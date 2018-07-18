@@ -1,5 +1,5 @@
 ---
-title: Error 要素 (XMLA) |Microsoft ドキュメント
+title: Error 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f223bff2dced01c2b3f954ca14242b1a35c93813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576554"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036650"
 ---
 # <a name="error-element-xmla"></a>Error 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34576554"
 |既定値|なし|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -70,11 +70,11 @@ ms.locfileid: "34576554"
   
 |属性|説明|  
 |---------------|-----------------|  
-|ErrorCode|必要な**UnsignedInt**属性 (される場合にのみ**メッセージ**親要素です)。エラーのリターン コード (数値) を含みます。|  
-|Severity|省略可能な**文字列**属性 (される場合にのみ**メッセージ**親要素です)。エラーの重大度レベルを格納します。|  
-|説明|省略可能な**文字列**属性 (される場合にのみ**メッセージ**親要素です)。エラーについての説明テキストを含みます。|  
-|Source|省略可能な**文字列**属性 (される場合にのみ**メッセージ**親要素です)。エラーを生成したコンポーネントの名前を含みます。|  
-|HelpFile|省略可能な**文字列**属性 (される場合にのみ**メッセージ**親要素です)。エラーについて説明しているヘルプ ファイルまたはトピックのパス、あるいは URL を含みます。|  
+|ErrorCode|必要な**UnsignedInt**属性 (場合にのみ**メッセージ**は親要素です)。エラーのリターン コード (数値) を含みます。|  
+|Severity|省略可能な**文字列**属性 (場合にのみ**メッセージ**は親要素です)。エラーの重大度レベルを格納します。|  
+|説明|省略可能な**文字列**属性 (場合にのみ**メッセージ**は親要素です)。エラーについての説明テキストを含みます。|  
+|Source|省略可能な**文字列**属性 (場合にのみ**メッセージ**は親要素です)。エラーを生成したコンポーネントの名前を含みます。|  
+|HelpFile|省略可能な**文字列**属性 (場合にのみ**メッセージ**は親要素です)。エラーについて説明しているヘルプ ファイルまたはトピックのパス、あるいは URL を含みます。|  
   
 ## <a name="remarks"></a>コメント  
   

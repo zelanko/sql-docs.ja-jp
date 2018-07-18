@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 11: パーティションの作成 |Microsoft ドキュメント'
+title: 'レッスン 11: パーティションの作成 |Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d738649ea357b172975505ff7993b56181ce0b4f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018759"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985894"
 ---
 # <a name="lesson-10-create-partitions"></a>レッスン 10: パーティションを作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-このレッスンではパーティションを作成するより小さな論理部分を処理するのには、FactInternetSales テーブルを分割する (更新) の他のパーティションに依存しません。 既定では、モデルに含めるすべてのテーブルにはパーティションが 1 つあり、テーブルのすべての列と行がその中に含まれます。 FactInternetSales テーブルの年です。 別のデータを分割します。1 つの各パーティション テーブルの 5 年です。 これにより、各パーティションを個別に処理できるようにします。 詳細については、「 [[パーティション]](../analysis-services/tabular-models/partitions-ssas-tabular.md)」を参照してください。  
+このレッスンではパーティションを作成するより小さな論理部分を処理できる、FactInternetSales テーブルに分割 (更新) 他のパーティションに依存しません。 既定では、モデルに含めるすべてのテーブルにはパーティションが 1 つあり、テーブルのすべての列と行がその中に含まれます。 FactInternetSales テーブルで年間でデータを分割します。各テーブルの 5 年間の 1 つのパーティション。 これにより、各パーティションを個別に処理できるようにします。 詳細については、「 [[パーティション]](../analysis-services/tabular-models/partitions-ssas-tabular.md)」を参照してください。  
   
 このレッスンの推定所要時間: **15 分**  
   
@@ -28,22 +28,22 @@ ms.locfileid: "34018759"
   
 ## <a name="create-partitions"></a>パーティションの作成  
   
-#### <a name="to-create-partitions-in-the-factinternetsales-table"></a>FactInternetSales テーブルでパーティションを作成するには  
+#### <a name="to-create-partitions-in-the-factinternetsales-table"></a>FactInternetSales テーブルにパーティションを作成するには  
   
-1.  表形式モデル エクスプ ローラーで、展開**テーブル**を右クリックして**FactInternetSales** > **パーティション**です。  
+1.  表形式モデル エクスプ ローラーで**テーブル**、右クリックして**FactInternetSales** > **パーティション**します。  
   
-2.  [パーティション マネージャー] ダイアログ ボックスで、**コピー**です。  
+2.  [パーティション マネージャー] ダイアログ ボックスで、**コピー**します。  
   
-3.  **パーティション名**、名前を変更**FactInternetSales2010**です。  
+3.  **パーティション名**、名を変更して**FactInternetSales2010**します。  
   
     > [!TIP]  
-    > テーブル プレビュー ウィンドウ内の列名とソースからの列名には、(オン)、モデル テーブルに含まれている列を表示することがわかります。 これは、[テーブルのプレビュー] ウィンドウでは、モデル テーブルからではなく、ソース テーブルから取得された列が表示されるためです。  
+    > テーブル プレビュー ウィンドウ内の列名を元の列名には、(オン)、モデル テーブルに含まれる列を表示することがわかります。 これは、[テーブルのプレビュー] ウィンドウでは、モデル テーブルからではなく、ソース テーブルから取得された列が表示されるためです。  
   
-4.  選択、 **SQL**真上、プレビュー ウィンドウを開くには、SQL ステートメントのエディターの右側にあるボタンをクリックします。  
+4.  選択、 **SQL**すぐ上の SQL ステートメントのエディターを開く、プレビュー ウィンドウの右側にあるボタンをクリックします。  
   
     特定の期間内の行だけをパーティションに含めたいので、WHERE 句を含める必要があります。 WHERE 句は、SQL ステートメントによってのみ作成できます。  
   
-5.  **SQL ステートメント**フィールドにコピーして、次のステートメントを貼り付けて既存のステートメントを置き換えます。  
+5.  **SQL ステートメント**フィールドにコピーして、次のステートメントを貼り付けて既存のステートメントに置き換えます。  
   
     ```  
     SELECT   
@@ -81,9 +81,9 @@ ms.locfileid: "34018759"
   
 #### <a name="to-create-a-partition-for-the-2011-year"></a>2011 年用のパーティションを作成するには  
   
-1.  パーティションの一覧で、 **FactInternetSales2010**で作成したパーティションに分割し、クリックして**コピー**です。  
+1.  パーティション一覧で、 **FactInternetSales2010**で作成した、パーティション分割し、**コピー**します。  
   
-2.  **パーティション名**、型**FactInternetSales2011**です。  
+2.  **パーティション名**、型**FactInternetSales2011**します。  
   
 3.  SQL ステートメントで、WHERE 句を次の内容に置き換えて、2011 年の行だけがパーティションに含まれるようにします。  
   
@@ -115,33 +115,33 @@ ms.locfileid: "34018759"
     WHERE (([OrderDate] >= N'2014-01-01 00:00:00') AND ([OrderDate] < N'2015-01-01 00:00:00'))  
     ```  
 
-## <a name="delete-the-factinternetsales-partition"></a>FactInternetSales のパーティションを削除します。
-これで、各年のパーティションがある、FactInternetSales パーティションを削除できます。 パーティションを処理するときに、すべてのプロセスを選択するときに、重複ができなくなります。
+## <a name="delete-the-factinternetsales-partition"></a>FactInternetSales パーティションを削除します。
+各年のパーティションをしたら FactInternetSales パーティションを削除できます。 これにより、パーティションを処理するときに、すべてのプロセスを選択するときに、重複をできないようにします。
 #### <a name="to-delete-the-factinternetsales-partition"></a>FactInternetSales パーティションを削除するには
--  FactInternetSales パーティションをクリックし、クリックして**削除**です。
+-  FactInternetSales パーティションをクリックし、クリックして**削除**します。
 
 
 
 ## <a name="process-partitions"></a>パーティションの処理  
-パーティション マネージャーで、確認、**最終処理**新しいの各列には、これらのパーティションが処理されていないで作成した番組がパーティション分割します。 新しいパーティションを作成したら、"パーティションの処理" または "テーブルの処理" 操作を実行して、それらのパーティション内のデータを更新する必要があります。  
+Partition manager での**Last Processed**新しいの各列には、これらのパーティションが処理されたことで作成した番組がパーティション分割します。 新しいパーティションを作成したら、"パーティションの処理" または "テーブルの処理" 操作を実行して、それらのパーティション内のデータを更新する必要があります。  
   
 #### <a name="to-process-the-factinternetsales-partitions"></a>FactInternetSales パーティションを処理するには  
   
-1.  をクリックして**OK**パーティション マネージャー ダイアログ ボックスを閉じます。  
+1.  クリックして**OK**パーティション マネージャー ダイアログ ボックスを閉じます。  
   
-2.  クリックして、 **FactInternetSales**テーブルをクリック、**モデル**メニュー >**プロセス** > **パーティションの処理**です。  
+2.  をクリックして、 **FactInternetSales**テーブルををクリックし、**モデル**メニュー >**プロセス** > **パーティションの処理**します。  
   
-3.  パーティションの処理 ダイアログ ボックスで、次を確認してください。**モード**に設定されている**既定の処理**です。  
+3.  パーティションの処理 ダイアログ ボックスで、次のように確認します。**モード**に設定されている**既定の処理**します。  
   
 4.  作成した 5 つのパーティションのそれぞれについて、 **[処理]** 列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
 
-    ![として-表形式の lesson10--パーティションの処理](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
+    ![として-テーブル-lesson10--パーティションの処理](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
   
-    権限借用の資格情報の入力を求められたら、Windows ユーザー名とレッスン 2 で指定したパスワードを入力します。  
+    権限借用の資格情報を求められたらは、Windows ユーザー名とレッスン 2 で指定したパスワードを入力します。  
   
     **[データ処理]** ダイアログ ボックスが表示され、各パーティションのプロセスの詳細が表示されます。 転送される行数はパーティションごとに異なります。 これは、各パーティションに、SQL ステートメントの WHERE 句で指定された年の行が含められるためです。 処理が完了したら、[データ処理] ダイアログ ボックスをクリックします。  
   
-    ![として-表形式の lesson10-プロセスの完了](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![-テーブル-lesson10-プロセス-完了](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>次の操作
 次のレッスンに移動:[レッスン 11: ロールの作成](../analysis-services/lesson-11-create-roles.md)です。 

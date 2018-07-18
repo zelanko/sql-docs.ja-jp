@@ -1,5 +1,5 @@
 ---
-title: avg 関数 (XQuery) |Microsoft ドキュメント
+title: avg 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6c347eb78dd3ac8e58075cc91edeee87b3a4418d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077167"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983461"
 ---
-# <a name="aggregate-functions---avg"></a>集計関数の avg
+# <a name="aggregate-functions---avg"></a>集計関数 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   一連の数値の平均値を返します。  
@@ -44,23 +44,23 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  平均値を計算するアトミック値のシーケンス。  
   
-## <a name="remarks"></a>解説  
- 渡されるアトミック値のすべての種類**avg()** 3 つの組み込み数値基本型または xdt:untypedAtomic のただ 1 つのサブタイプである必要があります。 これらの型を混在させることはできません。 xdt:untypedAtomic 型の値は、xs:double として扱われます。 結果**avg()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。  
+## <a name="remarks"></a>コメント  
+ 渡されるアトミック値の型をすべて**avg()** する 3 つの組み込み数値基本データ型または xdt:untypedAtomic のいずれかのサブタイプである必要があります。 これらの型を混在させることはできません。 xdt:untypedAtomic 型の値は、xs:double として扱われます。 結果**avg()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。  
   
  入力が静的に空の場合、空になることが暗黙に示され、静的エラーが発生します。  
   
- **Avg()** 関数を計算する数値の平均値を返します。 以下に例を示します。  
+ **Avg()** 関数は、計算される数値の平均値を返します。 以下に例を示します。  
   
- **sum (** *$arg* **) div カウント (** *$arg* **)**  
+ **sum (** *$arg* **) div 数 (** *$arg* **)**  
   
- 場合 *$arg* 、空のシーケンスは、空のシーケンスが返されます。  
+ 場合 *$arg*空のシーケンスが空のシーケンスが返されます。  
   
- Xdt:untypedAtomic 値は、xs:double にキャストすることはできない場合、入力シーケンスで値が無視されます。 *$arg*です。  
+ Xdt:untypedAtomic 値は、xs:double にキャストできない場合で、入力シーケンスの値が無視されます。 *$arg*します。  
   
  他のすべての場合は、関数から静的エラーが返されます。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. avg() XQuery 関数を使用した、製造プロセス中のワーク センターの場所全体での平均労働時間よりも長いワーク センターの検索  
  指定したクエリを書き直すことができます[min 関数 (XQuery)](../xquery/aggregate-functions-min.md)を使用する、 **avg()** 関数。  

@@ -1,5 +1,5 @@
 ---
-title: ceiling 関数 (XQuery) |Microsoft ドキュメント
+title: ceiling 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1399fd20bf4d7af3fed85730fc397e1400347ad2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991334"
 ---
-# <a name="numeric-values-functions---ceiling"></a>Ceiling の数値の値関数 
+# <a name="numeric-values-functions---ceiling"></a>数値関数 - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   引数の値以上で、小数部を含まない最小の数値を返します。 引数が空のシーケンスの場合は、空のシーケンスを返します。  
@@ -46,20 +46,20 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  関数を適用する数値。  
   
-## <a name="remarks"></a>解説  
- 場合の種類 *$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**と同じ戻り値の型です *$arg*型です。  
+## <a name="remarks"></a>コメント  
+ 場合の種類 *$arg*は 3 つの数値基本データ型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**と同じ戻り値の型です *$arg*型。  
   
- 場合の種類 *$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
+ 場合の種類 *$arg* 、数値型のいずれかから派生した型は、戻り値の型が基本の数値型。  
   
- Fn:floor、fn:ceiling、または fn:round 関数への入力が場合**xdt:untypedAtomic**に暗黙的にキャスト**xs:double**です。  
+ Fn:floor、fn:ceiling、または fn:round 関数への入力は場合**xdt:untypedAtomic**に暗黙的にキャストされた**xs:double**します。  
   
  その他の型のデータが入力されると、静的エラーが生成されます。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. ceiling() XQuery 関数の使用  
- 次のクエリは、製品モデル 7 の製造にかかわりのあるワーク センターの場所一覧を返します。 ワーク センターの場所ごとに、場所 ID、労働時間、ロット サイズのデータが記録されている場合、これを返します。 クエリを使用して、 **ceiling**を型の値で労働時間を返す関数を**decimal**です。  
+ 次のクエリは、製品モデル 7 の製造にかかわりのあるワーク センターの場所一覧を返します。 ワーク センターの場所ごとに、場所 ID、労働時間、ロット サイズのデータが記録されている場合、これを返します。 クエリを使用して、 **ceiling**を労働時間を型の値を返す関数を**decimal**します。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -81,13 +81,13 @@ WHERE ProductModelID=7
   
 -   AWMI 名前空間プレフィックスは、Adventure Works Manufacturing Instructions を表しています。 このプレフィックスは、クエリ対象のドキュメントで使用されるものと同じ名前空間を示しています。  
   
--   **指示**は、 **xml**型の列です。 したがって、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md) XQuery を指定するために使用します。 query メソッドの引数には XQuery ステートメントを指定しています。  
+-   **手順については**は、 **xml**型の列。 そのため、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md) XQuery を指定するために使用します。 query メソッドの引数には XQuery ステートメントを指定しています。  
   
--   **... 返す**ループ構造体です。 クエリで、**の**ループのリストを識別する\<場所 > の要素。 各ワーク センターの場所の**返す**内のステートメント、**の**ループを生成する XML の説明。  
+-   **... 返す**はループ構造体です。 クエリで、**の**ループの一覧を識別する\<場所 > 要素。 各ワーク センター拠点の**返す**内のステートメント、**の**ループが生成される XML について説明します。  
   
     -   A\<場所 > を LocationID 属性と LaborHrs 属性を持つ要素。 中かっこ ({ }) 内の対応する式により、必要な値をドキュメントから取得しています。  
   
-    -   {$i/@LotSize } 式が存在する場合、ドキュメントから LotSize 属性を取得します。  
+    -   {0} $i/@LotSize } 式が存在する場合、ドキュメントから LotSize 属性を取得します。  
   
     -   結果を次に示します。  
   

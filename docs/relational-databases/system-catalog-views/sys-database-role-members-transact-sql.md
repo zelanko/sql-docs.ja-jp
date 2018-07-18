@@ -1,5 +1,5 @@
 ---
-title: sys.database_role_members (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.database_role_members (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -26,25 +26,26 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ac347dbb4748c575b8f4388952a45315f28a5b01
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001294"
 ---
 # <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベース ロールのメンバーごとに 1 行のデータを返します。  データベース ユーザー、アプリケーション ロール、およびその他のデータベース ロールは、データベース ロールのメンバーにすることができます。 ロールにメンバーを追加するには、使用、 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)ステートメントを`ADD MEMBER`オプション。 結合[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)の名前を返す、`principal_id`値。
+  データベース ロールのメンバーごとに 1 行のデータを返します。  データベース ユーザー、アプリケーション ロール、およびその他のデータベース ロールは、データベース ロールのメンバーであることができます。 ロールにメンバーを追加するには、使用、 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)ステートメントを`ADD MEMBER`オプション。 結合[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)の名前を返す、`principal_id`値。
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**role_principal_id**|**int**|データベース ロールのプリンシパル ID。|  
+|**role_principal_id**|**int**|データベース ロールのプリンシパルの ID。|  
 |**member_principal_id**|**int**|メンバーのデータベース プリンシパルの ID。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは自分のロールのメンバーシップを参照できます。 メンバーシップを他のロールを表示するにはメンバーシップが必要です、`db_securityadmin`固定データベース ロールまたは`VIEW DEFINITION`データベースでします。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のクエリでは、データベース ロールのメンバーを返します。  

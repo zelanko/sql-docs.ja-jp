@@ -1,5 +1,5 @@
 ---
-title: PropertyList 要素 (XMLA) |Microsoft ドキュメント
+title: PropertyList 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3e773de16e65aa9c7f1be521214088aa9f06b369
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577834"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036710"
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  使用される Analysis (XMLA) プロパティの XML のコレクションを格納、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)と[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
+  によって使用される Analysis (XMLA) プロパティの XML のコレクションを格納、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)と[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34577834"
 |既定値|なし|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "34577834"
   
  使用可能なプロパティとその値は、 **Discover** メソッドで要求の種類として DISCOVER_PROPERTIES を使用することによって取得できます。 **PropertyList** 要素内に一覧表示されるプロパティの順序は任意です。  
   
- Analysis Services でサポートされる XMLA プロパティの詳細については、次を参照してください。[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。  
+ Analysis Services でサポートされる XMLA プロパティの詳細については、次を参照してください。[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)します。  
   
 ## <a name="example"></a>例  
   

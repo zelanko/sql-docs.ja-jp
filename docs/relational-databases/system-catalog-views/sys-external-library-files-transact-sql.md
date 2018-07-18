@@ -1,5 +1,5 @@
 ---
-title: sys.external_library_files (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.external_library_files (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: sql
@@ -24,26 +24,26 @@ ms.author: jeannt
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: febfe235bd7f4711e8192ab7625491b72ac050ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001174"
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 外部ライブラリを構成する各ファイルの行を一覧表示します。
 
-|列名 |データ型 |Description|
+|列名 |データ型 |説明|
 |------|------|-----|
-|external_library_id | int |外部ライブラリ オブジェクトの ID。 |
-|content |varbinary(max) |外部ライブラリ ファイル アイテムのコンテンツ。 |
-|プラットフォーム |tinyint |SQL Server がインストールされているホストのプラットフォームの ID です。 |
+|external_library_id | ssNoversion |外部ライブラリ オブジェクトの ID。 |
+|content |varbinary(max) |外部ライブラリのファイル成果物のコンテンツ。 |
+|プラットフォーム |TINYINT |SQL Server がインストールされているホスト プラットフォームの ID。 |
 |platform_desc | nvarchar(60) |ホストのプラットフォームの名前です。 有効な値は、'WINDOWS'、'LINUX' です。 |
 
 ### <a name="see-also"></a>参照  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [外部ライブラリを作成します。](../../t-sql/statements/create-external-library-transact-sql.md)  
-[SQL Server マシン ラーニング サービス パッケージの管理](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[SQL Server Machine Learning サービスのパッケージ管理](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

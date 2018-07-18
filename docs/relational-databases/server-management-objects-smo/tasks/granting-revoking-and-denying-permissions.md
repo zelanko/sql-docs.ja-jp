@@ -1,5 +1,5 @@
 ---
-title: 許可、取り消し、および権限の拒否 |Microsoft ドキュメント
+title: 許可、取り消し、および権限の拒否 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77c9bb9b74b4d0b7dee5ec09724db144852dc73b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969517"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990645"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>権限の許可、取り消し、および拒否
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32969517"
  データベース権限およびデータベース オブジェクト権限は、<xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> オブジェクトを使用して、同じように割り当てることができます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Visual Basic でのサーバー権限の付与  
  このコード例では、指定されたログインへの Create Endpoint 権限および Alter Any Endpoint 権限を許可し、これらの権限の列挙および表示を行います。 これらの権限のうちの 1 つが呼び出されて、権限が再び列挙されます。 この例では、指定されたログインには、当初に必要な指定の権限があることを前提としています。  

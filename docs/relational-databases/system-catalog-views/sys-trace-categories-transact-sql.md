@@ -1,5 +1,5 @@
 ---
-title: sys.trace_categories (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.trace_categories (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,29 +25,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85c5ad8a9cd6e901151797e763913713f2a228b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220423"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993764"
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  類似したイベント クラスは、同じカテゴリに分類されます。 内の行ごと、 **sys.trace_categories**カタログ ビューは、サーバーの間で一意であるカテゴリを識別します。 これらのカテゴリが指定したバージョンは変更しないでください、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]です。  
+  類似したイベント クラスは、同じカテゴリに分類されます。 内の行ごと、 **sys.trace_categories**カタログ ビュー、サーバーの間で一意であるカテゴリを識別します。 これらのカテゴリがの指定したバージョンは変更しないでください、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。  
   
- サポートされているトレース イベントの一覧については、次を参照してください。 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)です。  
+ サポートされているトレース イベントの完全な一覧を参照してください。 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)します。  
   
 > **重要:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 拡張イベント カタログ ビューを代わりに使用します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|カテゴリの一意 ID。 この列にではまた、 **sys.trace_events**カタログ ビューです。|  
 |**name**|**nvarchar(128)**|カテゴリの一意な名前。 このパラメーターはローカライズされません。|  
 |**type**|**tinyint**|カテゴリの種類:<br /><br /> 0 = 標準<br /><br /> 1 = 接続<br /><br /> 2 = エラー|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

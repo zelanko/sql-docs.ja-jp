@@ -1,5 +1,5 @@
 ---
-title: モデリング フラグ (DMX) |Microsoft ドキュメント
+title: モデリング フラグ (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 17280abc62cd75122fde1f54b321ca9b51a1b1d9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842945"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992464"
 ---
 # <a name="modeling-flags-dmx"></a>モデリング フラグ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34842945"
  **MODEL_EXISTENCE_ONLY**  
  この属性列の値は、属性の有無ほど重要ではありません。 このフラグはマイニング モデル列で定義されます。  
   
- サード パーティのアルゴリズムによっては、別のモデリング フラグもサポートしている場合があります。 アルゴリズムがどのモデリング フラグを確認するのには、サポートを使用して、 **SUPPORTED_MODELING_FLAGS**スキーマ行セット。 また、サーバーのマイニング サービスに対してクエリを実行し、特定のアルゴリズムでサポートされているモデリング フラグを判別することもできます。 たとえば、次のクエリでは、現在のサーバー上の Microsoft 線形回帰アルゴリズムでサポートされているモデリング フラグが返されます。  
+ サード パーティのアルゴリズムによっては、別のモデリング フラグもサポートしている場合があります。 アルゴリズムがどのモデリング フラグを確認するには、サポートを使用して、 **SUPPORTED_MODELING_FLAGS**スキーマ行セット。 また、サーバーのマイニング サービスに対してクエリを実行し、特定のアルゴリズムでサポートされているモデリング フラグを判別することもできます。 たとえば、次のクエリでは、現在のサーバー上の Microsoft 線形回帰アルゴリズムでサポートされているモデリング フラグが返されます。  
   
 ```  
 SELECT SUPPORTED_MODELING_FLAGS  
@@ -45,22 +45,22 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL、REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>マイニング モデルでのモデリング フラグの指定  
- 構文の例についてを[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、マイニング構造列でフラグを指定するためのサポートを参照してください[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)です。  
+ 構文の例についてを[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、マイニング構造列でフラグを指定するためのサポートを参照してください[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)します。  
   
- マイニング モデル列でモデリング フラグを指定する構文の例は、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)です。  
+ マイニング モデル列にモデリング フラグを指定する構文の例は、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)します。  
   
- マイニング モデル列の使用の詳細については、次を参照してください。[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)です。  
+ マイニング モデル列の使用の詳細については、次を参照してください。[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [データ マイニング拡張機能&#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   

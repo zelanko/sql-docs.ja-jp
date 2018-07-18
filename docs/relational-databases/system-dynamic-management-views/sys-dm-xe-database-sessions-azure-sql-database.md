@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_sessions (Azure SQL データベース) |Microsoft ドキュメント
+title: sys.dm_xe_database_sessions (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 28759d7101a8a798223a92b9201e0e9aa930a4fa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466458"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984201"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "34466458"
   
 ||  
 |-|  
-|**適用されます**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 およびそれ以降のバージョン。|  
+|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 およびそれ以降のバージョン。|  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|イベント セッションのメモリ アドレス。 NULL 値は許可されません。|  
 |event_name|**nvarchar(60)**|アクションがバインドされているイベントの名前。 NULL 値は許可されません。|  
 |event_package_guid|**uniqueidentifier**|イベントを含むパッケージの GUID。 NULL 値は許可されません。|  
 |event_predicate|**nvarchar(2048)**|イベントに適用される述語ツリーの XML 表現。 NULL 値が許可されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  VIEW DATABASE STATE 権限が必要です。  
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  
@@ -51,7 +51,7 @@ ms.locfileid: "34466458"
 |sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多対一|  
   
 ## <a name="see-also"></a>参照  
-[Azure SQL データベースでの拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+[Azure SQL Database の拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
  

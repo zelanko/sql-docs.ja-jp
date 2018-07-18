@@ -1,5 +1,5 @@
 ---
-title: sql:column() 関数 (XQuery) |Microsoft ドキュメント
+title: sql:column() 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077649"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981944"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery Extension Functions - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  」の説明に従って[XML 内リレーショナル データのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)、使用することができます、 **sql:column()** 関数を使用するときに[XML データ型メソッド](../t-sql/xml/xml-data-type-methods.md)リレーショナル値を公開するにはXQuery 内部です。  
+  」の説明に従って[XML 内リレーショナル データのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)、使用することができます、 **sql:column()** 関数を使用するときに[XML データ型メソッド](../t-sql/xml/xml-data-type-methods.md)リレーショナル値を公開するにはXQuery 内部。  
   
- たとえば、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)変数またはの列に格納されている XML インスタンスに対してクエリを指定するために使用**xml**型です。 場合によっては、クエリで XML 型ではない別の列の値を使用して、リレーショナル データと XML データを結合することもできます。 これを行うには、使用する、 **sql:column()** 関数。  
+ たとえば、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)変数またはの列に格納されている XML インスタンスに対してクエリを指定するために使用**xml**型。 場合によっては、クエリで XML 型ではない別の列の値を使用して、リレーショナル データと XML データを結合することもできます。 これを行うには、使用する、 **sql:column()** 関数。  
   
  SQL 値は、対応する XQuery 値にマップされ、その型は対応する SQL 型に相当する XQuery 基本データ型になります。  
   
@@ -46,10 +46,10 @@ ms.locfileid: "33077649"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>解説  
- 指定された列への参照をことに注意してください、 **sql:column()** XQuery 内の関数は処理されている行の列を参照します。  
+## <a name="remarks"></a>コメント  
+ 指定された列への参照をことに注意してください、 **sql:column()** XQuery 内の関数が処理されている行の列を参照します。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、のみを参照することができます、 **xml**インスタンス コンテキスト、ソースの式の XML DML 挿入ステートメントで、それ以外の場合は型の列を参照することはできません**xml**または CLR。ユーザー定義型です。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、のみを参照することができます、 **xml**インスタンス コンテキスト、ソースの式の XML DML 挿入ステートメントで、それ以外の場合、型の列を参照することはできません**xml**または CLRユーザー定義型です。  
   
  **Sql:column()** 結合操作では、関数はサポートされていません。 代わりに、APPLY 操作を使用できます。  
   
@@ -69,9 +69,9 @@ sql:column("columnName")
   
 -   **ProductID**、 **ProductName**、および**ProductPrice**属性値がから取得した、**製品**テーブル。  
   
--   **ProductModelID**から属性の値を取得、 **ProductModel**テーブル。  
+-   **ProductModelID**から属性値を取得、 **ProductModel**テーブル。  
   
--   クエリをさらに興味深いものにするように、 **ProductModelName**属性値がから取得した、 **CatalogDescription**の列**xml 型**です。 すべての製品モデルの XML 製品モデル カタログ情報が格納されていないため、`if`ステートメントが存在する場合にのみ値を取得するために使用します。  
+-   さらに興味深いクエリを作成する、 **ProductModelName**属性値がから取得した、 **CatalogDescription**の列**xml 型**します。 すべての製品モデルの XML 製品モデル カタログ情報が格納されていないため、`if`ステートメントを使用して、存在する場合にのみ値を取得します。  
   
     ```  
     SELECT P.ProductID, CatalogDescription.query('  
@@ -100,7 +100,7 @@ sql:column("columnName")
   
 -   **名前空間**キーワード、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)XML 名前空間プレフィックス"pd"、クエリ本文で使用されるを定義します。 テーブルの別名 "P" および "PM" は、クエリ自体の FROM 句に定義されていることに注意してください。  
   
--   **Sql:column()** 関数を使用して XML 内部の XML 以外の値をします。  
+-   **Sql:column()** 関数を使用して、XML 内部の XML 以外の値を表示します。  
   
  結果の一部を次に示します。  
   
@@ -113,7 +113,7 @@ ProductID               Result
 ...  
 ```  
   
- 次のクエリは、製品固有の情報を保持する XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 XML が割り当てられます、@xの変数**xml**型です。  
+ 次のクエリは、製品固有の情報を保持する XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 XML が割り当てられているし、@xの変数**xml**型。  
   
 ```  
 declare @x xml  
@@ -142,7 +142,7 @@ select @x
  [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)   
+ [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

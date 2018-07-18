@@ -1,5 +1,5 @@
 ---
-title: sp_renamedb (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_renamedb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3e1763b46d3d98616685878b27f60d76b398ab49
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256938"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984189"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 0 以外の数値 (失敗)  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **sysadmin**または**dbcreator**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **sysadmin**または**dbcreator**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`Accounting` データベースを作成し、このデータベース名を `Financial` に変更します。 `sys.databases`カタログ ビューが、データベースの新しい名前を確認するクエリを実行します。  

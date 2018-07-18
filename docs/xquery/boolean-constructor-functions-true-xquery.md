@@ -1,5 +1,5 @@
 ---
-title: true 関数 (XQuery) |Microsoft ドキュメント
+title: true 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 349b2f99f5db35ca9d44e3ac8459030b7f7ba55f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077589"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014032"
 ---
-# <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンス トラクター関数の true (XQuery)
+# <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンス トラクター関数 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   xs:boolean 値 True を返します。 これは、`xs:boolean("1")` と同じです。  
@@ -42,10 +42,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. XQuery 論理関数 true() の使用  
- 次の例は、型指定されていないクエリ**xml**変数。 内の式、 **value()** メソッドは、ブール値を返します**true()** "aaa"属性値である場合。 **Value()** のメソッド、 **xml**データ型がブール値、ビットに変換し、それを取得します。  
+ 次の例は、型指定されていないクエリ**xml**変数。 内の式、 **value()** メソッドはブール値を返します**true()** "aaa"属性値である場合。 **Value()** のメソッド、 **xml**データ型がビットにブール値を変換し、それを返します。  
   
 ```  
 DECLARE @x XML  
@@ -55,11 +55,11 @@ go
 -- result = 1  
 ```  
   
- 次の例では、クエリが指定の型指定されたに対して**xml**列です。 `if`式の型指定されたブール値をチェックする、<`ROOT`> 要素と、それに応じて、構築された XML が返されます。 この例では、次の操作が実行されます。  
+ 次の例では、クエリを指定する型指定されたに対して**xml**列。 `if`式の型指定されたブール値をチェックする、<`ROOT`> 要素を適宜構築済みの XML を返します。 この例では、次の操作が実行されます。  
   
--   定義する XML スキーマ コレクションを作成、<`ROOT`> xs:boolean 型の要素。  
+-   定義する XML スキーマ コレクションを作成し、<`ROOT`> xs:boolean 型の要素。  
   
--   型指定されたテーブルを作成**xml** XML スキーマ コレクションを使用して列です。  
+-   型指定されたテーブルを作成します。 **xml** XML スキーマ コレクションを使用して列。  
   
 -   XML インスタンスを列に保存し、クエリを実行します。  
   

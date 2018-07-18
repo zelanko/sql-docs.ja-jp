@@ -1,5 +1,5 @@
 ---
-title: エクスポート (DMX) |Microsoft ドキュメント
+title: エクスポート (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841965"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991063"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
   
 ## <a name="arguments"></a>引数  
  *オブジェクトの種類*  
- (マイニング モデルまたはマイニング構造) にエクスポートするオブジェクトの型を省略可能です。  
+ (マイニング モデルまたはマイニング構造) をエクスポートするオブジェクトの型を省略します。  
   
  *オブジェクト名*  
  任意。 エクスポートするオブジェクトの名前です。  
@@ -39,12 +39,12 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  文字列としてエクスポートするファイルの名前と場所です。  
   
 ## <a name="remarks"></a>コメント  
- ステートメントがマイニング モデルを指定する場合、結果ファイルは関連するマイニング構造も含みます。 ステートメントを指定する場合**WITH DEPENDENCIES**、.abf ファイルに (たとえば、データ ソースおよびデータ ソース ビュー) のオブジェクトを処理するために必要なすべてのオブジェクトが含まれます。  
+ ステートメントがマイニング モデルを指定する場合、結果ファイルは関連するマイニング構造も含みます。 ステートメントが指定されている場合**WITH DEPENDENCIES**、(データ ソースとデータ ソース ビューなど) のオブジェクトを処理するために必要なすべてのオブジェクトが、.abf ファイルに含まれます。  
   
- データベースであるかからオブジェクトをエクスポートまたはインポートするサーバーの管理者、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。  
+ データベースであるか、エクスポートまたはインポートするサーバーの管理者がオブジェクトから、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。  
   
 ## <a name="export-mining-structure-example"></a>マイニング構造のエクスポート例  
- 次の例は、Targeted Mailing と Forecasting マイニング構造、および Association マイニング モデルを、指定したファイルの場所にエクスポートします。 Association モデルは Market Basket マイニング構造の一部であるため、例では Market Basket 構造もエクスポートします。 アソシエーション モデルを使用してエクスポートされたために、Market Basket マイニング構造の一部はエクスポートされず存在するその他のすべてのマイニング モデル**マイニング モデル**ではなく、**マイニング構造**です。  
+ 次の例は、Targeted Mailing と Forecasting マイニング構造、および Association マイニング モデルを、指定したファイルの場所にエクスポートします。 Association モデルは Market Basket マイニング構造の一部であるため、例では Market Basket 構造もエクスポートします。 使用してアソシエーション モデルがエクスポートされるため、Market Basket マイニング構造の一部はエクスポートされず可能性のあるその他のすべてのマイニング モデル**マイニング モデル**ではなく、**マイニング構造**します。  
   
 ```  
 EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Association TO 'C:\TM_NEW.abf'  

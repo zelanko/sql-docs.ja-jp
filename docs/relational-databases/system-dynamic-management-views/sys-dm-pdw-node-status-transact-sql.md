@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_node_status (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_pdw_node_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,17 +18,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 423bae3ce66e21721e328a23d51a8356be40ea2a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000804"
 ---
 # <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   追加情報を保持 (経由で[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) のパフォーマンスとアプライアンスのすべてのノードの状態に関するします。 アプライアンス内のノードごとに 1 行が一覧表示します。  
   
-|列名|データ型|Description|範囲|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|ノードに関連付けられている一意の数値 id です。<br /><br /> このビューのキーです。|種類に関係なく、アプライアンスの間で一意です。|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
@@ -46,6 +47,6 @@ ms.lasthandoff: 05/23/2018
 |error_id|**nvarchar(36)**|このノードで発生した最後のエラーの一意の識別子。||  
   
 ## <a name="see-also"></a>参照  
- [SQL データ ウェアハウスと並列データ ウェアハウスの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

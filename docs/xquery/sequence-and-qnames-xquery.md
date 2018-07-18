@@ -1,5 +1,5 @@
 ---
-title: シーケンスと Qname (XQuery) |Microsoft ドキュメント
+title: シーケンスと Qname (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077999"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990011"
 ---
 # <a name="sequence-and-qnames-xquery"></a>シーケンスと QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ SELECT @x.query('/Root/a');
   
  式 (`/Root/a`) では、`Root` と `a` が QName です。  
   
- 次の例では、クエリが指定されて、型指定されたに対して**xml**列です。 クエリの反復すべて\<手順 > 最初のワーク センターからの場所にある要素。  
+ 次の例では、クエリを指定する、型指定されたに対して**xml**列。 クエリは、すべてを反復処理\<手順 > 最初のワーク センターからの場所にある要素。  
   
 ```  
 SELECT Instructions.query('  
@@ -134,11 +134,11 @@ WHERE ProductModelID=7;
   
  クエリ式では、次の点に注意してください。  
   
--   `AWMI root`、`AWMI:Location`、`AWMI:step`、`$Step` は、すべて QName です。 `AWMI` プレフィックスであり、 `root`、`Location`と`Step`はすべてのローカル名。  
+-   `AWMI root`、`AWMI:Location`、`AWMI:step`、`$Step` は、すべて QName です。 `AWMI` プレフィックスであり、 `root`、 `Location`、および`Step`はすべてのローカル名。  
   
 -   `$step`変数は QName であり、プレフィックスはありません。  
   
- 次の名前空間は XQuery サポートで使用する定義済み[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。  
+ XQuery サポートで使用するための次の名前空間が定義済み[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
 |プレフィックス|[URI]|  
 |------------|---------|  
@@ -154,7 +154,7 @@ WHERE ProductModelID=7;
  各データベースを作成するには、 **sys** XML スキーマ コレクションです。 各データベースにはこれらのスキーマが保持されるため、ユーザーが作成した XML スキーマ コレクションからアクセスすることができます。  
   
 > [!NOTE]  
->  この実装がサポートしていません、`local`プレフィックス内の XQuery 仕様」の説明に従ってhttp://www.w3.org/2004/07/xquery-local-functionsです。  
+>  この実装がサポートしていません、`local`の XQuery 仕様に記載されているプレフィックスhttp://www.w3.org/2004/07/xquery-local-functionsします。  
   
 ## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)  

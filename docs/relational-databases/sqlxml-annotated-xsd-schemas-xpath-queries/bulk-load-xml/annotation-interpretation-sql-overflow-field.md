@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-フィールド (SQLXML 4.0) |Microsoft ドキュメント
+title: sql:overflow-フィールド (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,19 +22,19 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970227"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005815"
 ---
-# <a name="annotation-interpretation---sqloverflow-field"></a>注釈の解釈の sql:overflow-フィールド
+# <a name="annotation-interpretation---sqloverflow-field"></a>注釈の解釈 - sql:overflow-フィールド
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列を使用して、スキーマで指定された、 **sql:overflow-フィールド**注釈。 オーバーフロー列は複数指定することもできます。  
+  スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列を使用して、スキーマで指定、 **sql:overflow-フィールド**注釈。 オーバーフロー列は複数指定することもできます。  
   
- 存在する XML ノード (要素または属性)、 **sql:overflow-フィールド**定義されている注釈がスコープに入ると、オーバーフロー列がアクティブになり、未使用データを受信します。 ノードがスコープ外に出ると、オーバーフロー列はアクティブではなくなります。それまでのオーバーフロー フィールドがある場合は、XML 一括読み込みによってそのフィールドがアクティブになります。  
+ 存在する XML ノード (要素または属性) されるたびに、 **sql:overflow-フィールド**定義されている注釈がスコープに入った、オーバーフロー列がアクティブになり、未使用データを受信します。 ノードがスコープ外に出ると、オーバーフロー列はアクティブではなくなります。それまでのオーバーフロー フィールドがある場合は、XML 一括読み込みによってそのフィールドがアクティブになります。  
   
- オーバーフロー列にデータを保存すると XML 一括読み込み用にも保存開始タグと終了タグの親要素のする**sql:overflow-フィールド**が定義されています。  
+ オーバーフロー列にデータを保存すると XML 一括読み込みも格納、タグと親要素の終了タグを**sql:overflow-フィールド**が定義されています。  
   
  たとえば、次のスキーマについて説明します、 **\<顧客 >** と **\<CustOrder >** 要素。 これらの要素それぞれに、オーバーフロー列が指定されています。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "32970227"
 </xsd:schema>  
 ```  
   
- スキーマでは、 **\<顧客 >** 要素は Cust テーブルにマップされ、 **\<順序 >** 要素は CustOrder テーブルにマップします。  
+ スキーマで、 **\<顧客 >** 要素は Cust テーブルにマップし、 **\<順序 >** 要素は CustOrder テーブルにマップされます。  
   
- 両方の**\<顧客 >** と**\<順序 >** 要素は、オーバーフロー列を識別します。 要素と属性に、XML 一括読み込みが未使用のすべての子を保存するため、 **\<顧客 >** Cust テーブルのオーバーフロー列内の要素とすべての未使用の子要素と属性、の**\<順序 >** CustOrder テーブルのオーバーフロー列内の要素。  
+ 両方の**\<顧客 >** と**\<順序 >** 要素は、オーバーフロー列を識別します。 したがって、XML 一括読み込みを保存します未使用のすべての子の要素と属性、 **\<顧客 >** Cust テーブルのオーバーフロー列内の要素と、未使用の子要素と、の属性をすべて**\<順序 >** CustOrder テーブルのオーバーフロー列内の要素。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   

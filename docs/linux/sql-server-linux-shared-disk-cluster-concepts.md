@@ -1,5 +1,5 @@
 ---
-title: フェールオーバー クラスター インスタンスの SQL Server on Linux |Microsoft ドキュメント
+title: フェールオーバー クラスター インスタンスの SQL Server on Linux |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,79 +13,80 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 0275d0004bc02f1e32e7da3630c8a0bd15532d18
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982801"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、SQL Server フェールオーバー クラスター インスタンス (FCI) を Linux に関連する概念について説明します。 
+この記事では、Linux に SQL Server フェールオーバー クラスター インスタンス (FCI) に関連する概念を説明します。 
 
-Linux 上の SQL Server の FCI を作成するを参照してください[Linux 上の SQL Server FCI の構成。](sql-server-linux-shared-disk-cluster-configure.md)
+Linux 上の SQL Server FCI を作成するを参照してください[Linux 上の SQL Server FCI の構成。](sql-server-linux-shared-disk-cluster-configure.md)
 
 ## <a name="the-clustering-layer"></a>クラスタ リングのレイヤー
 
-* RHEL でクラスタ リングの層は Red Hat Enterprise Linux (RHEL) に基づいて[HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)です。 
+* RHEL でクラスタ リングの層は Red Hat Enterprise Linux (RHEL) に基づいて[HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)します。 
 
     > [!NOTE] 
-    > Red Hat HA アドオンおよびドキュメントへのアクセスには、サブスクリプションが必要です。 
+    > Red Hat HA アドオンとドキュメントへのアクセスには、サブスクリプションが必要です。 
 
-* SLES、クラスタ リングのレイヤーはに基づいて SUSE Linux Enterprise[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)です。
+* SLES でのクラスタ リングの階層は SUSE Linux Enterprise に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)します。
 
-    クラスターの構成、リソース エージェント オプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)です。
+    クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)します。
 
-RHEL HA アドオンおよび SUSE HAE の両方に基づいて構築されます[ペース](http://clusterlabs.org/)です。
+RHEL HA アドオンと SUSE HAE の両方が上に構築された[Pacemaker](http://clusterlabs.org/)します。
 
-次の図に示す 2 つのサーバーに記憶域が提供されます。 -Corosync とペース - クラスタ リングのコンポーネントは、通信およびリソース管理を調整します。 サーバーのいずれかが、記憶域リソース、および SQL Server へのアクティブな接続です。 ペースが障害を検出したときに、クラスタ リングのコンポーネントは、他のノードに、リソースの移動を管理します。  
+次の図に示すよう、2 つのサーバーに記憶域が表示されます。 -Corosync と Pacemaker - クラスタ リングのコンポーネントは、通信、およびリソース管理を調整します。 サーバーのいずれかが、ストレージ リソースと SQL Server への接続。 Pacemaker は、障害を検出したときにクラスタ リングのコンポーネントは、他のノードに、リソースの移動を管理します。  
 
 ![Red Hat Enterprise Linux 7 ディスク SQL クラスターの共有](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションが外であり、サービスは、スタンドアロン インスタンスとしてペースによって制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 推測 @ を@servernameと sys.servers クラスター dmv sys.dm_os_cluster_nodes と sys.dm_os_cluster_properties にレコードがないときに、ノード名を返すにします。 文字列のサーバー名を指す接続文字列を使用して、ip アドレスを使用しない、これらには、選択したサーバーの名前 (次のセクションで説明されている) と仮想 IP リソースの作成に使用される IP、DNS サーバーに登録する必要があります。
+> この時点では、Linux 上の Pacemaker との SQL Server の統合は、Windows の WSFC でとして結合ではありません。 SQL 内ではありません、クラスターの存在に関する知識と、すべてのオーケストレーションが外部では、サービスは、スタンドアロン インスタンスとして Pacemaker によって制御されます。 また、仮想ネットワーク名は、WSFC を特定、Pacemaker で同じの相当するものはありません。 必要がありますを @@servername sys.servers クラスター dmv sys.dm_os_cluster_nodes と sys.dm_os_cluster_properties にレコードがないときに、ノード名を返すとします。 文字列のサーバー名を指す接続文字列を使用し、ip アドレスを使用しない、選択したサーバー名に置き換えます (次のセクションで説明) と仮想 IP リソースの作成に使用される IP が DNS サーバーに登録する必要があります。
 
-## <a name="number-of-instances-and-nodes"></a>インスタンスの数およびノード
+## <a name="number-of-instances-and-nodes"></a>インスタンスとノードの数
 
-SQL Server on Linux の主な違いがありますがあることですのみ SQL Server の Linux サーバーごとの 1 つインストールします。 インストールを行うことには、インスタンスが呼び出されます。 つまり、Windows Server フェールオーバー クラスター (WSFC) ごとに最大で 25 個の Fci をサポートする Windows サーバーとは異なり Linux ベースの FCI がのみ 1 つのインスタンス。 この 1 つのインスタンスが既定のインスタンスです。Linux 上の名前付きインスタンスの概念はありません。 
+SQL Server on Linux で 1 つの重要な違いは、あることにのみ SQL Server の Linux サーバーあたり 1 回のインストールです。 インストールには、インスタンスが呼び出されます。 これは、Windows Server フェールオーバー クラスター (WSFC) ごとに最大 25 の Fci をサポートする Windows Server とは異なり、Linux ベースの FCI のみがされる 1 つのインスタンスを意味します。 この 1 つのインスタンスも既定のインスタンス。Linux 上の名前付きインスタンスの概念はありません。 
 
-ペース クラスターしか持つことが 16 ノードまで Corosync が関係しているときに 1 つの FCI が最大 16 台のサーバーにまたがることができます。 SQL Server の Standard Edition を使用して実装 FCI は、ペース クラスターに最大 16 ノードがある場合でも、クラスターに最大 2 つのノードをサポートしています。
+Pacemaker クラスターしか持つことが最大 16 ノード Corosync が関係しているときに、1 つの FCI が最大 16 台のサーバーにまたがることができます。 SQL Server の Standard Edition で実装される、FCI は、Pacemaker クラスターに最大 16 ノードがある場合でも、クラスターに最大 2 つのノードをサポートしています。
 
-SQL Server FCI で SQL Server のインスタンスが 1 つのノードか一方でアクティブです。
+SQL Server FCI では、SQL Server インスタンスが 1 つのノードまたは他のアクティブです。
 
 ## <a name="ip-address-and-name"></a>IP アドレスと名前
-Linux ペース クラスターでは、各 SQL Server の FCI は、独自の一意の IP アドレスと名前が必要です。 FCI の構成は、複数のサブネットにまたがっている場合、1 つの IP アドレスがサブネットごとに必要になります。 一意の名前と IP アドレスは、アプリケーションとエンドユーザーする必要はありません、ペース クラスターの基になるサーバーが決まっているように、FCI のアクセスに使用されます。
+Linux の Pacemaker クラスターの各 SQL Server FCI には、独自の一意の IP アドレスと名前が必要があります。 FCI の構成は、複数のサブネットにまたがっている場合、1 つの IP アドレスがサブネットごとに必要になります。 一意の名前と IP アドレスを使用して、FCI にアクセスすると、アプリケーションとエンドユーザーが、Pacemaker クラスターの基になるサーバーを把握する必要はありません。
 
-DNS で、FCI の名前は、ペース クラスターの作成を取得する FCI リソースの名前と同じにする必要があります。
-名前と IP アドレスの両方を DNS に登録する必要があります。
+DNS の FCI の名前、Pacemaker クラスターで作成される FCI リソースの名前と同じことがあります。
+名前と IP アドレスを DNS に登録する必要があります。
 
 ## <a name="shared-storage"></a>ストレージの共有
-すべての Fci では、Linux または Windows Server 上にあるかどうかなんらかの形式の共有記憶域が必要です。 この記憶域が、FCI をホストできる可能性のあるすべてのサーバーに提供されますが、1 台のサーバーのみは特定の時点で、FCI の記憶域を使用することができます。 Linux での共有記憶域に使用できるオプションは次のとおりです。
+Linux または Windows Server 上にあるかどうか、すべての Fci 共有記憶域のいくつかの形式が必要です。 このストレージは、FCI をホストできる可能性があるすべてのサーバーに表示されますが、1 台のサーバーは、特定の時点で、FCI の記憶域を使用することができます。 Linux での共有記憶域の使用可能なオプションがあります。
 
 - iSCSI
 - Network File System (NFS)
-- サーバー メッセージ ブロック (SMB) Windows Server、多少異なるオプションがあります。 Fci の Linux ベースのサポートされていない 1 つのオプションは、ローカル SQL Server の一時ワークスペースには、TempDB のノードになっているディスクを使用する機能です。
+- サーバー メッセージ ブロック (SMB) で Windows Server には多少異なるオプションがあります。 Linux ベースの Fci のサポートされていない 1 つのオプションは、SQL Server の一時ワークスペースには、TempDB のノードに対してローカルなディスクを使用する機能です。
 
-構成では、複数の場所にまたがる、1 つのデータ センターに格納されている情報同期する必要が、他のです。 フェールオーバーが発生した場合、FCI をオンラインにすることができ、同じにする、記憶域を表示します。 これを実現するがいくつかの外部メソッド レプリケーションに必要な記憶域、基になる記憶域のハードウェアまたはソフトウェア ベースの一部のユーティリティを使用して行うことがあるかどうか。 
+複数の場所にわたる構成で 1 つのデータ センターに格納されている必要がありますと同期、その他。 フェールオーバーが発生した場合、FCI をオンラインにすることになります、同じである記憶域が表示されます。 これを実現する必要があります何らかの外部ストレージ レプリケーションの場合は、基になる記憶域ハードウェアまたはソフトウェア ベースのいくつかのユーティリティを使用して、そのかどうか。 
 
 >[!NOTE]
->SQL Server 2017、直接サーバーに提示する、このようなディスクを使用する Linux ベースの展開を XFS または EXT4 でフォーマットしなければなりません。 他のファイル システムは現在サポートされていません。 ここで、すべての変更が反映されます。
+>SQL Server 2017 では、このようなサーバーに直接表示されるディスクを使用して Linux ベースの展開をか EXT4、XFS でフォーマットしなければなりません。 他のファイル システムは現在サポートされていません。 ここで、すべての変更が反映されます。
 
-共有記憶域を表すためのプロセスは、別のサポートされているメソッドに対して同じです。
+共有記憶域を表示するためのプロセスは、さまざまなサポートされている方法についても同じです。
 
 - 共有記憶域を構成します。
-- FCI のペース クラスターのノードとして機能するサーバーにフォルダーと記憶域をマウントします。
-- 必要に応じて、SQL Server システム データベースを共有記憶域に移動します。
+- FCI の Pacemaker クラスターのノードとして機能するサーバーにフォルダーとして、記憶域をマウントします。
+- 必要に応じて、SQL Server のシステム データベースを共有記憶域に移動します。
 - 共有記憶域に接続されている SQL Server は、各サーバーからテスト
 
-SQL Server on Linux での 1 つの主な違いは、既定のユーザー データとログ ファイルの場所を構成するときに、システム データベース必要があります常が存在するで`/var/opt/mssql/data`です。 Windows server では、TempDB を含めて、システム データベースを移動する機能です。 このファクトは、FCI の再生にどのように共有記憶域が構成されています。
+SQL Server on Linux での 1 つの大きな違い既定ユーザー データとログ ファイルの場所を構成するときに、システム データベース必要があります常に存在しないことですで`/var/opt/mssql/data`します。 Windows Server では、TempDB も含め、システム データベースを移動する機能です。 この事実は、fci の再生にどのように共有記憶域が構成されています。
 
-非システム データベースの既定のパスを変更できる、`mssql-conf`ユーティリティです。 既定値を変更する方法について[既定データまたはログ ディレクトリの場所の変更](sql-server-linux-configure-mssql-conf.md#datadir)です。 格納することも SQL Server データ ファイルとトランザクションの他の場所で、既定の場所ではない場合でも、適切なセキュリティがある限り、場所は、指定する必要があります。
+使用してシステム以外のデータベースの既定のパスを変更することができます、`mssql-conf`ユーティリティ。 既定値を変更する方法について[既定データまたはログ ディレクトリの場所を変更する](sql-server-linux-configure-mssql-conf.md#datadir)します。 格納することも SQL Server データおよびトランザクションの他の場所で、既定の場所でない場合でも、適切なセキュリティがある限り、場所は、記述する必要があります。
 
-次のトピックでは、Linux ベースの SQL Server の FCI のサポートされている記憶域の種類を構成する方法について説明します。
+次のトピックでは、Linux ベースの SQL Server FCI 用にサポートされているストレージの種類を構成する方法について説明します。
 
-- [フェールオーバー クラスター インスタンス - iSCSI: Linux 上の SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [フェールオーバー クラスター インスタンス: NFS - Linux に SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [フェールオーバー クラスター インスタンス: SMB - Linux に SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [フェールオーバー クラスター インスタンスの iSCSI - SQL Server on Linux を構成します。](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [NFS - SQL Server on Linux を構成するには、フェールオーバー クラスター インスタンス。](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [フェールオーバー クラスター インスタンス - SMB - SQL Server on Linux の構成します。](sql-server-linux-shared-disk-cluster-configure-smb.md)

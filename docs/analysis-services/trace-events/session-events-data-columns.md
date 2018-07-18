@@ -1,5 +1,5 @@
 ---
-title: セッション Events Data Columns |Microsoft ドキュメント
+title: セッション イベントのデータ列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e3a0287edc3081273f2a3c3075f355e9b2b2493
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044346"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007244"
 ---
 # <a name="session-events-data-columns"></a>Session イベントのデータ列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "34044346"
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
 |RequestProperties|45|9|XMLA 要求のプロパティ。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [セキュリティ監査イベント カテゴリ](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

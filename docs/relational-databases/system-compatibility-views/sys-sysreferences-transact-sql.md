@@ -1,5 +1,5 @@
 ---
-title: sys.sysreferences (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sysreferences (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f708e89b4cc152e3f508c5eede3f95f1624148fa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225963"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981954"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33225963"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|FOREIGN KEY 制約の ID です。|  
 |**fkeyid**|**int**|参照しているテーブルの ID です。|  

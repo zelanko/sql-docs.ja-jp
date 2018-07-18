@@ -1,5 +1,5 @@
 ---
-title: Query 要素 (XMLA) |Microsoft ドキュメント
+title: Query 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 861f216ac263de32b9f2afc3e0fcd4e43b3dfb4a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576174"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984643"
 ---
 # <a name="query-element-xmla"></a>Query 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  内のクエリが含まれています、[クエリ](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)によって使用されるコレクション、 [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)使用法に基づく最適化中にコマンド。  
+  内でクエリを含む、[クエリ](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)によって使用されるコレクション、 [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)使用法に基づく最適化中にコマンド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34576174"
 |既定値|なし|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34576174"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- **DesignAggregations** コマンドは、コマンドの **Query** コレクション内に 1 つ以上の **Queries** 要素を含めることにより、使用法に基づく最適化をサポートしています。 各 **Query** 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 独自の目標クエリを指定できますか、またはクエリ ログには、Analysis Services のインスタンスによって格納された情報を使用するには、最も頻繁に使用するクエリに関する情報を取得します。  
+ **DesignAggregations** コマンドは、コマンドの **Query** コレクション内に 1 つ以上の **Queries** 要素を含めることにより、使用法に基づく最適化をサポートしています。 各 **Query** 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 目標クエリを指定するか、またはクエリ ログ内の Analysis Services のインスタンスが格納されている情報を使用するには、最も頻繁に使用するクエリに関する情報を取得します。  
   
- 繰り返しの集計をデザインする場合のみがある、最初に目標クエリを渡す**DesignAggregations**コマンドのため、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスがこれらの目標クエリを保存し、後続中にこれらのクエリを使用**DesignAggregations**コマンド。 反復処理の最初の **DesignAggregations** コマンドで目標クエリを渡した場合、後続の **DesignAggregations** コマンドの **Queries** プロパティに目標クエリが含まれていると、エラーが発生します。  
+ 最初の目標クエリを渡すが繰り返し集計をデザインする場合のみ**DesignAggregations**コマンドのため、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスは、これらの目標クエリを保存し、後続の中にこれらのクエリを使用**DesignAggregations**コマンド。 反復処理の最初の **DesignAggregations** コマンドで目標クエリを渡した場合、後続の **DesignAggregations** コマンドの **Queries** プロパティに目標クエリが含まれていると、エラーが発生します。  
   
  **Query** 要素には、以下の引数を含むコンマ区切りの値が含まれます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34576174"
  たとえば文字列 "011" は、3 つの属性を持つディメンションを処理するクエリの中に、2 番目と 3 番目の属性が含まれることを示しています。  
   
 > [!NOTE]  
->  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外される属性の詳細については、次を参照してください。[プロパティ (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)です。  
+>  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外された属性の詳細については、次を参照してください。[プロパティ (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)します。  
   
  集計デザインを含むメジャー グループ内の各ディメンションは、 *Query* 要素の **Dataset** の値によって表されます。 *Dataset* の値の順序は、メジャー グループに含まれるディメンションの順序と一致している必要があります。  
   

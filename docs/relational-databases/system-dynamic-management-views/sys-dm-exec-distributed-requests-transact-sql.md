@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_distributed_requests (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_distributed_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7d61b26c1af6a588140cdf47308ee8f69ecd42b2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982544"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/23/2018
   
  セッションに基づいており、要求 ID、ユーザーことができますし、取得、実際の分散要求を実行する – sys.dm_exec_distributed_requests を使用して生成されました。 たとえば、正規 SQL および SQL テーブルの外部に関連するクエリに分解し、さまざまなステートメントおよび要求のさまざまなコンピューティング ノード間で実行します。 すべてのコンピューティング ノード間で分散の手順を追跡するために、'global' の実行 ID のそれぞれの 1 つの特定の要求と演算子に関連付けられている計算ノード上のすべての操作を追跡するために使用できるについて紹介します。  
   
-|列名|データ型|Description|範囲|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|このビューのキーです。 要求に関連付けられている一意の数値 id です。|システム内のすべての要求間で一意です。|  
 |execution_id|**nvarchar(32**|このクエリの実行に使用されたセッションに関連付けられた一意の数値 id です。||  
-|ステータス|**nvarchar(32**|要求の現在の状態。|'Pending' 'を承認する'、'AcquireSystemResources'、'初期化'、'プラン'、'解析'、'AquireResources'、'を実行している'、'キャンセルする'、'包括的な」は ' Failed'、「取り消し済み」です。|  
+|status|**nvarchar(32**|要求の現在の状態。|'Pending' 'を承認する'、'AcquireSystemResources'、'初期化'、'プラン'、'解析'、'AquireResources'、'を実行している'、'キャンセルする'、'包括的な」は ' Failed'、「取り消し済み」です。|  
 |error_id|**nvarchar(36)**|存在する場合は、要求に関連付けられているエラーの一意の id。|エラーが発生していない場合は、NULL に設定します。|  
 |start_time|**datetime**|要求の実行が開始された時刻。|キューに置かれた要求の場合は 0それ以外の場合、有効な datetime 以下に、現在の時刻。|  
 |end_time|**datetime**|エンジンが、要求のコンパイルを完了した時刻。|キューに置かれた、またはアクティブな要求の場合は nullそれ以外の場合、現在の時刻に以下の有効な datetime です。|  

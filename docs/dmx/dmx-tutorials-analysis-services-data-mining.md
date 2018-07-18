@@ -1,5 +1,5 @@
 ---
-title: DMX のチュートリアル (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: DMX のチュートリアル (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3d242236074c652f2210580f657d99e205f5ed6
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842205"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991076"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX のチュートリアル (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34842205"
  [多次元モデルのデータ アクセス&#40;Analysis Services - 多次元データ&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>参照  
- [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [基本的なデータ マイニング チュートリアル](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
   
   

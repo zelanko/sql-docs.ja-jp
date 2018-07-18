@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_unforce_plan (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_query_store_unforce_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13525b0f1c77a3c570f35f1a745b4402f6ef9cbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253980"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036160"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
-## <a name="permissions"></a>権限  
- 必要があります、 **EXECUTE** 、データベースに対する権限と**挿入**、**更新**、および**削除**クエリ ストアのカタログに対する権限表示モード。  
+## <a name="permissions"></a>アクセス許可  
+ 必要があります、 **EXECUTE** 、データベースに対する権限と**挿入**、**更新**、および**削除**クエリのストア カタログに対する権限表示モード。  
   
 ## <a name="examples"></a>使用例  
  次の例では、クエリのストアにクエリに関する情報を返します。  
@@ -82,7 +82,7 @@ EXEC sp_query_store_unforce_plan 3, 3;
   
 ## <a name="see-also"></a>参照  
  [sp_query_store_force_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [sp_query_store_remove_plan &#40;Transct SQL。&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [sp_query_store_remove_plan &#40;Transct SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   

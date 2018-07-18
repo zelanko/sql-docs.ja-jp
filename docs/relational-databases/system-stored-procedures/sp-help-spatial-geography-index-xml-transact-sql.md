@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_index_xml (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_spatial_geography_index_xml (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 13c388b03208c015ab8f0f6405b33b8ac3bd4a80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259079"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000714"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  に関する名前と指定された一連のプロパティの値を返します、 **geography**空間インデックスです。 インデックスのプロパティのコア セットまたはすべてのプロパティのどちらを返すかを選択できます。  
+  に関する名前と指定した一連のプロパティの値を返します、 **geography**空間インデックスです。 インデックスのプロパティのコア セットまたはすべてのプロパティのどちらを返すかを選択できます。  
   
  結果は、選択したプロパティの名前と値を表示する XML フラグメントで返されます。  
   
@@ -50,19 +50,19 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引数  
- 参照してください[ストアド プロシージャの引数と空間インデックスのプロパティ](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)です。  
+ 参照してください[ストアド プロシージャの引数と空間インデックスのプロパティ](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)します。  
   
-## <a name="properties"></a>プロパティ  
- 参照してください[ストアド プロシージャの引数と空間インデックスのプロパティ](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)です。  
+## <a name="properties"></a>[プロパティ]  
+ 参照してください[ストアド プロシージャの引数と空間インデックスのプロパティ](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ユーザーには、プロシージャにアクセスするための PUBLIC ロールを割り当てる必要があります。 サーバーとオブジェクトに対する READ ACCESS 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="example"></a>例  
- 次の例で`sp_help_spatial_geography_index_xml`空間インデックスを調査する**SIndx_SpatialTable_geography_col2**テーブルで定義された**geography_col**で指定されたクエリ サンプルの**@qs**. この例では、選択したプロパティの名前と値を表示する XML フラグメントで、指定されたインデックスの主要プロパティを返します。  
+ 次の例では`sp_help_spatial_geography_index_xml`空間インデックスを調査する**SIndx_SpatialTable_geography_col2**テーブルで定義された**geography_col**で指定されたクエリ サンプルの**@qs**. この例では、選択したプロパティの名前と値を表示する XML フラグメントで、指定されたインデックスの主要プロパティを返します。  
   
  [XQuery](../../xquery/xquery-basics.md)結果セットに、特定のプロパティを返すことが実行されます。  
   
@@ -74,11 +74,11 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- ような[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)、このストアド プロシージャのプロパティに簡単にプログラムによるアクセスを提供する、 **geography**空間インデックスおよび XML の結果セットをレポートします。  
+ ような[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)、このストアド プロシージャのプロパティに簡単にプログラムによるアクセスを提供します、 **geography**空間インデックスおよび XML の結果セットをレポートします。  
   
- 境界ボックスの**geography**は、地球全体です。  
+ 境界ボックス、 **geography**は地球全体です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ## <a name="see-also"></a>参照  
  [空間インデックス ストアド プロシージャ](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

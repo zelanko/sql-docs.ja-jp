@@ -1,5 +1,5 @@
 ---
-title: SMO 名前空間 |Microsoft ドキュメント
+title: SMO 名前空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -22,25 +22,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 66e6dfd0bd563dfc43fa1bbb44c4042159f0608a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967407"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005956"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO オブジェクト モデルの名前空間
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) にはさまざまな名前空間があります。 それぞれの名前空間は、SMO 内の機能の各領域を表しています。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SMO アセンブリは、C:\Program files \microsoft SQL Server\130\SDK\Assemblies\ フォルダーに配置されます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SMO アセンブリは C:\Program files \microsoft SQL Server\130\SDK\Assemblies\ フォルダーにあります。  
   
 ## <a name="namespaces"></a>名前空間  
  SMO 名前空間は次のとおりです。  
   
-|クラス|関数|  
+|クラス|機能|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|インスタンス クラス、ユーティリティ クラス、およびプログラムで操作に使用される列挙体を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|<xref:Microsoft.SqlServer.Management.Smo>|インスタンス クラス、ユーティリティ クラス、およびプログラムで操作するために使用される列挙体を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |<xref:Microsoft.SqlServer.Management.Common>|接続クラスなど、レプリケーション管理オブジェクト (RMO) および SMO に共通のクラスが含まれています。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを表すクラスが含まれています。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|WMI プロバイダーを表すクラスが含まれています。|  

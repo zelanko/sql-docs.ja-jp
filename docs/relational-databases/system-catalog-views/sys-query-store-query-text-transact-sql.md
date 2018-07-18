@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_query_text (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.query_store_query_text (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,18 +27,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f619900c47a3797a033c4eb7c48dd7c423a8c53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181438"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985118"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   含まれています、[!INCLUDE[tsql](../../includes/tsql-md.md)]テキストとクエリの SQL ハンドル。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|主キー。|  
 |**query_sql_text**|**nvarchar(max)**|ユーザーから提供されるため、クエリの SQL テキスト。 ある空白文字、ヒント、およびコメントが含まれています。|  
@@ -46,8 +46,8 @@ ms.locfileid: "33181438"
 |**is_part_of_encrypted_module**|**bit**|クエリ テキストは、暗号化されたモジュールの一部です。|  
 |**has_restricted_text**|**bit**|クエリ テキストには、パスワードまたはその他の unmentionable 単語が含まれています。|  
   
-## <a name="permissions"></a>権限  
- 必要があります、 **VIEW DATABASE STATE**権限です。  
+## <a name="permissions"></a>アクセス許可  
+ 必要があります、 **VIEW DATABASE STATE**権限。  
   
 ## <a name="see-also"></a>参照  
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

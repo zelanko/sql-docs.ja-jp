@@ -1,5 +1,5 @@
 ---
-title: バリデート式 (XQuery) |Microsoft ドキュメント
+title: バリデート式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc8f8006679709e7ea8f9d73aed1f3757072ad53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076285"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036700"
 ---
 # <a name="validate-expressions-xquery"></a>バリデート式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  この実装では、**検証**式はサポートされていません。 XQuery 構築式の結果は常に型指定されません。 XQuery 式の結果を型指定しなければならない場合は、SQL の CAST 式を使用して、結果をキャスト、 **xml**任意のスキーマ コレクションでのデータ型。  
+  この実装で、**検証**式はサポートされていません。 XQuery 構築式の結果は常に型指定されません。 XQuery 式の結果の型を指定する必要がある場合に、SQL の CAST 式を使用して、結果をキャストする**xml**任意のスキーマ コレクションでのデータ型。  
   
 ## <a name="see-also"></a>参照  
  [パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   

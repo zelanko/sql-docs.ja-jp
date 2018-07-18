@@ -1,6 +1,6 @@
 ---
-title: データベース メールと電子メール アラートは、Linux 上の SQL エージェントの |Microsoft ドキュメント
-description: この記事の内容が Linux に SQL Server でデータベース メールと電子メール アラートを使用する方法について説明します
+title: データベース メールと電子メール アラートは、Linux 上の SQL エージェントの |Microsoft Docs
+description: この記事は、SQL Server on Linux でのデータベース メールと電子メール アラートを使用する方法を説明します
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585194"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984264"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>データベース メールと Linux 上の SQL エージェントによる電子メールのアラート
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>データベース メールと Linux 上の SQL エージェントと電子メール アラート
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-次の手順は、データベース メールをセットアップし、SQL Server エージェントで使用する方法を示します (**mssql server エージェント**) on Linux です。 
+次の手順は、データベース メールを設定し、SQL Server エージェントで使用する方法を説明 (**mssql server エージェント**) Linux 上。 
 
 ## <a name="1-enable-db-mail"></a>1.データベース メールを有効にします。
 
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  
 ## <a name="6-send-test-email"></a>6.テスト電子メールを送信します。
 > [!NOTE]
-> 電子メール クライアントに移動し、「クライアントを許可安全性の低いメールを送信する」を有効にする必要があります。 すべてのクライアントは、データベース メールを電子メール デーモンとして認識します。
+> 電子メール クライアントに移動し、"安全性が低いクライアント許可メールを送信します"を有効にする必要があります。 すべてのクライアントは、電子メール、デーモンとしてデータベース メールを認識します。
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -95,7 +95,7 @@ GO
 ```
 
 ## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7.Mssql conf または環境変数を使用してデータベース メール プロファイルの設定
-Mssql conf ユーティリティまたは環境変数を使用すると、データベース メール プロファイルを登録します。 この場合、既定のプロファイルをとしましょう。
+Mssql conf ユーティリティまたは環境変数を使用すると、データベース メール プロファイルを登録します。 この場合、既定のプロファイルがましょう。
 
 ```bash
 # via mssql-conf
@@ -104,7 +104,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8.SQLAgent ジョブの通知をオペレーターを設定します。 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8.SQLAgent ジョブ通知のオペレーターを設定します。 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -126,4 +126,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>次のステップ
-SQL Server エージェントを使用して、作成、スケジュール、およびジョブを実行する方法の詳細については、次を参照してください。 [Linux に SQL Server エージェント ジョブを実行](sql-server-linux-run-sql-server-agent-job.md)です。
+SQL Server エージェントを使用して、作成、スケジュール、およびジョブを実行する方法の詳細については、次を参照してください。 [Linux 上の SQL Server エージェント ジョブの実行](sql-server-linux-run-sql-server-agent-job.md)します。

@@ -1,5 +1,5 @@
 ---
-title: sys.resource_governor_external_resource_pools (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.resource_governor_external_resource_pools (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,28 +24,28 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b5681bfb81bfc4b18a0052f5ce397973ae90688f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181288"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985155"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>sys.resource_governor_external_resource_pools (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-格納されている外部リソース プール構成を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ビューの各行によってプールの構成が決定されます。
+格納されている外部リソース プールの構成を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ビューの各行によってプールの構成が決定されます。
   
-|列名|データ型|Description|
+|列名|データ型|説明|
 |-----------------|---------------|-----------------|
 |pool_id|**int**|リソース プールの一意の ID。 NULL 値は許可されません。<br /><br /> **注:** 今後の名前を変更できます。|
-|name|**sysname**|リソース プールの名前です。 NULL 値は許可されません。|
+|NAME|**sysname**|リソース プールの名前。 NULL 値は許可されません。|
 |max_cpu_percent|**int**|CPU の競合がある場合にリソース プールのすべての要求に許可される最大平均 CPU 帯域幅。 NULL 値は許可されません。|
 |max_memory_percent|**int**|このリソース プールの要求で使用できる合計サーバー メモリの割合。 NULL 値は許可されません。 効果的な最大値はプールの最小値によって異なります。 たとえば、max_memory_percent を 100 に設定することは可能ですが、効果的な最大値はそれより小さな値になります。|
 |max_processes|**int**|同時実行の外部プロセスの最大数。 既定値は 0 で、制限がないことを示します。 NULL 値は許可されません。|
 |version|**bigint**|内部バージョン番号です。|
   
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
 VIEW SERVER STATE 権限が必要です。
 

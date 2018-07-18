@@ -1,5 +1,5 @@
 ---
-title: StructureColumn (DMX) |Microsoft ドキュメント
+title: StructureColumn (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842625"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992412"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,18 +33,18 @@ StructureColumn('structure column name')
  ケースまたは入れ子になったテーブルのマイニング構造列の名前。  
   
 ## <a name="result-type"></a>結果の種類  
- 返される型で参照されている列の型によって異なります、\<構造の列名 > のパラメーターです。 たとえば、参照されるマイニング構造列がスカラー値を含む場合、関数はスカラー値を返します。  
+ 返される型で参照されている列の型によって異なります、\<構造の列名 > パラメーター。 たとえば、参照されるマイニング構造列がスカラー値を含む場合、関数はスカラー値を返します。  
   
  参照されるマイニング構造列が入れ子になったテーブルである場合、関数はテーブル値を返します。 返されたテーブル値は、サブ SELECT ステートメントの FROM 句に使用できます。  
   
 ## <a name="remarks"></a>コメント  
  この関数はポリモーフィックで、SELECT 式リスト、WHERE 条件式、ORDER BY 式など、式を使用できるステートメント内の任意の場所で使用できます。  
   
- マイニング構造内の列の名前は文字列値でありそのため、単一引用符で囲む必要があります。 たとえば、 `StructureColumn('`**列 1**`')`です。 同じ名前を持つ列が複数ある場合、名前は SELECT ステートメントが含まれるコンテキスト内で解決されます。  
+ マイニング構造内の列の名前は文字列値とそのため、単一引用符で囲む必要があります。 たとえば、 `StructureColumn('`**列 1**`')`。 同じ名前を持つ列が複数ある場合、名前は SELECT ステートメントが含まれるコンテキスト内で解決されます。  
   
  使用してクエリから返された結果、 **StructureColumn**関数は、モデルに対するフィルターの存在を受けます。 つまり、モデル フィルターは、マイニング モデルに含まれるケースを制御します。 したがって、構造列上のクエリは、マイニング モデルに使用されたケースのみを返します。 ケース テーブルと入れ子になったテーブルの両方に対するマイニング モデル フィルターの影響を示すコード例については、このトピックの「例」のセクションを参照してください。  
   
- DMX SELECT ステートメントでこの関数を使用する方法の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;です。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)または[SELECT FROM&#60;構造&#62;です。ケース](../dmx/select-from-structure-cases.md)です。  
+ DMX SELECT ステートメントでこの関数を使用する方法の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)または[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
   
 ## <a name="error-messages"></a>エラー メッセージ  
  次のセキュリティ エラーは、親のマイニング構造に対するドリルスルー権限がユーザーに与えられていない場合に発生します。  
@@ -56,7 +56,7 @@ StructureColumn('structure column name')
  '%{structure-column-name/}' マイニング構造列が '%{structure/}' 親マイニング構造内に見つかりませんでした (現在のコンテキスト (line %{line/}、列 %{column/}))。  
   
 ## <a name="examples"></a>使用例  
- ここに示す例では、次のマイニング構造を使用します。 マイニング構造に 2 つの入れ子になったテーブル列が含まれているメモ`Products`と`Hobbies`です。 `Hobbies` 列の入れ子になったテーブルには、入れ子になったテーブルのキーとして使用される単一列があります。 入れ子になったテーブルで、`Products`列は、複雑な入れ子になったテーブル キー列と入力に使用されるその他の列の両方があります。 次の例は、モデルですべての列を使用しない可能性があっても、多くの異なる列を組み込んでデータ マイニング構造を設計する方法を示しています。 これらの列の一部は、モデル レベルでパターンの汎用化に役立たない可能性がありますが、ドリルスルーには非常に有効です。  
+ ここに示す例では、次のマイニング構造を使用します。 マイニング構造に 2 つの入れ子になったテーブル列が含まれているメモ`Products`と`Hobbies`します。 `Hobbies` 列の入れ子になったテーブルには、入れ子になったテーブルのキーとして使用される単一列があります。 入れ子になったテーブル、`Products`列がキー列と入力に使用されるその他の列の両方を持つ複雑な入れ子になったテーブル。 次の例は、モデルですべての列を使用しない可能性があっても、多くの異なる列を組み込んでデータ マイニング構造を設計する方法を示しています。 これらの列の一部は、モデル レベルでパターンの汎用化に役立たない可能性がありますが、ドリルスルーには非常に有効です。  
   
 ```  
 CREATE MINING STRUCTURE [MyStructure]   
@@ -102,10 +102,10 @@ SELECT CustomerName, Age, StructureColumn(‘Occupation’) FROM MyModel.CASES
 WHERE Age > 30  
 ```  
   
- 年齢が 30 歳を超える顧客にケースを制限する行のフィルター処理は、モデルのレベルで実行されます。 したがって、この式は、構造データに含まれているが、モデルから使用されないケースを返しません。 フィルター条件は、モデルの作成に使用されるため (`EXISTS (Products)`) ケースを制限する製品を購入した顧客のみ、ある可能性があります構造内のこのクエリによって返されないケースです。  
+ 年齢が 30 歳を超える顧客にケースを制限する行のフィルター処理は、モデルのレベルで実行されます。 したがって、この式は、構造データに含まれているが、モデルから使用されないケースを返しません。 フィルター条件がモデルの作成に使用されるため (`EXISTS (Products)`) 場合の制限に製品を購入した顧客のみである可能性があります構造内のこのクエリによって返されないケース。  
   
 ### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>サンプル クエリ 2: 構造列にフィルターを適用する  
- 次のサンプル クエリは、モデルの列を返すだけでなく`CustomerName`と`Age`、テーブルと入れ子になったテーブル`Products`も、列の値を返しますが、`Quantity`入れ子になったテーブルではないモデルの一部です。  
+ 次のサンプル クエリは、モデルの列を返すだけでなく`CustomerName`と`Age`、入れ子になったテーブルと`Products`も、列の値を返しますが、`Quantity`入れ子になったテーブルの一部ではないモデルの。  
   
 ```  
 SELECT CustomerName, Age,  
@@ -113,10 +113,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn(‘Occupation’) = ‘Architect’  
 ```  
   
- この例では、フィルターが適用は、職業が Architect 顧客にケースを制限する構造の列に注意してください (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`)。 モデル フィルターの条件がケースに適用されるは、モデルの作成時に常に、ためには、少なくとも 1 つの条件を満たすケースのみ行が、`Products`テーブルがモデルのケースに含まれています。 したがって、両方のフィルターを入れ子になったテーブル`Products`とケース フィルター`(‘Occupation’)`適用されます。  
+ この例でフィルターが適用するは、職業が Architect の顧客にケースを制限する構造の列に注意してください (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`)。 モデル フィルターの条件がケースに適用されるは、モデルの作成時に常に、ために少なくとも 1 つの修飾を含むケースのみ行、`Products`テーブルは、モデルのケースに含まれています。 そのため、両方のフィルターを入れ子になったテーブル`Products`場合のフィルターと`(‘Occupation’)`適用されます。  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>サンプル クエリ 3: 入れ子になったテーブルから列を選択する  
- 次のサンプル クエリでは、トレーニング ケースとして使用された顧客の名前がモデルから返されます。 顧客ごとに、購入の詳細を含む入れ子になったテーブルも返されます。 モデルに含まれていますが、`ProductName`列、モデルの値を使用していない、`ProductName`列です。 モデルだけが確認では、通常、製品を購入したかどうか (`NOT``OnSale`) 価格。 このクエリでは、製品名だけでなく、モデルには含まれていない購入した数量も返されます。  
+ 次のサンプル クエリでは、トレーニング ケースとして使用された顧客の名前がモデルから返されます。 顧客ごとに、購入の詳細を含む入れ子になったテーブルも返されます。 モデルが含まれますが、`ProductName`列、モデルの値を使用していない、`ProductName`列。 モデルだけが確認では、通常、製品を購入したかどうか (`NOT``OnSale`) 価格。 このクエリでは、製品名だけでなく、モデルには含まれていない購入した数量も返されます。  
   
 ```  
 SELECT CustomerName,    
