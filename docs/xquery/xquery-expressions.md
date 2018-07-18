@@ -1,5 +1,5 @@
 ---
-title: XQuery 式 |Microsoft ドキュメント
+title: XQuery 式 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,16 +23,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3858da8849775173d77bdb6db0aa5ac3cbd183e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077369"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030360"
 ---
 # <a name="xquery-expressions"></a>XQuery 式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 式を説明するトピックです。  
+  XQuery 式を説明するトピック。  
   
 
  [一次式&#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "33077369"
  [パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
  XQuery パス式について説明します。 XQuery パス式では、ドキュメント内の要素、属性、テキストなど、ノードの位置が特定されます。  
   
- [式のシーケンス&#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
+ [シーケンス式&#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
  数字のシーケンスを操作する XQuery 演算子について説明します。  
   
  [算術式&#40;XQuery&#41;](../xquery/arithmetic-expressions-xquery.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "33077369"
  XQuery でサポートされる比較式について説明します。 一般比較式、値比較式、ノード比較式、およびノード型比較式がサポートされます。  
   
  [論理式&#40;XQuery&#41;](../xquery/logical-expressions-xquery.md)  
- XQuery でサポートされる論理を説明**と**と**または**演算子。  
+ XQuery でサポートされる論理を説明します。**と**と**または**演算子。  
   
  [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
  クエリ内に XML を作成できるようにする XQuery コンストラクターについて説明します。  
@@ -59,11 +59,11 @@ ms.locfileid: "33077369"
  [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
  FLOWR 繰り返し構文について説明します。 FLOWR は FOR、LET、WHERE、ORDER BY、および RETURN を表します。 LET はサポートされていません。  
   
- [順序付けし、式の順序なし&#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
- XQuery 操作の並べ替えモードについて説明します。 既定では、順序付けのモードに設定**注文**です。  
+ [順序付けられ、式を順不同&#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
+ XQuery 操作の並べ替えモードについて説明します。 既定では、順序付けのモードに設定**注文**します。  
   
  [条件式&#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
- XQuery でサポートされる条件について説明します**if then else**ステートメントです。  
+ XQuery でサポートされる条件について説明します**if then else**ステートメント。  
   
  [量化式&#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
  XQuery における存在量化子および全称量化子について説明します。  

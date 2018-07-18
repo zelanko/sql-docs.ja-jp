@@ -1,5 +1,5 @@
 ---
-title: 空の関数 (XQuery) |Microsoft ドキュメント
+title: 空の関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f312276737406070eb07f371d5fb1c807b8e24b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077209"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040500"
 ---
-# <a name="functions-on-sequences---empty"></a>シーケンスの空の関数
+# <a name="functions-on-sequences---empty"></a>空のシーケンスの関数-
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  True の場合の値 *$arg*は空のシーケンス。 それ以外の場合は False を返します。  
+  True の場合の値 *$arg*は空のシーケンスです。 それ以外の場合は False を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,14 +46,14 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  アイテムのシーケンス。 シーケンスが空の場合、関数は True を返します。 それ以外の場合は False を返します。  
   
-## <a name="remarks"></a>解説  
- **Fn:exists()** 関数はサポートされていません。 別の方法として、 **not()** 関数を使用できます。  
+## <a name="remarks"></a>コメント  
+ **Fn:exists()** 関数がサポートされていません。 別の方法として、 **not()** 関数を使用できます。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. empty() XQuery 関数を使用した属性の有無の判断  
- Product Model 7 の製造プロセス内で、このクエリではないすべてのワーク センター拠点を返します。、 **MachineHours**属性。  
+ 製品モデル 7 の製造プロセスをこのクエリがないすべてのワーク センター拠点が返されます、 **MachineHours**属性。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -82,7 +82,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- 次、少し変更のクエリは、場合に、"NotFound"を返します、 **MachineHour**属性が存在しません。  
+ 以下、少し変更のクエリが場合、"NotFound"を返します、 **MachineHour**属性が存在しません。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  

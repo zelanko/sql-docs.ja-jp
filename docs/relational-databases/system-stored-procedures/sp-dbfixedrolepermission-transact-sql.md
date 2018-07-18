@@ -1,5 +1,5 @@
 ---
-title: sp_dbfixedrolepermission (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dbfixedrolepermission (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 32ca47ff848d735c9310d894eff46c94b0c8da92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239682"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037810"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**正しい情報が返されます[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]です。 出力がで実装された権限階層への変更を反映していない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 詳細については、次を参照してください。[権限&#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)です。  
+  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**正しい情報が返されます[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。 出力がで実装された権限の階層への変更を反映していない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。 詳細については、次を参照してください。[権限&#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -55,15 +55,15 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定データベース ロールの名前。|  
-|**アクセス許可**|**nvarchar (70)**|関連付けられた権限**DbFixedRole**|  
+|**権限**|**nvarchar (70)**|アクセス許可に関連付けられている**DbFixedRole**|  
   
-## <a name="remarks"></a>解説  
- 固定データベース ロールの一覧を表示するには実行**sp_helpdbfixedrole**です。 次の表は、固定データベース ロールを示しています。  
+## <a name="remarks"></a>コメント  
+ 固定データベース ロールの一覧を表示するには、実行**sp_helpdbfixedrole**します。 次の表は、固定データベース ロールを示しています。  
   
-|固定データベース ロール|Description|  
+|固定データベース ロール|説明|  
 |-------------------------|-----------------|  
 |**db_owner**|データベース所有者|  
 |**db_accessadmin**|データベース アクセス管理者|  
@@ -75,11 +75,11 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|データベース否定データ リーダー|  
 |**db_denydatawriter**|データベース否定データ ライター|  
   
- メンバー、 **db_owner**固定データベース ロールの他のすべての固定データベース ロールのアクセス許可があります。 固定サーバー ロールのアクセス許可を表示するには、実行**sp_srvrolepermission**です。  
+ メンバー、 **db_owner**固定データベース ロールには、その他のすべての固定データベース ロールの権限します。 固定サーバー ロールのアクセス許可を表示するには、実行**sp_srvrolepermission**します。  
   
- 結果セットが含まれています、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを実行して、データベース ロールのメンバーによって、実行できるその他の特別な操作です。  
+ 結果セットが含まれています、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを実行することができ、データベース ロールのメンバーが実行できるその他の特別な操作です。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -93,7 +93,7 @@ GO
 ## <a name="see-also"></a>参照  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember の各&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

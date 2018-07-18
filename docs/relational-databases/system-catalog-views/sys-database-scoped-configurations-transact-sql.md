@@ -1,5 +1,5 @@
 ---
-title: sys.database_scoped_configurations (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.database_scoped_configurations (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -24,31 +24,31 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 373d2933d362f565799518bfe1af516ad1943276
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172991"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989248"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   構成ごとに 1 行が含まれています。 
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**configuration_id**|**int**|構成オプションの ID です。|  
-|**name**|**nvarchar(60)**|構成オプションの名前です。 可能な構成については、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)です。|  
+|**configuration_id**|**int**|構成オプションの ID。|  
+|**name**|**nvarchar(60)**|構成オプションの名前。 可能な構成については、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)します。|  
 |**value**|**sqlvariant**|プライマリ レプリカの場合は、この構成オプションの設定値です。|  
-|**value_for_secondary**|**sqlvariant**|セカンダリ レプリカには、この構成オプションの設定値です。|  
-|**elevate_online**|**nvarchar(60)** |データベース スコープのインデックス操作、online オプションに既定の設定 |
-|**elevate_resumable**|nvarchar(60)|データベース スコープでのインデックス操作の再開可能なオプションの既定のセット| 
+|**value_for_secondary**|**sqlvariant**|セカンダリ レプリカの場合は、この構成オプションの設定値です。|  
+|**elevate_online**|**nvarchar(60)** |Db オンライン インデックス操作のオプションの既定のセットのスコープ |
+|**elevate_resumable**|nvarchar(60)|Db スコープのインデックス操作の再開可能なオプションの既定のセット| 
   
-##  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> Permissions  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="remarks"></a>解説  
- 値として NULL が返される場合**value_for_secondary**、これには、セカンダリがプライマリに設定されていることを意味します。  
+## <a name="remarks"></a>コメント  
+ 値として NULL が返される**value_for_secondary**、これは、セカンダリがプライマリに設定されていることを意味します。  
  
  データベース スコープ構成設定はデータベースで継承されます。 つまり、特定のデータベースが復元されたり、アタッチされたりしたとき、既存の構成設定が残ります。
   

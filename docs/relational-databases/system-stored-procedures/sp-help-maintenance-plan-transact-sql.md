@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260628"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979054"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +50,17 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ## <a name="arguments"></a>引数  
  [  **@plan_id =**] **'***plan_id***'**  
- メンテナンス プランのプラン ID を指定します。 *plan_id*は**UNIQUEIDENTIFIER**です。 既定値は NULL です。  
+ メンテナンス プランのプラン ID を指定します。 *plan_id*は**UNIQUEIDENTIFIER**します。 既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
   
 ## <a name="result-sets"></a>結果セット  
- 場合*plan_id*が指定されている**sp_help_maintenance_plan**は 3 つのテーブルを返します。 プラン、データベース、およびジョブです。  
+ 場合*plan_id*が指定されている**sp_help_maintenance_plan**は 3 つのテーブルを返します: プラン、データベース、およびジョブ。  
   
 ### <a name="plan-table"></a>Plan テーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|メンテナンス プランの ID|  
 |**plan_name**|**sysname**|メンテナンス プランの名前|  
@@ -76,21 +76,21 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>Database テーブル  
   
-|列名|Description|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**database_name**|メンテナンス プランに関連付けられているすべてのデータベースの名前。 *database_name* は **sysname** です。|  
   
 ### <a name="job-table"></a>Job テーブル  
   
-|列名|Description|  
+|列名|説明|  
 |-----------------|-----------------|  
-|**job_id**|メンテナンス プランに関連付けられているすべてのジョブの ID。 *job_id*は**uniqueidentifier**です。|  
+|**job_id**|メンテナンス プランに関連付けられているすべてのジョブの ID。 *job_id*は**uniqueidentifier**します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_maintenance_plan**では、 **msdb**データベース。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_help_maintenance_plan**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_help_maintenance_plan**します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、メンテナンス プラン FAD6F2AB-3571-11D3-9D4A-00C04FB925FC に関する詳細情報を返します。  

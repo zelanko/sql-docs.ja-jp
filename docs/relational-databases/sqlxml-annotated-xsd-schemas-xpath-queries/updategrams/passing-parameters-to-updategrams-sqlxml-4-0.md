@@ -1,5 +1,5 @@
 ---
-title: アップデート グラム (SQLXML 4.0) にパラメーターを渡す |Microsoft ドキュメント
+title: (SQLXML 4.0) アップデート グラムにパラメーターを渡す |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,26 +23,27 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d89d8d78b2d9f2439711756ae97f5fae5220724d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035473"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートにパラメーターを渡すの詳細については、次を参照してください。[アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)です。  
+  アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートに渡すパラメーターの詳細については、次を参照してください。[アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)します。  
   
- アップデートグラムでは、パラメーター値として NULL を渡すことができます。 指定する NULL パラメーター値を渡す、 **nullvalue**属性。 割り当てられている値、 **nullvalue**属性は、パラメーターの値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
+ アップデートグラムでは、パラメーター値として NULL を渡すことができます。 指定した、NULL パラメーターの値を渡すため、 **nullvalue**属性。 割り当てられている値、 **nullvalue**属性は、パラメーター値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
   
 > [!NOTE]  
->  **\<Sql:header >** と **\<updg:header >** を指定する必要があります、 **nullvalue**として修飾されていない以外の一方で、 **\<updg:sync >** を指定する、 **nullvalue**として修飾 (たとえば、 **updg:nullvalue**)。  
+>  **\<Sql:header >** と **\<updg:header >**、指定する必要があります、 **nullvalue**として修飾されていない一方で、  **。\<updg:sync >** を指定する、 **nullvalue**として修飾 (たとえば、 **updg:nullvalue**)。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要がある[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
+ 次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要があります[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
- アップデート グラムの例を使用する前に、次の点に注意します。  
+ アップデート グラムの例を使用する前に、次のことを確認してください。  
   
--   例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムの注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
+-   例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. アップデートグラムにパラメーターを渡す  
  この例では、アップデートグラムで HumanResources.Shift テーブル内の従業員の姓を変更します。 アップデートグラムには、勤務時間を一意に識別する ShiftID と、Name の 2 つのパラメーターが渡されます。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  上のアップデートグラムをメモ帳にコピーし、UpdategramWithParameters.xml としてファイルに保存します。  
   
-2.  内で SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を準備[SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)後に次の行を追加することによって、アップデート グラムを実行する、 `cmd.Properties("Output Stream").Value = outStream`:  
+2.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を準備する[SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)後に次の行を追加することで、アップデート グラムを実行する、 `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  
@@ -103,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  上のアップデートグラムをメモ帳にコピーし、UpdategramPassingNullvalues.xml としてファイルに保存します。  
   
-2.  内で SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を準備[SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)後に次の行を追加することによって、アップデート グラムを実行する、 `cmd.Properties("Output Stream").Value = outStream`:  
+2.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を準備する[SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)後に次の行を追加することで、アップデート グラムを実行する、 `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  

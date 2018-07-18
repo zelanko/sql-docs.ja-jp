@@ -1,5 +1,5 @@
 ---
-title: 地理的レプリケーション動的管理ビューおよび関数 (Azure SQL データベース) |Microsoft ドキュメント
+title: 地理的レプリケーション動的管理ビューおよび関数 (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql
@@ -23,10 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 76e405d57c5cc47b15af7a8943c506b04c09c19c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981664"
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>地理的レプリケーション動的管理ビューおよび関数 (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/23/2018
   
 |||  
 |-|-|  
-|[sys.geo_replication_links &#40;Azure SQL データベース&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)|[sys.dm_geo_replication_link_status &#40;Azure SQL データベース&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)|  
-|[sys.dm_operation_status &#40;Azure SQL データベース&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)|[sys.dm_continuous_copy_status &#40;Azure SQL データベース&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)|  
+|[sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)|[sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)|  
+|[sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)|[sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)|  
   
   

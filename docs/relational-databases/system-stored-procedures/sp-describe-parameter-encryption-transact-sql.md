@@ -1,5 +1,5 @@
 ---
-title: sp_describe_parameter_encryption (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_describe_parameter_encryption (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260455"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974497"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  指定された分析[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントとパラメーターは、Always Encrypted 機能を使用して保護されているデータベース列に対応するパラメーターを決定します。 暗号化された列に対応するパラメーターの暗号化メタデータを返します。  
+  指定された分析[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントとパラメーターは、パラメーターは、Always Encrypted 機能を使用して保護されているデータベース列に対応を判断します。 暗号化された列に対応するパラメーターの暗号化メタデータを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,53 +46,53 @@ sp_describe_parameter_encryption
   
 ## <a name="arguments"></a>引数  
  [ @tsql =] ' Transact SQL_batch'  
- 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 Nvarchar (n) または nvarchar (max)、transact SQL_batch 可能性があります。  
+ 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 Nvarchar (n) または nvarchar (max)、transact SQL_batch 可能性があります。  
   
- [ @params =] N'parameters'  
+ [ @params =] 'N'parameters  
  *@params* これは、sp_executesql と同様に、TRANSACT-SQL バッチのパラメーターの宣言文字列を提供します。 パラメーターには、nvarchar (n) または nvarchar (max) があります。  
   
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定する各パラメーターを定義する必要があります *@params*です。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない*@params*は必要ありません。 このパラメーターの既定値は NULL はします。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定されたすべてのパラメーターを定義する必要があります *@params*します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない*@params*は必要ありません。 NULL は、このパラメーターの既定値です。  
   
 ## <a name="return-value"></a>戻り値  
- 0 は成功を示します。 発生したエラーを示す他の何らかとします。  
+ 0 は成功を示します。 その他は、エラーを示します。  
   
 ## <a name="result-sets"></a>結果セット  
- **sp_describe_parameter_encryption** 2 つの結果セットを返します。  
+ **sp_describe_parameter_encryption** 2 つの結果セットが返されます。  
   
--   結果セットのデータベースの列の指定されたパラメーター用に構成された暗号化キーを記述する[!INCLUDE[tsql](../../includes/tsql-md.md)]にステートメントが対応しています。  
+-   結果セットは、データベース列の指定したパラメーター用に構成された暗号化キーを記述する[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントに対応しています。  
   
--   結果セットを記述する方法の特定のパラメーターを暗号化する必要があります。 この結果は、最初の結果セットで説明するキーの参照を設定します。  
+-   結果セットをどのように特定のパラメーターの記述を暗号化する必要があります。 この結果は、最初の結果セットで説明するキーの参照を設定します。  
   
- 最初の結果セットの各行には、キーのペアがについて説明します暗号化された列暗号化キーとその対応する列マスター _ キー。  
+ 最初の結果セットの各行には、キーのペアがについて説明します暗号化された列暗号化キーとその対応する列のマスター _ キー。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|結果セットの行の id。|  
-|**database_id**|**int**|データベースの id。|  
-|**column_encryption_key_id**|**int**|列暗号化キーの id。メモ: この id には、行、 [sys.column_encryption_keys &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)カタログ ビューです。|  
-|**column_encryption_key_version**|**int**|将来の使用のために予約されています。 現時点では、1 を常に含まれています。|  
-|**column_encryption_key_metadata_version**|**binary(8)**|列暗号化キーの作成日時を表すタイムスタンプです。|  
+|**database_id**|**int**|データベース id。|  
+|**column_encryption_key_id**|**int**|列暗号化キーの id。注: この id は内の行を表します、 [sys.column_encryption_keys &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)カタログ ビューです。|  
+|**column_encryption_key_version**|**int**|将来使用するために予約されています。 現時点では、1 を常に含まれています。|  
+|**column_encryption_key_metadata_version**|**binary(8)**|列暗号化キーの作成時刻を表すタイムスタンプです。|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|列暗号化キーの暗号化された値。|  
-|**column_master_key_store_provider_name**|**sysname**|列暗号化キーの暗号化された値を生成するために使用された列マスター_キーを含むキー ストアのプロバイダーの名前。|  
+|**column_master_key_store_provider_name**|**sysname**|列暗号化キーの暗号化された値を生成するために使用された列マスター_キーを含むキー ストア プロバイダーの名前。|  
 |**column_master_key_path**|**nvarchar (4000)**|列暗号化キーの暗号化された値を生成するために使用された列マスター_キーのキーのパス。|  
 |**column_encryption_key_encryption_algorithm_name**|**sysname**|列暗号化キーの暗号化値を生成するために使用される暗号化アルゴリズムの名前。|  
   
- 2 番目の結果セットの各行には、1 つのパラメーター暗号化メタデータが含まれています。  
+ 2 つ目の結果セットの各行には、1 つのパラメーターの暗号化メタデータが含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**parameter_ordinal**|**int**|結果セット内の行の id です。|  
+|**parameter_ordinal**|**int**|結果セット内の行の id。|  
 |**parameter_name**|**sysname**|指定されたパラメーターのいずれかの名前、 *@params*引数。|  
-|**column_encryption_algorithm**|**tinyint**|パラメーターの列に対して構成されている暗号化アルゴリズムを示すコードに対応します。 現在サポートされている値: 2 **AEAD_AES_256_CBC_HMAC_SHA_256**です。|  
-|**column_encryption_type**|**tinyint**|パラメーターの列に対して構成されている暗号化の種類を示すコードに対応します。 サポートされる値は次のとおりです。<br /><br /> 0-プレーン テキスト (列は暗号化されない)<br /><br /> 1 – ランダムな暗号化<br /><br /> 2 – 明確な暗号化します。|  
-|**column_encryption_key_ordinal**|**int**|最初の結果の行のコードを設定します。 参照先の行、列に対して構成された列暗号化キーの説明、パラメーターに対応しています。|  
+|**column_encryption_algorithm**|**tinyint**|パラメーターの列に対して構成されている暗号化アルゴリズムを示すコードに対応します。 現在サポートされている値: 2 **AEAD_AES_256_CBC_HMAC_SHA_256**します。|  
+|**column_encryption_type**|**tinyint**|パラメーターの列に対して構成されている暗号化の種類を示すコードに対応します。 サポートされている値は次のとおりです。<br /><br /> 0 – プレーン テキスト (列は暗号化されません)<br /><br /> 1 – ランダムな暗号化<br /><br /> 2 – 明確な暗号化します。|  
+|**column_encryption_key_ordinal**|**int**|最初の結果内の行のコードを設定します。 参照先の行、列に対して構成された列暗号化キーの説明、パラメーターに対応しています。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|型の正規化アルゴリズムのバージョン番号。|  
   
-## <a name="remarks"></a>解説  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Always Encrypted をサポートする、クライアント ドライバーが自動的に呼び出します**sp_describe_parameter_encryption**アプリケーションによって発行された、パラメーター化クエリ用の暗号化メタデータを取得します。 後で、ドライバーは暗号化メタデータを使用して Always Encrypted で保護されたデータベース列に対応するパラメーターの値を暗号化し、プレーン テキストの暗号化された使用して、アプリケーションによって送信されるパラメーター値を置き換えますデータベース エンジンへのクエリを送信する前に、パラメーターの値  
+## <a name="remarks"></a>コメント  
+ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Always Encrypted をサポートしているクライアント ドライバーが自動的に呼び出します**sp_describe_parameter_encryption**パラメーター化されたクエリでは、アプリケーションによって発行された暗号化メタデータを取得します。 その後、ドライバーは暗号化メタデータを使用して Always Encrypted で保護されたデータベース列に対応するパラメーターの値を暗号化し、プレーン テキストの暗号化された使用して、アプリケーションによって送信されたパラメーター値に置換されます。データベース エンジンにクエリを送信する前に、パラメーターの値  
   
-## <a name="permissions"></a>権限  
- 必要な**VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**と**VIEW ANY COLUMN MASTER KEY DEFINITION**データベース内の権限です。  
+## <a name="permissions"></a>アクセス許可  
+ 必要な**VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**と**VIEW ANY COLUMN MASTER KEY DEFINITION**データベースのアクセス許可。  
   
 ## <a name="examples"></a>使用例  
   
@@ -156,7 +156,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |------------------------------------------------|-------------------------------|----------------------------------------------------------|  
 |MSSQL_CERTIFICATE_STORE|CurrentUser/マイ/A66BB0F6DD70BDFF02B62D0F87E340288E6F9305|RSA_OAEP|  
   
- 2 番目の結果セットを次に示します。  
+ 2 つ目の結果セットを次に示します。  
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  

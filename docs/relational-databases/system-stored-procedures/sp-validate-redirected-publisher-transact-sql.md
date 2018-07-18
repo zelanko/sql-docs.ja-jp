@@ -1,5 +1,5 @@
 ---
-title: sp_validate_redirected_publisher (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_validate_redirected_publisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 89bb592d13d395bff62a09668efb9a3d0ecae60c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999625"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978944"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  パブリッシング データベースの現在のホストがレプリケーションをサポートできることを確認します。 ディストリビューション データベースから実行する必要があります。 このプロシージャを呼び出す**sp_get_redirected_publisher**です。  
+  パブリッシング データベースの現在のホストがレプリケーションをサポートできることを確認します。 ディストリビューション データベースから実行する必要があります。 このプロシージャを呼び出す**sp_get_redirected_publisher**します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,15 +63,15 @@ ms.locfileid: "32999625"
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>解説  
- パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher**は出力パラメーターに null を返します *@redirected_publisher*です。 エントリが存在する場合は、成功した場合も失敗した場合も出力パラメーターでそのエントリが返されます。  
+## <a name="remarks"></a>コメント  
+ パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher** 、出力パラメーターで null を返します *@redirected_publisher*します。 エントリが存在する場合は、成功した場合も失敗した場合も出力パラメーターでそのエントリが返されます。  
   
  検証が成功すると、 **sp_validate_redirected_publisher**成功を示す値を返します。  
   
  検証が失敗した場合は、失敗を説明するエラーが発生します。  
   
-## <a name="permissions"></a>権限  
- 呼び出し元必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**定義済みパブリケーションのパブリケーション アクセス リストのメンバーまたはディストリビューション データベースの固定データベース ロールパブリッシャー データベースと関連付けられています。  
+## <a name="permissions"></a>アクセス許可  
+ 呼び出し元する必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールには、ディストリビューション データベースまたは定義済みパブリケーションのパブリケーション アクセス リストのメンバーパブリッシャー データベースと関連付けられています。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

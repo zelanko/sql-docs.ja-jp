@@ -1,5 +1,5 @@
 ---
-title: 進行状況レポート イベント カテゴリ |Microsoft ドキュメント
+title: 進行状況レポート イベント カテゴリ |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f3e48e34e5b85093793b0ea70786b106d72235a7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981306"
 ---
 # <a name="progress-reports-event-category"></a>進行状況レポート イベント カテゴリ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   進行状況レポート イベント カテゴリには、次の表に示したイベント クラスがあります。  
   
-|Event Class|イベント ID|Description|  
+|Event Class|イベント ID|説明|  
 |-----------------|--------------|-----------------|  
 |Progress Report Begin|5|トレースが開始されてからのすべての Progress Report Begin イベントを収集します。|  
 |Progress Report End|6|トレースが開始されてからのすべての Progress Report End イベントを収集します。|  

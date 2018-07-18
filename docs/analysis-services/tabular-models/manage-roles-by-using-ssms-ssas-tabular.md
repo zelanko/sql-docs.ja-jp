@@ -1,5 +1,5 @@
 ---
-title: SSMS を使用してロールの管理 |Microsoft ドキュメント
+title: SSMS を使用してロールの管理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045216"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045350"
 ---
 # <a name="manage-roles-by-using-ssms"></a>SSMS を使用したロールの管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、配置したテーブル モデルのロールの作成、編集、および管理を行うことができます。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、配置したテーブル モデルのロールの作成、編集、および管理を行うことができます。  
   
  このトピックのタスク:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34045216"
   
 4.  **[このロールにデータベースの権限を設定します]** で、次の権限オプションのいずれかを選択します。  
   
-    |権限|Description|  
+    |権限|説明|  
     |----------------|-----------------|  
     |**[フル コントロール (管理者)]**|メンバーは、モデル スキーマを変更したり、すべてのデータを表示したりできます。|  
     |**[データベースの処理]**|メンバーは、処理およびすべて処理の各操作を実行できます。 モデル スキーマを変更することはできませんし、データを表示することもできません。|  
@@ -58,12 +58,12 @@ ms.locfileid: "34045216"
   
 6.  メンバーシップ設定ウィンドウで **[追加]** をクリックし、 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、メンバーとして追加する Windows ユーザーまたはグループを選択します。  
   
-7.  作成しているロールに読み取り権限がある場合、DAX 数式を使用してテーブルに行フィルターを追加できます。 行フィルターを追加する、**ロールのプロパティ - \<rolename >** ダイアログ ボックスで、**ページの選択**、をクリックして**行フィルター**です。  
+7.  作成しているロールに読み取り権限がある場合、DAX 数式を使用してテーブルに行フィルターを追加できます。 行フィルターを追加する、**ロールのプロパティ - \<rolename >**  ダイアログ ボックスで**ページの選択**、 をクリックして**行フィルター**します。  
   
-8.  行フィルター ウィンドウで、テーブルを選択し、をクリックして、 **DAX フィルター**フィールド、し、 **DAX フィルター - \<tablename >** フィールドに、DAX の数式を入力します。  
+8.  行フィルター ウィンドウで、テーブルを選択し、をクリックして、 **DAX フィルター**フィールド、し、 **DAX フィルター - \<tablename >** フィールドに、DAX 式を入力します。  
   
     > [!NOTE]  
-    >  DAX フィルター - \<tablename > フィールドが、AutoComplete クエリ エディターを含むまたは関数挿入機能していません。 DAX 数式を作成するときにオートコンプリート機能を使用するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] の DAX 数式エディターを使用する必要があります。  
+    >  DAX フィルター - \<tablename > フィールドが、オートコンプリート クエリ エディターまたは関数挿入機能していません。 DAX 数式を作成するときにオートコンプリート機能を使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の DAX 数式エディターを使用する必要があります。  
   
 9. **[OK]** をクリックして、ロールを保存します。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "34045216"
   
 ###  <a name="bkmk_edit_role"></a> ロールを編集するには  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、編集するロールを含むテーブル モデル データベースを展開し、**[ロール]** を展開してから、ロールを右クリックして **[プロパティ]** をクリックします。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、編集するロールを含むテーブル モデル データベースを展開し、 **[ロール]** を展開してから、ロールを右クリックして **[プロパティ]** をクリックします。  
   
-     **ロール プロパティ** \<rolename > ダイアログ ボックスで、アクセス許可を変更、追加するか、メンバーを削除および追加/編集行フィルターします。  
+     **ロールのプロパティ** \<rolename > ダイアログ ボックスで、アクセス許可を変更、追加またはメンバーの削除、および行フィルターの追加/編集します。  
   
 ###  <a name="bkmk_deletet_role"></a> ロールを削除するには  
   

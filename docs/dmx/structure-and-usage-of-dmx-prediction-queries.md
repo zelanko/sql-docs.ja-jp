@@ -1,5 +1,5 @@
 ---
-title: 構造と DMX 予測クエリの使用状況 |Microsoft ドキュメント
+title: 構造と DMX 予測クエリの使用 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 37ff157cbddb0894880f12097c977b923d92f177
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841865"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981916"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>構造と DMX 予測クエリの使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、マイニング モデルの結果に基づいて、新しいデータセット内の不明な列の値を予測する、予測クエリのデータ マイニング拡張機能 (DMX) を使用できます。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、マイニング モデルの結果に基づいて、新しいデータセット内の不明な列の値を予測する、予測クエリでは、データ マイニング拡張機能 (DMX) を使用できます。  
   
  使用するクエリの型は、モデルから取得する情報の種類によって異なります。 簡単な予測をリアルタイムで作成する場合、たとえば、Web サイト上の潜在消費者が、自転車購入者の人物像に当てはまるかどうかを判断する場合、単一のクエリを使用します。 データ ソース内に含まれているケースのセットから予測のバッチを作成する場合は、通常の予測クエリを使用します。  
   
@@ -27,10 +27,10 @@ ms.locfileid: "34841865"
  DMX を使用して、次の型の予測を作成することができます。  
   
  Prediction join  
- マイニング モデル内に存在するパターンに基づいて、入力データに対する予測を作成するのに使用します。 このクエリ ステートメントが続くことが必要な**ON**をマイニング モデルの列と入力列間の結合条件を指定する句。  
+ マイニング モデル内に存在するパターンに基づいて、入力データに対する予測を作成するのに使用します。 このクエリ ステートメントの後に、 **ON**をマイニング モデルの列と入力列間の結合条件を指定する句。  
   
  Natural prediction join  
- クエリを実行するテーブル内の列の名前と正確に一致する、マイニング モデル内の列の名前に基づいた予測を作成するのに使用します。 このクエリ ステートメントは必要ありません、 **ON**句、結合条件が自動的に生成するために基づくマイニング モデルの列と入力列の間で一致する名前。  
+ クエリを実行するテーブル内の列の名前と正確に一致する、マイニング モデル内の列の名前に基づいた予測を作成するのに使用します。 このクエリ ステートメントは必要ありません、 **ON**句では、結合条件が自動的に生成するために基づくマイニング モデルの列と、入力列の間で一致する名前。  
   
  Empty prediction join  
  最も可能性の高い予測を検出するのに使用します。入力データを指定する必要はありません。 これにより、マイニング モデルの内容にのみ基づいた予測が返されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "34841865"
 ## <a name="query-structure"></a>クエリ構造  
  DMX で予測クエリを作成するには、次の要素の組み合わせを使用します。  
   
--   **[フラット化] を選択**  
+-   **[フラット化] を選択します**  
   
 -   **TOP**  
   
@@ -53,24 +53,24 @@ ms.locfileid: "34841865"
   
 -   **ORDER BY**  
   
- **選択**予測クエリの要素の列を定義し、結果に表示される式を設定して、次のデータを含めることができます。  
+ **選択**予測クエリの要素の列を定義し、結果に表示される式が設定されており、次のデータを含めることができます。  
   
--   **予測**または**PredictOnly**マイニング モデルからの列です。  
+-   **予測**または**PredictOnly**マイニング モデルからの列。  
   
 -   予測を作成するのに使用する入力データからの列。  
   
 -   データの列を返す関数。  
   
- **FROM** *\<モデル >* **PREDICTION JOIN**要素は、予測を作成するために使用するソース データを定義します。 単一のクエリの場合、これは列に割り当てられた一連の値となります。 空の予測結合の場合は、空のままとなります。  
+ **FROM** *\<モデル >* **PREDICTION JOIN**要素は、予測の作成に使用するソース データを定義します。 単一のクエリの場合、これは列に割り当てられた一連の値となります。 空の予測結合の場合は、空のままとなります。  
   
- **ON**要素は、外部データセット内の列をマイニング モデルで定義されている列をマップします。 空の予測結合クエリまたは自然予測結合を作成する場合は、この要素を含める必要はありません。  
+ **ON**要素には、外部データセット内の列をマイニング モデルで定義されている列がマップされます。 空の予測結合クエリまたは自然予測結合を作成する場合は、この要素を含める必要はありません。  
   
- 使用することができます、**場所**句を予測クエリの結果をフィルター処理します。 使用することができます、**上部**または**ORDER BY**句を最も可能性の高い予測を選択します。 詳細については、これらの句を使用して、次を参照してください。[選択&#40;DMX&#41;](../dmx/select-dmx.md)です。  
+ 使用することができます、**場所**句予測クエリの結果をフィルター処理します。 使用することができます、**上部**または**ORDER BY**句を最も可能性の高い予測を選択します。 これらの句の使用に関する詳細については、次を参照してください。[選択&#40;DMX&#41;](../dmx/select-dmx.md)します。  
   
  予測ステートメントの構文の詳細については、次を参照してください[SELECT FROM&#60;モデル&#62;PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md)と[SELECT FROM&#60;モデル&#62; &#40;DMX。&#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.server_principals (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.server_principals (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,24 +26,24 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 503ae5f7918edabd609e6176eeb0fa5c1238dd77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221633"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039036"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   サーバー レベルのプリンシパルごとに 1 行のデータを格納します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|プリンシパルの名前。 サーバー内で一意です。|  
 |**principal_id**|**int**|プリンシパルの ID 番号。 サーバー内で一意です。|  
 |**sid**|**varbinary(85)**|プリンシパルの SID (セキュリティ識別子)。 Windows プリンシパルの場合、これは Windows SID に一致します。|  
 |**type**|**char(1)**|プリンシパルの種類。<br /><br /> S = SQL ログイン<br /><br /> U = Windows ログイン<br /><br /> G = Windows グループ<br /><br /> R = サーバー ロール<br /><br /> C = 証明書にマップされるログイン<br /><br /> K = 非対称キーにマップされるログイン|  
-|**type_desc**|**nvarchar(60)**|プリンシパルの種類の説明:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type_desc**|**nvarchar(60)**|プリンシパルの種類の説明です。<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = ログインは無効です。|  
 |**create_date**|**datetime**|プリンシパルが作成された日時。|  
 |**modify_date**|**datetime**|プリンシパルの定義が最後に変更された日時。|  
@@ -53,10 +53,10 @@ ms.locfileid: "33221633"
 |**owning_principal_id**|**int**|**Principal_id**サーバー ロールの所有者のです。 プリンシパルがサーバー ロールでない場合は NULL です。|  
 |**is_fixed_role**|**bit**|プリンシパルが固定サーバー ロールの場合、1 を返します。 詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  すべてのログインは自分のログイン名、システム ログイン、および固定サーバー ロールを参照できます。 他のログインを参照するには、ALTER ANY LOGIN、またはログインに対する権限が必要です。 ユーザー定義のサーバー ロールを参照するには、ALTER ANY SERVER ROLE、またはロールのメンバーシップが必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次のクエリは、サーバー プリンシパルに対して明示的に付与または拒否されている権限を一覧表示します。  

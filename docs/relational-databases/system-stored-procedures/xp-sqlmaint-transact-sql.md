@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (TRANSACT-SQL) |Microsoft ドキュメント
+title: xp_sqlmaint (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256650"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979384"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  呼び出し、 **sqlmaint**ユーティリティを含む文字列を**sqlmaint**スイッチ。 **Sqlmaint**ユーティリティは、1 つまたは複数のデータベースでメンテナンス操作のセットを実行します。  
+  呼び出し、 **sqlmaint**ユーティリティを含む文字列**sqlmaint**スイッチ。 **Sqlmaint**ユーティリティは、1 つまたは複数のデータベースでメンテナンス操作のセットを実行します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -50,19 +50,19 @@ xp_sqlmaint 'switch_string'
  **'** *switch_string* **'**  
  含む文字列、 **sqlmaint**ユーティリティ スイッチです。 スイッチとその値は、空白で区切る必要があります。  
   
- **-しますか?** スイッチは無効**xp_sqlmaint**です。  
+ **-でしょうか。** スイッチで有効でない**xp_sqlmaint**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  [なし] : エラーが返されます、 **sqlmaint**ユーティリティが失敗します。  
   
-## <a name="remarks"></a>解説  
- SQL Server 認証でログオンするユーザーによってこのプロシージャが呼び出される場合、 **-u"***login_id***"** と **-p"***パスワード***"** スイッチ前に付加されます*switch_string*実行前にします。 Windows 認証では、ユーザーがログオンしている場合*switch_string*を変更せずに渡される**sqlmaint**です。  
+## <a name="remarks"></a>コメント  
+ この手順は、SQL Server の認証でログオンしたユーザーによって呼び出される場合、 **-u"***login_id***"** と **-p"***パスワード***"** スイッチ前に付加されます*switch_string*実行前にします。 Windows 認証では、ユーザーがログインしている場合*switch_string*への変更なしで渡される**sqlmaint**します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`xp_sqlmaint`呼び出し`sqlmaint`整合性チェックを実行するのには、レポート ファイルを作成および更新`msdb.dbo.sysdbmaintplan_history`です。  
+ 次の例では、`xp_sqlmaint`呼び出し`sqlmaint`整合性チェックを実行するレポート ファイルを作成および更新`msdb.dbo.sysdbmaintplan_history`します。  
   
 ```  
 EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C9054212   

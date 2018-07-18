@@ -1,5 +1,5 @@
 ---
-title: WideWorldImporters データ - SQL サンプル データベースの生成 |Microsoft ドキュメント
+title: WideWorldImporters データ - SQL サンプル データベースの生成 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
@@ -13,23 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ace1f771ef3a77a6f7db0072442affe181d7872
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988946"
 ---
-# <a name="wideworldimporters-data-generation"></a>WideWorldImporters データの生成
+# <a name="wideworldimporters-data-generation"></a>WideWorldImporters データ生成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-WideWorldImporters と WideWorldImportersDW データベースのリリース バージョンでは、2013、年 1 月 1 日まで、データベースが生成された日からのデータがあります。
+、2013 年 1 月 1日最大のデータベースが生成された 1 日からのデータは、WideWorldImporters と WideWorldImportersDW データベースのリリース バージョンであります。
 
-これらのサンプル データベースを使用する場合より新しいサンプル データを含めることができます。
+これらのサンプル データベースを使用する場合は、最新のサンプル データが含まれます。
 
 ## <a name="data-generation-in-wideworldimporters"></a>WideWorldImporters でデータの生成
 
-現在の日付までのサンプル データを生成します。
+現在の日付までのサンプル データを生成するには。
 
-1. 実行していない場合は、WideWorldImporters データベースのクリーン バージョンをインストールします。 インストール手順については、次を参照してください。[インストールと構成](wide-world-importers-oltp-install-configure.md)です。
-2. データベースで、次のステートメントを実行します。
+1. これを完了していない場合は、WideWorldImporters データベースのクリーン バージョンをインストールします。 インストール手順については、次を参照してください。[インストールと構成](wide-world-importers-oltp-install-configure.md)します。
+2. データベースでは、次のステートメントを実行します。
 
     ```
         EXECUTE DataLoadSimulation.PopulateDataToCurrentDate
@@ -40,31 +41,31 @@ WideWorldImporters と WideWorldImportersDW データベースのリリース �
             @AreDatesPrinted = 1;
     ```
 
-    このステートメントは、現在の日付までのデータベースにサンプルの売上および注文書データを追加します。 日単位でデータの生成の進行状況を表示します。 データの生成は、データが必要なすべての年度の約 10 分かかります。 データ生成時に、ランダムな要素があるため、生成されたデータを実行間で違いの一部です。
+    このステートメントは、サンプルの売上および注文データを現在の日付まで、データベースに追加します。 日別に、データ生成の進行状況を表示します。 データの生成は、データが必要なすべての年の約 10 分かかります。 データ生成、ランダムな要素のための実行の間に生成されるデータにいくつか違いがあります。
 
-    1 日の注文に対して生成されたデータの量を増減するには、パラメーターの値を変更する`@AverageNumberOfCustomerOrdersPerDay`です。 パラメーターを使用して`@SaturdayPercentageOfNormalWorkDay`と`@SundayPercentageOfNormalWorkDay`を週末の曜日に注文量を決定します。
+    1 日の注文に対して生成されたデータの量を増減するには、パラメーターの値を変更する`@AverageNumberOfCustomerOrdersPerDay`します。 パラメーターを使用して`@SaturdayPercentageOfNormalWorkDay`と`@SundayPercentageOfNormalWorkDay`週末の曜日の注文の量を確認します。
 
-## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW で生成されたインポートのデータ
+## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW で生成されるインポート データ
 
 WideWorldImportersDW OLAP データベースの現在の日付までのサンプル データをインポートするには。
 
-1. 前のセクションの手順を使用して、WideWorldImporters OLTP データベースのデータ生成ロジックを実行します。
-2. まだ行っていない、WideWorldImportersDW データベースのクリーン バージョンをインストールします。 インストール手順については、次を参照してください。[インストールと構成](wide-world-importers-oltp-install-configure.md)です。
-3. データベースで、次のステートメントを実行することによって、OLAP データベースを再作成します。
+1. 前のセクションで手順を使用して、WideWorldImporters OLTP データベースのデータの生成ロジックを実行します。
+2. 場合は、まだ完了していない、WideWorldImportersDW のデータベースのクリーン バージョンをインストールします。 インストール手順については、次を参照してください。[インストールと構成](wide-world-importers-oltp-install-configure.md)します。
+3. データベースで、次のステートメントを実行することによって OLAP データベースを再作成します。
 
     ```sql
     EXECUTE [Application].Configuration_ReseedETL
     ```
 
-4. 実行、*毎日 ETL.ispac* OLAP データベースにデータをインポートする SQL Server Integration Services パッケージです。 ETL ジョブを実行する方法についてを参照してください。 [WideWorldImporters ETL ワークフロー](wide-world-importers-perform-etl.md)です。
+4. 実行、*毎日 ETL.ispac* OLAP データベースにデータをインポートする SQL Server Integration Services パッケージ。 ETL ジョブを実行する方法についてを参照してください。 [WideWorldImporters ETL ワークフロー](wide-world-importers-perform-etl.md)します。
 
-## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>パフォーマンス テスト用 WideWorldImportersDW でデータを生成します。
+## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>WideWorldImportersDW でパフォーマンスをテストするためのデータを生成します。
 
-WideWorldImportersDW は、パフォーマンス テスト用データのサイズを増やす任意にできます。 たとえば、クラスター化列ストア インデックスで使用するデータのサイズを増やすことできます。
+WideWorldImportersDW は、パフォーマンスをテストするためのデータのサイズを増やす任意にできます。 たとえば、クラスター化列ストア インデックスで使用するデータのサイズを増やすことできます。
 
-課題の 1 つは、ダウンロードのサイズをダウンロードする簡単に、大規模なが SQL Server のパフォーマンス機能を示すために十分な大きさに保持します。 たとえば、列ストア インデックスの大きな利点で多数の行を操作する場合にのみ実行できます。 
+ダウンロードする簡単に、大規模なが、SQL Server のパフォーマンス機能を紹介するのに十分な大きさのダウンロードのサイズを保つの課題の 1 つです。 たとえば、列ストア インデックスの大きな利点がでより多くの行を使用する場合にのみ実行できます。 
 
-使用することができます、`Application.Configuration_PopulateLargeSaleTable`プロシージャ内の行の数を増やす、`Fact.Sale`テーブル。 2012 年の 2013 年 1 月 1 日を開始する World Wide Importers の既存のデータとの衝突を回避するには、行が挿入されます。
+使用することができます、`Application.Configuration_PopulateLargeSaleTable`プロシージャ内の行の数を増やす、`Fact.Sale`テーブル。 2013 年 1 月 1 日を開始する World Wide Importers の既存のデータとの衝突を回避するために、2012 年の行が挿入されます。
 
 ### <a name="procedure-details"></a>プロシージャの詳細
 
@@ -74,10 +75,10 @@ WideWorldImportersDW は、パフォーマンス テスト用データのサイ�
 
 #### <a name="parameters"></a>パラメーター
 
-  `@EstimatedRowsFor2012` **bigint** (12000000 の既定値) の
+  `@EstimatedRowsFor2012` **bigint** (12000000 の既定値) の使用
 
 #### <a name="result"></a>結果
 
-約、必要な数の行が挿入され、 `Fact.Sale` 2012 年内のテーブルです。 手順 1 日あたり 50,000 行の数に制限します。 このような制限を変更できますが、制限を使用して、テーブルの偶発的な overinflations を回避できます。
+行の約必要な数の挿入、 `Fact.Sale` 2012 年のテーブル。 手順 1 日あたり 50,000 行の数に制限しています。 このような制限を変更できますが、制限を使用して、テーブルの偶発的な overinflations を回避できます。
 
-プロシージャには、クラスター化列ストアが適用されていないインデックスを作成も適用されます。
+プロシージャには、クラスター化列ストアが適用されていない場合のインデックス作成も適用されます。

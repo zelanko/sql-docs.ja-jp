@@ -1,5 +1,5 @@
 ---
-title: XSL 変換の適用 (SQLXML マネージ クラス) |Microsoft ドキュメント
+title: XSL 変換の適用 (SQLXML マネージ クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 951c8d315fa4ff72d16acb0873117af4b7857196
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968837"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972134"
 ---
-# <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 変換の適用 (SQLXML マネージ クラス)
+# <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 変換の適用 (SQLXML マネージド クラス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   この例では、AdventureWorks データベースに対して SQL クエリを実行します。 クエリ結果には XSL 変換が適用され、従業員の名前と姓を示す 2 列のテーブルが生成されます。  
   
- SqlXmlCommand オブジェクトの XslPath プロパティを使用してを XSL ファイルとディレクトリ パスを指定します。  
+ SqlXmlCommand オブジェクトの XslPath プロパティは、XSL ファイルとディレクトリ パスを指定に使用されます。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  

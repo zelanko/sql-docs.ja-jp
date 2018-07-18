@@ -1,5 +1,5 @@
 ---
-title: 図形 (DMX) |Microsoft ドキュメント
+title: 図形 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841675"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985295"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;ソース データ クエリ&gt;-図形
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   マイニング モデルのケース テーブルとなる、複数のデータ ソースから単一の階層テーブル (入れ子になったテーブルを使用するテーブル) にクエリを結合します。  
   
- 完全な構文、**図形**コマンドについては、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) ソフトウェア開発キット (SDK)。  
+ 完全な構文、**図形**コマンドが記載されて、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) ソフトウェア開発キット (SDK)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,7 +40,7 @@ APPEND ({ <child table query> }
 ```  
   
 ## <a name="arguments"></a>引数  
- *マスター クエリ*  
+ *マスターのクエリ*  
  クエリは親テーブルを返します。  
   
  *子テーブルのクエリ*  
@@ -52,14 +52,14 @@ APPEND ({ <child table query> }
  *子の列*  
  master query の結果から親の行を識別する子テーブル内の列です。  
   
- *テーブルの列名*  
+ *テーブル名の列*  
  入れ子になったテーブルの親テーブルに、列名を新たに追加します。  
   
 ## <a name="remarks"></a>コメント  
  親テーブルと子テーブルを関連付ける列ごとにクエリを発行する必要があります。  
   
 ## <a name="examples"></a>使用例  
- 内で次の例を使用することができます、 [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)ステートメントを入れ子になったテーブルが含まれるモデルをトレーニングします。 2 つのテーブル内で、**図形**によってステートメントが関連付けられて、 **OrderNumber**列です。  
+ 内で次の例を使用することができます、 [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)入れ子になったテーブルを含むモデルをトレーニングするステートメント。 2 つのテーブル内で、**図形**から関連するステートメント、 **OrderNumber**列。  
   
 ```  
 SHAPE {  

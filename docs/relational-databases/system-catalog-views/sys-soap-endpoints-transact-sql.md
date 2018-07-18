@@ -1,5 +1,5 @@
 ---
-title: sys.soap_endpoints (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.soap_endpoints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,23 +25,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 7f3af00bccbef87dd6390c5421b8d625e4b6ed42
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981602"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- SOAP 型ペイロードを扱うサーバーのエンドポイントごとに 1 行のデータを格納します。 このビューの各行は、同じ行に対応**endpoint_id**で、 **sys.http_endpoints**カタログ ビューに、HTTP 構成メタデータ。  
+ SOAP 型ペイロードを扱うサーバーのエンドポイントごとに 1 行のデータを格納します。 このビューですべての行については、同じ行に対応**endpoint_id**で、 **sys.http_endpoints**カタログ ビューに、HTTP 構成メタデータが含まれます。  
   
  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**< 継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)です。|  
+|**< 継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)します。|  
 |**is_sql_language_enabled**|**bit**|1 は、BATCHES = ENABLED オプションが指定されていることを示します。エンドポイントでアドホック SQL バッチが許可されます。|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|このメソッドを実装するストアド プロシージャの、3 つの要素で構成される名前。<br /><br /> メソッドの名前は、3 つの要素で構成する必要があります。 1 つの要素、2 つの要素、または 4 つの要素で構成される名前は許可されません。|  
 |**default_database**|**sysname**|DATABASE = オプションで指定される、既定のデータベースの名前。<br /><br /> NULL = DEFAULT が指定されています。|  
@@ -54,8 +54,8 @@ ms.locfileid: "33221353"
 |**login_type**|**nvarchar(60)**|エンドポイントで許可される認証の種類。<br /><br /> WINDOWS<br /><br /> MIXED|  
 |**header_limit**|**int**|SOAP ヘッダーの最大許容サイズ。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   

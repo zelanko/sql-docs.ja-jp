@@ -1,5 +1,5 @@
 ---
-title: Xml データ型に対しての XQuery 演算子 |Microsoft ドキュメント
+title: Xml データ型に対しての XQuery 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 62c4875c74d6ff67e8d1760a29ac48672fc7765a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077569"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988181"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml データ型に対する XQuery の演算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "33077569"
 ### <a name="a-using-general-operators"></a>A. 一般的な演算子の使用  
  次のクエリでは、シーケンスおよびシーケンスの比較に適用される一般的な演算子の用途について説明します。 クエリは、各顧客からの電話番号のシーケンスを取得する、 **AdditionalContactInfo**の列、**連絡先**テーブル。 取得されたシーケンスは、2 つの電話番号 ("111-111-1111"、"222-2222") のシーケンスと比較されます。  
   
- クエリを使用して、 **=** 比較演算子です。 右側にあるシーケンス内の各ノード、 **=** 演算子は、左側にあるシーケンス内の各ノードと比較されます。 ノードが一致する場合、ノード比較は**TRUE**です。 次に、シーケンスは int 型に変換されて 1 と比較され、クエリが顧客 ID を返します。  
+ クエリを使用して、 **=** 比較演算子。 右側にあるシーケンス内の各ノード、 **=** 演算子が左側にあるシーケンス内の各ノードと比較されます。 ノードの比較では、ノードが一致している場合**TRUE**します。 次に、シーケンスは int 型に変換されて 1 と比較され、クエリが顧客 ID を返します。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -63,7 +63,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- 上記のクエリの動作を観察する別の方法がある: 各電話番号の値から取得した、 **AdditionalContactInfo**列が一連の 2 つの電話番号と比較します。 値がセット内にある場合、その顧客が結果に返されます。  
+ 前のクエリの動作を観察する別の方法がある: 各電話番号の値から取得した、 **AdditionalContactInfo**列が 2 つの電話番号のセットと比較されます。 値がセット内にある場合、その顧客が結果に返されます。  
   
 ### <a name="b-using-a-numeric-operator"></a>B. 数値演算子の使用  
  このクエリの + 演算子は 1 つのアイテムに適用されるので、値の演算子です。 たとえば、クエリによって返されたロット サイズに値 1 が加算されます。  
@@ -99,7 +99,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- に、両方のオペランド、 **eq**演算子がアトミック値な値の演算子は、クエリで使用します。 一般的な比較演算子を使用して、同じクエリを記述することができます ( **=** )。  
+ に、両方のオペランド、 **eq**演算子はアトミック値、値の演算子は、クエリで使用します。 一般的な比較演算子を使用して、同じクエリを記述することができます ( **=** )。  
   
 ## <a name="see-also"></a>参照  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   

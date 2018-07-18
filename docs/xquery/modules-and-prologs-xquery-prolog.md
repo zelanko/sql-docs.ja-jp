@@ -1,5 +1,5 @@
 ---
-title: XQuery プロローグ |Microsoft ドキュメント
+title: XQuery プロローグ |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,17 +26,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974555"
 ---
-# <a name="modules-and-prologs---xquery-prolog"></a>モジュールとプロローグの XQuery プロローグ
+# <a name="modules-and-prologs---xquery-prolog"></a>モジュールとプロローグ - XQuery プロローグ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery クエリは、プロローグ (序文) と本文で構成されます。 XQuery プロローグは、クエリ処理に必要な環境を作成する一連の宣言および定義です。 SQL Server では、XQuery プロローグに名前空間の宣言を含めることができます。 XQuery 本文は、目的のクエリ結果を指定する一連の式で構成されます。  
   
- Instructions 列に対して、次の XQuery を指定するなど、 **xml**製造手順 XML として格納されている型。 このクエリでは、ワーク センターの場所 `10` に関する製造手順が取得されます。 `query()`のメソッド、 **xml**データ型は、XQuery を指定して使用します。  
+ Instructions 列に対して、次の XQuery を指定するなど、 **xml**製造手順 XML として格納する型。 このクエリでは、ワーク センターの場所 `10` に関する製造手順が取得されます。 `query()`のメソッド、 **xml** XQuery を指定するデータ型を使用します。  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -48,14 +49,14 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   XQuery プロローグには、名前空間プレフィックス (AWMI) 宣言が含まれています`(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`です。  
+-   XQuery プロローグには、名前空間プレフィックス (AWMI) 宣言が含まれています`(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`します。  
   
 -   `declare namespace` キーワードは、クエリ本文で後から使用される名前空間プレフィックスを定義します。  
   
 -   `/AWMI:root/AWMI:Location[@LocationID="10"]` がクエリの本文です。  
   
 ## <a name="namespace-declarations"></a>名前空間の宣言  
- 次のクエリで示すように、名前空間の宣言でプレフィックスを定義し、名前空間 URI に関連付けます。 クエリで`CatalogDescription`は、 **xml**型の列です。  
+ 次のクエリで示すように、名前空間の宣言でプレフィックスを定義し、名前空間 URI に関連付けます。 クエリで`CatalogDescription`は、 **xml**型の列。  
   
  この列に対する XQuery の指定では、クエリのプロローグで `declare namespace` 宣言を指定して、製品説明のプレフィックス `PD` を名前空間 URI に関連付けています。 クエリ本文では、名前空間 URI の代わりにこのプレフィックスを使用します。 結果の XML のノードは、名前空間 URI に関連付けられた名前空間内に含まれます。  
   
@@ -68,7 +69,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- クエリの読みやすさを向上させるのには、プレフィックスとクエリのプロローグで名前空間のバインドを使用して宣言するのではなく WITH XMLNAMESPACES を使用して、名前空間を宣言できます`declare namespace`です。  
+ クエリの読みやすさを向上させるのを使用して、プレフィックスとクエリのプロローグで名前空間のバインドを宣言する代わりに WITH XMLNAMESPACES を使用して名前空間を宣言できます`declare namespace`します。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -80,10 +81,10 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 詳細についてを参照してください、 [with XMLNAMESPACES を使用したクエリへの名前空間の追加](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)です。  
+ 詳細についてを参照してください、 [with XMLNAMESPACES を使用したクエリへの名前空間の追加](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)します。  
   
 ### <a name="default-namespace-declaration"></a>既定の名前空間の宣言  
- 使用して、名前空間プレフィックスを宣言する代わりに、`declare namespace`使用することができます、宣言、`declare default element namespace`要素名に対する既定の名前空間のバインドを宣言します。 この場合、プレフィックスは指定しません。  
+ 使用して、名前空間プレフィックスを宣言する代わりに、`declare namespace`使用することができます、宣言、`declare default element namespace`要素名の既定の名前空間のバインドを宣言します。 この場合、プレフィックスは指定しません。  
   
  次の例では、クエリ本文のパス式で名前空間プレフィックスを指定していません。 既定では、すべての要素名はプロローグで指定された既定の名前空間に所属します。  
   

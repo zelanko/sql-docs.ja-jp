@@ -1,5 +1,5 @@
 ---
-title: 条件式 (XQuery) |Microsoft ドキュメント
+title: 条件式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076164"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979014"
 ---
 # <a name="conditional-expressions-xquery"></a>条件式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ else
   <expression3>  
 ```  
   
- 有効なブール値に応じて`expression1`か、`expression2`または`expression3`が評価されます。 以下に例を示します。  
+ 有効なブール値に応じて`expression1`, か、`expression2`または`expression3`が評価されます。 以下に例を示します。  
   
 -   テスト式 `expression1` の結果が空のシーケンスになった場合、結果は False になります。  
   
--   場合テスト式`expression1`、簡単なブール値、この値に結果が式の結果。  
+-   場合テスト式`expression1`、単純なブール値、この値に結果が式の結果。  
   
 -   テスト式 `expression1` の結果が複数ノードのシーケンスになった場合、式の結果は True になります。  
   
@@ -59,9 +59,9 @@ else
   
 -   テスト式は、かっこで囲む必要があります。  
   
--   **Else**式が必要です。 これが必要ない場合は、このトピックの例にあるように、" ( ) " を返すことができます。  
+-   **他**式が必要です。 これが必要ない場合は、このトピックの例にあるように、" ( ) " を返すことができます。  
   
- に対して、次のクエリを指定するなど、 **xml**型の変数です。 **場合**SQL 変数の値をテストする条件 (@v) を使用して、XQuery 式の内部、 [sql:variable() 関数](../xquery/xquery-extension-functions-sql-variable.md)拡張関数。 変数の値が "FirstName" の場合、<`FirstName`> 要素が返されます。 それ以外の場合は、<`LastName`> 要素が返されます。  
+ に対して次のクエリを指定するなど、 **xml**型の変数。 **場合**条件は、SQL 変数の値をテスト (@v) を使用して XQuery 式の内部で、 [sql:variable() 関数](../xquery/xquery-extension-functions-sql-variable.md)拡張関数。 変数の値が "FirstName" の場合、<`FirstName`> 要素が返されます。 それ以外の場合は、<`LastName`> 要素が返されます。  
   
 ```  
 declare @x xml  
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 前のクエリでの条件で、**場合**式では、3 つ以上の子要素があるかどうかを確認 <`Features`>。 3 つ以上ある場合は、結果に `\<there-is-more/>` 要素が返されます。  
+ 上記のクエリでは、条件、**場合**式は、複数の 2 つの子要素があるかどうかを確認します。 <`Features`>。 3 つ以上ある場合は、結果に `\<there-is-more/>` 要素が返されます。  
   
  結果を次に示します。  
   
@@ -155,7 +155,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- しなくても、このクエリを記述できます、**場合**句、次の例で示すようにします。  
+ なしこのクエリを記述することができます、**場合**句では、次の例に示すようにします。  
   
 ```  
 SELECT Instructions.query('  

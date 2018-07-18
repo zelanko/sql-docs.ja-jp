@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,28 +25,29 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e59eeea065a0346a623d929562fc554ad842e416
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031460"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   前回データベースが再起動されてから収集された統計が含まれます。  
   
- 詳細については、次を参照してください。 [、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)と[を使用してメモリ最適化テーブルのインデックスのガイドライン](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)です。  
+ 詳細については、次を参照してください。 [、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)と[Guidelines for Using Indexes on Memory-Optimized Tables](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)します。  
 
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|インデックスが属しているオブジェクトの ID。|  
-|xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部の ID。<br /><br /> 注: 対象[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。|  
+|xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部の ID。<br /><br /> 注: に適用されます[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]します。|  
 |index_id|**bigint**|インデックスの ID。 index_id は、オブジェクト内でのみ一意です。|  
 |scans_started|**bigint**|実行されたインメモリ OLTP のインデックス スキャンの回数。 選択、挿入、更新、または削除を実行するたびに、インデックス スキャンが必要になります。|  
 |scans_retries|**bigint**|再試行する必要のあるインデックス スキャンの回数。|  
-|rows_returned|**bigint**|テーブルが作成された後に返される行またはの開始の累積数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
-|rows_touched|**bigint**|テーブルが作成された後にアクセスする行の累積数またはの開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|rows_returned|**bigint**|テーブルが作成された後に返される行の先頭の数の累計[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
+|rows_touched|**bigint**|テーブルが作成された後にアクセスする行の累積数またはの開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |rows_expiring|**bigint**|内部使用のみです。|  
 |rows_expired|**bigint**|内部使用のみです。|  
 |rows_expired_removed|**bigint**|内部使用のみです。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/23/2018
 |phantom_expired_rows_removed|**bigint**|内部使用のみです。|  
 |object_address|**varbinary(8)**|内部使用のみです。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

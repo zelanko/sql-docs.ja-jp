@@ -1,5 +1,5 @@
 ---
-title: count 関数 (XQuery) |Microsoft ドキュメント
+title: count 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076369"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987484"
 ---
-# <a name="aggregate-functions---count"></a>集計関数の数
+# <a name="aggregate-functions---count"></a>集計関数 - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  指定されたシーケンス内に含まれる項目数を返します *$arg*です。  
+  指定されたシーケンス内に含まれる項目の数を返します *$arg*します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,11 +46,11 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  カウントするアイテム。  
   
-## <a name="remarks"></a>解説  
- 場合 0 を返します *$arg*は空のシーケンス。  
+## <a name="remarks"></a>コメント  
+ 0 を返します *$arg*は空のシーケンスです。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. count() XQuery 関数を使用して、ある製品モデルを製造するワーク センターの場所の数をカウントする  
  次のクエリでは、ある製品モデル (ProductModelID=7) の製造プロセスでのワーク センターの場所の数をカウントします。  
@@ -74,7 +74,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   <`NoOfWorkStations`> 要素を含んだ XML が構成されます。  
   
--   **Count()** 関数の数、XQuery の本文のカウント <`Location`> 要素。  
+-   **Count()** 関数、XQuery の本文のカウント数 <`Location`> 要素。  
   
  結果を次に示します。  
   

@@ -1,5 +1,5 @@
 ---
-title: PredictCaseLikelihood (DMX) |Microsoft ドキュメント
+title: PredictCaseLikelihood (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841781"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040310"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  0 ～ 1 の範囲の倍精度浮動小数点値です。 値が 1 に近いほど、このモデルでケースが発生する確率が高くなります。 値が 0 に近いほど、このモデルでケースが発生する確率が低くなります。  
   
 ## <a name="remarks"></a>コメント  
- 既定では、結果、 **PredictCaseLikelihood**関数は正規化されます。 通常、正規化された値は、ケース内の属性の数が増え、任意の 2 つのケースの未加工の確率の差が小さくなるほど、有用性が増します。  
+ 既定の結果、 **PredictCaseLikelihood**関数を正規化します。 通常、正規化された値は、ケース内の属性の数が増え、任意の 2 つのケースの未加工の確率の差が小さくなるほど、有用性が増します。  
   
  x と y を指定した、次の式を使用して、正規化された値を計算します。  
   
@@ -55,7 +55,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  正規化された = (z/(1 + z))  
   
 ## <a name="examples"></a>使用例  
- 次の例は、指定したケースに基づいて、クラスタ リング モデル内で発生する可能性を返して、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW データベース。  
+ 次の例は、指定したケースがクラスター モデルに基づく内で発生する可能性を返します、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW データベース。  
   
 ```  
 SELECT  
@@ -78,7 +78,7 @@ NATURAL PREDICTION JOIN
 |-------------------------|----------------------------|---------------------|  
 |6.30672792729321E-08|6.30672792729321E-08|9.5824454056846E-48|  
   
- これらの結果の違いは、正規化の影響を示します。 生の値**CaseLikelihood**提案をケースの確率約 20% です。 ただし、結果を正規化するときに明らかになり、ケースの発生確率が非常に低いことです。  
+ これらの結果の違いは、正規化の影響を示します。 生の値**CaseLikelihood**提案のケースの確率は約 20%; ただし、結果を正規化すると明らかになります、ケースの発生確率が非常に低いことです。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

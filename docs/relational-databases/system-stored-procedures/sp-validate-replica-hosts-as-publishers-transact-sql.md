@@ -1,5 +1,5 @@
 ---
-title: sp_validate_replica_hosts_as_publishers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_validate_replica_hosts_as_publishers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 408d6c239afd528deeae25f925b8626968dff6bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037750"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_validate_replica_hosts_as_publishers**の拡張機能は、 **sp_validate_redirected_publisher**すべてのセカンダリ レプリカを現在のプライマリ レプリカだけではなく、検証することができます。 **sp_validate_replicat_hosts_as_publisher** Alwayson レプリケーション トポロジ全体を検証します。 **sp_validate_replica_hosts_as_publishers**ダブルホップ セキュリティ エラー (21892) を回避するリモート デスクトップ セッションを使用して、ディストリビューターに対して直接実行する必要があります。  
+  **sp_validate_replica_hosts_as_publishers**の拡張機能は、 **sp_validate_redirected_publisher**すべてのセカンダリ レプリカを現在のプライマリ レプリカだけではなく検証できるようにします。 **sp_validate_replicat_hosts_as_publisher** Alwayson レプリケーション トポロジ全体を検証します。 **sp_validate_replica_hosts_as_publishers**ダブルホップ セキュリティ エラー (21892) を回避するためにリモート デスクトップ セッションを使用して、ディストリビューターに対して直接実行する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,12 +63,12 @@ sp_validate_replica_hosts_as_publishers
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>解説  
- パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher**は出力パラメーターに null を返します *@redirected_publisher*です。 それ以外の場合は、成功した場合も失敗した場合も関連付けられているリダイレクトされたパブリッシャーが返されます。  
+## <a name="remarks"></a>コメント  
+ パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher**出力パラメーターに null を返します *@redirected_publisher*します。 それ以外の場合は、成功した場合も失敗した場合も関連付けられているリダイレクトされたパブリッシャーが返されます。  
   
  検証が成功すると、 **sp_validate_redirected_publisher**成功を示す値を返します。  
   
- 検証が失敗した場合は、該当するエラーが発生します。  **sp_validate_redirected_publisher**によりすべての問題とだけでなく、最初に発生する最善の努力が発生しました。  
+ 検証が失敗した場合は、該当するエラーが発生します。  **sp_validate_redirected_publisher**によりすべての問題とだけでなく、最初に発生させる最善の努力が発生しました。  
   
 > [!NOTE]  
 >  セカンダリ レプリカのホストで読み取りアクセスが許可されていない場合や、読み取りを目的としたアクセスを指定する必要がある場合、**sp_validate_replica_hosts_as_publishers** による検証は失敗し、次のエラー メッセージが表示されます。  
@@ -78,8 +79,8 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  レプリカ ホスト 'MyReplicaHostName' について、1 つまたは複数のパブリッシャー検証エラーが発生しました。  
   
-## <a name="permissions"></a>権限  
- 呼び出し元必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**定義済みパブリケーションのパブリケーション アクセス リストのメンバーまたはディストリビューション データベースの固定データベース ロールパブリッシャー データベースと関連付けられています。  
+## <a name="permissions"></a>アクセス許可  
+ 呼び出し元する必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールには、ディストリビューション データベースまたは定義済みパブリケーションのパブリケーション アクセス リストのメンバーパブリッシャー データベースと関連付けられています。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: 削除 (DMX) |Microsoft ドキュメント
+title: 削除 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b11bda21fe877af419442cb8b98acd4d29c21b
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841275"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989914"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,17 +37,17 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  構造識別子です。  
   
 ## <a name="remarks"></a>コメント  
- 指定しない場合**マイニング モデルの**または**マイニング構造の**、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]名前に基づいてオブジェクトの種類を検索し、適切なオブジェクトを処理します。 サーバーが同じ名前のマイニング構造とマイニング モデルを持つ場合、エラーが返されます。  
+ 指定しない場合**マイニング モデルの**または**マイニング構造の**、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]名前に基づいてオブジェクトの種類を検索し、正しいオブジェクトを処理します。 サーバーが同じ名前のマイニング構造とマイニング モデルを持つ場合、エラーが返されます。  
   
  次の表は、異なる形式の構文を使用した場合の結果について示しています。  
   
 |ステートメントから削除してください。|結果|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<構造体 >*<br /><br /> または<br /><br /> DELETE FROM MINING STRUCTURE*\<構造 >* です。コンテンツ|マイニング構造を ProcessClear を実行します。 すべての内容がマイニング構造および関連するマイニング モデルから削除されます。|  
-|DELETE FROM MINING STRUCTURE*\<構造 >* です。場合|マイニング構造を ProcessClearStructureOnly を実行します。 関連するマイニング モデルは保存したまま、すべての内容がマイニング構造から削除されます。 マイニング構造が削除された後では、関連するマイニング モデルでのドリルスルーは失敗します。|  
-|マイニング モデルから削除*\<モデル >*<br /><br /> または<br /><br /> マイニング モデルから削除*\<モデル >* です。コンテンツ|ProcessClear をマイニング モデルを実行しますが、状態の値をそのまま残ります。 状態値は、その列で使用できる状態を表します。 たとえば、性別の列の状態値は、男性と女性です。|  
+|マイニング構造から削除*\<構造体 >*<br /><br /> または<br /><br /> マイニング構造から削除*\<構造 >* します。コンテンツ|マイニング構造に対して ProcessClear を実行します。 すべての内容がマイニング構造および関連するマイニング モデルから削除されます。|  
+|マイニング構造から削除*\<構造 >* します。場合|マイニング構造に対して ProcessClearStructureOnly を実行します。 関連するマイニング モデルは保存したまま、すべての内容がマイニング構造から削除されます。 マイニング構造が削除された後では、関連するマイニング モデルでのドリルスルーは失敗します。|  
+|マイニング モデルから削除*\<モデル >*<br /><br /> または<br /><br /> マイニング モデルから削除*\<モデル >* します。コンテンツ|マイニング モデルに ProcessClear を実行しますが、状態の値をそのまま残されます。 状態値は、その列で使用できる状態を表します。 たとえば、性別の列の状態値は、男性と女性です。|  
   
- 処理の種類の詳細については、次を参照してください。[型要素&#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)です。  
+ 処理の種類の詳細については、次を参照してください。 [Type 要素&#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、すべての内容が NB_Sample モデルから削除されます。  

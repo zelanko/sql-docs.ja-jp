@@ -1,5 +1,5 @@
 ---
-title: メッセージを使用して |Microsoft ドキュメント
+title: メッセージを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1b0f54854c6eebcbdfdf28d93e7df700cf4eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968687"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037850"
 ---
 # <a name="using-messages"></a>メッセージの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO では、システム メッセージがによって表される、<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>オブジェクトに属し、**サーバー**オブジェクト。 システム メッセージが変更されることはできません、ため**SystemMessage**オブジェクトのプロパティは読み取り専用です。  
+  SMO では、システム メッセージがによって表される、<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>オブジェクトに属し、 **Server**オブジェクト。 システム メッセージが変更されることはできません、ため**SystemMessage**オブジェクトのプロパティは読み取り専用です。  
   
- SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいをインスタンス化して、新しいユーザー定義のメッセージを作成できます**UserDefinedMessage**オブジェクトと適切なプロパティを設定します。  
+ SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいをインスタンス化して、新しいユーザー定義メッセージを作成できる**UserDefinedMessage**オブジェクトと適切なプロパティを設定します。  
   
 ## <a name="examples"></a>使用例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Visual Basic での特定のシステム メッセージの検索  
  このコード例では、システム メッセージを ID 番号で識別してメッセージを表示する方法を示します。  

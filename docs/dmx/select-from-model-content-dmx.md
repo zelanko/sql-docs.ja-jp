@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;モデル&gt;です。コンテンツ (DMX) |Microsoft ドキュメント
+title: SELECT FROM&lt;モデル&gt;します。コンテンツ (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842665"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040350"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;モデル&gt;です。コンテンツ (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;モデル&gt;します。コンテンツ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   指定されたデータ マイニング モデルのマイニング モデル スキーマ行セットを返します。  
@@ -34,7 +34,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *n*  
  任意。 返す行数を指定する整数値です。  
   
- *式の一覧*  
+ *式リスト*  
  Content スキーマ行セットから派生する、列のコンマ区切りのリストです。  
   
  *model*  
@@ -47,12 +47,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  任意。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>コメント  
- **SELECT FROM** *\<モデル > * * *。コンテンツ** ステートメントには、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 使用することができます、 **SELECT FROM\<モデル >。コンテンツ**ステートメントをモデルの NODE_RULE 列の値を返します。  
+ **SELECT FROM** *\<モデル > * * *。コンテンツ** ステートメントは、各アルゴリズムに固有のコンテンツを返します。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 使用することができます、 **SELECT FROM\<モデル >。コンテンツ**ステートメントをモデルの NODE_RULE 列の値を返します。  
   
  次の表に、マイニング モデル コンテンツに含まれる列を示します。  
   
 > [!NOTE]  
->  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 詳細については、マイニング モデル アルゴリズム、および解釈および各種類のモデル コンテンツのマイニング モデルをクエリする方法のヒントごとにコンテンツの次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)です。  
+>  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 マイニング モデル コンテンツの各アルゴリズム、および解釈および各種類のモデル コンテンツのマイニング モデルをクエリする方法に関するヒントについては、次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)します。  
   
 |CONTENT 行セット列|説明|  
 |---------------------------|-----------------|  
@@ -89,10 +89,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 次のクエリは、 **IsDescendant**関数を前述のクエリで返されたノードの直系の子を返します。  
+ 次のクエリは、 **IsDescendant**関数を前のクエリで返されたノードの直下の子を返します。  
   
 > [!NOTE]  
->  NODE_NAME の値は文字列であるためへの引数として NODE_ID を返すために、下位選択ステートメントを使用することはできません、 **IsDescendant**関数。  
+>  NODE_NAME の値は文字列であるためへの引数として NODE_ID を返す下位選択ステートメントを使用することはできません、 **IsDescendant**関数。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -121,7 +121,7 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|欠落|0|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
 |TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
@@ -137,9 +137,9 @@ WHERE NODE_TYPE = 26
   
  例の結果を次に示します。  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
-|TM_NaiveBayes|Bike Buyer|欠落|0|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   

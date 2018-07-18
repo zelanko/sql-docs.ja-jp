@@ -1,5 +1,5 @@
 ---
-title: ClusterDistance (DMX) |Microsoft ドキュメント
+title: ClusterDistance (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841515"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985398"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  **ClusterDistance**関数では、入力したケースの距離を返します、指定されたクラスターまたはクラスターが指定されていない場合、最も可能性の高いクラスターから入力したケースの距離。  
+  **ClusterDistance**関数では、入力したケースの距離を返します、指定されたクラスターでは、クラスターが指定されていない場合、最も可能性の高いクラスターから入力したケースの距離。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,11 +35,11 @@ ClusterDistance([<ClusterID expression>])
  スカラー値です。  
   
 ## <a name="remarks"></a>コメント  
- **ClusterDistance**関数が、入力したケースと入力したケースの確率の高いクラスター間の距離を返します。  
+ **ClusterDistance**関数が、入力したケースとその入力したケースの確率の高いクラスターとの間の距離を返します。  
   
  K-Means クラスタリングの場合、どのケースも所属できるのは、メンバーシップの重みが 1.0 のクラスター 1 つだけなので、クラスターの距離は常に 0 になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 マイニング モデル コンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION をクエリしたり参照したりして、重心の値を取得できます。 詳細については、「[クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
   
- 既定の EM クラスタリング手法の場合、クラスター内のすべてのポイントは同程度であると見なされるため、仕様上、クラスターには重心がありません。 値**ClusterDistance** 、特定のケースと特定のクラスター間で*N*次のように計算されます。  
+ 既定の EM クラスタリング手法の場合、クラスター内のすべてのポイントは同程度であると見なされるため、仕様上、クラスターには重心がありません。 値**ClusterDistance**特定のケースと特定のクラスター間*N*は次のように計算されます。  
   
  ClusterDistance(N) =1–(membershipWeight(N))  
   
@@ -50,13 +50,13 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>関連する予測関数  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クラスタ リング モデルを照会するためには、次の追加機能を提供します。  
   
--   使用して、[クラスター &#40;DMX&#41; ](../dmx/cluster-dmx.md)関数最も可能性の高いクラスターを返します。  
+-   使用して、[クラスター &#40;DMX&#41; ](../dmx/cluster-dmx.md)関数可能性が最も高いクラスターを返します。  
   
 -   使用して、 [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md)ケースが特定のクラスターに所属する確率を取得します。 この値は、クラスターとの距離とは逆の関係になります。  
   
--   使用して、 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)関数、入力ケース既存のモデルのクラスターの各確率値のヒストグラムを返します。  
+-   使用して、 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)関数をそれぞれのモデルのクラスターで、入力ケース既存の確率値のヒストグラムを返します。  
   
--   使用して、 [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)を考慮すると、モデルが存在するは、入力したケース可能性を示す 1、0 からメジャーを返す関数は、アルゴリズムによって学習します。  
+-   使用して、 [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)関数を入力したケース可能性を示す 1、0 からメジャーが考慮すると、モデルが存在するが返されませんが、アルゴリズムによって学習します。  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>例 1: 最も可能性の高いクラスターまでのクラスターの距離の取得  
  次の例は、指定したケースから、そのケースが最も所属している可能性の高いクラスターまでの距離を返します。  
@@ -89,7 +89,7 @@ NATURAL PREDICTION JOIN
 |クラスター 6|  
   
 ## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>例 2: 指定したクラスターまでの距離の取得  
- 次の構文では、マイニング モデル コンテンツ スキーマ行セットを使用して、マイニング モデル内のクラスターのノードの ID とノードのキャプションの一覧を返します。 クラスター id の引数としてのノードのキャプションを行うこともできますし、 **ClusterDistance**関数。  
+ 次の構文では、マイニング モデル コンテンツ スキーマ行セットを使用して、マイニング モデル内のクラスターのノードの ID とノードのキャプションの一覧を返します。 クラスター id の引数としてノードのキャプションを使用することができますし、 **ClusterDistance**関数。  
   
 ```  
 SELECT NODE_UNIQUE_NAME, NODE_CAPTION   

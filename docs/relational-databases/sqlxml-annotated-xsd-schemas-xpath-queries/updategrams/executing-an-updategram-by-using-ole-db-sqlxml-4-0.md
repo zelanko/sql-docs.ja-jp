@@ -1,5 +1,5 @@
 ---
-title: OLE DB (SQLXML 4.0) を使用してアップデート グラムを実行 |Microsoft ドキュメント
+title: OLE DB (SQLXML 4.0) を使用してアップデート グラムの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,25 +22,26 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c80025b375cfa017d92a6ae1602c78ddc57d9f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032270"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB を使用した、アップデートグラムの実行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  このトピックでは、アップデート グラムを実行する DB usingOLE の実際のサンプルを示します。  
+  このトピックでは、アップデート グラムを実行する DB usingOLE の実際のサンプルを提供します。  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>ICommandStream を使用した XML コマンドの設定  
  OLE DB (バージョン 2.6 以降) ICommandStream インターフェイスは、文字列ではなく、ストリーム オブジェクトとしてのコマンドを渡します。  
   
- このインターフェイスでは、XML パーサーで認識されるエンコードのコマンドを使用できます。 Icommand::execute が呼び出されると、コマンド テキストは、ストリームから直接読み取りし、変換は必要ありません。 したがって、ICommandStream を使用して XML コマンドを実行するインターフェイスが効率的です。  
+ このインターフェイスでは、XML パーサーで認識されるエンコードのコマンドを使用できます。 Icommand::execute が呼び出されると、コマンド テキストは、ストリームから直接読み取りし、変換は必要ありません。 そのため、ICommandStream を使用して XML コマンドを実行するインターフェイスが効率的です。  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>ICommandStream を使用した、コマンドとしての XML の設定と、XML ドキュメントとしての結果の取得  
  ICommandStream インターフェイスは、コマンドとして XML ドキュメントを設定するために使用でき、結果を XML ドキュメントとして取得することができます。  
   
 #### <a name="executing-templates-with-xpath-queries"></a>XPath クエリを含むテンプレートの実行  
- XPath クエリで構成される次の XML テンプレートは、ICommandStream を使用してコマンドとして指定されます。  
+ XPath クエリで構成される次の XML テンプレートは ICommandStream を使用してコマンドとして指定します。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  ICommandStream::SetCommandStream を使用すると、コマンド ストリームを指定します。 この例では、実行する XML テンプレートをファイルから読み込みます。 大きな XML テンプレートを実行する場合はこの方法が便利です。  
   
-5.  Icommand::execute、IID_ISequentialStream インターフェイス ID を要求を使用して、XML コマンドを実行します。  
+5.  Icommand::execute、IID_ISequentialStream インターフェイス ID を要求を使用して XML コマンドを実行します  
   
 6.  結果を処理します。 この例では、ストリームから読み取った XML が画面に表示されます。  
   
@@ -523,7 +524,7 @@ FOR XML AUTO</sql:query>
   
  テンプレートにパラメーター値を渡すときには、パラメーターの名前と値の両方を指定する必要があります。  
   
- コードは、次に示します。  
+ これは、コードを示します。  
   
 ```  
 #define UNICODE  

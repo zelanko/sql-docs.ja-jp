@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_merge_checkpoint_files (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_xtp_merge_checkpoint_files (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/28/2016
 ms.prod: sql
@@ -23,24 +23,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bc2c91d93ad24147fa288ffb8164823f4f8a84c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259692"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979424"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   **sys.sp_xtp_merge_checkpoint_files**指定トランザクション範囲内のすべてのデータとデルタ ファイルをマージします。  
   
- 詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)です。  
+ 詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ||  
 |-|  
-|**注**: このストアド プロシージャは非推奨[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 必要がなくなったので、使用できません開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。|  
+|**注**: このストアド プロシージャは非推奨[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]します。 これは、必要がなくなったら、使用できません開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]します。|  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +58,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  ように、データ ファイルのトランザクションの (bigint) 下限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)マージの開始チェックポイント ファイルに対応します。 transactonId の値が無効であれば、エラーが生成されます。  
   
  *upper_bound_Tid*  
- ように、データ ファイルのトランザクションの (bigint) 上限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)です。 transactonId の値が無効であれば、エラーが生成されます。  
+ ように、データ ファイルのトランザクションの (bigint) 上限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)します。 transactonId の値が無効であれば、エラーが生成されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -66,10 +66,10 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
 ## <a name="cursors-returned"></a>返されるカーソル  
  なし  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールと db_owner 固定データベース ロールが必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  有効な範囲内のすべてのデータとデルタ ファイルをマージして、1 つのデータとデルタ ファイルを生成します。 このプロシージャではマージ ポリシーは無視されます。  
   
 ## <a name="see-also"></a>参照  

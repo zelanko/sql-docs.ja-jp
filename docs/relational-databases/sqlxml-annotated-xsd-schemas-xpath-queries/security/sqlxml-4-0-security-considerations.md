@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 のセキュリティに関する考慮事項 |Microsoft ドキュメント
+title: SQLXML 4.0 のセキュリティに関する考慮事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f4a7e0ea6b195f4b77c844eba2fce133e1f8b21
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708480"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035310"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 のセキュリティに関する注意点
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34708480"
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
  SQLXML 4.0 でアップデートグラムを使用する場合の、セキュリティに関するガイドラインを提供します。  
   
- [セキュリティの考慮事項のスキーマ注釈が付けられた&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [スキーマのセキュリティに関する考慮事項を注釈が付けられた&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
  SQLXML 4.0 で注釈付きスキーマを使用する場合の、セキュリティに関するガイドラインを提供します。  
   
  [XML のセキュリティに関する考慮事項の&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)  

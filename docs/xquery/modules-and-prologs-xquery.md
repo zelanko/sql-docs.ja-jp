@@ -1,5 +1,5 @@
 ---
-title: モジュールとプロローグ (XQuery) |Microsoft ドキュメント
+title: モジュールとプロローグ (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 08d19f2a24c243647b4004a557fd25bf96d2dd62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076759"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974533"
 ---
 # <a name="modules-and-prologs-xquery"></a>モジュールとプロローグ (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)する一連の名前空間の宣言です。 プロローグで名前空間の宣言を使用すると、名前空間のバインドにプレフィックスを指定して、クエリ本文でそのプレフィックスを使用できます。  
+  [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)一連の名前空間の宣言です。 プロローグで名前空間の宣言を使用すると、名前空間のバインドにプレフィックスを指定して、クエリ本文でそのプレフィックスを使用できます。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
  次の XQuery 仕様は、この実装ではサポートされません。  

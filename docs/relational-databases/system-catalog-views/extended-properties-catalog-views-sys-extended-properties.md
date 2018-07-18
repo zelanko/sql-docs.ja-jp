@@ -1,5 +1,5 @@
 ---
-title: sys.extended_properties (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.extended_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,28 +26,28 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fb0a4c9692b88ccc895d9aa97f4520cc2d5aea4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031470"
 ---
-# <a name="extended-properties-catalog-views---sysextendedproperties"></a>拡張プロパティ カタログ ビューの sys.extended_properties
+# <a name="extended-properties-catalog-views---sysextendedproperties"></a>拡張プロパティ カタログ ビューでは - sys.extended_properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   現在のデータベース内の拡張プロパティごとに 1 行のデータを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |class|**tinyint**|プロパティが属するアイテムのクラスを識別します。 次のいずれかになります。<br /><br /> 0 = データベース<br /><br /> 1 = オブジェクトまたは列<br /><br /> 2 = パラメーター<br /><br /> 3 = スキーマ<br /><br /> 4 = データベース プリンシパル<br /><br /> 5 = アセンブリ<br /><br /> 6 = 型<br /><br /> 7 = インデックス<br /><br /> 10 = XML スキーマ コレクション<br /><br /> 15 = メッセージの種類<br /><br /> 16 = サービス コントラクト<br /><br /> 17 = サービス<br /><br /> 18 = リモート サービス バインド<br /><br /> 19 = ルート<br /><br /> 20 = データ領域 (ファイル グループまたはパーティションのスキーマ)<br /><br /> 21 = パーティション関数<br /><br /> 22 = データベース ファイル<br /><br /> 27 = プラン ガイド|  
 |class_desc|**nvarchar(60)**|拡張プロパティが属するクラスの説明です。 次のいずれかになります。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> PARAMETER<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|拡張プロパティが属するアイテムの ID です。アイテムのクラスに従って解釈されます。 大部分のアイテムでは、この ID はクラス自体に適用される ID に等しくなります。 非標準的なメジャー ID の解釈は次のようになります。<br /><br /> class が 0 の場合、major_id は常に 0 になります。<br /><br /> class が 1、2、または 7 の場合、major_id は object_id になります。|  
 |minor_id|**int**|拡張プロパティが属するアイテムのセカンダリ ID です。アイテムのクラスに従って解釈されます。 大部分のアイテムでは、この ID が 0 になります。0 以外の場合、ID は次のようになります。<br /><br /> class が 1 の場合、minor_id は、列であれば column_id に、オブジェクトであれば 0 になります。<br /><br /> class が 2 の場合、minor_id は parameter_id になります。<br /><br /> class が 7 の場合、minor_id は index_id になります。|  
-|name|**sysname**|class、major_id、および minor_id で一意となるプロパティ名です。|  
+|NAME|**sysname**|class、major_id、および minor_id で一意となるプロパティ名です。|  
 |value|**sql_variant**|拡張プロパティの値です。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

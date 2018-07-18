@@ -1,5 +1,5 @@
 ---
-title: Automatic Administrative Tasks in SQL Server エージェントのスケジュール設定 |Microsoft ドキュメント
+title: SQL Server エージェントでの自動管理タスクをスケジュール設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e03ca384c3e425eead6663537031411ca8583af9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029840"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server エージェントでの自動管理タスクのスケジュール設定
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "32970903"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Agent> 名前空間にあります。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
-プログラムを使用する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エージェント、含める必要があります、**を使用して**エージェント名前空間を修飾するステートメント。 他の後のステートメントを挿入**を使用して**アプリケーションでは、宣言の前に、ステートメントなど。
+プログラムを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含める必要があります、エージェント、**を使用して**エージェント名前空間を修飾するステートメント。 他の後のステートメントを挿入**を使用して**アプリケーションでは、宣言の前に、ステートメントなど。
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -173,7 +173,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |インスタンス |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>種類では角かっこのため**演算子**は、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]キーワード。  
+ 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>型には角かっこが必要ですので、**演算子**は、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]キーワード。  
   
 ```csharp  
 {  
@@ -206,7 +206,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |インスタンス |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>種類では角かっこのため**演算子**は、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]キーワード。  
+ 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>型には角かっこが必要ですので、**演算子**は、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]キーワード。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

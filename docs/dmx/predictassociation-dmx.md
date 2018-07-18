@@ -1,5 +1,5 @@
 ---
-title: PredictAssociation (DMX) |Microsoft ドキュメント
+title: PredictAssociation (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842975"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989544"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   結合メンバーシップを予測します。  
   
-たとえば、PredictAssociation 関数を使用すると、顧客の買い物かごの現在の状態を示した推奨事項のセットを取得します。 
+たとえば、PredictAssociation 関数を使用すると、顧客の買い物かごの現在の状態を指定した推奨事項のセットを取得します。 
   
 ## <a name="syntax"></a>構文  
   
@@ -31,7 +31,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- 予測可能な入れ子になったテーブル関連付けと分類の一部のアルゴリズムにはが含まれているアルゴリズム。 入れ子になったテーブルをサポートする分類アルゴリズムには、[!INCLUDE[msCoName](../includes/msconame-md.md)]デシジョン ツリー、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes、および[!INCLUDE[msCoName](../includes/msconame-md.md)]ニューラル ネットワーク アルゴリズムです。  
+ 予測可能な入れ子になったテーブル関連付けといくつかの分類アルゴリズムにはが含まれているアルゴリズムです。 入れ子になったテーブルをサポートする分類アルゴリズムには、[!INCLUDE[msCoName](../includes/msconame-md.md)]デシジョン ツリー、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes、および[!INCLUDE[msCoName](../includes/msconame-md.md)]ニューラル ネットワーク アルゴリズム。  
   
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式 >  
@@ -42,18 +42,18 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY、および INCLUDE_STATISTICS はテーブル列の参照にのみ適用され、EXCLUDE_NULL および INCLUDE_NULL はスカラー列の参照にのみ適用されます。  
   
- INCLUDE_STATISTICS はのみを返します **$Probability**と **$AdjustedProbability**です。  
+ INCLUDE_STATISTICS はのみ返します **$Probability**と **$AdjustedProbability**します。  
   
- 場合数値パラメーター *n*を指定すると、 **PredictAssociation**確率に基づく上位の n 個の最も可能性の高い値を返します。  
+ 場合数値パラメーター *n*が指定されている、 **PredictAssociation**確率に基づく上位の n 個の最も可能性の高い値を返します。  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- 含める場合は **$AdjustedProbability**、ステートメントが最上部を返す*n*値に基づいて、 **$AdjustedProbability**です。  
+ 含める場合 **$AdjustedProbability**、ステートメントが最上部を返す*n*値に基づいて、 **$AdjustedProbability**します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 **PredictAssociation**データベースの Adventure Works では 4 つの製品を返す関数が一緒に販売できる最も高いです。  
+ 次の例では、 **PredictAssociation**データベースの Adventure Works では、4 つの製品を返す関数が一緒に販売できる最も高い。  
   
 ```  
 SELECT  
@@ -61,7 +61,7 @@ SELECT
 From  
   [Association]  
 ```  
-次の例使用方法について説明することができます入れ子になったテーブル、予測関数への入力として、SHAPE 句を使用します。 SHAPE クエリは、1 つの列として customerId および顧客が既に挿入製品の一覧を含む 2 番目の列として入れ子になったテーブルを行セットを作成します。 
+次の例では、使い方入れ子になったテーブル、予測関数への入力として、SHAPE 句を使用してを示します。 SHAPE クエリでは、customerId が 1 つの列として、顧客が既にになる製品の一覧を含む 2 番目の列として入れ子になったテーブルを行セットを作成します。 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
