@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988454"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978954"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
   
 ##  <a name="Arguments"></a> 引数  
  @db_name  
- データベースの名前。 @db_nameパラメーターは**SYSNAME**です。 このパラメーターに空の文字列または NULL 値が渡されると、SQL Server のインスタンス上にあるすべてのデータベースに関する情報が返されます。  
+ データベースの名前。 @db_nameパラメーターが**SYSNAME**します。 このパラメーターに空の文字列または NULL 値が渡されると、SQL Server のインスタンス上にあるすべてのデータベースに関する情報が返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|データベース名。|  
 |db_guid|UNIQUEIDENTIFIER|データベースを一意に識別する識別子。|  
@@ -61,16 +61,16 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|値が 1 の場合は、削除されたデータベースであることを示します。|  
 |credential_name|SYSNAME|ストレージ アカウントへの認証に使用された SQL 資格情報の名前。 NULL 値は、SQL 資格情報が設定されていないことを示します。|  
 |retention_days|INT|現在の保有期間 (日数)。 NULL 値が示す[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベース用に構成されたことはありません。|  
-|is_managed_backup_enabled|INT|示すかどうか[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベースが現在有効です。 1 の値が示す[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が現在有効で示し、値 0 を[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベースが無効にします。|  
+|is_managed_backup_enabled|INT|示すかどうか[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベースが現在有効です。 値 1 では、ことを示します[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]現在有効になって 0 の値と[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]はこのデータベースを無効になります。|  
 |storage_url|NVARCHAR (1024)|ストレージ アカウントの URL。|  
 |Encryption_algorithm|NCHAR (20) 型|バックアップを暗号化するときに使用する、現在の暗号化アルゴリズムを返します。|  
 |Encryptor_type|NCHAR(15)|暗号化機能の設定 (証明書または非対称キー) を返します。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|証明書または非対称キーの名前。|  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
- メンバーシップが必要、 **db_backupoperator**を持つデータベース ロール**ALTER ANY CREDENTIAL**アクセス許可。 ユーザーが拒否されていない必要があります**VIEW ANY DEFINITION**アクセス許可。  
+### <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **db_backupoperator**を持つデータベース ロール**ALTER ANY CREDENTIAL**アクセス許可。 ユーザーが拒否されていない必要があります**VIEW ANY DEFINITION**アクセス許可。  
   
 ## <a name="examples"></a>使用例  
  次の例では、"TestDB" の [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の構成が返されます。  
@@ -83,7 +83,7 @@ GO
 SELECT * FROM managed_backup.fn_backup_db_config('TestDB')  
 ```  
   
- 次の例を返します、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で実行された SQL Server のインスタンス上のすべてのデータベースに構成します。  
+ 次の例を返します、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で実行される SQL Server のインスタンス上のすべてのデータベースに構成します。  
   
 ```  
 Use msdb  

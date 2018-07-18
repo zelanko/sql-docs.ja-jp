@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e724071d14199f90877fa02a0471a1e5a0b8574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e989508142069cbee4dc270867360f433af5fbcf
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328246"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
   パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -173,7 +172,7 @@ ms.lasthandoff: 05/03/2018
  **場所**  
  子パッケージの場所を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  

@@ -1,5 +1,5 @@
 ---
-title: '[全般] の XQuery のユース ケース |Microsoft ドキュメント'
+title: '[全般] の XQuery のユース ケース |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9a28080c682d40d1e08aaa96e594c96496d79026
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078089"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999834"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery の一般的な使用例
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ WHERE CatalogDescription is not null
   
 -   クエリ本文で、必要な XML が構築されます。  
   
--   WHERE 句で、 **exist()** 製品カタログの説明を含む行のみを検索するメソッドを使用します。 つまり、<`ProductDescription`> 要素が含まれる XML です。  
+-   WHERE 句で、 **exist()** 製品カタログの説明が含まれている行のみを検索するメソッドを使用します。 つまり、<`ProductDescription`> 要素が含まれる XML です。  
   
  結果を次に示します。  
   
@@ -79,7 +79,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 次のクエリは、同じ情報を取得、製品モデルに対してのみカタログの説明には、重みが含まれますが、<`Weight`>、仕様内の要素、<`Specifications`> 要素。 この例では、WITH XMLNAMESPACES を使用して pd プレフィックスとこれにバインドされる名前空間を定義しています。 これにより、バインディングに記述されていない両方、 **query()** メソッドと、 **exist()** メソッドです。  
+ 次のクエリは、同じ情報を取得、カタログの説明が、製品モデルに対してのみには、重みが含まれていますが、<`Weight`>、仕様内の要素、<`Specifications`> 要素。 この例では、WITH XMLNAMESPACES を使用して pd プレフィックスとこれにバインドされる名前空間を定義しています。 これにより、バインディングに記述されていない両方、 **query()** メソッドと、 **exist()** メソッド。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -94,10 +94,10 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- 前のクエリで、 **exist()** のメソッド、 **xml**データ型の WHERE 句があるかどうかを確認することで、<`Weight`> 内の要素、<`Specifications`> 要素。  
+ 前のクエリで、 **exist()** のメソッド、 **xml** WHERE 句があるかどうかをチェックのデータ型の <`Weight`> 内の要素、<`Specifications`> 要素。  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. カタログの説明に正面からの小さな製品写真が含まれる製品モデルの製品モデル ID の検索  
- XML 製品カタログの説明には、製品の写真が含まれています、<`Picture`> 要素。 各写真には、いくつかのプロパティがあります。 画像の角度のように、<`Angle`> 要素、および、サイズ、<`Size`> 要素。  
+ XML 製品カタログの説明には、製品の写真が含まれています、<`Picture`> 要素。 各写真には、いくつかのプロパティがあります。 以下の画像の角度を <`Angle`> 要素、および、サイズ、<`Size`> 要素。  
   
  カタログの説明に正面からの小さな写真が含まれる製品モデルを取得するために、クエリは次の形式の XML を構築します。  
   
@@ -125,7 +125,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  上のクエリに関して、次の点に注意してください。  
   
--   WHERE 句で、 **exist()** を製品カタログの説明を持つ行のみを取得するメソッドが使用される、<`Picture`> 要素。  
+-   WHERE 句で、 **exist()** を製品カタログの説明を持つ行のみを取得するメソッドを使用します <`Picture`> 要素。  
   
 -   WHERE 句を使用して、 **value()** の値を比較のメソッドを 2 回、<`Size`> と <`Angle`> 要素。  
   
@@ -143,8 +143,8 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 製品のフラット リストにで囲まれた各ペアのモデルの名前と機能のペアを作成、\<機能 > 要素  
- 製品モデル カタログの説明の XML には、いくつか製品の特徴が含まれています。 これらすべての機能に含まれる、<`Features`> 要素。 クエリを使用して[XML の構築 (XQuery)](../xquery/xml-construction-xquery.md)必要な XML を構築するためにします。 中かっこに囲まれた式が、結果に置き換えられます。  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 製品のフラットなリストにで囲まれた各ペアのモデルの名前と機能のペアを作成、\<機能 > 要素  
+ 製品モデル カタログの説明の XML には、いくつか製品の特徴が含まれています。 含まれるこれらの機能はすべて、<`Features`> 要素。 クエリを使用して[XML の構築 (XQuery)](../xquery/xml-construction-xquery.md)必要な XML を構築します。 中かっこに囲まれた式が、結果に置き換えられます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,8 +194,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 製品の一覧の製品モデル カタログの説明からには、モデルの名前、モデルの ID と内の機能にグループ化、 \<Product > 要素  
- 製品モデル カタログの説明に格納された情報を使用して、次のクエリは、製品モデルの名前、モデル ID を一覧表示し、内の機能にグループ化、 \<Product > 要素。  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 製品の一覧から製品モデルのカタログの説明、名前、モデルの ID をモデル化し、内の機能にグループ化、\<製品 > 要素  
+ 製品モデル カタログの説明に格納されている情報を使用して、次のクエリは、製品モデルの名前、モデルの ID を一覧表示し、内の機能にグループ化、\<製品 > 要素。  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -231,7 +231,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. 製品モデルの特徴の説明の取得  
- 次のクエリを含む XML を生成する、<`Product`> を持つ要素**ProducModelID**、 **ProductModelName**属性、および最初の 2 つの製品の特徴です。 具体的には、最初の 2 製品の特徴は、<`Features`> 要素の最初の 2 つの子要素です。 それ以上に特徴がある場合は、空の <`There-is-more/`> 要素が返されます。  
+ 次のクエリに XML を構築、<`Product`> 要素を持つ**ProducModelID**、 **ProductModelName**属性、および最初の 2 つの製品の機能です。 具体的には、最初の 2 製品の特徴は、<`Features`> 要素の最初の 2 つの子要素です。 それ以上に特徴がある場合は、空の <`There-is-more/`> 要素が返されます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -257,7 +257,7 @@ WHERE CatalogDescription is not NULL
   
  上のクエリに関して、次の点に注意してください。  
   
--   FOR ... RETURN ループ部分により、最初の 2 つの製品の特徴情報が取得されます。 **Position()** 関数は、シーケンス内の要素の位置を検索に使用します。  
+-   FOR ... RETURN ループ部分により、最初の 2 つの製品の特徴情報が取得されます。 **Position()** 関数を使用して、シーケンス内の要素の位置を確認します。  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. 製品カタログの説明からの "ons" で終わる要素名の検索  
  次のクエリは、カタログの説明を検索し、内のすべての要素を返します、<`ProductDescription`>"ons"で終わる名前を持つ要素。  
@@ -309,9 +309,9 @@ WHERE CatalogDescription.value('
   
 -   WHERE 句を使用して、カタログの説明の <`Summary`> に "Aerodynamic" という語が含まれる行のみを取得しています。  
   
--   **Contains()** 関数を使用して、単語がテキストに含まれるかどうかを参照してください。  
+-   **Contains()** 関数を使用して、テキストの単語が含まれているかどうかを参照してください。  
   
--   **Value()** のメソッド、 **xml**データ型によって返される値を比較し**contains()** を 1 にします。  
+-   **Value()** のメソッド、 **xml**データ型によって返される値を比較する**contains()** を 1 にします。  
   
  結果を次に示します。  
   
@@ -329,7 +329,7 @@ ProductModelID Result
 ```  
   
 ### <a name="h-find-product-models-whose-catalog-descriptions-do-not-include-product-model-pictures"></a>H. カタログの説明に製品モデルの写真が含まれない製品モデルの検索  
- 次のクエリ含めるれない製品モデルのカタログの説明の Productmodelid を取得する <`Picture`> 要素。  
+ 次のクエリを含めるれない製品モデル カタログの説明が操作を実行しているの Productmodelid を取得する <`Picture`> 要素。  
   
 ```  
 SELECT  ProductModelID  

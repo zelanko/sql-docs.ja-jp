@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,18 +27,19 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aacecfc425af980274435584a191614a0f9536a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74ab3804f6f62d6aadb9e45a57bd7169aa1d1e96
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409214"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>カスタム タスク用ユーザー インターフェイスの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルを使用すると、カスタム タスクの開発者は、タスク用のユーザー インターフェイスを容易に作成できます。作成後、このユーザー インターフェイスは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に統合して表示することができます。 このユーザー インターフェイスでは、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザーに役に立つ情報を提供でき、カスタム タスクのプロパティや設定を正しく構成するための指針とすることができます。  
   
  タスク用のカスタム ユーザー インターフェイスを開発するには、2 つの重要なクラスを使用します。 次の表は、これらのクラスを示しています。  
   
-|クラス|Description|  
+|クラス|[説明]|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|マネージ タスクを識別する属性。この属性のプロパティによってデザイン時の情報を提供し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでのオブジェクトの表示方法と操作方法を制御します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|タスクとカスタム ユーザー インターフェイスを関連付けるためにタスクが使用するインターフェイス。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性のプロパティを示しています。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|制御フロー ツールボックスに表示するタスク名。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|タスクの説明 (<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute> から継承)。 ツールヒントに表示されるプロパティです。|  

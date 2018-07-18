@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 756040486a286a294410858111c8f9258619839b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d959635a9d43bc03325a039b71fff1c0f827617b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957047"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356714"
 ---
 # <a name="replication-queue-reader-agent"></a>Replication Queue Reader Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ qrdrsvc [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  接続確立時にキュー リーダー エージェントが使用する SSL (Secure Sockets Layer) の暗号化レベルです。  
   
-|EncryptionLevel の値|Description|  
+|EncryptionLevel の値|[説明]|  
 |---------------------------|-----------------|  
 |**0**|SSL は使用されません。|  
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
@@ -98,7 +97,7 @@ qrdrsvc [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  キュー リーダー操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
-|HistoryVerboseLevel の値|Description|  
+|HistoryVerboseLevel の値|[説明]|  
 |-------------------------------|-----------------|  
 |**0**|履歴はログに記録されません。この設定はお勧めできません。|  
 |**1**|既定値です。 同じ状態 (startup、progress、success など) を示している以前の履歴メッセージを常に更新します。 前回の記録に同じ状態がない場合は、新しい記録を挿入します。|  
@@ -127,7 +126,8 @@ qrdrsvc [-?]
  クエリがタイムアウトになるまでの秒数です。既定値は 1800 秒です。  
   
  **-ResolverState** [ **1**| **2**| **3**]  
- キュー更新における競合の解決方法を指定します。 **1** はパブリッシャーが優先されることを示します。この場合、現在キューの中で競合しているトランザクションはパブリッシャー側、およびキューを更新しようとしたサブスクライバー側でロールバックされます。キューに格納されている、それ以降のトランザクションについては、処理が継続されます。 **2** はサブスクライバーが優先されることを示します。つまり、キューに格納されたトランザクションの方がパブリッシャー側の値よりも優先されます。 **3** は、競合が発生した場合は常にサブスクライバーが再初期化されることを示します (つまり、パブリッシャーが優先されます)。この場合、キューに格納された後続のトランザクションは強制的に終了され、サブスクリプションが再初期化されます。 既定の設定は、トランザクション パブリケーションの場合は **1** に、スナップショット パブリケーションの場合は **3** になります。  
+ キュー更新における競合の解決方法を指定します。 **1** はパブリッシャーが優先されることを示します。この場合、現在キューの中で競合しているトランザクションはパブリッシャー側、およびキューを更新しようとしたサブスクライバー側でロールバックされます。キューに格納されている、それ以降のトランザクションについては、処理が継続されます。 
+  **2** はサブスクライバーがオーバーライドされることを示します。つまり、キューに格納されたトランザクションの方がパブリッシャー側の値をオーバーライドします。 **3** は、競合が発生した場合は常にサブスクライバーが再初期化されることを示します (つまり、パブリッシャーが優先されます)。この場合、キューに格納された後続のトランザクションは強制的に終了され、サブスクリプションが再初期化されます。 既定の設定は、トランザクション パブリケーションの場合は **1** に、スナップショット パブリケーションの場合は **3** になります。  
   
 ## <a name="remarks"></a>Remarks  
  キュー リーダー エージェントを起動するには、コマンド プロンプトから **qrdrsvc.exe** を実行します。 詳細については、「 [レプリケーション エージェント実行可能ファイルのプログラミング](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  

@@ -3,27 +3,25 @@ title: MSSQLSERVER_50000 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - 50000 [SQL Server Native Client setup error]
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4aac814d8dbe5cfe4bfb0e07b17330267417d447
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2244b3a1b72263489a67b6ce4c6d23d44deb6bca
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950067"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428411"
 ---
 # <a name="sql-server-native-client-error-mssqlserver50000"></a>SQL Server Native Client エラー MSSQLSERVER_50000
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "32950067"
 |||  
 |-|-|  
 |製品名|SQL Server|  
-|[製品バージョン]|11.0|  
+|製品バージョン|11.0|  
 |イベント ID|50000|  
 |イベント ソース|SETUP|  
 |コンポーネント|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  

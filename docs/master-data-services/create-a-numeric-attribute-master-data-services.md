@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4e09e7241c3fd6c40e8d6a8d6d0b0532426355cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6965c60178eec6405e249ff2801e139fa1e3244
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407274"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>数値属性を作成する (マスター データ サービス)
 
@@ -46,12 +46,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-information"></a>属性情報  
  作成された属性ごとに、7 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |状態|属性の状態。<br /><br /> [保存] をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、属性が更新中であることを示します。<br /><br /> 属性の作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
 |[オブジェクト名]|属性名です。|  
 |表示名|属性の表示名。|  
-|Description|属性の説明。|  
+|[説明]|属性の説明。|  
 |ピクセル幅の表示|属性の幅。|  
 |種類とプロパティ|属性の種類とデータ型の情報。|  
 |変更の追跡を有効化|変更の追跡に対して属性が有効になっているかどうかを指定し、グループ番号を括弧で表示します。|  

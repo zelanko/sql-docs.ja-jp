@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb70afd25086bdee1c671f514cc5fc77cedc56d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5377d170dc3a733d7e47dff9082493a744036e9e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406684"
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
   データ マイニング クエリ タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に構築されたデータ マイニング モデルに基づいて、予測クエリを実行します。 予測クエリは、マイニング モデルを使用して新しいデータの予測を作成します。 たとえば、予測クエリにより、夏季のヨット販売数を予測したり、ヨットを購入する可能性の高い顧客の一覧を生成できます。  

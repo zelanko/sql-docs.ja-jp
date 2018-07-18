@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +28,12 @@ caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d45c217f4a7f6ed93f6688f931362339859d058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: afda6527d2ef2f0903347bb92001166037ddf4f7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408024"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 **[スクリプト変換エディター]** を開くと、スクリプト コンポーネントはメタデータ デザイン モードになります。このモードでは、メタデータを構成し、コンポーネントのプロパティを設定します。 メタデータ デザイン モードで、スクリプト コンポーネントのプロパティを設定して、入力と出力を構成したら、コード デザイン モードに切り替えてカスタム スクリプトを記述できます。 メタデータ デザイン モードとコード デザイン モードについて詳しくは、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」をご覧ください。  

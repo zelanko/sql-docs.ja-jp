@@ -1,13 +1,12 @@
 ---
-title: データ ソース オブジェクトを永続化 |Microsoft ドキュメント
+title: データ ソース オブジェクトを永続化 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,27 +15,27 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b516f66963b0c3a6d72614c9218d01313d9e6f7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419391"
 ---
-# <a name="persisted-data-source-objects"></a>永続化されたデータ ソース オブジェクト
+# <a name="persisted-data-source-objects"></a>データ ソース オブジェクトを永続化
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが使用して永続化されたデータ ソース オブジェクトをサポートしている、 **IPersistFile**インターフェイスです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは永続化されたデータ ソース オブジェクトをサポート、 **IPersistFile**インターフェイス。  
   
 ## <a name="examples"></a>使用例  
  **A.データ ソースの初期化を保持します。**  
   
- 次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名を受け取る、 *pLocation*と*pDatasource*関数のパラメーターです。  
+ 次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名を受け取る、 *pLocation*と*pDatasource*関数のパラメーター。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -233,9 +232,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **Ipersistfile::save**前に、または呼び出し後、メソッドを呼び出すことができる**idbinitialize::initialize**です。 正常に返された後に、メソッドを呼び出す**idbinitialize::initialize**有効なデータ ソースの指定が保存されることを確認します。  
+ **Ipersistfile::save**呼び出しの前後に、メソッドを呼び出すことが**idbinitialize::initialize**します。 メソッドの呼び出しから正常に戻った後**idbinitialize::initialize**が確実に有効なデータ ソースの仕様を保持します。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース オブジェクト &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データ ソース オブジェクト&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

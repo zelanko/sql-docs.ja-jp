@@ -1,13 +1,12 @@
 ---
-title: 結果セット (OLE DB) からの行をフェッチ |Microsoft ドキュメント
+title: 結果セット (OLE DB) から行がフェッチ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f31ea65252179382249e7262782b41c9fdd84d80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3798d8c92100507fe7741381808bc924d3a5656
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947538"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417851"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>結果セットからの行のフェッチ (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,15 +30,15 @@ ms.locfileid: "32947538"
 
   このサンプルでは、結果セットから行をフェッチする方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページです。  
+ このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>Description  
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムをする必要があります変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 名前付きインスタンスに接続する場合から、接続文字列を変更する"かに\\\name"という名前付きインスタンス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+### <a name="description"></a>説明  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
 ### <a name="code"></a>コード  
   
@@ -385,6 +384,6 @@ int ProcessResultSet() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [処理結果の操作方法に関するトピック (&) #40";"OLE DB"&"#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [結果の操作方法に関するトピックを処理&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

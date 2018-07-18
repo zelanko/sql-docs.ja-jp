@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b062f6dc200d2024a1bb08c93847304ef9f6a5e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbd854699f0b5618319da232e42d86074890bff8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964527"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354814"
 ---
 # <a name="specify-a-merge-article-resolver"></a>マージ アーティクル競合回避モジュールの指定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "32964527"
   
     -   既定の競合回避モジュール。 既定の競合回避モジュールの動作は、サブスクリプションがクライアント サブスクリプションまたはサーバー サブスクリプションのどちらであるかによって異なります。 サブスクリプションの種類の指定について詳しくは、「[マージ サブスクリプションの種類と競合解決の優先度の指定 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)」をご覧ください。  
   
-    -   ユーザーの作成したカスタム競合回避モジュール。ビジネス ロジック ハンドラー (マネージ コードで作成) または COM ベースのカスタム競合回避モジュールです。 詳しくは、「 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。 競合する行だけでなく、レプリケートされた各行に対して実行するカスタム ロジックを実装する必要がある場合は、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。  
+    -   ユーザーの作成したカスタム競合回避モジュール。ビジネス ロジック ハンドラー (マネージド コードで作成) または COM ベースのカスタム競合回避モジュールです。 詳しくは、「 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。 競合する行だけでなく、レプリケートされた各行に対して実行するカスタム ロジックを実装する必要がある場合は、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。  
   
     -   標準の COM ベース競合回避モジュール。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に含まれています。  
   
@@ -88,13 +87,13 @@ ms.locfileid: "32964527"
   
 1.  固有のカスタム競合回避モジュールを登録する場合は、次のいずれかの種類を作成します。  
   
-    -   ビジネス ロジック ハンドラーとしてのマネージ コード ベースの競合回避モジュール。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
+    -   ビジネス ロジック ハンドラーとしてのマネージド コード ベースの競合回避モジュール。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
   
     -   ストアド プロシージャ ベースの競合回避モジュールと COM-ベースの競合回避モジュール。 詳しくは、「 [マージ アーティクルのカスタム競合回避モジュールの実装](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)」をご覧ください。  
   
-2.  目的の競合回避モジュールが既に登録されているかを判断するには、パブリッシャーの任意のデータベースに対して [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行します。 これにより、カスタム競合回避モジュールの説明、およびディストリビューターに登録された各 COM ベースの競合回避モジュールのクラス識別子 (LSID)、またはディストリビューターに登録された各ビジネス ロジック ハンドラーのマネージ アセンブリの情報が表示されます。  
+2.  目的の競合回避モジュールが既に登録されているかを判断するには、パブリッシャーの任意のデータベースに対して [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行します。 これにより、カスタム競合回避モジュールの説明、およびディストリビューターに登録された各 COM ベースの競合回避モジュールのクラス識別子 (LSID)、またはディストリビューターに登録された各ビジネス ロジック ハンドラーのマネージド アセンブリの情報が表示されます。  
   
-3.  目的のカスタム競合回避モジュールがまだ登録されていない場合は、ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。 **@article_resolver** に競合回避モジュールの名前を指定します。ビジネス ロジックの場合はアセンブリの表示名です。 COM ベースの競合回避モジュールの場合は、 **@resolver_clsid**に DLL の CLSID を指定し、ビジネス ロジック ハンドラーの場合は、 **@is_dotnet_assembly** @is_dotnet_assembly **@is_dotnet_assembly**、 **@dotnet_assembly_name**にアセンブリの名前、 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> @is_dotnet_assembly **@dotnet_class_name**を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。  
+3.  目的のカスタム競合回避モジュールがまだ登録されていない場合は、ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。 **@article_resolver** に競合回避モジュールの名前を指定します。ビジネス ロジックの場合はアセンブリの表示名です。 COM ベースの競合回避モジュールの場合は、**@resolver_clsid** に DLL の CLSID を指定し、ビジネス ロジック ハンドラーの場合は、**@is_dotnet_assembly** に **true** 値、**@dotnet_assembly_name** にアセンブリの名前、**@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> にオーバーライドされるクラスの完全修飾名を指定します。  
   
     > [!NOTE]  
     >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にビジネス ロジック ハンドラー アセンブリが配置されている場合は、 **@dotnet_assembly_name**を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。  

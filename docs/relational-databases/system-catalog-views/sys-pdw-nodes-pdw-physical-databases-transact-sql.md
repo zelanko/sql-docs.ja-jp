@@ -1,14 +1,13 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -19,21 +18,21 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cfc242de943ef2f4cf88b86a789fa88f84a6dd51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cd8793713fafdaa6a92785eecd9c269c42fae307
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180728"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985243"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  コンピューティング ノードでの各物理データベースに 1 行が含まれています。 集計の物理的なデータベース情報を使用して、データベースに関する詳細情報を取得します。 情報を結合に参加させる、`sys.pdw_nodes_pdw_physical_databases`を`sys.pdw_database_mappings`と`sys.databases`テーブル。  
+  コンピューティング ノードでの各物理データベースに 1 行が含まれています。 集計の物理的なデータベース情報を使用して、データベースに関する詳細情報を取得します。 情報を結合する参加、`sys.pdw_nodes_pdw_physical_databases`を`sys.pdw_database_mappings`と`sys.databases`テーブル。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|データベースのオブジェクト ID。 この値での database_id と同じことに注意してください、 [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)ビュー。|  
+|database_id|**int**|データベースのオブジェクト ID。 この値がでの database_id と同じことに注意してください、 [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)ビュー。|  
 |physical_name|**sysname**|シェルとコンピューティング ノードで、データベースの物理名。 この値で physical_name 列の値と同じ、 [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)ビュー。|  
 |pdw_node_id|**int**|ノードに関連付けられている一意の数値 id です。|  
   
@@ -93,7 +92,7 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

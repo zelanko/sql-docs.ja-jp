@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43d77d15fb417d201e07d389d00df0be7aad145
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 646c2baeb42bbfc122455bd9c5981f0399d781b8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407104"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>[SAP BW ソース エディター] ([接続マネージャー] ページ)
   **[SAP BW ソース エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換元の SAP BW 接続マネージャーを選択できます。 このページでは、実行モードと SAP Netweaver BW システムからデータを抽出するためのパラメーターも選択します。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **実行モード**  
  ソースからデータを抽出する方法を指定します。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**P - プロセス チェーンをトリガー**|プロセス チェーンをトリガーします。 この場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが抽出プロセスを開始します。|  
 |**W - 通知を待機**|SAP Netweaver BW システムから、データ抽出の開始する通知を待ちます。 この場合、SAP Netweaver BW システムが抽出プロセスを開始します。|  

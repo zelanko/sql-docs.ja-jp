@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e55d35db8f5dffe70d3ceb3be79726c03c27970f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f3aabc630fd1f194e9ec3a0d3a5826dcbb3060d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334536"
 ---
 # <a name="data-profile-viewer"></a>Data Profile Viewer (Data Profile Viewer)
   データのプロファイル処理では、次に、データ プロファイルを表示して分析します。 このプロファイルは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内でデータ プロファイル タスクを実行してデータ プロファイルを計算した後に表示できます。 データ プロファイル タスクの設定方法および実行方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」をご覧ください。  
@@ -77,7 +76,7 @@ ms.lasthandoff: 05/03/2018
  Data Profile Viewer の使用方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。 データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。データ プロファイル タスクを使用すると、Data Profile Viewer で分析するプロファイル出力を作成できます。  
   
 ### <a name="static-options"></a>静的オプション  
- **[ファイル]**  
+ **開く**  
  データ プロファイル タスクの出力を含む保存済みファイルを参照する場合にクリックします。  
   
  **[プロファイル]** ペイン  
@@ -171,7 +170,7 @@ ms.lasthandoff: 05/03/2018
  テーブルまたはビューの行数が表示されます。  
   
 ##### <a name="detailed-value-distribution-pane"></a>[詳細な値分布] ペイン  
- **[値]**  
+ **Value**  
  プロファイルされた列の個別の値が表示されます。  
   
  **Count**  

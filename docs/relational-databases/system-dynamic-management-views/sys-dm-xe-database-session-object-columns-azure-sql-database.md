@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_object_columns (Azure SQL データベース) |Microsoft ドキュメント
+title: sys.dm_xe_database_session_object_columns (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 863b6d2c274c76919455a4ea68ba0e944d64f16e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467808"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029408"
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "34467808"
   
 ||  
 |-|  
-|**適用されます**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 およびそれ以降のバージョン。|  
+|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 およびそれ以降のバージョン。|  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|イベント セッションのメモリ アドレス。 Sys.dm_xe_database_sessions.address と多対一の関係があります。 NULL 値は許可されません。|  
 |column_name|**nvarchar(60)**|構成値の名前。 NULL 値は許可されません。|  
@@ -42,7 +42,7 @@ ms.locfileid: "34467808"
 |object_name|**nvarchar(60)**|この列が所属するオブジェクトの名前。 NULL 値は許可されません。|  
 |object_package_guid|**uniqueidentifier**|オブジェクトを含むパッケージの GUID。 NULL 値は許可されません。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  VIEW DATABASE STATE 権限が必要です。  
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  

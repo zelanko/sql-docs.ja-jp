@@ -1,5 +1,5 @@
 ---
-title: sys.trace_event_bindings (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.trace_event_bindings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,29 +25,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 287f5cb11acb3ddf23b0a1f77f4039a97b9da9ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220783"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981434"
 ---
 # <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Sys.trace_event_bindings**カタログ ビューには、イベントと列のすべての可能な組み合わせの一覧が含まれています。 各イベントに対して、 **trace_event_id**列、使用可能なすべての列がリストに含め、 **trace_column_id**列です。 ただし、イベントが発生するたびに、使用できるすべての列が追加されるわけではありません。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンによっては、これらの値は変化しません。  
+  **Sys.trace_event_bindings**カタログ ビューに含めるイベントと列のすべての可能な使用状況の組み合わせの一覧が含まれています。 各イベントに対して、 **trace_event_id**列で、使用可能なすべての列は記載されて、 **trace_column_id**列。 ただし、イベントが発生するたびに、使用できるすべての列が追加されるわけではありません。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンによっては、これらの値は変化しません。  
   
- サポートされているトレース イベントの一覧については、次を参照してください。 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)です。  
+ サポートされているトレース イベントの完全な一覧を参照してください。 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 拡張イベント カタログ ビューを代わりに使用します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|トレース イベントの ID。 この列にではまた、 **sys.trace_events**カタログ ビューです。|  
 |**trace_column_id**|**smallint**|トレース列の ID。 この列にではまた、 **sys.trace_columns**カタログ ビューです。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

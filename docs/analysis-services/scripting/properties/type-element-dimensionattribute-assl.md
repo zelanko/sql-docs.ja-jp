@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (DimensionAttribute) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045686"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971454"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 要素 (DimensionAttribute) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34045686"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*Regular*|  
+|既定値|*正規表現*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -46,10 +46,10 @@ ms.locfileid: "34045686"
 |親要素|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |*アカウント*|勘定科目の名前を表す属性です。|  
 |*AccountNumber*|勘定科目の番号を表す属性です。|  
@@ -68,11 +68,11 @@ ms.locfileid: "34045686"
 |*AddressStreet*|住所の番地を表す属性です。|  
 |*AddressZip*|住所の郵便番号を表す属性です。|  
 |*BOMResource*|部品表 (BOM) のリソースを表す属性です。|  
-|*Caption*|キャプションを表す属性です。|  
+|*キャプション*|キャプションを表す属性です。|  
 |*CaptionAbbreviation*|省略形を表す属性です。|  
 |*CaptionDescription*|説明を表す属性です。|  
 |*Channel*|チャネルを表す属性です。|  
-|*City*|市区町村を表す属性です。|  
+|*市区町村*|市区町村を表す属性です。|  
 |*会社*|会社を表す属性です。|  
 |*大陸*|大陸を表す属性です。|  
 |*国*|国または地域を表す属性です。|  
@@ -83,7 +83,7 @@ ms.locfileid: "34045686"
 |*CurrencySource*|通貨換算の換算元通貨を表す属性です。|  
 |*CustomerGroup*|顧客のグループを表す属性です。|  
 |*CustomerHousehold*|顧客の世帯を表す属性です。|  
-|*Customers*|顧客を表す属性です。|  
+|*顧客*|顧客を表す属性です。|  
 |*日付*|日付を表す属性です。|  
 |*DateCanceled*|キャンセル日を表す属性です。|  
 |*DateDuration*|期間を表す属性です。|  
@@ -96,7 +96,7 @@ ms.locfileid: "34045686"
 |*DayOfTrimester*|三半期の通算日を表す属性です。|  
 |*DayOfWeek*|週の通算日を表す属性です。|  
 |*DayOfYear*|年の通算日を表す属性です。|  
-|*日数*|日を表す属性です。|  
+|*日*|日を表す属性です。|  
 |*DaysOfTenDays*|10 日間の通算日を表す属性です。|  
 |*FiscalDay*|会計カレンダーにおける日を表す属性です。|  
 |*FiscalDayOfHalfYears*|会計カレンダーにおける半期の通算日を表す属性です。|  
@@ -126,7 +126,7 @@ ms.locfileid: "34045686"
 |*FiscalYear*|会計カレンダーにおける年を表す属性です。|  
 |*FormattingColor*|書式設定で使用される色を表す属性です。|  
 |*FormattingFont*|書式設定で使用されるフォントを表す属性です。|  
-|*FormattingFontEffects*|書式設定で使用されるフォントの文字飾りを表す属性です。|  
+|*FormattingFontEffects*|書式設定に使用するフォントの文字飾りを表す属性です。|  
 |*FormattingFontSize*|書式設定で使用されるフォント サイズを表す属性です。|  
 |*FormattingOrder*|書式設定で使用される並べ替え順序を表す属性です。|  
 |*FormattingSubtotal*|小計を表す属性です。|  
@@ -151,7 +151,7 @@ ms.locfileid: "34045686"
 |*ISO8601Week*|ISO 8601 カレンダーにおける週を表す属性です。|  
 |*ISO8601WeekOfYear*|ISO 8601 カレンダーにおける年の通算週を表す属性です。|  
 |*ISO8601Year*|ISO 8601 カレンダーにおける年を表す属性です。|  
-|*IsWeekDay*|平日かどうかを表す属性です。|  
+|*[Isweekday]*|平日かどうかを表す属性です。|  
 |*IsWorkingDay*|営業日かどうかを表す属性です。|  
 |*ManufacturingDay*|製造カレンダーにおける日を表す属性です。|  
 |*ManufacturingDayOfHalfYears*|製造カレンダーにおける半期の通算日を表す属性です。|  
@@ -185,7 +185,7 @@ ms.locfileid: "34045686"
 |*MonthOfTrimester*|三半期の通算月を表す属性です。|  
 |*MonthOfYear*|年の通算月を表す属性です。|  
 |*か月間*|月を表す属性です。|  
-|*organizationalUnit*|組織単位を表す属性です。|  
+|*OrganizationalUnit*|組織単位を表す属性です。|  
 |*OrgTitle*|組織の肩書きを表す属性です。|  
 |*PercentOwnership*|所有権の比率を表す属性です。|  
 |*PercentVoteRight*|投票権の比率を表す属性です。|  
@@ -204,8 +204,8 @@ ms.locfileid: "34045686"
 |*PhysicalVolume*|容積を表す属性です。|  
 |*PhysicalWeight*|重量を表す属性です。|  
 |*PhysicalWidth*|幅を表す属性です。|  
-|*ポイント*|ポイントを表す属性です。|  
-|*PostalCode*|郵便番号を表す属性です。|  
+|*Point*|ポイントを表す属性です。|  
+|*[郵便番号]*|郵便番号を表す属性です。|  
 |*Product*|製品を表す属性です。|  
 |*ProductBrand*|製品ブランドを表す属性です。|  
 |*ProductCategory*|製品カテゴリを表す属性です。|  
@@ -216,17 +216,17 @@ ms.locfileid: "34045686"
 |*ProjectEnddate*|プロジェクト終了日を表す属性です。|  
 |*プロジェクト名*|プロジェクト名を表す属性です。|  
 |*ProjectStartDate*|プロジェクト開始日を表す属性です。|  
-|*Promotion*|プロモーションを表す属性です。|  
+|*プロモーション*|プロモーションを表す属性です。|  
 |*QtyRangeHigh*|数量範囲の上限値を表す属性です。|  
 |*QtyRangeLow*|数量範囲の下限値を表す属性です。|  
-|*Quantitative*|数量属性を表す属性です。|  
+|*定量的*|数量属性を表す属性です。|  
 |*QuarterOfHalfYear*|半期の通算四半期を表す属性です。|  
 |*"Quarterofyear"*|年の通算四半期を表す属性です。|  
 |*四半期*|四半期を表す属性です。|  
 |*レート*|レートを表す属性です。|  
 |*RateType*|レートの種類を表す属性です。|  
 |*Region*|顧客によって定義された領域を表す属性です。|  
-|*Regular*|標準属性を表す属性です。|  
+|*正規表現*|標準属性を表す属性です。|  
 |*RelationToParent*|親へのリレーションを表す属性です。|  
 |*ReportingDay*|レポート カレンダーにおける日を表す属性です。|  
 |*ReportingDayOfHalfYears*|レポート カレンダーにおける半期の通算日を表す属性です。|  
@@ -257,9 +257,9 @@ ms.locfileid: "34045686"
 |*担当者*|代表者を表す属性です。|  
 |*シナリオ*|シナリオを表す属性です。|  
 |*Seconds*|秒を表す属性です。|  
-|*シーケンス*|シーケンス属性を表す属性です。|  
+|*Sequence*|シーケンス属性を表す属性です。|  
 |*ShortCaption*|短いキャプションを表す属性です。|  
-|*stateOrProvince*|都道府県を表す属性です。|  
+|*StateOrProvince*|都道府県を表す属性です。|  
 |*TenDayOfHalfYears*|半期の通算の旬を表す属性です。|  
 |*TenDayOfQuarter*|四半期の通算の旬を表す属性です。|  
 |*TenDayOfTrimester*|三半期の通算の旬を表す属性です。|  
@@ -270,9 +270,9 @@ ms.locfileid: "34045686"
 |*TrimesterOfYear*|年の通算三半期を表す属性です。|  
 |*UndefinedTime*|未定義の期間を表す属性です。|  
 |*Utility*|ユーティリティを表す属性です。|  
-|*[バージョン]*|バージョンを表す属性です。|  
+|*バージョン*|バージョンを表す属性です。|  
 |*WebHtml*|HTML コンテンツを表す属性です。|  
-|*WebMailAlias*|電子メールの別名を表す属性です。|  
+|*WebMailAlias*|電子メール エイリアスを表す属性です。|  
 |*WebUrl*|URL アドレスを表す属性です。|  
 |*WebXmlOrXsl*|XML または XSL コンテンツを表す属性です。|  
 |*WeekOfHalfYears*|半期の通算週を表す属性です。|  
@@ -283,13 +283,13 @@ ms.locfileid: "34045686"
 |*週*|週を表す属性です。|  
 |*年*|年を表す属性です。|  
   
- 許可される値に対応する列挙**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AttributeType>します。  
+ 許容された値に対応する列挙体**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AttributeType>します。  
   
  親に対応する要素**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   
 ## <a name="see-also"></a>参照  
- [要素の属性&#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Attributes 要素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [ディメンション要素&#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -2,7 +2,6 @@
 title: Query メソッド (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9f676540c7076a68c006aeeb1c6d120e889c7b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 682743135ddb0a7eddff18e0c659f0a7a7b9931f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288358"
 ---
 # <a name="query-method-rds"></a>クエリ メソッド (RDS)
 返す有効な SQL クエリ文字列を使用して、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
@@ -44,13 +44,13 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *DataFactory*  
  オブジェクト変数を表す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト。  
   
- *接続*  
+ *Connection*  
  A**文字列**サーバー接続情報を含む値です。 これがに似ていますが、[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティです。  
   
- *Query*  
+ *クエリ*  
  A**文字列**SQL クエリを含むです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クエリでは、データベース サーバーの SQL 文法を使用する必要があります。 実行されたクエリでエラーがある場合は、結果のステータスが返されます。 **クエリ**メソッドが、構文のチェックを行わない、**クエリ**文字列。  
   
 ## <a name="applies-to"></a>適用対象  

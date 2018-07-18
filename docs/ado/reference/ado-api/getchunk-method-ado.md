@@ -2,7 +2,6 @@
 title: GetChunk メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38397b5573cfb7ddb10a7454833f4e9b512b769b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d39075e6d3c16540ded137a8ac78ccc6f8d94f8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278791"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk メソッド (ADO)
 大きなテキストまたはバイナリ データの内容の一部、または返します[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
@@ -41,10 +41,10 @@ variable = field.GetChunk(Size)
  返します、**バリアント**です。  
   
 #### <a name="parameters"></a>パラメーター  
- *サイズ*  
+ *[サイズ]*  
  A**長い**バイトまたは取得する文字の数と同じである式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **GetChunk**メソッドを**フィールド**長いバイナリまたは文字データの一部またはすべてを取得するオブジェクト。 システム メモリが限られている状況で使用できます、 **GetChunk**全体ではなく、特定の部分で長い値を操作するメソッド。  
   
  データを**GetChunk**に割り当てられている呼び出しが戻る*変数*です。 場合*サイズ*が残りのデータよりも大きい、 **GetChunk**埋め込みなしで残りのデータのみを返します*変数*空のスペースです。 フィールドが空である場合、 **GetChunk**メソッドは、null 値を返します。  

@@ -2,7 +2,6 @@
 title: BeginTrans、CommitTrans RollbackTrans イベント (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -27,11 +26,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9754baa574a21916e981c91aad56385adfb16e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c440f6bd1a978a820797414ff81e6b9b15da467
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276061"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント (ADO)
 これらのイベントが関連付けられている操作の後に呼び出される、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの実行が終了します。  
@@ -66,7 +66,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  **接続**オブジェクトに対してこのイベントが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Visual c で複数**接続**同じイベント処理メソッドを共有できます。 メソッドを使用して、返された**接続**を決定するオブジェクトがイベントを発生させたオブジェクト。  
   
  場合、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティに設定されている**adXactCommitRetaining**または**adXactAbortRetaining**、新しいトランザクションがコミットまたはロールバック、トランザクション後に開始します。 使用して、 **BeginTransComplete**を無視するすべてのイベントが最初のトランザクションの開始イベント。  

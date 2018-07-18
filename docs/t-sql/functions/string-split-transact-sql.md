@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5416e4c42e0aee104bc3fe23857a996b8b4b5981
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 45e0dbf6fac0361a95aeedc3b47ba13ae82058d5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689160"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787743"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ WHERE RTRIM(value) <> '';
   
 |ProductId|[オブジェクト名]|Tags|  
 |---------------|----------|----------|  
-|@shouldalert|Full-Finger Gloves|clothing,road,touring,bike|  
+|1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike,mountain|  
   
@@ -107,10 +106,10 @@ FROM Product
   
 |ProductId|[オブジェクト名]|value|  
 |---------------|----------|-----------|  
-|@shouldalert|Full-Finger Gloves|clothing|  
-|@shouldalert|Full-Finger Gloves|road|  
-|@shouldalert|Full-Finger Gloves|touring|  
-|@shouldalert|Full-Finger Gloves|bike|  
+|1|Full-Finger Gloves|clothing|  
+|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|touring|  
+|1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  

@@ -1,25 +1,24 @@
 ---
-title: SQL Server 共有管理オブジェクト (SMO) のライセンス条項 |Microsoft ドキュメント
+title: SQL Server 共有管理オブジェクト (SMO) のライセンス条項 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040430"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共有管理オブジェクト (SMO) のライセンス条項
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "34235099"
 
 **1.インストールおよび使用に関する権利。**
 
-&nbsp;&nbsp;インストールして、設計、開発、およびプログラムをテストしてデバイスの任意の数、ソフトウェアの複製を使用する場合があります。
+&nbsp;&nbsp;インストールして、設計、開発およびテスト、プログラムをデバイスで任意の数、ソフトウェアの複製を使用して可能性があります。
 
 **2.  追加のライセンス条件および追加の使用権。**
 
@@ -55,7 +54,7 @@ ms.locfileid: "34235099"
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii. 再頒布の条件。お客様は、お客様が頒布するすべての再頒布可能コードにつき、以下に従わなければなりません。**
 * お客様のプログラムにおいて再頒布可能コードに重要な新しい機能を追加すること
-* 再頒布可能コードが .dll のファイル名拡張子を持つに、お客様のプログラムと共に、リンカーによってこのような再頒布可能コードの実行の結果のみを配布します。
+* .dll のファイル名拡張子が再頒布可能コード、お客様のプログラムと共に、リンカーによってそのような再頒布可能コードの実行の結果のみを配布します。
 * お客様のプログラムの頒布者および外部エンド ユーザーに、本ライセンス条項と同等以上に再頒布可能コードを保護する条項に同意させること 
 * お客様のプログラムにお客様名義の有効な著作権表示を行うこと
 * お客様のプログラムの頒布または使用に関する請求 (弁護士費用を含みます) について、マイクロソフトを免責、防御、および補償すること
@@ -87,7 +86,7 @@ ms.locfileid: "34235099"
 
 **8.  サポート サービス。** 本ソフトウェアは現状有姿で提供されます。そのため、マイクロソフトはサポート サービスを提供しない場合があります。
 
-**9.  完全合意**です。 本ライセンス条項、ならびに追加物、更新プログラム、インターネットベース サービス、およびサポート サービスに関する使用条件は、本ソフトウェアおよびサポート サービスについてのお客様とマイクロソフトとの間の完全なる合意です。
+**9.  完全な合意**します。 本ライセンス条項、ならびに追加物、更新プログラム、インターネットベース サービス、およびサポート サービスに関する使用条件は、本ソフトウェアおよびサポート サービスについてのお客様とマイクロソフトとの間の完全なる合意です。
 
 **10. 準拠法。**
 

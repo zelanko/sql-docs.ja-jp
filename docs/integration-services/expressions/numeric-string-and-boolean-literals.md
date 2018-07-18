@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34382ce333db1d7dda8e72b4a7eeb6a2b8196e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c70f744427da1b6e7d10ce061bcd3640ca86cfa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408914"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>数値、文字列、ブール型リテラル
  式には、数値、文字列、およびブール値のリテラルを含めることができます。 式エバリュエーターでは、整数、10 進数、浮動小数点定数など、さまざまな数値リテラルがサポートされます。 さらに、式エバリュエーターが値を処理する方法を指定する long 型および float 型サフィックスと、数値リテラルの科学的表記法がサポートされます。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、数値リテラルのサフィックスの一覧を示します。  
   
-|サフィックス|Description|  
+|サフィックス|[説明]|  
 |------------|-----------------|  
 |L または l|long 型数値リテラル。|  
 |U または u|符号なし数値リテラル。|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、数値式の要素とその正規表現の一覧を示します。  
   
-|式の要素|正規表現|Description|  
+|式の要素|正規表現|[説明]|  
 |------------------------|------------------------|-----------------|  
 |D で表現される数字。|[0-9]|任意の数字です。|  
 |E で表現される科学的表記法。|[Ee][+-]?{D}+|大文字と小文字の e、+ または - (オプション)、および D で定義された 1 個以上の数字です。|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、正規表現言語を使用した有効な数値リテラルについて説明します。  
   
-|正規表現|Description|  
+|正規表現|[説明]|  
 |------------------------|-----------------|  
 |{D}+{IS}|1 個以上の数字 (D) を持つ整数の数値リテラルと、long 型または符号なし、あるいはその両方のサフィックス (IS) (オプション) です。  たとえば、457、785u、986L、7945ul などです。|  
 |{D}+{E}{FS}|1 個以上の数字 (D) を持つ非整数の数値リテラル、科学的表記法、および long 型または float 型サフィックスです。  たとえば、4E8l、13e-2f、5E+L などです。|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
  文字列には、エスケープ シーケンスに必要なその他の文字を含めることができます。 次の表に、文字列リテラルのエスケープ シーケンスの一覧を示します。  
   
-|エスケープ シーケンス|Description|  
+|エスケープ シーケンス|[説明]|  
 |---------------------|-----------------|  
 |\a|アラート|  
 |\b|バックスペース|  

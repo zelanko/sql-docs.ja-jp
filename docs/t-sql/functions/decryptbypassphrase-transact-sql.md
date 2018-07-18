@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - DECRYPTBYPASSPHRASE function
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e01348ab88ef33ab38a9fd9040d5ff0174cb26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee0265d9974883cd0d61ac1b8f0514f97d1b3a04
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787753"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  パスフレーズを使用して暗号化されたデータの暗号化を解除します。  
+この関数は、もともとパスフレーズで暗号化されたデータを復号します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,43 +49,51 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
   
 ## <a name="arguments"></a>引数  
  *passphrase*  
- 暗号化解除キーを作成するために使用されるパスフレーズを指定します。  
+復号キーの生成に使用されるパスフレーズ。  
   
  @passphrase  
- 暗号化用のキーを生成するために使用されるパスフレーズを含む **nvarchar**、**char**、**varchar**、または **nchar** 型の変数を指定します。  
+復号キーの生成に使用されるパスフレーズを含む型
+
++ **char**
++ **nchar**
++ **nvarchar**
+
+内の複数の
+
++ **varchar**
+
+の変数。  
   
- '*ciphertext*'  
- 暗号化を解除する暗号文です。  
+'*ciphertext*'  
+キーで暗号化されたデータの文字列。 *ciphertext* には、**varbinary** データ型が与えられます。  
+ 
+@ciphertext  
+キーで暗号化されたデータを含む、型 **varbinary** の変数。 *@ciphertext* 変数の最大サイズは 8,000 バイトです。  
   
- @ciphertext  
- 暗号文を含む **varbinary** 型の変数を指定します。 最大サイズは 8,000 バイトです。  
+*add_authenticator*  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示します。 *add_authenticator* には、暗号化プロセスで認証子が使用された場合、値 1 が与えられます。 *add_authenticator* には、**int** データ型が与えられます。  
   
- *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 認証子が使用されている場合は 1 です。 **int**.  
+@add_authenticator  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示す変数。 *@add_authenticator* には、暗号化プロセスで認証子が使用された場合、値 1 が与えられます。 *@add_authenticator* には、**int** データ型が与えられます。  
+
+*authenticator*  
+認証子の生成の基礎として使用されるデータ。 *authenticator* には、**sysname** データ型が与えられます。  
   
- @add_authenticator  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 認証子が使用されている場合は 1 です。 **int**.  
-  
- *authenticator*  
- 認証子のデータを指定します。 **sysname**.  
-  
- @authenticator  
- 認証子の派生元のデータを含む変数を指定します。  
+@authenticator  
+認証子の生成の基礎として使用されるデータを含む変数。 *@authenticator* には、**sysname** データ型が与えられます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+最大サイズが 8,000 バイトの **varbinary**。  
   
 ## <a name="remarks"></a>Remarks  
- この関数を実行するには、権限は必要ありません。  
+`DECRYPTBYPASSPHRASE` は、その実行にアクセス許可を必要としません。 `DECRYPTBYPASSPHRASE` は、間違ったパスフレーズまたは認証子情報を受け取ると、NULL を返します。  
   
- 間違ったパスフレーズまたは認証子の情報が使用された場合、NULL が返されます。  
+`DECRYPTBYPASSPHRASE` はパスフレーズを使用し、復号キーを生成します。 この復号キーは永続ではありません。  
   
- パスフレーズは暗号化解除キーの生成に使用され、保存されません。  
-  
- 暗号文が暗号化されたときに認証子が含まれていた場合、暗号化を解除するときにその認証子を提供する必要があります。 暗号化を解除するときに提供された認証子の値が、そのデータで暗号化された認証子の値と一致しない場合、暗号化解除は失敗します。  
+暗号化テキストの暗号化時に認証子が含まれた場合、`DECRYPTBYPASSPHRASE` は、復号プロセスのためにその同じ認証子を受け取らなければなりません。 復号プロセスのために与えられた認証子値がデータの暗号化に使用された認証子値に一致しない場合、`DECRYPTBYPASSPHRASE` 操作は失敗します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で更新されたレコードの暗号化を解除 [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md)です。  
+この例では、[EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) で更新されたレコードを復号します。  
   
 ```  
 USE AdventureWorks2012;  

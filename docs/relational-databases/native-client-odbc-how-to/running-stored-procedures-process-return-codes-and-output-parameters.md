@@ -1,38 +1,36 @@
 ---
-title: リターン コードと出力パラメーター (ODBC) 処理 |Microsoft ドキュメント
+title: リターン コードと出力パラメーター (ODBC) の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b17a4c623e280e2ae8b1e16f9b4b998dba562b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b64711f2cf375ee602e26a77a00d8a22e9e16e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945527"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423991"
 ---
-# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>ストアド プロシージャの実行のプロセスのリターン コードと出力パラメーター
+# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>ストアド プロシージャの実行 - プロセスのリターン コードと出力パラメーター
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは、リモート ストアド プロシージャとしてのストアド プロシージャの実行をサポートします。 ストアド プロシージャをリモート ストアド プロシージャとして実行すると、ドライバーとサーバーでプロシージャ実行のパフォーマンスが最適化されます。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーター、サーバーから最後のパケットで送信され、するまでアプリケーションをご利用いただけません[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA が返されます。 ストアド プロシージャからエラーが返される場合は、SQL_NO_DATA が返されるまでは、次の結果に進める SQLMoreResults を呼び出します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーター、サーバーから最後のパケットで送信され、までアプリケーションをご利用いただけません[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) sql_no_data が返されます。 ストアド プロシージャからエラーが返された場合は、SQL_NO_DATA が返されるまでは、次の結果に進めておく SQLMoreResults を呼び出します。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -41,11 +39,11 @@ ms.locfileid: "32945527"
   
 1.  ODBC CALL エスケープ シーケンスを使用する SQL ステートメントを構築します。 このステートメントでは、各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対してパラメーター マーカーを使用する必要があります。  
   
-2.  呼び出す[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)各入力には、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合)。  
+2.  呼び出す[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 、それぞれの入力入出力、出力パラメーター、およびプロシージャの戻り値 (ある場合)。  
   
-3.  使用してステートメントを実行**SQLExecDirect**です。  
+3.  使用してステートメントを実行**SQLExecDirect**します。  
   
-4.  プロセスの結果セットをまで**SQLFetch**または**SQLFetchScroll** SQL_NO_DATA が返される結果の最終処理の設定中に、またはまで**SQLMoreResults** SQL_NO_DATA が返されます。 この時点で、リターン コードと出力パラメーターにバインドされた変数に、返されたデータ値が格納されています。  
+4.  プロセスの結果が設定されるまで**SQLFetch**または**SQLFetchScroll** SQL_NO_DATA が返されるセットの最後の結果を処理中に、またはまで**SQLMoreResults** sql_no_data が返されます。 この時点で、リターン コードと出力パラメーターにバインドされた変数に、返されたデータ値が格納されています。  
   
 ## <a name="example"></a>例  
  このサンプルでは、リターン コードおよび出力パラメーターの処理を示します。 このサンプルは IA64 ではサポートされていません。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
@@ -200,6 +198,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
-[呼び出すストアド プロシージャ & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[ストアド プロシージャを呼び出す&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

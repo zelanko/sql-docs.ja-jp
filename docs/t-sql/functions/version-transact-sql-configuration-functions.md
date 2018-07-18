@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - processors [SQL Server], types
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1d44d9755cca86af446449c14c90117be1e45043
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cea443cb5994a922a633000e96415503d0406d05
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33060989"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785074"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;バージョン - Transact SQL 構成関数
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +80,7 @@ ms.locfileid: "33060989"
 > [!NOTE]  
 > @@VERSION によって報告された製品バージョンが Azure SQL Database で正しくない問題を認識しています。 Azure SQL Database で実行される SQL Server データベース エンジンのバージョンは常に、SQL Server のオンプレミスのバージョンより新しいため、最新のセキュリティ修正プログラムが含まれています。 これは、パッチ レベルが SQL Server のオンプレミスのバージョンと同じかそれより新しく、SQL Server で使用できる最新の機能が Azure SQL Database で使用できることを意味します。
 >
-> エンジンのエディションをプログラムで確認するには、SELECT SERVERPROPERTY('EngineEdition') を使用します。 このクエリでは、スタンドアロンのデータベースの場合に '5'、Azure SQL Database のマネージ インスタンスの場合に '8' を返します。 
+> エンジンのエディションをプログラムで確認するには、SELECT SERVERPROPERTY('EngineEdition') を使用します。 このクエリでは、スタンドアロンのデータベースの場合に '5'、Azure SQL Database のマネージド インスタンスの場合に '8' を返します。 
 >
 > この問題が解決されたら、ドキュメントを更新します。
 

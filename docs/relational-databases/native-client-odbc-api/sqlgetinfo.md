@@ -1,13 +1,12 @@
 ---
-title: SQLGetInfo |Microsoft ドキュメント
+title: SQLGetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -19,27 +18,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5279fcdb04a83508d45a77155125917206ed1ec8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f47bc9d185835931afa8a80a7759f33cd79b55
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432771"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  によって返される値、表に示します**SQLGetInfo**です。 返される値は、接続先サーバーのバージョン番号によって異なる場合があります。  
+  によって返される値、表に示します**SQLGetInfo**します。 返される値は、接続先サーバーのバージョン番号によって異なる場合があります。  
   
- **SQLGetInfo**で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client とは異なります**SQLGetInfo**で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー (SQLSRV32 です。DLL) と**SQLGetInfo** SQL_KEYWORDS とバッファー長 0 と呼びます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列未満である 0 以外のバッファー長を持つ呼び出されたときに、 **SQLGetInfo**で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
+ **SQLGetInfo**で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client とは異なります**SQLGetInfo**で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー (SQLSRV32 します。DLL) と**SQLGetInfo** SQL_KEYWORDS バッファー長 0 と呼びます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列未満である、0 以外の場合のバッファーの長さで呼び出されたときに、 **SQLGetInfo**で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|接続数は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって制限されます。 ドライバーはこの 0 を返します**SQLGetInfo**要求します。|  
-|SQL_ACTIVE_ENVIRONMENTS|環境の数はドライバーによって制限されません。 ドライバーはこの 0 を返します**SQLGetInfo**要求します。|  
-|SQL_ACTIVE_STATEMENTS|ドライバーは、この 1 を返します**SQLGetInfo**要求します。 アプリケーションで使用できるステートメント ハンドルの数はドライバーによって制限されませんが、あるステートメント ハンドルでの既定の実行が、別のハンドルでの実行をブロックすることがあります。|  
+|SQL_ACTIVE_CONNECTIONS|接続数は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって制限されます。 ドライバーは、この 0 を返します**SQLGetInfo**要求。|  
+|SQL_ACTIVE_ENVIRONMENTS|環境の数はドライバーによって制限されません。 ドライバーは、この 0 を返します**SQLGetInfo**要求。|  
+|SQL_ACTIVE_STATEMENTS|ドライバーは、この 1 を返します**SQLGetInfo**要求。 アプリケーションで使用できるステートメント ハンドルの数はドライバーによって制限されませんが、あるステートメント ハンドルでの既定の実行が、別のハンドルでの実行をブロックすることがあります。|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN、SQL_AT_ADD_COLUMN_DEFAULT、SQL_AT_ADD_COLUMN_SINGLE、SQL_AT_ADD_CONSTRAINT、SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION、SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -56,13 +56,13 @@ ms.lasthandoff: 05/03/2018
 |SQL_COLLATION_SEQ|接続とサーバーに現在割り当てられている照合順序のシーケンス。|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|ODBC SQL_BIGINT データ型の変換ではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーがサポートする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** ODBC とデータ型は SQL_DECIMAL を入力します。 この表の「SQL_CONVERT_DECIMAL」を参照してください。|  
+|SQL_CONVERT_BIGINT|ODBC SQL_BIGINT データ型の変換ではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** として ODBC データ型は SQL_DECIMAL を入力します。 この表の「SQL_CONVERT_DECIMAL」を参照してください。|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_TINYINT、SQL_CVT_LONGVARBINARY、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_LONGVARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_TIMESTAMP、SQL_CVT_LONGVARBINARY、SQL_CVT_WCHAR、SQL_CVT_WLONGVARCHAR、SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|ODBC SQL_TYPE_DATE データ型の変換ではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーがサポートする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** ODBC とデータ型が SQL_TYPE_TIMESTAMP を入力します。 この表の「SQL_CONVERT_TIMESTAMP」を参照してください。|  
+|SQL_CONVERT_DATE|ODBC SQL_TYPE_DATE データ型の変換ではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**データ型として ODBC SQL_TYPE_TIMESTAMP を入力します。 この表の「SQL_CONVERT_TIMESTAMP」を参照してください。|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|ODBC SQL_DOUBLE データ型の変換ではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのサポート、ODBC の SQL_DOUBLE データ型として使用できます。 この表の「SQL_CONVERT_FLOAT」を参照してください。|  
+|SQL_CONVERT_DOUBLE|ODBC SQL_DOUBLE データ型の変換ではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが使用できますと ODBC の SQL_DOUBLE データ型をサポートしています。 この表の「SQL_CONVERT_FLOAT」を参照してください。|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT、SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|ODBC SQL_TYPE_TIME データ型の変換ではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーがサポートする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** ODBC とデータ型が SQL_TYPE_TIMESTAMP を入力します。 この表の「SQL_CONVERT_TIMESTAMP」を参照してください。|  
+|SQL_CONVERT_TIME|ODBC SQL_TYPE_TIME データ型の変換ではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**データ型として ODBC SQL_TYPE_TIMESTAMP を入力します。 この表の「SQL_CONVERT_TIMESTAMP」を参照してください。|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_TIMESTAMP、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_VARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_TINYINT、SQL_CVT_LONGVARBINARY、SQL_CVT_WCHAR、SQL_CVT_WVARCHAR|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|現在のデータ ソース名。 によって示される値を設定*StringLengthPtr*接続は、データ ソース名を指定しなかった場合は 0 にします。|  
+|SQL_DATA_SOURCE_NAME|現在のデータ ソース名。 指す値を設定*StringLengthPtr*接続では、データ ソース名を指定しなかった場合は 0 にします。|  
 |SQL_DATA_SOURCE_READ_ONLY|接続属性 SQL_ATTR_ACCESS_MODE の設定によって異なります。|  
 |SQL_DATABASE_NAME|接続の現在のデータベース。|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
@@ -120,7 +120,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY、SQL_CA2_MAX_ROWS_CATALOG、SQL_CA2_MAX_ROWS_DELETE、SQL_CA2_MAX_ROWS_INSERT、SQL_CA2_MAX_ROWS_SELECT、SQL_CA2_MAX_ROWS_UPDATE、SQL_CA2_OPT_ROWVER_CONCURRENCY、SQL_CA2_OPT_VALUES_CONCURRENCY、SQL_CA2_READ_ONLY_CONCURRENCY|  
 |SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|ケース insenstive 並べ替え順序を実行するサーバーに接続されている場合は SQL_IC_MIXED。<br /><br /> 大文字小文字を区別の並べ替え順序を実行するサーバーに接続されている場合は SQL_IC_SENSITIVE。|  
+|SQL_IDENTIFIER_CASE|ケース insenstive の並べ替え順序を実行するサーバーに接続されている場合は SQL_IC_MIXED。<br /><br /> 大文字小文字を区別の並べ替え順序を実行するサーバーに接続されている場合は SQL_IC_SENSITIVE。|  
 |SQL_IDENTIFIER_QUOTE_CHAR|" (二重引用符)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC、SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|この要求はドライバーではサポートされません。|  

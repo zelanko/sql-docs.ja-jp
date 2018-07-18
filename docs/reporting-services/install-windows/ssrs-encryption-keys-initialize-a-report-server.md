@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f51884df3e202153f3da1b75b63cd2155270eedc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0aa557940b06fc44e75bfe3d6af8d2033ae2b276
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322721"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS の暗号化キー - レポート サーバーの初期化
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、初期化されたサーバーとは、レポート サーバー データベース内のデータの暗号化および暗号化解除を実行できるサーバーのことです。 レポート サーバーを操作するには、初期化が必要です。 初期化は、レポート サーバー サービスを最初に開始するときに行われます。 また、既存の配置にレポート サーバーを追加するときや、復旧処理の一環としてキーを手動で再作成するときにも、初期化が行われます。 暗号化キーを使用する方法と理由の詳細については、「[暗号化キーの構成と管理 (構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」および「[暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)」を参照してください。  

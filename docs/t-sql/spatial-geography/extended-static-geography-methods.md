@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,12 +18,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be34311dde2bbcbeb49ff4a7c1cd77a2e795e648
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c62fadae96a694777ef499bf6d3d2fb1d550fea6
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33058909"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36239755"
 ---
 # <a name="extended-static-geography-methods"></a>拡張された静的な地理メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "33058909"
   
 -   [Null](../../t-sql/spatial-geography/null-geography-data-type.md)  
   
--   [[解析]](../../t-sql/spatial-geography/parse-geography-data-type.md)  
+-   [解析](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
 -   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   

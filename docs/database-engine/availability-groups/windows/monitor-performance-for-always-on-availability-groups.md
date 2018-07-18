@@ -1,4 +1,4 @@
----
+﻿---
 title: Always On 可用性グループのパフォーマンスを監視する (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 06/13/2017

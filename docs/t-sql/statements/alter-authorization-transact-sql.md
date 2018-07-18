@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,15 +26,16 @@ helpviewer_keywords:
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 caps.latest.revision: 84
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69a1483b2bc515d0c03a5f11dc1ba520ab185c08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d1ff4bfeb848cf4f668d7e48a3cd3b574052ecc
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786213"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -211,7 +211,7 @@ ALTER AUTHORIZATION ON
 新しい所有者プリンシパルは、次のいずれかである必要があります。  
 -   SQL サーバー認証ログイン。  
 -   Azure AD 内に存在するフェデレーション ユーザー (グループではなく)。  
--   Azure AD 内に存在するマネージ ユーザー (グループではなく) またはアプリケーション。    
+-   Azure AD 内に存在するマネージド ユーザー (グループではなく) またはアプリケーション。    
 
 > [!NOTE]  
 > 新しい所有者が Azure Active Directory ユーザーの場合は、新しい所有者が新しい DBO になるデータベース内にユーザーとして存在することはできません。 このような Azure AD ユーザーは、ALTER AUTHORIZATION ステートメントを実行して新しいユーザーにデータベース所有権を変更する前にまず、データベースから削除する必要があります。 SQL Database での Azure Active Directory ユーザーの構成について詳しくは、[Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse に接続する方法](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページをご覧ください。   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,20 +18,21 @@ helpviewer_keywords:
 - DECRYPTBYKEYAUTOCERT function
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3bf53e51d3896953e66e3360aaa810a5c13c51ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7541b3f935ab66997315f04f43980beae24698d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790213"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  証明書で自動的に暗号化解除された対称キーを使用し、暗号化を解除します。  
-  
+この関数は、対称キーでデータを復号します。 その対称キーは、証明書で自動的に復号されます。  
+
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
@@ -47,40 +47,40 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>引数  
  *cert_ID*  
- 対称キーの保護に使用されている証明書の ID です。 *Cert_ID* は **int**です。  
+対称キーの保護に使用されている証明書の ID。 *cert_ID* には、**int** データ型が与えられます。  
   
- *cert_password*  
- 証明書の秘密キーを保護するパスワードを指定します。 秘密キーがデータベースのマスター キーで保護されている場合は NULL を指定できます。 *cert_password* は **nvarchar**です。  
+*cert_password*  
+証明書の秘密キーの復号に使用されるパスワード。 データベース マスター キーによってプライベート キーが保護される場合、`NULL` 値を設定できます。 *cert_password* には、**nvarchar** データ型が与えられます。  
+
+'*ciphertext*'  
+キーで暗号化されたデータの文字列。 *ciphertext* には、**varbinary** データ型が与えられます。  
+
+@ciphertext  
+キーで暗号化されたデータを含む、型 **varbinary** の変数。  
+
+*add_authenticator*  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示します。 データ暗号化プロセス中、[ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に渡された値に一致する必要があります。 *add_authenticator* には、暗号化プロセスで認証子が使用された場合、値 1 が与えられます。 *add_authenticator* には、**int** データ型が与えられます。  
   
- '*ciphertext*'  
- キーで暗号化されたデータです。 *暗号化テキスト* は **varbinary**です。  
+@add_authenticator  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示す変数。 データ暗号化プロセス中、[ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に渡された値に一致する必要があります。 *@add_authenticator* には、**int** データ型が与えられます。  
   
- @ciphertext  
- キーを使用して暗号化されたデータを含む **varbinary** 型の変数を指定します。  
+*authenticator*  
+認証子の生成の基礎として使用されるデータ。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *authenticator* には、**sysname** データ型が与えられます。  
   
- *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化するときに EncryptByKey に渡されたものと同じ値である必要があります。 **1** 認証子が使用された場合。 *add_authenticator* は **int**です。  
-  
- @add_authenticator  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化する際に EncryptByKey に渡された値と同じである必要があります。  
-  
- *authenticator*  
- 認証子の生成元のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *認証システム* は **sysname**です。  
-  
- @authenticator  
- 認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
+@authenticator  
+認証子の生成元となるデータを含む変数。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *@authenticator* には、**sysname** データ型が与えられます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+最大サイズが 8,000 バイトの **varbinary**。  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKeyAutoCert は、OPEN SYMMETRIC KEY および DecryptByKey の機能を組み合わせたもので、 対称キーの暗号化解除と、そのキーを使用した暗号化テキストの暗号化解除を 1 回の操作で行います。  
+`DECRYPTBYKEYAUTOCERT` には、`OPEN SYMMETRIC KEY` と `DECRYPTBYKEY` の機能が組み合わされています。 1 つの操作で、最初に非対称キーが復号され、そのキーで暗号化テキストが復号されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 対称キーに対する VIEW DEFINITION 権限と、証明書に対する CONTROL 権限が必要です。  
+対称キーに対する `VIEW DEFINITION` 権限と、証明書に対する `CONTROL` 権限が必要です。   
   
 ## <a name="examples"></a>使用例  
- 次の例では、`DecryptByKeyAutoCert` を使用して暗号化解除の実行コードを簡素化する方法を示します。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
+この例では、`DECRYPTBYKEYAUTOCERT` が復号コードを簡略化するしくみを確認できます。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
   
 ```  
 --Create the keys and certificate.  

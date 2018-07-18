@@ -2,7 +2,6 @@
 title: コマンド (Visual C 構文の ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 206b88fb2e8b8bf14f678b826bc4b5d52deb597d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01c460c5d7829d67242259a0c8d3c45e1dc66270
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276601"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>コマンド (Visual C 構文の ADO)
 ## <a name="methods"></a>メソッド  
@@ -35,7 +35,7 @@ CreateParameter(BSTR Name, DataTypeEnum Type, ParameterDirectionEnum Direction, 
 Execute(VARIANT *RecordsAffected, VARIANT *Parameters, long Options, _ADORecordset **ppirs)  
 ```  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
   
 ```  
 get_ActiveConnection(_ADOConnection **ppvObject)  

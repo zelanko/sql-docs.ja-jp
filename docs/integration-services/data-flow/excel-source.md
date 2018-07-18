@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34a6c0953afad881e80138dd3306f386e98702f1
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: ca1571e89f1273e40f59fa8e680b8a0123efec19
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333066"
 ---
 # <a name="excel-source"></a>Excel ソース
   Excel ソースは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック内のワークシートまたは範囲からデータを抽出します。  
@@ -141,7 +140,7 @@ ms.lasthandoff: 05/17/2018
  **列**  
  **[Excel ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択した外部 (変換元) 列を表示します。  
   
- **[エラー]**  
+ **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
  **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  

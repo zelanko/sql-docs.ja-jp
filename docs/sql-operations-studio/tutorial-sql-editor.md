@@ -1,4 +1,4 @@
----
+﻿---
 title: 'チュートリアル: TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成するには - SQL Operations Studio (プレビュー) |Microsoft ドキュメント'
 description: このチュートリアルでは、SQL Operations Studio (プレビュー) で T-SQL を使用して簡略化する主要な機能について説明します。
 ms.custom: tools|sos
@@ -34,7 +34,7 @@ ms.locfileid: "34235552"
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルでは、SQL Server または Azure SQL Database に *TutorialDB* が必要です。*TutorialDB* データベースを作成するには、次のクイック スタートのいずれかを行います。
+このチュートリアルでは、SQL Server または Azure SQL Database に *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイック スタートのいずれかを行います。
 
 - [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
 - [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
@@ -42,9 +42,9 @@ ms.locfileid: "34235552"
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>すぐにデータベース オブジェクトを見つけて、一般的なタスクを実行
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] はデータベース オブジェクトをすばやく検索する検索ウィジェットを提供します。結果一覧には、選択したオブジェクトに関連する、例えばテーブルのデータ編集のような一般的なタスクのためのコンテキスト メニューが提供されます。
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] はデータベース オブジェクトをすばやく検索する検索ウィジェットを提供します。 結果一覧には、選択したオブジェクトに関連する、例えばテーブルの*データ編集*のような一般的なタスクのためのコンテキスト メニューが提供されます。
 
-1. [サーバー] サイド バーを開き (**Ctrl + G**)、**[データベース]** を展開して、**[TutorialDB]** を選択します。
+1. [サーバー] サイド バーを開き (**Ctrl + G**)、**[データベース]** を展開して、**[TutorialDB]** を選択します。 
 
 1. **[TutorialDB]** を右クリックして、コンテキスト メニューの **[管理]** を選択し、*TutorialDB ダッシュボード*を開きます。
 

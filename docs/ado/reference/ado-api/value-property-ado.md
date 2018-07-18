@@ -2,7 +2,6 @@
 title: Value プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -21,11 +20,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a7a96d3b663afb8c30eea502e475487ae0572d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45f028bf6aaa1273f7220519fc5dfa76c1365437
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282831"
 ---
 # <a name="value-property-ado"></a>Value プロパティ (ADO)
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 
 取得または設定、**バリアント**オブジェクトの値を示す値。 既定値によって異なります、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティです。
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 使用して、**値**プロパティを設定またはからデータを返す**フィールド**オブジェクト、設定またはパラメーター値を取得する**パラメーター**オブジェクト、設定またはプロパティの設定を取得するか、**プロパティ**オブジェクト。 かどうか、**値**プロパティが読み取り/書き込みまたは読み取り専用では、さまざまな要因によって異なります。 詳細については、対応するオブジェクトのトピックを参照してください。
 

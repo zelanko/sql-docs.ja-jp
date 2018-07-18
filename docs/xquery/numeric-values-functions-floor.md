@@ -1,5 +1,5 @@
 ---
-title: floor 関数 (XQuery) |Microsoft ドキュメント
+title: floor 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f0ec0cc8b4a6e958767c805a5bc7ec68678f753
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077179"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991344"
 ---
-# <a name="numeric-values-functions---floor"></a>数値の値関数、floor します。
+# <a name="numeric-values-functions---floor"></a>数値関数 - floor します。
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   引数の値を超えず、小数部のない最も大きな数値を返します。 引数が空のシーケンスの場合は、空のシーケンスを返します。  
@@ -46,15 +46,15 @@ fn:floor ($arg as numeric?) as numeric?
  *$arg*  
  関数を適用する数値。  
   
-## <a name="remarks"></a>解説  
- 場合の種類 *$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型と同じ、*$arg*型です。 場合の種類 *$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
+## <a name="remarks"></a>コメント  
+ 場合の種類 *$arg*は 3 つの数値基本データ型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型は同じですが、*$arg*型。 場合の種類 *$arg* 、数値型のいずれかから派生した型は、戻り値の型が基本の数値型。  
   
- Fn:floor、fn:ceiling、または fn:round 関数への入力が場合**xdt:untypedAtomic**、型指定されていないデータは、暗黙的にキャストされた**xs:double**です。 その他の型のデータが入力されると、静的エラーが生成されます。  
+ Fn:floor、fn:ceiling、または fn:round 関数への入力が場合**xdt:untypedAtomic**、型指定されていないデータは、暗黙的にキャストされた**xs:double**します。 その他の型のデータが入力されると、静的エラーが生成されます。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks サンプル データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列に、AdventureWorks サンプル データベース。  
   
- 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**floor()** XQuery 関数。 置換を行うには必要なは、 **ceiling()** と、クエリの関数、 **floor()** 関数。  
+ 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**floor()** XQuery 関数。 置換を行う必要があるすべてが、 **ceiling()** 関数を使用したクエリで、 **floor()** 関数。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  

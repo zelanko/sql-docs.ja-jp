@@ -1,5 +1,5 @@
 ---
-title: Power Pivot ギャラリーを使用して |Microsoft ドキュメント
+title: Power Pivot ギャラリーを使用して |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d47fc300b39e0dc7d63c2699e8a05f677573ea9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037466"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980585"
 ---
 # <a name="use-power-pivot-gallery"></a>Power Pivot ギャラリーを使用する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "34037466"
 ##  <a name="icons"></a> Power Pivot ギャラリーのアイコン  
  アイコンは、コンテンツを使用できるかどうか、およびコンテンツの状態を視覚的に示すインジケーターです。  
   
-|アイコン|Description|  
+|アイコン|説明|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|砂時計アイコンは、ドキュメントの各ページのサムネイル画像が生成されているときに表示されます。 ページを更新して、更新された画像を表示します。|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|ページ アイコンは、ブックまたはレポートに含まれるページ数が [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーで表示できるページ数を超えているときに表示されます。 すべてのページを表示するには、クライアント アプリケーションを使用する必要があります。|  
@@ -122,7 +122,7 @@ ms.locfileid: "34037466"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|接続されているデータ ソースから更新されたデータを取得するスケジュールを作成または表示するには、[データ更新の管理] ボタンをクリックします。 スケジュールを作成する方法については、「 [データ更新のスケジュール (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)」を参照してください。|  
+|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|接続されているデータ ソースから更新されたデータを取得するスケジュールを作成または表示するには、[データ更新の管理] ボタンをクリックします。 スケジュールを作成する方法については、「 [データ更新のスケジュール (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)」を参照してください。|  
   
 ##  <a name="delete"></a> Power Pivot ギャラリーのブックまたはレポートを削除する  
  ライブラリからドキュメントを削除するには、最初に [すべてのドキュメント] ビューに切り替えます。  
@@ -163,6 +163,6 @@ ms.locfileid: "34037466"
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot ギャラリーの削除](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [作成し、Power Pivot ギャラリーのカスタマイズ](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [データ更新のスケジュール (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [データ更新 (Power Pivot for SharePoint) のスケジュールします。](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

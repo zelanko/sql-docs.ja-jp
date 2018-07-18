@@ -2,10 +2,10 @@
 title: IBCPSession::BCPDone (OLE DB) |Microsoft ドキュメント
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: be47a1af02449515eeea9e5c395796f602bbcf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b840ab60ac59501d1a7e2c3908af36e9e9a31d38
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690275"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信される残りの行をコミットします。  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  その他の操作を呼び出せません、 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)呼び出した後のインターフェイス、 **BCPDone**メソッドです。 呼び出すだけのことが、 [ibcpsession::bcpinit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)新しいバルク コピー操作を開始するメソッド。 これは、呼び出しに似ています、 [irowsetfastload::commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)メソッドです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

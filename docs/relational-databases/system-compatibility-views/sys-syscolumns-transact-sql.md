@@ -1,5 +1,5 @@
 ---
-title: sys.syscolumns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.syscolumns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ab6fb39894c7cbe10be6d00d5fc74e782ca5650e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221891"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061951"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "33221891"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|列またはプロシージャ パラメーターの名前です。|  
+|**name**|**sysname**|列またはプロシージャ パラメーターの名前。|  
 |**id**|**int**|この列が所属するテーブルのオブジェクト ID またはこのパラメーターが使用されているストアド プロシージャの ID です。|  
-|**xtype**|**tinyint**|物理記憶型**sys.types**です。|  
+|**xtype**|**tinyint**|物理記憶型**sys.types**します。|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|拡張ユーザー定義データ型の ID です。 データ型の数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  
-|**長さ**|**smallint**|最大物理記憶長**sys**.**型**です。|  
+|**length**|**smallint**|最大物理記憶長**sys**.**型**します。|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**smallint**|列またはパラメーターの ID です。|  
@@ -57,17 +57,17 @@ ms.locfileid: "33221891"
 |**reserved**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|この列の既定の ID です。|  
-|**domain**|**int**|この列に CHECK 制約、ルールの ID です。|  
+|**domain**|**int**|ルールまたはこの列の CHECK 制約の ID。|  
 |**number**|**smallint**|グループ化しているプロシージャの場合は、サブプロシージャ番号です。<br /><br /> 0 = プロシージャ以外のエントリ|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|この列が表示される行に対するオフセットです。|  
 |**collationid**|**int**|列の照合順序の ID です。 文字ベース以外の列の場合は、NULL です。|  
-|**ステータス**|**tinyint**|列またはパラメーターのプロパティを説明するビットマップです。<br /><br /> 0x08 = NULL 入力を許可する列です。<br /><br /> 0x10 = ANSI による埋め込みが効果的とき**varchar**または**varbinary**列が追加されました。 末尾の空白を保持しつつ**varchar**の後続のゼロが保持されるので**varbinary**列です。<br /><br /> 0x40 = OUTPUT パラメーターです。<br /><br /> 0x80 = ID 列です。|  
-|**type**|**tinyint**|物理記憶型**sys**.**型**です。|  
-|**usertype**|**smallint**|ユーザー定義データ型の ID **sys.types**です。 データ型の数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  
+|**status**|**tinyint**|列またはパラメーターのプロパティを説明するビットマップです。<br /><br /> 0x08 = NULL 入力を許可する列です。<br /><br /> 0x10 = ANSI による埋め込みがとき**varchar**または**varbinary**列が追加されました。 末尾の空白が保持されます**varchar**後続のゼロが保持される**varbinary**列。<br /><br /> 0x40 = OUTPUT パラメーターです。<br /><br /> 0x80 = ID 列です。|  
+|**type**|**tinyint**|物理記憶型**sys**.**型**します。|  
+|**usertype**|**smallint**|ユーザー定義データ型の ID **sys.types**します。 データ型の数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**prec**|**smallint**|この列の有効桁数のレベルです。<br /><br /> -1 = **xml**または大きな値型です。|  
+|**prec**|**smallint**|この列の有効桁数のレベルです。<br /><br /> -1 = **xml**または大きな値の型。|  
 |**scale**|**int**|この列の小数点以下桁数。<br /><br /> NULL = データ型は数値型以外です。|  
 |**iscomputed**|**int**|列が計算列かどうかを示すフラグを設定します。<br /><br /> 0 = 非計算列<br /><br /> 1 = 計算列|  
 |**isoutparam**|**int**|プロシージャ パラメーターが出力パラメーターかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  

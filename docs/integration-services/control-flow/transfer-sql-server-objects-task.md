@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 09d1dffe9ae8dbb9b94f3738e0b382cd658d35d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1f021c19e306bc0b8549e9e4e5fa025dc1c63c4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405314"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスク
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内の 1 つ以上の種類のオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で転送します。 たとえば、このタスクを使用して、テーブルやストアド プロシージャをコピーできます。 転送元として使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて、コピーできるオブジェクトの種類が異なります。 たとえば、スキーマとユーザー定義集計は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースだけに含まれます。  
@@ -172,7 +171,7 @@ ms.lasthandoff: 05/03/2018
  **[ExistingData]**  
  転送先サーバーにデータをどのようにコピーするかを指定します。 このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[置換]**|転送先サーバー上のデータは上書きされます。|  
 |**追加**|転送元サーバーからコピーされたデータは、転送先サーバー上の既存のデータに追加されます。|  

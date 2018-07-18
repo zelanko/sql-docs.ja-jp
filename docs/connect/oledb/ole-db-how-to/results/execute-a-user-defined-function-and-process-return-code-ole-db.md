@@ -2,10 +2,10 @@
 title: コードを実行するユーザー定義関数とプロセス戻り値 (OLE DB) |Microsoft ドキュメント
 description: ユーザー定義関数とプロセス リターン コード SQL Server の OLE DB Driver を使用してを実行します。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2355ea72a10fc5cee1ea35ae5c682cf5cd269c8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a11b48a03bef7b6842b427d43d1a73c311a08b42
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665552"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>ユーザー定義関数の実行とリターン コードの処理 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   この例では、ユーザー定義関数を実行して、リターン コードを出力します。 このサンプルは IA64 ではサポートされていません。  
   
@@ -369,6 +372,6 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [処理結果の操作方法に関するトピック (&) #40";"OLE DB"&"#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [結果を処理方法に関するトピック&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

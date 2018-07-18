@@ -1,4 +1,4 @@
----
+﻿---
 title: データベース エンジン チューニング アドバイザーの起動および使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2017

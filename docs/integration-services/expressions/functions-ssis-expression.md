@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2135360e8289cd48e9a77dea289325791287db4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cd8bd35a642d72a0d3b1b934dbdc1587bd96996
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409654"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  式言語には、次の数学関数が用意されています。  
   
-|機能|Description|  
+|機能|[説明]|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS 式&#41;](../../integration-services/expressions/abs-ssis-expression.md)|数値式の正の絶対値を返します。|  
 |[EXP &#40;SSIS 式&#41;](../../integration-services/expressions/exp-ssis-expression.md)|指定した式の e を基数とする指数を返します。|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  式エバリュエーターには、次の文字列関数が用意されています。  
   
-|機能|Description|  
+|機能|[説明]|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS 式&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|文字式の左端の文字の Unicode コード値を返します。|  
 |[FINDSTRING &#40;SSIS 式&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|文字式内のある文字列が指定回数目に検出された場所を、1 を基点とするインデックスで返します。|  
@@ -79,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  式エバリュエーターには、次の日付と時刻関数が用意されています。  
   
-|関数|Description|  
+|関数|[説明]|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|指定された日付に日付または期間を加えて、新しい DT_DBTIMESTAMP 値を返します。|  
 |[DATEDIFF &#40;SSIS 式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|指定された 2 つの日付間の差を、日付および時刻の単位で返します。|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  式エバリュエーターには、次の NULL 関数が用意されています。  
   
-|機能|Description|  
+|機能|[説明]|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS 式&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|式が NULL かどうかに基づいてブール型の結果を返します。|  
 |[NULL &#40;SSIS 式&#41;](../../integration-services/expressions/null-ssis-expression.md)|要求されたデータ型の NULL 値を返します。|  

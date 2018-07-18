@@ -1,5 +1,5 @@
 ---
-title: '[パブリケーション] (ピア ツー ピア レプリケーション) | Microsoft Docs'
+title: '[パブリケーション](ピア ツー ピア レプリケーション) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,14 +17,14 @@ caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03d36031aca90950479c31b413475f8eacf4bf8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 963cb5a142e3413f3ed71c61e42185d50f2754c1
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960027"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358424"
 ---
-# <a name="publication-peer-to-peer-replication"></a>[パブリケーション] \(ピア ツー ピア レプリケーション)
+# <a name="publication-peer-to-peer-replication"></a>[パブリケーション] (ピア ツー ピア レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[パブリケーション]** ページでは、ピア ツー ピア レプリケーションに対して有効になっているトランザクション パブリケーションを表示します。 パブリケーションは、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで有効になっています。  
   

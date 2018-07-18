@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_tables_cursor (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_fulltext_tables_cursor (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0e188636c3152c6ba7e1daa941f01c5766ad4320
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036280"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33254874"
   カーソルを使用して、フルテキスト インデックス作成用として登録されたテーブルの一覧を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、新しい**sys.fulltext_indexes**カタログ ビューを代わりにします。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)です。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、新しい**sys.fulltext_indexes**カタログ ビューを代わりにします。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 ## <a name="arguments"></a>引数  
  [ **@cursor_return=** ] *@cursor_variable* OUTPUT  
- 型の output 変数は、**カーソル**です。 カーソルは読み取り専用で、スクロール可能な動的カーソルです。  
+ 型の output 変数は、**カーソル**します。 カーソルは読み取り専用で、スクロール可能な動的カーソルです。  
   
  [ **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
- フルテキスト カタログの名前を指定します。 *fulltext_catalog_name*は**sysname**、既定値は NULL です。 場合*fulltext_catalog_name*を省略するか、NULL の場合は、データベースに関連付けられているすべてのフルテキスト インデックス付きのテーブルが返されます。 場合*fulltext_catalog_name*が指定されているが、 *table_name*を省略するか、NULL の場合は、このカタログに関連付けられているすべてのフルテキスト インデックス付きテーブルについて、フルテキスト インデックス情報を取得します。 両方*fulltext_catalog_name*と*table_name*を指定した場合は、行が返されます*table_name*に関連付けられている*fulltext_catalog_name。*;それ以外の場合、エラーが発生します。  
+ フルテキスト カタログの名前を指定します。 *fulltext_catalog_name*は**sysname**、既定値は NULL です。 場合*fulltext_catalog_name*を省略するかが null の場合、データベースに関連付けられているすべてのフルテキスト インデックス付きのテーブルが返されます。 場合*fulltext_catalog_name*が指定されているが、 *table_name*を省略するかが null の場合、このカタログに関連付けられているすべてのフルテキスト インデックス付きテーブルについて、フルテキスト インデックス情報を取得します。 両方*fulltext_catalog_name*と*table_name*指定する場合、行が返されます*table_name*に関連付けられている*fulltext_catalog_name*;それ以外の場合、エラーが発生します。  
   
  [ **@table_name=**] **'***table_name***'**  
  フルテキスト メタデータを要求するテーブル名を指定します。この名前は 1 つまたは 2 つの要素で構成されます。 *table_name*は**nvarchar (517)** 既定値は NULL です。 だけの場合*table_name*指定すると、関連する行のみ*table_name*が返されます。  
@@ -64,7 +64,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|テーブル所有者 テーブルを作成したデータベース ユーザーの名前です。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
@@ -73,8 +73,8 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |**FULLTEXT_INDEX_ACTIVE**|**int**|このテーブルでフルテキスト インデックス作成のマークが付いている列がクエリに適しているかどうか。<br /><br /> 0 = 非アクティブ<br /><br /> 1 = アクティブ|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|フルテキスト インデックス データが存在するフルテキスト カタログ。|  
   
-## <a name="permissions"></a>権限  
- メンバーに権限は、既定の実行、**パブリック**ロール。  
+## <a name="permissions"></a>アクセス許可  
+ 実行権限は、既定のメンバーに、**パブリック**ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、フルテキスト カタログ `Cat_Desc` に関連付けられた、フルテキスト インデックスが作成されているテーブルの名前を返します。  

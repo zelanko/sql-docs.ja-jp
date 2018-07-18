@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_function_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_function_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,34 +25,35 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ad955c58adf7a77c1fab429657d2d8331602fb21
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985198"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  キャッシュされた関数のパフォーマンス統計が集計を返します。 ビューには、各キャッシュされている関数のプランの 1 つの行が返され、行の有効期間は、関数が残っている限りキャッシュします。 関数がキャッシュから削除されると、対応する行はこのビューから削除します。 その時点でパフォーマンス統計 SQL トレース イベントが発生したような**sys.dm_exec_query_stats**です。 メモリ内の関数と CLR のスカラー関数を含む、スカラー関数に関する情報を返します。 テーブル値関数についての情報は返しません。  
+  キャッシュされた関数のパフォーマンス統計が集計を返します。 ビューには、各キャッシュされている関数のプランの 1 つの行が返され、行の有効期間は、関数が残っている限りキャッシュします。 関数がキャッシュから削除されると、対応する行はこのビューから削除します。 その時点では、パフォーマンス統計 SQL トレース イベントが発生するのような**sys.dm_exec_query_stats**します。 メモリ内の関数と CLR のスカラー関数を含む、スカラー関数に関する情報を返します。 テーブル値関数についての情報は返しません。  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。  
   
 > [!NOTE]
-> 最初のクエリ**sys.dm_exec_function_stats**サーバーで現在実行中のワークロードがある場合、不正確な結果を生じる可能性があります。 クエリを再実行すると、より正確な結果を確認できます。  
+> 最初のクエリの**sys.dm_exec_function_stats**サーバーで現在実行中のワークロードがある場合、不正確な結果を生成可能性があります。 クエリを再実行すると、より正確な結果を確認できます。  
   
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|関数が存在するデータベースの ID。|  
 |**object_id**|**int**|関数のオブジェクト id 番号。|  
 |**type**|**char(2)**|オブジェクトの型: FN = スカラー値関数|  
 |**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|これは、クエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、この関数内から実行されました。|  
-|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用することがあります、 **sys.dm_exec_cached_plans**動的管理ビュー。<br /><br /> 0x000 ときに、ネイティブ コンパイルの関数のクエリがメモリ最適化テーブルは常になります。|  
+|**sql_handle**|**varbinary(64)**|これでのクエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、この関数内から実行されました。|  
+|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用できる、 **sys.dm_exec_cached_plans**動的管理ビュー。<br /><br /> 0x000 ときに、ネイティブ コンパイルの関数のクエリがメモリ最適化テーブルは常になります。|  
 |**cached_time**|**datetime**|関数がキャッシュに追加された時刻です。|  
 |**last_execution_time**|**datetime**|前回は、関数が実行されたとします。|  
 |**execution_count**|**bigint**|以降に、関数が実行された回数を最後にコンパイルします。|  
-|**total_worker_time**|**bigint**|合計 CPU 時間にコンパイルされた後にこの関数の実行で使用された (マイクロ秒)。<br /><br /> 関数のネイティブ コンパイル、 **total_worker_time**多くの実行にかかる 1 ミリ秒未満の場合に正確なことができない可能性があります。|  
+|**total_worker_time**|**bigint**|合計 CPU 時間にコンパイルされた後にこの関数の実行で使用された (マイクロ秒)。<br /><br /> ネイティブ コンパイル関数では、 **total_worker_time**多くの実行にかかる 1 ミリ秒未満の場合は、正確にできない可能性があります。|  
 |**last_worker_time**|**bigint**|最後に、関数が実行されたときに使用された CPU 時間、マイクロ秒単位で。 <sup>1</sup>|  
 |**min_worker_time**|**bigint**|この関数で 1 回の実行中に使用された (マイクロ秒) の最小 CPU 時間。 <sup>1</sup>|  
 |**max_worker_time**|**bigint**|この関数で 1 回の実行中に使用されたマイクロ秒単位の最大 CPU 時間。 <sup>1</sup>|  
@@ -73,10 +74,10 @@ ms.lasthandoff: 05/23/2018
 |**min_elapsed_time**|**bigint**|最小経過時間 (マイクロ秒) のいずれか、この関数の実行を完了します。|  
 |**max_elapsed_time**|**bigint**|最大経過時間 (マイクロ秒) のいずれか、この関数の実行を完了します。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="examples"></a>使用例  
  次の例では、平均経過時間で識別される上位 10 個の関数に関する情報を返します。  

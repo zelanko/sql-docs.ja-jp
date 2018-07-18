@@ -2,10 +2,10 @@
 title: スパース列のサポート (OLE DB) |Microsoft ドキュメント
 description: スパース列のサポート (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d505ef702a1fda4b3896b51efb23c2b3b761bf33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5acd9fc1a368f9f7701468887263129495b046e1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611927"
 ---
 # <a name="sparse-columns-support-ole-db"></a>スパース列のサポート (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   このトピックでは、スパース列の SQL Server のサポートの OLE DB ドライバーに関する情報を提供します。 スパース列の詳細については、次を参照してください。 [OLE DB Driver for SQL Server でスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)です。 サンプルについては、次を参照してください。[表示列およびカタログ メタデータのスパース列の&#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)です。  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="ole-db-support-for-sparse-columns"></a>OLE DB によるスパース列のサポート  
  OLE DB Driver for SQL Server のスパース列をサポートするために、次の OLE DB インターフェイスが変更されました。  
   
-|型またはメンバー関数|Description|  
+|型またはメンバー関数|説明|  
 |-----------------------------|-----------------|  
 |IColumnsInfo::GetColumnsInfo|新しい DBCOLUMNFLAGS フラグ値のある DBCOLUMNFLAGS_SS_ISCOLUMNSET が設定されている**column_set**内の列*dwFlags*です。<br /><br /> DBCOLUMNFLAGS_WRITE に設定されている**column_set**列です。|  
 |IColumsRowset::GetColumnsRowset|設定は、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET が**column_set** DBCOLUMN_FLAGS 内の列です。<br /><br /> DBCOLUMN_COMPUTEMODE が DBCOMPUTEMODE_DYNAMIC 用に設定されている**column_set**列です。|  

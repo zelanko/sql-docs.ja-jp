@@ -1,5 +1,5 @@
 ---
-title: PredictHistogram (DMX) |Microsoft ドキュメント
+title: PredictHistogram (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842145"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985361"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,18 +48,18 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] データ マイニング アルゴリズムをサポートしていない **$ProbabilityVariance**です。 この列は、0 を常に含まれています。[!INCLUDE[msCoName](../includes/msconame-md.md)]アルゴリズムです。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] データ マイニング アルゴリズムをサポートしていない **$ProbabilityVariance**します。 この列は、0 を常に含まれています。[!INCLUDE[msCoName](../includes/msconame-md.md)]アルゴリズム。  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] データ マイニング アルゴリズムをサポートしていない **$ProbabilityStdev**です。 この列は、0 を常に含まれています。[!INCLUDE[msCoName](../includes/msconame-md.md)]アルゴリズムです。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] データ マイニング アルゴリズムをサポートしていない **$ProbabilityStdev**します。 この列は、0 を常に含まれています。[!INCLUDE[msCoName](../includes/msconame-md.md)]アルゴリズム。  
   
 -   **$AdjustedProbability**  
   
      **$AdjustedProbability**列は、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]拡張機能を[!INCLUDE[msCoName](../includes/msconame-md.md)]OLE DB for Data Mining 仕様です。  
   
 ## <a name="cluster-columns"></a>クラスター列  
- ヒストグラムを**PredictHistogram**関数を返します、\<クラスター列参照 > は、次の列で構成されます。  
+ ヒストグラムを**PredictHistogram**関数を返します、\<クラスター列参照 >、次の列で構成されています。  
   
 -   **$Cluster** (クラスター名を表します)  
   
@@ -68,7 +68,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>使用例  
- 次の例は、単一クエリに対して Bike Buyer 列の予測された状態を返します。 クエリを使用して取得調整済みの確率に基づいて、Bike Buyer 属性の上位 2 最も可能性の高い状態も返されます、 **PredictHistogram**関数。  
+ 次の例は、単一クエリに対して Bike Buyer 列の予測された状態を返します。 クエリを使用して取得される調整済みの確率に基づいて、Bike Buyer 属性の上位 2 つの最も可能性の高い状態も返されます、 **PredictHistogram**関数。  
   
 ```  
 SELECT  

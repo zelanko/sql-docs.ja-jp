@@ -1,5 +1,5 @@
 ---
-title: sys.security_policies (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.security_policies (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33221133"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993804"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "33221133"
 |schema_id|**int**|オブジェクトが存在するスキーマの ID。|  
 |parent_object_id|**int**|ポリシーが所属するオブジェクトの ID。 0 を指定する必要があります。|  
 |type|**vachar(2)**|**SP** を指定する必要があります。|  
-|type_desc|**nvarchar(60)**|**SECURITY_POLICY**です。|  
+|type_desc|**nvarchar(60)**|**SECURITY_POLICY**します。|  
 |create_date|**datetime**|セキュリティ ポリシーが作成された UTC 日付。|  
 |modify_date|**datetime**|セキュリティ ポリシーが最後に変更された UTC 日付。|  
 |is_ms_shipped|**bit**|常に false です。|  
@@ -59,7 +59,7 @@ ms.locfileid: "33221133"
 |is_schemabinding_enabled|**bit**|セキュリティ ポリシーの Schemabinding の状態:<br /><br /> 0 または NULL = 有効になっています。<br /><br /> 1 = 無効|  
   
 ## <a name="permissions"></a>アクセス許可  
- 持つプリンシパル、 **ALTER ANY SECURITY POLICY**権限は、このカタログ ビューだけでなくすべてのユーザーとすべてのオブジェクトにアクセス権を持つ**VIEW DEFINITION**オブジェクト。  
+ 持つプリンシパル、 **ALTER ANY SECURITY POLICY**アクセス許可がある、すべてのユーザーをこのカタログ ビューのすべてのオブジェクトへのアクセス**VIEW DEFINITION**オブジェクト。  
   
 ## <a name="see-also"></a>参照  
  [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)   

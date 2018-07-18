@@ -1,4 +1,4 @@
----
+﻿---
 title: ソース SQL Operations Studio (プレビュー) の管理 |Microsoft ドキュメント
 description: SQL Operations Studio (プレビュー) でソース管理を構成する方法を説明します。
 ms.custom: tools|sos
@@ -33,13 +33,14 @@ ms.locfileid: "34236433"
 
 ## <a name="open-an-existing-git-repository"></a>既存の Git リポジトリを開く
 
-1. **ファイル**メニューの下にある、**フォルダーを開く.**を選択します。
-2. Gitによって追跡されるファイルを含むフォルダーを参照し、**フォルダーの選択**をクリックします。ローカル リポジトリ内のサブフォルダーは、ここで選択することができます。
+1. **ファイル**メニューの下にある、**フォルダーを開く.** を選択します。
+2. Gitによって追跡されるファイルを含むフォルダーを参照し、**フォルダーの選択**をクリックします。 ローカル リポジトリ内のサブフォルダーは、ここで選択することができます。
 
 
 ## <a name="initialize-a-new-git-repository"></a>新しい git リポジトリを初期化します。
 
 1. **ソース管理**を選択し、gitアイコンを選択します。
+
 
    ![ソース管理の git アイコン](media/source-control/source-control.png)
 

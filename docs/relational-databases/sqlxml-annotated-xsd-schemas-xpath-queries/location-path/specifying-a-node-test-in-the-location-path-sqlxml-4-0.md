@@ -1,5 +1,5 @@
 ---
-title: ノード テストの場所のパス (SQLXML 4.0) に指定 |Microsoft ドキュメント
+title: ノード テストの場所のパス (SQLXML 4.0) の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,31 +22,31 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2c25b27a36a8505f0608ad8690ea13d6c60c197
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970287"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053750"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>ロケーション パスでのノード テストの指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、または**self**) 主ノード型を持ちます。 **属性**軸、主ノード型は**\<属性 >** です。 **親**、**子**、および**self**軸の場合、主ノード型は**\<要素 >** です。  
+  ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、または**セルフ**) 主ノード型があります。 **属性**軸の主ノード型は**\<属性 >** します。 **親**、**子**、および**セルフ**軸の場合、主ノード型は**\<要素 >** します。  
   
 > [!NOTE]  
 >  ワイルドカード (*) のノード テスト (たとえば `child::*`) は、サポートされていません。  
   
 ## <a name="node-test-example-1"></a>ノード テスト: 例 1  
- ロケーション パス`child::Customer`選択**\<顧客 >** コンテキスト ノードの子要素です。  
+ ロケーション パス`child::Customer`選択**\<顧客 >** コンテキスト ノードの子要素。  
   
- この例では、`child` は軸で、`Customer` はノード テストです。 主ノード型、**子**軸は**\<要素 >** です。 そのため、ノード テストの場合は TRUE、 **\<顧客 >** ノードが、 **\<要素 >** ノード。 コンテキスト ノードを持たない場合**\<顧客 >** 、子ノードの空のセットが返されます。  
+ この例では、`child` は軸で、`Customer` はノード テストです。 主ノード型、**子**軸は**\<要素 >** します。 そのため、ノード テストの場合は TRUE、 **\<顧客 >** ノードが、 **\<要素 >** ノード。 コンテキスト ノードにない場合**\<顧客 >** 、子ノードの空のセットが返されます。  
   
 ## <a name="node-test-example-2"></a>ノード テスト : 例 2  
  ロケーション パス`attribute::CustomerID`選択、 **CustomerID**コンテキスト ノードの属性です。  
   
- 例では、`attribute`軸と`CustomerID`ノード テストです。 主ノード型、**属性**軸は**\<属性 >** です。 そのため、ノード テストの場合は TRUE **CustomerID**は、 **\<属性 >** ノード。 コンテキスト ノードを持たない場合**CustomerID**空のノードのセットが返されます。  
+ 例では、`attribute`は、軸と`CustomerID`はノード テストです。 主ノード型、**属性**軸は**\<属性 >** します。 そのため、ノード テストの場合は TRUE **CustomerID**は、 **\<属性 >** ノード。 コンテキスト ノードにない場合**CustomerID**空のノードのセットが返されます。  
   
 > [!NOTE]  
->  XPath ロケーション ステップを参照する場合のこの実装では、 **\<要素 >** または**\<属性 >** エラーが生成されたスキーマで宣言されていない型です。 これは、空のノード セットを返す MSXML の XPath の実装とは異なります。  
+>  XPath のロケーション ステップを参照する場合のこの実装では、 **\<要素 >** または**\<属性 >** エラーが生成されたスキーマで宣言されていない型です。 これは、空のノード セットを返す MSXML の XPath の実装とは異なります。  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>軸の省略構文  
  ロケーション パスでは、次の省略構文がサポートされています。  
@@ -57,7 +57,7 @@ ms.locfileid: "32970287"
   
 -   ロケーション ステップから `child::` を省略できます。  
   
-     したがって、**子**は、既定の軸です。 ロケーション パス `Customer/Order` は、`child::Customer/child::Order` と同じです。  
+     したがって、**子**は既定の軸。 ロケーション パス `Customer/Order` は、`child::Customer/child::Order` と同じです。  
   
 -   `self::node()` は 1 つのピリオド (.) で省略できます。また、`parent::node()` は 2 つのピリオド (..) で省略できます。  
   

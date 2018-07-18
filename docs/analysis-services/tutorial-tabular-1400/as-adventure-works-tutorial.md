@@ -1,5 +1,5 @@
 ---
-title: Analysis Services の Adventure Works チュートリアル (1400) |Microsoft ドキュメント
+title: Analysis Services Adventure Works チュートリアル (1400) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,61 +10,61 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28aa401eb037fecadca17ededf041ab82a4bc498
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044576"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042450"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>テーブル モデリング (1400 互換性レベル)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-このチュートリアルを作成およびで表形式モデルを展開する方法のレッスンでは、 [1400 互換性レベル](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)です。 、Analysis Services を表形式モデルの作成経験がない場合は、を作成し、Visual Studio を使用して基本的な表形式モデルを展開する方法を学習する最も簡単な方法ではこのチュートリアルを完了します。 前提条件を作成したら、インプレース必要がありますは 2 ~ 3 時間かかるを完了します。  
+このチュートリアルを作成して、表形式モデルをデプロイする方法のレッスンでは、 [1400 互換性レベル](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)します。 Analysis Services および表形式モデルに慣れていない場合は、作成して、Visual Studio を使用して基本的な表形式モデルをデプロイする方法を学習する最も簡単な方法ではこのチュートリアルを完了します。 前提条件を作成したらインプレース、2 ~ 3 時間かかるにする必要があります。  
   
 ## <a name="what-you-learn"></a>学習内容   
   
--   新しいテーブル モデル プロジェクトを作成する方法、 **1400 互換性レベル**SSDT では Visual Studio でします。
+-   新しいテーブル モデル プロジェクトを作成する方法、 **1400 互換性レベル**Visual Studio と SSDT でします。
   
--   表形式モデル プロジェクト ワークスペース データベースにリレーショナル データベースからデータをインポートする方法です。  
+-   テーブル モデル プロジェクト ワークスペース データベースにリレーショナル データベースからデータをインポートする方法。  
   
 -   モデルに含まれるテーブル間のリレーションシップを作成および管理する方法。  
   
--   計算列、メジャー、および重要なビジネス メトリックを分析に役立つ主要業績評価指標を作成する方法。  
+-   計算列、メジャー、およびユーザーの重要なビジネス メトリックを分析するのに役立つ主要業績評価指標を作成する方法。  
   
--   パースペクティブとビジネスとアプリケーション固有のビュー ポイントを提供することによって、モデル データを簡単に参照複数ユーザーを支援する階層を作成および管理方法です。  
+-   パースペクティブと階層ヘルプのユーザーはビジネスとアプリケーション固有のビュー ポイントを提供することで、モデル データを簡単に参照を作成および管理する方法。  
   
 -   パーティションを作成してテーブル データをより小さな論理部分に分割し、他のパーティションと分離して処理できるようにする方法。  
   
 -   ユーザー メンバーのロールを作成して、モデル オブジェクトとデータを保護する方法。  
   
--   表形式モデルを展開する方法、 **Azure Analysis Services**サーバーまたは**SQL Server 2017 Analysis Services** SSDT を使用してサーバー。  
+-   表形式モデルをデプロイする方法、 **Azure Analysis Services**サーバーまたは**SQL Server 2017 Analysis Services** SSDT を使用してサーバー。  
   
 ## <a name="prerequisites"></a>前提条件  
 
-このチュートリアルを完了する必要があります。  
+このチュートリアルでは、次の操作をする必要があります。  
   
--   Azure Analysis Services サーバーまたは表形式モードでの SQL Server 2017 Analysis Services サーバー。 無料のサインアップ[Azure Analysis Services の評価版](https://azure.microsoft.com/services/analysis-services/)と[サーバーを作成する](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server)または無料ダウンロード[SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)です。
+-   Azure Analysis Services サーバーまたは表形式モードでの SQL Server 2017 Analysis Services サーバー。 無料のサインアップ[Azure Analysis Services の試用版](https://azure.microsoft.com/services/analysis-services/)と[サーバーを作成する](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server)を無料でダウンロードまたは[SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)します。
 
--   [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal)で、**サンプル AdventureWorksDW データベース**、またはと内部設置型 SQL Server データ ウェアハウス、 [AdventureWorksDW サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)です。 AdventureWorksDW データベースを内部設置型 SQL Server データ ウェアハウスをインストールする場合は、サーバーのバージョンと対応するサンプル データベースのバージョンを使用します。 
+-   [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal)で、**サンプル AdventureWorksDW データベース**、またはでオンプレミス SQL Server Data Warehouse、 [AdventureWorksDW サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)します。 オンプレミス SQL Server データ ウェアハウスに、AdventureWorksDW データベースをインストールするときに、サーバー バージョンに対応するサンプル データベースのバージョンを使用します。 
 
-    **重要:** 、内部設置型 SQL Server データ ウェアハウスにサンプル データベースをインストールし、Azure Analysis Services サーバーにモデルを配置する場合、[オンプレミス データ ゲートウェイ](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)が必要です。
+    **重要:** サンプル データベース、オンプレミス SQL Server データ ウェアハウスをインストールし、Azure Analysis Services サーバーにモデルを配置する場合、 [、オンプレミス データ ゲートウェイ](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)が必要です。
 
--   最新バージョン[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)です。 または、Visual Studio 2017 がある場合は、ダウンロードしてインストール[Microsoft Analysis Services プロジェクト](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)(VSIX) パッケージ。 このチュートリアルでは、SSDT と Visual Studio への参照は同義です。 
+-   最新バージョンの[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)します。 または、Visual Studio 2017 既にある場合は、ダウンロードしてインストール[Microsoft Analysis Services プロジェクト](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)(VSIX) パッケージ。 このチュートリアルでは、SSDT と Visual Studio への参照は同義です。 
 
--   最新バージョン[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。    
+-   最新バージョンの[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。    
 
--   などのクライアント アプリケーション[Power BI Desktop](https://powerbi.microsoft.com/desktop/)または Excel です。 
+-   などのクライアント アプリケーション[Power BI Desktop](https://powerbi.microsoft.com/desktop/)または Excel。 
 
-## <a name="scenario"></a>Scenario  
+## <a name="scenario"></a>シナリオ  
 
-このチュートリアルは、Adventure Works Cycles、架空の会社に基づいています。 Adventure Works は、生成し、自転車、部品、および北米、ヨーロッパ、およびアジアの市場で商用アクセサリを配布するための大規模な多国籍製造会社です。 会社には、500 の作業者が採用しています。 さらに、Adventure Works では、市場には、全体で複数の地域販売チームが採用しています。 プロジェクトでは、売上およびマーケティング ユーザーが、AdventureWorksDW データベース内のインターネット販売データを分析するためのテーブル モデルを作成します。  
+このチュートリアルは、Adventure Works Cycles という架空の会社に基づいています。 Adventure Works が生成され、自転車、部品、および北アメリカ、ヨーロッパ、およびアジアに流通市場のアクセサリを配布するための大規模な多国籍製造会社です。 会社では、500 を採用しています。 さらに、Adventure Works では、その市場拠点の複数の地域販売チームを採用しています。 プロジェクトでは、売上およびマーケティング AdventureWorksDW データベース内のインターネット販売データを分析するための表形式モデルを作成します。  
   
-このチュートリアルを完了するには、さまざまなレッスンを完了する必要があります。 各レッスンでは、タスクがあります。 順序で各タスクの完了は、レッスンを完了する必要があります。 特定のレッスンである可能性があります、同様の結果を実現するいくつかのタスクが、各タスクを完了する方法は若干異なります。 このメソッドは、多くの場合は、複数の方法でタスクを完了しを使用して、前のレッスンとタスクで学習したスキルが身を示します。  
+このチュートリアルを完了するには、さまざまなレッスンを完了する必要があります。 各レッスンでは、タスクがあります。 順序で各タスクの完了は、レッスンを完了する必要があります。 特定のレッスンである可能性があります、似たような結果をいくつかのタスクが、各タスクを完了する方法は若干異なります。 このメソッドは、タスクを完了して、前のレッスンやタスクで学習したスキルを活用してチャレンジを 1 つ以上の方法があることを示しています。  
   
-レッスンの目的は、SSDT に含まれる機能の多くを使用して基本的な表形式モデルの作成を指示します。 各レッスンは前のレッスンに基づいているので、順序どおりに完了する必要があります。
+各レッスンの目的を SSDT に含まれる機能の多くを使用して基本的な表形式モデルを作成することを紹介します。 各レッスンは前のレッスンに基づいているので、順序どおりに完了する必要があります。
   
-このチュートリアルでは、Azure ポータルで、SSMS、またはモデル データを参照するクライアント アプリケーションを使用して、サーバーまたはデータベースを管理するサーバーの管理について」のレッスンは提供されません。 
+このチュートリアルでは、Azure ポータルで、SSMS、またはモデル データを参照するクライアント アプリケーションを使用して、サーバーやデータベースの管理サーバーの管理についてのレッスンは提供されません。 
 
 
 ## <a name="lessons"></a>レッスン  
@@ -73,7 +73,7 @@ ms.locfileid: "34044576"
   
 |レッスン|推定所要時間|  
 |----------|------------------------------|  
-|[1 - 新しいテーブル モデル プロジェクトを作成します。](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)|10 分|  
+|[1 - 新しい表形式モデル プロジェクトを作成します。](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)|10 分|  
 |[2 - データの取得](../tutorial-tabular-1400/as-lesson-2-get-data.md)|10 分|  
 |[3 - 日付テーブルとしてマーク](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)|3 分|  
 |[4 - リレーションシップの作成](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)|10 分|  
@@ -89,7 +89,7 @@ ms.locfileid: "34044576"
   
 ## <a name="supplemental-lessons"></a>補足のレッスン  
 
-これらのレッスンは、チュートリアルを完了する必要はありませんより優れたについて高度なテーブル モデル作成機能に役に立ちます。  
+これらのレッスンは、チュートリアルを完了する必要はありませんが、向上について高度なテーブル モデル作成機能に役に立ちます。  
   
 |レッスン|推定所要時間|  
 |----------|------------------------------|  
@@ -98,9 +98,9 @@ ms.locfileid: "34044576"
 |[不規則階層](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)|20 分| 
 
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 
-最初に、次を参照してください。[レッスン 1: 新しいテーブル モデル プロジェクトを作成する](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)です。  
+最初に、次を参照してください。[レッスン 1: 新しい表形式モデル プロジェクトを作成する](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)します。  
   
   
   

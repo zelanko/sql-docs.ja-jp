@@ -1,5 +1,5 @@
 ---
-title: ローカル名-からの QName (XQuery) |Microsoft ドキュメント
+title: ローカルの名前-から-QName (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 691e26b9e58bbb83706fb987a06280321dc37656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077759"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061360"
 ---
-# <a name="functions-related-to-qnames---local-name-from-qname"></a>Qname のローカル名から QName に関連する関数
+# <a name="functions-related-to-qnames---local-name-from-qname"></a>Qname のローカル名から QName に関係する関数
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定された QName のローカル部分を表す xs:NCNAME を返します *$arg*です。 結果には、空のシーケンスがある場合は *$arg*空のシーケンスします。  
+  指定された QName のローカル部分を表す xs:NCNAME を返します *$arg*します。 場合、結果が空のシーケンスには *$arg*は空のシーケンスです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,9 +44,9 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  ローカル名部分を抽出する QName です。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
   
- 次の例では、 **local-name-from-QName()** QName 型の値から部分が、ローカル名と名前空間 URI を取得します。 この例では、次の操作が実行されます。  
+ 次の例では、 **local-name-from-QName()** QName 型の値からパーツのローカル名と名前空間 URI を取得します。 この例では、次の操作が実行されます。  
   
 -   XML スキーマ コレクションの作成。  
   
@@ -82,6 +82,6 @@ FROM T
 ```  
   
 ## <a name="see-also"></a>参照  
- [Qname に関連する関数&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [QNames に関係する関数&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

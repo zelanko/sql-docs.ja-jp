@@ -1,14 +1,12 @@
 ---
 title: パフォーマンス カウンター | Microsoft Docs
-ms.custom: ''
+ms.custom: supportability
 ms.date: 08/27/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b04d580014de1b5c248d299c2da1fce385326ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db10ccfd3a7487db61a03752111aa14702448d23
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411174"
 ---
 # <a name="performance-counters"></a>パフォーマンス カウンター
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、データ フロー エンジンのパフォーマンスを監視するために使用できるパフォーマンス カウンターのセットがインストールされます。 たとえば、"Buffers spooled" カウンターを調べると、パッケージの実行中にデータ バッファーがディスクに一時的に書き込まれているかどうかを判断できます。 このスワップは、パフォーマンスを低下させると共に、コンピューターのメモリが不足していることを示しています。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、パフォーマンス カウンターについて説明します。  
   
-|パフォーマンス カウンター|Description|  
+|パフォーマンス カウンター|[説明]|  
 |-------------------------|-----------------|  
 |BLOB bytes read|データ フロー エンジンがすべてのソースから読み取ったバイナリ ラージ オブジェクト (BLOB) データのバイト数。|  
 |BLOB bytes written|データ フロー エンジンがすべての出力先に書き込んだ BLOB データのバイト数。|  

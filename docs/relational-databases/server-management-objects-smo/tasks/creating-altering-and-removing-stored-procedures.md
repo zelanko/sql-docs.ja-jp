@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、および削除、ストアド プロシージャ |Microsoft ドキュメント
+title: 作成、変更、およびストアド プロシージャの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,24 +19,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 780f289ae9ecd7ccfaeba41d5a9dd07e594441f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968187"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029776"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>ストアド プロシージャの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO)、ストアド プロシージャは、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクト。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO)、ストアド プロシージャがによって表されるが、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクト。  
   
- 作成する、 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo オブジェクトの設定が必要、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>プロパティを[!INCLUDE[tsql](../../../includes/tsql-md.md)]ストアド プロシージャを定義するスクリプト。 パラメーターには @ プレフィックスが必要です。パラメーターは <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> オブジェクトを使用して個別に作成し、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> コレクションに追加する必要があります。  
+ 作成、 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo オブジェクトの設定が必要、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>プロパティを[!INCLUDE[tsql](../../../includes/tsql-md.md)]ストアド プロシージャを定義するスクリプト。 パラメーターには @ プレフィックスが必要です。パラメーターは <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> オブジェクトを使用して個別に作成し、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> コレクションに追加する必要があります。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Visual Basic でのストアド プロシージャの作成、変更、および削除  
- このコード例は、ストアド プロシージャを作成する方法を示しています、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、従業員 ID 番号が指定されると、従業員の姓を返します。 このストアド プロシージャには、従業員 ID 番号を指定する 1 つの入力パラメーターと、従業員の姓を返す 1 つの出力パラメーターが必要です。  
+ このコード例のストアド プロシージャを作成する方法を示しています、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、従業員 ID 番号が指定されると、従業員の姓を返します。 このストアド プロシージャには、従業員 ID 番号を指定する 1 つの入力パラメーターと、従業員の姓を返す 1 つの出力パラメーターが必要です。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -74,7 +74,7 @@ sp.Drop()
 ``` 
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-c"></a>Visual C# でのストアド プロシージャの作成、変更、および削除  
- このコード例は、ストアド プロシージャを作成する方法を示しています、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、従業員 ID 番号 (`BusinessEntityID`) が指定されると、従業員の姓を返します。 このストアド プロシージャには、従業員 ID 番号を指定する 1 つの入力パラメーターと、従業員の姓を返す 1 つの出力パラメーターが必要です。  
+ このコード例のストアド プロシージャを作成する方法を示しています、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、従業員 ID 番号 (`BusinessEntityID`) が指定されると、従業員の姓を返します。 このストアド プロシージャには、従業員 ID 番号を指定する 1 つの入力パラメーターと、従業員の姓を返す 1 つの出力パラメーターが必要です。  
   
 ```csharp  
 {  
@@ -114,7 +114,7 @@ sp.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-powershell"></a>PowerShell でのストアド プロシージャの作成、変更、および削除  
- このコード例は、ストアド プロシージャを作成する方法を示しています、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、従業員 ID 番号 (`BusinessEntityID`) が指定されると、従業員の姓を返します。 このストアド プロシージャには、従業員 ID 番号を指定する 1 つの入力パラメーターと、従業員の姓を返す 1 つの出力パラメーターが必要です。  
+ このコード例のストアド プロシージャを作成する方法を示しています、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、従業員 ID 番号 (`BusinessEntityID`) が指定されると、従業員の姓を返します。 このストアド プロシージャには、従業員 ID 番号を指定する 1 つの入力パラメーターと、従業員の姓を返す 1 つの出力パラメーターが必要です。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

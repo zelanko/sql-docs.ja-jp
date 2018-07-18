@@ -17,11 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999898"
 ---
 # <a name="page-compression-implementation"></a>ページの圧縮の実装
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,18 +52,18 @@ ms.lasthandoff: 05/19/2018
   
  次の図に、プレフィックスの圧縮が行われる前のテーブルのサンプル ページを示します。  
   
- ![プレフィックスの圧縮前のページ](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "プレフィックスの圧縮前のページ")  
+ ![プレフィックスの圧縮前のページ](media/skt-tblcompression1c.gif "プレフィックスの圧縮前のページ")  
   
  次の図に、プレフィックスの圧縮後の同じページを示します。 プレフィックスはヘッダーに移動され、列の値はプレフィックスへの参照に変更されます。  
   
- ![プレフィックスの圧縮後のページ](../../relational-databases/data-compression/media/tblcompression2.gif "プレフィックスの圧縮後のページ")  
+ ![プレフィックスの圧縮後のページ](media/tblcompression2.gif "プレフィックスの圧縮後のページ")  
   
  1 行目の最初の列にある値 4b は、その行にプレフィックスの最初の 4 文字 (aaab) に加え、文字 b が存在することを示します。 これにより、結果の値は aaabb (元の値) になります。  
   
 ## <a name="dictionary-compression"></a>ディクショナリの圧縮  
  プレフィックスの圧縮が完了した後、ディクショナリの圧縮が適用されます。 ディクショナリの圧縮では、ページ上の任意の場所で繰り返される値を検索し、それらの値を CI 領域に格納します。 プレフィックスの圧縮とは異なり、ディクショナリの圧縮は 1 つの列に制限されません。 ディクショナリの圧縮では、ページ上の任意の場所で繰り返し現れる値を置き換えることができます。 次の図に、ディクショナリの圧縮後の同じページを示します。  
   
- ![ディクショナリの圧縮後のページ](../../relational-databases/data-compression/media/tblcompression3.gif "ディクショナリの圧縮後のページ")  
+ ![ディクショナリの圧縮後のページ](media/tblcompression3.gif "ディクショナリの圧縮後のページ")  
   
  値 4b がページのさまざまな列から参照されていることに注意してください。  
   

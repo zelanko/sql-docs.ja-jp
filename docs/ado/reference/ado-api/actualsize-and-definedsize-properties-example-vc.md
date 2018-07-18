@@ -2,7 +2,6 @@
 title: ActualSize と DefinedSize プロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe74dafe719743f9726d8e5980091865b500c48f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275061"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize と DefinedSize プロパティの例 (vc++)
 この例では、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)と[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)定義されたサイズと、フィールドの実際のサイズを表示するプロパティです。  

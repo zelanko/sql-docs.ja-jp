@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 026b01925fbcf0ec615da77793dff7f84221322f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f60130ee43309e89ccc39fa2f4c3be42e928ca5a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332186"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>関数 - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="remarks"></a>Remarks  
  次の表に、dm_execution_performance_counter 関数によって返されるカウンター名の値を一覧で示します。  
   
-|カウンター名|Description|  
+|カウンター名|[説明]|  
 |------------------|-----------------|  
 |BLOB bytes read|データ フロー エンジンがすべてのソースから読み取るバイナリ ラージ オブジェクト (BLOB) データのバイト数。|  
 |BLOB bytes written|データ フロー エンジンがすべての出力先に書き込む BLOB データのバイト数。|  
@@ -61,7 +60,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>戻り値  
  dm_execution_performance_counters 関数は、1 つの処理中の実行に対して次の列を持つ表を返します。 返す情報は、実行に含まれているすべてのパッケージが対象です。 処理中の実行がない場合は、空の表を返します。  
   
-|列名|列の型|Description|Remarks|  
+|列名|列の型|[説明]|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** は無効な値です。|パッケージを含む実行の一意識別子。||  
 |counter_name|**nvarchar(128)**|カウンターの名前。|値の「**解説**」セクションを参照してください。|  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server エージェント テーブル (TRANSACT-SQL) |Microsoft ドキュメント
+title: SQL Server エージェント テーブル (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f45847235f549eb80404236633111f5678f53825
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263530"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018433"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server エージェントのテーブル (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33263530"
  現在の情報を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブの利用状況と状態。  
   
  [dbo.sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
- スケジュールされたジョブの実行に関する情報を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントです。  
+ スケジュールされたジョブの実行に関する情報を格納[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。  
   
  [dbo.sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによる実行が予定されているジョブに関する情報を格納します。  
@@ -82,7 +82,7 @@ ms.locfileid: "33263530"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ スケジュールに関する情報を格納します。  
   
  [dbo.syssessions](../../relational-databases/system-tables/dbo-syssessions-transact-sql.md)  
- 含まれています、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの開始日を各[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント セッション。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービスが開始されるたびに、セッションが作成されます。  
+ 含まれています、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの開始日の各[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント セッション。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービスが開始されるたびに、セッションが作成されます。  
   
  [dbo.syssubsystems](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)  
  使用可能なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ サブシステムに関する情報を格納します。  
@@ -97,6 +97,6 @@ ms.locfileid: "33263530"
  マルチサーバー操作ドメインに現在参加している対象サーバーを記録します。  
   
  [dbo.systaskids](../../relational-databases/system-tables/dbo-systaskids-transact-sql.md)  
- 以前のバージョンで作成されたタスクのマッピングを格納[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ジョブ、現在のバージョン。  
+ 以前のバージョンで作成されたタスクのマッピングを格納[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]現在のバージョンでのジョブ。  
   
   

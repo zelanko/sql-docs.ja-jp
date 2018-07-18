@@ -1,5 +1,5 @@
 ---
-title: SMO イベントの処理 |Microsoft ドキュメント
+title: SMO イベントの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ce6066af6508215ebe84fc3e8f5680c06a246ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967607"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988214"
 ---
 # <a name="handling-smo-events"></a>SMO イベントの処理
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "32967607"
 ## <a name="event-subscription"></a>イベント サブスクリプション  
  イベントを処理するには、イベント ハンドラー クラスを作成し、イベント ハンドラー クラスのインスタンスの作成して、イベント ハンドラーを親オブジェクトに割り当てて、イベントをサブスクライブします。  
   
- イベントを処理するためには、イベント ハンドラー クラスが作成される必要があります。 イベント ハンドラー クラスは、2 つ以上のイベント ハンドラー関数を含めることができます。また、処理されるイベントに対してインストールされている必要があります。 イベント ハンドラー関数からのイベントに関する情報が表示される、 *ServerEventNotificatificationArgs*イベントに関する情報を報告するために使用するパラメーターです。  
+ イベントを処理するためには、イベント ハンドラー クラスが作成される必要があります。 イベント ハンドラー クラスは、2 つ以上のイベント ハンドラー関数を含めることができます。また、処理されるイベントに対してインストールされている必要があります。 イベント ハンドラー関数からのイベントに関する情報が表示される、 *ServerEventNotificatificationArgs*パラメーター イベントに関する情報をレポートするために使用できます。  
   
- 処理可能なデータベースとサーバーのイベントの種類で表示されます、<xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>クラスおよび<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>クラスです。  
+ 処理可能なデータベースとサーバーのイベントの種類が記載されて、<xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>クラスおよび<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>クラス。  
   
 ## <a name="example"></a>例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Visual Basic でのイベント ハンドラーの登録およびイベント ハンドリングのサブスクライブ  

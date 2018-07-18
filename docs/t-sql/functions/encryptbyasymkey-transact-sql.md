@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,49 +20,79 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 212ce15f0d28b16b81a9c07d785c129b039cdc6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b20c55dc0de01eec655afa245b554d908d93c703
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782943"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  非対称キーでデータを暗号化します。  
+この関数は非対称キーでデータを暗号化します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
 ## <a name="arguments"></a>引数  
- *Asym_Key_ID*  
- データベース内の非対称キーの ID を指定します。 **int**.  
+*asym_key_ID*  
+データベース内の非対称キーの ID。 *asym_key_ID* には、**int** データ型が与えられます。  
   
- *cleartext*  
- 非対称キーで暗号化するデータの文字列を指定します。  
+*cleartext*  
+`ENCRYPTBYASYMKEY` が非対称キーで暗号化するデータの文字列。 *cleartext* のデータ型には
+ 
++ **[バイナリ]**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
   
- **@plaintext**  
- 非同期キーを使用して暗号化されるデータを含む **nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または **nchar** 型の変数を指定します。  
+内の複数の
+  
++ **varchar**
+ 
+があります。  
+  
+**@plaintext**  
+`ENCRYPTBYASYMKEY` が非対称キーで暗号化する値を保持する変数。 **@plaintext** のデータ型には
+  
++ **[バイナリ]**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
+  
+内の複数の
+  
++ **varchar**
+ 
+があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+最大サイズが 8,000 バイトの **varbinary**。  
   
 ## <a name="remarks"></a>Remarks  
- 非対称キーでの暗号化および暗号化解除は、対称キーの場合に比べて非常に時間がかかります。 テーブル内のユーザー データなど、大きなデータセットは、非対称キーを使用して暗号化しないことをお勧めします。 代わりに、強力な対称キーを使用してデータを暗号化し、非対称キーを使用してその対称キーを暗号化してください。  
+非対称キーを使用する暗号化操作と復号操作は大量のリソースを消費します。そのため、対称キーの暗号化と復号に比べ、非常に高くつきます。 データベース テーブルに格納されているユーザー データ データベースなど、データセットが大規模になる場合、非対称キーで暗号化/復号することは開発者にお勧めしていません。 代わりに、強力な対称キーでデータを暗号化し、その対称キーを非対称キーで暗号化することをお勧めしています。  
   
- **EncryptByAsymKey** 返す **NULL** 場合は、入力は、アルゴリズムによっては、バイト数を超えています。 この上限は、次のとおりです。512 ビットの RSA キーでは、最大 53 バイトを暗号化できます。1024 ビットのキーでは、最大 117 バイトを暗号化できます。2048 ビットのキーでは、最大 245 バイトを暗号化できます  ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、証明書と非対称キーはどちらも RSA キーのラッパーです)。  
+アルゴリズムにもよりますが、`ENCRYPTBYASYMKEY` は、入力が特定のバイト数を超えると、**NULL** を返します。 具体的な制限:
+
++ 512 ビット RSA キーで暗号化できるのは 53 バイトまで
++ 1024 ビット キーで暗号化できるのは 117 バイトまで
++ 2048 ビット キーで暗号化できるのは 245 バイトまで
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、証明書と非対称キーの両方が RSA キーのラッパーとして機能することにご注意ください。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`@cleartext` に格納されているテキストを非対称キー `JanainaAsymKey02` を使用して暗号化します。 暗号化したデータは、`ProtectedData04` テーブルに挿入します。  
+この例では、`@cleartext` に格納されているテキストを非対称キー `JanainaAsymKey02` を使用して暗号化します。 このステートメントは、`ProtectedData04` テーブルに暗号化されたデータを挿入します。  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

@@ -2,7 +2,6 @@
 title: Append メソッド (ADOX Views) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d8d713be4cf193ba7cacf1957bdf51937b9ed4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a524be12a721d86e0e5afd1029f486ca7c8ecaa9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285211"
 ---
 # <a name="append-method-adox-views"></a>Append メソッド (ADOX ビュー)
 新たに作成[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトに追加され、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)コレクション。  
@@ -38,13 +38,13 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *名前*  
+ *Name*  
  A**文字列**を作成するビューの名前を指定する値。  
   
  *Command*  
  ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)を作成するビューを表すオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定した属性と名前を持つデータ ソースに新しいビューを作成、**コマンド**オブジェクト。  
   
  ユーザーが指定したコマンド テキストを表す場合、ビューではなく、プロシージャ、動作は、プロバイダーによって異なります。 **追加**プロバイダーは永続的なコマンドをサポートしていない場合は失敗します。  

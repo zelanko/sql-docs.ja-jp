@@ -2,10 +2,10 @@
 title: SQL Server エラーの詳細 |Microsoft ドキュメント
 description: SQL Server エラーの詳細
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
+ms.component: oledb|ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f271da81733649c94f01b06281f7463c8ac719b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b69559a6c89f30c73245633aa67db90ce7cd78a
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665582"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server エラーの詳細
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server の OLE DB Driver は、プロバイダー固有のエラー インターフェイスを定義[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)です。 このインターフェイスにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラーの詳細が返されるので、コマンドの実行や行セットの操作が失敗したときに役立ちます。  
   
@@ -49,7 +52,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  コンシューマーでは SSERRORINFO 構造体のメンバーが次のように解釈されます。  
   
-|メンバー|Description|  
+|Member|説明|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー メッセージです。 返される文字列と同じ**ierrorinfo::getdescription**です。|  
 |*pwszServer*|セッションの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。|  
@@ -61,6 +64,6 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)   
- [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

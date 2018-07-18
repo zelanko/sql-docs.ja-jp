@@ -2,7 +2,6 @@
 title: プロパティのオブジェクト (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b646b698f8d14e6440368dbffb6e472360c2832d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4256e213e6ce9d6c96b55bda013fbf79f1a49cda
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280761"
 ---
 # <a name="property-object-ado"></a>プロパティのオブジェクト (ADO)
 プロバイダーによって定義されている ADO オブジェクトの動的な特性を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO オブジェクトが 2 種類のプロパティを設定します。 組み込みと動的です。  
   
  組み込みのプロパティは、これらのプロパティは、ADO では実装されていると、すぐに利用できる、新しいオブジェクトを使用して、`MyObject.Property`構文です。 としては表示されません**プロパティ**オブジェクトの内のオブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション、ため、その値を変更できますが、その特性を変更することはできません。  

@@ -1,13 +1,12 @@
 ---
-title: ストアド プロシージャを実行している |Microsoft ドキュメント
+title: ストアド プロシージャを実行している |。Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, stored procedures
 - stored procedures [ODBC], executing
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c22a7b233459c446d708b1c5c177cd2f2ad9344f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 179068eed7b131a237176e94974f39daa8685b33
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708020"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415651"
 ---
 # <a name="running-stored-procedures"></a>ストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +32,7 @@ ms.locfileid: "34708020"
 
   ストアド プロシージャは、データベースに保存される実行可能なオブジェクトです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
   
--   ストアド プロシージャ :   
+-   ストアド プロシージャ:  
   
      1 つの実行可能なプロシージャとしてプリコンパイルされた 1 つ以上の SQL ステートメント。  
   
@@ -64,7 +62,7 @@ ms.locfileid: "34708020"
   
      拡張ストアド プロシージャは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは使用できない C や C++ の機能を使用できます。  
   
-     ストアド プロシージャを呼び出す方法の例は、次を参照してください。[プロセスのリターン コードと出力パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)です。  
+     ストアド プロシージャを呼び出す方法の例は、次を参照してください。[プロセスのリターン コードと出力パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

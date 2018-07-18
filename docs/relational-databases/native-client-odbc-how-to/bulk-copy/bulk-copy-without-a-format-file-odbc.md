@@ -1,13 +1,12 @@
 ---
-title: 一括コピー フォーマット ファイル (ODBC) なし |Microsoft ドキュメント
+title: 一括コピー フォーマット ファイル (ODBC) なし |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9bc0e4c687ceb4a9f741acfae895b14bbbeb5500
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d718ca9e4bdc8e7ba9b04dc72653325985d9841b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944857"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424311"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>フォーマット ファイルを使用しない一括コピー (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ ms.locfileid: "32944857"
   
 3.  SQL Server に接続します。  
   
-4.  呼び出す[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を次の情報を設定します。  
+4.  呼び出す[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)次の情報を設定します。  
   
     -   一括コピー操作の対象になるテーブルまたはビューの名前  
   
@@ -55,7 +53,7 @@ ms.locfileid: "32944857"
   
     -   コピーの方向 (ファイルからビューまたはテーブルへのコピーの場合は DB_IN、テーブルまたはビューからファイルへのコピーの場合は DB_OUT)  
   
-5.  呼び出す[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を一括コピー操作を実行します。  
+5.  呼び出す[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)一括コピー操作を実行します。  
   
  これらの手順で DB_OUT を設定すると、ファイルはネイティブ形式で作成されます。 その後、以下の同様の手順を使用して、このファイルをサーバーに一括コピーできます。ただし、DB_IN ではなく DB_OUT が設定されます。 この操作は、コピー元のテーブルとコピー先のテーブルの構造が厳密に同じ場合にのみ機能します。  
   
@@ -164,6 +162,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [一括コピーでは、SQL Server ODBC ドライバーの操作方法に関するトピック (&) #40";"ODBC"&"#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [一括コピーの SQL Server ODBC ドライバーの操作について&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

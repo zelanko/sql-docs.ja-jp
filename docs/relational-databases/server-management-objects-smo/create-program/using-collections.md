@@ -1,5 +1,5 @@
 ---
-title: コレクションの使用 |Microsoft ドキュメント
+title: コレクションの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,23 +21,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85f06095f120086bd4f11e3fd5959b8fe17198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970799"
 ---
 # <a name="using-collections"></a>コレクションの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   コレクションとは、同じオブジェクト クラスから作成された、同じ親オブジェクトを持つオブジェクトのリストのことです。 コレクション オブジェクトには、Collection サフィックス付きのオブジェクトの種類の名前が必ず含まれています。 たとえば、指定されたテーブル内の列にアクセスするには、<xref:Microsoft.SqlServer.Management.Smo.ColumnCollection> というオブジェクトの種類を使用します。 これには、同じ <xref:Microsoft.SqlServer.Management.Smo.Column> オブジェクトに属するすべての <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトが含まれます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **をしています.各**ステートメントまたは[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach**ステートメントは、コレクションの各メンバーを反復処理するために使用できます。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **をしています.各**ステートメントまたは[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach**コレクションの各メンバーを反復処理するステートメントを使用できます。  
   
 ## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Visual Basic でのコレクションを使用したオブジェクトの参照  
- このコード例を使用して列のプロパティを設定する方法を示しています、 <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>、 <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>、および<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>プロパティです。 これらのプロパティはコレクションを表現しており、オブジェクトの名前を指定するパラメーターと共に使用すれば、特定のオブジェクトを識別するために使用できます。 名前とスキーマが必要、<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>コレクション オブジェクト プロパティです。  
+ このコード例を使用して列のプロパティを設定する方法を示しています、 <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>、 <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>、および<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>プロパティ。 これらのプロパティはコレクションを表現しており、オブジェクトの名前を指定するパラメーターと共に使用すれば、特定のオブジェクトを識別するために使用できます。 名前とスキーマが必要な<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>コレクション オブジェクトのプロパティ。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -50,7 +51,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 ```
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-c"></a>Visual C# でのコレクションを使用したオブジェクトの参照  
- このコード例を使用して列のプロパティを設定する方法を示しています、 <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>、 <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>、および<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>プロパティです。 これらのプロパティはコレクションを表現しており、オブジェクトの名前を指定するパラメーターと共に使用すれば、特定のオブジェクトを識別するために使用できます。 名前とスキーマが必要、<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>コレクション オブジェクト プロパティです。  
+ このコード例を使用して列のプロパティを設定する方法を示しています、 <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>、 <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>、および<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>プロパティ。 これらのプロパティはコレクションを表現しており、オブジェクトの名前を指定するパラメーターと共に使用すれば、特定のオブジェクトを識別するために使用できます。 名前とスキーマが必要な<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>コレクション オブジェクトのプロパティ。  
   
 ```csharp  
 {   
@@ -65,7 +66,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName
 ```  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>Visual Basic でのコレクションのメンバーの反復処理  
- このコード例を反復処理、<xref:Microsoft.AnalysisServices.Server.Databases%2A>コレクション プロパティとすべてのデータベースのインスタンスに接続が表示されます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ このコード例を反復処理、<xref:Microsoft.AnalysisServices.Server.Databases%2A>コレクション プロパティとすべてのデータベースのインスタンスへの接続が表示されます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -86,7 +87,7 @@ Console.WriteLine("Total connections =" & total)
 ```
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>Visual C# でのコレクションのメンバーの反復処理  
- このコード例を反復処理、<xref:Microsoft.AnalysisServices.Server.Databases%2A>コレクション プロパティとすべてのデータベースのインスタンスに接続が表示されます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ このコード例を反復処理、<xref:Microsoft.AnalysisServices.Server.Databases%2A>コレクション プロパティとすべてのデータベースのインスタンスへの接続が表示されます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

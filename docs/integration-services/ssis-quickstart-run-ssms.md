@@ -1,23 +1,21 @@
 ---
 title: SSMS を使用して SSIS パッケージを実行する | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2db8fcce27253a451dc0b099fa31947f94841f7b
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 5b6c49e522e63f4f70d202d03bc86b031a1084e4
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454996"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331996"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS パッケージを実行する
 このクイックスタートでは、SQL Server Management Studio (SSMS) を使用して SSIS カタログ データベースに接続してから、SSMS のオブジェクト エクスプローラーから SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
@@ -45,7 +43,7 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -61,9 +59,9 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
    | **サーバー名** | 完全修飾サーバー名 | Azure SQL Database サーバーに接続する場合、名前は次の形式になります。`<server_name>.database.windows.net` |
-   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | SQL Server 認証では、SQL Server や Azure SQL Database に接続できます。 Azure SQL Database サーバーに接続している場合は、Windows 認証を使用することはできません。 |
-   | **Login** | サーバー管理者アカウント | このアカウントは、サーバーを作成したときに指定したアカウントです。 |
-   | **Password** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーを作成したときに指定したパスワードです。 |
+   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | SQL Server 認証を使用すると、SQL Server または Azure SQL Database に接続できます。 Azure SQL Database サーバーに接続する場合、Windows 認証を使用できません。 |
+   | **Login** | サーバー管理者アカウント | このアカウントは、サーバーの作成時に指定したアカウントです。 |
+   | **Password** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
 
 3. **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 

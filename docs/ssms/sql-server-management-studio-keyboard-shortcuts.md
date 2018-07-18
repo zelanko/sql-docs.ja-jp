@@ -7,8 +7,7 @@ ms.prod_service: sql-tools
 ms.component: ssms
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,14 +25,16 @@ caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4e0ddf3ca23438a761b330238c9aa7356b8f7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7579eb32749cf41763f37980ddc6dc0b85997c2
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36927033"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、2 つのキーボード スキームが用意されています。 既定のスキームは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] スキームであり、そのキーボード ショートカットの基になっているのは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 です。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の標準スキームに似たキーボード スキームも提供されています。 キーボード スキームの変更やキーボード ショートカットの追加を行うには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[環境]** の **[キーボード]** ページで目的のキーボード スキームを選択できます。  
   
 > [!NOTE]  

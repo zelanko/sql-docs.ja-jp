@@ -3,8 +3,6 @@ title: DML トリガー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b102242b35b67ec8126b6286ded3ec1d7e0351c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2b628d80404c47917f8907ddf802b79b996f5a6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011729"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429441"
 ---
 # <a name="dml-triggers"></a>DML トリガー
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ ms.locfileid: "33011729"
  AFTER トリガーは、INSERT、UPDATE、MERGE、または DELETE ステートメントの動作が実行された後に実行されます。 制約違反が発生した場合は、AFTER トリガーは実行されません。したがってこのトリガーは、制約違反を防ぐための処理には使用できません。 MERGE ステートメントで指定されたすべての INSERT、UPDATE、または DELETE 操作について、対応するトリガーが各 DML 操作に対して実行されます。  
   
  INSTEAD OF トリガー  
- INSTEAD OF トリガーは、トリガーを起動するステートメントの標準動作を置き換える働きをします。 たとえば、このトリガーを使用して、1 つ以上の列に対するエラー チェックや値チェックを実行することができます。行の挿入、更新、削除などの操作の前に追加の処理を実行することが可能です。 たとえば、経理テーブル内の時給列の値を更新するときに、更新する値が指定された値を超えている場合は、エラー メッセージを生成してトランザクションをロールバックするようにトリガーを定義することができます。また、新しいレコードを経理テーブルに挿入する前に監査記録にそのレコードを挿入するようにトリガーを定義することもできます。 INSTEAD OF トリガーを使用する主な利点は、更新可能ではなかったビューを更新できるようになることです。 たとえば、複数のベース テーブルに基づいたビューでは、INSTEAD OF トリガーを使用して、複数のテーブルのデータを参照する挿入、更新、および削除の各操作をサポートする必要があります。 INSTEAD OF トリガーのもう 1 つの利点は、バッチの一部を拒否しながらバッチのその他の部分を正常に実行できるロジックをコード化できることです。  
+ INSTEAD OF トリガーは、トリガーを起動するステートメントの標準動作をオーバーライドする働きをします。 たとえば、このトリガーを使用して、1 つ以上の列に対するエラー チェックや値チェックを実行することができます。行の挿入、更新、削除などの操作の前に追加の処理を実行することが可能です。 たとえば、経理テーブル内の時給列の値を更新するときに、更新する値が指定された値を超えている場合は、エラー メッセージを生成してトランザクションをロールバックするようにトリガーを定義することができます。また、新しいレコードを経理テーブルに挿入する前に監査記録にそのレコードを挿入するようにトリガーを定義することもできます。 INSTEAD OF トリガーを使用する主な利点は、更新可能ではなかったビューを更新できるようになることです。 たとえば、複数のベース テーブルに基づいたビューでは、INSTEAD OF トリガーを使用して、複数のテーブルのデータを参照する挿入、更新、および削除の各操作をサポートする必要があります。 INSTEAD OF トリガーのもう 1 つの利点は、バッチの一部を拒否しながらバッチのその他の部分を正常に実行できるロジックをコード化できることです。  
   
  次の表は、AFTER トリガーと INSTEAD OF トリガーの機能を比較したものです。  
   
@@ -73,7 +70,7 @@ ms.locfileid: "33011729"
 |**inserted**テーブルと **deleted**テーブル内の **text** 、 **ntext** 、および **image** の列参照|使用不可|Allowed|  
   
  CLR トリガー  
- CLR トリガーは、AFTER トリガーと INSTEAD OF トリガーのいずれかにすることができます。 また、CLR トリガーは DDL トリガーにすることもできます。 CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージ コードに記述されている、1 つ以上のメソッドを実行します。  
+ CLR トリガーは、AFTER トリガーと INSTEAD OF トリガーのいずれかにすることができます。 また、CLR トリガーは DDL トリガーにすることもできます。 CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージド コードに記述されている、1 つ以上のメソッドを実行します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

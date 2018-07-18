@@ -1,5 +1,5 @@
 ---
-title: OlapInfo 要素 (XMLA) |Microsoft ドキュメント
+title: OlapInfo 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8c0cc23eb76d3da97aadbb9a1738580ebdbc62f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576784"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968374"
 ---
 # <a name="olapinfo-element-xmla"></a>OlapInfo 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34576784"
 |既定値|なし|  
 |Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "34576784"
 |子要素|[AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)、 [CellInfo](../../../analysis-services/xmla/xml-elements-properties/cellinfo-element-xmla.md)、 [CubeInfo](../../../analysis-services/xmla/xml-elements-properties/cubeinfo-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- **OLAPInfo**のセクションで、**ルート**要素を使用して、 **MDDataSet**データ型は、キューブに関するメタデータ、多次元の結果、およびプロパティの軸セルには、結果に含まれています。  
+ **OLAPInfo**のセクションを**ルート**要素を使用して、 **MDDataSet**データ型は、キューブに関するメタデータ、多次元の結果と、プロパティの軸を提供します。セルには、結果に含まれています。  
   
 ## <a name="see-also"></a>参照
  [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

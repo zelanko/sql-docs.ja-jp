@@ -1,5 +1,5 @@
 ---
-title: パブリケーション情報、[すべてのサブスクリプション] (スナップショット パブリケーション) | Microsoft Docs
+title: パブリケーション情報、[すべてのサブスクリプション](スナップショット パブリケーション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d7278cb9860a8cdb7f5d18ef7e35d79f2eb49dcc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6bd21f53560997b9498f12026777ad42c432e16
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32961477"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350901"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>パブリケーション情報、[すべてのサブスクリプション] (スナップショット パブリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "32961477"
   
 -   [まもなく期限切れ/期限切れ] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
   
--   [初期化されていないサブスクリプション] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
+-   [初期化されていないサブスクリプション]\([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
   
 -   [失敗したコマンドの再試行]  
   

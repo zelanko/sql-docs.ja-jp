@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c9f031139b8ebe4e3df498b3bcffb5ebc2d5368
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bae2a9aa176ef20c0eae1500c273071e0b3ef649
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964287"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359328"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>トランザクション パブリケーションの更新可能なサブスクリプションの有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "32964287"
   
 3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 2. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@job_name** と **@password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
-4.  パブリケーションにアーティクルを追加します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+4.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 5.  サブスクライバーで、このパブリケーションに対する更新サブスクリプションを作成します。   
   
@@ -89,13 +88,13 @@ ms.locfileid: "32964287"
   
     -   ディストリビューション データベース用のキュー リーダー エージェント ジョブが存在するかどうかわからない場合は、ディストリビューター側のディストリビューション データベースに対して [sp_helpqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md) を実行します。 結果セットが空の場合、キュー リーダー エージェント ジョブを作成する必要があります。  
   
-    -   ディストリビューターで、[sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) を実行します。 エージェントの実行に使用される Windows 資格情報を **@job_name** と **@password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これらの資格情報は、キュー リーダー エージェントがパブリッシャーとサブスクライバーに接続するときに使用されます。 詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+    -   ディストリビューターで、[sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) を実行します。 エージェントの実行に使用される Windows 資格情報を **@job_name** と **@password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これらの資格情報は、キュー リーダー エージェントがパブリッシャーとサブスクライバーに接続するときに使用されます。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
 3.  パラメーター **@allow_queued_tran** に **true** を指定し、**@conflict_policy** に **pub wins**、**sub reinit**、または **sub wins** を指定して、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を実行します。  
   
 4.  パブリッシャーで [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 3. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@snapshot_job_name** と **@password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
-5.  パブリケーションにアーティクルを追加します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+5.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 6.  サブスクライバーで、このパブリケーションに対する更新サブスクリプションを作成します。  
   

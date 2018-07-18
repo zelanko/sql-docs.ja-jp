@@ -1,5 +1,5 @@
 ---
-title: dbo.sysdac_instances (TRANSACT-SQL) |Microsoft ドキュメント
+title: dbo.sysdac_instances (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178818"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031340"
 ---
-# <a name="data-tier-application-views---dbosysdacinstances"></a>データ層アプリケーションのビュー - dbo.sysdac_instances
+# <a name="data-tier-application-views---dbosysdacinstances"></a>データ層アプリケーション ビュー - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置されたデータ層アプリケーション (DAC) インスタンスごとに 1 行を表示します。 sysdac_instances は、msdb データベースの dbo スキーマに属しています。 次の表では、sysdac_instances ビュー内の列について説明します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|DAC インスタンスの識別子。|  
 |instance_name|**sysname**|DAC 配置時に指定された DAC インスタンスの名前。|  
@@ -49,14 +49,14 @@ ms.locfileid: "33178818"
 |created_by|**sysname**|DAC インスタンスを作成したログイン。|  
 |database_name|**sysname**|DAC インスタンスのために作成したデータベースの名前。|  
   
-## <a name="remarks"></a>解説  
- DAC には、アプリケーションが使用する論理データ層オブジェクト (テーブルやビューなど) の定義である DAC 型が含まれます。 DAC パッケージは、DAC の配置に使用されるファイルです。 DAC パッケージは、DAC 型に含まれるすべての論理オブジェクトの表現を含んでいます。 DAC パッケージは、1 つ以上のコピー、またはのインスタンスに dac のインスタンスを展開するために使用できます、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 同じ DAC パッケージから配置された各 DAC インスタンスは、同じ型を共有しますが、一意のインスタンス名とインスタンス識別子を割り当てられます。  
+## <a name="remarks"></a>コメント  
+ DAC には、アプリケーションが使用する論理データ層オブジェクト (テーブルやビューなど) の定義である DAC 型が含まれます。 DAC パッケージは、DAC の配置に使用されるファイルです。 DAC パッケージは、DAC 型に含まれるすべての論理オブジェクトの表現を含んでいます。 DAC パッケージは、1 つ以上のコピー、またはのインスタンスに dac のインスタンスをデプロイするために使用できます、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 同じ DAC パッケージから配置された各 DAC インスタンスは、同じ型を共有しますが、一意のインスタンス名とインスタンス識別子を割り当てられます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  すべての列を表示するには、sysadmin 固定サーバー ロールのメンバーシップが必要です。 パブリック ロールのメンバーは、instance_name、description、および type_version の各列を表示できます。  
   
 ## <a name="see-also"></a>参照  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [データ層アプリケーションのビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [データ層アプリケーション ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

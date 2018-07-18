@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -30,11 +29,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7dd1c5f7c1c80eb4686677a426d5f18fb6b53672
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fff879e523baaf7955dd985cfc6453dfada8330
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404004"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>データ フロー コンポーネントでのエラー出力の使用
   エラー出力と呼ばれる特殊な <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> オブジェクトをコンポーネントに追加すると、コンポーネントは、実行中に処理できない行をリダイレクトできます。 コンポーネントで発生する可能性のある問題は、通常、エラーまたは切り捨てに分類され、各コンポーネントに固有です。 エラー出力を提供するコンポーネントを使用すると、エラー行を結果セットからフィルター選択したり、問題が発生したときにコンポーネントを失敗させたり、エラーを無視して処理を続行するなど、エラー条件を柔軟に処理できます。  

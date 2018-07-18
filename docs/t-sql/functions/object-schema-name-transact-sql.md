@@ -1,10 +1,9 @@
 ---
 title: OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,17 +22,18 @@ helpviewer_keywords:
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e616434a72eb7c19d831874e475fcfed2ef57668
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b14711117e766e8ee4bdf4596b9b5ed6a75c645
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788423"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   スキーマ スコープ オブジェクトのデータベース スキーマ名を返します。 スキーマ スコープ オブジェクトの一覧については、「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」をご覧ください。  
   
@@ -71,7 +71,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  *database_id* が指定されていない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は *object_id* が現在のデータベースのコンテキストであると見なします。 別のデータベースの *object_id* を参照するクエリは、NULL または正しくない値を返します。 たとえば、次のクエリでは、現在のデータベースのコンテキストは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] です。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、クエリの FROM 句に指定されたデータベースではなく、このデータベースの指定されたオブジェクト ID のオブジェクト スキーマ名を返します。 したがって、正しくない情報が返されます。  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
 FROM master.sys.objects;  
   
@@ -79,7 +79,7 @@ FROM master.sys.objects;
   
  次の例では、`master` 関数で `OBJECT_SCHEMA_NAME` データベースのデータベース ID を指定し、正確な結果を返します。  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
 FROM master.sys.objects;  
   
@@ -90,7 +90,7 @@ FROM master.sys.objects;
 ### <a name="a-returning-the-object-schema-name-and-object-name"></a>A. オブジェクト スキーマ名とオブジェクト名を取得する  
  この例では、アドホック ステートメントでも準備されたステートメントでもない、キャッシュされたすべてのクエリ プランについて、オブジェクト スキーマ名、オブジェクト名、SQL テキストを返します。  
   
-```  
+```sql
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -104,7 +104,7 @@ GO
 ### <a name="b-returning-three-part-object-names"></a>B. 3 つの要素で構成されたオブジェクト名を取得する  
  この例では、データベース名、スキーマ名、およびオブジェクト名と共に、すべてのデータベースのすべてのオブジェクトの統計を示す `sys.dm_db_index_operational_stats` 動的管理ビューの残りのすべての列を返します。  
   
-```  
+```sql
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -120,6 +120,4 @@ GO
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [セキュリティ保護可能](../../relational-databases/security/securables.md)  
-  
-  
+ [セキュリティ保護可能](../../relational-databases/security/securables.md)

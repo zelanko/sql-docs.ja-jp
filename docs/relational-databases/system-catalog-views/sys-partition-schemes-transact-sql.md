@@ -1,5 +1,5 @@
 ---
-title: sys.partition_schemes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.partition_schemes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,25 +26,25 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 710a39957a01d2846dfa940230f350538ac4353d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179838"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001075"
 ---
 # <a name="syspartitionschemes-transact-sql"></a>sys.partition_schemes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  パーティション構成がある各データ領域の行を含みます**型**PS. を =  
+  パーティション構成は、各データ領域の行を含む**型**PS. を =  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<継承された列 >**||列を継承[sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)です。|  
+|**\<列を継承 >**||列を継承[sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)します。|  
 |**function_id**|**int**|パーティション構成で使用されるパーティション関数の ID|  
   
  このビューが継承する列の一覧は、次を参照してください[sys.data_spaces &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

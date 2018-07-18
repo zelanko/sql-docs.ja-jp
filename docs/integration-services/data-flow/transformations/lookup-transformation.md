@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0681beed559734ecaee000a45be3bc19447d9eeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8a7f9c717006eec8d1ee7deb4e807709b124ced
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332866"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -198,7 +197,8 @@ ms.lasthandoff: 05/03/2018
  既存のテーブルまたはビューを一覧から選択するか、 **[新規作成]** をクリックして新しいテーブルを作成します。  
   
 > [!NOTE]  
->  **[参照変換エディター]** の **[詳細設定]** ページで SQL ステートメントを指定する場合、ここで選択したテーブル名はその SQL ステートメントで上書きおよび置換されます。 詳細については、「 [[参照変換エディター] &#40;[詳細設定] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)」を参照してください。  
+>  
+  **[参照変換エディター]** の **[詳細設定]** ページで SQL ステートメントを指定する場合、ここで選択したテーブル名はその SQL ステートメントでオーバーライドおよび置換されます。 詳細については、「 [[参照変換エディター] &#40;[詳細設定] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)」を参照してください。  
   
  **[新規作成]**  
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
@@ -270,7 +270,7 @@ ms.lasthandoff: 05/03/2018
  参照データセットを生成するために使用される SQL ステートメントを変更します。  
   
 > [!NOTE]  
->  このページで指定するオプションの SQL ステートメントは、 **[参照変換エディター]** の **[接続]** ページで指定したテーブル名を上書きおよび置換します。 詳細については、「 [[参照変換エディター] &#40;[接続] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)」を参照してください。  
+>  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。 詳細については、「 [[参照変換エディター] &#40;[接続] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)」を参照してください。  
   
  **[パラメーターの設定]**  
  **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、入力列をパラメーターにマップします。  

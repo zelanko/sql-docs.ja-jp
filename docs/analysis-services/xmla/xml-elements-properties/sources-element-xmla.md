@@ -1,5 +1,5 @@
 ---
-title: ソース要素 (XMLA) |Microsoft ドキュメント
+title: ソース要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5466ee4ed04b7890718e5d613cbade3f37cd6929
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019800"
 ---
 # <a name="sources-element-xmla"></a>Sources 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  コレクションを格納[ソース](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)親要素[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)要素。  
+  コレクションを含む[ソース](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)親要素[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,12 +41,12 @@ ms.locfileid: "34576414"
 |既定値|なし|  
 |Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
-|子要素|[ソース](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
+|子要素|[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb23a63d77461cb13784c515bd0638af277e63b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308271"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,14 +44,14 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>例外  
 PDOException。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 Pdo::query で実行されるクエリが準備されたいずれかのステートメントを実行できる pdo::sqlsrv_attr_direct_query の設定に応じて、直接またはします。 詳細については、「 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)」 (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行) を参照してください。  
   
 Pdo::sqlsrv_attr_query_timeout; pdo::exec の動作にも影響します。詳細については、次を参照してください。 [pdo::setattribute](../../connect/php/pdo-setattribute.md)です。  
   
 次のオプションを指定するには $*fetch_style*です。  
   
-|style|Description|  
+|style|説明|  
 |---------|---------------|  
 |Pdo::fetch_column、 *num*|指定された列内のデータを照会します。 テーブルの最初の列は 0 です。|  
 |Pdo::fetch_class、'*classname*'、配列 ( *arglist* )|クラスのインスタンスを作成し、列名をクラスのプロパティに割り当てます。 クラス コンストラクターに 1 つ以上のパラメーターを指定できる場合、 *arglist*を渡すこともできます。|  

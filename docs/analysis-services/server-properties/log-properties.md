@@ -9,11 +9,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238899"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999344"
 ---
 # <a name="log-properties"></a>ログのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "35238899"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="error-log"></a>エラー ログ  
- 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 参照してください[キューブ、パーティション、およびディメンション処理のエラー構成&#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)と<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>詳細についてはします。  
+ 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 参照してください[キューブ、パーティション、およびディメンションの処理のエラー構成&#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)と<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>詳細についてはします。  
   
  **ErrorLog\ErrorLogFileName**  
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  

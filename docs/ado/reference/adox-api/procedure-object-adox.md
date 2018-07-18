@@ -2,7 +2,6 @@
 title: プロシージャのオブジェクト (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd25aeeac87c3bd3bc8aa7b1405815f987d44266
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4decbe11233f64db4fd51ef0c3a2b923355c375
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286731"
 ---
 # <a name="procedure-object-adox"></a>プロシージャのオブジェクト (ADOX)
 ストアド プロシージャを表します。 ADO と組み合わせて使用すると[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、**プロシージャ**オブジェクトは追加、削除、または変更、ストアド プロシージャを使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **プロシージャ**オブジェクトでは、理解、またはプロバイダーの"CREATE PROCEDURE"構文を使用することがなくストアド プロシージャを作成することができます。  
   
  プロパティを持つ、**プロシージャ**オブジェクトをすることができます。  

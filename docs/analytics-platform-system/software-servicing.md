@@ -1,6 +1,6 @@
 ---
-title: ソフトウェアのサービスの Analytics Platform System |Microsoft ドキュメント
-description: ソフトウェアは、Analytics Platform System (APS) を処理します。
+title: ソフトウェアのサービス、Analytics Platform System |Microsoft Docs
+description: Analytics Platform System (APS) でソフトウェアにサービスを提供します。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,35 +9,35 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7d9991dfb310e2cebc3c61bbd6f9f04a40a0f38e
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 79231b6e2867154bc4d826b83a0a4fd27487f438
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538752"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909802"
 ---
-# <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System でのソフトウェア サービス
-このセクションでは、サービスの Analytics Platform System アプライアンスには、WSUS および Analytics Platform System の修正プログラムを含むの要件、ソフトウェアをまとめたものです。  
+# <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System でソフトウェアのサービス
+このセクションでは、サービスの要件の WSUS と Analytics Platform System の修正プログラムを含めて、Analytics Platform System アプライアンス ソフトウェアをまとめたものです。  
   
-## <a name="Basics"></a>ソフトウェアのサービスの基礎  
-**WSUS:** Analytics Platform System アプライアンスは、Windows Server Update Services (WSUS) から更新プログラムを受信するように構成する必要があります。 これらの更新プログラムには、アプライアンス ソフトウェアの重要な変更が含まれます。 構成後多数の更新プログラムは自動的にインストールされ、実践的な管理は不要します。 通常、WSUS 更新プログラムが中に構成、 [Windows Server Update Services の構成&#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md)新しいアプライアンス セットアップ中に手順を実行します。 それ以外の場合は、この構成手順を後で実行することができます。 WSUS については、次を参照してください。、 [WSUS web サイト ガイド](http://go.microsoft.com/fwlink/?LinkId=202417)です。  
+## <a name="Basics"></a>ソフトウェア サービスの基礎  
+**WSUS:** Analytics Platform System appliance は、Windows Server Update Services (WSUS) から更新プログラムを受信するように構成する必要があります。 これらの更新プログラムには、アプライアンス ソフトウェアの重要な変更が含まれます。 構成されている多くの更新プログラムは自動的にインストールされ、実践的な管理は必要ありません。 通常、WSUS の更新プログラムは、中に構成された、 [Windows Server Update Services の構成&#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md)新しいアプライアンスのセットアップ中に手順を実行します。 有効でない場合は、この構成手順を後で実行できます。 WSUS については、次を参照してください。、 [WSUS web サイト ガイド](http://go.microsoft.com/fwlink/?LinkId=202417)します。  
   
-**修正プログラム:** さらに、Analytics Platform System の修正プログラムを適用する必要があります。 A*修正プログラム*分析プラットフォーム システム ソフトウェアの問題を解決するのには、特定の顧客に対して作成されたソフトウェアの更新します。 各修正プログラムは、顧客固有の問題の修正プログラムをインストールする実行可能ファイルです。 各修正プログラムには、Windows、SQL Server、および Analytics Platform System を超えて繰り返し発生するすべての以前にリリースされたソフトウェア更新プログラムも含まれています。 修正プログラムをインストールする場合は、Microsoft サポートが修正プログラムと指示を提供するは。  
+**修正プログラム:** さらに、Analytics Platform System の修正プログラムを適用する必要があります。 A*修正プログラム*Analytics Platform System のソフトウェアの問題を解決するのには、特定の顧客用に作成したソフトウェアの更新します。 各修正プログラムは、顧客固有の問題の修正プログラムをインストールする実行可能ファイルです。 各修正プログラムには、Windows、SQL Server および Analytics Platform System のすべての以前にリリースされたソフトウェア更新プログラムの集積/離散も含まれています。 修正プログラムをインストールする場合は、Microsoft サポートが修正プログラムと手順を提供するは。  
   
-**更新プログラムのスコープ:** 分析プラットフォーム システムに修正プログラムまたはサービス パックを適用する必要がありますをオフラインに全体のアプライアンスです。 つまり、PDW と HDInsight の両方の地域に影響があります。  
+**更新プログラムのスコープ:** Analytics Platform System に修正プログラムまたはサービス パックを適用する必要がありますをオフラインに全体のアプライアンスです。  
   
-**SSIS 変換先アダプターとクライアント ツール:** SSIS 変換先アダプター MSI への変更を含む、修正プログラムを適用するときにまたは MSI ファイルは更新のクライアント ツールの msi ファイルを**C:\PDWINST\ClientTools**コントロールのノード上のディレクトリ。 修正プログラムでは、コンポーネントは自動的には、更新された MSI ファイルからインストールされません。 これらのコンポーネントを更新するには、顧客必要があります、コンポーネントの以前のバージョンをアンインストールし、更新された MSI ファイルから新しいバージョンをインストールします。 SSIS 変換先アダプター MSI への変更を含む、修正プログラムのアンインストール時に、またはクライアント ツールの MSI、それらのコンポーネントの MSI ファイルは以前のバージョンに戻されます。 これらコンポーネントを以前のバージョンに戻すには、顧客は、コンポーネントの既存の (最新) バージョンをアンインストールし、元に戻された MSI ファイルからの古いバージョンを再インストールする必要があります。  
+**SSIS 変換先アダプターとクライアント ツール:** SSIS 変換先アダプター MSI への変更が含まれる修正プログラムを適用するときに、または MSI ファイルは更新のクライアント ツールの MSI、 **C:\PDWINST\ClientTools**コントロールのノード上のディレクトリ。 修正プログラムが、更新された MSI ファイルからのコンポーネントを自動的にインストールされません。 これらのコンポーネントを更新するには、顧客は、コンポーネントの以前のバージョンをアンインストールして更新された MSI ファイルから新しいバージョンをインストールする必要があります。 SSIS 変換先アダプター MSI への変更が含まれる修正プログラムをアンインストールするときに、またはクライアント ツールの MSI をこれらのコンポーネントの MSI ファイルは、以前のバージョンに戻されます。 以前のバージョンにこれらのコンポーネントを元に戻すには、顧客は、コンポーネントの既存の (最新) バージョンをアンインストールして、元に戻された MSI ファイルから以前のバージョンを再インストールする必要があります。  
   
 ## <a name="software-servicing-topics"></a>ソフトウェアのサービスに関するトピック  
 次のトピックでは、アプライアンス上でソフトウェアのサービスを管理する方法について説明します。  
   
--   [ダウンロードして Microsoft 更新プログラムを適用して&#40;分析プラットフォーム システム&#41;](download-and-apply-microsoft-updates.md)  
+-   [ダウンロードして Microsoft 更新プログラムを適用して&#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
   
--   [Microsoft 更新プログラムのアンインストール&#40;分析プラットフォーム システム&#41;](uninstall-microsoft-updates.md)  
+-   [Microsoft 更新プログラムのアンインストール&#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
   
--   [分析プラットフォーム システムの修正プログラム適用&#40;分析プラットフォーム システム&#41;](apply-analytics-platform-system-hotfixes.md)  
+-   [Analytics Platform System の修正プログラムを適用&#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
   
--   [分析プラットフォーム システムの修正プログラムをアンインストール&#40;分析プラットフォーム システム&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+-   [Analytics Platform System の修正プログラムのアンインストール&#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

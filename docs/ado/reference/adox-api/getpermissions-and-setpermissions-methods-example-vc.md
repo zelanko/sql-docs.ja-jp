@@ -2,7 +2,6 @@
 title: GetPermissions と SetPermissions メソッドの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e95e83e5533d2be01ab1a85d48425bc1e4460ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 041543140a1bf6b434d88773259ff4dff12e293b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285903"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions と SetPermissions メソッドの例 (vc++)
 この例で、 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)と[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッドです。 次のコードでは、完全なアクセス権を Orders テーブルに、管理ユーザーに与えられます。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1d39082b0baa47577fb4315a7b16d182b39b3ae
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6d74a0a231c58b0b9828b96b902d3cda56a66ded
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585804"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785174"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));
   
 ## <a name="see-also"></a>参照  
  [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [binary と varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: システム セキュリティ関数 |Microsoft ドキュメント
+title: システム セキュリティ関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d4651dcea60ef0dcc20b6ef9f0779eb82c8d1dc9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33227806"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066630"
 ---
 # <a name="system-security-functions"></a>システム セキュリティ関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

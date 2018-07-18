@@ -2,7 +2,6 @@
 title: ADO イベント モデルの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec57df4ce7217579d4b409d3a571a077c376d98e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275471"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (vc++)
 Visual C のセクションの[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)ADO イベント モデルのインスタンスを作成する方法の一般的な説明。 によって作成された環境でのイベント モデルのインスタンス化の具体的な例を次に示します、 **#import**ディレクティブです。  

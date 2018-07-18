@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1afc0e84acaf044a7271f0d46d599f4422c650b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37ac91100876f9519e7f7ec2de1c9a375567d392
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288541"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
 進行状況を示す、 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトへのデータが取得されてその[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定または値は次のいずれかを返します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|現在のクエリが実行中で、行が取得されていません。 **DataControl**オブジェクトの**Recordset**は使用されません。|  
 |**adcReadyStateInteractive**|現在のクエリによって取得される行の初期セットが格納されている、 **DataControl**オブジェクトの**Recordset**し、使用可能な。 残りの行がまだフェッチされています。|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  これらの定数を使用するクライアント側実行可能ファイルは、それらの宣言をする必要があります。 RDS ライブラリの既定のインストール フォルダーにあるファイル Adcvbs.inc から、使用する定数の宣言を貼り付けるを切り取ってことができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)変更を監視するイベント、 **ReadyState**非同期クエリ操作中にプロパティです。 これは、プロパティの値を定期的に確認するよりも効率的です。  
   
  非同期の操作中にエラーが発生した場合、 **ReadyState**プロパティに対する変更を**adcReadyStateComplete**、[状態](../../../ado/reference/ado-api/state-property-ado.md)からプロパティが変更された**adStateExecuting**に**取得のみ**、および**レコード セット**オブジェクト[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティまま*何も行われません*.  

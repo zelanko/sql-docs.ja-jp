@@ -1,4 +1,4 @@
----
+﻿---
 title: '[データベースの復元] ([全般] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/01/2016

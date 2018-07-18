@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ''
 caps.latest.revision: 0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 295704322a3ddb1e630c9dafbdf1ebcf37fdefad
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709030"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL ツールとユーティリティの SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>クエリを実行し、データベースの管理ツール  
 
-| ツール | Description |
+| ツール | [説明] |
 |:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 実行されている場所にデータベースを管理するための無料で軽量のツールです。 このプレビュー リリースでは、拡張 TRANSACT-SQL エディターと、データベースの操作状態のカスタマイズ可能な洞察など、データベースの管理機能を提供します。 **[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows、macOS、および Linux で実行される**です。|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | クエリ、設計、および SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse を管理するには、SQL Server Management Studio (SSMS) を使用します。 **Windows で SSMS を実行**です。|
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="additional-tools"></a>その他のツール
 
-| ツール | Description |
+| ツール | [説明] |
 |:--|:--|
 | [構成マネージャー](../tools/configuration-manager/sql-server-configuration-manager-help.md) | SQL Server 構成マネージャーを使用して SQL Server サービスを構成し、ネットワーク接続を構成します。 Windows で実行されている configuration Manager|
 |[mssql conf](../linux/sql-server-linux-configure-mssql-conf.md)|Mssql conf を使用すると、Linux で実行されている SQL Server を構成できます。|

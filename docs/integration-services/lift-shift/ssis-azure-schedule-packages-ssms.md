@@ -5,25 +5,25 @@ ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 72b20d4d42517555449f639cee398db4363d5735
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: d52568b59540ed5a3c4a1111ebf1759f5bdd77f8
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36261977"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を利用し、Azure で SSIS パッケージの実行スケジュールを設定します
+# <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を利用し、Azure でデプロイされた SSIS パッケージの実行スケジュールを設定します
 
-SQL Server Management Studio (SSMS) には、Azure SQL Database にデプロイされた SSIS パッケージのスケジュールを設定する機能があります。 オンプレミス SQL Server と SQL Database Managed Instance (プレビュー) にはファースト クラス SSIS ジョブ スケジューラーとしてそれぞれ、SQL Server エージェントと Managed Instance Agent があります。 一方、SQL Database には、ファースト クラス SSIS ジョブ スケジューラーが組み込まれていません。 この記事で説明する SSMS 機能は SQL Server エージェントに似た、おなじみのインターフェイスを備えており、SQL Database にデプロイされているパッケージをそのインターフェイスでスケジュール設定できます。
+SQL Server Management Studio (SSMS) を使用して、Azure SQL Database にデプロイされた SSIS パッケージのスケジュールを設定することができます。 オンプレミス SQL Server と SQL Database Managed Instance (プレビュー) には、ファースト クラス SSIS ジョブ スケジューラーとしてそれぞれ、SQL Server エージェントと Managed Instance Agent があります。 一方、SQL Database には、ファースト クラス SSIS ジョブ スケジューラーが組み込まれていません。 この記事で説明する SSMS 機能は SQL Server エージェントに似た、おなじみのインターフェイスを備えており、SQL Database にデプロイされているパッケージをそのインターフェイスでスケジュール設定できます。
 
-SQL Database を使用して SSIS カタログ データベース (`SSISDB`) をホストする場合、この SSMS 機能を使用し、SSIS パッケージのスケジュール設定に必要なデータ ファクトリのパイプライン、アクティビティ、トリガーを生成できます。 その後、データ ファクトリでそれらのオブジェクトを編集したり、拡張したりできます。
+SQL Database を使用して SSIS カタログ (`SSISDB`) をホストする場合、この SSMS 機能を使用し、SSIS パッケージのスケジュール設定に必要な Data Factory のパイプライン、アクティビティ、トリガーを生成できます。 その後、Data Factory でそれらのオブジェクトを任意で編集したり、拡張したりできます。
 
 SSMS を使用してパッケージのスケジュールを設定するとき、SSIS では 3 つのデータ ファクトリ オブジェクトが自動的に新しく作成されます。その名前は、選択したパッケージの名前とタイムスタンプに基づきます。 たとえ゛は、SSIS パッケージの名前が **MyPackage** であれば、SSMS によって、次のようなデータ ファクトリ オブジェクトが新しく作成されます。
 

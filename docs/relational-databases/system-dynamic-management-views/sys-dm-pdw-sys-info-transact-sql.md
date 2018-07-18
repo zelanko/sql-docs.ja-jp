@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_sys_info (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_pdw_sys_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,29 +7,29 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 686976b4-2d5d-4d64-bf12-56eba1dc59b1
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eddd759f3dfa1447a441350583a6ce66e2ac14ab
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 4333413236f790bf2838d768585ea75537784e6d
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926443"
 ---
 # <a name="sysdmpdwsysinfo-transact-sql"></a>sys.dm_pdw_sys_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   アプライアンス上の全体的なアクティビティを反映するアプライアンス レベルのカウンターのセットを提供します。  
   
-|列名|データ型|Description|範囲|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |total_sessions|**int**|システムの現在のセッションの数。|max_active_sessions (下記参照) に 0 を返します。|  
 |idle_sessions|**int**|現在のアイドル状態のセッションの数。||  
@@ -41,6 +41,6 @@ ms.lasthandoff: 05/23/2018
 |active_restores|**int**|バックアップの数は、現在実行中を復元します。||  
   
 ## <a name="see-also"></a>参照  
- [SQL データ ウェアハウスと並列データ ウェアハウスの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

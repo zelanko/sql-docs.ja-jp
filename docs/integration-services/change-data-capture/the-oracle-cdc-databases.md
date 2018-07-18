@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
@@ -16,11 +14,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7095024d2b7636b600fe1e905b335b866b1f30ba
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411544"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -99,7 +98,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、 **cdc.xdbcdc_config** テーブルの列を示します。  
   
-|アイテム|Description|  
+|アイテム|[説明]|  
 |----------|-----------------|  
 |version|CDC インスタンスの構成のバージョンを追跡します。 このテーブルが更新されたり、キャプチャ インスタンスが追加または削除されたりするたびに更新されます。|  
 |connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、[http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、使用可能なオプションについて説明しています。  
   
-|[オブジェクト名]|既定|Min|Max|静的|Description|  
+|[オブジェクト名]|既定|Min|Max|静的|[説明]|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |trace|False|-|-|False|指定できる値は以下のとおりです。<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|@shouldalert|120|False|トランザクションに割り当てられるメモリのチャンクのサイズ (KB) です (トランザクションは複数のチャンクを割り当てることができます)。 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) テーブルの memory_limit 列を参照してください。|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、 **cdc.xdbcdc_state** テーブルの列を示します。  
   
-|アイテム|Description|  
+|アイテム|[説明]|  
 |----------|-----------------|  
 |ステータス|現在の Oracle CDC インスタンスの現在の状態コードです。 CDC の現在の状態を表します。|  
 |sub_status|現在の状態に関する追加情報を提供する二次的な状態です。|  
@@ -167,7 +166,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、cdc.xdbcdc_trace テーブルの列を示します。  
   
-|アイテム|Description|  
+|アイテム|[説明]|  
 |----------|-----------------|  
 |TIMESTAMP|トレース レコードが書き込まれたときの正確な UTC タイムスタンプ。|  
 |型|次のいずれかの値が格納されます。<br /><br /> error<br /><br /> INFO<br /><br /> trace|  
@@ -182,7 +181,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、 **cdc.xdbcdc_staged_transactions** テーブルの列を示します。  
   
-|アイテム|Description|  
+|アイテム|[説明]|  
 |----------|-----------------|  
 |transaction_id|ステージングされるトランザクションの一意なトランザクション識別子です。|  
 |seq_num|現在のトランザクションの **xcbcdc_staged_transactions** 行の (0 から始まる) 番号です。|  

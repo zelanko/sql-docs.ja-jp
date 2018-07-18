@@ -13,36 +13,36 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: 847638bc0693d83ba38dec6c8fec5e4ca030e01f
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 30ca6a2286102933243542b5bebcbd82030b952c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306471"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981374"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>接続[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows 認証に Kerberos を使用して、SQL server 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Kerberos を使用して SQL Server への接続をサポートします。
 
-MacOS または Linux で統合認証 (Windows 認証) を使用するために設定する必要があります、 **Kerberos チケット**Windows ドメイン アカウントに、現在のユーザーをリンクします。 
+MacOS または Linux で統合認証 (Windows 認証) を使用するために設定する必要があります、 **Kerberos チケット**現在のユーザーを Windows ドメイン アカウントにリンクします。 
 
 ## <a name="prerequisites"></a>前提条件
 
-- Kerberos ドメイン コント ローラーを照会するのには Windows ドメインに参加しているコンピューターにアクセスします。
-- SQL Server は、Kerberos 認証を許可するように構成する必要があります。 Unix で実行されている、クライアント ドライバーは、統合認証のみがサポートされて Kerberos を使用します。 Kerberos を使用して認証を Sql Server を設定する方法の詳細についてはあります[ここ](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server)です。 接続しようとしている Sql Server のインスタンスごとに登録されている Spn を設定する必要があります。 SQL Server の Spn の形式に関する情報が記載されて[ここ](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- Kerberos ドメイン コント ローラーのクエリを実行するには、Windows ドメインに参加しているマシンへのアクセス。
+- SQL Server は、Kerberos 認証を許可するように構成する必要があります。 Unix で実行されている、クライアント ドライバーは、Kerberos を使用してのみ統合認証サポートされます。 Kerberos を使用して認証を設定する Sql Server の詳細についてはあります[ここ](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server)します。 Spn を接続しようとしている Sql Server のインスタンスごとに登録されている必要があります。 SQL Server の Spn の形式の詳細が表示されている[ここ](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
-## <a name="checking-if-sql-server-has-kerberos-setup"></a>かどうか、Sql Server は Kerberos セットアップの確認
+## <a name="checking-if-sql-server-has-kerberos-setup"></a>確認のかどうか、Sql Server は Kerberos のセットアップ
 
-Sql Server のホスト コンピューターにログインします。 Windows コマンド プロンプトを使用して、`setspn -L %COMPUTERNAME%`ホストのすべてのサービス プリンシパル名の一覧を表示します。 つまり Sql Server は、SPN が登録し、Kerberos 認証を受け入れる準備ができて MSSQLSvc/HostName.Domain.com で始まるエントリが表示されます。 
-- Sql Server のホストへのアクセス権がないかどうかは、同じ Active Directory に参加している Windows OS 他から、コマンドを使用すること`setspn -L <SQLSERVER_NETBIOS>`< SQLSERVER_NETBIOS > は、Sql Server のホストのコンピューター名。
+Sql Server のホスト マシンにログインします。 Windows コマンド プロンプトを使用して、`setspn -L %COMPUTERNAME%`をホストのすべてのサービス プリンシパル名を一覧表示します。 Sql Server は、SPN が登録されているし、Kerberos 認証を受け入れる準備ができてつまり MSSQLSvc/HostName.Domain.com で始まるエントリが表示されます。 
+- Sql Server のホストへのアクセス権がないかどうかは、同じ Active Directory に参加している Windows OS 他からには、コマンドを使用すること`setspn -L <SQLSERVER_NETBIOS>`< SQLSERVER_NETBIOS > は、Sql Server のホストのコンピューター名。
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Kerberos キー配布センターを取得します。
 
-Kerberos KDC (キー配布センター) 構成値を検索します。 Active Directory ドメインに参加している Windows コンピューターで、次のコマンドを実行します。 
+Kerberos KDC (キー配布センター) の構成値を求めます。 Active Directory ドメインに参加している Windows コンピューターで、次のコマンドを実行します。 
 
-開始`cmd.exe`実行`nltest`です。
+開始`cmd.exe`実行`nltest`します。
 
 ```
 nltest /dsgetdc:DOMAIN.COMPANY.COM (where “DOMAIN.COMPANY.COM” maps to your domain’s name)
@@ -53,16 +53,16 @@ Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
 ...
 The command completed successfully
 ```
-このケースの dc 33.domain.company.com で、必須の KDC 構成値は、DC の名前をコピーします。
+このケースの dc 33.domain.company.com で、必須の KDC 構成値である DC の名前をコピーします。
 
-## <a name="join-your-os-to-the-active-directory-domain-controller"></a>OS を Active Directory ドメイン コント ローラーに参加させる
+## <a name="join-your-os-to-the-active-directory-domain-controller"></a>お使いの OS を Active Directory ドメイン コント ローラーに参加させる
 
 ### <a name="ubuntu"></a>Ubuntu
 ```bash
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-編集、`/etc/network/interfaces`ファイルの dns ネーム サーバーとして、AD ドメイン コント ローラーの IP アドレスが表示されるようにします。 以下に例を示します。 
+編集、`/etc/network/interfaces`ファイルに dns ネーム サーバーとして AD ドメイン コントローラの IP アドレスが表示されます。 以下に例を示します。 
 
 ```/etc/network/interfaces
 <...>
@@ -74,7 +74,7 @@ dns-search **<AD domain name>**
 ```
 
 > [!NOTE]
-> さまざまなマシンのネットワーク インターフェイス (eth0) が異なる場合があります。 使用しているどちらかを調べるには、ifconfig を実行し、IP アドレスと送信および受信したバイト数を持つインターフェイスをコピーします。
+> さまざまなコンピューターのネットワーク インターフェイス (eth0) が異なる場合があります。 使用しているかを確認するには、ifconfig を実行し、IP アドレスと送信および受信したバイト数を持つインターフェイスをコピーします。
 
 このファイルを編集した後、ネットワーク サービスを再起動します。
 
@@ -82,7 +82,7 @@ dns-search **<AD domain name>**
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
-今すぐことを確認、`/etc/resolv.conf`ファイルには、次のような行が含まれています。  
+これでいることを確認、`/etc/resolv.conf`ファイルには、次のような行が含まれています。  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -99,7 +99,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 sudo yum install realmd krb5-workstation
 ```
 
-編集、`/etc/sysconfig/network-scripts/ifcfg-eth0`ファイル (またはその他のインターフェイス設定ファイルに適切な) DNS サーバーとして、AD ドメイン コント ローラーの IP アドレスが表示されるよう。
+編集、`/etc/sysconfig/network-scripts/ifcfg-eth0`ファイル (またはその他のインターフェイス構成をファイルに適切な) DNS サーバーとして AD ドメイン コントローラの IP アドレスが表示されるようします。
 
 ```/etc/sysconfig/network-scripts/ifcfg-eth0
 <...>
@@ -113,7 +113,7 @@ DNS1=**<AD domain controller IP address>**
 sudo systemctl restart network
 ```
 
-今すぐことを確認、`/etc/resolv.conf`ファイルには、次のような行が含まれています。  
+これでいることを確認、`/etc/resolv.conf`ファイルには、次のような行が含まれています。  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -128,7 +128,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### <a name="macos"></a>macOS
 
-- [次の手順] で、macOS を Active Directory ドメイン コント ローラーに参加させる (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US)です。
+- [次の手順] で、macOS を Active Directory ドメイン コント ローラーに参加させる (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US)します。
 
 
 
@@ -178,4 +178,4 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 * 接続プロファイルの完了 をクリックして**接続**
 
-正常に接続すると、サーバーが表示されます、*サーバー*サイドバーです。
+正常に接続した後、サーバーが表示されます、*サーバー*サイドバーです。

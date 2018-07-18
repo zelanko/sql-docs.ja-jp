@@ -1,5 +1,5 @@
 ---
-title: Analysis Services の SQL Server Management Studio でのスクリプト プロジェクト |Microsoft ドキュメント
+title: Analysis Services の SQL Server Management Studio でのスクリプト プロジェクト |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8ee5d2958b6ba7f180472e4d91ce389159e0438
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016349"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034970"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services スクリプト プロジェクト
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34016349"
   
  Analysis Services スクリプト プロジェクトのプロジェクト フォルダーには、次の表に示す種類のファイルを格納できます。  
   
-|ファイルの種類|Description|  
+|ファイルの種類|説明|  
 |---------------|-----------------|  
 |Analysis Services スクリプト プロジェクト定義ファイル (.ssmsasproj)|ソリューション エクスプローラーに表示されるフォルダーに関するメタデータ、およびプロジェクトに含まれるファイルをどのフォルダーが表示するかを示す情報が含まれます。<br /><br /> また、プロジェクトに含まれる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続のメタデータ、およびプロジェクトに含まれるスクリプト ファイルに接続を関連付けるメタデータも含まれます。|  
 |DMX スクリプト ファイル (.dmx)|プロジェクトに含まれている DMX スクリプトが含まれます。|  
@@ -52,9 +52,9 @@ ms.locfileid: "34016349"
   
 ## <a name="see-also"></a>参照  
  [SQL Server データ ツール &#40;SSDT&#41; を使用した多次元モデルの作成](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [多次元式 & #40 です。MDX と #41 です。参照](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [多次元式 (MDX) リファレンス](../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services スクリプト言語&#40;の ASSL を XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語&#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

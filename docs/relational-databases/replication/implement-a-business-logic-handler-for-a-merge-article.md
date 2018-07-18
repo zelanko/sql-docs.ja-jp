@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5038ad98858e3fa5e94864286af043ff432cc0a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65e1d7d8e984ca65f72646da72f2908f6b9d2b3d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956817"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357344"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "32956817"
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>新しいテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義し、**@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義し、**@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>既存のテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
@@ -209,7 +208,7 @@ ms.locfileid: "32956817"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>にビジネス ロジック ハンドラーの表示名 ( <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>) を指定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> メソッドを呼び出します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+3.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> メソッドを呼び出します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>既存のテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   

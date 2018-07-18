@@ -6,23 +6,21 @@ ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ba9202ae949122d83c2690e62a645246b7796bb
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 36d911274b98df4990f66be5079f2acf309afa84
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701857"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787203"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,7 +28,7 @@ ms.locfileid: "33701857"
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 内のユーザーが作成したテーブルの名前を変更します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 内のユーザーが作成したテーブルまたはデータベースの名前を変更します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Data Warehouse)](alter-database-azure-sql-data-warehouse.md) を使用します。  Azure SQL Database でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Database)](alter-database-azure-sql-database.md) ステートメントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のデータベースの名前を変更するには、ストアド プロシージャ [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md) を使用します。
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Data Warehouse)](alter-database-transact-sql.md?&tabs=sqldw) を使用します。  Azure SQL Database でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?&tabs=sqldbmi) ステートメントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のデータベースの名前を変更するには、ストアド プロシージャ [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md) を使用します。
   
 ## <a name="syntax"></a>構文  
   

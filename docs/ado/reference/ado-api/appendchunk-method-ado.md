@@ -2,7 +2,6 @@
 title: AppendChunk メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ba8020b9bf2666ba3b2ab0ffe9156c771360c95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3446061f98047d6af28725095ede2a30208969a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275911"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk メソッド (ADO)
 大きなテキストまたはバイナリ データへのデータの追加[フィールド](../../../ado/reference/ado-api/field-object.md)、または、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクト。  
@@ -38,13 +38,13 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *オブジェクト*  
+ *object*  
  A**フィールド**または**パラメーター**オブジェクト。  
   
  *データ*  
  A**バリアント**オブジェクトに追加するデータを格納しています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **AppendChunk**メソッドを**フィールド**または**パラメーター**長いバイナリまたは文字のデータを格納するオブジェクト。 システム メモリが限られている状況で使用できます、 **AppendChunk**全体ではなく特定の部分で長い値を操作するメソッド。  
   
 ## <a name="field"></a>フィールド  

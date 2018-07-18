@@ -1,14 +1,11 @@
 ---
-title: CLR 統合の概要 |Microsoft ドキュメント
+title: CLR 統合の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -30,19 +27,19 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d79bafbd781b34d3f6fa4908f998775f37548cd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930147"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349464"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、名前空間とライブラリを使用してデータベース オブジェクトのコンパイルに必要なの概説、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 共通言語ランタイム (CLR) と統合します。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
+  このトピックでは、名前空間を使用してデータベース オブジェクトのコンパイルに必要なライブラリの概要、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 共通言語ランタイム (CLR) との統合。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
   
 ## <a name="required-namespaces"></a>必要な名前空間  
- 基本的な CLR データベース オブジェクトの開発に必要なコンポーネントがインストールされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 CLR 統合機能は、.NET Framework の一部である system.data.dll というアセンブリで公開されます。 このアセンブリは、.NET Framework ディレクトリ内だけでなく、GAC (グローバル アセンブリ キャッシュ) 内にもあります。 通常、このアセンブリへの参照は、コマンド ライン ツールと [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio の両方で自動的に追加されるので、手動で追加する必要はありません。  
+ 基本的な CLR データベース オブジェクトの開発に必要なコンポーネントがインストールされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 CLR 統合機能は、.NET Framework の一部である system.data.dll というアセンブリで公開されます。 このアセンブリは、.NET Framework ディレクトリ内だけでなく、GAC (グローバル アセンブリ キャッシュ) 内にもあります。 通常、このアセンブリへの参照は、コマンド ライン ツールと [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio の両方で自動的に追加されるので、手動で追加する必要はありません。  
   
  system.data.dll アセンブリには、CLR データベース オブジェクトのコンパイルに必要な次の名前空間が含まれています。  
   
@@ -93,7 +90,7 @@ End Class
   
  この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドは、2 つの新しいクラスを使用して**[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** と **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** マネージを作成する、単純なテキストを出力するオブジェクトをデータベースメッセージ。 メソッドも割り当てます、文字列"Hello world!" out パラメーターの値。 このメソッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャとして宣言すれば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャと同じ方法で実行できます。  
   
- このプログラムをライブラリとしてコンパイル、読み込みます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、およびストアド プロシージャとして実行します。  
+ ライブラリとしてこのプログラムをコンパイルに読み込んで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、ストアド プロシージャとして実行します。  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>"Hello World"ストアド プロシージャをコンパイルします。  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の再配布ファイルが既定でインストールされます。 インストールされるファイルには、Visual C# プログラムと Visual Basic プログラム用のコマンド ライン コンパイラである csc.exe と vbc.exe が含まれています。 サンプルをコンパイルする前に、csc.exe または vbc.exe が格納されたディレクトリを指すようにパス変数を変更する必要があります。 .NET Framework の既定のインストール パスは、次のとおりです。  
@@ -102,13 +99,13 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- version は、インストールされた再配布可能な .NET Framework のバージョン番号を表します。 例:  
+ version は、インストールされた再配布可能な .NET Framework のバージョン番号を表します。 以下に例を示します。  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v4.6.1  
 ```  
   
- .NET Framework ディレクトリをパスに追加した後、次のコマンドを実行してサンプル ストアド プロシージャをアセンブリにコンパイルできます。 **/Target**オプションでは、アセンブリにコンパイルすることができます。  
+ .NET Framework ディレクトリをパスに追加した後、次のコマンドを実行してサンプル ストアド プロシージャをアセンブリにコンパイルできます。 **/Target**オプションでは、アセンブリにコンパイルできます。  
   
  Visual C# ソース ファイルの場合は、次のコマンドを実行します。  
   
@@ -127,7 +124,7 @@ vbc /target:library helloworld.vb
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>"Hello World" ストアド プロシージャの SQL Server への読み込みと実行  
  サンプル プロシージャを正常にコンパイルしたら、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でそのプロシージャをテストできます。 プロシージャをテストするには、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を起動し、適切なテスト データベース (AdventureWorks サンプル データベースなど) に接続して新しいクエリを作成します。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 使用して、CLR コードを有効にすることができます、 **sp_configure**システム ストアド プロシージャです。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 使用して、CLR コードを有効にすることができます、 **sp_configure**システム ストアド プロシージャ。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
   
  ストアド プロシージャにアクセスするには、アセンブリを作成する必要があります。 この例では、C:\ ディレクトリに helloworld.dll アセンブリが作成されているものとします。 クエリに次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを追加します。  
   
@@ -182,7 +179,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>参照  
  [CLR ストアド プロシージャ](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [SQL Server インプロセス固有の拡張 ado.net](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [SQL Server のインプロセス固有の拡張 ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [CLR データベース オブジェクトのデバッグ](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)  
   

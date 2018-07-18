@@ -2,7 +2,6 @@
 title: 属性のプロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe7d17ab86f7ed60c863d0d3d0f2b32afd9972f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f440f94b5e3814a45f5ec5871f5073e19c9a5b4d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276011"
 ---
 # <a name="attributes-property-ado"></a>属性プロパティ (ADO)
 オブジェクトの 1 つまたは複数の特性を示します。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  [プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト、**属性**プロパティは読み取り専用でき、その値が 1 つ以上の合計[PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md)値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**属性**プロパティを設定または取得の特性を**接続**オブジェクト、**パラメーター**オブジェクト、**フィールド**オブジェクト、または**プロパティ**オブジェクト。  
   
  複数の属性を設定すると、適切な定数を合計することができます。 互換性のない定数を含む合計にプロパティの値を設定した場合、エラーが発生します。  

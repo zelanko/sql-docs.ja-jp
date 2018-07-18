@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d6fc15b14633191d1a7307a5b0fbf510ad3ecebc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfa543da84e0dcfb454e089379e709075f302104
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402224"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の作成と実行 (マスター データ サービス)
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sync-relationship-information"></a>同期関係の情報  
  作成された同期関係ごとに、10 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |状態|同期関係の状態。<br /><br /> **[保存]** をクリックするか、同期関係を実行すると、![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像が表示され、同期関係が更新中であることが示されます。<br /><br /> 同期関係の作成中、編集中、または実行中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
 |ソース モデル|ソース モデルの名前。|  

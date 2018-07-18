@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b809f775b77c5c3b56cf3f3801e36fe20c915ed5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e426530a16fbe6d9749b505723d3251e43f94aa7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307741"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ PDO オブジェクトを返します。 失敗した場合は、PDOException �
 ## <a name="exceptions"></a>例外  
 PDOException  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 インスタンスを null に設定して、接続オブジェクトを閉じることができます。  
   
 接続後、pdo::errorcode には 00000 の代わりに 01000 が表示されます。  

@@ -2,7 +2,6 @@
 title: Count プロパティの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1046d3e75b29dec55bfcc3bc1acfbcdbe94dbb64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5e462bef0846b71a963c1e510fac1e23d00e010
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277261"
 ---
 # <a name="count-property-example-vb"></a>Count プロパティの例 (VB)
 この例で、[カウント](../../../ado/reference/ado-api/count-property-ado.md)で 2 つのコレクションを持つプロパティ、***従業員***データベース。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。 使用せずにこれらのコレクションを列挙する別の方法、**カウント**プロパティを使用すること`For Each...Next`ステートメントです。  

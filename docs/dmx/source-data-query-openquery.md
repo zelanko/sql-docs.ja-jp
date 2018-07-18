@@ -1,5 +1,5 @@
 ---
-title: OPENQUERY (DMX) |Microsoft ドキュメント
+title: OPENQUERY (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6f7b4744c3f521ed4c51e461f2b01a748b9b6496
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842475"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989760"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;ソース データ クエリ&gt;-OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  ソース データ クエリを既存のデータ ソースへのクエリで置き換えます。 INSERT、SELECT FROM PREDICTION JOIN、および SELECT FROM NATURAL PREDICTION JOIN ステートメントをサポートして**OPENQUERY**です。  
+  ソース データ クエリを既存のデータ ソースへのクエリで置き換えます。 INSERT、SELECT FROM PREDICTION JOIN、および SELECT FROM NATURAL PREDICTION JOIN ステートメントをサポートして**OPENQUERY**します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,9 +36,9 @@ OPENQUERY(<named datasource>, <query syntax>)
  行セットを返すクエリ構文です。  
   
 ## <a name="remarks"></a>コメント  
- **OPENQUERY**データ ソースの権限をサポートすることによって外部データにアクセスするより安全な方法を提供します。 接続文字列はデータ ソースに格納されるので、管理者はデータ ソースのプロパティを使用して、データへのアクセスを管理することができます。 データ ソースの詳細については、次を参照してください。[データ ソースのサポートされている&#40;SSAS - 多次元&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)です。  
+ **OPENQUERY**データ ソースのアクセス許可をサポートすることによって外部データにアクセスするより安全な方法を提供します。 接続文字列はデータ ソースに格納されるので、管理者はデータ ソースのプロパティを使用して、データへのアクセスを管理することができます。 データ ソースの詳細については、次を参照してください。[サポートされるデータ ソース&#40;SSAS - 多次元&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)します。  
   
- クエリを実行して、サーバーで使用できるデータ ソースの一覧を取得できる、 **MDSCHEMA_INPUT_DATASOURCES**スキーマ行セット。 使用しての詳細については**MDSCHEMA_INPUT_DATASOURCES**を参照してください[MDSCHEMA_INPUT_DATASOURCES 行セット](../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)です。  
+ クエリを実行して、サーバーで使用できるデータ ソースの一覧を取得することができます、 **MDSCHEMA_INPUT_DATASOURCES**スキーマ行セット。 使用しての詳細については**MDSCHEMA_INPUT_DATASOURCES**を参照してください[MDSCHEMA_INPUT_DATASOURCES 行セット](../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)します。  
   
  また、次の DMX クエリを使用すると、現在の Analysis Services データベース内のデータ ソースの一覧を返すこともできます。  
   

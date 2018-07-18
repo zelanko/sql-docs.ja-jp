@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 06/13/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 20ede2e4e67c7d3d5e3925e041d0baceda5446e5
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612227"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -77,6 +78,7 @@ SQL Server Management Studio 17.7 アップグレード パッケージ (17.x �
 
 > [!NOTE]
 > SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールになりました。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
+
 ## <a name="sql-server-management-studio"></a>[SQL Server Management Studio]
 
 
@@ -137,7 +139,8 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 この 17.7 リリースの問題と制限事項を次に示します。
 
-新しい *General Purpose* または *Business Critical* エディションの Azure SQL Database を使用するとき、無効なエディションであるというエラーが一部のダイアログに表示されます。
+- 新しい *General Purpose* または *Business Critical* エディションの Azure SQL Database を使用するとき、無効なエディションであるというエラーが一部のダイアログに表示されます。
+- XEvent ビューアーで待機時間が発生する場合があります。 これは、[.NET Framework における既知の問題](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)です。 NetFx 4.7.2 へのアップグレードを検討してください。
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>SSMS をアンインストールおよび再インストールする

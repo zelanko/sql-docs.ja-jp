@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -25,11 +24,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 067e710a54b518f8bf9c64c8ee5594fa4689f6b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 154474f9947ff08ab7c98c3d7a93b76d12775695
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410644"
 ---
 # <a name="developing-a-custom-connection-manager"></a>カスタム接続マネージャーの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、接続マネージャーを使用して、外部データ ソースに接続するために必要な情報をカプセル化します。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、エンタープライズ データベースからテキスト ファイルや Excel ワークシートまで、よく使用されるデータ ソースへの接続をサポートする、さまざまな接続マネージャーが用意されています。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] でサポートされている接続マネージャーと外部データ ソースが、要件を必ずしも満たさない場合は、カスタム接続マネージャーを作成できます。  

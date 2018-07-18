@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 748eecc0759365057c1dbb2c2610e6307faf6a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0846c8135c4b9095ab9c5a1f5549fc0884dd6703
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405244"
 ---
 # <a name="transfer-logins-task"></a>ログイン転送タスク
   ログイン転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で 1 つ以上のログインを転送します。  
@@ -115,7 +114,7 @@ ms.lasthandoff: 05/03/2018
  **[LoginsToTransfer]**  
  転送元サーバーから転送先サーバーにコピーされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[AllLogins]**|転送元サーバーのすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが転送先サーバーにコピーされます。|  
 |**[SelectedLogins]**|**[LoginsList]** に指定されているログインのみが転送先サーバーにコピーされます。|  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[FailTask]**|転送先サーバーに同じ名前のログインが既に存在していた場合、タスクが失敗します。|  
 |**Overwrite**|転送先サーバーにある同じ名前のログインは上書きされます。|  

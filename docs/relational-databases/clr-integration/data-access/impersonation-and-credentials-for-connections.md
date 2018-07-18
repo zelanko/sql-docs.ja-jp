@@ -1,14 +1,11 @@
 ---
-title: 権限借用と接続の資格情報 |Microsoft ドキュメント
+title: 権限借用と接続の資格情報 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -24,12 +21,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 09e9a65b9a6be2e1dc9de9153054f9b024818d0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 828357e883ddcf1b1aa1792878d1aedc52105f99
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919087"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358894"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>接続の権限借用と資格情報
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +34,11 @@ ms.locfileid: "32919087"
   
  Windows に接続する SQL Server プロセスは、SQL Server Windows サービス アカウントのセキュリティ コンテキストを既定で取得します。 ただし、CLR 関数をプロキシ ID にマッピングすることにより、その発信接続に対し、Windows サービス アカウントとは異なるセキュリティ コンテキストを設定することができます。  
   
- 場合によってを使用して、呼び出し元を偽装する可能性があります、 **SqlContext.WindowsIdentity**サービス アカウントとして実行するのではなくプロパティです。 **WindowsIdentity**インスタンスは、呼び出し元のコードを呼び出すし、クライアントが Windows 認証を使用する場合にのみ使用するクライアントの id を表します。 取得した後、 **WindowsIdentity**呼び出すことができますのインスタンス、 **Impersonate**スレッドのセキュリティ トークンを変更し、クライアントの代わりに ADO.NET 接続を開きます。  
+ 場合によってを使用して、呼び出し元を偽装する可能性があります、 **SqlContext.WindowsIdentity**サービス アカウントとして実行しているのではなくプロパティ。 **WindowsIdentity**インスタンスは、呼び出し元のコードを呼び出すし、クライアントが Windows 認証を使用する場合にのみ使用するクライアントの id を表します。 取得した後、 **WindowsIdentity**呼び出すことができますのインスタンス、 **Impersonate**スレッドのセキュリティ トークンを変更し、クライアントの代わりに ADO.NET 接続を開きます。  
   
- SQLContext.WindowsIdentity.Impersonate を呼び出した後は、ローカル データにアクセスすることはできませんし、システム データにアクセスすることはできません。 もう一度、データにアクセスするには、WindowsImpersonationContext.Undo を呼び出す必要があります。  
+ SQLContext.WindowsIdentity.Impersonate を呼び出した後は、ローカル データにアクセスすることはできませんし、システム データにアクセスすることはできません。 ここでも、データにアクセスするには、WindowsImpersonationContext.Undo を呼び出す必要があります。  
   
- 次の例を使用して、呼び出し元を偽装する方法を示しています、 **SqlContext.WindowsIdentity**プロパティです。  
+ 次の例を使用して、呼び出し元を偽装する方法を示しています、 **SqlContext.WindowsIdentity**プロパティ。  
   
  Visual C#  
   
@@ -77,9 +74,9 @@ catch
 ```  
   
 > [!NOTE]  
->  権限借用の動作変更については、次を参照してください。 [SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)です。  
+>  権限借用の動作の変更については、次を参照してください。 [SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID インスタンスを取得した場合、既定では、そのインスタンスを別のコンピューターに反映できません。既定では、Windows セキュリティ インフラストラクチャによりこの操作が制限されます。 ただし、"委任" というメカニズムを使用すると、信頼関係のある複数のコンピューターに Windows ID を反映できるようになります。 TechNet の記事で委任の詳細については、"[Kerberos プロトコル遷移および制約付き委任](http://go.microsoft.com/fwlink/?LinkId=50419)"です。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID インスタンスを取得した場合、既定では、そのインスタンスを別のコンピューターに反映できません。既定では、Windows セキュリティ インフラストラクチャによりこの操作が制限されます。 ただし、"委任" というメカニズムを使用すると、信頼関係のある複数のコンピューターに Windows ID を反映できるようになります。 TechNet 記事では、委任の詳細については、"[Kerberos プロトコル遷移および制約付き委任](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
   
 ## <a name="see-also"></a>参照  
  [SqlContext オブジェクト](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

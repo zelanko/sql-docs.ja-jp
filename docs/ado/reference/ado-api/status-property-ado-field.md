@@ -2,7 +2,6 @@
 title: Status プロパティ (ADO フィールド) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1514ffc90b09c35df70a6bf32ee55b47dae3a71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70baf781839fe9a606f1aed2c26676dffe102d69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282011"
 ---
 # <a name="status-property-ado-field"></a>Status プロパティ (ADO フィールド)
 状態を示す、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  返します、 [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md)値。 既定値は**adfieldok で**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="record-field-status"></a>レコード フィールドの状態  
  値に変更、**フィールド**のフィールド コレクション内のオブジェクト、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトは、オブジェクトのまでキャッシュ[更新](../../../ado/reference/ado-api/update-method.md)メソッドが呼び出されます。 その時点では、フィールドの値への変更には、エラーが発生しました、OLE DB エラーが発生、 **DB_E_ERRORSOCCURRED** (2147749409)。 いずれかの Status プロパティ、**フィールド**内のオブジェクト、**フィールド**から値をエラーの原因となったコレクションが格納されます、 [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md)の原因を説明します。問題を。  

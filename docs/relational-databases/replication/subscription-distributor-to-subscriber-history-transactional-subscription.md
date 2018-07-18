@@ -1,5 +1,5 @@
 ---
-title: サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (トランザクション サブスクリプション) | Microsoft Docs
+title: サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴](トランザクション サブスクリプション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 775a138a247c875eb04b3ca843f11e1bfea54dff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6c1b27aa40de5a5fbf4ad6cb09802cfaa1a56f8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32961967"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359454"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (トランザクション サブスクリプション)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

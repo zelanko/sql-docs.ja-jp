@@ -1,4 +1,4 @@
----
+﻿---
 title: 機能していないファイル グループの削除 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017

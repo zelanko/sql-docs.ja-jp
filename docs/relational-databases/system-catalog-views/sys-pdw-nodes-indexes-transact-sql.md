@@ -1,41 +1,40 @@
 ---
-title: sys.pdw_nodes_indexes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.pdw_nodes_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 04591e83fdfd8222a84480f983b21a6d77d51da2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db4fcae2e341731ff3e56b8b5a11101d7db5da5
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875020"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  インデックスを返します[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。  
+  インデックスを返します[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。  
   
-|列名|データ型|Description|範囲|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|このインデックスが属しているオブジェクトの id です。||  
-|name|**sysname**|インデックスの名前です。 名前は、オブジェクト内でのみ一意です。 NULL = ヒープ||  
+|NAME|**sysname**|インデックスの名前です。 名前は、オブジェクト内でのみ一意です。 NULL = ヒープ||  
 |index_id|**int**|インデックスの id です。 index_id は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス||  
-|型|**tinyint**|インデックスの種類です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = の非クラスター化<br /><br /> 5 = クラスター化 xVelocity メモリ最適化列ストア インデックス|  
+|type|**tinyint**|インデックスの種類:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = の非クラスター化<br /><br /> 5 = クラスター化 xVelocity メモリ最適化列ストア インデックス|  
 |type_desc|**nvarchar(60)**|インデックスの種類の説明。<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> クラスター化列ストア||  
 |is_unique|**bit**|0 = インデックスは一意ではありません。|常に 0 です。|  
 |data_space_id|**int**|このインデックスのデータ領域の id です。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = object_id には、テーブル値関数です。||  
@@ -52,10 +51,10 @@ ms.lasthandoff: 05/04/2018
 |filter_definition|**nvarchar(max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。|常に NULL になります。|  
 |pdw_node_id|**int**|一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|NOT NULL|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

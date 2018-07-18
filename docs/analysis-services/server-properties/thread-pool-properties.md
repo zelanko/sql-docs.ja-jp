@@ -1,5 +1,5 @@
 ---
-title: スレッド プール プロパティ |Microsoft ドキュメント
+title: スレッド プール プロパティ |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239252"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050603"
 ---
 # <a name="thread-pool-properties"></a>スレッド プール プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、多くの操作でマルチスレッドを使用し、複数のジョブを並列実行することによって、サーバーの全体的なパフォーマンスを向上させます。 スレッドをより効率的に管理するために、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスレッド プールを使用してスレッドの事前割り当てを実行し、次のジョブがスレッドを容易に利用できるようにします。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスは、スレッド プールの独自セットを維持します。 テーブル インスタンスと多次元インスタンスでは、スレッド プールの使用方法が異なります。 たとえば、多次元インスタンスのみが **IOProcess** スレッド プールを使用します。 そのため、 **PerNumaNode**この記事で説明されている、プロパティは表形式インスタンスに当てはまりません。 後の [プロパティ リファレンス](#bkmk_propref) セクションでは、各プロパティについてモードの要件が示されています。
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスは、スレッド プールの独自セットを維持します。 テーブル インスタンスと多次元インスタンスでは、スレッド プールの使用方法が異なります。 たとえば、多次元インスタンスのみが **IOProcess** スレッド プールを使用します。 そのため、 **PerNumaNode**テーブル インスタンスにとって意味は、この記事で説明されているプロパティ。 後の [プロパティ リファレンス](#bkmk_propref) セクションでは、各プロパティについてモードの要件が示されています。
   
  このトピックの内容は次のとおりです。  
   
@@ -49,7 +49,8 @@ ms.locfileid: "35239252"
   
  多数のプロセッサを使用した場合の副次的な影響の 1 つとして、クエリと処理の負荷が複数のプロセッサに分散され、共有データ構造に関する競合が増加するために、パフォーマンスの低下が発生する可能性があることが挙げられます。 この現象が発生する可能性があるのは、特に NUMA アーキテクチャを使用するハイエンド システムですが、データを集中的に使用する複数のアプリケーションを同じハードウェア上で実行する非 NUMA システムにも当てはまります。  
   
- この問題を緩和するために、特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 操作の種類と、特定の論理プロセッサ セットの間で関係を設定することができます。 **GroupAffinity** プロパティを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の管理対象であるスレッド プールの種類ごとに、どのシステム リソースを使用するかを指定するカスタム関係マスクを作成できます。
+ この問題を緩和するために、特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 操作の種類と、特定の論理プロセッサ セットの間で関係を設定することができます。 
+  **GroupAffinity** プロパティを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の管理対象であるスレッド プールの種類ごとに、どのシステム リソースを使用するかを指定するカスタム関係マスクを作成できます。
  
 表形式インスタンスで **GroupAffinity** を設定する場合は、SQL Server 2016 Cumulative Update 1 (CU1) 以降をお勧めします。 
   
@@ -183,7 +184,7 @@ ms.locfileid: "35239252"
  NUMA ノードが存在するシステムでは、PerNumaNode=-1 という既定の設定を使用し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がノード数に基づいてスレッド プール数とスレッド関係を調整できるようにすることをお勧めします。 システムのノード数が 4 未満の場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は **PerNumaNode**=0 で示される動作を実装します。これに対して、 **PerNumaNode**=1 は、4 つ以上のノードが存在するシステムで使用されます。  
   
 ### <a name="choosing-a-value"></a>値の選択  
- 既定値を上書きして別の有効な値を使用することもできます。  
+ 既定値をオーバーライドして別の有効な値を使用することもできます。  
   
  **PerNumaNode=0 の設定**  
   

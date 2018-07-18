@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965327"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356364"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>パラメーター化されたフィルター - パラメーター化された行フィルター
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  既に述べたとおり、HOST_NAME() は、既定では [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに接続しているコンピューターの名前を返します。 パラメーター化されたフィルターを使用する場合、サブスクリプションの作成時に値を指定することによって、この値をオーバーライドすることがよくあります。 これにより、HOST_NAME() 関数は、コンピューターの名前ではなく、指定された値を返します。  
   
 > [!NOTE]  
->  HOST_NAME() を上書きした場合、HOST_NAME() 関数のすべての呼び出しは、指定された値を返します。 他のアプリケーションが、コンピューター名を返す HOST_NAME() 関数に依存していないことを確認してください。  
+>  HOST_NAME() をオーバーライドした場合、HOST_NAME() 関数のすべての呼び出しは、指定された値を返します。 他のアプリケーションが、コンピューター名を返す HOST_NAME() 関数に依存していないことを確認してください。  
   
  **HumanResources.Employee** テーブルについて考えてみます。 このテーブルには **EmployeeID**という列があります。 このテーブルにフィルターを適用して各従業員が関連データのみを受け取れるようにするには、フィルター句を次のように指定します。  
   
@@ -131,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>[パーティションのオプション] の設定  
  **[パーティションのオプション]** プロパティの値は、アーティクルを作成するときに、フィルター選択されたテーブルのデータをサブスクライバーが共有する方法に応じて設定します。 このプロパティは、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)、および **[アーティクルのプロパティ]** ダイアログ ボックスを使用して、4 つの値のいずれかに設定できます。 このプロパティは、 **[フィルターの追加]** ダイアログ ボックスまたは **[フィルターの編集]** ダイアログ ボックスを使用して、2 つの値のいずれかに設定できます。これらのダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから使用できます。 次の表は、利用可能な値をまとめたものです。  
   
-|Description|[フィルターの追加] および [フィルターの編集] の値|[アーティクルのプロパティ] の値|ストアド プロシージャ内の値|  
+|[説明]|[フィルターの追加] および [フィルターの編集] の値|[アーティクルのプロパティ] の値|ストアド プロシージャ内の値|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |パーティション内のデータは重複しています。サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できます。|**[このテーブルの 1 行を複数のサブスクリプションに移動する]**|**[重複する]**|**0**|  
 |パーティション内のデータは重複しています。サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できません。|なし*|**[重複する (パーティション外のデータ変更を禁止)]**|**1**|  

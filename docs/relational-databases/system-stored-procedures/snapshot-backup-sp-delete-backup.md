@@ -1,5 +1,5 @@
 ---
-title: sp_delete_backup (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_backup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2955570ee99eaa05d9a689ccbe62973af3208d80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241010"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054449"
 ---
 # <a name="spdeletebackup-transact-sql"></a>sp_delete_backup (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sys.sp_delete_backup
  バックアップ ファイル自体を含む設定の指定したバックアップを構成するすべてのスナップショットを削除する、削除するバックアップの URL です。  
   
  *[ @db_name =] database_name*  
- 削除するスナップショットを含むデータベースの名前です。 データベース名が提供された場合、システムによって指定されたデータベースのバックアップの URL を使用して、バックアップの URL が提供されることの検証の場合[sp_delete_backup_file_snapshot &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)各スナップショットを削除します。 データベース名が指定されていない場合は、このデータベースのチェックは実行されません。  
+ 削除するスナップショットを含むデータベースの名前です。 データベース名が提供される、システムは、指定されたデータベースのバックアップの URL を使用して、バックアップの URL が提供されることを検証の場合[sp_delete_backup_file_snapshot &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)各スナップショットを削除します。 データベース名が指定されていない場合は、このデータベースのチェックは実行されません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ALTER ANY DATABASE 権限または指定されたデータベースに対する ALTER 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_is_master_switch_on (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.fn_is_master_switch_on (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87e9ad348eabfad30d556a88dfade8417684469a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226376"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038770"
 ---
 # <a name="managedbackupfnismasterswitchon-transact-sql"></a>managed_backup.fn_is_master_switch_on (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +56,13 @@ managed_backup.fn_is_master_switch_on ()
   
  1 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]はアクティブです。0 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は一時停止しています。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  この関数に対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ 
+  [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

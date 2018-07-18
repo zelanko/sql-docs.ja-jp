@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,20 +22,21 @@ helpviewer_keywords:
 - CATCH block
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
 caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68439f7a9ea22078660d6e0465961c052002e8be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad684b6105de84c82c23297d3d0aa0848dd78e42
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786003"
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  TRY...CATCH 構造の CATCH ブロックが実行される原因となったエラーのメッセージ テキストを返します。  
+この関数は、TRY…CATCH 構造の CATCH ブロックが実行される原因となったエラーのメッセージ テキストを返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,21 +50,21 @@ ERROR_MESSAGE ( )
  **nvarchar (4000)**  
   
 ## <a name="return-value"></a>戻り値  
- CATCH ブロック内で呼び出された場合は、CATCH ブロックが実行される原因となったエラー メッセージの全テキストを返します。 このテキストには、長さ、オブジェクト名、回数など、置き換え可能なパラメーターに提供される値が含まれます。  
+`ERROR_MESSAGE` は、CATCH ブロック内で呼び出されると、`CATCH` ブロックが実行される原因となったエラー メッセージの全テキストを返します。 このテキストには、長さ、オブジェクト名、時刻など、置換可能なパラメーターに指定された値が含まれます。  
   
- CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
+`ERROR_MESSAGE` は、CATCH ブロックの範囲外で呼び出されると、NULL を返します。  
   
 ## <a name="remarks"></a>Remarks  
- ERROR_MESSAGE は、CATCH ブロックのスコープ内であればどこでも呼び出すことができます。  
+`ERROR_MESSAGE` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
- ERROR_MESSAGE では、実行される回数や、CATCH ブロックのスコープ内のどこで実行されるかに関係なく、エラー メッセージが返されます。 これは、@@ERROR のような関数とは対照的です。@@ERROR 関数では、エラーが発生したステートメントの直後のステートメント、または CATCH ブロックの最初のステートメントでエラー番号が返されます。  
+`ERROR_MESSAGE` は、実行回数に関係なく、あるいは `CATCH` ブロックのスコープ内の実行場所に関係なく、関連エラー メッセージを返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
   
- 入れ子にされた CATCH ブロックでは、ERROR_MESSAGE によって、参照される CATCH ブロックのスコープ固有のエラー メッセージが返されます。 たとえば、外側の TRY...CATCH 構造の CATCH ブロックには、TRY...CATCH 構造が入れ子にされている場合があります。 入れ子にされた CATCH ブロックでは、ERROR_MESSAGE によって、入れ子にされた CATCH ブロックを起動したエラーのメッセージが返されます。 ERROR_MESSAGE が外側の CATCH ブロックで実行された場合は、その CATCH ブロックを起動したエラーのメッセージが返されます。  
+`CATCH` ブロックが入れ子になっている場合、`ERROR_MESSAGE` は、`CATCH` ブロックを参照した `CATCH` ブロックのスコープに固有のエラー メッセージを返します。 たとえば、外側の TRY...CATCH 構造の `CATCH` ブロックの中に `TRY...CATCH` 構造が含まれることがあります。 その内側の `CATCH` ブロック内では、`ERROR_MESSAGE` は内側の `CATCH` ブロックを呼び出したエラーからのメッセージを返します。 `ERROR_MESSAGE` が外側の `CATCH` ブロック内で実行される場合、外側の `CATCH` ブロックを呼び出したエラーからのメッセージを返します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-errormessage-in-a-catch-block"></a>A. CATCH ブロックで ERROR_MESSAGE を使用する  
- 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 ここではエラーのメッセージが返されます。  
+この例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `CATCH` ブロックはエラー メッセージを返します。  
   
 ```  
   
@@ -76,13 +76,23 @@ BEGIN CATCH
     SELECT ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorMessage
+----------------------------------
+Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
- 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 ここではエラー メッセージと共に、エラーに関連する情報が返されます。  
+この例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `CATCH` ブロックは、エラー メッセージと共にそのエラーに関する情報を返します。  
   
 ```  
-  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -97,28 +107,17 @@ BEGIN CATCH
         ,ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
- 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 ここではエラー メッセージと共に、エラーに関連する情報が返されます。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber  
-        ,ERROR_SEVERITY() AS ErrorSeverity  
-        ,ERROR_STATE() AS ErrorState  
-        ,ERROR_PROCEDURE() AS ErrorProcedure  
-        ,ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine  ErrorMessage
+----------- ------------- ----------- --------------- ---------- ----------------------------------
+8134        16            1           NULL            4          Divide by zero error encountered.
+
+(1 row(s) affected)
+
+```
   
 

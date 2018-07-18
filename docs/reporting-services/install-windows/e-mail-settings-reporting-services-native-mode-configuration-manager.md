@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 722890bcdd6b8f412052f87f38eea279b8f0c05f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5d7f6a81a9f13aa82c8aef9320617d23c2f2fbd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322141"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
 Reporting Services にはメール配信拡張機能があり、メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。
@@ -138,7 +138,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 - `<SMTPServer>` リモート SMTP サーバーまたはフォワーダーを指定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
 - `<From>` メール メッセージの **[送信者]** 行に使用する値を設定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
 
-リモート SMTP サービスで使用する他の値としては、次のものがあります (既定値を変更するのでない限り、これらの値を指定する必要はありません)。
+リモート SMTP サービスで使用する他の値としては、次のものがあります (既定値を変更するのでない限り、これらの値をオーバーライドする必要はありません)。
 
 - `<SMTPServerPort>` 既定ではポート 25 に構成されます。
 - `<SMTPAuthenticate>` レポート サーバーがリモート SMTP サーバーに接続する方法を指定します。 既定値は **0** (認証なし) です。 この場合、接続は匿名アクセスをとおして行われます。 ドメインの構成によっては、レポート サーバーと SMTP サーバーが同じドメインのメンバーであることが必要になる場合があります。
@@ -163,7 +163,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 
 7. `<SMTPAuthenticate>` を 1 または 2 に設定する場合は、 **の値を** 1 `<SendUsing>` に設定します。
 
-7. `<From>`を設定します。 SMTP サーバーからメールを送信する権限のあるユーザー アカウントを指定する必要があります。
+7. `<From>` を設定します。 SMTP サーバーからメールを送信する権限のあるユーザー アカウントを指定する必要があります。
 
 8. ファイルを保存します。
 

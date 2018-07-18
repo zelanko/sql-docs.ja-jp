@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2f5459ca526980c9a77fe79ecb482f0b2c1ce0bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bbfb174e1226cc9a514e3293ef313fa942d8b6d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322001"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
   Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。 URL 予約は、Web アプリケーションへの URL エンドポイントの構文を定義します。 レポート サーバーでアプリケーションを構成する際には、レポート サーバー Web サービスとレポート マネージャーの両方に対して URL 予約を定義します。 セットアップまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL を構成すると、自動的に URL 予約が作成されます。  

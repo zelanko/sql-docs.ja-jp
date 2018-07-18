@@ -1,5 +1,5 @@
 ---
-title: sys.column_store_row_groups (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.column_store_row_groups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,47 +25,48 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ef19c029232369de3a2da590e17f97a8bdb13655
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029792"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  セグメント単位でクラスター化列ストア インデックス情報を提供して、システム管理に関する管理者の決定を支援します。 **sys.column_store_row_groups**が、(削除済みとしてマークされているを含む) に物理的に格納されている行の合計数と、列の削除済みとしてマークされている行の数。 使用して**sys.column_store_row_groups**行を判断するグループが削除された行の割合が高いと、再構築する必要があります。  
+  セグメント単位でクラスター化列ストア インデックス情報を提供して、システム管理に関する管理者の決定を支援します。 **sys.column_store_row_groups** (削除済みとしてマークされているを含む) に物理的に格納されている行の合計数の列と列の削除済みとしてマークされている行の数。 使用**sys.column_store_row_groups**行を判断するグループが削除された行の割合が高いと、再構築する必要があります。  
    
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このインデックスが定義されているテーブルの ID。|  
 |**index_id**|**int**|この列ストア インデックスがあるテーブルのインデックスの ID。|  
 |**partition_number**|**int**|行グループ row_group_id を保持するテーブル パーティションの ID。 この DMV を sys.partitions に結合するには、partition_number を使用できます。|  
 |**row_group_id**|**int**|この行グループに関連付けられている行グループ番号。 この番号はパーティション内で一意です。<br /><br /> -1 = メモリ内のテーブルの末尾。|  
 |**delta_store_hobt_id**|**bigint**|デルタ ストアで OPEN の行グループの hobt_id でします。<br /><br /> 行グループがデルタ ストア内にない場合は NULL です。<br /><br /> メモリ内のテーブルの末尾の場合は NULL です。|  
-|**状態**|**tinyint**|state_description に関連付けられている ID 番号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = COMPRESSED <br /><br /> 4 = 廃棄 (TOMBSTONE)|  
+|**state**|**tinyint**|state_description に関連付けられている ID 番号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = COMPRESSED <br /><br /> 4 = 廃棄 (TOMBSTONE)|  
 |**state_description**|**nvarchar(60)**|行グループの永続的な状態の説明:<br /><br /> INVISIBLE - デルタ ストアのデータからの構築プロセスにおける非表示の圧縮されたセグメント。 非表示の圧縮されたセグメントが完了するまで、読み取りアクションでデルタ ストアが使用されます。 その後、新しいセグメントが表示されると、ソース デルタ ストアは削除されます。<br /><br /> OPEN - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED - いっぱいになったが、組ムーバー プロセスによってまだ圧縮されていない行グループ。<br /><br /> COMPRESSED - いっぱいになり、圧縮された行グループ。|  
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 削除された行がまだ格納されていることがあります。 1 つの行グループの最大行数は 1,048,576 (16 進数では FFFFF) です。|  
 |**deleted_rows**|**bigint**|削除済みとしてマークされている行グループ内の行の合計。 これはデルタ行グループの場合は常に 0 です。|  
 |**size_in_bytes**|**bigint**|この行グループ内にあるすべてのデータ (メタデータと共有辞書は除く) のサイズ (バイト単位)。デルタ行グループと列ストア行グループの両方が対象です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クラスター化または非クラスター化列ストア インデックスがある各テーブルの列ストア行グループごとに 1 つの行を返します。  
   
- 使用して**sys.column_store_row_groups**行グループおよび行グループのサイズに含まれる行の数を決定します。  
+ 使用**sys.column_store_row_groups**行グループおよび行グループのサイズに含まれる行の数を決定します。  
   
- 行グループ内の削除済みの行の数が合計行数に対して占める割合が高くなると、テーブルの効率が低下します。 テーブルのサイズが小さくなるよう列ストア インデックスを再構築して、テーブルを読み取るために必要なディスク I/O を削減します。 使用して列ストア インデックスを再構築する、**リビルド**のオプション、 **ALTER INDEX**ステートメントです。  
+ 行グループ内の削除済みの行の数が合計行数に対して占める割合が高くなると、テーブルの効率が低下します。 テーブルのサイズが小さくなるよう列ストア インデックスを再構築して、テーブルを読み取るために必要なディスク I/O を削減します。 使用して列ストア インデックスを再構築する、**リビルド**のオプション、 **ALTER INDEX**ステートメント。  
   
- 更新可能な列ストアが最初に新規データを挿入、**開く**状態の行グループが行ストア形式とも呼ばれることに、デルタ テーブルとして。  開いている行グループがいっぱいの状態に変わります**CLOSED**です。 Closed 行グループは、組ムーバーによって列ストア形式に圧縮し、状態が**圧縮**です。  組ムーバーは、定期的に起動され、列ストア行グループに圧縮する準備ができている CLOSED 状態の行グループがあるかどうかを確認するバックグラウンド プロセスです。  また、組ムーバーは、すべての行が削除された行グループの割り当てを解除します。 割り当てが解除された行グループとしてマークされている**廃棄 (tombstone)** です。 組ムーバーを直ちに実行するを使用して、 **REORGANIZE**のオプション、 **ALTER INDEX**ステートメントです。  
+ 更新可能な列ストアが最初に新しいデータを挿入、**オープン**行グループは行ストア形式であり、デルタ テーブルと呼ばれるをこともできます。  Open の行グループがいっぱいの状態に変わります**CLOSED**します。 Closed 行グループが、組ムーバーによって列ストア形式に圧縮され、状態が**圧縮**します。  組ムーバーは、定期的に起動され、列ストア行グループに圧縮する準備ができている CLOSED 状態の行グループがあるかどうかを確認するバックグラウンド プロセスです。  また、組ムーバーは、すべての行が削除された行グループの割り当てを解除します。 行グループの割り当て解除のマーク**廃棄 (tombstone)** します。 組ムーバーを直ちに実行するを使用して、 **REORGANIZE**のオプション、 **ALTER INDEX**ステートメント。  
   
  列ストア行グループは、いっぱいになると圧縮され、新しい行の受け入れを停止します。 圧縮されたグループから行が削除されると、削除された行は、保持されますが、削除済みとしてマークされます。 圧縮されたグループに対する更新は、圧縮されたグループからの削除、および OPEN 状態のグループへの挿入として実装されます。  
   
-## <a name="permissions"></a>権限  
- 場合、ユーザーは、テーブルの情報を返します**VIEW DEFINITION**テーブルに対する権限。  
+## <a name="permissions"></a>アクセス許可  
+ ユーザーがある場合、テーブルの情報を返します**VIEW DEFINITION**テーブルに対する権限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例の結合、 **sys.column_store_row_groups**特定のテーブルに関する情報を返すには、他のシステム テーブル。 計算済みの `PercentFull` 列は、行グループの効率の推定値を示します。 コメントのハイフンの前に 1 つのテーブルの削除に関する情報、**場所**句テーブル名を指定します。  
+ 次の例の結合、 **sys.column_store_row_groups**特定のテーブルに関する情報を返すには、その他のシステム テーブル。 計算済みの `PercentFull` 列は、行グループの効率の推定値を示します。 コメントのハイフンの前後に 1 つのテーブルの削除に関する情報、**場所**句とテーブル名を指定します。  
   
 ```  
 SELECT i.object_id, object_name(i.object_id) AS TableName,   

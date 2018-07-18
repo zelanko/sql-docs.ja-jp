@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6fefb85430b6bf3b98d15a884130e1db1d2cdfa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308421"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,13 +43,13 @@ $*cursor_offset*: 場合にフェッチする行を指定する省略可能な (
 ## <a name="return-value"></a>戻り値  
 行を返す複合値または false です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 フェッチが呼び出されると、カーソルは自動的に前進します。 次の表には、可能な $ の一覧が含まれています。*fetch_style*値。  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|説明|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|列名でインデックス付けされた配列を指定します。|  
-|PDO::FETCH_BOTH|列名でインデックス付けされた 0 から始まる配列を指定します。 これは既定値です。|  
+|PDO::FETCH_BOTH|列名でインデックス付けされた 0 から始まる配列を指定します。 既定値です。|  
 |PDO::FETCH_BOUND|True を返し、 [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)で指定された値を割り当てます。|  
 |PDO::FETCH_CLASS|インスタンスを作成し、列を名前付きプロパティにマップします。<br /><br />フェッチを呼び出す前に、 [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) を呼び出します。|  
 |PDO::FETCH_INTO|要求されたクラスのインスタンスを更新します。<br /><br />フェッチを呼び出す前に、 [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) を呼び出します。|  
@@ -61,9 +61,9 @@ $*cursor_offset*: 場合にフェッチする行を指定する省略可能な (
   
 カーソルがスクロール可能な場合 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)、フェッチは結果セットの境界内にカーソルを移動します。 次の表には、可能な $ の一覧が含まれています。*cursor_orientation*値。  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|説明|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|次の行を取得します。 これは既定値です。|  
+|PDO::FETCH_ORI_NEXT|次の行を取得します。 既定値です。|  
 |PDO::FETCH_ORI_PRIOR|前の行を取得します。|  
 |PDO::FETCH_ORI_FIRST|1 番目の行を取得します。|  
 |PDO::FETCH_ORI_LAST|最後の行を取得します。|  

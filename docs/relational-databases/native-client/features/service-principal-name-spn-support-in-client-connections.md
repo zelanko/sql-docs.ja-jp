@@ -1,13 +1,11 @@
 ---
-title: クライアント接続でのサービス プリンシパル名 (SPN) のサポート |Microsoft ドキュメント
+title: クライアント接続でのサービス プリンシパル名 (SPN) のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,27 +14,26 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 988032e24c587de7b7e00f64d8fe6244ce0bd58d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65208af559037dd7e73cbaac49daa825460d1f60
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956537"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411471"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>クライアント接続でのサービス プリンシパル名 (SPN) のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]、あらゆるプロトコルで相互認証を有効にするサービス プリンシパル名 (Spn) のサポートが拡張されています。 以前のバージョンの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Spn が kerberos over TCP サポートのみときに、既定の SPN、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスは、Active Directory に登録されました。  
+  以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]、あらゆるプロトコルで相互認証を有効にするサービス プリンシパル名 (Spn) のサポートが強化されています。 以前のバージョンの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Spn が kerberos over TCP サポートのみときに、既定の SPN、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスは、Active Directory に登録済みです。  
   
- Spn を使用して、認証プロトコルによって判断いるアカウントを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスが実行されています。 インスタンスのアカウントが判明した場合は、Kerberos 認証を使用したクライアントとサーバーによる相互認証が可能となります。 インスタンスのアカウントが不明である場合は、NTLM 認証を使用して、サーバーによるクライアントの認証のみが行われます。 現在、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client が、認証を参照して、インスタンス名とネットワーク接続のプロパティから SPN を生成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスはスタートアップ時に、Spn を登録しようとします。 または、手動で登録できます。 ただし、SPN を登録するアカウントのアクセス権が不十分である場合は、登録が失敗します。  
+ Spn は、アカウントを特定する認証プロトコルで使用されます、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスが実行されています。 インスタンスのアカウントが判明した場合は、Kerberos 認証を使用したクライアントとサーバーによる相互認証が可能となります。 インスタンスのアカウントが不明である場合は、NTLM 認証を使用して、サーバーによるクライアントの認証のみが行われます。 現時点では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client が、認証を参照して、インスタンス名とネットワーク接続のプロパティから SPN を生成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスはスタートアップ時に、Spn を登録しようとします。 または、手動で登録できます。 ただし、SPN を登録するアカウントのアクセス権が不十分である場合は、登録が失敗します。  
   
- ドメインおよびコンピューター アカウントは、自動的に Active Directory に登録されます。 これらのアカウントを SPN として使用することも、管理者が独自に SPN を定義することもできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントが直接使用する SPN を指定できるようにしてより管理し、信頼性の高い認証を安全になります。  
+ ドメインおよびコンピューター アカウントは、自動的に Active Directory に登録されます。 これらのアカウントを SPN として使用することも、管理者が独自に SPN を定義することもできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントを直接使用する SPN を指定できるようにしてより管理し、信頼性の高い認証をセキュリティで保護を使用します。  
   
 > [!NOTE]  
 >  クライアント アプリケーションで指定された SPN は、Windows 統合セキュリティを使用して接続されている場合にのみ使用されます。  
@@ -46,17 +43,17 @@ ms.locfileid: "32956537"
   
  Kerberos の詳細については、次の記事を参照してください。  
   
--   [Windows 用の Kerberos に関する技術的補足](http://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=101449)  
   
 -   [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)  
   
 ## <a name="usage"></a>使用方法  
  次の表では、セキュリティで保護された認証をクライアント アプリケーションで使用するための、最も一般的なシナリオについて説明します。  
   
-|Scenario|Description|  
+|シナリオ|説明|  
 |--------------|-----------------|  
 |レガシ アプリケーションで SPN が指定されない。|この互換性のシナリオでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で作成されたアプリケーションの動作が変更されないことが保証されます。 SPN が指定されていない場合、アプリケーションは生成された SPN を使用し、どの認証方法が使用されるかは認識しません。|  
-|現在のバージョンを使用してクライアント アプリケーション[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、ドメイン ユーザーまたはコンピューター アカウント、インスタンス固有の SPN、またはユーザー定義の文字列、接続文字列に、SPN を指定します。|プロバイダー文字列、初期化文字列、または接続文字列で **ServerSPN** キーワードを使用することで、次の操作が可能になります。<br /><br /> -によって使用されるアカウントを指定する、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスが接続します。 これにより、Kerberos 認証へのアクセスが簡単になります。 Kerberos キー配布センター (KDC) が存在し、かつ正しいアカウントが指定された場合は、NTLM よりも Kerberos 認証が使用される可能性が高くなります。 KDC は通常、ドメイン コントローラーと同じコンピューターに存在します。<br /><br /> -検索のサービス アカウントに SPN を指定します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 各[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスをこの目的で使用できる 2 つの既定の Spn が生成されます。 ただし、これらのキーが Active Directory に存在することは保証されないため、この状況では Kerberos 認証は保証されません。<br /><br /> -指定のサービス アカウントの検索に使用される SPN、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 これは、サービス アカウントにマップされる任意のユーザー定義文字列でかまいません。 この場合は、キーを手動で KDC に登録する必要があり、キーがユーザー定義 SPN の規則を満たしていることも必要です。<br /><br /> **FailoverPartnerSPN** キーワードを使用すると、フェールオーバー パートナー サーバーの SPN を指定できます。 アカウントおよび Active Directory キーの値の範囲は、プリンシパル サーバーに指定できる値と同じです。|  
+|現在のバージョンを使用してクライアント アプリケーション[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、ドメイン ユーザーまたはコンピューター アカウント、インスタンス固有の SPN、またはユーザー定義の文字列は、接続文字列で SPN を指定します。|プロバイダー文字列、初期化文字列、または接続文字列で **ServerSPN** キーワードを使用することで、次の操作が可能になります。<br /><br /> -使用するアカウントを指定してください、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]接続のインスタンス。 これにより、Kerberos 認証へのアクセスが簡単になります。 Kerberos キー配布センター (KDC) が存在し、かつ正しいアカウントが指定された場合は、NTLM よりも Kerberos 認証が使用される可能性が高くなります。 KDC は通常、ドメイン コントローラーと同じコンピューターに存在します。<br /><br /> -検索のサービス アカウントに SPN を指定してください、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 すべて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスをこの目的のために使用できる 2 つの既定の Spn が生成されます。 ただし、これらのキーが Active Directory に存在することは保証されないため、この状況では Kerberos 認証は保証されません。<br /><br /> -のサービス アカウントを検索するために使用する SPN を指定してください、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 これは、サービス アカウントにマップされる任意のユーザー定義文字列でかまいません。 この場合は、キーを手動で KDC に登録する必要があり、キーがユーザー定義 SPN の規則を満たしていることも必要です。<br /><br /> **FailoverPartnerSPN** キーワードを使用すると、フェールオーバー パートナー サーバーの SPN を指定できます。 アカウントおよび Active Directory キーの値の範囲は、プリンシパル サーバーに指定できる値と同じです。|  
 |ODBC アプリケーションで、SPN がプリンシパル サーバーまたはフェールオーバー パートナー サーバーの接続属性として指定される。|接続属性 **SQL_COPT_SS_SERVER_SPN** を使用して、プリンシパル サーバーへの接続用の SPN を指定できます。<br /><br /> 接続属性 **SQL_COPT_SS_FAILOVER_PARTNER_SPN** を使用して、フェールオーバー パートナー サーバーの SPN を指定できます。|  
 |OLE DB アプリケーションで、SPN がプリンシパル サーバーまたはフェールオーバー パートナー サーバーのデータ ソース初期化プロパティとして指定される。|**SSPROP_INIT_SERVER_SPN** プロパティ セット内の接続プロパティ **DBPROPSET_SQLSERVERDBINIT** を使用して、接続用の SPN を指定できます。<br /><br /> **SSPROP_INIT_FAILOVER_PARTNER_SPN** 内の接続プロパティ **DBPROPSET_SQLSERVERDBINIT** を使用して、フェールオーバー パートナー サーバーの SPN を指定できます。|  
 |ユーザーが、サーバーまたはフェールオーバー パートナー サーバーの SPN を ODBC データ ソース名 (DSN) で指定する。|SPN は、DSN を設定するダイアログ ボックスを使用して ODBC DSN に指定できます。|  
@@ -72,13 +69,13 @@ ms.locfileid: "32956537"
   
  アプリケーションでは、接続文字列キーワードを指定する代わりに、プログラムによって SPN を接続属性として指定できます。 こうすると、接続プールの断片化を管理するうえで役立ちます。  
   
- 接続文字列内の SPN は対応する接続属性を設定することで上書きできますが、接続のプールで使用される接続文字列は、プールの目的で接続文字列値を使用するので、アプリケーションでは注意が必要です。  
+ 接続文字列内の SPN は対応する接続属性を設定することでオーバーライドできますが、接続のプールで使用される接続文字列は、プールの目的で接続文字列値を使用するので、アプリケーションでは注意が必要です。  
   
 ## <a name="down-level-server-behavior"></a>下位サーバーの動作  
  新しい接続動作はクライアントで実装されるため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のバージョンに固有ではありません。  
   
 ## <a name="linked-servers-and-delegation"></a>リンク サーバーと委任  
- リンク サーバーを作成すると、 **@provstr**のパラメーター [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)サーバーとフェールオーバー パートナーの Spn を指定するために使用できます。 そのメリットは、クライアントの接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使用する接続を、より簡単かつ確実に確立できます。  
+ リンク サーバーを作成するとき、 **@provstr**パラメーターの[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)サーバーおよびフェールオーバー パートナーの Spn を指定するために使用できます。 そのメリットは、クライアントの接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使用する接続を、より簡単かつ確実に確立できます。  
   
  リンク サーバーでの委任には、Kerberos 認証が必要です。  
   
@@ -98,7 +95,7 @@ ms.locfileid: "32956537"
   
  接続文字列または接続属性で SPN に使用される構文は次のとおりです。  
   
-|構文|Description|  
+|構文|説明|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *fqdn* は、完全修飾ドメイン名です。|  
 |MSSQLSvc/*fqdn*:*port*|TCP が使用される場合にプロバイダーが生成する既定の SPN。<br /><br /> *port* は、TCP ポート番号です。|  

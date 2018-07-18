@@ -1,5 +1,5 @@
 ---
-title: sp_attach_db (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_attach_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c275128a8e3c2bbce6165486e256fc5b34d402d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240482"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037200"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "33240482"
   データベースをサーバーにアタッチします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] CREATE DATABASE を使用することをお勧め*database_name* FOR ATTACH 代わりにします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] CREATE DATABASE を使用することをお勧めします。 *database_name* FOR ATTACH 代わりにします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  1 つまたは複数が別の場所は、複数のログ ファイルを再構築、CREATE DATABASE を使用して*database_name* FOR ATTACH_REBUILD_LOG です。  
+>  1 つまたは複数がある新しい場所には、複数のログ ファイルを再構築、CREATE DATABASE を使用して、 *database_name* FOR attach_rebuild_log を指定します。  
   
 > [!IMPORTANT]  
->  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働用ではないサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
+>  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,7 +56,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  サーバーにアタッチされるデータベースの名前を指定します。 名前は一意である必要があります。 *dbname*は**sysname**、既定値は NULL です。  
   
  [ **@filename1=** ] **'***filename_n***'**  
- データベース ファイルの物理名を、パスも含めて指定します。 *filename_n*は**nvarchar (260)**、既定値は NULL です。 ファイル名は 16 個まで指定できます。 最初のパラメーター名**@filename1**に 1 ずつ増分 **@filename16**です。 指定するファイルには少なくともプライマリ ファイルが含まれている必要があります。 プライマリ ファイルには、データベース内の他のファイルを参照するシステム テーブルが含まれています。 また、データベースがデタッチされた後で移動したファイルも指定する必要があります。  
+ データベース ファイルの物理名を、パスも含めて指定します。 *filename_n*は**nvarchar (260)**、既定値は NULL です。 ファイル名は 16 個まで指定できます。 最初のパラメーター名**@filename1**にインクリメント **@filename16**します。 指定するファイルには少なくともプライマリ ファイルが含まれている必要があります。 プライマリ ファイルには、データベース内の他のファイルを参照するシステム テーブルが含まれています。 また、データベースがデタッチされた後で移動したファイルも指定する必要があります。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -69,8 +69,8 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **Sp_attach_db**ストアド プロシージャは、明示的に使用して、データベース サーバーからデタッチされたデータベースでのみ実行する必要があります**sp_detach_db**オペレーション データベース、またはコピーします。 16 を超えるファイルを指定した場合は、CREATE DATABASE を使用します。 *database_name* FOR ATTACH または CREATE DATABASE *database_name* for_attach_rebuild_log を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ **Sp_attach_db**ストアド プロシージャは、明示的なを使用して、データベース サーバーからデタッチされたデータベースでのみ実行する必要があります**sp_detach_db**オペレーション データベース、またはコピーします。 16 ファイル以上を指定する必要が場合は、CREATE DATABASE を使用して*database_name* FOR ATTACH または CREATE DATABASE *database_name* for_attach_rebuild_log を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
  指定されていないファイルは、最後に指定された場所にあることが想定されます。 異なる場所にあるファイルを使用するには、新しい場所を指定する必要があります。  
   
@@ -89,8 +89,8 @@ sp_attach_db [ @dbname= ] 'dbname'
   
  データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。  
   
-## <a name="permissions"></a>権限  
- データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)です。  
+## <a name="permissions"></a>アクセス許可  
+ データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)します。  
   
 ## <a name="examples"></a>使用例  
  次の例からのファイルをアタッチする[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]現在のサーバーにします。  

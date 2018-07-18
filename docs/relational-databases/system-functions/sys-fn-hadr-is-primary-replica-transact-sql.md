@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_is_primary_replica (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_hadr_is_primary_replica (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebfd66acdc93f1a5148981e06f8adf1c507e1705
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240512"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995632"
 ---
 # <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
   
 ## <a name="arguments"></a>引数  
  '*dbname*'  
- データベースの名前です。 *dbname*は、データ型は sysname です。  
+ データベースの名前です。 *dbname*が sysname 型。  
   
-## <a name="returns"></a>返します。  
- 現在のインスタンス上のデータベースがプライマリ レプリカの場合は 1 を返します。 それ以外の場合は 0 を返します。  
+## <a name="returns"></a>戻り値  
+ 現在のインスタンス上のデータベースがプライマリ レプリカの場合は 1 を返します。 それ以外の場合 0 を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数を使用すると、ローカル インスタンスが特定の可用性データベースのプライマリ レプリカをホストしているかどうかを効率的に確認できます。 サンプル コードは次のようになります。  
   
 ```  
@@ -77,8 +77,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn 可用性グループと &#40; です。SQL Server と &#41; です。](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [可用性グループ &#40;Transact SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [AlwaysOn 可用性グループ&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [AlwaysOn 可用性グループ カタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   

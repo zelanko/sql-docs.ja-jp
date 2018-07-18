@@ -2,7 +2,6 @@
 title: FilterValue プロパティ (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a672d4c8508504c8bb1f76e609cb4f269b796d39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8c9d029ffcf40d33805a37334af8953635e2815
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288317"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue プロパティ (RDS)
 レコードをフィルター処理に使用する値を示します。  
@@ -44,7 +44,7 @@ DataControl.FilterValue = String
  *文字列*  
  A**文字列**レコードをフィルター処理に使用するデータ値を表す値 (たとえば、`'Programmer'`または`125`)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 **FilterValue**、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)、および[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、並べ替えおよびフィルター処理でクライアント側のキャッシュ機能を提供します。 並べ替えの機能は、1 つの列の値によって、レコードを並べ替えます。 フィルターの機能は、完全な検索条件に基づくレコードのサブセットを表示[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)はキャッシュに保持されます。 [リセット](../../../ado/reference/rds-api/reset-method-rds.md)メソッドは条件を実行し、現在の置換**Recordset** 、更新可能で**レコード セット**です。  
   
  Null 値は、型の不一致エラーになります。  

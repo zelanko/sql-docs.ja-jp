@@ -2,7 +2,6 @@
 title: WillChangeRecord および RecordChangeComplete イベント (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77d02d1a5b5d643c49fcbbd33057d6c709f1949a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: baef6471c753f7a85590a6dd46efb59657fbe9dd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282841"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord および RecordChangeComplete イベント (ADO)
 **WillChangeRecord**でイベントが 1 つまたは複数のレコード (行) より前に呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を変更します。 **RecordChangeComplete**いずれかの後にイベントが呼び出されるかより多くのレコードを変更します。  
@@ -64,7 +64,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  A **Recordset**オブジェクト。 **Recordset**のこのイベントが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A **WillChangeRecord**または**RecordChangeComplete** 、以下の理由により行の最初の変更されたフィールドのイベントが発生する**Recordset**操作: [更新](../../../ado/reference/ado-api/update-method.md)、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、および[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)です。 値、 **Recordset** [カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)どのような操作が発生するイベントの原因を判断します。  
   
  中に、 **WillChangeRecord**イベント、 **Recordset** [フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティに設定されている**adFilterAffectedRecords**です。 イベントを処理中にこのプロパティを変更することはできません。  

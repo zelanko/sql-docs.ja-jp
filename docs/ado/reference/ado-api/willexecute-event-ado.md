@@ -2,7 +2,6 @@
 title: アクティビ ティー イベント (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d9fee251d53f5966f83fb1a49d3ecd75fe0813
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0fd9c97018c5c15710067298a88b4996c5a699f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282881"
 ---
 # <a name="willexecute-event-ado"></a>アクティビ ティー イベント (ADO)
 **アクティビ ティー**イベントは、接続で保留中のコマンドを実行する前に呼び出されます。  
@@ -47,7 +47,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)のロックの種類を格納している、 **Recordset**は開かれます。 このパラメーターを使用中に任意の型にロックを変更することができます、 **RecordsetOpen**操作します。 *LockType*他の操作は無視されます。  
   
- *Options*  
+ *[オプション]*  
  A**長い**コマンドを実行したり、開いたりに使用できるオプションを示す値、 **Recordset**です。  
   
  *adStatus*  
@@ -62,7 +62,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに対してこのイベント通知が適用されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A**アクティビ ティー**接続によるイベントが発生します。  [Execute メソッド (ADO 接続)](../../../ado/reference/ado-api/execute-method-ado-connection.md)、[メソッドの実行 (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md)、または[Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド、 *pConnection*パラメーターにする必要があります常に有効な参照が含まれて、**接続**オブジェクト。 場合は、イベントの原因**Connection.Execute**、 *pRecordset*と*pCommand*パラメーターに設定されて**Nothing**です。 場合は、イベントの原因**Recordset.Open**、 *pRecordset*パラメーターで参照、 **Recordset**オブジェクトおよび*pCommand*パラメーターに設定されている**Nothing**です。 場合は、イベントの原因**Command.Execute**、 *pCommand*パラメーターは参照、**コマンド**オブジェクトおよび*pRecordset*パラメーターに設定されている**Nothing**です。  
   
  **アクティビ ティー**を確認し、保留中の実行のパラメーターを変更することができます。 このイベントは、保留中のコマンドをキャンセルする要求を返す可能性があります。  

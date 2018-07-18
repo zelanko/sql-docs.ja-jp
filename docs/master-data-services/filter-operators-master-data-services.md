@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f4d3785155a0027f374b25f22b9586a215fd4ae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402614"
 ---
 # <a name="filter-operators-master-data-services"></a>フィルター演算子 (マスター データ サービス)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="filter-operators"></a>フィルター演算子  
   
-|コントロール名|Description|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |**次の値に等しい**|指定した条件とまったく同じ属性値を返します。 たとえば、 **Mountain-100**を対象にしてフィルター処理を行うには、「 **Mountain-100**」と入力する必要があります。|  
 |**次の値に等しくない**|指定した条件とまったく同じではない属性値を返します。 フィルター条件は、結果から除外しようとする属性値とまったく同じにする必要があります。 たとえば、 **Mountain-100**と一致する結果を除外するには、「 **Mountain-100**」と入力する必要があります。<br /><br /> <br /><br /> 注: 属性に "次の値に等しくない" 句を使用してフィルター条件を適用する場合、データベース設定で [SET ANSI_NULLS] がオンになっていると、属性が NULL のメンバーはフィルター条件を通過し、返されます。 この動作を停止するには、データベース設定で [SET ANSI_NULLS] をオフにします。 [SET ANSI_NULLS] がオフの場合、データ値が NULL であれば、NULL 値に対するデータの比較はすべて TRUE に評価され、メンバーは "次の値に等しくない" 句を通過しません。 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md)」をご覧ください。|  

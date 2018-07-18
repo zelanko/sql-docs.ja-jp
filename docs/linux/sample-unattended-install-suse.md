@@ -1,8 +1,8 @@
 ---
-title: SUSE Linux Enterprise Server 上の SQL Server の無人インストール |Microsoft ドキュメント
-description: SQL Server スクリプトのサンプル - SUSE Linux Enterprise Server への無人インストール
-author: edmacauley
-ms.author: edmaca
+title: SUSE Linux Enterprise Server 上の SQL Server の無人インストール |Microsoft Docs
+description: SQL Server のスクリプト サンプル - SUSE Linux Enterprise server の無人インストール
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
@@ -11,29 +11,30 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 53d4e3838288180994e3e505fc93f4ef18aca402
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c2dba4d7e92d440b59d51ff4c0cc254bccd57ae1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428931"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server のサンプル: SQL Server を無人インストール スクリプト
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server のサンプル: SQL Server の無人インストール スクリプト
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このサンプル バッシュ スクリプトは、SUSE Linux Enterprise Server (SLES) v12 SP2 対話型の入力せずに SQL Server 2017 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
+このサンプルの Bash スクリプトは、対話型の入力なしの SUSE Linux Enterprise Server (SLES) v12 sp2、SQL Server 2017 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
 
 > [!TIP]
-> SQL Server をインストールする最も簡単な方法に従う場合は、無人インストール スクリプトを使用する必要はありません、 [SLES のクイック スタート](quickstart-install-connect-suse.md)です。 その他のセットアップの情報については、 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
+> SQL Server をインストールする最も簡単な方法に従うには、無人インストール スクリプトを必要がない場合、 [SLES のクイック スタート](quickstart-install-connect-suse.md)します。 その他のセットアップの情報については、 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-- Linux 上の SQL Server を実行するには、少なくとも 2 GB のメモリを必要とします。
+- Linux 上の SQL Server を実行するには少なくとも 2 GB のメモリ必要があります。
 - ファイル システムは **XFS** または **EXT4** でなければいけません。 **BTRFS** といったその他のファイル システムはサポートされていません。
 - その他のシステム要件については、[Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system) を参照してください。
 
 > [!IMPORTANT]
-> SQL Server 2017 libsss_nss_idmap0 で、既定の SLES リポジトリによって提供されていませんが必要です。 SLES v12 SP2 SDK からインストールすることができます。
+> SQL Server 2017 では、libsss_nss_idmap0 で、既定の SLES リポジトリによって提供されていない必要があります。 SLES v12 SP2 SDK からインストールすることができます。
 
 ## <a name="sample-script"></a>サンプル スクリプト
 
@@ -170,18 +171,18 @@ echo Done!
    chmod +x install_sql.sh
    ```
 
-1. スクリプトを実行します。
+1. スクリプトを実行します
 
    ```bash
    ./install_sql.sh
    ```
 
-### <a name="understanding-the-script"></a>スクリプトを理解します。
+### <a name="understanding-the-script"></a>スクリプトをについてください。
 Bash スクリプトでは、まず変数を設定します。 これらの変数は、このサンプルのようにスクリプト変数として指定することもできますし、環境変数として指定することもできます。 変数 ``` MSSQL_SA_PASSWORD ``` は SQL Server インストールでは **必須** です。その他は、スクリプト用に作成されたカスタム変数です。 サンプル スクリプトは、次の手順を実行します。
 
 1. Microsoft GPG の公開鍵をインポートします。
 
-1. SQL Server とコマンド ライン ツールの Microsoft のリポジトリを登録します。
+1. SQL Server およびコマンド ライン ツール用の Microsoft リポジトリを登録します。
 
 1. ローカル リポジトリを更新します。
 
@@ -199,7 +200,7 @@ Bash スクリプトでは、まず変数を設定します。 これらの変�
 
 1. 別のシステムから SQL Server に接続するために必要な tcp ポート 1433 のブロックをファイアウォール上で解除します。
 
-1. 必要に応じてデッドロック トレースのトレース フラグを設定します。 (行のコメントを解除する必要があります)
+1. 必要に応じてデッドロックのトレースのトレース フラグを設定します。 (行のコメントを解除する必要があります)
 
 1. これで SQL Server がインストールされました。利用できるようにするために、プロセスを再起動します。
 
@@ -207,7 +208,7 @@ Bash スクリプトでは、まず変数を設定します。 これらの変�
 
 1. ```SQL_INSTALL_USER``` と ```SQL_INSTALL_USER_PASSWORD``` がどちらも設定されている場合、新しいサーバー管理者のユーザーを作成します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 複数回の無人インストールを簡略化し、適切な環境変数を設定するスタンドアロン Bash スクリプトを作成します。 サンプル スクリプトが使用している変数はいずれも削除することができ、独自の Bash スクリプトに配置することができます。
 
@@ -226,4 +227,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux の概要](sql-server-linux-overview.md)です。
+Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux の概要](sql-server-linux-overview.md)します。

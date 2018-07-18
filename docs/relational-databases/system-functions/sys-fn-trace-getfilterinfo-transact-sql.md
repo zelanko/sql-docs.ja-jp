@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_getfilterinfo (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_trace_getfilterinfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1f55c02dfd91edbb964b87e74e2d413f9066501d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236305"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971877"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,20 +54,20 @@ fn_trace_getfilterinfo ( trace_id )
  *trace_id*  
  トレースの ID を指定します。 *trace_id*は**int**、既定値はありません。  
   
-## <a name="tables-returned"></a>返されたテーブル  
- 次の情報を返します。 列に関する詳細については、次を参照してください。 [sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)です。  
+## <a name="tables-returned"></a>返されるテーブル  
+ 次の情報を返します。 列に関する詳細については、次を参照してください。 [sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|フィルターが適用される列の ID。|  
 |**logical_operator**|**int**|AND または OR 演算子が適用されるかどうかを示します。|  
 |**comparison_operator**|**int**|実行される比較の種類を示します。次の種類があります。<br /><br /> 0 = 等しい<br /><br /> 1 = 等しくない<br /><br /> 2 = より大きい<br /><br /> 3 = より小さい<br /><br /> 4 = 以上<br /><br /> 5 = 以下<br /><br /> 6 = 一致<br /><br /> 7 = 一致しない|  
 |**value**|**sql_variant**|フィルターを適用するときに使用する値を示します。|  
   
-## <a name="remarks"></a>解説  
- ユーザーのセット*trace_id*識別、変更、およびトレースを制御する値。 特定のトレースの ID が渡されたときに**fn_trace_getfilterinfo**そのトレースに関するすべてのフィルターに関する情報を返します。 指定されたトレースにフィルターがない場合、空の行セットが返されます。 無効な ID が渡された場合、空の行セットが返されます。 トレースに関する同様の情報を参照してください。 [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)です。  
+## <a name="remarks"></a>コメント  
+ ユーザーのセット*trace_id*識別、変更、およびトレースを制御する値。 特定のトレースの ID が渡されたときに**fn_trace_getfilterinfo**そのトレースに関するすべてのフィルターに関する情報を返します。 指定されたトレースにフィルターがない場合、空の行セットが返されます。 無効な ID が渡された場合、空の行セットが返されます。 トレースに関する同様の情報を参照してください。 [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーの ALTER TRACE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

@@ -1,5 +1,5 @@
 ---
-title: 全般プロパティ |Microsoft ドキュメント
+title: '[全般] プロパティ |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238898"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033340"
 ---
 # <a name="general-properties"></a>全般プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "35238898"
  SQL Server Browser サービスからのインスタンス要求を検出するためにサーバー インスタンスを表示するかどうかを指定するブール型プロパティです。 既定値は True です。 false に設定した場合、インスタンスは SQL Server Browser に表示されません。  
   
  **言語**  
- エラー メッセージや数値書式などの言語を定義する文字列プロパティです。 このプロパティは CollationName プロパティに優先します。  
+ エラー メッセージや数値書式などの言語を定義する文字列プロパティです。 このプロパティは CollationName プロパティをオーバーライドします。  
   
  このプロパティの既定値は空白であり、CollationName プロパティによって言語が定義されることを示します。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "35238898"
  処理、復元、その他の操作時に使用する一時ファイルの格納場所を指定する文字列プロパティです。 このプロパティの既定値は、セットアップによって指定されます。 このプロパティを指定しない場合、既定値は Data ディレクトリです。  
   
 ## <a name="requestprioritization-category"></a>要求の優先順位付けカテゴリ  
- **有効**  
+ **Enabled**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
  **StatisticsStoreSize**  

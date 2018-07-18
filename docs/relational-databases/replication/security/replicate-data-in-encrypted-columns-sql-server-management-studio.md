@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9960c196d08cc38f376bad003a30cc4a7791ca08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1995800b729a75861e43c846f3c2be7fdfd571cd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32962147"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350214"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>暗号化された列のデータをレプリケートする (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +62,11 @@ ms.locfileid: "32962147"
   
 4.  [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) を実行してキーを閉じます。  
   
-5.  暗号化された列を含むテーブルをパブリッシュします。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+5.  暗号化された列を含むテーブルをパブリッシュします。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
   
 6.  パブリケーションにサブスクライブします。 詳細については、「[プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」または「[プッシュ サブスクリプションの作成](../../../relational-databases/replication/create-a-push-subscription.md)」を参照してください。  
   
-7.  サブスクリプションを初期化します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご参照ください。  
+7.  サブスクリプションを初期化します。 詳しくは、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 8.  手順 1 と同じ値を ALGORITHM、KEY_SOURCE、および IDENTITY_VALUE に使用して、サブスクライバーで [CREATE SYMMETRIC KEY](../../../t-sql/statements/create-symmetric-key-transact-sql.md) を実行します。 ENCRYPTION BY には別の値を指定することもできます。  
   

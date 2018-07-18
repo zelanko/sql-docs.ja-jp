@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97ebf10bb9ae1a30a7f66ba5b984e0c08ee5ac24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aaddf1fab037c2bccec6f3bfc5411ba6156ee75b
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619479"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列パターン プロファイル要求]** のオプションを設定できます。 列パターン プロファイルは、文字列型の列に含まれる指定された比率の値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、および \d{9} という正規表現が生成されます。 その他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれている可能性があります。  
@@ -133,7 +132,7 @@ ms.lasthandoff: 05/03/2018
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   
  **Symbols**  
- パターンの一部として保持する記号の一覧が表示されます。 記号の例として、日付を表す "/"、時刻を表す ":"、電子メール アドレスを表す "@" などがあります。 既定では、**[Symbols]** の一覧には、`,.;:-"'~=&/@!?()<>[]{}|#*^%` が含まれます。  
+ パターンの一部として保持する記号の一覧が表示されます。 記号の例として、日付を表す "/"、時刻を表す ":"、電子メール アドレスを表す "\@" などがあります。 既定では、**[Symbols]** の一覧には、`,.;:-"'~=&/@!?()<>[]{}|#*^%` が含まれます。  
   
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   

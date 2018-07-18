@@ -1,5 +1,5 @@
 ---
-title: (除算)(DMX) |Microsoft ドキュメント
+title: (除算)(DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842375"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972668"
 ---
 # <a name="divide-dmx"></a>(除算)(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ Dividend / Divisor
  数値を返す有効なデータ マイニング拡張機能 (DMX) 式です。  
   
  *除数*  
- 有効な DMX 式、数値を返します。  
+ 数値の値を返す有効な DMX 式。  
   
 ## <a name="return-value"></a>戻り値  
  優先順位の高いパラメーターのデータ型を持つ値です。  

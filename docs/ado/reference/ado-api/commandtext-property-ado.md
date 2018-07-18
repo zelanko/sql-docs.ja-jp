@@ -2,7 +2,6 @@
 title: CommandText プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaad9ab5bc4def9975631a875071dc69a44b6028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c333cd961ea8b4b3f37f78c682ebe65c7ac9001
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276861"
 ---
 # <a name="commandtext-property-ado"></a>CommandText プロパティ (ADO)
 プロバイダーに対して発行できるコマンドのテキストを示します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**SQL ステートメント、テーブル名、相対 URL、またはストアド プロシージャの呼び出しなど、プロバイダーのコマンドを含む値です。 既定値は空の文字列 ("") です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **CommandText**プロパティを設定またはによって表されるコマンドのテキストを返す、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 通常この SQL ステートメントになりますが、ストアド プロシージャの呼び出しなど、プロバイダーで認識されるコマンド ステートメントの他の種類をすることもできます。 特定の言語仕様またはプロバイダーのクエリ プロセッサによってサポートされているバージョンの SQL ステートメントがあります。  
   
  場合、 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)のプロパティ、**コマンド**にオブジェクトが設定されている**True**と**コマンド**オブジェクトを設定すると、開いている接続にバインド**CommandText**プロパティを ADO 準備クエリ (プロバイダーが格納されているクエリのコンパイル形式) を呼び出すと、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)または[を開く](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドです。  

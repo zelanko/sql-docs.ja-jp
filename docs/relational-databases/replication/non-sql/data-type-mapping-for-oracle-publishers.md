@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32889f88a4e055800c02286e819b9ce1f7422175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76e46f9c9a157261f8341243583e855a0681756d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360184"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle パブリッシャーのデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の日付の範囲は 1753 A.D. から  9999 A.D. までですが、Oracle の日付の範囲は 4712 B.C. から  4712 A.D. までです。 DATE 型の列に SQL Server の日付範囲を超える値が含まれている場合は、その列の代替データ型である VARCHAR(19) を選択してください。  
   
 ### <a name="float-and-number-types"></a>FLOAT 型と NUMBER 型  
- FLOAT データ型と NUMBER データ型のマッピング時に指定される小数点以下桁数および有効桁数は、列に対して Oracle データベースのデータ型を使って指定された小数点以下桁数および有効桁数で決まります。 有効桁数は、数値全体の桁数です。 小数点以下桁数は、数値の中で小数点より右側の桁数です。 たとえば、123.45 という値の場合、有効桁数は 5 で、小数点以下桁数は 2 になります。  
+ FLOAT データ型と NUMBER データ型のマッピング時に指定される小数点以下桁数および有効桁数は、列に対して Oracle データベースのデータ型を使って指定された小数点以下桁数および有効桁数で決まります。 precision は、数値全体の桁数です。 scale は、数値の中で小数点より右側の桁数です。 たとえば、123.45 という値の場合、有効桁数は 5 で、小数点以下桁数は 2 になります。  
   
  Oracle では、NUMBER(4,5) のように、有効桁数よりも大きな小数点以下桁数の数値を定義できます。しかし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、有効桁数を小数点以下桁数と同じか、それ以上にする必要があります。 データの切り捨てが発生しないようにするため、Oracle パブリッシャーで小数点以下桁数が有効桁数よりも大きい場合は、データ型をマップするときに、有効桁数が小数点以下桁数と同じ値に設定されます。つまり、NUMBER(4,5) は NUMERIC(5,5) としてマップされます。  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="specifying-alternative-data-type-mappings"></a>代替データ型マッピングの指定  
  通常、既定のデータ型マッピングは適切な設定です。しかし、多くの Oracle データ型に対して、既定のマッピングを使用しないで一連の代替マッピングからデータ型マッピングを選択することができます。 代替マッピングを指定する方法は 2 つあります。  
   
--   ストアド プロシージャまたはパブリケーションの新規作成ウィザードを使用して、アーティクルごとに既定値を上書きします。  
+-   ストアド プロシージャまたはパブリケーションの新規作成ウィザードを使用して、アーティクルごとに既定値をオーバーライドします。  
   
 -   ストアド プロシージャを使用して、以降のすべてのアーティクルの既定値をグローバルに変更します (既存のアーティクルの既定値は変更されません)。  
   

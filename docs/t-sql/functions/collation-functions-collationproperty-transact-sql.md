@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - COLLATIONPROPERTY function
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1c121184b4d2af48a547b06fec38b89fa2335da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d24771ca97dc145ae8212ccc4d08b26c4cbea564
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784443"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>照合順序関数 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ COLLATIONPROPERTY( collation_name , property )
 *property*  
 collation プロパティ。 *property* 引数は、**varchar (128)** データ型で、次のいずれかの値を持つことができます。
   
-|プロパティ名|Description|  
+|プロパティ名|[説明]|  
 |---|---|
 |**CodePage**|照合順序の Unicode 以外のコード ページ。 これらの値を変換してその文字マッピングを確認するには、「[Appendix G Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx)」(付録 G: DBCS/Unicode マッピングテーブル) と「[Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx)」(付録H: コード ページ) を参照してください。|  
 |**LCID**|照合順序の Windows LCID。 これらの値を変換するには、「[LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx)」(LCID 構造) を参照してください (最初に **varbinary** に変換する必要があります)。|  

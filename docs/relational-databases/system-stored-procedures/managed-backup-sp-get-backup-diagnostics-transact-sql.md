@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,17 +26,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2b2f8c78b1802ff177040352cd7342b51b035c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051320"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Smart Admin によってログに記録される拡張イベントを返します。  
   
- このストアド プロシージャを使用してスマート管理者によって記録される拡張イベントを監視するには[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]イベントは、このシステムに記録されますと確認できるし、このストアド プロシージャを使用して監視します。  
+ このストアド プロシージャを使用して、スマート管理者によってログに記録、拡張イベントを監視するには[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]イベントは、このシステムに記録されますと確認できるし、このストアド プロシージャを使用して監視します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,30 +49,30 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 引数  
  @xevent_channel  
- 拡張イベントの種類。 既定値は、それまでの 30 分間にログに記録されたすべてのイベントを返すよう設定されています。 ログに記録されるイベントは、有効にした拡張イベントの種類によって異なります。 このパラメーターを使用すると、特定の種類のイベントのみが表示されるようにストアド プロシージャにフィルターを適用できます。 イベントの完全名を指定するかなどの部分文字列を指定することができます: **'Admin'**、 **"Analytic"**、 **'Operational'**、および **'Debug'**. @event_channelは**VARCHAR (255)** です。  
+ 拡張イベントの種類。 既定値は、それまでの 30 分間にログに記録されたすべてのイベントを返すよう設定されています。 ログに記録されるイベントは、有効にした拡張イベントの種類によって異なります。 このパラメーターを使用すると、特定の種類のイベントのみが表示されるようにストアド プロシージャにフィルターを適用できます。 イベントの完全名を指定または、部分文字列を指定することができます: **'Admin'**、 **"Analytic"**、 **"Operational"**、および **'Debug'**. @event_channelは**VARCHAR (255)** します。  
   
- イベントの型が現在有効になって使用の一覧を取得する、 **managed_backup.fn_get_current_xevent_settings**関数。  
+ イベントの種類が現在有効になって使用の一覧を取得する、 **managed_backup.fn_get_current_xevent_settings**関数。  
   
  [@begin_time  
- イベントが表示対象となる期間の開始時刻。 @begin_timeで、既定値は NULL のパラメーター型は DATETIME です。 これを指定しない場合は、過去 30 分間のイベントが表示されます。  
+ イベントが表示対象となる期間の開始時刻。 @begin_timeパラメーターは DATETIME で、既定値は NULL です。 これを指定しない場合は、過去 30 分間のイベントが表示されます。  
   
  @end_time  
- イベントが表示対象となる期間の終了時刻。 @end_timeパラメーターでは、DATATIME は、既定値は NULL です。  これを指定しない場合は、現在までのイベントが表示されます。  
+ イベントが表示対象となる期間の終了時刻。 @end_timeパラメーターでは、DATATIME が既定値は NULL です。  これを指定しない場合は、現在までのイベントが表示されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
  このストアド プロシージャでは、次の情報を含むテーブルが返されます。  
   
 ||||  
 |-|-|-|  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |event_type|NVARCHAR (512)|拡張イベントの種類|  
 |イベント|NVARCHAR (512)|イベント ログの概要|  
-|Timestamp|TIMESTAMP|イベントの発生時刻を示す、イベントのタイムスタンプ|  
+|Timestamp|timestamp|イベントの発生時刻を示す、イベントのタイムスタンプ|  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
- 必要があります**EXECUTE**ストアド プロシージャに対する権限。 必要もあります**VIEW SERVER STATE**内部的に呼び出すための他のシステム オブジェクトをアクセス許可がこのアクセス許可を必要とします。  
+### <a name="permissions"></a>アクセス許可  
+ 必要があります**EXECUTE**ストアド プロシージャに対する権限。 また必要もあります**VIEW SERVER STATE**が内部的に他のシステム オブジェクトを呼び出すためのアクセス許可がこのアクセス許可が必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、過去 30 分間にログに記録されたすべてのイベントが返されます。  

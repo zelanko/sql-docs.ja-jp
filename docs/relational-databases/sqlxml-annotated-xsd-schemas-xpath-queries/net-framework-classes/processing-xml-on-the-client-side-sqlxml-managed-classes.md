@@ -1,5 +1,5 @@
 ---
-title: クライアント側の XML の処理 (SQLXML マネージ クラス) |Microsoft ドキュメント
+title: クライアント側の XML の処理 (SQLXML マネージ クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ea74968bc1776aecab380f5566abbe9a1e64ac5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972045"
 ---
-# <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>クライアント側での XML の処理 (SQLXML マネージ クラス)
+# <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>クライアント側での XML の処理 (SQLXML マネージド クラス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この例は、ClientSideXml プロパティの使用方法を示しています。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  
+  この例では、ClientSideXml プロパティの使用を示します。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  
   
  次の GetContacts、ストアド プロシージャ**FirstName**と**LastName** AdventureWorks データベースの Person.Contact テーブル内の従業員のです。  
   
@@ -44,7 +45,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- この c# アプリケーションでは、ストアド プロシージャを実行し、CommandText 値を指定する FOR XML AUTO オプションを指定します。 アプリケーションでは、ClientSideXml SqlXmlCommand オブジェクトのプロパティが true に設定します。 これにより、前から存在するストアド プロシージャを実行して行セットを返すことができ、クライアント側で XML 変換を適用することができます。  
+ この c# アプリケーションでは、ストアド プロシージャを実行し、CommandText 値を指定するときに、FOR XML AUTO オプションを指定します。 SqlXmlCommand オブジェクトの ClientSideXml プロパティを設定するアプリケーションでは、true に設定します。 これにより、前から存在するストアド プロシージャを実行して行セットを返すことができ、クライアント側で XML 変換を適用することができます。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  

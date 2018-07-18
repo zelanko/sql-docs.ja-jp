@@ -2,10 +2,10 @@
 title: 行のフェッチ |Microsoft ドキュメント
 description: IRowset インターフェイスを使用して行のフェッチ
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 51f88888b2d6387bb406511b1330dba2113752d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f003e6c6b0257556ac6b561d25b5987e29eaf40
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690285"
 ---
 # <a name="fetching-rows"></a>行のフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IRowset**インターフェイスは、行セットの基本インターフェイスです。 **IRowset**インターフェイスには、行を順番にフェッチ、これらの行からデータを取得する行を管理するためのメソッドが用意されています。 コンシューマーでメソッドを使用して**IRowset**すべての行セットの基本的な操作です。 基本的な操作には、行のフェッチと解放、列値の取得などがあります。  
   

@@ -1,5 +1,5 @@
 ---
-title: プログラム変数から一括コピー |Microsoft ドキュメント
+title: プログラム変数から一括コピー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,18 +24,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5e0bcb033e4e99bdba8dc7167d3823e103c9cfd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 253123cc62751c39c39e9f5ab9282e2b1e6a3c10
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948357"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420021"
 ---
 # <a name="bulk-copying-from-program-variables"></a>プログラム変数からの一括コピー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  プログラム変数から直接一括コピーできます。 行と呼び出し元のデータを保持する変数を割り当て後[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)一括コピーを開始するには、呼び出す[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を関連付けるプログラム変数の形式と場所を指定するには、各列の列です。 各変数を入力にデータを呼び出して[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)をサーバーに 1 行のデータを送信します。 変数を入力し、呼び出す手順を繰り返す**bcp_sendrow**のすべての行がサーバーに送信される、まで、呼び出し[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)操作が完了したことを指定します。  
+  プログラム変数から直接一括コピーできます。 行のデータを保持する変数を割り当てた後[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)一括コピーを開始するには、呼び出す[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の各列に関連付けられているプログラム変数の形式と場所を指定するには列。 各変数のデータを呼び出すし[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)サーバーに 1 行のデータを送信します。 変数を入力し、呼び出す手順を繰り返す**bcp_sendrow**のすべての行は、サーバーに送信された、まで呼び出して[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)操作が完了したかを指定します。  
   
  **Bcp_bind * * * pData*パラメーターには、列にバインドされている変数のアドレスが含まれています。 各列のデータは、次の 2 つの方法のいずれかを使用して格納できます。  
   
@@ -43,28 +43,28 @@ ms.locfileid: "32948357"
   
 -   データ変数の直前にインジケーター変数を割り当てる  
   
- インジケーター変数は、可変長列のデータの長さを示します。列で NULL 値を許容している場合は NULL 値も示します。 データ変数を使用すると、専用の場合、この変数のアドレスに格納されます、**bcp_bind * * * pData*パラメーター。 インジケーター変数を使用する場合、インジケーター変数のアドレスは、**bcp_bind * * * pData*パラメーター。 一括コピー関数を追加して、データ変数の場所を計算する、**bcp_bind * * * cbIndicator*と*pData*パラメーター。  
+ インジケーター変数は、可変長列のデータの長さを示します。列で NULL 値を許容している場合は NULL 値も示します。 データ変数を使用すると、専用の場合、この変数のアドレスに保存、**bcp_bind * * * pData*パラメーター。 インジケーター変数のアドレスが格納されているインジケーター変数を使用する場合、**bcp_bind * * * pData*パラメーター。 一括コピー関数を追加して、data 変数の場所を計算する、**bcp_bind * * * cbIndicator*と*pData*パラメーター。  
   
- **bcp_bind**可変長のデータを処理するための 3 つのメソッドをサポートしています。  
+ **bcp_bind**可変長データを処理するための 3 つのメソッドをサポートしています。  
   
--   使用して*cbData*には、データ変数のみです。 内のデータの長さを配置*cbData*です。 一括データの長さが、変更をコピーするたびに呼び出す[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)をリセットする*cbData*です。 その他の 2 つの方法のいずれかが使用されている場合は、SQL_VARLEN_DATA を指定します。 *cbData*です。 列に対して指定されているすべてのデータ値が NULL の場合は、指定の SQL_NULL_DATA *cbData*です。  
+-   使用*cbData*データ変数のみにします。 配置内のデータの長さ*cbData*します。 一括データの長さには、変更がコピーされるたびに呼び出す[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)をリセットする*cbData*します。 その他の 2 つのメソッドのいずれかが使用されている場合に SQL_VARLEN_DATA を指定*cbData*します。 列に指定されたすべてのデータ値が NULL の場合は、指定の SQL_NULL_DATA *cbData*します。  
   
--   インジケーター変数を使用します。 新しい各データ値をデータ変数に移動するときに、その値の長さをインジケーター変数に格納します。 その他の 2 つの方法のいずれかが使用されている場合 0 を指定*cbIndicator*です。  
+-   インジケーター変数を使用します。 新しい各データ値をデータ変数に移動するときに、その値の長さをインジケーター変数に格納します。 その他の 2 つのメソッドのいずれかが使用されている場合に 0 を指定*cbIndicator*します。  
   
--   ターミネータ ポインターを使用します。 負荷、**bcp_bind * * * pTerm*パラメーター データを終了するビット パターンのアドレスを使用します。 その他の 2 つの方法のいずれかが使用されている場合は、場合は NULL を指定します。 *pTerm*です。  
+-   ターミネータ ポインターを使用します。 ロード、**bcp_bind * * * pTerm*パラメーター データを終了するビット パターンのアドレスを使用します。 NULL を指定する場合は、その他の 2 つのメソッドのいずれかが使用されている*pTerm*します。  
   
- これらのメソッドの 3 つすべてを同じで使用できる**bcp_bind**を呼び出すと、その場合コピーされるデータ量の最小の仕様を使用します。  
+ これらのメソッドの 3 つすべては同じで使用できる**bcp_bind**呼び出すには、コピーするデータ量の最小の仕様を使用する場合。  
   
- **Bcp_bind * * * 型*パラメーターは Db-library のデータ型識別子、ODBC データ型識別子されません。 Db-library のデータ型識別子が、ODBC で使用する、sqlncli.h で定義されている**bcp_bind**関数。  
+ **Bcp_bind * * * 型*パラメーターは、Db-library のデータ型識別子、ODBC データ型識別子されません。 Db-library のデータ型識別子は、ODBC で使用するための sqlncli.h で定義されて**bcp_bind**関数。  
   
- 一括コピー関数では、すべての ODBC C データ型をサポートしているわけではありません。 たとえば、一括コピー関数が、ODBC SQL_C_TYPE_TIMESTAMP 構造をサポートして、これを使用して[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) ODBC sql_type_timestamp 型のデータを sql_c_char 型の変数に変換します。 使用する場合**bcp_bind**で、*型*sqlcharacter を変数にバインドするパラメーター、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列、一括コピー関数を変換します文字変数を適切な datetime 形式のタイムスタンプ エスケープ句。  
+ 一括コピー関数では、すべての ODBC C データ型をサポートしているわけではありません。 たとえば、一括コピー関数が ODBC SQL_C_TYPE_TIMESTAMP 構造体をサポートして、これを使用して、 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) SQL_C_CHAR 変数に ODBC sql_type_timestamp 型のデータを変換します。 使用する場合**bcp_bind**で、*型*sqlcharacter を変数にバインドするパラメーター、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列、一括コピー関数を変換、適切な datetime 形式の文字変数にタイムスタンプ エスケープ句。  
   
  次の表は、ODBC SQL データ型のマッピングで使用する推奨されるデータ型、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
 |ODBC SQL データ型|ODBC C データ型|bcp_bind*型*パラメーター|SQL Server データ型|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **可変の文字**<br /><br /> **char varying**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **文字がさまざまな**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
@@ -91,7 +91,7 @@ ms.locfileid: "32948357"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 署名されていない**tinyint**、unsigned **smallint**、または符号なし**int**データ型。 値のデータの損失を防ぐためには、これらのデータ型を移行するときに、作成、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [次へ] の最大の整数データ型を持つテーブルです。 ユーザーが元のデータ型で許容されている範囲外の値を後から追加しないようにするには、次のようにルールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列に適用し、ソースのデータ型でサポートされる範囲内に許容値を限定します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 署名されていない**tinyint**の符号なし**smallint**、符号なしまたは**int**データ型。 値のデータの損失を防ぐためには、これらのデータ型を移行するときに、作成、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [次へ] の最大の整数データ型を含むテーブル。 ユーザーが元のデータ型で許容されている範囲外の値を後から追加しないようにするには、次のようにルールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列に適用し、ソースのデータ型でサポートされる範囲内に許容値を限定します。  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -111,13 +111,13 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interval データ型を直接サポートされていませんしません。 アプリケーション、ただし、間隔のエスケープ シーケンスとして格納の文字列、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字列です。 アプリケーションでは、後で使用するためにこれらのエスケープ シーケンスを読み取ることができますが、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内では使用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interval データ型を直接サポートしません。 アプリケーション文字列と interval のエスケープ シーケンスを格納できる、ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字型列。 アプリケーションでは、後で使用するためにこれらのエスケープ シーケンスを読み取ることができますが、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内では使用できません。  
   
- 一括コピー関数は、すばやくデータを読み込むために使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ODBC データ ソースから読み取られています。 使用して[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)プログラム変数に結果セットの列をバインドするを使用し、 **bcp_bind**一括コピーを同じプログラム変数をバインドします。 呼び出す[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)または**SQLFetch**したプログラム変数と呼び出し元に、ODBC データ ソースからデータの行をフェッチ[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)データの一括コピープログラム変数から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ すばやくデータを読み込む一括コピー関数を使用できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC データ ソースから読み取られました。 使用して、 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)プログラム変数に結果セットの列をバインドするを使用し、 **bcp_bind**一括コピー操作をプログラム変数にバインドします。 呼び出す[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)または**SQLFetch**プログラムの変数と呼び出しに ODBC データ ソースからデータの行をフェッチ[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)データを一括コピープログラム変数から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
- アプリケーションで使用できます、 [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)関数で指定したデータ変数のアドレスを変更する必要があるとき、 **bcp_bind** *pData*パラメーター。 アプリケーションで使用できます、 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)関数に最初に指定されたデータの長さを変更する必要があるとき、**bcp_bind * * * cbData*パラメーター。  
+ アプリケーションで使用できます、 [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)関数で指定したデータ変数のアドレスを変更する必要があるときにいつでも、 **bcp_bind** *pData*パラメーター。 アプリケーションで使用できます、 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)関数の最初に指定したデータの長さを変更する必要があるときにいつでも、**bcp_bind * * * cbData*パラメーター。  
   
- データを読み取ることができません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を一括コピー; を使用してプログラム変数には"bcp_readrow"関数のようなものがありません。 実行できるのは、アプリケーションからサーバーへのデータの送信だけです。  
+ データを読み取ることができません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括コピーを使用してプログラム変数にあるような"bcp_readrow"関数。 実行できるのは、アプリケーションからサーバーへのデータの送信だけです。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー操作を実行する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

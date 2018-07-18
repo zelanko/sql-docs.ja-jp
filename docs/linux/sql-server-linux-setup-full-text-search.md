@@ -1,5 +1,5 @@
 ---
-title: Linux 上の SQL Server フルテキスト検索のインストール |Microsoft ドキュメント
+title: Linux 上の SQL Server フルテキスト検索のインストール |Microsoft Docs
 description: この記事では、Linux に SQL Server フルテキスト検索をインストールする方法について説明します。
 author: rothja
 ms.author: jroth
@@ -13,21 +13,22 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 401eb2569a1da86964543f9122d213398f39eff4
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021208"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上の SQL Server フルテキスト検索をインストールします。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-次の手順インストール[SQL Server フルテキスト検索](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql サーバー-fts**) on Linux です。 フルテキスト検索では、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行することができます。 このリリースの既知の問題については、次を参照してください。、 [Release Notes](sql-server-linux-release-notes.md)です。
+次の手順インストール[SQL Server フルテキスト検索](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql-サーバー-fts**) Linux 上。 フルテキスト検索では、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行することができます。 このリリースの既知の問題を参照してください、[リリース ノート](sql-server-linux-release-notes.md)します。
 
 > [!NOTE]
-> SQL Server フルテキスト検索を最初にインストールする前に[SQL Server のインストール](sql-server-linux-setup.md#platforms)です。 これにより、キーとリポジトリをインストールするときに使用する構成、 **mssql サーバー-fts**パッケージです。
+> SQL Server のフルテキスト検索を最初にインストールする前に[SQL Server インストール](sql-server-linux-setup.md#platforms)します。 これは、キーとをインストールするときに使用するリポジトリを構成します、 **mssql-サーバー-fts**パッケージ。
 
-プラットフォーム用の SQL Server フルテキスト検索をインストールします。
+お使いのプラットフォームの SQL Server フルテキスト検索をインストールします。
 
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
@@ -35,61 +36,61 @@ ms.lasthandoff: 05/19/2018
 
 ## <a name="RHEL">RHEL をインストールします。</a>
 
-インストールする次のコマンドを使用して、 **mssql サーバー-fts** Red Hat Enterprise Linux にします。 
+次のコマンドを使用して、インストール、 **mssql-サーバー-fts** Red Hat Enterprise linux。 
 
 ```bash
 sudo yum install -y mssql-server-fts
 ```
 
-既に存在する場合**mssql サーバー-fts**インストールされている、次のように、次のコマンドで最新バージョンに更新できます。
+既にある場合**mssql-サーバー-fts**インストールされている場合、次のように次のコマンドで最新バージョンに更新できます。
 
 ```bash
 sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
+オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 この記事で説明されている同じオフライン インストール手順を使用して[SQL Server のインストール](sql-server-linux-setup.md#offline)します。
 
 ## <a name="ubuntu">Ubuntu にインストールします</a>
 
-インストールする次のコマンドを使用して、 **mssql サーバー-fts** Ubuntu でします。 
+次のコマンドを使用して、インストール、 **mssql-サーバー-fts** ubuntu の場合。 
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts
 ```
 
-既に存在する場合**mssql サーバー-fts**インストールされている、次のように、次のコマンドで最新バージョンに更新できます。
+既にある場合**mssql-サーバー-fts**インストールされている場合、次のように次のコマンドで最新バージョンに更新できます。
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts 
 ```
 
-オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
+オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 この記事で説明されている同じオフライン インストール手順を使用して[SQL Server のインストール](sql-server-linux-setup.md#offline)します。
 
-## <a name="SLES">SLES をインストールします。</a>
+## <a name="SLES">SLES でのインストールします。</a>
 
-インストールする次のコマンドを使用して、 **mssql サーバー-fts** SUSE Linux Enterprise Server にします。 
+次のコマンドを使用して、インストール、 **mssql-サーバー-fts** SUSE Linux Enterprise server。 
 
 ```bash
 sudo zypper install mssql-server-fts
 ```
 
-既に存在する場合**mssql サーバー-fts**インストールされている、次のように、次のコマンドで最新バージョンに更新できます。
+既にある場合**mssql-サーバー-fts**インストールされている場合、次のように次のコマンドで最新バージョンに更新できます。
 
 ```bash
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
+オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 この記事で説明されている同じオフライン インストール手順を使用して[SQL Server のインストール](sql-server-linux-setup.md#offline)します。
 
 ## <a name="supported-languages"></a>サポートされている言語
 
-フルテキスト検索を使用して[ワード ブレーカー](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)言語に基づいて個々 の単語を識別する方法を決定します。 クエリを実行して登録されているワード ブレーカーの一覧を取得することができます、 **sys.fulltext_languages**カタログ ビューです。 次の言語のワード ブレーカーは、SQL Server 2017 とともにインストールされます。
+フルテキスト検索を使用して[ワード ブレーカー](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)言語に基づいて個々 の単語を識別する方法を決定します。 登録されているワード ブレーカーの一覧を取得するにはクエリを実行して、 **sys.fulltext_languages**カタログ ビューです。 SQL Server 2017 で、次の言語のワード ブレーカーがインストールされます。
 
-| 言語 | 言語 ID |
+| [言語] | 言語 ID |
 |---|---|
 | ニュートラル | 0 |
 | アラビア語 | 1025 |
@@ -147,9 +148,9 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a> フィルター
 
-フルテキスト検索は、バイナリ ファイルに格納されているテキストのでも動作します。 必須でここでは、インストールされているフィルターは、ファイルを処理します。 フィルターの詳細については、次を参照してください。[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)です。
+フルテキスト検索は、バイナリ ファイルに格納されているテキストでも機能します。 インストール済みのフィルターがファイルを処理するために必要なこの場合。 フィルターの詳細については、次を参照してください。[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)します。
 
-呼び出すことによってインストールされているフィルターの一覧を表示できる**sp_help_fulltext_system_components 'filter'** です。 SQL Server 2017 年 1、次のフィルターがインストールされます。
+呼び出すことによって、インストールされているフィルターの一覧を確認できます**sp_help_fulltext_system_components 'filter'** します。 SQL Server 2017 では、次のフィルターがインストールされます。
 
 | [コンポーネント名] | クラス ID | バージョン |
 |---|---|---|
@@ -259,11 +260,11 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>セマンティック検索
-[セマンティック検索](../relational-databases/search/semantic-search-sql-server.md)を抽出し、統計的に関連するインデックス、フルテキスト検索機能を上に構築*キー フレーズ*です。 これにより、データベース内のドキュメント内で意味を照会することができます。 ようなドキュメントを識別することもできます。
+[セマンティック検索](../relational-databases/search/semantic-search-sql-server.md)を抽出し、統計的に関連するインデックス、フルテキスト検索機能に基づいて*キー フレーズ*します。 これにより、データベース内のドキュメント内で意味を照会することができます。 類似したドキュメントを識別するためにも役立ちます。
 
-セマンティック検索を使用するのには、最初のコンピューターに、セマンティック言語統計データベースを復元する必要があります。
+セマンティック検索を使用するためには、最初のコンピューターに、セマンティック言語統計データベースを復元する必要があります。
 
-1. などのツールを使用[sqlcmd](sql-server-linux-setup-tools.md)Linux の SQL Server インスタンスで、次の TRANSACT-SQL コマンドを実行します。 このコマンドは、言語統計データベースを復元します。
+1. ツールを使用して[sqlcmd](sql-server-linux-setup-tools.md)Linux の SQL Server インスタンスで、次の TRANSACT-SQL コマンドを実行します。 このコマンドは、言語統計データベースを復元します。
 
    ```sql
    RESTORE DATABASE [semanticsdb] FROM
@@ -274,7 +275,7 @@ sudo zypper update mssql-server-fts
    ```
 
    > [!NOTE]
-   > 必要に応じて、前の RESTORE コマンドには、構成を調整するパスを更新します。
+   > 必要に応じて、構成を調整する前の RESTORE コマンドでパスを更新します。
 
 1. セマンティック言語統計データベースを登録する次の TRANSACT-SQL コマンドを実行します。
 
@@ -283,6 +284,6 @@ sudo zypper update mssql-server-fts
     GO
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-について、フルテキスト検索は、次を参照してください。 [SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)です。 
+フルテキスト検索については、次を参照してください。 [SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)します。 

@@ -1,8 +1,8 @@
 ---
-title: Red Hat Enterprise Linux 上の SQL Server の無人インストール |Microsoft ドキュメント
-description: SQL Server スクリプトのサンプル - Red Hat Enterprise Linux 上の無人インストール
-author: edmacauley
-ms.author: edmaca
+title: Red Hat Enterprise Linux 上の SQL Server の無人インストール |Microsoft Docs
+description: SQL Server のスクリプト サンプル - Red Hat Enterprise Linux での無人インストール
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
@@ -11,11 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f9eb7f2e8754a81650f167104d53150f0f0a4d90
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9412c7ed24bd37d96c1519ea30b96c42a7b53e0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407942"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 用のサンプル: SQL Server の無人インストール スクリプト
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/19/2018
 
 ## <a name="prerequisites"></a>前提条件
 
-- Linux 上の SQL Server を実行するには、少なくとも 2 GB のメモリを必要とします。
+- Linux 上の SQL Server を実行するには少なくとも 2 GB のメモリ必要があります。
 - ファイル システムは **XFS** または **EXT4** でなければいけません。 **BTRFS** といったその他のファイル システムはサポートされていません。
 - その他のシステム要件については、[Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system) を参照してください。
 
@@ -163,19 +164,19 @@ echo Done!
    chmod +x install_sql.sh
    ```
 
-1. スクリプトを実行します。
+1. スクリプトを実行します
 
    ```bash
    ./install_sql.sh
    ```
 
-## <a name="understanding-the-script"></a>スクリプトを理解します。
+## <a name="understanding-the-script"></a>スクリプトをについてください。
 
 Bash スクリプトでは、まず変数を設定します。  これらの変数は、このサンプルのようにスクリプト変数として指定することもできますし、環境変数として指定することもできます。  変数 ``` MSSQL_SA_PASSWORD ``` は SQL Server インストールでは **必須** です。その他は、スクリプト用に作成されたカスタム変数です。  サンプル スクリプトは、次の手順を実行します。
 
 1. Microsoft GPG の公開鍵をインポートします。
 
-1. SQL Server とコマンド ライン ツールの Microsoft のリポジトリを登録します。
+1. SQL Server およびコマンド ライン ツール用の Microsoft リポジトリを登録します。
 
 1. ローカル リポジトリを更新します。
 
@@ -193,7 +194,7 @@ Bash スクリプトでは、まず変数を設定します。  これらの変�
 
 1. 別のシステムから SQL Server に接続するために必要な tcp ポート 1433 のブロックをファイアウォール上で解除します。
 
-1. 必要に応じてデッドロック トレースのトレース フラグを設定します。 (行のコメントを解除する必要があります)
+1. 必要に応じてデッドロックのトレースのトレース フラグを設定します。 (行のコメントを解除する必要があります)
 
 1. これで SQL Server がインストールされました。利用できるようにするために、プロセスを再起動します。
 
@@ -201,7 +202,7 @@ Bash スクリプトでは、まず変数を設定します。  これらの変�
 
 1. ```SQL_INSTALL_USER``` と ```SQL_INSTALL_USER_PASSWORD``` がどちらも設定されている場合、新しいサーバー管理者のユーザーを作成します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 複数回の無人インストールを簡略化し、適切な環境変数を設定するスタンドアロン Bash スクリプトを作成します。  サンプル スクリプトが使用している変数はいずれも削除することができ、独自の Bash スクリプトに配置することができます。
 
@@ -220,4 +221,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux の概要](sql-server-linux-overview.md)です。
+Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux の概要](sql-server-linux-overview.md)します。

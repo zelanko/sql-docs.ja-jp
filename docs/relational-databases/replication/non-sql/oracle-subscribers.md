@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca824bafc48fac904e8be917b138adc503e97533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f69c92b0624f6553f92d59a5ef38e00973f9116
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964087"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355864"
 ---
 # <a name="oracle-subscribers"></a>Oracle サブスクライバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "32964087"
   
 1.  ディストリビューターが Oracle サブスクライバーに接続できるように、Oracle クライアント ネットワーク ソフトウェアおよび Oracle OLE DB プロバイダーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにインストールし、これらを構成します。 Oracle クライアント ネットワーク ソフトウェアは、最新バージョンであることが必要です。 Oracle では、最新バージョンのクライアント ソフトウェアをインストールすることを推奨しています。 このため、データベース ソフトウェアよりもクライアント ソフトウェアの方が新しいバージョンであることがよくあります。 最も簡単にソフトウェアをインストールする方法は、Oracle クライアント ディスクで Oracle Universal Installer を使用することです。 Oracle Universal Installer で、次の情報を指定します。  
   
-    |[情報]|Description|  
+    |[情報]|[説明]|  
     |-----------------|-----------------|  
     |Oracle ホーム|Oracle ソフトウェアのインストール ディレクトリのパスです。 既定値 (C:\oracle\ora90 など) をそのまま使用するか、別のパスを入力します。 Oracle ホームの詳細については、このトピックの「Oracle ホームに関する注意点」を参照してください。|  
     |Oracle ホーム名|Oracle ホーム パスの別名|  
@@ -48,7 +47,7 @@ ms.locfileid: "32964087"
   
      Oracle Universal Installer が完了したら、Net Configuration Assistant を使用してネットワーク接続を構成します。 ネットワーク接続を構成するには、4 つの情報を指定する必要があります。 Oracle データベース管理者は、データベースとリスナーをセットアップするときにネットワークを構成しています。この情報が不明な場合は、管理者に問い合わせてください。 以下の操作を行う必要があります。  
   
-    |操作|Description|  
+    |操作|[説明]|  
     |------------|-----------------|  
     |データベースを識別する|データベースは 2 とおりの方法で識別できます。 1 つ目は、SID (Oracle System Identifier) を使用する方法で、すべての Oracle リリースで使用できます。 2 つ目は、サービス名を使用する方法で、Oracle リリース 8.0 以降で使用できます。 どちらの方法も、データベースの作成時に構成される値を使用します。データベースのリスナーの構成時に管理者が使用したものと同じ命名方法を、クライアント ネットワーク構成でも使用することが重要です。|  
     |データベースのネットワークの別名を識別する|Oracle データベースへのアクセスに使用するネットワークの別名を指定する必要があります。 ネットワークの別名とは、基本的にはデータベースの作成時に構成されたリモート SID またはサービス名へのポインターです。ネットワークの別名は、各種の Oracle リリースや製品では、ネット サービス名や TNS 別名など、複数の名前で呼ばれています。 SQL*Plus では、ログイン時に "ホスト文字列" パラメーターとしてこの別名の入力画面が表示されます。|  

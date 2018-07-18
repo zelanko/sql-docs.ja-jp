@@ -2,7 +2,6 @@
 title: Name プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1990ae16694a9ddee3747850773a4c361881a307
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 834a04e01587be21938d461ac1645802bad624d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279581"
 ---
 # <a name="name-property-ado"></a>Name プロパティ (ADO)
 オブジェクトの名前を示します。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**オブジェクトの名前を示す値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**名前**に名前を割り当てるまたはの名前を取得するプロパティ、**コマンド**、**プロパティ**、**フィールド**、または**パラメーター**オブジェクト。  
   
  読み取り/書き込みするには、値、**コマンド**オブジェクトおよび読み取り専用で、**プロパティ**オブジェクト。  

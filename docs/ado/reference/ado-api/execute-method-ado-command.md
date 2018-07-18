@@ -2,7 +2,6 @@
 title: Execute メソッド (ADO コマンド) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09ce33d4fa2f6ac63fc19ce711fe88fcf717d049
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278121"
 ---
 # <a name="execute-method-ado-command"></a>Execute メソッド (ADO コマンド)
 クエリや、SQL ステートメントで指定されたストアド プロシージャの実行、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)のプロパティ、[コマンド オブジェクト](../../../ado/reference/ado-api/command-object-ado.md)です。  
@@ -42,18 +42,18 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>パラメーター  
  *RecordsAffected*  
- 省略可。 A**長い**先変数プロバイダーが返されます、操作の影響を受けるレコードの数。 *RecordsAffected*パラメーターは、アクションのクエリまたはストアド プロシージャに対してのみ適用されます。 *RecordsAffected*結果を返すクエリまたはストアド プロシージャによって返されるレコードの数は返しません。 この情報を取得するには、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティです。 **Execute**メソッドでは、正しい情報で使用する場合は返されません**adAsyncExecute**、単にコマンドを実行すると非同期的に、ために影響を受けたレコードの数はまだわかりません時に、メソッドを返します。  
+ 任意。 A**長い**先変数プロバイダーが返されます、操作の影響を受けるレコードの数。 *RecordsAffected*パラメーターは、アクションのクエリまたはストアド プロシージャに対してのみ適用されます。 *RecordsAffected*結果を返すクエリまたはストアド プロシージャによって返されるレコードの数は返しません。 この情報を取得するには、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティです。 **Execute**メソッドでは、正しい情報で使用する場合は返されません**adAsyncExecute**、単にコマンドを実行すると非同期的に、ために影響を受けたレコードの数はまだわかりません時に、メソッドを返します。  
   
  *パラメーター*  
- 省略可。 A**バリアント**入力文字列またはストリームに指定されたと組み合わせて使用するパラメーター値の配列**CommandText**または**CommandStream**です。 (出力パラメーターは返されませんこの引数で渡されるときに適切な値。)  
+ 任意。 A**バリアント**入力文字列またはストリームに指定されたと組み合わせて使用するパラメーター値の配列**CommandText**または**CommandStream**です。 (出力パラメーターは返されませんこの引数で渡されるときに適切な値。)  
   
- *Options*  
- 省略可。 A**長い**プロバイダーを評価する方法を示す値、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)のプロパティ、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 指定できる値のビットマスクを使用して確立[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)や[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値。 たとえば、使用する**adCmdText**と**adExecuteNoRecords**組み合わせて ADO の値を評価する場合、 **CommandText**プロパティとして、テキストと示しますのコマンドは、必要がありますを破棄し、コマンド テキストの実行時に生成されるレコードが返されません。  
+ *[オプション]*  
+ 任意。 A**長い**プロバイダーを評価する方法を示す値、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)のプロパティ、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 指定できる値のビットマスクを使用して確立[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)や[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値。 たとえば、使用する**adCmdText**と**adExecuteNoRecords**組み合わせて ADO の値を評価する場合、 **CommandText**プロパティとして、テキストと示しますのコマンドは、必要がありますを破棄し、コマンド テキストの実行時に生成されるレコードが返されません。  
   
 > [!NOTE]
 >  使用して、 **ExecuteOptionEnum**値**adExecuteNoRecords**内部処理を最小限に抑えることによってパフォーマンスを向上させるためにします。 場合**adExecuteStream**が指定されているオプション**adAsyncFetch**と**adAsynchFetchNonBlocking**は無視されます。 使用しないでください、 **CommandTypeEnum**値**adCmdFile**または**adCmdTableDirect**で**Execute**です。 これらの値は、オプションとしてのみ使用できます、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)と[Requery](../../../ado/reference/ado-api/requery-method.md)のメソッド、 **Recordset**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **Execute**メソッドを**コマンド**オブジェクトで指定されたクエリの実行、 **CommandText**プロパティまたは**CommandStream**オブジェクトのプロパティです。  
   
  結果が返される、 **Recordset** (既定) またはバイナリ情報のストリームとして。 バイナリ ストリームを取得する指定**adExecuteStream**で*オプション*を設定してストリームを指定し、 **Command.Properties (「出力ストリーム」)** です。 ADO**ストリーム**結果を受信するオブジェクトを指定するか、IIS 応答オブジェクトなどの別のストリーム オブジェクトを指定することができます。 呼び出しの前にストリームが指定されなかった場合**Execute**で**adExecuteStream**エラーが発生します。 制御が戻るとき、ストリームの位置**Execute**がプロバイダーを特定します。  

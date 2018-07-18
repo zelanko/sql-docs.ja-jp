@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 589fc732d9d49b58763f6374277d4375cccbbaf8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309051"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,7 +61,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>パラメーター  
 *$errorsAndOrWarnings*[省略可能]: 定義済みの定数です。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
-|値|Description|  
+|値|説明|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  
@@ -72,7 +72,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ## <a name="return-value"></a>戻り値  
 配列の **array** 、または **null**。 各**配列**、返された**配列**3 つのキー/値ペアが含まれています。 次の表では、各キーとその説明を示します。  
   
-|Key|Description|  
+|Key|説明|  
 |-------|---------------|  
 |SQLSTATE|ODBC ドライバー由来のエラーの場合、ODBC が返す SQLSTATE。 ODBC の SQLSTATE 値については、次を参照してください。 [ODBC エラー コード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)です。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、IMSSP の SQLSTATE。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来の警告の場合、01SSP の SQLSTATE。|  
 |コード|SQL Server 由来のエラーの場合、SQL Server のネイティブ エラー コード。<br /><br />ODBC ドライバー由来のエラーの場合、ODBC が返すエラー コード。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のエラー コード。 詳細については、「 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)」を参照してください。|  

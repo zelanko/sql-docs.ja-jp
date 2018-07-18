@@ -2,7 +2,6 @@
 title: 行のプロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b62cd50996a98c94261454e069a8f8a2d2bb9ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4de19beeb853abb0a6bdc4d517332a812fa43c0e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281321"
 ---
 # <a name="row-property-ado"></a>行のプロパティ (ADO)
 OLE DB の設定を取得または**行**からまたは上のオブジェクト、 [ADORecordConstruction インターフェイス](../../../ado/reference/ado-api/adorecordconstruction-interface.md)オブジェクト。 使用すると**put_Row**を設定する、**行**オブジェクトの行が ADO に変わる**レコード**オブジェクト。  

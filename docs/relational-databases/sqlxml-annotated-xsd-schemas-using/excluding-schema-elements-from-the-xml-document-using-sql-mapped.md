@@ -1,5 +1,5 @@
 ---
-title: 'Sql を使用して XML ドキュメントからスキーマ要素の除外: マップ |Microsoft ドキュメント'
+title: 'Sql を使用して XML ドキュメントからスキーマ要素の除外: マップ |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -29,29 +29,29 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 640ae49de50fec55afb9c957042f5d317f41195f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969837"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001244"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Sql を使用して XML ドキュメントからスキーマ要素の除外: マップ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 ですが、データベースのテーブル (ビュー) または列にマップされないと、XML で表示しない、XSD スキーマで要素を作成するかどうかを指定できます、 **sql: マップ**注釈。  
+  既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 XSD スキーマをデータベース テーブル (ビュー) または列にマップされないと、XML で表示しない要素を作成するかどうかを指定できます、 **sql: マップ**注釈。  
   
- **Sql: マップ**注釈は、スキーマを変更することはできませんまたは他のソースし、まだデータベースに保存されていないデータを格納してから XML を検証するスキーマを使用する場合に特に便利です。 **Sql: マップ**注釈とは異なります**sql: 定数**点で、XML ドキュメントにマップされない要素と属性は表示されません。  
+ **Sql: マップ**注釈は、スキーマを変更することはできません、またはその他のソースし、まだデータベースに格納されていないデータが含まれていますから XML を検証するスキーマを使用する場合に特に便利です。 **Sql: マップ**注釈とは異なります**sql: は定数**ことで、XML ドキュメントにマップされない要素と属性が表示されません。  
   
  **Sql: マップ**注釈はブール値 (0 = false、1 = true)。 指定できる値は 0、1、true、false です。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 注釈を指定する  
- 他のソースからの XSD スキーマがあるとします。 この XSD スキーマから成る、  **\<Person.Contact >** を持つ要素**ContactID**、 **FirstName**、 **LastName**、および**HomeAddress**属性。  
+ 他のソースからの XSD スキーマがあるとします。 この XSD スキーマから成る、  **\<Person.Contact >** を持つ要素**ContactID**、 **FirstName**、 **LastName**と**HomeAddress**属性。  
   
- この XSD スキーマを AdventureWorks データベースの Person.Contact テーブルにマップする**sql: マップ**で指定された、 **HomeAddress** Employees テーブルで、ホームが格納されていないので属性従業員の住所。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
+ この XSD スキーマを AdventureWorks データベースの Person.Contact テーブルにマッピング**sql: マップ**が指定されて、 **HomeAddress** Employees テーブルは、ホームを格納していないため、属性従業員の住所。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   
- スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<Person.Contact >** 要素は Person.Contact テーブルにマップされ、すべての属性が Person.Contact テーブル内の同じ名前の列にマップします。  
+ スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<Person.Contact >** 要素は Person.Contact テーブルにマップされ、すべての属性は Person.Contact テーブル内の同じ名前の列にマップします。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -90,9 +90,9 @@ ms.locfileid: "32969837"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に使用する ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
- これは、結果セットを示します。  
+ これは、結果セットです。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -108,7 +108,7 @@ ms.locfileid: "32969837"
 </ROOT>  
 ```  
   
- ContactID、FirstName、および LastName 表示されているが、HomeAddress はマッピング スキーマの場合は 0 を指定するためにないことに注意してください、 **sql: マップ**属性。  
+ ContactID、FirstName、LastName は存在するが、HomeAddress はマッピング スキーマの場合は 0 を指定するためではなく、 **sql: マップ**属性。  
   
 ## <a name="see-also"></a>参照  
  [XSD 要素および属性からテーブルと列の既定のマッピング&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  

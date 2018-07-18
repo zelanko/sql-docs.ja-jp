@@ -1,5 +1,5 @@
 ---
-title: sys.database_connection_stats (Azure SQL データベース) |Microsoft ドキュメント
+title: sys.database_connection_stats (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: ''
@@ -28,29 +28,29 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181528"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029515"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  統計情報を含む[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース**接続**データベース接続の成功と失敗の概要を提供するイベントです。 接続イベントの詳細については、イベントの種類」を参照してください。 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)です。  
+  統計情報を含む[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース**接続**イベント、データベース接続の成功と失敗の概要について説明します。 接続イベントの詳細については、イベントの種類を参照してください。 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)します。  
   
-|統計|型|Description|  
+|統計|型|説明|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|データベースの名前です。|  
 |**start_time**|**datetime2**|集計の間隔の開始日時 (UTC)。 この時刻は常に 5 分の倍数です。 以下に例を示します。<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|集計の間隔の終了日時 (UTC)。 **End_time**は常に 5 分後に、対応するよりも**start_time**の同じ行にします。|  
+|**end_time**|**datetime2**|集計の間隔の終了日時 (UTC)。 **End_time**は常に 5 分後に、対応するよりも**start_time**同じ行にします。|  
 |**success_count**|**int**|成功した接続の数。|  
 |**total_failure_count**|**int**|失敗した接続の合計数。 これは、合計の**connection_failure_count**、 **terminated_connection_count**、および**throttled_connection_count**、デッドロック イベントは含まれません。|  
 |**connection_failure_count**|**int**|失敗したログインの数。|  
-|**terminated_connection_count**|**int**|***のみに適用可能[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。***<br /><br /> 終了された接続の数。|  
-|**throttled_connection_count**|**int**|***のみに適用可能[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。***<br /><br /> スロットルされた接続の数。|  
+|**terminated_connection_count**|**int**|***のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。***<br /><br /> 終了された接続の数。|  
+|**throttled_connection_count**|**int**|***のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。***<br /><br /> スロットルされた接続の数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ### <a name="event-aggregation"></a>イベント集計  
  このビューのイベント情報は、5 分未満の間隔で収集および集計されます。 数の列は、特定の間隔において特定のデータベースで特定の接続イベントが発生した回数を表します。  
@@ -62,7 +62,7 @@ ms.locfileid: "33181528"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>間隔の start_time と end_time  
- イベントの発生時に、集計間隔にイベントが含まれている*で*または*後 * * * start_time** および*する前に * * * end_time** その間隔。 たとえば、`2012-10-30 19:25:00.0000000` に発生したイベントは、下に示す例では 2 つ目の間隔にのみ含まれます。  
+ イベントの発生時に、集計間隔にイベントが含まれている*で*または*後 * * * start_time** と*する前に * * * end_time** その間隔。 たとえば、`2012-10-30 19:25:00.0000000` に発生したイベントは、下に示す例では 2 つ目の間隔にのみ含まれます。  
   
 ```  
   
@@ -80,17 +80,17 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>含まれていないエラー  
  すべての接続情報とエラー情報がこのビューに含まれるわけではありません。  
   
--   このビューにすべて含まれていない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース イベントの種類で指定されたもののみ、発生するエラー [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)です。  
+-   このビューにすべて含まれていない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース イベントの種類で指定されているのみエラーが発生する可能性があります、 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)します。  
   
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データセンター内でコンピューター障害が発生すると、論理サーバーの少量のデータがイベント テーブルで見つからない可能性があります。  
   
 -   IP アドレスが DoSGuard によってブロックされている場合、その IP アドレスからの接続の試みのイベントは収集できないため、このビューに表示されません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  アクセス許可を持つユーザー、**マスター**データベースは、このビューに読み取り専用のアクセス権を持ちます。  
   
 ## <a name="example"></a>例  
- 次の例のクエリを示しています**sys.database_connection_stats**を 2011 年 9 月 25 日の正午と午後 9/28/2011 年 (UTC) の間で発生したデータベース接続の概要を返します。 既定では、クエリ結果が並べ替えられます。 **start_time** (昇順)。  
+ 次の例は、のクエリを示しています。 **sys.database_connection_stats**を 2011 年 9 月 25 日の正午と午後 9/28/2011 (UTC) の間に発生したデータベース接続の概要を返します。 既定では、クエリの結果は並べ**start_time** (昇順)。  
   
 ```  
 SELECT *  

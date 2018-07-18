@@ -2,7 +2,6 @@
 title: Source プロパティ (ADO レコード セット) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fff874c34b527adc976b608e6b1594427245de24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ee46e4f0af37fd28a6e45f48e31bab7e868821f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281876"
 ---
 # <a name="source-property-ado-recordset"></a>Source プロパティ (ADO レコード セット)
 データ ソースを示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -38,10 +38,10 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  セット、**文字列**値または[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト参照; だけを返す、**文字列**のソースを示す値、**レコード セット**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**ソース**のデータ ソースを指定するプロパティ、 **Recordset**オブジェクトを使用して、次のいずれかの:**コマンド**オブジェクト変数、SQL ステートメント、ストアド プロシージャでは、または、テーブル名。  
   
- 設定した場合、**ソース**プロパティを**コマンド**オブジェクト、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)のプロパティ、**レコード セット**オブジェクトが継承、値、 **ActiveConnection**プロパティに指定された**コマンド**オブジェクト。 ただし、読み取り、**ソース**プロパティは返されません、**コマンド**オブジェクトです代わりに、を返します、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)のプロパティ、**コマンド。**オブジェクトを設定する、**ソース**プロパティです。  
+ 設定した場合、**ソース**プロパティを**コマンド**オブジェクト、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)のプロパティ、**レコード セット**オブジェクトが継承、値、 **ActiveConnection**プロパティに指定された**コマンド**オブジェクト。 ただし、読み取り、**ソース**プロパティは返されません、**コマンド**オブジェクトです代わりに、を返します、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)のプロパティ、**コマンド。** オブジェクトを設定する、**ソース**プロパティです。  
   
  場合、**ソース**プロパティは、SQL ステートメント、ストアド プロシージャ、またはテーブル名、パフォーマンスを最適化するには、適切なを渡すことによって*オプション*引数と、 [を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの呼び出しです。  
   

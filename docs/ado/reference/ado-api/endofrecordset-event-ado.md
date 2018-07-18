@@ -2,7 +2,6 @@
 title: EndOfRecordset イベント (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f035d61d2e8526c21960761be2db5a900666083c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ee224162242cb4494556ac1099631d0d73283d1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277951"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset イベント (ADO)
 **EndOfRecordset**イベントは、行の末尾に移動しようとしたときに呼び出されますが、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
@@ -51,7 +51,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  A **Recordset**オブジェクト。 **Recordset**のこのイベントが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **EndOfRecordset**場合に、イベントが発生する可能性があります、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)操作は失敗します。  
   
  このイベント ハンドラーが呼び出されますの末尾を越えた移動しようとしましたが、**レコード セット**呼び出しの結果などのオブジェクト**MoveNext**です。 ただし、このイベントの中でしたより多くのレコードをデータベースから取得し、それらの末尾に追加、 **Recordset**です。 その場合は、設定*fMoreData* VARIANT_TRUE とからの戻り値に**EndOfRecordset**です。 呼び出す**MoveNext**新しく取得されたレコードにアクセスするには、もう一度です。  

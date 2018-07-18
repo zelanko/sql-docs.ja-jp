@@ -1,27 +1,25 @@
 ---
-title: FILESTREAM (ODBC) を使用して増分データの送受信を行う |Microsoft ドキュメント
+title: FILESTREAM (ODBC) のインクリメンタル式でのデータの送受信 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71bdf8f52d8b8ea726e9d350013c7848654903a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76a02beccc609c62267594e7f3512e8f0e395157
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944317"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428501"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM を使用したデータのインクリメンタル式での送受信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,14 +27,14 @@ ms.locfileid: "32944317"
 
   このサンプルでは、FILESTREAM 機能を使用して、SQLPutData と SQLGetData でデータをインクリメンタル式に送受信する方法を紹介します。  
   
- FILESTREAM 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)です。  
+ FILESTREAM 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)します。  
   
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するデータベースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
- 2 つ目のコード リストは C++ コードです。 サーバーを指定する必要があります。C++ コード リストで、"MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib、および /EHsc を使用して C++ コード リストをコンパイルします。  
+ 2 つ目のコード リストは C++ コードです。 サーバーを指定する必要があります。C++ コード リストで、"MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib、および /EHsc を使用して C++ コード リストをコンパイルします。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用したデータベースを削除します。  
   

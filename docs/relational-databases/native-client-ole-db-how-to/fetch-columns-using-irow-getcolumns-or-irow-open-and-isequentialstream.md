@@ -1,13 +1,12 @@
 ---
-title: Irow::getcolumns (または irow::open) を使用して列をフェッチと ISequentialStream |Microsoft ドキュメント
+title: Irow::getcolumns (または irow::open) を使用して列のフェッチと ISequentialStream |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13c41862464fc304b7d9b52f6b482288dee479db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 90d289f2df035416b208b1d5b14b0bb27fed54d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947687"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423401"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns (または IRow::Open) と ISequentialStream を使用した列のフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  大規模なデータをバインドできるかを使用して取得、 **ISequentialStream**インターフェイスです。 バインドされた列の場合、状態フラグ DBSTATUS_S_TRUNCATED は、データが切り捨てられたことを示します。  
+  大規模なデータ バインドできるかを使用して取得、 **ISequentialStream**インターフェイス。 バインドされた列の場合、状態フラグ DBSTATUS_S_TRUNCATED は、データが切り捨てられたことを示します。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -40,24 +39,24 @@ ms.locfileid: "32947687"
   
 1.  データ ソースへの接続を確立します。  
   
-2.  コマンドを実行 (この例では**icommandexecute::execute()** IID_IRow と共に呼び出されます)。  
+2.  コマンドを実行します (この例で**icommandexecute::execute()** は IID_IRow と共に呼び出されます)。  
   
-3.  列データを使用して、フェッチ**IRow::Open()** または**irow::getcolumns()** です。  
+3.  使用して列データをフェッチ**IRow::Open()** または**irow::getcolumns()** します。  
   
-    -   **IRow::Open()** を開くために使用する、 **ISequentialStream**行にします。 列にバイナリ データのストリームが含まれているかを示す DBGUID_STREAM を指定 (**IStream**または**ISequentialStream**列からデータの読み取りに使用できます)。  
+    -   **IRow::Open()** を開くために使用できる、 **ISequentialStream**行にします。 列にバイナリ データのストリームが含まれることを示す DBGUID_STREAM を指定 (**IStream**または**ISequentialStream**列からデータを読み取るために使用されます)。  
   
-    -   場合**irow::getcolumns()** を使用する、 **pData**ストリーム オブジェクトを指す DBCOLUMNACCESS 構造体の要素を設定します。  
+    -   場合**irow::getcolumns()** を使用する、 **pData** DBCOLUMNACCESS 構造体の要素がストリーム オブジェクトを指すに設定します。  
   
-4.  使用して**ISequentialStream::Read()** 繰り返しをコンシューマーのバッファーに指定したバイト数を読み取る。  
+4.  使用**ISequentialStream::Read()** 繰り返しに指定したバイト数をコンシューマーのバッファーに読み込みます。  
   
 ## <a name="example"></a>例  
  この例では、IRow を使用して単一の行をフェッチする方法を示します。 また、行から一度に 1 つの列を取得します。 この例では、IRow::GetColumns() および IRow::Open() の使用方法も示します。 列のデータの読み取りには ISequentialStream::Read を使用しています。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページです。  
+ このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するテーブルを作成します。  
   
- Ole32.lib oleaut32.lib をコンパイルし、2 つ目の (C++) コード リストを実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムをする必要があります変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 名前付きインスタンスに接続する場合から、接続文字列を変更する"かに\\\name"という名前付きインスタンス。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ Ole32.lib oleaut32.lib をコンパイルし、2 つ目の (C++) コード リストを実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用したテーブルを削除します。  
   
@@ -679,6 +678,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [OLE DB の操作方法に関するトピック](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB の使用法に関するトピック](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

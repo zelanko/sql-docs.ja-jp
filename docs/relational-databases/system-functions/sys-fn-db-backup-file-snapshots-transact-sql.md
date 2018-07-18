@@ -1,5 +1,5 @@
 ---
-title: sys.fn_db_backup_file_snapshots (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_db_backup_file_snapshots (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085bf32115bfe84b00471de27e1fd9c11b3a1ab9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33231351"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023870"
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sql:limit-フィールドと sql:limit-値 (SQLXML 4.0) |Microsoft ドキュメント
+title: sql:limit- およびフィールドの値 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fb356e56bdd4453df6d0b62d921efafbde2dfdea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969157"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050095"
 ---
-# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>注釈の解釈の sql:limit-フィールドと sql:limit-値
+# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>注釈の解釈 - sql:limit- およびフィールドの値
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 一括読み込み処理、 **sql:limit-フィールド**と**sql:limit-値**注釈が定義に従ってします。 詳細については、次を参照してください。[フィルター値を使用した、-フィールドと sql:limit-値&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)です。  
+  XML 一括読み込みの処理、 **sql:limit-フィールド**と**sql:limit-値**注釈が定義に従ってします。 詳細については、次を参照してください。 [sql:limit の値を使用してフィルター処理、および -値&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)します。  
   
  たとえば、データベースに次のテーブルが含まれているとします。  
   

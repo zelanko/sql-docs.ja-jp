@@ -1,5 +1,5 @@
 ---
-title: SQL Server Analysis Services 表形式の 1200 モデルでサポートされるデータ ソース |Microsoft ドキュメント
+title: SQL Server Analysis Services 表形式 1200 モデルでサポートされるデータ ソース |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,29 +10,29 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31ef1eb37f85e3e9ec7a7ea7d7eadee03b6c9c20
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044706"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017530"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>SQL Server Analysis Services 表形式モデル 1200 にサポートされるデータ ソース
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   
-この記事では、SQL Server Analysis Services 表形式モデル 1200 より低い互換性レベルで使用できるデータ ソースの種類について説明します。 
+この記事では、SQL Server Analysis Services 表形式モデル 1200 とより低い互換性レベルで使用できるデータ ソースの種類について説明します。 
 
-1400 の互換性レベル モデルでは、次を参照してください。 [SQL Server Analysis Services 表形式の 1400 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)です。
+1400 互換性レベル モデルでは、次を参照してください。 [SQL Server Analysis Services 表形式 1400 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)します。
 
-Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)です。
+Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)します。
   
-##  <a name="bkmk_supported_ds"></a> メモリ内のテーブル モデルに対してサポートされているデータ ソース  
-[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールする際のセットアップで、各データ ソースに対して挙げられているプロバイダーはインストールされません。 その他のアプリケーションがコンピューター上で一部のプロバイダーをインストールする可能性があります。 それ以外の場合に、ダウンロードしてプロバイダーをインストールする必要があります。  
+##  <a name="bkmk_supported_ds"></a> メモリ内表形式モデルのサポートされるデータ ソース  
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールする際のセットアップで、各データ ソースに対して挙げられているプロバイダーはインストールされません。 コンピューターに他のアプリケーションでは、一部のプロバイダーをインストールする可能性があります。 それ以外の場合は、ダウンロードして、プロバイダーをインストールする必要があります。  
   
 |||||  
 |-|-|-|-|  
-|ソース|バージョン|ファイルの種類|[プロバイダー]|  
+|Source|バージョン|ファイルの種類|[プロバイダー]|  
 |Access データベース|Microsoft Access 2010 以降。|.accdb または .mdb|ACE 14 OLE DB プロバイダー|  
-|SQL Server リレーショナル データベース|SQL Server 2008 以降、SQL Server データ ウェアハウス 2008 およびそれ以降、Azure SQL Database、Azure SQL Data Warehouse、Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) として SQL Server 並列データ ウェアハウス (PDW) 呼ばれていました。 当初、Analysis Services から PDW に接続するには、特別なデータ プロバイダーが必要でした。 このプロバイダーは、SQL Server 2012 で変更されました。 SQL Server 2012 以降、PDW/APS への接続には、SQL Server Native Client が使用されます。 |(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 10.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server リレーショナル データベース|SQL Server 2008 以降、SQL Server データ ウェアハウス 2008 以降では、Azure SQL Database、Azure SQL Data Warehouse、Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) が以前のとして SQL Server 並列データ ウェアハウス (PDW)。 当初、Analysis Services から PDW に接続するには、特別なデータ プロバイダーが必要でした。 このプロバイダーは、SQL Server 2012 で変更されました。 SQL Server 2012 以降、PDW/APS への接続には、SQL Server Native Client が使用されます。 |(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 10.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle リレーショナル データベース|Oracle 9i 以降。|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata リレーショナル データベース|Teradata V2R6 以降|(該当なし)|TDOLEDB OLE DB プロバイダー<br /><br /> .Net Data Provider for Teradata|  
 |Informix リレーショナル データベース||(該当なし)|Informix OLE DB プロバイダー|  
@@ -48,14 +48,14 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
   
   
 ##  <a name="bkmk_supported_ds_dq"></a> DirectQuery モデルのサポートされるデータ ソース  
- DirectQuery はインメモリ ストレージ モードの代わりに使用できます。このモデルでは、クエリがバックエンド データ システムにルーティングされ、結果が直接返されます。モデル (モデルが読み込まれている場合は RAM) 内にすべてのデータが格納されることはありません。 Analysis Services は、ネイティブ データベース クエリ構文でクエリがあるために、このモードでデータ ソースの小さなサブセットがサポートします。  
+ DirectQuery はインメモリ ストレージ モードの代わりに使用できます。このモデルでは、クエリがバックエンド データ システムにルーティングされ、結果が直接返されます。モデル (モデルが読み込まれている場合は RAM) 内にすべてのデータが格納されることはありません。 ネイティブ データベース クエリ構文でクエリを作成するため、Analysis Services は、このモードのデータ ソースの小さなサブセットがサポートされています。  
   
 データ ソース   |バージョン  |[プロバイダー]
 ---------|---------|---------
 Microsoft SQL Server    |  2008 以降      |       OLE DB Provider for SQL Server、SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client  
-Azure SQL Database    |   すべて      |  OLE DB Provider for SQL Server、SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client            
-Microsoft Azure SQL Data Warehouse     |   すべて     |  SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   すべて      |  OLE DB Provider for SQL Server、SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client       
+Azure SQL Database    |   All      |  OLE DB Provider for SQL Server、SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client            
+Microsoft Azure SQL Data Warehouse     |   All     |  SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   All      |  OLE DB Provider for SQL Server、SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client       
 Oracle リレーショナル データベース     |  Oracle 9i 以降       |  Oracle OLE DB プロバイダー       
 Teradata リレーショナル データベース    |  Teradata V2R6 以降     | .Net Data Provider for Teradata    
 
@@ -68,10 +68,10 @@ Teradata リレーショナル データベース    |  Teradata V2R6 以降    
   
 複数のデータ ソースに、類似データが格納されている列があれば、モデル デザイナー内でリレーションシップを作成する理由になります。 異種のデータ ソースを使用する場合は、同一データまたは類似データが格納されている他のデータ ソースのテーブルにマップできる列のあるテーブルを選択します。  
   
-OLE DB プロバイダーでは、大規模なデータに対して高いパフォーマンスを発揮します。 同じデータ ソースに対して数種類のプロバイダーの中から選択する場合は、最初に OLE DB プロバイダーを選択することをお勧めします。  
+OLE DB プロバイダーでは、大規模なデータの高速のパフォーマンスを提供できる場合があります。 同じデータ ソースに対して数種類のプロバイダーの中から選択する場合は、最初に OLE DB プロバイダーを選択することをお勧めします。  
 
 ## <a name="see-also"></a>参照
 
-[データ ソースが SQL Server Analysis Services で 1400 の表形式モデルをサポート](data-sources-supported-ssas-tabular-1400.md)
+[SQL Server Analysis Services 表形式 1400 モデルにサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)
 
 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

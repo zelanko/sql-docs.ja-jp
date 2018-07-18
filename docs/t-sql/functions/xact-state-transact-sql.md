@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,16 @@ helpviewer_keywords:
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b3293dab60c9b3f7f39b47c15397d29c5892ec9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 670fbe69dc5923efac50b52900778468ab03080e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785423"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ XACT_STATE()
   
 |戻り値|意味|  
 |------------------|-------------|  
-|@shouldalert|現在の要求にアクティブなユーザー トランザクションが存在する。 要求では、データ書き込み、トランザクションのコミットなど、任意の操作を実行できます。|  
+|1|現在の要求にアクティブなユーザー トランザクションが存在する。 要求では、データ書き込み、トランザクションのコミットなど、任意の操作を実行できます。|  
 |0|現在の要求にアクティブなユーザー トランザクションが存在しない。|  
 |-1|現在の要求にアクティブなユーザー トランザクションが存在するが、コミットできないトランザクションとして分類されるエラーが発生した。 この場合、要求でトランザクションのコミットまたはセーブポイントへのロールバックは行えず、トランザクションの完全ロールバックだけを要求できます。 要求では、トランザクションをロールバックするまで書き込み操作は実行できず、 読み取り操作だけを実行できます。 トランザクションがロールバックされた後は、要求では読み取り、書き込み両方の操作を実行でき、新しいトランザクションを開始できます。<br /><br /> 外側のバッチの実行が完了すると、コミット不可能なトランザクションは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的にロールバックされます。 トランザクションがコミット不可能な状態になったときにエラー メッセージが送信されなかった場合、バッチが完了すると、エラー メッセージがクライアント アプリケーションに送信されます。 このメッセージは、コミット不可能なトランザクションが検出され、ロールバックされたことを示します。|  
   

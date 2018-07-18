@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 104cf6916beca429e65610106cbdba5a289deeec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 385ccf4fcf3b411536b825f4ff34e06cc8de4120
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054869"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786693"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,11 +69,11 @@ IS_OBJECTSIGNED (
 ## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED は、次の値を返します。  
   
-|戻り値|Description|  
+|戻り値|[説明]|  
 |------------------|-----------------|  
 |NULL|オブジェクトが署名されていないか、オブジェクトが有効ではありません。|  
 |0|オブジェクトは署名されていますが、署名が有効ではありません。|  
-|@shouldalert|オブジェクトは署名されています。|  
+|1|オブジェクトは署名されています。|  
   
 ## <a name="permissions"></a>アクセス許可  
  証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  

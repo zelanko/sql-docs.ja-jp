@@ -2,7 +2,6 @@
 title: ActualSize プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 697202ef2c88d5fa33657c74713d884f2cbe916c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f71de5881975eb9ba38b2d21ef8f1590aae95d90
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275101"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize プロパティ (ADO)
 フィールドの値をバイト単位の実際の長さを示します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  返します、**長い**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **ActualSize**の実際の長さを取得するプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの値。 すべてのフィールドについて、 **ActualSize**プロパティは読み取り専用です。 ADO の長さを判断できない場合、**フィールド**オブジェクトの値、 **ActualSize**プロパティから返される**adUnknown**です。  
   
  **ActualSize**と[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)プロパティは、次の例で示すように異なります、します。 A**フィールド**の宣言された型とオブジェクト**それぞれ**し、50 文字の最大長を返します、 **DefinedSize** 50 でのプロパティの値が、 **ActualSize**プロパティの値が返されますが、現在のレコードのフィールドに格納されているデータの長さ。 **フィールド**で、 **DefinedSize** 255 バイトは、可変長の列として扱われます。 より大きい。  

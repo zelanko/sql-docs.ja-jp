@@ -2,10 +2,10 @@
 title: 分散トランザクションのサポート |Microsoft ドキュメント
 description: SQL Server の OLE DB Driver で分散トランザクション
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e6593d0153f66e6899b5d180fb8194a970d7caa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690305"
 ---
 # <a name="supporting-distributed-transactions"></a>分散トランザクションのサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server コンシューマーが使用できる、 **itransactionjoin::jointransaction** Microsoft 分散トランザクション コーディネーター (MS DTC) によってコーディネートされる分散トランザクションに参加するメソッド。  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  分散トランザクションの場合、OLE DB Driver for SQL Server を実装**itransactionjoin::jointransaction**パラメーターは次のようにします。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC トランザクション オブジェクトへのポインター。|  
 |*IsoLevel*|SQL Server、OLE DB ドライバーによって無視されます。 MS DTC によりコーディネートされるトランザクションの分離レベルは、コンシューマーが MS DTC からトランザクション オブジェクトを取得するときに決まります。|  

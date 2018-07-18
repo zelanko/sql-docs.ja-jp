@@ -1,5 +1,5 @@
 ---
-title: sys.credentials (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.credentials (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ac0d1322be8e6c65d066c9de20d9a117b08f981a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031360"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,18 +40,18 @@ ms.locfileid: "33180948"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|資格情報の ID。 サーバーで一意です。|  
-|name|**sysname**|資格情報の名前です。 サーバーで一意です。|  
+|NAME|**sysname**|資格情報の名前。 サーバーで一意です。|  
 |credential_identity|**nvarchar (4000)**|使用する識別情報の名前。 通常は Windows ユーザーです。 一意である必要はありません。|  
 |create_date|**datetime**|資格情報が作成された日時。|  
 |modify_date|**datetime**|資格情報が最後に変更された日時。|  
-|target_type|**nvarchar(100)**|資格情報の種類。 従来の資格情報の場合は NULL を返し、暗号化サービス プロバイダーにマップされた資格情報の場合は CRYPTOGRAPHIC PROVIDER を返します。 外部キー管理プロバイダーの詳細については、次を参照してください。[拡張キー管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)です。|  
-|target_id|**int**|資格情報がマップされているオブジェクトの ID。 従来の資格情報の場合は 0 を返し、暗号化サービス プロバイダーにマップされた資格情報の場合は 0 以外を返します。 外部キー管理プロバイダーの詳細については、次を参照してください。[拡張キー管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)です。|  
+|target_type|**nvarchar(100)**|資格情報の種類。 従来の資格情報の場合は NULL を返し、暗号化サービス プロバイダーにマップされた資格情報の場合は CRYPTOGRAPHIC PROVIDER を返します。 外部キー管理プロバイダーの詳細については、次を参照してください。[拡張キー管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)します。|  
+|target_id|**int**|資格情報がマップされているオブジェクトの ID。 従来の資格情報の場合は 0 を返し、暗号化サービス プロバイダーにマップされた資格情報の場合は 0 以外を返します。 外部キー管理プロバイダーの詳細については、次を参照してください。[拡張キー管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)します。|  
 
-## <a name="remarks"></a>解説  
-データベース レベルの資格情報は、次を参照してください。 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)です。
+## <a name="remarks"></a>コメント  
+データベース レベルの資格情報を参照してください。 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)します。
   
-## <a name="permissions"></a>権限  
- いずれかが必要`VIEW ANY DEFINITION`権限または`ALTER ANY CREDENTIAL`権限です。 さらに、プリンシパル拒否されていない`VIEW ANY DEFINITION`権限です。  
+## <a name="permissions"></a>アクセス許可  
+ `VIEW ANY DEFINITION`権限または`ALTER ANY CREDENTIAL`権限。 さらに、プリンシパル必要があります拒否されていない`VIEW ANY DEFINITION`権限。  
   
 ## <a name="see-also"></a>参照  
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   

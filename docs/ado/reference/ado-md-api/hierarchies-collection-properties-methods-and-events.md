@@ -2,7 +2,6 @@
 title: 階層のコレクションのプロパティ、メソッド、およびイベント |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,14 +16,15 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a0db150edbd22ccb155ad4f9d25de2f377133df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 481f9775f655c1ab5c995141fd4da19e11cdc365
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284031"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>階層のコレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  

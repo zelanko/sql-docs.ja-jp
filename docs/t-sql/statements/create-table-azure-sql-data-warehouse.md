@@ -6,25 +6,23 @@ ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 237c0a53319d7b4c0478cdd8527737401ab5b5f1
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702615"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942178"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -182,7 +180,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |*n* 値|有効桁数|Scale|  
 |--:|--:|-:|  
 |`0`|19|0|  
-|`1`|21|@shouldalert|  
+|`1`|21|1|  
 |`2`|22|2|  
 |`3`|23|3|  
 |`4`|24|4|  
@@ -249,7 +247,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 | `bigint`|8|  
 | `int` |4|  
 | `smallint` |2|  
-| `tinyint` |@shouldalert|  
+| `tinyint` |1|  
   
  `bit`  
  `1`、`0`、または `NULL の値をとる整数型です。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] はビット列の記憶域を最適化します。 テーブル内で 8 個以下のビット列がある場合は、列が 1 バイトとして格納されます。 9 ～ 16 ビット列の場合、列は 2 バイトとしては保存されなど。  

@@ -2,7 +2,6 @@
 title: NumericScale と有効桁数のプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09cd79d4f547dfd721ea1f04f3ca2e9faad6e1b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b8c8eaf6af8d2882542975c0d7732a82efeb032
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279901"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale と (vc++) の有効桁数のプロパティの例
 この例では、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)と[精度](../../../ado/reference/ado-api/precision-property-ado.md)内のフィールドの有効桁数と小数点以下桁数を表示するプロパティ、***割引***のテーブル、 ***Pubs***データベース。  

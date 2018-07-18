@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -31,11 +30,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ffa8e41ef713891227994a79c1179e16992f9d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d75638152141d1035bfad5affe3d24b50db14d60
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36253234"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,8 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  分散トランザクションに既に参加しているセッションでは、リモート サーバーを参照するリモート ストアド プロシージャが実行されます。  
   
- **sp_configure remote proc trans** オプションを使用すると、ローカル トランザクション内のリモート ストアド プロシージャを呼び出したときに、自動的にローカル トランザクションを MS DTC 管理の分散トランザクションに昇格させるかどうかを制御できます。 接続レベルの SET オプション REMOTE_PROC_TRANSACTIONS を使用した場合は、**sp_configure remote proc trans** で設定したサーバーの既定値よりも優先されます。このオプションをオンに設定した状態でリモート ストアド プロシージャを呼び出すと、ローカル トランザクションは分散トランザクションに昇格します。 この場合、MS DTC トランザクションを作成した接続がトランザクションの発行元になります。 COMMIT TRANSACTION では、MS DTC により調整されるコミットが開始されます。 **sp_configure remote proc trans** オプションを ON に設定した場合、ローカル トランザクション内のリモート ストアド プロシージャ コールは分散トランザクションの一部として自動的に保護されます。特別に BEGIN TRANSACTION の代わりに BEGIN DISTRIBUTED TRANSACTION を実行するようアプリケーションを書き換える必要はありません。  
+ 
+  **sp_configure remote proc trans** オプションを使用すると、ローカル トランザクション内のリモート ストアド プロシージャを呼び出したときに、自動的にローカル トランザクションを MS DTC 管理の分散トランザクションに昇格させるかどうかを制御できます。 接続レベルの SET オプション REMOTE_PROC_TRANSACTIONS を使用した場合は、**sp_configure remote proc trans** で設定したサーバーの既定値をオーバーライドします。このオプションをオンに設定した状態でリモート ストアド プロシージャを呼び出すと、ローカル トランザクションは分散トランザクションに昇格します。 この場合、MS DTC トランザクションを作成した接続がトランザクションの発行元になります。 COMMIT TRANSACTION では、MS DTC により調整されるコミットが開始されます。 **sp_configure remote proc trans** オプションを ON に設定した場合、ローカル トランザクション内のリモート ストアド プロシージャ コールは分散トランザクションの一部として自動的に保護されます。特別に BEGIN TRANSACTION の代わりに BEGIN DISTRIBUTED TRANSACTION を実行するようアプリケーションを書き換える必要はありません。  
   
  分散トランザクションの環境と処理の詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーターのマニュアルを参照してください。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fa36a4c855bbebc679f00d328e4dffe0c8ccb7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11b8e027ba6dd51cb98fe6192c88218ef1f802cc
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308921"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ $*モード*: に渡す有効なパラメーター [pdostatement::fetch](../../c
 ## <a name="return-value"></a>戻り値  
 成功した場合は true、それ以外の場合は false。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

@@ -2,10 +2,10 @@
 title: OLE DB の日付と時刻の強化のデータ型のサポート |Microsoft ドキュメント
 description: OLE DB の日付と時刻の強化のためのデータ型のサポート
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 66756bbb8179e9d7644d053dd76c4ab8223032d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce5d32efa04e3402e9e454f2ab4c89cb6e1e5b69
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666392"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付と時刻の強化に対するデータ型のサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   この記事は、OLE DB (OLE DB Driver for SQL Server) の概要情報の種類をサポートする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日付/時刻データ型。  
   
@@ -33,9 +36,9 @@ ms.lasthandoff: 05/03/2018
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|値|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|date|DBTYPE_DBDATE|133 (oledb.h)|  
+|日付|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -44,9 +47,9 @@ ms.lasthandoff: 05/03/2018
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|クライアントで変換した場合の文字列の形式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> このデータ型は、1 分の精度がします。 秒の部分は、出力時には 0 になり、入力時にはサーバーによって丸められます。|  
-|date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
+|日付|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 -   分の範囲は 0 ～ 59 です。  
   
--   秒の範囲は 0 ～ 59 です。 この範囲では、恒星時との同期を維持するために最大 2 秒のうるう秒が許可されています。  
+-   秒の範囲は 0 ～ 59 です。 これにより、sidereal 時間との同期を維持するために最大 2 秒のうるう秒です。  
   
  次の既存の OLE DB 構造体の実装は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい日付と時刻のデータ型をサポートするように変更されました。 ただし、定義は変更されていません。  
   
@@ -177,7 +180,7 @@ enum SQLVARENUM {
   
 |OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|注|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|date||  
+|DBTYPE_DBDATE|日付||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server の OLE DB Driver は、DBCOLUMDESC を検査*bScale*メンバーに秒の小数部の精度を確認します。|  
 |DBTYPE_DBTIME2|**時間**(p)|SQL Server の OLE DB Driver は、DBCOLUMDESC を検査*bScale*メンバーに秒の小数部の精度を確認します。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|SQL Server の OLE DB Driver は、DBCOLUMDESC を検査*bScale*メンバーに秒の小数部の精度を確認します。|  
@@ -185,6 +188,6 @@ enum SQLVARENUM {
  アプリケーションに DBTYPE_DBTIMESTAMP を指定するときに*wType*へのマッピングをオーバーライドできます**datetime2**型の名前を指定することによって*pwszTypeName*です。 場合**datetime**が指定されている*bScale* 3 をする必要があります。 場合**smalldatetime**が指定されている*bScale* 0 にする必要があります。 場合*bScale*と整合性がありません*wType*と*pwszTypeName*DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化 (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

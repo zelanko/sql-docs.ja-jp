@@ -1,5 +1,5 @@
 ---
-title: sys.masked_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.masked_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -24,29 +24,29 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 432ea847081c8f0060954efdd6e7f2beea1a592d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179298"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998044"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>sys.masked_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  使用して、 **sys.masked_columns**クエリを持つ動的データ マスク関数に適用されたテーブルの列を表示します。 このビューが継承、 **sys.columns** ビューです。 **sys.columns** ビューのすべての列と、 **is_masked** 列および **masking_function** 列を返して、マスクされた列かどうかを示し、マスクされた列の場合は、どのようなマスキング関数が定義されているかを示します。 これは、列があるマスキング関数が適用されるは表示のみを表示します。  
+  使用して、 **sys.masked_columns**クエリを持つ動的データ マスク関数がそれらに適用されたテーブルの列を表示します。 このビューが継承、 **sys.columns** ビューです。 **sys.columns** ビューのすべての列と、 **is_masked** 列および **masking_function** 列を返して、マスクされた列かどうかを示し、マスクされた列の場合は、どのようなマスキング関数が定義されているかを示します。 これは、列があるマスキング関数が適用されるは表示のみを表示します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|この列が属するオブジェクトの ID です。|  
-|name|**sysname**|列の名前です。 オブジェクト内で一意です。|  
+|NAME|**sysname**|列の名前です。 オブジェクト内で一意です。|  
 |column_id|**int**|列の ID です。 オブジェクト内で一意です。<br /><br /> 列 ID は連続した値にならないことがあります。|  
-|**sys.masked_columns**から継承された数の多い列を返します**sys.columns**です。|さまざまな|参照してください[sys.columns &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)列定義の詳細をします。|  
+|**sys.masked_columns**から継承された数の多い列を返します**sys.columns**します。|さまざまな|参照してください[sys.columns &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)列定義の詳細についてはします。|  
 |is_masked|**bit**|列はマスクされているかどうかを示します。 1 には、マスクのことを示します。|  
 |masking_function|**nvarchar (4000)**|列のマスキング関数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このビューは、ユーザーが、テーブルにある種のアクセス許可を持っているか、ユーザーが VIEW ANY DEFINITION 権限を持つかどうかに、テーブルに関する情報を返します。  
   
 ## <a name="example"></a>例  
@@ -61,7 +61,7 @@ WHERE is_masked = 1;
 ```  
   
 ## <a name="see-also"></a>参照  
- [動的なデータ マスキング](../../relational-databases/security/dynamic-data-masking.md)   
+ [動的データ マスク](../../relational-databases/security/dynamic-data-masking.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

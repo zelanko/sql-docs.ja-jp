@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a10e3133f9f865d02d90070d6304d098461bd02a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86015ca5563e15bdac6f41b76f2d824bc7079b70
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409444"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="view-information"></a>ビュー情報  
  作成されたビューごとに、10 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |状態|ビューの状態。<br /><br /> **[保存]** をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、ビューが更新中であることを示します。<br /><br /> ビューの作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
 |[オブジェクト名]|サブスクリプション ビュー名。|  

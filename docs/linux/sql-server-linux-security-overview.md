@@ -1,6 +1,6 @@
 ---
-title: SQL Server on Linux のセキュリティの制限事項 |Microsoft ドキュメント
-description: この記事では、Linux の制限の SQL Server がについて説明します。
+title: Linux 上の SQL Server のセキュリティの制限 |Microsoft Docs
+description: この記事では、Linux の制限の SQL Server について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,24 +13,25 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.openlocfilehash: 259f1d466a5d05f882bd7d53041d58b8d85c5e32
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020298"
 ---
-# <a name="security-limitations-for-sql-server-on-linux"></a>SQL Server on Linux のセキュリティの制限
+# <a name="security-limitations-for-sql-server-on-linux"></a>Linux 上の SQL Server のセキュリティの制限
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-現在、SQL Server on Linux には、次の制限があります。
+現在、Linux 上の SQL Server には、次の制限があります。
 
-* 標準のパスワード ポリシーを指定します。 MUST_CHANGE が、唯一のオプションを構成することがあります。  
+* 標準のパスワード ポリシーが提供されます。 MUST_CHANGE が、唯一のオプションを構成することがあります。  
 * 拡張キー管理はサポートされていません。 
-* Azure Key Vault に格納されたキーを使用することはサポートされていません。
-* SQL Server では、接続を暗号化するため、独自の自己署名証明書を生成します。 TLS 証明書に指定されたユーザーを使用する SQL Server を構成することができます。 
+* Azure Key Vault に格納されているキーを使用することはサポートされていません。
+* SQL Server では、接続を暗号化するため、独自の自己署名証明書を生成します。 SQL Server は、TLS 証明書に指定されたユーザーを使用するように構成できます。 
 
-SQL Server で使用できるセキュリティ機能の詳細については、次を参照してください。、 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)です。
+SQL Server で使用できるセキュリティ機能の詳細については、次を参照してください。、 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-一般的なセキュリティ タスクでは、次を参照してください。 [Linux に SQL Server のセキュリティ機能の概要](sql-server-linux-security-get-started.md)です。 TCP を変更するスクリプトのポート番号、SQL Server のディレクトリ、トレース フラグまたは照合順序を構成しを参照してください[mssql conf Linux での SQL Server の構成](sql-server-linux-configure-mssql-conf.md)です。
+セキュリティの一般的なタスクは、次を参照してください。 [Linux 上の SQL Server のセキュリティ機能の概要](sql-server-linux-security-get-started.md)します。 TCP を変更するスクリプトのポート番号、SQL Server ディレクトリ、およびトレース フラグまたは照合順序の構成を参照してください[mssql-conf での Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md)します。

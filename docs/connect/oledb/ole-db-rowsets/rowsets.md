@@ -2,10 +2,10 @@
 title: 行セット |Microsoft ドキュメント
 description: OLE DB Driver for SQL Server での行セット
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d3f187118cd273712ed8145bbfef3af712091028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ffead535df47ea3f6937e11fa16f5e32318ecf3
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690175"
 ---
 # <a name="rowsets"></a>行セット
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   行セットとは、データの列を含む行の集まりです。 行セットは、すべての OLE DB データ プロバイダーが表形式で結果セット データを公開できるようにするための重要な機能を持つオブジェクトです。  
   
@@ -51,9 +54,9 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [IOpenRowset による行セットの作成](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
+-   [IOpenRowset を使用した行セットの作成](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [Icommand::execute で行セットを作成します。](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [ICommand::Execute を使用した行セットの作成](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
 -   [行セットのプロパティと動作](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [ブックマーク](../../oledb/ole-db-rowsets/bookmarks.md)  
   
--   [行セットのデータの更新](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
+-   [行セット内のデータの更新](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

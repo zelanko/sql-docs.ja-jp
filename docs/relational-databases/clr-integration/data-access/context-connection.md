@@ -1,14 +1,11 @@
 ---
-title: コンテキスト接続 |Microsoft ドキュメント
+title: コンテキスト接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,16 +20,16 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: afe4fd0360b6ba50db7e007e6c3e6fbc78c3060f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d464e257ca7d0f967dfbaf9325f3a30a30f0bc3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918149"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356864"
 ---
 # <a name="context-connection"></a>コンテキスト接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  内部データへのアクセスに関する問題は、ごく一般的なものです。 内部データにアクセスすることは、CLR (共通言語ランタイム) ストアド プロシージャや関数を実行しているサーバーへのアクセスを考えることです。 1 つのオプションを使用して接続を作成する**System.Data.SqlClient.SqlConnection**をローカル サーバーを指す接続文字列の指定、および接続を開きます。 これには、ログインのための資格情報を指定することが必要になります。 接続がストアド プロシージャまたは関数よりも、別のデータベース セッションに、異なる場合があります**設定**別のトランザクションでは、オプションで、一時テーブルを認識しないようにします。 マネージ ストアド プロシージャや関数のコードが SQL Server プロセスで実行されているということは、だれかがそのサーバーに接続して、マネージ コードを呼び出す SQL ステートメントを実行したことを意味します。 多くの場合、ストアド プロシージャまたはそのトランザクションと共に、その接続のコンテキストで実行される関数を**設定**オプション、およびなどです。 これを "コンテキスト接続" と呼びます。  
+  内部データへのアクセスに関する問題は、ごく一般的なものです。 内部データにアクセスすることは、CLR (共通言語ランタイム) ストアド プロシージャや関数を実行しているサーバーへのアクセスを考えることです。 1 つのオプションを使用して接続を作成する**System.Data.SqlClient.SqlConnection**でローカルのサーバーを指す接続文字列を指定して、接続を開きます。 これには、ログインのための資格情報を指定することが必要になります。 接続がストアド プロシージャや関数よりも、別のデータベース セッションでは、異なる場合があります**設定**別個のトランザクションでは、オプションで、一時テーブルを認識しない、という具合です。 マネージド ストアド プロシージャや関数のコードが SQL Server プロセスで実行されているということは、だれかがそのサーバーに接続して、マネージド コードを呼び出す SQL ステートメントを実行したことを意味します。 ストアド プロシージャまたは関数をそのトランザクションと共に、その接続のコンテキストで実行する可能性があります**設定**オプション、という具合です。 これを "コンテキスト接続" と呼びます。  
   
  コンテキスト接続を使用すると、コードを最初に呼び出したのと同じコンテキストで Transact-SQL ステートメントを実行することができます。 コンテキスト接続を取得するには、次の例に示すように "context connection" 接続文字列キーワードを使用する必要があります。  
   
@@ -57,10 +54,10 @@ End Using
 ```  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [正規の vs です。コンテキスト接続](../../../relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md)  
+ [通常の接続とコンテキスト接続](../../../relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md)  
  通常の接続とコンテキスト接続の違いについて説明します。  
   
- [標準モードとコンテキスト接続に関する制限事項](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)  
+ [通常の接続とコンテキスト接続に関する制限事項](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)  
  通常の接続とコンテキスト接続の制限事項について説明します。  
   
   

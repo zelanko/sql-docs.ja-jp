@@ -2,7 +2,6 @@
 title: HelpContext、HelpFile プロパティ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fdd4316a0d1ca1e75b074590755a65267e93ca0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 708ce57e129ed84dcbafa837916c299a76739e0d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278911"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile プロパティ
 ヘルプ ファイルとに関連付けられているトピックを示します、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **HelpFile**を返します、**文字列**ヘルプ ファイルを完全に解決されたパスに評価される値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ヘルプ ファイルが指定されている場合、 **HelpFile** 、プロパティ、 **HelpContext**プロパティの使用に自動的に識別するヘルプ トピックを表示します。 使用可能な関連するヘルプ トピックがない場合、 **HelpContext**プロパティは 0 を返しますと**HelpFile**プロパティが長さ 0 の文字列を返します ("") です。  
   
 ## <a name="applies-to"></a>適用対象  

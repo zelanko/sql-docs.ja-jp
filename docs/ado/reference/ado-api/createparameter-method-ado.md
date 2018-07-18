@@ -2,7 +2,6 @@
 title: CreateParameter メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878ebc66b72724eea326683634cde7f122a815f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 865b2b0b8009b03e33e24f72ab4f336910a17ace
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277251"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter メソッド (ADO)
 新たに作成[パラメーター](../../../ado/reference/ado-api/parameter-object.md)指定したプロパティを持つオブジェクト。  
@@ -41,22 +41,22 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  返します、**パラメーター**オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
- *名前*  
- 省略可。 A**文字列**値の名前を含む、**パラメーター**オブジェクト。  
+ *Name*  
+ 任意。 A**文字列**値の名前を含む、**パラメーター**オブジェクト。  
   
- *型*  
- 省略可。 A[格納](../../../ado/reference/ado-api/datatypeenum.md)のデータ型を指定する値、**パラメーター**オブジェクト。  
+ *Type*  
+ 任意。 A[格納](../../../ado/reference/ado-api/datatypeenum.md)のデータ型を指定する値、**パラメーター**オブジェクト。  
   
- *方向*  
- 省略可。 A[値](../../../ado/reference/ado-api/parameterdirectionenum.md)の種類を指定する値**パラメーター**オブジェクト。  
+ *[方向]*  
+ 任意。 A[値](../../../ado/reference/ado-api/parameterdirectionenum.md)の種類を指定する値**パラメーター**オブジェクト。  
   
- *サイズ*  
- 省略可。 A**長い**文字またはバイトで、パラメーターの値の最大長を指定する値。  
+ *[サイズ]*  
+ 任意。 A**長い**文字またはバイトで、パラメーターの値の最大長を指定する値。  
   
- *値*  
- 省略可。 A**バリアント**の値を指定する、**パラメーター**オブジェクト。  
+ *Value*  
+ 任意。 A**バリアント**の値を指定する、**パラメーター**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **CreateParameter**メソッドを作成、新しい**パラメーター**指定された名前、型、方向、サイズ、および値を持つオブジェクト。 対応する引数を渡す任意の値が書き込まれます**パラメーター**プロパティです。  
   
  このメソッドは自動的に追加しません、**パラメーター**オブジェクトを**パラメーター**のコレクション、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 これにより、追加のプロパティを追加するときに値が ADO は検証を設定する、**パラメーター**オブジェクトをコレクション。  

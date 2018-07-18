@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e38b45781566ac04acdfb7584f8f10ed249d44c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e3603e4eb3f446518562eec82cf33d02d0ff1fa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411664"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
   SQL 実行タスク、OLE DB ソース、OLE DB 変換先、および参照変換では、SQL クエリを使用できます。 SQL 実行タスクでは、SQL ステートメントによってデータベース オブジェクトとデータを作成、更新、および削除したり、ストアド プロシージャを実行したり、SELECT ステートメントを実行したりすることができます。 OLE DB ソースと参照変換の場合、通常 SQL ステートメントは SELECT ステートメントまたは EXEC ステートメントです。 EXEC ステートメントで最もよく実行するのは、結果セットを返すストアド プロシージャです。  
@@ -95,7 +94,7 @@ SQL ステートメントは次の方法で提供できます。
  **[ツール バー]**  
  ツール バーは、データセットの管理、表示するペインの選択、クエリ機能の制御に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[ダイアグラム ペインの表示/非表示]**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。|  
 |**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。|  
@@ -112,7 +111,7 @@ SQL ステートメントは次の方法で提供できます。
  **[クエリ定義]**  
  クエリ定義は、クエリの定義およびテストを行うツール バーおよびペインを提供します。  
   
-|ペイン|Description|  
+|ペイン|[説明]|  
 |----------|-----------------|  
 |**[ダイアグラム]** ペイン|クエリをダイアグラムに表示します。 このダイアグラムには、クエリに含まれるテーブルと、その結合状態が表示されます。 テーブルの列の横にあるチェック ボックスをオンにすると、クエリの出力にその列が追加されます。オフにすると、削除されます。<br /><br /> テーブルをクエリに追加すると、クエリ ビルダーにより、テーブルのキーに応じてテーブル間の結合が行われます。 結合を追加するには、あるテーブルのフィールドを別のテーブルのフィールドにドラッグします。 結合を管理するには、結合を右クリックしてからメニュー オプションを選択します。<br /><br /> **[ダイアグラム]** ペインを右クリックすると、テーブルの追加や削除、すべてのテーブルの選択、ペインの表示と非表示の切り替えを行うことができます。|  
 |**[グリッド]** ペイン|クエリをグリッドに表示します。 このペインを使用して、クエリの列の追加や削除を行うことができます。また、各列の設定も変更できます。|  

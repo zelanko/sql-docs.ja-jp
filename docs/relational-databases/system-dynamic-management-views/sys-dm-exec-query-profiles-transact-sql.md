@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_profiles (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_query_profiles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046140"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/23/2018
 ## <a name="table-returned"></a>返されるテーブル  
  返されるカウンターは、演算子別、スレッド別です。 結果は動的であり、クエリの終了時にのみ出力を作成する SET STATISTICS XML ON などの既存のオプションの結果とは一致しません。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|このクエリが実行されるセッションを識別します。 dm_exec_sessions.session_id を参照します。|  
 |request_id|**int**|対象の要求を識別します。 dm_exec_sessions.request_id を参照します。|  
@@ -74,8 +75,8 @@ ms.lasthandoff: 05/23/2018
 |lob_read_ahead_count|**bigint**|これまでの LOB 先行読み取りの数。|  
 |segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
 |segment_skip_count|**int**|これまでのセグメント スキップの数。| 
-|actual_read_row_count|**bigint**|残余述語が適用される前に、演算子によって読み取られる行の数。| 
-|estimated_read_row_count|**bigint**|**適用されます:** で始まる[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>残余述語が適用される前に、演算子で読み取られる行の数が推定されます。|  
+|actual_read_row_count|**bigint**|残余述語が適用される前に、演算子によって読み取られた行の数。| 
+|estimated_read_row_count|**bigint**|**適用対象:** 以降[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>残余述語が適用される前に、演算子によって読み取られる行の数が推定されます。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  クエリ プラン ノードで IO がない場合、IO 関連のすべてのカウンターは NULL に設定されます。  
@@ -86,20 +87,20 @@ ms.lasthandoff: 05/23/2018
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
- 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、標準的なクエリ実行の統計がプロファイリング インフラストラクチャでは、プロファイリング インフラストラクチャ軽量のクエリ実行の統計のサイド バイ サイドが存在します。 新しいクエリ実行統計プロファイル インフラストラクチャでは、行の実際の数など、演算子ごとのクエリ実行の統計を収集する場合のパフォーマンスのオーバーヘッドが大幅に削減します。 グローバルを使用してこの機能を有効にすることができますスタートアップ[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)が自動的にオン query_thread_profile 拡張イベントを使用する場合またはします。
+ 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、標準的なクエリの実行統計プロファイリング インフラストラクチャでは、軽量なクエリの実行統計プロファイリング インフラストラクチャのサイド バイ サイドでが存在します。 新しいクエリ実行統計プロファイリング インフラストラクチャは、行の実際の数などの演算子ごとのクエリ実行統計を収集する場合のパフォーマンスのオーバーヘッドを大幅に削減します。 グローバルを使用してこの機能を有効にすることができますスタートアップ[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)が自動的にオン query_thread_profile 拡張イベントを使用する場合またはします。
 
 >[!NOTE]
-> CPU と経過時間は、パフォーマンスに与える影響を軽減する軽量なクエリ実行統計プロファイル インフラストラクチャではサポートされていません。
+> CPU と経過時間は、パフォーマンスに与える影響を軽減する軽量なクエリの実行統計プロファイリング インフラストラクチャでサポートされていません。
 
- STATISTICS XML ON および SET STATISTICS PROFILE ON プロファイリング インフラストラクチャ従来のクエリ実行の統計を常に使用を設定します。
+ XML ON および SET STATISTICS PROFILE ON の従来のクエリの実行統計プロファイリング インフラストラクチャを使用して、常に統計情報を設定します。
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
    
 ## <a name="examples"></a>使用例  
- Sys.dm_exec_query_profiles を分析するクエリを実行することを計画しているセッションに手順 1: ログインします。 構成するのには、プロファイルのクエリは、SET STATISTICS PROFILE を使用します。 この同じセッションでクエリを実行します。  
+ Sys.dm_exec_query_profiles を分析するクエリを実行することを計画しているセッションに手順 1: ログインします。 構成するには、プロファイルのクエリで SET STATISTICS PROFILE を使用します。 この同じセッションでクエリを実行します。  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -131,7 +132,7 @@ ORDER BY node_id;
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

@@ -2,7 +2,6 @@
 title: MemberTypeEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fea8c8e217275906b1f04f06a2c20b697255f0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d98b66ad2941d34f15d49d146cea622e4d39457
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284701"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 設定を指定、[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)のプロパティ、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクト。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|示します、**メンバー**オブジェクトは、レベルのすべてのメンバーを表します。|  
 |**adMemberFormula**|3|示します、**メンバー**オブジェクトは、数式を使用して計算されます。|  

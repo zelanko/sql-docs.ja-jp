@@ -2,7 +2,6 @@
 title: Execute メソッド (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c050ef685d6e3ef566d78307db2c10c2c01c23e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 488b4056ca768cfae943558aefc9922bd1a16368
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288193"
 ---
 # <a name="execute-method-rds"></a>Execute メソッド (RDS)
 要求を実行し、2.5 以降、ADO で使用する ADO レコード セットを作成します。  
@@ -81,7 +81,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  実行によって返される情報エラーへのポインター。 NULL の場合、エラー情報は返されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  *HandlerString*パラメーターを null にすることがあります。 この場合の動作は、RDS サーバーを構成する方法によって異なります。 "MSDFMAP.handler"のハンドラーの文字列では、Microsoft から提供されたハンドラー (Msdfmap.dll) を使用することを示します。 "MASDFMAP.handler,sample.ini"のハンドラー文字列は、Msdfmap.dll ハンドラーを使用することと、"sample.ini"の引数をハンドラーに渡される必要があることを示します。 MSDFMAP.dll は、方向、sample.ini を使用して、接続およびクエリ文字列を確認すると、引数を解釈します。  
   
 ## <a name="applies-to"></a>適用対象  

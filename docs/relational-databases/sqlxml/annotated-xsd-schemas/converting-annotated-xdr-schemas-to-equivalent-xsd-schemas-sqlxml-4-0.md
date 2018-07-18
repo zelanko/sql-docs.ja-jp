@@ -1,5 +1,5 @@
 ---
-title: 変換する XDR スキーマから同等の XSD スキーマ (SQLXML 4.0) 注釈が付けられた |Microsoft ドキュメント
+title: 注釈付き XDR スキーマから同等の XSD スキーマ (SQLXML 4.0) を変換する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a841cf9e5bcfe3c1de5c199fa29984c709631598
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969827"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047280"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>注釈付き XDR スキーマから同等の XSD スキーマへの変換 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  各要素の説明は次のとおりです。  
   
  XDRFileName  
- XSD に変換する XDR ファイルの名前を指定します。 このツールでは入力 XDR ファイルが読み取られ、現在の作業ディレクトリに XSD 出力ファイルが作成されます。 入力ファイルに拡張子 .xdr または .xml が付けられている場合、出力 XSD ファイルは同じ名前で拡張子が .xsd に変更されます。 場合は、入力ファイル名拡張子が .xml または .xdr (または、拡張機能が不足しているかどうか)、以外は、同じ名前の出力ファイルが作成され、入力ファイル名に拡張子 .xsd が追加されます。 たとえば、入力 XDR ファイル名が SampleFile.abc の場合、出力される XSD ファイルは SampleFile.abc.xsd になります。  
+ XSD に変換する XDR ファイルの名前を指定します。 このツールでは入力 XDR ファイルが読み取られ、現在の作業ディレクトリに XSD 出力ファイルが作成されます。 入力ファイルに拡張子 .xdr または .xml が付けられている場合、出力 XSD ファイルは同じ名前で拡張子が .xsd に変更されます。 場合は、入力ファイル名拡張子は .xml または .xdr (または、拡張機能が不足しているかどうか)、以外は、同じ名前の出力ファイルが作成され、入力ファイル名に拡張子 .xsd が追加されます。 たとえば、入力 XDR ファイル名が SampleFile.abc の場合、出力される XSD ファイルは SampleFile.abc.xsd になります。  
   
  -y  
  (省略可) 既存の XSD ファイルを、変換ツールで生成される XSD ファイルで上書きします。 このフラグを指定しない場合は、既存の XSD ファイルを上書きするかどうかを確認するメッセージが表示され、このときに出力ファイル名を変更できます。  
@@ -60,10 +60,10 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  (省略可) ツールによる変換処理で発生する、致命的でない警告を返します。 既定では、致命的なエラーだけが表示されます。  
   
  -?  
- 指定できるオプションの一覧を返します**cvtschema**とその説明です。  
+ 指定できるオプションの一覧を返します**cvtschema**とその説明。  
   
 ## <a name="see-also"></a>参照  
- [XPath データ型に XSD データ型のマッピング&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
+ [XSD データ型を XPath データ型にマッピング&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
  [XSD 注釈&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

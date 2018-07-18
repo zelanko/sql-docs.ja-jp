@@ -15,18 +15,16 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 63f7f18921d856753162a22e8fbf079834105164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce0a1a62d294f510a9521ef38d178157244f1de2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021359"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703303"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、ページ分割されたレポートが XML 形式で返されます。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  
-  
- HTML 表示拡張機能は、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Web ポータルで実行する場合など、ブラウザーで表示されるレポートの既定の表示拡張機能です。  
-  
+
  HTML 表示拡張機能は、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Web ポータルで実行する場合など、ブラウザーで表示されるレポートの既定の表示拡張機能です。 HTML 表示拡張機能を使用すると、HTML を部分的に表示することも、完全な HTML ドキュメントとして表示することもできます。 HTML がフラグメントの場合、HTML ドキュメントの **HEAD**タグ、 **HTML**タグ、および **BODY** タグが削除されています。 表示されるのは、 **BODY** タグの内容のみです。 これは、他のアプリケーションで作成した HTML に HTML を埋め込む場合に便利です。  
   
  状況によっては、レポート パラメーターを使用して、レポートが HTML で表示される際にスクリプト インジェクション攻撃を開始することも可能であることを意味します。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  

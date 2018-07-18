@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6444d370a8eecec4df7d1a702354851892d007d
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619559"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgError"></a> エラー メッセージ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTS_E_** で始まります。  
   
-|16 進コード|10 進コード|シンボル名|Description|  
+|16 進コード|10 進コード|シンボル名|[説明]|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|転送先でストアド プロシージャ "%1" を上書きしています。|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|列 "%2" のデータ型 "%1" は、%3 に対してはサポートされていません。 この列は DT_NTEXT に変換されます。|  
@@ -1047,7 +1046,7 @@ ms.lasthandoff: 05/03/2018
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|このバッファーは孤立しています。 未解決のバッファーを残したまま、バッファー マネージャーがシャットダウンされたため、バッファーがクリーンアップされません。 メモリ リークや他の問題が発生する可能性があります。|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|エラー コード 0x%2!8.8X! により、"%1" という名前の入力列を検索できませんでした。 指定された入力列が入力列のコレクションに見つかりませんでした。|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|エラー コード 0x%2!8.8X! により、系列 ID %1!d! の入力列を 検索できませんでした。 入力列が入力列のコレクションに見つかりませんでした。|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|式に、認識できないトークン "%1" が含まれています。 "%1" が変数の場合、トークンは "@%1" と表記される必要があります。 指定されたトークンが無効です。 トークンが変数名である場合、先頭に @ 記号を付ける必要があります。|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|式に、認識できないトークン "%1" が含まれています。 "%1" が変数の場合、トークンは "\@%1" と表記される必要があります。 指定されたトークンが無効です。 トークンが変数名である場合、先頭に @ 記号を付ける必要があります。|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|式に、認識できないトークン "#%1!d!" が含まれています。|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|変数 "%1" が Variables コレクションに見つかりませんでした。 変数が正しいスコープに存在しない可能性があります。|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|式 "%1" を解析できませんでした。 この式には無効なトークン、不完全なトークン、または無効な要素が含まれている可能性があります。 また、適切な形式ではないか、かっこなどの必要な要素の一部が不足している可能性があります。|  
@@ -2025,7 +2024,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgWarning"></a> 警告メッセージ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、 **DTS_W_** で始まります。  
   
-|16 進コード|10 進コード|シンボル名|Description|  
+|16 進コード|10 進コード|シンボル名|[説明]|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|評価期間は あと %1!lu! 日間残っています。 評価期間が終了すると、パッケージを実行できなくなります。|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|警告が発生しました。 この警告の前に、より具体的な警告が発生しており、その警告で詳細が説明されています。|  
@@ -2081,8 +2080,8 @@ ms.lasthandoff: 05/03/2018
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|タスクが操作 "%1" を実行できませんでした。|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|ファイル/プロセス "%1" がパス上にありません。|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|件名が空です。|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|[宛先] 行に指定されたアドレスの形式が正しくありません。 "@" 記号がないか、無効です。|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|[差出人] 行に指定されたアドレスの形式が正しくありません。 "@" 記号がないか、無効です。|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|[宛先] 行に指定されたアドレスの形式が正しくありません。 "\@" 記号がないか、無効です。|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|[差出人] 行に指定されたアドレスの形式が正しくありません。 "\@" 記号がないか、無効です。|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|2 つの XML ドキュメントが異なっています。|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD の検証には、XML ドキュメント内の DOCTYPE 行で定義されている DTD ファイルが使用されます。 プロパティ "%1" に割り当てられているものは使用されません。|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|タスクが "%1" を検証できませんでした。|  
@@ -2171,7 +2170,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgInfo"></a> 情報メッセージ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、 **DTS_I_** で始まります。  
   
-|16 進コード|10 進コード|シンボル名|Description|  
+|16 進コード|10 進コード|シンボル名|[説明]|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|このコンテナーの分散トランザクションを開始しています。|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|このコンテナーで開始された分散トランザクションをコミットしています。|  
@@ -2270,7 +2269,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgGeneral"></a> 一般的なメッセージおよびイベント メッセージ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTS_MSG_** で始まります。  
   
-|16 進コード|10 進コード|シンボル名|Description|  
+|16 進コード|10 進コード|シンボル名|[説明]|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|関数が正しくありません。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|指定されたファイルが見つかりません。|  
@@ -2309,7 +2308,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgSuccess"></a> 成功時のメッセージ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、 **DTS_S_** で始まります。  
   
-|16 進コード|10 進コード|シンボル名|Description|  
+|16 進コード|10 進コード|シンボル名|[説明]|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|値が NULL です。|  
 |0x40005|262149|DTS_S_TRUNCATED|文字列値が切り捨てられました。 バッファーで列には長すぎる文字列を受け取ったため、バッファーにより文字列が切り捨てられました。|  
@@ -2318,7 +2317,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgPipeline"></a> データ フロー コンポーネントのエラー メッセージ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTSBC_E_** で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
   
-|16 進コード|10 進コード|シンボル名|Description|  
+|16 進コード|10 進コード|シンボル名|[説明]|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|出力とエラー出力の合計件数 %1!lu! が正しくありません。 正しくは、%2!lu! 件である必要があります。|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|インデックス %1!lu! で出力を取得できません。|  

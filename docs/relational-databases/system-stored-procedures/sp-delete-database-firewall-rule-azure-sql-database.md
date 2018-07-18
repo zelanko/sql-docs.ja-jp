@@ -1,5 +1,5 @@
 ---
-title: sp_delete_database_firewall_rule (Azure SQL データベース) |Microsoft ドキュメント
+title: sp_delete_database_firewall_rule (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: ''
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0178f70f2ea71af12f53109b4dbde0240977c9d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241350"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049490"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  データベース レベルのファイアウォール設定を削除、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。 データベースのファイアウォール ルールを構成および master のデータベースとユーザー データベースを削除できる[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。   
+  データベース レベルのファイアウォール設定を削除します、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。 データベースのファイアウォール規則を構成および master のデータベースとユーザー データベースを削除できる[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]します。   
   
  
 ## <a name="syntax"></a>構文  
@@ -49,13 +49,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>引数  
  [ **@name =**] **'***名前***'**  
- 削除するデータベース レベルのファイアウォール設定の名前。 *名前*は**nvarchar (128)** 既定値はありません。 Unicode 識別子`N`は省略可能です[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。 
+ 削除するデータベース レベルのファイアウォール設定の名前。 *名前*は**nvarchar (128)** で既定値はありません。 Unicode 識別子`N`は省略可能です[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]します。 
   
-## <a name="permissions"></a>権限  
- サーバー レベル プリンシパル ログインのみ、プロビジョニング プロセスまたはデータベース レベルのファイアウォール ルールを削除できるの管理者として割り当てられている Azure Active Directory プリンシパルによって作成します。  
+## <a name="permissions"></a>アクセス許可  
+ サーバー レベル プリンシパル ログインだけプロビジョニング プロセスまたはデータベース レベルのファイアウォール ルールを削除できるの管理者として割り当てられている、Azure Active Directory プリンシパルによって作成します。  
   
 ## <a name="example"></a>例  
- 次の例では、削除、データベース レベルのファイアウォール設定名前付き`Example DB Setting 1`します。
+ 次の例では、データベース レベルのファイアウォール設定の名前付き`Example DB Setting 1`します。
   
 ```  
 -- Remove database-level firewall setting  
@@ -64,11 +64,11 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
 ```  
   
 ## <a name="see-also"></a>参照  
- [Azure SQL データベース ファイアウォール](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
+ [Azure SQL Database ファイアウォール](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [方法: ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sp_set_database_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40;Azure SQL データベース&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
+ [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   
 

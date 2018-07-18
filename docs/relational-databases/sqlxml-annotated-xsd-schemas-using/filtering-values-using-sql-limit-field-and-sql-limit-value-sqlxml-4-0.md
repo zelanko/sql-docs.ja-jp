@@ -1,5 +1,5 @@
 ---
-title: 使用した、値をフィルター処理のフィールドと sql:limit-値 (SQLXML 4.0) |Microsoft ドキュメント
+title: Sql:limit の値を使用してフィルター処理、および -(SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,22 +25,22 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cc72a5c28166d3eac2b1ee9200bb1c6549b818cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972117"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032582"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 **Sql:limit-フィールド**と**sql:limit-値**注釈を使用制限値を含むデータベース列を識別するデータをフィルター処理に使用する特定の制限値を指定するには返されます。  
+  データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 **Sql:limit-フィールド**と**sql:limit-値**注釈を使用して制限値を含むデータベース列を識別するために、データをフィルター処理に使用する特定の制限値を指定するには返されます。  
   
- **Sql:limit-フィールド**注釈が制限値を格納する列を識別するためです。 各マップ要素または属性で許可されています。  
+ **Sql:limit-フィールド**は注釈は、制限値を含む列を識別するために使用されます。 各マップ要素または属性で許可されています。  
   
- **Sql:limit-値**注釈を使用で指定されている列に適用する制限値を指定する、 **sql:limit-フィールド**注釈。 **Sql:limit-値**注釈は省略可能です。 場合**sql:limit-値**が指定されていない、NULL 値が使用されます。  
+ **Sql:limit-値**で指定されている列に適用する制限値を指定する注釈が使用される、 **sql:limit-フィールド**注釈。 **Sql:limit-値**注釈は省略可能です。 場合**sql:limit-値**が指定されていない場合、NULL 値が使用されます。  
   
 > [!NOTE]  
->  使用する場合、 **sql:limit-フィールド**型のマップされる SQL 列がここでは**実際**、SQLXML 4.0 で変換を実行する、 **sql:limit-値**XML スキーマで指定しました。として、 **nvarchar**値を指定します。 ここで、10 進数の制限値を完全な科学的表記法で指定する必要があります。 詳細については、後の例 B を参照してください。  
+>  使用する場合、 **sql:limit-フィールド**型のマップされる SQL 列のある**実際**、SQLXML 4.0 で変換を実行する、 **sql:limit-値**XML スキーマで指定されています。として、 **nvarchar**値を指定します。 ここで、10 進数の制限値を完全な科学的表記法で指定する必要があります。 詳細については、後の例 B を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するには、次がインストールされている必要があります。  
@@ -60,7 +60,7 @@ ms.locfileid: "32972117"
   
  顧客には、発送先住所と請求先住所のいずれかまたは両方が設定されています。 AddressType 列の値は Shipping と Billing です。  
   
- これは、マッピング スキーマで、 **ShipTo**スキーマ属性が Addresses リレーションの StreetAddress 列にマップします。 この属性に対して返される値を指定することによってのみ出荷先住所に限られます、 **sql:limit-フィールド**と**sql:limit-値**注釈。 同様に、 **BillTo**スキーマ属性には、顧客の請求先住所だけが返されます。  
+ これは、マッピング スキーマで、 **ShipTo**スキーマ属性が Addresses リレーションの StreetAddress 列にマップされます。 この属性に対して返される値は指定することでのみ出荷先住所に制限されます、 **sql:limit-フィールド**と**sql:limit-値**注釈。 同様に、 **BillTo**スキーマ属性が顧客の請求先住所だけを返します。  
   
  スキーマは次のようになります。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "32972117"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に使用する ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  結果を次に示します。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "32972117"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- これは、マッピング スキーマで、 **OrderID**注文の詳細に属性が orders リレーションの OrderID 列にマップします。 この属性に対して返される値 2.0000000 値が設定されているもののみに限られます-001 (0.2) が指定されて、 **Discount**属性を使用して、 **sql:limit-フィールド**と**sql:limit-値**注釈。  
+ これは、マッピング スキーマで、 **OrderID**注文の詳細属性が orders リレーションの OrderID 列にマップされます。 この属性に対して返される値は 2.0000000 値を持つもののみに制限されています-001 (0.2) が指定されて、**割引**属性を使用して、 **sql:limit-フィールド**と**sql:limit-値**注釈。  
   
  スキーマは次のようになります。  
   

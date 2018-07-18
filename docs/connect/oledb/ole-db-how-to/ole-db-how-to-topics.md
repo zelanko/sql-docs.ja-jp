@@ -2,10 +2,10 @@
 title: OLE DB の操作方法に関するトピック |Microsoft ドキュメント
 description: OLE DB の操作方法に関するトピック
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,50 +16,53 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5a1d3136717e2afdb91d87da8c3c928d9eabc874
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d26d126d8a25c59fa30b9ac7a51e33bcdb3f0f97
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665902"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server を使用するのには、サーバーへの接続、コマンドを実行し、結果の処理方法を理解する必要です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [処理結果の操作方法に関するトピック (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+-   [結果を処理方法に関するトピック&#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [大規模なデータ & #40; OLE DB & #41; を設定します。](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [大きなデータを設定&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
--   [OLE DB データ ソース (&) #40";"OLE DB"&"#41; を列挙します。](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
+-   [OLE DB データ ソースを列挙&#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
--   [一括データのコピーを使用して IRowsetFastLoad (&) #40 です。 OLE DB & #41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
+-   [データを一括コピー IRowsetFastLoad を使用した&#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
   
--   [FAST_FORWARD カーソルを取得します。](../../oledb/ole-db-how-to/obtain-a-fast-forward-cursor.md)  
+-   [FAST_FORWARD カーソルの取得](../../oledb/ole-db-how-to/obtain-a-fast-forward-cursor.md)  
   
--   [ブックマーク (&) #40";"OLE DB"&"#41; を使用して行を取得します。](../../oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
+-   [ブックマークを使用して行を取得&#40;OLE DB&#41;](../../oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Irow::getcolumns & #40; または irow::open #41; を使用して列をフェッチします。ISequentialStream](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [Irow::getcolumns を使用して列をフェッチ&#40;または irow::open&#41;と ISequentialStream](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Irow::getcolumns (&) #40";"OLE DB"&"#41; を使用して列をフェッチします。](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [Irow::getcolumns を使用して列をフェッチ&#40;OLE DB&#41;](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
   
--   [変更 SQL サーバー認証のユーザー パスワード (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
+-   [SQL Server 認証のユーザー パスワードの変更&#40;OLE DB&#41;](../../oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [強化された日付と時刻の機能 (&) #40";"OLE DB"&"#41; の使用](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
+-   [強化された日付と時刻の機能の使用&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
--   [Filestream と OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)  
+-   [FILESTREAM と OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
--   [IROWSETFASTLOAD と ISEQUENTIALSTREAM (&) #40";"OLE DB"&"#41; を使用して SQL SERVER に BLOB データを送信します。](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+-   [IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用して SQL SERVER に BLOB データを送信&#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [大きな CLR Udt & #40; OLE DB & #41; を使用します。](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [大きな CLR Udt を使用して&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
--   [表示列およびカタログ メタデータをスパース列 (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+-   [表示列およびカタログ メタデータのスパース列の&#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [統合 Kerberos 認証 (&) #40 です。 OLE DB (&) #41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
+-   [統合 Kerberos 認証&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   
--   [使用してテーブル値パラメーター (&) #40 です。 OLE DB (&) #41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+-   [テーブル値パラメーターを使用して&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  

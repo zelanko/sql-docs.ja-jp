@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 82bdae63648dcd579090b7fa418709a6c48258be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d03cc1734e5efdea3a275be5a22d1e351abda1e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333596"
 ---
 # <a name="model-deployment-options-master-data-services"></a>モデル配置オプション (マスター データ サービス)
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、システム管理のモデル配置ウィザードまたは MDSModelDeploy ツールのいずれかを使用してモデルを配置する際に何を選択すればよいかを決定するのに役立ちます。  
   
-|オプション|Description|注|  
+|オプション|[説明]|注|  
 |------------|-----------------|-----------|  
 |ボタンを使用して新しい|一意の名前を持つ新しいモデルを作成します。 すべてのモデル オブジェクトに新しい識別子が作成されます。|新しい識別子を持つ新しいモデルを作成した場合、後でモデル配置ツールを使用してモデルに更新を適用することはできません。 Web アプリケーションのウィザードを使用してモデル パッケージを配置ときに、同じ名前または ID を持つモデルが既に存在している場合、選択できるのは新しいモデルの作成のみです。|  
 |複製|パッケージ内のモデルの正確な複製である新しいモデルを作成します。 このオプションは、名前または識別子が同じモデルがターゲット環境内に存在しない場合にのみ機能します。 複数の環境に同じモデルがあり、複製したモデルを後で更新する場合は、"複製" を使用します。|これは、Web アプリケーションのウィザードの既定の動作です。 同じ名前または ID を持つモデルが既に存在する場合は、代わりに新しいモデルを作成するよう求められます。|  

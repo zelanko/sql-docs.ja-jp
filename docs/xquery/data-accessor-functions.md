@@ -1,5 +1,5 @@
 ---
-title: データ アクセサー関数 |Microsoft ドキュメント
+title: データ アクセサー関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6ffe984949061ac58b80e2ee82335927fdacc1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077829"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026869"
 ---
 # <a name="data-accessor-functions"></a>データ アクセサー関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33077829"
   このセクションのトピックでは、データ アクセサー関数のサンプル コードについて説明し、そのコードを提供します。  
   
 ## <a name="understanding-fndata-fnstring-and-text"></a>fn:data()、fn:string()、text() について  
- XQuery 関数を持つ**fn:data()** 値を抽出するスカラー、型指定されたノード、ノード テストから**text()** テキスト ノード、および関数を返す**fn:string()** を返す、ノードの文字列値です。 この 3 つのアクセサーの使用方法が紛らわしい場合があります。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でこれらを使用する場合のガイドラインを示します。 XML インスタンス\<age > 12 \< /有効期間の > は、わかりやすくするために使用します。  
+ XQuery 関数を持つ**fn:data()** ノード、ノード テストからスカラー、型指定された値を抽出する**text()** テキスト ノード、および関数を返す**fn:string()** を返す、ノードの文字列値。 この 3 つのアクセサーの使用方法が紛らわしい場合があります。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でこれらを使用する場合のガイドラインを示します。 XML インスタンス\<age > 12\<age/> の図のために使用されます。  
   
 -   型指定されていない XML : パス式 /age/text() はテキスト ノード "12" を返します。 関数 fn:data(/age) および fn:string(/age) は文字列値 "12" を返します。  
   

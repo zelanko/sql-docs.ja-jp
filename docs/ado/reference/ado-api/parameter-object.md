@@ -2,7 +2,6 @@
 title: パラメーター オブジェクト |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59474a000d3def675caf66085380c6a3791805c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280711"
 ---
 # <a name="parameter-object"></a>Parameter オブジェクト
 パラメーターまたはに関連付けられている引数を表します、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトがパラメーター化されたクエリまたはストアド プロシージャに基づいています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  プロバイダーの多くは、パラメーター化コマンドをサポートします。 これらは、目的のアクションが定義されている、1 回のコマンドが、変数 (またはパラメーター) は、コマンドのいくつかの詳細を変更するために使用します。 たとえば、SQL SELECT ステートメントでは、WHERE 句、および並べ替え句の列名を定義するのに別の一致条件を定義するのにパラメーターを使用する可能性があります。  
   
  **パラメーター**オブジェクトは、パラメーター化クエリに関連付けられているパラメーターを表すか、ストアド プロシージャの入力/出力引数および戻り値。 プロバイダー、いくつかのコレクション、メソッド、またはのプロパティの機能によって、**パラメーター**オブジェクトを使用できない可能性があります。  

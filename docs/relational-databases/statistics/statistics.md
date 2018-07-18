@@ -3,12 +3,9 @@ title: 統計 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: statistics
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a44bb869e9954c0bd080f23bc6b09913ea011617
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: fdc7c247878ae7d493ed4a15716d2b180a9f9952
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34154612"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429201"
 ---
 # <a name="statistics"></a>統計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -146,7 +142,7 @@ AUTO_UPDATE_STATISTICS の制御の詳細については、「[SQL Server 内の
 * アプリケーションで統計の更新を待機している 1 つ以上のクエリによって、クライアント要求がタイムアウトする場合。 場合によっては、同期統計を待機していることが原因で、厳しいタイムアウト時間が設定されたアプリケーションが失敗することがあります。  
   
 #### <a name="incremental"></a>INCREMENTAL   
- CREATE STATISTICS の INCREMENTAL オプションが ON の場合、作成される統計情報はパーティションごとの統計になります。 OFF の場合、統計ツリーが削除され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって統計が再計算されます。 既定値は OFF です。 この設定は、データベース レベルの INCREMENTAL プロパティよりも優先されます。 増分統計の作成の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 パーティションごとの統計を自動的に作成する方法の詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 
+ CREATE STATISTICS の INCREMENTAL オプションが ON の場合、作成される統計情報はパーティションごとの統計になります。 OFF の場合、統計ツリーが削除され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって統計が再計算されます。 既定値は OFF です。 この設定は、データベース レベルの INCREMENTAL プロパティをオーバーライドします。 増分統計の作成の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 パーティションごとの統計を自動的に作成する方法の詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 
   
  大きなテーブルに新しいパーティションを追加した場合、新しいパーティションが含まれるように統計を更新する必要があります。 ただし、テーブル全体のスキャン (FULLSCAN または SAMPLE オプション) に要する時間は非常に長くなることがあります。 また、新しいパーティションに対する統計のみが必要となるため、テーブル全体をスキャンする必要はありません。 増分オプションでは、パーティションごとの統計が作成され格納されるため、更新時には、新しい統計を必要とするそれらのパーティションの統計のみを更新します。  
   

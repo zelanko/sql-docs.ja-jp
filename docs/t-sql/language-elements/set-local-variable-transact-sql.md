@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,11 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4dd56e5ebe54462a0ee8e4efeb7c1d1e47bf023
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9961be2758ba85deefa53b1d376ce688317f1f55
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36257664"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +150,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  最適化が有効に設定された FORWARD_ONLY、READ_ONLY カーソルを指定します。 SCROLL も指定した場合、FAST_FORWARD は指定できません。  
   
  READ_ONLY  
- このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能よりも優先されます。  
+ このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
   
  SCROLL LOCKS  
  カーソルによって行われる位置指定更新または位置指定削除の成功が保証されることを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はカーソルに読み取られた行をロックし、後で変更できることを保証します。 FAST_FORWARD を指定した場合、SCROLL_LOCKS は指定できません。  
@@ -171,7 +171,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *select_statement* に、列が一意な行識別子 (ROWID) になっていない ORDER BY 句が含まれる場合、DYNAMIC カーソルは KEYSET カーソルに変換されます。KEYSET カーソルを開くことができない場合、DYNAMIC カーソルは STATIC カーソルに変換されます。 STATIC キーワードを指定せず、ISO 構文を使用して定義されたカーソルの場合も、同様の変換が行われます。  
   
  READ ONLY  
- このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能よりも優先されます。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
+ このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
   
  UPDATE [OF *column_name*[ **,**... *n* ] ]  
  カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しなかった場合は、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  

@@ -1,5 +1,5 @@
 ---
-title: string 関数 (XQuery) |Microsoft ドキュメント
+title: string 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c20973cdaa3b3d80124a9713a104d7294d6c20f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968874"
 ---
-# <a name="data-accessor-functions---string-xquery"></a>データ アクセサー関数の文字列 (XQuery)
+# <a name="data-accessor-functions---string-xquery"></a>データ アクセサー関数 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   値を返します *$arg*を文字列として表されます。  
@@ -46,20 +47,20 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  ノードまたはアトミック値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
--   場合 *$arg*空のシーケンスでは、長さゼロの文字列が返されます。  
+-   場合 *$arg*空のシーケンスでは、長さ 0 の文字列が返されます。  
   
--   場合 *$arg*ノードの場合、string-value アクセサーを使用して取得したノードの文字列値を返します。 これは、W3C XQuery 1.0 and XPath 2.0 Data Model 仕様で定義されています。  
+-   場合 *$arg*ノードで、関数は、文字列値のアクセサーを使用して取得したノードの文字列値を返します。 これは、W3C XQuery 1.0 and XPath 2.0 Data Model 仕様で定義されています。  
   
--   場合 *$arg*は、アトミック値としてキャスト式によって返されるのと同じ文字列を返します**xs:string**、 *$arg*、以外の場合に特に記載します。  
+-   場合 *$arg*は、アトミック値としてキャスト式によって返されるのと同じ文字列を返します**xs:string**、 *$arg*、以外の場合、それ以外の場合に注意します。  
   
--   場合の種類 *$arg*は**xs:anyURI**、特殊文字をエスケープせず、URI を文字列に変換します。  
+-   場合の種類 *$arg*は**xs:anyURI**URI は、特殊文字をエスケープせず、文字列に変換されます。  
   
--   この実装で**fn:string()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。  
+-   この実装では、 **fn:string()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-string-function"></a>A. string 関数の使用  
  次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素ノードを取得します。  

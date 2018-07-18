@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 6: 計算列の作成 |Microsoft ドキュメント'
+title: 'レッスン 6: 計算列を作成する |Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3b86f84567e85fb604883e7cd7f8de83feb252e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031590"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>レッスン 5: 計算列を作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-このレッスンでは、計算列を追加して、モデル内に新しいデータを作成します。 計算列は、モデル内の既存のデータに基づいて機能します。 詳細については、次を参照してください。 [Calculated Columns](../analysis-services/tabular-models/ssas-calculated-columns.md)です。  
+このレッスンでは、計算列を追加して、モデル内に新しいデータを作成します。 計算列は、モデル内の既存のデータに基づいて機能します。 詳細についてを参照してください。 [Calculated Columns](../analysis-services/tabular-models/ssas-calculated-columns.md)します。  
   
 このレッスンでは、3 つの異なるテーブル内に、5 つの新しい計算列を作成します。 手順は実習ごとに少しずつ異なります。 これは、新しい列を作成したり、それらの名前を変更したり、それらをテーブル内のさまざまな場所へ配置するのには、いくつかの方法があることを示すためです。  
   
@@ -30,15 +30,15 @@ ms.locfileid: "34017789"
   
 ## <a name="create-calculated-columns"></a>計算列の作成  
   
-#### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>DimDate テーブルの MonthCalendar の計算列を作成します。  
+#### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>DimDate テーブルに MonthCalendar 計算列を作成します。  
   
-1.  クリックして、**モデル**メニュー >**モデル ビュー** > **データ ビュー**です。  
+1.  をクリックして、**モデル**メニュー >**モデル ビュー** > **データ ビュー**します。  
   
     計算列は、モデル デザイナーのデータ ビューでのみ作成できます。  
   
-2.  モデル デザイナーで、をクリックして、 **DimDate**テーブル (タブ)。  
+2.  モデル デザイナーで、クリックして、 **DimDate**テーブル (タブ)。  
   
-3.  右クリックし、 **CalendarQuarter**列ヘッダーをクリックして**列の挿入**です。  
+3.  右クリックし、 **CalendarQuarter**列ヘッダーをクリックして**列の挿入**します。  
   
     **Calculated Column 1** という新しい列が、 **Calendar Quarter** 列の左側に挿入されます。  
   
@@ -50,15 +50,15 @@ ms.locfileid: "34017789"
   
     すべての行の計算列に値が入力されます。 テーブルを下にスクロールすると、この列の行が、各行のデータに基づいて、異なる値を保持できることがわかります。    
   
-5.  この列の名前を変更**MonthCalendar**です。 
+5.  この列の名前を変更**MonthCalendar**します。 
 
-    ![として-表形式の lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
+    ![として-テーブル-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
-月表示カレンダー月の並べ替え可能な名前を提供する列が計算されます。  
+MonthCalendar には、1 か月の並べ替え可能な名前を提供する列が計算されます。  
   
-#### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>DimDate テーブルの DayOfWeek 計算列を作成します。  
+#### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>DimDate テーブルに DayOfWeek 計算列を作成します。  
   
-1.  **DimDate**テーブル アクティブのままで、をクリックして、**列** メニューをクリックして**列の追加**です。  
+1.  **DimDate**テーブルがアクティブな をクリックして、**列** メニューをクリック**列の追加**します。  
   
 2.  数式バーで、次の数式を入力します。  
     
@@ -66,21 +66,21 @@ ms.locfileid: "34017789"
     =RIGHT(" " & FORMAT([DayNumberOfWeek],"#0"), 2) & " - " & [EnglishDayNameOfWeek]  
     ```
     
-    式の作成が完了したら、ENTER キーを押します。 新しい列がテーブルの右端に追加されます。  
+    数式の構築が完了したら、ENTER キーを押します。 新しい列がテーブルの右端に追加されます。  
   
-3.  列の名前を変更**DayOfWeek**です。  
+3.  列の名前を変更**DayOfWeek**します。  
   
-4.  列見出しをクリックし、列の間をドラッグ、 **EnglishDayNameOfWeek**列と**DayNumberOfMonth**列です。  
+4.  、列見出しをクリックし、列の間をドラッグ、 **EnglishDayNameOfWeek**列と**DayNumberOfMonth**列。  
   
     > [!TIP]  
     > テーブル内の列を移動することで、列が参照しやすくなります。  
   
-曜日を示す、曜日、週の並べ替え可能な名前を提供する列が計算されます。  
+曜日を示すには、週の曜日の並べ替え可能な名前を提供する列が計算されます。  
   
-#### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>ProductSubcategoryName 計算列を DimProduct テーブルの作成します。  
+#### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>DimProduct テーブルに ProductSubcategoryName 計算列を作成します。  
   
   
-1.  **DimProduct**テーブル、テーブルの一番右にスクロールします。 右端にある **Add Column** (斜体) という列の列見出しをクリックします。  
+1.  **DimProduct**テーブル、テーブルの右端までスクロールします。 右端にある **Add Column** (斜体) という列の列見出しをクリックします。  
   
 2.  数式バーで、次の数式を入力します。  
     
@@ -88,13 +88,13 @@ ms.locfileid: "34017789"
     =RELATED('DimProductSubcategory'[EnglishProductSubcategoryName])  
     ```
   
-3.  列の名前を変更**ProductSubcategoryName**です。  
+3.  列の名前を変更**ProductSubcategoryName**します。  
   
-ProductSubcategoryName 計算列は DimProductSubcategory テーブルで、[EnglishProductSubcategoryName] 列からデータが含まれている DimProduct テーブルの階層を作成するために使用します。 階層は、複数のテーブルにまたがって存在することはできません。 レッスン 9 で後で階層を作成します。  
+ProductSubcategoryName 計算列は DimProductSubcategory テーブルの EnglishProductSubcategoryName 列からデータを含め、DimProduct テーブルの階層を作成するために使用します。 階層は、複数のテーブルにまたがって存在することはできません。 階層は ､ 後ほどレッスン 9 で作成します。  
   
-#### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>DimProduct テーブルに、ProductCategoryName の計算列を作成します。  
+#### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>DimProduct テーブルに ProductCategoryName 計算列を作成します。  
   
-1.  **DimProduct**テーブル アクティブであるをクリックして、**列** メニューをクリックして**列の追加**です。  
+1.  **DimProduct**テーブル中、 をクリックして、**列** メニューをクリック**列の追加**します。  
   
 2.  数式バーで、次の数式を入力します。  
   
@@ -102,11 +102,11 @@ ProductSubcategoryName 計算列は DimProductSubcategory テーブルで、[Eng
     =RELATED('DimProductCategory'[EnglishProductCategoryName]) 
     ```
     
-3.  列の名前を変更**ProductCategoryName**です。  
+3.  列の名前を変更**ProductCategoryName**します。  
   
-ProductCategoryName の計算列は DimProductCategory テーブルに EnglishProductCategoryName 列からデータを含め、DimProduct テーブルの階層を作成するために使用します。 階層は、複数のテーブルにまたがって存在することはできません。  
+ProductCategoryName 計算列は ､ DimProductCategory テーブルの EnglishProductCategoryName 列からデータを含んだ DimProduct テーブルの階層を作成するために使用します。 階層は、複数のテーブルにまたがって存在することはできません。  
   
-#### <a name="create-a-margin-calculated-column-in-the-factinternetsales-table"></a>FactInternetSales テーブルで Margin 計算列を作成します。  
+#### <a name="create-a-margin-calculated-column-in-the-factinternetsales-table"></a>FactInternetSales テーブルに Margin 計算列を作成します。  
   
 1.  モデル デザイナーで、選択、 **FactInternetSales**テーブル。  
   
@@ -120,11 +120,11 @@ ProductCategoryName の計算列は DimProductCategory テーブルに EnglishPr
 
 4.  列の名前を **Margin**に変更します。  
   
-5.  間で列をドラッグして、 **SalesAmount**列と**TaxAmt**列です。 
+5.  列の間にドラッグ、 **SalesAmount**列と**TaxAmt**列。 
  
-      ![として-表形式の lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
+      ![として-テーブル-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
-    Margin 計算列を使用して、各販売の利益率を分析できます。  
+    Margin 計算列は、各販売の利益率の分析に使用されます。  
   
 ## <a name="whats-next"></a>次の操作
 次のレッスンに移動:[レッスン 6: メジャーの作成](../analysis-services/lesson-6-create-measures.md)です。

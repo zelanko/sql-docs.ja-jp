@@ -1,5 +1,5 @@
 ---
-title: テーブルに列を追加 |Microsoft ドキュメント
+title: テーブルに列の追加 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043456"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991474"
 ---
 # <a name="add-columns-to-a-table"></a>テーブルに列を追加します。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,8 +50,8 @@ ms.locfileid: "34043456"
   
 2.  各行の属性を追加するには、数式バーに DAX 式を入力します。  
   
-## <a name="add-a-blank-column"></a>空白の列を追加します。  
- モデル テーブルに名前付きの空白列を作成できます。 空白の列は、別のソースのデータを貼り付ける場合に便利です。 貼り付けたデータは、インポートされたデータとは異なる方法で保存されることに留意してください。 詳細については、次を参照してください。[コピーと貼り付けデータ](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)です。  
+## <a name="add-a-blank-column"></a>空白列を追加します。  
+ モデル テーブルに名前付きの空白列を作成できます。 空白の列は、別のソースのデータを貼り付ける場合に便利です。 貼り付けたデータは、インポートされたデータとは異なる方法で保存されることに留意してください。 詳細については、次を参照してください。[コピーと貼り付けデータ](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)します。  
   
 #### <a name="to-create-a-named-blank-column"></a>名前付きの空白列を作成するには  
   

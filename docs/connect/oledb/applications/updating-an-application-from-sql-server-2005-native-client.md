@@ -2,7 +2,7 @@
 title: SQL Server 2005 Native Client からのアプリケーションの更新 |Microsoft ドキュメント
 description: SQL Server 2005 Native Client からのアプリケーションの更新
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: faea11704538aea426d5c1c6fdbe8018893dcdc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60a03e3ec34c29821a6b29d3174b11c5376511e6
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612067"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client からのアプリケーションの更新
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 が付属[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 が付属[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]です。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に付属する [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 10.5。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] に付属する [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0。  
 
-|比較すると、SQL Server の OLE DB ドライバーの動作が変更されて[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Native Client|Description|  
+|比較すると、SQL Server の OLE DB ドライバーの動作が変更されて[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Native Client|説明|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB によって定義された有効桁数までしか埋め込まれない|OLE DB Driver for SQL Server、サーバーへの変換後のデータの送信先の変換をデータの最大長までしかに後続のゼロが埋め込まれます**datetime**値。 SQL Server Native Client 9.0 では、9 桁まで埋め込まれていました。|  
 |ICommandWithParameter::SetParameterInfo DBTYPE_DBTIMESTAMP を検証します。|OLE DB Driver for SQL Server には、OLE DB 要件が実装され*bScale* DBTYPE_DBTIMESTAMP の秒の小数部の有効桁数を設定する ICommandWithParameter::SetParameterInfo にします。|  

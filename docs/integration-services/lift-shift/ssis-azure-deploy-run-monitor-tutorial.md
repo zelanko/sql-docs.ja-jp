@@ -1,26 +1,26 @@
 ---
 title: Azure で SSIS パッケージをデプロイし、実行する | Microsoft Docs
+description: SQL Server Integration Services (SSIS) プロジェクトを Azure SQL Database 上の SSIS カタログにデプロイして、パッケージを実行する方法について説明します
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3bd32f6f60342a0224ebf353de6cda15696d8900
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585634"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262496"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Azure で SSIS パッケージをデプロイし、実行する
-このチュートリアルでは、Azure SQL Database の SSISDB カタログ データベースに SQL Server Integration Services プロジェクトを配置する方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>チュートリアル: Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する
+このチュートリアルでは、Azure SQL Database の SSIS カタログに SQL Server Integration Services (SSIS) プロジェクトをデプロイする方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
 
 ## <a name="prerequisites"></a>Prerequisites
 

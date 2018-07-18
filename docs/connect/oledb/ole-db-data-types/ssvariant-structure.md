@@ -2,10 +2,10 @@
 title: SSVARIANT 構造体 |Microsoft ドキュメント
 description: OLE DB Driver for SQL Server での SSVARIANT 構造体
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,20 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: eb977dbe9ef7bed4e6c98ef612bd6e2bb67bf159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9afd7d6ce87ac49c060347287d4b7a081ea5bb41
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666382"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **SSVARIANT** msoledbsql.h には、構造が SQL Server の OLE DB Driver DBTYPE_SQLVARIANT 値に対応します。  
   
  **SSVARIANT**識別共用体は、します。 Vt メンバーの値は、コンシューマーは読み取るメンバーを確認できます。 vt の値に対応して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。 したがって、 **SSVARIANT**構造体は、SQL Server の種類を格納できます。 標準の OLE DB 型のデータ構造の詳細については、次を参照してください。[型インジケーター](http://go.microsoft.com/fwlink/?LinkId=122171)です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ときに DataTypeCompat = = 80、いくつか**SSVARIANT**サブタイプが文字列になります。 たとえば、次の vt 値に表示されます**SSVARIANT** VT_SS_WVARSTRING として表されます。  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -58,7 +61,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  次の表のメンバー、 **SSVARIANT**構造体。  
   
-|メンバー|OLE DB 型インジケーター|OLE DB C データ型|vt の値|コメント|  
+|Member|OLE DB 型インジケーター|OLE DB C データ型|vt の値|コメント|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||含まれる値の型を指定します、 **SSVARIANT**構造体。|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|では、 **tinyint** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。|  
@@ -83,6 +86,6 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BLOBType|未使用|未使用|未使用|未使用|  
   
 ## <a name="see-also"></a>参照  
- [データ型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [データ型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

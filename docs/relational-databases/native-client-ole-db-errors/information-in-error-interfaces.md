@@ -1,13 +1,12 @@
 ---
-title: エラー インターフェイス内の情報 |Microsoft ドキュメント
+title: エラー インターフェイス内の情報 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,25 +17,24 @@ helpviewer_keywords:
 - ISQLErrorInfo interface
 - errors [OLE DB], error interfaces
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6687b4dbc8dd0a47c3e2116b27e814240463cc90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e646def60e75118e2b10baa2cbc85a91e384e3cd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945127"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416731"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが OLE DB 定義のエラー インターフェイスの一部のエラーと状態情報を報告**IErrorInfo**、 **IErrorRecords**、および**ISQLErrorInfo**.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー、OLE DB 定義のエラー インターフェイス内のいくつかのエラーと状態情報を報告する**IErrorInfo**、 **IErrorRecords**、および**ISQLErrorInfo**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート**IErrorInfo**メンバーが次のように機能します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート**IErrorInfo**メンバー関数を次のようにします。  
   
 |メンバー関数|説明|  
 |---------------------|-----------------|  
@@ -46,22 +44,22 @@ ms.locfileid: "32945127"
 |**GetHelpFile**|サポートされていません。 常に NULL が返されます。|  
 |**GetSource**|文字列 "Microsoft SQL Server Native Client" を返します。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがコンシューマーが使用できるサポート**IErrorRecords**メンバーが次のように機能します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コンシューマーが使用できるサポート**IErrorRecords**メンバー関数を次のようにします。  
   
 |メンバー関数|説明|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|エラーに関する基本情報を ERRORINFO 構造体に設定します。 ERRORINFO 構造体には、エラーの HRESULT 戻り値およびエラーが適用されるプロバイダーとインターフェイスを特定するメンバーが含まれます。|  
-|**GetCustomErrorObject**|インターフェイスの参照を返します**ISQLErrorInfo、** と[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)です。|  
-|**GetErrorInfo**|参照を返します、 **IErrorInfo**インターフェイスです。|  
-|**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー経由でコンシューマーにパラメーターを返さない**GetErrorParameters**です。|  
+|**GetCustomErrorObject**|インターフェイスの参照を返します**ISQLErrorInfo、** と[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)します。|  
+|**GetErrorInfo**|参照を返します、 **IErrorInfo**インターフェイス。|  
+|**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー経由でコンシューマーにパラメーターを返さない**GetErrorParameters**します。|  
 |**GetRecordCount**|使用できるエラー レコードの数を返します。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート**isqlerrorinfo::getsqlinfo**パラメーターは次のようにします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート**isqlerrorinfo::getsqlinfo**パラメーターとして次のとおりです。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*pbstrSQLState*|エラーの SQLSTATE 値を返します。 SQLSTATE 値は、SQL-92、ODBC と ISO SQL、および API の各仕様で定義されています。 どちらも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]も[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーが実装に固有の SQLSTATE 値を定義します。|  
-|*plNativeError*|返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエラー番号**master.dbo.sysmessages**使用可能な場合です。 ネイティブ エラーは、初期化が成功するの後に利用可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのデータ ソース。 試行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、常に 0 を返します。|  
+|*plNativeError*|返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのエラー番号**master.dbo.sysmessages**使用可能な場合。 ネイティブ エラーは、初期化に成功したときに使用可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのデータ ソース。 試行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは常に 0 を返します。|  
   
 ## <a name="see-also"></a>参照  
  [エラー](../../relational-databases/native-client-ole-db-errors/errors.md)  

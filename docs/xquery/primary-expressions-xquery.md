@@ -1,5 +1,5 @@
 ---
-title: 一次式 (XQuery) |Microsoft ドキュメント
+title: 一次式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,16 +28,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078119"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031440"
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 原始式には、リテラル、変数参照、コンテキスト アイテム式、コンス トラクター、および関数の呼び出しが含まれます。  
+  XQuery 原始式には、リテラル、変数参照、コンテキスト アイテム式、コンス トラクター、および関数呼び出しが含まれます。  
   
 ## <a name="literals"></a>リテラル  
  XQuery リテラルには、数値型または文字列型のリテラルを使用できます。 文字列リテラルには、定義済みのエンティティ参照を含めることができます。エンティティ参照は文字のシーケンスです。 シーケンスは、構文上意味を持つことも考えられる 1 文字を表すアンパサンドで始まります。 XQuery の定義済みエンティティ参照を次に示します。  
@@ -50,7 +50,7 @@ ms.locfileid: "33078119"
 |&quot;|"|  
 |&apos;|'|  
   
- 文字列リテラルには、10 進または 16 進のコード ポイントで識別される文字参照 (Unicode 文字への XML 形式の参照) を含めることもできます。 たとえば、文字参照でユーロの通貨記号を表すことができます"&\#8364;"です。  
+ 文字列リテラルには、10 進または 16 進のコード ポイントで識別される文字参照 (Unicode 文字への XML 形式の参照) を含めることもできます。 たとえば、文字参照でユーロの通貨記号を表すことができます"&\#8364;"します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XML Version 1.0 が解析の基準として使用されます。  
@@ -101,7 +101,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 組み込みの Boolean 関数**true()** と**false()**、次の例のようにを表すブール値を使用できます。  
+ 組み込みの Boolean 関数**true()** と**false()**、ブール値を表す次の例に示すように使用できます。  
   
 ```  
 DECLARE @var XML  
@@ -159,12 +159,12 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   モジュールのインポートはサポートされていません。  
   
--   外部変数の宣言はサポートされていません。 この解決方法は、使用する、 [sql:variable() 関数](../xquery/xquery-extension-functions-sql-variable.md)です。  
+-   外部変数の宣言はサポートされていません。 これに対する解決策は、使用する、 [sql:variable() 関数](../xquery/xquery-extension-functions-sql-variable.md)します。  
   
 ## <a name="context-item-expressions"></a>コンテキスト アイテム式  
  コンテキスト アイテムは、パス式のコンテキストで現在処理中のアイテムです。 コンテキスト アイテムが NULL ではない XML データ型インスタンス内にある場合は、ドキュメント ノードで初期化されます。 Nodes() メソッド、XPath 式のコンテキストまたは述語で変更することもできます。  
   
- コンテキスト アイテムはドット (.) を含む式によって返されます。 たとえば、次のクエリは各要素を評価します。 <`a`> 属性の存在を`attr`です。 attr 属性が存在する場合は、その要素が返されます。 述語の中の条件は、コンテキスト ノードが 1 つのピリオドで指定されていることを示しています。  
+ コンテキスト アイテムはドット (.) を含む式によって返されます。 評価される各要素の例では、次のクエリ <`a`> 属性の有無`attr`します。 attr 属性が存在する場合は、その要素が返されます。 述語の中の条件は、コンテキスト ノードが 1 つのピリオドで指定されていることを示しています。  
   
 ```  
 DECLARE @var XML  
@@ -179,8 +179,8 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
  `<a attr="1">2</a>`  
   
-## <a name="function-calls"></a>関数呼び出し  
- 組み込みの XQuery 関数を呼び出すことができます、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql:variable() と sql:column() 関数。 実装済み関数の一覧は、次を参照してください。 [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)です。  
+## <a name="function-calls"></a>関数の呼び出し  
+ 組み込みの XQuery 関数を呼び出すことができます、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql:variable() と sql:column() 関数。 実装済み関数の一覧は、次を参照してください。 [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)します。  
   
 #### <a name="implementation-limitations"></a>実装の制限事項  
  次に、実装の制限事項を示します。  

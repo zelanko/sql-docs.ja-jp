@@ -3,9 +3,7 @@ title: SQL Server 2014 リリース ノート | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: f9a8d57f209e5c8c813fd08c8faff6ce5504c97b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036759"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926973"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ SQL Server 2014 SP2 には、SQL Server 2014 SP1 CU7 以降にリリースされ
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>SP2 でのパフォーマンスとスケーラビリティに関する機能強化
 
-|機能|Description|詳細情報|
+|機能|[説明]|詳細情報|
 |---|---|---|
 |ソフト NUMA の自動パーティション分割|NUMA ノードあたり 8 個以上の CPU をレポートするシステムでは、ソフト NUMA を自動的に構成できます。|[ソフト NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |バッファー プール拡張|SQL Server のバッファー プールを 8 TB より大きく拡張できます。|[バッファー プール拡張](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -44,7 +42,7 @@ SQL Server 2014 SP2 には、SQL Server 2014 SP1 CU7 以降にリリースされ
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2 でのサポート性と診断の向上
 
-|機能|Description|詳細情報|
+|機能|[説明]|詳細情報|
 |---|---|---|
 |AlwaysON のタイムアウト ログ|リース タイムアウト メッセージに対する新しいログ機能が追加され、現在の時刻と予想される更新時刻がログに記録されるようになります。 |[AlwaysOn 可用性グループのリース タイムアウトの診断の向上](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |AlwaysON XEvent とパフォーマンス カウンター|AlwaysON での待機時間の問題をトラブルシューティングするときの診断が向上する、新しい AlwaysON XEvent とパフォーマンス カウンター。 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) および [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)

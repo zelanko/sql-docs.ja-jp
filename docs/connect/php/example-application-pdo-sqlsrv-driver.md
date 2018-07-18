@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1ac3513e5805614a3cea530d403cd135f30e10b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307631"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>サンプル アプリケーション (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,9 +31,9 @@ AdventureWorks Product Reviews サンプル アプリケーションの PDO_SQLS
 1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]をインストールします。 詳細については、次を参照してください[Microsoft Drivers for PHP for SQL Server の概要。](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  後で示すコードを、2 つのファイル adventureworks_demo.php と photo.php にコピーします。  
 3.  adventureworks_demo.php および photo.php ファイルを Web サーバーのルート ディレクトリに置きます。  
-4.  アプリケーションを起動して実行http://localhost/adventureworks_demo.phpお使いのブラウザーからです。  
+4.  アプリケーションを起動して実行 http://localhost/adventureworks_demo.php お使いのブラウザーからです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
 AdventureWorks Product Reviews サンプル アプリケーションを実行するには、コンピューターが次のようになっている必要があります。  
   
 -   システムが [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の要件を満たしていること。 詳細については、次を参照してください。 [Microsoft Drivers for PHP for SQL Server のシステム要件](../../connect/php/system-requirements-for-the-php-sql-driver.md)です。  

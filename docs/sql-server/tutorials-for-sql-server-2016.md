@@ -3,8 +3,6 @@ title: SQL Server チュートリアル | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: performance
@@ -15,11 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 954ab1ff985054fa0aebaa3aba0711cacd5b4a35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36925963"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 05/03/2018
  
 ## <a name="current-tutorials"></a>現在のチュートリアル  
   
-|テクノロジ|Description|  
+|テクノロジ|[説明]|  
 |--------------|---------------|  
 |[Analysis Services チュートリアル (SSAS)](../analysis-services/analysis-services-tutorials-ssas.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] テーブルまたは多次元モデルを開発および配置する方法について説明します。 また、PowerPivot などのツールを使用して、モデル内のデータを分析する方法についても説明します。|  
 |[データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)|データベース エンジンのインスタンスに接続してから、Transact-SQL ステートメントを構築および実行する方法について説明します。|  

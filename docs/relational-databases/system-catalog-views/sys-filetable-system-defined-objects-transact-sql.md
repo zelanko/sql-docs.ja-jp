@@ -1,5 +1,5 @@
 ---
-title: sys.filetable_system_defined_objects (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.filetable_system_defined_objects (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a9d4cdb95349c9af9416caca7ca8dcf8893c0b4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178568"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970634"
 ---
 # <a name="sysfiletablesystemdefinedobjects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "33178568"
   
  FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
   
-|列|データ型|Description|  
+|[列]|データ型|説明|  
 |------------|---------------|-----------------|  
-|**object_id**|**int**|FileTable に関連するシステム定義オブジェクトのオブジェクト ID。<br /><br /> 内のオブジェクトを参照して**sys.objects**です。|  
-|**parent_object_id**|**int**|親 FileTable のオブジェクト ID。<br /><br /> 内のオブジェクトを参照して**sys.objects**です。|  
+|**object_id**|**int**|FileTable に関連するシステム定義オブジェクトのオブジェクト ID。<br /><br /> オブジェクト参照**sys.objects**します。|  
+|**parent_object_id**|**int**|親 FileTable のオブジェクト ID。<br /><br /> オブジェクト参照**sys.objects**します。|  
   
 ## <a name="see-also"></a>参照  
  [FileTable の作成、変更、および削除](../../relational-databases/blob/create-alter-and-drop-filetables.md)   

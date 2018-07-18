@@ -1,5 +1,5 @@
 ---
-title: マイニング構造の処理 |Microsoft ドキュメント
+title: マイニング構造の処理 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999734"
 ---
 # <a name="process-a-mining-structure"></a>マイニング構造の処理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  マイニング構造に関連付けられているマイニング モデルを参照したり使用したりする前に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを配置してマイニング構造とマイニング モデルを処理する必要があります。 また、マイニング構造またはマイニング モデルに変更を加えると、それらを再配置し、処理するように求められます。 **のデータ マイニング デザイナーの** [マイニング構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブで構造を処理すると、関連するモデルもすべて処理されます。  
+  マイニング構造に関連付けられているマイニング モデルを参照したり使用したりする前に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを配置してマイニング構造とマイニング モデルを処理する必要があります。 また、マイニング構造またはマイニング モデルに変更を加えると、それらを再配置し、処理するように求められます。 **のデータ マイニング デザイナーの** [マイニング構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブで構造を処理すると、関連するモデルもすべて処理されます。  
   
  マイニング構造は、次のツールを使用して処理できます。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "34017129"
   
      マイニング構造に変更を加えた場合は、マイニング モデルを処理する前にマイニング構造を再配置するよう求められます。 **[はい]** をクリックします。  
   
-2.  をクリックして**実行**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
+2.  クリックして**実行**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
   
      **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
   
-3.  モデルの処理が完了したら、**[処理の進行状況]** ダイアログ ボックスの **[閉じる]** をクリックします。  
+3.  モデルの処理が完了したら、 **[処理の進行状況]** ダイアログ ボックスの **[閉じる]** をクリックします。  
   
-4.  をクリックして**閉じる**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
+4.  クリックして**閉じる**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
   
 ## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

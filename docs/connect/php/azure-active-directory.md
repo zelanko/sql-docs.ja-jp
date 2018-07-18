@@ -3,7 +3,6 @@ title: Azure Active Directory |Microsoft ドキュメント
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: bfb4c78f7a32c1205256f7a0d44bd9526fabdc27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 224fa4f0746c45f9651b4714593e28f719b4d1ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307001"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続します。
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
 Azure AD を使用する、**認証**キーワード。 値を**認証**かかる場合に、次の表で説明します。
 
-|Keyword|値|Description|
+|Keyword|値|説明|
 |-|-|-|
 |**[認証]**|(既定) の設定します。|認証モードがその他のキーワードによって決定されます。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。 |
 ||`SqlPassword`|(Azure のインスタンスがあります) を SQL Server インスタンスへの直接認証ユーザー名とパスワードを使用します。 ユーザー名とパスワードを使用する接続文字列に渡す必要があります、 **UID**と**PWD**キーワード。 |

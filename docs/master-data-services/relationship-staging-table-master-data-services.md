@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ac87515c37a6b5ea0356d47b9a60167787ee5d95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb81e8c1ac664474cf9482bb76b27e7f3f2fdc54
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335316"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>リレーションシップ ステージング テーブル (マスター データ サービス)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="TableColumns"></a> テーブルの列  
  次の表は、リレーションシップ ステージング テーブルの各フィールドの用途を説明しています。  
   
-|列名|Description|ReplTest1|  
+|列名|[説明]|ReplTest1|  
 |-----------------|-----------------|-----------|  
 |**ID**|自動的に割り当てられる ID。|このフィールドには値を入力しないでください。 バッチが未処理の場合、このフィールドは空白です。|  
 |**RelationshipType**|Required<br /><br /> 設定しているリレーションシップの種類。|有効な値は次のとおりです。<br /><br /> **1**: 親<br /><br /> **2**: 兄弟 (同じレベル)|  

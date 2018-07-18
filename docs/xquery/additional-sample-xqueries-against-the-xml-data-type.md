@@ -1,5 +1,5 @@
 ---
-title: 追加サンプル XQueries に対して xml データ型 |Microsoft ドキュメント
+title: 追加サンプル XQueries に対して xml データ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fa92635bcca9a206fcfb2f85e3da72e57facdeb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076203"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030370"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>xml データ型に対する XQuery のその他のサンプル
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このセクションのトピックでは、に対して XQuery クエリを使用する方法を示すその他のサンプルを提供、 **xml**データ型。  
+  このセクションのトピックでは、に対して XQuery クエリを使用する方法について説明するその他のサンプルを提供、 **xml**データ型。  
   
 -   [XQuery の一般的な使用例](../xquery/general-xquery-use-cases.md)  
   

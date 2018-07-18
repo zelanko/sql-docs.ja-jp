@@ -2,13 +2,10 @@
 title: SQL Server の最大容量仕様 | Microsoft Docs
 ms.date: 11/6/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +24,12 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cd2e8b76948a5f2d89b19157894d72de378f3ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4007806d8db8c22b6f6e1ac1d1969db026bb6912
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036429"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36833380"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +62,7 @@ ms.locfileid: "33036429"
 |ストアド プロシージャのソース テキスト内のバイト数||バッチ サイズまたは 250 MB のいずれか小さい方||  
 |**varchar (max)**、 **varbinary (max)**、 **xml**、 **テキスト**、または **イメージ** あたりのバイト数||2^31-1||  
 |**ntext** または **nvarchar (max)** あたりの文字数||2^30-1||  
-|テーブルごとのクラスター化インデックス数||@shouldalert||  
+|テーブルごとのクラスター化インデックス数||1||  
 |GROUP BY、ORDER BY の列数||バイト数のみによって制限されます。||  
 |GROUP BY WITH CUBE または WITH ROLLUP ステートメント内の列または式の数||10||  
 |インデックス キーごとの列数||32|テーブルに 1 つ以上の XML インデックスが含まれている場合は、XML 列がプライマリ XML インデックスのクラスター化キーに追加されるため、ユーザー テーブルのクラスター化キーが 31 列までに制限されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、キー列数が最大キー列数制限の 32 を越えないように、非クラスター化インデックスに非キー列を含めることができます。 詳細については、「 [付加列インデックスの作成](../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。|  
@@ -79,12 +76,12 @@ ms.locfileid: "33036429"
 |データベース サイズ||524,272 テラバイト||  
 |インスタンスごとのデータベース数 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
 |データベースごとのファイル グループ数||32,767||  
-|メモリ最適化データに対応する、データベースごとのファイル グループ||@shouldalert||  
+|メモリ最適化データに対応する、データベースごとのファイル グループ||1||  
 |データベースごとのファイル数||32,767||  
 |ファイル サイズ (データ)||16 テラバイト||  
 |ファイル サイズ (ログ)||2 テラバイト||  
 |データベースごとのメモリ最適化データに対応するデータ ファイル||[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] では 4,096。 それより後のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、このような厳密な制限はありません。||  
-|メモリ最適化データに対応するデータ ファイルごとのデルタ ファイル||@shouldalert||  
+|メモリ最適化データに対応するデータ ファイルごとのデルタ ファイル||1||  
 |テーブルごとの外部キー テーブル参照数||発信 = 253。 着信 = 10,000。|制限については、「 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。|  
 |識別子長 (文字数)||128||  
 |コンピューターごとのインスタンス数||スタンドアロン サーバー上に 50 個のインスタンス。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、クラスター インストールのストレージ オプションとして共有クラスター ディスクを使用する場合、フェールオーバー クラスター上に 25 個のインスタンスがサポートされます。クラスター インストールのストレージ オプションとして SMB ファイル共有を選択する場合は、フェールオーバー クラスター上に 50 個のインスタンスがサポートされます。||  
@@ -121,19 +118,19 @@ ms.locfileid: "33036429"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティごとの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンス総数||200*|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンス (データ層アプリケーションを含む) ごとのユーザー データベース数||50|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティごとのユーザー データベース総数||1,000|  
-|データベースごとのファイル グループ数||@shouldalert|  
-|ファイル グループごとのデータ ファイル数||@shouldalert|  
-|データベースごとのログ ファイル数||@shouldalert|  
+|データベースごとのファイル グループ数||1|  
+|ファイル グループごとのデータ ファイル数||1|  
+|データベースごとのログ ファイル数||1|  
 |コンピューターごとのボリューム数||3|  
   
- * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティでサポートされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージ インスタンスの最大数は、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](https://msdn.microsoft.com/library/ee210548.aspx)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](https://msdn.microsoft.com/library/cc645993.aspx)」を参照してください。    
+ * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティでサポートされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの最大数は、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](https://msdn.microsoft.com/library/ee210548.aspx)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](https://msdn.microsoft.com/library/cc645993.aspx)」を参照してください。    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション オブジェクト  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション (DAC) でテストされた各種オブジェクトの最大サイズと最大数。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC オブジェクト||最大サイズ/最大数 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 64 ビットの場合)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
-|DAC ごとのデータベース数||@shouldalert|  
+|DAC ごとのデータベース数||1|  
 |DAC ごとのオブジェクト数*||データベース内のオブジェクト数または使用可能なメモリによって制限されます。|  
   
  *制限の対象となるオブジェクトの種類は、ユーザー、テーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、ユーザー定義データ型、データベース ロール、スキーマ、およびユーザー定義テーブル型です。  

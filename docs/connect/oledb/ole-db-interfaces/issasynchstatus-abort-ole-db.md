@@ -2,10 +2,10 @@
 title: Issasynchstatus::abort (OLE DB) |Microsoft ドキュメント
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4956fb734b06b49942394ebfd0d4e70f5d6ec9d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db1804728aea9f0362aad24c114eb1a1570c2a67
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689335"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   非同期に実行されている操作を取り消します。  
   
@@ -74,7 +77,7 @@ HRESULT Abort(
   
  **Issasynchstatus::abort**初期化フェーズで非同期に取り消された行セットで呼び出されました。 行セットはゾンビ状態になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ゾンビ状態にその行セットまたはデータ ソース オブジェクトを残すことがあります行セットまたはデータ ソース オブジェクトの初期化を中止するよう以外のすべてのメソッド**IUnknown**メソッドは E_UNEXPECTED を返します。 この状態になると、コンシューマーはその行セットまたはデータ ソース オブジェクトの解放しか実行できません。  
   
  呼び出す**issasynchstatus::abort**値を渡すと*eOperation*以外の DBASYNCHOP_OPEN が S_OK を返します。 これは、わけではありません、操作が完了したか、取り消されました。  

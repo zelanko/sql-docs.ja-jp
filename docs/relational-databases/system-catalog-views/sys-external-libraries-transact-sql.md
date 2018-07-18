@@ -1,5 +1,5 @@
 ---
-title: sys.external_libraries (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.external_libraries (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: sql
@@ -24,29 +24,29 @@ ms.author: jeannt
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 110f514c4688536decfd29c412ce310746cd972e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974997"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001194"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 
-R、Python などの外部のランタイムに関連するパッケージ ライブラリの管理をサポートします。
+R や Python などの外部のランタイムに関連するパッケージ ライブラリの管理をサポートしています。
 
 ## <a name="sysexternallibraries"></a>sys.external_libraries
 
-カタログ ビュー sys.external_libraries には、データベースにアップロードされている外部ライブラリごとに行が一覧表示します。
+カタログ ビューの sys.external_libraries には、データベースにアップロードされている外部ライブラリごとに 1 行が一覧表示します。
 
-|列名 |データ型 | Description|
+|列名 |データ型 | 説明|
 |------|------|------|
-|external_library_id |int | 外部ライブラリ オブジェクトの ID。 |
-|name |sysname |外部ライブラリの名前です。 所有者ごとのデータベース内で一意です。|
-|principal_id |int |この外部ライブラリを所有するプリンシパルの ID です。 |
-|language | sysname | 言語または外部のライブラリをサポートするランタイムの名前。 有効な値は、'R' です。 追加のランタイムは、将来追加される可能性があります。|
-|スコープ (scope) |int |パブリックのスコープ以外の場合は 0プライベート スコープの場合は 1 |  
+|external_library_id |ssNoversion | 外部ライブラリ オブジェクトの ID。 |
+|NAME |sysname |外部ライブラリの名前。 所有者ごとのデータベース内で一意です。|
+|principal_id |ssNoversion |この外部ライブラリを所有するプリンシパルの ID。 |
+|language | sysname | 言語または外部ライブラリをサポートするランタイムの名前。 有効な値は、'R' です。 追加のランタイムは、今後追加される可能性があります。|
+|スコープ (scope) |ssNoversion |パブリック スコープ以外の場合は 0プライベート スコープ 1 |  
 |scope_desc |varchar (7) |パッケージがパブリックかプライベートかどうかを示します|
 
 

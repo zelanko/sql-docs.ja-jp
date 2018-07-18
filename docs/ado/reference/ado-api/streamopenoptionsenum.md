@@ -2,7 +2,6 @@
 title: StreamOpenOptionsEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2594a0a2095d49a0819b21967ee7e2a45c8337c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5aca6380229e55ed29c99ea51592e1e618ce0058
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282621"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 開くのためのオプションを指定します、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。 値は、OR 演算と組み合わせることができます。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|開く、**ストリーム**非同期モードでのオブジェクト。|  
 |**adOpenStreamFromRecord**|4|内容を識別、*ソース*パラメーターを既に開いている[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。 既定の動作が扱わ*ソース*ツリー構造でノードを直接参照する URL として。 そのノードに関連付けられている既定のストリームが開かれます。|  

@@ -15,16 +15,16 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e9f294c857c1f1ed598eaaf0f79702475ef59c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78e74f96f36c5bfb21859bbc1f4ef1916e061b59
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046889"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926883"
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS Usage Feedback Collection の Local Audit
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) には、匿名の機能使用状況データを収集して Microsoft に送信する、インターネット対応機能が含まれています。 SSMS は、標準的なコンピューター情報、および使用とパフォーマンスに関する情報を収集する場合があります。これらの情報は Microsoft に送信され、SSMS の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 お客様の名前、住所などの連絡先情報は収集されません。 詳細については、[SQL Server のプライバシーに関する声明](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)をご覧ください。
+SQL Server Management Studio (SSMS) には、匿名の機能使用状況データを収集して Microsoft に送信する、インターネット対応機能が含まれています。 SSMS は、標準的なコンピューター情報、および使用とパフォーマンスに関する情報を収集する場合があります。これらの情報は Microsoft に送信され、SSMS の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 お客様の名前、住所などの連絡先情報は収集されません。 詳細については、[SQL Server のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)をご覧ください。
 
 ## <a name="audit-feature-usage-data"></a>Audit 機能の使用状況データ
 

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4cfb1b67c43227d8fd27c2536fd762a601651786
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5d7f54e4f13e33ead0d281c940259c48ab0208f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332906"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
   参照変換は、次の部分キャッシュ モードまたはキャッシュなしのモードを使用するように構成できます。  
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
      ステートメントにパラメーターが含まれている場合は、 **[パラメーター]** をクリックしてパラメーターを入力列にマップします。  
   
     > [!NOTE]  
-    >  このページで指定するオプションの SQL ステートメントは、 **[参照変換エディター]** の **[接続]** ページで指定したテーブル名を上書きおよび置換します。  
+    >  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。  
   
 13. エラー出力を構成するには、**[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
   

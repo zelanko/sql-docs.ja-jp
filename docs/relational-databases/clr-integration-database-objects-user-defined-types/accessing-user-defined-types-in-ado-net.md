@@ -1,13 +1,11 @@
 ---
-title: ADO.NET でのユーザー定義型へのアクセス |Microsoft ドキュメント
+title: ADO.NET でのユーザー定義型へのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,22 +17,22 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7747896143f8ecb4d13c17d1f0ff36773b7583a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62ae1ba46066a71d874dd63cc6e18a4a88960465
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918747"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349274"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>ADO.NET でのユーザー定義型へのアクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  サポートされる言語のいずれかを使用してユーザー定義型 (Udt) を記述、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR) 検証可能なコードを生成します。 サポートされる言語には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic などがあります。 UDT では、オブジェクトやカスタム データ構造を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納できます。 データは、.NET Framework のクラスまたは構造体のパブリック メンバーとして公開され、動作は .NET Framework のクラスまたは構造体のメソッドによって定義されます。 UDT の変数として、テーブルの列の定義として使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、またはの引数として、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数またはストアド プロシージャです。  
+  サポートされる言語のいずれかを使用してユーザー定義型 (Udt) が記述された、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR) 検証可能なコードを生成します。 サポートされる言語には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic などがあります。 UDT では、オブジェクトやカスタム データ構造を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納できます。 データは、.NET Framework のクラスまたは構造体のパブリック メンバーとして公開され、動作は .NET Framework のクラスまたは構造体のメソッドによって定義されます。 UDT の変数として、テーブルの列の定義として使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、またはの引数として、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数またはストアド プロシージャ。  
   
- ADO.NET では、 **System.Data.SqlClient**プロバイダーは、次の方法で Udt が公開します。  
+ ADO.NET では、 **System.Data.SqlClient**プロバイダーは、次の方法で Udt を公開します。  
   
--   を介して、 **System.Data.SqlClient.SqlDataReader**オブジェクトとして。  
+-   を通じて、 **System.Data.SqlClient.SqlDataReader**オブジェクトとして。  
   
--   を介して、 **SqlDataReader**未処理のバイトとして。  
+-   を通じて、 **SqlDataReader**未処理のバイトとして。  
   
 -   パラメーターとして、 **System.Data.SqlClient.SqlParameter**オブジェクト。  
   
@@ -42,8 +40,8 @@ ms.locfileid: "32918747"
  [UDT データの取得](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md)  
  UDT データを取得する方法とパラメーターを指定する方法について説明します。  
   
- [Dataadapter による UDT 列の更新](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)  
- Udt を操作する方法について説明します**データセット**UDT を使用してデータを更新する方法と**Dataadapter**です。  
+ [データ アダプターによる UDT 列の更新](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)  
+ Udt を操作する方法について説明します**データセット**UDT を使用してデータを更新する方法と**Dataadapter**します。  
   
 ## <a name="see-also"></a>参照  
  [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  

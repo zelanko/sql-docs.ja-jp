@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 でのデータを変更する Diffgram を使用した |Microsoft ドキュメント
+title: Diffgram を使用した SQLXML 4.0 でのデータを変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -32,15 +32,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b054765ab3fe626d1eb8360691a56da17b3174c0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707400"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053830"
 ---
-# <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 の .NET Framework のサポート - Diffgram を使用してデータを変更するには
+# <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 の .NET Framework サポート - DiffGrams を使用してデータを変更するには
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  DiffGram の書式がで導入された、**データセット**コンポーネント、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET フレームワークです。 .NET Framework では、DiffGram を作成して、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルのデータを変更するときに使用できます。  
+  DiffGram 形式がで導入された、**データセット**のコンポーネントである、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework です。 .NET Framework では、DiffGram を作成して、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルのデータを変更するときに使用できます。  
   
 > [!NOTE]  
 >  ここでは、DiffGram の概要について説明し、使用例を紹介します。 .NET Framework での DiffGram の機能について理解していることを前提としています。 このドキュメントでは、SQLXML に固有の DiffGram に関する問題を中心に説明します。  
@@ -52,10 +52,11 @@ ms.locfileid: "34707400"
  [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
  DiffGram の使用例を紹介します。  
   
- [ADO を使用して、DiffGram の実行&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
+ [ADO を使用した、DiffGram の実行&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  ADO (ActiveX Data Objects) での DiffGram の実行例を紹介します。  
   
- [SQLXML マネージ クラスを使用した DiffGram の実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
- SQLXML マネージ クラスでの DiffGram の実行例を紹介します。  
+ 
+  [SQLXML マネージド クラスを使用した DiffGram の実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
+ SQLXML マネージド クラスでの DiffGram の実行例を紹介します。  
   
   

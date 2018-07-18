@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (ClrAssemblyFile) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (ClrAssemblyFile) (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a4cf5d0a1ef4fd627dd10d0b73ca1520980484fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038255"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990304"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Type 要素 (ClrAssemblyFile) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,25 +46,25 @@ ms.locfileid: "34038255"
 |親要素|[ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この要素の値は、次のいずれかの文字列に制限されます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|*メイン*|アセンブリのメイン ファイルであるファイルを指定します。|  
+|*Main*|アセンブリのメイン ファイルであるファイルを指定します。|  
 |*依存します。*|アセンブリの依存ファイルであるファイルを指定します。|  
 |*デバッグ*|デバック情報を含んでいるファイルを指定します。|  
   
- 許可される値に対応する列挙**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ClrAssemblyFileType>します。  
+ 許容された値に対応する列挙体**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ClrAssemblyFileType>します。  
   
  親に対応する要素**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ClrAssemblyFile>します。  
   
 ## <a name="see-also"></a>参照  
- [File 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/file-element-assl.md)   
+ [要素が&#40;ASSL&#41;](../../../analysis-services/scripting/objects/file-element-assl.md)   
  [要素をファイル&#40;ASSL&#41;](../../../analysis-services/scripting/collections/files-element-assl.md)   
  [ClrAssembly データ型&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)   
- [Assembly 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
+ [Assembly 要素&#40;ASSL&#41;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
  [Assemblies 要素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/assemblies-element-assl.md)   
- [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

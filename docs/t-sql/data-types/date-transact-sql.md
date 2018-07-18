@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 792774360e368f0cf950cacfd97a8c2d5355e8e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055219"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415441"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,11 +61,11 @@ ms.locfileid: "33055219"
 ## <a name="supported-string-literal-formats-for-date"></a>date でサポートされる文字列リテラル形式
 次の表は、**date** データ型に使用できる有効な文字列リテラル形式を示しています。
   
-|数値|Description|  
+|数値|[説明]|  
 |-------------|-----------------|  
 |mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m] m - dd-[yy] yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m、dd、および [yy]yy は、スラッシュ (/)、ハイフン (-)、またはピリオド (.) で区切られた文字列の月、日、および年を表します。<br /><br /> 4 桁または 2 桁の年だけがサポートされています。 可能な限り 4 桁の年を使用してください。 2 桁の年を 4 桁の西暦年として解釈する場合に、基準になる年を 0001 ～ 9999 の範囲の整数で指定するには、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を使用します。<br /><br /> **メモ** Informatica では、YYYY は 1582 ～ 9999 の範囲に制限されます。<br /><br /> 2 桁の西暦が、終了年の末尾の 2 桁の数値以下である場合は、終了年と同じ世紀として解釈されます。 終了年の末尾の 2 桁の数値よりも大きい場合は、終了年の 1 つ前の世紀と解釈されます。 たとえば、two digit year cutoff が 2049 (既定値) である場合、2 桁表記が 49 であれば、2049 年と解釈されます。2 桁表記が 50 であれば、1950 年と解釈されます。<br /><br /> 既定の日付形式は、現在の言語設定によって決まります。 日付形式は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) ステートメントおよび [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ステートメントを使って変更できます。<br /><br /> **date** では、**ydm** 形式はサポートされません。|  
   
-|アルファベット|Description|  
+|アルファベット|[説明]|  
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**ydm** は、現在の言語における月の正式名または省略形を表します。 コンマは省略可能であり、大文字と小文字は無視されます。<br /><br /> こうしたあいまいさを排除するため、4 桁の西暦を使用してください。<br /><br /> 日を省略したときは、その月の 1 日が指定されます。|  
   
@@ -74,15 +73,15 @@ ms.locfileid: "33055219"
 |--------------|----------------|  
 |-YYYY-MM-DD<br /><br /> YYYYMMDD|SQL 標準と同じです。 これが国際標準として定義された唯一の形式です。|  
   
-|区切りなし|Description|  
+|区切りなし|[説明]|  
 |-----------------|-----------------|  
 |[yy]yymmdd<br /><br /> yyyy[mm][dd]|**date** データは、4 桁、6 桁、または 8 桁で指定できます。 6 桁または 8 桁の文字列は、常に **ymd** と解釈されます。 月と日は常に 2 桁です。 4 桁の文字列は年として解釈されます。|  
   
-|ODBC|Description|  
+|ODBC|[説明]|  
 |----------|-----------------|  
 |{ d 'yyyy-mm-dd' }|ODBC API 固有です。|  
   
-|W3C XML 形式|Description|  
+|W3C XML 形式|[説明]|  
 |--------------------|-----------------|  
 |yyyy-mm-ddTZD|XML/SOAP 用にサポートされています。<br /><br /> TZD は、タイム ゾーン指定子 (Z または +hh:mm または -hh:mm) です。<br /><br /> -   hh:mm はタイム ゾーン オフセットを表します。 hh は、タイム ゾーン オフセットの時間数を表す 0 ～ 14 の 2 桁の数字です。<br />-   MM は、タイム ゾーン オフセットの付加的な分数を表す 0 ～ 59 の 2 桁の数字です。<br />-   タイム ゾーン オフセットでは、+ (正負号) または – (負符号) を必ず指定します。 ローカル時刻を取得する際、協定世界時 (UTC) を基準としてタイム ゾーン オフセットを加算するか、減算するかを示します。 タイム ゾーン オフセットの有効範囲は -14:00 ～ +14:00 までです。|  
   

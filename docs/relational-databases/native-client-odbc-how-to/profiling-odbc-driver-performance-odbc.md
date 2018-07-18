@@ -1,13 +1,12 @@
 ---
-title: プロファイリングの ODBC ドライバー パフォーマンスに関するトピック (ODBC) |Microsoft ドキュメント
+title: ODBC ドライバー パフォーマンスに関するトピック (ODBC) をプロファイリング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
@@ -16,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ef45dd7a860dc23b0dcbee5ff6276b2a78dedb57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aa6ff562bc4a9b9f17d9527e156f1b2c03e4ea9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943177"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426071"
 ---
-# <a name="profiling-odbc-driver-performance-odbc"></a>ODBC ドライバー パフォーマンス (ODBC) のプロファイル
+# <a name="profiling-odbc-driver-performance-odbc"></a>ODBC ドライバー (ODBC) のパフォーマンスのプロファイリング
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーには、ドライバーのパフォーマンスをプロファイルするための、ドライバー固有の 2 つのオプションが用意されています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーはファイルにパフォーマンス統計情報を記録することができます。 ログ ファイルはタブで区切られており、Microsoft Excel など、タブ区切りのファイルをサポートする任意のスプレッドシートで分析できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーはファイルにパフォーマンスの統計情報を記録することができます。 ログ ファイルはタブで区切られており、Microsoft Excel など、タブ区切りのファイルをサポートする任意のスプレッドシートで分析できます。  
   
  ドライバーは、実行時間の長いクエリ (指定した時間内にサーバーから応答が得られないクエリ) もログに記録できます。 プログラマとデータベース管理者は、これらのクエリを後で分析できます。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "32943177"
   
 -   [ドライバーのパフォーマンス データをプロファイル&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
   
--   [実行時間の長いクエリをログ&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [ログ クエリの実行時間の長い&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
 ## <a name="see-also"></a>参照  
- [ODBC の操作方法に関するトピック](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [ODBC の使用法に関するトピック](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

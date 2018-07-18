@@ -1,13 +1,12 @@
 ---
-title: (ODBC) のクエリを実行 |Microsoft ドキュメント
+title: クエリの実行 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,23 +16,22 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, queries
 - queries [ODBC]
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0f9e231ad0ad3cd2641f450fcdf086a74a24ebe
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3042b9db6526af479664001c9e7eaeeb8832f0fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34706890"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407047"
 ---
 # <a name="executing-queries-odbc"></a>クエリの実行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC アプリケーションでは、接続ハンドルを初期化してデータ ソースに接続した後、その接続ハンドルに 1 つ以上のステートメント ハンドルを割り当てます。 アプリケーションが実行できる、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメント ハンドルでのステートメント。 次に、SQL ステートメントを実行するときの一般的な手順を示します。  
+  ODBC アプリケーションでは、接続ハンドルを初期化してデータ ソースに接続した後、その接続ハンドルに 1 つ以上のステートメント ハンドルを割り当てます。 アプリケーションを実行できます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメント ハンドルでのステートメント。 次に、SQL ステートメントを実行するときの一般的な手順を示します。  
   
 1.  必要なステートメント属性を設定します。  
   
@@ -43,7 +41,7 @@ ms.locfileid: "34706890"
   
 4.  任意の結果セットを取得します。  
   
- アプリケーションは、SQL ステートメントから返されたすべての結果セット内にあるすべての行を取得した後、同一ステートメント ハンドルで別のクエリを実行できます。 いずれかを呼び出すと、結果セットの残りの部分を取り消すことができる場合は、アプリケーションでは、特定の結果セット内のすべての行を取得する必要がないことを決定、 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)または[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)です。  
+ アプリケーションは、SQL ステートメントから返されたすべての結果セット内にあるすべての行を取得した後、同一ステートメント ハンドルで別のクエリを実行できます。 いずれかを呼び出すと、結果セットの残りの部分を取り消すことができる場合、アプリケーションでは、特定の結果セット内のすべての行を取得する必要がないことを確認します[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)または[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)します。  
   
  ODBC アプリケーションで、異なるデータを使用して同じ SQL ステートメントを複数回実行する必要がある場合は、SQL ステートメントの構築時に、次のように疑問符 (?) で表されるパラメーター マーカーを使用します。  
   
@@ -51,7 +49,7 @@ ms.locfileid: "34706890"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- 各パラメーター マーカーは、呼び出しプログラム変数にバインドされた[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)です。  
+ 各パラメーター マーカーは、呼び出すプログラム変数にバインドされた[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)します。  
   
  アプリケーションは、すべての SQL ステートメントの実行と結果セットの処理を完了後、ステートメント ハンドルを解放します。  
   

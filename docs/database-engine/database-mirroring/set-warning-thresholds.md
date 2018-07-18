@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 51f4f099935d92f95be67b0964e9ed3a52bc764f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 631f734e2ade09264c62bfb6392f2f7b3edd8fcd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312321"
 ---
 # <a name="set-warning-thresholds"></a>[警告しきい値の設定]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **Warnings**  
  サポートされている警告が一覧表示されます。サポートされている警告は次のとおりです。  
   
-|警告|Description|  
+|警告|[説明]|  
 |-------------|-----------------|  
 |**[未送信のログがしきい値を超えた場合に警告する]**|プリンシパルの送信キューにある未送信ログのキロバイト (KB) 数を示すしきい値です。|  
 |**[復元されていないログがしきい値を超えた場合に警告する]**|ミラー サーバー インスタンスの再実行キューのキロバイト数を示すしきい値です。|  

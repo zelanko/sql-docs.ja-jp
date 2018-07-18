@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 68be5f600da960023548a5b9e5678c995766a71b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60fdefca0b30606ce6cb11ab8cd44f05188b59f6
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335336"
 ---
 # <a name="business-rule-examples-master-data-services"></a>ビジネス ルールの例 (マスター データ サービス)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ## <a name="business-rule-examples"></a>ビジネス ルールの例  
-サンプル モデル |Entity  |ビジネス ルール名| Description  
+サンプル モデル |Entity  |ビジネス ルール名| [説明]  
 ---------|---------|---------|-----------|  
 Customer    | Customer   | Person pmt terms| 顧客の既定の支払条件を指定します。          
 次のビジネス ルールで、CustomerType 属性値が `is equal` [ルール条件](../master-data-services/business-rule-conditions-master-data-services.md)に一致する場合は、 `defaults to` [ルール アクション](../master-data-services/business-rule-conditions-master-data-services.md) が PaymentTerms 属性に適用されます。 それ以外の場合は、アクションが行われません。  
@@ -47,7 +47,7 @@ Else
   
 **--------------------------------------------------**  
   
-サンプル モデル  |Entity  |ビジネス ルール名|Description    
+サンプル モデル  |Entity  |ビジネス ルール名|[説明]    
 ---------|---------|---------|---------------  
 Customer     | Customer    | Org pmt terms | 組織の既定の支払条件を指定します。         
 次のビジネス ルールで、CustomerType 属性値が `is equal` [ルール条件](../master-data-services/business-rule-conditions-master-data-services.md)に一致する場合は、 `defaults to` [ルール アクション](../master-data-services/business-rule-actions-master-data-services.md) が PaymentTerms 属性に適用されます。 それ以外の場合は、アクションが行われません。  
@@ -63,7 +63,7 @@ Else
 **--------------------------------------------------**  
   
   
-サンプル モデル  |Entity  |ビジネス ルール名| Description    
+サンプル モデル  |Entity  |ビジネス ルール名| [説明]    
 ---------|---------|---------|-----------  
 Product     |  Product       | DaysToManufacture |社内の製造に対して製造日数の範囲を指定します。          
 次のビジネス ルールで、InHouseManufacture 属性値が `is equal` [ルール条件](../master-data-services/business-rule-conditions-master-data-services.md)に一致する場合は、 `must be between` [ルール アクション](../master-data-services/business-rule-actions-master-data-services.md) が DaysToManufacture 属性に適用されます。 それ以外の場合は、アクションが行われません。  
@@ -79,7 +79,7 @@ Else
 **--------------------------------------------------**  
   
   
-サンプル モデル  |Entity  |ビジネス ルール名|Description    
+サンプル モデル  |Entity  |ビジネス ルール名|[説明]    
 ---------|---------|---------|-------------  
 Product     |Product         |Required fields| 製品エンティティ メンバーの必須の属性を指定します。           
 次のビジネス ルールで、すべての条件下で `is required` [検証アクション](../master-data-services/business-rule-actions-master-data-services.md) が指定された属性に対して行われます。 属性値は、Null または空白にすることはできません。  
@@ -104,7 +104,7 @@ Else
 **--------------------------------------------------**  
   
   
-サンプル モデル  |Entity  |ビジネス ルール名|Description    
+サンプル モデル  |Entity  |ビジネス ルール名|[説明]    
 ---------|---------|---------|-----------  
 Product     | Product        |  Std Cost| 標準的なコストは 0 より大きくする必要があります。        
 次のビジネス ルールで、すべての条件下で `must be greater than` [ルール アクション](../master-data-services/business-rule-actions-master-data-services.md) は製品の StandardCost 属性に適用されます。  
@@ -120,7 +120,7 @@ Else
 **--------------------------------------------------**  
   
   
-サンプル モデル  |Entity  |ビジネス ルール名|Description    
+サンプル モデル  |Entity  |ビジネス ルール名|[説明]    
 ---------|---------|---------|------------  
 Product     | Product        | FG MSRP Cost|製品が完成品である場合は、MSRP (メーカー希望小売価格) と販売店コストは 0 より大きくする必要があることを指定します。           
   
@@ -138,7 +138,7 @@ Else
 **--------------------------------------------------**  
   
   
-サンプル モデル  |Entity  |ビジネス ルール名|Description    
+サンプル モデル  |Entity  |ビジネス ルール名|[説明]    
 ---------|---------|---------|------------  
 Product     | Product        |  Default Name| Color 属性と Class 属性の値に基づいて既定の製品名を指定します。 Color 属性値が YLO ではなく、Class 属性が NA ではない場合は、既定の名前は Yellow NA になります。         
 次のビジネス ルールで、Color 属性と Class 属性が `is equal` ルール条件に一致しない場合は、 `defaults to` [ルール アクション](../master-data-services/business-rule-actions-master-data-services.md) が Name 属性に適用されます。  

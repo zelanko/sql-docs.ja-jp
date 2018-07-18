@@ -2,7 +2,6 @@
 title: 軸オブジェクト (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 689bc6f49df65025bea7df44110cf02b4ec09ba0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66dfcb418d7a440b260956d411ae87b9601d4274
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283371"
 ---
 # <a name="axis-object-ado-md"></a>軸オブジェクト (ADO MD)
 1 つまたは複数のディメンションの選択したメンバーを含むセル セットのフィルター軸または位置指定を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **軸**オブジェクトに含まれること、[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)コレクション、によって返されるか、 [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)のプロパティ、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)です。  
   
  コレクションのプロパティと、**軸**オブジェクトを次を行うことができます。  

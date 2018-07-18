@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_xtp_gc_queue_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef266afcab07fbb9d5bb73a48dafcf8eea59844
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000834"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +36,12 @@ ms.lasthandoff: 05/23/2018
   
  ガベージ コレクションのメイン スレッド (アイドル スレッド) は、ガベージ コレクションのメイン スレッドが前回呼び出されてから完了したすべてのトランザクションについて、更新、削除、および挿入された行を追跡します。 ガベージ コレクション スレッドは、起動すると、最も古いアクティブなトランザクションのタイムスタンプが変化しているかどうかを判断します。 最も古いアクティブなトランザクションが変化した場合は、アイドル スレッドにより、書き込みセットが不要になったトランザクションの作業項目が (16 行ごとのチャンクで) エンキューされます。 たとえば、1,024 行を削除すると、64 のガベージ コレクション作業項目がエンキューされます (1 つの作業項目には削除された 16 行が含まれています)。  ユーザー トランザクションがコミットされると、スケジューラでエンキューされたすべての項目が選択されます。 スケジューラにエンキューされた項目がない場合、ユーザー トランザクションは、現在の NUMA ノードでキューを検索します。  
   
- sys.dm_xtp_gc_queue_stats を実行してエンキューされた作業が処理されているかどうかを確認することにより、削除された行についてガベージ コレクションでメモリが解放されるかどうかを確認できます。 Current_queue_depth のエントリが処理されていない場合、または current_queue_depth を新しい作業項目を追加しない場合は、これはガベージ コレクションがメモリを解放していないことを示します。 たとえば、実行時間が長いトランザクションが存在する場合、ガベージ コレクションは実行できません。  
+ sys.dm_xtp_gc_queue_stats を実行してエンキューされた作業が処理されているかどうかを確認することにより、削除された行についてガベージ コレクションでメモリが解放されるかどうかを確認できます。 Current_queue_depth のエントリが処理されていない場合、または current_queue_depth に新しい作業項目を追加しない場合は、これはガベージ コレクションがメモリを解放していないことを示します。 たとえば、実行時間が長いトランザクションが存在する場合、ガベージ コレクションは実行できません。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
 
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|キューの一意の識別子。|  
 |total_enqueues|**bigint**|サーバーが起動してからこのキューにエンキューされたガベージ コレクションの作業項目の総数。|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/23/2018
 |maximum_queue_depth|**bigint**|このキューに同時に存在した最大項目数。|  
 |last_service_ticks|**bigint**|キューが最後に処理された時点における CPU のティック。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="user-scenario"></a>ユーザー シナリオ  

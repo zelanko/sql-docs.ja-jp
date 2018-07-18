@@ -1,0 +1,80 @@
+---
+title: NullKeyNotAllowed 要素 (ASSL) |Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- NullKeyNotAllowed Element
+api_location:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+topic_type:
+- apiref
+f1_keywords:
+- NullKeyNotAllowed
+helpviewer_keywords:
+- NullKeyNotAllowed element
+ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
+caps.latest.revision: 35
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165273"
+---
+# <a name="nullkeynotallowed-element-assl"></a>NullKeyNotAllowed 要素 (ASSL)
+  決定する方法、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]処理エンジンが処理中に発生した null キー エラーを処理します。  
+  
+## <a name="syntax"></a>構文  
+  
+```xml  
+  
+<ErrorConfiguration>  
+   ...  
+   <NullKeyNotAllowed>...</NullKeyNotAllowed>  
+   ...  
+</ErrorConfiguration>  
+```  
+  
+## <a name="element-characteristics"></a>要素の特性  
+  
+|特性|説明|  
+|--------------------|-----------------|  
+|データ型と長さ|String (列挙型)|  
+|既定値|*ReportAndContinue*|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+  
+## <a name="element-relationships"></a>要素の関係  
+  
+|リレーションシップ|要素|  
+|------------------|-------------|  
+|親要素|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
+|子要素|なし|  
+  
+## <a name="remarks"></a>コメント  
+ NULL キー エラーは、NULL 値が許可されていないキー列で NULL 値が検出され、処理中にレコードが破棄された場合に発生します。 場合にのみ、ただし、このエラーが発生、 [NullProcessing](nullprocessing-element-assl.md)の要素、`DataItem`の先祖である、`ErrorConfiguration`に親要素が設定されている*エラー*します。  
+  
+ この要素の値は、次の表のいずれかの文字列に制限されます。  
+  
+|値|説明|  
+|-----------|-----------------|  
+|*IgnoreError*|処理は、エラーを無視し、続行します。|  
+|*ReportAndContinue*|処理は、エラーを報告し、続行します。|  
+|*ReportAndStop*|処理は、停止、エラーを報告します。|  
+  
+ 許容された値に対応する列挙体`NullKeyNotAllowed`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ErrorOption>します。  
+  
+## <a name="see-also"></a>参照  
+ [ErrorConfiguration 要素&#40;ASSL&#41;](../objects/errorconfiguration-element-assl.md)  
+  
+  

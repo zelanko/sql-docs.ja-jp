@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ad07906a4b64281016da04ee803833e3d17542
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055159"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36255514"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  XML データとリレーショナル行セットとの間で使用するマッピング、およびオーバーフローした列の処理方法を指定します。 *flags* は省略可能な入力パラメーターで、次のいずれかの値を指定できます。  
   
-|バイト値|Description|  
+|バイト値|[説明]|  
 |----------------|-----------------|  
 |**0**|既定では、**属性中心**のマッピングが使用されます。|  
 |**1**|**属性中心**のマッピングを使用します。 XML_ELEMENTS と組み合わせることができます。 この場合、まだ処理されていないすべての列に対して、まず**属性中心**のマッピングが適用され、次に**要素中心**のマッピングが適用されます。|  
@@ -90,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  次の表で、**エッジ** テーブルの構造について説明します。  
   
-|列名|データ型|Description|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素の ID 値は 0 です。 負の ID 値は予約済みです。|  
 |**parentid**|**bigint**|ノードの親の識別子。 この ID によって識別される親のノードは、必ずしも要素ではなく、この ID によって親が識別されるノードの NodeType に依存します。 たとえば、ノードがテキスト ノードである場合、その親は属性ノードである場合もあります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  

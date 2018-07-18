@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -25,11 +24,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6856c4bece1275ae91f3bfd57ae10408e29177e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 241b2b8b24422edcd5b67e8a18012805286f3002
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410584"
 ---
 # <a name="coding-a-custom-task"></a>カスタム タスクのコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
@@ -169,7 +169,7 @@ End Class
   
  次の表は、<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッド内のタスクに対して提供されるパラメーターの一覧です。  
   
-|パラメーター|Description|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|タスクで使用できる <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトのコレクションを含みます。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|タスクで使用できる変数を含みます。 タスクは、VariableDispenser を介して変数を使用します。変数を直接使用することはありません。 変数ディスペンサーには、変数をロックまたはロック解除したり、デッドロックや上書きを防ぐ機能があります。|  

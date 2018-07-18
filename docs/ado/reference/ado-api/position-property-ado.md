@@ -2,7 +2,6 @@
 title: Position プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c931d220a9418a790ff79d6b61c89004800a0061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 407ef25ebc55685436f61acaa42cbdf964619b09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280691"
 ---
 # <a name="position-property-ado"></a>位置プロパティ (ADO)
 内の現在位置を示す、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**長い**バイト、ストリームの先頭から現在の位置の数でオフセットを指定する値。 既定では 0 で、ストリーム内の最初のバイトを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  現在の位置は、ストリームの末尾の後に、ポイントに移動できます。 ストリームの末尾を越える現在位置を指定する場合、[サイズ](../../../ado/reference/ado-api/size-property-ado-stream.md)の**ストリーム**オブジェクトがそれに応じて増加します。 この方法で追加された新しいバイトは、null になります。  
   
 > [!NOTE]

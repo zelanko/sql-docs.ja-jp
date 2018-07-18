@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server Analysis Services 表形式の 1400 モデルでサポートされるデータ ソース |Microsoft ドキュメント
 ms.date: 05/07/2018
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: Sybase コンソール (SybaseToSQL) for SSMA の概要 |Microsoft ドキュメント
+title: 概要、SSMA for Sybase Console (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
@@ -20,44 +20,44 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0ae06be98a30b6c293ef3625f31ff2ac272c1d8e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778548"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980644"
 ---
-# <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Sybase コンソール (SybaseToSQL) for SSMA の概要
-このセクションを起動して、SSMA for Sybase コンソール アプリケーションの使用を開始するための手順について説明します。 記載されている表記規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
+# <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>概要、SSMA for Sybase Console (SybaseToSQL)
+このセクションでは、起動、SSMA for Sybase のコンソール アプリケーションの概要と手順を説明します。 記載されている規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
   
-## <a name="launching-the-ssma-console"></a>SSMA コンソールを起動します。  
+## <a name="launching-the-ssma-console"></a>SSMA コンソールの起動  
 SSMA コンソール アプリケーションを起動するのにには、次の手順を使用します。  
   
 1.  開始に移動し、すべてのプログラム をポイントします。  
   
-2.  クリックして、 **SQL Server Migration Assistant Sybase コマンド プロンプトの**ショートカットです。  
+2.  をクリックして、 **SQL Server Migration Assistant Sybase コマンド プロンプトの**ショートカット。  
   
-    SSMA コンソール メニューの使用状況を表示および`(/? Help)`、コンソール アプリケーションで作業を開始するためです。  
+    SSMA コンソールの使用状況 メニューを表示および`(/? Help)`、コンソール アプリケーションを使用するためです。  
   
 ## <a name="using-the-ssma-console"></a>SSMA コンソールの使用  
-Windows システムで、コンソールを正常に起動した後は、作業を次の手順を使用できます。  
+コンソールは、Windows システムに正常に起動した後は、作業を次の手順を使用できます。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)です。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、次を参照してください。[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)します。  
   
-2.  [変数の値のファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+2.  [変数値ファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
 3.  [サーバー接続ファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-4.  [SSMA コンソールを実行する&#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)プロジェクトのニーズに基づいています。 
+4.  [SSMA コンソールの実行&#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)プロジェクトのニーズに基づいて。 
   
 追加機能:  
   
-1.  [パスワードを指定して](http://msdn.microsoft.com/en-us/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)エクスポート/インポートして、他のウィンドウのコンピューターにします。  
+1.  [パスワードを指定して](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)とエクスポート/インポート、ウィンドウの他のコンピューターにします。  
   
-2.  [レポートの生成](http://msdn.microsoft.com/en-us/19278f6a-6d58-4867-9d71-c6228040466e)詳細な xml を表示するには、評価/変換とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成することもできます。  
+2.  [レポートの生成](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e)詳細な xml を表示するには、評価/変換とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成することもできます。  
   
-## <a name="ssma-console-output-conventions"></a>SSMA コンソール出力の表記規則  
-SSMA スクリプトのコマンドとオプションを実行すると、コンソール プログラムをユーザーに、コンソールの結果とメッセージ (については、エラーなど) を表示または、必要に応じて、xml 出力ファイルにリダイレクトします。 各メッセージの種類の出力には一意の色によって表されます。 白色のテキスト メッセージがスクリプト ファイルのコマンドを示しますたとえば、緑色で 1 つと、ユーザー入力を求めるを表します。  
+## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力の規則  
+SSMA スクリプト コマンドとオプションを実行すると、コンソール プログラム、コンソールのユーザーに、結果とメッセージ (情報、エラーなど) を表示します。 または、必要に応じて、xml 出力ファイルにリダイレクトします。 一意の色では、各種のメッセージが出力に表されます。 たとえば、白のカラーにテキスト メッセージがスクリプト ファイルのコマンドを表します緑のカラーで 1 つとユーザーの入力を求めるプロンプトを表します。  
   
 ![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
@@ -66,11 +66,11 @@ SSMA スクリプトのコマンドとオプションを実行すると、コン
 |色|説明|  
 |---------|---------------|  
 |[赤]|実行中に致命的なエラー|  
-|灰色|日付と時刻スタンプをユーザーにメッセージ|  
+|灰色|日付と時刻スタンプをユーザーに対するメッセージ|  
 |White|スクリプト ファイルのコマンド、メッセージの種類|  
 |黄|警告|  
-|[緑]|ユーザー入力を求める|  
+|[緑]|ユーザー入力を求めるプロンプト|  
 |シアン|開始、終了、および操作の結果|  
   
 ## <a name="see-also"></a>参照  
-[SAP ASE 用 SSMA をインストールする&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+[SSMA for SAP ASE のインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

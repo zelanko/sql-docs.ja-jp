@@ -2,7 +2,6 @@
 title: LockType プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35d413ea9bfaded1494270d837f433fc9546e0b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f981f14e4eedb9dad3724f91c5ce70f6535ee0a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279231"
 ---
 # <a name="locktype-property-ado"></a>LockType プロパティ (ADO)
 編集中のレコードに置かれたロックの種類を示します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、 [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)値。 既定値は**adLockReadOnly**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  設定、 **LockType**プロパティを開く前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を開くときにプロバイダーのロックの種類を使用する必要がありますを指定します。 開いている上で使用されているロックの種類を取得するプロパティを読み取る**Recordset**オブジェクト。  
   
  プロバイダーはすべてのロックの種類をサポートしていません。 プロバイダーをサポートして、要求された場合**LockType**設定すると、別の種類のロックが代用されます。 使用可能な実際のロック機能を決定する、**レコード セット**オブジェクトを使用して、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを**adUpdate**と**adUpdateBatch**.  

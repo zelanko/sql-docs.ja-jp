@@ -2,7 +2,6 @@
 title: StayInSync プロパティ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4e5067036aaaf36c60a134f825012fdc5facf75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ccd1cf14eddb9fb0b7b440defb0eb700b2fb354
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282501"
 ---
 # <a name="stayinsync-property"></a>StayInSync プロパティ
 階層構造内に示します[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトかどうか、基になる子レコードへの参照 (つまり、*章*)、親の行の位置が変わったときに変更します。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**ブール**値。 既定値は **True**です。 場合**True**、章に更新されます親**レコード セット**場合、オブジェクトの変更行位置; **False**チャプターは引き続き前のチャプター内のデータを参照してください場合でも、親**Recordset**オブジェクトには、行の位置が変更されました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティでサポートされているなど、階層のレコード セットに適用されます、 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)、親に設定する必要があります**Recordset** 、子の前に**レコード セット**を取得します。 このプロパティは、階層レコード セットの移動を簡略化します。  
   
 ## <a name="applies-to"></a>適用対象  

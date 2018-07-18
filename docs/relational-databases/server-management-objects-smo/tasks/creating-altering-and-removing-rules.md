@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、およびルールの削除 |Microsoft ドキュメント
+title: 作成、変更、およびルールの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2e46039c71863f6cfb60f63c8e1e926f8f68231d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969207"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046180"
 ---
 # <a name="creating-altering-and-removing-rules"></a>ルールの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "32969207"
  <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティでの定義には、入力されたデータ値を参照する変数が含まれている必要があります。 ルールを作成するときは、任意の名前または記号を使用してこの値を表すことができますが、最初の文字は @ 記号にする必要があります。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Visual Basic でのルールの作成、変更、および削除  
  このコード例では、ルールの作成、作成したルールの列へのアタッチ、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトのプロパティの修正、列からのデタッチ、および削除を行う方法を示します。  
   
- **Dim**のステートメント、<xref:Microsoft.SqlServer.Management.Smo.Rule>であいまいさを避けるためにアセンブリの完全パスを持つオブジェクトが指定されて、 <xref:Microsoft.SqlServer.Management.Smo.Rule> System.Data アセンブリ内のオブジェクト。  
+ **Dim**のステートメント、<xref:Microsoft.SqlServer.Management.Smo.Rule>であいまいさを回避するためにアセンブリの完全なパスを指定したオブジェクトを<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data アセンブリ内のオブジェクト。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -70,7 +70,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>Visual C# でのルールの作成、変更、および削除  
  このコード例では、ルールの作成、作成したルールの列へのアタッチ、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトのプロパティの修正、列からのデタッチ、および削除を行う方法を示します。  
   
- **Dim**のステートメント、<xref:Microsoft.SqlServer.Management.Smo.Rule>であいまいさを避けるためにアセンブリの完全パスを持つオブジェクトが指定されて、 <xref:Microsoft.SqlServer.Management.Smo.Rule> System.Data アセンブリ内のオブジェクト。  
+ **Dim**のステートメント、<xref:Microsoft.SqlServer.Management.Smo.Rule>であいまいさを回避するためにアセンブリの完全なパスを指定したオブジェクトを<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data アセンブリ内のオブジェクト。  
   
 ```csharp  
 {  
@@ -103,7 +103,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>PowerShell でのルールの作成、変更、および削除  
  このコード例では、ルールの作成、作成したルールの列へのアタッチ、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトのプロパティの修正、列からのデタッチ、および削除を行う方法を示します。  
   
- **Dim**のステートメント、<xref:Microsoft.SqlServer.Management.Smo.Rule>であいまいさを避けるためにアセンブリの完全パスを持つオブジェクトが指定されて、 <xref:Microsoft.SqlServer.Management.Smo.Rule> System.Data アセンブリ内のオブジェクト。  
+ **Dim**のステートメント、<xref:Microsoft.SqlServer.Management.Smo.Rule>であいまいさを回避するためにアセンブリの完全なパスを指定したオブジェクトを<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data アセンブリ内のオブジェクト。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

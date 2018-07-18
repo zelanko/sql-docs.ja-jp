@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_hash_index_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_xtp_hash_index_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fdb15a0c64b11eb0fc57772ccaf37adcc1cc599e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969774"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,11 +45,11 @@ ms.lasthandoff: 05/23/2018
 チェーンの長さが長いことは、SELECT と INSERT を含む個々の列に対して行われるすべての操作のパフォーマンスに著しい影響を与える可能性があります。 チェーンの長さが短く、空のバケット数が多いことは、bucket_count の値が高すぎることを意味します。 これにより、インデックス スキャンのパフォーマンスが低下します。  
   
 > [!WARNING]
-> **sys.dm_db_xtp_hash_index_stats**テーブル全体をスキャンします。 したがって、データベースに大規模なテーブルがある場合**sys.dm_db_xtp_hash_index_stats**実行時間がかかる場合があります。  
+> **sys.dm_db_xtp_hash_index_stats**テーブル全体をスキャンします。 そのため、データベースの大規模なテーブルがある場合**sys.dm_db_xtp_hash_index_stats**実行時間がかかる場合があります。  
   
-詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)です。  
+詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|親テーブルのオブジェクト ID。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルの ID です。|  
@@ -59,14 +60,14 @@ ms.lasthandoff: 05/23/2018
 |max_chain_length|**bigint**|ハッシュ バケット内の行チェーンの長さの最大値。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルに対応する、インメモリ OLTP オブジェクトの ID。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
 
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. ハッシュ インデックスのバケット数のトラブルシューティング
 
-既存のテーブルのハッシュ インデックスのバケット数のトラブルシューティングを行うには、次のクエリを使用できます。 このクエリは、ユーザー テーブルに空のバケットとハッシュ インデックスのすべてのチェーンの長さの割合に関する統計情報を返します。
+既存のテーブルのハッシュ インデックスのバケット数のトラブルシューティングを行うには、次のクエリを使用できます。 クエリでは、ユーザー テーブルで空のバケットとハッシュ インデックスのすべてのチェーンの長さの割合に関する統計情報を返します。
 
 ```sql
   SELECT  
@@ -90,11 +91,11 @@ ms.lasthandoff: 05/23/2018
   ORDER BY [table], [index];  
 ``` 
 
-このクエリの結果を解釈する方法の詳細については、「[メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)です。  
+このクエリの結果を解釈する方法の詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)します。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部テーブルのハッシュ インデックスの統計
 
-特定の機能は、ハッシュ インデックスをメモリ最適化テーブルで列ストア インデックスなどを利用する内部テーブルを使用します。 次のクエリは、ユーザー テーブルにリンクされている内部テーブルに対して hash インデックスの統計を返します。
+特定の機能は、ハッシュ インデックスをメモリ最適化テーブルの列ストア インデックスなどを利用する内部テーブルを使用します。 次のクエリでは、ユーザー テーブルにリンクされている内部テーブルのハッシュ インデックスの統計を返します。
 
 ```sql
   SELECT  
@@ -115,9 +116,9 @@ ms.lasthandoff: 05/23/2018
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-内部テーブルのインデックスの BUCKET_COUNT は変更できませんしたがってこのクエリの出力と見なすべき役に立つのみことに注意してください。 必要な操作はありません。  
+内部テーブルのインデックスの BUCKET_COUNT を変更することはできません、したがってこのクエリの出力と見なす役に立つだけのことに注意してください。 必要な操作はありません。  
 
-このクエリは、内部テーブルのハッシュ インデックスを利用する機能を使用している場合を除き、任意の行を返す必要はありません。 次のメモリ最適化テーブルには、列ストア インデックスが含まれています。 このテーブルを作成した後に、内部テーブルのハッシュ インデックスが表示されます。
+このクエリは、内部テーブルのハッシュ インデックスを利用する機能を使用している場合を除き、行を返す必要はありません。 次のメモリ最適化テーブルには、列ストア インデックスが含まれています。 このテーブルを作成すると、内部テーブルのハッシュ インデックスが表示されます。
 
 ```sql
   CREATE TABLE dbo.table_columnstore

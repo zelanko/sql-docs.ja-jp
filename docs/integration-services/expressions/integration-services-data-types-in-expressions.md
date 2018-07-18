@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10198a10b0e62c4910b8533c00523107f7ccc287
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3766c3cdad4998d8d5b57c7b2d69bc1fb2d03ce
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402964"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  

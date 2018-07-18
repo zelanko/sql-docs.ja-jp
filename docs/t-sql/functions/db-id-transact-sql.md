@@ -28,16 +28,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb7e49f0ebd4746ccad1a9647ac2f35d61efcdc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239312"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-データベースの識別 (ID) 番号を返します。
+この関数は、指定されたデータベースのデータベース識別 (ID) 番号を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,16 +50,16 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>引数  
 '*database_name*'  
-対応するデータベース ID を返す基になるデータベースの名前です。 *database_name* は **sysname** です。 場合 *database_name* は省略すると、現在のデータベース ID が返されます。
+データベース ID 番号 `DB_ID` を持つデータベースの名前が返されます。 `DB_ID` の呼び出しで *database_name* が省略された場合、`DB_ID` は現在のデータベースの ID を返します。
   
 ## <a name="return-types"></a>戻り値の型
 **int**
   
 ## <a name="permissions"></a>アクセス許可  
-**DB_ID** の呼び出し元がデータベースの所有者ではなく、データベースが **master** でも **tempdb** でもない場合、対応する行を表示するには、少なくとも **master** データベースで、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバーレベルの権限、あるいは、CREATE DATABASE の権限が必要です。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。
+`DB_ID` の呼び出し元が、**マスター**以外または **tempdb** 以外の特定データベースを所有していない場合は、対応する `DB_ID` 行を確認するために、少なくとも、サーバー レベルの `ALTER ANY DATABASE` または `VIEW ANY DATABASE` 権限が必要です。 **マスター** データベースの場合、`DB_ID` には少なくとも `CREATE DATABASE` 権限が必要です。 呼び出し元が接続するデータベースは常に、**sys.databases** 内で確認できます。
   
 > [!IMPORTANT]  
->  既定は、パブリックのロールは、データベースの情報を表示するすべてのログインを許可する、VIEW ANY DATABASE 権限を持っています。 データベースを検出する機能からのログインをブロックするには、パブリックから VIEW ANY DATABASE 権限を取り消すまたは個別のログインの VIEW ANY DATABASE 権限を拒否します。  
+>  既定では、public ロールは、すべてのログインにデータベース情報の表示を許可する `VIEW ANY DATABASE` 権限を持っています。 ログインでデータベースが検出されるのを阻止するには、public から `VIEW ANY DATABASE` を `REVOKE` するか、または、個別のログインに対する `VIEW ANY DATABASE` を `DENY` します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -71,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>B. 指定したデータベースのデータベース ID を返す  
-次の例は、データベースの ID を返して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース。
+この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのデータベース ID を返します。
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  

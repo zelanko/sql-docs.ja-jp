@@ -1,5 +1,5 @@
 ---
-title: 名前空間を持つ XPath クエリの実行 (SQLXML マネージ クラス) |Microsoft ドキュメント
+title: 名前空間を持つ XPath クエリの実行 (SQLXML マネージ クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,25 +25,25 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b068d1d9848a7c462833d54fa6e92268fc83433f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051492"
 ---
-# <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>名前空間を使用した XPath クエリの実行 (SQLXML マネージ クラス)
+# <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>名前空間を使用した XPath クエリの実行 (SQLXML マネージド クラス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XPath クエリには名前空間を使用できます。 スキーマ要素に対象名前空間の修飾子が付けられている場合、そのスキーマに対する XPath クエリでは、名前空間を指定する必要があります。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 ではワイルドカード文字 (*) がサポートされないため、XPath クエリは、名前空間プレフィックスを使用して指定する必要があります。 プレフィックスを解決するには、名前空間プロパティを使用して、名前空間のバインドを指定します。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 ではワイルドカード文字 (*) がサポートされないため、XPath クエリは、名前空間プレフィックスを使用して指定する必要があります。 プレフィックスを解決するには、名前空間プロパティを使用して名前空間のバインドを指定します。  
   
- XPath クエリは、次の例では、ワイルドカード文字を使用して名前空間を指定します (\*) および local-name() and namespace-uri() XPath 関数。 この XPath クエリは、ローカルの名前がすべての要素を返します**従業員**と名前空間 URI が**urn: myschema:Contacts**:  
+ XPath クエリは次の例では、ワイルドカード文字を使用して名前空間を指定します (\*) および local-name() and namespace-uri() XPath 関数。 この XPath クエリは、ローカルの名前がすべての要素を返します**従業員**と名前空間 URI が**urn: myschema:Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- SQLXML 4.0 では、この XPath クエリを名前空間プレフィックスと共に指定します。 例としては**x: 連絡先**ここで、 **x**名前空間のプレフィックスします。 次の XSD スキーマについて考えてみます。  
+ SQLXML 4.0 では、この XPath クエリを名前空間プレフィックスと共に指定します。 例としては、 **x: 連絡先**ここで、 **x**名前空間のプレフィックスします。 次の XSD スキーマについて考えてみます。  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -59,7 +59,7 @@ ms.locfileid: "32969057"
 </schema>  
 ```  
   
- このスキーマは、ターゲットの名前空間を定義するため、このスキーマに対して XPath クエリを"Employee") などは、名前空間を含める必要があります。  
+ このスキーマは、ターゲットの名前空間を定義するため、このスキーマに対して"Employee") などの XPath クエリは、名前空間を含める必要があります。  
   
  次の C# サンプル アプリケーションでは、前の XSD スキーマ (MySchema.xml) に対する XPath クエリが実行されます。 プレフィックスを解決するには、SqlXmlCommand オブジェクトの名前空間プロパティを使用して名前空間のバインドを指定します。  
   
@@ -103,7 +103,7 @@ class Test
   
 1.  この例で提供される XSD スキーマ (MySchema.xml) をフォルダーに保存します。  
   
-2.  この例では、スキーマが格納されている同じフォルダーに、c# コード (DocSample.cs が指定されている) を保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
+2.  スキーマが格納されている同じフォルダーには、この例では、c# コード (DocSample.cs されている) を保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
   
 3.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   

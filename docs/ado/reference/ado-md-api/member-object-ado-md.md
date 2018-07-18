@@ -2,7 +2,6 @@
 title: メンバー オブジェクト (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6629f860fb8043387526019ec17c0e1775915a66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee79dc5a17ebbce35a8543a0ed2351ca65f03374
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284041"
 ---
 # <a name="member-object-ado-md"></a>メンバー オブジェクト (ADO MD)
 キューブでは、レベルのメンバー、レベルのメンバーまたはセル セットの軸に沿った位置のメンバーの子を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  プロパティ、**メンバー**が使用されているコンテキストによって異なります。 A**メンバー**の[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)で、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)が、[子](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティを返す、**メンバー**上現在の階層内の次の下位レベル**メンバー**です。 **メンバー**の[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)、**子**コレクションは常に空です。 また、[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティにのみ適用されます**メンバー**の**レベル**です。  
   
  A**メンバー**の**位置**は表示するときに、便利な 2 つのプロパティを持つ、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)と[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)です。 これらのプロパティにアクセスした場合、エラーが発生、**メンバー**の**レベル**です。  
@@ -72,12 +72,12 @@ ms.lasthandoff: 05/03/2018
   
  **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、利用可能なプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの完全な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|Description|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブに所属するカタログの名前。|  
 |ChildrenCardinality|メンバーが持つ子の数。|  
 |CubeName|キューブの名前。|  
-|Description|メンバーの説明文です。|  
+|説明|メンバーの説明文です。|  
 |DimensionUniqueName|明確な名前、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)です。|  
 |HierarchyUniqueName|階層の明確な名前。|  
 |LevelNumber|レベルと階層のルートの距離。|  

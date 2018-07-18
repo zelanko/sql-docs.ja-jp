@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,18 +23,18 @@ caps.latest.revision: 56
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff1277c0c1f0614947a4ac5cd720067395cdb91f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9df1593cd21e8bcc1e230f2806bbafd7bc2077ff
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358824"
 ---
 # <a name="replication-backward-compatibility"></a>レプリケーションの旧バージョンとの互換性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションのバージョン間における動作の違いについて説明します。 アップグレードを行う場合や、レプリケーション トポロジ内に複数のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在する場合は、旧バージョンとの互換性を理解することが重要です。  
   
- 
-  [SQL Server レプリケーションの非推奨の機能](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
+ [SQL Server レプリケーションの非推奨の機能](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
  旧バージョンとの互換性を維持するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では引き続き使用できるが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のバージョンでは削除される予定のレプリケーション機能  
   
  [SQL Server レプリケーションにおける重大な変更](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  

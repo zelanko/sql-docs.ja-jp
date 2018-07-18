@@ -2,7 +2,6 @@
 title: Description プロパティ (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62938b58b97abfb621cd4e9ea9f9c9e583c124e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b073b4719de6554159947502a525d242f37e6707
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284071"
 ---
 # <a name="description-property-ado-md"></a>Description プロパティ (ADO MD)
 現在のオブジェクトを説明するテキストを返します。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>戻り値  
  返します、**文字列**は読み取り専用とします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクト、**説明**メジャーと数式のメンバーにのみ適用されます。 **説明**空の文字列を返します ("") のメンバーの他のすべての種類。 詳細についてはさまざまな種類のメンバーは、次を参照してください。、[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティです。  
   
  このプロパティでのみサポート**メンバー**オブジェクトに属する、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト。 このプロパティが参照されたときにエラーが発生した**メンバー**に属しているオブジェクト、[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクト。  

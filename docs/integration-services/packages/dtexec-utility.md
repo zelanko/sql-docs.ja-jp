@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
@@ -16,11 +14,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19120f136913925721b61aacd59364f787ac0816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2583631f47e2f986e238880acb3e420515eeda60
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335686"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
   **dtexec** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの構成と実行に使用します。 **dtexec** ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 また **dtexec** ユーティリティでは、さまざまな変換元 ( [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー、.ispac プロジェクト ファイル、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システム) からパッケージを読み込むことができます。  
@@ -393,7 +392,7 @@ dtexec /option [value] [/option [value]]...
   
      値が指定されない場合は、既定値の **force** が使用されます。  
   
--   **/Set** [$Sensitive::]*propertyPath;value*: (省略可能)。 パッケージ内のパラメーター、変数、プロパティ、コンテナー、ログ プロバイダー、Foreach 列挙子、または接続の構成を上書きします。 このオプションを指定すると、 **/Set** は *propertyPath* 引数を、指定された値に変更します。 複数の **/Set** オプションを指定できます。  
+-   **/Set** [$Sensitive::]*propertyPath;value*: (省略可能)。 パッケージ内のパラメーター、変数、プロパティ、コンテナー、ログ プロバイダー、Foreach 列挙子、または接続の構成をオーバーライドします。 このオプションを指定すると、 **/Set** は *propertyPath* 引数を、指定された値に変更します。 複数の **/Set** オプションを指定できます。  
   
      **/Set** オプションは **/F[ile]** オプションと共に使用できます。また。 **/Set** オプションは **/ISServer** オプションまたは **/Project** オプションと共に使用することもできます。 **/Set** を **/Project**と共に使用すると、 **/Set** によってパラメーター値が設定されます。 **/Set** を **/ISServer**と共に使用すると、 **/Set** によってプロパティのオーバーライドが設定されます。 また、 **/Set** を **/ISServer**と共に使用すると、オプションの $Sensitive プレフィックスを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでプロパティが機密として扱われるよう指定できます。  
   
@@ -407,7 +406,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、 **/Set** オプションを使用しても、デザイン時の構成で指定した値を上書きすることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](../../integration-services/packages/package-configurations.md) 」 (パッケージ構成) および「 [SQL Server 2016 における Integration Services 機能の動作の変更](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
+     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、**/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](../../integration-services/packages/package-configurations.md) 」 (パッケージ構成) および「 [SQL Server 2016 における Integration Services 機能の動作の変更](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
   
 -   **/Ser[ver]** *server*: (省略可能)。 **/SQL** または **/DTS** オプションが指定されている場合、このオプションにはパッケージを取得するサーバーの名前を指定します。 **/Server** オプションを省略して **/SQL** オプションまたは **/DTS** オプションを指定した場合、ローカル サーバーに対してパッケージの実行が試行されます。 *server_instance* 値は引用符で囲むことができます。  
   
@@ -453,7 +452,7 @@ dtexec /option [value] [/option [value]]...
   
     > **重要!!** パッケージの署名を確認するように構成した場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって確認されるのは、デジタル署名が存在するかどうか、有効かどうか、および信頼関係のある発行元の署名であるかどうかのみです。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、パッケージが変更されたかどうかは確認されません。  
   
-    > **注:** オプションの **BlockedSignatureStates** レジストリ値では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** コマンド ラインで設定されたデジタル署名オプションよりも制限が厳しい設定を指定できます。 この場合、制限が厳しい方のレジストリ設定が他の設定よりも優先されます。  
+    > **注:** オプションの **BlockedSignatureStates** レジストリ値では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** コマンド ラインで設定されたデジタル署名オプションよりも制限が厳しい設定を指定できます。 この場合、制限が厳しい方のレジストリ設定が他の設定をオーバーライドします。  
   
 -   **/VerifyV[ersionID]** *versionID*: (省略可能)。 パッケージの検証フェーズ中に、実行されるパッケージのバージョン GUID を *version_id* 引数に指定された値と比較して検証します。  
   

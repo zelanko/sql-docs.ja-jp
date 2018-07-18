@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services のチュートリアル レッスン 9: 階層を作成 |Microsoft ドキュメント'
+title: 'Analysis Services チュートリアル-レッスン 9: 階層を作成する |Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,57 +10,57 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 ms.openlocfilehash: df99d05373d4d3087ef1d5fa5324ec645bf000b6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042976"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973021"
 ---
 # <a name="create-hierarchies"></a>階層を作成する
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-このレッスンでは、階層を作成します。 階層は、レベルで並べられた列のグループです。 たとえば、Geography 階層と、国、州、国、および市の下位レベルの場合があります。 階層は、あるレポート クライアント アプリケーション フィールドの一覧の他の列とは分けて表示できるため、クライアントのユーザーは簡単に移動し、レポートに含めることができます。 詳細については、次を参照してください[階層。](../tabular-models/hierarchies-ssas-tabular.md)
+このレッスンでは、階層を作成します。 階層は、レベルに分類された列のグループです。 たとえば、Geography 階層と、国、州、国、および市区町村の下位レベルの場合があります。 階層は、あるレポート クライアント アプリケーション フィールドの一覧の他の列とは分けて表示できるため、クライアントのユーザーは簡単に移動し、レポートに含めることができます。 詳細についてを参照してください[階層。](../tabular-models/hierarchies-ssas-tabular.md)
   
-階層を作成するには、モデル デザイナーを使用して*ダイアグラム ビュー*です。 作成して、階層の管理は、データ ビューではサポートされていません。  
+階層を作成するには、モデル デザイナーを使用して、*ダイアグラム ビュー*します。 作成して、階層の管理は、データ ビューではサポートされていません。  
   
 このレッスンの推定所要時間: **20 分**  
   
 ## <a name="prerequisites"></a>前提条件  
 
-この記事は、順番に従って実行する必要がありますが、テーブル モデリング チュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 8: パースペクティブの作成](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)です。  
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 8: パースペクティブを作成する](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)します。  
   
 ## <a name="create-hierarchies"></a>階層を作成する  
   
 #### <a name="to-create-a-category-hierarchy-in-the-dimproduct-table"></a>DimProduct テーブルに Category 階層を作成するには  
   
-1.  モデル デザイナー (ダイアグラム ビュー) を右クリックし、 **DimProduct**テーブル >**階層の作成**です。 テーブル ウィンドウの下部に新しい階層が表示されます。 階層の名前を変更**カテゴリ**です。  
+1.  モデル デザイナー (ダイアグラム ビュー) でを右クリックし、 **DimProduct**テーブル >**階層の作成**です。 テーブル ウィンドウの下部に新しい階層が表示されます。 階層の名前を変更**カテゴリ**します。  
   
-2.  をクリックし、ドラッグ、 **ProductCategoryName**を新しい列**カテゴリ**階層。  
+2.  クリックしてドラッグし、 **ProductCategoryName**を新しい列**カテゴリ**階層。  
   
-3.  **カテゴリ**階層を右クリックして**ProductCategoryName** > **の名前を変更**、し、入力**カテゴリ**です。  
+3.  **カテゴリ**階層を右クリックして**ProductCategoryName** > **の名前を変更**、し、入力**カテゴリ**します。  
   
     > [!NOTE]  
     > 階層内の列の名前を変更しても、テーブル内のその列の名前は変更されません。 階層内の列は、テーブル内の列の 1 つの表現形態に過ぎません。  
   
-4.  をクリックし、ドラッグ、 **ProductSubcategoryName**列を**カテゴリ**階層。 名前を変更して**Subcategory**です。 
+4.  クリックしてドラッグし、 **ProductSubcategoryName**列を**カテゴリ**階層。 名前を変更して**Subcategory**します。 
   
-5.  右クリックし、 **ModelName**列 >**階層を追加する**、し、**カテゴリ**です。 名前を変更して**モデル**です。
+5.  右クリックし、 **ModelName**列 >**階層を追加する**、し、**カテゴリ**します。 名前を変更して**モデル**します。
 
-6.  最後に、追加**EnglishProductName**カテゴリ階層にします。 名前を変更して**製品**です。  
+6.  最後に、追加**EnglishProductName**カテゴリ階層にします。 名前を変更して**製品**します。  
 
     ![as-lesson9-category](../tutorial-tabular-1400/media/as-lesson9-category.png)
   
-#### <a name="to-create-hierarchies-in-the-dimdate-table"></a>DimDate テーブルの階層を作成するには  
+#### <a name="to-create-hierarchies-in-the-dimdate-table"></a>DimDate テーブルに階層を作成するには  
   
-1.  **DimDate**という名前の階層を作成するテーブルで、**カレンダー**です。  
+1.  **DimDate**という名前の階層を作成するテーブルで、**カレンダー**します。  
   
-3.  次の列での順序を追加します。
+3.  次の列を順番に追加します。
 
     *  CalendarYear
     *  CalendarSemester
     *  CalendarQuarter
-    *  月表示カレンダー
+    *  MonthCalendar
     *  DayNumberOfMonth
     
 4.  **DimDate**テーブルで、作成、**会計**階層。 次の列での順序のとおりです。  
@@ -68,7 +68,7 @@ ms.locfileid: "34042976"
     *  FiscalYear
     *  FiscalSemester
     *  FiscalQuarter
-    *  月表示カレンダー
+    *  MonthCalendar
     *  DayNumberOfMonth
   
 5.  最後に、 **DimDate**テーブルで、作成、 **ProductionCalendar**階層。 次の列での順序のとおりです。  

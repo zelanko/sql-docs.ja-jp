@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio で Analysis Services テンプレートを使用して |Microsoft ドキュメント
+title: SQL Server Management Studio での Analysis Services テンプレートの使用 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebed4cb2e230e3d3367131a8caca63544cf78b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019199"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981185"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34019199"
   
  **テンプレート エクスプローラー**を開くには、 **[表示]** メニューから選択します。 次に、キューブ アイコンをクリックして、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるテンプレートの一覧を表示します。  
   
- ![Analysis Services テンプレート エクスプ ローラーで、フィルター処理されていて](../../analysis-services/instances/media/ssas-templateexplorer.gif "テンプレート エクスプ ローラーで、Analysis Services に対してフィルター処理")  
+ ![Analysis Services テンプレート エクスプ ローラーで、フィルター処理されていて](../../analysis-services/instances/media/ssas-templateexplorer.gif "テンプレート エクスプ ローラーで、Analysis Services のフィルター処理")  
   
  テンプレートを開くには、テンプレート名を右クリックして **[開く]** をクリックするか、開いているクエリ ウィンドウにテンプレートをドラッグします。 クエリ ウィンドウが開かれた後は、ツール バーまたは [クエリ] メニューのコマンドを使用してステートメントを構築できます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34019199"
  この例では、テーブル モデル データベースをデータ ソースとして使用することで、SQL Server Management Studio で MDX クエリを作成する方法を示しています。 お使いのコンピューターでこの例を繰り返すには、 [Adventureworks テーブル モデル サンプル プロジェクトをダウンロード](http://go.microsoft.com/fwlink/?LinkId=231183)してください。  
   
 > [!WARNING]  
->  直接クエリ モードで配置されているテーブル モデルに対して MDX クエリを使用することはできません。 ただし、EVALUATE コマンドと DAX テーブル クエリを使用して、同等のクエリを送信することができます。 詳細については、「 [DAX クエリのパラメーター](http://msdn.microsoft.com/en-us/c5841b4e-3395-4237-815b-9822a691e544)」を参照してください。  
+>  直接クエリ モードで配置されているテーブル モデルに対して MDX クエリを使用することはできません。 ただし、EVALUATE コマンドと DAX テーブル クエリを使用して、同等のクエリを送信することができます。 詳細については、「 [DAX クエリのパラメーター](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544)」を参照してください。  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>MDX クエリをテンプレートから作成する  
   
@@ -58,13 +58,13 @@ ms.locfileid: "34019199"
   
 3.  **メタデータ エクスプローラー**を使用して、次のフィールドとメジャーをクエリ テンプレートにドラッグします。  
   
-    1.  置き換える\<row_axis, mdx_set > を **[Product Category] です [。Product Category Name]** です。  
+    1.  置換\<row_axis, mdx_set > を **[Product Category]. [Product Category Name]** します。  
   
-    2.  置き換える\<column_axis, mdx_set > を **[Date] です [。Calendar Year] です。[Calendar Year]**.  
+    2.  置換\<column_axis, mdx_set > を **[Date] です [。Calendar Year] です。[Calendar Year]**.  
   
-    3.  置き換える\<from_clause, mdx_name > を **[Internet Sales]** です。  
+    3.  置換\<from_clause, mdx_name > を **[Internet Sales]** します。  
   
-    4.  置き換える\<where_clause、mdx_set > を **[Measures] です [。Internet Total Sales]** です。  
+    4.  置換\<where_clause、mdx_set > を **[Measures]. [Internet Total Sales]** します。  
   
 4.  クエリはそのまま実行できますが、特定のメンバーを返す関数を追加するなど、変更を加えることもできます。 たとえば、 **[Product Category].[Product Category Name]** の後に「 **.members**」と入力します。 詳細については、「 [メンバー式の使用](../../mdx/using-member-expressions.md)」をご覧ください。  
   
@@ -132,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  **テンプレート エクスプローラー**を開き、 **[スキーマ行セットの発見]** テンプレートを空のクエリ ウィンドウにドラッグします。  
   
-3.  テンプレートで、置換、 [RequestType 要素&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)要素を次のテキスト。 `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  テンプレートでは、置換、 [RequestType 要素&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 、次のテキストを持つ要素。 `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  **[実行]** をクリックします。  
   
@@ -154,14 +154,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Analysis Services テンプレート リファレンス  
  次のテンプレートは、Analysis Services データベースや、マイニング構造、マイニング モデル、キューブ、テーブル モデルなどのデータベース内のオブジェクトと一緒に使用するように提供されています。  
   
-|カテゴリ|項目テンプレート|Description|  
+|カテゴリ|項目テンプレート|説明|  
 |--------------|-------------------|-----------------|  
-|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示します*\<モデル >* です。指定されたマイニング モデルのマイニング モデル スキーマ行セットの内容を取得するコンテンツのステートメント。|  
-||連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントを DMX **RangeMin**と**RangeMax**のセットを取得する関数指定されたマイニング モデルの連続列から指定された範囲内の値。|  
-||不連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントで指定されたマイニング モデルの不連続列から値の完全なセットを取得します。|  
+|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示します*\<モデル >* します。指定されたマイニング モデルのマイニング モデル スキーマ行セットの内容を取得するコンテンツのステートメント。|  
+||連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントを DMX **RangeMin**と**RangeMax**関数のセットを取得するには指定されたマイニング モデルの連続列から指定した範囲の値。|  
+||不連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントは、指定されたマイニング モデルの不連続列から値の完全なセットを取得します。|  
 ||ドリルスルー クエリ|DMX SELECT * FROM Model.CASES ステートメントを DMX IsInNode 関数と共に使用してドリルスルー クエリを実行する方法を示します。|  
 ||モデル属性|DMX System.GetModelAttributes 関数を使用して、モデルで使用される属性の一覧を返す方法を示します。|  
-||PMML コンテンツ|DMX SELECT を使用する方法を示します\*FROM *\<モデル >* です。PMML ステートメントをこの機能をサポートするアルゴリズム、マイニング モデルの Predictive Model Markup Language (PMML) 表記を取得します。|  
+||PMML コンテンツ|DMX の SELECT を使用する方法を示します\*FROM *\<モデル >* します。PMML ステートメントを使用して、この機能をサポートするアルゴリズム、マイニング モデルの Predictive Model Markup Language (PMML) 表記を取得します。|  
 |DMX\モデル管理|モデルの追加|DMX ALTER MINING MODEL STRUCTURE ステートメントを使用してマイニング モデルを追加する方法を示します。|  
 ||モデルの削除|DMX DELETE * FROM MINING MODEL ステートメントを使用して、指定されたマイニング モデルのコンテンツを削除する方法を示します。|  
 ||構造ケースの削除|DMX DELETE FROM MINING STRUCTURE ステートメントを使用して、マイニング モデル構造ケースを削除する方法を示します。|  
@@ -179,10 +179,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||モデルのトレーニング|DMX INSERT INTO MINING MODEL ステートメントを使用して、以前にトレーニングした構造の内部のマイニング モデルをトレーニングする方法を示します。|  
 ||入れ子になった構造のトレーニング|DMX INSERT INTO MINING STRUCTURE ステートメントを SHAPE ソース データ クエリと組み合わせ、クエリを使用して既存のデータ ソースから取得した、入れ子になったテーブルを含んでいるデータで、入れ子になった列を含んでいるマイニング モデルをトレーニングする方法を示します。|  
 ||構造のトレーニング|DMX INSERT INTO MINING STRUCTURE 構造と OPENQUERY ソース データ クエリを組み合わせ、マイニング構造をトレーニングする方法を示します。|  
-|DMX\予測クエリ|基本予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを OPENQUERY ソース データ クエリからクエリを使用して取り出したデータを使用してマイニング モデルに対して予測クエリを実行します。既存のデータ ソースです。|  
+|DMX\予測クエリ|基本予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを OPENQUERY ソース データ クエリからクエリを使用して取り出したデータを使用してマイニング モデルに対して予測クエリを実行する、既存のデータ ソース。|  
 ||入れ子になった予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを SHAPE および OPENQUERY ソース データ クエリを含む入れ子になったデータを使用してマイニング モデルに対して予測クエリを実行するにはこのテーブルを使用して、既存のデータ ソースからクエリを使用して取得します。|  
-||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します*\<モデル >* 列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前には、マイニング モデル内の列が一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブルの値のセットが含まれています。|  
-||単一予測|DMX SELECT FROM を使用する方法を示します\<モデル > NATURAL PREDICTION JOIN ステートメント内の列と同じ名前の列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行するにはマイニング モデルです。|  
+||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します*\<モデル >* 列で、予測クエリで明示的に指定された、1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前、マイニング モデル内の列に一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブル内の値のセットを含むです。|  
+||単一予測|DMX SELECT FROM を使用する方法を示します\<model > NATURAL PREDICTION JOIN ステートメントを名前の列に一致する列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行するにはマイニング モデルです。|  
 ||ストアド プロシージャ コール|DMX CALL ステートメントを使用してストアド プロシージャを呼び出す方法を示します。|  
 |MDX\式|移動平均 - 固定|MDX の **ParallelPeriod** 関数および **CurrentMember** 関数を自然な順序のセットと共に使用して、時間ディメンションの階層の一定期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|  
 ||移動平均 - 可変|**Avg** 関数内の MDX の **CASE** ステートメントを使用して、時間ディメンションの階層の可変期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|  
@@ -197,14 +197,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\管理|バックアップ|XMLA の **Backup** コマンドを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをファイルにバックアップする方法を示します。|  
 ||キャンセル|XMLA の **Cancel** コマンドを使用して、現在のセッション、データベース、またはインスタンス上で実行しているすべての操作を取り消す方法を示します。現在のセッションは管理者またはサーバーの管理者以外のユーザー、データベースは管理者、インスタンスはサーバー管理者がキャンセルできます。|  
 ||リモート パーティション データベースの作成|XMLA の **Create** コマンドを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) データベース要素と共に使用して、リモート パーティションを保存する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびデータ ソースを作成する方法を示します。|  
-||Del|XMLA の **Delete** コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|  
+||DELETE|XMLA の **Delete** コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|  
 ||ディメンションの処理|XMLA の **Batch** コマンドを **Parallel** 要素および **Process** コマンドと組み合わせ、並列バッチ操作を使用してディメンションの属性を更新する方法を示します。|  
 ||パーティションの処理|XMLA の **Batch** コマンドを **Parallel** 要素および **Process** コマンドと組み合わせ、並列バッチ操作を使用してパーティションを完全に処理する方法を示します。|  
-||復元|XMLA の **Restore** コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|  
+||[復元]|XMLA の **Restore** コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|  
 ||同期|XMLA の **Synchronize** コマンドで、SynchronizeSecurity タグの SkipMembership オプションを使用して別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースと同期させる方法を示します。|  
 |XMLA\スキーマ行セット|スキーマ行セットの検出|XMLA の **Discover** メソッドを使用して、DISCOVER_SCHEMA_ROWSETS スキーマ行セットの内容を取得する方法を示します。|  
 |XMLA\サーバー ステータス|接続|XMLA の **Discover** メソッドを使用して、DISCOVER_CONNECTIONS スキーマ行セットの内容を取得する方法を示します。|  
-||ジョブ|XMLA の **Discover** メソッドを使用して、DISCOVER_JOBS スキーマ行セットの内容を取得する方法を示します。|  
+||Jobs|XMLA の **Discover** メソッドを使用して、DISCOVER_JOBS スキーマ行セットの内容を取得する方法を示します。|  
 ||[場所]|XMLA の **Discover** メソッドを使用して、場所バックアップ ファイルのパスを指定して DISCOVER_LOCATIONS スキーマ行セットの内容を取得する方法を示します。|  
 ||Locks|XMLA の **Discover** メソッドを使用して、DISCOVER_LOCKS スキーマ行セットの内容を取得する方法を示します。|  
 ||メモリ許可|XMLA の **Discover** メソッドを使用して、DISCOVER_MEMORYGRANT スキーマ行セットの内容を取得する方法を示します。|  
@@ -215,8 +215,8 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 ## <a name="see-also"></a>参照  
  [多次元式 (MDX) リファレンス](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services スクリプト言語&#40;の ASSL を XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語&#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

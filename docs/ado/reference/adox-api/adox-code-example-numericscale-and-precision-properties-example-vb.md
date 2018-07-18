@@ -2,7 +2,6 @@
 title: NumericScale と有効桁数のプロパティの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1ad5c520771d13760d3592060150c38b48bae38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0776d768a8cbfa8d1ac252cdc90a07bc9fae8f07
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284891"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX コードの例: NumericScale し (VB) の有効桁数のプロパティの例
 この例で、 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)と[精度](../../../ado/reference/adox-api/precision-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクト。 このコードは、それらの値を表示、 **Order Details**のテーブル、 *Northwind*データベース。  

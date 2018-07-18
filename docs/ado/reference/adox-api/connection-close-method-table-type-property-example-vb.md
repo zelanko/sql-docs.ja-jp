@@ -2,7 +2,6 @@
 title: 接続を閉じる方法、テーブル型のプロパティの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98e7ba7600ddcb19487d604f2f62f520770a6543
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285331"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>テーブル型のプロパティの例 (VB) である接続 Close メソッド
 設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**カタログへの接続を閉じる必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマ オブジェクトから作成されたすべてのオブジェクトは孤立します。 任意のプロパティがキャッシュされているこれらのオブジェクトで使用可能なは引き続きプロバイダーへの呼び出しを必要とするプロパティの読み取り試行は失敗します。  

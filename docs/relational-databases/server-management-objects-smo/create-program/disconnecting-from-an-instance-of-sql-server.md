@@ -1,5 +1,5 @@
 ---
-title: SQL Server のインスタンスからの切断 |Microsoft ドキュメント
+title: SQL Server のインスタンスからの切断 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,26 +22,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b5f422894b6457e474acb5f9bf62b9795ea5f897
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970645"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>SQL Server のインスタンスからの切断
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを手動で閉じたり切断する処理は必要ありません。 接続を開いたり閉じたりする操作は、必要に応じて行われます。  
+  手動で閉じたり切断[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) オブジェクトは必要ありません。 接続を開いたり閉じたりする操作は、必要に応じて行われます。  
   
 ## <a name="connection-pooling"></a>接続のプール  
- ときに、[接続](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)メソッドが呼び出されると、接続は自動的に解放されません。 [切断](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)接続プールへの接続を解放するメソッドを明示的に呼び出す必要があります。 また、プールされていない接続を要求することもできます。 設定して、これを行う、 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>を参照するプロパティ、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクト。  
+ ときに、 [Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)メソッドが呼び出されると、接続が自動的に解放されません。 [切断](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)接続プールへの接続を解放するメソッドを明示的に呼び出す必要があります。 また、プールされていない接続を要求することもできます。 これを行う、 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>を参照するプロパティ、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクト。  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>RMO の SQL Server のインスタンスからの切断  
  RMO を使ったプログラミングでサーバー接続を閉じる方法は、SMO とは若干異なります。  
   
- によって、RMO オブジェクトのサーバー接続を維持するため、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトをこのオブジェクトは、のインスタンスから切断するときにも使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RMO を使用してプログラミングするときにします。 使用して接続を終了する、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトを呼び出し、[切断](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)RMO オブジェクトのメソッドです。 接続が閉じられた後は、RMO オブジェクトを使用することはできません。  
+ によって、RMO オブジェクトのサーバー接続が維持されるため、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトのインスタンスから切断するときにも、このオブジェクトが使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RMO を使用してプログラミングする場合。 使用して接続を終了する、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトを呼び出し、[切断](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)RMO オブジェクトのメソッド。 接続が閉じられた後は、RMO オブジェクトを使用することはできません。  
   
 ## <a name="example"></a>例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
  
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-basic"></a>Visual Basic で SMO オブジェクトを閉じたり切断する処理を行う方法  

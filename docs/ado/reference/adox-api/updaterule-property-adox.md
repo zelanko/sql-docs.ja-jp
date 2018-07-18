@@ -2,7 +2,6 @@
 title: UpdateRule プロパティ (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4ff1ee3ac7e7513ccd67368b2ee3b2c9defcf2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24375b3faa749889fe98d2d3f99815bc48987439
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287191"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule プロパティ (ADOX)
 プライマリ アクションが実行されることを示します[キー](../../../ado/reference/adox-api/key-object-adox.md)が更新されます。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定を返します、**長い**のいずれかの値、 [RuleEnum](../../../ado/reference/adox-api/ruleenum.md)定数。 既定値は**adRINone**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティは読み取り専用で[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトをコレクションに既に追加されています。  
   
 ## <a name="applies-to"></a>適用対象  

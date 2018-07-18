@@ -2,27 +2,27 @@
 title: Microsoft SQL データベースに対する接続ライブラリ |Microsoft ドキュメント
 description: さまざまなプログラミング言語のクライアントから Microsoft SQL Server と Azure SQL データベースへの接続を有効にするモジュールのダウンロードのリンクを提供します。
 author: MightyPen
-ms.component: connect
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.topic: article
-ms.date: 04/10/2018
+ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7d00ed25392e979cc0d5037bef6b7d8eccc66bf
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36246844"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースを接続するモジュール
 
 この記事は、接続モジュールのダウンロード リンクを提供または*ドライバー*と対話するために使用するクライアント プログラムを[Microsoft SQL Server](../relational-databases/database-features.md)、その対となるクラウドを使用して[AzureSQL データベース](http://docs.microsoft.com/azure/sql-database/)です。 ドライバーは、次のオペレーティング システムで実行されているプログラミング言語のさまざまな利用できます。
 
 - Linux (Ubuntu)
-- MacOS
+- macOS
 - Windows
 
 #### <a name="oop-to-relational-mismatch"></a>OOP リレーショナルが一致しません
@@ -49,10 +49,10 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-| 言語 | SQL driver をダウンロードします。 |
+| [言語] | SQL driver をダウンロードします。 |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Ubuntu Linux 用の .NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core、MacOS 用](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET core](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js ドライバー、インストール手順](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP (PHP) | [PHP](./php/download-drivers-php-sql-server.md) |
@@ -68,7 +68,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 次の表は、Microsoft SQL データベースに接続するクライアント アプリケーションを使用するオブジェクト リレーショナル マッピング (ORM) フレームワークの例を示します。
 
 
-| 言語 | ORM ドライバーのダウンロード |
+| [言語] | ORM ドライバーのダウンロード |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x またはそれ以降)](http://docs.microsoft.com/ef/) |
 | Java | [ORM を休止状態します。](http://hibernate.org/orm)|

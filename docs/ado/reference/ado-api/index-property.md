@@ -2,7 +2,6 @@
 title: Index プロパティ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01e7883719900e85fdb7227f50c90ed265f73c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe083fa971ad3ce6566d51326ce35163f446838a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279180"
 ---
 # <a name="index-property"></a>Index プロパティ
 有効にインデックスを現在の名前を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**値で、インデックスの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定したインデックス、**インデックス**プロパティ必要がありますが事前に宣言して基になるベース テーブルで、 **Recordset**オブジェクト。 つまり、インデックス必要がありますが宣言されているプログラムで ADOX として[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトか、ベース テーブルが作成されました。  
   
  インデックスを設定できない場合は、実行時エラーが発生します。 **インデックス**次の条件下でプロパティを設定することはできません。  

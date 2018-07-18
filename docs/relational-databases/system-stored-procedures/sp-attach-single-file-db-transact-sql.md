@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_attach_single_file_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981874"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "33238802"
   データ ファイルが 1 つだけ格納されているデータベースを現在のサーバーにアタッチします。 **sp_attach_single_file_db**複数のデータ ファイルでは使用できません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] CREATE DATABASE を使用することをお勧め*database_name* FOR ATTACH 代わりにします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。 レプリケートされたデータベースには、このプロシージャを使用しないでください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] CREATE DATABASE を使用することをお勧めします。 *database_name* FOR ATTACH 代わりにします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。 レプリケートされたデータベースには、このプロシージャを使用しないでください。  
   
 > [!IMPORTANT]  
->  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働用ではないサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
+>  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  サーバーにアタッチされるデータベースの名前を指定します。 名前は一意である必要があります。 *dbname*は**sysname**、既定値は NULL です。  
   
  [ **@physname=** ] **'***physical_name***'**  
- 物理名、データベース ファイルのパスを含むです。 *physical_name*は**nvarchar (260)**、既定値は NULL です。  
+ データベース ファイルのパスを含む、物理名です。 *physical_name*は**nvarchar (260)**、既定値は NULL です。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -68,18 +68,18 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- 使用して**sp_attach_single_file_db**明示的に使用して、サーバーからデタッチされたデータベースに対してのみ**sp_detach_db**オペレーション データベース、またはコピーします。  
+## <a name="remarks"></a>コメント  
+ 使用**sp_attach_single_file_db**を明示的に使用して、サーバーからデタッチされたデータベースに対してのみ**sp_detach_db**オペレーション データベース、またはコピーします。  
   
- **sp_attach_single_file_db**は単一のログ ファイルのあるデータベースに対してのみ機能します。 ときに**sp_attach_single_file_db**データベースをアタッチ、サーバーに、新しいログ ファイルを作成します。 データベースが読み取り専用の場合、ログ ファイルは、アタッチされる前の場所に作成されます。  
+ **sp_attach_single_file_db**は単一のログ ファイルのあるデータベースに対してのみ機能します。 ときに**sp_attach_single_file_db**データベースをアタッチ、サーバーに新しいログ ファイルを作成します。 データベースが読み取り専用の場合、ログ ファイルは、アタッチされる前の場所に作成されます。  
   
 > [!NOTE]  
 >  データベース スナップショットのデタッチおよびアタッチは行うことができません。  
   
  レプリケートされたデータベースには、このプロシージャを使用しないでください。  
   
-## <a name="permissions"></a>権限  
- データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)です。  
+## <a name="permissions"></a>アクセス許可  
+ データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] をデタッチした後、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] から現在のサーバーに 1 つのファイルをアタッチします。  

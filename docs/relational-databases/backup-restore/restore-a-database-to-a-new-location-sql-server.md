@@ -1,4 +1,4 @@
----
+﻿---
 title: データベースを新しい場所に復元する (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016

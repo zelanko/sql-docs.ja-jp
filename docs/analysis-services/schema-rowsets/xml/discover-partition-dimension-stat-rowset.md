@@ -10,22 +10,22 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe43b694b8fdeb4128ae1ad2aa9dc137d2bc9d42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34034513"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980425"
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>DISCOVER_PARTITION_DIMENSION_STAT 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   パーティションに関連付けられているディメンションについての統計を返します。  
   
- **適用されます:** 表形式モデル、多次元モデル  
+ **適用対象:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_PARTITION_DIMENSION_STAT**行セットには、次の列が含まれています。  
   
-|列名|型を表すインジケーター|制限|Description|  
+|列名|型を表すインジケーター|制限|説明|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|必須|データベースの名前。<br /><br /> この列は制限リストに必要です。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|必須|キューブまたはテーブル モデルの名前。<br /><br /> この列は制限リストに必要です。|  
@@ -50,6 +50,6 @@ ms.locfileid: "34034513"
 |ADOMDNAME|PartitionDimensionStat|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

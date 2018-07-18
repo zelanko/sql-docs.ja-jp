@@ -1,5 +1,5 @@
 ---
-title: レプリケーション ビュー (TRANSACT-SQL) |Microsoft ドキュメント
+title: レプリケーション ビュー (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,16 +31,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9215cc303d4a6541e958a86dbdd352802bd64bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007729"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030880"
 ---
 # <a name="replication-views-transact-sql"></a>レプリケーション ビュー (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  これらのビューには、レプリケーションで使用される情報が含まれて[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ビュー内のデータに簡単にアクセスを有効にする[レプリケーション システム テーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)です。 データベースがパブリケーション データベースまたはサブスクリプション データベースとして有効な場合に、ビューはユーザー データベースで作成されます。 データベースがレプリケーション トポロジから削除されると、すべてのレプリケーション オブジェクトはユーザー データベースから削除されます。 使用してレプリケーション メタデータにアクセスするための推奨される方法は、[レプリケーションのストアド プロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)です。  
+  これらのビューでのレプリケーションで使用される情報を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ビュー内のデータに簡単にアクセスを有効にする[レプリケーション システム テーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)します。 データベースがパブリケーション データベースまたはサブスクリプション データベースとして有効な場合に、ビューはユーザー データベースで作成されます。 データベースがレプリケーション トポロジから削除されると、すべてのレプリケーション オブジェクトはユーザー データベースから削除されます。 使用してレプリケーション メタデータにアクセスするための推奨される方法は、[レプリケーションのストアド プロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。  
   
 > [!IMPORTANT]  
 >  ユーザーはシステム ビューを直接変更しないでください。  

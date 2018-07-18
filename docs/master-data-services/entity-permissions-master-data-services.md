@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 69ec91fb58dc323d264e167593f4117cba81eebf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 343231fd0aea8a9c2ed61c640b6252e8a6a29b58
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406984"
 ---
 # <a name="entity-permissions-master-data-services"></a>エンティティ権限 (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  これらの権限は、ユーザー インターフェイスの **[エクスプローラー]** 機能領域にのみ適用されます。  
   
-|権限|Description|  
+|権限|[説明]|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーは、メンバー、属性、階層メンバーシップ、コレクション メンバーシップを読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成し、作成時に属性値を割り当てることができます。|  

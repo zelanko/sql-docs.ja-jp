@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,14 +17,14 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0a46f863c810f41422c96267e2be21b0a5f47ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbfaf49aecdcaa80692fb9ec49bbd47db8a9650c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32962157"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357434"
 ---
-# <a name="microsoft-replication-conflict-viewer-merge-replication"></a>[Microsoft レプリケーション競合表示モジュール] (マージ レプリケーション)
+# <a name="microsoft-replication-conflict-viewer-merge-replication"></a>[Microsoft レプリケーション競合表示モジュール] \(マージ レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   レプリケーション競合表示モジュールを使用すると、レプリケーション同期中に発生した競合を表示できます。 競合が発生するのは、同一のデータの変更が、2 つの異なるサーバー、たとえば、パブリッシャーとサブスクライバー、または 2 つの異なるサブスクライバーで行われたときです。 競合は、レプリケーションがアーティクルの作成時に選択された競合回避モジュールを使用することで自動的に解決されます。 ただし、レプリケーション競合表示モジュールを使用すると、必要な場合に、競合を回避するための別の解決方法を選択することができます。 発生する可能性がある競合は、次のとおりです。  
   

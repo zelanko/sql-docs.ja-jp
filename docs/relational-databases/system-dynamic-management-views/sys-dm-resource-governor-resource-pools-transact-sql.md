@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_resource_pools (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_resource_governor_resource_pools (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0317d8dbebebe43cf23c1f97299c9f81098f08e3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467938"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980806"
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "34467938"
   リソース プールの現在の状態、現在の構成、および統計に関する情報を返します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_resource_governor_resource_pools**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_resource_governor_resource_pools**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|リソース プールの ID。 NULL 値は許可されません。|  
-|name|**sysname**|リソース プールの名前。 NULL 値は許可されません。|  
+|NAME|**sysname**|リソース プールの名前。 NULL 値は許可されません。|  
 |statistics_start_time|**datetime**|このプールの統計がリセットされた時刻。 NULL 値は許可されません。|  
 |total_cpu_usage_ms|**bigint**|リソース ガバナー統計がリセットされた後の累積 CPU 使用率 (ミリ秒単位)。 NULL 値は許可されません。|  
 |cache_memory_kb|**bigint**|現在の合計キャッシュ メモリ使用量 (KB 単位)。 NULL 値は許可されません。|  
@@ -63,31 +63,31 @@ ms.locfileid: "34467938"
 |max_memory_percent|**int**|このリソース プールの要求で使用できる合計サーバー メモリの割合の現在の構成。 NULL 値は許可されません。|  
 |cap_cpu_percent|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース プールのすべての要求に割り当てられる、CPU 帯域幅のハード キャップ。 CPU の最大帯域幅レベルを、指定したレベルに制限します。 値の許容範囲は 1 ～ 100 です。 NULL 値は許可されません。|  
 |min_iops_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> このプールのディスク ボリューム設定ごとの、1 秒あたりの最小 I/O (IOPS)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
-|max_iops_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> このプールのディスク ボリューム設定ごとの、1 秒あたりの最大 I/O (IOPS)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  つまり、リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME 設定値は 0.|  
+|max_iops_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> このプールのディスク ボリューム設定ごとの、1 秒あたりの最大 I/O (IOPS)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  つまり、リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定値は 0.|  
 |read_io_queued_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナーがリセットされた後にエンキューされた読み取り IO の合計。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
 |read_io_issued_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に発行された読み取り IO の合計。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
 |read_io_completed_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に完了した読み取り IO の合計。 NULL 値は許可されません。|  
 |read_io_throttled_total|**int**|リソース ガバナー統計がリセットされた後に調整された読み取り IO の合計。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
 |read_bytes_total|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に読み取られたバイト数の合計。 NULL 値は許可されません。|  
 |read_io_stall_total_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 読み取り IO の到着から完了までの合計時間 (ミリ秒単位)。 NULL 値は許可されません。 |  
-|read_io_stall_queued_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 読み取り IO の到着から発行までの合計時間 (ミリ秒単位)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。<br /><br /> かどうか、IO 設定、待機時間の原因となって、プールの減算を決定する**read_io_stall_queued_ms**から**read_io_stall_total_ms**です。|  
+|read_io_stall_queued_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 読み取り IO の到着から発行までの合計時間 (ミリ秒単位)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。<br /><br /> かどうか、IO 設定、待機時間の原因となって、プールの減算を決定する**確認するのに**から**read_io_stall_total_ms**します。|  
 |write_io_queued_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後にエンキューされた書き込み IO の合計。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
 |write_io_issued_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に発行された書き込み IO の合計。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
-|write_io_completed_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に完了した書き込み IO の合計。 Null 値はありません。|  
-|write_io_throttled_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に調整された書き込み IO の合計。 Null 値はありません。|  
+|write_io_completed_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に完了した書き込み IO の合計。 値が許容されません。|  
+|write_io_throttled_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に調整された書き込み IO の合計。 値が許容されません。|  
 |write_bytes_total|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> リソース ガバナー統計がリセットされた後に書き込まれたバイト数の合計。 NULL 値は許可されません。|  
 |write_io_stall_total_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 書き込み IO の到着から完了までの合計時間 (ミリ秒単位)。 NULL 値は許可されません。 |  
 |write_io_stall_queued_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 書き込み IO の到着から発行までの合計時間 (ミリ秒単位)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。<br /><br /> これは、IO リソース管理によって発生した遅延です。|  
 |io_issue_violations_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> IO 発行違反の合計。 つまり、IO の発行レートが予約レートを下回った回数です。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
 |io_issue_delay_total_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> IO の発行予定時間から実際に発行されるまでの合計時間 (ミリ秒単位)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  リソース ガバナー ワークロード グループとリソース ガバナー リソース プールには、多対一のマッピングがあります。 このため、多くのリソース プール統計が、ワークロード グループ統計から派生しています。  
   
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、sys.resource_governor_resource_pools カタログ ビューを使用します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

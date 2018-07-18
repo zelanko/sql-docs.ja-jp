@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,18 +19,19 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d5d676ed2b32827c16b70dab4c447d7029ed806
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e9360b346ed267fcaad61ef6c06b9408c837b8d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402984"
 ---
 # <a name="operators-ssis-expression"></a>演算子 (SSIS 式)
   このセクションでは、式の言語が提供する演算子、および式エバリュエーターが使用する演算子の優先順位と結合性について説明します。  
   
  次の表に、演算子に関するこのセクションのトピックの一覧を示します。  
   
-|演算子|Description|  
+|演算子|[説明]|  
 |--------------|-----------------|  
 |[キャスト (SSIS 式)](../../integration-services/expressions/cast-ssis-expression.md)|式をあるデータ型から別のデータ型に変換します。|  
 |[() (括弧) (SSIS 式)](../../integration-services/expressions/parentheses-ssis-expression.md)|式の評価順序を特定します。|  

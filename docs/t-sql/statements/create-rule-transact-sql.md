@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -31,14 +30,15 @@ helpviewer_keywords:
 - rules [SQL Server], creating
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e0ef2de168411dbd4662a7fabd88ec0b6ad141f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781713"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  CREATE RULE は、単一のバッチ内で他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと組み合わせて使用することはできません。 ルールを作成した時点では、データベース内の既存のデータにルールは適用されません。また、ルールをシステム データ型にバインドすることはできません。  
   
- ルールは、現在のデータベース内でのみ作成できます。 ルールを作成したら、**sp_bindrule** を実行してルールを列または別名データ型にバインドします。 ルールと列のデータ型の間には互換性がとれている必要があります。 たとえば、数値型列のルールとして "@value LIKE A%" は使用できません。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 また、計算列にもバインドできません。  
+ ルールは、現在のデータベース内でのみ作成できます。 ルールを作成したら、**sp_bindrule** を実行してルールを列または別名データ型にバインドします。 ルールと列のデータ型の間には互換性がとれている必要があります。 たとえば、数値型列のルールとして "\@value LIKE A%" は使用できません。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 また、計算列にもバインドできません。  
   
  文字および日付定数は、必ず単一引用符 (') で囲み、バイナリ定数は 0x で始めてください。 ルールとバインド先の列の間に互換性がとれていない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、ルールがバインドされたときではなく値が挿入されたときにエラー メッセージが返されます。  
   
@@ -89,7 +89,7 @@ AS condition_expression
   
  同じ名前の新しいルールを作成するときには、まず **sp_unbindrule** を実行して現在のルールのバインドを解除し、次に DROP RULE を使用してルールを削除する必要があります。 列からルールのバインドを解除するには、**sp_unbindrule** を使用します。  
   
- 以前のルールのバインドを解除せずに、新しいルールを列またはデータ型にバインドすることができます。新しいルールは以前のルールよりも優先されます。 列にバインドされているルールは、別名データ型にバインドされているルールよりも常に優先されます。 ルールを列にバインドすると、その列の別名データ型に既にバインドされていたルールは新しいルールに置き換えられますが、 ルールをデータ型にバインドしても、その別名データ型の列にバインドされていたルールは新しいルールに置き換えられません。 次の表は、ルールが既に存在する列および別名データ型にルールをバインドするときの優先順位です。  
+ 以前のルールのバインドを解除せずに、新しいルールを列またはデータ型にバインドすることができます。新しいルールは以前のルールをオーバーライドします。 列にバインドされているルールは、別名データ型にバインドされているルールよりも常に優先されます。 ルールを列にバインドすると、その列の別名データ型に既にバインドされていたルールは新しいルールに置き換えられますが、 ルールをデータ型にバインドしても、その別名データ型の列にバインドされていたルールは新しいルールに置き換えられません。 次の表は、ルールが既に存在する列および別名データ型にルールをバインドするときの優先順位です。  
   
 |新しいルールのバインド先|前のルールのバインド先が<br /><br /> 別名データ型の場合|前のルールのバインド先が<br /><br /> [列]|  
 |-----------------------|-------------------------------------------|----------------------------------|  
@@ -133,7 +133,7 @@ AS
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

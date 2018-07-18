@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 451273b019c91d7bf92ae2f277bb4a7b69e668b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e150652a335175dce388d7cd0f5c40a79e61391
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964307"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352984"
 ---
 # <a name="publication-properties-subscription-options"></a>[パブリケーションのプロパティ]、[サブスクリプション オプション]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "32964307"
  スナップショット エージェントが実行されるたびにスナップショット ファイルを作成するかどうかを決定します ( **[独立したディストリビューション エージェント]** が有効な場合のみ)。 このオプションは読み取り専用であり、パブリケーションの新規作成ウィザードの **[スナップショット エージェント]** ページで **[スナップショットをすぐに作成し、サブスクリプションを初期化できるようにそのスナップショットを保持する]** を選択した場合は **[True]** に設定されます (既定)。 詳細については、「[スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-snapshot.md)」を参照してください。  
   
  **[バックアップ ファイルからの初期化を許可]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクリプションの初期化でバックアップ ファイルを使用できるようにするかどうかを決定します。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクリプションの初期化でバックアップ ファイルを使用できるようにするかどうかを決定します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
  **[SQL Server 以外のサブスクライバーを許可]**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 パブリケーションで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーをサポートするかどうかを決定します。 このオプションを **[True]** にすると、他のパブリケーション プロパティで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーをサポートするように設定されます。 サブスクリプションが存在する場合、このオプションは読み取り専用です。 **[即時更新サブスクリプションを許可]** 、 **[キュー更新サブスクリプションを許可]**、または **[ピア ツー ピア サブスクリプションを許可]** が **[True]** に設定されている場合、このオプションは **[True]** に設定できません。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  

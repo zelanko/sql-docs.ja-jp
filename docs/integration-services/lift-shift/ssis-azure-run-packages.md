@@ -1,28 +1,27 @@
 ---
 title: Azure で SSIS パッケージを実行する | Microsoft Docs
-ms.description: Provides an overview of the available methods for running packages deployed to Azure SQL Database.
+description: Azure SQL Database にデプロイされている SSIS パッケージの実行に利用できる方法の概要について示します。
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: e4d733b49f8353fc430f90161ef25c352c8cac8f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8365215117ea1260ed5faff76187a7dd9c607887
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586087"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262046"
 ---
-# <a name="run-an-ssis-package-in-azure"></a>Azure で SSIS パッケージを実行する
+# <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージを実行する
 
-この記事で説明するオプションの 1 つを選択することで、Azure SQL Database サーバーで SSISDB カタログ データベースにデプロイされている SSIS パッケージを実行できます。 パッケージは直接実行するか、Azure Data Factory パイプラインの一部として実行できます。 Azure の SSIS の概要については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+この記事で説明する方法の 1 つを選択することで、Azure SQL Database サーバーで SSISDB カタログにデプロイされている SSIS パッケージを実行できます。 パッケージは直接実行するか、Azure Data Factory パイプラインの一部として実行できます。 Azure 上の SSIS の概要については、「[Azure で SSIS パッケージをデプロイし、実行する](ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
 
 - パッケージを直接実行する
 
@@ -81,4 +80,4 @@ Azure SQL Database に接続し、Transact-SQL コードを実行できるあら
 
 ## <a name="next-steps"></a>次の手順
 
-Azure にデプロイされている SSIS パッケージのスケジュール設定オプションについて学習してください。 詳しくは、[Azure で SSIS パッケージの実行スケジュールを設定する](ssis-azure-schedule-packages.md)方法に関するページを参照してください。
+Azure にデプロイされている SSIS パッケージのスケジュール設定オプションについて学習してください。 詳細については、「[Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages.md)」を参照してください。

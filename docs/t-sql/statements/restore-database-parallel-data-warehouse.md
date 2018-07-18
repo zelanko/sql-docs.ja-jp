@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -12,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed7e6aeb0630a20ee39d512fc17dfe24040737f2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702516"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782433"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -132,7 +131,7 @@ RESTORE HEADERONLY
   
 たとえば、2 つのノードを備えたアプライアンス (ノードあたり 30 GB) から 6 つのノードを備えたアプライアンスに 60 GB のデータベースを復元する場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、6 つのノードを備えたアプライアンス上に 180 GB のデータベース (6 ノード、ノードあたり 30 GB) を作成します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] はまず 2 つのノードに復元することでソースの構成と一致させ、次に 6 つのノードすべてにデータを再割り当てします。  
   
- 再割り当て後の各計算ノードでは、小さい方のソース アプライアンス上の各計算ノードと比べて、含まれる実際のデータが少なくなり、空き領域が大きくなります。 追加の領域を使用して、データベースにデータを追加します。 復元されたデータベースのサイズが必要以上に大きい場合は、[ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md) を使用してデータベース ファイルのサイズを縮小することができます。  
+ 再割り当て後の各計算ノードでは、小さい方のソース アプライアンス上の各計算ノードと比べて、含まれる実際のデータが少なくなり、空き領域が大きくなります。 追加の領域を使用して、データベースにデータを追加します。 復元されたデータベースのサイズが必要以上に大きい場合は、[ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw) を使用してデータベース ファイルのサイズを縮小することができます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  以下の制限事項と制約において、ソース アプライアンスとはデータベースのバックアップが作成されたアプライアンスであり、ターゲット アプライアンスとはデータベースの復元先のアプライアンスです。  

@@ -2,7 +2,6 @@
 title: Delete メソッド (ADO フィールドのコレクション) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07256948e8b83c6ddac5000bfb12cf590325fd5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 296364d3fafc4a67767699d55631209658657de1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277551"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Delete メソッド (ADO フィールドのコレクション)
 オブジェクトを削除、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクション。  
@@ -41,7 +41,7 @@ Fields.Delete Field
  *フィールド*  
  A**バリアント**を指定する、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトを削除します。 このパラメーターの名前を指定できます、**フィールド**オブジェクトまたはの序数の位置、**フィールド**オブジェクト自体です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  呼び出す、 **Fields.Delete**メソッドを開いている[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)実行時エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

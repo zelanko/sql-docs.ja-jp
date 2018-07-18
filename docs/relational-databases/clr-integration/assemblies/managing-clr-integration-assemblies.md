@@ -1,14 +1,11 @@
 ---
-title: CLR 統合アセンブリの管理 |Microsoft ドキュメント
+title: CLR 統合アセンブリの管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,28 +18,28 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4883867e93c1f8a9e782f1e0a70d8ca6f53160
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fba26bd48f94fb76f44c423297e9f2bc0d2f86cb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918797"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350184"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 統合アセンブリの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  マネージ コードは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 アセンブリは DLL ファイルまたは実行可能 (.exe) ファイルとしてパッケージ化されます。 実行可能ファイルが単独で実行できるのに対し、DLL は既存のアプリケーションでホストする必要があります。 マネージ DLL アセンブリに読み込まれ、によってホストされていることができます[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプロセスに読み込んで使用するには、CREATE ASSEMBLY ステートメントを使用してそのアセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録する必要があります。 アセンブリは、ALTER ASSEMBLY ステートメントを使用してより最近のバージョンから更新することも、DROP ASSEMBLY ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から削除することも可能です。  
+  マネージド コードは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 アセンブリは DLL ファイルまたは実行可能 (.exe) ファイルとしてパッケージ化されます。 実行可能ファイルが単独で実行できるのに対し、DLL は既存のアプリケーションでホストする必要があります。 マネージ DLL アセンブリに読み込まれ、によってホストされていることができます[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプロセスに読み込んで使用するには、CREATE ASSEMBLY ステートメントを使用してそのアセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録する必要があります。 アセンブリは、ALTER ASSEMBLY ステートメントを使用してより最近のバージョンから更新することも、DROP ASSEMBLY ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から削除することも可能です。  
   
- アセンブリ情報が格納されている、 **sys.assembly_files**アセンブリがインストールされているデータベースのテーブルにします。 **Sys.assembly_files**テーブルには、次の列が含まれています。  
+ アセンブリ情報が格納されている、 **sys.assembly_files**アセンブリがインストールされているデータベースのテーブル。 **Sys.assembly_files**テーブルには、次の列が含まれています。  
   
-|列|Description|  
+|[列]|説明|  
 |------------|-----------------|  
 |assembly_id|アセンブリに定義される ID。 この番号は、同じアセンブリに関連するすべてのオブジェクトに割り当てられます。|  
-|name|オブジェクトの名前。|  
-|file_id|最初のオブジェクトに関連付けられている各オブジェクトを識別する番号を指定した**assembly_id** 1 の値が指定されています。 複数のオブジェクトが同じ関連付けられている場合**assembly_id**、その後各**file_id**値が 1 増えます。|  
+|NAME|オブジェクトの名前。|  
+|file_id|最初のオブジェクトに関連付けられている各オブジェクトを識別する番号を指定した**assembly_id** 1 の値が指定されています。 複数のオブジェクトが関連付けられている場合**assembly_id**、以降の各し**file_id**値が 1 ずつインクリメントされます。|  
 |content|アセンブリまたはファイルの 16 進数表記。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [アセンブリを作成します。](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [アセンブリの作成](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] における SAFE、EXTERNAL_ACCESS、および UNSAFE CLR アセンブリの作成について説明します。  
   
  [アセンブリの変更](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  

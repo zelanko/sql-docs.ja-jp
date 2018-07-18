@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20ce53ebc4de2694039019857264b5821f3c6f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d27f27154fe4faa1f028c53aafd7db40f20e938
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333276"
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
   コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="container-types"></a>コンテナーの種類  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、パッケージを構築するために 4 種類のコンテナーが用意されています。 次の表に、使用できるコンテナーの種類の一覧を示します。  
   
-|コンテナー|Description|  
+|コンテナー|[説明]|  
 |---------------|-----------------|  
 |[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)|列挙子を使用して、制御フローを繰り返し実行します。|  
 |[For ループ コンテナー](../../integration-services/control-flow/for-loop-container.md)|条件をテストして、制御フローを繰り返し実行します。|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="summary-of-container-properties"></a>コンテナー プロパティのまとめ  
  すべての種類のコンテナーには、一連の共通のプロパティがあります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されているグラフィック ツールを使用してパッケージを作成すると、Foreach ループ、For ループ、およびシーケンスの各コンテナーに対して、次のプロパティが [プロパティ] ウィンドウに一覧表示されます。 タスク ホスト コンテナーのプロパティは、タスク ホストがカプセル化しているタスクの構成の一環として、 タスクを構成するときに設定します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**DelayValidation**|コンテナーの検証を実行時まで遅らせるかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>に評価されるまで、タスクを繰り返します。|  
 |**[説明]**|コンテナーの説明です。 このプロパティに格納されるのは文字列で、空白にすることもできます。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>に評価されるまで、タスクを繰り返します。|  

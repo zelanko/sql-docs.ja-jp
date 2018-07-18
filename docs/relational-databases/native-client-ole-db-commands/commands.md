@@ -1,36 +1,34 @@
 ---
-title: コマンド |Microsoft ドキュメント
+title: コマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56749be182165535e7fb8678cdda09a3a485a95f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e98822b180c5b1a745cc1265ca090de5f0c6305d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707980"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418701"
 ---
 # <a name="commands"></a>コマンド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを公開、 **ICommand**インターフェイスとコマンド オブジェクトのこのセクションで説明されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **ICommand**インターフェイスとコマンド オブジェクトのこのセクションで説明されています。  
   
 -   [コマンドの構文](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   

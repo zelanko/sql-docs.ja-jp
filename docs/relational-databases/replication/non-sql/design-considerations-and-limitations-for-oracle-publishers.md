@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38df2896997fe55f9072c481eb7678ce6c870aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c762e0ceedad4c535f5eda7bafe017ed2d61d6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965067"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351714"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +143,8 @@ ms.locfileid: "32965067"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)」 (レプリケートされたデータの検証) を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
   
 -   パブリッシュされた Oracle テーブルへのスキーマ変更はサポートされていません。 スキーマ変更を行うには、まずパブリケーションを削除し、変更を行ってから、パブリケーションおよびサブスクリプションを再作成します。  
   

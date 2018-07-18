@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5efe57352b1c3ddbbdc1a4db0eb64ba8a27af65f
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772146"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513017"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルと従来のパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
@@ -152,7 +150,7 @@ SSIS サービス アカウントを既定値から変更した場合は、パ�
   
      - または -  
   
-     コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**に 32 ビット バージョンのツールもあります。  
+     コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**に 32 ビット バージョンのツールもあります。  
   
 2.  **[ソースの選択]** ページで、 **[プロジェクト配置ファイル]** をクリックして、プロジェクトの配置ファイルを選択します。  
   
@@ -702,7 +700,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **スコープ**  
  パラメーターのスコープを一覧表示します。  
   
- **[値]**  
+ **Value**  
  パラメーター値を一覧表示します。  
   
  パラメーター プロパティを構成するには、値フィールドの横にある参照ボタンをクリックします。  

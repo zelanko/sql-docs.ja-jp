@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63b354be996722779bc44f27115eb8ed6f0f79a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2913492a72dc0c384fa6885664db1038a178e64e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331376"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
   ファイル システム タスクは、ファイル システム内のファイルとディレクトリの操作を実行します。 たとえば、ファイル システム タスクを使用すると、パッケージはディレクトリやファイルの作成、移動、または削除を実行できます。 また、ファイル システム タスクを使用して、ファイルやディレクトリの属性を設定することもできます。 たとえば、ファイル システム タスクを使用すると、ファイルを非表示にしたり読み取り専用にできます。  
@@ -68,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[ファイル システム タスク エディター] ([全般] ページ)](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
+-   [[ファイル システム タスク エディター]\([全般] ページ)](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   

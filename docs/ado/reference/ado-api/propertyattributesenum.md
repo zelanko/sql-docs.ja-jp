@@ -2,7 +2,6 @@
 title: PropertyAttributesEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db96074b46b31a826d8abc22da15f66d2af3a52f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31260a4336954a2efa0cf001d244b7ad7ff7d6a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280801"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 属性を指定、[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|プロパティがプロバイダーによってサポートされていないことを示します。|  
 |**adPropRequired**|1|データ ソースが初期化される前にユーザーにこのプロパティの値を指定することを示します。|  

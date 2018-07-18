@@ -2,23 +2,21 @@
 title: SQL Server のドキュメントに投稿する方法 | Microsoft Docs
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926533"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 - [GitHub アカウントを作成する](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [コンテンツ オーサリング ツールをインストールする](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Git リポジトリをローカルに設定する](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [ツールを使って投稿する](https://docs.microsoft.com/contribute/full-workflow)
+- [ツールを使って投稿する](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 ドキュメントを大幅に変更するプル要求を送信する場合は、オンライン**貢献者使用許諾契約書 (CLA)** の提出を求める GitHub のコメントを受け取ります。 オンライン フォームを提出してからでないと、プル要求は受け付けられません。
 
@@ -94,7 +92,7 @@ ms.lasthandoff: 05/03/2018
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) リポジトリでは、複数の標準フォルダーを使ってコンテンツが整理されています。
 
-| フォルダー | Description |
+| フォルダー | [説明] |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 公開されたすべての SQL Server コンテンツが格納されています。 サブフォルダーには、異なる分野のコンテンツが論理的にまとめられています。 |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | インクルード ファイルが格納されています。 これらのファイルは、他のトピックに含めることのできるコンテンツのブロックです。 |
@@ -138,5 +136,3 @@ GitHub で [sql-docs リポジトリ](https://github.com/MicrosoftDocs/sql-docs)
 記事を探し、変更内容を送信して、SQL Server コミュニティに投稿します。 
 
 ありがとうございます。
-
-

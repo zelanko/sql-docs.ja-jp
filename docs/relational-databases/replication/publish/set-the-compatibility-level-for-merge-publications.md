@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87c782fe9c90e04ba0217776b8fd1fd618367fe9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 04da76853e5a3c8a4705fba7c822c770717d9339
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32963387"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359524"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>マージ パブリケーションの互換性レベルの設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "32963387"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードの **[サブスクライバーの種類]** ページで互換性レベルを設定します。 このウィザードへのアクセスの詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)を使用して、マージ パブリケーションの互換性レベルを設定する方法について説明します。 パブリケーション スナップショットの作成後、互換性レベルを上げることはできますが、下げることはできません。 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[全般]** ページで互換性レベルを上げます。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。 パブリケーションの互換性レベルを上げた場合、設定した互換性レベルよりも前のバージョンを実行しているサーバーでは、既存のサブスクリプションを同期できなくなります。  
+ パブリケーションの新規作成ウィザードの **[サブスクライバーの種類]** ページで互換性レベルを設定します。 このウィザードへのアクセスの詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)を使用して、マージ パブリケーションの互換性レベルを設定する方法について説明します。 パブリケーション スナップショットの作成後、互換性レベルを上げることはできますが、下げることはできません。 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[全般]** ページで互換性レベルを上げます。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。 パブリケーションの互換性レベルを上げた場合、設定した互換性レベルよりも前のバージョンを実行しているサーバーでは、既存のサブスクリプションを同期できなくなります。  
   
 > [!NOTE]  
 >  互換性レベルはパブリケーションの他のプロパティ、および有効になるアーティクルのプロパティと密接に関連しているため、互換性レベルとその他のプロパティをこのダイアログ ボックスで同時に変更しないでください。 プロパティの変更後、パブリケーションのスナップショットを再生成する必要があります。  
@@ -58,7 +57,7 @@ ms.locfileid: "32963387"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>マージ パブリケーションのパブリケーション互換性レベルを設定するには  
   
-1.  パブリケーションに古いバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との互換性を持たせるには、パブリッシャーで [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行し、**@publication_compatibility_level** に値を指定します。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+1.  パブリケーションに古いバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との互換性を持たせるには、パブリッシャーで [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行し、**@publication_compatibility_level** に値を指定します。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>マージ パブリケーションのパブリケーション互換性レベルを変更するには  
   

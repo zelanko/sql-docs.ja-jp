@@ -1,7 +1,7 @@
 ---
 title: クエリ処理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842905"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、ローカル テーブル、パーティション テーブル、複数のサーバーに分散されたテーブルなどさまざまなデータ ストレージ アーキテクチャでクエリを処理します。 以下のトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリを処理して、実行プランのキャッシュによりクエリの再利用を最適化する方法について説明します。
 
+## <a name="execution-modes"></a>実行モード
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、2 つの異なる処理モードで SQL ステートメントを処理できます。
+- 行モード実行
+- バッチ モード実行
+
+### <a name="row-mode-execution"></a>行モード実行
+*行モード実行*は、データが行形式で格納される、従来の RDMBS テーブルで使用されるクエリ処理方法です。 クエリが実行され、行ストア テーブルのデータにアクセスするとき、実行ツリーの演算子と子演算子は、テーブル スキーマに指定されている列全体で、必要な行をそれぞれ読み取ります。 SELECT ステートメント、JOIN 述語、フィルター述語で参照される結果セットに必要な列を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は読み取られる各行から取得します。
+
+> [!NOTE]
+> 行モード実行は OLTP シナリオで非常に効率的ですが、データ ウェアハウスのシナリオなど、大量のデータをスキャンするときは効率性が下がることがあります。
+
+### <a name="batch-mode-execution"></a>バッチ モード実行  
+*バッチ モード実行*は、複数の行をまとめて処理するためのクエリ処理方法です (そのため、バッチという言葉が使われています)。 バッチ内の各列は、別個のメモリ領域のベクトルとして格納されています。そのため、バッチ モード処理はベクトル基準となります。 バッチ モード処理ではまた、マルチコア CPU 向けに最適化されており、最新ハードウェアでメモリ スループットを上げるアルゴリズムが使用されています。      
+
+バッチ モード実行は、列ストア ストレージ形式と緊密に統合され、このストレージ形式に合わせて最適化されています。 バッチ モードの処理は、可能な場合は圧縮データに対して行われるので、行モード実行で使用される[交換操作](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)が不要になります。 結果的に、並行処理の向上と高速なパフォーマンスが得られます。    
+
+クエリがバッチ モードで実行され、列ストア インデックスのデータにアクセスするとき、実行ツリーの演算子と子演算子は、列セグメントにある複数の行をまとめて読み取ります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、SELECT ステートメント、JOIN 述語、フィルター述語で参照される結果に必要な列のみ読み取ります。    
+列ストア インデックスの詳細については、「[列ストア インデックスのアーキテクチャ](../relational-databases/sql-server-index-design-guide.md#columnstore_index)」を参照してください。  
+
+> [!NOTE]
+> バッチ モード実行は、大量のデータが読み取られ、集計される、データ ウェアハウス シナリオで非常に効率的となります。
+
 ## <a name="sql-statement-processing"></a>SQL ステートメントの処理
+単一の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの処理は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で SQL ステートメントを実行する最も基本的な方法です。 ローカルのベース テーブルだけを参照する (ビューやリモート テーブルは参照しない) 単一の `SELECT` ステートメントを処理する手順が、この基本的な処理の良い例です。
 
-単一の SQL ステートメントの処理は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で SQL ステートメントを実行する最も基本的な方法です。 ローカルのベース テーブルだけを参照する (ビューやリモート テーブルは参照しない) 単一の `SELECT` ステートメントを処理する手順が、この基本的な処理の良い例です。
-
-#### <a name="logical-operator-precedence"></a>論理演算子の優先順位
+### <a name="logical-operator-precedence"></a>論理演算子の優先順位
 
 1 つのステートメントで複数の論理演算子を使用すると、最初に `NOT` が評価され、次に `AND`、最後に `OR` が評価されます。 算術演算子、およびビット演算子は論理演算子より前に処理されます。 詳細については、「[Operator Precedence (Transact-SQL)](../t-sql/language-elements/operator-precedence-transact-sql.md)」 (演算子の順位 (Transact-SQL)) を参照してください。
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>SELECT ステートメントの最適化
+### <a name="optimizing-select-statements"></a>SELECT ステートメントの最適化
 
 `SELECT` ステートメントは非手続き型であり、要求したデータを取得するときにデータベース サーバーで使用する手順が細かく指定されません。 つまり、データベース サーバーが SELECT ステートメントを分析して、要求したデータを抽出する最も効率的な方法を決定する必要があります。 これを、 `SELECT` ステートメントの最適化と呼びます。 また、最適化を行うコンポーネントをクエリ オプティマイザーと呼びます。 クエリ オプティマイザーへの入力は、クエリ、データベース スキーマ (テーブル定義やインデックスの定義)、およびデータベース統計で構成されます。 クエリ オプティマイザーの出力がクエリ実行プランです。これは、クエリ プランや単にプランと呼ばれることもあります。 クエリ プランの内容については、このトピックの後半で説明します。
 
@@ -104,7 +128,7 @@ GO
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーを使用すると、プログラマやデータベース管理者が入力しなくても、データベース内の状態の変化に合わせてデータベース サーバーを動的に調整できるので、クエリ オプティマイザーは不可欠です。 これにより、プログラマはクエリの最終結果の記述だけに重点を置くことができます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、ステートメントを実行するたびに、データベースの状態に合わせて効率的な実行プランを構築します。
 
-#### <a name="processing-a-select-statement"></a>SELECT ステートメントの処理
+### <a name="processing-a-select-statement"></a>SELECT ステートメントの処理
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が単一の SELECT ステートメントを処理する基本的な手順は次のとおりです。 
 
@@ -114,7 +138,7 @@ GO
 4. リレーショナル エンジンによって、実行プランの実行が開始されます。 リレーショナル エンジンは、ベース テーブルからのデータを必要とする手順を処理するときに、要求した行セットのデータを渡すようにストレージ エンジンに要求します。
 5. リレーショナル エンジンでは、ストレージ エンジンから返されたデータが結果セット用に定義された形式に変換され、結果セットをクライアントに返します。
 
-#### <a name="processing-other-statements"></a>その他のステートメントの処理
+### <a name="processing-other-statements"></a>その他のステートメントの処理
 
 `SELECT` ステートメントの処理で説明した基本的な手順は、 `INSERT`、 `UPDATE`、 `DELETE`などの SQL ステートメントにも適用されます。 `UPDATE` ステートメントと `DELETE` ステートメントは、いずれも変更または削除する行セットを対象とする必要があります。 これらの行を特定する処理は、 `SELECT` ステートメントの結果セットを得るために使用された、基になる行を特定する処理と同じです。 `UPDATE` ステートメントと `INSERT` ステートメントのどちらにも、更新または挿入するデータ値を指定する SELECT ステートメントを埋め込むことができます。
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のプラン表示機能では、リレーショナル エンジンがこの 2 つの `SELECT` ステートメントのどちらに対しても同じ実行プランを構築することが示されます。
 
-#### <a name="using-hints-with-views"></a>ビューでのヒントの使用
+### <a name="using-hints-with-views"></a>ビューでのヒントの使用
 
 クエリのビューに設定されるヒントは、ベース テーブルにアクセスするためにビューを展開するときに検出される他のヒントと競合することがあります。 この競合が発生すると、クエリはエラーを返します。 たとえば、定義にテーブル ヒントが含まれている、次のビューについて考えてみます。
 
@@ -513,7 +537,7 @@ WHERE ProductSubcategoryID = 4;
 
 ### <a name="ForcedParam"></a> 強制パラメーター化
 
-データベースのすべての `SELECT`、`INSERT`、`UPDATE`、`DELETE` ステートメントをパラメーター化するように指定することで、いくつかの制約はありますが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の簡易パラメーター化の既定動作を無効にできます。 強制パラメータ化を有効にするには、 `PARAMETERIZATION` ステートメントの `FORCED` オプションを `ALTER DATABASE` に設定します。 強制パラメーター化を行うと、クエリをコンパイルおよび再コンパイルする頻度を緩和できるので、データベースによってはパフォーマンスが向上します。 一般的に POS (point-of-sale) などのアプリケーションから大量のクエリが同時に実行されるデータベースは、強制パラメーター化によりパフォーマンスが向上します。
+データベースのすべての `SELECT`、`INSERT`、`UPDATE`、`DELETE` ステートメントをパラメーター化するように指定することで、いくつかの制約はありますが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の簡易パラメーター化の既定動作をオーバーライドできます。 強制パラメータ化を有効にするには、 `PARAMETERIZATION` ステートメントの `FORCED` オプションを `ALTER DATABASE` に設定します。 強制パラメーター化を行うと、クエリをコンパイルおよび再コンパイルする頻度を緩和できるので、データベースによってはパフォーマンスが向上します。 一般的に POS (point-of-sale) などのアプリケーションから大量のクエリが同時に実行されるデータベースは、強制パラメーター化によりパフォーマンスが向上します。
 
 `PARAMETERIZATION` オプションを `FORCED`に設定すると、 `SELECT`、 `INSERT`、 `UPDATE`、 `DELETE` の各ステートメントに使用されているリテラル値は、その形式を問わずクエリのコンパイル時にパラメーターに変換されます。 ただし、次に示すクエリ構造に現れるリテラルは例外です。 
 
@@ -572,7 +596,7 @@ WHERE ProductSubcategoryID = 4;
 * `PARAMETERIZATION` オプションはオンライン操作で設定します。このとき、データベースレベルの排他ロックは必要ありません。
 * `PARAMETERIZATION` オプションの現在の設定は、データベースを再アタッチまたは復元するときも維持されます。
 
-単一クエリ、および構文は同じでパラメーター値のみが異なる他の任意のクエリを簡易パラメーター化するように指定することで、強制パラメーター化の動作を無効にできます。 逆に、データベースで強制パラメーター化の動作が無効になっている場合に、構文が同じクエリに対してのみ強制パラメーター化の動作を指定することもできます。 この方法については、「[プラン ガイド](../relational-databases/performance/plan-guides.md) 」を参照してください。
+単一クエリ、および構文は同じでパラメーター値のみが異なる他の任意のクエリを簡易パラメーター化するように指定することで、強制パラメーター化の動作をオーバーライドできます。 逆に、データベースで強制パラメーター化の動作が無効になっている場合に、構文が同じクエリに対してのみ強制パラメーター化の動作を指定することもできます。 この方法については、「[プラン ガイド](../relational-databases/performance/plan-guides.md) 」を参照してください。
 
 > [!NOTE]
 > `PARAMETERIZATION` オプションを `FORCED` に設定すると、`PARAMETERIZATION` オプションを `SIMPLE` に設定する場合と比べて、報告されるエラー メッセージに違いが現れる場合があります。複数のエラー メッセージが強制パラメーター化で報告される場合があり、簡易パラメーター化よりも多くのエラー メッセージが報告されることがあります。また、エラーが発生した行番号が間違って報告されることがあります。
@@ -635,7 +659,7 @@ WHERE ProductID = 63;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、クエリを最適化する過程で、並列実行による効果が期待できるクエリやインデックス操作を検索します。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、そのようなクエリの実行プランに交換操作を挿入して並列実行用クエリを作成します。 交換操作とは、プロセス管理、データの再配布、およびフロー制御を行うクエリ実行プラン内の操作です。 交換操作は `Distribute Streams`論理操作、 `Repartition Streams`論理操作、および `Gather Streams` 論理操作から構成されており、これらは並列クエリのプラン表示出力に含まれる可能性があります。 
 
-交換操作を挿入すると、並列クエリの実行プランになります。 並列クエリの実行プランでは複数のワーカー スレッドを使用できます。 並列でないクエリで使用する直列の実行プランの場合、実行時に使用するワーカー スレッドは 1 つのみです。 並列クエリで実際に使用するワーカー スレッドの数は、クエリ プランを実行するための初期化の時点で、プランの複雑さと並列処理の次数に応じて決まります。 並列処理の次数は、使用している CPU の最大数によって決まります (これは使用しているワーカー スレッドの数という意味ではありません)。 並列処理の次数はサーバー レベルで設定され、sp_configure システム ストアド プロシージャで変更できます。 クエリ ステートメントで `MAXDOP` クエリ ヒントを、またはインデックス ステートメントで `MAXDOP` インデックス オプションを指定することにより、この値を無効にすることができます。 
+交換操作を挿入すると、並列クエリの実行プランになります。 並列クエリの実行プランでは複数のワーカー スレッドを使用できます。 並列でないクエリで使用する直列の実行プランの場合、実行時に使用するワーカー スレッドは 1 つのみです。 並列クエリで実際に使用するワーカー スレッドの数は、クエリ プランを実行するための初期化の時点で、プランの複雑さと並列処理の次数に応じて決まります。 並列処理の次数は、使用している CPU の最大数によって決まります (これは使用しているワーカー スレッドの数という意味ではありません)。 並列処理の次数はサーバー レベルで設定され、sp_configure システム ストアド プロシージャで変更できます。 クエリ ステートメントで `MAXDOP` クエリ ヒントを、またはインデックス ステートメントで `MAXDOP` インデックス オプションを指定することにより、この値をオーバーライドできます。 
 
 次のいずれかの条件が満たされている場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ オプティマイザーは、クエリに対して並列実行プランを使用しません。
 
@@ -672,9 +696,9 @@ WHERE ProductID = 63;
 
 静的カーソルとキーセット ドリブン カーソルは、並列実行プランによって作成できます。 ただし、動的カーソルの動作は、直列実行の場合だけ有効です。 クエリ オプティマイザーは、動的カーソルの一部であるクエリに対しては必ず直列実行プランを生成します。
 
-#### <a name="overriding-degrees-of-parallelism"></a>並列処理の次数の上書き
+#### <a name="overriding-degrees-of-parallelism"></a>並列処理の次数のオーバーライド
 
-[max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) サーバー構成オプション ([!INCLUDE[ssSDS_md](../includes/sssds-md.md)]では [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)) を使用すると、並列プランの実行で使用されるプロセッサの数を制限できます。 max degree of parallelism オプションは、MAXDOP クエリ ヒントまたは MAXDOP インデックス オプションを指定することにより、個別のクエリやインデックス操作のステートメントで上書きできます。 MAXDOP では、個別のクエリやインデックス操作をより制御できます。 たとえば、MAXDOP オプションを使用すると、オンライン インデックス操作専用のプロセッサの数を増減することによって制御できます。 このようにして、インデックス操作で使用されるリソースと同時実行ユーザーが使用するリソースのバランスをとることができます。 
+[max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) サーバー構成オプション ([!INCLUDE[ssSDS_md](../includes/sssds-md.md)]では [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)) を使用すると、並列プランの実行で使用されるプロセッサの数を制限できます。 max degree of parallelism オプションは、MAXDOP クエリ ヒントまたは MAXDOP インデックス オプションを指定することにより、個別のクエリやインデックス操作のステートメントでオーバーライドできます。 MAXDOP では、個別のクエリやインデックス操作をより制御できます。 たとえば、MAXDOP オプションを使用すると、オンライン インデックス操作専用のプロセッサの数を増減することによって制御できます。 このようにして、インデックス操作で使用されるリソースと同時実行ユーザーが使用するリソースのバランスをとることができます。 
 
 max degree of parallelism オプションを 0 (既定) に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で並列プランの実行で使用するプロセッサの数を最大 64 に制限できます。 MAXDOP オプションを 0 に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では 64 個の論理プロセッサという実行時ターゲットが設定されますが、必要であれば、別の値を手動で設定できます。 クエリおよびインデックスに対して MAXDOP を 0 に設定すると、並列プランの実行で指定されたクエリまたはインデックスに対して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で利用可能なすべてのプロセッサ (最大 64) を使用できます。 MAXDOP はあらゆる並列クエリに強制される値ではなく、並列に望ましいあらゆるクエリにとっての仮のターゲットです。 つまり、実行時に十分なワーカー スレッドが利用できない場合、MAXDOP サーバー構成オプションより低い並列度でクエリが実行されることがあります。
 
@@ -772,7 +796,7 @@ Index Seek 操作の上位にある並列操作は、`O_ORDERKEY` の値を使�
 > [!NOTE]
 > 並列インデックス操作は、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] より、Enterprise Edition でのみ使用できます。
  
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、インデックス操作の並列処理の限度 (実行に使用する個別ワーカー スレッドの合計数) を決める際に、他のクエリに行うのと同じアルゴリズムが使用されます。 インデックス操作に必要な並列処理の最大限度は、 [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) サーバー構成オプションによって決まります。 CREATE INDEX、ALTER INDEX、DROP INDEX、および ALTER TABLE の各ステートメントで MAXDOP インデックス オプションを設定することにより、個別のインデックス操作の max degree of parallelism 値を上書きできます。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、インデックス操作の並列処理の限度 (実行に使用する個別ワーカー スレッドの合計数) を決める際に、他のクエリに行うのと同じアルゴリズムが使用されます。 インデックス操作に必要な並列処理の最大限度は、 [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) サーバー構成オプションによって決まります。 CREATE INDEX、ALTER INDEX、DROP INDEX、および ALTER TABLE の各ステートメントで MAXDOP インデックス オプションを設定することにより、個別のインデックス操作の max degree of parallelism 値をオーバーライドできます。
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]によってインデックス実行プランが構築される際に、並列操作の数は、次のうち最も低い値に設定されます。 
 

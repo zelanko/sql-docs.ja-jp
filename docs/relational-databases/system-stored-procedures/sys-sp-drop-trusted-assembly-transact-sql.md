@@ -1,5 +1,5 @@
 ---
-title: sys.sp_drop_trusted_assembly (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_drop_trusted_assembly (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ffdc0c87a798b23ce25e544b26ea63132495b53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255335"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971854"
 ---
 # <a name="sysspdroptrustedassembly-transact-sql"></a>sys.sp_drop_trusted_assembly (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_drop_trusted_assembly
 ## <a name="arguments"></a>引数
 
 [ @hash =] '*値*'  
-サーバーの信頼されたアセンブリの一覧から削除するアセンブリの SHA2_512 ハッシュ値。 アセンブリが署名されていないか、データベースを信頼可能としてマークされていない場合でも、clr の厳格なセキュリティが有効にすると、信頼されたアセンブリを読み込むことがあります。
+サーバーの信頼されたアセンブリの一覧から削除するアセンブリの SHA2_512 のハッシュ値。 アセンブリが署名されていないか、データベースが信頼可能としてマークされていない場合でも、clr の厳密なセキュリティが有効にすると、信頼されたアセンブリを読み込むことがあります。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 
-この手順からアセンブリを削除する[sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)です。
+この手順からアセンブリを削除します。 [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)します。
 
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
-メンバーシップが必要、`sysadmin`固定サーバー ロールまたは`CONTROL SERVER`権限です。
+メンバーシップが必要です、`sysadmin`固定サーバー ロールまたは`CONTROL SERVER`権限。
 
 ## <a name="examples"></a>使用例  
 
-次の例では、サーバーの信頼されたアセンブリの一覧からアセンブリ ハッシュを削除します。  
+次の例では、サーバーの信頼されたアセンブリの一覧から、アセンブリのハッシュを削除します。  
 
 ```  
 EXEC sp_drop_trusted_assembly 

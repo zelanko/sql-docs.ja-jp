@@ -17,11 +17,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2fc52c7bd989884b80c489801e76b51981270c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619519"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>名前 (名前付きパラメーター) でパラメーターのバインド
 特定の Dbms では、アプリケーションの代わりに、プロシージャ呼び出し内の位置での名前でストアド プロシージャにパラメーターを指定できるようにします。 このようなパラメーターと呼びます*名前付きパラメーター*です。 ODBC では、名前付きパラメーターの使用をサポートします。 ODBC では、名前付きパラメーターはストアド プロシージャ呼び出しでのみ使用し、他の SQL ステートメントでは使用できません。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- この手順では、最初のパラメーターで@title_idが既定値は 1 です。 アプリケーションでは、次のコードを使用して、1 つだけの動的パラメーターを指定するように、このプロシージャを呼び出します。 このパラメーターは、名前を持つ名前付きパラメーター"@quote"です。  
+ この手順では、最初のパラメーターで@title_idが既定値は 1 です。 アプリケーションでは、次のコードを使用して、1 つだけの動的パラメーターを指定するように、このプロシージャを呼び出します。 このパラメーターは、名前を持つ名前付きパラメーター"\@引用符"です。  
   
 ```  
 // Prepare the procedure invocation statement.  

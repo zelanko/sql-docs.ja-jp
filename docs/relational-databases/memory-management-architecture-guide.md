@@ -1,7 +1,7 @@
 ---
 title: メモリ管理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -20,11 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239372"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +76,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 > 32 ビット オペレーティング システム上では、古いバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行できます。 32 ビットのオペレーティング システム上で 4 ギガバイト (GB) を超えるメモリにアクセスするには、Address Windowing Extensions (AWE) がメモリを管理する必要がありました。 これは、64 ビット オペレーティング システムで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行するときには必要ありません。 AWE の詳細については、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] ドキュメントの「[プロセス アドレス空間](http://msdn.microsoft.com/library/ms189334.aspx)」および「[大規模データベースのメモリ管理](http://msdn.microsoft.com/library/ms191481.aspx)」をご覧ください。   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のメモリ管理の変更点
-
-以前のバージョンの SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、5 つの異なるメカニズムを利用してメモリが割り当てられていました。
+以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、次の 5 つの異なるメカニズムを利用してメモリが割り当てられていました。
 -  **SPA (Single-page Allocator/単一ページ アロケータ)**。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで 8KB 以下のメモリ割り当てのみ含む。 構成オプションの *max server memory (MB)* と *min server memory (MB)* によって、SPA が利用する物理メモリの上限が決められていました。 同時にバッファー プールが SPA のメカニズムであり、これが単一ページ割り当てを最も多く利用していました。
 -  **MPA (Multi-Page Allocator/複数ページ アロケータ)**。8KB より多くを要求するメモリ割り当て用。
 -  **CLR アロケータ**。CLR 初期化中に作成される SQL CLR ヒープとそのグローバル割り当てを含む。
@@ -109,7 +109,6 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 -  大量の入力パラメーターを格納する必要があるトレース操作。
 
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降の "memory_to_reserve" の変更点
-
 以前のバージョンの SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーは、**複数ページ アロケータ (MPA)**、**CLR アロケータ**、SQL Server プロセスの**スレッド スタック**のメモリ割り当て、**直接 Windows 割り当て (DWA)** で使用するために、プロセス VAS (Virtual Address Space/仮想アドレス空間) の一部を予約しました。 仮想アドレス空間のこの部分は、"Mem-To-Leave" または "non-Buffer Pool" 領域とも呼ばれています。
 
 このような割り当てのために予約される仮想アドレス空間は、構成オプションの ***memory_to_reserve*** によって決定されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用される初期値は 256 MB です。 初期値をオーバーライドするには、スタートアップ パラメーターの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* を使用します。 スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。
@@ -127,12 +126,11 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |Windows からの直接割り当て|はい|はい|
 
 ## <a name="dynamic-memory-management"></a> 動的メモリ管理
-
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の既定のメモリ管理動作では、システムでメモリ不足を発生させることなく、必要な量のメモリを獲得します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、Microsoft Windows の Memory Notification API を使用してこれを実現しています。
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の既定のメモリ管理動作では、システムでメモリ不足を発生させることなく、必要な量のメモリを獲得します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、Microsoft Windows の Memory Notification API を使用してこれを実現しています。
 
 メモリを動的に使用する場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
   
-**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のメモリ割り当て、コンパイル メモリ、すべてのキャッシュ (バッファー プールを含む)、クエリ実行メモリ許可、ロック マネージャー メモリ、CLR<sup>1</sup> メモリ (基本的に、**[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** で見つかったメモリ クラーク) を制御します。 
+**[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のメモリ割り当て、コンパイル メモリ、すべてのキャッシュ (バッファー プールを含む)、[クエリ実行メモリ許可](#effects-of-min-memory-per-query)、[ロック マネージャー メモリ](#memory-used-by-sql-server-objects-specifications)、CLR<sup>1</sup> メモリ (基本的に、**[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** で見つかったメモリ クラーク) を制御します。 
 
 <sup>1</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
 
@@ -170,13 +168,12 @@ FROM sys.dm_os_process_memory;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を起動すると、システムの物理メモリの量、サーバー スレッドの数、さまざまな起動パラメーターなど、数多くのパラメーターに基づいてバッファー プール用の仮想アドレス空間のサイズが計算されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、計算された量のプロセス仮想アドレス空間をバッファー プール用に予約しますが、現在の負荷に必要な量だけ物理メモリを獲得 (コミット) します。
 
-インスタンスでは、ワークロードのサポートに必要なメモリを獲得し続けます。 多くのユーザーが接続してクエリを実行すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では要求に応じて追加の物理メモリを獲得します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスでは、max server memory の割当量に達するか、または Windows によって余分な空きメモリがなくなったことが示されるまで、物理メモリを獲得し続けます。獲得したメモリの量が min server memory 設定よりも多く、Windows によって空きメモリの不足が示されると、メモリが解放されます。
+インスタンスでは、ワークロードのサポートに必要なメモリを獲得し続けます。 多くのユーザーが接続してクエリを実行すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では要求に応じて追加の物理メモリを獲得します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスでは、max server memory の割当量に達するか、または OS によって余分な空きメモリがなくなったことが示されるまで、物理メモリを獲得し続けます。獲得したメモリの量が min server memory 設定よりも多く、OS によって空きメモリの不足が示されると、メモリが解放されます。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスが動作しているコンピューター上で他のアプリケーションを起動すると、メモリを消費し、物理メモリの空き領域が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の目標よりも少なくなります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスでは、メモリの消費を調整します。 他のアプリケーションが停止され、使用可能なメモリが増えると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスはメモリ割り当てのサイズを大きくします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、数 MB のメモリの解放および獲得を毎秒行うことができるため、メモリ割り当ての変更に迅速に対応できます。
 
 ## <a name="effects-of-min-and-max-server-memory"></a>最小および最大サーバー メモリの効果
-
-構成オプションの min server memory と max server memory によって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンのバッファー プールとその他のキャッシュで使用されるメモリ量の上限と下限が決められます。 バッファー プールは、min server memory に指定されたメモリ容量をすぐには獲得しません。 バッファー プールは、初期化に必要なメモリのみで起動します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のワークロードが増えるにしたがって、そのワークロードに対応するために必要なメモリを獲得し続けます。 バッファー プールは、min server memory で指定しされたメモリ容量に達するまでは獲得したメモリを解放しません。 メモリ容量が min server memory に達すると、バッファー プールは標準アルゴリズムを使用して、必要に応じてメモリ容量を獲得または解放します。 唯一の違いは、バッファー プールはそのメモリ割り当てを min server memory の値より少ないメモリ容量にはせず、max server memory の値より多いメモリ容量は獲得しないということです。
+構成オプションの *min server memory* と *max server memory* によって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンのバッファー プールとその他のキャッシュで使用されるメモリ量の上限と下限が決められます。 バッファー プールは、min server memory に指定されたメモリ容量をすぐには獲得しません。 バッファー プールは、初期化に必要なメモリのみで起動します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のワークロードが増えるにしたがって、そのワークロードに対応するために必要なメモリを獲得し続けます。 バッファー プールは、min server memory で指定しされたメモリ容量に達するまでは獲得したメモリを解放しません。 メモリ容量が min server memory に達すると、バッファー プールは標準アルゴリズムを使用して、必要に応じてメモリ容量を獲得または解放します。 唯一の違いは、バッファー プールはそのメモリ割り当てを min server memory の値より少ないメモリ容量にはせず、max server memory の値より多いメモリ容量は獲得しないということです。
 
 > [!NOTE]
 > プロセスとしての[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory オプションで指定された容量を超えるメモリを獲得します。 内部コンポーネントも外部コンポーネントも、バッファー プール外にメモリ容量を割り当てることができます。この場合は、メモリ容量が余分に消費されますが、通常、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって消費されるメモリ容量の最大部分は、バッファー プールに割り当てられたメモリ容量が占めます。
@@ -187,8 +184,7 @@ min server memory と max server memory の両方に同じ値を指定した場�
 
 他のアプリケーションが頻繁に停止または起動されるコンピューター上で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスが動作している場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスによるメモリの割り当てと解放により、他のアプリケーションの起動時間が遅くなることがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が、1 つのコンピューター上で動作している複数のサーバー アプリケーションのうちの 1 つであるときも、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に割り当てるメモリ量をシステム管理者が制御しなければならない場合があります。 このような場合には、min server memory オプションと max server memory オプションを使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が使用するメモリ量を制御できます。 **min server memory** と **max server memory** は MB 単位で指定されます。 詳細については、 [サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md)の設定を参照してください。
 
-## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの仕様で使用されるメモリ
-
+## <a name="memory-used-by-sql-server-objects-specifications"></a>SQL Server オブジェクトの仕様で使用されるメモリ
 次の一覧で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各オブジェクトによって使用されるおおよそのメモリ量について説明します。 表示されている金額は概算であり、環境とオブジェクトの作成方法によって異なります。
 
 * ロック (ロック マネージャーにより保守管理): 64 バイト + 32 バイト (所有者あたり)   
@@ -198,12 +194,33 @@ min server memory と max server memory の両方に同じ値を指定した場�
 
 複数のアクティブな結果セット (MARS) が有効になっている場合、ユーザー接続で使用されるメモリは約 (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB です。
 
-## <a name="buffer-management"></a>バッファー管理
+## <a name="effects-of-min-memory-per-query"></a>min memory per query の効果
+*min memory per query* 構成オプションでは、クエリの実行用に割り当てる最小メモリ容量 (KB 単位) を確定します。 これは、最小メモリ許可とも呼ばれます。 すべてのクエリは、実行を開始するためには、要求された最小メモリをセキュリティで保護できるようになるまで、または query wait サーバー構成オプションで指定された値を超えるまで、待機する必要があります。 このシナリオで累積される待機の種類は、RESOURCE_SEMAPHORE です。
 
+> [!IMPORTANT]
+> 稼働率が非常に高いシステムでは特に、min memory per query サーバー構成オプションの値を高く設定しすぎないでください。そうしないと、次の状況を招く可能性があります。         
+> - メモリ リソースの競合が増加します。         
+> - 実行時に必要なメモリがこの構成より少ない場合でも、すべての単一クエリのメモリ量を増やすことで、同時実行性が低下します。    
+>    
+> この構成の使い方の推奨事項については、「[min memory per query サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)」を参照してください。
+
+### <a name="memory-grant-considerations"></a>メモリ許可に関する考慮事項
+**行モード実行**の場合は、いかなる状況でも初期のメモリ許可を超過することはありません。 **ハッシュ**操作または**並べ替え**操作を実行するために、初期のメモリ許可より多くのメモリを必要とする場合、ディスクへの書き込みが行われます。 ハッシュ操作では TempDB 内の作業ファイルによって書き込みがサポートされます。一方、並べ替え操作では[作業テーブル](../relational-databases/query-processing-architecture-guide.md#worktables)によって書き込みがサポートされます。   
+
+並べ替え操作中に発生する書き込みは、[並べ替えの警告](../relational-databases/event-classes/sort-warnings-event-class.md)と呼ばれています。 並べ替えの警告は、並べ替え操作がメモリに収まらないことを示します。 インデックスの作成に関連する並べ替え操作は対象になりません。`SELECT` ステートメントで使用される `ORDER BY` 句などのクエリ内の並べ替え操作のみが対象になります。
+
+ハッシュ操作中に発生する書き込みは、[ハッシュの警告](../relational-databases/event-classes/hash-warning-event-class.md)と呼ばれています。 これらは、ハッシュ演算中にハッシュの再帰またはハッシュの中断 (ハッシュの保留) が生じたときに発生します。
+-  使用できるメモリ内にビルド入力が収まらないときに、ハッシュの再帰が発生します。その結果、入力が複数のパーティションに分割され、個別に処理されます。 複数のパーティションに分割されても使用できるメモリ内に収まらない場合は、さらにサブパーティションに分割され、個別に処理されます。 この分割プロセスは、使用できるメモリ内に各パーティションが収まるようになるまで、または最大再帰レベルに到達するまで続きます。
+-  ハッシュ演算が最大再帰レベルに到達するとハッシュの保留が発生し、パーティション分割された残りのデータを処理するための代替プランに移行されます。 これらのイベントが原因となって、サーバー内のパフォーマンスが低下する可能性があります。
+
+**バッチ モード実行**の場合、初期のメモリ許可は既定では特定の内部しきい値まで動的に増加することができます。 この動的なメモリ許可メカニズムは、バッチ モードで実行されている**ハッシュ**操作または**並べ替え**操作のメモリ常駐実行を可能にするように設計されています。 これらの操作がまだメモリ内に収まらない場合は、ディスクへの書き込みが行われます。
+
+実行モードの詳細については、「[クエリ処理アーキテクチャ ガイド](../relational-databases/query-processing-architecture-guide.md#execution-modes)」を参照してください。
+
+## <a name="buffer-management"></a>バッファー管理
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの主な目的はデータの格納と取得であるため、データベース エンジンの主要な特性は頻繁なディスク I/O ということになります。 ディスク I/O 操作は多くのリソースを消費するうえ、完了するのに比較的長い時間がかかるので、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では I/O の効率を上げることに重点を置いています。 バッファー管理は、この効率向上を実現するための重要なコンポーネントです。 バッファー管理コンポーネントは 2 つのメカニズムから構成されています。1 つはデータベース ページに対するアクセスと更新を行う**バッファー マネージャー**で、もう 1 つはデータベース ファイルの I/O を削減する**バッファー キャッシュ** (**バッファー プール**) です。 
 
 ### <a name="how-buffer-management-works"></a>バッファー管理のしくみ
-
 バッファーはメモリ内の 8 KB のページで、データ ページやインデックス ページと同じサイズです。 したがって、バッファー キャッシュは 8 KB 単位のページに分割されます。 バッファー マネージャーは、データベース ディスク ファイルのデータ ページやインデックス ページをバッファー キャッシュに読み取って、変更されたページをディスクに書き戻すための機能を管理しています。 バッファー マネージャーが別のデータを読み取るためのバッファー領域を必要とするまで、そのページはバッファー キャッシュ内に残ります。 データに変更が加えられた場合だけ、そのデータがディスクに書き戻されます。 バッファー キャッシュ内のデータは、ディスクに書き戻す前に何度でも変更できます。 詳細については、「 [ページの読み取り](../relational-databases/reading-pages.md) 」および「 [ページの書き込み](../relational-databases/writing-pages.md)」をご覧ください。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を起動すると、システムの物理メモリの量、構成されるサーバー スレッドの最大数、さまざまな起動パラメーターなど、数多くのパラメーターに基づいてバッファー キャッシュ用の仮想アドレス空間のサイズが計算されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、この計算された量のプロセス仮想アドレス空間 (メモリ ターゲット) をバッファー キャッシュ用に予約しますが、現在の負荷に必要な量だけ物理メモリを獲得 (コミット) します。 **sys.dm_os_sys_info** カタログ ビューの **bpool_commit_target** 列と [bpool_committed](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 列に対してクエリを実行すると、メモリ ターゲットとして予約されているページ数と、バッファー キャッシュ内で現在コミットされているページ数をそれぞれ返すことができます。
@@ -217,7 +234,6 @@ min server memory と max server memory の両方に同じ値を指定した場�
 * ログ マネージャー。先行書き込みログ記録を行います。  
 
 ### <a name="supported-features"></a>サポートされている機能
-
 バッファー マネージャーは、次の機能をサポートしています。
 
 * **NUMA (non-uniform memory access)** に対応しています。 バッファー キャッシュ ページはハードウェア NUMA ノード間に分散されます。そのため、スレッドは外部メモリからではなく、ローカルの NUMA ノードに割り当てられているバッファー ページにアクセスすることができます。 
@@ -257,6 +273,30 @@ min server memory と max server memory の両方に同じ値を指定した場�
 
 実行時間の長い I/O のうち、以前の状態には関係ないと考えられる孤立した I/O は、ハードウェアやドライバーの問題が原因になっている場合があります。 システム イベント ログには、問題の診断に役立つ関連イベントが含まれていることがあります。
 
+### <a name="memory-pressure-detection"></a>メモリ不足の検出
+メモリ不足は、メモリの不足が原因で発生する状態であり、次の結果を招く可能性があります。
+- 余分な I/O の発生 (レイジー ライターの非常にアクティブなバック グラウンド スレッドなど)
+- 再コンパイルの比率が高くなる
+- クエリの実行時間が長くなる (メモリ許可待機が存在する場合)
+- 余分な CPU サイクルが発生する
+
+この状況は、外部的な原因または内部的な原因によって引き起こされる可能性がります。 外部的な原因には次のようなものがあります。
+- 使用可能な物理メモリ (RAM) が不足しています。 これにより、システムは現在実行中のプロセスのワーキング セットをトリミングします。結果として、全体的な速度が低下する可能性があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はバッファー プールのコミット ターゲットを削減し、内部キャッシュのトリミングを頻繁に開始する可能性があります。 
+- 使用できる全体的なシステム メモリ (システムのページ ファイルを含む) が不足しています。 これにより、システムはメモリの割り当てを失敗する場合があります。現在割り当てられているメモリをページ アウトできないためです。
+内部的な原因には次のようなものがあります。
+- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] がメモリ使用量の下限を設定する場合に外部メモリ不足に対応します。
+- *max server memory* 構成の値を手動で縮小することにより、メモリ設定の値が引き下げられました。 
+- 内部コンポーネントによるいくつかのキャッシュ間のメモリ配分に変更が生じました。
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、動的メモリ管理の一環として、メモリ不足の検出および処理のために専用のフレームワークが実装されます。 このフレームワークには、**リソース モニター**と呼ばれるバックグラウンド タスクが含まれています。 リソース モニター タスクでは、外部および内部のメモリ インジケーターの状態が監視されます。 これらのインジケーターのいずれかの状態が変化すると、対応する通知が計算され、その通知がブロードキャストされます。 これらの通知は各エンジン コンポーネントからの内部メッセージであり、リング バッファーに格納されます。 
+
+次の 2 つのリング バッファーに、動的メモリ管理に関連する情報が保持されます。 
+- メモリ不足が通知されているかどうかなど、リソース モニターのアクティビティを追跡するリソース モニター リング バッファー。 このリング バッファーの状態情報は、*RESOURCE_MEMPHYSICAL_HIGH*、*RESOURCE_MEMPHYSICAL_LOW*、*RESOURCE_MEMPHYSICAL_STEADY*、または *RESOURCE_MEMVIRTUAL_LOW* の現在の状態に依存します。
+- 各 Resource Governor リソース プールのメモリ通知のレコードが含まれるメモリ ブローカー リング バッファー。 内部メモリ不足が検出されると、メモリの割り当てを行うコンポーネントに対して、メモリ不足を示す通知がオンになり、キャッシュ間でメモリのバランスをとるためのアクションがトリガーされます。 
+
+メモリ ブローカーは、コンポーネントごとにメモリの需要と消費量を監視し、収集した情報に基づいて、これらのコンポーネントの各々に対してメモリの最適な値を算出します。 Resource Governor リソース プールごとにブローカー セットがあります。 この情報は、使用量を必要に応じて拡大または縮小する各コンポーネントにブロードキャストされます。
+メモリ ブローカーの詳細については、[sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md) に関するページを参照してください。 
+
 ### <a name="error-detection"></a>エラー検出  
 データベース ページで 2 つのオプションのメカニズム (破損ページ保護とチェックサム保護) を使用して、ページがディスクに書き込まれてから再び読み取られるまでの間、ページの整合性を保証できます。 これらのメカニズムによって、データ ストレージだけでなく、ハードウェア コンポーネント (コントローラー、ドライバー、ケーブルなど)、およびオペレーティング システムに至るまで、個々の正確性を検証するための独立した手段が可能になります。 この保護はディスクに書き込む直前にページに追加され、ディスクから読み取られた後で検証されます。
 
@@ -278,7 +318,6 @@ min server memory と max server memory の両方に同じ値を指定した場�
 > TORN_PAGE_DETECTION は、使用するリソースが比較的少なくて済みますが、CHECKSUM による保護の最小限のサブセットしか利用できません。
 
 ## <a name="understanding-non-uniform-memory-access"></a>Non-Uniform Memory Access について
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は Non-Uniform Memory Access (NUMA) に対応しているので、特殊な構成を行わなくても NUMA ハードウェアで適切に実行されます。 プロセッサのクロック速度や数が増加するにつれて処理能力が向上しますが、その一方で、向上した能力の活用に必要となるメモリの待機時間を減らすことが困難になります。 ハードウェア ベンダーはメモリの待機時間をなくすために、大容量の L3 キャッシュを搭載していますが、この解決策にも限界があります。 この問題に対する、拡張性に優れた解決方法が NUMA アーキテクチャです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、アプリケーションを変更しなくても NUMA ベースのコンピューターを活用できるように設計されています。 詳細については、「 [ソフト NUMA を使用するように SQL Server を構成する方法](../database-engine/configure-windows/soft-numa-sql-server.md)」をご覧ください。
 
 ## <a name="see-also"></a>参照

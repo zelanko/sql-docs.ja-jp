@@ -2,7 +2,6 @@
 title: State プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4e254a4d13f4a210c174e3ef5b8181dd24cefd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7224efc2976873ff0326aa23a18df1cccbce230
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282031"
 ---
 # <a name="state-property-ado"></a>State プロパティ (ADO)
 すべての該当するオブジェクトのオブジェクトの状態がオープンかクローズかどうかを示します。 オブジェクトは、非同期メソッドを実行する場合は、オブジェクトの現在の状態が接続するを実行するかを取得することを示します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  返します、**長い**ことができる値、 [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)値。 既定値は**取得のみ**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用することができます、**状態**プロパティをいつでも、指定したオブジェクトの現在の状態を判断します。  
   
  オブジェクトの**状態**プロパティの値の組み合わせを持つことができます。 たとえば、ステートメントを実行すると、このプロパティがの合計値**可能**と**adStateExecuting**です。  

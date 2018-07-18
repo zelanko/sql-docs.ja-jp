@@ -3,27 +3,24 @@ title: SQL Server コネクタのメンテナンスとトラブルシューテ�
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: a8f4b4a73139a698d481b65e1ebe93b524e2d863
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9735b7d12bf8042436c6b554e6bb3c32fd5083b3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973877"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695833"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,7 +205,7 @@ Active Directory の詳細については、「 [Azure サブスクリプショ�
 ##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのエラー コードの説明  
  **プロバイダーのエラー コード:**  
   
-エラー コード  |記号  |Description    
+エラー コード  |記号  |[説明]    
 ---------|---------|---------  
 0 | scp_err_Success | 操作は成功しました。    
 @shouldalert | scp_err_Failure | 操作は失敗しました。    

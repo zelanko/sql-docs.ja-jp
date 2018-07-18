@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,22 +21,23 @@ helpviewer_keywords:
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b23535671b4f438a979a93eef12b2a6e9856fdd
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789153"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  結果セットのパーティションにおける行の順位を返します。この順位付けではギャップが発生しません。 行の順位は、対象となる行より 1 つ前の順位の番号に 1 を加算したものになります。  
+この関数は、結果セット パーティション内の各行の順位値をギャップなしで返します。 特定の行の順位は、その行より 1 つ前の順位値に 1 を加算したものになります。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,25 +47,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>引数  
  \<partition_by_clause>  
- [FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットをパーティションに分割します。このパーティションに DENSE_RANK 関数が適用されます。 PARTITION BY の構文については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。  
+最初に、[FROM](../../t-sql/queries/from-transact-sql.md) 句によって生成された結果セットをパーティションに分割します。その後、`DENSE_RANK` 関数が各パーティションに適用されます。 `PARTITION BY` 構文の詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関するページを参照してください。  
   
  \<order_by_clause>  
- DENSE_RANK 関数がパーティション内の行に適用される順序を決定します。  
+`DENSE_RANK` 関数がパーティション内の行に適用される順序を決定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- 同じパーティションで複数の行が 1 つの順位を分け合う場合は、それぞれの行に同じ順位が付けられます。 たとえば、上位 2 人の販売員の SalesYTD 値が同じである場合は、両方に順位 1 が付けられます。 SalesYTD が次に高い販売員には、順位 2 が付きます。 これは、この行より前の行の番号に 1 を加えたものです。 したがって、DENSE_RANK 関数からは、常に番号のギャップが発生しない連続する順位番号が返されます。  
+2 つ以上の行で同じパーティションの順位値が同じになる場合、それぞれの行に同じ順位が与えられます。 たとえば、上位 2 人の販売員の SalesYTD 値が同じ場合は、両方に順位値 1 が与えられます。 SalesYTD が次に高い販売員には、順位値 2 が与えられます。 これは、対象となる行より 1 つ前の順位値に 1 を加算したものになります。 したがって、`DENSE_RANK` 関数からは、ギャップのない、連続する順位値が常に返されます。  
   
- クエリ全体に使用される並べ替え順序によって、結果における行の順序が決まります。 つまり、順位が 1 位である行が必ずしもパーティションの先頭の行とは限りません。  
+クエリ全体に使用される並べ替え順序によって、結果セットにおける行の順序が決まります。 つまり、順位が 1 位である行が必ずしもパーティションの先頭の行とは限りません。  
   
- DENSE_RANK は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
+`DENSE_RANK` は非決定的です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. パーティション内の行に順位を付ける  
- 次の例では、指定された在庫場所の在庫内の製品を数量に応じて順位付けしています。 結果セットは `LocationID` によってパーティションに分割され、`Quantity` によって論理的に順序付けされます。 494 と 495 の製品が同じ数量であることを確認します。 これらは数量が同じなので、両方とも順位が 1 位になっています。  
+この例では、指定された在庫場所の在庫内の製品を数量に応じて順位付けしています。 `DENSE_RANK` は `LocationID` で結果セットをパーティション分割し、`Quantity` で論理的に結果セットを並べ替えます。 494 と 495 の製品が同じ数量であることを確認します。 いずれの数量値も同じであるため、両方に順位値 1 が与えられます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +102,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 結果セット内のすべての行に順位を付ける  
- 次の例では、給与に順位を付け、トップ 10 の従業員を返します。 PARTITION BY 句が指定されていないため、DENSE_RANK 関数は結果セットのすべての行に適用されます。  
+この例では、給与に順位を付け、トップ 10 の従業員を返します。 `SELECT` ステートメントで `PARTITION BY` 句が指定されなかったため、`DENSE_RANK` 関数はすべての結果セット行に適用されました。  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +130,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 同じクエリで順位付け関数を 4 つ使う  
- 以下の例では、同じクエリ内で 4 つの順位付け関数を使用します。 関数に固有の例については、各順位付け関数を参照してください。  
+この例では、次の 4 つの順位付け関数
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+が同じクエリで使用されます。 各順位付け関数をそれぞれの例で確認してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -154,11 +161,11 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4557045.0459|98027|  
-|Linda|Mitchell|2|@shouldalert|@shouldalert|@shouldalert|5200475.2313|98027|  
-|Jillian|Carson|3|@shouldalert|@shouldalert|@shouldalert|3857163.6332|98027|  
-|Garrett|Vargas|4|@shouldalert|@shouldalert|@shouldalert|1764938.9859|98027|  
-|Tsvi|Reiter|5|@shouldalert|@shouldalert|2|2811012.7151|98027|  
+|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
+|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
+|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
+|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
+|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
 |Shu|Ito|6|6|2|2|3018725.4858|98055|  
 |José|Saraiva|7|6|2|2|3189356.2465|98055|  
 |David|Campbell|8|6|2|3|3587378.4257|98055|  
@@ -172,7 +179,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D: パーティション内の行に順位付け  
- 次の例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 行セットは `SalesTerritoryGroup` によってパーティション分割され、`SalesAmountQuota` によって並べ替えられます。  
+この例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 `DENSE_RANK` は `SalesTerritoryGroup` で行セットをパーティション分割し、`SalesAmountQuota` で結果セットを並べ替えます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +190,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

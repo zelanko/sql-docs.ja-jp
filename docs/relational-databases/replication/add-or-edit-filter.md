@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93f66d894dd451c8b6bae3893222b14387d7e803
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c29de77be7dc0a36ce7311055fa081a3ca9a36d6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957033"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358124"
 ---
 # <a name="add-or-edit-filter"></a>フィルターの追加または編集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "32957033"
      このテキストは変更できません。標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用して、WHERE キーワードの後にフィルター句を入力します。 パブリッシャーが Oracle パブリッシャーの場合は、WHERE 句は Oracle クエリ構文に準拠する必要があります。 可能であれば、複雑なフィルターの使用は避けます。 静的フィルターとパラメーター化されたフィルターは、両方ともパブリケーションの処理時間を増加させます。したがって、フィルター ステートメントは可能な限り簡潔にしてください。  
   
     > [!IMPORTANT]  
-    >  パフォーマンスの理由により、マージ パブリケーションの場合は、パラメーター化された行フィルター句の列名に、 `LEFT([MyColumn]) = SUSER_SNAME()`などの関数を適用しないことをお勧めします。 フィルター句で HOST_NAME を使用していて、HOST_NAME 値を上書きする場合は、CONVERT を使用するデータ型の変換が必要になる可能性があります。 このようなケースの推奨事項の詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() 値の上書き」をご覧ください。  
+    >  パフォーマンスの理由により、マージ パブリケーションの場合は、パラメーター化された行フィルター句の列名に、 `LEFT([MyColumn]) = SUSER_SNAME()`などの関数を適用しないことをお勧めします。 フィルター句で HOST_NAME を使用していて、HOST_NAME 値をオーバーライドする場合は、CONVERT を使用するデータ型の変換が必要になる可能性があります。 このようなケースの推奨事項の詳細については、「[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() 値のオーバーライド」をご覧ください。  
   
 3.  **[このテーブルからデータを取得するサブスクリプションの数を指定します。]**  
   

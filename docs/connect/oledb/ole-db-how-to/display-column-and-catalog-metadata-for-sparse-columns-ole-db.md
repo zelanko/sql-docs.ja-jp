@@ -2,10 +2,10 @@
 title: 表示列およびカタログ メタデータをスパース列 (OLE DB) |Microsoft ドキュメント
 description: スパース列 (OLE DB) の列およびカタログ メタデータを表示します。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 78e9231b348df486355b1b816faf52b9a5eda1e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665602"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>スパース列に対する列およびカタログ メタデータの表示 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   このサンプルでは、スパース列、非スパース列、columnset 列の 3 つの列を持ったテーブルを作成します。 その後、非スパース列および columnset 列に対する列およびカタログ メタデータを示す OLE DB フラグを表示します。  
   

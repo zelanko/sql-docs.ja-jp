@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_parallel_workers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_query_parallel_workers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -25,29 +25,30 @@ ms.author: pelopes
 manager: ajayj
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f2bc4634a5e2fddb4a3c8eda009eb28019089596
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036310"
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   1 つのノードには、ワーカーの可用性情報を返します。  
   
-|名前|データ型|Description|  
+|名前|データ型|説明|  
 |----------|---------------|-----------------|  
-|**node_id**|**int**|NUMA ノードの id。|  
-|**scheduler_count**|**int**|このノード上のスケジューラの数です。|  
+|**node_id**|**int**|NUMA ノード id。|  
+|**scheduler_count**|**int**|このノード上のスケジューラの数。|  
 |**max_worker_count**|**int**|並列クエリのワーカーの最大数。|  
 |**reserved_worker_count**|**int**|並列クエリは、によって予約されているワーカーの数とすべての要求で使用されるメインのワーカーの数。| 
-|**free_worker_count**|**int**|タスクの使用可能なワーカーの数。<br /><br />**注:** すべての受信要求を消費に少なくとも 1 つのワーカーは、空いているワーカー カウントから減算されます。  空いているワーカーの数が負荷の高いサーバーに負の数を指定できます。| 
-|**used_worker_count**|**int**|並列クエリで使用しているワーカーの数。|  
+|**free_worker_count**|**int**|タスクの使用可能なワーカーの数。<br /><br />**注:** すべての受信要求は、空いているワーカーの数から減算されます、1 つ以上のワーカーを使用します。  無料のワーカーの数は負荷の高いサーバーで負の数値であることことができます。| 
+|**used_worker_count**|**int**|並列クエリで使用されるワーカーの数。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
  
 ## <a name="examples"></a>使用例  
   

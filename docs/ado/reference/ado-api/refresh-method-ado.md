@@ -2,7 +2,6 @@
 title: Refresh メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af7917817022b83ae5a8da4955ba3c08d05b0819
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c52fd39b749f7e5c46bf58a943729319cfa78439
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281251"
 ---
 # <a name="refresh-method-ado"></a>Refresh メソッド (ADO)
 プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、固有の仕様内のオブジェクトを更新します。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **更新**メソッドが呼び出し元となるコレクションに応じて異なるタスクを実行します。  
   
 ### <a name="parameters"></a>パラメーター  
@@ -54,7 +54,7 @@ collection.Refresh
 ### <a name="fields"></a>フィールド  
  使用して、**更新**メソッドを[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションが表示される影響を与えません。 基になるデータベース構造から変更を取得する、いずれかを使用する必要があります、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドまたはの場合、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、ブックマークをサポートしていません、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドです。  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
  使用して、**更新**メソッドを**プロパティ**一部のオブジェクトのコレクション、プロバイダーを公開する動的なプロパティをコレクションに設定します。 これらのプロパティは、組み込みプロパティ ADO サポート以外のプロバイダーに固有の機能に関する情報を提供します。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -3,12 +3,9 @@ title: CLR トリガーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - DML triggers, CLR triggers
 - DDL triggers, CLR triggers
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c09adf155120de6cb150bdf7d97c37b2e17e177
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acae1450d920f10443dd3ecb2ed90fb0eb9c16d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010219"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411941"
 ---
 # <a name="create-clr-triggers"></a>CLR トリガーの作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +39,7 @@ ms.locfileid: "33010219"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で SQL Server プロジェクトを配置すると、そのプロジェクトで指定されたデータベースにアセンブリが登録されます。 また、プロジェクトを配置することで、 **SqlTrigger** 属性で注釈が付けられたすべてのメソッドの CLR トリガーがデータベースに作成されます。 詳細については、「 [CLR データベース オブジェクトの配置](../../relational-databases/clr-integration/deploying-clr-database-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、既定では無効になっています。 マネージ コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [を使用して](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled オプション [を有効にしないと、](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)では、これらの参照が実行されません。  
+>  CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、既定では無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [を使用して](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled オプション [を有効にしないと、](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)では、これらの参照が実行されません。  
   
  **アセンブリを作成、変更、または削除するには**  
   

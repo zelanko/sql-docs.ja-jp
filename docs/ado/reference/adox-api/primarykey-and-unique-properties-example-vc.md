@@ -2,7 +2,6 @@
 title: 主キーと一意のプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d1ac229d0ba652803a9dd4b4f64c42c64b8dcc2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bacde66d71826f40eb86cb31c92c1f8663ccac74
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286771"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>主キーと一意のプロパティの例 (vc++)
 この例で、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、2 つの列を新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して、1 つの列に重複する値が許可されていません、主キーを作成します。  

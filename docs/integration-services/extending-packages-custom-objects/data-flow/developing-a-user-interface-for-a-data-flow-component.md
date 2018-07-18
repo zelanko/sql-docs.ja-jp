@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -29,11 +28,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92a4dc48daa318821dc1849094f66b046d80da20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9abe04ac85e75a81553057e10fe01abcdfe5b01d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410494"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
   コンポーネント開発者は、コンポーネント用のカスタム ユーザー インターフェイスを作成し、コンポーネントを編集するときに [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に表示させることができます。 カスタム ユーザー インターフェイスを実装すると、データ フロー タスクでコンポーネントが追加または削除されたとき、またはコンポーネントに関するヘルプが要求されたときに通知されます。  
@@ -95,7 +95,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS デザイナーのサービスの使用  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドの **IServiceProvider** パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。  
   
-|サービス|Description|  
+|サービス|[説明]|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|コンポーネントがコピー/貼り付け、または切り取り/貼り付け操作の一部として生成されたかどうかを判別するために使用します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|パッケージ内の既存の接続へのアクセス、または新しい接続の作成に使用します。|  

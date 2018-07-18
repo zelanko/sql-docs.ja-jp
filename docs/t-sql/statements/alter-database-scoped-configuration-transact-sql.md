@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/142018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,12 +25,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1fc2b483ff3a3b4a60d02c281041bb403485aaa2
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 811376d76608af8d75ab68649f0eea61bfb8a5c3
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34236493"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36249814"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -256,7 +255,7 @@ WHEN_SUPPORTED
   
 ## <a name="metadata"></a>メタデータ  
 
-[sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) システム ビューには、データベース内のスコープ構成に関する情報が表示されます。 データベース スコープ構成オプションはサーバー全体の初期設定に優先するため、sys.database_scoped_configurations にのみ表示されます。 [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) システム ビューは、サーバー全体の設定にのみ表示されます。  
+[sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) システム ビューには、データベース内のスコープ構成に関する情報が表示されます。 データベース スコープ構成オプションはサーバー全体の初期設定にオーバーライドするため、sys.database_scoped_configurations にのみ表示されます。 [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) システム ビューは、サーバー全体の設定にのみ表示されます。  
   
 ## <a name="examples"></a>使用例  
 以下は ALTER DATABASE SCOPED CONFIGURATION の使用例です  

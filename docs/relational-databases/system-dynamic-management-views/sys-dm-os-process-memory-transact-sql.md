@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_process_memory (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_process_memory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,24 +25,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5732a15fe8fe2d30f6f9c693e66258c0de4b44d3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980771"
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間から生じる大半のメモリ割り当ては、こうした割り当ての追跡と管理を可能にするインターフェイスを通じて制御されます。 ただし、メモリ割り当てが、内部のメモリ管理ルーチンをバイパスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アドレス空間で実行される場合もあります。 値は、ベースとなるオペレーティング システムを通じて取得されます。 操作することがない内部メソッドによって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と調整を行うロックやラージ ページ割り当てを除き、します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間から生じる大半のメモリ割り当ては、こうした割り当ての追跡と管理を可能にするインターフェイスを通じて制御されます。 ただし、メモリ割り当てが、内部のメモリ管理ルーチンをバイパスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アドレス空間で実行される場合もあります。 値は、ベースとなるオペレーティング システムを通じて取得されます。 操作することがない内部メソッドによって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、調整を行うロックされている場合、またはサイズの大きいページの割り当てを除く。  
   
- 戻り値のメモリ サイズは常にキロバイト (KB) 単位で表されます。 列**total_virtual_address_space_reserved_kb**の複製である**virtual_memory_in_bytes**から**sys.dm_os_sys_info**です。  
+ 戻り値のメモリ サイズは常にキロバイト (KB) 単位で表されます。 列**total_virtual_address_space_reserved_kb**の複製である**virtual_memory_in_bytes**から**sys.dm_os_sys_info**します。  
   
  次の表は、プロセス アドレス空間の全体像を表したものです。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_process_memory**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_process_memory**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**physical_memory_in_use_kb**|**bigint**|オペレーティング システムから報告されたプロセス ワーキング セットに、ラージ ページ API を使用して追跡された割り当てを加えた値 (KB 単位) を示します。 Null を許容しません。|  
 |**large_page_allocations_kb**|**bigint**|ラージ ページ API を使用して割り当てられた物理メモリを指定します。 Null を許容しません。|  
@@ -56,13 +57,13 @@ ms.lasthandoff: 05/23/2018
 |**available_commit_limit_kb**|**bigint**|プロセスによってコミット可能なメモリの量を示します。 Null を許容しません。|  
 |**process_physical_memory_low**|**bit**|プロセスが物理メモリの不足の通知に応答していることを示します。 Null を許容しません。|  
 |**process_virtual_memory_low**|**bit**|仮想メモリ不足の条件が検出されたことを示します。 Null を許容しません。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

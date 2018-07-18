@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 caps.latest.revision: 65
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 525b5ad479dcba8caa584988498e02a6d25dc44f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6e72a58e17eb584cd0420f04ec10e2b479069fb
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054532"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781653"
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,10 +64,10 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-|戻り値|Description|  
+|戻り値|[説明]|  
 |------------------|-----------------|  
 |0|*login* は *role* のメンバーではありません。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、このステートメントは常に 0 を返します。|  
-|@shouldalert|*login* は *role* のメンバーです。|  
+|1|*login* は *role* のメンバーです。|  
 |NULL|*role* または *login* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
 ## <a name="remarks"></a>Remarks  

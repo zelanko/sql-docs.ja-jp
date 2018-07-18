@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server:Deprecated Features オブジェクト | Microsoft Docs
 ms.custom: ''
 ms.date: 05/03/2016

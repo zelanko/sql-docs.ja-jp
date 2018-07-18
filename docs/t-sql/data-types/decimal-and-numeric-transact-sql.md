@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,16 @@ helpviewer_keywords:
 - numeric data type, about numeric data type
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5086284cd266b2bccdc83f44c9e486f988399b0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417383"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 型と numeric 型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ p (precision)
 >  Informatica では、有効桁数と小数点以下桁数の指定に関係なく、16 の有効桁数のみサポートされます。  
   
 *s* (scale)  
-小数点の右側にある保存される文字 (数字) 数です。 この数値が *p* から差し引かれ、小数点の左側の最大桁数が判別されます。 小数点の右側にある保存できる最大文字 (数字) 数です。 小数点以下桁数は、0 から *p* までの値でなければなりません。 小数点以下桁数は、有効桁数が指定された場合にのみ指定できます。 既定の小数点以下桁数は 0 です。したがって、0 <= *s* \<= *p* になります。 ストレージの最大サイズは有効桁数によって異なります。
+小数点の右側にある保存される文字 (数字) 数です。 この数値が *p* から差し引かれ、小数点の左側の最大桁数が判別されます。 小数点以下桁数は、0 から *p* までの値でなければなりません。 小数点以下桁数は、有効桁数が指定された場合にのみ指定できます。 既定の小数点以下桁数は 0 です。したがって、0 <= *s* \<= *p* になります。 ストレージの最大サイズは有効桁数によって異なります。
   
 |有効桁数|ストレージのバイト サイズ|  
 |---|---|

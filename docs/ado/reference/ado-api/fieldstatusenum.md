@@ -2,7 +2,6 @@
 title: FieldStatusEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4a64c48018b0a8012da631af5b4af0259f0b8e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 924ad7aa3d97138e771ed217b7b86b586c11bbce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278698"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定します、[ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)の[フィールド オブジェクト](../../../ado/reference/ado-api/field-object.md)です。  
   
  **AdFieldPending\*** 値は、操作を設定できる状態の原因となったはその他の状態の値と組み合わせることを示します。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指定したフィールドが既に存在することを示します。|  
 |**adFieldBadStatus**|12|無効な状態値は、OLE DB プロバイダーに ADO から送信されたことを示します。 考えられる原因は、OLE DB 1.0 または 1.1 プロバイダーは、または、不適切な組み合わせの[値](../../../ado/reference/ado-api/value-property-ado.md)と[ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)です。|  

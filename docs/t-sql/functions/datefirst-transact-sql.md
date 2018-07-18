@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -33,22 +32,23 @@ helpviewer_keywords:
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c1af3730ecd3484728266ed7aecdfd975286461
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4231c534aa021192a45ad56f059cb02c2ddffaec
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792203"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-セッションにおける、[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) の現在の値を返します。
+この関数は、特定のセッションにおける、[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) の現在の値を返します。
   
-すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,9 +62,20 @@ ms.lasthandoff: 05/03/2018
 **tinyint**
   
 ## <a name="remarks"></a>Remarks  
-SET DATEFIRST は、週の最初の曜日を指定します。 言語設定がは 7 の日曜日です。
+SET DATEFIRST *n* では、週の最初の日 (日曜日、月曜日、火曜日など) を指定します。 *n* の値は、1 から 7 までの範囲となります。
+
+```sql
+SET DATEFIRST 3;
+GO  
+SELECT @@DATEFIRST; -- 3 (Wednesday)
+GO
+```  
+
+米国の英語環境の場合、@DATEFIRST の既定値は 7 (日曜日) です。
   
-この言語設定は、文字列をデータベース格納用の日付値に変換する際の解釈のほか、データベースに格納される日付値の表示に影響します。 この設定は、日付データのストレージ形式には影響しません。 次の例では、最初に言語を `Italian` に設定します。 `SELECT @@DATEFIRST;` ステートメントからは `1` が返されます。 次に、言語を `us_english` に設定します。 `SELECT @@DATEFIRST;` ステートメントからは `7` が返されます。
+この言語設定は、SQL Server で文字列がデータベース ストレージ用の日付値に変換されるときに、文字列の解釈に影響を与えます。 この設定はまた、データベースに格納されている日付値の表示にも影響を与えます。 この設定は日付データのストレージ形式には影響しません。
+
+この例ではまず、言語を `Italian` に設定します。 `SELECT @@DATEFIRST;` ステートメントからは `1` が返されます。 次のステートメントで、言語を `us_english` に設定します。 最後のステートメント `SELECT @@DATEFIRST;` からは、`7` が返されます。
   
 ```sql
 SET LANGUAGE Italian;  
@@ -77,7 +88,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="examples"></a>使用例  
-次の例では、週の最初の曜日を `5` (金曜) に設定します。現在の曜日 `Today` は土曜と仮定します。 `SELECT` ステートメントでは、`DATEFIRST` の値と現在の曜日を示す数値が返されます。
+この例では、週の最初の曜日を `5` (金曜日) に設定します。現在の曜日 `Today` は土曜日であると仮定します。 `SELECT` ステートメントでは、`DATEFIRST` の値と現在の曜日を示す数値が返されます。
   
 ```sql
 SET DATEFIRST 5;  

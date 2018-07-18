@@ -1,5 +1,5 @@
 ---
-title: Analysis Services インスタンスへのサーバー管理者権限を付与 |Microsoft ドキュメント
+title: Analysis Services インスタンスにサーバー管理者権限の付与 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dac4df875c8a620f735822e73215f86f17a88c3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018859"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36760097"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Analysis Services インスタンスにサーバー管理者権限を付与する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34018859"
  インストール後は、ロールのメンバーシップを変更することで、サービスへの完全な権限を必要とする他のユーザーを追加することができます。 また、分析管理オブジェクト (AMO) を使用してもサーバー ロールを管理できます。 詳細については、「[分析管理オブジェクト (AMO) による開発](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理およびサーバー、データベース、およびオブジェクトの各レベルでクエリを実行するためには、さらに細かくロールの進行状況を提供します。 これらのロールの使用方法については、「[ロールと権限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)」を参照してください。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー、データベース、およびオブジェクト レベルで処理とクエリをさらに詳細なロールの進行状況を提供します。 これらのロールの使用方法については、「[ロールと権限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)」を参照してください。  
   
 ## <a name="modify-server-role-membership"></a>サーバー ロールのメンバーシップの変更  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34018859"
   
 2.  **[ページの選択]** ペインで **[セキュリティ]** をクリックし、ページの下部にある **[追加]** をクリックして、サーバー ロールに 1 つまたは複数の Windows ユーザーまたはグループを追加します。  
   
-     ![Management studio での追加のユーザー ダイアログ ボックス](../../analysis-services/instances/media/ssas-serveradminadd.png "management studio での追加のユーザー ダイアログ ボックス")  
+     ![Management studio で、追加のユーザー ダイアログ ボックス](../../analysis-services/instances/media/ssas-serveradminadd.png "management studio で、追加のユーザー ダイアログ ボックス")  
   
 ### <a name="add-computer-accounts"></a>コンピューター アカウントの追加  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、コンピューター アカウントを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者グループのメンバーに設定することもできます。  
@@ -53,10 +53,10 @@ ms.locfileid: "34018859"
 5.  **[選択するオブジェクト名を入力してください]** ボックスにコンピューターの名前を入力し、 **[名前の確認]** をクリックして、コンピューター アカウントが現在の場所で見つかることを確認します。 コンピューター アカウントが見つからない場合は、コンピューター名と、そのコンピューターが属している実際のドメインを確認してください。  
   
 ## <a name="nt-servicessastelemetry-account"></a>NT Service\SSASTelemetry アカウント  
- **NT Service/SSASTelemetry** は、権限の低いコンピューター アカウントです。セットアップ中に作成され、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で実装されているカスタマー エクスペリエンス向上プログラム (CEIP) サービスの実行にのみ使用されます。 このサービスは、いくつかの discover コマンドを実行するために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上で管理者権限を必要とします。 詳細については、「 [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) 」および「 [Microsoft SQL Server Privacy Statement](http://msdn.microsoft.com/library/57769f4a-5689-49a1-8298-e3c0db5106f8) 」を参照してください。  
+ **NT Service/SSASTelemetry** は、権限の低いコンピューター アカウントです。セットアップ中に作成され、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で実装されているカスタマー エクスペリエンス向上プログラム (CEIP) サービスの実行にのみ使用されます。 このサービスは、いくつかの discover コマンドを実行するために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上で管理者権限を必要とします。 詳細については、「 [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) 」および「 [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトと操作へのアクセスの承認 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [セキュリティ ロール &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [セキュリティ ロール (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

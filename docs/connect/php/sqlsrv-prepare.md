@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,12 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d05dadf16e96589c2f16b7d31580cab61650b9e6
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e3b376d9fb4333489bf841f04cfb2d429803c6f3
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34563920"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309681"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -88,7 +87,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 別の手法の書き込みと読み取り大量の情報では、次を参照してください。 [SQL ステートメントのバッチ](../../odbc/reference/develop-app/batches-of-sql-statements.md)と[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)です。  
   
-詳細については、「 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、ステートメントを準備して実行します。 ステートメントを実行すると (を参照してください[sqlsrv_execute](../../connect/php/sqlsrv-execute.md))、フィールドを更新、 *Sales.SalesOrderDetail* AdventureWorks データベースのテーブルです。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server の Red Hat Enterprise Linux 共有クラスターを運用 |Microsoft ドキュメント
-description: SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。
+title: SQL Server、Red Hat Enterprise Linux 共有クラスターを運用 |Microsoft Docs
+description: SQL Server 用の Red Hat Enterprise Linux の共有ディスク クラスターを構成することによって、高可用性を実装します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 71fef5396f5be6fa615de190a9374c646f467e7e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981864"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを運用します。
+# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server、Red Hat Enterprise Linux の共有ディスク クラスターで運用します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このドキュメントでは、Red Hat Enterprise Linux、共有ディスク フェールオーバー クラスターで SQL Server を次のタスクを実行する方法について説明します。
+このドキュメントでは、Red Hat Enterprise Linux での共有ディスク フェールオーバー クラスター上の SQL Server の次のタスクを実行する方法について説明します。
 
 - 手動でフェールオーバー クラスター
 - フェールオーバー クラスターの SQL Server サービスを監視します
@@ -33,7 +33,7 @@ ms.locfileid: "34323445"
 
 ## <a name="architecture-description"></a>アーキテクチャの説明
 
-クラスタ リングの層は、[Pacemaker](http://clusterlabs.org/)の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。  Corosync とペースのクラスター ネットワーク通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
+クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています Corosync と Pacemaker クラスター通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
 
 次の図は、SQL Server での Linux クラスターのコンポーネントを示しています。 
 
@@ -43,7 +43,7 @@ ms.locfileid: "34323445"
 
 ## <a name = "failManual"></a>フェールオーバー クラスターを手動で
 
-`resource move`コマンドは、ターゲット ノードで起動するリソースを強制する制約を作成します。  実行した後、`move`リソースを実行したコマンド`clear`のため、リソースをもう一度移動したり、リソースを自動的にフェールオーバーすることは、制約が削除されます。 
+`resource move`コマンドは、ターゲット ノードで起動するリソースの強制的な制約を作成します。  実行した後、`move`リソースを実行するコマンド`clear`できるようになりますが、リソースをもう一度移動またはリソースを自動的にフェールオーバーすることに制約を削除します。 
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>  
@@ -59,7 +59,7 @@ sudo pcs resource clear mssqlha
 
 ## <a name="monitor-a-failover-cluster-sql-server-service"></a>フェールオーバー クラスターの SQL Server サービスを監視します
 
-現在のクラスターの状態を表示します。
+現在のクラスターの状態を表示するには。
 
 ```bash
 sudo pcs status  
@@ -75,13 +75,13 @@ sudo crm_mon
 
 ## <a name="add-a-node-to-a-cluster"></a>クラスターにノードを追加します
 
-1. 各ノードの IP アドレスを確認してください。 次のスクリプトは、現在のノードの IP アドレスを示します。 
+1. 各ノードの IP アドレスを確認します。 次のスクリプトでは、現在のノードの IP アドレスを示します。 
 
    ```bash
    ip addr show
    ```
 
-3. 新しいノードに必要な一意の名前は 15 文字以下です。 コンピューター名は、既定では、Red Hat Linux`localhost.localdomain`です。 この既定の名前が一意でないが長すぎます。 新しいノードにコンピューター名を設定します。 そのコンピューター名を`/etc/hosts`に追加することにより設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
+3. 新しいノードには、15 文字である一意の名前が必要がありますまたはそれ以下。 コンピューター名は、既定では、Red Hat Linux`localhost.localdomain`します。 この既定の名前が一意でないが長すぎます。 新しいノードのコンピューター名を設定します。 そのコンピューター名を`/etc/hosts`に追加することにより設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
@@ -118,7 +118,7 @@ sudo crm_mon
    sudo firewall-cmd --reload
    ```
 
-   Mount コマンドを含むように/etc/fstab ファイルを編集します。 
+   Mount コマンドを含めるには、/etc/fstab ファイルを編集します。 
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr
@@ -212,7 +212,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 クラスターをトラブルシューティングするには、3 つのデーモンがどのように連携してクラスター リソースを管理するかを理解することが役立ちます。 
 
-| デーモン | Description 
+| デーモン | 説明 
 | ----- | -----
 | Corosync | クォーラムのメンバーシップとクラスター ノード間のメッセージングを提供します。
 | Pacemaker | Corosync 上に存在し、リソースのステート マシンを提供します。 
@@ -220,11 +220,11 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 `pcs` ツールを使用するためには、PCSDを実行している必要あります。 
 
-### <a name="current-cluster-status"></a>クラスターの現在の状態 
+### <a name="current-cluster-status"></a>現在のクラスターの状態 
 
 `sudo pcs status` は、各ノードのクラスター、クォーラム、ノード、リソース、およびデーモンの状態に関する基本的な情報を返します。 
 
-正常なペース クォーラム出力の例は次のようになります。
+Pacemaker の正常なクォーラムの出力の例は次のようになります。
 
 ```
 Cluster name: MyAppSQL 
@@ -263,7 +263,7 @@ pacemaker: active/enabled
 
     Pacemaker ですべてのノードが通信できるように、で次のポートが開かれている必要があります。
     
-    - * * TCP: 2224 3121、21064
+    - * * TCP: 2224、3121、21064
 
 - **Pacemaker および Corosync サービスが実行されているか**
 
@@ -275,7 +275,7 @@ pacemaker: active/enabled
 
 * Pacemaker の [クラスター入門](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成します。](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 

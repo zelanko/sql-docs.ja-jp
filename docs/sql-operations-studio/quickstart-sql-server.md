@@ -1,4 +1,4 @@
----
+﻿---
 title: 'クイック スタート: 接続し、クエリの SQL Operations Studio (プレビュー) を使用して SQL Server |Microsoft ドキュメント'
 description: このクイック スタートは、SQL Operations Studio (preview) を使用して SQL Server に接続してクエリを実行する方法を示しています。
 ms.custom: tools|sos
@@ -13,12 +13,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 94a760c815b9933ff4d8d7da3dd24c292fcdc641
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 7f8963de448c39709a4df102cdf764a361b7654c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235392"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985074"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して SQL サーバーに接続してクエリを問い合わせる
 このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、[!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用する *TutorialDB* を作成します。
@@ -31,25 +31,25 @@ ms.locfileid: "34235392"
 
 SQL Server へのアクセスを持っていない場合は、次のリンクからプラットフォームを選択してください (SQL ログインとパスワードを覚えておくようにしてください)。
 - [Windows - SQL Server 2017 Developer Edition のダウンロード](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - SQL Server 2017 Developer Edition のダウンロード](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - *データを作成しクエリを問い合わせる* ための手順に従うだけです。
+- [macOS - Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- [Linux - SQL Server 2017 Developer Edition のダウンロード](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) - *データを作成しクエリを問い合わせる* ための手順に従うだけです。
 
 
 ## <a name="connect-to-a-sql-server"></a>SQL Server に接続する
 
    
 1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** を実行します。
-2. 初めて *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* を実行する場合、**[接続]** ダイアログが開きます。**[接続]** ダイアログが開かない場合、**[サーバー]** ページの **[新しい接続]** アイコンをクリックしてください。
+1. 初めて *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* を実行する場合、**[接続]** ダイアログが開きます。 **[接続]** ダイアログが開かない場合、**[サーバー]** ページの **[新しい接続]** アイコンをクリックしてください。
    
    ![新しい接続のアイコン](media/quickstart-sql-server/new-connection-icon.png)
 
-3. この記事では *SQL ログイン*を使用しますが、*Windows 認証*はサポートされています。次のように、フィールドに入力します。
+1. この記事では *SQL ログイン*を使用しますが、*Windows 認証*はサポートされています。 次のように、フィールドに入力します。
  
     - **サーバー名:** localhost
     - **認証の種類:** SQL ログイン  
     - **ユーザー名:** SQL Server のユーザー名  
-    - **パスワード:** SQL サーバーのパスワード  
-    - **データベース名:** このフィールドは空白 
+    - **パスワード:** SQL Server のパスワード  
+    - **データベース名:** このフィールドを空白のままにします 
     - **サーバー グループ:** \<既定\>  
 
    ![新しい接続 画面](media/quickstart-sql-server/new-connection-screen.png)
@@ -60,8 +60,8 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 
 次の手順で **TutorialDB** という名前のデータベースを作成します。
 
-1. サーバーを右クリックして**localhost**を選択して**新しいクエリ。**
-1. クエリ ウィンドウに次のスニペットを貼り付けます。 
+1. サーバーで、右クリック**localhost**、選び**新しいクエリ。**
+1. クエリ ウィンドウには、次のスニペットを貼り付けます。 
 
    ```sql
    USE master
@@ -77,25 +77,25 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
-1. クエリを実行する をクリックして**実行**です。
+1. クエリを実行するには、次のようにクリックします。**実行**します。
 
-クエリが完了したら、新しい**TutorialDB**データベースの一覧に表示されます。 表示されない場合を右クリックし、**データベース**ノード**更新**です。
+クエリが完了すると、新しい**TutorialDB**データベースの一覧に表示されます。 表示されない場合を右クリックし、**データベース**ノード**更新**します。
 
 
 ## <a name="create-a-table"></a>テーブルの作成
 
-クエリ エディター接続が失われて、*マスター*にテーブルを作成するデータベースですが、 *TutorialDB*データベース。 
+クエリ エディターの接続状態を*マスター*でテーブルを作成するデータベースが、 *TutorialDB*データベース。 
 
 1. 接続コンテキストを変更する**TutorialDB**:
 
-   ![変更のコンテキスト](media/quickstart-sql-server/change-context.png)
+   ![コンテキストの変更](media/quickstart-sql-server/change-context.png)
 
 
 
-1. クエリ ウィンドウに次のスニペットを貼り付けるし、をクリックして**実行**:
+1. クエリ ウィンドウに次のスニペットを貼り付けて、をクリックして**実行**:
 
    > [!NOTE]
-   > これを追加したり、エディターでは、前のクエリを上書きできます。 クリックすると**実行**が選択されているクエリのみを実行します。 何も選択されている場合にクリックすると**実行**エディター内のすべてのクエリを実行します。
+   > これには、追加したり、エディターで上記のクエリを上書きできます。 クリックする**実行**が選択されている、クエリを実行します。 何も選択されている場合は、クリックして**実行**エディター内のすべてのクエリを実行します。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -114,11 +114,11 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
    GO
    ```
 
-クエリが完了したら、新しい**顧客**テーブルのテーブルの一覧に表示されます。 右クリックする必要があります、 **TutorialDB > テーブル**ノード**更新**です。
+クエリが完了すると、新しい**顧客**テーブルのテーブルの一覧に表示されます。 右クリックする必要があります、 **TutorialDB > テーブル**ノード**更新**します。
 
 ## <a name="insert-rows"></a>行を挿入する
 
-- クエリ ウィンドウに次のスニペットを貼り付けるし、をクリックして**実行**:
+- クエリ ウィンドウに次のスニペットを貼り付けて、をクリックして**実行**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -135,7 +135,7 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>クエリによって返されるデータを表示します。
-1. クエリ ウィンドウに次のスニペットを貼り付けるし、をクリックして**実行**:
+1. クエリ ウィンドウに次のスニペットを貼り付けて、をクリックして**実行**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -144,10 +144,10 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 
 1. クエリの結果が表示されます。
 
-   ![Select の結果](media/quickstart-sql-server/select-results.png)
+   ![結果を選択します。](media/quickstart-sql-server/select-results.png)
 
 
 ## <a name="next-steps"></a>次の手順
-これで正常に接続した SQL Server とクエリの実行を試してみてから、[コード エディターのチュートリアル](tutorial-sql-editor.md)です。
+これで SQL Server とクエリの実行に正常に接続した、試し、[コード エディターのチュートリアル](tutorial-sql-editor.md)します。
 
 

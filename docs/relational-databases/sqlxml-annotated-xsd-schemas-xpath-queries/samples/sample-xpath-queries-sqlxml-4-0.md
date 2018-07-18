@@ -1,5 +1,5 @@
 ---
-title: サンプル XPath クエリ (SQLXML 4.0) |Microsoft ドキュメント
+title: サンプル XPath クエリ (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 582dcc59060c2be97fb760c6367a4690981855b4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708440"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050040"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath クエリの例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,19 +37,19 @@ ms.locfileid: "34708440"
 >  サンプルのクエリは、実行する XPath 操作の種類ごとにグループ化されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [例については XPath 注釈付き XSD スキーマのサンプル&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
+ [注釈付き XSD スキーマを XPath の例のサンプル&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  このファイルは、ここで説明する XPath クエリのサンプルと共に使用します。  
   
  [XPath クエリで軸を指定する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
  XPath クエリで軸をどのように指定するかを示します。  
   
- [XPath クエリでブール値述語を指定する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
+ [ブール値述語を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
  XPath クエリでブール値の述語をどのように指定するかを示します。  
   
  [関係演算子を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
  XPath クエリで関係演算子をどのように指定するかを示します。  
   
- [XPath クエリで算術演算子を指定する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [XPath クエリで算術演算子の指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
  XPath クエリで算術演算子をどのように指定するかを示します。  
   
  [XPath クエリで明示的な変換関数を指定する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
@@ -58,10 +58,10 @@ ms.locfileid: "34708440"
  [ブール演算子を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)  
  XPath クエリで論理演算子をどのように指定するかを示します。  
   
- [XPath クエリ内で論理関数を指定する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)  
+ [Boolean 関数群を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)  
  XPath クエリで論理関数をどのように指定するかを示します。  
   
- [XPath クエリ内で XPath 変数を指定する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)  
+ [XPath クエリで XPath 変数を指定する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)  
  XPath クエリで XPath 変数をどのように指定するかを示します。  
   
   

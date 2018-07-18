@@ -1,5 +1,5 @@
 ---
-title: Multiplicity 要素 (ASSL) |Microsoft ドキュメント
+title: Multiplicity 要素 (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2740e920332d55fd2826b8d91d6f7434d2f59e91
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042426"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045840"
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,14 +46,14 @@ ms.locfileid: "34042426"
 |親要素|[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |*1 つ*|これは主キー エンドです。|  
 |*多く*|これは、外部キー エンドです。|  
   
- 許可される値に対応する列挙**ロール**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Multiplicity>します。  
+ 許容された値に対応する列挙体**ロール**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Multiplicity>します。  
   
   

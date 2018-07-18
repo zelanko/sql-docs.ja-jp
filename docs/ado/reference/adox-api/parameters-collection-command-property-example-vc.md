@@ -2,7 +2,6 @@
 title: パラメーターのコレクション、プロパティの使用例のコマンド (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8baf747f5a5a0ca73fb565df16db1d79a9ebbeb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 238a257567fa9e222f221044b933fdab2fcafb31
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286611"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>パラメーターのコレクション、プロパティの使用例のコマンド (vc++)
 次のコードを使用する方法を示しています、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)を持つプロパティ、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)プロシージャのパラメーター情報を取得するオブジェクト。  

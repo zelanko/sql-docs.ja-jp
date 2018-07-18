@@ -1,5 +1,5 @@
 ---
-title: sp_create_removable (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_create_removable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac999e58a6c88d8a121d7708b6fc9e954cf7419
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035240"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33239502"
   リムーバブル メディア データベースを作成します。 3 つ以上のファイル (システム カタログ テーブルとトランザクション ログに 1 つずつ、データ テーブルに 1 つ以上) を作成し、それらのファイルにデータベースを格納します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用することをお勧め[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用することをお勧めします。 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,36 +61,36 @@ sp_create_removable
   
 ## <a name="arguments"></a>引数  
  [ **@dbname=** ] **'***dbname***'**  
- リムーバブル メディアに作成するデータベースの名前を指定します。 *dbname*は**sysname**です。  
+ リムーバブル メディアに作成するデータベースの名前を指定します。 *dbname*は**sysname**します。  
   
  [ **@syslogical=** ] **'***syslogical***'**  
- システム カタログ テーブルを格納するファイルの論理名を指定します。 *syslogical*は**sysname**です。  
+ システム カタログ テーブルを格納するファイルの論理名を指定します。 *syslogical*は**sysname**します。  
   
  [  **@sysphysical=** ] **'***sysphysical***'**  
- 物理名です。 システム カタログ テーブルを格納するファイルの名前をフル パスと共に指定します。 *sysphysical*は**nvarchar (260)** です。  
+ 物理名です。 システム カタログ テーブルを格納するファイルの名前をフル パスと共に指定します。 *sysphysical*は**nvarchar (260)** します。  
   
  [ **@syssize=** ] *syssize*  
- システム カタログ テーブルを格納するファイルのサイズ (MB) を指定します。 *syssize*は**int**です。最小*syssize*は 1 です。  
+ システム カタログ テーブルを格納するファイルのサイズ (MB) を指定します。 *syssize*は**int**します。最小*syssize*は 1 です。  
   
  [ **@loglogical=** ] **'***loglogical***'**  
- トランザクション ログを格納するファイルの論理名を指定します。 *loglogical*は**sysname**です。  
+ トランザクション ログを格納するファイルの論理名を指定します。 *loglogical*は**sysname**します。  
   
  [  **@logphysical=** ] **'***logphysical***'**  
- 物理名です。 トランザクション ログを格納するファイルの名前をフル パスと共に指定します。 *logphysical*は**nvarchar (260)** です。  
+ 物理名です。 トランザクション ログを格納するファイルの名前をフル パスと共に指定します。 *logphysical*は**nvarchar (260)** します。  
   
  [ **@logsize=** ] *logsize*  
- トランザクション ログを格納するファイルのサイズ (MB) を指定します。 *logsize*は**int**です。最小*logsize*は 1 です。  
+ トランザクション ログを格納するファイルのサイズ (MB) を指定します。 *logsize*は**int**します。最小*logsize*は 1 です。  
   
  [  **@datalogical1=** ] **'***datalogical***'**  
- データ テーブルを格納するファイルの論理名を指定します。 *datalogical*は**sysname**です。  
+ データ テーブルを格納するファイルの論理名を指定します。 *datalogical*は**sysname**します。  
   
  データ ファイルの数は 1 ～ 16 です。 データベースが大きくなり複数のディスクに分散する必要が生じた場合に備えて、通常、複数のデータ ファイルを作成します。  
   
  [  **@dataphysical1=** ] **'***dataphysical***'**  
- 物理名です。 データ テーブルを格納するファイルの名前をフル パスと共に指定します。 *dataphysical*は**nvarchar (260)** です。  
+ 物理名です。 データ テーブルを格納するファイルの名前をフル パスと共に指定します。 *dataphysical*は**nvarchar (260)** します。  
   
  [  **@datasize1=** ] **'***datasize***'**  
- データ テーブルを格納するファイルのサイズ (MB) を指定します。 *datasize*は**int**です。最小*datasize*は 1 です。  
+ データ テーブルを格納するファイルのサイズ (MB) を指定します。 *datasize*は**int**します。最小*datasize*は 1 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -98,10 +98,10 @@ sp_create_removable
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースのコピーをコンパクト ディスクなどのリムーバブル メディアに作成し、他のユーザーにデータベースを配布する場合は、このストアド プロシージャを使用します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  CREATE DATABASE、CREATE ANY DATABASE、または ALTER ANY DATABASE の各権限が必要です。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上のディスク使用量を管理するため、通常、データベースを作成する権限をいくつかのログイン アカウントに制限します。  
@@ -116,10 +116,10 @@ sp_create_removable
 |復元|デタッチ|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セット データではなくファイルとログ ファイルのアクセス許可。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットのデータではなくファイルとログ ファイルのアクセス許可。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、データベースを作成`inventory`というリムーバブルなデータベースです。  
+ 次の例では、データベースを作成する`inventory`というリムーバブルなデータベースです。  
   
 ```  
 EXEC sp_create_removable 'inventory',   

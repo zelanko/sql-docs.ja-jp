@@ -2,7 +2,6 @@
 title: ADOX 列挙定数 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba95b08ddaa4a75a8243f6830b0f9ce9637d819
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a862168ffd8be5d7490a7151813bb6c1272f6d86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284781"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列挙定数
 デバッグを支援するには、ADOX 列挙定数には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADOX の 1 つのリリース別に変更があります。 コードは必要があります列挙定数の実際の値ではなく、名前にのみ依存します。  
   
  次の列挙定数が定義されます。  
   
-|列挙型|Description|  
+|列挙型|説明|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|ときに実行されるアクションの種類を指定**SetPermissions**と呼びます。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 値を持つレコードのインデックスが作成するかどうかを指定します。|  

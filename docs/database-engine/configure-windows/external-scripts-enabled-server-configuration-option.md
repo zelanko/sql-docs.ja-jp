@@ -2,12 +2,9 @@
 title: external scripts enabled サーバー構成オプション | Microsoft Docs
 ms.date: 11/13/2017
 ms.prod: sql
-ms.prod_service: high-availability
+ms.technology: configuration
 ms.reviewer: ''
 ms.suite: sql
-ms.custom: ''
-ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - external scripts enabled
@@ -15,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-caps.latest.revision: 9
-author: jeannt
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a84fc90e8ec1f18c97d5ba6d56a7c515a5f4efb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb602248a8a409cb79c4ca4c0769fbc4fd66b616
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428911"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>external scripts enabled サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ RECONFIGURE WITH OVERRIDE;
 
 この変更を有効にするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。
 
-詳しくは、「[Set up SQL Server Machine Learning](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)」(SQL Server Machine Learning をセットアップする) をご覧ください。
+詳しくは、「[Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)」(SQL Server Machine Learning をセットアップする) をご覧ください。
 
 ## <a name="see-also"></a>参照
 

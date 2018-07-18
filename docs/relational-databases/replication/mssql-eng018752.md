@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31ea022e9f8f5e5153928c350ce3cc5362dd4aa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d82d90fea1a7717ef3af823552a1314fec0ac3e8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353544"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 -   ログ リーダー エージェントを再起動します。 詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」を参照してください。  
   
--   ディストリビューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを再起動します (クラスター内でオフラインまたはオンラインにします)。 スケジュールされたジョブがその他の **インスタンスから**sp_repldone **、**sp_replcmds **、または** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行した可能性がある場合は、これらのインスタンスに対しても [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを再起動します。 詳細については、「[SQL Server エージェント サービスの開始、停止、または一時停止](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)」を参照してください。  
+-   ディストリビューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを再起動します (クラスター内でオフラインまたはオンラインにします)。 スケジュールされたジョブがその他の **インスタンスから**sp_repldone **、** sp_replcmds **、または** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行した可能性がある場合は、これらのインスタンスに対しても [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを再起動します。 詳細については、「[SQL Server エージェント サービスの開始、停止、または一時停止](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)」を参照してください。  
   
 -   パブリケーション データベース上のパブリッシャーで [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) を実行してから、ログ リーダー エージェントを再起動します。  
   

@@ -2,7 +2,7 @@
 title: 一括コピー操作の実行 |Microsoft ドキュメント
 description: SQL Server の OLE DB Driver を使用して一括コピー操作の実行
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 72b7fdaa9c221b46b05c6fc02d5f0b0121df4f0c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9a820a3e5e2f7f2cf81bb00ce8cb72f195eca27
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612157"
 ---
 # <a name="performing-bulk-copy-operations"></a>一括コピー操作の実行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の一括コピー機能により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルやビューに大量のデータを入出力できます。 SELECT ステートメントを指定してデータを外部に転送することもできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と ASCII ファイルなどのオペレーティング システム データ ファイルとの間でデータを移動できます。 データ ファイルには、さまざまな形式を使用できます。一括コピーの形式は、フォーマット ファイルで定義されます。 必要に応じて、データをプログラム変数に読み込んでから、一括コピー関数や一括コピー メソッドを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に転送できます。  
   
@@ -102,11 +105,11 @@ ms.lasthandoff: 05/03/2018
   
  プロバイダー固有のプロパティ SSPROP_FASTLOADOPTIONS、SSPROP_FASTLOADKEEPNULLS、および SSPROP_FASTLOADKEEPIDENTITY、OLE DB Driver for SQL Server の一括コピー行セットの動作の制御します。 プロパティが指定されて、 *rgProperties*のメンバー、 *rgPropertySets* **IOpenRowset**パラメーター メンバー。  
   
-|プロパティ ID|Description|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : コンシューマーが指定する ID 値を管理します。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルの ID 列の値が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって生成されます。 列にバインドされている任意の値は、SQL Server の OLE DB ドライバーによって無視されます。<br /><br /> VARIANT_TRUE: コンシューマーが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ID 列に値を提供するアクセサーをバインドします。 Identity プロパティは、コンシューマーごとに一意の値を提供するため、NULL を許容する列で使用できません**IRowsetFastLoad::Insert**呼び出します。|  
 |SSPROP_FASTLOADKEEPNULLS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : DEFAULT 制約が適用されている列の NULL 値を管理します。 影響を受けるのは、NULL 値を許容し、DEFAULT 制約が適用されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列だけです。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Driver for SQL Server コンシューマーが列の null 値を含む行を挿入するときに、列の既定値を挿入します。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Driver for SQL Server コンシューマーが列の null 値を含む行を挿入するときに、列の値に対する NULL を挿入します。|  
-|SSPROP_FASTLOADOPTIONS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : なし<br /><br /> 説明: このプロパティと同じでは、 **-h** "*ヒント*[,...*n*]"のオプション、 **bcp**ユーティリティです。 データをテーブルに一括コピーするときのオプションとして、次の文字列を使用できます。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]): データ ファイル内のデータの並べ替え順。 読み込むデータ ファイルをテーブル上のクラスター化インデックスに従って並べ替えると、一括コピーのパフォーマンスが向上します。<br /><br /> **ROWS_PER_BATCH** = *bb*: バッチごとのデータの行の数 (として*bb*)。 サーバーは、 *bb*の値に応じて一括コピーの負荷を最適化します。 既定では、 **ROWS_PER_BATCH**が不明です。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: (cc) としてバッチごとのデータのキロバイト (KB) の数。 既定では、 **KILOBYTES_PER_BATCH**が不明です。<br /><br /> **TABLOCK**: 一括コピー操作の実行中、テーブル レベルのロックを取得します。 一括コピー操作中だけロックを保持することにより、テーブル ロックの競合が少なくなるので、このオプションによりパフォーマンスが大幅に向上します。 テーブルを読み込める複数のクライアントで同時に、テーブルにインデックスがあるない場合および**TABLOCK**を指定します。 既定では、ロック動作はテーブル オプションによって決まります**一括読み込みでロックをテーブル**です。<br /><br /> **CHECK_CONSTRAINTS**: に対する制約*table_name*一括コピー操作中にチェックされます。 既定では、制約は無視されます。<br /><br /> **FIRE_TRIGGER**:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]トリガーに対して行のバージョン管理を使用し、行のバージョンのバージョン ストアを**tempdb**です。 したがって、トリガーが有効になっていても一括ログ記録を最適化できます。 バッチを一括インポートで大量の行の有効なトリガーを使用して前に、のサイズを拡張する必要があります**tempdb**です。|  
+|SSPROP_FASTLOADOPTIONS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : なし<br /><br /> 説明: このプロパティと同じでは、 **-h** "*ヒント*[,...*n*]"のオプション、 **bcp**ユーティリティです。 データをテーブルに一括コピーするときのオプションとして、次の文字列を使用できます。<br /><br /> **順序**(*列*[**ASC** &#124; **DESC**] [,...*n*]): データ ファイル内のデータの並べ替え順です。 読み込むデータ ファイルをテーブル上のクラスター化インデックスに従って並べ替えると、一括コピーのパフォーマンスが向上します。<br /><br /> **ROWS_PER_BATCH** = *bb*: バッチごとのデータの行の数 (として*bb*)。 サーバーは、 *bb*の値に応じて一括コピーの負荷を最適化します。 既定では、 **ROWS_PER_BATCH**が不明です。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: (cc) としてバッチごとのデータのキロバイト (KB) の数。 既定では、 **KILOBYTES_PER_BATCH**が不明です。<br /><br /> **TABLOCK**: 一括コピー操作の実行中、テーブル レベルのロックを取得します。 一括コピー操作中だけロックを保持することにより、テーブル ロックの競合が少なくなるので、このオプションによりパフォーマンスが大幅に向上します。 テーブルを読み込める複数のクライアントで同時に、テーブルにインデックスがあるない場合および**TABLOCK**を指定します。 既定では、ロック動作はテーブル オプションによって決まります**一括読み込みでロックをテーブル**です。<br /><br /> **CHECK_CONSTRAINTS**: に対する制約*table_name*一括コピー操作中にチェックされます。 既定では、制約は無視されます。<br /><br /> **FIRE_TRIGGER**:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]トリガーに対して行のバージョン管理を使用し、行のバージョンのバージョン ストアを**tempdb**です。 したがって、トリガーが有効になっていても一括ログ記録を最適化できます。 バッチを一括インポートで大量の行の有効なトリガーを使用して前に、のサイズを拡張する必要があります**tempdb**です。|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>ファイル ベースの一括コピー操作の使用  
  SQL Server の OLE DB ドライバーを実装して、 **IBCPSession**のサポートを公開するインターフェイス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ファイルベースの一括コピー操作します。 **IBCPSession**インターフェイスを実装して、 [ibcpsession::bcpcolfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)、 [ibcpsession::bcpcolumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)、 [ibcpsession::bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)、 [IBCPSession::BCPDone](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)、 [:bcpexec](../../oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)、 [ibcpsession::bcpinit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)、 [ibcpsession::bcpreadfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)、および[ibcpsession::bcpwritefmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)メソッドです。  
@@ -115,7 +118,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>参照  
  [SQL Server 機能の OLE DB ドライバー](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [データ ソースのプロパティ&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)   
- [一括データ &#40; のインポートとエクスポートSQL Server と &#41; です。](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [一括インポートのパフォーマンスを最適化します。](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  

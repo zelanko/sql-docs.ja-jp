@@ -2,7 +2,6 @@
 title: onReadyStateChange イベント (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 152acad43fbecebc5ee7808284a1d1fba90e1380
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66de98fbc8c78b194ce41f0f26bb5f1ed6c351c2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288123"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange イベント (RDS)
 **OnReadyStateChange**イベントが呼び出されたときの値、 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティが変更されました。  
@@ -40,7 +40,7 @@ onReadyStateChange
 #### <a name="parameters"></a>パラメーター  
  [なし] :  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ReadyState**プロパティに反映の進行状況、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトへのデータを非同期的に取得されて、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 使用して、 **onReadyStateChange**変更を監視するイベント、 **ReadyState**プロパティが発生したときにします。 これは、プロパティの値を定期的に確認するよりも効率的です。  
   
 ## <a name="applies-to"></a>適用対象  

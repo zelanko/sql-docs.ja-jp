@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e104ed1947d0fbce90064027e4200add9521bb9f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 332343edfc42e35dbc05d67a6be48aa3ad6c2ac7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402584"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
   **[変数]** ウィンドウを使用すると、ユーザー定義変数を作成、変更し、システム変数を表示できます。  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  変数に式を割り当てる場合は、データ型を変更できません。  
   
- **[値]**  
+ **Value**  
  変数の値を表示します。 ユーザー定義変数の値を更新できます。 この値は、リテラルまたは式にすることができます。また、複数行の文字列にすることもできます。 変数に式を割り当てるには、 **[変数]** ウィンドウの **[式]** 列の横にある参照ボタンをクリックします。  
   
  **Namespace**  
@@ -104,7 +103,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **Data type**  
   
--   **[値]**  
+-   **Value**  
   
 -   **Namespace**  
   

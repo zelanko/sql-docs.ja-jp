@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 のガイドラインと制限 |Microsoft ドキュメント
+title: SQLXML 4.0 のガイドラインと制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 407a3a50c6dfa6b88ddfb22b8c00b1b487607421
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032612"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 のガイドラインと制限
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,6 +35,6 @@ ms.lasthandoff: 05/03/2018
   
      つまり、SQLXML 4.0 とバージョン固有の PROGID を使用するアプリケーションを実行している状態で、他のソフトウェア プログラムをインストールすると、 このプログラムによって以前のバージョンの SQLXML がインストールされる可能性があり、 この場合、アプリケーションのバージョン固有の PROGID では以前のバージョンの SQLXML が参照されるため、アプリケーションで使用する SQLXML 機能が含まれていないと、エラーが発生します。  
   
--   何らかの理由で SQLXMLOLEDB プロバイダーを使用するおらず、代わりに、SQLOLEDB を使用するプロバイダーの SQLXML 機能を設定する場合、 **SQLXML Version**プロパティを"SQLXML.4.0"です。  
+-   SQLXML の機能のプロバイダーを設定するはありません、SQLXMLOLEDB プロバイダーを使用して、SQLOLEDB を使用する代わりに、何らかの理由で場合、 **SQLXML Version**プロパティを"SQLXML.4.0"。  
   
   

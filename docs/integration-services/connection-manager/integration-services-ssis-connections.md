@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6ece524c8ee7565b692902b5f8d1e7dbcbd5db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333546"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="built-in-connection-managers"></a>組み込みの接続マネージャー  
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されている接続マネージャーの種類を一覧にしたものです。  
   
-|型|Description|トピック|  
+|型|[説明]|トピック|  
 |----------|-----------------|-----------|  
 |ADO (ADO)|ActiveX Data Objects (ADO) オブジェクトに接続します。|[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|.NET プロバイダーを使用して、データ ソースに接続します。|[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -112,11 +111,11 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  次の表にリストされている接続マネージャーは、 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] および [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]でのみ動作します。  
   
-|型|Description|トピック|  
+|型|[説明]|トピック|  
 |----------|-----------------|-----------|  
 |ORACLE|Oracle \<バージョン情報\> サーバーに接続します。|Oracle 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、変換元と変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)のダウンロード ページを参照してください。|  
 |SAPBI|SAP NetWeaver BI Version 7 システムに接続します。|SAP BI 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、 [Microsoft SQL Server 2008 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016)のダウンロード ページを参照してください。|  
-|TERADATA|Teradata \<バージョン情報\> サーバーに接続します。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)のダウンロード ページを参照してください。|  
+|TERADATA|Teradata \<バージョン情報\> サーバーに接続します。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
   
 ### <a name="custom-connection-managers"></a>カスタム接続マネージャー  
  カスタム接続マネージャーを作成することもできます。 詳細については、「 [カスタム接続マネージャーの開発](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)」を参照してください。  

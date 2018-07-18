@@ -1,4 +1,4 @@
----
+﻿---
 title: データベースの完全バックアップの作成 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017

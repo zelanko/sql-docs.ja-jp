@@ -1,5 +1,5 @@
 ---
-title: upper-case 関数 (XQuery) |Microsoft ドキュメント
+title: upper-case 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 177659d16f1fda6e0d6dd45430949baf6331eefe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076219"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981900"
 ---
-# <a name="functions-on-string-values---upper-case"></a>文字列値 - 大文字に関数
+# <a name="functions-on-string-values---upper-case"></a>大文字の文字列値に対して関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   この関数では、各文字に変換 *$arg*大文字にします。 Unicode コード ポイント用の Microsoft Windows バイナリ大文字/小文字変換では、文字を大文字に変換する方法が指定されています。 この標準は、Unicode 標準のコード ポイントの標準のマッピングよりも異なります。  
@@ -49,20 +49,20 @@ fn:upper-case($arg as xs:string?) as xs:string
 |項目|定義|  
 |*$arg*|大文字に変換する文字列値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  場合の値 *$arg*が空、長さ 0 の文字列が返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更する  
- 次の例の変更、入力文字列 ' abcDEF!@4' を大文字に変換します。  
+ 次の例では、変更、入力文字列 ' abcDEF!@4' を大文字に変換します。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. 指定された文字列の検索  
+### <a name="b-search-for-a-specific-character-string"></a>B. 特定の文字の文字列の検索  
  この例では、upper-case 関数を使用して、大文字と小文字を区別せずに検索を行う方法を示しています。  
   
 ```  

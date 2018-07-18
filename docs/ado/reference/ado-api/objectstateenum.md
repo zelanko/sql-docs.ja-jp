@@ -2,7 +2,6 @@
 title: ObjectStateEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a8d7ba4da1908d2434049c8a71039a259bab8ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46030a27b9a2567f023c2c0d7946536703c91195
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279983"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 オブジェクトがオープンかクローズは、コマンドを実行するか、データを取得するデータ ソースに接続するかどうかを指定します。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|オブジェクトが閉じられたことを示します。|  
 |**adStateOpen**|1|オブジェクトが開かれていることを示します。|  

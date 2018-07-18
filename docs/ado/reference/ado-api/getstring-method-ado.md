@@ -2,7 +2,6 @@
 title: GetString メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 373ef70e69d528d41fc2631610a7f31f72c3eec7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 824ad1a3223538e724e4430186dcf176e86617a2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278881"
 ---
 # <a name="getstring-method-ado"></a>GetString メソッド (ADO)
 返します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として。  
@@ -45,18 +45,18 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)値を指定する方法、 **Recordset**を文字列に変換する必要があります。 *RowDelimiter*、 *ColumnDelimiter*、および*NullExpr*パラメーターでのみ使用されて、 *StringFormat*の**adClipString**です。  
   
  *NumRows*  
- 省略可。 変換する行の数、 **Recordset**です。 場合*NumRows*が指定されていない、内の行の総数よりも大きい場合や、**レコード セット**、し、すべての行で、**レコード セット**変換されます。  
+ 任意。 変換する行の数、 **Recordset**です。 場合*NumRows*が指定されていない、内の行の総数よりも大きい場合や、**レコード セット**、し、すべての行で、**レコード セット**変換されます。  
   
- *[列区切り記号]*  
- 省略可。 それ以外の場合、タブ文字を指定した場合、列間で使用される区切り記号です。  
+ *columnDelimiter*  
+ 任意。 それ以外の場合、タブ文字を指定した場合、列間で使用される区切り記号です。  
   
  *RowDelimiter*  
- 省略可。 それ以外の場合、キャリッジ リターン文字を指定した場合、行の間で使用される区切り記号です。  
+ 任意。 それ以外の場合、キャリッジ リターン文字を指定した場合、行の間で使用される区切り記号です。  
   
  *NullExpr*  
- 省略可。 、それ以外の場合、空の文字列を指定されている場合に、null 値の代わりに使用される式。  
+ 任意。 、それ以外の場合、空の文字列を指定されている場合に、null 値の代わりに使用される式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  行のデータが、スキーマ データは、文字列に保存されます。 したがって、 **Recordset**この文字列を使用してを再度開くことはできません。  
   
  このメソッドは、RDO **GetClipString**メソッドです。  

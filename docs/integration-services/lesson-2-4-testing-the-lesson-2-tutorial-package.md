@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
@@ -18,11 +16,12 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8f16f44bf7acf8437d51fdc3e5129c01846130b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e087dfd8f039c5b876f4581844944742638c1812
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400564"
 ---
 # <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>レッスン 2-4 - レッスン 2 のチュートリアル パッケージのテスト
 Foreach ループ コンテナーとフラット ファイル接続マネージャーを構成したので、Lesson 2 のパッケージは、Sample Data フォルダー内の 14 個のフラット ファイルに対して反復処理を実行できるようになりました。 指定した条件を満たすファイル名が見つかるたびに、Foreach ループ コンテナーは、ユーザー定義変数にそのファイル名を取り込みます。 次に、この変数に基づいて、フラット ファイル接続マネージャーの ConnectionString プロパティを更新し、新しいフラット ファイルへの接続を確立します。 さらに、新しいフラット ファイル内のデータに対して未変更のデータ フロー タスクを実行してから、フォルダー内の次のファイルに接続します。  

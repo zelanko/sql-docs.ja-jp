@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e153a9eca1215d1d873af06f3d1b222476e08083
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 963a425748ab1c2ba0f114c85277b630f23317f7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411964"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>モデル権限とメンバー権限の重複 (Master Data Services)
 
@@ -34,9 +34,10 @@ ms.lasthandoff: 05/03/2018
   
  メンバーに割り当てられている権限が、対応するモデル オブジェクトの権限とは異なる場合、次のルールが適用されます。  
   
--   **拒否** が他のどの権限よりも優先されます。  
+-   
+  **拒否** が他のどの権限をオーバーライドします。  
   
--   モデル レベルの**管理者** 権限がすべての権限に優先され、サブ レベルで ALL (CRUD) アクセス権限に変更されます。  
+-   モデル レベルの**管理者** 権限はすべての権限をオーバーライドし、サブ レベルで ALL (CRUD) アクセス権限に変更されます。  
   
 -   有効なアクセス権限は、メンバーと属性のアクセス権限と交差します。  
   

@@ -1,13 +1,12 @@
 ---
-title: 結果を処理方法に関するトピック (OLE DB) |Microsoft ドキュメント
+title: 結果の操作方法に関するトピック (OLE DB) の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8162c57738ee978289a90f2898198c9fd6c05d06
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2f34853f4074eb8436200d6ce13f5666a2ee3434
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707270"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420571"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>結果を処理する方法に関するトピック (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "34707270"
   
 -   [ユーザー定義関数とプロセスのリターン コードの実行&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [結果セットから行をフェッチ&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [結果セットから行がフェッチ&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>参照  
  [OLE DB の使用法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

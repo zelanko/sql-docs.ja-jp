@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32994089"
 ---
 # <a name="spgettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
   
 ## <a name="arguments"></a>引数  
  [ @request_id=] *request_id*  
- トポロジ状態要求の ID を指定します。 *request_id*は**int**、既定値は NULL です。 ID を取得するには、@request_id出力パラメーターを[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)またはクエリ、 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)システム テーブル。  
+ トポロジ状態要求の ID を指定します。 *request_id*は**int**、既定値は NULL です。 ID を取得するには、@request_id出力パラメーターを [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)またはクエリ 、 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)システム テーブル。  
   
 ## <a name="result-sets"></a>結果セット  
  sp_gettopologyinfo では、単一の XML 列で構成される結果セットが返されます。 XML 列のデータが内のデータと同じ、 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)システム テーブル。  

@@ -3,12 +3,10 @@ title: OData ソース | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455416"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401434"
 ---
 # <a name="odata-source"></a>OData ソース
 Open Data Protocol (OData) サービスからのデータを使用するには、SSIS パッケージの OData ソース コンポーネントを使用します。 このコンポーネントは、OData v3 プロトコルと v4 プロトコルをサポートします。  
@@ -120,7 +118,7 @@ OData ソースには、次のデータ ソースのサポートが含まれま�
  **列**  
  **[ODBC ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択されている外部 (変換元) 列を表示します。  
   
- **[エラー]**  
+ **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
  **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  

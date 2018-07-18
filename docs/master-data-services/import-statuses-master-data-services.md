@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dd2d891192bdeb27b82cb8da463ca03624695aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3905312358c36688e4c20a5a78d6c5504c745aa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404124"
 ---
 # <a name="import-statuses-master-data-services"></a>インポート状態 (マスター データ サービス)
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 
   **[ステージング バッチ]** ページの **[統合管理]** 機能領域に表示される状態は次のとおりです。  
   
-|状態|Description|Status_ID|  
+|状態|[説明]|Status_ID|  
 |------------|-----------------|----------------|  
 |実行用のキューに登録済み|バッチ処理が開始されていません。|@shouldalert|  
 |実行中|バッチ処理中です。|2|  

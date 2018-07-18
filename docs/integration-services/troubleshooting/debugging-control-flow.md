@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e156eea066ba43e6debc63be47b45fd18dcd9a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b117289c9877835d6c74d48497152021b47dc5ad
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405304"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではブレークの条件が 10 件用意されており、すべてのタスクとコンテナーで有効にできます。 **[ブレークポイントの設定]** ダイアログ ボックスでは、次の条件に基づいてブレークポイントを有効にできます。  
   
-|ブレークの条件|Description|  
+|ブレークの条件|[説明]|  
 |---------------------|-----------------|  
 |タスクまたはコンテナーが **OnPreExecute** イベントを受け取ったとき。|タスクが実行される直前に呼び出されます。 このイベントは、タスクまたはコンテナーが実行される直前に、タスクまたはコンテナーから発生します。|  
 |タスクまたはコンテナーが **OnPostExecute** イベントを受け取ったとき。|タスクの実行ロジックが完了した直後に呼び出されます。 このイベントは、タスクまたはコンテナーが実行された直後に、タスクまたはコンテナーから発生します。|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、ヒット カウントの種類について説明します。  
   
-|ヒット カウントの種類|Description|  
+|ヒット カウントの種類|[説明]|  
 |--------------------|-----------------|  
 |毎回|ブレークポイントにヒットすると、常に実行が中断されます。|  
 |ヒット カウント (等しい)|ブレークポイントの発生回数がヒット カウントと等しくなると実行が中断されます。|  
@@ -113,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、各ウィンドウについて説明しています。  
   
-|ウィンドウ|Description|  
+|ウィンドウ|[説明]|  
 |------------|-----------------|  
 |ブレークポイント|パッケージ内のブレークポイントを一覧表示し、ブレークポイントの有効化および削除のオプションを提供します。|  
 |[出力]|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **[ヒット カウントの種類]**  
  ブレークポイントがいつ有効になるかを指定します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**毎回**|ブレークポイントにヒットすると、常に実行が中断されます。|  
 |**ヒット カウント (等しい)**|ブレークポイントの発生回数がヒット カウントと等しくなると実行が中断されます。|  

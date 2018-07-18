@@ -1,13 +1,12 @@
 ---
-title: IBCPSession (OLE DB) を使用してファイルに FILESTREAM 列を読み取る |Microsoft ドキュメント
+title: FILESTREAM 列 IBCPSession (OLE DB) を使用してファイルへの読み取り |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c13b3dfc5113e780cd7250ed417dc07d9fe9cfa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ee8442fbd2efd6a9bd319ae17ca815b82cc1b2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947737"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422201"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession を使用した FILESTREAM 列のファイルへの読み取り (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,16 +28,16 @@ ms.locfileid: "32947737"
 
   このサンプルでは、IBCPSession インターフェイスを使用して filestream 列をファイルに読み取り、フォーマット ファイルを作成します。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)です。  
+ Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)します。  
   
 ## <a name="example"></a>例  
- INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  次のいずれかのサンプルを使用して、このサンプルで読み取るテーブルを作成します。  
   
--   [ICommandText パラメーター (&) #40";"OLE DB"&"#41; にバインドされた ISequentialStream を使って FILESTREAM 列にデータを送信します。](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText パラメーターにバインドされた ISequentialStream を使用して、FILESTREAM 列にデータを送信&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload (&) #40";"OLE DB"&"#41; を使用して FILESTREAM 列にデータを送信します。](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload を使用して FILESTREAM 列にデータを送信&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  1 つ目のコード リストをコピーし、ISSHelper.h という名前のファイルに貼り付けます。  
   

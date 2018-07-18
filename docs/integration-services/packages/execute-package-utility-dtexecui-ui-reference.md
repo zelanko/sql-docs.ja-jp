@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b68b33eeb18b07c19bf367be9fdcb27b45e632c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 825edb0d4002dec483756551e1c2b175acef7efe
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401454"
 ---
 # <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードは、 **/USER** *username* および **/PASSWORD** *password* options to the commおよび prompt.|  
 |**ファイル システム**|パッケージがファイル システムに存在する場合は、このオプションを選択します。|  
 |**[SSIS パッケージ ストア]**|パッケージが [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに存在する場合は、このオプションを選択します。|  
@@ -213,11 +212,12 @@ ms.lasthandoff: 05/03/2018
  **[参照]**  
  パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、 **[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
   
- **[再開オプションを上書きする]**  
- パッケージのチェックポイントが有効な場合、再開オプションを上書きするかどうかを示します。  
+ 
+  **[再開オプションをオーバーライドする]**  
+ パッケージのチェックポイントが有効な場合、再開オプションをオーバーライドするかどうかを示します。  
   
  **[再開オプション]**  
- 再開オプションを上書きする場合、チェックポイントの使用方法を選択します。  
+ 再開オプションをオーバーライドする場合、チェックポイントの使用方法を選択します。  
   
  **Execute**  
  パッケージを実行します。  
@@ -312,7 +312,7 @@ ms.lasthandoff: 05/03/2018
  **[プロパティのパス]**  
  プロパティのパスを入力します。 パスの構文では、円記号 (\\) を使用して続くアイテムがコンテナーであることを示し、ピリオド (.) を使用して続くアイテムがプロパティであることを示します。また、角かっこはコレクションのメンバーを示します。 メンバーは、インデックスまたは名前で識別できます。 たとえば、パッケージ変数のプロパティのパスは、「\Package.Variables[MyVariable].Value」です。  
   
- **[値]**  
+ **Value**  
  プロパティの値を入力します。  
   
  **[削除]**  

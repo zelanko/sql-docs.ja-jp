@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed6b502b0d8b2034624518344c78ed0195dce6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: deffdb98790baa64eaa1983fee6839a65289d0d4
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307291"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>カーソルの種類 (SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ SQLSRV ドライバーでは、カーソルの種類に応じて、任意の順�
   
 任意の順序で、結果セット内の任意の行にアクセスすることができます、スクロール可能なカーソルを含む結果セットを作成することができます。 次の表に、値を渡すことができる、 **Scrollable** sqlsrv_query または sqlsrv_prepare オプション。  
   
-|オプション|Description|  
+|オプション|説明|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|結果セットの末尾に到達するまで、結果セットの最初の行から一度に 1 つの行を移動することができます。<br /><br />これは、既定のカーソルの種類です。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)このカーソルの種類で作成した結果セットのエラーが返されます。<br /><br />**フォワード**SQLSRV_CURSOR_FORWARD の省略形は、します。|  
 |SQLSRV_CURSOR_STATIC|により、任意の順序で行にアクセスするが、データベース内の変更は反映されません。<br /><br />**静的**SQLSRV_CURSOR_STATIC の省略形は、します。|  
@@ -46,7 +46,7 @@ SQLSRV ドライバーでは、カーソルの種類に応じて、任意の順�
   
 次の表で指定できる値、*行*パラメーター。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|次の行を指定します。 これは、既定値を指定しない場合、*行*スクロール可能な結果セットのパラメーターです。|  
 |SQLSRV_SCROLL_PRIOR|現在の行の前に、の行を指定します。|  

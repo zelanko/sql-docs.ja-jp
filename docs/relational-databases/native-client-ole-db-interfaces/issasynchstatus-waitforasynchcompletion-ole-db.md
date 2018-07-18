@@ -1,14 +1,12 @@
 ---
-title: Issasynchstatus::waitforasynchcompletion (OLE DB) |Microsoft ドキュメント
+title: Issasynchstatus::waitforasynchcompletion (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ab8eec0f1eabc796a4acac57abd0af86d8c1982
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd159c230fc7a53367c0a05d1b36905635391799
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949037"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427241"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +50,7 @@ HRESULT WaitForAsynchCompletion(
  メソッドが成功しました。  
   
  E_UNEXPECTED  
- に、行セットが使用されていない状態では**itransaction::commit**または**itransaction::abort**が呼び出されたか、初期化フェーズ中に、行セットが取り消されました。  
+ に、行セットが未使用状態は**itransaction::commit**または**itransaction::abort**が呼び出されたか、初期化フェーズ中に、行セットが取り消されました。  
   
  DB_E_CANCELED  
  行セットの設定中またはデータ ソース オブジェクトの初期化中に、非同期処理が取り消されました。  
@@ -61,24 +59,24 @@ HRESULT WaitForAsynchCompletion(
  指定したタイムアウトに達しても、操作が完了していません。  
   
 > [!NOTE]  
->  上記のリターン コード値に加えて、 **issasynchstatus::waitforasynchcompletion**メソッドには、主要な OLEDB によって返されるリターン コード値もサポートしています**icommand::execute**と**idbinitialize::initialize**メソッドです。  
+>  上記のリターン コード値に加えて、 **issasynchstatus::waitforasynchcompletion**メソッドは、ole DB core によって返されるリターン コード値もサポートしています**icommand::execute**と。**Idbinitialize::initialize**メソッド。  
   
-## <a name="remarks"></a>解説  
- **Issasynchstatus::waitforasynchcompletion**メソッドは、タイムアウト値 (ミリ秒単位) が経過するか、保留中の操作が完了するまでは返されません。 **コマンド**オブジェクトには、 **CommandTimeout**秒数を制御するプロパティ、クエリは、タイムアウト前に実行されます。**CommandTimeout**と組み合わせて使用する場合、プロパティは無視されます**issasynchstatus::waitforasynchcompletion**メソッドです。  
+## <a name="remarks"></a>コメント  
+ **Issasynchstatus::waitforasynchcompletion**メソッドは、タイムアウト値 (ミリ秒単位) が経過するか、保留中の操作が完了するまでは返されません。 **コマンド**オブジェクトには、 **CommandTimeout**秒数を制御するプロパティがタイムアウトする前に、クエリを実行します。**CommandTimeout**と組み合わせて使用する場合、プロパティは無視されます**issasynchstatus::waitforasynchcompletion**メソッド。  
   
- 非同期操作では、タイムアウト プロパティが無視されます。 タイムアウト パラメーター **issasynchstatus::waitforasynchcompletion**制御は、呼び出し元に返されるまでの経過時間の最大サイズを指定します。 タイムアウトが発生すると、DB_S_ASYNCHRONOUS が返されます。 タイムアウトによって非同期操作が取り消されることはありません。 タイムアウト期間内に完了しない非同期操作をアプリケーションで取り消す必要がある場合、タイムアウトを待機後、DB_S_ASYNCHRONOUS が返されたときに明示的に操作を取り消す必要があります。  
+ 非同期操作では、タイムアウト プロパティが無視されます。 タイムアウト パラメーター **issasynchstatus::waitforasynchcompletion**制御が呼び出し元に返されるまでの経過時間の最大サイズを指定します。 タイムアウトが発生すると、DB_S_ASYNCHRONOUS が返されます。 タイムアウトによって非同期操作が取り消されることはありません。 タイムアウト期間内に完了しない非同期操作をアプリケーションで取り消す必要がある場合、タイムアウトを待機後、DB_S_ASYNCHRONOUS が返されたときに明示的に操作を取り消す必要があります。  
   
 > [!NOTE]  
->  OLE DB サービス コンポーネントを使用している場合は S_OK、返される可能性が DB_S_ASYNCHRONOUS が予想される場合ので、アプリケーションを呼び出す必要があります[issasynchstatus::getstatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) S_OK または DB_S_ASYNCHRONOUS が返される場合の完了を確認します。  
+>  OLE DB サービス コンポーネントを使用している場合 S_OK 返される可能性が DB_S_ASYNCHRONOUS が必要ですが、ときにアプリケーションを呼び出す必要がありますので[issasynchstatus::getstatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) S_OK または DB_S_ASYNCHRONOUS が返されるときに完了を確認します。  
   
- 場合、 *dwMillisecTimeOut*値が、無限に設定されている、 **issasynchstatus::waitforasynchcompletion**メソッド、操作が完了するまでブロックします。 場合、 *dwMillisecTimeOut*値が 0 に設定し、メソッドはすぐに保留中の操作の状態を返します。 操作が完了する前にタイムアウトが発生すると、DB_S_ASYNCHRONOUS が返されます。  
+ 場合、 *dwMillisecTimeOut*値は、無限に設定されて、 **issasynchstatus::waitforasynchcompletion**メソッド、操作が完了するまでブロックします。 場合、 *dwMillisecTimeOut*値が 0 に設定し、メソッドはすぐに保留中の操作の状態を返します。 操作が完了する前にタイムアウトが発生すると、DB_S_ASYNCHRONOUS が返されます。  
   
  タイムアウトが発生する前に操作が完了すると、返される HRESULT には操作から返された HRESULT が設定されます (返される HRESULT は、操作が同期的に実行された場合に返される HRESULT になります)。  
   
- また、DBPROPSET_SQLSERVERROWSET プロパティ セットに SSPROP_ISSAsynchStatus プロパティが追加されています。 サポートするプロバイダー、 [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)インターフェイスが VARIANT_TRUE の値は、このプロパティを実装する必要があります。  
+ また、DBPROPSET_SQLSERVERROWSET プロパティ セットに SSPROP_ISSAsynchStatus プロパティが追加されています。 サポートするプロバイダー、 [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)インターフェイスは、このプロパティを VARIANT_TRUE の値を実装する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [非同期操作を実行します。](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

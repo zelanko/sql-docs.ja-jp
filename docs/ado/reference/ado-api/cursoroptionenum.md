@@ -2,7 +2,6 @@
 title: CursorOptionEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51b30e8f2ccba9dd33979f0fb3cb9cb3b6d270c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf036719cdfc8c03f94c613fae9cc411c1d619b8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277331"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 どのような機能を指定、[サポート](../../../ado/reference/ado-api/supports-method.md)のメソッドをテストする必要があります。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)を新しいレコードを追加するメソッド。|  
 |**adApproxPosition**|0x4000|では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)と[と、AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティです。|  

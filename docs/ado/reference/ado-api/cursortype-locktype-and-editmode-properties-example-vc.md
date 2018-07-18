@@ -2,7 +2,6 @@
 title: カーソル、LockType、および EditMode のプロパティの例 (vc++) |。Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0dbb8beebbbe01559954d674c69e93f356f7d632
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 726a7b346052cd847c599f4389480007b6698999
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277371"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>カーソル。、LockType、および EditMode のプロパティの例 (vc++)
 この例の設定、[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)開く前にプロパティ、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。 値も示しています、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でプロパティです。 EditModeOutput 関数は、この手順を実行する必要があります。  

@@ -2,7 +2,6 @@
 title: GetRows メソッドの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a22412b6ffdcbc2884292f482996973dd99158a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3f4af181439ea74b0f55f49e97f19e955eec517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278871"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows メソッドの例 (vc++)
 この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)から指定された行数を取得する方法を[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)および結果として得られるデータの配列を設定します。 **GetRows**メソッドが返す行の必要な数よりも小さい: 場合[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達している場合、または**GetRows**したレコードを取得しようとしています。別のユーザーによって削除されます。 この関数を返します**False** 2 番目のケースが発生した場合にのみです。 GetRowsOK 関数は、この手順を実行する必要があります。  

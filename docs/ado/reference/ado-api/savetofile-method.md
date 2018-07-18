@@ -2,7 +2,6 @@
 title: SaveToFile メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9beb8a1e2bfcc307c93b293a35dcac26cf0847a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dda2aaf0d73889ac74e171c48ed3bb3d320ddc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281601"
 ---
 # <a name="savetofile-method"></a>SaveToFile メソッド
 バイナリの内容を保存、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)をファイルにします。  
@@ -47,7 +47,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  既存のファイルを上書きした場合 (ときに**adSaveCreateOverwrite**設定されている)、 **SaveToFile**新しい後に続く元の既存のファイルからバイトを切り捨てます[EOS](../../../ado/reference/ado-api/eos-property.md)です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **SaveToFile**の内容をコピーするために使用する可能性があります、**ストリーム**オブジェクトをローカル ファイルにします。 コンテンツまたはのプロパティの変更はありません、**ストリーム**オブジェクト。 **ストリーム**オブジェクトを呼び出す前に開く必要があります**SaveToFile**です。  
   
  このメソッドの関連付けを変更していない、**ストリーム**基になるソース オブジェクト。 **ストリーム**オブジェクトが元の URL に関連付けられるまだまたは**レコード**開かれたときに、ソースとなった。  

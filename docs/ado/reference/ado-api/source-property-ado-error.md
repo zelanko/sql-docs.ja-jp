@@ -2,7 +2,6 @@
 title: Source プロパティ (ADO エラー) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1db468ae4575a494b03efc5cf9eb3372b6d5cab2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 67134598a14d9b4a50910b2eab20f0a0cf495957
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282061"
 ---
 # <a name="source-property-ado-error"></a>Source プロパティ (ADO エラー)
 オブジェクトまたはエラーの発生源アプリケーションの名前を示します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  返します、**文字列**オブジェクトまたはアプリケーションの名前を示す値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**ソース**プロパティを[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトまたはエラーの発生源アプリケーションの名前を決定するオブジェクト。 これは、オブジェクトのクラス名またはプログラム id です。 ADO ではエラーの場合は、プロパティ値になります **ADODB。 * * * ObjectName*ここで、 *ObjectName*エラーを発生させたオブジェクトの名前を指定します。 ADOX および ADO MD では、値になります **ADOX。 * * * ObjectName*と **ADOMD。 * * *、ObjectName*それぞれします。  
   
  エラーのドキュメントをに基づいて、**ソース**、[数](../../../ado/reference/ado-api/number-property-ado.md)、および[説明](../../../ado/reference/ado-api/description-property.md)のプロパティ**エラー**オブジェクトをコードを記述することができますエラーが適切に処理するされます。  

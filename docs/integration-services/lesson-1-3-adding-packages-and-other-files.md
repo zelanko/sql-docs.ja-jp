@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: conceptual
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 910d7759a7298e7285eb90c6d9e0d165245ec799
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d374f336d2fe70d62bdca2194cfe5ac3250e0d91
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334096"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>レッスン 1-3 - パッケージとその他のファイルの追加
 このタスクでは、既存のパッケージ、個々のパッケージをサポートする補助ファイル、および Readme を、前のタスクで作成した Deployment Tutorial プロジェクトに追加します。 たとえば、パッケージのデータを含んでいる XML データ ファイルや、プロジェクトのすべてのパッケージに関する Readme 情報を提供するテキスト ファイルを追加します。  

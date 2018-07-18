@@ -1,5 +1,5 @@
 ---
-title: Properties 要素 (XMLA) |Microsoft ドキュメント
+title: Properties 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c72d367944a79e86d9bfa251121e8589cbc0e86
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576124"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994554"
 ---
 # <a name="properties-element-xmla"></a>Properties 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  使用される分析 (XMAL) プロパティの XML が含まれています、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)と[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
+  によって使用される分析 (XMAL) プロパティの XML が含まれています、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)と[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34576124"
 |既定値|なし|  
 |Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34576124"
 |子要素|[PropertyList](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- **プロパティ**要素の側面を制御するための XMLA プロパティを表す、 **Discover**と**Execute**などに必要な情報を定義する方法返される結果セットの形式を指定するか、データを書式設定する必要がありますのロケールを指定する、データ ソースに接続します。  
+ **プロパティ**要素の側面を制御するための XMLA プロパティを表す、 **Discover**と**Execute**などに必要な情報を定義する方法返される結果セットの形式を指定するか、ロケール データを書式設定する必要がありますを指定する、データ ソースに接続します。  
   
  使用可能なプロパティとその値は、 **Discover** メソッドで要求の種類として DISCOVER_PROPERTIES を使用することによって取得できます。  
   

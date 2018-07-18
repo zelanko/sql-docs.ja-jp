@@ -2,7 +2,6 @@
 title: メンバーのコレクション (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18a3fac9cff0a41c9d1e7dc820d68ae77c294d4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6b4a6902ebf9efae5b02eccb14f1d06e9279cc6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284651"
 ---
 # <a name="members-collection-ado-md"></a>メンバーのコレクション (ADO MD)
 含まれています、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)レベル、または軸に沿った位置からのオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A**メンバー**は次の種類のメンバーを格納するコレクションを使用します。  
   
 -   キューブ内のレベルを構成するメンバー。 含まれる、**メンバー**のコレクション、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト。 サンプルを使用するなど、[マルチ ディメンション スキーマの概要とデータ](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)国のレベルの 4 つのメンバーは、カナダ、アメリカ合衆国、英国、およびドイツです。  

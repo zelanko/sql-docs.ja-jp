@@ -2,7 +2,6 @@
 title: エラー オブジェクトのプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3200118afc7a0275e392460171507c77d9884bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bde620b9b8460061777b1019a5a35256a9179a2b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277861"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>説明、HelpContext、HelpFile、以下、数、ソース、および SQLState のプロパティの例 (vc++)
 この例は、によってエラーが発生し、トラップ、表示、[説明](../../../ado/reference/ado-api/description-property.md)、 [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、 [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、[以下](../../../ado/reference/ado-api/nativeerror-property-ado.md)、 [数](../../../ado/reference/ado-api/number-property-ado.md)、[ソース](../../../ado/reference/ado-api/source-property-ado-error.md)、および[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)結果のプロパティ[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  

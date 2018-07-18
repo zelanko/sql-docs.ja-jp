@@ -2,7 +2,6 @@
 title: オブジェクトのフィールド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49960f2763b402a291531a2ab010ef6a0682107f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b815da825f777b51a43a90af26eba955050b785
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278471"
 ---
 # <a name="field-object"></a>Field オブジェクト
 一般的なデータ型のデータの列を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  各**フィールド**オブジェクト内の列に対応して、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 使用する、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティ**フィールド**オブジェクトを設定または現在のレコードのデータを取得します。 機能によって、プロバイダーが公開して一部のコレクション、メソッド、またはプロパティの**フィールド**オブジェクトを使用できない可能性があります。  
   
  コレクション、メソッド、およびプロパティの使用、**フィールド**オブジェクトを次を行うことができます。  

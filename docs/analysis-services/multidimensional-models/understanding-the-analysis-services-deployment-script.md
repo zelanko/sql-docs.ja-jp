@@ -1,5 +1,5 @@
 ---
-title: サービス配置スクリプトの解析を理解する |Microsoft ドキュメント
+title: サービス配置スクリプトの分析の理解 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84179762d2c4819fb5fc5f82ad6d0528ea689ecf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026579"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021427"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Analysis Services 配置スクリプトについて
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34026579"
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードでは、単一の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースへのオブジェクトの配置のみを行います。 サーバー レベルのオブジェクトまたはデータは配置しません。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services 配置ウィザードを実行しています。](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)   
- [配置スクリプトを作成するために使用する入力ファイルをについてください。](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
+ [Analysis Services 配置ウィザードの実行](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)   
+ [配置スクリプトを作成するための入力ファイルについて](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
   
   

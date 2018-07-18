@@ -1,5 +1,5 @@
 ---
-title: sys.dm_io_cluster_valid_path_names (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_io_cluster_valid_path_names (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,29 +27,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73be0586ae8f12633fff733f763f021f7133d119
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038810"
 ---
 # <a name="sysdmioclustervalidpathnames-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   SQL Server フェールオーバー クラスター インスタンスに対応するクラスター化ボリュームを含む、すべての有効な共有ディスクに関する情報を返します。 インスタンスがクラスター化されていない場合は、空の行セットが返されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**path_name**|**Nvarchar(512)**|ボリューム マウント ポイント、またはデータベースとログ ファイルのルート ディレクトリとして使用できるドライブのパス。 NULL 値は許可されません。|  
 |**cluster_owner_node**|**Nvarchar(64)**|ドライブの現在の所有者。 クラスター化ボリューム (CSV) の場合は、MetaData Server をホストしているノードの所有者。 NULL 値は許可されません。|  
 |**is_cluster_shared_volume**|**Bit**|このパスを含むドライブがクラスター化ボリュームの場合は 1 を返します。それ以外の場合は 0 を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SQL Server フェールオーバー クラスター インスタンス (FCI) は、データとログ ファイルのストレージとして、FCI のすべてのノード間で共有ストレージを使用する必要があります。 このビューで表示されるディスクは、インスタンスに関連付けられているクラスター リソース グループの中にあり、データまたはログ ファイルのストレージとして使用できるディスクのみです。  
   
 > [!NOTE]  
 >  このビューに置き換わります[sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)将来のリリースでします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

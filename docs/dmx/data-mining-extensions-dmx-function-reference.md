@@ -1,5 +1,5 @@
 ---
-title: データ マイニング拡張機能 (DMX) 関数リファレンス |Microsoft ドキュメント
+title: データ マイニング拡張機能 (DMX) 関数リファレンス |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842535"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998424"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>データ マイニング拡張機能 (DMX) 関数リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34842535"
  [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   

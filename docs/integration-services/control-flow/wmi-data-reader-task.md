@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 443aeb132cc4a201a276d1d76b1849e0e8bf92e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 881118c9747dca1a328bd091bf1bfee017e2bbb5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405864"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
   WMI データ リーダー タスクは、WQL (Windows Management Instrumentation Query Language) を使用してクエリを実行し、コンピューター システムに関する WMI から情報を返します。 WMI データ リーダー タスクは、次の目的で使用できます。  
@@ -81,7 +80,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>WMI データ リーダー タスクで使用できるカスタム ログ メッセージ  
  次の表は、WMI データ リーダー タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|Description|  
+|ログ エントリ|[説明]|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|タスクが WMI データの読み取りを開始したことを示します。|  
 |**WMIDataReaderOperation**|タスクで実行された WQL クエリを報告します。|  
@@ -131,7 +130,7 @@ Select * FROM Win32_QuickFixEngineering
  **[WQLQuerySourceType]**  
  タスクで実行する WQL クエリのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを WQL クエリに設定します。 この値を選択すると、動的オプションの **[WQLQuerySourceType]** が表示されます。|  
 |**[ファイル接続]**|WQL クエリを含むファイルを選択します。 この値を選択すると、動的オプションの **[WQLQuerySourceType]** が表示されます。|  
@@ -146,7 +145,7 @@ Select * FROM Win32_QuickFixEngineering
  **[DestinationType]**  
  タスクで実行する WQL クエリの出力先の種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[ファイル接続]**|WQL クエリの結果を保存するファイルを選択します。 この値を選択すると、動的オプションの **[DestinationType]** が表示されます。|  
 |**変数**|WQL クエリの結果を保存する変数を設定します。 この値を選択すると、動的オプションの **[DestinationType]** が表示されます。|  

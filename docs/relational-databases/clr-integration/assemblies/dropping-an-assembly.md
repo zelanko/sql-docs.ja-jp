@@ -1,14 +1,11 @@
 ---
-title: アセンブリを削除する |Microsoft ドキュメント
+title: アセンブリの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -20,12 +17,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 46be0c285631013e3847e7ad7c0e8f03a543ad8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6efb9fe4c000e0fccf221a365c8c7cd5bc8050e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918997"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356924"
 ---
 # <a name="dropping-an-assembly"></a>アセンブリの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ DROP ASSEMBLY MyDotNETAssembly
   
  DROP ASSEMBLY は、現在実行中のアセンブリを参照するコードに影響を与えることはありませんが、DROP ASSEMBLY を実行後は、アセンブリ コードを起動しようとすると失敗します。  
   
- アセンブリがデータベースに存在する別のアセンブリにより参照されている場合、または、アセンブリが現在のデータベースで共通言語ランタイム (CLR) 関数、プロシージャ、トリガー、ユーザー定義型 (UDT)、ユーザー定義集計 (UDA) により使用されている場合、DROP ASSEMBLY はエラーを返します。 まず、DROP AGGREGATE、DROP FUNCTION、DROP PROCEDURE、DROP TRIGGER、および DROP TYPE ステートメントを使用して、アセンブリに含まれるすべてのマネージ データベース オブジェクトを削除します。  
+ アセンブリがデータベースに存在する別のアセンブリにより参照されている場合、または、アセンブリが現在のデータベースで共通言語ランタイム (CLR) 関数、プロシージャ、トリガー、ユーザー定義型 (UDT)、ユーザー定義集計 (UDA) により使用されている場合、DROP ASSEMBLY はエラーを返します。 まず、DROP AGGREGATE、DROP FUNCTION、DROP PROCEDURE、DROP TRIGGER、および DROP TYPE ステートメントを使用して、アセンブリに含まれるすべてのマネージド データベース オブジェクトを削除します。  
   
 ## <a name="removing-a-udt-from-the-database"></a>データベースからの UDT の削除  
  DROP TYPE ステートメントを使用すると、現在のデータベースから UDT が削除されます。 UDT を削除すると、DROP ASSEMBLY ステートメントを使用してデータベースからアセンブリを削除できます。  
@@ -71,11 +68,11 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
   
 ## <a name="see-also"></a>参照  
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [アセンブリを変更します。](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [アセンブリの変更](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [アセンブリを作成します。](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [DROP AGGREGATE &#40;TRANSACT-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE & #40;TRANSACT-SQL と #41 です。](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ドロップ タイプ&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   

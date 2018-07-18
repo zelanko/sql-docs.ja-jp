@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,21 +27,22 @@ helpviewer_keywords:
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 caps.latest.revision: 92
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7743c3c9a4e343a168fcaa2897eb511b8d312297
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943058"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で別名データ型またはユーザー定義型を現在のデータベースで作成します。 別名データ型の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ システム型に基づきます。 ユーザー定義型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) のアセンブリのクラスを使用して実装します。 ユーザー定義型を実装にバインドするには、先に [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使用して、その実装を含む CLR アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で登録しておく必要があります。  
   
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR コード実行機能は無効になっています。 マネージ コード モジュールを参照するデータベース オブジェクトを作成、変更、および削除できますが、それらの参照を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を有効にする必要があります。  
+ 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR コード実行機能は無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、および削除できますが、それらの参照を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を有効にする必要があります。  
  
 > [!NOTE]  
 >  このトピックでは、SQL Server への .NET Framework CLR の統合について説明します。 CLR 統合は、Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] には適用されません。
@@ -246,7 +246,7 @@ column_name <data_type>
   
  その他、次のような注意事項があります。  
   
--   クラスにはオーバーロードされたメソッドが存在する可能性があります。ただし、これらのメソッドはマネージ コード内からのみ呼び出すことができ、[!INCLUDE[tsql](../../includes/tsql-md.md)] から呼び出すことはできません。  
+-   クラスにはオーバーロードされたメソッドが存在する可能性があります。ただし、これらのメソッドはマネージド コード内からのみ呼び出すことができ、[!INCLUDE[tsql](../../includes/tsql-md.md)] から呼び出すことはできません。  
   
 -   *assembly_name* が SAFE または EXTERNAL_ACCESS の場合、すべての静的メンバーは **const** または **readonly** として宣言する必要があります。  
   

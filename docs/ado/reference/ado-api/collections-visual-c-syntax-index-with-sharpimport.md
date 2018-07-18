@@ -2,7 +2,6 @@
 title: 'コレクション (Visual C++ 構文のインデックス #import) |Microsoft ドキュメント'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92ffc11b2011ff5f37aee25266d0f229b1dfd617
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276531"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C++ 構文のインデックス #import)
 コレクションが、一般的なメソッドとプロパティを継承ことを確認すると便利です。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -58,7 +58,7 @@ HRESULT Clear( );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -75,7 +75,7 @@ HRESULT Delete( const _variant_t & Index );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -93,7 +93,7 @@ HRESULT Refresh( );
 HRESULT Update( );  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -34,11 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9e89081eadae06a6dd14ae9a4d5e273657146f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f835fc61aea7474d9c31f33b070d96da1afa3033
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36241064"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  置換された値の間隔と配置を決めるコードです。  
   
-|コード|プレフィックスまたは配置|Description|  
+|コード|プレフィックスまたは配置|[説明]|  
 |----------|-----------------------------|-----------------|  
 |- (マイナス)|左寄せ|指定されたフィールド幅内で引数の値を左寄せします。|  
 |+ (プラス)|符号プレフィックス|引数の値が符号付きの場合に、プラス記号 (+) またはマイナス記号 (-) を先頭に付けます。|  
@@ -130,7 +130,7 @@ RAISERROR ( { msg_str | @local_variable }
  *msg_str* と同じ形式の文字列を含む有効な文字データ型の変数です。 *@local_variable* のデータ型は **char** または **varchar** であるか、これらのデータ型に暗黙的に変換できるデータ型である必要があります。  
   
  *severity*  
- このメッセージに関連付けられたユーザー定義重大度レベルです。 sp_addmessage を使用して作成されたユーザー定義メッセージを、*msg_id* を使用して出力するときは、RAISERROR で指定された重大度が sp_addmessage で指定された重大度より優先されます。  
+ このメッセージに関連付けられたユーザー定義重大度レベルです。 sp_addmessage を使用して作成されたユーザー定義メッセージを、*msg_id* を使用して出力するときは、RAISERROR で指定された重大度が sp_addmessage で指定された重大度をオーバーライドします。  
   
  0 から 18 までの重大度レベルはどのユーザーでも指定できます。 19 から 25 までの重大度レベルは、固定サーバー ロールまたはユーザー ALTER TRACE 権限を持つ、sysadmin のメンバーでのみ指定できます。 重大度レベル 19 から 25 までは、WITH LOG オプションを必要とします。 0 より小さい重大度レベルは 0 と解釈されます。 25 より大きい重大度レベルは 25 と解釈されます。  
   
@@ -161,7 +161,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *オプション*  
  エラーのカスタム オプションです。次の表のいずれかの値をとります。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスについて、エラー ログとアプリケーション ログにエラーを記録します。 エラー ログに記録されるエラーは、現在のところ最高 440 バイトに制限されています。 Sysadmin 固定サーバー ロールまたは ALTER TRACE 権限を持つユーザーのメンバーだけでは、WITH LOG を指定できます。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|クライアントにすぐにメッセージを送信します。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

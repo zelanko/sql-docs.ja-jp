@@ -3,12 +3,10 @@ title: 認証モードの選択 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -28,15 +26,15 @@ helpviewer_keywords:
 - Password Expired dialog box
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
-ms.openlocfilehash: efb9a4044c54b81785f59c23ce74f1d4cf635b60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41dea300ced42f97fc3a6f7868e13edd534f0377
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970017"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941518"
 ---
 # <a name="choose-an-authentication-mode"></a>認証モードの選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +86,7 @@ ms.locfileid: "32970017"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証では、Kerberos セキュリティ プロトコルを使用できません。  
   
--   Windows には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで使用できない、追加のパスワード ポリシーが用意されています。  
+-   Windows には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで使用できない、追加のパスワード ポリシーが用意されています。  
   
 -   接続時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインの暗号化されたパスワードをネットワーク上で渡す必要があります。 自動的に接続する一部のアプリケーションでは、クライアントでパスワードが保存されます。 これらは追加の攻撃ポイントとなります。  
   

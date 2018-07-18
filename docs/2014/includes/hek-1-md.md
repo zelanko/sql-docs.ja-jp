@@ -1,1 +1,1 @@
-SQL Server の\-OLTP のメモリ
+SQL Server で\-インメモリ OLTP

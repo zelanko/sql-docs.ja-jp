@@ -1,25 +1,27 @@
 ---
 title: Azure にデプロイされた SSIS パッケージの検証 | Microsoft Docs
+description: Azure で期待どおりにパッケージが実行されない可能性のある既知の問題について、SSIS のパッケージの配置ウィザードでパッケージを確認する方法について説明します。
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5dcdd0f396f0cb6a272af121fd03757dc8bb2b72
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262056"
 ---
-# <a name="validate-ssis-packages-deployed-to-azure"></a>Azure にデプロイされた SSIS パッケージの検証
-SQL Server Integration Services (SSIS) プロジェクトを Azure サーバーの SSIS カタログ データベース (SSISDB) にデプロイすると、パッケージの配置ウィザードにより、**[確認]** ページの後に検証手順が追加されます。 この検証手順では、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 その後、**[検証]** ページに該当する警告が表示されます。
+# <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure にデプロイされた SQL Server Integration Services (SSIS) パッケージを検証する
+
+SQL Server Integration Services (SSIS) プロジェクトを Azure サーバーの SSIS カタログ (SSISDB) にデプロイすると、パッケージの配置ウィザードにより、**[確認]** ページの後に検証手順が追加されます。 この検証手順では、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 その後、**[検証]** ページに該当する警告が表示されます。
 
 > [!IMPORTANT]
 > この記事で説明する検証は、SQL Server Data Tools (SSDT) バージョン 17.4 以降でプロジェクトをデプロイするときに行われます。 最新版の SSDT を入手する方法については、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」をご覧ください。
@@ -29,7 +31,7 @@ SQL Server Integration Services (SSIS) プロジェクトを Azure サーバー�
 ## <a name="validate-connection-managers"></a>接続マネージャーを検証する
 
 ウィザードでは、接続を失敗させる可能性がある次の問題がないか、特定の接続マネージャーが確認されます。
-- **Windows 認証**。 接続文字列で Windows 認証を使用する場合、検証で警告が表示されます。 Windows 認証は、追加の構成手順を要求します。 詳細については、「[Connect to on-premises data sources with Windows Authentication](ssis-azure-connect-with-windows-auth.md)」 (Windows 認証でオンプレミス データ ソースに接続する) を参照してください。
+- **Windows 認証**。 接続文字列で Windows 認証を使用する場合、検証で警告が表示されます。 Windows 認証は、追加の構成手順を要求します。 詳細については、「[Windows 認証でデータとファイル共有に接続する](ssis-azure-connect-with-windows-auth.md)」を参照してください。
 - **ファイル パス**。 接続文字列に `C:\\...` のようなハードコーディングされたローカル ファイル パスが含まれる場合、検証で警告が表示されます。 絶対パスを含むパッケージは失敗することがあります。
 - **UNC パス**。 接続文字列に UNC パスが含まれる場合、検証で警告が表示されます。 UNC パスを含むパッケージは失敗することがあります。一般的に、UNC パスはアクセスに Windows 認証を要求するためです。
 - **ホスト名**。 サーバー プロパティに IP アドレスではなくホスト名が含まれる場合、検証で警告が表示されます。 ホスト名を含むパッケージは失敗することがあります。一般的に、Azure 仮想ネットワークは DNS 名前解決のために正しい DNS 構成を必要とするためです。
@@ -80,4 +82,4 @@ SQL Server Integration Services (SSIS) プロジェクトを Azure サーバー�
 Orc 形式は HDFS ターゲットと Azure Data Lake Store ターゲットでサポートされていません。
 
 ## <a name="next-steps"></a>次の手順
-Azure でパッケージ実行をスケジュールする方法については、「[Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md)」 (Azure で SSIS パッケージの実行をスケジュールする) を参照してください。
+Azure でパッケージ実行をスケジュールする方法については、「[Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages.md)」を参照してください。

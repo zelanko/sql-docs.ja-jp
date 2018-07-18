@@ -2,7 +2,6 @@
 title: ADORecordConstruction インターフェイス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76a13ea05920d1a479734b26bdc57bedfe2d6817
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275631"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction インターフェイス
 **ADORecordConstruction**インターフェイスは、ADO を構築するために使用**レコード**オブジェクトを OLE DB から**行**C/C++ アプリケーション内のオブジェクト。  
   
  このインターフェイスは、次のプロパティをサポートします。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
   
 |||  
 |-|-|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定された OLE DB**行**オブジェクト (`pRow`)、ADO の構築**レコード**オブジェクト (`adoR`)、次の 3 つの基本的な操作を額。  
   
 1.  ADO を作成する**レコード**オブジェクト。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  ADO**レコード**OLE DB のコンテナーからオブジェクトを作成することができますも**行**オブジェクト。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  

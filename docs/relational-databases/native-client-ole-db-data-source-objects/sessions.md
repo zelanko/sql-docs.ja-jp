@@ -1,36 +1,34 @@
 ---
-title: セッション |Microsoft ドキュメント
+title: セッション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6de9aa78a6cbdd26900eb4565f3edc7783acdeb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06d705cb21fe6a10ed30daab57a3534856d633f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946287"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416841"
 ---
 # <a name="sessions"></a>セッション
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー セッションのインスタンスへの接続を 1 つを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー セッションのインスタンスへの接続を 1 つを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、セッションがデータ ソースのトランザクション領域を区切ることが必要です。 特定のセッション オブジェクトから作成されたすべてのコマンド オブジェクトは、そのセッション オブジェクトのローカル トランザクションまたは分散トランザクションに関係します。  
   
@@ -38,7 +36,7 @@ ms.locfileid: "32946287"
   
  データ ソースで新たに作成されるセッション オブジェクトは、データ ソースでの指定に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの独自の接続を確立します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続は、そのセッションを作成したオブジェクトに対するすべての参照がアプリケーションによって解放された時点で削除されます。  
   
- 次の例で使用する方法、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーへの接続に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
+ 次の例では、使用する方法、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに接続するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
   
 ```  
 int main()  
@@ -187,14 +185,14 @@ EXIT:
 }  
 ```  
   
- 接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのセッション オブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]継続的に作成し、セッション オブジェクトを解放するアプリケーションの大幅なオーバーヘッドを生成できます。 管理することにより、オーバーヘッドを最小化できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー セッション オブジェクトを効率的にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー アプリケーションで保つことができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトの少なくとも 1 つのインターフェイスへの参照を保持することによってアクティブなセッション オブジェクトの接続。  
+ 接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのセッション オブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]継続的に作成し、セッション オブジェクトをリリースするアプリケーションのかなりのオーバーヘッドを生成することができます。 管理することによって、オーバーヘッドを最小化できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー セッション オブジェクトを効率的にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー アプリケーションを保つことができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトの少なくとも 1 つのインターフェイスの参照を保持することによってアクティブなセッション オブジェクトの接続。  
   
- たとえば、コマンド作成オブジェクト参照のプールを保持することで、プール内にあるセッション オブジェクトのアクティブな接続が維持されます。 セッション オブジェクトは、必要なプール メンテナンスは、有効な**IDBCreateCommand**セッションを必要とするアプリケーションのメソッドへのインターフェイス ポインター。 アプリケーション メソッドでセッションが不要になると、このメソッドは、プールを保持するコードにインターフェイス ポインターを返します。ただし、コマンド作成オブジェクトへのアプリケーションの参照は解放されません。  
+ たとえば、コマンド作成オブジェクト参照のプールを保持することで、プール内にあるセッション オブジェクトのアクティブな接続が維持されます。 プール メンテナンスのコードを渡します、有効なセッション オブジェクトが必要な**IDBCreateCommand**セッションを必要とするアプリケーション メソッドへのインターフェイス ポインター。 アプリケーション メソッドでセッションが不要になると、このメソッドは、プールを保持するコードにインターフェイス ポインターを返します。ただし、コマンド作成オブジェクトへのアプリケーションの参照は解放されません。  
   
 > [!NOTE]  
->  前の例で、 **IDBCreateCommand**ために、インターフェイスが使用される、 **ICommand**インターフェイスを実装して、 **GetDBSession**メソッド、オブジェクトが作成されたセッションを許可するコマンドまたは行セットのスコープ内の唯一の方法です。 したがって、コマンド オブジェクトを使用すると、追加のセッションを作成できるデータ ソース オブジェクト ポインターをアプリケーションで取得できます。  
+>  上記の例では、 **IDBCreateCommand**ため、インターフェイスが使用される、 **ICommand**インターフェイスの実装、 **GetDBSession**メソッドは、コマンドでは、唯一の方法または、オブジェクトが作成されたセッションを許可する行セットのスコープ。 したがって、コマンド オブジェクトを使用すると、追加のセッションを作成できるデータ ソース オブジェクト ポインターをアプリケーションで取得できます。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース オブジェクト &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データ ソース オブジェクト&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

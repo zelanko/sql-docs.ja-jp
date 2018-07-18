@@ -1,6 +1,6 @@
 ---
-title: SQL Server on Linux のトラブルシューティング |Microsoft ドキュメント
-description: SQL Server 2017 を使用して Linux 上のトラブルシューティングのヒントを提供します。
+title: SQL Server on Linux のトラブルシューティング |Microsoft Docs
+description: Linux 上の SQL Server 2017 を使用するためには、トラブルシューティングのヒントを提供します。
 author: annashres
 ms.author: anshrest
 manager: craigg
@@ -12,54 +12,55 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 966e2e389bbefeafcb381ddaecff7b7303ba489d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: 2877b068569d409e20417ab9b535fd1ba8fd1017
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981294"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このドキュメントでは、Linux または、Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときにサポートされる機能の既知の制限事項を確認するのに注意してください、 [SQL Server on Linux のリリース ノート](sql-server-linux-release-notes.md)です。
+このドキュメントでは、Linux または Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときにサポートされている機能と既知の制限事項を確認する注意してください、 [SQL Server on Linux リリース ノート](sql-server-linux-release-notes.md)します。
 
 > [!TIP]
-> よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
+> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
 
 ## <a id="connection"></a> 接続エラーをトラブルシューティングします。
-Linux SQL Server への接続に問題が発生した場合は、いくつかを確認します。 
+Linux、SQL Server への接続に問題が発生した場合は、いくつかを確認します。 
 
 - サーバー名または IP アドレスが、クライアント コンピューターから到達可能であることを確認します。
 
    > [!TIP]
-   > Ubuntu コンピューターの IP アドレスを検索するには、次の例のように ifconfig コマンドを実行することができます。
+   > Ubuntu コンピューターの IP アドレスを検索するには、次の例のように、ifconfig コマンドを実行できます。
    >
    >   ```bash
    >   sudo ifconfig eth0 | grep 'inet addr'
    >   ```
-   > Red Hat では、次の例のように、ip アドレスを使用できます。
+   > Red Hat などの次の例に示す ip アドレスを使用することができます。
    >
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > この手法の 1 つの例外は、Azure Vm に関連しています。 Azure vm で[Azure ポータルで VM のパブリック IP を見つける](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)です。
+   > この手法の 1 つの例外は、Azure Vm に関連しています。 Azure vm では、 [、Azure portal で VM のパブリック IP の検出](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)します。
 
-- 該当する場合は、ファイアウォール上の SQL Server ポート (既定は 1433) が開かれていることを確認します。
+- 該当する場合は、ファイアウォール上の SQL Server ポート (既定は 1433) を開いていることを確認します。
 
-- Azure vm であることを確認、 [SQL Server の既定ポートのネットワーク セキュリティ グループ ルール](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)です。
+- Azure Vm の場合があることを確認、[既定の SQL Server ポートのネットワーク セキュリティ グループ ルール](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)します。
 
-- ユーザー名とパスワードを含まないこと誤りがないか、余分なスペースか不適切な大文字小文字の区別を確認します。
+- ユーザー名とパスワードがないこと、入力ミスや余分なスペースや不適切な大文字小文字の区別を確認します。
 
-- 次の例のようにサーバー名でプロトコルとポート番号を明示的に設定しようとしています: **tcp:servername、1433**です。
+- 次の例のようにサーバー名でプロトコルとポート番号を明示的に設定しようとしています: **tcp:servername、1433**します。
 
-- 接続エラーとタイムアウトもネットワーク接続の問題があります。 接続情報とネットワーク接続を確認した後、再度接続を再試行してください。
+- 接続エラーとタイムアウトもネットワーク接続の問題があります。 ネットワーク接続、接続情報を確認したら、接続を再試行します。
 
 ## <a name="manage-the-sql-server-service"></a>SQL Server サービスを管理します。
 
-次のセクションでは、開始、停止、再開、および SQL Server サービスの状態を確認する方法を示します。 
+次のセクションでは、開始、停止、再起動、および SQL Server サービスの状態を確認する方法を示します。 
 
-### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Red Hat Enterprise Linux (RHEL) および Ubuntu で mssql サーバー サービスを管理します。 
+### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Red Hat Enterprise Linux (RHEL) および Ubuntu mssql server サービスを管理します。 
 
 このコマンドを使用して SQL Server サービスの状態を確認します。
 
@@ -67,7 +68,7 @@ Linux SQL Server への接続に問題が発生した場合は、いくつかを
    sudo systemctl status mssql-server
    ```
 
-停止、開始、または必要に応じて、次のコマンドを使用して、SQL Server サービスを再起動することができます。
+停止、起動、または、必要に応じて、次のコマンドを使用して、SQL Server サービスを再起動できます。
 
    ```bash
    sudo systemctl stop mssql-server
@@ -77,7 +78,7 @@ Linux SQL Server への接続に問題が発生した場合は、いくつかを
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Mssql Docker コンテナーの実行を管理します。
 
-次のコマンドを実行して最新作成された SQL Server の Docker コンテナーの状態およびコンテナーの ID を取得できます (下の ID が、**コンテナー ID**列)。
+次のコマンドを実行して最新に作成した SQL Server の Docker コンテナーの状態およびコンテナーの ID を取得できます (下の ID が、**コンテナー ID**列)。
 
    ```bash
    sudo docker ps -l
@@ -91,30 +92,30 @@ Linux SQL Server への接続に問題が発生した場合は、いくつかを
    ```
 
 > [!TIP]
-> Docker の詳細のトラブルシューティングのヒントを参照してください。[トラブルシューティング SQL Server の Docker コンテナー](sql-server-linux-configure-docker.md#troubleshooting)です。
+> Docker のトラブルシューティングの詳細のヒントを参照してください。[トラブルシューティングの SQL Server の Docker コンテナー](sql-server-linux-configure-docker.md#troubleshooting)します。
 
 ## <a name="access-the-log-files"></a>ログ ファイルにアクセスします。
    
-Linux と Docker の両方のインストールに/var/opt/mssql/log/errorlog ファイルを SQL Server エンジンのログです。 このディレクトリを参照する 'superuser' モードである必要があります。
+Linux と Docker の両方のインストールに/var/opt/mssql/log/errorlog ファイルを SQL Server エンジンのログ。 このディレクトリを参照する 'スーパー ユーザー' モードである必要があります。
 
-ここで、ログ:/var/オプトイン/mssql/セットアップ-< タイムスタンプのインストール時刻を表す > 'vim' のように、utf-16 の互換性のあるツールを使用して、エラー ログ ファイルを参照するか、次のように 'cat'。 
+ここで、インストーラーによって記録: var/選択/mssql/セットアップ/-< インストールの時刻を表す時刻のタイムスタンプ > 'vim' のような任意の utf-16 互換性のあるツールを使用して、エラー ログ ファイルを参照するか、次のように 'cat'。 
 
    ```bash
    sudo cat errorlog
    ```
 
-場合は、変換することも、ファイルを utf-8 に注意してお読みに 'more' または 'less、次のコマンド。
+場合は、変換することも、ファイルを utf-8 を使用して読み取る次のコマンドで ' 以下' または '詳細'。
    
    ```bash
    sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>拡張イベント
 
-拡張イベントは、SQL コマンドを使用して照会できます。  拡張イベントの詳細についてはあります[ここ](https://technet.microsoft.com/en-us/library/bb630282.aspx):
+拡張イベントは、SQL コマンドを使用して照会できます。  拡張イベントに関する詳細が見つかります[ここ](https://technet.microsoft.com/library/bb630282.aspx):
 
 ## <a name="crash-dumps"></a>クラッシュ ダンプ 
 
-Linux のログ ディレクトリにダンプを探します。 Linux のコアはダンプ/var/opt/mssql/log ディレクトリの下のチェック (. tar.gz2 拡張機能) または SQL ミニダンプ (拡張子は .mdmp)
+Linux でのログ ディレクトリにダンプを探します。 Linux のコア ダンプの/var/opt/mssql/log ディレクトリの下のチェック (. tar.gz2 拡張機能) または SQL ミニダンプ (拡張子は .mdmp)
 
 コア ダンプの 
    ```bash
@@ -126,7 +127,7 @@ SQL ダンプの
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
    
-## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>最小構成で、またはシングル ユーザー モードで SQL Server を起動します。
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>最小限の構成またはシングル ユーザー モードで SQL Server を起動します。
 
 ### <a name="start-sql-server-in-minimal-configuration-mode"></a>最小構成モードで SQL Server を起動します。
 設定値によりサーバーが起動できないとき (たとえば使用できるメモリが不足している場合) などに便利です。
@@ -136,14 +137,14 @@ SQL ダンプの
    ```
 
 ### <a name="start-sql-server-in-single-user-mode"></a>シングル ユーザー モードで SQL Server を起動します。
-特定の状況では、スタートアップ オプションと m を使用して、シングル ユーザー モードで SQL Server のインスタンスを起動する必要があります。 たとえば、サーバーの構成オプションを変更したり、破損した master データベースや他のシステム データベースを復旧したりすることがあります。 たとえば、サーバー構成オプションを変更または破損した master データベースまたはその他のシステム データベースを復元する可能性があります。   
+特定の状況では、-m スタートアップ オプションを使用して、シングル ユーザー モードで SQL Server のインスタンスを起動する必要があります。 たとえば、サーバーの構成オプションを変更したり、破損した master データベースや他のシステム データベースを復旧したりすることがあります。 たとえば、サーバー構成オプションを変更または破損した master データベースまたは他のシステム データベースを回復する場合します。   
 
 シングル ユーザー モードで SQL Server を起動します。
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m
    ```
 
-SQLCMD でのシングル ユーザー モードで SQL Server を起動します。
+SQLCMD を使用したシングル ユーザー モードで SQL Server を起動します。
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
    ```
@@ -151,17 +152,17 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
 > [!WARNING]  
 >  スタートアップに関する将来の問題を防ぐため、Linux 上の SQL Server は "mssql" ユーザーで起動してください。 たとえば、"sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" などとします。 
 
-別のユーザーと、SQL Server を開始している誤って場合、は、systemd で SQL Server を開始する前に 'mssql' ユーザーに SQL Server データベース ファイルの所有権を変更する必要があります。 たとえば、'mssql' ユーザーに/var/opt/mssql 下にあるすべてのデータベース ファイルの所有権を変更するに次のコマンドを実行します。
+別のユーザーと誤って SQL Server を開始した場合は、systemd で SQL Server を開始する前に、'mssql' ユーザーに SQL Server データベース ファイルの所有権を変更する必要があります。 たとえば、'mssql' ユーザーには、/var/opt/mssql 下のすべてのデータベース ファイルの所有権を変更するに次のコマンドを実行します。
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
-## <a name="rebuild-system-databases"></a>システム データベースの再構築します。
-最後の手段として、master の再構築することもでき、モデル データベースが既定のバージョンにバックアップします。
+## <a name="rebuild-system-databases"></a>システム データベースを再構築します。
+最後の手段として、master の再構築することもでき、モデル データベースが既定のバージョンに戻します。
 
 > [!WARNING]
-> 次の手順は**SQL Server システム データをすべて削除**構成されています。 これには、ユーザー データベース (ただし、ユーザー データベース自体ではなく) に関する情報が含まれます。 システム データベースは、次のように格納されているその他の情報も削除されます: マスター_キーについては、任意の証明書をマスター、SA ログインのパスワード、msdb、および sp_configure オプションから msdb からのジョブに関連する情報、データベース メールに読み込まれます。 影響を理解する場合にのみ使用できます。
+> 次の手順は**すべての SQL Server システム データの削除**に構成されています。 これには、ユーザー データベース (ただし、ユーザー データベース自体ではなく) に関する情報が含まれます。 システム データベースは、次のように格納されているその他の情報も削除されます。 マスター _ キーは、マスター、SA ログインのパスワード、msdb からジョブに関連する情報、msdb、および sp_configure オプションからデータベース メールの情報に読み込まれたすべての証明書。 影響を理解した場合にのみ使用します。
 
 1. SQL Server を停止します。
 
@@ -169,16 +170,16 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
    sudo systemctl stop mssql-server
    ```
 
-1. 実行**sqlservr**で、 **force セットアップ**パラメーター。 
+1. 実行**sqlservr**で、**セットアップを強制する-** パラメーター。 
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
    ```
    
    > [!WARNING]
-   > 以前の警告を参照してください。 また、実行すると、 **mssql**ユーザーは、ここに示すようにします。
+   > 前述の警告を参照してください。 また、としてこれを実行する必要があります、 **mssql**ユーザーは、ここに示すようにします。
 
-1. 「回復が完了しました」メッセージを確認した後、ctrl キーを押しながら C キーを押します。 これがシャット ダウン、SQL Server
+1. 「回復が完了しました」のメッセージを確認した後は、CTRL キーを押しながら C キーを押します。 これは SQL Server をシャット ダウンされます。
 
 1. SA パスワードを再構成します。
 
@@ -196,11 +197,11 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
 
 1. リモート SQL Server インスタンスに接続することはできません。
 
-   記事の「トラブルシューティング」を参照してください[Linux に SQL Server への接続](#connection)です。
+   記事のトラブルシューティングのセクションを参照してください。 [SQL Server on Linux への接続](#connection)します。
 
-2. エラー: ホスト名は 15 文字である必要があります以下です。
+2. エラー: ホスト名は 15 文字である必要がありますまたはそれ以下。
 
-   これは、Debian パッケージの SQL Server をインストールしようとするコンピューターの名前が 15 文字より長いときに発生する既知の問題です。 現在、マシンの名前を変更する以外の回避策はありません。 これを実現する方法の 1 つでは、ホスト名のファイルを編集し、コンピューターを再起動します。 次[web サイトのガイド](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)これについて詳しく説明します。
+   これは、SQL Server の Debian パッケージをインストールしようとするマシンの名前が 15 文字より長いときに発生する既知の問題です。 現在、マシンの名前を変更する以外の回避策はありません。 これを実現する方法の 1 つは、ホスト名のファイルを編集し、マシンを再起動することです。 次[web サイトのガイド](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)これを詳しく説明します。
 
 3. システム管理者 (SA) パスワードをリセットしています。
 
@@ -209,16 +210,16 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
    > [!NOTE]
    > 次の手順では、SQL Server サービスを一時的に停止します。
 
-   ホスト端末にログインし、次のコマンドを実行し、SA パスワードをリセットする指示に従います。
+   ホスト ターミナルにログインし、次のコマンドを実行して、SA のパスワードをリセットする指示に従います。
 
    ```bash
    sudo systemctl stop mssql-server
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-4. [パスワード] に特殊文字を使用します。
+4. パスワードに特殊文字を使用します。
 
-   SQL Server ログイン パスワードでいくつかの文字を使用する場合は、端末の Linux コマンドで使用する場合、円記号でエスケープする必要があります。 たとえば、する必要がありますをエスケープするドル記号 ($) を使用するといつでもターミナル コマンド/シェル スクリプトで。
+   一部の文字では、SQL Server ログイン パスワードを使用する場合は、ターミナルでの Linux コマンドを使用するときに、円記号でエスケープする必要があります。 たとえば、エスケープする必要ありますドル記号 ($) を使用するときにいつでもターミナル、コマンド シェル/スクリプトで。
 
    機能しません。
 
@@ -226,7 +227,7 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
    sudo sqlcmd -S myserver -U sa -P Test$$
    ```
 
-   動作:
+   機能:
 
    ```bash
    sqlcmd -S myserver -U sa -P Test\$\$

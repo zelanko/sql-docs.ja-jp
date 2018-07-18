@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,15 +27,16 @@ helpviewer_keywords:
 - transactions [SQL Server], isolation levels
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 caps.latest.revision: 80
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0380185c7371a742a778293f9f1cffe038c6e2db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e9a7eefcd3ba735175e62c174fe338b2858be9f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782653"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -138,7 +138,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  SET TRANSACTION ISOLATION LEVEL をストアド プロシージャまたはトリガーで実行した場合は、オブジェクトから制御が返されると、分離レベルはオブジェクトの呼び出し時に使用されていたレベルに再設定されます。 たとえば、バッチで REPEATABLE READ を設定し、このバッチからストアド プロシージャを呼び出して分離レベルを SERIALIZABLE に設定した場合、ストアド プロシージャからバッチに制御が返されると、分離レベルの設定は REPEATABLE READ に戻ります。  
   
 > [!NOTE]  
->  ユーザー定義関数と共通言語ランタイム (CLR) ユーザー定義型では、SET TRANSACTION ISOLATION LEVEL は実行できません。 ただし、テーブル ヒントを使用して分離レベルを指定することはできます。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+>  ユーザー定義関数と共通言語ランタイム (CLR) ユーザー定義型では、SET TRANSACTION ISOLATION LEVEL は実行できません。 ただし、テーブル ヒントを使用して分離レベルをオーバーライドすることはできます。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  sp_bindsession を使用して 2 つのセッションをバインドすると、各セッションではそれぞれの分離レベル設定が保持されます。 SET TRANSACTION ISOLATION LEVEL を使用してセッションの分離レベル設定を変更しても、そのセッションにバインドしている他のセッションの設定に影響はありません。  
   

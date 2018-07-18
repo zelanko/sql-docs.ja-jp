@@ -1,5 +1,5 @@
 ---
-title: sum 関数 (XQuery) |Microsoft ドキュメント
+title: sum 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 071394e1c2889c94c65a8e42179fd1bdbf5cf383
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076825"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022630"
 ---
-# <a name="aggregate-functions---sum"></a>集計関数: sum
+# <a name="aggregate-functions---sum"></a>集計関数 - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   一連の数値の合計を返します。  
@@ -46,17 +46,17 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  合計が計算される、一連のアトミック値。  
   
-## <a name="remarks"></a>解説  
- すべての種類に渡されるアトミック値の**sum()** 同じ基本型のサブタイプである必要があります。 使用できる基本データ型は、3 つの組み込みの数値基本データ型または xdt:untypedAtomic です。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
+## <a name="remarks"></a>コメント  
+ すべての種類に渡されるアトミック値の**sum()** 同じ基本型のサブタイプにする必要があります。 使用できる基本データ型は、3 つの組み込みの数値基本データ型または xdt:untypedAtomic です。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
   
- 結果**sum()** 入力が空のシーケンスで必要に応じて場合でも、xs:double xdt:untypedAtomic の場合などに渡された型の基本型を受け取ります。 入力が静的に空の場合、結果は静的な型および動的な型 xs:integer の 0 になります。  
+ 結果**sum()** 場合でも、入力が空のシーケンスで必要に応じて、xs:double、xdt:untypedAtomic の場合などに渡された型の基本型を受け取ります。 入力が静的に空の場合、結果は静的な型および動的な型 xs:integer の 0 になります。  
   
- **Sum()** 関数、数値の合計を返します。 Xdt:untypedAtomic 値は、xs:double にキャストすることはできない場合、入力シーケンスで値が無視されます。 *$arg*です。 入力が動的に計算された空のシーケンスの場合、使用されている基本データ型の値 0 が返されます。  
+ **Sum()** 関数は、数値の合計を返します。 Xdt:untypedAtomic 値は、xs:double にキャストできない場合で、入力シーケンスの値が無視されます。 *$arg*します。 入力が動的に計算された空のシーケンスの場合、使用されている基本データ型の値 0 が返されます。  
   
  オーバーフローまたは範囲外の例外が発生したとき、関数は実行時エラーを返します。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. sum() XQuery 関数を使用した、製造プロセス内のすべてのワーク センターの場所での合計労働時間の計算  
  次のクエリでは、製造手順が格納されているすべての製品モデルの製造プロセスにおける、すべてのワーク センターの場所での合計労働時間を計算します。  
@@ -113,7 +113,7 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   引数を 1 つのバージョンのみ**sum()** はサポートされています。  
+-   1 つの引数のバージョンのみ**sum()** はサポートされています。  
   
 -   入力が動的に計算された空のシーケンスである場合、xs:integer 型ではなく、使用されている基本データ型の値 0 が返されます。  
   

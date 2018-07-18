@@ -1,5 +1,5 @@
 ---
-title: .NET 環境での SQLXML 一括読み込みの使用 |Microsoft ドキュメント
+title: .NET 環境での SQLXML 一括読み込みの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 270abbb40bdf6081b7409cf76a97925a1cd2b3d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970593"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053740"
 ---
-# <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 の .NET Framework のサポートの一括読み込みの使用
+# <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 の .NET Framework サポート - 一括読み込みの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  ここでは、XML 一括読み込み機能を .NET 環境で使用する方法について説明します。 XML 一括読み込みの詳細については、次を参照してください。 [XML データの一括読み込みを実行する & #40 です。SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  ここでは、XML 一括読み込み機能を .NET 環境で使用する方法について説明します。 XML 一括読み込みの詳細については、次を参照してください。 [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)します。  
   
- マネージ環境から SQLXML 一括読み込み COM オブジェクトを使用するには、このオブジェクトにプロジェクト参照を追加する必要があります。 これによって、一括読み込み COM オブジェクトのマネージ ラッパー インターフェイスが生成されます。  
+ マネージド環境から SQLXML 一括読み込み COM オブジェクトを使用するには、このオブジェクトにプロジェクト参照を追加する必要があります。 これによって、一括読み込み COM オブジェクトのマネージド ラッパー インターフェイスが生成されます。  
   
 > [!NOTE]  
->  マネージ XML 一括読み込みはマネージ ストリームでは動作せず、ネイティブ ストリームのラッパーが必要です。 SQLXML 一括読み込みコンポーネントはマルチスレッド環境 ('[MTAThread]' 属性) では動作しません。 次の追加情報を使用して InvalidCastException 例外を取得する場合は、マルチ スレッド環境で一括読み込みコンポーネントを実行しようとすると、:「インターフェイス SQLXMLBULKLOADLib.ISQLXMLBulkLoad の QueryInterface が失敗しました」。 回避策が、一括読み込みオブジェクト シングル スレッド アクセスを含むオブジェクトを作成するには (たとえばを使用して、 **[STAThread]** 属性のサンプルで示すように)。  
+>  マネージド XML 一括読み込みはマネージド ストリームでは動作せず、ネイティブ ストリームのラッパーが必要です。 SQLXML 一括読み込みコンポーネントはマルチスレッド環境 ('[MTAThread]' 属性) では動作しません。 次の追加情報を含む InvalidCastException 例外を取得するマルチ スレッド環境で一括ロード コンポーネントを実行しようとした場合:「インターフェイス SQLXMLBULKLOADLib.ISQLXMLBulkLoad の QueryInterface が失敗しました」。 回避するには、一括読み込みオブジェクト シングル スレッド アクセスを含むオブジェクトを作成する (などを使用して、 **[STAThread]** 属性のサンプルに示すように)。  
   
  ここでは、データベースに XML データの一括読み込みを行う、実際の C# サンプル アプリケーションを紹介します。 実際のサンプルを作成するには、次の手順に従います。  
   
@@ -118,9 +118,9 @@ ms.locfileid: "32970593"
   
 5.  C# コンソール アプリケーションを作成します。  
   
-6.  **プロジェクト**メニューの **参照の追加**です。  
+6.  **プロジェクト**メニューの **参照の追加**します。  
   
-7.  **COM**  タブで  **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll) をクリック**OK**です。 表示されます、 **Interop.SQLXMLBULKLOADLib**プロジェクトで作成されたアセンブリです。  
+7.  **COM**  タブで  **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll) をクリック**OK**します。 表示されます、 **Interop.SQLXMLBULKLOADLib**プロジェクトで作成されたアセンブリ。  
   
 8.  Main() メソッドを次のコードに置き換え、 更新プログラム、 **ConnectionString**プロパティと、スキーマとデータ ファイルへのファイル パス。  
   
@@ -146,15 +146,15 @@ ms.locfileid: "32970593"
 9. 作成したテーブルに XML を読み込むには、プロジェクトをビルドして実行します。  
   
     > [!NOTE]  
-    >  .NET Framework で提供される tlbimp.exe ツールを使用して、一括読み込みコンポーネント (xblkld4.dll) への参照を追加することもできます。 このツールでは、ネイティブ DLL (xblkld4.dll) のマネージ ラッパーが作成され、任意の .NET プロジェクトで使用できます。 例:  
+    >  .NET Framework で提供される tlbimp.exe ツールを使用して、一括読み込みコンポーネント (xblkld4.dll) への参照を追加することもできます。 このツールでは、ネイティブ DLL (xblkld4.dll) のマネージド ラッパーが作成され、任意の .NET プロジェクトで使用できます。 以下に例を示します。  
   
     ```  
     c:\>tlbimp xblkld4.dll  
     ```  
   
-     この例では、.NET Framework プロジェクトで使用できるマネージ ラッパー DLL (SQLXMLBULKLOADLib.dll) が作成されます。 新しく作成した DLL へのプロジェクト参照を、.NET Framework で追加します。  
+     この例では、.NET Framework プロジェクトで使用できるマネージド ラッパー DLL (SQLXMLBULKLOADLib.dll) が作成されます。 新しく作成した DLL へのプロジェクト参照を、.NET Framework で追加します。  
   
 ## <a name="see-also"></a>参照  
- [XML データ & #40; の一括読み込みを実行します。SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

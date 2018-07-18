@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,14 +20,15 @@ helpviewer_keywords:
 - current SET options
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c36f69481c79f01f4ad6dcebf111f3d787fc57e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6734f9320737dd65dbd678ff74589d4b570cb864
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791913"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,8 @@ ms.lasthandoff: 05/03/2018
  **整数 (integer)**  
   
 ## <a name="remarks"></a>Remarks  
- オプションは、**SET** コマンドの使用または **sp_configure ユーザー オプション**値からのものです。 **SET** コマンドで構成されているセッション値は、**sp_configure** オプションを上書きします。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] などの多数のツールによって SET オプションは自動的に構成されます。 各ユーザーには、構成を表す @@OPTIONS 関数が用意されます。  
+ オプションは、**SET** コマンドの使用または **sp_configure ユーザー オプション**値からのものです。 
+  **SET** コマンドで構成されているセッション値は、**sp_configure** オプションをオーバーライドします。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] などの多数のツールによって SET オプションは自動的に構成されます。 各ユーザーには、構成を表す @@OPTIONS 関数が用意されます。  
   
  SET ステートメントを使用することにより、特定のユーザー セッションの言語とクエリ処理オプションを変更できます。 **@@OPTIONS** では、ON または OFF に設定されたオプションのみを検出できます。  
   

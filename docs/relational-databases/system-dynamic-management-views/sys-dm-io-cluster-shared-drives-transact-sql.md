@@ -1,5 +1,5 @@
 ---
-title: sys.dm_io_cluster_shared_drives (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_io_cluster_shared_drives (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 300d3bad9d7886db06a5b2891a6e030b03d63347
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991994"
 ---
 # <a name="sysdmioclustershareddrives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,20 +37,20 @@ ms.lasthandoff: 05/23/2018
   このビューは、現在のサーバー インスタンスがクラスター化されたサーバーの場合、各共有ドライブのドライブ名を返します。 現在のサーバー インスタンスがクラスター化されたサーバーでない場合は、空の行セットを返します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_io_cluster_shared_drives**です。  
+>  これから[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_io_cluster_shared_drives**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DriveName**|**nchar(2)**|クラスターの共有ディスク アレイを構成する個別のディスクを表すドライブの名前 (ドライブ文字)。 列値が許容されません。|  
-|**pdw_node_id**|**int**|**適用されます**: ssPDW<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: ssPDW<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="remarks"></a>解説  
- クラスター化が有効な場合、フェールオーバー クラスター インスタンスには、共有ディスク上にデータ ファイルとログ ファイルが置かれ、別のノードにフェールオーバーした後アクセスできるようになっている必要があります。 このビューの各行は、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される 1 つの共有ディスクを表します。 データを保管するためのこのインスタンスのログ ファイルはこのビューで表示されているディスクのみを使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 このビューで表示されるディスクは、SQL Server インスタンスに関連付けられているクラスター リソース グループに属するディスクです。  
+## <a name="remarks"></a>コメント  
+ クラスター化が有効な場合、フェールオーバー クラスター インスタンスには、共有ディスク上にデータ ファイルとログ ファイルが置かれ、別のノードにフェールオーバーした後アクセスできるようになっている必要があります。 このビューの各行は、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される 1 つの共有ディスクを表します。 データを格納したり、ログ ファイルのこのインスタンスをこのビューで表示されているディスクのみを使用できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このビューで表示されるディスクは、SQL Server インスタンスに関連付けられているクラスター リソース グループに属するディスクです。  
   
 > [!NOTE]  
->  このビューは、今後のリリースでは非推奨とされます。 使用することをお勧め[sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)代わりにします。  
+>  このビューは、今後のリリースでは非推奨とされます。 使用することをお勧めします。 [sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)代わりにします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/23/2018
 SELECT * FROM sys.dm_io_cluster_shared_drives;  
 ```  
   
- これは、結果セットを示します。  
+ これは、結果セットです。  
   
  DriveName  
   

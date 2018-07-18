@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_xtp_checkpoint_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 183970c09d23304553167b20366e0751d5f35207
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467238"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993864"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ ms.locfileid: "34467238"
 SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 新しいバージョンを大幅に異なるし、下位にあるトピックに説明が[SQL Server 2014](#bkmk_2014)です。**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 新しいバージョンから大幅に異なるし、下位にあるトピックの説明は[SQL Server 2014](#bkmk_2014)します。**
   
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] およびそれ以降  
- 次の表で列`sys.dm_db_xtp_checkpoint_stats`で始まる、  **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** です。  
+ 次の表に、列の記述`sys.dm_db_xtp_checkpoint_stats`以降 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|コント ローラーに表示される最後の LSN です。|  
 |end_of_log_lsn|**numeric(38)**|ログの最後の LSN。|  
-|bytes_to_end_of_log|**bigint**|ログ バイト数の間のバイト数に対応する、コント ローラーによって`last_lsn_processed`と`end_of_log_lsn`です。|  
+|bytes_to_end_of_log|**bigint**|ログ バイト数の間のバイト数に対応する、コント ローラーによって`last_lsn_processed`と`end_of_log_lsn`します。|  
 |log_consumption_rate|**bigint**|トランザクション ログの使用量 (KB/秒) でのコント ローラーでの比率。|  
 |active_scan_time_in_ms|**bigint**|トランザクション ログを自動的にスキャンすることでコント ローラーによって費やされた時間。|  
 |total_wait_time_in_ms|**bigint**|ログをスキャンしない中には、コント ローラーの累積待機時間。|  
@@ -71,13 +71,13 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|終了した前回のチェックポイントのタイムスタンプです。|  
 |hardened_recovery_lsn|**numeric(38)**|回復は、この LSN から開始されます。|  
 |hardened_root_file_guid|**uniqueidentifier**|完了した最後のチェックポイントの結果として書き込まれたルート ファイルの GUID です。|  
-|hardened_root_file_watermark|**bigint**|**内部のみ**です。 どれが最大ルート ファイルの読み取りに有効な (これは、内部的に関連する型にのみ – BSN と呼ばれます)。|  
+|hardened_root_file_watermark|**bigint**|**内部のみ**します。 どれが最大ルート ファイルの読み取りに有効な (これは、内部的に関連する型にのみ – BSN と呼ばれます)。|  
 |hardened_truncation_lsn|**numeric(38)**|切り捨てのポイントの LSN です。|  
 |log_bytes_since_last_close|**bigint**|最後からのバイトは、ログの現在の末尾を閉じます。|  
 |time_since_last_close_in_ms|**bigint**|以降、チェックポイントの最後の終了時刻。|  
 |current_checkpoint_id|**bigint**|新しい現在のセグメントは、このチェックポイントに割り当てられているされます。 チェックポイントのシステムは、パイプラインです。 現在のチェックポイントはログからのセグメントに割り当てられている中です。 これが、制限に達すると、チェックポイントは、コント ローラーと、新しいものを現在作成して解放されます。|  
 |current_checkpoint_segment_count|**bigint**|現在のチェックポイントのセグメントの数。|  
-|recovery_lsn_candidate|**bigint**|**内部でのみ**です。 Current_checkpoint_id を閉じるときに、recoverylsn として選択されるように候補。|  
+|recovery_lsn_candidate|**bigint**|**内部でのみ**します。 Current_checkpoint_id を閉じるときに、recoverylsn として選択されるように候補。|  
 |outstanding_checkpoint_count|**bigint**|終了するを待機しているパイプラインでのチェックポイントの数。|  
 |closing_checkpoint_id|**bigint**|終了のチェックポイントの ID です。<br /><br /> シリアライザーは、並列で作業しているため、いったんフィールドが完了し、チェックポイントはスレッドを終了して、終了する候補です。 閉じるスレッドは 1 つずつを閉じるだけことができ、終了のチェックポイントが閉じるスレッドが実行されている 1 つであるため順番にあります。|  
 |recovery_checkpoint_id|**bigint**|回復に使用されるチェックポイントの ID です。|  
@@ -88,9 +88,9 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|シリアル化されたデータの量。 |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 次の表で列`sys.dm_db_xtp_checkpoint_stats`の **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** です。  
+ 次の表に、列の記述`sys.dm_db_xtp_checkpoint_stats`の **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|スレッドの現在のログ シーケンス番号 (LSN) と end-of-log 間の、ログのバイト数。|  
 |total_log_blocks_processed|**bigint**|サーバーが起動した後で処理されたログ ブロックの合計数。|  
@@ -108,7 +108,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |end_of_log_lsn|**数値 (38)**|ログの末尾の LSN。|  
 |task_address|**varbinary(8)**|SOS_Task のアドレス。 追加の情報を得るには、sys.dm_os_tasks と組み合わせます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW DATABASE STATE` 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

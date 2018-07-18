@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6135e7e65c10d375d6a59529bd1beb3369a8d084
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2a5e265f00931bd06609f288d3c30f733548f39
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408874"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>エラーとイベントのリファレンス (Integration Services)
   ここでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に関連するいくつかのエラーとイベントについて説明します。 エラー メッセージについては、原因と解決方法も示します。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="error-messages"></a>エラー メッセージ  
   
-|エラーのシンボル名|Description|  
+|エラーのシンボル名|[説明]|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|キャッシュ変換によるインメモリ キャッシュへのデータの書き込みが試行されているため、パッケージを実行できないが、 キャッシュ接続マネージャーは、既にキャッシュ ファイルをインメモリ キャッシュに読み込んでいることを示しています。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指定された接続に失敗したため、パッケージを実行できないことを示しています。|  
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events-sqlispackage"></a>イベント (SQLISPackage)  
  詳細については、「 [Integration Services パッケージによってログに記録されるイベント](../integration-services/performance/events-logged-by-an-integration-services-package.md)」を参照してください。  
   
-|イベント|Description|  
+|イベント|[説明]|  
 |-----------|-----------------|  
 |SQLISPackage_12288|パッケージが開始されたことを示しています。|  
 |SQLISPackage_12289|パッケージの実行が正常に完了したことを示しています。|  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events-sqlisservice"></a>イベント (SQLISService)  
  詳細については、「 [Integration Services サービスによってログに記録されるイベント](../integration-services/service/events-logged-by-the-integration-services-service.md)」を参照してください。  
   
-|イベント|Description|  
+|イベント|[説明]|  
 |-----------|-----------------|  
 |SQLISService_256|サービスを開始しようとしていることを示しています。|  
 |SQLISService_257|サービスが開始したことを示しています。|  

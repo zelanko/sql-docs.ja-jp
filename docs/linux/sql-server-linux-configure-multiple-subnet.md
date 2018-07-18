@@ -1,5 +1,5 @@
 ---
-title: Linux 上の複数のサブネット Always On 可用性グループおよびフェールオーバー クラスター インスタンスの構成 |Microsoft ドキュメント
+title: Linux 上の複数のサブネット Always On 可用性グループおよびフェールオーバー クラスター インスタンスの構成 |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,32 +12,33 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 612ac9c684fa8e0383981a32a94cf82d8ec68678
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001697"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>複数のサブネット Always On 可用性グループおよびフェールオーバー クラスター インスタンスを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-ときに常に 可用性グループ (AG) またはフェールオーバー クラスター インスタンス (FCI) にまたがる複数のサイト、サイトの各通常、独自のネットワークがあります。 多くの場合、つまり、各サイトが独自の IP アドレス指定します。 たとえば、サイト A のアドレスが 192.168.1 で開始します。*x*し 192.168.2 とサイト B のアドレスを開始します *。x*ここで、 *x*サーバーに一意の IP アドレスの一部です。 何らかのネットワーク レイヤーでの場所にルーティングせずと、これらのサーバーは互いに通信することができません。 このシナリオを処理する 2 つの方法: 結びます。 また、2 つの異なるサブネット、VLAN と呼ばれる、ネットワーク設定、または、サブネット間のルーティングを構成します。
+Always On 可用性グループ (AG で) またはフェールオーバー クラスター インスタンス (FCI) にまたがる場合は、複数のサイトの各サイトは、通常が、独自のネットワークです。 多くの場合、つまり、各サイトでは、独自の IP アドレス指定します。 たとえば、サイト A のアドレスは 192. 168.1 で開始します。*x* 192.168.2 始めるサイト B のアドレス *。x*ここで、 *x*は、サーバーに一意の IP アドレスの一部です。 ネットワーク レイヤーでルーティングを使わず、これらのサーバーは互いに通信できません。 このシナリオを処理する 2 つの方法はあります。 2 つの異なるサブネット、VLAN と呼ばれるブリッジ ネットワークをセットアップまたは、サブネット間のルーティングを構成します。
 
 ## <a name="vlan-based-solution"></a>VLAN ベースのソリューション
  
-**前提条件となる**: ため、VLAN ベースのソリューションでは、可用性グループまたは FCI に参加する各サーバーようにが必要 2 つのネットワーク カード (Nic) (デュアル ポート NIC は、1 つの物理サーバーに障害点になります) 適切な可用性のために割り当てることができる IP アドレスでネイティブのサブネットだけでなく、VLAN のいずれか。 これは、独自のネットワークにも必要のある iSCSI などその他のネットワーク要件に加えします。
+**前提条件となる**: の VLAN ベースのソリューション、AG または FCI に参加する各サーバーように必要があります 2 つのネットワーク カード (Nic) (デュアル ポート NIC は、1 つの物理サーバーに障害点になります) 適切な可用性のために割り当てられた IP アドレスことがありますネイティブのサブネットだけでなく、VLAN の 1 つ。 これは、iSCSI も、独自のネットワークを必要とするなどの他のネットワーク ニーズです。
 
-可用性グループまたは FCI の IP アドレスの作成は、VLAN で行われます。 次の例では、VLAN は 192.168.3 のサブネットがします。*x*のため、可用性グループまたは FCI 用に作成された IP アドレスは 192.168.3.104 します。 可用性グループまたは FCI に割り当てられている単一の IP アドレスがあるため、構成詳細 nothing 必要があります。
+AG または FCI の IP アドレスの作成は、VLAN で行われます。 次の例では、VLAN は 192.168.3 のサブネットが。*x*ので、AG または FCI 用に作成された IP アドレスは 192.168.3.104 します。 何も追加は、AG または FCI に割り当てられている単一の IP アドレスがあるため、構成する必要があります。
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
-## <a name="configuration-with-pacemaker"></a>ペースの構成
+## <a name="configuration-with-pacemaker"></a>Pacemaker と構成
 
-世界では、Windows、Windows Server フェールオーバー クラスター (WSFC) はネイティブに複数のサブネットをサポートし、IP アドレスに、OR 依存関係を使用して複数の IP アドレスを処理します。 Linux では、OR 依存関係はありませんが、方法は、ペースでネイティブに適切なマルチ サブネットを実現するために、次に示すようにします。 これは、単にリソースを変更する通常のペースのコマンドラインを使用して行うことはできません。 クラスター情報ベース (CIB) を変更する必要があります。 CIB は、ペースの構成で XML ファイルです。
+Windows の世界で Windows Server フェールオーバー クラスター (WSFC) はネイティブ複数のサブネットをサポートし、IP アドレスで、OR 依存関係を使用して複数の IP アドレスを処理します。 Linux では、OR 依存関係はありませんが、次に示すように、Pacemaker でネイティブに適切なマルチ サブネットを実現する方法があります。 これは、単にリソースを変更する通常の Pacemaker のコマンドラインを使用して行うことはできません。 クラスター情報ベース (CIB) を変更する必要があります。 CIB は、Pacemaker 構成 XML ファイルです。
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
-### <a name="update-the-cib"></a>更新プログラム、CIB
+### <a name="update-the-cib"></a>CIB を更新します。
 
 1.  CIB をエクスポートします。
 
@@ -53,9 +54,9 @@ ms.lasthandoff: 05/19/2018
     sudo cibadmin -Q > <filename>
     ```
 
-    ここで*filename* CIB を呼び出したい名前を指定します。
+    場所*filename* CIB を呼び出そうとする名前を指定します。
 
-2.  生成されたファイルを編集します。 探して、`<resources>`セクションです。 可用性グループまたは FCI に対して作成されたさまざまなリソースが表示されます。 IP アドレスに関連付けられている 1 つを検索します。 追加、`<instance attributes>`上または既存のものでは、下の 2 番目の IP アドレスの情報とその前にセクション`<operations>`です。 次の構文に似ています。
+2.  生成されたファイルを編集します。 探して、`<resources>`セクション。 AG または FCI に対して作成されたさまざまなリソースが表示されます。 関連付けられた IP アドレスを見つけます。 追加、`<instance attributes>`上または既存のものでは、下の 2 つ目の IP アドレスの情報を使用する前にセクション`<operations>`します。 次の構文に似ています。
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/19/2018
     </instance attributes>
     ```
     
-    ここで*NameForAttribute*この属性の一意の名前は、*スコア*プライマリ サブネットのより大きい必要があります、属性に割り当てられた番号*RuleName*、ルールの名前を指定*ExpressionName* 、式の名前は、 *NodeNameInSubnet2* 、他のサブネット内のノードの名前を指定*NameForSecondIP* 2 番目の IP アドレスに関連付けられている名前を指定します*IPAddress* 2 番目のサブネットの IP アドレスは、 *NameForSecondIPNetmask*ネットマスクに関連付けられている名前を指定し、*ネットマスク*は、2 番目のサブネットのネットマスク。
+    場所*NameForAttribute* 、この属性の一意の名前は、*スコア*プライマリ サブネットのより大きい必要があります、属性に割り当てられた番号*RuleName*、ルールの名前を指定*ExpressionName* 、式の名前は、 *NodeNameInSubnet2* 、他のサブネット内のノードの名前を指定します*NameForSecondIP* 2 番目の IP アドレスに関連付けられた名前を指定します*IPAddress* 2 番目のサブネットの IP アドレスは、 *NameForSecondIPNetmask*ネットマスクに関連付けられている名前を指定します、*ネットマスク*が 2 番目のサブネットのネットマスク。
     
     例を次に示します。
     
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/19/2018
     </instance attributes>
     ```
 
-3.  変更された CIB をインポートし、ペースを再構成します。
+3.  変更された CIB をインポートし、Pacemaker を再構成します。
 
     **RHEL/Ubuntu**
     
@@ -95,11 +96,11 @@ ms.lasthandoff: 05/19/2018
     sudo cibadmin -R -x <filename>
     ```
 
-    ここで*filename* IP アドレス情報が変更された CIB ファイルの名前を指定します。
+    場所*filename* CIB ファイルに変更された IP アドレス情報の名前を指定します。
 
-### <a name="check-and-verify-failover"></a>確認し、フェールオーバーの確認
+### <a name="check-and-verify-failover"></a>フェールオーバーを確認し、
 
-1.  適用した後、CIB が正常に更新された構成と、ペースで IP アドレス リソースに関連付けられた DNS 名に対して ping を実行します。 これにより、AG または FCI をホストしているサブネットに関連付けられている IP アドレスが反映されます。
-2.  可用性グループまたは FCI を他のサブネットに失敗します。
-3.  可用性グループまたは FCI が完全にオンライン後は、IP アドレスに関連付けられた DNS 名を ping します。 これにより、2 番目のサブネットの IP アドレスが反映されます。
-4.  必要な場合、可用性グループまたは FCI を元のサブネットに失敗します。
+1.  CIB が更新された構成と正常に適用されると、Pacemaker で IP アドレス リソースに関連付けられた DNS 名に対して ping を実行します。 現在、AG または FCI をホストするサブネットに関連付けられている IP アドレスを反映したものにする必要があります。
+2.  AG または FCI を他のサブネットに失敗します。
+3.  AG または FCI が完全にオンライン、IP アドレスに関連付けられた DNS 名に対して ping を実行します。 2 つ目のサブネットの IP アドレスを反映したものにする必要があります。
+4.  必要な場合、AG または FCI を元のサブネットに失敗します。

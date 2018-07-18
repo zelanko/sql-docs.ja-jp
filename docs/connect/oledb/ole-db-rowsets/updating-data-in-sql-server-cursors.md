@@ -2,10 +2,10 @@
 title: SQL Server カーソルでデータの更新 |Microsoft ドキュメント
 description: SQL Server カーソルでデータの更新
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 06f02dbd2376ffcdb08f932245bb098ae64c53ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cece02b19e2334246dbddc096cafbeeae705684
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689505"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server カーソルでのデータ更新
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   フェッチとによるデータの更新時に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]カーソルの場合、OLE DB Driver for SQL Server コンシューマー アプリケーションが、同じ考慮事項およびその他のクライアント アプリケーションに適用される制約によってバインドされます。  
   
@@ -48,6 +51,6 @@ ms.lasthandoff: 05/03/2018
  コンシューマーでは、特定の順序で行が処理されることを想定しないでください。 1 行以上の行に対してデータ変更を順序付けて処理することが必要な場合、アプリケーション ロジックで順序を確立し、トランザクションを開いてそのロジックをトランザクション内に含める必要があります。  
   
 ## <a name="see-also"></a>参照  
- [行セットのデータの更新](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
+ [行セット内のデータの更新](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

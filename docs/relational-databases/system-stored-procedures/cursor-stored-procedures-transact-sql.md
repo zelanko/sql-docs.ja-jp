@@ -1,5 +1,5 @@
 ---
-title: カーソル ストアド プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント
+title: カーソル ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 29019fbc25394b0a61fba1fd31fb20225f173409
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237650"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970426"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>カーソル ストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

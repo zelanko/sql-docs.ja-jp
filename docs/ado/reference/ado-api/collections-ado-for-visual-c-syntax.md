@@ -2,7 +2,6 @@
 title: コレクション (Visual C 構文の ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60bcd8f05c88e20fade932287a429e315f1d8e40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dc0c28d095c96fa94c13118ce6876a99a888dbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276561"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>コレクション (Visual C 構文の ADO)
 ## <a name="parameters"></a>パラメーター  
@@ -47,7 +47,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 get_Count(long *c);  
@@ -78,7 +78,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 get_Count(long *c);  
@@ -106,7 +106,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 get_Count(long *c);  
@@ -119,7 +119,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
 -   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
   
 ### <a name="methods"></a>メソッド  
   
@@ -131,7 +131,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 get_Count(long *c);  

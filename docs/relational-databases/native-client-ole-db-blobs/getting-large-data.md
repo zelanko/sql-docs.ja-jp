@@ -1,13 +1,12 @@
 ---
-title: 大きなデータの取得 |Microsoft ドキュメント
+title: 大きなデータの取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,23 +15,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 313fdc999b80c8c1797f6be376836b41adc710e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ed32d379c0a0a58af6a4239899af434027a904f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946367"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421561"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  一般に、コンシューマーを作成するコードを分離する必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクトにより参照されないデータを処理するその他のコードから、 **ISequentialStream**インターフェイス ポインター。  
+  一般に、コンシューマーを作成するコードを分離する必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクトにより参照されないデータを処理する他のコードから、 **ISequentialStream**インターフェイス ポインター。  
   
  このトピックでは、次の関数で使用可能な機能について説明します。  
   
@@ -42,9 +40,9 @@ ms.locfileid: "32946367"
   
 -   ICommand::Execute  
   
- コンシューマーへの呼び出し内のデータの 1 つの行のみをフェッチする必要があります (グループの 行セット プロパティ DBPROP_ACCESSORDER プロパティが DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS の値のいずれかに設定されている場合、 **GetNextRows**メソッド BLOB データがバッファーされていないためです。 DBPROP_ACCESSORDER の値が DBPROPVAL_AO_RANDOM に設定されている場合、コンシューマーが内のデータの複数の行をフェッチできます**GetNextRows**です。  
+ コンシューマーがへの呼び出し内のデータの単一の行のみをフェッチする必要があります (行セット プロパティ グループ) 内の DBPROP_ACCESSORDER プロパティが値 DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかに設定されている場合、 **GetNextRows**メソッド BLOB データがバッファーされていないためです。 DBPROP_ACCESSORDER の値が DBPROPVAL_AO_RANDOM に設定されている場合、コンシューマーが内のデータの複数の行をフェッチできます**GetNextRows**します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから大規模なデータが取得されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するように、コンシューマーから要求されるまでです。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから大規模なデータが取得されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーの要求されるまでです。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
   
 ## <a name="example"></a>例  
  次の例では、大きなデータ値を 1 つの列から取得します。  
@@ -156,6 +154,6 @@ HRESULT GetUnboundData
   
 ## <a name="see-also"></a>参照  
  [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [大きな値の型を使用します。](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [大きな値の型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

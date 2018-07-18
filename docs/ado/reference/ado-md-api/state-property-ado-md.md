@@ -2,7 +2,6 @@
 title: State プロパティ (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8541ca4202fcf6f0f450ab38e2ea74b609b529c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 975a9354734e0f6e5d0a2502b89b43c886be5fa3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284561"
 ---
 # <a name="state-property-ado-md"></a>State プロパティ (ADO MD)
 セルセットの現在の状態を示します。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>戻り値  
  返します、**長い**の現在の状態を示す整数値、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトし、は読み取り専用です。 次の値が無効です:**取得のみ**(0) と**可能**(1)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用する、 [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)定数名は、プロジェクトで参照されている ADO タイプ ライブラリがある必要があります。 参照してください[ADO md を使用する ADO](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)詳細についてはします。  
   
 ## <a name="applies-to"></a>適用対象  

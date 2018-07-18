@@ -1,4 +1,4 @@
----
+﻿---
 title: アクティブなセカンダリ - セカンダリ レプリカでのバックアップ - AlwaysOn 可用性 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2017
@@ -61,7 +61,7 @@ ms.locfileid: "34770198"
   
 1.  可用性グループを構成して、バックアップを優先的に実行する可用性レプリカを指定します。 詳細については、「[CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)」または「[ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)」の *AUTOMATED_BACKUP_PREFERENCE* パラメーターと *BACKUP_PRIORITY* パラメーターを参照してください。  
   
-2.  バックアップの実行の候補である可用性レプリカをホストするすべてのサーバー インスタンス上のすべての可用性データベースに対して、スクリプト化されたバックアップ ジョブを作成します。 詳細については、「 [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)」を参照してください。  
+2.  バックアップの実行の候補である可用性レプリカをホストするすべてのサーバー インスタンス上のすべての可用性データベースに対して、スクリプト化されたバックアップ ジョブを作成します。 詳細については、「 [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md) を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **セカンダリ レプリカでバックアップを構成するには**  

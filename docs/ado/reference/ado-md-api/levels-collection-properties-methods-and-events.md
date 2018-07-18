@@ -2,7 +2,6 @@
 title: コレクションのプロパティ、メソッド、およびイベントのレベル |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,14 +16,15 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d23bc0e2f4054f725f6ddb3a18c48e87b950ee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a5f35f092fc73a5e580fef783ee7a5eba9232c7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284002"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>レベルのコレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  

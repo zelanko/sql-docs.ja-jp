@@ -2,7 +2,6 @@
 title: グループとユーザーの追加、ChangePassword メソッドの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ad64050af9fd606008064c0ff96ab1d90a926bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8de70dad95da30fb9f64bc587486beef808a164d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285981"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>グループとユーザーの追加、ChangePassword メソッドの例 (VB)
 この例を示します、 [Append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドの[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、だけでなく、 [Append](../../../ado/reference/adox-api/append-method-adox-users.md)メソッドの[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)新しいを追加することによって[グループ](../../../ado/reference/adox-api/group-object-adox.md)され、新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)システムにします。 新しい**グループ**に追加されますが、**グループ**の新しいコレクション**ユーザー**です。 したがって、新しい**ユーザー**に追加、**グループ**です。 また、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドを使用して指定、**ユーザー**パスワードです。  

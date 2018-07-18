@@ -1,7 +1,7 @@
 ---
 title: よく寄せられる質問 (FAQ) JDBC ドライバーの |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 282f71f49eba5ccece8bc9d50ef690fd0af3cb8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ebe12966a73d5944c2cfb6eb1a2328e27a5385e
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452162"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>よく寄せられる質問 (FAQ) JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  この記事では、Microsoft SQL Server 用 JDBC Driver についてよく寄せられる質問に対する回答をご紹介します。  
+  このページは、SQL Server 用 Microsoft JDBC Driver についてよく寄せられる質問に対する回答を提供します。  
   
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問  
 **JDBC ドライバーの向上を支援する方法は?**  
@@ -32,6 +33,9 @@ JDBC ドライバーはオープン ソースと、ソース コードにある 
 **SQL Server と Java は、ドライバーのバージョンがサポートされますか。**  
  参照してください、 [Microsoft JDBC Driver for SQL Server のサポート マトリックス](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)詳細ページ。  
   
+**JDBC ドライバー パッケージ、Microsoft ダウンロード センターでご確認いただけます、GitHub で利用可能な JDBC ドライバーの違いは何ですか。**  
+ JDBC ドライバー ファイル使用可能な GitHub リポジトリの Microsoft JDBC driver の JDBC ドライバーの中核を成すは、リポジトリに表示されているオープン ソース ライセンスの下でします。 Microsoft ダウンロード センター上のドライバー パッケージには、Windows 統合認証と JDBC ドライバーで XA トランザクションを有効にすると追加のライブラリが含まれます。 その他のライブラリは、ダウンロード可能なパッケージに含まれているライセンスの下でです。
+
  **どのような知っておくべきドライバーをアップグレードするときにしますか。**  
  Microsoft JDBC Driver 6.4 サポート、JDBC 4.1、4.2、および 4.3 (部分的) の仕様と、インストール パッケージに 3 つの JAR クラス ライブラリを次のように含まれています。  
   
@@ -69,12 +73,12 @@ JDBC ドライバーはオープン ソースと、ソース コードにある 
   
  **ドライバーを再配布できますか。** JDBC ドライバー 4.1、4.2、6.0、6.2、および 6.4 は再頒布可能パッケージです。 使用許諾契約を「再頒布可能コード」句を確認します。 
    
- **ドライバーを使用して Linux コンピューターから Microsoft SQL Server にアクセスできますか。** はい。 ドライバーを使用して、Linux、Unix、他の Windows 以外のプラットフォームから SQL Server にアクセスできます。 参照してください[Microsoft JDBC Driver for SQL Server のサポート マトリックス](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)詳細についてはします。  
+ **ドライバーを使用して Linux コンピューターから Microsoft SQL Server にアクセスできますか。** はい。 ドライバーを使用して、Linux、Unix、他の Windows 以外のプラットフォームから SQL Server にアクセスできます。 詳細については、次を参照してください。 [Microsoft JDBC Driver for SQL Server のサポート マトリックス](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)です。
   
  **ドライバーは Secure Sockets Layer (SSL) 暗号化をサポートしますか。** バージョン 1.2 以降のドライバーは、Secure Sockets Layer (SSL) 暗号化をサポートしています。 詳細については、次を参照してください。 [SSL 暗号化を使用して](../../connect/jdbc/using-ssl-encryption.md)です。  
   
  **どのような認証は、SQL Server 用 Microsoft JDBC Driver でサポートされてですか。**  
- 次の表は、使用可能な認証オプションを示しています。 4.0 リリース以降のドライバーでは、ピュア Java Kerberos 認証が使用可能です。  
+ 次の表は、使用可能な認証オプションを示しています。 ピュア Java Kerberos 認証は、以降のドライバー 4.0 リリースで使用可能です。  
   
 |||  
 |-|-|  
@@ -89,10 +93,10 @@ JDBC ドライバーはオープン ソースと、ソース コードにある 
 |Windows|Azure Active Directory 認証|  
   
 **ドライバーはサポートしてインターネット プロトコル バージョン 6 (IPv6) アドレスですか?**  
- はい。このドライバーは、接続プロパティのコレクションと serverName 接続文字列プロパティと合わせて IPv6 アドレスの使用をサポートしています。 詳細については、次を参照してください。[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)です。  
+ 可能。 ドライバーは、IPv6 アドレスの使用をサポートします。 接続プロパティのコレクションと serverName 接続文字列プロパティを使用します。 詳細については、次を参照してください。[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)です。  
   
 **アダプティブ バッファリングとは**  
- アダプティブ バッファリングは、Microsoft SQL Server 2005 JDBC Driver 1.2 以降に導入されており、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 Microsoft SQL Server JDBC Driver のアダプティブ バッファリング機能には接続文字列プロパティ responseBuffering があり、これを "adaptive" または "full" に設定できます。 JDBC Driver 2.0 以降では、ドライバーの既定の動作は "adaptive" です。 つまり、アプリケーションから明示的に要求しなくても、アダプティブ バッファリングの動作が適用されます。 ただし、バージョン 1.2 リリースでは、"full" が既定のバッファリング モードであるため、アプリケーションから明示的にアダプティブ バッファリング モードを要求する必要があります。 詳細については、次を参照してください。[アダプティブ バッファリングを使用して](../../connect/jdbc/using-adaptive-buffering.md)トピックとブログ。 [新機能は adaptiveresponse バッファー化および使用する理由にしますか。](http://go.microsoft.com/fwlink/?LinkId=111575)  
+ アダプティブ バッファリングと、Microsoft SQL Server 2005 JDBC Driver version 1.2 以降が導入されました。 あらゆる種類のサーバー カーソルのオーバーヘッドの増加の大きな値データを取得するように設定されます。 Microsoft SQL Server JDBC Driver のアダプティブ バッファリング機能には接続文字列プロパティ responseBuffering があり、これを "adaptive" または "full" に設定できます。 バージョン 1.2 リリースでは、バッファリング モードは既定では「完全」アプリケーション明示的にアダプティブ バッファリング モードを設定する必要があります。 JDBC Driver 2.0 以降では、ドライバーの既定の動作は "adaptive" です。 したがって、アプリケーションはアダプティブ バッファリングの動作を取得するには、明示的にアダプティブ動作を要求する必要はありません。 詳細については、次を参照してください。[アダプティブ バッファリングを使用して](../../connect/jdbc/using-adaptive-buffering.md)およびブログ[新機能は adaptiveresponse バッファー化および使用する理由に?](http://go.microsoft.com/fwlink/?LinkId=111575)です。
   
 **ドライバーの接続プールをサポートしますか。**  
  ドライバーは、Java Platform, Enterprise Edition 5 (Java EE 5) の接続プールをサポートしています。 ドライバーは、ミドルウェア アプリケーション サーバー ベンダーが提供するあらゆる接続プールの実装に参加できるように、JDBC 3.0 に必要なインターフェイスを実装しています。 このドライバーは、これらの環境でプールされた接続に参加します。 詳細については、次を参照してください。[接続プールを使用して](../../connect/jdbc/using-connection-pooling.md)です。 ドライバーは独自のプール実装を提供せず、むしろサードパーティの Java アプリケーション サーバーに依存しています。  

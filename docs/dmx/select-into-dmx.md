@@ -1,5 +1,5 @@
 ---
-title: SELECT (DMX) |Microsoft ドキュメント
+title: SELECT (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842235"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040420"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  既存のマイニング モデルのマイニング構造を基にした新しいマイニング モデルを作成します。 **SELECT INTO**ステートメントは、スキーマおよび実際のアルゴリズムに固有ではないその他の情報をコピーして、新しいマイニング モデルを作成します。  
+  既存のマイニング モデルのマイニング構造を基にした新しいマイニング モデルを作成します。 **SELECT INTO**ステートメントがスキーマと実際のアルゴリズムに固有ではないその他の情報をコピーして、新しいマイニング モデルを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ FROM <existing model>
  任意。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
   
  *式 (expression)*  
- トレーニング データに対する有効なフィルター条件に評価される式です。 フィルターとして使用できる式の詳細については、次を参照してください。[マイニング モデル フィルターの&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)です。  
+ トレーニング データに対する有効なフィルター条件に評価される式です。 フィルターとして使用できる式の詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
  *既存のモデル*  
  コピーする既存のモデルの名前です。  
@@ -49,12 +49,12 @@ FROM <existing model>
 ## <a name="remarks"></a>コメント  
  既存のモデルが学習済みの場合、新しいモデルはこのステートメントの実行時に自動的に処理されます。 学習済みではない場合、新しいモデルは処理されないままとなります。  
   
- **SELECT INTO**ステートメントは、既存のモデルの構造は、新しいモデルのアルゴリズムと互換性がある場合にのみは機能します。 そのため、このステートメントは、同じアルゴリズムに基づくモデルを短時間で作成およびテストする場合に最も役に立ちます。 アルゴリズムの種類を変更する場合は、新しいアルゴリズムで、既存のモデル内の各列のデータ型がサポートされている必要があります。サポートされていない場合は、モデルが処理されるときにエラーが発生する可能性があります。  
+ **SELECT INTO**ステートメントが既存のモデルの構造が新しいモデルのアルゴリズムと互換性のある場合にのみ機能します。 そのため、このステートメントは、同じアルゴリズムに基づくモデルを短時間で作成およびテストする場合に最も役に立ちます。 アルゴリズムの種類を変更する場合は、新しいアルゴリズムで、既存のモデル内の各列のデータ型がサポートされている必要があります。サポートされていない場合は、モデルが処理されるときにエラーが発生する可能性があります。  
   
  **WITH DRILLTHROUGH**句は、新しいマイニング モデルでドリルスルーを使用します。 ドリルスルーは、モデルの作成時にのみ可能です。  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>例 1: モデルのパラメーターの変更  
- 次の例は、既存のマイニング モデルに基づく新しいマイニング モデルを作成`TM_Clustering`、」で作成した、[基本的なデータ マイニング チュートリアル」](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)です。 新しいモデルでは、新しいモデル内に最大 5 つのクラスターが存在するよう CLUSTER_COUNT パラメーターが変更されています。 これに対して、既存のモデルでは既定値 10 が使用されています。  
+ 次の例は、既存のマイニング モデルに基づく新しいマイニング モデルを作成します。 `TM_Clustering`、で作成した、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 新しいモデルでは、新しいモデル内に最大 5 つのクラスターが存在するよう CLUSTER_COUNT パラメーターが変更されています。 これに対して、既存のモデルでは既定値 10 が使用されています。  
   
 ```  
 SELECT * INTO [New_Clustering]  

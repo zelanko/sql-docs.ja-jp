@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
@@ -16,16 +14,17 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76b11c452724a324118e07a7b494d1ff0a2ab1c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18c212529f41739f1e2562b9d21e078a7915d8ef
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404384"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 制御タスクのカスタム プロパティ
   次の表は、CDC 制御タスクのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|Description|  
+|プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
 |接続|ADO.NET Connection|変更テーブルおよび CDC 状態 (同じデータベースに格納されている場合) にアクセスするための、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC データベースへの ADO.NET 接続。<br /><br /> 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。|  
 |TaskOperation|Integer (列挙)|CDC 制御タスクに対して選択した操作。 有効な値は、 **[初期読み込みの開始をマーク]**、 **[初期読み込みの終了をマーク]**、 **[CDC の開始をマーク]**、 **[処理範囲の取得]**、 **[処理済みの範囲をマーク]**、および **[CDC の状態をリセット]** です。<br /><br /> (Oracle ではなく) **CDC での作業時に**[MarkCdcStart] **、**[MarkInitialLoadStart] **、または** [MarkInitialLoadEnd] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin**である必要があります。<br /><br /> これらの操作の詳細については、「 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) 」(CDC 制御タスク エディター) と「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」(CDC 制御タスク) を参照してください。|  

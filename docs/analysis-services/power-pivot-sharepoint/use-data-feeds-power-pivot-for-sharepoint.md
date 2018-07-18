@@ -1,5 +1,5 @@
 ---
-title: データ フィード (Power Pivot for SharePoint) の使用 |Microsoft ドキュメント
+title: データ フィード (Power Pivot for SharePoint) の使用 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027752"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979870"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>データ フィードの使用 (PowerPivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34027752"
   
  Atom 1.0 形式のデータを提供する Web サービスまたはデータ サービスが必要です。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と SharePoint 2010 では、この形式のデータを提供できます。  
   
- SharePoint リストをデータ フィードとしてエクスポートする前に、ADO.NET Data Services を SharePoint サーバーにインストールする必要があります。 詳細については、「 [SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール方法](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)」を参照してください。  
+ SharePoint リストをデータ フィードとしてエクスポートする前に、ADO.NET Data Services を SharePoint サーバーにインストールする必要があります。 詳細については、「 [SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール方法](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)」を参照してください。  
   
 ##  <a name="sharepointlist"></a> SharePoint リストからのデータ フィードの作成  
  SharePoint 2010 ファームでは、SharePoint リストのリスト リボンに [データ フィードとしてエクスポート] ボタンがあります。 このボタンをクリックすると、リストをフィードとしてエクスポートできます。 最良の結果を得るには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアント アプリケーションと統合された Excel 2010 がワークステーションに必要です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアント アプリケーションは、データ フィードのエクスポートに応答して起動し、リストを含む新しい [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] テーブルを作成します。  
@@ -57,7 +57,7 @@ ms.locfileid: "34027752"
   
 5.  **[開く]** をクリックした場合は、テーブルのインポート ウィザードを使用してデータ フィードをワークシートにインポートします。 データ フィードは新しいテーブルとして [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ウィンドウに追加されます。  
   
- ADO.NET Data Services 3.5.1 が SharePoint サーバーにインストールされていない場合はエラーが発生します。 エラーとその解決方法の詳細については、「 [SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール方法](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)」を参照してください。  
+ ADO.NET Data Services 3.5.1 が SharePoint サーバーにインストールされていない場合はエラーが発生します。 エラーとその解決方法の詳細については、「 [SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール方法](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)」を参照してください。  
   
 ##  <a name="rsreport"></a> Reporting Services レポートからのデータ フィードの作成  
  SQL Server 2008 R2 Reporting Services を配置している場合は、新しい Atom 表示拡張機能を使用して既存のレポートからデータ フィードを生成できます。 最良の結果を得るには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel と統合された Excel 2010 がワークステーションに必要です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアント アプリケーションは、データ フィードのエクスポートに応答して起動します。そして、受信したテーブルと列が自動的に追加され、関連付けられます。  
@@ -82,7 +82,7 @@ ms.locfileid: "34027752"
   
     1.  **[ベース URL]** は省略可能です。 データ サービス ドキュメントが複数のフィードを提供する場合はベース URL を指定してください。 ベース URL には、すべてのフィードに共通する URL の部分 (サーバー名とサイトなど) を指定します。 Reporting Services レポートにデータ サービス ドキュメントを作成している場合、ベース URL はレポート サーバーの URL とレポートになります。  
   
-    2.  **[Web サービス URL]** は必須です。 ベース URL せず、この値を含める必要があります`http://`または`https://`アドレス。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL が`http://adventure-works/inventory/today.aspx`、ベース URL になります`http://adventure-works/inventory`、および Web サービスの URL は/today.aspx になります。  
+    2.  **[Web サービス URL]** は必須です。 ベース URL、せず、この値を含める必要があります`http://`または`https://`アドレス。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL は`http://adventure-works/inventory/today.aspx`、ベース URL になります。 `http://adventure-works/inventory`、および Web サービスの URL は/today.aspx になります。  
   
          Web サービス URL には、データのサブセットを除外または選択するパラメーターを含めることができます。 フィードを提供するアプリケーションまたはサービスは、URL に指定するパラメーターをサポートしている必要があります。  
   

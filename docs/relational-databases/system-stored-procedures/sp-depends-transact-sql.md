@@ -1,5 +1,5 @@
 ---
-title: sp_depends (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_depends (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cc84911c1280ef3a4d82c8ba291073eca75d89a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261288"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049450"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33261288"
   テーブルまたはビューに従属するビューおよびプロシージャ、ビューまたはプロシージャが従属するテーブルおよびビューなど、データベース オブジェクトの従属性に関する情報を表示します。 現在のデータベース内に存在しないオブジェクトへの参照はレポートされません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)と[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)と[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,9 +68,9 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果セット  
  **sp_depends** 2 つの結果セットが表示されます。  
   
- 次の結果セットでオブジェクトを表示*\<オブジェクト >* によって異なります。  
+ 次の結果セットをオブジェクトを表示する*\<オブジェクト >* によって異なります。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|従属性が存在するアイテムの名前。|  
 |**type**|**nvarchar(16)**|アイテムの種類。|  
@@ -78,20 +78,20 @@ sp_depends [ @objname = ] '<object>'
 |**選択されています。**|**nvarchar(8)**|アイテムが SELECT ステートメントで使用されているかどうかを示します。|  
 |**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
- 次の結果セットに依存するオブジェクトを表示する*\<オブジェクト >* です。  
+ 次の結果セットに依存するオブジェクトを表示する*\<オブジェクト >* します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|従属性が存在するアイテムの名前。|  
 |**type**|**nvarchar(16)**|アイテムの種類。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-listing-dependencies-on-a-table"></a>A. テーブルの従属性を一覧表示する  
- 次の例に依存するデータベース オブジェクトの一覧、`Sales.Customer`テーブルに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 ここではスキーマ名とテーブル名の両方を指定します。  
+ 次の例に依存するデータベース オブジェクトを一覧表示、`Sales.Customer`テーブルに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 ここではスキーマ名とテーブル名の両方を指定します。  
   
 ```  
 USE AdventureWorks2012;  

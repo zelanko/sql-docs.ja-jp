@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7479bfd0d246bf3e70f7dc65a089844362f9b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be17c584af2fc584be7d95ebcc4069fc9f545b97
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331076"
 ---
 # <a name="audit-transformation"></a>監査変換
   監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables"></a>システム変数  
  次の表では、監査変換で使用できるシステム変数について説明します。  
   
-|システム変数|インデックス|Description|  
+|システム変数|インデックス|[説明]|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|パッケージの実行インスタンスを識別する GUID です。|  
 |**PackageID**|@shouldalert|パッケージの一意識別子です。|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **[監査の種類]**  
  監査情報を得るために使用できるシステム変数を選択します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[実行インスタンスの GUID]**|パッケージの実行インスタンスを個別に識別する GUID を挿入します。|  
 |**[パッケージ ID]**|パッケージを個別に識別する GUID を挿入します。|  

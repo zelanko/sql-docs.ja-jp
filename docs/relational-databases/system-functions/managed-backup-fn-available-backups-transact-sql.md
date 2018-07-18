@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.fn_available_backups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230857"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040360"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  指定されたデータベースに使用可能なバックアップ ファイルの 0 行、1 行、または複数の行から成るテーブルを返します。 返されるバックアップ ファイルがによって作成されたバックアップ[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]です。  
+  指定されたデータベースに使用可能なバックアップ ファイルの 0 行、1 行、または複数の行から成るテーブルを返します。 返されるバックアップ ファイルがによって作成されたバックアップ[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,28 +54,28 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 データベースを削除してから再作成すると、すべてのデータベースのバックアップ セットが返されます。 出力は、各データベースを一意に識別する database_guid に従って並べ替えられます。   
 LSN にギャップがある場合は、ログ チェーンが中断されていることを意味します。その場合、テーブルには、欠落した各 LSN セグメントに対して特別な行が含まれます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|バックアップ ファイルの URL。|  
 |backup_type|NVARCHAR (6)|データベース バックアップの場合は "DB"、ログ バックアップの場合は "LOG"。|  
 |expiration_date|DATETIME|このファイルが削除されることが予想される日付。 これは、指定された保有期間内の特定の時点にデータベースを復旧する機能に基づいて設定されます。|  
 |database_guid|UNIQUEIDENTIFIER|指定されたデータベースの GUID 値。  GUID はデータベースを一意に識別します。|  
-|first_lsn|NUMERIC(25, 0)|バックアップ セット内の先頭または最も古いログ レコードのログ シーケンス番号。 NULL を指定できます。|  
-|last_lsn|NUMERIC(25, 0)|バックアップ セットの次のログ レコードのログ シーケンス番号。 NULL を指定できます。|  
+|first_lsn|NUMERIC(25, 0)|バックアップ セット内の先頭または最も古いログ レコードのログ シーケンス番号。 NULL にすることができます。|  
+|last_lsn|NUMERIC(25, 0)|バックアップ セットの次のログ レコードのログ シーケンス番号。 NULL にすることができます。|  
 |backup_start_date|DATETIME|バックアップ操作が開始された日付と時刻。|  
 |backup_finish_date|NVARCHAR(128)|バックアップ操作が終了した日付と時刻。|  
-|machine_name|NVARCHAR(128)|SQL Server のインスタンスがインストールされ、実行中コンピューターの名前[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]です。|  
+|machine_name|NVARCHAR(128)|SQL Server インスタンスがインストールされ実行されているコンピューターの名前[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。|  
 |last_recovery_fork_id|UNIQUEIDENTIFIER|最後の復旧分岐の ID 番号。|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|最初の復旧分岐の ID。 データ バックアップの場合、first_recovery_fork_guid の値は last_recovery_fork_guid と同じです。|  
 |fork_point_lsn|NUMERIC(25, 0)|first_recovery_fork_id が last_recovery_fork_id に等しくない場合は、分岐ポイントのログ シーケンス番号。 これらが同じである場合、この値は NULL になります。|  
-|availability_group_guid|UNIQUEIDENTIFIER|データベースが Alwayson データベースの場合は、これは、可用性グループの GUID。 それ以外の場合は、NULL になります。|  
+|availability_group_guid|UNIQUEIDENTIFIER|データベースが Alwayson データベースの場合は、これは、可用性グループの GUID です。 それ以外の場合は、NULL になります。|  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  必要があります**選択**この関数に対する権限。  
   
 ## <a name="examples"></a>使用例  

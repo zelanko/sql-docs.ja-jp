@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -21,11 +20,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a4de22aefed2d4602e5ca331355ae7588394672e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3747bdba5ef54790a600b976c930ceeecd789c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322281"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションとデータ警告を利用するには、SQL Server エージェントが必要です。また、SQL Server エージェントに対する権限を構成する必要もあります。 SQL Server エージェントが実行中であるにもかかわらず、SQL Server エージェントが必要であることを示すエラー メッセージが表示された場合は、権限を更新または確認してください。 このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を対象とし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを使用して SQL Server エージェントの権限を更新する 3 つの方法について説明します。 このトピックの手順で使用する資格情報には、サービス アプリケーション データベース、msdb データベース、および master データベースのオブジェクトに対する実行権限を RSExecRole に許可するための十分な権限が必要です。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
  ![サービス アプリケーション データベースへの SQL エージェント アクセス許可](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "サービス アプリケーション データベースへの SQL エージェント アクセス許可")  
   
-||Description|  
+||[説明]|  
 |------|-----------------|  
 |**1**|Reporting Services サービス アプリケーション データベースをホストしている SQL Server データベース エンジンのインスタンス。|  
 |**2**|SQL データベース エンジンのインスタンスに対応する SQL Server エージェントのインスタンス。|  

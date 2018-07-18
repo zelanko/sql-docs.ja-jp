@@ -2,7 +2,6 @@
 title: 格納 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ca60e4fda2319b9b63d7c0b7c0162cfd8027063
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4e9f6e0188bf8752a4bbecb91b084c49317a238
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277511"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 データ型を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)です。 次の表の説明の列内のかっこに対応する OLE DB 型インジケーターを示します。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|常に他のデータ型定数は、その他のデータ型の配列を示すと組み合わせるフラグ値です。 ADOX には適用されません。|  
 |**adBigInt**|20|8 バイト符号付き整数 (DBTYPE_I8) を示します。|  

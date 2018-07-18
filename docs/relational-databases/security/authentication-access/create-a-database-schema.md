@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39149a6c1eb604fdeedaa1538e6655dab1a12a90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 678f19f8f6eaf3e959ef7c51f966212d723f674d
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966687"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943078"
 ---
 # <a name="create-a-database-schema"></a>データベース スキーマの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +80,8 @@ ms.locfileid: "32966687"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- **[スキーマ – 新規作成]** ダイアログ ボックスには、 **[権限]** と **[拡張プロパティ]** という 2 つのページもあり、それぞれにオプションが用意されています。  
+ 
+  **[スキーマ – 新規作成]** ダイアログ ボックスには、 **[権限]** と **[拡張プロパティ]** という 2 つのページもあり、それぞれにオプションが用意されています。  
   
 -   **[権限]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
   

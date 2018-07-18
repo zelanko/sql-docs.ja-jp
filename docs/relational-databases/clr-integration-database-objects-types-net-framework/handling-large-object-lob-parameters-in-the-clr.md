@@ -1,13 +1,11 @@
 ---
-title: CLR でラージ オブジェクト (LOB) パラメーターの処理 |Microsoft ドキュメント
+title: CLR でラージ オブジェクト (LOB) のパラメーターの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,16 +18,16 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: edf562e37da02ae5837f336081db055cb50286d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 713d1021c88787177d3835706256392dea519825
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919137"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353874"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>CLR での LOB (ラージ オブジェクト) パラメーターの処理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用して**SqlBytes**と**SqlChars**ラージ オブジェクト (LOB) のバイナリ型を渡したり (**varbinary (max)**) と LOB 文字型 (**nvarchar (max)**)パラメーターでは、それぞれします。 これらの型を使用すると、マネージ領域に LOB 値全体をコピーするのではなく、データベースから CLR (共通言語ランタイム) ルーチンに LOB 値をストリーミングできます。 **SqlBinary**と**SqlString**小さなバイナリおよび文字列の値のみ使用する必要があります。  
+  使用**SqlBytes**と**SqlChars**ラージ オブジェクト (LOB) のバイナリ型を渡す (**varbinary (max)**) と LOB 文字型 (**nvarchar (max)**)パラメーターでは、それぞれします。 これらの型を使用すると、マネージド領域に LOB 値全体をコピーするのではなく、データベースから CLR (共通言語ランタイム) ルーチンに LOB 値をストリーミングできます。 **SqlBinary**と**SqlString**小さなバイナリ値や文字列値に対してのみ使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [.NET Framework での SQL Server データ型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  

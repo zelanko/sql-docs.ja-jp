@@ -1,13 +1,12 @@
 ---
-title: テキストとイメージの列を管理する |Microsoft ドキュメント
+title: テキストとイメージの列の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-text-image-columns
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,25 +20,24 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 300caa16e74ee36e740c901a295c1c30c1723d33
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: f17ef47c7d6653f6389ace37d2a4f3f39f006b76
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707240"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432561"
 ---
 # <a name="managing-text-and-image-columns"></a>text 列と image 列の管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **テキスト**、 **ntext**、および**イメージ**データ (長い形式のデータとも呼ばれる) は、文字またはバイナリ文字列データ型に収まらないほど大きなデータ値を保持できる**char**、 **varchar**、**バイナリ**、または**varbinary**列です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **テキスト**データ型、ODBC SQL_LONGVARCHAR データ型にマップ**ntext** SQL_WLONGVARCHAR; にマップし、**イメージ**SQL_LONGVARBINARY にマップします。 長いドキュメントや大きなビットマップなど、データ アイテムの中には大きすぎて適切にメモリに読み込むことができないものもあります。 長いデータの取得先[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、シーケンシャルな部分に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーにより、アプリケーションを呼び出す[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)です。 連続したブロックで長い形式のデータを送信するアプリケーションを呼び出すことができます[SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)です。 実行時にデータ送信に使われるパラメーターを、実行時データ パラメーターと呼びます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **テキスト**、 **ntext**、および**イメージ**データ (長い形式のデータとも呼ばれる) は文字またはバイナリ文字列データ型に収まるようには大きすぎるデータ値を保持できる**char**、 **varchar**、**バイナリ**、または**varbinary**列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **テキスト**データ型は ODBC SQL_LONGVARCHAR データ型にマップされます**ntext** sql_wlongvarchar と**イメージ**にマップされます。 長いドキュメントや大きなビットマップなど、データ アイテムの中には大きすぎて適切にメモリに読み込むことができないものもあります。 長いデータを取得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンシャルの部分で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーにより、アプリケーションを呼び出す[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)します。 シーケンシャルな部分で長い形式のデータを送信するアプリケーションを呼び出すことができます[SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)します。 実行時にデータ送信に使われるパラメーターを、実行時データ パラメーターと呼びます。  
   
- アプリケーションが実際に作成またはであらゆる種類のデータ (データの長さだけがありません) を取得**SQLPutData**または**SQLGetData**にのみ、**文字**と**バイナリ**データを送信または部分で取得することができます。 ただし、データがそれほど 1 つのバッファーに収まらない場合は通常を使用する理由**SQLPutData**または**SQLGetData**です。 バッファーをパラメーターまたは列にバインドする方がはるかに簡単です。  
+ アプリケーションが実際に作成またはであらゆる種類のデータ (データの間だけ) を取得**SQLPutData**または**SQLGetData**だけですが、**文字**と**バイナリ**データを送信または部分で取得できます。 ただし、データが 1 つのバッファーに合わせて大きさの場合は、理由はありません一般的に使用する**SQLPutData**または**SQLGetData**します。 バッファーをパラメーターまたは列にバインドする方がはるかに簡単です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -29,12 +28,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42e3ae8b426b7230cf8cfee4be68838792d30318
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82a1ce7e2b416ed0b31b6612d580e95ac7d7500e
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33064500"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36242114"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  *select_statement* 内の句が、要求されたカーソルの種類の機能と矛盾する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってカーソルが別の種類に暗黙的に変換されます。  
   
  READ ONLY  
- このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能よりも優先されます。  
+ このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
   
  UPDATE [OF *column_name* [**,**...*n*]]  
  カーソル内で更新できる列を定義します。 OF *column_name* [**,**..*.n*] を指定した場合は、指定した列に対してのみ更新ができます。 列リストを伴わずに UPDATE を指定した場合は、すべての列を更新できます。  
@@ -120,7 +119,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 >  FAST_FORWARD と FORWARD_ONLY の両方を同じ DECLARE CURSOR ステートメントで使用できます。  
   
  READ_ONLY  
- このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能よりも優先されます。  
+ このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
   
  SCROLL_LOCKS  
  カーソルによって行われる位置指定更新または位置指定削除の成功が保証されることを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はカーソルに読み取られた行をロックし、後で変更できることを保証します。 FAST_FORWARD または STATIC も指定した場合は、SCROLL_LOCKS を指定できません。  
@@ -161,7 +160,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
  カーソルの宣言後、次に示すシステム ストアド プロシージャを使用すると、カーソルの特性を判断できます。  
   
-|システム ストアド プロシージャ|Description|  
+|システム ストアド プロシージャ|[説明]|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|現在接続時に可視であるカーソルとその属性の一覧を返します。|  
 |**sp_describe_cursor**|順方向専用カーソルか、スクロール カーソルかなど、カーソルの属性を記述します。|  

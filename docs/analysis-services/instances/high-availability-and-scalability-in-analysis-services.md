@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017999"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700903"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services の高可用性とスケーラビリティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34017999"
 |MOLAP ストレージを使用した多次元モデル|データをすばやく読み込むためのディスク IO と、キャッシュ データ用の十分な RAM を確保できるバランスの取れた構成を選択します。|  
 |ROLAP ストレージを使用した多次元モデル。|ディスク I/O を最大化し、ネットワーク待機時間を最小限に抑えます。|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>WSFC による高可用性と冗長性  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>高可用性と WSFC による冗長性  
  Analysis Services は、最短時間でサービスを復元する高可用性を実現するために、既存の Windows Server フェールオーバー クラスター (WSFC) サービスにインストールできます。  
   
  フェールオーバー クラスターは、データベースへのフル アクセス (読み取りと書き戻し) を 1 ノードずつ提供します。 最初のノードがダウンした場合、セカンダリ データベースは、クラスター内の追加ノードで代替サーバーとして実行されます。  

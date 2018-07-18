@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -33,15 +32,16 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 caps.latest.revision: 136
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a6076456c9053ab773901110d078a92dd545fc51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e28bd156151f090a7c8ed3568eba4a72b7aab750
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791723"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -425,14 +425,15 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 |[標準的なテーブル以外の対象オブジェクトを指定する](#TargetObjects)|ビュー • テーブル変数|  
 |[リモート テーブルに行を挿入する](#RemoteTables)|リンク サーバー、OPENQUERY 行セット関数、OPENDATASOURCE 行セット関数|  
 |[テーブルまたはデータ ファイルのデータを一括読み込みする](#BulkLoad)|INSERT…SELECT • OPENROWSET 関数|  
-|[ヒントを使用してクエリ オプティマイザーの既定の動作を上書きする](#TableHints)|テーブル ヒント|  
+|
+  [ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント|  
 |[INSERT ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
   
 ###  <a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して INSERT ステートメントの基本機能を示します。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 1 行のデータを挿入する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルに 1 行を挿入します。 このテーブルの列は、`UnitMeasureCode`、`Name`、および `ModifiedDate` です。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません*。*  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルに 1 行を挿入します。 このテーブルの列は、`UnitMeasureCode`、`Name`、および `ModifiedDate` です。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません *。*  
   
 ```  
 INSERT INTO Production.UnitMeasure  
@@ -487,7 +488,7 @@ GO
 ```  
   
 #### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>E. ID 列を持つテーブルにデータを挿入する  
- 次の例では、ID 列にデータを挿入する方法をいくつか示します。 最初の 2 つの INSERT ステートメントで、新規の行に対して ID 値が生成されます。 3 番目の INSERT ステートメントは、SET IDENTITY_INSERT ステートメントで設定された列の IDENTITY プロパティを上書きし、ID 列に値を明示的に挿入します。  
+ 次の例では、ID 列にデータを挿入する方法をいくつか示します。 最初の 2 つの INSERT ステートメントで、新規の行に対して ID 値が生成されます。 3 番目の INSERT ステートメントは、SET IDENTITY_INSERT ステートメントで設定された列の IDENTITY プロパティをオーバーライドし、ID 列に値を明示的に挿入します。  
   
 ```  
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
@@ -868,8 +869,10 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作を上書きする  
- このセクションの例では、[テーブル ヒント](../../t-sql/queries/hints-transact-sql-table.md)を使用して、INSERT ステートメントを処理する際のクエリ オプティマイザーの既定の動作を一時的に上書きする方法を示します。  
+###  
+  <a name="TableHints">
+  </a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
+ このセクションの例では、[テーブル ヒント](../../t-sql/queries/hints-transact-sql-table.md)を使用して、INSERT ステートメントを処理する際のクエリ オプティマイザーの既定の動作を一時的にオーバーライドする方法を示します。  
   
 > [!CAUTION]  
 >  通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーでは、クエリにとって最適な実行プランが選択されるため、ヒントは、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。  

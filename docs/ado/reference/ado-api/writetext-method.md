@@ -2,7 +2,6 @@
 title: WriteText メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2b12293935df6f9afaf6a1691e2decce3f6c6f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283191"
 ---
 # <a name="writetext-method"></a>WriteText メソッド
 指定したテキストに文字列を[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -41,10 +41,10 @@ Stream.WriteText Data, Options
  *データ*  
  A**文字列**書き込まれる文字のテキストを含む値です。  
   
- *Options*  
- 省略可。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)指定した文字列の末尾行区切り記号を記述する必要があるかどうかを指定する値。  
+ *[オプション]*  
+ 任意。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)指定した文字列の末尾行区切り記号を記述する必要があるかどうかを指定する値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定した文字列に書き込まれる、**ストリーム**介在するスペースや各文字列間の文字のないオブジェクトです。  
   
  現在[位置](../../../ado/reference/ado-api/position-property-ado.md)が書き込まれたデータの次の文字に設定します。 **WriteText**メソッドでは、ストリーム内のデータの残りの部分は切り捨てられません。 これらの文字を切り捨てる場合は、呼び出す[SetEOS](../../../ado/reference/ado-api/seteos-method.md)です。  

@@ -1,14 +1,12 @@
 ---
 title: パッケージ内の機微なデータへのアクセス制御 | Microsoft Docs
-ms.custom: ''
+ms.custom: security
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 329a9cbc48f2576160c53701dc199fb689ad9674
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401494"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>パッケージ内の機微なデータへのアクセス制御
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータを保護するために、保護レベルを設定できます。保護レベルを使用すると、パッケージ内の機微なデータのみを保護することも、すべてのデータを保護することもできます。 さらに、パスワードまたはユーザー キーでこのデータを暗号化したり、データベースを使用してデータを暗号化したりすることもできます。 また、パッケージに使用する保護レベルは静的である必要はなく、パッケージのライフ サイクルの各段階で変更できます。 多くの場合、開発中に保護レベルを 1 つ設定し、パッケージを配置した時点で別の保護レベルを設定します。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="protection-levels"></a>保護レベル  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で提供される保護レベルを次の表に示します。 かっこで囲まれた値は、 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> 列挙の値です。 これらの値は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを操作するときにパッケージのプロパティを構成するために使用する [プロパティ] ウィンドウに表示されます。  
   
-|保護レベル|Description|  
+|保護レベル|[説明]|  
 |----------------------|-----------------|  
 |[機微なデータを保存しない] (**DontSaveSensitive**)|パッケージの保存時、パッケージ内の機微なプロパティの値は出力されません。 この保護レベルでは暗号化は行われません。その代わり、「機微」とマークされたプロパティは、パッケージと一緒に保存されません。その結果、他のユーザーが機微なデータを利用することはできません。 異なるユーザーがパッケージを開いた場合は、機微な情報が空白と置き換えられます。したがって、ユーザーは、機微な情報を指定する必要があります。<br /><br /> **dtutil** ユーティリティ (dtutil.exe) で使用する場合、この保護レベルに対応する値は 0 です。|  
 |[すべてのデータをパスワードで暗号化する] (**EncryptAllWithPassword**)|パスワードを使用してパッケージ全体を暗号化します。 暗号化処理には、パッケージを作成またはエクスポートしたときにユーザーによって指定されたパスワードが使用されます。 パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開くか、 **dtexec** コマンド プロンプト ユーティリティを使用して実行するには、パッケージ パスワードを指定する必要があります。 パスワードを指定しないと、パッケージにアクセスしたりパッケージを実行したりできません。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 3 です。|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -34,11 +32,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94fd84ce9a46537fb90caa47e869f96167493bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0772e8230673a23412d880aef729d0a278c448bb
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401624"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
  **[数字]**  
  列データを比較する際の先頭および末尾の数字の有意性を指定します。 たとえば、先頭の数字が有意である場合、"123 Main Street" は "456 Main Street" と同じグループとは見なされません。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[Neither]**|先頭および末尾の数字は考慮されません。|  
 |**[Leading]**|先頭の数字のみが考慮されます。|  

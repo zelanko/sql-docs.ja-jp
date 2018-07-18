@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: mathoma
 ms.suite: sql
 ms.technology: t-sql
@@ -30,15 +29,15 @@ helpviewer_keywords:
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 caps.latest.revision: 140
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26721a416b9e3da167a438ea2609679d08481237
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01e89f2c7bfb8cc814def96fcc8d51db0349b439
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075639"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785673"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -273,7 +272,7 @@ SELECT * FROM deleted;
  CLR トリガーに対して、トリガーにバインドするアセンブリのメソッドを指定します。 このメソッドは引数を受け取らず、void を返す必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 このクラスの名前が名前空間で修飾されており、名前空間の部分がピリオド (.) で分けられている場合は、このクラス名を角かっこ ([ ]) または引用符 (" ") で区切る必要があります。 入れ子にされたクラスは使用できません。  
   
 > [!NOTE]  
->  既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージ コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) によって [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) が有効化されていない場合、これらの参照は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは実行されません。  
+>  既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) によって [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) が有効化されていない場合、これらの参照は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは実行されません。  
   
 ## <a name="remarks-for-dml-triggers"></a>DML トリガーの解説  
  DML トリガーは主に、ビジネス ルールとデータの整合性を設定するために使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ALTER TABLE と CREATE TABLE ステートメントで宣言参照整合性 (DRI) を使用できます。 ただし、DRI ではデータベース間の参照整合性は提供されません。 参照整合性とは、テーブルの主キーと外部キー間の関係についての規則です。 参照整合性を設定するには、ALTER TABLE と CREATE TABLE で、PRIMARY KEY と FOREIGN KEY 制約を使用します。 トリガー テーブルに制約が存在する場合、これらは INSTEAD OF トリガーが実行された後、AFTER トリガーが実行される前にチェックされます。 制約違反の場合は、INSTEAD OF トリガーの動作がロールバックされ、AFTER トリガーは起動しません。  
@@ -401,7 +400,7 @@ RETURN;
  いずれかのトリガーで ROLLBACK TRANSACTION が実行されると、入れ子レベルにかかわらず、それ以降のトリガーは実行されません。  
   
 ### <a name="nested-triggers"></a>入れ子にされたトリガー  
- トリガーは 32 レベルまで入れ子にできます。 トリガーによって、別のトリガーが存在するテーブルが変更された場合、この 2 番目のトリガーがアクティブになり、さらに別のトリガーを呼び出すことができます。 この連鎖的なトリガーで無限ループが発生すると、入れ子レベルを超過した時点でトリガーは取り消されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーで、CLR ルーチン、データ型、または集計を参照することによってマネージ コードが実行された場合、この参照は 32 レベルの入れ子制限の 1 レベルとしてカウントされます。 マネージ コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
+ トリガーは 32 レベルまで入れ子にできます。 トリガーによって、別のトリガーが存在するテーブルが変更された場合、この 2 番目のトリガーがアクティブになり、さらに別のトリガーを呼び出すことができます。 この連鎖的なトリガーで無限ループが発生すると、入れ子レベルを超過した時点でトリガーは取り消されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーで、CLR ルーチン、データ型、または集計を参照することによってマネージド コードが実行された場合、この参照は 32 レベルの入れ子制限の 1 レベルとしてカウントされます。 マネージド コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
   
  入れ子にされたトリガーを無効にするには、sp_configure の nested triggers オプションを 0 (オフ) に設定します。 既定の構成では、入れ子になったトリガーは許可されています。 入れ子にされたトリガーがオフの場合、ALTER DATABASE によって RECURSIVE_TRIGGERS がどのように設定されていても、再帰トリガーは無効になります。  
   
@@ -575,7 +574,7 @@ GO
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   

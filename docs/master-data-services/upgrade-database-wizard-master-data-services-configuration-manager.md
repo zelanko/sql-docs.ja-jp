@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e1a419588ce2ef98d1cc76c8ea4505f9e93d8e6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6c61b007f24cf78e182358d864789012c13015a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335126"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="upgrade-review"></a>[アップグレードの確認]  
  このページで指定した情報を確認します。 問題がなければ、 **[次へ]** をクリックして、指定したデータベースをアップグレードします。  
   
-|コントロール名|Description|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |**SQL Server インスタンス (SQL Server instance)**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
 |**[Master Data Services データベース]**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  

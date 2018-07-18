@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c4f2b3a0cf70d068e1f6a7124e7152c8329ebd1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 784103c416947b57ebea358f911dfee4996a515e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288521"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges メソッド (RDS)
 保留中のローカル キャッシュと更新の変更を送信する[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)で指定されたデータ ソースに、[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティまたは[URL](../../../ado/reference/rds-api/url-property-rds.md)プロパティです。  
@@ -44,13 +44,13 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataFactory*  
  オブジェクト変数を表す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト。  
   
- *接続*  
+ *Connection*  
  A**文字列**で作成された接続を表す値、 **.rds ですDataControl**オブジェクトの[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティです。  
   
  *レコード セット*  
  オブジェクト変数を表す、 **Recordset**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [接続](../../../ado/reference/rds-api/connect-property-rds.md)、[サーバー](../../../ado/reference/rds-api/server-property-rds.md)、および[SQL](../../../ado/reference/rds-api/sql-property.md)を使用するには、プロパティを設定する必要があります、 **SubmitChanges**メソッドを**RDS.DataControl**オブジェクト。  
   
  呼び出す場合は、[ただし](../../../ado/reference/rds-api/cancelupdate-method-rds.md)メソッドを呼び出した後**SubmitChanges**同じ**Recordset**オブジェクト、**ただし**変更がコミット済みの呼び出しは失敗します。  

@@ -2,10 +2,10 @@
 title: コマンドの準備 |Microsoft ドキュメント
 description: SQL Server の OLE DB Driver を使用してコマンドを準備します。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-commands
+ms.component: oledb|ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3fadd6d85159607ad9450567ac8f042689da5fa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666062"
 ---
 # <a name="preparing-commands"></a>コマンドの準備
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server の OLE DB Driver では、1 つのコマンドの複数の実行を最適化のコマンドの準備がサポートします。ただし、コマンドの準備は、オーバーヘッドを生成し、コンシューマーは、複数回実行するコマンドを準備する必要はありません。 一般的には、コマンドを 4 回以上実行する場合に準備します。  
   

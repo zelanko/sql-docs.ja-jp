@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c718ffc989b3417f08075e4cb6ae4ae34776e4e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd289185d211277dc7a66574640bf2d2b053e35f
+ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37872782"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>ストアド プロシージャ (Integration Services カタログ)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,8 @@ ms.lasthandoff: 05/03/2018
   
  カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
   
- データベース ビューとストアド プロシージャを直接使用することも、マネージ API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] およびマネージ API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャ (このセクションで説明) を呼び出します。  
+ データベース ビューとストアド プロシージャを直接使用することも、マネージド API を呼び出すカスタム コードを記述することもできます。 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] およびマネージド API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャ (このセクションで説明) を呼び出します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
@@ -102,7 +102,7 @@ ms.lasthandoff: 05/03/2018
  [catalog.move_environment &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md)  
  特定のフォルダーの環境を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内の別のフォルダーに移動します。  
   
- [catalog.move_project &#40;&#40;SSISDB データベース&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+ [catalog.move_project &#40;&#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
  特定のフォルダーのプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内の別のフォルダーに移動します。  
   
  [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md)  

@@ -2,7 +2,6 @@
 title: カスタマイズ ファイル UserList セクション |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f27f83f6b3753ad5298a869e5d8891af089e4ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcf8649af2695fa354659f13e891521eb14f39cb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273831"
 ---
 # <a name="customization-file-userlist-section"></a>カスタマイズ ファイル UserList に関するセクション
 **Userlist**に関連するセクション、**接続**セクションを同じセクションで*識別子*パラメーター。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  *userName* **=**   
  ***accessRights***  
   
-|要素|Description|  
+|要素|説明|  
 |----------|-----------------|  
 |*userName*|*ユーザー名*のこの接続を使用しているユーザーです。 IIS で有効なユーザー名が確立されている**Service Manager**ダイアログ。|  
 |***accessRights***|次のアクセス権のいずれか。<br /><br /> -   **NoAccess** -ユーザーがデータ ソースにアクセスできません。<br />-   **読み取り専用**-ユーザーは、データ ソースを読み取ることができます。<br />-   **ReadWrite** : ユーザーの読み取りまたはデータ ソースに書き込むことができます。|  

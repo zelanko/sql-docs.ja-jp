@@ -1,5 +1,5 @@
 ---
-title: (DMX) |Microsoft ドキュメント
+title: および (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a53a2e309d427ee3868478a17186cad1070d4f81
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841225"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047320"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ Expression1 AND Expression2
  数値を返す有効なデータ マイニング拡張機能 (DMX) 式です。  
   
  *Expression2*  
- 有効な DMX 式、数値を返します。  
+ 数値の値を返す有効な DMX 式。  
   
 ## <a name="return-value"></a>戻り値  
  両方のパラメーターの結果が TRUE の場合は TRUE を返し、そうでない場合は FALSE を返すブール値です。  
@@ -41,7 +41,7 @@ Expression1 AND Expression2
 ## <a name="remarks"></a>コメント  
  両方のパラメーターは、演算子が論理積を実行する前に、ブール値 (FALSE の場合は 0、そうでない場合は TRUE) として処理されます。 次の表は、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
   
-|Expression1|Expression2|戻り値します。|  
+|Expression1|Expression2|戻り値は|  
 |-----------------------|-----------------------|---------------------|  
 |TRUE|TRUE|TRUE|  
 |TRUE|FALSE|FALSE|  

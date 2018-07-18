@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addextendedproc (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 2083d370479fa19049a083ef401574f21740929c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239792"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046090"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  拡張ストアド プロシージャに新しい名前を登録[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  拡張ストアド プロシージャの新しい名前を登録します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) を使用してください。  
@@ -49,7 +49,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
   
 ## <a name="arguments"></a>引数  
  [  **@functname =** ] **'***プロシージャ***'**  
- ダイナミックリンク ライブラリ (DLL) の内部で呼び出す関数の名前を指定します。 *プロシージャ*は**nvarchar (517)**、既定値はありません。 *プロシージャ*形式で所有者名を含めることができます必要に応じて*owner.function*です。  
+ ダイナミックリンク ライブラリ (DLL) の内部で呼び出す関数の名前を指定します。 *プロシージャ*は**nvarchar (517)**、既定値はありません。 *プロシージャ*形式で所有者名を含めることができます必要に応じて*owner.function*します。  
   
  [  **@dllname =** ] **'***dll***'**  
  関数が含まれている DLL の名前を指定します。 *dll*は**varchar (255)**、既定値はありません。 DLL の完全パスを指定することをお勧めします。  
@@ -60,21 +60,21 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- 拡張ストアド プロシージャを作成した後に追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して**sp_addextendedproc**です。 詳細については、次を参照してください。[拡張ストアド プロシージャを SQL Server に追加する](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)です。  
+## <a name="remarks"></a>コメント  
+ 拡張ストアド プロシージャが作成された後に追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して**sp_addextendedproc**します。 詳細については、次を参照してください。[拡張ストアド プロシージャを SQL Server に追加する](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)します。  
   
- この手順でのみ実行できる、**マスター**データベース。 以外のデータベースから拡張ストアド プロシージャを実行する**マスター**を使用して拡張ストアド プロシージャの名前を修飾**マスター**です。  
+ のみこの手順を実行することができます、**マスター**データベース。 以外のデータベースから拡張ストアド プロシージャを実行する**マスター**、拡張ストアド プロシージャの名前を修飾**マスター**します。  
   
- **sp_addextendedproc**にエントリを追加、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビュー、新しい名前を登録する拡張ストアド プロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 内のエントリも追加、 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)カタログ ビューです。  
+ **sp_addextendedproc**にエントリを追加、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)拡張ストアド プロシージャのカタログ ビュー、新しい名前を登録する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 内のエントリも追加、 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)カタログ ビューです。  
   
 > [!IMPORTANT]  
->  完全パスで登録されなかった既存の DLL は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後、機能しなくなります。 問題を解決するには使用**sp_dropextendedproc** 、DLL の登録を解除してと共に登録し、 **sp_addextendedproc**、完全なパスを指定します。  
+>  完全パスで登録されなかった既存の DLL は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後、機能しなくなります。 問題を解決するには使用**sp_dropextendedproc** 、DLL の登録を解除し、それを再登録する**sp_addextendedproc**、完全なパスを指定します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_addextendedproc**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_addextendedproc**します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では追加、 **xp_hello**拡張ストアド プロシージャです。  
+ 次の例では、追加、 **xp_hello**拡張ストアド プロシージャ。  
   
 ```  
 USE master;  

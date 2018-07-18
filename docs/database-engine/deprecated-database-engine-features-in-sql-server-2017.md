@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server 2017 データベース エンジンの非推奨の機能 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/09/2018

@@ -2,7 +2,6 @@
 title: メソッドを作成 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b4da5ba900cdd3456bbfe611ea0fe1021e23d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62ab48632de559f56f034ca0db10a968a43be32a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283231"
 ---
 # <a name="write-method"></a>Write メソッド
 バイナリ データを書き込む、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -41,7 +41,7 @@ Stream.Write Buffer
  *バッファー*  
  A**バリアント**書き込まれるバイトの配列を格納しています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定されたバイトを書き込む、**ストリーム**オブジェクトの各バイト間に介在するは空白なし。  
   
  現在[位置](../../../ado/reference/ado-api/position-property-ado.md)が書き込まれたデータに続くバイトに設定します。 **書き込み**メソッドでは、ストリーム内のデータの残りの部分は切り捨てられません。 これらのバイトを切り捨てる場合は、呼び出す[SetEOS](../../../ado/reference/ado-api/seteos-method.md)です。  

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_ backup_master_switch (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.sp_ backup_master_switch (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,18 +26,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 64d6681203962b54f1f3daae2de26e695cec240c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237372"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995553"
 ---
 # <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  一時停止または再開、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]です。  
+  一時停止または再開、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
   
- 使用してこのストアド プロシージャを一時的に停止し、それらの再開[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]です。 これにより、すべての構成設定はそのまま保持され、サービスの再開時にもその設定は維持されています。 ときに[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が一時停止して、保有期間は適用されません。 つまり、ファイルをストレージから削除する必要があるかどうか、またはバックアップ ファイルが壊れていたりログ チェーンが分断されたりしているかどうかがチェックされることはありません。  
+ このストアド プロシージャを一時的に停止を使用して、それらの再開[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。 これにより、すべての構成設定はそのまま保持され、サービスの再開時にもその設定は維持されています。 ときに[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が一時停止、保有期間は適用されません。 つまり、ファイルをストレージから削除する必要があるかどうか、またはバックアップ ファイルが壊れていたりログ チェーンが分断されたりしているかどうかがチェックされることはありません。  
   
 
   
@@ -52,16 +52,16 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> 引数  
  @state  
- 状態を設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]です。 @stateパラメーターは**ビット**です。 値を 0 に設定した場合は操作が一時停止し、値を 1 に設定した場合は操作が再開されます。  
+ 状態を設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。 @stateパラメーターが**ビット**します。 値を 0 に設定した場合は操作が一時停止し、値を 1 に設定した場合は操作が再開されます。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  このステートメントに関連したセキュリティの問題について説明します。サブセクション (H3 見出し) として「権限」を含めます。 必要に応じて、組み合わせ所有権や監査に関する他のサブセクションを含めることを検討してください。  
   
-### <a name="permissions"></a>権限  
- メンバーシップが必要**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対するアクセス許可**sp_deletebackuphistory**ストアド プロシージャです。  
+### <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対する**sp_deletebackuphistory**ストアド プロシージャ。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用すると、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を、そのバックアップが実行されているインスタンス上で一時停止できます。  
@@ -85,6 +85,7 @@ Go
 ```  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ 
+  [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

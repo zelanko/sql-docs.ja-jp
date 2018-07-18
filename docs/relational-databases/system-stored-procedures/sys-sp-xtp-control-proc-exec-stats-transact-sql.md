@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_control_proc_exec_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_xtp_control_proc_exec_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4423664cd7cf7edcfa628a51c85653bf3745fef6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254950"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971814"
 ---
 # <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   インスタンスに関するネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にします。  
   
- ネイティブ コンパイル ストアド プロシージャのクエリ レベルで統計コレクションを有効にするを参照してください。 [sys.sp_xtp_control_query_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)です。  
+ ネイティブ コンパイル ストアド プロシージャのクエリ レベルで統計コレクションを有効にするのを参照してください。 [sys.sp_xtp_control_query_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,7 +54,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ## <a name="return-code"></a>リターン コード  
  成功した場合は 0。 失敗した場合は 0 以外の値。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  固定 sysadmin ロールのメンバーシップが必要です。  
   
 ## <a name="code-samples"></a>コード サンプル  

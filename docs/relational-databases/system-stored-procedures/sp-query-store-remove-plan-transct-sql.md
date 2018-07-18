@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_plan (Transct SQL) |Microsoft ドキュメント
+title: sp_query_store_remove_plan (Transct SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f3efe5d6bac67d639877a2434fd3b97bec84d5da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250182"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993621"
 ---
 # <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  必要があります、 **EXECUTE** 、データベースに対する権限と**削除**クエリ ストアのカタログ ビューに対する権限。  
   
 ## <a name="examples"></a>使用例  

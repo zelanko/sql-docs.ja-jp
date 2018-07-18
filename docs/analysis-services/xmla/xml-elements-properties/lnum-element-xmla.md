@@ -1,5 +1,5 @@
 ---
-title: LNum 要素 (XMLA) |Microsoft ドキュメント
+title: LNum 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ab7672d51a90e30701666fbf391ffec6060f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575474"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994944"
 ---
 # <a name="lnum-element-xmla"></a>LNum 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34575474"
 |既定値|なし|  
 |Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34575474"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- **HierarchyInfo** 、要素、 **LNum**要素には、階層のレベルの序数位置を表すプロパティの名前が含まれています。 値は、OLE DB for OLAP 仕様で軸行セットに関して定義されている、LEVEL_NUMBER プロパティと同等です。  
+ **HierarchyInfo** 、要素、 **LNum**要素には階層のレベルの序数位置を提供するプロパティの名前が含まれています。 値は、OLE DB for OLAP 仕様で軸行セットに関して定義されている、LEVEL_NUMBER プロパティと同等です。  
   
  **メンバー** 、要素、 **LNum**要素には、0 から始まる序数の位置、階層のルート レベルから親によって表されるメンバーにはが含まれています[メンバー](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)。要素。 値 0 は、階層のルート レベルを表します。  
   

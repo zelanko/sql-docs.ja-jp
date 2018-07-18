@@ -1,5 +1,5 @@
 ---
-title: sys.sysusers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sysusers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0561ed37fa705f0952ae2a6e7cfd012d81364432
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000964"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,10 +41,10 @@ ms.lasthandoff: 05/04/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**uid**|**smallint**|このデータベース内で一意なユーザー ID です。<br /><br /> 1 = データベースの所有者。<br /><br /> ユーザーとロールの数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  
-|**ステータス**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|このデータベース内で一意なユーザー名またはグループ名です。|  
 |**sid**|**varbinary(85)**|このエントリのセキュリティ識別子です。|  
 |**ロール**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/04/2018
 |**gid**|**smallint**|このユーザーが所属するグループ ID です。 場合**uid**と同じ**gid**、このエントリは、グループを定義します。 グループとユーザーを合計した数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  
 |**environ**|**varchar(255)**|予約されています。|  
 |**hasdbaccess**|**int**|1 = アカウントはデータベースにアクセスできます。|  
-|**islogin**|**int**|1 = アカウントは Windows グループ、Windows ユーザー、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン アカウントを持つユーザーです。|  
+|**islogin**|**int**|1 = アカウントは、Windows グループ、Windows ユーザー、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン アカウントを持つユーザー。|  
 |**isntname**|**int**|1 = アカウントは、Windows グループまたは Windows ユーザーです。|  
 |**isntgroup**|**int**|1 = アカウントは Windows グループです。|  
 |**isntuser**|**int**|1 = アカウントは Windows ユーザーです。|  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_dms_workers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_dms_workers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 940857ee9b723eed5adf1626d8db8c7868d30e7c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982614"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,15 +40,15 @@ ms.lasthandoff: 05/23/2018
   
  このビューは、過去 1000 件の要求とアクティブな要求のデータを示しています。アクティブな要求には、常に、このビュー内のデータがあります。  
   
-|列名|データ型|Description|範囲|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|クエリを DMS ワーカーは、一部の of.request_id、step_index、および dms_step_index は、このビューのキーを形成します。||  
-|step_index|**int**|DMS ワーカーの一部である手順のクエリを実行します。|内の手順インデックスを参照してください[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)です。|  
+|step_index|**int**|DMS ワーカーの一部である手順のクエリを実行します。|内の手順インデックスを参照してください。 [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)します。|  
 |dms_step_index|**int**|このワーカーが実行されている DMS プランのステップします。|参照してください[sys.dm_exec_dms_workers (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|ワーカーが実行されているノードです。|参照してください[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)です。|  
+|compute_node_id|**int**|ワーカーが実行されているノードです。|参照してください[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)します。|  
 |distribution_id|**int**|||  
-|型|**nvarcha(32)**|||  
-|ステータス|**nvarchar(32)**|この手順の状態|'Pending'、'Running'、'完了'、'失敗'、'UndoFailed'、'PendingCancel'、' が取り消されました '、'を元に戻す'、'中止'|  
+|type|**nvarcha(32)**|||  
+|status|**nvarchar(32)**|この手順の状態|'Pending'、'Running'、'完了'、'失敗'、'UndoFailed'、'PendingCancel'、' が取り消されました '、'を元に戻す'、'中止'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  

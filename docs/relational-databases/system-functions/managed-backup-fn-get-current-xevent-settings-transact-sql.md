@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26fc0678d8597cc8a56211e829bdc598c734f168
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227828"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029537"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ smart_admin.fn_get_current_xevent_settings ()
 ## <a name="table-returned"></a>返されるテーブル  
  拡張イベントの管理、分析、運用のチャネルは必須であり、既定で有効になっていますが、構成することはできません。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|拡張イベントの種類。|  
-|is_configurable|NVARCHAR(128)|これは、設定は**True**イベントが構成可能な場合は、それ以外の場合、設定**False**です。|  
+|is_configurable|NVARCHAR(128)|設定されているこの**True**イベントが構成可能な場合は、それ以外の場合に設定が**False**します。|  
 |is_enabled|NVARCHAR(128)|イベントが有効な場合は True に設定されます。有効でない場合は False に設定されます。 デバッグ イベントを有効にするには、smart_admin.sp_set_parameter を使用します。|  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  必要があります**選択**関数に対する権限。  
   
 ## <a name="examples"></a>使用例  

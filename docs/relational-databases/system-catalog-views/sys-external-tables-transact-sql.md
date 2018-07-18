@@ -1,5 +1,5 @@
 ---
-title: sys.external_tables (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.external_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33181318"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037270"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,20 +32,20 @@ ms.locfileid: "33181318"
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|\<継承された列 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)です。||  
+|\<列を継承 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。||  
 |max_column_id_used|**int**|列の最大の ID がこのテーブルを使用することです。||  
 |uses_ansi_nulls|**bit**|テーブルは、SET ANSI_NULLS データベース オプションが ON の場合に作成されます。||  
 |data_source_id|**int**|外部データ ソースのオブジェクト ID。||  
-|file_format_id|**int**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部ファイル形式のオブジェクトの ID です。||  
-|location|**nvarchar (4000)**|HADOOP の外部データ ソース経由で外部テーブルは、これは、HDFS の外部データのパスです。||  
+|file_format_id|**int**|HADOOP の外部データ ソース経由で外部テーブルの外部ファイル形式のオブジェクト ID です。||  
+|location|**nvarchar (4000)**|HADOOP の外部データ ソース経由で外部テーブルは、これは、HDFS 内の外部データのパスです。||  
 |reject_type|**tinyint**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部データを照会するときに、拒否された行はカウント方法です。|VALUE – 拒否された行の数。<br /><br /> PERCENTAGE – 拒否された行の割合。|  
-|reject_value|**float**|HADOOP の外部データ ソース経由で外部テーブルの。<br /><br /> *Reject_type =* valueで、これは、クエリが失敗するまでに許可する行の拒否された回数。<br /><br /> *Reject_type* = percentage、これは、クエリが失敗するまでに許可する行の却下のパーセンテージです。||  
+|reject_value|**float**|HADOOP の外部データ ソース経由で外部テーブルは。<br /><br /> *Reject_type =* valueで、これは、クエリが失敗するまでに許可する行の拒否された回数。<br /><br /> *Reject_type* = percentage、これは、クエリが失敗するまでに許可する行の却下のパーセンテージです。||  
 |reject_sample_value|**int**|*Reject_type* = percentage、これは、読み込むには、成功と失敗、拒否された行の比率を計算する前に行の数。|reject_type = value の場合は NULL です。|  
-|distribution_type|**int**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルは、これは、行のデータの分布、基になるベース テーブルの間でです。|0 – Sharded<br /><br /> 1 – レプリケート<br /><br /> 2 – ラウンド ロビン|  
-|distribution_desc|**nvarchar(120)**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルの場合は、この配布種類を文字列として表示されます。||  
-|sharding_column_id|**int**|SHARD_MAP_MANAGER 外部データ ソースと sharded ディストリビューション経由で外部テーブルは、これは、シャーディング キー値を含んでいる列の列の ID です。||  
-|remote_schema_name|**sysname**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルの場合 (外部のテーブルが定義されているスキーマとは異なる) 場合は、リモート データベースでベース テーブルの場所のスキーマです。||  
-|remote_object_name|**sysname**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルは、これは (外部テーブルの名前と異なる) 場合は、リモート データベースでベース テーブルの名前です。||  
+|distribution_type|**int**|SHARD_MAP_MANAGER の外部データ ソース経由で外部テーブルの基になるベース テーブルの間で、行のデータ分布になります。|0 – Sharded<br /><br /> 1 – レプリケート<br /><br /> 2 – ラウンド ロビン|  
+|distribution_desc|**nvarchar(120)**|SHARD_MAP_MANAGER の外部データ ソース経由で外部テーブルは、これは、分布の種類を文字列として表示されます。||  
+|sharding_column_id|**int**|SHARD_MAP_MANAGER の外部データ ソースと sharded ディストリビューション経由で外部テーブルは、シャーディング キー値を含む列の列 ID です。||  
+|remote_schema_name|**sysname**|SHARD_MAP_MANAGER の外部データ ソース経由で外部テーブルの場合、ベース テーブルの場所 (外部テーブルが定義されているスキーマと異なる) 場合は、リモート データベースでスキーマです。||  
+|remote_object_name|**sysname**|SHARD_MAP_MANAGER の外部データ ソース経由で外部テーブルは、これは、(外部テーブルの名前と異なる) 場合は、リモート データベースでベース テーブルの名前です。||  
   
 ## <a name="permissions"></a>アクセス許可  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

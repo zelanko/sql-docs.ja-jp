@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a09ba7744f03fca15bb60db7979d31bb141f75c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307011"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>定数 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ Pdo::sqlsrv_attr_encoding 属性に渡すことが[pdostatement::setattribute](.
   
 PDO::SQLSRV_ATTR_ENCODING に渡すために使用できる値は次のとおりです。  
   
-|PDO_SQLSRV ドライバー定数|Description|  
+|PDO_SQLSRV ドライバー定数|説明|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|データは、エンコードや変換されていない、サーバーからの未加工のバイト ストリームです。<br /><br />PDO::setAttribute では無効です。|  
 |PDO::SQLSRV_ENCODING_SYSTEM|データは、システムで設定された Windows ロケールのコード ページに指定されているとおりの 8 ビット文字です。 任意のマルチバイト文字またはこのコード ページにマップされていない文字が 1 バイトの疑問符 (?) 文字で置き換えられます。|  
@@ -78,7 +78,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、列からの数値のフェッ
 ### <a name="err-constants"></a>ERR 定数  
 次の表は、使用される定数を指定した場合[sqlsrv_errors](../../connect/php/sqlsrv-errors.md)エラー、警告、またはその両方を返します。  
   
-|値|Description|  
+|値|説明|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。 これが既定値です。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  
@@ -87,7 +87,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、列からの数値のフェッ
 ### <a name="fetch-constants"></a>FETCH 定数  
 次の表に、 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)によって返される配列の種類を指定するために使用される定数を示します。  
   
-|SQLSRV 定数|Description|  
+|SQLSRV 定数|説明|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** は、次のデータ行を連想配列として返します。|  
 |SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** は、次のデータ行を、数値キーと連想キーを持つ配列として返します。 これが既定値です。|  
@@ -98,7 +98,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、列からの数値のフェッ
   
 次の表に、 **LogSubsystems** 設定の値として使用できる定数を示します。  
   
-|SQLSRV 定数 (かっこ内と同等の整数)|Description|  
+|SQLSRV 定数 (かっこ内と同等の整数)|説明|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|すべてのサブシステムのログ記録をオンにします。|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|接続アクティビティのログ記録をオンにします。|  
@@ -109,7 +109,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、列からの数値のフェッ
   
 次の表に、 **LogSeverity** 設定の値として使用できる定数を示します。  
   
-|SQLSRV 定数 (かっこ内と同等の整数)|Description|  
+|SQLSRV 定数 (かっこ内と同等の整数)|説明|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|エラー、警告、および通知をログ記録することを指定します。|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|エラーをログ記録することを指定します。|  
@@ -119,7 +119,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、列からの数値のフェッ
 ### <a name="nullable-constants"></a>null 許容型の定数  
 次の表に、この情報が使用できない場合に、列で null が使用可能かどうかを判断するために使用できる定数を示します。 **sqlsrv_field_metadata** によって返される [null 許容](../../connect/php/sqlsrv-field-metadata.md) キーの値を比較して、列で null が使用可能かどうかを判断できます。  
   
-|SQLSRV 定数 (かっこ内と同等の整数)|Description|  
+|SQLSRV 定数 (かっこ内と同等の整数)|説明|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_NULLABLE_YES (0)|列で NULL 値が許容されます。|  
 |SQLSRV_NULLABLE_NO (1)|この列では null 値は使用できません。|  
@@ -128,7 +128,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、列からの数値のフェッ
 ### <a name="param-constants"></a>PARAM 定数  
 次の表に、 [sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)を呼び出すときにパラメーターの方向を指定する定数を示します。  
   
-|SQLSRV 定数|Description|  
+|SQLSRV 定数|説明|  
 |-------------------|---------------|  
 |SQLSRV_PARAM_IN|入力パラメーターを示します。|  
 |SQLSRV_PARAM_INOUT|双方向のパラメーターを示します。|  
@@ -140,14 +140,14 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、列からの数値のフェッ
 |SQLSRV 定数|PHP データ型|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|Integer|  
-|SQLSRV_PHPTYPE_DATETIME|DateTime|  
-|SQLSRV_PHPTYPE_FLOAT|Float|  
+|SQLSRV_PHPTYPE_DATETIME|DATETIME|  
+|SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|文字列|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM**と**SQLSRV_PHPTYPE_STRING**ストリームのエンコードを指定するパラメーターを受け入れます。 次の表には、受け入れ可能なパラメーターの SQLSRV 定数と、対応するエンコードの説明が含まれています。  
   
-|SQLSRV 定数|Description|  
+|SQLSRV 定数|説明|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|データは、エンコードまたは変換されず、生のバイト ストリームとしてサーバーから返されます。|  
 |SQLSRV_ENC_CHAR|データは、システムに設定された Windows ロケールのコード ページに指定されているとおりに、8 ビット文字で返されます。 任意のマルチバイト文字またはこのコード ページにマップされていない文字が 1 バイトの疑問符 (?) 文字で置き換えられます。<br /><br />これが既定のエンコードです。|  
@@ -163,38 +163,38 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、列からの数値のフェッ
   
 |SQLSRV 定数|SQL Server データ型|  
 |-------------------|------------------------|  
-|SQLSRV_SQLTYPE_BIGINT|bigint|  
+|SQLSRV_SQLTYPE_BIGINT|BIGINT|  
 |SQLSRV_SQLTYPE_BINARY|binary|  
 |SQLSRV_SQLTYPE_BIT|bit|  
 |SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
 |SQLSRV_SQLTYPE_DATE|date<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DATETIME|datetime|  
+|SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DECIMAL|10 進<sup>5</sup>|
-|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|decimal|  
-|SQLSRV_SQLTYPE_FLOAT|float|  
+|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
+|SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|int|  
+|SQLSRV_SQLTYPE_INT|ssNoversion|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
 |SQLSRV_SQLTYPE_NUMERIC|数値<sup>5</sup>|
-|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
+|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
-|SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
+|SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
 |SQLSRV_SQLTYPE_NVARCHAR('max')|nvarchar(MAX)|  
 |SQLSRV_SQLTYPE_NTEXT|ntext<sup>2</sup>|  
-|SQLSRV_SQLTYPE_REAL|real|  
+|SQLSRV_SQLTYPE_REAL|REAL|  
 |SQLSRV_SQLTYPE_SMALLDATETIME|smalldatetime|  
-|SQLSRV_SQLTYPE_SMALLINT|smallint|  
-|SQLSRV_SQLTYPE_SMALLMONEY|smallmoney|  
+|SQLSRV_SQLTYPE_SMALLINT|SMALLINT|  
+|SQLSRV_SQLTYPE_SMALLMONEY|SMALLMONEY|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  
-|SQLSRV_SQLTYPE_TIMESTAMP|timestamp|  
-|SQLSRV_SQLTYPE_TINYINT|tinyint|  
-|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|uniqueidentifier|  
+|SQLSRV_SQLTYPE_TIMESTAMP|TIMESTAMP|  
+|SQLSRV_SQLTYPE_TINYINT|TINYINT|  
+|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|  
 |SQLSRV_SQLTYPE_UDT|UDT (UDT)|  
 |SQLSRV_SQLTYPE_VARBINARY|varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  

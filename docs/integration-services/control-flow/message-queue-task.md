@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd0aac2e3a0be8bba0bba6ff4e263c42f929ec17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332486"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
@@ -83,7 +82,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>メッセージ キュー タスクで使用できるカスタム ログ メッセージ  
  次の表は、メッセージ キュー タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|Description|  
+|ログ エントリ|[説明]|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|タスクで開いていたメッセージ キューを終了したことを示します。|  
 |**MSMQBeforeOpen**|タスクがメッセージ キューを開く操作を開始したことを示します。|  
@@ -147,7 +146,7 @@ ms.lasthandoff: 05/03/2018
  **[MessageType]**  
  メッセージ型を指定します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]** が表示されます。|  
 |**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]** が表示されます。|  
@@ -185,7 +184,7 @@ ms.lasthandoff: 05/03/2018
  **[MessageType]**  
  メッセージ型を指定します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]** が表示されます。|  
 |**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]** が表示されます。|  
@@ -204,7 +203,7 @@ ms.lasthandoff: 05/03/2018
  **[フィルター]**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[フィルターなし]**|メッセージにフィルターは適用されません。 この値を選択すると、動的オプションの **[IdentifierReadOnly]** が表示されます。|  
 |**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
@@ -225,7 +224,7 @@ ms.lasthandoff: 05/03/2018
  **Assert**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[フィルターなし]**|メッセージにフィルターは適用されません。 この値を選択すると、動的オプションの **[IdentifierReadOnly]** が表示されます。|  
 |**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
@@ -251,7 +250,7 @@ ms.lasthandoff: 05/03/2018
  **[Compare]**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**なし**|メッセージは比較されません。|  
 |**完全一致**|メッセージは **[CompareString]** オプションで指定した文字列と完全に一致する必要があります。|  
@@ -265,7 +264,7 @@ ms.lasthandoff: 05/03/2018
  **[Compare]**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**なし**|メッセージは比較されません。|  
 |**完全一致**|メッセージは **[CompareString]** オプションで指定した文字列と完全に一致する必要があります。|  

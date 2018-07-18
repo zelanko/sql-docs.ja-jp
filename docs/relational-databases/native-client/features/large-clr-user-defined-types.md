@@ -1,29 +1,25 @@
 ---
-title: 大きな CLR ユーザー定義型 |Microsoft ドキュメント
+title: 大きな CLR ユーザー定義型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5a2f97231456dc6a3ea79dca021bfbf51cd7b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d008d4976f72ca4b2c802ffa5df4c1d1702f02e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949597"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415431"
 ---
 # <a name="large-clr-user-defined-types"></a>大きな CLR ユーザー定義型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,16 +27,16 @@ ms.locfileid: "32949597"
 
   SQL Server 2005 では、共通言語ランタイム (CLR) のユーザー定義型 (UDT) のサイズは 8,000 バイトに制限されていました。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降では、この制限が解除されます。 CLR UDT はラージ オブジェクト (LOB) 型と同様に扱われるようになりました。 つまり、8,000 バイト以下の UDT は SQL Server 2005 の場合と同じように動作しますが、8,000 バイトを超える UDT もサポートされるようになり、そのサイズは "無制限" として報告されます。  
   
- 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)と[Large CLR User-Defined 型&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
+ 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)と[Large CLR User-Defined 型&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="use-cases"></a>例  
  ODBC の場合、大きな UDT のサポートには、UDT 値を実行時データ パラメーターとして個別に送信する機能が含まれています。 これは、SQLPutData を使用して行います。  
   
- OLE DB では、大きな Udt のサポートには、ISequentialStream バインドを使用して、サーバーとの間の UDT 値のストリームに機能が含まれています。  
+ OLE DB、大きな Udt のサポートには、ISequentialStream バインドを使用して、サーバーとの間の UDT 値のストリームに機能が含まれています。  
   
- 8,000 バイト以下の UDT は SQL Server 2005 の場合と同じように動作します。 OLE db の場合は、ISequentialStream バインドを使用してまだ小さな Udt をストリーミングできます。  
+ 8,000 バイト以下の UDT は SQL Server 2005 の場合と同じように動作します。 OLE DB、ISequentialStream バインドを使用して、小さな Udt をストリーミングすることもできます。  
   
- 場合によっては、ネイティブ コードで CLR UDT のコンテンツを認識する必要がありますが、マネージ オブジェクトのインスタンスを作成する必要はありません。 この場合は、カスタムのシリアル化を使用して、サーバーの UDT 値をクライアントで認識される形式に変換することができます。  
+ 場合によっては、ネイティブ コードで CLR UDT のコンテンツを認識する必要がありますが、マネージド オブジェクトのインスタンスを作成する必要はありません。 この場合は、カスタムのシリアル化を使用して、サーバーの UDT 値をクライアントで認識される形式に変換することができます。  
   
  既存のデータ アクセス コードを使用するアプリケーションの場合は、クライアント側で CLR UDT の動作を利用できます。そのためには、ネイティブ API を使用して UDT を取得し、混合モードのアプリケーションで C++ CLI 相互運用機能を使用して UDT のインスタンスを作成します。  
   

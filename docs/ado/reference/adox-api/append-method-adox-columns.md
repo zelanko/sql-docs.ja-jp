@@ -2,7 +2,6 @@
 title: Append メソッド (ADOX 列) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e53965f9a8c5602459a08f5c47e5719741bb648
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1bdaa9f13104ca2f56dd44c4b3a08dfd3c424c3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284831"
 ---
 # <a name="append-method-adox-columns"></a>Append メソッド (ADOX 列)
 新しく追加[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを[列](../../../ado/reference/adox-api/columns-collection-adox.md)コレクション。  
@@ -41,11 +41,11 @@ Columns.Append Column [,Type] [,DefinedSize]
  *列*  
  **列**追加するオブジェクトまたは列を作成し、追加の名前。  
   
- *型*  
- 省略可。 A**長い**列のデータ型を指定する値。 *型*パラメーターに対応、[型](../../../ado/reference/adox-api/type-property-column-adox.md)のプロパティ、**列**オブジェクト。  
+ *Type*  
+ 任意。 A**長い**列のデータ型を指定する値。 *型*パラメーターに対応、[型](../../../ado/reference/adox-api/type-property-column-adox.md)のプロパティ、**列**オブジェクト。  
   
  *DefinedSize*  
- 省略可。 A**長い**列のサイズを指定する値。 *DefinedSize*パラメーターに対応、 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)のプロパティ、**列**オブジェクト。  
+ 任意。 A**長い**列のサイズを指定する値。 *DefinedSize*パラメーターに対応、 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)のプロパティ、**列**オブジェクト。  
   
 > [!NOTE]
 >  追加するときにエラーが発生、**列**を**列**のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)場合、**列**に存在しません[テーブル](../../../ado/reference/adox-api/table-object-adox.md)に既に追加されて、[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクション。  

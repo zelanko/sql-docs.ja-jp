@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2875295c5978f54dcff3ee2b5a5129db36757f7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16c36b568128871b15533a55a6b14d2c59a45efe
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942538"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="using-a-certificate-in-sql-server"></a>SQL Server での証明書の使用  
  証明書は、データベース ミラーリングで接続を保護したり、パッケージや他のオブジェクトに署名したり、データや接続を暗号化したりする場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の証明書に関するその他のリソースを次の表に示します。  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|証明書を作成するためのコマンドについて説明します。|  
 |[デジタル署名を使用してパッケージのソースを特定する](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|証明書を使用してソフトウェア パッケージに署名する方法について説明します。|  
@@ -63,7 +62,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>SQL Server での非対称キーの使用  
  非対称キーは、データを保護したり、プレーンテキストに署名したりする場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での非対称キーに関するその他のリソースを次の表に示します。  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|非対称キーを作成するためのコマンドについて説明します。|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|オブジェクトに署名するためのオプションについて説明します。|  

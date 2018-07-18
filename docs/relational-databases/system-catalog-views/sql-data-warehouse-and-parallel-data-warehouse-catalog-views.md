@@ -1,5 +1,5 @@
 ---
-title: SQL データ ウェアハウスと並列データ ウェアハウスのカタログ ビュー |Microsoft ドキュメント
+title: SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
@@ -19,21 +19,21 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f82ec61d5f78b2590f463cade01b044aae459dbc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698605"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029727"
 ---
-# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー
+# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  このトピックの内容を一覧表示、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューです。  
+  このトピックで、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューです。  
   
- すべて[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューが始まる**sys.pdw**です。  
+ すべて[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューが始まる**sys.pdw**します。  
   
-## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビュー  
- 次のカタログ ビューの両方に適用[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビュー  
+ 次のカタログ ビューの両方に適用されます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.pdw_column_distribution_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
   

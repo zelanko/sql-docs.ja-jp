@@ -2,7 +2,6 @@
 title: Size プロパティ (ADO パラメーター) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faa4e918d291f9d6dc095f05a40b6d71729bb5da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c33004000e4f8f3099a53777a2941c442901ba7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281861"
 ---
 # <a name="size-property-ado-parameter"></a>Size プロパティ (ADO パラメーター)
 バイト数または文字で、最大サイズを示す、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**長い**バイトまたはキャラクターの値の最大サイズを示す値、**パラメーター**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**サイズ**プロパティに書き込まれた値の最大サイズを決定またはからの読み取りを[値](../../../ado/reference/ado-api/value-property-ado.md)のプロパティ、**パラメーター**オブジェクト。  
   
  可変長データ型を指定するかどうか、**パラメーター**オブジェクト (たとえば、**文字列**など、入力**それぞれ**)、オブジェクトを設定する必要があります**サイズ**プロパティに追加する前に、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションです。 それ以外の場合、エラーが発生します。  

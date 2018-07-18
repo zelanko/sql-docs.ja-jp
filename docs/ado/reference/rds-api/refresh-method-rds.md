@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -22,11 +21,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e86c8965180eb6cec2fda86a2c5141d0c3e6fa75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee9fd5b4748d2343b78e2dc696e7826341223d53
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288421"
 ---
 # <a name="refresh-method-rds"></a>Refresh メソッド (RDS)
 指定されたデータ ソースを再クエリ、[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティと、クエリの結果を更新します。  
@@ -45,7 +45,7 @@ DataControl.Refresh
  *DataControl*  
  オブジェクト変数を表す、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  設定する必要があります、[接続](../../../ado/reference/rds-api/connect-property-rds.md)、[サーバー](../../../ado/reference/rds-api/server-property-rds.md)、および[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティを使用する前に、**更新**メソッドです。 関連付けられているフォーム上のすべてのデータ バインド コントロール、 **.rds ですDataControl**オブジェクトが新しいレコードのセットに反映されます。 既存の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが解放され、未保存の変更は破棄されます。 **更新**メソッドに自動的には、最初のレコード、現在のレコードです。  
   
  呼び出すことをお勧め、**更新**メソッド定期的に操作する際にデータを使用します。 データを取得し、しばらくの間、クライアント コンピューターに残す、古くなっている可能性があります。 加えた変更が失敗する、他のユーザー レコードに変更された可能性し、する前に変更を送信してためことができます。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,18 +22,19 @@ helpviewer_keywords:
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9606bc7e70ca12fcdd9edf145955d469ad87ae54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b44199260af6886096e2ceabb071692e34b967f
+ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37923614"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>データベース スコープ ベースの資格情報 (TRANSACT-SQL) の作成します。
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベースの資格情報を作成します。 データベースの資格情報は、サーバー ログインまたはデータベース ユーザーにマップされません。 データベースは、資格情報を使用して、外部の場所へのアクセスをいつでも、データベースでは、アクセスが必要な操作を実行します。  
   

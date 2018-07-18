@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_xtp_nonclustered_index_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7bec37b0223f2384ebdfc2898717bd937bb0b046
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978124"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "34464648"
   
  多数の再試行が同時実行の問題を示しています。呼び出す[!INCLUDE[msCoName](../../includes/msconame-md.md)]サポートします。  
   
- メモリ最適化非クラスター化インデックスの詳細については、次を参照してください。 [SQL Server のインメモリ OLTP 内部概要](http://t.co/T6zToWc6y6)、17 ページです。  
+ メモリ最適化非クラスター化インデックスの詳細については、次を参照してください。 [SQL Server インメモリ OLTP 内部概要](http://t.co/T6zToWc6y6)、17 ページです。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|オブジェクトの ID。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルの ID です。|  
@@ -66,7 +66,7 @@ ms.locfileid: "34464648"
 |key_merge_count|**bigint**|インデックスのキー マージ操作の累積数。|  
 |key_merge_retry_count|**bigint**|キー マージ操作の再試行の累積数。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

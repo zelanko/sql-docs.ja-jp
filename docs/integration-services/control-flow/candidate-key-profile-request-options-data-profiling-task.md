@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cff19de2067c9a0822784439d952622387bdea0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d43d1c2dcded1a862a240c19ed00304bbc97276
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402684"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>[候補キー プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[候補キー プロファイル要求]** のオプションを設定できます。 候補キー プロファイルは、列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうかを報告します。 また、このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[Default]**|ソース テーブル内の列の照合順序に基づいてデータを並べ替えて比較します。|  
 |**[BinarySort]**|文字ごとに定義されているビット パターンに基づいてデータを並べ替えて比較します。 バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。|  
@@ -105,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
  **[DictionarySort]** を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**IgnoreCase**|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
 |**IgnoreNonSpace**|比較で、通常の文字と分音文字付きの文字を区別するかどうかを指定します。 このオプションを設定した場合、比較で分音文字は無視されます。 たとえば、"&#xE5;" は "a" と同じ文字になります。|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **[ThresholdSetting]**  
  このプロパティのオプションを次の表に示します。 このプロパティの既定値は **[Specified]** です。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**なし**|しきい値が指定されていません。 キーの強さは、その値に関係なく報告されます。|  
 |**[Specified]**|しきい値は **[KeyStrengthThreshold]** で指定します。 キーの強さは、このしきい値より大きい場合にのみ報告されます。|  

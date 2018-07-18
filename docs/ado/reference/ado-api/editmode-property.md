@@ -2,7 +2,6 @@
 title: EditMode プロパティ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e31414c353a1157d25da420428502772872cb35e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fd943679fc15cde9a3349b455decc778889b0c6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277931"
 ---
 # <a name="editmode-property"></a>EditMode プロパティ
 現在のレコードの編集状態を示します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  返します、 [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO では、現在のレコードに関連付けられている編集バッファーを保持します。 このプロパティは、このバッファーに変更が加えされているかどうか、または新しいレコードが作成されるかどうかを示します。 使用して、 **EditMode**プロパティ、現在のレコードの編集状態を確認します。 編集のプロセスが中断された場合は、保留中の変更をテストして使用する必要があるかどうかを判断、[更新](../../../ado/reference/ado-api/update-method.md)または[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドです。  
   
  *即時更新モード*、 **EditMode**にプロパティをリセット**adEditNone**呼び出しに成功した後、**更新**メソッドが呼び出されます. 呼び出し時に[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)は正常に削除されませんまたはデータ ソース内の複数のレコード (たとえば、参照整合性違反の場合) が原因、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)に残る編集モード (**EditMode** = **adEditInProgress**)。 したがって、**ただし**現在のレコードから移動する前に呼び出す必要があります (たとえば[移動](../../../ado/reference/ado-api/move-method-ado.md)、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)、または[を閉じる](../../../ado/reference/ado-api/close-method-ado.md) ).  

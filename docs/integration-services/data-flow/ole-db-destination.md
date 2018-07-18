@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dfed499dd91ae4113671bf88f23e5ac1b0d8792
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91ef4d0595ea468f9b6fdd2bfb43bbd9dacad6ed
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406914"
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
   OLE DB 変換先は、データベースのテーブルやビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込みます。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースのテーブルにデータを読み込むことができます。  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  **[OLE DB 変換先エディター]** ダイアログ ボックスで公開される高速読み込みオプションに加えて、 **[詳細エディター]** ダイアログ ボックスで、FastLoadOptions プロパティに次の一括読み込みオプションを入力することにより、それらのオプションを使用するように OLE DB 変換先を構成できます。  
   
-|高速読み込みオプション|Description|  
+|高速読み込みオプション|[説明]|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|挿入するサイズを KB 単位で指定します。 このオプションの形式は、**KILOBYTES_PER_BATCH** = \<正の整数**>** です。|  
 |FIRE_TRIGGERS|挿入テーブルでトリガーを起動するかどうかを指定します。 このオプションの形式は、 **FIRE_TRIGGERS**です。 このオプションが指定されている場合は、トリガーが起動されます。|  
@@ -141,7 +140,7 @@ ms.lasthandoff: 05/03/2018
  **[データ アクセス モード]**  
  データを変換先に読み込む方法を指定します。 2 バイト文字セット (DBCS) データを読み込むには、高速読み込みオプションのいずれかを使用する必要があります。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|データを OLE DB 変換先のテーブルまたはビューに読み込みます。|  
 |[テーブルまたはビュー - 高速読み込み]|高速読み込みオプションを使用し、データを OLE DB 変換先のテーブルまたはビューに読み込みます。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
@@ -284,7 +283,7 @@ ms.lasthandoff: 05/03/2018
  **列**  
  使用されていません。  
   
- **[エラー]**  
+ **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
  **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  

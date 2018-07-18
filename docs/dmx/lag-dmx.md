@@ -1,5 +1,5 @@
 ---
-title: Lag (DMX) |Microsoft ドキュメント
+title: Lag (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f984e50b2c6a800a66f689d88b21dfcb487e282
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842495"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042830"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ Lag()
  整数型のスカラー値です。  
   
 ## <a name="remarks"></a>コメント  
- 場合、 **Lag**関数を使用して KEY TIME 列が入れ子になったテーブル内に配置されているモデルで、、関数は、ステートメントの下位選択内に配置する必要があります。  
+ 場合、 **Lag**関数を使用して、KEY TIME 列が入れ子になったテーブル内にあるモデルでは、関数をステートメントの下位選択内にあるにある必要があります。  
   
 ## <a name="examples"></a>使用例  
  次の例は、最近 12 か月以内にデータがモデルの学習に使用されたケースを返します。  

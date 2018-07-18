@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f37984c25fb722245d433e18904b2d48de7707df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be02312e00441df86c3f9811c3d625fc98d18cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957237"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358144"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +171,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  接続時にマージ エージェントで使用される SSL (Secure Sockets Layer) 暗号化のレベルです。  
   
-|EncryptionLevel の値|Description|  
+|EncryptionLevel の値|[説明]|  
 |---------------------------|-----------------|  
 |**0**|SSL は使用されません。|  
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
@@ -186,7 +185,7 @@ replmerg [-?]
   
  同期中のデータ交換の種類を指定します。次のいずれかを指定できます。  
   
-|ExchangeType の値|Description|  
+|ExchangeType の値|[説明]|  
 |------------------------|-----------------|  
 |**1**|エージェントは、サブスクライバーからパブリッシャーにデータ変更をアップロードします。|  
 |**2**|エージェントは、パブリッシャーからサブスクライバーにデータ変更をダウンロードします。|  
@@ -205,7 +204,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  マージ エージェントが使用する収束のレベルを指定します。次のいずれかを指定できます。  
   
-|ForceConvergenceLevel の値|Description|  
+|ForceConvergenceLevel の値|[説明]|  
 |---------------------------------|-----------------|  
 |**0** (既定値)|既定値です。 追加の収束なしで標準のマージを実行します。|  
 |**1**|すべての生成結果の収束を強制します。|  
@@ -226,7 +225,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  マージ操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
-|HistoryVerboseLevel の値|Description|  
+|HistoryVerboseLevel の値|[説明]|  
 |-------------------------------|-----------------|  
 |**0**|エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーをログに記録します。|  
 |**1**|各セッションの状態における増分セッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。|  
@@ -331,7 +330,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  既存のサブスクライバー データベースがあるかどうかを指定します。  
   
-|SubscriberDBAddOption の値|Description|  
+|SubscriberDBAddOption の値|[説明]|  
 |---------------------------------|-----------------|  
 |**0**|既存のデータベースを使用します (既定値)。|  
 |**1**|新しい空のサブスクライバー データベースを作成します。|  
@@ -377,7 +376,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  マージ セッションの最後に検証を行うかどうかを指定し、行う場合は検証の種類も指定します。 推奨値は **3** です。  
   
-|Validate の値|Description|  
+|Validate の値|[説明]|  
 |--------------------|-----------------|  
 |**0** (既定値)|検証なし。|  
 |**1**|行数のみの検証。|  

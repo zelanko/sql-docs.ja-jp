@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,18 +14,19 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3a11f37c3e82506f5eea48a02bc1997c5de2c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307481"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックではの既定値は、準備されたステートメントの実行ではなく直接ステートメント実行を指定するための pdo::sqlsrv_attr_direct_query 属性の使用について説明します。 準備されたステートメントを使用すると、1 回以上のパラメーターのバインドを使用してステートメントを実行する場合にパフォーマンスを向上させるが発生することができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 送信する場合、[!INCLUDE[tsql](../../includes/tsql_md.md)]ステートメントでは、ドライバーによってステートメントの準備なしでサーバーに直接、pdo::sqlsrv_attr_direct_query 属性を設定する[pdo::setattribute](../../connect/php/pdo-setattribute.md) (に渡されるドライバーのオプションとしてまたは[:: _ _Construct](../../connect/php/pdo-construct.md)) を呼び出したときまたは[pdo::prepare](../../connect/php/pdo-prepare.md)です。 既定では、pdo::sqlsrv_attr_direct_query の値が False (準備されたステートメントの実行を使用します)。  
   
 使用する場合[pdo::query](../../connect/php/pdo-query.md)、直接実行ことができます。 呼び出しの前に[pdo::query](../../connect/php/pdo-query.md)、呼び出す[pdo::setattribute](../../connect/php/pdo-setattribute.md) pdo::sqlsrv_attr_direct_query を True に設定します。  各呼び出し[pdo::query](../../connect/php/pdo-query.md) pdo::sqlsrv_attr_direct_query の異なる設定で実行できます。  

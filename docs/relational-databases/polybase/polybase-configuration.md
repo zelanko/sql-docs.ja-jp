@@ -3,8 +3,6 @@ title: PolyBase の構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: polybase
@@ -13,11 +11,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2e53e939a1431664ea0a8446983a22879a913ad
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 848ac4ee465ad0c7461734fbcd7478eaff6af531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173544"
 ---
 # <a name="polybase-configuration"></a>PolyBase の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -206,7 +205,7 @@ PolyBase が Kerberos でセキュリティが強化されているクラスタ�
   
     |**#**|**構成ファイル**|**構成キー**|**操作**|  
     |------------|----------------|---------------------|----------|   
-    |@shouldalert|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
+    |1|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
     |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 例: YOUR-REALM.COM|  
     |3|core-site.xml|hadoop.security.authentication|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: KERBEROS<br></br>**セキュリティに関する注意:** KERBEROS は大文字で記述する必要があります。 小文字の場合、機能しない可能性があります。|   
     |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: hdfs/_HOST@YOUR-REALM.COM|  

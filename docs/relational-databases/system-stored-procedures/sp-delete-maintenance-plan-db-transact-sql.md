@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247165"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049550"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>引数  
  [  **@plan_id =**] **'***plan_id***'**  
- メンテナンス プランの ID を指定します。 *plan_id*は**uniqueidentifier**です。  
+ メンテナンス プランの ID を指定します。 *plan_id*は**uniqueidentifier**します。  
   
  [ **@db_name =**] **'***database_name***'**  
  メンテナンス プランから削除するデータベース名を指定します。 *database_name* は **sysname** です。  
@@ -62,18 +62,18 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_delete_maintenance_plan_db**から実行する必要があります、 **msdb**データベース。  
   
- **Sp_delete_maintenance_plan_db**ストアド プロシージャの削除、メンテナンス プランと、指定されたデータベース間の関連付けを削除したり、データベースを破壊しません。  
+ **Sp_delete_maintenance_plan_db**ストアド プロシージャは、メンテナンス プランと、指定されたデータベース間の関連付けを削除します。 削除したり、データベースを破棄しません。  
   
- ときに**sp_delete_maintenance_plan_db**最後にデータベース メンテナンス プランから削除、ストアド プロシージャでは、メンテナンス プランも削除されます。  
+ ときに**sp_delete_maintenance_plan_db**削除最後のデータベース メンテナンス プランから、ストアド プロシージャでは、メンテナンス プランも削除されます。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_delete_maintenance_plan_db**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_delete_maintenance_plan_db**します。  
   
 ## <a name="examples"></a>使用例  
- メンテナンス プランを削除、 **AdventureWorks2012**を使用して以前に追加して、データベース**sp_add_maintenance_plan_db**です。  
+ 内のメンテナンス プランを削除、 **AdventureWorks2012**以前を使用して追加データベース**sp_add_maintenance_plan_db**します。  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  

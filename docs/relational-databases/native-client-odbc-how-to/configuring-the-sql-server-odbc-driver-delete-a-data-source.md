@@ -1,13 +1,12 @@
 ---
-title: データ ソース (ODBC) の削除 |Microsoft ドキュメント
+title: データ ソース (ODBC) の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,30 +17,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9847df12ee3d8095c94610d6ad6041e2e6b2c531
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02ca5ac7ea78f771e24fb13a97f125885bc0ce2a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943587"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417815"
 ---
-# <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>SQL Server ODBC ドライバーの削除、データ ソースを構成します。
+# <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>SQL Server ODBC ドライバーのデータ ソースの削除を構成します。
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降で ODBC アプリケーションを使用する前に、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でカタログ ストアド プロシージャのバージョンをアップグレードする方法や、データ ソースを追加、削除、およびテストする方法を理解しておく必要があります。  
   
-  ODBC アドミニストレーターをプログラムでを使用してデータ ソースを削除することができます (を使用して[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md))、または削除するファイル (ファイル データ ソース名)。  
+  プログラムで ODBC アドミニストレーターを使用してデータ ソースを削除することができます (を使用して[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md))、または (する場合、ファイル データ ソース名) にファイルを削除しています。  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>ODBC アドミニストレーターを使用してデータ ソースを削除するには  
   
-1.  **コントロール パネルの **、開かれている**管理ツール**、し、ダブルクリックするか**ODBC データ ソース (64 ビット)** または**ODBC データ ソース (32 ビット)**. コマンド プロンプトから odbcad32.exe を実行することもできます。  
+1.  **コントロール パネルの **オープン**管理ツール**、いずれかをダブルクリックして**ODBC データ ソース (64 ビット)** または**ODBC データ ソース (32 ビット)**. コマンド プロンプトから odbcad32.exe を実行することもできます。  
   
-2.  クリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブです。  
+2.  をクリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブ。  
   
 3.  削除するデータ ソースを選択します。  
   
-4.  をクリックして**削除**、削除を確定します。  
+4.  クリックして**削除**、削除を確定します。  
   
 ## <a name="example"></a>例  
  データ ソースをプログラムで削除するには、呼び出す[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) 2 番目のパラメーターとして ODBC_REMOVE_DSN または ODBC_REMOVE_SYS_DSN を使用します。  
@@ -66,6 +65,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [追加のデータ ソース (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+ [データ ソースの追加&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: MSpublisher_databases (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSpublisher_databases (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,23 +26,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 130a176655a7574903e85aa6cfa55037ca977448
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004779"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993504"
 ---
 # <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSpublisher_databases**テーブルには、ローカル ディストリビューターによって処理されるパブリッシャー/パブリッシャー データベースの各ペアの 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**id**|**int**|行の ID です。|  
-|**publisher_engine_edition**|**int**|エディション、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーで、次のいずれかになります。<br /><br /> **10** personal Edition を =<br /><br /> **11** desktop Engine (MSDE) を =<br /><br /> **20** = 標準<br /><br /> **21**ワークグループを =<br /><br /> **30** = Enterprise (評価)<br /><br /> **31**開発者を =<br /><br /> **40** = express (Express は、パブリッシャーをすることはできません。 この値は完全性を維持するためにあります)。|  
+|**publisher_engine_edition**|**int**|エディション、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]発行元は、次のいずれかを指定できます。<br /><br /> **10** personal Edition を =<br /><br /> **11** desktop Engine (MSDE) を =<br /><br /> **20** = 標準<br /><br /> **21**ワークグループを =<br /><br /> **30** = Enterprise (評価)<br /><br /> **31**開発者を =<br /><br /> **40** = express (Express は、パブリッシャーをすることはできません。 この値は完全性を維持するためにあります)。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

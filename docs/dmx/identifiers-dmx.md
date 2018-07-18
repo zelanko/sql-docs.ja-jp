@@ -1,5 +1,5 @@
 ---
-title: 識別子 (DMX) |Microsoft ドキュメント
+title: 識別子 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842415"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978610"
 ---
 # <a name="identifiers-dmx"></a>識別子 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  すべてのオブジェクト[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]識別子を持つ必要があります。 オブジェクトの名前が識別子となります。 サーバー、データベース、およびデータベース オブジェクト (データ ソース、データ ソース ビュー、キューブ、ディメンション、マイニング モデルなど) は識別子を持っています。  
+  すべてのオブジェクトで[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]に識別子を設定する必要があります。 オブジェクトの名前が識別子となります。 サーバー、データベース、およびデータベース オブジェクト (データ ソース、データ ソース ビュー、キューブ、ディメンション、マイニング モデルなど) は識別子を持っています。  
   
  データ マイニング拡張機能 (DMX) には 2 つのクラスの識別子があります。  
   
@@ -41,7 +41,7 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  標準識別子の最初の文字は、次のうちのいずれかである必要があります。  
   
-    -   Unicode 規格 &#xa0;2.0 で定義されている文字。 これには、ラテン文字 a ~ z と a ~ Z、およびその他の言語からアルファベットの文字が含まれます。  
+    -   Unicode 規格 &#xa0;2.0 で定義されている文字。 これには、ラテン文字 a ~ z、a ~ Z、およびその他の言語の文字が含まれます。  
   
     -   アンダースコア (_)。  
   
@@ -53,7 +53,7 @@ SELECT * FROM Clustering.CONTENT;
   
     -   アンダースコア (_)。  
   
-3.  DMX 予約語を識別子として使用することはできません。 DMX では、予約語の大文字と小文字は区別されません。 詳細については、次を参照してください。[予約済みキーワード&#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)です。  
+3.  DMX 予約語を識別子として使用することはできません。 DMX では、予約語の大文字と小文字は区別されません。 詳細については、次を参照してください。[予約済みキーワード&#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)します。  
   
 4.  埋め込まれたスペースや特殊文字を識別子に含めることはできません。  
   
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   予約語をオブジェクト名やオブジェクト名の一部に使用する場合。  
   
-     予約キーワードはオブジェクト名に使用しないことをお勧めします。 以前のバージョンからアップグレードしたデータベースに[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の以前のバージョンに予約されていない単語が含まれる識別子を含めることがあります[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の予約語であるが、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]です。 オブジェクト名の変更が可能になるまで、このようなオブジェクトを参照するには、区切られた識別子を使用します。  
+     予約キーワードはオブジェクト名に使用しないことをお勧めします。 以前のバージョンからアップグレードしたデータベースに[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の以前のバージョンで予約されていなかった単語を含む識別子が含まれている可能性があります[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の予約語であるが、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 オブジェクト名の変更が可能になるまで、このようなオブジェクトを参照するには、区切られた識別子を使用します。  
   
 -   修飾された識別子として示されていない文字を使用する場合。  
   
@@ -97,14 +97,14 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  修飾されたオブジェクト名を使用する際、場合によってはオブジェクト名を構成している複数の識別子を区切る必要があります。 各識別子は個々に区切ってください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 19f244d7febe15f03b5510ba484b985044ad3548
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f4162789cf09c326b3b5d016e22bafed9fe790b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330136"
 ---
 # <a name="system-settings-master-data-services"></a>システム設定 (マスター データ サービス)
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="General"></a> 全般設定  
   
-|構成マネージャーの設定|システム設定|Description|  
+|構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 |**[データベース接続のタイムアウト]**|**DatabaseConnectionTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで接続が完了するまでに許容される秒数。 この時間内に接続が完了しない場合、接続が取り消されエラーが返されます。 既定値は **60** 秒 (1 分) です。|  
 |**[データベース コマンドのタイムアウト]**|**DatabaseCommandTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでコマンドが完了するまでに許容される秒数。 この時間内にコマンドが完了しない場合、コマンドは取り消されエラーが返されます。 既定値は **3600** 秒 (60 分) です。|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Versions"></a> バージョン管理設定  
   
-|構成マネージャーの設定|システム設定|Description|  
+|構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 |**[コミット済みのバージョンだけをコピーする]**|**CopyOnlyCommittedVersion**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーがコピーできるモデル バージョンは、状態が **[コミット済み]** のバージョンであるか、またはすべての状態のバージョンであるかを示します。 既定値は **[はい]** または **1**で、ユーザーが **[コミット済み]** バージョンのみをコピーできることを示します。 値を **[いいえ]** または **2** に変更すると、ユーザーはすべてのバージョンをコピーできます。|  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Staging"></a> ステージング設定  
   
-|構成マネージャーの設定|システム設定|Description|  
+|構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 |**[すべてのステージング トランザクションをログに記録]**|**StagingTransactionLogging**|SQL Server 2008 R2 だけに適用されます。 ステージング レコードが [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに読み込まれるときにトランザクションをログに記録するかどうかを示します。 既定値は **[オフ]** または **2**です。 値を **[オン]** または **1** に変更すると、ログ記録が有効になります。|  
 |**[ステージング バッチの間隔]**|**StagingBatchInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[統合管理]** 機能領域で、 **[バッチの開始]** をクリックしてからバッチが処理されるまでの秒数を示します。 既定値は **60** 秒 (1 分) です。|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Explorer"></a> エクスプローラー設定  
   
-|構成マネージャーの設定|システム設定|Description|  
+|構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 |**[既定で階層内のメンバーの数]**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[エクスプローラー]** 機能領域で、 **[詳細]** が表示されるまでに、各階層ノードに表示されるメンバーの最大数を示します。 **[詳細]** をクリックすると、次のメンバーのグループを表示できます。 既定値は **50**です。|  
 |**[既定で階層内の名前を表示する]**|**ShowNamesInHierarchy**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[エクスプローラー]** 機能領域で、階層を表示する場合に選択する既定の設定を示します。<br /><br /> 既定値は **[はい]** または **1**で、各メンバーの名前とコードが表示されることを示します。 値を **[いいえ]** または **2** に変更すると、コードのみが表示されます。|  
@@ -94,14 +94,14 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="xls"></a> Excel 設定用アドイン  
   
-|構成マネージャーの設定|システム設定|Description|  
+|構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 |[Web サイト ホーム ページで Excel テキスト用アドインを表示]|ShowAddInText|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム ページで、 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]をダウンロードするためのリンクを表示します。|  
 |[Web サイト ホーム ページでの Excel 用アドインのインストール パス]|AddInURL|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム ページで [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] へのリンクが表示される場合に、ユーザーがリンクをクリックした場合の移動先となる場所。|  
   
 ##  <a name="BusinessRules"></a> ビジネス ルール設定  
   
-|構成マネージャーの設定|システム設定|Description|  
+|構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 |**[新しいビジネス ルールの増分数]**|**BusinessRuleDefaultPriorityIncrement**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[システム管理]** 機能領域で、新しい各ビジネス ルールの優先度の増分数を示します。 既定値は **10**です。|  
 |**[ビジネス ルールを適用するメンバーの数]**|**BusinessRuleRealtimeMemberCount**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[エクスプローラー]** 機能領域で、ビジネス ルールを適用するグリッド内のメンバーの最大数を示します。 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]では、ビジネス ルールを適用するアクティブなワークシート内のメンバーの最大数を示します。 既定値は **10000**です。|  
@@ -110,12 +110,12 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Notifications"></a> 通知設定  
   
-|構成マネージャーの設定|システム設定|Description|  
+|構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 |**[通知に対するマスター データ マネージャーの URL]**|**MDMRootURL**|電子メール通知のリンクで使用される [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションの URL (`http://constoso/mds` など)。|  
 |**[通知電子メールの送信間隔]**|**NotificationInterval**|電子メール通知を送信する頻度 (秒数)。 既定値は **120** 秒 (2 分) です。|  
 |**[電子メールごとの通知の数]**|**NotificationsPerEmail**|単一の電子メールに記載される検証の問題の最大数。 これを超える数の問題が存在しても、電子メールには含まれません (ただし、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]では確認できます)。|  
-|**[既定の電子メールの形式]**|**EmailFormat**|すべての電子メール通知の形式。 既定値は **[HTML]** または **1**です。 データベース設定値 **2** は、 **テキスト**を意味します。<br /><br /> 注: この設定は、ユーザーごとに上書きすることができます。上書きするには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーの **[全般]** タブの **[電子メールの形式]** を変更して保存します。|  
+|**[既定の電子メールの形式]**|**EmailFormat**|すべての電子メール通知の形式。 既定値は **[HTML]** または **1**です。 データベース設定値 **2** は、 **テキスト**を意味します。<br /><br /> 注: この設定は、ユーザーごとにオーバーライドすることができます。オーバーライドするには、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーの **[全般]** タブの **[電子メールの形式]** を変更して保存します。|  
 |**[電子メール アドレスの正規表現]**|**EmailRegExPattern**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[ユーザー/グループの権限]** 機能領域で、ユーザーの **[電子メールの形式]** を変更して保存します。正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](http://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。|  
 |**[データベース メール アカウント]**|**EmailProfilePrincipalAccount**|電子メール通知を送信するときに使用するデータベース メール アカウントを表示します。 既定のプロファイルは **mds_email_user**です。|  
 |**[データベース メール プロファイル]**|**DatabaseMailProfile**|電子メール通知を送信するときに使用するデータベース メール プロファイル。 既定値は空白です。|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Security"></a> セキュリティ設定  
   
-|構成マネージャーの設定|システム設定|Description|  
+|構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[ユーザー/グループの権限]** 機能領域で、 **[階層メンバー]** タブで設定したユーザーとグループの権限が適用される頻度 (秒数) を示します。 既定値は **3,600** 秒 (60 分) です。|  
   

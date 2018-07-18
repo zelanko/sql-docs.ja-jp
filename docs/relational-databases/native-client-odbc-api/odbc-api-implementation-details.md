@@ -1,13 +1,12 @@
 ---
-title: ODBC API 実装の詳細 |Microsoft ドキュメント
+title: ODBC API 実装の詳細 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d047d5278c21173bac8bb70fa9320dbb2187d095
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0f544a1a3f94c567d374418b077136f92f57a32d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707520"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429601"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 実装の詳細
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "34707520"
   
  この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー リファレンスは、すべての ODBC 関数呼び出しを記載したものではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと共に使用される、ドライバー固有のパラメーターや動作を備えた ODBC 関数だけについて説明しています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。 ODBC 3.51 の総合的なリファレンスについてから Microsoft Data Access Components SDK をダウンロード、[データ アクセスおよびストレージ デベロッパー センター](http://go.microsoft.com/fwlink?linkid=4173)、したり表示したり、 [ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45250)オンラインです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。 ODBC 3.51 の総合的なリファレンスから Microsoft Data Access Components SDK をダウンロード、[データ アクセスおよびストレージ デベロッパー センター](http://go.microsoft.com/fwlink?linkid=4173)、したり表示したり、 [ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45250)オンライン。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -141,7 +140,7 @@ ms.locfileid: "34707520"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client &#40;ODBC&#41;参照](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL Server Native Client &#40;ODBC&#41;リファレンス](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [SQL Server Native Client を使用したアプリケーションのビルド](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

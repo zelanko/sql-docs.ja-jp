@@ -2,10 +2,10 @@
 title: テーブル値パラメーター (OLE DB) |Microsoft ドキュメント
 description: テーブル値パラメーター (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-table-valued-parameters
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,18 +17,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 786d653868fe53c5910a4e3bcffedd89805e3dac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df40f003355b7c98ec6b3b8996bf9c372faa4ad0
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689865"
 ---
 # <a name="table-valued-parameters-ole-db"></a>テーブル値パラメーター (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   このセクションでは、SQL Server の OLE DB ドライバーでテーブル値パラメーターのサポートについて説明します。 その他の概要については、次を参照してください。[テーブル値パラメーター &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)です。 サンプルについては、次を参照してください。[テーブル値パラメーターの&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  パラメーターのセットを使用してプロシージャにパラメーターとしてサーバーに複数行データを送信する現在のところ、(の DBPARAMS パラメーター **icommand::execute**)。 パラメーター セットを使用する場合、セットの各要素は、個別のリモート プロシージャ コール (RPC) の要求でサーバーに送信する必要があります。 テーブル値パラメーターの機能は似ていますが、サーバーとの統合はより緊密になっています。 RPC 要求の数を削減し、サーバーでセットベースの操作を有効にします。  
   
  テーブル値パラメーターは、OLE DB として SQL Server の OLE DB ドライバーでサポートされて**行セット**オブジェクト。 どの**行セット**オブジェクトでしたによって提供されるコンシューマー (つまり、SQL Server の OLE DB Driver を使用してクライアント アプリケーション) のプレース ホルダーとしてテーブル値パラメーターのパラメーターです。 テーブル値パラメーターは、他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パラメーターの型と同じように扱われます。 SQL Server の OLE DB Driver は、作成、探索、仕様、バインディング、およびスキーマのインターフェイスを提供します。  
@@ -53,6 +56,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>参照  
  [SQL Server プログラミング用の OLE DB ドライバー](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [使用してテーブル値パラメーター (&) #40 です。 OLE DB (&) #41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [テーブル値パラメーターを使用して&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

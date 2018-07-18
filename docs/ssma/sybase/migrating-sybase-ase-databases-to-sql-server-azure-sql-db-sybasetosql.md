@@ -1,5 +1,5 @@
 ---
-title: SQL Server - Azure SQL DB に Sybase ASE データベースの移行 |Microsoft ドキュメント
+title: SQL Server - Azure SQL DB への Sybase ASE データベースの移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: sql
@@ -16,42 +16,42 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6fa8c916324af8baebe5c0a7832c4118c2991787
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a021ac1cfc442943b15ade737c54d0b9e227ef03
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779068"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982214"
 ---
-# <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SQL Server - Azure SQL データベース (SybaseToSQL) に SAP ASE データベースを移行します。
-SQL Server Migration Assistant (SSMA) の SAP Adaptive Server Enterprise (ASE) は、包括的な環境に SAP ASE データベースを簡単に移行するのに役立つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。 SSMA の SAP ASE を使用することができます、確認するデータベース オブジェクトとデータ、移行対象のデータベースを評価するデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースへのデータを移行してから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。  
+# <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SQL Server - Azure SQL Database (SybaseToSQL) に SAP ASE データベースを移行します。
+SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (ASE) は、すぐに SAP ASE データベースを移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL Database。 SAP ASE の SSMA を使用してデータベース オブジェクトとデータを確認して、移行対象のデータベースを評価をするデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]や Azure SQL Database へのデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL Database。  
   
 ## <a name="recommended-migration-process"></a>推奨される移行プロセス  
-正常に移行するオブジェクトとデータへの SAP ASE データベースから[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースは、次の手順します。  
+SAP ASE データベースからオブジェクトとデータを正常に移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL Database に、次のプロセスを使用します。  
   
-1.  [新しい SSMA プロジェクトを作成](http://msdn.microsoft.com/en-us/11091d95-c488-48c3-891a-743cac94ac93)です。  
+1.  [新しい SSMA プロジェクト作成](http://msdn.microsoft.com/11091d95-c488-48c3-891a-743cac94ac93)です。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクト オプションの設定&#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)です。 データ型マッピングのカスタマイズの概要については、次を参照してください。 [Sybase ASE のマッピング、および SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)です。  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、次を参照してください。[プロジェクト オプションの設定&#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)します。 データ型のマッピングをカスタマイズする方法については、次を参照してください。[マッピングの Sybase ASE と SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)します。  
   
-2.  [SAP ASE データベース サーバーに接続](http://msdn.microsoft.com/en-us/a45a2330-9175-4c9e-af38-ef920e350614)です。  
+2.  [SAP ASE データベース サーバーに接続する](http://msdn.microsoft.com/a45a2330-9175-4c9e-af38-ef920e350614)します。  
   
-3.  [SQL Server インスタンスへの接続](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)または[Azure SQL データベースのインスタンスへの接続](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)です。  
+3.  [SQL Server インスタンスへの接続](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)または[Azure SQL Database のインスタンスへの接続](http://msdn.microsoft.com/9e77e4b0-40c0-455c-8431-ca5d43849aa7)します。  
   
-4.  [SAP ASE データベース スキーマを SQL Server にマップします。 Azure SQL Database のデータベース スキーマ/](http://msdn.microsoft.com/en-us/2c927003-c49d-4fe1-8e3e-5b2899166268)です。  
+4.  [SQL Server に SAP ASE データベース スキーマを割り当てる Azure SQL Database のデータベース スキーマ/](http://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268)します。  
   
-5.  必要に応じて、[評価レポートを作成する](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)変換のためのデータベース オブジェクトを評価し、変換にかかる時間を推定します。  
+5.  必要に応じて、[評価レポートを作成する](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)変換のためのデータベース オブジェクトを評価し、変換にかかる時間を推定します。  
   
-6.  [SQL Server に SAP ASE データベース スキーマに変換/Azure SQL データベースのスキーマ](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3)です。  
+6.  [SQL Server に SAP ASE データベース スキーマを変換/Azure SQL Database スキーマ](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3)します。  
   
-7.  [変換後のデータベース オブジェクトを読み込む SQL Server と Azure SQL Database](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)です。  
+7.  [SQL Server に変換されたデータベース オブジェクトを読み込むと Azure SQL Database](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)します。  
   
-    スクリプトを保存するかで実行して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベース、またはデータベース オブジェクトを同期します。  
+    スクリプトを保存するかで実行して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL Database、またはデータベース オブジェクトを同期します。  
   
-8.  [SQL Server にデータを移行または Azure SQL Database](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811)です。  
+8.  [SQL Server にデータを移行または Azure SQL Database](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)します。  
   
 9. 必要に応じて、データベース アプリケーションを更新します。  
   
 ## <a name="see-also"></a>参照  
-[SAP ASE 用 SSMA をインストールする&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
-[SAP ASE for SSMA の概要&#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
+[SSMA for SAP ASE のインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+[SSMA で SAP ASE の概要&#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

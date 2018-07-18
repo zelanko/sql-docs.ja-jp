@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,16 @@ helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c270729aa66c05f835cba507884e8d5cda102d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36dad0a2333267793590f32fcf43ae8004d1741e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785863"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -44,16 +44,15 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ```
 
 ## <a name="arguments"></a>引数 
+*式 (expression)*  
+任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 連結時に式は `NVARCHAR` または `VARCHAR` 型に変換されます。 文字列以外の型は `NVARCHAR` 型に変換されます。
 
 *separator*  
 連結される文字列の区切り記号として使用される `NVARCHAR` または `VARCHAR` 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 リテラルまたは変数を使用できます。 
 
-*式 (expression)*  
-任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 連結時に式は `NVARCHAR` または `VARCHAR` 型に変換されます。 文字列以外の型は `NVARCHAR` 型に変換されます。
-
-
 <order_clause>   
 必要に応じて、`WITHIN GROUP` 句を使用して連結結果の順序を指定します。
+
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
@@ -76,7 +75,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 
 ## <a name="remarks"></a>Remarks  
- 
 `STRING_AGG` は、すべての式を行から取り出し、それらを 1 つの文字列に連結する集計関数です。 式の値は、暗黙的に文字列型に変換され、連結されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型の変換の詳細については、「[CAST および CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 
 
 入力式が `VARCHAR` 型の場合、区切り記号を `NVARCHAR` 型にすることはできません。 
@@ -84,7 +82,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 null 値は無視され、対応する区切り記号は追加されません。 null 値のプレースホルダーを返すには、例 B を参照して `ISNULL` 関数を使用します。
 
 `STRING_AGG` は任意の互換性レベルで使用できます。
-
 
 ## <a name="examples"></a>使用例 
 
@@ -104,7 +101,6 @@ FROM Person.Person;
 > [!NOTE]  
 >  Management Studio のクエリ エディターを使用している場合、**[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、**[結果をテキストで表示]** に切り替えてください。   
 
-
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. NULL 値を含まない、コンマ区切りの名前のリストを生成する   
 次の例では、null 値を 'N/A' に置き換え、コンマで区切った名前を 1 つの結果セルに返します。  
 ```sql
@@ -113,15 +109,12 @@ FROM Person.Person;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
- 
 
 |Csv | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-
 ### <a name="c-generate-comma-separated-values"></a>C. コンマ区切り値を生成する 
-
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -136,10 +129,8 @@ FROM Person.Person;
 
 > [!NOTE]  
 >  Management Studio のクエリ エディターを使用している場合、**[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、**[結果をテキストで表示]** に切り替えてください。   
- 
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 関連するタグが付いたニュース記事を返す 
-
 記事とそのタグは別のテーブルに分かれています。 開発者は、すべての関連するタグが付いた記事ごとに 1 つの行を返したいと考えています。 この場合、次のクエリを使用します。 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -158,7 +149,6 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 町ごとの電子メール アドレスのリストを生成する
-
 次のクエリは、従業員の電子メール アドレスを検索し、町ごとにグループ化します。 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -176,7 +166,6 @@ GROUP BY town;
 emails 列に返された電子メール アドレスは、特定の町で働く従業員のグループに電子メールを送信する場合にそのまま使用できます。 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. 町ごとの電子メール アドレスの並べ替えられたリストを生成する   
-   
 次のクエリは、前の例と同様に、従業員の電子メール アドレスを検索し、町ごとにグループ化し、電子メール アドレスをアルファベット順に並べ替えます。   
 ```sql
 SELECT town, 
@@ -191,7 +180,6 @@ GROUP BY town;
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
-
 
 ## <a name="see-also"></a>参照  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  

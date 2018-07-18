@@ -2,7 +2,6 @@
 title: NextRecordset メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1773c2bd8709a429a2e388b8a38a192107f2e7f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1df02b14168a15f9bccc476b62583334b2f0c3f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279641"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
 現在のクリア[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを返します**レコード セット**一連のコマンドを進めることで。  
@@ -43,12 +43,12 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>パラメーター  
  *RecordsAffected*  
- 省略可。 A**長い**する変数、現在の操作の影響を受けるレコードの数はプロバイダーに返されます。  
+ 任意。 A**長い**する変数、現在の操作の影響を受けるレコードの数はプロバイダーに返されます。  
   
 > [!NOTE]
 >  このパラメーターでは、操作によって影響を受けたレコードの数のみを返しますレコードの数を生成するために使用する select ステートメントから返されません、 **Recordset**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **NextRecordset**複合コマンド ステートメントの次のコマンドまたは複数の結果を返すストアド プロシージャの結果を返すメソッド。 開く場合、**レコード セット**複合コマンド ステートメントに基づいて、オブジェクト (たとえば、"選択\*table1; からSELECT \* table2 の") を使用して、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)または[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを**Recordset**、ADO は最初のコマンドのみを実行しに結果を返します*recordset*です。 ステートメント内の後続のコマンドの結果にアクセスするには、呼び出し、 **NextRecordset**メソッドです。  
   
  その他の結果がある限り、 **Recordset**複合ステートメントを含んでいない切断されているか、プロセス境界を越えてマーシャ リング、 **NextRecordset**メソッドは引き続き返す**Recordset**オブジェクト。 行を返すコマンドが正常に実行されますが、レコード、返されたが返されない場合**Recordset**オブジェクトは開いているが、空になります。 テストを作成することを確認して、この場合、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティが両方とも**True**です。 かどうか、行を返す実行するコマンドを正常に返された**Recordset**オブジェクトが閉じ、テストすることによって確認できます、[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティを**Recordset**. ない多くの結果がある場合に*recordset*に設定されます*Nothing*です。  

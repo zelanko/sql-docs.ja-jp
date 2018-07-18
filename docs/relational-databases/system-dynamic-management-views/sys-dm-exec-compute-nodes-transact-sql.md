@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_compute_nodes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_compute_nodes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2e0c2b19e9d790e25f78b88160b96a5f0d4d9eb8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061560"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/23/2018
   
  この DMV を使用して、そのロール、名と IP アドレスを使用して、スケール アウト クラスターのすべてのノードの一覧を参照してください。  
   
-|列名|データ型|Description|範囲|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ノードに関連付けられている一意の数値 id です。 このビューのキーです。|種類に関係なく、スケール アウト クラスター全体にわたって一意です。|  
-|型|**nvarchar(32)**|ノードの型。|' COMPUTE'、'ヘッド'|  
-|name|**nvarchar(32)**|ノードの論理名です。|適切な長さの任意の文字列。|  
+|type|**nvarchar(32)**|ノードの型。|' COMPUTE'、'ヘッド'|  
+|NAME|**nvarchar(32)**|ノードの論理名です。|適切な長さの任意の文字列。|  
 |address|**nvarchar(32)**|このノードの P アドレスです。|IP アドレスの範囲|  
   
 ## <a name="see-also"></a>参照  

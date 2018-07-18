@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b9694018882f65f3b530c1dfc4a880787b9c18a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fc8f606319a825855b404da45e85782ba29bc2e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401464"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>[マスター データ サービス データベースへの接続] ダイアログ ボックス
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="select-database"></a>[データベースの選択]  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストするローカルまたはリモートの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに接続するための情報を指定します。 リモート インスタンスに接続するには、そのインスタンスでリモート接続を有効にする必要があります。  
   
-|コントロール名|Description|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |**SQL Server インスタンス (SQL Server instance)**|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストするために必要な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンス名を指定します。 ここには、ローカルまたはリモートのコンピューターの、既定または名前付きのインスタンスを指定できます。 次のように入力して、情報を指定します。<br /><br /> ローカル コンピューター上の既定のインスタンスに接続するには、ピリオド (.) を入力します。<br /><br /> 指定したローカル コンピューターまたはリモート コンピューター上の既定のインスタンスに接続するには、サーバー名または IP アドレスを入力します。<br /><br /> 指定したローカル コンピューターまたはリモート コンピューター上の名前付きインスタンスに接続するには、サーバー名または IP アドレスと、インスタンス名を入力します。 この情報は、 *server_name*\\*instance_name*の形式で指定します。|  
 |**認証の種類**|指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスへの接続時に使用する認証の種類を選択します。 接続に使用する資格情報によって、 **[マスター データ サービス データベース]** ドロップダウン リストに表示されるデータベースが決まります。<br /><br /> 認証の種類は次のとおりです。<br /><br /> **[現在のユーザー – 統合セキュリティ]**: 現在の Windows ユーザー アカウントの資格情報を使用して接続するときに、統合 Windows 認証を使用します。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] では、コンピューターにログオンしてアプリケーションを開いたユーザーの Windows 資格情報が使用されます。 アプリケーションで別の Windows 資格情報を指定することはできません。 別の Windows 資格情報を使用して接続する場合は、そのユーザーとしてコンピューターにログオンし、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]を開く必要があります。<br /><br /> **[SQL Server アカウント]**: 接続する際に SQL Server アカウントを使用します。 このオプションを選択すると、 **[ユーザー名]** フィールドと **[パスワード]** フィールドが有効になり、指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アカウントの資格情報を指定する必要があります。|  

@@ -2,7 +2,7 @@
 title: SQL Server Reporting Services (SSRS) とは | Microsoft Docs
 description: オンプレミスのモバイル レポートやページ分割された Reporting Services レポートに使用するツールやサービスについて説明します。
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -22,12 +22,12 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c594502d7a63ce437e680a4b9b6accd095a102d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cfeadac5c872c75075cc40e1f2dc07e7a592aa6d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550333"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404914"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
 

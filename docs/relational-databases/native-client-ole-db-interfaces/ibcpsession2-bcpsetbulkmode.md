@@ -1,14 +1,12 @@
 ---
-title: Ibcpsession 2::bcpsetbulkmode |Microsoft ドキュメント
+title: Ibcpsession 2::bcpsetbulkmode |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97f00c5d111401a44d576815b704b752f2788a6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b5776826790bf9026df5d25965c4116367b974
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946787"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419631"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Ibcpsession 2::bcpsetbulkmode を提供する代わりに[ibcpsession::bcpcolfmt (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)列の形式を指定するためです。 個々 の列形式属性を設定するには、ibcpsession::bcpcolfmt とは異なり、ibcpsession 2::bcpsetbulkmode はすべての属性を設定します。  
+  Ibcpsession 2::bcpsetbulkmode の代替を提供する[ibcpsession::bcpcolfmt &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)列の形式を指定するためです。 個々 の列形式属性を設定するには、ibcpsession::bcpcolfmt とは異なり、ibcpsession 2::bcpsetbulkmode はすべての属性を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +44,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>引数  
- *プロパティ*  
+ *property*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
@@ -61,38 +59,38 @@ HRESULT BCPSetBulkMode (
  cbRow  
  行ターミネータ値の長さです (バイト単位)。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  Ibcpsession 2::bcpsetbulkmode には、次のいずれかを返すことができます。  
   
 |||  
 |-|-|  
 |**S_OK**|メソッドが成功しました。|  
-|**E_FAIL**|ISQLServerErrorInfo インターフェイスを使用する詳細な情報のプロバイダー固有のエラーが発生しました。|  
+|**E_FAIL**|ISQLServerErrorInfo インターフェイスを使用して、詳細な情報のプロバイダー固有のエラーが発生しました。|  
 |**E_UNEXPECTED**|メソッドの呼び出しが予期されませんでした。 たとえば、 **IBCPSession2::BCPInit** ibcpsession 2::bcpsetbulkmode を呼び出す前に、メソッドは呼び出されませんでした。|  
-|**E_INVALIDARG**|引数が無効でした。|  
+|**E_INVALIDARG**|引数が無効です。|  
 |**E_OUTOFMEMORY**|メモリ不足エラー。|  
   
-## <a name="remarks"></a>解説  
- Ibcpsession 2::bcpsetbulkmode は、クエリまたはテーブルの一括コピー出力を使用できます。 Ibcpsession 2::bcpsetbulkmode 使用すると、クエリ ステートメントの一括コピー出力を呼び出す前に呼び出す必要があります`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`クエリ ステートメントを指定します。  
+## <a name="remarks"></a>コメント  
+ 一括コピー出力、クエリまたはテーブルには、ibcpsession 2::bcpsetbulkmode を使用できます。 Ibcpsession 2::bcpsetbulkmode は一括コピー出力クエリ ステートメントを使用する場合は、呼び出す前に呼び出す必要があります`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`クエリ ステートメントを指定します。  
   
- RPC 呼び出し構文とバッチ クエリ構文 (`{rpc func};SELECT * from Tbl` など) を 1 つのコマンド テキスト内で組み合わせて使用しないでください。  Icommandprepare::prepare エラーを返して、メタデータを取得できなくなります。 ストアド プロシージャの実行とバッチ クエリを 1 つのコマンド テキストで組み合わせて使用する必要がある場合は、ODBC CALL 構文 (`{call func}; SELECT * from Tbl` など) を使用します。  
+ RPC 呼び出し構文とバッチ クエリ構文 (`{rpc func};SELECT * from Tbl` など) を 1 つのコマンド テキスト内で組み合わせて使用しないでください。  Icommandprepare::prepare にエラーが返され、メタデータの取得できなくなります。 ストアド プロシージャの実行とバッチ クエリを 1 つのコマンド テキストで組み合わせて使用する必要がある場合は、ODBC CALL 構文 (`{call func}; SELECT * from Tbl` など) を使用します。  
   
  次の表に、定数を*プロパティ*パラメーター。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。実行可能ファイル、および ibcpsession::bcpcolfmt で*eUserDataType*プロパティに設定**BCP_TYPE_SQLCHARACTER**です。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の – w オプションに対応します。EXE および ibcpsession::bcpcolfmt で*eUserDataType*プロパティに設定**BCP_TYPE_SQLNCHAR**です。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の – N オプションに対応します。EXE および ibcpsession::bcpcolfmt で*eUserDataType*プロパティに設定**BCP_TYPE_SQLNCHAR**列のデータ型が文字列の場合、または**BCP_TYPE_DEFAULT**場合文字列ではありません。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の – n オプションに対応します。EXE および ibcpsession::bcpcolfmt で*eUserDataType*プロパティに設定**BCP_TYPE_DEFAULT**です。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。EXE とでは、ibcpsession::bcpcolfmt *eUserDataType*プロパティに設定**BCP_TYPE_SQLCHARACTER**します。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の – w オプションに対応します。EXE およびでは、ibcpsession::bcpcolfmt *eUserDataType*プロパティに設定**BCP_TYPE_SQLNCHAR**します。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の – N オプションに対応します。EXE およびでは、ibcpsession::bcpcolfmt *eUserDataType*プロパティに設定**BCP_TYPE_SQLNCHAR**列の型が文字列の場合または**BCP_TYPE_DEFAULT**場合文字列ではありません。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の – n オプションに対応します。EXE およびでは、ibcpsession::bcpcolfmt *eUserDataType*プロパティに設定**BCP_TYPE_DEFAULT**します。|  
   
- Ibcpsession 2::bcpsetbulkmode と競合しない ibcpsession::bcpcontrol オプションについては、ibcpsession::bcpcontrol および ibcpsession 2::bcpsetbulkmode を呼び出すことができます。 たとえば、ibcpsession::bcpcontrol でを呼び出すことができます**BCP_OPTION_FIRST**および ibcpsession 2::bcpsetbulkmode です。  
+ Ibcpsession 2::bcpsetbulkmode と競合しない ibcpsession::bcpcontrol オプションについては、ibcpsession::bcpcontrol および ibcpsession 2::bcpsetbulkmode を呼び出すことができます。 たとえば、ibcpsession::bcpcontrol でを呼び出すことができます**BCP_OPTION_FIRST** ibcpsession 2::bcpsetbulkmode とします。  
   
- Ibcpsession::bcpcontrol でを呼び出すことはできません**BCP_OPTION_TEXTFILE**および ibcpsession 2::bcpsetbulkmode です。  
+ Ibcpsession::bcpcontrol でを呼び出すことはできません**BCP_OPTION_TEXTFILE** ibcpsession 2::bcpsetbulkmode とします。  
   
- Ibcpsession::bcpcolfmt、ibcpsession::bcpcontrol、および ibcpsession::bcpreadfmt を含む関数呼び出しのシーケンスを持つ ibcpsession 2::bcpsetbulkmode を呼び出すしようとする場合は、シーケンス エラーが関数呼び出しのいずれかが戻ります。 エラーを解決することを選択する場合は、設定をリセットして最初からやり直すには、ibcpsession::bcpinit を呼び出します。  
+ Ibcpsession::bcpcolfmt、ibcpsession::bcpcontrol、および ibcpsession::bcpreadfmt を含む関数呼び出しのシーケンスで ibcpsession 2::bcpsetbulkmode を呼び出すしようとした場合、シーケンス エラーが関数呼び出しの 1 つ戻ります。 エラーを修正することを選択する場合は、設定をリセットし、最初からやり直すには、ibcpsession::bcpinit を呼び出します。  
   
- 関数のシーケンス エラーが発生する関数呼び出しの例をいくつか次に示します。  
+ 関数シーケンス エラーが発生する関数呼び出しの例を次に示します。  
   
 ```  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_IN);  
@@ -369,6 +367,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [IBCPSession2 (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

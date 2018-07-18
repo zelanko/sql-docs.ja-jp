@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,20 +20,21 @@ helpviewer_keywords:
 - SOUNDEX values
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e5ab09ee3ae088382fee86a8add2aa112d9efa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 692d3124814aaaeb25e7ec5507dc0a4ccf968b34
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781563"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  2 つの文字式の SOUNDEX 値の差を示す整数値を返します。  
+この関数は、2 つの異なる文字式を対象に [SOUNDEX()](./soundex-transact-sql.md) 値の差を測定し、整数値を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +45,19 @@ DIFFERENCE ( character_expression , character_expression )
 ```  
   
 ## <a name="arguments"></a>引数  
- *character_expression*  
- 文字データの英数字[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には定数、変数、または列を指定できます。  
+*character_expression*  
+文字データの英数字[式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* には定数、変数、または列を指定できます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **int**  
-  
+**int**  
+ 
 ## <a name="remarks"></a>Remarks  
- 返される整数は、2 つ式の SOUNDEX 値に、どの程度同じ文字が含まれているかを表します。 戻り値の範囲は 0 ～ 4 で、0 は類似性が低いか類似性がないことを示し、4 は類似性が高いか同じ値であることを示します。  
+`DIFFERENCE` は 2 つの異なる `SOUNDEX` 値を比較し、整数値を返します。 この値は、0 から 4 のスケールで、`SOUNDEX` 値が一致する度合いを測定します。 値が 0 の場合、SOUNDEX 値の類似性が弱いか、類似性がまったくなく、4 の場合、類似性が強いか、まったく同じになります。  
   
- DIFFERENCE と SOUNDEX は照合順序に依存します。  
+`DIFFERENCE` と `SOUNDEX` には、照合順序の区別があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例の最初の部分では、よく似た 2 つの文字列の `SOUNDEX` 値が比較されます。 Latin1_General の照合順序では、`DIFFERENCE` は値 `4` を返します。 次の例の 2 番目の部分では、大きく異なる 2 つの文字列の `SOUNDEX` 値が比較され、Latin1_General の照合順序では、`DIFFERENCE` は値 `0` を返します。  
+この例の最初の部分で、2 つの非常に似た文字列の `SOUNDEX` 値が比較されます。 照合順序 Latin1_General に対して、`DIFFERENCE` は値 `4` を返します。 この例の 2 番目の部分では、2 つの大きく異なる文字列の `SOUNDEX` 値が比較されます。照合順序 Latin1_General に対して、`DIFFERENCE` は値 `0` を返します。  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

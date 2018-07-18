@@ -1,4 +1,4 @@
----
+﻿---
 title: トランザクション ログ バックアップの適用 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/13/2016

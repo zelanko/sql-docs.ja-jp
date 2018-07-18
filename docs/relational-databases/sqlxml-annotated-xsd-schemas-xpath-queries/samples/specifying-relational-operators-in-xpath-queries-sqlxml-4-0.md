@@ -1,5 +1,5 @@
 ---
-title: 関係演算子を指定する XPath クエリ (SQLXML 4.0) |Microsoft ドキュメント
+title: XPath クエリ (SQLXML 4.0) に関係演算子の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,27 +22,28 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 71d17e2b77670ec02e345bfd30211d92ca3ab556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032440"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での関係演算子の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下の例では、XPath クエリに関係演算子を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。[サンプル注釈付き XSD スキーマを XPath の例 & #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  以下の例では、XPath クエリに関係演算子を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-specify-relational-operator"></a>A. 関係演算子を指定する  
- この XPath クエリは、子の要素を返します、 **\<顧客 >** 要素を**CustomerID**属性の値が「1」と where 任意の子**\<順序>** 要素を含む、  **\<OrderDetail >** を持つ子、 **OrderQty** 3 より大きい値を持つ属性。  
+ この XPath クエリは、子の要素を返します、 **\<顧客 >** 要素を**CustomerID**属性の値が「1」、任意の子**\<順序>** 要素が含まれる、  **\<OrderDetail >** を持つ子、 **OrderQty** 3 より大きい値を持つ属性。  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 角かっこのフィルターで指定された述語、 **\<顧客 >** 要素。 のみ、 **\<顧客 >** 要素には、少なくとも 1 つを持つ **\<OrderDetail >** 3 が返されるよりも大きい OrderQty 属性値を持つ孫です。  
+ 角かっこのフィルターで指定された述語、 **\<顧客 >** 要素。 のみ、 **\<顧客 >** を少なくとも 1 つを持つ要素 **\<OrderDetail >** 孫 OrderQty 属性値 3 が返されるよりも大きいをします。  
   
- **子**軸は、既定値です。 そのため、クエリは、として指定できます。  
+ **子**軸は既定値。 そのため、クエリは、として指定できます。  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (SpecifyRelationalA.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  このテンプレートを実行した場合の結果セットは次のとおりです。  
   
@@ -85,13 +86,13 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. XPath クエリに関係演算子を指定し、論理関数を使用して結果を比較する  
- このクエリでは、すべてを返します、 **\<順序 >** をコンテキスト ノードの子要素、 **SalesPersonID**属性値が 270 未満。  
+ このクエリでは、すべてを返します、 **\<順序 >** を持つコンテキスト ノードの要素の子、 **SalesPersonID**属性の値が 270 未満です。  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- ショートカット、**属性**軸 (@)、指定できるためと、**子**軸は、既定値、クエリから省略することができます。  
+ ショートカット、**属性**軸 (@) を指定できますので、**子**軸は既定のクエリから省略できます。  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (SpecifyRelationalB.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  テンプレートを実行して得られる結果セットの一部を次に示します。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -42,11 +41,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aa86bc9c23bf63066df604c265b47a55419586e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ffe7a15fdaa81492cf0b993ba10a1ca555c6625
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36249244"
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +185,7 @@ ms.lasthandoff: 05/03/2018
  サブクエリと共に使用され、サブクエリによって返される行が存在するかどうかを調べます。 詳細については、「[EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- 論理演算子の優先順位は、高い方から NOT、AND、OR です。 かっこを使用することによって、検索条件におけるこれらの優先順位を変更することができます。 論理演算子の評価順序は、クエリ オプティマイザーが行う選択によって異なる場合があります。 論理演算子が論理値を操作する方法の詳細については、「[AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)」、「[OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)」、および「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
+ 論理演算子の優先順位は、高い方から NOT、AND、OR です。 かっこを使用することによって、検索条件におけるこれらの優先順位をオーバーライドすることができます。 論理演算子の評価順序は、クエリ オプティマイザーが行う選択によって異なる場合があります。 論理演算子が論理値を操作する方法の詳細については、「[AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)」、「[OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)」、および「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   

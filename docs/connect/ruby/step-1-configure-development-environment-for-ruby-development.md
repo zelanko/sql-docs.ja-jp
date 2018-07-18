@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ruby
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8b4cd36a78952e8d783e79388ede49287e5e0f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb14bee9528ad23b212bb0a7ffbbba02e1c39678
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309701"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>手順 1: Ruby 開発のための開発環境を構成します。
 SQL Server の Ruby ドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。    
@@ -34,8 +34,8 @@ Ruby ドライバーが SQL Server と Azure SQL データベースで既定で�
   
 2.  **ルビをインストールします。**  
 インストーラーをダウンロードすると、次の操作を行います。  
-a. ファイルをダブルクリックして、インストーラーを起動します。  
-b. 使用言語を選択し、条項に同意します。  
+A. ファイルをダブルクリックして、インストーラーを起動します。  
+B. 使用言語を選択し、条項に同意します。  
 c.  インストール設定画面で、このインストールにより Ruby パスと関連付ける .rb と .rbw ファイルに両方のルビの追加の実行可能ファイルの横にあるチェック ボックスを選択します。  
   
 3.  **ルビの開発キットをダウンロードします。**  
@@ -43,8 +43,8 @@ RubyInstaller ページから開発キットをダウンロードします。
   
 4.  **ルビの開発キットをインストールします。**  
 ダウンロードが完了したら、次の操作を行います。  
-a. ファイルをダブルクリックします。 ファイルを抽出する場所を求められます。  
-b. [...] ボタンをクリックし、"C:\DevKit"を選択します。 「新しいフォルダーの作成」をクリックして、最初このフォルダーを作成する必要があります。  
+A. ファイルをダブルクリックします。 ファイルを抽出する場所を求められます。  
+B. [...] ボタンをクリックし、"C:\DevKit"を選択します。 「新しいフォルダーの作成」をクリックして、最初このフォルダーを作成する必要があります。  
 c. "OK"し、「抽出」、ファイルを抽出する をクリックします。  
   
 5. **Cmd.exe を開きます**  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -24,16 +23,16 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a87f0391580dd8f577abf94997fd1448ae5bf198
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 754a5c4bed2ba321987c4b0b820f4ad821369f42
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964397"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351691"
 ---
 # <a name="view-conflict-information-for-merge-publications"></a>マージ パブリケーションの競合情報の表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  マージ レプリケーションの競合を解決すると、優先されなかった行のデータが競合テーブルに書き込まれます。 この競合データは、レプリケーション ストアド プロシージャを使用してプログラムから表示できます。 詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
+  マージ レプリケーションの競合を解決すると、優先されなかった行のデータが競合テーブルに書き込まれます。 この競合データは、レプリケーション ストアド プロシージャを使用してプログラムから表示できます。 詳細については、「 [マージ レプリケーションの競合検出および解決の詳細](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
 ### <a name="to-view-conflict-information-and-losing-row-data-for-all-types-of-conflicts"></a>すべての種類の競合に関する競合情報と優先されなかった行のデータを表示するには  
   
@@ -50,9 +49,9 @@ ms.locfileid: "32964397"
   
     |@conflict_logging 値|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
-    |**パブリッシャー**|@shouldalert|0|  
-    |**サブスクライバー**|0|@shouldalert|  
-    |**両方**|@shouldalert|@shouldalert|  
+    |**パブリッシャー**|1|0|  
+    |**サブスクライバー**|0|1|  
+    |**両方**|1|1|  
   
 2.  パブリッシャー側のパブリケーション データベースまたはサブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)を実行します。 特定のパブリケーションに属するアーティクルの競合情報のみが返されるようにするには、 **@publication** に値を指定します。 これにより、競合を持つアーティクルに対応する競合テーブル情報が返されます。 目的のアーティクルに対応する **conflict_table** の値を確認します。 アーティクルに対応する **conflict_table** の値が NULL の場合、そのアーティクル内では削除競合のみが発生しています。  
   

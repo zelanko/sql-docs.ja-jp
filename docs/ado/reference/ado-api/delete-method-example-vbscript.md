@@ -2,7 +2,6 @@
 title: 削除メソッドの例 (VBScript) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f55b0ff261ce76b5312f5ea13888d398553b23fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 148baaf84c8025d23b78f01bd098fb4a37634257
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277591"
 ---
 # <a name="delete-method-example-vbscript"></a>メソッドの例 (VBScript) の削除します。
 この例では、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)から指定されたレコードを削除する方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  

@@ -2,7 +2,6 @@
 title: プロパティをフィルター処理 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9dc176d7c64d1845ddb863cd58fd41313967ccce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72efa7b9a70bdfdf141c32d5487cc2a5b9776d16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278761"
 ---
 # <a name="filter-property"></a>プロパティをフィルター処理します。
 内のデータにフィルターを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
@@ -35,11 +35,11 @@ ms.lasthandoff: 05/03/2018
   
 -   **条件の文字列:** と連結された 1 つまたは複数の個別句から成る文字列**AND**または**OR**演算子。  
   
--   **ブックマークの配列。**一意のブックマークの配列値内のレコードを指す、**レコード セット**オブジェクト。  
+-   **ブックマークの配列。** 一意のブックマークの配列値内のレコードを指す、**レコード セット**オブジェクト。  
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)値。  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 使用して、**フィルター**プロパティ内のレコードを選択して画面を**Recordset**オブジェクト。 フィルター選択された**Recordset**現在のカーソルになります。 その他のプロパティ値を返すことが、現在に基づく**カーソル**は、影響を受けるよう[AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、[と、AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)、および[PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)です。 設定、**フィルター**プロパティに特定の新しい値を新しい値を満たす最初のレコードに現在のレコードに移動します。
   

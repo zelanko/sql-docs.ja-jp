@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -34,11 +33,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc5ab13c00b5af13a68325fc50c252f0ca68f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0212edfaa4160bd0fbc0da9df6861cfa46056ed3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350024"
 ---
 # <a name="programmatically-monitor-replication"></a>プログラムによるレプリケーションの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -272,7 +272,7 @@ ms.lasthandoff: 05/03/2018
   
     -   *metricID* - 監視しきい値の基準を表す <xref:System.Int32> 値です。次の表に示す値を使用します。  
   
-        |ReplTest1|Description|  
+        |ReplTest1|[説明]|  
         |-----------|-----------------|  
         |@shouldalert|**expiration** - トランザクション パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
         |2|**latency** - トランザクション パブリケーションへのサブスクリプションのパフォーマンスを監視します。|  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_external_resource_pool_affinity (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_resource_governor_external_resource_pool_affinity (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,28 +24,29 @@ author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: abee195d109b751df856c720264a42241bf861f9
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052300"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-CPU アフィニティ、現在の外部リソース プールの構成情報を返します。
+現在、外部リソース プールの構成について、CPU アフィニティ情報を返します。
   
-|列名|データ型|Description|
+|列名|データ型|説明|
 |----------------|---------------|-----------------|
 |pool_id|**int**|外部リソース プールの ID。 NULL 値は許可されません。|
 |processor_group|**smallint**|Windows の論理プロセッサ グループの ID。 NULL 値は許可されません。|
 |cpu_mask|**bigint**|このプールに関連付けられている Cpu を表すバイナリ マスク。 NULL 値は許可されません。|
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
-アフィニティで作成されたプールに`AUTO`アフィニティがないためにこのビューに表示されません。 詳細については、次を参照してください。、 [CREATE EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md)と[ALTER EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)ステートメントです。
+アフィニティで作成されたプール`AUTO`アフィニティがないためにこのビューに表示されません。 詳細については、次を参照してください。、 [CREATE EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md)と[ALTER EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)ステートメント。
 
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
 `VIEW SERVER STATE` 権限が必要です。
 

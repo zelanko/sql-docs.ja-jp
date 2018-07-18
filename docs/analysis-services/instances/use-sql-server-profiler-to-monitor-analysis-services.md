@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler を使用して、Analysis Services の監視を |Microsoft ドキュメント
+title: SQL Server Profiler を使用して、Analysis Services の監視 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e9e4407abe5565931994d9dcca4cd0326577dbf4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034668"
 ---
 # <a name="use-sql-server-profiler-to-monitor-analysis-services"></a>SQL Server Profiler を使用した Analysis Services の監視
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "34016099"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server Profiler による Analysis Services の監視の概要](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを監視する方法について説明します。|  
 |[再生用のプロファイラー トレースの作成 &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して再生用トレースを作成するための要件について説明します。|  
 |[Analysis Services トレース イベント](../../analysis-services/trace-events/analysis-services-trace-events.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のイベント クラスについて説明します。 これらのイベント クラスは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって生成されるアクションにマップされ、トレースの再生に使用されます。|  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services インスタンスを監視します。](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+ [Analysis Services インスタンスの監視](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

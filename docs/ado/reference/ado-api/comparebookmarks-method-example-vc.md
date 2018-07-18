@@ -2,7 +2,6 @@
 title: CompareBookmarks メソッドの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e576c5a766fd0509d143ec649d72acb8b244ca4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16ff4ae1e6314f1ed72dd73ec25eef0b3261906f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276911"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks メソッドの例 (vc++)
 この例で、 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッドです。 特定のブックマークは特別な何らかの理由でない限りは、ブックマークの相対値は必要ありません。  

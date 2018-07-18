@@ -2,7 +2,6 @@
 title: FetchOptions プロパティ (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcbb951a5d17c7b7f0d8be540bef5c74e96b101d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b73931acd678871f05e5aa4022153ded86a830e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288134"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions プロパティ (RDS)
 非同期フェッチの型を示します。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="setting-and-return-values"></a>設定して、戻り値  
  設定または値は次のいずれかを返します。  
   
-|定数|Description|  
+|定数|説明|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|すべてのレコード、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)コントロールは、アプリケーションに返される前にフェッチされます。 完全な**Recordset**を前に、アプリケーションとは何も操作をフェッチします。|  
 |**adcFetchBackground**|コントロールは、レコードの最初のバッチがフェッチされるとすぐにアプリケーションに返すことができます。 それ以降の読み取り、 **Recordset**最初のバッチでフェッチされなかったレコードへのアクセスの試行は、要求されたレコードが実際にフェッチされるまで遅延されます、アプリケーションに制御が戻る時点であります。|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  これらの定数を使用するクライアント側実行可能ファイルは、それらの宣言をする必要があります。 RDS ライブラリの既定のインストール フォルダーにあるファイル Adcvbs.inc から、使用する定数の宣言を貼り付けるを切り取ってことができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Web アプリケーションでは通常使用する**adcFetchAsync** (既定値) の場合は、パフォーマンス向上を提供するためです。 コンパイル済みのクライアント アプリケーションでは通常使用する**adcFetchBackground**です。  
   
 ## <a name="applies-to"></a>適用対象  

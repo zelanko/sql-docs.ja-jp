@@ -2,7 +2,6 @@
 title: ADORecordsetConstruction インターフェイス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ff32133f7959b598d2c6bc7f2eb029906e66761
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c781a5b1db2d501488d609454ee67e240ee35a55
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275621"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction インターフェイス
 **ADORecordsetConstruction**インターフェイスは、ADO を構築するために使用**Recordset**オブジェクトを OLE DB から**行セット**C/C++ アプリケーション内のオブジェクト。  
   
  このインターフェイスは、次のプロパティをサポートします。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
   
 |||  
 |-|-|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定された OLE DB**行セット**オブジェクト (`pRowset`)、ADO の構築**レコード セット**オブジェクト (`adoRs`) 次の 3 つの基本的な操作を額。  
   
 1.  ADO を作成する**Recordset**オブジェクト。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
  ADO を構築することもできます。 **Recordset**オブジェクトを OLE DB から**章**または**RowPosition**オブジェクト。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  

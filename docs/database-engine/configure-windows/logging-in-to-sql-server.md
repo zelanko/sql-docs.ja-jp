@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867717"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324436"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server へのログイン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "32867717"
 |使用されているポート (ここでは 2828) の指定による、既定の TCP ポートをリッスンしていない既定のインスタンスへの接続 ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] が既定のポート (1433) をリッスンしている場合は不要)。|APPHOST,2828|  
 |指定された TCP ポート (ここでは 2828) 上の名前付きインスタンスへの接続 (ホスト コンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが実行されていない場合に、よく必要になります)。|APPHOST,2828|  
 |IP アドレスと使用されている TCP ポート (ここでは 2828) の指定による、既定の TCP ポートをリッスンしていない既定のインスタンスへの接続。|192.168.17.28,2828|  
-|IP アドレスと使用されている TCP ポート (ここでは 2828) の指定による、名前付きインスタンスへの接続。|192.168.17.28,2828|  
+|IP アドレスと使用されている TCP ポート (ここでは 2828) の指定による、名前付きインスタンスへの接続。|192.168.17.28\SQLEXPRESS,2828|  
 |TCP 接続を適用する、名前による既定のインスタンスへの接続。|tcp:APPHOST|  
 |TCP 接続を適用する、名前による名前付きインスタンスへの接続。|tcp:APPHOST\SQLEXPRESS|  
 |名前付きパイプ名の指定による、既定のインスタンスへの接続。|\\\APPHOST\pipe\unit\app|  

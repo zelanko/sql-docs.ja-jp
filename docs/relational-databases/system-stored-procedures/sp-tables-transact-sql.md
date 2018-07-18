@@ -1,5 +1,5 @@
 ---
-title: sp_tables (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b0a4e8b4ae1b78da17beb1a5289a90782979ad3c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056150"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,13 +59,13 @@ sp_tables [ [ @table_name = ] 'name' ]
  [  **@table_owner=** ] **'***所有者***'**  
  カタログ情報を返すために使用するテーブルのテーブル所有者です。 *所有者*は**nvarchar (384)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。 所有者を指定しない場合は、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーには、指定した名前を持つテーブルを所有している、そのテーブルの列が返されます。 所有者を指定せず、かつ、指定した名前のテーブルを現在のユーザーが所有していない場合は、このプロシージャは、データベース所有者が所有する、指定された名前のテーブルを探します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルの列が返されます。 所有者を指定せず、かつ、指定した名前のテーブルを現在のユーザーが所有していない場合は、このプロシージャは、データベース所有者が所有する、指定された名前のテーブルを探します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
  [  **@table_qualifier=** ] **'***修飾子***'**  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
  [ **、** [  **@table_type=** ] **"'***型***'**、 **'** 型 **'"** ]  
- 指定したテーブル型のすべてのテーブルに関する情報を持つ、コンマで区切られた値の一覧です。 これらを含める**テーブル**、 **SYSTEMTABLE**、および**ビュー**です。 *型*は**varchar (100)**、既定値は NULL です。  
+ 指定したテーブル型のすべてのテーブルに関する情報を持つ、コンマで区切られた値の一覧です。 以下の**テーブル**、 **SYSTEMTABLE**、および**ビュー**します。 *型*は**varchar (100)**、既定値は NULL です。  
   
 > [!NOTE]  
 >  テーブル型はそれぞれ単一引用符で囲み、パラメーター全体を二重引用符で囲む必要があります。 テーブル型は必ず大文字です。 SET QUOTED_IDENTIFIER がオンになっている場合は、単一引用符をそれぞれ 2 つずつ付け、パラメーター全体を単一引用符で囲む必要があります。  
@@ -78,22 +78,22 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 このフィールドには NULL を指定できます。|  
-|**TABLE_OWNER**|**sysname**|テーブル所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列がテーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
+|**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 このフィールドには NULL を指定できます。|  
+|**TABLE_OWNER**|**sysname**|テーブルの所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、テーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 このフィールドは常に値を返します。|  
 |**TABLE_TYPE**|**varchar (32)**|テーブル、システム テーブル、またはビューです。|  
-|**「解説」**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値を返しません。|  
+|**「解説」**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  相互運用可能性を最大にするため、ゲートウェイのクライアントは、SQL-92 標準の SQL パターン照合 (% と _ ワイルドカード文字) のみを想定してください。  
   
- 特定のテーブルに対する、現在のユーザーの読み取りおよび書き込みアクセス権についての特権情報は必ずしも確認されません。 したがって、アクセスは保証されません。 この結果セットには、テーブルとビューだけでなく、それらの型をサポートする DBMS 製品へのゲートウェイのシノニムや別名も含まれます。 場合、サーバー属性**ACCESSIBLE_TABLES**が Y の結果セットの**sp_server_info**、現在のユーザーがアクセスできるテーブルのみが返されます。  
+ 特定のテーブルに対する、現在のユーザーの読み取りおよび書き込みアクセス権についての特権情報は必ずしも確認されません。 したがって、アクセスは保証されません。 この結果セットには、テーブルとビューだけでなく、それらの型をサポートする DBMS 製品へのゲートウェイのシノニムや別名も含まれます。 場合、サーバー属性**ACCESSIBLE_TABLES**での結果セットが Y **sp_server_info**、現在のユーザーがアクセスできるテーブルのみが返されます。  
   
- **sp_tables**は等価**SQLTables** ODBC にします。 返される結果は並べ**TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、および**TABLE_NAME**です。  
+ **sp_tables**と等価**SQLTables** ODBC にします。 返される結果は並べ**TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、および**TABLE_NAME**します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -127,7 +127,7 @@ EXEC sp_tables ;
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. 指定したスキーマ内のテーブルに関する情報を返す  
- 次の例は、内のディメンション テーブルに関する情報を返します、`AdventureWorksPDW201`データベース。  
+ 次の例は、ディメンション テーブルに情報を返します、`AdventureWorksPDW201`データベース。  
   
 ```  
 -- Uses AdventureWorks  

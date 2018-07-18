@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c534b0114c3e54d9a3ecd17bdde03d779c7edc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0d0d154c844bd1afbcb4662b7e45f8a120de618
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955717"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351284"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] \(ピア ツー ピア レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "32955717"
 ## <a name="options"></a>および  
  **[トポロジの構成]** ページには、要素を右クリックすると表示されるインターフェイス要素およびオプションがあります。 次の表では、各インターフェイス要素を説明します。  
   
-|インターフェイス要素|Description|  
+|インターフェイス要素|[説明]|  
 |-----------------------|-----------------|  
 |デザイン画面|その他のインターフェイス要素を表示します。 要素を追加するには、デザイン画面を右クリックします。|  
 |![トポロジ内の最初のノード](../../relational-databases/replication/media/p2pwizard-firstnode.gif "トポロジ内の最初のノード")|トポロジの元のノード。 元のノードのパブリケーション データベースのコピーを使用して、新しいノードが初期化されます。|  

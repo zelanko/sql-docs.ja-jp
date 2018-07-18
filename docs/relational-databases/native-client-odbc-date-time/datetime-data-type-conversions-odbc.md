@@ -1,13 +1,12 @@
 ---
-title: datetime データ型変換 (ODBC) |Microsoft ドキュメント
+title: datetime データ型変換 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - bindings [ODBC]
 - ODBC, bindings and conversions
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39a6c79dee9d84ee85efd3b9d8b97b1ae82d081e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 451f379563b8705d027854f29bd04abbd3857e50
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943497"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424681"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime データ型変換 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +37,7 @@ ms.locfileid: "32943497"
   
 -   date 型の文字列の形式は 'yyyy-mm-dd' です。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細についてを参照してください「データ形式: 文字列とリテラルをデータする」の[ODBC の日付と時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)です。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、の「データ形式: 文字列とリテラルをデータする"セクションを参照してください。 [ODBC の日付と時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)します。  
   
  一般的な変換規則を次に示します。  
   
@@ -51,9 +49,9 @@ ms.locfileid: "32943497"
   
 -   サーバーの型にタイム ゾーンが存在しなくても、クライアントの型にタイム ゾーンがある場合、時刻は UTC に変換されてからサーバーに格納されます。  
   
--   時刻はあるが、受信側が時刻を格納できない場合、時刻部分は無視されます。  
+-   受信側が時刻を格納できない時間が存在する場合、時刻部分は無視されます。  
   
--   日付はあるが、受信側が日付を格納できない場合、日付部分は無視されます。  
+-   日付が存在する、受信側が日付を格納できない場合、日付部分は無視されます。  
   
 -   C データ型から SQL データ型に変換する際に秒または秒の小数部の切り捨てが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
   
@@ -67,6 +65,6 @@ ms.locfileid: "32943497"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型から C 型に変換する際に考慮する問題を示します。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

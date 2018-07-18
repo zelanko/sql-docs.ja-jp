@@ -2,7 +2,6 @@
 title: ConnectModeEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f35019573f17e49fea3bdec7bfe6afc17b844f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b89e379d85002fc58deb36a1b95d1b7457d4c8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277091"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 内のデータを変更するため利用可能なアクセス許可を指定、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、opening、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の値を指定するか、[モード](../../../ado/reference/ado-api/mode-property-ado.md)のプロパティ、 **レコード**と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|読み取り専用のアクセス許可を示します。|  
 |**adModeReadWrite**|3|読み取り/書き込みアクセス許可を示します。|  

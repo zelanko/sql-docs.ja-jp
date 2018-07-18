@@ -2,10 +2,10 @@
 title: データ ソース オブジェクト (OLE DB) |Microsoft ドキュメント
 description: データ ソース オブジェクト (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2eb3583366cf896ecf2382a5d2f36d1298e4c4a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a69fbb260c594ad095872049b06b1f7084bfc29b
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665652"
 ---
 # <a name="data-source-objects-ole-db"></a>データ ソース オブジェクト (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server などのデータ ストアへのリンクを確立するために使用する OLE DB インターフェイスのセットの用語のデータ ソースを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 OLE DB Driver for SQL Server コンシューマーの最初のタスクは、プロバイダーのデータ ソース オブジェクトのインスタンスを作成します。  
   
@@ -80,9 +83,9 @@ else
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [データ ソースのプロパティ (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [データ ソースのプロパティ&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
--   [データ ソース情報プロパティ](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
+-   [データ ソース情報のプロパティ](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   
 -   [初期化プロパティと承認プロパティ](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)  
   
@@ -90,7 +93,7 @@ else
   
 -   [セッションのプロパティ - OLE DB Driver for SQL Server](../../oledb/ole-db-data-source-objects/session-properties-oledb-driver-for-sql-server.md)  
   
--   [永続化されたデータ ソース オブジェクト](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
+-   [保存されるデータ ソース オブジェクト](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

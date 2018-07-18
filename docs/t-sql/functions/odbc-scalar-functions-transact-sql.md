@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -53,16 +52,16 @@ helpviewer_keywords:
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b17a85709bbb7a60badadabc1f18ff5fd688188d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc12292f373e1028e37050020dfcccff74e90ade
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055629"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783964"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "33055629"
   
 ### <a name="string-functions"></a>文字列関数  
   
-|機能|Description|  
+|機能|[説明]|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|文字列式の長さ (ビット単位) を返します。<br /><br /> 引数は文字列データ型に限定されません。 そのため、string_exp から文字列型への暗黙的な変換は実行されず、指定されたデータ型の (内部的な) サイズを返します。|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|string_exp1 に対して string_exp2 を連結した結果の文字列を返します。 結果の文字列は DBMS に依存します。 たとえば、string_exp1 に指定された列に NULL 値が格納されていた場合、DB2 では NULL が返されますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では非 NULL 文字列が返されます。|  
@@ -85,13 +84,13 @@ ms.locfileid: "33055629"
   
 ### <a name="numeric-function"></a>数値関数  
   
-|機能|Description|  
+|機能|[説明]|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|numeric_exp を、小数点の右側の integer_exp 桁までに切り詰めて返します。 integer_exp が負数の場合、numeric_exp は、小数点の左側 &#124;integer_exp&#124; 桁に切り詰められます。|  
   
 ### <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数  
   
-|機能|Description|  
+|機能|[説明]|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|現在の日付を返します。|  
 |CURDATE( ) (ODBC 3.0)|現在の日付を返します。|  

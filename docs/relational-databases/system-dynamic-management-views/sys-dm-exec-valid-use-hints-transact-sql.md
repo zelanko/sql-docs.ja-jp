@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_valid_use_hints (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_valid_use_hints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -23,23 +23,24 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: d1fb0ffed04c77e280d02378429cf769107bdfbc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987144"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>sys.dm_exec_valid_use_hints (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-返します[USE ヒント](../../t-sql/queries/hints-transact-sql-query.md)ヒント名をサポートします。 行ごとに 1 つのヒント名が一覧表示します。  
+返します[USE HINT](../../t-sql/queries/hints-transact-sql-query.md)ヒント名がサポートされています。 行ごとに 1 つのヒント名が一覧表示します。  
   
-USE ヒント表記法でサポートされているすべてのヒントの一覧を表示するのにには、この DMV を使用します。  
+この DMV を使用して、USE HINT 表記法でサポートされているすべてのヒントの一覧を参照してください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|ヒントの名前。|
+|NAME|**sysname**|ヒントの名前。|
 
-参照してください[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)のヒントごとの説明についてはします。
+参照してください[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)の各ヒントについて説明します。
 
 導入された[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。
   

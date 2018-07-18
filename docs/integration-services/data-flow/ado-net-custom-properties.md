@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d16d06518a5b58f768f4e87a4361d99b3e2796af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50c968acabb2432118d60bd19fb81c72fbe41d19
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334666"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET カスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、ADO NET ソースのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|Description|  
+|プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
 |CommandTimeOut|String|SQL コマンドがタイムアウトになる時間を秒数で指定する値です。値が 0 の場合、コマンドはタイムアウトになりません。|  
 |SqlCommand|String|ADO NET ソースがデータの抽出に使用する SQL ステートメントです。<br /><br /> パッケージを読み込むときに、ADO NET ソースが使用する SQL ステートメントでこのプロパティを動的に更新できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」をご覧ください。|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。 これらのプロパティは、 **[ADO.NET 変換先エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。  
   
-|プロパティ|データ型|Description|  
+|プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
 |BatchSize|Integer|サーバーに送信されるバッチ内の行数です。 値 **0** は、バッチ サイズが内部バッファーのサイズに一致することを示します。 このプロパティの既定値は **0**です。|  
 |CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  

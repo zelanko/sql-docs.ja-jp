@@ -1,5 +1,5 @@
 ---
-title: sp_prepare (Transact SQL) |Microsoft ドキュメント
+title: sp_prepare (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 08e1c0f988d480e7c0c98d0818591734574ece87
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036300"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  パラメーター化された準備[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント ステートメントを返しますと*処理*実行します。 sp_prepare は、ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットで 11 を = です。  
+  パラメーター化された準備[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントとステートメントを返します*処理*実行します。 sp_prepare は、ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットで 11 を = です。  
   
  ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,15 +49,15 @@ sp_prepare handle OUTPUT, params, stmt, options
  SQL Server によって生成される*準備済みハンドル*識別子。 *処理*必須のパラメーターには、 **int**値を返します。  
   
  *params*  
- パラメーター化されたステートメントを指定します。 *Params*変数の定義は、ステートメント内のパラメーター マーカーに置き換えられます。 *params*必須パラメーターですが、 **ntext**、 **nchar**、または**nvarchar**値を入力します。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
+ パラメーター化されたステートメントを指定します。 *Params*変数の定義は、ステートメント内のパラメーター マーカーの代わりに使用します。 *params*が必要なパラメーターです、 **ntext**、 **nchar**、または**nvarchar**値を入力します。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
   
  *stmt*  
- カーソル結果セットを定義します。 *Stmt*パラメーターが必要です、 **ntext**、 **nchar**、または**nvarchar**値を入力します。  
+ カーソル結果セットを定義します。 *Stmt*パラメーターは必須でありの呼び出し、 **ntext**、 **nchar**、または**nvarchar**値を入力します。  
   
  *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*int の次の入力値が必要です。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

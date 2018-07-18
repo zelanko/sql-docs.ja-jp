@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0fb3daaeaac3afc27abfacee4c9f596baaa01e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6460f20104e73a3a941a5fdda0145a5bd2124f1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405624"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列の値分布プロファイル要求]** のオプションを設定できます。 列の値分布プロファイルは、選択された列に含まれるすべての異なる値と、それぞれの値が表す行のテーブル内での比率を報告します。 また、テーブル内の指定された比率を超えている行の値も報告できます。 このプロファイルを使用すると、列に含まれる個別の値の数が正しくないなどのデータの問題を特定できます。 たとえば、米国の州の列をプロファイルし、50 個を超える個別の値を検出できます。  
@@ -75,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[Default]**|ソース テーブル内の列の照合順序に基づいてデータを並べ替えて比較します。|  
 |**[BinarySort]**|文字ごとに定義されているビット パターンに基づいてデータを並べ替えて比較します。 バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。|  
@@ -83,7 +82,7 @@ ms.lasthandoff: 05/03/2018
   
  **[DictionarySort]** を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**IgnoreCase**|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
 |**IgnoreNonSpace**|比較で、通常の文字と分音文字付きの文字を区別するかどうかを指定します。 このオプションを設定した場合、比較で分音文字は無視されます。 たとえば、"&#xE5;" は "a" と同じ文字になります。|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
  **[ValueDistributionOption]**  
  すべての列の値の分布を計算するかどうかを指定します。 このオプションの既定値は **[FrequentValues]** です。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[AllValues]**|すべての列の値の分布が計算されます。|  
 |**[FrequentValues]**|**[FrequentValueThreshold]** で指定した最小値を頻繁に超える値の分布のみが計算されます。 **[FrequentValueThreshold]** を満たさない値は出力レポートから除外されます。|  

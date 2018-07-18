@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6a3855b496d1c7986279f345ff42c2933a6d67b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c92d948cac44c58dfc6558fec62db5e19a3562a0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075659"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782583"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  *language_term* で指定した言語に対しては、単語区切りや語幹検索などのリソースが有効になっている必要があります。 指定した言語でこれらのリソースがサポートされていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返されます。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定のフルテキスト言語に関する情報を取得するには、sp_configure ストアド プロシージャを使用します。 詳細については、このトピックの「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定のフルテキスト言語に関する情報を取得するには、sp_configure ストアド プロシージャを使用します。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。  
   
  列のデータ型が BLOB および XML 以外で、複数の言語のテキスト データが含まれている場合や、列に格納されているテキストの言語が不明な場合は、ニュートラル (0x0) 言語リソースを使用することもできます。 ただしその前に、ニュートラル (0x0) 言語リソースを使用した場合にどのような結果が起こりうるのかを理解しておく必要があります。 ニュートラル (0x0) 言語リソースの使用について考えられる解決策と起こりうる結果については、「[フルテキスト インデックス作成時の言語の選択](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)」を参照してください。  
   

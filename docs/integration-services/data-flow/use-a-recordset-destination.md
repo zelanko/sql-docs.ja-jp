@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508deeca800867cfb24afc636d035f34f00ee98e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f7d21248c998d4d2d1be7470c77d2c7e18c05d1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410604"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
   レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **データ型の** パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  

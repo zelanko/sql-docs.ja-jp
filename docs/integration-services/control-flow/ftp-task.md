@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7ff7d1fcaa85ac4b53b1cde391bfb5dd6cbaf91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6918b56ec5335a25b9f0606b4646222df7ce9ee
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330896"
 ---
 # <a name="ftp-task"></a>FTP タスク
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-ftp-operations"></a>定義済みの FTP 操作  
  FTP タスクには、定義済みの操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
-|操作|Description|  
+|操作|[説明]|  
 |---------------|-----------------|  
 |ファイルの送信|ローカル コンピューターのファイルを FTP サーバーに送信します。|  
 |ファイルの受信|FTP サーバーのファイルをローカル コンピューターに保存します。|  
@@ -69,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP タスクで使用できるカスタム ログ エントリ  
  次の表は、FTP タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|Description|  
+|ログ エントリ|[説明]|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|タスクで FTP サーバーへの接続が開始されたことを示します。|  
 |**FTPOperation**|タスクで実行された FTP 操作の開始および種類を報告します。|  
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
  **操作**  
  実行する FTP 操作を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
 |**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  

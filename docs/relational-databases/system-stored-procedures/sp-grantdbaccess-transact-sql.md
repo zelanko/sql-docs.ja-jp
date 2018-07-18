@@ -1,5 +1,5 @@
 ---
-title: sp_grantdbaccess (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_grantdbaccess (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 6e62b1b4a05ade827c03ac0514cdd5545fa784db
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258263"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037800"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33258263"
   現在のデータベースにデータベース ユーザーを追加します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,24 +48,24 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@loginame =** ]  **'* * * ログイン* **'** Windows ログイン、Windows グループの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいデータベースにマップされるログインユーザー。Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ログイン * です。 たとえば、 **london \joeb**です。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
+ [  **@loginame =** ]  **'* * * ログイン* **'** Windows ログイン、Windows グループの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいデータベースにマップされるログインユーザー。Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ログイン *; たとえば、 **\joeb**します。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
   
  [  **@name_in_db=**] **'***name_in_db***'** **[出力]**  
- 新しいデータベース ユーザーの名前です。 *name_in_db* OUTPUT 変数のデータ型では、 **sysname**、および既定値は NULL です。 指定しない場合、*ログイン*を使用します。 値は NULL の場合、出力変数として指定されている場合**@name_in_db**に設定されている*ログイン*です。 *name_in_db*現在のデータベースに既に存在する必要があります。  
+ 新しいデータベース ユーザーの名前です。 *name_in_db* OUTPUT 変数のデータ型では、 **sysname**、および既定値は NULL です。 指定しない場合、*ログイン*使用されます。 値は null の場合、出力変数として指定されている場合**@name_in_db**に設定されている*ログイン*します。 *name_in_db*現在のデータベースに既に存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_grantdbaccess**呼び出しユーザーの作成、追加のオプションがサポートされます。 データベース ユーザーを作成する方法の詳細については、次を参照してください。 [CREATE USER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)です。 データベースからデータベース ユーザーを削除するには、使用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)です。  
+## <a name="remarks"></a>コメント  
+ **sp_grantdbaccess**呼び出しユーザーの作成、追加のオプションがサポートされます。 データベース ユーザーを作成する方法の詳細については、次を参照してください。 [CREATE USER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)します。 データベースからデータベース ユーザーを削除するには使用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)します。  
   
  **sp_grantdbaccess**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **db_owner**固定データベース ロール、または**db_accessadmin**固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **db_owner**固定データベース ロール、または**db_accessadmin**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`CREATE USER`Windows ログインのデータベース ユーザーを追加する`Edmonds\LolanSo`現在のデータベースにします。 新しいユーザーの名前は `Lolan` です。 データベース ユーザーの作成には、この方法を使用することをお勧めします。  
+ 次の例では`CREATE USER`Windows ログインのデータベース ユーザーを追加する`Edmonds\LolanSo`現在のデータベースにします。 新しいユーザーの名前は `Lolan` です。 データベース ユーザーの作成には、この方法を使用することをお勧めします。  
   
 ```  
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
@@ -75,7 +75,7 @@ GO
 ## <a name="see-also"></a>参照  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [DROP USER & #40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

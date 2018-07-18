@@ -2,7 +2,6 @@
 title: RelatedTable プロパティ (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 363f6ee1ceb90bf7328122d8e1e2e192a966ec6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8482cd8694058b1f3e4a29d0c1aed25640515d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286808"
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable プロパティ (ADOX)
 関連テーブルの名前を示します。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定を返します、**文字列**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  既定値は空の文字列 ("") です。  
   
  する場合は、キー、外部キーを**RelatedTable**キーを含むテーブルの名前を指定します。  

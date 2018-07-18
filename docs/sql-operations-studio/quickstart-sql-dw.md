@@ -13,12 +13,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 2f0ad75a6be9cb3ad1404a0406601fbef68b0303
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 8439dd5881629a5761b1a7a5581489ee47296358
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235512"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980494"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して、Azure SQL Data Warehouse に接続しデータを照会する
 
@@ -30,7 +30,7 @@ ms.locfileid: "34235512"
 - [[!INCLUDE[name-sos](../includes/name-sos-short.md)]のインストール](download.md)。
 
 
-SQL データ ウェアハウスをもっていない場合は [SQL データ ウェアハウスを作成](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision) を参照してください。
+SQL データ ウェアハウスをもっていない場合は [SQL データ ウェアハウスを作成](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision) を参照してください。
 
 サーバー名、およびログイン資格情報を覚えておくようにしてください。
 
@@ -39,34 +39,34 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して、Azure SQL Data Warehouse に接続しデータを照会する
 
-1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ページを開く必要があります。 表示されない場合、**接続**] ページで [**接続の追加**、または**新しい接続**のアイコン、**サーバー**サイドバー。
+1. [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初回実行時には **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、**[接続の追加]**、または **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
    
    ![新しい接続のアイコン](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. この記事では*SQL ログイン*が*Windows 認証*もサポートされています。 次のようにサーバー名、ユーザー名およびパスワードを使用して、フィールドに入力 *、* Azure SQL server:
+2. この記事では*SQL ログイン*を使用しますが、*Windows 認証*もサポートされています。 Azure SQL サーバーのサーバー名、ユーザー名およびパスワードを使用して *、* 次のようにフィールドに入力します。
 
    | 設定       | 提案される値 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **サーバー名** | 完全修飾サーバー名 | 名前には、次のようにする必要があります: **sqldwsample.database.windows.net** |
+   | **サーバー名** | 完全修飾サーバー名 | 名前は、このようなものでなければなりません: **sqldwsample.database.windows.net** |
    | **[認証]** | SQL ログイン| このチュートリアルでは、SQL 認証を使用します。 |
    | **ユーザー名** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
    | **パスワードを保存しますか?** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
    | **データベース名** | *空白のままに* | 接続先となるデータベースの名前。 |
-   | **サーバー グループ** | 選択します。 <Default> | サーバー グループを作成する場合は、特定のサーバー グループを設定できます。 | 
+   | **サーバー グループ** | 選択します <Default> | サーバー グループを作成する場合は、特定のサーバー グループに設定できます。 | 
 
    ![新しい接続のアイコン](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. サーバーに接続する、SQL Operations Studio を許可するファイアウォール規則を持っていない場合、**新しいファイアウォール ルールを作成**フォームが開きます。 新しいファイアウォール ルールを作成するフォームを完了します。 詳細については、「[のファイアウォール ルール](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)です。
+3. サーバーに SQL Operations Studio の接続を許可するファイアウォール規則が設定されていない場合、**[新しいファイアウォール規則の作成]** フォームが開きます。 フォームを完成させて新しいファイアウォール規則を作成します。 詳細については、[ファイアウォール規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)を参照してください。
 
    ![新しいファイアウォール規則](media/quickstart-sql-dw/firewall.png)  
 
-4. サーバーへの接続が開いた後、*サーバー*サイドバーです。
+4. サーバーの接続が正常に開いたら、*サーバー*サイドバーです。
 
-## <a name="create-the-tutorial-data-warehouse"></a>チュートリアルのデータ ウェアハウスを作成します。
+## <a name="create-the-tutorial-data-warehouse"></a>チュートリアルの data warehouse を作成します。
 1. オブジェクト エクスプ ローラーで、サーバーを右クリックし、選択**新しいクエリ。**
 
-1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+1. クエリ エディターに次のスニペットを貼り付けて、をクリックして**実行**:
 
    ```sql
     IF NOT EXISTS (
@@ -84,17 +84,17 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
 
 ## <a name="create-a-table"></a>テーブルの作成
 
-クエリ エディター接続が失われて、*マスター*にテーブルを作成するデータベースですが、 *TutorialDB*データベース。 
+クエリ エディターの接続状態を*マスター*でテーブルを作成するデータベースが、 *TutorialDB*データベース。 
 
 1. 接続コンテキストを変更する**TutorialDB**:
 
-   ![変更のコンテキスト](media/quickstart-sql-database/change-context.png)
+   ![コンテキストの変更](media/quickstart-sql-database/change-context.png)
 
 
-1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+1. クエリ エディターに次のスニペットを貼り付けて、をクリックして**実行**:
 
    > [!NOTE]
-   > これを追加したり、エディターでは、前のクエリを上書きできます。 クリックすると**実行**が選択されているクエリのみを実行します。 何も選択されている場合にクリックすると**実行**エディター内のすべてのクエリを実行します。
+   > これには、追加したり、エディターで上記のクエリを上書きできます。 クリックする**実行**が選択されている、クエリを実行します。 何も選択されている場合は、クリックして**実行**エディター内のすべてのクエリを実行します。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -116,7 +116,7 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
 
 ## <a name="insert-rows"></a>行を挿入する
 
-1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+1. クエリ エディターに次のスニペットを貼り付けて、をクリックして**実行**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -129,8 +129,8 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
    ```
 
 
-## <a name="view-the-result"></a>結果を表示します。
-1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+## <a name="view-the-result"></a>結果を表示します
+1. クエリ エディターに次のスニペットを貼り付けて、をクリックして**実行**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -139,15 +139,15 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
 
 1. クエリの結果が表示されます。
 
-   ![Select の結果](media/quickstart-sql-dw/select-results.png)
+   ![結果を選択します。](media/quickstart-sql-dw/select-results.png)
 
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップします。
 
-このコレクション内の他の記事は、このクイック スタートに基づいて構築します。 後続のクイック スタートの操作を続行する場合は、このクイック スタートで作成されたリソースをクリーンアップしないでください。 続行する予定がない場合は、Azure ポータルでこのクイック スタートで作成されたリソースを削除する、次の手順を使用します。
-不要になったリソース グループを削除することによって、リソースをクリーンアップします。 詳細については、「[リソースをクリーンアップ](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources)です。
+このコレクション内の他の記事では、このクイック スタートに基づいて構築します。 引き続きクイック スタートで作業する場合は、このクイック スタートで作成したリソースをクリーンアップしないでください。 続行する予定がない場合、次の手順を使用して、Azure portal でこのクイック スタートで作成したリソースを削除します。
+不要になったリソース グループを削除することによって、リソースをクリーンアップします。 詳細については、次を参照してください。[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)します。
 
 
 ## <a name="next-steps"></a>次の手順
 
-わかったらした Azure SQL データ ウェアハウスに正常に接続してクエリを実行すること、[コード エディターのチュートリアル](tutorial-sql-editor.md)です。
+これで、Azure SQL data warehouse に正常に接続したクエリを実行して、試し、[コード エディターのチュートリアル](tutorial-sql-editor.md)します。

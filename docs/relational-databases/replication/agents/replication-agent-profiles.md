@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 895b474a43d8112c8ff14d4a1aab7f3b3ae07dd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a035f00e7d0837c547395c06049c0b002e8b396
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956967"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352834"
 ---
 # <a name="replication-agent-profiles"></a>レプリケーション エージェント プロファイル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32956967"
  1 つのエージェントの別々のインスタンスに対して、別々のプロファイルを設定することもできます。 たとえば、ダイヤルアップ接続を介してパブリッシャーおよびディストリビューターに接続するマージ エージェントは、 **低速リンク** プロファイルを使用して低速の通信リンクに適したパラメーター セットを使用することができます。  
   
 > [!NOTE]  
->  コマンド ラインでエージェント パラメーターの値を指定した場合、その値はエージェント プロファイルの同じパラメーターの設定値より優先されます。  
+>  コマンド ラインでエージェント パラメーターの値を指定した場合、その値はエージェント プロファイルの同じパラメーターの設定値をオーバーライドします。  
   
  **エージェント プロファイルを使用および変更するには**  
   
@@ -63,7 +62,7 @@ ms.locfileid: "32956967"
   
 ||既定値 (default)|詳細履歴|  
 |-|-------------|---------------------|  
-|**-HistoryVerboseLevel**|@shouldalert|2|  
+|**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
 |**-LogScanThreshold**|500000|500000|  
 |**-PollingInterval**|5|5|  
@@ -78,10 +77,10 @@ ms.locfileid: "32956967"
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
 |**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
-|**-HistoryVerboseLevel**|@shouldalert|2|@shouldalert|@shouldalert|@shouldalert|  
+|**-HistoryVerboseLevel**|1|2|1|1|1|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
-|**-MaxBcpThreads**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
 |**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
 |**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
@@ -98,28 +97,28 @@ ms.locfileid: "32956967"
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
-|**-DestThreads**|2|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4|  
-|**-DownloadGenerationsPerBatch**|50|50|50|50|50|@shouldalert|500|  
+|**-DestThreads**|2|1|1|1|1|1|4|  
+|**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  
 |**-DownloadWriteChangesPerBatch**|100|100|100|100|100|100|100|  
-|**-FastRowCount**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
-|**-HistoryVerboseLevel**|2|3|@shouldalert|@shouldalert|2|@shouldalert|2|  
+|**-FastRowCount**|1|1|1|1|1|1|1|  
+|**-HistoryVerboseLevel**|2|3|1|1|2|1|2|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|15|15|  
 |**-MaxDownloadChanges**|0|0|0|0|0|0|0|  
 |**-MaxUploadChanges**|0|0|0|0|0|0|0|  
-|**-MetadataRetentionCleanup**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**-MetadataRetentionCleanup**|1|1|1|1|1|1|1|  
 |**-NumDeadlockRetries**|5|5|5|5|5|5|5|  
-|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|@shouldalert|  
+|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|1|  
 |**-PollingInterval**|60|60|60|60|60|60|60|  
 |**-QueryTimeout**|300|300|300|300|300|300|600|  
 |**-QueueSizeMultiplier**|NULL|NULL|NULL|NULL|NULL|NULL|5|  
-|**-SrcThreads**|2|2|2|2|2|@shouldalert|3|  
+|**-SrcThreads**|2|2|2|2|2|1|3|  
 |**-StartQueueTimeout**|0|0|0|0|0|0|0|  
-|**-UploadGenerationsPerBatch**|50|50|50|50|50|@shouldalert|500|  
+|**-UploadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-UploadReadChangesPerBatch**|100|100|100|100|100|100|100|  
 |**-UploadWriteChangesPerBatch**|100|100|100|100|100|100|100|  
-|**-Validate**|0|0|0|@shouldalert|3|0|0|  
+|**-Validate**|0|0|0|1|3|0|0|  
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
 ## <a name="queue-reader-agent-profiles"></a>キュー リーダー エージェント プロファイル  
@@ -127,7 +126,7 @@ ms.locfileid: "32956967"
   
 ||既定値 (default)|  
 |-|-------------|  
-|**-HistoryVerboseLevel**|@shouldalert|  
+|**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  

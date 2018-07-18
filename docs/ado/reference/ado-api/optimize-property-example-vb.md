@@ -2,7 +2,6 @@
 title: プロパティの例 (VB) を最適化 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881d332c6f7e1ac0f74a54dcacc7e9e7e3382006
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b750a30030d3f37e0b53af36001fa10929756a4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280001"
 ---
 # <a name="optimize-property-example-vb"></a>プロパティの例 (VB) の最適化します。
 この例で、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの動的**最適化**プロパティです。 ***Zip***のフィールド、***作成者***テーブルに、 ***Pubs***データベースのインデックスが付いていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 ***zip***フィールド承認のパフォーマンスを向上させるインデックスを作成する ADO、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッドです。  

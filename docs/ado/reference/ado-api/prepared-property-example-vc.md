@@ -2,7 +2,6 @@
 title: 準備ができているプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bb83e983f79a38bc4926053017a82735029b64b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4aeb945af1a75c28e4849f4736064fdb50d63d8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280771"
 ---
 # <a name="prepared-property-example-vc"></a>準備済みのプロパティの例 (vc++)
 この例を示します、 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)を開いて、2 つのプロパティ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト: 準備された 1 つ、準備されていません。  

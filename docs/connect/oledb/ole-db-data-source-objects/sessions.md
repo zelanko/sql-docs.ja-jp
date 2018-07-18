@@ -2,10 +2,10 @@
 title: セッション |Microsoft ドキュメント
 description: OLE DB Driver for SQL Server でのセッション
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d5aed67da19db68097f57f689ad0a26692d75f63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bc74a5ee3fb461f641e55f3fdf9e9d540130f67
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666172"
 ---
 # <a name="sessions"></a>セッション
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server セッションのインスタンスへの接続を 1 つを表す[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
   
@@ -191,6 +194,6 @@ EXIT:
 >  前の例で、 **IDBCreateCommand**ために、インターフェイスが使用される、 **ICommand**インターフェイスを実装して、 **GetDBSession**メソッド、オブジェクトが作成されたセッションを許可するコマンドまたは行セットのスコープ内の唯一の方法です。 したがって、コマンド オブジェクトを使用すると、追加のセッションを作成できるデータ ソース オブジェクト ポインターをアプリケーションで取得できます。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース オブジェクト &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データ ソース オブジェクト&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

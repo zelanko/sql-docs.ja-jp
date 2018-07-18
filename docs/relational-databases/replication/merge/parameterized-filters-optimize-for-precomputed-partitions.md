@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f094b8701172ece034c53ebad5f07b45fa3c207c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bd89a336eb0797d67f22c5f534ce06bd96caf50
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960257"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359344"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>パラメーター化されたフィルター - 事前計算済みパーティションの最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "32960257"
   
 -   HOST_NAME() や SUSER_SNAME() など、パラメーター化された行フィルターで使用する関数はパラメーター化されたフィルター句に直接記述してください。ビューまたは動的関数の内部で入れ子にすることはできません。 これらの関数の詳細については、「[HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)、「[SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md)」、および「[パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
--   パーティションの作成後、各サブスクライバーに返される値を変更することはできません。 たとえば、フィルターで HOST_NAME() を使用する場合 (および HOST_NAME() の値を上書きしない場合)、サブスクライバーでコンピューター名を変更しないでください。  
+-   パーティションの作成後、各サブスクライバーに返される値を変更することはできません。 たとえば、フィルターで HOST_NAME() を使用する場合 (および HOST_NAME() の値をオーバーライドしない場合)、サブスクライバーでコンピューター名を変更しないでください。  
   
 -   結合フィルターに動的関数 (HOST_NAME() や SUSER_SNAME() など、同期するサブスクライバーによって異なる値に評価される関数) を含めることはできません。 動的関数はパラメーター化された行フィルターでのみ使用できます。  
   
@@ -74,6 +73,6 @@ ms.locfileid: "32960257"
  事前計算済みパーティションを使用する場合、サブスクライバーからパブリッシャーに変更内容をアップロードするときに若干のパフォーマンス コストがかかります。ただし、マージ処理に必要な時間の大部分は、パーティションの評価とパブリッシャーからサブスクライバーへの変更内容のダウンロードに費やされます。したがって、全体としてはパフォーマンスが大きく向上します。 パフォーマンスがどの程度向上するかは、同時に同期するサブスクライバーの数、およびあるパーティションから別のパーティションに行を移動する同期ごとの更新数によって異なります。  
   
 ## <a name="see-also"></a>参照  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

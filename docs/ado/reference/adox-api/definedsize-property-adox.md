@@ -2,7 +2,6 @@
 title: DefinedSize プロパティ (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 522f1124f2c6f943b88a8c28b776707b2431122b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 291065218fc76fa60875a408714f789747983ac2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285541"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize プロパティ (ADOX)
 列の指定された最大サイズを示します。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定を返します、**長い**値は、データ値の文字の最大数です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  既定値は、ゼロ (0) です。  
   
  このプロパティは読み取り専用です[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトをコレクションに既に追加されています。  

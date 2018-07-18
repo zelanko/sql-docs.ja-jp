@@ -2,7 +2,6 @@
 title: LoadFromFile メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ade472c2b209c3e2d03a172eb66ad7a550f31ef5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 859c4cd31c3a2da8ff42fed470e5651ac568619b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279281"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile メソッド (ADO)
 既存のファイルの内容を読み込みます、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)です。  
@@ -40,7 +40,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  A**文字列**に読み込まれるファイルの名前を表す値、**ストリーム**です。 *FileName*任意の有効なパスと UNC 形式で名前を含めることができます。 指定したファイルが存在しない場合は、実行時エラーが発生します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このメソッドにローカル ファイルの内容を読み込みに使用できます、**ストリーム**オブジェクト。 ローカル ファイルの内容をサーバーにアップロードするために使用できます。  
   
  **ストリーム**オブジェクトの呼び出しの前に開いているが既にあります**LoadFromFile**です。 このメソッドのバインドを変更していない、**ストリーム**オブジェクトはまだ URL で指定されたオブジェクトにバインドされますまたは**レコード**を**ストリーム**もともと開かれます。  

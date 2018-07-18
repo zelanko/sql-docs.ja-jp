@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc3eb789b9f69196b2bb963ec714d5b94ec4f20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28267ea6dddecd2becf6bb656a6da2b51bba54ff
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402444"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
   **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換先が使用する SAP BW 接続マネージャーを選択できます。 このページでは、SAP Netweaver BW システムにデータを読み込むためのパラメーターも選択します。  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  **型**  
  インフォソースの種類を識別する 1 文字を入力します。 指定できる 1 文字の値の一覧を次の表に示します。  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**D**|トランザクション データ|  
 |**M**|マスター データ|  

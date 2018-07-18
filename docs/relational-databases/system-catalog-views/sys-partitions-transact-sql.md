@@ -1,5 +1,5 @@
 ---
-title: sys.partitions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.partitions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4902bca55295c2e6e870e2f3488cc178c0f771fa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001052"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   データベース内のすべてのテーブルとほとんどの種類のインデックスのパーティションごとに 1 行のデータを保持します。 フルテキスト、空間、XML などの特殊な種類のインデックスは、このビューには含まれません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルとインデックスは、明示的にパーティション分割されているかどうかに関係なく、1 つ以上のパーティションが保持されているものと見なされます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|パーティション ID を示します。 データベース内で一意です。|  
 |object_id|**int**|このパーティションが所属するオブジェクトの ID を示します。 すべてのテーブルまたはビューは 1 つ以上のパーティションで構成されます。|  
@@ -45,10 +46,10 @@ ms.lasthandoff: 05/04/2018
 |hobt_id|**bigint**|このパーティションの行を保持するデータ ヒープまたは B ツリーの ID を示します。|  
 |rows|**bigint**|このパーティション内の行の概数を示します。|  
 |filestream_filegroup_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> このパーティションに格納された FILESTREAM ファイル グループの ID を示します。|  
-|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 列ストア:**対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**対象**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **注:** の任意のエディションでフルテキスト インデックスが圧縮される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 列ストア:**に適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**に適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **注:** の任意のエディションでフルテキスト インデックスが圧縮される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |data_compression_desc|**nvarchar(60)**|各パーティションの圧縮状態を示します。 行ストア テーブルに指定できる値は、NONE、ROW、および PAGE です。 列ストア テーブルに指定できる値は COLUMNSTORE および COLUMNSTORE_ARCHIVE です。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

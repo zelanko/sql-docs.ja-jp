@@ -25,15 +25,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 083af55f2629a14f2ad28b293bb84ea9184a0345
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998144"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間データは - sys.dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間データの sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  インデックスとの互換性レベルを変更した結果として無効になる制約一覧[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 保存される計算列が含まれているインデックスまたは制約があり、計算式に空間 UDT が使用されている場合に、互換性レベルをアップグレードまたは変更すると、このインデックスまたは制約は無効になります。 この動的管理関数は、互換性レベルの変更の影響を調べる際に使用します。  
+  インデックスとの互換性レベルを変更した結果として無効になる制約一覧[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 保存される計算列が含まれているインデックスまたは制約があり、計算式に空間 UDT が使用されている場合に、互換性レベルをアップグレードまたは変更すると、このインデックスまたは制約は無効になります。 この動的管理関数は、互換性レベルの変更の影響を調べる際に使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,11 +46,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="Arguments"></a> 引数  
  *compatibility_level*  
- **int**設定を計画している、互換性レベルを識別します。  
+ **int**を設定する互換性レベルを識別します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
 |**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスとヒープの場合は INDEX|  
@@ -67,7 +68,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  保存される計算列の式で次の関数が使用されている場合、互換性レベルが 100 から 110 以上に変更されると、これらの列を参照するインデックスと制約が無効になります。  
   
--   **soundex**  
+-   **Soundex**  
   
 -   **Geography:: GeomFromGML**  
   
@@ -114,13 +115,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 -   **Geography:: を減らす**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>無効になったオブジェクトの動作  
- **インデックス**  
+ **[インデックス]**  
   
- クラスター化インデックスが無効になっているか、非クラスター化インデックスが強制された場合、次のエラーが発生する場合:"、クエリ プロセッサは、プランを作成することは、インデックス ' % です。\*'%.*ls' のテーブルまたはビューで ' % です。\*'%.*ls' が無効です"。 これらのオブジェクトを再度有効に、インデックスを再構築のアップグレード後に呼び出すことによって**ALTER INDEX ON しています.再構築**です。  
+ クラスター化インデックスが無効になっているか、非クラスター化インデックスを強制すると、次のエラーが発生します:"、クエリ プロセッサはプランを作成することは、インデックス ' % です。\*ls' テーブルまたはビュー ' % です。\*ls' が無効になっています"。 これらのオブジェクトを再度有効にするには、呼び出すことによってアップグレード後に、インデックスをリビルドします**ALTER INDEX ON しています.。再構築**します。  
   
  **ヒープ**  
   
- 無効になったヒープが含まれているテーブルを使用すると、次のエラーが発生します。 呼び出してアップグレード後に再構築すると、これらのオブジェクトを再度有効にするには、**インデックスのすべての変更.再構築**です。  
+ 無効になったヒープが含まれているテーブルを使用すると、次のエラーが発生します。 呼び出してアップグレード後に再構築すると、これらのオブジェクトを再度有効にするには、**インデックスのすべての変更.再構築**します。  
   
 ```  
 // ErrorNumber: 8674  
@@ -137,19 +138,19 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Check 制約と外部キー**  
   
- 無効になった CHECK 制約と外部キーを使用しても、エラーは発生しません。 ただし、行が変更されても、制約は適用されません。 これらのオブジェクトを再度有効にするを呼び出すことによってアップグレードした後、制約をチェック**ALTER TABLE.CHECK 制約**です。  
+ 無効になった CHECK 制約と外部キーを使用しても、エラーは発生しません。 ただし、行が変更されても、制約は適用されません。 これらのオブジェクトを再度有効にするには、呼び出すことによってアップグレードした後、制約を確認します**ALTER TABLE.。CHECK 制約**します。  
   
  **保存される計算列**  
   
  1 つの列を無効にすることはできないので、クラスター化インデックスまたはヒープを無効にすると、テーブル全体が無効になります。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="example"></a>例  
- 次の例のクエリを示しています**sys.dm_db_objects_disabled_on_compatibility_level_change**を互換性レベルを 120 に変更することによって影響を受けるオブジェクトを検索します。  
+ 次の例ではクエリを示します**sys.dm_db_objects_disabled_on_compatibility_level_change**互換性レベル 120 に変更によって影響を受けるオブジェクトを検索します。  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

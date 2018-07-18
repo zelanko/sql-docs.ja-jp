@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -36,11 +34,12 @@ caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e7a04bc86317e2ceb04a4b2ae1e7fcff40470e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aebf427b093a860122ace5c21f1a887dac331525
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331456"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
   Foreach ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **Foreach** ループ構造と同様です。 パッケージでは、ループは Foreach 列挙子を使用することで有効になります。  Foreach ループ コンテナーは、指定した列挙子のメンバーが処理されるたびに制御フローを繰り返します。  
@@ -203,7 +202,7 @@ ms.lasthandoff: 05/03/2018
  **列挙子**  
  列挙子の型を一覧から選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[Foreach File 列挙子]**|ファイルを列挙します。 この値を選択すると、セクション **[Foreach File 列挙子]** に動的オプションが表示されます。|  
 |**[Foreach Item 列挙子]**|アイテム内の値を列挙します。 この値を選択すると、セクション **[Foreach Item 列挙子]** に動的オプションが表示されます。|  
@@ -344,7 +343,7 @@ ms.lasthandoff: 05/03/2018
  **[DocumentSourceType]**  
  XML ドキュメントのソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 05/03/2018
  **[EnumerationType]**  
  一覧から列挙型を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[Navigator]**|XPathNavigator を使用して列挙します。|  
 |**[Node]**|XPath 操作によって返されたノードを列挙します。|  
@@ -374,7 +373,7 @@ ms.lasthandoff: 05/03/2018
  **[OuterXPathStringSourceType]**  
  XPath 文字列のソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。 
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -397,7 +396,7 @@ ms.lasthandoff: 05/03/2018
  **[InnerXPathStringSourceType]**  
  内部 XPath 文字列のソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  

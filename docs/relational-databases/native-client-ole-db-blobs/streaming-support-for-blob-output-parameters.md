@@ -1,29 +1,27 @@
 ---
-title: 出力パラメーターを BLOB のストリーミング サポート |Microsoft ドキュメント
+title: 出力パラメーターの BLOB のストリーミング サポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 822c7da502e5aa7dce6d6964048314918de7f656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6a00b9f21fcbd6e83844f727c4352d9a890c94d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947047"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415510"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 出力パラメーターのストリーミング サポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -517,6 +515,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>参照  
- [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+ [BLOB と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
   

@@ -2,10 +2,10 @@
 title: ローカル トランザクションのサポート |Microsoft ドキュメント
 description: SQL Server の OLE DB Driver でローカル トランザクション
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: de00c4aac3125209bb56a1867f07b1f395804cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689365"
 ---
 # <a name="supporting-local-transactions"></a>ローカル トランザクションのサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   セッションでは、OLE DB 用のドライバーを SQL Server のローカル トランザクションのトランザクション スコープを区切ります。 ときに、コンシューマーの方向で、OLE DB Driver for SQL Server に送信した要求のインスタンスに接続[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]要求は、OLE DB Driver for SQL Server の作業の単位を構成します。 ローカル トランザクションは常に、SQL Server セッションの 1 つ OLE DB ドライバーの作業の 1 つまたは複数の単位をラップします。  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server の OLE DB ドライバーをサポートしている**itransactionlocal::starttransaction**パラメーターは次のようにします。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*isoLevel*[in]|このトランザクションで使用する分離レベルを指定します。 ローカル トランザクションの場合に、OLE DB Driver for SQL Server には、以下がサポートしています。<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注: が始まる[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、ISOLATIONLEVEL_SNAPSHOT は有効、 *isoLevel*データベースのバージョン管理が有効になっているかどうかの引数。 ただし、ユーザーがステートメントを実行する際に、バージョン管理が有効か、データベースが読み取り専用の場合は、エラーが発生します。 として ISOLATIONLEVEL_SNAPSHOT を指定する場合に XACT_E_ISOLATIONLEVEL エラーが発生するさらに、 *isoLevel*のバージョンに接続しているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。|  
 |*アイソレーション*[in]|SQL Server の OLE DB Driver は、0 以外の値のエラーを返します。|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  ローカル トランザクションの場合、OLE DB Driver for SQL Server を実装する**itransaction::abort**パラメーターは次のようにします。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*pboidReason*[in]|設定しても無視されます。 NULL を指定しても問題ありません。|  
 |*:commit*[in]|TRUE のときは、セッションの新しいトランザクションが暗黙的に開始されます。 このトランザクションは、コンシューマーがコミットまたは終了する必要があります。 FALSE の場合、OLE DB Driver for SQL Server は、セッションの自動コミット モードに戻ります。|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  ローカル トランザクションの場合、OLE DB Driver for SQL Server を実装する**itransaction::commit**パラメーターは次のようにします。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*:commit*[in]|TRUE のときは、セッションの新しいトランザクションが暗黙的に開始されます。 このトランザクションは、コンシューマーがコミットまたは終了する必要があります。 FALSE の場合、OLE DB Driver for SQL Server は、セッションの自動コミット モードに戻ります。|  
 |*grfTC*[in]|非同期応答と 1 フェーズはサポートされていません、OLE DB Driver for SQL Server。 SQL Server の OLE DB Driver は、XACTTC_SYN 以外の値を XACT_E_NOTSUPPORTED を返します。|  
@@ -132,6 +135,6 @@ if (FAILED(hr))
   
 ## <a name="see-also"></a>参照  
  [トランザクション](../../oledb/ole-db-transactions/transactions.md)   
- [スナップショット分離の使用](../../oledb/features/working-with-snapshot-isolation.md)  
+ [スナップショット分離を使用した作業](../../oledb/features/working-with-snapshot-isolation.md)  
   
   

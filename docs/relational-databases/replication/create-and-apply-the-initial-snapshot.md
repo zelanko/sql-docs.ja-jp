@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dca228017f3ef4efff0309ac5f6b1af0a9006e97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53f6387ed588c810584e8d364a4ee232d4e67c35
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957034"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351724"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +162,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
 ```  
   
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
- スナップショット エージェントは、パブリッシャーが作成された後でスナップショットを生成します。 レプリケーション管理オブジェクト (RMO) およびレプリケーション エージェント機能への直接的なマネージ コード アクセスを使用して、これらのスナップショットをプログラムで生成できます。 使用するオブジェクトは、レプリケーションの種類によって異なります。 スナップショット エージェントを同期的に開始する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> オブジェクトを使用し、非同期的に開始する場合はエージェント ジョブを使用します。 初期スナップショットの生成後、サブスクリプションを最初に同期するときに、初期スナップショットをサブスクライバーに転送して適用することができます。 既存のスナップショットに最新の有効なデータが含まれていない場合は、エージェントを再実行する必要があります。 詳細については、「[Maintain Publications](../../relational-databases/replication/publish/maintain-publications.md)」(パブリケーションの管理) を参照してください。  
+ スナップショット エージェントは、パブリッシャーが作成された後でスナップショットを生成します。 レプリケーション管理オブジェクト (RMO) およびレプリケーション エージェント機能への直接的なマネージド コード アクセスを使用して、これらのスナップショットをプログラムで生成できます。 使用するオブジェクトは、レプリケーションの種類によって異なります。 スナップショット エージェントを同期的に開始する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> オブジェクトを使用し、非同期的に開始する場合はエージェント ジョブを使用します。 初期スナップショットの生成後、サブスクリプションを最初に同期するときに、初期スナップショットをサブスクライバーに転送して適用することができます。 既存のスナップショットに最新の有効なデータが含まれていない場合は、エージェントを再実行する必要があります。 詳細については、「[Maintain Publications](../../relational-databases/replication/publish/maintain-publications.md)」(パブリケーションの管理) を参照してください。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  

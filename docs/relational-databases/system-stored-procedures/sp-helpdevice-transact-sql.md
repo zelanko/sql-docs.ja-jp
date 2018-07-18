@@ -1,5 +1,5 @@
 ---
-title: sp_helpdevice (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpdevice (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 041cd12fe621a8f74b60b81d7a8964752caa4fde
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242800"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049300"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,32 +48,32 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 ## <a name="arguments"></a>引数  
  [ **@devname =** ] **'***name***'**  
- 情報をレポートするバックアップ デバイスの名前を指定します。 値*名前*は常に**sysname**です。  
+ 情報をレポートするバックアップ デバイスの名前を指定します。 値*名前*は常に**sysname**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|論理デバイス名|  
 |**physical_name**|**nvarchar(260)**|物理ファイル名|  
-|**説明**|**nvarchar (255)**|デバイスの説明|  
-|**ステータス**|**int**|ステータスの説明に対応する番号、**説明**列です。|  
+|**description**|**nvarchar (255)**|デバイスの説明|  
+|**status**|**int**|ステータスの説明に対応する番号、**説明**列。|  
 |**cntrltype**|**smallint**|デバイスのコントローラーの種類<br /><br /> 2 = ディスク デバイス<br /><br /> 5 = テープ デバイス|  
 |**size**|**int**|デバイス サイズ (2 KB ページ単位)|  
   
-## <a name="remarks"></a>解説  
- 場合*名前*が指定されている**sp_helpdevice**指定したダンプ デバイスに関する情報を表示します。 場合*名前*が指定されていない**sp_helpdevice**内のすべてのダンプ デバイスに関する情報を表示、 **sys.backup_devices**カタログ ビューです。  
+## <a name="remarks"></a>コメント  
+ 場合*名前*が指定されている**sp_helpdevice**指定したダンプ デバイスに関する情報が表示されます。 場合*名前*が指定されていない**sp_helpdevice**内のすべてのダンプ デバイスに関する情報を表示、 **sys.backup_devices**カタログ ビューです。  
   
- ダンプ デバイスを使用して、システムに追加されます**sp_addumpdevice**です。  
+ ダンプ デバイスを使用して、システムに追加されて**sp_addumpdevice**します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、レポートのインスタンス上のすべてのダンプ デバイスに関する情報[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ 次の例のインスタンス上のすべてのダンプ デバイスに関する情報を報告する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ```  
 EXEC sp_helpdevice;  

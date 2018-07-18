@@ -2,7 +2,6 @@
 title: プロパティのオブジェクト (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,16 +17,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80af9304927f526422650f63264f06539cb14b29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db31ab407ee6268d14797ea3f50a9056c287f314
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286877"
 ---
 # <a name="property-object-adox"></a>プロパティのオブジェクト (ADOX)
 ADOX オブジェクトの特性を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADOX オブジェクトが 2 種類のプロパティを設定します。 組み込みと動的です。  
   
  組み込みのプロパティは、MyObject.Property 構文を使用して、すべての新しいオブジェクトにすぐに利用可能なこれらのプロパティです。 オブジェクトのプロパティ オブジェクトとしては表示されません[Properties コレクション](../../../ado/reference/ado-api/properties-collection-ado.md)ので、その値を変更できますが、その特性を変更することはできません。  

@@ -1,13 +1,12 @@
 ---
-title: SQLConfigDataSource |Microsoft ドキュメント
+title: SQLConfigDataSource |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -19,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f194b43d361422af139e403d645024b74d18ff69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7560ae88c8681a68b0e3479821dc341a22268c9d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942407"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412502"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーをサポートしているさまざまな[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ソース構成属性文字列のデータの特定のキーワード/値ペア。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、さまざまなサポートしている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定のキーワード/値ペアのデータ ソース構成属性文字列。  
   
- 使用できるキーワードの一覧については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを参照してください[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)です。  
+ 使用できるキーワードの一覧については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを参照してください[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLConfigDataSource 関数](http://go.microsoft.com/fwlink/?LinkId=59337)   

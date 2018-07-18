@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,18 +23,19 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bfa1f25ed3dbedf92340112a806bd91de6c0158
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5072c118781098c2ce9039fe6937c902a3385ce3
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312924"
 ---
 # <a name="connecting-tasks-programmatically"></a>プログラムによるタスクの接続
   優先順位制約は、<xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> クラスとしてオブジェクト モデル内に表されるもので、パッケージ内での <xref:Microsoft.SqlServer.Dts.Runtime.Executable> オブジェクトの実行順序を確立します。 優先順位制約を使用すると、パッケージ内のコンテナーやタスクを、直前のコンテナーやタスクの実行結果に依存して実行させることができます。 2 つの <xref:Microsoft.SqlServer.Dts.Runtime.Executable> オブジェクト間の優先順位制約は、コンテナー オブジェクトの <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> コレクションにある <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> メソッドを呼び出すことによって確立されます。 2 つの実行可能オブジェクト間の制約を作成したら、<xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> プロパティを設定して、制約で定義されている 2 番目の実行可能オブジェクトを実行する条件を設定します。  
   
  次の表で説明するように、<xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.EvalOp%2A> プロパティに指定する値に応じて、1 つの優先順位制約内で制約と式の両方を使用できます。  
   
-|EvalOp プロパティの値|Description|  
+|EvalOp プロパティの値|[説明]|  
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|制約付きコンテナーまたは制約付きタスクを実行するかどうかを実行結果が決定するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> プロパティを <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列挙の目的の値に設定します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|制約付きコンテナーまたは制約付きタスクを実行するかどうかを式の値で決定するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> プロパティを設定します。|  

@@ -2,7 +2,6 @@
 title: Clone メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33fee6bf55b3175d75879e06949744d0730f6af0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f993cee93bce398020fdb5ae2b43a7911114a270
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276431"
 ---
 # <a name="clone-method-ado"></a>Clone メソッド (ADO)
 複製を作成[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 、既存のオブジェクト**Recordset**オブジェクト。 必要に応じて、複製が読み取り専用であることを指定します。  
@@ -48,9 +48,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  オブジェクト変数を識別する、 **Recordset**は重複するオブジェクト。  
   
  *LockType*  
- 省略可。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 、元のいずれか、ロックの種類を指定する値**Recordset**、または読み取り専用**Recordset**です。 有効な値は**adLockUnspecified**または**adLockReadOnly**です。  
+ 任意。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 、元のいずれか、ロックの種類を指定する値**Recordset**、または読み取り専用**Recordset**です。 有効な値は**adLockUnspecified**または**adLockReadOnly**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**クローン**を複数作成するメソッドが重複して**Recordset**オブジェクトを指定したレコード セットの 1 つ以上の現在のレコードを維持する場合に特にです。 使用して、**クローン**メソッドが作成して、新しいよりも効率的**Recordset**元として、同じ定義を使用するオブジェクト。  
   
  [フィルター](../../../ado/reference/ado-api/filter-property.md) 、元のプロパティ**Recordset**、いずれか、複製には適用されない場合、します。 設定、**フィルター**新しいプロパティ**Recordset**結果をフィルター処理します。 既存のすべてをコピーする最も簡単な方法**フィルター**値は、次のように、直接割り当てることができます。  

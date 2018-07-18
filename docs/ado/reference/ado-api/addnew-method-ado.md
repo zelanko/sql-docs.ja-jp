@@ -2,7 +2,6 @@
 title: AddNew メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315eec5a4cddccb55be1ad9b8bd9d8bc4ded99cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d21161d5755fc31be78aced4a7f4350dbf901fd4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275211"
 ---
 # <a name="addnew-method-ado"></a>AddNew メソッド (ADO)
 作成、更新可能なに対して新しいレコード[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -42,12 +42,12 @@ recordset.AddNew FieldList, Values
  A **Recordset**オブジェクト。  
   
  *FieldList*  
- 省略可。 単一の名前または名前の配列。 または、新しいレコードにフィールドの序数位置します。  
+ 任意。 単一の名前または名前の配列。 または、新しいレコードにフィールドの序数位置します。  
   
  *値*  
- 省略可。 1 つの値。 または、新しいレコードのフィールドの値の配列。 場合*Fieldlist* 、配列は、*値*配列でなければなりませんも同じメンバーの数、それ以外のエラーが発生します。 フィールド名の順序は、各配列内のフィールド値の順序と一致する必要があります。  
+ 任意。 1 つの値。 または、新しいレコードのフィールドの値の配列。 場合*Fieldlist* 、配列は、*値*配列でなければなりませんも同じメンバーの数、それ以外のエラーが発生します。 フィールド名の順序は、各配列内のフィールド値の順序と一致する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **AddNew**メソッドを作成し、新しいレコードを初期化します。 使用して、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを**adAddNew** (、 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)値) を現在のレコードを追加できるかどうかを確認する**Recordset**オブジェクト。  
   
  呼び出した後、 **AddNew**メソッド、新しいレコードを現在のレコードになりを呼び出した後は、[更新](../../../ado/reference/ado-api/update-method.md)メソッドです。 新しいレコードが追加されますので、 **Recordset**への呼び出し**MoveNext**の末尾を越えた移動は次の更新プログラム、 **Recordset**、 **EOF** True です。 場合、 **Recordset**オブジェクトはブックマークをサポートしていない、別のレコードに移動すると、新しいレコードにアクセスすることはできません。 カーソルの種類によってを呼び出す必要があります、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを新しいレコードにアクセスできるようにします。  

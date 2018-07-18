@@ -2,7 +2,6 @@
 title: RecordOpenOptionsEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7372e17fb7e18cec3cbb25a1850433e41e918a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0795d6eb942f10a97be1acda77954ae43fd4f2e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281261"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 開くのためのオプションを指定します、[レコード](../../../ado/reference/ado-api/record-object-ado.md)です。 使用してこれらの値を組み合わせることができますか。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|フィールドが関連付けられているプロバイダーを示す、**レコード**最初に、取得する必要がありませんが、フィールドにアクセスする最初の試行に取得できます。 ない場合、このフラグで示される、既定の動作がすべて取得するには、**レコード**オブジェクトのフィールドです。|  
 |**adDelayFetchStream**|0x4000|既定のストリームが関連付けられているプロバイダーを示す、**レコード**最初に取得する必要がありません。 関連付けられている既定のストリームを取得することがない場合、このフラグで示される、既定の動作です、**レコード**オブジェクト。|  

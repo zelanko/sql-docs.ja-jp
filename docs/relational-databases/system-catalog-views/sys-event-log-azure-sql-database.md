@@ -1,5 +1,5 @@
 ---
-title: sys.event_log (Azure SQL データベース) |Microsoft ドキュメント
+title: sys.event_log (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -27,46 +27,46 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f871501b63bd9823c5a44872224439e8df07a9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 55408f62c8e66c33bcb58682831970312c51130d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182538"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998174"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  成功を返します[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]データベース接続、接続エラーおよびデッドロックです。 この情報を使用して、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのデータベースの利用状況の追跡またはトラブルシューティングを行うことができます。  
+  成功が返される[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]データベース接続、接続エラー、およびデッドロックします。 この情報を使用して、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのデータベースの利用状況の追跡またはトラブルシューティングを行うことができます。  
   
 > [!CAUTION]  
->  大量のデータベースまたはログインの大きい数値を持つインストールの場合、sys.event_log 内のアクティビティと制限事項、パフォーマンス、CPU 使用率が高くと可能性があるログイン エラーが発生します。 Sys.event_log のクエリは、問題に投稿できます。 マイクロソフトは、この問題を解決するのには中です。 それまでは、この問題の影響を小さくには、sys.event_log のクエリを制限します。 NewRelic SQL Server プラグインのユーザーがアクセスする必要があります[Microsoft Azure SQL Database プラグインのチューニングとパフォーマンスの微調整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)追加の構成についてはします。  
+>  大量のデータベースまたはログインの大きい数値を持つインストールの場合、sys.event_log 内のアクティビティと制限事項、パフォーマンス、CPU 使用率が高くと可能性があるログイン エラーが発生します。 Sys.event_log のクエリは、問題に投稿できます。 マイクロソフトは、この問題を解決するのには中です。 それまでは、この問題の影響を小さくには、sys.event_log のクエリを制限します。 NewRelic SQL Server プラグインのユーザーがアクセスする必要があります[Microsoft Azure SQL Database プラグインのチューニングとパフォーマンスの調整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)の追加の構成情報。  
   
  `sys.event_log`ビューには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|データベースの名前です。 接続が失敗し、ユーザーがデータベース名を指定していない場合、この列は空白です。|  
 |**start_time**|**datetime2**|集計の間隔の開始日時 (UTC)。 集計されるイベントの場合、この時刻は常に 5 分の倍数です。 以下に例を示します。<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|集計の間隔の終了日時 (UTC)。 集計されるイベントの**End_time**は常に 5 分後に、対応するよりも**start_time**の同じ行にします。 集計されないイベント**start_time**と**end_time**イベントの実際の UTC 日時と同じです。|  
+|**end_time**|**datetime2**|集計の間隔の終了日時 (UTC)。 集計されるイベントは、 **End_time**は常に 5 分後に、対応するよりも**start_time**同じ行にします。 集計されないイベント**start_time**と**end_time**実際の UTC 日付とイベントの時刻を等しきます。|  
 |**event_category**|**nvarchar(64)**|このイベントを生成した上位レベルのコンポーネント。<br /><br /> 参照してください[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)使用可能な値の一覧についてはします。|  
 |**event_type**|**nvarchar(64)**|イベントの種類。<br /><br /> 参照してください[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)使用可能な値の一覧についてはします。|  
 |**event_subtype**|**int**|発生したイベントのサブタイプ。<br /><br /> 参照してください[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)使用可能な値の一覧についてはします。|  
 |**event_subtype_desc**|**nvarchar(64)**|イベントのサブタイプの説明。<br /><br /> 参照してください[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)使用可能な値の一覧についてはします。|  
 |**severity**|**int**|エラーの重大度。 有効な値は次のとおりです。<br /><br /> 0 = 情報<br />1 = 警告<br />2 = エラー|  
 |**event_count**|**int**|時刻をこのイベントが発生した、指定されたデータベースで指定された時間間隔の数 (**start_time**と**end_time**)。|  
-|**説明**|**nvarchar(max)**|イベントの詳細な説明。<br /><br /> 参照してください[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)使用可能な値の一覧についてはします。|  
-|**additional_data**|**XML**|*注: この値は常に、Azure SQL Database V12 の NULL です。参照してください[例](#Deadlock)V12 のデッドロック イベントを取得する方法についてのセクションです。*<br /><br /> **デッドロック**イベント、この列にデッドロック グラフが含まれています。 それ以外の種類のイベントの場合、この列は NULL です。 |  
+|**description**|**nvarchar(max)**|イベントの詳細な説明。<br /><br /> 参照してください[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)使用可能な値の一覧についてはします。|  
+|**additional_data**|**XML**|*注: この値が常に、Azure SQL Database V12 の NULL です。参照してください[例](#Deadlock)V12 のデッドロック イベントを取得する方法についてのセクション。*<br /><br /> **デッドロック**イベントでは、この列には、デッドロック グラフが含まれています。 それ以外の種類のイベントの場合、この列は NULL です。 |  
   
 ##  <a name="EventTypes"></a> イベントの種類  
- このビューの各行によって記録されるイベントは、カテゴリによって識別されます (**event_category**)、イベントの種類 (**event_type**)、およびサブタイプ (**event_subtype**)。 次の表に、このビューで収集されるイベントの種類を示します。  
+ このビューの各行によって記録されたイベントは、カテゴリによって識別されます (**event_category**)、イベントの種類 (**event_type**)、およびサブタイプ (**event_subtype**)。 次の表に、このビューで収集されるイベントの種類を示します。  
   
- イベントを**接続**カテゴリで、概要情報については、sys.database_connection_stats ビューにします。  
+ イベントを**接続**カテゴリで、概要情報は、sys.database_connection_stats ビューで使用できます。  
   
 > [!NOTE]  
 >  このビューには、発生する可能性のあるすべての [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データベース イベントが表示されるわけではなく、この表に示されているイベントのみが表示されます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の今後のリリースで他のカテゴリ、イベントの種類、およびサブタイプが報告対象として追加される可能性はあります。  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**説明**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**接続**|**connection_successful**|0|**connection_successful**|0|データベースに正常に接続されました。|  
 |**接続**|**connection_failed**|0|**invalid_login_name**|2|ログイン名がこのバージョンの SQL Server では無効です。|  
@@ -75,39 +75,39 @@ ms.locfileid: "33182538"
 |**接続**|**connection_failed**|3|**change_password_not_supported**|2|ユーザーがユーザーのログイン用のパスワードを変更しようとしました。これはサポートされていません。|  
 |**接続**|**connection_failed**|4|**login_failed_for_user**|2|ユーザーはログインできませんでした。|  
 |**接続**|**connection_failed**|5|**login_disabled**|2|ログインが無効でした。|  
-|**接続**|**connection_failed**|6|**failed_to_open_db**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> データベースを開くことができませんでした。 これはデータベースが存在しないか、データベースを開くための認証が正常に行われなかったため発生した可能性があります。|  
+|**接続**|**connection_failed**|6|**failed_to_open_db**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベースを開くことができませんでした。 これはデータベースが存在しないか、データベースを開くための認証が正常に行われなかったため発生した可能性があります。|  
 |**接続**|**connection_failed**|7|**blocked_by_firewall**|2|クライアントの IP アドレスからサーバーにアクセスすることが許可されていません。|  
-|**接続**|**connection_failed**|8|**client_close**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> クライアントが接続の確立中にタイムアウトした可能性があります。 接続タイムアウトを増やしてください。|  
-|**接続**|**connection_failed**|9|**再構成**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> データベースが再構成中であったため接続に失敗しました。|  
-|**接続**|**connection_terminated**|0|**idle_connection_timeout**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> 接続がシステム定義のしきい値よりも長い時間にわたってアイドル状態でした。|  
-|**接続**|**connection_terminated**|1|**再構成**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> データベース再構成が原因で、セッションが終了しました。|  
-|**接続**|**調整**|*\<理由コード >*|**reason_code**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: *\<理由コード >* です。 詳細については、次を参照してください。[エンジン調整](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)です。|  
-|**接続**|**throttling_long_transaction**|40549|**long_transaction**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> トランザクションが長時間実行されているため、セッションを終了しました。 トランザクションを短くしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)です。|  
-|**接続**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> 取得したロックの数が多すぎるため、セッションを終了しました。 1 つのトランザクションで読み取る行または変更する行の数を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)です。|  
-|**接続**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> TEMPDB の使用領域が多すぎるため、セッションを終了しました。 クエリを変更して一時テーブルの使用領域を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)です。|  
-|**接続**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> トランザクション ログの使用領域が多すぎるため、セッションを終了しました。 1 回のトランザクションで変更する行を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)です。|  
-|**接続**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> メモリの使用量が多すぎるため、セッションを終了しました。 クエリを変更して、処理する行を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)です。|  
+|**接続**|**connection_failed**|8|**client_close**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> クライアントが接続の確立中にタイムアウトした可能性があります。 接続タイムアウトを増やしてください。|  
+|**接続**|**connection_failed**|9|**再構成**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベースが再構成中であったため接続に失敗しました。|  
+|**接続**|**connection_terminated**|0|**idle_connection_timeout**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> 接続がシステム定義のしきい値よりも長い時間にわたってアイドル状態でした。|  
+|**接続**|**connection_terminated**|1|**再構成**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベース再構成が原因で、セッションが終了しました。|  
+|**接続**|**調整**|*\<理由コード >*|**reason_code**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: *\<理由コード >* します。 詳細については、次を参照してください。[エンジン調整](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40549|**long_transaction**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクションが長時間実行されているため、セッションを終了しました。 トランザクションを短くしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> 取得したロックの数が多すぎるため、セッションを終了しました。 1 つのトランザクションで読み取る行または変更する行の数を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> TEMPDB の使用領域が多すぎるため、セッションを終了しました。 クエリを変更して一時テーブルの使用領域を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクション ログの使用領域が多すぎるため、セッションを終了しました。 1 回のトランザクションで変更する行を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> メモリの使用量が多すぎるため、セッションを終了しました。 クエリを変更して、処理する行を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
 |**エンジン**|**デッドロック**|0|**デッドロック**|2|デッドロックが発生しました。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  アクセス許可を持つユーザー、**マスター**データベースは、このビューに読み取り専用のアクセス権を持ちます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ### <a name="event-aggregation"></a>イベント集計  
- このビューのイベント情報は、5 分未満の間隔で収集および集計されます。 **Event_count**列は、特定の回数を表す**event_type**と**event_subtype**指定された時間間隔内で特定のデータベースが発生しました。  
+ このビューのイベント情報は、5 分未満の間隔で収集および集計されます。 **Event_count**列が特定の時間数を表す**event_type**と**event_subtype**一定の時間間隔内で特定のデータベースが発生しました。  
   
 > [!NOTE]  
->  デッドロックなどの一部のイベントは集計されません。 これらのイベント、 **event_count**は 1 になりますと**start_time**と**end_time**実際の UTC 日付と時刻のイベントが発生したときになります。  
+>  デッドロックなどの一部のイベントは集計されません。 これらのイベントの**event_count**は 1 になりますと**start_time**と**end_time**実際の UTC 日付と時刻のイベントが発生したときになります。  
   
  たとえば、2012 年 2 月 5 日 の 11:00 から 11:05 まで (UTC) の間にログイン名が無効であったため Database1 データベースへの接続が 7 回失敗した場合、この情報はこのビューの 1 つの行に表示されます。  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**説明**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>間隔の start_time と end_time  
- イベントの発生時に、集計間隔にイベントが含まれている*で*または*後 * * * start_time** および*する前に * * * end_time** その間隔。 たとえば、`2012-10-30 19:25:00.0000000` に発生したイベントは、下に示す例では 2 つ目の間隔にのみ含まれます。  
+ イベントの発生時に、集計間隔にイベントが含まれている*で*または*後 * * * start_time** と*する前に * * * end_time** その間隔。 たとえば、`2012-10-30 19:25:00.0000000` に発生したイベントは、下に示す例では 2 つ目の間隔にのみ含まれます。  
   
 ```  
 start_time                    end_time  
@@ -124,7 +124,7 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>含まれていないエラー  
  すべての接続情報とエラー情報がこのビューに含まれるわけではありません。  
   
--   このビューにすべて含まれていない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベースのみで指定されている、発生するエラー[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)」を参照します。  
+-   このビューにすべて含まれていない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベースのみで指定されているエラーが発生する可能性があります、[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)このトピックの「します。  
   
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データセンター内でコンピューター障害が発生すると、論理サーバーの少量のデータがイベント テーブルで見つからない可能性があります。  
   
@@ -133,22 +133,22 @@ start_time                    end_time
 ## <a name="examples"></a>使用例  
   
 ### <a name="simple-examples"></a>簡単な例  
- 次のクエリは、2011 年 9 月 25 日の正午から 2011 年 9 月 28 日の正午まで (UTC) の間に発生したすべてのイベントを返します。 既定では、クエリ結果は並べ替えられます**start_time** (昇順)。  
+ 次のクエリは、2011 年 9 月 25 日の正午から 2011 年 9 月 28 日の正午まで (UTC) の間に発生したすべてのイベントを返します。 既定では、クエリの結果は並べ**start_time** (昇順)。  
   
 ```  
 SELECT * FROM sys.event_log   
-WHERE start_time >= '2011-09-25:12:00:00'   
+WHERE start_time >= '2011-09-25 12:00:00'   
     AND end_time <= '2011-09-28 12:00:00';  
 ```  
   
- 次のクエリでは、(Azure SQL データベース V11 にのみ適用されます) データベース Database1 のすべてのデッドロック イベントを返します。  
+ 次のクエリでは、Database1 データベース (Azure SQL Database V11 にのみ適用されます) のすべてのデッドロック イベントを返します。  
   
 ```  
 SELECT * FROM sys.event_log   
 WHERE event_type = 'deadlock'   
     AND database_name = 'Database1';  
 ```  
-<a name="Deadlock"></a> 次のクエリでは、(Azure SQL Database V12 にのみ適用されます) データベース Database1 のすべてのデッドロック イベントを返します。  
+<a name="Deadlock"></a> 次のクエリでは、Database1 データベース (Azure SQL Database V12 にのみ適用されます) のすべてのデッドロック イベントを返します。  
   
 ```  
 WITH CTE AS (  
@@ -173,8 +173,8 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```  
   
-### <a name="db-scoped-extended-event"></a>データベース スコープの拡張イベント  
- Db スコープの拡張イベント (XEvent) セッションを設定するには、次のサンプル コードを使用します。  
+### <a name="db-scoped-extended-event"></a>DB スコープの拡張イベント  
+ Db スコープの拡張イベント (XEvent) セッションをセットアップするには、次のサンプル コードを使用します。  
   
 ```sql  
 IF EXISTS  
@@ -206,7 +206,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
   
 ### <a name="check-for-deadlock"></a>デッドロックの確認
 
-次のクエリを使用すると、デッドロックがあるかどうかを確認します。  
+デッドロックがあるかどうかは確認するのにには、次のクエリを使用します。  
   
 ```sql  
 WITH CTE AS (  
@@ -230,6 +230,6 @@ SELECT * FROM CTE2;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Azure SQL データベースでの拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL Database の拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

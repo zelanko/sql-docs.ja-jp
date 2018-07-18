@@ -2,7 +2,6 @@
 title: Append メソッド (ADOX ユーザー) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf65ab9c0705019dcc56bae4e605b5cb2247d056
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a3c8bc74cf91e07fcac3bc9b58a7633a7083090
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285401"
 ---
 # <a name="append-method-adox-users"></a>Append メソッド (ADOX ユーザー)
 新しく追加[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトを[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)コレクション。  
@@ -42,9 +42,9 @@ Users.Append User[,Password]
  A**バリアント**値を含む、**ユーザー**追加するオブジェクトまたはユーザーを作成し、追加の名前。  
   
  *Password*  
- 省略可。 A**文字列**ユーザーのパスワードを含む値です。 *パスワード*パラメーターで指定された値に対応、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)のメソッド、**ユーザー**オブジェクト。  
+ 任意。 A**文字列**ユーザーのパスワードを含む値です。 *パスワード*パラメーターで指定された値に対応、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)のメソッド、**ユーザー**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ユーザー**のコレクション、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)カタログのすべてのユーザーを表します。 **ユーザー**のコレクション、[グループ](../../../ado/reference/adox-api/group-object-adox.md)特定のグループ メンバーシップを持つユーザーのみを表します。  
   
  プロバイダーがユーザーの作成をサポートしていない場合は、エラーが発生します。  

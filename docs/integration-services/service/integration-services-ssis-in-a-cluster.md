@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
@@ -16,11 +14,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfab44cc1e7b73e7172e5195c49268b97c94857f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3db86a73665ba532ecd5a1a55ce83339c61b36b9
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409934"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>クラスターにおける Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をクラスター化することはお勧めしません。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、クラスター化されるサービスまたはクラスター対応サービスではなく、クラスター ノード間のフェールオーバーはサポートしません。 したがって、クラスター環境では、クラスターの各ノードで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールし、スタンドアロン サービスとして起動する必要があります。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **フェールオーバーが発生したときに、実行中のパッケージが再起動されません。**
     
-    チェックポイントからパッケージを再開することで、パッケージのエラーから回復できます。 サービスをクラスター リソースとして構成しなくても、チェックポイントからパッケージを再開できます。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+    チェックポイントからパッケージを再開することで、パッケージのエラーから回復できます。 サービスをクラスター リソースとして構成しなくても、チェックポイントからパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] とは異なるリソース グループに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスを構成した場合、クライアント コンピューターから [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して msdb データベースに格納されているパッケージを管理することはできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、このダブルホップ シナリオで資格情報を委任することはできません。  
   

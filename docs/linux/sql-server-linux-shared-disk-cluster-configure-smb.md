@@ -1,5 +1,5 @@
 ---
-title: フェールオーバー クラスター インスタンスの記憶域構成 SMB - SQL Server on Linux |Microsoft ドキュメント
+title: フェールオーバー クラスター インスタンス ストレージ SMB - SQL Server on Linux の構成 |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,32 +12,32 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: b762740be742aa2d716b9d354c26fe87bb170732
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322973"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981804"
 ---
-# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス: SMB - Linux に SQL Server を構成します。
+# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - SMB - SQL Server on Linux の構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) の SMB 記憶域を構成する方法について説明します。 
+この記事では、Linux でのフェールオーバー クラスター インスタンス (FCI) の SMB 記憶域を構成する方法について説明します。 
  
-世界では、Windows 以外、SMB は、多くの場合、および参照されるとして、Common Internet File System (CIFS) を共有する Samba を介して実装します。 世界では、Windows、SMB 共有にアクセスするときはこのように: \\servername \sharename です。 Linux ベースの SQL Server インストールの場合、フォルダーとして SMB 共有をマウントする必要があります。
+Windows 以外の世界で、SMB が多くの場合、として、共通インターネット ファイル システム (CIFS) を共有する呼ばれ、Samba を使用して実装されます。 Windows の世界で、この方法の実行で、SMB 共有にアクセスする: \\servername \sharename します。 Linux ベースの SQL Server インストールの場合、SMB 共有フォルダーとしてマウントする必要があります。
 
 ## <a name="important-source-and-server-information"></a>ソース サーバーとサーバーの重要な情報
 
 いくつかのヒントと正常に SMB を使用するための注意事項を次に示します。
-- SMB 共有には、Windows では、Linux、または SMB 3.0 を使用している間、またはそれ以上としてアプライアンスからでもを指定できます。 Samba と SMB 3.0 の詳細については、次を参照してください。 [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) Samba 実装が SMB 3.0 に準拠しているかどうか。
-- SMB 共有は、高可用性にする必要があります。
-- セキュリティを設定する必要があります、SMB 共有に対する適切です。 次に、例から/etc/samba/smb.conf、SQLData1 は共有の名前を指定します。
+- SMB 共有は、Windows、Linux、または SMB 3.0 を使用している限り、またはそれ以上とアプライアンスからでもできます。 Samba と SMB 3.0 の詳細については、次を参照してください。 [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) 、Samba の実装が SMB 3.0 に準拠しています。
+- 高可用性 SMB 共有があります。
+- セキュリティを設定する必要があります、SMB 共有に適切です。 以下の SQLData1 が共有の名前を/etc/samba/smb.conf から例を示します。
 
 ![05 smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 
-1.  FCI の構成では、参加するサーバーのいずれかを選択します。 どちらかは関係ありません。
+1.  FCI の構成では、参加するサーバーのいずれかを選択します。 どれもかまいません。
 
 2.  Mssql ユーザーに関する情報を取得します。
 
@@ -45,15 +45,15 @@ ms.locfileid: "34322973"
     sudo id mssql
     ```
     
-    Uid や gid、そしてグループに注意してください。 
+    Uid や gid、グループに注意してください。 
 
-3. 実行`sudo smbclient -L //NameOrIP/ShareName -U User`です。
+3. 実行`sudo smbclient -L //NameOrIP/ShareName -U User`します。
 
-    \<NameOrIP > は、DNS 名または SMB 共有をホストしているサーバーの IP アドレス。
+    \<NameOrIP > は SMB 共有をホストするサーバーの IP アドレスまたは DNS 名。
 
     \<共有名 > は SMB 共有の名前を指定します。 
 
-4. システムのデータベースまたはデータの既定の場所に格納されているものは、次の手順に従っています。 それ以外の場合、手順 5 に進みます。 
+4. システム データベースまたはデータの既定の場所に格納されているものは、次の手順に従っています。 それ以外の場合は、手順 5. に進みます。 
 
    *    作業しているサーバーで SQL Server が停止していることを確認します。
     ```bash
@@ -61,37 +61,37 @@ ms.locfileid: "34322973"
     sudo systemctl status mssql-server
     ```
 
-   *    スーパー ユーザーを完全にスイッチです。 ユーザーは受け取りません受信正常終了した場合。
+   *    スーパー ユーザーを完全にスイッチします。 成功した場合は、すべての受信確認は受信しません。
 
     ```bash
     sudo -i
     ```
 
-   *    Mssql ユーザーであることに切り替えます。 ユーザーは受け取りません受信正常終了した場合。
+   *    スイッチを mssql ユーザーにします。 成功した場合は、すべての受信確認は受信しません。
 
     ```bash
     su mssql
     ```
 
-   *    SQL Server のデータを格納するファイルとログ ファイルを一時ディレクトリを作成します。 ユーザーは受け取りません受信正常終了した場合。
+   *    SQL Server のデータを格納するファイルとログ ファイルを一時ディレクトリを作成します。 成功した場合は、すべての受信確認は受信しません。
 
     ```bash
     mkdir <TempDir>
     ```
 
-    <TempDir> フォルダーの名前です。 次の例では、/var/opt/mssql/tmp をという名前のフォルダーを作成します。
+    <TempDir> フォルダーの名前です。 次の例では、/var/opt/mssql/tmp という名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/tmp
     ```
 
-   *    SQL Server データとログ ファイルを一時ディレクトリにコピーします。 ユーザーは受け取りません受信正常終了した場合。
+   *    SQL Server のデータとログ ファイルを一時ディレクトリにコピーします。 成功した場合は、すべての受信確認は受信しません。
 
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
     ```
 
-    \<TempDir > 前の手順で、フォルダーの名前を指定します。
+    \<TempDir > は、前の手順からフォルダーの名前です。
     
    *    ファイルがディレクトリであることを確認します。
 
@@ -101,7 +101,7 @@ ms.locfileid: "34322973"
 
     \<TempDir > 手順 d からフォルダーの名前を指定します。
     
-   *    既存の SQL Server データ ディレクトリからファイルを削除します。 ユーザーは受け取りません受信正常終了した場合。
+   *    既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、すべての受信確認は受信しません。
  
     ```bash
     rm – f /var/opt/mssql/data/*
@@ -113,17 +113,17 @@ ms.locfileid: "34322973"
     ls /var/opt/mssql/data
     ```
  
-   *    Root ユーザーに戻る exit」と入力します。
+   *    ルート ユーザーに切り替えてに exit」と入力します。
 
-   *    SQL Server データ フォルダーに SMB 共有をマウントします。 ユーザーは受け取りません受信正常終了した場合。 この例では、Windows Server ベースの SMB 3.0 共有に接続するための構文を使用します。
+   *    SQL Server データ フォルダー内の SMB 共有をマウントします。 成功した場合は、すべての受信確認は受信しません。 この例では、Windows Server ベースの SMB 3.0 共有に接続するための構文を示します。
 
     ```bash
     Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
     ```
 
-    \<サーバー名 > は SMB 共有を使用してサーバーの名前を指定します。
+    \<ServerName > は SMB 共有を使用したサーバーの名前です
     
-    \<共有名 > 共有の名前を指定します
+    \<共有名 > は、共有の名前です
 
     \<ユーザー名 > の共有にアクセスするユーザーの名前を指定します
 
@@ -131,23 +131,23 @@ ms.locfileid: "34322973"
 
     \<ドメイン > Active Directory の名前を指定します
 
-    \<mssqlUID > は、mssql ユーザーの UID 
+    \<mssqlUID > mssql ユーザーの UID は、 
  
-    \<mssqlGID > mssql ユーザーのグループ ID は、
+    \<mssqlGID > mssql ユーザーの GID は、
  
-   *    スイッチなしでマウントを発行することで、マウントが成功したことを確認します。
+   *    スイッチなしでマウントを発行して、マウントが成功したことを確認します。
 
     ```bash
     mount
     ```
  
-   *    Mssql ユーザーに切り替えます。 ユーザーは受け取りません受信正常終了した場合。
+   *    Mssql ユーザーに切り替えます。 成功した場合は、すべての受信確認は受信しません。
 
     ```bash
     su mssql
     ```
 
-   *    一時ディレクトリ/var/opt/mssql/data からファイルをコピーします。 ユーザーは受け取りません受信正常終了した場合。
+   *    一時ディレクトリ/var/opt/mssql/data からファイルをコピーします。 成功した場合は、すべての受信確認は受信しません。
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssql/data
@@ -159,43 +159,43 @@ ms.locfileid: "34322973"
     ls /var/opt/mssql/data
     ```
 
-   *    Exit mssql 設定されませんを入力します。 
+   *    キャンセルする場合は mssql できませんを入力します。 
 
-   *    終了できないルートを入力してください。
+   *    終了できないルートを入力します。
 
-   *    SQL Server を起動します。 すべてが正しくコピーされた、セキュリティが適用されて正しく、SQL Server が表示されますを起動する場合は。
+   *    SQL Server を起動します。 場合、すべてが正しくコピーされ、セキュリティが適用されて正しく、SQL Server 表示されますが開始します。
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
  
-   *    さらにテストするには、アクセス許可が正常であることを確認するデータベースを作成します。 次の例では、TRANSACT-SQL です。SSMS を使用することができます。
+   *    さらにテストするには、アクセス許可が正常であることを確認するデータベースを作成します。 次のコードの例では、TRANSACT-SQL です。SSMS を使用することができます。
 
     ![10_testcreatedb][2] 
   
-   *    SQL Server を停止し、シャット ダウンがあることを確認します。 追加するか、他のディスクをテストする場合はシャット ダウンできません SQL Server が追加され、テストされるまで。
+   *    SQL Server を停止し、シャット ダウンがあることを確認します。 追加または他のディスクをテストする場合は、シャットしないで SQL Server をものを追加してテストするまで。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   *    終了した場合にのみ、共有のマウントを解除します。 それ以外の場合は、テスト/、追加のディスクの追加を完了した後にマウント解除。
+   *    完了している場合のみ、共有のマウントを解除します。 ない場合は、任意のディスクのテスト/追加を終了した後のマウントを解除します。
 
     ```bash
     sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
     ```
 
-    \<IPAddressOrServerName > は、IP アドレスまたは SMB ホストの名前
+    \<IPAddressOrServerName > IP アドレスまたは SMB ホストの名前です
 
-    \<共有名 > 共有の名前を指定します
+    \<共有名 > は、共有の名前です
     
-    \<FolderMountedIn > SMB がマウントされているフォルダーの名前を指定します
+    \<FolderMountedIn > は SMB がマウントされているフォルダーの名前です
 
-5.  ユーザー データベースや、バックアップなどのシステム データベース以外のものを以下の手順を実行します。 既定の場所を使用して、だけの場合は、手順 14 をスキップします。
+5.  ユーザー データベースやバックアップなどのシステム データベース以外の次の手順に従います。 既定の場所を使用して、専用の場合は、手順 14 に進みます。
     
-   *    スーパー ユーザーにするスイッチです。 ユーザーは受け取りません受信正常終了した場合。
+   *    スーパー ユーザーを指定するスイッチです。 成功した場合は、すべての受信確認は受信しません。
 
     ```bash
     sudo -i
@@ -207,37 +207,37 @@ ms.locfileid: "34322973"
     mkdir <FolderName>
     ```
 
-    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要があります、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
+    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要があります。 適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata という名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   *    SQL Server データ フォルダーに SMB 共有をマウントします。 ユーザーは受け取りません受信正常終了した場合。 この例では、Samba ベースの SMB 3.0 共有に接続するための構文を使用します。
+   *    SQL Server データ フォルダー内の SMB 共有をマウントします。 成功した場合は、すべての受信確認は受信しません。 この例では、Samba ベースの SMB 3.0 共有に接続するための構文を示します。
 
     ```bash
     Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
     ```
 
-    \<サーバー名 > は SMB 共有を使用してサーバーの名前を指定します。
+    \<ServerName > は SMB 共有を使用したサーバーの名前です
 
-    \<共有名 > 共有の名前を指定します
+    \<共有名 > は、共有の名前です
 
-    \<FolderName > の最後の手順で作成したフォルダーの名前を指定します。  
+    \<フォルダー名 > は、最後の手順で作成したフォルダーの名前です  
 
     \<ユーザー名 > の共有にアクセスするユーザーの名前を指定します
 
     \<パスワード > は、ユーザーのパスワード
 
-    \<mssqlUID > は、mssql ユーザーの UID
+    \<mssqlUID > mssql ユーザーの UID は、
 
-    \<mssqlGID > mssql ユーザーの GID がします。
+    \<mssqlGID > mssql ユーザーの GID です。
  
-   * スイッチなしでマウントを発行することで、マウントが成功したことを確認します。
+   * スイッチなしでマウントを発行して、マウントが成功したことを確認します。
  
-   * スーパー ユーザーを使用できなくする exit」と入力します。
+   * スーパー ユーザーをされなく exit」と入力します。
 
-   * テストするには、そのフォルダーにデータベースを作成します。 次の例では、sqlcmd を使用して、データベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所が削除されます。 SSMS を使用することができます。
+   * テストするには、そのフォルダーで、データベースを作成します。 次の例では、sqlcmd を使用して、データベースを作成、コンテキストを切り替える、ファイルは、OS レベルで存在し、一時的な場所を削除し、確認します。 SSMS を使用することができます。
  
    * 共有のマウントを解除します。 
 
@@ -245,19 +245,19 @@ ms.locfileid: "34322973"
     sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
     ```
     
-    \<IPAddressOrServerName > は、IP アドレスまたは SMB ホストの名前
+    \<IPAddressOrServerName > IP アドレスまたは SMB ホストの名前です
  
-    \<共有名 > 共有の名前を指定します
+    \<共有名 > は、共有の名前です
  
-    \<FolderMountedIn > SMB がマウントされているフォルダーの名前を指定します。
+    \<FolderMountedIn > は SMB がマウントされているフォルダーの名前です。
  
-6.  その他のノードで手順を繰り返します。
+6.  その他のノード上の手順を繰り返します。
 
 FCI を構成する準備が整いました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[フェールオーバー クラスター インスタンス: Linux 上の SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure.md)
+[Linux 上の SQL Server のフェールオーバー クラスター インスタンスを構成します。](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/05-smbsource.png 

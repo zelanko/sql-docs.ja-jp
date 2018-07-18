@@ -13,11 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8965d870164a146156031232d050bbee0a35e9ad
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812156"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,15 +26,15 @@ ms.lasthandoff: 05/03/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各バージョンで利用可能な列ストア機能の概要と、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の最新リリース。  
 
  > [!NOTE]
- > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、列ストア インデックスが SQL Database Premium レベル、Standard レベル (S3 以上)、およびすべての vCore レベルで使用できます。 SQL Server (2016 SP1 以降) では、列ストア インデックスがすべてのエディションで使用できます。 SQL Server (2016 以前) では、列ストア インデックスが Enterprise Edition でのみ使用できます。
+ > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、列ストア インデックスが [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium レベル、Standard レベル (S3 以上)、すべての vCore レベルで使用できます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降では、列ストア インデックスがすべてのエディションで使用できます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (SP1 より前) 以前のバージョンでは、列ストア インデックスが Enterprise Edition でのみ使用できます。
  
 ## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要  
  列ストア インデックスの主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
 
 |列ストア インデックスの機能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|マルチ スレッド クエリのバッチ実行|はい|はい|はい|はい|はい|はい| 
-|シングル スレッド クエリのバッチ実行|||はい|はい|はい|はい|  
+|マルチ スレッド クエリのバッチ モード実行|はい|はい|はい|はい|はい|はい| 
+|シングル スレッド クエリのバッチ モード実行|||はい|はい|はい|はい|  
 |アーカイブ圧縮オプション||はい|はい|はい|はい|はい|  
 |スナップショット分離および Read Committed スナップショット分離|||はい|はい|はい|はい| 
 |テーブルの作成時に、列ストア インデックスを指定する|||はい|はい|はい|はい|  

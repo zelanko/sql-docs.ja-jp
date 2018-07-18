@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_srvrolepermission (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db6b3367b1d1a048bb47e4d30b96970557f48939
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014763"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="arguments"></a>引数  
  [  **@srvrolename =** ] **'***ロール***'**  
- 権限を返す固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 ロールを指定しない場合、すべての固定サーバー ロールの権限が返されます。 *ロール*値は次のいずれかを持つことができます。  
+ 権限を返す固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 ロールを指定しない場合、すべての固定サーバー ロールの権限が返されます。 *ロール*値は次のいずれかであることができます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**sysadmin**|システム管理者。|  
 |**securityadmin**|セキュリティ管理者。|  
@@ -66,17 +66,17 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**サーバー ロール**|**sysname**|固定サーバー ロールの名前。|  
-|**アクセス許可**|**sysname**|関連付けられた権限**ServerRole**|  
+|**ServerRole**|**sysname**|固定サーバー ロールの名前。|  
+|**権限**|**sysname**|アクセス許可に関連付けられている**ServerRole**|  
   
-## <a name="remarks"></a>解説  
- 表示される権限には、固定サーバー ロールのメンバーが実行できる、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとその他の特別な操作が含まれます。 固定サーバー ロールの一覧を表示するには実行**sp_helpsrvrole**です。  
+## <a name="remarks"></a>コメント  
+ 表示される権限には、固定サーバー ロールのメンバーが実行できる、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとその他の特別な操作が含まれます。 固定サーバー ロールの一覧を表示するには、実行**sp_helpsrvrole**します。  
   
- **Sysadmin**固定サーバー ロールは、その他のすべての固定サーバー ロールのアクセス許可を持っています。  
+ **Sysadmin**固定サーバー ロールは、その他のすべての固定サーバー ロールのアクセス許可を持ちます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

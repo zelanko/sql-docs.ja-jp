@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dba7ad5bc651e279ad23a7876d196ef9316bb56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22be2baf6980f8df813635f3b9d4e4dfd213b818
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957267"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355894"
 ---
 # <a name="generate-filters"></a>[フィルターの生成]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ ms.locfileid: "32957267"
      このテキストは変更できません。標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用して、WHERE キーワードの後にフィルター句を入力します。  
   
     > [!IMPORTANT]  
-    >  パラメーター化された行フィルター句では列名に関数を適用しないことをお勧めします。これは、 `LEFT([MyColumn]) = SUSER_SNAME()`のように指定すると、パフォーマンスに問題が生じるためです。 フィルター句で HOST_NAME を使用していて、HOST_NAME 値を上書きする場合は、CONVERT を使用するデータ型の変換が必要になる可能性があります。 このようなケースの推奨事項の詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)に拡張されます。  
+    >  パラメーター化された行フィルター句では列名に関数を適用しないことをお勧めします。これは、 `LEFT([MyColumn]) = SUSER_SNAME()`のように指定すると、パフォーマンスに問題が生じるためです。 フィルター句で HOST_NAME を使用していて、HOST_NAME 値をオーバーライドする場合は、CONVERT を使用するデータ型の変換が必要になる可能性があります。 このようなケースの推奨事項の詳細については、「[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() 値のオーバーライド」をご覧ください。  
   
 3.  **[このテーブルからデータを取得するサブスクリプションの数を指定します。]**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ。 マージ レプリケーションを使用して、お使いのデータとアプリケーションに最適なパーティションの種類を指定できます。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションでは、重複しないパーティションのオプションが設定されます。 重複しないパーティションを事前計算済みパーティションと共に使用することで、パフォーマンスが向上します。事前計算済みパーティションに関連するアップロードの負担が、重複しないパーティションによって最小限に抑えられるためです。 重複しないパーティションのパフォーマンス上の利点は、使用するパラメーター化されたフィルターと結合フィルターが複雑になるほど明確になります。 このオプションを選択する場合は、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ。 マージ レプリケーションを使用して、お使いのデータとアプリケーションに最適なパーティションの種類を指定できます。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションでは、重複しないパーティションのオプションが設定されます。 重複しないパーティションを事前計算済みパーティションと共に使用することで、パフォーマンスが向上します。事前計算済みパーティションに関連するアップロードの負担が、重複しないパーティションによって最小限に抑えられるためです。 重複しないパーティションのパフォーマンス上の利点は、使用するパラメーター化されたフィルターと結合フィルターが複雑になるほど明確になります。 このオプションを選択する場合は、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
   
  フィルターを追加した後で、 **[OK]** をクリックして終了し、ダイアログ ボックスを閉じます。 指定したフィルターは、SELECT 句のテーブルに対して解析され、実行されます。 フィルター ステートメントに構文エラーなどの問題がある場合には通知され、フィルター ステートメントを編集することができます。  
   

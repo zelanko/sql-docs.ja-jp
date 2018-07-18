@@ -10,23 +10,24 @@ ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 05/08/2018
-ms.author: rebeccaz
+ms.date: 07/09/2018
+ms.author: aliceku
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c6d5134ac7760ce9156124ad8c7efd864da81878
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 49a3745e67a51ee8f5eb9625d518328f61593514
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34462370"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934854"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Azure SQL Database と Data Warehouse の透過的なデータ暗号化
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-透過的なデータ暗号化 (TDE) は、悪意のあるアクティビティの脅威から Azure SQL Database と Azure Data Warehouse を保護するのに役立ちます。 データベース、関連するバックアップ、静止したトランザクション ログ ファイルのリアルタイム暗号化および暗号化解除を実行します。アプリケーションに変更を加える必要はありません。 既定では、新しくデプロイされたすべての Azure SQL Database で TDE は有効になっていますが、場合によっては、古いデータベースのために手動で有効にする必要があります。  
+透過的なデータ暗号化 (TDE) は、悪意のあるアクティビティの脅威から Azure SQL Database と Azure Data Warehouse を保護するのに役立ちます。 データベース、関連するバックアップ、静止したトランザクション ログ ファイルのリアルタイム暗号化および暗号化解除を実行します。アプリケーションに変更を加える必要はありません。 既定では、TDL は新しく展開されるすべての Azure SQL Database で有効です。 SQL Database で論理 **master** データベースを暗号化するために TDE を使用することはできません。  **master** データベースには、ユーザー データベースで TDE 操作を実行する必要があるオブジェクトが含まれます。
+
+古いデータベースや Azure SQL Data Warehouse の場合、TDE を手動で有効にする必要があります。  
 
 透過的なデータ暗号化では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 このデータベース暗号化キーは、透過的なデータ暗号化プロテクターで保護されます。 プロテクターは、サービス管理証明書 (サービス管理の透過的なデータ暗号化) または Azure Key Vault に格納されている非対称キー (Bring Your Own Key) です。 透過的なデータ暗号化プロテクターはサーバー レベルで設定します。 
 

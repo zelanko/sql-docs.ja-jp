@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 423942773422452cc6b46b808fbe53a61270db2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85a9cdf94dff3a45563c0f22cb715a228d969dcb
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329946"
 ---
 # <a name="add-or-change-a-property-expression"></a>プロパティ式を追加または変更する
   パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、イベント ハンドラー、パッケージおよびプロジェクト レベルの接続マネージャー、およびログ プロバイダーに対してプロパティ式を作成できます。  

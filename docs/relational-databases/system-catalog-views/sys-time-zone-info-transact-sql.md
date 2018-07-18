@@ -1,5 +1,5 @@
 ---
-title: sys.time_zone_info (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.time_zone_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -28,23 +28,23 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 252def1ce861b926a6c8a990a3cbf10b22eb83f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222417"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984924"
 ---
 # <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   サポートされているタイム ゾーンに関する情報を返します。 コンピューターにインストールされているすべてのタイム ゾーンは、次のレジストリ ハイブに格納されます。  
-`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`」を参照してください。  
+`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Windows の標準的な形式でタイム ゾーンの名前です。 たとえば、**中央オーストラリア標準時**または**中央ヨーロピアン標準時**です。|  
-|**current_utc_offset**|**nvarchar(12)**|現在の UTC のオフセットです。 たとえば、 **+01: 00**または **-07:00**です。|  
-|**is_currently_dst**|**bit**|現在夏時間を確認する場合は true。|  
+|**name**|**sysname**|Windows 標準の形式でタイム ゾーンの名前です。 たとえば、 **cen です。オーストラリア標準時**または**中央ヨーロピアン標準時**します。|  
+|**current_utc_offset**|**nvarchar(12)**|現在の utc オフセットです。 たとえば、 **+01: 00**または **-07:00**します。|  
+|**is_currently_dst**|**bit**|夏時間が現在監視している場合は true。|  
   
 ## <a name="see-also"></a>参照  
  [GETUTCDATE &#40;TRANSACT-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   

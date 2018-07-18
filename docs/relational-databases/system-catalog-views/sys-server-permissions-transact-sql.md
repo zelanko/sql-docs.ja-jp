@@ -1,5 +1,5 @@
 ---
-title: sys.server_permissions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.server_permissions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,28 +26,28 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 16200de0c63979912b893fa84e7b36cf93a4ec62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221943"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038873"
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   サーバーレベルの権限ごとに 1 行のデータを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|権限が存在するリソースのクラスの識別子。<br /><br /> 100 = サーバー<br /><br /> 101 = サーバー プリンシパル<br /><br /> 105 = エンドポイント|  
-|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明。 次の値のいずれかになります。<br /><br /> **サーバー**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
-|**major_id**|**int**|権限が存在するセキュリティ保護可能なリソースの ID。クラスに基づいて解釈されます。 ほとんどの場合、これは、クラスが表すに適用される ID の種類だけです。 標準以外のリソースに対する解釈は、次のようになります。<br /><br /> 100 = 常に 0|  
+|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明。 次のいずれかの値です。<br /><br /> **サーバー**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**major_id**|**int**|権限が存在するセキュリティ保護可能なリソースの ID。クラスに基づいて解釈されます。 ほとんどは、これは、クラスが表す内容に適用される ID の種類だけです。 標準以外のリソースに対する解釈は、次のようになります。<br /><br /> 100 = 常に 0|  
 |**minor_id**|**int**|権限が存在するリソースのセカンダリ ID。クラスに基づいて解釈されます。|  
 |**grantee_principal_id**|**int**|権限が許可されているサーバー プリンシパル ID。|  
 |**grantor_principal_id**|**int**|権限の許可者のサーバー プリンシパル ID。|  
 |**type**|**char(4)**|サーバー権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
 |**permission_name**|**nvarchar(128)**|権限名。|  
-|**状態**|**char(1)**|権限の状態。<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = Grant With Grant オプション|  
+|**state**|**char(1)**|権限の状態。<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = Grant With Grant オプション|  
 |**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |権限の種類|アクセス許可の名前|適用されるセキュリティ保護可能なリソース|  
@@ -83,10 +83,10 @@ ms.locfileid: "33221943"
 |VWSS|VIEW SERVER STATE|SERVER|  
 |XA|EXTERNAL ACCESS|SERVER|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは自分の権限を参照できます。 他のログインの権限を参照するには、VIEW DEFINITION、ALTER ANY LOGIN、またはログインに対するすべての権限が必要です。 ユーザー定義のサーバー ロールを参照するには、ALTER ANY SERVER ROLE、またはロールのメンバーシップが必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次のクエリは、サーバー プリンシパルに対して明示的に付与または拒否されている権限を一覧表示します。  

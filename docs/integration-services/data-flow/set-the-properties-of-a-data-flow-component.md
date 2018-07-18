@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a159f57e4315cba3f9eb3ee2d27cfffb94fb6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d97d2aeabc624d2d13ed4ed6e6ae515b314bbb1e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409204"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
   変換元、変換先、変換などを含むデータ フロー コンポーネントのプロパティを設定するには、次の機能のいずれかを使用します。  
@@ -128,11 +127,11 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、データ フロー内のコンポーネントのプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|Description|  
+|プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|コンポーネントの CLSID。|  
 |ContactInfo|String|コンポーネント開発者の連絡先情報。|  
-|Description|String|データ フロー コンポーネントの説明。 このプロパティの既定値は、データ フロー コンポーネントの名前です。|  
+|[説明]|String|データ フロー コンポーネントの説明。 このプロパティの既定値は、データ フロー コンポーネントの名前です。|  
 |ID|Integer|コンポーネントのこのインスタンスを一意に識別する値。|  
 |[IdentificationString]|String|コンポーネントを識別します。|  
 |IsDefaultLocale|ブール値|コンポーネントが、それ自体が属するデータ フロー タスクのロケールを使用するかどうかを示します。|  
@@ -148,9 +147,9 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、データ フロー内のコンポーネントの入力のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|Description|  
+|プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
-|Description|String|入力の説明。|  
+|[説明]|String|入力の説明。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
 |HasSideEffects|ブール値|コンポーネントが下流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
@@ -168,10 +167,10 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、データ フロー内のコンポーネントの入力列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|Description|  
+|プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。|  
-|Description|String|入力列を説明します。|  
+|[説明]|String|入力列を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|出力列に割り当てられた外部メタデータ列の ID。|  
@@ -192,10 +191,10 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、データ フロー内のコンポーネントの出力のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|Description|  
+|プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|ブール値|出力がパスに接続されていない場合に、データ フロー エンジンが出力を削除するかどうかを指定する値。|  
-|Description|String|出力を説明します。|  
+|[説明]|String|出力を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
 |ExclusionGroup|Integer|相互排他的な出力のグループを識別する値。|  
@@ -213,10 +212,10 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、データ フロー内のコンポーネントの出力列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|Description|  
+|プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。|  
-|Description|String|出力列を説明します。|  
+|[説明]|String|出力列を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row** 既定値は **Fail component**です。|  
 |ExternalMetadataColumnID|Integer|出力列に割り当てられた外部メタデータ列の ID。|  
@@ -236,9 +235,9 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、データ フロー内のコンポーネントの外部メタデータ列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|Description|  
+|プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
-|Description|String|外部列を説明します。|  
+|[説明]|String|外部列を説明します。|  
 |ID|Integer|列を一意に識別する値。|  
 |[IdentificationString]|String|列を識別する文字列。|  
 |[オブジェクト名]|String|外部列の名前。|  
@@ -250,7 +249,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、出力列および外部メタデータ列のデータ型プロパティを示しています。  
   
-|プロパティ|データ型|Description|  
+|プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Unicode でない文字列データのコード ページを指定します。|  
 |DataType|Integer (列挙)|列の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  

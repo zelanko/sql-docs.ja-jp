@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 のデータ アクセス コンポーネント |Microsoft ドキュメント
+title: SQLXML 4.0 のデータ アクセス コンポーネント |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e825d46a60fe8a0d27e54e1989658861f77a7c9a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049990"
 ---
-# <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 のデータ アクセス コンポーネントで SQLXMLOLEDB プロバイダー
+# <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 のデータ アクセス コンポーネント - SQLXMLOLEDB プロバイダー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに対して XML データを挿入または取得するときに使用できる、3 種類のデータ プロバイダーが用意されています。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "34708190"
   
      ActiveX Data Objects (ADO) を介して、SQLXML 4.0 の機能へのアクセスを提供します。  
   
--   SQLXML マネージ クラス  
+-   SQLXML マネージド クラス  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML の機能へのアクセスを提供します。 詳細については、次を参照してください。 [SQLXML マネージ クラス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)です。  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML の機能へのアクセスを提供します。 詳細については、次を参照してください。 [SQLXML マネージ クラス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)します。  
   
 -   SQL Server Native Client (SQLNCLI11)  
   

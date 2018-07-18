@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f478c5f06ff846d313625dc0792b33708a9ca358
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b8a39d64854d6cc63f0b607b9eaa5084ab250313
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702965"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784673"
 ---
 # <a name="create-external-file-format-transact-sql"></a>外部のファイルの形式 (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -187,7 +186,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
   
 -   AM/PM (tt) は、必須ではありません。 既定では、AM は。
   
-|日付型|例|Description|  
+|日付型|例|[説明]|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-mm-dd HH:mm:ss.fff'|年、月、日に加えて、この日付形式には、00-24 の時、00-59 の分、00-59 の秒、3 桁のミリ秒が含まれます。|  
 |DateTime|DATE_FORMAT = 'yyyy-mm-dd hh:mm:ss.ffftt'|年、月、日に加えて、この日付形式には、00-12 の時、00-59 の分、00-59 の秒、3 桁のミリ秒、および AM/am/PM/pm が含まれます。 |  

@@ -2,7 +2,6 @@
 title: 保存して開く方法の例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6248fa2dd504e808f5ae2685ba70d46f373a6309
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281391"
 ---
 # <a name="save-and-open-methods-example-vb"></a>保存して開く方法の例 (VB)
 これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを併用することができます。  

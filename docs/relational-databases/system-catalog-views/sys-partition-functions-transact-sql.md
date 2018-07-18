@@ -1,5 +1,5 @@
 ---
-title: sys.partition_functions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.partition_functions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,20 +26,20 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2a537bc6906576c7eacd8f06d555ab4a3dc69a1d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180428"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987424"
 ---
 # <a name="syspartitionfunctions-transact-sql"></a>sys.partition_functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパーティション関数ごとに 1 行のデータを保持します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|パーティション関数の名前です。 データベース内で一意です。|  
+|**name**|**sysname**|パーティション関数の名前。 データベース内で一意です。|  
 |**function_id**|**int**|パーティション関数 ID です。 データベース内で一意です。|  
 |**type**|**char(2)**|関数の種類。<br /><br /> R = 範囲|  
 |**type_desc**|**nvarchar(60)**|関数の種類。<br /><br /> RANGE|  
@@ -49,7 +49,7 @@ ms.locfileid: "33180428"
 |**create_date**|**datetime**|関数が作成された日付です。|  
 |**modify_date**|**datetime**|関数が ALTER ステートメントを使用して最後に変更された日付です。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

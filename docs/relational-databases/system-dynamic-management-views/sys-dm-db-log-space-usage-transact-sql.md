@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_space_usage (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_log_space_usage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9bedbe8d5aa7b4e50ce4f486f2f3dbbf84e48a9c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061440"
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,24 +39,24 @@ ms.lasthandoff: 05/23/2018
 > [!NOTE]
 > すべてのトランザクション ログ ファイルが結合されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|データベース ID。|  
 |total_log_size_in_bytes |**bigint** |ログのサイズ  |
 |used_log_space_in_bytes |**bigint** |ログの占有サイズ  |     
-|used_log_space_in_percent |**real** |ログの合計サイズに対する比率で表したログの占有サイズ |
-|log_space_in_bytes_since_last_backup |**bigint** |最後のログ バックアップ以降に使用される領域の量 <br />**適用されます:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]を通じて[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。|
+|used_log_space_in_percent |**real** |ログの合計サイズの割合で示したログの占有サイズ |
+|log_space_in_bytes_since_last_backup |**bigint** |前回のログ バックアップ以降に使用される領域の量 <br />**適用対象:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]を通じて[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]します。|
     
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. 容量のログの空き領域 tempdb の決定します。   
-次のクエリは、tempdb の利用可能なメガバイト (MB) のログの合計空き領域を返します。
+### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. 量の空き領域を確認ログ tempdb   
+次のクエリでは、tempdb で使用可能なメガバイト (MB) のログの合計空き領域を返します。
 
 ```sql
 USE tempdb;  

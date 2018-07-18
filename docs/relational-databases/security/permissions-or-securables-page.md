@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,16 +17,16 @@ f1_keywords:
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ee922c02ec87f4d8908b597f694328703366cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5c5020b57bd7a5fcd120b097a43961c35330733
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968537"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941398"
 ---
 # <a name="permissions-or-securables-page"></a>[権限] ページまたは [セキュリティ保護可能なリソース] ページ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +68,7 @@ ms.locfileid: "32968537"
  列を含むオブジェクト (テーブル、ビュー、テーブル値関数など) の場合、 **[列権限]** ボタンをクリックすると、 **[列権限]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、テーブルまたはビューの各列に対して **[許可]**、 **[許容]** または **[拒否]** の権限を設定できます。 このオプションは、すべての種類のオブジェクトや権限で使用できるとは限りません。  
   
 ## <a name="effective-tab"></a>[有効] タブ  
- プリンシパルがセキュリティ保護可能なリソースに関連付けた権限は、複数の異なるプリンシパルに設定されている権限から継承されている場合があります。 たとえば、ログインは個別に権限が与えられるだけでなく、グループのメンバーとしても権限が与えられる場合があります。 **[有効]** タブでは、明示的な権限と、グループまたはロールのメンバーシップから受け取る権限を組み合わせた結果が表示されます。 許可の権限は集計されます。 また、すべての許可の権限よりも拒否の権限が優先されます。  
+ プリンシパルがセキュリティ保護可能なリソースに関連付けた権限は、複数の異なるプリンシパルに設定されている権限から継承されている場合があります。 たとえば、ログインは個別に権限が与えられるだけでなく、グループのメンバーとしても権限が与えられる場合があります。 **[有効]** タブでは、明示的な権限と、グループまたはロールのメンバーシップから受け取る権限を組み合わせた結果が表示されます。 許可の権限は集計されます。 また、すべての許可の権限を拒否の権限がオーバーライドします。  
   
  **権限**  
  権限の名前です。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbb3488bcd17087caf11096a788312fdfa147df7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da8653f0e3b3080e4cbab0baa60d1eb2d9f79b5d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332976"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
   条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているため、行が式に一致しない場合は既定の出力に送信されます。  

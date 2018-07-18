@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8fadb6163b7ad9e52f02834a3982feb30cd9a3c8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9d49d5cae66834cd9cfd304198fc4f677020fe75
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550563"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322321"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに URL が使用されます。 どちらのアプリケーションを使用する場合も、事前に Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]それぞれに 1 つ以上の URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、両方のアプリケーションの URL に既定値が用意されています。この既定値は、他の Web サービスや Web アプリケーションとのサイド バイ サイドの配置をはじめとするほとんどの配置シナリオに有効です。  

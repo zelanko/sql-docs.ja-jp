@@ -1,13 +1,12 @@
 ---
-title: 一括コピー SELECT 結果セット (ODBC) |Microsoft ドキュメント
+title: SELECT 結果セット (ODBC) の一括コピー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f184bc996cec750383caa12ecc8fc06060d01f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7be06db485057a16961d76ff3965ce862c104cdd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945457"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427291"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 結果セットの一括コピー (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +42,7 @@ ms.locfileid: "32945457"
   
 3.  SQL Server に接続します。  
   
-4.  呼び出す[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を次の情報を設定します。  
+4.  呼び出す[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)次の情報を設定します。  
   
     -   NULL を指定する、 *szTable*パラメーター。  
   
@@ -54,11 +52,11 @@ ms.locfileid: "32945457"
   
     -   コピーの方向 (DB_OUT)。  
   
-5.  呼び出す[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)eOption を BCPHINTS に設定、および SELECT ステートメントを含む SQLTCHAR 配列へのポインターを iValue に置きます。  
+5.  呼び出す[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)eOption を BCPHINTS に設定し、SELECT ステートメントを含む SQLTCHAR 配列へのポインターを iValue に配置します。  
   
-6.  呼び出す[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を一括コピー操作を実行します。  
+6.  呼び出す[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)一括コピー操作を実行します。  
   
- これらの手順を使用すると、ファイルはネイティブ形式で作成されます。 使用して、データ値を他のデータ型に変換することができます[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)です。 詳細については、次を参照してください。[一括コピー フォーマット ファイルを作成する&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)です。  
+ これらの手順を使用すると、ファイルはネイティブ形式で作成されます。 使用してデータ値を他のデータ型に変換できる[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)します。 詳細については、次を参照してください。[一括コピー フォーマット ファイルを作成&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)します。  
   
 ## <a name="example"></a>例  
  AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
@@ -172,6 +170,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [一括コピーでは、SQL Server ODBC ドライバーの操作方法に関するトピック (&) #40";"ODBC"&"#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [一括コピーの SQL Server ODBC ドライバーの操作について&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

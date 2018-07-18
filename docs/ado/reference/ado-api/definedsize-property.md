@@ -2,7 +2,6 @@
 title: DefinedSize プロパティ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b84eb083ba442fc214d63b518c8bab0c001aa229
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b060258acc6e267ff9e518aa4591bdfd0eef69e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277561"
 ---
 # <a name="definedsize-property"></a>DefinedSize プロパティ
 データ容量を示す、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  長さがないデータ型、これに設定されている ~ 0 (ビット演算子、値は 0 以外のすべてのビットが 1 に設定されます)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **DefinedSize**のデータ容量を決定するプロパティ、**フィールド**オブジェクト。  
   
  **DefinedSize**と[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティは異なります。 たとえば、**フィールド**の宣言された型とオブジェクト**それぞれ**と**DefinedSize** 50、1 つの文字を含むのプロパティの値。 **ActualSize**返さプロパティの値は 1 つの文字の長さ (バイト単位)。  

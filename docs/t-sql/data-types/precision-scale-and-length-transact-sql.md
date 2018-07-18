@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/22/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - data types [SQL Server], precision
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc12ae4429ab39c1eb20059f17473e67cdbf60ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0acd3b9603be457483a43b343652b21c17e0390e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053949"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415352"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precision、scale、および長さ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ precision は、数値全体の桁数です。 scale は、数値の中で小数
   
 オペランド式は、precision が p1 で scale が s1 の式 e1 と、precision が p2 で scale が s2 の式 e2 で表されます。 **decimal** でない任意の式の precision と scale は、その式のデータ型に定義された precision と scale です。
   
-|演算|結果の precision|結果の scale *|  
+|演算|結果の precision|結果の小数点以下桁数 *|  
 |---|---|---|
 |e1 + e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
 |e1 - e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
@@ -79,7 +78,7 @@ precision は、数値全体の桁数です。 scale は、数値の中で小数
 ```sql
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
-ここでは、precision は 61 であり、scale は 40 です。
+ここでは、有効桁数は 61 であり、小数点以下の桁数は 40 です。
 整数部 (precision-scale = 21) が 32 未満であり、乗算ルールの (1) に該当するため、scale は `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17` で計算されます。 結果のデータ型は `decimal(38,17)` です。
 
 次の式は、`decimal(38,6)` に収めた結果 `0.000001` を返します。
@@ -87,7 +86,7 @@ select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20
 select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
 ```
 ここでは、precision は 61 であり、scale は 20 です。
-scale が 6 桁を越えており、整数部 (`precision-scale = 41`) が 32 を超えています。 これは乗算ルールの (3) に該当するため、結果の型は `decimal(38,6)` になります。
+小数点以下の桁数が 6 桁を越えており、整数部 (`precision-scale = 41`) が 32 を超えています。 これは乗算ルールの (3) に該当するため、結果の型は `decimal(38,6)` になります。
 
 ## <a name="see-also"></a>参照
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  

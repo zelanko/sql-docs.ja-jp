@@ -2,10 +2,10 @@
 title: ストアド プロシージャを実行 odbc 呼び出しし、出力の処理 |Microsoft ドキュメント
 description: プロセスのリターン コードと出力パラメーターの SQL Server の OLE DB Driver を使用します。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5c7b5119e2f8dd00076e0e746ccf3352371c503f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 89e08882d06111e02057a95586c4f38c27b8db76
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665562"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ストアド プロシージャを実行 odbc 呼び出しし、出力の処理
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドでは、複数の結果を返します、出力パラメーターのデータが使用可能な場合に**imultipleresults::getresult** DB_S_NORESULT を返すまたは**IMultipleResults**インターフェイスが完全に解放されると、先に生じた方です。  
   
@@ -359,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [処理結果の操作方法に関するトピック (&) #40";"OLE DB"&"#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [結果を処理方法に関するトピック&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

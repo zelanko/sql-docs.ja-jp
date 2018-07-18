@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70f7975e2bf6408239bd4d4fe7c07af169e0bf29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78335b05976d63c1da39a69766fd44e073ad4e54
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310321"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS (内部) ナレッジを使用したデータのクレンジング
 
@@ -111,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  値は、信頼レベルに基づいて次の 5 つのタブに表示されます。  
   
-|タブ|Description|  
+|タブ|[説明]|  
 |---------|-----------------|  
 |**提案**|信頼レベルが *自動提案しきい値* より高く *自動修正しきい値* より低い推奨値が検出されたドメイン値が表示されます。<br /><br /> 推奨値は、元の値の **[次に修正]** 列に表示されます。 上のグリッドで値の **[承認]** 列または **[拒否]** 列のオプション ボタンをクリックすると、その提案をその値のすべてのインスタンスに対して承認または拒否できます。 この場合、承認した値は **[修正済み]** タブに移動し、拒否した値は **[無効]** タブに移動します。|  
 |**[新規作成]**|十分な情報がないために他のタブにマップできない有効なドメインが表示されます。そのほか、信頼レベルが *自動提案しきい値* より低いが、有効と見なされる程度には高い値もこのタブに含まれます。<br /><br /> 値が適切であると思われる場合は **[承認]** 列のオプション ボタンをクリックし、 思われない場合は **[拒否]** 列のオプション ボタンをクリックします。 承認した値は **[適切]** タブに移動し、拒否した値は **[無効]** タブに移動します。元の値の置換値として、その値の **[次に修正]** 列に適切な値を手動で入力することもできます。値を入力したら、**[承認]** 列のオプション ボタンをクリックして変更を受け入れます。 この場合、値が **[修正済み]** タブに移動します。|  

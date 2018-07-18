@@ -1,1 +1,1 @@
-**このトピックに適用されます**![はい](media/yes.png "はい")SQL Server \(2008 以降の\)![ありません](media/no.png "ありません")。Azure SQL データベース![ありません](media/no.png "ありません")Azure SQL Data Warehouse![ありません](media/no.png "ありません")Parallel Data Warehouse
+**このトピックの対象:** ![はい](media/yes.png "はい")SQL Server \(2008年以降で\)![ありません](media/no.png "ありません")Azure SQL Database![ありません](media/no.png "ありません")Azure SQL Data Warehouse![ありません](media/no.png "ありません")Parallel Data Warehouse

@@ -1,5 +1,5 @@
 ---
-title: sys.partition_parameters (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.partition_parameters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,29 +26,30 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e0287d1c3a88281bb1b56a6d632e77beeeb7791f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036385"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   パーティション関数の各パラメーターの行を保持します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|このパラメーターが属するパーティション関数の ID です。|  
-|**parameter_id**|**int**|パラメーターの ID です。 パーティション関数内で一意であり、1 から始まります。|  
+|**parameter_id**|**int**|パラメーターの ID。 パーティション関数内で一意であり、1 から始まります。|  
 |**system_type_id**|**tinyint**|パラメーターのシステム型の ID です。 対応する、 **system_type_id**の列、 **sys.types**カタログ ビューです。|  
-|**max_length**|**smallint**|バイト単位でパラメーターの最大長。|  
-|**有効桁数 (precision)**|**tinyint**|数値ベースの場合は、パラメーターの有効桁数です。それ以外の場合は、0 です。|  
+|**max_length**|**smallint**|(バイト単位) のパラメーターの最大長。|  
+|**有効桁数**|**tinyint**|数値ベースの場合は、パラメーターの有効桁数です。それ以外の場合は、0 です。|  
 |**scale**|**tinyint**|数値ベースの場合は、パラメーターの小数点以下桁数です。それ以外の場合は、0 です。|  
 |**collation_name**|**sysname**|文字ベースの場合は、パラメーターの照合順序の名前です。それ以外の場合は、NULL です。|  
-|**user_type_id**|**int**|型の ID。 データベース内で一意です。 システム データ型の場合、 **user_type_id** = **system_type_id**です。|  
+|**user_type_id**|**int**|型の ID。 データベース内で一意です。 システム データ型、 **user_type_id** = **system_type_id**します。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [関数のカタログ ビューをパーティション分割&#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   

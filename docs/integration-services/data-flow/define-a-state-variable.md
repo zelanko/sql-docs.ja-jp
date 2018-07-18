@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a9ff7319403a724dcd1c2778a516114d6aef3e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 786d9b2e0d3a3f00d3f9e00496d8a11e9d2c18c1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402994"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、CDC 状態変数値の各要素の概要を示します。  
   
-|コンポーネント|Description|  
+|コンポーネント|[説明]|  
 |---------------|-----------------|  
 |**\<state-name>**|現在の CDC 状態の名前です。|  
 |**CS**|現在の処理範囲の始点 (Current Start) を示します。|  
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、使用可能な CDC 状態値を示します。  
   
-|状態|Description|  
+|状態|[説明]|  
 |-----------|-----------------|  
 |(INITIAL)|現在の CDC グループでパッケージが実行される前の初期状態です。 CDC 状態が空のときの状態でもあります。|  
 |ILSTART (Initial Load Started)|CDC 制御タスクに対する **MarkInitialLoadStart** 操作の呼び出し後、初期読み込みパッケージが開始したときの状態です。|  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_xtp_table_memory_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -26,19 +26,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bea396c2625b282b0b63d9be240ed932c640749b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991864"
 ---
 # <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベースの各 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] テーブル (ユーザーおよびシステム) におけるメモリ使用量に関する統計を返します。 システム テーブルは、負の値のオブジェクト Id を持つし、実行時情報を格納するために使用、[!INCLUDE[hek_2](../../includes/hek-2-md.md)]エンジンです。 ユーザー オブジェクトとは異なり、システム テーブルは内部で使用され、メモリ内にしか存在しないため、カタログ ビューには表示されません。 システム テーブルは、ストレージ内のすべてのデータ ファイルとデルタ ファイルのメタデータ、マージ要求、行をフィルター選択するためのデルタ ファイルのウォーターマーク、削除されたテーブル、復旧とバックアップに関する情報などを格納するために使用されます。 ある、[!INCLUDE[hek_2](../../includes/hek-2-md.md)]エンジンは、最大 8,192 のデータを持つことができます、大規模なインメモリ データベース、システム テーブルによって使用されたメモリのデルタ ファイルのペアは、数メガ バイトを指定できます。  
+  現在のデータベースの各 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] テーブル (ユーザーおよびシステム) におけるメモリ使用量に関する統計を返します。 システム テーブルの id が負の値のオブジェクトとの実行時の情報を格納するため、[!INCLUDE[hek_2](../../includes/hek-2-md.md)]エンジン。 ユーザー オブジェクトとは異なり、システム テーブルは内部で使用され、メモリ内にしか存在しないため、カタログ ビューには表示されません。 システム テーブルは、ストレージ内のすべてのデータ ファイルとデルタ ファイルのメタデータ、マージ要求、行をフィルター選択するためのデルタ ファイルのウォーターマーク、削除されたテーブル、復旧とバックアップに関する情報などを格納するために使用されます。 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]エンジンは、最大 8,192 のデータを持つことができ、大規模なメモリ内データベース、システム テーブルによって使用されたメモリのデルタ ファイルのペアは、数メガ バイトを指定できます。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|テーブルのオブジェクト ID です。 インメモリ OLTP システム テーブルの場合は NULL です。|  
 |memory_allocated_for_table_kb|**bigint**|このテーブルに割り当てられているメモリです。|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/23/2018
 |memory_allocated_for_indexes_kb|**bigint**|このテーブルのインデックスに割り当てられているメモリです。|  
 |memory_used_by_indexes_kb|**bigint**|このテーブルのインデックスに使用されているメモリです。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  現在のデータベースに対して VIEW DATABASE STATE 権限を持っている場合は、すべての行が返されます。 この権限を持っていない場合は、空の行セットが返されます。  
   
  VIEW DATABASE 権限がない場合は、SELECT 権限を持っているテーブル内の行に対するすべての列が返されます。  

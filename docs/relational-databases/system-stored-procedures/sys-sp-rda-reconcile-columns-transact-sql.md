@@ -1,14 +1,11 @@
 ---
-title: sys.sp_rda_reconcile_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_rda_reconcile_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ff66e1f9b9e78cd2eb4c4c68d4cdc3e931d58ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e53540b06850f380f6ea5cfe80ea7cc33455fd7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997699"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414211"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  内の列に、リモート Azure テーブルに列の整合性を保ちます、Stretch 対応 SQL Server テーブル。  
+  内の列に、リモート Azure テーブルの列を調整する、Stretch 対応 SQL Server テーブル。  
     
-  **sp_rda_reconcile_columns**は、リモート テーブルではなく Stretch 対応 SQL Server テーブルに存在するリモート テーブルに列を追加します。 これらの列は、リモート テーブルから誤って削除した列にする可能性があります。 ただし、 **sp_rda_reconcile_columns**は SQL Server のテーブルではなく、リモート テーブルに存在するリモート テーブルから列を削除できません。
+  **sp_rda_reconcile_columns**リモート テーブルではなく Stretch 対応 SQL Server テーブルに存在するリモート テーブルに列を追加します。 これらの列には、列をリモート テーブルから誤って削除した可能性があります。 ただし、 **sp_rda_reconcile_columns** SQL Server テーブルではなく、リモート テーブルに存在するリモート テーブルから列を削除しません。
   
   > [!IMPORTANT]
   > **sp_rda_reconcile_columns** がリモート テーブルから誤って削除した列を再作成する場合、削除された列に属していたデータは復元されません。
@@ -52,15 +48,15 @@ sp_rda_reconcile_columns @objname = '@objname'
   
 ## <a name="arguments"></a>引数  
  @objname = '*@objname*'  
- SQL Server の Stretch 対応テーブルの名前。  
+ Stretch 対応 SQL Server テーブルの名前。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
    
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Stretch 対応の SQL Server テーブルに存在しなくなったリモートの Azure テーブルに列が存在している場合、これらの余分な列が Stretch Database の正常な動作を妨げることはありません。 必要に応じて余分の列を手動で削除できます。  
   
 ## <a name="example"></a>例  

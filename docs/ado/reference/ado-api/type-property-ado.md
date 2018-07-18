@@ -2,7 +2,6 @@
 title: Type プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78984a64299b947afe71d07e8a9155b9594173e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33bf90a2ac3101cbf582449f2b5495f110a37a62
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282571"
 ---
 # <a name="type-property-ado"></a>Type プロパティ (ADO)
 操作の種類またはデータ型を示す、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、[格納](../../../ado/reference/ado-api/datatypeenum.md)値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **パラメーター** 、オブジェクト、**型**読み取り/書き込みプロパティです。 新しい**フィールド**に追加されたオブジェクト、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクション、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、**型**の後に、読み取り/書き込み[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティを**フィールド**が指定されているデータ プロバイダーが追加、新しいおよび**フィールド**を呼び出して、 [を更新](../../../ado/reference/ado-api/update-method.md)のメソッド、**フィールド**コレクション。  
   
  その他のすべてのオブジェクトに対して、**型**プロパティは読み取り専用です。  

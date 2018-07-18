@@ -2,7 +2,6 @@
 title: OriginalValue と UnderlyingValue プロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ebcdbff0183da0bb389279d642e3a9129aff955
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fa7e2dbf687c9d07bad1e9052b7fd2eeede1e4f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280071"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue と UnderlyingValue プロパティの例 (vc++)
 この例で、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)にレコードのデータを基になる場合は、メッセージを表示することによってプロパティが変更された、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)バッチ更新をします。  

@@ -2,7 +2,6 @@
 title: ただしメソッド (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 209d0c496f3c9467acb947e44165b91a6619af7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8769760499f89af5bfca07daaca03969667677fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287421"
 ---
 # <a name="cancelupdate-method-rds"></a>ただしメソッド (RDS)
 現在のまたは新しい行に加えられた変更を取り消します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -41,7 +41,7 @@ DataControl.CancelUpdate
  *DataControl*  
  オブジェクト変数を表す、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  OLE DB は両方の元の値のコピーと変更のキャッシュのカーソル サービス。 呼び出すと**ただし**変更のキャッシュが空にリセットされ、バインドされたコントロールが、元のデータで更新します。  
   
 ## <a name="applies-to"></a>適用対象  

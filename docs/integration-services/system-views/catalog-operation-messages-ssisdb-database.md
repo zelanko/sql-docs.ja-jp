@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
@@ -19,18 +17,19 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 920d2b8ab5eb2d0635fbdac7170fbe5d2ecfe8ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8de728484d1c0e00eb4ad1bc4dd7ad4137b618c8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401954"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでの操作中に記録されるメッセージを表示します。  
   
-|列名|データ型|Description|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|メッセージの一意識別子 (ID)。|  
 |operation_id|**bigint**|操作の一意の ID。|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  このビューに表示されるメッセージの種類は次のとおりです。  
   
-|**message_type** 値|Description|  
+|**message_type** 値|[説明]|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|[エラー]|  
@@ -67,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
  このビューに表示されるメッセージ ソースの種類は次のとおりです。  
   
-|**message_source_type**|Description|  
+|**message_source_type**|[説明]|  
 |-------------------------------|-----------------|  
 |10|T-SQL や CLR ストアド プロシージャのようなエントリの API|  
 |20|パッケージ (ISServerExec.exe) を実行するために使用する外部プロセス|  

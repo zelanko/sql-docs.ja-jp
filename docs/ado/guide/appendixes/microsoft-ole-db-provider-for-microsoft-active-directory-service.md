@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft OLE DB Provider for Microsoft Active Directory Service |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
@@ -30,7 +30,7 @@ ms.locfileid: "35270651"
 Active Directory サービス インターフェイス (ADSI) プロバイダーでは、adsi エディターを使用した異種のディレクトリ サービスに接続する ADO が許可されます。 これにより、ADO アプリケーションは、Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory サービスに、すべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなく読み取り専用アクセスできるようにします。 ADSI 自体は、プロバイダー モデルに基づいて、できるように、別のディレクトリに新しいプロバイダーの提供アクセスがある場合、ADO アプリケーションはシームレスにアクセスします。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
   
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター  
- このプロバイダーに接続するには、設定、**Provider**の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)には、次のプロパティ。  
+ このプロバイダーに接続するには、設定、**Provider**の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)には、次のプロパティ。   
   
 ```  
 ADSDSOObject  

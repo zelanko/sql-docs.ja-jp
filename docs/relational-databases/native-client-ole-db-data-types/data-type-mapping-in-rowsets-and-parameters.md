@@ -1,13 +1,12 @@
 ---
-title: 行セット、およびパラメーター内のデータ型マッピング |Microsoft ドキュメント
+title: 行セット、およびパラメーター内のデータ型マッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,23 +21,22 @@ helpviewer_keywords:
 - GetParameterInfo function
 - OLE DB, data types
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
-caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e81a584d2af05050483a68e05f164b920f0ad764
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea9322153c59e3d83e07504236df82b0aa7b3272
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946847"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413961"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  行セットでは、パラメーター値として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次 OLE DB を使用してデータには、関数で報告される、データ型が定義されている**icolumnsinfo::getcolumninfo**と**Icommandwithparameters::getparameterinfo**です。  
+  行セットでは、パラメーター値として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次 OLE DB を使用してデータには、関数で報告された、データ型が定義されている**icolumnsinfo::getcolumninfo**と**Icommandwithparameters::getparameterinfo**します。  
   
 |SQL Server データ型|OLE DB データ型|  
 |--------------------------|----------------------|  
@@ -74,12 +72,12 @@ ms.locfileid: "32946847"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、図に示すように、コンシューマーから要求されたデータの変換をサポートしています。  
   
- **Sql_variant**オブジェクトは、任意のデータを保持できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]text、ntext、image、varchar (max)、nvarchar (max)、varbinary (max)、xml、timestamp、および Microsoft .NET Framework 共通言語ランタイム (CLR) を除くデータの種類ユーザー定義型です。 また、sql_variant データのインスタンスは、その基になる基本データ型として sql_variant を保持できません。 たとえば、列を含めることができます**smallint**一部の行に対して値**float**の他の行の値と**char**/**nchar**残りの部分の値。  
+ **Sql_variant**オブジェクトは、いずれかのデータを保持できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]text、ntext、image、varchar (max)、nvarchar (max)、varbinary (max)、xml、timestamp、および Microsoft .NET Framework 共通言語ランタイム (CLR) 以外のデータ型ユーザー定義の型。 また、sql_variant データのインスタンスは、その基になる基本データ型として sql_variant を保持できません。 たとえば、列を含めることができます**smallint**いくつかの行の値**float** 、他の行の値と**char**/**nchar**残りの部分での値。  
   
 > [!NOTE]  
->  **Sql_variant**データ型は Microsoft Visual Basic®、DBTYPE_VARIANT、DBTYPE_SQLVARIANT にバリアント データ型に似ています。  
+>  **Sql_variant**データ型は Microsoft Visual Basic® と DBTYPE_VARIANT、DBTYPE_SQLVARIANT Variant データ型に似ています。  
   
- ときに**sql_variant**データを DBTYPE_VARIANT としてフェッチ、バッファーの VARIANT 構造体内に格納されます。 VARIANT 構造体内のサブタイプがで定義されているサブタイプにマップされていない可能性がありますが、 **sql_variant**データ型。 **Sql_variant**に一致するすべてのサブタイプの順序でデータを DBTYPE_SQLVARIANT としてフェッチするし、必要があります。  
+ ときに**sql_variant**データを DBTYPE_VARIANT としてフェッチは、バッファーの VARIANT 構造体内に格納されます。 VARIANT 構造体のサブタイプがで定義されているサブタイプにマップされていない可能性がありますが、 **sql_variant**データ型。 **Sql_variant**一致するように、すべてのサブタイプの順序でデータを DBTYPE_SQLVARIANT としてフェッチするする必要があります。  
   
 ## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT データ型  
  サポートするために、 **sql_variant**データ型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBTYPE_SQLVARIANT と呼ばれるプロバイダー固有のデータ型を公開します。 ときに**sql_variant**データを DBTYPE_SQLVARIANT としてフェッチで、プロバイダー固有の SSVARIANT 構造体に格納されます。 SSVARIANT 構造体を含むすべてのサブタイプのサブタイプに一致する、 **sql_variant**データ型。  
@@ -87,7 +85,7 @@ ms.locfileid: "32946847"
  また、セッション プロパティ SSPROP_ALLOWNATIVEVARIANT を TRUE に設定する必要もあります。  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>プロバイダー固有のプロパティ SSPROP_ALLOWNATIVEVARIANT  
- データをフェッチするときに、列またはパラメーターに返すデータ型を明示的に指定できます。 **IColumnsInfo**列情報を取得し、それをバインドを使用するも使用できます。 ときに**IColumnsInfo** SSPROP_ALLOWNATIVEVARIANT セッション プロパティが FALSE (既定値)、DBTYPE_VARIANT が返された場合のバインドのために、列情報の取得に使用**sql_variant**列です。 SSPROP_ALLOWNATIVEVARIANT プロパティが FALSE の場合、DBTYPE_SQLVARIANT はサポートされません。 SSPROP_ALLOWNATIVEVARIANT プロパティを TRUE に設定すると、列の型は DBTYPE_SQLVARIANT として返されます。この場合、バッファーには SSVARIANT 構造体が保持されます。 フェッチで**sql_variant**データを DBTYPE_SQLVARIANT としてセッション プロパティ SSPROP_ALLOWNATIVEVARIANT を TRUE に設定する必要があります。  
+ データをフェッチするときに、列またはパラメーターに返すデータ型を明示的に指定できます。 **IColumnsInfo**をバインドを使用して列情報を取得できます。 ときに**IColumnsInfo** SSPROP_ALLOWNATIVEVARIANT セッション プロパティが FALSE (既定値) の DBTYPE_VARIANT が返された場合にバインドするため、列情報の取得に使用**sql_variant**列。 SSPROP_ALLOWNATIVEVARIANT プロパティが FALSE の場合、DBTYPE_SQLVARIANT はサポートされません。 SSPROP_ALLOWNATIVEVARIANT プロパティを TRUE に設定すると、列の型は DBTYPE_SQLVARIANT として返されます。この場合、バッファーには SSVARIANT 構造体が保持されます。 フェッチで**sql_variant**データを DBTYPE_SQLVARIANT としてセッション プロパティ SSPROP_ALLOWNATIVEVARIANT を TRUE に設定する必要があります。  
   
  SSPROP_ALLOWNATIVEVARIANT プロパティはプロバイダー固有の DBPROPSET_SQLSERVERSESSION プロパティ セットの一部であり、セッション プロパティです。  
   
@@ -101,6 +99,6 @@ ms.locfileid: "32946847"
 |SSPROP_ALLOWNATIVEVARIANT|型 : VT_BOOL<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : データを DBTYPE_VARIANT と DBTYPE_SQLVARIANT のどちらとしてフェッチするかを決定します。<br /><br /> VARIANT_TRUE: 列の型は DBTYPE_SQLVARIANT として返され、バッファーには SSVARIANT 構造体が保持されます。<br /><br /> VARIANT_FALSE: 列の型は DBTYPE_VARIANT として返され、バッファーには VARIANT 構造体が保持されます。|  
   
 ## <a name="see-also"></a>参照  
- [データ型 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+ [データ型&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

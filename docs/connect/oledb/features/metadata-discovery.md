@@ -2,7 +2,7 @@
 title: メタデータの検出 |Microsoft ドキュメント
 description: OLE DB Driver for SQL Server でのメタデータの検出
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 978e6eb5ed864e77fbd6600848d2ce77c0e92d2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3980b8064b565dc09ebb79e9d81be9c6f85fc21a
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611637"
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   メタデータ検出機能が強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]により、OLE DB Driver for SQL Server のアプリケーションがその列を確認またはクエリの実行から返されるパラメーター メタデータが同一にする前に指定したメタデータ形式との互換性クエリを実行します。 クエリの実行後に返されたメタデータにクエリの実行前に指定したメタデータ形式との互換性がない場合は、エラーが発生します。  
   
@@ -29,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server の OLE DB Driver を使用してアプリケーションを開発サーバーのバージョンに接続した場合よりも前[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、メタデータ検出機能は、サーバーのバージョンに対応します。  
   
-## <a name="remarks"></a>解説   
+## <a name="remarks"></a>コメント   
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の OLE DB メンバー関数が機能強化され、メタデータ検出機能が向上しています。  
   
 -   IColumnsInfo::GetColumnInfo  

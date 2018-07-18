@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d981976b5a8e73ade7063c73eafb1d7a1b9dcd45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fbc998de972b49472bb581fc39b7634d3ed3ada
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400424"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>エンティティのトランザクション ログの種類の変更 (マスター データ サービス)
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 
   エンティティのトランザクション ログの種類を、"属性"、"メンバー"、または "なし" に変更できます。  
   
-|トランザクション ログの種類|Description|  
+|トランザクション ログの種類|[説明]|  
 |--------------------------|-----------------|  
 |属性|エンティティの変更ログは、属性レベルで保存されます。<br /><br /> トランザクション ログは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の場合と同様に保存されます。|  
 |メンバー|エンティティの変更ログは、行レベルで保存されます。<br /><br /> すべての属性の変更に対し、新しい行の更新がトリガーされます。<br /><br /> トランザクション ログの種類として "行" を使用している場合、エンティティは、緩やかに変化するディメンション タイプ 4 として保存されます。 タイプ 2 のサブスクリプション ビューとタイプ 4 の (履歴) サブスクリプション ビューがサポートされます。 詳細については、「[サブスクリプション ビュー形式 (マスター データ サービス)](../master-data-services/subscription-view-formats-master-data-services.md)」を参照してください。<br /><br /> より優れたパフォーマンスが得られます。|  

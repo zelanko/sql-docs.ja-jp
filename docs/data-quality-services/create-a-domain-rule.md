@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b1103a3528674c8541aa04569e0d63a17ddcefc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a90d530044eb24193f899f0926b392bec8dfe92
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310131"
 ---
 # <a name="create-a-domain-rule"></a>ドメイン ルールの作成
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
  ドメイン ルールを作成するときには、いくつかの選択肢があります。 たとえば、値が A、B、C のいずれかの文字で始まるかどうかを検証するには、複雑な条件を含む単純なルール (パイプ文字を含む正規表現など) を作成することも、複数の単純な条件を含む複雑なルールを作成することもできます。 たとえば、"Value contains regular expression (^A|^B|^C)" は前者の例、 "'Value begins with A' OR 'Value begins with B' OR 'Value begins with C'" は後者の例になります。  
   
-|条件|Description|例|  
+|条件|[説明]|例|  
 |---------------|-----------------|-------------|  
 |長さが次の値と等しい|オペランドで指定された文字数の文字で構成される値のみが有効になります。|オペランドの例: 3<br /><br /> 有効な値: BB1<br /><br /> 無効な値: AA|  
 |長さが次の値以上|オペランドで指定された文字数以上の文字で構成される値のみが有効になります。|オペランドの例: 3<br /><br /> 有効な値: BB1、BBAA<br /><br /> 無効な値: AA|  

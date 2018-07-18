@@ -1,13 +1,12 @@
 ---
-title: SQL から C への変換 |Microsoft ドキュメント
+title: SQL から C への変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe025209a14da132e6f6e3e1efd55d2263bdf997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0eb7cf6d146324ac5e472ea58fca5743683479e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948047"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425641"
 ---
-# <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime SQL から C へのデータ型変換
+# <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime の SQL から C へのデータ型変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -38,16 +37,16 @@ ms.locfileid: "32948047"
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|OK|21|16|16|  
+|SQL_TYPE_DATE|[OK]|12|13|12|13,23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|[OK]|10,23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7,8|[OK]|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|[OK]|21|16|16|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
-|記号|意味|  
+|シンボル|説明|  
 |------------|-------------|  
-|OK|変換の問題は発生しません。|  
+|[OK]|変換の問題は発生しません。|  
 |1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前の規則が適用されます。|  
 |2|先頭および末尾にあるスペースは無視されます。|  
 |3|文字列が日付、時刻、タイム ゾーン、またはタイム ゾーン オフセットに解析され、秒の小数部は 9 桁まで許容されます。 タイム ゾーン オフセットが解析されると、時刻はクライアントのタイム ゾーンに変換されます。 この変換中にエラーが発生した場合と「Datetime フィールド オーバーフロー」メッセージの SQLSTATE 22018 の診断レコードが生成されます。|  
@@ -71,9 +70,9 @@ ms.locfileid: "32948047"
 |21|SQL_SS_TIMESTAMPOFFSET_STRUCT を格納するのにバッファーの大きさが十分である場合、値は SQL_SS_TIMESTAMPOFFSET_STRUCT として返されます。 それ以外の場合は、"数値が範囲を超えています" というメッセージで SQLSTATE 22003 の診断レコードが生成されます。|  
 |22|値がクライアントのタイム ゾーンに変換されてから、日付が抽出されます。 これにより、タイムスタンプ オフセットの種類によるその他の変換との一貫性が提供されます。 この変換中にエラーが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。 これにより、単純な切り捨てによって取得された値とは異なる日付になることもあります。|  
   
- このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合でサーバーの種類が指定されている場合 SQLBindParameter がサーバー上の実際の型と一致しません、暗黙的な変換は、サーバーで実行するクライアントに返される型は型と一致して、SQLBindParameter を使用して指定します。 これにより、サーバー側の変換規則が上記の表の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
+ このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターでサーバーの種類が指定されている場合 SQLBindParameter がサーバー上の実際の型と一致せず、暗黙的な変換は、サーバーで実行するクライアントに返される型は SQLBindParameter を通じて指定された型に一致します。 これにより、サーバー側の変換規則が上記の表の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

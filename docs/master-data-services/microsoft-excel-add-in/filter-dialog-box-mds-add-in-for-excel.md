@@ -1,14 +1,12 @@
 ---
 title: '[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン) | Microsoft Docs'
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e775f606b81fd849f7089f15116d4bd0f4c514d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a9914b45153ccd8912d8009bc0baf7971eacce2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408564"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="columns"></a>[列]  
  Excel で表示する属性 (列) を決定するには、 **[列]** セクションを使用します。  
   
-|コントロール名|Description|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |属性の型|属性の型は、使用するメンバーの種類を示します。 ほとんどの場合は **[リーフ]** です。 詳細については、「[メンバー (マスター データ サービス)](../../master-data-services/members-master-data-services.md)」を参照してください。|  
 |明示的階層|属性の型として **[統合]** を選択した場合に、統合メンバーが属する階層を選択します。 詳細については、「[明示的階層 (マスター データ サービス)](../../master-data-services/explicit-hierarchies-master-data-services.md)」を参照してください。|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rows"></a>[行]  
  Excel で表示するメンバー (行) を決定するには、 **[行]** セクションを使用します。 この操作は、表示される行をフィルター選択する条件を定義することによって行います。  
   
-|コントロール名|Description|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |属性|フィルター処理の基準にする属性が表示されます。 属性が表示されない場合は、属性が追加されていません。<br /><br /> 注: ワークシートに表示しない属性を基準にフィルター処理を行うことができます。|  
 |演算子|選択した属性の型に対応する演算子が表示されます。 詳細については、「[フィルター演算子 (マスター データ サービス)](../../master-data-services/filter-operators-master-data-services.md)」を参照してください。|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="summary"></a>[概要]  
  データを読み込む前に、読み込まれるデータの量に関する詳細を表示するには、 **[概要]** セクションを使用します。  
   
-|コントロール名|Description|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |[モデル]|モデルの名前。|  
 |[バージョンのオプション]|バージョンの名前。|  

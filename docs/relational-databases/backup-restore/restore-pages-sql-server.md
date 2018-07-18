@@ -1,4 +1,4 @@
----
+﻿---
 title: ページ復元 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -161,7 +161,7 @@ ms.locfileid: "32922467"
     > [!WARNING]  
     >  破損していない特定のページを復元するには、 **[追加]** をクリックし、復元するページの **[ファイル ID]** と **[ページ ID]** を入力します。  
   
-5. ページ グリッドを使用して、復元対象のページを特定します。最初、このグリッドには、[suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) システム テーブルから取得されたデータが表示されます。このグリッドにページを追加したりグリッドからページを削除したりするには、**[追加]** または **[削除]** をクリックします。詳細については、「[suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)」を参照してください。  
+5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「[suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)」を参照してください。  
   
 6.  **[バックアップ セット]** グリッドに、既定の復元プランのバックアップ セットが一覧表示されます。 必要に応じて **[確認]** をクリックし、バックアップが読み取り可能かどうか、また、バックアップ セットに不備がないかどうかを、実際には復元せずに確認します。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」をご覧ください。  
   

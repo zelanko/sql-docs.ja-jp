@@ -1,6 +1,6 @@
 ---
-title: PowerShell を使用した Linux に SQL Server の管理 |Microsoft ドキュメント
-description: この記事では、SQL Server on Linux での windows PowerShell の使用の概要を示します。
+title: PowerShell を使用した Linux 上の SQL Server の管理 |Microsoft Docs
+description: この記事では、SQL Server on Linux での Windows で PowerShell の使用の概要を提供します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,50 +12,50 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 54892a66cea7643d708bcd7ba5cf1b6b07d4523f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: a1b6b4bb4c99a3b991120d57b8cf25cc91686957
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323673"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982144"
 ---
-# <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows PowerShell を使用して、Linux 上の SQL Server を管理するには
+# <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows で PowerShell を使用して、SQL Server on Linux を管理するには
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事で紹介[SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)と Linux 上の SQL Server 2017 で使用する方法の例をいくつか使用について説明します。 SQL Server の PowerShell のサポートは、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがあるときに使用できるように Windows では、現在使用可能なです。
+この記事で紹介[SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)と、SQL Server 2017 on Linux での使用方法については、いくつかの例について説明します。 Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に使用できるように、for SQL Server PowerShell のサポートは現在、Windows で使用できます。
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows 上の SQL PowerShell の最新バージョンをインストールします。
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) Windows に付属している[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)です。 SQL Server を使用する場合は、常に最新バージョンの SSMS および SQL PowerShell を使用する必要があります。 SSMS の最新バージョンは継続的に更新および最適化されている 2017 on Linux を SQL Server で現在動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)です。 最新の状態に、SSMS の最新バージョンように求められますダウンロード可能な新しいバージョンがある場合。
+[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) Windows に含まれている[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)します。 SQL Server を使用する場合は、SSMS および SQL PowerShell の最新バージョンを常に使用する必要があります。 SSMS の最新バージョンは更新は継続的に最適化し、2017 on Linux を SQL Server で現在動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)します。 最新の情報、ダウンロード可能な新しいバージョンがある場合にする最新バージョンの SSMS を求めます。
 
 ## <a name="before-you-begin"></a>アンインストールの準備
 
-読み取り、[既知の問題](sql-server-linux-release-notes.md)for Linux に SQL Server 2017 です。
+読み取り、[既知の問題](sql-server-linux-release-notes.md)SQL Server 2017 on Linux の。
 
 ## <a name="launch-powershell-and-import-the-sqlserver-module"></a>PowerShell を起動し、インポート、 *sqlserver*モジュール
 
-Windows PowerShell を起動してスタートしましょう。 開く、*コマンド プロンプト*Windows コンピューターと型の**PowerShell**新しい Windows PowerShell セッションを起動します。
+Windows で PowerShell を起動してみましょう。 開く、*コマンド プロンプト*、Windows コンピューターでは、型に**PowerShell**新しい Windows PowerShell セッションを起動します。
 
 ```
 PowerShell
 ```
 
-SQL Server という名前の Windows PowerShell モジュールを提供する**SqlServer** PowerShell 環境またはスクリプトへの SQL Server コンポーネント (SQL Server プロバイダーとコマンドレット) をインポートに使用できます。
+SQL Server という名前の Windows PowerShell モジュールを提供する**SqlServer** PowerShell 環境またはスクリプトに SQL Server コンポーネント (SQL Server プロバイダーとコマンドレット) をインポートして使用できます。
 
-コピーしてインポートする PowerShell プロンプトで次のコマンドを貼り付ける、 **SqlServer**現在の PowerShell セッションにモジュール。
+コピーをインポートする PowerShell プロンプトで次のコマンドを貼り付けて、 **SqlServer**現在の PowerShell セッションにモジュール。
 
 ```powershell
 Import-Module SqlServer
 ```
 
-次のコマンドを入力することを確認、PowerShell プロンプトで、 **SqlServer**モジュールが正しくインポートされました。
+確認する PowerShell プロンプトで次のコマンドを入力、 **SqlServer**モジュールが正しくインポートされました。
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell には、次の出力のような情報が表示されます。
+PowerShell では、次の出力のような情報を表示する必要があります。
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -64,17 +64,17 @@ Script     0.0        SqlServer
 Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
-## <a name="connect-to-sql-server-and-get-server-information"></a>SQL Server に接続し、サーバーの情報の取得
+## <a name="connect-to-sql-server-and-get-server-information"></a>SQL Server に接続し、サーバーの情報を取得します。
 
-みましょう PowerShell を使用して Windows を Linux に SQL Server 2017 インスタンスに接続し、いくつかのサーバーのプロパティを表示します。
+Linux 上の SQL Server 2017 インスタンスに接続し、いくつかのサーバーのプロパティを表示する、Windows で PowerShell を使用しましょう。
 
-コピーし、PowerShell プロンプトで次のコマンドを貼り付けます。 PowerShell は、これらのコマンドを実行するときに行います。
-- 表示、 *Windows PowerShell 資格情報要求*資格情報の入力を求めるダイアログ (*SQL ユーザー名*と*SQL パスワード*)、SQL Server 2017 に接続するにはLinux 上のインスタンス
+コピーして、PowerShell プロンプトで次のコマンドを貼り付けます。 これらのコマンドを実行すると、PowerShell が行われます。
+- 表示、 *Windows PowerShell 資格情報要求*資格情報の入力を求めるダイアログ (*SQL ユーザー名*と*SQL パスワード*) SQL Server 2017 に接続するにはLinux 上のインスタンス
 - SQL Server 管理オブジェクト (SMO) アセンブリを読み込み
-- インスタンスを作成、[サーバー](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx)オブジェクト
-- 接続、**サーバー**といくつかのプロパティを表示
+- インスタンスを作成、 [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx)オブジェクト
+- 接続、 **Server**といくつかのプロパティを表示
 
-置き換えます**\<your_server_instance\>** IP アドレスまたは Linux に SQL Server 2017 インスタンスのホスト名です。
+置き換えてください**\<your_server_instance\>** IP アドレスまたは Linux 上の SQL Server 2017 インスタンスのホスト名でします。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -95,7 +95,7 @@ $server.Information | Select-Object Edition, HostPlatform, HostDistribution | Fo
 # done
 ```
 
-PowerShell には、次の出力のような情報が表示されます。
+PowerShell では、次の出力のような情報を表示する必要があります。
 
 ```
 Edition          : Developer Edition (64-bit)
@@ -103,18 +103,18 @@ HostPlatform     : Linux
 HostDistribution : Ubuntu
 ```
 > [!NOTE]
-> これらの値を何も表示が、対象の SQL Server インスタンスへの接続を可能性がありますが失敗した場合。 SQL Server Management Studio から接続する、同じ接続情報を使用することを確認します。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。
+> これらの値は何も表示場合、ほとんどの場合、ターゲット SQL Server インスタンスに接続が失敗しました。 SQL Server Management Studio から接続する、同じ接続情報を使用することを確認します。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。
 
 ## <a name="examine-sql-server-error-logs"></a>SQL Server エラー ログを調べます
 
-接続して、エラー ログを調査する Windows PowerShell を使用して Linux 上の SQL Server 2017 インスタンスにします。 使用しても、 **Out-gridview**エラーからの情報を表示するコマンドレットをグリッド ビューの表示でログに記録します。
+エラー ログを確認する Windows PowerShell を使用しては、Linux 上の SQL Server 2017 インスタンスに接続しましょう。 また、 **Out-gridview**グリッド ビューの表示で、エラーからの情報を表示するコマンドレットのログします。
 
-コピーし、PowerShell プロンプトで次のコマンドを貼り付けます。 実行するまで数分がかかる場合があります。 これらのコマンドは、次を操作します。
-- 表示、 *Windows PowerShell 資格情報要求*資格情報の入力を求めるダイアログ (*SQL ユーザー名*と*SQL パスワード*)、SQL Server 2017 に接続するにはLinux 上のインスタンス
-- 使用して、 **Get SqlErrorLog** Linux 上の SQL Server 2017 インスタンスに接続し、エラーを取得するコマンドレットをログに記録されてから**昨日**
+コピーして、PowerShell プロンプトで次のコマンドを貼り付けます。 実行するまで数分がかかる場合があります。 これらのコマンドを以下に示します。
+- 表示、 *Windows PowerShell 資格情報要求*資格情報の入力を求めるダイアログ (*SQL ユーザー名*と*SQL パスワード*) SQL Server 2017 に接続するにはLinux 上のインスタンス
+- 使用して、 **Get SqlErrorLog** Linux 上の SQL Server 2017 インスタンスに接続し、エラーを取得するコマンドレットのログ以降**昨日**
 - 出力をパイプ処理、 **Out-gridview**コマンドレット
 
-置き換えます**\<your_server_instance\>** IP アドレスまたは Linux に SQL Server 2017 インスタンスのホスト名です。
+置き換えてください**\<your_server_instance\>** IP アドレスまたは Linux 上の SQL Server 2017 インスタンスのホスト名でします。
 
 ```powershell
 # Prompt for credentials to login into SQL Server

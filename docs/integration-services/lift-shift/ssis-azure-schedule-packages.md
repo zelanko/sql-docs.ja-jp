@@ -1,26 +1,27 @@
 ---
 title: Azure で SSIS パッケージのスケジュールを設定する | Microsoft Docs
+description: Azure SQL Database にデプロイされている SSIS パッケージの実行スケジュールの設定に利用できる方法の概要について示します。
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 62367e0ece20f56b6447a23b78b03b8799eef119
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585844"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262176"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Azure で SSIS パッケージの実行をスケジュールする
-この記事で説明するオプションの 1 つを選択することで、Azure SQL Database サーバーで SSISDB カタログ データベースにデプロイされている SSIS パッケージの実行をスケジュールできます。 パッケージは直接スケジュールするか、Azure Data Factory パイプラインの一部として間接的にスケジュールできます。 Azure の SSIS の概要については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージの実行スケジュールを設定する
+
+この記事で説明する方法の 1 つを選択することで、Azure SQL Database サーバーで SSISDB カタログにデプロイされている SSIS パッケージの実行をスケジュールできます。 パッケージは直接スケジュールするか、Azure Data Factory パイプラインの一部として間接的にスケジュールできます。 Azure の SSIS の概要については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
 
 - パッケージのスケジュールを直接設定する
 
@@ -35,7 +36,7 @@ ms.locfileid: "34585844"
 
 ## <a name="ssms"></a> SSMS でパッケージをスケジュールする
 
-SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB に配置されたパッケージを右クリックして **[スケジュール]** を選択することで、**[新しいスケジュール]** ダイアログ ボックスを開くことができます。 詳しくは、「[Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md)」(SSMS を使用して Azure で SSIS パッケージの実行をスケジュールする) をご覧ください。
+SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB に配置されたパッケージを右クリックして **[スケジュール]** を選択することで、**[新しいスケジュール]** ダイアログ ボックスを開くことができます。 詳細については、「[SSMS を利用して Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages-ssms.md)」を参照してください。
 
 この機能には、SQL Server Management Studio バージョン 17.7 以降が必要です。 最新バージョンの SSMS を入手するには、「[SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
@@ -177,4 +178,4 @@ Data Factory パイプラインの一部として SSIS パッケージを実行�
 
 ## <a name="next-steps"></a>次の手順
 
-Azure にデプロイされている SSIS パッケージの実行オプションを確認してください。 詳細は、[Azure で SSIS パッケージ実行する](ssis-azure-run-packages.md)方法に関するページを参照してください。
+Azure にデプロイされている SSIS パッケージの実行オプションを確認してください。 詳細については、「[Azure で SSIS パッケージを実行する](ssis-azure-run-packages.md)」を参照してください。

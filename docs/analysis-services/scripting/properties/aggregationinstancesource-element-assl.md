@@ -1,5 +1,5 @@
 ---
-title: AggregationInstanceSource 要素 (ASSL) |Microsoft ドキュメント
+title: AggregationInstanceSource 要素 (ASSL) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,14 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90125ab5a94f54b9d90c31770e675225a733d1a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999171"
 ---
 # <a name="aggregationinstancesource-element-assl"></a>AggregationInstanceSource 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  バインドされているユーザー定義集計インスタンスのデータのソースを識別、[パーティション](../../../analysis-services/scripting/objects/partition-element-assl.md)要素。  
+  ユーザー定義集計のインスタンスにバインドされているデータのソースを識別、[パーティション](../../../analysis-services/scripting/objects/partition-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,14 +46,14 @@ ms.lasthandoff: 05/10/2018
 |親要素|[パーティション](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この要素が欠落している場合や空の文字列に設定されている場合、既定では、パーティションを所有するキューブのデータ ソース ビューが使用されます。  
   
- 詳細については、**バインド**の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、**バインド**型との継承階層**バインド**型を参照してください[データ型のバインド&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)です。  
+ 詳細については、**バインド**の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、**バインド**型との継承階層**バインド**型を参照してください[データ型のバインド&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)します。  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとのバインド & #40 です。SSAS 多次元 & #41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

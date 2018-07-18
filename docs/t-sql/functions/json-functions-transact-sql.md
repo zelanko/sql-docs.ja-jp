@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - JSON functions
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
-caps.latest.revision: 8
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: db0782c904e5dc03fe34052fe6866a7330a55af4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c80fe1dc25e1e3dc958af7bcc7af57b07ab4732e
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33051159"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36246834"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 関数 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 このセクションのページで説明されている関数を使用して、JSON テキストを検証または変更するか、単純または複雑な値を抽出します。  
   
-|機能|Description|  
+|機能|[説明]|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|有効な JSON を含む文字列であるかどうかをテストします。|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|JSON 文字列からには、スカラー値を抽出します。|  

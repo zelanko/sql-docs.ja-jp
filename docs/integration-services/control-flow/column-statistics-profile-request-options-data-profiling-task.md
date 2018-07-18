@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aecfcaa81ea18d9c90d000d5370e8b93e7d4a979
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3b654ce6c261dd1049945306f19b2dd37dfe6a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406224"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>[列統計プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列統計プロファイル要求]** のオプションを設定できます。 列統計プロファイルは、数値型列の最小値、最大値、平均値、標準偏差や、 **datetime** 列の最小値、最大値などの統計を報告します。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。  

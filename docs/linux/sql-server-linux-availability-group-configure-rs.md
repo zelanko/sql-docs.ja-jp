@@ -1,5 +1,5 @@
 ---
-title: Linux 上の読み取りのスケールの SQL Server 可用性グループの構成 |Microsoft ドキュメント
+title: Linux 上の読み取りスケールの SQL Server 可用性グループの構成 |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,28 +12,29 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e406248118933eb60e95e101c6812d61b72ad7a7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d29bd3e2f86a824dadef1f9886c96b28547fbf03
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37891063"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux 上の読み取りのスケールの SQL Server 可用性グループの構成します。
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux 上の読み取りスケールの SQL Server 可用性グループの構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Linux では、SQL Server 常に 可用性グループ (AG) な読み取りワークロード用を構成できます。 2 つの種類の Ag のアーキテクチャがあります。 高可用性のためのアーキテクチャでは、クラスター マネージャーを使用して、ビジネス継続性を提供します。 このアーキテクチャは、読み取りスケール レプリカも含めることができます。 高可用性アーキテクチャを作成するを参照してください。[を構成する SQL Server Always On 可用性グループ Linux での高可用性の](sql-server-linux-availability-group-configure-ha.md)します。 その他のアーキテクチャでは、読み取りスケール ワークロードのみをサポートします。 この記事では、読み取りスケール ワークロードについてクラスター マネージャーがない可用性グループを作成する方法について説明します。 このアーキテクチャでは、読み取り-小数点以下桁数のみを提供します。 高可用性を実現をしていません。
+Linux で、SQL Server 常にで可用性グループ (AG) の読み取りスケール ワークロードを構成できます。 AG には 2 種類のアーキテクチャがあります。 高可用性のアーキテクチャでは、クラスター マネージャーを使用して、改善されたビジネス継続性を提供します。 このアーキテクチャは、読み取りスケール レプリカも含めることができます。 高可用性アーキテクチャを作成するを参照してください。[を構成する SQL Server Always On 可用性グループの Linux での高可用性](sql-server-linux-availability-group-configure-ha.md)します。 その他のアーキテクチャでは、読み取りスケール ワークロードのみをサポートします。 この記事では、読み取りスケール ワークロードの場合で、クラスター マネージャーがない AG を作成する方法について説明します。 このアーキテクチャは、読み取りスケールのみを提供します。 高可用性は提供されません。
 
 >[!NOTE]
->可用性グループに`CLUSTER_TYPE = NONE`別のオペレーティング システム プラットフォームでホストされるレプリカを含めることができます。 高可用性をサポートできません。 
+>`CLUSTER_TYPE = NONE` による可用性グループには、さまざまなオペレーティング システム プラットフォームでホストされているレプリカを含めることができます。 高可用性はサポートできません。 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
-## <a name="create-the-ag"></a>可用性グループを作成します。
+## <a name="create-the-ag"></a>AG を作成する
 
-可用性グループを作成します。 Set `CLUSTER_TYPE = NONE`. さらに、各レプリカを設定`FAILOVER_MODE = NONE`です。 分析を実行するか、ワークロードをレポートできますを直接クライアント アプリケーションは、セカンダリ データベースに接続します。 また、読み取り専用ルーティング リストを作成することもできます。 転送用のプライマリ レプリカへの接続は、ラウンド ロビン方式で、ルーティング リストから各セカンダリ レプリカに接続要求を読み取る。
+AG を作成します。 `CLUSTER_TYPE = NONE` を設定します。 さらに、`FAILOVER_MODE = MANUAL` で各レプリカを設定します。 分析やレポートのワークロードを実行するクライアント アプリケーションは、セカンダリ データベースに直接接続できます。 また、読み取り専用ルーティング リストを作成できます。 プライマリ レプリカへの接続によって、ルーティング リストに基づき、ラウンドロビン方式で各セカンダリ レプリカに読み取り接続要求を転送します。
 
-次の TRANSACT-SQL スクリプトを作成、AG という`ag1`です。 スクリプトは、構成、可用性グループ レプリカと`SEEDING_MODE = AUTOMATIC`です。 この設定は、各セカンダリ サーバーでは、可用性グループに追加した後、データベースを自動的に作成する SQL Server をによりします。 環境内の次のスクリプトを更新します。 置換、`<node1>`と`<node2>`レプリカをホストする SQL Server インスタンスの名前を持つ値です。 置換、`<5022>`エンドポイント用に設定するポートを持つ値です。 SQL Server のプライマリ レプリカでは、次の TRANSACT-SQL スクリプトを実行します。
+次の Transact-SQL スクリプトによって `ag1` という名前の AG が作成されます。 このスクリプトでは、`SEEDING_MODE = AUTOMATIC` で AG レプリカが構成されます。 この設定によって、SQL Server は AG にセカンダリ サーバーが追加されるたびに、そのセカンダリ サーバーでデータベースを自動作成します。 ご利用の環境に合わせて次のスクリプトを変更してください。 `<node1>` 値と `<node2>` 値を、レプリカをホストする SQL Server インスタンスの名前に置き換えます。 `<5022>` 値を、エンドポイントに設定したポートに置き換えます。 プライマリ SQL Server レプリカで次の Transact-SQL スクリプトを実行します。
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
@@ -57,9 +58,9 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-### <a name="join-secondary-sql-servers-to-the-ag"></a>セカンダリ SQL サーバーを可用性グループに参加させる
+### <a name="join-secondary-sql-servers-to-the-ag"></a>セカンダリ SQL Server を AG に参加させる
 
-次の TRANSACT-SQL スクリプトは、AG という名前に、サーバーを結合`ag1`です。 環境内で使用するスクリプトを更新します。 各セカンダリ SQL Server レプリカで、可用性グループに参加する次の TRANSACT-SQL スクリプトを実行します。
+次の Transact-SQL スクリプトにより、`ag1` という名前の AG にサーバーが参加します。 ご利用の環境に合わせてスクリプトを変更してください。 各セカンダリ SQL Server レプリカで次の Transact-SQL スクリプトを実行し、AG に参加させます。
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
@@ -69,22 +70,22 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-この可用性グループでは、高可用性構成はありません。 高可用性を実現する場合は、ある手順に従って[、Always On 可用性グループを構成する SQL Server on Linux の](sql-server-linux-availability-group-configure-ha.md)します。 具体的で、可用性グループを作成`CLUSTER_TYPE=WSFC`(Windows) にまたは`CLUSTER_TYPE=EXTERNAL`(Linux) にします。 いずれかの Windows Server フェールオーバー クラスタ リング Windows または Linux のペースを使用して、クラスター マネージャーを統合し。
+この AG は高可用性構成ではありません。 高可用性を必要がある場合は」の手順に従ってください[Linux 上の SQL Server の Always On 可用性グループを構成する](sql-server-linux-availability-group-configure-ha.md)します。 含む AG を具体的には、作成`CLUSTER_TYPE=WSFC`(Windows) でまたは`CLUSTER_TYPE=EXTERNAL`(Linux) にします。 クラスタ リング Windows または Linux 上の Pacemaker をいずれかの Windows Server フェールオーバーを使用して、クラスター マネージャーと統合します。
 
-## <a name="connect-to-read-only-secondary-replicas"></a>読み取り専用のセカンダリ レプリカに接続します。
+## <a name="connect-to-read-only-secondary-replicas"></a>読み取り専用セカンダリ レプリカに接続する
 
-これには読み取り専用のセカンダリ レプリカに接続する 2 つの方法があります。 アプリケーションでは、セカンダリ レプリカをホストする SQL Server インスタンスに直接接続でき、データベースのクエリを実行することができます。 これらもルーティングを使用して読み取り専用、リスナーを作成する必要があります。
+読み取り専用セカンダリ レプリカには 2 つの方法で接続できます。 アプリケーションは、セカンダリ レプリカをホストする SQL Server インスタンスに直接接続し、データベースにクエリを実行できます。 リスナーを要求する読み取り専用ルーティングも利用できます。
 
 * [読み取り可能なセカンダリ レプリカ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 * [読み取り専用ルーティング](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
 
-## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>読み取りのスケールの可用性グループのプライマリ レプリカのフェールオーバーします。
+## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>読み取りスケール可用性グループのプライマリ レプリカをフェールオーバーする
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-* [分散型可用性グループを構成します。](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [可用性グループの詳細を表示します](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
-* [強制手動フェールオーバーを実行します。](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
+* [分散型可用性グループを構成する](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
+* [可用性グループの詳細](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [強制手動フェールオーバーの実行](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
 

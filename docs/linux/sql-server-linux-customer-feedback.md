@@ -4,18 +4,18 @@ description: SQL Server カスタマー フィードバックの収集方法と 
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 66275b164e1d6514d04e0c8a6f1a666de0a02425
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074295"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329507"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux での SQL Server カスタマー フィードバック
 
@@ -23,7 +23,7 @@ ms.locfileid: "34074295"
 
 Microsoft SQL Server は既定で、お客様のアプリケーションの使用状態に関する情報を収集します。 具体的には、SQL Server はインストール エクスペリエンス、利用状況、およびパフォーマンスに関する情報を収集します。 この情報は、Microsoft が製品の向上を図り、お客様のニーズをさらに満たすのに役立ちます。 たとえば Microsoft では、お客様が受け取るエラー コードの種類に関する情報を収集して、関連するバグの修正、SQL Server の使用方法に関するドキュメントの改善、より良いサービスのために製品に機能を追加すべきかどうかの判断を行います。
 
-このドキュメントではどのような種類の情報が収集および送信を収集する Linux の Microsoft SQL Server を構成する方法に関する詳細情報がマイクロソフトにします。 SQL Server 2017 には、お行い、ユーザーから収集することはありませんは、どのような情報を説明するプライバシーに関する声明が含まれています。 プライバシーに関する声明をお読みください。
+このドキュメントではどのような種類の情報が収集および送信を収集する Linux の Microsoft SQL Server を構成する方法に関する詳細情報がマイクロソフトにします。 SQL Server 2017 には、お行い、ユーザーから収集することはありませんは、どのような情報を説明するプライバシーに関する声明が含まれています。 詳細については、次を参照してください。、[のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)です。
 
 具体的には、Microsoft はこのメカニズムでは次の種類の情報は送信しません。
 
@@ -39,6 +39,9 @@ SQL Server 2017 は、インストール エクスペリエンスに関する情
 ## <a name="disable-customer-feedback"></a>お客様のフィードバックを無効にします。
 
 このオプションを使用して、か、SQL Server が Microsoft にフィードバックを送信する場合に変更できます。 既定では、この設定は true に設定します。 値を変更するには、次のコマンドを実行します。
+
+> [!IMPORTANT]
+> できますされませんオフにするお客様のフィードバックを無料の SQL Server、Express、および Developer エディション。
 
 ### <a name="on-red-hat-suse-and-ubuntu"></a>Red Hat、SUSE、Ubuntu で
 
@@ -111,7 +114,7 @@ Linux 上の SQL server ではローカルの監査は SQL Server データベ�
    ```
    
 ### <a name="on-docker"></a>Docker で
-Docker でローカルの監査を有効にする必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 
+で docker をローカルの監査を有効にする必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 
 
 1. 新しいローカルの監査ログのターゲット ディレクトリをコンテナーになります。 コンピューターにホスト ディレクトリ内には、新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例は、新しい作成**監査/** ディレクトリ。
 
@@ -138,6 +141,6 @@ Docker でローカルの監査を有効にする必要があります Docker [�
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
    ```
    
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。、 [Linux に SQL Server の概要](sql-server-linux-overview.md)です。

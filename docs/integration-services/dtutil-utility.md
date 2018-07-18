@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331226"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの管理に使用します。 このユーティリティを使用して、パッケージのコピー、移動、削除を行ったり、パッケージの存在を確認することができます。 これらの操作は [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ上で実行できます。このパッケージは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のいずれかに格納されます。 このユーティリティが **msdb**に格納されているパッケージにアクセスする場合、コマンド プロンプトでユーザー名とパスワードが必要となる場合があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、コマンド プロンプトではユーザー名とパスワードの両方が必要です。 ユーザー名を入力しない場合、 **dtutil** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にログオンしようとします。 パッケージのストレージ型は **SQL**、 **FILE**、および **DTS** オプションで指定します。  
@@ -88,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>パラメーター  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |/?|コマンド プロンプト オプションを表示します。|  
 |/C[opy] *location;destinationPathandPackageName*|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージに対するコピー操作を指定します。 このパラメーターを使用するには、先に **/FI**、 **SQ**、または **/DT** オプションを使用してパッケージの場所を指定する必要があります。 次に、コピー先の場所とコピー先のパッケージ名を指定します。 *destinationPathandPackageName* 引数には、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージのコピー先を指定します。 コピー先の *location* が **SQL**の場合は、 *DestUser*、 *DestPassword* 、および *DestServer* 引数もコマンドで指定する必要があります。<br /><br /> **Copy** 操作でコピー先に既存のパッケージが見つかった場合、 **dtutil** によって、パッケージの上書きを確認するプロンプトが表示されます。 パッケージを上書きする場合は **Y** 、プログラムを終了する場合は **N** と応答します。 コマンドに *Quiet* 引数が含まれている場合は、プロンプトは表示されず、既存のパッケージはすべて上書きされます。|  

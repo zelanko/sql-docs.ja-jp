@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daae51399d0366cf11f751c7abc17601c8d5e2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2694e985acff1f3d520647f1db171c3b61471b2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409294"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、チェックポイントの実装時に設定するパッケージのプロパティの一覧を示します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |CheckpointFileName|チェックポイント ファイルの名前を指定します。|  
 |CheckpointUsage|チェックポイントを使用するかどうかを指定します。|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="checkpoint-usage"></a>チェックポイントの使用法  
  CheckpointUsage プロパティは次の値に設定できます。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**Never**|チェックポイント ファイルを使用せず、パッケージのワークフローの最初からパッケージを実行することを指定します。|  
 |**毎回**|チェックポイント ファイルを常に使用し、前の実行で失敗した時点からパッケージを再開することを指定します。 チェックポイント ファイルが見つからない場合、パッケージは失敗します。|  

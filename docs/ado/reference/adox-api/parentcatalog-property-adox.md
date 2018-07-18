@@ -2,7 +2,6 @@
 title: ParentCatalog プロパティ (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -45,11 +44,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45548fec3e60a12cf2c74218ed8ab5603fa26899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2dd0c1e0ccc1751e79d6ccfdafe89523ae8e8e00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286671"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog プロパティ (ADOX)
 プロバイダー固有のプロパティへのアクセスを提供するテーブル、ユーザー、または列のオブジェクトの親のカタログを指定します。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定を返します、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)オブジェクト。 設定**ParentCatalog**開いた**カタログ**テーブルまたは列を追加する前に、プロバイダー固有のプロパティにアクセスできるように、**カタログ**コレクション。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  一部のデータ プロバイダーの作成時のみ書き込まれるプロバイダー固有のプロパティ値を許可する: つまり、ときにテーブルまたは列が追加されますをその**カタログ**コレクション。 これらのオブジェクトを追加する前にこれらのプロパティにアクセスする、**カタログ**を指定して、**カタログ**で、 **ParentCatalog**プロパティ最初。  
   
  テーブルまたは列は別に追加するときにエラーが発生した**カタログ**よりも、 **ParentCatalog**です。  

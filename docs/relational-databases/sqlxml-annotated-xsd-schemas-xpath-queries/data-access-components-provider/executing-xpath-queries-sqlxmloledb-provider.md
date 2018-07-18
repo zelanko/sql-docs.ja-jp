@@ -1,5 +1,5 @@
 ---
-title: XPath クエリ (SQLXMLOLEDB プロバイダー) の実行 |Microsoft ドキュメント
+title: XPath クエリ (SQLXMLOLEDB プロバイダー) の実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5cad9cb9284353aa856b45bad2fa6a14ad126d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049959"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>XPath クエリの実行 (SQLXMLOLEDB プロバイダー)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,14 +61,14 @@ ms.lasthandoff: 05/03/2018
 </xsd:schema>  
 ```  
   
- マッピング スキーマ プロパティは、XPath クエリの実行対象となるマッピング スキーマを提供します。 このマッピング スキーマには XSD または XDR スキーマを指定できます。 Base Path プロパティは、マッピング スキーマへのファイル パスを提供します。  
+ マッピング スキーマ プロパティには、XPath クエリの実行対象となるマッピング スキーマが用意されています。 このマッピング スキーマには XSD または XDR スキーマを指定できます。 Base Path プロパティは、マッピング スキーマへのファイル パスを提供します。  
   
  ClientSideXML プロパティが True に設定します。 つまり、XML ドキュメントはクライアントで生成されます。  
   
  このアプリケーションでは、XPath クエリを直接指定します。 したがって、XPath 言語 {ec2a4293-e898-11d2-b1b7-00c04f680c56} を含める必要があります。  
   
 > [!NOTE]  
->  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例で指定の使用、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]追加ネットワーク クライアント ソフトウェアをインストールする必要がありますデータ プロバイダー用の Native Client (SQLNCLI11)。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)です。  
+>  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例で指定の使用、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) データ プロバイダー追加ネットワーク クライアント ソフトウェアをインストールする必要があります。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)します。  
   
 ```  
 Option Explicit  

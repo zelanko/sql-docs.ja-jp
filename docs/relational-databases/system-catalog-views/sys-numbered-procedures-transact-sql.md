@@ -1,5 +1,5 @@
 ---
-title: sys.numbered_procedures (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.numbered_procedures (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d16757a007b423ab6c4ed8ff8a002a73c9c583dd
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33178758"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987444"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  番号付きプロシージャとして作成された SQL Server ストアド プロシージャごとに 1 行のデータを保持します。 ベース ストアド プロシージャ (番号が 1 のもの) に対する行は表示されません。 ベース ストアド プロシージャのエントリは含まれてビューなど**sys.objects**と**sys.procedures**です。  
+  番号付きプロシージャとして作成された SQL Server ストアド プロシージャごとに 1 行のデータを保持します。 ベース ストアド プロシージャ (番号が 1 のもの) に対する行は表示されません。 ベース ストアド プロシージャのエントリで見つかるビューなど**sys.objects**と**sys.procedures**します。  
   
 > [!IMPORTANT]  
 >  番号付きプロシージャは非推奨とされました。 番号付きプロシージャの使用はお勧めしません。 このカタログ ビューを使用するクエリをコンパイルすると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  

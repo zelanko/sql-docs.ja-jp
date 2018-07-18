@@ -2,10 +2,10 @@
 title: SQL Server テーブルから列を削除する |Microsoft ドキュメント
 description: SQL Server の OLE DB Driver を使用して SQL Server テーブルから列を削除します。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 702f003afe0088daacd756af7abdf1935ed447ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 962e36bf135c6f01594652f4549b7e0216cd063f
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689085"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>SQL Server テーブルからの列の削除
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server を公開、 **itabledefinition::dropcolumn**関数。 これにより、コンシューマーから列を削除する、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。  
   
@@ -53,6 +56,6 @@ hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);
 ```  
   
 ## <a name="see-also"></a>参照  
- [テーブルとパーティション インデックス](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
+ [テーブルとインデックス](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

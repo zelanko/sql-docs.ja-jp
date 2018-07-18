@@ -1,5 +1,5 @@
 ---
-title: sys.symmetric_keys (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.symmetric_keys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9920ff9e4b648c4911568b44374d860cc2d18710
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221939"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985284"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   CREATE SYMMETRIC KEY ステートメントを使用して作成した対称キーごとに 1 行のデータを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|キーの名前。 c4database 内で一意です。|  
 |**principal_id**|**int**|キーを所有するデータベース プリンシパルの ID。|  
@@ -53,10 +53,10 @@ ms.locfileid: "33221939"
 |**cryptographic_provider_guid**|**uniqueidentifier**|暗号化サービス プロバイダーの GUID。 拡張キー管理以外のキーの場合、この値は NULL になります。|  
 |**cryptographic_provider_algid**|**sql_variant**|暗号化サービス プロバイダーのアルゴリズム ID。 拡張キー管理以外のキーの場合、この値は NULL になります。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  

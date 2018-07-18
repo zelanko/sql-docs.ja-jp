@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12b5a6f22c7cfdde137b7e15b6a146175838ddd0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238133"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018469"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
   
 ## <a name="arguments"></a>引数  
  [  **@plan_name =**] **'***plan_name***'**  
- 追加するメンテナンス プランの名前を指定します。 *plan_name*は**varchar (128)** です。  
+ 追加するメンテナンス プランの名前を指定します。 *plan_name*は**varchar (128)** します。  
   
  **@plan_id = '** *plan_id* **'**  
- メンテナンス プランの ID を指定します。 *plan_id*は**uniqueidentifier**です。  
+ メンテナンス プランの ID を指定します。 *plan_id*は**uniqueidentifier**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_add_maintenance_plan**から実行する必要があります、 **msdb**データベースにあり、新しいが空で、メンテナンス プランを作成します。 1 つまたは複数のデータベースを追加し、ジョブまたはジョブに関連付ける、実行**sp_add_maintenance_plan_db**と**sp_add_maintenance_plan_job**です。  
+## <a name="remarks"></a>コメント  
+ **sp_add_maintenance_plan**から実行する必要があります、 **msdb**データベースにあり、新しいが空で、メンテナンス プランを作成します。 1 つまたは複数のデータベースを追加し、ジョブまたはジョブに関連付けるを実行**sp_add_maintenance_plan_db**と**sp_add_maintenance_plan_job**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_maintenance_plan**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_maintenance_plan**します。  
   
 ## <a name="examples"></a>使用例  
  Myplan というメンテナンス プランを作成します。  

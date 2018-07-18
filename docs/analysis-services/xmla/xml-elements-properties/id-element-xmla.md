@@ -1,5 +1,5 @@
 ---
-title: ID 要素 (XMLA) |Microsoft ドキュメント
+title: ID 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18c0a9e1db03ef30b54b788d16223e70bc9e9059
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575504"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037030"
 ---
 # <a name="id-element-xmla"></a>ID 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  親の実行に使用するロックを識別[ロック](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)または[Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)要素。  
+  親を実行するためのロックを識別する[ロック](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)または[Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34575504"
 |既定値|なし|  
 |Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "34575504"
  **ID**要素には、ロックを識別するために使用するグローバル一意識別子 (GUID) が含まれています。  
   
 ## <a name="see-also"></a>参照
- [オブジェクトの要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
+ [要素をオブジェクト&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
  [Mode 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)   
  [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

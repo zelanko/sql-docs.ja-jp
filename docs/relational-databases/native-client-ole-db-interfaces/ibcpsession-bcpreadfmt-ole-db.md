@@ -1,14 +1,12 @@
 ---
-title: Ibcpsession::bcpreadfmt (OLE DB) |Microsoft ドキュメント
+title: Ibcpsession::bcpreadfmt (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1579e92e5938dd2a13555b5a8c17a09fc80dd081
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cdd98f828a69965a3a610ad27aeb2196e747d0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424351"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,14 +41,14 @@ HRESULT BCPReadFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>解説  
- **BCPReadFmt**メソッドは、データ ファイル内のデータ形式を指定するフォーマット ファイルからデータを読み取るために使用します。 このメソッドでは、適切なバージョンのフォーマット ファイルを検出することができます。 また、フォーマット ファイルが xml 形式か、または古いスタイルのテキスト形式かを自動的に検出し、フォーマット ファイルに適した動作をします。 フォーマット ファイルのバージョンでサポートされている、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー BCP がバージョン 6.0 またはそれ以降。  
+## <a name="remarks"></a>コメント  
+ **BCPReadFmt**メソッドは、データ ファイル内のデータの形式を示すフォーマット ファイルからデータを読み取るために使用します。 このメソッドでは、適切なバージョンのフォーマット ファイルを検出することができます。 また、フォーマット ファイルが xml 形式か、または古いスタイルのテキスト形式かを自動的に検出し、フォーマット ファイルに適した動作をします。 フォーマット ファイルのバージョンでサポートされている、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー BCP がバージョン 6.0 以降。  
   
- 後に、 **BCPReadFmt**メソッドが値を書式設定を読み取り、適切な呼び出しがなさ、 [ibcpsession::bcpcolumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)と[ibcpsession::bcpcolfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)メソッドです。 ユーザーがフォーマット ファイルを解析し、これらのメソッドを呼び出す必要はありません。  
+ 後に、 **BCPReadFmt**メソッドが値を書式設定を読み取り、適切な呼び出し、 [ibcpsession::bcpcolumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)と[ibcpsession::bcpcolfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)メソッド。 ユーザーがフォーマット ファイルを解析し、これらのメソッドを呼び出す必要はありません。  
   
- フォーマット ファイルを保存する、 [ibcpsession::bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)メソッドです。 呼び出し、 **BCPReadFmt**メソッドは、保存されている形式を参照できます。 また、一括コピー ユーティリティ (**bcp**) によって参照されることができるファイルにユーザー定義のデータ形式を保存することができます、 **BCPReadFmt**メソッドです。  
+ フォーマット ファイルを保存する、 [ibcpsession::bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)メソッド。 呼び出し、 **BCPReadFmt**メソッドは、保存されている形式を参照できます。 または、一括コピー ユーティリティ (**bcp**) で参照できるファイルでユーザー定義のデータ形式を保存することができます、 **BCPReadFmt**メソッド。  
   
- **BCP_OPTION_DELAYREADFMT**の値、 *eOption*のパラメーター [ibcpsession::bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) ibcpsession::bcpreadfmt の動作を変更します。  
+ **BCP_OPTION_DELAYREADFMT**の値、 *eOption*パラメーターの[ibcpsession::bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) ibcpsession::bcpreadfmt の動作を変更します。  
   
 ## <a name="arguments"></a>引数  
  *pwszFormatFile*[in]  
@@ -60,7 +59,7 @@ HRESULT BCPReadFmt(
  メソッドが成功しました。  
   
  E_FAIL  
- 詳細な情報を使用するためのプロバイダー固有のエラーが発生しました、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイスです。  
+ 詳細な情報を使用するためのプロバイダー固有のエラーが発生しました、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイス。  
   
  E_OUTOFMEMORY  
  メモリ不足エラー。  

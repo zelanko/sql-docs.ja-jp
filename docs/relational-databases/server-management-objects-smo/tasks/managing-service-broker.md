@@ -1,5 +1,5 @@
 ---
-title: Service Broker の管理 |Microsoft ドキュメント
+title: Service Broker の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1d3bb44a64386329570d78e8b3ce436b9573f63f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967957"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000944"
 ---
 # <a name="managing-service-broker"></a>Service Broker の管理
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "32967957"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService> オブジェクトは、アドレス指定が可能なメッセージ交換エンドポイントである [!INCLUDE[ssSB](../../../includes/sssb-md.md)] サービスを表します。 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] メッセージは、あるサービスから別のサービスに送信されます。 サービスによってメッセージを保持するキューが指定され、このサービスの対象とするコントラクトを指定します。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 設定を表すオブジェクトを[!INCLUDE[ssSB](../../../includes/sssb-md.md)]リモート サービスと通信するときに、セキュリティと認証を使用します。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 設定を表すオブジェクトを[!INCLUDE[ssSB](../../../includes/sssb-md.md)]リモート サービスと通信するときにセキュリティと認証を使用します。  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> オブジェクトは、サービスおよびサービスが定義されているデータベースの位置情報を格納した [!INCLUDE[ssSB](../../../includes/sssb-md.md)] ルートを表します。 メッセージの配信にはルートが必要です。 既定では、各データベースに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の現在のインスタンスとして場所を示すルートが含まれます。  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
- [SQL Server Service Broker (SQL Server Service Broker)](../../../database-engine/configure-windows/sql-server-service-broker.md)  
+ [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,16 +24,16 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 042659861435f0deacf885dc5ec4c382f47a328f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d4a4259d06ffdcb14d7bb4c7a772c8606d2b669
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972487"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941938"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -121,7 +119,8 @@ ms.locfileid: "32972487"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- **[データベース ユーザー - 新規]** ダイアログ ボックスでは、 **[所有されているスキーマ]**、 **[メンバーシップ]**、 **[セキュリティ保護可能なリソース]**、 **[拡張プロパティ]** という 4 つの追加ページにもオプションが提供されます。  
+ 
+  **[データベース ユーザー - 新規]** ダイアログ ボックスでは、 **[所有されているスキーマ]**、 **[メンバーシップ]**、 **[セキュリティ保護可能なリソース]**、 **[拡張プロパティ]** という 4 つの追加ページにもオプションが提供されます。  
   
 -   **[所有されているスキーマ]** ページには、新しいデータベース ユーザーが所有できるすべてのスキーマが一覧表示されます。 データベース ユーザーのスキーマを追加または削除するには、 **[このユーザーが所有するスキーマ]** で、スキーマの横のチェック ボックスをオンまたはオフにします。  
   
@@ -137,7 +136,7 @@ ms.locfileid: "32972487"
      **[照合順序]**  
      選択されているデータベースに使用する照合順序を表示します。 このフィールドは読み取り専用です。  
   
-     **[プロパティ]**  
+     **Properties**  
      オブジェクトの拡張プロパティを表示または指定します。 各拡張プロパティは、オブジェクトに関連付けられたメタデータの名前/値ペアで構成されています。  
   
      **省略記号 [...]**  

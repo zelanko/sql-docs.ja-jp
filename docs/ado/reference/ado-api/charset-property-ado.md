@@ -2,7 +2,6 @@
 title: Charset プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 972f090d648c94c3fab20f013eaa185fe3849f00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9de51b96b78a7eccac34805ccc511754db3e393b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276301"
 ---
 # <a name="charset-property-ado"></a>Charset プロパティ (ADO)
 文字セットを示します、テキストの内容[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)の内部バッファーに格納するために変換するか、**ストリーム**オブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**文字を指定する値の設定先の内容、**ストリーム**変換されます。 既定値は**Unicode**です。 有効な値は、インターネットの文字セットの名前 (たとえば、および「iso 8859-1」、"windows-1252") として、インターフェイス経由で渡される一般的な文字列です。 システムによって把握されている文字セット名の一覧は、Windows レジストリに HKEY_CLASSES_ROOT\MIME\Database\Charset のサブキーを参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  テキストの**ストリーム**オブジェクト、文字セットで指定されたテキスト データが格納されている、 **Charset**プロパティです。 既定では Unicode です。 **Charset**プロパティに入るデータを変換するため、**ストリーム**または今後のうち、**ストリーム**です。 たとえば場合、**ストリーム**ISO 8859-1 のデータ、BSTR へのデータのコピーが含まれています、**ストリーム**オブジェクトは、データを Unicode に変換されます。 この逆も当てはまります。  
   
  開くのため**ストリーム**、現在[位置](../../../ado/reference/ado-api/position-property-ado.md)の先頭にある必要があります、**ストリーム**(0) に設定できる**Charset**です。  

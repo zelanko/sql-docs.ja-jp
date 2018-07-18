@@ -1,4 +1,4 @@
----
+﻿---
 title: SSMS を使用したデータベース バックアップの復元 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016

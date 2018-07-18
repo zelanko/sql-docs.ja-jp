@@ -1,5 +1,5 @@
 ---
-title: SMO のインストール |Microsoft ドキュメント
+title: SMO のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,33 +20,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 125712a02b362a49902c9f1e2422414f059864ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8780920f4b535c77b82f404e84917d4cc97af4e1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965937"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983884"
 ---
 #<a name="installing-smo"></a>SMO のインストール
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-このページでは、SMO を使用するアプリケーションおよび SMO を使用するためのシステム要件をインストールする方法について説明します。
+このページでは、アプリケーションと SMO を使用するためのシステム要件で使用するための SMO をインストールする方法について説明します。
 
 ## <a name="smo-nuget-package"></a>SMO の NuGet パッケージ
 
-以降で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2017 SMO として配布される、 [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) NuGet パッケージの SMO でのアプリケーションを開発できるようにします。
+以降で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2017 SMO はで配布されて、 [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) SMO でアプリケーションを開発できるようにする NuGet パッケージ。
 
-これは、SharedManagementObjects.msi で、SQL Server の各リリースの SQL Feature Pack の一部としてリリースされていたに代わるものです。 SMO を使用するアプリケーションでは、代わりに、NuGet パッケージを更新する必要があり、アプリケーションを開発すると、バイナリがインストールされていることを確認する負担になります。
+これは、SharedManagementObjects.msi で、SQL Server の各リリースの SQL の Feature Pack の一部としてリリースされていたに代わるものです。 SMO を使用するアプリケーションでは、代わりに、NuGet パッケージを更新する必要があり、アプリケーションを開発すると、バイナリがインストールされていることを確認する負担になります。
 
 >>[!Important]
->>前述のように、[ファイルとバージョン番号](files-and-version-numbers.md) ページで、SMO アセンブリを GAC にインストールしないでください。 SMO のこれらのバージョンを使用しても他のアプリケーションで問題が発生そうでした (など[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio)。
+>>説明したように、[ファイルとバージョン番号](files-and-version-numbers.md) ページで、SMO アセンブリを GAC にインストールしないでください。 SMO のこれらのバージョンを使用しても他のアプリケーションで問題を引き起こすそうでした (など[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio)。
 
 ##<a name="installing-the-package"></a>パッケージをインストールします。
 
-参照してください[NuGet のクイック スタートで、パッケージを使用する](https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package)手順と例についてをインストールすると、NuGet パッケージを使用します。 
+参照してください[NuGet クイック スタート - パッケージを使用して](https://docs.microsoft.com/nuget/quickstart/use-a-package)手順と例についてをインストールすると、NuGet パッケージを使用します。 
   
 ## <a name="system-requirements"></a>システム要件
   
- SMO が必要です[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4.0 を実行するにはのでそれを使用しているアプリケーションは、クライアント コンピューターがそのバージョンがあるか、以降がインストールされてことを確認する必要があります。
+ SMO が必要です[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4.0 を使用して任意のアプリケーションは、クライアント コンピューターがそのバージョンがあること、または以降がインストールされていることを確認する必要がありますので、実行します。
   

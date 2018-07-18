@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
@@ -16,11 +14,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c5784cbfda1f6eb935e864b0547db0fbe8cedbbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22606fe669b6e68efec8c82252d8a2345adb5450
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410624"
 ---
 # <a name="create-infosource-for-transaction-data"></a>[トランザクション データのインフォソースの作成]
   SAP Netweaver BW システムでトランザクション データ用の新しいインフォソースを作成するには、**[トランザクション データのインフォソースの作成]** ダイアログ ボックスを使用します。  
@@ -86,7 +85,7 @@ ms.lasthandoff: 05/03/2018
  **[種類]**  
  データ フロー列に関連付けられているインフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |CHA|特性|  
 |UNI|単位|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e47280ea121780890bf027578c29c69420211af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 792014313d846e0c25fd9280da7529006e3c5b0d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35327776"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   マージ結合変換では、FULL、LEFT、または INNER 結合を使用して並べ替えた 2 つのデータセットを結合した出力が生成されます。 たとえば、LEFT 結合を使用して、製品情報を含むテーブルを、製品が製造された国または地域を一覧表示するテーブルと結合します。 その結果、すべての製品とその製造元である国または地域を一覧表示するテーブルが生成されます。  

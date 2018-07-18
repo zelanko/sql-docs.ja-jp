@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -27,11 +26,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 65c540fec5a19b8c99057b56b83f12c8b49d1ac3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5a4f32be14ce3faa26ce94fcfa7a3c70518a152
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400684"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>実行プランおよびバッファーの割り当て
   実行前に、データ フロー タスクはそのコンポーネントを確認し、コンポーネントの各処理手順に応じて、実行プランを生成します。 このセクションでは、実行プラン、プランの表示方法、および実行プランに基づいて入力および出力バッファーを割り当てる方法に関する詳細について説明します。  

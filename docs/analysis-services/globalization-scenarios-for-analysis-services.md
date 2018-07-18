@@ -1,5 +1,5 @@
 ---
-title: Analysis Services のグローバリゼーションのシナリオ |Microsoft ドキュメント
+title: Analysis Services のグローバリゼーションのシナリオ |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018289"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031904"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services のグローバリゼーションのシナリオ
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34018289"
   
 -   1 つのデータ モデルで複数の翻訳されたキャプションを提供することにより、ユーザーが選択した言語でフィールド名や値が表示されるようにできます。 カナダ、ベルギー、スイスなどのバイリンガル国で事業を行う企業では、クライアント/サーバー アプリケーション全体で複数の言語をサポートすることが標準的なコーディング要件になっています。 このシナリオは、翻訳と通貨換算によって可能になります。 詳細と参考資料のリンクは、この後の「 [機能](#bkmk_features) 」を参照してください。  
   
--   開発および運用環境を、地理的にさまざまな国に分散して設置できます。 ある国で開発したソリューションを別の国に配置するというシナリオは、ますます一般化しています。 1 つの言語で開発したソリューションを、別の言語パックを使用するサーバーに配置できるように準備するには、言語および照合順序のプロパティを設定する方法についての知識が不可欠です。 これらのプロパティを適切に設定すると、元のホスト システムから取得する継承された既定値を上書きすることができます。 詳細については、この後の [言語および照合順序 &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md) 」をご覧ください。  
+-   開発および運用環境を、地理的にさまざまな国に分散して設置できます。 ある国で開発したソリューションを別の国に配置するというシナリオは、ますます一般化しています。 1 つの言語で開発したソリューションを、別の言語パックを使用するサーバーに配置できるように準備するには、言語および照合順序のプロパティを設定する方法についての知識が不可欠です。 これらのプロパティを適切に設定すると、元のホスト システムから取得する継承された既定値をオーバーライドすることができます。 詳細については、この後の [言語および照合順序 &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md) 」をご覧ください。  
   
 ##  <a name="bkmk_features"></a> グローバル化された多言語ソリューションを構築するための機能  
  クライアント レベルでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の多次元データを使用または操作するグローバル化されたアプリケーションで、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の多言語機能および複数カルチャ機能を使用できます。  
@@ -55,7 +55,7 @@ ms.locfileid: "34018289"
 ||||  
 |-|-|-|  
 |**機能**|**テーブル**|**多次元**|  
-|[言語および照合順序 &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|オペレーティング システムから継承されます。|モデル階層で主要オブジェクトの言語と照合順序の両方を上書きする機能と共に継承されます。|  
+|[言語および照合順序 &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|オペレーティング システムから継承されます。|モデル階層で主要オブジェクトの言語と照合順序の両方をオーバーライドする機能と共に継承されます。|  
 |翻訳サポートのスコープ|キャプションと説明。|オブジェクトの名前、キャプション、識別子、および説明の翻訳を、どの Unicode 言語およびスクリプトでも作成できます。 これは、ツールや環境が別の言語の場合にも当てはまります。 たとえば、スタック全体で英語およびラテン文字の照合順序を使用する開発環境で、名前にキリル文字を使用したオブジェクトをモデルに含めることができます。|  
 |翻訳サポートの実装|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して作成し、入力する翻訳ファイルを生成して、モデルにインポートし直します。<br /><br /> 詳しくは、「[表形式モデルでの翻訳 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)」をご覧ください。|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して作成し、キューブ、メジャー、ディメンション、および属性のキャプション、説明、およびアカウントの種類の翻訳を定義します。<br /><br /> 詳しくは、「[多次元モデルの翻訳 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)」をご覧ください。 この機能を使用する方法のレッスンは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] チュートリアルの「[レッスン 9 : パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)」をご覧ください。|  
 |通貨換算|使用できません。|通貨換算は、通貨データを含むメジャーを変換する専用の MDX スクリプトで行います。 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] のビジネス インテリジェンス ウィザードを使用すると、属性、メジャー グループのデータおよびメタデータの組み合わせを使用して通貨データを含むメジャーを換算する MDX スクリプトディメンションを生成できます。 「[通貨換算 &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md)」をご覧ください。|  
@@ -64,7 +64,7 @@ ms.locfileid: "34018289"
  [Analysis Services での翻訳のサポート](../analysis-services/translation-support-in-analysis-services.md)   
  [Windows アプリケーションの国際化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [グローバル デベロッパー センターを参照してください。](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [ロケールに基づくアダプティブ デザインによる書き込みの Windows ストア アプリ](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Windows ストア アプリの作成では、ロケールに基づくアダプティブ デザイン](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# と XAML によるユニバーサル Windows アプリの開発](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

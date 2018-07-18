@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c1a75f5d3c6f4a9f9eadcec5ad6f48e809f9f3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 000322cdd3178c08e08a4bf6c7db47ecffbb5882
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401324"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   
-|管理者の種類|Description|  
+|管理者の種類|[説明]|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] スーパー ユーザー|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられている権限は、管理者のアクセス権に影響を与えません。<br /><br /> 明示的に割り当てられている機能領域権限、またはグループから継承した権限に基づいてスーパー ユーザーになる場合があります。<br /><br /> すべてのモデルに対するあらゆる権限が自動的に付与されます。<br /><br /> すべての機能領域に対するアクセス権が自動的に付与されます。|  
 |モデル管理者|明示的に割り当てられている管理者権限、またはグループから継承した権限に基づいてモデル管理者になる場合があります。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> 特定のモデルのすべてのオブジェクトおよびメンバーに対するあらゆる権限が自動的に付与されます。|  

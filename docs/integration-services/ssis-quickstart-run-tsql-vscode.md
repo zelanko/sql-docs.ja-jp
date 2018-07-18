@@ -1,23 +1,21 @@
 ---
 title: Transact-SQL (VS Code) を使用して SSIS パッケージを実行する | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33c48b9438d141fac721d246ff2218cb0ccde542
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: de36395eed6cd85512f9e7497500bef53ab6d228
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455155"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332006"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS パッケージを実行する
 このクイックスタートでは、Visual Studio Code を使用して SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
@@ -38,7 +36,7 @@ Visual Studio Code は、拡張機能をサポートする Windows、macOS、お
 
 -   Azure SQL Database。 Azure でのパッケージの配置と実行の詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
 
-Linux で SSIS パッケージを実行する場合は、このクイックスタートの情報を使用することはできません。 Linux でのパッケージの実行の詳細については、「[Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md)」 (SSIS で Linux 上のデータの抽出、変換、読み込みを行う) を参照してください。
+Linux で SSIS パッケージを実行する場合は、このクイックスタートの情報を使用することはできません。 Linux でパッケージを実行する方法については、[SSIS を使用し、Linux でデータの抽出、変換、読み込みを行う](../linux/sql-server-linux-migrate-ssis.md)方法に関するページを参照してください。
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>VS Code で言語モードを SQL に設定する
 
@@ -55,7 +53,7 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -78,9 +76,9 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバー名** | 完全修飾サーバー名 | Azure SQL Database サーバーに接続する場合、名前は次の形式になります。`<server_name>.database.windows.net` |
    | **データベース名** | **SSISDB** | 接続先となるデータベースの名前。 |
-   | **[認証]** | SQL ログイン | SQL Server 認証では、SQL Server や Azure SQL Database に接続できます。 Azure SQL Database サーバーに接続している場合は、Windows 認証を使用することはできません。 |
-   | **User name** | サーバー管理者アカウント | このアカウントは、サーバーを作成したときに指定したアカウントです。 |
-   | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーを作成したときに指定したパスワードです。 |
+   | **[認証]** | SQL ログイン | SQL Server 認証を使用すると、SQL Server または Azure SQL Database に接続できます。 Azure SQL Database サーバーに接続する場合、Windows 認証を使用できません。 |
+   | **User name** | サーバー管理者アカウント | このアカウントは、サーバーの作成時に指定したアカウントです。 |
+   | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
    | **パスワードを保存しますか?** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
    | **このプロファイルの名前を入力してください** | **mySSISServer** などのプロファイル名 | プロファイル名が保存されていると、その後のログインの接続が高速化します。 | 
 

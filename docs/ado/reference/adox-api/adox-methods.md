@@ -2,7 +2,6 @@
 title: ADOX メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284801"
 ---
 # <a name="adox-methods"></a>ADOX メソッド
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 |[追加 (ビュー)](../../../ado/reference/adox-api/append-method-adox-views.md)|新しく追加**ビュー**オブジェクトを**ビュー**コレクション。|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|ユーザー アカウントのパスワードを変更します。|  
 |[作成](../../../ado/reference/adox-api/create-method-adox.md)|新しいカタログを作成します。|  
-|[Del](../../../ado/reference/adox-api/delete-method-adox-collections.md)|コレクションからオブジェクトを削除します。|  
+|[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)|コレクションからオブジェクトを削除します。|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|カタログ内のオブジェクトの所有者を返します。|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|オブジェクトのグループまたはユーザーのアクセス許可を返します。|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|カタログ内のオブジェクトの所有者を指定します。|  

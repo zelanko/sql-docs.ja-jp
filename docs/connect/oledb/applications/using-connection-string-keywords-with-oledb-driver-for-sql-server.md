@@ -2,7 +2,7 @@
 title: SQL Server の OLE DB ドライバーとの接続文字列キーワードを使用して |Microsoft ドキュメント
 description: SQL Server の OLE DB ドライバーで接続文字列キーワードを使用します。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -21,14 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a88e1ba37c1c5ddab0af1bbba411a08429fd2a05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40aeb07deacbc5e1341f3d38abf5595986cedd48
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612247"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB ドライバーとの接続文字列キーワードを使用してください。
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、DBPROP_INIT_PROVIDERSTRING と共に使用できるキーワードを示します。  
   
-|Keyword|初期化プロパティ|Description|  
+|Keyword|初期化プロパティ|説明|  
 |-------------|-----------------------------|-----------------|  
 |**addr**|SSPROP_INIT_NETWORKADDRESS|"Address" のシノニム。|  
 |**Address**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを実行しているサーバーのネットワーク アドレス。 **アドレス**は通常、サーバーのネットワーク名が、パイプ、IP アドレス、または TCP/IP ポートとソケット アドレスなど他の名前を指定できます。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> 値**アドレス**に渡された値よりも優先**サーバー** SQL Server の OLE DB Driver を使用する場合、接続文字列にします。 またを注意してください`Address=;`で指定したサーバーに接続する、**サーバー**キーワード、一方`Address= ;, Address=.;`、 `Address=localhost;`、および`Address=(local);`すべてが原因で、ローカル サーバーに接続します。<br /><br /> 完全な構文、**アドレス**キーワードのとおりです。<br /><br /> [*プロトコル ***:**]* アドレス *[* *、* * * ポート&#124;\pipe\pipename*]<br /><br /> *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。 プロトコルの詳細については、次を参照してください。 [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)です。<br /><br /> どちらの場合*プロトコル*も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager です。<br /><br /> *ポート*に接続する、指定したサーバー上のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。|   
@@ -86,14 +87,14 @@ ms.lasthandoff: 05/03/2018
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|アタッチできるデータベースのプライマリ ファイルの名前 (完全なパス名を含む)。 使用する**AttachDBFileName**、プロバイダー文字列の Database キーワードでデータベース名を指定することも必要があります。 場合は、データベースは、以前にアタッチされて、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に再アタッチしません (、アタッチされたデータベースの既定値として接続に使用)。|  
 |**Auto Translate します。**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" のシノニム。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 文字の変換を構成します。 認識できる値は "yes" と "no" です。|  
-|**データベース**|DBPROP_INIT_CATALOG|データベース名です。|  
+|**[データベース]**|DBPROP_INIT_CATALOG|データベース名です。|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|データ型を使用する処理モードを指定します。 認識できる値は、プロバイダー データ型を示す "0" および SQL Server 2000 データ型を示す "80" です。|  
 |**Encrypt**|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 有効値は、"yes" および "no" です。 既定値は "no" です。|  
 |**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|データベース ミラーリングに使用するフェールオーバー サーバーの名前。|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|フェールオーバー パートナーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server、既定では、プロバイダーが生成した SPN を使用するとします。|  
 |**言語**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語。|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のサーバーの場合)。 有効値は、"yes" および "no" です。 既定値は "no" です。|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = [はい]** の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = Yes** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 可能な値は **Yes** と **No**です。 既定値は**いいえ**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = [はい]** の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = Yes** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 可能な値は、 **[はい]** と **[いいえ]** です。 既定値は**いいえ**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**net**|SSPROP_INIT_NETWORKLIBRARY|"Network" のシノニム。|  
 |**ネットワーク**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**ネットワーク ライブラリ**|SSPROP_INIT_NETWORKLIBRARY|"Network" のシノニム。|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、キーワードと共に使用できるを**idatainitialize::getdatasource**:  
   
-|Keyword|初期化プロパティ|Description|  
+|Keyword|初期化プロパティ|説明|  
 |-------------|-----------------------------|-----------------|  
 |**Application Name**|SSPROP_INIT_APPNAME|アプリケーションを識別する文字列。|  
 |**アプリケーションの目的**|SSPROP_INIT_APPLICATIONINTENT|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は**ReadOnly**と**ReadWrite**です。<br /><br /> 既定値は**ReadWrite**です。 SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
@@ -185,7 +186,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、ADO 接続文字列と共に使用できるキーワードを示します。  
   
-|Keyword|初期化プロパティ|Description|  
+|Keyword|初期化プロパティ|説明|  
 |-------------|-----------------------------|-----------------|  
 |**アプリケーションの目的**|SSPROP_INIT_APPLICATIONINTENT|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は**ReadOnly**と**ReadWrite**です。<br /><br /> 既定値は**ReadWrite**です。 SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**Application Name**|SSPROP_INIT_APPNAME|アプリケーションを識別する文字列。|  

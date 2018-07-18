@@ -1,5 +1,5 @@
 ---
-title: 既定のマッピング XSD 要素の属性テーブルの列 (SQLXML 4.0) |Microsoft ドキュメント
+title: 既定のテーブル列 (SQLXML 4.0) にマッピング XSD 要素の属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -33,21 +33,21 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b8093c30d058b926d79f6494aa3dd08bd59a1c8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032643"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>テーブルおよび列への XSD 要素および属性の既定のマッピング (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   既定では、XSD 注釈付きスキーマの複合型の要素は、指定されたデータベース内の同じ名前のテーブル (ビュー) にマップされ、単純型の要素または属性は、テーブル内の同じ名前の列にマップされます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 既定のマッピングを指定する  
- この例では、XSD スキーマで注釈は指定されていません。 **\<Person.Contact >** 要素は複合型であり、したがって、既定では、AdventureWorks データベースの Person.Contact テーブルにマップします。 すべての属性 (ContactID、FirstName、LastName)、  **\<Person.Contact >** 要素は単純型と既定では Person.Contact テーブル内の同じ名前の列にマップします。  
+ この例では、XSD スキーマで注釈は指定されていません。 **\<Person.Contact >** 要素は複合型はあり、そのため、既定では、AdventureWorks データベースの Person.Contact テーブルにマップします。 すべての属性 (ContactID、FirstName、LastName)、  **\<Person.Contact >** 要素は単純型と、既定では Person.Contact テーブル内の同じ名前の列にマップします。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -84,7 +84,7 @@ ms.locfileid: "32972057"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  次に結果セットの一部を示します。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "32972057"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. XML 要素をデータベース列にマップする  
- この例では、注釈が使用されず、既定のマッピングが行われます。 **\<Person.Contact >** 要素は複合型であり、データベース内の同じ名前のテーブルにマップします。 要素 **\<FirstName >** と **\<LastName >** と**EmployeeID**属性は単純型のであり、そのため、マップには同じ名前の列です。 前の例との唯一の違いは、FirstName フィールドと LastName フィールドのマップに要素を使用する点です。  
+ この例では、注釈が使用されず、既定のマッピングが行われます。 **\<Person.Contact >** 要素は複合型と、データベースで同じ名前のテーブルにマップされます。 要素 **\<FirstName >** と **\<LastName >** と**EmployeeID**属性は単純型と、そのため、マップ、同じ名前の列。 前の例との唯一の違いは、FirstName フィールドと LastName フィールドのマップに要素を使用する点です。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -137,7 +137,7 @@ ms.locfileid: "32972057"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  次に結果セットの一部を示します。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "32972057"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. XML 要素を XML データ型の列にマップする  
- この例では、注釈が使用されず、既定のマッピングが行われます。 **\<Production.ProductModel >** 要素は複合型であり、データベース内の同じ名前のテーブルにマップします。 **ProductModelID**属性は単純型であり、したがって、同じ名前の列にマップします。 前の例との唯一の違いは、 **\<指示 >** 要素を使用する列にマップ、 **xml**データ型を使用して、 **xsd:anyType**型です。  
+ この例では、注釈が使用されず、既定のマッピングが行われます。 **\<Production.ProductModel >** 要素は複合型と、データベースで同じ名前のテーブルにマップされます。 **ProductModelID**属性は、単純型はあり、したがって、同じ名前の列にマップします。 前の例との唯一の違いは、 **\<指示 >** 要素が使用する列にマップして、 **xml**データ型を使用して、 **xsd。anyType**型。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -168,7 +168,7 @@ ms.locfileid: "32972057"
 </xsd:schema>  
 ```  
   
- **Xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。  
+ **Xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   
@@ -192,7 +192,7 @@ ms.locfileid: "32972057"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  次に結果セットの一部を示します。  
   
@@ -211,7 +211,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティの考慮事項のスキーマ注釈が付けられた&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [スキーマのセキュリティに関する考慮事項を注釈が付けられた&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [SQLXML 4.0 での xml データ型のサポート](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'sql: マップ (SQLXML 4.0) |Microsoft ドキュメント'
+title: 'sql: マッピング (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968477"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050150"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>注釈の解釈 - sql: マップ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 一括読み込み処理、 **sql: マップ**期待どおりに、XSD スキーマで注釈-つまり、マッピング スキーマを指定する場合**sql: マップ ="false"** 任意の要素または属性を使用して、XML 一括読み込みはできません対応する列に関連付けられているデータを格納しようとしてください。  
+  XML 一括読み込みの処理、 **sql: マップ**期待どおりに、XSD スキーマで注釈-は、マッピング スキーマが指定されている場合**sql: マップ ="false"** の任意の要素または属性を使用して、XML 一括読み込みしません。対応する列に関連付けられているデータを格納しようとしてください。  
   
- XML 一括読み込みは、要素とマップされていない属性は無視されます (スキーマで記述されていないか、XSD スキーマで注釈が付いているため**sql: マップ ="false"**)。 使用してこのような列が指定されている場合に、オーバーフロー列にマップされていないすべてのデータが**sql:overflow-フィールド**です。  
+ XML 一括読み込みは、要素とマップされていない属性は無視されます (スキーマに記述されていないか、または、XSD スキーマで注釈が付いて ため**sql: マップ ="false"**)。 使用してこのような列が指定されている場合に、オーバーフロー列にマップされていないすべてのデータが**sql:overflow-フィールド**します。  
   
  たとえば、次の XSD スキーマを考えてみます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "32968477"
 </xsd:schema>  
 ```  
   
- **HomePhone**属性を指定**sql: マップ ="false"**、XML 一括読み込みでは、この属性の対応する列にマップされません。 XSD スキーマを識別、オーバーフロー列 (**OverflowColumn**) XML 一括読み込みでこの未使用データを格納します。  
+ **HomePhone**属性を指定します**sql: マップ ="false"**、XML 一括読み込みでは、この属性の対応する列にマップされません。 XSD スキーマは、オーバーフロー列を識別します (**OverflowColumn**) XML 一括読み込みでこの未使用データを格納します。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   

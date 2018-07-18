@@ -1,10 +1,8 @@
----
+﻿---
 title: PolyBase のインストール | Microsoft Docs
 ms.custom: ''
 ms.date: 02/23/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: polybase
@@ -15,16 +13,17 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a897b2a3a74900763cb6de6eb398e14b5d1bdb1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 900cd4573448f1c9e9007835adce76999239a6a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328502"
 ---
 # <a name="polybase-installation"></a>PolyBase のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) からインストールすることができます。
+  SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) からインストールすることができます。 
 
 ## <a name="prerequisites"></a>前提条件
   

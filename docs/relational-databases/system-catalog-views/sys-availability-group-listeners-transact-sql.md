@@ -1,5 +1,5 @@
 ---
-title: sys.availability_group_listeners (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.availability_group_listeners (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,38 +27,38 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ce9f05f546fe9ad9a1d22d17424fe8f06482499
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182168"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989364"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  について各で Always On 可用性グループかゼロ行をなしのネットワーク名が、可用性グループに関連付けられていることを示すで、Windows Server フェールオーバー クラスタ リング (WSFC) 可用性グループ リスナーの構成ごとに 1 行を返しますクラスターです。 このビューでは、クラスターから収集したリアルタイムの構成が表示されます。  
+  各で Always On 可用性グループ、行を返すか 0 なしのネットワーク名が、可用性グループに関連付けられていることを示すで、Windows Server フェールオーバー クラスタ リング (WSFC) 可用性グループ リスナーの構成ごとに 1 行を返しますクラスター。 このビューでは、クラスターから収集したリアルタイムの構成が表示されます。  
   
 > [!NOTE]  
 >  このカタログ ビューでは、WSFC クラスターで定義された IP 構成の詳細は表示されません。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|可用性グループ ID (**group_id**) から[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)です。|  
+|**group_id**|**uniqueidentifier**|可用性グループ ID (**group_id**) から[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)します。|  
 |**listener_id**|**nvarchar(36)**|クラスター リソース ID からの GUID。|  
 |**dns_name**|**nvarchar(63)**|可用性グループ リスナーの構成されたネットワーク名 (ホスト名)。|  
-|**port**|**int**|可用性グループ リスナーに対して構成された TCP ポート番号。<br /><br /> NULL = リスナーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部で構成され、そのポート番号が可用性グループに追加されていません。 ポートの使用の MODIFY LISTENER オプションを追加する、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。|  
-|**is_conformant**|**bit**|この IP 構成が準拠しているかどうか。次のいずれかになります。<br /><br /> 1 = リスナーは準拠しています。 インターネット プロトコル (IP) アドレスの間には、"OR" リレーションのみが存在します。 *準拠する*包含すべてによって作成された IP 構成、 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 また場合の外部で作成された IP 構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などによって、WSFC フェールオーバー クラスター マネージャーを使用して、変更できますで ALTER AVAILABILITY GROUP tsql ステートメントでは、IP 構成が準拠と見なされます。<br /><br /> 0 = リスナーは準拠していません。 IP アドレスを使用して構成できませんでしたは通常、これを示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コマンドし、代わりに、WSFC クラスターで直接定義されています。|  
+|**port**|**int**|可用性グループ リスナーに対して構成された TCP ポート番号。<br /><br /> NULL = リスナーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部で構成され、そのポート番号が可用性グループに追加されていません。 ポート、pleaseuse の MODIFY LISTENER オプションを追加する、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。|  
+|**is_conformant**|**bit**|この IP 構成が準拠しているかどうか。次のいずれかになります。<br /><br /> 1 = リスナーは準拠しています。 インターネット プロトコル (IP) アドレスの間には、"OR" リレーションのみが存在します。 *準拠する*はすべてによって作成された IP 構成、 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 また場合の外部で作成された IP 構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などで、WSFC フェールオーバー クラスター マネージャーを使用して、変更することができます、ALTER AVAILABILITY GROUP tsql ステートメントでは、準拠と見なされる IP 構成。<br /><br /> 0 = リスナーは準拠していません。 通常、IP アドレスを使用して構成できませんでしたがこれを示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コマンドし、代わりに、WSFC クラスターで直接定義されました。|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|このリスナーのクラスター IP 構成文字列 (存在する場合)。 NULL = リスナーには仮想 IP アドレスがありません。 以下に例を示します。<br /><br /> IPv4 アドレス: `65.55.39.10`<br /><br /> IPv6 アドレス: `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+### <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [可用性グループの監視と &#40; です。Transact SQL と &#41; です。](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

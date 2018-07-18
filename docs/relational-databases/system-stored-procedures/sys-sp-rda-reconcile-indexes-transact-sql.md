@@ -1,14 +1,11 @@
 ---
-title: sys.sp_rda_reconcile_indexes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_rda_reconcile_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f020a11a0fa41d7cbd939279058e9292c5d488c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff2352fde5124f1f0db140914799f2a6d75f88d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997849"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431921"
 ---
 # <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   リモート テーブルのインデックスを調整するために、スキーマに関するタスク キューに入れます。 このタスクが正常に完了した後、リモートのテーブルは、ローカルの拡張が有効なテーブルに存在するのと同じインデックスにあります。  
   
- 別のタスクを呼び出すときに、インデックスを調整するためにキューがある場合**sp_rda_reconcile_indexes**、このストアド プロシージャは、重複するタスクを蓄積されません。  
+ 呼び出すときにインデックスを調整する別のタスクがキューに存在する場合**sp_rda_reconcile_indexes**、重複するタスクがこのストアド プロシージャをキューに登録します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
@@ -19,18 +17,19 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40343c4bfc73d37d47058bbe599d102fb06fb646
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e879598419d050b60bbb9f149751e64762597134
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405334"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **SSISDB** カタログに表示されるすべてのパッケージの詳細を表示します。  
   
-|列名|データ型|Description|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|パッケージの一意識別子 (ID) です。|  
 |NAME|**nvarchar (256)**|パッケージの一意の名前。|  

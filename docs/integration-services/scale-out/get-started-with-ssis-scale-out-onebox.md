@@ -1,26 +1,25 @@
 ---
 title: 1 台のコンピューターでの SSIS Scale Out の概要 | Microsoft Docs
-ms.description: This article shows you everything you need to know to get started with SSIS Scale Out on a single computer
-ms.custom: ''
+description: この記事では、1 台のコンピューターで SSIS Scale Out の使用を開始するために必要な内容をすべて示しています
+ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: fbcd13fd6f9a3ecbad7a4076df2dad93171896ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8152a96d894304e46c7a1d46824a75e6cd69b9d1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403334"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要
 このセクションでは、コンピューターが 1 台の環境で Integration Services Scale Out を設定する方法を紹介します。既定の設定を利用します。

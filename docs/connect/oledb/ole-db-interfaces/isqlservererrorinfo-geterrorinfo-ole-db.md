@@ -2,10 +2,10 @@
 title: Isqlservererrorinfo::geterrorinfo (OLE DB) |Microsoft ドキュメント
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 057e677242ad12cb9df8a669c129b75c3cb67f2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 936924540c5c55f8e333a64d794e54af098f7279
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690195"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB 用のドライバーを含む SQL Server の SSERRORINFO 構造体へのポインターを返します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エラーの詳細。  
   
@@ -60,7 +63,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  SQL Server の OLE DB Driver は、要求を完了するための十分なメモリを割り当てられませんでした。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SQL Server の OLE DB Driver は、SSERRORINFO 文字列と OLECHAR 文字列、コンシューマーが渡したポインターを通じて返されるのメモリを割り当てます。 コンシューマーを使用してこのメモリを解放する必要があります、 **imalloc::free**メソッド エラー データにアクセスする必要がなくなったときにします。  
   
  SSERRORINFO 構造体は、次のように定義されています。  
@@ -79,7 +82,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|メンバー|Description|  
+|Member|説明|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー メッセージ。 を介して、メッセージが返されます、 **ierrorinfo::getdescription**メソッドです。|  
 |*pwszServer*|エラーが発生した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。|  

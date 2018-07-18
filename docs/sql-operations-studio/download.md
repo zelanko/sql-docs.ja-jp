@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール | Microsoft ドキュメント
 description: Windows、macOS、そして Linux に対応する Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,24 +13,24 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcf6f9d14efd903c47d4e3b059503fb77606209b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 421b22fd1489561ff04a69e23ecac15d1d52be5a
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988640"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270993"
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
-ダウンロードし、最新のリリースをインストール、*パブリック プレビューの場合があります*:
+ダウンロードし、最新のリリースをインストール、*年 6 月のパブリック プレビュー*:
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
-|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|2018 月 7日 |0.29.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|2018 月 7日 |0.29.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|2018 月 7日 |0.29.3|
+|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=875602)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=875603)|2018 年 6 月 20日 |0.30.6|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=875604)|2018 年 6 月 20日 |0.30.6|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=875607)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=875606)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)|2018 年 6 月 20日 |0.30.6|
 
 最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
@@ -40,20 +40,20 @@ ms.locfileid: "33988640"
 
 **インストーラー**
 
-1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] インストーラー](https://go.microsoft.com/fwlink/?linkid=873386) ダウンロードして実行します。
+1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] インストーラー](https://go.microsoft.com/fwlink/?linkid=875602) ダウンロードして実行します。
 1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 
 **.zip ファイル**
 
-1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=873387) をダウンロードします。
+1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=875603) をダウンロードします。
 2. ダウンロードしたファイルを参照し、展開します。
 3. `\sqlops-windows\sqlops.exe`を実行します。
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>SQL Operations Studio (プレビュー) for MacOS の取得
 
-1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=873388) をダウンロードします。
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=875604) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
 3. [!INCLUDE[name-sos](../includes/name-sos-short.md)] を *Launchpad* で有効にするため *sqlops.app* を *アプリケーション* フォルダーへドラッグします。
 
@@ -61,9 +61,9 @@ ms.locfileid: "33988640"
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>SQL Operations Studio (プレビュー) for Linux の取得
 
 1. ダウンロード[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Linux のインストーラーまたは tar.gz アーカイブのいずれかを使用します。
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=873391)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=873390)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=875607)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=875606)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)
 1. ファイルを展開し、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動するため、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **Debian のインストール:**

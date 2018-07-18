@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eba1b10c2ebd776ddd03174e33529b03149605e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88a5fb5fbac36bfa7dc0eb6d7f3495c9306c8513
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403494"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」をご覧ください。  
   
--   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+-   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>イベント ハンドラーを使用したパッケージ エラーのキャッチおよび処理  
  イベント ハンドラーを使用することにより、パッケージやパッケージ内のオブジェクトで発生する多くのイベントに対応できます。  

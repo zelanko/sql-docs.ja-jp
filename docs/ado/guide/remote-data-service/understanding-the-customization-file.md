@@ -1,4 +1,4 @@
----
+﻿---
 title: カスタマイズ ファイルの概要 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity

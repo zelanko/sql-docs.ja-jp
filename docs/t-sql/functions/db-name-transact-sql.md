@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,20 +22,21 @@ helpviewer_keywords:
 - DB_NAME function
 ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c2a2e92fdef5cae1b2404d18c2c5fb18b3de1ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 573f8036d1e28f18e89597ae4bd71b00796c66af
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786533"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-データベース名を返します。
+この関数は、指定されたデータベースの名前を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,21 +48,23 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>引数  
 *database_id*  
-名前が返されるデータベースの識別番号 (ID) を指定します。 *database_id* は **int**, 、既定値はありません。 ID の指定を省略すると、現在のデータベースの名前が返されます。
+
+名前 `DB_NAME` が返されるデータベースの識別番号 (ID) です。 `DB_NAME` の呼び出しで *database_id* が省略された場合、`DB_NAME` は現在のデータベースの名前を返します。
   
 ## <a name="return-types"></a>戻り値の型
 **nvarchar(128)**
   
 ## <a name="permissions"></a>アクセス許可  
-場合の呼び出し元 **DB_NAME** 、データベースの所有者ではないと、データベースが **マスター** または **tempdb**, 、対応する行を表示するために必要な最低限のアクセス許可には、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバー レベルの権限、または CREATE DATABASE 権限、 **マスター** データベース。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。
+
+`DB_NAME` の呼び出し元が、**マスター**以外または **tempdb** 以外の特定データベースを所有していない場合は、対応する `DB_ID` 行を確認するために、少なくとも、サーバー レベルの `ALTER ANY DATABASE` または `VIEW ANY DATABASE` 権限が必要です。 **マスター** データベースの場合、`DB_ID` には少なくとも `CREATE DATABASE` 権限が必要です。 呼び出し元が接続するデータベースは常に、**sys.databases** 内で確認できます。
   
 > [!IMPORTANT]  
->  既定は、パブリックのロールは、データベースの情報を表示するすべてのログインを許可する、VIEW ANY DATABASE 権限を持っています。 データベースを検出する機能からのログインをブロックするには、パブリックから VIEW ANY DATABASE 権限を取り消すまたは個別のログインの VIEW ANY DATABASE 権限を拒否します。  
+>  既定では、public ロールは、すべてのログインにデータベース情報の表示を許可する `VIEW ANY DATABASE` 権限を持っています。 ログインでデータベースが検出されるのを阻止するには、public から `VIEW ANY DATABASE` を `REVOKE` するか、または、個別のログインに対する `VIEW ANY DATABASE` を `DENY` します。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-current-database-name"></a>A. 現在のデータベース名を返す  
-次の例では、現在のデータベース名を返します。
+この例では、現在のデータベース名を返します。
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
@@ -70,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-name-of-a-specified-database-id"></a>B. 指定したデータベース ID のデータベース名を返す  
-次の例では、データベース ID が `3` のデータベース名を返します。
+この例では、データベース ID `3` のデータベース名を返します。
   
 ```sql
 USE master;  
@@ -88,7 +90,7 @@ SELECT DB_NAME() AS [Current Database];
 ```  
   
 ### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. データベース ID を使用してデータベースの名前を返す  
-次の例では、各データベースのデータベース名とデータベース ID を返します。
+次の例では、各データベースのデータベース名と database_id を返します。
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  

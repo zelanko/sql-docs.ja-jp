@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,12 +21,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0c1c14aaeff26111ebb66ce8aa77f9a25b599ba
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 1dd1dac24574484f0424399504f606f6b0917aa8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563900"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309501"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -81,7 +80,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="remarks"></a>コメント  
 **Sqlsrv_query**関数が 1 回限りのクエリに最適し、特殊な状況を除き、クエリを実行する既定の選択肢をする必要があります。 この関数は、最小限のコードでクエリを実行するための簡素化されたメソッドを提供します。 **Sqlsrv_query**関数はステートメントの準備とステートメントの実行の両方を行うし、パラメーター化クエリを実行するために使用できます。  
   
-詳細については、「 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルに 1 つの行を挿入します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  

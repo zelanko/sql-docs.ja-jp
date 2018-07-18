@@ -2,7 +2,6 @@
 title: SetPermissions メソッド (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3178c472bfeb58361ae6d7d889d82d3823b09469
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6cb3bb780109c61b5d481d0d0d3bae56badea819
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286810"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions メソッド (ADOX)
 アクセス許可を指定します、[グループ](../../../ado/reference/adox-api/group-object-adox.md)または[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクト。  
@@ -40,7 +40,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *名前*  
+ *Name*  
  A**文字列**アクセス許可を設定する対象のオブジェクトの名前を指定する値。  
   
  *ObjectType*  
@@ -53,12 +53,12 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  A**長い**ビットマスクを指定できる値の 1 つ以上の[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)を設定する権限を示す定数です。  
   
  *継承します。*  
- 省略可。 A**長い**いずれかの値の[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)オブジェクトがこれらのアクセス許可を継承する方法を指定する定数。 既定値は**adInheritNone**です。  
+ 任意。 A**長い**いずれかの値の[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)オブジェクトがこれらのアクセス許可を継承する方法を指定する定数。 既定値は**adInheritNone**です。  
   
  *ObjectTypeId*  
- 省略可。 A**バリアント**OLE DB 仕様で定義されていないプロバイダーのオブジェクト型の GUID を指定する値。 このパラメーターは必要な場合*ObjectType*に設定されている**adPermObjProviderSpecific**です。 それ以外の場合は使用されません。  
+ 任意。 A**バリアント**OLE DB 仕様で定義されていないプロバイダーのオブジェクト型の GUID を指定する値。 このパラメーターは必要な場合*ObjectType*に設定されている**adPermObjProviderSpecific**です。 それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  プロバイダーがグループまたはユーザーのアクセス許可の設定をサポートしていない場合は、エラーが発生します。  
   
 > [!NOTE]

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'クイック スタート: SQL Operations Studio (プレビュー) を使用して Azure SQL Database に接続して照会する |Microsoft ドキュメント'
 description: このクイック スタートは、SQL Operations Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。
 ms.custom: tools|sos
@@ -13,12 +13,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: c72e6d5b8e3e2770300e6b890b076bf77617849b
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 5470e19da9d8641a1337f0f8162fe0a1789820dd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235776"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982264"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Azure SQL Database に接続して照会する
 
@@ -41,37 +41,37 @@ ms.locfileid: "34235776"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して Azure SQL データベース サーバーへの接続を確立します。
 
-1. [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初回実行時には **[接続]** ページが開きます。**[接続]** ページが表示されない場合は、**[接続の追加]**、または **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
+1. [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初回実行時には **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、**[接続の追加]**、または **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
    
    ![新しい接続のアイコン](media/quickstart-sql-database/new-connection-icon.png)
 
-2. この記事では*SQL ログイン*を使用しますが、*Windows 認証*もサポートされています。Azure SQL サーバーのサーバー名、ユーザー名およびパスワードを使用して、次のようにフィールドに入力します。
+2. この記事では*SQL ログイン*を使用しますが、*Windows 認証*もサポートされています。 Azure SQL サーバーのサーバー名、ユーザー名およびパスワードを使用して *、* 次のようにフィールドに入力します。
 
    | 設定       | 提案される値 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **サーバー名** | 完全修飾サーバー名 | 名前には、次のようにする必要があります: **servername.database.windows.net** |
+   | **サーバー名** | 完全修飾サーバー名 | 名前は、このようなものでなければなりません: **servername.database.windows.net** |
    | **[認証]** | SQL ログイン| このチュートリアルでは、SQL 認証を使用します。 |
    | **ユーザー名** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
    | **パスワードを保存しますか?** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
    | **データベース名** | *空白のままに* | 接続するデータベースの名前。 |
-   | **サーバー グループ** | 選択します。 <Default> | サーバー グループを作成する場合は、特定のサーバー グループを設定できます。 | 
+   | **サーバー グループ** | 選択します <Default> | サーバー グループを作成する場合は、特定のサーバー グループに設定できます。 | 
 
    ![新しい接続のアイコン](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. サーバーに SQL Operations Studio の接続を許可するファイアウォール規則が設定されていない場合、**[新しいファイアウォール規則の作成]** フォームが開きます。フォームを完成させて新しいファイアウォール規則を作成します。詳細については、[ファイアウォール規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)を参照してください。
+3. サーバーに SQL Operations Studio の接続を許可するファイアウォール規則が設定されていない場合、**[新しいファイアウォール規則の作成]** フォームが開きます。 フォームを完成させて新しいファイアウォール規則を作成します。 詳細については、[ファイアウォール規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)を参照してください。
 
    ![新しいファイアウォール規則](media/quickstart-sql-database/firewall.png)  
 
-4. サーバーへの接続が開いた後、*サーバー*サイドバーです。
+4. サーバーの接続が正常に開いたら、*サーバー*サイドバーです。
 
 ## <a name="create-the-tutorial-database"></a>チュートリアルのデータベースを作成します。
 
-次のセクションでは、作成、 *TutorialDB*でいくつか使用されているデータベース[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアルです。
+次のセクションでは、作成、 *TutorialDB*でいくつか使用されているデータベース[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアル。
 
-1. サーバー サイド バー内の Azure SQL サーバーを右クリックし、選択**新しいクエリ。**
+1. サーバー サイド バーで、Azure SQL サーバーを右クリックし、選択**新しいクエリ。**
 
-1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+1. クエリ エディターに次のスニペットを貼り付けて、をクリックして**実行**:
 
    ```sql
    IF NOT EXISTS (
@@ -90,18 +90,18 @@ ms.locfileid: "34235776"
 
 ## <a name="create-a-table"></a>テーブルの作成
 
-クエリ エディター接続が失われて、*マスター*にテーブルを作成するデータベースですが、 *TutorialDB*データベース。 
+クエリ エディターの接続状態を*マスター*でテーブルを作成するデータベースが、 *TutorialDB*データベース。 
 
 1. 接続コンテキストを変更する**TutorialDB**:
 
-   ![変更のコンテキスト](media/quickstart-sql-database/change-context.png)
+   ![コンテキストの変更](media/quickstart-sql-database/change-context.png)
 
 
 
-1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+1. クエリ エディターに次のスニペットを貼り付けて、をクリックして**実行**:
 
    > [!NOTE]
-   > これを追加したり、エディターでは、前のクエリを上書きできます。 クリックすると**実行**が選択されているクエリのみを実行します。 何も選択されている場合にクリックすると**実行**エディター内のすべてのクエリを実行します。
+   > これには、追加したり、エディターで上記のクエリを上書きできます。 クリックする**実行**が選択されている、クエリを実行します。 何も選択されている場合は、クリックして**実行**エディター内のすべてのクエリを実行します。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -123,7 +123,7 @@ ms.locfileid: "34235776"
 
 ## <a name="insert-rows"></a>行を挿入する
 
-- 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+- クエリ エディターに次のスニペットを貼り付けて、をクリックして**実行**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -138,8 +138,8 @@ ms.locfileid: "34235776"
    ```
 
 
-## <a name="view-the-result"></a>結果を表示します。
-1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+## <a name="view-the-result"></a>結果を表示します
+1. クエリ エディターに次のスニペットを貼り付けて、をクリックして**実行**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -148,14 +148,14 @@ ms.locfileid: "34235776"
 
 1. クエリの結果が表示されます。
 
-   ![Select の結果](media/quickstart-sql-database/select-results.png)
+   ![結果を選択します。](media/quickstart-sql-database/select-results.png)
 
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップします。
 
-このコレクション内の他の記事は、このクイック スタートに基づいて構築します。 後続のクイック スタートの操作を続行する場合は、このクイック スタートで作成されたリソースをクリーンアップしないでください。 続行する予定がない場合は、Azure ポータルでこのクイック スタートで作成されたリソースを削除する、次の手順を使用します。
-不要になったリソース グループを削除することによって、リソースをクリーンアップします。 詳細については、「[リソースをクリーンアップ](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources)です。
+このコレクション内の他の記事では、このクイック スタートに基づいて構築します。 引き続きクイック スタートで作業する場合は、このクイック スタートで作成したリソースをクリーンアップしないでください。 続行する予定がない場合、次の手順を使用して、Azure portal でこのクイック スタートで作成したリソースを削除します。
+不要になったリソース グループを削除することによって、リソースをクリーンアップします。 詳細については、次を参照してください。[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)します。
 
 ## <a name="next-steps"></a>次の手順
 
-わかったら、Azure SQL データベースに正常に接続してクエリを実行すること、[コード エディターのチュートリアル](tutorial-sql-editor.md)です。
+これで、Azure SQL database に正常に接続したクエリを実行して、試し、[コード エディターのチュートリアル](tutorial-sql-editor.md)します。

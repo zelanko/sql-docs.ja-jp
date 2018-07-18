@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b753000c255d6c07777c94e8fb61c847ab10d0c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309151"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,7 +70,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 返されたオブジェクトの値のデータ型は既定の PHP データ型になります。 既定の PHP データ型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 クラス名が省略可能な *$className* パラメーターで指定される場合、このクラス型のオブジェクトはインスタンス化されます。 名前が結果セットのフィールド名に一致するプロパティがクラスにある場合、対応する結果セット値がプロパティに適用されます。 結果セットのフィールド名がクラス プロパティに一致しない場合、結果セットのフィールド名を持つプロパティがオブジェクトに追加され、結果セットの値がプロパティに適用されます。  
   
 次の規則は、 *$className* パラメーターと共にクラスを指定したときに適用されます。  

@@ -1,13 +1,12 @@
 ---
-title: カーソルの同時実行 (ODBC) |Microsoft ドキュメント
+title: カーソルの同時実行 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c1cd11454b45ed3d5f3b67cc7e76bbf12eb79982
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bc43656728586f30a2fa07e3ab1903ec00dc6d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942717"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423901"
 ---
 # <a name="cursor-concurrency-odbc"></a>カーソル同時実行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  カーソル操作は、カーソルの種類と同様に、アプリケーションで設定される同時実行オプションの影響を受けます。 同時実行オプションは、の SQL_ATTR_CONCURRENCY オプションを使用して設定された[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)です。 同時実行の種類は次のとおりです。  
+  カーソル操作は、カーソルの種類と同様に、アプリケーションで設定される同時実行オプションの影響を受けます。 同時実行オプションが設定の SQL_ATTR_CONCURRENCY オプションを使用して[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。 同時実行の種類は次のとおりです。  
   
 -   読み取り専用 (SQL_CONCUR_READONLY)  
   

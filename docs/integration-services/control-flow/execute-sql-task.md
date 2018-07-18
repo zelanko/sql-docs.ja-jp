@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48c90af75a51d0b849f1ce7b0a714bd403e9018d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404754"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -158,7 +157,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
  このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[直接入力]**|Transact-SQL ステートメントをソースに設定します。 この値を選択すると、動的オプション **[SQLStatement]** が表示されます。|  
 |**[ファイル接続]**|Transact-SQL ステートメントを含んでいるファイルを選択します。 この値を設定すると、動的オプション **[ファイル接続]** が表示されます。|  
@@ -578,7 +577,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 ### <a name="custom-log-entries"></a>カスタム ログ エントリ  
  次の表では、SQL 実行タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|Description|  
+|ログ エントリ|[説明]|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|SQL ステートメントの実行フェーズに関する情報を提供します。 タスクがデータベースへの接続を取得したとき、SQL ステートメントの準備が開始されたとき、および SQL ステートメントの実行が完了した後に、ログ エントリが書き込まれます。 準備フェーズのログ エントリには、タスクで使用される SQL ステートメントが含まれます。|  
 

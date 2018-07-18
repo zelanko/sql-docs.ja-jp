@@ -3,7 +3,6 @@ title: SQL Server Reporting Services のインストール (2017 以降) | Micro
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.custom: ''
@@ -13,11 +12,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3504d97184804512f70c35c36c5c1c0e528c30ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 868c812a854c39b1c75a3bc89d792eabe04483f8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322571"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services のインストール (2017 以降)
 
@@ -100,7 +100,7 @@ Windows サービスは、インストールの一部として作成されます
 
 URL 予約は、プレフィックス、ホスト名、ポート、および仮想ディレクトリで構成されます。
 
-|要素|Description|
+|要素|[説明]|
 |----------|-----------------|
 |Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|
 |ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`http://<computername>/reportserver`、`http://localhost/reportserver`、`http://<IPAddress>/reportserver.`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|

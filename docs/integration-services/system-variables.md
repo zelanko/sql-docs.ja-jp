@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a154155683bff4521a088552e299d34f72c3632e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11df6b02f0c90516727c86d687897ff1a04c0118
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331636"
 ---
 # <a name="system-variables"></a>システム変数
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、実行中のパッケージとそのオブジェクトに関する情報を格納する、システム変数のセットが用意されています。 これらの変数は、式およびプロパティ式の内部で使用でき、パッケージ、コンテナー、タスク、およびイベント ハンドラーをカスタマイズできます。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-packages"></a>パッケージ用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がパッケージ用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|Description|  
+|システム変数|データ型|[説明]|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|タスクがシグナルを送信して実行を停止する必要があることを示す、Windows イベント オブジェクトへのハンドルです。|  
 |**ContainerStartTime**|DateTime|コンテナーの開始時刻です。|  
@@ -64,14 +63,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-containers"></a>コンテナー用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が、For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナー用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|Description|コンテナー|  
+|システム変数|データ型|[説明]|コンテナー|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|コンテナーが使用するロケールです。|For ループ コンテナー<br /><br /> Foreach ループ コンテナー<br /><br /> シーケンス コンテナー|  
   
 ## <a name="system-variables-for-tasks"></a>タスク用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がタスク用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|Description|  
+|システム変数|データ型|[説明]|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|タスクの名前です。|  
 |**LocaleId**|Int32|タスクが使用するロケールです。|  
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-event-handlers"></a>イベント ハンドラー用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がイベント ハンドラー用に提供するシステム変数について説明します。 すべての変数がすべてのイベント ハンドラーで使用できるわけではありません。  
   
-|システム変数|データ型|Description|イベント ハンドラー|  
+|システム変数|データ型|[説明]|イベント ハンドラー|  
 |---------------------|---------------|-----------------|-------------------|  
 |**キャンセル**|ブール値|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
 |**ErrorCode**|Int32|エラー識別子です。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  

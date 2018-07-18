@@ -1,13 +1,11 @@
 ---
-title: 許可されない System.Core.dll の型およびメンバー |Microsoft ドキュメント
+title: System.Core.dll の型およびメンバーが許可されていません |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
@@ -15,19 +13,19 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4a4680a668a9c7e9d62010157a2301af154f52e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b0734153961954ea0b59e59debb12e30fc8909e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922917"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356304"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll の許可されない型およびメンバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) プログラミングには、型またはメンバーを持つの使用が許可されていません、 **HostProtectionAttribute**を指定する、 **System.Security.Permissions.HostProtectionResource**列挙の値が**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同期**、または**UI**です。 次の表は、ホスト保護属性 (HPA) 値が許可されない System.Core.dll アセンブリのメンバーおよび型を示しています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) のプログラミングには、型またはメンバーを持つの使用が許可されない、 **HostProtectionAttribute**を指定する、 **System.Security.Permissions.HostProtectionResource**列挙体の値を持つ**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同期**、または**UI**します。 次の表は、ホスト保護属性 (HPA) 値が許可されない System.Core.dll アセンブリのメンバーおよび型を示しています。  
   
 > [!NOTE]  
->  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)です。  
+>  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)します。  
   
 |型またはメンバー|HPA 値|  
 |--------------------|--------------------|  

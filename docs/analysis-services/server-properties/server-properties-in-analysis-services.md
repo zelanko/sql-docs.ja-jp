@@ -1,5 +1,5 @@
 ---
-title: Analysis Services のサーバー プロパティ |Microsoft ドキュメント
+title: Analysis services サーバーのプロパティ |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238822"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975100"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services のサーバー プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの既定のサーバー構成プロパティを変更できます。 各インスタンスには、同じサーバーの他のインスタンスとは別に設定される固有の構成プロパティがあります。  
   
- サーバーを構成するのには、SQL Server Management Studio を使用してまたは特定の SQL Server Analysis Services インスタンスの msmdsrv.ini ファイルを編集します。  
+ で、サーバーを構成するには、SQL Server Management Studio を使用して、または特定の SQL Server Analysis Services インスタンスの msmdsrv.ini ファイルを編集します。  
  
 SQL Server Management Studio のプロパティ ページには、最も頻繁に変更されるプロパティのサブセットが表示されます。 プロパティの完全な一覧は msmdsrv.ini ファイルにあります。   
   
 > [!NOTE]  
->  既定の SQL Server Analysis Services インストールで msmdsrv.ini \Program Files\Microsoft SQL Server\MSAS13 で確認できます。MSSQLSERVER\OLAP\Config フォルダーです。
+>  既定の SQL Server Analysis Services インストールでは、SQL Server\MSAS13 \Program Files\Microsoft で msmdsrv.ini を確認できます。MSSQLSERVER\OLAP\Config フォルダーです。
 > 
 > サーバー構成に影響を与える他のプロパティには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の配置構成プロパティが含まれます。 これらのプロパティに関する詳細については、「 [ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)」を参照してください。
  

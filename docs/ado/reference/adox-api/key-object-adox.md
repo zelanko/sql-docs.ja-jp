@@ -2,7 +2,6 @@
 title: キーのオブジェクト (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07b51f604cd8099d3b11f7e748199dfe6a438abd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05863d8227f2f0dddc6b7a44c60951fe3f8471be
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286841"
 ---
 # <a name="key-object-adox"></a>キー オブジェクト (ADOX)
 データベース テーブルから、外部キー、または一意のキー フィールドを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次のコードが新たに作成**キー**:  
   
 ```  

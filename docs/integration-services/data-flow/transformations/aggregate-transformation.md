@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a8e1f5981bdaf8cec7b263a9894ce3d1c4c7b04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2328032345bfac2575afacc8764ba1265cb94ac
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331196"
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="operations"></a>操作  
  集計変換では、次の操作がサポートされています。  
   
-|操作|Description|  
+|演算|[説明]|  
 |---------------|-----------------|  
 |グループ化|データセットをグループに分割します。 グループ化には、任意のデータ型の列を使用できます。 詳細については、「[GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md)」を参照してください。|  
 |SUM|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「[SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md)」を参照してください。|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **[キー スケール]**  
  [詳細設定] 画面で、集計によって書き込むことのできるキーの概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[キー スケール]** プロパティと **[キー]** プロパティの両方が設定されている場合、 **[キー]** の値が優先されます。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |[未指定]|[キー スケール] プロパティは使用されません。|  
 |Low|集計では約 500,000 キーを書き込むことができます。|  
@@ -177,7 +176,7 @@ ms.lasthandoff: 05/03/2018
  **操作**  
  使用可能な操作の一覧から選択します。次の表を指針として使用できます。  
   
-|操作|Description|  
+|演算|[説明]|  
 |---------------|-----------------|  
 |**GroupBy**|データセットをグループに分割します。 どのようなデータ型を持つ列でもグループ化に使用できます。 詳細については、「GROUP BY」を参照してください。|  
 |**Sum**|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「SUM」を参照してください。|  
@@ -193,7 +192,7 @@ ms.lasthandoff: 05/03/2018
  **Count Distinct Scale**  
  集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、 **[CountDistinctKeys]** が優先されます。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |[未指定]|**CountDistinctScale** プロパティは使用されません。|  
 |Low|集計では約 500,000 の個別の値を書き込むことができます。|  
@@ -215,7 +214,7 @@ ms.lasthandoff: 05/03/2018
  **[キー スケール]**  
  集計で予想される、概算のキー数をオプションで指定します。 変換ではこの情報を使用して最初のキャッシュ サイズを最適化します。 既定では、このオプションの値は **[未指定]** です。 **[キー スケール]** と **[キーの数]** の両方が指定されている場合、 **[キーの数]** の方が優先されます。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |[未指定]|**[キー スケール]** プロパティは使用されません。|  
 |Low|集計では約 500,000 キーを書き込むことができます。|  
@@ -228,7 +227,7 @@ ms.lasthandoff: 05/03/2018
  **[個別カウント スケール]**  
  集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[個別カウント スケール]** と **[個別カウント キー数]** の両方が指定されている場合、 **[個別カウント キー数]** の方が優先されます。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |[未指定]|CountDistinctScale プロパティは使用されません。|  
 |Low|集計では約 500,000 の個別の値を書き込むことができます。|  

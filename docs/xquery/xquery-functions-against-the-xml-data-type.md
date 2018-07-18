@@ -1,5 +1,5 @@
 ---
-title: Xml データ型に対する XQuery 関数 |Microsoft ドキュメント
+title: Xml データ型に対する XQuery 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -25,28 +25,28 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: db1906027692ec40974668f48521588b2231cebd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077735"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997114"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml データ型に対する XQuery 関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このトピックとサブトピックに対して XQuery を指定するときに使用できる関数を記述、 **xml**データ型。 W3C 仕様では、次を参照してください。 [ http://www.w3.org/TR/2004/WD-xpath-functions-20040723](http://go.microsoft.com/fwlink/?LinkId=4873)です。  
+  このトピックとサブトピックに対して XQuery を指定するときに使用できる関数を記述、 **xml**データ型。 W3C 仕様では、次を参照してください。 [ http://www.w3.org/TR/2004/WD-xpath-functions-20040723](http://go.microsoft.com/fwlink/?LinkId=4873)します。  
   
- XQuery 関数が属する、http://www.w3.org/2004/07/xpath-functions名前空間。 W3C 仕様では、これらの関数を表すために "fn:" という名前空間プレフィックスを使用しています。 この関数を使用するときに、"fn:" 名前空間プレフィックスを明示的に指定する必要はありません。 名前空間プレフィックスは明示的に指定する必要がないので、ここでは、読みやすさを考慮して名前空間プレフィックスは省略します。  
+ 属している XQuery 関数、http://www.w3.org/2004/07/xpath-functions名前空間。 W3C 仕様では、これらの関数を表すために "fn:" という名前空間プレフィックスを使用しています。 この関数を使用するときに、"fn:" 名前空間プレフィックスを明示的に指定する必要はありません。 名前空間プレフィックスは明示的に指定する必要がないので、ここでは、読みやすさを考慮して名前空間プレフィックスは省略します。  
   
- 次の表は、XQuery 関数に対してはサポートされている、 **xml**データ型。  
+ 次の表は、XQuery 関数に対してサポートされている、 **xml**データ型。  
   
 |カテゴリ|関数名|  
 |--------------|-------------------|  
-|[数値の値に対する関数](http://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[Ceiling](../xquery/numeric-values-functions-ceiling.md)|  
+|[数値の値に対する関数](http://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[ceiling](../xquery/numeric-values-functions-ceiling.md)|  
 ||[floor](../xquery/numeric-values-functions-floor.md)|  
-||[丸める](../xquery/numeric-values-functions-round.md)|  
-|[文字列値に XQuery 関数](http://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
-||[が次の値を含む](../xquery/functions-on-string-values-contains.md)|  
+||[ラウンド](../xquery/numeric-values-functions-round.md)|  
+|[文字列の値に対する XQuery 関数](http://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
+||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[部分文字列](../xquery/functions-on-string-values-substring.md)|  
 ||[lower-case 関数&#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[文字列長](../xquery/functions-on-string-values-string-length.md)|  
@@ -56,7 +56,7 @@ ms.locfileid: "33077735"
 ||[local-name 関数 (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[名前空間 uri 関数 (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
 |[コンテキスト関数](http://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
-||[position](../xquery/context-functions-position-xquery.md)|  
+||[位置](../xquery/context-functions-position-xquery.md)|  
 |[シーケンスの関数](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[空](../xquery/functions-on-sequences-empty.md)|  
 ||[個別の値](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[id 関数 (XQuery)](../xquery/functions-on-sequences-id.md)|  
@@ -70,9 +70,9 @@ ms.locfileid: "33077735"
 ||[data](../xquery/data-accessor-functions-data-xquery.md)|  
 |[ブール値コンス トラクター関数&#40;XQuery&#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 関数 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 関数 (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
-|[Qname に関連する関数&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[Expanded-qname() (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
-||[ローカル名-からの QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
-||[名前空間 uri の QName の (XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md)|  
+|[QNames に関係する関数&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[Expanded-qname() (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
+||[ローカルの名前-から-QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
+||[名前空間の uri-から-QName (XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md)|  
 |[SQL Server XQuery 拡張関数します。](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)|[sql:column() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
 ||[sql:variable() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   

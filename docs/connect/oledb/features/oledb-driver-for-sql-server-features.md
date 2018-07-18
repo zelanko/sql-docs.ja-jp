@@ -2,7 +2,7 @@
 title: SQL Server 機能の OLE DB Driver |Microsoft ドキュメント
 description: OLE DB ドライバーの SQL Server 機能
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f1cc26981dae02bd76133c204c5eff142db76c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbc52f29aa0bfc6c60d9f8b7cb47b138c11b561
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612357"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>SQL Server 機能の OLE DB ドライバー
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -47,13 +48,13 @@ ms.lasthandoff: 05/03/2018
  [ユーザー定義型の使用](../../oledb/features/using-user-defined-types.md)  
  OLE DB Driver for SQL Server でユーザー定義型 (UDT)、オブジェクトやカスタム データ構造を格納することにより、SQL 型システムを拡張するものをサポートする方法について説明します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。  
   
- [大きな値の型を使用します。](../../oledb/features/using-large-value-types.md)  
+ [大きな値の型の使用](../../oledb/features/using-large-value-types.md)  
  OLE DB Driver for SQL Server ではラージ オブジェクト (LOB) データ型、大きな値データ型をサポートする方法について説明します。  
   
  [プログラムによるパスワードの変更](../../oledb/features/changing-passwords-programmatically.md)  
  OLE DB Driver for SQL Server に期限切れのパスワードの処理がサポートされているため、パスワードを変更できるように管理者の関与なしでクライアントにする方法について説明します。  
   
- [スナップショット分離の使用](../../oledb/features/working-with-snapshot-isolation.md)  
+ [スナップショット分離を使用した作業](../../oledb/features/working-with-snapshot-isolation.md)  
  OLE DB Driver for SQL Server でリーダー/ライターのブロッキング問題を回避することでデータベースのパフォーマンスを向上させる行のバージョン管理の拡張機能をサポートする方法について説明します。  
   
  [クエリ通知の操作](../../oledb/features/working-with-query-notifications.md)  

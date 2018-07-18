@@ -1,5 +1,5 @@
 ---
-title: データ マイニング拡張機能 (DMX) 構文要素 |Microsoft ドキュメント
+title: データ マイニング拡張機能 (DMX) 構文要素 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842385"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989924"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>データ マイニング拡張機能 (DMX) 構文要素
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,13 +56,13 @@ ms.locfileid: "34842385"
  アルゴリズムでマイニング モデルの処理に使用できる別のヒントを定義します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   

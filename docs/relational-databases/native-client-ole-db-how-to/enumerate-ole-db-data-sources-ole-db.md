@@ -1,13 +1,12 @@
 ---
-title: OLE DB データ ソース (OLE DB) を列挙 |Microsoft ドキュメント
+title: OLE DB データ ソース (OLE DB) の列挙 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75cfceeb4fb5e87c9deb8dc7f391d561c3d438f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d4bf448d4537e282d6121a4247dc0ca71b3de7e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946557"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432661"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB データ ソースの列挙 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,33 +30,33 @@ ms.locfileid: "32946557"
 
   このサンプルでは、列挙子オブジェクトを使用して、使用可能なデータ ソースを一覧表示する方法を示します。  
   
- コンシューマーを呼び出し、SQLOLEDB 列挙子に表示されるデータ ソースの一覧を表示、 [isourcesrowset:](http://go.microsoft.com/fwlink/?LinkId=120312)メソッドです。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
+ コンシューマーを呼び出し、SQLOLEDB 列挙子に表示されるデータ ソースを一覧表示、 [isourcesrowset::getsourcesrowset](http://go.microsoft.com/fwlink/?LinkId=120312)メソッド。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
   
  使用しているネットワーク ライブラリに応じて、適切なドメインでデータ ソースが検索されます。 名前付きパイプの場合は、クライアントがログオンしたドメインになります。 AppleTalk の場合は、既定のゾーンになります。 SPX/IPX の場合は、バインダリ内にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一覧になります。 Banyan VINES の場合は、ローカル ネットワークにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールになります。 マルチプロトコルと TCP/IP ソケットはサポートされません。  
   
  サーバーのオンとオフが切り替わると、これらのドメインで情報を更新するのに数分かかる場合があります。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページです。  
+ このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB データ ソースを列挙するには  
   
-1.  ソース行セットを呼び出すことによって取得**ISourceRowset::GetSourcesRowset**です。  
+1.  ソース行セットを呼び出すことによって取得**ISourceRowset::GetSourcesRowset**します。  
   
-2.  呼び出して列挙子の行セットの説明を検索**GetColumnInfo::IColumnInfo**です。  
+2.  呼び出して列挙子の行セットの説明を検索**GetColumnInfo::IColumnInfo**します。  
   
 3.  列情報からバインド構造体を作成します。  
   
-4.  呼び出して行セットのアクセサーを作成**iaccessor::createaccessor**です。  
+4.  行セットのアクセサーを呼び出すことによって作成**iaccessor::createaccessor**します。  
   
-5.  呼び出して、行をフェッチ**irowset::getnextrows**です。  
+5.  呼び出すことによって、行のフェッチ**irowset::getnextrows**します。  
   
-6.  呼び出して、行の行セットのコピーからデータを取得**irowset::getdata**、して処理します。  
+6.  行の行セットのコピーからデータを呼び出すことによって取得**irowset::getdata**、し、それを処理します。  
   
 ## <a name="example"></a>例  
- ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムをする必要があります変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 名前付きインスタンスに接続する場合から、接続文字列を変更する"かに\\\name"という名前付きインスタンス。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
 ```  
 // compile with: ole32.lib  

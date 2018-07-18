@@ -2,10 +2,10 @@
 title: 大きな CLR ユーザー定義型 (OLE DB) |Microsoft ドキュメント
 description: 大きな CLR ユーザー定義型 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611987"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   このトピックでは、OLE DB Driver for 大きな共通言語ランタイム (CLR) ユーザー定義型 (Udt) をサポートするために SQL Server で、OLE DB への変更について説明します。  
   
@@ -78,11 +81,11 @@ ms.lasthandoff: 05/03/2018
 |列の型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|NULL|NULL|オン|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|NULL|NULL|Set|DB_ALL_EXCEPT_LIKE|0|  
   
  UDT には次の列も定義されています。  
   
-|列識別子|型|Description|  
+|列識別子|型|説明|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているカタログの名前。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているスキーマの名前。|  
@@ -95,7 +98,7 @@ ms.lasthandoff: 05/03/2018
 |パラメーターの型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|~0|~0|Clear|  
-|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|~0|~0|オン|  
+|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|~0|~0|Set|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>COLUMNS 行セット (スキーマ行セット)  
  UDT 型に対して返される列値を次に示します。  
@@ -103,11 +106,11 @@ ms.lasthandoff: 05/03/2018
 |列の型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|Clear|*n*|  
-|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|オン|0|  
+|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|Set|0|  
   
  UDT には、次の追加の列が定義されています。  
   
-|列の識別子|型|Description|  
+|列の識別子|型|説明|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているカタログの名前。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているスキーマの名前。|  
@@ -128,12 +131,12 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|サポート (2)、(5)|なし|サポートされている (3), (5)|なし|  
 |DBTYPE_STR|サポート (2)、(5)|なし|サポートされている (3), (5)|なし|  
 |DBTYPE_IUNKNOWN|サポートされている (6)|なし|サポートされている (6)|なし|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポート (5)|なし|サポートされている (3), (5)|なし|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|サポート (5)|なし|サポートされている (3), (5)|なし|  
 |DBTYPE_VARIANT (VT_BSTR)|サポート (2)、(5)|なし|なし|なし|  
   
 ### <a name="key-to-symbols"></a>記号の説明  
   
-|記号|意味|  
+|シンボル|説明|  
 |------------|-------------|  
 |1|サーバー以外の型で dbtype_udt 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が DBTYPE_UDT と、ステートメントが実行されるときにエラーが発生します。  発生するエラーは DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR です。<br /><br /> UDT ではないサーバー パラメーターに UDT 型のパラメーターを指定すると、エラーになります。|  
 |2|データが 16 進数文字列からバイナリ データに変換されます。|  

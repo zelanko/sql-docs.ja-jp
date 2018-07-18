@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル (DMX) を作成 |Microsoft ドキュメント
+title: マイニング モデル (DMX) の作成 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842635"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980592"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34842635"
   
  マイニング構造には、モデル名の後に「_structure」を追加した名前を付けます。これにより、構造名がモデル名から一意であることが保証されます。  
   
- 既存のマイニング構造のマイニング モデルを作成するには、使用、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)ステートメントです。  
+ 既存のマイニング構造のマイニング モデルを作成するには、使用、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)ステートメント。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  現在のプロバイダーによって定義された、データ マイニング アルゴリズムの名前です。  
   
 > [!NOTE]  
->  使用して現在のプロバイダーでサポートされているアルゴリズムの一覧を取得できる[DMSCHEMA_MINING_SERVICES 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)です。 現在のインスタンスでサポートされているアルゴリズムを表示する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)です。  
+>  使用して現在のプロバイダーでサポートされているアルゴリズムの一覧を取得できる[DMSCHEMA_MINING_SERVICES 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)します。 現在のインスタンスでサポートされているアルゴリズムを表示する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)します。  
   
  *パラメーター リスト*  
  任意。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
@@ -56,11 +56,11 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *XML 文字列*  
  (詳しい知識のあるユーザーのみ。)XML でエンコードされたモデル (PMML) です。 文字列を示すには必ず単一引用符 (') を使用してください。  
   
- **セッション**句では、接続を閉じるか、またはセッションがタイムアウトになるときに、サーバーから自動的に削除されるマイニング モデルを作成することができます。**セッション**には、データベース管理者、ユーザーは不要のみを使用するためのディスク領域、接続が開いている限り、マイニング モデルは便利です。  
+ **セッション**句では、接続が終了またはセッションがタイムアウトになるときに、サーバーから自動的に削除されるマイニング モデルを作成することができます。**セッション**マイニング モデルは、するには、データベース管理者、ユーザーは必要ありませんし、接続が開いている限りのみディスク容量を使用するので便利です。  
   
  **WITH DRILLTHROUGH**句は、新しいマイニング モデルでドリルスルーを使用します。 ドリルスルーは、モデルの作成時にのみ可能です。 モデルの種類によっては、カスタム ビューアーでモデルを参照するためにドリルスルーが必要な場合があります。 Microsoft 汎用コンテンツ ツリー ビューアーを使用してモデルを予測または参照する場合は、ドリルスルーは必要ありません。  
   
- **CREATE MINING MODEL**ステートメント列定義の一覧、アルゴリズム、およびアルゴリズム パラメーターのリストに基づく新しいマイニング モデルを作成します。  
+ **CREATE MINING MODEL**ステートメントは、列定義の一覧、アルゴリズム、およびアルゴリズム パラメーターのリストに基づく新しいマイニング モデルを作成します。  
   
 ### <a name="column-definition-list"></a>列定義リスト  
  列定義の一覧を使用するモデルの構造を定義するには、次の情報を各列に含めます。  
@@ -75,9 +75,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   コンテンツの種類 (必須)  
   
--   によって示される予測の要求は、この列を予測するアルゴリズムに示す、 **PREDICT**または**PREDICT_ONLY**句  
+-   示される予測の要求は、この列を予測するためのアルゴリズムを示す、 **PREDICT**または**PREDICT_ONLY**句  
   
--   によって示される、属性列 (適用される場合にのみ必須)、リレーションシップ、 **RELATED TO**句  
+-   によって示される属性列 (適用される場合にのみ必須)、リレーションシップ、 **RELATED TO**句  
   
  1 つの列を定義するのにには、列定義リストの次の構文を使用します。  
   
@@ -103,9 +103,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [モデリング フラグ&#40;データ マイニング&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
- ステートメントに句を追加して、2 つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の使用をサポートしている\<Column relationship > 句。  
+ ステートメントに句を追加して、2 つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の使用をサポートする\<Column relationship > 句。  
   
- **を関連します。**  
+ **関連するには**  
  この形式は値の階層を示します。 RELATED TO 列の対象にすることが可能なのは、入れ子になったテーブル内のキー列、ケース行内の不連続値の列、RELATED TO 句のある別の列です。これにより、より深い階層が示されます。  
   
  予測列の使用方法を説明するには、予測句を使用します。 次の表は、使用できる 2 つの句について示しています。  
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)です。  
+ 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)します。  
   
 ## <a name="remarks"></a>コメント  
  組み込みのテスト データセットを持つモデルを作成する場合は、CREATE MINING STRUCTURE ステートメントの後に ALTER MINING STRUCTURE ステートメントを使用します。 ただし、すべての種類のモデルで予約データセットがサポートされるわけではありません。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
   
- CREATEMODEL ステートメントを使用して、マイニング モデルを作成する方法のチュートリアルは、次を参照してください。[時系列予測の DMX のチュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)です。  
+ CREATEMODEL ステートメントを使用してマイニング モデルを作成する方法のチュートリアルは、次を参照してください。[時系列予測の DMX チュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)します。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes の例  
  次の例では、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムを新しいマイニング モデルを作成します。 Bike Buyer の列は、予測可能属性として定義されています。  
@@ -172,7 +172,7 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>時系列の例  
- 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)]タイム シリーズ アルゴリズムを ARTxp アルゴリズムを使用して新しいマイニング モデルを作成します。 ReportingDate は時系列のキー列で、ModelRegion はデータ系列のキー列です。 この例では、データの周期を 12 か月としています。 したがって、 *PERIODICITY_HINT*パラメーターは 12 に設定します。  
+ 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)]タイム シリーズ アルゴリズムを ARTxp アルゴリズムを使用して新しいマイニング モデルを作成します。 ReportingDate は時系列のキー列で、ModelRegion はデータ系列のキー列です。 この例では、データの周期を 12 か月としています。 そのため、 *PERIODICITY_HINT*パラメーター 12 に設定されます。  
   
 > [!NOTE]  
 >  指定する必要があります、 *PERIODICITY_HINT*中かっこ文字を使用してパラメーター。 さらに、値は文字列であるため、囲む必要があります単一引用符で:"{\<数値 >}"。  

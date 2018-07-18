@@ -1,7 +1,8 @@
 ---
-title: (データ Migration Assistant) の SQL Server の移行の評価を実行して |Microsoft ドキュメント
+title: (Data Migration Assistant) SQL Server の移行評価の実行 |Microsoft Docs
+description: Data Migration Assistant を使用して、別の SQL Server または Azure SQL Database に移行する前に、オンプレミスの SQL Server を評価する方法について説明します
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -17,23 +18,24 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 30c44a7aba2a721501996d7a1d53a6a4a83a345e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870727"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934954"
 ---
-# <a name="perform-a-sql-server-migration-assessment"></a>SQL Server の移行の評価を実行します。
-次の手順では、内部設置型 SQL Server, データ Migration Assistant を使用して、Azure の仮想マシン、または Azure SQL データベースで実行されている SQL Server に移行するため、最初の評価を実行できます。
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant で移行評価を SQL Server を実行します。
+
+次の手順では、オンプレミスの SQL Server、Data Migration Assistant を使用して、Azure VM、または Azure SQL Database で実行される SQL Server に移行するため、最初の評価を実行できます。
 
 ## <a name="create-an-assessment"></a>評価を作成します。
 
-1.  選択、**新規**(+) アイコンをクリックし、**評価**プロジェクトの種類。
+1.  選択、**新規**(+) アイコンをクリックして、**評価**プロジェクトの種類。
 
 2.  ソースとターゲット サーバーの種類を設定します。
 
-    最近、内部設置型 SQL Server インスタンスに、または Azure VM でホストされている SQL Server に、内部設置型 SQL Server インスタンスをアップグレードする場合に、ソースとターゲット サーバーの種類を設定**SQL Server**です。 Azure SQL Database に移行する場合は、代わりに、ターゲット サーバーの種類に設定**Azure SQL Database**です。
+    オンプレミスで最新の SQL Server インスタンスまたは Azure VM でホストされている SQL Server のオンプレミスの SQL Server インスタンスをアップグレードする場合は、ソースとターゲット サーバーの種類を設定**SQL Server**します。 Azure SQL Database に移行する場合、ターゲット サーバーの種類を設定代わりに**Azure SQL Database**します。
 
 3.  **[作成]** をクリックします。
 
@@ -45,67 +47,67 @@ ms.locfileid: "32870727"
 
 2. レポートの種類を選択します。
 
-   内部設置型 SQL Server またはターゲットの Azure VM でホストされている SQL Server に移行するため、ソース SQL Server のインスタンスを評価するときは、次の評価レポートの種類のいずれかを選択できます。
+   ターゲットの Azure VM でホストされている SQL Server にオンプレミスの SQL Server に移行するため、ソース SQL Server のインスタンスを評価するときは、次の評価レポート タイプの一方または両方を選択できます。
 
     -   **互換性の問題**
 
-    -   **新機能の推奨事項**
+    -   **新機能のお勧め**
 
     ![SQL Server のターゲットの評価レポートの種類を選択します。](../dma/media/AssessmentTypes.png)
 
-   Azure SQL Database に移行するため、ソース SQL Server のインスタンスを評価するときは、次の評価レポートの種類のいずれかを選択できます。
+   Azure SQL Database に移行するため、ソース SQL Server のインスタンスを評価するときは、次の評価レポート タイプの一方または両方を選択できます。
 
-    -   **データベースの互換性を確認します。**
+    -   **データベースの互換性を確認してください。**
 
-    -   **チェック機能のパリティ**
+    -   **機能パリティを確認してください。**
 
-    ![SQL データベースのターゲットの評価レポートの種類を選択します。](../dma/media/AssessmentTypes_Azure.png)
+    ![SQL Database のターゲットの評価レポートの種類を選択します。](../dma/media/AssessmentTypes_Azure.png)
 
-## <a name="add-databases-to-assess"></a>評価にデータベースを追加します。
+## <a name="add-databases-to-assess"></a>評価するためのデータベースを追加します。
 
-1.  選択**追加ソース**接続ポップアップ メニューを開きます。
+1.  選択**ソースの追加**接続フライアウト メニューを開きます。
 
-2.  SQL server インスタンス名を入力、認証の種類を選択、正しい接続プロパティを設定し、選択**接続**です。
+2.  SQL server インスタンス名を入力、認証の種類を選択、適切な接続のプロパティを設定および選択し、 **Connect**します。
 
-3.  データベースを選択し、評価を選択**追加**です。
+3.  データベースを選択し、評価、選択**追加**します。
 
     > [!NOTE] 
-    > 複数のデータベースを削除するには、shift キーまたは Ctrl キーを押しながらクリックしているときに選択して**削除ソース**です。 使用して、複数の SQL Server インスタンスからデータベースを追加することも、**追加ソース**ボタンをクリックします。
+    > 複数のデータベースを削除するには、shift キーまたは Ctrl キーを押しながらクリックしているときに選択して**削除ソース**します。 使用して、複数の SQL Server インスタンスからデータベースを追加することも、**ソースの追加**ボタンをクリックします。
 
-4.  をクリックして**次**評価を開始します。
+4.  クリックして**次**評価を開始します。
 
-    ![ソースを追加し、評価の開始](../dma/media/SelectDatabase.png)
+    ![ソースを追加し、評価を開始](../dma/media/SelectDatabase.png)
 
-## <a name="view-results"></a>結果の表示
+## <a name="view-results"></a>結果を表示します。
 
-評価の所要時間は、追加したデータベースの数と各データベースのスキーマのサイズによって異なります。 利用できるようになったら、データベースごとに結果が表示されます。
+評価の実行時間は、追加したデータベースの数と各データベースのスキーマのサイズによって異なります。 使用するとすぐに、データベースごとに結果が表示されます。
 
-1.  評価を完了しているデータベースを選択しを切り替える**互換性の問題**と**機能の推奨事項**スイッチャーを使用して、します。
+1.  評価が完了したデータベースを選択し、切り替える**互換性の問題**と**機能に関する推奨事項**スイッチャーを使用しています。
 
-2.  選択したターゲット SQL Server のバージョンでサポートされているすべての互換性レベルでの互換性問題の確認、**オプション**ページ。
+2.  選択したターゲット SQL Server のバージョンでサポートされているすべての互換性レベルで互換性の問題を確認して、**オプション**ページ。
 
-互換性の問題を確認するには、影響を受けるオブジェクトとその下で識別されたすべての問題の詳細を分析して**まて**、**動作の変更**、および**非推奨機能**.
+互換性の問題を確認するには影響を受けるオブジェクト、その詳細、および可能性のある下検知したすべての問題の修正プログラムを分析することで**まて**、**動作の変更**、および**非推奨の機能**します。
 
-![評価の結果の表示](../dma/media/ReviewResults.png)
+![評価結果を表示します。](../dma/media/ReviewResults.png)
 
 同様に、全体の機能の推奨事項を確認できます**パフォーマンス**、**ストレージ**、および**セキュリティ**領域。
 
-インメモリ OLTP と列ストア、Stretch Database、Always Encrypted、動的データ マスクおよび透過的なデータ暗号化などの機能のさまざまな機能に関する推奨事項について説明します。
+機能に関する推奨事項では、さまざまなインメモリ OLTP と列ストア、Stretch Database、Always Encrypted、動的データ マスク、および Transparent Data Encryption などの機能について説明します。
 
-![ビューの機能に関する推奨事項](../dma/media/FeatureRecommendations.png)
+![機能の推奨事項の表示](../dma/media/FeatureRecommendations.png)
 
-Azure SQL データベース移行のブロッキング問題と機能のパリティの問題、評価を指定します。 特定のオプションを選択して、両方のカテゴリの結果を確認します。
+Azure SQL database では、評価は、移行を妨げる問題と機能パリティに関する問題を提供します。 特定のオプションを選択して、両方のカテゴリの結果を確認します。
 
-- **SQL Server 機能パリティ**カテゴリは、推奨事項は、Azure、および問題を緩和する手順で使用可能な他の方法の包括的なセットを提供します。 移行プロジェクトでこの作業の計画に役立ちます。
+- **SQL Server 機能パリティ**カテゴリは、Azure と軽減の手順で使用できる別の方法の推奨事項の包括的なセットを提供します。 移行プロジェクトでこの作業を計画できます。
 
-  ![SQL Server 機能のパリティ情報の表示](../dma/media/SQLFeatureParity.png)
+  ![SQL Server 機能パリティ情報の表示](../dma/media/SQLFeatureParity.png)
 
-- **互換性の問題**カテゴリは、Azure SQL データベースへの内部設置型 SQL Server データベースの移行をブロックする部分的にサポートされているか、サポートされていない機能を提供します。 これらの問題に対処するための推奨事項を用意します。
+- **互換性の問題**カテゴリには、Azure SQL データベースへのオンプレミス SQL Server データベースの移行をブロックする機能が部分的にサポートされているか、サポートされていません。 それらの問題に対処するための推奨事項を提供します。
 
   ![ビューの互換性の問題](../dma/media/CompatibilityIssues.png)
 
-## <a name="export-results"></a>結果のエクスポート
+## <a name="export-results"></a>結果をエクスポートします。
 
 すべてのデータベースには、評価が完了、選択**レポートをエクスポート**結果を JSON ファイルまたは CSV ファイルにエクスポートします。 都合に合わせて独自のデータを分析できます。
 
-同時に複数の評価を実行して開くことで、評価の状態を表示できます、**すべて評価**ページ。
+同時に複数の評価を実行して、評価の状態を表示するには、開く、**の評価すべて**ページ。

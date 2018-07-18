@@ -1,5 +1,5 @@
 ---
-title: 特定のタスクをプログラミング |Microsoft ドキュメント
+title: 特定のタスクのプログラミング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,25 +25,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971697"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998125"
 ---
 # <a name="programming-specific-tasks"></a>プログラミング特有のタスク
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   SMO オブジェクトを使用したプログラミングに特有のタスクには、バックアップ、統計の監視、レプリケーション、インスタンス オブジェクトの管理、および構成オプションの設定など、特定の関数を使用したプログラムにのみ必要となる場合がある複雑な処理が含まれています。  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SMO でのリンク サーバーの使用](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|SMO が <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> オブジェクトを使用して OLE-DB サーバーをリンクする方法について説明します。|  
 |[SMO での SQL Server の構成](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|SMO で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの構成設定を確認および変更する方法について説明します。|  
 |[テーブルおよびインデックスのパーティション分割の使用](../../../relational-databases/server-management-objects-smo/tasks/using-table-and-index-partitioning.md)|SMO でインデックスおよびテーブル分割を使用する方法について説明します。|  
 |[ファイル グループとファイルを使用したデータの格納](../../../relational-databases/server-management-objects-smo/tasks/using-filegroups-and-files-to-store-data.md)|SMO でファイル グループを使用する方法について説明します。|  
 |[WMI プロバイダーを使用したサービスの管理とネットワーク設定](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|構成管理用の WMI プロバイダーを表す <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを追跡するいくつかの方法について説明します。|  
-|[データベース オブジェクトの操作](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトを表すインスタンス クラスを作成する方法について説明します。|  
+|[データベース オブジェクトでの作業](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトを表すインスタンス クラスを作成する方法について説明します。|  
 |[ユーザー、ロール、およびログインの管理](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|SMO でセキュリティ ロールを使用する方法について説明します。|  
 |[権限の許可、取り消し、および拒否](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|SMO を使用して、ユーザーまたはロールのメンバーに対して権限の許可、取り消し、および拒否を行う方法について説明します。|  
 |[暗号化の使用](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|SMO で暗号化を使用してデータを保護する方法について説明します。|  

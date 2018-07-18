@@ -2,7 +2,6 @@
 title: メソッドの例 (JScript) の検索 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4671755b8ebbe5cf69a0341604f931902dea2d0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 067f8c214d3ebf1f90871108444b666e0da77bfb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278641"
 ---
 # <a name="find-method-example-jscript"></a>メソッドの例 (JScript) を検索します。
 この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[検索](../../../ado/reference/ado-api/find-method-ado.md)見つけての会社を表示する方法、 ***Northwind*** G. 切り取り文字で始まる名前のデータベースし、貼り付け次のコードをメモ帳または別のテキスト エディターととして保存**FindJS.asp**です。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5dbd9dc8fe274818305954c2bc1df137472db8ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1404eb940dc99453b4a991b10c2a0be8651b1ef8
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333146"
 ---
 # <a name="dimension-processing-destination"></a>ディメンション処理変換先
   ディメンション処理変換先は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションを読み込んで処理します。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
  **[処理方法]**  
  一覧で選択したディメンションに適用する処理方法を選択します。 このオプションの既定値は **[完全]** です。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[追加 (増分)]**|ディメンションの増分処理を実行します。|  
 |**[完全]**|ディメンションの完全処理を実行します。|  
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
  **[キー エラー アクション]**  
  許容されないキー値を持つレコードを処理する方法を指定します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|不正なキー値を **UnknownMember** に変換します。|  
 |**DiscardRecord**|レコードを破棄します。|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
  **[エラー時のアクション]**  
  **[エラー時に停止する]** を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**StopProcessing**|処理を停止します。|  
 |**StopLogging**|ログ記録エラーを停止します。|  
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
  **[見つからないキー]**  
  見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -140,7 +139,7 @@ ms.lasthandoff: 05/03/2018
  **[重複キー]**  
  重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError**です。  
   
-|Value|Description|  
+|Value|[説明]|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
  **[不明な種類に変換された NULL キー]**  
  NULL キーが **UnknownMember** 値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError**です。  
   
-|Value|Description|  
+|Value|[説明]|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -158,7 +157,7 @@ ms.lasthandoff: 05/03/2018
  **[許可されていない NULL キー]**  
  NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  

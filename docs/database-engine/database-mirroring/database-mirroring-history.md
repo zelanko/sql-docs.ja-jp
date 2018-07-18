@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 512f75d4210ba8d873917552c3eb42c831367b4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61eb214df285ef51e20dd8308b430d0b43f22417
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311671"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **履歴**  
  履歴一覧を表示します。 列のヘッダーをクリックすると、その列のデータを使用してグリッドが並べ替えられます。 一覧には次の列があります。  
   
-|列名|Description|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |**[記録された日時]**|履歴行のタイムスタンプです。|  
 |**ロール**|このデータベースに対するサーバー インスタンスの現在のミラーリング ロールです。[プリンシパル] または [ミラー] のいずれかになります。|  

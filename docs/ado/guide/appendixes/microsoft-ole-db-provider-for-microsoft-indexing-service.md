@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft OLE DB Provider for Microsoft インデックス サービス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity

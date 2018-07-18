@@ -1,5 +1,5 @@
 ---
-title: sp_db_increased_partitions |Microsoft ドキュメント
+title: sp_db_increased_partitions |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237690"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970414"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +50,15 @@ sp_dp_increased_partitions
   
 ## <a name="arguments"></a>引数  
  [ @dbname=] '*database_name*'  
- データベースの名前です。 *dbname*は**sysname**で、既定値は NULL です。 場合*dbname*が指定されていない、現在のデータベースを使用します。  
+ データベースの名前です。 *dbname*は**sysname**既定値は NULL です。 場合*dbname*が指定されていない、現在のデータベースを使用します。  
   
  [ @increased_partitions=] '*increased_partitions*'  
- 指定したデータベースに対して 15, 000 個のパーティションのサポートを有効または無効にします。 *increased_partitions*は**varchar (6)** 既定値は NULL です。 サポートを有効にするための承認済みの値は 'ON' または 'TRUE' です。サポートを無効にするための承認済みの値は 'OFF' または 'FALSE' です。 場合*increased_partitions*が指定されていない、プロシージャは指定されたデータベースのサポートが有効になっている、サポートを示すために 0 が無効になっているかを示す 1 を返します。  
+ 指定したデータベースに対して 15, 000 個のパーティションのサポートを有効または無効にします。 *increased_partitions*は**varchar (6)** 既定値は NULL です。 サポートを有効にするための承認済みの値は 'ON' または 'TRUE' です。サポートを無効にするための承認済みの値は 'OFF' または 'FALSE' です。 場合*increased_partitions*が指定されていない、プロシージャが指定されたデータベースのサポートを有効にするサポートを示すために 0 が無効になっているかを示す 1 を返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  指定したデータベースに対する ALTER DATABASE 権限が必要です。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.database_scoped_credentials (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.database_scoped_credentials (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a559b19863da9e6cc2a1ee3ccf8323d4a245af10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181018"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989384"
 ---
 # <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "33181018"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|データベースの ID には、資格情報がスコープ設定されます。 データベース内で一意です。|  
-|name|**sysname**|データベースの名前には、資格情報がスコープ設定されます。 データベース内で一意です。|  
+|NAME|**sysname**|データベースの名前には、資格情報がスコープ設定されます。 データベース内で一意です。|  
 |credential_identity|**nvarchar (4000)**|使用する識別情報の名前。 通常は Windows ユーザーです。 一意である必要はありません。|  
 |create_date|**datetime**|データベース スコープの資格情報が作成された時刻です。|  
 |modify_date|**datetime**|データベース スコープの資格情報が最後に変更された時刻です。|  
-|target_type|**nvarchar(100)**|データベースの種類には、資格情報がスコープ設定されます。 返します`NULL`データベース スコープ資格情報。|  
+|target_type|**nvarchar(100)**|データベースの種類には、資格情報がスコープ設定されます。 返します`NULL`データベース スコープの資格情報。|  
 |target_id|**int**|データベース スコープの資格情報にマップされているオブジェクトの ID。 データベースの 0 を返します。 資格情報のスコープ|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する `CONTROL` 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

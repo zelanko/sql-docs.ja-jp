@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1705206653630eb9bbaa832380804de3c0d9eb83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d56dbad56be7bf0762bb4d43fcc3138f547fe30
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957747"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355384"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>マージ レプリケーションの競合の詳細 - 競合回避モジュールの選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "32957747"
   
  データをパーティション分割するときに、複数のユーザーが同じパーティションに書き込まず、レプリケーション トポロジが基本構成 (1 つのパブリッシャーといくつかのサブスクライバー) に比較的従っている場合、競合は非常にまれであるか、またはまったく発生しません。 このような環境では、複雑な競合解決方法が不要な場合もあります。 競合の解決に既定の設定を使用する方法、クライアント サブスクリプションを使用する方法、または最初の変更を優先する方法をお勧めします。 トポロジがより複雑な場合 (再パブリッシュ サブスクライバーを使用するなど) は、サーバー サブスクリプションに特定の優先度を指定する方が適切です。  
   
- アーティクル競合回避モジュールは、ビジネス上のニーズにより既定の競合回避モジュールより細かく調整されたソリューションが必要な場合にお勧めします。 アーティクル競合回避モジュールを使用する場合は、ビジネス ロジック ハンドラーを使用することをお勧めします。 詳細については、「[Execute Business Logic During Merge Synchronization](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)」 (マージ同期中のビジネス ロジックの実行) を参照してください。  
+ アーティクル競合回避モジュールは、ビジネス上のニーズにより既定の競合回避モジュールより細かく調整されたソリューションが必要な場合にお勧めします。 アーティクル競合回避モジュールを使用する場合は、ビジネス ロジック ハンドラーを使用することをお勧めします。 詳細については、「[Execute Business Logic During Merge Synchronization](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
   
  最終的に、既定の競合回避モジュールとアーティクル競合回避モジュールのどちらを使用するかは、アプリケーションのデータおよびビジネス ロジックのニーズによって異なります。 たとえば、異なるサブスクライバーでパーティション分割されていないテーブルに顧客の順位データを入力する従業員がさまざまなジョブ カテゴリ (支社長、工程管理者、販売スタッフ) にまたがっており、ジョブ カテゴリによってデータの優先度が決まるとします。 この場合、アーティクル競合回避モジュールを構築できます。このモジュールは、競合発生時に優先されるデータの判別に、アーティクルから得られたジョブ カテゴリ データを使用します。  
   

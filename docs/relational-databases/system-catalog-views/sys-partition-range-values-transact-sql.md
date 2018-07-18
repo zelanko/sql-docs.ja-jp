@@ -1,5 +1,5 @@
 ---
-title: sys.partition_range_values (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.partition_range_values (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179568"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001214"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33179568"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|この範囲境界値のパーティション関数の ID です。|  
 |**boundary_id**|**int**|左端の境界が ID 1 で始まる境界値の組の ID (1 から始まる序数) です。|  
-|**parameter_id**|**int**|この値が対応する関数のパラメーターの ID です。 この列の値でそれらに対応して、 **parameter_id**の列、 **sys.partition_parameters**カタログ ビューの特定の**function_id**です。|  
+|**parameter_id**|**int**|この値が対応する関数のパラメーターの ID です。 この列の値に対応、 **parameter_id**の列、 **sys.partition_parameters**カタログ ビューの特定の**function_id**します。|  
 |**value**|**sql_variant**|実際の境界値です。|  
   
 ## <a name="permissions"></a>アクセス許可  

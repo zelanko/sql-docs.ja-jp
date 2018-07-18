@@ -1,5 +1,5 @@
 ---
-title: PredictAdjustedProbability (DMX) |Microsoft ドキュメント
+title: PredictAdjustedProbability (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9fd11ec1fcdf9a3c6ce5dc6476e877d808710b54
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989641"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
  スカラー値です。  
   
 ## <a name="remarks"></a>コメント  
- 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 省略した状態バケットを含めるには、設定、\<予測状態 > に**INCLUDE_** です。  
+ 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 省略した状態バケットを含めるには設定、\<予測状態 > に**INCLUDE_** します。  
   
  省略した状態の調整済みの確率を返すには、設定、\<予測状態 > を NULL にします。  
   
