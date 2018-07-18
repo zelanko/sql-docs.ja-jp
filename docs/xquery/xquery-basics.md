@@ -1,5 +1,5 @@
 ---
-title: XQuery の基礎 |Microsoft ドキュメント
+title: XQuery の基礎 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 726bf0f34e8fe8d8b5d0713ca74b8f07f9e94483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970624"
 ---
 # <a name="xquery-basics"></a>XQuery の基礎
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33077619"
  [シーケンスと Qname &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  シーケンス、QName、事前定義された名前空間について説明します。  
   
- [式のコンテキストとクエリの評価&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [式コンテキストとクエリの評価&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  XQuery が評価される 2 つのコンテキストについて説明します。 この 2 つは、静的コンテキストと動的コンテキストです。  
   
  [アトミック化&#40;XQuery&#41;](../xquery/atomization-xquery.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "33077619"
  XQuery の静的エラー、動的エラー、および型エラーの処理について説明します。  
   
  [XQuery のコメント](../xquery/comments-in-xquery.md)  
- 使用して XQuery にコメントを追加する方法について説明、"`(:`「と」`:)`"区切り記号  
+ 使用して XQuery にコメントを追加する方法について説明します、"`(:`「と」`:)`"区切り記号  
   
  [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)  
  静的に型指定された言語として [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery について説明します。  

@@ -1,5 +1,5 @@
 ---
-title: DirectQuery モードでの DAX 数式の互換性 |Microsoft ドキュメント
+title: DirectQuery モードでの DAX 数式の互換性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045646"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985384"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery モードでの DAX 数式の互換性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-テーブル 1200 以降モデルに対して DirectQuery モード、以前のバージョンで多くの機能制限適用されなくなります。 特に DAX 数式については、次のように改善されました。
+DirectQuery モードでテーブル 1200 以降モデルで以前のバージョンで多くの機能制限はもう適用されません。 特に DAX 数式については、次のように改善されました。
 
 - DirectQuery ではパフォーマンスを向上させるより単純なクエリを生成するようになりました。
-- DirectQuery モードでは、行レベルのセキュリティ (RLS) はサポートされています。
-- DirectQuery モードの表形式モデルでは、計算列はサポートされています。
+- DirectQuery モードでは、行レベル セキュリティ (RLS) がサポートされています。
+- DirectQuery モードで表形式モデルでは、計算列はサポートされてようになりました。
 
 ## <a name="dax-functions-in-directquery-mode"></a>DirectQuery モードでの DAX 関数
 
-つまり、すべての DAX 関数は、DirectQuery モデルがサポートされます。 ただし、数式の種類がすべてに必要な場合は、すべての関数がサポートされているし、DirectQuery モデルのすべての関数に最適化されています。 最も基本的なレベルで、DAX 関数は最適化されているものと最適化されていないものの 2 つに大別されます。 まず、最適化されている関数について詳しく見てみましょう。
+つまり、DirectQuery モデルのすべての DAX 関数がサポートされています。 ただし、すべての種類の数式のすべての関数がサポートされているし、DirectQuery モデルのすべての関数に最適化されています。 最も基本的なレベルで、DAX 関数は最適化されているものと最適化されていないものの 2 つに大別されます。 まず、最適化されている関数について詳しく見てみましょう。
 
 
 ### <a name="optimized-for-directquery"></a>DirectQuery 向けに最適化されている関数
@@ -34,21 +34,21 @@ ms.locfileid: "34045646"
 
 | すべての DAX 数式でサポートされる                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | メジャーとクエリの数式でのみサポートされる                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ABS</br>  ACOS</br>  ACOT</br>  [AND]</br>  ASIN</br>  ATAN</br>  空白</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  通貨</br>  [DATE]</br>  DATEDIFF</br>  DATEVALUE</br>  [DAY]</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  [FIND]</br>  [HOUR]</br>  [IF]</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  [LEFT]</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  [LOWER]</br>  [MAX]</br>  MID</br>  [MIN]</br>  [MINUTE]</br>  [MOD]</br>  [MONTH]</br>  MROUND</br>  [NOT]</br>  [NOW]</br>  または</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  [RIGHT]</br>  [ROUND]</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  [SECOND]</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  [SWITCH]</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  [TODAY]</br>  TRIM</br>  TRUE</br>  [TRUNC]</br>  UNICODE</br>  [UPPER]</br>  USERNAME</br>  USERELATIONSHIP</br>  VALUE</br>  WEEKDAY</br>  WEEKNUM</br>  [YEAR]</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> [AVERAGE]</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> [COUNT]</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> [MIN]</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> [SUM]</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
+| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  空白</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  通貨</br>  [DATE]</br>  DATEDIFF</br>  DATEVALUE</br>  [DAY]</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  [FIND]</br>  [HOUR]</br>  [IF]</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  [LEFT]</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  [LOWER]</br>  MAX</br>  MID</br>  [MIN]</br>  [MINUTE]</br>  [MOD]</br>  [MONTH]</br>  MROUND</br>  NOT</br>  [NOW]</br>  OR</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  [RIGHT]</br>  [ROUND]</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  [SECOND]</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  [SWITCH]</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  [TODAY]</br>  TRIM</br>  TRUE</br>  [TRUNC]</br>  UNICODE</br>  [UPPER]</br>  USERNAME</br>  USERELATIONSHIP</br>  Value</br>  WEEKDAY</br>  WEEKNUM</br>  [YEAR]</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> [AVERAGE]</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> [SUM]</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
 
 
 
 ### <a name="non-optimized-for-directquery"></a>DirectQuery 向けに最適化されていない関数
-これらの関数は DirectQuery の使用に最適化されていません。 計算列と行レベルのセキュリティの数式ではまったく " *サポートされていません* "。 ただし、パフォーマンスが不明であるものの、メジャーとクエリの数式では " *サポートされています* "。
+これらの関数は DirectQuery を使用する最適化されていません。 計算列と行レベルのセキュリティの数式ではまったく " *サポートされていません* "。 ただし、パフォーマンスが不明であるものの、メジャーとクエリの数式では " *サポートされています* "。
 
  最適化されていない関数をすべて列挙することはしませんが、 基本的には、上記の最適化されている関数の一覧になければ、その関数は DirectQuery 向けに最適化されていません。
 
 特定の関数が DirectQuery 向けに最適化されていない理由は、基になるリレーショナル エンジンが、xVelocity エンジンによって実行されるものと同等の計算を実行できないか、数式を同等の SQL 式に変換できないことです。 その他のケースとしては、変換された式のパフォーマンスとその結果の計算が受け入れられないことが考えられます。
 
-すべての DAX 関数については、[DAX 関数リファレンス] を参照してください。(https://msdn.microsoft.com/en-us/library/ee634396.aspx)
+すべての DAX 関数の詳細については、[DAX 関数の参照] を参照してください。(https://msdn.microsoft.com/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery モードでの DAX 演算子
-すべての DAX の比較演算および算術演算子は、DirectQuery モードで完全にサポートされます。 詳細については、「 [DAX 演算子リファレンス](https://msdn.microsoft.com/library/ee634237.aspx)」を参照してください。
+すべての DAX の比較および算術演算子は、DirectQuery モードで完全にサポートします。 詳細については、「 [DAX 演算子リファレンス](https://msdn.microsoft.com/library/ee634237.aspx)」を参照してください。
 
 
  
@@ -117,7 +117,7 @@ DirectQuery モードでは、文字列表現の日時から実際の **datetime
 インメモリ データ ストアを使用するモデルで日付に対してサポートされるテキスト形式の範囲は、SQL Server でサポートされる日付の文字列形式より制限されます。 ただし、DAX では日付と時刻のカスタム形式がサポートされます。  
   
 **文字列から他の非ブール値へのキャスト**  
-文字列から非ブール値へのキャストの場合、DirectQuery モードは SQL Server と同じように動作します。 詳細については、「 [CAST および CONVERT &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)」を参照してください。  
+文字列から非ブール値へのキャストの場合、DirectQuery モードは SQL Server と同じように動作します。 詳細については、「 [CAST および CONVERT &#40;Transact-SQL&#41;](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)」を参照してください。  
   
 **認められない数値から文字列へのキャスト**  
 例: `CONCATENATE(102,”,345”)`  
@@ -342,7 +342,7 @@ DirectQuery モードでは、この関数のパラメーターが 3 つ (列の
 
 
 ## <a name="see-also"></a>参照  
-[DirectQuery モード](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery モード](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

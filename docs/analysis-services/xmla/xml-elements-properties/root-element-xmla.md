@@ -1,5 +1,5 @@
 ---
-title: root 要素 (XMLA) |Microsoft ドキュメント
+title: root 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 794e33d6270ef9540396fd7d2f38a08ccab4c8d2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968384"
 ---
 # <a name="root-element-xmla"></a>root 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  によって返される結果を含む、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドまたは、XML for Analysis (XMLA) コマンドを使用して実行、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
+  によって返される結果が含まれています、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドまたは XML for Analysis (XMLA) コマンドの実行を使用して、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34578134"
 |[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[行セット](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)、 [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
 |[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)、[行セット](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)、 [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "34578134"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- **ルート**要素には、いずれかで返される情報が含まれています、 [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) 、1 つによって返される要素**Discover**メソッドの呼び出し、または、 [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) 、1 つで実行される単一の XMLA コマンドによって返される要素**Execute**メソッドの呼び出しです。  
+ **ルート**要素には、いずれかで返される情報が含まれています、 [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) 、1 つによって返される要素**Discover**メソッドの呼び出し、または、 [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) 、1 つで実行される単一の XMLA コマンドによって返される要素**Execute**メソッドの呼び出し。  
   
 ## <a name="see-also"></a>参照
  [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

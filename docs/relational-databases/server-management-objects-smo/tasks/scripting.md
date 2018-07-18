@@ -1,5 +1,5 @@
 ---
-title: スクリプト |Microsoft ドキュメント
+title: スクリプト |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 722c8f75c8fe759e632a3cefc5960e49ad0519f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969547"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970594"
 ---
 # <a name="scripting"></a>スクリプトの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO でのスクリプティングはによって制御されます、<xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトとその子オブジェクトまたは**スクリプト**個々 のオブジェクトのメソッドです。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトのインスタンスのオブジェクトの依存関係リレーションシップからマッピングを制御する[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+  SMO でのスクリプティングはによって制御されます、<xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトとその子オブジェクトまたは**スクリプト**個々 のオブジェクトに対するメソッド。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトのインスタンス上のオブジェクトの依存関係からのマッピングを制御する[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32969547"
   
 3.  スクリプト生成  
   
- 検索フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> オブジェクトが使用されます。 オブジェクトの URN リストが指定されている場合、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> メソッドは、URN リスト内のオブジェクトに対応する <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトを返します。 ブール値を*fParents*パラメーターの使用を親または指定したオブジェクトの子が検出できるようにがかどうかを選択します。 依存関係ツリーはこの段階で変更することができます。  
+ 検索フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> オブジェクトが使用されます。 オブジェクトの URN リストが指定されている場合、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> メソッドは、URN リスト内のオブジェクトに対応する <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトを返します。 ブール値を*fParents*親または指定したオブジェクトの子が検出するかどうかを選択するパラメーターを使用します。 依存関係ツリーはこの段階で変更することができます。  
   
  リスト生成フェーズでは、このツリーが渡され、結果リストが返されます。 このオブジェクト リストは記述順であり、変更することもできます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "32969547"
  3 番目の最後のフェーズでは、指定されたリストとスクリプティング オプションを使用してスクリプトが生成されます。 結果は <xref:System.Collections.Specialized.StringCollection> システム オブジェクトとして返されます。 このフェーズで、<xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトの Items コレクションおよび <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> や <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> などのプロパティから、依存オブジェクト名が抽出されます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
  このコード例は、 **Imports** System.Collections.Specialized 名前空間のステートメント。 アプリケーションの宣言の前、かつ他の Imports ステートメントの後に、次のステートメントを挿入します。  
   

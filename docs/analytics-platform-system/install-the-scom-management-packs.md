@@ -1,6 +1,6 @@
 ---
-title: SCOM 管理パックの分析プラットフォーム システムをインストールする |Microsoft ドキュメント
-description: 次の手順をダウンロードして SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインストールします。 管理パックは、SCOM から SQL Server PDW の監視に必要なです。
+title: Analytics Platform System の SCOM 管理パックのインストール |Microsoft Docs
+description: 以下の手順をダウンロードして SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインストールします。 管理パックが SCOM から SQL Server PDW の監視に必要です。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 163ab893074e171decb573d876c5f98334437985
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 8a870ed2fb711599556178132e133039098f3051
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544684"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909822"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System の SQL Server Operations Manager (SCOM) 管理パックをインストールします。
-次の手順をダウンロードして SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインストールします。 管理パックは、SCOM から SQL Server PDW の監視に必要なです。  
+以下の手順をダウンロードして SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインストールします。 管理パックが SCOM から SQL Server PDW の監視に必要です。  
   
 ## <a name="BeforeBegin"></a>はじめに  
 **前提条件**  
@@ -25,13 +25,13 @@ ms.locfileid: "31544684"
 System Center Operations Manager は、インストールして実行する必要があります。 SQL Server PDW 2012 では、System Center Operations Manager 2007 R2、System Center Operations Manager 2012、または System Center Operations Manager 2012 service pack 1 が必要です。  
   
 ## <a name="Step1"></a>手順 1: 管理パックをダウンロードします。  
-APS PDW ワークロードのダウンロード、 [Microsoft Analytics Platform System 用の System Center 管理パック](http://go.microsoft.com/fwlink/?LinkId=396857)です。  
+APS PDW ワークロードでは、ダウンロード、 [Microsoft Analytics Platform System 用の System Center 管理パック](http://go.microsoft.com/fwlink/?LinkId=396857)します。  
   
-アプライアンスの管理、ダウンロード、 [SQL Server アプライアンス ベースの管理パック](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436)です。  
+アプライアンスの管理、ダウンロード、 [SQL Server アプライアンス ベースの管理パック](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436)します。  
   
-以前のバージョンの PDW APS なしでは、ダウンロード、[用 Microsoft SQL Server 2012 並列データ ウェアハウス アプライアンスで、System Center 監視パック](http://go.microsoft.com/fwlink/p/?LinkId=282661)です。  
+古いバージョンの PDW AP せず、ダウンロード、[System Center Monitoring Pack for Microsoft SQL Server 2012 並列データ ウェアハウス アプライアンス](http://go.microsoft.com/fwlink/p/?LinkId=282661)します。  
   
-HDInsight のワークロード、ダウンロード、 [HDInsight 用 System Center 管理パック](http://go.microsoft.com/fwlink/?LinkId=390208)です。  
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>手順 2: 管理パックをインストールします。  
   
@@ -39,7 +39,7 @@ HDInsight のワークロード、ダウンロード、 [HDInsight 用 System Ce
   
 1.  インストールを実行するには、ダウンロードした SQL Server アプライアンス ベースの管理パックをダブルクリックします。  
   
-2.  ライセンス契約に同意し、をクリックして**次**です。  
+2.  ライセンス条項に同意し、をクリックして**次**します。  
   
     ![ライセンス条項に同意](./media/install-the-scom-management-packs/SCOM_licnse_agrmt.png "SCOM_licnse_agrmt")  
   
@@ -57,11 +57,11 @@ HDInsight のワークロード、ダウンロード、 [HDInsight 用 System Ce
   
 ### <a name="install-the-monitoring-pack-for-sql-server-pdw-appliance"></a>SQL Server PDW アプライアンス用監視パックをインストールします。  
   
-1.  インストールを実行するには、ダウンロードした SQL Server PDW アプライアンス管理パックをダブルクリックします。  
+1.  インストールを実行するには、ダウンロードした SQL Server PDW アプライアンスの管理パックをダブルクリックします。  
   
-2.  ライセンス契約に同意し、をクリックして**次**です。  
+2.  ライセンス条項に同意し、をクリックして**次**します。  
   
-    ![ライセンス agreeement を受け入れる](./media/install-the-scom-management-packs/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
+    ![使用許諾に同意](./media/install-the-scom-management-packs/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
   
 3.  抽出したファイルを保持するディレクトリを選択します。 既定の管理パックのインストール フォルダーは、既定で表示されます。 既定値を選択するか、独自のインストール フォルダーを選択します。  
   
@@ -76,7 +76,7 @@ HDInsight のワークロード、ダウンロード、 [HDInsight 用 System Ce
     ![インストールの完了](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>次の手順  
-インストールされている管理パックがある場合は、これでは、次の手順に進む: [PDW 用 SCOM 管理パックのインポート&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)です。  
+インストールされている管理パックがある場合は、これでは、次の手順に進む: [PDW の SCOM 管理パックをインポート&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)します。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

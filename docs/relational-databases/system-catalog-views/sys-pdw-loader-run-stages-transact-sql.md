@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_loader_run_stages (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.pdw_loader_run_stages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5521b046d49fe27c7dd1a174f960caec54e8626e
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33180548"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969655"
 ---
 # <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  進行中と完了したロード操作に関する情報を含む[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 情報は、システムの再起動の間で永続化します。  
+  進行中と完了したロード操作に関する情報を含む[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。 情報は、システムの再起動の間で永続化します。  
   
 |||||  
 |-|-|-|-|  
 |列名|データ型|説明|範囲|  
 |run_id|**int**|実行のローダーの一意の識別子。||  
-|stage|**nvarchar(30)**|実行の現在のステージです。|'CREATE_STAGING'、'DMS_LOAD'、'LOAD_INSERT'、'LOAD_CLEANUP'|  
+|ステージ|**nvarchar(30)**|実行の現在のステージです。|'CREATE_STAGING'、'DMS_LOAD'、'LOAD_INSERT'、'LOAD_CLEANUP'|  
 |request_id|**nvarchar(32)**|この段階を実行している要求の ID。||  
 |status|**nvarchar(16)**|このフェーズの状態です。||  
 |start_time|**datetime**|ステージの開始時刻。||  
@@ -42,6 +42,6 @@ ms.locfileid: "33180548"
 |total_elapsed_time|**int**|この段階で費やされた (またはこれまでに費やされた) の合計時間が実行されています。|Total_elapsed_time では、整数値 (ミリ秒単位で 24.8 日) の最大値を超えるをオーバーフローしました期日の実体化エラーが発生します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

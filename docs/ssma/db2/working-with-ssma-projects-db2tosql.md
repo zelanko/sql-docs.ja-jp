@@ -1,5 +1,5 @@
 ---
-title: SSMA プロジェクト (DB2ToSQL) の使用 |Microsoft ドキュメント
+title: SSMA プロジェクト (DB2ToSQL) での作業 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,17 +16,17 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c0f9cf55498ec5637b18f542ea079517571640b0
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ea3cf916d256e070ee7e0bdd20de81f3f4464e12
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775558"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980554"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA プロジェクト (DB2ToSQL) での作業
-DB2 データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA プロジェクトを作成します。 プロジェクトは、次の情報を含むファイルです。  
+DB2 のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA プロジェクトを作成します。 プロジェクトは、次の情報を含むファイルです。  
   
--   移行する場合、DB2 データベースに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+-   移行する DB2 データベースに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
   
 -   ターゲット インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移行済みのオブジェクトとデータを受信します。  
   
@@ -34,47 +34,47 @@ DB2 データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnov
   
 -   プロジェクトの設定。  
   
-DB2 から切断されているプロジェクトを開くときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 オフラインで作業することができます。 再接続について[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server に接続する&#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)です。  
+DB2 から切断されているプロジェクトを開くときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 オフラインで作業できます。 再接続する方法については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server に接続する&#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)します。  
   
 ## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定を確認します。  
-SSMA には、変換してデータベース オブジェクトの読み込み、データの移行および同期するため SSMA DB2 といくつかの設定が含まれていますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、設定を確認する必要があります。 をする場合は、すべての新しいプロジェクトに使用される既定の設定を変更できます。  
+SSMA には、変換、データベース オブジェクトの読み込みとデータの移行、および DB2 での SSMA の同期のいくつかの設定が含まれていますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、設定を確認する必要があります。 たい場合は、すべての新しいプロジェクトに使用される既定の設定を変更できます。  
   
 **既定のプロジェクト設定を確認するには**  
   
 1.  **ツール** メニューのをクリックして**プロジェクト設定の既定の**します。  
   
-2.  プロジェクトの種類を選択して**移行のターゲット バージョン**どの設定を表示または変更するために必要としをクリックしてドロップダウン**全般** タブ。  
+2.  プロジェクトの種類を選択します。**移行ターゲット バージョン**どの設定が表示または変更するために必要とクリックのドロップダウン**全般**タブ。  
   
-3.  左側のウィンドウでをクリックして**変換**です。  
+3.  左側のウィンドウで次のようにクリックします。**変換**します。  
   
-4.  右側のウィンドウで確認し、必要に応じて設定を変更します。 これらの設定の詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)です。  
+4.  右側のウィンドウで確認し、必要に応じて設定を変更します。 これらの設定の詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)します。  
   
-5.  移行、同期、システム オブジェクトの読み込み、GUI、および種類のマッピングのページの手順 1. ~ 3. を繰り返します。  
+5.  移行、同期、システム オブジェクトの読み込み、GUI、およびマッピングの種類のページの手順 1. ~ 3. を繰り返します。  
   
-    -   移行設定については、次を参照してください。[プロジェクト設定&#40;移行&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)です。  
+    -   移行の設定については、次を参照してください。[プロジェクト設定&#40;移行&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)します。  
   
-    -   システム オブジェクトの設定については、次を参照してください。[プロジェクト設定&#40;読み込みシステム オブジェクト&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)です。  
+    -   システム オブジェクトの設定については、次を参照してください。[プロジェクト設定&#40;システム オブジェクトの読み込み&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)します。  
   
-    -   同期するための設定については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[プロジェクト設定&#40;同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)です。  
+    -   同期するための設定について[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[プロジェクト設定&#40;同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)します。  
   
-    -   GUI の設定については、次を参照してください。[プロジェクト設定&#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)です。  
+    -   GUI の設定については、次を参照してください。[プロジェクト設定&#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)します。  
   
-    -   データ型マッピングの設定については、次を参照してください。[プロジェクト設定&#40;型マッピング&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)です。  
+    -   データ型マッピングの設定については、次を参照してください。[プロジェクト設定&#40;型マッピング&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)します。  
   
 ## <a name="creating-new-projects"></a>新しいプロジェクトの作成  
 DB2 データベースからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、まずプロジェクトを作成する必要があります。  
   
 **プロジェクトを作成するには**  
   
-1.  **ファイル** メニューのをクリックして**新しいプロジェクト**です。  
+1.  **ファイル** メニューのをクリックして**新しいプロジェクト**します。  
   
     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **名前**ボックスで、プロジェクトの名前を入力します。  
+2.  **名前**ボックスに、プロジェクトの名前を入力します。  
   
-3.  **場所**ボックスに入力し、プロジェクトのフォルダーの選択、またはをクリックして**OK**です。  
+3.  **場所**ボックス、入力またはプロジェクトのフォルダーを選択し、クリックして**OK**します。  
   
-4.  **移行に**ドロップダウンで、対象のバージョンを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移行に使用します。 使用可能なオプションは次のとおりです。  
+4.  **移行に**ドロップダウンで、ターゲットのバージョンを選択します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移行に使用します。 使用可能なオプションがあります。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
   
@@ -85,44 +85,44 @@ DB2 データベースからデータを移行する[!INCLUDE[ssNoVersion](../..
     -   Azure SQL DB  
   
 ## <a name="customizing-project-settings"></a>プロジェクト設定のカスタマイズ  
-すべての新しい SSMA プロジェクトに適用される既定のプロジェクト設定を定義するだけでなく、各プロジェクトの設定をカスタマイズできます。 詳細については、次を参照してください。[プロジェクト オプションの設定&#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md)セクションを関連するとします。  
+すべての新しい SSMA プロジェクトに適用される既定のプロジェクト設定を定義するだけでなく、各プロジェクトの設定をカスタマイズできます。 詳細については、次を参照してください。[プロジェクト オプションの設定&#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md)および関連するセクション。  
   
-ソースとターゲット データベース間のデータ型マッピングをカスタマイズする場合は、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 詳細については、次を参照してください。[マッピング DB2 および SQL Server データ型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)です。  
+ソースとターゲット データベース間のデータ型マッピングをカスタマイズするときに、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 詳細については、次を参照してください。[マッピング DB2 と SQL Server データ型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)します。  
   
 ## <a name="saving-projects"></a>プロジェクトの保存  
-プロジェクトを保存すると、SSMA は、プロジェクト設定、および必要に応じて、プロジェクト ファイルに、データベースのメタデータを保持します。  
+プロジェクトを保存するときに、SSMA は、プロジェクトの設定と、必要に応じて、プロジェクト ファイルに、データベースのメタデータを保持します。  
   
 **プロジェクトを保存するには**  
   
--   **ファイル** メニューのをクリックして**プロジェクトの保存**です。  
+-   **ファイル** メニューのをクリックして**プロジェクトの保存**します。  
   
-    プロジェクトのスキーマが変更されたか、変換されていない場合、SSMA は読み込みおよびメタデータを保存することを求められます。 読み込みとメタデータの保存はでオフラインで作業できます。 テクニカル サポート担当者など、他のユーザーに完全なプロジェクト ファイルを送信することもできます。 メタデータを保存するメッセージが表示されたら、次の操作を行います。  
+    場合は、プロジェクトのスキーマが変更されたか、変換されていない、SSMA は読み込みおよびメタデータを保存することを求められます。 オフライン作業を行う、読み込みとメタデータを保存します。 テクニカル サポート担当者などの他のユーザーに完全なプロジェクト ファイルを送信することもできます。 メタデータを保存する場合は、次の操作を行います。  
   
-    1.  状態が表示される各スキーマ用**メタデータがありません**データベース名の横にあるチェック ボックスをオンにします。  
+    1.  状態を表示する各スキーマの**メタデータが不足している**データベース名の横にあるチェック ボックスをオンにします。  
   
-        メタデータの保存には数分かかる場合があります。 まだのメタデータを保存したくない場合は、チェック ボックスをオンされません。  
+        メタデータの保存には数分かかる場合があります。 まだメタデータを保存したくない場合は、チェック ボックスをオンされません。  
   
-    2.  クリックして、**保存**ボタンをクリックします。  
+    2.  をクリックして、**保存**ボタンをクリックします。  
   
-        SSMA は、DB2 スキーマが解析され、プロジェクト ファイルにメタデータを保存します。  
+        SSMA は DB2 スキーマを解析し、プロジェクト ファイルにメタデータを保存します。  
   
 ## <a name="opening-projects"></a>プロジェクトを開く  
-プロジェクトを開くときに、切断されている DB2 およびから[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 オフラインで作業することができます。 メタデータを更新するにデータベース オブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 データを移行するには、DB2 に再接続する必要がありますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+DB2 およびからは切断されて、プロジェクトを開いたときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 オフラインで作業できます。 メタデータを更新するにデータベース オブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 データを移行する必要があります、DB2 に再接続し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
   
 **プロジェクトを開く**  
   
 1.  次の手順のいずれかを使用します。  
   
-    -   **ファイル** メニューのをポイント**最近使ったプロジェクト**、開きたいプロジェクトをクリックします。  
+    -   **ファイル**メニューで、**最近使ったプロジェクト**、開きたいプロジェクトをクリックします。  
   
-    -   **ファイル**メニューの **プロジェクトを開く**.o2ssproj プロジェクト ファイルを探し、ファイルを選択し、をクリックして**開く**です。  
+    -   **ファイル**メニューの **プロジェクトを開く**、.o2ssproj のプロジェクト ファイルの検索、ファイルを選択およびクリックして**オープン**します。  
   
-2.  DB2 への再接続、**ファイル** メニューのをクリックして**DB2 への再接続**です。  
+2.  DB2 に再接続するには、**ファイル** メニューのをクリックして**DB2 への再接続**します。  
   
-3.  再接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]の**ファイル** メニューのをクリックして**SQL Server に再接続**です。  
+3.  再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]の**ファイル** メニューのをクリックして**SQL Server に再接続**します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [DB2 データベースに接続する](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)です。  
+移行プロセスの次の手順が、 [DB2 データベースに接続する](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server にデータベースを移行する DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

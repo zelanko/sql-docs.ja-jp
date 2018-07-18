@@ -1,5 +1,5 @@
 ---
-title: AssociationSet 要素 (CSDLBI) |Microsoft ドキュメント
+title: AssociationSet 要素 (CSDLBI) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2ae4f565a2383284421bb433ed5cc98371196d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039216"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968983"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "34039216"
 ## <a name="applicable-attributes"></a>該当する属性  
  次の表に、**AssociationSet** 要素を定義する要素と属性を示します。  
   
-|名前|必須かどうか|Description|  
+|名前|必須かどうか|説明|  
 |----------|-----------------|-----------------|  
-|状態|可|関連付けがアクティブかどうかを示す文字列。 値は State 要素によって定義されます。|  
+|状態|はい|関連付けがアクティブかどうかを示す文字列。 値は State 要素によって定義されます。|  
 |[非表示]|いいえ|リレーションシップが表示されるかどうかを示すブール値。 既定では Hidden の値は **false** で、モデル内のすべてのリレーションシップが表示されます。|  
   
 ## <a name="state-element"></a>State 要素  
@@ -37,13 +37,13 @@ ms.locfileid: "34039216"
   
  次の表に **State** 要素の値を示します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |Active|関連付けがアクティブです。|  
 |無効|関連付けがアクティブです。|  
   
 ## <a name="example"></a>例  
- **表形式**  
+ **テーブル**  
   
  次の例では、AdventureWorks のテーブル モデルのリレーションシップ (CSDLBI Version 1.1) を示します。 既存のリレーションシップ (OrderKey と Date の間) が存在するため、関連付けは Inactive にマークされています。  
   

@@ -1,6 +1,6 @@
 ---
-title: PDW のファイアウォールの構成 - Analytics Platform System |Microsoft ドキュメント
-description: SQL Server PDW 構成マネージャーの [ファイアウォール] ページでは有効にするにまたは許可するか、Analytics Platform System アプライアンス上の特定のポートにアクセスできないようにするファイアウォール規則を無効にすることができます。
+title: PDW のファイアウォールの構成 - Analytics Platform System |Microsoft Docs
+description: SQL Server PDW 構成マネージャーの [ファイアウォール] ページでは有効にまたはを許可または Analytics Platform System appliance の特定のポートにアクセスできないようにするファイアウォール規則を無効にすることができます。
 aauthor: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,58 +9,58 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539382"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909842"
 ---
-# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System での並列データ ウェアハウス ファイアウォール構成
-**ファイアウォール**ページの SQL Server PDW 構成マネージャーでは、有効にするにまたは許可するか、Analytics Platform System アプライアンス上の特定のポートにアクセスできないようにするファイアウォール規則を無効にすることができます。  
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System の parallel Data Warehouse ファイアウォールの構成
+**ファイアウォール**の SQL Server PDW 構成マネージャー ページでは、有効にまたはを許可または Analytics Platform System appliance の特定のポートにアクセスできないようにするファイアウォール規則を無効にすることができます。  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>ポートとファイアウォールを管理するには、アプライアンス ノードのルールします。  
   
-1.  構成マネージャーを起動します。 詳細については、次を参照してください。[構成マネージャーを起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)です。  
+1.  Configuration Manager を起動します。 詳細については、次を参照してください。 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)します。  
   
-2.  構成マネージャーの左側のウィンドウで展開**並列データ ウェアハウス トポロジ**、クリックして**ファイアウォール**です。  
+2.  Configuration Manager の左側のウィンドウで展開**並列データ ウェアハウスのトポロジ**、 をクリックし、**ファイアウォール**します。  
   
-3.  ルールを見つけ、ポートやファイアウォール構成一覧に更新し、選択するかその項目の横にあるボックスをオフにします。 SQL Server PDW の管理者が構成可能なオプションのみが、外部向けのノード上のポートを開いたり、閉じたりするを含め、この一覧に表示されます。  
+3.  構成の一覧を更新し選択するか、その項目の横にあるボックスをオフにするポートまたはファイアウォールのルールを探します。 SQL Server PDW の管理者が構成可能なオプションだけが、外部向けのノード上のポートを開いたり、閉じたりするなど、この一覧に表示されます。  
   
-4.  をクリックして**適用**して変更を保存します。  
+4.  クリックして**適用**変更を保存します。  
   
 ![DWConfig アプライアンス PDW のファイアウォール](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
   
 ## <a name="external-ports"></a>外部ポート  
-PDW の外部からのクライアント接続については、次のポートを開きます。  
+PDW の外部からのクライアント接続は、次のポートが開かれます。  
   
 |用途|ポート番号|ノード|  
 |-----------|-----------|---------|  
-|SQL クライアント アクセス PDW (TDS)|17001|CTL|  
-|ローダー クライアント アクセス (dwloader & SSIS)|8001|CTL|  
-|リモート デスクトップ アクセス|3389|CTL を CMP|  
+|SQL クライアント アクセスの PDW (TDS)|17001|CTL|  
+|ローダーのクライアント アクセス (dwloader & SSIS)|8001|CTL|  
+|リモート デスクトップ アクセス|3389|CMP、CTL|  
 |SSIS BinaryLoaderDataChannel|16551|CTL|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
-|SSL 暗号化接続が (内部通信、HDInsight クラスターのサービスにアクセスして、管理コンソールにアクセスする)|443|すべてのノード|  
+|SSL 暗号化 (管理者コンソールにアクセスする内部通信) の接続|443|すべてのノード|  
 |SQL Server PDW ロード制御フローの Windows 資格情報|8002|CTL|  
-|_Kerberos|88|AD01 および AD02、|  
-|_ldap|389|AD01 および AD02|  
+|(_K)|88|AD01 と AD02、|  
+|_ldap|389|AD01 と AD02|  
   
 ## <a name="internal-ports"></a>内部ポート  
-次のポートは、内部の通信と PDW によって使用されますの PDW アプライアンスの外部からの接続が開いていません。  
+次のポートは、社内コミュニケーションの PDW で使用されますが、PDW アプライアンスの外部からの接続が開かれていません。  
   
 |用途|ポート番号|ノード|  
 |-----------|-----------|---------|  
-|DMS コントロール チャネルのトラフィック|16450|CTL を CMP|  
-|DMS データ チャネルのトラフィック|16550|CTL を CMP|  
-|内部診断|16650|CTL を CMP|  
-|フェールオーバーの状態 (DM)|15000|CTL を CMP|  
+|DMS のコントロール チャネルのトラフィック|16450|CMP、CTL|  
+|DMS データ チャネルのトラフィック|16550|CMP、CTL|  
+|内部診断|16650|CMP、CTL|  
+|フェールオーバーの状態 (DMS)|15000|CMP、CTL|  
 |フェールオーバーの状態 (エンジン)|15001|CMP|  
-|動的 (短期) ポートの範囲|20000-65535|CTL を CMP|  
-|SQL Server ポート範囲 (TDS)|1433, 1500-1508|CTL を CMP|  
+|動的な (短期) ポート範囲|20000-65535|CMP、CTL|  
+|SQL Server のポート範囲 (TDS)|1433, 1500-1508|CMP、CTL|  
   
 > [!NOTE]  
-> 既定では TCP ポート 8020 を使用して外部のテーブルまたは外部データ ソースを作成します。 これらのステートメントは、代わりにその他のポートを構成できます。 Hortonworks JOB_TRACKER_LOCATION 既定ポートは、50300 です。 他のシステムやツールと統合すると、追加のポートが必要があります。  
+> 外部テーブルまたは外部データ ソースを作成するには、既定で TCP ポート 8020 が使用されます。 これらのステートメントは、代わりに他のポートを構成できます。 Hortonworks JOB_TRACKER_LOCATION の既定のポートは、50300 です。 その他のシステムおよびツールと統合すると、追加のポートが必要があります。  
   
 <!-- MISSING LINKS ## See Also  
 [HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  

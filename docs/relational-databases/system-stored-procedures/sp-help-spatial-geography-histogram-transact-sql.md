@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_histogram (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_spatial_geography_histogram (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a2eadfd9864c3d595d9d93078cd028a66b5d22ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263118"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019790"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,21 +57,21 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  境界ボックスの解像度です。 有効な値は 10 ～ 5000 です。 *解像度*は、 **tinyint**、既定値はありません。  
   
  [  **@sample =** ] **'***サンプル***'**  
- 使用するテーブルの割合を指定します。 有効な値は、0 ～ 100 です。 *tablesample*は、 **float**です。 既定値は 100 です。  
+ 使用するテーブルの割合を指定します。 有効な値は、0 ～ 100 です。 *tablesample*は、 **float**します。 既定値は 100 です。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  テーブルの値が返されます。 テーブルの列の内容を次の表に示します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|開始カウントが 1 の各セルの一意の ID を表します。|  
 |**セル**|**geography**|それぞれのセルを表す四角形です。 セルの形は、空間インデックス作成用に使用されたセルの形と同じです。|  
 |**row_count**|**bigint**|セルに接しているかまたはセルを含む空間オブジェクトの数を示します。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ユーザーのメンバーである必要があります、**パブリック**ロール。 サーバーとオブジェクトに対する READ ACCESS 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果をクエリすることにより、結果アイテムの概算数を取得できます。  
   
 > [!NOTE]  

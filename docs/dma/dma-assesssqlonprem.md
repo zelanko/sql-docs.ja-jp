@@ -2,7 +2,7 @@
 title: (Data Migration Assistant) SQL Server の移行評価の実行 |Microsoft Docs
 description: Data Migration Assistant を使用して、別の SQL Server または Azure SQL Database に移行する前に、オンプレミスの SQL Server を評価する方法について説明します
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: bfb92c1217fe95687bdef5203189315b965b7446
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782223"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934954"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant で移行評価を SQL Server を実行します。
 
@@ -86,7 +86,7 @@ ms.locfileid: "37782223"
 
 2.  選択したターゲット SQL Server のバージョンでサポートされているすべての互換性レベルで互換性の問題を確認して、**オプション**ページ。
 
-互換性の問題を確認するには影響を受けるオブジェクトとその詳細下検知したすべての問題を分析することによって**重大な変更**、**動作の変更**、および**非推奨の機能**.
+互換性の問題を確認するには影響を受けるオブジェクト、その詳細、および可能性のある下検知したすべての問題の修正プログラムを分析することで**まて**、**動作の変更**、および**非推奨の機能**します。
 
 ![評価結果を表示します。](../dma/media/ReviewResults.png)
 

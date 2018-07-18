@@ -1,5 +1,5 @@
 ---
-title: ブック内のデータ接続のデータを更新できません |。Microsoft ドキュメント
+title: ブック内のデータ接続のデータを更新できません |。Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d1fabd45d3b9858114e48e3bdde258ed6ccc8362
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 211aecdb0158cff593c7f3f9ef241244db6ca051
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037426"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981714"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>ブック内のデータ接続に関するデータを更新できません
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34037426"
 |||  
 |-|-|  
 |適用対象|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint インストール|  
-|[製品バージョン]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|下記を参照。|  
 |メッセージ テキスト|ブック内のデータ接続に関するデータを更新できません。 再試行するか、システム管理者に問い合わせてください。 以下の接続を更新できませんでした: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ|  
   
@@ -40,17 +40,17 @@ ms.locfileid: "34037426"
   
  開こうとしているブックが、SQL Server 2008 R2 バージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成された可能性があります。 ほとんどの場合、データ接続文字列で指定された Analysis Services データ プロバイダーは、要求を処理しているコンピューター上に存在しません。  
   
- 大文字と小文字の場合は、ULS ログにこのメッセージが表示されます:"の更新に失敗しました '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t データ' ブックで '\<ブックへの URL >'"、「接続を取得できません」という順です。  
+ 大文字と小文字の場合は、ULS ログにこのメッセージが表示されます:"更新に失敗しました '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t データ' ブックの '\<ブックへの URL >'"、続いて「接続を取得できません」です。  
   
  ブックのバージョンを決定するには、Excel で開き、接続文字列にどのデータ プロバイダーが指定されているか確認します。 SQL Server 2008 R2 ブックは、MSOLAP.4 をデータ プロバイダーとして使用します。  
   
- この問題を回避するために、ブックをアップグレードすることができます。 または、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint または Excel Services を実行している物理コンピューター上の SQL Server 2008 R2 バージョンの Analysis Services からクライアント ライブラリをインストールできます。詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
+ この問題を回避するために、ブックをアップグレードすることができます。 または、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint または Excel Services を実行している物理コンピューター上の SQL Server 2008 R2 バージョンの Analysis Services からクライアント ライブラリをインストールできます。詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
   
  **シナリオ 2b: 間違ったバージョンのクライアント ライブラリがインストールされたアプリケーション サーバーで Excel Services が実行されている**  
   
  既定では、SharePoint Server 2010 は、SQL Server 2008 バージョンの Analysis Services OLE DB プロバイダーを Excel Services を実行するアプリケーション サーバーにインストールします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスをサポートするファームでは、Excel Services や [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint など、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを要求するアプリケーションを実行するすべての物理サーバーは、最新バージョンのデータ プロバイダーを使用する必要があります。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を実行するサーバーは、更新された OLE DB データ プロバイダーを自動的に取得します。 同じコンピューター上の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を使用しない、スタンドアロン インスタンスの Excel Services など、その他のサーバーは、新しいクライアント ライブラリを使用するために、更新プログラムを適用する必要があります。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を実行するサーバーは、更新された OLE DB データ プロバイダーを自動的に取得します。 同じコンピューター上の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を使用しない、スタンドアロン インスタンスの Excel Services など、その他のサーバーは、新しいクライアント ライブラリを使用するために、更新プログラムを適用する必要があります。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
   
  **シナリオ 3: ドメイン コントローラーを使用できない**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34037426"
   
  この問題を回避するには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーと同じドメインにコンピューターを所属させるか、ローカル コンピューターにドメイン コントローラーをインストールします。 2 番目の解決策として、ドメイン コントローラーのインストールを行う場合は、すべてのサービスとユーザーのローカル ドメイン アカウントを作成することが必要になります。 それには、サービス アカウントを構成して、定義したアカウントの SharePoint 権限を構成する必要があります。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 使用する方法の詳細な手順について[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]オフライン、ブログ エントリを参照してください"を[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]はネットワークからサーバー"で[ http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241)です。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 使用する方法の詳細な手順について[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]オフラインでのブログ記事を参照してください"を[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サーバー"で[ http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241)します。  
   
  **シナリオ 4: 不安定なサーバー**  
   

@@ -1,7 +1,7 @@
 ---
-title: データ Migration Assistant (SQL Server) の新機能 |Microsoft ドキュメント
+title: Data Migration Assistant (SQL Server) の新 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -17,81 +17,93 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1d7d749aae4b5086e44961f9fbcb6967269ccf1c
-ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
+ms.openlocfilehash: 620590f03bf429dbc1633a1f78bb921def5fd585
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34758122"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982154"
 ---
-# <a name="whats-new-in-data-migration-assistant"></a>データ Migration Assistant の新機能
-このトピックでは、各リリースで追加のデータ移行アシスタント (DMA) が一覧表示します。
+# <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新します。
+このトピックでは、各リリースで追加の Data Migration Assistant (DMA) を使用します。
+
+## <a name="dma-v36"></a>DMA v3.6
+DMA の v3.6 のリリースでは、最も一般的な移行ブロックによって影響を受けるスキーマ オブジェクトの「自動修正」について説明します。
+
+このリリースでは、次の移行ブロックの自動修正を提供し、動作が問題を変更します。
+- 非修飾結合の構文を使用するスキーマ オブジェクト。
+- レガシ RAISEERROR ステートメントを使用して、スキーマ オブジェクト。
+- 整数リテラルで順序を使用する SQL ステートメント。
+
+DMA では、表示されている問題によって影響を受けるオブジェクトの自動スキーマの変換を実行し、スキーマの変換を続行する前に確認のユーザーに求めます。 ユーザーできます推奨のコードの変更を確認し、いずれかで承認または拒否任意の特定のデータベース オブジェクトのすべての変換。
+
+DMA では、Microsoft プログラム合成 (PROSE) テクノロジを使用して、コード修正を提案します。 詳細については[PROSE](https://microsoft.github.io/prose/)します。
 
 ## <a name="dma-v35"></a>DMA v3.5
 DMA の v3.5 リリースには、次の追加機能が含まれています。
-- (ベンチマーク テストは、プロセスは 4 倍よりも短時間 DMA の以前のバージョンを示します) Azure SQL Database に移行するための大幅なパフォーマンス向上します。
-- メモリ使用量は、さらに、移行のワークフローの安定性を向上させるために最適化されます。
-- (既に評価を実行し、移行の前に、重大なスキーマ オブジェクトのアドレスを指定した) 場合は、スキーマおよびデータの移行中に評価をスキップする権限です。
-- クラッシュしたときに、レガシ バージョンの SQL Server のアップグレードを実行する内部設置型を以降のバージョンまたは Azure Vm 上の SQL Server をバックアップ ファイルは、無効なネットワーク共有のパスが提供されるツールを使用して、問題に対処する修正プログラムです。
+- (ベンチマーク テストでは、プロセスは 4 回よりも高速 DMA の以前のバージョンを示します)、Azure SQL Database に移行するための大幅なパフォーマンスの向上。
+- メモリ フット プリントはさらに、移行のワークフローの安定性を向上させるために最適化されています。
+- (既に評価を実行し、移行前に重大なスキーマ オブジェクトのアドレスを指定した) 場合は、スキーマとデータの移行中に評価をスキップする権限です。
+- レガシ バージョンの SQL Server のアップグレードを実行するオンプレミスにする場合に以降のバージョンまたは Azure Vm 上の SQL Server にバックアップ ファイルは、無効なネットワーク共有のパスを指定した場合のクラッシュのツールを使用して、問題に対処するための修正。
 
 ## <a name="dma-v34"></a>DMA v3.4
 DMA の v3.4 リリースには、次の追加機能が含まれています。
-- Azure SQL データベースへの移行のソースとして SQL Server 2017 をサポートします。
-- 安定性、パフォーマンス、および評価規則の正確性を強化します。
+- Azure SQL Database への移行のソースとして SQL Server 2017 をサポートします。
+- 安定性、パフォーマンス、および評価ルールの正確性を強化します。
 
 ## <a name="dma-v33"></a>DMA v3.3
-DMA の v3.3 リリースでは、新しいバージョンの Windows と Linux の両方で、SQL Server 2017 を内部設置型 SQL Server インスタンスを移行できるようにします。 Windows と Linux の全体的な移行ワークフローでは、同じ for Linux は、SQL Server 2017 への移行には、いくつかの追加の考慮事項が必要です。
+DMA の v3.3 リリースでは、Windows と Linux の両方での SQL Server 2017 の新しいバージョンに、オンプレミス SQL Server インスタンスを移行できるようにします。 Windows および Linux 用の全体的な移行ワークフローでは、同一の Linux の SQL Server 2017 への移行、いくつかの追加の考慮事項が必要です。
 
 ### <a name="specifying-the-back-up-path"></a>バックアップ パスを指定します。
-Linux および Windows は、別のパスの形式を使用します。 その結果、Linux 上の SQL Server 2017 への移行には、ユーザーが Windows と Linux の両方のバージョンの物理ファイルの場所へのパスを指定することが必要です。 物理ファイルの場所に応じてさまざまな方法では、パスの両方のバージョンを提供できます。
-物理的なバックアップ ファイルが実行しているコンピューター上にある場合は。
+Linux および Windows は、別のパスの形式を使用します。 その結果、SQL Server 2017 on Linux に移行する場合は、ユーザーが物理ファイルの場所へのパスのバージョンの Windows と Linux の両方を提供することが必要です。 物理ファイルの場所に応じて異なる方法で、パスの両方のバージョンを行うことができます。
+物理バックアップ ファイルを実行しているコンピューターの場合。
 - Linux を使用して、ネットワーク上の他のコンピューターとファイルを共有する 'samba' を共有します。
-- Windows では、Linux を実行しているコンピューター上に共有をマウント 'やり' コマンドを使用します。
+- Windows、Linux を実行しているコンピューター上に共有をマウントするのに 'mnt' コマンドを使用します。
 
 > [!NOTE]
-> 'Samba' 共有または 'やり' コマンドを使用しての詳細については、この記事の範囲を超えています。
+> 'Samba' 共有または 'mnt' コマンドを使用しての詳細については、この記事の範囲を超えては。
 
-### <a name="migrating-windows-logins"></a>移行中の Windows ログイン
-Linux 上の SQL Server 2017 では、Active Directory (AD) のログインの移行がサポートされている正式に、正常に機能する追加の構成が必要です。 トピックを参照してください[Linux に SQL Server と Active Directory 認証](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication)詳細については、Linux 上の SQL Server 2017 上の Active Directory のログインを設定します。 必要な構成を実行するには、セットアップが完了すると、Active Directory のログインを通常どおりに移行することができます。 標準の SQL 認証は、任意の追加設定せず、期待どおりに動作します。
+### <a name="migrating-windows-logins"></a>Windows ログインの移行
+SQL Server 2017 on Linux では、Active Directory (AD) のログインの移行がサポートされている正式に、正常に機能する追加の構成が必要です。 トピックを参照してください[SQL Server on Linux での Active Directory 認証](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)の SQL Server 2017 on Linux での Active Directory ログインの設定に関する詳細情報。 必要な構成を実行すると、セットアップが完了して、通常どおりに Active Directory ログインを移行することができます。 標準の SQL 認証は、追加の設定せず、期待どおりに動作します。
 
 ## <a name="dma-v32"></a>DMA v3.2
 DMA の場合は v3.2 リリースには、次の追加機能が含まれています。
 
-- スキーマとデータの移行が、内部設置型 SQL Server データベースから Azure SQL データベースを新しい移行ワークフローで有効です。
-- Azure SQL Database には、スキーマの移行中には、DMA はソース データベース オブジェクトのスクリプト、潜在的な互換性の問題を解決する方法について説明しを Azure に、スキーマを展開します。
+- スキーマとデータの移行が、オンプレミスの SQL Server データベースから Azure SQL Database に新しい移行ワークフローで有効です。
+- Azure SQL Database へのスキーマの移行中に DMA はソース データベース オブジェクトのスクリプト、潜在的な互換性の問題を解決する方法について説明し、スキーマを Azure に配置されます。
 
 ## <a name="dma-v31"></a>DMA v3.1
 DMA の v3.1 リリースには、次の追加機能が含まれています。
 
-- 強化された評価に関する推奨事項の Azure SQL データベース、データベースの照合順序の観点からは、サポートされていないシステム ストアド プロシージャ、および CLR オブジェクトの使用します。
-- 互換性レベル 130、120、110、および 100 の Azure SQL データベースを移行する場合の評価のガイダンスです。
+- サポートされていないシステム ストアド プロシージャ、および CLR オブジェクトのデータベースの照合順序の観点から Azure SQL Database の強化された評価の推奨事項を使用します。
+- 互換性レベル 130、120、110、および 100 の Azure SQL Database に移行するときの評価のガイダンスです。
 
 ## <a name="dma-v30"></a>DMA v3.0
-DMA の v3.0 リリースは、Azure SQL データベースの評価に関連する問題を修正するための包括的な推奨事項を示しませんを拡張します。
+DMA の v3.0 リリースでは、関連する問題を修正するための包括的な推奨事項を提供する Azure SQL データベースの評価を拡張します。
 
-- ブロックの問題を移行します。
-- 部分的にかの特性と機能がサポートされていません。
+- 移行を妨げる問題。
+- 部分的に、または機能をサポートします。
 
 ## <a name="dma-v21"></a>DMA v2.1
-DMA のバージョン 2.1 以降のリリースには、次の追加が含まれています。
-- スケールで評価を実行するのに役立つ、無人モードでの評価を実行するためのコマンド ライン サポートします。 詳細については、トピックを参照してください[実行データ Migration Assistant コマンドラインから](dma-commandline.md)です。
+DMA のバージョン 2.1 以降のリリースには、以下の追加が含まれています。
+- スケールで評価を実行する、無人モードでの評価を実行するためのコマンドラインのサポート。 追加の詳細をトピックを参照してください[実行 Data Migration Assistant、コマンドラインから](dma-commandline.md)します。
 - ユーザーが起動し、DMA を閉じるときにパフォーマンスの向上。
-- SQL 接続のタイムアウトを構成する機能。詳細については、トピックを参照してください[データ Migration Assistant の構成設定](dma-configurationsettings.md)です。
+- SQL 接続のタイムアウトを構成する機能。追加の詳細をトピックを参照してください[Data Migration Assistant の構成設定](dma-configurationsettings.md)します。
 
 ## <a name="dma-v20"></a>DMA v2.0
-DMA のバージョン 2.0 リリースには、強化されたストレッチ データベース機能に関する推奨事項記憶域削減効果を最大限活用する適切な優先順位付けされたテーブルを提供するにはが含まれています。
+DMA の v2.0 リリースには、記憶域の節約を最大化する適切な優先順位付きのテーブルを提供する向上の Stretch database 機能提案が含まれています。
 
 ## <a name="dma-v10"></a>DMA v1.0
-DMA の v1.0 リリースは、最初のリリースのとなります。
-- オンプレミス バージョンの SQL Server へのアップグレードに影響する問題の検出。 互換性の問題として、発見が説明されているし、これらは、次の領域に分類されます。
+DMA の v1.0 リリースは初期のリリースとを提供します。
+- オンプレミス バージョンの SQL Server へのアップグレードに影響する問題の検出。 互換性の問題として、結果が記載されているし、これらは、次の領域に分類されます。
     - 重大な変更
     - 動作の変更
-    - 非推奨機能
-- データベースのアップグレードから利点を活用できるターゲット SQL Server プラットフォームの新機能の検出。 機能の推奨事項として、発見が説明されているし、それらは、次の領域に分類されます。
+    - 非推奨の機能
+- データベースのアップグレードから恩恵を受けるターゲット SQL Server プラットフォームの新機能の検出。 機能の推奨事項として、結果が記載されているし、これらは、次の領域に分類されます。
     - [パフォーマンス]
     - Security
     - ストレージ
--   最新のユーザー エクスペリエンスの評価を実行します。
+-   評価を実行する最新のユーザー エクスペリエンス。
 
 ## <a name="see-also"></a>参照
-[Migration Assistant のデータの概要](../dma/dma-overview.md)
+[Data Migration Assistant の概要](../dma/dma-overview.md)

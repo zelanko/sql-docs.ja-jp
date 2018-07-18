@@ -1,5 +1,5 @@
 ---
-title: データベース メンテナンス プラン ストアド プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント
+title: データベース メンテナンス プラン ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ba326369983800065b6ae23cfa83e35ad034f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237590"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023840"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>データベース メンテナンス プランのストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステムはストアド プロシージャのメンテナンス タスクの設定に使用されます。 これらのストアド プロシージャは、データベース メンテナンス プランと共に使用できます。 ただし、この機能は、これらのストアド プロシージャを使用しないメンテナンス プランでも実行できます。 これらのプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステムはストアド プロシージャを設定するメンテナンス タスクに使用されます。 これらのストアド プロシージャは、データベース メンテナンス プランと共に使用できます。 ただし、この機能は、これらのストアド プロシージャを使用しないメンテナンス プランでも実行できます。 これらのプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -44,6 +44,6 @@ ms.locfileid: "33237590"
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [のオブジェクト エクスプローラーの](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

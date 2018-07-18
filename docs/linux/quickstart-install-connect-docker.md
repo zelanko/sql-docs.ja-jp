@@ -14,10 +14,11 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.openlocfilehash: 6b28ac7d654d04f5e0998ecda31d16ec597f8d3d
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020700"
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>クイック スタート: Docker を使用して SQL Server 2017 コンテナー イメージを実行する
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/23/2018
 
    前のコマンドは、最新の SQL Server 2017 コンテナー イメージをプルします。 特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `microsoft/mssql-server-linux:2017-GA`)。 利用可能なすべてのイメージを表示するには [mssql-server-linux Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) を参照してください。
    
-   この記事でバッシュ コマンド`sudo`を使用します。 Macos、`sudo`は必要ありません。 使用したくない場合は、Linux 上`sudo`Docker を実行することができます、 **docker**をグループ化し、そのグループにユーザーを追加します。 詳細については、次を参照してください。 [Linux のインストール後のステップ](https://docs.docker.com/install/linux/linux-postinstall/)です。
+   この記事での bash コマンドの`sudo`使用されます。 Macos で`sudo`は必要ないかもしれません。 Linux では、使用しない場合`sudo`Docker を実行するには、構成、 **docker**をグループ化し、そのグループにユーザーを追加します。 詳細については、次を参照してください。 [Linux のインストール後のステップ](https://docs.docker.com/install/linux/linux-postinstall/)します。
 
 1. Docker でコンテナー イメージを実行するには、bash シェル (Linux/macOS) または管理者特権の PowerShell コマンド プロンプトから次のコマンドを使用できます。
 
@@ -78,8 +79,8 @@ ms.lasthandoff: 05/23/2018
    | パラメーター | 説明 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  **ACCEPT_EULA** 変数に [使用許諾契約書](http://go.microsoft.com/fwlink/?LinkId=746388) の同意を確認するための任意の値を設定します。 SQL Server イメージに必須の設定です。 |
-   | **e ' SA_PASSWORD =\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
-   | **-p 1433:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。 この例では SQL Server がコンテナー内の TCP 1433 でリッスンしていると、ホスト上の 1433 ポートにこの公開されます。 |
+   | **-e ' SA_PASSWORD =\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
+   | **-p 1433:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。 この例では、SQL Server がコンテナー内の TCP 1433 でリッスンしていると、ホスト上の 1433 ポートにこの公開されます。 |
    | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 2 つ以上のコンテナーを実行する場合、同じ名前を再利用することはできません。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux コンテナー イメージ。 |
 
@@ -227,7 +228,7 @@ SQL 接続をサポートする外部の Linux、Windows、macOS ツールから
 
 1. コンテナーをホストしているコンピューターの IP アドレスを探します。 Linux の場合、 **ifconfig** または **ip addr** を使用します。Windows の場合、**ipconfig** を使用します。
 
-1. IP アドレスとコンテナーのポート 1433 にマップされたポートを指定して sqlcmd を実行します。 この例では、ホスト コンピューターには 1433、同じポートであります。 ホスト コンピューターにマップされている別のポートを指定した場合は、ここ使用します。
+1. IP アドレスとコンテナーのポート 1433 にマップされたポートを指定して sqlcmd を実行します。 この例では、1433、ホスト コンピューターで同じポートであります。 ホスト コンピューターで別のマップされたポートを指定した場合は、ここで使用します。
 
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'

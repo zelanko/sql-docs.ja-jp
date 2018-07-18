@@ -1,5 +1,5 @@
 ---
-title: Power Pivot サーバーの管理とサーバーの全体管理の構成 |Microsoft ドキュメント
+title: Power Pivot サーバーの管理とサーバーの全体管理の構成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd681ec1859195219f73f6aacc6fd1f8665681a6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 87e2903607b476b04c44ac81ba337ea38e68a58b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028403"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983494"
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>サーバーの全体管理での Power Pivot サーバーの管理と構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34028403"
   
  [Power Pivot の構成ツール](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |リンク|型|タスクの説明|  
 |----------|----------|----------------------|  
@@ -53,10 +53,10 @@ ms.locfileid: "34028403"
 |[サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|必須|この手順では、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] System サービスを準備します。|  
 |[サイト コレクションを対象とした Power Pivot 機能の統合をサーバーの全体管理でアクティブ化する方法](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|必須|この手順では、サイト コレクション レベルで [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 機能を有効にします。|  
 |[Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|必須|この手順では、Analysis Services OLE DB プロバイダーを Excel Services の信頼できるプロバイダーとして追加します。|  
-|[SharePoint 2010 での Power Pivot データ更新](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|推奨|データの更新は省略可能ですが推奨されます。 パブリッシュされた Excel ブックで [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データに自動更新をスケジュールできます。|  
-|[Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|推奨|この手順では、サーバー上でデータの更新ジョブを実行するために使用できる特別な目的のアカウントを準備します。|  
+|[SharePoint 2010 での power Pivot データ更新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|推奨|データの更新は省略可能ですが推奨されます。 パブリッシュされた Excel ブックで [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データに自動更新をスケジュールできます。|  
+|[Power Pivot の構成自動データ更新アカウント (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|推奨|この手順では、サーバー上でデータの更新ジョブを実行するために使用できる特別な目的のアカウントを準備します。|  
 |[使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|省略可|使用状況データ コレクションは既定で構成されています。 これらの手順を使用して、既定の設定を変更できます。|  
-|[データ更新専用またはクエリ専用処理の構成 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/5e027605-1086-4941-bb01-f315df8f829b)|省略可|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] インスタンスは、データ更新ジョブまたはクエリ専用にすることができます。 さらに、並列データ更新ジョブの既定の設定を変更できます。|  
+|[データ更新専用またはクエリ専用処理 (Power Pivot for SharePoint を) 構成します。](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|省略可|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] インスタンスは、データ更新ジョブまたはクエリ専用にすることができます。 さらに、並列データ更新ジョブの既定の設定を変更できます。|  
 |[Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|省略可|パスワードの更新とサービス アカウントの変更方法について説明します。|  
 |[サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|省略可|サービスの関連付けを変更する方法について説明します。|  
 |[サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|省略可|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ギャラリーを信頼できる場所として追加する方法について説明します。|  
@@ -66,8 +66,8 @@ ms.locfileid: "34028403"
 |[BI セマンティック モデル接続のコンテンツ タイプのライブラリへの追加 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|省略可|BI セマンティック モデル接続ファイルの作成をサポートするようにドキュメント ライブラリを拡張する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [Power Pivot for SharePoint 2010 のインストール](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Power Pivot for SharePoint 2010 のインストール](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [構成設定のリファレンス &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Power Pivot for SharePoint の災害復旧](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Power Pivot for SharePoint のディザスター リカバリー](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

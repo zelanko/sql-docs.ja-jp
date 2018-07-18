@@ -1,5 +1,5 @@
 ---
-title: 新しい要素 (XMLA) |Microsoft ドキュメント
+title: New 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ed98ed9c42d8cecddb07941855403925b1de6b8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575924"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969158"
 ---
 # <a name="new-element-xmla"></a>New 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  新しいファイル システム ストレージの場所で使用が含まれています、[フォルダー](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)要素。  
+  によって使用される新しいファイル システム ストレージ場所が含まれています、[フォルダー](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34575924"
 |既定値|なし|  
 |Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34575924"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- **新規**要素が値の置換される UNC パスを含む、**元**親に含まれる要素**フォルダー**復元または同期されている、すべてのオブジェクトの要素中に、それぞれ、**復元**または**同期**コマンド。 値、**元**要素の値と比較されます、 **StorageLocation**各キューブ、メジャー グループ、またはパーティションの要素と、更新するこの要素の値が使用される、一致が見つかった場合、**StorageLocation**復元または同期中にオブジェクトの。  
+ **新規**要素が値の置換される UNC パスを含む、**元**親に含まれる要素**フォルダー**復元または同期されると、すべてのオブジェクトの要素実行時に、**復元**または**同期**コマンド。 値、**元**要素の値と比較されます、 **StorageLocation**各キューブ、メジャー グループ、またはパーティションの要素と、この要素の値が更新に使用して、一致が見つかった場合、**StorageLocation**の復元または同期中にオブジェクト。  
   
- バックアップと復元のオブジェクトの詳細については、次を参照してください。[をバックアップおよび復元するオブジェクト (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
+ バックアップと復元のオブジェクトの詳細については、次を参照してください。[をバックアップおよび復元するオブジェクト (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)します。  
   
 ## <a name="see-also"></a>参照
  [元の要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/original-element-xmla.md)   

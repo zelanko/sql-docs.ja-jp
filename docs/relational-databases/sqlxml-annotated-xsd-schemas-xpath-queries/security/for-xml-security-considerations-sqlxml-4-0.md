@@ -1,5 +1,5 @@
 ---
-title: XML のセキュリティに関する注意点 (SQLXML 4.0) の |Microsoft ドキュメント
+title: XML のセキュリティに関する考慮事項 (SQLXML 4.0) の |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4045a40f92ba7e1b1489643ef28336c6577612a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968967"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032260"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>FOR XML のセキュリティに関する注意点 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_maintenance_plan_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5617e3d37b6c880e2d35b9f562e26714eea05a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242889"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974015"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_delete_maintenance_plan_job**から実行する必要があります、 **msdb**データベース。  
   
- ユーザーが実行をお勧めときに、すべてのジョブは、メンテナンス プランから削除されましたが、 **sp_delete_maintenance_plan_db**プランから、残りのデータベースを削除します。  
+ ユーザーが実行することをお勧めときに、すべてのジョブは、メンテナンス プランから削除されましたが、 **sp_delete_maintenance_plan_db**プランから、残りのデータベースを削除します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_delete_maintenance_plan_job**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_delete_maintenance_plan_job**します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、"B8FCECB1-E22C-11D2-AA64-00C04F688EAE" というジョブをメンテナンス プランから削除します。  

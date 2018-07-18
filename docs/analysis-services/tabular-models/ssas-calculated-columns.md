@@ -1,5 +1,5 @@
 ---
-title: 計算列 |Microsoft ドキュメント
+title: 計算列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a79910d324a1e0c157a638745ad96a4bfff800e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043266"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982524"
 ---
 # <a name="calculated-columns"></a>計算列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  テーブル モデルでの計算列を使用すると、新しいデータをモデルに追加できます。 列に値を貼り付けまたはインポートする代わりに、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
+  計算列、テーブル モデルでは、モデルに新しいデータを追加することを有効にします。 列に値を貼り付けまたはインポートする代わりに、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
  
   
   
@@ -49,7 +49,7 @@ ms.locfileid: "34043266"
   
 -   計算列の名前を変更する場合、その列に依存する数式をすべて手動で更新する必要があります。 手動更新モードでない場合、数式の結果の更新は自動的に実行されます。 ただし、この処理には時間がかかることがあります。  
   
--   列名に使用できない文字がいくつかあります。 詳しくは、「 [DAX 構文の仕様](http://msdn.microsoft.com/en-us/098630f4-7d1d-467e-976c-99b2279430d5)」の「名前付けに関する要件」をご覧ください。  
+-   列名に使用できない文字がいくつかあります。 詳しくは、「 [DAX 構文の仕様](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)」の「名前付けに関する要件」をご覧ください。  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  計算列で使用される数式は、メジャーで使用される数式よりリソースを大量に消費する可能性があります。 その理由の 1 つとして、計算列の結果が常にテーブルのすべての行を対象に計算されるのに対し、メジャーはレポート、ピボットテーブル、またはピボットグラフに使用されているフィルターで定義されたセルのみを対象として計算されることが挙げられます。 たとえば、テーブルに 100 万行含まれている場合、計算列には必ず 100 万個の結果が含まれるため、それだけパフォーマンスにも影響します。 ただし、ピボットテーブルでは、通常、行見出しおよび列見出しを適用してデータをフィルター処理します。したがって、メジャーは、ピボットテーブルの各セルに含まれているデータのサブセットのみを対象として計算されます。  
@@ -66,9 +66,9 @@ ms.locfileid: "34043266"
   
 -   循環依存や自己参照依存を含む数式を作成した場合、エラーが発生します。  
   
-##  <a name="bkmk_rel_tasks"></a> Related tasks  
+##  <a name="bkmk_rel_tasks"></a> 関連タスク  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[計算列の作成](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|このトピックのタスクでは、テーブルに新しい計算列を追加する方法について説明します。|  
   

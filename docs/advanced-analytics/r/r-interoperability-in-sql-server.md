@@ -7,21 +7,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59196e0569ac9cc683b3affa68fc17f068e74994
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: da739700cabb6a9d691d5f284cd6f0532898393f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203174"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979024"
 ---
 # <a name="r-interoperability-in-sql-server"></a>SQL Server での R の相互運用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、SQL Server の R を実行するためのメカニズムについて説明し、Microsoft R とオープン ソース r です。 違いについて説明します
+このトピックでは、SQL Server 内で R を実行するためのメカニズムに重点を置いていて、Microsoft R とオープン ソース R. の違いについて説明します
 
-適用されます SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス。
+適用対象: SQL Server 2016 R Services、SQL Server 2017 の Machine Learning サービス
 
-その他のコンポーネントについては、次を参照してください。 [SQL Server の新しいコンポーネント](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md)です。
+その他のコンポーネントについては、次を参照してください。 [SQL Server の新しいコンポーネント](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md)します。
 
 ### <a name="open-source-r-components"></a>オープン ソースの R コンポーネント
 
@@ -35,15 +35,15 @@ ms.locfileid: "31203174"
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 
-同様に、既定のインスタンスに関連付けられた R のツールは、既定では thi フォルダーに配置するは。
+同様に、既定のインスタンスに関連付けられている R ツールは、既定では足りないのフォルダーに配置すると。
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
 
-Microsoft R は CRAN から発生する可能性のある R のベース ディストリビューションからさまざまな方法の詳細については、次を参照してください[R 言語および Microsoft R 製品と機能との相互運用。](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
+Microsoft R の CRAN から発生する可能性のある R の基本分布の違いについての詳細については、次を参照してください[R 言語と Microsoft R 製品の機能との相互運用性。](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)
 
 ### <a name="additional-r-packages-from-microsoft-r"></a>Microsoft R から追加の R パッケージ
 
-ベースの R ディストリビューションに加えて[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]リモート計算コンテキストで R の実行をサポートする R の並列実行するためのフレームワークと同様にいくつか独自の R パッケージが含まれています。
+基本の R ディストリビューションに加え[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]もリモート計算コンテキストで R の実行をサポートする R の並列実行するためのフレームワークと同様にいくつか独自の R パッケージが含まれています。
 
 R の基本ディストリビューションと拡張された R の機能とパッケージの組み合わせを **Microsoft R** と呼びます。Microsoft R Server (スタンドアロン) をインストールすると、SQL Server R Services (In-Database) とまったく同じパッケージセットが、別のフォルダーにインストールされます。
 
@@ -62,13 +62,13 @@ Microsoft R に追加されたものの中で最も重要なのは、**RevoScale
 
 + **RevoPemaR**。 PEMA は、Parallel External Memory Algorithm (並列外部メモリ アルゴリズム) の略です。 **RevoPemaR** パッケージは、独自の並列アルゴリズムを開発するために使用できる API を提供します。 詳細については、[RevoPemaR の使用開始に関するガイド](https://docs.microsoft.com/r-server/r/how-to-developer-pemar)を参照してください。
 
-試すことをお勧め[MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)、分散処理、R コードのかつスケーラブルで、リモートの実行をサポートする Microsoft R から新しいパッケージは、Microsoft Research によって開発向上機械学習アルゴリズムを使用します。
+試してみることをお勧め[MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)、分散処理、R コードのかつスケーラブルなリモート実行をサポートする Microsoft R から新しいパッケージは、Microsoft Research によって開発強化された機械学習アルゴリズムを使用します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [アーキテクチャの概要](../../advanced-analytics/r/architecture-overview-sql-server-r.md)
 
-[R をサポートする SQL Server のコンポーネント](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)
+[R をサポートする SQL Server コンポーネント](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)
 
 [セキュリティの概要](../../advanced-analytics/r/security-overview-sql-server-r.md)
 

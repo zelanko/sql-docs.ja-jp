@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_execution_stats |Microsoft ドキュメント
+title: sys.dm_external_script_execution_stats |Microsoft Docs
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468358"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023816"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,20 @@ ms.locfileid: "34468358"
 > [!NOTE]  
 >  この DMV は、外部スクリプト実行をサポートする機能をインストールして有効にした場合にのみ使用できます。 R スクリプトでこれを行う方法については、「[SQL Server R Services (In-Database) をセットアップする](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)」をご覧ください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|登録されている外部スクリプト言語の名前です。 各外部スクリプトは、スクリプト要求で言語を指定して、関連付けられているランチャーを開始する必要があります。 |  
 |counter_name|**nvarchar**|登録されている外部スクリプト関数の名前です。 NULL 値は許可されません。|  
 |counter_value|**整数 (integer)**|登録されている外部スクリプト関数がサーバーで呼び出されたインスタンスの合計数です。 この値は、機能がインスタンスにインストールされてからの累積値で、リセットすることはできません。|  
 
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 > [!NOTE]  
 >  外部スクリプトを実行するユーザーはさらに EXECUTE ANY EXTERNAL SCRIPT 権限も持っている必要がありますが、管理者はこの権限がなくてもこの DMV を使用できます。 
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   この DMV は、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] で提供される新しい外部スクリプト実行機能の全体的な使用状況を監視するために、内部テレメトリ用に提供されます。 登録されている外部スクリプト関数が呼び出されるたびにスタート パッドがディスクベースのカウンターを増分すると、テレメトリ サービスが開始します。
 
 一般に、パフォーマンス カウンターは、それを生成したプロセスがアクティブな間だけ有効です。 したがって、DMV に対するクエリは、実行を停止したサービスの詳細なデータを表示できません。 たとえば、ランチャーが外部スクリプトを実行し、極めて短い時間でそれを完了した場合、従来の DMV ではデータが何も表示されない可能性があります。
@@ -65,7 +65,7 @@ ms.locfileid: "34468358"
 ### <a name="r-counter-values"></a>R カウンターの値
  現在、[!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] でサポートされている唯一の外部スクリプト言語は R です。R 言語に対する外部スクリプト要求は、[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] によって処理されます。 
 
-R、この DMV はインスタンスで行われる R 呼び出しの数を追跡します。 たとえば、 `rxLinMod` が呼び出されて並列で実行された場合、このカウンターは 1 だけ増やされます。
+R では、この DMV はインスタンスで行われた R 呼び出しの数を追跡します。 たとえば、 `rxLinMod` が呼び出されて並列で実行された場合、このカウンターは 1 だけ増やされます。
  
 R 言語の場合、 *counter_name* フィールドに表示されるカウンターの値は、登録されている ScaleR 関数の名前を表します。 *counter_value* フィールドの値は、特定の ScaleR 関数を呼び出したインスタンスの累積数を表します。 
 

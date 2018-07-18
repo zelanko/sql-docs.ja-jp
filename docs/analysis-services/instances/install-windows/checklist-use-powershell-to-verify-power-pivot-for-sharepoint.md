@@ -1,5 +1,5 @@
 ---
-title: 'チェックリスト: PowerShell を使用して、SharePoint の Power Pivot を確認する |Microsoft ドキュメント'
+title: 'チェックリスト: PowerShell を使用して Powerpivot for SharePoint を確認する |Microsoft Docs'
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bf217aee4222aec601c1dde08ffcb2e264eb31f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce55062f33739f4f27769e4c3851cede820f6423
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019439"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985414"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] のインストール操作や復旧操作を完了するには、信頼性の高い検証テストに合格する必要があります。このテストでは、サービスとデータが操作可能であるかどうかが確認されます。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。  
   
-![PowerShell 関連コンテンツ](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")完全な PowerShell スクリプトは、トピックの最後に記載されています。 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の完全な配置を監査するためのカスタム スクリプトを構築するには、完全なスクリプトをひな形として使用します。
+![PowerShell 関連コンテンツ](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")完全な PowerShell スクリプトは、トピックの下部に含まれます。 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の完全な配置を監査するためのカスタム スクリプトを構築するには、完全なスクリプトをひな形として使用します。
   
   
 ##  <a name="bkmk_prerequisites"></a> PowerShell 環境を準備する  
@@ -48,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![sharepoint アプリケーションの全般設定で powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "で powerpivot の sharepoint アプリケーションの全般設定")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードを使用することで、サーバーの全体管理の大半のコンポーネントを必要に応じて確認できます。 サーバーの全体管理でダッシュボードを開くには、 **[アプリケーションの全般設定]** をクリックし、 **の** [管理ダッシュボード] **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** をクリックします。 ダッシュボードの詳細については、「 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。|  
+|![sharepoint の全般的なアプリケーション セット内の powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot を sharepoint アプリケーションの全般設定")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードを使用することで、サーバーの全体管理の大半のコンポーネントを必要に応じて確認できます。 サーバーの全体管理でダッシュボードを開くには、 **[アプリケーションの全般設定]** をクリックし、 **の** [管理ダッシュボード] **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** をクリックします。 ダッシュボードの詳細については、「 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。|  
   
 ##  <a name="bkmk_symptoms"></a> 現象と推奨される操作  
  次の表は、現象や問題、および問題解決に役立つこのトピックの推奨されるセクションを示しています。  
@@ -57,7 +57,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |データ更新が実行されていない|「 [タイマー ジョブ](#bkmk_timer_jobs) 」のセクションを参照して、 **オンライン [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Data Refresh Timer Job"** がオンラインになっていることを確認します。|  
 |管理ダッシュボードのデータが古くなっている|「 [タイマー ジョブ](#bkmk_timer_jobs) 」のセクションを参照して、 **"Management Dashboard Processing Timer Job"** がオンラインになっていることを確認します。|  
-|管理ダッシュボードの一部の機能に関する問題|(Excel Services または [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint のない) サーバーの全体管理のトポロジを持つファームに [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint をインストールする場合に、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードの組み込みレポートへのフル アクセスが必要なときは、Microsoft ADOMD.NET クライアント ライブラリをダウンロードしてインストールする必要があります。 ダッシュボードの一部のレポートでは、ADOMD.NET を使用して、ファームの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] クエリ処理およびサーバーの状態に関するレポート データを提供する内部データにアクセスします。 セクション「 [ADOMD.Net クライアント ライブラリ](#bkmk_adomd) 」およびトピック「 [サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする方法](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)」を参照してください。|  
+|管理ダッシュボードの一部の機能に関する問題|(Excel Services または [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint のない) サーバーの全体管理のトポロジを持つファームに [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint をインストールする場合に、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードの組み込みレポートへのフル アクセスが必要なときは、Microsoft ADOMD.NET クライアント ライブラリをダウンロードしてインストールする必要があります。 ダッシュボードの一部のレポートでは、ADOMD.NET を使用して、ファームの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] クエリ処理およびサーバーの状態に関するレポート データを提供する内部データにアクセスします。 セクション「 [ADOMD.Net クライアント ライブラリ](#bkmk_adomd) 」およびトピック「 [サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする方法](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)」を参照してください。|  
   
 ##  <a name="bkmk_windows_service"></a> Analysis Services の Windows サービス  
  このセクションのスクリプトでは、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスを検証します。 サービスが **実行されている**ことを確認します。  
@@ -167,7 +167,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![注](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")アプリケーション プールをサーバーの全体管理 ページで確認できます**サービス アプリケーションの管理**です。 サービス アプリケーションの名前をクリックし、リボンで **[プロパティ]** をクリックします。  
+ ![注](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")アプリケーション プールは、サーバーの全体管理 ページでも確認できます**サービス アプリケーションの管理**します。 サービス アプリケーションの名前をクリックし、リボンで **[プロパティ]** をクリックします。  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーションと Excel サービス アプリケーションのプロキシ**  
   
@@ -271,7 +271,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows と ULS のログ  
  **Windows イベント ログ**  
   
- 次のコマンドは、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに関連するイベントの Windows イベント ログを検索します。 イベントを無効にする方法やイベント レベルの変更については、次を参照してください[構成し、SharePoint ログ ファイルの表示と診断ログ&#40;Power Pivot for SharePoint。&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 次のコマンドは、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに関連するイベントの Windows イベント ログを検索します。 イベントを無効にするか、イベント レベルの変更については、次を参照してください[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;Power Pivot for SharePoint。&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
  **サービス名:** MSOLAP$POWERPIVOT  
   
@@ -350,7 +350,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 」および「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](http://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
+ 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 」および「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](http://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
   
 ##  <a name="bkmk_adomd"></a> ADOMD.Net クライアント ライブラリ  
   
@@ -367,7 +367,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- 詳細については、「 [サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする方法](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)」を参照してください。  
+ 詳細については、「 [サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする方法](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)」を参照してください。  
   
 ##  <a name="bkmk_health_collection"></a> 正常性データの収集ルール  
  **"Status"** がオンラインであり、 **"Enabled"** が True であることを確認します。  

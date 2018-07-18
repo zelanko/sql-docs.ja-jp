@@ -1,5 +1,5 @@
 ---
-title: 通知 Events Data Columns |Microsoft ドキュメント
+title: 通知イベントのデータ列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf7695ec7dbbe7361641fb939718724f611e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045716"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017765"
 ---
 # <a name="notification-events-data-columns"></a>Notification イベントのデータ列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Notification イベントとは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザーが直接発生させるものではないイベントのことです。 たとえば、ユーザーがプロアクティブ キャッシュの基になるテーブルを更新すると、通知が発生します。  
+  Notification イベントとは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のユーザーが直接発生させるものではないイベントのことです。 たとえば、ユーザーがプロアクティブ キャッシュの基になるテーブルを更新すると、通知が発生します。  
   
  Notifications イベントのイベント カテゴリには、次のイベント クラスがあります。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "34045716"
 |TextData|42|9|Notification イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Notification イベントが発生した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## <a name="see-also"></a>「  
- [通知イベントのイベント カテゴリ](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>参照  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

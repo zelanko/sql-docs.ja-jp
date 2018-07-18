@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_advanced (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.sp_backup_config_advanced (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08c79b906a95c41013f28a559acdc7f98809c186
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970484"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  高度な設定を構成[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]です。  
+  高度な設定を構成します[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ EXEC managed_backup.sp_backup_config_advanced
  有効にするためのデータベース名は、特定のデータベースでのバックアップを管理します。 NULL の場合、または *、し、この管理対象のバックアップは、サーバー上のすべてのデータベースに適用します。  
   
  @encryption_algorithm  
- バックアップ中にバックアップ ファイルの暗号化に使用する暗号化アルゴリズムの名前。 @encryption_algorithmは**SYSNAME**です。 データベースに対して初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成する場合の必須パラメーターです。 指定**NO_ENCRYPTION**バックアップ ファイルを暗号化したくない場合。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成設定を変更する場合、このパラメーターは省略可能です。パラメーターを指定しない場合は、既存の構成値が保持されます。 このパラメーターで許可される値は次のとおりです。  
+ バックアップ中にバックアップ ファイルを暗号化するために使用する暗号化アルゴリズムの名前。 @encryption_algorithmは**SYSNAME**します。 データベースに対して初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成する場合の必須パラメーターです。 指定**NO_ENCRYPTION**バックアップ ファイルを暗号化したくない場合。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成設定を変更する場合、このパラメーターは省略可能です。パラメーターを指定しない場合は、既存の構成値が保持されます。 このパラメーターで許可される値は次のとおりです。  
   
 -   AES_128  
   
@@ -70,10 +70,10 @@ EXEC managed_backup.sp_backup_config_advanced
  暗号化アルゴリズムの詳細については、「 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)」をご覧ください。  
   
  @encryptor_type  
- '証明書' を指定できますが、暗号化機能の型または ' ASYMMETRIC_KEY"です。 @encryptor_typeは**nvarchar (32)** です。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
+ '証明書' を指定できますが、暗号化機能の型または ' ASYMMETRIC_KEY"です。 @encryptor_typeは**nvarchar (32)** します。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
   
  @encryptor_name  
- バックアップの暗号化に使用する既存の証明書または非対称キーの名前。 @encryptor_nameは**SYSNAME**です。 非対称キーを使用する場合は、拡張キー管理 (EKM) を使用して構成する必要があります。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
+ バックアップの暗号化に使用する既存の証明書または非対称キーの名前。 @encryptor_nameは**SYSNAME**します。 非対称キーを使用する場合は、拡張キー管理 (EKM) を使用して構成する必要があります。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
   
  詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
@@ -83,13 +83,13 @@ EXEC managed_backup.sp_backup_config_advanced
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
- メンバーシップが必要**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対するアクセス許可**sp_deletebackuphistory**ストアド プロシージャです。  
+### <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対する**sp_deletebackuphistory**ストアド プロシージャ。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、高度な構成オプションを設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]SQL Server のインスタンス。  
+ 次の例は、高度な構成オプションを設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の SQL Server のインスタンス。  
   
 ```  
 Use msdb;  

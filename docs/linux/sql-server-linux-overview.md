@@ -1,5 +1,5 @@
 ---
-title: SQL Server on Linux の概要 |Microsoft ドキュメント
+title: SQL Server on Linux の概要 |Microsoft Docs
 description: このトピックでは、SQL Server が Linux 上でどのように実行されるかを説明し、詳細な知識を得るための情報を提供します。
 author: rothja
 ms.author: jroth
@@ -13,11 +13,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.openlocfilehash: 16ea8b69f1d55e5b338931f0531bdf8a2e037707
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311690"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020140"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -27,9 +27,9 @@ SQL Server 2017 を Linux で実行することができるようになりまし
 
 ## <a name="install"></a>インストール
 
-、作業を開始するには、次のクイック スタートのいずれかを使用して Linux に SQL Server をインストールします。
+開始するには、次のクイック スタートのいずれかを使用して Linux に SQL Server をインストールします。
 
-- [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
+- [Red Hat Enterprise Linux をインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
 - [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-docker.md)
@@ -55,7 +55,7 @@ SQL Server 2017 では、Linux を含む、サポートされているすべて�
 SQL Server を使い慣れている場合は、[リリース ノート](sql-server-linux-release-notes.md)で、このリリースの既知の問題と、一般的なガイドラインを確認してください。 その後、[SQL Server on Linux の新機能](sql-server-linux-whats-new.md) と、[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md) をご覧ください。 
 
 > [!TIP]
-> よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
+> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

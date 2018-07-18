@@ -1,6 +1,6 @@
 ---
 title: Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム) |Microsoft ドキュメント
-description: Windows と Linux 上のレプリカでは、SQL Server の可用性グループ構成します。
+description: Windows および Linux 上のレプリカでは、SQL Server の可用性グループ構成。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -14,11 +14,11 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9ccd5cb5fdc7d5c5bc6ff62b203bee0bbce6e5e8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322763"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983914"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム)
 
@@ -30,13 +30,13 @@ ms.locfileid: "34322763"
 
 続ける前に、Windows および Linux での SQL Server インスタンスのインストールと構成について熟知してください。 
 
-## <a name="scenario"></a>Scenario
+## <a name="scenario"></a>シナリオ
 
 このシナリオでは、2 台のサーバーは、別々のオペレーティング システムにあります。 `WinSQLInstance` という名前の Windows Server 2016 がプライマリ レプリカをホストします。 `LinuxSQLInstance` という名前の Linux サーバーがセカンダリ レプリカをホストします。
 
 ## <a name="configure-the-ag"></a>可用性グループを構成します。 
 
-可用性グループを作成する手順は、読み取りスケール ワークロードの可用性グループを作成する手順と同じです。 AG クラスター型は、クラスター マネージャーが存在しないため、[なし] です。 
+可用性グループを作成する手順は、読み取りスケール ワークロード用の AG を作成する手順と同じです。 可用性グループのクラスターの種類が NONE、クラスター マネージャーがないためです。 
 
    >[!NOTE]
    >この記事のスクリプトでは、環境に合わせて置き換える必要のある値を山かっこ `<`と`>` で識別します。 山かっこ自体は、スクリプトには必要ありません。 
@@ -52,7 +52,7 @@ ms.locfileid: "34322763"
 
    ![可用性グループを有効にします。](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
-   SQL Server 構成マネージャーでは、コンピューターがフェールオーバー クラスターのノードではないことを示します。 
+   SQL Server 構成マネージャーでは、コンピューターがフェールオーバー クラスター内のノードでないことを示します。 
 
    可用性グループを有効にした後は、SQL Server を再起動します。
 
@@ -74,7 +74,7 @@ ms.locfileid: "34322763"
 
    ![可用性グループの Linux を有効にします。](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
-1. 両方のサーバー上の hosts ファイルを構成するか、サーバー名を DNS に登録します。
+1. 両方のサーバー上の hosts ファイルを構成またはサーバー名を DNS に登録します。
 
 1. Windows と Linux の両方で TPC 1433 と 5022 のファイアウォール ポートを開きます。
 
@@ -155,7 +155,7 @@ ms.locfileid: "34322763"
    ```
 
    >[!IMPORTANT]
-   >ファイアウォールは、リスナーの TCP ポートを開く必要があります。 前のスクリプトでは、ポートは 5022 です。 使用可能な TCP ポートを使用します。 
+   >ファイアウォールは、リスナーの TCP ポートを開く必要があります。 前のスクリプトでは、ポートは 5022 です。 利用可能な TCP ポートを使用します。 
 
 1. セカンダリ レプリカで、エンドポイントを作成します。 エンドポイントを作成するには、前述のスクリプトをセカンダリ レプリカで繰り返します。 
 
@@ -174,7 +174,7 @@ ms.locfileid: "34322763"
 
       * `<LinuxSQLInstance>` をセカンダリ レプリカの SQL Server インスタンスのサーバーの名前に置き換えます。 
 
-   可用性グループを作成するには、値を更新し、プライマリ レプリカでスクリプトを実行します。  
+   AG を作成するには、値を更新し、プライマリ レプリカでスクリプトを実行します。  
 
    ```sql
    CREATE AVAILABILITY GROUP [ag1]
@@ -240,7 +240,7 @@ ms.locfileid: "34322763"
    GO
    ```
 
-1. データベースがセカンダリ レプリカの設定を取得することを確認します。 
+1. データベースをセカンダリ レプリカで入力を取得することを確認します。 
 
 ## <a name="fail-over-the-primary-replica"></a>プライマリ レプリカをフェールオーバーします。
 
@@ -248,7 +248,7 @@ ms.locfileid: "34322763"
 
 この記事では、移行または読み取りスケールのワークロードをサポートするプラットフォーム間の可用性グループを作成する手順を確認しました。 手動による災害復旧のために使用できます。 可用性グループをフェールオーバーする方法についても説明しました。 クロス プラットフォームのクラスター ツールが無いため、クロス プラットフォームの可用性グループはクラスターの種類 `NONE` を使用し、高可用性をサポートしません。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Always On 可用性グループの概要](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 

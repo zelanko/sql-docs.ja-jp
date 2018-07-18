@@ -1,5 +1,5 @@
 ---
-title: 永続化階層レコード セット |Microsoft ドキュメント
+title: 階層レコード セットの保持 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,19 +18,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef907391ad15cb5dd4d58efb6268a0b1688274fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 281204b15620eba99f30c4480817973052af0cea
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272521"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980958"
 ---
-# <a name="persisting-hierarchical-recordsets"></a>永続化階層レコード セット
-階層を保存することができます**Recordset** adtg 形式または XML 形式で呼び出すことによってファイルに、[保存](../../../ado/reference/ado-api/save-method.md)メソッドです。 階層を保存するときに、2 つの制限を適用するただし、**レコード セット**XML 形式で s: 場合は、XML で保存することはできません、階層的な**レコード セット**保留中の更新プログラムが含まれていて、パラメーター化されたを保存することはできません階層**Recordset**です。  
+# <a name="persisting-hierarchical-recordsets"></a>階層レコード セットを保持します。
+階層構造を保存する**レコード セット**を呼び出すことによって、adtg 形式または XML 形式でファイルに、[保存](../../../ado/reference/ado-api/save-method.md)メソッド。 階層を保存するときに、2 つの制限を適用するただし、**レコード セット**XML 形式で s: 場合は、XML で保存することはできません、階層**レコード セット**保留中の更新プログラムが含まれていて、パラメーター化されたを保存することはできません階層**Recordset**します。  
   
- データ シェイプ プロバイダーの詳細については、次を参照してください。 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) と[for OLE DB Data Shaping Service の概要](http://msdn.microsoft.com/en-us/9f51e471-8e85-448e-9fb8-b64bbf767bf3)です。  
+ データ シェイプ プロバイダーの詳細については、次を参照してください。 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) と[for OLE DB Data Shaping Service の概要](http://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)します。  
   
 ## <a name="see-also"></a>参照  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
- [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

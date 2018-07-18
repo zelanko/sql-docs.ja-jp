@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_job_object (Azure SQL データベース) |Microsoft ドキュメント
+title: sys.dm_os_job_object (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
 ms.prod: ''
@@ -27,42 +27,43 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968764"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-SQL Server プロセスだけでなく、ジョブ オブジェクト レベルで特定リソース消費量の統計情報を管理するジョブ オブジェクトの構成を記述する 1 つの行を返します。 SQL Server はジョブ オブジェクトで実行されていない場合は、空のセットを返します。 
+ジョブのオブジェクト レベルで特定リソース消費量の統計と同様に、SQL Server プロセスを管理するジョブ オブジェクトの構成を記述する 1 つの行を返します。 SQL Server はジョブ オブジェクトで実行されていない場合は、空のセットを返します。 
 
-ジョブ オブジェクトは、オペレーティング システム レベルでの CPU、メモリ、および IO リソース管理を実装する Windows のコンストラクトです。 ジョブ オブジェクトに関する詳細については、次を参照してください。[ジョブ オブジェクト](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)です。 
+ジョブ オブジェクトは、オペレーティング システム レベルでの CPU、メモリ、および IO リソース ガバナンスを実装する Windows コンストラクトです。 ジョブ オブジェクトの詳細については、次を参照してください。[ジョブ オブジェクト](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)します。 
 
 > [!NOTE]
-> Sys.dm_os_job_object DMV が現在 sys.dm_job_object として表示されます。 これは一時的な:`sys.dm_os_job_object`この DMV の永続的な名前になります。 
+> Sys.dm_os_job_object sys.dm_job_object として DMV 現在表示されてことがあります。 これは一時的な:`sys.dm_os_job_object`この DMV の永続的な名前になります。 
   
-|列|データ型|Description|  
+|[列]|データ型|説明|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**int**|SQL Server スレッドは、各スケジュールの間隔中に使用できるプロセッサ サイクルの一部を指定します。 値は 10000 サイクル スケジュールの間隔内で利用可能なサイクルの割合として報告されます。 例を値 100 は、スレッドが CPU コアを使用できることは、そのすべての容量を示します。|
-|cpu_affinity_mask|**bigint**|論理プロセッサを記述するビット マスク SQL Server プロセスは、プロセッサ グループ内で使用できます。 たとえば、cpu_affinity_mask 255 (バイナリ 1111) つまり最初の 8 個の論理プロセッサを使用できます。|
-|cpu_affinity_group|**int**|SQL Server で使用されているプロセッサ グループの数。|
-|memory_limit_mb|**bigint**|SQL Server を含む、ジョブ オブジェクトのすべてのプロセスが累積的に使用できる、mb 単位でのコミットされたメモリの最大量。| 
+|cpu_rate|**int**|SQL Server スレッドは、各スケジュールの間隔中に使用できるプロセッサ サイクルの部分を指定します。 値は 10000 サイクルのスケジュール間隔内で利用可能なサイクルの割合として報告されます。 たとえば、スレッドが CPU コアを使用できる値 100 には、完全な容量が。|
+|cpu_affinity_mask|**bigint**|論理プロセッサを記述するビット マスク、SQL Server プロセスは、プロセッサ グループ内で使用できます。 たとえば、cpu_affinity_mask 255 (1111 バイナリ) という最初の 8 つの論理プロセッサを使用することができます。|
+|cpu_affinity_group|**int**|SQL Server で使用されるプロセッサ グループの数。|
+|memory_limit_mb|**bigint**|最大 (mb) を SQL Server を含む、ジョブ オブジェクトのすべてのプロセスは累積的に使用できる、コミットされたメモリ量。| 
 |process_memory_limit_mb |**bigint**|SQL Server など、ジョブ オブジェクトの 1 つのプロセスを mb 単位でのコミットされたメモリの最大量を使用できます。|
-|workingset_limit_mb |**bigint**|MB で、SQL Server のワーキング セットが使用できるメモリの最大量。|
-|non_sos_mem_gap_mb|**bigint**|Mb 単位でのメモリの量は、スレッドのスタック、Dll、およびその他の非 SOS メモリ割り当てを確保します。 SOS ターゲット メモリ間の違いは、`process_memory_limit_mb`と`non_sos_mem_gap_mb`です。| 
-|low_mem_signal_threshold_mb|**bigint**|メモリのしきい値を mb 単位で。 ジョブ オブジェクトの使用可能なメモリの量がこのしきい値より下にある場合は、SQL Server プロセスにメモリ不足の通知信号が送信されます。 |
-|total_user_time|**bigint**|ジョブ オブジェクトが作成されてからユーザー モードで、ジョブ オブジェクト内のスレッドを 100 ns 刻みの合計数を設けます。 |
-|total_kernel_time |**bigint**|ジョブ オブジェクト内のスレッドを 100 ns 刻みの合計数は、ジョブ オブジェクトが作成されてから、カーネル モードで費やしてきました。 |
-|write_operation_count |**bigint**|合計数は、ローカル ディスク上にジョブ オブジェクトが作成された後に SQL Server によって発行された IO 操作を記述します。 |
-|read_operation_count |**bigint**|ローカル ディスク上にジョブ オブジェクトが作成された後に SQL Server によって発行された読み取りの IO 操作の合計数。 |
-|peak_process_memory_used_mb|**bigint**|ピーク時の SQL Server など、ジョブ オブジェクトの 1 つのプロセスを mb 単位でのメモリ量は、ジョブ オブジェクトが作成されたために使用します。| 
-|peak_job_memory_used_mb|**bigint**|ピーク時のジョブ オブジェクトのすべてのプロセスは、ジョブ オブジェクトから累積的に使用している mb 単位でのメモリ量が作成されました。|
+|workingset_limit_mb |**bigint**|最大 (mb)、SQL Server のワーキング セットが使用できるメモリ量。|
+|non_sos_mem_gap_mb|**bigint**|MB 単位でのメモリの量は、スレッド スタック、Dll、およびその他の非 SOS のメモリ割り当ての確保。 SOS ターゲット メモリの違いは、`process_memory_limit_mb`と`non_sos_mem_gap_mb`します。| 
+|low_mem_signal_threshold_mb|**bigint**|メモリしきい値 (MB 単位)。 ジョブ オブジェクトの使用可能なメモリの量がこのしきい値を下回ると、SQL Server プロセスにメモリ不足通知信号が送信されます。 |
+|total_user_time|**bigint**|ジョブ オブジェクトが作成されたため、ジョブ オブジェクト内のスレッドがユーザー モードで費やさが 100 ns 刻みの合計数。 |
+|total_kernel_time |**bigint**|ジョブ オブジェクトが作成されたため、ジョブ オブジェクト内のスレッドがカーネル モードで費やさが 100 ns 刻みの合計数。 |
+|write_operation_count |**bigint**|合計数は、ジョブ オブジェクトが作成された後に、SQL Server によって発行されたローカル ディスク上の IO 操作を記述します。 |
+|read_operation_count |**bigint**|ジョブ オブジェクトが作成された後に、SQL Server によって発行されたローカル ディスク上の読み取りの IO 操作の合計数。 |
+|peak_process_memory_used_mb|**bigint**|ピーク (mb)、SQL Server など、ジョブ オブジェクトの 1 つのプロセスのメモリ量は、ジョブ オブジェクトが作成されたために使用されます。| 
+|peak_job_memory_used_mb|**bigint**|ピーク時のジョブ オブジェクトのすべてのプロセスは、ジョブ オブジェクトから累積的使用いたを mb 単位でのメモリ量が作成されました。|
   
-## <a name="permissions"></a>権限  
-SQL データベース管理インスタンスが必要です。`VIEW SERVER STATE`権限です。 SQL データベースで必要があります、`VIEW DATABASE STATE`データベースの権限です。  
+## <a name="permissions"></a>アクセス許可  
+SQL Database マネージ インスタンスが必要です。`VIEW SERVER STATE`権限。 SQL Database が必要です、`VIEW DATABASE STATE`データベースの権限。  
  
 ## <a name="see-also"></a>参照  
 
-マネージ インスタンスについては、次を参照してください。[マネージ インスタンスの SQL データベース](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)です。
+マネージ インスタンスについては、次を参照してください。 [SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)します。
   

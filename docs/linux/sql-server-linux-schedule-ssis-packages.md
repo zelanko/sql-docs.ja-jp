@@ -1,6 +1,6 @@
 ---
-title: Cron と Linux の SSIS パッケージのスケジュール |Microsoft ドキュメント
-description: この記事では、cron サービスと Linux 上の SQL Server Integration Services (SSIS) パッケージをスケジュールする方法について説明します。
+title: Cron で Linux 上の SSIS パッケージのスケジュール |Microsoft Docs
+description: この記事では、cron サービスで Linux 上の SQL Server Integration Services (SSIS) パッケージをスケジュールする方法について説明します。
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -13,34 +13,35 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 3dd2c69dae65f073ec7bc34a40ae1f31be2c1a7c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020110"
 ---
-# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>スケジュール SQL Server Integration Services パッケージの cron と Linux の実行
+# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>スケジュールの SQL Server Integration Services パッケージ cron を使用した Linux 上の実行
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Windows で SQL Server Integration Services (SSIS) と SQL Server を実行する場合は、SQL Server エージェントを使用して、SSIS パッケージの実行を自動化できます。 Linux に SQL Server と SSIS を実行するとただし、SQL Server エージェントのユーティリティは Linux 上のジョブのスケジュール設定を使用できません。 代わりは、広く使用されている Linux プラットフォームではパッケージの実行を自動化する cron サービスを使用します。
+SQL Server Integration Services (SSIS) と SQL Server を Windows で実行するときに、SQL Server エージェントを使用して SSIS パッケージの実行を自動化できます。 SSIS の SQL Server on Linux を実行すると、SQL Server エージェントのユーティリティは Linux 上のジョブをスケジュールする使用できません。 代わりに、パッケージの実行を自動化する Linux プラットフォームで広く使用されている cron サービスを使用します。
 
-この記事では、SSIS パッケージの実行を自動化する方法を示す例を提供します。 例は、Red Hat Enterprise を実行に書き込まれます。 コードは、Ubuntu など他の Linux ディストリビューションと似ています。
+この記事では、SSIS パッケージの実行を自動化する方法を示す例を示します。 Red Hat Enterprise 上で実行する例が書き込まれます。 コードは、Ubuntu など、他の Linux ディストリビューションと似ています。
 
 ## <a name="prerequisites"></a>前提条件
 
 ジョブを実行する cron サービスを使用する前に、コンピューターで実行されているかどうかを確認します。
 
-Cron サービスの状態を確認するには、次のコマンドを使用:`systemctl status crond.service`です。
+Cron サービスの状態を確認するには、次のコマンドを使用:`systemctl status crond.service`します。
 
-サービスがアクティブでない場合 (つまり、実行されていない) を設定および cron サービスを適切に構成する管理者に問い合わせてください。
+サービスがアクティブでない場合 (つまり、実行されていない)、設定して、cron サービスを適切に構成する管理者に問い合わせてください。
 
 ## <a name="create-jobs"></a>ジョブを作成します。
 
-Cron ジョブとは、指定された間隔で定期的に実行する構成可能なタスクです。 ジョブは通常、コンソール内で直接入力するか、またはシェル スクリプトとして実行コマンドと同じくらい簡単にできます。
+Cron ジョブは、指定された間隔で定期的に実行する構成可能なタスクです。 ジョブは通常、コンソールで直接入力するか、またはシェル スクリプトとして実行コマンドと同じくらい簡単にできます。
 
-簡単な管理とメンテナンスの目的では、わかりやすい名前を含むスクリプトをパッケージの実行コマンドを配置することをお勧めします。
+容易な管理とメンテナンスの目的では、わかりやすい名前を含むスクリプトをパッケージの実行コマンドを配置することをお勧めします。
 
-パッケージを実行するための簡単なシェル スクリプトの例を次に示します。 1 つのコマンドのみが含まれていますが、必要に応じて他のコマンドを追加することができます。
+パッケージを実行するための簡単なシェル スクリプトの例を次に示します。 1 つのコマンドのみが含まれていますが、必要に応じてその他のコマンドを追加することができます。
 
 ```bash
 # A simple shell script that contains a simple package execution command
@@ -49,37 +50,37 @@ Cron ジョブとは、指定された間隔で定期的に実行する構成可
 /opt/ssis/bin/dtexec /F yourSSISpackageName.dtsx >> $HOME/tmp/out 2>&1
 ```
 
-## <a name="schedule-jobs-with-the-cron-service"></a>Cron サービスでジョブのスケジュール設定します。
+## <a name="schedule-jobs-with-the-cron-service"></a>Cron サービス ジョブのスケジュール設定します。
 
-ジョブを定義した後 cron サービスを使用して自動的に実行するようにスケジュールできます。
+ジョブを定義した後は、cron サービスを使用して自動的に実行するようをスケジュールできます。
 
-Cron を実行するため、ジョブを追加するには、crontab ファイルで、ジョブを追加します。 開くには、crontab ファイルを追加したり、ジョブを更新できますエディターで、次のコマンドを使用:`crontab -e`です。
+実行する cron ジョブを追加するには、ジョブを crontab ファイルに追加します。 Crontab ファイルを追加またはジョブを更新することができます、エディターで開くには、次のコマンドを使用:`crontab -e`します。
 
-既に説明したジョブを毎日午前 2 時 10 分に実行をスケジュールするには、crontab ファイルに次の行を追加します。
+2時 10分 AM に毎日実行する前に説明したジョブをスケジュールするには、crontab ファイルに、次の行を追加します。
 
 ```
 # run <SSIS package name> at 2:10 AM every day
 10 2 \* \* \* $/HOME/SSIS/jobs/SSISpackageName.daily
 ```
 
-Crontab ファイルを保存し、エディターを終了します。
+Crontab のファイルを保存し、エディターを終了します。
 
-サンプル コマンドの形式を理解するのには、次のセクションの情報を確認します。
+サンプル コマンドの形式を理解するには、次のセクションの情報を確認します。
  
-## <a name="format-of-a-crontab-file"></a>Crontab ファイルの形式
+## <a name="format-of-a-crontab-file"></a>Crontab のファイルの形式
 
-次の図は、crontab ファイルに追加されるジョブの行の書式の説明を示します。
+次の図は、crontab ファイルに追加されるジョブの行の形式に関する説明を示します。
 
 ![Crontab ファイル内のエントリの形式の説明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
 
-Crontab ファイル形式のより詳細な説明を取得するには、次のコマンドを使用:`man 5 crontab`です。
+Crontab のファイル形式の詳細な説明を取得するには、次のコマンドを使用:`man 5 crontab`します。
 
-この記事の内容の例を説明するのに役立つ出力の部分的な例を次に示します。
+出力例では、この記事で説明するための部分的な例を次に示します。
 
-![Crontab 形式の詳細の部分的な説明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+![Crontab の形式の詳細な部分の説明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
-## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS についての関連コンテンツ
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS に関する関連コンテンツ
 -   [抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
 -   [Linux 上の SQL Server Integration Services (SSIS) のインストールします。](sql-server-linux-setup-ssis.md)
 -   [Ssis conf で Linux 上の SQL Server Integration Services を構成します。](sql-server-linux-configure-ssis.md)
--   [制限事項と Linux の SSIS の既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [制限事項と Linux での SSIS の既知の問題](sql-server-linux-ssis-known-issues.md)

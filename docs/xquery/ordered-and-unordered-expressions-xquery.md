@@ -1,5 +1,5 @@
 ---
-title: 順序付けし、式 (XQuery) の順序なし |Microsoft ドキュメント
+title: 順序付けし、順不同の式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f36e7adf5334ce9ef343b6d518d762a2b4f4c0c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076859"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974014"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>順序付けられた式と順序付けられていない式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  既定では、すべての操作で順序付けのモード[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は**注文**です。 したがって、返されるノード シーケンス、パス式や FLWOR 式でなく、**の order by**句、ドキュメントの順序では、します。  
+  既定ですべての操作の並べ替えモード[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は**注文**します。 つまり、返されるノード シーケンス、パス式や FLWOR 式では、なし、**並べ替え**句はドキュメント順にします。  
   
- その他**注文**と**順序付けられていない**XQuery 仕様で説明されている構文はサポートされていません。  
+ その他**注文**と**順序付けられていない**XQuery 仕様で説明する構文はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
  [XQuery 式](../xquery/xquery-expressions.md)   

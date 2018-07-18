@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -23,19 +23,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ecc569a1f112bba0ec49c46da77c1dbc29fcddab
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020020"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  バッファー プール拡張に関する構成情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 バッファー プール拡張ファイルごとに 1 行を返します。  
+  バッファー プール拡張に関する構成情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 バッファー プール拡張ファイルごとに 1 行を返します。  
   
 
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |path|**nvarchar**(256)|バッファー プール拡張キャッシュのパスとファイル名。 Null 値を許容します。|  
 |file_id|**int**|バッファー プール拡張ファイルの ID。 NULL 値は許可されません。|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/23/2018
 |state_description|**nvarchar**(60)|バッファー プール拡張機能の状態を説明します。 NULL 値が許可されます。<br /><br /> 0 = バッファー プール拡張機能が無効<br /><br /> 1 = バッファー プール拡張機能が有効|  
 |current_size_in_kb|**bigint**|バッファー プール拡張ファイルの現在のサイズ。 NULL 値は許可されません。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -67,7 +68,7 @@ WHERE is_in_bpool_extension <> 0
 ```  
   
 ## <a name="see-also"></a>参照  
- [バッファー プール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [バッファー プール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)   
+ [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

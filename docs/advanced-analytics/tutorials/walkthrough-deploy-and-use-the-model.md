@@ -1,5 +1,5 @@
 ---
-title: R モデルを配置し、SQL (チュートリアル) で使用 |Microsoft ドキュメント
+title: R モデルをデプロイし、SQL (チュートリアル) での使用 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,33 +7,33 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8476381c60a63d85ce6d3cb0153578416856f8fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204184"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983014"
 ---
-# <a name="deploy-the-r-model-and-use-it-in-sql"></a>SQL で使用して、R モデルの配置
+# <a name="deploy-the-r-model-and-use-it-in-sql"></a>R モデルを展開し、SQL で使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このレッスンでは、ストアド プロシージャからトレーニング済みモデルを呼び出すことによって、運用環境で R モデルを使用します。 R またはサポートするアプリケーション プログラミング言語から、ストアド プロシージャを呼び出すことができますし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] (など、c#、Java、Python など)、新規の観測値を予測するモデルを使用します。
+このレッスンでは、ストアド プロシージャからトレーニング済みモデルを呼び出すことによって、運用環境で R モデルを使用します。 R またはサポートするアプリケーション プログラミング言語からストアド プロシージャを呼び出すことができますし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] (など、c#、Java、Python など)、モデルを使用して新しい観察結果を予測します。
 
-このサンプルでは、スコア付けのモデルを使用する 2 つの最も一般的な方法を示します。
+このサンプルでは、スコアリングにモデルを使用する 2 つの最も一般的な方法を示しています。
 
-- **バッチ モードのスコアリング**非常に高速に複数の予測を作成、SQL を渡すことによってクエリまたは入力としてテーブルに必要なときに使用します。 結果のテーブルが返されます、直接テーブルに挿入したりファイルに書き込む場合があります。
+- **バッチ スコアリング モード**非常に高速に複数の予測を作成、SQL を渡すことによってクエリまたはテーブルとして入力する必要がある場合に使用されます。 結果のテーブルが返されます、直接テーブルに挿入したり、ファイルに書き込む可能性があります。
 
-- **個々 のスコア付けモード**を一度に 1 つずつ予測を作成する必要がある場合に使用します。 ストアド プロシージャには、一連の個別の値を渡します。 値は、モデルでは、予測を作成するモデルを使用して、機能に対応しているか、確率の値などの別の結果を生成します。 アプリケーション、またはユーザーにその値を表示できます。
+- **個別スコアリング モード**一度に 1 つずつ予測を作成する必要がある場合に使用されます。 ストアド プロシージャには、一連の個別の値を渡します。 値は、予測を作成するモデルを使用すると、モデル内の機能に対応していますか、確率値などの別の結果を生成します。 アプリケーション、またはユーザーにその値を表示できます。
 
 ## <a name="batch-scoring"></a>バッチ スコアリング
 
-バッチ スコアリングのためのストアド プロシージャは、最初に、PowerShell スクリプトを実行したときに作成されました。 これは、ストアド プロシージャ、 *PredictTipBatchMode*は次の実行します。
+バッチ スコアリングのためのストアド プロシージャは、最初に PowerShell スクリプトを実行したときに作成されました。 これは、ストアド プロシージャ、 *PredictTipBatchMode*は次の処理します。
 
 - SQL クエリとして一連の入力データを取得する
 - 前のレッスンで保存したトレーニング済みのロジスティック回帰モデルを呼び出す
 - ドライバーが、0 以外のヒントを取得する確率を予測します。
 
-1. 使用するスクリプト、ストアド プロシージャを通して分ほどかかる*PredictTipBatchMode*です。 このスクリプトは、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]を使用して、モデルを操作できるようにする方法のさまざまな側面を示しています。
+1. スクリプト、ストアド プロシージャを調査のために少し時間がかかる*PredictTipBatchMode*します。 このスクリプトは、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]を使用して、モデルを操作できるようにする方法のさまざまな側面を示しています。
   
     ```tsql
     CREATE PROCEDURE [dbo].[PredictTipBatchMode]
@@ -59,15 +59,15 @@ ms.locfileid: "31204184"
     END
     ```
 
-    + SELECT ステートメントを使用して、SQL テーブルから保存されたモデルを呼び出します。 モデルとしてテーブルから取得された**varbinary (max)** SQL 変数に格納されているデータ_@lmodel2_、およびパラメーターとして渡された*mod*格納されているシステムにプロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。
+    + SQL テーブルから、格納されたモデルを呼び出すには、SELECT ステートメントを使用します。 モデルがテーブルから取得した**varbinary (max)** SQL 変数に格納されたデータを_@lmodel2_、およびパラメーターとして渡された*mod*格納されているシステムにプロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。
 
-    + スコアリングは SQL クエリとして定義され、SQL 変数内の文字列として格納されているために、入力として使用されるデータ _@input_です。 データは、データベースから取得したと呼ばれるデータ フレームで保存され*InputDataSet*への入力データの既定の名前だけである、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャを定義できます別の変数名、パラメーターを使用して必要な場合は *_@input_data_1_name_* です。
+    + スコア付けは SQL クエリとして定義され、文字列として、SQL 変数に格納されているは、入力として使用されるデータ _@input_します。 呼ばれるデータ フレームに格納されているように、データベースからデータを取得すると、 *InputDataSet*への入力データの既定の名前だけである、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャを定義できます別の変数名、パラメーターを使用して必要な場合は *_@input_data_1_name_* します。
 
     + スコアを生成するために、ストアド プロシージャは `rxPredict` RevoScaleR **ライブラリの** 関数を呼び出します。
 
-    + 戻り値、*スコア*、確率、ドライバーを特定のモデル、ヒントを取得します。 必要に応じて、戻り値を「ヒント」と「ヒントなし」グループに分類する戻り値を簡単にいくつかの種類のフィルターを適用する可能性があります。  たとえば、0.5 未満の確率ことになりますが、ヒントはほとんどありません。
+    + 戻り値、*スコア*、確率、そのドライバー モデルを指定するには、ヒントを取得します。 必要に応じて、ある種のフィルターは、戻り値を「ヒント」と「チップなし」グループに分類に返される値を簡単に適用できます。  たとえば、確率が 0.5 よりも小さいでは、ヒントはほとんどありませんが意味します。
   
-2.  バッチ モードでストアド プロシージャを呼び出すには、ストアド プロシージャへの入力として必要なクエリを定義します。 次に、SQL クエリです。動作することを確認する SSMS で実行することができます。
+2.  バッチ モードでは、ストアド プロシージャを呼び出して、ストアド プロシージャへの入力として必要なクエリを定義します。 次に、SQL クエリ。SSMS の動作の確認をで実行することができます。
 
     ```SQL
     SELECT TOP 10
@@ -95,23 +95,23 @@ ms.locfileid: "31204184"
     q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
     ```
 
-4. R からストアド プロシージャを実行する呼び出し、 **sqlQuery**のメソッド、 **RODBC**パッケージ化し、SQL 接続を使用して`conn`前に定義します。
+4. ストアド プロシージャ R からを実行するには、呼び出し、 **sqlQuery**のメソッド、 **RODBC**パッケージ化し、SQL 接続を使用して、`conn`前に定義します。
 
     ```R
     sqlQuery (conn, q);
     ```
 
-    ODBC エラーが発生した場合は、クエリの構文を確認し、正しい数の引用符があるかどうか。 
+    ODBC エラーが発生する場合は、クエリの構文を確認し、適切な数の引用符があるかどうか。 
     
-    アクセス許可エラーが発生した場合は、ログインが、ストアド プロシージャを実行する機能を確認します。
+    アクセス許可エラーが発生する場合は、ログインには、ストアド プロシージャを実行する機能を確認します。
 
-## <a name="single-row-scoring"></a>1 つの行のスコア付け
+## <a name="single-row-scoring"></a>単一行のスコアリング
 
-行ごとに予測モデルを呼び出すときに、一連の個別のケースごとの機能を表す値を渡します。 ストアド プロシージャは、単一予測または確率を返します。 
+行ごとに予測モデルを呼び出すときに、一連の個別の各ケースの機能を表す値を渡します。 ストアド プロシージャは、1 つの予測と確率を返します。 
 
-ストアド プロシージャ*PredictTipSingleMode*この方法を示します。 これは、入力特徴値 (たとえば、座席数とトリップ距離) を表す複数のパラメーター、スコア ストアド R モデルを使用してこれらの機能およびヒント確率を出力します。
+ストアド プロシージャ*PredictTipSingleMode*この方法を示します。 これは、入力特徴値 (たとえば、乗客数、乗車距離) を表す複数のパラメーター、スコアを格納された R モデルを使用してこれらの機能、およびヒント確率を出力します。
 
-1. 場合、ストアド プロシージャ*PredictTipSingleMode*は作成されませんでした、初期の PowerShell スクリプトでは、今すぐ作成する次の TRANSACT-SQL ステートメントを実行することができます。
+1. 場合、ストアド プロシージャ*PredictTipSingleMode*は作成されませんでした、初期の PowerShell スクリプトによって、今すぐ作成するのには、次の TRANSACT-SQL ステートメントを実行することができます。
 
     ```tsql
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
@@ -165,21 +165,21 @@ ms.locfileid: "31204184"
     END
     ```
 
-2. SQL Server Management Studio で使用することができます、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC**プロシージャ (または**EXECUTE**) ストアド プロシージャを呼び出すし、必須の入力を渡すことにします。 たとえば、Management Studio でこのステートメントを実行してください。
+2. SQL Server Management studio で使用することができます、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC**プロシージャ (または**EXECUTE**)、ストアド プロシージャを呼び出すし、必要な入力を渡すことにします。 たとえば、Management Studio でこのステートメントを実行してみてください。
 
     ```SQL
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    ここに渡された値は、それぞれ、変数の_乗客\_カウント_、 _trip_distance_、_トリップ\_時間\_で\_秒_、_ピックアップ\_緯度_、_ピックアップ\_経度_、 _dropoff\_緯度_、および_dropoff\_経度_です。
+    ここで渡される値は、それぞれ、変数の_乗客\_カウント_、 _trip_distance_、_トリップ\_時間\_で\_秒_、 _pickup\_緯度_、 _pickup\_経度_、_降車\_緯度_、および_降車\_経度_します。
 
-3. R コードでこの同じ呼び出しを実行するには、だけを次のような全体のストアド プロシージャの呼び出しを含む R 変数を定義します。
+3. R コードからこの同じ呼び出しを実行するには、次のような全体のストアド プロシージャの呼び出しを含む R 変数の定義だけです。
 
     ```R
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    ここに渡された値は、それぞれ、変数の_乗客\_カウント_、_トリップ\_距離_、_トリップ\_時間\_で\_秒_、_ピックアップ\_緯度_、_ピックアップ\_経度_、 _dropoff\_緯度_、および_dropoff\_経度_です。
+    ここで渡される値は、それぞれ、変数の_乗客\_カウント_、_トリップ\_距離_、_トリップ\_時間\_で\_秒_、 _pickup\_緯度_、 _pickup\_経度_、_降車\_緯度_、および_降車\_経度_します。
 
 4. 呼び出す`sqlQuery`(から、 **RODBC**パッケージ) ストアド プロシージャの呼び出しを含む文字列変数と共に、接続文字列を渡します。
 
@@ -189,15 +189,15 @@ ms.locfileid: "31204184"
     ```
 
     >[!TIP]
-    > SQL Server と R. の両方の優れた統合を提供する R ツールの Visual Studio (RTVS)SQL Server 接続 RODBC の併用の例については、この記事を参照してください: [SQL Server と R を使用します。](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
+    > R Tools for Visual Studio (RTVS) は、SQL Server と R. の両方の優れた統合を提供します。RODBC を使用して、SQL Server 接続の例については、この記事を参照してください: [SQL Server と R の使用](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
 
-操作する方法を習得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データをトレーニング済みの R モデルを永続化と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このデータ セットに基づく新しいモデルを作成するには比較的簡単にする必要があります。 たとえば、これらの追加のモデルを作成してみてください可能性があります。
+操作する方法を学習する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データをトレーニング済みの R モデルを永続化と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このデータ セットに基づく新しいモデルを作成するには比較的簡単である必要があります。 たとえば、これらの追加のモデルを作成してみてください可能性があります。
 
 - チップの金額を予測する回帰モデル
 
-- 先端が大きな、中、または小さいかどうかを予測する多クラス分類モデル
+- ヒントは、ビッグ、中、または小さいかどうかを予測する多クラス分類モデル
 
 これらの追加のサンプルおよびリソースの一部を確認することもお勧めします。
 
@@ -213,8 +213,8 @@ ms.locfileid: "31204184"
 
 [R モデルを構築し、SQL Server に保存](walkthrough-build-and-save-the-model.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server R チュートリアル](sql-server-r-tutorials.md)
 
-[Sqlrutils を使用して、ストアド プロシージャを作成する方法](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+[Sqlrutils を使用してストアド プロシージャを作成する方法](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)

@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、およびデータベースの削除 |Microsoft ドキュメント
+title: 作成、変更、およびデータベースの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 704588d27405070f4598640866658033a85bd818
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967647"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020050"
 ---
 # <a name="creating-altering-and-removing-databases"></a>データベースの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32967647"
  修正または削除のために、<xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトを作成する必要はありません。 データベースは、コレクションを使用して参照することができます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>Visual Basic でのデータベースの作成、変更、および削除  
  このコード例では、新しいデータベースを作成します。 このデータベースに対し、ファイルおよびファイル グループが自動的に作成されます。  

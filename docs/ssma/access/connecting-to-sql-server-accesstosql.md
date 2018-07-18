@@ -1,5 +1,5 @@
 ---
-title: SQL Server (AccessToSQL) への接続 |Microsoft ドキュメント
+title: SQL Server (AccessToSQL) への接続 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,82 +28,82 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8130650ac55171207ab663b40a73a5940efc112b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 085d42cc6401f665269610c18f44516f5afe7a83
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773368"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981624"
 ---
-# <a name="connecting-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL) に接続します。
-Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のターゲット インスタンスに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 SSMA がのインスタンス内のデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でデータベースのメタデータを表示および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続しているが、パスワードは保存されません。  
+# <a name="connecting-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL) への接続
+Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のターゲット インスタンスに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 SSMA がのインスタンス内のデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でデータベースのメタデータを表示および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が、接続先は、パスワードを保存しないことです。  
   
-プロジェクトを閉じるまで、SQL Server への接続がアクティブな保たれます。 プロジェクトを再度開くと、アクティブなサーバーに接続する場合 SQL Server に再接続する必要があります。 SQL Server にデータベース オブジェクトを読み込むし、データを移行するまで、オフライン作業できます。  
+SQL Server への接続をプロジェクトを終了するまでアクティブに保ちます。 プロジェクトを再度開くと、サーバーにアクティブに接続する場合に SQL Server に再接続する必要があります。 SQL Server にデータベース オブジェクトを読み込むし、データを移行するまで、オフライン使用できます。  
   
-SQL Server のインスタンスに関するメタデータが自動的に同期されていません。 代わりに、SQL Server メタデータ エクスプ ローラー内のメタデータを更新するには、SQL Server のメタデータを手動で更新する必要があります。 詳細については、このトピックの後半の「SQL Server のメタデータの同期」セクションを参照してください。  
+SQL Server のインスタンスに関するメタデータは、自動的に同期されません。 代わりに、SQL Server メタデータ エクスプ ローラー内のメタデータを更新するには、SQL Server のメタデータを手動で更新する必要があります。 詳細については、このトピックの「「SQL Server のメタデータの同期」セクションを参照してください。  
   
 ## <a name="required-sql-server-permissions"></a>必要な SQL Server のアクセス許可  
-接続に使用されるアカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]そのアカウントで実行されるアクションに応じて異なるアクセス許可が必要です。  
+接続に使用されるアカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]そのアカウントで実行されるアクションに応じて、さまざまなアクセス許可が必要です。  
   
--   アクセス オブジェクトに変換する[!INCLUDE[tsql](../../includes/tsql_md.md)]からメタデータを更新する、構文[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、またはスクリプトに変換された構文を保存するアカウントがのインスタンスにログインする権限を持って[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+-   アクセス オブジェクトに変換する[!INCLUDE[tsql](../../includes/tsql_md.md)]からメタデータを更新する構文、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、か、アカウントをスクリプトに変換された構文を保存するのインスタンスにログインする権限を持って必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
   
--   データベース オブジェクトに読み込むために[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]とデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、最小のアクセス許可の要件は、メンバーシップ、 **db_owner**ターゲット データベースのデータベース ロール。  
+-   データベース オブジェクトに読み込むために[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]とデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、アクセス許可の最小要件は、メンバーシップ、 **db_owner**ターゲット データベースのデータベース ロール。  
   
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
-データベース オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Access データベースを移行します。  
+Access データベースのオブジェクトに変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を Access データベースを移行します。  
   
-接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 接続した後は、データベース レベルのアクセスには、このマッピングをカスタマイズすることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください[マッピング ソースとターゲット データベース。](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、データベース レベルのアクセスには、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 詳細については、次を参照してください[マッピング ソースとターゲット データベース。](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 > [!IMPORTANT]  
-> 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、ことを確認して、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が実行されていると、接続を受け入れることができます。 詳細については、次を参照してください。"に接続する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース エンジン"の[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブック。  
+> 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が実行されていると、接続を受け入れることができます。 詳細については、次を参照してください。"への接続、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース エンジン"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブックの「します。  
   
 **SQL Server に接続するには**  
   
-1.  **ファイル**メニューの  **SQL Server への接続**です。  
+1.  **ファイル**メニューの  **SQL サーバーへの接続**します。  
   
-    接続されていた場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、コマンド名になります**SQL Server に再接続**です。  
+    以前に接続されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、コマンドの名前になります**SQL Server に再接続**します。  
   
-2.  **サーバー名**ボックス入力するかのインスタンスの名前を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+2.  **サーバー名**ボックス、入力のインスタンスの名前を選択するか[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
   
     -   ローカル コンピューターの既定のインスタンスに接続する場合は、入力**localhost**またはドット (**.**)。  
   
-    -   別のコンピューターの既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
+    -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   
-    -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュとインスタンス名を入力します。 例: myserver \myinstance です。  
+    -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュ、およびインスタンス名を入力します。 例: \myinstance します。  
   
-    -   アクティブなユーザー インスタンスへの接続に[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]、名前付きパイプを使用して接続プロトコル、パイプ名をなどを指定して\\ \\.\pipe\sql\query です。 詳細については、[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のドキュメントを参照してください。  
+    -   アクティブなユーザー インスタンスに接続する[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]、名前付きパイプを使用して接続プロトコルと、パイプ名を指定するよう\\ \\.\pipe\sql\query します。 詳細については、[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のドキュメントを参照してください。  
   
-3.  場合、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既定以外のポートで接続を受け入れる、使用されるポート番号を入力するように構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]内の接続、**サーバー ポート**ボックス。 既定のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既定のポート番号は 1433 です。 名前付きインスタンスは、SSMA はからのポート番号の取得を試みます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser サービス。  
+3.  場合、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既定以外のポートで接続を受け入れる、使用されるポート番号を入力するように構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]内の接続、**サーバー ポート**ボックス。 既定のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既定のポート番号は 1433 です。 名前付きインスタンスは、SSMA は、ポート番号の取得を試みます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser サービス。  
   
-4.  **データベース**ボックスで、オブジェクトおよびデータ移行のターゲット データベースの名前を入力します。  
+4.  **データベース**ボックスに、オブジェクトとデータの移行のターゲット データベースの名前を入力します。  
   
-    このオプションに再接続するときは使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+    このオプションに再接続する場合は使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
   
-    ターゲット データベース名には、スペースや特殊文字を含めることはできません。 たとえばに Access データベースを移行できます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "abc"という名前のデータベースです。 Access データベースを移行することはできませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース"、b、c"をという名前です。  
+    ターゲット データベース名には、スペースや特殊文字を含めることはできません。 Access データベースを移行するなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "abc"という名前のデータベース。 Access データベースを移行することはできませんが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "、b、c"という名前のデータベース。  
   
-    接続した後、データベースごとには、このマッピングをカスタマイズすることができます。 詳細については、次を参照してください[マッピング ソースとターゲット データベース。](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+    接続した後は、データベースごとには、このマッピングをカスタマイズできます。 詳細については、次を参照してください[マッピング ソースとターゲット データベース。](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
-5.  **認証**ドロップダウン メニューで、接続に使用する認証の種類を選択します。 現在の Windows アカウントを使用するのには、選択**Windows 認証**です。 使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ログインで、 **SQL Server 認証**、ユーザー名とパスワードを指定します。  
+5.  **認証**ドロップダウン メニューで、接続に使用する、認証の種類を選択します。 現在の Windows アカウントを使用する**Windows 認証**します。 使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ログインで、 **SQL Server 認証**、およびユーザー名とパスワードを入力します。  
   
-6.  セキュリティで保護された接続の場合は、2 つのコントロールが追加、**暗号化接続** チェック ボックスと**TrustServerCertificate**チェック ボックスをオンします。 場合にのみ**暗号化接続**チェック ボックスをオン**TrustServerCertificate**  チェック ボックスが表示されます。 ときに**暗号化接続**は checked(true) と**TrustServerCertificate** unchecked(false) は、SQL Server の SSL 証明書を検証します。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを実現するのには、証明書をクライアント側およびサーバー側でにインストールする必要があります。  
+6.  セキュリティで保護された接続は、2 つのコントロールを追加、**暗号化接続**チェック ボックスと**TrustServerCertificate**チェック ボックスをオンします。 場合にのみ**暗号化接続**チェック ボックスをオン**TrustServerCertificate**チェック ボックスが表示されます。 ときに**暗号化接続**checked(true) と**TrustServerCertificate** unchecked(false) は、SQL Server の SSL 証明書を検証します。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを確実にクライアント側およびサーバー側で、証明書をインストールする必要があります。  
   
 7.  **[接続]** をクリックします。  
   
 **高いバージョンの互換性**  
   
-以降のバージョンの SQL Server への接続または再接続することができます。  
+以降のバージョンの SQL Server に接続または再接続することができます。  
   
-1.  作成されたプロジェクトが SQL Server 2005、SQL Server 2008 または SQL Server 2012 に接続することができます。  
+1.  作成したプロジェクトが SQL Server 2005、SQL Server 2008 または SQL Server 2012 に接続することができます。  
   
-2.  作成されたプロジェクトは、SQL Server 2008 が低いバージョンなどの SQL Server 2005 に接続することはできません、SQL Server 2012 に接続することができます。  
+2.  作成したプロジェクトは SQL Server 2008 ですが、下位バージョンの SQL Server 2005 つまりへの接続に許可されていない場合は、SQL Server 2012 に接続することができます。  
   
-3.  作成されたプロジェクトが SQL Server 2012、SQL Server 2012 のみに接続することができます。  
+3.  作成したプロジェクトが SQL Server 2012、SQL Server 2012 のみに接続することができます。  
   
 4.  SQL Azure の高いバージョンの互換性が正しくありません。  
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**プロジェクトの種類と対象サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 (バージョン: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 (バージョン: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 (Version:13.x)|SQL Azure|  
+|**プロジェクトの種類とターゲット サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 (バージョン: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 (バージョン: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 (Version:13.x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|はい|はい|はい|はい|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||はい|はい|はい|はい||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||はい|はい|はい||
@@ -112,23 +112,23 @@ SQL Server のインスタンスに関するメタデータが自動的に同期
 |SQL Azure||||||はい|
   
 > [!IMPORTANT]  
-> 接続されている SQL Server のバージョンに従っていませんが、プロジェクトの種類に従って、データベース オブジェクトの変換を実施します。 SQL Server 2005 プロジェクトが発生した場合の変換は実行がに従って SQL Server 2005 を SQL Server (SQL Server 2008/SQL Server 2012]/[SQL Server 2014/SQL Server 2016) の上位バージョンに接続している場合でもです。  
+> データベース オブジェクトの変換は、接続して SQL Server のバージョンに従っていませんが、プロジェクトの種類に従ってに行われます。 SQL Server 2005 のプロジェクトが発生した場合の変換はに従って SQL Server 2005 以上のバージョンの SQL Server (SQL Server 2008/SQL Server 2012 または SQL Server 2014/SQL Server 2016) に接続している場合でも実行されます。  
   
-## <a name="synchronizing-sql-server-metadata"></a>SQL Server メタデータを同期します。  
+## <a name="synchronizing-sql-server-metadata"></a>SQL サーバーのメタデータの同期  
 場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]スキーマを変更する接続した後、サーバーと、メタデータを同期することができます。  
   
-**SQL Server のメタデータを同期するために**  
+**SQL Server のメタデータを同期するには**  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーで、右クリック**データベース**、し、**データベースと同期する**です。  
   
-## <a name="reconnecting-to-sql-server"></a>SQL Server への再接続  
-接続を[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]プロジェクトを終了するまでアクティブに保ちます。 プロジェクトを開くときにに再接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]アクティブなサーバーに接続する場合。 データベース オブジェクトが読み込まれるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]とデータを移行します。  
+## <a name="reconnecting-to-sql-server"></a>SQL Server に再接続  
+接続を[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]プロジェクトを終了するまでアクティブに保ちます。 プロジェクトを開くときにに再接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]する場合は、サーバーにアクティブに接続します。 データベース オブジェクトが読み込まれるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]しデータを移行します。  
   
 再接続プロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]接続を確立するための手順と同じです。  
   
 ## <a name="next-steps"></a>次の手順  
-ソースとターゲット データベースの間のマッピングをカスタマイズする場合は、「[マッピング ソースとターゲット データベース](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)するデータベース オブジェクトに変換する、次の手順は、それ以外の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文を使用して[変換データベース オブジェクト](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+ソースとターゲット データベースの間のマッピングをカスタマイズする場合は、「[マッピング ソースとターゲット データベース](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)データベース オブジェクトに変換する次手順は、それ以外の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文を使用して[変換データベース オブジェクト](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

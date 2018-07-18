@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_fulltext_system_components (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019990"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  登録済みのワード ブレーカー、フィルター、およびプロトコル ハンドラーの情報を返します。 **sp_help_fulltext_system_components**データベースや、指定されたコンポーネントを使用して、フルテキスト カタログの識別子の一覧も返します。  
+  登録済みのワード ブレーカー、フィルター、およびプロトコル ハンドラーの情報を返します。 **sp_help_fulltext_system_components**もデータベースや、指定したコンポーネントを使用しているフルテキスト カタログの識別子の一覧を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_help_fulltext_system_components
  すべてのフルテキスト コンポーネントについての情報を返します。  
   
  [ **@component_type=** ] *component_type*  
- コンポーネントの種類を指定します。 *component_type*次のいずれかになります。  
+ コンポーネントの種類を指定します。 *component_type*次のいずれかを指定できます。  
   
 -   **wordbreaker**  
   
@@ -61,7 +61,7 @@ sp_help_fulltext_system_components
   
 -   **fullpath**  
   
- 完全パスを指定すると場合、 *param* DLL コンポーネントへの完全パスでも指定する必要がありますまたはエラー メッセージが返されます。  
+ 完全なパスが指定されている場合*param* DLL コンポーネントへの完全パスも指定する必要がありますまたはエラー メッセージが返されます。  
   
  [ **@param=** ] *param*  
  コンポーネントの種類に応じて、ロケール識別子 (LCID)、"." プレフィックス付きのファイル拡張子、プロトコル ハンドラーの完全なコンポーネント名、または DLL コンポーネントへの完全なパスのいずれかを指定します。  
@@ -72,7 +72,7 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>結果セット  
  システム コンポーネントについて、次の結果セットが返されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|コンポーネントの型。 次のいずれかです。<br /><br /> フィルター (filter)<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|コンポーネント名。|  
@@ -81,17 +81,17 @@ sp_help_fulltext_system_components
 |**version**|**nvarchar(30)**|コンポーネントのバージョンです。|  
 |**manufacturer**|**sysname**|コンポーネントの製造元の名前。|  
   
- 1 つがある場合にのみ、次の結果セットが返されます、または 1 つ以上のフルテキスト カタログを使用してが存在する*component_type*です。  
+ 1 つがある場合にのみ、次の結果セットが返される、または 1 つ以上のフルテキスト カタログを使用してが存在する*component_type*します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|データベースの ID です。|  
-|**ftcatid**|**int**|フルテキスト カタログの ID です。|  
+|**ftcatid**|**int**|フルテキスト カタログの ID。|  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、**パブリック**ロールです。 ただし、のみを表示する対象の VIEW DEFINITION 権限がある、フルテキスト カタログに関する情報。 メンバーにのみ、 **serveradmin**に値が表示できる固定サーバー ロール、 **fullpath**列です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、**パブリック**ロールです。 ただし、ユーザーには VIEW DEFINITION 権限がある、フルテキスト カタログに関する情報が表示できるのみです。 メンバーのみ、 **serveradmin**固定サーバー ロールが内の値を参照してください、 **fullpath**列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  アップグレードの準備をする場合、このメソッドは特に重要です。 特定のデータベース内でこのストアド プロシージャを実行し、その結果を使用して、特定のカタログがアップグレードの影響を受けているかどうかを判断します。  
   
 ## <a name="examples"></a>使用例  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 特定のワード ブレーカーが登録されているかどうかを確認する  
- 次の例では、トルコ語 (LCID = 1055) がシステムにインストールされ、サービス インスタンスに登録されている場合のトルコ語のワード ブレーカーを一覧表示します。 この例は、パラメーター名を指定**@component_type**と **@param**です。  
+ 次の例では、トルコ語 (LCID = 1055) がシステムにインストールされ、サービス インスタンスに登録されている場合のトルコ語のワード ブレーカーを一覧表示します。 この例では、パラメーターの名前を指定します。 **@component_type**と **@param**します。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -143,9 +143,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [登録済みフィルターとワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+ [登録済みフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [フルテキスト検索およびセマンティック検索ストアド プロシージャの&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [フルテキスト検索およびセマンティック検索ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

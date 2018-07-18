@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services tutorial 補足のレッスン: 詳細行 |Microsoft ドキュメント'
+title: 'Analysis Services チュートリアル補足のレッスン: 詳細行 |Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,39 +10,39 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0518cdd7707c5973bfd055af997a75c9b67d7479
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045746"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017795"
 ---
-# <a name="supplemental-lesson---detail-rows"></a>補足のレッスンでは、詳細行
+# <a name="supplemental-lesson---detail-rows"></a>補足のレッスン - 詳細行
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-この補足のレッスンでは、カスタム詳細行の式を定義するのに DAX エディターを使用します。 詳細行式は、メジャーをプロパティの詳細については、メジャーの集計結果をエンドユーザーに提供します。 
+この補足のレッスンでは、カスタム詳細行の式を定義するのに DAX エディターを使用します。 詳細行の式はメジャーの集計された結果の詳細についてをエンドユーザーに提供する、メジャーのプロパティです。 
   
 このレッスンの推定所要時間: **10 分**  
   
 ## <a name="prerequisites"></a>前提条件  
 
-この補足のレッスン記事は、テーブル モデリング チュートリアルの一部です。 この補足のレッスンでは、タスクを実行する前に作成した前のレッスンをすべて完了した Adventure Works Internet Sales サンプル モデル プロジェクトがあるか。  
+この補足のレッスンの記事では、表形式モデルのチュートリアルの一部です。 この補足のレッスンの実習を行う前に作成した前のレッスンをすべて完了した Adventure Works Internet Sales サンプル モデル プロジェクトがあるか。  
   
-## <a name="whats-the-issue"></a>問題とは何ですか。
+## <a name="whats-the-issue"></a>この問題は何ですか。
 
 詳細行の式を追加する前に、InternetTotalSales メジャーの詳細を見てみましょう。
 
-1.  SSDT をクリックして、**モデル**メニュー > **Excel で分析**を Excel を開き、空のピボット テーブルを作成します。
+1.  SSDT で、**モデル**メニュー > **Excel で分析**する Excel を開き、空のピボット テーブルを作成します。
   
-2.  **ピボット テーブル フィールド**、追加、 **InternetTotalSales**メジャーには、FactInternetSales テーブルから**値**、 **CalendarYear** DimDate テーブルから**列**、および**EnglishCountryRegionName**に**行**です。 ピボット テーブルで、地域および年によって InternetTotalSales メジャーの集計結果できるようになりました。 
+2.  **ピボット テーブル フィールド**、追加、 **InternetTotalSales** FactInternetSales テーブルからメジャー**値**、 **CalendarYear**からDimDate テーブル**列**、および**EnglishCountryRegionName**に**行**します。 ピボット テーブルで、リージョンと年ごと InternetTotalSales メジャーから集計結果が、できるようになりました。 
 
     ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
-3. ピボット テーブルでは、年と地域名の集計値をダブルクリックします。 ここでは、オーストラリアと 2014 年の値をダブルクリックします。 データはいない有用なデータを含む新しいシートが開きます。
+3. ピボット テーブルでは、年およびリージョン名値を集計をダブルクリックします。 ここでは、Australia と 2014 年の値をダブルクリックします。 データが有用でないデータを格納している新しいシートが開きます。
 
     ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
-どのような表示する列と行の InternetTotalSales メジャーの集計の結果に影響を与えるデータを含むテーブルを次に示します。 そのためには、メジャーのプロパティとして詳細行の式を追加できます。
+今度は、InternetTotalSales メジャーの集計結果に寄与するデータの列と行を含むテーブルを参照してください。 そのためには、メジャーのプロパティとして詳細行の式を追加できます。
 
 ## <a name="add-a-detail-rows-expression"></a>詳細行の式を追加します。
 
@@ -50,7 +50,7 @@ ms.locfileid: "34045746"
   
 1. FactInternetSales テーブルのメジャー グリッドで、クリックして、 **InternetTotalSales**メジャーです。 
 
-2. **プロパティ** > **詳細行式**、DAX エディターを開く [エディター] をクリックします。
+2. **プロパティ** > **詳細行式**、DAX エディターを開くエディター ボタンをクリックします。
 
     ![as-lesson-detail-rows-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
@@ -69,13 +69,13 @@ ms.locfileid: "34045746"
 
     ```
 
-    この式は、列の名前を指定して、ユーザーがピボット テーブルまたはレポート内での集計の結果をダブルクリックすると、FactInternetSales テーブルと関連テーブルからメジャーの結果が返されます。
+    この式は、名前、列を指定し、FactInternetSales テーブルと関連テーブルからのメジャーの結果が返されるは、ユーザーがピボット テーブルまたはレポート内での集計の結果をダブルクリックするとします。
 
-4. 戻る Excel では、手順 3. で作成したシートを削除し、集計値をダブルクリックします。 このとき、メジャーの定義の詳細行の式のプロパティ、新しいシートが開きますよりずっと有用なデータを格納しています。
+4. Excel に戻って、手順 3 で作成したシートを削除し、集計の値をダブルクリックします。 今回は、詳細行の式プロパティにメジャーの定義、新しいシートが開きますより有用なデータを格納しています。
 
     ![as-lesson-detail-rows-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
-5. モデルを再展開します。
+5. モデルを再デプロイします。
 
   
 ## <a name="see-also"></a>参照  

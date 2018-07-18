@@ -1,6 +1,6 @@
 ---
-title: Red Hat Enterprise Linux に SQL Server 2017 の概要 |Microsoft ドキュメント
-description: このクイック スタートでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。
+title: Red Hat Enterprise Linux 上の SQL Server 2017 の概要 |Microsoft Docs
+description: このクイック スタートでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成および sqlcmd を使用したデータベースを照会する方法を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,16 +13,17 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020419"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート: SQL Server をインストールし、Red hat でデータベースを作成
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート: SQL Server をインストールし、Red Hat でデータベースを作成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このクイック スタートの最初をインストールする SQL Server 2017 に Red Hat Enterprise Linux (RHEL) 7.3 以降。 その次に **sqlcmd** を使用して、最初のデータベースへ接続し、クエリを実行します。
+このクイック スタートで最初にインストールする SQL Server 2017 で Red Hat Enterprise Linux (RHEL) 7.3 以降。 その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
 
 > [!TIP]
 > このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended) または [オフライン](sql-server-linux-setup.md#offline) インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/23/2018
 
 RHEL 7.3 または 7.4 マシンで **少なくとも 2 GB** のメモリが必要です。
 
-自分のコンピューター上の Red Hat Enterprise Linux をインストールするに移動[ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)です。 Azure で RHEL 仮想マシンを作成することもできます。 参照してください[作成と Azure CLI を使用して Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image RHEL`への呼び出しで`az vm create`です。
+自分のコンピューターで Red Hat Enterprise Linux をインストールするには[ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)します。 Azure で RHEL 仮想マシンを作成することもできます。 参照してください[の作成と Azure CLI を使用した Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image RHEL`への呼び出しで`az vm create`します。
 
 その他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system) を参照してください。
 
@@ -118,7 +119,7 @@ RHEL で SQL Server を構成するためには、ターミナルで次のコマ
 >
 > * [SQL Server Operations Studio (プレビュー)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)です。
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)します。
 > * [mssql-cli (プレビュー)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

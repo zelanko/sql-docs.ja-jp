@@ -1,5 +1,5 @@
 ---
-title: Linux 上の SQL Server の active Directory 認証 |Microsoft ドキュメント
+title: Linux 上の SQL Server の active Directory の認証 |Microsoft Docs
 description: この記事では、Linux 上の SQL Server の Active Directory 認証の概要を示します。
 author: rothja
 ms.date: 02/23/2018
@@ -14,11 +14,11 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 7f34cda192cbd909ac6c2392ab49acb58038b416
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34320933"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020494"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上の SQL Server の active Directory 認証
 
@@ -28,18 +28,18 @@ ms.locfileid: "34320933"
 
 ## <a name="ad-authentication-overview"></a>AD 認証の概要
 
-AD の認証により、クライアントへの認証に Windows または Linux ではドメインに参加している[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメイン資格情報と、Kerberos プロトコルを使用します。
+AD 認証を使用への認証に Windows または Linux 上のクライアントのドメインに参加している[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメイン資格情報と、Kerberos プロトコルを使用します。
 
 AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証に対して次の利点があります。
 
-- ユーザーは、パスワードの入力を求められず、シングル サインオンを使用して認証します。   
+- ユーザーは、パスワードを入力することがなくシングル サインオンを使用して認証できます。   
 - AD グループのログインを作成すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD グループのメンバーシップを使用してアクセスおよびアクセス許可を管理することができます。  
 - 各ユーザーが組織全体で単一の ID を持っているので、どの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインがどのユーザーに対応するかを追跡する必要がありません。   
 - AD では、組織全体で一元的なパスワード ポリシーを適用することができます。   
 
 ## <a name="configuration-steps"></a>構成手順
 
-Active Directory 認証を使用するために、ネットワーク上に AD ドメイン コント ローラー (Windows) が必要です。
+Active Directory 認証を使用するには、ネットワーク上に AD ドメイン コント ローラー (Windows) が必要です。
 
 AD の認証を構成する方法の詳細については、チュートリアルの中の [チュートリアル: SQL Server on Linux で使用する Active Directory 認証](sql-server-linux-active-directory-authentication.md) で説明されています。 このチュートリアルでの各セクションへのリンクの概要を次に示します。
 
@@ -51,7 +51,7 @@ AD の認証を構成する方法の詳細については、チュートリア�
 
 ## <a name="known-issues"></a>既知の問題
 
-- この時点では、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は、証明書です。 WINDOWS 認証方法は、将来のリリースで有効にするされます。
+- この時点では、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は、証明書です。 将来のリリースでは、WINDOWS 認証方法を有効になります。
 - Centrify、Powerbroker および Vintela などのサード パーティ製 AD ツールはサポートされていません。
 
 ## <a name="next-steps"></a>次の手順

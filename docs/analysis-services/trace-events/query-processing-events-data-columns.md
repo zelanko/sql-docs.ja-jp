@@ -1,5 +1,5 @@
 ---
-title: クエリ処理イベントのデータ列 |Microsoft ドキュメント
+title: クエリ イベントのデータ列の処理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8c0222c19d1f21e130f342f689ebb72cc8c0fda7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045536"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017599"
 ---
 # <a name="query-processing-events-data-columns"></a>クエリ処理イベントのデータ列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
