@@ -1,5 +1,5 @@
 ---
-title: DiscretizationMethod 要素 (ASSL) |Microsoft ドキュメント
+title: DiscretizationMethod 要素 (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 81064689788574061f103b973a5435beb3e83893
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34036413"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002204"
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "34036413"
 |親要素|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)、 [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
- 値、 **DiscretizationMethod**要素を決定する方法の値を**DimensionAttribute**または**ScalarMiningStructureColumn**分離されるか、構成されています特定のグループ セットにします。 分離メソッドの詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)です。  
+## <a name="remarks"></a>コメント  
+ 値、 **DiscretizationMethod**要素を決定する方法の値を**DimensionAttribute**または**ScalarMiningStructureColumn**分離されるか、構成されています特定のグループ セットにします。 分離メソッドの詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)します。  
   
  この要素の値は、次の表のいずれかの文字列に制限されます。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "34036413"
 |-----------|-----------------|  
 |*自動*|マイニング構造列における AUTOMATIC 分離メソッドに相当します。|  
 |*EqualAreas*|マイニング構造列における EQUAL_AREAS 分離メソッドに相当します。|  
-|*Clusters*|マイニング構造列における CLUSTERS 分離メソッドに相当します。|  
+|*クラスター*|マイニング構造列における CLUSTERS 分離メソッドに相当します。|  
 |*しきい値*|マイニング構造列における THRESHOLDS 分離メソッドに相当します。|  
 |*EqualRanges*|マイニング構造列における EQUAL_RANGES 分離メソッドに相当します。|  
   
- 許可される値に対応する列挙**DiscretizationMethod**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DiscretizationMethod>します。  
+ 許容された値に対応する列挙**DiscretizationMethod**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DiscretizationMethod>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

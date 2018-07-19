@@ -1,6 +1,6 @@
 ---
-title: SQL Server on Linux のペース クラスターの展開 |Microsoft ドキュメント
-description: このチュートリアルでは、SQL Server on Linux のペース クラスターを展開する方法を示します。
+title: SQL Server on Linux の Pacemaker クラスターのデプロイ |Microsoft Docs
+description: このチュートリアルでは、SQL Server on Linux の Pacemaker クラスターをデプロイする方法を示します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -12,27 +12,28 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 239d4418c5e7d59a980d9028e2533dd9d7a2c566
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001834"
 ---
-# <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux のペース クラスターを展開します。
+# <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux の Pacemaker クラスターをデプロイします。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このチュートリアルのドキュメントの Linux ペース クラスターを展開に必要なタスク、 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 可用性グループ (AG) またはフェールオーバー クラスター インスタンス (FCI)。 密に結合された Windows Server とは異なり/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]前に、またはのインストール後、スタック ペース クラスターの作成に加え、Linux 上の可用性グループ (AG) の構成を行うことができます[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]です。 クラスターを構成した後、統合とペース部分では、可用性グループまたは FCI の展開のリソースの構成は行われます。
+このチュートリアル用の Linux の Pacemaker クラスターをデプロイに必要なタスクのドキュメントを[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Always On 可用性グループ (AG) またはフェールオーバー クラスター インスタンス (FCI)。 密結合の Windows Server とは異なり/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]のインストールの前後に、Linux 上の可用性グループ (AG) の構成だけでなく、スタック、Pacemaker クラスターの作成を行うことができます[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]します。 クラスターを構成した後、統合と、Pacemaker 部分では、AG または FCI の展開のリソースの構成が行われます。
 > [!IMPORTANT]
-> クラスター型なしの可用性グループは*いない*ペース クラスターでは、必要なもそのペースで管理することができます。 
+> None のクラスターの種類で、AG は*いない*Pacemaker クラスターを必要ともその Pacemaker で管理することができます。 
 
 > [!div class="checklist"]
-> * 高可用性アドオンをインストールし、ペースをインストールします。
-> * ペース (RHEL および Ubuntu のみ) 用のノードを準備します。
-> * ペース クラスターを作成します。
-> * SQL Server HA と SQL Server エージェントのパッケージをインストールします。
+> * 高可用性アドオンをインストールし、Pacemaker をインストールします。
+> * Pacemaker (RHEL および Ubuntu のみ) 用のノードを準備します。
+> * Pacemaker クラスターを作成します。
+> * SQL Server の HA および SQL Server エージェントのパッケージをインストールします。
  
 ## <a name="prerequisite"></a>前提条件
-[SQL Server 2017 インストール](sql-server-linux-setup.md)です。
+[SQL Server 2017 インストール](sql-server-linux-setup.md)します。
 
 ## <a name="install-the-high-availability-add-on"></a>高可用性アドオンをインストールします。
 Linux の各配布用の高可用性 (HA) アドオンを構成するパッケージをインストールするのにには、次の構文を使用します。 
@@ -50,21 +51,21 @@ Linux の各配布用の高可用性 (HA) アドオンを構成するパッケ�
     sudo subscription-manager list --available
     ```
 
-3.  RHEL 高可用性をサブスクリプションに関連付けるには、次のコマンドを実行します。
+3.  RHEL の高可用性をサブスクリプションに関連付けるには、次のコマンドを実行します。
     
     ```bash
     sudo subscription-manager attach --pool=<PoolID>
     ```
     
-    ここで*PoolId*前の手順から高可用性サブスクリプション プール id を指定します。
+    場所*PoolId*は、前の手順から高可用性のサブスクリプションのプールの ID です。
     
-4.  高可用性のアドオンを使用することができるリポジトリを有効にします。
+4.  高可用性アドオンを使用できるリポジトリを有効にします。
     
     ```bash
     sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
     ```
     
-5.  ペースをインストールします。
+5.  Pacemaker をインストールします。
     
     ```bash
     sudo yum install pacemaker pcs fence-agents-all resource-agents
@@ -78,19 +79,19 @@ sudo apt-get install pacemaker pcs fence-agents resource-agents
 
 **SUSE Linux Enterprise Server (SLES)**
 
-YaST で高可用性のパターンをインストールまたはサーバーの主なインストールの一部として実行します。 ソースとして、またはオンライン取得することによって、ISO または DVD をインストールを実行できます。
+YaST で高可用性のパターンをインストールすることも、サーバーのメインのインストールの一部としての操作を行います。 ソースとして、またはオンライン取得することによって、ISO または DVD をインストールを実行できます。
 > [!NOTE]
-> SLES、HA アドオンを取得、クラスターの作成時に初期化します。
+> HA アドオン SLES、クラスターの作成時に初期化を取得します。
 
-## <a name="prepare-the-nodes-for-pacemaker-rhel-and-ubuntu-only"></a>ペース (RHEL および Ubuntu のみ) のノードを準備します。
-ペース自体は、という名前の配布で作成されたユーザーを使用して*hacluster*です。 RHEL および Ubuntu に HA アドオンがインストールされているときに、ユーザーが作成されます。
-1. ペース クラスターのノードとして使用する各サーバーでは、クラスターで使用するユーザーのパスワードを作成します。 例で使用される名前は*hacluster*が任意の名前を使用できます。 ユーザー名とパスワードをペース クラスターに参加しているすべてのノードで同じにする必要があります。
+## <a name="prepare-the-nodes-for-pacemaker-rhel-and-ubuntu-only"></a>Pacemaker (RHEL および Ubuntu のみ) 用のノードを準備します。
+Pacemaker は、という名前のディストリビューションに作成されたユーザーを使用して*hacluster*します。 HA アドオンが RHEL および Ubuntu にインストールされているときに、ユーザーが作成されます。
+1. Pacemaker クラスターのノードとして使用する各サーバーでは、クラスターで使用されるユーザーのパスワードを作成します。 例で使用する名前は*hacluster*が任意の名前を使用できます。 名とパスワードは、Pacemaker クラスターに参加しているすべてのノードで同じである必要があります。
    
     ```bash
     sudo passwd hacluster
     ```
     
-2. ペース クラスターの一部となる各ノードで有効にして、開始、 `pcsd` (RHEL と Ubuntu) は、次のコマンドでサービス。
+2. Pacemaker クラスターの一部となる各ノードで有効にして、開始、`pcsd`サービスに、次のコマンド (RHEL と Ubuntu)。
 
    ```bash
    sudo systemctl enable pcsd
@@ -104,7 +105,7 @@ YaST で高可用性のパターンをインストールまたはサーバーの
    ```
    
    いることを確認する`pcsd`が開始します。
-3. ペース クラスターの考えられる各ノードのペース サービスを有効にします。
+3. Pacemaker クラスターの各ノード上の Pacemaker サービスを有効にします。
    
    ```bash
    sudo systemctl start pacemaker
@@ -112,15 +113,15 @@ YaST で高可用性のパターンをインストールまたはサーバーの
 
    Ubuntu では、エラー参照してください。
    
-   *既定の開始のペースには、ランレベル、中止が含まれていません。*
+   *pacemaker 既定の開始にはには、中止ランレベルが含まれていません。*
    
-   このエラーは、既知の問題です。 エラーに関係なくペース サービスを有効にすると成功し、このバグがある時点で今後修正できます。
+   このエラーは、既知の問題です。 エラーに関係なくは成功しますが、Pacemaker サービスを有効にしてこのバグをいくつかの時点で、将来修正されます。
    
-4. 次に、作成し、ペース クラスターを起動します。 この手順で RHEL と Ubuntu の間で 1 つの相違があります。 両方の配布中に次のようにインストールします。 `pcs` RHEL、このコマンドを実行する上で、ペース クラスターの既存の構成を破棄するのは、既定の構成ファイルを構成し、新しいクラスターを作成します。
+4. 次に、作成し、Pacemaker クラスターを起動します。 この手順で RHEL と Ubuntu の 1 つの違いがあります。 インストール中には、両方のディストリビューション`pcs`RHEL、このコマンドを実行する上で、Pacemaker クラスターの既存の構成を破棄するために既定の構成ファイルを構成し、新しいクラスターを作成します。
 
 <a id="create"></a>
-## <a name="create-the-pacemaker-cluster"></a>ペース クラスターを作成します。 
-このセクションでは、それぞれの Linux ディストリビューションのクラスターを作成および構成方法を説明します。
+## <a name="create-the-pacemaker-cluster"></a>Pacemaker クラスターを作成します。 
+このセクションでは、作成し、各配布の Linux クラスターを構成する方法を説明します。
 
 **RHEL**
 
@@ -130,79 +131,79 @@ YaST で高可用性のパターンをインストールまたはサーバーの
    sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
    ```
    
-   ここで*NodeX*ノードの名前を指定します。
+   場所*NodeX*ノードの名前を指定します。
 2. クラスターを作成する。
    
    ```bash
    sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable
    ```
    
-   ここで*PMClusterName*ペース クラスターに割り当てられた名前と*Nodelist*をスペースで区切られたノードの名前の一覧を示します。
+   場所*PMClusterName* Pacemaker クラスターに割り当てられた名前と*Nodelist*スペースで区切られたノードの名前の一覧を示します。
 
 **Ubuntu**
 
-Ubuntu の構成は、RHEL に似ています。 ただし、1 つの主要な相違がある: クラスター、および有効と開始の基本構成を作成するペース パッケージをインストールする`pcsd`です。 エラーが発生した場合は、RHEL 説明下手順に従って正確にペース クラスターを構成しようとすると、します。 この問題を解決するには、次の手順を実行します。 
-1. 各ノードからペースの既定の構成を削除します。
+Ubuntu の構成は、RHEL に似ています。 ただし、1 つの主な違いがある: クラスター、および有効と開始の基本構成を作成して Pacemaker パッケージをインストールする`pcsd`します。 エラーが発生した正確に RHEL の手順に従って、Pacemaker クラスターを構成しようとする場合。 この問題を解決するには、次の手順を実行します。 
+1. 各ノードからは、Pacemaker の既定の構成を削除します。
    
    ```bash
    sudo pcs cluster destroy
    ```
    
-2. ペース クラスターの作成に RHEL セクションの手順に従います。
+2. Pacemaker クラスターを作成するための RHEL セクションの手順に従います。
 
 **SLES**
 
-ペース クラスターを作成するプロセスは、完全に異なる sles RHEL および Ubuntu 上にあります。 次の手順は、SLES でクラスターを作成する方法を文書化します。
-1. 実行して、クラスター構成プロセスを開始します。 
+Pacemaker クラスターを作成するためのプロセスがまったく異なる sles RHEL および Ubuntu で実行されるよりもします。 次の手順は、SLES でクラスターを作成する方法を文書化します。
+1. 実行して、クラスター構成のプロセスを開始します。 
    ```bash
    sudo ha-cluster-init
    ``` 
    
-   ノードのいずれか。 NTP が構成されていないことと、ウォッチドッグのデバイスが検出されないことを求められます。 処理の準備と実行の大丈夫です。 ウォッチドッグは、ストレージ ベースである SLES の組み込みのフェンス操作を使用する場合、STONITH に関連付けられます。 NTP とウォッチドッグを後で構成することができます。
+   ノードのいずれか。 NTP が構成されていないことと、ウォッチドッグのデバイスが検出されないことを求められます可能性があります。 いったい何して実行するために問題はありません。 ストレージ ベースである SLES の組み込みのフェンス操作を使用する場合、ウォッチドッグは STONITH に関連します。 NTP とウォッチドッグは、後で構成することができます。
    
-2. Corosync の構成を求められます。 マルチキャスト アドレスおよびポートだけでなく、バインドするネットワーク アドレスに対して求められます。 ネットワーク アドレスが使用されます。 サブネットです。たとえば、192.191.190.0 です。 すべてのプロンプトで、既定値をそのまま使用したり、必要に応じて変更できます。
+2. Corosync を構成するように求められます。 マルチキャスト アドレスおよびポートと、バインドするネットワーク アドレスに対して求められます。 ネットワーク アドレスが使用されます。 サブネットです。たとえば、192.191.190.0 です。 すべてのプロンプトで、既定値をそのまま使用したり、必要に応じて変更できます。
    
-3. 次に、ディスク ベース フェンス操作は、SBD を構成するかどうかを求められます。 この構成は、必要な場合は、後で行うことができます。 SBD がない場合、設定されているとは異なり RHEL および Ubuntu、`stonith-enabled`は既定で false に設定します。
+3. 次に、ディスク ベースのフェンス操作は、SBD を構成するかどうかを求められます。 この構成は、必要な場合は、後で行うことができます。 SBD でない場合は、構成とは異なり RHEL および Ubuntu、`stonith-enabled`は既定で false に設定します。
    
-4. 最後に、管理用の IP アドレスを構成するかどうかを求められます。 この IP アドレス オプションですが、関数を使用して高可用性 Web Konsole (ホーク) に接続するために使用するためにクラスターの IP アドレスを作成するという意味での Windows Server フェールオーバー クラスター (WSFC) の IP アドレスに似ています。 この構成はオプションです。
+4. 最後に、管理用 IP アドレスを構成するかどうかを求められます。 この IP アドレスは省略可能では、関数を使用して HA Web Konsole (HAWK) に接続するために使用するクラスターの IP アドレスを作成するという意味での Windows Server フェールオーバー クラスター (WSFC) の IP アドレスに似ています。 でも、この構成では省略可能です。
    
-5. その後、クラスターが立ち上がっており実行中を発行して 
+5. クラスターが稼働して発行することによって 
    ```bash
    sudo crm status
    ```
    
-6. 変更、 *hacluster*を使用してパスワード 
+6. 変更、 *hacluster*とパスワード 
    ```bash
    sudo passwd hacluster
    ```
    
-7. 管理用の IP アドレスを構成した場合も、パスワードの変更をテストするブラウザーでテストできます*hacluster*です。
+7. 管理用の IP アドレスを構成した場合ものパスワードの変更をテストするブラウザーでテストできます*hacluster*します。
    ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
-8. クラスターのノードになる別の SLES サーバー上で実行します。 
+8. クラスターのノードとなる別の SLES サーバーで実行します。 
    ```bash
    sudo ha-cluster-join
    ```
    
-9. メッセージが表示されたらは、名前または前の手順では、クラスターの最初のノードとして構成されたサーバーの IP アドレスを入力します。 サーバーは、既存のクラスターにノードとして追加されます。
+9. メッセージが表示されたら、名前または前の手順でクラスターの最初のノードとして構成されたサーバーの IP アドレスを入力します。 サーバーは、既存のクラスターにノードとして追加されます。
    
 10. 発行することによって、ノードが追加されたことを確認します。 
    ```bash
    sudo crm status
    ```
    
-11. 変更、 *hacluster*を使用してパスワード 
+11. 変更、 *hacluster*とパスワード 
    ```bash
    sudo passwd hacluster
    ```
    
-12. クラスターに追加する手順の他のすべてのサーバーに対して 8. ~ 11. を繰り返します。
+12. 手順 8-11 の他のすべてのサーバー クラスターに追加するには
 
-## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>SQL Server HA と SQL Server エージェントのパッケージをインストールします。
-次のコマンドを使用して、SQL Server HA パッケージをインストールして[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェント、既にインストールされていない場合。 インストール後に HA パッケージをインストールする[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]の再起動が必要[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]を使用するのには、します。 これらの手順は、マイクロソフトのパッケージのリポジトリが既に設定されている、ので前提としています。[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]この時点でインストールする必要があります。
+## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>SQL Server の HA および SQL Server エージェントのパッケージをインストールします。
+次のコマンドを使用して、SQL Server の HA パッケージをインストールして[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェント、既にインストールされていない場合。 インストールした後、HA パッケージをインストールする[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]の再起動が必要[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]用にも使用します。 これらの手順は、マイクロソフトのパッケージのリポジトリが既に設定されている、ため前提としています。[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]この時点でインストールする必要があります。
 > [!NOTE]
-> - 使用しない場合[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]ログ配布やその他の用途のエージェントがないインストールするためにパッケージ化*mssql server エージェント*スキップすることができます。
-> - その他の省略可能なパッケージは、 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux では、 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 、フルテキスト検索 (*mssql サーバー-fts*) および[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Integration Services (*mssql サーバーが*)、されません。FCI は、または、AG のいずれかの高可用性のために必要です。
+> - 使用しない場合[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]ログ配布やその他の使用はすべてのエージェントがないためパッケージ化、インストール*mssql server エージェント*をスキップできます。
+> - その他のオプションのパッケージの[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]linux では、 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 、フルテキスト検索 (*mssql-サーバー-fts*) と[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Integration Services (*mssql server は*)、いません。FCI または AG のいずれかの高可用性のために必要です。
 
 **RHEL**
 
@@ -225,17 +226,17 @@ sudo zypper install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-このチュートリアルでは、SQL Server on Linux のペース クラスターを展開する方法について学習しました。 方法を学習します。
+このチュートリアルでは、SQL Server on Linux の Pacemaker クラスターをデプロイする方法について説明しました。 学習したします。
 > [!div class="checklist"]
-> * 高可用性アドオンをインストールし、ペースをインストールします。
-> * ペース (RHEL および Ubuntu のみ) 用のノードを準備します。
-> * ペース クラスターを作成します。
-> * SQL Server HA と SQL Server エージェントのパッケージをインストールします。
+> * 高可用性アドオンをインストールし、Pacemaker をインストールします。
+> * Pacemaker (RHEL および Ubuntu のみ) 用のノードを準備します。
+> * Pacemaker クラスターを作成します。
+> * SQL Server の HA および SQL Server エージェントのパッケージをインストールします。
 
-作成し、Linux 上の SQL Server の可用性グループの構成を参照してください。
+作成して、SQL Server on Linux の可用性グループの構成を参照してください。
 
 > [!div class="nextstepaction"]
-> [作成し、Linux 上の SQL Server の可用性グループを構成する](sql-server-linux-create-availability-group.md)です。
+> [作成し、SQL Server on Linux の可用性グループの構成](sql-server-linux-create-availability-group.md)します。
 

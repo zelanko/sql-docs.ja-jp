@@ -1,6 +1,6 @@
 ---
-title: Linux 上の SQL Server のパフォーマンス機能の概要 |Microsoft ドキュメント
-description: この記事では、SQL Server に追加された新しい Linux ユーザーの SQL Server のパフォーマンス機能の概要を示します。 すべてのプラットフォームでは、これらの例の多くは機能が Linux にこの記事のコンテキストが存在します。
+title: SQL Server on Linux のパフォーマンス機能の概要 |Microsoft Docs
+description: この記事では、Linux ユーザーが SQL Server に新しい SQL Server のパフォーマンス機能の概要を示します。 これらの例の多くは、すべてのプラットフォームで機能が、この記事のコンテキストは Linux です。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,12 +13,13 @@ ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
 ms.openlocfilehash: 91a83740d83cb6e121d8ea413cf6322f75b68dff
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001854"
 ---
-# <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のパフォーマンス機能のチュートリアル
+# <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>SQL Server on Linux のパフォーマンス機能のチュートリアル
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -30,7 +31,7 @@ SQL Server を初めて利用する Linux ユーザーの場合、次のタス�
 ## <a name="create-a-columnstore-index"></a>列ストア インデックスを作成します。
 列ストア インデックスは、列ストアと呼ばれる列指向データ形式で大規模なストアのデータを格納して、クエリを実行するためのテクノロジです。  
 
-1. 次の TRANSACT-SQL コマンドを実行することによって、salesorderdetail の各テーブルに列ストア インデックスを追加します。
+1. 次の TRANSACT-SQL コマンドを実行して、SalesOrderDetail テーブルに列ストア インデックスを追加します。
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -127,7 +128,7 @@ SQL Server では、アプリケーションのシステムのパフォーマン
 ### <a name="natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャ
 SQL Server では、メモリ最適化テーブルにアクセスするネイティブ コンパイル ストアド プロシージャがサポートされています。 T-SQL ステートメントは、機械語のコードにコンパイルされ、高速データ アクセスと従来の T-SQL より効率的なクエリ実行が可能になる、ネイティブ DLL として格納されます。   NATIVE_COMPILATION が設定されているストアド プロシージャはネイティブでコンパイルされます。 
 
-1. ShoppingCart テーブルに大量のレコードを挿入するネイティブ コンパイル ストアド プロシージャを作成する次のスクリプトを実行します。
+1. ShoppingCart テーブルに多数のレコードを挿入するネイティブ コンパイル ストアド プロシージャを作成する次のスクリプトを実行します。
 
 
    ```sql
@@ -145,13 +146,13 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
     END
    END 
    ```
-2. 行数は 1,000,000 行を挿入します。
+2. 1,000,000 行を挿入します。
 
    ```sql
    EXEC usp_InsertSampleCarts 1000000 
    ```
 
-3. 挿入された行を確認します。
+3. 行が挿入されたことを確認するには。
 
    ```sql
    SELECT COUNT(*) FROM dbo.ShoppingCart 
@@ -167,7 +168,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
 - [インメモリ OLTP (インメモリ最適化)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## <a name="use-query-store"></a>クエリ ストアを使用
-クエリ ストアは、クエリ、実行プランとランタイム統計情報に関する詳細なパフォーマンス情報を収集します。
+クエリ ストアは、クエリ、実行プラン、およびランタイム統計に関する詳細なパフォーマンス情報を収集します。
 
 クエリ ストアは、既定ではアクティブではありません。ALTER DATABASE で有効にすることができます。
 
@@ -175,7 +176,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
    ```
 
-クエリ ストアのクエリとプランに関する情報を返す次のクエリを実行します。 
+クエリ ストアにクエリとプランに関する情報を返す次のクエリを実行します。 
 
    ```sql
    SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*
@@ -189,7 +190,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
 ## <a name="query-dynamic-management-views"></a>クエリの動的管理ビュー
 動的管理ビューは、サーバー インスタンスのヘルスの監視、問題の診断、パフォーマンスのチューニングに使用できる、サーバーの状態の情報を返します。
 
-Dm_os_wait stats 動的管理ビューを照会します。
+Dm_os_wait stats の動的管理ビューを照会するには。
 
    ```sql
    SELECT wait_type, wait_time_ms

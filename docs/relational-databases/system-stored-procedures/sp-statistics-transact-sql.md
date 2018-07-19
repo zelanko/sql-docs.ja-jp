@@ -1,5 +1,5 @@
 ---
-title: sp_statistics (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_statistics (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0b4a24cce24a94fdd6c4f901974d0f4accf7ff1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263055"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005664"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,59 +57,59 @@ sp_statistics [ @table_name = ] 'table_name'
  [  **@table_owner=** ] **'***所有者***'**  
  カタログ情報を返すために使用するテーブルのテーブル所有者の名前です。 *table_owner*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*所有者*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザー指定の名前を持つテーブルを所有している場合、そのテーブルのインデックスが返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していないと*名前*、このプロシージャは、指定したテーブルを探します*名前*が所有する、データベース所有者です。 テーブルが存在する場合は、そのテーブルのインデックスが返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルのインデックスが返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*名前*、この手順は、指定したテーブルを探します*名前*によって所有されている、データベース所有者です。 テーブルが存在する場合は、そのテーブルのインデックスが返されます。  
   
  [  **@table_qualifier=** ] **'***修飾子***'**  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このパラメーターは、データベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このパラメーターは、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
  [  **@index_name=** ] **'***index_name***'**  
  インデックス名を指定します。 *index_name*は**sysname**、既定値は % です。 ワイルドカードによるパターン照合がサポートされています。  
   
  [  **@is_unique=** ] **'***is_unique***'**  
- あるかどうか一意インデックスのみ (場合**Y**) 返されます。 *is_unique*は**char (1)**、既定値は**N**です。  
+ あるかどうか一意インデックスのみ (場合**Y**) を返します。 *is_unique*は**char (1)**、既定値は**N**します。  
   
  [  **@accuracy=** ] **'***精度***'**  
- 統計のカーディナリティおよび統計のページの精度を指定します。 *精度*は**char (1)**、既定値は**Q**です。指定**E**基数やページは、正確に統計を更新するかどうかを確認します。  
+ 統計のカーディナリティおよび統計のページの精度を指定します。 *精度*は**char (1)**、既定値は**Q**します。指定**E**カーディナリティおよびページが正確になるように、統計が更新されるかどうかを確認します。  
   
- 値**E** (sql_ensure)、ドライバーを無条件に統計を取得します。  
+ 値**E** (sql_ensure) ドライバーを無条件に統計を取得します。  
   
- 値**Q** (SQL_QUICK) 基数を取得するドライバーを要求して、サーバーからすぐに使用できる場合にのみページします。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 Open Group 標準に従って記述されているアプリケーションは常に、ODBC 3.x 準拠のドライバーから SQL_QUICK 動作を取得します。  
+ 値**Q** (SQL_QUICK) は、カーディナリティを取得するドライバーを要求し、ページのサーバーからすぐに使用できる場合。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 Open Group 標準に従って記述されているアプリケーションは常に、ODBC 3.x 準拠のドライバーから SQL_QUICK 動作を取得します。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 この列は、NULL の場合もあります。|  
-|**TABLE_OWNER**|**sysname**|テーブル所有者名です。 この列は、常に値を返します。|  
+|**TABLE_OWNER**|**sysname**|テーブルの所有者名です。 この列は、常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 この列は、常に値を返します。|  
-|**NON_UNIQUE**|**smallint**|NULL になります。<br /><br /> 0 = 一意<br /><br /> 1 = 一意ではない|  
-|**INDEX_QUALIFIER**|**sysname**|インデックス所有者の名前。 DBMS 製品の中には、テーブル所有者以外のユーザーでもインデックスを作成できるものがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に、同じ**TABLE_NAME**です。|  
+|**NON_UNIQUE**|**smallint**|NULL 以外です。<br /><br /> 0 = 一意<br /><br /> 1 = 一意ではない|  
+|**INDEX_QUALIFIER**|**sysname**|インデックス所有者の名前。 DBMS 製品の中には、テーブル所有者以外のユーザーでもインデックスを作成できるものがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に同じ**TABLE_NAME**します。|  
 |**INDEX_NAME**|**sysname**|インデックスの名前。 この列は、常に値を返します。|  
 |**TYPE**|**smallint**|この列は常に値を返します。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = ハッシュ化<br /><br /> 3 = 非クラスター化|  
 |**SEQ_IN_INDEX**|**smallint**|インデックス内での列の位置。|  
 |**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 この列は、常に値を返します。|  
 |**COLLATION**|**char(1)**|照合順序で使用されている並べ替え順。 次の値をとります。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし|  
-|**基数**|**int**|テーブル内の行数またはインデックス内の一意な値の個数。|  
+|**カーディナリティ**|**int**|テーブル内の行数またはインデックス内の一意な値の個数。|  
 |**ページ**|**int**|インデックスまたはテーブルを格納するページ数。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
   
-## <a name="remarks"></a>解説  
- 列で昇順に表示される結果セット内のインデックス**NON_UNIQUE**、**型**、 **INDEX_NAME**、および**SEQ_IN_INDEX**です。  
+## <a name="remarks"></a>コメント  
+ 結果セットのインデックス列で昇順には表示**NON_UNIQUE**、**型**、 **INDEX_NAME**、および**SEQ_IN_INDEX**します。  
   
  クラスター化インデックス型は、テーブルのデータがインデックスの順に格納されているインデックス型を指します。 これに対応して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インデックスをクラスター化します。  
   
  ハッシュ化インデックス型は、完全一致検索または範囲検索を受け付けますが、パターン照合検索ではインデックスは使用されません。  
   
- **sp_statistics**は等価**SQLStatistics** ODBC にします。 返される結果は並べ**NON_UNIQUE**、**型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および**SEQ_IN_インデックス**です。 詳細については、次を参照してください。、 [ODBC API リファレンス](http://go.microsoft.com/fwlink/?LinkId=68323)です。  
+ **sp_statistics**と等価**SQLStatistics** ODBC にします。 返される結果は並べ**NON_UNIQUE**、**型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および**SEQ_IN_インデックス**します。 詳細については、次を参照してください。、 [ODBC API リファレンス](http://go.microsoft.com/fwlink/?LinkId=68323)します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、情報を返しますに関する、`DimEmployee`テーブル。  
+ 次の例では、に関する情報を返します、`DimEmployee`テーブル。  
   
 ```  
 -- Uses AdventureWorks  

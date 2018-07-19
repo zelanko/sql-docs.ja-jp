@@ -1,5 +1,5 @@
 ---
-title: 量化式 (XQuery) |Microsoft ドキュメント
+title: 量化式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,10 +31,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9fa6c22aafdd0279c9205f36902bac1ef18c77df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004634"
 ---
 # <a name="quantified-expressions-xquery"></a>量化式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
  *存在量化子*  
  2 つのシーケンスがあるときに、最初のシーケンスの中に、使用される比較演算子に基づいて 2 番目のシーケンスと一致するアイテムがある場合、True が返されます。  
   
- *全称量化子*  
+ *ユニバーサル量指定子*  
  2 つのシーケンスがあるときに、最初のシーケンスのすべてのアイテムが 2 番目のシーケンスと一致する場合、True が返されます。  
   
  XQuery では、次の形式の量化式がサポートされます。  
@@ -53,9 +54,9 @@ ms.lasthandoff: 05/03/2018
 ( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
 ```  
   
- これらの式をクエリで使用して、存在量化または全称量化を明示的に式の 1 つ以上のシーケンスに適用できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、内の式、`satisfies`句には、次のいずれかが発生する: ノード シーケンス、空のシーケンスまたはブール値。 この式の結果の有効なブール値が、量化に使用されます。 使用する存在量化**一部**真の結果を式では少なくとも 1 つ、量化子によりバインドされた値の場合は True を返します。 使用する全称**すべて**量化子によりバインドされたすべての値の True である必要があります。  
+ これらの式をクエリで使用して、存在量化または全称量化を明示的に式の 1 つ以上のシーケンスに適用できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、内の式、`satisfies`句は、次のいずれかが発生する必要があります: ノード シーケンス、空のシーケンスまたはブール値。 この式の結果の有効なブール値が、量化に使用されます。 使用する存在量化**一部**真の結果を式では、量化子によりバインドされた値の少なくとも 1 つの場合は True を返します。 使用する全称**すべて**量化子によりバインドされたすべての値の True である必要があります。  
   
- たとえば、次のクエリのチェックすべて\<場所 > 要素に LocationID 属性を持っているかどうかが確認されます。  
+ たとえば、次のクエリのチェックすべて\<場所 > 要素に LocationID 属性があるかどうかを参照してください。  
   
 ```  
 SELECT Instructions.query('  
@@ -71,13 +72,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- LocationID はの必須の属性であるため、\<場所 > 要素、期待される結果が表示されます。  
+ LocationID はの必須の属性があるため、\<場所 > 要素、期待される結果が表示されます。  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- 使用する代わりに、 [query() メソッド](../t-sql/xml/query-method-xml-data-type.md)、使用することができます、 [value() メソッド](../t-sql/xml/value-method-xml-data-type.md)結果を返すをリレーショナル形式で、次のクエリで示すようにします。 このクエリでは、すべてのワーク センターの場所に LocationID 属性が含まれている場合に True が返されます。 それ以外の場合は False が返されます。  
+ 使用する代わりに、 [query() メソッド](../t-sql/xml/query-method-xml-data-type.md)、使用することができます、 [value() メソッド](../t-sql/xml/value-method-xml-data-type.md)にリレーショナルの世界では、次のクエリで示すように結果を返します。 このクエリでは、すべてのワーク センターの場所に LocationID 属性が含まれている場合に True が返されます。 それ以外の場合は False が返されます。  
   
 ```  
 SELECT Instructions.value('  

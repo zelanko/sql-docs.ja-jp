@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_requests |Microsoft ドキュメント
+title: sys.dm_external_script_requests |Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc6db4816e4ba890e132600874d5db21aa190c02
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005684"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,21 +39,21 @@ ms.lasthandoff: 05/23/2018
 >  
 >  この DMV は、外部スクリプト実行をサポートする機能をインストールして有効にした場合にのみ使用できます。 R スクリプトでこれを行う方法については、「[SQL Server R Services (In-Database) をセットアップする](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)」をご覧ください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**一意識別子**|外部スクリプト要求を送信したプロセスの ID です。 これは、プロセス ID が受信すると [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**一意識別子**|外部スクリプト要求を送信したプロセスの ID です。 これは、ID に対応するプロセスが受信すると [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|サポートされているスクリプト言語を表すキーワードです。 現時点では、 `R` のみサポートされています。|  
 |degree_of_parallelism|**int**|作成された並列処理の数を示す数値です。 この値は、要求された並列処理の数と異なる場合があります。|  
 |external_user_name|**nvarchar**|スクリプトが実行されたときの Windows ワーカー アカウント。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 > [!NOTE]
 >   
 >  外部スクリプトを実行するユーザーはさらに EXECUTE ANY EXTERNAL SCRIPT 権限も持っている必要がありますが、管理者はこの権限がなくてもこの DMV を使用できます。 
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 
 このビューは、スクリプト言語の識別子を使用してフィルター処理することができます。
 
@@ -87,7 +88,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   

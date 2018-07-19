@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_xtp_gc_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,22 +23,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a66e199d232ed96fd194d42e340f3468fee51b6b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467548"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005654"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  現在の動作に関する情報 (全体的な統計情報) を提供、[!INCLUDE[hek_2](../../includes/hek-2-md.md)]ガベージ コレクション プロセスです。  
+  現在の動作に関する情報 (全体的な統計情報) を提供します、[!INCLUDE[hek_2](../../includes/hek-2-md.md)]ガベージ コレクション プロセスです。  
   
- 行のガベージ コレクションは、通常のトランザクション処理の一環として、またはガベージ コレクションのメイン スレッド (アイドル ワーカー) によって実行されます。 ガベージ コレクション キューから 1 つの作業項目をデキュー ユーザー トランザクションがコミットされたときに ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md))。 ガベージ コレクションが可能であってもメイン ユーザー トランザクションでアクセスされなかった行のガベージ コレクションは、ダスティ コーナー スキャン (使用頻度が低いインデックスの領域のスキャン) の一環としてアイドル ワーカーによって実行されます。  
+ 行のガベージ コレクションは、通常のトランザクション処理の一環として、またはガベージ コレクションのメイン スレッド (アイドル ワーカー) によって実行されます。 ユーザー トランザクションがコミットされたときに、ガベージ コレクション キューから 1 つの作業項目をデキュー ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md))。 ガベージ コレクションが可能であってもメイン ユーザー トランザクションでアクセスされなかった行のガベージ コレクションは、ダスティ コーナー スキャン (使用頻度が低いインデックスの領域のスキャン) の一環としてアイドル ワーカーによって実行されます。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|サーバーの起動後にガベージ コレクション サブシステムによって検査された行の数。|  
 |rows_no_sweep_needed|**bigint**|ダスティ コーナー スキャンを実行せずに削除された行の数。|  
@@ -54,7 +54,7 @@ ms.locfileid: "34467548"
 |sweep_rows_expired|**bigint**|ダスティ コーナー処理によって読み取られた、期限切れの行。|  
 |sweep_rows_expired_removed|**bigint**|ダスティ コーナー処理によって削除された、期限切れの行。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="usage-scenario"></a>使用シナリオ  

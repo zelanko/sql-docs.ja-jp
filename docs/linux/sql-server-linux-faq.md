@@ -1,6 +1,6 @@
-﻿---
-title: SQL Server on Linux に関する FAQ |Microsoft ドキュメント
-description: この記事では、Linux で実行されている SQL Server に関するよく寄せられる質問に対する回答を提供します。
+---
+title: SQL Server on Linux の FAQ |Microsoft Docs
+description: この記事では、Linux で実行されている SQL Server についてよく寄せられる質問に対する回答を提供します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,11 +12,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323139"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001794"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux Frequently Asked Questions (FAQ)
 
@@ -26,110 +26,110 @@ ms.locfileid: "34323139"
 
 ## <a name="general-questions"></a>一般的な質問
 
-1. **Linux プラットフォームがサポートされますか。**
+1. **どのような Linux プラットフォームがサポートされますか。**
 
-   SQL Server は Red Hat Enterprise Server、SUSE Linux Enterprise Server、および Ubuntu で現在サポートされています。 Docker によってコンテナーで実行されているでもサポートされます。 サポートされるバージョンに関する最新情報については、次を参照してください。[サポートされているプラットフォーム](sql-server-linux-setup.md#supportedplatforms)です。
+   Red Hat Enterprise Server、SUSE Linux Enterprise Server、および Ubuntu では、SQL Server が現在サポートされています。 また、docker コンテナーで実行もサポートされます。 サポートされているバージョンに関する最新情報については、次を参照してください。[サポートされているプラットフォーム](sql-server-linux-setup.md#supportedplatforms)します。
 
-1. **他のプラットフォームで動作の SQL Server on Linux**しますか?
+1. **SQL Server on Linux を他のプラットフォームで動作**でしょうか。
 
-   SQL Server をテストして、上記の配布の Linux ではサポートされています。 他の Linux ディストリビューションが密接に関連しているし、SQL Server を実行することができます (たとえば、CentOS、密接に関連して Red Hat Enterprise Server)。 サポートされていないオペレーティング システム上の SQL Server のインストールを選択する場合を確認してください、**サポート ポリシー**のセクションで、 [for Microsoft SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)サポートを理解するには影響します。 いくつかコミュニティで維持される Linux ディストリビューションには、基になるオペレーティング システムが問題である場合は、サポートを受ける正式な方法はありません。 にも注意してください。
+   SQL Server をテストして、上記のディストリビューションの Linux ではサポートされています。 他の Linux ディストリビューションは密接に関連し、SQL Server を実行できる可能性があります (たとえば、CentOS、密接に関連する Red Hat Enterprise Server)。 サポートされていないオペレーティング システムに SQL Server をインストールする場合は、確認しますが、**サポート ポリシー**のセクション、 [for Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)サポートを理解するには影響します。 いくつかコミュニティに維持される Linux ディストリビューションには、基になるオペレーティング システムが問題である場合は、サポートを受ける形式的な方法はありません。 にも注意してください。
 
 1. **Linux でサポートされるは、SQL Server 機能ですか。**
 
-   サポートされる機能と既知の問題の一覧については、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)です。
+   サポートされている機能と既知の問題の完全な一覧を参照してください、[リリース ノート](sql-server-linux-release-notes.md)します。
 
 1. **SQL Server のサポート ポリシーとは何ですか。**
 
-   サポート ポリシーを理解するのには、確認、 [for SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)です。
+   サポート ポリシーについては、確認、 [for SQL Server 技術のサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)します。
 
-1. **SQL Server の Windows のバック グラウンドに由来すればいます。Linux 上の SQL Server を使用する方法を習得するためのリソースはありますか。**
+1. **SQL Server の Windows のバック グラウンドからです。Linux 上の SQL Server を使用する方法を確認するのに役立つリソースはありますか。**
 
-   [クイック スタート](sql-server-linux-setup.md#platforms)手順 Linux に SQL Server をインストールして、TRANSACT-SQL クエリを実行する方法について説明します。 その他のチュートリアルでは、SQL Server を使用して Linux 上で追加の手順を説明します。 ヒントのサードパーティの一覧は、次を参照してください。、 [Linux ヒント SQL Server の MSSQLTIPS 一覧](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/)です。
+   [クイック スタート](sql-server-linux-setup.md#platforms)Linux 上の SQL Server をインストールし、TRANSACT-SQL クエリを実行する方法の詳細な手順を説明します。 その他のチュートリアルでは、Linux 上の SQL Server を使用して追加についてを説明します。 ヒントのサードパーティの一覧は、次を参照してください。、 [SQL Server on Linux のヒントの一覧を MSSQLTIPS](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/)します。
 
 ## <a name="installation"></a>インストール
 
-1. **Linux サーバーにインストールされている SQL Server の取得方法**
+1. **Linux サーバーにインストールされている SQL Server を取得する方法はありますか**
 
-   Microsoft SQL Server をインストールするためのパッケージ リポジトリを維持および yum、zypper などのネイティブのパッケージ マネージャーを使用してインストールをサポートしている apt とします。 すぐにインストールするのいずれかの操作を参照して、[クイック スタート](sql-server-linux-setup.md#platforms)です。
+   Microsoft SQL Server をインストールするためのパッケージ リポジトリを管理および yum、zypper などのネイティブのパッケージ マネージャーを使用してインストールをサポートし、apt します。 を迅速にインストールするには、のいずれかを表示、[クイック スタート](sql-server-linux-setup.md#platforms)します。
 
-1. **Linux のサブシステムの Windows 10 上に SQL Server をインストールできますか。**
+1. **Windows 10 の Linux サブシステム用に SQL Server をインストールできますか。**
 
-   不可。 現在、Windows 10 で実行されている Linux は SQL Server および関連ツールのサポートされているプラットフォームではできません。
+   No. 現在、Windows 10 で実行されている Linux は SQL Server と関連ツールのサポートされているプラットフォームではできません。
 
-1. **SQL Server 2017 はデータ ファイルの Linux ファイル システムを使用できますか。**
+1. **SQL Server 2017 はデータ ファイルに対して、どの Linux ファイル システムを使用できますか。**
 
-   現在 SQL Server on Linux は、ext4 および XFS をサポートします。 後で必要に応じて、他のファイル システムのサポートが追加されます。
+   現在 SQL Server on Linux には、ext4、XFS がサポートしています。 今後必要に応じて、他のファイル システムのサポートが追加されます。
 
-1. **サーバーをインストールする SQL オフライン インストール パッケージをダウンロードできますか。**
+1. **SQL Server をオフラインでインストールするインストール パッケージをダウンロードできますか。**
 
-   可能。 詳細については、内のリンクのダウンロード パッケージを参照してください、[リリース ノート](sql-server-linux-release-notes.md)です。 また、確認、[オフライン インストール手順](sql-server-linux-setup.md#offline)です。
+   可能。 詳細については、パッケージのダウンロードのリンクを参照してください、[リリース ノート](sql-server-linux-release-notes.md)します。 また、確認、[オフライン インストールで手順](sql-server-linux-setup.md#offline)します。
 
-1. **Linux 上の SQL Server の無人インストールを実行**
+1. **Linux に SQL Server の無人インストールを実行できますか。**
 
-   可能。 無人インストールの詳細については、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md#unattended)です。 用のサンプル スクリプトを参照してください[Red Hat](sample-unattended-install-redhat.md)、 [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)、および[Ubuntu](sample-unattended-install-ubuntu.md)です。 確認することも[このサンプル スクリプト](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)SQL Server ユーザー諮問チームによって作成します。
+   可能。 無人インストールの詳細については、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンスについて](sql-server-linux-setup.md#unattended)します。 サンプル スクリプトを参照してください。 [Red Hat](sample-unattended-install-redhat.md)、 [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)、および[Ubuntu](sample-unattended-install-ubuntu.md)します。 確認することも[このサンプル スクリプト](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)SQL Server Customer Advisory チームによって作成します。
 
 ## <a name="tools"></a>ツール
 
-1. **使用できます、SQL Server Management Studio クライアント Windows Linux 上の SQL Server にアクセスしますか。**
+1. **クライアント使用できます、SQL Server Management Studio で Windows SQL Server on Linux にアクセスするのにでしょうか。**
 
-   はい、Linux 上の SQL Server にアクセスする Windows 上で実行されるすべての既存のツールを使用することができます。 これらには、Microsoft SQL Server Management Studio (SSMS)、SQL Server Data Tools (SSDT) および OSS などのツールとサード パーティのツールが含まれます。
+   はい、SQL Server on Linux へのアクセスに Windows 上で実行されるすべての既存のツールを使用することができます。 Microsoft SQL Server Management Studio (SSMS)、SQL Server Data Tools (SSDT) と OSS などのツールとサード パーティのツールが含まれます。
 
-1. **Linux 上で実行される SSMS のようなツールはありますか。**
+1. **Linux 上で実行される SSMS などのツールはありますか。**
 
    新しい Microsoft SQL Operations Studio (preview) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL Operations Studio (プレビュー) は、どのような](../sql-operations-studio/what-is.md)します。
 
 1. **Sqlcmd および bcp のようなコマンドは、Linux で利用可能ですか。**
 
-   はい、 [sqlcmd および bcp](sql-server-linux-setup-tools.md)は Linux、macOS、および Windows でネイティブに使用できます。 さらに、新しい使用[mssql scripter](https://github.com/Microsoft/mssql-scripter)任意の場所を実行している SQL データベースに対して T-SQL スクリプトを生成するには、Linux、macOS、または Windows コマンド ライン ツールです。 また、プレビューのリリースを参照してください[mssql cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)です。
+   はい、 [sqlcmd および bcp](sql-server-linux-setup-tools.md)は Linux、macOS、および Windows でネイティブに利用できます。 さらに、新しい使用[mssql scripter](https://github.com/Microsoft/mssql-scripter)任意の場所を実行している SQL データベースに対して T-SQL スクリプトを生成するには、Linux、macOS、または Windows のコマンド ライン ツール。 また、リリースのプレビューを表示[mssql cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)します。
 
-1. **Linux でインスタンスの Windows で SSMS を介して接続されているときに、利用状況モニターを表示することが実行されているがしますか。**
+1. **Linux でインスタンスの Windows 上の SSMS を通して接続したときの利用状況モニターを表示することを実行するでしょうか。**
 
-   はい、Windows で SSMS を使用するには、リモートで接続してツール]/[などの機能を使用して Linux インスタンス上の利用状況モニター コマンドとして。
+   はい、Windows で SSMS を使用してリモートで接続でき、ツール]/[などの機能の使用の Linux インスタンスの利用状況モニターのコマンドとして。
 
-1. **どのようなツールは、Linux 上の SQL Server のパフォーマンスの監視に使用できるか。**
+1. **どのようなツールは、Linux 上の SQL Server のパフォーマンスの監視に使用できるでしょうか。**
 
-   使用することができます[システム動的管理ビュー (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)をさまざまな種類の SQL Server、Linux プロセス情報などに関する情報を収集します。 使用することができます[クエリのストア](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)クエリのパフォーマンスを向上させるためにします。 組み込みなど、他のツール[パフォーマンス ダッシュ ボード](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)、リモートの SQL Server Management Studio (SSMS) Windows から作業します。
+   使用することができます[システム動的管理ビュー (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)をさまざまな種類の SQL Server、Linux プロセス情報などに関する情報を収集します。 使用することができます[クエリ ストア](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)クエリのパフォーマンスを向上させるためにします。 組み込みなどの他のツールでは、[パフォーマンス ダッシュ ボード](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)、リモートでの SQL Server Management Studio (SSMS) Windows から作業します。
 
 ## <a name="administration"></a>管理
 
-1. **Microsoft が Linux で、SQL Server 構成マネージャーのようにアプリを作成しましたか。**
+1. **Microsoft が on Linux で、SQL Server 構成マネージャーのようにアプリを作成しますか。**
 
-   はい、SQL Server on Linux 用の構成ツールがある: [mssql conf](sql-server-linux-configure-mssql-conf.md)です。
+   はい、SQL Server on Linux 用の構成ツールがある: [mssql conf](sql-server-linux-configure-mssql-conf.md)します。
 
-1. **SQL Server on Linux は、同じホストに複数のインスタンスをサポートしますか。**
+1. **SQL Server on Linux は、同じホストで複数のインスタンスをサポートしますか。**
 
-   複数の個別インスタンスを持つホストで複数のコンテナーを実行していることをお勧めします。 各コンテナーは、別のポートでリッスンする必要があります。 詳細については、次を参照してください。[複数の SQL Server のコンテナー実行](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)です。
+   複数のコンテナーを個別のインスタンスが複数存在するホストで実行されていることをお勧めします。 各コンテナーは、別のポートでリッスンする必要があります。 詳細については、次を参照してください。[複数の SQL Server のコンテナーを実行](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)します。
 
-1. **Linux でサポートされている Active Directory 認証しますか。**
+1. **Linux 上の Active Directory 認証はサポートされますか。**
 
-   可能。 詳細については、次を参照してください。 [Linux に SQL Server と Active Directory 認証](sql-server-linux-active-directory-authentication.md)です。
+   可能。 詳細については、次を参照してください。 [SQL Server on Linux での Active Directory 認証](sql-server-linux-active-directory-authentication.md)します。
 
-1. **Linux でサポートされているクラスタ リングと Always On はか。**
+1. **Linux でサポートされているクラスタ リングと Always On のですか。**
 
-   Linux 上のペースには、フェールオーバー クラスタ リングと Linux での高可用性が実現されます。 詳細については、次を参照してください。[ビジネス継続性とデータベース復旧 - SQL Server on Linux](sql-server-linux-business-continuity-dr.md)です。
+   Linux 上の Pacemaker では、フェールオーバー クラスタ リングと Linux での高可用性が実現します。 詳細については、次を参照してください。[ビジネス継続性とデータベース復旧 - SQL Server on Linux](sql-server-linux-business-continuity-dr.md)します。
 
-1. **Windows およびその逆の Linux からレプリケーションを構成することは?**
+1. **Linux Windows からおよびその逆からレプリケーションを構成することはできますか。**
 
-   読み取りのスケールのレプリカは、一方向のデータ レプリケーションの Windows と Linux の間で使用できます。
+   読み取りスケール レプリカは、一方向のデータ レプリケーションの Windows と Linux で使用できます。
 
-1. **Windows から Linux に SQL Server の旧バージョンで既存のデータベースを移行することは?**
+1. **Windows から Linux に SQL Server の以前のバージョンで既存のデータベースを移行することはできますか。**
 
-   はい、[いくつかの方法](sql-server-linux-migrate-overview.md)これを実現するのです。
+   はい、[いくつかのメソッド](sql-server-linux-migrate-overview.md)これを実現するのです。
 
-1. **できますデータの移行は my Oracle と他のデータベース エンジンの SQL Server on Linux にしますか。**
+1. **移行できますデータ Oracle および他のデータベース エンジンから SQL Server on Linux でしょうか。**
 
-   可能。 SSMA は、いくつかのデータベース エンジンの種類からの移行をサポートしています: Microsoft Access、DB2、MySQL、Oracle、および SAP ASE (旧称 SAP Sybase ASE)。 SSMA の使用方法の例は、次を参照してください。 [Oracle スキーマを SQL Server Migration Assistant Linux での SQL Server 2017 に移行](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)です。
+   可能。 SSMA は、いくつかの種類のデータベース エンジンからの移行をサポートしています: Microsoft Access、DB2、MySQL、Oracle、および SAP ASE (旧称 SAP Sybase ASE の場合)。 SSMA を使用する方法の例は、次を参照してください。 [Oracle スキーマを SQL Server Migration Assistant を使った Linux 上の SQL Server 2017 に移行](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)します。
 
-1. **SQL Server のファイルに必要なアクセス許可しますか。**
+1. **どのようなアクセス許可は、SQL Server のファイルに必要なでしょうか。**
 
-   すべてのファイル、`/var/opt/mssql`ファイル フォルダーを所有する必要があります、 **mssql**ユーザーに属し、 **mssql**グループ。 両方の**mssql**ユーザーとグループは、すべてのファイルとディレクトリの読み取り/書き込みアクセス許可を持つ必要があります。 ファイルとディレクトリのアクセス許可に関連する次の特殊なシナリオに注意してください。
+   すべてのファイル、`/var/opt/mssql`ファイル フォルダーの所有する必要がある、 **mssql**ユーザーに属し、 **mssql**グループ。 両方の**mssql**ユーザーとグループには、すべてのファイルとディレクトリの読み取り/書き込みアクセス許可を持つようにします。 ファイルとディレクトリのアクセス許可に関連する次の特殊なシナリオに注意してください。
 
-   * Mssql 所有者およびグループのアクセス許可は、マウントされているネットワーク共有 SQL Server のファイルの格納に使用する必要があります。
-   * 既定以外のディレクトリにデータベース ファイルまたはバックアップを検索する場合も、そのディレクトリのアクセス許可を設定する必要があります。
-   * 0022 から既定のルート umask を変更する場合は、インストール後に SQL Server の構成が失敗します。 SQL Server 起動アカウントに必要なアクセス許可を手動で適用して、必要があります。
+   * Mssql 所有者とグループのアクセス許可は、マウントされたネットワーク共有される SQL Server のファイルを格納する必要があります。
+   * 既定以外のディレクトリにデータベース ファイルまたはバックアップを検索する場合は、そのディレクトリのアクセス許可も設定する必要があります。
+   * 0022 から既定のルートの umask を変更する場合は、インストール後に SQL Server の構成が失敗します。 SQL Server 開始アカウントに必要なアクセス許可を手動で適用して、必要があります。
 
-1. **インストールされている mssql アカウントおよびグループから SQL Server のファイルとディレクトリの所有権を変更できますか。**
+1. **インストールされている mssql アカウントとグループから SQL Server のファイルとディレクトリの所有権を変更できますか。**
 
-   既定のインストールからの SQL Server ディレクトリとファイルの所有権の変更はサポートされていません。 Mssql アカウントとグループは、SQL Server が具体的には使用され、対話型ログイン アクセス権がありません。
+   既定のインストールからの SQL Server ディレクトリとファイルの所有権を変更することはできません。 Mssql アカウントとグループは、SQL Server は具体的には使用され、対話型ログイン アクセス権がありません。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -1,5 +1,5 @@
 ---
-title: xp_loginconfig (TRANSACT-SQL) |Microsoft ドキュメント
+title: xp_loginconfig (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 950a01041db936c83a5a3c799f1055ab3996aa34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260327"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003174"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスのログイン セキュリティ構成を報告[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  インスタンスのログイン セキュリティ構成を報告[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -48,35 +48,35 @@ xp_loginconfig ['config_name']
   
 ## <a name="arguments"></a>引数  
  **'** *config_name 付きで* **'**  
- 表示する構成値を指定します。 場合*config_name 付きで*が指定されていないすべての構成値が報告されます。 *config_name 付きで*は**sysname**、既定値は NULL、これらの値のいずれかを指定できます。  
+ 表示する構成値を指定します。 場合*config_name 付きで*が指定されていないすべての構成値が報告されます。 *config_name 付きで*は**sysname**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|**ログイン モード**|ログイン セキュリティ モード。 指定できる値は**Mixed**と**Windows 認証**です。<br /><br /> 次の文字列によって置き換えられました。<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
-|**既定のログイン**|信頼関係接続が許可されているユーザー (ログイン名が照合されないユーザー) に対する、既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ID の名前。 既定のログインは**ゲスト**です。 この値は旧バージョンとの互換性を維持するために用意されています。|  
+|**ログイン モード**|ログイン セキュリティ モード。 指定できる値は**Mixed**と**Windows 認証**します。<br /><br /> 次の文字列によって置き換えられました。<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
+|**既定のログイン**|信頼関係接続が許可されているユーザー (ログイン名が照合されないユーザー) に対する、既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ID の名前。 既定のログインは**ゲスト**します。 この値は旧バージョンとの互換性を維持するために用意されています。|  
 |**既定のドメイン**|信頼関係接続が許可されているネットワーク ユーザーに対する、既定の Windows ドメインの名前。 既定のドメインは、Windows および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターのドメインです。 この値は旧バージョンとの互換性を維持するために用意されています。|  
-|**監査レベル**|監査レベル。 指定できる値は**none**、**成功**、**エラー**、および**すべて**です。 監査はエラー ログや Windows イベント ビューアーに書き込まれます。|  
-|**一連のホスト名**|クライアントのログイン レコードのホスト名が、Windows ネットワーク ユーザー名と置き換えられるかどうかを示します。 指定できる値は**true**または**false**です。 これを設定するからの出力で、ネットワーク ユーザー名が表示されます**sp_who**です。|  
-|**マップ _**|Windows の特殊文字は、有効なにマップされる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アンダー スコア文字 (_)。 指定できる値は**ドメインの区切り記号**(既定)、**領域**、 **null**、または任意の 1 文字です。 この値は旧バージョンとの互換性を維持するために用意されています。|  
-|**マップの $**|Windows の特殊文字は、有効なにマップされる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ドル記号 ($) の文字です。 指定できる値は**ドメインの区切り記号**、**領域**、 **null**、または任意の 1 文字です。 既定値は**領域**です。 この値は旧バージョンとの互換性を維持するために用意されています。|  
-|**# をマップします。**|Windows の特殊文字は、有効なにマップされる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]番号記号 (#)。 指定できる値は**ドメインの区切り記号**、**領域**、 **null**、または任意の 1 文字です。 既定値はハイフンです。 この値は旧バージョンとの互換性を維持するために用意されています。|  
+|**監査レベル**|監査レベル。 指定できる値は**none**、**成功**、**エラー**、および**すべて**します。 監査はエラー ログや Windows イベント ビューアーに書き込まれます。|  
+|**セットのホスト名**|クライアントのログイン レコードのホスト名が、Windows ネットワーク ユーザー名と置き換えられるかどうかを示します。 指定できる値は**true**または**false**します。 これを設定するからの出力で、ネットワーク ユーザー名が表示されます**sp_who**します。|  
+|**マップ _**|Windows の特殊文字が有効なにマップされる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アンダー スコア文字 (_)。 指定できる値は**ドメインの区切り記号**(既定)、**領域**、 **null**、または任意の 1 文字。 この値は旧バージョンとの互換性を維持するために用意されています。|  
+|**マップ $**|Windows の特殊文字が有効なにマップされる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ドル記号 ($) の文字します。 指定できる値は**ドメインの区切り記号**、**領域**、 **null**、または任意の 1 文字。 既定値は**領域**します。 この値は旧バージョンとの互換性を維持するために用意されています。|  
+|**# をマップします。**|Windows の特殊文字が有効なにマップされる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]番号記号 (#)。 指定できる値は**ドメインの区切り記号**、**領域**、 **null**、または任意の 1 文字。 既定値はハイフンです。 この値は旧バージョンとの互換性を維持するために用意されています。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|構成値。|  
-|**設定値**|**sysname**|構成値の設定。|  
+|**構成値**|**sysname**|構成値の設定。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **xp_loginconfig**構成値を設定するのには使用できません。  
   
- を設定するログイン モードと監査レベルを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+ ログイン モードと監査レベルを設定するには使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  に対する CONTROL 権限が必要です、**マスター**データベース。  
   
 ## <a name="examples"></a>使用例  

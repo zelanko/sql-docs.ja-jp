@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 のプログラミング概念 |Microsoft ドキュメント
+title: SQLXML 4.0 のプログラミング概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0071c9f56d118c3d80a92d556c29b813a25cdee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003394"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 のプログラミング概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "32970507"
  [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
  提供される SQLXML の例から実際のサンプルを作成するための要件について説明します。  
   
- [クライアント側およびサーバー側の書式設定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [クライアント側とサーバー側の書式設定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  クライアント側とサーバー側の書式設定について情報を提供し、これらを比較します。XML ドキュメントを構築する FOR XML コマンドに関する情報も提供します。  
   
  [SQLXML 4.0 の注釈付き XSD スキーマ](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -58,16 +58,16 @@ ms.locfileid: "32970507"
  [SQLXML 4.0 での XPath クエリの使用](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  XPath 言語のサブセットを使用して、注釈付き XSD スキーマにより作成された XML ビューに対してクエリを実行する方法を説明し、例を示します。  
   
- [SQLXML 4.0 でのデータを変更するのにアップデート グラムの使用](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [SQLXML 4.0 でのアップデートグラムを使用したデータの変更](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  XSD (または XDR) の注釈付きスキーマによって提供される XML ビューを操作し、データベース内のデータを変更するアップデートグラムについて、情報を提供します。  
   
- [XML データ & #40; の一括読み込みを実行します。SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  SQLXML 4.0 で XML の一括読み込みを行う方法について説明します。  
   
  [SQLXML 4.0 のデータ アクセス コンポーネント](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  SQLXMLOLEDB プロバイダーについて説明し、その他の SQLXML 4.0 データ アクセス コンポーネントへのリンクを提供します。  
   
- [SQLXML 4.0 の .NET Framework のサポート](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [SQLXML 4.0 の .NET Framework サポート](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  .NET Framework に対する SQLXML 4.0 のサポートについて説明します。  
   
  [テンプレート、XSL、およびスキーマのキャッシュ&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  

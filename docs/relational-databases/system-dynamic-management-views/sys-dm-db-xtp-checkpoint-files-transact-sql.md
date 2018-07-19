@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_files (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_xtp_checkpoint_files (TRANSACT-SQL) |Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,42 +26,43 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005744"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   ファイル サイズ、物理的な場所、トランザクション ID など、チェックポイント ファイルに関する情報を表示します。  
   
-> **注:** 現在のチェックポイントが閉じられていない、s の状態 列の`ys.dm_db_xtp_checkpoint_files`新しいファイルの UNDER CONSTRUCTION がされます。 最後のチェックポイント以降のトランザクション ログ拡張のための十分ながある場合、または発行した場合に、チェックポイントが自動的に閉じられます、`CHECKPOINT`コマンド ([チェックポイント&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
+> **注:** 現在のチェックポイントが閉じられていない、s の [状態] 列の`ys.dm_db_xtp_checkpoint_files`新しいファイルの UNDER CONSTRUCTION になります。 最後のチェックポイント以降のトランザクション ログ拡張のための十分ながある場合、または発行した場合に、チェックポイントが自動的に閉じられます、`CHECKPOINT`コマンド ([チェックポイント&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
   
- メモリ最適化ファイル グループは、インメモリ テーブルでの挿入および削除された行を格納するのに追加専用のファイルを内部的に使用されます。 これらのファイルには 2 つの種類があります。 データ ファイルには、デルタ ファイルには、削除された行への参照が含まれますが挿入された行が含まれています。 
+ メモリ最適化ファイル グループは、内部的には、インメモリ テーブルの挿入および削除された行を格納するのに追加専用のファイルを使用します。 これらのファイルには 2 つの種類があります。 データ ファイルには、デルタ ファイルが削除された行への参照が含まれている挿入された行が含まれています。 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 新しいバージョンを大幅に異なるし、下位にあるトピックに説明が[SQL Server 2014](#bkmk_2014)です。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 新しいバージョンから大幅に異なるし、下位にあるトピックの説明は[SQL Server 2014](#bkmk_2014)します。  
   
- 詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)です。  
+ 詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)します。  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] およびそれ以降  
- 次の表に、列の`sys.dm_db_xtp_checkpoint_files`で始まる、  **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** です。  
+ 次の表に、列の`sys.dm_db_xtp_checkpoint_files`以降 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 内の file_id と結合[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)です。|  
+|container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 内の file_id と結合[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)します。|  
 |container_guid|**uniqueidentifier**|で、ルート、データまたはデルタ ファイルがの一部であるコンテナーの GUID です。 File_guid sys.database_files テーブルに結合します。|  
 |checkpoint_file_id|**uniqueidentifier**|チェックポイント ファイルの GUID です。|  
 |relative_file_path|**nvarchar (256)**|コンテナーにマップされている、ファイルのパスです。|  
 |file_type|**smallint**|無料の場合は-1<br /><br /> データ ファイルは 0 です。<br /><br /> デルタ ファイルの場合は 1 です。<br /><br /> ルート ファイルの 2<br /><br /> 大きなデータ ファイルの 3|  
-|file_type_desc|**nvarchar(60)**|空きとして管理されている空き-すべてのファイル割り当てに利用できます。 無料のファイルは、システムによって予測されるニーズに応じてサイズ変更できます。 最大サイズは、1 GB です。<br /><br /> データにはデータ ファイルには、メモリ最適化テーブルに挿入された行が含まれます。<br /><br /> 差分にはデルタ ファイルには、削除されたデータ ファイル内の行への参照が含まれます。<br /><br /> ルートにはルート ファイルには、メモリ最適化テーブルとネイティブ コンパイル済みのオブジェクトのシステム メタデータが含まれます。<br /><br /> 大規模なデータの大きなデータ ファイルを含める (n)varchar(max) と varbinary (max) 列だけでなく、列セグメントはメモリ最適化テーブルで列ストア インデックスの一部である挿入された値。|  
+|file_type_desc|**nvarchar(60)**|無料として保守管理されてすべて FREE のファイルは、割り当てに使用できます。 無料のファイルは、システムによって予測されるニーズに応じてサイズを変更できます。 最大サイズは、1 GB です。<br /><br /> データにはデータ ファイルには、メモリ最適化テーブルに挿入された行が含まれます。<br /><br /> 差分にはデルタ ファイルには、削除されたデータ ファイル内の行への参照が含まれます。<br /><br /> ルートにはルート ファイルには、メモリ最適化テーブルとネイティブ コンパイル済みのオブジェクトのシステム メタデータが含まれます。<br /><br /> 大規模なデータの大きなデータ ファイルを含む (n)varchar(max) と varbinary (max) 列と列セグメントはメモリ最適化テーブルの列ストア インデックスの一部であるで挿入された値。|  
 |internal_storage_slot|**int**|内部ストレージ配列でのファイルのインデックス。 ルートの場合、または 1 以外の状態を NULL になります。|  
 |checkpoint_pair_file_id|**uniqueidentifier**|対応するデータまたはデルタ ファイルです。 ルートの場合は NULL。|  
 |file_size_in_bytes|**bigint**|ディスク上のファイルのサイズです。|  
 |file_size_used_in_bytes|**bigint**|データ格納中のチェックポイント ファイル ペアについては、この列は、次のチェックポイントの後に更新されます。|  
 |logical_row_count|**bigint**|データの場合は、挿入された行の数です。<br /><br /> デルタでは、行の数は、テーブルのドロップのアカウンティングの後に削除されます。<br /><br /> ルートの場合、次のように NULL です。|  
 |state|**smallint**|0 – PRECREATED<br /><br /> 1-UNDER CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8-ログの切り捨てを待機しています|  
-|state_desc|**nvarchar(60)**|PRECREATED – チェックポイント ファイルの数が事前に割り当てられたトランザクションが実行されているように、新しいファイルを割り当てる待機時間を排除または最小限に抑えます。 これらのファイルを事前作成されたことができます、ワークロードの推定の必要に応じて、サイズがデータはありません。 これは、MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでのストレージ オーバーヘッドです。<br /><br /> UNDER CONSTRUCTION - これらのチェックポイント ファイルは、データベースによって生成されたログ レコードに基づいて、登録されている、つまり、構築、され、まだチェックポイントの一部ではないできます。<br /><br /> ACTIVE - 終了した前回のチェックポイントからパッケージを挿入または削除された行が含まれます。 データベースの再起動時にトランザクション ログのアクティブな部分を適用する前にメモリに読み込まれる領域のテーブルの内容が含まれます。 これらのチェックポイントのファイルのマージ操作を想定してメモリ最適化テーブルのメモリ内サイズの約 2 x がトランザクション ワークロード維持するのには、そのサイズを見込んでいます。<br /><br /> MERGE TARGET – マージ操作でこれらのチェックポイント ファイルのターゲットは、マージ ポリシーによって識別されたソース ファイルから統合されたデータ行を格納します。 マージをインストールした段階で、MERGE TARGET は ACTIVE 状態に遷移します。<br /><br /> マージがインストールされているし、MERGE TARGET CFP が持続性チェックポイントの場合は、この状態にマージ ソース チェックポイント ファイルの遷移の一部は、ログの切り捨て – 待機しています。 メモリ最適化テーブルを持つデータベースの運用上の正確性は、この状態のファイルが必要です。  たとえば、持続性チェックポイントから復元を行う際に、時間をさかのぼる目的で使用されます。|  
+|state_desc|**nvarchar(60)**|PRECREATED – チェックポイント ファイルの数が事前に割り当てられたトランザクションが実行されているように、新しいファイルを割り当てるときの待機時間を排除または最小限にします。 推定、ワークロードのニーズに応じて、サイズを変更できるこれらのファイルを事前に作成されたが、データはありません。 これは、MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでのストレージ オーバーヘッドです。<br /><br /> UNDER CONSTRUCTION - は、これらのチェックポイント ファイルは、データベースによって生成されたログ レコードに基づいて、登録されている、つまり、作成中と、まだチェックポイントの一部ではないです。<br /><br /> ACTIVE - 終了した前回のチェックポイントからパッケージを挿入または削除された行が含まれます。 領域は、データベースの再起動時にトランザクション ログのアクティブな部分を適用する前に、メモリに読み込まれるテーブルの内容が含まれます。 マージ操作を想定して、メモリ最適化テーブルのメモリ内サイズの約 2 x がトランザクションのワークロード維持するには、これらのチェックポイント ファイルのサイズを見込んでいます。<br /><br /> MERGE TARGET – マージ操作でこれらのチェックポイント ファイルのターゲットは、マージ ポリシーによって識別されたソース ファイルから統合されたデータ行を格納します。 マージをインストールした段階で、MERGE TARGET は ACTIVE 状態に遷移します。<br /><br /> マージがインストールされているし、MERGE TARGET CFP が持続性チェックポイントの場合は、この状態にマージ ソースのチェックポイント ファイルの遷移の一部は、ログの切り捨てを待機しています。 メモリ最適化テーブルでデータベースの正しい動作では、この状態のファイルが必要です。  たとえば、持続性チェックポイントから復元を行う際に、時間をさかのぼる目的で使用されます。|  
 |lower_bound_tsn|**bigint**|ファイル内のトランザクションの下限の境界状態 (1, 3) に含まれない場合は null。|  
 |upper_bound_tsn|**bigint**|ファイル内のトランザクションの上限状態 (1, 3) に含まれない場合は null。|  
 |begin_checkpoint_id|**bigint**|開始チェックポイントの ID です。|  
@@ -71,11 +72,11 @@ ms.lasthandoff: 05/23/2018
 |encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > 1 のキーで暗号化<br /><br /> 2 = > 2 のキーで暗号化します。 アクティブなファイルのみ有効です。|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 次の表に、列の`sys.dm_db_xtp_checkpoint_files`の **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** です。  
+ 次の表に、列の`sys.dm_db_xtp_checkpoint_files`の **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 内の file_id と結合[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)です。|  
+|container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 内の file_id と結合[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)します。|  
 |container_guid|**uniqueidentifier**|データまたはデルタ ファイルが含まれているコンテナーの GUID。|  
 |checkpoint_file_id|**GUID**|データ ファイルまたはデルタ ファイルの ID。|  
 |relative_file_path|**nvarchar (256)**|コンテナーの場所を基準とする、データ ファイルまたはデルタ ファイルの相対パス。|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/23/2018
 |tombstone_operation_lsn|**nvarchar(23)**|tombstone_operation_lsn が、ログの切り捨てに関するログ シーケンス番号より少ない場合は、このファイルは削除されます。|  
 |logical_deletion_log_block_id|**bigint**|状態 5 にのみ適用されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW DATABASE STATE` 権限が必要です。  
   
 ## <a name="use-cases"></a>例  

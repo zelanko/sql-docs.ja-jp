@@ -1,5 +1,5 @@
 ---
-title: xp_revokelogin (TRANSACT-SQL) |Microsoft ドキュメント
+title: xp_revokelogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,19 +23,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 89d5f1d84bb421f9a60cd6ff308efa38c227dd94
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257963"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003246"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Windows グループまたはユーザーからのアクセスを取り消します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  Windows グループまたはユーザーからのアクセスを取り消します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,15 +48,15 @@ xp_revokelogin {[@loginame=] 'login'}
   
 ## <a name="arguments"></a>引数  
  [ **@loginame =** ] **'***login***'**  
- アクセスを取り消す Windows ユーザーまたはグループの名前を指定します。 *ログイン*など、ドメイン名を含める必要があります **[ADVWKS\sylvester1]** です。 *ログイン*は**sysname**、既定値はありません。  
+ アクセスを取り消す Windows ユーザーまたはグループの名前を指定します。 *ログイン*など、ドメイン名を含める必要があります **[advwks \sylvester1]** します。 *ログイン*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  代わりに DROP LOGIN を使用してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

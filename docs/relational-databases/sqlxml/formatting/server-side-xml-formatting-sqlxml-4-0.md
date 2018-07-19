@@ -1,5 +1,5 @@
 ---
-title: サーバー側の XML 書式設定 (SQLXML 4.0) |Microsoft ドキュメント
+title: サーバー側の XML 書式設定 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd37f50bb838717d9a245b038f624dee57bbf7d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969987"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003414"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>サーバー側の XML 書式設定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- FOR XML 句の詳細については、次を参照してください。 [For を使用して XML](../../../relational-databases/xml/for-xml-sql-server.md)です。  
+ FOR XML 句の詳細については、次を参照してください。 [For を使用して XML](../../../relational-databases/xml/for-xml-sql-server.md)します。  
   
 ## <a name="see-also"></a>参照  
- [クライアント側およびサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [クライアント側とサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [クライアント側の XML 書式設定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 処理オプションを指定する |Microsoft ドキュメント
+title: 処理オプションを指定する |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 945332a0d0e5138ad3422a3db1b88dfb21e85f2f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024339"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002214"
 ---
-# <a name="deployment-script-files---specifying-processing-options"></a>配置スクリプト ファイルの処理オプションの指定
+# <a name="deployment-script-files---specifying-processing-options"></a>配置スクリプト ファイル - 処理オプションの指定
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置ウィザードからの処理オプションを読み取り、 \<*プロジェクト名*> >.deploymentoptions ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ビルドするときに、このファイルを作成、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 指定された処理オプションを使用して、**展開**のページ*\<プロジェクト名 >* **プロパティ ページ**を作成する ダイアログ ボックス、 \<*プロジェクト名*> >.deploymentoptions ファイル。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開ウィザードの処理オプションの読み取り、 \<*プロジェクト名*> >.deploymentoptions ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時にこのファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 指定された処理オプションを使用して、**展開**のページ*\<プロジェクト名 >* **プロパティ ページ**を作成する ダイアログ ボックス、 \<*プロジェクト名*> >.deploymentoptions ファイル。  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>配置に関する処理オプションの確認  
- 内で格納されている構成設定、 \<*プロジェクト名*> >.deploymentoptions ファイルを次に示します。  
+ 内で格納されている構成設定、 \<*プロジェクト名*> >.deploymentoptions ファイルは、次のとおり。  
   
 -   **処理方法** この設定では、配置するオブジェクトを配置後に処理するかどうかと、実行する処理の種類を制御します。 処理オプションには次の 3 つがあります。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34024339"
     -   このオプションが **False**の場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではメタデータ変更が 1 つのトランザクションで配置され、各処理コマンドがそれぞれ別個のトランザクションで配置されます。  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>配置に関する処理オプションの変更  
- ただしを展開する必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトに保存されているものの別の処理オプションを使用して、 \<*プロジェクト名*> >.deploymentoptions ファイル。 たとえば、すべてのオブジェクトを完全に処理するか、既定の処理オプションを使用して処理するか、まったく処理しないようにする必要が生じることがあります。 キューブまたはディメンションが書き込み可能である場合は、新しい書き戻しテーブルまたは既存の書き戻しテーブルのどちらを使用するかを指定できます。  
+ ただし、デプロイする必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトに格納されている別の処理オプションを使用して、 \<*プロジェクト名*> >.deploymentoptions ファイル。 たとえば、すべてのオブジェクトを完全に処理するか、既定の処理オプションを使用して処理するか、まったく処理しないようにする必要が生じることがあります。 キューブまたはディメンションが書き込み可能である場合は、新しい書き戻しテーブルまたは既存の書き戻しテーブルのどちらを使用するかを指定できます。  
   
  配置時に使用する処理オプションを変更するには、プロジェクトを編集して再作成するか、次の手順のいずれかの方法に従って入力ファイル内の処理オプションを変更できます。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "34024339"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 応答ファイル モードの詳細については、「 [Analysis Services 配置ウィザードの実行](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)」を参照してください。  
   
-     または  
+     — または —  
   
 -   変更、 \<*プロジェクト名*> 任意のテキスト エディターを使用して、>.deploymentoptions ファイル。  
   
 ## <a name="see-also"></a>参照  
  [インストール先の指定](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
- [パーティションおよびロールの配置オプションを指定します。](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
- [ソリューションの配置の構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [パーティションおよびロールの配置オプションの指定](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
+ [ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   
