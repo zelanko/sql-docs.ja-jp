@@ -1,5 +1,5 @@
 ---
-title: エンドポイントの実装 |Microsoft ドキュメント
+title: エンドポイントの実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5bd1f57ee89138dca4354d1a558d605784cb3310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970187"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042010"
 ---
 # <a name="implementing-endpoints"></a>エンドポイントの実装
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   エンドポイントは、要求をネイティブにリッスンできるサービスです。 SMO を使用してさまざまな種類のエンドポイントをサポートする、<xref:Microsoft.SqlServer.Management.Smo.Endpoint>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> オブジェクトのインスタンスを作成し、そのプロパティを設定することで、特定のプロトコルを必要とする特定の種類のペイロードを処理するためのエンドポイント サービスを作成できます。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Endpoint>上の次のペイロードの種類を指定するオブジェクトを使用できます。  
+ <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Endpoint>オブジェクトは、上の次のペイロードの種類を指定するために使用できます。  
   
 -   データベース ミラーリング  
   
@@ -46,16 +46,16 @@ ms.locfileid: "32970187"
   
 -   TCP プロトコル  
   
- ペイロードの種類を指定すると、実際のペイロード設定できますを使用して、<xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A>オブジェクト プロパティです。 <xref:Microsoft.SqlServer.Management.Smo.Payload> オブジェクト プロパティは、プロパティを変更できる、指定された種類のペイロード オブジェクトへの参照を提供します。  
+ ペイロードの種類を指定すると、実際のペイロード設定できるを使用して、<xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A>オブジェクト プロパティです。 <xref:Microsoft.SqlServer.Management.Smo.Payload> オブジェクト プロパティは、プロパティを変更できる、指定された種類のペイロード オブジェクトへの参照を提供します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> オブジェクトに対して、ミラーリング ロール、および暗号化が有効であるかどうかを指定する必要があります。 <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload>オブジェクトには、メッセージ転送、許可される接続の最大数と認証モードに関する情報が必要です。 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> オブジェクトでは、さまざまなプロパティの設定が必要です。これには、クライアントが使用できる SOAP ペイロード メソッド (ストアド プロシージャおよびユーザー定義関数) を指定する、<xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> オブジェクト プロパティなどがあります。  
+ <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> オブジェクトに対して、ミラーリング ロール、および暗号化が有効であるかどうかを指定する必要があります。 <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload>オブジェクトには、メッセージの転送、許可される接続の最大数と、認証モードに関する情報が必要です。 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> オブジェクトでは、さまざまなプロパティの設定が必要です。これには、クライアントが使用できる SOAP ペイロード メソッド (ストアド プロシージャおよびユーザー定義関数) を指定する、<xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> オブジェクト プロパティなどがあります。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> オブジェクト プロパティを使用すると、<xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> プロパティで指定された型のプロトコル オブジェクトを参照して、実際のプロトコルを設定することができます。 <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> オブジェクトには、制限された IP アドレス、ポート、Web サイト、および認証情報のリストが必要です。 <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol>オブジェクトでは、制限された IP アドレスおよびポート情報のリストも必要です。  
+ <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> オブジェクト プロパティを使用すると、<xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> プロパティで指定された型のプロトコル オブジェクトを参照して、実際のプロトコルを設定することができます。 <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> オブジェクトには、制限された IP アドレス、ポート、Web サイト、および認証情報のリストが必要です。 <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol>オブジェクトでは、制限された IP アドレスとポート情報の一覧も必要です。  
   
  エンドポイントを作成して定義を完了したら、データベース ユーザー、グループ、ロール、およびログオンに対して、アクセスの許可、取り消し、および拒否を行うことができます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Visual Basic でのデータベース ミラーリング エンドポイント サービスの作成  
  コード例では、SMO でデータベース ミラーリング エンドポイントを作成する方法を示します。 これは、データベース ミラーを作成する前に必要な操作です。 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Database> プロパティおよびその他のプロパティを使用して、データベース ミラーを作成します。  
@@ -138,6 +138,6 @@ $ep.EndpointState;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングのエンドポイントと &#40; です。SQL Server と &#41; です。](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_maintenance_plan_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 200638dc2e227ad2b8428f668deb424ab3a277c2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238351"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041090"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,14 +58,14 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_add_maintenance_plan_job**から実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_maintenance_plan_job**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_maintenance_plan_job**します。  
   
 ## <a name="examples"></a>使用例  
- この例を使用して作成したメンテナンス プランにジョブ"B8FCECB1-E22C-11D2-AA64-00C04F688EAE"を追加する**sp_add_maintenance_plan_job**です。  
+ この例は、ジョブ"B8FCECB1-E22C-11D2-AA64-00C04F688EAE"を使用して作成したメンテナンス プランに追加します。 **sp_add_maintenance_plan_job**します。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  

@@ -1,5 +1,5 @@
-﻿---
-title: SQL Server Analysis Services 表形式の 1400 モデルでサポートされるデータ ソース |Microsoft ドキュメント
+---
+title: SQL Server Analysis Services 表形式 1400 モデルでサポートされるデータ ソース |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,62 +10,62 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043156"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041660"
 ---
-# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>データ ソースが SQL Server Analysis Services で 1400 の表形式モデルをサポート
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>SQL Server Analysis Services 表形式 1400 モデルにサポートされるデータ ソース
 
 [!INCLUDE[ssas-appliesto-sql2017](../../includes/ssas-appliesto-sql2017.md)]
 
 この記事では、1400 互換性レベルの SQL Server Analysis Services (SSAS) 表形式モデルで使用できるデータ ソースの種類について説明します。 
 
-SSAS 表形式モデル 1200 と下限の互換性レベルはを参照してください。 [SQL Server Analysis Services 表形式の 1200 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular.md)です。
+SSAS 表形式モデル 1200 と下限の互換性レベルはを参照してください。 [SQL Server Analysis Services 表形式 1200 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular.md)します。
 
-Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)です。
+Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)します。
 
 
-## <a name="cloud-data-sources"></a>クラウド データ ソース
+## <a name="cloud-data-sources"></a>クラウドのデータ ソース
 
 |Azure のデータ ソース  |メモリ内  |DirectQuery  |
 |---------|---------|---------|
-|Azure SQL Database     |   はい      |    はい      |
+|Azure SQL データベース     |   はい      |    はい      |
 |Azure SQL データ ウェアハウス     |   はい      |   はい       |
 |Azure BLOB ストレージ     |   はい       |    いいえ      |
-|Azure テーブル ストレージ    |   はい       |    いいえ      |
+|Azure Table Storage    |   はい       |    いいえ      |
 |Azure Cosmos DB      |  はい        |  いいえ        |
 |Azure Data Lake Store     |   はい       |    いいえ      |
 |Azure HDInsight HDFS     |     はい     |   いいえ       |
-|Azure HDInsight Spark (ベータ版)     |   はい       |   いいえ       |
+|Azure HDInsight Spark (ベータ)     |   はい       |   いいえ       |
 ||||
 
 **プロバイダー**   
-インメモリと DirectQuery モデルの Azure データ ソースへの接続は、SQL Server の .NET Framework データ プロバイダーを使用します。
+インメモリおよび DirectQuery モデルの Azure データ ソースへの接続は、SQL Server の .NET Framework Data Provider を使用します。
 
 ## <a name="on-premises-data-sources"></a>オンプレミス データ ソース
 
-### <a name="supported-by-in-memory-and-directquery-models"></a>インメモリと DirectQuery モデルでサポートされています。
+### <a name="supported-by-in-memory-and-directquery-models"></a>インメモリおよび DirectQuery モデルでサポートされています。
 
-|データ ソース | メモリ内のプロバイダー | DirectQuery プロバイダー |
+|データ ソース | メモリ内プロバイダー | DirectQuery プロバイダー |
 |  --- | --- | --- |
 | SQL Server |SQL Server Native Client 11.0、Microsoft OLE DB Provider for SQL Server、.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | SQL Server データ ウェアハウス |SQL Server Native Client 11.0、Microsoft OLE DB Provider for SQL Server、.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
-| Oracle |Microsoft OLE DB Provider for Oracle、.NET 用の Oracle データ プロバイダー |.NET 用の oracle データ プロバイダー | |
-| Teradata |OLE DB Provider for Teradata、.NET の Teradata データ プロバイダー |.NET の Teradata データ プロバイダー | |
+| Oracle |Microsoft OLE DB Provider for Oracle で Oracle Data Provider for .NET |Oracle Data Provider for .NET | |
+| Teradata |OLE DB Provider for Teradata、Teradata Data Provider for .NET |Teradata Data Provider for .NET | |
 | | | |
 
 > [!NOTE]
-> OLE DB プロバイダーは、インメモリ モデルでは、大規模なデータのパフォーマンスが向上を提供できます。 選択すると、同じデータ ソースごとに異なるプロバイダーの間で、最初の OLE DB プロバイダーを試してください。  
+> インメモリ モデルでは、OLE DB プロバイダーは、大規模なデータのパフォーマンス向上を提供できます。 同じデータ ソースごとに異なるプロバイダーの間を選択するときは、まず、OLE DB プロバイダーを試してください。  
 
-### <a name="supported-by-in-memory-models-only"></a>インメモリ モデルでのみでサポートされています。
+### <a name="supported-by-in-memory-models-only"></a>インメモリ モデルのみでサポートされています。
 
-|データベース  |
+|[データベース]  |
 |---------|---------|---------|
 |Access データベース     | 
 |SQL Server Analysis Services     | 
-|IBM Informix (ベータ版) | 
+|IBM Informix (ベータ) | 
 |JSON ドキュメント     | 
 |バイナリからの行     | 
 |MySQL データベース     | 

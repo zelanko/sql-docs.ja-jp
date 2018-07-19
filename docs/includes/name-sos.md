@@ -1,1 +1,1 @@
-<Token>Microsoft SQL Management Studio (プレビュー)</Token>
+<Token>Microsoft SQL Operations Studio (プレビュー)</Token>

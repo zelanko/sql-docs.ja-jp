@@ -1,5 +1,5 @@
 ---
-title: round 関数 (XQuery) |Microsoft ドキュメント
+title: round 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 69c9e11d9cb6dda3aa50a2d49e3eb9c55b99a57b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055130"
 ---
-# <a name="numeric-values-functions---round"></a>数値の値関数の round
+# <a name="numeric-values-functions---round"></a>数値関数 - round します。
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   引数に最も近く、小数部分を持たない数値を返します。 そのような数値が複数ある場合、正の無限大に最も近い数値が返されます。 以下に例を示します。  
@@ -54,24 +54,24 @@ fn:round ( $arg as numeric?) as numeric?
  *$arg*  
  関数を適用する数値。  
   
-## <a name="remarks"></a>解説  
- 場合の種類 *$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型と同じ、*$arg*型です。 場合の種類 *$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
+## <a name="remarks"></a>コメント  
+ 場合の種類 *$arg*は 3 つの数値基本データ型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型は同じですが、*$arg*型。 場合の種類 *$arg* 、数値型のいずれかから派生した型は、戻り値の型が基本の数値型。  
   
- 場合に入力する、 **fn:floor**、 **fn:ceiling**、または**fn:round**関数は**xdt:untypedAtomic**、型指定されていないデータは、暗黙的にキャストされます**xs:double**です。  
+ 場合への入力、 **fn:floor**、 **fn:ceiling**、または**fn:round**関数は**xdt:untypedAtomic**、型指定されていないデータは、暗黙的にキャストされます**xs:double**します。  
   
  その他の型のデータが入力されると、静的エラーが生成されます。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例**xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
- 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**round()** XQuery 関数。 置換を行うには必要なは、 **ceiling()** と、クエリの関数、 **round()** 関数。  
+ 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**round()** XQuery 関数。 置換を行う必要があるすべてが、 **ceiling()** 関数を使用したクエリで、 **round()** 関数。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
 -   **Round()** 関数では、整数値を xs:decimal にマップします。  
   
--   **Round()** xs:double 値および xs:float 値 - 0.5e0 と 0e0 の関数ではなく - 0e0 0e0 にマップされます。  
+-   **Round()** 0.5e0 と 0e0 間 xs:double および xs:float 値の関数ではなく - 0e0 0e0 にマップされます。  
   
 ## <a name="see-also"></a>参照  
  [floor 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   

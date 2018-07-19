@@ -1,5 +1,5 @@
 ---
-title: sp_execute (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_execute (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041170"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,16 +48,16 @@ sp_execute handle OUTPUT
   
 ## <a name="arguments"></a>引数  
  *handle*  
- *処理*sp_prepare から返される値。 *処理*を呼び出す必要なパラメーターは、 **int**値を入力します。  
+ *処理*sp_prepare から返される値。 *処理*を呼び出して取得する必須パラメーター **int**値を入力します。  
   
  *bound_param*  
- 追加パラメーターを使用することを示します。 *bound_param*任意のデータ型をプロシージャに追加のパラメーターを示すために入力値をする必須パラメーターです。  
+ 追加パラメーターを使用することを示します。 *bound_param*プロシージャの追加のパラメーターを示すために任意のデータ型の入力値を必要なパラメーターです。  
   
 > [!NOTE]  
->  *bound_param* 、sp_prepare から行われた宣言に一致する必要があります*params*値し、形式にすることができます*@name値 =* または*値*です。  
+>  *bound_param* 、sp_prepare から行われた宣言に一致する必要があります*params*値し、形式にすることができます*@name値 =* または*値*します。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_prepare &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
+ [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
   
   

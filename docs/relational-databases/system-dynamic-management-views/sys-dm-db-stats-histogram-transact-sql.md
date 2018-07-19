@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_histogram (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_stats_histogram (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,18 +25,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042770"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-現在の指定されたデータベース オブジェクト (テーブルまたはインデックス付きビュー) の統計ヒストグラムを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 ような`DBCC SHOW_STATISTICS WITH HISTOGRAM`します。
+現在の指定されたデータベース オブジェクト (テーブルまたはインデックス付きビュー)、統計ヒストグラムを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 ような`DBCC SHOW_STATISTICS WITH HISTOGRAM`します。
 
 > [!NOTE] 
-> この DMF は以降で利用可能な[!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]SP1 CU2
+> この DMF は以降で利用できる[!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]SP1 CU2
 
 ## <a name="syntax"></a>構文  
   
@@ -53,7 +54,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|統計オブジェクトのプロパティを返す対象であるオブジェクト (テーブルまたはインデックス付きビュー) の ID。|  
 |stats_id |**int**|統計オブジェクトの ID。 テーブルまたはインデックス付きビューで一意です。 詳細については、「[sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)」を参照してください。|  
@@ -62,13 +63,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |ヒストグラム区間内 (上限は除く) に列値がある行の予測数。 |
 |equal_rows |**real** |ヒストグラム区間の上限と列値が等しい行の予測数。 |
 |distinct_range_rows |**bigint** |ヒストグラム区間内 (上限は除く) にある個別の列値を持つ行の予測数。 |
-|average_range_rows |**real** |上限を除く、ヒストグラムのステップ内の重複する列の値を持つ行の数の平均値 (`RANGE_ROWS / DISTINCT_RANGE_ROWS`の`DISTINCT_RANGE_ROWS > 0`)。 |
+|average_range_rows |**real** |上限を除く、ヒストグラムのステップ内の重複する列の値を持つ行の平均数 (`RANGE_ROWS / DISTINCT_RANGE_ROWS`の`DISTINCT_RANGE_ROWS > 0`)。 |
   
- ## <a name="remarks"></a>解説  
+ ## <a name="remarks"></a>コメント  
  
- 結果セット`sys.dm_db_stats_histogram`のような情報を返します`DBCC SHOW_STATISTICS WITH HISTOGRAM`も含まれていますと`object_id`、 `stats_id`、および`step_number`です。
+ 結果セット`sys.dm_db_stats_histogram`のような情報を返します`DBCC SHOW_STATISTICS WITH HISTOGRAM`も含まれています`object_id`、 `stats_id`、および`step_number`します。
 
- 列`range_high_key`sql_variant データ型を使用する必要があります`CAST`または`CONVERT`場合は、述語が非文字列定数と比較します。
+ 列`range_high_key`sql_variant データ型を使用する必要があります`CAST`または`CONVERT`の場合、述語は、非文字列定数と比較します。
 
 ### <a name="histogram"></a>ヒストグラム
   
@@ -90,14 +91,14 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  クエリ オプティマイザーでは、統計的有意性に応じてヒストグラム区間を定義します。 区間幅を最大にするアルゴリズムを使用して境界値の差を最大にし、ヒストグラムの区間の数を最小限に抑えます。 区間の最大数は 200 です。 ヒストグラムの区間の数は、境界点が 200 より少ない列でも、個別の値の数より少なくなることがあります。 たとえば、個別の値が 100 個ある列のヒストグラムの境界点が 100 より少なくなる場合もあります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-ユーザーは、統計情報列に対する select 権限を持つテーブルを所有するユーザーまたはユーザーのメンバーである必要があります、`sysadmin`固定サーバー ロール、`db_owner`固定データベース ロール、または`db_ddladmin`固定データベース ロール。
+ユーザーは、統計情報列に対する select 権限を持ってまたはテーブルを所有するユーザーまたはユーザーのメンバーであることが必要です、`sysadmin`固定サーバー ロール、`db_owner`固定データベース ロール、または`db_ddladmin`固定データベース ロール。
 
 ## <a name="examples"></a>使用例  
 
 ### <a name="a-simple-example"></a>A. 簡単な例    
-次の例では、作成し、単純なテーブルを追加します。 統計を作成し、`Country_Name`列です。
+次の例では、作成し、単純なテーブルを設定します。 統計を作成、`Country_Name`列。
 
 ```sql
 CREATE TABLE Country
@@ -108,12 +109,12 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-主キーが占める`stat_id`番号は 1、ためコール`sys.dm_db_stats_histogram`の`stat_id`番号を返すための統計ヒストグラム、2、`Country`テーブル。    
+主キーが占める`stat_id`番号は 1、そのため呼び出し`sys.dm_db_stats_histogram`の`stat_id`番号を返すため、統計ヒストグラムの 2、`Country`テーブル。    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>B. 便利なクエリは:   
+### <a name="b-useful-query"></a>B. 便利なクエリ:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -122,15 +123,15 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. 便利なクエリは:
-次の例は、テーブルから選択`Country`列の述語で`Country_Name`です。
+### <a name="c-useful-query"></a>C. 便利なクエリ:
+次の例は、テーブルから選択`Country`列の述語で`Country_Name`します。
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-次の例は、以前に作成された統計テーブルに`Country`と列`Country_Name`上記のクエリで述語に一致するヒストグラムのステップにします。
+次の例では、次のテーブルで以前に作成された統計に`Country`と列`Country_Name`の上記のクエリで述語に一致するヒストグラムのステップ。
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2017 Analysis Services の新機能 |Microsoft ドキュメント
+title: SQL Server 2017 Analysis Services の新機能新機能 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,43 +10,43 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045026"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042360"
 ---
-# <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services の新機能
+# <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services の新機能新機能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-SQL Server 2017 Analysis Services は、SQL Server 2012 以降、最も重要な機能強化の一部を表示します。 これまでよりもより強力な表形式モデルは、このリリース (SQL Server 2012 Analysis Services で初めて導入された) 表形式モードでの成功時に構築します。
+SQL Server 2017 Analysis Services は、SQL Server 2012 以降の最も重要な拡張機能のいくつかのように参照してください。 これまでよりもより強力な表形式モデルは、このリリース (SQL Server 2012 Analysis Services で初めて導入された) 表形式モードでの成功を構築します。
 
-多次元モードと SharePoint モード用の Power Pivot は、多くの Analysis Services の配置のホチキス止めです。 Analysis Services の製品ライフ サイクルでは、これらのモードは完成度の高いです。 このリリースでこれらのモードのいずれかの新機能はありません。 ただし、バグの修正とパフォーマンスの向上はも含まれます。
+多次元モードと SharePoint モード用の Power Pivot は、多くの Analysis Services の展開のホチキス止めです。 Analysis Services の製品ライフ サイクルの成熟したはこれらのモードです。 このリリースでこれらのモードのいずれかの新機能はありません。 ただし、バグの修正とパフォーマンスの向上が含まれます。
 
-SQL Server 2017 Analysis Services では、ここで説明する機能が含まれています。 それらを利用するための最新バージョンを使用する必要がありますも[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) および[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT と SSMS では、SQL Server の新機能と通常一致新規および改良された機能を使用して毎月更新されます。  
+SQL Server 2017 Analysis Services では、ここで説明する機能が含まれます。 それらを利用するには、最新バージョンを使用する必要がありますも[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) と[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT および SSMS は、通常、SQL Server の新機能と一致する新規および改良された機能で毎月更新されます。  
 
-すべての新機能について説明する重要ですが、これも知ることが重要対象は廃止されており、このリリースと今後のリリースで廃止されました。 チェック アウトを必ず[旧バージョンとの互換性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)です。
+されるがどのように把握しておくもすべての新機能の詳細については重要ですが、このリリースと今後のリリースで廃止された非推奨とされます。 チェック アウトを必ず[旧バージョンとの互換性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)します。
 
-このリリースでは、主要な新機能をいくつか見てをみましょう。
+このリリースでは、主要な新機能のいくつか見てをみましょう。
 
 ## <a name="1400-compatibility-level-for-tabular-models"></a>テーブル モデルの1400 互換性レベル
-  新機能と記載されている機能の多くは、ここを活用するには、新規または既存のテーブル モデルを設定または 1400 互換性レベルにアップグレードしてする必要があります。 1400 互換性レベルのモデルを SQL Server 2016 SP1 以前に展開したり、低い互換性レベルにダウングレードしたりすることはできません。 詳細については、次を参照してください。 [Analysis Services 表形式モデルの互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)です。
+  新機能と説明されている機能の多くの機能をここで実行するには、新規または既存のテーブル モデルを設定するか、1400 互換性レベルにアップグレードしてする必要があります。 1400 互換性レベルのモデルを SQL Server 2016 SP1 以前に展開したり、低い互換性レベルにダウングレードしたりすることはできません。 詳細についてを参照してください。 [Analysis Services 表形式モデルの互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)します。
   
 SSDT では、新しいテーブル モデル プロジェクトを作成するときに新しい 1400 互換性レベルを選択できます。 
 
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-SSDT では、ソリューション エクスプ ローラーで、既存のテーブル モデルのアップグレードを右クリックして**Model.bim**、し、**プロパティ**、設定、**互換性レベル**プロパティ**SQL Server 2017 (1400)** です。 
+ソリューション エクスプ ローラーで、SSDT で既存のテーブル モデルをアップグレードするを右クリックして**Model.bim**、し、**プロパティ**、設定、**互換性レベル**プロパティ**SQL Server 2017 (1400)** します。 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
-留意することが重要 1400 に既存のモデルをアップグレードすると、ダウン グレードします。 必ず、1200 モデル データベースのバックアップを保管してください。
+留意することが重要するダウン グレードできません。 既存のモデルを 1400 にアップグレードした後。 1200 モデル データベースのバックアップを保管してください。
 
 ## <a name="modern-get-data-experience"></a>新しい Get Data エクスペリエンス
-SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースからデータをインポートする際に、現代が導入されています**データの取得**1400 互換性レベルのモデルで発生します。 この新機能は、Power BI Desktop と Microsoft Excel 2016 の同様の機能に基づいています。 最新のデータの取得操作は、データの取得のクエリ ビルダーと M の式を使用して、非常に多くのデータ変換とデータのマッシュ アップ機能を提供します。
+SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースからデータをインポートする際に、最新が導入されています**データの取得**モデルの 1400 互換性レベルが発生します。 この新機能は、Power BI Desktop と Microsoft Excel 2016 の同様の機能に基づいています。 新しい Get Data エクスペリエンスは、クエリ ビルダーのデータの取得と M 式を使用して、膨大なデータ変換とデータのマッシュ アップ機能を提供します。
 
-最新のデータの取得操作は、さまざまなデータ ソースのサポートを提供します。 将来的に、更新プログラムではさらに多くのサポートが含まれます。
+新しい Get Data エクスペリエンスでは、さまざまな種類のデータ ソースのサポートを提供します。 今後、更新プログラムではさらに多くのサポートが含まれます。
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
@@ -55,18 +55,18 @@ SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースから�
 ![高度なマッシュ アップ](../analysis-services/media/as-get-data-advanced.png)
 
 
-最新データの取得が発生し、1400 を互換性レベル 1200 の表形式モデルの既存の upraded に M マッシュ アップ機能は適用されません。 新しいエクスペリエンスは、1400 互換性レベルで作成した新しいモデルにのみ適用されます。
+最新の Get Data エクスペリエンスし、を 1400 互換性レベル 1200 の表形式モデルの既存の upraded に M マッシュ アップ機能は適用されません。 新しいエクスペリエンスは、1400 互換性レベルで作成された新しいモデルにのみ適用されます。
 
 ## <a name="encoding-hints"></a>エンコードのヒント
-このリリースでは、メモリ内の大規模な表形式モデルの処理 (データの更新) を最適化するために使用される高度な機能、エンコードのヒントを紹介します。 エンコードして理解するには、次を参照してください。[パフォーマンス チューニングのテーブル モデルの SQL Server 2012 Analysis Services](https://msdn.microsoft.com/library/dn393915.aspx)エンコードを理解するには」のホワイト ペーパー。
+このリリースでは、高度な機能を使用して大規模なメモリ内表形式モデルの処理 (データの更新) を最適化するエンコードのヒントを紹介します。 エンコードを理解を参照してください。[パフォーマンス チューニングの表形式モデル SQL Server 2012 Analysis Services で](https://msdn.microsoft.com/library/dn393915.aspx)エンコードをより深く理解するには、に関するホワイト ペーパー。
 
-* 値のエンコードは、集計にのみ使用される通常の列のクエリ パフォーマンスの向上を提供します。
+* 値のエンコードは、通常の集計をのみ使用される列のクエリ パフォーマンスの向上を提供します。
 
-* ハッシュのエンコードが group by の列 (多くの場合、ディメンション テーブルの値) と外部キー用に推奨します。 文字列型の列は、常にエンコードされるハッシュです。
+* ハッシュのエンコードは、group by の列 (ディメンション テーブルの値では多くの場合) と外部キーの優先です。 文字列型の列は、常に、エンコードされたハッシュです。
 
-数値列には、いずれかのエンコード方法を使用できます。 各数値の列値またはハッシュのエンコードを適用するかどうかを決定するのサンプル値の取得と Analysis Services が、いずれかのテーブルが空の場合 (またはパーティションに分割せず)、テーブルの処理を開始、テーブル全体の処理操作が実行されて、. 既定では、値のエンコードが選択すると、列の個別の値のサンプルでは、十分な大きさ: それ以外の場合ハッシュのエンコード圧縮効率の改善を提供通常されます。 列が部分的に処理された後、データの分布に関する詳しい情報に基づくエンコード方式を変更し、エンコード プロセス; を再起動する Analysis Services のことがただし、この処理時間を向上し、効率的ではありません。 パフォーマンス チューニングに関するホワイト ペーパーでは、さらに詳しく再エンコードについて説明し、SQL Server Profiler を使用することを検出する方法について説明します。
+数値列には、これらのエンコード方法のいずれかを使用できます。 Analysis Services が、いずれかのテーブルが空の (パーティションの有無にかかわらず) の場合、テーブルの処理を開始または、テーブル全体の処理操作が実行される、サンプルの値は、各数値の列値またはハッシュ エンコードを適用するかどうかを判断するの取得します. 既定では、値のエンコード選択ときに十分では、列の個別の値のサンプル:、それ以外の場合圧縮効率の改善が提供通常ハッシュ エンコードされます。 Analysis Services データの分散の詳細に基づいて列が部分的に処理した後、エンコード方式を変更し、エンコード プロセス; を再起動する可能性があります。ただし、この処理時間を向上し、効率的ではありません。 パフォーマンス チューニングに関するホワイト ペーパーでは、さらに詳しく再エンコードについて説明し、SQL Server Profiler を使用してそれを検出する方法について説明します。
 
-エンコードのヒントは、データ プロファイルからやトレース イベントを再エンコードへの応答の知識を指定されたエンコーディング メソッドの基本設定を指定するモデルを使用できます。 ハッシュでエンコードされた列での集計は列の値でエンコードされた値のエンコードとして指定できるこのような列のヒントよりも遅くなります。 優先順位が適用されることは保証されません。 これは、設定とは対照的です。 エンコードのヒントを指定するには、列に EncodingHint プロパティを設定します。 使用可能な値は"Default"、"Value"および「ハッシュ」です。 JSON ベースのメタデータを Model.bim ファイルからの次のスニペットは、Sales Amount 列のエンコード値を指定します。
+エンコードのヒントからデータ プロファイルやトレース イベントを再エンコードへの応答に関する予備知識を指定するエンコード方式の優先順位を指定するモデルを使用できます。 以降、列のハッシュ エンコードでの集計は、列の値でエンコードされた値のエンコードがヒントとして指定する、このような列のよりも遅くなります。 優先順位が適用されることは保証されません。 設定ではなく、ヒントになります。 エンコードのヒントを指定するには、列に EncodingHint プロパティを設定します。 使用可能な値は、"Default"、"Value"および「ハッシュ」です。 Model.bim ファイルから JSON ベースのメタデータの次のスニペットでは、Sales Amount 列のエンコード値を指定します。
 
 ```
 {
@@ -110,7 +110,7 @@ SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースから�
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 関数は、詳細行の式でよく使用します。 次の例では、サンプル Adventure Works テーブル モデルの Internet Sales テーブルの行について返される列を定義しています。
+[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 関数は、詳細行式でよく使用します。 次の例では、サンプル Adventure Works テーブル モデルの Internet Sales テーブルの行について返される列を定義しています。
 
 ```
 SELECTCOLUMNS(
@@ -127,7 +127,7 @@ SELECTCOLUMNS(
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
 #### <a name="default-detail-rows-expression-property-for-tables"></a>テーブルの既定の [詳細行の式] プロパティ
-メジャーだけでなく、テーブルにも、詳細行式を定義できるプロパティがあります。 **[Default Detail Rows Expression]** (既定の詳細行の式) プロパティは、テーブル内のすべてのメジャーについて既定として動作します。 定義された、独自の式がないメジャーは、テーブルから式を継承し、テーブルに対して定義されている行を表示します。 これにより、式の再利用し、テーブルに後で自動的に追加する新しいメジャーが式を継承します。
+メジャーだけでなく、テーブルにも、詳細行式を定義できるプロパティがあります。 **[Default Detail Rows Expression]** (既定の詳細行の式) プロパティは、テーブル内のすべてのメジャーについて既定として動作します。 独自の式が定義されていないメジャーは、テーブルから式を継承し、テーブルに対して定義されている行を表示します。 これにより、式の再利用し、式を継承する新しいメジャーを後で自動的にテーブルに追加します。
 
 ![AS_Default_Detail_Rows_Expression](../analysis-services/media/as-default-detail-rows-expression.png)
  
@@ -141,9 +141,9 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="object-level-security"></a>オブジェクト レベルのセキュリティ
-このリリースで導入されて[オブジェクト レベルのセキュリティ](../analysis-services/tabular-models/object-level-security.md)テーブルと列にします。 テーブルおよび列のデータへのアクセスを制限、だけでなく機密性の高いテーブルおよび列名を保護することができます。 これで、悪意のあるユーザーがテーブルの存在を検出できなくなります。
+このリリースで導入[オブジェクト レベル セキュリティ](../analysis-services/tabular-models/object-level-security.md)テーブルおよび列。 テーブルおよび列のデータへのアクセスを制限、だけでなく、機密性の高いテーブルおよび列名を保護できます。 これで、悪意のあるユーザーがテーブルの存在を検出できなくなります。
 
-JSON ベースのメタデータを表形式モデル スクリプト言語 (TMSL)、または表形式オブジェクト モデル (TOM) を使用して、オブジェクト レベルのセキュリティを設定する必要があります。 
+JSON ベースのメタデータ、Tabular Model Scripting Language (TMSL)、または表形式オブジェクト モデル (TOM) を使用して、オブジェクト レベルのセキュリティを設定する必要があります。 
 
 たとえば、次のコードを使用して、 **TablePermission** クラスの **MetadataPermission** プロパティを **None**に設定すると、サンプル Adventure Works テーブル モデルの Product テーブルをセキュリティで保護できます。
 
@@ -171,16 +171,16 @@ db.Update(UpdateOptions.ExpandFull);
 
 ## <a name="dynamic-management-views-dmvs"></a>動的管理ビュー (DMV)
 [Dmv](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)はローカル サーバーの操作やサーバーの正常性に関する情報を返す SQL Server Profiler でクエリします。
-このリリースには、機能強化が含まれています。[動的管理ビュー](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) の 1400 1200 互換性レベルは、表形式モデル。
+このリリースには機能強化が含まれています[動的管理ビュー](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV)、互換性レベル 1200 と 1400 の表形式モデル用です。
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)し 1400、1200 の表形式モデルのようになりました。 1400 の表形式モデルでは、M パーティション、M 式および構造化されたデータ ソース間の依存関係を表示します。 詳細については、次を参照してください。、 [Analysis Services ブログ](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)です。
+[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md) 1200 と 1400 の表形式モデルを使用したようになりました。 表形式 1400 モデルでは、M パーティション、M 式および構造化データ ソース間の依存関係を表示します。 詳細についてを参照してください、 [Analysis Services ブログ](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)します。
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)の機能強化がこの DMV には、メジャーの次元を表示するさまざまなクライアント ツールで使用されるために含まれます。 たとえば、Excel ピボット テーブルの探索機能により、ユーザーが選択したメジャーに関連するディメンションへのクロス ドリル。 このリリースでは、正しくない値を表示している以前基数の列が修正されます。
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)の向上は、この DMV には、メジャーの次元を表示するさまざまなクライアント ツールで使用されるために含まれています。 たとえば、Excel ピボット テーブルの探索機能により、ユーザーが選択されているメジャーに関連付けられたディメンションをクロス ドリルします。 このリリースでは、正しくない値が表示されていた以前基数の列を修正します。
 
 ## <a name="dax-enhancements"></a>DAX の機能強化
-このリリースには、新しい DAX 関数と機能のサポートが含まれています。 を利用するために、最新バージョンの SSDT を使用する必要があります。 詳細については、次を参照してください。[新しい DAX 関数](https://msdn.microsoft.com/library/mt704075.aspx)です。
+このリリースには、新しい DAX 関数と機能のサポートが含まれています。 を利用するためには、最新バージョンの SSDT を使用する必要があります。 詳細についてを参照してください。[新しい DAX 関数](https://msdn.microsoft.com/library/mt704075.aspx)します。
 
-最も重要な DAX の新機能の 1 つでは、新しい[IN 演算子/CONTAINSROW 関数](https://msdn.microsoft.com/library/mt842621.aspx)の DAX 式。 これは、 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 句で複数の値を指定するために一般的に使用されている `WHERE` 演算子と似ています。
+DAX の新しい機能の最も重要な情報の 1 つでは、新しい[IN 演算子/関数の CONTAINSROW](https://msdn.microsoft.com/library/mt842621.aspx)の DAX 式。 これは、 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 句で複数の値を指定するために一般的に使用されている `WHERE` 演算子と似ています。
 
 以前は、次のメジャー式のように、論理 `OR` 演算子を使用して複数値フィルターを指定するのが一般的でした。
 
@@ -232,19 +232,19 @@ Filtered Sales:=CALCULATE (
     )
 ```
 
-## <a name="additional-improvements"></a>その他の機能強化
-すべての新しい機能に加えて、Analysis Services、SSDT および SSMS も含める次の機能強化。
+## <a name="additional-improvements"></a>追加の機能強化
+すべての新機能だけでなく、Analysis Services、SSDT および SSMS もとおりです。 次の機能強化
 
-* 階層と列を再利用は、Power BI のフィールド リストでの有用な場所で確認できます。
-* 日付関係を簡単に日付フィールドに基づく日付ディメンションへのリレーションシップを作成します。
+* 階層および列の再利用は、Power BI のフィールド リストでより便利な場所に表示します。
+* 日付フィールドに基づく日付ディメンションへのリレーションシップを簡単に作成、日付リレーションシップ。
 * Analysis Services の既定のインストール オプションは、表形式モードのようになりました。
-* 新しいデータ ソースのデータ (Power Query) を取得します。
+* 新しいデータの取得 (Power Query) のデータ ソース。
 * SSDT 用の DAX エディター。
-* M クエリの既存の DirectQuery データ ソースをサポートします。
-* SSMS の向上、表示、編集、およびスクリプトの構造化されたデータ ソースのサポートなどです。
+* 既存の DirectQuery データ ソースは、M クエリをサポートします。
+* SSMS の向上、表示、編集、およびスクリプトの構造化データ ソースのサポートなど。
 
 
 
 ## <a name="see-also"></a>参照
-[SQL Server 2017 年 1 リリース ノートします。](../sql-server/sql-server-2017-release-notes.md)   
+[SQL Server 2017 リリース ノートします。](../sql-server/sql-server-2017-release-notes.md)   
 [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)

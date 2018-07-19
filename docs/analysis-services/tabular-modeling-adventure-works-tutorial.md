@@ -1,5 +1,5 @@
 ---
-title: テーブル モデリング (互換性レベル 1200) |Microsoft ドキュメント
+title: テーブル モデリング (1200 互換性レベル) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045066"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054689"
 ---
-# <a name="tabular-modeling-1200-compatibility-level"></a>テーブル モデリング (互換性レベル 1200)
+# <a name="tabular-modeling-1200-compatibility-level"></a>テーブル モデリング (1200 互換性レベル)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-このチュートリアルでの Analysis Services 表形式モデルを作成する方法のレッスンでは、[互換性レベル 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)を使用して[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)、Analysis Services にモデルを配置およびサーバーをオンプレミスまたは Azure です。  
+このチュートリアルでは、Analysis Services 表形式モデルを作成する方法のレッスンを提供する、[互換性レベル 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)を使用して[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)、Analysis services モデルをデプロイし、サーバーをオンプレミスまたは Azure です。  
  
-SQL Server 2017 または Azure Analysis Services を使用しているし、1400 互換性のレベルでモデルを作成、使用する場合、[テーブル モデリング (互換性レベルが 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)です。 この更新されたバージョンは、最新のデータの取得機能を使用して接続し、ソース データをインポートをパーティションを構成する、M 言語を使用し、追加の補足レッスンが含まれています。
+SQL Server 2017 または Azure Analysis Services を使用しているし、1400 の互換性のレベルで、モデルを作成、使用する場合、[テーブル モデリング (1400 互換性レベル)](tutorial-tabular-1400/as-adventure-works-tutorial.md)します。 この更新されたバージョンは、最新のデータの取得機能を使用して接続し、ソース データをインポート、M 言語を使用して、パーティションを構成する、およびその他の補足のレッスンが含まれています。
 
 > [!IMPORTANT]
-> サーバーでサポートされている最新の互換性レベルで、表形式モデルを作成する必要があります。 以降の互換性レベル モデルでは、パフォーマンスを向上させる、追加の機能よりシームレスに将来の互換性レベルにアップグレードされます。
+> サーバーでサポートされている最新の互換性レベルで、表形式モデルを作成する必要があります。 以降の互換性レベル モデルでは、パフォーマンスの向上、追加の機能を提供しよりシームレスに将来の互換性レベルにアップグレードされます。
  
   
 ## <a name="what-you-learn"></a>学習内容   
@@ -37,38 +37,38 @@ SQL Server 2017 または Azure Analysis Services を使用しているし、140
   
 -   モデル データの分析を支援するための、計算、計測、および主要業績評価指標を作成および管理する方法。  
   
--   パースペクティブとビジネスとアプリケーション固有のビュー ポイントを提供することによって、モデル データを簡単に参照複数ユーザーを支援する階層を作成および管理方法です。  
+-   パースペクティブと階層ヘルプのユーザーはビジネスとアプリケーション固有のビュー ポイントを提供することで、モデル データを簡単に参照を作成および管理する方法。  
   
--   作成する方法より小さな論理部分に、他のパーティションから独立して処理できる分割テーブルのデータをパーティション分割します。  
+-   他のパーティションから独立したテーブルのデータをより小さな論理部分を処理できるに分割するパーティションを作成する方法。  
   
 -   ユーザー メンバーのロールを作成して、モデル オブジェクトとデータを保護する方法。  
   
--   Analysis Services サーバーにオンプレミスまたは Azure では、表形式モデルを展開する方法です。  
+-   Analysis Services サーバー、オンプレミスまたは Azure では、表形式モデルをデプロイする方法。  
   
-## <a name="scenario"></a>Scenario  
-このチュートリアルは、Adventure Works Cycles、架空の会社に基づいています。 Adventure Works は、自転車、部品、および北米、ヨーロッパ、およびアジアの市場で商用アクセサリを生成するための大規模な多国籍製造会社です。 ワシントン州ボセルに本社では、会社には、500 の作業者が採用しています。 さらに、Adventure Works では、市場には、全体で複数の地域販売チームが採用しています。  
+## <a name="scenario"></a>シナリオ  
+このチュートリアルは、Adventure Works Cycles という架空の会社に基づいています。 Adventure Works は、自転車、部品、および北アメリカ、ヨーロッパ、およびアジアに流通市場のアクセサリを生成するための大規模な多国籍製造会社です。 会社では、ワシントン州ボセルに本社 500 を採用しています。 さらに、Adventure Works では、その市場拠点の複数の地域販売チームを採用しています。  
   
 あなたは、販売チーム、マーケティング チーム、および上級管理職のデータ分析ニーズにより高度に対応するべく、AdventureWorksDW サンプル データベース内のインターネット販売データを分析するためのテーブル モデルを作成します。  
   
-このチュートリアル (および Adventure Works Internet Sales テーブル モデル) を完了するには、多数のレッスンを完了する必要があります。 各レッスンでは、多くのタスクです。順序で各タスクの完了は、レッスンを完了する必要があります。 特定のレッスンである可能性があります、同様の結果を実現するいくつかのタスクが、各タスクを完了する方法は若干異なります。 これは、特定のタスクを完了して、前のタスクで学習したスキルが身に複数の 1 つの方法が多くの場合、ことを示します。  
+このチュートリアル (および Adventure Works Internet Sales テーブル モデル) を完了するには、多数のレッスンを完了する必要があります。 各レッスンでは、さまざまなタスクです。順序で各タスクの完了は、レッスンを完了する必要があります。 特定のレッスンである可能性があります、似たような結果をいくつかのタスクが、各タスクを完了する方法は若干異なります。 これは、特定のタスクを完了して、前のタスクで学習したスキルを活用してチャレンジを 1 つ以上の方法が多くの場合、ことを説明します。  
   
-各レッスンの目的は、SSDT に含まれる機能の多くを使用して、インメモリ モードで実行されている基本的な表形式モデルの作成を指示します。 各レッスンは前のレッスンに基づいているので、順序どおりに完了する必要があります。 すべてのレッスンを完了したら、作成し、Analysis Services サーバーで Adventure Works Internet Sales サンプル テーブル モデルを展開しました。  
+各レッスンの目的を SSDT に含まれる機能の多くを使用して、インメモリ モードで実行されている基本的な表形式モデルを作成することを紹介します。 各レッスンは前のレッスンに基づいているので、順序どおりに完了する必要があります。 すべてのレッスンを完了すると、作成し、Analysis Services サーバーには、Adventure Works Internet Sales サンプル テーブル モデルをデプロイしました。  
   
 このチュートリアルでは、配置したテーブル モデル データベースを SQL Server Management Studio で管理する方法や、レポート クライアント アプリケーションを使用して配置済みのモデルに接続し、モデル データを参照する方法については説明しません。  
   
 ## <a name="prerequisites"></a>前提条件  
 このチュートリアルを完了するのには、次の前提条件が必要です。  
   
--   最新バージョン[SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)です。
+-   最新バージョンの[SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)します。
 
--   SQL Server Management Studio の最新バージョン。 [最新バージョンを入手](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。 
+-   SQL Server Management Studio の最新バージョン。 [最新バージョンの取得](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。 
   
--   などのクライアント アプリケーション[Power BI Desktop](https://powerbi.microsoft.com/desktop/)または Excel です。    
+-   などのクライアント アプリケーション[Power BI Desktop](https://powerbi.microsoft.com/desktop/)または Excel。    
   
--   Adventure Works DW サンプル データベースと SQL Server インスタンス。 このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 [最新バージョンを入手](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)です。  
+-   Adventure Works DW サンプル データベースで SQL Server インスタンス。 このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 [最新バージョンの取得](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)します。  
   
 
--   Azure Analysis Services または SQL Server 2016 またはそれ以降の Analysis Services インスタンスにモデルを配置します。 [Azure Analysis Services の無料試用版にサインアップする](https://azure.microsoft.com/services/analysis-services/)です。
+-   Azure Analysis Services または SQL Server 2016 または以降の Analysis Services インスタンスにモデルをデプロイします。 [無料の Azure Analysis Services 試用版にサインアップ](https://azure.microsoft.com/services/analysis-services/)します。
   
 ## <a name="lessons"></a>レッスン  
 このチュートリアルには次のレッスンが含まれています。  

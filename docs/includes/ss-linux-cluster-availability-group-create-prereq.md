@@ -2,17 +2,17 @@
 
 可用性グループを作成する前に、以下のことを行う必要があります。
 
-- 可用性レプリカをホストするすべてのサーバーが通信できるように、環境を設定します。
+- 可用性レプリカをホストするすべてのサーバーが通信できるように環境を設定します。
 - SQL Server をインストールします。
 
 >[!NOTE]
->Linux では、クラスターによって管理されるクラスター リソースとして追加する前に、可用性グループを作成する必要があります。 このドキュメントでは、可用性グループを作成する例を示します。 クラスターを作成し、可用性グループをクラスター リソースとして追加する特定の配布手順については、「次の手順」の下のリンクを参照してください。
+>Linux では、クラスターによって管理されるクラスター リソースとして追加する前に、可用性グループを作成する必要があります。 このドキュメントでは、可用性グループを作成する例を示します。 クラスターを作成し、クラスター リソースとして、可用性グループを追加する特定の配布手順については、「次の手順」の下のリンクを参照してください。
 
 1. 各ホストのコンピューター名を更新します。
 
    各 SQL Server 名には次の条件があります。
    
-   - 15 文字以下です。
+   - 15 文字以下。
    - ネットワーク内で一意です。
    
    コンピューター名を設定するには、`/etc/hostname` を編集します。 次のスクリプトを編集できます`/etc/hostname`で`vi`:。
@@ -24,7 +24,7 @@
 2. Hosts ファイルを構成します。
 
     >[!NOTE]
-    >ホスト名が、ip アドレス、DNS サーバーに登録されている場合は、次の手順を行う必要はありません。 可用性グループの構成の一部にするためのもので、ノードのすべてが相互に通信できることを検証します。 (ホスト名への ping は、対応する IP アドレスに応答する必要があります)。またの/etc/hosts ファイルに、localhost の IP アドレス 127.0.0.1 でノードのホスト名をマップするレコードが含まれていないことを確認します。
+    >ホスト名が ip アドレス、DNS サーバーに登録されている場合は、次の手順を実行する必要はありません。 可用性グループの構成の一部にするためのもので、ノードすべてが、互いと通信できることを検証します。 (ホスト名への ping は、対応する IP アドレスに応答する必要があります)。また、/etc/hosts ファイルに、ノードのホスト名を localhost IP アドレス 127.0.0.1 をマップするレコードが含まれていないことを確認します。
     >
 
    すべてのサーバー上の hosts ファイルには、可用性グループに参加するすべてのサーバーの IP アドレスと名前が含まれています。 
@@ -41,7 +41,7 @@
    sudo vi /etc/hosts
    ```
 
-   次の例は、**node1** の `/etc/hosts` を示しています。**node1**、**node2**、**node3** に対して追加があります。 このドキュメントで**node1**はプライマリ レプリカをホストするサーバーを表します。 および**node2**と**node3**セカンダリ レプリカをホストするサーバーを参照してください。
+   次の例は、**node1** の `/etc/hosts` を示しています。**node1**、**node2**、**node3** に対して追加があります。 このドキュメントで**node1**はプライマリ レプリカをホストするサーバーを表します。 **Node2**と**node3**セカンダリ レプリカをホストするサーバーを参照してください。
 
     ```
     127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -53,46 +53,37 @@
 
 ### <a name="install-sql-server"></a>SQL Server をインストールする
 
-SQL Server をインストールします。 次のリンクは、さまざまな配布用の SQL Server インストールの手順をポイントします。 
+SQL Server をインストールします。 次のリンクは、さまざまなディストリビューションの SQL Server のインストール手順をポイントします。 
 
 - [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 - [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
-## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>AlwaysOn 可用性グループを有効にし、mssql サーバーを再起動
+## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>AlwaysOn 可用性グループを有効にして mssql-server を再起動する
 
-SQL Server インスタンスをホストする各ノードで AlwaysOn 可用性グループを有効にします。 再起動`mssql-server`です。 次のスクリプトを実行します。
+SQL Server インスタンスをホストする各ノードで AlwaysOn 可用性グループを有効にします。 再起動`mssql-server`します。 次のスクリプトを実行します。
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-##  <a name="enable-an-alwaysonhealth-event-session"></a>AlwaysOn_health イベント セッションを有効にします。 
+##  <a name="enable-an-alwaysonhealth-event-session"></a>AlwaysOn_health イベント セッションを有効にする 
 
-必要に応じて、可用性グループをトラブルシューティングする際に、根本原因の診断に役立てるために AlwaysOn 可用性グループの拡張イベントを有効にすることができます。 SQL Server の各インスタンスで、次のコマンドを実行します。 
+必要に応じて、可用性グループをトラブルシューティングする際に、根本原因を診断を支援する AlwaysOn 可用性グループの拡張イベントを有効にできます。 SQL Server の各インスタンスで次のコマンドを実行します。 
 
 ```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-この XE セッションに関する詳細については、次を参照してください。[拡張イベント AlwaysOn](http://msdn.microsoft.com/library/dn135324.aspx)です。
-
-## <a name="create-a-database-mirroring-endpoint-user"></a>データベース ミラーリング エンドポイントのユーザーを作成します。
-
-次の TRANSACT-SQL スクリプトは、という名前のログインを作成`dbm_login`という名前のユーザーと`dbm_user`です。 強力なパスワードでスクリプトを更新します。 データベース ミラーリングのエンドポイントのユーザーを作成するには、すべての SQL Server インスタンスで、次のコマンドを実行します。
-
-```SQL
-CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
-CREATE USER dbm_user FOR LOGIN dbm_login;
-```
+この XE セッションの詳細については、次を参照してください。 [AlwaysOn の拡張イベント](http://msdn.microsoft.com/library/dn135324.aspx)します。
 
 ## <a name="create-a-certificate"></a>証明書を作成する
 
 Linux 上の SQL Server サービスは、ミラーリングのエンドポイント間の通信を認証するのに証明書を使用します。 
 
-次の TRANSACT-SQL スクリプトは、マスター_キーと証明書を作成します。 証明書をバックアップにし、秘密キーを持つファイルをセキュリティで保護します。 強力なパスワードでスクリプトを更新してください。 プライマリ SQL Server インスタンスに接続します。 証明書を作成するには、次の TRANSACT-SQL スクリプトを実行します。
+次の Transact-SQL スクリプトでは、マスター キーと証明書を作成します。 その後、証明書をバックアップし、秘密キーでファイルをセキュリティ保護します。 強力なパスワードでスクリプトを更新してください。 プライマリ SQL Server インスタンスに接続します。 証明書を作成するには、次の TRANSACT-SQL スクリプトを実行します。
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -105,16 +96,16 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-この時点にある証明書が、プライマリ SQL Server レプリカ`/var/opt/mssql/data/dbm_certificate.cer`と秘密キーで`var/opt/mssql/data/dbm_certificate.pvk`です。 これら 2 つのファイルを、可用性レプリカをホストするすべてのサーバー上の同じ場所にコピーします。 Mssql user を使用してまたは mssql ユーザーは、これらのファイルにアクセスする権限を付与します。 
+この時点で、プライマリ SQL Server レプリカの `/var/opt/mssql/data/dbm_certificate.cer` には証明書が、`var/opt/mssql/data/dbm_certificate.pvk` には秘密キーが作成されています。 これら 2 つのファイルを、可用性レプリカをホストするすべてのサーバー上の同じ場所にコピーします。 Mssql ユーザーを使用して、またはファイルにアクセスを mssql ユーザーに権限を付与します。 
 
-たとえば、移行元サーバーで、次のコマンド ファイルをコピー、ターゲット マシンにします。 置換、`**<node2>**`レプリカをホストする SQL Server インスタンスの名前を持つ値です。 
+たとえば、ソース サーバーで、次のコマンド、ファイル コピー、ターゲット コンピューターにします。 置換、`**<node2>**`レプリカをホストする SQL Server インスタンスの名前を持つ値。 
 
 ```bash
 cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-各対象サーバー上には、mssql ユーザー証明書にアクセスする権限を付与します。
+各対象サーバー上を mssql ユーザー証明書へのアクセスにアクセス許可を付与します。
 
 ```bash
 cd /var/opt/mssql/data
@@ -123,12 +114,11 @@ chown mssql:mssql dbm_certificate.*
 
 ## <a name="create-the-certificate-on-secondary-servers"></a>セカンダリ サーバーで証明書を作成する
 
-次の TRANSACT-SQL スクリプトは、SQL Server のプライマリ レプリカに対して作成したバックアップから、マスター _ キーと証明書を作成します。 また、ユーザーに証明書へのアクセスを承認します。 強力なパスワードでスクリプトを更新してください。 暗号化解除パスワードは、前の手順で .pvk ファイルの作成に使ったものと同じパスワードです。 証明書を作成するには、するには、すべてのセカンダリ サーバー上で、次のスクリプトを実行します。
+次の Transact-SQL スクリプトでは、プライマリ SQL Server レプリカで作成したバックアップからマスター キーと証明書を作成します。 強力なパスワードでスクリプトを更新してください。 暗号化解除パスワードは、前の手順で .pvk ファイルの作成に使ったものと同じパスワードです。 証明書を作成するには、すべてのセカンダリ サーバー上で、次のスクリプトを実行します。
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
-CREATE CERTIFICATE dbm_certificate   
-    AUTHORIZATION dbm_user
+CREATE CERTIFICATE dbm_certificate
     FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
     WITH PRIVATE KEY (
     FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
@@ -138,11 +128,11 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>すべてのレプリカにデータベース ミラーリング エンドポイントを作成する
 
-データベース ミラーリング エンドポイントは、データベース ミラーリング セッションに参加させる、または可用性レプリカをホストするサーバー インスタンス間でメッセージの送受信に伝送制御プロトコル (TCP) を使用します。 データベース ミラーリング エンドポイントでは、一意な TCP ポート番号でリッスンします。 
+データベース ミラーリング エンドポイントでは、伝送制御プロトコル (TCP) を使用して、データベース ミラーリング セッションに参加するサーバー インスタンス間、または可用性レプリカをホストするサーバー インスタンス間でメッセージを送受信します。 データベース ミラーリング エンドポイントでは、一意な TCP ポート番号でリッスンします。 
 
-次の TRANSACT-SQL スクリプトの作成という名前のリッスンしているエンドポイント`Hadr_endpoint`可用性グループのです。 エンドポイントを開始し、接続のアクセス許可を作成したユーザーに与えられます。 スクリプトを実行する前に、`**< ... >**` の間の値を置き換えます。 IP アドレスを含めることができます必要に応じて`LISTENER_IP = (0.0.0.0)`です。 リスナーの IP アドレスは、IPv4 アドレスである必要があります。 使用することも`0.0.0.0`します。 
+次の Transact-SQL スクリプトでは、可用性グループに対して `Hadr_endpoint` という名前のリスニング エンドポイントを作成します。 エンドポイントを開始し、作成した証明書への接続権限が与えられます。 スクリプトを実行する前に、`**< ... >**` の間の値を置き換えます。 必要に応じて、IP アドレス `LISTENER_IP = (0.0.0.0)` を含めることができます。 リスナー IP アドレスは、IPv4 アドレスである必要があります。 `0.0.0.0` を使用することもできます。 
 
-すべての SQL Server インスタンスで、環境には、次の TRANSACT-SQL スクリプトを更新します。 
+すべての SQL Server インスタンスで、ご利用の環境に合わせて次の Transact-SQL スクリプトを更新します。 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -153,11 +143,10 @@ CREATE ENDPOINT [Hadr_endpoint]
         ENCRYPTION = REQUIRED ALGORITHM AES
         );
 ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
-GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
 >[!NOTE]
->レプリカをホストする構成のみでの唯一の有効な値を 1 つのノードに SQL Server Express Edition を使用するかどうか`ROLE`は`WITNESS`します。 SQL Server Express Edition では、次のスクリプトを実行します。
+>構成専用レプリカの唯一の有効な値をホストする 1 つのノードで、SQL Server Express Edition を使用するかどうかは`ROLE`は`WITNESS`します。 SQL Server Express Edition では、次のスクリプトを実行します。
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -168,16 +157,15 @@ CREATE ENDPOINT [Hadr_endpoint]
         ENCRYPTION = REQUIRED ALGORITHM AES
         );
 ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
-GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
-ファイアウォールで TCP ポートは、リスナー ポートを開く必要があります。
+ファイアウォールの TCP ポートをリスナー ポート用に開く必要があります。
 
 
 
 >[!IMPORTANT]
->データベース ミラーリング エンドポイントにサポートされている唯一の認証メソッドは、SQL Server 2017 リリースでは、`CERTIFICATE`です。 `WINDOWS`オプションは将来のリリースで有効にします。
+>データベース ミラーリング エンドポイントのサポートされている唯一の認証方法は、SQL Server 2017 リリースでは、`CERTIFICATE`します。 `WINDOWS`オプションは、将来のリリースで有効になります。
 
-詳細については、次を参照してください。[データベース ミラーリング エンドポイント (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)です。
+詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)」を参照してください。
 
 

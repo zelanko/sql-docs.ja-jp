@@ -1,6 +1,6 @@
 ---
-title: Docker で SQL Server データベースをリストア |Microsoft ドキュメント
-description: このチュートリアルには表示は、新しい Linux Docker コンテナーでの SQL Server データベースのバックアップを復元する方法です。
+title: Docker で SQL Server データベースをリストア |Microsoft Docs
+description: このチュートリアルでは、新しい Linux Docker コンテナーで SQL Server データベースのバックアップを復元する方法。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,23 +12,23 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842815"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041210"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker コンテナーでの SQL Server データベースを復元します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このチュートリアルでは、移動して、Docker で実行されている SQL Server 2017 Linux コンテナー イメージに SQL Server のバックアップ ファイルを復元する方法を示します。
+このチュートリアルでは、移動し、Docker で実行されている SQL Server 2017 Linux コンテナー イメージを SQL Server のバックアップ ファイルを復元する方法を示します。
 
 > [!div class="checklist"]
 > * プルし、最新の SQL Server 2017 Linux コンテナー イメージを実行します。
-> * コンテナーには、World Wide Importers のデータベース ファイルをコピーします。
+> * World Wide Importers のデータベース ファイルをコンテナーにコピーします。
 > * コンテナー内のデータベースを復元します。
-> * 表示およびデータベースを変更する TRANSACT-SQL ステートメントを実行します。
+> * データベースを表示したり、TRANSACT-SQL ステートメントを実行します。
 > * 変更されたデータベースをバックアップします。
 
 ## <a name="prerequisites"></a>前提条件
@@ -40,7 +40,7 @@ ms.locfileid: "34842815"
 
 ## <a name="pull-and-run-the-container-image"></a>コンテナー イメージのプルと実行
 
-1. Linux または Mac でバッシュ端末または Windows 上の管理者特権の PowerShell セッションを開きます。
+1. Linux または Mac でバッシュ ターミナルまたは Windows 上の管理者特権の PowerShell セッションを開きます。
 
 1. Docker Hub から SQL Server 2017 Linux コンテナー イメージをプルします。
 
@@ -53,9 +53,9 @@ ms.locfileid: "34842815"
     ```
 
     > [!TIP]
-    > このチュートリアルでは、docker コマンドの例は、bash シェル (Linux または Mac) と PowerShell (Windows) の両方で与えられます。
+    > このチュートリアルでは、bash シェル (Linux または Mac) と PowerShell (Windows) の両方の docker コマンドの例が与えられます。
 
-1. Docker によってコンテナー イメージを実行するには、次のコマンドを使用することができます。
+1. Docker コンテナー イメージを実行するには、次のコマンドを使用できます。
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -71,10 +71,10 @@ ms.locfileid: "34842815"
        -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    このコマンドは、Developer edition (既定値) を SQL Server 2017 コンテナーを作成します。 SQL Server ポート**1433**ポートとして、ホストで公開された**1401**です。 省略可能な`-v sql1data:/var/opt/mssql`パラメーターという名前のデータ ボリューム コンテナーを作成する**sql1ddata**です。 SQL Server によって作成されたデータの保持に使用されます。
+    このコマンドは、Developer edition (既定値) を使用した SQL Server 2017 コンテナーを作成します。 SQL Server ポート**1433**ポートとホスト上で公開される**1401**します。 省略可能な`-v sql1data:/var/opt/mssql`パラメーターは、という名前のデータ ボリューム コンテナーを作成します。 **sql1ddata**します。 これは、SQL Server によって作成されたデータを永続化に使用されます。
 
    > [!NOTE]
-   > コンテナーで実稼働 SQL Server のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働のコンテナー イメージを実行](sql-server-linux-configure-docker.md#production) 同じコンテナー名とポートを使用する場合、このチュートリアルの残りの部分は実稼働のコンテナーで動作します。
+   > コンテナーで実稼働 SQL Server のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働のコンテナー イメージを実行](sql-server-linux-configure-docker.md#production) 同じコンテナー名とポートを使用する場合、このチュートリアルの残りの部分は、実稼働のコンテナーで引き続き動作します。
 
 1. Docker コンテナーを表示するには、 `docker ps` コマンドを使用します。
 
@@ -101,9 +101,9 @@ ms.locfileid: "34842815"
 
 ## <a name="copy-a-backup-file-into-the-container"></a>コンテナーにバックアップ ファイルをコピーします。
 
-このチュートリアルでは、 [Wide World Importers のサンプル データベース](../sample/world-wide-importers/wide-world-importers-documentation.md)です。 ダウンロードし、SQL Server のコンテナーに、Wide World importers 社のデータベースのバックアップ ファイルをコピーするには、次の手順を使用します。
+このチュートリアルでは、 [Wide World Importers サンプル データベース](../sample/world-wide-importers/wide-world-importers-documentation.md)します。 次の手順を使用して、ダウンロードし、Wide World Importers のデータベースのバックアップ ファイルを SQL Server のコンテナーにコピーします。
 
-1. まず、使用して**docker exec**バックアップ フォルダーを作成します。 次のコマンドは、作成、 **/var/opt/mssql/backup** SQL Server のコンテナー内のディレクトリ。
+1. まず、使用して**docker exec**バックアップ フォルダーを作成します。 次のコマンドを作成、 **/var/opt/mssql/backup** SQL Server のコンテナーの内部ディレクトリ。
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -113,7 +113,7 @@ ms.locfileid: "34842815"
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. 次に、ダウンロード、 [、Wideworldimporters-full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)ホスト マシンのファイルです。 ホーム/ユーザー ディレクトリに移動し、として、バックアップ ファイルをダウンロード、次のコマンド**wwi.bak**です。
+1. 次に、ダウンロード、 [、Wideworldimporters-full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)をホスト マシンのファイル。 ホーム/ユーザーのディレクトリに移動し、としてバックアップ ファイルをダウンロードする、次のコマンド**wwi.bak**します。
 
    ```bash
    cd ~
@@ -124,7 +124,7 @@ ms.locfileid: "34842815"
    curl -OutFile "wwi.bak" "https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak"
    ```
 
-1. 使用して**docker cp**内のコンテナーにバックアップ ファイルをコピーする、 **/var/opt/mssql/backup**ディレクトリ。
+1. 使用**docker cp**でコンテナーにバックアップ ファイルをコピーする、 **/var/opt/mssql/backup**ディレクトリ。
 
    ```bash
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
@@ -136,12 +136,12 @@ ms.locfileid: "34842815"
 
 ## <a name="restore-the-database"></a>データベースを復元します
 
-バックアップ ファイルは、コンテナー内にあるようになりました。 バックアップを復元する前には、論理ファイル名とバックアップ内のファイルの種類を知る必要があります。 次の TRANSACT-SQL コマンドは、バックアップを検査しを使用して復元を実行**sqlcmd**コンテナーにします。
+バックアップ ファイルは、コンテナー内にあるようになりました。 バックアップを復元する前に、論理ファイル名と、バックアップ内のファイルの種類を知っておく必要です。 次の TRANSACT-SQL コマンドは、バックアップを検査し、復元を使用して、実行**sqlcmd**コンテナー。
 
 > [!TIP]
-> このチュートリアルでは使用**sqlcmd**コンテナーの中、コンテナーがプレインストールされてこの tool に付属しているためです。 ただし、実行することも TRANSACT-SQL ステートメントの他のクライアントと、コンテナーの外部ツールなど[Visual Studio Code](sql-server-linux-develop-use-vscode.md)または[SQL Server Management Studio](sql-server-linux-manage-ssms.md)です。 接続するには、コンテナーのポート 1433 にマップされたホスト ポートを使用します。 この例ではその**localhost、1401**ホスト コンピューター上および**Host_IP_Address、1401**リモートです。
+> このチュートリアルでは**sqlcmd**コンテナー内で事前にインストールされているこのツールを使用して、コンテナーが含まれているためです。 ただし、実行することも TRANSACT-SQL ステートメントの他のクライアントで、コンテナーの外部ツールなど[Visual Studio Code](sql-server-linux-develop-use-vscode.md)または[SQL Server Management Studio](sql-server-linux-manage-ssms.md)します。 に接続するには、コンテナーのポート 1433 にマップされていたホスト ポートを使用します。 この例では**localhost、1401** 、ホスト コンピューター上と**Host_IP_Address、1401**リモートです。
 
-1. 実行**sqlcmd**論理ファイルの名前と、バックアップ内のパスを一覧に、コンテナー内です。 これは、 **RESTORE FILELISTONLY** TRANSACT-SQL ステートメント。
+1. 実行**sqlcmd**論理ファイル名と、バックアップ内のパスを列挙するコンテナー内で。 これは、 **RESTORE FILELISTONLY** TRANSACT-SQL ステートメント。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
@@ -167,7 +167,7 @@ ms.locfileid: "34842815"
    WWI_InMemory_Data_1   D:\Data\WideWorldImporters_InMemory_Data_1
    ```
 
-1. 呼び出す、 **RESTORE DATABASE**コマンド、コンテナー内のデータベースを復元します。 前の手順で、ファイルごとには、新しいパスを指定します。
+1. 呼び出す、 **RESTORE DATABASE**コンテナー内でデータベースを復元するコマンド。 前の手順でファイルごとに新しいパスを指定します。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -209,7 +209,7 @@ ms.locfileid: "34842815"
    RESTORE DATABASE successfully processed 58455 pages in 18.069 seconds (25.273 MB/sec).
    ```
 
-## <a name="verify-the-restored-database"></a>復元されたデータベースを確認してください。
+## <a name="verify-the-restored-database"></a>復元されたデータベースを確認します。
 
 コンテナー内のデータベース名の一覧を表示する次のクエリを実行します。
 
@@ -225,7 +225,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    -Q "SELECT Name FROM sys.Databases"
 ```
 
-表示されるはず**WideWorldImporters**データベースの一覧にします。
+表示する必要があります**WideWorldImporters**データベースの一覧にします。
 
 ## <a name="make-a-change"></a>変更を加える
 
@@ -245,7 +245,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
    ```
 
-   項目の識別子および名前の一覧が表示されます。
+   項目の識別子と名前の一覧が表示されます。
 
    ```
    StockItemID StockItemName
@@ -262,7 +262,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
             10 USB food flash drive - chocolate bar
    ```
 
-1. 次の最初の項目の説明を更新**更新**ステートメント。
+1. 次の最初の項目の説明を更新**UPDATE**ステートメント。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -287,9 +287,9 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="create-a-new-backup"></a>新しいバックアップを作成します。
 
-コンテナーに、データベースを復元した後、実行中のコンテナー内のデータベースのバックアップを定期的に作成することがもできます。 手順は、前の手順には、逆の順序で同様のパターンに従います。
+コンテナーに、データベースを復元した後も定期的に実行中のコンテナー内のデータベースのバックアップを作成する可能性があります。 手順は、前の手順が逆の順序で同様のパターンに従います。
 
-1. 使用して、**データベースのバックアップ**コンテナーに、データベースのバックアップを作成する TRANSACT-SQL コマンド。 このチュートリアルで作成、新しいバックアップ ファイル**wwi_2.bak**、以前に作成したで **/var/opt/mssql/backup**ディレクトリ。
+1. 使用して、 **BACKUP DATABASE**コンテナーにデータベースのバックアップを作成する TRANSACT-SQL コマンド。 このチュートリアルは、新しいバックアップ ファイルを作成します。 **wwi_2.bak**、以前に作成したで **/var/opt/mssql/backup**ディレクトリ。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -322,7 +322,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    BACKUP DATABASE successfully processed 59099 pages in 25.056 seconds (18.427 MB/sec).
    ```
 
-1. 次に、コンテナかられ、ホスト コンピューターには、バックアップ ファイルをコピーします。
+1. 次に、コンテナーから、ホスト マシンには、バックアップ ファイルをコピーします。
 
    ```bash
    cd ~
@@ -336,11 +336,11 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ls -l wwi*
    ```
 
-## <a name="use-the-persisted-data"></a>持続データを使用します。
+## <a name="use-the-persisted-data"></a>永続化されたデータを使用します。
 
-データベースのバックアップを取得し、データを保護するため、データ ボリューム コンテナーを使用することもできます。 作成されたこのチュートリアルの先頭、 **sql1**のコンテナー、`-v sql1data:/var/opt/mssql`パラメーター。 **Sql1data**データ ボリューム コンテナーが引き続き発生する、 **/var/opt/mssql**データ コンテナーを削除した後でもです。 次の手順を完全に削除、 **sql1**コンテナーして新しいコンテナーを作成して**sql2**、永続化されたデータを使用します。
+データベースのバックアップを取得し、データを保護するため、データ ボリューム コンテナーを使用することもできます。 このチュートリアルの作成の開始、 **sql1**のコンテナー、`-v sql1data:/var/opt/mssql`パラメーター。 **Sql1data**データ ボリューム コンテナーが解決しない、 **/var/opt/mssql**データ、コンテナーが削除された後にもします。 次の手順を完全に削除、 **sql1**コンテナーし、新しいコンテナーを作成および**sql2**、永続化されたデータ。
 
-1. 停止、 **sql1**コンテナーです。
+1. 停止、 **sql1**コンテナー。
 
    ```bash
    sudo docker stop sql1
@@ -350,7 +350,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker stop sql1
    ```
 
-1. コンテナーを削除します。 これは削除されません、以前に作成した**sql1data**データ ボリューム コンテナーとの永続化されたデータ。
+1. コンテナーを削除します。 これは削除されません、以前に作成した**sql1data**データ ボリューム コンテナーと、永続化されたデータ。
 
    ```bash
    sudo docker rm sql1
@@ -360,7 +360,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker rm sql1
    ```
 
-1. 新しいコンテナーを作成**sql2**、再利用して、 **sql1data**データ ボリューム コンテナーです。
+1. 新しいコンテナーを作成**sql2**、再利用し、 **sql1data**データ ボリューム コンテナー。
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -374,7 +374,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
        -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
     ```
 
-1. Wide World importers 社のデータベースの新しいコンテナーが開始されました。 クエリを実行して、前の変更を行ったことを確認します。
+1. Wide World Importers のデータベースに新しいコンテナーになります。 以前の変更を行ったことを確認するためのクエリを実行します。
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -389,19 +389,19 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > SA パスワードが指定したパスワードではありません、 **sql2**コンテナー、`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`です。 復元されたすべての SQL Server データ**sql1**チュートリアルの前にから変更されたパスワードを含みます。 実際には、次のようにいくつかのオプションは/var/opt/mssql 内のデータを復元するために無視されます。 このため、パスワードが`<YourNewStrong!Passw0rd>`次に示すようにします。
+   > SA パスワードは、指定したパスワードではありません、 **sql2**コンテナー、`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`します。 すべての SQL Server のデータが復元された**sql1**チュートリアルの前半でから変更されたパスワードを含むです。 実際には、このようないくつかのオプションは/var/opt/mssql でデータを復元するために無視されます。 このため、パスワードは`<YourNewStrong!Passw0rd>`次のようにします。
 
 ## <a name="next-steps"></a>次のステップ
 
-このチュートリアルでは、Windows 上のデータベースをバックアップし、SQL Server 2017 RC2 を実行する Linux サーバーに移動する方法について学習しました。 方法を学習します。
+このチュートリアルでは、Windows 上のデータベースをバックアップし、SQL Server 2017 RC2 を実行している Linux サーバーに移動する方法について説明しました。 学習したします。
 > [!div class="checklist"]
 > * SQL Server 2017 Linux コンテナー イメージを作成します。
 > * SQL Server データベースのバックアップをコンテナーにコピーします。
-> * コンテナー内の TRANSACT-SQL ステートメントを実行**sqlcmd**です。
-> * 作成し、コンテナーからのバックアップ ファイルを抽出します。
-> * Docker でデータ ボリューム コンテナーを使用して、SQL Server のデータを保持します。
+> * コンテナー内の TRANSACT-SQL ステートメントを実行**sqlcmd**します。
+> * 作成し、コンテナーからバックアップ ファイルを抽出します。
+> * Docker でのデータ ボリューム コンテナーを使用して、SQL Server のデータを保持します。
 
-次に、他の Docker 構成とトラブルシューティングのシナリオを確認します。
+次に、その他の Docker の構成とトラブルシューティングのシナリオを確認します。
 
 > [!div class="nextstepaction"]
->[Docker での SQL Server 2017 について構成ガイド](sql-server-linux-configure-docker.md)
+>[Docker で SQL Server 2017 の構成ガイド](sql-server-linux-configure-docker.md)

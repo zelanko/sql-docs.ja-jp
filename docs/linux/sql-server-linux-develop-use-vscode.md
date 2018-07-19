@@ -1,5 +1,5 @@
 ---
-title: For SQL Server、Visual Studio Code mssql 拡張機能を使用して |Microsoft ドキュメント
+title: Visual Studio Code mssql 拡張機能を使用して、SQL Server の |Microsoft Docs
 description: このチュートリアルでは、VS Code の mssql 拡張機能を使用する方法を示します。 この拡張機能を使用すると、VS Code で Transact-SQL スクリプトを編集し、実行できます。
 author: rothja
 ms.author: jroth
@@ -13,10 +13,11 @@ ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984334"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio Code を使用して SQL Server の Transact-SQL スクリプトを作成し、実行する
 
@@ -27,20 +28,20 @@ ms.lasthandoff: 05/19/2018
 Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカルなコード エディターで、拡張機能をサポートします。 [VS Code 用の **mssql** 拡張機能] により、SQL Server に接続し、 Transact-SQL (T-SQL) でクエリを行い、結果を表示することができます。
 
 ## <a name="install-vs-code"></a>VS Code をインストールします。
-1. VS Code をまだインストールしていない場合[ダウンロードし、VS Code のインストール]コンピューターにします。
+1. VS Code をまだインストールしていない場合[ダウンロードして、VS Code のインストール]コンピューターにします。
 
-2. VS Code を開始します。
+2. VS Code を起動します。
 
 ## <a name="install-the-mssql-extension"></a>Mssql 拡張機能をインストールします。
 次の手順では、mssql 拡張機能をインストールする方法について説明します。 
 
-1. キーを押して**CTRL + SHIFT + P** (または**F1**) VS コードでコマンド パレットを開きます。 
+1. キーを押して**CTRL + SHIFT + P** (または**F1**) で VS Code コマンド パレットを開きます。 
 
-2. 選択**インストール拡張**および種類**mssql**です。
+2. 選択**拡張機能のインストール**と種類**mssql**します。
    > [!TIP] 
-   > MacOS などの**CMD**キーに相当**CTRL** Linux と Windows のキー。
+   > Macos で、 **CMD**キーが等しく**CTRL** Linux と Windows キー。
 
-2. [インストール] をクリックして**mssql**です。 
+2. [インストール] をクリックして**mssql**します。 
    
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
 
@@ -59,23 +60,23 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
    >   ```
    
    > [!NOTE]
-   > Windows 8.1、Windows Server 2012 または下位のバージョンをダウンロードしてインストールする必要があります、 [Windows 10 ユニバーサル C ランタイム]です。 ダウンロードして、zip ファイルを開きます。 現在の OS 構成をターゲットとするインストーラー (.msu ファイル) を実行しています。
+   > Windows 8.1、Windows Server 2012、またはより下位のバージョンをダウンロードしてインストールする必要があります、 [Windows 10 ユニバーサル C ランタイム]します。 ダウンロードして、zip ファイルを開きます。 (.Msu ファイル)、現在の OS 構成を対象とする、インストーラーを実行します。
 
-## <a name="create-or-open-a-sql-file"></a>作成または SQL ファイルを開く
+## <a name="create-or-open-a-sql-file"></a>作成したり、SQL ファイルを開く
 
 **mssql** 拡張機能を使用 mssql コマンドと T-SQL は、IntelliSense、エディターで、言語モードが に設定されているときに **SQL** です。
 
-1. キーを押して**CTRL + N**です。 Visual Studio のコードは、既定で新しい 'プレーン テキスト' ファイルを開きます。 
+1. キーを押して**CTRL + N**します。 Visual Studio Code では、既定で新しい 'テキスト' ファイルを開きます。 
 
-2. キーを押して**CTRL + K、M**に言語モードを変更および**SQL**です。 
+2. キーを押して**CTRL + K、M**を言語モードを変更および**SQL**します。 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png" alt="SQL language mode" style="width: 500px;" />
 
-3. 代わりに、.sql ファイルの拡張子を持つ既存のファイルを開きます。 自動的には、言語モードが**SQL** .sql 拡張子を持つファイルです。  
+3. または、.sql というファイル拡張子を既存のファイルを開きます。 言語モードが自動的に**SQL** .sql 拡張子を持つファイル。  
 
 ## <a name="connect-to-sql-server"></a>SQL Server への接続
 
-次の手順では、VS コードでの SQL Server に接続する方法を示します。
+次の手順では、VS Code での SQL Server に接続する方法を示します。
 
 1. VS Code で **Ctrl + Shift + P** (または **F1**) キーを押して、コマンド パレットを開きます。
 
@@ -84,30 +85,30 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-commands.png" alt="mssql commands" style="width: 500px;" />
    
 
-3. 選択、 **MS SQL: 接続**コマンド。 入力する**sqlcon**とキーを押します**ENTER**です。
+3. 選択、 **MS SQL: 接続**コマンド。 入力するだけ**sqlcon**キーを押します**ENTER**します。
 
-4. 選択**接続プロファイルの作成**です。 これは、SQL Server インスタンスの接続プロファイルを作成します。
+4. 選択**接続プロファイルを作成する**します。 これは、SQL Server インスタンスの接続プロファイルを作成します。
 
 5. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してから、**Enter** キーを押して続行します。 
 
    次の表では、接続プロファイルのプロパティについて説明します。
 
-   | 設定 | Description |
+   | 設定 | 説明 |
    |-----|-----|
-   | **サーバー名** | SQL Server インスタンス名。 このチュートリアルでは、使用**localhost**コンピューターにローカルの SQL Server インスタンスに接続します。 リモートの SQL Server への接続している場合、は、対象の SQL Server コンピューターまたは IP アドレスの名前を入力します。 SQL Server インスタンスのポートを指定する必要がある場合は、名前から分離するためにコンマを使用します。 たとえばポート 1401 で実行されているローカル サーバーの入力**localhost、1401**です。 |
-   | **[オプション]データベース名** | 使用するデータベースです。 このチュートリアルの目的を指定しないと、データベース キーを押して**ENTER**を続行します。 |
-   | **ユーザー名** | サーバー上のデータベースにアクセス権を持つユーザーの名前を入力します。 このチュートリアルでは、既定値を使用して**SA**アカウント、SQL Server のセットアップ中に作成します。 |
+   | **サーバー名** | SQL Server インスタンス名。 このチュートリアルでは、使用**localhost**コンピューターにローカルの SQL Server インスタンスに接続します。 リモート SQL Server に接続する場合は、対象の SQL Server コンピューターまたは IP アドレスの名前を入力します。 SQL Server インスタンスのポートを指定する必要がある場合は、名前から分離すること、コンマを使用します。 たとえばポート 1401 で実行されているローカル サーバーの入力**localhost、1401**します。 |
+   | **[省略可能]データベース名** | 使用するデータベースです。 このチュートリアルの目的を指定しないと、データベース キーを押して**ENTER**を続行します。 |
+   | **ユーザー名** | サーバー上のデータベースにアクセス権を持つユーザーの名前を入力します。 このチュートリアルでは、既定値を使用して、 **SA**アカウント、SQL Server セットアップ中に作成します。 |
    | **パスワード (SQL ログイン)** | 指定したユーザーのパスワードを入力します。 | 
-   | **パスワードを保存しますか?** | 型**はい**パスワードを保存します。 それ以外の場合、入力**いいえ**を求めるには、パスワード、接続プロファイルが使用されるたびにします。 |
-   | **[オプション]このプロファイルの名前を入力してください。** | 接続プロファイルの名前。 たとえば、プロファイルを名前でした**localhost プロファイル**です。 
+   | **パスワードを保存しますか?** | 型**はい**パスワードを保存します。 それ以外の場合、入力**いいえ**接続プロファイルを使用するたびにパスワードを求められます。 |
+   | **[省略可能]このプロファイルの名前を入力します。** | 接続プロファイルの名前。 たとえば、プロファイルを名前**localhost プロファイル**します。 
 
    > [!Tip] 
-   > 作成してユーザー設定ファイル (settings.json) で接続プロファイルを編集します。 選択して、設定ファイルを開きます**優先**し**ユーザー設定**VS Code メニューでします。 詳細については、次を参照してください。[接続プロファイルの管理]です。
+   > 作成し、ユーザー設定ファイル (settings.json) で接続プロファイルを編集できます。 設定ファイルを選択して開きます** 基本設定**し**ユーザー設定**VS Code メニュー。 詳細については、次を参照してください。[接続プロファイルを管理します]。
 
 6. **Esc** キーを押して、プロファイルが作成され、接続されていることを通知する情報メッセージを閉じます。
 
    > [!TIP]
-   > 接続エラーが発生する場合は、まず、内のエラー メッセージから、問題を診断、**出力**VS Code のパネル (選択**出力**上、**ビュー**メニュー)。 次に、[接続のトラブルシューティングに関する推奨事項]を確認します。
+   > 接続エラーが発生した場合のエラー メッセージから問題の診断にまず、**出力**VS Code でのパネル (選択**出力**で、**ビュー**メニュー)。 次に、[接続のトラブルシューティングに関する推奨事項]を確認します。
 
 7. ステータス バーで、接続を確認します。
 
@@ -119,9 +120,9 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png" alt="SQL snippets" style="width: 500px;" />
 
-2. 選択**sqlCreateDatabase**です。
+2. 選択**sqlCreateDatabase**します。
 
-3. スニペットは、入力**TutorialDB**データベース名にします。
+3. スニペットでは、次のように入力します。 **TutorialDB**データベース名。
 
    ```sql
    USE master
@@ -140,7 +141,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 500px;" />
 
    > [!TIP]
-   > Mssql 拡張機能コマンドのショートカット キー バインディングをカスタマイズすることができます。 参照してください[ショートカットをカスタマイズする]です。
+   > Mssql 拡張機能コマンドのショートカット キー バインドをカスタマイズすることができます。 参照してください[ショートカットをカスタマイズします]。
 
 ## <a name="create-a-table"></a>テーブルの作成
 
@@ -148,22 +149,22 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
 2. キーを押して**F1**コマンド パレットを表示します。
 
-3. 型**sql** SQL コマンドまたは型を表示するコマンド パレットで**sqluse**の**MS SQL:Use データベース**コマンド。
+3. 型**sql** SQL コマンドの種類を表示するためのコマンド パレットで**sqluse**の**MS SQL:Use データベース**コマンド。
 
-4. をクリックして**MS SQL:Use データベース**を選択し、 **TutorialDB**データベース。 これは、前のセクションで作成した新しいデータベースをコンテキストを変更します。
+4. クリックして**MS SQL:Use データベース**を選択し、 **TutorialDB**データベース。 これは、前のセクションで作成された新しいデータベースにコンテキストを変更します。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 500px;" />
 
-3. エディターで、次のように入力します。 **sql** 、スニペットを表示し、選択する**sqlCreateTable**とキーを押します**入力**です。
+3. エディターで、次のように入力します。 **sql** 、スニペットを表示し、選択する**sqlCreateTable**キーを押します**入力**します。
 
-4. このスニペットでは、入力**従業員**テーブル名をします。
+4. スニペットでは、次のように入力します。**従業員**テーブル名。
 
 5. キーを押して**タブ**、し、入力**dbo**スキーマ名。
 
    > [!NOTE]
-   > スニペットを追加した後は、VS コード エディターからフォーカスを変更することがなく、テーブル名とスキーマ名を入力してください。
+   > スニペットを追加した後、VS コード エディターからフォーカスを変更することがなく、テーブルとスキーマの名前を入力してください。
 
-6. 列名の変更**Column1**に**名前**と**Column2**に**場所**です。
+6. 列名を変更**Column1**に**名前**と**Column2**に**場所**します。
 
    ```sql
    -- Create a new table called 'Employees' in schema 'dbo'
@@ -185,7 +186,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
 ## <a name="insert-and-query"></a>挿入とクエリ
 
-1. 4 行を挿入する次のステートメントを追加、**従業員**テーブル。 すべての行を選択します。
+1. 次の 4 つの行を挿入するには、次のステートメントを追加、**従業員**テーブル。 すべての行を選択します。
 
    ```sql
    -- Insert rows into table 'Employees'
@@ -206,66 +207,66 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
    ```
 
    > [!TIP]
-   > 入力したときに、T-SQL で IntelliSense のアシスタンスを使用します。
+   > 入力するときに、T-SQL での IntelliSense のサポートを使用します。
    >   <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 500px;" />
 
-2. キーを押して**CTRL + SHIFT + E**コマンドを実行します。 2 つの結果の表示を設定、**結果**ウィンドウです。 
+2. キーを押して**CTRL + SHIFT + E**コマンドを実行します。 2 つの結果の表示を設定、**結果**ウィンドウ。 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png" alt="Results" style="width: 300px;" />
 
 ## <a name="view-and-save-the-result"></a>表示し、結果の保存
 
-1. **ビュー**メニューの **エディターの切り替えグループ レイアウト**垂直または水平方向の分割レイアウトに切り替える。
+1. **ビュー**メニューの **エディターの切り替えグループ レイアウト**垂直または水平方向の分割のレイアウトに切り替える。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-split.png" alt="Vertical split" style="width: 500px;" />
 
-2. をクリックして、**結果**と**メッセージ**パネル ヘッダー パネルを展開したり、折りたたんだりします。
+2. をクリックして、**結果**と**メッセージ**パネル ヘッダー パネルを展開および折りたたみます。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 500px;" />
 
    > [!TIP]
-   > Mssql 拡張機能の既定の動作をカスタマイズすることができます。 参照してください[拡張子のオプションをカスタマイズ]です。
+   > Mssql 拡張機能の既定の動作をカスタマイズできます。 参照してください[拡張機能のオプションをカスタマイズします]。
 
-2. ズーム インする 2 番目の結果グリッドで最大にする [グリッド] アイコンをクリックします。
+2. ズームインする 2 つ目の結果グリッドで最大化 [グリッド] アイコンをクリックします。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png" alt="Maximize grid" style="width: 500px;" />
 
    > [!NOTE]
-   > T-SQL スクリプトは 2 つ以上の結果グリッドと最大化 アイコンが表示されます。
+   > T-SQL スクリプトがある 2 つまたは複数の結果グリッドと最大化アイコンが表示されます。
 
-3. グリッドでマウスの右ボタンで、グリッドのコンテキスト メニューを開きます。 
+3. グリッド上でマウスの右ボタンをグリッドのコンテキスト メニューを開きます。 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 500px;" />
 
-4. 選択**すべて選択**です。
+4. 選択**すべて選択**します。
 
 5. グリッドのコンテキスト メニューを開き、選択**JSON として保存**.json ファイルを結果を保存します。
 
-6. JSON ファイルのファイル名を指定します。 このチュートリアルでは、次のように入力します。 **employees.json**です。
+6. JSON ファイルのファイル名を指定します。 このチュートリアルでは、入力**employees.json**します。
 
-7. JSON ファイルが保存され、VS コードで開かれていることを確認します。
+7. JSON ファイルが保存され、VS Code で開かれていることを確認します。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 500px;" />
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-現実のシナリオでは、保存および実行する必要のあるスクリプトを作成する場合があります (管理用または大規模な開発プロジェクトの一部として) 以降。 ここを使用してスクリプトを保存することができます、 **.sql**拡張機能です。
+実際のシナリオでは、保存および実行する必要のあるスクリプトを作成する場合があります (管理または大規模な開発プロジェクトの一部として) 以降。 ここでスクリプトを保存することができます、 **.sql**拡張機能。
 
-T-SQL を新しい場合を参照してください[チュートリアル : Transact-SQL ステートメントの作成]と[TRANSACT-SQL リファレンス (データベース エンジン)]です。
+T-SQL に慣れていない場合は、次を参照してください。[チュートリアル: TRANSACT-SQL ステートメントの作成]と[TRANSACT-SQL リファレンス (データベース エンジン)]します。
 
-使用してまたは mssql 拡張機能に影響を与えるの詳細については、次を参照してください。 [mssql 拡張機能プロジェクト wiki]です。
+またはを使用して、mssql 拡張機能に影響する詳細については、次を参照してください。 [mssql 拡張機能プロジェクトの wiki]します。
 
-VS Code を使用する方法については、次を参照してください。、 [Visual Studio のコード ドキュメント](https://code.visualstudio.com/docs)です。
+VS Code の使用に関する詳細については、次を参照してください。、 [Visual Studio Code のドキュメント](https://code.visualstudio.com/docs)します。
 
 [**mssql** VS Code 拡張機能]:https://aka.ms/mssql-marketplace
-[ダウンロードし、VS Code のインストール]:https://code.visualstudio.com/Download
+[ダウンロードして、VS Code のインストール]:https://code.visualstudio.com/Download
 [.Net Core のインストラクション]:https://www.microsoft.com/net/core
-[接続プロファイルの管理]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
+[接続プロファイルを管理します]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [接続のトラブルシューティングに関する推奨事項]:./sql-server-linux-troubleshooting-guide.md#connection
-[ショートカットをカスタマイズする]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[チュートリアル : Transact-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx
+[ショートカットをカスタマイズします]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
+[チュートリアル: Transact-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL リファレンス (データベース エンジン)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 ユニバーサル C ランタイム]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
-[拡張子のオプションをカスタマイズ]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
-[mssql 拡張機能プロジェクト wiki]: https://github.com/Microsoft/vscode-mssql/wiki
+[拡張機能のオプションをカスタマイズします]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
+[mssql 拡張機能プロジェクトの wiki]: https://github.com/Microsoft/vscode-mssql/wiki

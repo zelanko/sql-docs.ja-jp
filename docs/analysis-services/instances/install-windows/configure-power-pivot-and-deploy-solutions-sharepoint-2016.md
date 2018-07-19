@@ -1,5 +1,5 @@
 ---
-title: Power Pivot の構成し、ソリューションの配置 (SharePoint 2016) |Microsoft ドキュメント
+title: Power Pivot の構成し、ソリューションの配置 (SharePoint 2016) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58315c0a956a4d9ecadfdfee8e9c1a0adbbc2c22
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018169"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984064"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34018169"
   
 -   バックエンド サービスと、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーをインストールする方法の詳細については、「 [Power Pivot モードでの Analysis Services のインストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」を参照してください。  
   
- インストール方法について、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2016 構成ツールでは、次を参照してください。[インストールまたは for SharePoint アドイン (SharePoint 2016) Power Pivot をアンインストール](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)です。  
+ 詳細については、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2016 構成ツールでは、次を参照してください。[インストールまたは for SharePoint アドイン (SharePoint 2016) Power Pivot をアンインストール](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)します。  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Power Pivot for SharePoint 2016 の構成の実行  
  **注:** 次の手順を実行するには、ファーム管理者である必要があります。 次のようなエラー メッセージが表示される場合があります。  
@@ -51,7 +51,7 @@ ms.locfileid: "34018169"
   
     4.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]`になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]** ページを確認します。  
   
-5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 各アクションの詳細については、このトピックの [「Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 」で「サーバーの構成に使用する入力値」セクションを参照してください。  
+5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 各アクションの詳細については、このトピックの「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 」で「サーバーの構成に使用する入力値」セクションを参照してください。  
   
 6.  必要に応じて、今回は処理しないすべてのアクションを削除します。 たとえば、Secure Store Service を後で構成する場合は、 **[Secure Store Service の構成]** を選択し、 **[この操作をタスク一覧に含めます]** チェック ボックスをオフにします。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34018169"
   
 8.  **[実行]** をクリックして、タスク一覧にあるすべてのアクションを処理します。 **[実行]** は、アクションの検証後に有効になります。 **[実行]** が有効になっていない場合は、まず **[検証]** をクリックしてください。  
   
- 詳細については、「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
+ 詳細については、「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Power Pivot の構成の確認  
  **サービス**  
@@ -78,7 +78,7 @@ ms.locfileid: "34018169"
   
 1.  構成ツールによって作成されたサイトの URL を参照します。  
   
-     選択**設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")、順にクリック**サイト設定**です。  
+     選択**設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")、順にクリックします**サイト設定**します。  
   
      **[サイト コレクションの機能]** をクリックします。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "34018169"
   
 5.  **[OK]** を選択します。  
   
- 更新のデータのトラブルシューティングに関する詳細については、次を参照してください。 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)です。  
+ データのトラブルシューティングの更新の詳細については、次を参照してください。 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)します。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

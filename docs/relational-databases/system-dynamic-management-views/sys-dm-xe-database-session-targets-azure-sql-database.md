@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_targets (Azure SQL データベース) |Microsoft ドキュメント
+title: sys.dm_xe_database_session_targets (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 8978a41b22beb36ccc31d1cfdc0a73eaf2da34ec
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466018"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041020"
 ---
 # <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34466018"
 |-|  
 |**適用されます**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 および将来のバージョンでは任意です。|  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|イベント セッションのメモリ アドレス。 Sys.dm_xe_database_sessions.address と多対一の関係があります。 NULL 値は許可されません。|  
 |target_name|**nvarchar(60)**|セッション内のターゲットの名前。 NULL 値は許可されません。|  
@@ -41,7 +41,7 @@ ms.locfileid: "34466018"
 |execution_duration_ms|**bigint**|ターゲットが実行された時間の合計 (ミリ秒単位)。 NULL 値は許可されません。|  
 |target_data|**nvarchar(max)**|イベント集計情報など、ターゲットが保持するデータ。 NULL 値が許可されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  VIEW DATABASE STATE 権限が必要です。  
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  

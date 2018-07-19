@@ -1,7 +1,8 @@
 # [レプリケーション](sql-server-replication.md)  
 # [新機能 (レプリケーション)](what-s-new-replication.md)  
 # [レプリケーションの旧バージョンとの互換性](replication-backward-compatibility.md)  
-## [SQL Server レプリケーションの非推奨の機能](deprecated-features-in-sql-server-replication.md)  
+## 
+  [SQL Server レプリケーションの非推奨の機能](deprecated-features-in-sql-server-replication.md)  
 ## [SQL Server レプリケーションにおける重大な変更](breaking-changes-in-sql-server-replication.md)  
 
 # レプリケーション領域
@@ -21,6 +22,7 @@
 
 ## [メモリ最適化テーブル サブスクライバーへのレプリケーション](replication-to-memory-optimized-table-subscribers.md)  
 ## [SQL Database へのレプリケーション](replication-to-sql-database.md)  
+## [SQL Database のレプリケーション](replication-with-sql-database-managed-instance.md)
 ## [データの再パブリッシュ](republish-data.md)  
 ## [インターネット経由のレプリケーション](replication-over-the-internet.md)  
 ### [VPN を使用したインターネット経由のデータのパブリッシュ](publish-data-over-the-internet-using-vpn.md)  

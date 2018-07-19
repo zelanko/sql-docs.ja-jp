@@ -1,5 +1,5 @@
 ---
-title: Power Pivot の可用性と災害復旧 |Microsoft ドキュメント
+title: Power Pivot の可用性とディザスター リカバリー |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2b5a16ac487b52f3592743481e0013b4bf44856
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026539"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979584"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot の可用性と災害復旧
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  可用性と災害復旧計画[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]主に、SharePoint ファーム、さまざまなコンポーネントで許容されるダウンタイムの量と、ツールと SharePoint の可用性の実装のベスト プラクティスの設計に依存します。 このトピックでは、さまざまなテクノロジについて要約し、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置に関して可用性とディザスター リカバリーを計画するときに考慮する必要のあるトポロジ図の例を示します。  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の可用性とディザスター リカバリー計画は主に、SharePoint ファームの設計、さまざまなコンポーネントで許容されるダウンタイムの長さ、SharePoint の可用性を高めるために実装するツールとベスト プラクティスに依存します。 このトピックでは、さまざまなテクノロジについて要約し、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置に関して可用性とディザスター リカバリーを計画するときに考慮する必要のあるトポロジ図の例を示します。  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **このトピックの内容**  
+ **このトピックの内容:**  
   
 -   [PowerPivot の高可用性に関連する SharePoint 2013 のトポロジの例](#bkmk_sharepoint2013)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34026539"
   
  ![sharepoint 2010 で powerpivot の可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "sharepoint 2010 で powerpivot の可用性")  
   
--   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールします。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
+-   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールします。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
   
 -   **(2)** 2 つの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共有サービスと **(4)** Windows Service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** が、SharePoint アプリケーション サーバーにインストールされます。  
   
@@ -81,8 +81,11 @@ ms.locfileid: "34026539"
 |-|--------------|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の同期ミラーリングを同じファーム内で行うことによる可用性の確保|サポートはされますが、推奨はされません。 同期コミット モードの AlwaysOn を推奨します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 同期コミット モードの|サポートされ、なおかつ推奨されます。|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|Supported|  
+|
+            [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
+|
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+            [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|Supported|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
@@ -95,9 +98,11 @@ ms.locfileid: "34026539"
   
 ##  <a name="bkmk_more_resources"></a> 詳細情報へのリンク  
   
--   [サポートされている SharePoint データベース用の高可用性とディザスター リカバリーのオプション (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
+-   
+            [サポートされている SharePoint データベース用の高可用性とディザスター リカバリーのオプション (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
--   [ディザスター リカバリーを計画する (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
+-   
+            [ディザスター リカバリーを計画する (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   
 -   [SQL Server クラウドのバックアップと復旧に関するホワイト ペーパー](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   

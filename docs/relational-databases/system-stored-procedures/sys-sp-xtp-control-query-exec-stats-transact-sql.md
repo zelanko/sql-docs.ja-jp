@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_control_query_exec_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_xtp_control_query_exec_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23301458684008945c057aa1d7f9f97380a9cb68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055850"
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33257573"
   
  統計コレクションを有効にすると、パフォーマンスが低下します。 1 つまたは少数のネイティブ コンパイル ストアド プロシージャのみをトラブルシューティングする必要がある場合は、それらのネイティブ コンパイル ストアド プロシージャに対してのみ統計コレクションを有効にすることができます。  
   
- すべてのネイティブ コンパイル ストアド プロシージャのプロシージャ レベルで統計コレクションを有効にするを参照してください。 [sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)です。  
+ すべてのネイティブ コンパイル ストアド プロシージャのプロシージャ レベルで統計コレクションを有効にするのを参照してください。 [sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,9 +54,9 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value 0 に設定されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を開始します。  
   
  @database_id = = *database_id*、 @xtp_object_id = *procedure_id*  
- ネイティブ コンパイル ストアド プロシージャのデータベース ID とオブジェクト ID。 インスタンスの統計コレクションが有効になっている場合 ([sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))、ネイティブ コンパイル ストアド プロシージャの統計情報を収集します。 インスタンスに対する統計コレクションを無効にしても、個々のネイティブ コンパイル ストアド プロシージャに関する統計コレクションは無効になりません。  
+ ネイティブ コンパイル ストアド プロシージャのデータベース ID とオブジェクト ID。 インスタンスの統計コレクションが有効になっている場合 ([sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))、ネイティブ コンパイル ストアド プロシージャの統計情報が収集されます。 インスタンスに対する統計コレクションを無効にしても、個々のネイティブ コンパイル ストアド プロシージャに関する統計コレクションは無効になりません。  
   
- 使用して[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)、 [sys.procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)、 [DB_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)、または[OBJECT_ID &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md)データベースとストアド プロシージャの Id を取得します。  
+ 使用[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)、 [sys.procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)、 [DB_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)、または[OBJECT_ID &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md)データベースとストアド プロシージャの Id を取得します。  
   
  @old_collection_value = *value*  
  現在の状態を返します。  
@@ -64,7 +64,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## <a name="return-code"></a>リターン コード  
  成功した場合は 0。 失敗した場合は 0 以外の値。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  固定 sysadmin ロールのメンバーシップが必要です。  
   
 ## <a name="code-sample"></a>コード サンプル  

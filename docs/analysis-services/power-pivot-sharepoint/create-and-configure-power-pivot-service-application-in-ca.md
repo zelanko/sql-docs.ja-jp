@@ -1,5 +1,5 @@
 ---
-title: 作成し、CA での Power Pivot サービス アプリケーションの構成 |Microsoft ドキュメント
+title: 作成し、CA での Power Pivot サービス アプリケーションの構成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025169"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982604"
 ---
-# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>作成し、CA で Power Pivot サービス アプリケーションを構成します。
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>作成し、CA での Power Pivot サービス アプリケーションの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスの共有サービス インスタンスです。 各サービス アプリケーションは、固有のアプリケーション ID、構成設定、プロパティ、および内部データ ストレージを備えています。  
   
@@ -57,13 +57,13 @@ ms.locfileid: "34025169"
   
 3.  **[SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション]** を選択します。 この項目が一覧に表示されない場合は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がインストールされていないか、正しく構成されていません。  
   
-4.  **[新しい [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの作成]** ページで、アプリケーションの名前を入力します。 既定値は PowerPivotServiceApplication\<番号 >。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成する場合は、それぞれの用途を明確に示す名前を付けると他の管理者にわかりやすくなります。  
+4.  **[新しい [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの作成]** ページで、アプリケーションの名前を入力します。 既定値は PowerPivotServiceApplication\<数 >。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成する場合は、それぞれの用途を明確に示す名前を付けると他の管理者にわかりやすくなります。  
   
-5.  [アプリケーション プール] で、このアプリケーションのための新しいアプリケーション プールを作成し (推奨)、 そのアプリケーション プールのマネージ アカウントを選択または作成します。 必ずドメイン ユーザー アカウントを指定してください。 ドメイン ユーザー アカウントにより、パスワードやアカウント情報をまとめて更新できる SharePoint のマネージ アカウント機能を使用できるようになります。 ドメイン アカウントは、配置をスケールアウトして、同じ ID で実行されるサービス インスタンスを追加する場合にも必要です。  
+5.  [アプリケーション プール] で、このアプリケーションのための新しいアプリケーション プールを作成し (推奨)、 そのアプリケーション プールのマネージド アカウントを選択または作成します。 必ずドメイン ユーザー アカウントを指定してください。 ドメイン ユーザー アカウントにより、パスワードやアカウント情報をまとめて更新できる SharePoint の管理アカウント機能を使用できるようになります。 ドメイン アカウントは、配置をスケールアウトして、同じ ID で実行されるサービス インスタンスを追加する場合にも必要です。  
   
 6.  **[データベース サーバー]** の既定値は、ファーム構成データベースをホストする SQL Server データベース エンジン インスタンスです。 このサーバーを使用することも、別の SQL Server を選択することもできます。  
   
-7.  **データベース名**、既定値は PowerPivotServiceApplication1_\<guid > です。 各 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに固有のデータベースを作成する必要があります。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
+7.  **データベース名**、既定値は PowerPivotServiceApplication1_\<guid >。 各 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに固有のデータベースを作成する必要があります。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
 8.  **[データベース認証]** の既定値は、"Windows 認証" です。 **[SQL 認証]** を選択する場合は、SharePoint 管理者ガイドを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34025169"
   
      サービスの関連付けの詳細については、「 [サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)」を参照してください。  
   
-10. クリックして **OK.** 作成したサービスが、他のマネージ サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
+10. **[OK]** をクリックします。 作成したサービスが、他のマネージド サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
   
 ##  <a name="ConfigApp"></a> Power Pivot サービス アプリケーションの構成  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、既定の構成を使用して作成されます。 既定の設定は、ほとんどのシナリオで推奨されます。 既定の設定を変更するのは、応答の遅延や接続の切断などの問題が発生した場合や、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスの構成を特定の SharePoint Web アプリケーションに対して変更する場合だけにしてください。  
@@ -106,9 +106,9 @@ ms.locfileid: "34025169"
   
 9. [データ更新] の **[営業時間]** では、営業時間を定義する時間の範囲を指定できます。 データ更新スケジュールを営業時間後に実行すると、通常の営業時間中に生成されたトランザクション データを取得できます。  
   
-10. **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新ジョブを実行するための定義済みアカウントを保存する Secure Store Service の定義済みの対象アプリケーションを指定できます。 ID ではなく、必ず対象アプリケーション名を指定してください。 自動データ更新の対象アプリケーションは、SQL Server セットアップで [新しいサーバー] オプションを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールした場合は自動的に作成されます。 それ以外の場合は、対象アプリケーションを手動で作成する必要があります。 アカウントを構成する方法については、「 [Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)」を参照してください。  
+10. **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント]** で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新ジョブを実行するための定義済みアカウントを保存する Secure Store Service の定義済みの対象アプリケーションを指定できます。 ID ではなく、必ず対象アプリケーション名を指定してください。 自動データ更新の対象アプリケーションは、SQL Server セットアップで [新しいサーバー] オプションを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールした場合は自動的に作成されます。 それ以外の場合は、対象アプリケーションを手動で作成する必要があります。 アカウントを構成する方法については、「 [Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)」を参照してください。  
   
-11. **[ユーザーによるカスタムの Windows 資格情報の入力を許可する]** チェック ボックスをオンまたはオフにして、スケジュールの所有者が任意の Windows 資格情報を入力してデータ更新スケジュールを実行できるようにするかどうかを指定します。 このチェック ボックスを選択した場合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは作成され、保存された資格情報のセットごとに対象アプリケーションを管理します。 詳細については、「 [PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)」を参照してください。  
+11. **[ユーザーによるカスタムの Windows 資格情報の入力を許可する]** チェック ボックスをオンまたはオフにして、スケジュールの所有者が任意の Windows 資格情報を入力してデータ更新スケジュールを実行できるようにするかどうかを指定します。 このチェック ボックスを選択した場合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは作成され、保存された資格情報のセットごとに対象アプリケーションを管理します。 詳細については、「 [PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)」を参照してください。  
   
 12. **[処理履歴の最大の長さ]** では、データ更新処理の履歴レコードを保持する期間を指定できます。 この情報は、データ更新を使用するブックごとに保持されるデータ更新の履歴ページに表示されます。 表示されます、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュ ボード。  
   
@@ -125,9 +125,9 @@ ms.locfileid: "34025169"
 ##  <a name="AssignGSA"></a> Power Pivot サービス アプリケーションの Web アプリケーションへの割り当て  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの構成が完了したら、Web アプリケーションに関連するサービス アプリケーションの接続リストに追加することによって、サービス アプリケーションを Web アプリケーションに割り当てることができます。 これには 2 つの方法があります。  
   
--   **既定** の接続グループに追加します。 *既定の接続グループ* とは、そのグループを参照する任意の Web アプリケーションで使用できるサービス アプリケーション接続のコレクションです。 このリストに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを 1 つ追加する必要があります。  
+-   **"既定"** の接続グループに追加します。 *既定の接続グループ* とは、そのグループを参照する任意の Web アプリケーションで使用できるサービス アプリケーション接続のコレクションです。 このリストに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを 1 つ追加する必要があります。  
   
--   特定の Web アプリケーションの **カスタム** 接続リストを作成します。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、カスタム リストで選択することによって、使用するサービス アプリケーションを選択できます。  
+-   特定の Web アプリケーションの "カスタム" **** 接続リストを作成します。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、カスタム リストで選択することによって、使用するサービス アプリケーションを選択できます。  
   
  既定の接続グループに同じ型のサービス アプリケーションを複数含めることもできますが、 このリストに複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを追加する構成はサポートされていません。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.column_store_segments (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.column_store_segments (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2018
 ms.prod: sql
@@ -25,37 +25,37 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 5de9c261a2e5f6b7b2d1eb31c63a88caa54cbbe9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180498"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054497"
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-列ストア インデックスで各列セグメントの 1 つの行を返します。 行グループごとに各列の 1 つの列セグメントがあります。 たとえば、10 行グループと 34 列を含むテーブルには、340 行が返されます。 
+列ストア インデックス内の各列セグメントの 1 つの行を返します。 行グループごとに各列の 1 つの列セグメントがあります。 たとえば、10 個の行グループと 34 列を含むテーブルは、340 行を返します。 
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|パーティション ID を示します。 データベース内で一意です。|  
 |**hobt_id**|**bigint**|この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。|  
 |**column_id**|**int**|列ストアの列の ID。|  
-|**segment_id**|**int**|行グループの ID です。 旧バージョンと互換性のため、列名が呼び出す segment_id 行グループ ID です。 この場合でも引き続き 使用してセグメントを一意に識別できる\<hobt_id で、partition_id、column_id >、< segment_id >。|  
+|**segment_id**|**int**|行グループの ID。 旧バージョンと互換性のため、列名が行グループ ID です。 この場合でも、segment_id を呼び出せる続けます 使用してセグメントを一意に識別できる\<hobt_id で、partition_id、column_id >、< segment_id >。|  
 |**version**|**int**|列セグメント形式のバージョン。|  
-|**encoding_type**|**int**|そのセグメントで使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (いくつか内部のバリエーションを 4 に非常に似ています)<br /><br /> 2 = VALUE_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 4 STORE_BY_VALUE_BASED - 非文字列/バイナリないディクショナリを =<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - 文字列/にあるバイナリ辞書が見つかりません<br /><br /> すべてのエンコーディング利用可能な場合のエンコード ビット パッキングと実行の長さ。|  
+|**encoding_type**|**int**|そのセグメントを使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (内部のいくつかのバリエーションを 4 によく似ています)<br /><br /> 2 = VALUE_HASH_BASED - の一般的な値がディクショナリ内の文字列/バイナリ列<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列/バイナリ列<br /><br /> 4 = STORE_BY_VALUE_BASED - 非文字列/バイナリない辞書で<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - ない辞書で文字列/バイナリ<br /><br /> すべてのエンコーディングでは、可能な場合のエンコード ビット パッキングと実行の長さの活用します。|  
 |**row_count**|**int**|行グループ内の行の数。|  
 |**has_nulls**|**int**|列セグメントに NULL 値がある場合は 1。|  
-|**base_id**|**bigint**|エンコードの種類 1 が使用されている場合は、id をベース値です。  エンコードの種類 1 が使用されていない場合、base_id は-1 に設定します。|  
-|**magnitude**|**float**|エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が使用されていない場合は大きさが-1 に設定します。|  
-|**primary_dictionary_id**|**int**|値 0 は、グローバルの辞書を表します。 値-1 は、この列用に作成されたグローバルの辞書がないことを示します。|  
-|**secondary_dictionary_id**|**int**|0 以外の値は、現在のセグメント (つまり、行グループ) のこの列のローカルのディクショナリを指します。 値-1 は、このセグメントのローカルのディクショナリがないことを示します。|  
+|**base_id**|**bigint**|エンコードの種類 1 が使用されている場合は、id をベース値です。  エンコードの種類 1 が使用されていない、base_id が-1 に設定します。|  
+|**magnitude**|**float**|エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が使用されていない、magnitude が-1 に設定します。|  
+|**primary_dictionary_id**|**int**|値 0 は、グローバルのディクショナリを表します。 値-1 は、この列用に作成されたグローバル辞書がないことを示します。|  
+|**secondary_dictionary_id**|**int**|0 以外の値は、この列に現在のセグメント (つまり行グループ) のローカルのディクショナリを指します。 値-1 は、このセグメントのローカルのディクショナリがないことを示します。|  
 |**min_data_id**|**bigint**|列セグメントの最小データ ID。|  
 |**max_data_id**|**bigint**|列セグメントの最大データ ID。|  
 |**null_value**|**bigint**|NULL を表すために使用される値。|  
 |**on_disk_size**|**bigint**|セグメントのサイズ (バイト単位)。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次のクエリは、列ストア インデックスのセグメントに関する情報を返します。  
   
 ```sql  
@@ -71,10 +71,10 @@ GROUP BY i.name, p.object_id, p.index_id, i.type_desc ;
 GO  
 ```  
   
-## <a name="permissions"></a>権限  
- すべての列が少なくとも必要**VIEW DEFINITION**テーブルに対する権限。 ユーザーがあるない限り列は null を返します**選択**権限: has_nulls、base_id、magnitude、min_data_id、max_data_id、および null_value します。  
+## <a name="permissions"></a>アクセス許可  
+ すべての列が少なくとも必要**VIEW DEFINITION**テーブルに対する権限。 ユーザーがあるない限り、列は null を返します**選択**アクセス許可: has_nulls、base_id、magnitude、min_data_id、max_data_id、および null_value します。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
