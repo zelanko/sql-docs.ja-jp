@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b00b3fbfeeff2fa7c99ac8f69e3c46c79e4ed796
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334706"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964354"
 ---
 # <a name="azure-blob-source"></a>Azure BLOB Source
   **Azure BLOB Source** コンポーネントは、SSIS パッケージが Azure BLOB のデータを読み取ることを可能にします。 サポートされるファイル形式は、CSV および AVRO です。
@@ -37,10 +37,14 @@ ms.locfileid: "35334706"
   
 3.  **[Blob name]** (BLOB 名) フィールドに、BLOB のパスを指定します。  
   
-4.  **[Blob file format]** (BLOB ファイル形式) フィールドに、使用する形式を指定します。  
+4.  **[BLOB ファイル形式]** フィールドで、使用する BLOB 形式 (**[テキスト]** または **[Avro]**) を選択します。  
   
-5.  CSV 形式の場合は、 **[Column delimiter character]** (列区切り文字) に値を指定する必要があります。 さらに、ファイルの 1 行目に列名が含まれている場合は、 **[先頭データ行を列名として使用する]** も指定する必要があります。  
+5.  ファイル形式が **[テキスト]** の場合は、**[列の区切り文字]** に値を指定する必要があります。 さらに、ファイルの 1 行目に列名が含まれている場合は、 **[先頭データ行を列名として使用する]** も指定する必要があります。
+
+6.  ファイルが圧縮されている場合は、**[Decompress the file]** (ファイルの圧縮解除) を選択します。
+
+7.  ファイルが圧縮されている場合は、**[圧縮の種類]** として **[GZIP]**、**[DEFLATE]**、または **[BZIP2]** を選択します。 Zip 形式はサポートされていません。
   
-6.  接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  
+8.  接続情報を指定した後、**[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  
   
   

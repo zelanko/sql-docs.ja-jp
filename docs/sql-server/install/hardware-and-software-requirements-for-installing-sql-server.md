@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア | Microsoft Docs
 ms.custom: ''
-ms.date: 08/23/2017
+ms.date: 07/06/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -48,12 +48,12 @@ caps.latest.revision: 333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aef7f10021c179b8ab6a6498bbe251159b8bfe7a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e057c582aea0646f0f151c1a342f89281d8479e0
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773188"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890953"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server のインストールに必要なハードウェアおよびソフトウェア
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "34773188"
 |コンポーネント|要件|  
 |---------------|-----------------|  
 |.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 以降では、データベース エンジン、マスター データ サービス、レプリケーションのために [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 が必要になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 セットアップにより [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]が自動的にインストールされます。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft .NET Framework 4.6 (Web Installer) for Windows [から](http://support.microsoft.com/kb/3045560)を手動でインストールすることもできます。<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 の詳細、推奨事項、ガイダンスについては、「 [.NET Framework 配置ガイド (開発者向け)](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)」を参照してください。<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 をインストールするには、[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] と [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] に [KB2919355](http://support.microsoft.com/kb/2919355) が必要になります。|  
-|ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きインスタンスおよび既定のインスタンスは、次のネットワーク プロトコルをサポートします: 共有メモリ、名前付きパイプ、TCP/IP、および VIA。<br/><br/> 注: フェールオーバー クラスターでは共有メモリと VIA を使用できません。<br/><br/> VIA プロトコルが非推奨とされることにもご注意ください。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> ネットワーク プロトコルとネットワーク ライブラリの詳細については、「 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)」を参照してください。|  
+|ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きインスタンスおよび既定のインスタンスは、次のネットワーク プロトコルをサポートします: 共有メモリ、名前付きパイプ、TCP/IP、および VIA。<br/><br/> 注: VIA プロトコルはフェールオーバー クラスターではサポートされません。 共有メモリは、接続がフェールオーバー クラスター インスタンスのローカル パイプ アドレスを通じて行われている場合にのみサポートされます。<br/><br/> VIA プロトコルが非推奨とされることにもご注意ください。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> ネットワーク プロトコルとネットワーク ライブラリの詳細については、「 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)」を参照してください。|  
 |ハード ディスク|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では 6 GB 以上のハード ディスク空き容量が必要です。<br/><br/> 必要となるディスク空き容量は、インストールする [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のコンポーネントに応じて異なります。 詳細については、この記事で後述する「[必要なハード ディスク空き容量](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)」を参照してください。 データ ファイルでサポートされているストレージの種類の詳細については、「 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)」を参照してください。|  
 |ドライブ|ディスクからインストールする場合は、DVD ドライブが必要です。|  
 |モニター|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では Super-VGA (800x600) 以上の解像度のモニターが必要です。|  

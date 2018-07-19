@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: 72d3f28c6cc0e2998004b8b4883fdb846e2a92e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956427"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297368"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "32956427"
 
 **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
-古いバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降に移行する場合、および[データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)を最新のレベルにアップグレードする場合、ワークロードのパフォーマンスが低下するリスクにさらされる場合があります。
+古いバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降に移行する場合、および[データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)を最新のレベルにアップグレードする場合、ワークロードのパフォーマンスが低下するリスクにさらされる可能性があります。
 
 これは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降、すべてのクエリ オプティマイザーの変更が最新の[データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)と連携しているため、プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` のデータベース オプションを最新のものに変更した時点で発生するためです。 この機能とクエリ ストアの組み合わせによって、アップグレード プロセス中のクエリのパフォーマンスを高いレベルで制御できます。 
 

@@ -1,7 +1,7 @@
 ---
 title: SSIS を使用する Excel からのインポートまたは Excel へのエクスポート | Microsoft Docs
 description: 前提条件、既知の問題、制限事項と共に、SQL Server Integration Services (SSIS) を使用して Excel データをインポートまたはエクスポートする方法について説明します。
-ms.date: 04/10/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,51 +13,62 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0230dd81a704ce0d9ada34eecea205e153ebb78b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403394"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137931"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
-この記事では、SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする方法について説明します。 また、前提条件、制限事項、および既知の問題についても説明します。
+この記事では、Excel からデータをインポートするとき、または SQL Server Integration Services (SSIS) を使って Excel にデータをエクスポートするときに、指定する必要のある接続情報および構成する必要のある設定について説明します。
 
-Excel からデータをインポートする、または Excel にデータをエクスポートするには、SSIS パッケージを作成し、Excel 接続マネージャーと Excel ソースまたは Excel 変換先を使用することで行えます。 SSIS に組み込まれている SQL Server インポートおよびエクスポート ウィザードを使用することもできます。
+以下のセクションには、SSIS で Excel を正常に使用するため、または一般的な問題を理解して解決するために必要な情報が含まれています。
 
-この記事には、SSIS から Excel を正常に使用するため、または一般的な問題を理解して解決するために必要な 3 つの情報セットが含まれています。
-1.  [必要なファイル](#files-you-need)。
-2.  Excel から、または Excel へのデータの読み込み時に指定する必要がある情報。
+1.  使用できる[ツール](#tools)。
+
+2.  必要な[ファイル](#files-you-need)。
+
+3.  Excel から、または Excel にデータを読み込むときに、提供する必要がある接続情報、および構成する必要がある設定。
     -   データ ソースとして [Excel を指定](#specify-excel)します。
     -   [Excel ファイル名とパス](#excel-file)を指定します。
     -   [Excel のバージョン](#excel-version)を選択します。
     -   [最初の行に列名が含まれる](#first-row)かどうかを指定します。
     -   [データを含むワークシートまたは範囲](#sheets-ranges)を指定します。
-3.  既知の問題と制限事項。
+
+4.  既知の問題と制限事項。
     -   [データ型](#issues-types)に関する問題
     -   [インポート](#issues-importing)に関する問題。
     -   [エクスポート](#issues-exporting)に関する問題。
+
+## <a name="tools"></a> 使用できるツール
+
+次のいずれかのツールを使って、Excel からデータをインポートしたり、Excel にデータをエクスポートしたりできます。
+
+-   **SQL Server Integration Services (SSIS)**. Excel 接続マネージャーで、Excel ソースまたは Excel 変換先を使用する SSIS パッケージを作成します。 (この記事では、SSIS パッケージの設計方法は説明しません。)
+
+-   SSIS に組み込まれている **SQL Server インポートおよびエクスポート ウィザード**。 詳しくは、「[SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」および「[Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。
 
 ## <a name="files-you-need"></a> Excel に接続するために必要なファイルを取得する
 
 Excel からデータをインポートしたり、データを Excel にエクスポートするには、事前に Excel の接続コンポーネントをダウンロードする必要があります (まだインストールされていない場合)。 Excel の接続コンポーネントは、既定ではインストールされません。
 
-[Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)で、Excel の接続コンポーネントの最新バージョンをダウンロードします。
-  
-以前のバージョンの Excel で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
+[Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)で、Excel の接続コンポーネントの最新バージョンをダウンロードします。 以前のバージョンの Excel で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
 
-Microsoft Access 2016 *ランタイム*ではなく、必ず Access データベース エンジン 2016 *再頒布可能パッケージ*をダウンロードしてください。
+### <a name="notes-about-the-download-and-installation"></a>ダウンロードとインストールに関する注意事項
 
-32 ビット バージョンの Office を既にインストールしている場合は、32 ビット バージョンのコンポーネントをインストールする必要があります。 また、SSIS パッケージを 32 ビット モードで実行していること、またはインポートおよびエクスポート ウィザードの 32 ビット バージョンを実行していることを確認する必要があります。
+-   Microsoft Access 2016 *ランタイム*ではなく、必ず Access データベース エンジン 2016 *再頒布可能パッケージ*をダウンロードしてください。
 
-Office 365 サブスクリプションをお持ちの場合は、インストーラーを実行するときにエラー メッセージが表示される場合があります。 このエラーは、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示します。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例 :
+-   32 ビット バージョンの Office を既にインストールしている場合は、32 ビット バージョンのコンポーネントをインストールする必要があります。 また、SSIS パッケージを 32 ビット モードで実行していること、またはインポートおよびエクスポート ウィザードの 32 ビット バージョンを実行していることを確認する必要があります。
 
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+-   Office 365 サブスクリプションをお持ちの場合は、インストーラーを実行するときにエラー メッセージが表示される場合があります。 このエラーは、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示します。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例 :
 
-2016 再頒布可能パッケージのインストールに問題がある場合は、代わりに [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)から 2010 再頒布可能パッケージをインストールします  (Excel 2013 用の再頒布可能パッケージはありません)。
+    `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="specify-excel"></a> Excel を指定する
+    2016 再頒布可能パッケージのインストールに問題がある場合は、代わりに [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)から 2010 再頒布可能パッケージをインストールします  (Excel 2013 用の再頒布可能パッケージはありません)。
+
+## <a name="specify-excel"></a> データ ソースとして Excel を指定する
 
 最初の手順は、Excel に接続することを指定することです。
 

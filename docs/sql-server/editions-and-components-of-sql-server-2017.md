@@ -3,12 +3,9 @@ title: SQL Server 2017 の各エディションとサポートされている機
 ms.custom: ''
 ms.date: 11/10/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -40,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cda2359f1e6ae92e49331bbd2bd3471107d2fdf
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 4e93dec74b1e647fac64e7982b11e51635163193
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702845"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37891013"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +98,7 @@ ms.locfileid: "33702845"
   
  以下の表の情報を参照し、ニーズに最も合う機能を判断してください。  
   
-|サーバー コンポーネント|Description|  
+|サーバー コンポーネント|[説明]|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には [!INCLUDE[ssDE](../includes/ssde-md.md)]が含まれています。これは、データの格納、処理、およびセキュリティ保護、レプリケーション、フルテキスト検索、リレーショナルおよび XML データを管理するツール、データベース内分析機能の統合、および Hadoop とその他の異種データ ソースにアクセスするための Polybase 統合、および [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) サーバー用のコア サービスです。|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、オンライン分析処理 (OLAP) アプリケーションおよびデータ マイニング アプリケーションを作成および管理するためのツールが含まれます。|  
@@ -109,10 +106,10 @@ ms.locfileid: "33702845"
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、データを移動、コピー、変換するためのグラフィカル ツールおよびプログラミング可能なオブジェクトのセットです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 用の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) コンポーネントも含まれています。|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) は、マスター データ管理のための [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ソリューションです。 MDS は、あらゆるドメイン (製品、顧客、アカウント) を管理するように構成できます。MDS には、データの管理に使用できる [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] のほかに、階層、きめ細かいセキュリティ、トランザクション、データのバージョン管理、およびビジネス ルールが含まれています。|  
 |Machine Learning Services (データベース内)|Machine Learning Services (データベース内) は、エンタープライズ データ ソースを使用する分散型のスケーラブルな機械学習ソリューションをサポートします。 SQL Server 2016 では、R 言語がサポートされていました。 SQL Server 2017 では、R と Python がサポートされています。|
-|Machine Learning Server (スタンドアロン)|Machine Learning Server (スタンドアロン) では、Linux、Hadoop、Teradata などの複数のエンタープライズ データ ソースを使用する分散型のスケーラブルな機械学習ソリューションを複数のプラットフォームに配置できます。 SQL Server 2016 では、R 言語がサポートされていました。 SQL Server 2017 では、R と Python がサポートされています。|
+|Machine Learning Server (スタンドアロン)|Machine Learning Server (スタンドアロン) では、Linux や Hadoop などの複数のエンタープライズ データ ソースを使用する分散型のスケーラブルな機械学習ソリューションを複数のプラットフォームに配置できます。 SQL Server 2016 では、R 言語がサポートされていました。 SQL Server 2017 では、R と Python がサポートされています。|
 
   
-|管理ツール|Description|  
+|管理ツール|[説明]|  
 |----------------------|-----------------|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のコンポーネントを構成、管理、開発し、それらのコンポーネントへアクセスするための統合環境です。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、すべてのスキル レベルの開発者と管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用できます。<br /><br /> ダウンロードしてインストールする <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] (「  [SQL Server Management Studio (SSMS) のダウンロード](http://msdn.microsoft.com/library/mt238290.aspx)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャー|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービス、サーバー プロトコル、クライアント プロトコル、およびクライアントの別名に関する基本的な構成管理を行います。|  
@@ -122,7 +119,7 @@ ms.locfileid: "33702845"
 |[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] は、ビジネス インテリジェンス コンポーネント ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]) のソリューションをビルドするための IDE です。<br /><br /> (以前の Business Intelligence Development Studio)。<br /><br /> [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] には、Visual Studio 内で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プラットフォーム (社内および社外の両方) のデータベース設計を行うデータベース開発者用の統合環境である "データベース プロジェクト" も含まれます。 データベース開発者は、強化された Visual Studio のサーバー エクスプローラーを使用して、データベース オブジェクトおよびデータの作成または編集、クエリの実行を簡単に行うことができます。|  
 |接続コンポーネント|クライアントとサーバー間の通信用コンポーネント、および DB-Library、ODBC、OLE DB 用のネットワーク ライブラリをインストールします。|  
   
-|ドキュメント|Description|  
+|ドキュメント|[説明]|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の主要マニュアル。| 
 
@@ -272,7 +269,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |データ層アプリケーション コンポーネントの操作のサポート - 抽出、配置、アップグレード、削除|はい|はい|はい|はい|はい| 
 |ポリシー オートメーション (変更時とスケジュールに基づいて確認)|はい|はい|はい|いいえ|いいえ|   
 |パフォーマンス データ コレクター|はい|はい|はい|いいえ|いいえ| 
-|複数インスタンス管理でマネージ インスタンスとして登録できる|はい|はい|はい|いいえ|いいえ|   
+|複数インスタンス管理でマネージド インスタンスとして登録できる|はい|はい|はい|いいえ|いいえ|   
 |標準的なパフォーマンス レポート|はい|はい|はい|いいえ|いいえ| 
 |プラン ガイドおよびプラン ガイドの固定計画|はい|はい|はい|いいえ|いいえ|   
 |NOEXPAND ヒントを使用したインデックス付きビューの直接クエリ|はい|はい|はい|はい|はい| 

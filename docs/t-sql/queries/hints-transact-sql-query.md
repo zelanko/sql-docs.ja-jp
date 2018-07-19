@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470293"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854344"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470293"
  SIMPLE は、クエリ オプティマイザーに対して簡易パラメーター化を試行するように指示します。 FORCED は、クエリ オプティマイザーに対して強制パラメーター化を試行するように指示します。 詳細については、「クエリ処理アーキテクチャ ガイド」の「[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)」および「クエリ処理アーキテクチャ ガイド」の「[簡易パラメーター化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)」を参照してください。  
   
  RECOMPILE  
- クエリの実行後、そのクエリに対して生成されたプランを破棄し、次回同じクエリが実行されたときにクエリ オプティマイザーにクエリ プランを再コンパイルさせるよう [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に指示します。 RECOMPILE を指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はクエリ プランをキャッシュして再利用します。 クエリ プランをコンパイルする場合、RECOMPILE クエリ ヒントは、クエリ内のローカル変数の現在値を使用し、クエリがストアド プロシージャ内にある場合は任意のパラメーターに渡された現在値を使用します。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に、クエリの新しい一時的なプランを生成し、クエリ実行完了直後にそのプランを破棄するよう指示します。 生成されたクエリ プランは、RECOMPILE ヒントを指定しないで同じクエリを実行したときにキャッシュに格納されるプランを置き換えません。 RECOMPILE を指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はクエリ プランをキャッシュして再利用します。 クエリ プランをコンパイルする場合、RECOMPILE クエリ ヒントは、クエリ内のローカル変数の現在値を使用し、クエリがストアド プロシージャ内にある場合は任意のパラメーターに渡された現在値を使用します。  
   
  RECOMPILE は、ストアド プロシージャ全体ではなくその中のクエリのサブセットだけを再コンパイルする必要がある場合に、WITH RECOMPILE 句を使用したストアド プロシージャを作成する代わりに使用すると便利です。 詳細については、「[ストアド プロシージャの再コンパイル](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)」を参照してください。 RECOMPILE はプラン ガイドを作成するときにも利用できます。  
   

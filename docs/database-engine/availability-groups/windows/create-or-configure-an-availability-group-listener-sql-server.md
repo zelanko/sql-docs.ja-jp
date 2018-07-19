@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769678"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066002"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの作成または構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769678"
 >  初めてリスナーを作成する前に、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)」を読むことを強くお勧めします。  
   
 ###  <a name="DNSnameReqs"></a> 可用性グループ リスナーの DNS 名の要件  
- 各可用性グループ リスナーは、ドメインおよび NetBIOS 内で一意の DNS ホスト名を必要とします。 DNS 名は、文字列値です。 この名前には、英数字、ダッシュ (-)、およびハイフン (_) のみを任意の順序で含めることができます。 DNS ホスト名では大文字と小文字は区別されません。 最大長は 63 文字です。ただし、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で指定できる最大長は 15 文字です。  
+ 各可用性グループ リスナーは、ドメインおよび NetBIOS 内で一意の DNS ホスト名を必要とします。 DNS 名は、文字列値です。 この名前には、英数字、ダッシュ/ハイフン (-)、およびアンダースコア (_) のみを任意の順序で含めることができます。 DNS ホスト名では大文字と小文字は区別されません。 最大長は 63 文字です。ただし、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で指定できる最大長は 15 文字です。  
   
  意味のある文字列を指定することをお勧めします。 たとえば、可用性グループの名前が `AG1`の場合は、 `ag1-listener`のような意味のある DNS ホスト名にします。  
   

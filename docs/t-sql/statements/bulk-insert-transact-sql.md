@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,14 +27,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782673"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ BULK INSERT
       { 'char' | 'native'| 'widechar' | 'widenative' } ]   
    [ [ , ] DATASOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
-   [ [ , ] ERRORFILE_DATASOURCE = 'data_source_name' ]   
+   [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]   
    [ [ , ] FIRSTROW = first_row ]   
    [ [ , ] FIRE_TRIGGERS ]   
    [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
@@ -99,11 +99,11 @@ BULK INSERT
  指定のテーブルまたはビューにインポートするデータが含まれているデータ ファイルの完全なパスを指定します。 BULK INSERT を使用して、ディスク (ネットワーク、フロッピー ディスク、ハード ディスクなど) からデータをインポートすることができます。   
  
  *data_file* には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているサーバーからの有効なパスを指定する必要があります。 *data_file* がリモート ファイルの場合は、UNC (汎用名前付け規則) 名を指定します。 UNC 名の形式は、\\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*です。 たとえば、 `\\SystemX\DiskZ\Sales\update.txt`のようにします。   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1 以降では、data_file は Azure Blob Storage に格納することができます。
 
 **'** *data_source_name* **'**   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 インポートされるファイルの Azure Blob Storage の場所を指している名前付きの外部データ ソースです。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。    
   
  BATCHSIZE **=***batch_size*  
@@ -131,7 +131,7 @@ BULK INSERT
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、[フォーマット ファイル](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)の各列に対して照合順序名を指定することをお勧めします。  
   
-|CODEPAGE の値|Description|  
+|CODEPAGE の値|[説明]|  
 |--------------------|-----------------|  
 |ACP|**char**、**varchar**、または **text** データ型の列は、[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換されます。|  
 |OEM (既定値)|**char**、**varchar**、または **text** のデータ型の列は、システムの OEM コード ページから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換されます。|  
@@ -146,17 +146,18 @@ BULK INSERT
 |**char** (既定値)|文字形式。<br /><br /> 詳細については、「[文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
 |**native**|ネイティブ (データベース) データ型。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、ネイティブ データ ファイルを作成します。<br /><br /> ネイティブ値を使用すると、char 型の値を使用するよりもパフォーマンスが向上します。<br /><br /> 詳細については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
 |**widechar**|Unicode 文字。<br /><br /> 詳細については、「 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
-|**widenative**|ネイティブ (データベース) データ型。ただし、データが Unicode として格納される **char**、**varchar**、**text** 列は除きます。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、**widenative** データ ファイルを作成します。<br /><br /> **widenative** 値を使用すると、**widechar** 値を使用するよりもパフォーマンスが向上します。 データ ファイルに [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 拡張文字が含まれている場合は、**widenative** を指定します。<br /><br /> 詳細については、「 [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
+|**widenative**|ネイティブ (データベース) データ型。ただし、データが Unicode として格納される **char**、**varchar**、**text** 列は除きます。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、**widenative** データ ファイルを作成します。<br /><br /> 
+  **widenative** 値を使用すると、**widechar** 値を使用するよりもパフォーマンスが向上します。 データ ファイルに [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 拡張文字が含まれている場合は、**widenative** を指定します。<br /><br /> 詳細については、「 [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
   
   ERRORFILE **='***file_name***'**  
  形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。  
   
  このエラー ファイルは、コマンドが実行されたときに作成されます。 ファイルが既に存在する場合はエラーが発生し、 拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行の参照と、エラーの診断が含まれています。 エラーが修正されるとすぐ、データは読み込み可能になります。   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。
 
 'errorfile_data_source_name'   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 名前付きの外部データ ソースで、インポート中に見つかったエラーを格納するエラー ファイルの Azure Blob Storage の場所を指しています。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
  
  FIRSTROW **=***first_row*  
@@ -214,11 +215,11 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
 ### <a name="input-file-format-options"></a>入力ファイル フォーマットのオプション
   
 FORMAT **=** 'CSV'   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準に準拠しているコンマ区切り値ファイルを指定します。
 
 FIELDQUOTE **=** 'field_quote'   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 CSV ファイルで引用符文字として使用される文字を指定します。 指定されていない場合は、[RFC 4180](https://tools.ietf.org/html/rfc4180) 標準の定義に従って引用符文字 (") が引用符文字として使用されます。
   
  FORMATFILE **='***format_file_path***'**  
@@ -232,7 +233,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
   
 -   データ形式に他に異なる点がある。 フォーマット ファイルは通常、**bcp** ユーティリティを使用して作成し、必要に応じてテキスト エディターで修正します。 詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
 
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blob Storage に格納することができます。
 
  FIELDTERMINATOR **='***field_terminator***'**  
@@ -424,6 +425,18 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
+```
+
+### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Azure Blob Storage 内のファイルからデータをインポートし、エラー ファイルを指定する   
+次の例では、外部データ ソースとして構成されている Azure Blob Storage の場所に csv ファイルからデータを読み込み、エラー ファイルも指定する方法を示します。 これには、Shared Access Signature を使用したデータベース スコープ資格情報が必要です。 Azure SQL Database を実行している場合、ERRORFILE オプションと共に ERRORFILE_DATA_SOURCE も指定する必要があることに注意してください。指定しないと、アクセス許可エラーでインポートが失敗する可能性があります。 ERRORFILE で指定するファイルは、コンテナー内に存在していてはなりません。
+
+```sql
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-01-19.csv'
+WITH (DATA_SOURCE = 'MyAzureInvoices',
+     FORMAT = 'CSV',
+     ERRORFILE = 'MyErrorFile',
+     ERRORFILE_DATA_SOURCE = 'MyAzureInvoices'); 
 ```
 
 資格情報と外部データ ソースの構成などの `BULK INSERT` の詳細な例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。

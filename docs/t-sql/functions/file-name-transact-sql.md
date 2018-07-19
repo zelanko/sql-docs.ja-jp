@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,20 +26,20 @@ helpviewer_keywords:
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4092e8dc584847d1a3a5e18c570838145ed88d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8342dff7af15fc9c497521124e52e5c60519245b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050819"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791923"
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたファイル識別 (ID) 番号の論理ファイル名を返します。  
+この関数は、指定されたファイル識別 (ID) 番号の論理ファイル名を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,17 +50,17 @@ FILE_NAME ( file_id )
 ```  
   
 ## <a name="arguments"></a>引数  
- *file_id*  
- ファイル名を返す基になるファイル識別番号です。 *file_id* は **int** です。  
+*file_id*  
+ファイル名 `FILE_NAME` を取得するファイル識別番号です。 *file_id* のデータ型は **int** です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- *file_ID* は、sys.master_files カタログ ビューまたは sys.database_files カタログ ビューの file_id 列に対応しています。  
+*file_ID* は、sys.master_files カタログ ビューまたは sys.database_files カタログ ビューの file_id 列に対応します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `file_ID 1` および `file_ID` に対するファイル名を返します。  
+この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `file_ID 1` および `file_ID` に対するファイル名を返します。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -71,9 +70,9 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-File Name 1           File Name 2  
-----------------      ------------------------  
-AdventureWorks2012_Data   AdventureWorks2012_Log  
+File Name 1                File Name 2  
+-------------------------  ------------------------  
+AdventureWorks2012_Data    AdventureWorks2012_Log  
 
 (1 row(s) affected)
 ``` 

@@ -3,32 +3,29 @@ title: SQL Server Data Tools のカスタマー エクスペリエンス向上�
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssdt
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bf04dde0c16f7f7782755db0583d9f64716471b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563800"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36886738"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP) により、どのようにしてソフトウェアを改善する方法を特定しているかについて説明します。  有効または無効にするツールはいつでも構成することができます。  
   
 > [!NOTE]  
->  Microsoft SQL Server 2016 リリースと、その他の製品およびサービスのユーザー データの収集および使用方法については、この [Microsoft のプライバシーに関する声明](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)を参照してください。  
+> Microsoft SQL Server リリースのユーザー データの収集および使用方法については、この「[プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>SQL Server Data Tools の CEIP を有効または無効にする  
  カスタマー エクスペリエンス向上プログラムは、Microsoft が時間の経過と共に製品を向上させるために記述されたプログラムです。 このプログラムは、コンピューターで実行しているユーザーのタスクを中断することなく、コンピューターのハードウェアおよびユーザーによる製品の利用状況を収集します。 収集される情報は、Microsoft がどの機能を改善するかを特定するために役立ちます。 このドキュメントでは、Visual Studio 2017、Visual Studio 2015 および Visual Studio 2013 で SQL Server Data Tools (SSDT) の CEIP を有効または無効にする方法について説明します。  
@@ -75,7 +72,7 @@ ms.locfileid: "34563800"
 > [!CAUTION]  
 >  レジストリの編集を誤ると、システムに深刻な悪影響を及ぼす可能性があります。 レジストリを変更する前に、コンピューター上のすべての重要なデータをバックアップしておくことをお勧めします。 手動での変更の適用後に問題が発生した場合は、[前回正常起動時の構成] スタートアップ オプションを使うこともできます。  
   
- CEIP によって収集、処理、および転送される情報の詳細については、「 [Microsoft カスタマー エクスペリエンス向上プログラムのプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=52143)」を参照してください。  
+ CEIP により収集、処理、および送信される情報の詳細については、「[プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Visual Studio 2015 の CEIP と SQL Server Data Tools の選択および制御  
  Visual Studio 2015 の SSDT は、SQL Server 2016 に付属するデータ モデリング ツールです。 Visual Studio 2015 に組み込まれている CEIP オプションが使用されます。 Visual Studio 2015 の CEIP を通じてフィードバックを送信する方法の詳細は、[Visual Studio のヘルプ ドキュメント](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)で確認できます。  
@@ -117,7 +114,7 @@ ms.locfileid: "34563800"
 > [!CAUTION]  
 >  レジストリの編集を誤ると、システムに深刻な悪影響を及ぼす可能性があります。 レジストリを変更する前に、コンピューター上のすべての重要なデータをバックアップしておくことをお勧めします。 手動での変更の適用後に問題が発生した場合は、[前回正常起動時の構成] スタートアップ オプションを使うこともできます。  
   
- CEIP によって収集、処理、および転送される情報の詳細については、「 [Microsoft カスタマー エクスペリエンス向上プログラムのプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=52143)」を参照してください。  
+ CEIP により収集、処理、および送信される情報の詳細については、「[プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>CEIP および SQL Server Data Tools - BI (SSDT BI) の選択および制御  
  SSDT-BI を使用している場合、インストール中に CEIP に協力するかどうかを選択できます。 SSDT-BI の CEIP の構成は、後でクライアント ツールまたはレジストリ設定の編集により変更することができます。  

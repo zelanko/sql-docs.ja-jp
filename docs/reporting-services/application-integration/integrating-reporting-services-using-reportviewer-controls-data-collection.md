@@ -15,16 +15,17 @@ caps.latest.revision: 2
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bc1edeb74cced8b18275b57deca6b078c13a56d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d41ac350e03dfbecc53041b2bbfa2570ede717c
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926853"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer コントロールを使用した Reporting Services の統合 - データ収集
 既定では、ReportViewer コントロールで匿名の使用情報が収集されます。これにより、Microsoft では顧客がコントロールをどのように利用しているかをよりよく理解できます。 顧客がビューアー コントロールをどのように配置して使用しているかをよりよく理解することで、今後の開発の際に、顧客に最大の価値をもたらす機能強化に焦点を合わせることができます。
 
-Microsoft SQL Server 2016 リリースと、その他の製品およびサービスのユーザー データの収集および使用方法については、この [Microsoft のプライバシーに関する声明](https://www.microsoft.com/EN-US/privacystatement/SQLServer/Default.aspx)を参照してください。
+Microsoft SQL Server 2016 リリースと、その他の製品およびサービスのユーザー データの収集および使用方法については、この「[プライバシーに関する声明]((http://go.microsoft.com/fwlink/?LinkID=868444))」を参照してください。
 
 ## <a name="opting-out-of-telemetry"></a>テレメトリのオプトアウト
 

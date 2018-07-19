@@ -7,8 +7,7 @@ ms.prod_service: sql-tools
 ms.component: ssms
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,15 +21,16 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 707777f3b568aa38d06416ca1ab3f1292051e068
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8c64df36bef9012e91d444f9f5326a4e746b543
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926473"
 ---
 # <a name="ssms-utility"></a>Ssms ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **Ssms**ユーティリティが [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。 指定すると、 **Ssms** はサーバーへの接続を確立し、クエリ、スクリプト、ファイル、プロジェクト、ソリューションを開きます。  
+  **Ssms** ユーティリティが [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。 指定すると、 **Ssms** はサーバーへの接続を確立し、クエリ、スクリプト、ファイル、プロジェクト、ソリューションを開きます。  
   
  クエリ、プロジェクト、またはソリューションを含んだファイルを指定できます。 接続情報が指定され、ファイルの種類とサーバーの種類が対応している場合、クエリを含んだファイルは自動的にサーバーに接続されます。 たとえば、.sql ファイルならば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の SQL クエリ エディター ウィンドウが開き、.mdx ファイルならば [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の MDX クエリ エディター ウィンドウが開きます。 **SQL Server のソリューションと SQL Server のプロジェクト** は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で開きます。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5c9763da1ea1f9bb3e1e0d92ff02fbfa48a22c46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f83f32c9afb33da154c94d1b8194e37bc04fdc6
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783804"
 ---
 # <a name="collations"></a>照合順序
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +106,7 @@ FROM fn_helpcollations();
 -   データベースの復元または接続を行う場合、データベースの既定の照合順序、およびデータベース内の **char** 型、**varchar** 型、および **text** 型の任意の列またはパラメーターの照合順序は、オペレーティング システムでサポートされている必要があります。  
   
 > [!NOTE]
-> Azure SQL Database マネージ インスタンス サーバーの照合順序は **SQL_Latin1_General_CP1_CI_AS** であり、変更できません。
+> Azure SQL Database Managed Instance サーバーの照合順序は **SQL_Latin1_General_CP1_CI_AS** であり、変更できません。
 
 > [!NOTE]
 > コード ページ変換は **char** および **varchar** データ型に対してはサポートされていますが、**text** データ型に対してはサポートされていません。 コード ページ変換時のデータ損失はレポートされません。  
@@ -161,16 +161,16 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>B. その他の例  
- **COLLATE** を使用するその他の例については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples)」の例「**G. データベースを作成し、照合順序名とオプションを指定する**」と「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column)」の例「**V. 列の照合順序を変更する**」を参照してください。  
+ **COLLATE** を使用するその他の例については、「[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples)」の例「**G. データベースを作成し、照合順序名とオプションを指定する**」と「[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)」の例「**V. 列の照合順序を変更する**」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
- [照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [定数 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
- [テーブル &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
+ [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
+ [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [照合順序の優先順位](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [定数](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)     
+ [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [table データ型](../../t-sql/data-types/table-transact-sql.md)     
   
   

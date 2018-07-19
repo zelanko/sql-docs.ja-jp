@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,45 +25,44 @@ helpviewer_keywords:
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877969369a9b18cd7b13db556078a5773b89c947
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5921a0d15230df4628d4dbb084bcbe964e39b46
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052419"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782153"
 ---
 # <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたファイル識別 (ID) 番号のファイル グループ名を返します。  
+この館数は、指定されたファイル識別 (ID) 番号のファイル グループ名を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
 ## <a name="arguments"></a>引数  
  *filegroup_id*  
- ファイル グループ名を返す基になるファイル グループ ID 番号を指定します。 *filegroup_id* は **smallint** です。  
+
+ファイル グループ名 `FILEGROUP_NAME` を取得するファイル グループの ID 番号です。 *filegroup_id* のデータ型は **smallint** です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- *filegroup_id* に対応する、 **data_space_id** 内の列、 **sys.filegroups** カタログ ビューです。  
+*filegroup_id* は、**sys.filegroups** カタログ ビューの **data_space_id** 列に対応します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`1` データベースでファイル グループ ID が [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のファイル グループ名を返します。  
+この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内のファイル グループ ID `1` に対するファイル グループの名前を取得します。  
   
 ```  
-  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

@@ -17,12 +17,12 @@ caps.latest.revision: 91
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 977041d3925ed11fc6098f1617c95c263391171f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: fa00305db62ead0bd7eded16f22991914e3c80cc
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771498"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080130"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
 
@@ -68,7 +68,10 @@ SQL Server の前提条件としてインストールされる特定のバージ
   
      続行するには、 **[次へ]** をクリックします。  
 
-4.  [ライセンス条項] ページで使用許諾契約書を確認し、同意する場合は **[ライセンス条項に同意する]** チェック ボックスをオンにして、 **[次へ]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)]に送信することもできます。  
+4.  [ライセンス条項] ページで使用許諾契約書を確認し、同意する場合は **[ライセンス条項に同意する]** チェック ボックスをオンにして、 **[次へ]** をクリックします。  
+
+  >[!NOTE]
+  > SQL Server は、インストールの状態に関する情報および製品の機能向上に役立つその他の利用状況データとパフォーマンス データを送信します。 SQL Server のデータ処理とプライバシー管理の詳細については、「[プライバシーに関する声明](https://privacy.microsoft.com/en-us/privacystatement)」および「[SQL Server を構成して Microsoft にフィードバックを送信する](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)」を参照してください。 
   
 5.  [グローバル ルール] ウィンドウ内で、ルール エラーが存在していない場合は、セットアップ手順は自動的に [製品の更新プログラム] ページに進みます。  
   
@@ -80,9 +83,9 @@ SQL Server の前提条件としてインストールされる特定のバージ
   
 9. **[インストール ルール]** で、SQL Server セットアップはセットアップの実行中に発生する可能性がある潜在的な問題を特定するためのチェックを行います。 エラーが発生した場合は、詳細な情報を得るため、**[状態]** 列をクリックします。 それ以外の場合は、**[次へ]** をクリックします。 
 
-10. **[インストールの種類]** で、新しいインストールの実行、または既存のインストールへの機能の追加のいずれかを選択します。 **[次へ]** をクリックします。 
+10. SQL Server をマシンに初めてインストールする場合は、**[インストールの種類]** ページがスキップされて、直接 **[機能の選択]** ページに移動します。 ただし、SQL Server がシステムに既にインストール済みの場合は、**[インストールの種類]** で、新規インストールを実行するか、既存のインストール環境に機能を追加するかを選択します。 **[次へ]** をクリックします。 
   
-11. [機能の選択] ページで、インストールするコンポーネントを選択します。 たとえば、SQL Server データベース エンジンの新しいインスタンスをインストールするには、**[データベース エンジン サービス]** を選択します。
+11. **[機能の選択]** ページで、インストールするコンポーネントを選択します。 たとえば、SQL Server データベース エンジンの新しいインスタンスをインストールするには、**[データベース エンジン サービス]** を選択します。
 
     機能名を選択すると、 **[機能の説明]** ペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、[SQL Server 2016 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)に関するセクションと「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。
   

@@ -1,10 +1,9 @@
 ---
 title: ALTER DATABASE 互換性レベル (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,24 +24,23 @@ helpviewer_keywords:
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 caps.latest.revision: 89
-author: edmacauley
-ms.author: edmaca
-manager: craigg
-ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg'
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689140"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791513"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 データベースの特定の動作に、指定したバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を設定します。 その他の ALTER DATABASE オプションについては、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -56,12 +54,13 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
  変更するデータベースの名前を指定します。  
   
  COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
- データベースの互換性の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンを指定します。 次の互換性レベル値を構成することができます。  
+ データベースの互換性の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンを指定します。 次の互換性レベルの値を構成することができます (上で示したすべての互換性レベルをすべてのバージョンがサポートしているわけではありません)。  
   
 |Product|データベース エンジンのバージョン|互換性レベルの指定|サポートされている互換性レベル値|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 論理サーバー|12|130|140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス|12|130|140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
@@ -136,8 +135,14 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>旧バージョンとの互換性を維持するための互換性レベルの使用  
 *データベース互換性レベル*設定は、サーバー全体ではなく、指定したデータベースの動作にのみ影響します。 データベース互換性レベルでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との部分的な下位互換性だけが保たれます。   
+
+> [!TIP]
+> "*データベース互換性レベル*" はデータベース レベルの設定なので、新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で実行しているアプリケーションが古いデータベース互換性レベルを使用している場合でも、アプリケーションを変更する必要なく、サーバー レベルの拡張機能を利用できます。
+>
+> これには、新しい[システム動的管理ビュー](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)や[拡張イベント](../../relational-databases/extended-events/extended-events.md)など、豊富な監視とトラブルシューティングに関する改善が含まれます。 また、[自動ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa) などのスケーラビリティの向上も含まれます。
+
 互換モード 130 以降、機能に影響を与える新しいクエリ プランは、新しい互換性レベルにのみ意図的に追加されています。 これは、クエリ プランの変更によってパフォーマンスの低下から発生するためのアップグレード中に、リスクを最小限に抑えるために追加されました。   
-アプリケーションの観点からは、新しい機能のいくつかを継承し、クエリ オプティマイザー スペースで行われたパフォーマンス改善を継承するために、ある時点で最新の互換性レベルにアップグレードすることは目的であり続けますが、それをコントロールされた方法で行います。 関連する互換性レベル設定によって制御される動作では、安全な移行補助として下位の互換性レベルを使用し、バージョンの違いに対処してください。 データベース互換性レベルのアップグレードで推奨されるワークフローなど、詳細については、この記事の後半に出てくる「[データベース互換性レベルのアップグレードのベスト プラクティス](#best-practices-for-upgrading-database-compatibility-evel)」を参照してください。  
+アプリケーションの観点からは、新しい機能のいくつかを継承し、クエリ オプティマイザー スペースで行われたパフォーマンス改善を継承するために、ある時点で最新の互換性レベルにアップグレードすることは目的であり続けますが、それをコントロールされた方法で行います。 関連する互換性レベル設定によって制御される動作では、安全な移行補助として下位の互換性レベルを使用し、バージョンの違いに対処してください。 データベース互換性レベルのアップグレードで推奨されるワークフローなど、詳細については、この記事の後半に出てくる「[データベース互換性レベルのアップグレードのベスト プラクティス](#best-practices-for-upgrading-database-compatibility-level)」を参照してください。  
   
 > [!IMPORTANT]
 > 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで導入された機能が廃止されている場合、その機能は互換性レベルによって保護されません。 これは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] から削除された機能に当てはまります。
@@ -350,7 +355,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
-SET compatibility_level = 90;  
+SET compatibility_level = 110;  
 GO  
 USE AdventureWorks2012;  
 GO  
@@ -376,7 +381,7 @@ SELECT @v;
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [予約済みキーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  

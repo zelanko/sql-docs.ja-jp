@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c0f697cb84405cd84c2aa595a1d39f28f048474
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708030"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324486"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34708030"
   
 ##  <a name="glossary-of-backup-terms"></a>バックアップの用語集
  **バックアップ (back up)** (動詞)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースまたはそのトランザクション ログからバックアップ デバイス (ディスクなど) にデータまたはログ レコードをコピーすることによって、データ バックアップまたはログ バックアップを作成します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ レコードまたはそのトランザクション ログのログ レコードをコピーすることによって、**バックアップ (名詞)** を作成するプロセス。  
   
  **バックアップ (backup)** (名詞)  
  障害の発生後、データの復元と復旧に使用できるデータのコピー。 データベースのバックアップを使用して、コピー (データベース) を新しい場所に復元することもできます。  

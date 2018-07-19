@@ -3,11 +3,6 @@ title: SQL Server 監視のパートナー | Microsoft Docs
 description: サーバー監視のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,14 +10,15 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: f9c0dbc7ddcd40f8dbd859711c32dc4f9ff79f71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: f5251195c95036abb741672c593dbd82e8817fca
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033639"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926213"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視パートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ SQL Server サービスを監視するためのツールを、業界をリード
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft の監視パートナー
-| Partner | Description | リンク |
+| Partner | [説明] | リンク |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL の診断マネージャーは、SQL Server 環境内の正常性、パフォーマンス、可用性の問題を中央コンソールから管理者に事前に通知する、強力なパフォーマンス監視と診断ソリューションです。<br><br>[システム要件][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Web サイト][idera_website]<br>[Twitter][idera_twitter]<br>[ビデオ][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - SQL Server 環境の他に類を見ない監視、診断、最適化により、常にピーク パフォーマンスを確保します。 Spotlight は、SQL Server データベースの最適な適合性に必要な詳細情報へのアクセスを提供します。 正常性とパフォーマンス、自動化されたアラートとアクション、モバイル デバイス サポートの概要が直感的にわかります。|[Marketplace][quest_marketplace]<br>[Web サイト][quest_website]<br>[ビデオ][quest_video] | |
@@ -72,9 +68,7 @@ SQL Server サービスを監視するためのツールを、業界をリード
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/--> [quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
 
 <!--Press links-->
 <!--[idera_press]:-->

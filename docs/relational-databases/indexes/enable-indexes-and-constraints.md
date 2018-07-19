@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a128f53b779b6c3ea99aa694bfb96e61c334b722
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26bc2c58ae5355447602229bfdec9f711be4d0fd
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941087"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854274"
 ---
 # <a name="enable-indexes-and-constraints"></a>インデックスと制約の有効化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "32941087"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- テーブルまたはビューに対する ALTER 権限が必要です。 DBCC DBREINDEX を使用している場合、ユーザーはテーブルを所有しているか、 **sysadmin** 固定サーバー ロールのメンバーであるか、 **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
+ テーブルまたはビューに対する ALTER 権限が必要です。 DBCC DBREINDEX を使用している場合、ユーザーはテーブルを所有しているか、**sysadmin** 固定サーバー ロールのメンバーであるか、**db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   

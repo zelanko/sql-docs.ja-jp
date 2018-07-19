@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -60,16 +59,16 @@ helpviewer_keywords:
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744131"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909582"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -512,7 +511,7 @@ WITH CHECK | WITH NOCHECK
   
  次の条件に該当する列は削除できません。  
   
--   インデックスで使用されている列  
+-   キー列または INCLUDE としてインデックスで使用されている列
   
 -   CHECK、FOREIGN KEY、UNIQUE、または PRIMARY KEY 制約で使用されている列  
   
@@ -540,7 +539,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism* には次のいずれかの値を指定できます。  
   
- @shouldalert  
+ 1  
  並列プラン生成を抑制します。  
   
  \>1  
@@ -645,7 +644,7 @@ WITH CHECK | WITH NOCHECK
   
  *partition_scheme_name* を指定した場合、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) のルールが適用されます。 テーブルは、行データ用にパーティション分割されている必要があります。また、テーブルのパーティション構成では、FILESTREAM パーティション構成と同じパーティション関数とパーティション列を使用する必要があります。  
   
- *filestream_filegroup_name* には、FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイルが 1 つ定義されている必要があります。それ以外の場合は、エラーが発生します。  
+ *filestream_filegroup_name* には、FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイルが 1 つ定義されている必要があります。それ以外の場合は、エラーが発生します。  
   
  **"** default **"** には、DEFAULT プロパティ セットを含む FILESTREAM ファイル グループを指定します。 FILESTREAM ファイル グループがない場合は、エラーが発生します。  
   
@@ -1743,7 +1742,7 @@ WITH
   
 |パーティション|データがある|境界の範囲|  
 |---------------|---------------|--------------------|  
-|@shouldalert|はい|OrderDate < '2004-01-01'|  
+|1|はい|OrderDate < '2004-01-01'|  
 |2|はい|'2004-01-01' <= OrderDate < '2005-01-01'|  
 |3|はい|'2005-01-01' <= OrderDate< '2006-01-01'|  
 |4|はい|'2006-01-01'<= OrderDate < '2007-01-01'|  
@@ -1827,7 +1826,7 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
 ## <a name="see-also"></a>参照  
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   

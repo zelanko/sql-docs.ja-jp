@@ -1,10 +1,9 @@
 ---
 title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/12/2017
+ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,19 +23,19 @@ helpviewer_keywords:
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b478026b549078601540322e8f249cc718146425
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9890f1f127b20cb857822df66b30b165f0862ab
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065069"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781843"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   証明書を暗号化するときに使用する秘密キーを変更します。秘密キーが存在しない場合は追加します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] に対して、証明書を使用できるようにするかどうかを変更します。  
   
@@ -59,7 +58,7 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -96,7 +95,7 @@ ALTER CERTIFICATE certificate_name
   
  データベースに既に存在する証明書の秘密キーをファイルからインポートするとき、その秘密キーはデータベース マスター キーにより自動的に保護されます。 秘密キーをパスワードで保護するには、ENCRYPTION BY PASSWORD 句を使用します。  
   
- REMOVE PRIVATE KEY オプションを指定すると、データベースから証明書の秘密キーが削除されます。 このオプションは、署名の確認に証明書が使用される場合、または秘密キーを必要としない [!INCLUDE[ssSB](../../includes/sssb-md.md)] シナリオの場合に指定できます。 対称キーを保護する証明書の秘密キーを削除しないでください。  
+ REMOVE PRIVATE KEY オプションを指定すると、データベースから証明書の秘密キーが削除されます。 署名の確認に証明書が使用される場合、または秘密キーを必要としない [!INCLUDE[ssSB](../../includes/sssb-md.md)] シナリオの場合は、秘密キーを削除できます。 対称キーを保護する証明書の秘密キーを削除しないでください。  
   
  秘密キーがデータベース マスター キーを使って暗号化される場合は、暗号化解除のパスワードを指定する必要はありません。  
   

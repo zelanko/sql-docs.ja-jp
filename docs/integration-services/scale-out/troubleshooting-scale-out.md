@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: ee095bce32da1d663aee1ed1c38d2cda52187a31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 91063b4895ee46c5bd1746348b37d6564a0d4b10
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409794"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964284"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out のトラブルシューティング
 
@@ -149,6 +149,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     値の型: **REG_DWORD** 
 
     値データ: **2**
+
+    > [!NOTE]
+    > 自己署名以外の証明書がルート証明書ストアにある場合は、クライアント証明書の認証が失敗します。 詳細については、「[Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ)」(インターネット インフォメーション サービス (IIS) 8 で HTTP 403.7 エラーまたは 403.16 エラーが発生してクライアント証明書の要求が拒否される可能性がある) を参照してください。
 
 ## <a name="http-request-error"></a>HTTP 要求エラー
 

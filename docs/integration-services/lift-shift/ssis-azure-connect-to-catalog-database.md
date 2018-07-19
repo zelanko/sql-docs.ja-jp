@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405674"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798267"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure の SSIS カタログ (SSISDB) に接続する
 
@@ -26,7 +27,7 @@ Azure SQL Database サーバーでホストされている SSIS カタログ (SS
 - ログイン情報 
 
 > [!IMPORTANT]
-> この時点では、Azure Data Factory バージョン 2 での Azure SSIS Integration Runtime の作成とは切り離して、Azure SQL Database に SSISDB カタログ データベースを作成することはできません。 Azure SSIS IR は、Azure 上で SSIS パッケージを実行するランタイム環境です。 プロセスのチュートリアルについては、「[Azure で SSIS パッケージをデプロイし、実行する](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。 
+> この時点では、Azure Data Factory での Azure SSIS Integration Runtime の作成とは切り離して、Azure SQL Database に SSISDB カタログ データベースを作成することはできません。 Azure SSIS IR は、Azure 上で SSIS パッケージを実行するランタイム環境です。 プロセスのチュートリアルについては、「[Azure で SSIS パッケージをデプロイし、実行する](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。 
 
 ## <a name="prerequisites"></a>Prerequisites
 始める前に、バージョン 17.2 以降の SQL Server Management Studio (SSMS) があることを確認します。 SSISDB カタログ データベースが SQL Database Managed Instance (プレビュー) でホストされている場合は、SSMS のバージョンが 17.6 以降であることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。

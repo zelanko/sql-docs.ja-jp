@@ -1,7 +1,7 @@
 ---
 title: Integration Services (SSIS) 用の Azure Feature Pack | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f30a22035e141a7a10bc6069a8d1b6eb26818029
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bc49dc5bd2375d52d3f8a849578bd5ac9ef74430
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405054"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934864"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
@@ -39,33 +39,37 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
 ## <a name="components-in-the-feature-pack"></a>Feature Pack のコンポーネント
 -   接続マネージャー
 
+    -   [Azure Data Lake Analytics 接続マネージャー](connection-manager/azure-data-lake-analytics-connection-manager.md)
+
+    -   [Azure Data Lake Store 接続マネージャー](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Azure HDInsight 接続マネージャー](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
+
+    -   [Azure Resource Manager の接続マネージャー](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
     -   [Azure Storage 接続マネージャー](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Azure サブスクリプション接続マネージャー](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
-    -   [Azure Data Lake Store 接続マネージャー](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-    
-    -   [Azure Resource Manager の接続マネージャー](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
-    
-    -   [Azure HDInsight 接続マネージャー](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
-
 -   処理手順
-
-    -   [Azure BLOB のアップロード タスク](../integration-services/control-flow/azure-blob-upload-task.md)
 
     -   [Azure BLOB のダウンロード タスク](../integration-services/control-flow/azure-blob-download-task.md)
 
-    -   [Azure HDInsight Hive タスク](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Azure BLOB のアップロード タスク](../integration-services/control-flow/azure-blob-upload-task.md)
 
-    -   [Azure HDInsight Pig タスク](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+    -   [Azure Data Lake Analytics タスク](control-flow/azure-data-lake-analytics-task.md)
+
+    -   [Azure Data Lake Store ファイル システム タスク](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
     -   [Azure HDInsight クラスターの作成タスク](../integration-services/control-flow/azure-hdinsight-create-cluster-task.md)
 
     -   [Azure HDInsight クラスターの削除タスク](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Azure SQL DW のアップロード タスク](../integration-services/control-flow/azure-sql-dw-upload-task.md)
+    -   [Azure HDInsight Hive タスク](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
-    -   [Azure Data Lake Store ファイル システム タスク](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Azure HDInsight Pig タスク](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+
+    -   [Azure SQL DW のアップロード タスク](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
 -   データ フロー コンポーネント
 
@@ -77,7 +81,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure BLOB および ADLS ファイル列挙子。 「[Foreach ループ コンテナー](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)」を参照してください。
+-   Azure Blob と Azure Data Lake Store のファイル列挙子。 「[Foreach ループ コンテナー](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)」を参照してください。
 
 ## <a name="scenario-processing-big-data"></a>シナリオ: ビッグ データの処理
  Azure コネクタを使用して、次のビッグ データの処理を完了します。

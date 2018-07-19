@@ -9,15 +9,13 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: sql-server
 ms.date: 04/28/2018
-ms.openlocfilehash: 9ccf32a232b501bb3184786af0c48dc7214b1936
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: f1e3d0fd2b63ac3eb9ab0d66b14df15dad0c15ee
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32686652"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926823"
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>新規および最近の更新: SQL Server のドキュメント
 

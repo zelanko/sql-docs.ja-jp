@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -29,15 +28,16 @@ helpviewer_keywords:
 - cryptography [SQL Server], certificates
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13d7e7e0c6ddb7760bb28dfd703904957c4fd820
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788293"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  バックアップ ファイルに秘密キーを書き込む前に、キーを暗号化するため使用するパスワードを指定します。 パスワードに対しては、複雑性がチェックされます。  
   
  *decryption_password*  
- 秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。  
+ 秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。 証明書がマスター キーによって暗号化されている場合、これは必要はありません。 
   
 ## <a name="remarks"></a>Remarks  
  データベースで秘密キーがパスワードによって暗号化されている場合は、暗号化解除パスワードを指定する必要があります。  

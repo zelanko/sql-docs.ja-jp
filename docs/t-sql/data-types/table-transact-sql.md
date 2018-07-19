@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1751c6c9b6a05cd4337bd376108ef8d7e3d84ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054225"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432241"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,8 +105,9 @@ SELECT select_list INTO table_variable;
   
 **table** 変数を変更するクエリでは、並列クエリ実行プランを生成しません。 非常に大きい場合に、パフォーマンスが低下する可能性が **テーブル** 変数、または **テーブル** 、複雑なクエリでの変数を変更します。 このような場合は、代わりに一時テーブルを使用することを検討してください。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。 読み取るクエリは **テーブル** 変数を変更せずの並列処理を実行できます。
   
-インデックスを明示的に作成することはできません **テーブル** 変数、および統計情報はありませんが上に保持されます **テーブル** 変数です。 場合によっては、インデックスと統計をサポートする一時テーブルを使用した方がパフォーマンスが向上する場合があります。 詳細については、一時テーブル、を参照してください。 [テーブルの作成 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/statements/create-table-transact-sql.md).
-  
+インデックスを明示的に作成することはできません **テーブル** 変数、および統計情報はありませんが上に保持されます **テーブル** 変数です。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、特定のインデックスの種類をテーブル定義にインライン作成できる新しい構文が導入されました。  この新しい構文を使うと、テーブル定義の一部として**テーブル**変数にインデックスを作成できます。 場合によっては、完全なインデックスのサポートと統計を提供する一時テーブルを使用した方が、パフォーマンスが向上する場合があります。 一時テーブルとインライン インデックス作成について詳しくは、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」をご覧ください。
+
+
 CHECK 制約、既定値、および計算列、 **テーブル** 型の宣言は、ユーザー定義関数を呼び出すことはできません。
   
 間における代入操作 **テーブル** 変数がサポートされていません。

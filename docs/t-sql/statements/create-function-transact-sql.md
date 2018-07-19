@@ -1,10 +1,9 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -37,14 +36,15 @@ helpviewer_keywords:
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2b6f3905029c6929f4c747f3d34fa54bfde0f07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790403"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,10 @@ ms.lasthandoff: 05/03/2018
 -   セキュリティ ポリシーのフィルター述語としてのインライン関数を使用します。  
   
 > [!NOTE]  
->  このトピックでは、SQL Server への .NET Framework CLR の統合について説明します。 CLR 統合は、Azure SQL Database には適用されません。  
+>  このトピックでは、SQL Server への .NET Framework CLR の統合について説明します。 CLR 統合は、Azure SQL Database には適用されません。
+
+> [!NOTE]  
+>  Azure SQL Data Warehouse については、「[CREATE FUNCTION (SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016)」をご覧ください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -572,7 +575,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>計算列の相互運用性  
  関数には次のプロパティがあります。 これらのプロパティの値によって、保存される計算列またはインデックス付き計算列で関数を使用できるかどうかが決まります。  
   
-|プロパティ|Description|注|  
+|プロパティ|[説明]|注|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|関数が決定的か非決定的かを示します。|決定的関数では、ローカル データ アクセスが可能です。 たとえば、特定の一連の入力値を使用して同じ状態のデータベースで呼び出されるたびに、必ず同じ結果を返す関数は、決定的と呼ばれます。|  
 |**IsPrecise**|関数が正確か不正確かを示します。|不正確な関数には、浮動小数点演算などの演算を含みます。|  
@@ -622,7 +625,7 @@ RETURNS return_data_type
   
 -   SEND  
   
- ユーザー定義関数は入れ子にすることができます。つまり、1 つのユーザー定義関数で、別のユーザー定義関数を呼び出すことができます。 呼び出された関数が実行を開始すると入れ子レベルが 1 つ上がり、呼び出された関数が実行を終了するとレベルが 1 つ下がります。 ユーザー定義関数は、32 レベルまで入れ子にすることができます。 入れ子レベルが最大値を超えると、関数チェーン全体の呼び出しが失敗します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数からマネージ コードへの参照は、32 レベルの入れ子制限のうちの 1 レベルとカウントします。 マネージ コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
+ ユーザー定義関数は入れ子にすることができます。つまり、1 つのユーザー定義関数で、別のユーザー定義関数を呼び出すことができます。 呼び出された関数が実行を開始すると入れ子レベルが 1 つ上がり、呼び出された関数が実行を終了するとレベルが 1 つ下がります。 ユーザー定義関数は、32 レベルまで入れ子にすることができます。 入れ子レベルが最大値を超えると、関数チェーン全体の呼び出しが失敗します。 マネージド コードへの参照、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数は、32 レベルの入れ子制限の 1 つのレベルとしてカウントします。 マネージド コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
   
 ### <a name="using-sort-order-in-clr-table-valued-functions"></a>並べ替え順序の使用に関するガイダンス  
  CLR テーブル値関数で ORDER 句を使用する場合は、以下のガイドラインに従ってください。  
@@ -648,7 +651,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>メタデータ  
  次の表に、ユーザー定義関数に関するメタデータを返すために使用できるシステム カタログ ビューを示します。  
   
-|システム ビュー|Description|  
+|システム ビュー|[説明]|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|以下の「例」の E を参照してください。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR ユーザー定義関数の情報を表示します。|  

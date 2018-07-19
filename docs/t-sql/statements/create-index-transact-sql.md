@@ -1,10 +1,9 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/21/2017
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -55,16 +54,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0253d659a428b46aceee2b261f4b07e96983325b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582304"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782713"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,6 +142,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -309,7 +310,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  クラスター化インデックスの作成時に、テーブルの FILESTREAM データの配置を指定します。 FILESTREAM_ON 句を使用すると、異なる FILESTREAM ファイル グループやパーティション構成に FILESTREAM データを移動できます。  
   
- *filestream_filegroup_name* FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイルが 1 つ定義されている必要があります。それ以外の場合は、エラーが発生します。  
+ *filestream_filegroup_name* FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイルが 1 つ定義されている必要があります。それ以外の場合は、エラーが発生します。  
   
  テーブルがパーティション分割されている場合、FILESTREAM_ON 句を使用して、テーブルのパーティション構成と同じパーティション関数とパーティション列を使用するように、FILESTREAM ファイル グループのパーティション構成を指定する必要があります。 それ以外の場合は、エラーが発生します。  
   
@@ -461,7 +462,26 @@ ONLINE = { ON | **OFF** }
  テーブル ロックは、インデックス操作の間適用されます。 クラスター化インデックスを作成、再構築、または削除するオフライン インデックス操作や、非クラスター化インデックスを再構築または削除するオフライン インデックス操作では、テーブルのスキーマ修正 (Sch-M) ロックが取得されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。 非クラスター化インデックスを作成するオフライン インデックス操作では、テーブルの共有 (S) ロックが取得されます。 この場合は、基になるテーブルに対して更新は許可されませんが、SELECT ステートメントなどの読み取り操作は許可されます。  
   
  詳細については、「[オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)」を参照してください。  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (パブリック プレビューの機能)
+
+ オンラインでのインデックス操作が再開可能かどうかを指定します。
+
+ ON の場合、インデックス操作は再開可能です。
+
+ OFF の場合、インデックス操作は再開可能ではありません。
+
+MAX_DURATION **=** *time* **[MINUTES]** は **RESUMABLE = ON** (**ONLINE = ON** が必須) と共に使用。
+ 
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (パブリック プレビューの機能) 
+
+再開可能なオンラインでのインデックス操作が、一時停止までに実行される時間 (分単位で指定する整数値) を示します。 
+
+> [!WARNING]
+>  オンラインで実行できるインデックス操作の詳細については、「[オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。
+
  インデックスは、グローバル一時テーブル上のインデックスを含めてオンラインで作成できます。ただし次のインデックスは例外です。  
   
 -   XML インデックス  
@@ -502,7 +522,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  *max_degree_of_parallelism* は次のように指定できます。  
   
- @shouldalert  
+ 1  
  並列プラン生成を抑制します。  
   
  \>1  
@@ -648,7 +668,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  派生した計算列 **image**、**ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、および **xml** データ型は、インデックスを設定または含まれる非キー列としては、計算列のデータ型をインデックス キー列または非キー列として使用できる限りです。 たとえば、**xml** 計算列にはプライマリ XML インデックスを作成できません。 インデックス サイズが 900 バイトを超える場合、警告メッセージが表示されます。  
   
- 計算列にインデックスを作成すると、以前は機能していた挿入または更新の操作が失敗することがあります。 このような失敗は、計算列の結果が算術エラーになる場合に発生する可能性があります。 たとえば、次のテーブルでは、計算列 `c` は計算エラーになりますが、`INSERT` ステートメントは正常に実行されます。  
+ 計算列にインデックスを作成すると、以前は機能していた挿入または更新の操作が失敗することがあります。 このような失敗は、計算列の結果が算術エラーになる場合に発生する可能性があります。 たとえば、次のテーブルでは、計算列 `c` は計算エラーになりますが、INSERT ステートメントは正常に実行されます。  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -696,7 +716,50 @@ INSERT INTO t1 VALUES (1, 0);
 -   オンライン操作は、パーティション インデックスや、保存される計算列を含むインデックス、または付加列で実行できる。  
   
  詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
-  
+ 
+### <a name="resumable-indexes"></a>再開可能なインデックス操作
+
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (パブリック プレビューの機能)。
+
+次のガイドラインは再開可能なインデックス操作に適用されます。
+
+- オンライン インデックスは、RESUMABLE = ON オプションを使って再開可能な操作として指定されます。 
+- RESUMABLE オプションは特定のインデックス用のメタデータ内に保持されるのではなく、現在の DDL ステートメントの実行中にのみ適用されます。 したがって、再開機能を有効にするには、RESUMABLE = ON 句を明示的に指定する必要があります。
+- MAX_DURATION オプションは、RESUMABLE = ON オプションに対してのみサポートされます。 
+-  MAX_DURATION for RESUMABLE オプションでは、構築するインデックスの時間間隔を指定します。 この時間が経過すると、インデックスの構築が一時停止するか、またはその実行が完了します。 ユーザーは、一時停止されたインデックスの構築を再開可能にするタイミングを決定します。 MAX_DURATION の分単位の**時間**は、0 分より長く、かつ 1 週間 (7 * 24 * 60 = 10080 分) 以内とする必要があります。 インデックス操作の一時停止時間を長くすると、特定のテーブルでの DML パフォーマンスおよびデータベースのディスク容量に影響を及ぼす可能性があります。元々存在するインデックスも新たに作成されたインデックスもディスク容量を必要とし、DML 操作中に更新される必要があるからです。 MAX_DURATION オプションを省略した場合、インデックス操作は、それが完了するかまたは障害が発生するまで続行されます。 
+- インデックス操作を直ちに一時停止するには、進行中のコマンドを停止するか (Ctrl + C キー)、[ALTER INDEX](alter-index-transact-sql.md) PAUSE コマンドを実行するか、または KILL `<session_id>` コマンドを実行します。 コマンドが一時停止されたら、[ALTER INDEX](alter-index-transact-sql.md) コマンドを使って再開することができます。 
+- 再開可能なインデックスに対する元の CREATE INDEX ステートメントを再実行すると、一時停止されていたインデックス作成操作が自動的に再開されます。
+- SORT_IN_TEMPDB=ON オプションは、再開可能なインデックスに対してはサポートされていません。 
+- RESUMABLE=ON を指定した DDL コマンドを、示的なトランザクション内で実行することはできません (BEGIN TRAN ... COMMIT ブロックの一部にすることはできません)。
+- インデックスの構築/再構築を再開/中止するには、[ALTER INDEX](alter-index-transact-sql.md) T-SQL 構文を使用します
+
+> [!NOTE]
+> DDL コマンドは、完了するか、一時停止するか、または失敗するまで実行されます。 コマンドが一時停止した場合は、操作が一時停止され、インデックスの作成が完了しなかったことを示すエラーが発行されます。 現在のインデックスの状態の詳細については、[sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md) を参照してください。 前と同様に、障害が発生した場合はエラーも発行されます。 
+
+インデックス作成が再開可能な操作として実行されることを示し、現在の実行状態を確認する方法については、「[sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)」をご覧ください。 パブリック プレビューでは、このビューの次の列は 0 に設定されます。
+- total_execution_time
+- percent_complete、page_count
+
+**リソース** 再開可能なオンライン インデックス作成操作には、次のリソースが必要です
+- インデックスが一時停止されている期間など、構築されているインデックスを保持するために追加の領域が必要である。
+- 並べ替えフェーズ中の追加ログ スループット。 再開可能なインデックスの全体的なログ領域使用量は、通常のオンライン インデックス作成と比較して少なく、この操作中にログを切り捨てることができます。
+- いかなる DDL 変更も阻止する DDL 状態
+  - 一時停止と操作実行の両方の操作期間中、ゴースト クリーンアップはビルド内のインデックスでブロックされます。
+
+**現在の機能上の制限**
+
+> [!IMPORTANT]
+> **再開可能なオンライン インデックス作成**は、現在、非クラスター化インデックスでのみサポートされます。
+
+再開可能なインデックス作成操作に対して次の機能は無効になります
+- 再開可能なインデックス作成は、パブリック プレビューではクラスター化インデックスについてはサポートされません。
+- 再開可能なオンライン インデックス作成操作が一時停止された後、MAXDOP の初期値を変更することはできません。
+- DROP EXISTING 句はサポートされていません。
+- 次のものを含むインデックスの作成 
+ - キー列としての計算列または TIMESTAMP 列
+ - 再開可能なインデックス作成に含まれる列としての LOB 列
+- フィルター選択されたインデックス
+ 
 ## <a name="row-and-page-locks-options"></a>行およびページ ロック オプション  
  ALLOW_ROW_LOCKS = ON かつ ALLOW_PAGE_LOCK = ON の場合は、インデックスにアクセスするときに、行、ページ、およびテーブル レベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。  
   
@@ -983,11 +1046,53 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
+### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. 再開可能なインデックス操作を作成、再開、一時停止、中止する
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx1 on test_table PAUSE   
+ALTER INDEX test_idx2 on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx1 on test_table RESUME   
+ALTER INDEX test_idx2 on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx1 on test_table ABORT 
+ALTER INDEX test_idx2 on test_table ABORT 
+```
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="m-basic-syntax"></a>M. 基本構文  
-  
+### <a name="n-basic-syntax"></a>N. 基本構文  
+  ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>再開可能なインデックス操作を作成、再開、一時停止、中止する
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
 ```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
@@ -997,7 +1102,7 @@ CREATE INDEX IX_VendorID
     ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>N. 現在のデータベース内のテーブルに非クラスター化インデックスを作成する  
+### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O.  現在のデータベース内のテーブルに非クラスター化インデックスを作成する  
  次の例では、`ProductVendor` テーブルの `VendorID` 列に非クラスター化インデックスを作成します。  
   
 ```sql  
@@ -1005,7 +1110,7 @@ CREATE INDEX IX_ProductVendor_VendorID
     ON ProductVendor (VendorID);   
 ```  
   
-### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>O.  他のデータベースのテーブルにクラスター化インデックスを作成する  
+### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. 他のデータベースのテーブルにクラスター化インデックスを作成する  
  次の例では、`Purchasing` データベースにある `VendorID` テーブルの `ProductVendor` 列に非クラスター化インデックスを作成します。  
   
 ```sql  
@@ -1021,7 +1126,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

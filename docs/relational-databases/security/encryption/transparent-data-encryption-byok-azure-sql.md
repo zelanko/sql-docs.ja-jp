@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.custom: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/19/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698333"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107240"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ TDE と BYOK には、次のような利点があります。
 
 ### <a name="general-guidelines"></a>一般的なガイドライン
 - Azure Key Vault と Azure SQL Database が、同じテナント内にあることを確認します。  クロステナントのキー コンテナーとサーバー相互作用は、**サポートされていません**。
-- 必要なリソースに使用されるサブスクリプションを決定します。サブスクリプション間のサーバーの移動には、後で BYOK を使用して TDE の新しいセットアップを行う必要があります。
+- 必要なリソースに使用されるサブスクリプションを決定します。サブスクリプション間のサーバーの移動には、後で BYOK を使用して TDE の新しいセットアップを行う必要があります。 [リソースの移動](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)の詳細をご覧ください
 - BYOK で TDE を構成するときは、ラップ/ラップ解除操作の繰り返しによってキー コンテナーにかかる負荷を考慮することが重要です。 たとえば、論理サーバーに関連付けられているすべてのデータベースは同じ TDE プロテクターを使うため、そのサーバーでフェールオーバーが発生すると、サーバー内のデータベースと同じ数のキー操作がコンテナーに対してトリガーされます。 これまでの実績から、また[キー コンテナー サービスの制限](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)に記されている内容から、コンテナー内の TDE プロテクターへのアクセスに対して常に高い可用性を保証するには、1 つのサブスクリプションの 1 つの Azure Key Vault に関連付けるデータベースの数を、Standard / General Purpose のデータベースで最大 500 個、Premium / Business Critical データベースで最大 200 個にすることをお勧めします。 
 - 推奨: TDE プロテクターのコピーはオンプレミスで保持してください。  これには、ローカルに TDE プロテクターを作成するために HSM デバイスが必要で、TDE プロテクターのローカル コピーを格納するためにキー エスクロー システムが必要です。
 
@@ -68,6 +68,7 @@ TDE と BYOK には、次のような利点があります。
 - キー (または、キー コンテナー) を誤って削除した場合に、データの損失を防ぐには、[論理的な削除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)を有効にしたキー コンテナーを作成します。  キー コンテナーで [PowerShell で “soft-delete” プロパティを有効にする](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (このオプションは AKV ポータルからはまだ使用できませんが、SQL で必要です) を使用する必要があります。  
   - 論理削除のリソースは、一定の期間保持されます。復旧や消去が行われない限り、その期間は 90 日間です。
   - **復旧**と**消去**アクションには、キー コンテナーのアクセス ポリシーに関連付けられた独自のアクセス許可があります。 
+- この重要なリソースを削除できるユーザーを管理し、偶発的な削除または承認されていない削除を防止するには、キー コンテナーでリソース ロックを設定します。  [リソース ロックの詳細をご覧ください](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
 
 - Azure Active Directory (Azure AD) の ID を使用して、キー コンテナーへのアクセス権を論理サーバーに付与します。  ポータルの UI を使用すると、Azure AD の ID が自動的に作成され、キー コンテナーのアクセス許可がそのサーバーに付与されます。  BYOK で TDE を構成するために PowerShell を使用すると、Azure AD の ID が作成され、完了が確認されます。 PowerShell を使用するときの詳しいステップバイステップのガイダンスについては、「[BYOK での TDE の構成](transparent-data-encryption-byok-azure-sql-configure.md)」を参照してください。
 

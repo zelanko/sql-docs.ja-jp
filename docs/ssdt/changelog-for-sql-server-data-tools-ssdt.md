@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,42 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0f08b48b48570685a8b57bfbf76fd4a473604fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286268"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+
+## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT for Visual Studio 2017 (15.7.1)
+ビルド番号: 14.0.16167.0  
+リリース日: 2018 年 7 月 2 日  
+  
+### <a name="whats-new"></a>新機能
+
+**SSIS:**
+
+- AS タスクで使用するための新しい Azure Government AAD 機関 (login.microsoftonline.us) のサポートが追加されます。
+- 対象サーバーのバージョンが SQLServer2016 のときに AS 処理タスク UI に "メソッドが見つかりません" と表示される問題が修正されます。
+- 対象サーバーのバージョンが SQLServer2012 のときに一部のパイプライン コンポーネントを実行できない問題が修正されます。
+
+**インストーラー:**
+
+- VS インスタンス リストをフィルター処理して、SSDT をインストールできないインスタンスを除外します。
+
+### <a name="known-issues"></a>既知の問題:
+
+- ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+- Windows 10 に SSDT をインストールするときに、[新しい SQL Server Data Tools for Visual Studio 2017 インスタンスをインストールします] を選ぶと、"要求されたメタファイル操作はサポートされていません" で失敗します。 コンピューターを再起動し、SSDT インストーラーをもう一度起動して、インストールを続行してください。
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT for Visual Studio 2017 (15.7.0)
 ビルド番号: 14.0.16165.0  

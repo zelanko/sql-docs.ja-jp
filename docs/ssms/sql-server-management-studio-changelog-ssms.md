@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,23 +15,97 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619539"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957725"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 [SSMS の以前のバージョン](#previous-ssms-releases)は以下でダウンロードできます。
 
 
-## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-リリース番号: 17.7<br>
+
+## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+*17.8 では SQL データベースのプロビジョニングに関連するバグが検出されたため、17.8 は SSMS 17.8.1 に置き換えられました。*
+
+
+ビルド番号: 14.0.17277.0<br>
+リリース日: 2018 年 6 月 26 日
+
+
+### <a name="whats-new"></a>新機能
+
+**SSMS 全般**
+
+データベースのプロパティ:
+
+- このバージョンでは、ファイル グループ用の **AUTOGROW_ALL_FILES** 構成オプションが公開されます。 この新しい構成オプションは、[データベースのプロパティ] > [ファイル グループ] ウィンドウにおいて、使用可能なファイル グループ (ファイルストリーム ファイル グループとメモリ最適化ファイル グループを除く) ごとにチェック ボックスの新しい列 ([すべてのファイルを自動拡張]) の形式で追加されます。 ユーザーは、対応する [すべてのファイルを自動拡張] チェック ボックスをオン/オフにすることで、特定のファイル グループに対して AUTOGROW_ALL_FILES を有効/無効にすることができます。 それに応じて、CREATE 用のデータベースのスクリプト化またはデータベース (SQL 2016 以上) 用のスクリプトの生成の際に、**AUTOGROW_ALL_FILES** オプションが適切にスクリプト化されます。
+    
+SQL エディター:
+
+- ユーザーにマスターへのアクセス権がない場合の、Azure SQL Database における Intellisense のエクスペリエンスが向上しました。
+
+スクリプトの作成:
+
+- 全般的な (特に、待機時間の長い接続における) パフォーマンスが向上しました。
+    
+**Analysis Services (AS)**
+
+- Analysis Services クライアント ライブラリとデータ プロバイダーが最新バージョンに更新され、新しい Azure Government AAD 権限 (login.microsoftonline.us) のサポートが追加されました。
+
+
+
+### <a name="bug-fixes"></a>バグの修正
+
+**SSMS 全般**
+    
+メンテナンス プラン:
+
+- SQL 認証を使用するメンテナンス プランを編集する場合に "オペレーターへの通知タスク" が失敗していた問題を修正しました。
+    
+スクリプトの作成:
+
+- SMO における PostProcess アクションによってリソースが消費され、SQL ログインが失敗する問題を修正しました。
+    
+SMO:
+
+- 既定の制約を含む列を追加する際にデータが既にテーブルに存在すると Table.Alter() が失敗する問題を修正しました。 詳細については、「[sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)」(データを含むテーブルに列を追加する際に SQL Server SMO がインラインの既定の制約を生成する) を参照してください。
+    
+Always Encrypted:
+
+- パーティション テーブルで Always Encrypted を有効にした場合のロック タイムアウト エラーの原因となっていた (DacFx の) 問題を修正しました。
+    
+
+**Analysis Services (AS)**
+
+- 表形式 Analysis Services 1400 レベルの互換性モデルの OAuth データ ソースを変更する場合に発生していた問題を修正しました。この問題が原因で、OAuth トークンにおける変更がデータ ソースで更新されませんでした。
+- Analysis Services 表形式 1400 レベルの互換性モデルにおける一部の無効なデータ ソースの資格情報の使用時または Power Query (Oracle など) での [データ ソースの変更] の移行をサポートしていないデータ ソースの編集時に発生する可能性のあった SSMS のクラッシュを修正しました。
+
+
+### <a name="known-issues"></a>既知の問題
+
+- *[プロパティ]* ウィンドウでファイル グループのプロパティを変更した後に *[スクリプト]* ボタンをクリックすると、2 つのスクリプトが生成されます。1 つ目は *USE<database>* ステートメントを使用したスクリプト、2 つ目は *USE master* ステートメントを使用したスクリプトです。  *USE master* を使用したスクリプトの生成時にはエラーが発生するため、このスクリプトを破棄する必要があります。 *USE <database>* ステートメントを含むスクリプトを実行してください。
+- 新しい *General Purpose* または *Business Critical* エディションの Azure SQL Database を使用するとき、無効なエディションであるというエラーが一部のダイアログに表示されます。
+- XEvent ビューアーで待機時間が発生する場合があります。 これは、[.NET Framework における既知の問題](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)です。 NetFx 4.7.2 へのアップグレードを検討してください。
+
+
+
+## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
+
+以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
+
 ビルド番号: 14.0.17254.0<br>
 リリース日: 2018 年 5 月 9 日
+
+[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>新機能
 
@@ -180,9 +254,7 @@ SMO:
 > [!WARNING]
 > [メンテナンス プラン](../relational-databases/maintenance-plans/maintenance-plans.md)の使用中に SSMS 17.6 が不安定になりクラッシュするという既知の問題があります。 メンテナンス プランを使用する場合は、SSMS 17.6 をインストールしないでください。 17.6 を既にインストールしていて、この問題の影響を受けている場合は、SSMS 17.5 にダウングレードしてください。 
 
-## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
 
-以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 一般公開 | ビルド番号: 14.0.17224.0
@@ -312,7 +384,7 @@ XE プロファイラー:
     - ユーザーが *VIEW SERVER STATE* アクセス許可を持っていない場合に SSMS のクラッシュの原因となっていた問題を修正しました。
     - XE プロファイラー ライブ データ ウィンドウを閉じても基になるセッションが停止しないという問題を修正しました。
 - 登録済みサーバー:
-    - "移動先…" コマンドが機能しなくなるという問題を修正しました -  [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) および [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
+    - [... に移動] コマンドが停止する問題を修正しました ([Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) および [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/))。
 - SMO:
     - 転送オブジェクトの TransferData メソッドが動作していないという問題を修正しました。
     - SQL DW データベースが一時停止した場合に Server データベースが例外をスローするという問題を修正しました。
@@ -429,7 +501,7 @@ XE プロファイラー:
 **SSMS 全般**
 
 - MFA を使用した UA を使用する Azure AD 認証では、次の SSMS 機能はサポートされていません。
-   - データベース エンジン チューニング アドバイザーは Azure AD の認証ではサポートされていません。ユーザーに表示されるエラー メッセージが少し曖昧だという既知の問題があります。"Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした…) が、正常なメッセージである "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient) (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
+   - データベース エンジン チューニング アドバイザーは Azure AD の認証ではサポートされていません。ユーザーに表示されるエラー メッセージが少しあいまいだという既知の問題があります。"Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした…) が、正常なメッセージである "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient) (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
 - DTA でクエリを分析しようとすると、次のエラーが発生します。"Object must implement IConvertible. (mscorlib)" (オブジェクトで IConvertible を実装する必要があります (mscorlib))。
 - *[低下したクエリ]* がオブジェクト エクスプローラーのレポートのクエリ ストアのリストにありません。
    - 回避策: **[クエリ ストア]** ノードを右クリックし、**[View Regressed Queries]\(低下したクエリを表示します\)** を選択します。
@@ -458,7 +530,7 @@ XE プロファイラー:
 
 - MFA を使用したユニバーサル認証を使用する DacFx のデータベースのインポート/エクスポート ウィザード。
 - API のサポートについては、「[IUniversalAuthProvider インターフェイス](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)」を参照してください。
-- MFA を使用した Azure AD ユニバーサル認証で使用される ADAL マネージ ライブラリは、バージョン 3.13.9 にアップグレードされました。
+- MFA を使用した Azure AD ユニバーサル認証で使用される ADAL マネージド ライブラリは、バージョン 3.13.9 にアップグレードされました。
 - SQL Database および SQL Data Warehouse の Azure AD 管理者設定のサポートが実現された新しい CLI インターフェイスの追加。
 
  Active Directory の認証方法の詳細については、「[SQL Database と SQL Data Warehouse でのユニバーサル認証 (MFA 対応の SSMS サポート)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)」と「[SQL Server Management Studio 用に Azure SQL Database の多要素認証を構成する](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)」を参照してください。
@@ -524,7 +596,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - クエリの結果を (テキストとして) 印刷しようとすると発生する問題を修正しました。  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - SQL Azure データベースでテーブルとその他のオブジェクトの削除をスクリプト化したときに、SSMS が不正にこれらを破棄する問題を修正しました。
 - 次のようなエラーが表示され、SSMS が時々起動しない問題を修正しました。"1 つ以上のコンポーネントが見つかりません。 アプリケーションを再インストールしてください。"
-- SSMS UI の SPID が古くなって同期されない問題を修正しました。https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- SSMS UI の SPID が古くなって同期されない問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - /passive 引数が /quiet として扱われる SSMS (サイレント) セットアップでの問題を修正しました。
 - SSMS が起動時に時々、"オブジェクト参照がオブジェクト インスタンスに設定されていません" というエラーをスローする問題を修正しました。 http://connect.microsoft.com/SQLServer/feedback/details/3134698
 - グラフ テーブルで [計算] を押すと、SSMS がクラッシュするデータ圧縮ウィザードの問題を修正しました。
@@ -730,7 +802,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 暗号化が正しく処理されていない状態でモジュールを更新すると、Always Encrypted でエラーが発生する。
 - OLTP と OLAP の既定の接続タイムアウト値が 15 秒から 30 秒に変更され、無視された接続エラーのクラスが修正されました。 
 - カスタム レポートの起動時の SSMS のクラッシュが修正されました ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3118856)を参照)。
-- Azure SQL データベースで [スクリプトの生成] が 実行できないという問題が修正されました。
+- Azure SQL データベースに対する [スクリプトの生成...] が失敗する問題を修正しました。
 - [スクリプト化] と [スクリプトの生成] ウィザードが修正され、ストアド プロシージャなどのオブジェクトのスクリプト化の際に余分な改行が追加されないようになります ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3115850)を参照)。
 - SQLAS PowerShell プロバイダー: Dimension フォルダーと MeasureGroup フォルダーに LastProcessed プロパティが追加されます ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3111879)を参照)。
 - ライブ クエリ統計: バッチの最初のクエリしか表示されないという問題が修正されました ( [Connect アイテム] (http://connect.microsoft.com/SQLServer/feedback/details/3114221) を参照)。  

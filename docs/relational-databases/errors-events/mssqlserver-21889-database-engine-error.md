@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8241192ce757574e301baed8e8a694ab02656514
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 3a42d6959fcf743ea17f582a7aa1c9bf752bd423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332212"
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/19/2018
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|SQLErrorNum21889|  
-|メッセージ テキスト|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス '%s' はレプリケーション パブリッシャーではありません。 このインスタンスがパブリッシング データベース '%s' をホストできるようにするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス '%s' で、ディストリビューター '%s' を指定して **sp_adddistributor** を実行します。 元のパブリッシャーで使用されているものと同じログインおよびパスワードを指定していることを確認してください。|  
+|メッセージ テキスト|SQL サーバー インスタンス '%s' はレプリケーション パブリッシャーではありません。 このインスタンスがパブリッシング データベース '%s' をホストできるようにするために、SQL Server インスタンス '%s' で、ディストリビューター '%s' を指定して **sp_adddistributor** を実行します。 元のパブリッシャーで使用されているものと同じログインおよびパスワードを指定していることを確認してください。|  
   
 ## <a name="explanation"></a>説明  
-パブリッシャー データベースをホストするためには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがレプリケーション パブリッシャーである必要があります。 **sp_validate_redirected_publisher** は、リモート サーバーで **sp_helpdistributor** を呼び出し、サーバーがレプリケーション パブリッシャーであるかどうかを判断します。 このエラーは、ストアド プロシージャ **sp_helpdistributor** を実行して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象のインスタンがレプリケーション パブリッシャーでないことが示された場合に発生します。  
+パブリッシャー データベースをホストするためには、SQL Server のインスタンスがレプリケーション パブリッシャーである必要があります。 **sp_validate_redirected_publisher** は、リモート サーバーで **sp_helpdistributor** を呼び出し、サーバーがレプリケーション パブリッシャーであるかどうかを判断します。 このエラーは、SQL Server のターゲット インスタンスがレプリケーション パブリッシャーではないことを示します。  
   
 ## <a name="user-action"></a>ユーザーの操作  
-パブリッシャー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで **sp_adddistributor** を実行します。 **sp_adddistributor** を実行するときに、正しいディストリビューターを指定します。 *@password* パラメーターには、ディストリビューターで **sp_adddistributor** を最初に実行したときに使用したものと同じ値を使用します。  
+パブリッシャー データベースをホストする SQL Server のインスタンスで **sp_adddistributor** を実行します。 **sp_adddistributor** を実行するときに、正しいディストリビューターを指定します。 *@password* パラメーターには、ディストリビューターで **sp_adddistributor** を最初に実行したときに使用したものと同じ値を使用します。  
   

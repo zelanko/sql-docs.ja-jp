@@ -16,12 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332736"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297408"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>レッスン 1-6 - 参照変換の追加と構成
 ソース ファイルからデータを取り出すフラット ファイルを構成したら、次は、 **CurrencyKey** および **DateKey**の値を取得する際に必要な参照変換を定義します。 参照変換は、指定の入力列のデータを参照データセットの列に結合することにより、参照を実行します。 参照データセットは、既存のテーブル、既存のビュー、新しいテーブル、または SQL ステートメントの結果のいずれかになります。 このチュートリアルでは、参照変換は、OLE DB 接続マネージャーを使用して、参照データセットのソースとなるデータを含むデータベースに接続します。  
@@ -41,7 +41,7 @@ ms.locfileid: "35332736"
   
 1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[参照]** を **[データ フロー]** タブのデザイン画面にドラッグします。[参照] を **[Extract Sample Currency Data]** ソースのすぐ下に置きます。  
   
-2.  **[Extract Sample Currency Data]** フラット ファイル ソースをクリックします。次に、緑色の矢印を、新しく追加した **[参照]** 変換までドラッグして、これら 2 つのコンポーネントを接続します。  
+2.  **[Extract Sample Currency Data]** フラット ファイル ソースをクリックします。次に、青色の矢印を、新しく追加した **[参照]** 変換までドラッグして、これら 2 つのコンポーネントを接続します。  
   
 3.  **[データ フロー]** デザイン画面で、 **[参照]** 変換の **[参照]** をクリックし、名前を「 **Lookup Currency Key**」に変更します。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35332736"
 12. [プロパティ] ウィンドウで、 **LocaleID** プロパティが **[英語 (米国)]** に、 **[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 7 : OLE DB 変換先の追加と構成](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+[手順 7: OLE DB 変換先の追加と構成](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>参照  
 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  

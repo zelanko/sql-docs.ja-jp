@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,26 +20,26 @@ helpviewer_keywords:
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46b6c72283ab0ead6aad871f3801fb3ed967f8f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed29d25330ceb824bef86969e822ae706ffd1a5c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786943"
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  接続によって現在オープンされているカーソルに対して最後に実行した FETCH ステートメントの状態を返します。  
+この館数は、接続によって現在オープンされているカーソルに対して最後に実行した FETCH ステートメントの状態を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 @@FETCH_STATUS  
 ```  
   
@@ -49,22 +48,22 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="return-value"></a>戻り値  
   
-|戻り値|Description|  
+|戻り値|[説明]|  
 |------------------|-----------------|  
-|0|FETCH ステートメントは正常に実行されました。|  
+|&nbsp;0|FETCH ステートメントは正常に実行されました。|  
 |-1|FETCH ステートメントが失敗したか、または行が結果セットに収まりません。|  
 |-2|取り出した行がありません。|
 |-9|カーソルはフェッチ操作を実行しません。|  
   
 ## <a name="remarks"></a>Remarks  
- @@FETCH_STATUS は、接続時のすべてのカーソルに対してグローバルであるため、@@FETCH_STATUS は慎重に使用してください。 FETCH ステートメントを実行した後、別のカーソルに対して他の FETCH ステートメントを実行する前に、@@FETCH_STATUS の値を調べる必要があります。 接続時にフェッチが実行されるまで、@@FETCH_STATUS の値は未定義です。  
+`@@FETCH_STATUS` は接続時のすべてのカーソルに対してグローバルであるため、慎重に使用してください。 FETCH ステートメントを実行した後、別のカーソルに対して他の FETCH ステートメントを実行する前に、`@@FETCH_STATUS` を調べる必要があります。 接続時にフェッチが実行されるまで、`@@FETCH_STATUS` は未定義です。  
   
- たとえば、ユーザーがあるカーソルからの FETCH ステートメントを実行します。次に、別のカーソルからの結果を開いて処理するためのストアド プロシージャを呼び出します。 呼び出したストアド プロシージャから制御が戻された時点で、@@FETCH_STATUS は、ストアド プロシージャを呼び出す前に実行した FETCH ステートメントではなく、ストアド プロシージャで最後に実行した FETCH ステートメントを反映します。  
+たとえば、ユーザーがあるカーソルからの FETCH ステートメントを実行します。次に、別のカーソルからの結果を開いて処理するためのストアド プロシージャを呼び出します。 呼び出したストアド プロシージャから制御が戻された時点で、`@@FETCH_STATUS` は、ストアド プロシージャを呼び出す前に実行された FETCH ステートメントではなく、ストアド プロシージャ内で最後に実行された FETCH ステートメントを反映します。  
   
- 特定のカーソルの最後のフェッチの状態を取得するには、動的管理関数 **sys.dm_exec_cursors** の **fetch_status** 列のクエリを実行します。  
+特定のカーソルの最後のフェッチの状態を取得するには、動的管理関数 **sys.dm_exec_cursors** の **fetch_status** 列のクエリを実行します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`@@FETCH_STATUS` を使用して `WHILE` ループ内のカーソルの動作を制御します。  
+この例では、`@@FETCH_STATUS` を使用して `WHILE` ループ内のカーソルの動作を制御します。  
   
 ```  
 DECLARE Employee_Cursor CURSOR FOR  

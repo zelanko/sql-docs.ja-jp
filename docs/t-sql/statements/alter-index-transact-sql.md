@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: tsql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -46,17 +45,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbd5a65f85fa7b54964abf60e01c24a94969753e
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 866e481123bc73db91a093cc79de0c2e7e277fa9
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34154652"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262576"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +192,7 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZE PARTITION = *partition_number*|非パーティション インデックス、XML インデックス、空間インデックス、または無効化されたインデックス|  
 |IGNORE_DUP_KEY = ON|XML インデックス<br /><br /> 空間インデックス<br /><br /> 列ストア インデックス: **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
 |ONLINE = ON|XML インデックス<br /><br /> 空間インデックス<br /><br /> 列ストア インデックス: **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
-| RESUMABLE = ON  | **All** キーワードでサポートされていない再開可能なインデックス。 <br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
+|RESUMABLE = ON  | **All** キーワードでサポートされていない再開可能なインデックス。 <br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  オンラインで実行できるインデックス操作の詳細については、「[オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。
@@ -482,7 +480,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  *max_degree_of_parallelism* は次のように指定できます。  
   
- @shouldalert  
+ 1  
  並列プラン生成を抑制します。  
   
  \>1  
@@ -575,7 +573,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
- オンライン インデックス再構築では、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY** は、オンライン インデックス再構築操作が優先度の低いロックを待機して、オンライン インデックス構築操作が待機している間、他の操作を続行可能にすることを示します。 **WAIT AT LOW PRIORITY** オプションを省略すると、`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` と同等になります。 詳細については、「[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)」を参照してください。 
+ オンライン インデックス再構築では、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY** は、オンライン インデックス再構築操作が優先度の低いロックを待機して、オンライン インデックス構築操作が待機している間、他の操作を続行可能にすることを示します。 **WAIT AT LOW PRIORITY** オプションを省略すると、WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE) と同等になります。 詳細については、「[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)」を参照してください。 
   
  MAX_DURATION = *time* **[MINUTES]**  
   
@@ -613,7 +611,7 @@ WAIT_AT_LOW_PRIORITY は **RESUMABLE=ON** および **ONLINE = ON** と共に使
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- 一時停止の後でオンラインでのインデックス再構築を再開するには、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY** は、オンライン インデックス再構築操作が優先度の低いロックを待機して、オンライン インデックス構築操作が待機している間、他の操作を続行可能にすることを示します。 **WAIT AT LOW PRIORITY** オプションを省略すると、`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` と同等になります。 詳細については、「[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)」を参照してください。 
+ 一時停止の後でオンラインでのインデックス再構築を再開するには、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY** は、オンライン インデックス再構築操作が優先度の低いロックを待機して、オンライン インデックス構築操作が待機している間、他の操作を続行可能にすることを示します。 **WAIT AT LOW PRIORITY** オプションを省略すると、WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE) と同等になります。 詳細については、「[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)」を参照してください。 
 
 
 PAUSE
@@ -629,19 +627,19 @@ ABORT
 再開可能として宣言されている実行中または一時停止中のインデックス操作を中止します。 再開可能なインデックス再構築操作を終了するには、**ABORT** コマンドを明示的に実行する必要があります。 障害が発生しても再開可能なインデックス操作を一時停止しても、操作の実行は終了しません。操作は無期限の一時停止状態のままとなります。
   
 ## <a name="remarks"></a>Remarks  
-インデックスをパーティションに再分割するか別のファイル グループに移動する場合、`ALTER INDEX` は使用できません。 このステートメントは、列の追加や削除、または列の順序変更など、インデックス定義の変更には使用できません。 これらの操作は、`CREATE INDEX` と `DROP_EXISTING` 句を使用して実行します。  
+インデックスをパーティションに再分割するか別のファイル グループに移動する場合、ALTER INDEX は使用できません。 このステートメントは、列の追加や削除、または列の順序変更など、インデックス定義の変更には使用できません。 これらの操作を実行するには、CREATE INDEX を DROP_EXISTING 句と共に使用します。  
   
-オプションを明示的に指定しない場合は、現在の設定が適用されます。 たとえば、`REBUILD` 句で `FILLFACTOR` 設定を指定しなかった場合、再構築処理では、システム カタログに格納されている FILL FACTOR 値が使用されます。 現在のインデックス オプション設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) を使用します。  
+オプションを明示的に指定しない場合は、現在の設定が適用されます。 たとえば、REBUILD 句で FILLFACTOR 設定を指定しなかった場合、再構築処理では、システム カタログに格納されている FILL FACTOR 値が使用されます。 現在のインデックス オプション設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) を使用します。  
   
-`ONLINE`、`MAXDOP`、`SORT_IN_TEMPDB` の値はシステム カタログに保存されません。 インデックス ステートメントでオプション値を指定しない限り、各オプションの既定値が使用されます。
+ONLINE、MAXDOP、および SORT_IN_TEMPDB の値は、システム カタログに格納されません。 インデックス ステートメントでオプション値を指定しない限り、各オプションの既定値が使用されます。
   
-マルチプロセッサ コンピューター上では、`ALTER INDEX ... REBUILD` は他のクエリと同様、自動的に使用プロセッサの数を増やしてインデックスの変更に関連するスキャンや並べ替え操作を実行します。 `LOB_COMPACTION` の有無に関係なく、`ALTER INDEX ... REORGANIZE` を実行すると、**max degree of parallelism** の値は単一スレッドの操作になります。 詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
+マルチプロセッサ コンピューター上では、ALTER INDEX ...REBUILD は他のクエリと同様、自動的に使用プロセッサの数を増やしてインデックスの変更に関連するスキャンや並べ替え操作を実行します。 ALTER INDEX ...REORGANIZE を実行すると、LOB_COMPACTION の有無に関係なく、**max degree of parallelism** の値は単一スレッドの操作になります。 詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!IMPORTANT]
-> インデックスのあるファイル グループがオフラインまたは読み取り専用に設定されていると、インデックスを再構成または再構築することはできません。 キーワード `ALL` を指定した場合で、1 つ以上のインデックスがオフラインまたは読み取り専用のファイル グループにある場合、ステートメントは失敗します。  
+> インデックスのあるファイル グループがオフラインまたは読み取り専用に設定されていると、インデックスを再構成または再構築することはできません。 キーワード ALL を指定した場合で、1 つ以上のインデックスがオフラインまたは読み取り専用のファイル グループにある場合、ステートメントは失敗します。  
   
 ## <a name="rebuilding-indexes"></a> インデックスの再構築  
-インデックスの再構築では、インデックスを削除し再作成します。 この操作では、断片化をなくし、指定されているか既に存在する FILL FACTOR 設定に基づいてページを圧縮することによりディスク領域を取り戻した後、連続するページにインデックス行を再び並べ替えます。 `ALL` を指定した場合、テーブル上のすべてのインデックスが、1 回のトランザクションで削除され再構築されます。 外部キー制約は、前もって削除しておく必要はありません。 128 以上のエクステントがあるインデックスを再構築すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、トランザクションがコミットされるまで実際のページの割り当て解除とそれに関連するロックが延期されます。  
+インデックスの再構築では、インデックスを削除し再作成します。 この操作では、断片化をなくし、指定されているか既に存在する FILL FACTOR 設定に基づいてページを圧縮することによりディスク領域を取り戻した後、連続するページにインデックス行を再び並べ替えます。 ALL を指定した場合、テーブル上のすべてのインデックスが、1 回のトランザクションで削除され再構築されます。 外部キー制約は、前もって削除しておく必要はありません。 128 以上のエクステントがあるインデックスを再構築すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、トランザクションがコミットされるまで実際のページの割り当て解除とそれに関連するロックが延期されます。  
  
 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。 
   
@@ -651,7 +649,7 @@ ABORT
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インデックスが作成または再構築されたとき、テーブル内のすべての行をスキャンして統計が作成または更新されます。
 > 
-> ただし、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、パーティション インデックスが作成または再構築されたとき、テーブル内のすべての行をスキャンして統計が作成されることはありません。 代わりに、クエリ オプティマイザーが既定のサンプリング アルゴリズムを使用してこれらの統計を生成します。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、`FULLSCAN` 句で `CREATE STATISTICS` または `UPDATE STATISTICS` を使用します。  
+> ただし、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、パーティション インデックスが作成または再構築されたとき、テーブル内のすべての行をスキャンして統計が作成されることはありません。 代わりに、クエリ オプティマイザーが既定のサンプリング アルゴリズムを使用してこれらの統計を生成します。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、FULLSCAN 句で CREATE STATISTICS または UPDATE STATISTICS を使用します。  
   
 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、非クラスター化インデックスを再構築することで、ハードウェア障害により発生した不一致を修正できる場合がありました。    
 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降でも、非クラスター化インデックスをオフラインで再構築することで、インデックスとクラスター化インデックス間の不一致を修正できますが、 オンラインでインデックスを再構築する場合、既存の非クラスター化インデックスを基に再構築が行われるので、不一致を維持してしまい非クラスター化インデックスの不一致を修復できません。 オフラインでインデックスを再構築すると、強制的にクラスター化インデックス (ヒープ) のスキャンがなされ、不一致が解消されることがあります。 クラスター化インデックスからの再構築を保証するため、非クラスター化インデックスを削除および再作成します。 不一致を解消する場合、以前のバージョンと同様に影響を受けたデータをバックアップから復元することをお勧めします。ただし、非クラスター化インデックスをオフラインで再構築しても、インデックスの不一致を修復できます。 詳細については、「[DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)」を参照してください。  
@@ -669,7 +667,7 @@ ABORT
 ## <a name="reorganizing-indexes"></a> インデックスの再構成  
 インデックスの再構成では、最小のシステム リソースが使用されます。 この操作では、リーフ レベル ページをリーフ ノードの論理順序 (左から右) に合わせて物理的に並べ替えることにより、テーブルやビュー上にあるクラスター化および非クラスター化インデックスのリーフ レベルをデフラグします。 再構成でも、インデックス ページは圧縮されます。 圧縮は既存の FILL FACTOR 値に基づいて行われます。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) を使用します。  
   
-`ALL` を指定した場合、テーブル上のクラスター化と非クラスター化の両方のリレーショナル インデックスと XML インデックスが再構成されます。 `ALL` を指定した場合は、いくつかの制限が適用されます。本記事の「引数」セクションの `ALL` の定義を参照してください。  
+ALL を指定した場合、テーブル上のクラスター化および非クラスター化両方のリレーショナル インデックスと XML インデックスが再構成されます。 ALL を指定した場合は、いくつかの制限が適用されます。本記事の「引数」セクションの ALL の定義を参照してください。  
   
 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
  
@@ -684,14 +682,14 @@ ABORT
 インデックスを有効にするには、ALTER INDEX REBUILD ステートメントまたは CREATE INDEX WITH DROP_EXISTING ステートメントを使用します。 ONLINE オプションが ON に設定されていると、無効化されたクラスター化インデックスを再構築できません。 詳細については、「 [インデックスと制約の無効化](../../relational-databases/indexes/disable-indexes-and-constraints.md)」を参照してください。  
   
 ## <a name="setting-options"></a>オプションの設定  
-指定のインデックスに対して、そのインデックスを再構築したり、再編成したりすることなく、オプション `ALLOW_ROW_LOCKS`、`ALLOW_PAGE_LOCKS`、`IGNORE_DUP_KEY`、`STATISTICS_NORECOMPUTE` を設定できます。 変更された値はすぐにインデックスに適用されます。 これらの設定を表示するには、**sys.indexes** を使用します。 詳細については、「 [インデックス オプションの設定](../../relational-databases/indexes/set-index-options.md)」を参照してください。  
+特定のインデックスに対して、再構築または再構成を行わずに ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、IGNORE_DUP_KEY および STATISTICS_NORECOMPUTE オプションを設定できます。 変更された値はすぐにインデックスに適用されます。 これらの設定を表示するには、**sys.indexes** を使用します。 詳細については、「 [インデックス オプションの設定](../../relational-databases/indexes/set-index-options.md)」を参照してください。  
   
 ### <a name="row-and-page-locks-options"></a>行およびページ ロック オプション  
-`ALLOW_ROW_LOCKS = ON` と `ALLOW_PAGE_LOCK = ON` の場合、インデックスにアクセスするとき、行レベル、ページ レベル、テーブル レベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。  
+ALLOW_ROW_LOCKS = ON かつ ALLOW_PAGE_LOCK = ON の場合は、インデックスにアクセスするとき、行レベル、ページ レベル、およびテーブル レベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。  
   
-`ALLOW_ROW_LOCKS = OFF` と `ALLOW_PAGE_LOCK = OFF` の場合、インデックスにアクセスするとき、テーブル レベルのロックのみが許可されます。  
+ALLOW_ROW_LOCKS = OFF かつ ALLOW_PAGE_LOCK = OFF の場合は、インデックスにアクセスするときにテーブル レベルのロックだけが許可されます。  
   
-行またはページ ロック オプションが設定されている場合に `ALL` を指定すると、この設定はすべてのインデックスに適用されます。 基になるテーブルがヒープの場合、この設定は次のように適用されます。  
+行またはページ ロック オプションが設定されている場合に ALL を指定すると、この設定はすべてのインデックスに適用されます。 基になるテーブルがヒープの場合、この設定は次のように適用されます。  
   
 |||  
 |-|-|  
@@ -716,8 +714,8 @@ ABORT
 
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
-オンラインでのインデックス再構築は、`RESUMABLE = ON` オプションを使用し、再開可能として指定できます。 
--  `RESUMABLE` オプションは特定のインデックス用のメタデータ内に保持されるのではなく、現在の DDL ステートメントの実行中にのみ適用されます。 したがって、再開機能を有効にするには、`RESUMABLE = ON` 句を明示的に指定する必要があります。
+オンライン インデックス再構築は、RESUMABLE = ON オプションを使用し、再開可能として指定できます。 
+-  RESUMABLE オプションは特定のインデックス用のメタデータ内に保持されるのではなく、現在の DDL ステートメントの実行中にのみ適用されます。 したがって、再開機能を有効にするには、RESUMABLE = ON 句を明示的に指定する必要があります。
 -  MAX_DURATION オプションは、RESUMABLE = ON オプションまたは **low_priority_lock_wait** 引数オプションに対してサポートされています。 
    -  MAX_DURATION for RESUMABLE オプションでは、再構築するインデックスの時間間隔を指定します。 この時間が経過すると、インデックスの再構築が一時停止するか、またはその実行が完了します。 ユーザーは、一時停止されたインデックスの再構築を再開可能にするタイミングを決定します。 MAX_DURATION の分単位の**時間**は、0 分より長く、かつ 1 週間 (7 * 24 * 60 = 10080 分) 以内とする必要があります。 インデックス操作の一時停止時間を長くすると、特定のテーブルでの DML パフォーマンスおよびデータベースのディスク容量に影響を及ぼす可能性があります。元々存在するインデックスも新たに作成されたインデックスもディスク容量を必要とし、DML 操作中に更新される必要があるからです。 MAX_DURATION オプションを省略した場合、インデックス操作は、それが完了するかまたは障害が発生するまで続行されます。 
    -  \<low_priority_lock_wait> 引数オプションを使用すると、SCH-M ロックでブロックされたときにインデックス操作を続行する方法を決定することができます。
@@ -749,7 +747,7 @@ ABORT
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>オンライン インデックス操作での WAIT_AT_LOW_PRIORITY  
   
- オンライン インデックス再構築の DDL ステートメントを実行するには、特定のテーブルで実行されているすべてのアクティブなブロック トランザクションが完了する必要があります。 オンライン インデックス再構築を実行すると、このテーブルに対する実行の開始が準備できているすべての新しいトランザクションがブロックされます。 オンライン インデックス再構築のロックの期間は非常に短いですが、特定のテーブルに対して開かれているすべてのトランザクションの完了を待機し、新しいトランザクションの開始をブロックすることで、スループットに大きな影響を与える場合があり、ワークロードの速度低下またはタイムアウトを引き起こしたり、基になるテーブルへのアクセスが大幅に制限されたりします。 **WAIT_AT_LOW_PRIORITY** オプションは、オンライン インデックス再構築に必要な S ロックおよび Sch-M ロックを DBA が管理できるようにし、3 つのオプションのいずれかを選択できるようにします。 3 つのいずれのケースでも、待機時間 (`(MAX_DURATION = n [minutes])`) 中にブロックするアクティビティがない場合は、オンライン インデックス再構築が待機なしで直ちに実行され、DDL ステートメントが完了します。  
+ オンライン インデックス再構築の DDL ステートメントを実行するには、特定のテーブルで実行されているすべてのアクティブなブロック トランザクションが完了する必要があります。 オンライン インデックス再構築を実行すると、このテーブルに対する実行の開始が準備できているすべての新しいトランザクションがブロックされます。 オンライン インデックス再構築のロックの期間は非常に短いですが、特定のテーブルに対して開かれているすべてのトランザクションの完了を待機し、新しいトランザクションの開始をブロックすることで、スループットに大きな影響を与える場合があり、ワークロードの速度低下またはタイムアウトを引き起こしたり、基になるテーブルへのアクセスが大幅に制限されたりします。 **WAIT_AT_LOW_PRIORITY** オプションは、オンライン インデックス再構築に必要な S ロックおよび Sch-M ロックを DBA が管理できるようにし、3 つのオプションのいずれかを選択できるようにします。 3 つのいずれのケースでも、待機時間 ((MAX_DURATION = n [minutes])) 中にブロックするアクティビティがない場合は、オンライン インデックス再構築が待機なしで直ちに実行され、DDL ステートメントが完了します。  
   
 ## <a name="spatial-index-restrictions"></a>空間インデックスに関する制限  
  空間インデックスを再構築するとき、基になるユーザー テーブルはインデックス操作の間使用できなくなります。これは、空間インデックスがスキーマ ロックを保持するためです。  
@@ -767,7 +765,7 @@ ABORT
   
 パーティション インデックスには次の制限が適用されます。  
   
--   `ALTER INDEX ALL ...` を使用しても、固定されていないインデックスがテーブルにあると、そのパーティションの圧縮の設定を変更できません。  
+-   ALTER INDEX ALL ... を使用しても、固定されていないインデックスがテーブルにあると、そのパーティションの圧縮の設定を変更できません。  
 -   ALTER INDEX \<index> ...REBUILD PARTITION ... 構文は、そのインデックスの指定のパーティションを再構築します。  
 -   ALTER INDEX \<index> ...REBUILD WITH ... 構文は、そのインデックスのすべてのパーティションを再構築します。  
   
@@ -1011,7 +1009,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 ```  
   
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. テーブルですべてのインデックスを再構築し、オプションを指定する  
- 次の例では、キーワード `ALL` を指定します。 これにより、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの Production.Product テーブルに関連付けられたすべてのインデックスが再構築されます。 3 つのオプションが指定されます。  
+ 次の例では、キーワード ALL を指定します。 これにより、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの Production.Product テーブルに関連付けられたすべてのインデックスが再構築されます。 3 つのオプションが指定されます。  
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
