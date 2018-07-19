@@ -312,8 +312,7 @@
 ## [sp_help_log_shipping_secondary_primary](sp-help-log-shipping-secondary-primary-transact-sql.md)  
 ## [sp_refresh_log_shipping_monitor](sp-refresh-log-shipping-monitor-transact-sql.md)  
 ## [sp_upgrade_log_shipping](sp-upgrade-log-shipping-transact-sql.md)  
-# 
-  [管理対象のバックアップ](managed-backup-stored-procedures-transact-sql.md)  
+# [管理対象のバックアップ](managed-backup-stored-procedures-transact-sql.md)  
 ## [managed_backup.sp_backup_config_basic](managed-backup-sp-backup-config-basic-transact-sql.md)  
 ## [managed_backup.sp_backup_config_advanced](managed-backup-sp-backup-config-advanced-transact-sql.md)  
 ## [managed_backup.sp_backup_config_schedule](managed-backup-sp-backup-config-schedule-transact-sql.md)  
