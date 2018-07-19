@@ -13,13 +13,13 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: ebe7da1e1024cefc14c52d0a02e0517b764c8d07
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455296"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057320"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート: SQL Server をインストールし、Ubuntu でデータベースを作成
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート: SQL Server をインストールし、Ubuntu 上でデータベースを作成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "34455296"
 
 Ubuntu 16.04 コンピューターに **少なくとも 2 GB** メモリを搭載する必要があります。
 
-Ubuntu を自分のコンピューターにインストールするに移動[ http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)です。 Azure の Ubuntu 仮想マシンを作成することもできます。 [Azure CLI を使用して Linux Vm を作成および管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) を参照してください。
+独自のマシンに Ubuntu をインストールするには[ http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)します。 Azure の Ubuntu 仮想マシンを作成することもできます。 [Azure CLI を使用して Linux Vm を作成および管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) を参照してください。
 
 > [!NOTE]
 > 現時点で、 Windows 10 の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) は、インストール対象としてサポートされていません。
@@ -52,7 +52,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Microsoft SQL Server Ubuntu リポジトリを登録します。
+1. Microsoft SQL Server の Ubuntu リポジトリを登録します。
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
@@ -92,23 +92,23 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
 
 ## <a id="tools"></a>SQL Server コマンド ライン ツールをインストールします。
 
-データベースを作成するには、SQL Server で TRANSACT-SQL ステートメントを実行できるツールを使用して接続する必要があります。 次の手順では、次の SQL Server コマンド ライン ツールをインストールします。[sqlcmd](../tools/sqlcmd-utility.md) と[bcp](../tools/bcp-utility.md)
+データベースを作成するには、SQL Server で TRANSACT-SQL ステートメントを実行できるツールを使用して接続する必要があります。 次の手順で、SQL Server コマンド ライン ツール: [sqlcmd](../tools/sqlcmd-utility.md) と [bcp](../tools/bcp-utility.md) をインストールします。
 
-インストールする次の手順を使用して、 **mssql ツール**Ubuntu でします。 
+次の手順を使用してインストールする、 **mssql ツール**ubuntu の場合。 
 
-1. パブリック リポジトリ鍵キーをインポートします。
+1. パブリック リポジトリの GPG キーをインポートします。
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Microsoft Ubuntu リポジトリを登録します。
+1. Ubuntu の Microsoft リポジトリを登録します。
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. ソース リストを更新し、unixODBC 開発者のパッケージでインストール コマンドを実行します。
+1. ソースの一覧を更新して、unixODBC 開発者のパッケージをインストール コマンドを実行します。
 
    ```bash
    sudo apt-get update 
@@ -122,7 +122,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **省略可能な**: 追加`/opt/mssql-tools/bin/`を**パス**bash シェルの環境変数。
+1. **省略可能な**: 追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
 
    させる**sqlcmd と bcp**ログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bash_profile**次のコマンドでファイル。
 
@@ -130,7 +130,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   させる**sqlcmd と bcp**対話型/以外のログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bashrc**次のコマンドでファイル。
+   させる**sqlcmd と bcp**対話型/非ログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bashrc**次のコマンドでファイル。
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -142,7 +142,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
 >
 > * [SQL Server Operations Studio (プレビュー)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)です。
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)します。
 > * [mssql-cli (プレビュー)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

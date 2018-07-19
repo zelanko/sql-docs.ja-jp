@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store_space_usage (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_tran_version_store_space_usage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -24,31 +24,32 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: fbfc968d9fb4620884f282121a820dad548405cc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060249"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-データベースごとにバージョン ストア レコードで使用する tempdb の領域の合計を表示するテーブルを返します。 **sys.dm_tran_version_store_space_usage**は効率的かつ実行するには、個々 のバージョン ストア レコードから移動しないを返しますが tempdb データベースごとに使用されるバージョン ストアの領域を集計できません高価です。
+各データベースのバージョン ストア レコードで使われている tempdb の領域の合計を表示するテーブルを返します。 **sys.dm_tran_version_store_space_usage**効率的でが高く低コストの個別のバージョン ストア レコードを移動しないと返しますデータベースごとに tempdb で消費されるバージョン ストア領域の集計を実行します。
   
-各バージョン レコードは、いくつかの追跡または状態の情報と共に、バイナリ データとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
+バージョン管理された各レコードは、いくつかの追跡または状態情報と共に、バイナリ データとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
   
-バージョン レコードはバイナリとして格納されるので、複数のデータベースの照合順序が異なっていても問題にはなりません。 使用して**sys.dm_tran_version_store_space_usage** tempdb のサイズ、SQL Server インスタンスにデータベースのバージョン ストアの領域使用率に基づくを監視して計画します。
+バージョン レコードはバイナリとして格納されるので、複数のデータベースの照合順序が異なっていても問題にはなりません。 使用**sys.dm_tran_version_store_space_usage** tempdb のサイズの SQL Server インスタンスのデータベース バージョン ストア領域の使用量に基づくを監視して計画します。
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|データベースのデータベース ID。|  
 |**reserved_page_count**|**bigint**|Tempdb のバージョンで予約済みページの合計数は、データベースのレコードを格納します。|  
-|**reserved_space_kb**|**bigint**|バージョンの tempdb のキロバイトで使用される領域の合計は、データベースのレコードを格納します。|  
+|**reserved_space_kb**|**bigint**|バージョンの tempdb のキロバイト単位で使用される領域の合計は、データベースのレコードを格納します。|  
   
-## <a name="permissions"></a>権限  
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
+## <a name="permissions"></a>アクセス許可  
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
 
 ## <a name="examples"></a>使用例  
-内の各データベースのバージョン ストアによって、tempdb で使用される領域を判断する次のクエリを使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 
+内の各データベースのバージョン ストアによって、tempdb で消費される領域を決定する、次のクエリを使用できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 
   
 ```sql  
 SELECT 

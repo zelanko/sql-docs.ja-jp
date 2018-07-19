@@ -1,5 +1,5 @@
 ---
-title: xp_grantlogin (TRANSACT-SQL) |Microsoft ドキュメント
+title: xp_grantlogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0fd1ba37422fa5491d6dd834bc35cdd536830b97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258849"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058790"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Windows グループまたはユーザーへのアクセスを付与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  Windows グループまたはユーザー アクセス権を付与する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,19 +48,19 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
   
 ## <a name="arguments"></a>引数  
  [ **@loginame =** ] **'***login***'**  
- 追加する Windows ユーザーまたはグループの名前を指定します。 Windows ユーザーまたはグループをフォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ユーザー*です。 *ログイン*は**sysname**、既定値はありません。  
+ 追加する Windows ユーザーまたはグループの名前を指定します。 Windows ユーザーまたはグループは、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ユーザー*します。 *ログイン*は**sysname**、既定値はありません。  
   
  [  **@logintype =** ] **'***logintype***'**  
- アクセス権が与えられるログインのセキュリティ レベルを指定します。 *logintype*は**varchar (5)**、既定値は NULL です。 のみ**admin**を指定できます。 場合**admin**が指定されている*ログイン*へのアクセス権が付与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメンバーとして追加して、 **sysadmin**固定サーバー ロール。  
+ アクセス権が与えられるログインのセキュリティ レベルを指定します。 *logintype*は**varchar (5)**、既定値は NULL です。 のみ**管理者**を指定できます。 場合**管理者**が指定されている*ログイン*へのアクセスを許可するが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメンバーとして追加して、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- **xp_grantlogin**はシステム ストアド プロシージャ、拡張ストアド プロシージャではなくなります。 **xp_grantlogin**呼び出し**sp_grantlogin**と**sp_addsrvrolemember**です。  
+## <a name="remarks"></a>コメント  
+ **xp_grantlogin**は、システム ストアド プロシージャ、拡張ストアド プロシージャではなく。 **xp_grantlogin**呼び出し**sp_grantlogin**と**sp_addsrvrolemember**します。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **securityadmin**固定サーバー ロール。 変更するときに、 *logintype*、メンバーシップが必要、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **securityadmin**固定サーバー ロール。 変更するときに、 *logintype*、メンバーシップが必要です、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="see-also"></a>参照  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   

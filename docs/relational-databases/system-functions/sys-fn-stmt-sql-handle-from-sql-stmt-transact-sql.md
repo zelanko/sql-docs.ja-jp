@@ -1,5 +1,5 @@
 ---
-title: sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236027"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060370"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  取得、 **stmt_sql_handle**の[!INCLUDE[tsql](../../includes/tsql-md.md)]下にあるステートメント パラメーターの型 (簡易または強制) 指定します。 これによりを使用して、クエリのストアに格納されたクエリを参照してください、 **stmt_sql_handle**わかっている場合にそれぞれのテキスト。  
+  取得、 **stmt_sql_handle**の[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント パラメーターの型 (簡易または強制) 指定します。 使用して、クエリのストアに格納されたクエリを参照することができます、 **stmt_sql_handle**わかっている場合にそれぞれのテキスト。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  クエリのストアのハンドルにクエリのテキストです。 *query_sql_text*は、 **nvarchar (max)**、既定値はありません。  
   
  *query_param_type*  
- クエリのパラメーターの型です。 *query_param_type*は、 **tinyint**です。 有効な値は次のとおりです。  
+ クエリのパラメーターの型です。 *query_param_type*は、 **tinyint**します。 有効な値は次のとおりです。  
   
 -   NULL – 既定値は 0  
   
@@ -62,18 +62,18 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>返される列  
  次の表では、列を sys.fn_stmt_sql_handle_from_sql_stmt を返します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL ハンドルです。|  
-|**query_sql_text**|**nvarchar(max)**|テキスト、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。|  
+|**query_sql_text**|**nvarchar(max)**|テキスト、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。|  
 |**query_parameterization_type**|**tinyint**|クエリのパラメーター化の種類。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  必要があります、 **EXECUTE** 、データベースに対する権限と**削除**クエリ ストアのカタログ ビューに対する権限。  
   
 ## <a name="examples"></a>使用例  
@@ -99,7 +99,7 @@ JOIN sys.dm_exec_query_stats AS qs
   
 ## <a name="see-also"></a>参照  
  [sp_query_store_force_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [sp_query_store_remove_plan &#40;Transct SQL。&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [sp_query_store_remove_plan &#40;Transct SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   

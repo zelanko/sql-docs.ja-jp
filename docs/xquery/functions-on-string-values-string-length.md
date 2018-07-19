@@ -1,5 +1,5 @@
 ---
-title: string-length 関数 (XQuery) |Microsoft ドキュメント
+title: string-length 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078199"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059776"
 ---
-# <a name="functions-on-string-values---string-length"></a>文字列長の文字列値に使用する関数
+# <a name="functions-on-string-values---string-length"></a>文字列長の文字列値に対して関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   文字列の長さを文字数として返します。  
@@ -47,14 +47,14 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  長さを計算する対象となるソース文字列です。  
   
-## <a name="remarks"></a>解説  
- 場合の値 *$arg*は空のシーケンス、 **xs:integer**値 0 が返されます。  
+## <a name="remarks"></a>コメント  
+ 場合の値 *$arg*は空のシーケンス、 **xs:integer** 0 の値が返されます。  
   
- XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。 互換性レベルが 110 以上の場合、各サロゲート ペアは 1 文字としてカウントされます。 互換性レベルがこれ未満の場合は、2 文字としてカウントされます。 詳細については、次を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)です。  
+ XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。 互換性レベルが 110 以上の場合、各サロゲート ペアは 1 文字としてカウントされます。 互換性レベルがこれ未満の場合は、2 文字としてカウントされます。 詳細については、次を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)します。  
   
  値にサロゲート文字 2 文字で表される 4 バイトの Unicode 文字が含まれている場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はサロゲート文字 1 つを 1 文字として計算します。  
   
- **String-length()** パラメーターは、述語内だけ使用することがなくです。 たとえば、次のクエリでは <`ROOT`> 要素が返されます。  
+ **String-length()** せず、パラメーターは、述語内でのみ使用できます。 たとえば、次のクエリでは <`ROOT`> 要素が返されます。  
   
 ```  
 DECLARE @x xml;  
@@ -63,10 +63,10 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照して[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)です。 参照してください[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)です。  
+ XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照してください。 [SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。 参照してください[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)します。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例**xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. XQuery の string-length() 関数を使用して、長い概要説明のある製品を取得する  
  次のクエリでは、概要説明が 50 文字を超える製品の製品 ID、概要説明の長さ、概要自体 (<`Summary`> 要素) を取得します。  
@@ -87,7 +87,7 @@ WHERE CatalogDescription.value('string-length( string( (/pd:ProductDescription/p
   
  上のクエリに関して、次の点に注意してください。  
   
--   WHERE 句の条件により、XML ドキュメントに保持されている概要説明が 200 文字を超える行のみが取得されます。 使用して、 [value() メソッド (XML データ型)](../t-sql/xml/value-method-xml-data-type.md)です。  
+-   WHERE 句の条件により、XML ドキュメントに保持されている概要説明が 200 文字を超える行のみが取得されます。 使用して、 [value() メソッド (XML データ型)](../t-sql/xml/value-method-xml-data-type.md)します。  
   
 -   SELECT 句は、必要な XML のみを構築しています。 使用して、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md) XML を構築し、XML ドキュメントからデータを取得するために必要な XQuery 式を指定します。  
   
@@ -107,7 +107,7 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. XQuery の string-length() 関数を使用して、保証内容が短い製品を取得する  
- 次のクエリは、製品保証内容が 20 文字より長い、製品 ID、長さ、保証内容の記述を含む XML を取得し、<`Warranty`> 要素自体です。  
+ 次のクエリは 20 文字より長いが、製品の製品 ID、長さ、保証の説明を含む XML を取得し、<`Warranty`> 要素自体です。  
   
  保証は製品の特徴の 1 つです。 省略可能な <`Warranty`> 子要素の後、<`Features`> 要素。  
   
@@ -137,7 +137,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **pd**と**wm**はこのクエリで使用される名前空間プレフィックス。 これらは、クエリ対象のドキュメントで使用されている同じ名前空間を示します。  
   
--   XQuery では、入れ子になった FOR ループを指定しています。 外部 FOR ループが必要ですが、取得するため、 **ProductModelID**の属性、<`ProductDescription`> 要素。 また、保証内容の記述が 20 文字未満の製品のみを取得するので、内部 FOR ループも必要です。  
+-   XQuery では、入れ子になった FOR ループを指定しています。 外側の FOR ループが必要な場合は、取得するため、 **ProductModelID**の属性、<`ProductDescription`> 要素。 また、保証内容の記述が 20 文字未満の製品のみを取得するので、内部 FOR ループも必要です。  
   
  結果の一部を次に示します。  
   

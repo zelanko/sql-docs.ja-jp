@@ -1,6 +1,6 @@
 ---
-title: SUSE Linux Enterprise Server 上の SQL Server 2017 の概要 |Microsoft ドキュメント
-description: このクイック スタートでは、SUSE Linux Enterprise Server を SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。
+title: SUSE Linux Enterprise Server 上の SQL Server 2017 の概要 |Microsoft Docs
+description: このクイック スタートでは、SUSE Linux Enterprise Server 上の SQL Server 2017 のインストールを作成し、sqlcmd を使用したデータベースの照会方法を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,25 +13,26 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.openlocfilehash: 77dd13139eba88a40cbf20094b880c5046ebfb05
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057631"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート: SQL Server をインストールし、SUSE Linux Enterprise Server にデータベースを作成
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート: SQL Server をインストールし、SUSE Linux Enterprise Server 上のデータベースの作成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このクイック スタートでは、SUSE Linux Enterprise Server (SLES) v12 SP2 に初めて SQL Server 2017 をインストールするだけです。 その次に **sqlcmd** を使用して、最初のデータベースへ接続し、クエリを実行します。
+このクイック スタートで最初に SUSE Linux Enterprise Server (SLES) v12 SP2 の SQL Server 2017 をインストールします。 その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
 
 > [!TIP]
 > このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended) または [オフライン](sql-server-linux-setup.md#offline) インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-SLES v12 SP2 コンピューターでする必要があります**に少なくとも 2 GB**メモリです。 ファイル システムは **XFS** または **EXT4** でなければいけません。 **BTRFS** といったその他のファイル システムはサポートされていません。
+SLES v12 SP2 コンピューターでする必要があります**に少なくとも 2 GB**メモリ。 ファイル システムは **XFS** または **EXT4** でなければいけません。 **BTRFS** といったその他のファイル システムはサポートされていません。
 
-自分のコンピューター上の SUSE Linux Enterprise Server をインストールするに移動[ https://www.suse.com/products/server](https://www.suse.com/products/server)です。 Azure で SLES 仮想マシンを作成することもできます。 参照してください[作成と Azure CLI を使用して Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image SLES`への呼び出しで`az vm create`です。
+を、自分のマシンを SUSE Linux Enterprise Server をインストールするには[ https://www.suse.com/products/server](https://www.suse.com/products/server)します。 Azure SLES 仮想マシンを作成することもできます。 参照してください[の作成と Azure CLI を使用した Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image SLES`への呼び出しで`az vm create`します。
 
 > [!NOTE]
 > 現時点で、 Windows 10 の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) は、インストール対象としてサポートされていません。
@@ -40,7 +41,7 @@ SLES v12 SP2 コンピューターでする必要があります**に少なく�
 
 ## <a id="install"></a>SQL Server をインストールします。
 
-SLES で SQL Server を構成するには、インストールするターミナル次のコマンドを実行、 **mssql サーバー**パッケージ。
+Sles SQL Server を構成するには、インストールするターミナルで次のコマンドを実行、 **mssql server**パッケージ。
 
 > [!IMPORTANT]
 > 既に SQL Server 2017 の CTP または RC リリースをインストールしている場合は、古いリポジトリを削除してからその GA リポジトリの一つを登録する必要があります。 詳細については、 [リポジトリをプレビュー リポジトリからGA リポジトリに変更する](sql-server-linux-change-repo.md) を参照してください。
@@ -84,19 +85,19 @@ SLES で SQL Server を構成するには、インストールするターミナ
    systemctl status mssql-server
    ```
 
-1. リモートで接続する場合はファイアウォールで SQL Server の TCP ポート (既定は 1433) を開く必要もあります。 SuSE ファイアウォールを使用している場合は、編集する必要があります。、 **/etc/sysconfig/SuSEfirewall2**構成ファイル。 変更、 **FW_SERVICES_EXT_TCP**エントリを SQL Server のポート番号が含まれます。
+1. リモートで接続する場合はファイアウォールで SQL Server の TCP ポート (既定は 1433) を開く必要もあります。 編集する必要があります、SuSE ファイアウォールを使用している場合、 **/etc/sysconfig/SuSEfirewall2**構成ファイル。 変更、 **FW_SERVICES_EXT_TCP**エントリを SQL Server のポート番号が含まれます。
 
    ```
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-この時点では、SQL Server では、SLES コンピューター上で実行しを使用する準備ができました!
+この時点では、SQL Server は SLES コンピューター上で実行しを使用する準備ができました!
 
 ## <a id="tools"></a>SQL Server コマンド ライン ツールをインストールします。
 
-データベースを作成するには、SQL Server で TRANSACT-SQL ステートメントを実行できるツールを使用して接続する必要があります。 次の手順では、次の SQL Server コマンド ライン ツールをインストールします。[sqlcmd](../tools/sqlcmd-utility.md) と[bcp](../tools/bcp-utility.md)
+データベースを作成するには、SQL Server で TRANSACT-SQL ステートメントを実行できるツールを使用して接続する必要があります。 次の手順で、SQL Server コマンド ライン ツール: [sqlcmd](../tools/sqlcmd-utility.md) と [bcp](../tools/bcp-utility.md) をインストールします。
 
-1. Zypper に Microsoft SQL Server リポジトリを追加します。
+1. Zypper を Microsoft SQL Server リポジトリを追加します。
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
@@ -109,7 +110,7 @@ SLES で SQL Server を構成するには、インストールするターミナ
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. 利便性のため、`/opt/mssql-tools/bin/` を、**PATH** 環境変数に追加します。 これにより、完全なパスを指定せずに、ツールを実行することができます。 次のコマンドを実行し、**PATH** をログイン セッションと対話型/非ログイン セッションの両方に変更します。
+1. 利便性のために、`/opt/mssql-tools/bin/` を **PATH** 環境変数に追加します。 これにより、完全なパスを指定せずに、ツールを実行することができます。 次のコマンドを実行し、**PATH** をログイン セッションと対話型/非ログイン セッションの両方に変更します。
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -122,7 +123,7 @@ SLES で SQL Server を構成するには、インストールするターミナ
 >
 > * [SQL Server Operations Studio (プレビュー)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)です。
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)します。
 > * [mssql-cli (プレビュー)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

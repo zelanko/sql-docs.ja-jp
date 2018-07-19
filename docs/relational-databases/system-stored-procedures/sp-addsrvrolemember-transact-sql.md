@@ -1,5 +1,5 @@
 ---
-title: sp_addsrvrolemember (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addsrvrolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 8d718d3cb44a4a1f148cd92df72dde7465b61762
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056100"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33238882"
   ログインを固定サーバー ロールのメンバーとして追加します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  固定サーバー ロールに追加するログインの名前を指定します。 *ログイン*は**sysname**、既定値はありません。 *ログイン*できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
   
  [ @rolename **=** ] **'***ロール***'**  
- ログインを追加する固定サーバー ロールの名前を指定します。 *ロール*は**sysname**NULL の場合、既定値は次の値のいずれかを指定する必要があります。  
+ ログインを追加する固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は null の場合、値は次のいずれかを指定する必要があります。  
   
 -   sysadmin  
   
@@ -73,7 +73,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ログインを固定サーバー ロールに追加すると、そのロールに関係付けられている権限がログインに与えられます。  
   
  Sa ログインのあること、およびパブリックのロールのメンバーシップを変更することはできません。  
@@ -82,11 +82,11 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
  ログインは、ユーザー定義のトランザクション内で実行できません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  新しいメンバーを追加するロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、Windows ログインを追加`Corporate\HelenS`を`sysadmin`固定サーバー ロール。  
+ 次の例では、Windows ログイン`Corporate\HelenS`を`sysadmin`固定サーバー ロール。  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  

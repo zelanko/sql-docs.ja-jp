@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_child_instances (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_child_instances (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66f4d8c770cc10c2ba47769576d8f9625edac0cf
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056170"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +38,13 @@ ms.lasthandoff: 05/23/2018
   
 > **重要:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 返される情報**sys.dm_os_child_instances**各ユーザー インスタンス (heart_beat) の状態を確認し、ユーザーへの接続の作成に使用できるパイプ名 (instance_pipe_name) を取得するために使用できますインスタンスを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または SQLCmd します。 ユーザー インスタンスがクライアント アプリケーションなどの外部プロセスによって開始された場合のみ、ユーザー インスタンスに接続できます。 SQL 管理ツールではユーザー インスタンスを開始できません。  
+ 返される情報**sys.dm_os_child_instances** (heart_beat) ごとのユーザー インスタンスの状態を確認して、ユーザーへの接続を作成するために使用できるパイプ名 (instance_pipe_name) を取得するために使用できますインスタンスを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または SQLCmd します。 ユーザー インスタンスがクライアント アプリケーションなどの外部プロセスによって開始された場合のみ、ユーザー インスタンスに接続できます。 SQL 管理ツールではユーザー インスタンスを開始できません。  
   
-> **注:** の機能、ユーザー インスタンスは[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]のみです。  
+> **注:** ユーザー インスタンスは、機能の[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]のみです。  
   
-> **注**これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_child_instances**です。  
+> **注**これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_child_instances**します。  
   
-|列|データ型|Description|  
+|[列]|データ型|説明|  
 |------------|---------------|-----------------|  
 |**owning_principal_name**|**nvarchar (256)**|このユーザー インスタンスに対応するユーザーの名前です。|  
 |owning_principal_sid|nvarchar (256)|このユーザー インスタンスを所有するプリンシパルの SID (セキュリティ識別子) です。 この値は、Windows SID と一致します。|  
@@ -53,13 +54,13 @@ ms.lasthandoff: 05/23/2018
 |**os_process_id**|**Int**|このユーザー インスタンスに対応する、Windows プロセスのプロセス番号です。|  
 |**os_process_creation_date**|**DateTime**|このユーザー インスタンス プロセスの前回の開始日付と時刻です。|  
 |**heart_beat**|**nvarchar(5)**|このユーザー インスタンスの現在の状態 (ALIVE または DEAD) です。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
- 動的管理ビューの詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブック。  
+## <a name="remarks"></a>コメント  
+ 動的管理ビューの詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 ## <a name="see-also"></a>参照  
  [管理者以外のユーザー インスタンス](http://msdn.microsoft.com/en-us/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  

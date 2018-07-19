@@ -1,5 +1,5 @@
 ---
-title: コンス トラクター関数 (XQuery) |Microsoft ドキュメント
+title: コンス トラクター関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6db36cc2dbd664869633d1d2f198684098ba29b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077732"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059736"
 ---
 # <a name="constructor-functions-xquery"></a>コンストラクター関数 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,8 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  任意の組み込み XSD 型。  
   
-## <a name="remarks"></a>解説  
- コンストラクターは基本データ型、および派生されたアトミック XSD 型に対してサポートされています。 ただしのサブタイプ**xs:duration**が含まれている**xdt:yearMonthDuration と xdt:dayTimeDuration**、および**xs:QName**、 **xs:NMTOKEN**、および**xs:NOTATION**はサポートされていません。 関連するスキーマ コレクションで利用可能なユーザー定義のアトミック型も使用できます。ただし、それらは次に示す型から直接または間接的に派生されている必要があります。  
+## <a name="remarks"></a>コメント  
+ コンストラクターは基本データ型、および派生されたアトミック XSD 型に対してサポートされています。 ただしのサブタイプ**xs:duration**、含む**xdt:yearMonthDuration と xdt:dayTimeDuration**と**xs:QName**、 **xs:NMTOKEN**、および**xs:NOTATION**はサポートされていません。 関連するスキーマ コレクションで利用可能なユーザー定義のアトミック型も使用できます。ただし、それらは次に示す型から直接または間接的に派生されている必要があります。  
   
 #### <a name="supported-base-types"></a>サポートされている基本データ型  
  サポートされている基本データ型を次に示します。  
@@ -143,12 +143,12 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   引数が別の型のリテラルである場合、式はコンパイル時に評価されます。 値が型に関する制約を満たしていない場合、空のシーケンスが返されます。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 関数を使用して、製品の説明の古いバージョンを取得する  
- この例ではサンプルの XML ドキュメントが最初に割り当てられた、 **xml**型の変数です。 このドキュメントには 3 つのサンプル <`ProductDescription`> 要素が含まれます。各要素には <`DateCreated`> 子要素が含まれています。  
+ サンプルの XML ドキュメントに最初に割り当てられている、この例では、 **xml**型の変数。 このドキュメントには 3 つのサンプル <`ProductDescription`> 要素が含まれます。各要素には <`DateCreated`> 子要素が含まれています。  
   
- 次に、その変数がクエリされ、指定された日時より前に作成された製品の説明だけを取得します。 比較の目的で、クエリを使用して、 **xs:dateTime()** コンス トラクター関数を日付を入力します。  
+ 次に、その変数がクエリされ、指定された日時より前に作成された製品の説明だけを取得します。 比較のために、クエリを使用して、 **xs:dateTime()** コンス トラクター関数を日付を入力します。  
   
 ```  
 declare @x xml  
@@ -183,7 +183,7 @@ select @x.query('
   
 -   FOR ... WHERE ループ構造を使用して、取得、 \<ProductDescription > WHERE 句で指定された条件を満たす要素。  
   
--   **DateTime()** コンス トラクター関数を構築するために使用**dateTime**適切に比較できるように、値を入力します。  
+-   **DateTime()** コンス トラクター関数が構築に使用される**dateTime**適切に比較できる型の値。  
   
 -   この後、クエリは結果の XML を出力します。 一連の属性を構成しているため、XML の構造にコンマとかっこが使用されています。  
   

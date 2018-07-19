@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ce8af4df2491d6b80acf931ae769b1a0299504b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260295"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056090"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  指定されたリソース プールに指定された[!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースをバインドします。 実行する前に、データベースとリソース プールの両方が存在する必要があります`sys.sp_xtp_bind_db_resource_pool`です。  
+  指定されたリソース プールに指定された[!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースをバインドします。 実行する前に、データベースとリソース プールの両方が存在する必要があります`sys.sp_xtp_bind_db_resource_pool`します。  
   
  このシステム ストアド プロシージャは、resource_pool_name で識別されるリソース ガバナー プールと database_name によって識別されるデータベースのバインドを作成します。 データベースは、バインド時にメモリ最適化オブジェクトを持つ必要はありません。 メモリ最適化オブジェクトが存在しない場合、リソース プールからメモリは取得されません。 このバインディングがによって割り当てられたメモリを管理するリソース ガバナーを使用する[!INCLUDE[hek_2](../../includes/hek-2-md.md)]以下に示すようにアロケーター。  
   
@@ -60,7 +60,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
 ## <a name="messages"></a>メッセージ  
  エラーが発生したときに`sp_xtp_bind_db_resource_pool`これらのメッセージのいずれかを返します。  
   
- **データベースが存在しません**  
+ **データベースは存在しません**  
  Database_name は既存のデータベースを参照する必要があります。 指定した ID のデータベースが存在しない場合、次のメッセージが返されます。   
 *データベース ID %d は存在しません。このバインディングの有効なデータベース ID を使用してください。*  
   
@@ -78,18 +78,18 @@ Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, L
 Binding to a resource pool is not supported for system database 'master'. This operation can only be performed on a user database.  
 ```  
   
-**リソース プールは存在しません**  
- Resource_pool_name で識別されるリソース プールが実行する前に存在する必要があります`sp_xtp_bind_db_resource_pool`です。  指定した ID のプールが存在しない場合、次のエラーが返されます。  
-*リソース プール %s は存在しません。有効なリソース プール名を入力してください。*  
+**リソース プールが存在しません**  
+ Resource_pool_name で識別されるリソース プールが実行する前に存在する必要があります`sp_xtp_bind_db_resource_pool`します。  指定した ID のプールが存在しない場合、次のエラーが返されます。  
+*リソース プール %s は存在しません。有効なリソース プールの名前を入力してください。*  
   
 ```  
 Msg 41370, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Resource pool 'Pool_Hekaton' does not exist or resource governor has not been reconfigured.  
 ```  
   
-**Pool_name が予約されたシステム プールを指します**  
+**Pool_name が予約されたシステム プールには**  
  "INTERNAL" および "DEFAULT" というプール名はシステム プール用に予約されています。  明示的にデータベースをこれらにバインドするのは無効です。  システム プール名を入力した場合、次のエラーが返されます。  
-*リソース プール %s は、システム リソースのプールです。この手順を使用してデータベースにシステム リソース プールは明示的にバインドされません可能性があります。*  
+*リソース プール %s は、システム リソース プールです。この手順を使用してデータベースにシステム リソース プールは明示的にバインドしないことがあります。*  
   
 ```  
 Msg 41373, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -97,8 +97,8 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **データベースは既に別のリソース プールにバインドされています**  
- データベースにバインドできるのは、1 度に 1 つのリソース プールだけです。 データベースを別のリソース プールにバインドする前に、リソース プールに対するデータベースのバインドを明示的に削除する必要があります。 参照してください[sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)です。  
-*データベース %s は既にをリソース プール %s にバインドされています。新しいバインディングを作成する前にバインドを解除する必要があります。*  
+ データベースにバインドできるのは、1 度に 1 つのリソース プールだけです。 データベースを別のリソース プールにバインドする前に、リソース プールに対するデータベースのバインドを明示的に削除する必要があります。 参照してください[sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)します。  
+*データベース %s は、既にをリソース プール %s にバインドされています。新しいバインドを作成する前にバインドを解除する必要があります。*  
   
 ```  
 Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 54  
@@ -120,7 +120,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  バインドは、データベースが次にオンラインになったときに有効になります。  
  
- B. 上の例をいくつかの基本的なチェックを含むの展開された例です。  次のコード実行[!INCLUDE[tsql](../../includes/tsql-md.md)]で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. 上記の例をいくつかの基本的なチェックを含むの展開の例です。  次の実行[!INCLUDE[tsql](../../includes/tsql-md.md)]で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -150,7 +150,7 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 -   `database_name` で指定するデータベースと `resource_pool_name` で指定するリソース プールはどちらも、バインドする前に存在している必要があります。  
   
@@ -158,6 +158,6 @@ END
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブルを持つデータベースのリソース プールへのバインド](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_unbind_db_resource_pool & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

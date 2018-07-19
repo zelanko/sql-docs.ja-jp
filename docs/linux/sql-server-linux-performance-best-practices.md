@@ -1,5 +1,5 @@
 ---
-title: Linux 上の SQL Server のパフォーマンスのベスト プラクティス |Microsoft ドキュメント
+title: SQL Server on Linux のパフォーマンスのベスト プラクティス |Microsoft Docs
 description: このトピックでは、Linux で SQL Server 2017 を実行する場合の、パフォーマンスのベスト プラクティスとガイドラインを提供します。
 author: rgward
 ms.author: bobward
@@ -12,10 +12,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 4725a8043be3aad99f3432f99d00f6279a9d814d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057416"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のパフォーマンスについてのベスト プラクティスと構成ガイドライン
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/19/2018
 
 このトピックでは、Linux 上の SQL Server に接続するデータベース アプリケーションのパフォーマンスを最大化するための、ベスト プラクティスと推奨事項を提供します。 これらの推奨事項は、Linux プラットフォームで実行されている場合に特化しています。 インデックスのデザインなどの、すべての一般的な SQL Server の推奨事項は引き続き適用されます。
 
-次のガイドラインには、SQL Server と Linux のオペレーティング システムの両方を構成するための推奨事項が含まれています。
+次のガイドラインには、SQL Server と Linux オペレーティング システムの両方を構成するための推奨事項が含まれています。
 
 ## <a name="sql-server-configuration"></a>SQL Server の構成
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/19/2018
 
 次の Linux オペレーティング システム構成設定を使用して、SQL Server インストール環境のパフォーマンスを最大限にすることを検討してください。
 
-### <a name="kernel-settings-for-high-performance"></a>高パフォーマンスのカーネル設定
+### <a name="kernel-settings-for-high-performance"></a>高パフォーマンス用のカーネル設定
 これらは、SQL Server インストール環境の高パフォーマンスとスループットに関連する、Linux オペレーティング システムで推奨される設定です。 これらの設定を構成するプロセスについては Linux オペレーティング システムのドキュメントを参照してください。
 
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/19/2018
 > [!Note]
 > Red Hat Enterprise Linux (RHEL) ユーザーの場合、スループットのパフォーマンス プロファイルは自動的に (C-States を除く)、これらの設定を構成します。
 
-次の表は、CPU の設定に関する推奨事項を示します。
+次の表では、CPU 設定に関する推奨事項を示します。
 
 | 設定 | 値 | 詳細情報 |
 |---|---|---|
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/19/2018
 | min_perf_pct | 100 | intel p-state のドキュメントを参照してください |
 | C-States | C1 Only | C-States が C1 のみに設定されていることを確認する方法については、Linux またはシステムのマニュアルを参照してください |
 
-次の表は、ディスクの設定に関する推奨事項を示します。
+次の表では、ディスクの設定に関する推奨事項を示します。
 
 | 設定 | 値 | 詳細情報 |
 |---|---|---|
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/19/2018
 sysctl -w kernel.numa_balancing=0
 ```
 
-### <a name="kernel-settings-for-virtual-address-space"></a>カーネルの仮想アドレス空間の設定
+### <a name="kernel-settings-for-virtual-address-space"></a>仮想アドレス空間のカーネル設定
 
 既定の設定の**vm.max_map_count** (65536) はSQL Server インストール環境では十分な大きさではない可能性があります。 この値を (上限となる) 256K に変更します。
 
@@ -109,8 +110,8 @@ SQL Server のデータおよびログ ファイルを格納するファイル �
 
 仮想マシンで SQL Server on Linux を実行している場合は、仮想マシン用に予約されたメモリの量を修正するオプションが選択されていることを確認します。 HYPER-V 動的メモリなどの機能を使用しないでください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)です。
+パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)します。
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux の SQL Server の概要](sql-server-linux-overview.md)です。

@@ -1,5 +1,5 @@
 ---
-title: IsDescendant (DMX) |Microsoft ドキュメント
+title: IsDescendant (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c33a607587ee19de0f47942cd2c1e5b350229a88
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061040"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ IsDescendant(<NodeID>)
  Boolean 型。  
   
 ## <a name="remarks"></a>コメント  
- **IsDescendant**だけで使われる[SELECT FROM&#60;モデル&#62;です。コンテンツ&#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md)と[SELECT FROM&#60;モデル&#62;です。DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md)クエリ。  
+ **IsDescendant**でのみ使用が[SELECT FROM&#60;モデル&#62;します。コンテンツ&#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md)と[SELECT FROM&#60;モデル&#62;します。DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md)クエリ。  
   
 ## <a name="examples"></a>使用例  
  次の例は、IsDescendant 関数に指定されたノードの子孫であるケースをすべて返します。  

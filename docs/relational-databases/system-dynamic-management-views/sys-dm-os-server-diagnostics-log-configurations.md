@@ -26,24 +26,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f6b46b93d8a781dc6393c8482b0258411050a19c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058279"
 ---
 # <a name="sysdmosserverdiagnosticslogconfigurations"></a>sys.dm_os_server_diagnostics_log_configurations
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  現在の構成で 1 つの行を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター診断ログです。 診断ログのオンまたはオフ、ログ ファイルの場所、数、およびサイズは、これらのプロパティ設定によって決まります。  
+  1 つの行の現在の構成を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター診断ログ。 診断ログのオンまたはオフ、ログ ファイルの場所、数、およびサイズは、これらのプロパティ設定によって決まります。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |is_enabled|**bit**|ログ記録がオンとオフのどちらであるかを示します。<br /><br /> 1 = 診断ログはオンです。<br /><br /> 0 = 診断ログはオフです。|  
 |max_size|**int**|各診断ログの最大サイズ (MB 単位)。 既定値は 100 MB です。|  
 |max_files|**int**|新しい診断ログとして再利用されるまでにコンピューターに格納できる診断ログ ファイルの最大数。|  
 |path|**nvarchar(260)**|診断ログの場所を示すパス。 既定の場所は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのインストール フォルダー内の \<\MSSQL\Log> です。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  SQL Server フェールオーバー クラスター インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords_by_document (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_fts_index_keywords_by_document (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 58377295a7bccadd1a1d273ba45469e817408949
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058263"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -66,15 +67,15 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列|データ型|Description|  
+|[列]|データ型|説明|  
 |------------|---------------|-----------------|  
-|キーワード (keyword)|**nvarchar (4000)**|フルテキスト インデックスに格納されているキーワードの 16 進数表記です。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの終了を示す特殊文字を表します。|  
-|display_term|**nvarchar (4000)**|人間が判読できる形式のキーワードです。 この形式は、フルテキスト インデックスに格納されている内部形式から派生しています。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの終了を示す特殊文字を表します。|  
+|キーワード (keyword)|**nvarchar (4000)**|フルテキスト インデックスに格納されているキーワードの 16 進数表記です。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの終了位置を示す特殊文字を表します。|  
+|display_term|**nvarchar (4000)**|人間が判読できる形式のキーワードです。 この形式は、フルテキスト インデックスに格納されている内部形式から派生しています。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの終了位置を示す特殊文字を表します。|  
 |column_id|**int**|現在のキーワードのフルテキスト インデックスが作成された列の ID です。|  
 |document_id|**int**|現在の用語のフルテキスト インデックスが作成されたドキュメントまたは行の ID です。 この ID は、ドキュメントまたは行のフル テキスト キー値に対応します。|  
-|occurrence_count|**int**|ドキュメントまたは行で示されている現在のキーワードのオカレンス数**document_id**です。 ときに '*search_property_name*' が指定されている occurrence_count ドキュメントまたは行内の指定した検索プロパティの現在のキーワードのオカレンス数のみが表示されます。|  
+|occurrence_count|**int**|ドキュメントまたは行で示される現在のキーワードの出現回数**document_id**します。 ときに '*search_property_name*' が指定されている occurrence_count ドキュメントまたは行内の指定した検索プロパティの現在のキーワードのオカレンス数のみが表示されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sys.dm_fts_index_keywords_by_document から返される情報は、特に次の項目を確認するのに役立ちます。  
   
 -   フルテキスト インデックスに格納されているキーワードの合計数。  
@@ -93,7 +94,7 @@ sys.dm_fts_index_keywords_by_document
   
  フルテキスト キー列が整数データ型 (推奨されるデータ型) の場合、document_id はベース テーブルのフルテキスト キー値に直接マップされます。  
   
- 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この例では、によって返された結果をこのビューを結合する必要が dm_fts_index_keywords_by_document から返されるベース テーブルの行を識別するため[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)です。 結合の前に、このストアド プロシージャの出力を一時テーブルに格納します。 その後、dm_fts_index_keywords_by_document の document_id 列と、このストアド プロシージャから返される DocId 列を結合します。 なお、**タイムスタンプ**列は、によって自動生成されるために、挿入時にの値を受け取ることはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 したがって、**タイムスタンプ**に列を変換する必要があります**varbinary (8)** 列です。 次の例はこれらの手順を示しています。 この例では*table_id* 、テーブルの id を指定します*database_name* 、データベースの名前を指定し、 *table_name*テーブルの名前を指定します。  
+ 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この場合、によって返される結果と、このビューを結合する必要が dm_fts_index_keywords_by_document から返されるベース テーブルの行を識別するために[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)します。 結合の前に、このストアド プロシージャの出力を一時テーブルに格納します。 その後、dm_fts_index_keywords_by_document の document_id 列と、このストアド プロシージャから返される DocId 列を結合します。 なお、**タイムスタンプ**列は、によって自動生成されるために、挿入時の値を受け取ることはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 そのため、**タイムスタンプ**に列を変換する必要があります**varbinary (8)** 列。 次の例はこれらの手順を示しています。 この例で*table_id*は、テーブルの ID です*database_name* 、データベースの名前を指定し、 *table_name*テーブルの名前を指定します。  
   
 ```  
 USE database_name;  
@@ -113,7 +114,7 @@ GO
   
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  フルテキスト インデックスに含まれる列に対する SELECT 権限と、CREATE FULL TEXT CATALOG 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -122,7 +123,7 @@ GO
  次の例は、ドキュメント レベルでフルテキスト インデックスのコンテンツを表示、`HumanResources.JobCandidate`のテーブル、`AdventureWorks2012`サンプル データベース。  
   
 > [!NOTE]  
->  提示された例を実行することによってこのインデックスを作成することができます、`HumanResources.JobCandidate`テーブルに[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)です。  
+>  このインデックスを作成するには使用されている例を実行することによって、`HumanResources.JobCandidate`テーブルに[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)します。  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   
@@ -132,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索とセマンティック検索の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [フル テキスト検索](../../relational-databases/search/full-text-search.md)   
+ [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [sp_fulltext_keymappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   

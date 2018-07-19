@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.sp_set_parameter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238339"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058830"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> 引数  
  @parameter_name  
- 値を設定するパラメーターの名前。 @parameter_name nvarchar (128)。 使用可能なパラメーター名は**SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および**StorageOperationDebugXevent**です。  
+ 値を設定するパラメーターの名前。 @parameter_name nvarchar (128) です。 使用可能なパラメーター名は**SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および**StorageOperationDebugXevent**します。  
   
  @parameter_value  
  パラメーターに設定する値。 @parameter 値は、nvarchar (128) です。  許容されているパラメーターの名前と値のペアは次のとおりです。  
@@ -73,10 +73,10 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="best-practices"></a>ベスト プラクティス  
  ステートメントまたはルーチンの実行時にユーザーが知っておく必要があるベスト プラクティスを説明するセクション (省略可) です。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
- 必要があります**EXECUTE**に対するアクセス許可**managed_backup.sp_set_parameter**ストアド プロシージャです。  
+### <a name="permissions"></a>アクセス許可  
+ 必要があります**EXECUTE**に対する**managed_backup.sp_set_parameter**ストアド プロシージャ。  
   
 ## <a name="examples"></a>使用例  
  次の例では、運用およびデバッグの拡張イベントを有効にします。  

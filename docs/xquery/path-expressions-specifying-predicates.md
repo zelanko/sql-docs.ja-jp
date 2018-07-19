@@ -1,5 +1,5 @@
 ---
-title: パス式のステップで述語の指定 |Microsoft ドキュメント
+title: パス式のステップで述語の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 83e100d49f09616c429a1dd6b42550beb8bbcfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058522"
 ---
-# <a name="path-expressions---specifying-predicates"></a>パス式で述語の指定
+# <a name="path-expressions---specifying-predicates"></a>パス式 - 述語の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  」の説明に従って[XQuery パス式](../xquery/path-expressions-xquery.md)パス式での軸ステップには、次のコンポーネントが含まれています。  
+  」の説明に従って[XQuery パス式](../xquery/path-expressions-xquery.md)パス式の軸ステップには、次のコンポーネントが含まれています。  
   
--   [軸](../xquery/path-expressions-specifying-axis.md)です。  
+-   [軸](../xquery/path-expressions-specifying-axis.md)します。  
   
--   ノード テスト。 詳細については、次を参照してください。[パス式のステップでノードのテストを指定する](../xquery/path-expressions-specifying-node-test.md)です。  
+-   ノード テスト。 詳細については、次を参照してください。[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)します。  
   
 -   0 個以上の述語。 これは省略可能です。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33078059"
 ## <a name="predicates"></a>述語  
  述語は、指定されたテストを適用して、ノード シーケンスをフィルター処理するために使用されます。 述語式は、角かっこで囲み、パス式の最後のノードにバインドされます。  
   
- たとえば、あると想定の SQL パラメーター値 (x)、 **xml**データ型が宣言されている、次に示すようにします。  
+ たとえば、あると想定の SQL パラメーター値 (x)、 **xml**次に示すように、データ型が宣言します。  
   
 ```  
 declare @x xml  
@@ -78,7 +78,7 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- どの式でも、述語は適用対象のパス式のノードにバインドされていることに注意してください。 たとえば、最初のパス式が 1 つ目を選択 <`Name`> 要素内での各///people/person ノードと、提供された XML インスタンスは、次を返します。  
+ どの式でも、述語は適用対象のパス式のノードにバインドされていることに注意してください。 たとえば、最初のパス式が 1 つ目を選択 <`Name`> 各//people/person ノード内と、指定された XML インスタンス要素は、次を返します。  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
@@ -96,7 +96,7 @@ select @x.query('/People[1]/Person/Name')
 select @x.query('(/People/Person/Name)[1]')  
 ```  
   
- この例では、述語が適用される順序が変わります。 これで、かっこで囲まれたパス (/People/Person/Name) が最初に評価された後に、このパスに一致するすべてのノードを含むセットに述語操作 [1] が適用されます。 かっこでは、操作の順序がなければ異なるととして [1] が適用される点で、`child::Name`ノード テストは、最初のパス式の例に似ています。  
+ この例では、述語が適用される順序が変わります。 これで、かっこで囲まれたパス (/People/Person/Name) が最初に評価された後に、このパスに一致するすべてのノードを含むセットに述語操作 [1] が適用されます。 かっこのない操作の順序が異なる場合として [1] が適用されることで、`child::Name`ノード テストの最初のパス式の例に似ています。  
   
 ### <a name="quantifiers-and-predicates"></a>量化子と述語  
  量化子は、述語自体の角かっこ内で、複数回使用および追加できます。 たとえば、前の例を使用すると、次の式は複雑な述語のサブ式内で複数の量化子を使用する有効な式です。  
@@ -142,11 +142,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     この式のパス式は、LotSize 属性が指定されている <`Location`> 要素ノードのみを返します。 述語が、特定の空のシーケンスを返すかどうかは <`Location`>、ワーク センターの場所が結果に返されません。  
+     この式のパス式は、LotSize 属性が指定されている <`Location`> 要素ノードのみを返します。 述語が、特定の空のシーケンスを返すかどうかは <`Location`>、ワーク センターの場所が、結果で返されないこと。  
   
-2.  値のみできます xs:integer、xs:Boolean、またはノードの述語\*です。 ノードの\*述語を任意のノードがある場合は True および False 空のシーケンスを評価します。 double 型や float 型など、他の数値型では、静的な型指定エラーが生成されます。 式の述語の真偽値は、結果の整数がコンテキストの位置の値と同じ場合にのみ、True になります。 唯一の整数リテラル値も、および**last()** 関数が 1 にフィルター処理されたステップ式の基数を減らします。  
+2.  述語の値では、なります xs:integer、xs:Boolean、またはノード\*します。 ノードの\*、任意のノードがある場合は True と False 空のシーケンスに、述語が評価されます。 double 型や float 型など、他の数値型では、静的な型指定エラーが生成されます。 式の述語の真偽値は、結果の整数がコンテキストの位置の値と同じ場合にのみ、True になります。 唯一の整数リテラル値も、および**last()** 関数が 1 のフィルター処理されたステップ式のカーディナリティを削減します。  
   
-     たとえば、次のクエリは、3 番目の子要素ノードを取得します。、<`Features`> 要素。  
+     たとえば、次のクエリがの 3 番目の子要素ノードを取得します <`Features`> 要素。  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -168,7 +168,7 @@ WHERE ProductModelID=7
   
 3.  述語式の値が Boolean 型の単純なデータ型値である場合、述語の真偽値は、述語式の値と同じになります。  
   
-     に対して、次のクエリを指定するなど、 **xml**という XML インスタンスを顧客調査 XML インスタンスを保持する型の変数です。 このクエリは、子供がいる顧客を取得します。 このクエリでが\<HasChildren > 1\</HasChildren >。  
+     に対して次のクエリを指定するなど、 **xml**顧客調査 XML インスタンスという XML インスタンスを保持する型の変数。 このクエリは、子供がいる顧客を取得します。 このクエリでが\<HasChildren > 1\</HasChildren >。  
   
     ```  
     declare @x xml  
@@ -199,9 +199,9 @@ WHERE ProductModelID=7
   
      上のクエリに関して、次の点に注意してください。  
   
-    -   内の式、**の**ループに 2 つの手順と、2 番目の手順は、述語を指定します。 この述語の値は、Boolean 型の値です。 この値が True の場合は、述語の真偽値も True になります。  
+    -   内の式、**の**ループが 2 つの手順と、2 番目の手順は、述語を指定します。 この述語の値は、Boolean 型の値です。 この値が True の場合は、述語の真偽値も True になります。  
   
-    -   クエリを返します、<`Customer`> が述語の値が True の場合、子要素の\<Survey > ドキュメント ルートの子要素です。 結果を次に示します。  
+    -   クエリが返す、<`Customer`> の子要素を持つ述語の値が True の場合の\<アンケート > ドキュメント ルートの子要素。 結果を次に示します。  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -209,7 +209,7 @@ WHERE ProductModelID=7
   
 4.  述語式の値が少なくとも 1 つのノードを含むシーケンスの場合、述語の真偽値は True になります。  
   
- たとえば、次のクエリは XML カタログの説明には、少なくとも 1 つの機能子要素にはが含まれています製品モデルの ProductModelID を取得、<`Features`> に関連付けられている名前空間からの要素、 **wm**プレフィックス。  
+ たとえば、次のクエリが XML カタログの説明には、少なくとも 1 つの機能子要素にはが含まれています製品モデルの ProductModelID を取得します <`Features`> に関連付けられている名前空間からの要素、 **wm**プレフィックス。  
   
 ```  
 SELECT ProductModelID  
@@ -223,11 +223,11 @@ WHERE CatalogDescription.exist('
   
  上のクエリに関して、次の点に注意してください。  
   
--   WHERE 句を指定します、 [exist() メソッド (XML データ型)](../t-sql/xml/exist-method-xml-data-type.md)です。  
+-   WHERE 句を指定します、 [exist() メソッド (XML データ型)](../t-sql/xml/exist-method-xml-data-type.md)します。  
   
--   内のパス式、 **exist()** メソッドは、2 番目のステップで述語を指定します。 述語式が少なくとも 1 つの機能のシーケンスを返す場合、この述語式の真偽値は True になります。 この場合、ため、 **exist()** メソッドが True を返す、ProductModelID が返されます。  
+-   内のパス式、 **exist()** メソッドは、2 番目のステップで述語を指定します。 述語式が少なくとも 1 つの機能のシーケンスを返す場合、この述語式の真偽値は True になります。 この場合は、ため、 **exist()** メソッドが True を返す、ProductModelID が返されます。  
   
 ## <a name="static-typing-and-predicate-filters"></a>静的な型指定フィルターおよび述語フィルター  
- 述語は、静的に推定される式の型にも影響する場合があります。 整数リテラル値、および**last()** 関数は、多くても 1 つのフィルター処理されたステップ式の基数を減らします。  
+ 述語は、静的に推定される式の型にも影響する場合があります。 整数リテラル値、および**last()** 関数は、最大で 1 つのフィルター処理されたステップ式のカーディナリティを削減します。  
   
   

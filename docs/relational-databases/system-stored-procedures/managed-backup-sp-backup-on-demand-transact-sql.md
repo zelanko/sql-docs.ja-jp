@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) |Microsoft ドキュメント
+title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,22 +26,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d95bdd7fa337598c289aaa7a958c33513eec12d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058040"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   要求[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を指定されたデータベースのバックアップを実行します。  
   
- このストアド プロシージャを使用すると、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で構成されるデータベースに対してアドホック バックアップを実行できます。 これにより、バックアップのチェーンが中断し、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]プロセスは認識し、バックアップは同じ Windows Azure Blob ストレージ コンテナーに格納します。  
+ このストアド プロシージャを使用すると、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で構成されるデータベースに対してアドホック バックアップを実行できます。 こうことで、バックアップ チェーンが中断し、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]プロセスは認識し、バックアップは同じ Windows Azure Blob ストレージ コンテナーに格納します。  
   
  バックアップが正常に完了すると、バックアップ ファイルの完全なパスが返されます。 これには、バックアップ操作の結果として作成された新しいバックアップ ファイルの名前と場所が含まれます。  
   
- 場合、エラーが返されます[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]のバックアップを実行中は、型指定されたデータベースを指定します。 この場合、返されるエラー メッセージには、現在のバックアップのアップロード先となるバックアップ ファイルの完全なパスが含まれます。  
+ 場合、エラーが返されます[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]のバックアップを実行中は、指定されたデータベースの型を指定します。 この場合、返されるエラー メッセージには、現在のバックアップのアップロード先となるバックアップ ファイルの完全なパスが含まれます。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,21 +55,21 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> 引数  
  @database_name  
- バックアップの実行対象となるデータベースの名前。 @database_nameは**SYSNAME**です。  
+ バックアップの実行対象となるデータベースの名前。 @database_nameは**SYSNAME**します。  
   
  @type  
- 実行するバックアップの種類: Database または Log。 @typeパラメーターは**nvarchar (32)** です。  
+ 実行するバックアップの種類: Database または Log。 @typeパラメーターが**nvarchar (32)** します。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
- メンバーシップが必要**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対するアクセス許可**sp_deletebackuphistory**ストアド プロシージャです。  
+### <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対する**sp_deletebackuphistory**ストアド プロシージャ。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、データベース "TestDB" に対してデータベース バックアップを要求します。 このデータベースでは[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]有効にします。  
+ 次の例では、データベース "TestDB" に対してデータベース バックアップを要求します。 このデータベースでは[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にします。  
   
 ```  
 Use MSDB  
