@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 33754b46bbad95b3194ca9e8c0087e93bba2d93c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970718"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087274"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,15 +47,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@tsql =** ] **'***Transact SQL_batch***'**  
+ [  **\@tsql =** ] **'***Transact SQL_batch***'**  
  1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
   
- [  **@params =** ] **N'***パラメーター***'**  
- @params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
+ [  **\@params =** ] **N'***パラメーター***'**  
+ \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
   
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定されたすべてのパラメーターを定義する必要があります@paramsします。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない@paramsは必要ありません。 NULL は、このパラメーターの既定値です。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定されたすべてのパラメーターを定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない\@params は必要ありません。 NULL は、このパラメーターの既定値です。  
   
- [ **@browse_information_mode =** ] *tinyint*  
+ [  **\@browse_information_mode =** ] *tinyint*  
  追加のキー列とソース テーブル情報が返されるかどうかを指定します。 1 に設定すると、各クエリに FOR BROWSE オプションが含まれているように分析されます。 追加のキー列とソース テーブル情報が返されます。  
   
 -   0 に設定すると、情報は返されません。  
@@ -121,11 +121,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**場合は、次のいずれかでエラーが返されます。  
   
--   場合、入力@tsqlは無効な[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 有効性は、解析および分析によって決まりますが、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 クエリの最適化中または実行中に、バッチによるエラーは、決定する際に考慮されないかどうか、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチが有効です。  
+-   場合、入力\@tsql が有効ではありません[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 有効性は、解析および分析によって決まりますが、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 クエリの最適化中または実行中に、バッチによるエラーは、決定する際に考慮されないかどうか、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチが有効です。  
   
--   場合@paramsが NULL でないと、文字列を含むパラメーターの宣言の構文が有効な文字列でないか、1 回以上のパラメーターを宣言する文字列が含まれている場合。  
+-   場合\@1 回以上のパラメーターを宣言する文字列が含まれている場合、またはパラメーターが NULL でないと、パラメーターの宣言の構文が有効な文字列でない文字列が含まれています。  
   
--   場合、入力[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチで宣言されているパラメーターに同じ名前のローカル変数を宣言します@paramsします。  
+-   場合、入力[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチで宣言されているパラメーターに同じ名前のローカル変数を宣言します\@params します。  
   
 -   ステートメント内に一時テーブルが使用されている場合。  
   
@@ -160,7 +160,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set**は間接再帰をサポートしていません。  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行する権限が必要です、@tsql引数。  
+ 実行する権限が必要です、 \@tsql 引数。  
   
 ## <a name="examples"></a>使用例  
   

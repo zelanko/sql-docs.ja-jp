@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 052ea58263c2167035f09d7c81c0e1732c530e03
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280668"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082724"
 ---
 # <a name="general-properties-page-models-report-manager"></a>[全般] プロパティ ページ、モデル (レポート マネージャー)
   モデル定義 (.smdl) ファイルの名前変更、削除、移動、または置換を行うには、レポート モデルの [全般] プロパティ ページを使用します。 モデルの作成者または変更者、および変更日時の詳細がページの上部に表示されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "37280668"
  **名前**  
  モデルの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
- ; ? : @ & = +, $/* \< > |" /  
+ ; ? : \@ & = +, $/* \< > |" /  
   
  **[説明]**  
  モデルの説明を入力します。 この説明は、モデルへのアクセス権を持つユーザーの [コンテンツ] ページに表示されます。  

@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974497"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085474"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @tsql =] ' Transact SQL_batch'  
+ [ \@tsql =] ' Transact SQL_batch'  
  1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 Nvarchar (n) または nvarchar (max)、transact SQL_batch 可能性があります。  
   
- [ @params =] 'N'parameters  
- *@params* これは、sp_executesql と同様に、TRANSACT-SQL バッチのパラメーターの宣言文字列を提供します。 パラメーターには、nvarchar (n) または nvarchar (max) があります。  
+ [ \@params =] 'N'parameters  
+ *\@params* TRANSACT-SQL バッチには、sp_executesql と同様に、パラメーターの宣言文字列を提供します。 パラメーターには、nvarchar (n) または nvarchar (max) があります。  
   
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定されたすべてのパラメーターを定義する必要があります *@params*します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない*@params*は必要ありません。 NULL は、このパラメーターの既定値です。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定されたすべてのパラメーターを定義する必要があります *\@params*します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない *\@params*は必要ありません。 NULL は、このパラメーターの既定値です。  
   
 ## <a name="return-value"></a>戻り値  
  0 は成功を示します。 その他は、エラーを示します。  
@@ -82,7 +82,7 @@ sp_describe_parameter_encryption
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|結果セット内の行の id。|  
-|**parameter_name**|**sysname**|指定されたパラメーターのいずれかの名前、 *@params*引数。|  
+|**parameter_name**|**sysname**|指定されたパラメーターのいずれかの名前、  *\@params*引数。|  
 |**column_encryption_algorithm**|**tinyint**|パラメーターの列に対して構成されている暗号化アルゴリズムを示すコードに対応します。 現在サポートされている値: 2 **AEAD_AES_256_CBC_HMAC_SHA_256**します。|  
 |**column_encryption_type**|**tinyint**|パラメーターの列に対して構成されている暗号化の種類を示すコードに対応します。 サポートされている値は次のとおりです。<br /><br /> 0 – プレーン テキスト (列は暗号化されません)<br /><br /> 1 – ランダムな暗号化<br /><br /> 2 – 明確な暗号化します。|  
 |**column_encryption_key_ordinal**|**int**|最初の結果内の行のコードを設定します。 参照先の行、列に対して構成された列暗号化キーの説明、パラメーターに対応しています。|  
@@ -160,7 +160,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|@c1|1|1|  
+|1|\@c1|1|1|  
   
  (結果を続行します。)  
   

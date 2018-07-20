@@ -4,58 +4,57 @@ description: SQL Operations Studio (プレビュー) で洞察ウィジェット
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
+ms.technology: ssops
 ms.reviewer: alayu; sstein
 ms.suite: sql
-ms.prod_service: sql-tools
-ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article"
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77f34ceebb4f02c829b2df3efcae5e64c2eaa1bf
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 79918d899fa978404dde63bf9257ffb9fc52d185
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235931"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082854"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとの洞察ウィジェットを持つデータベースを管理します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとの洞察のウィジェットでのデータベースを管理します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Insight ウィジェットがサーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察の視覚エフェクトに変えます。 
+洞察のウィジェットは、サーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察に満ちた視覚エフェクトに変換します。 
 
-洞察は、カスタマイズ可能なグラフおよびサーバーとデータベースの監視ダッシュ ボードに追加するグラフです。 サーバーおよびデータベースの概要の洞察を表示し、詳細については、ドリルを定義する管理操作を起動します。 
+インサイトは、カスタマイズ可能なチャートやグラフ サーバーとデータベースの監視ダッシュ ボードに追加するには。 サーバーをデータベースの概要の詳細情報の表示し、詳細については、ドリルダウンを定義する管理アクションを起動します。 
 
-優れたサーバーおよびデータベース管理ダッシュ ボードに次の例と同様にビルドするには。
+すばらしいサーバーおよびデータベース管理ダッシュ ボード例を次のようなをビルドすることができます。
 
 ![データベース ダッシュ ボード](media/insight-widgets/database-dashboard.png)
 
 
-操作を開始し、洞察のウィジェットのさまざまな種類の作成を開始には、次のチュートリアルを確認します。
+移動し、洞察のウィジェットのさまざまな種類の作成を開始には、次のチュートリアルをご覧ください。
 
 - [カスタム インサイト ウィジェットをビルドします。](tutorial-build-custom-insight-sql-server.md)
-- *組み込みの洞察ウィジェットを有効にします。*
-   - [パフォーマンス監視のインサイトを有効にします。](tutorial-qds-sql-server.md)
-   - [テーブル領域使用状況情報を得ることを有効にします。](tutorial-table-space-sql-server.md)
+- *組み込みの洞察のウィジェットを有効にします。*
+   - [パフォーマンスの洞察の監視を有効にします。](tutorial-qds-sql-server.md)
+   - [テーブル領域使用状況の分析情報を有効にします。](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>SQL クエリ 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 別の言語または高負荷のユーザー インターフェイスの JSON の最小構成でできるだけ多く T-SQL を使用するようにまだを行わずに済みますしようとしています。 T-SQL で洞察ウィジェットを構成するには、洞察に富んだウィジェットに変換できる便利なの T-SQL クエリの既存のソースの膨大な数は活用します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] まだ他の言語や複雑なユーザー インターフェイスの最小限の JSON 構成で可能な限り T-SQL を使用するための概要を回避しようとしています。 T-SQL で洞察のウィジェットを構成するには、洞察に富むウィジェットに変換できる便利な T-SQL クエリの既存のソースの数を数えきれないほどが利用しています。
 
-Insight ウィジェットは、1 つまたは 2 つの T-SQL クエリから構成されます。
-* *Insight ウィジェットのクエリ*必須であり、ウィジェットで表示されるデータを返すクエリです。
-* *情報の詳細クエリ*はインサイトの詳細 ページを作成するかどうかにのみ必要です。
+洞察のウィジェットは、1 つまたは 2 つの T-SQL クエリから構成されます。
+* *洞察のウィジェットのクエリ*をウィジェットに表示されるデータを返すクエリでありは必須です。
+* *インサイトの詳細のクエリ*がインサイトの詳細ページを作成するかどうかにのみ必要です。
 
-Insight ウィジェットのクエリでは、数、グラフ、またはグラフを表示するデータセットを定義します。 インサイトの詳細のクエリを使用すると、洞察の詳細 パネルで、表形式で関連するインサイトの詳細情報を一覧表示されます。 
+Insight ウィジェットのクエリは、数、グラフ、またはグラフを表示するデータセットを定義します。 インサイトの詳細のクエリは、インサイトの詳細 パネルで表形式で関連する分析情報の詳細情報を一覧表示に使用されます。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] insight ウィジェットのクエリを実行し、グラフのデータセットにクエリの結果セットをマップし、それを表示します。 ユーザー情報の詳細を開くと、insight 詳細クエリが実行され、ダイアログ ボックス内のグリッド ビューで、結果を出力します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 洞察のウィジェットのクエリを実行します、グラフのデータセットにクエリの結果セットをマップし、それをレンダリングします。 ユーザー分析情報の詳細を開くと、インサイトの詳細のクエリが実行され、ダイアログ ボックスで、グリッド ビューに結果を出力します。
 
-基本的な概念では、T-SQL クエリを記述する方法の数、グラフ、およびグラフ ウィジェットのデータセットとして使用できるようにします。 
+基本的な考え方では、数、グラフ、およびグラフ ウィジェットのデータセットとして使用できるように、方法で T-SQL クエリを作成します。 
 
 ## <a name="summary"></a>[概要]
 
-T-SQL クエリされ、結果セットは、洞察ウィジェットの動作を決定します。 グラフの種類のクエリの記述や、既存のクエリの右側のグラフの種類のマッピングは、効果的な洞察ウィジェットを構築する主要な考慮事項です。
+T-SQL クエリとその結果セットは、洞察のウィジェットの動作を決定します。 グラフの種類のクエリを作成または既存のクエリの右側のグラフの種類のマッピングは、効果的な洞察のウィジェットを構築する重要な考慮事項です。
 
 
 

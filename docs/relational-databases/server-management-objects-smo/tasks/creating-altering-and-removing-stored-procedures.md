@@ -18,19 +18,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 780f289ae9ecd7ccfaeba41d5a9dd07e594441f0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 37eaf9824ac36333208ba538f36a5016ca6b87c8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029776"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084104"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>ストアド プロシージャの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO)、ストアド プロシージャがによって表されるが、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクト。  
   
- 作成、 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo オブジェクトの設定が必要、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>プロパティを[!INCLUDE[tsql](../../../includes/tsql-md.md)]ストアド プロシージャを定義するスクリプト。 パラメーターには @ プレフィックスが必要です。パラメーターは <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> オブジェクトを使用して個別に作成し、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> コレクションに追加する必要があります。  
+ 作成、 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo オブジェクトの設定が必要、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>プロパティを[!INCLUDE[tsql](../../../includes/tsql-md.md)]ストアド プロシージャを定義するスクリプト。 パラメーターが必要な\@プレフィックスし、を使用して個別に作成する必要があります<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>オブジェクトとへの追加、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>のコレクション、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクト。  
   
 ## <a name="example"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  

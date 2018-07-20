@@ -1,5 +1,5 @@
 ---
-title: MSqreader_history (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSqreader_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c060cd85f1b4a36087f3d8756bf0d48c1976110f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 621b446ea1310becc626d35f53a1a9ff523c39d5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006019"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101860"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSqreader_history**ローカル ディストリビューターに関連付けられているキュー リーダー エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSqreader_history**テーブルは、ローカル ディストリビューターに関連付けられているキュー リーダー エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|キュー リーダー エージェントの ID|  
 |**publication_id**|**int**|パブリケーションの ID。|  

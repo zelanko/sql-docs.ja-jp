@@ -24,14 +24,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a9be038053825a62153babc5480db8d4d451716
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 610717618c11fba23199f2e967217f7f50dce88a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408671"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083594"
 ---
-# <a name="stored-procedures---calling"></a>ストアド プロシージャの呼び出し
+# <a name="stored-procedures---calling"></a>ストアド プロシージャ - 呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -44,15 +44,15 @@ ms.locfileid: "37408671"
 > [!NOTE]  
 >  OLE DB で名前付きパラメーターを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを呼び出す場合は、パラメーター名の先頭に '\@' 文字を付ける必要があります。 これは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の制限です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、この制限を MDAC よりも厳密に適用します。  
   
- パラメーターをサポートする、 **ICommandWithParameters**コマンド オブジェクトでインターフェイスが公開されます。 パラメーターを使用するコンシューマー最初パラメーターについて説明します、プロバイダーを呼び出すことによって、 **icommandwithparameters::setparameterinfo**メソッド (必要に応じてを呼び出す呼び出し元のステートメントを準備しますまたは、  **。GetParameterInfo**メソッド)。 次に、バッファーの構造を指定するアクセサーを作成し、このバッファーにパラメーター値を格納します。 最後に、バッファーへのアクセサーおよびへのポインター、ハンドルを渡します**Execute**します。 以降の呼び出しの**Execute**、コンシューマーでは、新しいパラメーターの値を格納、バッファーの呼び出しに**Execute**アクセサー ハンドルとバッファー ポインターを使用します。  
+ パラメーターをサポートするには、コマンド オブジェクトで **ICommandWithParameters** インターフェイスを公開します。 パラメーターを使用するには、コンシューマーは、まず、**ICommandWithParameters::SetParameterInfo** メソッドを呼び出して、プロバイダーにパラメーターを示します (または、必要に応じて、**GetParameterInfo** メソッドを呼び出す呼び出し元ステートメントを準備します)。 次に、バッファーの構造を指定するアクセサーを作成し、このバッファーにパラメーター値を格納します。 最後に、アクセサーのハンドルとバッファーへのポインターを **Execute** に渡します。 その後 **Execute** を呼び出す場合、コンシューマーはバッファーに新しいパラメーター値を格納し、アクセサー ハンドルとバッファー ポインターを指定して **Execute** を呼び出します。  
   
- パラメーターを使用して、一時ストアド プロシージャを呼び出すコマンドを呼び出す必要がありますまず**icommandwithparameters::setparameterinfo**コマンドを正常に準備する前に、パラメーター情報を定義します。 これは、一時ストアド プロシージャの内部名がクライアントで使用される外部名とは異なるので、SQLOLEDB がシステム テーブルをクエリして、一時ストアド プロシージャのパラメーター情報を判断できないためです。  
+ パラメーターを使用する一時ストアド プロシージャを呼び出すコマンドは、まず、**ICommandWithParameters::SetParameterInfo** を呼び出してパラメーター情報を定義しないと、適切に準備されません。 これは、一時ストアド プロシージャの内部名がクライアントで使用される外部名とは異なるので、SQLOLEDB がシステム テーブルをクエリして、一時ストアド プロシージャのパラメーター情報を判断できないためです。  
   
  次に、パラメーターのバインド プロセスの手順を示します。  
   
-1.  DBPARAMBINDINFO 構造体の配列にパラメーター情報を格納します。パラメーター情報には、パラメーター名、パラメーターのデータ型を表すプロバイダー固有の名前、標準のデータ型名などが含まれます。 配列内の構造体 1 つが、1 つのパラメーターを表します。 この配列に渡されます、 **SetParameterInfo**メソッド。  
+1.  DBPARAMBINDINFO 構造体の配列にパラメーター情報を格納します。パラメーター情報には、パラメーター名、パラメーターのデータ型を表すプロバイダー固有の名前、標準のデータ型名などが含まれます。 配列内の構造体 1 つが、1 つのパラメーターを表します。 その後、この配列は **SetParameterInfo** メソッドに渡されます。  
   
-2.  呼び出す、 **icommandwithparameters::setparameterinfo**メソッドにパラメーターをプロバイダーについて説明します。 **SetParameterInfo**各パラメーターのネイティブ データ型を指定します。 **SetParameterInfo**引数します。  
+2.  **ICommandWithParameters::SetParameterInfo** メソッドを呼び出して、パラメーターをプロバイダーに示します。 **SetParameterInfo** では、各パラメーターのネイティブ データ型を指定します。 **SetParameterInfo** 引数は次のとおりです。  
   
     -   型情報を設定するパラメーターの数  
   
@@ -60,7 +60,7 @@ ms.locfileid: "37408671"
   
     -   DBPARAMBINDINFO 構造体の配列  
   
-3.  使用してパラメーター アクセサーを作成、 **iaccessor::createaccessor**コマンド。 このアクセサーにより、バッファーの構造を指定し、パラメーター値をバッファーに格納します。 **CreateAccessor**コマンドは、バインドのセットからアクセサーを作成します。 このバインドは、コンシューマーが DBBINDING 構造体の配列を使用して記述します。 各バインドでは、1 つのパラメーターをコンシューマーのバッファーに関連付けます。バインドには、次のような情報が含まれます。  
+3.  **IAccessor::CreateAccessor** コマンドを使用して、パラメーター アクセサーを作成します。 このアクセサーにより、バッファーの構造を指定し、パラメーター値をバッファーに格納します。 **CreateAccessor** コマンドでは、バインドのセットからアクセサーを作成します。 このバインドは、コンシューマーが DBBINDING 構造体の配列を使用して記述します。 各バインドでは、1 つのパラメーターをコンシューマーのバッファーに関連付けます。バインドには、次のような情報が含まれます。  
   
     -   バインドが適用されるパラメーターの序数  
   
@@ -70,11 +70,11 @@ ms.locfileid: "37408671"
   
     -   コンシューマーのバッファー内にあるデータ値の長さと型  
   
-     アクセサーは、アクセサーのハンドルにより識別されます。このハンドルは HACCESSOR 型です。 このハンドルは、によって返される、 **CreateAccessor**メソッド。 コンシューマーはアクセサーを使用して完了すると、ときに、コンシューマーを呼び出す必要があります、 **ReleaseAccessor**を保持しているメモリを解放するメソッド。  
+     アクセサーは、アクセサーのハンドルにより識別されます。このハンドルは HACCESSOR 型です。 このハンドルは、**CreateAccessor** メソッドから返されます。 コンシューマーはアクセサーを使い終わるたびに、**ReleaseAccessor** メソッドを呼び出して、アクセサーが保持しているメモリを解放する必要があります。  
   
-     ときに、メソッドを呼び出し、コンシューマーなど**icommand::execute**にアクセサーとバッファー自体へのポインター、ハンドルが渡されます。 プロバイダーはこのアクセサーを使用して、バッファー内にあるデータを送信する方法を決定します。  
+     コンシューマーが **ICommand::Execute** などのメソッドを呼び出す場合、アクセサーへのハンドルとバッファー自体へのポインターを渡します。 プロバイダーはこのアクセサーを使用して、バッファー内にあるデータを送信する方法を決定します。  
   
-4.  DBPARAMS 構造体にデータを格納します。 コンシューマーの変数の値の取得元と入力パラメーターと出力パラメーター値が書き込まれますが、実行時に渡される**icommand::execute** DBPARAMS 構造体にします。 DBPARAMS 構造体には、次の 3 つの要素が含まれます。  
+4.  DBPARAMS 構造体にデータを格納します。 入力パラメーター値の取得と出力パラメーター値の書き込みに使われるコンシューマーの変数が、実行時に DBPARAMS 構造体の **ICommand::Execute** に渡されます。 DBPARAMS 構造体には、次の 3 つの要素が含まれます。  
   
     -   アクセサー ハンドルで指定されているバインドに従ってプロバイダーが入力パラメーター データを取得し、出力パラメーター データを返すための、バッファーへのポインター  
   
@@ -82,19 +82,19 @@ ms.locfileid: "37408671"
   
     -   手順 3. で作成したアクセサー ハンドル  
   
-5.  使用して、コマンドを実行**icommand::execute**します。  
+5.  **ICommand::Execute** を使用してコマンドを実行します。  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>ストアド プロシージャを呼び出す方法  
  内のストアド プロシージャを実行するときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーをサポートします。  
   
--   ODBC CALL エスケープ シーケンスです。  
+-   ODBC CALL エスケープ シーケンス。  
   
 -   リモート プロシージャ コール (RPC) エスケープ シーケンス  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE ステートメント  
   
-### <a name="odbc-call-escape-sequence"></a>ODBC 呼び出しのエスケープ シーケンス  
- パラメーター情報がわかっている場合は、呼び出す**icommandwithparameters::setparameterinfo**プロバイダーにパラメーターを記述するメソッド。 それ以外の場合は、ストアド プロシージャの呼び出しに ODBC CALL 構文を使用すると、プロバイダーはヘルパー関数を呼び出してストアド プロシージャのパラメーター情報を取得します。  
+### <a name="odbc-call-escape-sequence"></a>ODBC CALL エスケープ シーケンス  
+ パラメーター情報を把握している場合は、**ICommandWithParameters::SetParameterInfo** メソッドを呼び出して、パラメーターをプロバイダーに示します。 それ以外の場合は、ストアド プロシージャの呼び出しに ODBC CALL 構文を使用すると、プロバイダーはヘルパー関数を呼び出してストアド プロシージャのパラメーター情報を取得します。  
   
  パラメーター情報 (パラメーターのメタデータ) を把握していない場合は、ODBC CALL 構文の使用をお勧めします。  
   
@@ -111,9 +111,9 @@ ms.locfileid: "37408671"
 ### <a name="rpc-escape-sequence"></a>RPC エスケープ シーケンス  
  RPC エスケープ シーケンスは、ストアド プロシージャを呼び出す ODBC CALL 構文と似ています。 プロシージャを複数回呼び出す場合は、ストアド プロシージャを呼び出す 3 つの方法のうち、RPC エスケープ シーケンスのパフォーマンスが最も優れています。  
   
- RPC エスケープ シーケンスを使用してストアド プロシージャを実行する場合、プロバイダーはパラメーター情報の決定にヘルパー関数を呼び出しません (ODBC CALL 構文では、ヘルパー関数が呼び出されます)。 RPC 構文は ODBC CALL 構文よりも簡単です。そのためコマンドが高速に解析され、パフォーマンスが向上します。 この場合、実行することによって、パラメーター情報を提供する必要があります**icommandwithparameters::setparameterinfo**します。  
+ RPC エスケープ シーケンスを使用してストアド プロシージャを実行する場合、プロバイダーはパラメーター情報の決定にヘルパー関数を呼び出しません (ODBC CALL 構文では、ヘルパー関数が呼び出されます)。 RPC 構文は ODBC CALL 構文よりも簡単です。そのためコマンドが高速に解析され、パフォーマンスが向上します。 この場合は、**ICommandWithParameters::SetParameterInfo** を実行してパラメーター情報を提供する必要があります。  
   
- RPC エスケープ シーケンスを使用する場合は、戻り値が必要です。 ストアド プロシージャが値を返さない場合、サーバーが既定で 0 を返します。 また、ストアド プロシージャ上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルを開くことはできません。 ストアド プロシージャは暗黙的に準備および呼び出し**icommandprepare::prepare**は失敗します。 RPC 呼び出しを準備することができないのためにできるクエリを実行しない列のメタデータ。Icolumnsinfo::getcolumninfo と icolumnsrowset::getcolumnsrowset は DB_E_NOTPREPARED を返します。  
+ RPC エスケープ シーケンスを使用する場合は、戻り値が必要です。 ストアド プロシージャが値を返さない場合、サーバーが既定で 0 を返します。 また、ストアド プロシージャ上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルを開くことはできません。 ストアド プロシージャは暗黙的に準備され、**ICommandPrepare::Prepare** の呼び出しは失敗します。 RPC 呼び出しを準備することができないのためにできるクエリを実行しない列のメタデータ。Icolumnsinfo::getcolumninfo と icolumnsrowset::getcolumnsrowset は DB_E_NOTPREPARED を返します。  
   
  パラメーターのメタデータを把握できている場合は、ストアド プロシージャの実行方法として RPC エスケープ シーケンスの使用をお勧めします。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "37408671"
  RPC エスケープ シーケンスを示すサンプル アプリケーションを参照してください。[ストアド プロシージャの実行&#40;RPC 構文を使用して&#41;しプロセスのリターン コードと出力パラメーター &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)します。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE ステートメント  
- ODBC CALL エスケープ シーケンスと RPC エスケープ シーケンスは、ストアド プロシージャを呼び出すための推奨方法ではなく、 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)ステートメント。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの RPC メカニズムを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コマンド処理を最適化します。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
+ ストアド プロシージャを呼び出す方法としては、[EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) ステートメントよりも、ODBC CALL エスケープ シーケンスや RPC エスケープ シーケンスをお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの RPC メカニズムを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コマンド処理を最適化します。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
   
- これは、例、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**ステートメント。  
+ 次に、[!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** ステートメントの例を示します。  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

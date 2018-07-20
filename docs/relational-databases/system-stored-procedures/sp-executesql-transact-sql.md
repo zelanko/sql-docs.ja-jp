@@ -1,5 +1,5 @@
 ---
-title: sp_executesql (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_executesql (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,12 +24,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0b0e9906c39de7875edc183e36fd5257afbe303
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 38c0cd9d348e78a10be4917172c149750da8a657
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261661"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083794"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,22 +54,22 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @stmt= ] *ステートメント*  
- Unicode 文字列が含まれて、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 @stmt Unicode 定数または Unicode 変数のいずれかにする必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**です。たとえば、Unicode 定数**N 'sp_who'** 有効ですが、文字定数 **'sp_who'** はありません。 文字列のサイズは、データベース サーバーで利用可能なメモリにより制限されます。 64 ビット サーバーに、文字列のサイズは 2 GB の最大サイズに制限**nvarchar (max)** です。  
+ [ \@stmt =]*ステートメント*  
+ 含む Unicode 文字列には、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**します。Unicode 定数など**N 'sp_who'** が有効で、文字定数 **'sp_who'** はありません。 文字列のサイズは、データベース サーバーで利用可能なメモリにより制限されます。 64 ビット サーバーで、文字列のサイズが 2 GB の最大サイズに制限、 **nvarchar (max)** します。  
   
 > [!NOTE]  
->  @stmt たとえば、名前の変数と同じ形式を持つパラメーターを含めることができます。 `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt には、たとえば、名前の変数と同じ形式を持つパラメーターを含めることができます。 `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- @stmt に含める各パラメーターには、@params パラメーター定義リストとパラメーター値リストの両方に、対応するエントリが存在する必要があります。  
+ 含まれる各パラメーター \@stmt では、両方に対応するエントリがあります、 \@params パラメーター定義リストとパラメーター値の一覧。  
   
- [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
- @stmt に埋め込まれたすべてのパラメーターの定義が含まれている 1 つの文字列を指定します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された@stmtmustで定義されている@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに@stmtパラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL です。  
+ [ \@params =] N'\@*parameter_name * * data_type* [,...*n* ] '  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む\@stmt します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された\@で定義されている stmtmust \@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターが含まれていない\@params は必要ありません。 このパラメーターの既定値は NULL です。  
   
- [ @param1=] '*value1*'  
- パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 @stmt に含まれる各パラメーターに対して、パラメーター値を指定する必要があります。値が必要なときに、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに@stmtパラメーターを持たない。  
+ [ \@param1 =] '*value1*'  
+ パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 含まれるすべてのパラメーターに指定されたパラメーター値が必要がある\@stmt します。ときに、値は必要ありません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターがありません。  
   
  [ OUT | OUTPUT ]  
- パラメーターが出力パラメーターであることを示します。 **テキスト**、 **ntext**、および**イメージ**プロシージャが共通言語ランタイム (CLR) プロシージャでない限り、出力パラメーターとしてパラメーターを使用できます。 OUTPUT キーワードを使用する出力パラメーターは、プロシージャが CLR プロシージャでない限り、カーソルのプレースホルダーにできます。  
+ パラメーターが出力パラメーターであることを示します。 **テキスト**、 **ntext**、および**イメージ**パラメーターは、プロシージャが共通言語ランタイム (CLR) プロシージャでない限り、OUTPUT パラメーターとして使用できます。 OUTPUT キーワードを使用する出力パラメーターは、プロシージャが CLR プロシージャでない限り、カーソルのプレースホルダーにできます。  
   
  *n*  
  追加するパラメーター値のプレースホルダーです。 定数または変数のみを指定できます。 関数などの複雑な式や演算子を使用した式は指定できません。  
@@ -80,10 +80,10 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>結果セット  
  SQL 文字列に組み込んだすべての SQL ステートメントから結果セットが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このトピックの「構文」セクションで説明した特定の順序で sp_executesql パラメーターを入力する必要があります。 パラメーターを不適切な順序で入力した場合、エラー メッセージが表示されます。  
   
- sp_executesql は、バッチ、名前の有効範囲、およびデータベース コンテキストに関して、EXECUTE と同じように動作します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに sp_executesql@stmtパラメーターは、sp_executesql ステートメントが実行されるまでコンパイルされません。 @stmt の内容は、sp_executesql を呼び出したバッチの実行プランとは別の実行プランとしてコンパイルされ、実行されます。 sp_executesql バッチから、sp_executesql を呼び出すバッチ内で宣言されている変数は参照できません。 sp_executesql バッチ内のローカル カーソルまたはローカル変数は、sp_executesql を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、sp_executesql ステートメント終了時まで有効です。  
+ sp_executesql は、バッチ、名前の有効範囲、およびデータベース コンテキストに関して、EXECUTE と同じように動作します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに sp_executesql \@stmt パラメーターは、sp_executesql ステートメントが実行されるまでコンパイルされません。 内容\@stmt がコンパイルされ、sp_executesql を呼び出したバッチの実行プランから別の実行プランとして実行します。 sp_executesql バッチから、sp_executesql を呼び出すバッチ内で宣言されている変数は参照できません。 sp_executesql バッチ内のローカル カーソルまたはローカル変数は、sp_executesql を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、sp_executesql ステートメント終了時まで有効です。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのパラメーター値だけが変わる場合は、ストアド プロシージャの代わりに sp_executesql を使用して、ステートメントを何回でも実行できます。 この場合、パラメーター値が変わるだけで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントそのものは変わらないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーではステートメントを最初に実行したときに生成した実行プランを再使用できます。  
   
@@ -139,13 +139,13 @@ SELECT @max_title;
   
 -   整数パラメーターはネイティブ形式で指定します。 Unicode にキャストする必要はありません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-executing-a-simple-select-statement"></a>A. 簡単な SELECT ステートメントを実行する  
- 次の例を作成し、実行、単純な`SELECT`というパラメーターを含んでいるステートメント`@level`です。  
+ 次の例は、作成し、実行、単純な`SELECT`というパラメーターを含むステートメント`@level`します。  
   
 ```  
 EXECUTE sp_executesql   
@@ -156,7 +156,7 @@ EXECUTE sp_executesql
 ```  
   
 ### <a name="b-executing-a-dynamically-built-string"></a>B. 動的に作成した文字列を実行する  
- 次の例を使用して`sp_executesql`動的に作成した文字列を実行します。 この例で使用するストアド プロシージャでは、特定の年の販売データをパーティション分割するために使用されるテーブル セットにデータを追加します。 月ごとに次の形式のテーブルが 1 つずつ存在します。  
+ 次の例を使用して`sp_executesql`を動的に作成した文字列を実行します。 この例で使用するストアド プロシージャでは、特定の年の販売データをパーティション分割するために使用されるテーブル セットにデータを追加します。 月ごとに次の形式のテーブルが 1 つずつ存在します。  
   
 ```  
 CREATE TABLE May1998Sales  
@@ -242,7 +242,7 @@ WHERE SalesOrderNumber = @SalesOrderNumber;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D. 簡単な SELECT ステートメントを実行する  
- 次の例を作成し、実行、単純な`SELECT`というパラメーターを含んでいるステートメント`@level`です。  
+ 次の例は、作成し、実行、単純な`SELECT`というパラメーターを含むステートメント`@level`します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -254,7 +254,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- その他の例では、次を参照してください。 [sp_executesql (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms188001.aspx)です。  
+ その他の例では、次を参照してください。 [sp_executesql (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms188001.aspx)します。  
   
 ## <a name="see-also"></a>参照  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

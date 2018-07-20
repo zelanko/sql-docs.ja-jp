@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 7a7c1c73ca70e0d42104e74c868d6acd32cc01b1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1ce94cb159e552b147ad1798eeacf60b9c7ff25a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020130"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085094"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>エクスポートし、SSMS または SqlPackage.exe で Windows を使った Linux 上のデータベースのインポート
 
@@ -34,7 +34,7 @@ ms.locfileid: "38020130"
 
 1. 」と入力して SSMS を起動**Microsoft SQL Server Management Studio** Windows では、検索ボックス、およびデスクトップ アプリをクリックします。
 
-    ![[SQL Server Management Studio]](./media/sql-server-linux-manage-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. オブジェクト エクスプ ローラーで、ソース データベースに接続します。 ソース データベースには、オンプレミスで実行されている Microsoft SQL server または Linux、Windows または Docker と Azure SQL Database または Azure SQL Data Warehouse では、クラウドでを指定できます。
 
@@ -52,7 +52,7 @@ ms.locfileid: "38020130"
 
 1. 」と入力して SSMS を起動**Microsoft SQL Server Management Studio** Windows では、検索ボックス、およびデスクトップ アプリをクリックします。
 
-    ![[SQL Server Management Studio]](./media/sql-server-linux-manage-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. オブジェクト エクスプ ローラーで、ターゲット サーバーに接続します。 ターゲット サーバーが Microsoft SQL Server をオンプレミスで実行できます。 または、Linux、Windows または Docker と Azure SQL Database または Azure SQL Data Warehouse では、クラウドで。
 

@@ -1,5 +1,5 @@
 ---
-title: 拡張ストアド プロシージャの実行における特性 |Microsoft ドキュメント
+title: 拡張ストアド プロシージャの実行における特性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 276efd6941012857820607d51e08ad309e581e94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11ce9088d6f6e9cde45eb080b1c12f3c4d434b18
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936467"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087894"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>拡張ストアド プロシージャの実行における特性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32936467"
   
  拡張ストアド プロシージャの実行には次の 3 つの特性があります。  
   
--   拡張ストアド プロシージャ関数は、のセキュリティ コンテキストで実行される[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+-   拡張ストアド プロシージャ関数は、のセキュリティ コンテキストで実行されます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 -   拡張ストアド プロシージャ関数は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の処理領域で実行されます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "32936467"
   
 -  
   
- DLL はまでは、サーバーのアドレス空間に読み込まれている拡張のストアド プロシージャ DLL が読み込まれて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が停止している、管理者が DBCC を使用して DLL を明示的にアンロードまたは*DLL_name* (無料)。  
+ DLL はまで、サーバーのアドレス空間に読み込まれた後、拡張のストアド プロシージャ DLL が読み込まれる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が停止している管理者が DBCC を使用して DLL を明示的にアンロードまたは*DLL_name* (無料)。  
   
  EXECUTE ステートメントを使用すると、拡張ストアド プロシージャをストアド プロシージャとして [!INCLUDE[tsql](../../includes/tsql-md.md)] から実行できます。  
   
@@ -53,20 +53,20 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- @ *retval*  
+ \@ *retval*  
  戻り値です。  
   
- @ *param1*  
+ \@ *param1*  
  入力パラメーターです。  
   
- @ *param2*  
+ \@ *param2*  
  入力/出力パラメーターです。  
   
 > [!CAUTION]  
 >  拡張ストアド プロシージャを使用すると、パフォーマンスの向上や、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能強化を図ることができます。 ただし、拡張ストアド プロシージャ DLL と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は同じアドレス領域を共有するため、問題のあるプロシージャにより [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能が影響を受けることがあります。 拡張ストアド プロシージャ DLL によってスローされる例外は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で処理されますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ領域に損傷を与える可能性があります。 セキュリティ措置として、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に拡張ストアド プロシージャを組み込むことができるのは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者だけに限定されています。 これらのプロシージャは詳細にテストしてからインストールする必要があります。  
   
 ## <a name="see-also"></a>参照  
- [拡張ストアド プロシージャのプログラミング](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
+ [拡張ストアド プロシージャ プログラミング](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
  [SQL Server にインストールされた拡張ストアド プロシージャの照会](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   

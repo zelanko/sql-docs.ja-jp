@@ -1,23 +1,28 @@
 ---
-title: 予測モデル (SQL のクイック スタートで R) を作成 |Microsoft ドキュメント
+title: SQL Server Machine Learning で R を使用して、予測モデルを作成するクイック スタート |Microsoft Docs
+description: このクイック スタートでは、SQL Server のデータを使用して予測をプロットする R でモデルを構築する方法を説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ca2fcac5bef63a4abf2449b56c25a600b9255c3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202644"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086824"
 ---
-# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>予測モデル (SQL のクイック スタートで R) を作成します。
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>クイック スタート: SQL Server で R を使用して予測モデルを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この手順では、R を使用してモデルをトレーニングしてから、モデルを SQL Server のテーブルに保存する方法について説明します。 モデルは、速度に基づいて自動車の停止距離を予測するシンプルな回帰モデルです。 使用して、`cars`は小型で簡単に理解するために、R に含まれているデータセットです。
+このクイック スタートでは、R を使用するモデルをトレーニングする方法について説明し、SQL Server のテーブルに、モデルを保存します。 モデルは、速度に基づいて自動車の停止距離を予測するシンプルな回帰モデルです。 使用して、`cars`データセットが R に含まれるため、サイズが小さく、簡単に理解できます。
+
+## <a name="prerequisites"></a>前提条件
+
+前のクイック スタート[の Hello World R と SQL を](rtsql-using-r-code-in-transact-sql-quickstart.md)情報を提供し、このクイック スタートに必要な R 環境を設定するためにリンクします。
 
 ## <a name="create-the-source-data"></a>ソース データを作成する
 
@@ -33,7 +38,7 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'car_speed'
 ```
 
-+ 一部のユーザーなどに使用する一時テーブルは、いくつかの R クライアントがバッチの間でセッションを切断することに注意してください。
++ 一部の人などに使用する一時テーブルは、一部の R クライアントがバッチ間のセッションを切断することに注意してください。
 
 + 小規模と大規模の多くのデータセットが R ランタイムに付属しています。 R と共にインストールされるデータセットの一覧を取得するには、R コマンド プロンプトから「`library(help="datasets")`」と入力します。
 
@@ -48,7 +53,7 @@ EXEC sp_execute_external_script
 + モデルのトレーニングで使用する入力データを提供する
 
 > [!TIP]
-> 線形モデルの更新を必要がある場合はお勧めこのチュートリアルでは、rxLinMod を使用して、モデルを調整するプロセスについて説明します[線形モデルの調整。](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> 線形モデルの更新機能を必要がある場合はお勧めこのチュートリアルでは、rxLinMod を使用して、モデルに合わせて調整するプロセスについて説明します[Fitting Linear Models。](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 モデルを実際に構築するには、R コード内に式を定義し、データを入力パラメーターとして渡します。
 
@@ -75,7 +80,7 @@ GO
 
 ## <a name="create-a-table-for-storing-the-model"></a>モデルを格納するテーブルを作成する
 
-次に、再トレーニングまたは予測に使用できるように、モデルを格納します。 モデルを作成する R パッケージの出力は、通常は**バイナリ オブジェクト**です。 したがって、モデルを格納するテーブルには **varbinary** 型の列が必要です。
+次に、再トレーニングまたは予測に使用することができますので、モデルを格納します。 モデルを作成する R パッケージの出力は、通常は**バイナリ オブジェクト**です。 したがって、モデルを格納するテーブルには **varbinary** 型の列が必要です。
 
 ```sql
 CREATE TABLE stopping_distance_models (
@@ -112,7 +117,7 @@ WHERE model_name = 'default model'
 
 ただし、データ フレームに加え、スカラーなどの他の型の出力を返すことはできます。
 
-たとえば、モデルをトレーニングするが、モデルの係数のテーブルをすぐに表示する必要があるとします。 係数のテーブルをメインの結果セットとして作成し、トレーニング済みのモデルを SQL 変数に出力します。 すぐに再モデルを使用する、変数を呼び出すことによって、または次のように、モデルをテーブルに保存する可能性があります。
+たとえば、モデルをトレーニングするが、モデルの係数のテーブルをすぐに表示する必要があるとします。 係数のテーブルをメインの結果セットとして作成し、トレーニング済みのモデルを SQL 変数に出力します。 すぐに再モデルを使用して、変数を呼び出すことによって、または次のように、テーブルにモデルを保存する可能性があります。
 
 ```sql
 DECLARE @model varbinary(max), @modelname varchar(30)
@@ -137,18 +142,17 @@ VALUES ('latest model', @model)
 
 ![rslq_basictut_coefficients](media/rslq-basictut-coefficients.PNG)
 
-### <a name="summary"></a>[概要]
+### <a name="summary"></a>まとめ
 
-SQL パラメーターおよび R 変数を操作するため、これらの規則に従う`sp_execute_external_script`:
+SQL パラメーターと R の変数を操作するため、これらの規則に従う`sp_execute_external_script`:
 
-+ 名前では R スクリプトにマップされているすべての SQL パラメーターを表示する必要があります、 _@params_引数。
-+ これらのパラメーターのいずれかを出力するには、"_@params_" リストに OUTPUT キーワードを追加します。
-+ マップされるパラメーターを一覧した後、"_@params_" リストの直後に SQL パラメーターから R 変数へのマッピングを 1 行ずつ指定します。
++ 名前では R スクリプトにマップされているすべての SQL パラメーターを表示する必要があります、  _\@params_引数。
++ これらのパラメーターの 1 つの出力に OUTPUT キーワードを追加、  _\@params_一覧。
++ マップされるパラメーターを一覧表示した後は 1 行ずつ、すぐに R 変数への SQL パラメーターの後に、マッピングを提供、  _\@params_一覧。
 
-## <a name="next-lesson"></a>次のレッスン
+## <a name="next-steps"></a>次のステップ
 
-モデルを作成したら、最後のステップで、そこから予測を生成し、結果をプロットする方法を学習します。
+最後のクイック スタートでは、モデルがある、できたから予測を生成し、結果をプロットする方法について説明します。
 
-[モデルからの予測とプロット](../tutorials/rtsql-predict-and-plot-from-model.md)
-
-
+> [!div class="nextstepaction"]
+> [クイック スタート: 予測し、プロットをモデルから](../tutorials/rtsql-predict-and-plot-from-model.md)

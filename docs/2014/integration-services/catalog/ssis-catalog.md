@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 968676f1d56299a720a85cee508fd860d7dc1d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160917"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084084"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   `SSISDB`カタログが操作するための中心点[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) プロジェクトを展開している、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -64,7 +64,7 @@ ms.locfileid: "37160917"
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
--   名前を @ で始めることはできませんが、先頭以外では @ を使用できます。  
+-   \@ 最初の文字として許可されていませんが、2 文字目以降の使用可能性があります\@します。  
   
 -   名前の長さは 1 ～ 128 文字にする必要があります。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "37160917"
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
--   名前を @ で始めることはできませんが、先頭以外では @ を使用できます。  
+-   \@ 最初の文字として許可されていませんが、2 文字目以降の使用可能性があります\@します。  
   
 -   名前の長さは 1 ～ 128 文字にする必要があります。  
   

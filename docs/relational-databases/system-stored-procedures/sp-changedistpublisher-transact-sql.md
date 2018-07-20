@@ -1,5 +1,5 @@
 ---
-title: sp_changedistpublisher (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_changedistpublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 1c1676fe8f270fc5c054c8a9f2c3b9b7a0c3a519
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce38cf053b16ae43ab9a9c5cd617bace6d78e4db
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085954"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,6 +44,7 @@ ms.lasthandoff: 05/03/2018
 sp_changedistpublisher [ @publisher = ] 'publisher'  
     [ , [ @property = ] 'property' ]  
     [ , [ @value = ] 'value' ]  
+    [ , [ @storage_connection_string = ] 'storage_connection_string']
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -55,9 +57,15 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  [ **@value=** ] **'***value***'**  
  指定されたプロパティの値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
   
+ [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ SQL Database マネージ インスタンスに必要なは、Azure SQL Database の記憶域ボリュームのアクセス キーが一致する必要があります。 
+
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+ 
  次の表に、パブリッシャーのプロパティと、それぞれの値を示します。  
   
-|プロパティ|値|Description|  
+|プロパティ|値|説明|  
 |--------------|------------|-----------------|  
 |**アクティブ**|**true**|パブリッシャーをアクティブ化します。|  
 ||**false**|パブリッシャーを非アクティブ化します。|  
@@ -65,18 +73,19 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**login**||ログイン名。|  
 |**password**||指定したログインに対する複雑なパスワード。|  
 |**security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *これ以外は変更できません*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パブリッシャーです。*|  
-||**0**|使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。 *これ以外は変更できません*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パブリッシャーです。*|  
+||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。 *これ以外は変更できません*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パブリッシャーです。*|  
 |**working_directory**||パブリケーションのデータおよびスキーマ ファイルを保存するために使用する作業ディレクトリです。|  
-|NULL (既定値)||使用可能なすべて*プロパティ*オプションが出力されます。|  
+|NULL (既定値)||使用可能なすべて*プロパティ*オプションが出力されます。| 
+|**storage_connection_string**| アクセス キー | データベースが Azure SQL Database マネージ インスタンスの場合は、作業ディレクトリのアクセス キー。 
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changedistpublisher**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changedistpublisher**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changedistpublisher**します。  
   
 ## <a name="see-also"></a>参照  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

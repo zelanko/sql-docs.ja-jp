@@ -1,0 +1,1 @@
+Azure SQL Database でのパブリッシャーとディストリビューターのデータベースが必要です[マネージ インスタンス](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)詳細については、次を参照してください。 [Azure SQL Database を使用したレプリケーション](http://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database)します。

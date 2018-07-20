@@ -21,12 +21,12 @@ caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5052533d7ad6ec684a9da0262761e923c43a5a64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccfded2316c40eaede10cfcc366025c55dec589c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177269"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084720"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>フォルダーの作成、削除、または変更 (レポート マネージャー)
   フォルダーを作成すると、レポート サーバーにパブリッシュするアイテムを整理して管理できます。 フォルダーを作成することには、関心のあるレポートをユーザーが見つけやすくなるという利点があります。 コンテンツ マネージャーは、権限を適用するためのフレームワークとしてフォルダーを利用できます。 特定のフォルダーに対してロールの割り当てを作成することで、開発中のレポートや限定されたユーザーのみを対象としたレポートへのアクセスを制限できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "37177269"
   
      **[新しいフォルダー]** ページが開きます。  
   
-3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字 (; ? : @ & = + , $ / * < > | など) は使用できません。 : @ & = +, $/* \< > |。 フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
+3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字 (; ? : @ & = + , $ / * < > | など) は使用できません。 : \@ & = +, $/* \< > |。 フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
   
 4.  必要に応じて、説明を入力します。  
   

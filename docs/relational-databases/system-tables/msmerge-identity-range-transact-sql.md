@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSmerge_identity_range (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 026774d2eae738f8641c56f923bcabc981fded1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd06dae4c34b2b5c77b81db64f9d12408539b01
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005129"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101230"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_identity_range**テーブルがパブリケーションに対するサブスクリプションの id 列に割り当てられている数値範囲を追跡するために使用されるレプリケーションが自動的に管理するこれらの範囲の割り当て。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
+  **MSmerge_identity_range**テーブルがパブリケーションに対するサブスクリプションの id 列に割り当てられている数値の範囲を追跡するために使用されるレプリケーションが自動的に管理するこれらの範囲の割り当て。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|指定したサブスクリプションの一意の ID 番号です。|  
 |**artid**|**uniqueidentifier**|指定したアーティクルの一意な ID 番号です。|  
@@ -45,7 +45,7 @@ ms.locfileid: "33005129"
 |**range_end**|**numeric(38)**|現在の範囲の終了 ID 値です。|  
 |**next_range_begin**|**numeric(38)**|割り当てられる次の範囲の開始 ID 値です。|  
 |**next_range_end**|**numeric(38)**|割り当てられる次の範囲の終了 ID 値です。|  
-|**is_pub_range**|**bit**|値**1**をパブリケーションに id 範囲が割り当てられている場合。|  
+|**is_pub_range**|**bit**|値**1** id 範囲がパブリケーションに割り当てられている場合。|  
 |**max_used**|**numeric(38)**|割り当てることができる ID の最大値です。|  
   
 ## <a name="see-also"></a>参照  

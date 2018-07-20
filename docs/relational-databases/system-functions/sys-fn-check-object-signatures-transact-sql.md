@@ -25,12 +25,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1473ca4fd7f29992c74c035c9ce649dfc96c5d0b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015154"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088094"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,17 +50,17 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>引数  
- { '@*class*' }  
+ {0} '\@*クラス*'}  
  提供される拇印の種類を特定します。  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- @*クラス*は**sysname**します。  
+ \@*クラス*は**sysname**します。  
   
- { @*thumbprint* }  
- キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 @*拇印*は**varbinary (20)** します。  
+ { \@*拇印*}  
+ キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*拇印*は**varbinary (20)** します。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
  次の表に、列を**fn_check_object_signatures**を返します。  

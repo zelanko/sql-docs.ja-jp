@@ -1,5 +1,5 @@
 ---
-title: MSrepl_queuedtraninfo (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSrepl_queuedtraninfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSrepl_queuedtraninfo system table
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8dfae0143bf2c9841166220ff32b898cec601d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f71452985e4f386cd3ee7f4b74cd8bdba96edc0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004929"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101390"
 ---
 # <a name="msreplqueuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_queuedtraninfo** SQL ベースのキューに置かれた更新を使用している、キューに置かれたすべての更新サブスクリプションによって発行されたキューに置かれたコマンドに関する情報を格納するテーブルがレプリケーション プロセスによって使用されます。 このテーブルは、サブスクリプション データベースに保存されます。  
+  **MSreplication_queuedtraninfo** SQL ベースのキューに置かれた更新を使用している、キューに置かれたすべての更新サブスクリプションによって発行されたキューに登録されたコマンドに関する情報を格納する、テーブルがレプリケーション プロセスによって使用されます。 このテーブルは、サブスクリプション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリケーション データベースの名前です。|  
 |**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
-|**Tranid**|**sysname**|キューに登録されたコマンドが実行されたときのトランザクション ID。|  
+|**tranid**|**sysname**|キューに登録されたコマンドが実行されたときのトランザクション ID。|  
 |**maxorderkey**|**bigint**|内部使用のみ。|  
 |**commandcount**|**bigint**|内部使用のみ。|  
   

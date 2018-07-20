@@ -1,5 +1,5 @@
 ---
-title: xp_enumgroups (TRANSACT-SQL) |Microsoft ドキュメント
+title: xp_enumgroups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_enumgroups
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ca84dd52786613e7489ae3272d014e819fe4f04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844460db0fd4cec42b8b89bf70deb72098d3ce6a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257144"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101550"
 ---
 # <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +51,18 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**グループ**|**sysname**|Windows グループの名前|  
 |**comment**|**sysname**|Windows で提供される Windows グループの説明。|  
   
-## <a name="remarks"></a>解説  
- 場合*domain_name* Windows ベースのコンピューターの名前を指定するのインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されているか、ドメイン名を指定すると、 **xp_enumgroups**コンピューターからローカル グループを列挙実行している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+## <a name="remarks"></a>コメント  
+ 場合*domain_name* Windows ベースのコンピューターの名前を指定するのインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている、またはドメイン名を指定すると、 **xp_enumgroups**コンピューターからローカル グループを列挙実行している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
  **xp_enumgroups**場合のインスタンスは使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が Windows 98 で実行されています。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **db_owner**の固定データベース ロール、**マスター**データベース、またはメンバーシップ、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **db_owner**固定データベース ロール、**マスター**メンバーシップまたは、データベース、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例のグループを一覧表示、`sales`ドメイン。  

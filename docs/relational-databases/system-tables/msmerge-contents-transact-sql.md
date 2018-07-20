@@ -1,5 +1,5 @@
 ---
-title: MSmerge_contents (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSmerge_contents (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,31 +22,32 @@ helpviewer_keywords:
 - MSmerge_contents system table
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad83b251629b87a85da723a0d7db2875c8c45462
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4643b0ba6bdfd9eea4405be02ca481133f0db096
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101560"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_contents**テーブルには、発行された後に、現在のデータベースで変更された行ごとに 1 行が含まれています。 このテーブルは、マージ プロセスが、変更された行を判断するために使用します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|パブリッシュされたテーブルのニックネーム。|  
 |**rowguid**|**uniqueidentifier**|指定した行の行識別子 (ROWID)。|  
-|**生成**|**bigint**|識別される行の生成、 **tablenick**と**rowguid**です。|  
+|**生成**|**bigint**|識別される行の生成、 **tablenick**と**rowguid**します。|  
 |**partchangegen**|**bigint**|最新のデータ変更に関連する generation 値です。フィルター選択されたパブリケーションに行が含まれているかどうかを変更します。|  
-|**系列**|**Varbinary(501)**|この行に加えられた変更の履歴を管理するために使用するサブスクライバーのニックネームとバージョン番号のペアです。|  
+|**系列**|**varbinary(501)**|この行に加えられた変更の履歴を管理するために使用するサブスクライバーのニックネームとバージョン番号のペアです。|  
 |**colvl**|**varbinary(7489)**|列バージョン情報です。|  
 |**マーカー**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**logical_record_parent_rowguid**|**uniqueidentifier**|最上位レベル親行を識別**MSmerge_contents** (によって**rowguid**) 論理レコード内の対応する子行ごとにします。|  
-|**logical_record_lineage**|**Varbinary(501)**|論理レコードの最上位レベルの親行に加えられた変更の履歴を管理するために使用するサブスクライバーのニックネームとバージョン番号のペアです。 論理レコードのすべての子行に対しては、この値は NULL です。|  
+|**logical_record_parent_rowguid**|**uniqueidentifier**|最上位レベル親行を識別**MSmerge_contents** (によって**rowguid**) 論理レコードの対応する子行はごとです。|  
+|**logical_record_lineage**|**varbinary(501)**|論理レコードの最上位レベルの親行に加えられた変更の履歴を管理するために使用するサブスクライバーのニックネームとバージョン番号のペアです。 論理レコードのすべての子行に対しては、この値は NULL です。|  
 |**logical_relation_change_gen**|**bigint**|変更によって論理レコードの再配置が生じ、既存の行が論理レコード内外に移動した場合、その前回の変更に関連付けられた generation 値です。|  
   
 ## <a name="see-also"></a>参照  

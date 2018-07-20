@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162293"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083404"
 ---
 # <a name="new-folder-page-report-manager"></a>[新しいフォルダー] ページ (レポート マネージャー)
   [新しいフォルダー] ページでは、レポート サーバーのフォルダー階層に新しいフォルダーを作成できます。 作成するフォルダーは、レポート サーバー データベースに保存される仮想フォルダーです。 このフォルダーは、コンピューターのファイル システムに作成されるわけではありません。  
@@ -39,7 +39,7 @@ ms.locfileid: "37162293"
   
 ## <a name="options"></a>および  
  **名前**  
- フォルダー名を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 名前を指定するときに、; ? : @ & = +, $/* \< > |"または/名前を指定します。  
+ フォルダー名を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 名前を指定するときに、; ? : \@ & = +, $/* \< > |"または/名前を指定します。  
   
  **[説明]**  
  フォルダーの内容の説明を入力します。 この説明は、フォルダーへの権限を持つユーザーの [コンテンツ] ページに表示されます。  

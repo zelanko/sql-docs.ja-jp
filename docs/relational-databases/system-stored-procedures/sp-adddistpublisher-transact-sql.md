@@ -1,7 +1,7 @@
 ---
-title: sp_adddistpublisher (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_adddistpublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,15 +23,15 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3ccd9c550df21ea904c4ff8d8c7a3941908e59a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75db58f4711b946eeceeb74dcbb3a34538ea97e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992829"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084294"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   指定されたディストリビューション データベースを使用するように、パブリッシャーを構成します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。 なお、ストアド プロシージャ[sp_adddistributor &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)と[sp_adddistributiondb &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)このストアド プロシージャを使用する前に実行されている必要がありますプロシージャです。  
   
@@ -47,6 +47,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @working_directory= ] 'working_directory' ]   
+    [ , [ @storage_connection_string= ] 'storage_connection_string']
     [ , [ @trusted= ] 'trusted' ]   
     [ , [ @encrypted_password= ] encrypted_password ]   
     [ , [ @thirdparty_flag = ] thirdparty_flag ]  
@@ -78,44 +79,51 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
   
  [  **@working_directory=**] **'***working_directory***'**  
- パブリケーション用のデータ ファイルとスキーマ ファイルの格納に使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)**、および既定値は ReplData フォルダーのこのインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、たとえば ' C:\Program files \microsoft SQL server Server\MSSQL\MSSQ.1\ReplData です。 名前は UNC 形式で指定する必要があります。  
-  
+ パブリケーション用のデータ ファイルとスキーマ ファイルの格納に使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)**、および既定値は ReplData フォルダーのこのインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、たとえば`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`します。 名前は UNC 形式で指定する必要があります。  
+
+ Azure SQL Database では、使用`\\<storage_account>.file.core.windows.net\<share>`します。
+
+ [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ SQL データベースに必要です。 Azure Portal からストレージ アクセス キーを使用 > 設定します。
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+
  [  **@trusted=**] **'***信頼***'**  
- このパラメーターは、非推奨であり、旧バージョンとの互換性のためにのみ提供されています。 *信頼された*は**nvarchar (5)**、これ以外に設定し、 **false**エラーが発生します。  
+ このパラメーターは、非推奨であり、旧バージョンとの互換性のためにのみ提供されています。 *信頼された*は**nvarchar (5)**、以外に設定して**false**エラーが発生します。  
   
  [  **@encrypted_password=**] *encrypted_password*  
- 設定*encrypted_password*は現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
+ 設定*encrypted_password*現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
   
  [  **@thirdparty_flag =**] *thirdparty_flag*  
- パブリッシャーが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 *thirdparty_flag*は**ビット**値は次のいずれかを指定できます。  
+ パブリッシャーの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 *thirdparty_flag*は**ビット**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|**0** (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースです。|  
+|**0** (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベース|  
   
  [ **@publisher_type**=] **'***publisher_type***'**  
- パブリッシャーがない場合に、パブリッシャーの種類を示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 *publisher_type* sysname は、次の値のいずれかになります。  
+ パブリッシャーでないときに、パブリッシャーの種類を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 *publisher_type*が sysname で、次の値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (既定値)。|指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。|  
 |**ORACLE**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE GATEWAY**|Oracle ゲートウェイ パブリッシャーを指定します。|  
   
- Oracle パブリッシャーと Oracle ゲートウェイ パブリッシャーとの違いの詳細については、次を参照してください。 [Oracle パブリッシャーを構成する](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)です。  
+ Oracle パブリッシャーと Oracle ゲートウェイ パブリッシャーとの違いの詳細については、次を参照してください。 [Oracle パブリッシャーの構成](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_adddistpublisher**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_adddistpublisher**スナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用されます。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_adddistpublisher**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_adddistpublisher**します。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
@@ -123,6 +131,6 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  
+ [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
   
   

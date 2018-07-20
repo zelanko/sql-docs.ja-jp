@@ -1,37 +1,36 @@
 ---
-title: 更新済み - SSMA for SQL Server のドキュメント |Microsoft ドキュメント
-description: 更新されたコンテンツで最近変更したドキュメントについては、SQL Server Migration Assistant (SSMA) for Microsoft SQL Server のスニペットを表示します。
+title: 更新済み - SQL Server のドキュメントの SSMA |Microsoft Docs
+description: 最近変更されたドキュメントの SQL Server Migration Assistant (SSMA) for Microsoft SQL Server の更新されたコンテンツのスニペットを表示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: ssma
 ms.date: 04/28/2018
-ms.openlocfilehash: c941c5ca367c579fd654c7c399520f371f3f59b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 97b48abd3e470703f72441006a3ecd92b635e913
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776968"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085464"
 ---
-# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>新規または最近更新された: SQL Server Migration Assistant (SSMA)
+# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>新規または最近更新: SQL Server Migration Assistant (SSMA)
 
 
 
 ほとんど毎日 Microsoft への更新プログラムの既存のアーティクルのいくつかの[Docs.Microsoft.com](http://docs.microsoft.com/)ドキュメント web サイトです。 この記事では、最近更新された文書からの抜粋を表示します。 新しい情報の記事へのリンクも表示される可能性があります。
 
-この記事は、定期的に再実行しているプログラムによって生成されます。 場合によっては抜粋を付けること不完全な書式設定、マークダウンとしてソース アーティクルからです。 イメージはここでは表示されません。
+この記事は、定期的に再実行しているプログラムによって生成されます。 時折不完全な書式設定の抜粋が表示されたり、ソース記事からマークダウンとして表示されたりすることがあります。 イメージはここでは表示されません。
 
 最新の更新プログラムは、次の日付範囲とサブジェクトの報告されます。
 
 
 
 - "*更新日の範囲:* " &nbsp; **2018 年 2 月 3 日** &nbsp;から&nbsp; **2018 年 4 月 28 日**
-- *サブジェクト領域:* &nbsp; **SQL Server Migration Assistant**です。
+- *対象領域:* &nbsp; **SQL Server Migration Assistant**します。
 
 
 
@@ -53,9 +52,9 @@ ms.locfileid: "34776968"
 
 このセクションでは、最近大幅な更新があった記事から収集された更新の抜粋を示します。
 
-ここに表示される抜粋は、適切なセマンティック コンテキストから区切りが表示されます。 また、区切ることもあります抜粋が実際の資料の周囲にある重要なマークダウン構文からです。 したがってこれらの抜粋は、一般的なガイダンスのみです。 のみの抜粋を使用するをクリックし、実際の資料を参照してくださいに時間がかかって各自の興味を保証するかどうかを把握できます。
+ここに表示される抜粋は、適切なセマンティック コンテキストから区切られて表示されます。 また、元の記事の中で、重要なマークダウン構文に覆われた抜粋が区切られて表示されることもあります。 したがってこれらの抜粋は、一般的なガイダンスとしてのみ使用されます。 抜粋からは、その記事をクリックして訪れるに足るものであるか、ということだけを知ることができます。
 
-これらおよびその他の理由は、これらの抜粋からコードをコピーしない場合と受け取らない正確な情報源として任意のテキストの抜粋です。 代わりに、実際の資料を参照してください。
+これらおよびその他の理由によって、これらの抜粋からコードをコピーせず、テキストの抜粋を確かな事実として受け取らないようにしてください。 代わりに、実際の資料を参照してください。
 
 
 
@@ -98,7 +97,7 @@ ms.locfileid: "34776968"
 - [新規 + 更新 (3 + 3): &nbsp; &nbsp; **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
 - [新規 + 更新 (7 + 10): &nbsp; &nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
 - [新規 + 更新 (0 + 2): &nbsp; &nbsp; **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (1 + 3): &nbsp; &nbsp; **SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新しい + 更新 (1 + 3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [新規 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
 - [新規 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
 - [新規 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)

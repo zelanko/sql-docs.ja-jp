@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200832"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084044"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
   このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、レポートを作成します。  
@@ -344,10 +344,10 @@ ms.locfileid: "37200832"
   
 1.  レポート データ ペインで **[パラメーター]** を展開します。  
   
-2.  レポート データ ペインで @ProductProductCategoryNameを選択し、 **[パラメーターのプロパティ]** からダウンロードできます。  
+2.  右クリックして\@ProductProductCategoryName、 をクリックし、**パラメーターのプロパティ**します。  
   
     > [!NOTE]  
-    >  名前の横の @ 文字は、これがパラメーターであることを示しています。  
+    >  \@名前の横にある文字の場合、これがパラメーターであることを示します。  
   
 3.  **[全般]** タブで **[非表示]** をクリックします。  
   

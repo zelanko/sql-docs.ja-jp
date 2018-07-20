@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227412"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084064"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨の機能が検出された回数を示す使用カウントを表示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "37227412"
 |------------------------------------------------------|-----------------|  
 |'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
 |'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 置き換える`SELECT column_list FROM`  *\< function_name >*`()`します。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '@' と '@@' で始まる名前|@ または @@ で始まる識別子が見つかりました。 @、@@、または @@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|\@ または \@\@ で始まる識別子が見つかりました。 \@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
 |ADDING TAPE DEVICE|非推奨の機能 sp_addumpdevice'`tape`' が発生しました。 使用して、sp_addumpdevice'`disk`' 代わりにします。 使用するごとに 1 回発生します。|  
 |ALL 権限|GRANT ALL、DENY ALL、または REVOKE ALL 構文が見つかった合計回数。 特定の権限を拒否するように構文を変更してください。 クエリごとに 1 回発生します。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|サーバー インスタンスの起動後に、ALTER DATABASE の非推奨の機能 TORN_PAGE_DETECTION オプションが使用された合計回数。 代わりに、PAGE_VERIFY 構文を使用してください。 DDL ステートメントで使用するごとに 1 回発生します。|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227412"
 |sp_defaultlanguage|sp_defaultlanguage プロシージャが見つかりました。 代わりに ALTER LOGIN を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_denylogin|sp_denylogin プロシージャが見つかりました。 代わりに ALTER LOGIN DISABLE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_depends|sp_depends プロシージャが見つかりました。 代わりに sys.dm_sql_referencing_entities および sys.dm_sql_referenced_entities を使用してください。 クエリごとに 1 回発生します。|  
-|sp_detach_db @keepfulltextindexfile|sp_detach_db ステートメントで @keepfulltextindexfile 引数が見つかりました。 この引数は使用しないでください。|  
+|sp_detach_db \@keepfulltextindexfile|sp_detach_db ステートメントで \@keepfulltextindexfile 引数が見つかりました。 この引数は使用しないでください。|  
 |sp_dropalias|sp_dropalias プロシージャが見つかりました。 別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 アップグレードされたデータベースで別名を削除するには、sp_dropalias を使用します。 コンパイルごとに 1 回発生します。|  
 |sp_dropapprole|sp_dropapprole プロシージャが見つかりました。 代わりに DROP APPLICATION ROLE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_dropextendedproc|sp_dropextendedproc プロシージャが見つかりました。 代わりに CLR を使用してください。 コンパイルごとに 1 回発生します。|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227412"
 |sp_fulltext_catalog|sp_fulltext_catalog プロシージャが見つかりました。 代わりに CREATE/ALTER/DROP FULLTEXT CATALOG を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_fulltext_column|sp_fulltext_column プロシージャが見つかりました。 代わりに、ALTER FULLTEXT INDEX を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_fulltext_database|sp_fulltext_database プロシージャが見つかりました。 代わりに ALTER DATABASE を使用してください。 コンパイルごとに 1 回発生します。|  
-|sp_fulltext_service @action=clean_up|sp_fulltext_service プロシージャの clean_up オプションが見つかりました。 クエリごとに 1 回発生します。|  
-|sp_fulltext_service @action=connect_timeout|sp_fulltext_service プロシージャの connect_timeout オプションが見つかりました。 クエリごとに 1 回発生します。|  
-|sp_fulltext_service @action=data_timeout|sp_fulltext_service プロシージャの data_timeout オプションが見つかりました。 クエリごとに 1 回発生します。|  
-|sp_fulltext_service @action=resource_usage|sp_fulltext_service プロシージャの resource_usage オプションが見つかりました。 このオプションには機能がありません。 クエリごとに 1 回発生します。|  
+|sp_fulltext_service \@action=clean_up|sp_fulltext_service プロシージャの clean_up オプションが見つかりました。 クエリごとに 1 回発生します。|  
+|sp_fulltext_service \@action=connect_timeout|sp_fulltext_service プロシージャの connect_timeout オプションが見つかりました。 クエリごとに 1 回発生します。|  
+|sp_fulltext_service \@action=data_timeout|sp_fulltext_service プロシージャの data_timeout オプションが見つかりました。 クエリごとに 1 回発生します。|  
+|sp_fulltext_service \@action=resource_usage|sp_fulltext_service プロシージャの resource_usage オプションが見つかりました。 このオプションには機能がありません。 クエリごとに 1 回発生します。|  
 |sp_fulltext_table|sp_fulltext_table プロシージャが見つかりました。 代わりに CREATE/ALTER/DROP FULLTEXT INDEX を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_getbindtoken|sp_getbindtoken プロシージャが見つかりました。 代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_grantdbaccess|sp_grantdbaccess プロシージャが見つかりました。 代わりに CREATE USER を使用してください。 クエリごとに 1 回発生します。|  

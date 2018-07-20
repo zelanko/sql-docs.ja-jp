@@ -1,5 +1,5 @@
 ---
-title: MSdistributor (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSdistributor (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,23 +22,24 @@ helpviewer_keywords:
 - MSdistributor system table
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 519b425dbea36885b4e7c763f2f889e56258674e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a318e37567d5d6da707fd95328f1d534e853a79
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101190"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistributor**テーブルには、ディストリビューターのプロパティが含まれています。 次の表は、 **msdb**データベース。  
+  **MSdistributor**テーブルには、ディストリビューターのプロパティが含まれています。 このテーブルに格納されます、 **msdb**データベース。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**プロパティ**|**sysname**|プロパティの名前|  
+|**property**|**sysname**|プロパティの名前|  
 |**value**|**nvarchar(3000)**|プロパティの値|  
   
 ## <a name="see-also"></a>参照  

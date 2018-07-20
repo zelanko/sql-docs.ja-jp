@@ -18,12 +18,12 @@ caps.latest.revision: 208
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c268854800acdfa1e725b4d00b564c018dd70f94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326402"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084074"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 データベース エンジンの非推奨の機能
   このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -40,7 +40,7 @@ ms.locfileid: "37326402"
 |データベース オブジェクト|トリガーから結果セットを返す機能|なし|トリガーから結果を返す|12|  
 |暗号化|RC4 または RC4_128 を使用した暗号化は非推奨とされており、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は非推奨とされます。|AES など、別の暗号化アルゴリズムを使用してください。|非推奨の暗号化アルゴリズム|253|  
 |リモート サーバー|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|リモート サーバー|@@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
+|リモート サーバー|\@\@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
 |リモート サーバー|SET REMOTE_PROC_TRANSACTIONS|リンク サーバーを使用してリモート サーバーを置き換えてください。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET オプション|`SET ROWCOUNT`、`INSERT`、および `UPDATE` ステートメントの `DELETE`|TOP キーワード|SET ROWCOUNT|109|  
 |テーブル ヒント|HOLDLOCK table hint without parenthesis|かっこ付きの HOLDLOCK を使用します。|HOLDLOCK table hint without parenthesis|167|  
@@ -143,7 +143,7 @@ ms.locfileid: "37326402"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての ROWGUIDCOL の使用|$rowguid を使用してください。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての IDENTITYCOL の使用|$identity を使用してください。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|一時テーブル名および一時ストアド プロシージャ名としての #、## の使用|別の文字を少なくとも 1 文字は使用してください。|'#' and '##' as the name of temporary tables and stored procedures|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての @、@@、または @@ で始まる名前の使用|@、@@、または @@ で始まる名前を識別子として使用しないでください。|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての '@' と '@@' で始まる名前|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての \@、\@\@、または \@\@ で始まる名前の使用。|\@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|既定値としての DEFAULT キーワードの使用|DEFAULT キーワードを既定値として使用しないでください。|既定値としての DEFAULT キーワード|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|テーブル ヒントの区切り文字としてのスペースの使用|テーブル ヒントはコンマを使用して区切ってください。|コンマで区切られていない複数のテーブル ヒント|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|集計インデックス付きビューの選択リストには、互換性モードが 90 の場合、COUNT_BIG (*) の指定が必要|COUNT_BIG (*) を使用してください。|COUNT_BIG(*) がないインデックス付きビューの選択リスト|2|  

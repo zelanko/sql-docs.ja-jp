@@ -14,12 +14,12 @@ caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189899"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084654"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>[全般] プロパティ ページ、レポート (レポート マネージャー)
   レポートの [全般] プロパティ ページでは、レポート定義の名前変更、削除、移動、または置換を行うことができます。 また、このページを使用して、リンク レポートを作成することもできます。 レポートの作成者または変更者、および変更日時の詳細がページの上部に表示されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "37189899"
   
 ## <a name="options"></a>および  
  **名前**  
- レポートの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 名前を指定するときに、; ? : @ & = +, $ * \< >  
+ レポートの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 名前を指定するときに、; ? : \@ & = +, $ * \< >  
   
  " / を使用しないでください。  
   

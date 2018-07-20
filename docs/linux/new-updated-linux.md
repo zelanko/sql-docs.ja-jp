@@ -1,21 +1,21 @@
 ---
-title: 更新済み - SQL Server on Linux docs |Microsoft ドキュメント
-description: 最近変更したドキュメントについては、Microsoft SQL Server on Linux の更新されたコンテンツのスニペットを表示します。
+title: 更新済み - SQL Server on Linux のドキュメント |Microsoft Docs
+description: 最近変更されたドキュメントは、Microsoft SQL Server on Linux の更新されたコンテンツのスニペットを表示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.date: 04/28/2018
-ms.openlocfilehash: 3b7ed71be06ee7e485236fa0e244e47bb77b3b70
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f1e437e0b9d4c2940293280ee2c5529da85e6c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334016"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082484"
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新規または最近の更新: SQL Server on Linux のドキュメント
 
@@ -23,14 +23,14 @@ ms.locfileid: "35334016"
 
 ほとんど毎日 Microsoft への更新プログラムの既存のアーティクルのいくつかの[Docs.Microsoft.com](http://docs.microsoft.com/)ドキュメント web サイトです。 この記事では、最近更新された文書からの抜粋を表示します。 新しい情報の記事へのリンクも表示される可能性があります。
 
-この記事は、定期的に再実行しているプログラムによって生成されます。 場合によっては抜粋を付けること不完全な書式設定、マークダウンとしてソース アーティクルからです。 イメージはここでは表示されません。
+この記事は、定期的に再実行しているプログラムによって生成されます。 時折不完全な書式設定の抜粋が表示されたり、ソース記事からマークダウンとして表示されたりすることがあります。 イメージはここでは表示されません。
 
 最新の更新プログラムは、次の日付範囲とサブジェクトの報告されます。
 
 
 
 - "*更新日の範囲:* " &nbsp; **2018 年 2 月 3 日** &nbsp;から&nbsp; **2018 年 4 月 28 日**
-- *サブジェクト領域:* &nbsp; **Microsoft SQL Server on Linux**です。
+- *対象領域:* &nbsp; **Microsoft SQL Server on Linux**します。
 
 
 
@@ -43,8 +43,8 @@ ms.locfileid: "35334016"
 
 
 1. [Linux 上の SQL Server の active Directory 認証](sql-server-linux-active-directory-auth-overview.md)
-2. [構成する SQL Server Always On 可用性グループを Windows および Linux (プラットフォーム) 間に](sql-server-linux-availability-group-cross-platform.md)
-3. [Linux 上の可用性グループに対して常に実行します。](sql-server-linux-availability-group-operate-ha.md)
+2. [構成する SQL Server Always On 可用性グループで、Windows および Linux (クロス プラットフォーム)](sql-server-linux-availability-group-cross-platform.md)
+3. [Linux 上の可用性グループに対して常に](sql-server-linux-availability-group-operate-ha.md)
 
 
 
@@ -54,9 +54,9 @@ ms.locfileid: "35334016"
 
 このセクションでは、最近大幅な更新があった記事から収集された更新の抜粋を示します。
 
-ここに表示される抜粋は、適切なセマンティック コンテキストから区切りが表示されます。 また、区切ることもあります抜粋が実際の資料の周囲にある重要なマークダウン構文からです。 したがってこれらの抜粋は、一般的なガイダンスのみです。 のみの抜粋を使用するをクリックし、実際の資料を参照してくださいに時間がかかって各自の興味を保証するかどうかを把握できます。
+ここに表示される抜粋は、適切なセマンティック コンテキストから区切られて表示されます。 また、元の記事の中で、重要なマークダウン構文に覆われた抜粋が区切られて表示されることもあります。 したがってこれらの抜粋は、一般的なガイダンスとしてのみ使用されます。 抜粋からは、その記事をクリックして訪れるに足るものであるか、ということだけを知ることができます。
 
-これらおよびその他の理由は、これらの抜粋からコードをコピーしない場合と受け取らない正確な情報源として任意のテキストの抜粋です。 代わりに、実際の資料を参照してください。
+これらおよびその他の理由によって、これらの抜粋からコードをコピーせず、テキストの抜粋を確かな事実として受け取らないようにしてください。 代わりに、実際の資料を参照してください。
 
 
 
@@ -70,8 +70,8 @@ ms.locfileid: "35334016"
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [インストールして、Linux 上の SQL Server をアップグレードするためのリポジトリを構成します。](#TitleNum_1)
-2. [Mssql conf ツールを使用して Linux 上の SQL Server を構成します。](#TitleNum_2)
+1. [インストールして、Linux 上の SQL Server のアップグレードのためのリポジトリを構成します。](#TitleNum_1)
+2. [Linux 上の SQL Server を mssql-conf ツールを構成します。](#TitleNum_2)
 3. [Linux 上の SQL Server 2017 のリリース ノート](#TitleNum_3)
 
 
@@ -83,7 +83,7 @@ ms.locfileid: "35334016"
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1.&nbsp; [インストールして、Linux 上の SQL Server をアップグレードするためのリポジトリを構成します。](sql-server-linux-change-repo.md)
+### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1.&nbsp; [インストールして、Linux 上の SQL Server のアップグレードのためのリポジトリを構成します。](sql-server-linux-change-repo.md)
 
 *更新日: 2018 年 4 月 25 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次へ](#TitleNum_2))
 
@@ -102,9 +102,9 @@ ms.locfileid: "35334016"
    sudo cat /etc/yum.repos.d/mssql-server.repo
 ```
 
-- **名前**プロパティが構成されているリポジトリ。 この記事の [リポジトリ] セクションでテーブルを識別できます。
+- **名前**プロパティが構成されているリポジトリです。 この記事の [リポジトリ] セクションでテーブルを識別できます。
 
-**古いリポジトリ (RHEL) を削除します。**
+**古いリポジトリ (RHEL) の削除します。**
 
 必要に応じて、次のコマンドを使用して古いリポジトリを削除します。
 
@@ -112,11 +112,11 @@ ms.locfileid: "35334016"
 sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ```
 
-このコマンドは、前のセクションで指定されたファイルがという名前の前提としています。 **mssql server.repo**です。
+このコマンドは、前のセクションで識別されるファイルの名前が前提としています。 **mssql server.repo**します。
 
 **新しいリポジトリ (RHEL) を構成します。**
 
-SQL Server のインストールとアップグレードに使用する新しいリポジトリを構成します。 任意のリポジトリを構成するのにには、次のコマンドのいずれかを使用します。
+SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。 次のコマンドのいずれかを使用して、好みのリポジトリを構成します。
 
 | リポジトリ | コマンド |
 |---|---|
@@ -127,19 +127,19 @@ SQL Server のインストールとアップグレードに使用する新しい
 
 SLES でリポジトリを構成するのにには、次の手順を使用します。
 
-**以前に構成したリポジトリ (SLES) の確認します。**
+**以前に構成されたリポジトリ (SLES) の確認します。**
 
 まず、SQL Server リポジトリが既に登録されているかどうかを確認します。
 
-- 使用して**zypper 情報**すべて以前に構成されたリポジトリに関する情報を取得します。
+- 使用**zypper 情報**以前に構成された任意のリポジトリに関する情報を取得します。
 
 ```
    sudo zypper info mssql-server
 ```
 
-- **リポジトリ**プロパティが構成されているリポジトリ。 この記事の [リポジトリ] セクションでテーブルを識別できます。
+- **リポジトリ**プロパティが構成されているリポジトリです。 この記事の [リポジトリ] セクションでテーブルを識別できます。
 
-**古いリポジトリ (SLES) を削除します。**
+**古いリポジトリ (SLES) の削除します。**
 
 必要に応じて、古いリポジトリを削除します。 以前に構成されたリポジトリの種類に基づいて、次のコマンドのいずれかを使用します。
 
@@ -157,9 +157,9 @@ SLES でリポジトリを構成するのにには、次の手順を使用しま
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2.&nbsp; [Mssql conf ツールを使用して Linux 上の SQL Server を構成します。](sql-server-linux-configure-mssql-conf.md)
+### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2.&nbsp; [Linux 上の SQL Server を mssql-conf ツールを構成します。](sql-server-linux-configure-mssql-conf.md)
 
-*最終更新日: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [次](#TitleNum_3))
+*更新日: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前](#TitleNum_1) | [次](#TitleNum_3))
 
 <!-- Source markdown line 151.  ms.author= jroth.  -->
 
@@ -174,24 +174,24 @@ SLES でリポジトリを構成するのにには、次の手順を使用しま
 **<a id="masterdatabasedir"></a> Master データベース ファイル ディレクトリの既定の場所を変更します。**
 
 
-**Filelocation.masterdatafile**と**filelocation.masterlogfile**設定の変更を SQL Server エンジンが master データベース ファイルを検索する場所です。 既定では、この場所は、/var/opt/mssql/data です。
+**Filelocation.masterdatafile**と**filelocation.masterlogfile**設定では、SQL Server エンジンが master データベース ファイルを検索する場所の場所を変更します。 既定では、この場所は、/var/opt/mssql/data は。
 
 これらの設定を変更するには、次の手順を使用します。
 
-- 新しいエラー ログ ファイルのターゲット ディレクトリを作成します。 次の例は、新しい作成**tmp/masterdatabasedir**ディレクトリ。
+- 新しいエラー ログ ファイルのターゲット ディレクトリを作成します。 次の例では、作成、新しい **/tmp masterdatabasedir**ディレクトリ。
 
 ```
    sudo mkdir /tmp/masterdatabasedir
 ```
 
-- 所有者とするディレクトリのグループを変更、 **mssql**ユーザー。
+- 所有者とグループをディレクトリの変更、 **mssql**ユーザー。
 
 ```
    sudo chown mssql /tmp/masterdatabasedir
    sudo chgrp mssql /tmp/masterdatabasedir
 ```
 
-- Mssql conf を使用して、マスター データ ファイルとログ ファイルの既定の master データベースのディレクトリを変更する、**設定**コマンド。
+- Mssql conf を使用して、マスター データとログ ファイルでの既定の master データベースのディレクトリを変更する、**設定**コマンド。
 
 ```
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
@@ -204,21 +204,21 @@ SLES でリポジトリを構成するのにには、次の手順を使用しま
    sudo systemctl stop mssql-server
 ```
 
-- Master.mdf と masterlog.ldf を移動するには。
+- Master.mdf と masterlog.ldf を移動します。
 
 ```
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf
    sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
 ```
 
-- SQL Server サービスを開始します。
+- SQL Server サービスを開始するには。
 
 ```
    sudo systemctl start mssql-server
 ```
 
 > [!NOTE]
-> SQL Server は、指定したディレクトリ内 master.mdf ファイルおよび mastlog.ldf ファイルを見つけることができません、指定したディレクトリ内のシステム データベースのテンプレートのコピーが自動的に作成されます、および SQL Server は正常に場合を起動します。 ただし、ユーザー データベース、サーバーのログイン、サーバー証明書、暗号化キー、SQL エージェント ジョブ、または古い SA ログインのパスワードなどのメタデータは、新しいマスター データベースでは更新されません。 SQL Server を停止し、新しい指定した場所に古い master.mdf および mastlog.ldf を移動し、引き続き既存のメタデータを使用する SQL Server を開始する必要があります。
+> SQL Server でのファイル master.mdf および mastlog.ldf ファイルを指定されたディレクトリを見つけられない場合は、システム データベースのテンプレート化されたコピーが指定されたディレクトリに自動的に作成され、SQL Server は正常に起動します。 ただし、ユーザー データベース、サーバーのログイン、サーバー証明書、暗号化キー、SQL エージェント ジョブ、または古い SA ログインのパスワードなどのメタデータは、新しいマスター データベースでは更新されません。 SQL Server を停止して、古い master.mdf および mastlog.ldf を新しいの指定した場所に移動し、引き続き既存のメタデータを使用する SQL Server を開始する必要があります。
 
 
 
@@ -245,21 +245,21 @@ SLES でリポジトリを構成するのにには、次の手順を使用しま
 
 - [SQL Server エージェントを有効にする]
 
-**<a id="CU6"></a> CU6 (年 2018年 4 月)**
+**<a id="CU6"></a> CU6 (2018 年 4 月)**
 
 
-これは、SQL Server 2017 の累積的な更新プログラム 6 (CU6) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3025.34 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [ https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464)です。
+これは、SQL Server 2017 の累積的な更新プログラム 6 (CU6) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3025.34 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464)します。
 
 **パッケージの詳細**
 
 
-手動またはオフラインのパッケージのインストールで、次の表の情報とパッケージの RPM と Debian パッケージをダウンロードできます。
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
 
 | [パッケージ] | パッケージ バージョン | ダウンロード |
 |-----|-----|-----|
-| Red Hat RPM パッケージ | 14.0.3025.34-3 | [エンジンは RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
-| SLES RPM パッケージ | 14.0.3025.34-3 | [mssql server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
-| Ubuntu 16.04 Debian パッケージ | 14.0.3025.34-3 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+| Red Hat の RPM パッケージ | 14.0.3025.34-3 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
+| SLES RPM パッケージ | 14.0.3025.34-3 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
+| Debian パッケージを Ubuntu 16.04 | 14.0.3025.34-3 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 
 

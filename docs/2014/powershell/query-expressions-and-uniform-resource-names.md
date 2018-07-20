@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 996fad627cebc240a39337a0f0ae3a096e53901c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326182"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083964"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインでは、XPath 式に似た、2 種類の式文字列が使用されます。 クエリ式は、オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙するための条件のセットを指定する文字列です。 URN (Uniform Resource Name) は、単一のオブジェクトを一意に識別する特定の種類のクエリ式文字列です。  
@@ -67,22 +67,22 @@ ms.locfileid: "37326182"
   
  たとえば、サーバーでは **ServerCollection** クラスを、データベースでは **DatabaseCollection** クラスを指定します。  
   
- @*PropertyName*  
- *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に @ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull** には、@IsAnsiNull と指定します。  
+ \@*PropertyName*  
+ *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前を付ける必要があります、\@文字。 たとえば、指定\@の IsAnsiNull、**データベース**クラス プロパティ**IsAnsiNull**します。  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  指定したブール型のプロパティが TRUE に設定されているすべてのオブジェクトを列挙します。  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  指定したブール型のプロパティが FALSE に設定されているすべてのオブジェクトを列挙します。  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ 含まれています (\@*StringPropertyName*、'*PatternString*')  
  指定した文字列プロパティに '*PatternString*' に指定した文字のセットが 1 つ以上含まれるすべてのオブジェクトを列挙します。  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  指定した文字列プロパティの値が '*PatternString*' に指定した文字パターンとまったく同じであるすべてのオブジェクトを列挙します。  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  指定した日付プロパティの値が '*DateString*' に指定した日付と一致するすべてのオブジェクトを列挙します。 *DateString* は、yyyy-mm-dd hh:mi:ss.mmm 形式で指定する必要があります。  
   
 |||  
@@ -97,11 +97,11 @@ ms.locfileid: "37326182"
   
  この形式で指定された日付は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に格納されているすべての日付形式に対して評価できます。  
   
- is_null(@*PropertyName*)  
+ is_null (\@*PropertyName*)  
  指定したプロパティの値が NULL であるすべてのオブジェクトを列挙します。  
   
  not(\<*PropertyExpression*>)  
- *PropertyExpression*の評価値を否定して、 *PropertyExpression*に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、"not(contains(@Name, 'xyz'))" と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
+ *PropertyExpression*の評価値を否定して、 *PropertyExpression*に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、されません (が含まれています (\@'xyz' の名前))、名前に xyz という文字列がないすべてのオブジェクトを列挙します。  
   
 ## <a name="remarks"></a>コメント  
  クエリ式は、SMO モデル階層のノードを列挙する文字列です。 各ノードには、そのノードのどのオブジェクトを列挙するかを決定する条件を指定するためのフィルター式があります。 クエリ式は、XPath 式言語をモデル化したものです。 クエリ式は、XPath でサポートされる式の小さなサブセットを実装し、XPath には用意されていないいくつかの拡張を含みます。 XPath 式は、XML ドキュメント内の 1 つまたは複数のタグを列挙するための条件のセットを指定する文字列です。 XPath の詳細については、 [W3C XPath 言語の Web サイト](http://www.w3.org/TR/xpath20/)を参照してください。  

@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 05/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: sql-linux
-ms.openlocfilehash: 2b6293e7c0d80eb1ebe02d6cd03f17626d793c05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: b0a16d3818195da0a98557025d0fe96c3d5333ee
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001664"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086774"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio を使用して、Linux 上の SQL Server を管理するには
 
@@ -55,7 +55,7 @@ SQL Server を使用する場合は、最新バージョンの SQL Server Manage
 
 1. 」と入力して SSMS を起動**Microsoft SQL Server Management Studio** Windows では、検索ボックス、およびデスクトップ アプリをクリックします。
 
-    ![[SQL Server Management Studio]](./media/sql-server-linux-manage-ssms/ssms.png)
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png)
 
 1. **サーバーへの接続**ウィンドウで、次の情報を入力します (SSMS が既に実行されている場合はクリックして**Connect > データベース エンジン**を開く、**サーバーへの接続**ウィンドウ):
 

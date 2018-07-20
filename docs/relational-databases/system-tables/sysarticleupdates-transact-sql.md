@@ -1,5 +1,5 @@
 ---
-title: sysarticleupdates (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysarticleupdates (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - sysarticleupdates system table
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 384e6abd93369bd1913bddf31b8dec6f8541e0d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72316742aeb0674af092605609b870f0b412aded
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005579"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101620"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   即時更新するサブスクリプションをサポートするアーティクルごとに、1 行のデータを格納します。 このテーブルは、レプリケートされたデータベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルの一意な ID 番号を示す ID 列。|  
 |**pubid**|**int**|そのアーティクルが属するパブリケーションの ID です。|  
@@ -47,8 +47,8 @@ ms.locfileid: "33005579"
 |**autogen**|**bit**|ストアド プロシージャが自動的に生成されるかどうかを示します。<br /><br /> **0** = false、自動ではありません。<br /><br /> **1**自動 = true、します。|  
 |**sync_upd_trig**|**int**|アーティクル テーブルでの、自動バージョン トリガーの ID。|  
 |**conflict_tableid**|**int**|競合テーブルの ID。|  
-|**ins_conflict_proc**|**int**|競合を書き込むためのプロシージャの ID、 **conflict_table**です。|  
-|**identity_support**|**bit**|キュー更新の使用時に、ID 範囲の自動処理が有効かどうかを示します。 **0**範囲サポートの識別情報がないことを意味します。|  
+|**ins_conflict_proc**|**int**|競合を書き込むために使用するプロシージャの ID、 **conflict_table**します。|  
+|**identity_support**|**bit**|キュー更新の使用時に、ID 範囲の自動処理が有効かどうかを示します。 **0**サポートの範囲は id がないことを意味します。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

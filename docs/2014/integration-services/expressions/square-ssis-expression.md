@@ -17,12 +17,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4203b4e904161a3acf36b6422bc29d41307a6d77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db690f1b8ffd3b011ef5a39f442ca44d32b50f33
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243122"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083325"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 式)
   数値式の 2 乗値を返します。  
@@ -66,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  式に含まれる変数名には、常にプレフィックスの @ を付けます。  
+>  式では、変数名が常に含まれます、\@プレフィックス。  
   
 ## <a name="see-also"></a>参照  
  [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  

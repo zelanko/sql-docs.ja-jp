@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumnconstraints (TRANSACT-SQL) |Microsoft ドキュメント
+title: IHpublishercolumnconstraints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - IHpublishercolumnconstraints system table
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4b764ec9638f207d504052598f6867a9123f945
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b5e927ce418b1f556a9529823a389f8d2cce54c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000349"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101700"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishercolumnconstraints**システム テーブル内の SQL Server 以外のパブリケーションの列をマップ、 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)システム テーブルの制約、 [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)システム テーブル。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **IHpublishercolumnconstraints**システム テーブル内の SQL Server 以外のパブリケーションの列をマップ、 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)システム テーブル内の制約、 [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)システム テーブル。 このテーブルは、ディストリビューション データベースに保存されます。  
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**publishercolumn_id**|**int**|列を識別[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)関連付けられている制約を使用しています。|  
-|**publisherconstraint_id**|**int**|制約を識別[IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)列に関連付けられています。|  
+|**publishercolumn_id**|**int**|列を識別する[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)を関連付けられている制約。|  
+|**publisherconstraint_id**|**int**|制約[IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)列に関連付けられています。|  
 |**indid**|**int**|パブリッシュされたテーブル内での列の位置|  
   
 ## <a name="see-also"></a>参照  

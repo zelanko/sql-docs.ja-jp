@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274628"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084014"
 ---
 # <a name="examples-using-path-mode"></a>例 : PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
@@ -126,7 +126,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>XPath 形式の列名の指定  
- 次のクエリでは、`ProductModelID` 列に指定した名前が '@' で始まり、スラッシュ ('/') を含んでいません。 したがって、結果の XML では、<`row`> 要素の属性が生成され、対応する列値が設定されます。  
+ 次のクエリでは、`ProductModelID`で始まる列の名前を指定された '\@'、スラッシュ (/) を含んでいません。 したがって、結果の XML では、<`row`> 要素の属性が生成され、対応する列値が設定されます。  
   
 ```  
 USE AdventureWorks2012;  

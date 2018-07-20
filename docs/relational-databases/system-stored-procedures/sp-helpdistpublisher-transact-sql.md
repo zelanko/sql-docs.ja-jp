@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistpublisher (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpdistpublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: c2944745c938fbeb3c36f37da950a6413c4fbde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4eed56a7e9356ac7f42c5f1bf2a5d55e85111523
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999589"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082414"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,37 +47,38 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="arguments"></a>引数  
  [  **@publisher=** ] **'***パブリッシャー***'**  
- プロパティが返されるパブリッシャーです。 *パブリッシャー*は**sysname**、既定値は **%** です。  
+ プロパティが返されるパブリッシャーです。 *パブリッシャー*は**sysname**、既定値は **%** します。  
   
  [  **@check_user=** ] *check_user*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|パブリッシャーの名前です。|  
+|**name**|**sysname**|パブリッシャーの名前。|  
 |**distribution_db**|**sysname**|指定されたパブリッシャーのディストリビューション データベースです。|  
-|**security_mode**|**int**|キュー更新サブスクリプションまたは以外のパブリッシャーへの接続にレプリケーション エージェントによって使用されるセキュリティ モード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
+|**security_mode**|**int**|キュー更新サブスクリプションの場合、または以外のパブリッシャーに接続するレプリケーション エージェントによって使用されるセキュリティ モード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
 |**login**|**sysname**|キュー更新サブスクリプションのパブリッシャーへの接続、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーとの接続のため、レプリケーション エージェントで使用されるログイン名です。|  
-|**password**|**nvarchar (524)**|単純な暗号化形式で返されるパスワードです。 パスワードは NULL ユーザー以外の**sysadmin**です。|  
+|**password**|**nvarchar (524)**|単純な暗号化形式で返されるパスワードです。 パスワードは NULL ですユーザー以外の**sysadmin**します。|  
 |**アクティブ**|**bit**|リモート パブリッシャーがディストリビューターとしてローカル サーバーを使用しているかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**working_directory**|**nvarchar (255)**|作業ディレクトリの名前です。|  
-|**信頼されています。**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]し、以降のバージョンでこのを常に返します**0**、つまり、パスワードが必要です。|  
+|**信頼されています。**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンでこのを常に返します**0**、つまり、パスワードが必要であります。|  
 |**thirdparty_flag**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはサード パーティのアプリケーションによってパブリケーションが有効にされるかどうかを示します。<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oracle、または Oracle Gateway Publisher です。<br /><br /> **1** = パブリッシャーと統合されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サード パーティ製アプリケーションを使用します。|  
 |**publisher_type**|**sysname**|パブリッシャーの種類次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar (4000)**|パブリッシャーでの OLE DB データ ソースの名前です。|  
+|**storage_connection_string**|**nvarchar (4000)**|作業ディレクトリのストレージ アクセス キーとディストリビューターまたはパブリッシャー側の Azure SQL データベース。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpdistpublisher**はあらゆる種類のレプリケーションで使用します。  
   
- **sp_helpdistpublisher**パブリッシャー ログインは表示されませんかの結果のパスワードを設定ではない**sysadmin**ログインします。  
+ **sp_helpdistpublisher**パブリッシャー ログインには表示されませんか結果のパスワードを設定以外**sysadmin**ログインします。  
   
-## <a name="permissions"></a>権限  
- メンバー、 **sysadmin**固定サーバー ロールを実行**sp_helpdistpublisher**の任意のパブリッシャーをディストリビューターとしてローカル サーバーを使用します。 メンバー、 **db_owner**固定データベース ロールまたは**replmonitor**ディストリビューション データベースでロール実行**sp_helpdistpublisher**を使用している任意のパブリッシャーディストリビューション データベースです。 指定したパブリケーションのパブリケーション アクセスのユーザーを一覧表示*パブリッシャー*実行**sp_helpdistpublisher**です。 場合*パブリッシャー*が指定されていない、ユーザーがアクセスする権限を持っているすべてのパブリッシャーに対して情報が返されます。  
+## <a name="permissions"></a>アクセス許可  
+ メンバー、 **sysadmin**固定サーバー ロールが実行**sp_helpdistpublisher**の任意のパブリッシャーをディストリビューターとしてローカル サーバーを使用します。 メンバー、 **db_owner**固定データベース ロール、または**replmonitor**ディストリビューション データベースでロール実行**sp_helpdistpublisher**を使用しているパブリッシャーのディストリビューション データベースです。 指定したパブリケーションのパブリケーション アクセスのユーザーを一覧表示*パブリッシャー*実行**sp_helpdistpublisher**します。 場合*パブリッシャー*が指定されていない、ユーザーへのアクセス権を持っているすべてのパブリッシャーに対して情報が返されます。  
   
 ## <a name="see-also"></a>参照  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202692"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085084"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>共有データ ソースを作成、削除、または変更する (レポート マネージャー)
   共有データ ソースでは、1 つのデータ ソースに対する接続プロパティを指定します。 多数のレポート、モデル、またはデータ ドリブン サブスクリプションで 1 つのデータ ソースを使用する場合は、共有データ ソースを作成することにより、同じ接続情報を複数箇所で管理するオーバーヘッドを低減できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "37202692"
   
 3.  **[新しいデータ ソース]** をクリックします。 **[新しいデータ ソース]** ページが開きます。  
   
-4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : @ & = +, $/* \< > |" /.  
+4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : \@ & = +, $/* \< > |" /.  
   
 5.  必要に応じて説明を入力し、接続に関する情報をユーザーに提供します。 この説明は、レポート マネージャーの **[コンテンツ]** ページに表示されます。  
   

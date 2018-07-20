@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 07/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -24,17 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974094"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086174"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  外部の場所に引数として指定されたスクリプトを実行します。 スクリプトは、サポートされていると、登録済みの言語で記述する必要があります。 実行する**sp_execute_external_script**、ステートメントを使用して外部スクリプトを有効にする必要があります最初`sp_configure 'external scripts enabled', 1;`します。  
+  外部の場所に引数として指定されたスクリプトを実行します。 サポートされていると、登録済みの言語 (R または Python) では、スクリプトを記述する必要があります。 実行する**sp_execute_external_script**、ステートメントを使用して外部スクリプトを有効にする必要があります最初`sp_configure 'external scripts enabled', 1;`します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,28 +53,30 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>引数
- @language = N'*言語*'  
+ \@言語 = N'*言語*'  
  スクリプト言語を示します。 *言語*は**sysname**します。  
 
  有効な値は `Python` または `R` です。 
   
- @script = N'*スクリプト*'  
+ \@スクリプト = N'*スクリプト*'  
  外部の言語のスクリプト リテラルまたは変数の入力として指定します。 *スクリプト*は**nvarchar (max)** します。  
   
- [ @input_data_1_name = N'*input_data_1_name*']  
- によって定義されたクエリを表すために使用する変数の名前を示す@input_data_1します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 *input_data_1_name*は**sysname**します。  
+ [ \@input_data_1_name = N'*input_data_1_name*']  
+ によって定義されたクエリを表すために使用する変数の名前を示す\@input_data_1 します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 *input_data_1_name*は**sysname**します。  
   
  既定値は`InputDataSet`します。  
   
- [ @input_data_1 = N'*input_data_1*']  
+ [ \@input_data_1 = N'*input_data_1*']  
  形式で外部のスクリプトで使用する入力データを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 データ型*input_data_1*は**nvarchar (max)** します。
   
- [ @output_data_1_name =  N'*output_data_1_name*' ]  
+ [ \@output_data_1_name = N'*output_data_1_name*']  
  返されるデータを含む外部スクリプトで変数の名前を指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームである必要があります。 Python、出力は、pandas データ フレームである必要があります。 *output_data_1_name*は**sysname**します。  
   
  既定値は、"OutputDataSet"です。  
   
- [ @parallel = 0 | 1] を設定して、R スクリプトの並列実行を有効にする、`@parallel`パラメーターを 1 にします。 このパラメーターに既定では 0 (並列処理です)。  
+ [\@並列 0 を = | 1]
+
+ R スクリプトの並列実行を有効に設定して、`@parallel`パラメーターを 1 にします。 このパラメーターに既定では 0 (並列処理です)。  
   
  R スクリプトを使用して、RevoScaleR 関数を使用して、`@parallel`パラメーターをスクリプトが普通に並列化と仮定すると、大規模なデータセットを処理するために役立つことができます。 たとえば、R を使用して`predict`に新しい予測を生成して設定するには、モデルで関数を`@parallel = 1`クエリ エンジンへのヒントとして。 に従って行が分散クエリを並列に処理できる場合、 **MAXDOP**設定します。  
   
@@ -82,10 +84,11 @@ sp_execute_external_script
   
  RevoScaleR 関数を使用する R スクリプトでは、並列処理は自動的に処理され、指定しないでください`@parallel = 1`を**sp_execute_external_script**呼び出します。  
   
- [ @params = N' *@parameter_name data_type* [OUT |出力] [、.. .n]']  
+ [ \@params = N'*\@parameter_name data_type* [OUT |出力] [、.. .n]']  
  外部のスクリプトで使用される入力パラメーターの宣言の一覧。  
   
- [ @parameter1 = '*value1*'  [ OUT | OUTPUT ] [ ,...n ] ]  
+ [ \@parameter1 = '*value1*' [OUT |出力] [、.. .n]  
+
  外部のスクリプトで使用される入力パラメーターの値の一覧。  
 
 ## <a name="remarks"></a>コメント
@@ -119,7 +122,7 @@ sp_execute_external_script
 
 ### <a name="data-types"></a>データ型
 
-入力クエリまたはのパラメーターで使用すると、次のデータ型はサポートされていません`sp_execute_external_script`プロシージャ、およびサポートされていない型エラーを返します。  
+入力クエリまたはのパラメーターで使用すると、次のデータ型はサポートされていません**sp_execute_external_script**プロシージャ、およびサポートされていない型エラーを返します。  
 
 この問題を回避するには、**キャスト**列または値でサポートされている型[!INCLUDE[tsql](../../includes/tsql-md.md)]外部スクリプトを送信する前にします。  
   
