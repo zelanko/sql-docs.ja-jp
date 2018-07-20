@@ -1,5 +1,5 @@
 ---
-title: MSpeer_response (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSpeer_response (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9641b794b7ac71b0fc8fb555ba04b4fa5bc83a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 137fb38215788b030f1831a92ad85cec570e0421
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004609"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101960"
 ---
 # <a name="mspeerresponse-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "33004609"
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|内の状態要求エントリを識別、 [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md)テーブル。|  
 |**ピア**|**sysname**|応答を生成したピアです。|  
-|**peer_db**|**sysname**|応答を生成したピア側のサブスクリプション データベースです。|  
+|**peer_db**|**sysname**|応答を生成したピアでサブスクリプション データベースです。|  
 |**received_date**|**datetime**|ピア要求を受信した日付と時刻です。|  
   
 ## <a name="see-also"></a>参照  

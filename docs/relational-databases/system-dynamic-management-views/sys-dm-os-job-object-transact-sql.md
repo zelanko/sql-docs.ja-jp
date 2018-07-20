@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
+ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968764"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39164213"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,6 @@ ms.locfileid: "37968764"
 ジョブのオブジェクト レベルで特定リソース消費量の統計と同様に、SQL Server プロセスを管理するジョブ オブジェクトの構成を記述する 1 つの行を返します。 SQL Server はジョブ オブジェクトで実行されていない場合は、空のセットを返します。 
 
 ジョブ オブジェクトは、オペレーティング システム レベルでの CPU、メモリ、および IO リソース ガバナンスを実装する Windows コンストラクトです。 ジョブ オブジェクトの詳細については、次を参照してください。[ジョブ オブジェクト](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)します。 
-
-> [!NOTE]
-> Sys.dm_os_job_object sys.dm_job_object として DMV 現在表示されてことがあります。 これは一時的な:`sys.dm_os_job_object`この DMV の永続的な名前になります。 
   
 |[列]|データ型|説明|  
 |-------------|---------------|-----------------|  

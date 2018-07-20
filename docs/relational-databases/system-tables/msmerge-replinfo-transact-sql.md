@@ -1,5 +1,5 @@
 ---
-title: MSmerge_replinfo (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSmerge_replinfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,26 +22,27 @@ helpviewer_keywords:
 - MSmerge_replinfo system table
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44bd1de5c31f43c56e2fe7cb90bfe8e6585ad45d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 120141183f975a96168254bbd9a680aa6bb54a9d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103030"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_replinfo**テーブルには、サブスクリプションごとに 1 つの行が含まれています。 このテーブルは、サブスクリプションに関する情報を追跡します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**repid**|**uniqueidentifier**|レプリカの一意な ID。|  
-|**use_interactive_resolver**|**bit**|調整時にインタラクティブ競合回避モジュールを使用するかどうかを指定します。<br /><br /> **0** do = インタラクティブ競合回避モジュールを使用します。<br /><br /> **1** = インタラクティブ競合回避モジュールを使用します。|  
-|**validation_level**|**int**|サブスクリプションに対して実行する検証の種類。 指定される検証レベルは次のいずれかの値になります。<br /><br /> **0** = 検証なし。<br /><br /> **1**行数のみの検証を = です。<br /><br /> **2** = 行数とチェックサムの検証。<br /><br /> **3** = 行数とバイナリ チェックサムの検証。|  
-|**resync_gen**|**bigint**|サブスクリプションの再同期化で使用される世代番号。 値**– 1**サブスクリプションが再同期にマークされていないことを示します。|  
+|**use_interactive_resolver**|**bit**|調整時に、インタラクティブ競合回避モジュールを使用するかどうかを指定します。<br /><br /> **0** = は、インタラクティブ競合回避モジュールを使用しません。<br /><br /> **1** = 対話型の競合回避モジュールを使用します。|  
+|**validation_level**|**int**|サブスクリプションに対して実行する検証の種類。 指定される検証レベルは次のいずれかの値になります。<br /><br /> **0** = 検証なし。<br /><br /> **1** = 行数のみの検証。<br /><br /> **2** = 行数とチェックサムの検証。<br /><br /> **3** = 行数とバイナリ チェックサムの検証。|  
+|**resync_gen**|**bigint**|サブスクリプションの再同期化で使用される世代番号。 値 **– 1**サブスクリプションが再同期のマークされていないことを示します。|  
 |**login_name**|**sysname**|サブスクリプションを作成したユーザーの名前。|  
 |**ホスト名**|**sysname**|サブスクリプションのパーティションの生成時に、パラメーター化された行フィルターで使用される値。|  
 |**merge_jobid**|**binary(16)**|サブスクリプションのマージ ジョブ ID。|  

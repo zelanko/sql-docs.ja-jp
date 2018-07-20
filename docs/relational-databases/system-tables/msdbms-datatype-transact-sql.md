@@ -1,5 +1,5 @@
 ---
-title: MSdbms_datatype (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSdbms_datatype (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5927d0c839793e58b2bc6422fa9f3646b0538699
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10e748d771414e9dee552a0e0f7ecdc643ba298a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004679"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103540"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdbms_datatype**テーブルには、異種データベース レプリケーションでパブリッシャーまたはサブスクライバーとして使用される各サポートされているデータベース管理システム (DBMS) でのネイティブ データ型の完全な一覧が含まれています。 次の表は、 **msdb**データベース。  
+  **MSdbms_datatype**テーブルには、異種データベース レプリケーションでパブリッシャーまたはサブスクライバーとして使用される各サポートされているデータベース管理システム (DBMS) でのネイティブ データ型の完全な一覧が含まれています。 このテーブルに格納されます、 **msdb**データベース。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|個々の一意なデータ型を識別します。|  
 |**dbms_id**|**int**|型が属する DBMS を識別します。|  
 |**type**|**sysname**|データ型の名前 (ネイティブ) です。|  
-|**createparams**|**int**|各データ型に適用できる長さ、有効桁数、および小数点以下桁数の組み合わせを表すビットマップです。以下の要素が含まれます。<br /><br /> **0x1**有効桁数を = です。<br /><br /> **0x2**スケールを = です。<br /><br /> **0x4**長さを = です。|  
+|**createparams**|**int**|各データ型に適用できる長さ、有効桁数、および小数点以下桁数の組み合わせを表すビットマップです。以下の要素が含まれます。<br /><br /> **0x1** = 有効桁数。<br /><br /> **0x2**スケールを = です。<br /><br /> **0x4**長さを = です。|  
   
-## <a name="remarks"></a>解説  
- このテーブルには、SQL Server のインスタンスに SQL Server 以外のデータベースをサブスクライブありを SQL Server 以外のサブスクライバーを発行できるための SQL Server データ型のエントリが含まれています。  
+## <a name="remarks"></a>コメント  
+ このテーブルには、SQL Server のインスタンスことができるため両方非 SQL Server データベースにサブスクライブする - SQL Server 以外のサブスクライバーの発行の SQL Server データ型のエントリが含まれています。  
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

@@ -1,5 +1,5 @@
 ---
-title: MSlogreader_history (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSlogreader_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,24 +22,25 @@ helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8041a5c3dfdb216d939ef5b99e22b36c0781eda9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: def5bc1d69a3d5332f96752fcd5e6b1eaedff08e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103100"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSlogreader_history**ローカル ディストリビューターに関連付けられているログ リーダー エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSlogreader_history**テーブルは、ローカル ディストリビューターに関連付けられているログ リーダー エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ログ リーダー エージェントの ID です。|  
-|**runstatus**|**int**|実行ステータスです。<br /><br /> 1 = 開始<br /><br /> 2 = 成功します。<br /><br /> 3 = 実行中<br /><br /> 4 = アイドル状態です。<br /><br /> 5 = 再試行<br /><br /> 6 = 失敗|  
+|**runstatus**|**int**|実行ステータスです。<br /><br /> 1 = 開始<br /><br /> 2 = 成功。<br /><br /> 3 = 実行中<br /><br /> 4 = アイドル状態です。<br /><br /> 5 = 再試行<br /><br /> 6 = 失敗|  
 |**start_time**|**datetime**|ジョブの実行開始時刻です。|  
 |**time**|**datetime**|メッセージが記録された時刻です。|  
 |**duration**|**int**|メッセージ セッションの実行時間 (秒) です。|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 |**delivery_latency**|**int**|コマンドがパブリッシュされたデータベースに登録されてからディストリビューション データベースに登録されるまでの待機時間です。 単位はミリ秒。|  
 |**error_id**|**int**|内のエラーの ID、 **MSrepl_error**システム テーブル。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
-|**updateable_row**|**bit**|設定**1**履歴行を上書きできる場合です。|  
+|**updateable_row**|**bit**|設定**1**履歴行を上書きできる場合。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

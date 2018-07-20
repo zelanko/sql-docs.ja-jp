@@ -1,5 +1,5 @@
 ---
-title: MSrepl_originators (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSrepl_originators (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - MSrepl_originators system table
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b09a8c577b0389702ada6c9b5372c3d10b9916a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7d0bb1049790123de504af1955e43807613e6db
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103040"
 ---
 # <a name="msreploriginators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSrepl_originators**テーブルには、トランザクションの発生した更新可能なサブスクライバーごとに 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSrepl_originators**テーブルにはトランザクションが発生した更新可能なサブスクライバーごとに 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|更新サブスクライバーの識別子。|  
 |**publisher_database_id**|**int**|パブリケーション データベースの識別子。|  

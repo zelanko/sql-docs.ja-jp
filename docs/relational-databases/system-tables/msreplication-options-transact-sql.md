@@ -1,5 +1,5 @@
 ---
-title: MSreplication_options (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSreplication_options (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSreplication_options system table
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2626cd096000035a8d7a87eaa0be5d31a15c082
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71d3ddefd2cfe9c691f9311be12a1e09caea3c58
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004829"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103520"
 ---
 # <a name="msreplicationoptions-transact-sql"></a>MSreplication_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_options**テーブルがレプリケーションによって内部的に使用されるメタデータを格納します。 次の表は、**マスター**データベース。  
+  **MSreplication_options**テーブルがレプリケーションによって内部的に使用されるメタデータを格納します。 このテーブルに格納されます、**マスター**データベース。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|内部使用のみです。|  
 |**value**|**bit**|内部使用のみです。|  

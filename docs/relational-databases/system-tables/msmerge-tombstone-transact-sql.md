@@ -1,5 +1,5 @@
 ---
-title: MSmerge_tombstone (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSmerge_tombstone (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99823a19970cf5732aa4e68b3588c6b5a6934a07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af64c598ccb092a5c0e408496ceba8d97f609124
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102070"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_tombstone**テーブルは、削除された行に関する情報を格納でき、他のサブスクライバーに反映されるまで削除します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**rowguid**|**uniqueidentifier**|行識別子 (ROWID) です。|  
 |**tablenick**|**int**|テーブルのニックネームです。|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |**系列**|**varbinary(249)**|削除されたレコードのバージョンと、削除されたときに認識された更新を示します。 これによって、あるサブスクライバーによって行が削除されているときに、別のサブスクライバーがこれを更新するという競合を、一貫して回避するための規則が定められます。|  
 |**生成**|**int**|行が削除されると、割り当てられます。 サブスクライバーが generation 値 N を要求する場合、generation 値 >= N を満たす廃棄標識だけが送信されます。|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|削除された行が属する論理レコードを識別します。|  
-|**logical_record_lineage**|**Varbinary(501)**|この行が属する論理レコードについて削除の履歴を管理するために使用するサブスクライバーのニックネームとバージョン番号のペアです。|  
+|**logical_record_lineage**|**varbinary(501)**|この行が属する論理レコードについて削除の履歴を管理するために使用するサブスクライバーのニックネームとバージョン番号のペアです。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

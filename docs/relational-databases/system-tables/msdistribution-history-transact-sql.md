@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_history (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSdistribution_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSdistribution_history system table
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7196fcd36a995b0e1e8feb3f7436d1f634da375c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11e5be7e9f65c0df2cadc1d27ed0af85b214d7fc
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005939"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102760"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistribution_history**ローカル ディストリビューターに関連付けられているディストリビューション エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSdistribution_history**テーブルは、ローカル ディストリビューターに関連付けられているディストリビューション エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに保存されます。  
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ディストリビューション エージェントの ID。|  
 |**runstatus**|**int**|実行中の状態:<br /><br /> **1** = 開始します。<br /><br /> **2** = 成功します。<br /><br /> **3** = 実行中です。<br /><br /> **4** = アイドル状態です。<br /><br /> **5** = 再試行します。<br /><br /> **6** = 失敗します。|  
@@ -57,7 +57,7 @@ ms.locfileid: "33005939"
 |**delivery_latency**|**int**|コマンドがディストリビューション データベースに登録されてからサブスクライバーに適用されるまでの待機時間です。 単位はミリ秒。|  
 |**total_delivered_commands**|**bigint**|サブスクリプションが作成されてから配信されたコマンドの総数です。|  
 |**error_id**|**int**|内のエラーの ID、 **MSrepl_error**システム テーブル。|  
-|**updateable_row**|**bit**|設定**1**履歴行を上書きできる場合です。|  
+|**updateable_row**|**bit**|設定**1**履歴行を上書きできる場合。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
   
 ## <a name="see-also"></a>参照  

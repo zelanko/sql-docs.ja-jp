@@ -1,5 +1,5 @@
 ---
-title: sysmergearticlecolumns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmergearticlecolumns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - sysmergearticlecolumns system table
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f47c3e98f2453df7eff9a71dbc4792fd72fd3a75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac3cc549ee47ceff92a1213d8ae73a9244f9b2bc
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004959"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102870"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Sysmergearticlecolumns**テーブルには、マージ パブリケーションでパブリッシュされ、マージ アーティクルに各列をマップするテーブルの各列に 1 行が含まれています。 このテーブルは、パブリケーション データベース内に保存されます。  
+  **Sysmergearticlecolumns**テーブルには、マージ パブリケーションでパブリッシュされ、各列はマージ アーティクルにマップされるテーブル列ごとに 1 つの行が含まれています。 このテーブルは、パブリケーション データベース内に保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルの識別子です。|  
 |**colid**|**smallint**|アーティクル内の列の識別子。|  

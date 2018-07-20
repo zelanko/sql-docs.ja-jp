@@ -1,5 +1,5 @@
 ---
-title: MSdistributiondbs (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSdistributiondbs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSdistributiondbs system table
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a616111951170d264e61bc40ff0691806ca2ebaf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92666ee39278f5305130579150aa36757a28fb0b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004159"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103290"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistributiondbs**テーブルには、ローカル ディストリビューターで定義されているディストリビューション データベースごとに 1 つの行が含まれています。 次の表は、 **msdb**データベース。  
+  **MSdistributiondbs**テーブルには、ローカル ディストリビューターで定義されている各ディストリビューション データベースの 1 つの行が含まれています。 このテーブルに格納されます、 **msdb**データベース。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|ディストリビューション データベースの名前。|  
 |**min_distretention**|**int**|トランザクションを削除するまでの最小保有期間 (時間単位)。|  

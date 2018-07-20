@@ -1,5 +1,5 @@
 ---
-title: MSmerge_metadataaction_request (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSmerge_metadataaction_request (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a26726d6fb6bc38a79ab50f958f071301a841f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 951b42bb78d2b15d2d107e6a4de0291aa16c7693
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103230"
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_metadataaction_request**テーブルが必要な補正アクションごとに 1 行を格納します。 エントリを作成し、エラーが発生し、同期を再試行する必要がある場合は、Web 同期を使用して、 **MSmerge_metadataaction_request**です。 その後のマージのアップロード フェーズ中、同期するパブリケーションに属するすべてのアーティクルへの要求は、このテーブルから取得されてアップロードされます。 同期を正常に完了すると、対応する行で、 **MSmerge_metadataaction_request**テーブルを削除します。 このテーブルは、パブリッシャー側ではパブリケーション データベースに、サブスクライバー側ではサブスクリプション データベースに格納されます。  
+  **MSmerge_metadataaction_request**テーブルには、必要な各補正アクションに対して 1 行が格納されます。 エントリを作成し、Web 同期を使用して、エラーが発生し、同期を再試行する必要がある場合、 **MSmerge_metadataaction_request**します。 その後のマージのアップロード フェーズ中、同期するパブリケーションに属するすべてのアーティクルへの要求は、このテーブルから取得されてアップロードされます。 同期が正常に完了すると、対応する行で、 **MSmerge_metadataaction_request**テーブルを削除します。 このテーブルは、パブリッシャー側ではパブリケーション データベースに、サブスクライバー側ではサブスクリプション データベースに格納されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|パブリッシュされたテーブルのニックネーム。|  
 |**rowguid**|**uniqueidentifier**|指定した行の行識別子 (ROWID)。|  

@@ -1,5 +1,5 @@
 ---
-title: IHpublishers (TRANSACT-SQL) |Microsoft ドキュメント
+title: IHpublishers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ helpviewer_keywords:
 - IHpublishers system table
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e59cadf84f2e05bf08690d44fb14036369fc502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b57b1577f806aa14a9649b40c8b0cbf7b6fe533d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004039"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102180"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishers**システム テーブルには、1 つの行各 SQL Server 以外のパブリッシャー、現在のディストリビューターを使用してにはが含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **IHpublishers**システム テーブルには各 SQL Server 以外のパブリッシャー、現在のディストリビューターを使用して 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャーを識別します。|  
 |**仕入先**|**sysname**|SQL Server 以外のデータベースのベンダーの名前。|  
 |**publisher_guid**|**uniqueidentifier**|SQL Server 以外のパブリッシャーを識別する GUID です。|  
 |**flush_request_time**|**datetime**|メタデータ キャッシュを更新するためにログ リーダー エージェントを必要としたアーティクル メタデータに対して最後の変更が発生した日付と時刻を示します。|  
-|**version**|**sysname**|SQL Server 以外のパブリッシャーのバージョンを表すテキスト文字列。|  
+|**version**|**sysname**|バージョンの SQL Server 以外のパブリッシャーの特性を設定するテキスト文字列。|  
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

@@ -43,11 +43,14 @@
    GO
    ```
 
+> [!TIP]
+> Transact-SQL ステートメントおよびクエリの作成の詳細については、「[Tutorial: Writing Transact-SQL Statements (チュートリアル: TRANSACT-SQL ステートメントの作成)](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
+
 ### <a name="insert-data"></a>データの挿入
 
 次に、新しいテーブル `Inventory` を作成し、2 つの新しい行を挿入します。
 
-1. **sqlcmd** のコマンド プロンプトで、コンテキストを新しい `TestDB` データベースに切り替えます。
+1. **sqlcmd** のコマンド プロンプトで、新しい `TestDB` データベースのコンテキストに切り替えます。 
 
    ```sql
    USE TestDB
@@ -71,7 +74,7 @@
    GO
    ```
 
-### <a name="select-data"></a>データの選択
+### <a name="select-data"></a>データの取得
 
 ここで、`Inventory` テーブルからデータを返すクエリを実行します。
 
@@ -95,7 +98,21 @@
 QUIT
 ```
 
-## <a name="connect-from-windows"></a>Windows からの接続
+## <a name="performance-best-practices"></a>パフォーマンスのベスト プラクティス
+
+Linux 上の SQL Server をインストールした後、運用環境のシナリオのパフォーマンスを向上させるには、Linux と SQL Server を構成するためのベスト プラクティスを確認します。 詳細については、次を参照してください。[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](../linux/sql-server-linux-performance-best-practices.md)します。
+
+## <a name="cross-platform-data-tools"></a>データのクロス プラットフォーム ツール
+
+ほかに**sqlcmd**、SQL Server を管理する次のようなクロス プラットフォーム ツールを使用することができます。
+
+|||
+|---|---|
+| [SQL Server Operations Studio](../sql-operations-studio/index.md) | クロス プラットフォーム GUI データベース管理ユーティリティです。 |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL コマンドを実行するためのクロス プラットフォーム コマンド ライン インターフェイス。 |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 拡張機能による TRANSACT-SQL ステートメントを実行するクロス プラットフォーム GUI コード エディターです。 |
+
+## <a name="connecting-from-windows"></a>Windows からの接続
 
 Windows 上の SQL Server ツールは、あらゆるリモート SQL Server インスタンスへの接続と同じ方法で Linux 上の SQL Server インスタンスに接続します。
 
@@ -103,11 +120,11 @@ Linux コンピューターに接続できる Windows コンピューターが�
 
 Windows で実行し、Linux 上の SQL Server に接続するその他のツールについては、以下を参照してください。
 
-- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="other-deployment-scenarios"></a>その他の展開シナリオ
 
 他のインストール シナリオについては、次のリソースを参照してください。
 
@@ -118,21 +135,10 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 | [無人インストール](../linux/sql-server-linux-setup.md#unattended) | プロンプトを表示せずにインストールするスクリプトを作成する方法を説明する |
 | [オフライン インストール](../linux/sql-server-linux-setup.md#offline) | オフライン インストール パッケージを手動でダウンロードする方法を説明する |
 
-接続し、SQL Server を管理するには、その他の方法を調査するには、次のツールについて説明します。
-
-|||
-|---|---|
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 拡張子を持つ TRANSACT-SQL ステートメントを実行しているクロスプラット フォームの GUI コード エディター。 |
-| [SQL Server の Operations Studio](../sql-operations-studio/index.md) | クロス プラットフォーム GUI データベース管理ユーティリティです。 |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL コマンドを実行している用のクロスプラット フォーム コマンドライン インターフェイスです。 |
-| [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | 接続し、Linux 上の SQL Server インスタンスを管理する Windows ベースの GUI のデータベース管理ユーティリティ。 |
-
-Transact-SQL ステートメントおよびクエリの作成の詳細については、「[Tutorial: Writing Transact-SQL Statements (チュートリアル: TRANSACT-SQL ステートメントの作成)](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
-
 > [!TIP]
-> よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.md)です。
+> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](../linux/sql-server-linux-faq.md)します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [For SQL Server on Linux のチュートリアルでは、調査します。](../linux/sql-server-linux-migrate-restore-database.md)
+> [Linux 上の SQL Server、チュートリアルを確認します。](../linux/sql-server-linux-migrate-restore-database.md)

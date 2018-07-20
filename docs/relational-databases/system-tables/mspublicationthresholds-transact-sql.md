@@ -1,5 +1,5 @@
 ---
-title: MSpublicationthresholds (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSpublicationthresholds (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,27 +22,28 @@ helpviewer_keywords:
 - MSpublicationthresholds system table
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cda79bde63b4f9ca7b33348374cd00e92d79c1a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd6d30b4af38bfde278e22da916f12d8639a2a82
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102441"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSpublicationthresholds**テーブルが監視されている各閾値に対して 1 つの行で、パブリケーションのレプリケーション パフォーマンス基準を追跡するために使用します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSpublicationthresholds**テーブルが監視されている各閾値に対して 1 つの行で、パブリケーションに対してレプリケーションのパフォーマンス メトリックを追跡するために使用します。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|しきい値が設定されていないパブリケーションを識別します。|  
 |**metric_id**|**int**|定義されている監視対象のレプリケーション パフォーマンス基準を識別、 [MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md)システム テーブル。|  
 |**value**|**sql_variant**|監視対象の基準のしきい値です。|  
-|**shouldalert**|**bit**|値**1**メトリックは、定義されたしきい値を超えたときに、アラートを生成することを示します。|  
-|**isenabled**|**bit**|値**1**このレプリケーション パフォーマンス基準に対する監視が有効になっていることを示します。|  
+|**shouldalert**|**bit**|値**1**メトリックが、定義されたしきい値を超えた場合にアラートを生成することを示します。|  
+|**isenabled**|**bit**|値**1**このレプリケーションのパフォーマンス メトリックの監視が有効になっていることを示します。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

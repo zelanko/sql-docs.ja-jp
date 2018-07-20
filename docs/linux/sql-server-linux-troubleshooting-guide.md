@@ -5,19 +5,19 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 2877b068569d409e20417ab9b535fd1ba8fd1017
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 7d8f392177bd83a8fc8764eac080fcc7b76739ed
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981294"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102200"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
@@ -192,6 +192,14 @@ SQLCMD を使用したシングル ユーザー モードで SQL Server を起�
    ```bash
    sudo systemctl start mssql-server
    ```
+
+## <a name="improve-performance"></a>パフォーマンスを向上させる
+
+データベースの設計、ハードウェア、およびワークロードの需要をなど、パフォーマンスに影響を与える多くの要素があります。 パフォーマンスを向上させるために検索する場合は、この記事でベスト プラクティスを確認して開始[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)します。 パフォーマンスの問題のトラブルシューティングに利用されてツールの一部について説明します。
+
+- [クエリ ストア](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [システム動的管理ビュー (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [SQL Server Management Studio でのパフォーマンスのダッシュ ボード](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
 
 ## <a name="common-issues"></a>一般的な問題
 

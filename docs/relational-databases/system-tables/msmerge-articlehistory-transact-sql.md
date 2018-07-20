@@ -1,5 +1,5 @@
 ---
-title: MSmerge_articlehistory (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSmerge_articlehistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,31 +22,32 @@ helpviewer_keywords:
 - MSmerge_articlehistory system table
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44f758d3f56b595407b15077031a911a828ff48f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a271583707ee57335a04f02f7a3569752e4f289
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101970"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_articlehistory**テーブルは変更を行った先アーティクルごとに 1 つの行と、マージ エージェントの同期セッション中に、アーティクルに加えられた変更を追跡します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSmerge_articlehistory**テーブル アーティクルに変更が行われる各アーティクルに対して 1 つの行と、マージ エージェントの同期セッション中に加えられた変更を追跡します。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|マージ エージェント ジョブ セッションの ID、 [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md)システム テーブル。|  
-|**phase_id**|**int**|次のいずれかの同期セッションのフェーズ:<br /><br /> **1** = アップロードします。<br /><br /> **2**ダウンロードを = です。<br /><br /> **4**クリーンアップを = です。<br /><br /> **5**シャット ダウンを = です。<br /><br /> **6**スキーマの変更を = です。<br /><br /> **7** BCP を = です。|  
+|**phase_id**|**int**|次のいずれかの同期セッションのフェーズ:<br /><br /> **1** = アップロードします。<br /><br /> **2** = ダウンロードします。<br /><br /> **4**クリーンアップを = です。<br /><br /> **5** = シャット ダウンします。<br /><br /> **6**スキーマの変更を = です。<br /><br /> **7** BCP を = です。|  
 |**article_name**|**sysname**|変更が行われたアーティクル名です。|  
 |**start_time**|**datetime**|エージェントがアーティクルの処理を開始した時刻です。|  
 |**duration**|**int**|エージェントがアーティクルを処理した時間の長さ (秒単位) です。|  
-|**挿入します。**|**int**|同期中に特定のアーティクルに適用された挿入数です。 この値は同期処理中に増加し、最終値は総数を表します。|  
+|**挿入します**|**int**|同期中に特定のアーティクルに適用された挿入数です。 この値は同期処理中に増加し、最終値は総数を表します。|  
 |**更新プログラム**|**int**|同期中に特定のアーティクルに適用された更新数です。 この値は同期処理中に増加し、最終値は総数を表します。|  
 |**削除します**|**int**|同期中に特定のアーティクルに適用された削除数です。 この値は同期処理中に増加し、最終値は総数を表します。|  
-|**競合しています**|**int**|同期中に発生した競合の数です。 この値は同期処理中に増加し、最終値は総数を表します。|  
+|**競合**|**int**|同期中に発生した競合の数です。 この値は同期処理中に増加し、最終値は総数を表します。|  
 |**conflicts_resolved**|**int**|同期中に発生し、解決された競合の数です。 この値は同期処理中に増加し、最終値は総数を表します。|  
 |**rows_retried**|**int**|同期中に再試行され、失敗した行数です。 この値は同期処理中に増加し、最終値は総数を表します。|  
 |**percent_complete**|**decimal**|セッション中にマージ エージェントが費やした総同期時間の割合です。 セッションが完了するまでこの値は NULL です。|  

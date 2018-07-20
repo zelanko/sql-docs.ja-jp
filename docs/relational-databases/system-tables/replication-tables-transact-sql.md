@@ -1,5 +1,5 @@
 ---
-title: レプリケーション テーブル (TRANSACT-SQL) |Microsoft ドキュメント
+title: レプリケーション テーブル (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1746bf67f4858a97d91e5e7f7740449d14126b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 919b11f4d9b5e71fe9ff0fc084ce4d591c807329
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012829"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103440"
 ---
 # <a name="replication-tables-transact-sql"></a>レプリケーション テーブル (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーション トポロジは、レプリケーション システム テーブルによってサポートされます。 ユーザー データベースがパブリッシャーまたはサブスクライバーとして構成されると、レプリケーションによりシステム テーブルがデータベースに追加されます。 これらのテーブルは、レプリケーション トポロジからユーザー データベースが削除されると、削除されます。 一般的な規則についてシステム テーブルを使用して、参照してください[システム テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)です。  
+  レプリケーション トポロジは、レプリケーション システム テーブルによってサポートされます。 ユーザー データベースがパブリッシャーまたはサブスクライバーとして構成されると、レプリケーションによりシステム テーブルがデータベースに追加されます。 これらのテーブルは、レプリケーション トポロジからユーザー データベースが削除されると、削除されます。 一般的な規則についてシステム テーブルを使用して、参照してください[システム テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)します。  
   
 ## <a name="replication-tables"></a>レプリケーション テーブル  
  次に、レプリケーションで使用するシステム テーブルの一覧をデータベースごとにグループ化して示します。  
@@ -75,7 +75,7 @@ ms.locfileid: "33012829"
 |[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
 |[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
   
- ディストリビューション データベース内のこれらのテーブルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーからデータをレプリケートする場合に使用されます。 詳細については、次を参照してください。[非 SQL Server パブリッシャー](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)です。  
+ ディストリビューション データベース内のこれらのテーブルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーからデータをレプリケートする場合に使用されます。 詳細については、次を参照してください。[非 SQL Server パブリッシャー](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)します。  
   
 |||  
 |-|-|  

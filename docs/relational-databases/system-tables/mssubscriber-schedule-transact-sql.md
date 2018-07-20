@@ -1,5 +1,5 @@
 ---
-title: MSsubscriber_schedule (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSsubscriber_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,34 +20,35 @@ helpviewer_keywords:
 - MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e38c0d789862bc0e2464c74e0ff0ba438c32ffb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1424947221413447e0277df4c10b17c0ea08d8b2
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103660"
 ---
 # <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSsubscriber_schedule**テーブルには、既定のマージとトランザクション同期スケジュールを各パブリッシャーとサブスクライバーのペアが含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSsubscriber_schedule**テーブルには、既定のマージとトランザクション同期スケジュール パブリッシャー/サブスクライバーの各ペアが含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
   
 > [!NOTE]  
->  このシステム テーブルは廃止されており、以前のバージョンをサポートするために保持されている[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+>  このシステム テーブルは非推奨し、以前のバージョンをサポートするために保持されている[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
 |**サブスクライバー**|**sysname**|サブスクライバーの名前。|  
 |**agent_type**|**smallint**|エージェントの種類。<br /><br /> 0 = ディストリビューション エージェント<br /><br /> 1 = マージ エージェント|  
-|**frequency_type**|**int**|ディストリビューション エージェントをスケジュール設定する頻度。<br /><br /> **1** = 1 回です。<br /><br /> **2** = オンデマンドです。<br /><br /> **4**毎日を = です。<br /><br /> **8**毎週を = です。<br /><br /> **16**毎月を = です。<br /><br /> **32** = 月単位。<br /><br /> **64**自動開始を = です。<br /><br /> **128**定期的なを = です。|  
-|**frequency_interval**|**int**|設定した頻度に適用する値**frequency_type**です。|  
-|**frequency_relative_interval**|**int**|ディストリビューション エージェントの日付。<br /><br /> **1**最初を = です。<br /><br /> **2**秒を = です。<br /><br /> **4**サードパーティを = です。<br /><br /> **8**第 4 を = です。<br /><br /> **16**最後を = です。|  
-|**frequency_recurrence_factor**|**int**|によって使用される定期実行係数**frequency_type**です。|  
-|**frequency_subday**|**int**|定義した期間にスケジュールを組み直す頻度。<br /><br /> **1** = 1 回です。<br /><br /> **2**秒を = です。<br /><br /> **4**分を = です。<br /><br /> **8**時間を = です。|  
-|**frequency_subday_interval**|**int**|間隔**frequency_subday**です。|  
+|**frequency_type**|**int**|ディストリビューション エージェントをスケジュール設定する頻度。<br /><br /> **1** = 1 回です。<br /><br /> **2** = 要求時。<br /><br /> **4**毎日を = です。<br /><br /> **8** = 毎週。<br /><br /> **16**毎月を = です。<br /><br /> **32** = 月単位。<br /><br /> **64** = 自動開始します。<br /><br /> **128**定期的なを = です。|  
+|**frequency_interval**|**int**|設定した頻度に適用する値**frequency_type**します。|  
+|**frequency_relative_interval**|**int**|ディストリビューション エージェントの日付。<br /><br /> **1**最初を = です。<br /><br /> **2**秒を = です。<br /><br /> **4**サードを = です。<br /><br /> **8**第 4 を = です。<br /><br /> **16**最後を = です。|  
+|**frequency_recurrence_factor**|**int**|使用される定期実行係数**frequency_type**します。|  
+|**frequency_subday**|**int**|定義した期間にスケジュールを組み直す頻度。<br /><br /> **1** = 1 回です。<br /><br /> **2**秒を = です。<br /><br /> **4** = 分。<br /><br /> **8** = 1 時間です。|  
+|**frequency_subday_interval**|**int**|間隔**frequency_subday**します。|  
 |**active_start_time_of_day**|**int**|ディストリビューション エージェントのスケジュールの開始時刻。HHMMSS の形式で表されます。|  
 |**active_end_time_of_day**|**int**|ディストリビューション エージェントのスケジュールの終了時刻。HHMMSS の形式で表されます。|  
 |**active_start_date**|**int**|ディストリビューション エージェントのスケジュールの開始日。YYYYMMDD の形式で表されます。|  

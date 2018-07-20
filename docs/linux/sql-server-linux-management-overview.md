@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: 89b670f6b4dd815744f505d1aa4f60a29d25bcaa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 26123d12c48c6c8abd51590d3f6d42c7476acd29
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984147"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102420"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux 上の SQL Server を管理するための適切なツールを選択します。
 
@@ -26,6 +26,7 @@ ms.locfileid: "37984147"
 SQL Server 2017 on Linux を管理するいくつかの方法はあります。 次のセクションでは、さまざまな管理ツールとその他のリソースへのポインターと手法の概要を示します。
 
 ## <a name="mssql-conf"></a>mssql-conf 
+
 **Mssql conf**ツール Linux 上の SQL Server を構成します。 詳細については、次を参照してください。 [mssql-conf での Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md)します。
 
 ## <a name="transact-sql"></a>Transact-SQL

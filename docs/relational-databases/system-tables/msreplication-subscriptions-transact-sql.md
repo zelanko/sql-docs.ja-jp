@@ -1,5 +1,5 @@
 ---
-title: MSreplication_subscriptions (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSreplication_subscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fed5b79386ae09b3733a23980d0a1b32bd1c39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaedff89c120cc9607d06976f26a10d780a12c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005469"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103380"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_subscriptions**テーブルに 1 行ディストリビューション エージェントが、ローカル サブスクライバー データベースのサービスごとのレプリケーション情報にはが含まれています。 次の表は、サブスクリプション データベースに格納されます。  
+  **MSreplication_subscriptions**テーブルに 1 行ディストリビューション エージェントがローカル サブスクライバー データベースのサービスごとにレプリケーション情報にはが含まれています。 このテーブルは、サブスクリプション データベースに格納されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
@@ -43,8 +43,8 @@ ms.locfileid: "33005469"
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> 0 = プッシュ<br /><br /> 1 = プル<br /><br /> 2 = 匿名です。|  
 |**distribution_agent**|**sysname**|ディストリビューション エージェントの名前。|  
-|**[時刻]**|**smalldatetime**|ディストリビューション エージェントによる前回の更新時刻。|  
-|**説明**|**nvarchar (255)**|サブスクリプションの説明。|  
+|**Time**|**smalldatetime**|ディストリビューション エージェントによる前回の更新時刻。|  
+|**description**|**nvarchar (255)**|サブスクリプションの説明。|  
 |**transaction_timestamp**|**varbinary(16)**|内部使用のみ。|  
 |**update_mode**|**tinyint**|更新の種類。|  
 |**agent_id**|**binary(16)**|エージェントの ID。|  

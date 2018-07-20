@@ -1,5 +1,5 @@
 ---
-title: MSmerge_sessions (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSmerge_sessions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,33 +22,33 @@ helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dded9db18b0a3048c3a4eb8a56869946fca8a1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1b825cb12e7d95615120b1418061b6106047c46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010729"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103330"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_sessions**の以前のマージ エージェント ジョブ セッションの結果の履歴行を保持します。 このテーブルには、マージ エージェントが実行されるたびに、新しい行が追加されます。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSmerge_sessions**テーブルに履歴行以前のマージ エージェント ジョブ セッションの結果にはが含まれています。 このテーブルには、マージ エージェントが実行されるたびに、新しい行が追加されます。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|マージ エージェント ジョブ セッションの ID。|  
 |**agent_id**|**int**|マージ エージェントの ID です。|  
 |**start_time**|**datetime**|ジョブの実行開始時刻。|  
 |**end_time**|**datetime**|ジョブの実行完了時刻。|  
-|**duration**|**int**|秒単位で、このジョブ セッションの累積時間。|  
+|**duration**|**int**|累積的な期間 (秒)、このジョブ セッションのです。|  
 |**delivery_time**|**int**|変更のバッチを適用するために要する秒数。|  
 |**upload_time**|**int**|変更をパブリッシャーにアップロードするために要する秒数。|  
 |**download_time**|**int**|変更をサブスクライバーにダウンロードするために要する秒数。|  
-|**delivery_rate**|**float**|1 秒あたりの配信コマンド数の平均です。|  
-|**time_remaining**|**int**|アクティブなセッション内の残り秒数の推定。|  
+|**delivery_rate**|**float**|配信されたコマンド 1 秒あたりの平均数。|  
+|**time_remaining**|**int**|アクティブなセッションのままに推定される秒数。|  
 |**percent_complete**|**decimal**|アクティブなセッションで既に配信された全変更の推定パーセンテージ。|  
 |**upload_inserts**|**int**|パブリッシャー側で適用される挿入の数です。|  
 |**upload_updates**|**int**|パブリッシャーで適用された更新数。|  
@@ -67,7 +67,7 @@ ms.locfileid: "33010729"
 |**runstatus**|**int**|実行ステータスです。<br /><br /> **1** = 開始します。<br /><br /> **2** = 成功します。<br /><br /> **3** = 実行中です。<br /><br /> **4** = アイドル状態です。<br /><br /> **5** = 再試行します。<br /><br /> **6** = 失敗します。|  
 |**estimated_upload_changes**|**int**|パブリッシャーで適用する必要がある変更の推定数。|  
 |**estimated_download_changes**|**int**|サブスクライバーで適用する必要がある変更の推定数。|  
-|**「接続タイプ」**|**int**|アップロード中に使用される接続。次の接続があります。<br /><br /> **1** = ローカル エリア ネットワーク (LAN)。<br /><br /> **2** = ダイヤルアップ ネットワークに接続します。<br /><br /> **3** = web 同期します。|  
+|**「接続タイプ」**|**int**|アップロード中に使用される接続。次の接続があります。<br /><br /> **1** = ローカル エリア ネットワーク (LAN)。<br /><br /> **2** = ダイヤルアップ ネットワーク接続。<br /><br /> **3** = web 同期します。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
   
 ## <a name="see-also"></a>参照  

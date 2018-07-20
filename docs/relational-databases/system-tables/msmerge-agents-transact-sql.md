@@ -1,5 +1,5 @@
 ---
-title: MSmerge_agents (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSmerge_agents (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2199793fc6bc8d7822468d1fc0984347946277c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23204288fc2bfb3358feb11ccb77c59a393c68b5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005899"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102311"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_agents**テーブルは、サブスクライバーで実行されるマージ エージェントはごとに 1 行を格納します。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|マージ エージェントの ID です。|  
 |**name**|**nvarchar(100)**|マージ エージェントの名前です。|  
@@ -48,17 +48,17 @@ ms.locfileid: "33005899"
 |**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**local_job**|**bit**|ローカル ディストリビューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブがあるかどうかを示します。|  
 |**job_id**|**binary(16)**|ジョブの識別番号。|  
-|**profile_id**|**int**|構成の ID、 **MSagent_profiles**テーブル。|  
+|**profile_id**|**int**|ある構成 ID、 **MSagent_profiles**テーブル。|  
 |**anonymous_subid**|**uniqueidentifier**|匿名エージェントの ID です。|  
 |**subscriber_name**|**sysname**|サブスクライバーの名前。|  
 |**creation_date**|**datetime**|ディストリビューション エージェントまたはマージ エージェントが作成された日時です。|  
-|**offload_enabled**|**bit**|エージェントをリモートから起動できることを指定します。<br /><br /> **0**エージェントをリモートでアクティブにできませんを指定します。<br /><br /> **1**リモート、および offload_server プロパティで指定されたリモート コンピューター上にエージェントをアクティブ化されますを指定します。|  
+|**offload_enabled**|**bit**|エージェントをリモートから起動できることを指定します。<br /><br /> **0**エージェントをリモートでアクティブにできませんを指定します。<br /><br /> **1**リモート、および offload_server プロパティで指定されたリモート コンピューター上にエージェントをアクティブ化を指定します。|  
 |**offload_server**|**sysname**|エージェントをリモートから起動するときに使用するサーバーのネットワーク名を指定します。|  
 |**sid**|**varbinary(85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
-|**subscriber_security_mode**|**smallint**|サブスクライバーに接続するときにエージェントが使用するセキュリティ モードです。次のいずれかの値をとります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証です。|  
+|**subscriber_security_mode**|**smallint**|サブスクライバーに接続するときにエージェントが使用するセキュリティ モードです。次のいずれかの値をとります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**subscriber_login**|**sysname**|サブスクライバーに接続するときに使用するログイン名です。|  
-|**subscriber_password**|**nvarchar (524)**|サブスクライバーに接続するときに使用するパスワードの暗号化された値です。|  
-|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントで使用されるセキュリティ モード。次のいずれかの値をとります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証です。|  
+|**@subscriber_password**|**nvarchar (524)**|サブスクライバーに接続するときに使用するパスワードの暗号化された値です。|  
+|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントで使用されるセキュリティ モード。次のいずれかの値をとります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログイン。|  
 |**publisher_password**|**nvarchar (524)**|パブリッシャーに接続するときに使用されるパスワードの暗号化された値。|  
 |**job_step_uid**|**uniqueidentifier**|エージェントが起動される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップの一意な ID|  

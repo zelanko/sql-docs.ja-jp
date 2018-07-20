@@ -1,5 +1,5 @@
 ---
-title: IHsubscriptions (TRANSACT-SQL) |Microsoft ドキュメント
+title: IHsubscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - IHsubscriptions system table
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 437f5e75b7728e1ada248bd69996285c0dad20af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 519e81dc73977fed54709e6c1fac0f053a3ef3ba
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004069"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102990"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHsubscriptions**システム テーブルを含むサブスクリプションごとに 1 つの行、パブリケーションに対するから、SQL Server 以外のパブリッシャー、現在のディストリビューターを使用しています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **IHsubscriptions**システム テーブルが含まれていますサブスクリプションごとに 1 つの行にはパブリケーションから、SQL Server 以外のパブリッシャー、現在のディストリビューターを使用します。 このテーブルは、ディストリビューション データベースに保存されます。  
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|パブリッシュされたアーティクルを一意に識別します。|  
 |**srvid**|**smallint**|サブスクライバーのサーバー ID。|  
@@ -47,10 +47,10 @@ ms.locfileid: "33004069"
 |**login_name**|**sysname**|サブスクリプションを追加するときに使用するログイン名です。|  
 |**distribution_jobid**|**binary(16)**|ディストリビューション エージェントのジョブ ID です。|  
 |**timestamp**|**timestamp**|サブスクリプションを作成した日付と時刻。|  
-|**queued_reinit**|**bit**|アーティクルが初期化または再初期化の対象としてマークされているかどうかを指定します。 値**1**サブスクライブされるアーティクルが初期化または再初期化のマークされていることを指定します。|  
-|**ステータス**|**tinyint**|サブスクリプションの状態です。<br /><br /> **0** = 非アクティブです。<br /><br /> **1** = サブスクライブします。<br /><br /> **2**アクティブを = です。|  
-|**sync_type**|**tinyint**|初期同期の種類。<br /><br /> **1** = 自動。<br /><br /> **2** = none です。|  
-|**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ、ディストリビューション エージェントに、サブスクライバーで実行されます。<br /><br /> **1** = プル、ディストリビューション エージェントがディストリビューターで実行されます。|  
+|**queued_reinit**|**bit**|アーティクルが初期化または再初期化の対象としてマークされているかどうかを指定します。 値**1**サブスクライブされるアーティクルが初期化または再初期化のマークされているを指定します。|  
+|**status**|**tinyint**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブです。<br /><br /> **1** = サブスクライブします。<br /><br /> **2** = アクティブ。|  
+|**sync_type**|**tinyint**|初期同期の種類。<br /><br /> **1** = 自動。<br /><br /> **2** = none。|  
+|**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ、ディストリビューション エージェントがサブスクライバーで実行されます。<br /><br /> **1** = プル、ディストリビューション エージェントがディストリビューターで実行されます。|  
 |**update_mode**|**tinyint**|更新モード。<br /><br /> **0** = 読み取り専用です。<br /><br /> **1** = 即時更新します。|  
 |**loopback_detection**|**bit**|双方向トランザクション レプリケーション トポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **0** = 戻す。<br /><br /> **1** = は送信しません。|  
   

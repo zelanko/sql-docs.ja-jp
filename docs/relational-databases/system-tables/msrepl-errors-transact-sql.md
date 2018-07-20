@@ -1,5 +1,5 @@
 ---
-title: MSrepl_errors (TRANSACT-SQL) |Microsoft ドキュメント
+title: MSrepl_errors (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSrepl_errors system table
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48346fe7e8beb4c1885507de48d14889bd6ffee6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 992e5594f208cd64ef48d90f2b29e7018719a6da
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005399"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103720"
 ---
 # <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSrepl_errors**テーブルには、ディストリビューション エージェントおよびマージ エージェントの拡張エラー情報を持つ行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSrepl_errors**テーブルには、ディストリビューション エージェントおよびマージ エージェントのエラーに関する拡張情報を持つ行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|エラーの ID です。|  
+|**id**|**int**|エラーの ID。|  
 |**time**|**datetime**|エラーが発生した時刻。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|エラー ソースの種類の ID。|  
