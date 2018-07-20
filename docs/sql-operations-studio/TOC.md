@@ -14,6 +14,8 @@
 # 操作方法ガイド
 ## [ダッシュボードおよび洞察のウィジェット](insight-widgets.md)
 ## [拡張機能](extensions.md)
+### [SQL Server エージェント](sql-server-agent-extension.md)
+### [SQL Server Profiler](sql-server-profiler-extension.md)
 ## [コード スニペット](code-snippets.md)
 ## [統合ターミナル (PowerShell、Bash)](integrated-terminal.md)
 ## [キーボード ショートカット](keyboard-shortcuts.md)
