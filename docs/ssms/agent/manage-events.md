@@ -24,17 +24,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0262ff33df1f98283c7eb5ebdc63256c69f0f88
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981904"
 ---
 # <a name="manage-events"></a>イベントの管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 
+  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスには、特定のエラー重大度レベル以上のあらゆるイベント メッセージを転送できます。 この処理を *イベントの転送*と呼びます。 転送先サーバーは、マスター サーバーにもなる専用のサーバーです。 イベントの転送を使用して、サーバーのグループに対する警告を集中管理できます。その結果、使用頻度の高いサーバーの負荷を減少させることができます。  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 05/03/2018
   
     警告エンジンによって検出されたエラー状況は、"SQL Server エージェント" のソース名でローカル Windows アプリケーション ログに書き込まれます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが定義に従って電子メールによる通知を送信できない場合は、アプリケーション ログにイベントが記録されます。  
   
-ローカルで定義された警告が無効になっていて、その警告の発生原因となるイベントが発生した場合、そのイベントが (警告転送の条件を満たしていれば) 警告管理サーバーに転送されます。 この場合、ローカル サイトのユーザーの必要に応じて、ローカル上書き (つまりローカル サーバーで定義され、警告管理サーバーでも定義される警告) を有効または無効にすることができます。 また、イベントがローカル警告によって処理される場合でも、必ずイベントが転送されるように要求することもできます。  
+ローカルで定義された警告が無効になっていて、その警告の発生原因となるイベントが発生した場合、そのイベントが (警告転送の条件を満たしていれば) 警告管理サーバーに転送されます。 この場合、ローカル サイトのユーザーの必要に応じて、ローカルオーバーライド (つまりローカル サーバーで定義され、警告管理サーバーでも定義される警告) を有効または無効にすることができます。 また、イベントがローカル警告によって処理される場合でも、必ずイベントが転送されるように要求することもできます。  
   
 次に、マルチサーバー環境でイベントを管理するための一般的なタスクを示します。  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
 ## <a name="running-event-triggered-jobs"></a>イベント トリガーのジョブの実行  
 警告に応答して実行されるジョブを定義できます。 たとえば、警告によって検出された問題を修正したり、さらに診断したりするジョブを実行できます。  
@@ -98,5 +100,5 @@ ms.lasthandoff: 05/03/2018
 > ジョブがイベントを発生させることもありえるので、再帰的な警告ジョブ ループを作成しないように注意してください。  
   
 ## <a name="see-also"></a>参照  
-[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/44bee7d9-7517-4071-99be-8b36f979c7cc)  
+[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e341b085f4a7ca591e02328db1bda8fae75a4ed
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 86e450a6eb6c1e169d5c9dc6147f0ab3cc2a9fb6
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094745"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085434"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>SQL Server の単体テストにテスト条件を追加する方法
 SQL Server の単体テストにテスト条件を追加するには、**SQL Server 単体テスト デザイナー**を使用します。 テスト クラスを保存すると、テスト条件は、テスト クラスを含むソース コード ファイルの Visual C\# コードまたは Visual Basic コードとして、テスト プロジェクトに自動的に保存されます。 保存したテスト条件は、**SQL Server 単体テスト デザイナー**またはソース コード ファイルで編集できます。  
@@ -33,7 +33,7 @@ SQL Server の単体テストにテスト条件を追加するには、**SQL Ser
 2.  ナビゲーション バーで、テスト条件を追加するテスト メソッドをクリックするか、**[共通スクリプト]** をクリックします。  
   
     > [!NOTE]  
-    > 共通スクリプトは、特定の単体テストに属していません。 共通スクリプトは、テスト クラスの単体テストの前または後に実行されます。 詳細については、「[SQL Server の単体テストのスクリプト](../ssdt/scripts-in-sql-server-unit-tests.md)」を参照してください。  
+    > 共通スクリプトは、特定の単体テストに属していません。 共通スクリプトは、テスト クラスの単体テストの前または後に実行されます。 詳しくは、「[SQL Server の単体テストのスクリプト](../ssdt/scripts-in-sql-server-unit-tests.md)」をご覧ください。  
   
 3.  ナビゲーション バーで、テスト条件の追加先となる Transact\-SQL スクリプトをクリックします。 テスト条件は、事前テスト スクリプト、テスト スクリプト、または事後テスト スクリプトに追加できます。  
   

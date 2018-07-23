@@ -25,10 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c45059cf8296e912853cac57d4e4da440ec03cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053000"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>結果ペインのデータの操作 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,7 +97,7 @@ null を使用せずに空白を入力するには、既存のテキストを削
 ## <a name="reconciling-changes-made-by-multiple-users"></a>複数のユーザーによる変更を調整する  
 クエリまたはビューの結果を操作していると、同じデータベースに対して操作を行っている別のユーザーがレコードを変更する場合があります。  
   
-この現象が発生すると、セルから離れて競合が起きた直後に、通知が表示されます。 その際、他のユーザーの変更を上書きするか、結果ペインを他のユーザーの変更に合わせて更新するか、発生した差異を調整せずに結果ペインの編集を続けるかを選択できます。 差異を調整しない場合は、変更がデータベースにコミットされません。  
+この現象が発生すると、セルから離れて競合が起きた直後に、通知が表示されます。 その際、他のユーザーの変更をオーバーライドするか、結果ペインを他のユーザーの変更に合わせて更新するか、発生した差異を調整せずに結果ペインの編集を続けるかを選択できます。 差異を調整しない場合は、変更がデータベースにコミットされません。  
   
 ## <a name="limitations-in-the-results-pane"></a>結果ペインの制限  
   

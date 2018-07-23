@@ -19,21 +19,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ad2c51c0d2e38449d7ef1b2e44c2dca80b98133f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064765"
 ---
 # <a name="job-categories-properties---new-job-category"></a>ジョブ カテゴリのプロパティ - [新しいジョブ カテゴリ]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 
+  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 1 つのジョブ カテゴリまたはすべてのジョブ カテゴリのジョブを一覧表示し、新しいジョブ カテゴリを追加できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **名前**  
 新しいジョブ カテゴリの名前を入力します。 ジョブ カテゴリの [プロパティ] ダイアログの場合は、表示されるカテゴリがここに示されます。  
   

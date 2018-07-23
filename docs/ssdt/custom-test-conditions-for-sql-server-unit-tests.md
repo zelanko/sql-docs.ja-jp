@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 807b718aaf84ed3760ba6b4bcece880ca73e6bc6
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 8f42e25023a989489000b124a653beb69c1afb33
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094682"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082564"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>SQL Server の単体テストのカスタム テスト条件
 SQL Server 単体テストにはカスタムのテスト条件を追加できます。 ただし、拡張機能を作成したか、他のユーザーが作成した拡張機能をインストールしているかにかかわらず、テスト条件は最初にインストールしないと、使用できません。  

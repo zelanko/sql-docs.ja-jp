@@ -18,24 +18,24 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c43f3a3e6c717947859e9cbfc1b2de0197129c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b97950c37c5cff52f049253bbd85a60d5373d724
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039959"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980054"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage への接続
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[Microsoft Azure Storage 接続]** ダイアログを使用して、ストレージ アカウントを指定したり、Microsoft Azure への接続を検証します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 Microsoft Azure のアカウントに関する次の情報を指定し、 **[次へ]** をクリックして続行します。  
   
 1.  **[ストレージ アカウント]** : ストレージ アカウント名を指定します。
 
    >[!NOTE]
-   > [汎用のストレージ アカウント](https://docs.microsoft.com/en-us/azure/storage/storage-introduction#introducing-the-azure-storage-services)にのみ接続できます。 他の種類のストレージ アカウントに接続すると、次のようなエラーが発生することがあります。
+   > [汎用のストレージ アカウント](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services)にのみ接続できます。 他の種類のストレージ アカウントに接続すると、次のようなエラーが発生することがあります。
    >
    >  HTTP ヘッダーのいずれか 1 つの値が正しい形式になっていません。 (Microsoft.SqlServer.StorageClient)
    >

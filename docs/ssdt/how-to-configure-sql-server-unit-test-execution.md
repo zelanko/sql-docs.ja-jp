@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8859458dfad88f729ace7b25ce7f050242990909
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: df35cb91b59e9ea4734864ee9f839b2eef983eaa
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094786"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086304"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>SQL Server の単体テストの実行を構成する方法
 テスト プロジェクトを構成することによって、SQL Server 単体テストの実行方法を制御するいくつかの設定を指定できます。 これらの構成設定は、テスト プロジェクトの app.config ファイルに格納されます。 このファイルを直接編集する場合は、新しい値が [テストの構成] ダイアログ ボックスに表示されます。  

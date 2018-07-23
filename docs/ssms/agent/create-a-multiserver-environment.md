@@ -21,17 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48b5e195f437b3bc173869ac7d8a7334c741e2b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985314"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 
+  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 マルチサーバー管理では、マスター サーバー (MSX) 1 台と、対象サーバー (TSX) 1 台以上を設定する必要があります。 すべての対象サーバーで処理されるジョブは、まずマスター サーバーで定義されてから対象サーバーにダウンロードされます。  
   
@@ -59,14 +61,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="related-tasks"></a>Related Tasks  
 次のトピックでは、マルチサーバー環境を作成するための一般的な作業について説明します。  
   
-|Description|トピック|  
+|[説明]|トピック|  
 |---------------|---------|  
 |マスター サーバーを作成する方法について説明します。|[マスター サーバーの作成](../../ssms/agent/make-a-master-server.md)|  
 |対象サーバーを作成する方法について説明します。|[対象サーバーの作成](../../ssms/agent/make-a-target-server.md)|  
 |マスター サーバーに対象サーバーを参加させる方法について説明します。|[マスター サーバーへの対象サーバーの参加](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |マスター サーバーから対象サーバーの参加を解除する方法について説明します。|[マスター サーバーからの対象サーバーの参加の解除](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |マスター サーバーから複数の対象サーバーの参加を解除する方法について説明します。|[マスター サーバーからの複数の対象サーバーの参加の解除](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
-|対象サーバーの状態を確認する方法について説明します。|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)|  
+|対象サーバーの状態を確認する方法について説明します。|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>参照  
 [プロキシを使用するマルチサーバー ジョブのトラブルシューティング](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  

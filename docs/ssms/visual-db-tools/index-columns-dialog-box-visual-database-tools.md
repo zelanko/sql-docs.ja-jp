@@ -18,17 +18,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ed5aca3c9f33ac691306d1c68a199975518003c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047569"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023719"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>[インデックスの列] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスでは、インデックスの列を選択し、その並べ替え順を設定できます。 インデックスは 1 つ以上の列を使用できます。また、各列は昇順または降順に並べ替えることができます。 このダイアログ ボックスを表示するには、 **[インデックス/キー]** ダイアログ ボックスの **[全般]** セクションで、 **[列]** 行の参照ボタンをクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **列名**  
 このインデックスに加える列を選択します。 その列をインデックスから削除するには、 **<None>** を選択します。  
   

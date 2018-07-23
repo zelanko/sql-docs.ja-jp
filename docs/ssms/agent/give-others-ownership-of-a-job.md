@@ -20,17 +20,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ba025ae882c1779cc4022b4cb75d323384a2708
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d795f709f37772c22cfcffb2b9f0d98c77a7501e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980034"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 
+  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブの所有権を他のユーザーに割り当てる方法を説明します。  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  クエリ ウィンドウで、 [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/en-us/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) システム ストアド プロシージャを使用する次のステートメントを入力します。 次の例では、 `danw` からのすべてのジョブを `françoisa`に再割り当てします。  
+3.  クエリ ウィンドウで、 [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) システム ストアド プロシージャを使用する次のステートメントを入力します。 次の例では、 `danw` からのすべてのジョブを `françoisa`に再割り当てします。  
   
     ```  
     USE msdb ;  
@@ -96,7 +98,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="SMOProc2"></a>SQL Server 管理オブジェクトの使用  
 **ジョブの所有権を他のユーザーに割り当てるには**  
   
-1.  Visual Basic、Visual C#、PowerShell などのプログラミング言語で **Job** クラスを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](http://msdn.microsoft.com/en-us/900242ad-d6a2-48e9-8a1b-f0eea4413c16)」を参照してください。  
+1.  Visual Basic、Visual C#、PowerShell などのプログラミング言語で **Job** クラスを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [ジョブの実装](../../ssms/agent/implement-jobs.md)  

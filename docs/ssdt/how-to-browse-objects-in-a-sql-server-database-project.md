@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd49a4d9d5370f1b5834f285831387323d9e0114
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 406940e534252c1118e4cbeb4b5b16166ec02b6a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094777"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088174"
 ---
 # <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>SQL Server データベース プロジェクトのオブジェクトを参照する方法
 Visual Studio の SQL Server オブジェクト エクスプローラーには、専用の [プロジェクト] ノードが用意されました。このノードの下で、ソリューション内のすべての SQL Server データベース プロジェクトが SQL Server Management Studio のような階層構造でグループ化されます。  

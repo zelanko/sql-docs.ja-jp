@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.editor.howto.navigate
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94bc95b5e2c3bf1b8dfc98c6590dceeddd481df9
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b06fbf69aa5a9d1c9354907f953d0fa98e8f9d40
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094802"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085674"
 ---
 # <a name="how-to-navigate-between-scripts"></a>スクリプト間を移動する方法
 Transact\-SQL エディターでは、オフライン開発用に 2 つの便利なナビゲーション ツールが用意されています。これらは、Visual Studio のユーザーにはなじみのある、[定義へ移動] と [すべての参照の検索] です。 たとえば、テーブル名を右クリックし、[すべての参照の検索] を使用すると、プロジェクト内のそのテーブルへの参照をすべて一覧表示できます。 検索結果をダブルクリックすると、特定のコード ファイルに移動できます。 このファイル内でテーブル名を再度右クリックし、[定義へ移動] をクリックすると、テーブル定義に戻ります。  

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecc38b525f07804f74c430b6acea99bf1712507e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a17d6a3f39ce45c3669ef9820b8b73d4c77a1b08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094641"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087084"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>接続文字列とアクセス許可の概要
 SQL Server 単体テストを実行するには、1 つまたは 2 つの特定の接続文字列を使用してデータベース サーバーに接続する必要があります。 各接続文字列は、テストの一部として特定のスクリプトでタスクまたはタスク セットを実行するために必要な特定のアクセス許可を保持するアカウントを表します。 これらの文字列は、**[SQL Server テスト構成]** ダイアログ ボックスで指定するか、テスト プロジェクトの app.config ファイルを手動で編集することにより指定できます。  

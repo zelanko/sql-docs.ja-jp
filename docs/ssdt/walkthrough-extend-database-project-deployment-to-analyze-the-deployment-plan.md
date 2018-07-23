@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bc03001c6bad49728134da6fd65f5fd0ee40873
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 7852d23e283c21f62856e4b3b9242c5e5115d0cd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094914"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085610"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張
 配置コントリビューターを作成して、SQL プロジェクトの配置時にカスタム アクションを実行できます。 DeploymentPlanModifier または DeploymentPlanExecutor を作成できます。 計画の実行前に計画を変更する場合は DeploymentPlanModifier を使用し、計画の実行中に操作を実行する場合は DeploymentPlanExecutor を使用します。 このチュートリアルでは、データベース プロジェクトの配置時に実行されるアクションに関するレポートを作成する、DeploymentUpdateReportContributor という名前の DeploymentPlanExecutor を作成します。 このビルド コントリビューターはレポートを生成するかどうかを制御するパラメーターを受け取るため、追加のステップを実行する必要があります。  
@@ -65,7 +65,7 @@ ms.locfileid: "37094914"
   
 3.  ソリューション エクスプローラーで、プロジェクト ノードを右クリックし、**[参照の追加]** をクリックします。  
   
-4.  [フレームワーク] タブで **[System.ComponentModel.Composition]** を選択します。  
+4.  [フレームワーク] タブで **System.ComponentModel.Composition** を選択します。  
   
 5.  必要な SQL 参照を追加します。この操作を行うには、プロジェクト ノードを右クリックし、**[参照の追加]** をクリックします。 **[参照]** をクリックし、**C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** フォルダーに移動します。 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll**、および **Microsoft.Data.Tools.Schema.Sql.dll** の各エントリを選択し、**[追加]**、**[OK]** の順にクリックします。  
   

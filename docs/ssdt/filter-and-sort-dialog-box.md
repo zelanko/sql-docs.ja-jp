@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datafilterdialog.dialog
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a5b2a1e6358302562d0fccc558eedbb4eb304d7
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: e60772ba898624feab9eada69c65e60a58ad6afd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094681"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083614"
 ---
 # <a name="filter-and-sort-dialog-box"></a>[フィルターと並べ替え] ダイアログ ボックス
 SQL Server オブジェクト エクスプローラーでは、テーブルまたはビューを右クリックして、**[データの表示]** を選択できます (詳細については、「[テーブル内のデータを表示および編集する方法](../ssdt/how-to-view-and-edit-data-in-a-table.md)」を参照してください)。 SQL Server Data Tools の 2014 年 3 月リリース以降、**データ エディター**のツール バーには、[並べ替えとフィルター] ボタンが追加されました。 テーブルまたはビューに表示されるデータを変更できます。  

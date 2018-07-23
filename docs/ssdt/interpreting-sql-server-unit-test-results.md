@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ea9047286b25eaae4820d5b7726a657fa19a22a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1709d7ca64eedf5e4f0dd170606082e7f99f3e31
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094850"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083864"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>SQL Server の単体テストの結果の解釈
 SQL Server 単体テストを実行すると、テスト結果が自動的に生成されて、ディスクに保存され、**[テスト結果]** ウィンドウに概要が表示されます。 テストの実行を開始するとすぐに、**[テスト結果]** ウィンドウが表示され、テスト実行の進行状況が表示されます。 この表示には、実行中のテストと完了したテストが含まれます。  

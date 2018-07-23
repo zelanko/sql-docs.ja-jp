@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e16b3aa3fb5010c23248dc16a5554bc9ff5cf6b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1dcc845c366b912f762e9bbf805c54c5de920fca
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094929"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085834"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する
 機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」をご覧ください。  
@@ -403,7 +403,7 @@ namespace ColumnCountCondition
   
 5.  **[プロパティ]** ウィンドウで、Count プロパティ、Enabled プロパティ、および ResultSet プロパティを構成します。  
   
-    詳しくは、「[方法: データベース単体テストにテスト条件を追加する](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」をご覧ください。  
+    詳しくは、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

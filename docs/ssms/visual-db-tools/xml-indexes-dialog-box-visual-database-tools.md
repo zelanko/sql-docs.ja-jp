@@ -18,17 +18,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00757208c128ef00ea58c5139b6edc8461621307
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33051999"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988644"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[XML インデックス]** ダイアログ ボックスを使用すると、 **[インデックス/キー]** ダイアログ ボックスではできない、データ型が XML の列に対するインデックスの作成を行うことができます。 各 XML 列に複数の XML インデックスを作成できますが、最初に作成したインデックス (プライマリ インデックス) が他のインデックス (セカンダリ インデックス) の基になります。 プライマリ XML インデックスを削除すると、セカンダリ インデックスも削除されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **[選択された XML インデックス]**  
 既存の XML インデックスを一覧表示します。 特定のインデックスを選択すると、右側のグリッドにそのプロパティが表示されます。 一覧が空の場合、テーブルには何も定義されていません。  
   

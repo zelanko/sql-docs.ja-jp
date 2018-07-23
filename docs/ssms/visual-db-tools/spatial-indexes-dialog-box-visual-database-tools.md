@@ -17,19 +17,20 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb7c869dbf087db4c59eb9e5ba30c48f6e33f055
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981874"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、 **[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
   
-空間インデックスの作成の制限については、「 [空間インデックスの概要](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)」を参照してください。  
+空間インデックスの作成の制限については、「 [空間インデックスの概要](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **[選択された空間インデックス]**  
 既存の空間インデックスを一覧表示します。 特定の空間インデックスのプロパティを表示するには、そのインデックスをクリックします。 この一覧が空の場合、テーブルには空間インデックスがまったく定義されていません。  
   
@@ -121,5 +122,5 @@ ms.lasthandoff: 05/03/2018
 該当するインデックスで行レベルのロックを許可するかどうかを指定します。 行レベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。  
   
 ## <a name="see-also"></a>参照  
-[空間インデックスの概要](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[空間インデックスの概要](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

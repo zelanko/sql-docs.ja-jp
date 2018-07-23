@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 823a2ed8a1a4c81587d71d1646e19312c0afea8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 34e614c397fd1de17c7c46fe320d76dd0fb17581
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044609"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985354"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>ビジネス インテリジェンスに使用される SQL Server Management Studio の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33044609"
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] では、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、および XML for Analysis (XMLA) で作成されるスクリプトの開発と保存を行う [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] スクリプト プロジェクトが提供されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] スクリプト プロジェクトは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] インスタンスで管理タスクを実行したり、データベースやキューブなどのオブジェクトを再作成したりする場合に使用します。 たとえば、既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] インスタンスで直接新しいオブジェクトを作成する XMLA スクリプトを [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] スクリプト プロジェクトで開発することができます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] スクリプト プロジェクトは、ソリューションの一部として保存し、ソース コード コントロールに統合できます。  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]の使用方法について詳しくは、「 [SQL Server Management Studio を使用した開発と実装](http://msdn.microsoft.com/en-us/c4f5a06b-e2e4-4660-a3a8-6fd356742c02)」をご覧ください。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]の使用方法について詳しくは、「 [SQL Server Management Studio を使用した開発と実装](http://msdn.microsoft.com/c4f5a06b-e2e4-4660-a3a8-6fd356742c02)」をご覧ください。  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Integration Services ソリューションの管理  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] サービスを使用して、パッケージの管理および実行中のパッケージの監視を行うことができます。 また [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] では、パッケージをフォルダーに編成できるほか、パッケージの実行、インポート、エクスポート、データ変換サービス (DTS) パッケージの移行、および [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] パッケージのアップグレードを行うことができます。  
@@ -48,21 +48,21 @@ SQL Server Management Studio では、Reporting Services の機能の有効化�
   
 [共有スケジュール] フォルダーを使用して共有スケジュールを管理し、レポート サーバー データベース (ReportServer、ReportServerTempdb) を管理します。 また、レポート サーバー データベースを新規または別の SQL Server データベース エンジン ([!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]) に移動する場合は、master システム データベースで RSExecRole を作成します。 これらの作業の詳細については、次のトピックを参照してください。  
   
--   [Management Studio の操作方法に関するトピック](http://msdn.microsoft.com/en-us/60685458-9108-47bf-820a-5e7db454d408)  
+-   [Management Studio の操作方法に関するトピック](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
--   [レポート サーバー データベースの管理](http://msdn.microsoft.com/en-us/97b2e1b5-3869-4766-97b9-9bf206b52262)  
+-   [レポート サーバー データベースの管理](http://msdn.microsoft.com/97b2e1b5-3869-4766-97b9-9bf206b52262)  
   
--   [RSExecRole を作成する方法](http://msdn.microsoft.com/en-us/7ac17341-df7e-4401-870e-652caa2859c0)  
+-   [RSExecRole を作成する方法](http://msdn.microsoft.com/7ac17341-df7e-4401-870e-652caa2859c0)  
   
 また、各種機能の有効化と構成、サーバーの既定値の設定、およびロールとジョブの管理を行うことで、サーバーを管理します。 これらの作業の詳細については、次のトピックを参照してください。  
   
--   [レポート サーバーのプロパティを設定する方法 (Management Studio)](http://msdn.microsoft.com/en-us/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [レポート サーバーのプロパティを設定する方法 (Management Studio)](http://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [ロールを作成、削除、または変更する方法 (Management Studio)](http://msdn.microsoft.com/en-us/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [ロールを作成、削除、または変更する方法 (Management Studio)](http://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
--   [Reporting Services のクライアント側印刷機能の有効化と無効化](http://msdn.microsoft.com/en-us/0e709c96-7517-4547-8ef6-5632f8118524)  
+-   [Reporting Services のクライアント側印刷機能の有効化と無効化](http://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Data Tools を使用した開発と実装](http://msdn.microsoft.com/en-us/132ed779-3ec8-4734-9698-802116d1b017)  
-[SQL Server データ ツールの Reporting Services](http://msdn.microsoft.com/en-us/0903c7b2-ac59-45f1-b7d0-922ecd9d76f8)  
+[SQL Server Data Tools を使用した開発と実装](http://msdn.microsoft.com/132ed779-3ec8-4734-9698-802116d1b017)  
+[SQL Server データ ツールの Reporting Services](http://msdn.microsoft.com/0903c7b2-ac59-45f1-b7d0-922ecd9d76f8)  
   

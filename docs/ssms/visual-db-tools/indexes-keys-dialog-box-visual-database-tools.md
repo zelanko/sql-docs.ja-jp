@@ -18,21 +18,21 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5a139725bdc5a0bbde74478ad1a2465e8b3ea9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053799"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984994"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>[インデックス/キー] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスを使用すると、インデックス、主キー、および一意キーを作成したり、変更したりできます。 このダイアログ ボックスにアクセスするには、インデックスまたはキーを持つテーブルのテーブル定義を開いて、テーブル定義グリッドを右クリックし、 **[インデックス/キー]** をクリックします。  
   
 > [!NOTE]  
-> テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
+> テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **[選択された主/一意キーまたはインデックス]**  
 既存の主キーまたは一意キーとインデックスを示します。 右側のグリッドにプロパティを表示するキーまたはインデックスを選択します。 一覧が空の場合、テーブルには何も定義されていません。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33053799"
 展開して **[CLUSTERED として作成]** の情報を表示します。  
   
 **[CLUSTERED として作成]**  
-キーまたはインデックスをクラスター化します。 1 つのテーブルでクラスター化できるインデックスは、1 つだけです。 テーブル内のデータは、クラスター化インデックスの順序で保存されます。 詳細については、「 [クラスター化インデックスの作成](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 」と「 [非クラスター化インデックスの作成](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)」を参照してください。  
+キーまたはインデックスをクラスター化します。 1 つのテーブルでクラスター化できるインデックスは、1 つだけです。 テーブル内のデータは、クラスター化インデックスの順序で保存されます。 詳細については、「 [クラスター化インデックスの作成](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 」と「 [非クラスター化インデックスの作成](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943)」を参照してください。  
   
 **[データ スペースの指定]**  
 展開して **[(データ スペースの種類)]**、 **[ファイル グループまたはパーティション スキーム名]**、および **[パーティション列の一覧]** の情報を表示します。  
@@ -120,6 +120,6 @@ ms.locfileid: "33053799"
 該当するインデックスで行レベルのロックを許可するかどうかを指定します。 行レベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。 推奨設定値は **[はい]** です。  
   
 ## <a name="see-also"></a>参照  
-[制約の使用 (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[キーの使用 (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[制約の使用 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[キーの使用 (Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

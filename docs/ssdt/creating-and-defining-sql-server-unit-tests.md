@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.DatabaseMethodNameDialog
 - sql.data.tools.unittesting.designer
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e197b3aa5a5383a40e20e366edb4d5b9c6f98c4b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4b52fc60f3102e7b6a38d254fba682ab4321d804
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094737"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088334"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>SQL Server の単体テストの作成と定義
 SQL Server の単体テストを実行すると、スキーマ内の 1 つ以上のデータベース オブジェクトに対する変更によって、データベース アプリケーションの既存の機能が使用できなくなっていないかどうかを検証できます。 これらのテストは、ソフトウェア開発者が作成する単体テストを補完するものです。 両方の種類のテストを実行して、アプリケーションの動作を検証する必要があります。  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae970c69dbc12619f340e1a766198afc250b4e1e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772820"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039970"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34772820"
 ##  <a name="EnableTSQLTable"></a> Transact-SQL を使用してテーブルで Stretch Database を有効にする  
  Transact-SQL を使用して、既存のテーブルで Stretch Database を有効にしたり、Stretch Database が有効になっている新しいテーブルを作成したりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  CREATE TABLE または ALTER TABLE を実行してテーブルで Stretch Database を有効にする場合は、次のオプションを使用します。  
   
 -   テーブルにホット データとコールド データの両方が含まれている場合は、オプションで `FILTER_PREDICATE = <function>` 句を使用して、移行する行を選択する関数を指定します。 この述語でインライン テーブル値関数を呼び出す必要があります。 詳細については、「 [フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 フィルター関数を指定しない場合、テーブル全体が移行されます。  

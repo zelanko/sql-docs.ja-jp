@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fc026287cb292f3074afe4392d38088b3ba456d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094905"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087144"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Team Foundation ビルドから SQL Server の単体テストを実行する方法
 Team Foundation ビルドを使用すると、SQL Server の単体テストをビルド確認テスト (BVT) の一環として実行できます。 データベースを配置し、テスト データを生成して、選択したテストを実行するように単体テストを構成できます。 Team Foundation ビルドを使い慣れていない場合は、このトピックの手順を実行する前に、次の情報を確認してください。  

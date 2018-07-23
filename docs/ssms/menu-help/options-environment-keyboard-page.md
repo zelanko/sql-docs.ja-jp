@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5b6ecaea97dd0fb947a69ad9c50506684dc0ba9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6218358bced6d36056b33ce82720d53cbc32bdab
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043359"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982494"
 ---
 # <a name="options-environment---keyboard-page"></a>[オプション] \([環境]/[キーボード] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,5 +42,5 @@ ms.locfileid: "33043359"
 **ストアド プロシージャ**  
 キーボード ショートカットを押したときに実行されるストアド プロシージャです。  
   
-各スキームにおけるキーボード ショートカットの一覧については、「 [SQL Server Management Studio のキーボード ショートカット](http://msdn.microsoft.com/en-us/98baaac4-0727-4ce4-8bfe-c63793ae69b8)」を参照してください。  
+各スキームにおけるキーボード ショートカットの一覧については、「 [SQL Server Management Studio のキーボード ショートカット](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8)」を参照してください。  
   

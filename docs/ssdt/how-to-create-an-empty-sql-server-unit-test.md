@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1476ab23a36faee220445218470c25713a47ebac
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: dead1b79e36fbda2565eaf64cb26dc63db0a7af7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094826"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088444"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>空の SQL Server の単体テストを作成する方法
 データベース オブジェクトに単体テストを含めることで、データベース オブジェクトに加えた変更によって既存の機能が使用できなくなっていないかどうかを検証できます。 次に、任意のデータベース オブジェクト用に SQL Server 単体テストを作成する手順について説明します。 SQL Server Data Tools には、データベース関数、トリガー、およびストアド プロシージャの追加のサポートも含まれています。 詳しくは、「[関数、トリガー、およびストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)」をご覧ください。  

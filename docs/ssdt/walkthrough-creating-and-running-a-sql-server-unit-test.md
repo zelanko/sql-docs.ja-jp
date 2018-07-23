@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b3358a05940feb1905b65242877cf951e17776a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a04bd99b8106615efc7e210c11c281abd4fdaf9f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094921"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086834"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>チュートリアル :SQL Server の単体テストの作成と実行
 このチュートリアルでは、複数のストアド プロシージャの動作を検証する SQL Server の単体テストを作成します。 SQL Server の単体テストを作成すると、アプリケーションの不適切な動作の原因となる可能性があるコードの欠陥を特定するのに役立ちます。 SQL Server の単体テストとアプリケーション テストは、自動テスト スイートの一部として実行できます。  

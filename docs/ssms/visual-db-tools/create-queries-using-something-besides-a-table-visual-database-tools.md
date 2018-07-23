@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee54d948bb5acebaf55a3b0137677bf72013570d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16ce8b8901e94ea995b1ac0c517d0df7f7304922
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048439"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979315"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>テーブル以外のアイテムを使用したクエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,5 +147,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F" は、取得の対象となる組織の管理者の emp_id を示しています。 ユーザー定義関数をクエリに追加する方法については、「[クエリへのテーブルの追加 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)」を参照してください。 ユーザー定義関数の詳しい説明については、「[ユーザー定義関数](http://msdn.microsoft.com/en-us/d7ddafab-f5a6-44b0-81d5-ba96425aada4)」を参照してください。  
+"VPA30890F" は、取得の対象となる組織の管理者の emp_id を示しています。 ユーザー定義関数をクエリに追加する方法については、「[クエリへのテーブルの追加 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)」を参照してください。 ユーザー定義関数の詳しい説明については、「[ユーザー定義関数](http://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4)」を参照してください。  
   

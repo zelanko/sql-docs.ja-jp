@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
 - sql.data.tools.design.table.columnsgrid.view
@@ -18,12 +18,12 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ffd1c415ab2ae463a539adc0dbbdb719764efb7
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 199f12a6318b9a283a62176289a2c6501444255e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094666"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085174"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>テーブル デザイナーを使用してテーブルおよびリレーションシップを管理する方法
 Transact\-SQL エディターと同様に、テーブル デザイナーを使用すると、テーブル固有のプログラミング オブジェクトを含め、SQL Server データベースのテーブル構造を視覚的に作成および編集できます。  接続されているデータベースまたはプロジェクトに対して新しいテーブルを作成するときや、SQL Server オブジェクト エクスプローラーまたはソリューション エクスプローラーでテーブルを編集するためにダブルクリックしたときに、テーブル デザイナーが起動します。  

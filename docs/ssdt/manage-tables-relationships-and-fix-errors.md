@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbba56a9a251a39e7f5504279a0d58c5a5637688
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 876d0668cccc034701f2df0f44005e19b8c6158d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094658"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087534"
 ---
 # <a name="manage-tables-relationships-and-fix-errors"></a>テーブルとリレーションシップの管理およびエラーの修正
 このセクションのトピックでは、テーブル デザイナーを使用してテーブルのデザインとテーブルのリレーションシップの管理を行う方法について説明します。 他のトピックでは、一般的な構文エラーやセマンティック エラーについて説明します。  

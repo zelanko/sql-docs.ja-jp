@@ -23,17 +23,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046039"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971364"
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 
+  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを使用すると、 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップ スクリプトでトークンを使用できます。 ジョブ ステップを記述するときにトークンを使用すると、ソフトウェア プログラムを記述するときの変数と同じような柔軟性が得られます。 ジョブ ステップ スクリプトにトークンを挿入した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] サブシステムでジョブ ステップが実行される前に、 [!INCLUDE[tsql](../../includes/tsql_md.md)] エージェントにより実行時にトークンが置き換えられます。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "33046039"
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server エージェントのトークン  
   
-|トークン|Description|  
+|トークン|[説明]|  
 |---------|---------------|  
 |**(A-DBN)**|データベース名。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にデータベース名の値に置き換えられます。|  
 |**(A-SVR)**|サーバー名。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にサーバー名の値に置き換えられます。|  
@@ -97,7 +98,7 @@ ms.locfileid: "33046039"
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server エージェントのエスケープ マクロ  
   
-|エスケープ マクロ|Description|  
+|エスケープ マクロ|[説明]|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***token_name***))**|トークンの置換後の文字列にある単一引用符 (') をエスケープします。 1 つの単一引用符を 2 つの連続する単一引用符に置き換えます。|  
 |**$(ESCAPE_DQUOTE(***token_name***))**|トークンの置換後の文字列にある二重引用符 (") をエスケープします。 1 つの二重引用符を 2 つの連続する二重引用符に置き換えます。|  

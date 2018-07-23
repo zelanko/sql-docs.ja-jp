@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5ef4c7f272cc66003051a395b93e119f153640a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094738"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087174"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>SQL Server 単体テスト デザイナーのテスト条件を作成する方法
 新しいテスト条件の作成には、拡張可能な [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスを利用できます。 たとえば、列数や結果セットの値を検証するテスト条件を作成することができます。  
@@ -39,7 +39,7 @@ ms.locfileid: "37094738"
   
 6.  **[プロジェクト]** メニューの **[プロジェクトのアンロード]** をクリックします。  
   
-7.  **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[<project name>.csproj の編集]** をクリックします。  
+7.  **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[<project name>.csproj の編集]** を選択します。  
   
 8.  Microsoft.CSharp.targets をインポートした後、次の Import ステートメントを追加します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "37094738"
   
 13. 新しいテスト条件を使用できるようにするには、署名したアセンブリを %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions フォルダーにコピーする必要があります。 このフォルダーが存在しない場合は作成します。 このディレクトリにコピーするには、コンピューターの管理特権が必要です。  
   
-14. テスト条件をインストールします。 詳細については、「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」を参照してください。  
+14. テスト条件をインストールします。 詳しくは、「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」をご覧ください。  
   
 15. 新しい SQL Server の単体テストをプロジェクトに追加し、プロジェクトに追加されるテスト条件への参照を作成します。 プロジェクトのテスト条件アセンブリに手動で参照を追加することができます。 この手順を実行した後は、デザイナーを読み込み直します。  
   

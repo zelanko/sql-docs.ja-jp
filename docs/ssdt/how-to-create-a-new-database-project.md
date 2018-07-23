@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
 - sql.data.tools.SqlProjectImportDatabaseDialog.dialog
@@ -21,12 +21,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2482967c3001377a803b87e6bcd46c3cc9183b82
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4fdaca995e96116b1268916d008b565454511489
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094842"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088484"
 ---
 # <a name="how-to-create-a-new-database-project"></a>新しいデータベース プロジェクトを作成する方法
 新しいデータベース プロジェクトを作成し、既存のデータベース、.sql スクリプト ファイル、またはデータ層アプリケーション (.dacpac) からデータベース スキーマをインポートすることができます。 その後で、接続されたデータベース開発で使用できるものと同じビジュアル デザイナー ツール (Transact\-SQL エディター、テーブル デザイナー) を起動し、オフライン データベース プロジェクトに変更を加えて、その変更を元の実稼働データベースに公開できます。 変更を後で公開できるようにスクリプトとして保存することもできます。 **プロジェクトのプロパティ** ペインを使用すると、ターゲット プラットフォームを別のバージョンの SQL Server (SQL Azure を含む) に変更することもできます。  

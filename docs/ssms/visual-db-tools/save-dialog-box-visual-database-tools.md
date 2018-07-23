@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccd558bbfd074a2eee44fa1ea91a412b65b3e8fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048449"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030777"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>[上書き保存] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33048449"
 > [!NOTE]  
 > テーブル デザイナーのテーブルに対して行った変更は、テーブルを保存するまでデータベースにはコミットされません。 いったんテーブルを保存すると、変更を取り消すことはできなくなります。 未保存の変更を破棄するには、開いているすべてのテーブルを保存しないで閉じます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **[該当テーブルに関する警告]**  
 選択したテーブルを次に保存するときに、このダイアログ ボックスを表示するかどうかを指定します。 既定では、このチェック ボックスはオンです。 このオプションをオフにしても、 **[オプション]** ダイアログ ボックスで再びオンにできます。  
   

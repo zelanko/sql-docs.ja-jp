@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6433702a0b265053d8a6124adcca065b3f876f25
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4938666c0a8a23aca2760b55d94bc3d7e03947f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094938"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086284"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
 ビルド コントリビューターを作成して、データベース プロジェクトのビルド時にカスタム アクションを実行できます。 このチュートリアルでは、データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力する ModelStatistics という名前のビルド コントリビューターを作成します。 このビルド コントリビューターはビルド時にパラメーターを受け取るため、追加のステップが必要となります。  
