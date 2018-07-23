@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 6f5a4b479c9ca217d0bde9535c28b301ea7715bc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978904"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086974"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して、Linux 上の SQL Server のデータベースを作成するには
 
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT) は、Visual Studio を SQL Server on Linux の強�
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio と SQL Server Data Tools をインストールします。
 
-1. 既にインストールしていない Visual Studio、Windows コンピューターの場合[ダウンロードして Visual Studio のインストール]します。 Visual Studio Community エディションは、受講者、完全に機能を備えた無料の IDE、Visual Studio のライセンスがない、オープン ソース、個人の開発者。
+1. 既にインストールしていない Visual Studio、Windows コンピューターの場合[ダウンロードおよび Visual Studio のインストール]します。 Visual Studio Community エディションは、受講者、完全に機能を備えた無料の IDE、Visual Studio のライセンスがない、オープン ソース、個人の開発者。
 
 2. Visual Studio のインストール中に次のように選択します。**カスタム**の、**インストールの種類を選択**オプション。 **[次へ]** をクリックします。
 
@@ -113,7 +113,7 @@ T-SQL に慣れていない場合は、次を参照してください。[チュ�
 
 SQL Data Tools でのデータベース開発の詳細については、次を参照してください[SSDT MSDN ドキュメント]
 
-[ダウンロードして Visual Studio のインストール]:https://www.visualstudio.com/downloads/
+[ダウンロードおよび Visual Studio のインストール]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN ドキュメント]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [チュートリアル: Transact-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx

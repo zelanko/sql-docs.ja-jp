@@ -29,7 +29,7 @@
 ## SQL Server 2016
 ### [R Services (データベース内)](install/sql-r-services-windows-install.md)
 ### [R Server (スタンドアロン)](install/sql-r-standalone-windows-install.md)
-## [トレーニング済みモデル](r/install-pretrained-models-sql-server.md)
+## [トレーニング済みモデル](install/sql-pretrained-models-install.md)
 ## [コマンド プロンプトのセットアップ](install/sql-ml-component-commandline-install.md)
 ## [オフラインのセットアップ (インターネットなし)](install/sql-ml-component-install-without-internet-access.md)
 ## [R および Python のアップグレード](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)

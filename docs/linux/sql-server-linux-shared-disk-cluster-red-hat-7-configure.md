@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 7ddd34e56d8f8499715c535de21ae6f23bd282b1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4ab3db647ea96ce926d51c7dcf94c2e17e633c22
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001634"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086444"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux の共有ディスク クラスターを構成します。
 
@@ -111,7 +111,7 @@ ms.locfileid: "38001634"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>共有記憶域を構成して、データベース ファイルを移動する 
 
-共有記憶域を提供するためのさまざまなソリューションがあります。 このチュートリアルでは、NFS を使った共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して、NFS をセキュリティで保護するをお勧めします (ここで例を見つけることができます:https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)します。 
+共有記憶域を提供するためのさまざまなソリューションがあります。 このチュートリアルでは、NFS を使った共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して、NFS をセキュリティで保護するをお勧めします (ここで例を見つけることができます: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)します。 
 
 >[!Warning]
 >NFS を保護していない場合、ネットワークにアクセスして SQL ノードの IP アドレスを偽装できるすべてのユーザーがデータ ファイルにアクセスできます。 通常どおり、実稼働環境で使用する前にお使いのシステムの脅威モデルを確認してください。 別の記憶域オプションとして、SMB ファイル共有を使用できます。

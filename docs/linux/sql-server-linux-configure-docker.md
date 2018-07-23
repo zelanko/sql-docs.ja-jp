@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 07/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 433da2ba98a47ec5dc4be64cd1d6b1ea52068c04
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
-ms.translationtype: HT
+ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352754"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085874"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -40,7 +40,7 @@ ms.locfileid: "37352754"
 
 前のセクションで、クイック スタートでは、Docker Hub から SQL Server の無料の Developer edition を実行します。 ほとんどの情報は、Enterprise、Standard、または Web edition などのコンテナー イメージを運用環境に実行する場合にも適用されます。 ただし、ここに記載されているいくつかの違いがあります。
 
-- のみ、有効なライセンスがある場合、SQL Server を運用環境で使用できます。 無料の SQL Server Express の運用環境ライセンスを取得する[ここ](https://go.microsoft.com/fwlink/?linkid=857693)します。 SQL Server Standard および Enterprise Edition のライセンスを利用[Microsoft ボリューム ライセンス](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)します。
+- のみ、有効なライセンスがある場合、SQL Server を運用環境で使用できます。 無料の SQL Server Express の運用環境ライセンスを取得する[ここ](https://go.microsoft.com/fwlink/?linkid=857693)します。 SQL Server Standard および Enterprise Edition のライセンスを利用[Microsoft ボリューム ライセンス](https://www.microsoft.com/en-us/licensing/default.aspx)します。
 
 - 実稼働 SQL Server のコンテナー イメージをプルする必要があります[Docker ストア](https://store.docker.com)します。 1 つをいない場合は、Docker のストアのアカウントを作成します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "37352754"
       docker login
       ```
 
-   1. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux)、] をクリックして**チェック アウトを続行**指示に従います。
+   1. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux)、 をクリックして**チェック アウトを続行**指示に従います。
 
    1. プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)します。 2 つの違いがあります。 イメージをプルする必要があります**ストア、microsoft、mssql-サーバー-linux:\<タグ名\>** Docker ストアから。 実稼働エディションを指定する必要があり、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
 
