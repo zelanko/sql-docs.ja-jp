@@ -1,7 +1,7 @@
 # [Microsoft SQL Server 用 JDBC Driver](microsoft-jdbc-driver-for-sql-server.md)
 
 # [JDBC のコード サンプル +](../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)
-# [JDBC リファレンス +](../../connect/jdbc/reference/datetimeoffset-class.md)
+# [JDBC API リファレンス +](reference/jdbc-driver-api-reference.md)
 
 # [JDBC ドライバーの概要](getting-started-with-the-jdbc-driver.md)
 ## [ステップ 1: Java 開発用に開発環境を構成する](step-1-configure-development-environment-for-java-development.md)
