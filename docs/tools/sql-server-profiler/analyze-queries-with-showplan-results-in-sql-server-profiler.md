@@ -19,10 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26e3fcd0f7959f5b659468f943a321d30c75cce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066845"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler での Showplan 結果を使用したクエリの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="showplan-events"></a>Showplan イベント  
  次の表に、各種の Showplan トレース イベントとその説明を示します。  
   
-|イベント名|Description|  
+|イベント名|[説明]|  
 |----------------|-----------------|  
 |**Performance statistics**|コンパイル済みの Showplan が初めてキャッシュされたとき、再コンパイルされたとき、およびプラン キャッシュから削除されたときを示します。 **TextData** 列には、XML 形式の Showplan が含まれます。 詳細については、「 [Performance Statistics イベント クラス](../../relational-databases/event-classes/performance-statistics-event-class.md)」を参照してください。|  
 |**Showplan All**|実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのコンパイルに関する完全な詳細情報が含まれたクエリ プランを表示します。 たとえば、コストの見積りと列リストを表示できます。 詳細については、「 [Showplan All イベント クラス](../../relational-databases/event-classes/showplan-all-event-class.md)」を参照してください。|  

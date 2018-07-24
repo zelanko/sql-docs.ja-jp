@@ -19,10 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb3df3e09379d0a99dea7660d210fc9bccd5f5fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053920"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([証明書] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  **[MSSQLSERVER のプロトコルのプロパティ]**  
  セキュリティ プロバイダーによって判別される証明書の名前です。 証明書を選択すると、プロパティのグリッドに詳細が表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  [有効期限]  
  証明書の有効期間の最終日付です。  
   

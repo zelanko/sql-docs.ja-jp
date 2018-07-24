@@ -1,5 +1,5 @@
 ---
-title: '&lt;エイリアス&gt;プロパティ ([別名] タブ) |Microsoft ドキュメント'
+title: '&lt;エイリアス&gt;プロパティ ([別名] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e2ed13706eb817c9603c354ee268ba188e7c3d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999914"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;[別名]&gt; プロパティ ([別名] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   別名は、接続のために使用できる代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 **[\<** Alias **> のプロパティ]** ダイアログ ボックスの **[別名]** ページでは、別名の接続文字列について各要素の表示や指定を行います。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **Alias Name**  
  この接続を参照するために使用する名前 (別名) です。  
   

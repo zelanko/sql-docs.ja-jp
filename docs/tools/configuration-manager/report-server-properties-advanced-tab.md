@@ -15,16 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b3ca502b82745780d2353e25ea8252d811e42e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050660"
 ---
 # <a name="report-server-properties-advanced-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[カスタマー フィードバック レポート]**  
  サービス品質の監視がこのサービスで有効になっているかどうかを示します。 カスタマー フィードバック報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。  
   

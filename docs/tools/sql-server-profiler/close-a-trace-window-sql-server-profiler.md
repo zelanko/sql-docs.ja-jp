@@ -1,5 +1,5 @@
 ---
-title: 閉じるトレース ウィンドウ (SQL Server Profiler) |Microsoft ドキュメント
+title: 閉じるトレース ウィンドウ (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -18,10 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47dc73850a63a293b69466d42284e54a8ffdb79e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048321"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>トレース ウィンドウを閉じる (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

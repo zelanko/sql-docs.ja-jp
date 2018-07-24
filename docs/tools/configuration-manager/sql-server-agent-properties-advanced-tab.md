@@ -15,16 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8576723b9b7205bf63a21b5f4106bf5366f8a8fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999084"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   既定では、5 つのプロパティが **[詳細設定]** タブに表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **クラスター化インデックス**  
  このサービスがクラスター サーバーのリソースとしてインストールされているかどうかが表示されます。  
   

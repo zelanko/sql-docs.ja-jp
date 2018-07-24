@@ -1,5 +1,5 @@
 ---
-title: Configuration 要素 (DTA) |Microsoft ドキュメント
+title: Configuration 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 50e3fc0edbc43eff14fa9cfec5e4bf5d8326b0e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997124"
 ---
 # <a name="configuration-element-dta"></a>Configuration 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +47,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Configuration の属性|Description|  
+|Configuration の属性|[説明]|  
 |-----------------------------|-----------------|  
 |**SpecificationMode**|省略可。 データベース エンジン チューニング アドバイザーが、指定された構成を既存の構成との関連で分析を行うか、それともまったく新しい独立した構成として分析を行うかを指定します。 この属性を指定するには **string** データ型を使用します。指定できる値は次のいずれかです。<br /><br /> **Relative**:<br />                  指定された構成を、チューニングしているデータベースにある物理設計構造の現在の既存構成 (インデックス、インデックス付きビュー、パーティション) との関連で評価します。 例 :<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**:<br />                  指定された構成を、独立した構成として評価します。 Absolute が指定されると、データベース エンジン チューニング アドバイザーは既存の構成を考慮しません。 例 :<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  

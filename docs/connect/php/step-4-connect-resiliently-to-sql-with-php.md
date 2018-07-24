@@ -1,5 +1,5 @@
 ---
-title: '手順 4: は、PHP で SQL に弾性的接続 |Microsoft ドキュメント'
+title: '手順 4: は PHP で SQL に弾性的に接続 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -14,22 +14,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b422ab79b0a0cec89683835f592d4813edc99d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: da5c3b99eab34afded5fd92c19f53f3868517d43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310001"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983025"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>ステップ 4: PHP で SQL に弾性的に接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-デモ プログラムのように設計されたように一時的なエラー (プレフィックス '08' このに記載されていると、エラー コードは[付録](https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) 再試行にリーダーを接続の試行中にします。 クエリ コマンドの実行中の一時的なエラーが原因で、プログラムを接続を破棄し、クエリ コマンドを再試行する前に、新しい接続を作成します。 推奨もこの設計を選択します。 デモ プログラムで利用可能なデザインの柔軟性の一部を示しています。  
+デモ プログラムの目的はように一時的なエラー (エラー コードは '08'」の一覧にこのプレフィックスを持つ[付録](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) 再試行に潜在顧客を接続の試行中にします。 ただし、クエリ コマンドの実行中の一時的なエラーが原因で接続が破棄され、クエリ コマンドを再試行する前に、新しい接続を作成するプログラム。 この設計の選択を推奨します。 デモ プログラムは、使用できる柔軟にデザインの一部を示しています。  
   
-このサンプル コードの長さは、例外キャッチ ロジックにほとんどの場合です。   
+このサンプル コードの長さが例外キャッチ ロジックにほとんどの場合です。   
   
-[Sqlsrv_query()](../../connect/php/sqlsrv-query.md)関数を使用して SQL データベースに対するクエリからセットの結果を取得することができます。 この関数は、本質的にクエリと接続オブジェクトをすべて受け入れ、反復処理できるので、結果のセットを返します[sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md)です。 
+[Sqlsrv_query()](../../connect/php/sqlsrv-query.md) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的にクエリと接続オブジェクトをすべて受け入れます、使用して反復処理できる結果セットを返します[sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md)します。 
   
 ```php
 

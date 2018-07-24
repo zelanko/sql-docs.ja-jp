@@ -1,5 +1,5 @@
 ---
-title: updateDate (int, java.sql.Date) メソッド |Microsoft ドキュメント
+title: updateDate (int, java.sql.Date) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb9a9a7480d77101dd024d68e39a069577960233
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851037"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995968"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>updateDate (int, java.sql.Date) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void updateDate(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *インデックス*  
+ *index*  
   
  列インデックスを示す **int** です。  
   
@@ -51,7 +51,7 @@ public void updateDate(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この updateDate メソッドは、java.sql.ResultSet インターフェイスの updateDate メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: StorageBoundInMB 要素 (DTA) |Microsoft ドキュメント
+title: StorageBoundInMB 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff7220d48a161456d899fb150c3749accad10fcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063390"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**unsignedInt**、長さは無制限です。|  
 |**既定値**|[なし] :|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>[説明]  
  次のコード例では、チューニングの推奨設定で使用できる最大ディスク領域として 1500 MB の制限を設定する方法を示します。  
   
 ## <a name="code"></a>コード  

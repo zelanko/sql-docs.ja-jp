@@ -1,5 +1,5 @@
 ---
-title: DTAXML 要素 (DTA) |Microsoft ドキュメント
+title: DTAXML 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d08c99cc52515bfc999b686edb9f8afaa61f986c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048282"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "33072599"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|Description|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**xmlns:xsi**|必須。 XML Schema Instance 名前空間を識別します。 この名前空間の属性を使用して、データベース エンジン チューニング アドバイザーの XML ファイルの検証に使用するスキーマを参照します。<br /><br /> 必要な値: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|必須。 データベース エンジン チューニング アドバイザーの名前空間を識別します。<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の XML エディターを使用してデータベース エンジン チューニング アドバイザーの XML ファイルを編集する場合、F1 ヘルプとダイナミック ヘルプでは、この値を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの参照トピックを検索します。<br /><br /> 必須値 :<br /><br /> [データベース エンジン チューニング アドバイザーの XML スキーマ](http://go.microsoft.com/fwlink/?LinkId=43100) の名前空間|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  

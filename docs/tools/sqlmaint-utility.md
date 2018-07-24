@@ -1,5 +1,5 @@
 ---
-title: sqlmaint ユーティリティ |Microsoft ドキュメント
+title: sqlmaint ユーティリティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077899"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997144"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,8 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
  **-BkUpDB** [ *backup_path*] |  **-BkUpLog** [ *backup_path* ]  
  バックアップ操作を指定します。 **-BkUpDb** はデータベース全体をバックアップします。 **-BkUpLog** はトランザクション ログのみをバックアップします。  
   
- *backup_path* には、バックアップを格納するディレクトリを指定します。 *backup_path* は、 **-UseDefDir** も指定されている場合は必要ありません。ただし両方が指定されている場合は、 **-UseDefDir** が優先されます。 バックアップは、ディレクトリまたはテープ デバイス アドレス ( \\\\.\TAPE0 など) に格納することができます。 データベース バックアップのファイル名は、次のように自動的に生成されます。  
+ *backup_path* には、バックアップを格納するディレクトリを指定します。 
+  *backup_path* は、**-UseDefDir** も指定されている場合は必要ありません。ただし両方が指定されている場合は、**-UseDefDir** によってオーバーライドされます。 バックアップは、ディレクトリまたはテープ デバイス アドレス ( \\\\.\TAPE0 など) に格納することができます。 データベース バックアップのファイル名は、次のように自動的に生成されます。  
   
 ```  
 dbname_db_yyyyMMddhhmm.BAK  
@@ -209,10 +210,12 @@ dbname_log_yyyymmddhhmm.BAK
  ディスク バックアップの場合で、バックアップ作成後の期間が \<*time_period*> を超える場合、バックアップ ディレクトリ内にあるすべてのバックアップ ファイルを削除します。  
   
  **-CrBkSubDir**  
- ディスク バックアップの場合で、[*backup_path*] ディレクトリ内、または **-UseDefDir** が指定されている場合は、既定のバックアップ ディレクトリ内にサブディレクトリを作成します。 サブディレクトリの名前は、 **-D**に指定されるデータベース名を基に生成されます。 **-CrBkSubDir** を使用すると、 *backup_path* パラメーターを変更せずに、異なるデータベースのすべてのバックアップを、個別のサブディレクトリに簡単に格納することができます。  
+ ディスク バックアップの場合で、[*backup_path*] ディレクトリ内、または **-UseDefDir** が指定されている場合は、既定のバックアップ ディレクトリ内にサブディレクトリを作成します。 サブディレクトリの名前は、 **-D**に指定されるデータベース名を基に生成されます。 
+  **-CrBkSubDir** を使用すると、 *backup_path* パラメーターを変更せずに、異なるデータベースのすべてのバックアップを、個別のサブディレクトリに簡単に格納することができます。  
   
  **-UseDefDir**  
- ディスク バックアップの場合、既定のバックアップ ディレクトリにバックアップ ファイルを作成します。 **UseDefDir** は、 *backup_path* よりも優先されます (両方が指定されている場合)。 既定の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップでは、既定のバックアップ ディレクトリは C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup です。  
+ ディスク バックアップの場合、既定のバックアップ ディレクトリにバックアップ ファイルを作成します。 
+  **UseDefDir** は、*backup_path* をオーバーライドします (両方が指定されている場合)。 既定の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップでは、既定のバックアップ ディレクトリは C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup です。  
   
  **TAPE**  
  バックアップ メディアがテープであることを指定します。  

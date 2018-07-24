@@ -1,5 +1,5 @@
 ---
-title: TuningTimeInMin 要素 (DTA) |Microsoft ドキュメント
+title: TuningTimeInMin 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a906fea9cc3ff318a523695046c0a8c8fea2ce9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048650"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**unsignedInt**、長さは無制限です。|  
 |**既定値**|480 分 (8 時間)。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>[説明]  
  次のコード例は、最大チューニング時間を 12 時間に設定する方法を示します。  
   
 ## <a name="code"></a>コード  

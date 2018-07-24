@@ -1,5 +1,5 @@
 ---
-title: TCP/IP のプロパティ ([プロトコル] タブ) |Microsoft ドキュメント
+title: TCP/IP のプロパティ ([プロトコル] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -17,10 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34f6d026e29da596afaa6c812a726a64fb7e828f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002684"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>[TCP/IP のプロパティ] ダイアログ ボックス ([プロトコル] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  変更を有効にするには、Microsoft SQL Server を再起動する必要があります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   

@@ -1,17 +1,14 @@
 ---
-title: トレースの再生 |Microsoft ドキュメント
+title: トレースの再生 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: sql-server-profiler
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, replaying traces
 - Run to Cursor option
@@ -26,12 +23,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 756953ef6b0c9f474da304bca89104cb8dd05028
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: 98a09f67e8b39ad21c62bc2c793b5eb2b00e7a03
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059700"
 ---
 # <a name="replay-traces"></a>トレースの再生
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.lasthandoff: 04/26/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[再生を実行するための必要条件](../../tools/sql-server-profiler/replay-requirements.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で再生できるようにトレース定義に含める必要があるイベントについて説明します。|  
 |[再生オプション &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-options-sql-server-profiler.md)|**の** [構成の再生] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ダイアログ ボックスで設定できるオプションについて説明します。|  

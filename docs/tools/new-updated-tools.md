@@ -4,22 +4,20 @@ description: Microsoft SQL Server 用ツールの最近変更されたドキュ�
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: tools
 ms.date: 04/28/2018
-ms.openlocfilehash: 0547653c4fc2d8bd04f851b843e74fd9ec78d2ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 31df25173ad475c733bc7239366a6c2ce820289e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32739164"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088184"
 ---
-# <a name="new-and-recently-updated-tools-for-sql-server"></a>新規または最近更新された: SQL Server のツール
+# <a name="new-and-recently-updated-tools-for-sql-server"></a>新規または最近更新: SQL Server 用のツール
 
 
 
@@ -32,7 +30,7 @@ ms.locfileid: "32739164"
 
 
 - "*更新日の範囲:* " &nbsp; **2018 年 2 月 3 日** &nbsp;から&nbsp; **2018 年 4 月 28 日**
-- *サブジェクト領域:* &nbsp; **Tools for SQL Server**です。
+- *対象領域:* &nbsp; **Tools for SQL Server**します。
 
 
 
@@ -44,7 +42,7 @@ ms.locfileid: "32739164"
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-- [SQL Server の mssql cli コマンド ライン クエリ ツール](mssql-cli.md)
+- [SQL Server 用 mssql cli コマンド ライン クエリ ツール](mssql-cli.md)
 
 
 
@@ -94,16 +92,16 @@ ms.locfileid: "32739164"
 
 
 
-**-G**<a name="G"></a> このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチが必要です[バージョン 14.0.3008.27 以降](http://go.microsoft.com/fwlink/?LinkID=825643)です。 バージョンを判断するには、bcp -v を実行します。 詳細については、次を参照してください。 [Azure Active Directory 認証を使用する SQL データベースまたは SQL Data Warehouse での認証](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)です。
+**-G**<a name="G"></a> このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチが必要です[14.0.3008.27 バージョンまたはそれ以降](http://go.microsoft.com/fwlink/?LinkID=825643)します。 バージョンを判断するには、bcp -v を実行します。 詳細については、次を参照してください。[使用して Azure Active Directory 認証では、SQL Database または SQL Data Warehouse の認証に](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)します。
 
 > [!TIP]
->  Bcp のバージョンが Azure Active Directory 認証 (AAD) の型のサポートを含むかどうかにチェックする**bcp--** (bcp\<領域 >\<dash >\<dash >)-g の一覧であることを確認使用可能な引数。
+>  Bcp のバージョンが Azure Active Directory 認証 (AAD) の型のサポートが含まれますかどうかをチェックする**bcp--** (bcp\<領域 >\<dash >\<dash >)-g の一覧に表示されることを確認使用可能な引数。
 
 - **Azure Active Directory のユーザー名とパスワード:**
 
     Azure Active Directory のユーザー名とパスワードを使用には、 **-G** オプションを指定します。ユーザー名とパスワードは、 **-U** オプションと **-P** オプションを指定する方法でも使用できます。
 
-    次の例は、Azure AD のユーザー名を使用してデータをエクスポートし、ここでユーザー名とパスワードは、AAD 資格情報のパスワード。 例では、エクスポート テーブル`bcptest`データベースから`testdb`Azure サーバーから`aadserver.database.windows.net`ファイルにデータを格納および`c:\last\data1.dat`:
+    次の例では、Azure AD のユーザー名を使用してデータをエクスポートして、ユーザー名とパスワードは、AAD の資格情報のパスワード。 例では、テーブルをエクスポートします`bcptest`データベースから`testdb`Azure サーバーから`aadserver.database.windows.net`ファイルでデータを格納および`c:\last\data1.dat`:
 ```
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
 ```
@@ -117,7 +115,7 @@ ms.locfileid: "32739164"
 
 - **Azure Active Directory 統合**
 
-    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。 この構成では、現在の Windows ユーザー アカウント (で bcp コマンドが実行されているアカウント) が Azure AD と統合されていることを前提としています。
+    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。 この構成では、現在の Windows ユーザー アカウント (bcp コマンドを実行しているアカウント) が Azure AD とフェデレーションすることを前提としています。
 
 
 

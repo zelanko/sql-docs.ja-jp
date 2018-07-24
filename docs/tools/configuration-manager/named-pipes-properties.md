@@ -1,5 +1,5 @@
 ---
-title: 名前付きパイプ プロパティ |Microsoft ドキュメント
+title: 名前付きパイプのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6002657f6863f9ca5212516ab6f7afd37c2a348
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997154"
 ---
 # <a name="named-pipes-properties"></a>[名前付きパイプのプロパティ] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があるのは、プロトコルを有効または無効にする場合、または名前付きパイプを変更する場合です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   
