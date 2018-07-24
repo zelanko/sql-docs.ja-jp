@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: osql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -30,13 +29,13 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 408ff561489550f11cda04d73a7b868c4cea2d83
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: c4f0f070a9f8644fe8198adb7ed6c11559932c40
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002605"
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -103,7 +102,7 @@ C:\>osql
  パスワードを要求せずに、セキュリティ接続を使用します。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を指定します。 サーバー上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスに接続するには、*server_name***\\*** instance_name* を指定します。 サーバーを指定しない場合、 **osql** は、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **osql** を実行するときは、このオプションが必要です。  
+ 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を指定します。 サーバー上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスに接続するには、*server_name***\\***instance_name* を指定します。 サーバーを指定しない場合、 **osql** は、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **osql** を実行するときは、このオプションが必要です。  
   
  **-H** *wksta_name*  
  ワークステーション名を指定します。 ワークステーション名は **sysprocesses.hostname** に格納され、 **sp_who**により表示されます。 このオプションが指定されていない場合は、現在のコンピューター名であると見なされます。  
@@ -213,9 +212,9 @@ osql -E -q "select name, object_id from %table%"
 >  **osql** ユーティリティでは CLR ユーザー定義データ型はサポートされていません。 これらのデータ型を処理するには、 **sqlcmd** ユーティリティを使用する必要があります。 詳細については、「 [sqlcmd Utility](../tools/sqlcmd-utility.md)」を参照してください。  
   
 ## <a name="osql-commands"></a>OSQL コマンド  
- [!INCLUDE[tsql](../includes/tsql-md.md)] osql **では、**ステートメントの他に次のコマンドも使用できます。  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] osql **では、** ステートメントの他に次のコマンドも使用できます。  
   
-|コマンド|Description|  
+|コマンド|[説明]|  
 |-------------|-----------------|  
 |GO|最後の GO の後に入力したすべてのステートメントを実行します。|  
 |RESET|入力したステートメントをすべて消去します。|  
