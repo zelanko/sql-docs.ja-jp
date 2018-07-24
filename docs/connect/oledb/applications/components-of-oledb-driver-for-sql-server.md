@@ -1,5 +1,5 @@
 ---
-title: OLE DB Driver for SQL Server のコンポーネント |Microsoft ドキュメント
+title: OLE DB Driver for SQL Server のコンポーネント |Microsoft Docs
 description: OLE DB Driver for SQL Server のコンポーネント
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,26 +18,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 78b72796de5aa4ac2fb9bc0793f98365b7d8281e
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b1b46e57b3be42fa93f8a246db528a5f85709d9e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611687"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109834"
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のコンポーネント
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server には、次のコンポーネントが含まれています。  
 
-|コンポーネント|説明|  
+|コンポーネント|[説明]|  
 |---------------|-----------------|  
-|msoledbsql.dll|OLE DB 用のドライバーの SQL Server の機能すべてを含むダイナミック リンク ライブラリ (DLL) ファイル。|  
-|msoledbsqlr.rll|SQL Server ライブラリの OLE DB Driver に付随するリソース ファイル。|   
-|msoledbsql.h|すべての新しい定義を含むヘッダー ファイルを SQL Server の OLE DB Driver は、SQL Server の OLE DB Driver を使用するために必要です。 このヘッダー ファイルには、sqloledb.h ヘッダー ファイルが置き換えられます。<br /><br /> 注: 参照できます msoledbsql.h と同じプログラム内で sqloledb.h sqloledb.h を最初に定義されている限りです。|  
-|msoledbsql.lib|直接の呼び出しに必要なライブラリ ファイル、 [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)関数は、OLE DB Driver for SQL Server の一部であります。<br /><br /> 注意: msoledbsql.lib ファイルを参照するプログラミング コードで、する必要があります msoledbsql.dll ファイルがシステム パス、および構成するユーザーのシステム パスであるかどうかを確認するアプリケーションを使用します。|  
+|msoledbsql.dll|すべての OLE DB Driver for SQL Server の機能を含むダイナミック リンク ライブラリ (DLL) ファイル。|  
+|msoledbsqlr.rll|SQL Server ライブラリの OLE DB driver 付随するリソース ファイル。|   
+|msoledbsql.h|すべての新しい定義を含むヘッダー ファイルを SQL Server の OLE DB Driver for SQL Server OLE DB ドライバーを使用するために必要です。 このヘッダー ファイルでは、sqloledb.h ヘッダー ファイルを置き換えます。<br /><br /> 注: と参照できます msoledbsql.h 同じプログラム内で sqloledb.h sqloledb.h を最初に定義されている限り、します。|  
+|msoledbsql.lib|直接の呼び出しに必要なライブラリ ファイル、 [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)関数は、OLE DB Driver for SQL Server の一部であります。<br /><br /> プログラミング コードで sqlncli11.lib ファイルを参照する場合、使用しているコンピューターのシステム パス、およびアプリケーションを使用するユーザーのシステム パスに sqlncli11.dll ファイルが含まれることを確認する必要があります。|  
 
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server を使用したアプリケーションの構築](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
