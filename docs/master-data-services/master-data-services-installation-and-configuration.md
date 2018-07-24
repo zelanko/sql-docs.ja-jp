@@ -15,12 +15,12 @@ caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0eeea06688707eb143254d62bbfaf59ef5d7d800
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f26803afed7f38e00c87db06e1c3c6398d346b5e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335506"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980484"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -40,7 +40,7 @@ ms.locfileid: "35335506"
   
 > **ダウンロード**  
 >-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
->-   Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server がインストール済みの仮想マシンをすぐにご利用いただけます。  
+>-   Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server がインストール済みの仮想マシンをすぐにご利用いただけます。  
  
 > **MDS Web サイトを作成できませんか?**
 >>この問題を解決する方法については、この Microsoft サポートの記事を参照してください。

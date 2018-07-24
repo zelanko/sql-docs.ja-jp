@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose ユーティリティ (Service Broker) |Microsoft ドキュメント
+title: ssbdiagnose ユーティリティ (Service Broker) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -32,11 +32,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078209"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046830"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ ssbdiagnose
  指定した *error_id* のエラーまたはメッセージがレポートから除外されます。 **-IGNORE** を複数回指定すると、複数のメッセージ ID を除外することができます。  
   
  **\<baseconnectionoptions >**  
- 接続オプションが特定の句に含まれていない場合に **ssbdiagnose** が使用する、基本的な接続情報を指定します。 特定の句で指定された接続情報は、 **baseconnectionoption** の情報よりも優先されます。 優先的に使用される接続情報は、パラメーターごとに判別されます。 たとえば、 **-S** と **-d** の両方が **baseconnetionoptions**で指定され、 **-d** のみが **toconnetionoptions**で指定されている場合、 **ssbdiagnose** では、 **baseconnetionoptions** の -S と **toconnetionoptions**の -d が使用されます。  
+ 接続オプションが特定の句に含まれていない場合に **ssbdiagnose** が使用する、基本的な接続情報を指定します。 特定の句で指定された接続情報は、**baseconnectionoption** の情報をオーバーライドします。 優先的に使用される接続情報は、パラメーターごとに判別されます。 たとえば、 **-S** と **-d** の両方が **baseconnetionoptions**で指定され、 **-d** のみが **toconnetionoptions**で指定されている場合、 **ssbdiagnose** では、 **baseconnetionoptions** の -S と **toconnetionoptions**の -d が使用されます。  
   
  **CONFIGURATION**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスのペアまたは 1 つのサービスでの構成エラーのレポートを要求します。  

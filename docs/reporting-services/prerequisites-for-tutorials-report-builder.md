@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c720c71a703cd7c0fcd436923e7a820d35f4622
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd3566dce2e0b8b8c48396e5c268375f43252e45
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018899"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980744"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>チュートリアルの前提条件 (レポート ビルダー)
 
@@ -44,7 +44,7 @@ ms.locfileid: "33018899"
   
 -   SQL Server インスタンスの名前と任意のデータベースへの読み取り専用アクセスに必要な資格情報。 チュートリアルのデータセット クエリでは、リテラル データを使用します。ただし、各クエリは、レポート データセットに必要なメタデータを返すように、SQL Server インスタンスで処理される必要があります。 たとえば、 `data source=<servername>`という接続文字列では、サーバーしか指定されていません。 この場合は、そのサーバーにアクセスする権限を付与したシステム管理者によって割り当てられた既定のデータベースに対する読み取りアクセス権が必要です。 `data source=<servername>;initial catalog=<database>`という接続文字列のように、データベースを指定することもできます。  
   
--   「[チュートリアル: マップ レポート (レポート ビルダー)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)」では、レポート サーバーが Bing Maps を背景としてサポートするように構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。   
+-   「[チュートリアル: マップ レポート (レポート ビルダー)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)」では、レポート サーバーが Bing Maps を背景としてサポートするように構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。   
 
 -   「[チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md)」チュートリアルでは、Contoso Sales キューブへのアクセスが必要です。 詳細については、チュートリアルを参照してください。 
   
