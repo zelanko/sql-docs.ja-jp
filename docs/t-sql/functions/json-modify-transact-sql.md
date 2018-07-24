@@ -14,11 +14,11 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.openlocfilehash: d51961c8c06c0b7769ef8896b92ad1ad0633e0cf
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36259534"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983808"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,9 +79,9 @@ JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合は、新し�
   
 |既存の値|パスが存在します。|厳密でないモード|厳格モード|  
 |--------------------|-----------------|--------------|-----------------|  
-|NULL でないです。|はい|既存の値を更新します。|既存の値を更新します。|  
+|NULL でないです。|[ユーザー アカウント制御]|既存の値を更新します。|既存の値を更新します。|  
 |NULL でないです。|いいえ|指定したパスに新しいキーと値のペアを作成しようとします。<br /><br /> これは失敗する場合があります。 たとえば、パス `$.user.setting.theme` を指定したときに、`$.user` または `$.user.settings` オブジェクトが存在しないか、設定がアレイまたはスカラー値の場合、JSON_MODIFY はキー `theme` を挿入しません。|Error – INVALID_PROPERTY|  
-|NULL|はい|既存のプロパティを削除します。|既存の値を null に設定します。|  
+|NULL|[ユーザー アカウント制御]|既存のプロパティを削除します。|既存の値を null に設定します。|  
 |NULL|いいえ|NO ACTION 最初の引数が結果として返されます。|Error – INVALID_PROPERTY|  
   
  lax モードでは、JSON_MODIFY は、新しいキーと値のペアを作成しようとしますが、その操作は、場合によっては失敗します。  

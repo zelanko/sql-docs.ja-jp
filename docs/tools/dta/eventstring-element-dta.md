@@ -1,5 +1,5 @@
 ---
-title: EventString 要素 (DTA) |Microsoft ドキュメント
+title: EventString 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c90feb22a7850c024b355816a693542a417d31c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069019"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987414"
 ---
 # <a name="eventstring-element-dta"></a>EventString 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "33069019"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|Description|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**Weight**|省略可。 対象のイベントに関するクエリの重み係数 (重要度の係数) を指定します。 重み係数の指定には、 **float** データ型を使用します。 たとえば、 **Weight**="100.01" のようにします。 **Weight** に指定できる最小値は「0」です。|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**既定値**|[なし] :|  

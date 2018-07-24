@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler でトレースをフィルター処理 |Microsoft ドキュメント
+title: SQL Server Profiler でトレースにフィルター選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -22,10 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0204e06854c66b11415c9dc210e5d1d714842ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988234"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>SQL Server Profiler でのトレースへのフィルターの適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -35,22 +35,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f54b14989ac5df37bbb8ee386c783c9721a32206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974281"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 以前のバージョンの SQL Server に関連するコンテンツについては、「[bcp ユーティリティ](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)」を参照してください。
 
- > 最新のバージョンの bcp ユーティリティでは、次を参照してください[SQL Server 用 Microsoft コマンド ライン ユーティリティ 14.0。 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > 最新バージョンの bcp ユーティリティでは、次を参照してください[for SQL Server のマイクロソフト コマンド ライン ユーティリティ 14.0。 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
- > Bcp を使用して、Linux を参照してください[Linux での sqlcmd および bcp のインストール](../linux/sql-server-linux-setup-tools.md)です。
+ > Linux では、bcp を使用して、参照してください[sqlcmd および bcp を Linux にインストール](../linux/sql-server-linux-setup-tools.md)します。
 
- > Azure SQL Data Warehouse で bcp を使用する方法の詳細については、次を参照してください。 [bcp を使用したデータを読み込む](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)します。
+ > Azure SQL Data Warehouse での bcp の使用に関する詳細については、次を参照してください。 [bcp を使用したデータを読み込む](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)します。
 
   **b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) は、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは **の知識は必要ありません。ただし、** queryout [!INCLUDE[tsql](../includes/tsql-md.md)]オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
   
@@ -130,7 +130,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  データを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にコピーする (**in**) 場合はコピー先のビューの名前、データを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からコピーする (**out**) 場合はコピー元のビューの名前です。 すべての列が同じテーブルを参照しているビューのみが、コピー先のビューとして使用できます。 ビューにデータをコピーするときの制限の詳細については、「[挿入 &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md)」をご覧ください。  
   
  **-a** ***packet_size***<a name="a"></a>  
- サーバーとの間で送信されるネットワーク パケットごとのバイト数を指定します。 サーバー構成オプションは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (または **sp_configure** システム ストアド プロシージャ) を使用して設定できます。 ただし、このオプションを使用すると、サーバー構成オプションを個別に無効にできます。 *packet_size* の有効値は 4,096 から 65,535 バイトです。既定値は 4,096 です。  
+ サーバーとの間で送信されるネットワーク パケットごとのバイト数を指定します。 サーバー構成オプションは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (または **sp_configure** システム ストアド プロシージャ) を使用して設定できます。 ただし、このオプションを使用すると、サーバー構成オプションを個別にオーバーライドできます。 *packet_size* の有効値は 4,096 から 65,535 バイトです。既定値は 4,096 です。  
   
  パケット サイズを大きくすると、一括コピーのパフォーマンスを向上させることができます。 より大きなサイズのパケットを要求しても、許可されない場合、既定値が使用されます。 **bcp** ユーティリティが生成するパフォーマンス統計には、使用したパケット サイズが示されます。  
   
@@ -150,7 +150,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > フォーマット ファイルの各列に対して照合順序名を指定することをお勧めします (65001 オプションを照合順序/コード ページ仕様よりも優先する場合を除く)。
   
-|コード ページ値|Description|  
+|コード ページ値|[説明]|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|クライアントが使用する既定のコード ページです。 **-C** が指定されていない場合に使用される既定のコード ページです。|  
@@ -190,21 +190,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* には、2^63-1 以下の正の整数を指定できます。 **-F** *first_row* is 1-based.  
 
 **-G**<a name="G"></a>  
- このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチが必要です[バージョン 14.0.3008.27 以降](http://go.microsoft.com/fwlink/?LinkID=825643)です。 バージョンを判断するには、bcp -v を実行します。 詳細については、次を参照してください。 [Azure Active Directory 認証を使用する SQL データベースまたは SQL Data Warehouse での認証](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)です。 
+ このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチが必要です[14.0.3008.27 バージョンまたはそれ以降](http://go.microsoft.com/fwlink/?LinkID=825643)します。 バージョンを判断するには、bcp -v を実行します。 詳細については、次を参照してください。[使用して Azure Active Directory 認証では、SQL Database または SQL Data Warehouse の認証に](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)します。 
 
 > [!TIP]
->  Bcp のバージョンが Azure Active Directory 認証 (AAD) の型のサポートを含むかどうかにチェックする**bcp--** (bcp\<領域 >\<dash >\<dash >)-g の一覧であることを確認使用可能な引数。
+>  Bcp のバージョンが Azure Active Directory 認証 (AAD) の型のサポートが含まれますかどうかをチェックする**bcp--** (bcp\<領域 >\<dash >\<dash >)-g の一覧に表示されることを確認使用可能な引数。
 
 - **Azure Active Directory のユーザー名とパスワード:** 
 
     Azure Active Directory のユーザー名とパスワードを使用には、 **-G** オプションを指定します。ユーザー名とパスワードは、 **-U** オプションと **-P** オプションを指定する方法でも使用できます。 
 
-    次の例は、Azure AD のユーザー名を使用してデータをエクスポートし、ここでユーザー名とパスワードは、AAD 資格情報のパスワード。 例では、エクスポート テーブル`bcptest`データベースから`testdb`Azure サーバーから`aadserver.database.windows.net`ファイルにデータを格納および`c:\last\data1.dat`:
+    次の例では、Azure AD のユーザー名を使用してデータをエクスポートして、ユーザー名とパスワードは、AAD の資格情報のパスワード。 例では、テーブルをエクスポートします`bcptest`データベースから`testdb`Azure サーバーから`aadserver.database.windows.net`ファイルでデータを格納および`c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    次の例は、Azure AD のユーザー名を使用してデータをインポートし、ここでユーザー名とパスワードは、AAD 資格情報のパスワード。 例では、ファイルのデータをインポートする`c:\last\data1.dat`テーブルに`bcptest`データベース`testdb`Azure サーバーで`aadserver.database.windows.net`Azure AD ユーザーとパスワードを使用します。
+    次の例では、Azure AD のユーザー名を使用してデータをインポートして、ユーザー名とパスワードは、AAD の資格情報のパスワード。 例では、ファイルからデータをインポートする`c:\last\data1.dat`テーブルに`bcptest`データベース`testdb`Azure サーバーで`aadserver.database.windows.net`Azure AD ユーザーとパスワードを使用します。
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -213,15 +213,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 統合** 
  
-    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。 この構成では、現在の Windows ユーザー アカウント (で bcp コマンドが実行されているアカウント) が Azure AD と統合されていることを前提としています。 
+    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。 この構成では、現在の Windows ユーザー アカウント (bcp コマンドを実行しているアカウント) が Azure AD とフェデレーションすることを前提としています。 
 
-    次の例では、Azure AD の統合されたアカウントを使用してデータをエクスポートします。 例では、エクスポート テーブル`bcptest`データベースから`testdb`Azure サーバーから Azure AD の統合を使用して`aadserver.database.windows.net`ファイルにデータを格納および`c:\last\data2.dat`:
+    次の例では、Azure AD の統合アカウントを使用してデータをエクスポートします。 例では、テーブルをエクスポートします`bcptest`データベースから`testdb`Azure サーバーから Azure AD の統合を使用して`aadserver.database.windows.net`ファイルでデータを格納および`c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    次の例は、Azure AD の統合認証を使用してデータをインポートします。例では、ファイルのデータをインポートする`c:\last\data2.txt`テーブルに`bcptest`データベース`testdb`Azure サーバーで`aadserver.database.windows.net`Azure AD の統合認証を使用します。
+    次の例では、Azure AD の統合認証を使用してデータをインポートします。この例では、ファイルからデータをインポート`c:\last\data2.txt`テーブルに`bcptest`データベース`testdb`Azure サーバーで`aadserver.database.windows.net`Azure AD の統合認証を使用して。
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -294,7 +294,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 詳細については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   
 **-N**<a name="N"></a>  
-文字以外のデータについてはデータベースのネイティブなデータ型を使用し、文字データについては Unicode 文字を使用して、一括コピー操作を実行します。 **-w** オプションの代わりにこのオプションを使用すると、高いパフォーマンスが得られます。このオプションは、データ ファイルを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスから別のインスタンスにデータを転送する場合に使用します。 フィールドごとにプロンプトは表示されません。 ANSI 拡張文字を含むデータを転送し、ネイティブ モードのパフォーマンスを利用する場合は、このオプションを使用します。  
+文字以外のデータについてはデータベースのネイティブなデータ型を使用し、文字データについては Unicode 文字を使用して、一括コピー操作を実行します。 
+  **-w** オプションの代わりにこのオプションを使用すると、高いパフォーマンスが得られます。このオプションは、データ ファイルを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスから別のインスタンスにデータを転送する場合に使用します。 フィールドごとにプロンプトは表示されません。 ANSI 拡張文字を含むデータを転送し、ネイティブ モードのパフォーマンスを利用する場合は、このオプションを使用します。  
   
  詳細については、「[Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   
@@ -327,7 +328,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  詳細については、後の「 [解説](#remarks)」を参照してください。  
   
  **-r** ***row_term***<a name="r"></a>  
- 行ターミネータを指定します。 既定値は **\n** (改行文字) です。 既定の行ターミネータを無効にする場合、このパラメーターを使用します。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
+ 行ターミネータを指定します。 既定値は **\n** (改行文字) です。 既定の行ターミネータをオーバーライドする場合、このパラメーターを使用します。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
   
  bcp.exe コマンドでは、行ターミネータを 16 進数表記で指定すると、値が 0x00 で切り捨てられます。 たとえば、0x410041 を指定した場合、使用されるのは 0x41 になります。  
   
@@ -339,7 +340,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-S** ***server_name*** [\\***instance_name***]<a name="S"></a> 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバーを指定しない場合、 **bcp** ユーティリティは、ローカル コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続されます。 ネットワーク上のリモート コンピューターまたはローカルの名前付きインスタンスから **bcp** コマンドを実行するときは、このオプションが必要です。 サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続するには、 *server_name*のみを指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、*server_name***\\***instance_name* を指定します。  
   
  **-t** ***field_term***<a name="t"></a>  
- フィールド ターミネータを指定します。 既定値は **\t** (タブ文字) です。 既定のフィールド ターミネータを無効にする場合、このパラメーターを使用します。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
+ フィールド ターミネータを指定します。 既定値は **\t** (タブ文字) です。 既定のフィールド ターミネータをオーバーライドする場合、このパラメーターを使用します。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
   
  bcp.exe コマンドでは、フィールド ターミネータを 16 進数表記で指定すると、値が 0x00 で切り捨てられます。 たとえば、0x410041 を指定した場合、使用されるのは 0x41 になります。  
   
@@ -498,7 +499,7 @@ bcp ユーティリティは、 [Microsoft SQL Server 2016 Feature Pack](https:/
 
 
 ### <a name="example-test-conditions"></a>**テスト条件の例**
-以下の例では、SQL Server (2016 以降) および Azure SQL Database 用の `WideWorldImporters` サンプル データベースを利用しています。  `WideWorldImporters` ダウンロードできます[ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)です。  サンプル データベースを復元する構文については、「 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 」を参照してください。  特記していない場合、この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  多くの例では、 `D:\BCP` というディレクトリを使用します。
+以下の例では、SQL Server (2016 以降) および Azure SQL Database 用の `WideWorldImporters` サンプル データベースを利用しています。  `WideWorldImporters` ダウンロードできます[ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)します。  サンプル データベースを復元する構文については、「 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 」を参照してください。  特記していない場合、この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  多くの例では、 `D:\BCP` というディレクトリを使用します。
 
 以下のスクリプトでは、`WideWorldImporters.Warehouse.StockItemTransactions` テーブルの空のコピーを作成し、主キー制約を追加します。  SQL Server Management Studio (SSMS) で、次の T-SQL スクリプトを実行します。
 

@@ -51,11 +51,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7775dbaa4a8c28d9e7124b94c73f3b87c9e68838
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943178"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984824"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -332,7 +332,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 句で指定したバックアッ�
 詳細については、「[コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」を参照してください。  
   
 { COMPRESSION | NO_COMPRESSION }  
-[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]以降のバージョンでのみ、このバックアップで[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を実行するかどうかを指定し、サーバー レベルの既定値をオーバーライドできます。  
+[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降のバージョンでのみ、このバックアップで[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を実行するかどうかを指定し、サーバー レベルの既定値をオーバーライドできます。  
   
 インストール時の既定の動作では、バックアップの圧縮は行われません。 ただし、この既定の動作は、[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) サーバー構成オプションを設定することで変更できます。 このオプションの現在の値の表示については、「[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)」を参照してください。  
 

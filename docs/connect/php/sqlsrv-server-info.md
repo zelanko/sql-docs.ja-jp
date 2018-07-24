@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_server_info |Microsoft ドキュメント
+title: sqlsrv_server_info |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 878ea8dde5e6cbccf4d87e4a3b4b98fbf06f557b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983607"
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>戻り値  
 次のキーを含む連想配列。  
   
-|キー|説明|  
+|キー|[説明]|  
 |-------|---------------|  
 |CurrentDatabase|現在対象となっているデータベース。|  
 |SQLServerVersion|SQL Server のバージョン。|  

@@ -17,11 +17,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e26743a1020bc71e20e17d64aad7c14ccd29c325
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328153"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978611"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>ネイティブ プロシージャの ATOMIC ブロック
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -147,8 +147,8 @@ GO
   
 |省略可能な設定|[説明]|  
 |----------------------|-----------------|  
-|**DATEFORMAT**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、 **DATEFORMAT** は **LANGUAGE**に関連付けられた既定の日付形式よりも優先されます。|  
-|**DATEFIRST**|指定した場合、 **DATEFIRST** は **LANGUAGE**に関連付けられた既定よりも優先されます。|  
+|**DATEFORMAT**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、**DATEFORMAT** は **LANGUAGE**に関連付けられた既定の日付形式をオーバーライドします。|  
+|**DATEFIRST**|指定した場合、**DATEFIRST** は **LANGUAGE**に関連付けられた既定をオーバーライドします。|  
 |**DELAYED_DURABILITY**|サポートされている値は、 **OFF** と **ON**です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるトランザクションのコミットには、完全持続性、既定値、または遅延持続性が適用されます。詳細については、「[Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)」 (トランザクションの持続性の制御) を参照してください。|  
   
  次の SET オプションには、すべてのネイティブ コンパイル ストアド プロシージャのすべての ATOMIC ブロックについて同じシステム既定値が設定されます。  

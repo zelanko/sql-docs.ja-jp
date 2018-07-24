@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_rows_affected |Microsoft ドキュメント
+title: sqlsrv_rows_affected |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f416bf1633909e548572f8f90c7fac7e188ecf75
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309351"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991384"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_rows_affected( resource $stmt)
 直前に実行されたステートメントによって変更された行数を示す整数です。 変更された行がない場合は、ゼロ (0) が返されます。 変更された行数に関する情報が使用できない場合は、マイナス 1 (-1) が返されます。 変更された行数の取得中にエラーが発生した場合は、 **false** が返されます。  
   
 ## <a name="example"></a>例  
-次の例では、UPDATE ステートメントによって変更された行の数が表示されます。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、UPDATE ステートメントによって変更された行の数が表示されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

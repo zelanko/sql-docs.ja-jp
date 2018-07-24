@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38a7e0a75dc850b5f4ef883d44c6ceb4d426b651
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077009"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980964"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>トレースに表示される列の構成 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33077009"
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|Audit Login|648|  
-|@shouldalert|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   グループ化する列を 1 列だけ選択して、トレース イベントをグループ化し集計します。 グループ化するデータ列を 1 列だけ選択すると、トレース ウィンドウにそのデータ列の値でグループ化されたイベントが表示され、その下にあるすべてのイベントが折りたたまれます。 グループ化するために選択したデータ列のイベントの左側にはプラス記号 (**+**) が表示され、右側にはその下で折りたたまれているイベントの数がかっこ内に表示されます。 次の例は、グループ化用に **EventClass** データ列だけを選択した場合、トレース ウィンドウのグリッドがどのように表示されるかを示しています。 すべてのイベントが **EventClass** データ列に配置されていることに注意してください。 すべてのイベントを表示するには、プラス記号をクリックして展開し、その種類のすべてのイベント クラスを表示します。  

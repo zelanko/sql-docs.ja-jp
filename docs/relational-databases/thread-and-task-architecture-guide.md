@@ -21,11 +21,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dcb886bee40d358bf0b2815e8fb669876f32d3a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012860"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978231"
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,14 +123,14 @@ CPU を追加しても、SQL Server で自動的にその CPU の使用が開始
 
 |[処理名]   |実行可能なプログラム |64 個を超える CPU の使用 |  
 |----------|----------|----------|  
-|SQL Server データベース エンジン |Sqlserver.exe  |はい |  
+|SQL Server データベース エンジン |Sqlserver.exe  |[ユーザー アカウント制御] |  
 |Reporting Services |Rs.exe |いいえ |  
 |Analysis Services  |As.exe |いいえ |  
 |Integration Services   |Is.exe |いいえ |  
 |Service Broker |Sb.exe |いいえ |  
 |フルテキスト検索   |Fts.exe    |いいえ |  
 |SQL Server エージェント   |Sqlagent.exe   |いいえ |  
-|[SQL Server Management Studio]   |Ssms.exe   |いいえ |  
+|SQL Server Management Studio   |Ssms.exe   |いいえ |  
 |SQL Server セットアップ   |Setup.exe  |いいえ |  
 
 

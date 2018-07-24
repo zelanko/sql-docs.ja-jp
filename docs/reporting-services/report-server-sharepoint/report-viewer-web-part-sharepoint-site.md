@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c29118ab8807d8bd0d51ee593488c66c89bf2942
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978904"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint サイトのレポート ビューアー Web パーツ - Reporting Services
 
@@ -37,7 +37,7 @@ SQL Server 2017 以降では、Reporting Services のインストール モー�
 ページ分割されたレポートを SharePoint ページに埋め込むにはページ ビューアー Web パーツで十分ですが、更新されたレポート ビューアー Web パーツはそれ以外の機能も提供します。
 
 * 特定のツール バー ボタンの表示/非表示
-* レポートのパラメーター値の上書き
+* レポートのパラメーター値のオーバーライド
 * レポート パラメーターへのフィルター Web パーツの接続
 
 ## <a name="download-the-report-viewer-web-part-solution-package"></a>レポート ビューアー Web パーツのソリューション パッケージのダウンロード

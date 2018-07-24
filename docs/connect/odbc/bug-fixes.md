@@ -1,7 +1,7 @@
 ---
-title: 修正されたバグのリスト |Microsoft ドキュメント
+title: 修正されたバグのリスト |Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,44 +14,57 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: v-makouz
-ms.author: genemi
+ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 9cba17b1f03b07320b644889bc111752f4f65a6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852233"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946906"
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
-このページには、以降で、各リリースで修正されたバグの一覧が含まれています[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバーの 17。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+このページには、以降では、各リリースで修正されたバグの一覧が含まれています[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>バグの修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバー 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>バグ修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバー 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- SQLFreeHandle MARS を有効にし、接続属性を呼び出すときに、1 秒の遅延を固定"Encrypt = [はい]"
-- SQLGetData で渡されたバッファーのサイズが小さいときに取得されるデータ (Windows) に、エラー 22003 クラッシュを修正
-- 切り捨てられた ADAL エラー メッセージを修正
-- 整数を小数点の数を浮動小数点に変換するときに、32 ビット Windows でまれなバグを修正
-- ここで、データの切り捨てエラーを返す二重で Always Encrypted で 10 進数のフィールドへの挿入は問題を修正しました
-- MacOS インストーラーに、警告を修正
-- 固定接続の回復との接続プール両方が有効な場合、サーバーから削除するセッションの原因は、セッション復旧試行中に SQL Server に無効な状態を送信
+- Azure Active Directory 認証に関するエラー メッセージを修正しました
+- エンコードの検出が異なるロケールの環境変数が設定されている場合を修正しました
+- 固定接続回復が進行中の接続を切断する時にクラッシュ
+- 接続の存続性の検出を修正しました
+- 閉じているソケットの不適切な検出を修正しました
+- 失敗した回復中に、ステートメント ハンドルを解放しようとしています。 ときに、無期限の待機を修正しました
+- バージョン 13 と 17 の両方が Windows にインストールされている場合、アンインストールが正しくない動作を修正
+- 以前の Windows プラットフォーム (Windows 7、8、および Server 2012) に固定の復号化の動作
+- Windows 上の ADAL 認証を使用する場合は、キャッシュの問題を修正しました
+- ロックされた問題が修正し、Windows 上のログ トレースの上書き
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>バグの修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバーの 17 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>バグ修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバー 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- バグを修正、Kerberos 認証を使用して、一括挿入でした「アクセスが拒否されました」エラーで失敗します。
-- UnixODBC 2.3.1 以降のバージョンに存在バグの回避策を削除 (ドライバーには、unixODBC に渡される特定のバッファーのサイズが 2 倍に)
-- 接続の回復を固定 ColumnEncryption を使用するときにハング (再接続) = 有効になっています。
-- 場所と「Active Directory の対話型認証」を使用してオプション Azure 認証 DSN の作成のバグを修正ウィンドウ状態になる応答しない状態 (Windows)
-- (接続ハンドルをクリアするときに発生した)、非同期実行が有効にすると、ODBC のシャット ダウン中にまれなクラッシュを修正
-- SQL ドライバーが CPU の消費時間ストアド プロシージャの実行中に原因となった問題を修正しました
+- SQLFreeHandle を MARS を有効になっていると接続属性を呼び出すときに、1 秒の遅延を固定"Encrypt = [はい]"
+- SQLGetData で渡されたバッファーのサイズが小さい場合、取得されるデータ (Windows) で、エラー 22003 クラッシュを修正しました
+- 切り捨てられた ADAL エラー メッセージを修正しました
+- 整数を小数点数の浮動に変換するときに、32 ビット Windows のまれなバグを修正しました
+- Always Encrypted での 10 進数のフィールドに double を挿入してデータの切り捨てエラーを返すは、問題を修正しました
+- MacOS のインストーラーに関する警告を修正しました
+- 固定接続の回復性と接続プールが有効な場合、サーバーを削除するセッションの原因とは、セッション復旧試行中に SQL Server に不適切な状態を送信
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>バグ修正、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+
+- バグを修正しましたが、Kerberos 認証を使用して一括挿入は、「アクセス拒否」エラーで失敗でした
+- UnixODBC 2.3.1 の下のバージョンに存在するバグの回避策を削除しました (ドライバーには、unixODBC に渡される特定のバッファーのサイズが 2 倍に)
+- 接続の回復性を修正しました (再接続) ColumnEncryption を使用するときにハング = 有効になっています。
+- 場所と「Active Directory 対話型認証」を使用してオプション Azure Authentication DSN の作成のバグを修正ウィンドウは応答しない (Windows) を受ける可能性があります。
+- (接続ハンドルを消去するときに発生した) 非同期実行が有効な場合は、ODBC のシャット ダウン中にまれなクラッシュを修正しました
+- SQL ドライバーが時間の長いストアド プロシージャの実行中に CPU 使用量が多い原因となった問題を修正しました
 - 固定できない変換せずに暗号化された varbinary (max) 列にデータを取得するには
-- ここで null varchar (max) の後に暗号化された列を使用してフェッチ SQLGetData() は静的カーソルで問題を修正、次の列も null データがある場合でも
-- Always Encrypted で varbinary (max) フィールドを取得して問題を修正しました。
-- Always Encrypted を使用して setlocale() の問題の修正
-- SQLDescribeParam() で Always Encrypted で XML 型のストアド プロシージャのパラメーターで呼び出されたときにエラーを返すことで問題を修正しました。
-- SQLTables で作業していないエスケープされたアンダー スコアの固定
-- バグの修正、ヘブライ語データ (varchar) が Linux でのワイド文字として返された場合に切り捨てられます
-- SHIFT-JIS でエンコードされた char と varchar utf-8 アプリケーションからのクエリを実行すると問題を修正しました。
-- SQL_DRIVER_NAME パラメーターで SQLGetInfo を呼び出して返される位置 Linux スタイル filename macos バグを修正
-- 入力を使用して、Windows 1252 文字データの読み込みファイル BCP ユーティリティを使用して VARCHAR 列にバイトがエラーになる 32 k を超える問題を修正しました
+- Null に varchar (max) の後に暗号化された列を使用してフェッチ SQLGetData() 静的カーソルで問題を修正、次の列も null データがある場合でも
+- Always Encrypted で varbinary (max) フィールドのフェッチに問題を修正しました
+- Always Encrypted を使用していない setlocale() の問題を修正しました
+- SQLDescribeParam() で Always Encrypted で XML 型のストアド プロシージャのパラメーターで呼び出されたときにエラーを返す問題を修正しました
+- SQLTables で作業していないエスケープ後のアンダー スコアを修正しました
+- ヘブライ語のデータ (varchar) が Linux 上のワイド文字として返された場合に切り捨てられますバグを修正しました
+- Shift JIS エンコードされた char と varchar utf-8 アプリケーションからのクエリに関する問題を修正しました
+- Macos を Linux スタイルのファイル名に返さ SQL_DRIVER_NAME パラメーターを持つ SQLGetInfo を呼び出すことで、バグを修正しました
+- 入力を使用して、Windows 1252 文字データの読み込みファイル 32 k のエラーが発生、BCP ユーティリティを使用して、VARCHAR 列にバイトを超える問題を修正しました

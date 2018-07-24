@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 100ec0e739dc397b8173259abcfaf7c8e6cdfd9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024955"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982414"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services サイト コレクション機能
 
@@ -35,7 +35,7 @@ Reporting Services SharePoint モードには、SharePoint サイト コレク�
 
  次の表に、Reporting Services のサイト コレクションの機能を示します。  
   
-|機能|Description|  
+|機能|[説明]|  
 |-------------|-----------------|  
 |**レポート サーバーの全体管理機能**|Reporting Services レポート サーバーとの統合を管理する機能を有効にします。 この機能は、SharePoint サーバーの全体管理のサイト コレクション内でのみインストールおよび使用されます。<br /><br /> レポート サーバーの統合機能は、SharePoint 製品用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] アドインをインストールすると自動的に SharePoint サーバーの全体管理のサイト コレクションでアクティブ化されます。 場合によっては、この機能を手動でアクティブ化する必要があります。 レポート サーバー機能をアクティブ化するには、SharePoint サーバーの全体管理の [サイトの設定] ページ内の Reporting Services ページを使用します。<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services 以降のバージョンの SharePoint 製品用アドインをインストールすると、既存のすべてのサイト コレクションのレポート サーバーの統合機能がアクティブ化されます。 また、この機能は、新しいサイト コレクションに対して自動的にアクティブ化されます。|  
 |**レポート サーバーの統合機能**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services による豊富なレポート機能を有効にする<br /><br /> この機能は、既定でアクティブになっています。|  

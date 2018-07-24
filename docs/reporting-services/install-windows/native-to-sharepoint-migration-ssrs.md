@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d828bb3d70346ecb41bd5382f67a8c54ed18e8fd
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322391"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988894"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
 
@@ -49,12 +49,12 @@ ms.locfileid: "35322391"
   
 |Object|スクリプト化の可否|コメント|  
 |------------|---------------------|--------------|  
-|[レポート]|はい|移行後にデータソースのパスワードを再入力します。|  
-|データソース|はい|移行後にレポートとデータソースとの間のリンクを再設定します。|  
-|モデル|はい||  
-|[データセット]|はい||  
+|[レポート]|[ユーザー アカウント制御]|移行後にデータソースのパスワードを再入力します。|  
+|データソース|[ユーザー アカウント制御]|移行後にレポートとデータソースとの間のリンクを再設定します。|  
+|モデル|[ユーザー アカウント制御]||  
+|[データセット]|[ユーザー アカウント制御]||  
 |レポート パーツ||移行後にレポート パーツへのパスを確認または更新します。|  
-|スケジュール|はい|ListSchedules メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)」) を参照してください。|  
+|スケジュール|[ユーザー アカウント制御]|ListSchedules メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)」) を参照してください。|  
 |サブスクリプション|はい|ListSubscriptions メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 」) および <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> に関する説明を参照してください。|  
 |スナップショット|||
 

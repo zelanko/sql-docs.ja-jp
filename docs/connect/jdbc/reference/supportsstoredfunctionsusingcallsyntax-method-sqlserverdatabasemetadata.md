@@ -1,5 +1,5 @@
 ---
-title: supportsStoredFunctionsUsingCallSyntax メソッド |Microsoft ドキュメント
+title: supportsStoredFunctionsUsingCallSyntax メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c09d5fad34a20caefb670e3dbaed17b50e53215
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848037"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988384"
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>supportsStoredFunctionsUsingCallSyntax メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,8 +39,8 @@ public boolean supportsStoredFunctionsUsingCallSyntax()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この supportsStoredFunctionsUsingCallSyntax メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsStoredFunctionsUsingCallSyntax メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この supportsStoredFunctionsUsingCallSyntax メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsStoredFunctionsUsingCallSyntax メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
