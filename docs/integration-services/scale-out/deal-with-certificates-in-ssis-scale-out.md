@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: e602b89a44b5d26369973ef6f5ec8dc1f6d5c4eb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2af1f3f516c6cc13684ee67954017c5f5cb6a47c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405134"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130588"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out の証明書を管理する
 
@@ -45,12 +45,12 @@ SQL Server インストール ウィザードの **[Integration Services Scale O
 次のコマンドを使用して、新しい SSL 証明書を作成し、マスター ノードにインストールします。
 
 ```dos
-MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 例 :
 
 ```dos
-MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 
 #### <a name="2-bind-the-certificate-to-the-master-port"></a>2.証明書をマスター ポートにバインドする
@@ -92,7 +92,7 @@ A.  ワーカー ノードのローカル コンピューターのルート ス�
 
 B.  Scale Out Worker サービス構成ファイルを更新します。
 
-    Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
+ワーカー ノードで Scale Out Worker サービス構成ファイル `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` を更新します。 **MasterHttpsCertThumbprint** を新しい SSL 証明書のサムプリントに更新します。
 
 c.  Scale Out Worker サービスを再起動します。
 

@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 006841648398b5d0da8343decdfbfe7b094a8bdf
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322771"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005081"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint および Reporting Services サーバーのサポートされる組み合わせ
 
@@ -44,7 +44,7 @@ SharePoint モードでインストールされている SQL Server Reporting Se
 
 ||レポート サーバー|アドイン|SharePoint バージョン|
 |-|-------------------|-------------|------------------------|
-|@shouldalert|SQL Server 2016|SQL Server 2016|SharePoint 2016|
+|1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|

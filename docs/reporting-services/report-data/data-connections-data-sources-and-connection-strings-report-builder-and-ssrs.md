@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022869"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969417"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
 
@@ -48,7 +48,7 @@ ms.locfileid: "33022869"
   
  次の表は、埋め込みデータ ソースと共有データ ソースの違いをまとめたものです。  
   
-|Description|埋め込み<br /><br /> [データ ソース]|Shared<br /><br /> [データ ソース]|  
+|[説明]|埋め込み<br /><br /> [データ ソース]|Shared<br /><br /> [データ ソース]|  
 |-----------------|------------------------------|----------------------------|  
 |データ接続がレポート定義に埋め込まれる|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
 |レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  
@@ -96,7 +96,8 @@ ms.locfileid: "33022869"
   
 3.  **データ接続情報** 接続文字列は、データ拡張機能に渡されます。  
   
-4.  **資格情報** 資格情報は、接続文字列とは別個に管理されます。  
+4.  
+  **資格情報** 資格情報は、接続文字列とは別個に管理されます。  
   
 5.  **データ拡張機能/データ プロバイダー** データへの接続は、複数のデータ アクセス レイヤーを通じて行われる場合があります。  
   

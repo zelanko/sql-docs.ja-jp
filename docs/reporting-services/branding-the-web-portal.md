@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 6f4893d2044676078d102cbd776de03815b8354e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968846"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
@@ -96,7 +96,7 @@ Reporting Services の colors.json ファイルには 2 つのメイン カテ�
   
 インターフェイス セクションは、以下のグループに分類されます。  
   
-|セクション|Description|  
+|セクション|[説明]|  
 |---|---|  
 |primary|ボタンとホバーの色。|  
 |セカンダリ|タイトル バー、検索バー、左側のメニュー (表示される場合)、それらのアイテムのテキストの色。|  

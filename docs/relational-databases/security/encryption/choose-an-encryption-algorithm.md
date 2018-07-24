@@ -20,11 +20,11 @@ ms.author: aliceku
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 27ed854b8dc14c25979968b5ce9d3833fe0cef05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302862"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969214"
 ---
 # <a name="choose-an-encryption-algorithm"></a>暗号化アルゴリズムの選択
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "37302862"
  暗号化アルゴリズムによって定義されるデータ変換は、未承認ユーザーが容易に復元できないものです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DES、Triple DES、TRIPLE_DES_3KEY、RC2、RC4、128 ビット RC4、DESX、128 ビット AES、192 ビット AES、256 ビット AES など、複数のアルゴリズムがサポートされ、管理者および開発者が必要に応じて選択できるようになっています。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが使用されなくなりました。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
+>  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが非推奨とされます。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
   
  理想的なアルゴリズムは状況によって異なります。また、個々のアルゴリズムの利点についても、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックでは扱っていません。 ただし、一般論としては、次のような原則があります。  
   

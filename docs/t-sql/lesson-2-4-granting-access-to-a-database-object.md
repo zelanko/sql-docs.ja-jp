@@ -18,11 +18,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e5641055b11a53bcf39e2eb87ca547553521f9bf
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427021"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014600"
 ---
 # <a name="lesson-2-4---granting-access-to-a-database-object"></a>レッスン 2-4 - データベース オブジェクトへのアクセス権の付与
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

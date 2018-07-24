@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5464c11f7c9594e613bb4385731736a3204c08f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707860"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015859"
 ---
 # <a name="full-text-search"></a>フルテキスト検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.locfileid: "34707860"
   
 |DocumentID|[タイトル]|  
 |----------------|-----------|  
-|@shouldalert|Crank Arm and Tire Maintenance|  
+|1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -178,20 +178,20 @@ ms.locfileid: "34707860"
   
 |Keyword|ColId|DocId|個数|  
 |-------------|-----------|-----------|----------------|  
-|Crank|@shouldalert|@shouldalert|@shouldalert|  
-|Arm|@shouldalert|@shouldalert|2|  
-|Tire|@shouldalert|@shouldalert|4|  
-|メンテナンス|@shouldalert|@shouldalert|5|  
-|Front|@shouldalert|2|@shouldalert|  
-|Front|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|2|2|  
-|Reflector|@shouldalert|2|5|  
-|Reflector|@shouldalert|3|2|  
-|Bracket|@shouldalert|2|3|  
-|Bracket|@shouldalert|3|3|  
-|アセンブリ|@shouldalert|2|6|  
-|3|@shouldalert|2|7|  
-|インストール|@shouldalert|3|4|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|メンテナンス|1|1|5|  
+|Front|1|2|1|  
+|Front|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Bracket|1|3|3|  
+|アセンブリ|1|2|6|  
+|3|1|2|7|  
+|インストール|1|3|4|  
   
  **Keyword** 列には、インデックス作成時に抽出された単一のトークン表現が含まれています。 ワード ブレーカーが、トークンの構成要素を決定します。  
   
@@ -214,8 +214,8 @@ ms.locfileid: "34707860"
   
 |Keyword|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|3|2|  
+|Rear|1|3|1|  
+|Reflector|1|3|2|  
   
  フラグメント 2 を見ればわかるように、フルテキスト クエリでは、各フラグメントを内部的にクエリし、古いエントリを破棄する必要があります。 したがって、非常に多くのフルテキスト インデックス フラグメントがフルテキスト インデックスに含まれている場合、クエリのパフォーマンスが大幅に低下する可能性があります。 フラグメントの数を減らすには、 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの REORGANIZE オプションを使用してフルテキスト カタログを再構成します。 このステートメントは *マスター マージ*を実行します。マスター マージでは、フラグメントが単一のより大きなフラグメントにマージされ、フルテキスト インデックスから古いエントリがすべて削除されます。  
   
@@ -223,18 +223,18 @@ ms.locfileid: "34707860"
   
 |Keyword|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank|@shouldalert|@shouldalert|@shouldalert|  
-|Arm|@shouldalert|@shouldalert|2|  
-|Tire|@shouldalert|@shouldalert|4|  
-|メンテナンス|@shouldalert|@shouldalert|5|  
-|Front|@shouldalert|2|@shouldalert|  
-|Rear|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|2|2|  
-|Reflector|@shouldalert|2|5|  
-|Reflector|@shouldalert|3|2|  
-|Bracket|@shouldalert|2|3|  
-|アセンブリ|@shouldalert|2|6|  
-|3|@shouldalert|2|7|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|メンテナンス|1|1|5|  
+|Front|1|2|1|  
+|Rear|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|アセンブリ|1|2|6|  
+|3|1|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>フルテキスト インデックスと標準の SQL Server インデックスの違い:  
   

@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f19c24999fb1005a312af5eba61664faa2cc2aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936156"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006034"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 拡張イベント セッション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "32936156"
   
  前の図を見ると、イベント セッションに対して異なる DDL コマンドが発行されたときに、セッション状態が変化していることがわかります。 このような状態の変化について次の表で説明します。  
   
-|図ラベル|DDL ステートメント|Description|  
+|図ラベル|DDL ステートメント|[説明]|  
 |------------------------|-------------------|-----------------|  
 |作成|CREATE EVENT SESSION|CREATE EVENT SESSION によって提供されたメタデータを含むセッション オブジェクトがホスト プロセスによって作成されます。 ホスト プロセスは、セッション定義を検証し、ユーザーの権限レベルを検証した後、メタデータを master データベースに格納します。 このときセッションはまだアクティブではありません。|  
 |Alter|ALTER EVENT SESSION, STATE=START|ホスト プロセスによってセッションが開始されます。 ホスト プロセスは、格納されているメタデータを読み取って、セッション定義を検証し、ユーザーの権限レベルを検証して、セッションを作成します。 イベントやターゲットなどのセッション オブジェクトが読み込まれ、イベント処理がアクティブになります。|  

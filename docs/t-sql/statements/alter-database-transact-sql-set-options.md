@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04b95a4a2249f1b5eb80d28b43e082a75e8b9ffd
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fe4ddf28ab00fa8fd60eec6beb14a4cbcacd01ad
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792163"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946996"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
 
@@ -1105,25 +1105,25 @@ NO_WAIT
   
 |オプションのカテゴリ|他のオプションとの組み合わせの可否|WITH \<termination> 句の使用の可否|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<db_state_option>|はい|はい|  
-|\<db_user_access_option>|はい|はい|  
-|\<db_update_option>|はい|はい|  
-|\<delayed_durability_option>|はい|はい|  
-|\<external_access_option>|はい|いいえ|  
-|\<cursor_option>|はい|いいえ|  
-|\<auto_option>|はい|いいえ|  
-|\<sql_option>|はい|いいえ|  
-|\<recovery_option>|はい|いいえ|  
-|\<target_recovery_time_option>|いいえ|はい|  
+|\<db_state_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<db_user_access_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<db_update_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<delayed_durability_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<external_access_option>|[ユーザー アカウント制御]|いいえ|  
+|\<cursor_option>|[ユーザー アカウント制御]|いいえ|  
+|\<auto_option>|[ユーザー アカウント制御]|いいえ|  
+|\<sql_option>|[ユーザー アカウント制御]|いいえ|  
+|\<recovery_option>|[ユーザー アカウント制御]|いいえ|  
+|\<target_recovery_time_option>|いいえ|[ユーザー アカウント制御]|  
 |\<database_mirroring_option>|いいえ|いいえ|  
 |ALLOW_SNAPSHOT_ISOLATION|いいえ|いいえ|  
-|READ_COMMITTED_SNAPSHOT|いいえ|はい|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|はい|はい|  
-|\<service_broker_option>|はい|いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|はい|はい|  
-|\<parameterization_option>|はい|はい|  
-|\<change_tracking_option>|はい|はい|  
-|\<db_encryption_option>|はい|いいえ|  
+|READ_COMMITTED_SNAPSHOT|いいえ|[ユーザー アカウント制御]|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<service_broker_option>|[ユーザー アカウント制御]|いいえ|  
+|DATE_CORRELATION_OPTIMIZATION|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<parameterization_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<change_tracking_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<db_encryption_option>|[ユーザー アカウント制御]|いいえ|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュは、次のいずれかのオプションを設定することにより消去されます。  
   
@@ -1867,20 +1867,20 @@ NO_WAIT
   
 |オプションのカテゴリ|他のオプションとの組み合わせの可否|WITH \<termination> 句の使用の可否|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|はい|いいえ|  
-|\<change_tracking_option>|はい|はい|  
-|\<cursor_option>|はい|いいえ|  
-|\<db_encryption_option>|はい|いいえ|  
-|\<db_update_option>|はい|はい|  
-|\<db_user_access_option>|はい|はい|  
-|\<delayed_durability_option>|はい|はい|  
-|\<parameterization_option>|はい|はい|  
+|\<auto_option>|[ユーザー アカウント制御]|いいえ|  
+|\<change_tracking_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<cursor_option>|[ユーザー アカウント制御]|いいえ|  
+|\<db_encryption_option>|[ユーザー アカウント制御]|いいえ|  
+|\<db_update_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<db_user_access_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<delayed_durability_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<parameterization_option>|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
 |ALLOW_SNAPSHOT_ISOLATION|いいえ|いいえ|  
-|READ_COMMITTED_SNAPSHOT|いいえ|はい|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|はい|はい|  
-|DATE_CORRELATION_OPTIMIZATION|はい|はい|  
-|\<sql_option>|はい|いいえ|  
-|\<target_recovery_time_option>|いいえ|はい|  
+|READ_COMMITTED_SNAPSHOT|いいえ|[ユーザー アカウント制御]|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|DATE_CORRELATION_OPTIMIZATION|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|\<sql_option>|[ユーザー アカウント制御]|いいえ|  
+|\<target_recovery_time_option>|いいえ|[ユーザー アカウント制御]|  
   
 ## <a name="examples"></a>使用例  
   
@@ -1994,7 +1994,7 @@ SET QUERY_STORE = ON
 ALTER DATABASE { database_name | Current }  
 SET   
 {  
-    <optionspec> [ ,...n ] [ WITH <termination> ]   
+    <optionspec> [ ,...n ] 
 }  
 ;  
 
@@ -2003,9 +2003,7 @@ SET
     <auto_option>   
   | <change_tracking_option>   
   | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
+  | <db_encryption_option>    
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
@@ -2047,12 +2045,6 @@ SET
   
 <db_encryption_option> ::=  
   ENCRYPTION { ON | OFF }  
-  
-<db_update_option> ::=  
-  { READ_ONLY | READ_WRITE }  
-  
-<db_user_access_option> ::=  
-  { RESTRICTED_USER | MULTI_USER }  
   
 <delayed_durability_option> ::=  DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
   
@@ -2100,14 +2092,7 @@ SET
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
   | RECURSIVE_TRIGGERS { ON | OFF }   
-}  
-  
-<termination>  ::=   
-{  
-    ROLLBACK AFTER integer [ SECONDS ]   
-  | ROLLBACK IMMEDIATE   
-  | NO_WAIT  
-}  
+}
 
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
