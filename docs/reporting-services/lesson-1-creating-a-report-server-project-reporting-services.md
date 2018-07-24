@@ -15,16 +15,16 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fea148cc4148b4beaf14c8b31d7bd23aad734a0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d898041ee9e03612227fcc29c43d42859c54ffda
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016529"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980864"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)
 
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)](https://msdn.microsoft.com/library/ms167559(SQL.120).aspx)」を参照してください。
 
 このレッスンで、 *レポート サーバー プロジェクト* と *レポート定義 (.rdl)* ファイルを [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] Visual Studio 内に作成します。 
 
