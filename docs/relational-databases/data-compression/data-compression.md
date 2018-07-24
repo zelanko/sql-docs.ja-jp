@@ -28,11 +28,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001674"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ REBUILD PARTITION = ALL WITH (
 -   スナップショット エージェントで最初のスキーマ スクリプトが生成されるときに、新しいスキーマでは、テーブルとインデックスの両方に同じ圧縮設定が使用されます。 圧縮をテーブルのみで有効にし、インデックスで無効にすることはできません。  
 -   トランザクション レプリケーションの場合、アーティクル スキーマ オプションによって、スクリプトを作成する必要がある依存オブジェクトおよびプロパティが特定されます。 詳細については、「 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」を参照してください。  
      ディストリビューション エージェントでは、スクリプトの適用時に下位のサブスクライバーのチェックが行われません。 圧縮のレプリケーションが選択されている場合、下位のサブスクライバーに対するテーブルの作成は失敗します。 混合トポロジの場合は、圧縮のレプリケーションを有効にしないでください。  
--   マージ レプリケーションの場合、パブリケーションの互換性レベルがスキーマ オプションよりも優先され、この互換性レベルによってスクリプトが作成されるスキーマ オブジェクトが特定されます。  
+-   マージ レプリケーションの場合、パブリケーションの互換性レベルがスキーマ オプションをオーバーライドし、この互換性レベルによってスクリプトが作成されるスキーマ オブジェクトが特定されます。  
      混合トポロジの場合、新しい圧縮オプションをサポートする必要がないときは、パブリケーションの互換性レベルを下位のサブスクライバー バージョンに設定してください。 サポートする必要があるときは、テーブルをサブスクライバーに作成してから圧縮してください。  
   
 次の表に、レプリケーション時に圧縮を制御するレプリケーション設定を示します。  
@@ -209,7 +209,7 @@ REBUILD PARTITION = ALL WITH (
  [Unicode 圧縮の実装](../../relational-databases/data-compression/unicode-compression-implementation.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  

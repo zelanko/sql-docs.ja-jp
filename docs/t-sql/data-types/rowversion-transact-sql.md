@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d4e3e5ff4dcc49b2f48d8fd5e19f4085c0ebc2e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408541"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023501"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "37408541"
 [!INCLUDE[tsql](../../includes/tsql-md.md)] の **timestamp** データ型は、ISO 標準に定義されている **timestamp** データ型とは異なります。
   
 > [!NOTE]  
->  ph x="1" /&gt; タイムスタンプ** 構文は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  **タイムスタンプ** 構文は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 CREATE TABLE または ALTER TABLE ステートメントでは、列名を指定する必要はありません、 **タイムスタンプ** などのデータ型します。
   

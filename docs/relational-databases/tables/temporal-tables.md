@@ -16,10 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000674"
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -142,7 +143,7 @@ SELECT * FROM Employee
   
  次の表の該当行列の SysStartTime は、クエリ対象のテーブルの **SysStartTime** 列の値で、 **SysEndTime** はクエリ対象のテーブルの **SysEndTime** 列の値です。 完全な構文と例については、「 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 」、および「 [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)でサポートされているデータベース機能です。  
   
-|式|該当行|Description|  
+|式|該当行|[説明]|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|過去の指定時点の実際 (現行) の値を含む行のあるテーブルを返します。 内部的には、テンポラル テーブルとその履歴テーブルの結合が行われ、結果がフィルター処理されて、*<date_time>* パラメーターで指定された特定の時点で有効だった行の値が返されます。 *system_start_time_column_name* 値が *<date_time>* パラメーター値と等しいかそれよりも小さく、*system_end_time_column_name* 値が *<date_time>* パラメーター値より大きい場合に、行の値は有効と見なされます。|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|指定した時間範囲内でアクティブだったすべての行バージョンの値を含むテーブルを返します。FROM 引数の *<start_date_time>* パラメーター値の前にアクティブになったか、TO 引数の *<end_date_time>* パラメーター値の後にアクティブでなくなったかに無関係です。 内部的には、共用体が一時的なテーブルとその履歴テーブルの間実行され、結果をフィルター処理すると、指定した時間範囲の中にいつでもにアクティブだったすべての行のバージョンの値を返します。 FROM エンドポイントによって定義されている下限の境界で正確にアクティブが中断された行は含まれず、TO エンドポイントによって定義された境界の上限で正確にアクティブになったレコードも含まれません。|  

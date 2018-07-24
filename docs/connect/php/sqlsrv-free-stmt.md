@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_free_stmt |Microsoft ドキュメント
+title: sqlsrv_free_stmt |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e5a0d3cbf54917f32d0e30f2d0b1f15929d6836
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309072"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019690"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,10 +46,10 @@ sqlsrv_free_stmt( resource $stmt)
 関数が無効なパラメーターを使用して呼び出されている場合を除き、ブール値は **true** です。 関数が無効なパラメーターで呼び出された場合、 **false** を返します。  
   
 > [!NOTE]  
-> この関数のパラメーターとして、**Null** は有効です。 これにより、スクリプトで複数回関数を呼び出すことが可能になります。 などの場合、エラー状態でステートメントを解放して、スクリプトの最後にもう一度解放して、2 つ目を呼び出して**sqlsrv_free_stmt**戻ります**true**ため、最初の呼び出しは**sqlsrv_free_stmt** (エラー条件) ステートメントのリソースに設定**null**です。  
+> この関数のパラメーターとして、**Null** は有効です。 これにより、スクリプトで複数回関数を呼び出すことが可能になります。 たとえば、エラー状態でステートメントを解放して、スクリプトの最後にもう 1 回解放する場合、sqlsrv_free_stmt **への 2 回目の呼び出しによって true** が返されます。これは、(エラー状態での) sqlsrv_free_stmt **への最初の呼び出しでステートメント リソースが null** に設定されるためです。  
   
 ## <a name="example"></a>例  
-次の例では、ステートメントのリソースを作成し、単純なクエリを実行し、このステートメントに関連付けられているすべてのリソースを解放する **sqlsrv_free_stmt** を呼び出します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、ステートメントのリソースを作成し、単純なクエリを実行し、このステートメントに関連付けられているすべてのリソースを解放する **sqlsrv_free_stmt** を呼び出します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

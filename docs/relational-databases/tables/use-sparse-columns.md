@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ced43e7bbddaa59d1f88446294a3c0a519e5410f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012779"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000644"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "33012779"
 |データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
 |**bit**|0.125|5|98%|  
-|**tinyint**|@shouldalert|5|86%|  
+|**tinyint**|1|5|86%|  
 |**smallint**|2|6|76%|  
 |**int**|4|8|64%|  
 |**bigint**|8|12|52%|  
@@ -242,7 +242,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
 ## <a name="see-also"></a>参照  
  [列セットの使用](../../relational-databases/tables/use-column-sets.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   

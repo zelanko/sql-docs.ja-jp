@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_fields |Microsoft ドキュメント
+title: sqlsrv_num_fields |Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309181"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006872"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-アクティブな結果セット内のフィールド数を取得します。 この関数は前に、または実行後、準備したステートメントで呼び出すことができます。  
+アクティブな結果セット内のフィールド数を取得します。 この関数は、準備したステートメント、または実行後にする前に呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,9 +46,9 @@ sqlsrv_num_fields( resource $stmt)
 アクティブな結果セットのフィールド数を表す整数値。 エラーが発生すると、ブール値 **false** が返されます。  
   
 ## <a name="example"></a>例  
-次の例の先頭の 3 行のすべてのフィールドを取得するクエリの実行、 *HumanResources.Department* AdventureWorks データベースのテーブルです。 **Sqlsrv_num_fields**関数は、結果セット内のフィールドの数を決定します。 この結果を利用して、返される各行のフィールドを反復処理してデータを表示します。  
+次の例では、Adventureworks データベースの *HumanResources.Department* テーブル内にある先頭の 3 つの行について、すべてのフィールドを取得するクエリを実行します。 sqlsrv_num_fields** 関数で、結果セットのフィールド数を判断します。 この結果を利用して、返される各行のフィールドを反復処理してデータを表示します。  
   
-例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

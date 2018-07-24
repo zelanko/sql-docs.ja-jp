@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ee27537dd58803a79291ea75a47e51d1cd53936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993514"
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33011879"
 ## <a name="security-principles"></a>セキュリティ原則  
  次の表は、テンポラル テーブルに適用されるセキュリティ原則についてまとめたものです。  
   
-|原則|Description|  
+|原則|[説明]|  
 |---------------|-----------------|  
 |システムによるバージョン管理の有効/無効を切り替えるには、影響を受けるオブジェクトに対する最高の権限が必要になる|SYSTEM_VERSIONING の有効/無効を切り替えるには、現行テーブルと履歴テーブルの両方の CONTROL 権限が必要になります。|  
 |履歴データを直接変更できない|SYSTEM_VERSIONING がオンのときは、現行テーブルまたは履歴テーブルの実際の権限に関係なく、履歴データを変更することはできません。 データとスキーマのいずれも変更できません。|  
@@ -42,7 +42,7 @@ ms.locfileid: "33011879"
   
 ### <a name="disallowed-alter-schema-operations"></a>許可されていない ALTER スキーマ操作  
   
-|操作|現行テーブル|履歴テーブル|  
+|演算|現行テーブル|履歴テーブル|  
 |---------------|-------------------|-------------------|  
 |**DROP TABLE**|禁止|禁止|  
 |**ALTER TABLE…SWITCH PARTITION**|SWITCH IN のみ (「 [テンポラル テーブルでのパーティション分割](../../relational-databases/tables/partitioning-with-temporal-tables.md)」参照)|SWITCH OUT のみ (「 [テンポラル テーブルでのパーティション分割](../../relational-databases/tables/partitioning-with-temporal-tables.md)」参照)|  
@@ -51,7 +51,7 @@ ms.locfileid: "33011879"
   
 ## <a name="allowed-alter-table-operations"></a>許可される ALTER TABLE 操作  
   
-|操作|現在|履歴|  
+|演算|現在|履歴|  
 |---------------|-------------|-------------|  
 |**ALTER TABLE…REBUILD**|許可 (非依存)|許可 (非依存)|  
 |**CREATE INDEX**|許可 (非依存)|許可 (非依存)|  

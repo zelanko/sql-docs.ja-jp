@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c097a8735033be257dae8bb51d1946758f5936ae
-ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042682"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006820"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 ## <a name="remarks"></a>Remarks  
 **sqlsrv_fetch** と **sqlsrv_get_field** の組み合わせでは、データに対する順方向専用のアクセスが提供されます。  
   
-**sqlsrv_fetch**/**sqlsrv_get_field** の組み合わせでは、結果セット行の 1 フィールドのみがスクリプト メモリに読み込まれ、PHP の戻り値の型を指定できます  (PHP の戻り値の型の指定方法については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください)。また、この関数の組み合わせで、データをストリームとして取得することもできます  (ストリームとしてのデータの取得については、「[SQLSRV ドライバーを使用してデータをストリームとして取得する](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)」を参照してください)。  
+**sqlsrv_fetch**/**sqlsrv_get_field** の組み合わせでは、結果セット行の 1 フィールドのみがスクリプト メモリに読み込まれ、PHP の戻り値の型を指定できます  (PHP の戻り値の型の指定方法については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください)。また、この関数の組み合わせで、データをストリームとして取得することもできます (ストリームとしてのデータの取得については、「[SQLSRV ドライバーを使用してデータをストリームとして取得する](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)」を参照してください)。  
   
 ## <a name="example"></a>例  
 次の例では、製品のレビューとレビュアー名を含むデータの行を取得します。 結果セットからデータを取得するには、 **sqlsrv_get_field** を使用します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
