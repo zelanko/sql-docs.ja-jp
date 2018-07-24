@@ -1,6 +1,6 @@
 ---
-title: FILESTREAM の ICommandText にバインドされた ISequentialStream にデータを送信 |Microsoft ドキュメント
-description: FILESTREAM の ICommandText にバインドされた ISequentialStream にデータを送信します。
+title: FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
+description: FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4bfc03b8cdf3047ddfd46338be4796dd9f39d2d3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 36461107cf11c9119bd9e11b73cb7b96383483e7
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665572"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108774"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM の ICommandText にバインドされた ISequentialStream にデータを送信します。
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   このサンプルでは、ICommandText パラメーターにバインドされた ISequentialStream インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート](../../../oledb/features/filestream-support.md)です。  
+ Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート](../../../oledb/features/filestream-support.md)します。  
   
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- INCLUDE 環境変数には、msoledbsql.h を格納するディレクトリが含まれています。 確認してください。  
+ INCLUDE 環境変数に、sqlncli.h が保存されているディレクトリが含まれていることを確認します。  
   
  サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "35665572"
   
  Compile ICommandUpload.cpp、ISSHelper.cpp、ole32.lib、および oleaut32.lib をコンパイルします。  
   
- 渡す際にこのサンプルを実行する必要があります、サーバーまたはに加えて、値の名前を 4 MB (0x400001) の間と 4 GB (0 xffffffff) データの量を示す記述にします。  
+ このサンプルを実行するには、サーバーの名前 (server\instance_name) に加えて、書き込むデータのサイズを指定する 4 MB (0x400001) ～ 4 GB (0xFFFFFFFF) の値を渡す必要があります。  
   
  4 つ目の ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) コード リストは、このサンプルで作成したデータベースを削除します。  
   

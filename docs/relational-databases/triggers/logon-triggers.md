@@ -17,15 +17,15 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa1d89d7fa17fb09ffedd054524be178918796e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c12464c584e667e66dfdf3de3c13278ef1732e55
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423182"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108364"
 ---
 # <a name="logon-triggers"></a>ログオン トリガー
-[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   ログオン トリガーは、LOGON イベントに応答してストアド プロシージャを起動します。 このイベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでユーザー セッションが確立されるときに発生します。 ログオン トリガーは、ログインの認証段階が終了した後、ユーザー セッションが実際に確立されるまでの間に発生します。 したがって、通常、エラー メッセージや PRINT ステートメントからのメッセージはユーザーに通知されますが、このトリガー内で発生したすべてのメッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されます。 認証に失敗した場合は、ログオン トリガーが作動しません。  
   
  ログオン トリガーを使用すると、ログインの利用状況を追跡したり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのログインを制限したり、特定のログインのセッション数を制限したりすることで、サーバー セッションを監査し制御できます。 たとえば、次のコードでは、ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login_test *によってユーザー セッションが既に 3 つ生成されている場合、ログオン トリガーは、そのログインが開始する* へのログイン試行を拒否します。  
