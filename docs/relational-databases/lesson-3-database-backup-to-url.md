@@ -17,19 +17,19 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c04ca530ed9e01a7a5ec01e5fe7bcd31af78b41c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6da6086cd5c1a0ebfd56394e5c79b2078ef82e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942567"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978934"
 ---
 # <a name="lesson-3-database-backup-to-url"></a>レッスン 3: URL へのデータベースのバックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 このレッスンでは、 [「レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する」](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)で作成した Azure コンテナーに、オンプレミスの SQL Server 2016 インスタンス内の AdventureWorks2014 データベースをバックアップします。  
   
 > [!NOTE]  
-> この Azure コンテナーに SQL Server 2012 SP1 CU2 以降のデータベースまたは SQL Server 2014 データベースをバックアップする場合、 [こちら](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) に記載されている非推奨の構文を使用すれば、WITH CREDENTIAL 構文で URL へのバックアップを行うことができます。  
+> この Azure コンテナーに SQL Server 2012 SP1 CU2 以降のデータベースまたは SQL Server 2014 データベースをバックアップする場合、 [こちら](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) に記載されている非推奨の構文を使用すれば、WITH CREDENTIAL 構文で URL へのバックアップを行うことができます。  
   
 BLOB ストレージにデータベースをバックアップするには、次の手順に従います。  
   

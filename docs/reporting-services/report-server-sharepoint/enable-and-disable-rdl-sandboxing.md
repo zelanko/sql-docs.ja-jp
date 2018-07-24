@@ -14,10 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049150"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化
 
@@ -70,7 +71,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
 
  次の表では、構成設定に関する情報を示します。 構成ファイルに出現する順に、設定を示します。  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定値は 1000 です。|  
 |**MaxResourceSize**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値: 100|  
@@ -80,7 +81,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
 |**Allow**|RDL 式で許可される型または型のセットです。|  
 |**Namespace**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
 |**AllowNew**|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> **RDLSandboxing** が有効であるときは、**AllowNew**の設定に関係なく、RDL 式に新しい配列を作成できません。|  
-|**[値]**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
+|**Value**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
 |**メンバー**|**\<Types>** 要素に含まれる型の一覧に対する、RDL 式で許可されないメンバー名の一覧です。|  
 |**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
   

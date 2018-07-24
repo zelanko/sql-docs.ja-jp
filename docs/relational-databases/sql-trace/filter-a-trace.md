@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32c4039457be6660d837bbc0f3a41da91ab08b4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974217"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046210"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "32974217"
   
  フィルターを適用できるかどうかは、データ列によって異なります。 一部のデータ列にはフィルターを適用できません。 フィルターの適用が可能なデータ列では、次の表に示す関係演算子を使用してフィルターを指定できます。  
   
-|関係演算子|演算子記号|Description|  
+|関係演算子|演算子記号|[説明]|  
 |-------------------------|---------------------|-----------------|  
 |Like|Like|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
 |パターンに一致しない|パターンに一致しない|イベントのトレース データが入力したテキストと同じであってはならないことを指定します。 複数の値を指定できます。|  
@@ -94,7 +94,7 @@ ms.locfileid: "32974217"
 |**DBUserName**|LIKE、NOT LIKE|  
 |**Duration**|=、<>、>=、\<=|  
 |**EndTime**|>=、<=|  
-|**[エラー]**|=、<>、>=、<=|  
+|**Error**|=、<>、>=、<=|  
 |**EventSubClass**|=、<>、>=、<=|  
 |**FileName**|LIKE、NOT LIKE|  
 |**GUID**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  

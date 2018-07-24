@@ -18,11 +18,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: defc260673b6dd9a2170c154ca35730ec5bb4309
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940877"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983354"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,8 @@ ms.locfileid: "32940877"
 データの取り込みにメモリ最適化テーブルを使用します。 取り込みの大部分が (更新ではなく) 挿入で構成され、データのインメモリ OLTP ストレージの占有領域が重要な場合、次のいずれかを行います。
 
 - [を実行するジョブを使用して、](../indexes/columnstore-indexes-overview.md)クラスター化列ストア インデックス `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`が指定されたディスクベースのテーブルに定期的にデータを一括オフロードします。または、
-- [一時メモリ最適化テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) を使用して、履歴データを管理します。このモードでは、履歴データはディスクに保存され、データの移動はシステムによって管理されます。
+- 
+  [一時メモリ最適化テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) を使用して、履歴データを管理します。このモードでは、履歴データはディスクに保存され、データの移動はシステムによって管理されます。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サンプル リポジトリに一時メモリ最適化テーブル、メモリ最適化テーブル型、およびネイティブ コンパイル ストアド プロシージャを使用するスマート グリッド アプリケーション含めることでデータの取り込みを高速化し、センサー データのインメモリ OLTP ストレージの占有領域を管理しています。 
 

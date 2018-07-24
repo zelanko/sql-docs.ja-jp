@@ -20,10 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 974155cff19984223d015c5ef38165ece3517c97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038460"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="wellknown"></a> 広く使用され、知られている Microsoft プロパティについての情報の入手  
  マイクロソフトでは、さまざまなコンテキストで使用できる何百ものドキュメント プロパティを定義していますが、それぞれのファイル形式で使用できるプロパティはごくわずかです。 頻繁に使用される Windows プロパティの中に、少数の汎用プロパティがあります。 よく知られている汎用プロパティの一部の例を次の表に示します。 この表では、よく知られている名前、Windows の正規名 (マイクロソフトが公開するプロパティの説明で使用)、プロパティ セット GUID、プロパティ整数識別子、および簡単な説明を示します。  
   
-|よく知られている名前|Windows の正規名|プロパティ セット GUID|整数 ID|Description|  
+|よく知られている名前|Windows の正規名|プロパティ セット GUID|整数 ID|[説明]|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|特定のアイテムの作成者。|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|アイテムに割り当てられる一連のキーワード (タグとも呼ばれます)。|  

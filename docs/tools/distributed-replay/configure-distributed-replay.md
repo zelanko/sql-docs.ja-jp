@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay の構成 |Microsoft ドキュメント
+title: 分散再生の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038483"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  コントローラー構成ファイルによって指定されるログ記録レベルには、次の内容が含まれます。  
   
-|設定|XML 要素|Description|指定できる値|Required|  
+|設定|XML 要素|[説明]|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |ログ記録レベル|`<LoggingLevel>`|コントローラー サービスのログ記録レベルを指定します。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|不可。 既定値は `CRITICAL`です。|  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
  クライアント構成ファイルによって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|Description|指定できる値|Required|  
+|設定|XML 要素|[説明]|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |コントローラー|`<Controller>`|コントローラーのコンピューターの名前を指定します。 クライアントは、コントローラーにアクセスすることによって、Distributed Replay 環境での登録を試みます。|"`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。|不可。 既定では、クライアントはローカル ("`.`") で実行しているコントローラー インスタンスの登録を試みます (存在する場合)。|  
 |クライアントの作業ディレクトリ|`<WorkingDirectory>`|ディスパッチ ファイルが保存されるクライアント上のローカル パス。<br /><br /> このディレクトリ内のファイルは、次の再生時に上書きされます。|ドライブ文字で始まる完全なディレクトリ名。|不可。 値が指定されない場合は、ディスパッチ ファイルは既定のクライアント構成ファイルと同じ場所に保存されます。 値が指定されており、そのフォルダーがクライアントに存在しない場合は、クライアント サービスは開始されません。|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 05/03/2018
   
  前処理構成の設定は、前処理構成ファイル内の `<PreprocessModifiers>` 要素の子である XML 要素で指定されています。 これらの設定は次のとおりです。  
   
-|設定|XML 要素|Description|指定できる値|Required|  
+|設定|XML 要素|[説明]|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |システム セッション アクティビティを含む|`<IncSystemSession>`|キャプチャ中のシステム セッション アクティビティが再生中に含まれるかどうかを示します。|`Yes` &#124; `No`|不可。 既定値は `No`です。|  
 |最大アイドル時間|`<MaxIdleTime>`|アイドル時間を絶対数 (単位は秒) で指定します。|>= -1 の整数です。<br /><br /> `-1` は、元のトレース ファイルの元の値から変更されていないことを示します。<br /><br /> `0` は、指定された時刻に何らかのアクティビティが行われていることを示します。|不可。 既定値は `-1`です。|  
@@ -125,7 +126,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="replayoptions-element"></a>\<ReplayOptions > 要素  
  再生構成ファイルの `<ReplayOptions>` 要素によって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|Description|指定できる値|Required|  
+|設定|XML 要素|[説明]|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ (管理ツールの **replay** オプションで、サーバー名が既に **-s***target server* パラメーターを使用して指定されている場合)。|  
 |シーケンス モード|`<SequencingMode>`|イベント スケジュールに使用されるモードを指定します。|`synchronization` &#124; `stress`|不可。 既定値は `stress`です。|  
@@ -140,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="outputoptions-element"></a>\<OutputOptions > 要素  
  再生構成ファイルの `<OutputOptions>` 要素によって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|Description|指定できる値|Required|  
+|設定|XML 要素|[説明]|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |行数の記録|`<RecordRowCount>`|それぞれの結果セットで行数を記録するかどうかを示します。|`Yes` &#124; `No`|不可。 既定値は `Yes`です。|  
 |結果セットの記録|`<RecordResultSet>`|すべての結果セットの内容を記録するかどうかを示します。|`Yes` &#124; `No`|不可。 既定値は `No`です。|  

@@ -1,5 +1,5 @@
 ---
-title: テーブル要素のスキーマ (DTA) |Microsoft ドキュメント
+title: テーブル要素をスキーマ (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 75b9a322b97dccaf8d43ec57ac2f750ba235a61d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036760"
 ---
 # <a name="table-element-for-schema-dta"></a>Schema の Table 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|Description|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**NumberOfRows**|省略可。 さまざまなサイズのテーブルのシミュレーションを行うための整数です。|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、1 ～ 255 文字。|  
 |**既定値**|[なし] :|  

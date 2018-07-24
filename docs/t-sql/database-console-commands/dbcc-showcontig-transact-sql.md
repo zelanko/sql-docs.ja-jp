@@ -28,11 +28,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263324"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040050"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>結果セット  
 次の表では、結果セットに表示される情報について説明します。
   
-|統計|Description|  
+|統計|[説明]|  
 |---|---|
 |**スキャンされたページ数**|テーブルまたはインデックスのページ数です。|  
 |**スキャンされたエクステント数**|テーブルまたはインデックスのエクステント数です。|  
@@ -114,7 +114,7 @@ DBCC SHOWCONTIG
   
 TABLERESULTS を指定した場合、DBCC SHOWCONTIG は次の列に加え、前の表で説明した 9 つの列も返します。
   
-|統計|Description|  
+|統計|[説明]|  
 |---|---|
 |**[オブジェクト名]**|処理されるテーブルまたはビューの名前です。|  
 |**ObjectId**|オブジェクト名の ID。|  

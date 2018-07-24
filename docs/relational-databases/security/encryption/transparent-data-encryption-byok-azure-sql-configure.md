@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5b6a5d6eafc76b80a169332f8c71309440c4ef0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d9419443e554c225bd2ee6708c8448787160b6de
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093316"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979176"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell と CLI: Azure Key Vault の自分のキーを使用して Transparent Data Encryption を有効にする
 
@@ -39,8 +39,8 @@ ms.locfileid: "37093316"
    - [Key Vault からの PowerShell の手順](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [ハードウェア セキュリティ モジュール (HSM) と Key Vault の使用手順](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - キー コンテナーには、TDE で使用する次のプロパティが含まれている必要があります。
-   - [論理的な削除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [PowerShell で Key Vault の論理的な削除を使用する方法](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
+   - [論理的な削除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [PowerShell で Key Vault の論理的な削除を使用する方法](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) 
 - TDE に使用するには、キーに次の属性が必要です。
    - 有効期限がない
    - 無効ではない
@@ -200,13 +200,13 @@ ms.locfileid: "37093316"
 
 - Azure サブスクリプションを所有し、そのサブスクリプションの管理者である必要があります。
 - [推奨されますが、省略可能] TDE プロテクター キー マテリアルのローカル コピーを作成するためのハードウェア セキュリティ モジュール (HSM) またはローカル キー ストア。
-- コマンド ライン インターフェイス バージョン 2.0 以降。 最新バージョンをインストールして Azure サブスクリプションに接続する方法については、[Azure クロスプラットフォーム コマンド ライン インターフェイス 2.0 のインストールと構成](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)に関するページを参照してください。 
+- コマンド ライン インターフェイス バージョン 2.0 以降。 最新バージョンをインストールして Azure サブスクリプションに接続する方法については、[Azure クロスプラットフォーム コマンド ライン インターフェイス 2.0 のインストールと構成](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)に関するページを参照してください。 
 - TDE に使用する Azure Key Vault とキーを作成します。
-   - [CLI 2.0 を使用した Key Vault の管理](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [CLI 2.0 を使用した Key Vault の管理](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
    - [ハードウェア セキュリティ モジュール (HSM) と Key Vault の使用手順](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - キー コンテナーには、TDE で使用する次のプロパティが含まれている必要があります。
-   - [論理的な削除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [CLI で Key Vault の論理的な削除を使用する方法](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
+   - [論理的な削除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [CLI で Key Vault の論理的な削除を使用する方法](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli) 
 - TDE に使用するには、キーに次の属性が必要です。
    - 有効期限がない
    - 無効ではない
@@ -264,11 +264,11 @@ ms.locfileid: "37093316"
 
 ## <a name="sql-cli-references"></a>SQL CLI リファレンス
 
-https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/db/tde?view=azure-cli-latest 
 

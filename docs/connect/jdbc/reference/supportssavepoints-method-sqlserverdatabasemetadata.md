@@ -1,5 +1,5 @@
 ---
-title: supportsSavepoints メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: supportsSavepoints メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d05fccf894afbfb5bc5c2d514e3540b64fbcc625
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040920"
 ---
 # <a name="supportssavepoints-method-sqlserverdatabasemetadata"></a>supportsSavepoints メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,8 +44,8 @@ public boolean supportsSavepoints()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この supportsSavepoints メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsSavepoints メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この supportsSavepoints メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsSavepoints メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

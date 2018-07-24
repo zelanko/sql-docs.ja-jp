@@ -19,12 +19,12 @@ caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc31efe5f3e78a80061d47149c56bf942cd7e8b7
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: a25bfbe07720f190d5da0cc0b30e2104d77dc576
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989378"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980601"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33989378"
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] をダウンロードするには、**[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** ![ダウンロード](../analysis-services/media/download.png "ダウンロード")に移動してください。
 
-- Azure アカウントをすでにお持ちですか?  すでにお持ちの場合は、 **[こちら](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。
+- Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。
 
 > [!NOTE]
 > 最新のリリース ノートについては、「[SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)」を参照してください。
@@ -70,7 +70,8 @@ ms.locfileid: "33989378"
 -   [テンポラル テーブル](#TT)
 -   [Microsoft Azure BLOB Storage へのストライプ バックアップ](#StripedBackupToAzure)
 -   [Microsoft Azure BLOB Storage へのファイル スナップショット バックアップ](#FileSnapshotBackup)
--   [管理対象のバックアップ](#ManagedBackup)
+-   
+  [管理対象のバックアップ](#ManagedBackup)
 -   [TempDB データベース](#multipleTempDB)
 -   [組み込みの JSON サポート](#ForJson)
 -   [PolyBase](#bkPolyBase)
@@ -419,7 +420,7 @@ SQL Server 2016 Standard Edition で、Always On の基本的な可用性グル�
 
  自動フェールオーバーをサポートするレプリカの数が&2; から&3; に増えました。
 
- Always On フェールオーバー クラスターでグループ管理サービス アカウントがサポートされるようになりました。 詳細については、「 [グループの管理されたサービス アカウントの概要](https://technet.microsoft.com/library/hh831782.aspx)」を参照してください。 Windows Server 2012 R2 の場合は、パスワードの変更後の一時的なダウンタイムを回避するために更新プログラムが必要になります。 更新プログラムを取得する場合は、「 [gMSA ベースのサービスは、Windows Server 2012 R2 のドメインでパスワードを変更した後ログインできません](https://support.microsoft.com/kb/2998082/)」を参照してください。
+ Always On フェールオーバー クラスターでグループ管理サービス アカウントがサポートされるようになりました。 詳細については、「[グループの管理されたサービス アカウントの概要](https://technet.microsoft.com/library/hh831782.aspx)」を参照してください。 Windows Server 2012 R2 の場合は、パスワードの変更後の一時的なダウンタイムを回避するために更新プログラムが必要になります。 更新プログラムを取得する場合は、「 [gMSA ベースのサービスは、Windows Server 2012 R2 のドメインでパスワードを変更した後ログインできません](https://support.microsoft.com/kb/2998082/)」を参照してください。
 
  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] では、Windows Server 2016 での分散トランザクションおよび DTC がサポートされます。 詳細については、「[Support for distributed transactions (分散トランザクションのサポート)](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md#dtcsupport)」を参照してください。
 

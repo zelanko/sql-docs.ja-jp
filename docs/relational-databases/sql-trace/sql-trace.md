@@ -17,10 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5517458968f64bab9a64b0692deaa973022d9109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062065"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="use-data-columns-to-describe-returned-events"></a>データ列による返されたイベントの説明  
  SQL トレースでは、トレース出力のデータ列を使用して、トレースの実行時に返されたイベントが説明されます。 次の表に、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のデータ列を示します。これらのデータ列は、SQL トレースによって使用されるデータ列と同一のデータ列です。また、この表では、既定で選択されているデータ列を示しています。  
   
-|データ列|列番号|Description|  
+|データ列|列番号|[説明]|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラム名ではなくアプリケーションによって渡された値が格納されます。|  
 |**BigintData1**|52|トレースで指定されているイベント クラスに依存する値 (**bigint** データ型)。|  
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 |**DBUserName***|40|クライアントの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名。|  
 |**Duration**|13|イベントの期間 (ミリ秒)。<br /><br /> サーバーはマイクロ秒 (100 万分の 1 (10<sup>-6</sup>) 秒) 単位でのイベント期間、およびイベントにより使用されるミリ秒 (10<sup>-3</sup>秒) 単位での CPU 時間をレポートします。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに、既定ではミリ秒単位で **Duration** 列が表示されますが、トレースがファイルまたはデータベース テーブルに保存されると、 **Duration** 列の値はマイクロ秒単位で記述されます。|  
 |**EndTime**|15|イベントが終了した時刻。 **SQL:BatchStarting** や **SP:Starting**などのイベントの開始を示すイベント クラスには、このデータ列は作成されません。|  
-|**[エラー]**|31|特定のイベントのエラー番号。 これは多くの場合、 **sysmessages**に格納されたエラー番号です。|  
+|**Error**|31|特定のイベントのエラー番号。 これは多くの場合、 **sysmessages**に格納されたエラー番号です。|  
 |**EventClass***|27|キャプチャされるイベント クラスの種類。|  
 |**EventSequence**|51|このイベントのシーケンス番号。|  
 |**EventSubClass***|21|イベント サブクラスの種類。各イベント クラスに関するより詳細な情報を提供します。 たとえば、 **Execution Warning** イベント クラスのイベント サブクラス値は、以下のような実行の警告の種類を表します。<br /><br /> **1** = クエリの待機。 クエリを実行するには、メモリなど、そのためのリソースが確保されるまで待機しなければなりません。<br /><br /> **2** = クエリのタイムアウト。クエリの実行に必要なリソースが確保されるのを待機していて時間切れになりました。 すべてのイベント クラスに対して、このデータ列が作成されるわけではありません。|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 05/03/2018
 |**TargetLoginName**|42|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの名前。|  
 |**TargetLoginSid**|43|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの SID。|  
 |**TargetUserName**|39|データベース ユーザーを対象とした操作 (ユーザーへの権限の許可など) を行う場合の対象となるユーザーの名前。|  
-|**TextData**|@shouldalert|トレースにキャプチャされるイベント クラスに依存するテキスト値。 ただし、パラメーター化クエリをトレースする場合は、変数は **TextData** 列のデータ値と共には表示されません。|  
+|**TextData**|1|トレースにキャプチャされるイベント クラスに依存するテキスト値。 ただし、パラメーター化クエリをトレースする場合は、変数は **TextData** 列のデータ値と共には表示されません。|  
 |**Transaction ID**|4|トランザクションに対してシステムが割り当てた ID。|  
 |**型**|57|トレースにキャプチャされるイベント クラスに依存する整数値。|  
 |**Writes**|17|イベントの代わりにサーバーによって実行される物理ディスクの書き込み操作回数。|  

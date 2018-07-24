@@ -14,10 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d376ca984ee2666c8f84a46d3a7895c911d0c719
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053340"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services のサイト設定とサイト機能 (SharePoint モード)
 
@@ -30,7 +31,7 @@ Reporting Services の SharePoint モードには、SharePoint の [サイトの
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
-|サイトの設定|Description|  
+|サイトの設定|[説明]|  
 |------------------|-----------------|  
 |Reporting Services のサイト設定|このトピックで説明するサイト全体の設定。|  
 |データ警告の管理|データ警告機能の管理。|  
@@ -44,7 +45,7 @@ Reporting Services の SharePoint モードには、SharePoint の [サイトの
   
 ## <a name="options-for-reporting-services-site-settings"></a>[Reporting Services のサイト設定] のオプション
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**RSClientPrint ActiveX コントロールのダウンロードの有効化**|このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなど、一般的な印刷ダイアログ ボックスの機能がサポートされています。 コントロールの詳細については、「 [カスタム アプリケーション内での RSClientPrint コントロールの使用](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)」をご覧ください。|  
 |**ローカル モードでのリモート エラーを有効にします**|ローカル モードでの実行時にリモート コンピューターの詳細なエラー メッセージの表示と非表示を切り替えます。 次のようなエラー メッセージが表示される場合は、リモート エラーを有効にすると役立つことがあります。<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

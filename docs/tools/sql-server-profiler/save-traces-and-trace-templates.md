@@ -1,5 +1,5 @@
 ---
-title: トレースとトレース テンプレートの保存 |Microsoft ドキュメント
+title: トレースとトレース テンプレートの保存 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c745679dcae70ebb1fbf5e5bbdd667bf839020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076429"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055074"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

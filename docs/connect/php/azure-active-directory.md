@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory |Microsoft ドキュメント
+title: Azure Active Directory |Microsoft Docs
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,37 +10,37 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 224fa4f0746c45f9651b4714593e28f719b4d1ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 71e6b3b4556621b6bc8a8a4c7996cfdb47a12849
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307001"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979444"
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続します。
+# <a name="connect-using-azure-active-directory-authentication"></a>方法: Azure Active Directory 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) は、代替手段として動作する中央のユーザー ID 管理テクノロジ[SQL Server 認証](../../connect/php/how-to-connect-using-sql-server-authentication.md)です。 Azure AD によりフェデレーション id を持つ Microsoft Azure SQL Database と SQL データ ウェアハウスへの接続では、Azure AD を使用して、ユーザー名とパスワード、Windows 統合認証、または Azure AD アクセス トークンです。SQL Server 用 PHP ドライバーでは、これらの機能の部分的なサポートを提供します。
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) は、サーバーの全体のユーザー ID 管理テクノロジの代替として動作する[SQL Server 認証](../../connect/php/how-to-connect-using-sql-server-authentication.md)します。 Azure AD はユーザー名とパスワード、Windows 統合認証、または; Azure AD アクセス トークンを使用の Azure AD でフェデレーション id を持つ Microsoft Azure SQL Database と SQL Data Warehouse への接続を許可します。SQL Server 用 PHP ドライバーでは、これらの機能の部分的なサポートを提供します。
 
 Azure AD を使用する、**認証**キーワード。 値を**認証**かかる場合に、次の表で説明します。
 
-|Keyword|値|説明|
+|Keyword|値|[説明]|
 |-|-|-|
 |**[認証]**|(既定) の設定します。|認証モードがその他のキーワードによって決定されます。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。 |
-||`SqlPassword`|(Azure のインスタンスがあります) を SQL Server インスタンスへの直接認証ユーザー名とパスワードを使用します。 ユーザー名とパスワードを使用する接続文字列に渡す必要があります、 **UID**と**PWD**キーワード。 |
-||`ActiveDirectoryPassword`|ユーザー名とパスワードを使用して Azure Active Directory id を認証します。 ユーザー名とパスワードを使用する接続文字列に渡す必要があります、 **UID**と**PWD**キーワード。 |
+||`SqlPassword`|(これは、Azure インスタンスである可能性があります)、SQL Server インスタンスへの直接認証ユーザー名とパスワードを使用します。 ユーザー名とパスワードを使用して、接続文字列に渡す必要がある、 **UID**と**PWD**キーワード。 |
+||`ActiveDirectoryPassword`|ユーザー名とパスワードを使用して id を Azure Active Directory で認証します。 ユーザー名とパスワードを使用して、接続文字列に渡す必要がある、 **UID**と**PWD**キーワード。 |
 
-**認証**キーワードが接続のセキュリティ設定に影響します。 既定では、接続文字列に設定されている場合、**暗号化**キーワードが true に設定は、クライアントは暗号化を要求するようにします。 さらに、サーバー証明書は、暗号化設定に関係なく、検証する場合を除き、 **TrustServerCertificate**設定が true に設定します。 これには、古いと、セキュリティで保護された、ログイン メソッドを暗号化は接続文字列で個別に要求しない限り、サーバー証明書は検証されません低は区別されます。
+**認証**キーワードが接続のセキュリティ設定に影響します。 既定ではその後、接続文字列に設定されている場合、 **Encrypt**キーワードが true に設定は、クライアントの暗号化を要求するようにします。 さらに、サーバー証明書が暗号化の設定に関係なく検証する場合を除き、 **TrustServerCertificate**設定が true に設定します。 これには、古いと、暗号化は、接続文字列で具体的には要求されない限り、サーバー証明書は検証されません、セキュリティで保護されたの login メソッドは区別されます。
 
-SQL Server on Windows 用 PHP ドライバーで Azure AD を使用して、前にインストールしてあることを確認してください、 [Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/download/details.aspx?id=41950)(Linux と MacOS は必要ありません)。
+Azure AD を Windows 上の SQL Server の PHP ドライバーと共に使用する前にインストールされていることを確認、 [Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/download/details.aspx?id=41950)(Linux と MacOS は必要ありません)。
 
 #### <a name="limitations"></a>制限事項
 
-基になる ODBC ドライバーを Windows では、1 つ以上の値をサポートしている、**認証**キーワード、 **ActiveDirectoryIntegrated**、PHP ドライバーでは、任意のプラットフォームでは、この値はできませんが、つまりもAzure AD トークン ベースの認証をサポートしていません。
+、Windows では、基になる ODBC ドライバーは、1 つ以上の値をサポートしています、**認証**キーワード、 **ActiveDirectoryIntegrated**、PHP ドライバーでは、任意のプラットフォームでは、この値はできませんが、ため、またAzure AD トークン ベース認証をサポートしていません。
 
 ## <a name="example"></a>例
 
-次の例を使用して接続する方法を示しています。 **SqlPassword**と**ActiveDirectoryPassword**です。
+次の例を使用して接続する方法を示しています。 **SqlPassword**と**ActiveDirectoryPassword**します。
 
 ```php
     <?php
@@ -84,7 +84,7 @@ SQL Server on Windows 用 PHP ドライバーで Azure AD を使用して、前�
     ?>
 ```
 
-次の例では、上記と同じ PDO_SQLSRV ドライバーで。
+次の例では、上記と同じ PDO_SQLSRV ドライバーを使用します。
 
 ```php
     <?php
@@ -129,4 +129,4 @@ SQL Server on Windows 用 PHP ドライバーで Azure AD を使用して、前�
     ?>
 ```
 ## <a name="see-also"></a>参照  
-[ODBC ドライバーでの Azure Active Directory の使用](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+[ODBC ドライバーでの Azure Active Directory の使用](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)

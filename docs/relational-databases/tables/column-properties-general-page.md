@@ -18,20 +18,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3ad590202d288b636b56caf59fa14c59e5a79bcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011987"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038896"
 ---
-# <a name="column-properties-general-page"></a>[列のプロパティ] ([全般] ページ)
+# <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   このページを使用すると、選択されている列のプロパティを表示できます。  
   
  このページの情報は読み取り専用です。 列を変更するには、 **[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、 **[デザイン]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **名前**  
  列の名前です。  
   

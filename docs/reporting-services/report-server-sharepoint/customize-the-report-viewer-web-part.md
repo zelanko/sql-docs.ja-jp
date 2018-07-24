@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028589"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052183"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
 
@@ -69,7 +69,7 @@ ms.locfileid: "33028589"
   
  次に、レポート ビューアー Web パーツのカスタム プロパティを示します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |レポート|現在の SharePoint サイトまたは同じ Web アプリケーションやファーム内のサイト上のレポートへの完全修飾パス。 追加プロパティの設定で最良の結果を得るには、レポート URL を指定した後で [適用] をクリックしてください。|  
 |[ハイパーリンク ターゲット]|現在のドキュメント内のリンク対象コンテンツを表示するためのターゲット フレームを指定する標準 HTML。 外部 Web サイトへのハイパーリンクを含むレポートについて、現在のウィンドウ内の既存のレポートを対象ドキュメントに置き換えるか、対象ドキュメントを新しいブラウザー ウィンドウで開くかを指定できます。 有効な値には、 **_Top**、 **_Blank**、および **_Self**が含まれます。 **_Top** を指定すると、現在のウィンドウが使用されます。 **_Blank** を指定すると、新しいブラウザー ウィンドウにドキュメントが読み込まれます。 **_Self** を指定すると、現在のフレーム内にドキュメントが開きます。 HTML の Target 属性では **_Parent** も有効な値ですが、ページに埋め込むレポート ビューアー Web パーツでは使用しないでください。|  

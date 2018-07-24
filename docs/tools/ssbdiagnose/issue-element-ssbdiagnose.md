@@ -1,5 +1,5 @@
 ---
-title: Issue 要素 (ssbdiagnose) |Microsoft ドキュメント
+title: Issue 要素 (ssbdiagnose) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4c221d40c9f4a182f82ea241bf1acd7741286279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075869"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002634"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 要素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33075869"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|Description|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**type**|Issue 要素で報告する問題のカテゴリを次に示します。<br /><br /> **"Diagnosis"** では、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] の構成の分析時に検出された構成の問題を報告します。<br /><br /> **"Problem"** では、 **ssbdiagnose** で分析を完了できない場合の原因となった問題を報告します。 問題を修正して、 **ssbdiagnose**を再実行します。<br /><br /> **"Event"** では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **チェックの実行時に検出された** イベントを報告します。 イベントが報告されるのは、 **-SHOWEVENTS** が指定されている場合のみです。|  
 |**コード**|メッセージのエラー番号を示します。|  
@@ -57,10 +57,10 @@ ms.locfileid: "33075869"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
-|**[値]**|エラー メッセージのテキストを返します。|  
+|**Value**|エラー メッセージのテキストを返します。|  
 |**個数**|報告されたエラーにつき 1 個。|  
   
 ## <a name="element-relationships"></a>要素の関係  

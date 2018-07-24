@@ -1,5 +1,5 @@
 ---
-title: 出力パラメーターを BLOB のストリーミング サポート |Microsoft ドキュメント
+title: 出力パラメーターの BLOB のストリーミング サポート |Microsoft Docs
 description: BLOB 出力パラメーターのストリーミング サポート
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665172"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106868"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 出力パラメーターのストリーミング サポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  この記事には、ストリーミング BLOB をバインドする BLOB 出力パラメーターのサポートを示していますが、ISequentialStreams としてパラメーターを出力するサンプルが含まれています。  
+  このトピックでは、BLOB 出力パラメーターのストリーミング サポートを示すサンプルを紹介します。このストリーミング サポートでは、BLOB 出力パラメーターを ISequentialStreams としてバインドします。  
   
- IMultipleResults::GetResult の出力パラメーターがブロックされ、DB_E_OBJECTOPEN 戻り値が返される場合があります。 呼び出し元は、保留中の blob パラメーター、およびどちらか完全に読み取るチェックまたはそれらをリリースする必要があります。  
+ IMultipleResults::GetResult の出力パラメーターがブロックされ、DB_E_OBJECTOPEN 戻り値が返される場合があります。 呼び出し元は保留中の BLOB パラメーターをチェックし、これらのパラメーターを完全に読み取るか、または解放する必要があります。  
   
 ## <a name="example"></a>例  
   

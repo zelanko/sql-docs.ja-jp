@@ -1,5 +1,5 @@
 ---
-title: 共有メモリのプロパティ |Microsoft ドキュメント
+title: 共有メモリのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 730c784c1c7f92bf0c8fc81f66484b57354f7c31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039710"
 ---
 # <a name="shared-memory-properties"></a>[共有メモリのプロパティ] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動しないと、このプロトコルを有効または無効にできません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。 既定では、共有メモリ プロトコルは有効になっています。  
   

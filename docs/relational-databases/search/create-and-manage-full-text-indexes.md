@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c69da5538488f1660dae8a3c1f56b1f7dff2e5ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182138"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052392"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "33182138"
 
 ##  <a name="view"></a> フルテキスト インデックスのプロパティを表示する
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Transact-SQL で、フルテキスト インデックスのプロパティを表示する
-|カタログ ビューまたは動的管理ビュー|Description|  
+|カタログ ビューまたは動的管理ビュー|[説明]|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|フルテキスト カタログからフルテキスト インデックスへの参照ごとに 1 行のデータを返します。|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|フルテキスト インデックスの一部となっている列ごとに 1 行のデータを格納します。|  
@@ -76,7 +76,7 @@ ms.locfileid: "33182138"
   
 5.  **[ページの選択]** ペインでは、次のいずれかのページを選択できます。  
   
-    |ページ|Description|  
+    |ページ|[説明]|  
     |----------|-----------------|  
     |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**<br /><br />詳細については、「[フルテキスト インデックス プロパティ &#40;[全般] ページ&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)」を参照してください。|  
     |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[フルテキスト インデックス プロパティ &#40;[列] ページ&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)」を参照してください。|  
@@ -89,7 +89,7 @@ ms.locfileid: "33182138"
   
  次の表に、インデックスが作成されたテーブルおよび列に関連したフルテキスト プロパティと、それに関連する [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の一覧を示します。  
   
-|プロパティ|Description|機能|  
+|プロパティ|[説明]|機能|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|列のドキュメント型情報を保持する、テーブル内の TYPE COLUMN。|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|列に対してフルテキスト インデックスを作成できるかどうかを示します。|COLUMNPROPERTY|  

@@ -17,11 +17,12 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 85c22b39e27a6e7f00773a6fcee0b5ac900cbb42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ab84785d74c876e67784d1781f0503a1771be18
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985134"
 ---
 # <a name="tutorial-map-report-report-builder"></a>チュートリアル: マップ レポート (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] チュートリアルでは、地図を背景として、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートのデータを表示するときに使用できるマップ機能について学習できます。 
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 このチュートリアルの推定所要時間: 30 分。  
   
 ## <a name="requirements"></a>必要条件  
-このチュートリアルでは、Bing マップの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。 
+このチュートリアルでは、Bing マップの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。 
 
 その他の要件については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   

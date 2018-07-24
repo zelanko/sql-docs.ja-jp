@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSet フィールド |Microsoft ドキュメント
+title: SQLServerResultSet フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f93a84e056726ffa5cf96ea05b9fd02933ed3c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847567"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036200"
 ---
 # <a name="sqlserverresultset-fields"></a>SQLServerResultSet フィールド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerResultSet のメンバーについては、次を参照してください。 [SQLServerResultSet メンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)です。  
+  SQLServerResultSet のメンバーについては、次を参照してください。 [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

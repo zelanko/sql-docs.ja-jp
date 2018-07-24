@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97480ae8c4b390250ae2007b7d1d03d0efccf472
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a2be6888bcd358d5e8633801c79d4a994967d56f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979165"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server でのインメモリ OLTP 機能の採用計画
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/19/2018
 
 Azure SQL データベースのクラウド サービスでホストされているデータベースの場合、選択したサービス層が、データベースで消費可能なアクティブ メモリの量に影響します。 アラートを使用してデータベースのメモリ使用量を監視する計画を立てる必要があります。 詳細については、次の情報を参照してください。
 
-- [価格レベル](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)に対するインメモリ OLTP ストレージの制限を確認する
+- [価格レベル](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)に対するインメモリ OLTP ストレージの制限を確認する
 - [インメモリ OLTP ストレージの監視](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>メモリ最適化テーブル変数

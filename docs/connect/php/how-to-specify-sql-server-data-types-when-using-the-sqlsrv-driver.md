@@ -1,5 +1,5 @@
 ---
-title: '方法: SQLSRV ドライバーを使用する場合は、SQL Server データ型を指定 |Microsoft ドキュメント'
+title: '方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308091"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032976"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ SQL Server データ型を指定するには、データを挿入または更新
 次の手順は、データをサーバーに送信する際に、SQL Server データ型を指定する方法をまとめています。  
   
 > [!NOTE]  
-> SQL Server データ型が指定されていない場合は、既定の型が使用されます。 既定の SQL Server データ型については、「 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)」を参照してください。  
+> SQL Server データ型を指定しない場合、既定の型が使用されます。 既定の SQL Server データ型については、「 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)」を参照してください。  
   
 1.  データを挿入または更新する Transact-SQL クエリを定義します。 クエリでパラメーター値のプレースホルダーとして疑問符 (?) を使用します。  
   
@@ -42,7 +42,7 @@ SQL Server データ型を指定するには、データを挿入または更新
   
 3.  クエリを準備または実行するときに使用する *$params* 配列を構築します。 SQL Server データ型を指定するときに、 *$params* 配列の各要素も配列にする必要があります。  
   
-4.  適切なを使用して目的の SQL Server データ型を指定する**sqlsrv_sqltype _\*** の各サブ配列の 4 番目のパラメーターとして定数、 *$params*配列。 完全な一覧については、 **sqlsrv_sqltype _\*** 定数、」の Sqltype セクションを参照してください[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
+4.  目的の SQL Server データ型を指定するには、$params 配列の各サブ配列の 4 番目のパラメーターとして、適切な **SQLSRV\*SQLTYPE*** 定数を使用します。 **SQLSRV\*SQLTYPE**[ 定数の完全な一覧については、「](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;」の SQLTYPE セクションを参照してください。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
   
     ```  
     $employeeId = 5;  
@@ -58,9 +58,9 @@ SQL Server データ型を指定するには、データを挿入または更新
     ```  
   
 ## <a name="example"></a>例  
-次の例にデータを挿入する、 *HumanResources.EmployeePayHistory* AdventureWorks データベースのテーブルです。 *$changeDate*、 *$rate*、および *$payFrequency* パラメーターに SQL Server 型が指定されています。 *$employeeId* パラメーターには既定の SQL Server 型が使用されています。 データが正常に挿入されたことを確認するため、同じデータを取得し、表示しています。  
+次の例では、Adventureworks データベースの *HumanResources.EmployeePayHistory* テーブルにデータを挿入しています。 *$changeDate*、 *$rate*、および *$payFrequency* パラメーターに SQL Server 型が指定されています。 *$employeeId* パラメーターには既定の SQL Server 型が使用されています。 データが正常に挿入されたことを確認するため、同じデータを取得し、表示しています。  
   
-この例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

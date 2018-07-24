@@ -1,5 +1,5 @@
 ---
-title: Banner 要素 (ssbdiagnose) |Microsoft ドキュメント
+title: Banner 要素 (ssbdiagnose) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5119e483fc089c19782eb6287ea42a08c79c4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055117"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 要素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33076099"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|Description|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**title**|**ssbdiagnose** の XML 出力ファイルを生成したユーティリティを示します。|  
 |**product**|**ssbdiagnose** の XML 出力ファイルを生成した製品を示します。|  
@@ -51,7 +51,7 @@ ms.locfileid: "33076099"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  

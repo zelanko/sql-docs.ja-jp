@@ -15,16 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2c6c71003694d4b696fc771c6b89a29ffafbff0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38043038"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   **[詳細設定]** タブには、以下のプロパティが既定で表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **クラスター化インデックス**  
  このサービスがクラスター サーバーのリソースとしてインストールされているかどうかが表示されます。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
  製品の SKU (Stock Keeping Unit、製品のエディションとも呼ばれます) が表示されます。  
   
  **起動時のパラメーター**  
- この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが使用する起動時のパラメーターが一覧表示されます。 各パラメーターはセミコロンで区切られます。 既定のパラメーターには、master データベースのデータ ファイル (`master.mdf`) のパス、master データベースのログ ファイル (`mastlog.ldf`) のパス、エラー ログ ファイルのパスが含まれます。 起動時のパラメーターの構文については、オンライン ブックの **「SQL Server サービスのスタートアップ オプションの使用」**を検索してください。  
+ この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが使用する起動時のパラメーターが一覧表示されます。 各パラメーターはセミコロンで区切られます。 既定のパラメーターには、master データベースのデータ ファイル (`master.mdf`) のパス、master データベースのログ ファイル (`mastlog.ldf`) のパス、エラー ログ ファイルのパスが含まれます。 起動時のパラメーターの構文については、オンライン ブックの **「SQL Server サービスのスタートアップ オプションの使用」** を検索してください。  
   
  **[SKU (Stock Keeping Unit)]**  
  製品の SKU (Stock Keeping Unit) 番号が表示されます。  

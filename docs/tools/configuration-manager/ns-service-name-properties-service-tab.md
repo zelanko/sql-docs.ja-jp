@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;サービス名&gt;プロパティ ([サービス] タブ) |Microsoft ドキュメント
+title: NS$&lt;サービス名&gt;プロパティ ([サービス] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 388985b726d0fa2cdf38e17fb18e914237fa3580
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067331"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058491"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;サービス名&gt; プロパティ ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **バイナリ パス**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
