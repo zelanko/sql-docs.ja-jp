@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure への SQL Server マネージ バックアップを有効にする | Microsoft Docs
+title: Microsoft Azure への SQL Server マネージド バックアップを有効にする | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c8aebe504f63e5b99818a928f114841e3c90b075
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0b9b90aa7ca04cb7b1cbedde2befae373339bab
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921057"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984044"
 ---
-# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップを有効にする
+# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップを有効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、データベース レベルとインスタンス レベルの両方で、既定の設定を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする方法について説明します。 また、電子メール通知を有効にする方法と、バックアップ処理を監視する方法についても説明します。  
   
- このチュートリアルでは、Azure PowerShell を使用します。 チュートリアルを開始する前に、 [Azure PowerShell をダウンロードしてインストールします](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)。  
+ このチュートリアルでは、Azure PowerShell を使用します。 チュートリアルを開始する前に、 [Azure PowerShell をダウンロードしてインストールします](http://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
->  また、高度なオプションを有効にする場合やカスタムのスケジュールを使用する場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする前にまずその設定を構成します。 詳細については、「 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
+>  また、高度なオプションを有効にする場合やカスタムのスケジュールを使用する場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする前にまずその設定を構成します。 詳細については、「[Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>既定の設定で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する  
   
@@ -42,7 +42,7 @@ ms.locfileid: "32921057"
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     ストレージ アカウントの詳細については、「 [Azure ストレージ アカウントについて](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/)」を参照してください。  
+     ストレージ アカウントの詳細については、「 [Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。  
   
 3.  **バックアップ ファイル用の BLOB コンテナーを作成する:** Azure 管理ポータルまたは Azure PowerShell で BLOB コンテナーを作成できます。 次の `New-AzureStorageContainer` コマンドを実行すると、 `backupcontainer` ストレージ アカウントに `managedbackupstorage` という BLOB コンテナーが作成されます。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "32921057"
     |**コンテナーの URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS トークン:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
+     SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>[有効化] [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -90,7 +90,7 @@ ms.locfileid: "32921057"
 4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する:** SQL Server Management Studio を起動し、対象の SQL Server インスタンスに接続します。 要件に合わせて、データベース名、コンテナーの URL、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
     > [!IMPORTANT]  
-    >  インスタンス レベルで管理対象バックアップを有効にするには、 `NULL` パラメーターに `database_name` を指定します。  
+    >  インスタンス レベルで管理対象バックアップを有効にするには、`database_name` パラメーターに `NULL` を指定します。  
   
     ```sql  
     Use msdb;  
@@ -180,6 +180,7 @@ ms.locfileid: "32921057"
  このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更し、新しい値を指定することができます。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ 
+  [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

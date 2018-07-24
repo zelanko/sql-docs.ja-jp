@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 29c1cc08fa6e17eb59656cb658c6c1b78fe9c850
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfc77e602a6d5082a9ffc44ed98b1710bcd19e9
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026849"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024178"
 ---
 # <a name="creating-the-web-service-proxy"></a>Web サービス プロキシの作成
   クライアントと Web サービスは、SOAP メッセージを使用して通信できます。SOAP メッセージは、入力パラメーターと出力パラメーターを XML としてカプセル化します。 プロキシ クラスは、パラメーターを XML 要素にマップした後、ネットワークを介して SOAP メッセージを送信します。 この方法では、プロキシ クラスによって、SOAP レベルで Web サービスと通信する必要がなくなり、SOAP および Web サービスのプロキシをサポートするあらゆる開発環境で Web サービスを呼び出すことができます。  
@@ -120,8 +120,8 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
-rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
+rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  
   

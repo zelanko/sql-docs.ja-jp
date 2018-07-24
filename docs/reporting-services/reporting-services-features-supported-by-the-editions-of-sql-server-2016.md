@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4fe2db69e67e0d0e7630bd34c1d926be49e7bbe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028955"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983124"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 の各エディションがサポートする Reporting Services の機能
 
@@ -34,7 +34,7 @@ ms.locfileid: "33028955"
     
  > [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Evaluation Center から SQL Server 2016 をダウンロードする](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 仮想マシンのアイコン](../analysis-services/media/azure-virtual-machine-small.png) **[SQL Server 2016 がインストール済みの仮想マシンをすぐにご利用いただけます](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Azure 仮想マシンのアイコン](../analysis-services/media/azure-virtual-machine-small.png) **[SQL Server 2016 がインストール済みの仮想マシンをすぐにご利用いただけます](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 Evaluation Edition および Developer Edition でサポートされている機能については、SQL Server Enterprise Edition をご覧ください。
 
@@ -48,33 +48,33 @@ Evaluation Edition および Developer Edition でサポートされている機
   
 |機能名|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|モバイル レポートと KPI|はい||||||はい|  
+|モバイル レポートと KPI|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
 |サポートされているカタログ DB の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Standard 以上|Standard 以上|Web|Express|||Standard 以上|  
 |サポートされているデータ ソースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Web|Express|||すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|  
-|レポート サーバー|はい|はい|はい|はい|||はい|  
-|レポート デザイナー|はい|はい|はい|はい|||はい|  
-|レポート デザイナー Web ポータル|はい|はい|はい|はい|||はい|  
-|ロール ベース セキュリティ|はい|はい|はい|はい|||はい|  
-|Excel、PowerPoint、Word、PDF、およびイメージへのエクスポート|はい|はい|はい|はい|||はい|  
-|強化されたゲージとグラフ|はい|はい|はい|はい|||はい|  
-|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]ダッシュボードへのレポート アイテムのピン留め|はい|はい|はい|はい|||はい|  
-|カスタム認証|はい|はい|はい|はい|||はい|  
-|データ フィードとしてのレポート|はい|はい|はい|はい|||はい|  
-|モデルのサポート|はい|はい|はい||||はい|  
-|ロールベースのセキュリティのカスタム ロールの作成|はい|はい|||||はい|  
-|モデル アイテムのセキュリティ|はい|はい|||||はい|  
-|無限クリック スルー|はい|はい|||||はい|  
-|共有コンポーネント ライブラリ|はい|はい|||||はい|  
-|電子メールおよびファイル共有のサブスクリプションとスケジュール設定|はい|はい|||||はい|  
-|レポート履歴、実行スナップショット、およびキャッシュ|はい|はい|||||はい|  
-|SharePoint 統合|はい|はい|||||はい|  
-|リモートおよび非 SQL データ ソースのサポート<sup>1</sup>|はい|はい|||||はい|  
-|データ ソース、配信およびレンダリング、RDCE の拡張性|はい|はい|||||はい|  
-|カスタム ブランド化|はい||||||はい|  
-|データ ドリブン レポート サブスクリプション|はい||||||はい|  
-|スケール アウト配置 (Web ファーム)|はい||||||はい|  
-|警告<sup>2</sup>|はい||||||はい|  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|はい||||||はい|  
+|レポート サーバー|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|レポート デザイナー|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|レポート デザイナー Web ポータル|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|ロール ベース セキュリティ|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|Excel、PowerPoint、Word、PDF、およびイメージへのエクスポート|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|強化されたゲージとグラフ|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]ダッシュボードへのレポート アイテムのピン留め|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|カスタム認証|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|データ フィードとしてのレポート|[ユーザー アカウント制御]|はい|はい|はい|||[ユーザー アカウント制御]|  
+|モデルのサポート|[ユーザー アカウント制御]|はい|はい||||[ユーザー アカウント制御]|  
+|ロールベースのセキュリティのカスタム ロールの作成|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|モデル アイテムのセキュリティ|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|無限クリック スルー|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|共有コンポーネント ライブラリ|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|電子メールおよびファイル共有のサブスクリプションとスケジュール設定|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|レポート履歴、実行スナップショット、およびキャッシュ|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|SharePoint 統合|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|リモートおよび非 SQL データ ソースのサポート<sup>1</sup>|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|データ ソース、配信およびレンダリング、RDCE の拡張性|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|カスタム ブランド化|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
+|データ ドリブン レポート サブスクリプション|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
+|スケール アウト配置 (Web ファーム)|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
+|警告<sup>2</sup>|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
   
  <sup>1</sup> SQL Server 2016 Reporting Services (SSRS) でサポートされるデータ ソースの詳細については、「[Reporting Services &#40;SSRS&#41; でサポートされるデータ ソース](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」をご覧ください。  
   
@@ -96,9 +96,9 @@ Evaluation Edition および Developer Edition でサポートされている機
   
 |ツール名|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl、.rds)|はい|はい|||||はい|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|はい||||||はい|  
-|モバイル デバイス (iOS、Windows 10、Android) 用 Power BI アプリ (.rsmobile)|はい||||||はい|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl、.rds)|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
+|モバイル デバイス (iOS、Windows 10、Android) 用 Power BI アプリ (.rsmobile)|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
   
 > [!NOTE]  
 > 1.  上記の表は、これらのクライアント ツールを有効にするために必要な [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションを示しています。ただし、これらのツールは、どのエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]にホストされているデータにもアクセスできます。  

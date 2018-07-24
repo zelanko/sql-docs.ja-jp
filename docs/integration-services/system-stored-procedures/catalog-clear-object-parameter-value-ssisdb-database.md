@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524356687337eb962c262ea1e503fd2b40856623
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8288e93ff860e79116815f5b5d5417d05786d262
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410554"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082374"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @folder_name = ] *folder_name*  
+ [ \@folder_name = ] *folder_name*  
  プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
- [ @project_name = ] *project_name*  
+ [ \@project_name = ] *project_name*  
  プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
- [ @object_type = ] *object_type*  
+ [ \@object_type = ] *object_type*  
  オブジェクトの種類。 有効な値は、プロジェクトでは `20`、パッケージでは `30` です。 *object_type* は **smallInt** です。  
   
- [ @ object _name = ] *object _name*  
+ [ \@ object _name = ] *object _name*  
  パッケージの名前です。 *object _name* は **nvarchar(260)** です。  
   
- [ @parameter_ name = ] *parameter_name*  
+ [ \@parameter_ name = ] *parameter_name*  
  パラメーターの名前。 *parameter_ name* は **nvarchar(128)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  

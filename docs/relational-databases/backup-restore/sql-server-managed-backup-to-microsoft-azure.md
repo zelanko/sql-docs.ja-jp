@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure への SQL Server マネージ バックアップ | Microsoft Docs
+title: Microsoft Azure への SQL Server マネージド バックアップ | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -14,14 +14,14 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a2099ad58020f03c3dc6deceea0fea9ba5230a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac4d76ceb3bcbd3042e4fb4d7f1fa42ceda44860
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922527"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983384"
 ---
-# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップ
+# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は Microsoft Azure BLOB ストレージへの SQL Server バックアップを管理および自動化します。 SQL Server でデータベースのトランザクション ワークロードに基づいて、バックアップ スケジュールを決定するように選択できます。 また、詳細オプションを使用して、スケジュールを定義することもできます。 保有期間の設定で、Azure BLOB ストレージでのバックアップの保存期間を決定します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。  
@@ -34,19 +34,19 @@ ms.locfileid: "32922527"
 ## <a name="benefits"></a>利点  
  現在、複数データベースのバックアップを自動化するには、バックアップ方法の開発、カスタム コードの記述、およびバックアップのスケジュール設定が必要です。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用すれば、保有期間と保存場所を指定するだけで、バックアップ プランを作成できます。 詳細設定を使用できますが、必須ではありません。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] で行われます。  
   
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、データベース レベルまたは SQL Server インスタンス レベルで構成できます。 インスタンス レベルで構成する場合、新しいすべてのデータベースも自動的にバックアップされます。 データベース レベルでの設定を使用して、個々のケースに対するインスタンス レベルの既定値を上書きすることができます。  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、データベース レベルまたは SQL Server インスタンス レベルで構成できます。 インスタンス レベルで構成する場合、新しいすべてのデータベースも自動的にバックアップされます。 データベース レベルでの設定を使用して、個々のケースに対するインスタンス レベルの既定値をオーバーライドすることができます。  
   
  また、セキュリティ強化のためにバックアップを暗号化することができ、バックアップのタイミングを制御するためのカスタム スケジュールをセットアップすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Microsoft Azure BLOB ストレージを使用する利点の詳細については、「 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
 ##  <a name="Prereqs"></a> 前提条件  
  Microsoft Azure Storage は、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] がバックアップ ファイルを格納するために使用されます。 次の前提条件を満たす必要があります。  
   
-|前提条件|Description|  
+|前提条件|[説明]|  
 |------------------|-----------------|  
 |**Microsoft Azure アカウント**|[購入オプション](http://azure.microsoft.com/pricing/free-trial/) を調べる前に、 [無料評価版](http://azure.microsoft.com/pricing/purchase-options/)で Azure を使用することができます。|  
-|**Azure ストレージ アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/)」を参照してください。|  
-|**BLOB コンテナー**|BLOB はコンテナーで構成されます。 バックアップ ファイルに対してターゲット コンテナーを指定します。 [Azure 管理ポータル](https://manage.windowsazure.com/)でコンテナーを作成することができます。または、 **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) コマンドを使用します。|  
-|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
+|**Azure ストレージ アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。|  
+|**BLOB コンテナー**|BLOB はコンテナーで構成されます。 バックアップ ファイルに対してターゲット コンテナーを指定します。 [Azure 管理ポータル](https://manage.windowsazure.com/)でコンテナーを作成することができます。または、 **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/) コマンドを使用します。|  
+|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
 |**SQL Server エージェント**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を機能させるには、SQL Server エージェントを実行する必要があります。 スタートアップ オプションを自動に設定することを検討してください。|  
   
 ## <a name="components"></a>Components  
@@ -56,7 +56,7 @@ ms.locfileid: "32922527"
   
 |||  
 |-|-|  
-|システム オブジェクト|Description|  
+|システム オブジェクト|[説明]|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって作成されたすべてのバックアップに対するメタデータとバックアップ履歴を格納します。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にします。|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|暗号化など、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の詳細設定を構成します。|  
@@ -133,9 +133,12 @@ ms.locfileid: "32922527"
             [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。  
   
 ## <a name="see-also"></a>参照  
-- [Microsoft Azure への SQL Server マネージ バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
-- [Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
-- [Microsoft Azure への SQL Server マネージ バックアップを無効にする](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
+- 
+  [Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
+- 
+  [Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
+- 
+  [Microsoft Azure への SQL Server マネージド バックアップを無効にする](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [システム データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   

@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3651eca0e06a0c0b91ba8f12ca0e66a49c906037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae4de7aad9a404b900c47c4067a8266410e44379
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278378"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981394"
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャの作成](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャの作成](https://msdn.microsoft.com/library/ms345415(SQL.120).aspx)」を参照してください。
 
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE PROCEDURE ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する方法について説明します。  
   

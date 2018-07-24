@@ -17,16 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942007"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984684"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>レッスン 1: 保存されたアクセス ポリシーと Shared Access Signature を作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このレッスンでは [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) スクリプトを使用して、Azure BLOB コンテナーに格納済みアクセス ポリシーを使用した Shared Access Signature を作成します。  
+このレッスンでは [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) スクリプトを使用して、Azure BLOB コンテナーに格納済みアクセス ポリシーを使用した Shared Access Signature を作成します。  
   
 > [!NOTE]  
 > このスクリプトは、Azure PowerShell 5.0.10586 を使用して作成されています。  
@@ -139,7 +139,7 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
 [レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>参照  
-[Shared Access Signature, 第 1 部: SAS モデルについて](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Shared Access Signature, 第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [コンテナーの作成](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [コンテナー ACL の設定](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [コンテナー ACL の取得](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

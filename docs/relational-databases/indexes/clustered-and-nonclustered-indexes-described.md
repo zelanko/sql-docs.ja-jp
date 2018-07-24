@@ -18,17 +18,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8780ec7ab94ae66f4ba76133fcc884cad2456522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5469eabd93c8d3124b7e6f6de3484006df47b0d0
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939737"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983324"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>クラスター化インデックスと非クラスター化インデックスの概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[クラスター化インデックスと非クラスター化インデックスの概念](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[クラスター化インデックスと非クラスター化インデックスの概念](https://msdn.microsoft.com/library/ms190457(SQL.120).aspx)」を参照してください。
 
   インデックスとは、テーブルまたはビューに関連付けられたディスク上の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 これらのキーは 1 つの構造 (B-Tree) 内に格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はその構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。  
   

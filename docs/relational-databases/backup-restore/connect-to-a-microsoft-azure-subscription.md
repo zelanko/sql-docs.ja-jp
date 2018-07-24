@@ -14,21 +14,21 @@ caps.latest.revision: 4
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 78be8dddc2a8d2afc4728280a9f0e1cb618b8d3e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35a9b5426c071e089036dbe0aaaadc1783f11c24
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917467"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983734"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Microsoft Azure サブスクリプションへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 **Microsoft サブスクリプションへの接続** を使用して、既存の Azure BLOB コンテナーを SQL Server のインスタンスに登録します。  ダイアログ ボックスでは、Shared Access Signature と格納されたアクセス ポリシーが Azure BLOB コンテナーに作成された後に、SQL Server 資格情報が作成されます。  このダイアログ ボックスは、SQL Server Management Studio からバックアップ タスクまたは復元タスクを使用する際に表示され、その操作には URL デバイスが必要です。
 
 ## <a name="limitation"></a>制限事項
-**Microsoft サブスクリプションへの接続** は、Service Management (クラシック) デプロイメント モデルを使って作成された Azure Storage アカウントでのみ機能します。  Azure デプロイメント モデルに関する詳細については、「 [Azure Resource Manager とクラシック デプロイ](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)」を参照してください。
+**Microsoft サブスクリプションへの接続** は、Service Management (クラシック) デプロイメント モデルを使って作成された Azure Storage アカウントでのみ機能します。  Azure デプロイメント モデルに関する詳細については、「 [Azure Resource Manager とクラシック デプロイ](https://azure.microsoft.com/documentation/articles/resource-manager-deployment-model/)」を参照してください。
 
-## <a name="options"></a>および
+## <a name="options"></a>[変数]
 **サインイン**     
 適切な Azure アカウントでサインインします。
 

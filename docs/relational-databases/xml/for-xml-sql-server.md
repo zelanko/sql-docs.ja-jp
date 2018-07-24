@@ -24,16 +24,16 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b078037878664a2bbdbb305803f2fbfb440f902f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4e1d87003c6445ec8884663f45e91775093b497
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014279"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985444"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツの詳細については、「[FOR XML (SQL Server)](https://msdn.microsoft.com/en-US/library/ms178107(SQL.120).aspx)」をご覧ください。
+ > 以前のバージョンの SQL Server に関連するコンテンツの詳細については、「[FOR XML (SQL Server)](https://msdn.microsoft.com/library/ms178107(SQL.120).aspx)」をご覧ください。
 
   SELECT クエリは、結果を行セットとして返します。 必要に応じて、SQL クエリに FOR XML 句を指定することで、SQL クエリの結果を XML 形式で取得することができます。 FOR XML 句は、最上位レベルのクエリとサブクエリのいずれでも使用できます。 最上位レベルの FOR XML 句は、SELECT ステートメント内でのみ使用できます。 サブ クエリでは、FOR XML 句を INSERT、UPDATE、DELETE ステートメント内で使用できます。 また、代入ステートメントでも使用できます。  
   

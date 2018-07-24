@@ -47,17 +47,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d755a56c4ee302ed0f249bac303b082b9031a239
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2eea165fab198d9e30eb377e610b0778c410bb9f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985184"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **スクリプトの生成とパブリッシュ ウィザード** を使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]のインスタンス間でデータベースを転送するスクリプトを作成できます。 データベース用のスクリプトは、ローカル ネットワーク上のデータベース エンジンのインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]から生成できます。 生成したスクリプトは、データベース エンジンの別のインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行できます。 また、ウィザードを使用して、Database Publishing Services を使用して作成された Web サービスに、データベースの内容を直接パブリッシュすることもできます。 スクリプトの作成は、データベース全体または特定のオブジェクトに限定して行うことができます。  
 
-スクリプトの生成とパブリッシュ ウィザードの使用に関する詳細なチュートリアルについては、[チュートリアル: スクリプト生成ウィザード](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)に関するページを参照してください。
+スクリプトの生成とパブリッシュ ウィザードの使用に関する詳細なチュートリアルについては、[チュートリアル: スクリプト生成ウィザード](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)に関するページを参照してください。
 
 
   

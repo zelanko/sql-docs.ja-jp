@@ -27,16 +27,16 @@ caps.latest.revision: 58
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cb28981e42dd6bc12a4f9b47eb5378db6bacd88e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97a03d0cbb0108a4a7cdba27dd0394446a3bb556
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972227"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983064"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 構成マネージャー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server 構成マネージャー](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx)」をご覧ください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server 構成マネージャー](https://msdn.microsoft.com/library/ms174212(SQL.120).aspx)」をご覧ください。
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に関連付けられているサービスの管理、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が使用するネットワーク プロトコルの設定、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クライアント コンピューターからのネットワーク接続の設定を行うためのツールです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、[スタート] メニューから利用できる [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール スナップインであり、他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール画面に追加することも可能です。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール (**mmc.exe**) は、**SQLServerManager\<バージョン>.msc** ファイル ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)] の **SQLServerManager13.msc** など) を使用して構成マネージャーを開きます。 最新の 4 つのバージョンへのパスを次に示します (Windows が C ドライブにインストールされている場合)。  
   

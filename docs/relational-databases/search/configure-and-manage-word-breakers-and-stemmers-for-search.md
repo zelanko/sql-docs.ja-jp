@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ece22b891139b95d025ccf1f67c6dcac6633b8c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4360dec65a22ff313cf19340f4b9310aa6a6f7af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181488"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985394"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>検索用のワード ブレーカーとステミング機能の構成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 追加のオプションと詳細については、「[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)」をご覧ください。
 
 ##  <a name="tshoot"></a> 単語区切りのタイムアウト エラーのトラブルシューティング  
- 単語区切りのタイムアウト エラーは、さまざまな状況で発生する可能性があります。 エラーが発生する状況とその対処方法については、「[MSSQLSERVER_30053](https://msdn.microsoft.com/en-us/library/cc879279.aspx)」をご覧ください。
+ 単語区切りのタイムアウト エラーは、さまざまな状況で発生する可能性があります。 エラーが発生する状況とその対処方法については、「[MSSQLSERVER_30053](https://msdn.microsoft.com/library/cc879279.aspx)」をご覧ください。
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>MSSQLSERVER_30053 エラーに関する情報
   

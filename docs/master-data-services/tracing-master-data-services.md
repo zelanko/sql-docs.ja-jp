@@ -15,12 +15,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b4ac3f71827d48a42953f5d1fc65ed1ec05c5a31
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d7c90b45352ff3afe78891c6849b04d69ab58175
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334886"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984694"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
 
@@ -31,7 +31,7 @@ ms.locfileid: "35334886"
 ```  
 <sources>  
       <!-- Adjust the switch value to control the types of messages that should be logged.   
-           http://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels  
+           http://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
            Use the a switchValue of Verbose to generate a full log. Please be aware that   
            the trace file can get quite large very quickly -->  
       <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="Warning, ActivityTracing">  
@@ -54,7 +54,7 @@ ms.locfileid: "35334886"
   
 -   トレースは、Warning メッセージと ActivityTracing メッセージに対して有効になっています。  
   
-     詳細については、「 [SourceLevels 列挙体](https://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels)」を参照してください。  
+     詳細については、「 [SourceLevels 列挙体](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels)」を参照してください。  
   
 -   ログは、WebApplication フォルダーの下の Logs フォルダーに保存されます。 既定の場所は、C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs です。  
   

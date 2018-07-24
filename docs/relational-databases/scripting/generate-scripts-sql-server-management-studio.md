@@ -15,17 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d3d77c77be6e16e6d4deb5fd968774717230f88
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 17167b89180bd8af491d20c6ef3785dba238ad7f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983264"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>スクリプトの生成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成するための 2 つのメカニズムが用意されています。 複数のオブジェクト用のスクリプトは、**スクリプトの生成とパブリッシュ ウィザード**を使用して作成できます。 また、個々のオブジェクトまたは複数のオブジェクト用のスクリプトを、 **オブジェクト エクスプローラー** の **[スクリプト化]** メニューを使用して生成することもできます。  
 
-SQL Server Management Studio (SSMS) を使用してさまざまなオブジェクトのスクリプトを作成する方法の詳細なチュートリアルについては、「[チュートリアル: SQL Server Management Studio でオブジェクトのスクリプトを作成する](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms)」を参照してください。
+SQL Server Management Studio (SSMS) を使用してさまざまなオブジェクトのスクリプトを作成する方法の詳細なチュートリアルについては、「[チュートリアル: SQL Server Management Studio でオブジェクトのスクリプトを作成する](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)」を参照してください。
 
   
 ## <a name="before-you-begin"></a>はじめに  

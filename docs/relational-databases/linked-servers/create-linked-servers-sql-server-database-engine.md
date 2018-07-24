@@ -23,16 +23,16 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c7dfed0144de73aa7bf84db9999e4b6a5aec6c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bed6a93030c854c89ec32658ed086d6b0092a8c9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947747"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984484"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[リンク サーバーの作成 (SQL Server データベース エンジン)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[リンク サーバーの作成 (SQL Server データベース エンジン)](https://msdn.microsoft.com/library/ff772782(SQL.120).aspx)」を参照してください。
 
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
   

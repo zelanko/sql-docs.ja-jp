@@ -1,4 +1,4 @@
-﻿---
+---
 title: データベースの完全バックアップの作成 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
@@ -19,16 +19,16 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0cdafe9c854ccce0dd554d52afb850b39c97a7d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a9f8f115dd24f27f1c140677775ba9e29dd7468
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923277"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982894"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > SQL Server 2014 の場合は、「[データベースの完全バックアップの作成 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)」を参照してください。
+ > SQL Server 2014 の場合は、「[データベースの完全バックアップの作成 (SQL Server)](https://msdn.microsoft.com/library/ms187510(SQL.120).aspx)」を参照してください。
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。  
   
@@ -263,7 +263,7 @@ ms.locfileid: "32923277"
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
-    |オプション|Description|  
+    |オプション|[説明]|  
     |------------|-----------------|  
     |*database*|バックアップするデータベースです。|  
     |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|  
@@ -274,7 +274,7 @@ ms.locfileid: "32923277"
     -   基本的なバックアップ セット WITH オプション  
   
          { COMPRESSION | NO_COMPRESSION }  
-         [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降でのみ、このバックアップで [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md) を実行するかどうかを指定し、サーバー レベルの既定値を上書きできます。  
+         [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降でのみ、このバックアップで [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md) を実行するかどうかを指定し、サーバー レベルの既定値をオーバーライドできます。  
   
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 以降でのみ、使用する暗号化アルゴリズムと暗号化の保護に使用する証明書または非対称キーを指定します。  

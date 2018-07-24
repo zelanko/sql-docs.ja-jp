@@ -17,16 +17,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00ff0d0eb75ea6ad78135ac85d93494d77b8c581
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e29db743d4b35cf5cf7a52a0eac2676fa32db37d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32937127"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981836"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-> インポートおよびエクスポート ウィザードに関連するコンテンツについては、「[SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)」(SQL Server インポートおよびエクスポート ウィザード) を参照してください。
+> インポートおよびエクスポート ウィザードに関連するコンテンツについては、「[SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)」(SQL Server インポートおよびエクスポート ウィザード) を参照してください。
 
 フラット ファイルのインポート ウィザードを使用すると、フラット ファイル (.csv、.txt) のデータをコピー先に簡単にコピーできます。 この概要では、このウィザードを使用する理由、このウィザードを見つける方法、実行が簡単な例について説明します。
 
@@ -40,7 +40,7 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## <a name="prerequisites"></a>Prerequisites
-この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
+この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
  
 ## <a id="started"></a>はじめに
 フラット ファイルのインポート ウィザードにアクセスするには、次の手順を実行します。
@@ -98,7 +98,7 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 
 ウィザードの詳細については、以下を参照してください。
  
-- **その他のリソースのインポートに関する詳細**。 複数のフラット ファイルをインポートする場合は、「[SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)」(SQL Server インポートおよびエクスポート ウィザード) を参照してください。
-- **フラット ファイル ソースへの接続に関する詳細**。 フラット ファイル ソースへの接続の詳細については、「[Connect to a Flat File Data Source](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)」(フラット ファイル データ ソースへの接続) を参照してください。
+- **その他のリソースのインポートに関する詳細**。 複数のフラット ファイルをインポートする場合は、「[SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)」(SQL Server インポートおよびエクスポート ウィザード) を参照してください。
+- **フラット ファイル ソースへの接続に関する詳細**。 フラット ファイル ソースへの接続の詳細については、「[Connect to a Flat File Data Source](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)」(フラット ファイル データ ソースへの接続) を参照してください。
 - **PROSE の詳細**。 このウィザードに使用されるインテリジェント フレームワークの概要については、「[PROSE SDK](https://microsoft.github.io/prose/)」を参照してください。
 

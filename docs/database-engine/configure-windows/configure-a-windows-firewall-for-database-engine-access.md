@@ -18,16 +18,16 @@ caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aa4d659caca70d7ff01168d40148d35f23d25908
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fa88b008e2c2115318c2c31c62b9fab94571273
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869527"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983844"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](https://msdn.microsoft.com/en-US/library/ms175043(SQL.120).aspx)」をご覧ください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](https://msdn.microsoft.com/library/ms175043(SQL.120).aspx)」をご覧ください。
 
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、データベース エンジン アクセスのための Windows ファイアウォールを構成する方法について説明します。 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールを経由して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターで、アクセスを許可するようにファイアウォールを構成する必要があります。  

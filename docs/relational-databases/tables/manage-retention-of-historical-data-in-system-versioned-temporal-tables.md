@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239127"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985614"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 優れたデータ圧縮と効率的な保有期間のクリーンアップにより、クラスター化列ストア インデックスはワークロードが急速に大量の履歴データを生成するシナリオに最適な選択肢になります。 このようなパターンは、変更の追跡と監査、傾向分析、または IoT のデータ取り込みにテンポラル テーブルを使うトランザクション処理の多いワークロードで一般的なものです。
 
-詳しくは、「[リテンション ポリシーを使用したテンポラル テーブルでの履歴データの管理](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)」をご覧ください。
+詳しくは、「[リテンション ポリシーを使用したテンポラル テーブルでの履歴データの管理](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)」をご覧ください。
 
 ## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   

@@ -14,11 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 554b1c2240d06fc0c9180594bc00ecc6473c9bd5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: de587834e6321f9604a986d353a723159ade2855
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983754"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/19/2018
   
 - データベース オプション [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) を ON に設定する。  
   
-[自動コミット モード](http://msdn.microsoft.com/en-us/c8de5b60-d147-492d-b601-2eeae8511d00)で実行されるクエリでアクセスするメモリ最適化テーブルの場合、分離レベルのテーブル ヒントは必要ありません。  
+[自動コミット モード](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)で実行されるクエリでアクセスするメモリ最適化テーブルの場合、分離レベルのテーブル ヒントは必要ありません。  
   
 ## <a name="see-also"></a>参照
 

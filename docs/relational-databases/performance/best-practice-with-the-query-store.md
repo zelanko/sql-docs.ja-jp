@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6b667bf8be87561461c1ceec2543dcce051b93e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332493"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981424"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "34332493"
   
 ##  <a name="SSMS"></a> 最新の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用する  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、クエリ ストアを構成するためのユーザー インターフェイスと、ワークロードについて収集されたデータを使用するためのユーザー インターフェイスが用意されています。  
-最新バージョンの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は[ここ](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)からダウンロードしてください。  
+最新バージョンの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は[ここ](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)からダウンロードしてください。  
   
- [クエリ ストアに関する @Azure ブログ](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)の記事で、トラブルシューティングのシナリオでクエリ ストアを使用する方法について簡単に説明しています。  
+ [クエリ ストアに関する @Azure ブログ](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)の記事で、トラブルシューティングのシナリオでクエリ ストアを使用する方法について簡単に説明しています。  
   
 ##  <a name="Insight"></a> UseAzure SQL Database で Query Performance Insight を使用する  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でクエリ ストアを実行する場合、 **Query Performance Insight** を使用して、時間の経過に応じた DTU 消費量を分析できます。  

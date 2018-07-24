@@ -20,16 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870157"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984504"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツの詳細については、「[SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツの詳細については、「[SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx)」を参照してください。
 
 Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) の機能です。 SQL Server 2016 Express with Advanced Services で利用できます。  
 
@@ -40,16 +40,18 @@ Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした 
   
 -   SQL Server 2016 Express は、「**[SQL Server ダウンロード](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**」からダウンロードしてインストールできます。 LocalDB は、インストール中に選択する機能で、メディアをダウンロードするときに使用できます。 メディアをダウンロードする場合は、 **[Express Advanced]** または **[LocalDB]** パッケージを選択します。 
   
--   Azure アカウントをすでにお持ちですか?  すでにお持ちの場合は、 **[こちら](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
+-   Azure アカウントをすでにお持ちですか?  すでにお持ちの場合は、 **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 ## <a name="install-localdb"></a>LocalDB をインストールする  
  インストール ウィザードまたは SqlLocalDB.msi プログラムを使用して、 **LocalDB** をインストールします。 **LocalDB** は [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]をインストールするときのオプションです。 
  
 インストール時に **[機能の選択/共有機能]** ページで **LocalDB** を選択します。 主要な **のバージョンごとに** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のバイナリ ファイルのインストールが 1 つだけ表示されます。 複数の [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセスを開始することができ、すべてのプロセスが使用するバイナリは同じです。 **LocalDB** として開始された [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスには、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] と同じ制限があります。  
 
- [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** のインスタンスは、 **SqlLocalDB.exe** ユーティリティを使用して管理されます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] を使用する必要があります。 
+ 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]
+  **LocalDB** のインスタンスは、**SqlLocalDB.exe** ユーティリティを使用して管理されます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] を使用する必要があります。 
   
-## <a name="description"></a>Description  
+## <a name="description"></a>[説明]  
  **LocalDB** セットアップ プログラムは、SqlLocalDB.msi プログラムを使用してコンピューターに必要なファイルをインストールします。 **LocalDB** はインストールされると [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスとなり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを作成して開くことができます。 データベースのシステム データベース ファイルは、通常は非表示になっているユーザーのローカル AppData パスに格納されます。 たとえば、**C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** などです。 ユーザー データベース ファイルは、ユーザーが指定する場所、通常は **C:\Users\\<user\>\Documents\\** フォルダーに格納されます。  
   
  **LocalDB** をアプリケーションに含める方法については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のマニュアル「[ローカル データの概要](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)」、「[チュートリアル: SQL Server LocalDB データベースの作成](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)」、「[チュートリアル: SQL Server LocalDB データベースのデータへの接続 (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)」を参照してください。  
@@ -74,7 +76,7 @@ Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした 
   
 -   **LocalDB** の自動インスタンスはパブリックです。 ユーザーのために自動的に作成および管理され、任意のアプリケーションから使用できます。 どのバージョンの **LocalDB** に対しても、ユーザーのコンピューターにインストールされている **LocalDB** の自動インスタンスが 1 つ存在します。 **LocalDB** の自動インスタンスを使用すると、シームレスなインスタンス管理を実行できます。 インスタンスを作成する必要はありません。それだけで動作します。 これにより、アプリケーションのインストールと別のコンピューターへの移行が簡単になります。 対象コンピューターに指定バージョンの **LocalDB** がインストールされている場合、その対象コンピューターでも同じバージョンの **LocalDB** の自動インスタンスを使用できます。 **LocalDB** の自動インスタンスのインスタンス名には特殊なパターンがあり、これは予約済み名前空間に属します。 これにより、 **LocalDB**の名前付きインスタンスとの名前の競合を防ぎます。 自動インスタンスの名前は **MSSQLLocalDB**です。  
   
--   **LocalDB** の名前付きインスタンスはプライベートです。 これらは、そのインスタンスの作成と管理を行う単一のアプリケーションによって所有されます。 名前付きインスタンスは他のインスタンスからの分離を可能にし、他のデータベース ユーザーとのリソースの競合を減らすことによってパフォーマンスを向上させることができます。 名前付きインスタンスは、ユーザーが **LocalDB** 管理 API を通じて明示的に作成するか、マネージ アプリケーションの app.config ファイルを通じて暗黙的に作成する必要があります (ただし、マネージ アプリケーションでは必要に応じて API も使用できます)。 **LocalDB** の各名前付きインスタンスには、 **LocalDB** バイナリの特定のセットを指す特定の **LocalDB** バージョンが関連付けられています。 **LocalDB** のインスタンス名は **sysname** データ型で、最大文字数は 128 文字です (これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の正規の名前付きインスタンスとは異なり、16 の ASCII 文字で構成される正規の NetBIOS 名に制限されることはありません)。**LocalDB** のインスタンス名には、ファイル名内で有効な任意の Unicode 文字を使用できます。  自動インスタンス名を使用する名前付きインスタンスは、自動インスタンスになります。  
+-   **LocalDB** の名前付きインスタンスはプライベートです。 これらは、そのインスタンスの作成と管理を行う単一のアプリケーションによって所有されます。 名前付きインスタンスは他のインスタンスからの分離を可能にし、他のデータベース ユーザーとのリソースの競合を減らすことによってパフォーマンスを向上させることができます。 名前付きインスタンスは、ユーザーが **LocalDB** 管理 API を通じて明示的に作成するか、マネージド アプリケーションの app.config ファイルを通じて暗黙的に作成する必要があります (ただし、マネージド アプリケーションでは必要に応じて API も使用できます)。 **LocalDB** の各名前付きインスタンスには、 **LocalDB** バイナリの特定のセットを指す特定の **LocalDB** バージョンが関連付けられています。 **LocalDB** のインスタンス名は **sysname** データ型で、最大文字数は 128 文字です (これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の正規の名前付きインスタンスとは異なり、16 の ASCII 文字で構成される正規の NetBIOS 名に制限されることはありません)。**LocalDB** のインスタンス名には、ファイル名内で有効な任意の Unicode 文字を使用できます。  自動インスタンス名を使用する名前付きインスタンスは、自動インスタンスになります。  
   
  コンピューターの異なるユーザーが同じ名前のインスタンスを持つことができます。 各インスタンスは、別のユーザーとして実行している別のプロセスです。  
   
