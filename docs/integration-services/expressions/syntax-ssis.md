@@ -17,12 +17,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50aade82abccaa58b62d28b086392a276dee3f2d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a7b7e364b9384813e63036b184f80f4e807f7218
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335896"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084834"
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文は、C 言語および C# 言語が使用する構文と同様です。 式には、識別子 (列および変数)、リテラル、演算子、関数などの要素が含まれます。 このトピックでは、式エバリュエーターの構文がさまざまな式要素を適用する際の、一意の必要条件の概要について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "35335896"
 ## <a name="identifiers"></a>識別子  
  式には、列および変数の識別子を含めることができます。 列はデータ ソースで生成されるか、またはデータ フローの変換によって作成できます。 式では、系列 ID を使用して列を参照できます。 系列 ID は、パッケージの要素を一意に識別する数値です。 系列 ID を式の内部で参照する場合、系列 ID にポンド (#) プレフィックスを含める必要があります。 たとえば、系列 ID 138 を参照するには、#138 を使用します。  
   
- 式には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] で用意されているシステム変数と、カスタム変数を含めることができます。 変数を式の内部で参照する場合、変数に @ プレフィックスを含める必要があります。 たとえば、`Counter` 変数は、@Counter を使用して参照します。 @ 文字は変数名の一部ではなく、式エバリュエーターに対して識別子が変数であることを示すだけのものです。 詳しくは、「[識別子 &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)」をご覧ください。  
+ 式には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] で用意されているシステム変数と、カスタム変数を含めることができます。 変数を式の内部で参照する場合、変数に \@ プレフィックスを含める必要があります。 たとえば、`Counter` 変数を参照する場合、\@Counter を使用します。 \@ 文字は変数名の一部ではなく、式の評価において識別子が変数であることを示すだけのものです。 詳しくは、「[識別子 &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)」をご覧ください。  
   
 ## <a name="literals"></a>リテラル  
  式には、数値、文字列、およびブール値のリテラルを含めることができます。 文字列リテラルを式で使用するには、引用符で囲む必要があります。 数値リテラルおよびブール値のリテラルには、引用符は付けません。 式言語には、通常エスケープされる文字のエスケープ シーケンスが含まれます。 詳細については、「[リテラル (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)」を参照してください。  

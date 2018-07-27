@@ -2,7 +2,7 @@
 title: tempdb データベース | Microsoft Docs
 description: このトピックでは、SQL Server と Azure SQL Database で tempdb データベースを構成し、使用する方法について説明します。
 ms.custom: P360
-ms.date: 12/19/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,15 +23,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98e93ce7e85d6c027e2b9b347ff54425440d2674
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d7a260337f00e6e37015855f9141fbd081e34e91
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582324"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108374"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **tempdb** システム データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたは SQL Database に接続しているすべてのユーザーが使用できるグローバル リソースです。 Tempdb で保持するもの:  
   
 - グローバルまたはローカルな一時テーブルおよびインデックス、一時ストアド プロシージャ、テーブル変数、テーブル値関数で返されるテーブル、カーソルなど、明示的に作成された一時的な**ユーザー オブジェクト**。  
@@ -44,7 +44,7 @@ ms.locfileid: "34582324"
   > 各内部オブジェクトでは、少なくとも 9 つのページが使用されます (IAM ページと 8 ページ分のエクステント)。 ページとエクステントの詳細については、「[ページとエクステント](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)」を参照してください。
 
   > [!IMPORTANT]
-  > Azure SQL Database は、tempdb に保存され、データベース レベルまで調べられるグローバル一時テーブルとグローバル一時ストアド プロシージャをサポートしています。 グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ Azure SQL データベース内ですべてのユーザーのセッションで共有されます。 他の Azure SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。
+  > Azure SQL Database 論理サーバーは、tempdb に保存され、データベース レベルまで調べられるグローバル一時テーブルとグローバル一時ストアド プロシージャをサポートしています。 グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ Azure SQL データベース内ですべてのユーザーのセッションで共有されます。 他の Azure SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) では、SQL Server と同じ一時オブジェクトがサポートされます。 Azure SQL Database 論理サーバーでは、master データベースと tempdb データベースのみが適用されます。 論理サーバーと論理 master データベースの概念については、「[Azure SQL 論理サーバーとは何か](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)」を参照してください。 Azure SQL Database 論理サーバーのコンテキストでの tempdb の詳細については、[Azure SQL Database 論理サーバーでの tempdb データベース](#tempdb-database-in-sql-database)に関するページをご覧ください。 Azure SQL Database Managed Instance の場合、すべてのシステム データベースが適用されます。 
 
 - **バージョン ストア**。これは行のバージョン管理を使用する機能のサポートに必要なデータ行を保持するデータ ページのコレクションです。 共通バージョン ストアとオンライン インデックス構築用のバージョン ストアの 2 つのバージョン ストアがあります。 バージョン ストアに保持される内容:
   - 行のバージョン管理を伴う READ COMMITTED 分離トランザクションまたはスナップショット分離トランザクションを使用するデータベースで、データ変更トランザクションによって生成される行バージョン。  
@@ -74,34 +74,34 @@ ms.locfileid: "34582324"
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
-|ANSI_NULL_DEFAULT|OFF|はい|  
-|ANSI_NULLS|OFF|はい|  
-|ANSI_PADDING|OFF|はい|  
-|ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
+|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
+|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
+|ARITHABORT|OFF|[ユーザー アカウント制御]|  
 |AUTO_CLOSE|OFF|いいえ|  
-|AUTO_CREATE_STATISTICS|ON|はい|  
+|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
 |AUTO_SHRINK|OFF|いいえ|  
-|AUTO_UPDATE_STATISTICS|ON|はい|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
+|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
-|CURSOR_DEFAULT|GLOBAL|はい|  
+|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
+|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|OFF|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|はい|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|はい|  
-|PARAMETERIZATION|SIMPLE|はい|  
-|QUOTED_IDENTIFIER|OFF|はい|  
+|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|[ユーザー アカウント制御]|  
+|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
+|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
 |RECOVERY|SIMPLE|いいえ|  
-|RECURSIVE_TRIGGERS|OFF|はい|  
-|Service Broker のオプション|ENABLE_BROKER|はい|  
+|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
+|Service Broker のオプション|ENABLE_BROKER|[ユーザー アカウント制御]|  
 |TRUSTWORTHY|OFF|いいえ|  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
@@ -113,11 +113,11 @@ ms.locfileid: "34582324"
 
 |SLO|最大 Tempdb データ ファイル サイズ (MB)|tempdb データ ファイルの数|最大 tempdb データ サイズ (MB)|
 |---|---:|---:|---:|
-|[標準]|14,225|@shouldalert|14,225|
-|S0|14,225|@shouldalert|14,225| 
-|S1|14,225|@shouldalert|14,225| 
-|S2|14,225| @shouldalert|14,225| 
-|S3|32,768|@shouldalert|32,768| 
+|[標準]|14,225|1|14,225|
+|S0|14,225|1|14,225| 
+|S1|14,225|1|14,225| 
+|S2|14,225| 1|14,225| 
+|S3|32,768|1|32,768| 
 |S4|32,768|2|65,536| 
 |S6|32,768|3|98,304| 
 |S7|32,768|6|196,608| 

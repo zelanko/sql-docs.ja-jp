@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 caps.latest.revision: 30
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bd36744f5604729d782822296dd6568b90a847
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 5ce04c1ef924224036f28b8b5dd1b4eb15c9a4a4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942628"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107964"
 ---
 # <a name="strong-passwords"></a>強力なパスワード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "36942628"
   
 -   スペースが含まれているか、スペースが先頭にある  
   
--   $ または @ で始まる  
+-   $ または \@ で始まる  
   
- OLE DB または ODBC の接続文字列で使用する場合、ログインまたはパスワードに次の文字は含めないでください: [] {}() , ; ? * ! @」をご覧ください。 これらの文字は、接続の初期化や、接続の値を区切る場合に使用されています。  
+ OLE DB または ODBC の接続文字列で使用する場合、ログインまたはパスワードに次の文字は含めないでください: [] {}() , ; ? * ! \@」をご覧ください。 これらの文字は、接続の初期化や、接続の値を区切る場合に使用されています。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [パスワード ポリシー](../../relational-databases/security/password-policy.md)  

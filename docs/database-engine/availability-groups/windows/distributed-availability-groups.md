@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c035428e526b64dd4b0245719b139f6567108b6
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270953"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083733"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>ディザスター リカバリーとマルチサイトのシナリオ
 
-従来の可用性グループではすべてのサーバーが同じ WSFC クラスターの一部である必要があり、複数のデータ センターを使うのが困難な場合があります。 次の図は、従来のマルチサイト可用性グループのアーキテクチャとデータ フローを示したものです。 1 つのプライマリ レプリカが、すべてのセカンダリ レプリカにトランザクションを送信しています。 この構成は、いくつかの点で分散型可用性グループより柔軟性が劣ります。 たとえば、Active Directory (該当する場合) や、WSFC クラスター内のクォーラムに対するミラーリング監視サーバーといったものを、実装する必要があります。 また、ノードの投票の変更など、WSFC クラスターの他の側面の考慮も必要になることがあります。
+従来の可用性グループではすべてのサーバーが同じ WSFC クラスターの一部である必要があり、複数のデータ センターを使うのが困難な場合があります。 次の図は、従来のマルチサイト可用性グループのアーキテクチャとデータ フローを示したものです。 1 つのプライマリ レプリカが、すべてのセカンダリ レプリカにトランザクションを送信しています。 この構成は、いくつかの点で分散型可用性グループよりも劣ります。 たとえば、Active Directory (該当する場合) や、WSFC クラスター内のクォーラムに対するミラーリング監視サーバーといったものを、実装する必要があります。 また、ノードの投票の変更など、WSFC クラスターの他の側面の考慮も必要になることがあります。
 
 ![従来のマルチサイト可用性グループ][4]
 
-分散型可用性グループでは、複数のデータ センターにまたがる可用性グループに対して、より柔軟な配置シナリオが提供されます。 [ログ配布]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)のような機能が過去に使われていた場合でも、分散型可用性グループを使うことができます。 ただし、従来の可用性グループとは異なり、分散型可用性グループではトランザクションの適用を遅延することはできません。 つまり、データが正しく更新または削除されないヒューマン エラーが発生した場合、可用性グループまたは分散型可用性グループでは役に立ちません。
+分散型可用性グループでは、複数のデータ センターにまたがる可用性グループに対して、より柔軟な配置シナリオが提供されます。 [ログ配布]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)のような機能が、ディザスター リカバリーなどのシナリオで過去に使われていた場合でも、分散型可用性グループを使うことができます。 ただし、ログ配布とは異なり、分散型可用性グループではトランザクションの適用を遅延することはできません。 つまり、データが正しく更新または削除されないヒューマン エラーが発生した場合、可用性グループまたは分散型可用性グループでは役に立ちません。
 
 分散型可用性グループは疎結合されていますが、この場合それは、分散型可用性グループは単一の WSFC クラスターを必要とせず、SQL Server によって保持されることを意味します。 WSFC クラスターは個別に保持され、同期は主に 2 つの可用性グループの間で非同期に行われるため、別のサイトにディザスター リカバリーを構成するのが簡単になります。 各可用性グループのプライマリ レプリカは、独自のセカンダリ レプリカを同期します。
 
@@ -222,9 +222,9 @@ Cluster Group                   JC                    Online
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag, 
-    sys.availability_replicas ar       
-WHERE   ag.group_id = ar.group_id
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar       
+    ON  ag.group_id = ar.group_id
 ```
 
 次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、DENNIS と JY という 2 つのレプリカで構成されています。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
@@ -235,12 +235,12 @@ SQL Server Management Studio で、ダッシュボードや他の領域に表示
 
 ```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag, 
-sys.availability_replicas ar,       
-sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id
-and     ag.group_id = ar.group_id 
-and ag.is_distributed = 1
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar
+    ON ag.group_id = ar.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars       
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
        
        
@@ -251,16 +251,16 @@ and ag.is_distributed = 1
 
 ```
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs,
-    sys.availability_groups ag,
-    sys.availability_replicas ar,
-    sys.dm_hadr_availability_replica_states ars,
-    sys.dm_hadr_database_replica_states drs
-WHERE   drs.group_id = ag.group_id
-and ar.replica_id = ars.replica_id
-and ars.replica_id = drs.replica_id
-and dbs.database_id = drs.database_id
-and ag.is_distributed = 1
+FROM    sys.databases dbs
+  INNER JOIN sys.dm_hadr_database_replica_states drs
+    ON dbs.database_id = drs.database_id
+  INNER JOIN sys.availability_groups ag
+    ON drs.group_id = ag.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id = drs.replica_id
+  INNER JOIN sys.availability_replicas ar
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
 
 ![分散型可用性グループのパフォーマンス情報][13]

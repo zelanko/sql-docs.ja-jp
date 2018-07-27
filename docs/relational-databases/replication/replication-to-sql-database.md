@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357824"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085134"
 ---
 # <a name="replication-to-sql-database"></a>SQL Database へのレプリケーション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "37357824"
  -  オンプレミスで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、またはクラウド上の Azure の仮想マシンで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が可能です。 詳細については、「 [Azure Virtual Machines 上の SQL Server の概要](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)」を参照してください。  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーのプッシュ サブスクライバーである必要があります。  
  -  ディストリビューション データベースとレプリケーション エージェントは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]には配置できません。  
- - スナップショットおよび一方向トランザクション レプリケーションがサポートされています。 ピアツーピア トランザクション レプリケーションおよびマージ レプリケーションはサポートされていません。  
+ - スナップショットおよび一方向トランザクション レプリケーションがサポートされています。 ピアツーピア トランザクション レプリケーションおよびマージ レプリケーションはサポートされていません。
+ - SQL Database Managed Instance (プレビュー) では、パブリッシャー データベースとディストリビューター データベースがサポートされます。 詳細については、「[Replication with SQL Database Managed Instance](replication-with-sql-database-managed-instance.md)」(SQL Database Managed Instance でのレプリケーション) をご覧ください。
  
  ## <a name="versions"></a>バージョン  
  - パブリッシャーとディストリビューターは、次のいずれかのバージョンである必要があります。  

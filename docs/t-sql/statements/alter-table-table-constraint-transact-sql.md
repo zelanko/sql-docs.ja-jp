@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dff7eb34493f69ac3e62e889f8641c9a7ed368a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786143"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106728"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,8 @@ ms.locfileid: "37786143"
  テーブル レベルの DEFAULT 定義に関連付けられた列を指定します。  
   
  WITH VALUES  
- DEFAULT *constant_expression* で指定される値が、既存の行に追加される新規列に格納されることを指定します。 WITH VALUES は、ADD column 句に DEFAULT を指定した場合のみ指定できます。 追加する列に NULL 値が許容され、WITH VALUES を指定した場合、新しい列には既定値が格納され、既存の行に追加されます。 列では NULL 値が許容されるが、WITH VALUES を指定しなかった場合、新しい列には NULL 値が格納され、既存の行に追加されます。 新しい列で NULL 値が許容されない場合は、WITH VALUES の指定に関係なく、新しい行に既定値が格納されます。  
+ DEFAULT 制約と共に列を追加する際に列が NULL を許容している場合、WITH VALUES を使用すると、既存の行の新しい列の値は DEFAULT の *constant_expression* で指定される値に設定されます。 追加する列が NULL を許容していない場合、既存の行のその列の値は常に DEFAULT の *constant expression* で指定される値に設定されます。 SQL Server 2012 以降、これはメタ データの操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation) である場合があります。
+関連する列が追加されない場合にこれを使用しても、影響はありません。 
   
  CHECK  
  1 つ以上の列に入力できる値を制限することによってドメインの整合性を設定する制約です。  

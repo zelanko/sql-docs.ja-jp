@@ -23,12 +23,12 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3831509441516a08cfa8d651ecd8ffa93c16107f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550763"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083544"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
   共有データ ソースは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーで実行される複数のレポート、モデル、およびデータ ドリブン サブスクリプションから参照できる一連のデータ ソース接続プロパティの集まりです。  共有データ ソースを使用することで、時間の経過に伴って変更されることの多いデータ ソースのプロパティを容易に管理できます。 ユーザーのアカウントまたはパスワードが変更された場合や、データベースを別のサーバーに移動した場合は、接続情報を 1 か所で更新できます。  
@@ -79,7 +79,7 @@ ms.locfileid: "34550763"
   
 1.  Web ポータルで、**[新規]** > **[データ ソース]** の順に選択します。 
   
-4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : @ & = + , $ / * < > | " / を含めることはできません。  
+4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : \@ & = + , $ / * < > | " /.  
   
 5.  必要に応じて説明を入力し、接続に関する情報をユーザーに提供します。  
   

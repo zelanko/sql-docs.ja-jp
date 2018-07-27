@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e32dac3a1145695c33fc06c818f8c59361e025dd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415441"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083834"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37415441"
 |プロパティ|ReplTest1|  
 |--------------|-----------|  
 |構文|**date**|  
-|使用方法|DECLARE @MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|使用方法|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|-YYYY-MM-DD<br /><br /> 詳細については、以下の「下位クライアントの下位互換性」セクションを参照してください。|  
 |範囲|0001-01-01 ～ 9999-12-31 (Informatica の場合は 1582-10-15 ～ 9999-12-31)<br /><br /> 1 年 1 月 1 日 CE ～ 9999 年 12 月 31 日 CE (Informatica の場合は 1582 年 10 月 15 日 CE ～9999 年 12 月 31 日 CE)|  
 |要素範囲|YYYY は、0001 ～ 9999 の年を表す 4 桁の数字です。 Informatica では、YYYY は 1582 ～ 9999 の範囲に制限されます。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。|  

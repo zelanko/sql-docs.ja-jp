@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45246cc4a9a09c45ffb4762d6eda2464aeb82f3f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6218f0332b83b5952a2c09836b10b4665db9b409
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421451"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085594"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37421451"
 |プロパティ|ReplTest1|  
 |---|---|
 |構文|**datetimeoffset** [ (*fractional seconds precision*) ]|  
-|使用方法|DECLARE @MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|使用方法|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |既定の文字列リテラル形式 (下位クライアント用)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 詳細については、以下の「下位クライアントの下位互換性」セクションを参照してください。|  
 |日付範囲|0001-01-01 ～ 31.12.99<br /><br /> 1 月 1 日 1 CE ～12 月 31 日 9999 CE|  
 |時刻範囲|00:00:00 ～ 23:59:59.9999999 (Informatica では秒の小数部はサポートされていません)|  
@@ -56,8 +56,8 @@ ms.locfileid: "37421451"
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00 00:00|  
 |カレンダー|グレゴリオ暦|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
-|タイム ゾーン オフセットへの対応と保持|はい|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|[ユーザー アカウント制御]|  
+|タイム ゾーン オフセットへの対応と保持|[ユーザー アカウント制御]|  
 |夏時間への対応|いいえ|  
   
 |指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト単位)|秒の小数部の有効桁数|  

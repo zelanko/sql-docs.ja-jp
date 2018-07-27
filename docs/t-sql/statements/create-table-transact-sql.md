@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786013"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216933"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,8 +206,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ NOT FOR REPLICATION ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
  
-
-  
 < table_index > ::=   
 {  
     {  
@@ -225,7 +223,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]  
   
 }   
-
 
 <table_option> ::=  
 {  
@@ -272,8 +269,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
-  
-      --Memory optimized CREATE TABLE Syntax  
+--Memory optimized CREATE TABLE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -382,7 +378,7 @@ column_name <data_type>
 -   計算列を INSERT ステートメントまたは UPDATE ステートメントの対象にすることはできません。  
   
 > [!NOTE]  
->  テーブル内の個々の行によって、計算列に関係する列の値が異なることがあるため、計算列の値はすべての行について同じにならないことがあります。  
+> テーブル内の個々の行によって、計算列に関係する列の値が異なることがあるため、計算列の値はすべての行について同じにならないことがあります。  
   
  計算列で NULL 値を許容するかどうかは、使用されている式に基づいて[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって自動的に決定されます。 NULL 値を許容しない列のみの場合でも、ほとんどの式の結果は NULL 値を許容すると見なされます。これは、アンダーフローやオーバーフローによって結果が NULL 値になる場合があるためです。 テーブルの任意の計算列で NULL 値が許容されるかどうかを調べるには、COLUMNPROPERTY 関数で **AllowsNull** プロパティを使用します。 NULL 値が許容される式を、NULL 値を許容しない式に変換するには、ISNULL に *check_expression* 定数を指定します。この定数は、NULL 値の結果の代わりに使用される NULL 以外の値です。 計算列では、共通言語ランタイム (CLR) のユーザー定義型の式に基づいて、その型に対する REFERENCES 権限が必要です。  
   
@@ -414,7 +410,9 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
 > [!NOTE]  
 >  ここでは、default はキーワードではありません。 default は、既定のファイル グループの識別子のため、TEXTIMAGE_ON **"** default **"** または TEXTIMAGE_ON **[** default **]** のように区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
- FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
+ 
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
  
  FILESTREAM データのファイル グループを指定します。  
   
@@ -495,6 +493,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  CREATE TABLE ステートメントでは、IDENTITY プロパティ、FOREIGN KEY 制約、CHECK 制約で NOT FOR REPLICATION 句を指定できます。 IDENTITY プロパティでこの句を指定すると、レプリケーション エージェントが挿入を行うときに ID 列の値が増加されません。 制約でこの句を指定すると、レプリケーション エージェントが挿入、更新、削除操作を行う際に制約が適用されません。  
   
  AS 行を常に生成された {開始 |終了 [非表示]} [NOT NULL]  
+ 
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定した datetime2 列が、システムによって、レコードの有効期限の開始時刻またはレコードの有効期限の終了時刻のいずれかを記録する使用されることを指定します。 列を定義する必要があります、NOT NULL とします。 NULL として指定できるようにしようとすると、システムには、エラーがスローされます。 期間の列に対して NOT NULL を明示的に指定しない場合、システムは、列を既定で NOT NULL として定義します。 この引数を使用して、期間 FOR SYSTEM_TIME とで SYSTEM_VERSIONING と組み合わせて = テーブルにシステムのバージョン管理を有効にする引数にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
@@ -509,14 +508,12 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
  INDEX *index_name* CLUSTERED COLUMNSTORE  
    
-  
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
  これを指定すると、テーブル全体をクラスター化列ストア インデックスを持つ列の形式で格納します。 これで、テーブル内のすべての列が常に含まれます。 アルファベットまたは数字の順序では、データが並べ替えられていないため、行の列ストア圧縮の利点は整理されています。  
   
  INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )  
    
-  
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
  これを指定すると、テーブルに非クラスター化列ストア インデックスを作成します。 行ストア ヒープまたはクラスター化インデックスは、基になるテーブルを指定でくか、またはクラスター化列ストア インデックスがあることができます。 すべての場合、テーブルに非クラスター化列ストア インデックスを作成すると、インデックス内の列のデータの 2 番目のコピーが格納されます。  
@@ -527,12 +524,12 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  ファイル グループが定義されているパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) または [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) を実行して、パーティション構成がデータベース内に存在するようにする必要があります。 *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、および有効桁数に一致する必要があります。 *column_name* インデックス定義内の列に限定されません。 UNIQUE インデックスをパーティション分割する場合、*column_name* は一意のキーとして使用されている列から選択する必要がありますが、それ以外の場合はベース テーブルの任意の列を指定できます。 この制限により、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、単一のパーティション内だけでキー値の一意性を確認できます。  
   
 > [!NOTE]  
->  一意でないクラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では既定により、まだ指定されていない場合、パーティション分割列がクラスター化インデックス キーのリストに追加されます。 一意でない非クラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、まだ指定されていない場合、パーティション分割列がインデックスの非キー列 (付加列) として追加されます。  
+> 一意でないクラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では既定により、まだ指定されていない場合、パーティション分割列がクラスター化インデックス キーのリストに追加されます。 一意でない非クラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、まだ指定されていない場合、パーティション分割列がインデックスの非キー列 (付加列) として追加されます。  
   
  *partition_scheme_name* または *filegroup* が指定されないまま、テーブルがパーティション分割されると、インデックスは基になるテーブルと同じパーティション分割列を使用して、同じパーティション構造に配置されます。  
   
 > [!NOTE]  
->  XML インデックスにはパーティション構成を指定できません。 ベース テーブルがパーティション分割される場合、XML インデックスではテーブルと同じパーティション構造が使用されます。  
+> XML インデックスにはパーティション構成を指定できません。 ベース テーブルがパーティション分割される場合、XML インデックスではテーブルと同じパーティション構造が使用されます。  
   
  パーティション分割の詳細については、「[パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
@@ -581,16 +578,18 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  列は、該当するデータ型である必要があります。  
   
  ALGORITHM  
- 必要があります **'AEAD_AES_256_CBC_HMAC_SHA_256'** です。  
+   
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+ 
+ **'AEAD_AES_256_CBC_HMAC_SHA_256'** を指定する必要があります。  
   
  機能の制約などについて詳しくは、「[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」をご覧ください。  
-  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
-  
+ 
  SPARSE  
  列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として指定することはできません。 スパース列のその他の制限事項と詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
   
  MASKED WITH ( FUNCTION = ' *mask_function* ')  
+ 
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  動的なデータのマスクを指定します。 *mask_function* マスキング関数は、適切なパラメーターの名前を指定します。 3 つの関数を使用できます。  
@@ -776,14 +775,12 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  COLUMNSTORE  
    
-  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
  非クラスター化列ストア インデックスとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 列ストアは、ほとんどのパフォーマンスの高い列ストア圧縮で圧縮を指定します。 これは、一般的な選択肢です。  
   
  COLUMNSTORE_ARCHIVE  
    
-  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  非クラスター化列ストア インデックスとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 COLUMNSTORE_ARCHIVE は、テーブルまたはパーティション サイズを小さく絞り込みますにさらに圧縮されます。 これは、保存用や、ストレージのサイズを減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
@@ -849,14 +846,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_DIRECTORY = *directory_name*  
    
-  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  Windows と互換性のある FileTable ディレクトリ名を指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、照合順序の設定とは関係なく、大文字と小文字は区別されません。 この値を指定しない場合、FileTable の名前が使用されます。  
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  FileTable の **Name** 列に適用される照合順序の名前を指定します。 照合順序は、Windows のファイル名のセマンティクスに準拠するために、大文字と小文字を区別しない設定にする必要があります。 この値が指定されていない場合、データベースの既定の照合順序が使用されます。 データベースの既定の照合順序で大文字と小文字が区別される場合は、エラーが発生し、CREATE TABLE 操作は失敗します。  
@@ -875,28 +870,24 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
-  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  FileTable の **stream_id** 列に対して自動的に作成される一意制約で使用する名前を指定します。 この値を指定しない場合、システムによって制約の名前が生成されます。  
   
  FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
-  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  FileTable の **parent_path_locator** 列と **name** 列に対して自動的に作成される一意制約で使用する名前を指定します。 この値を指定しない場合、システムによって制約の名前が生成されます。  
   
  SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .  *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]  
    
-  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
   
  データ型、null 値許容制約、および主キー制約の要件が満たされている場合は、テーブルのシステムのバージョン管理を有効にします。 場合、 **HISTORY_TABLE** 引数を使用しない場合は、システムは、2 つのテーブル間のリンクを作成するには、現在のテーブルと同じファイル グループ内の現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、により、システムは、履歴テーブルには、現在のテーブル内の各レコードの履歴を記録します。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 履歴テーブルには既定では、 **PAGE** 圧縮します。 HISTORY_TABLE 引数を介してへのリンクを作成し、既存の履歴テーブルを使用する場合に、現在のテーブルと、指定したテーブルの間のリンクが作成されます。 現在のテーブルがパーティション分割する場合、履歴テーブルは、パーティション分割構成がレプリケートされていないために自動的に現在のテーブルから履歴テーブルに既定のファイル グループに作成されます。 履歴テーブルの作成時に履歴テーブルの名前を指定すると場合、は、スキーマとテーブルの名前を指定する必要があります。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 この引数を使用して、期間 FOR SYSTEM_TIME と生成された常に行と組み合わせて {開始 |終了} 引数を使用して、テーブルでのシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
   
  REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
    
-  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  Stretch Database が有効または無効になっている新しいテーブルを作成します。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
@@ -911,13 +902,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  [ FILTER_PREDICATE = { null | *predicate* } ]  
    
-  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  必要に応じて、履歴データと現在のデータの両方を含むテーブルから移行する行を選択するフィルター述語を指定します。 この述語で決定論的インライン テーブル値関数を呼び出す必要があります。 詳しくは、「[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」および「[フィルター関数を使用して移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」をご覧ください。 
    
 > [!IMPORTANT]  
->  指定したフィルター述語のパフォーマンスが低いと、データ移行のパフォーマンスも低くなります。 Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター述語を適用します。  
+> 指定したフィルター述語のパフォーマンスが低いと、データ移行のパフォーマンスも低くなります。 Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター述語を適用します。  
   
  フィルター述語を指定しない場合、テーブル全体が移行されます。  
   
@@ -925,7 +915,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
    
-  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および Azure SQL。 
   
 -   SQL Server から Azure にデータを移行するには `OUTBOUND` を指定します。  
@@ -938,7 +927,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-  
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  値が ON の場合は、テーブルがメモリ最適化されていることを示します。 メモリ最適化テーブルは、トランザクション処理のパフォーマンスの最適化に使用されるインメモリ OLTP 機能の一部です。 インメモリ OLTP の使用を開始するには、「[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」をご覧ください。 メモリ最適化テーブルについて詳しくは、「[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)」をご覧ください。  
@@ -947,7 +935,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  DURABILITY  
    
-  
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
   
  値 SCHEMA_AND_DATA は、テーブルに持続性があり、変更がディスクに保存され、再起動またはフェールオーバー後も存続することを示します。  SCHEMA_AND_DATA が既定値です。  
@@ -955,11 +942,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  値 SCHEMA_ONLY は、テーブルに持続性がないことを示します。 データベースを再起動またはフェールオーバーした場合、テーブル スキーマは保存されますが、データの更新内容は保存されません。 DURABILITY=SCHEMA_ONLY は、MEMORY_OPTIMIZED=OFF と共にのみ使用することができます。  
   
 > [!WARNING]  
->  **DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、**READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。  
+> **DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、**READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。  
   
  BUCKET_COUNT  
    
-  
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 
   
  ハッシュ インデックスに作成されるバケットの数を示します。 ハッシュ インデックスの BUCKET_COUNT の最大値は 1,073,741,824 です。 バケット数について詳しくは、「[メモリ最適化テーブルのインデックス](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」をご覧ください。  
@@ -968,14 +954,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  INDEX  
    
-  
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 
   
 列インデックスとテーブル インデックスは、CREATE TABLE ステートメントの一部として指定できます。 メモリ最適化テーブルのインデックスの追加と削除について詳しくは、「[メモリ最適化テーブルの変更](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)」をご覧ください
   
  HASH  
    
-  
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 
   
  ハッシュ インデックスを作成することを示します。  
@@ -998,7 +982,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  SQL ステートメントは、CREATE TABLE ステートメントの *table_name* に指定された値を使用して、一時テーブルを参照します。以下に例を示します####。  
   
-```  
+```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
   
 INSERT INTO #MyTempTable VALUES (1);  
@@ -1018,7 +1002,7 @@ INSERT INTO #MyTempTable VALUES (1);
   
  ストアド プロシージャまたはトリガーの内部で作成されたローカル一時テーブルは、ストアド プロシージャまたはトリガーが呼び出される前に作成された一時テーブルと同じ名前にすることができます。 ただし、クエリが一時テーブルを参照し、かつ同じ名前の一時テーブルが同時に 2 つ存在する場合、クエリがどちらのテーブルに対して解決されるかは定義されません。 入れ子になったストアド プロシージャも、そのプロシージャを呼び出したストアド プロシージャによって作成された一時テーブルと同じ名前を持つ一時テーブルを作成することができます。 ただし、入れ子になったプロシージャで作成したテーブルへの解決を変更するためには、呼び出し元プロシージャで作成されたテーブルと同じ構造、同じ列名である必要があります。 次の例を参照してください。  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.Test2  
 AS  
 n    CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1060,30 +1044,31 @@ GO
   
  名前付き制約のある一時テーブルがユーザー定義トランザクションのスコープ内で作成される場合、一時テーブルを作成するステートメントを実行できるのは、一度に 1 ユーザーだけです。 たとえば、ストアド プロシージャで名前付き主キー制約のある一時テーブルが作成される場合、そのストアド プロシージャを複数のユーザーが同時に実行することはできません。  
 
-
 ## <a name="database-scoped-global-temporary-tables-azure-sql-database"></a>データベース スコープ グローバル一時テーブル (Azure SQL Database)
 
-SQL Server のグローバル一時テーブル (テーブル名が ## で始まる) は、tempdb に格納され、SQL Server インスタンス全体のすべてのユーザーのセッション間で共有されます。 SQL テーブル型については、前述のテーブルの作成に関するセクションをご覧ください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のグローバル一時テーブル (テーブル名が ## で始まる) は、tempdb に格納され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス全体のすべてのユーザーのセッション間で共有されます。 SQL テーブル型については、前述のテーブルの作成に関するセクションをご覧ください。  
 
-Azure SQL Database は、tempdb にも保存されてスコープがデータベース レベルに設定されるグローバル一時テーブルをサポートしています。  これは、グローバル一時テーブルが同じ Azure SQL Database 内ですべてのユーザーのセッションで共有されることを意味します。 他の Azure SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は、tempdb にも保存されてスコープがデータベース レベルに設定されるグローバル一時テーブルをサポートしています。 これは、グローバル一時テーブルが同じ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内ですべてのユーザーのセッションで共有されることを意味します。 他のデータベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。
 
-Azure SQL DB のグローバル一時テーブルは、SQL Server が一時テーブルに使用するのと同じ構文およびセマンティクスに従います。  同様に、グローバル一時ストアド プロシージャも、スコープが Azure SQL DB 内のデータベース レベルに設定されます。 ローカル一時テーブル (テーブル名が # で始まる) も Azure SQL Database でサポートされ、SQL Server で使用されるのと同じ構文およびセマンティクスに従います。  [一時テーブル](#temporary-tables)に関する上のセクションをご覧ください。  
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のグローバル一時テーブルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が一時テーブルに使用するのと同じ構文およびセマンティクスに従います。 同様に、グローバル一時ストアド プロシージャも、スコープが [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内のデータベース レベルに設定されます。 ローカル一時テーブル (テーブル名が # で始まる) も [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でサポートされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるのと同じ構文およびセマンティクスに従います。  [一時テーブル](#temporary-tables)に関する上のセクションをご覧ください。  
 
 > [!IMPORTANT]
-> この機能は、Azure SQL Database でのみ使用できます。
->
+> この機能は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で使用できます。
 
-### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Azure SQL DB のグローバル一時テーブルのトラブルシューティング 
+### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Azure SQL Database のグローバル一時テーブルのトラブルシューティング 
 
-tempdb のトラブルシューティングについては、「[tempdb のディスク領域の不足に関するトラブルシューティング](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396)」をご覧ください。 Azure SQL Database の DMV のトラブルシューティングにアクセスするには、サーバー管理者である必要があります。
+tempdb のトラブルシューティングについては、「[tempdb のディスク領域の不足に関するトラブルシューティング](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105))」をご覧ください。 
+
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の DMV のトラブルシューティングにアクセスできるのは、サーバー管理者のみです。
   
 ### <a name="permissions"></a>アクセス許可  
 
- すべてのユーザーがグローバル一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+ すべてのユーザーがグローバル一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。  
   
 ### <a name="examples"></a>使用例 
 
-- セッション A は、グローバル一時テーブル ##test を Azure SQL Database testdb1 に作成し、1 行を追加します
+- セッション A は、グローバル一時テーブル ##test を [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 に作成し、1 行を追加します
 
 ```sql
 CREATE TABLE ##test ( a int, b int);
@@ -1101,7 +1086,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ---Result
 ##test
 ```
-- セッション B は、Azure SQL Database testdb1 に接続し、セッション A によって作成されたテーブル ##test にアクセスできます
+- セッション B は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 に接続し、セッション A によって作成されたテーブル ##test にアクセスできます
 
 ```sql
 SELECT * FROM ##test
@@ -1109,7 +1094,7 @@ SELECT * FROM ##test
 1,1
 ```
 
-- セッション C は、Azure SQL Database testdb2 内の別のデータベースに接続し、testdb1 で作成された ##test にアクセスしようとします。 この選択は、グローバル一時テーブルのデータベース スコープが原因で失敗します 
+- セッション C は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 内の別のデータベースに接続し、testdb1 で作成された ##test にアクセスしようとします。 この選択は、グローバル一時テーブルのデータベース スコープが原因で失敗します 
 
 ```sql
 SELECT * FROM ##test
@@ -1118,15 +1103,13 @@ Msg 208, Level 16, State 0, Line 1
 Invalid object name '##test'
 ```
 
-- 現在のユーザー データベース testdb1 から Azure SQL Database tempdb 内のシステム オブジェクトのアドレス指定
+- 現在のユーザー データベース testdb1 からの [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb 内のシステム オブジェクトのアドレス指定
 
 ```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
 ```
-
-
 
 ## <a name="partitioned-tables"></a>パーティション テーブル  
  CREATE TABLE を使用してパーティション テーブルを作成するには、まず、テーブルをパーティション分割する方法を指定するパーティション関数を作成する必要があります。 パーティション関数は、[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) を使用して作成します。 次に、パーティション構成を作成する必要があります。パーティション構成では、パーティション関数が示すパーティションを保持するファイル グループを指定します。 パーティション構成は、[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) を使用して作成します。 パーティション テーブルでは、PRIMARY KEY 制約または UNIQUE 制約を別のファイル グループに配置するよう指定できません。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
@@ -1142,7 +1125,7 @@ SELECT * FROM tempdb.sys.database_files
 -   PRIMARY KEY 制約中で定義する列はすべて、NOT NULL として定義する必要があります。 NULL 値を許容するかどうかを指定しない場合、PRIMARY KEY 制約の影響を受けるすべての列は NOT NULL に設定されます。  
   
     > [!NOTE]  
-    >  メモリ最適化テーブルでは、null 許容のキー列が許可されます。  
+    > メモリ最適化テーブルでは、null 許容のキー列が許可されます。  
   
 -   CLR ユーザー定義型の列に対して主キーを定義する場合は、型の実装でバイナリ順がサポートされている必要があります。 詳細については、「 [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。  
   
@@ -1220,13 +1203,13 @@ SELECT * FROM tempdb.sys.database_files
   
 ## <a name="additional-constraint-information"></a>制約に関する追加情報  
   
--   制約に対して作成されたインデックスは、DROP INDEX で削除することはできません。ALTER TABLE を使用して制約を削除する必要があります。 制約に対して作成され、制約によって使用されるインデックスは、ALTER INDEX...REBUILD を使用して再構築できます。 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
+-   制約に対して作成されたインデックスは、`DROP INDEX` で削除することはできません。ALTER TABLE を使用して制約を削除する必要があります。 制約に対して作成され、制約によって使用されるインデックスは、`ALTER INDEX ... REBUILD` を使用して再構築できます。 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
 -   制約名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従う必要があります。ただし、番号記号 (#) で始めることはできません。 *constraint_name* を指定しない場合、この制約にはシステムによって生成された名前が割り当てられます。 制約の違反に関するすべてのエラー メッセージには、制約名が表示されます。  
   
 -   INSERT ステートメント、UPDATE ステートメントまたは DELETE ステートメントで制約の違反があった場合は、ステートメントが終了します。 ただし、SET XACT_ABORT に OFF が設定されている場合は、トランザクション (ステートメントが明示的なトランザクションの一部である場合) の処理は続行されます。 SET XACT_ABORT に ON が設定されている場合は、トランザクション全体がロールバックされます。 @@ERROR システム関数を調べることにより、トランザクション定義付きの ROLLBACK TRANSACTION ステートメントを使用することもできます。  
   
--   ALLOW_ROW_LOCKS が ON かつ ALLOW_PAGE_LOCK が ON の場合、インデックスにアクセスするときに行レベル、ページ レベル、テーブル レベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。 ALLOW_ROW_LOCKS = OFF かつ ALLOW_PAGE_LOCK = OFF の場合は、インデックスにアクセスするときにテーブル レベルのロックだけが許可されます。  
+-   `ALLOW_ROW_LOCKS = ON` と `ALLOW_PAGE_LOCK = ON` の場合、インデックスにアクセスするとき、行レベル、ページ レベル、テーブル レベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。 `ALLOW_ROW_LOCKS = OFF` と `ALLOW_PAGE_LOCK = OFF` の場合、インデックスにアクセスするとき、テーブル レベルのロックのみが許可されます。  
   
 -   テーブルが FOREIGN KEY 制約または CHECK 制約とトリガーを持っている場合、制約条件は、トリガーが実行される前に評価されます。  
   
@@ -1273,7 +1256,7 @@ SELECT * FROM tempdb.sys.database_files
 ### <a name="a-create-a-primary-key-constraint-on-a-column"></a>A. 列に PRIMARY KEY 制約を作成する  
  次の例では、`Employee` テーブルの `EmployeeID` 列にクラスター化インデックスを持つ PRIMARY KEY 制約の列定義を示しています。 制約名を指定していないため、制約名はシステムによって提供されます。  
   
-```  
+```sql  
 CREATE TABLE dbo.Employee (EmployeeID int  
 PRIMARY KEY CLUSTERED);  
 ```  
@@ -1281,20 +1264,20 @@ PRIMARY KEY CLUSTERED);
 ### <a name="b-using-foreign-key-constraints"></a>B. FOREIGN KEY 制約を使用する  
  FOREIGN KEY 制約は、他のテーブルを参照するために使用します。 外部キーは単一列キーの場合も複数列キーの場合もあります。 次の例では、`SalesPerson` テーブルを参照する `SalesOrderHeader` テーブルに対する単一列 FOREIGN KEY 制約を示しています。 単一列 FOREIGN KEY 制約では、REFERENCES 句のみが必要とされます。  
   
-```  
+```sql  
 SalesPersonID int NULL  
 REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
  FOREIGN KEY 句を明示的に使用して、列属性を書き換えることもできます。 列名が両方のテーブルで同じである必要はないことに注意してください。  
   
-```  
+```sql  
 FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
  複数列キー制約はテーブル制約として作成されます。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の `SpecialOfferProduct` テーブルには、複数列 PRIMARY KEY が含まれています。 次の例は、このキーを他のテーブルから参照する方法を示しています。明示的な制約名は省略可能です。  
   
-```  
+```sql  
 CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY  
  (ProductID, SpecialOfferID)  
 REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)  
@@ -1303,7 +1286,7 @@ REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ### <a name="c-using-unique-constraints"></a>C. UNIQUE 制約を使用する  
  UNIQUE 制約は、非主キー列に一意性を設定するために使用します。 次の例では、`Name` テーブルの `Product` 列が一意でなくてはならないという制限を課しています。  
   
-```  
+```sql  
 Name nvarchar(100) NOT NULL  
 UNIQUE NONCLUSTERED  
 ```  
@@ -1311,32 +1294,32 @@ UNIQUE NONCLUSTERED
 ### <a name="d-using-default-definitions"></a>D. DEFAULT 定義を使用する  
  既定値は (INSERT ステートメントおよび UPDATE ステートメントと組み合わせて使用され)、値が何も提供されていないときに、値を提供します。 たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースは、会社内で従業員が行うさまざまな職務を列挙する参照テーブルを含むことができます。 各職務の説明を示す列に、実際の説明が明示的に入力されなかったときの説明となる既定の文字列を指定できます。  
   
-```  
+```sql  
 DEFAULT 'New Position - title not formalized yet'  
 ```  
   
  DEFAULT 定義には、定数の他に関数を含めることができます。 次の例を使用すると、エントリの現在の日付が取得できます。  
   
-```  
+```sql  
 DEFAULT (getdate())  
 ```  
   
  ニラディック関数スキャンの使用により、データ整合性を向上させることもできます。 行を挿入したユーザーを追跡するには、USER 用ニラディック関数を使用します。 ニラディック関数をかっこで囲まないでください。  
   
-```  
+```sql  
 DEFAULT USER  
 ```  
   
 ### <a name="e-using-check-constraints"></a>E. CHECK 制約を使用する  
  次の例は、`Vendor` テーブルの `CreditRating` 列に入力する値に対する制限を示しています。 制約には名前がありません。  
   
-```  
+```sql  
 CHECK (CreditRating >= 1 and CreditRating <= 5)  
 ```  
   
  この例は、テーブルの列に入力される文字データのパターンを制限する名前付き制約を示しています。  
   
-```  
+```sql  
 CONSTRAINT CK_emp_id CHECK (emp_id LIKE   
 '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'   
 OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')  
@@ -1344,7 +1327,7 @@ OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
   
  この例では、値が特定のリストの範囲内にあるか、特定のパターンに従う必要があるという条件を指定しています。  
   
-```  
+```sql  
 CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')  
 OR emp_id LIKE '99[0-9][0-9]')  
 ```  
@@ -1352,7 +1335,7 @@ OR emp_id LIKE '99[0-9][0-9]')
 ### <a name="f-showing-the-complete-table-definition"></a>F. 完全なテーブル定義を表示する  
  次の例は、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内に作成された `PurchaseOrderDetail` テーブルの完全なテーブル定義とすべての制約定義を示します。 例を実行するときには、テーブル スキーマを `dbo` に変更することに注意してください。  
   
-```  
+```sql  
 CREATE TABLE dbo.PurchaseOrderDetail  
 (  
     PurchaseOrderID int NOT NULL  
@@ -1381,7 +1364,7 @@ ON PRIMARY;
 ### <a name="g-creating-a-table-with-an-xml-column-typed-to-an-xml-schema-collection"></a>G. XML スキーマ コレクションに型指定された xml 列を含むテーブルを作成する  
  次の例では、XML スキーマ コレクション `xml` 型の `HRResumeSchemaCollection` 列を持つテーブルを作成します。 `DOCUMENT` キーワードは、*column_name* 内の `xml` データ型の各インスタンスに、トップレベル要素を 1 つだけ含むことができるように指定します。  
   
-```  
+```sql  
 CREATE TABLE HumanResources.EmployeeResumes   
    (LName nvarchar(25), FName nvarchar(25),   
     Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );  
@@ -1390,7 +1373,7 @@ CREATE TABLE HumanResources.EmployeeResumes
 ### <a name="h-creating-a-partitioned-table"></a>H. パーティション分割されたテーブルを作成する  
  次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数を作成します。 次に、4 つのパーティションをそれぞれ保持するファイル グループを指定するパーティション構成を作成します。 最後に、そのパーティション構成を使用するテーブルを作成します。 この例では、ファイル グループが既にデータベースに存在していると仮定しています。  
   
-```  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
 GO  
@@ -1415,7 +1398,7 @@ GO
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. 列で uniqueidentifier データ型を使用する  
  次の例では、`uniqueidentifier` 列を含むテーブルを作成します。 この例では、PRIMARY KEY 制約を使って、重複値を挿入するユーザーからテーブルを保護し、`DEFAULT` 制約で `NEWSEQUENTIALID()` 関数を使って、新しい行の値を指定します。 また、$ROWGUID キーワードを使用して参照できるように、この `uniqueidentifier` 列に ROWGUIDCOL プロパティを適用します。  
   
-```  
+```sql  
 CREATE TABLE dbo.Globally_Unique_Data  
     (guid uniqueidentifier   
         CONSTRAINT Guid_Default DEFAULT   
@@ -1427,7 +1410,7 @@ CREATE TABLE dbo.Globally_Unique_Data
 ### <a name="j-using-an-expression-for-a-computed-column"></a>J. 計算列に式を使用する  
  次の例は、式 (`(low + high)/2`) を使用して `myavg` 計算列を計算する方法を示しています。  
   
-```  
+```sql  
 CREATE TABLE dbo.mytable   
     ( low int, high int, myavg AS (low + high)/2 ) ;  
 ```  
@@ -1435,7 +1418,7 @@ CREATE TABLE dbo.mytable
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. ユーザー定義型の列に基づいて計算列を作成する  
  次の例では、ユーザー定義型 `utf8string` として定義された 1 つの列を持つテーブルを作成します。型のアセンブリと型自体が現在のデータベース中に既に作成されていることを前提としています。 2 番目の列は `utf8string` に基づいて定義され、**type(class)**`utf8string` のメソッド `ToString()` を使用して列の値が計算されます。  
   
-```  
+```sql  
 CREATE TABLE UDTypeTable   
     ( u utf8string, ustr AS u.ToString() PERSISTED ) ;  
 ```  
@@ -1443,7 +1426,7 @@ CREATE TABLE UDTypeTable
 ### <a name="l-using-the-username-function-for-a-computed-column"></a>L. 計算列に USER_NAME 関数を使用する  
  次の例では、`myuser_name` 列で `USER_NAME()` 関数を使用します。  
   
-```  
+```sql  
 CREATE TABLE dbo.mylogintable  
     ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;  
 ```  
@@ -1451,7 +1434,7 @@ CREATE TABLE dbo.mylogintable
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>M. FILESTREAM 列を含むテーブルを作成する  
  次の例では、`Photo` という `FILESTREAM` 列を含むテーブルを作成します。 テーブルに 1 つ以上の `FILESTREAM` 列が含まれる場合、テーブルには `ROWGUIDCOL` 列が 1 つ存在する必要があります。  
   
-```  
+```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
     EmployeeId int NOT NULL PRIMARY KEY,  
@@ -1464,7 +1447,7 @@ CREATE TABLE dbo.EmployeePhoto
 ### <a name="n-creating-a-table-that-uses-row-compression"></a>N. 行の圧縮を使用するテーブルを作成する  
  次の例では、行の圧縮を使用するテーブルを作成します。  
   
-```  
+```sql  
 CREATE TABLE dbo.T1   
 (c1 int, c2 nvarchar(200) )  
 WITH (DATA_COMPRESSION = ROW);  
@@ -1477,7 +1460,7 @@ WITH (DATA_COMPRESSION = ROW);
   
  次の例では、スパース列を含むテーブルを作成します。  
   
-```  
+```sql  
 CREATE TABLE dbo.T1  
     (c1 int PRIMARY KEY,  
     c2 varchar(50) SPARSE NULL ) ;  
@@ -1485,7 +1468,7 @@ CREATE TABLE dbo.T1
   
  次の例では、2 つのスパース列と `CSet` という 1 つの列セットを含むテーブルを作成します。  
   
-```  
+```sql  
 CREATE TABLE T1  
     (c1 int PRIMARY KEY,  
     c2 varchar(50) SPARSE NULL,  
@@ -1495,14 +1478,13 @@ CREATE TABLE T1
   
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. システムのバージョン管理されたディスク ベースの一時的なテーブルを作成します。  
    
-  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
  次の例では、新しい履歴テーブルにリンクされている一時的なテーブルを作成する方法と、既存の履歴テーブルにリンクされている一時的なテーブルを作成する方法を示しています。 一時的なテーブルでは、主キーがシステムのバージョン管理を有効にするテーブルを有効にするのに定義される場合がありますに注意してください。 既存のテーブルのシステムのバージョン管理の追加または削除方法を示す例については、「[使用例](../../t-sql/statements/alter-table-transact-sql.md#Example_Top)」でシステムのバージョン管理の例をご覧ください。 ユース ケースについては、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」をご覧ください。  
   
  この例では、新しい履歴テーブルにリンクされている、新しい一時的なテーブルを作成します。  
   
-```  
+```sql  
 CREATE TABLE Department   
 (  
     DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,   
@@ -1518,8 +1500,7 @@ WITH (SYSTEM_VERSIONING = ON);
   
  この例では、既存の履歴テーブルにリンクされている、新しい一時的なテーブルを作成します。  
   
-```  
-  
+```sql  
 --Existing table   
 CREATE TABLE Department_History   
 (  
@@ -1549,14 +1530,13 @@ WITH
   
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q.  システムのバージョン管理されたメモリ最適化の一時的なテーブルを作成します。  
    
-  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
  次の例では、テーブルを作成するシステムのバージョン管理されたメモリ最適化時間的な新しい履歴のディスク ベース テーブルにリンクする方法を示します。  
   
  この例では、新しい履歴テーブルにリンクされている、新しい一時的なテーブルを作成します。  
   
-```  
+```sql  
 CREATE SCHEMA History  
 GO  
 CREATE TABLE dbo.Department   
@@ -1578,8 +1558,7 @@ WITH
   
  この例では、既存の履歴テーブルにリンクされている、新しい一時的なテーブルを作成します。  
   
-```  
-  
+```sql 
 --Existing table   
 CREATE TABLE Department_History   
 (  
@@ -1610,7 +1589,7 @@ WITH
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>R.  暗号化された列を含むテーブルを作成します。  
  次の例では、次の 2 つの暗号化された列を含むテーブルを作成します。 詳細については、「[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。  
   
-```  
+```sql  
 CREATE TABLE Customers (  
     CustName nvarchar(60)   
         ENCRYPTED WITH   
@@ -1633,15 +1612,38 @@ CREATE TABLE Customers (
 ### <a name="s-create-an-inline-filtered-index"></a>S.  インライン フィルターが適用されたインデックスを作成します 
 インライン フィルターが適用されたインデックスを持つテーブルを作成します。
   
-  ```
+```sql
   CREATE TABLE t1 
- (
+  (
       c1 int,
       index IX1  (c1) WHERE c1 > 0   
  )
 GO
- ```
+```
+
+### <a name="t-create-a-temporary-table-with-an-anonymously-named-compound-primary-key"></a>T.  匿名で名前付けされた複合主キーを持つ一時テーブルを作成します
+匿名で名前付けされた複合主キーを持つテーブルを作成します。 これは、(それぞれが別のセッションにある) 2 つのセッション スコープの一時テーブルが、同じ制約の名前を使用している場合に、実行時の競合を回避するのに役立ちます。 
+  
+```
+  CREATE TABLE #tmp 
+ (
+      c1 int,
+      c2 int,
+      PRIMARY KEY CLUSTERED ([c1], [c2])
+ )
+GO
+```
+
+制約を明示的に名付ける場合は、2 つ目のセッションで次のようなエラーが発生します。
  
+```
+Msg 2714, Level 16, State 5, Line 1
+There is already an object named 'PK_#tmp' in the database.
+Msg 1750, Level 16, State 1, Line 1
+Could not create constraint or index. See previous errors.
+```
+
+一時テーブルの名前が一意であるのに対して、制約の名前が一意ではないことが原因で、問題が発生しています。
   
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

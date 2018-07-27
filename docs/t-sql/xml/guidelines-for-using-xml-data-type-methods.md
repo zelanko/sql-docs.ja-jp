@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248454"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083374"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml データ型メソッドの使用に関するガイドライン
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  実行時にシングルトンであることが確実かどうかをコンパイラで判断できない場合、シングルトンを必要とするロケーション ステップ、関数パラメーター、および演算子はエラーを返します。 型指定されていないデータではこの問題が頻繁に発生します。 たとえば、属性の参照には単一の親要素が必要ですが、 単一の親ノードを選択する序数があれば問題を回避できます。 **node()**-**value()** の組み合わせを評価して属性値を抽出するときは、序数を指定する必要がない場合もあります。 次の例を参照してください。  
   
 ### <a name="example-known-singleton"></a>例 : 既知のシングルトン  
- 次の例で、**nodes()** メソッドは <`book`> 要素ごとに個別の行を生成します。 **value()** メソッドは <`book`> ノードで評価され、@genre の値を抽出して属性にします。この値はシングルトンです。  
+ 次の例で、**nodes()** メソッドは <`book`> 要素ごとに個別の行を生成します。 <`book`> ノードで評価される **value()** メソッドは、\@genre の値を抽出します。また、属性であるため、シングルトンです。  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

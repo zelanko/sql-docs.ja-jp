@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7f0ca959918e298d40eca5c925ccbf57e6173a2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d2d27efa67f446915de94ffd93edc0ed23db58e2
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329753"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038059"
 ---
 # <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,44 +32,11 @@ ms.locfileid: "34329753"
  
 ALTER TABLE 構文は、テーブル スキーマを変更する場合だけでなく、インデックスの追加、削除、および再構築の場合にも使用します。 インデックスは、テーブル定義の一部と見なされます。  
   
--   構文 ALTER TABLE … ADD/DROP/ALTER INDEX は、メモリ最適化テーブルでのみサポートされます。  
+-   構文 ALTER TABLE ...ADD/DROP/ALTER INDEX は、メモリ最適化テーブルでのみサポートされます。  
   
 -   ALTER TABLE ステートメントを使用しない場合、メモリ最適化テーブルのインデックスにステートメント CREATE INDEX、DROP INDEX、および ALTER INDEX を *使用できません* 。  
   
- 次の構文は、ALTER TABLE ステートメントの ADD、DROP、および ALTER の各 INDEX 句に使用されます。  
-  
-```
-| ADD   
-     {   
-        <column_definition>  
-      | <table_constraint>  
-      | <table_index>    
-     } [ ,...n ]  
-  
-| DROP   
-     {  
-         [ CONSTRAINT ]   
-         {   
-              constraint_name   
-         } [ ,...n ]  
-         | COLUMN   
-         {  
-              column_name   
-         } [ ,...n ]  
-         | INDEX   
-         {  
-              index_name   
-         } [ ,...n ]  
-     } [ ,...n ]  
-  
-| ALTER INDEX index_name  
-     {   
-         REBUILD WITH ( <rebuild_index_option> )     
-     }  
-}  
-```  
-  
- 次の種類の変更がサポートされています。  
+次の種類の変更がサポートされています。  
   
 -   バケット数の変更  
   

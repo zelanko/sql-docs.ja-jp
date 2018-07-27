@@ -17,11 +17,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf241911ce9befc7b42e8c84fd6fddb7dcd10374
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2ebaa1c922714413a29967d38aa8b60ebaa6c335
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086964"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,22 +77,22 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  たとえば、サーバーでは **ServerCollection** クラスを、データベースでは **DatabaseCollection** クラスを指定します。  
   
- @*PropertyName*  
- *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に @ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull** には、@IsAnsiNull と指定します。  
+ \@*PropertyName*  
+ *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull**には、\@IsAnsiNull と指定します。  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  指定したブール型のプロパティが TRUE に設定されているすべてのオブジェクトを列挙します。  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  指定したブール型のプロパティが FALSE に設定されているすべてのオブジェクトを列挙します。  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  指定した文字列プロパティに '*PatternString*' に指定した文字のセットが 1 つ以上含まれるすべてのオブジェクトを列挙します。  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  指定した文字列プロパティの値が '*PatternString*' に指定した文字パターンとまったく同じであるすべてのオブジェクトを列挙します。  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  指定した日付プロパティの値が '*DateString*' に指定した日付と一致するすべてのオブジェクトを列挙します。 *DateString* は、yyyy-mm-dd hh:mi:ss.mmm 形式で指定する必要があります。  
   
 |||  
@@ -106,11 +107,11 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  この形式で指定された日付は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に格納されているすべての日付形式に対して評価できます。  
   
- is_null(@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  指定したプロパティの値が NULL であるすべてのオブジェクトを列挙します。  
   
  not(\<*PropertyExpression*>)  
- *PropertyExpression*の評価値を否定して、 *PropertyExpression*に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、"not(contains(@Name, 'xyz'))" と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
+ *PropertyExpression*の評価値を否定して、 *PropertyExpression*に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、not(contains(\@Name, 'xyz')) と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
   
 ## <a name="remarks"></a>Remarks  
  クエリ式は、SMO モデル階層のノードを列挙する文字列です。 各ノードには、そのノードのどのオブジェクトを列挙するかを決定する条件を指定するためのフィルター式があります。 クエリ式は、XPath 式言語をモデル化したものです。 クエリ式は、XPath でサポートされる式の小さなサブセットを実装し、XPath には用意されていないいくつかの拡張を含みます。 XPath 式は、XML ドキュメント内の 1 つまたは複数のタグを列挙するための条件のセットを指定する文字列です。 XPath の詳細については、 [W3C XPath 言語の Web サイト](http://www.w3.org/TR/xpath20/)を参照してください。  

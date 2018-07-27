@@ -1,7 +1,7 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 972d3c177d596240fba0a04625c5bbff36e80ae5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785333"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109244"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,8 +157,11 @@ DEFAULT
 *constant_expression*  
  リテラル値、NULL 値、または列の既定値として使用されるシステム関数です。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型として定義されている列と共に使用する場合は、その型を実装したときに、*constant_expression* からユーザー定義型への暗黙的な変換がサポートされる必要があります。  
   
-WITH VALUES  
- DEFAULT *constant_expression* で指定された値を、既存の行に追加される新しい列に格納します。 追加される列で NULL 値が許容される場合、WITH VALUES を指定すると、既存の行に追加される新しい列には既定値が格納されます。 NULL 値が許容される列に対して WITH VALUES を指定しない場合は、既存の行の新しい列には NULL 値が格納されます。 新しい列で NULL 値が許容されない場合は、WITH VALUES の指定に関係なく、新しい行に既定値が格納されます。  
+WITH VALUES   
+ DEFAULT 制約と共に列を追加する際に列が NULL を許容している場合、WITH VALUES を使用すると、既存の行の新しい列の値は DEFAULT の *constant_expression* で指定される値に設定されます。 追加する列が NULL を許容していない場合、既存の行のその列の値は常に DEFAULT の *constant expression* で指定される値に設定されます。 SQL Server 2012 以降、これはメタ データの操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation) である場合があります。
+関連する列が追加されない場合にこれを使用しても、影響はありません。
+ 
+ DEFAULT *constant_expression* で指定される値が、既存の行に追加される新規列に格納されることを指定します。 追加する列に NULL 値が許容され、WITH VALUES を指定した場合、新しい列には既定値が格納され、既存の行に追加されます。 NULL 値が許容される列に対して WITH VALUES を指定しない場合は、既存の行の新しい列には NULL 値が格納されます。 新しい列で NULL 値が許容されない場合は、WITH VALUES の指定に関係なく、新しい行に既定値が格納されます。  
   
 IDENTITY  
  新しい列が ID 列であることを指定します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、列に一意な増分値を設定します。 既存のテーブルに ID 列を追加すると、テーブルの既存の行にシード値と増分値を持つ識別番号が追加されます。 行の更新順序は保証されません。 識別番号は、新しく追加された行に対しても生成されます。  

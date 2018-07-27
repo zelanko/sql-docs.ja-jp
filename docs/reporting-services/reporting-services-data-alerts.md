@@ -15,11 +15,12 @@ caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1cfc5097bc391a9d8487506b2958635dead23b7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a62aafb5512562339ad387dcb1bf8f34efac09d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981214"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services のデータ警告
 
@@ -121,7 +122,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
 ##  <a name="InstallAlerting"></a> データ警告のインストール  
  データ警告機能は、SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされている場合にのみ使用できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールすると、データ警告定義および警告メタデータを格納する警告データベースと、警告を管理するための 2 つの SharePoint ページとがセットアップによって自動的に作成され、SharePoint サイトにデータ警告デザイナーが追加されます。 警告機能に関して、インストール中に設定する特別な手順やオプションはありません。  
   
- SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で新たに導入された [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共有サービスや、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) に関する詳細については、MSDN ライブラリの「 [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) 」を参照してください。  
+ SharePoint モードでの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で新たに導入された [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスや、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) について詳しくは、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)」をご覧ください。  
   
  このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「 [SQL Server エージェントの構成](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) 」および「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
@@ -136,7 +137,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
   
  次の表は、データ警告の構成要素とその既定値、説明、および場所を一覧にしたものです。  
   
-|設定|既定値|Description|場所|  
+|設定|既定値|[説明]|場所|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|クリーンアップ サイクルの開始間隔 (分) です。|レポート サーバー構成ファイル|  
 |AlertingExecutionLogCleanupMinutes|10080|実行ログのエントリを保持する時間 (分) です。|レポート サーバー構成ファイル|  
@@ -150,7 +151,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
 ### <a name="event-handlers-and-retry"></a>イベント ハンドラーと再試行  
  イベント ハンドラーには次のものがあります。  
   
-|イベント ハンドラー|Description|  
+|イベント ハンドラー|[説明]|  
 |-------------------|-----------------|  
 |FireAlert|データ警告マネージャーで **[実行]**  をクリックして、警告定義の処理を直ちに開始します。|  
 |FireSchedule|SQL Server エージェントにより、警告定義のジョブ スケジュールが起動されます。|  

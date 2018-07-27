@@ -21,11 +21,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83908645f3578cbb29579d11ecaf19aa8cbac0b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e1547929bbb323f8211fcc6d1f23ffdb9722655
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087354"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,23 +43,23 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  これらのメタプロパティは、XPath による位置指定では参照できません。  
   
-|メタプロパティ属性|Description|  
+|メタプロパティ属性|[説明]|  
 |----------------------------|-----------------|  
-|**@mp:id**|DOM ノードに対して、システムによって生成されたドキュメント レベルの識別子を提供します。 この ID は、ドキュメントが再解析されない限り、同じ XML ノードを参照します。<br /><br /> XML ID が **0** の場合、その要素はルート要素です。 その親要素の XML ID は NULL になります。|  
-|**@mp:localname**|ノードの名前のローカル部分を格納します。 要素ノードや属性ノードの名前付けの際に、プレフィックスおよび名前空間 URI と共に使用します。|  
-|**@mp:namespaceuri**|現在の要素の名前空間 URI を指定します。 この属性の値が NULL の場合は、名前空間がありません。|  
-|**@mp:prefix**|現在の要素名の名前空間プレフィックスを格納します。<br /><br /> プレフィックスがなくて (NULL) URI が指定されている場合は、指定された名前空間が既定の名前空間であることを示します。 URI が指定されていない場合は、名前空間が関連付けられていません。|  
-|**@mp:prev**|ノードよりも前の兄弟を格納します。 これにより、ドキュメント内の要素の順序に関する情報が得られます。<br /><br /> **@mp:prev** には、同じ親要素を持つ前の兄弟要素の XML ID が含まれます。 要素が兄弟リストの先頭にある場合、 **@mp:prev** は NULL になります。|  
-|**@mp:xmltext**|処理の目的で使用します。 OPENXML のオーバーフロー処理で使用したように、要素とその属性とサブ要素のテキストをシリアル化したものです。|  
+|**\@mp:id**|DOM ノードに対して、システムによって生成されたドキュメント レベルの識別子を提供します。 この ID は、ドキュメントが再解析されない限り、同じ XML ノードを参照します。<br /><br /> XML ID が **0** の場合、その要素はルート要素です。 その親要素の XML ID は NULL になります。|  
+|**\@mp:localname**|ノードの名前のローカル部分を格納します。 要素ノードや属性ノードの名前付けの際に、プレフィックスおよび名前空間 URI と共に使用します。|  
+|**\@mp:namespaceuri**|現在の要素の名前空間 URI を指定します。 この属性の値が NULL の場合は、名前空間がありません。|  
+|**\@mp:prefix**|現在の要素名の名前空間プレフィックスを格納します。<br /><br /> プレフィックスがなくて (NULL) URI が指定されている場合は、指定された名前空間が既定の名前空間であることを示します。 URI が指定されていない場合は、名前空間が関連付けられていません。|  
+|**\@mp:prev**|ノードよりも前の兄弟を格納します。 これにより、ドキュメント内の要素の順序に関する情報が得られます。<br /><br /> **\@mp:prev** には、同じ親要素を持つ前の兄弟要素の XML ID が含まれます。 要素が兄弟リストの先頭にある場合、**\@mp:prev** は NULL になります。|  
+|**\@mp:xmltext**|処理の目的で使用します。 OPENXML のオーバーフロー処理で使用したように、要素とその属性とサブ要素のテキストをシリアル化したものです。|  
   
  次の表には、用意されている追加の親プロパティを示します。これらのプロパティを使用すると、階層情報を取得できます。  
   
-|親メタプロパティ属性|Description|  
+|親メタプロパティ属性|[説明]|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|**../@mp:id** に対応します|  
-|**@mp:parentlocalname**|**../@mp:localname** に対応します|  
-|**@mp:parentnamespacerui**|**../@mp:namespaceuri** に対応します|  
-|**@mp:parentprefix**|**../@mp:prefix** に対応します|  
+|**\@mp:parentid**|**../\@mp:id** と対応します。|  
+|**\@mp:parentlocalname**|**../\@mp:localname** と対応します。|  
+|**\@mp:parentnamespacerui**|**../\@mp:namespaceuri** と対応します。|  
+|**\@mp:parentprefix**|**../\@mp:prefix** と対応します。|  
   
 ## <a name="examples"></a>使用例  
  次に、OPENXML を使用してさまざまな行セット ビューを作成する方法の例を示します。  
@@ -68,11 +69,11 @@ ms.lasthandoff: 05/03/2018
   
  この OPENXML ステートメントは、次のことを表します。  
   
--   列に含まれるのが未使用データだけなのかすべてのデータなのかは **id** 列が **@mp:id** メタプロパティ属性にマップされます。このメタプロパティ属性は、システムによって生成された要素の一意な XML ID がこの列に含まれることを示しています。  
+-   **id** 列が **\@mp:id** メタプロパティ属性にマップされます。また、システムによって生成された要素の一意な XML ID がこの列に含まれることを示しています。  
   
--   列に含まれるのが未使用データだけなのかすべてのデータなのかは **parent** 列が **@mp:parentid** にマップされます。このメタプロパティ属性は、要素の親要素の XML ID がこの列に含まれることを示しています。  
+-   **parent** 列が **\@mp:parentid** にマップされます。また、要素の親要素の XML ID がこの列に含まれることを示しています。  
   
--   列に含まれるのが未使用データだけなのかすべてのデータなのかは **parentLocalName** 列が **@mp:parentlocalname** にマップされます。このメタプロパティ属性は、親のローカル名がこの列に含まれることを示しています。  
+-   **parentLocalName** 列が **\@mp:parentlocalname** にマップされます。また、親のローカル名がこの列に含まれることを示しています。  
   
  SELECT ステートメントは OPENXML で提供された行セットを返します。  
   
@@ -165,13 +166,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. xmltext メタプロパティの指定による列内の未使用データの取得  
  この例では、OPENXML を使用して、サンプルの XML ドキュメントの行セット ビューを作成します。 この例では、OPENXML 内の行セットの列に **xmltext** メタプロパティ属性をマップすることによって、未使用の XML データを取得する方法について説明します。  
   
- 列に含まれるのが未使用データだけなのかすべてのデータなのかは **comment** 列は、 **@mp:xmltext** メタプロパティ以外のメタプロパティ属性ごとに 1 つの列が含まれます。 *flags* パラメーターは **9** (XML_ATTRIBUTE and XML_NOCOPY) に設定されています。 この設定は、 **属性中心** のマッピングであり、未使用データのみがオーバーフロー列にコピーされることを示しています。  
+ **comment** 列は、**\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。 *flags* パラメーターは **9** (XML_ATTRIBUTE and XML_NOCOPY) に設定されています。 この設定は、 **属性中心** のマッピングであり、未使用データのみがオーバーフロー列にコピーされることを示しています。  
   
  SELECT ステートメントは OPENXML で提供される行セットを返します。  
   
- この例では、OPENXML によって生成された行セット内の列 ( **@mp:parentlocalname** ) に対して **ParentLocalName**メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
+ この例では、OPENXML によって生成された行セット内の列 (**ParentLocalName**) に対して **\@mp:parentlocalname** メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
   
- 行セットには他に 2 つの列 ( **parent** と **comment**) が指定されています。 列に含まれるのが未使用データだけなのかすべてのデータなのかは **parent** 列が **@mp:parentid** にマップされ、この列に、要素の親要素の XML ID が含まれることを示します。 comment 列は、 **@mp:xmltext** メタプロパティ以外のメタプロパティ属性ごとに 1 つの列が含まれます。  
+ 行セットには他に 2 つの列 ( **parent** と **comment**) が指定されています。 **parent** 列は **\@mp:parentid** にマップされ、この列に、要素の親要素の XML ID が含まれることを示します。 comment 列は、**\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。  
   
 ```  
 DECLARE @idoc int  

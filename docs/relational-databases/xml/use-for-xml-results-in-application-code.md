@@ -23,12 +23,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a8bbdb0f98dea26d73ec465d6fd9e226329345a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 535aa58c0bf17e78c47012ffaea42916d55c1818
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017329"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086024"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.locfileid: "33017329"
  表示される生成後の HTML ページの結果は、次のサンプル出力のようになります。  
   
 ##### <a name="server-side-processing"></a>サーバー側の処理  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ Page Generated \@ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   
@@ -205,7 +205,7 @@ ms.locfileid: "33017329"
 ## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>ASP.NET と .NET Framework を使用した、FOR XML データの取得  
  前述の例と同様に、次の ASP.NET コードは、AdventureWorks サンプル データベースの Sales.Store テーブルにある、 **xml** データ型の列である Demographics のクエリ結果を示しています。 前述の例と同様に、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
   
- この例では、FOR XML のクエリ結果を返して表示するために、次の Microsoft .NET Framework マネージ API が使用されています。  
+ この例では、FOR XML のクエリ結果を返して表示するために、次の Microsoft .NET Framework マネージド API が使用されています。  
   
 1.  指定した接続文字列変数 strConn の内容に基づいて SQL Server への接続を開くために、**SqlConnection** が使用されます。  
   

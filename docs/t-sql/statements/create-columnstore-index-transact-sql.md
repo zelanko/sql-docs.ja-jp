@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787770"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024248"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -358,13 +358,13 @@ ON
 
 クラスター化列ストア インデックスを使用しているテーブルでは、カーソルやトリガーは使用できません。 この制限は、非クラスター化列ストア インデックスには適用されません。非クラスター化列ストア インデックスを使用しているテーブルでは、カーソルとトリガーを使用できます。
 
-**SQL Server 2014 固有の制限事項**  
-以下の制限は SQL Server 2014 にのみ適用されます。 このリリースでは、更新可能なクラスター化列ストア インデックスを導入しました。 非クラスター化列ストア インデックスは引き続き読み取り専用でした。  
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] に固有の制限事項**  
+これらの制限は [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にのみ適用されます。 このリリースでは、更新可能なクラスター化列ストア インデックスを導入しました。 非クラスター化列ストア インデックスは引き続き読み取り専用でした。  
 
 -   変更の追跡。 読み取り専用のため、非クラスター化列ストア インデックス (NCCI) で変更履歴を使用することはできません。 クラスター化列ストア インデックス (CCI) では機能します。  
 -   変更データ キャプチャ。 読み取り専用のため、非クラスター化列ストア インデックス (NCCI) に変更データ キャプチャを使用することはできません。 クラスター化列ストア インデックス (CCI) では機能します。  
 -   読み取り可能セカンダリ。 AlwaysOn 可用性グループの読み取り可能セカンダリからクラスター化列ストア インデックス (CCI) にアクセスすることはできません。  読み取り可能セカンダリから非クラスター化列ストア インデックス (NCCI) にアクセスできます。  
--   複数のアクティブな結果セット (MARS)。 SQL Server 2014 では、列ストア インデックスに読み取り専用で接続するために MARS が使用されます。    ただし、SQL Server 2014 では、列ストア インデックスを含むテーブルで DML (データ操作言語) を同時操作するとき、MARS を利用できません。 その場合、 SQL Server は接続を強制終了し、トランザクションを中止します。  
+-   複数のアクティブな結果セット (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスを含むテーブルに読み取り専用で接続するために、MARS が使用されます。 ただし、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスを含むテーブルで DML (データ操作言語) を同時操作する場合、MARS を利用できません。 この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は接続を強制終了し、トランザクションを中止します。  
   
  列ストア インデックスのパフォーマンス上の利点と制限の詳細については、「[列ストア インデックス - 概要](../../relational-databases/indexes/columnstore-indexes-overview.md)」をご覧ください。
   
@@ -383,7 +383,7 @@ ON
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. ヒープをクラスター化列ストア インデックスに変換する  
  この例では、テーブルをヒープとして作成してから、cci_Simple という名前のクラスター化 columnstore インデックスに変換します。 こうすることで、テーブル全体のストレージが行ストアから列ストアに変更されます。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +397,7 @@ GO
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. クラスター化インデックスを同じ名前のクラスター化列ストア インデックスに変換する  
  この例では、クラスター化インデックスを持つテーブルを作成し、クラスター化インデックスをクラスター化列ストア インデックスに変換する構文を示します。 こうすることで、テーブル全体のストレージが行ストアから列ストアに変更されます。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +418,7 @@ GO
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] と [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスで非クラスター化インデックスを作成できませんでした。 この例は、どのようにを列ストア インデックスを作成する前に、非クラスター化インデックスを削除する必要する以前のリリースで表示されます。  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +441,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>D. 大きいファクト テーブルを行ストアから列ストアに変換する  
@@ -452,7 +450,7 @@ GO
   
 1.  まず、この例で使用する小さいテーブルを作成します。  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +468,7 @@ GO
   
 2.  行ストア テーブルからすべての非クラスター化インデックスを削除します。  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +478,9 @@ GO
     -   これは、クラスター化列ストア インデックスに変換されるときにインデックスに新しい名前を指定する場合にのみ行ってください。 クラスター化インデックスを削除しない場合は、新しいクラスター化列ストア インデックスに同じ名前が付けられます。  
   
         > [!NOTE]  
-        >  インデックスの名前に自分の名前を使用すると記憶しやすくなります。 すべての行ストア クラスター化インデックスは、既定の名前である 'ClusteredIndex_\<GUID>' を使用します。  
+        > インデックスの名前に自分の名前を使用すると記憶しやすくなります。 すべての行ストア クラスター化インデックスは、既定の名前である 'ClusteredIndex_\<GUID>' を使用します。  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +495,7 @@ GO
   
 4.  行ストア テーブルを、クラスター化列ストア インデックスを持つ列ストア テーブルに変換します。  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +520,7 @@ GO
 ### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>E. 列ストア テーブルをクラスター化インデックスを持つ行ストア テーブルに変換する  
  列ストア テーブルをクラスター化インデックスを持つ行ストア テーブルに変換するには、CREATE INDEX ステートメントと DROP_EXISTING オプションを使用します。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +529,21 @@ WITH ( DROP EXISTING = ON );
 ### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>F. 列ストア テーブルを行ストア ヒープに変換する  
  列ストア テーブルを行ストア ヒープに変換するには、クラスター化列ストア インデックスを削除します。  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. 全体のクラスター化列ストア インデックスを再構築での断片化を解消します。  
-   対象: SQL Server 2014  
+   適用対象: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  クラスター化列ストア インデックス全体を再構築するには、2 つの方法があります。 CREATE CLUSTERED COLUMNSTORE INDEX か [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) と REBUILD オプションを使用できます。 どちらの方法も、同じ結果が得られます。  
   
 > [!NOTE]  
->  SQL Server 2016 以降、この例で説明した方法で再構築せず、ALTER INDEX REORGANIZE を使用します。  
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この例で説明した方法を使って再構築する代わりに、`ALTER INDEX...REORGANIZE` を使用します。  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +561,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered"></a> 非クラスター化列ストア インデックスの例  
@@ -571,7 +568,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. 行ストア テーブルのセカンダリ インデックスとして列ストア インデックスを作成します。  
  この例では、行ストア テーブルに非クラスター化列ストア インデックスを作成します。 このような状況では、1 つだけの列ストア インデックスを作成できます。 列ストア インデックスでは、行ストア テーブル内のデータのコピーが含まれているために、追加のストレージが必要です。 この例では、単純なテーブルとクラスター化インデックスを作成し、非クラスター化列ストア インデックスを作成する構文を次に示します。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +586,7 @@ GO
 ### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. すべてのオプションを使用して、単純な非クラスター化 columnstore インデックスを作成します。  
  次の例は、すべてのオプションを使用して非クラスター化列ストア インデックスを作成する構文を示しています。  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -604,7 +601,7 @@ GO
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. フィルター選択された述語で、非クラスター化列ストア インデックスを作成します。  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの Production.BillOfMaterials テーブルにフィルター選択された非クラスター化列ストア インデックスを作成します。 フィルター述語では、フィルター選択されたインデックスに非キー列を含めることができます。 この例の述語では、EndDate が NULL 以外の行だけを選択します。  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -614,7 +611,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> D. 非クラスター化列ストア インデックス内のデータを変更する  
@@ -624,7 +620,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   列ストア インデックスを無効にするか削除します。 その後、テーブル内のデータを更新できます。 列ストア インデックスを無効にすると、データの更新の終了時に列ストア インデックスを再構築できます。 例を次に示します。  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -645,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  この例では、クラスター化インデックスを含む列ストア テーブルとして xDimProduct テーブルを作成し、CREATE CLUSTERED COLUMNSTORE INDEX を使用して行ストア テーブルから列ストア テーブルにテーブルを変更します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -670,7 +666,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. クラスター化列ストア インデックスを再構築する  
  この例は先の例を元に作られています。CREATE CLUSTERED COLUMNSTORE INDEX を使用し、cci_xDimProduct という名前の既存のクラスター化列ストア インデックスを再構築します。  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -684,7 +680,7 @@ WITH ( DROP_EXISTING = ON );
   
  この例では、先の例の cci_xDimProduct という名前のクラスター化列ストア インデックスを使用します。cci_xDimProduct を削除し、mycci_xDimProduct という名前で再作成します。  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -698,20 +694,19 @@ WITH ( DROP_EXISTING = OFF );
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. 列ストア テーブルをクラスター化インデックスを持つ行ストア テーブルに変換する  
  クラスター化列ストア インデックスを削除し、クラスター化インデックスを作成するという状況もあります。 その場合、行ストア形式でテーブルを保存します。 この例では、クラスター化インデックスが含まれる行ストア テーブルに列ストア テーブルを変換します。同じ名前が使用されます。 データは何も失われません。 すべてのデータが行ストア テーブルに入り、一覧の列はクラスター化インデックスのキー列になります。  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. 列ストア テーブルを行ストア ヒープに戻す  
  [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) を使用し、クラスター化列ストア インデックスを削除し、テーブルを行ストア ヒープに変換します。 この例では、cci_xDimProduct テーブルを行ストア ヒープに変換します。 テーブルは引き続き配布されますが、ヒープとして保存されます。  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

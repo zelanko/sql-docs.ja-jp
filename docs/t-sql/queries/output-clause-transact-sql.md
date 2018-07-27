@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252404"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088364"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252404"
 ```  
   
 ## <a name="arguments"></a>引数  
- @*table_variable*  
- 返される行を呼び出し元に返さずにテーブルに挿入する場合に、挿入先となる **table** 変数を指定します。 @*table_variable* は、INSERT、UPDATE、DELETE、または MERGE ステートメントの前に宣言する必要があります。  
+ \@*table_variable*  
+ 返される行を呼び出し元に返さずにテーブルに挿入する場合に、挿入先となる **table** 変数を指定します。 \@*table_variable* は、INSERT、UPDATE、DELETE、または MERGE ステートメントの前に宣言する必要があります。  
   
  *column_list* を指定しない場合は、**table** 変数の列の数は OUTPUT の結果セットと同じであることが必要です。 ただし、ID 列と計算列はスキップされるため、同じである必要はありません。 *column_list* を指定した場合は、省略された列は NULL 値を許容しているか、既定値が割り当てられている必要があります。  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  MERGE ステートメントでのみ使用できます。 MERGE ステートメントの OUTPUT 句に **nvarchar(10)** 型の列を指定します。この MERGE ステートメントは、行に対して実行されたアクションに従って 'INSERT'、'UPDATE'、'DELETE' のいずれかの値をそれぞれの行について返します。  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  
+ OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  
   
 > [!NOTE]  
 >  特に指定しない限り、OUTPUT 句への参照は、OUTPUT 句と OUTPUT INTO 句の両方を参照します。  
@@ -207,9 +207,9 @@ DELETE Sales.ShoppingCartItem
   
 -   OUTPUT INTO 句は、\<dml_table_source> 句を含む INSERT ステートメントではサポートされません。  
   
--   @@ROWCOUNT からは、外部の INSERT ステートメントによって挿入された行のみが返されます。  
+-   \@\@ROWCOUNT からは、外部の INSERT ステートメントによって挿入された行のみが返されます。  
   
--   @@IDENTITY、SCOPE_IDENTITY、および IDENT_CURRENT は、入れ子になった DML ステートメントによって生成された ID 値のみを返し、外部の INSERT ステートメントによって生成された ID 値は返しません。  
+-   \@\@IDENTITY、SCOPE_IDENTITY、および IDENT_CURRENT は、入れ子になった DML ステートメントによって生成された ID 値のみを返し、外部の INSERT ステートメントによって生成された ID 値は返しません。  
   
 -   クエリ通知ではステートメントは単一のエンティティとして扱われ、作成されるメッセージの種類は入れ子になった DML の種類になります。これは、外部の INSERT ステートメント自体から大きな変更が加えられた場合でも同様です。  
   

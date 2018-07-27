@@ -31,11 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087484"
 ---
 # <a name="examples-using-openxml"></a>例: OPENXML の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  *flags* を要素中心のマッピングを示す **2** に設定して同じ SELECT ステートメントを実行すると、<`Customer`> 要素にはサブ要素がないので、両方の顧客の **CustomerID** と **ContactName** の値が NULL として返されます。  
   
- また、@xmlDocument を **xml** 型や **(n)varchar(max)** 型にすることもできます。  
+ また、\@xmlDocument を **xml** 型や **(n)varchar(max)** 型にすることもできます。  
   
  XML ドキュメント内で <`CustomerID`> と <`ContactName`> がサブ要素の場合は、要素中心のマッピングにより値が取得されます。  
   
@@ -473,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  この OPENXML ステートメントは、次のことを表します。  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) は XML 属性、**ProductID** で終わります。 結果の行セットでは、XML ドキュメント内で選択した属性ノードごとに行が作成されます。  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) は、XML 属性 **ProductID** で終了します。 結果の行セットでは、XML ドキュメント内で選択した属性ノードごとに行が作成されます。  
   
 -   この例では、 *flags* パラメーターは指定されていません。 代わりに、 *ColPattern* パラメーターによってマッピングを指定します。  
   
@@ -481,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   行セット内の **ProdID** 列の *ColPattern* に指定された XPath パターン (**.**) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
   
--   行セット内の **Qty** 列に指定された *ColPattern* である **../@Quantity** により、コンテキスト ノード \<ProductID> の親ノードである <`OrderDetail`> の **Quantity** 属性が識別されます。  
+-   行セット内の **Qty** 列に指定された *ColPattern* である **../\@Quantity** により、コンテキスト ノード \<ProductID> の親ノードである <`OrderDetail`> の **Quantity** 属性が識別されます。  
   
--   同様に、行セット内の **OID** 列に指定された *ColPattern* である **../../@OrderID** により、コンテキスト ノードの親ノードの親である <`Order`> の **OrderID** 属性が識別されます。 親ノードは <`OrderDetail`> で、コンテキスト ノードは <`ProductID`> です。  
+-   同様に、行セット内の **OID** 列に指定された *ColPattern* である **../../\@OrderID** により、コンテキスト ノードの親ノードの親である <`Order`> の **OrderID** 属性が識別されます。 親ノードは <`OrderDetail`> で、コンテキスト ノードは <`ProductID`> です。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -581,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- 具体的には、 **xml** 型の変数 (@x) を **sp_xml_preparedocument()** 関数に渡しています。  
+ 具体的には、**xml** 型の変数 (\@x) を **sp_xml_preparedocument()** 関数に渡しています。  
   
  結果を次に示します。  
   

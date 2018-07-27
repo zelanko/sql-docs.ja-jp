@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのアダプティブ クエリの処理 | Microsoft Docs | Microsoft Docs
 description: SQL Server (2017 以降) および Azure SQL Database のクエリ パフォーマンスを向上させるためのアダプティブ クエリ処理の機能です。
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c7a38b9765d15e3d62c2ba022b356f627ee9c6ce
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332445"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087504"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,6 +107,29 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 ```
 
 USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
+
+## <a name="row-mode-memory-grant-feedback"></a>行モード メモリ許可フィードバック
+**適用対象:** SQL Database (パブリック プレビューの機能)
+
+行モード メモリ許可フィードバックは、バッチ モードと行モード両方の演算子のメモリ許可サイズを調整することで、バッチ モード メモリ許可フィードバックの機能を拡張します。  
+
+Azure SQL Database で行モード メモリ許可フィードバックのパブリック プレビューを有効にするには、クエリを実行する際に接続されるデータベースのデータベース互換レベル 150 を有効にします。
+
+行モード メモリ許可フィードバックのアクティビティは、**memory_grant_updated_by_feedback** XEvent を通じて確認できます。 
+
+行モード メモリ許可フィードバック以降では、実際の実行後プランのために 2 つの新しいクエリ プラン属性 (**IsMemoryGrantFeedbackAdjusted** および **LastRequestedMemory**) が表示されます。これらは MemoryGrantInfo クエリ プランの XML 要素に追加されます。 
+
+LastRequestedMemory では、前のクエリの実行から許可されたメモリがキロバイト (KB) で表示されます。 IsMemoryGrantFeedbackAdjusted 属性を使用すると、実際のクエリ実行プラン内のステートメントに対するメモリ許可フィードバックの状態を確認できます。 この属性に表示される値は次のとおりです。
+
+| IsMemoryGrantFeedbackAdjusted の値 | [説明] |
+|--- |--- |
+| No: First Execution | メモリ許可フィードバックは、最初のコンパイルとそれに関連付けられた実行ではメモリを調整しません。  |
+| No: Accurate Grant | ディスクへの書き込みが存在せず、許可されたメモリの少なくとも 50% がステートメントによって使用されている場合、メモリ許可フィードバックはトリガーされません。 |
+| No: Feedback disabled | メモリ許可フィードバックが継続的にトリガーされ、メモリを増加させる操作と減少させる操作の間で変動している場合、ステートメントのメモリ許可フィードバックは無効にされます。 |
+| Yes: Adjusting | メモリ許可フィードバックが適用されています。また、次の実行に向けてさらに調整される可能性があります。 |
+| Yes: Stable | メモリ許可フィードバックが適用されています。また、許可されたメモリが安定しています (つまり、前回の実行で許可されたメモリと今回の実行で許可されたメモリが同じです)。 |
+
+現在、メモリ許可フィードバックのプラン属性は、SQL Server Management Studio のグラフィカルなクエリ実行プランでは表示されません。ただし、初期テストのために、SET STATISTICS XML ON または query_post_execution_showplan XEvent を使用してこれらを表示することができます。  
 
 ## <a name="batch-mode-adaptive-joins"></a>バッチ モード アダプティブ結合
 バッチ モード アダプティブ結合機能を使うと、最初の入力のスキャンが "**終わる**" まで、[ハッシュ結合方法または入れ子になったループ結合](../../relational-databases/performance/joins.md)方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、実行中により適切な結合方法に動的に切り替えることができます。

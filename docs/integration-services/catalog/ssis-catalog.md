@@ -18,12 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1589f037fd8c44e3daba9116dbc576353a0fed59
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872822"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085774"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -91,7 +91,7 @@ ms.locfileid: "37872822"
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
--   名前を @ で始めることはできませんが、先頭以外では @ を使用できます。  
+-   名前を \@ で始めることはできませんが、先頭以外では \@ を使用できます。  
   
 -   名前の長さは 1 ～ 128 文字にする必要があります。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "37872822"
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
--   名前を @ で始めることはできませんが、先頭以外では @ を使用できます。  
+-   名前を \@ で始めることはできませんが、先頭以外では \@ を使用できます。  
   
 -   名前の長さは 1 ～ 128 文字にする必要があります。  
   
@@ -382,7 +382,7 @@ ms.locfileid: "37872822"
   
 ###  <a name="options"></a> オプションの構成  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  次の表では、ダイアログ ボックスに示される特定のプロパティと、catalog.catalog_property ビュー内の対応するプロパティについて説明します。  
   
 |プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_property ビュー)|[説明]|  

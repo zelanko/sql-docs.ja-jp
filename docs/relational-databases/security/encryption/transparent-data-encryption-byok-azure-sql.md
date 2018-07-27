@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: a803f26e65a4bdda5264fc2cea53a5b360f0df89
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107240"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982394"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -73,9 +73,10 @@ TDE と BYOK には、次のような利点があります。
 - Azure Active Directory (Azure AD) の ID を使用して、キー コンテナーへのアクセス権を論理サーバーに付与します。  ポータルの UI を使用すると、Azure AD の ID が自動的に作成され、キー コンテナーのアクセス許可がそのサーバーに付与されます。  BYOK で TDE を構成するために PowerShell を使用すると、Azure AD の ID が作成され、完了が確認されます。 PowerShell を使用するときの詳しいステップバイステップのガイダンスについては、「[BYOK での TDE の構成](transparent-data-encryption-byok-azure-sql-configure.md)」を参照してください。
 
   >[!NOTE]
-  >Azure AD の ID **が誤って削除されたり、キー コンテナーのアクセス ポリシーを使用してサーバーのアクセス許可が取り消されたりした**場合、そのサーバーはキー コンテナーへのアクセス権を失います。
+  >Azure AD の ID が**誤って削除されたり、サーバーのアクセス許可が取り消されたり** (キー コンテナーのアクセス ポリシーを使用して) した場合、そのサーバーはキー コンテナーへのアクセス権を失い、TDE で暗号化されたデータベースは 24 時間以内に削除されます。
   >
-  
+
+- VNET またはファイアウォールを使用せずに Azure Key Vault を構成します。  SQL がキー コンテナーにアクセスできなくなった場合、TDE で暗号化されたデータベースは、24 時間以内に削除されます。
 - すべての暗号化キーの監査とレポートを有効にする: Key Vault が提供するログは、他のセキュリティ情報ツールやイベント管理 (SIEM) ツールに簡単に挿入することができます。 Operations Management Suite (OMS) の [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) は、既に統合されているサービスの 1 つの例です。
 - 暗号化されたデータベースの高可用性を確実にするには、各論理サーバーを異なるリージョンに存在する 2 つの Azure Key Vault で構成します。
 

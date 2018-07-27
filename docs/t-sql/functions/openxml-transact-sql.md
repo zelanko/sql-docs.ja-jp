@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255514"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086744"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|既定では、**属性中心**のマッピングが使用されます。|  
 |**1**|**属性中心**のマッピングを使用します。 XML_ELEMENTS と組み合わせることができます。 この場合、まだ処理されていないすべての列に対して、まず**属性中心**のマッピングが適用され、次に**要素中心**のマッピングが適用されます。|  
 |**2**|**要素中心**のマッピングを使用します。 XML_ATTRIBUTES と組み合わせることができます。 この場合、まだ処理されていないすべての列に対して、まず**属性中心**のマッピングが適用され、次に**要素中心**のマッピングが適用されます。|  
-|**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 取得したコンテキストにおいて、このフラグは、使用したデータをオーバーフロー プロパティ **@mp:xmltext** にコピーしないことを示します。|  
+|**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 取得のコンテキストにおいて、このフラグは、使用したデータをオーバーフロー プロパティ **\@mp:xmltext** にコピーしないことを示します。|  
   
  *SchemaDeclaration*  
  フォームのスキーマ定義です。*ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  

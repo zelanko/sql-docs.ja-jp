@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a807550f86205d3f1f6c341599188cea08b6ee97
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: e2c2625c036a1f8d6a66660760c383ad4b676eb7
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36240974"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999322"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION では、BEGIN DISTRIBUTED TRANSACTION によって明示的にまたはローカル トランザクションのエスカレートにより開始された分散型トランザクション内の *savepoint_name* は参照できません。  
   
- COMMIT TRANSACTION ステートメントの実行後は、トランザクションをロールバックできません。ただし、COMMIT TRANSACTION が、ロールバックするトランザクション内に含まれている入れ子にされたトランザクションに関連付けられている場合を除きます。 この場合、COMMIT TRANSACTION を発行していたとしても、入れ子にされたトランザクションはロールバックされます。  
+ COMMIT TRANSACTION ステートメントの実行後は、トランザクションをロールバックできません。ただし、COMMIT TRANSACTION が、ロールバックするトランザクション内に含まれている入れ子にされたトランザクションに関連付けられている場合を除きます。 この場合、COMMIT TRANSACTION を発行していたとしても、入れ子になったトランザクションはロールバックされます。  
   
  トランザクションの中で、同じセーブポイント名を重複して指定することができます。しかし、重複するセーブポイント名を使用する ROLLBACK TRANSACTION は、そのセーブポイント名を使用する最新の SAVE TRANSACTION にしかロールバックできません。  
   

@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421571"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088124"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421571"
 |プロパティ|ReplTest1|  
 |--------------|-----------|  
 |構文|**time** [ (*fractional second scale*) ]|  
-|使用方法|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|使用方法|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|秒の小数点以下の有効桁数を指定します。<br /><br /> 0 ～ 7 の整数を指定できます。 Informatica の場合は、0 ～ 3 の整数を指定できます。<br /><br /> 既定の有効桁数は 7 (100 ナノ秒) です。|  
 |既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|hh:mm:ss[.nnnnnnn] (Informatica の場合は nnn)<br /><br /> 詳しくは、後の「下位クライアントの下位互換性」セクションをご覧ください。|  
 |範囲|00:00:00.0000000 ～ 23:59:59.9999999 (Informatica の場合は 00:00:00.000 ～ 23:59:59.999)|  
@@ -56,7 +56,7 @@ ms.locfileid: "37421571"
 |ストレージのサイズ|既定では 5 バイト固定 (秒部分の既定の有効桁数は 100ns) です。 Informatica の場合は、既定では 4 バイト固定 (秒部分の既定の有効桁数は 1 ミリ秒) です。|  
 |精度|100 ナノ秒 (Informatica では 1 ミリ秒)|  
 |既定値|00:00:00<br /><br /> この値は、**date** から **datetime2** または **datetimeoffset** への暗黙的な変換で、付加的な時刻要素として使用されます。|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|[ユーザー アカウント制御]|  
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
   

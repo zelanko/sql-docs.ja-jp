@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ad62b912dbe788aa6fffb016440a597c0a27cce
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1d411c73e322e4043645a161e059d5cd6f1a300f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249704"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088394"
 ---
 # <a name="variables-transact-sql"></a>変数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Transact-SQL ローカル変数は、特定の型の単一データ値を保持�
 * ストアド プロシージャのリターン コードや関数の戻り値によって返されるデータ値を保存する場合。
 
 > [!NOTE]
-> 一部の Transact-SQL システム関数の名前には、2 つの*アット* マーク (@@) で始まるものがあります。 初期のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、@@functions がグローバル変数と呼ばれていましたが、これらは変数ではなく、変数とは違った動作をします。 @@functions はシステム関数であり、構文の用法は関数の規則に従います。
+> 一部の Transact-SQL システム関数の名前には、2 つの "*アット*" マーク (\@\@) で始まるものがあります。 初期のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、\@\@ 関数がグローバル変数と呼ばれていましたが、これらは変数ではなく、変数とは違った動作をします。 \@\@ 関数はシステム関数であり、構文の用法は関数の規則に従います。
 
 次のスクリプトは小さなテスト テーブルを作成し、そのテーブルに 26 行を設定する例です。 このスクリプトでは変数を使用して次の 3 つのことを行います。 
 
@@ -85,17 +85,17 @@ GO
 
 ## <a name="declaring-a-transact-sql-variable"></a>Transact-SQL 変数の宣言
 DECLARE ステートメントでは、次の手順で Transact-SQL 変数が初期化されます。 
-* 名前を割り当てます。 名前は 1 つの @ で始まる必要があります。
+* 名前を割り当てます。 名前は 1 つの \@ で始まる必要があります。
 * システム提供のデータ型またはユーザー定義データ型と長さを割り当てます。 数値変数の場合は、有効桁数と小数点以下桁数も割り当てます。 XML 型の変数の場合は、省略可能なスキーマ コレクションを割り当てることができます。
 * 値を NULL に設定します。
 
-たとえば、次の **DECLARE** ステートメントでは、int データ型の **@mycounter** という名前のローカル変数が作成されます。  
+たとえば、次の **DECLARE** ステートメントでは、int データ型の **\@mycounter** という名前のローカル変数が作成されます。  
 ```sql
 DECLARE @MyCounter int;
 ```
 複数のローカル変数を宣言するには、最初のローカル変数を定義した後にコンマを付け、次のローカル変数名とデータ型を指定します。
 
-たとえば、次の **DECLARE** ステートメントでは、**@LastName**、**@FirstName** 、および **@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
+たとえば、次の **DECLARE** ステートメントでは、**\@LastName**、**\@FirstName**、および **\@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -165,7 +165,7 @@ GO
 > [!WARNING]
 > 1 つの SELECT ステートメントに複数の代入句がある場合、SQL Server では式の評価順序が保証されません。 複数の代入の間に参照がある場合のみ、その影響を確認できることに注意してください。
 
-SELECT ステートメントが複数の行を返すときに、変数がスカラーではない式を参照している場合は、結果セットの最終行でその式に対して返された値が変数に設定されます。 たとえば、次のバッチの **@EmpIDVariable** は返された最終行の **BusinessEntityID** 値、つまり 1 に設定されます。  
+SELECT ステートメントが複数の行を返すときに、変数がスカラーではない式を参照している場合は、結果セットの最終行でその式に対して返された値が変数に設定されます。 たとえば、次のバッチの **\@EmpIDVariable** は返された最終行の **BusinessEntityID** 値、つまり 1 に設定されます。  
 
 ```sql
 USE AdventureWorks2014;

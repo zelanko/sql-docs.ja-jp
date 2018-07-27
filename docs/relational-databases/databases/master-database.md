@@ -1,7 +1,7 @@
 ---
 title: master データベース | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2016
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: databases
@@ -19,16 +19,19 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d33bb332481561a1a81c0d18ebcfb19b4fc32f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ffc0e8ccb310cb5a5d491f057ee2b8b5074e080
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930987"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108125"
 ---
 # <a name="master-database"></a>master データベース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **master** データベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのシステム レベルの情報がすべて記録されます。 記録される情報には、ログオン アカウント、エンドポイント、リンク サーバー、システム構成設定など、インスタンス全体のメタデータが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、システム オブジェクトが **master** データベースではなく、 [Resource データベース](../../relational-databases/databases/resource-database.md)に格納されるようになりました。 また、 **master** は、他のすべてのデータベースの存在、それらのデータベース ファイルの場所、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の初期化情報を記録するデータベースでもあります。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **データベースが使用できないと、** を開始できません。  
+
+> [!IMPORTANT]
+> Azure SQL Database 論理サーバーでは、master データベースと tempdb データベースのみが適用されます。 論理サーバーと論理 master データベースの概念については、「[Azure SQL 論理サーバーとは何か](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)」を参照してください。 Azure SQL Database のコンテキストでの tempdb の詳細については、「[SQL Database の Tempdb データベース](tempdb-database.md#tempdb-database-in-sql-database)」を参照してください。 Azure SQL Database Managed Instance の場合、すべてのシステム データベースが適用されます。 Azure SQL Database の Managed Instance について詳しくは、「[マネージド インスタンスとは?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)」をご覧ください。
   
 ## <a name="physical-properties-of-master"></a>master データベースの物理プロパティ  
  \line 次の表は、 **master** のデータ ファイルとログ ファイルの初期構成値の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
@@ -46,34 +49,34 @@ ms.locfileid: "32930987"
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|いいえ|  
-|ANSI_NULL_DEFAULT|OFF|はい|  
-|ANSI_NULLS|OFF|はい|  
-|ANSI_PADDING|OFF|はい|  
-|ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
+|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
+|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
+|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
+|ARITHABORT|OFF|[ユーザー アカウント制御]|  
 |AUTO_CLOSE|OFF|いいえ|  
-|AUTO_CREATE_STATISTICS|ON|はい|  
+|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
 |AUTO_SHRINK|OFF|いいえ|  
-|AUTO_UPDATE_STATISTICS|ON|はい|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
+|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
-|CURSOR_DEFAULT|GLOBAL|はい|  
+|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
+|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|ON|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|はい|  
-|PAGE_VERIFY|CHECKSUM|はい|  
-|PARAMETERIZATION|SIMPLE|はい|  
-|QUOTED_IDENTIFIER|OFF|はい|  
+|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
+|PAGE_VERIFY|CHECKSUM|[ユーザー アカウント制御]|  
+|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
+|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
-|RECOVERY|SIMPLE|はい|  
-|RECURSIVE_TRIGGERS|OFF|はい|  
+|RECOVERY|SIMPLE|[ユーザー アカウント制御]|  
+|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
 |Service Broker のオプション|DISABLE_BROKER|いいえ|  
-|TRUSTWORTHY|OFF|はい|  
+|TRUSTWORTHY|OFF|[ユーザー アカウント制御]|  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

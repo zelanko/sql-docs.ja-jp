@@ -24,12 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404754"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084484"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -203,7 +203,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>[パラメーター マッピング] ページ - [SQL 実行タスク エディター]
 **[SQL 実行タスク エディター]** ダイアログ ボックスの **[パラメーター マッピング]** ページを使用すると、SQL ステートメント内のパラメーターに変数をマップできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[変数名]**  
  **[追加]** をクリックしてパラメーター マッピングを追加した後で、システム変数またはユーザー定義変数を一覧から選択するか、[\<**新しい変数...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
   
@@ -218,7 +218,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **[パラメーター名]**  
  パラメーター名を指定します。  
   
- タスクで使用される接続マネージャーの種類によって、数字またはパラメーター名を使用する必要があります。 接続マネージャーの種類によっては、パラメーター名の先頭文字を @ 記号にすること、@Param1 などの特定の名前を使用すること、またはパラメーター名として列名を使用することが求められます。  
+ タスクで使用される接続マネージャーの種類によって、数字またはパラメーター名を使用する必要があります。 接続マネージャーの種類によっては、パラメーター名の先頭文字を \@ 記号にすること、\@Param1 などの特定の名前を使用すること、またはパラメーター名として列名を使用することが求められます。  
   
  **[パラメーター サイズ]**  
  文字列やバイナリ フィールドなどの可変長パラメーターのサイズを指定します。  
@@ -234,7 +234,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
 ## <a name="result-set-page---execute-sql-task-editor"></a>[結果セット] ページ - [SQL 実行タスク エディター]
 **[SQL 実行タスク エディター]** ダイアログ ボックスの **[結果セット]** ページを使用すると、SQL ステートメントの結果を新しい変数または既存の変数にマップできます。 このダイアログ ボックスのオプションは、[全般] ページの **[ResultSet]** が **[なし]** に設定されている場合は無効です。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[結果名]**  
  **[追加]** をクリックして結果セットのマッピング設定を追加した後、結果に名前を付けます。 結果セットの種類によっては、特定の結果名を使用する必要があります。  
   
@@ -273,16 +273,16 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 -   [リターン コードの値の取得](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a> パラメーター名とパラメーター マーカー  
- SQL コマンドの構文では、SQL 実行タスクが使用する接続の種類によって、異なるパラメーター マーカーが使用されます。 たとえば、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーの場合は、SQL コマンドが使用するパラメーター マーカーの形式を **@varParameter** にする必要がありますが、OLE DB 接続の場合は疑問符 (?) パラメーター マーカーが必要です。  
+ SQL コマンドの構文では、SQL 実行タスクが使用する接続の種類によって、異なるパラメーター マーカーが使用されます。 たとえば、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーの場合は、SQL コマンドが使用するパラメーター マーカーの形式を **\@varParameter** にする必要がありますが、OLE DB 接続の場合は疑問符 (?) パラメーター マーカーが必要です。  
   
- 変数とパラメーターの間でのマッピングでパラメーター名として使用できる名前も、接続マネージャーの種類によって異なります。 たとえば、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーでは @ プレフィックス付きのユーザー定義名を使用し、OLE DB 接続マネージャーではパラメーター名として 0 から始まる序数の数値を使用する必要があります。  
+ 変数とパラメーターの間でのマッピングでパラメーター名として使用できる名前も、接続マネージャーの種類によって異なります。 たとえば、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーでは \@ プレフィックス付きのユーザー定義名を使用し、OLE DB 接続マネージャーではパラメーター名として 0 から始まる序数の数値を使用する必要があります。  
   
  次の表に、SQL 実行タスクで使用できる接続マネージャーの種類の SQL コマンドの要件をまとめます。  
   
 |接続の種類|パラメーター マーカー|[パラメーター名]|SQL コマンドの例|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO (ADO)|?|Param1、Param2、...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<パラメーター名>|@\<パラメーター名>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<パラメーター名>|\@\<パラメーター名>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL および OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -375,7 +375,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 -   ADO 接続では、Param1 や Param2 など、任意の 2 つのパラメーター名を使用します。ただし、これらのパラメーター名は、パラメーター リストの序数位置によってマップされる必要があります。  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続では、パラメーター名として @parmMinProductID と @parmMaxProductID が使用されます。  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続では、パラメーター名 \@parmMinProductID と \@parmMaxProductID を使用します。  
   
 ###  <a name="Stored_procedures"></a> ストアド プロシージャでのパラメーターの使用  
  ストアド プロシージャを実行する SQL コマンドでは、パラメーター マッピングを使用することもできます。 パラメーター マーカーとパラメーター名の使用方法に関する規則は、パラメーター化クエリの規則と同様に、SQL 実行タスクで使用される接続マネージャーの種類によって異なります。  
@@ -421,7 +421,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |接続の種類|パラメーター マーカー|  
     |---------------------|----------------------|  
     |ADO (ADO)|?|  
-    |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|\@\<パラメーター名>|  
     |ODBC|?|  
     |EXCEL および OLE DB|?|  
   
@@ -444,7 +444,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |接続の種類|[パラメーター名]|  
     |---------------------|--------------------|  
     |ADO (ADO)|Param1、Param2、...|  
-    |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|\@\<パラメーター名>|  
     |ODBC|1、2、3、…|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   
@@ -526,9 +526,9 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 |結果セットの種類|変数のデータ型|オブジェクトの種類|  
 |---------------------|---------------------------|--------------------|  
 |単一行|結果セット内の型列と互換性のあるすべての型|適用なし|  
-|完全な結果セット|**オブジェクト**|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは ADO **Recordset**です。<br /><br /> タスクで [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーなどのマネージ接続マネージャーを使用する場合、返されるオブジェクトは **System.Data.DataSet** です。<br /><br /> 次の例に示すように、スクリプト タスクを使用して、 **System.Data.DataSet** オブジェクトにアクセスできます。<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|完全な結果セット|**オブジェクト**|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは ADO **Recordset**です。<br /><br /> タスクで [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーなどのマネージド接続マネージャーを使用する場合、返されるオブジェクトは **System.Data.DataSet** です。<br /><br /> 次の例に示すように、スクリプト タスクを使用して、 **System.Data.DataSet** オブジェクトにアクセスできます。<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
 |XML|**String**|**String**|  
-|XML|**オブジェクト**|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは **MSXML6.IXMLDOMDocument**です。<br /><br /> タスクで [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーなどのマネージ接続マネージャーを使用する場合、返されるオブジェクトは **System.Xml.XmlDocument** です。|  
+|XML|**オブジェクト**|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは **MSXML6.IXMLDOMDocument**です。<br /><br /> タスクで [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーなどのマネージド接続マネージャーを使用する場合、返されるオブジェクトは **System.Xml.XmlDocument** です。|  
   
  変数は、SQL 実行タスクまたはパッケージのスコープ内で定義できます。 変数にパッケージ スコープがある場合、結果セットはパッケージ内の他のタスクやコンテナーで利用できます。また、パッケージ実行タスクや DTS 2000 パッケージ実行タスクが実行する任意のパッケージでも利用できます。  
   

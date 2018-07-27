@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - ssms のインストール、ssms のダウンロード、最新の ssms
-- '[SQL Server Management Studio]'
+- SQL Server Management Studio
 - ssms.exe
 - sql man studio
 - sql management studio
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957685"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188938"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ SQL Server Management Studio (SSMS) を使用すると、データベースと�
 
 SSMS 17.x は、*SQL Server Management Studio* の最新世代であり、SQL Server 2017 をサポートしています。
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=875802) (以前のバージョン SSMS 17.x はコンピューター上に必要ありません)**
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 アップグレード パッケージのダウンロード (17.x から 17.8.1 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 アップグレード パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=875804) (17.x から 17.8.1 へのアップグレード。以前のバージョン SSMS 17.x がコンピューター上に必要です)**
 
 
 **バージョン情報**
@@ -79,7 +79,7 @@ SQL Server Management Studio 17.8.1 アップグレード パッケージ (17.x 
 > [!NOTE]
 > SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールになりました。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
 
-## <a name="sql-server-management-studio"></a>[SQL Server Management Studio]
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 
 ## <a name="new-in-this-release"></a>このリリースの新機能
@@ -142,11 +142,16 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 ## <a name="release-notes"></a>リリース ノート
 
-この 17.8 リリースの問題と制限事項を次に示します。
+この 17.8.1 リリースの問題と制限事項を次に示します。
 
 - *[プロパティ]* ウィンドウでファイル グループのプロパティを変更した後に *[スクリプト]* ボタンをクリックすると、2 つのスクリプトが生成されます。1 つ目は *USE<database>* ステートメントを使用したスクリプト、2 つ目は *USE master* ステートメントを使用したスクリプトです。  *USE master* を使用したスクリプトの生成時にはエラーが発生するため、このスクリプトを破棄する必要があります。 *USE <database>* ステートメントを含むスクリプトを実行してください。
 - 新しい *General Purpose* または *Business Critical* エディションの Azure SQL Database を使用するとき、無効なエディションであるというエラーが一部のダイアログに表示されます。
 - XEvent ビューアーで待機時間が発生する場合があります。 これは、[.NET Framework における既知の問題](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)です。 NetFx 4.7.2 へのアップグレードを検討してください。
+- レプリケーション モニターが "*ファイルまたはアセンブリを読み込めませんでした...*" というエラーと共にクラッシュします。 この問題は次の方法で回避できます。
+  1. *SqlMonitor.exe* (つまりレプリケーション モニター) と SSMS を閉じます。
+  2. 更新済みの *sqlmonitor.exe.config* を [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw) からダウンロードします。
+  3. *sqlmonitor.exe.config* (通常 "C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn" にあります) を、ダウンロードしたものと置き換えます。
+  4. SSMS とレプリケーション モニターを再起動します。
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>SSMS をアンインストールおよび再インストールする

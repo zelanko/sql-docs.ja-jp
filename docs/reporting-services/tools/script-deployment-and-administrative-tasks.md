@@ -27,11 +27,12 @@ caps.latest.revision: 62
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e1279c063e41de74d3b2d8f8a7c219ad1e8338f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef2f030633a20fe66b024cbfaf2a13325851f26d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980405"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>配置タスクおよび管理タスクのスクリプト作成
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 |レポート サーバー データベース接続を構成する。|接続文字列、アカウントまたはパスワード、認証の種類を変更する場合は、 **rsconfig** ユーティリティを実行して接続を構成します。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」および「[rsconfig ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。<br /><br /> データベースの作成またはアップグレードに rsconfig.exe を使用することはできません。 データベースと RSExecRole が既に存在している必要があります。|  
 |スケールアウト配置を構成する。|スケールアウト配置を自動化するには、次のいずれかのアプローチを使用します。<br /><br /> -   rskeymgmt.exe ユーティリティを実行して、レポート サーバー インスタンスを既存の環境に追加する。 詳細については、「[スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)」を参照してください。<br />-   レポート サーバー WMI プロバイダーに対して実行するカスタム コードを作成する。|  
 |暗号化キーをバックアップする。|暗号化キーのバックアップを自動化するには、次のいずれかのアプローチを使用します。<br /><br /> -   rskeymgmt.exe ユーティリティを実行してキーをバックアップする。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。<br />-   レポート サーバー WMI プロバイダーに対して実行するカスタム コードを作成する。|  
-|レポート サーバーの電子メールを構成する。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーに対して実行するカスタム コードを作成します。 プロバイダーでは、電子メールの構成設定のサブセットがサポートされています。<br /><br /> RSReportServer.config ファイルにはすべての設定が含まれていますが、このファイルの使用を自動化しないようにしてください。 特に、ファイルを別のレポート サーバーにコピーする場合は、バッチ ファイルを使用しないでください。 各構成ファイルには、現在のインスタンスに固有の値が含まれています。 これらの値は、別のレポート サーバー インスタンスでは無効になります。<br /><br /> 設定の詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)」を参照してください。|  
+|レポート サーバーの電子メールを構成する。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーに対して実行するカスタム コードを作成します。 プロバイダーでは、電子メールの構成設定のサブセットがサポートされています。<br /><br /> RSReportServer.config ファイルにはすべての設定が含まれていますが、このファイルの使用を自動化しないようにしてください。 特に、ファイルを別のレポート サーバーにコピーする場合は、バッチ ファイルを使用しないでください。 各構成ファイルには、現在のインスタンスに固有の値が含まれています。 これらの値は、別のレポート サーバー インスタンスでは無効になります。<br /><br /> 設定について詳しくは、「[電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)」をご覧ください。|  
 |自動実行アカウントを構成する。|自動実行アカウントの構成を自動化するには、次のいずれかのアプローチを使用します。<br /><br /> -   rsconfig.exe ユーティリティを実行してアカウントを構成する。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br />-   レポート サーバー WMI プロバイダーを呼び出すカスタム コードを作成する。|  
 |既存のコンテンツを別のレポート サーバー上に配置する (フォルダー階層、ロールの割り当て、レポート、サブスクリプション、スケジュール、データ ソース、リソースなど)。|既存のレポート サーバー環境を再構築する最善の方法は、レポート サーバー データベースを新しいレポート サーバー インスタンスにコピーすることです。<br /><br /> カスタム コードを作成して、既存のレポート サーバーのコンテンツをプログラムによって再構築する方法もあります。 ただし、サブスクリプション、レポート スナップショット、レポート履歴は、プログラムによって再作成できないことに注意してください。<br /><br /> 場合によっては両者を組み合わせた方法も効果的です (つまり、レポート サーバー データベースを復元してから、カスタム コードによって、特定の環境に合わせてレポート サーバー データベースを更新します)。<br /><br /> 詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。<br /><br /> レポート サーバー データベースの再配置の詳細については、「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。 レポート サーバー環境をプログラムによって構築する方法の詳細については、このトピックの「スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行」を参照してください。|  
   

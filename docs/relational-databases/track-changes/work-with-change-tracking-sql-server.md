@@ -28,12 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dfd9c3494c1c46c21a851e251182f31f508f6e52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ab8bb044369141788aab51ca151f5c626c5a855
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013069"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087624"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>変更の追跡のしくみ (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "33013069"
  CHANGE_TRACKING_CURRENT_VERSION() 関数  
  この関数を使用すると、現在のバージョンを取得して、次回の変更クエリの際に使用できます。 このバージョンは、最後にコミットされたトランザクションのバージョンを表します。  
   
- CHANGE_TRACKING_MIN_VALID_VERSION() 関数  
+ CHANGE_TRACKING_MIN_VALID_VERSION() function  
  この関数を使用すると、クライアントの有効な最小バージョン (CHANGETABLE() から有効な結果を取得するために最低限必要なバージョン) を取得できます。 クライアントは、この関数から返される値に対して最終同期バージョンをチェックする必要があります。 最終同期バージョンがこの関数から返されたバージョンより小さいと、クライアントは CHANGETABLE() から有効な結果を取得できないため、再初期化が必要になります。  
   
 ### <a name="obtaining-initial-data"></a>初期データの取得  

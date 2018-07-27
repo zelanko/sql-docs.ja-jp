@@ -32,12 +32,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d8fad120755b75f9d7e07f9e10c184de6f879810
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788293"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024268"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -90,7 +90,9 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  秘密キーをファイルにバックアップする場合は、暗号化が必要です。 バックアップした証明書の保護に使用するパスワードは、証明書の秘密キーの暗号化に使用するパスワードとは異なります。  
   
- バックアップした証明書を復元するには、[CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) ステートメントを使います。  
+ バックアップした証明書を復元するには、[CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) ステートメントを使います。
+ 
+ バックアップを実行すると、ファイルは SQL Server インスタンスのサービス アカウントに対して ACL されます。 別のアカウントで実行しているサーバーに証明書を復元する必要がある場合は、ファイルに対するアクセス許可を調整して、新しいアカウントでファイルの読み取りを実行できるようにする必要があります。 
   
 ## <a name="permissions"></a>アクセス許可  
  証明書に対する CONTROL 権限と、秘密キーの暗号化に使用するパスワードの情報が必要です。 証明書のパブリックの部分だけをバックアップする場合は、証明書の権限が必要です。また、呼び出し元に対して証明書の VIEW 権限が拒否されていないことも必要になります。  
