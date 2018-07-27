@@ -1,5 +1,5 @@
 ---
-title: sys.internal_tables (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.internal_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,42 +25,42 @@ caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: fe0991279a517f10d3a00f56bc056aa6f0588ef7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 023f2b4a26a816ed31013aa20355593d0eda0faa
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181918"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216893"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  内部テーブルであるオブジェクトごとに 1 行のデータを返します。 内部テーブルはによって自動的に生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]さまざまな機能をサポートするためにします。 たとえば、プライマリ XML インデックスを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を細分化の XML ドキュメントのデータを保持する内部テーブルが自動的に作成します。 内部テーブルに表示される、 **sys**すべてのデータベースのスキーマなど、その機能を示す、システムによって生成された一意の名前を持つ**xml_index_nodes_2021582240_32001**または**queue_messages_1977058079**  
+  内部テーブルであるオブジェクトごとに 1 行のデータを返します。 内部テーブルはによって自動的に生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]さまざまな機能をサポートします。 たとえば、プライマリ XML インデックスを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]細分の XML ドキュメントのデータを保持する内部テーブルを自動的に作成されます。 内部テーブルに表示される、 **sys**すべてのデータベースのスキーマなど、その機能を示す、システムによって生成された一意の名前を持つ**xml_index_nodes_2021582240_32001**または**queue_messages_1977058079**  
   
- 内部テーブルには、ユーザーがアクセスできるデータは含まれていません。また、そのスキーマは固定され変更できません。 内部テーブルの名前を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで参照することはできません。 たとえば、SELECT などのステートメントを実行することはできません\*FROM  *\<sys.internal_table_name >* です。 ただし、カタログ ビューにクエリを実行して、内部テーブルのメタデータを表示することはできます。  
+ 内部テーブルには、ユーザーがアクセスできるデータは含まれていません。また、そのスキーマは固定され変更できません。 内部テーブルの名前を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで参照することはできません。 たとえば、SELECT などのステートメントを実行することはできません\*FROM  *\<sys.internal_table_name >* します。 ただし、カタログ ビューにクエリを実行して、内部テーブルのメタデータを表示することはできます。  
   
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)です。|  
-|**internal_type**|**tinyint**|内部テーブルの種類。<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (空間インデックスなど)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**|  
-|**internal_type_desc**|**nvarchar(60)**|内部テーブルの種類の説明。<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS|  
-|**parent_id**|**int**|親の ID。スキーマのスコープが設定されているかどうかは関係ありません。 親が存在しない場合は 0 です。<br /><br /> **queue_messages** = **object_id**キューの<br /><br /> **xml_index_nodes** = **object_id** xml インデックスの<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id**フルテキスト カタログの<br /><br /> **fulltext_index_map** = **object_id**フルテキスト インデックスの<br /><br /> **query_notification**、または**service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id**の空間インデックスなど拡張インデックスは、<br /><br /> **object_id**追跡が有効にするテーブルのテーブルの = **change_tracking**|  
-|**parent_minor_id**|**int**|親のマイナー ID。<br /><br /> **xml_index_nodes** = **index_id** XML インデックスの<br /><br /> **extended_indexes** = **index_id**の空間インデックスなど拡張インデックスは、<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**、または**change_tracking**|  
+|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|**internal_type**|**tinyint**|内部テーブルの種類。<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (など、空間インデックスの場合)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 236 = **selective_xml_index_node_table**|  
+|**internal_type_desc**|**nvarchar(60)**|内部テーブルの種類の説明。<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE|  
+|**parent_id**|**int**|親の ID。スキーマのスコープが設定されているかどうかは関係ありません。 親が存在しない場合は 0 です。<br /><br /> **queue_messages** = **object_id**のキュー<br /><br /> **xml_index_nodes** = **object_id**の xml インデックス<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id**のフルテキスト カタログ<br /><br /> **fulltext_index_map** = **object_id**のフルテキスト インデックス<br /><br /> **query_notification**、または**service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id**の空間インデックスなど拡張インデックスは、<br /><br /> **object_id**表の追跡が有効になっているテーブルの = **change_tracking**|  
+|**parent_minor_id**|**int**|親のマイナー ID。<br /><br /> **xml_index_nodes** = **index_id**の XML インデックス<br /><br /> **extended_indexes** = **index_id**の空間インデックスなど拡張インデックスは、<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**、または**change_tracking**|  
 |**lob_data_space_id**|**int**|0 以外の値の場合、このテーブルのラージ オブジェクト (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID。|  
-|**filestream_data_space_id**|**int**|将来の使用のために予約されています。|  
+|**filestream_data_space_id**|**int**|将来使用するために予約されています。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  内部テーブルは、親エンティティと同じファイル グループに配置されます。 後半の例 F で示すカタログ クエリを使用して、内部テーブルが行内データ、行外データ、およびラージ オブジェクト (LOB) データに使用するページ数を返すことができます。  
   
  使用することができます、 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)システム プロシージャを内部テーブルの領域使用状況データを返します。 **sp_spaceused**次の方法で内部テーブルの領域をレポートします。  
   
 -   キュー名を指定すると、キューに関連付けられた基になる内部テーブルが参照され、そのストレージ使用量がレポートされます。  
   
--   XML インデックス、空間インデックス、フルテキスト インデックスの内部テーブルによって使用されているページに含まれる、 **index_size**列です。 列に XML インデックス、空間インデックス、およびそのオブジェクトのフルテキスト インデックスのページが含まれるテーブルまたはインデックス付きビューの名前を指定すると、**予約**と**index_size**です。  
+-   XML インデックス、空間インデックス、およびフルテキスト インデックスの内部テーブルで使用されるページに記載されて、 **index_size**列。 列で、XML インデックス、空間インデックス、およびそのオブジェクトのフルテキスト インデックスのページが含まれているテーブルまたはインデックス付きビューの名前を指定すると、**予約**と**index_size**します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、カタログ ビューを使用して内部テーブルのメタデータにクエリを実行する方法について説明します。  
@@ -180,6 +180,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [オブジェクトのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [オブジェクト カタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

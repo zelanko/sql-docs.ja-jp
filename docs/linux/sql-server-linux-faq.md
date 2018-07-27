@@ -4,19 +4,19 @@ description: この記事では、Linux で実行されている SQL Server に�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102230"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268810"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux Frequently Asked Questions (FAQ)
 
@@ -34,9 +34,13 @@ ms.locfileid: "39102230"
 
    SQL Server をテストして、上記のディストリビューションの Linux ではサポートされています。 他の Linux ディストリビューションは密接に関連し、SQL Server を実行できる可能性があります (たとえば、CentOS、密接に関連する Red Hat Enterprise Server)。 サポートされていないオペレーティング システムに SQL Server をインストールする場合は、確認しますが、**サポート ポリシー**のセクション、 [for Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)サポートを理解するには影響します。 いくつかコミュニティに維持される Linux ディストリビューションには、基になるオペレーティング システムが問題である場合は、サポートを受ける形式的な方法はありません。 にも注意してください。
 
-1. **Linux でサポートされるは、SQL Server 機能ですか。**
+1. **どのように Linux 上のライセンスの機能ですか。**
 
-   サポートされている機能と既知の問題の完全な一覧を参照してください、[リリース ノート](sql-server-linux-release-notes.md)します。
+   SQL Server では、Windows と Linux の両方の同様のライセンスします。 実際には、SQL Server のライセンスを取得して、そのライセンスを使用して、好みのプラットフォーム上に選択できます。 詳細については、次を参照してください。 [SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)します。
+
+1. **Linux 上の SQL Server を Windows と同じですか。**
+
+   Core for SQL Server データベース エンジンは、Windows 上にある Linux で同じです。 ただし、一部の機能は現在サポートされていません Linux 上。 Linux でサポートされていない機能の一覧は、次を参照してください。、[機能とサービスがサポートされていない](sql-server-linux-release-notes.md#Unsupported)します。 確認することも、[既知の問題](sql-server-linux-release-notes.md#known-issues)します。 これらのリストで指定されている場合を除き、他の SQL Server の機能とサービスは、Linux でサポートされます。
 
 1. **SQL Server のサポート ポリシーとは何ですか。**
 

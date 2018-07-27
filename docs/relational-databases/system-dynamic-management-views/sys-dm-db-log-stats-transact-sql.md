@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061450"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278953"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -75,6 +75,9 @@ ms.locfileid: "38061450"
 |log_recovery_size_mb   |**float**  |   ログのサイズを mb 単位でログを復旧してから[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)します。|  
 |recovery_vlf_count |**bigint** |   合計数[仮想ログ ファイル (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)フェールオーバーやサーバーの再起動があった場合に回復します。 |  
 
+
+## <a name="remarks"></a>コメント
+実行時に`sys.dm_db_log_stats`セカンダリ レプリカとして可用性グループに参加しているデータベースに対して上記で説明したフィールドのサブセットのみが返されます。  現時点では、のみ`database_id`、 `recovery_model`、および`log_backup_time`がセカンダリ データベースに対して実行したときに返されます。   
 
 ## <a name="permissions"></a>アクセス許可  
 必要があります、`VIEW DATABASE STATE`データベースの権限。   

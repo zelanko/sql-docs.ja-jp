@@ -1,5 +1,5 @@
 ---
-title: IHpublisherindexes (TRANSACT-SQL) |Microsoft ドキュメント
+title: IHpublisherindexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 427df96d3f6808cbaa00d079546ad766d42fb701
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 657d8d364d0691ec2c0150b4ca933fcd46ce8f9f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004049"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103840"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHpublisherindexes**システム テーブルにはから SQL Server 以外のパブリッシャー、現在のディストリビューターを使用してレプリケートされたインデックスごとに 1 行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisherindex_id**|**int**|パブリッシュされたインデックスを識別します。|  
-|**table_id**|**int**|テーブルを識別[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)インデックスが属しています。|  
-|**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャー、インデックスのパブリッシュされたを識別します。|  
+|**table_id**|**int**|テーブルを識別する[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)インデックスが属しています。|  
+|**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャー、インデックスの発行元を識別します。|  
 |**name**|**sysname**|パブリッシュされたインデックスの名前です。|  
 |**type**|**nvarchar (255)**|サポートされているインデックスの種類、 [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md)システム テーブル。|  
   

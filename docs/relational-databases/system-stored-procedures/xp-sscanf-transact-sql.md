@@ -1,5 +1,5 @@
 ---
-title: xp_sscanf (TRANSACT-SQL) |Microsoft ドキュメント
+title: xp_sscanf (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b989dfa254330034cab4ab5278e2e4a9cca4da3d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257636"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103860"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +43,17 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>引数  
- **文字列**  
+ **string**  
  引数の値を読み出す文字列を指定します。  
   
  OUTPUT  
- 値を指定した場合、配置*引数*出力パラメーターです。  
+ 指定した場合は、値を代入*引数*出力パラメーター。  
   
  *format*  
- 書式設定された文字列がに似ていますが、C 言語のサポート内容**sscanf**関数。 現在サポートしているのは %s フォーマット引数のみです。  
+ 書式設定された文字の文字列を C 言語のサポート内容に似ています**sscanf**関数。 現在サポートしているのは %s フォーマット引数のみです。  
   
  *argument*  
- **Varchar**変数の対応する値に設定*形式*引数。  
+ **Varchar**変数に対応する値に設定*形式*引数。  
   
  *n*  
  最大 50 の引数を指定できることを示すプレースホルダーです。  
@@ -67,7 +66,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

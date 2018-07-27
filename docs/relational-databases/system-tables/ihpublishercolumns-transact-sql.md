@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumns (TRANSACT-SQL) |Microsoft ドキュメント
+title: IHpublishercolumns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,36 +22,36 @@ helpviewer_keywords:
 - IHpublishercolumns system table
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bd15161e658348ea68c2f87c1468ede00bac5e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1032578837699182d4c1ba73a118d03ece01b5f6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003759"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103875"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishercolumns**システム テーブルは、パブリッシャー側で格納されているメタデータを表します。 このテーブルには、レプリケートから SQL Server 以外のパブリッシャー、現在のディストリビューターを使用して各列の 1 つの行が含まれています。 データ型の情報が**IHpublishercolumns**データのパブリッシュ元となる SQL Server データベース管理システム (DBMS) に固有です。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **IHpublishercolumns**システム テーブルは、パブリッシャー側で格納されているメタデータを表します。 このテーブルには、1 行から SQL Server 以外のパブリッシャー、現在のディストリビューターを使用してレプリケートされた各列のデータが含まれています。 データ型情報**IHpublishercolumns**データの発行元の SQL Server データベース管理システム (DBMS) に固有です。 このテーブルは、ディストリビューション データベースに保存されます。  
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|パブリッシュされた列の識別子。|  
-|**table_id**|**int**|ソース テーブルからの識別[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)列が属しています。|  
-|**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャー、列の発行元を識別します。|  
+|**table_id**|**int**|ソース テーブルを識別する[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)列が属しています。|  
+|**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャーの列がパブリッシュされる元を識別します。|  
 |**name**|**sysname**|パブリッシュされた列の名前。|  
 |**column_ordinal**|**int**|順序に基づいた列の識別子。|  
 |**type**|**varchar(255)**|パブリッシャー側にあるパブリッシュ元となる列の列データ型。|  
-|**長さ**|**bigint**|パブリッシャー側にあるパブリッシュ元となる列の長さ。|  
+|**length**|**bigint**|パブリッシャー側にあるパブリッシュ元となる列の長さ。|  
 |**prec**|**int**|パブリッシャー側にあるパブリッシュ元となる列の有効桁数。|  
 |**scale**|**int**|パブリッシャー側にあるパブリッシュ元となる列の小数点以下桁数。|  
-|**isnullable**|**bit**|列が NULL 値を受け入れるかどうかを示す、 **1** NULL 値を受け入れることを意味します。|  
-|**iscaptured**|**bit**|列にトリガーが存在するかどうかを示します。列がアーティクルにパブリッシュされない場合もトリガーが存在することがあります。 値**1**列にトリガーが存在することを意味します。|  
+|**isnullable**|**bit**|列に NULL 値を受け入れるかどうかを示す、 **1** NULL 値を受け入れることを意味します。|  
+|**iscaptured**|**bit**|列にトリガーが存在するかどうかを示します。列がアーティクルにパブリッシュされない場合もトリガーが存在することがあります。 値**1**列に、トリガーが存在することを意味します。|  
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

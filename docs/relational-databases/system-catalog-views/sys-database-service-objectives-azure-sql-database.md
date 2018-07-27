@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 320d8d0dd434c4453a8004a0237bc9d2cbd9f352
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989274"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216973"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ Azure SQL database または Azure SQL Data Warehouse に存在する場合は�
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|Azure SQL Database サーバーのインスタンス内で一意で、データベースの ID。 結合可能な[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。|  
 |のエディション|sysname|データベースまたはデータ ウェアハウス用のサービス層:**基本的な**、**標準**、 **Premium**または**Data Warehouse**します。|  
-|service_objective|sysname|データベースの価格レベルです。 データベースがエラスティック プール内にある場合は、返す**ElasticPool**します。<br /><br /> **基本的な**階層を返します**基本的な**します。<br /><br /> **Standard サービス レベル内の単一データベース**次のいずれかを返します: S0、S1、S2 または S3 です。<br /><br /> **Premium レベルで 1 つのデータベース**次を返します: P1、P2、P4、P6/P3 または P11 します。<br /><br /> **SQL Data Warehouse** DW10000c を通じて DW100 を返します。|  
+|service_objective|sysname|データベースの価格レベルです。 データベースがエラスティック プール内にある場合は、返す**ElasticPool**します。<br /><br /> **基本的な**階層を返します**基本的な**します。<br /><br /> **Standard サービス レベル内の単一データベース**次のいずれかを返します: S0、S1、S2、S3、S4、S6、S7、S9 または S12 します。<br /><br /> **Premium レベルで 1 つのデータベース**次を返します: P1、P2、P4、P6、P11 または P15 します。<br /><br /> **SQL Data Warehouse** DW10000c を通じて DW100 を返します。|  
 |elastic_pool_name|sysname|名前、[エラスティック プール](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)データベースが属しています。 返します**NULL**データベースが 1 つのデータベースまたはデータ warehoue 場合。|  
   
 ## <a name="permissions"></a>アクセス許可  
