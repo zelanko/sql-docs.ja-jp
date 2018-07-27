@@ -1,5 +1,0 @@
-# [ssbdiagnose ユーティリティ (Service Broker)](ssbdiagnose-utility-service-broker.md)
-# [XML 出力ファイルの形式 (ssbdiagnose)](xml-output-file-format-ssbdiagnose.md)
-## [DiagnosticInformation 要素 (ssbdiagnose)](diagnosticinformation-element-ssbdiagnose.md)
-## [Banner 要素 (ssbdiagnose)](banner-element-ssbdiagnose.md)
-## [Issue 要素 (ssbdiagnose)](issue-element-ssbdiagnose.md)

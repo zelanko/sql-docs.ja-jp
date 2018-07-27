@@ -1,5 +1,0 @@
-# [FlagName プロパティ (ServerSettingsGeneralFlag クラス)](flagname-property-serversettingsgeneralflag-class.md)
-# [FlagValue プロパティ (ServerSettingsGeneralFlag クラス)](flagvalue-property-serversettingsgeneralflag-class.md)
-# [InstanceName プロパティ (ServerSettingsGeneralFlag クラス)](instancename-property-serversettingsgeneralflag-class.md)
-# [ServerSettingsGeneralFlag クラス](serversettingsgeneralflag-class.md)
-# [SetValue メソッド (ServerSettingsGeneralFlag クラス)](setvalue-method-serversettingsgeneralflag-class.md)

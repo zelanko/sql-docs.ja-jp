@@ -1,6 +1,0 @@
-# [Web サービス操作の分類 (マスター データ サービス)](categorized-web-service-operations-master-data-services.md)
-# [カスタム ワークフローの作成 - 例](create-a-custom-workflow-example.md)
-# [カスタム ワークフローの作成 - XML の説明](create-a-custom-workflow-xml-description.md)
-# [カスタム ワークフローの作成 (マスター データ サービス)](create-a-custom-workflow-master-data-services.md)
-# [マスター データ マネージャー Web サービス プロキシ クラスの作成](create-master-data-manager-web-service-proxy-classes.md)
-# [マスター データ サービスの開発者向けドキュメント](master-data-services-developer-documentation.md)

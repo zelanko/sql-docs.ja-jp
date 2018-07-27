@@ -1,6 +1,0 @@
-# [ODBC データ ソース アドミニストレーター](odbc-data-source-administrator.md)
-# [ドライバーの表示](viewing-drivers.md)
-# [データ ソースの管理](managing-data-sources.md)
-# [トレース オプションの設定](setting-tracing-options.md)
-# [ドライバーとデータ ソースについて](about-drivers-and-data-sources.md)
-# [ODBC 接続プール オプションの設定](setting-odbc-connection-pooling-options.md)

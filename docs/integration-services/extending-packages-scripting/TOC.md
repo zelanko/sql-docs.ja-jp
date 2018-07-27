@@ -1,7 +1,0 @@
-# [スクリプトによるパッケージの拡張](extending-packages-with-scripting.md)
-# [スクリプト タスクとスクリプト コンポーネントの比較](comparing-the-script-task-and-the-script-component.md)
-# [スクリプティング ソリューションとカスタム オブジェクトとの比較](comparing-scripting-solutions-and-custom-objects.md)
-# [スクリプティング ソリューションでの他のアセンブリの参照](referencing-other-assemblies-in-scripting-solutions.md)
-# [スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする](debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)
-# [スクリプト タスクによるパッケージの拡張](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)
-# [スクリプト コンポーネントによるデータ フローの拡張](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)

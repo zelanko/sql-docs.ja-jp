@@ -1,8 +1,0 @@
-# [ASSL リファレンス](analysis-services-scripting-language-assl-for-xmla.md)
-# [Analysis Services スクリプト言語の XML 要素の階層 (ASSL)](analysis-services-scripting-language-xml-element-hierarchy-assl.md)
-# [Analysis Services スクリプト言語の XML データ型階層 (ASSL)](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)
-# [Analysis Services スクリプト言語の XML 要素 (ASSL)](analysis-services-scripting-language-xml-elements-assl.md)
-## [オブジェクト +](objects/objects-assl.md)
-## [コレクション +](collections/collections-assl.md)
-## [プロパティ +](properties/properties-assl.md)
-# [Analysis Services スクリプト言語の XML データ型 (ASSL) +](data-type/analysis-services-scripting-language-xml-data-types-assl.md)

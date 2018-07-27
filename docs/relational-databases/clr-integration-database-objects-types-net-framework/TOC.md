@@ -1,5 +1,0 @@
-# [.NET Framework での SQL Server データ型](sql-server-data-types-in-the-net-framework.md)
-# [照合順序と CLR 統合データ型](collation-and-clr-integration-data-types.md)
-# [CLR での LOB (ラージ オブジェクト) パラメーターの処理](handling-large-object-lob-parameters-in-the-clr.md)
-# [CLR パラメーター データのマッピング](mapping-clr-parameter-data.md)
-# [NULL 値の許容と 3 値論理比較](nullability-and-three-value-logic-comparisons.md)

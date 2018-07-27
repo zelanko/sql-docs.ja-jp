@@ -1,5 +1,0 @@
-# [クライアント側とサーバー側の書式設定 (SQLXML 4.0)](client-side-and-server-side-formatting-sqlxml-4-0.md)
-# [クライアント側とサーバー側の XML 書式設定のアーキテクチャ (SQLXML 4.0)](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)
-# [クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0)](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)
-# [クライアント側の XML 書式設定 (SQLXML 4.0)](client-side-xml-formatting-sqlxml-4-0.md)
-# [サーバー側の XML 書式設定 (SQLXML 4.0)](server-side-xml-formatting-sqlxml-4-0.md)

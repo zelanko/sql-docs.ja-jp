@@ -1,6 +1,0 @@
-# [ステートメントの実行 (ODBC)](executing-statements-odbc.md)
-# [ステートメントのバッチ](batches-of-statements.md)
-# [直接実行](direct-execution.md)
-# [ISO オプションの効果](effects-of-iso-options.md)
-# [準備実行](prepared-execution.md)
-# [手順](procedures.md)

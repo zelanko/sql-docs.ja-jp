@@ -1,8 +1,0 @@
-# [Enabled プロパティ (ServerNetworkProtocolIpAddress クラス)](enabled-property-servernetworkprotocolipaddress-class.md)
-# [InstanceName プロパティ (ServerNetworkProtocolIPAddress クラス)](instancename-property-servernetworkprotocolipaddress-class.md)
-# [IpAddressName プロパティ (ServerNetworkProtocolIPAddress クラス)](ipaddressname-property-servernetworkprotocolipaddress-class.md)
-# [Properties プロパティ (ServerNetworkProtocolIPAddress クラス)](properties-property-servernetworkprotocolipaddress-class.md)
-# [ProtocolName プロパティ (ServerNetworkProtocolIPAddress クラス)](protocolname-property-servernetworkprotocolipaddress-class.md)
-# [ServerNetworkProtocolIPAddress クラス](servernetworkprotocolipaddress-class.md)
-# [SetDisable メソッド (ServerNetworkProtocolIPAddress クラス)](setdisable-method-servernetworkprotocolipaddress-class.md)
-# [SetEnable メソッド (ServerNetworkProtocolIPAddress クラス)](setenable-method-servernetworkprotocolipaddress-class.md)

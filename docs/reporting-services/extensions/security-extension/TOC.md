@@ -1,5 +1,0 @@
-# [Reporting Services での認証](authentication-in-reporting-services.md)
-# [Reporting Services での承認](authorization-in-reporting-services.md)
-# [カスタム セキュリティ拡張機能をインストールする方法](how-to-install-custom-security-extensions.md)
-# [セキュリティ拡張機能の実装](implementing-a-security-extension.md)
-# [セキュリティ拡張機能の概要](security-extensions-overview.md)

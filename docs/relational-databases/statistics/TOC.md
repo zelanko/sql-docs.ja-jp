@@ -1,7 +1,0 @@
-# [概要](statistics.md)  
-## [作成](create-statistics.md)  
-## [変更](modify-statistics.md)  
-## [削除](delete-statistics.md)  
-## [プロパティの表示](view-statistics-properties.md)  
-## [名前の変更](rename-statistics.md)  
-## [更新プログラム](update-statistics.md)  

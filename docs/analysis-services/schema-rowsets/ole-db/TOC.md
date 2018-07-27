@@ -1,5 +1,0 @@
-# [DBSCHEMA_CATALOGS 行セット](dbschema-catalogs-rowset.md)
-# [DBSCHEMA_COLUMNS 行セット](dbschema-columns-rowset.md)
-# [DBSCHEMA_PROVIDER_TYPES 行セット](dbschema-provider-types-rowset.md)
-# [DBSCHEMA_TABLES 行セット](dbschema-tables-rowset.md)
-# [OLE DB Schema 行セット](ole-db-schema-rowsets.md)

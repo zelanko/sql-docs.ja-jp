@@ -1,5 +1,0 @@
-# [クエリを実行する方法に関するトピック (ODBC)](executing-queries-how-to-topics-odbc.md)
-# [ステートメントの直接実行 (ODBC)](execute-a-statement-directly-odbc.md)
-# [ステートメントの準備と実行 (ODBC)](prepare-and-execute-a-statement-odbc.md)
-# [カーソル オプションの設定 (ODBC)](set-cursor-options-odbc.md)
-# [ステートメントの使用 (ODBC)](use-a-statement-odbc.md)

@@ -1,6 +1,0 @@
-# [エラーとメッセージの処理](handling-errors-and-messages.md)
-# [診断レコードと診断フィールド](diagnostic-records-and-fields.md)
-# [エラー メッセージ](error-messages.md)
-# [ネイティブ エラー番号](native-error-numbers.md)
-# [メッセージを生成するステートメントの処理](processing-statements-that-generate-messages.md)
-# [SQLSTATE (ODBC エラー コード)](sqlstate-odbc-error-codes.md)

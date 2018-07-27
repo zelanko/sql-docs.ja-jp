@@ -1,6 +1,0 @@
-# [SQL Server との通信 (ODBC)](communicating-with-sql-server-odbc.md)
-# [接続ハンドルの割り当て](allocating-a-connection-handle.md)
-# [環境ハンドルの割り当て](allocating-an-environment-handle.md)
-# [データ ソースへの接続 (ODBC)](connecting-to-a-data-source-odbc.md)
-# [データ ソースからの切断](disconnecting-from-a-data-source.md)
-# [SQL Server Native Client ODBC データ ソース](sql-server-native-client-odbc-data-sources.md)
