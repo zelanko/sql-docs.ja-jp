@@ -1,5 +1,5 @@
 ---
-title: サービス アカウント (Analysis Services) の構成 |Microsoft ドキュメント
+title: サービス アカウント (Analysis Services) の構成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dff21ebf96bf957a7f390b8dea0010fa0396ff7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019339"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130608"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>サービス アカウントの構成 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  製品全体のアカウントの準備については、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を含めて、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに関する包括的なサービス アカウントの情報を提供するトピック、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
+  製品全体のアカウントの準備については、 [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)サービスに関する包括的なサービス アカウントの情報を提供するトピック、「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows サービス アカウントと権限の構成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
   
  このトピックでは、テーブルおよびクラスター化インストールに必要な追加の権限など、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の補足情報を提供します。 また、サーバー操作をサポートするために必要な権限についても説明します。 たとえば、サービス アカウントの下で実行するように処理およびクエリ操作を構成できます。その場合、これを機能させるには追加の権限を付与する必要があります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34019339"
   
  ローカル セキュリティ設定でこのセキュリティ グループを確認できます。  
   
--   Compmgmt.msc を実行 |**ローカル ユーザーとグループ** | **グループ** | **SQLServerMSASUser$**\<サーバー名 >**$MSSQLSERVER** (の既定のインスタンス)。  
+-   Compmgmt.msc を実行する |**ローカル ユーザーとグループ** | **グループ** | **SQLServerMSASUser$**\<サーバー名 >**$MSSQLSERVER** (の既定のインスタンス)。  
   
 -   セキュリティ グループをダブルクリックして、そのメンバーを表示する。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34019339"
 |||  
 |-|-|  
 |**[プロセス ワーキング セットの増加]** (SeIncreaseWorkingSetPrivilege)|この特権は、既定では **[ユーザー]** セキュリティ グループを介してすべてのユーザーが使用可能です。 このグループの特権を削除してサーバーをロックすると、Analysis Services が起動に失敗して、「クライアントには必要な特権がありません」というエラーがログに記録される可能性があります。 このエラーが発生した場合は、特権を適切な Analysis Services セキュリティ グループに付与することで、Analysis Services に特権を復元します。|  
-|**[プロセスに対してメモリ クォータを調整する]** (SeIncreaseQuotaSizePrivilege)|この特権は、プロセスのリソースが十分でないためにプロセスの実行を完了できない場合に、さらに多くのメモリを要求するために使用します (メモリ量は、インスタンス用に設定されたメモリしきい値に依存します)。|  
+|**プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)|この特権は、プロセスのリソースが十分でないためにプロセスの実行を完了できない場合に、さらに多くのメモリを要求するために使用します (メモリ量は、インスタンス用に設定されたメモリしきい値に依存します)。|  
 |**[メモリ内のページのロック]** (SeLockMemoryPrivilege)|この特権が必要になるのは、ページングが完全にオフになっているときのみです。 既定では、表形式サーバー インスタンスは Windows ページング ファイルを使用しますが、 **VertiPaqPagingPolicy** を 0 に設定して、Windows ページングを使用しないようにすることもできます。<br /><br /> **VertiPaqPagingPolicy** を 1 (既定) にすると、表形式サーバー インスタンスは Windows ページング ファイルを使用します。 割り当てはロックされないため、必要に応じてページ アウトされます。 ページングが使用されているため、メモリ内のページをロックする必要はありません。 このため、既定の構成 ( **VertiPaqPagingPolicy** = 1) の場合、 **[メモリ内のページのロック]** 特権を表形式インスタンスに付与する必要はありません。<br /><br /> **VertiPaqPagingPolicy** を 0 にした場合。 Analysis Services のページングをオフにした場合は、割り当てがロックされ、 **[メモリ内のページのロック]** 特権が表形式インスタンスに付与されます。 このように設定され、かつ **[メモリ内のページのロック]** 特権がある場合、システムでメモリ不足が発生しているときは、Analysis Services に対して行われたメモリ割り当てをページ アウトできません。 **VertiPaqPagingPolicy** = 0 が適用されている場合、Analysis Services は **[メモリ内のページのロック]** 権限に依存します。 Windows ページングをオフにすることはお勧めしません。 このようにすると、ページングが許可されている場合には正常に処理されるような操作でメモリ不足エラーが発生する率が高まります。 [VertiPaqPagingPolicy](../../analysis-services/server-properties/memory-properties.md) の詳細については、「 **Memory Properties**」を参照してください。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>サービス アカウントに対する Windows 特権を表示または追加するには  
@@ -91,7 +91,7 @@ ms.locfileid: "34019339"
 ##  <a name="bkmk_FilePermissions"></a> Analysis Services サービス アカウントに割り当てられたファイル システム権限  
   
 > [!NOTE]  
->  各プログラム フォルダーに関連付けられている権限の一覧については、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
+>  各プログラム フォルダーに関連付けられている権限の一覧については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 」を参照してください。  
 >   
 >  IIS の構成と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に関連するファイル権限の詳細については、「[インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)」を参照してください。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "34019339"
   
  データ ファイル、プログラム実行可能ファイル、構成ファイル、ログ ファイル、および一時ファイルの権限保有者は、SQL Server セットアップによって作成されるローカル セキュリティ グループです。  
   
- インストールするインスタンスごとに作成されるセキュリティ グループが 1 つあります。 セキュリティ グループは、インスタンスに基づいてか、名前付き**SQLServerMSASUser$ MSSQLSERVER**既定のインスタンスまたは**SQLServerMSASUser$**\<servername >$\<instancename > 名前付きインスタンス。 セットアップは、サーバー操作に必要なファイル権限をこのセキュリティ グループに準備します。 \MSAS13.MSSQLSERVER\OLAP\BIN ディレクトリのセキュリティ権限をチェックすると、(サービス アカウントまたはサービスごとの SID ではなく) セキュリティ グループが該当ディレクトリの権限保有者であることがわかります。  
+ インストールするインスタンスごとに作成されるセキュリティ グループが 1 つあります。 セキュリティ グループはインスタンスに基づいて付けられます後か、という名前**SQLServerMSASUser$ MSSQLSERVER**既定のインスタンスまたは**SQLServerMSASUser$**\<servername >$\<instancename > の名前付きインスタンス。 セットアップは、サーバー操作に必要なファイル権限をこのセキュリティ グループに準備します。 \MSAS13.MSSQLSERVER\OLAP\BIN ディレクトリのセキュリティ権限をチェックすると、(サービス アカウントまたはサービスごとの SID ではなく) セキュリティ グループが該当ディレクトリの権限保有者であることがわかります。  
   
  このセキュリティ グループには、1 つのメンバー、つまり [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス開始アカウントのサービスごとのセキュリティ識別子 (SID) のみが含まれます。 セットアップによって、サービスごとの SID がローカル セキュリティ グループに追加されます。 SQL Server セットアップが Analysis Services を準備する方法において、SID のメンバーシップと共にローカル セキュリティ グループを使用することは、データベース エンジンと比較した場合に、小さくても顕著な相違となります。  
   
@@ -113,14 +113,14 @@ ms.locfileid: "34019339"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  使用して**コンピューター マネージャー** | **ローカル ユーザーとグループ** | **グループ**SQLServerMSASUser$のメンバーシップを検査する\<servername >$\<instancename > セキュリティ グループです。  
+2.  使用**コンピューター マネージャー** | **ローカル ユーザーとグループ** | **グループ**SQLServerMSASUser$のメンバーシップを検査する\<servername >$\<instancename > セキュリティ グループ。  
   
      メンバーの SID は、手順 1 で示したサービスごとの SID と一致する必要があります。  
   
 3.  **[Windows エクスプローラー]** | **[Program Files]** | **[Microsoft SQL Server]** | Msasxx.mssqlserver | **[OLAP]** | **[bin]** を使用して、フォルダーのセキュリティ プロパティが、手順 2 のセキュリティ グループに付与されていることを確認します。  
   
 > [!NOTE]  
->  SID は削除したり変更したりしないでください。 誤って削除したサービスごとの SID を復元するには、次を参照してください。 [ http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)です。  
+>  SID は削除したり変更したりしないでください。 誤って削除するサービスごとの SID を復元するを参照してください。 [ http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)します。  
   
  **サービスごとの SID の詳細**  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019339"
  SID は不変であるため、サービスのインストール時に作成されたファイル システム ACL を、サービス アカウントの変更頻度に関係なく、無期限に使用できます。 SID により権限を指定する ACL では、セキュリティのための措置を強化するために、同じアカウントで他のサービスが実行する場合でも、プログラムの実行可能プログラムおよびデータ フォルダーがサービスの単一のインスタンスによってのみアクセスされることが保証されます。  
   
 ##  <a name="bkmk_tasks"></a> 特定のサーバー操作に対する追加の Analysis Services 権限の付与  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]起動に使用するサービス アカウント (またはログオン アカウント) のセキュリティ コンテキストでいくつかのタスクを実行[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、し、タスクを要求しているユーザーのセキュリティ コンテキストでその他のタスクを実行します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、一部のタスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を開始するために使用されるサービス アカウント (またはログオン アカウント) のセキュリティ コンテキストに従って実行され、他のタスクは、そのタスクを要求しているユーザーのセキュリティ コンテキストに従って実行されます。  
   
  次の表に、サービス アカウントとして実行するタスクをサポートするために必要な追加権限を示します。  
   
@@ -144,11 +144,11 @@ ms.locfileid: "34019339"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース内のクエリ ログ テーブルへの書き込み|サービス アカウントのデータベース ログインの作成、およびクエリ ログ テーブルに対する書き込み権限の割り当て|以降の分析用にデータベース テーブル内に使用状況データを収集するために、クエリ ログ記録を有効にできます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントには、指定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのクエリ ログ テーブルに対する書き込み権限が必要です。 このテーブルがまだ存在しておらず、作成する必要がある場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログオン アカウントに、指定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内でテーブルを作成するための権限も必要です。 詳細については、 [使用法に基づく最適化ウィザードによる SQL Server Analysis Services のパフォーマンスの向上 (ブログ)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) および [Analysis Services でのクエリのログ記録 (ブログ)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [Windows サービス アカウントと権限を構成します。](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server サービス アカウントとサービスごとの SID (ブログ)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [サービス SID を使用してサービスを分離する SQL Server (サポート技術情報の記事)](http://support.microsoft.com/kb/2620201)   
+ [SQL Server では、サービス SID を使用してサービスを分離 (サポート技術情報の記事)](http://support.microsoft.com/kb/2620201)   
  [アクセス トークン (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [セキュリティ ID (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [セキュリティ識別子 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [アクセス トークン (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [アクセス制御リスト (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

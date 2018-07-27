@@ -31,12 +31,12 @@ caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ed04d5f47515fd38657434c9e35056a79cff891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170313"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310299"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
   **Bcp**のインスタンス間でデータをユーティリティの一括コピー [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]とユーザー指定の形式でデータ ファイル。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは **の知識は必要ありません。ただし、** queryout [!INCLUDE[tsql](../includes/tsql-md.md)]オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
@@ -147,7 +147,7 @@ ms.locfileid: "37170313"
 |RAW|コード ページの変換は行われません。 したがって、これは最も速いオプションです。|  
 |*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> **\*\* 重要な\* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]はコード ページ 65001 (utf-8 エンコード) をサポートしていません。|  
   
- `-d` *database_name*  
+ `-d` *Database_name*  
  接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 場合`-d` *database_name*と 3 つの部分名 (*database_name.schema.table*bcp.exe の最初のパラメーターとして渡される) を指定すると、指定することはできませんので、エラーが発生しますデータベース名で 2 回使用します。場合*database_name*開始ハイフン (-) またはスラッシュ (/) で追加しないの間にスペース`-d`とデータベース名。  
   
  **-e** *err_file*  
@@ -243,7 +243,7 @@ ms.locfileid: "37170313"
  詳細については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   
  **-N**  
- 文字以外のデータについてはデータベースのネイティブなデータ型を使用し、文字データについては Unicode 文字を使用して、一括コピー操作を実行します。 ph x="1" /&gt; オプションの代わりにこのオプションを使用すると、高いパフォーマンスが得られます。このオプションは、データ ファイルを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスから別のインスタンスにデータを転送する場合に使用します。 フィールドごとにプロンプトは表示されません。 ANSI 拡張文字を含むデータを転送し、ネイティブ モードのパフォーマンスを利用する場合は、このオプションを使用します。  
+ 文字以外のデータについてはデータベースのネイティブなデータ型を使用し、文字データについては Unicode 文字を使用して、一括コピー操作を実行します。 `-w` オプションの代わりにこのオプションを使用すると、高いパフォーマンスが得られます。このオプションは、データ ファイルを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスから別のインスタンスにデータを転送する場合に使用します。 フィールドごとにプロンプトは表示されません。 ANSI 拡張文字を含むデータを転送し、ネイティブ モードのパフォーマンスを利用する場合は、このオプションを使用します。  
   
  詳細については、「 [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   

@@ -4,20 +4,20 @@ description: この記事では、リリース ノートが含まれていて、
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/20/2018
-ms.topic: article
+ms.date: 07/18/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 85fb0060a7143aa77cd5495a6140a33d5ac881cc
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 29fa948938444471fcaaefc6869e4114c604686b
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854364"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146762"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -47,6 +47,7 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 | リリース     | バージョン       | リリース日 |
 |-------------|---------------|--------------|
+| [CU9](#CU9) | 14.0.3030.27  | 2018-07-18   |
 | [CU8](#CU8) | 14.0.3029.16  | 2018-06-21   |
 | [CU7](#CU7) | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6) | 14.0.3025.34  | 2018-04-19   |
@@ -68,9 +69,23 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントを有効にします。](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU9"></a> CU9 (2018 年 7 月)
+
+これは、SQL Server 2017 の累積的な更新プログラム 9 (CU9) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3030.27 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4341265](https://support.microsoft.com/en-us/help/4341265)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 14.0.3030.27-1 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3030.27-1 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
+| Debian パッケージを Ubuntu 16.04 | 14.0.3030.27-1 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU8"></a> CU8 (2018 年 6 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 8 (CU8) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3029.16 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789)します。
+これは、SQL Server 2017 の累積的な更新プログラム 8 (CU8) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3029.16 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4338363](https://support.microsoft.com/en-us/help/4338363)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 

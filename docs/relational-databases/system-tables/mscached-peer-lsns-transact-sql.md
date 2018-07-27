@@ -1,5 +1,5 @@
 ---
-title: MScached_peer_lsns (TRANSACT-SQL) |Microsoft ドキュメント
+title: MScached_peer_lsns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,23 +20,24 @@ helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c88be8f7ffd489fbc276b58f253819b2f1d9f7ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee2580aa933108da5fce53ff74d67f6c4de2ea1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103850"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MScached_peer_lsns**テーブルはピア ツー ピア レプリケーションで任意のサブスクライバーに戻るにはコマンドを判断するために使用されるトランザクション ログに LSN 値を追跡するために使用します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MScached_peer_lsns**テーブルはピア ツー ピア レプリケーションで任意のサブスクライバーに返されるコマンドを判断するために使用されるトランザクション ログに LSN 値を追跡するために使用します。 このテーブルは、ディストリビューション データベースに保存されます。  
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ディストリビューション エージェントの ID。|  
 |**originator**|**sysname**|発信元のパブリッシャーの名前。|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |**originator_db_version**|**int**|発信元のデータベースのバージョン番号識別子。|  
 |**originator_lsn**|**varbinary(16)**|発信元のトランザクションの LSN。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  LSN 値は、挿入直後にのみ使用され、システムで永続的に有効にはなりません。  
   
 ## <a name="see-also"></a>参照  
