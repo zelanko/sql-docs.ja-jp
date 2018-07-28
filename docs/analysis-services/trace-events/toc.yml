@@ -1,0 +1,64 @@
+- name: 概要
+  href: analysis-services-trace-events.md
+- name: トレースで使用されるオブジェクト コード
+  href: analysis-services-object-type-codes-used-in-traces.md
+- name: Command イベントのイベント カテゴリ
+  href: command-events-event-category.md
+  items:
+    - name: Command イベントのデータ列
+      href: command-events-data-columns.md
+- name: Discover イベントのイベント カテゴリ
+  href: discover-events-event-category.md
+  items:
+    - name: Discover イベントのデータ列
+      href: discover-events-data-columns.md
+- name: サーバー状態検出イベント カテゴリ
+  href: discover-server-state-event-category.md
+  items:
+    - name: Discover Server State イベントのデータ列
+      href: discover-server-state-events-data-columns.md
+- name: エラーと警告イベント カテゴリ
+  href: errors-and-warnings-event-category.md
+  items:
+    - name: Errors and Warnings イベントのデータ列
+      href: errors-and-warnings-events-data-columns.md
+- name: ファイルの読み込みと保存のイベント カテゴリ
+  href: file-load-and-save-event-category.md
+  items:
+    - name: ファイルの読み込みと保存のデータ列
+      href: file-load-and-save-data-columns.md
+- name: ロック イベント カテゴリ
+  href: lock-events-category.md
+  items:
+    - name: Lock イベントのデータ列
+      href: lock-events-data-columns.md
+- name: Notification イベントのイベント カテゴリ
+  href: notification-events-event-category.md
+  items:
+    - name: Notification イベントのデータ列
+      href: notification-events-data-columns.md
+- name: 進行状況レポート イベント カテゴリ
+  href: progress-reports-event-category.md
+  items:
+    - name: 進行状況レポートのデータ列
+      href: progress-reports-data-columns.md
+- name: Queries イベント カテゴリ
+  href: queries-events-category.md
+  items:
+    - name: Queries イベントのデータ列
+      href: queries-events-data-columns.md
+- name: クエリ処理イベント カテゴリ
+  href: query-processing-events-category.md
+  items:
+    - name: クエリ処理イベントのデータ列
+      href: query-processing-events-data-columns.md
+- name: セキュリティ監査イベント カテゴリ
+  href: security-audit-event-category.md
+  items:
+    - name: Security Audit のデータ列
+      href: security-audit-data-columns.md
+- name: Session イベントのイベント カテゴリ
+  href: session-events-event-category.md
+  items:
+    - name: Session イベントのデータ列
+      href: session-events-data-columns.md

@@ -1,0 +1,8 @@
+- name: ADOMD.NET のサーバー機能
+  href: adomd-net-server-functionality.md
+- name: ADOMD.NET サーバー オブジェクト アーキテクチャ
+  href: adomd-net-server-object-architecture.md
+- name: ADOMD.NET サーバー プログラミング
+  href: adomd-net-server-programming.md
+- name: ユーザー定義関数およびストアド プロシージャ
+  href: user-defined-functions-and-stored-procedures.md

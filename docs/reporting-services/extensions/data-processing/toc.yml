@@ -1,0 +1,26 @@
+- name: データ処理拡張機能ライブラリの作成
+  href: creating-a-data-processing-extension-library.md
+- name: データ処理拡張機能の概要
+  href: data-processing-extensions-overview.md
+- name: データ処理拡張機能コードのデバッグ
+  href: debugging-data-processing-extension-code.md
+- name: データ処理拡張機能のレポート サーバーへの配置
+  href: deploying-a-data-processing-extension-to-a-report-server.md
+- name: データ処理拡張機能のレポート デザイナーへの配置
+  href: deploying-a-data-processing-extension-to-report-designer.md
+- name: データ処理拡張機能の配置
+  href: deploying-a-data-processing-extension.md
+- name: データ処理拡張機能の Command クラスの実装
+  href: implementing-a-command-class-for-a-data-processing-extension.md
+- name: データ処理拡張機能の Connection クラスの実装
+  href: implementing-a-connection-class-for-a-data-processing-extension.md
+- name: データ処理拡張機能の実装
+  href: implementing-a-data-processing-extension.md
+- name: データ処理拡張機能の DataReader クラスの実装
+  href: implementing-a-datareader-class-for-a-data-processing-extension.md
+- name: データ処理拡張機能を実装する準備
+  href: preparing-to-implement-a-data-processing-extension.md
+- name: データ処理拡張機能の削除
+  href: removing-a-data-processing-extension.md
+- name: Reporting Services での外部データセットの使用
+  href: using-an-external-dataset-with-reporting-services.md

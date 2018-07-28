@@ -1,0 +1,68 @@
+- name: DISCOVER_CALC_DEPENDENCY 行セット
+  href: discover-calc-dependency-rowset.md
+- name: DISCOVER_COMMAND_OBJECTS 行セット
+  href: discover-command-objects-rowset.md
+- name: DISCOVER_COMMANDS 行セット
+  href: discover-commands-rowset.md
+- name: DISCOVER_CONNECTIONS 行セット
+  href: discover-connections-rowset.md
+- name: DISCOVER_CSDL_METADATA 行セット
+  href: discover-csdl-metadata-rowset.md
+- name: DISCOVER_DATASOURCES 行セット
+  href: discover-datasources-rowset.md
+- name: DISCOVER_DB_CONNECTIONS 行セット
+  href: discover-db-connections-rowset.md
+- name: DISCOVER_DIMENSION_STAT 行セット
+  href: discover-dimension-stat-rowset.md
+- name: DISCOVER_ENUMERATORS 行セット
+  href: discover-enumerators-rowset.md
+- name: DISCOVER_JOBS 行セット
+  href: discover-jobs-rowset.md
+- name: DISCOVER_KEYWORDS 行セット (XMLA)
+  href: discover-keywords-rowset-xmla.md
+- name: DISCOVER_LITERALS 行セット
+  href: discover-literals-rowset.md
+- name: DISCOVER_LOCATIONS 行セット
+  href: discover-locations-rowset.md
+- name: DISCOVER_LOCKS 行セット
+  href: discover-locks-rowset.md
+- name: DISCOVER_MEMORYGRANT 行セット
+  href: discover-memorygrant-rowset.md
+- name: DISCOVER_MEMORYUSAGE 行セット
+  href: discover-memoryusage-rowset.md
+- name: DISCOVER_OBJECT_ACTIVITY 行セット
+  href: discover-object-activity-rowset.md
+- name: DISCOVER_OBJECT_MEMORY_USAGE 行セット
+  href: discover-object-memory-usage-rowset.md
+- name: DISCOVER_PARTITION_DIMENSION_STAT 行セット
+  href: discover-partition-dimension-stat-rowset.md
+- name: DISCOVER_PARTITION_STAT 行セット
+  href: discover-partition-stat-rowset.md
+- name: DISCOVER_PERFORMANCE_COUNTERS 行セット
+  href: discover-performance-counters-rowset.md
+- name: DISCOVER_PROPERTIES 行セット
+  href: discover-properties-rowset.md
+- name: DISCOVER_SCHEMA_ROWSETS 行セット
+  href: discover-schema-rowsets-rowset.md
+- name: DISCOVER_SESSIONS 行セット
+  href: discover-sessions-rowset.md
+- name: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット
+  href: discover-storage-table-column-segments-rowset.md
+- name: DISCOVER_STORAGE_TABLE_COLUMNS 行セット
+  href: discover-storage-table-columns-rowset.md
+- name: DISCOVER_STORAGE_TABLES 行セット
+  href: discover-storage-tables-rowset.md
+- name: DISCOVER_TRACE_COLUMNS 行セット
+  href: discover-trace-columns-rowset.md
+- name: DISCOVER_TRACE_DEFINITION_PROVIDERINFO 行セット
+  href: discover-trace-definition-providerinfo-rowset.md
+- name: DISCOVER_TRACE_EVENT_CATEGORIES 行セット
+  href: discover-trace-event-categories-rowset.md
+- name: DISCOVER_TRACES 行セット
+  href: discover-traces-rowset.md
+- name: DISCOVER_TRANSACTIONS 行セット
+  href: discover-transactions-rowset.md
+- name: DISCOVER_XML_METADATA 行セット
+  href: discover-xml-metadata-rowset.md
+- name: XML for Analysis スキーマ行セット
+  href: xml-for-analysis-schema-rowsets.md
