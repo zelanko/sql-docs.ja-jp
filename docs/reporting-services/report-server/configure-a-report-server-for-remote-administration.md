@@ -51,7 +51,7 @@ ms.locfileid: "33026889"
 ## <a name="tasks"></a>処理手順  
  リモートのレポート サーバー構成を有効にするタスクは次のとおりです。  
   
--   Windows ファイアウォールでポートを有効にし、レポート サーバーおよび SQL Server データベース エンジン インスタンスによって使用されるポートで要求が許可されるようにします。  「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 」および「 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
+-   Windows ファイアウォールでポートを有効にし、レポート サーバーおよび SQL Server データベース エンジン インスタンスによって使用されるポートで要求が許可されるようにします。  「 [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 」および「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
   
 -   レポート サーバー データベースをホストするデータベース エンジン インスタンスへのリモート接続を有効にします。 リモート接続は、レポート サーバー データベース接続の構成と暗号化キーの管理のために必要です。  
   

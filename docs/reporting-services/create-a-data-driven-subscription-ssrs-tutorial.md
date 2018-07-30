@@ -75,7 +75,7 @@ ms.locfileid: "34689220"
   
 -   サンプル レポートにデータを提供する **AdventureWorks2014** サンプル データベース。  
   
--   サンプル レポートでのすべてのサブスクリプションを管理タスクを含む [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ロールの割り当て。 データ ドリブン サブスクリプションを定義するには、この作業が必要です。 コンピューター管理者の場合は、ローカル管理者用の既定のロール割り当てで、データ ドリブン サブスクリプションの作成に必要な権限が与えられます。 詳細については、「 [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
+-   サンプル レポートでのすべてのサブスクリプションを管理タスクを含む [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ロールの割り当て。 データ ドリブン サブスクリプションを定義するには、この作業が必要です。 コンピューター管理者の場合は、ローカル管理者用の既定のロール割り当てで、データ ドリブン サブスクリプションの作成に必要な権限が与えられます。 詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
   
 -   書き込み権限のある共有フォルダー。 共有フォルダーはネットワーク接続経由でアクセス可能になっている必要があります。  
   

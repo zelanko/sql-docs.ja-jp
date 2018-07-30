@@ -47,7 +47,7 @@ ms.locfileid: "33036699"
   
 -   [方法: ページの自動修復の試行結果を表示する](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> ページの自動修復が試行されるエラーの種類  
  次の表に示すいずれかのエラーが原因でデータ ファイル操作が失敗した場合のみ、そのページにデータベース ミラーリングの自動修復が適用されます。  
   
 |エラー番号|Description|ページの自動修復の原因となるインスタンス|  
@@ -69,7 +69,7 @@ ms.locfileid: "33036699"
 -   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
   
  
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> プリンシパル/プライマリ データベースでの I/O エラーの処理  
  プリンシパル/プライマリ データベースでページの自動修復が試行されるのは、データベースが SYNCHRONIZED 状態にあり、そのデータベースのログ レコードがプリンシパル/プライマリ サーバーからミラー/セカンダリへ送信され続けている場合だけです。 ページの自動修復が試行される場合の基本的な処理順序を次に示します。  
   
 1.  プリンシパル/プライマリ データベースのデータ ページで読み取りエラーが発生すると、プリンシパル/プライマリは、該当するエラー状態が記録された行を [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルに挿入します。 この後、データベース ミラーリングの場合は、プリンシパルがミラーに対してページのコピーを要求します。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]の場合は、プライマリが、すべてのセカンダリに要求をブロードキャストし、最初に応答したセカンダリからページを取得します。 この要求では、ページ ID と、現在フラッシュされたログの最後にある LSN を指定します。 要求対象のページは、 *復元待ち*としてマークされます。 これにより、ページの自動修復の試行時、このページにはアクセスできなくなります。 修復の試行時にこのページにアクセスしようとすると、エラー 829 (復元待ち) が発生して失敗します。  
@@ -83,7 +83,7 @@ ms.locfileid: "33036699"
 5.  ページ I/O エラーによって [遅延トランザクション](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)が発生した場合は、ページを修復した後で、プリンシパル/プライマリがそれらのトランザクションを解決しようとします。  
   
  
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> ミラー/セカンダリ データベースでの I/O エラーの処理  
  ミラー/セカンダリ データベースで発生したデータ ページの I/O エラーは通常、データベース ミラーリングでも [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]でも同じように処理されます。  
   
 1.  データ ミラーリングでは、ミラーがログ レコードを再実行している最中にページ I/O エラーが 1 回でも検出されると、そのミラーリング セッションは SUSPENDED 状態になります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、セカンダリ レプリカがログ レコードを再実行している最中にページ I/O エラーが 1 回でも検出されると、そのセカンダリ データベースは SUSPENDED 状態になります。 この時点で、ミラー/セカンダリは、該当するエラー状態が記録された行を **suspect_pages** テーブルに挿入します。 次に、ミラー/セカンダリは、プリンシパル/プライマリにそのページのコピーを要求します。  
