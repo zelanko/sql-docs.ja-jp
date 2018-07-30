@@ -1,4 +1,4 @@
-﻿---
+---
 title: SQL Operations Studio (プレビュー) とは何ですか。 | Microsoft Docs
 description: SQL Operations Studio (プレビュー) は無料で軽量な、SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse を管理するための Windows、macOS そして Linux で動作可能なツールです。
 ms.custom: tools|sos
