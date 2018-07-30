@@ -1,0 +1,10 @@
+- name: DBSCHEMA_CATALOGS 行セット
+  href: dbschema-catalogs-rowset.md
+- name: DBSCHEMA_COLUMNS 行セット
+  href: dbschema-columns-rowset.md
+- name: DBSCHEMA_PROVIDER_TYPES 行セット
+  href: dbschema-provider-types-rowset.md
+- name: DBSCHEMA_TABLES 行セット
+  href: dbschema-tables-rowset.md
+- name: OLE DB スキーマ行セット
+  href: ole-db-schema-rowsets.md
