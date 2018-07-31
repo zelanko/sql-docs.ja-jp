@@ -1,7 +1,7 @@
 ---
 title: テーブル値パラメーターを使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4852b9d6546375246c9236ccdfb8522c00ec548a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978764"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279213"
 ---
 # <a name="using-table-valued-parameters"></a>テーブル値パラメーターの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  テーブル値パラメーターは、複数行のデータをクライアント アプリケーションから SQL Server に簡単にマーシャリングするための手段です。複数のラウンド トリップや、データ処理用の特別なサーバー側ロジックは必要ありません。 テーブル値パラメーターを使用すると、クライアント アプリケーションで複数行のデータをカプセル化してサーバーに送信する処理を 1 つのパラメーター化コマンドで実行できます。 パラメーター化コマンドで実行できます。受信データ行は、TRANSACT-SQL を使用してで操作できるテーブル変数に格納されます。  
+  テーブル値パラメーターは、複数行のデータをクライアント アプリケーションから SQL Server に簡単にマーシャリングするための手段です。複数のラウンド トリップや、データ処理用の特別なサーバー側ロジックは必要ありません。 テーブル値パラメーターを使用すると、クライアント アプリケーションで複数行のデータをカプセル化してサーバーに送信する処理を 1 つのパラメーター化コマンドで実行できます。 受信データ行は、TRANSACT-SQL を使用してで操作できるテーブル変数に格納されます。  
   
  テーブル値パラメーター列の値は、標準の TRANSACT-SQL SELECT ステートメントを使用してアクセスできます。 テーブル値パラメーターが厳密に型指定し、その構造が自動的に検証します。 テーブル値パラメーターのサイズは、サーバーのメモリによってのみ制限されます。  
   
@@ -56,14 +56,14 @@ ms.locfileid: "37978764"
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーターの型を作成します。  
  テーブル値パラメーターは、TRANSACT-SQL の CREATE TYPE ステートメントを使用して定義されている厳密に型指定されたテーブルの構造に基づいています。 テーブル型を作成し、クライアント アプリケーションでテーブル値パラメーターを使用する前に、SQL Server で、構造を定義する必要があります。 テーブル型の作成の詳細については、次を参照してください。[ユーザー定義テーブル型](http://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「します。  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  テーブル型を作成した後は、その型に基づいてテーブル値パラメーターを宣言できます。 次の TRANSACT-SQL フラグメントでは、ストアド プロシージャの定義でテーブル値パラメーターを宣言する方法を示します。 READONLY キーワードは、テーブル値パラメーターを宣言するために必要なことに注意してください。  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -73,7 +73,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  次の TRANSACT-SQL UPDATE ステートメントでは、Categories テーブルに結合して、テーブル値パラメーターを使用する方法を示します。 Join FROM 句でテーブル値パラメーターを使用するときにする必要がありますエイリアスも、次に示すよう、テーブル値パラメーターが"ec"エイリアスは。  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -82,7 +82,7 @@ UPDATE dbo.Categories
   
  この TRANSACT-SQL の例では、単一のセット ベース操作で INSERT を実行するテーブル値パラメーターから行を選択する方法を示します。  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -104,7 +104,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  次の 2 つのコード フラグメントでは、SQLServerPreparedStatement とは、SQLServerCallableStatement データを挿入すると、テーブル値パラメーターを構成する方法を示します。 ここで、SQLServerDataTable、または、ResultSet、ISQLServerDataRecord オブジェクト sourceTVPObject ができます。 例では、接続がアクティブな接続オブジェクトが想定しています。  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -112,7 +112,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -126,7 +126,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>SQLServerDataTable オブジェクトとしてテーブル値パラメーターの受け渡し  
  Microsoft JDBC Driver 6.0 for SQL Server 以降、SQLServerDataTable クラスは、リレーショナル データのメモリ内のテーブルを表します。 この例では、SQLServerDataTable オブジェクトを使用してメモリ内データからテーブル値パラメーターを作成する方法を示します。 コードがまず SQLServerDataTable オブジェクトを作成、そのスキーマを定義およびテーブル データに設定します。 コードは、このデータ テーブルをテーブル値パラメーターとして SQL Server に渡される SQLServerPreparedStatement を構成します。  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -154,7 +154,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>結果セット オブジェクトとして、テーブル値パラメーターを渡す  
  この例では、結果セットからデータをテーブル値パラメーターの行をストリームする方法を示します。 コードは最初のソース テーブルからデータを取得、SQLServerDataTable オブジェクトを作成し、そのスキーマを定義、テーブルにデータを設定します。 コードは、このデータ テーブルをテーブル値パラメーターとして SQL Server に渡される SQLServerPreparedStatement を構成します。  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -174,7 +174,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>ISQLServerDataRecord オブジェクトとしてテーブル値パラメーターの受け渡し  
  Microsoft JDBC Driver 6.0 for SQL Server から、新しいインターフェイス ISQLServerDataRecord がストリーミングする方法、ユーザーは、その実装を提供します) にもよりますデータの使用可能なテーブル値パラメーターを使用します。 次の例では、ISQLServerDataRecord インターフェイスを実装する方法と、テーブル値パラメーターとして渡す方法を示します。 わかりやすくするためは、次の例は、ハードコーディングされた値を持つ 1 つの行をテーブル値パラメーターに渡します。 理想的には、ユーザーは、たとえば、テキスト ファイルからの任意のソースから、ストリームの行にこのインターフェイスを実装は。  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  
