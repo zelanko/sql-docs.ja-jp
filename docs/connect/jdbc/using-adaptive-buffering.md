@@ -1,5 +1,5 @@
 ---
-title: アダプティブ バッファリングの使用 |Microsoft ドキュメント
+title: アダプティブ バッファリングの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,81 +15,81 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae4120b567d876556c29254eae65d4471ab63924
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853327"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040830"
 ---
 # <a name="using-adaptive-buffering"></a>アダプティブ バッファリングの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  アダプティブ バッファリングは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 アプリケーションはすべてのバージョンのでアダプティブ バッファリング機能を使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ドライバーによってサポートされています。  
+  アダプティブ バッファリングは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 アプリケーションでは、ドライバーによってサポートされるすべてのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] でアダプティブ バッファリング機能を使用できます。  
   
- 通常、ときに、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]クエリを実行する、すべての結果、サーバーからメモリに取り出しますアプリケーションです。 この方法でリソースの消費量を最小限に抑えられますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、OutOfMemoryError、非常に大きな結果を生成するクエリの JDBC アプリケーションでスローされることができます。  
+ 通常、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] がクエリを実行するときは、すべての結果をサーバーからアプリケーション メモリに取り出します。 この方法では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] でのリソースの消費が最小化されますが、非常に大きな結果を生成するクエリの場合は、JDBC アプリケーションで OutOfMemoryError がスローされることがあります。  
   
- アプリケーションが、非常に大きな結果を処理できるようにするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]アダプティブ バッファリングを提供します。 アダプティブ バッファリングとドライバーがからステートメントの実行結果を取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]一度にはなく、アプリケーションの必要に応じて、します。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。 アダプティブ バッファリングは次のような場合に効果的です。  
+ アプリケーションで非常に大きな結果を処理できるようにするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] はアダプティブ バッファリングを提供しています。 ドライバーでアダプティブ バッファリングを使用すると、ステートメントの実行結果を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] から取得する処理が、すべて一度にではなく、アプリケーションの必要に応じて行われます。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。 アダプティブ バッファリングは次のような場合に効果的です。  
   
--   **クエリが非常に大きな結果セットを生成:** アプリケーションは、アプリケーションがメモリに格納できるよりも、複数の行を生成する SELECT ステートメントを実行できます。 以前のリリースで、アプリケーションは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要があります。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。  
+-   **クエリが非常に大きな結果セットを生成する:** アプリケーションでは、メモリに格納できる行よりも多くの行を生成する SELECT ステートメントを実行できます。 以前のリリースでは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要がありました。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。  
   
--   **クエリが非常に大きな**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**列または**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT パラメーター値:** アプリケーションが 1 つの値を取得できます (列または OUT パラメーター) が大きすぎてすべてアプリケーションのメモリ内に収まりません。         アダプティブ バッファリングにより、クライアント アプリケーションを getAsciiStream、getBinaryStream または getCharacterStream メソッドを使用して、ストリームとして、このような値を取得します。 アプリケーションから値を取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ように、ストリームから読み取ります。  
+-   **クエリが非常に大きな** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **列または** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT パラメーター値を生成する:** アプリケーションでは、アプリケーション メモリに完全に含めるには大きすぎる単一の値 (列または OUT パラメーター) を取得できます。 アダプティブ バッファリングはにより、getAsciiStream、getBinaryStream または getCharacterStream メソッドを使用して、ストリームとして、このような値を取得するクライアント アプリケーションです。 アプリケーションは、ストリームから読み取るときと同じようにして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] から値を取得します。  
   
 > [!NOTE]  
 >  アダプティブ バッファリングでは、必要な量のデータだけが、JDBC ドライバーによってバッファリングされます。 ドライバーにバッファーのサイズを制御したり制限したりするためのパブリック メソッドは備わっていません。  
   
 ## <a name="setting-adaptive-buffering"></a>アダプティブ バッファリングの設定  
- 以降では、JDBC driver version 2.0 では、ドライバーの既定の動作は"**アダプティブ**"です。 つまり、アプリケーションから明示的に要求しなくても、アダプティブ バッファリングの動作が適用されます。 バージョン 1.2 リリースでは、バッファリング モードが"**完全**"既定では、アプリケーションは、明示的にアダプティブ バッファリング モードを要求する必要があります。  
+ JDBC Driver 2.0 以降では、ドライバーの既定の動作は "**adaptive**" です。 つまり、アプリケーションから明示的に要求しなくても、アダプティブ バッファリングの動作が適用されます。 ただし、バージョン 1.2 リリースでは、"**full**" が既定のバッファリング モードであるため、アプリケーションから明示的にアダプティブ バッファリング モードを要求する必要があります。  
   
  アプリケーションがステートメントの実行でアダプティブ バッファリングを使用するように要求できる方法は 3 つあります。  
   
--   アプリケーションは、接続プロパティを設定できる**responseBuffering**を"adaptive"です。 接続プロパティの設定の詳細については、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)です。  
+-   アプリケーションは、接続プロパティを設定できる**responseBuffering** "adaptive"にします。 接続プロパティの設定の詳細については、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)します。  
   
--   アプリケーションを使用して、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)のメソッド、 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)応答バッファリング モードを使用して作成したすべての接続を設定するオブジェクト[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)オブジェクト。  
+-   アプリケーションで、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) オブジェクトの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) メソッドを使用して、その [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) オブジェクトを通じて作成されたすべての接続の応答バッファリング モードを設定できます。  
   
--   アプリケーションを使用して、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)応答バッファリング モードの特定のステートメント オブジェクトを設定するクラス。  
+-   アプリケーションで、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用して、特定のステートメント オブジェクトの応答バッファリング モードを設定できます。  
   
- JDBC Driver version 1.2、statement オブジェクトをキャストするために必要なアプリケーションを使用する場合、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)クラスを使用する、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)メソッドです。 コード例で、[読み取り大規模なデータ サンプル](../../connect/jdbc/reading-large-data-sample.md)と[ストアド プロシージャのサンプルを使用して大規模なデータの読み取り](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)この古い使用法を説明します。  
+ JDBC Driver Version 1.2 を使用している場合、[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用するには、Statement オブジェクトを [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスにキャストする必要があります。 コード例では、[読み取り大規模なデータ サンプル](../../connect/jdbc/reading-large-data-sample.md)と[ストアド プロシージャのサンプルを使用して大規模なデータの読み取り](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)この古い使用法を示します。  
   
- ただし、JDBC driver version 2.0 では、アプリケーションを使用、 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)メソッドおよび[unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)に関する想定せずベンダー固有の機能にアクセスする方法、実装クラスの階層構造です。 コード例を参照してください、[大規模なデータの更新のサンプル](../../connect/jdbc/updating-large-data-sample.md)トピックです。  
+ ただし、JDBC ドライバー Version 2.0 では、実装されているクラス階層を意識することなく、[isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) メソッドおよび [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) メソッドを使用して、ベンダー固有の機能にアクセスできます。 コード例を参照してください、[大規模なデータ サンプルの更新](../../connect/jdbc/updating-large-data-sample.md)トピック。  
   
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>アダプティブ バッファリングによる大きなデータの取得  
- ときに、大きな値は get を使用して、1 回読み取り\<型 > Stream メソッド、および ResultSet 列および CallableStatement OUT パラメーターがによって返される順序でアクセス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]アプリケーションを最小限にアダプティブ バッファリング結果を処理するときにメモリ使用量 アダプティブ バッファリングを使用すると、次のようになります。  
+ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] によって返された順序で ResultSet 列および CallableStatement OUT パラメーターにアクセスする場合、アダプティブ バッファリングにより、結果を処理するときのアプリケーション メモリの使用量を最小限に抑えることができます。 アダプティブ バッファリングを使用すると、次のようになります。  
   
--   Get\<型 > で定義されているメソッドをストリーム、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)と[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)場合は、ストリームをリセットすることができますが、クラスが既定では、1 回だけ読み取りストリームを返すアプリケーションによってマークされます。 アプリケーションがする場合は`reset`を呼び出すが、ストリーム、`mark`にメソッドが最初にストリームします。  
+-   [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスおよび [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスで定義されている get\<Type>Stream メソッドは、既定では 1 回だけ読み取るストリームを返します。ただし、アプリケーションによってマークされていれば、このストリームをリセットできます。 アプリケーションでストリームの `reset` を行う必要がある場合、まずそのストリームに対して `mark` メソッドを呼び出す必要があります。  
   
--   Get\<型 > で定義されているメソッドをストリーム、 [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md)と[SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md)クラスでは、常に位置を変更できるストリームを返すことがなく、ストリームの開始位置を呼び出す、`mark`メソッドです。  
+-   [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) クラスおよび [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) クラスで定義されている get\<Type>Stream メソッドは、`mark` メソッドを呼び出すことなく、常にストリームの開始位置に位置を変更できるストリームを返します。  
   
- アプリケーションがアダプティブ バッファリングを使用する場合、get で取得した値\<型 > Stream メソッドは、1 回だけ取得できます。 場合は、get を呼び出すしようとする\<型 > メソッド パラメーター、get の呼び出し後に、同じ列に\<型 >、メッセージのストリーム、同じ、オブジェクトのメソッドで例外がスローされます、"データへのアクセスがこれには使用できません列またはパラメーター"です。  
+ アプリケーションでアダプティブ バッファリングを使用する場合、get\<Type>Stream メソッドによって取得される値は、1 回だけ取得できます。 同じオブジェクトの get\<Type>Stream メソッドを呼び出した後に、同じ列またはパラメーターで任意の get\<Type>Stream メソッドを呼び出すと、"このデータはアクセスされており、この列またはパラメーターに対しては使用できません" という意味のメッセージで例外がスローされます。  
   
 > [!NOTE]
-> 結果セットの処理の途中で ResultSet.close() への呼び出しには、読み取りし、残りのすべてのパケットを破棄する SQL Server の Microsoft JDBC Driver が必要です。 クエリに大きなデータ セットが返される場合、およびネットワーク接続速度が遅い場合は特に、かなりの時間がかかります。     
+> 結果セットの処理の途中で ResultSet.close() への呼び出しには、Microsoft JDBC Driver for SQL Server を読み取って、残りのすべてのパケットを破棄が必要です。 クエリには、大規模なデータ セットが返された場合、およびネットワーク接続速度が遅い場合は特に、かなりの時間がかかります。     
   
 ## <a name="guidelines-for-using-adaptive-buffering"></a>アダプティブ バッファリングを使用するうえでのガイドライン  
  アプリケーションによるメモリ使用量を最小限に抑えるには、開発者は次の重要なガイドラインに従う必要があります。  
   
--   接続文字列プロパティは使用しないでください**selectMethod = cursor**非常に大きな結果を処理するアプリケーションを許可する設定。 アダプティブ バッファリング機能を使用すると、アプリケーションがサーバー カーソルを使用することなく、非常に大きな順方向専用の読み取り専用結果セットを処理することが可能になります。 設定するときに注意してください**selectMethod = cursor**、前方参照専用すべてその接続によって生成された読み取り専用の結果セットに影響があります。 つまり、アプリケーションは、わずかな行数の短い結果セットを定期的に処理する場合の作成、読み取り、および各結果セットは、クライアント側とサーバー側の両方でよりも多くのリソースを使用するために、サーバー カーソルを閉じる場所、 **selectMethod**に設定されていない**カーソル**です。  
+-   アプリケーションが非常に大きな結果セットを処理できるようにするために、接続文字列プロパティ **selectMethod=cursor** を使用しないようにします。 アダプティブ バッファリング機能を使用すると、アプリケーションがサーバー カーソルを使用することなく、非常に大きな順方向専用の読み取り専用結果セットを処理することが可能になります。 **selectMethod=cursor** を設定する場合、その接続で生成された順方向専用、読み取り専用のすべての結果セットに影響が及ぶ点に注意してください。 つまり、わずかな行数の短い結果セットを定期的に処理するようなアプリケーションでは、結果セットごとにサーバー カーソルを作成し、読み取って、閉じる操作を繰り返すことになって、クライアント側とサーバー側の両方でリソース消費が (**selectMethod** を **cursor** に設定しなかった場合と比較して) 増えることになります。  
   
--   大きなテキストまたはバイナリ値を getBlob または getClob メソッドではなく、getAsciiStream、getBinaryStream または getCharacterStream メソッドを使用して、ストリームとして読み取ります。 バージョン 1.2 リリース以降で、 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)クラスは、新しい get\<型 > この目的のためのメソッドをストリーム配信します。  
+-   大きなテキストまたはバイナリ値を getBlob または getClob メソッドではなく、getAsciiStream、getBinaryStream または getCharacterStream メソッドを使用してストリームとして読み取ります。 Version 1.2 リリース以降の [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスには、この目的のための新しい get\<Type>Stream メソッドがあります。  
   
--   可能性のある大きな値を含む列が SELECT ステートメントで列の一覧に最後に配置されることを確認、get\<型 > のメソッドをストリーム、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)内の列にアクセスするため、選択された順序です。  
+-   大きな値を含む可能性がある列は、SELECT ステートメント内で列リストの最後に配置し、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) の get\<Type>Stream メソッドを使用して、選択された順序で列にアクセスします。  
   
--   OUT 可能性のある大きな値を含むパラメーターは最後で宣言を作成するために使用する SQL のパラメーターの一覧で、 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)です。 さらに、いることを確認、get\<型 > のメソッドをストリーム、 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)宣言された順序で OUT パラメーターにアクセスするために使用します。  
+-   大きな値を含む可能性がある OUT パラメーターは、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) の作成に使用する SQL のパラメーターの一覧の最後で宣言します。 また、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) の get\<Type>Stream メソッドを使用して、宣言された順序で OUT パラメーターにアクセスします。  
   
 -   同じ接続で複数のステートメントを同時に実行しないでください。 前のステートメントの結果を処理する前に別のステートメントを実行すると、処理されない結果がアプリケーションのメモリにバッファリングされることがあります。  
   
--   場合がありますを使用して、 **selectMethod = cursor**の代わりに**responseBuffering = adaptive**など、複数の利点があります。  
+-   いくつかあります。 を使用した**selectMethod = カーソル**の代わりに**responseBuffering = adaptive**など、より便利になります。  
   
-    -   読み取り専用の結果セットの一部のユーザー入力を使用して後各行を読み取るなどが遅い、処理される場合、アプリケーション、順方向専用、 **selectMethod = cursor**の代わりに**responseBuffering = adaptive**可能性がありますによるリソース使用量を減らす[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+    -   読み取り専用の結果セットを使用して入力すると、ユーザーはいくつかの後の行ごとの読み取りなどの時間がかかり、順方向専用、アプリケーションが処理する場合**selectMethod = カーソル**の代わりに**responseBuffering = adaptive**可能性がありますによるリソース使用量を減らす[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
   
-    -   使用して、アプリケーションでは、2 つを処理するかより順方向専用、読み取り専用の結果セットを同じ接続で同時に場合、 **selectMethod = cursor**の代わりに**responseBuffering = adaptive**役立つ場合がありますこれらの結果セットの処理中に、ドライバーで必要なメモリの量を減らします。  
+    -   同じ接続で順方向専用、読み取り専用の複数の結果セットを同時に処理するようなアプリケーションでは、**responseBuffering=adaptive** の代わりに **selectMethod=cursor** を使用することで、ドライバーがこれらの結果セットを処理する際に必要となるメモリ量を減らすことができます。  
   
      どちらのケースも、サーバー カーソルを作成し、読み取って、閉じるという処理のオーバーヘッドを考慮する必要があります。  
   
  スクロール可能な結果セットと順方向専用の更新可能な結果セットの推奨事項を以下に補足します。  
   
--   スクロール可能な結果セットをフェッチする場合の行のブロック ドライバー常にメモリにによって示される行の数、 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト、場合でも、アダプティブ バッファリングが有効になっているとします。 スクロール、OutOfMemoryError 発生すると、呼び出すことによってフェッチされた行の数を減らすことができます、 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)フェッチ サイズを小さく行数に設定するオブジェクト必要な場合は、1 行にもダウンします。 これができない、OutOfMemoryError 場合、は、スクロール可能な結果セットで非常に大きな列を含むしないでください。  
+-   スクロール可能な結果セット : 行をブロック単位でフェッチする場合、常に [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) メソッドで指定された行数がメモリに読み込まれます。これは、アダプティブ バッファリングが有効になっていたとしても変わりません。 スクロールによって OutOfMemoryError が発生した場合は、フェッチされる行数を減らすことによって対処できます。フェッチ サイズの行数を減らすには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) メソッドを呼び出します。必要であれば、行数を 1 に設定することも検討してください。 それでも OutOfMemoryError を回避できない場合は、あまり大きな列がスクロール可能な結果セットに含まれないようにします。  
   
--   順方向専用の更新可能な結果セットをフェッチする場合の行のブロック ドライバー通常メモリにによって示される行の数、 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトアダプティブ バッファリングが有効な場合でも、接続でします。 呼び出す場合、[次](../../connect/jdbc/reference/next-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 、OutOfMemoryError でオブジェクトの結果、呼び出すことによってフェッチされた行の数を減らすことができます、 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)メソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)必要な場合でも、行数を 1 までの行のより小さい数に、フェッチ サイズを設定するオブジェクト。 呼び出して、行のバッファリングがドライバーを強制することも、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクトを"**アダプティブ**"の前にパラメーターステートメントを実行します。 結果セットは、アプリケーション、get のいずれかを使用して大きな列の値にアクセスする場合はスクロールできないため\<型 > Stream メソッドをドライバーは値を破棄、アプリケーションが読み取りは順方向専用の場合と同様とすぐに読み取り専用結果を設定します。  
+-   順方向専用の更新可能な結果セット: 行をブロック単位でフェッチする場合、その接続でアダプティブ バッファリングが有効になっていたとしても、通常は [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) メソッドで指定された行数がメモリに読み込まれます。 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) メソッドを呼び出すと OutOfMemoryError が発生する場合は、フェッチされる行数を減らすことによって対処できます。フェッチ サイズの行数を減らすには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) メソッドを呼び出します。必要であれば、行数を 1 に設定することも検討してください。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを "**adaptive**" パラメーターで呼び出した後、ステートメントを実行することによって、行のバッファリングを強制的に抑制することもできます。 結果セットはスクロールできないため、アプリケーションから、いずれかの get\<Type>Stream メソッドで大きな列の値にアクセスした場合、アプリケーションが読み取りを始めると直ちに、ドライバーが、順方向専用、読み取り専用の結果セットの場合とまったく同じように、その値を破棄します。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーによるパフォーマンスと信頼性の強化](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  

@@ -1,5 +1,5 @@
 ---
-title: Pdo::errorcode |Microsoft ドキュメント
+title: Pdo::errorcode |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73bc57c0519c3371b77e38b00b7cc2a8a203b811
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999192"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,15 +36,15 @@ mixed PDO::errorCode();
 ## <a name="return-value"></a>戻り値  
 PDO::errorCode は、5 文字の SQLSTATE を文字列として返すか、データベース ハンドルに操作がない場合、NULL を返されます。  
   
-## <a name="remarks"></a>コメント  
-PDO_SQLSRV ドライバーの pdo::errorcode は、一部の操作に関する警告を返します。 たとえば、正常に接続する、pdo::errorcode「01000」を示す SQL_SUCCESS_WITH_INFO を返します。  
+## <a name="remarks"></a>Remarks  
+PDO_SQLSRV ドライバーの PDO::errorCode は、一部の操作の成功時に警告を返します。 たとえば、接続に成功すると、PDO::errorCode は "01000" を返します。これは SQL_SUCCESS_WITH_INFO を示します。  
   
-PDO::errorCode は、データベース接続で直接実行された操作のエラー コードのみを返します。 Pdo::prepare で PDOStatement インスタンスを作成するか、または pdo::query し、エラーは、ステートメント オブジェクトで、pdo::errorcode はそのエラーを取得できません。 特定のステートメント オブジェクトで実行された操作のエラー コードを返すには、PDOStatement::errorCode を呼び出す必要があります。  
+PDO::errorCode は、データベース接続で直接実行された操作のエラー コードのみを返します。 PDO::prepare または PDO::query によって PDOStatement インスタンスを作成する場合、ステートメント オブジェクト上でエラーが生成されると、PDO::errorCode はそのエラーを取得しません。 特定のステートメント オブジェクトで実行された操作のエラー コードを返すには、PDOStatement::errorCode を呼び出す必要があります。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  
-この例では、列の名前のスペルが正しい (`Cityx`の代わりに`City`)、結果、エラーが報告されます。  
+この例では、列の名前が間違っており (`City` ではなく `Cityx`)、エラーが発生します。そのエラーは報告されます。  
   
 ```  
 <?php  

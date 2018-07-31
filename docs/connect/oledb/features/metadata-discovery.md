@@ -1,6 +1,6 @@
 ---
-title: メタデータの検出 |Microsoft ドキュメント
-description: OLE DB Driver for SQL Server でのメタデータの検出
+title: メタデータの検出 |Microsoft Docs
+description: OLE DB Driver for SQL Server でメタデータの検出
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3980b8064b565dc09ebb79e9d81be9c6f85fc21a
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 7f16d0b4b7143721118840d839a4fb99cfaf9bec
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611637"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105888"
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  メタデータ検出機能が強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]により、OLE DB Driver for SQL Server のアプリケーションがその列を確認またはクエリの実行から返されるパラメーター メタデータが同一にする前に指定したメタデータ形式との互換性クエリを実行します。 クエリの実行後に返されたメタデータにクエリの実行前に指定したメタデータ形式との互換性がない場合は、エラーが発生します。  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ではメタデータ検出機能が強化されているため、OLE DB Driver for SQL Server アプリケーションでは、クエリの実行によって返された列またはパラメーター メタデータがクエリの実行前に指定したメタデータ形式と同じであるか、その形式と互換性があることを確認できます。 クエリの実行後に返されたメタデータにクエリの実行前に指定したメタデータ形式との互換性がない場合は、エラーが発生します。  
   
- Bcp および IBCPSession と IBCPSession2 インターフェイスで指定できます、遅延をクエリ出力操作のメタデータの検出を回避するのには、読み取り (遅延メタデータ検出)。 その結果、パフォーマンスが向上し、メタデータ検出のエラーを回避できます。  
+ bcp 関数と IBCPSession および IBCPSession2 インターフェイスでは、遅延読み取り (遅延メタデータ検出) を指定して、クエリ出力操作でメタデータ検出を回避できます。 その結果、パフォーマンスが向上し、メタデータ検出のエラーを回避できます。  
   
- SQL Server の OLE DB Driver を使用してアプリケーションを開発サーバーのバージョンに接続した場合よりも前[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、メタデータ検出機能は、サーバーのバージョンに対応します。  
+ OLE DB Driver for SQL Server を使用してアプリケーションを開発し、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] より前のバージョンのサーバーに接続する場合、メタデータ検出機能はそのバージョンのサーバーに対応したものとなります。  
   
-## <a name="remarks"></a>コメント   
+## <a name="remarks"></a>Remarks   
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の OLE DB メンバー関数が機能強化され、メタデータ検出機能が向上しています。  
   
 -   IColumnsInfo::GetColumnInfo  
@@ -41,9 +41,9 @@ ms.locfileid: "35611637"
   
 -   Icommandwithparameters::getparameterinfo (を参照してください[ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md)詳細)  
   
- IBCPSession::BCPSetBulkMode を使用してメタデータ形式を指定する場合にも、パフォーマンスを改善を表示されます。  
+ IBCPSession::BCPSetBulkMode を使用してメタデータ形式を指定したときのパフォーマンスも向上しています。  
   
- 2 つのストアド プロシージャの追加により OLE DB Driver for SQL Server での強化されたメタデータの検出が可能な[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ 2 つのストアド プロシージャの追加により、OLE DB Driver for SQL Server で強化されたメタデータの検出が可能な[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
   
 -   sp_describe_first_result_set  
   

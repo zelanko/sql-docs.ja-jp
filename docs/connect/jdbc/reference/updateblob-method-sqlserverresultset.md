@@ -1,5 +1,5 @@
 ---
-title: updateBlob メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: updateBlob メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b6178a7da337197d2fe6b979bcd7e64c3d60245
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850917"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019920"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>updateBlob メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32850917"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|指定された列を java.sql.Blob 値で更新します。|  
 |[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|指定された入力ストリームを使用して、指定された列を更新します。|  

@@ -1,5 +1,5 @@
 ---
-title: SQLServerSavepoint クラス |Microsoft ドキュメント
+title: SQLServerSavepoint クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf38b520b662c902eea9da9b6c0e597d8466680d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846947"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066900"
 ---
 # <a name="sqlserversavepoint-class"></a>SQLServerSavepoint クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,6 +41,6 @@ public class SQLServerSavepoint
   
 ## <a name="see-also"></a>参照  
  [SQLServerSavepoint のメンバー](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

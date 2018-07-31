@@ -1,5 +1,5 @@
 ---
-title: 結果セットの操作 |Microsoft ドキュメント
+title: 結果セットの操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b2797c9ce000d687550ee50c27fdc51524f86c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851367"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060305"
 ---
 # <a name="working-with-result-sets"></a>結果セットの処理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  含まれるデータを操作する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース、データを操作するための 1 つのメソッドは、結果セットを使用します。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 、結果セットの使用をサポートする、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。 SQLServerResultSet オブジェクトを使用すると、SQL ステートメントまたはストアド プロシージャから返されるデータの取得、必要に応じて、データを更新でき、次にデータをデータベースに戻して保持できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに格納されているデータを操作するための方法の 1 つに、結果セットを使用する方法があります。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを介して結果セットの使用をサポートします。 SQLServerResultSet オブジェクトを使用することで、SQL ステートメントまたはストアド プロシージャから返されたデータを取得し、必要に応じてデータを更新し、データをデータベースに戻して保持できます。  
   
- さらに、SQLServerResultSet オブジェクトは、データの行間を移動する、取得またはそれに含まれるデータを設定して、基になるデータベースでさまざまなレベルの変更に応答性を確立するためのメソッドを提供します。  
+ また、SQLServerResultSet オブジェクトは、このオブジェクトのデータ行間を移動したり、オブジェクトに含まれるデータを取得または設定したり、基になるデータベースの変更に対するさまざまなレベルの応答性を確立したりするためのメソッドを提供します。  
   
 > [!NOTE]  
->  結果セットを変更に対する応答性などの管理の詳細については、次を参照してください。 [JDBC ドライバーでの結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)です。  
+>  変更に対する応答性など、結果セットの管理の詳細については、次を参照してください。 [JDBC ドライバーでの結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)します。  
   
- このセクションのトピックに含まれているデータを操作する結果セットを使用できるさまざまな方法を説明する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
+ このセクションのトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに含まれているデータを操作するために結果セットを使用できるさまざまな方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[結果セットのデータ サンプルの取得](../../connect/jdbc/retrieving-result-set-data-sample.md)|結果セットからデータを取得するを使用する方法について説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースを表示します。|  
-|[結果セットのデータ サンプルの変更](../../connect/jdbc/modifying-result-set-data-sample.md)|挿入、取得、およびデータの変更に結果セットを使用する方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。|  
-|[結果セットのデータ サンプルのキャッシング](../../connect/jdbc/caching-result-set-data-sample.md)|大量のデータの取得に結果セットを使用する方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースをクライアントにそのデータをキャッシュする方法を制御したりします。|  
+|[結果セットのデータ サンプルの取得](../../connect/jdbc/retrieving-result-set-data-sample.md)|結果セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースからデータを取得し、表示する方法について説明します。|  
+|[結果セットのデータ サンプルの変更](../../connect/jdbc/modifying-result-set-data-sample.md)|結果セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースのデータを挿入、取得、および変更する方法について説明します。|  
+|[結果セットのデータ サンプルのキャッシング](../../connect/jdbc/caching-result-set-data-sample.md)|結果セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースから大量のデータを取得し、そのデータがクライアント上でキャッシュされる方法を制御する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  

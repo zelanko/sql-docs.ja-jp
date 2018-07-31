@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft ドキュメント
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b840ab60ac59501d1a7e2c3908af36e9e9a31d38
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd24a45be060eaa091899d6ca499ece902c463c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690275"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106688"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -41,18 +41,18 @@ ms.locfileid: "35690275"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>コメント  
- その他の操作を呼び出せません、 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)呼び出した後のインターフェイス、 **BCPDone**メソッドです。 呼び出すだけのことが、 [ibcpsession::bcpinit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)新しいバルク コピー操作を開始するメソッド。 これは、呼び出しに似ています、 [irowsetfastload::commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ **BCPDone** メソッドを呼び出すと、それ以後は [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
  メソッドが成功しました。  
   
  E_UNEXPECTED  
- メソッドの呼び出しが予期されませんでした。 たとえば、 **BCPInit**メソッドは、このメソッドを呼び出す前に呼び出されませんでした。  
+ メソッドの呼び出しが予期されませんでした。 たとえば、このメソッドを呼び出す前に、**BCPInit** メソッドが呼び出されなかった場合などです。  
   
 ## <a name="example"></a>例  
- このサンプルを使用する方法を示します、 **IBCPSession**インターフェイスです。  
+ このサンプルでは、**IBCPSession** インターフェイスの使用方法を示します。  
   
  このサンプルを実行する前に、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] を実行する必要があります。  
   
@@ -70,7 +70,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP を使用する次のコマンドで、このデータをテーブルに追加し直すことができます。  
   
- **bcp マスター.outfile.dat-n-t-s で fltest** *サーバー*  
+ **bcp master..fltest in outfile.dat -n -T -S** *サーバー*  
   
 ```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  

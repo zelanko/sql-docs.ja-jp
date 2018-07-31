@@ -1,5 +1,5 @@
 ---
-title: Blob と OLE オブジェクト |Microsoft ドキュメント
+title: Blob と OLE オブジェクト |Microsoft Docs
 description: BLOB と OLE オブジェクト
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,47 +20,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: cacbe007e9bf0187648ad1fd95c8b6616fb8a300
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 3582b5566adc03ed8d4e7e35a71b32d18a1f4c41
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666082"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106098"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server を公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および xml データ型とバイナリ ラージ オブジェクト (Blob)。 **読み取り**メソッド**ISequentialStream**コンシューマーが扱いやすい単位で多くのデータを取得することができます。  
+  OLE DB Driver for SQL Server で公開されている **ISequentialStream** インターフェイスにより、コンシューマーはバイナリ ラージ オブジェクト (BLOB) として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **ntext** 型、**text** 型、**image** 型、**varchar(max)** 型、**nvarchar(max)** 型、**varbinary(max)** 型、および XML 型にアクセスできます。 **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
   
- この機能を示すサンプルについては、次を参照してください。[大量のデータを設定&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)です。  
+ この機能を示すサンプルについては、次を参照してください。[大量のデータを設定&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)します。  
   
- コンシューマーに実装された、OLE DB Driver for SQL Server を使用できます**IStorage**データ変更のため、コンシューマーはアクセサーのインターフェイス ポインターを提供するときのインターフェイスがバインドされています。  
+ コンシューマーからデータ変更用にバインドされたアクセサーにインターフェイス ポインターを渡すとき、OLE DB Driver for SQL Server は、コンシューマーに実装された **IStorage** インターフェイスを使用できます。  
   
- 大きな値データ型を OLE DB Driver for SQL Server 型での想定サイズのチェック**IRowset**や DDL インターフェイスです。 持つ列**varchar**、 **nvarchar**、および**varbinary**データ型および最大サイズが無制限に設定されてとして表されます ISLONG を通じて、スキーマ行セット列のデータ型を返すためのインターフェイス。  
+ 大きな値データ型の場合、OLE DB Driver for SQL Server では、**IRowset** インターフェイスや DDL インターフェイスで型の想定サイズの確認が行われます。 **varchar** 型、**nvarchar** 型、および **varbinary** データ型の列の最大サイズが無制限に設定されている場合、列のデータ型を返すスキーマ行セットおよびインターフェイスによって列は ISLONG と表されます。  
   
- OLE DB Driver for SQL Server を公開、 **varchar (max)**、 **varbinary (max)** と**nvarchar (max)** それぞれ DBTYPE_STR、DBTYPE_BYTES、dbtype_wstr 型として型です。  
+ OLE DB Driver for SQL Server では、**varchar(max)** 型、**varbinary(max)** 型、および **nvarchar(max)** 型が、それぞれ DBTYPE_STR、DBTYPE_BYTES、および DBTYPE_WSTR として公開されます。  
   
  このようなデータ型を使用して作業するために、アプリケーションでは次のような操作を行えます。  
   
--   データ型 DBTYPE_STR、DBTYPE_BYTES、または DBTYPE_WSTR としてバインドします。 場合は、バッファーの大きさがないための十分な切り捨てが行わ、以前のリリースでこれらの型と同様 (ただし、大きい値は、使用できるようになりました)。  
+-   データ型 DBTYPE_STR、DBTYPE_BYTES、または DBTYPE_WSTR としてバインドします。 バッファーのサイズが十分でない場合、これらのデータ型は以前のリリースでの動作と同様に (以前よりも大きな値を格納できるようになりましたが)、切り捨てが行われます。  
   
 -   データ型としてバインドし、DBTYPE_BYREF も指定します。  
   
 -   DBTYPE_IUNKNOWN としてバインドし、ストリーミングを使用します。  
   
- DBTYPE_IUNKNOWN にバインドすると、ISequentialStream ストリーム機能が使用されます。 SQL Server の OLE DB Driver には、大きな値データ型の DBTYPE_IUNKNOWN としてバインドの出力パラメーターがサポートしています。 これは、ストアド プロシージャが DBTYPE_IUNKNOWN としてクライアントに返されますの戻り値としてこれらのデータ型を返すシナリオをサポートします。  
+ DBTYPE_IUNKNOWN にバインドすると、ISequentialStream ストリーム機能が使用されます。 OLE DB Driver for SQL Server では、大きな値データ型の DBTYPE_IUNKNOWN としてバインドの出力パラメーターをサポートします。 これは、ストアド プロシージャが、クライアントに DBTYPE_IUNKNOWN として返される、戻り値としてこれらのデータ型を返すシナリオをサポートします。  
   
 ## <a name="storage-object-limitations"></a>ストレージ オブジェクトの制限事項  
   
--   SQL Server の OLE DB Driver は、単一の開いているストレージ オブジェクトのみをサポートできます。 1 つ以上のストレージ オブジェクトを開こうとすると (1 つ以上の参照を取得する**ISequentialStream**インターフェイス ポインター) DBSTATUS_E_CANTCREATE が返されます。  
+-   OLE DB Driver for SQL Server では、1 つ開いているストレージ オブジェクトのみをサポートできます。 複数の **ISequentialStream** インターフェイス ポインターへの参照を取得するために、複数のストレージ オブジェクトを開こうとすると、DBSTATUS_E_CANTCREATE が返されます。  
   
--   OLE DB Driver for SQL Server、DBPROP_BLOCKINGSTORAGEOBJECTS の読み取り専用プロパティの既定値は VARIANT_TRUE です。 そのため、ストレージ オブジェクトがアクティブな場合は、一部のメソッド (以外の記憶域オブジェクトのメソッド) 失敗して E_UNEXPECTED がします。  
+-   OLE DB Driver for SQL Server の読み取り専用プロパティ DBPROP_BLOCKINGSTORAGEOBJECTS の既定値は VARIANT_TRUE です。 そのため、ストレージ オブジェクトがアクティブの場合は、(ストレージ オブジェクト以外の) 一部のメソッドが失敗して E_UNEXPECTED が返されます。  
   
--   コンシューマーに実装されたストレージ オブジェクトによって提示されるデータの長さできる必要既知 OLE DB Driver for SQL Server ストレージ オブジェクトを参照する行アクセサーの作成時にします。 コンシューマー側では、アクセサーの作成に使用する DBBINDING 構造体に長さのインジケーターをバインドする必要があります。  
+-   コンシューマーに実装されたストレージ オブジェクトを参照する行アクセサーを作成するときは、そのオブジェクトのデータ長を OLE DB Driver for SQL Server 側で認識しておく必要があります。 コンシューマー側では、アクセサーの作成に使用する DBBINDING 構造体に長さのインジケーターをバインドする必要があります。  
   
--   行が含まれている場合より、1 つの大きなデータ値と DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM ではありません、コンシューマーを行のデータを取得またはその他の取得する前にすべての大きなデータ値を処理する、OLE DB Driver for SQL Server カーソルでサポートされている行セットを使用するか、必要があります。行の値。 DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM の場合は、SQL Server の OLE DB Driver は任意の順序でアクセスできるように、バイナリ ラージ オブジェクト (Blob) としてすべての xml データ型をキャッシュします。  
+-   行に 1 つの大きなデータ値とそれ以外のデータが格納されていて、DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM ではない場合は、OLE DB Driver for SQL Server のカーソルに対応した行セットを使用して行のデータを取得するか、すべての大きなデータ値を処理してから行の他の値を取得する必要があります。 DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM の場合、OLE DB Driver for SQL Server によりすべての XML データ型がバイナリ ラージ オブジェクト (BLOB) としてキャッシュされ、それらに任意の順序でアクセスできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -71,7 +71,7 @@ ms.locfileid: "35666082"
 -   [BLOB 出力パラメーターのストリーミング サポート](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server プログラミング用の OLE DB ドライバー](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
+ [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [大きな値の型の使用](../../oledb/features/using-large-value-types.md)  
   
   

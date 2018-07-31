@@ -1,5 +1,5 @@
 ---
-title: 既定の PHP データ型 |Microsoft ドキュメント
+title: 既定の PHP データ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307701"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981361"
 ---
 # <a name="default-php-data-types"></a>既定の PHP データ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -75,9 +75,9 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |xml|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
   
 
-1.  データは、システムの Windows ロケール設定のコード ページで指定されている 8 ビット文字で返されます。 任意のマルチバイト文字またはこのコード ページにマップされていない文字が 1 バイトの疑問符 (?) 文字で置き換えられます。  
+1.  データは、システムの Windows ロケール設定のコード ページで指定されている 8 ビット文字で返されます。 任意のマルチバイト文字またはこのコード ページにマップされていない文字は、1 バイトの疑問符 (?) 文字に置き換えられます。  
   
-2.  場合[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)または[sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md)がストリームの既定の PHP 型を持つデータを取得するために使用、データが返されますを文字列としてのストリームと同じエンコーディング。 たとえば、SQL Server の binary 型が取得した場合を使用して**sqlsrv_fetch_array**既定の戻り型がバイナリ文字列です。  
+2.  [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) または [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) を使用して既定の PHP 型が Stream であるデータを取得する場合、データはストリームと同じエンコードの文字列として返されます。 たとえば、**sqlsrv_fetch_array** を使用して SQL Server の binary 型を取得した場合、既定の戻り値の型はバイナリ文字列です。  
   
 3.  データは、エンコードまたは変換されず、生のバイト ストリームとしてサーバーから返されます。  
 
@@ -87,7 +87,7 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 
 6. これは、nvarchar(max) 型にマップされる従来の型です。
 
-7.  sql_variant 型は、双方向または出力パラメーターではサポートされていません。
+7.  sql_variant は双方向または出力パラメーターではサポートされていません。
 
 8.  これは、varchar(max) 型にマップされる従来の型です。  
   
@@ -97,16 +97,16 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>SQL Server 2008 でのその他の新しいデータ型と機能  
-SQL Server 2008 での新しいデータ型列 (テーブル値パラメーターの場合) などの外部に存在することはできません、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]です。 次の表は、SQL Server 2008 の新機能の PHP によるサポートをまとめたものです。  
+SQL Server 2008 の新しいデータ型で、列の外部に存在するもの (テーブル値パラメーターなど) は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ではサポートされていません。 次の表は、SQL Server 2008 の新機能の PHP によるサポートをまとめたものです。  
   
 |機能|PHP のサポート|  
 |-----------|---------------|  
 |テーブル値パラメーター|いいえ|  
 |スパース列|部分的|  
-|Null ビット圧縮|はい|  
-|大きな CLR ユーザー定義型 (UDT)|はい|  
+|Null ビット圧縮|[ユーザー アカウント制御]|  
+|大きな CLR ユーザー定義型 (UDT)|[ユーザー アカウント制御]|  
 |サービス プリンシパル名|いいえ|  
-|MERGE|はい|  
+|MERGE|[ユーザー アカウント制御]|  
 |FILESTREAM|部分的|  
   
 部分的な型のサポートとは、その列の型をプログラムでクエリできないことを意味します。  
@@ -118,7 +118,7 @@ SQL Server 2008 での新しいデータ型列 (テーブル値パラメータ�
 
 [PHP の型](http://php.net/manual/en/language.types.php)
 
-[データ型 (TRANSACT-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+[データ型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: SQL Server の OLE db OLE DB ドライバーで OUTPUT 句の使用 |Microsoft ドキュメント
-description: OLE db で OLE DB Driver for SQL Server の OUTPUT 句の使用
+title: OLE DB Driver for SQL Server での OLE DB を使用した OUTPUT 句の使用 | Microsoft Docs
+description: OLE DB Driver for SQL Server での OLE DB を使用した OUTPUT 句の使用
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8cf2e08b76636ab8509ab07fd1f3d60a102fa76d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ad3408d0419e408809b151114d83a09d976505fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665332"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109394"
 ---
-# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>SQL Server の OLE db OLE DB ドライバーで OUTPUT 句の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server での OLE DB を使用した OUTPUT 句の使用
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: '手順 3: pyodbc を使用して SQL に接続する概念実証 |Microsoft ドキュメント'
+title: 'ステップ 3: pyodbc を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9914b8bd941eb3e6ddc64fb1a4e37b38335fa01f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: a3fa70619208df8940ec10a1b5a0f46704ce9c43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309751"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979978"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>手順 3: 概念実証の pyodbc を使用して SQL に接続します。
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>ステップ 3: pyodbc を使用した SQL への接続を概念実証する
 
-この例は、概念実証ののみを考慮してください。  サンプル コードでは、わかりやすくするため、簡略化し、Microsoft によって推奨されるベスト プラクティスを必ずしもは表しません。  
+この例は、のみの概念実証を検討してください。  サンプル コードがわかりやすくするために、簡略化し、Microsoft によって推奨されるベスト プラクティスに表すとは限りません。  
 
-**次のサンプル スクリプトを実行**test.py と呼ばれるファイルを作成しを進めながら、各コード スニペットを追加します。 
+**次のサンプル スクリプトを実行**である test.py という名前のファイルを作成し、移動すると、各コード スニペットを追加します。 
 
 ```
 > python test.py
@@ -51,7 +51,7 @@ cursor = cnxn.cursor()
   
 ## <a name="step-2--execute-query"></a>手順 2: クエリを実行します。  
   
-SQL データベースに対するクエリからセットの結果を取得する、cursor.executefunction を使用できます。 この関数は本質的には任意のクエリを受け入れるし、反復処理できる cursor.fetchone() の使用に結果セットを返します
+SQL Database に対するクエリのセットの結果を取得する、cursor.executefunction を使用できます。 この関数は、基本的に任意のクエリを受け入れるし、cursor.fetchone() の使用に反復処理できる結果セットを返します
   
   
 ```python
@@ -66,7 +66,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
   
-この例を実行する方法が表示されます、[挿入](../../../t-sql/statements/insert-transact-sql.md)ステートメントは、安全にからアプリケーションを保護するためのパラメーターを渡す[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
+実行する方法がわかります。 この例では、[挿入](../../../t-sql/statements/insert-transact-sql.md)ステートメントが安全に、からアプリケーションを保護するパラメーターを渡す[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
   
   
 ```python
@@ -80,6 +80,6 @@ while row:
     row = cursor.fetchone()
 ```  
   `      
-  ## <a name="next-steps"></a>次のステップ  
+  ## <a name="next-steps"></a>次の手順  
   
-詳細については、次を参照してください。、 [Python デベロッパー センター](https://azure.microsoft.com/en-us/develop/python/)です。
+詳細については、次を参照してください。、 [Python デベロッパー センター](https://azure.microsoft.com/develop/python/)します。

@@ -1,6 +1,6 @@
 ---
-title: 行セット |Microsoft ドキュメント
-description: OLE DB Driver for SQL Server での行セット
+title: 行セット |Microsoft Docs
+description: OLE DB Driver for SQL Server の行セット
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,37 +20,37 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8ffead535df47ea3f6937e11fa16f5e32318ecf3
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: d4d7889775a66e3afd03103abf7503686ffd43fe
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690175"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106928"
 ---
 # <a name="rowsets"></a>行セット
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   行セットとは、データの列を含む行の集まりです。 行セットは、すべての OLE DB データ プロバイダーが表形式で結果セット データを公開できるようにするための重要な機能を持つオブジェクトです。  
   
- コンシューマーを使用して、セッションを作成した後、 **idbcreatesession::createsession**メソッド、コンシューマーが使用するか、 **IOpenRowset**または**IDBCreateCommand**行セットを作成するセッションのインターフェイスです。 SQL Server の OLE DB Driver は、これらのインターフェイスの両方をサポートします。 ここでは、これら両方のメソッドについて説明します。  
+ コンシューマーでは **IDBCreateSession::CreateSession** メソッドを使用してセッションを作成した後、そのセッションで **IOpenRowset** インターフェイスまたは **IDBCreateCommand** インターフェイスのいずれかを使用して行セットを作成できます。 OLE DB Driver for SQL Server では、これらのインターフェイスの両方をサポートします。 ここでは、これら両方のメソッドについて説明します。  
   
--   呼び出して行セットを作成、 **iopenrowset::openrowset**メソッドです。  
+-   **IOpenRowset::OpenRowset** メソッドを呼び出して行セットを作成します。  
   
-     この操作は、1 つのテーブル全体について行セットを作成することと同じです。 このメソッドは、1 つのベース テーブルのすべての行を含む行セットを開き、その行セットを返します。 引数のいずれかの**OpenRowset**行セットの作成元のテーブルを識別するテーブル id を指定します。  
+     この操作は、1 つのテーブル全体について行セットを作成することと同じです。 このメソッドは、1 つのベース テーブルのすべての行を含む行セットを開き、その行セットを返します。 **OpenRowset** の引数の 1 つは、行セットの作成元となるテーブルを識別するテーブル ID です。  
   
--   呼び出してコマンド オブジェクトを作成、 **idbcreatecommand::createcommand**メソッドです。  
+-   **IDBCreateCommand::CreateCommand** メソッドを呼び出して、コマンド オブジェクトを作成します。  
   
-     コマンド オブジェクトでは、プロバイダーがサポートするコマンドが実行されます。 OLE DB Driver for SQL Server、コンシューマーはいずれかを指定して[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントでは、SELECT ステートメントまたはストアド プロシージャの呼び出しなどです。 コマンド オブジェクトを使用して行セットを作成する手順は次のとおりです。  
+     コマンド オブジェクトでは、プロバイダーがサポートするコマンドが実行されます。 OLE DB Driver for SQL Server では、SELECT ステートメントなどの任意の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントやストアド プロシージャへの呼び出しをコンシューマーで指定できます。 コマンド オブジェクトを使用して行セットを作成する手順は次のとおりです。  
   
-    1.  コンシューマーは、 **idbcreatecommand::createcommand**を要求するコマンド オブジェクトを取得するセッションのメソッド、 **ICommandText**コマンド オブジェクトのインターフェイスです。 これは、 **ICommandText**インターフェイスを設定し、実際のコマンド テキストを取得します。 テキスト コマンドを呼び出すことによって、コンシューマー入力、 **icommandtext::setcommandtext**メソッドです。  
+    1.  コンシューマーは、セッションの **IDBCreateCommand::CreateCommand** メソッドを呼び出してコマンド オブジェクトを取得し、そのコマンド オブジェクトの **ICommandText** インターフェイスを要求します。 この **ICommandText** インターフェイスで、実際のコマンド テキストが設定および取得されます。 コンシューマーは、**ICommandText::SetCommandText** メソッドを呼び出して、テキスト コマンドにコマンドを設定します。  
   
-    2.  ユーザーの呼び出し、 **icommand::execute**のコマンドは、上のメソッドです。 コマンドの実行時に構築される行セット オブジェクトには、コマンドから返される結果セットが含まれます。  
+    2.  ユーザーがコマンドの **ICommand::Execute** メソッドを呼び出します。 コマンドの実行時に構築される行セット オブジェクトには、コマンドから返される結果セットが含まれます。  
   
- コンシューマーが使用できる、 **ICommandProperties**を取得またはで実行されるコマンドによって返される行セットのプロパティを設定するインターフェイス、 **icommand::execute**インターフェイスです。 最も一般的に要求されるプロパティは、行セットでサポートする必要のあるインターフェイスです。 コンシューマーはインターフェイスだけでなく、行セットやインターフェイスの動作を変更するプロパティも要求できます。  
+ コンシューマーは、**ICommandProperties** インターフェイスを使用して、**ICommand::Execute** インターフェイスで実行されるコマンドから返される行セットのプロパティを取得または設定できます。 最も一般的に要求されるプロパティは、行セットでサポートする必要のあるインターフェイスです。 コンシューマーはインターフェイスだけでなく、行セットやインターフェイスの動作を変更するプロパティも要求できます。  
   
- コンシューマーが行セットを解放、 **IRowset::Release**メソッドです。 行セットを解放すると、コンシューマーがその行セットに保持しているすべての行ハンドルも解放されます。 ただし、行セットを解放してもアクセサーは解放されません。 ある場合、 **IAccessor**インターフェイスがまだ解放します。  
+ コンシューマーは **IRowset::Release** メソッドを使用して行セットを解放します。 行セットを解放すると、コンシューマーがその行セットに保持しているすべての行ハンドルも解放されます。 ただし、行セットを解放してもアクセサーは解放されません。 **IAccessor** インターフェイスがある場合は、それを解放する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -1,6 +1,6 @@
 ---
-title: ローカル トランザクションのサポート |Microsoft ドキュメント
-description: SQL Server の OLE DB Driver でローカル トランザクション
+title: ローカル トランザクションのサポート |Microsoft Docs
+description: OLE DB driver for SQL Server のローカル トランザクション
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,54 +21,54 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 8bf157a5f5bdbea93c9361edc4903c5cd6c41302
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689365"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109724"
 ---
 # <a name="supporting-local-transactions"></a>ローカル トランザクションのサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  セッションでは、OLE DB 用のドライバーを SQL Server のローカル トランザクションのトランザクション スコープを区切ります。 ときに、コンシューマーの方向で、OLE DB Driver for SQL Server に送信した要求のインスタンスに接続[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]要求は、OLE DB Driver for SQL Server の作業の単位を構成します。 ローカル トランザクションは常に、SQL Server セッションの 1 つ OLE DB ドライバーの作業の 1 つまたは複数の単位をラップします。  
+  セッションを OLE DB Driver for SQL Server のローカル トランザクションのトランザクション スコープを区切ります。 コンシューマーの方向で、OLE DB Driver for SQL Server に送信した要求のインスタンスに接続[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]要求は、OLE DB driver for SQL Server の作業単位を構成します。 ローカル トランザクションは常に、SQL Server のセッションの 1 つ OLE DB ドライバーの作業の 1 つ以上の単位をラップします。  
   
- SQL Server の自動コミット モードの既定の OLE DB Driver を使用して、単一の作業単位がローカル トランザクションのスコープとして扱われます。 ローカル トランザクションに参加するのは、1 単位のみです。 セッションの作成時に、OLE DB Driver for SQL Server は、セッションのトランザクションを開始します。 作業単位の処理が正常に完了すると、その作業がコミットされます。 失敗すると、開始された作業がすべてロールバックされ、エラーがコンシューマーに報告されます。 どちらの場合、OLE DB Driver for SQL Server は、トランザクション内ですべての作業を実行できるように、セッションに対して新しいローカル トランザクションを開始します。  
+ OLE DB Driver for SQL Server の既定の自動コミット モードを使用すると、1 つの作業単位がローカル トランザクションのスコープとして扱われます。 ローカル トランザクションに参加するのは、1 単位のみです。 セッションが作成されたときに、OLE DB Driver for SQL Server は、セッションのトランザクションを開始します。 作業単位の処理が正常に完了すると、その作業がコミットされます。 失敗すると、開始された作業がすべてロールバックされ、エラーがコンシューマーに報告されます。 いずれの場合も、OLE DB Driver for SQL Server は、同じセッションの新しいローカル トランザクションを開始し、すべての作業が 1 トランザクション内で実行されるようにします。  
   
- 使用して、OLE DB Driver for SQL Server コンシューマーがローカル トランザクションのスコープをより正確に制御を指示できます、 **ITransactionLocal**インターフェイスです。 セッションのすべての作業単位トランザクション間で開始ポイントと、最終的なコンシューマーのセッションを開始すると、トランザクション、**コミット**または**中止**メソッド呼び出しはアトミック単位として扱われます。 OLE DB Driver for SQL Server では、そのためには、コンシューマーによって指示された場合に、トランザクションに暗黙的に開始します。 コンシューマーがモードの保持を要求しないと、セッションは親のトランザクション レベルの動作 (通常は、自動コミット モード) に戻ります。  
+ OLE DB Driver for SQL Server のコンシューマーは、**ITransactionLocal** インターフェイスを使用することで、より正確にローカル トランザクションのスコープを制御できます。 コンシューマーのセッションがトランザクションを開始すると、トランザクションの開始時点から、最終的に **Commit** または **Abort** メソッドが呼び出されるまでのセッションの作業単位すべてが、1 つのアトミックな単位として扱われます。 OLE DB Driver for SQL Server は、暗黙的に、コンシューマーの指示のトランザクションを開始します。 コンシューマーがモードの保持を要求しないと、セッションは親のトランザクション レベルの動作 (通常は、自動コミット モード) に戻ります。  
   
- SQL Server の OLE DB ドライバーをサポートしている**itransactionlocal::starttransaction**パラメーターは次のようにします。  
+ OLE DB Driver for SQL Server サポート**itransactionlocal::starttransaction**パラメーターとして次のとおりです。  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
-|*isoLevel*[in]|このトランザクションで使用する分離レベルを指定します。 ローカル トランザクションの場合に、OLE DB Driver for SQL Server には、以下がサポートしています。<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注: が始まる[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、ISOLATIONLEVEL_SNAPSHOT は有効、 *isoLevel*データベースのバージョン管理が有効になっているかどうかの引数。 ただし、ユーザーがステートメントを実行する際に、バージョン管理が有効か、データベースが読み取り専用の場合は、エラーが発生します。 として ISOLATIONLEVEL_SNAPSHOT を指定する場合に XACT_E_ISOLATIONLEVEL エラーが発生するさらに、 *isoLevel*のバージョンに接続しているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。|  
-|*アイソレーション*[in]|SQL Server の OLE DB Driver は、0 以外の値のエラーを返します。|  
-|*pOtherOptions*[in]|指定しない場合、NULL の場合は、OLE DB Driver for SQL Server は、インターフェイスからのオプション オブジェクトを要求します。 場合、SQL Server の OLE DB Driver は XACT_E_NOTIMEOUT を返しますのオプション オブジェクトの*ulTimeout*メンバーが 0 ではありません。 SQL Server の OLE DB ドライバーの値を無視する、 *szDescription*メンバー。|  
-|*pulTransactionLevel*[out]|ない場合 NULL の場合は、OLE DB Driver for SQL Server がトランザクションの入れ子になったレベルを返します。|  
+|*isoLevel*[in]|このトランザクションで使用する分離レベルを指定します。 ローカル トランザクションの場合で、OLE DB Driver for SQL Server には、次がサポートされています。<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注: [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降では、データベースのバージョン管理が有効でも無効でも、ISOLATIONLEVEL_SNAPSHOT は *isoLevel* の引数として有効です。 ただし、ユーザーがステートメントを実行する際に、バージョン管理が有効か、データベースが読み取り専用の場合は、エラーが発生します。 また、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続している場合に、*isoLevel* に ISOLATIONLEVEL_SNAPSHOT を指定すると、XACT_E_ISOLATIONLEVEL エラーが発生します。|  
+|*isoFlags*[in]|SQL Server の OLE DB Driver は、0 以外の値のエラーを返します。|  
+|*pOtherOptions*[in]|指定しない場合、NULL の場合は、OLE DB Driver for SQL Server は、インターフェイスからオプションのオブジェクトを要求します。 場合、OLE DB Driver for SQL Server が XACT_E_NOTIMEOUT を返しますのオプション オブジェクトの*ulTimeout*メンバーは 0 ではありません。 値を無視する、OLE DB Driver for SQL Server、 *szDescription*メンバー。|  
+|*pulTransactionLevel*[out]|指定しない場合、NULL の場合は、OLE DB Driver for SQL Server トランザクションの入れ子のレベルを返します。|  
   
- ローカル トランザクションの場合、OLE DB Driver for SQL Server を実装する**itransaction::abort**パラメーターは次のようにします。  
+ ローカル トランザクションの場合、OLE DB Driver for SQL Server 実装**itransaction::abort**パラメーターとして次のとおりです。  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |*pboidReason*[in]|設定しても無視されます。 NULL を指定しても問題ありません。|  
-|*:commit*[in]|TRUE のときは、セッションの新しいトランザクションが暗黙的に開始されます。 このトランザクションは、コンシューマーがコミットまたは終了する必要があります。 FALSE の場合、OLE DB Driver for SQL Server は、セッションの自動コミット モードに戻ります。|  
-|*fAsync*[in]|SQL Server の OLE DB ドライバーによって、非同期アボートはサポートされていません。 値が FALSE でない場合、SQL Server の OLE DB Driver は XACT_E_NOTSUPPORTED を返します。|  
+|*fRetaining*[in]|TRUE のときは、セッションの新しいトランザクションが暗黙的に開始されます。 このトランザクションは、コンシューマーがコミットまたは終了する必要があります。 FALSE の場合、OLE DB Driver for SQL Server は、セッションの自動コミット モードに戻ります。|  
+|*fAsync*[in]|SQL Server の OLE DB ドライバーによって、非同期中止がサポートされていません。 値が FALSE でない場合、OLE DB Driver for SQL Server は XACT_E_NOTSUPPORTED を返します。|  
   
- ローカル トランザクションの場合、OLE DB Driver for SQL Server を実装する**itransaction::commit**パラメーターは次のようにします。  
+ ローカル トランザクションの場合、OLE DB Driver for SQL Server 実装**itransaction::commit**パラメーターとして次のとおりです。  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
-|*:commit*[in]|TRUE のときは、セッションの新しいトランザクションが暗黙的に開始されます。 このトランザクションは、コンシューマーがコミットまたは終了する必要があります。 FALSE の場合、OLE DB Driver for SQL Server は、セッションの自動コミット モードに戻ります。|  
-|*grfTC*[in]|非同期応答と 1 フェーズはサポートされていません、OLE DB Driver for SQL Server。 SQL Server の OLE DB Driver は、XACTTC_SYN 以外の値を XACT_E_NOTSUPPORTED を返します。|  
+|*fRetaining*[in]|TRUE のときは、セッションの新しいトランザクションが暗黙的に開始されます。 このトランザクションは、コンシューマーがコミットまたは終了する必要があります。 FALSE の場合、OLE DB Driver for SQL Server は、セッションの自動コミット モードに戻ります。|  
+|*grfTC*[in]|非同期応答と 1 フェーズの応答はサポートされていません、OLE DB Driver for SQL Server。 SQL Server の OLE DB Driver は、XACTTC_SYN 以外の値を XACT_E_NOTSUPPORTED を返します。|  
 |*grfRM*[in]|0 を指定する必要があります。|  
   
- SQL Server セッション上の行セットが、ローカル コミットに保管されているまたは中止操作の OLE DB Driver は、DBPROP_ABORTPRESERVE と DBPROP_COMMITPRESERVE の行セット プロパティの値に基づいています。 既定では、これらのプロパティは、両方 VARIANT_FALSE すべて OLE DB Driver for SQL Server セッション上の行セットは次の中止失われたか、操作をコミットします。  
+ セッションの OLE DB Driver for SQL Server の行セットは、行セット プロパティ DBPROP_ABORTPRESERVE と DBPROP_COMMITPRESERVE の値に基づいて、ローカル コミット操作時またはアボート操作時に保存されます。 既定では、これらのプロパティの値はどちらも VARIANT_FALSE で、セッションのすべての OLE DB Driver for SQL Server の行セットはすべて、アボート操作またはコミット操作が行われると失われます。  
   
- OLE DB Driver for SQL Server を実装しません、 **ITransactionObject**インターフェイスです。 このインターフェイスへの参照を取得しようとすると、コンシューマーは E_NOINTERFACE を返します。  
+ OLE DB Driver for SQL Server を実装していません、 **ITransactionObject**インターフェイス。 このインターフェイスへの参照を取得しようとすると、コンシューマーは E_NOINTERFACE を返します。  
   
- この例では**ITransactionLocal**です。  
+ 次の例では、**ITransactionLocal** を使用します。  
   
 ```  
 // Interfaces used in the example.  

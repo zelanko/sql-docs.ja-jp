@@ -53,7 +53,7 @@ ms.locfileid: "37260092"
   
 8.  型**EXEC [stg]. [」と入力]?、?、ですか?** **SQL ステートメント**します。 SQL Server Management Studio を使用して名前を確認できます。  
   
-     ![SQL エディター] ダイアログ ボックス - [全般設定を実行](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "SQL エディター] ダイアログ ボックス - [全般設定の実行")  
+     ![SQL エディター ダイアログ ボックス - 全般設定を実行](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "SQL エディター ダイアログ ボックス - 全般設定の実行")  
   
 9. クリックして**パラメーター マッピング**左側のメニューから。  
   

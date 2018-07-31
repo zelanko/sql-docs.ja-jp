@@ -1,5 +1,5 @@
 ---
-title: SQLServerDriver クラス |Microsoft ドキュメント
+title: SQLServerDriver クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 976893003e65ea226e5df03a3d636b20d38018ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845477"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052724"
 ---
 # <a name="sqlserverdriver-class"></a>SQLServerDriver クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  表す、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]です。 このクラスに接続するためのメソッドが含まれています、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース、および JDBC ドライバーに関する情報を取得するためです。  
+  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を表します。 このクラスには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースに接続し、JDBC ドライバーに関する情報を取得するためのメソッドが含まれます。  
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
@@ -41,6 +41,6 @@ public final class SQLServerDriver
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメンバー](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

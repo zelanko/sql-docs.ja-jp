@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_errors |Microsoft ドキュメント
+title: sqlsrv_errors |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309051"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979793"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-返します。 拡張エラーや警告について、最後は**sqlsrv**操作を実行します。  
+最後に実行された **sqlsrv** 操作に関する拡張エラーや警告の情報を返します。  
   
-**Sqlsrv_errors**関数は、以下のパラメーター セクションで指定されたパラメーター値のいずれかで呼び出すことによってエラーや警告の情報を返すことができます。  
+後の「パラメーター」セクションで示されているパラメーター値のいずれかを指定して **Sqlsrv_errors** 関数を呼び出すことにより、エラーや警告の情報を取得できます。  
   
 既定では、いずれかの **sqlsrv** 関数の呼び出しで生成される警告はエラーとして扱われます。 **sqlsrv** 関数の呼び出しで警告が発生した場合、関数は false を返します。 ただし、SQLSTATE 値 01000、01001、01003、および 01S02 に対応する警告はエラーとして扱われません。  
   
@@ -49,7 +49,7 @@ sqlsrv_configure("WarningsReturnAsErrors", 0);
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-設定に関係なく警告のみを取得できる呼び出し**sqlsrv_errors**いずれかで、 **SQLSRV_ERR_ALL**または**SQLSRV_ERR_WARNINGS**パラメーター値 (を参照してくださいパラメーター以下のセクションの詳細)。  
+設定に関係なく、警告は、**SQLSRV_ERR_ALL** または **SQLSRV_ERR_WARNINGS** パラメーター値を指定して **sqlsrv_errors** を呼び出すことによってのみ取得できます (詳細については後の「パラメーター」セクションを参照)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,9 +59,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$errorsAndOrWarnings*[省略可能]: 定義済みの定数です。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
+*$errorsAndOrWarnings* (省略可能): 定義済みの定数。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  
@@ -70,18 +70,18 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 パラメーターの値を指定しないと、 **sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。  
   
 ## <a name="return-value"></a>戻り値  
-配列の **array** 、または **null**。 各**配列**、返された**配列**3 つのキー/値ペアが含まれています。 次の表では、各キーとその説明を示します。  
+配列の **array** 、または **null**。 返される **array** 内の各 **array** には、3 つのキーと値のペアが含まれます。 次の表では、各キーとその説明を示します。  
   
-|Key|説明|  
+|Key|[説明]|  
 |-------|---------------|  
-|SQLSTATE|ODBC ドライバー由来のエラーの場合、ODBC が返す SQLSTATE。 ODBC の SQLSTATE 値については、次を参照してください。 [ODBC エラー コード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)です。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、IMSSP の SQLSTATE。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来の警告の場合、01SSP の SQLSTATE。|  
+|SQLSTATE|ODBC ドライバー由来のエラーの場合、ODBC が返す SQLSTATE。 ODBC の SQLSTATE 値については、「[ODBC Error Codes (ODBC エラー コード)](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、IMSSP の SQLSTATE。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来の警告の場合、01SSP の SQLSTATE。|  
 |コード|SQL Server 由来のエラーの場合、SQL Server のネイティブ エラー コード。<br /><br />ODBC ドライバー由来のエラーの場合、ODBC が返すエラー コード。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のエラー コード。 詳細については、「 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)」を参照してください。|  
 |message|エラーの説明です。|  
   
 配列の値は、数値キー 0、1、および 2 でアクセスすることもできます。 エラーまたは警告が発生しなかった場合、 **null** が返されます。  
   
 ## <a name="example"></a>例  
-次の例では、失敗したステートメント実行の間に発生したエラーを表示します (ため、ステートメントが失敗した**InvalidColumName**指定されたテーブルで有効な列名ではありません)。例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、失敗したステートメント実行の間に発生したエラーを表示します (ステートメントは、**InvalidColumName** が指定されたテーブルの有効な列名ではないために失敗します)。この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

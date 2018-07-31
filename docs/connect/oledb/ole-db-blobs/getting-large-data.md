@@ -1,6 +1,6 @@
 ---
-title: 大きなデータの取得 |Microsoft ドキュメント
-description: SQL Server の OLE DB Driver を使用して大きなデータの取得
+title: 大きなデータの取得 |Microsoft Docs
+description: SQL Server の OLE DB ドライバーを使用して大きなデータの取得
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666202"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106183"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  一般に、コンシューマーがを通じて参照されていないデータを処理するその他のコードから、OLE DB Driver for SQL Server のストレージ オブジェクトを作成するコードを分離する必要があります、 **ISequentialStream**インターフェイス ポインター。  
+  一般に、コンシューマーは、OLE DB Driver for SQL Server のストレージ オブジェクトを作成するコードと、**ISequentialStream** インターフェイス ポインターにより参照されないデータを処理するコードを区別する必要があります。  
   
- この記事は、次の関数で使用可能な機能を参照します。  
+ この記事では、次の関数で使用可能な機能について説明します。  
   
 -   IRowset:GetData  
   
@@ -41,9 +41,9 @@ ms.locfileid: "35666202"
   
 -   ICommand::Execute  
   
- コンシューマーへの呼び出し内のデータの 1 つの行のみをフェッチする必要があります、 **GetNextRows** DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_ のいずれかに、行セット プロパティ グループで、DBPROP_ACCESSORDER プロパティが設定されている場合、メソッドSEQUENTIALSTORAGEOBJECTS です。 BLOB データがバッファーされていないためにです。 DBPROP_ACCESSORDER の値が DBPROPVAL_AO_RANDOM に設定されている場合、コンシューマーが内のデータの複数の行をフェッチできます**GetNextRows**です。  
+ 行セット プロパティ グループの DBPROP_ACCESSORDER プロパティに DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかの値が設定されている場合、**GetNextRows** メソッドの呼び出しで、コンシューマーが 1 行分のデータのみをフェッチする必要があります。 BLOB データがバッファーされていないためにです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
   
- SQL Server の OLE DB Driver はから大きなデータを取得できません[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するように、コンシューマーから要求されるまでです。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
+ OLE DB Driver for SQL Server から大規模なデータが取得されない[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンシューマーの要求されるまでです。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
   
 ## <a name="example"></a>例  
  次の例では、大きなデータ値を 1 つの列から取得します。  
@@ -154,7 +154,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>参照  
- [Blob と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [大きな値の型の使用](../../oledb/features/using-large-value-types.md)  
   
   

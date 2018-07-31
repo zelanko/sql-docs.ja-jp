@@ -1,6 +1,6 @@
 ---
-title: サーバーからクライアントへの変換を実行 |Microsoft ドキュメント
-description: サーバーからクライアントへの変換を実行
+title: クライアントにサーバーから変換 |Microsoft Docs
+description: サーバーからクライアントへの変換
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a90953e9ee026f4f2c941520b1fe94bcf74eb1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60adf00e05d190f72229b252a3877b417be7f260
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666412"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109434"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  この記事説明の間で実行される日付/時刻変換[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)](またはそれ以降) と SQL Server の OLE DB ドライバーで作成されたクライアント アプリケーション。  
+  この記事には、日付/時刻の間で変換がについて説明します[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)](またはそれ以降) と OLE DB ドライバーを使用した SQL Server 用に記述されたクライアント アプリケーション。  
   
 ## <a name="conversions"></a>コンバージョン  
- 次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーター、icommandwithparameters::setparameterinfo が呼び出され、型がで指定された場合の*して*サーバーによって実行されるサーバーで、暗黙的な変換は、実際の型と一致しませんをクライアントに返される型は icommandwithparameters::setparameterinfo を介して指定された型を一致とします。 これは、サーバーの変換規則がこの記事で説明されているものとは異なると、予期しない変換結果を可能性があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
+ 次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 Icommandwithparameters::setparameterinfo が呼び出され、型がで指定された場合、出力パラメーターの*して*サーバーによって実行される暗黙的な変換をサーバー上の実際の型と一致しません、と、クライアントに返される型の icommandwithparameters::setparameterinfo を通じて指定された型が一致します。 これにより、サーバーの変換規則がこの記事の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
   
 |変換先 -><br /><br /> From|[DATE]|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -41,7 +41,7 @@ ms.locfileid: "35666412"
 |DATETIME|5、7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
 |Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK] (VT_BSTR)|[OK]|[OK]|4|4|  
 |Datetimeoffset|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|[OK] (VT_BSTR)|[OK]|[OK]|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|なし|なし|なし|なし|なし|なし|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12、9|12|12|12|7、13|なし|なし|なし|なし|なし|なし|  
 |Sql_variant<br /><br /> (datetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
 |Sql_variant<br /><br /> (date)|1、7|[OK]|2|2|1|1、3|1、7|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
@@ -51,10 +51,10 @@ ms.locfileid: "35666412"
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
-|シンボル|説明|  
+|記号|意味|  
 |------------|-------------|  
 |[OK]|変換は必要ありません。|  
-|-|変換はサポートされていません。 Iaccessor::createaccessor が呼び出されたときに、バインドが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION がで返されます*rgStatus*です。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
+|-|変換はサポートされていません。 Iaccessor::createaccessor が呼び出されたときに、バインドが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION がで返されます*rgStatus*します。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
 |1|時刻フィールドに 0 が設定されます。|  
 |2|DBSTATUS_E_CANTCONVERTVALUE が設定されます。|  
 |3|タイムゾーンは 0 に設定されます。|  
@@ -70,6 +70,6 @@ ms.locfileid: "35666412"
 |13|文字列は ISO リテラルとして解析され、対象の型に変換されます。 これが失敗すると、文字列は OLE 日付リテラル (時刻要素も含む) として解析され、OLE Date (DBTYPE_DATE) から対象の型に変換されます。 文字列は datetime リテラルの構文に準拠している必要があります。ただし、変換先が DBTYPE_DATE または DBTYPE_DBTIMESTAMP の場合は別です。 この場合、ISO 形式の解析を成功させるために、datetime リテラルまたは時刻リテラルが許容されています。 OLE での解析を成功させるには、文字列は OLE で認識される構文に準拠している必要があります。 文字列を解析できない場合は、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 任意の部分の値が範囲外の場合は、DBSTATUS_E_DATAOVERFLOW が設定されます。|  
   
 ## <a name="see-also"></a>参照  
- [バインドと変換&#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
+ [バインドと変換 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
   
   

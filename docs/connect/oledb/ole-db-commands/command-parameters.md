@@ -1,6 +1,6 @@
 ---
-title: パラメーターをコマンド |Microsoft ドキュメント
-description: コマンドのパラメーター
+title: コマンド パラメーター | Microsoft Docs
+description: コマンド パラメーター
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2d1fb6d8461f9b23842b3f94c6fb88ebbf207598
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 9b4e12d36c00769be83e01e47fafbd2e18421aa1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666042"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106428"
 ---
-# <a name="command-parameters"></a>コマンドのパラメーター
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="command-parameters"></a>コマンド パラメーター
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -38,9 +38,9 @@ ms.locfileid: "35666042"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- ネットワーク トラフィックを減らすことによってパフォーマンスを向上させる SQL Server の OLE DB Driver は自動的に派生していませんパラメーター情報しない限り、 **icommandwithparameters::getparameterinfo**または**ICommandPrepare:。準備**コマンドを実行する前に呼び出されます。 つまり、OLE DB Driver for SQL Server が自動的にしません。  
+ ネットワーク トラフィックを削減してパフォーマンスを向上するために、OLE DB Driver for SQL Server では、コマンドの実行前に **ICommandWithParameters::GetParameterInfo** または **ICommandPrepare::Prepare** が呼び出されない限り、パラメーター情報の自動抽出は行いません。 つまり、OLE DB Driver for SQL Server が自動的にしません。  
   
--   指定されたデータ型が正しいことを確認してください**icommandwithparameters::setparameterinfo**です。  
+-   **ICommandWithParameters::SetParameterInfo** で指定されたデータ型の正当性を確認すること。  
   
 -   アクセサー バインド情報で指定された DBTYPE から、そのパラメーターに対する適切な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型にマップすること。  
   
@@ -48,23 +48,23 @@ ms.locfileid: "35666042"
   
  このようなことが起きないようにするには、アプリケーションで次の条件を満たす必要があります。  
   
--   いることを確認*して*と一致する、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ パラメーターの型の場合はハード コーディング**icommandwithparameters::setparameterinfo**です。  
+-   **ICommandWithParameters::SetParameterInfo** をハードコーディングしている場合、*pwszDataSourceType* をパラメーターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型と一致させます。  
   
 -   アクセサーをハードコーディングしている場合、パラメーターにバインドされている DBTYPE 値の型を、パラメーターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型と同じにします。  
   
--   アプリケーションのコードを呼び出す**icommandwithparameters::getparameterinfo**プロバイダーを取得できるように、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]パラメーターのデータ型に動的にします。 これにより、ネットワーク上でサーバーとの余分なやり取りが増えることに注意してください。  
+-   **ICommandWithParameters::GetParameterInfo** を呼び出すようにアプリケーションをコーディングし、プロバイダーでパラメーターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型を動的に取得できるようにします。 これにより、ネットワーク上でサーバーとの余分なやり取りが増えることに注意してください。  
   
 > [!NOTE]  
->  プロバイダーには、呼び出すことはできません**icommandwithparameters::getparameterinfo**のいずれか[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]UPDATE または DELETE ステートメントの FROM 句で指定を含むすべての SQL ステートメントのパラメーターを含むサブクエリに依存。SQL ステートメントのような比較の両方の式内のパラメーター マーカーを含むまたは定量化された述語です。または、クエリ関数のパラメーターをここでは、パラメーターのいずれか。 SQL ステートメントのバッチを処理するときに、プロバイダーも呼び出すことはできません**icommandwithparameters::getparameterinfo**バッチ内の最初のステートメントの後にあるステートメントのパラメーター マーカー。 コメント (/* \*/) では使用できません、[!INCLUDE[tsql](../../../includes/tsql-md.md)]コマンド。  
+>  SQL Native Client OLE DB プロバイダーでは、FROM 句が含まれている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE ステートメントや DELETE ステートメント、パラメーターを含むサブクエリに依存する SQL ステートメント、比較の両方の式、LIKE 述部、および定量化された述語内にパラメーター マーカーを含む SQL ステートメント、またはパラメーターのいずれかが、関数に対するパラメーターになっているクエリの場合は、**ICommandWithParameters::GetParameterInfo** を呼び出すことはできません。 また、SQL ステートメントをバッチ処理する場合、バッチ内の最初のステートメントの後にあるステートメント内のパラメーター マーカーに対して、**ICommandWithParameters::GetParameterInfo** を呼び出すことはできません。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] コマンド内ではコメント (/* \*/) を使用できません。  
   
- SQL Server の OLE DB Driver は、SQL ステートメント コマンドで入力パラメーターをサポートします。 プロシージャ呼び出しコマンドには、SQL Server の OLE DB Driver は、入力、出力、および入力/出力パラメーターをサポートします。 出力パラメーターの値は、実行時 (行セットが返されない場合のみ)、または返されたすべての行セットがアプリケーションによって使用されたときにアプリケーションに返されます。 返される値が有効であることを確認するを使用して**IMultipleResults**行セットの消費量を強制的にします。  
+ OLE DB Driver for SQL Server では、SQL ステートメント コマンドの入力パラメーターをサポートします。 プロシージャ呼び出しコマンドで、OLE DB Driver for SQL Server には、入力、出力、および入力/出力パラメーターがサポートしています。 出力パラメーターの値は、実行時 (行セットが返されない場合のみ)、または返されたすべての行セットがアプリケーションによって使用されたときにアプリケーションに返されます。 返される値が有効であることを保証するには、**IMultipleResults** を使用して行セットを強制的に使用します。  
   
- ストアド プロシージャ パラメーターの名前を DBPARAMBINDINFO 構造体で指定する必要はありません。 値として NULL を使用して、 *pwszName*メンバーを OLE DB Driver for SQL Server がパラメーター名を無視するで指定された序数だけを使用することを示す、 *rgParamOrdinals* のメンバー**Icommandwithparameters::setparameterinfo**です。 コマンド テキストに名前付きのパラメーターと名前のないパラメーターの両方が含まれている場合、どの名前付きパラメーターよりも前に、名前のないパラメーターをすべて指定する必要があります。  
+ ストアド プロシージャ パラメーターの名前を DBPARAMBINDINFO 構造体で指定する必要はありません。 OLE DB Driver for SQL Server でパラメーター名を無視し、**ICommandWithParameters::SetParameterInfo** の *rgParamOrdinals* メンバーで指定された序数だけを使用する必要があることを示すには、*pwszName* メンバーの値に NULL を使用します。 コマンド テキストに名前付きのパラメーターと名前のないパラメーターの両方が含まれている場合、どの名前付きパラメーターよりも前に、名前のないパラメーターをすべて指定する必要があります。  
   
- ストアド プロシージャのパラメーターの名前が指定されている場合、OLE DB Driver for SQL Server は有効であることを確認する名前を確認します。 SQL Server の OLE DB Driver は、コンシューマーから不適切なパラメーター名を受け取ると、エラーを返します。  
+ ストアド プロシージャ パラメーターの名前が指定された場合、OLE DB Driver for SQL Server ではその名前が妥当かどうかがチェックされます。 OLE DB Driver for SQL Server は、コンシューマーから不適切なパラメーター名を受信すると、エラーを返します。  
   
 > [!NOTE]  
->  サポートを公開する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、OLE DB Driver for SQL Server を実装して、新しい XML およびユーザー定義型 (UDT)、 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイスです。  
+>  OLE DB Driver for SQL Server には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML と UDT (ユーザー定義型) のサポートを公開するために、新しい [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) インターフェイスが実装されています。  
   
 ## <a name="see-also"></a>参照  
  [[コマンド]](../../oledb/ole-db-commands/commands.md)  

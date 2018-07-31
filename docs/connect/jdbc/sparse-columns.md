@@ -1,5 +1,5 @@
 ---
-title: スパース列 |Microsoft ドキュメント
+title: スパース列 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851687"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020978"
 ---
 # <a name="sparse-columns"></a>スパース列
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 少なくとも 20 ～ 40% の領域を削減できる場合は、スパース列の使用を検討してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 に接続すると、スパース列をサポートしている、 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (またはそれ以降) サーバー。 使用することができます[SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、 [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)、または[SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md)どの列がスパース列および列を確認するには、列を設定します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 では、[!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (以降) のサーバーに接続する場合、スパース列がサポートされます。 スパース列および列セットの列を特定するために、[SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)、または [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) を使用できます。  
   
  列セットは、すべてのスパース列を型指定されていない XML 形式で返す計算列です。 テーブルに多数の列 (1,024 を超える列) があるか、個別のスパース列の操作が煩雑である場合は、列セットの使用を検討してください。 列セットには、最大で 30,000 列を含めることができます。  
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>[説明]  
  このサンプルでは、列セットの検出方法を示します。 また、列セットの XML 出力を解析して、スパース列からデータを取得する方法も示します。  
   
  最初のコード リストは、サーバーで実行する必要がある Transact-SQL です。  

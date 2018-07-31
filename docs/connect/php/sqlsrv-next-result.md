@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result |Microsoft ドキュメント
+title: sqlsrv_next_result |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309441"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019610"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309441"
 指定したステートメントの次の結果 (結果セット、行数、または出力パラメーター) をアクティブにします。  
   
 > [!NOTE]  
-> バッチ クエリまたはストアド プロシージャによって返される最初の (または唯一の) の結果を呼び出さなくてもアクティブな**sqlsrv_next_result**です。  
+> バッチ クエリまたはストアド プロシージャによって返される最初の (または唯一の) 結果は、**sqlsrv_next_result** を呼び出さなくてもアクティブです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,12 +51,12 @@ sqlsrv_next_result( resource $stmt )
 次の結果を正常にアクティブにできたら、ブール値 **true** が返されます。 次の結果をアクティブにする際にエラーが発生した場合、 **false** が返されます。 これ以上結果がない場合、 **null** が返されます。  
   
 ## <a name="example"></a>例  
-次の例では、 *Production.ProductReview* テーブルに製品のレビューに挿入するストアド プロシージャを作成して実行します。その後、指定した製品のすべてのレビューを選択します。 ストアド プロシージャの実行後、最初の結果 (の挿入クエリ、ストアド プロシージャの影響を受ける行の数) は呼び出さずに消費**sqlsrv_next_result**です。 次の結果 (ストアド プロシージャで SELECT クエリによって返される行) を使用可能を呼び出して**sqlsrv_next_result**を使用して消費[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)です。  
+次の例では、 *Production.ProductReview* テーブルに製品のレビューに挿入するストアド プロシージャを作成して実行します。その後、指定した製品のすべてのレビューを選択します。 ストアド プロシージャの実行後、最初の結果 (ストアド プロシージャの挿入クエリの影響を受ける行数) は **sqlsrv_next_result** を呼び出さずに消費されます。 次の結果は (ストアド プロシージャで SELECT クエリによって返される行) は **sqlsrv_next_result** を呼び出すことによって利用でき、[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) を使用して消費されます。  
   
 > [!NOTE]  
-> 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、次を参照してください。[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)です。  
+> 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、「[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)」を参照してください。  
   
-例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -187,9 +187,9 @@ sqlsrv_close( $conn );
 次の例では、指定した製品 ID の製品レビュー情報を取得し、製品のレビューを挿入し、次いで指定した製品 ID の製品レビュー情報を再取得するバッチ クエリを実行します。 新しく挿入した製品のレビューは、バッチ クエリの最終的な結果セットに含められます。 この例では [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) を使用し、バッチ クエリの 1 つの結果から、次に移動します。  
   
 > [!NOTE]  
-> バッチ クエリまたはストアド プロシージャによって返される最初の (または唯一の) の結果を呼び出さなくてもアクティブな**sqlsrv_next_result**です。  
+> バッチ クエリまたはストアド プロシージャによって返される最初の (または唯一の) 結果は、**sqlsrv_next_result** を呼び出さなくてもアクティブです。  
   
-この例では、 *Purchasing.ProductReview*のテーブル、 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースをこのデータベースがサーバーにインストールされていることを前提とします。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、*AdventureWorks* データベースの [Purchasing.ProductReview](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) テーブルを使用します。また、このデータベースがサーバーにインストールされていることを前提としています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

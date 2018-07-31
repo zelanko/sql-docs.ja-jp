@@ -1,6 +1,6 @@
 ---
-title: ユーザー定義型の使用 |Microsoft ドキュメント
-description: SQL Server の OLE DB ドライバーでユーザー定義型の使用
+title: ユーザー定義型の使用 |Microsoft Docs
+description: OLE DB Driver for SQL Server のユーザー定義型の使用
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -25,32 +25,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6dd1191c3bb987f99b854f2e736f86dafb9e5ed1
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 5bc34584a052dc916540966690e54aecf7716092
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612237"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107088"
 ---
 # <a name="using-user-defined-types"></a>ユーザー定義型の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、ユーザー定義型 (UDT) が導入されました。 Udt では、SQL 型システムを拡張するオブジェクトやカスタム データ構造を格納することで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。 UDT は複数のデータ型を保持でき、動作を含むことができるので、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム データ型だけで構成される従来の別名データ型とは異なります。 UDT は、検証可能なコードを生成する .NET 共通言語ランタイム (CLR) でサポートされる任意の言語を使用して定義されます。 Microsoft Visual c# が含まれます<sup>®</sup>および Visual Basic<sup>®</sup> .NET です。 データは、.NET のクラスまたは構造体のフィールドやプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、ユーザー定義型 (UDT) が導入されました。 これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにオブジェクトやカスタム データ構造を格納できるようになり、SQL の型システムが拡張されます。 UDT は複数のデータ型を保持でき、動作を含むことができるので、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム データ型だけで構成される従来の別名データ型とは異なります。 UDT は、検証可能なコードを生成する .NET 共通言語ランタイム (CLR) でサポートされる任意の言語を使用して定義されます。 このような言語には、Microsoft Visual C#<sup>®</sup> や Visual Basic<sup>®</sup> .NET があります。 データは、.NET のクラスまたは構造体のフィールドやプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
   
- UDT の変数として、テーブルの列の定義として使用できる、[!INCLUDE[tsql](../../../includes/tsql-md.md)]バッチ、またはの引数として、[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数またはストアド プロシージャです。  
+ UDT は、テーブルの列定義、[!INCLUDE[tsql](../../../includes/tsql-md.md)] バッチの変数、または [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数やストアド プロシージャの引数として使用することができます。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- SQL Server の OLE DB Driver は、メタデータについては、オブジェクトとしての Udt を管理することができますを持つバイナリ型として Udt をサポートします。 UDT 列は、dbtype_udt 型として公開され、メタデータは、主要な OLE DB インターフェイスを介して公開される**IColumnRowset**、および新しい[ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイスです。  
+ OLE DB Driver for SQL Server では、UDT はメタデータ情報を持つバイナリ型としてサポートされるので、オブジェクトとして管理できます。 UDT 列は、DBTYPE_UDT 型として公開され、この列のメタデータは主要な OLE DB インターフェイスの **IColumnRowset** と新しいインターフェイスの [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) により公開されます。  
   
 > [!NOTE]  
->  **Irowsetfind::findnextrow**メソッドは、UDT データ型では機能しません。 UDT が検索列の型として使用されると、DB_E_BADCOMPAREOP が返されます。  
+>  **IRowsetFind::FindNextRow** メソッドでは、UDT データ型を処理できません。 UDT が検索列の型として使用されると、DB_E_BADCOMPAREOP が返されます。  
   
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
- 次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列は、dbtype_udt 型として SQL Server の OLE DB Driver を介して公開されます。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
+ 次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列は、dbtype_udt 型として SQL Server の OLE DB ドライバーを通じて公開されます。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
   
-|データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外**|  
+|データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外へ**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|サポートされている<sup>6</sup>|エラー<sup>1</sup>|サポートされている<sup>6</sup>|エラー<sup>5</sup>|  
 |DBTYPE_BYTES|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|  
@@ -58,116 +58,116 @@ ms.locfileid: "35612237"
 |DBTYPE_BSTR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
 |DBTYPE_STR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4、6</sup>|該当なし<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|サポートされていません|該当なし<sup>2</sup>|サポートされていません|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
   
- <sup>1</sup>サーバー以外の型で dbtype_udt 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が DBTYPE_UDT と、ステートメントが実行されるときにエラーが発生した (DB_E_ERRORSOCCURRED 以外の場合は、パラメーターの状態は dbstatus_e_badaccessor になります) です。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT がパラメーターのデータ型に暗黙的に変換されないことを示すエラーが返されます。  
+ <sup>1</sup>**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合、ステートメントの実行時にエラー (DB_E_ERRORSOCCURRED) が発生します (パラメーターの状態は DBSTATUS_E_BADACCESSOR になります)。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT がパラメーターのデータ型に暗黙的に変換されないことを示すエラーが返されます。  
   
- <sup>2</sup>この記事の範囲を超えています。  
+ <sup>2</sup>この記事での説明の対象外です。  
   
- <sup>3</sup> 16 進文字列からバイナリ データへのデータ変換が発生します。  
+ <sup>3</sup> 16 進文字列からバイナリ データへのデータ変換が行われます。  
   
- <sup>4</sup> 16 進文字列へのバイナリ データからのデータ変換が行われます。  
+ <sup>4</sup> バイナリ データから 16 進文字列へのデータ変換が行われます。  
   
- <sup>5</sup>検証は、アクセサーの作成時、またはフェッチ時に、エラーは DB_E_ERRORSOCCURRED、バインドの状態は DBBINDSTATUS_UNSUPPORTEDCONVERSION に設定で行うことができます。  
+ <sup>5</sup>アクセサーの作成時またはフェッチ時に検証が行われることがあります。エラー DB_E_ERRORSOCCURRED が返され、バインドの状態は DBBINDSTATUS_UNSUPPORTEDCONVERSION になります。  
   
  <sup>6</sup>BY_REF を使用できます。  
   
- DBTYPE_ と DBTYPE_EMPTY は入力パラメーターは出力パラメーターや結果にバインドできます。 入力パラメーターにバインドするとき、状態を DBSTATUS_S_ISNULL または DBSTATUS_S_DEFAULT に設定する必要があります。  
+ DBTYPE_NULL と DBTYPE_EMPTY は入力パラメーターにバインドできますが、出力パラメーターや結果にはバインドできません。 入力パラメーターにバインドした場合、状態を DBSTATUS_S_ISNULL または DBSTATUS_S_DEFAULT に設定する必要があります。  
   
  DBTYPE_UDT 型は、DBTYPE_EMPTY と DBTYPE_NULL に変換できますが、DBTYPE_EMPTY と DBTYPE_NULL は DBTYPE_UDT に変換できません。 この動作は、DBTYPE_BYTES 型と一貫性があります。  
   
 > [!NOTE]  
->  新しいインターフェイスが、パラメーターとしての Udt を処理するために使用される**ISSCommandWithParameters**から継承される**ICommandWithParameters**です。 アプリケーションでは、少なくとも UDT パラメーターの SSPROP_PARAM_UDT_NAME プロパティ セットの DBPROPSET_SQLSERVERPARAMETER プロパティの設定に、このインターフェイスを使用する必要があります。 これを行わない場合**icommand::execute** DB_E_ERRORSOCCURRED が返されます。 このインターフェイスとプロパティのセットはこの記事の後半で説明します。  
+>  UDT をパラメーターとして処理するための新しいインターフェイス **ISSCommandWithParameters** が導入されました。これは、**ICommandWithParameters** インターフェイスから継承されます。 アプリケーションでは、少なくとも UDT パラメーターの SSPROP_PARAM_UDT_NAME プロパティ セットの DBPROPSET_SQLSERVERPARAMETER プロパティの設定に、このインターフェイスを使用する必要があります。 これを行わないと、**ICommand::Execute** から DB_E_ERRORSOCCURRED が返されます。 このインターフェイスとプロパティ セットについては、この記事の後半で説明します。  
   
- ユーザー定義型がそのすべてのデータを保持するのに十分ではない列に挿入された場合**icommand::execute**状態 DB_E_ERRORSOCCURRED の S_OK を返します。  
+ データをすべて格納できる大きさがない列にユーザー定義型を挿入した場合、**ICommand::Execute** は状態が DB_E_ERRORSOCCURRED の S_OK を返します。  
   
- OLE DB core services で提供されるデータ変換 (**IDataConvert**) は、dbtype_udt 型に適用できません。 また、その他のバインドもサポートされません。  
+ OLE DB Core Services で提供されるデータ変換 (**IDataConvert**) は、DBTYPE_UDT 型には適用できません。 また、その他のバインドもサポートされません。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行セットに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値を追加したり、多くの主要な OLE DB スキーマ行セット変更します。  
+ OLE DB Driver for SQL Server では、新しい値を追加します。 または、多くの主要な OLE DB スキーマ行セットを変更します。  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS スキーマ行セット  
  PROCEDURE_PARAMETERS スキーマ行セットには、次の列が追加されました。  
   
-|列名|型|説明|  
+|列名|型|[説明]|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
 |SS_UDT_NAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
-|SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|アセンブリ修飾名、型名と、CLR によって参照されているために必要なすべてのアセンブリ id が含まれます。|  
+|SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|型名と、CLR での参照に必要なすべてのアセンブリ ID を含むアセンブリ修飾名。|  
   
 #### <a name="the-sqlassemblies-schema-rowset"></a>SQL_ASSEMBLIES スキーマ行セット  
- SQL Server の OLE DB Driver は、登録済み Udt を説明する新しいプロバイダー固有のスキーマ行セットを公開します。 ASSEMBLY_SERVER を DBTYPE_WSTR 型として指定することはできますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 SQL_ASSEMBLIES スキーマ行セットは、次の表で定義されます。  
+ OLE DB Driver for SQL Server は、登録済みの UDT に関する情報が格納される、プロバイダー固有の新しいスキーマ行セットを公開します。 ASSEMBLY_SERVER を DBTYPE_WSTR 型として指定することはできますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLIES スキーマ行セットの定義を示します。  
   
-|列名|型|説明|  
+|列名|型|[説明]|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|このデータ型を含むアセンブリのカタログ名。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはスキーマではなくデータベースによって決まりますが、アセンブリには依然として所有者が存在します。|  
 |ASSEMBLY_NAME|DBTYPE_WSTR|このデータ型を含むアセンブリの名前。|  
-|ASSEMBLY_ID|DBTYPE_UI4|型を含むアセンブリのオブジェクト ID。|  
+|ASSEMBLY_ID|DBTYPE_UI4|このデータ型を含むアセンブリのオブジェクト ID。|  
 |PERMISSION_SET|DBTYPE_WSTR|アセンブリのアクセスのスコープを示す値。 スコープを示す値には、"SAFE"、"EXTERNAL_ACCESS"、および "UNSAFE" があります。|  
 |ASSEMBLY_BINARY|DBTYPE_BYTES|アセンブリのバイナリ表記。|  
   
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES スキーマ行セット  
- OLE DB Driver for SQL Server では、指定されたサーバーのアセンブリの依存関係を説明する新しいプロバイダー固有のスキーマ行セットを公開します。 ASSEMBLY_SERVER は呼び出し元により DBTYPE_WSTR 型として指定することができますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLY_DEPENDENCIES スキーマ行セットが定義されています。  
+ OLE DB Driver for SQL Server では、特定のサーバーにおけるアセンブリの依存関係に関する情報が格納される、プロバイダー固有の新しいスキーマ行セットを公開します。 ASSEMBLY_SERVER は呼び出し元により DBTYPE_WSTR 型として指定することができますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLY_DEPENDENCIES スキーマ行セットの定義を示します。  
   
-|列名|型|説明|  
+|列名|型|[説明]|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|このデータ型を含むアセンブリのカタログ名。|  
-|ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはデータベースによって、スキーマではなく、所有者は、ここに反映されますがまだがあります。|  
+|ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはスキーマではなくデータベースによって決まりますが、アセンブリには依然として所有者が存在します。|  
 |ASSEMBLY_ID|DBTYPE_UI4|アセンブリのオブジェクト ID。|  
-|REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|参照されたアセンブリのオブジェクト ID。|  
+|REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|参照されるアセンブリのオブジェクト ID。|  
   
 #### <a name="the-sqlusertypes-schema-rowset"></a>SQL_USER_TYPES スキーマ行セット  
- OLE DB Driver for SQL Server では、新しいスキーマ行セット、指定されたサーバーの登録済み Udt が追加されたときを示す SQL_USER_TYPES を公開します。 UDT_SERVER は、呼び出し元により DBTYPE_WSTR 型として指定される必要がありますが、行セットには格納されません。 次の表に、SQL_USER_TYPES スキーマ行セットの定義を示します。  
+ OLE DB Driver for SQL Server は、特定サーバーの登録済み UDT が追加されたタイミングに関する情報が格納される、新しいスキーマ行セット SQL_USER_TYPES を公開します。 UDT_SERVER は、呼び出し元により DBTYPE_WSTR 型として指定される必要がありますが、行セットには格納されません。 次の表に、SQL_USER_TYPES スキーマ行セットの定義を示します。  
   
-|列名|型|説明|  
+|列名|型|[説明]|  
 |-----------------|----------|-----------------|  
-|UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合は、このプロパティは、カタログの名前を指定する文字列、UDT が定義されているです。|  
-|UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合は、このプロパティは、UDT が定義されているスキーマの名前を指定する文字列です。|  
+|UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているカタログの名前を指定する文字列です。|  
+|UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているスキーマの名前を指定する文字列です。|  
 |UDT_NAME|DBTYPE_WSTR|UDT を含むアセンブリの名前。|  
 |UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|型名の前に名前空間を付けた完全な型名 (AQN) (該当する場合)。|  
   
 #### <a name="the-columns-schema-rowset"></a>COLUMNS スキーマ行セット  
- COLUMNS スキーマ行セットへの追加は、次の列を含めます。  
+ COLUMNS スキーマ行セットには、次の列が追加されました。  
   
-|列名|型|説明|  
+|列名|型|[説明]|  
 |-----------------|----------|-----------------|  
-|SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合は、このプロパティは、カタログの名前を指定する文字列、UDT が定義されているです。|  
-|SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合は、このプロパティは、UDT が定義されているスキーマの名前を指定する文字列です。|  
+|SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているカタログの名前を指定する文字列です。|  
+|SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているスキーマの名前を指定する文字列です。|  
 |SS_UDT_NAME|DBTYPE_WSTR|UDT の名前。|  
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|型名の前に名前空間を付けた完全な型名 (AQN) (該当する場合)。|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB プロパティ セットに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値を追加またはに多くの主要な OLE DB プロパティのセットを変更します。  
+ OLE DB Driver for SQL Server では、新しい値を追加します。 またはに多くの主要な OLE DB プロパティ セットを変更します。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
- OLE DB で Udt をサポートするためには、OLE DB Driver for SQL Server は、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セットを実装します。  
+ OLE DB で UDT をサポートするため、OLE DB Driver for SQL Server では、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セットが実装されました。  
   
-|名前|型|説明|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|3 部構成の名前の識別子。<br /><br /> UDT パラメーターの場合、このプロパティは、ユーザー定義型が定義されているカタログ名を指定する文字列です。|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|3 部構成の名前の識別子。<br /><br /> UDT パラメーターの場合、このプロパティは、ユーザー定義型が定義されているスキーマ名を指定する文字列です。|  
 |SSPROP_PARAM_UDT_NAME|DBTYPE_WSTR|3 部構成の名前の識別子。<br /><br /> UDT 列の場合、このプロパティは、ユーザー定義型の 1 部構成の名前を指定する文字列です。|  
   
- SSPROP_PARAM_UDT_NAME は必須です。 SSPROP_PARAM_UDT_CATALOGNAME と SSPROP_PARAM_UDT_SCHEMANAME は省略可能です。 任意のプロパティが正しく指定されていない、DB_E_ERRORSINCOMMAND が返されます。 SSPROP_PARAM_UDT_CATALOGNAME プロパティと SSPROP_PARAM_UDT_SCHEMANAME プロパティがどちらも指定されていない場合、UDT は、テーブルと同じデータベースおよびスキーマ内に定義する必要があります。 UDT の定義が、テーブルと同じデータベース内にあって、同じスキーマ内にない場合、SSPROP_PARAM_UDT_SCHEMANAME プロパティを指定する必要があります。 UDT の定義は、別のデータベースでは、SSPROP_PARAM_UDT_CATALOGNAME と ssprop_param_udt_schemaname プロパティの両方を指定する必要があります。  
+ SSPROP_PARAM_UDT_NAME は必須です。 SSPROP_PARAM_UDT_CATALOGNAME と SSPROP_PARAM_UDT_SCHEMANAME は省略可能です。 いずれかのプロパティが適切に指定されていない場合、DB_E_ERRORSINCOMMAND が返されます。 SSPROP_PARAM_UDT_CATALOGNAME プロパティと SSPROP_PARAM_UDT_SCHEMANAME プロパティがどちらも指定されていない場合、UDT は、テーブルと同じデータベースおよびスキーマ内に定義する必要があります。 UDT の定義が、テーブルと同じデータベース内にあって、同じスキーマ内にない場合、SSPROP_PARAM_UDT_SCHEMANAME プロパティを指定する必要があります。 UDT の定義が異なるデータベースにある場合、SSPROP_PARAM_UDT_CATALOGNAME と SSPROP_PARAM_UDT_SCHEMANAME の両方を指定する必要があります。  
   
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
- 内のテーブルの作成をサポートする、 **ITableDefinition**インターフェイスの場合は、SQL Server では、次の 3 つの新しい列を DBPROPSET_SQLSERVERCOLUMN プロパティ セットに追加の OLE DB ドライバー。  
+ 内のテーブルの作成をサポートするために、 **ITableDefinition**インターフェイスの場合は、SQL Server では、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに次の 3 つの新しい列を追加の OLE DB ドライバー。  
   
-|名前|説明|型|説明|  
+|[オブジェクト名]|[説明]|型|[説明]|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
-|SSPROP_COL_UDT_NAME|UDT_NAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT の 1 部構成の名前を指定する文字列です。 その他の列の型は、このプロパティは、空の文字列を返します。|  
+|SSPROP_COL_UDT_NAME|UDT_NAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT の 1 部構成の名前を指定する文字列です。 他の列の型の場合、このプロパティでは空文字列が返されます。|  
   
 > [!NOTE]  
 >  UDT は PROVIDER_TYPES スキーマ行セットには表示されません。 すべての列は読み取り/書き込みアクセスです。  
   
  ADO では、"説明" 列の対応するエントリを使用してこれらのプロパティを参照します。  
   
- SSPROP_COL_UDTNAME は必須です。 SSPROP_COL_UDT_CATALOGNAME と SSPROP_COL_UDT_SCHEMANAME は省略可能です。 場合は、プロパティのいずれかが正しく指定されていない、 **DB_E_ERRORSINCOMMAND**が返されます。  
+ SSPROP_COL_UDTNAME は必須です。 SSPROP_COL_UDT_CATALOGNAME と SSPROP_COL_UDT_SCHEMANAME は省略可能です。 いずれかのプロパティが適切に指定されていない場合、**DB_E_ERRORSINCOMMAND** が返されます。  
   
  SSPROP_COL_UDT_CATALOGNAME プロパティと SSPROP_COL_UDT_SCHEMANAME プロパティがどちらも指定されていない場合、UDT は、テーブルと同じデータベースおよびスキーマ内に定義する必要があります。  
   
@@ -176,29 +176,29 @@ ms.locfileid: "35612237"
  UDT の定義がテーブルと異なるデータベースにある場合、SSPROP_COL_UDT_CATALOGNAME プロパティと SSPROP_COL_UDT_SCHEMANAME プロパティの両方を指定する必要があります。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB インターフェイスに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値が追加または多くの主要な OLE DB インターフェイスを変更します。  
+ OLE DB Driver for SQL Server では、新しい値を追加します。 または、多くの主要な OLE DB インターフェイスを変更します。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters インターフェイス  
- OLE DB Driver for SQL Server OLE DB で Udt をサポートするには数などの追加、変更を実装する、 **ISSCommandWithParameters**インターフェイスです。 この新しいインターフェイスが、主要な OLE DB インターフェイスから継承**ICommandWithParameters**です。 継承される 3 つのメソッドだけでなく**ICommandWithParameters**です。**GetParameterInfo**、 **MapParameterNames**、および**SetParameterInfo**です。**ISSCommandWithParameters**提供、 **GetParameterProperties**と**SetParameterProperties**ハンドル サーバー固有の仕様に使用されるメソッドデータ型。  
+ OLE DB で UDT をサポートするため、OLE DB Driver for SQL Server では、**ISSCommandWithParameters** インターフェイスの追加など、多くの変更が加えられました。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 **ICommandWithParameters** インターフェイスから継承される 3 つのメソッド (**GetParameterInfo**、**MapParameterNames**、および **SetParameterInfo**) に加えて、**ISSCommandWithParameters** では、サーバー固有のデータ型を処理するために使用される **GetParameterProperties** メソッドと **SetParameterProperties** メソッドが提供されます。  
   
 > [!NOTE]  
->  **ISSCommandWithParameters**インターフェイスもを使用する、新しい SSPARAMPROPS 構造体。  
+>  **ISSCommandWithParameters** インターフェイスでは、新しい SSPARAMPROPS 構造体も使用されます。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
- 加え、 **ISSCommandWithParameters**インターフェイスの場合は、SQL Server は、呼び出し元から返される行セットに新しい値を追加するもの OLE DB Driver、 **icolumnsrowset::getcolumnrowset**メソッドを含む以下。  
+ **ISSCommandWithParameters** インターフェイス以外にも、OLE DB Driver for SQL Server により、**IColumnsRowset::GetColumnRowset** メソッドの呼び出しで返される行セットに、次のような新しい値が追加されます。  
   
-|列名|型|説明|  
+|列名|型|[説明]|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT カタログ名の識別子。|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT スキーマ名の識別子。|  
 |DBCOLUMN_SS_UDT_NAME|DBTYPE_WSTR|UDT 名の識別子。|  
 |DBCOLUMN_SS_ASSEMBLY_TYPENAME|DBTYPE_WSTR|型名と、CLR での参照に必要なすべてのアセンブリ ID を含むアセンブリ修飾名。|  
   
- 上記の表で指定された追加された UDT メタデータを調べることで、DBCOLUMN_TYPE が DBTYPE_UDT に設定されて、他のバイナリ型からサーバーの UDT 列を区別できます。 そのデータが部分的に完成している場合、サーバーのデータ型は UDT になります。 サーバーのデータ型が UDT 以外の場合、これらの列は、常に NULL として返されます。  
+ DBCOLUMN_TYPE を DBTYPE_UDT に設定すると、上の表にある追加された UDT メタデータを参照することにより、サーバーの UDT 列と他のバイナリ型列とを区別することができます。 そのデータが部分的に完成している場合、サーバーのデータ型は UDT になります。 サーバーのデータ型が UDT 以外の場合、これらの列は、常に NULL として返されます。  
  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 機能の OLE DB ドライバー](../../oledb/features/oledb-driver-for-sql-server-features.md)    
+ [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

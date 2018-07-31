@@ -1,5 +1,5 @@
 ---
-title: ソースのプロパティのデータを設定 |Microsoft ドキュメント
+title: 設定、データ ソースのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a305b676d43a13ae731bcc98dd3f517a5bf733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850387"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991444"
 ---
 # <a name="setting-the-data-source-properties"></a>データ ソースのプロパティの設定」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  データ ソースは、Java Platform, Enterprise Edition (Java EE) 環境で JDBC 接続を作成するために推奨される機構です。 データ ソースは、接続、プールされた接続、および分散接続を提供します。このとき、Java コードに接続プロパティをハード コーディングする必要がありません。 すべて[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]データ ソースを設定したり、適切な setter メソッドと getter メソッドをそれぞれ使用して、任意のプロパティの値を取得します。  
+  データ ソースは、Java Platform, Enterprise Edition (Java EE) 環境で JDBC 接続を作成するために推奨される機構です。 データ ソースは、接続、プールされた接続、および分散接続を提供します。このとき、Java コードに接続プロパティをハード コーディングする必要がありません。 すべての [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] のデータ ソースは、適切な setter メソッドと getter メソッドを使用して、任意のプロパティの値を設定または取得できます。  
   
- アプリケーション サーバーやサーブレット/JSP エンジンなどの Java EE 製品では、通常、データベース アクセス用にデータ ソースを構成できます。 任意のプロパティに一覧表示、[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)トピックは、任意の場所の構成を入力できる場合、プロパティをプロパティとして指定することができます = 値のペア。  
+ アプリケーション サーバーやサーブレット/JSP エンジンなどの Java EE 製品では、通常、データベース アクセス用にデータ ソースを構成できます。 構成で "プロパティ=値" ペアとしてプロパティを入力できる場合は、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」に記載されているすべてのプロパティを指定できます。  
   
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、データ ソースを参照してください、 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)クラスです。 SQLServerDataSource クラスを使用して接続を確立する方法の例については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースを参照してください[データ ソースのサンプル](../../connect/jdbc/data-source-sample.md)です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のデータ ソースの詳細については、「[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラス」を参照してください。 SQLServerDataSource クラスを使用して接続を確立する方法の例については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースを参照してください[データ ソースのサンプル](../../connect/jdbc/data-source-sample.md)します。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

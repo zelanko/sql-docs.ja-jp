@@ -1,5 +1,5 @@
 ---
-title: データ ソース オブジェクト (OLE DB) |Microsoft ドキュメント
+title: データ ソース オブジェクト (OLE DB) |Microsoft Docs
 description: データ ソース オブジェクト (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,25 +22,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a69fbb260c594ad095872049b06b1f7084bfc29b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 58007040bc4f96749172644b229dba4769929d66
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665652"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106078"
 ---
 # <a name="data-source-objects-ole-db"></a>データ ソース オブジェクト (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server などのデータ ストアへのリンクを確立するために使用する OLE DB インターフェイスのセットの用語のデータ ソースを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 OLE DB Driver for SQL Server コンシューマーの最初のタスクは、プロバイダーのデータ ソース オブジェクトのインスタンスを作成します。  
+  OLE DB Driver for SQL Server では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] などのデータ ストアへのリンクを確立するために使用する OLE DB インターフェイスのセットのことをデータ ソースと呼びます。 OLE DB Driver for SQL Server コンシューマーの最初のタスクは、プロバイダーのデータ ソース オブジェクトのインスタンスを作成します。  
   
- すべての OLE DB プロバイダーは、そのプロバイダー自体のクラス ID (CLSID) を宣言します。 SQL Server の OLE DB ドライバーの CLSID が C/C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID が正しいを解決するシンボルを参照する msoledbsql.h ファイルに progid)。 CLSID を使用するコンシューマーは、OLE **CoCreateInstance**をデータ ソース オブジェクトのインスタンスを製造する関数。  
+ すべての OLE DB プロバイダーは、そのプロバイダー自体のクラス ID (CLSID) を宣言します。 OLE DB Driver for SQL Server の CLSID は、C/C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID が正しいを解決するシンボルを参照する msoledbsql.h ファイルに progid)。 コンシューマーは、CLSID を指定して OLE **CoCreateInstance** 関数を使用し、データ ソース オブジェクトのインスタンスを作成します。  
   
- OLE DB Driver for SQL Server は、インプロセス サーバーです。 SQL Server オブジェクトの OLE DB ドライバーのインスタンスは、実行可能なコンテキストを示すために、CLSCTX_INPROC_SERVER マクロを使用して作成されます。  
+ OLE DB Driver for SQL Server は、インプロセス サーバーです。 実行可能なコンテキストを示すために、CLSCTX_INPROC_SERVER マクロを使用して、OLE DB Driver for SQL Server のオブジェクトのインスタンスを作成します。  
   
- OLE DB Driver for SQL Server データ ソース オブジェクトは、コンシューマーに既存の接続を許可する OLE DB 初期化インターフェイスを公開[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。  
+ OLE DB Driver for SQL Server のデータ ソース オブジェクトでは、OLE DB 初期化インターフェイスが公開されます。コンシューマーは、このインターフェイスを使用して、既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに接続できます。  
   
  SQL Server の OLE DB ドライバーを通じて行うすべての接続では、これらのオプションが自動的に設定します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35665652"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- この例は、SQL Server データ ソース オブジェクトと参照を取得するために、OLE DB ドライバーを作成する、クラス id マクロを使用してその**IDBInitialize**インターフェイスです。  
+ 次の例では、クラス ID マクロを使用して、OLE DB Driver for SQL Server のデータ ソース オブジェクトを作成し、そのデータ ソース オブジェクトの **IDBInitialize** インターフェイスを取得します。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -77,13 +77,13 @@ else
 }  
 ```  
   
- OLE DB Driver for SQL Server データ ソース オブジェクトのインスタンスが正常に作成、データ ソースを初期化し、セッションを作成するコンシューマー アプリケーションを続行できます。 OLE DB セッションは、データへのアクセスや操作を可能にするインターフェイスを提供します。  
+ OLE DB Driver for SQL Server のデータ ソース オブジェクトのインスタンスが正常に作成された場合、データ ソースを初期化し、セッションを作成することで、コンシューマー アプリケーションを続行できます。 OLE DB セッションは、データへのアクセスや操作を可能にするインターフェイスを提供します。  
   
- SQL Server の OLE DB Driver は、最初の接続を指定のインスタンスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]正常なデータ ソースの初期化の一部として。 まで、または任意のデータ ソース初期化インターフェイスでの参照が保持される限りは、接続を維持、 **:uninitialize**メソッドが呼び出されます。  
+ OLE DB Driver for SQL Server は、データ ソースを正常に初期化する作業の一環として、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定されたインスタンスへの最初の接続を行います。 いずれかのデータ ソース初期化インターフェイスで参照が保持されている間、または **IDBInitialize::Uninitialize** メソッドが呼び出されるまで、その最初の接続が維持されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [データ ソースのプロパティ&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [データ ソースのプロパティ &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [データ ソース情報のプロパティ](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   

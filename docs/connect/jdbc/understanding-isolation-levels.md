@@ -1,5 +1,5 @@
 ---
-title: 分離レベルを理解する |Microsoft ドキュメント
+title: 分離レベルを理解する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852967"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039162"
 ---
 # <a name="understanding-isolation-levels"></a>分離レベルについて
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,32 +38,32 @@ ms.locfileid: "32852967"
   
     -   ステートメントまたはトランザクションの開始時に存在していた行の、コミット済みのバージョンを取得する。  
   
-    -   コミットされていないデータ変更を参照してください。  
+    -   コミットされていないデータ変更を読み取る。  
   
- トランザクション分離レベルを選択しても、データ変更を保護するために獲得したロックは影響を受けません。 常にトランザクションは、任意のデータを変更し、設定されたトランザクション分離レベルに関係なく、トランザクションが完了するまでそのロックを保持して排他ロックを取得します。 トランザクション分離レベルでは主に、読み取り操作に対して、他のトランザクションによって行われる変更の影響からの保護レベルを定義します。  
+ トランザクション分離レベルを選択しても、データ変更を保護するために獲得したロックは影響を受けません。 トランザクションでは、設定されたトランザクション分離レベルに関係なく、常に、そのトランザクションで変更するデータについて排他ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 トランザクション分離レベルでは主に、読み取り操作に対して、他のトランザクションによって行われる変更の影響からの保護レベルを定義します。  
   
  分離レベルが低いほど多くのユーザーが同時にデータにアクセスできるようになりますが、ユーザーに影響が及ぶ可能性がある同時実行の副作用 (ダーティ リードや更新データの喪失など) の種類が多くなります。 反対に、分離レベルが高いほど、ユーザーに影響が及ぶ可能性がある同時実行の副作用の種類は減りますが、必要なシステム リソースが増加し、あるトランザクションによって別のトランザクションがブロックされる状況も多くなります。 適切な分離レベルの選択は、アプリケーションのデータ整合性の要件と各分離レベルのオーバーヘッドとのバランスによって決まります。 最も高い分離レベルの SERIALIZABLE は、トランザクションで読み取り操作が繰り返し実行されるたびに、そのトランザクションで完全に同じデータが取得されることを保証します。このことの実現には、マルチユーザー システムにおいて他のユーザーが影響を受ける可能性が高いロック レベルが適用されています。 最も低い分離レベルは READ UNCOMMITTED ですが、このレベルでは、他のトランザクションによって変更され、まだコミットされていないデータを取得する場合があります。 同時実行のあらゆる副作用が READ UNCOMMITTED では生じる可能性がありますが、読み取りロックやバージョニングは発生しないため、オーバーヘッドはごくわずかです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表は、分離レベルごとの同時実行の副作用を示しています。  
   
 |[分離レベル]|ダーティ リード|反復不能読み取り|ファントム|  
 |---------------------|----------------|-------------------------|-------------|  
-|READ UNCOMMITTED|はい|[ユーザー アカウント制御]|はい|  
-|読み取りのコミット|いいえ|[ユーザー アカウント制御]|はい|  
-|REPEATABLE READ|いいえ|いいえ|はい|  
+|READ UNCOMMITTED|[ユーザー アカウント制御]|はい|[ユーザー アカウント制御]|  
+|READ COMMITTED|いいえ|はい|[ユーザー アカウント制御]|  
+|REPEATABLE READ|いいえ|いいえ|[ユーザー アカウント制御]|  
 |スナップショット|いいえ|いいえ|いいえ|  
 |Serializable|いいえ|いいえ|いいえ|  
   
  2 つのトランザクションが同じ行を取得すると、更新内容の喪失が生じる可能性がありますが、この状況を防ぐためには、REPEATABLE READ 以上の分離レベルでトランザクションを実行し、その後で、元の取得した値に基づいて行を更新する必要があります。 2 つのトランザクションが、元の取得した値に基づかずに 1 つの UPDATE ステートメントを使用して行を更新する場合、既定の分離レベル READ COMMITTED では更新データの喪失が発生しません。  
   
- トランザクションの分離レベルを設定するに使用することができます、 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md)のメソッド、 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)クラスです。 このメソッドを受け入れる、 **int**に基づいて、次のように接続定数のいずれかの引数として値。  
+ トランザクションの分離レベルを設定するには、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) メソッドを使用できます。 このメソッドは、引数として **int** 値を受け取ります。この値は、次のように接続定数のいずれかに基づいています。  
   
 ```  
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
- 新しいスナップショット分離レベルを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]次のように SQLServerConnection 定数のいずれかを使用することができます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の新しいスナップショット分離レベルを使用するには、次のように SQLServerConnection 定数のいずれかを使用できます。  
   
 ```  
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -75,7 +75,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]分離レベルを参照してください"の分離レベルは、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブック。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の分離レベルの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] オンライン ブックの「[!INCLUDE[ssDE](../../includes/ssde_md.md)]における分離レベル」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーを使用したトランザクションの実行](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

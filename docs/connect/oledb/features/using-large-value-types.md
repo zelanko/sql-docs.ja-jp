@@ -1,6 +1,6 @@
 ---
-title: 大きな値の型を使用して |Microsoft ドキュメント
-description: 大きな値型を SQL Server の OLE DB Driver を使用します。
+title: 大きな値の型を使用して |Microsoft Docs
+description: OLE DB Driver for SQL Server の大きな値の型の使用
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,59 +20,59 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b8b0e413eabbcf52e98d778ba309e9a2ca45f68f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612097"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107954"
 ---
 # <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値データ型は、8 KB の最大行サイズを超える型です。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入された、 **max**の指定子**varchar**、 **nvarchar**、および**varbinary** 2 と同じ大きさの値を格納を許可するデータ型 ^31-1バイト数です。 テーブルの列と[!INCLUDE[tsql](../../../includes/tsql-md.md)]変数を指定**varchar (max)**、 **nvarchar (max)**、または**varbinary (max)** データ型。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値をとるデータ型とは、最大行サイズが 8 KB を超えるデータ型のことです。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、2^31 -1 バイトまでの大きさの値を格納できる、**varchar** データ型、**nvarchar** データ型、**varbinary** データ型用の **max** 指定子が導入されました。 テーブル列や [!INCLUDE[tsql](../../../includes/tsql-md.md)] 変数に、**varchar(max)** データ型、**nvarchar(max)** データ型、または **varbinary(max)** データ型を指定できます。  
   
 > [!NOTE]  
->  大きな値データ型は、1 KB ~ 8 KB の最大サイズを持つことができますか、それらを指定することが無制限であるとします。  
+>  大きな値をとるデータ型は、最大サイズを 1 KB から 8 KB に制限できます。また、サイズを無制限にすることもできます。  
   
- 以前は、のみ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]などのデータ型**テキスト**、 **ntext**と**イメージ**このような長さを指定できました。 **Max**の指定子**varchar**、 **nvarchar**、および**varbinary**冗長これらのデータ型を作成します。 ただし、長い形式のデータ型がまだ使用できるので、OLE DB のデータ アクセス コンポーネント インターフェイスのほとんどを同じままになります。 以前のリリースとの互換性、OLE DB Driver for SQL Server で、DBCOLUMNFLAGS_ISLONG フラグが使用中は変更されません。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降用に作成されたプロバイダーやドライバーでは、最大長を無制限に設定する場合、新しいデータ型に対して、DBCOLUMNFLAGS_ISLONG や SQL_LONGVARCHAR といった表現を引き続き使用できます。  
-  
-> [!NOTE]  
->  指定することも**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)** ストアド プロシージャ、関数の入力呼び出し力パラメーターの型としてのデータ型が型を返す、または[CAST および CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md)関数。  
+ 以前は、**text**、**ntext**、**image** などの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型のみにこのようなサイズを指定できました。 **varchar**、**nvarchar**、**varbinary** に **max** 指定子が導入されたことで、これらのデータ型の存在は冗長になりました。 ただし、これらの大きなデータ型も引き続き使用できるので、OLE DB データ アクセス コンポーネントに対する大部分のインターフェイスは変更されません。 以前のリリースとの互換性、OLE DB Driver for SQL Server で、DBCOLUMNFLAGS_ISLONG フラグが使用中は変更されません。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降用に作成されたプロバイダーやドライバーでは、最大長を無制限に設定する場合、新しいデータ型に対して、DBCOLUMNFLAGS_ISLONG や SQL_LONGVARCHAR といった表現を引き続き使用できます。  
   
 > [!NOTE]  
->  データをレプリケートする場合は、構成する必要があります、 [max text repl size サーバー構成オプション](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)-1 です。  
+>  **varchar(max)** データ型、**nvarchar(max)** データ型、**varbinary(max)** データ型を、ストアド プロシージャの入力パラメーターの型や出力パラメーターの型、または関数の戻り値の型として指定したり、[CAST と CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) の各関数に指定することもできます。  
+  
+> [!NOTE]  
+>  データをレプリケートする場合は、[max text repl size サーバー構成オプション](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)を -1 に構成する必要があります。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 
- OLE DB Driver for SQL Server を公開、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** それぞれ DBTYPE_STR、DBTYPE_BYTES、dbtype_wstr 型として型.  
+ OLE DB Driver for SQL Server では、**varchar(max)** 型、**varbinary(max)** 型、**nvarchar(max)** 型が、それぞれ DBTYPE_STR、DBTYPE_BYTES、DBTYPE_WSTR として公開されます。  
   
- データ型**varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** での列に、 **max**サイズが無制限に設定されています。は ISLONG で主要な OLE DB スキーマ行セットと列のデータ型を返すインターフェイスとして表されます。  
+ **max** のサイズが無制限に設定されている列の **varchar(max)** データ型、**varbinary(max)** データ型、**nvarchar(max)** データ型は、列のデータ型を返す主要な OLE DB スキーマ行セットやインターフェイスでは ISLONG で表されます。  
   
- コマンド オブジェクトの**IAccessor** DBTYPE_IUNKNOWN としてバインドできるように実装が変更されました。 場合は、コンシューマーが DBTYPE_IUNKNOWN を指定し、設定*pObject*を null、プロバイダーを返します、 **ISequentialStream**コンシューマーにインターフェイスのコンシューマーがストリーミングすることができるように**varchar (max)**、 **nvarchar (max)**、または**varbinary (max)** 出力変数からのデータ。  
+ コマンド オブジェクトの **IAccessor** の実装は、DBTYPE_IUNKNOWN としてバインドできるように変更されています。 コンシューマーが DBTYPE_IUNKNOWN を指定し、*pObject* を NULL に設定すると、プロバイダーからコンシューマーに **ISequentialStream** インターフェイスが返されます。これにより、コンシューマーは **varchar(max)** データ、**nvarchar(max)** データ、または **varbinary(max)** データを出力変数からストリームできます。  
   
- ストリーミングされる出力パラメーターの値は、すべての結果行の後に返されます。 アプリケーションが上の次の結果を呼び出してセットに移動しようとしたかどうかは**imultipleresults::getresult**すべての返された出力パラメーター値を消費することがなく DB_E_OBJECTOPEN が返されます。  
+ ストリーミングされる出力パラメーターの値は、すべての結果行の後に返されます。 アプリケーションが、返される出力パラメーター値をすべて使用しないうちに **IMultipleResults::GetResult** を呼び出して次の結果セットに移動しようとすると、DB_E_OBJECTOPEN が返されます。  
   
- ストリーミングをサポートするために、OLE DB Driver for SQL Server に可変長のパラメーターに順番にアクセスする必要があります。 つまり、DBPROP_ACCESSORDER を DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS または DBPROPVAL_AO_SEQUENTIAL のいずれかに設定する必要があるたびに**varchar (max)**、 **nvarchchar (max)**、または**varbinary (max)** 列または出力パラメーターを DBTYPE_IUNKNOWN にバインドされます。 呼び出す**irowset::getdata**にこのアクセス順序の制限が遵守していない場合は、DBSTATUS_E_UNAVAILABLE で失敗します。 DBTYPE_IUNKNOWN を使用する出力バインドがない場合は、この制限は適用されません。  
+ OLE DB Driver for SQL Server では、ストリーミングをサポートするために、可変長パラメーターに順番にアクセスする必要があります。 つまり、**varchar(max)** 列、**nvarchchar(max)** 列、**varbinary(max)** 列や出力パラメーターを DBTYPE_IUNKNOWN. にバインドするときは必ず、DBPROP_ACCESSORDER を DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS または DBPROPVAL_AO_SEQUENTIAL のいずれかに設定する必要があります。 このアクセス順序の制限に従わないと、**IRowset::GetData** への呼び出しは DBSTATUS_E_UNAVAILABLE で失敗します。 DBTYPE_IUNKNOWN を使用する出力バインドがない場合は、この制限は適用されません。  
   
- SQL Server の OLE DB Driver は、ストアド プロシージャが DBTYPE_IUNKNOWN としてクライアントに公開される戻り値として大きな値の型を返すシナリオを容易に大きな値データ型の DBTYPE_IUNKNOWN としてバインドの出力パラメーターもサポートします。  
+ OLE DB Driver for SQL Server では、大きな値をとるデータ型の出力パラメーターを DBTYPE_IUNKNOWN としてバインドすることもサポートされます。これにより、ストアド プロシージャからクライアントに、DBTYPE_IUNKNOWN で公開される戻り値として大きな値をとるデータ型を返すようなシナリオを容易に実現できます。  
   
  このようなデータ型を使用して作業するために、アプリケーションでは次のような操作を行えます。  
   
--   列の基本型にバインド可能な型としてバインド (たとえば、nvarchar (max)、型としてバインドを nvarchar にバインドされていることができます)。 バッファーの大きさがない場合十分なが切り捨てられます、基本型と同様せよより大きな値が使用可能なになりました。  
+-   列の基本型にバインド可能な型としてバインドします (たとえば nvarchar(max) の場合は、nvarchar にバインド可能な型としてバインドします)。 以前よりも大きな値を格納できるようになりましたが、バッファーのサイズが十分でない場合は、基本型に応じて値が切り捨てられます。  
   
 -   列の基本型に変換可能な型としてバインドし、DBTYPE_BYREF も指定します。  
   
 -   DBTYPE_IUNKNOWN としてバインドし、ストリーミングを使用します。  
   
- 列の最大サイズを報告するときに、OLE DB Driver for SQL Server が報告されます。  
+ 列の最大サイズを報告するときに、OLE DB Driver for SQL Server がレポートされます。  
   
--   定義済みの最大サイズをたとえばは、2000、 **varchar (** 2000 **)** 列、または  
+-   定義された最大サイズ。たとえば、**varchar(** 2000 **)** 列の場合は 2000 になります。  
   
--   「無制限」の値がの場合、 **varchar (max)** 列が等しい ~ 0 です。 この値は、DBCOLUMN_COLUMNSIZE メタデータのプロパティに設定されます。  
+-   **varchar(max)** 列が 0 に等しい場合の値、"無制限"。 この値は、DBCOLUMN_COLUMNSIZE メタデータのプロパティに設定されます。  
   
- 標準変換規則に適用されます、 **varchar (max)** 列で、どの変換でも有効であることを意味する**varchar (** 2000 **)** 列はに対して有効でもある、**varchar (max)** 列です。 場合も同様です**nvarchar (max)** と**varbinary (max)** 列です。  
+ 標準の変換規則が **varchar(max)** 列に適用されます。つまり、**varchar(** 2000 **)** 列で有効なすべての変換は、**varchar(max)** 列でも有効です。 **nvarchar(max)** 列と **varbinary(max)** 列についても同じことが当てはまります。  
   
  大きな値をとるデータ型を取得するとき最も効果的な方法は、DBTYPE_IUNKNOWN としてバインドし、行セット プロパティ DBPROP_ACCESSORDER を DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS に設定することです。 これにより、次の例で示すように、値が中間バッファーなしでネットワークから直接ストリーミングされます。  
   
@@ -694,7 +694,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- SQL Server の OLE DB ドライバーが大きな値データ型を公開する方法の詳細については、次を参照してください。 [Blob と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)です。  
+ OLE DB Driver for SQL Server が大きな値データ型を公開する方法の詳細については、次を参照してください。 [Blob と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)します。  
 
   
 ## <a name="see-also"></a>参照  

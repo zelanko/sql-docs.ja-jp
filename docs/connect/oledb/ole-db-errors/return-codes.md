@@ -1,5 +1,5 @@
 ---
-title: リターン コードの |Microsoft ドキュメント
+title: リターン コード |Microsoft Docs
 description: リターン コード
 ms.custom: ''
 ms.date: 06/14/2018
@@ -26,31 +26,31 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 84927b3d26233e9d21f175850a5b11c2c2bea56b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ec559040fceb5116ca83cc4eb295580479224b04
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665962"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107048"
 ---
 # <a name="return-codes"></a>リターン コード
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   最も基本的なレベルでは、メンバー関数は成功するか失敗するかのどちらかです。 それよりもやや詳細なレベルでは、関数は成功しても、その成功はアプリケーション開発者が意図した状態ではない場合があります。  
   
- OLE DB のリターン コードの詳細については、次を参照してください。[リターン コード (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)です。  
+ OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)」を参照してください。  
   
  OLE DB Driver for SQL Server メンバー関数が S_OK を返すときに、関数が成功しました。  
   
- OLE DB Driver for SQL Server メンバー関数が S_OK を返さない、ときに、OLE/COM HRESULT をアンパックする FAILED マクロと IS_ERROR マクロは、全体的な成功または関数の失敗を判断できます。  
+ OLE DB Driver for SQL Server のメンバー関数が S_OK を返さない場合は、OLE/COM HRESULT をアンパックする FAILED マクロと IS_ERROR マクロにより、関数全体が成功したか失敗したかを判断できます。  
   
- FAILED または IS_ERROR が TRUE を返す場合、OLE DB Driver for SQL Server コンシューマーはメンバー関数の実行が失敗したことが保証されます。 FAILED または IS_ERROR を返す場合に FALSE と HRESULT と等しくありません S_OK を OLE DB Driver for SQL Server コンシューマーがその関数はある程度まで成功を保証します。 コンシューマーは、この"success 情報を含む"返された場合は、OLE DB Driver for SQL Server エラー インターフェイスから詳細な情報を取得できます。 また、関数 (、FAILED マクロに TRUE を返します) が失敗した明確にする場合、拡張エラー情報は、OLE DB Driver for SQL Server エラー インターフェイスから利用できます。  
+ FAILED または IS_ERROR が TRUE を返した場合、OLE DB Driver for SQL Server のコンシューマーは、メンバー関数の実行が失敗したことを確認できます。 FAILED または IS_ERROR が返される場合は、FALSE と HRESULT と S_OK を OLE DB Driver for SQL Server コンシューマーがその関数はある意味で成功を保証が等しくないです。 コンシューマーは OLE DB Driver for SQL Server のエラー インターフェイスから返される、関数の成功に関する詳細情報を取得できます。 また、関数が明らかに失敗している (FAILED マクロが TRUE を返した) 場合、OLE DB Driver for SQL Server のエラー インターフェイスから拡張エラー情報を取得できます。  
   
- OLE DB Driver for SQL Server コンシューマーは、DB_S_ERRORSOCCURRED により成功が情報"HRESULT 戻り値をよく発生します。 通常、DB_S_ERRORSOCCURRED を返すメンバー関数では、コンシューマーに状態値を提供するパラメーターが 1 つ以上定義されています。 コンシューマーが利用可能なときに、状態の値を取得するアプリケーション ロジックを実装する必要がありますので、状態値パラメーターで返される以外のコンシューマーに使用できる可能性エラー情報はありません。  
+ OLE DB Driver for SQL Server コンシューマーは、情報を含む DB_S_ERRORSOCCURRED"success"HRESULT 戻り値をよく遭遇します。 通常、DB_S_ERRORSOCCURRED を返すメンバー関数では、コンシューマーに状態値を提供するパラメーターが 1 つ以上定義されています。 コンシューマーは状態値パラメーターに返される情報以外のエラー情報を取得できない場合があるので、状態値が提供された場合にこの値を取得できるアプリケーション ロジックを実装することをお勧めします。  
   
- メンバー関数の SQL Server OLE DB Driver は、成功コード S_FALSE を返しません。 すべて OLE DB Driver for SQL Server メンバー関数は、常に成功を示すには S_OK を返します。  
+ OLE DB Driver for SQL Server メンバー関数は、成功コード S_FALSE を返しません。 すべて OLE DB Driver for SQL Server メンバー関数は、常に成功した場合は S_OK を返します。  
   
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)  

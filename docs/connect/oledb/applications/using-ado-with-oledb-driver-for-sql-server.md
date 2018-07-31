@@ -1,6 +1,6 @@
 ---
-title: SQL Server の OLE DB ドライバーと ADO の併用 |Microsoft ドキュメント
-description: SQL Server の OLE DB ドライバーと ADO の併用
+title: OLE DB Driver for SQL Server の ADO の使用 |Microsoft Docs
+description: OLE DB Driver for SQL Server での ADO の使用
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,35 +19,35 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 89f11eda93f9ac8eb67259265b646a2544143ae5
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: e1fdea857c21b66fd4e72f541f9a6a653aeb44c6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612197"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108084"
 ---
-# <a name="using-ado-with-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB ドライバーと ADO の併用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="using-ado-with-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server での ADO の使用
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  導入された新機能を活用するために[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]など複数のアクティブな結果セット (MARS)、クエリ通知、ユーザー定義型 (Udt)、または新しい**xml** ActiveX を使用する既存のアプリケーションのデータ型Data Objects (ADO) は、データ アクセス プロバイダーとしての SQL Server の OLE DB Driver を使用してください。  
+  ADO (ActiveX Data Object) を使用する既存のアプリケーションで、MARS (複数のアクティブな結果セット)、クエリ通知、UDT (ユーザー定義型)、新しい **xml** データ型など、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された新機能を利用するには、データ アクセス プロバイダーとして OLE DB Driver for SQL Server を使用する必要があります。  
   
- 最新バージョンの新機能を使用する ADO を有効にする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、一部の機能強化に加えられた OLE DB Driver for SQL Server OLE DB のコア機能を拡張するものです。 これらの拡張機能を指定する許可を使用する ADO アプリケーションは新しい[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]機能し、2 つのデータで導入された型を使用する[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml**と**udt**です。 これらの拡張機能も強化を利用、 **varchar**、 **nvarchar**、および**varbinary**データ型。 OLE DB Driver for SQL Server は、DBPROPSET_SQLSERVERDBINIT プロパティ セットを使用して ADO アプリケーションで、新しいデータ型が ADO と互換性のある方法で表示されるように、SSPROP_INIT_DATATYPECOMPATIBILITY 初期化プロパティを追加します。 さらに、SQL Server の OLE DB Driver は、という名前の新しい接続文字列キーワードもを定義**DataTypeCompatibility**接続文字列に設定されています。  
+ ADO から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の最新バージョンの新機能を使用できるように、OLE DB Driver for SQL Server を機能強化し、OLE DB の中核となる機能を拡張しました。 ADO アプリケーションはこのような機能強化により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能、および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された 2 つのデータ型 (**xml** と **udt**) を使用できるようになります。 また、この機能強化では、**varchar**、**nvarchar**、**varbinary** の各データ型に対する機能も強化されています。 OLE DB Driver for SQL Server では、ADO アプリケーションで使用するために、SSPROP_INIT_DATATYPECOMPATIBILITY 初期化プロパティが DBPROPSET_SQLSERVERDBINIT プロパティ セットに追加されています。このため、新しいデータ型は ADO との互換性を確保する方法で公開されます。 さらに、OLE DB Driver for SQL Server でもという名前の新しい接続文字列キーワードが定義**DataTypeCompatibility**接続文字列に設定されています。  
 
 > [!NOTE]  
->  既存の ADO アプリケーションは、SQLOLEDB プロバイダーを使用して、XML、UDT、および大きな値のテキストやバイナリのフィールド値にアクセスして更新できます。 新しい大きな**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)** データ型が ADO 型として返されます**adLongVarChar**、**adLongVarWChar**と**adLongVarBinary**それぞれします。 として XML 列が返されます**adLongVarChar**、UDT 列として返されますと**adVarBinary**です。 ただし場合の SQL Server (MSOLEDBSQL) SQLOLEDB ではなく、OLE DB Driver を使用する必要がありますを設定することを確認する、 **DataTypeCompatibility**キーワードを「80」、新しいデータ型が ADO データ型に正しく対応するようにします。  
+>  既存の ADO アプリケーションは、SQLOLEDB プロバイダーを使用して、XML、UDT、および大きな値のテキストやバイナリのフィールド値にアクセスして更新できます。 サイズの大きな値をとる新しいデータ型 **varchar(max)**、**nvarchar(max)**、**varbinary(max)** はそれぞれ、**adLongVarChar**、**adLongVarWChar**、**adLongVarBinary** という ADO 型として返されます。 XML 列は **adLongVarChar** として返され、UDT 列は **adVarBinary** として返されます。 ただし、OLE DB Driver for SQL Server (MSOLEDBSQL) SQLOLEDB ではなくを使用する場合に設定することを確認、 **DataTypeCompatibility**キーワードを「80」、新しいデータ型が ADO データ型に正しく対応するようにします。  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>ADO から SQL Server の OLE DB ドライバーを有効にします。  
- SQL Server で OLE DB ドライバーの使用方法を有効にするのには ADO アプリケーションは、接続文字列で、次のキーワードを実装する必要があります。  
+ OLE DB Driver for SQL Server を使用できるようにするには、ADO アプリケーションで、接続文字列に次のキーワードを実装する必要があります。  
 
 -   `Provider=MSOLEDBSQL`  
 
 -   `DataTypeCompatibility=80`  
 
- 詳細については、ADO 接続文字列キーワードが SQL Server の OLE DB ドライバーでサポートされてを参照してください[OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)です。  
+ 接続文字列 for SQL Server、OLE DB ドライバーでサポートされているキーワードの ADO の詳細についてを参照してください[OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)します。  
 
- MARS の機能を有効にするなど、SQL Server の OLE DB Driver を使用する完全に有効になっている ADO 接続文字列を確立する例を次に示します。  
+ 次に、MARS 機能の有効化など、OLE DB Driver for SQL Server を使用した操作で利用できる ADO 接続文字列を作成する例を示します。  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -62,10 +62,10 @@ con.Open
 ```  
 
 ## <a name="examples"></a>使用例  
- 次のセクションでは、SQL Server の OLE DB ドライバーと ADO を使用する方法の例を示します。  
+ 次のセクションでは、for SQL Server OLE DB ドライバーを ADO を使用する方法の例を示します。  
 
 ### <a name="retrieving-xml-column-data"></a>XML 列データの取得  
- この例では、レコード セットを取得および XML 列からデータを表示に使用される、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks**サンプル データベース。  
+ この例では、レコードセットを使用し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** サンプル データベースの XML 列からデータを取得および表示します。  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -101,7 +101,7 @@ Set con = Nothing
 >  レコードセットのフィルター選択は、XML 列でサポートされません。 これを使用すると、エラーが返されます。  
 
 ### <a name="retrieving-udt-column-data"></a>UDT 列データの取得  
- この例では、**コマンド**オブジェクトは、UDT を返す SQL クエリを実行するために使用、UDT データが更新され、新しいデータをデータベースに挿入されます。 この例では、**ポイント**UDT が既にデータベースに登録されています。  
+ この例では、**Command** オブジェクトを使用して、UDT を返す SQL クエリを実行します。その後、UDT データを更新し、新しいデータをデータベースに挿入します。 ここでは、**Point** UDT が既にデータベースに登録されていることを前提としています。  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -144,7 +144,7 @@ Set con = Nothing
 ```  
 
 ### <a name="enabling-and-using-mars"></a>MARS の有効化と使用  
- この例では、接続文字列を構築して、SQL Server の OLE DB ドライバーを通じて MARS を有効にして作成して、2 つのレコード セット オブジェクトは、同じ接続を使用して実行します。  
+ この例では、OLE DB Driver for SQL Server で MARS を有効にするように接続文字列を構築し、その後、同じ接続を使用して実行する 2 つのレコードセット オブジェクトを作成します。  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -168,7 +168,7 @@ con.Close
 Set con = Nothing  
 ```  
 
- 以前のバージョンの OLE DB プロバイダーでは、アクティブな結果セットを 1 つの接続ごとに 1 つしか開くことができなかったので、このコードにより 2 回目の実行時に暗黙の接続が作成されました。 暗黙の接続が OLE DB 接続プールにプールされなかったので、これが原因でオーバーヘッドが増加することになります。 MARS 機能を使用して SQL Server の OLE DB ドライバーによって公開される 1 つの接続で複数のアクティブな結果を取得します。  
+ 以前のバージョンの OLE DB プロバイダーでは、アクティブな結果セットを 1 つの接続ごとに 1 つしか開くことができなかったので、このコードにより 2 回目の実行時に暗黙の接続が作成されました。 暗黙の接続が OLE DB 接続プールにプールされなかったので、これが原因でオーバーヘッドが増加することになります。 OLE DB Driver for SQL Server で公開された MARS 機能を使用すると、1 つの接続で複数のアクティブな結果を取得できます。  
 
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server を使用したアプリケーションの構築](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

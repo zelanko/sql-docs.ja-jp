@@ -1,6 +1,6 @@
 ---
-title: データ ソース情報プロパティ |Microsoft ドキュメント
-description: データ ソース情報プロパティ
+title: データ ソースの情報のプロパティ |Microsoft Docs
+description: データ ソース情報のプロパティ
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,31 +20,31 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 80d39fd079654452a4d26484df7b9a12e903c714
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0fd9afc87acfb4c39e406ea3deb0b5e9bd7e82d0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665972"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108134"
 ---
 # <a name="data-source-information-properties"></a>データ ソース情報のプロパティ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERDATASOURCEINFO では、SQL Server の OLE DB Driver は、次のデータ ソース情報プロパティを定義します。  
+  プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERDATASOURCEINFO には、OLE DB Driver for SQL Server により、次のデータ ソース情報のプロパティが定義されます。  
   
-|プロパティ ID|説明|  
+|プロパティ ID|[説明]|  
 |-----------------|-----------------|  
 |SSPROP_COLUMNLEVELCOLLATION|型 : VT_BOOL<br /><br /> R/W: 読み取り<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明 : 列の照合順序がサポートされるかどうかの判断に使用されます。<br /><br /> VARIANT_TRUE: 列レベルの照合順序がサポートされます。<br /><br /> VARIANT_FALSE: 列レベルの照合順序はサポートされません。|  
 |SSPROP_UNICODELCID|型 : VT_I4 R/W: 読み取り<br /><br /> 説明 : Unicode ロケール ID です。<br /><br /> これは、Unicode データの並べ替えに使われるロケールです。|  
 |SSPROP_UNICODECOMPARISONSTYLE|型 : VT_I4 R/W: 読み取り<br /><br /> 説明 : Unicode 比較形式です。<br /><br /> Unicode データの並べ替えに使われる並べ替えオプションです。|  
   
- プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERSTREAM では、SQL Server の OLE DB Driver は、次の追加プロパティを定義します。  
+ プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERSTREAM には、OLE DB Driver for SQL Server により、次の追加プロパティが定義されます。  
   
-|プロパティ ID|説明|  
+|プロパティ ID|[説明]|  
 |-----------------|-----------------|  
-|SSPROP_STREAM_XMLROOT|型 : VT_BSTR R/W: 読み取り/書き込み<br /><br /> 説明: FOR XML クエリの結果に、整形式でないドキュメントを許可します。 このプロパティが指定されている場合の結果、' を選択しています. for XML' クエリは、整形式 XML ドキュメントを取得するには、このプロパティによって提供される、ルート タグにラップします。 クエリがブラウザーから実行されている場合、結果の読み込み時にブラウザーがパーサー エラーを表示する場合があります。 このエラーを回避するために、SQL ISAPI はキーワード ROOT をサポートしています。 このキーワードは SSPROP_STREAM_XMLROOT プロパティにマップされます。|  
+|SSPROP_STREAM_XMLROOT|型 : VT_BSTR R/W: 読み取り/書き込み<br /><br /> 説明: FOR XML クエリの結果に、整形式でないドキュメントを許可します。 このプロパティが指定されている場合の結果を ' を選択しています. for XML' クエリが、整形式 XML ドキュメントを返すためには、このプロパティによって提供されるルート タグにラップされています。 クエリがブラウザーから実行されている場合、結果の読み込み時にブラウザーがパーサー エラーを表示する場合があります。 このエラーを回避するために、SQL ISAPI はキーワード ROOT をサポートしています。 このキーワードは SSPROP_STREAM_XMLROOT プロパティにマップされます。|  
   
 ## <a name="see-also"></a>参照  
  [データ ソース オブジェクト&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

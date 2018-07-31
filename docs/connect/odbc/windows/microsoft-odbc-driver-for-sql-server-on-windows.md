@@ -1,5 +1,5 @@
 ---
-title: Microsoft ODBC Driver for SQL Server on Windows |Microsoft ドキュメント
+title: Microsoft ODBC Driver for SQL Server on Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32856657"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047440"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Microsoft ODBC Driver を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]を Microsoft に標準の ODBC インターフェイスを実装するアプリケーション プログラミング インターフェイス (API) を提供するスタンドアロンの ODBC ドライバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。
+Microsoft ODBC Drivers for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]を Microsoft には、標準の ODBC インターフェイスを実装するアプリケーション プログラミング インターフェイス (API) を提供するスタンドアロンの ODBC ドライバーは[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]します。
 
-Microsoft ODBC Driver for SQL Server は、新しいアプリケーションの作成に使用できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server では、Azure SQL Database、Azure SQL Data Warehouse、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および SQL Server 2005 への接続をサポートします。  
+Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケーションを作成できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server を使用すると、Azure SQL Database、Azure SQL Data Warehouse、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、SQL Server 2005 に接続できます。  
 
 ## <a name="summary"></a>[概要]
 
-| バージョン       | サポートされる機能      |
+| [バージョンのオプション]       | サポートされる機能      |
 | ------------- |---------------| 
-| SQL Server 用 Microsoft ODBC Driver 17 | <ul><li>BCP API が常に暗号化されたサポート</li><li>新しい接続文字列属性 UseFMTONLY により一時テーブルを必要とする特殊なケースで以前のメタデータを使用するドライバー</li>
-| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD の認証</li><li>AlwaysOn 可用性グループ (AG)</li></ul>   | 
+| Microsoft ODBC Driver 17 for SQL Server | <ul><li>Always Encrypted のサポートの BCP API</li><li>新しい接続文字列属性 UseFMTONLY により一時テーブルを必要とする特殊なケースで以前のメタデータを使用するには</li>
+| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>AlwaysOn 可用性グループ (AG)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>国際化ドメイン名 (IDN)</li></ul> |
 | Microsoft SQL Server 用 ODBC Driver 11 | <ul><li>ドライバー対応接続プール</li><li>接続の回復</li><li>非同期実行 (ポーリング メソッド)</li></ul> |    
 
@@ -46,9 +46,9 @@ Microsoft ODBC Driver for SQL Server は、新しいアプリケーションの�
 -   [OLE DB Provider for SQL Server のドライバー対応接続プール](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
 -   [非同期実行 &#40;通知方法&#41; の例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Windows ODBC ドライバーの接続の復元性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
--   [ODBC ドライバーで Always Encrypted を使用します。](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+-   [ODBC ドライバーで Always Encrypted を使用する](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [ODBC ドライバーでの Azure Active Directory の使用](../../../connect/odbc/using-azure-active-directory.md) 
--   [透過ネットワーク IP 解決を使用してください。](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
+-   [透過的なネットワーク IP の解決の使用](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>コミュニティ  
 - [Microsoft ODBC Driver For SQL Server チーム ブログ](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
@@ -56,7 +56,7 @@ Microsoft ODBC Driver for SQL Server は、新しいアプリケーションの�
   
 ## <a name="see-also"></a>参照  
 - [SQL Server Native Client について](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [SQL Server Native Client でアプリケーションの構築](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
+- [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client に関する FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [ODBC プログラマー リファレンス](../../../odbc/reference/odbc-programmer-s-reference.md)   
 - [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  

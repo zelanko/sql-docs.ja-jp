@@ -1,5 +1,5 @@
-﻿---
-title: データの取得 |Microsoft ドキュメント
+---
+title: データの取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983038"
 ---
 # <a name="retrieving-data"></a>データの取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "35309191"
   
 クエリで、複数の結果セットを取得する場合、 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)によって次の結果セットに移動できます。  
   
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン 1.1 以降では、[sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) を使用して結果セットに行が含まれているかどうかを見ることができます。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン 1.1 以降では、[sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) を使用して、結果セットに行が含まれているかどうかを確認できます。  
   
 ## <a name="pdosqlsrv-driver"></a>PDO_SQLSRV ドライバー  
-PDO_SQLSRV ドライバー、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]結果セットからデータを取得するため、次のオプションを提供します。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の PDO_SQLSRV ドライバーは、結果セットからデータを取得するための次のオプションを提供します。  
   
 -   [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)  
   
@@ -73,7 +73,7 @@ PDO_SQLSRV ドライバー、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_m
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |---------|---------------|  
 |[文字列としてデータを取得する](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|サーバーからデータをストリーミングする方法の概要を説明し、特定のユース ケースへのリンクを示します。|  
 |[方向パラメーターを使用する](../../connect/php/using-directional-parameters.md)|ストアド プロシージャを呼び出す際に、方向パラメーターを使用する方法について説明します。|  
@@ -84,7 +84,7 @@ PDO_SQLSRV ドライバー、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_m
 [方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>参照  
-[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [データの取得](../../connect/php/retrieving-data.md)  
   

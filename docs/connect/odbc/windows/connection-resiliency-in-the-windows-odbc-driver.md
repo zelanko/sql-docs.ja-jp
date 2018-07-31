@@ -1,5 +1,5 @@
 ---
-title: Windows ODBC ドライバーの接続レジリエンシー |Microsoft ドキュメント
+title: Windows ODBC ドライバーの接続の回復性 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852867"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060333"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC ドライバーの接続レジリエンシー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  常にアプリケーションに接続されている、 [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]Windows 上の ODBC ドライバーは、アイドル状態の接続を復元できます。  
+  確実にアプリケーションを [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]に接続されたままにするため、Windows 上の ODBC ドライバーは、アイドル状態の接続を復元できます。  
   
 > [!IMPORTANT]  
 >  接続の復元機能は Microsoft Azure SQL データベースと SQL Server 2014 (以降) サーバー バージョンでご利用いただけます。  
   
- アイドル接続の回復に関する詳細については、次を参照してください。[技術記事 – アイドル接続の回復](http://go.microsoft.com/fwlink/?LinkId=393996)です。  
+ アイドル接続の回復性に関する詳細については、「[Technical Article – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996)」 (技術記事 - アイドル接続の回復性) を参照してください。  
   
  Windows の場合、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] には再接続動作を変更する方法が 2 つあります。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32852867"
   
     -   **ConnectRetryCount** 接続文字列キーワードを使用する。  
   
-     接続再試行回数を取得するを使用して、 **SQL_COPT_SS_CONNECT_RETRY_COUNT** (読み取り専用) 接続の属性です。 アプリケーション サーバーに接続する接続の回復をサポートしていない場合**SQL_COPT_SS_CONNECT_RETRY_COUNT** 0 を返します。  
+     接続の再試行回数を取得するには、**SQL_COPT_SS_CONNECT_RETRY_COUNT** (読み取り専用) 接続属性を使用します。 接続の回復性をサポートしていないサーバーにアプリケーションが接続する場合、**SQL_COPT_SS_CONNECT_RETRY_COUNT** は 0 を返します。  
   
 -   接続の再試行間隔。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "32852867"
   
     -   **ConnectRetryInterval** 接続文字列キーワードを使用する。  
   
-     接続の再試行間隔の長さを取得するを使用して、 **SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (読み取り専用) 接続の属性です。  
+     接続の再試行間隔の長さを取得するには、**SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (読み取り専用) 接続属性を使用します。  
   
  アプリケーションが SQL_DRIVER_COMPLETE_REQUIRED で接続を確立し、後で、途切れた接続でステートメントを実行しようとする場合、ODBC ドライバーはダイアログ ボックスを再度表示しません。 回復の進行中にもです。  
   
--   回復中に、すべての呼び出しに**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** を返す必要があります**SQL_CD_FALSE**です。  
+-   回復中は、**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** が呼び出されたとき、**SQL_CD_FALSE** が返されるようにします。  
   
--   回復できなかったかどうか、すべての呼び出しに**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** を返す必要があります**SQL_CD_TRUE**です。  
+-   回復できなかった場合、**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** が呼び出されたとき、**SQL_CD_TRUE** が返されるようにします。  
   
  次の状態コードは、サーバーでコマンドを実行する関数から返されます。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "32852867"
 |IMC06|接続が切断され、復旧は不可能です。 クライアント ドライバーは接続を復旧不可能としてマークしています。 接続復旧は試行されませんでした。|  
   
 ## <a name="example"></a>例  
- 次の例には、2 つの関数が含まれています。 **func1**の ODBC ドライバーを使用するデータ ソース名 (DSN) に接続する方法を示しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] windows です。 DSN は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 認証を使用し、ユーザー ID を指定します。 **func1**で接続再試行回数を取得し、 **SQL_COPT_SS_CONNECT_RETRY_COUNT**です。  
+ 次の例には、2 つの関数が含まれています。 **func1** は、Windows の場合に、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] を使用するデータ ソース名 (DSN) で接続する方法を示しています。 DSN は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 認証を使用し、ユーザー ID を指定します。 **func1**で接続再試行回数を取得し、 **SQL_COPT_SS_CONNECT_RETRY_COUNT**します。  
   
  **func2** は **SQLDriverConnect**、 **ConnectRetryCount** 接続文字列キーワード、接続属性を使用し、接続再試行と再試行間隔の設定を取得します。  
   

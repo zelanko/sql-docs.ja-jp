@@ -1,6 +1,6 @@
 ---
-title: テーブル値パラメーターを含むコマンドを実行する |Microsoft ドキュメント
-description: テーブル値パラメーターを含むコマンドを実行します。
+title: テーブル値パラメーターを含むコマンドの実行 | Microsoft Docs
+description: テーブル値パラメーターを含むコマンドの実行
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,37 +16,37 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f1eb60372a79d95f3e88e68e0e0314d1968a971a
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 0406fd40ebb8a1bcc13f883b6ffe1735d5c07012
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689935"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108824"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>テーブル値パラメーターを含むコマンドの実行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  テーブル値パラメーターを使用してコマンドを実行するには、2 つのフェーズが必要です。  
+  テーブル値パラメーターを含むコマンドを実行するには、次の 2 つのフェーズが必要になります。  
   
 1.  パラメーターの型を指定する。  
   
 2.  パラメーター データをバインドする。  
   
 ## <a name="table-valued-parameter-specification"></a>テーブル値パラメーターの指定  
- コンシューマーは、テーブル値パラメーターの型を指定できます。 この情報には、テーブル値パラメーターの型名が含まれます。 接続の現在の既定のスキーマにテーブル値パラメーターのユーザー定義テーブル型がない場合は、スキーマ名も含まれます。 サーバーのサポートによって、コンシューマー可能性がありも指定省略可能なメタデータについては、列の順序など、特定の列のすべての行が既定値を持つことを示すことができます。  
+ コンシューマーは、テーブル値パラメーターの型を指定できます。 この情報には、テーブル値パラメーターの型名が含まれます。 また、テーブル値パラメーターのユーザー定義テーブル型が接続の現在の既定のスキーマにない場合は、スキーマ名も含まれます。 サーバーでサポートされているかどうかに応じて、コンシューマーでは、省略可能なメタデータ情報 (列の順序など) を指定したり、特定の列のすべての行に既定値が設定されるよう指定したりすることもできます。  
   
- テーブル値パラメーターを指定するには、コンシューマーは ISSCommandWithParamter::SetParameterInfo、して必要に応じて isscommandwithparameters::setparameterproperties です。 テーブル値パラメーターの場合、*して*DBPARAMBINDINFO 構造体のフィールドには DBTYPE_TABLE の値。 *UlParamSize*にフィールドが設定されている ~ 0 その長さを示すためには不明です。 Isscommandwithparameters::setparameterproperties を通じて、スキーマ名、型名、列の順序、および既定の列などのテーブル値パラメーターの特定のプロパティを設定できます。  
+ テーブル値パラメーターを指定するには、コンシューマーは ISSCommandWithParamter::SetParameterInfo を呼び出すし、isscommandwithparameters::setparameterproperties を必要に応じて呼び出します。 テーブル値パラメーターの場合、DBPARAMBINDINFO 構造体の *pwszDataSourceType* フィールドの値は DBTYPE_TABLE になります。 *ulParamSize* フィールドには ~0 が設定され、長さが不明であることを示します。 Isscommandwithparameters::setparameterproperties を通じて、スキーマ名、型名、列の順序、および既定の列などのテーブル値パラメーターの特定のプロパティを設定できます。  
   
 ## <a name="table-valued-parameter-binding"></a>テーブル値パラメーターのバインド  
  テーブル値パラメーターには、任意の行セット オブジェクトを指定できます。 プロバイダーは、実行中、このオブジェクトからテーブル値パラメーターを読み取って、サーバーに送信します。  
   
- テーブル値パラメーターをバインドするには、コンシューマーは、iaccessor::createaccessor を呼び出します。 *WType*テーブル値パラメーターの DBBINDING 構造体のフィールドは DBTYPE_TABLE に設定します。 *PObject* DBBINDING 構造体のメンバーは、NULL 以外の場合、および*pObject*の*iid*メンバーは IID_IRowset、またはその他のテーブル値パラメーター行セット オブジェクトに設定インターフェイス。 DBBINDING 構造体の残りのフィールドは、ストリームされた Blob に対して設定すると、同じように設定する必要があります。  
+ テーブル値パラメーターをバインドするには、コンシューマーは、iaccessor::createaccessor を呼び出します。 テーブル値パラメーターの DBBINDING 構造体の *wType* フィールドには、DBTYPE_TABLE が設定されます。 DBBINDING 構造体の *pObject* メンバーは NULL ではなく、*pObject* の *iid* メンバーは IID_IRowset、またはその他のテーブル値パラメーターの行セット オブジェクト インターフェイスに設定されます。 DBBINDING 構造体の残りのフィールドは、ストリームされた BLOB の場合と同じように設定する必要があります。  
   
  テーブル値パラメーターと、テーブル値パラメーターに関連付けられる行セット オブジェクトのバインドでは、次の制限が適用されます。  
   
--   テーブル値パラメーターの行セット列データに許容される状態値は DBSTATUS_S_ISNULL と DBSTATUS_S_OK だけです。 DBSTATUS_S_DEFAULT、障害が発生し、バインド状態値が DBSTATUS_E_BADSTATUS に設定されます。  
+-   テーブル値パラメーターの行セット列データに許容される状態値は DBSTATUS_S_ISNULL と DBSTATUS_S_OK だけです。 DBSTATUS_S_DEFAULT ではエラーが発生し、バインド状態値が DBSTATUS_E_BADSTATUS に設定されます。  
   
 -   テーブル値パラメーターは DBSTATUS_S_DEFAULT 状態でマークできます。 有効な値は DBSTATUS_S_DEFAULT と DBSTATUS_S_OK だけです。 状態が DBSTATUS_S_DEFAULT に設定された場合、テーブル値パラメーターの値は、空のテーブルに対応します。  
   
@@ -56,6 +56,6 @@ ms.locfileid: "35689935"
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [テーブル値パラメーターを使用して&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [テーブル値パラメーターの使用 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

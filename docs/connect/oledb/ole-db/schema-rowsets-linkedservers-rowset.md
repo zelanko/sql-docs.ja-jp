@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 行セット (OLE DB) |Microsoft ドキュメント
+title: LINKEDSERVERS 行セット (OLE DB) |Microsoft Docs
 description: LINKEDSERVERS 行セット (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,25 +17,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: c6b1299005c0307f04f0f245f6e0ec6ee57b5063
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611727"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105768"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>スキーマ行セットの LINKEDSERVERS 行セット
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---linkedservers-rowset"></a>スキーマ行セット - LINKEDSERVERS 行セット
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **LINKEDSERVERS**行セットに含めることが組織のデータ ソースを列挙する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散クエリ。  
+  **LINKEDSERVERS** 行セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散クエリに参加できる、組織のデータ ソースを列挙します。  
   
- **LINKEDSERVERS**行セットには、次の列が含まれています。  
+ **LINKEDSERVERS** 行セットは、次の列で構成されます。  
   
-|列名|型を表すインジケーター|説明|  
+|列名|型を表すインジケーター|[説明]|  
 |-----------------|--------------------|-----------------|  
-|SVR_NAME|DBTYPE_WSTR|リンク サーバーの名前です。|  
+|SVR_NAME|DBTYPE_WSTR|リンク サーバーの名前。|  
 |SVR_PRODUCT|DBTYPE_WSTR|メーカーなどの名前。リンク サーバーの名前で表されるデータ ストアの種類を識別します。|  
 |SVR_PROVIDERNAME|DBTYPE_WSTR|サーバーからのデータにアクセスする場合に使用する OLE DB プロバイダーの表示名。|  
 |SVR_DATASOURCE|DBTYPE_WSTR|プロバイダーからデータ ソースを取得する場合に使用する OLE DB DBPROP_INIT_DATASOURCE 文字列。|  
@@ -45,6 +45,6 @@ ms.locfileid: "35611727"
  行セットは SRV_NAME で並べ替えられます。SRV_NAME では 1 つの制限がサポートされます。  
   
 ## <a name="see-also"></a>参照  
- [スキーマ行セットのサポート&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+ [スキーマ行セットのサポート &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

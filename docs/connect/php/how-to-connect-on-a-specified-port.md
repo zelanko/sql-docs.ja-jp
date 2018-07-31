@@ -1,5 +1,5 @@
 ---
-title: '方法: 指定されたポートで接続 |Microsoft ドキュメント'
+title: '方法: 指定されたポートで接続 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6dd90c68aa47f21c35c2f566a2a8206ba421ace6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307621"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033027"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>方法: 指定されたポートで接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "35307621"
   
 ### <a name="to-connect-on-a-specified-port"></a>指定されたポートで接続するには  
   
-1.  サーバーが接続を受け入れるようにポートが構成されていることを確認します。 指定されたポートで接続を許可するサーバーを構成する方法の詳細については、次を参照してください。[する方法: 特定の TCP ポート (SQL Server 構成マネージャー) でリッスンするようにサーバーを構成する](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)です。  
+1.  サーバーが接続を受け入れるようにポートが構成されていることを確認します。 指定されたポートで接続を受け入れるようにサーバーを構成する方法の詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
-2.  必要なポートを追加、 *$serverName*のパラメーター、 [sqlsrv_connect](../../connect/php/sqlsrv-connect.md)関数。 サーバー名とポートをコンマで区切ります。 たとえば、次のコード行は SQLSRV ドライバーを使用して、ポート 1521 で *myServer* という名前のサーバーに接続する方法を示しています。  
+2.  目的のポートを [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) 関数の *$serverName* パラメーターに追加します。 サーバー名とポートをコンマで区切ります。 たとえば、次のコード行は SQLSRV ドライバーを使用して、ポート 1521 で *myServer* という名前のサーバーに接続する方法を示しています。  
   
     ```  
     $serverName = "myServer, 1521";  
     sqlsrv_connect( $serverName );  
     ```  
   
-    次のコード行では、PDO_SQLSRV ドライバーを使用して、という名前のサーバーに接続する方法を示します*myServer*ポート 1521 で。  
+    次のコード行は PDO_SQLSRV ドライバーを使用して、ポート 1521 で *myServer* という名前のサーバーに接続する方法を示しています。  
   
     ```  
     $serverName = "(local), 1521";  
@@ -50,9 +50,9 @@ ms.locfileid: "35307621"
 ## <a name="see-also"></a>参照  
 [サーバーへの接続](../../connect/php/connecting-to-the-server.md)
 
-[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[入門 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 

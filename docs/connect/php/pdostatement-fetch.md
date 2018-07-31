@@ -1,5 +1,5 @@
 ---
-title: Pdostatement::fetch |Microsoft ドキュメント
+title: Pdostatement::fetch |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308421"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020000"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,22 +34,22 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*fetch_style*: 行データの形式を指定する省略可能な (整数) シンボル。 $ を使用できる値の一覧については、「解説」セクションを参照してください*fetch_style*です。 既定値は PDO::FETCH_BOTH です。 $*fetch_style*のフェッチで、メソッドはオーバーライド $*fetch_style* pdo::query メソッドで指定します。  
+$*fetch_style*: 行データの形式を指定する省略可能な (整数) 記号です。 $*fetch_style* で使用可能な値一覧については、「解説」セクションを参照してください。 既定値は PDO::FETCH_BOTH です。フェッチ メソッドの  $*fetch_style* によって PDO::query メソッドで指定した $*fetch_style* はオーバーライドされます。  
   
-$*cursor_orientation*: 準備のステートメントを指定すると、取得する行を示す省略可能な (整数) シンボル`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`です。 $ を使用できる値の一覧については、「解説」セクションを参照してください*cursor_orientation*です。 スクロール可能なカーソルを使用する例については、「 [PDO::prepare](../../connect/php/pdo-prepare.md) 」を参照してください。  
+$*cursor_orientation*: 準備のステートメントが `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` を指定している場合、取得する行を示す省略可能な (整数) 記号です。 $*cursor_orientation* で使用可能な値一覧については、「解説」セクションを参照してください。 スクロール可能なカーソルを使用する例については、「 [PDO::prepare](../../connect/php/pdo-prepare.md) 」を参照してください。  
   
-$*cursor_offset*: 場合にフェッチする行を指定する省略可能な (整数) シンボル $*cursor_orientation* :fetch_ori_abs または pdo::fetch_ori_rel および pdo::attr_cursor が pdo::cursor_scroll です。  
+$*cursor_offset*: $*cursor_orientation* が PDO::FETCH_ORI_ABS または PDO::FETCH_ORI_REL および PDO::ATTR_CURSOR が PDO::CURSOR_SCROLL である場合にフェッチする行を指定する省略可能な (整数) 記号です。  
   
 ## <a name="return-value"></a>戻り値  
 行を返す複合値または false です。  
   
-## <a name="remarks"></a>コメント  
-フェッチが呼び出されると、カーソルは自動的に前進します。 次の表には、可能な $ の一覧が含まれています。*fetch_style*値。  
+## <a name="remarks"></a>Remarks  
+フェッチが呼び出されると、カーソルは自動的に前進します。 次の表は、可能な $*fetch_style* 値の一覧です。  
   
-|$*fetch_style*|説明|  
+|$*fetch_style*|[説明]|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|列名でインデックス付けされた配列を指定します。|  
-|PDO::FETCH_BOTH|列名でインデックス付けされた 0 から始まる配列を指定します。 既定値です。|  
+|PDO::FETCH_BOTH|列名でインデックス付けされた 0 から始まる配列を指定します。 これは既定値です。|  
 |PDO::FETCH_BOUND|True を返し、 [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)で指定された値を割り当てます。|  
 |PDO::FETCH_CLASS|インスタンスを作成し、列を名前付きプロパティにマップします。<br /><br />フェッチを呼び出す前に、 [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) を呼び出します。|  
 |PDO::FETCH_INTO|要求されたクラスのインスタンスを更新します。<br /><br />フェッチを呼び出す前に、 [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) を呼び出します。|  
@@ -59,18 +59,18 @@ $*cursor_offset*: 場合にフェッチする行を指定する省略可能な (
   
 カーソルが結果セットの最後にあり (最後の行が取得され、カーソルが結果セットの境界範囲を超えたところにあります)、カーソルが前進のみの場合 (PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY)、それ以降のフェッチ呼び出しは失敗します。  
   
-カーソルがスクロール可能な場合 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)、フェッチは結果セットの境界内にカーソルを移動します。 次の表には、可能な $ の一覧が含まれています。*cursor_orientation*値。  
+カーソルがスクロール可能な場合 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)、フェッチは結果セットの境界内にカーソルを移動します。 次の表は、可能な $*cursor_orientation* 値の一覧です。  
   
-|$*cursor_orientation*|説明|  
+|$*cursor_orientation*|[説明]|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|次の行を取得します。 既定値です。|  
+|PDO::FETCH_ORI_NEXT|次の行を取得します。 これは既定値です。|  
 |PDO::FETCH_ORI_PRIOR|前の行を取得します。|  
 |PDO::FETCH_ORI_FIRST|1 番目の行を取得します。|  
 |PDO::FETCH_ORI_LAST|最後の行を取得します。|  
-|:Fetch_ori_abs、 *num*|$ で要求された行を取得する*cursor_offset*行番号。|  
-|Pdo::fetch_ori_rel、 *num*|$ で要求された行を取得する*cursor_offset*現在位置からの相対位置でします。|  
+|PDO::FETCH_ORI_ABS, *num*|$*cursor_offset* で要求された行を行番号で取得します。|  
+|PDO::FETCH_ORI_REL, *num*|$*cursor_offset* で要求された行を現在の位置からの相対位置で取得します。|  
   
-$ 値が指定されている場合*cursor_offset*または $*cursor_orientation*結果セットの境界外に位置、フェッチは失敗します。  
+$*cursor_offset* または $*cursor_orientation* に指定した値が、結果セットの境界外に位置する場合、フェッチは失敗します。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   

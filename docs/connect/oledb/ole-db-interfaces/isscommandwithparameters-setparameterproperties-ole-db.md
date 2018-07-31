@@ -1,5 +1,5 @@
 ---
-title: Isscommandwithparameters::setparameterproperties (OLE DB) |Microsoft ドキュメント
+title: Isscommandwithparameters::setparameterproperties (OLE DB) |Microsoft Docs
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9f82f08c9a7a584e0ec4af47d63630b422aab3d6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: e04c6a678e204b741f4e0a494000b04ae575035f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689175"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106068"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -45,26 +45,26 @@ HRESULT SetParameterProperties(
   
 ## <a name="arguments"></a>引数  
  *cParams*[in]  
- 数、SSPARAMPROPS 構造体に、 *rgParamProperties*配列。 この数が 0 の場合**isscommandwithparameters::setparameterproperties**コマンドのパラメーターの指定されたすべてのプロパティが削除されます。  
+ *rgParamProperties* 配列内の SSPARAMPROPS 構造体の数。 この数が 0 の場合、**ISSCommandWithParameters::SetParameterProperties** では、コマンドのパラメーターに指定されているすべてのプロパティを削除します。  
   
  *rgParamProperties*[in]  
  設定する SSPARAMPROPS 構造体の配列。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **Isscommandwithparameters::setparameterproperties**メソッドは、主要な OLE DB と同じエラー コードを返します**icommandproperties::setproperties**メソッドです。  
+ **ISSCommandWithParameters::SetParameterProperties** メソッドでは、主要な OLE DB **ICommandProperties::SetProperties** メソッドと同じエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドを使用してパラメーター プロパティを設定または許可されて、各パラメーターごとに、序数を 1 つの**isscommandwithparameters::setparameterproperties**プロパティ配列から SSPARAMPROPS が構築された 1 回呼び出します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドを使用したパラメーター プロパティの設定は、各パラメーターに対して序数順に行うか、プロパティ配列から SSPARAMPROPS が構築されるたびに **ISSCommandWithParameters::SetParameterProperties** を 1 回呼び出すことによって行うことができます。  
   
- **SetParameterInfo**メソッドを呼び出す前に呼び出す必要があります、 **isscommandwithparameters::setparameterproperties**メソッドです。 `SetParameterProperties(0, NULL)` を呼び出すと、指定したパラメーター プロパティがすべて消去されます。また、`SetParameterInfo(0,NULL,NULL)` を呼び出すと、パラメーターに関連付けられているすべてのプロパティを含めて、パラメーターに関するすべての情報が消去されます。  
+ **ISSCommandWithParameters::SetParameterProperties** メソッドを呼び出す前に、**SetParameterInfo** メソッドを呼び出す必要があります。 `SetParameterProperties(0, NULL)` を呼び出すと、指定したパラメーター プロパティがすべて消去されます。また、`SetParameterInfo(0,NULL,NULL)` を呼び出すと、パラメーターに関連付けられているすべてのプロパティを含めて、パラメーターに関するすべての情報が消去されます。  
   
- 呼び出す**isscommandwithparameters::setparameterproperties**れていない型のパラメーターのプロパティを指定する dbtype_xml 型または dbtype_udt 型を返します DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED とマーク、 *dwStatus* dbpropstatus_notset そのパラメーターの SSPARAMPROPS に含まれているすべての Dbprop のフィールドです。 DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED が指しているパラメーターを検出するには、SSPARAMPROPS に含まれている各 DBPROPSET の DBPROP 配列をすべて調べる必要があります。  
+ **ISSCommandWithParameters::SetParameterProperties** を呼び出すときに DBTYPE_XML 型または DBTYPE_UDT 型以外のパラメーターのプロパティを指定すると、DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED が返され、そのパラメーターの SSPARAMPROPS に含まれているすべての DBPROP の *dwStatus* フィールドに DBPROPSTATUS_NOTSET が設定されます。 DB_E_ERRORSOCCURRED または DB_S_ERRORSOCCURRED が指しているパラメーターを検出するには、SSPARAMPROPS に含まれている各 DBPROPSET の DBPROP 配列をすべて調べる必要があります。  
   
- 場合**isscommandwithparameters::setparameterproperties**がパラメーター ヒントがまだ設定されていないパラメーターのプロパティを指定するために呼び出される**SetParameterInfo**プロバイダーは、e _ を返します。次のエラー メッセージで予期しない:  
+ **ISSCommandWithParameters::SetParameterProperties** を呼び出すときに、**SetParameterInfo** によって情報が設定されていないパラメーターのプロパティを指定すると、プロバイダーは次のエラー メッセージと共に E_UNEXPECTED を返します。  
   
  パラメーターを指定して SetParameterProperties メソッドを呼び出す場合は、最初に SetParameterInfo メソッドを呼び出す必要があります。 パラメーターのプロパティを設定する前に、パラメーター情報を設定する必要があります。  
   
- 場合に呼び出し**isscommandwithparameters::setparameterproperties**パラメーター情報が、セットされているが、一部のパラメーターといくつかのパラメーター、パラメーター情報が設定されていない、内の dwStatus プロパティが含まれています、SSPARAMPROPS プロパティ セットの DBPROPSET DBSTATUS_NOTSET が返されます。  
+ **ISSCommandWithParameters::SetParameterProperties** を呼び出すときに、情報が設定されているパラメーターと設定されていないパラメーターが含まれている場合、SSPARAMPROPS プロパティ セットの DBPROPSET 内の dwStatus プロパティに DBSTATUS_NOTSET が設定されて返されます。  
   
  SSPARAMPROPS 構造体は、次のように定義されています。  
   
@@ -78,12 +78,12 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- 以降で、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]isscommandwithparameters::setparameterproperties を期待する結果のより正確な記述を取得できるようにします。 以前のバージョンの isscommandwithparameters::setparameterproperties によって返される値からこれらのより正確な結果が異なる場合があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。[メタデータ検出](../../oledb/features/metadata-discovery.md)です。  
+ 以降では、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]isscommandwithparameters::setparameterproperties 期待どおりの結果のより正確な記述を取得できるようにします。 これらのより正確な結果の以前のバージョンの isscommandwithparameters::setparameterproperties によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../../oledb/features/metadata-discovery.md)します。  
   
-|Member|説明|  
+|メンバー|[説明]|  
 |------------|-----------------|  
 |*iOrdinal*|渡されるパラメーターの序数|  
-|*cPropertySets*|DBPROPSET の数が構造体に*rgPropertySets*です。|  
+|*cPropertySets*|*rgPropertySets* 内の DBPROPSET 構造体の数|  
 |*rgPropertySets*|DBPROPSET 構造体の配列を返すメモリへのポインター|  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: '手順 3: PHP を使用して SQL に接続する概念実証 |Microsoft ドキュメント'
+title: 'ステップ 3: PHP を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309451"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006454"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>ステップ 3: PHP を使用した SQL への接続を概念実証する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "35309451"
 ## <a name="step-1--connect"></a>手順 1: 接続  
   
   
-これは、 **OpenConnection**の後に続く関数はすべての上部近くに呼び出されます。  
+これは、 **OpenConnection**ですべての次の関数の先頭付近にある関数が呼び出されます。  
   
   
 ```php 
@@ -51,7 +51,7 @@ ms.locfileid: "35309451"
   
 ## <a name="step-2--execute-query"></a>手順 2: クエリを実行します。  
   
-[Sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php)関数を使用して SQL データベースに対するクエリからセットの結果を取得することができます。 この関数は、本質的には任意のクエリと、接続オブジェクトを受け取り、反復処理できるので、結果セットを返します[sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php)です。  
+[Sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的に任意のクエリを受け取り、接続オブジェクトと、使用して反復処理できる結果セットを返します[sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php)します。  
   
 ```php  
     function ReadData()  
@@ -83,7 +83,7 @@ ms.locfileid: "35309451"
   
 ## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
   
-この例を実行する方法が表示されます、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントは、安全にからアプリケーションを保護するためのパラメーターを渡す[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
+実行する方法がわかります。 この例では、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントが安全に、からアプリケーションを保護するパラメーターを渡す[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
   
   
 ```php 
@@ -120,9 +120,9 @@ ms.locfileid: "35309451"
   
 -トランザクションを開始します。  
   
--データの行を挿入する、データの別の行を更新  
+-データの行の挿入、データの別の行を更新  
   
--コミット トランザクションの挿入および更新が成功した場合、トランザクションをロールバックうちの 1 つがない場合  
+-コミット トランザクションの挿入および更新が成功した場合、トランザクションをロールバック、うち 1 つがなかった場合  
   
   
 ```php 

@@ -1,5 +1,5 @@
 ---
-title: Issabort::abort (OLE DB) |Microsoft ドキュメント
+title: Issabort::abort (OLE DB) |Microsoft Docs
 description: ISSAbort::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 39f56dd6c058c82783c8cff786e210884cd3bf0c
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: c725e8a55ab11c09089df37d217ba6f91095218e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690265"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105908"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   現在の行セットと、現在のコマンドに関連付けられているバッチ コマンドを取り消します。  
   
-**ISSAbort**が公開する OLE DB Driver for SQL Server、インターフェイスを提供、 **issabort::abort**コマンドを使用して、現在の行セットとどのようなコマンドをキャンセルに使用するメソッドがバッチ処理最初に、行セットを生成してをまだ完了していない実行します。  
+OLE DB Driver for SQL Server が公開する **ISSAbort** インターフェイスは、**ISSAbort::Abort** メソッドを提供します。このメソッドは、現在の行セットを取り消したうえで、この行セットを最初に生成したコマンドを含んでいるバッチ コマンドのうち、実行が完了していないのものを取り消す場合に使用します。  
   
- **ISSAbort**を使用して、OLE DB Driver for SQL Server に固有のインターフェイスがある**QueryInterface**上、 **IMultipleResults**によって返されるオブジェクト**icommand::execute**または**iopenrowset::openrowset**です。  
+ **ISSAbort** は、OLE DB Driver for SQL Server 固有のインターフェイスです。これを使用するには、**ICommand::Execute** または **IOpenRowset::OpenRowset** により返される **IMultipleResults** オブジェクトの **QueryInterface** を使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,20 +45,20 @@ ms.locfileid: "35690265"
 HRESULT Abort(void);  
 ```  
   
-## <a name="remarks"></a>コメント  
- 中止中のコマンドは、ストアド プロシージャでは、コマンドのバッチ、ストアド プロシージャ呼び出しを含むだけでなく、ストアド プロシージャ (およびそのプロシージャでは、そのプロシージャを呼び出す必要がある) の実行が終了されます。 サーバーがクライアントに結果セットを転送中の場合は、転送が停止されます。 クライアントがいない場合、結果セットを使用する、呼び出し**issabort::abort**行セットの解放を高速化は、行セットを解放する前に、トランザクションはロールバックされます、開いているトランザクションが存在しないと、XACT_ABORT が ON、ときに**Issabort::abort**は呼び出されます  
+## <a name="remarks"></a>Remarks  
+ 中止されるコマンドがストアド プロシージャの場合、ストアド プロシージャ (およびそのプロシージャを呼び出したすべてのプロシージャ) の実行と、そのストアド プロシージャの呼び出しが含まれるコマンド バッチの実行が終了します。 サーバーがクライアントに結果セットを転送中の場合、この転送も停止します。 クライアントが結果セットを使用しない場合、行セットを解放する前に **ISSAbort::Abort** を呼び出すと、行セットの解放が高速になります。ただし、開いているトランザクションがあり、XACT_ABORT が ON の場合、**ISSAbort::Abort** が呼び出されたときに、トランザクションがロールバックされます。  
   
- 後に**issabort::abort** 、関連付けられている S_OK を返す**IMultipleResults**インターフェイスが使用できない状態になるし、すべてのメソッド呼び出しに DB_E_CANCELED が返されます (、によって定義されたメソッドを除く**IUnknown**インターフェイス) が解放されるまでです。 場合、 **IRowset**から取得されていた**IMultipleResults**呼び出しの前に**中止**、また、使用できない状態に入るし、すべてのメソッドに DB_E_CANCELED を返します (の呼び出しによって定義されたメソッドを除く、 **IUnknown**インターフェイスと**irowset::releaserows**) に正常な呼び出しの後に解放されるまで**issabort::abort**.  
+ **ISSAbort::Abort** が S_OK を返すと、関連する **IMultipleResults** インターフェイスは使用できない状態になり、このインターフェイスが解放されるまで、すべてのメソッド呼び出しに DB_E_CANCELED が返されます (ただし **IUnknown** インターフェイスで定義されたメソッドは除きます)。 **Abort** を呼び出す前に、**IMultipleResults** から **IRowset** を取得している場合、これも使用できない状態になり、**ISSAbort::Abort** の正常な呼び出し後にこのインターフェイスが解放されるまでは、すべてのメソッド呼び出しで DB_E_CANCELED が返されます (ただし、**IUnknown** インターフェイスと **IRowset::ReleaseRows** で定義されたメソッドは除きます)。  
   
 > [!NOTE]  
->  以降で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]サーバーの XACT_ABORT 状態を実行する場合は、 **issabort::abort**が終了しに接続しているときに現在暗黙的または明示的なトランザクションはロールバック[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、現在のトランザクションは中止されません。  
+>  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンでは、サーバーの XACT_ABORT 状態が ON の場合、**ISSAbort::Abort** を実行すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するときに、現在のすべての暗黙的または明示的なトランザクションが終了し、ロールバックされます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、現在のトランザクションは中止されません。  
   
 ## <a name="arguments"></a>引数  
  [なし] :  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
- **Issabort::abort**メソッドを返します db_e_cantcancel、バッチが取り消された場合は S_OK、それ以外の場合。 バッチが既に取り消されている場合は、DB_E_CANCELED を返します。  
+ **ISSAbort::Abort** メソッドは、バッチが取り消された場合 S_OK を、それ以外の場合 DB_E_CANTCANCEL を返します。 バッチが既に取り消されている場合は、DB_E_CANCELED を返します。  
   
  DB_E_CANCELED  
  バッチは既に取り消されています。  
@@ -67,10 +67,10 @@ HRESULT Abort(void);
  バッチは取り消されませんでした。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細についてを使用して、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイスです。  
+ プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) インターフェイスを使用してください。  
   
  E_UNEXPECTED  
- メソッドの呼び出しが予期されませんでした。 たとえば、オブジェクトはゾンビ状態にため**issabort::abort**は既に呼び出されています。  
+ メソッドの呼び出しが予期されませんでした。 たとえば、**ISSAbort::Abort** が既に呼び出されていたために、オブジェクトがゾンビ状態になっている場合などです。  
   
  E_OUTOFMEMORY  
  メモリ不足エラー。  

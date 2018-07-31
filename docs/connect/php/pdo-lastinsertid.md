@@ -1,5 +1,5 @@
 ---
-title: PDO::lastInsertId |Microsoft ドキュメント
+title: PDO::lastInsertId |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308551"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983374"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-データベースのテーブルに最後に挿入された行の識別子を返します。 このテーブルには、IDENTITY NOT NULL 列が必要です。 シーケンスの名前を指定すると場合、`lastInsertId`指定されたシーケンスの名前のシーケンス番号を最も最近挿入されたを返します (シーケンス番号の詳細については、次を参照してください。[ここ](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers))。
+データベースのテーブルに最後に挿入された行の識別子を返します。 このテーブルには、IDENTITY NOT NULL 列が必要です。 シーケンス名が指定されている場合`lastInsertId`最近挿入されたシーケンスの指定された名前のシーケンス番号を返します (シーケンス番号の詳細については、次を参照してください。[ここ](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers))。
   
 ## <a name="syntax"></a>構文  
   
@@ -34,19 +34,19 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*名前*: シーケンスの名前を指定できる省略可能な文字列。 
+$*name*: シーケンス名を指定できる省略可能な文字列。 
   
 ## <a name="return-value"></a>戻り値  
-シーケンスの名前が指定されていない場合、行の識別子の文字列が最も最近追加されました。
-シーケンス名が指定した場合、シーケンスの識別子の文字列が最も最近追加されました。
+シーケンス名が指定されていない場合最後の行の識別子の文字列に追加します。
+シーケンス名が指定されている場合、シーケンスの識別子の文字列が最も最近追加されます。
 メソッドの呼び出しが失敗した場合、空の文字列が返されます。
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
 バージョン 2.0 との 4.3、省略可能なパラメーターは、テーブル名、および戻り値が指定されたテーブルに最後に追加された行の ID。
 5.0 以降では、省略可能なパラメーターが、名前のシーケンスと見なされ、戻り値は、シーケンスの最後に指定されたシーケンス名を追加します。
-4.3 の場合後のバージョンのテーブル名が指定した場合`lastInsertId`空の文字列を返します。
-シーケンスには、SQL Server 2012 でのみ以降はサポートされています。
+4.3 の場合後のバージョンのテーブル名が指定されている場合`lastInsertId`空の文字列を返します。
+シーケンスは、SQL Server 2012 でのみサポートします。
   
 ## <a name="example"></a>例  
   

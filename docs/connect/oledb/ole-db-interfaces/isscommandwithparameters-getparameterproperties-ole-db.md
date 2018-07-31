@@ -1,5 +1,5 @@
 ---
-title: Isscommandwithparameters::getparameterproperties (OLE DB) |Microsoft ドキュメント
+title: Isscommandwithparameters::getparameterproperties (OLE DB) |Microsoft Docs
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9c0f35cd59a670e35db6400f681187c52e4b97ef
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3bc5932fc68b627f6bc204deec971402046baca9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689995"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108094"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -44,17 +44,17 @@ HRESULT GetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>引数  
- *pcParams*[in] には、[出力].  
- 返された SSPARAMPROPS 構造体の番号が含まれるメモリへのポインター *prgParamProperties*です。  
+ *pcParams*[out][in]  
+ *prgParamProperties* に返された SSPARAMPROPS 構造体の数を保持するメモリへのポインター。  
   
  *prgParamProperties*[out]  
- SSPARAMPROPS 構造体の配列が返されるメモリへのポインター。 コンシューマーでこのメモリを解放する、プロバイダーを選択して、構造体のメモリを割り当てますこのメモリをアドレスを返します**imalloc::free**が不要になった必要がある場合、構造体。 呼び出しの前に**imalloc::free**の*prgParamProperties*、コンシューマーは、呼び出す必要がありますも**VariantClear**の*vValue*プロパティバリアントにはでの参照が含まれている場合に、メモリ リークを防ぐために各 DBPROP 構造体の BSTR などを入力します。 場合*pcParams*ゼロで出力されるか DB_E_ERRORSOCCURRED 以外のエラーが発生する、プロバイダーを選択し、メモリの割り当てはように*prgParamProperties*が出力に null ポインターです。  
+ SSPARAMPROPS 構造体の配列が返されるメモリへのポインター。 プロバイダーは、この構造体用のメモリを割り当て、このメモリのアドレスを返します。コンシューマーは、構造体が不要になった時点で、**IMalloc::Free** を使用してこのメモリを解放します。 コンシューマーは、*prgParamProperties* に対して **IMalloc::Free** を呼び出す前に、各 DBPROP 構造体の *vValue* プロパティに対して **VariantClear** を呼び出す必要があります。これは、変数に参照型 (BSTR など) が含まれている場合にメモリ リークを防ぐためです。 *pcParams* の出力が 0 か、DB_E_ERRORSOCCURRED 以外のエラーが発生した場合は、プロバイダーはメモリの割り当てを行わず、*prgParamProperties* の出力に NULL ポインターを設定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **GetParameterProperties**メソッドは、主要な OLE DB と同じエラー コードを返します**icommandproperties::getproperties**その DB_S_ERRORSOCCURRED と db_e_errorsoccured は返す以外のメソッドにすることはできません発生します。  
+ **GetParameterProperties** メソッドは、主要な OLE DB **ICommandProperties::GetProperties** メソッドと同じエラー コードを返します。ただし、DB_S_ERRORSOCCURRED と DB_E_ERRORSOCCURED は返すことができません。  
   
-## <a name="remarks"></a>コメント  
- **Isscommandwithparameters::getparameterproperties**に関連するメソッドが、一貫した動作**GetParameterInfo**です。 場合[isscommandwithparameters::setparameterproperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)または**SetParameterInfo**呼び出されていないか、cParams に 0 を使用して呼び出されましたが**GetParameterInfo**パラメーター情報を派生し、それを取得します。 場合**isscommandwithparameters::setparameterproperties**または**SetParameterInfo**が少なくとも 1 つのパラメーター、呼び出された**isscommandwithparameters::getparameterproperties**メソッドでは、これらのパラメーターに対してのみプロパティを返しますを**isscommandwithparameters::setparameterproperties**が呼び出されています。 場合**isscommandwithparameters::setparameterproperties**後に呼び出されます**isscommandwithparameters::getparameterproperties**または**GetParameterInfo**、後続の呼び出し**isscommandwithparameters::getparameterproperties**をこれらのパラメーターの値が上書きを返す**isscommandwithparameters::setparameterproperties**メソッドが呼び出されました。  
+## <a name="remarks"></a>Remarks  
+ **ISSCommandWithParameters::GetParameterProperties** メソッドは、**GetParameterInfo** と一貫性を保つように動作します。 [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) または **SetParameterInfo** が呼び出されなかったり、cParams に 0 を指定して呼び出した場合は、**GetParameterInfo** はパラメーター情報を取得して、これを返します。 **ISSCommandWithParameters::SetParameterProperties** または **SetParameterInfo** が少なくとも 1 つのパラメーターに対して呼び出されている場合、**ISSCommandWithParameters::GetParameterProperties** メソッドは、**ISSCommandWithParameters::SetParameterProperties** の呼び出しの対象となったパラメーターのプロパティのみを返します。 **ISSCommandWithParameters::SetParameterProperties** が **ISSCommandWithParameters::GetParameterProperties** または **GetParameterInfo** の後に呼び出された場合、後続の **ISSCommandWithParameters::GetParameterProperties** の呼び出しにより、**ISSCommandWithParameters::SetParameterProperties** メソッドの呼び出しの対象となったパラメーターの値がオーバーライドされます。  
   
  SSPARAMPROPS 構造体は、次のように定義されています。  
   
@@ -68,10 +68,10 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|Member|説明|  
+|メンバー|[説明]|  
 |------------|-----------------|  
 |*iOrdinal*|渡されるパラメーターの序数|  
-|*cPropertySets*|DBPROPSET の数が構造体に*rgPropertySets*です。|  
+|*cPropertySets*|*rgPropertySets* 内の DBPROPSET 構造体の数|  
 |*rgPropertySets*|DBPROPSET 構造体の配列を返すメモリへのポインター|  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: Bcp を使用した接続 |Microsoft ドキュメント
+title: Bcp による接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852597"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041403"
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Bcp](http://go.microsoft.com/fwlink/?LinkID=190626)ユーティリティでは、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux や macOS にします。 このページの Windows のバージョンとの相違点について説明`bcp`です。
+[bcp](http://go.microsoft.com/fwlink/?LinkID=190626) ユーティリティは、Linux および macOS では [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] にあります。 このページの Windows バージョンとの相違点について説明`bcp`します。
   
 - フィールド ターミネータはタブ ("\t") です。  
   
 - 行ターミネータは改行 ("\n") です。  
   
-- キャラクター モードで推奨される形式の`bcp`ファイルと拡張文字を含まないデータ ファイルの書式を設定します。  
+- 拡張文字を含まない `bcp` フォーマット ファイルとデータ ファイルでは、文字モードが推奨される形式です。  
   
 > [!NOTE]  
-> 円記号 '\\' に、コマンドライン引数を引用符で囲まれたか、エスケープするか、必要があります。 たとえば、カスタム行ターミネータとして改行文字を指定するにする必要がありますを使用して、次のメカニズムのいずれかの。  
+> コマンドライン引数のバックスラッシュ '\\' は、引用符で囲むか、エスケープする必要があります。 たとえば、ユーザー設定の行ターミネータとして改行を指定する場合、次のいずれかのメカニズムを使用する必要があります。  
 >   
 > -   -r\\\n  
 > -   -r"\n"  
 > -   -r'\n'  
   
-呼び出しの例のコマンドを次に示します`bcp`テーブルの行をテキスト ファイルにコピーします。  
+次に、テーブルの行をテキスト ファイルにコピーする `bcp` コマンド呼び出しの例を示します。  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
 ```  
   
-## <a name="available-options"></a>使用可能なオプション
-現在のリリースでは、次の構文とオプションを使用できます。  
+## <a name="available-options"></a>利用可能なオプション
+現在のリリースでは、次の構文およびオプションを使用できます。  
 
-[*データベース ***.**]* スキーマ ***.*** テーブル ***で** *data_file* | **アウト** *data_file*
+[*database***.**]* schema ***.*** table* **in** *data_file* | **out** *data_file*
 
 - -a *packet_size*  
 サーバーとの間で送信されるネットワーク パケットごとのバイト数を指定します。  
@@ -65,11 +65,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 接続先のデータベースを指定します。  
   
 - -d  
-渡された値により、`bcp`データ ソース名 (DSN) として解釈するで、-s オプション。 詳細については、「sqlcmd および bcp の DSN サポート」を参照してください[sqlcmd による接続](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)です。  
+`bcp` -S オプションに渡された値が、データ ソース名 (DSN) として解釈されるようにします。 詳細については、「[Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)」 (sqlcmd による接続) の「DSN Support in sqlcmd and bcp」 (sqlcmd および bcp の DSN サポート) を参照してください。  
   
-- -e *error_file*行を格納するエラー ファイルの完全パスを指定します、`bcp`ユーティリティによって、あるファイルからデータベースに転送することはできません。  
+- -e *error_file* `bcp` ユーティリティがファイルからデータベースに転送できなかった行を格納するエラー ファイルの完全パスを指定します。  
   
-- -e  
+- -E  
 ID 列に、インポートされたデータ ファイルの ID 値を使用します。  
   
 - -f *format_file*  
@@ -82,13 +82,13 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
 一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。  
   
 - -l  
-ログインのタイムアウトを指定します。 – L オプションにログインするまでの秒数を指定する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]がタイムアウトになるサーバーに接続しようとします。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 ~ 65,534 の範囲の数値でなければなりません。 指定した値が数値以外の場合、または範囲外の場合、`bcp` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。
+ログインのタイムアウトを指定します。 - l オプションでは、サーバーへの接続の試行時、ログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] に対してタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。
   
 - -L *last_row*  
 テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。  
   
 - -m *max_errors*  
-前に発生する可能性がある構文エラーの最大数を指定、`bcp`操作が取り消されました。  
+`bcp` 操作を取り消す前に発生することのできる構文エラーの最大数を指定します。  
   
 - -n  
 データのネイティブの (データベース) データ型を使用して一括コピー操作を実行します。  
@@ -106,18 +106,18 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
 通貨、日付、時刻のデータを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] に一括コピーする場合に、クライアント コンピューターのロケール設定に定義された地域別設定が使用されます。  
   
 - -S *server*  
-名前を指定、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]接続先のインスタンスまたは-d が使用される、DSN。  
+名前を指定します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]接続先のインスタンスまたは-d が使用される、DSN。  
   
 - -t *field_terminator*  
 フィールド ターミネータを指定します。  
   
 - -T  
-指定する、`bcp`ユーティリティに接続[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]信頼された接続 (統合セキュリティ) を使用します。  
+`bcp` ユーティリティが信頼関係接続 (統合セキュリティ) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] に接続することを指定します。  
   
 - -U *login_id*  
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] への接続に使用されるログイン ID を指定します。  
   
-- -v  
+- -V  
 `bcp` ユーティリティ バージョン番号と著作権に関する情報を報告します。  
   
 - -w  
@@ -144,11 +144,11 @@ Unicode 文字を使用して一括コピー操作を実行します。
 コマンド プロンプトからリダイレクトされた出力を受け取るファイル名を指定します。  
   
 - -V (80 | 90 | 100)  
-以前のバージョンからのデータ型を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の以前のバージョンのデータ型を使用します。  
   
 - -X  
 フォーマットおよび -f format_file オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。  
   
 ## <a name="see-also"></a>参照
 
-[使用した接続**sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[**sqlcmd** による接続](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

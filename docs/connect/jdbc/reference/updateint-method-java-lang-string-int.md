@@ -1,5 +1,5 @@
 ---
-title: updateInt (java.lang.String, int) メソッド |Microsoft ドキュメント
+title: updateInt (java.lang.String, int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62560202d4808bda26431044e5bf50720f6823b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850447"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983441"
 ---
 # <a name="updateint-method-javalangstring-int"></a>updateInt (java.lang.String, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された列の更新、 **int**列の名前を指定された値。  
+  渡された列名を使用して、指定された列を **int** 値で更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ public void updateInt(java.lang.String columnName,
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- A**文字列**列の名前を格納しています。  
+ 列名を含む**文字列**です。  
   
  *x*  
   
@@ -51,7 +51,7 @@ public void updateInt(java.lang.String columnName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この updateInt メソッドは、java.sql.ResultSet インターフェイスの updateInt メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

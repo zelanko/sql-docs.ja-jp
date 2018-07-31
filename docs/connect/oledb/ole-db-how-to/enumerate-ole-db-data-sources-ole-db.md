@@ -1,5 +1,5 @@
 ---
-title: OLE DB データ ソース (OLE DB) を列挙 |Microsoft ドキュメント
+title: OLE DB データ ソース (OLE DB) の列挙 |Microsoft Docs
 description: MSOLEDBSQL 列挙子を使用して OLE DB データ ソースを列挙します。
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,47 +16,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665882"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107985"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB データ ソースの列挙 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   このサンプルでは、列挙子オブジェクトを使用して、使用可能なデータ ソースを一覧表示する方法を示します。  
   
- コンシューマーが呼び出す MSOLEDBSQL 列挙子に表示されるデータ ソースの一覧を表示、 [isourcesrowset:](http://go.microsoft.com/fwlink/?LinkId=120312)メソッドです。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
+ コンシューマーは、MSOLEDBSQL 列挙子にデータ ソースを表示するために、[ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) メソッドを呼び出します。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
   
  使用しているネットワーク ライブラリに応じて、適切なドメインでデータ ソースが検索されます。 名前付きパイプの場合は、クライアントがログオンしたドメインになります。 AppleTalk の場合は、既定のゾーンになります。 SPX/IPX の場合は、バインダリ内にある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールの一覧になります。 Banyan VINES の場合は、ローカル ネットワークにある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールになります。 マルチプロトコルと TCP/IP ソケットはサポートされません。  
   
  サーバーのオンとオフが切り替わると、これらのドメインで情報を更新するのに数分かかる場合があります。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページです。  
+ このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB データ ソースを列挙するには  
   
-1.  ソース行セットを呼び出すことによって取得**ISourceRowset::GetSourcesRowset**です。  
+1.  ソース行セットを呼び出すことによって取得**ISourceRowset::GetSourcesRowset**します。  
   
-2.  呼び出して列挙子の行セットの説明を検索**GetColumnInfo::IColumnInfo**です。  
+2.  呼び出して列挙子の行セットの説明を検索**GetColumnInfo::IColumnInfo**します。  
   
 3.  列情報からバインド構造体を作成します。  
   
-4.  呼び出して行セットのアクセサーを作成**iaccessor::createaccessor**です。  
+4.  行セットのアクセサーを呼び出すことによって作成**iaccessor::createaccessor**します。  
   
-5.  呼び出して、行をフェッチ**irowset::getnextrows**です。  
+5.  呼び出すことによって、行のフェッチ**irowset::getnextrows**します。  
   
-6.  呼び出して、行の行セットのコピーからデータを取得**irowset::getdata**、して処理します。  
+6.  **IRowset::GetData** を呼び出して、行の行セットのコピーからデータを取得し、そのデータを処理します。  
   
 ## <a name="example"></a>例  
- ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムをする必要があります変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 名前付きインスタンスに接続する場合から、接続文字列を変更する"かに\\\name"という名前付きインスタンス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、msoledbsql.h を格納するディレクトリが含まれています。 確認してください。  
+ ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、msoledbsql.h が保存されているディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: ole32.lib  

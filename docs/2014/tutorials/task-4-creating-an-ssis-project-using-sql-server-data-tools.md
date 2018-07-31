@@ -40,7 +40,7 @@ ms.locfileid: "37208072"
   
 6.  **ソリューション エクスプ ローラー**ウィンドウで、右クリック**Package.dtsx**選択**の名前を変更**。 表示されない場合**ソリューション エクスプ ローラー**ウィンドウで、をクリックして**ビュー**をクリックし、メニュー バー**ソリューション エクスプ ローラー**します。  
   
-     ![Package.dtsx - [名前の変更] メニューの [](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx - [名前の変更] メニュー")  
+     ![Package.dtsx - 名前の変更 メニューの ](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx - 名前の変更 メニュー")  
   
 7.  型**CleanseAndCurate.dtsx**キーを押します**ENTER**します。 確認、**拡張子**まま **.dtsx**します。  
   

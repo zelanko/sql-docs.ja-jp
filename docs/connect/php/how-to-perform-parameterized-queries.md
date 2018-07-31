@@ -1,5 +1,5 @@
 ---
-title: '方法: パラメーター化クエリを実行 |Microsoft ドキュメント'
+title: '方法: パラメーター化クエリの実行 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032991"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>方法: パラメーター化クエリを実行する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "35307571"
   
 2.  Transact-SQL クエリ内のプレースホルダーに対応する PHP 変数を初期化または更新します。  
   
-3.  手順 2 からの PHP 変数を使用して作成または TRANSACT-SQL 文字列内のパラメーターのプレース ホルダーに対応するパラメーター値の配列を更新します。 配列内のパラメーター値は、それらを表すことを意図したプレース ホルダーと同じ順序でなければなりません。
+3.  ステップ 2 の PHP 変数を使用して、Transact-SQL 文字列内のパラメーター プレースホルダーに対応するパラメーター値の配列を作成または更新します。 配列内のパラメーター値は、それらを表すプレース ホルダーと同じ順序でなければなりません。
   
 4.  クエリを実行します。  
   
     -   SQLSRV ドライバーを使用している場合は、 [sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)を使用します。  
   
-    -   PDO_SQLSRV ドライバーを使用している場合を使用してクエリを実行します。 [pdo::prepare](../../connect/php/pdo-prepare.md)と[pdostatement::execute](../../connect/php/pdostatement-execute.md)です。 コードの例については、 [PDO::prepare](../../connect/php/pdo-prepare.md) および [PDOStatement::execute](../../connect/php/pdostatement-execute.md) のトピックを参照してください。  
+    -   PDO_SQLSRV ドライバーを使用している場合は、[PDO::prepare](../../connect/php/pdo-prepare.md) および [PDOStatement::execute](../../connect/php/pdostatement-execute.md) でクエリを実行します。 コードの例については、 [PDO::prepare](../../connect/php/pdo-prepare.md) および [PDOStatement::execute](../../connect/php/pdostatement-execute.md) のトピックを参照してください。  
   
 以降では、SQLSRV ドライバーを使用するパラメーター化クエリについて説明します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35307571"
   
 次の例では、データベースにクエリを発行して数量が正しく更新されたことを確認しています。 製品 ID は、SELECT クエリのパラメーターです。  
   
-例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -114,12 +114,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-前の例では、 **sqlsrv_query** 関数を使用してクエリを実行しています。 この関数は、ステートメントの準備と実行の両方を行うため、1 回限りのクエリを実行するのに便利です。 組み合わせ**sqlsrv_prepare**/**sqlsrv_execute**異なるパラメーター値でクエリの再実行をお勧めします。 異なるパラメーター値でクエリを再実行する例については、次の例を参照してください。  
+前の例では、 **sqlsrv_query** 関数を使用してクエリを実行しています。 この関数は、ステートメントの準備と実行の両方を行うため、1 回限りのクエリを実行するのに便利です。 異なるパラメーター値でクエリを再実行するには、**sqlsrv_prepare**/**sqlsrv_execute** の組み合わせが最善です。 異なるパラメーター値でクエリを再実行する例については、次の例を参照してください。  
   
 ## <a name="example"></a>例  
-次の例では、 **sqlsrv_prepare** 関数を使用するときに変数を暗黙的にバインドする方法を示します。 この例では、複数の注文を *Sales.SalesOrderDetail* テーブルに挿入します。 *$Params*配列がステートメントにバインドされている (*$stmt*) と**sqlsrv_prepare**と呼びます。 テーブルに新しい注文を挿入する各クエリを実行する前に、 *$params* 配列が注文の詳細に対応する新しい値で更新されます。 後続のクエリ実行では、新しいパラメーター値が使用されます。  
+次の例では、 **sqlsrv_prepare** 関数を使用するときに変数を暗黙的にバインドする方法を示します。 この例では、複数の注文を *Sales.SalesOrderDetail* テーブルに挿入します。 **sqlsrv_prepare** を呼び出すと、*$params* 配列がステートメント (*$stmt*) にバインドされます。 テーブルに新しい注文を挿入する各クエリを実行する前に、 *$params* 配列が注文の詳細に対応する新しい値で更新されます。 後続のクエリ実行では、新しいパラメーター値が使用されます。  
   
-例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -194,7 +194,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>参照  
 [データ型の変換](../../connect/php/converting-data-types.md)
 
-[セキュリティに関する考慮事項 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+[セキュリティに関する考慮事項、Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
 

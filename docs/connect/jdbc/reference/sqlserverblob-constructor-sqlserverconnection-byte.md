@@ -1,5 +1,5 @@
 ---
-title: SQLServerBlob コンス トラクター (SQLServerConnection, byte) |Microsoft ドキュメント
+title: SQLServerBlob コンストラクター (SQLServerConnection, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d93e5bee03976c5ae9c55247f98ba180e237a4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847037"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064415"
 ---
-# <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob コンス トラクター (SQLServerConnection, byte)
+# <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob コンストラクター (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  新しいインスタンスを初期化、 [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)クラスの指定した場合、 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトおよび**バイト**配列。  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトと **byte** 配列が渡されたときに、[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) クラスの新しいインスタンスを初期化します。  
   
 > [!NOTE]  
->  このメソッドは、JDBC Driver Version 2.0 では非推奨とされました。 代わりに、使用、 [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)のメソッド、 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)クラスです。  
+>  このメソッドは、JDBC Driver Version 2.0 では非推奨とされました。 代わりに、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +43,16 @@ public SQLServerBlob(SQLServerConnection connection,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *接続*  
+ *connection*  
   
  SQLServerConnection オブジェクト。  
   
  *data*  
   
- A**バイト**配列。  
+ **byte** 配列。  
   
 ## <a name="see-also"></a>参照  
- [SQLServerBlob コンス トラクター](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   
+ [SQLServerBlob コンストラクター](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   
  [SQLServerBlob のメンバー](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob クラス](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   

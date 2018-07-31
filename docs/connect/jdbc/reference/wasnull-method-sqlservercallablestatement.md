@@ -1,5 +1,5 @@
 ---
-title: wasNull メソッド (SQLServerCallableStatement) |Microsoft ドキュメント
+title: wasNull メソッド (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce699426d08cf783aee881a0af0a51dee0268551
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851627"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021171"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>wasNull メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**場合の最後のパラメーターが null でした。 それ以外の場合は、 **false**です。  
+ 最後に読み取られたパラメーターが null である場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この wasNull メソッドは、java.sql.CallableStatement インターフェイスの wasNull メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ wasNull メソッドは、java.sql.CallableStatement インターフェイスの wasNull メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

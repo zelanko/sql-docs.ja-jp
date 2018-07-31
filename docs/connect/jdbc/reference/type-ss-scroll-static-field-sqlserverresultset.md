@@ -1,5 +1,5 @@
 ---
-title: TYPE_SS_SCROLL_STATIC フィールド (SQLServerResultSet) |Microsoft ドキュメント
+title: TYPE_SS_SCROLL_STATIC フィールド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0774a09fce93a774e911fba28ea9ed9559313fb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848777"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046810"
 ---
 # <a name="typessscrollstatic-field-sqlserverresultset"></a>TYPE_SS_SCROLL_STATIC フィールド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定するため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]静的カーソルの種類。  
+  カーソルの種類を、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 静的カーソルに指定する場合に使用します。  
   
 ## <a name="syntax"></a>構文  
   

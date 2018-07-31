@@ -1,5 +1,5 @@
 ---
-title: 方向パラメーターを使用して |Microsoft ドキュメント
+title: 方向パラメーターを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8dc5a423b432d272565f8b8db6afdd2c22cbd16
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991264"
 ---
 # <a name="using-directional-parameters"></a>方向パラメーターを使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO_SQLSRV ドライバーを使用するには、する場合は、使用[pdostatement::bindparam](../../connect/php/pdostatement-bindparam.md)入力と出力パラメーターを指定します。  
+PDO_SQLSRV ドライバーを使用するときは、[PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) を使用して入力パラメーターおよび出力パラメーターを指定できます。  
   
 このセクションのトピックでは、SQLSRV ドライバーを使用してストアド プロシージャを呼び出すときに方向パラメーターを使用する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |---------|---------------|  
 |[方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|ストアド プロシージャを呼び出すときにパラメーターの方向を指定する方法を示します。|  
 |[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|出力パラメーターを含むストアド プロシージャを呼び出す方法、およびその値を取得する方法を示します。|  

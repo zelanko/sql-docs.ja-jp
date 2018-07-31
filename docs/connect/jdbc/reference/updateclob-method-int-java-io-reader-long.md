@@ -1,5 +1,5 @@
 ---
-title: updateClob (int, java.io.Reader, long) メソッド |Microsoft ドキュメント
+title: updateClob (int, java.io.Reader, long) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 978c5f09f2c7524462dc950a5edc9b435324bdb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849477"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973009"
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>updateClob (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,18 +40,18 @@ public void updateClob(int columnIndex,
   
  列インデックスを示す **int** です。  
   
- *リーダー*  
+ *reader*  
   
  リーダー オブジェクト。  
   
- *長さ*  
+ *length*  
   
  パラメーター データの文字数です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

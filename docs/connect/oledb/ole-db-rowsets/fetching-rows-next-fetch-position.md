@@ -1,6 +1,6 @@
 ---
-title: 次のフェッチ位置 |Microsoft ドキュメント
-description: 行のフェッチで次のフェッチ位置
+title: 次のフェッチ位置 |Microsoft Docs
+description: 行のフェッチ - 次のフェッチ位置
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 46e6e3b9898d6c1adbe4df4bdc2b33444b623df9
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: ec1149b615c64f2113afc007c0ea04e4c4665698
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690115"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106108"
 ---
-# <a name="fetching-rows---next-fetch-position"></a>行のフェッチで次のフェッチ位置
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="fetching-rows---next-fetch-position"></a>行のフェッチ - 次のフェッチ位置
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver SQL サーバーが保持の追跡の次のフェッチ位置のためをへの呼び出しのシーケンス、 **GetNextRows**メソッド (の方向、または介在する変更がへの呼び出しにスキップせず、 **FindNextRow**、**シーク**、または**RestartPosition**メソッド) をスキップまたは任意の行を繰り返ししないで行セット全体を読み取ります。 次のフェッチ位置が変更されたかを呼び出して**irowset::getnextrows**、 **irowset::restartposition**、または**irowsetindex::seek**、またはを呼び出すことによって**FindNextRow**と null *pBookmark*値。 呼び出す**FindNextRow** null 以外の値*pBookmark*値では次のフェッチ位置には影響しません。  
+  OLE DB Driver for SQL Server は次のフェッチ位置を追跡します。その結果、**GetNextRows** メソッドの一連の呼び出しでは、行をスキップしたり、同じ行を繰り返すことなく、行セット全体が読み取られます。この場合、この一連の呼び出しの間に、スキップされたり、読み取る方向が変更されたり、**FindNextRow**、**Seek**、または **RestartPosition** の各メソッドの呼び出しによって中断されることはありません。 **IRowset::GetNextRows**、**IRowset::RestartPosition**、または **IRowsetIndex::Seek** を呼び出すか、*pBookmark* 値に NULL を指定して **FindNextRow** を呼び出すことにより、次のフェッチ位置が変更されます。 *pBookmark* 値に NULL 以外の値を指定して **FindNextRow** を呼び出しても、次のフェッチ位置には影響しません。  
   
 ## <a name="see-also"></a>参照  
  [行のフェッチ](../../oledb/ole-db-rowsets/fetching-rows.md)  

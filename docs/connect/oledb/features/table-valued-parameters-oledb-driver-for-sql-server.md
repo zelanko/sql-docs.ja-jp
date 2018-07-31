@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーター (OLE DB Driver for SQL Server) |Microsoft ドキュメント
+title: テーブル値パラメーター (OLE DB Driver for SQL Server) | Microsoft Docs
 description: テーブル値パラメーター (OLE DB Driver for SQL Server)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,22 +17,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8a10c7d2d124886c9249d666060861af98d411c4
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 6a8c7db4c3ae20250a5498fab84f5d86cad62275
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611597"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109754"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>テーブル値パラメーター (OLE DB Driver for SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  テーブル値パラメーターで導入された[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]、し、効率的にサーバーに複数行のデータを渡すことを指定します。 テーブル値パラメーターの機能は、パラメーター配列に似ていますが、柔軟性とよくとの統合[!INCLUDE[tsql](../../../includes/tsql-md.md)]、し、頻繁にパフォーマンスを向上させることができます。 パラメーター配列は使用できませんが、テーブル値パラメーターの参加は、セットベースの操作でもできます。  
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] で導入されたテーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../../includes/tsql-md.md)] との統合も緊密です。また、多くの場合、パフォーマンスが向上します。 テーブル値パラメーターはセットベースの操作にも使用できますが、パラメーター配列は使用できません。  
   
   
- テーブル値パラメーターおよび OLE DB については、次を参照してください。[テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)です。  
+ テーブル値パラメーターおよび OLE DB の詳細については、次を参照してください。[テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)します。  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md) 

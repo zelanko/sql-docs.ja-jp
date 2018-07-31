@@ -1,5 +1,5 @@
 ---
-title: Pdo::quote |Microsoft ドキュメント
+title: Pdo::quote |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29147b488ea6f66870db4355021d2cf76d48496b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308181"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064278"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ $*parameter_type*: データ型を示す省略可能な (整数) シンボル。
 ## <a name="return-value"></a>戻り値  
 SQL ステートメントに渡すことができる引用符で囲まれた文字列、または失敗した場合は false。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

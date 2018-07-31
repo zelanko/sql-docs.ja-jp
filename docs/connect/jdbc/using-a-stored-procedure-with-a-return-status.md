@@ -1,5 +1,5 @@
 ---
-title: 戻り値を持つストアド プロシージャを使用して |Microsoft ドキュメント
+title: 状態の戻り値があるストアド プロシージャの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,32 +15,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29bb95c06d86ad4d6e45002da1429f6c7d5a5c9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853157"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040600"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>状態の戻り値があるストアド プロシージャの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  A[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ストアド プロシージャを呼び出すことができますが、状態パラメーターまたは結果のパラメーターを返します。 この戻り値は一般的に、ストアド プロシージャの成功または失敗を示すために使用されます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供、 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)クラスは、この種類のストアド プロシージャを呼び出すと、返されるデータを処理を行うこともできます。  
+  呼び出すことができる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ストアド プロシージャは、状態パラメーターまたは結果パラメーターを返すプロシージャです。 この戻り値は一般的に、ストアド プロシージャの成功または失敗を示すために使用されます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。  
   
- JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出すときに使用する必要が、 `call` SQL エスケープ シーケンスと組み合わせて、 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)のメソッド、 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)クラス. 構文、`call`状態の戻り値パラメーターを持つエスケープ シーケンスは、次。  
+ JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと組み合わせて使用する必要があります。 状態の戻り値パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
->  SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)です。  
+>  SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。  
   
- 構築する場合、`call`エスケープ シーケンスを使用して、状態の戻り値パラメーターを指定しますか? (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレース ホルダーとして機能します。 状態の戻り値パラメーターの値を指定するを使用して、パラメーターのデータ型を指定する必要があります、 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスのメソッドです。  
+ `call` エスケープ シーケンスを作成する場合、状態の戻り値パラメーターは?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 状態の戻り値パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。  
   
 > [!NOTE]  
->  を SQL Server データベースと JDBC ドライバーを使用する場合は、registerOutParameter メソッドの戻り値の状態パラメーターに指定した値は、java.sql.Types.INTEGER データ型を使用して指定することができる整数を常になります。  
+>  SQL Server のデータベースと合わせて JDBC ドライバーを使用する場合、registerOutParameter メソッドで状態の戻り値パラメーターに対して指定した値は、常に整数になります。この値は、java.sql.Types.INTEGER データ型を使用して指定できます。  
   
- さらに、状態の戻り値パラメーターの registerOutParameter メソッドに値を渡す場合は、ストアド プロシージャ呼び出しでパラメーターの順序は、パラメーターに使用するデータ型だけでなくを指定する必要があります。 状態の戻り値パラメーターは、ストアド プロシージャの呼び出しにおいて常に最初のパラメーターであるため、位置を示す序数は常に 1 になります。 SQLServerCallableStatement クラスでは、特定のパラメーターを示すために、パラメーターの名前を使用するためのサポートを提供しますが、状態の戻り値パラメーターのパラメーターの序数位置番号だけを使用できます。  
+ さらに、registerOutParameter メソッドに状態の戻り値パラメーターの値を渡す場合は、パラメーターに使用するデータ型だけでなく、ストアド プロシージャの呼び出しにおいてパラメーターの順序も指定する必要があります。 状態の戻り値パラメーターは、ストアド プロシージャの呼び出しにおいて常に最初のパラメーターであるため、位置を示す序数は常に 1 になります。 SQLServerCallableStatement クラスでは、パラメーター名を使用したパラメーター指定がサポートされていますが、状態の戻り値パラメーターに使用できるのは、パラメーターの序数位置番号だけです。  
   
- たとえばで次のストアド プロシージャを作成、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで次のストアド プロシージャを作成します。  
   
 ```  
 CREATE PROCEDURE CheckContactCity  
@@ -58,7 +58,7 @@ END
   
  このストアド プロシージャでは、cityName パラメーターで指定された都市名が Person.Address テーブルに存在するかどうかによって、1 または 0 の状態値が返されます。  
   
- 次の例では、開いている接続を[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベースが、関数に渡されたと[実行](../../connect/jdbc/reference/execute-method-sqlserverstatement.md)CheckContactCity ストアド プロシージャを呼び出すメソッドを使用します。  
+ 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続を関数に渡し、[execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドを使用して CheckContactCity ストアド プロシージャを呼び出しています。  
   
  [!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]  
   

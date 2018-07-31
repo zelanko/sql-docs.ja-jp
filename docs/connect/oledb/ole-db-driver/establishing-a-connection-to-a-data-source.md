@@ -1,6 +1,6 @@
 ---
-title: データ ソースへの接続を確立する |Microsoft ドキュメント
-description: SQL Server の OLE DB Driver を使用してデータ ソースへの接続を確立します。
+title: データ ソースへの接続を確立する |Microsoft Docs
+description: SQL Server の OLE DB ドライバーを使用してデータ ソースへの接続を確立します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,25 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8c198bad7fbe50aff0493d25c438268efb1deeb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666102"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107038"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>データ ソースへの接続の確立
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server にアクセスするコンシューマー必要があります最初のインスタンスを作成、データ ソース オブジェクトを呼び出して、 **CoCreateInstance**メソッドです。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 OLE DB Driver for SQL Server、クラス識別子は CLSID_MSOLEDBSQL です。 参照されている msoledbsql.h で使用されている SQL Server の OLE DB ドライバーに解決される MSOLEDBSQL_CLSID シンボルを使用することもできます。  
+  OLE DB Driver for SQL Server にアクセスするには、コンシューマーは、まず、**CoCreateInstance** メソッドを呼び出してデータ ソース オブジェクトのインスタンスを作成する必要があります。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 OLE DB Driver for SQL Server、CLSID_MSOLEDBSQL はクラス id です。 参照されている msoledbsql.h で使用されている SQL Server 用の OLE DB ドライバーを解決する MSOLEDBSQL_CLSID シンボルを使用することもできます。  
   
- データ ソース オブジェクトの公開、 **IDBProperties**インターフェイスで、コンシューマーを使用してサーバー名、データベース名、ユーザー ID やパスワードなどの基本的な認証情報を提供します。 **Idbproperties::setproperties**をこれらのプロパティを設定するメソッドが呼び出されます。  
+ データ ソース オブジェクトは、**IDBProperties** インターフェイスを公開します。コンシューマーは、このインターフェイスを使用して、サーバー名、データベース名、ユーザー ID、パスワードなどの基本的な認証情報を提供します。 **IDBProperties::SetProperties** メソッドが呼び出されて、これらのプロパティが設定されます。  
   
  同じコンピューター上で複数の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが実行されている場合、サーバー名を ServerName\InstanceName のように指定します。  
   
- データ ソース オブジェクトに公開、 **IDBInitialize**インターフェイスです。 呼び出すことによって、データ ソースへの接続が確立されたプロパティを設定した後、 **idbinitialize::initialize**メソッドです。 以下に例を示します。  
+ データ ソース オブジェクトは、**IDBInitialize** インターフェイスも公開します。 プロパティを設定した後、**IDBInitialize::Initialize** メソッドを呼び出して、データ ソースへの接続を確立します。 例 :  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -48,7 +48,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
                  (void **) &pIDBInitialize)  
 ```
   
- この呼び出しを**CoCreateInstance** CLSID_MSOLEDBSQL (データとオブジェクトの作成に使用されるコードに関連付けられている CSLID) に関連付けられているクラスの 1 つのオブジェクトを作成します。 IID_IDBInitialize はインターフェイスの識別子への参照を (**IDBInitialize**) オブジェクトとの通信に使用します。  
+ この **CoCreateInstance** の呼び出しにより、CLSID_MSOLEDBSQL に関連付けられているクラスのオブジェクトが 1 つ作成されます。CLSID_MSOLEDBSQL は、オブジェクトの作成に使用されるデータとコードに関連付けられている CSLID です。 IID_IDBInitialize は、オブジェクトとの通信に使われるインターフェイス (**IDBInitialize**) の ID への参照です。  
   
  次の例では、初期化し、データ ソースへの接続を確立する方法を示します。
   

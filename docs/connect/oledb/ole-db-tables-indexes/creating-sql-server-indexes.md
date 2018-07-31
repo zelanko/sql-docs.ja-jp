@@ -1,6 +1,6 @@
 ---
-title: SQL Server インデックスの作成 |Microsoft ドキュメント
-description: SQL Server の OLE DB Driver を使用して SQL Server インデックスの作成
+title: SQL Server インデックスの作成 |Microsoft Docs
+description: SQL Server の OLE DB ドライバーを使用して SQL Server インデックスの作成
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,51 +20,51 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 352cdcbe6c2f5697ad7864f8048474d7a19ed632
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 6d8f20b4d6b18e6e7c995e3957b51b20cb59d5b3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689495"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107975"
 ---
 # <a name="creating-sql-server-indexes"></a>SQL Server インデックスの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server を公開、 **iindexdefinition::createindex**関数を新しいインデックスを定義するコンシューマー[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。  
+  OLE DB Driver for SQL Server は、コンシューマーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルに新しいインデックスを定義できる、**IIndexDefinition::CreateIndex** 関数を公開します。  
   
- SQL Server の OLE DB Driver は、インデックスまたは制約のいずれかとしてテーブルのインデックスを作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、制約を作成する権限がテーブルの所有者、データベースの所有者、および特定の管理ロールのメンバーに許可されます。 テーブルにインデックスを作成できるのは、既定では、テーブルの所有者だけです。 したがって、成功または失敗の**CreateIndex**だけでなく、アプリケーション ユーザーのアクセス権に作成されたインデックスの種類にも依存します。  
+ OLE DB Driver for SQL Server では、インデックスまたは制約としてテーブルのインデックスを作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、制約を作成する権限がテーブルの所有者、データベースの所有者、および特定の管理ロールのメンバーに許可されます。 テーブルにインデックスを作成できるのは、既定では、テーブルの所有者だけです。 したがって、**CreateIndex** が成功するか失敗するかは、アプリケーション ユーザーのアクセス権だけでなく、作成するインデックスの種類によっても異なります。  
   
- コンシューマーでは、テーブル名を指定の Unicode 文字の文字列として、 *pwszName*のメンバー、 *uName*共用体の*pTableID*パラメーター。 *EKind*のメンバー *pTableID* dbkind_name にする必要があります。  
+ コンシューマーは、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列としてテーブル名を指定します。 *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
- *PIndexID*パラメーターが NULL の場合を指定でき、OLE DB Driver for SQL Server が、インデックスの一意の名前を作成する場合は、します。 コンシューマーに DBID への有効なポインターを指定して、インデックスの名前をキャプチャすることができます、 *ppIndexID*パラメーター。  
+ *pIndexID* パラメーターには NULL を指定できます。NULL を指定すると、OLE DB Driver for SQL Server により、インデックスの一意な名前が作成されます。 *ppIndexID* パラメーターに DBID への有効なポインターを指定することで、インデックスの名前をキャプチャできます。  
   
- コンシューマーは、Unicode 文字の文字列としてインデックスの名前を指定できます、 *pwszName*のメンバー、 *uName*共用体の*pIndexID*パラメーター。 *EKind*のメンバー *pIndexID* dbkind_name にする必要があります。  
+ インデックス名は、*pIndexID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定できます。 *pIndexID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
- コンシューマーは、インデックスに参加する列または複数の列を名前で指定します。 それぞれの DBINDEXCOLUMNDESC 構造で使用される**CreateIndex**、 *eKind*のメンバー、 *pColumnID* dbkind_name にする必要があります。 Unicode 文字の文字列として列の名前が指定されて、 *pwszName*のメンバー、 *uName*共用体の*pColumnID*です。  
+ コンシューマーは、インデックスに参加する列または複数の列を名前で指定します。 **CreateIndex** で使用する DBINDEXCOLUMNDESC 構造体ごとに、*pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。 列の名前は、*pColumnID* の *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。  
   
- SQL Server の OLE DB ドライバーと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インデックス内の値に基づいて昇順サポートします。 コンシューマー、DBINDEXCOLUMNDESC 構造体に DBINDEX_COL_ORDER_DESC を指定する場合、SQL Server の OLE DB Driver は E_INVALIDARG を返します。  
+ OLE DB Driver for SQL Server と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インデックス内の値に基づいて昇順のサポート。 コンシューマーがいずれかの DBINDEXCOLUMNDESC 構造体に DBINDEX_COL_ORDER_DESC を指定すると、OLE DB Driver for SQL Server から E_INVALIDARG が返されます。  
   
- **CreateIndex**インデックスのプロパティを次のように解釈します。  
+ **CreateIndex** では、インデックスのプロパティが次のように解釈されます。  
   
-|プロパティ ID|説明|  
+|プロパティ ID|[説明]|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: SQL Server の OLE DB ドライバーではこのプロパティはサポートされません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_CLUSTERED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスのクラスター化を制御します。<br /><br /> Variant_true の場合は、OLE DB Driver for SQL Server がクラスター化インデックスを作成しよう、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、どのテーブルでもクラスター化インデックスは 1 つしかサポートされません。<br /><br /> VARIANT_FALSE: OLE DB Driver for SQL Server は、非クラスター化インデックスを作成しようと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。|  
-|DBPROP_INDEX_FILLFACTOR|R/W 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明 : インデックス ページの格納に使用する割合を指定します。 詳細については、次を参照してください。 [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md)です。<br /><br /> バリアントの型は VT_I4 です。 値は 1 ～ 100 にする必要があります。|  
-|DBPROP_INDEX_INITIALIZE|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: SQL Server の OLE DB ドライバーではこのプロパティはサポートされません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_NULLCOLLATION|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: SQL Server の OLE DB ドライバーではこのプロパティはサポートされません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_NULLS|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: SQL Server の OLE DB ドライバーではこのプロパティはサポートされません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_PRIMARYKEY|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE&lt;br&gt;&lt;/br&gt;説明 : 参照整合性 (PRIMARY KEY 制約) としてインデックスを作成します。<br /><br /> VARIANT_TRUE: インデックスは、テーブルの PRIMARY KEY 制約をサポートするために作成されます。 列には NULL 値を許容しないでください。<br /><br /> VARIANT_FALSE: インデックスは、テーブル内の行値の PRIMARY KEY 制約としては使用されません。|  
-|DBPROP_INDEX_SORTBOOKMARKS|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: SQL Server の OLE DB ドライバーではこのプロパティはサポートされません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_TEMPINDEX|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: SQL Server の OLE DB ドライバーではこのプロパティはサポートされません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_TYPE|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: SQL Server の OLE DB ドライバーではこのプロパティはサポートされません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_UNIQUE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスに参加する列または複数の列に、UNIQUE 制約としてインデックスを作成します。<br /><br /> VARIANT_TRUE: インデックスを使用して、テーブル内の行値を一意に制約します。<br /><br /> VARIANT_FALSE: インデックスでは、行値が一意に制約されません。|  
+|DBPROP_INDEX_AUTOUPDATE|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: OLE DB Driver for SQL Server では、このプロパティはサポートしません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_CLUSTERED|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスのクラスター化を制御します。<br /><br /> Variant_true の場合は、OLE DB Driver for SQL Server がクラスター化インデックスを作成しよう、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、どのテーブルでもクラスター化インデックスは 1 つしかサポートされません。<br /><br /> VARIANT_FALSE: OLE DB Driver for SQL Server が非クラスター化インデックスを作成しよう、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。|  
+|DBPROP_INDEX_FILLFACTOR|R/W: 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明 : インデックス ページの格納に使用する割合を指定します。 詳細については、「[CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md)」を参照してください。<br /><br /> バリアントの型は VT_I4 です。 値は 1 ～ 100 にする必要があります。|  
+|DBPROP_INDEX_INITIALIZE|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: OLE DB Driver for SQL Server では、このプロパティはサポートしません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_NULLCOLLATION|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: OLE DB Driver for SQL Server では、このプロパティはサポートしません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_NULLS|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: OLE DB Driver for SQL Server では、このプロパティはサポートしません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_PRIMARYKEY|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE&lt;br&gt;&lt;/br&gt;説明 : 参照整合性 (PRIMARY KEY 制約) としてインデックスを作成します。<br /><br /> VARIANT_TRUE: インデックスは、テーブルの PRIMARY KEY 制約をサポートするために作成されます。 列には NULL 値を許容しないでください。<br /><br /> VARIANT_FALSE: インデックスは、テーブル内の行値の PRIMARY KEY 制約としては使用されません。|  
+|DBPROP_INDEX_SORTBOOKMARKS|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: OLE DB Driver for SQL Server では、このプロパティはサポートしません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_TEMPINDEX|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: OLE DB Driver for SQL Server では、このプロパティはサポートしません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_TYPE|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: OLE DB Driver for SQL Server では、このプロパティはサポートしません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_UNIQUE|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスに参加する列または複数の列に、UNIQUE 制約としてインデックスを作成します。<br /><br /> VARIANT_TRUE: インデックスを使用して、テーブル内の行値を一意に制約します。<br /><br /> VARIANT_FALSE: インデックスでは、行値が一意に制約されません。|  
   
- プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERINDEX では、SQL Server の OLE DB Driver は、次のデータ ソース情報のプロパティを定義します。  
+ プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERINDEX には、OLE DB Driver for SQL Server により、次のデータ ソース情報のプロパティが定義されます。  
   
-|プロパティ ID|説明|  
+|プロパティ ID|[説明]|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|型 : VT_BOOL (R/W)<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : IIndexDefinition::CreateIndex のときに、このプロパティの値に VARIANT_TRUE を指定すると、インデックス対象の列に対応するプライマリ XML インデックスが作成されます。 このプロパティが VARIANT_TRUE の場合、cIndexColumnDescs を 1 にする必要があります。それ以外の値を指定するとエラーが発生します。|  
   

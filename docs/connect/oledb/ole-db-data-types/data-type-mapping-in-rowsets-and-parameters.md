@@ -1,6 +1,6 @@
 ---
-title: 行セット、およびパラメーター内のデータ型マッピング |Microsoft ドキュメント
-description: 行セット、およびパラメーター内のデータ型マッピング
+title: 行セット、およびパラメーター内のデータ型マッピング |Microsoft Docs
+description: 行セットとパラメーターでのデータ型マッピング
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -25,19 +25,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5814771fe9ea11adc0908d2791af4e1b4f7dd881
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: c9c6d56cdbbbcd9b35b09f405154497a5fa3bc8f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666122"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108794"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  行セットで、パラメーターの値として、SQL Server の OLE DB ドライバーを表す場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]次 OLE DB を使用してデータには、関数で報告される、データ型が定義されている**icolumnsinfo::getcolumninfo**と**Icommandwithparameters::getparameterinfo**です。  
+  OLE DB Driver for SQL Server では、OLE DB で定義される次のデータ型を使用して、行セット内やパラメーター値として、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データを表します。これらのデータ型は、関数 **IColumnsInfo::GetColumnInfo** と **ICommandWithParameters::GetParameterInfo** で報告されます。  
   
 |SQL Server データ型|OLE DB データ型|  
 |--------------------------|----------------------|  
@@ -71,22 +71,22 @@ ms.locfileid: "35666122"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- SQL Server の OLE DB Driver は、の図に示すように、コンシューマーから要求されたデータ変換をサポートします。  
+ OLE DB Driver for SQL Server には、図のように、コンシューマーから要求されたデータ変換がサポートしています。  
   
- **Sql_variant**オブジェクトは、任意のデータを保持できる[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]text、ntext、image、varchar (max)、nvarchar (max)、varbinary (max)、xml、timestamp、および Microsoft .NET Framework 共通言語ランタイム (CLR) を除くデータの種類ユーザー定義型です。 また、sql_variant データのインスタンスは、その基になる基本データ型として sql_variant を保持できません。 たとえば、列を含めることができます**smallint**一部の行に対して値**float**の他の行の値と**char**/**nchar**残りの部分の値。  
+ **sql_variant** オブジェクトは、text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp、および Microsoft .NET Framework 共通言語ランタイム (CLR) のユーザー定義型を除く、任意の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型のデータを保持できます。 また、sql_variant データのインスタンスは、その基になる基本データ型として sql_variant を保持できません。 たとえば、一部の行の列に **smallint** 型の値を格納し、他の行の列に **float** 型の値を格納して、残りの行の列に **char**/**nchar** 型の値を格納できます。  
   
 > [!NOTE]  
->  **Sql_variant**データ型は Microsoft Visual Basic®、DBTYPE_VARIANT、DBTYPE_SQLVARIANT にバリアント データ型に似ています。  
+>  **sql_variant** データ型は、Microsoft Visual Basic® の Variant データ型や、OLE DB の DBTYPE_VARIANT および DBTYPE_SQLVARIANT に似ています。  
   
- ときに**sql_variant**データを DBTYPE_VARIANT としてフェッチ、バッファーの VARIANT 構造体内に格納されます。 VARIANT 構造体内のサブタイプがで定義されているサブタイプにマップされていない可能性がありますが、 **sql_variant**データ型。 **Sql_variant**に一致するすべてのサブタイプの順序でデータを DBTYPE_SQLVARIANT としてフェッチするし、必要があります。  
+ **sql_variant** 型のデータを DBTYPE_VARIANT としてフェッチすると、このデータはバッファーの VARIANT 構造体内に格納されます。 ただし、VARIANT 構造体内のサブタイプは、**sql_variant** データ型で定義されているサブタイプにマップされない場合があります。 このため、すべてのサブタイプを一致させるには、**sql_variant** 型のデータを DBTYPE_SQLVARIANT としてフェッチする必要があります。  
   
 ## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT データ型  
- サポートするために、 **sql_variant**データ型、SQL Server の OLE DB Driver は DBTYPE_SQLVARIANT と呼ばれるプロバイダー固有のデータ型を公開します。 ときに**sql_variant**データを DBTYPE_SQLVARIANT としてフェッチで、プロバイダー固有の SSVARIANT 構造体に格納されます。 SSVARIANT 構造体を含むすべてのサブタイプのサブタイプに一致する、 **sql_variant**データ型。  
+ OLE DB Driver for SQL Server では、**sql_variant** データ型をサポートするために、DBTYPE_SQLVARIANT と呼ばれるプロバイダー固有のデータ型を公開しています。 **sql_variant** 型のデータを DBTYPE_SQLVARIANT としてフェッチすると、データはプロバイダー固有の SSVARIANT 構造体内に格納されます。 SSVARIANT 構造体には、**sql_variant** データ型のサブタイプに一致するすべてのサブタイプが含まれています。  
   
  また、セッション プロパティ SSPROP_ALLOWNATIVEVARIANT を TRUE に設定する必要もあります。  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>プロバイダー固有のプロパティ SSPROP_ALLOWNATIVEVARIANT  
- データをフェッチするときに、列またはパラメーターに返すデータ型を明示的に指定できます。 **IColumnsInfo**列情報を取得し、それをバインドを使用するも使用できます。 ときに**IColumnsInfo** SSPROP_ALLOWNATIVEVARIANT セッション プロパティが FALSE (既定値)、DBTYPE_VARIANT が返された場合のバインドのために、列情報の取得に使用**sql_variant**列です。 SSPROP_ALLOWNATIVEVARIANT プロパティが FALSE の場合、DBTYPE_SQLVARIANT はサポートされません。 SSPROP_ALLOWNATIVEVARIANT プロパティを TRUE に設定すると、列の型は DBTYPE_SQLVARIANT として返されます。この場合、バッファーには SSVARIANT 構造体が保持されます。 フェッチで**sql_variant**データを DBTYPE_SQLVARIANT としてセッション プロパティ SSPROP_ALLOWNATIVEVARIANT を TRUE に設定する必要があります。  
+ データをフェッチするときに、列またはパラメーターに返すデータ型を明示的に指定できます。 また、**IColumnsInfo** を使用して列情報を取得し、その情報をバインドに使用することもできます。 **IColumnsInfo** を使用してバインド用の列情報を取得するときに、SSPROP_ALLOWNATIVEVARIANT セッション プロパティが FALSE (既定値) の場合、**sql_variant** 型の列には DBTYPE_VARIANT が返されます。 SSPROP_ALLOWNATIVEVARIANT プロパティが FALSE の場合、DBTYPE_SQLVARIANT はサポートされません。 SSPROP_ALLOWNATIVEVARIANT プロパティを TRUE に設定すると、列の型は DBTYPE_SQLVARIANT として返されます。この場合、バッファーには SSVARIANT 構造体が保持されます。 **sql_variant** 型のデータを DBTYPE_SQLVARIANT としてフェッチするときは、セッション プロパティ SSPROP_ALLOWNATIVEVARIANT が TRUE に設定されている必要があります。  
   
  SSPROP_ALLOWNATIVEVARIANT プロパティはプロバイダー固有の DBPROPSET_SQLSERVERSESSION プロパティ セットの一部であり、セッション プロパティです。  
   

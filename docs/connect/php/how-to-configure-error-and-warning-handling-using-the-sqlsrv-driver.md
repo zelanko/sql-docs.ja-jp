@@ -1,5 +1,5 @@
 ---
-title: エラーおよび警告の処理、SQLSRV ドライバーを使用して構成する |Microsoft ドキュメント
+title: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,36 +17,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307411"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999246"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、エラーと警告を処理するために SQLSRV ドライバーを構成する方法について説明します。  
   
-既定では、SQLSRV ドライバーの警告をエラーとして扱います。呼び出し、 **sqlsrv**エラーまたは警告を生成する関数を返します**false**です。 この動作を無効にするを使用して、 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)関数。 次のコード行が、スクリプトの先頭に含まれるときに、 **sqlsrv**警告 (エラーなし) のみを生成する関数は返されません**false**:  
+既定で、SQLSRV ドライバーは警告をエラーとして扱います。エラーまたは警告を生成する **sqlsrv** 関数の呼び出しは **false**を返します。 この動作を無効にするには、[sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用します。 スクリプトの先頭に次のコード行を含めると、警告のみを生成する (エラーは生成しない) **sqlsrv** 関数は **false** を返しません。  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-次のコード行には、既定の動作 (警告はエラーとして扱われます) がリセットされます。  
+次のコード行は既定の動作 (警告はエラーとして扱われる) をリセットします。  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > SQLSTATE 値 01000、01001、01003、および 01S02 に対応する警告はエラーとして扱われません。 構成に関係なく、これらのいずれかの状態に対応する警告のみを生成する **sqlsrv** 関数は **false**を返しません。  
   
-**WarningsReturnAsErrors** の値は php.ini ファイル内にも設定できます。 たとえば、このエントリ、 `[sqlsrv]` php.ini ファイルのセクションでは、既定の動作をオフにします。  
+**WarningsReturnAsErrors** の値は php.ini ファイル内にも設定できます。 たとえば、php.ini ファイルの `[sqlsrv]` セクション内のこのエントリは、既定の動作をオフにします。  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 エラーおよび警告情報の取得については、 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) と「 [方法: エラーと警告の処理](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
-次のコード例は、既定のエラー処理動作を無効にする方法を示しています。 例では、Transact-SQL PRINT コマンドを使用して、警告を生成しています。 [印刷] コマンドの詳細については、次を参照してください。 [PRINT (TRANSACT-SQL)](../../t-sql/language-elements/print-transact-sql.md)です。  
+次のコード例は、既定のエラー処理動作を無効にする方法を示しています。 例では、Transact-SQL PRINT コマンドを使用して、警告を生成しています。 PRINT コマンドの詳細については、「[PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)」を参照してください。  
   
 例では、まず警告を生成するクエリを実行して、既定のエラー処理動作を説明しています。 この警告はエラーとして扱われます。 エラー処理の設定を変更した後に、同じクエリが実行されます。 警告はエラーとして扱われません。  
   
@@ -104,7 +104,7 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>参照  
 [アクティビティのログ記録](../../connect/php/logging-activity.md)
 
-[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
   

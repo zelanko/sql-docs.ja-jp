@@ -1,5 +1,5 @@
 ---
-title: updateTime (java.lang.String, java.sql.Time) メソッド |Microsoft ドキュメント
+title: updateTime (java.lang.String, java.sql.Time) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30cd816f08e8ac17c6ff5372cebdd992c9efeb73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850977"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979244"
 ---
 # <a name="updatetime-method-javalangstring-javasqltime"></a>updateTime (java.lang.String, java.sql.Time) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public void updateTime(java.lang.String columnName,
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- A**文字列**列の名前を格納しています。  
+ 列名を含む**文字列**です。  
   
  *x*  
   
@@ -51,7 +51,7 @@ public void updateTime(java.lang.String columnName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この updateTime メソッドは、java.sql.ResultSet インターフェイスの updateTime メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

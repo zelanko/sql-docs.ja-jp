@@ -1,5 +1,5 @@
 ---
-title: Issasynchstatus::abort (OLE DB) |Microsoft ドキュメント
+title: 'Issasynchstatus: (OLE DB) |Microsoft Docs'
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: db1804728aea9f0362aad24c114eb1a1570c2a67
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 20ad1b1f1a33bd198f0915847d99bfa8adf86f9b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689335"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106048"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -45,7 +45,7 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>引数  
  *hChapter*[in]  
- 操作を中止するチャプターのハンドル。 呼び出されるオブジェクトは、行セット オブジェクトはない場合、または操作がチャプターに適用しない呼び出し元を設定する必要があります*hChapter* DB_NULL_HCHAPTER にします。  
+ 操作を中止するチャプターのハンドル。 呼び出し中のオブジェクトが行セット オブジェクトではない場合、または操作がチャプターに適用されない場合は、呼び出し元では *hChapter* を DB_NULL_HCHAPTER に設定する必要があります。  
   
  *eOperation*[in]  
  中止する操作。 次の値を使用する必要があります。  
@@ -54,7 +54,7 @@ HRESULT Abort(
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
- 非同期操作を取り消す要求が処理されました。 操作自体がキャンセルされたことは保証されません。 操作が取り消されたかどうかを決定するには、コンシューマーが呼び出す必要があります[issasynchstatus::getstatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)と db_e_canceled です。 ただし、その可能性がありますいない呼び出しで返される、非常に [次へ] です。  
+ 非同期操作を取り消す要求が処理されました。 その操作自体が取り消されたことが保証されるわけではありません。 実際に操作が取り消されたかどうかを判断するには、コンシューマーで [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) を呼び出し、DB_E_CANCELED が返されるかどうかを調べる必要があります。ただし、要求直後に呼び出しても、この値が返されないことがあります。  
   
  DB_E_CANTCANCEL  
  非同期操作をキャンセルできません。  
@@ -69,18 +69,18 @@ HRESULT Abort(
  *HChapter*パラメーターのない DB_NULL_HCHAPTER または*eOperation* DBASYNCH_OPEN はありません。  
   
  E_UNEXPECTED  
- **Issasynchstatus::abort**データ ソース オブジェクトに対して呼び出された**idbinitialize::initialize**呼び出されていない、または完了していません。  
+ **IDBInitialize::Initialize** が呼び出されていないか、完了していないデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。  
   
- **Issasynchstatus::abort**データ ソース オブジェクトに対して呼び出された**idbinitialize::initialize** 、初期化する前に、後で処理が取り消されましたが、呼び出されたか、タイムアウトしています。データ ソース オブジェクトはまだ初期化されていないことになります。  
+ または、**IDBInitialize::Initialize** が呼び出されたものの、その後初期化前に取り消されたか、タイムアウトになったデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。データ ソース オブジェクトはまだ初期化されていないことになります。  
   
- **Issasynchstatus::abort**を行セットに対して呼び出された**itransaction::commit**または**itransaction::abort**が呼び出された行セットがありませんでした存続コミットまたは中止とはゾンビ状態です。  
+ 以前に **ITransaction::Commit** または **ITransaction::Abort** が呼び出された行セットに対して **ISSAsynchStatus::Abort** が呼び出された場合もこの値が返されます。この行セットはコミットまたはアボートの後に保持されず、ゾンビ状態になります。  
   
- **Issasynchstatus::abort**初期化フェーズで非同期に取り消された行セットで呼び出されました。 行セットはゾンビ状態になります。  
+ 初期化フェーズで非同期に取り消された行セットに対して **ISSAsynchStatus::Abort** が呼び出された場合も、この値が返されます。 行セットはゾンビ状態になります。  
   
-## <a name="remarks"></a>コメント  
- ゾンビ状態にその行セットまたはデータ ソース オブジェクトを残すことがあります行セットまたはデータ ソース オブジェクトの初期化を中止するよう以外のすべてのメソッド**IUnknown**メソッドは E_UNEXPECTED を返します。 この状態になると、コンシューマーはその行セットまたはデータ ソース オブジェクトの解放しか実行できません。  
+## <a name="remarks"></a>Remarks  
+ 行セットまたはデータ ソース オブジェクトの初期化を中止すると、その行セットまたはデータ ソース オブジェクトはゾンビ状態になり、**IUnknown** メソッド以外のすべてのメソッドから E_UNEXPECTED が返されます。 この状態になると、コンシューマーはその行セットまたはデータ ソース オブジェクトの解放しか実行できません。  
   
- 呼び出す**issasynchstatus::abort**値を渡すと*eOperation*以外の DBASYNCHOP_OPEN が S_OK を返します。 これは、わけではありません、操作が完了したか、取り消されました。  
+ *eOperation* に DBASYNCHOP_OPEN 以外の値を渡して **ISSAsynchStatus::Abort** を呼び出すと、S_OK が返されます。 これは、操作が完了したか取り消されたことを示すわけではありません。  
   
 ## <a name="see-also"></a>参照  
  [非同期操作の実行](../../oledb/features/performing-asynchronous-operations.md)  

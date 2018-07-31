@@ -1,5 +1,5 @@
 ---
-title: Irowsetfastload::insertrow (OLE DB) |Microsoft ドキュメント
+title: Irowsetfastload::insertrow (OLE DB) |Microsoft Docs
 description: IRowsetFastLoad::InsertRow (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 59fde3a16ea1e79587150307da12d917fd7e9a82
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3239fd370f5a79ad65fa02a044ce88dd22e6c7f9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689195"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109404"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  一括コピー行セットに行を追加します。 サンプルについては、次を参照してください。[一括コピー データを使用して IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)と[SQL SERVER を使用して IROWSETFASTLOAD と ISEQUENTIALSTREAM に BLOB データを送信&#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)です。  
+  一括コピー行セットに行を追加します。 サンプルについては、次を参照してください。[一括コピー データを使用して IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)と[BLOB データを SQL SERVER を使用して IROWSETFASTLOAD と ISEQUENTIALSTREAM を送信&#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,7 +48,7 @@ HRESULT InsertRow(
  一括コピーの行データを定義するアクセサーのハンドルを指定します。 参照されるアクセサーは行アクセサーで、データ値を保持するコンシューマー所有のメモリをバインドします。  
   
  *pData*[in]  
- データ値を保持するコンシューマー所有のメモリへのポインターを指定します。 詳細については、次を参照してください。 [DBBINDING 構造体](http://go.microsoft.com/fwlink/?LinkId=65955)です。  
+ データ値を保持するコンシューマー所有のメモリへのポインターを指定します。 詳細については、「[DBBINDING 構造体](http://go.microsoft.com/fwlink/?LinkId=65955)」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -58,26 +58,26 @@ HRESULT InsertRow(
  エラーが発生しました。 エラー情報は、行セットのエラー インターフェイスから参照できます。  
   
  E_INVALIDARG  
- *PData*引数が NULL ポインターに設定されました。  
+ *pData* 引数に NULL ポインターが設定されました。  
   
  E_OUTOFMEMORY  
- MSOLEDBSQL は要求を完了するための十分なメモリを割り当てることができませんでした。  
+ MSOLEDBSQL では、要求を完了するのに必要なメモリを割り当てることができませんでした。  
   
  E_UNEXPECTED  
- によって以前に無効に一括コピー行セットに対してメソッドが呼び出された、 [irowsetfastload::commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)メソッドです。  
+ 既に [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドによって無効になっている一括コピー行セットに対して呼び出されました。  
   
  DB_E_BADACCESSORHANDLE   
- *HAccessor*コンシューマーによって提供される引数が無効です。  
+ コンシューマーが指定した *hAccessor* 引数が無効でした。  
   
  DB_E_BADACCESSORTYPE   
  指定されたアクセサーが行アクセサーではなかったか、コンシューマー所有のメモリが指定されませんでした。  
   
-## <a name="remarks"></a>コメント  
- コンシューマー データを変換中にエラー、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原因列のデータ型は SQL Server の OLE DB ドライバーからの E_FAIL 戻り値。 データを送信できる[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の**InsertRow**メソッドでのみ、または**コミット**メソッドです。 コンシューマー アプリケーションが呼び出すことができます、 **InsertRow**何度も、データ型変換エラーが存在するという通知を受け取るまで、誤ったデータを持つメソッドです。 **コミット**メソッドにより、すべてのデータが正しく指定されている、コンシューマーによってコンシューマーが使用できる、**コミット**メソッド適切に必要に応じて、データを検証します。  
+## <a name="remarks"></a>Remarks  
+ コンシューマー データを列の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に変換するときにエラーが発生すると、OLE DB Driver for SQL Server プロバイダーから E_FAIL が返されます。 **InsertRow** メソッドを使用するか、**Commit** メソッドのみを使用して、データを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に転送できます。 **InsertRow** メソッドを使用する場合、コンシューマー アプリケーションは、データ型変換エラーの通知を受け取るまで、誤ったデータを使用してこのメソッドを何回も呼び出す可能性があります。 **Commit** メソッドでは、すべてのデータがコンシューマーにより正しく指定されたことが保証されるので、コンシューマーは適切に **Commit** を使用することで、必要に応じてデータを検証できます。  
   
- SQL Server 一括コピー行セットの OLE DB Driver は、書き込み専用です。 SQL Server の OLE DB Driver は、行セットのコンシューマー クエリを許可するメソッドを公開ありません。 処理を終了する、コンシューマーは、上の参照を解放できます、 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)インターフェイスを呼び出さず、**コミット**メソッドです。 コンシューマーが行セットに挿入した行にアクセスして値を変更する機能や、そのような行を行セットから個別に削除する機能はありません。  
+ SQL Server 一括コピー行セットの OLE DB Driver は、書き込み専用です。 OLE DB Driver for SQL Server は、行セットのコンシューマー クエリを許可するメソッドを公開しません。 処理を終了する場合、コンシューマーは **Commit** メソッドを呼び出さずに、[IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) インターフェイスの参照を解放できます。 コンシューマーが行セットに挿入した行にアクセスして値を変更する機能や、そのような行を行セットから個別に削除する機能はありません。  
   
- 一括コピーされる行は、サーバー上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用に形式が設定されます。 行の形式は、ANSI_PADDING など、接続やセッションに設定されたオプションの影響を受けます。 このオプションは既定では、SQL Server の OLE DB ドライバーを介して確立された接続で設定されます。  
+ 一括コピーされる行は、サーバー上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用に形式が設定されます。 行の形式は、ANSI_PADDING など、接続やセッションに設定されたオプションの影響を受けます。 このオプションは、for SQL Server、OLE DB ドライバーを介して確立された接続の既定に設定されます。  
   
 ## <a name="see-also"></a>参照  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  

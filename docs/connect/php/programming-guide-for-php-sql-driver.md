@@ -1,5 +1,5 @@
 ---
-title: Microsoft drivers for PHP for SQL Server プログラミング ガイド |Microsoft ドキュメント
+title: Microsoft Drivers for PHP for SQL Server のプログラミング ガイド |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308911"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992794"
 ---
-# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>For PHP for SQL Server の Microsoft drivers ガイドのプログラミング
+# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このセクションには、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を使用してアプリケーションを開発するために役立つトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |---------|---------------|  
 |[サーバーへの接続](../../connect/php/connecting-to-the-server.md)|SQL Server に接続するためのオプションと手順について説明します。|  
 |[実行関数の比較](../../connect/php/comparing-execution-functions.md)|それぞれに対して異なるユース ケースを試し、クエリの実行に使用する関数を比較します。 特に、このドキュメントでは、単一クエリの実行と、準備されたクエリの複数回の実行を比較します。|  
@@ -38,13 +38,13 @@ ms.locfileid: "35308911"
 |[データ型の変換](../../connect/php/converting-data-types.md)|データ型を指定する方法と、既定のデータ型で詳細を提供する方法を説明します。|  
 |[エラーおよび警告の処理](../../connect/php/handling-errors-and-warnings.md)|エラーと警告を処理する方法を説明します。|  
 |[アクティビティのログ記録](../../connect/php/logging-activity.md)|エラーと警告のログ記録に関する情報を提供します。|  
-|[使用して Always Encrypted with Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|PHP ドライバーで Always Encrypted 機能を使用する方法についてを説明します。|  
-|[セキュリティに関する考慮事項 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|アプリケーションの開発、配置、および実行に関するセキュリティの考慮事項を説明します。|  
+|[Using Always Encrypted with Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|PHP ドライバーと共に Always Encrypted 機能を使用する方法について説明します。|  
+|[セキュリティに関する考慮事項、Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|アプリケーションの開発、配置、および実行に関するセキュリティの考慮事項を説明します。|  
   
 ## <a name="see-also"></a>参照  
-[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/overview-of-the-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)
 
-[入門 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 

@@ -1,5 +1,5 @@
 ---
-title: よく寄せられる質問 (FAQ) Linux の ODBC および macOS |Microsoft ドキュメント
+title: ODBC Linux と macOS のよく寄せられる質問 (FAQ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,39 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17d25f6084e136736dbc4c8a8ff3cb019ce4692e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991374"
 ---
-# <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>よく寄せられる質問 (FAQ) ODBC Linux および macOS 用
+# <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux と macOS のよく寄せられる質問 (FAQ)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver for に関する質問に対する回答は、次のとおり[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Linux や macOS にします。
+次に、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux および macOS に関する質問に対する回答を示します。
   
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
-**ドライバーで Linux または macOS 上の既存の ODBC アプリケーションの動作方法**  
-コンパイルし、コンパイルと Linux またはその他のドライバーを使用して macOS 上で実行する ODBC アプリケーションを実行することができます。 
+**Linux または macOS 上の既存の ODBC アプリケーションは、どのようにドライバーと連動しますか?**  
+他のドライバーを使用して Linux または macOS 上でコンパイルして実行している ODBC アプリケーションは、コンパイルして実行することができます。 
   
-**のどの機能[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]はこのバージョンのドライバー サポートしますか?**
+**このバージョンのドライバーがサポートしている [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] の機能はどれですか?**
 
-ODBC driver on Linux and macOS 内のすべてのサーバー機能をサポートしている[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]LocalDB を除きます。 詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サポートされる機能を参照してください[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)です。  
+ODBC Driver on Linux および macOS は、LocalDB を除く [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] のすべてのサーバー機能をサポートしています。 詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サポートについては、「 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)します。  
   
-**ドライバーは Kerberos 認証をサポートしますか。**  
-可能。 既存の Kerberos 環境のセットアップがあればを使用してサーバーに接続できる必要があります、 `Trusted_Connection=Yes` DSN または接続文字列オプションです。 詳細については、次を参照してください。 [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md)です。  
+**ドライバーは Kerberos 認証をサポートしますか?**  
+可能。 既存の Kerberos 環境のセットアップがあればを使用してサーバーに接続できる必要があります、 `Trusted_Connection=Yes` DSN または接続文字列オプションです。 詳細については、「[統合認証を使用する](../../../connect/odbc/linux-mac/using-integrated-authentication.md)」を参照してください。  
   
-**どの Unicode エンコードする必要があります、アプリケーションを使用しますか。**  
+**アプリケーションではどの Unicode エンコードを使用すればよいですか?**  
 SQL_CHAR データには UTF-8、SQL_WCHAR データには UTF-16 を使用してください。  
 
-**ダウンロードしてテストおよび評価のために、ドライバーを使用して実行できる ODBC サンプルはありますか。**
+**ドライバーの試用および評価のために、ダウンロードしてドライバーで実行できる ODBC サンプルはありますか?**
 
-サンプルについては、「 [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux (Linux の ODBC ドライバーに既存の MSDN C++ ODBC サンプルを使用する)](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 」を参照してください。 またこれは、macOS ODBC ドライバーに適用します。 
+サンプルについては、「 [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux (Linux の ODBC ドライバーに既存の MSDN C++ ODBC サンプルを使用する)](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 」を参照してください。 またこれは、macOS の ODBC ドライバーに当てはまります。 
 
-**Linux の ODBC ドライバーは、または macOS オープン ソースですか。**
+**Linux で ODBC ドライバーは、または macOS のオープン ソースですか。**
 
-Linux および macOS 上の ODBC ドライバーは、オープン ソース製品ではありません。  
+Linux と macOS の ODBC ドライバーはオープン ソース製品ではありません。  
 
 ## <a name="see-also"></a>参照
-[Linux および macOS 上の SQL Server 用 Microsoft ODBC Driver をインストールします。](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

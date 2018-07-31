@@ -1,6 +1,6 @@
 ---
-title: OLE DB テーブル値パラメーター型のサポート (プロパティ) |Microsoft ドキュメント
-description: OLE DB Table-Valued パラメーター型のサポート (プロパティ)
+title: OLE DB テーブル値パラメーターの型のサポート (プロパティ) | Microsoft Docs
+description: OLE DB テーブル値パラメーターの型のサポート (プロパティ)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,31 +16,31 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ea197e5411cb867221814817041f3fd6df7c8005
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 67d27b1b2441b481a696170013ece166bc58d778
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689575"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108764"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   このトピックでは、テーブル値パラメーターの行セット オブジェクトに関連付けられている OLE DB プロパティおよびプロパティ セットについて説明します。  
   
 ## <a name="properties"></a>[プロパティ]  
- テーブル値パラメーター行セット オブジェクトで IRowsetInfo::GetPropeties メソッドを介して公開されるプロパティの一覧を次に示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 そのため、いずれかを設定しようと iopenrowset::openrowset または ITableDefinitionWithConstraints::CreateTableWithConstraints でプロパティをメソッドの既定以外の値をエラーになりますが、オブジェクトは作成されません。  
+ 次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetPropeties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 そのため、いずれかを設定しようと iopenrowset::openrowset または ITableDefinitionWithConstraints::CreateTableWithConstraints プロパティのメソッドが既定以外の値にエラーが発生する、オブジェクトは作成されません。  
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  
   
-|プロパティ ID|値|  
+|プロパティ ID|ReplTest1|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : ブックマークはテーブル値パラメーターの行セット オブジェクトで利用できません。|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : ブックマークはテーブル値パラメーターの行セット オブジェクトで利用できません。|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -52,7 +52,7 @@ ms.locfileid: "35689575"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注: テーブル値パラメーター行セット オブジェクトでは、IRowsetChange インターフェイスをサポートします。<br /><br /> DBPROP_IRowsetChange を VARIANT_TRUE に設定して作成された行セットの動作は、即時更新モードの動作になります。<br /><br /> ただし、BLOB 列は、ISequentialStream オブジェクトとしてバインドされる、コンシューマーが予想される場合に、テーブル値パラメーター行セット オブジェクトの有効期間にわたって保持します。|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注 : テーブル値パラメーターの行セット オブジェクトでは、IRowsetChange インターフェイスがサポートされます。<br /><br /> DBPROP_IRowsetChange を VARIANT_TRUE に設定して作成された行セットの動作は、即時更新モードの動作になります。<br /><br /> ただし、BLOB 列が ISequentialStream オブジェクトとしてバインドされる場合、コンシューマーでは、テーブル値パラメーターの行セット オブジェクトの有効期間中その列を保持する必要があります。|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -82,14 +82,14 @@ ms.locfileid: "35689575"
  次のプロパティ セットでは、テーブル値パラメーターがサポートされます。  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- このプロパティは、必要な場合、DBCOLUMNDESC 構造体から各列の ITableDefinitionWithConstraints::CreateTableWithConstraints を使用して、テーブル値パラメーター行セット オブジェクトの作成プロセスでコンシューマーによって使用されます。  
+ このプロパティは、必要な場合、DBCOLUMNDESC 構造体から各列に対して ITableDefinitionWithConstraints::CreateTableWithConstraints を使用して、テーブル値パラメーター行セット オブジェクトを作成する過程でコンシューマーによって使用されます。  
   
 |プロパティ ID|プロパティ値|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 型 : VT_BOOL<br /><br /> 説明 : VARIANT_TRUE に設定された場合、その列が計算列であることを示します。 VARIANT_FALSE に設定された場合は、その列が計算列ではないことを示します。|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- これらのプロパティが、テーブル値パラメーターの型情報 ISSCommandWithParamters::GetParameterProperties への呼び出しを検出中にコンシューマーによって読み取られ、テーブル値パラメーターに関する特定のプロパティを設定中にコンシューマーが設定isscommandwithparameters::setparameterproperties 経由。  
+ これらのプロパティが ISSCommandWithParamters::GetParameterProperties への呼び出しでテーブル値パラメーターの型情報の検出中にコンシューマーによって読み取られ、テーブル値パラメーターに関する特定のプロパティを設定中にコンシューマーによって設定isscommandwithparameters::setparameterproperties 経由。  
   
  次の表に、これらのプロパティの詳細を示します。  
   
@@ -103,6 +103,6 @@ ms.locfileid: "35689575"
   
 ## <a name="see-also"></a>参照  
  [OLE DB テーブル値パラメーターの型のサポート](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [テーブル値パラメーターを使用して&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [テーブル値パラメーターの使用 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 統合 Kerberos 認証 (OLE DB) |Microsoft ドキュメント
-description: 統合 kerberos 認証 (OLE DB)
+title: 統合 Kerberos 認証 (OLE DB) |Microsoft Docs
+description: 統合 Kerberos 認証 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 49aac384ef7f330a445aca4c69ea0478edc85481
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665632"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109134"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>統合 Kerberos 認証 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このサンプルでは、SQL Server の OLE DB ドライバーの OLE DB を使用して、Kerberos 相互認証を取得する方法を示します。 このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。  
+  このサンプルでは、OLE DB driver for SQL Server OLE DB を使用して、Kerberos 相互認証を取得する方法を示します。 このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。  
   
- Spn および Kerberos 認証の詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)です。  
+ SPN および Kerberos 認証の詳細については、「[クライアント接続でのサービス プリンシパル名 &#40;SPN&#41; のサポート](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  サーバーを指定する必要があります。 .cpp ファイルで、"MyServer" の部分を [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降のインスタンスが実行されているコンピューター名に変更してください。  
   
  また、顧客から提供された SPN を指定する必要があります。 .cpp ファイルで、"CPSPN" の部分を顧客から提供された SPN に変更してください。  
   
- INCLUDE 環境変数には、msoledbsql.h を格納するディレクトリが含まれています。 確認してください。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
+ INCLUDE 環境変数に、msoledbsql.h が保存されているディレクトリが含まれていることを確認します。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

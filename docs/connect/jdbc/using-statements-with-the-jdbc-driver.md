@@ -1,5 +1,5 @@
 ---
-title: JDBC ドライバーでステートメントを使用して |Microsoft ドキュメント
+title: JDBC ドライバーでステートメントを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,33 +15,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c7da2ce5f69df8f28b281a935ea938b2648fa555
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851487"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968935"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>JDBC ドライバーでのステートメントの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]でデータを操作するために使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]さまざまな方法でデータベース。 入力パラメーターや出力パラメーターを使用して、データベースに SQL ステートメントを実行したり、データベースのストアド プロシージャを呼び出したりできます。 JDBC ドライバーは、バッチ操作による SQL エスケープ シーケンス、更新数、自動生成キーの使用、および更新の実行もサポートしています。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] データベース内のデータは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] を使用して、さまざまな方法で操作することができます。 入力パラメーターや出力パラメーターを使用して、データベースに SQL ステートメントを実行したり、データベースのストアド プロシージャを呼び出したりできます。 JDBC ドライバーは、バッチ操作による SQL エスケープ シーケンス、更新数、自動生成キーの使用、および更新の実行もサポートしています。  
   
- JDBC ドライバーからのデータを取得するための 3 つのクラスの提供、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
+ JDBC ドライバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースからデータを取得するための 3 つのクラスがあります。  
   
-1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) - パラメーターなしの SQL ステートメントを実行するために使用されます。  
+1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) - パラメーターを指定せずに SQL ステートメントを実行するために使用されます。  
   
-2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) - (SQLServerStatement から継承された) IN パラメーターを含むコンパイル済みの SQL ステートメントが実行中のために使用します。  
+2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) - (SQLServerStatement から継承されます) IN パラメーターを含む、コンパイル済みの SQL ステートメントを実行するために使用されます。  
   
-3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) - (SQLServerPreparedStatement から継承)、パラメーター、OUT パラメーター、またはその両方を含めることができるストアド プロシージャを実行するために使用します。  
+3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) - (SQLServerPreparedStatement から継承されます) IN パラメーター、OUT パラメーター、またはその両方を含むストアド プロシージャを実行するために使用されます。  
   
- このセクションのトピックでは、これらの 3 つのステートメント クラスのデータの操作を使用する方法について説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
+ このセクションのトピックでは、これら 3 つのステートメント クラスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースのデータを処理する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[SQL でのステートメントの使用](../../connect/jdbc/using-statements-with-sql.md)|JDBC ドライバーで SQL ステートメントを使用してデータを処理する方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。|  
-|[ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)|JDBC ドライバーでストアド プロシージャを使用してデータを処理する方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。|  
+|[SQL でのステートメントの使用](../../connect/jdbc/using-statements-with-sql.md)|JDBC ドライバーで SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースのデータを処理する方法について説明します。|  
+|[ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)|JDBC ドライバーでストアド プロシージャを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースのデータを処理する方法について説明します。|  
 |[複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)|JDBC ドライバーを使用して複数の結果セットからデータを取得する方法について説明します。|  
 |[SQL エスケープ シーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)|日付および時刻のリテラルや関数のような SQL エスケープ シーケンスの使用方法について説明します。|  
 |[自動生成キーの使用](../../connect/jdbc/using-auto-generated-keys.md)|自動生成キーの使用方法について説明します。|  

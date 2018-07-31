@@ -1,6 +1,6 @@
 ---
-title: 大きなデータを設定 |Microsoft ドキュメント
-description: SQL Server の OLE DB Driver を使用して大きなデータの設定
+title: 大きなデータの設定 |Microsoft Docs
+description: SQL Server の OLE DB ドライバーを使用して大きなデータの設定
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 27e50280df7bfe1bcbadcb76988d8962ebee1d77
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665932"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107198"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server では、コンシューマー ストレージ オブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
+  OLE DB Driver for SQL Server、コンシューマー ストレージ オブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
   
  コンシューマーは、データを保持するストレージ オブジェクトを作成し、このストレージ オブジェクトへのポインターをプロバイダーに渡します。 次に、プロバイダーがコンシューマー ストレージ オブジェクトからデータを読み取り、BLOB 列に書き込みます。  
   
- コンシューマーは独自のストレージ オブジェクトへのポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。 コンシューマーは、呼び出し、 **irowsetchange::setdata**または**irowsetchange::insertrow** BLOB 列をバインドするアクセサーを持つメソッドです。 このとき、コンシューマーのストレージ オブジェクトのストレージ インターフェイスへのポインターを渡します。  
+ コンシューマーは独自のストレージ オブジェクトへのポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。 次に、BLOB 列をバインドするアクセサーを指定して、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを呼び出します。 このとき、コンシューマーのストレージ オブジェクトのストレージ インターフェイスへのポインターを渡します。  
   
  このトピックでは、次の関数で使用可能な機能について説明します。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "35665932"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>大きなデータを設定する方法  
- コンシューマーは、BLOB 列とし、呼び出しの値をバインドするアクセサーを作成する独自のストレージ オブジェクトへのポインターを渡す、 **irowsetchange::setdata**または**irowsetchange::insertrow**メソッドです。 BLOB データを設定するには、次の手順を実行します。  
+ コンシューマーは、独自のストレージ オブジェクトへのポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。次に、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを呼び出します。 BLOB データを設定するには、次の手順を実行します。  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 設定、 *dwFlag*に STGM_READ を設定し、DBOBJECT 構造体の要素、 *iid*要素に IID_ISequentialStream (公開されるインターフェイス)。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の *dwFlag* 要素に STGM_READ を設定し、*iid* 要素に IID_ISequentialStream (公開されるインターフェイス) を設定します。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   
-3.  DBBINDING 構造体の配列を使用して、各列に 1 つずつ一連のバインドを作成します。 設定、 *wType* DBTYPE_IUNKNOWN、DBBINDING 構造体の要素、および*pObject*要素を作成した DBOBJECT 構造体をポイントします。  
+3.  DBBINDING 構造体の配列を使用して、各列に 1 つずつ一連のバインドを作成します。 DBBINDING 構造体の *wType* 要素に DBTYPE_IUNKNOWN を設定し、*pObject* 要素に作成した DBOBJECT 構造体へのポインターを設定します。  
   
 4.  DBBINDINGS 構造体の配列内のバインド情報を使用して、アクセサーを作成します。  
   
-5.  呼び出す**GetNextRows**行セットを次の行をフェッチします。 呼び出す**GetData**行セットからデータを読み取れません。  
+5.  **GetNextRows** を呼び出して、次の行を行セットにフェッチします。 **GetData** を呼び出して、その行セットからデータを読み取ります。  
   
-6.  含むデータ (および長さのインジケーター)、ストレージ オブジェクトを作成し、呼び出す**irowsetchange::setdata** (または**irowsetchange::insertrow**) データを設定する BLOB 列をバインドするアクセサーを使用します。  
+6.  データ (および長さのインジケーター) を保持するストレージ オブジェクトを作成し、次に BLOB 列をバインドするアクセサーを指定して **IRowsetChange::SetData** (または **IRowsetChange::InsertRow**) を呼び出し、データを設定します。  
   
 ## <a name="example"></a>例  
  次の例は、BLOB データを設定する方法を示しています。 この例では、テーブルを作成し、サンプル レコードを追加して、行セット内のそのレコードをフェッチし、BLOB フィールドの値を設定しています。  
@@ -726,7 +726,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>参照  
- [Blob と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [大きな値の型の使用](../../oledb/features/using-large-value-types.md)  
   
   

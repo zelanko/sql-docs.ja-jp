@@ -1,6 +1,6 @@
 ---
-title: 複数の行セットの結果を生成するコマンド |Microsoft ドキュメント
-description: 複数の行セットの結果を生成するコマンド
+title: 複数の行セットの結果を生成するコマンド |Microsoft Docs
+description: 複数行セットの結果を生成するコマンド
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,26 +21,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665522"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109624"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>複数行セットの結果を生成するコマンド
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server の OLE DB Driver から複数の行セットを返すことができます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ステートメントです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
+  OLE DB Driver for SQL Server から複数の行セットを返せる[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ステートメント。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
   
 -   バッチにまとめられた SQL ステートメントが 1 つのコマンドとして実行される場合。  
   
 -   ストアド プロシージャが SQL ステートメントのバッチを実装している場合。  
   
 ## <a name="batches"></a>バッチ  
- SQL Server の OLE DB Driver は、SQL ステートメントのバッチ区切り記号としてセミコロン文字を認識します。  
+ OLE DB Driver for SQL Server では、SQL ステートメントのバッチ区切り記号としてセミコロン文字が認識されます。  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

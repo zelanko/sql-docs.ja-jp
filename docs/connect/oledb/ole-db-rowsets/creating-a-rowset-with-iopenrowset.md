@@ -1,6 +1,6 @@
 ---
-title: IOpenRowset による行セットの作成 |Microsoft ドキュメント
-description: SQL Server 用の OLE DB Driver IOpenRowset インターフェイスを持つ行セットの作成
+title: IOpenRowset を使用した行セットの作成 |Microsoft Docs
+description: IOpenRowset インターフェイスの OLE DB Driver for SQL Server 行セットの作成
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,29 +19,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dd1b48ee3ba9439f5a1cddbfed07196480265b74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 53a9b42461fd9c7ba194af62f86d8670b8539ddf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689065"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105948"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset を使用した行セットの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server の OLE DB ドライバーをサポートしている、 **iopenrowset::openrowset**メソッドを次の制限。  
+  OLE DB Driver for SQL Server のサポート、 **iopenrowset::openrowset**メソッドは、次の制限。  
   
--   ベース テーブルまたはビューを指定してください、データベースの ID (DBID) 構造体、 *pTableID*パラメーターをポイントします。  
+-   *pTableID* パラメーターが指すデータベース ID (DBID) 構造体に、ベース テーブルまたはビューを指定する必要があります。  
   
--   DBID *eKind*メンバーは dbkind_name に示す必要があります。  
+-   DBID の *eKind* メンバーに DBKIND_NAME を指定する必要があります。  
   
--   DBID *uName*メンバーは、Unicode 文字の文字列として既存の基本テーブルまたはビューの名前を指定する必要があります。  
+-   DBID の *uName* メンバーには、既存のベース テーブルまたはビューの名前を Unicode 文字列で指定する必要があります。  
   
--   *PIndexID*のパラメーター **OpenRowset** NULL にする必要があります。  
+-   **OpenRowset** の *pIndexID* パラメーターには NULL を指定する必要があります。  
   
- 結果セットは**iopenrowset::openrowset**単一の行セットが含まれています。 単一の行セットを含む結果セットをサポートできる[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]カーソル。 開発者はカーソル サポートによって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の同時実行メカニズムを使用できます。  
+ **IOpenRowset::OpenRowset** の結果セットには、1 つの行セットが含まれます。 1 つの行セットが含まれる結果セットは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルでサポートできます。 開発者はカーソル サポートによって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の同時実行メカニズムを使用できます。  
   
 ## <a name="see-also"></a>参照  
  [行セット](../../oledb/ole-db-rowsets/rowsets.md)  

@@ -1,5 +1,5 @@
-﻿---
-title: '手順 3: pymssql を使用して SQL に接続する概念実証 |Microsoft ドキュメント'
+---
+title: 'ステップ 3: pymssql を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e744d2e472e082cacb48a3e4f8c3a07a1f87bb03
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8ea4fa2527fa39700647832bdd1a194389cb36e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309931"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982234"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>手順 3: 概念実証の pymssql を使用して SQL に接続します。
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>ステップ 3: pymssql を使用した SQL への接続を概念実証する
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-この例は、概念実証としてのみ考慮してください。  サンプル コードは、わかり易いよう簡略化されており、必ずしも Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
-
+この例は、のみの概念実証を検討してください。  サンプル コードがわかりやすくするために、簡略化し、Microsoft によって推奨されるベスト プラクティスに表すとは限りません。  
+  
 ## <a name="step-1--connect"></a>手順 1: 接続  
   
-[Pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html)関数は SQL データベースへの接続に使用します。  
+[Pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html)関数を使用して、SQL Database に接続します。  
   
 ```python
     import pymssql  
@@ -38,7 +38,7 @@ ms.locfileid: "35309931"
   
 ## <a name="step-2--execute-query"></a>手順 2: クエリを実行します。  
   
-[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)関数を使用して SQL データベースに対するクエリから結果セットを取得することができます。 この関数は、本質的に任意のクエリを受け入れ、[cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone) を使用して反復処理できる結果セットを返します。  
+[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的に任意のクエリを受け入れるし、使用して反復処理できる結果セットを返します[cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)します。  
   
   
 ```python
@@ -54,8 +54,8 @@ ms.locfileid: "35309931"
   
 ## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
   
-この例では、安全に [INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを実行し、[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) の値からアプリケーションを守るパラメーターを渡す方法を示しています。    
-
+実行する方法がわかります。 この例では、[挿入](../../../t-sql/statements/insert-transact-sql.md)ステートメントが安全に、からアプリケーションを保護するパラメーターを渡す[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
+  
   
 ```python
     import pymssql  
@@ -76,7 +76,7 @@ ms.locfileid: "35309931"
   
 * トランザクションを開始します。  
 * データの行を挿入します。  
-* ロールバック、トランザクション挿入を元に戻す  
+* ロールバック、トランザクションの挿入を元に戻す  
   
 ```python
     import pymssql  
@@ -88,6 +88,6 @@ ms.locfileid: "35309931"
     conn.close()
 ```  
     
-  ## <a name="next-steps"></a>次のステップ  
+  ## <a name="next-steps"></a>次の手順  
   
-詳細については [Python デベロッパー センター](https://azure.microsoft.com/en-us/develop/python/)を参照してください。
+詳細については、次を参照してください。、 [Python デベロッパー センター](https://azure.microsoft.com/develop/python/)します。

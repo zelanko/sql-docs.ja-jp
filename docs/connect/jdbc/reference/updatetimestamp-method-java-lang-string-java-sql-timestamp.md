@@ -1,5 +1,5 @@
 ---
-title: updateTimestamp (java.lang.String, java.sql.Timestamp) メソッド |Microsoft ドキュメント
+title: updateTimestamp (java.lang.String, java.sql.Timestamp) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3bcc0d80dee621c5b0484749bf12cbfdbb33d126
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849957"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021288"
 ---
 # <a name="updatetimestamp-method-javalangstring-javasqltimestamp"></a>updateTimestamp (java.lang.String, java.sql.Timestamp) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public void updateTimestamp(java.lang.String columnName,
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- A**文字列**列の名前を格納しています。  
+ 列名を含む**文字列**です。  
   
  *x*  
   
@@ -51,11 +51,11 @@ public void updateTimestamp(java.lang.String columnName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この updateTimestamp メソッドは、java.sql.ResultSet インターフェイスの updateTimestamp メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateTimestamp メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   
+ [updateTimestamp メソッド (SQLServerResultSet)](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

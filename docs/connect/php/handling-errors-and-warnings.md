@@ -1,5 +1,5 @@
 ---
-title: エラーおよび警告の処理 |Microsoft ドキュメント
+title: エラーおよび警告の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cba0246f57157488b4e62ab2cdcbc80b2aea71e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307541"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054600"
 ---
 # <a name="handling-errors-and-warnings"></a>エラーおよび警告の処理
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO_SQLSRV ドライバーを使用している場合は、エラーとエラー処理の詳細についてを見つけることができます、 [PDO](http://php.net/manual/book.pdo.php) web サイトです。  
+PDO_SQLSRV ドライバーを使用している場合、エラーとエラー処理の詳細については、[PDO](http://php.net/manual/book.pdo.php) の Web サイトを参照してください。  
   
 このセクションのトピックでは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーのエラーと警告の処理について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |---------|---------------|  
 |[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|エラーと警告の処理に関する構成設定の変更方法について説明します。|  
 |[方法: SQLSRV ドライバーを使用してエラーと警告を処理する](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|エラーと警告を別に処理する方法について説明します。|  
@@ -43,5 +43,5 @@ PDO_SQLSRV ドライバーを使用している場合は、エラーとエラー
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
 ## <a name="see-also"></a>参照  
-[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
   

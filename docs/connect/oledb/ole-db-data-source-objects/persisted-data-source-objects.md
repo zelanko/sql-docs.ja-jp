@@ -1,6 +1,6 @@
 ---
-title: データ ソース オブジェクトを永続化 |Microsoft ドキュメント
-description: 永続化されたデータ ソース オブジェクト
+title: データ ソース オブジェクトを永続化 |Microsoft Docs
+description: 保存されるデータ ソース オブジェクト
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665612"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106948"
 ---
-# <a name="persisted-data-source-objects"></a>永続化されたデータ ソース オブジェクト
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="persisted-data-source-objects"></a>保存されるデータ ソース オブジェクト
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server の OLE DB Driver は、永続化されたデータ ソース オブジェクトをサポートしています、 **IPersistFile**インターフェイスです。  
+  OLE DB Driver for SQL Server が使用して永続化されたデータ ソース オブジェクトをサポートしている、 **IPersistFile**インターフェイス。  
   
 ## <a name="examples"></a>使用例  
- **A.データ ソースの初期化を保持します。**  
+ **A.データ ソースの初期化の保存:**  
   
- 次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名を受け取る、 *pLocation*と*pDatasource*関数のパラメーターです。  
+ 次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名は、関数の *pLocation* パラメーターと *pDatasource* パラメーターで受け取ります。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -145,7 +145,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B.永続化されたデータ ソースの初期化を使用します。**  
+ **B.保存されたデータ ソースの初期化の使用:**  
   
  次の例では、保存されたデータ ソース オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインとパスワードを指定する初期化プロパティを追加します。  
   
@@ -233,7 +233,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **Ipersistfile::save**前に、または呼び出し後、メソッドを呼び出すことができる**idbinitialize::initialize**です。 正常に返された後に、メソッドを呼び出す**idbinitialize::initialize**有効なデータ ソースの指定が保存されることを確認します。  
+ **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
   
 ## <a name="see-also"></a>参照  
  [データ ソース オブジェクト&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

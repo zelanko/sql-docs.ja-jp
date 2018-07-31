@@ -1,7 +1,7 @@
 ---
-title: JDBC ドライバー API リファレンス |Microsoft ドキュメント
+title: JDBC ドライバー API リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,56 +14,82 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b9dc05cfa6e96fc3dd987095917a932883df4e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 14e597d2788e57eb49903f52ebd40132ead9a35f
+ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843185"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39174909"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API リファレンス
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] API を提供する Java 内で使用できるプログラミング コードへの接続し、対話する、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。  
-  
+[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] が提供する API は Java プログラミング内で使用し、[!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースに接続し、やりとりできます。
+
+
+
+### <a name="javadocio-website-is-primary"></a>JavaDoc.io web サイトがプライマリ
+
+JavaDoc.io web サイトに、表示する場合、Microsoft JDBC API のリファレンス ドキュメントがホストされています。 JavaDoc.io は JDBC リファレンス ドキュメントについては、プライマリ web サイトではようになりました。 JavaDoc.io で JDBC リファレンスのドキュメントは次の直接リンクでご利用いただけます。
+
+- [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
+
+JavaDoc.io がバージョン 6.0 以降の JDBC リファレンス ドキュメントです。
+
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>Docs でレガシ JDBC ドキュメントのみがここでは
+
+JDBC API のリファレンス ドキュメントの記事では、ここ**https://docs.microsoft.com/sql/connect/jdbc/reference/** JDBC クラスの新しいリリースの更新時に不要になった更新中です。 ただし、こちらの記事は、JDBC バージョン 4.1 と 4.2 のすべての参照を含めることが操作を行います。
+
+JDBC バージョン 6.0、およびいくつかの以降のバージョンのドキュメントがここではもします。 6.0 以降のバージョン、JavaDoc.io web サイトを使用します。
+
+
+
+### <a name="important-notes"></a>重要な注意点
+
 > [!NOTE]  
->  JDBC ドライバーの使用に関する概念については、次を参照してください。 [JDBC ドライバーの概要](../../../connect/jdbc/overview-of-the-jdbc-driver.md)です。  
+>  JDBC ドライバーを使用して概念については、次を参照してください。 [JDBC ドライバーの概要](../../../connect/jdbc/overview-of-the-jdbc-driver.md)します。  
   
 > [!IMPORTANT]  
->  JDBC 4.1 と 4.2 のコンプライアンス サポートは、Microsoft JDBC Driver 4.2 (またはそれ以降) を使用して SQL Server 用です。 以前の Microsoft JDBC ドライバーの 4.1 リリースと 4.0 リリースの場合、JDBC 4.1 や 4.2 で導入された新しいメソッドに対応していません。  
+>  JDBC 4.1 と 4.2 のコンプライアンス サポートについては、Microsoft JDBC Driver 4.2 for SQL Server (以降) を使用します。 以前の Microsoft JDBC ドライバーの 4.1 リリースと 4.0 リリースの場合、JDBC 4.1 や 4.2 で導入された新しいメソッドに対応していません。  
 >   
->  JDBC 4.1 コンプライアンスの API 詳細についてはこのセクションでは扱いません。 参照してください[JDBC 4.1 準拠、JDBC driver](../../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)です。  
+>  JDBC 4.1 コンプライアンスの API 詳細についてはこのセクションでは扱いません。 「[JDBC Driver の JDBC 4.1 への準拠](../../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)」を参照してください。  
 >   
->  JDBC 4.2 コンプライアンスの API 詳細についてはこのセクションでは扱いません。 参照してください[JDBC 4.2 準拠、JDBC driver](../../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)です。  
+>  JDBC 4.2 コンプライアンスの API 詳細についてはこのセクションでは扱いません。 「[JDBC Driver の JDBC 4.2 への準拠](../../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)」を参照してください。  
 >   
->  Microsoft JDBC Driver 4.2 for SQL Server から利用できるように、一括コピーの API 詳細については、このセクションの内容が見つかりません。 参照してください[JDBC ドライバーで一括コピーを使用して](../../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)です。  
+>  Microsoft JDBC Driver 4.2 for SQL Server より利用できる一括コピーの API 詳細についてはこのセクションでは扱いません。 「[JDBC ドライバーでの一括コピーの使用](../../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)」を参照してください。  
 >   
->  Always Encrypted を使用できる Microsoft JDBC Driver 6.0 for SQL Server 以降の API 詳細については、このセクションの内容が見つかりません。 参照してください[Always Encrypted の JDBC ドライバー API リファレンス](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
+>  Microsoft JDBC Driver 6.0 for SQL Server より利用できる Always Encrypted の API 詳細についてはこのセクションでは扱いません。 「[JDBC ドライバーの Always Encrypted API のリファレンス](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)」を参照してください。  
 >   
->  Microsoft JDBC Driver 6.0 for SQL Server 以降使用可能な Using Table-Valued パラメーターの API 詳細については、このセクションの内容が見つかりません。 参照してください[テーブル値パラメーターの使用](../../../connect/jdbc/using-table-valued-parameters.md)  
+>  このセクションでは、SQL Server 用 Microsoft JDBC Driver 6.0 以降使用可能な Using Table-Valued パラメーターの API 詳細については見つかりませんでした。 「[テーブル値パラメーターの使用](../../../connect/jdbc/using-table-valued-parameters.md)」を参照してください。  
 >   
->  Microsoft JDBC Driver 6.4 では、JDK 7.0、8.0、9.0 でコンパイルをサポートします。  
+>  Microsoft JDBC ドライバー 6.4 は JDK 7.0、8.0、および 9.0 によるコンパイルに対応しています。  
 >   
->  Microsoft JDBC Driver 6.2 では、JDK 7.0 および 8.0 によるコンパイルをサポートします。  
+>  Microsoft JDBC ドライバー 6.2 は JDK 7.0 と 8.0 によるコンパイルに対応しています。  
 >   
->  Microsoft JDBC Drivers 6.0 と JDK 5.0、6.0、7.0、8.0 によるコンパイルに 4.2 対応します。  
+>  Microsoft JDBC ドライバー 6.0 と 4.2 は JDK 5.0、6.0、7.0、および 8.0 によるコンパイルに対応しています。  
 >   
 >  Microsoft JDBC ドライバー 4.1 は JDK 5.0、6.0、7.0 によるコンパイルに対応しています。  
 
+
+
 ## <a name="interfaces"></a>インターフェイス  
   
-|インターフェイス名|Description|  
+|インターフェイス名|[説明]|  
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement インターフェイス](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|入力パラメーターおよび出力パラメーターと共に、呼び出すストアド プロシージャの名前を指定できます。|  
-|[ISQLServerConnection インターフェイス](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|JDBC の接続を表し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。|  
-|[SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|接続に固有のプロパティの一覧を表す、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベースを使用して、 [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
+|[ISQLServerConnection インターフェイス](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースへの JDBC 接続を表します。|  
+|[SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|[ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを利用した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースへの接続に固有のプロパティの一覧を表します。|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|JDBC の準備されたステートメント機能の基本的な実装を表します。|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|JDBC 結果セットを表します。|  
-|[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|JDBC ステートメント機能の基本的な実装を表します。|  
+|[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|JDBC ステートメント機能の基本的な実装を表します。|
+| &nbsp; | &nbsp; |
+
+
   
 ## <a name="classes"></a>クラス  
   
-|クラス名|Description|  
+|クラス名|[説明]|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|microsoft.sql.DateTimeOffset 型のオブジェクトを表します。|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|BLOB (binary large object) を表します。|  
@@ -72,11 +98,11 @@ ms.locfileid: "32843185"
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|ISQLServerConnectopn を実装します。|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|接続プール マネージャーの物理データベース接続を表します。|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|データベースのメタデータを表します。|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|接続に固有のプロパティの一覧を表す、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベースを使用して、 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを利用した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースへの接続に固有のプロパティの一覧を表します。|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|JNDI (Java Naming and Directory Interface) からのデータ ソースを生成するオブジェクト ファクトリを表します。|  
-|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|JDBC ドライバーを表します。 このクラスに接続するためのメソッドが含まれています、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース、および JDBC ドライバーに関する情報を取得するためです。|  
+|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|JDBC ドライバーを表します。 このクラスには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースに接続し、JDBC ドライバーに関する情報を取得するためのメソッドが含まれます。|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|SQL ステートメントの実行に失敗したこと、または実行が完了しなかったことを表します。|  
-|[SQLServerNClob クラス](../../../connect/jdbc/reference/sqlservernclob-class.md)|Character large binary object National Character Set を使用してを表します。|  
+|[SQLServerNClob クラス](../../../connect/jdbc/reference/sqlservernclob-class.md)|National Character Set を使用する文字ラージ バイナリ オブジェクトを表します。|  
 |[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)|準備されたステートメントのパラメーターのメタデータを表します。|  
 |[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)|接続プール内の物理データベース接続を表します。|  
 |[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)|ISQLServerPreparedStatement を実装します。|  
@@ -86,10 +112,12 @@ ms.locfileid: "32843185"
 |[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)|トランザクションのロールバックが可能なチェックポイントを表します。|  
 |[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)|ISQLServerStatement を実装します。|  
 |[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)|分散 (XA) トランザクションに参加できる JDBC 接続を表します。|  
-|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)|ファクトリを表します[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)内部的に使用されるオブジェクト。|  
-|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|XA の XAResource を表しますは分散トランザクション管理です。|  
-  
+|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)|内部で使用されている [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) オブジェクトのファクトリを表します。|  
+|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|XA 分散トランザクション管理用の XAResource を表します。|
+| &nbsp; | &nbsp; |
+
+
+
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーの概要](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
-  
+ [JDBC ドライバーの概要](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
+

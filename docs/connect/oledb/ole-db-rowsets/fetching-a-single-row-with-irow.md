@@ -1,6 +1,6 @@
 ---
-title: IRow による 1 行のフェッチ |Microsoft ドキュメント
-description: SQL Server 用の OLE DB Driver IRow インターフェイスを使用して 1 つの行のフェッチ
+title: IRow による 1 行のフェッチ |Microsoft Docs
+description: SQL Server 用の OLE DB Driver IRow インターフェイスを使用して 1 つの行をフェッチしています
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,26 +21,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 21123e4d9918216f9b23ca2c7304bdcb1be2b0c7
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 7398658ce254bcfd8b4b1059625d8628852225aa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690045"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108944"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>IRow による 1 行のフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow**パフォーマンスが向上するのには SQL Server が簡略化のインターフェイスの OLE DB ドライバーに実装します。 **IRow**単一行オブジェクトの列に直接アクセスできます。 事前にわかっているコマンドの実行の結果が正確に 1 つの行を生成する場合**IRow**その行の列を取得します。 結果セットには、複数の行が含まれている場合**IRow**最初の行のみを公開します。  
+  **IRow**インターフェイスの OLE DB driver の実装のパフォーマンスを向上させる SQL Server が簡略化されます。 **IRow** では、1 つの行オブジェクトの列に直接アクセスできます。 コマンドの実行結果が正確に 1 行になることが事前にわかっている場合、**IRow** でその行の列を取得できます。 結果セットが複数の行で構成される場合は、**IRow** では先頭の行だけが公開されます。  
   
- **IRow**実装では、行を移動することはできません。 行内の各列には 1 回だけアクセスされます。ただし、例外が 1 つあります。最初に列サイズを確認し、次にデータをフェッチする場合は、列に 2 回アクセスできます。  
+ **IRow** 実装では、行を移動することはできません。 行内の各列には 1 回だけアクセスされます。ただし、例外が 1 つあります。最初に列サイズを確認し、次にデータをフェッチする場合は、列に 2 回アクセスできます。  
   
 > [!NOTE]  
->  **Irow::open**のみ DBGUID_STREAM 型と DBGUID_ 型のオブジェクトに開かれるをサポートしています。  
+>  **IRow::Open** は、DBGUID_STREAM 型と DBGUID_NULL 型のオブジェクトを開くことだけをサポートします。  
   
- 使用して行オブジェクトを取得する**icommand::execute**メソッド、IID_IRow を渡す必要があります。 **IMultipleResults**インターフェイスは、複数の結果セットを処理するために使用する必要があります。 **IMultipleResults**サポート**IRow**と**IRowset**です。 **IRowset**一括操作のために使用します。  
+ **ICommand::Execute** メソッドを使用して行オブジェクトを取得するには、IID_IRow を渡す必要があります。 複数の結果セットを処理するには、**IMultipleResults** インターフェイスを使用する必要があります。 **IMultipleResults** では、**IRow** と **IRowset** がサポートされます。 **IRowset** は、一括操作に使用されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

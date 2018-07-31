@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_prepare |Microsoft ドキュメント
+title: sqlsrv_prepare |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -21,12 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3b376d9fb4333489bf841f04cfb2d429803c6f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 62789cd3b0ab8cea6d744addd35721746a443328
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309681"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982294"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,9 +43,9 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 #### <a name="parameters"></a>パラメーター  
 *$conn*: 作成したステートメントに関連付けられた接続リソースです。  
   
-*$tsql*: 作成したステートメントに対応する TRANSACT-SQL 式です。  
+*$tsql*: 作成されたステートメントに対応する Transact-SQL 式です。  
   
-*$params* [省略可能]:**配列**パラメーター化されたクエリ パラメーターに対応する値。 配列の各要素には、次のいずれかを指定できます。
+*$params* (省略可能): パラメーター化されたクエリのパラメーターに対応する値の**配列**です。 配列の各要素には、次のいずれかを指定できます。
   
 -   リテラル値。  
   
@@ -58,39 +58,39 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     ```  
   
     > [!NOTE]  
-    > クエリ パラメーターとして渡された変数は、値ではなく参照によって渡される必要があります。 たとえば、 `&$myVariable` の代わりに、 `$myVariable`を渡します。 値渡しでパラメーターを持つクエリを実行すると、PHP の警告が発生します。  
+    > クエリ パラメーターとして渡された変数は、値ではなく参照によって渡される必要があります。 たとえば、 `&$myVariable` の代わりに、 `$myVariable`を渡します。 by-value パラメーターを使用してクエリを実行すると、PHP の警告が生成されます。  
   
     次の表では、これらの配列の要素を説明します。  
   
-    |要素|説明|  
+    |要素|[説明]|  
     |-----------|---------------|  
     |*&$value*|リテラル値または PHP の変数への参照。|  
-    |*$direction*[省略可能]|次のいずれかの**sqlsrv_param _\*** パラメーターの方向を示すために使用される定数: **SQLSRV_PARAM_IN**、 **SQLSRV_PARAM_OUT**、 **SQLSRV_PARAM_INOUT**です。 既定値は**SQLSRV_PARAM_IN**です。<br /><br />PHP 定数の詳細については、次を参照してください。[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。|  
-    |*$phpType*[OPTIONAL]|A **sqlsrv_phptype _\*** 戻り値の PHP データ型を指定する定数。|  
-    |*$sqlType*[OPTIONAL]|A **sqlsrv_sqltype _\*** 入力値の SQL Server データ型を指定する定数。|  
+    |*$direction*[省略可能]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
+    |*$phpType*[省略可能]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。|  
+    |*$sqlType*[省略可能]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。|  
   
-*$options* [省略可能]: クエリのプロパティを設定する連想配列。 次の表は、サポートされているキーと対応する値を示します。  
+*$options* (省略可能): クエリのプロパティを設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。  
   
-|Key|サポートされている値|説明|  
+|Key|サポートされている値|[説明]|  
 |-------|--------------------|---------------|  
-|QueryTimeout|正の整数値です。|クエリのタイムアウト (秒単位) を設定します。 既定では、ドライバーは結果を無制限に待機します。|  
-|SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|すべてのストリームの実行時データを送信するドライバーを構成 (**true**)、またはストリーム データをチャンク単位で送信する (**false**)。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
-|Scrollable|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|  
+|QueryTimeout|正の整数値です。|クエリのタイムアウト (秒単位) を設定します。 既定で、ドライバーは、結果を無制限に待機します。|  
+|SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|実行時にすべてのストリーム データを送信する (**true**)、またはストリーム データをチャンク単位で送信する (**false**) ように、ドライバーを構成します。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
+|スクロール可能|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|  
   
 ## <a name="return-value"></a>戻り値  
 ステートメント リソースです。 ステートメント リソースを作成できない場合、 **false** が返されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 パラメーターとして変数を使用するステートメントを準備するときに、変数がステートメントにバインドされます。 つまり、変数の値を更新すると、次回ステートメントを実行する際に、更新されたパラメーター値を使用して実行されます。  
   
-組み合わせ**sqlsrv_prepare**と**sqlsrv_execute**離職ステートメントの準備とステートメントの実行で 2 つに関数呼び出しとパラメーター化クエリを実行するために使用できます。 この関数は、実行ごとに異なるパラメーター値を使用してステートメントを複数回実行する場合に適しています。  
+**sqlsrv_prepare** と **sqlsrv_execute** の組み合わせは、ステートメントの準備とステートメントの実行を 2 つの関数呼び出しに分割し、パラメーター化されたクエリを実行するために使用できます。 この関数は、実行ごとに異なるパラメーター値を使用してステートメントを複数回実行する場合に適しています。  
   
-別の手法の書き込みと読み取り大量の情報では、次を参照してください。 [SQL ステートメントのバッチ](../../odbc/reference/develop-app/batches-of-sql-statements.md)と[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)です。  
+大量の情報の書き込みと読み取りを行う別の手法については、「[SQL ステートメントのバッチ](../../odbc/reference/develop-app/batches-of-sql-statements.md)」および「[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」をご覧ください。  
   
-詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
-次の例では、ステートメントを準備して実行します。 ステートメントを実行すると (を参照してください[sqlsrv_execute](../../connect/php/sqlsrv-execute.md))、フィールドを更新、 *Sales.SalesOrderDetail* AdventureWorks データベースのテーブルです。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、ステートメントを準備して実行します。 このステートメントを実行すると (「[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)」を参照)、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルのフィールドが更新されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -137,7 +137,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>例  
-次の例では、ステートメントを準備し、異なるパラメーター値で再実行する方法を示します。 この例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルの *OrderQty* 列を更新します。 更新されたら、更新プログラムが成功したことを確認するため、データベースが照会されます。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、ステートメントを準備し、異なるパラメーター値で再実行する方法を示します。 この例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルの *OrderQty* 列を更新します。 更新されたら、更新プログラムが成功したことを確認するため、データベースが照会されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -222,7 +222,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。 当てはまります bigint 型の列値の範囲は次の場合は特に、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)です。
+> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](http://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
 
 ## <a name="example"></a>例  
 このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  

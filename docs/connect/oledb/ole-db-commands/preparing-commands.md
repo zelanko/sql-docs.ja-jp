@@ -1,6 +1,6 @@
 ---
-title: コマンドの準備 |Microsoft ドキュメント
-description: SQL Server の OLE DB Driver を使用してコマンドを準備します。
+title: コマンドの準備 |Microsoft Docs
+description: SQL Server の OLE DB ドライバーを使用してコマンドの準備
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b5cefe4cea0c0d156c13239f24c4a97f7c90eeb0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666062"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106018"
 ---
 # <a name="preparing-commands"></a>コマンドの準備
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server の OLE DB Driver では、1 つのコマンドの複数の実行を最適化のコマンドの準備がサポートします。ただし、コマンドの準備は、オーバーヘッドを生成し、コンシューマーは、複数回実行するコマンドを準備する必要はありません。 一般的には、コマンドを 4 回以上実行する場合に準備します。  
+  OLE DB Driver for SQL Server では、1 つのコマンドを最適化された状態で複数回実行できるように、コマンドを準備できます。ただし、コマンドを準備することでオーバーヘッドが生じるので、コンシューマーではコマンドを複数回実行する場合は準備する必要はありません。 一般的には、コマンドを 4 回以上実行する場合に準備します。  
   
  パフォーマンス上の理由から、コマンドの準備は、コマンドが実行されるまで遅延されます。 これは既定の動作です。 準備中のコマンドのエラーは、コマンドまたはメタプロパティ操作が実行されるまで認識されません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SSPROP_DEFERPREPARE プロパティを FALSE に設定すると、この既定の動作を無効にできます。  
   
@@ -43,21 +43,21 @@ ms.locfileid: "35666062"
   
  コマンドによっては、準備してはいけないものがあります。 たとえば、ストアド プロシージャの実行を指定するコマンドや、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャの作成に関して無効なテキストを含むコマンドは、準備しないようにしてください。  
   
- 一時ストアド プロシージャを作成する場合、OLE DB Driver for SQL Server は、ステートメント自体が実行された場合、結果を返す、一時ストアド プロシージャを実行します。  
+ OLE DB Driver for SQL Server では、一時ストアド プロシージャが作成されると、その一時ストアド プロシージャを実行して、そのステートメント自体が実行されたかのように結果を返します。  
   
- 一時ストアド プロシージャの作成は、SQL Server の OLE DB ドライバーによって制御されます、特定の初期化プロパティ SSPROP_INIT_USEPROCFORPREP です。 プロパティ値が SSPROPVAL_USEPROCFORPREP_ON または SSPROPVAL_USEPROCFORPREP_ON_DROP の場合は、SQL Server の OLE DB Driver は、コマンドを準備するときに、ストアド プロシージャを作成しようとします。 ストアド プロシージャの作成は、アプリケーション ユーザーが適切な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 権限を所持している場合に成功します。  
+ 一時ストアド プロシージャの作成は、OLE DB Driver for SQL Server 固有の初期化プロパティである SSPROP_INIT_USEPROCFORPREP によって制御されます。 プロパティ値が SSPROPVAL_USEPROCFORPREP_ON または SSPROPVAL_USEPROCFORPREP_ON_DROP の場合、コマンドが準備されると、OLE DB Driver for SQL Server は、ストアド プロシージャの作成を試みます。 ストアド プロシージャの作成は、アプリケーション ユーザーが適切な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 権限を所持している場合に成功します。  
   
- 一時ストアド プロシージャの作成、ほとんど切断しないコンシューマーの大量のリソースを要求できます**tempdb**、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]システム データベースの一時オブジェクトが作成されます。 コマンドを作成したセッションがのインスタンスへの接続を失ったときにのみ、SQLServerのOLEDBドライバーによって作成される一時ストアドプロシージャが削除されるSSPROP_INIT_USEPROCFORPREPの値がSSPROPVAL_USEPROCFORPREPONの場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. その接続がデータ ソースの初期化時に作成された既定の接続の場合は、データ ソースの初期化が解除されたときのみ、一時ストアド プロシージャが削除されます。  
+ ほとんど切断しないコンシューマーの場合、一時ストアド プロシージャの作成には、**tempdb** の大量のリソースが必要になることがあります。tempdb は、一時オブジェクトが作成される [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム データベースです。 SSPROP_INIT_USEPROCFORPREP の値が SSPROPVAL_USEPROCFORPREP_ ON の場合、コマンドを作成したセッションで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの接続が失われたときにだけ、OLE DB Driver for SQL Server で作成された一時ストアド プロシージャが削除されます。 その接続がデータ ソースの初期化時に作成された既定の接続の場合は、データ ソースの初期化が解除されたときのみ、一時ストアド プロシージャが削除されます。  
   
- SSPROP_INIT_USEPROCFORPREP の値が SSPROPVAL_USEPROCFORPREP_ON_DROP の場合は、OLE DB Driver for SQL Server の一時ストアド プロシージャは、次のいずれかが発生したときに削除されます。  
+ SSPROP_INIT_USEPROCFORPREP の値が SSPROPVAL_USEPROCFORPREP_ON_DROP の場合、次のいずれかの時点で、OLE DB Driver for SQL Server の一時ストアド プロシージャが削除されます。  
   
--   コンシューマーは**icommandtext::setcommandtext**を新しいコマンドを示します。  
+-   コンシューマーが **ICommandText::SetCommandText** を使用して新しいコマンドを指定したとき。  
   
--   コンシューマーは**ICommandPrepare::Unprepare**コマンド テキストを必要がなくなったことを示すためにします。  
+-   コンシューマーが **ICommandPrepare::Unprepare** を使用して、コマンド テキストが必要なくなったことを指定したとき。  
   
 -   コンシューマーが一時ストアド プロシージャを使用して、コマンド オブジェクトへのすべての参照を解放したとき。  
   
- コマンド オブジェクト最大で 1 つ一時ストアド プロシージャは、 **tempdb**です。 既存の一時ストアド プロシージャは、特定のコマンド オブジェクトに関する現在のコマンド テキストを表します。  
+ コマンド オブジェクトは、最大で 1 つだけ一時ストアド プロシージャを **tempdb** に保持します。 既存の一時ストアド プロシージャは、特定のコマンド オブジェクトに関する現在のコマンド テキストを表します。  
   
 ## <a name="see-also"></a>参照  
  [[コマンド]](../../oledb/ole-db-commands/commands.md)  

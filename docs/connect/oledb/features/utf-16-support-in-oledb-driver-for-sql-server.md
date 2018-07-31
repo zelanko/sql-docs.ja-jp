@@ -1,6 +1,6 @@
 ---
-title: SQL Server の OLE DB ドライバーの utf-16 サポート |Microsoft ドキュメント
-description: SQL Server の OLE DB ドライバーの utf-16 のサポート
+title: OLE DB driver for SQL Server の utf-16 のサポート |Microsoft Docs
+description: OLE DB Driver for SQL Server の UTF-16 のサポート
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bcb7393315063102315fdf5062bdfa05ee07282d
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 8374545412ca244e6af643ed10f101a714985da6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611627"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108144"
 ---
-# <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB ドライバーの utf-16 のサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server の UTF-16 のサポート
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  以降で[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]場合、列の結果または出力パラメーターをバインドするときに、固定長バッファーを指定した場合、 **wchar**終端文字が上位サロゲート コード ポイントの前に、バッファーに書き込まれた文字、サロゲート ペア、および場合は、次へ**wchar**文字が下位サロゲート コード ポイントで、OLE DB Driver for SQL Server は、バッファーに上位サロゲート コード ポイントを追加しません。  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降、列の結果または出力パラメーターをバインドするときに固定長バッファーを指定した場合、ターミネータ文字の前にバッファーに書き込まれる **wchar** 文字がサロゲート ペアの上位サロゲート コード ポイントである場合、および次の **wchar** 文字が下位サロゲート コード ポイントである場合は、OLE DB Driver for SQL Server はバッファーに上位サロゲート コード ポイントを追加しません。  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md)   

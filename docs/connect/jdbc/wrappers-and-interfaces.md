@@ -1,5 +1,5 @@
 ---
-title: ラッパーとインターフェイス |Microsoft ドキュメント
+title: ラッパーとインターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,52 +15,52 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a7316e5daa6fa27209a31a07ddf0ace84c191b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852437"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994814"
 ---
 # <a name="wrappers-and-interfaces"></a>ラッパーとインターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 、クラスのプロキシを作成することがサポートするインターフェイスとするのに便利なラッパーに固有の JDBC api 拡張機能にアクセス、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]プロキシ インターフェイス経由します。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、クラスのプロキシを作成できるインターフェイスと、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能に対し、プロキシ インターフェイス経由でアクセスするためのラッパーをサポートします。  
   
 ## <a name="wrappers"></a>ラッパー  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Java.sql.Wrapper インターフェイスをサポートします。 このインターフェイスに固有の JDBC API に access 拡張機能するためのメカニズムを提供、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]プロキシ インターフェイス経由します。  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、java.sql.Wrapper インターフェイスをサポートします。 このインターフェイスには、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能に対し、プロキシ インターフェイス経由でアクセスするためのメカニズムが備わっています。  
   
- Java.sql.Wrapper インターフェイスには、2 つのメソッドの定義: **isWrapperFor**と**unwrap**です。 **IsWrapperFor**メソッドでは、指定した入力オブジェクトがこのインターフェイスを実装するかどうかを確認します。 **Unwrap**メソッドへのアクセスを許可するには、このインターフェイスを実装するオブジェクトを返します、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]固有のメソッドです。  
+ Java.sql.Wrapper インターフェイスには、2 つのメソッドが定義されています: **isWrapperFor**と**unwrap**します。 **isWrapperFor** は、指定された入力オブジェクトに、このインターフェイスが実装されているかどうかをチェックするメソッドです。 **unwrap** メソッドは、このインターフェイスを実装するオブジェクトを返します。このメソッドから返されたオブジェクトを使用することで、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 固有のメソッドにアクセスできます。  
   
- **isWrapperFor**と**unwrap**メソッドに次のように公開されます。  
+ **isWrapperFor**と**unwrap**メソッドは、次のように公開します。  
   
--   [isWrapperFor メソッド&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
+-   [isWrapperFor メソッド &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
   
--   [unwrap メソッド&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
+-   [unwrap メソッド &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
   
--   [isWrapperFor メソッド&#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
+-   [isWrapperFor メソッド &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
   
--   [unwrap メソッド&#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
+-   [unwrap メソッド &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
   
--   [isWrapperFor メソッド&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
+-   [isWrapperFor メソッド &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
   
 -   [unwrap メソッド&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
   
--   [isWrapperFor メソッド&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
+-   [isWrapperFor メソッド &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
   
--   [unwrap メソッド&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
+-   [unwrap メソッド &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
   
--   [isWrapperFor メソッド&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
+-   [isWrapperFor メソッド &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
   
 -   [unwrap メソッド&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
   
--   [isWrapperFor メソッド&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
+-   [isWrapperFor メソッド &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
   
 -   [unwrap メソッド&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>インターフェイス  
- 以降で[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]JDBC Driver 3.0 では、インターフェイスを関連付けられたクラスからドライバー固有のメソッドにアクセスするアプリケーション サーバーを使用できます。 アプリケーション サーバーは、プロキシを公開することを作成することで、クラスをラップすることができます、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-インターフェイスから固有の機能です。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を持つインターフェイスをサポートする、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]固有のメソッドと定数をアプリケーション サーバーは、クラスのプロキシを作成できるようにします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 以降では、関連付けられたクラスからドライバー固有のメソッドにアクセスするアプリケーション サーバーでインターフェイスを使用できます。 アプリケーション サーバーでは、プロキシを作成し、インターフェイスから [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 固有の機能を公開することで、クラスをラップできます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、アプリケーション サーバーがクラスのプロキシを作成できるように、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 固有のメソッドと定数を持つインターフェイスをサポートします。  
   
- 標準の Java インターフェイスのため、同じオブジェクトを使用するには、ドライバー固有の機能にアクセスするラップ解除されたまたはジェネリックでは後から派生[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]機能します。  
+ このインターフェイスは標準の Java インターフェイスから派生するため、オブジェクトをアンラップしてドライバー固有の機能または汎用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 機能にアクセスした後で、同じオブジェクトを使用できます。  
   
  次のインターフェイスが追加されています。  
   
@@ -78,8 +78,8 @@ ms.locfileid: "32852437"
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>Description  
- このサンプルにアクセスする方法、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-DataSource オブジェクトから特定の機能です。 このデータ ソース クラスは、アプリケーション サーバーでラッピングされている可能性があります。 JDBC driver に固有の関数または定数にアクセスするには、ISQLServerDataSource インターフェイスへのデータ ソースのラップを解除し、このインターフェイスで宣言された関数を使用できます。  
+### <a name="description"></a>[説明]  
+ このサンプルは、DataSource オブジェクトから [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 固有の関数にアクセスする方法を示しています。 この DataSource クラスはアプリケーション サーバーによってラップされた可能性があります。 JDBC Driver 固有の関数または定数にアクセスするには、データソースを ISQLServerDataSource インターフェイスにアンラップし、このインターフェイスで宣言された関数を使用できます。  
   
 ### <a name="code"></a>コード  
   

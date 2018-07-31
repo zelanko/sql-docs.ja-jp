@@ -1,5 +1,5 @@
 ---
-title: updateString メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: updateString メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,23 +20,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bbfea2e2daec9b71f54a8c3c1a1a901579d14fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979224"
 ---
 # <a name="updatestring-method-sqlserverresultset"></a>updateString メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された列の更新、**文字列**値。  
+  指定された列を**文字列**の値で更新します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|指定された列の更新、**文字列**列インデックスを指定された値。|  
-|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|指定された列の更新、**文字列**列の名前を指定された値。|  
+|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|渡された列インデックスを使用して、指定された列を**文字列**の値で更新します。|  
+|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|渡された列名を使用して、指定された列を**文字列**の値で更新します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

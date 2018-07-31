@@ -1,5 +1,5 @@
 ---
-title: wasNull メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: wasNull メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 257cc1e1889e0866bcbf0e26b2315593074545fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848497"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979194"
 ---
 # <a name="wasnull-method-sqlserverresultset"></a>wasNull メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +39,12 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true** null である最後の値を読み取る場合です。 それ以外の場合は、 **false**です。  
+ 最後に読み取られた値が null である場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この wasNull メソッドは、java.sql.ResultSet インターフェイスの wasNull メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

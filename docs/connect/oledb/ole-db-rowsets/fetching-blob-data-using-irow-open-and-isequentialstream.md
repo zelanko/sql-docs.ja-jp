@@ -1,6 +1,6 @@
 ---
-title: Irow::open および ISequentialStream を使用して BLOB データのフェッチ |Microsoft ドキュメント
-description: Irow::open および ISequentialStream を使用して BLOB データのフェッチ
+title: IRow::Open と ISequentialStream を使用した BLOB データのフェッチ | Microsoft Docs
+description: IRow::Open と ISequentialStream を使用した BLOB データのフェッチ
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 25482d58c4cac6e6d396171c4a76ccbf30e74f74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 1121e3ae5e0e7ce4926f7908c3aeb9d8f7aa7887
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690085"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109774"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open と ISequentialStream を使用した BLOB データのフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **Irow::open**のみ DBGUID_STREAM 型と DBGUID_ 型のオブジェクトに開かれるをサポートしています。  
+  **IRow::Open** は、DBGUID_STREAM 型と DBGUID_NULL 型のオブジェクトを開くことだけをサポートします。  
   
- 次の関数は**irow::open**と**ISequentialStream**大きなデータをフェッチします。  
+ 次の関数では、**IRow::Open** と **ISequentialStream** を使用して大きなデータをフェッチします。  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,7 +84,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 大規模なデータのバインドまたはを使用して取得できる、 **ISequentialStream**インターフェイスです。 バインドされた列の場合、DBSTATUS_S_TRUNCATED を設定してデータが切り捨てられるかどうかが状態フラグで示されます。  
+ 大きなデータは、**ISequentialStream** インターフェイスを使用してバインドまたは取得できます。 バインドされた列の場合、DBSTATUS_S_TRUNCATED を設定してデータが切り捨てられるかどうかが状態フラグで示されます。  
   
 ## <a name="see-also"></a>参照  
  [IRow を使用した BLOB データのフェッチ](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  

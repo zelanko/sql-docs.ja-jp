@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_begin_transaction |Microsoft ドキュメント
+title: sqlsrv_begin_transaction |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83c62cf6a9ec637573682cc3b0193b173875a42
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309201"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983147"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35309201"
 指定した接続でトランザクションを開始します。 現在のトランザクションには、 **sqlsrv_begin_transaction** の呼び出しの後、 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) または [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)の呼び出しの前に指定した接続で実行されたすべてのステートメントが含まれています。  
   
 > [!NOTE]  
-> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]既定で自動コミット モードにします。 これは、すべてのクエリは、 **sqlsrv_begin_transaction**を使用してトランザクションを開始します。  
+> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、既定で自動コミット モードになっています。 これは、すべてのクエリは、 **sqlsrv_begin_transaction**を使用してトランザクションを開始します。  
   
 > [!NOTE]  
 > 接続でトランザクションが既に開始された後で、 **sqlsrv_begin_transaction** rollback **sqlsrv_commit** または **sqlsrv_rollback**を呼び出すと、 **false** が返され、 *Already in Transaction* エラーがエラー コレクションに追加されます。  
@@ -57,7 +57,7 @@ sqlsrv_begin_transaction( resource $conn)
   
 この例の最初のクエリは、新しい販売注文を AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルに挿入します。 これは、製品 ID 709 の製品 5 つに対する注文です。 2 番目のクエリは、製品 ID 709 の在庫量を 5 つ分減らします。 これらのクエリはどちらも、データベースに注文および製品の可用性の状態を正確に反映する目的で成功する必要があるため、トランザクションに含まれています。  
   
-例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -125,12 +125,12 @@ sqlsrv_close( $conn);
 トランザクションの動作を重視するため、いくつかの推奨されるエラー処理は前の例には含まれていません。 実稼働アプリケーションでは、 **sqlsrv** 関数のすべての呼び出しは、エラーを確認し、それに応じて処理することをお勧めします。  
   
 > [!NOTE]  
-> トランザクションの実行に、埋め込みの Transact SQL を使用しないでください。 たとえば、トランザクションを開始するために、"BEGIN TRANSACTION" を Transact-SQL クエリとして使用してステートメントを実行しないでください。 埋め込みの Transact SQL を使用してトランザクションを実行するときに、必要なトランザクションの動作は保証できません。  
+> トランザクションの実行に、埋め込みの Transact SQL を使用しないでください。 たとえば、トランザクションを開始するために、"BEGIN TRANSACTION" を Transact-SQL クエリとして使用してステートメントを実行しないでください。 埋め込みの Transact-SQL を使用してトランザクションを実行した場合、予測されるトランザクションの動作は保証できません。  
   
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [方法: トランザクションを実行する](../../connect/php/how-to-perform-transactions.md)
 
-[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/overview-of-the-php-sql-driver.md) 
+[SQL Server 用 Microsoft Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md) 
   

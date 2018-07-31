@@ -1,24 +1,23 @@
 ---
 title: SqlPackage.exe |Microsoft Docs
-ms.custom:
-- SSDT
+ms.prod: sql
+ms.technology: ssdt
 ms.date: 2018-06-27
-ms.prod: sql-non-specified
 ms.reviewer: alayu; sstein
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 caps.latest.revision: 53
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4c206a60e0b494d4e060864eefcb50424d316938
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
-ms.translationtype: HT
+ms.openlocfilehash: 15a34b5cc746368edb4f4dbe3e16720da77f9128
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080080"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085414"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -137,7 +136,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
-|**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|このプロパティは、ブロックしているアセンブリを配置計画から削除する際に SqlClr の配置によって使用されます。 既定では、参照しているアセンブリを削除する必要がある場合、ブロックまたは参照しているアセンブリによって、アセンブリの更新がブロックされます。|
+|**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|このプロパティは、ブロックしているアセンブリを配置計画から削除する際に SqlClr の配置によって使用されます。 既定では、参照しているアセンブリを削除する必要がある場合、ブロックまたは参照しているアセンブリによって、アセンブリの更新がブロックされます。|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|互換性がない SQL Server プラットフォームであっても操作を試行するかどうかを指定します。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|このプロパティが true に設定されている場合は、行レベル セキュリティを使用するテーブルに対するデータ モーションをブロックしません。 既定値は false です。|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|変更を配置する前にデータベースをバックアップします。|

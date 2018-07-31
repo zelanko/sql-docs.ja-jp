@@ -1,5 +1,5 @@
 ---
-title: updatesAreDetected メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: updatesAreDetected メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a91c3c3366a2f158b9ecf2f6e4b0d9341a60b2a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016043"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>updatesAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  呼び出して表示される行の更新プログラムを検出できるかどうかを取得、 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)クラスです。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) メソッドを呼び出すことで表示されている行が更新されたことを検出できるかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ public boolean updatesAreDetected(int type)
 #### <a name="parameters"></a>パラメーター  
  *type*  
   
- **Int**を示す結果セットの種類で、java.sql.ResultSet または SQLServerResultSet で定義されている、次の値のいずれかを指定することができます。  
+ 結果セットの種類を示す **int** です。java.sql.ResultSet または SQLServerResultSet での定義に従って、次のいずれかの値を指定できます。  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet の種類  
  TYPE_FORWARD_ONLY  
@@ -62,13 +62,13 @@ public boolean updatesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>戻り値  
- **true**行の更新を検出できる場合は。 それ以外の場合は、 **false**です。  
+ 行の更新を検出できる場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この updatesAreDetected メソッドは、java.sql.DatabaseMetaData インターフェイスの updatesAreDetected メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この updatesAreDetected メソッドは、java.sql.DatabaseMetaData インターフェイスで updatesAreDetected メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

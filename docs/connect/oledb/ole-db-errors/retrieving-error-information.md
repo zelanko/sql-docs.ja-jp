@@ -1,6 +1,6 @@
 ---
-title: エラー情報の取得 |Microsoft ドキュメント
-description: SQL Server の OLE DB Driver を使用してエラー情報を取得します。
+title: エラー情報の取得 |Microsoft Docs
+description: OLE DB ドライバーを使用して、SQL Server のエラー情報の取得
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 514ff67f699b8dc0f3fb70881d24880e84aed390
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 24bb40aa1f6fcaf26f82a27a0601946c2c200cf5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665912"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108074"
 ---
 # <a name="retrieving-error-information"></a>エラー情報の取得
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  この例では、SQL Server の OLE DB ドライバーによって公開されるさまざまなエラー インターフェイスから情報を取得します。  
+  次の例では、OLE DB Driver for SQL Server で公開されるさまざまなエラー インターフェイスから情報を取得します。  
   
 ```  
 // DumpErrorInfo queries MSOLEDBSQL error interfaces, retrieving available  

@@ -1,5 +1,5 @@
 ---
-title: 既定の SQL Server データの種類 |Microsoft ドキュメント
+title: 既定の SQL Server データ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307230"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979574"
 ---
 # <a name="default-sql-server-data-types"></a>既定の SQL Server のデータ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "35307230"
 |ストリーム (エンコード: バイナリではない)|varchar(max)|varchar(max)|  
 |ストリーム (エンコード: バイナリ)|varbinary|varbinary|  
 |Array|サポートされていません。|サポートされていません。|  
-|オブジェクト|サポートされていません。|サポートされていません。|  
+|Object|サポートされていません。|サポートされていません。|  
 |DateTime (1)|DATETIME|サポートされていません。|  
   
 ## <a name="see-also"></a>参照  
@@ -53,5 +53,5 @@ ms.locfileid: "35307230"
 
 [PHP の型](http://php.net/manual/language.types.php)
 
-[データ型 (TRANSACT-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[データ型 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

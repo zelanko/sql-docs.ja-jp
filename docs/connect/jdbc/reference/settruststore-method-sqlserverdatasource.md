@@ -1,5 +1,5 @@
 ---
-title: setTrustStore メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: setTrustStore メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf5d6034fbf2e9ce9d1c1b58909146dbcf56f0c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846737"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042282"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,14 +41,14 @@ public void setTrustStore(java.lang.String trustStore)
 #### <a name="parameters"></a>パラメーター  
  *trustStore*  
   
- A**文字列**パス (ファイル名を含む) を証明書の trustStore ファイルを含むです。  
+ 証明書の trustStore ファイルへのパス (ファイル名を含む) を表す **String** です。  
   
-## <a name="remarks"></a>解説  
- TrustStore プロパティが指定されていないかに設定の null の場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]は、信頼マネージャー ファクトリの検索を使用する証明書ストアの場所を決定するルールに依存します。 既定の SunX509 TrustManagerFactory この順序で次の場所にトラスト マテリアルを見つけようと試みます。  
+## <a name="remarks"></a>Remarks  
+ trustStore プロパティが指定されていないか null に設定されている場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] は、信頼マネージャー ファクトリの検索ルールに従って、使用する証明書ストアを決定します。 既定の SunX509 TrustManagerFactory では、次の場所で、この順序に従ってトラスト マテリアルの検索が行われます。  
   
 -   1. Java 仮想マシン (JVM) システム プロパティの "javax.net.ssl.trustStore" で指定されたファイル  
   
--   2. "\<java-home>/lib/security/jssecacerts" file.  
+-   2. "\<java ホーム >/ライブラリ/セキュリティ/jssecacerts"ファイル。  
   
 -   3. "\<java ホーム >/ライブラリ/セキュリティ/cacerts"ファイル。  
   
@@ -56,7 +56,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  trustStore プロパティが文字列または空の文字列 "" に設定されている場合、ドライバーはその値を使用して trustStore ファイルを検索し、サーバーの SSL 証明書を検証します。  
   
- trustStorePassword プロパティは trustStore プロパティと共に指定でき、その値を trustStore ファイルを開くために使用します。 詳細については、次を参照してください。 [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)です。  
+ trustStorePassword プロパティは trustStore プロパティと共に指定でき、その値を trustStore ファイルを開くために使用します。 詳細については、「[setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

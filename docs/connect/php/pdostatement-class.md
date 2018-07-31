@@ -1,5 +1,5 @@
 ---
-title: PDOStatement クラス |Microsoft ドキュメント
+title: PDOStatement クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7366455a5ba12ff2c987f7337b185e45b48ed44f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308281"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983137"
 ---
 # <a name="pdostatement-class"></a>PDOStatement クラス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ PDOStatement クラスは、ステートメントとステートメントの結�
 PDOStatement {}  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 PDOStatement クラスには、次のメソッドが含まれています。  
   
 -   [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)  
@@ -78,13 +78,13 @@ PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 ## <a name="see-also"></a>参照  
 [PDO_SQLSRV ドライバー リファレンス](../../connect/php/pdo-sqlsrv-driver-reference.md) 
 
-[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/overview-of-the-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[入門 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  
   

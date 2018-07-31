@@ -1,5 +1,5 @@
 ---
-title: Pdostatement::closecursor 呼び出します |Microsoft ドキュメント
+title: PDOStatement::closeCursor |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7795d237ab932ddb2cb7b1e45700f023ca939327
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308701"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019620"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,8 +36,8 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>戻り値  
 成功した場合は true、それ以外の場合は false です。  
   
-## <a name="remarks"></a>コメント  
-MultipleActiveResultSets 接続オプションが false に設定されている場合に、closeCursor は有効になります。  MultipleActiveResultSets 接続オプションの詳細については、次を参照してください。[する方法: 無効にする複数のアクティブな結果セット (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)です。  
+## <a name="remarks"></a>Remarks  
+MultipleActiveResultSets 接続オプションが false に設定されている場合に、closeCursor は有効になります。  MultipleActiveResultSets 接続オプションの詳細については、「[方法: 複数のアクティブな結果セット (MARS) を無効にする](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)」を参照してください。  
   
 closeCursor を呼び出す代わりに、ステートメント ハンドルを null に設定するだけでも同じことができます。  
   

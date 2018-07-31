@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchAll |Microsoft ドキュメント
+title: PDOStatement::fetchAll |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639ff09c2c739e99b974c1b4df7d4963b7959e94
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308991"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983022"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,16 +34,16 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*fetch_style*: 行データの形式を指定する (整数) 記号です。 値の一覧については、「 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 」を参照してください。 PDO::FETCH_COLUMN も使用できます。 PDO::FETCH_BOTH が既定値です。  
+$*fetch_style*: 行データの形式を指定する (整数の) シンボル。 値の一覧については、「 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 」を参照してください。 PDO::FETCH_COLUMN も使用できます。 PDO::FETCH_BOTH が既定値です。  
   
-$*column_index*: 場合に返される列を表す整数値 $*fetch_style* pdo::fetch_column がします。 0 は既定値です。  
+$*column_index*: $*fetch_style* が PDO::FETCH_COLUMN の場合に取得する列を表す整数値。 0 は既定値です。  
   
-$*ctor_args*: クラスのコンス トラクターのパラメーターの配列と $*fetch_style*が pdo::fetch_class または pdo::fetch_obj です。  
+$*ctor_args*: $*fetch_style* が PDO::FETCH_CLASS または PDO::FETCH_OBJ のとき、クラス コンストラクターのパラメーターの配列。  
   
 ## <a name="return-value"></a>戻り値  
 結果セットの残りの行の配列、またはメソッドの呼び出しが失敗した場合は false。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

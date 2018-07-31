@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_field_metadata |Microsoft ドキュメント
+title: sqlsrv_field_metadata |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309391"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991274"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-準備されたステートメントのフィールドのメタデータを取得します。 ステートメントの準備については、「 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 」または「 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)」を参照してください。 なお**sqlsrv_field_metadata**前または実行後、準備されたステートメントで呼び出すことができます。  
+準備されたステートメントのフィールドのメタデータを取得します。 ステートメントの準備については、「 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 」または「 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)」を参照してください。 **sqlsrv_field_metadata** は、実行前または実行後の任意の準備されたステートメントで呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,14 +45,14 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>戻り値  
 配列の **array** 、または **false**。 array は、結果セット内のフィールドごとに 1 つの配列で構成されます。 各サブ配列には、次の表で示すようなキーがあります。 フィールド メタデータの取得中にエラーが発生した場合は、 **false** が返されます。  
   
-|Key|説明|  
+|Key|[説明]|  
 |-------|---------------|  
-|名前|フィールドが対応する列の名前。|  
+|[オブジェクト名]|フィールドが対応する列の名前。|  
 |型|SQL 型に対応する数値。|  
 |サイズ|文字型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) のフィールドの文字数。 バイナリ型 (binary(n)、varbinary(n)、UDT) のフィールドのバイト数。 他の SQL Server データ型の場合は**NULL** 。|  
 |有効桁数|可変精度の型 (real、numeric、decimal、datetime2、datetimeoffset、time) の有効桁数。 他の SQL Server データ型の場合は**NULL** 。|  
 |Scale|可変スケールの型 (numeric、decimal、datetime2、datetimeoffset、time) のスケール。 他の SQL Server データ型の場合は**NULL** 。|  
-|[可]|列が null 値を許容するかどうかを示す列挙値 (**SQLSRV_NULLABLE_YES**)、列値が許容されません (**SQLSRV_NULLABLE_NO**)、列が null 許容の場合は、不明または (**SQLSRV_NULLABLE_UNKNOWN**)。|  
+|[可]|列が null 値許容か (**SQLSRV_NULLABLE_YES**)、null 値許容ではないか (**SQLSRV_NULLABLE_NO**)、または null 値許容かどうかわからないか (**SQLSRV_NULLABLE_UNKNOWN**) を示す列挙値。|  
   
 次の表では、各サブ配列のキーについての詳細を示します (これらの型の詳細については、SQL Server のマニュアルを参照してください)。  
   
@@ -94,7 +94,7 @@ sqlsrv_field_metadata( resource $stmt)
 Nullable キーは yes または no です。  
   
 ## <a name="example"></a>例  
-次の例では、ステートメント リソースを作成した後、フィールド メタデータを取得して表示します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、ステートメント リソースを作成した後、フィールド メタデータを取得して表示します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

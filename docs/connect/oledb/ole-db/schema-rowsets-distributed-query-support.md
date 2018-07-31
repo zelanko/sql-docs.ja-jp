@@ -1,6 +1,6 @@
 ---
-title: 分散クエリのサポート スキーマ行セットで |Microsoft ドキュメント
-description: 分散スキーマ行セット内のクエリのサポート
+title: 分散スキーマ行セット内のクエリのサポート |Microsoft Docs
+description: スキーマ行セットでの分散クエリのサポート
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,21 +21,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c996768d8b2c0aaf2c2f622add33ffdf5aab3e89
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 085a4424272e4d620c4b36fe9ecf44894cb1a33f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611617"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105828"
 ---
-# <a name="schema-rowsets---distributed-query-support"></a>スキーマ行セットの分散クエリのサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---distributed-query-support"></a>スキーマ行セット - 分散クエリのサポート
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  サポートする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散クエリ、SQL Server の OLE DB Driver **IDBSchemaRowset**インターフェイスは、リンク サーバー上のメタデータを返します。  
+  OLE DB Driver for SQL Server の **IDBSchemaRowset** インターフェイスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散クエリをサポートするため、リンク サーバー上のメタデータを返します。  
   
- DBPROPSET_SQLSERVERSESSION の SSPROP_QUOTEDCATALOGNAMES プロパティが VARIANT_TRUE の場合、カタログ名には引用符で囲んだ識別子 ("my.catalog" など) を指定できます。 カタログでは、スキーマ行セットの出力を制限すること、SQL Server の OLE DB Driver は、リンク サーバーとカタログ名を含む 2 部構成の名前を認識します。 次の表に、スキーマ行セットには、2 部構成のカタログ名を指定すると*linked_server ***.*** カタログ*名前付きのリンク サーバーの適切なカタログへの出力を制限します。  
+ DBPROPSET_SQLSERVERSESSION の SSPROP_QUOTEDCATALOGNAMES プロパティが VARIANT_TRUE の場合、カタログ名には引用符で囲んだ識別子 ("my.catalog" など) を指定できます。 OLE DB Driver for SQL Server では、スキーマ行セットの出力をカタログで制限するときに、リンク サーバーとカタログ名を含む 2 部構成の名前が認識されます。 次の表のスキーマ行セットでは、2 部構成のカタログ名を *linked_server ***.*** catalog* の形式で指定することで、名前の付いたリンク サーバーの適切なカタログに出力が制限されます。  
   
 |スキーマ行セット|カタログの制限|  
 |-------------------|-------------------------|  
@@ -49,12 +49,12 @@ ms.locfileid: "35611617"
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  リンク サーバーからのすべてのカタログにスキーマ行セットを制限、構文を使用します。 *linked_server* (ピリオドを区切り文字の一部である名前を指定)。 この構文は、カタログ名の制限で NULL を指定する場合と同じで、カタログをサポートしないデータ ソースをリンク サーバーが示している場合にも使用されます。  
+>  スキーマ行セットをリンク サーバーのすべてのカタログに制限するには、*linked_server* 構文を使用します (ピリオドを区切り文字として名前を指定します)。 この構文は、カタログ名の制限で NULL を指定する場合と同じで、カタログをサポートしないデータ ソースをリンク サーバーが示している場合にも使用されます。  
   
- SQL Server の OLE DB Driver は、リンク サーバーとして登録されている OLE DB データ ソースの一覧を返す、LINKEDSERVERS スキーマ行セットを定義します。  
+ OLE DB Driver for SQL Server は、LINKEDSERVERS スキーマ行セットを定義し、リンク サーバーとして登録された OLE DB データ ソースの一覧を返します。  
   
 ## <a name="see-also"></a>参照  
- [スキーマ行セットのサポート&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
+ [スキーマ行セットのサポート &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS 行セット&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

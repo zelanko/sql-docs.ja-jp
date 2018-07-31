@@ -1,5 +1,5 @@
 ---
-title: SQL Server (OLE DB) リファレンスの OLE DB Driver |Microsoft ドキュメント
+title: OLE DB Driver for SQL Server (OLE DB) リファレンス |Microsoft Docs
 description: OLE DB Driver for SQL Server (OLE DB) リファレンス
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4877a5a4a3965b65bd9a61f33303dabff34af4e6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690165"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105808"
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>SQL Server (OLE DB) インターフェイス用の OLE DB ドライバー
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB Driver for SQL Server (OLE DB) のインターフェイス
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server を実行している 1 つまたは複数のコンピューター上のデータへのアクセスを必要があるコンシューマーにインターフェイスを公開する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 SQL Server の OLE DB Driver は、OLE DB バージョン 2.0 に準拠したプロバイダーです。  
+  OLE DB Driver for SQL Server は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行する 1 台以上のコンピューターのデータにアクセスする必要があるコンシューマーに対して、インターフェイスを公開します。 OLE DB Driver for SQL Server は、OLE DB バージョン 2.0 に準拠したプロバイダーです。  
   
- この OLE DB Driver for SQL Server プログラミング リファレンスは文書化されません。 すべての OLE DB インターフェイスとメソッド、インターフェイスや SQL Server の OLE DB Driver を使用する場合は、プロバイダー固有の動作を示すメソッドのみです。  
+ この OLE DB Driver for SQL Server のプログラミング リファレンスには、すべての OLE DB インターフェイスとメソッドのドキュメントが含まれているわけではありません。OLE DB Driver for SQL Server を使用する際に、プロバイダー固有の動作を行うインターフェイスやメソッドのみを取り上げています。  
   
- フルの詳細については、主要な OLE DB インターフェイスとメソッドを参照してください、 [OLE DB プログラマーズ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45232)です。  
+ OLE DB の中核となるインターフェイスやメソッドの完全な説明については、[OLE DB のプログラマー リファレンス](http://go.microsoft.com/fwlink/?LinkId=45232)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

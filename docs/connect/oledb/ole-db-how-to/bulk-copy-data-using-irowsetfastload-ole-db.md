@@ -1,5 +1,5 @@
 ---
-title: データを一括コピー IRowsetFastLoad (OLE DB) を使用した |Microsoft ドキュメント
+title: IRowsetFastLoad (OLE DB) を使用したデータのコピーを一括 |Microsoft Docs
 description: OLE DB Driver for SQL Server の SQL Server テーブルを使用して IRowsetFastLoad インターフェイスにデータの一括コピー
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,25 +19,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 915a9ba3bf4a9f9937d79cbb9449671ca09b3cb9
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665662"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107724"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad を使用したデータの一括コピー (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   このサンプルでは、IRowsetFastLoad を使用して、レコードをテーブルに一括コピーする方法を示します。  
   
- コンシューマーでは、一括コピーして、OLE DB Driver for SQL Server ドライバー固有のプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定する必要があるの SQL Server の OLE DB Driver に通知します。 プロパティがデータ ソースの設定は、コンシューマーは、SQL Server セッションの OLE DB ドライバーを作成します。 新しいセッションにより、コンシューマーへのアクセスを**IRowsetFastLoad**です。  
+ コンシューマーの一括コピーして、OLE DB Driver for SQL Server ドライバー固有のプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定する必要がある SQL Server の OLE DB Driver に通知します。 のプロパティのセットをデータ ソースでは、コンシューマーは、SQL Server のセッションの OLE DB ドライバーを作成します。 新しいセッションがするコンシューマーへのアクセスを許可**IRowsetFastLoad**します。  
   
- 完全なサンプルが使用可能なを使用する方法を示す**IRowsetFastLoad**のレコードにテーブルに一括コピーします。 このサンプルで 10 個のレコードがテーブルに追加されます**IRFLTable**です。 テーブルを作成する必要があります**IRFLTable**データベースにします。  
+ **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 テーブル **IRFLTable** をデータベース内に作成する必要があります。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページです。  
+ このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -46,24 +46,24 @@ ms.locfileid: "35665662"
   
 1.  データ ソースへの接続を確立します。  
   
-2.  OLE DB Driver for SQL Server ドライバー固有のデータ ソース プロパティである SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定します。 このプロパティを VARIANT_TRUE に設定すると、新しく作成されたセッションでは、コンシューマーへのアクセス**IRowsetFastLoad**です。  
+2.  OLE DB Driver for SQL Server ドライバー固有のデータ ソースのプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定します。 このプロパティを VARIANT_TRUE に設定すると、新しく作成されたセッションを使用して、コンシューマーから **IRowsetFastLoad** にアクセスできるようになります。  
   
-3.  要求するセッションを作成、 **IOpenRowset**インターフェイスです。  
+3.  要求するセッションを作成、 **IOpenRowset**インターフェイス。  
   
-4.  呼び出す**iopenrowset::openrowset** (データの一括コピー操作でコピーする) テーブルからのすべての行を含む行セットを開けません。  
+4.  **IOpenRowset::OpenRowset** を呼び出して、(一括コピー操作によるデータのコピー先の) テーブルのすべての行が含まれる行セットを開きます。  
   
-5.  必要なバインドを使用して、アクセサーの作成を行い**iaccessor::createaccessor**です。  
+5.  必要なバインディングを使用して、アクセサーの作成を行い**iaccessor::createaccessor**します。  
   
 6.  テーブルへのデータのコピー元となる、メモリ バッファーを設定します。  
   
-7.  呼び出す**irowsetfastload::insertrow**一括コピーでデータをテーブルにします。  
+7.  呼び出す**irowsetfastload::insertrow**への一括コピーでデータをテーブル。  
   
 ## <a name="example"></a>例  
  この例では、テーブル IRFLTable に 10 個のレコードを追加します。 テーブル IRFLTable をデータベース内に作成する必要があります。 このサンプルは IA64 ではサポートされていません。  
   
  1 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムをする必要があります変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 名前付きインスタンスに接続する場合から、接続文字列を変更する"かに\\\name"という名前付きインスタンス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、msoledbsql.h を格納するディレクトリが含まれています。 確認してください。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、msoledbsql.h が保存されているディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したテーブルを削除します。  
   

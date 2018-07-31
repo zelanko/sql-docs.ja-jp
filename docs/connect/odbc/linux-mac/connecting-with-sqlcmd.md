@@ -1,5 +1,5 @@
 ---
-title: Sqlcmd による接続 |Microsoft ドキュメント
+title: Sqlcmd による接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,112 +17,112 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853087"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015806"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481)ユーティリティでは、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux や macOS にします。
+[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) ユーティリティは、Linux および macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] で使用できます。
   
-次のコマンドは、Windows 認証 (Kerberos) を使用する方法を示して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]認証では、それぞれします。
+次のコマンドは、Windows 認証 (Kerberos) を使用する方法を示してと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]認証では、それぞれします。
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
 sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
 ```  
   
-## <a name="available-options"></a>使用可能なオプション
+## <a name="available-options"></a>利用可能なオプション
 
 現在のリリースでは、次のオプションを使用できます。  
   
-- -? 表示`sqlcmd`使用します。  
+- -? 表示`sqlcmd`使用量。  
   
-- -a、パケット サイズを要求します。  
+- -a パケット サイズを要求します。  
   
-- -b Terminate バッチ ジョブ エラーがある場合。  
+- -b エラーがある場合にバッチ ジョブを終了します。  
   
 - -c *batch_terminator*バッチ ターミネータを指定します。  
   
 - -C サーバー証明書を信頼します。  
 
-- -d *database_name*問題、 `USE ` *database_name*ステートメントを開始するときに`sqlcmd`です。  
+- -d *database_name*問題、 `USE ` *database_name*ステートメントを開始するときに`sqlcmd`します。  
 
-- -D によりに渡された値、 `sqlcmd` -s オプションのデータ ソース名 (DSN) として解釈されます。 詳細については、次を参照してください。"での DSN サポート`sqlcmd`と`bcp`"このトピックの最後にします。  
+- -D `sqlcmd` -S オプションに渡された値が、データ ソース名 (DSN) として解釈されるようにします。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
   
-- -e は、標準出力デバイス (stdout) を入力スクリプトを記述できます。
+- -e 入力スクリプトを標準出力デバイス (stdout) に書き込みます。
 
-- -E は、信頼関係接続 (統合認証です。) を使用してください。Linux または macOS クライアントから統合認証を使用して信頼関係接続の作成に関する詳細については、次を参照してください。 [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md)です。
+- 信頼関係接続の統合認証を使用します。Linux または macOS のクライアントから統合認証を使用して、信頼関係接続を作成する方法についての詳細については、次を参照してください。 [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md)します。
 
-- -h *number_of_rows*列見出し間に出力する行数を指定します。  
+- -h *number_of_rows*  列ヘッダーの間に出力する行数を指定します。  
   
-- -H では、ワークステーション名を指定します。  
+- -H ワークステーション名を指定します。  
   
-- -i *input_file*[、*input_file*[,...]ストアド プロシージャまたは SQL ステートメントのバッチを含むファイルを識別します。  
+- -i *input_file*[,*input_file*[,…]] SQL ステートメントまたはストアド プロシージャのバッチを含むファイルを指定します。  
   
 - -I セット、`SET QUOTED_IDENTIFIER`接続オプションをオンにします。  
   
-- -k は、削除するか、制御文字を置き換えます。  
+- -k  制御文字を削除するか、置き換えます。  
   
 - **-K * * * application_intent*  
-アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、**ReadOnly** だけです。 場合 **-k**が指定されていない`sqlcmd`AlwaysOn 可用性グループのセカンダリ レプリカへの接続をサポートしていません。 詳細については、次を参照してください。 [ODBC Driver on Linux and macOS - 高可用性と災害復旧](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)です。  
+アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、`sqlcmd` では AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、次を参照してください。 [ODBC Driver on Linux と macOS の高可用性とディザスター リカバリー](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)します。  
   
 > [!NOTE]  
-> **-K** は、CTP for SUSE Linux ではサポートされていません。 ただしを指定できます、 **ApplicationIntent = ReadOnly**に渡される DSN ファイルでキーワード`sqlcmd`です。 詳細については、次を参照してください。"での DSN サポート`sqlcmd`と`bcp`"このトピックの最後にします。  
+> **-K** は、CTP for SUSE Linux ではサポートされていません。 ただし、**に渡される DSN ファイルで**ApplicationIntent=ReadOnly`sqlcmd` キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
   
-- -l*タイムアウト*するまでの秒数を指定、`sqlcmd`サーバーに接続しようとすると、ログインがタイムアウトします。
+- -l*タイムアウト*するまでの秒数を指定する`sqlcmd`サーバーに接続しようとすると、ログインがタイムアウトします。
 
-- -m *error_level*コントロールするエラー メッセージは stdout に送信されます。  
+- -m *error_level* stdout に送信されるエラー メッセージを制御します。  
   
 - **-M * * * multisubnet_failover*  
-[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M**迅速に検出およびフェールオーバー (現在) アクティブなサーバーへの接続を提供します。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を参照してください[ODBC Driver on Linux and macOS - 高可用性と災害復旧](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)です。  
+[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、フェールオーバーを迅速に検出して、(現在) アクティブなサーバーに接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を参照してください[ODBC Driver on Linux と macOS の高可用性とディザスター リカバリー](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)します。  
   
 > [!NOTE]  
-> **-M** は、CTP for SUSE Linux ではサポートされていません。 ただしを指定できます、 **MultiSubnetFailover = Yes**に渡される DSN ファイル内のキーワード`sqlcmd`です。 詳細については、次を参照してください。"での DSN サポート`sqlcmd`と`bcp`"このトピックの最後にします。  
+> **-M** は、CTP for SUSE Linux ではサポートされていません。 ただし、`sqlcmd` に渡される DSN ファイルで **MultiSubnetFailover=Yes** キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
   
 - -N 接続を暗号化します。  
   
-- -o *output_file*からの出力を受信するファイルを識別`sqlcmd`です。  
+- -o *output_file* `sqlcmd` からの出力を受信するファイルを指定します。  
   
-- すべての結果の-p 印刷パフォーマンス統計情報を設定します。  
+- -p  すべての結果セットのパフォーマンス統計を出力します。  
   
-- -P では、ユーザーのパスワードを指定します。  
+- -P  ユーザー パスワードを指定します。  
   
-- -q *commandline_query*クエリを実行するときに`sqlcmd`開始されるが、クエリの実行が終了したら、終了しません。  
+- -q *commandline_query*クエリを実行するときに`sqlcmd`が開始されるが、クエリの実行が完了したときに終了しません。  
 
-- -Q *commandline_query*クエリを実行するときに`sqlcmd`を開始します。 `sqlcmd` クエリの終了時に終了します。  
+- -Q *commandline_query*クエリを実行するときに`sqlcmd`を開始します。 クエリが終了すると `sqlcmd` は終了します。  
 
-- -r stderr にエラー メッセージをリダイレクトします。
+- -r エラー メッセージを stderr にリダイレクトします。
 
-- -R は、クライアントの地域別設定を使用して、文字データに通貨および日付と時刻のデータを変換するドライバーをさせます。 現時点では、en_US (英語 (米国)) 書式設定のみを使用します。
+- -R ドライバーがクライアントの地域別設定を使用して、通貨および日時データを文字データへ変換します。 現時点では、en_US (英語 (米国)) 書式設定のみを使用します。
   
 - -s *column_separator_char*列の区切り文字を指定します。  
 
-- -S [*プロトコル*:]*サーバー*[**、* * * ポート*]  
-インスタンスを指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]に接続するかどうか、-d はまたはを使用する DSN。 ODBC driver on Linux and macOS が -%s が必要です。 なお**tcp**唯一の有効なプロトコルです。  
+- -S [*protocol*:] *server*[**,***port*]  
+インスタンスを指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]に接続するかどうか、-d はまたはを使用する DSN。 Linux および macOS 上の ODBC ドライバーが必要です-%s なお**tcp**は唯一の有効なプロトコルです。  
   
-- -t *query_timeout*コマンド (または SQL ステートメント) がタイムアウトするまでの秒数を指定します。  
+- -t *query_timeout* コマンド (または SQL ステートメント) がタイムアウトになるまでの時間を秒数で指定します。  
   
-- -u を指定してその output_file は input_file の形式に関係なく、Unicode 形式で格納されます。  
+- -u input_file の形式に関係なく、output_file を Unicode 形式で格納するように指定します。  
   
-- -U *login_id*ユーザー ログイン ID を指定します  
+- -U *login_id*ユーザーのログイン ID を指定します  
   
-- -V *error_severity_level* ERRORLEVEL 変数の設定に使用される重大度レベルを制御します。  
+- -V *error_severity_level* ERRORLEVEL 変数を設定するために使用される重大度レベルを制御します。  
   
 - -w *column_width*出力用の画面幅を指定します。  
   
-- W は、列から末尾のスペースを削除します。  
+- -W 列から後続の空白を削除します。  
   
-- -x 変数の代入の無効化します。  
+- -x 変数の代入を無効にします。  
   
 - -X コマンド、スタートアップ スクリプト、および環境変数を無効にします。  
   
-- -y *variable_length_type_display_width*設定、`sqlcmd`スクリプト変数`SQLCMDMAXFIXEDTYPEWIDTH`です。
+- -y *variable_length_type_display_width*設定、`sqlcmd`スクリプト変数`SQLCMDMAXFIXEDTYPEWIDTH`します。
   
-- -Y *fixed_length_type_display_width*設定、`sqlcmd`スクリプト変数`SQLCMDMAXVARTYPEWIDTH`です。
+- -Y *fixed_length_type_display_width*設定、`sqlcmd`スクリプト変数`SQLCMDMAXVARTYPEWIDTH`します。
 
 
 ## <a name="available-commands"></a>使用可能なコマンド
@@ -160,26 +160,26 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 -   :setvar  
   
 ## <a name="unavailable-options"></a>利用できないオプション
-現在のリリースで、次のオプションがご利用いただけません。  
+現在のリリースでは、次のオプションは使用できません。  
 
-- ログイン A[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]専用管理者接続 (DAC) を使用します。 専用管理者接続 (DAC) を作成する方法については、次を参照してください。[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)です。  
+- -A  専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] にログインします。 専用管理者接続 (DAC) を作成する方法については、「[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)」を参照してください。  
   
-- -f *code_page*入力と出力のコード ページを指定します。  
+- -f *code_page* 入力と出力のコード ページを指定します。  
   
-- -L は、ローカルに構成されているサーバー コンピューターおよびネットワーク上でブロードキャストしているサーバー コンピューターの名前を一覧表示します。  
+- -L  ローカルに構成されたサーバー コンピューターと、ネットワーク上でブロードキャストしているサーバー コンピューター名の一覧を表示します。  
   
-- -v を作成する、`sqlcmd`で使用できるスクリプトの変数、`sqlcmd`スクリプト。  
+- -v  `sqlcmd` スクリプトで使用できる `sqlcmd` スクリプト変数を作成します。  
   
-次の代替方法を使用することができます。 別のファイルに追加することができますし、1 つのファイル内のパラメーターに配置します。 これにより、パラメーター ファイルを使用して値を置き換えることができます。 たとえば、という名前のファイルを作成`a.sql`(パラメーター ファイル)、次のコンテンツ。
+次の代替方法を使用することができます。 別のファイルに追加することができますし、1 つのファイル内のパラメーターに配置します。 これにより、パラメーター ファイルを使用して値を置き換えることができます。 たとえば、次のコンテンツを使用して、`a.sql` というファイル (パラメーター ファイル) を作成します。
   
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
   
-という名前のファイルを作成し、`b.sql`交換のパラメーターを使用します。  
+次に、置換のためのパラメーターを使用して、`b.sql` というファイルを作成します。  
   
     select $(ColumnName) from $(TableName)  
 
-コマンドラインで結合`a.sql`と`b.sql`に`c.sql`次のコマンドを使用します。  
+、コマンドラインで組み合わせる`a.sql`と`b.sql`に`c.sql`次のコマンドを使用します。  
   
     cat a.sql > c.sql 
   
@@ -189,13 +189,13 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
     slqcmd -S<…> -P<..> –U<..> -I c.sql  
 
-- -z*パスワード*パスワードを変更します。  
+- ~ z*パスワード*パスワードを変更します。  
   
-- -Z*パスワード*パスワードの変更と終了します。  
+- ~ Z*パスワード*パスワードの変更と終了します。  
 
 ## <a name="unavailable-commands"></a>使用できないコマンド
 
-現在のリリースでは、次のコマンドがご利用いただけません。  
+現在のリリースでは、次のコマンドは利用できません。  
   
 -   :ED  
   
@@ -205,30 +205,30 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>sqlcmd および bcp の DSN サポート
 
-サーバー名の代わりにデータ ソース名 (DSN) を指定することができます、 **sqlcmd**または**bcp** `-S`オプション (または**sqlcmd** : 接続コマンド)-d を指定した場合 -D により**sqlcmd**または**bcp** -s オプションで、DSN に指定されたサーバーに接続します。  
+-D を指定した場合は、**sqlcmd** または **bcp** `-S` オプション (または **sqlcmd**: 接続コマンド) でサーバー名ではなくデータ ソース名 (DSN) を指定できます。 -D により**sqlcmd**または**bcp** -s オプションで、DSN に指定されたサーバーに接続します。  
   
 システム Dsn に格納されている、 `odbc.ini` ODBC SysConfigDir ディレクトリ内のファイル (`/etc/odbc.ini`標準インストールで)。 ユーザー Dsn に格納されている`.odbc.ini`でユーザーのホーム ディレクトリ (`~/.odbc.ini`)。
   
-次のエントリは、Linux または macOS DSN でサポートされます。
+Linux または macOS 上の DSN では、次のエントリがサポートされています。
 
--   **ApplicationIntent = ReadOnly**  
+-   **ApplicationIntent=ReadOnly**  
 
--   **データベース = * * * database_name*  
+-   **Database = * * * database_name*  
   
 -   **Driver for SQL Server ODBC Driver 11 を =** または**Driver for SQL Server ODBC Driver 13 を =**
   
--   **MultiSubnetFailover = Yes**  
+-   **MultiSubnetFailover=Yes**  
   
 -   **サーバー = * * * server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   
-Dsn では DRIVER エントリのみが必要ですが、サーバーに接続する`sqlcmd`または`bcp`サーバー エントリに値が必要です。  
+DSN では DRIVER エントリのみが必要ですが、サーバーに接続するには、`sqlcmd` または `bcp` が SERVER エントリ内の値を必要とします。  
 
-DSN の両方で同じオプションが指定されている場合、`sqlcmd`または`bcp`コマンド ライン コマンド ライン オプションは、DSN で使用される値をオーバーライドします。 例では、DSN に DATABASE エントリと`sqlcmd`コマンドラインが含まれています **-d**に渡された値 **-d**を使用します。 場合**Trusted_Connection = [はい]** DSN、Kerberos 認証を使用し、ユーザー名で指定された (**– U**) とパスワード (**– P**)、指定した場合は無視されます。
+DSN と `sqlcmd` または `bcp` コマンド ラインの両方で同じオプションが指定されている場合は、コマンドライン オプションが、DSN で使用される値をオーバーライドします。 たとえば、DSN に DATABASE エントリがあり、`sqlcmd` コマンドラインに **-d** が含まれる場合、**-d** に渡される値が使用されます。 DSN で **Trusted_Connection=yes** が指定されている場合は、Kerberos 認証が使用され、ユーザー名 (**–U**) とパスワード (**–P**) は無視されます (指定されている場合)。
 
-呼び出す既存のスクリプト`isql`を使用するように変更する`sqlcmd`は次の別名を定義することによって:`alias isql="sqlcmd –D"`です。  
+エイリアス `alias isql="sqlcmd –D"` を定義して、`isql` を呼び出す既存のスクリプトを、`sqlcmd` を使用するように変更できます。  
 
 ## <a name="see-also"></a>参照  
-[使用した接続**bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[**bcp** による接続](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

@@ -1,5 +1,5 @@
 ---
-title: Pdo::begintransaction |Microsoft ドキュメント
+title: Pdo::begintransaction |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307971"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020890"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,14 +36,14 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>戻り値  
 メソッドの呼び出しに成功した場合は true、それ以外の場合は false。  
   
-## <a name="remarks"></a>コメント  
-Pdo::begintransaction で開始されたトランザクションが終了[pdo::commit](../../connect/php/pdo-commit.md)または[pdo::rollback](../../connect/php/pdo-rollback.md)と呼びます。  
+## <a name="remarks"></a>Remarks  
+PDO::beginTransaction で開始されたトランザクションは、[PDO::commit](../../connect/php/pdo-commit.md) または [PDO::rollback](../../connect/php/pdo-rollback.md) が呼び出されたときに終了します。  
   
 PDO::beginTransaction は PDO::ATTR_AUTOCOMMIT の値によって影響を受けず、PDO::ATTR_AUTOCOMMIT の値に影響を与えません。  
   
 前の PDO::beginTransaction が PDO::rollback または PDO::commit で終了する前に PDO::beginTransaction を呼び出すことはできません。  
   
-接続は、このメソッドが失敗した場合に、自動コミット モードを返します。  
+このメソッドが失敗した場合、接続は自動コミット モードに戻ります。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   

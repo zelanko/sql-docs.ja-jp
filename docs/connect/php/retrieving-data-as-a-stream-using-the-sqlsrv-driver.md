@@ -1,5 +1,5 @@
 ---
-title: SQLSRV ドライバーを使用してストリームとしてデータを取得する |Microsoft ドキュメント
+title: SQLSRV ドライバーを使用してデータをストリームとして取得する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be1e84c923dad3ed92c4c2b983a1e5592741eead
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309251"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992894"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用してデータをストリームとして取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-ストリームがあるだけの SQLSRV ドライバーで使用できるようにデータを取得する、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、し、PDO_SQLSRV ドライバーでは使用できません。  
+ストリームとしてのデータの取得は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の SQLSRV ドライバーでのみ使用でき、PDO_SQLSRV ドライバーでは使用できません。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、大量のデータを取得するためにストリームを利用します。 このセクションのトピックでは、データをストリームとして取得する方法について詳しく説明します。  
   
 次の手順に、データをストリームとして取得する方法をまとめています。  
   
-1.  準備し、で TRANSACT-SQL クエリを実行[sqlsrv_query](../../connect/php/sqlsrv-query.md)またはの組み合わせ[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)です。  
+1.  [sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md) の組み合わせで Transact-SQL クエリを準備して実行します。  
   
 2.  [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) を使用して、結果セットの次の行に移動します。  
   
-3.  [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、行からフィールドを取得します。 データを使用して、ストリームとして取得することを指定**SQLSRV_PHPTYPE_STREAM (<encoding>)** 関数呼び出しで 3 番目のパラメーターとして。 次の表は、エンコーディングおよびそれらの記述を指定するために使用する定数を示しています。  
+3.  [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、行からフィールドを取得します。 関数呼び出しの 3 番目のパラメーターとして **SQLSRV_PHPTYPE_STREAM(<encoding>)** を使用して、データをストリームとして取得することを指定します。 次の表は、エンコーディングおよびそれらの記述を指定するために使用する定数を示しています。  
   
-    |SQLSRV 定数|説明|  
+    |SQLSRV 定数|[説明]|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|データは、エンコードまたは変換されず、生のバイト ストリームとしてサーバーから返されます。|  
     |SQLSRV_ENC_CHAR|データは、システムの Windows ロケール設定のコード ページで指定されている 8 ビット文字で返されます。 任意のマルチバイト文字またはこのコード ページにマップされていない文字は、1 バイトの疑問符 (?) 文字に置き換えられます。|  
@@ -46,7 +46,7 @@ ms.locfileid: "35309251"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |---------|---------------|  
 |[SQLSRV ドライバーを使用したストリームでのデータ型のサポート](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|ストリームとして取得できる SQL Server データ型を一覧表示します。|  
 |[方法: SQLSRV ドライバーを使用したストリームとしての文字データの取得](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|文字データをストリームとして取得する方法を説明します。|  

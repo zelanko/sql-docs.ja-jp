@@ -1,5 +1,5 @@
 ---
-title: supportsConvert (int, int) メソッド |Microsoft ドキュメント
+title: supportsConvert (int, int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d482ebf9a5baba07e72f9d9f2bbb446bd3378363
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847947"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023970"
 ---
 # <a name="supportsconvert-method-int-int"></a>supportsConvert (int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,11 +54,11 @@ public boolean supportsConvert(int fromType,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この supportsConvert メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsConvert メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この supportsConvert メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsConvert メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [supportsConvert メソッド&#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   
+ [supportsConvert メソッド (SQLServerDatabaseMetaData)](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData のメンバー](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData クラス](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: '方法: 送信し、Linux および macOS (SQL) で ASCII データの取得 |Microsoft ドキュメント'
+title: '方法: 送信し、Linux および macOS (SQL) での ASCII データの取得 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -17,33 +17,33 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979824"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>方法: 送信し、Linux および macOS で ASCII データの取得 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>方法: Linux および macOS での ASCII データの送信と取得 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-この記事では、ASCII (非 utf-8) のロケールが生成されたか、Linux または macOS システムにインストールされていると仮定します。 
+この記事では、ASCII (UTF 8 ではない) のロケールが生成されたまたは、Linux または macOS システムにインストールされている前提としています。 
 
-送信するか、サーバーに ASCII 文字セットを取得します。  
+送信または ASCII を取得するには、文字は、サーバーを設定します。  
 
-1.  目的のロケールでない場合、システム環境での既定を呼び出すように`setlocale(LC_ALL, $locale)`最初の接続を行う前にします。 PHP setlocale() 関数は、現在のスクリプトのみのロケールを変更して、呼び出される場合、最初の接続を行った後、それを無視してかまいません。
+1.  目的のロケールでない場合、システム環境の既定の設定を呼び出すように`setlocale(LC_ALL, $locale)`最初の接続を行う前にします。 PHP の setlocale() 関数は、現在のスクリプトのみのロケールを変更し、最初の接続を行った後に呼び出される場合は無視可能性があります。
  
-2.  SQLSRV ドライバーを使用する場合を指定すること`'CharacterSet' => SQLSRV_ENC_CHAR`接続としてオプションがこの手順は省略可能なであるため、既定のエンコーディングします。
+2.  SQLSRV ドライバーを使用する場合を指定できます`'CharacterSet' => SQLSRV_ENC_CHAR`接続としてオプションがこの手順は省略可能ですが、既定のエンコーディングします。
 
-3.  PDO_SQLSRV ドライバーを使用する場合は、次の 2 つの方法があります。 まず、接続時に、設定`PDO::SQLSRV_ATTR_ENCODING`に`PDO::SQLSRV_ENCODING_SYSTEM`(接続オプションの設定の例は、次を参照してください。 [:: _ _construct](../../connect/php/pdo-construct.md))。 代わりに、正常に接続後、この行を追加します。 `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  PDO_SQLSRV ドライバーを使用する場合は、2 つの方法があります。 最初に、接続を確立するときに設定`PDO::SQLSRV_ATTR_ENCODING`に`PDO::SQLSRV_ENCODING_SYSTEM`(接続オプションの設定の例は、次を参照してください。 [:: _ _construct](../../connect/php/pdo-construct.md))。 代わりに、正常に接続した後、この行を追加します。 `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-接続リソース (SQLSRV) または接続オブジェクト (PDO_SQLSRV) のエンコーディングを指定する場合、ドライバーは、その他の接続オプション文字列がその同じエンコードを使用すると見なします。 サーバー名およびクエリ文字列も同じ文字セットを使用すると見なします。  
+(SQLSRV) でリソースを接続または接続オブジェクト (PDO_SQLSRV) のエンコードを指定すると、その他の接続オプション文字列には、その同じエンコーディングを使用するドライバーが前提とします。 サーバー名およびクエリ文字列も同じ文字セットを使用すると見なします。  
   
-PDO_SQLSRV ドライバーの既定のエンコーディング utf-8 (pdo::sqlsrv_encoding_utf8) とは、SQLSRV ドライバー異なります。 これらの定数の詳細については、次を参照してください。[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。 
+PDO_SQLSRV ドライバーの既定のエンコーディングは、SQLSRV ドライバーとは異なり、utf-8 (pdo::sqlsrv_encoding_utf8) が。 これらの定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。 
   
 ## <a name="example"></a>例  
-次の例では、接続を確立する前に特定のロケールを指定することによって SQL Server 用 PHP ドライバーを使用してデータを ASCII を送受信する方法を示します。 さまざまな Linux プラットフォームにロケールは、macOS で同じロケールからが異なるということがあります。 たとえば、米国 ISO 8859-1 (ラテン 1) ロケールは`en_US.ISO-8859-1`macOS では、名前は、Linux で`en_US.ISO8859-1`です。
+次の例では、接続を確立する前に特定のロケールを指定することで SQL Server 用 PHP ドライバーを使用してデータを ASCII を送受信する方法を示します。 さまざまな Linux プラットフォームでのロケールは、macOS で同じロケールから異なるということがあります。 たとえば、米国-iso-8859-1 (Latin 1) ロケールは`en_US.ISO-8859-1`macOS では、名前は、Linux で`en_US.ISO8859-1`します。
   
-例では、あると想定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]サーバーにインストールします。 例では、ブラウザーから実行時に、すべての出力はブラウザーに書き込まれます。  
+例では、ある[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]をサーバーにインストールされます。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
   
 ```  
 <?php  

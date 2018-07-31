@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_query |Microsoft ドキュメント
+title: sqlsrv_query |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -21,12 +21,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dd1dac24574484f0424399504f606f6b0917aa8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8f4ecf98769f064c6d25b1aa466d8e4fe27f5ab5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309501"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979964"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,9 +43,9 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 #### <a name="parameters"></a>パラメーター  
 *$conn*: 準備済みステートメントに関連付けられた接続リソースです。  
   
-*$tsql*: 準備済みステートメントに対応する TRANSACT-SQL 式です。  
+*$tsql*: 準備済みステートメントに対応する Transact-SQL 式です。  
   
-*$params* [省略可能]:**配列**パラメーター化されたクエリ パラメーターに対応する値。 配列の各要素には、次のいずれかを指定できます。
+*$params* (省略可能): パラメーター化されたクエリのパラメーターに対応する値の**配列**です。 配列の各要素には、次のいずれかを指定できます。
   
 -   リテラル値。  
   
@@ -57,36 +57,36 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     array($value [, $direction [, $phpType [, $sqlType]]])  
     ```  
   
-    配列の各要素の説明は、次の表には。  
+    次の表で配列の各要素を説明します。  
   
-    |要素|説明|  
+    |要素|[説明]|  
     |-----------|---------------|  
     |*$value*|リテラル値、PHP 変数、または PHP by-reference 変数。|  
-    |*$direction*[省略可能]|次のいずれかの**sqlsrv_param _\*** パラメーターの方向を示すために使用される定数: **SQLSRV_PARAM_IN**、 **SQLSRV_PARAM_OUT**、 **SQLSRV_PARAM_INOUT**です。 既定値は**SQLSRV_PARAM_IN**です。<br /><br />PHP 定数の詳細については、次を参照してください。[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。|  
-    |*$phpType*[OPTIONAL]|A **sqlsrv_phptype _\*** 戻り値の PHP データ型を指定する定数。<br /><br />PHP 定数の詳細については、次を参照してください。[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。|  
-    |*$sqlType*[OPTIONAL]|A **sqlsrv_sqltype _\*** 入力値の SQL Server データ型を指定する定数。<br /><br />PHP 定数の詳細については、次を参照してください。[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。|  
+    |*$direction*[省略可能]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
+    |*$phpType*[省略可能]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
+    |*$sqlType*[省略可能]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
   
-*$options* [省略可能]: クエリのプロパティを設定する連想配列。 サポートされるキーは次のとおりです。  
+*$options* (省略可能): クエリのプロパティを設定する連想配列。 サポートされるキーは次のとおりです。  
   
-|Key|サポートされる値|説明|  
+|Key|サポートされる値|[説明]|  
 |-------|--------------------|---------------|  
-|QueryTimeout|正の整数値です。|クエリのタイムアウト (秒単位) を設定します。 既定では、ドライバーは結果を無制限に待機します。|  
-|SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|すべてのストリームの実行時データを送信するドライバーを構成 (**true**)、またはストリーム データをチャンク単位で送信する (**false**)。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
-|Scrollable|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|  
+|QueryTimeout|正の整数値です。|クエリのタイムアウト (秒単位) を設定します。 既定で、ドライバーは、結果を無制限に待機します。|  
+|SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|実行時にすべてのストリーム データを送信する (**true**)、またはストリーム データをチャンク単位で送信する (**false**) ように、ドライバーを構成します。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
+|スクロール可能|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|  
   
 ## <a name="return-value"></a>戻り値  
-ステートメント リソースです。 場合は、ステートメントを作成または実行すると、 **false**が返されます。  
+ステートメント リソースです。 ステートメントを作成または実行できない場合、**false** が返されます。  
   
-## <a name="remarks"></a>コメント  
-**Sqlsrv_query**関数が 1 回限りのクエリに最適し、特殊な状況を除き、クエリを実行する既定の選択肢をする必要があります。 この関数は、最小限のコードでクエリを実行するための簡素化されたメソッドを提供します。 **Sqlsrv_query**関数はステートメントの準備とステートメントの実行の両方を行うし、パラメーター化クエリを実行するために使用できます。  
+## <a name="remarks"></a>Remarks  
+**sqlsrv_query** 関数は 1 回限りのクエリに最適であり、特殊な状況を除き、クエリを実行するための既定の選択となります。 この関数は、最小限のコードでクエリを実行するための簡素化されたメソッドを提供します。 **sqlsrv_query** 関数はステートメントの準備と実行の両方を行い、パラメーター化されたクエリの実行に使用できます。  
   
-詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
-次の例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルに 1 つの行を挿入します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルに 1 つの行を挿入します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 > [!NOTE]  
-> 次の例では、INSERT ステートメントを使用しての使用例を示すを**sqlsrv_query**任意の Transact SQL ステートメントに 1 回限りのステートメントの実行の概念が適用されます。  
+> 次の例では、1 回限りのステートメントの実行に **sqlsrv_query** を使用する方法を示すために INSERT ステートメントを使用していますが、概念は任意の Transact-SQL ステートメントに当てはまります。  
   
 ```  
 <?php  
@@ -130,7 +130,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>例  
-次の例は、フィールドを更新、 *Sales.SalesOrderDetail* AdventureWorks データベースのテーブルです。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルのフィールドを更新します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -166,7 +166,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。 当てはまります bigint 型の列値の範囲は次の場合は特に、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)です。
+> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](http://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
 
 ## <a name="example"></a>例  
 このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  

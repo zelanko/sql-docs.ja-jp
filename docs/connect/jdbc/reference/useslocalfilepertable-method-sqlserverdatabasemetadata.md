@@ -1,5 +1,5 @@
 ---
-title: usesLocalFilePerTable メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: usesLocalFilePerTable メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a45d7bb5cfe5439108ce0adeb060e48ca94c774
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850407"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039185"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>usesLocalFilePerTable メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ public boolean usesLocalFilePerTable()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**テーブルごとにファイルを使用します。 それ以外の場合は、 **false**です。  
+ テーブルごとにファイルを使用する場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この usesLocalFilePerTable メソッドは、java.sql.DatabaseMetaData インターフェイスの usesLocalFilePerTable メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この usesLocalFilePerTable メソッドは、java.sql.DatabaseMetaData インターフェイスで usesLocalFilePerTable メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

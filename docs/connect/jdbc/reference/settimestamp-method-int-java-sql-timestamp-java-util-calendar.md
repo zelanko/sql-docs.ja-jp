@@ -1,5 +1,5 @@
 ---
-title: setTimestamp (int、java.sql.Timestamp, java.util.Calendar) メソッド |Microsoft ドキュメント
+title: setTimestamp (int, java.sql.Timestamp, java.util.Calendar) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 319972f9c911236ffbcc35c14e7489d0f581328a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843957"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002174"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>setTimestamp (int, java.sql.Timestamp, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setTimestamp(int n,
 #### <a name="parameters"></a>パラメーター  
  *n*  
   
- **Int**パラメーター数を示すです。  
+ パラメーターの番号を示す **int** です。  
   
  *x*  
   
@@ -51,16 +51,16 @@ public final void setTimestamp(int n,
   
  *cal*  
   
- 予定表オブジェクトです。  
+ 暦オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この setTimestamp メソッドは、java.sql.PreparedStatement インターフェイスの setTimestamp メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [setTimestamp メソッド&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   
+ [setTimestamp メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

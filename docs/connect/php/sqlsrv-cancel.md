@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_cancel |Microsoft ドキュメント
+title: sqlsrv_cancel |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c411bf9275f28b13896103565efb2af7dfbb8c66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308981"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983575"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-ステートメントをキャンセルします。 これは、保留中のステートメントの結果を破棄することを意味します。 使用して準備された場合は、この関数が呼び出された後、ステートメントを再実行することができます[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)です。 ステートメントに関連付けられているすべての結果が消費されている場合、この関数を呼び出す必要はありません。  
+ステートメントをキャンセルします。 これは、保留中のステートメントの結果を破棄することを意味します。 この関数が呼び出されると、ステートメントを再実行することができます (ステートメントが [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) を使用して準備された場合)。 ステートメントに関連付けられているすべての結果が消費されている場合、この関数を呼び出す必要はありません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ sqlsrv_cancel( resource $stmt)
 ブール値: 操作が成功した場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="example"></a>例  
-次の例のターゲット、 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)クエリを実行するデータベース、消費し、結果を変数までカウント *$salesTotal*が指定した値に達する。 残りのクエリ結果は破棄されます。 この例では、ローカル コンピューターに SQL Server および AdventureWorks データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースを使用してクエリを実行し、変数 *$salesTotal* が、指定した値に達するまで結果を消費してカウントします。 残りのクエリ結果は破棄されます。 この例では、ローカル コンピューターに SQL Server および AdventureWorks データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -96,7 +96,7 @@ sqlsrv_cancel( $stmt);
 ```  
   
 ## <a name="comments"></a>コメント  
-準備ができたし、の組み合わせを使用して実行するステートメント[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)と[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)再実行することができます**sqlsrv_execute** を呼び出した後**sqlsrv_cancel**です。 実行すると、ステートメント[sqlsrv_query](../../connect/php/sqlsrv-query.md)呼び出した後に再実行することはできません**sqlsrv_cancel**です。  
+[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) と [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) の組み合わせを使用して準備され実行されたステートメントは、**sqlsrv_cancel** を呼び出した後、**sqlsrv_execute** を使用して再実行することができます。 [sqlsrv_query](../../connect/php/sqlsrv-query.md) を使用して実行されたステートメントは、**sqlsrv_cancel** の呼び出し後に再実行することはできません。  
   
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)

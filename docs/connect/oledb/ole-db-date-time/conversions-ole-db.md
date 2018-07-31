@@ -1,5 +1,5 @@
 ---
-title: バインドと変換 (OLE DB) |Microsoft ドキュメント
+title: バインドと変換 (OLE DB) |Microsoft Docs
 description: バインドと変換 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,38 +18,38 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8c653bc4f79e9f54b96fa86fc5c0b65756b23216
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 233c9e7e2aefbdae34f964e95dbeb7d10d55a63d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666022"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105878"
 ---
 # <a name="conversions-ole-db"></a>変換 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このセクションでは、の間で変換する方法を説明**datetime**と**datetimeoffset**値。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
+  このセクションの間で変換する方法を説明します**datetime**と**datetimeoffset**値。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
   
- OLE DB における日付と時刻のリテラルと文字列の形式は、通常 ISO に従うため、クライアントのロケールに依存しません。 これには、標準が OLE オートメーションである DBTYPE_DATE という例外があります。 ただし、OLE DB Driver for SQL Server のみでに変換するか、クライアントからのデータが送信するときの型の間であるため、アプリケーションを強制的に OLE DB Driver for SQL Server に DBTYPE_DATE と文字列の形式の間で変換する方法はありません。 それ以外の場合、文字列では次の形式を使用します (角かっこに囲まれたテキストは省略可能な要素を示します)。  
+ OLE DB における日付と時刻のリテラルと文字列の形式は、通常 ISO に従うため、クライアントのロケールに依存しません。 これには、標準が OLE オートメーションである DBTYPE_DATE という例外があります。 ただし、OLE DB Driver for SQL Server は、クライアントとの間でデータが送信されたときに、型の間のみ変換、するため、アプリケーションが OLE DB Driver for SQL Server に DBTYPE_DATE と文字列の形式の間で変換を強制するための方法はありません。 それ以外の場合、文字列では次の形式を使用します (角かっこに囲まれたテキストは省略可能な要素を示します)。  
   
--   形式**datetime**と**datetimeoffset**文字列は。  
+-   形式**datetime**と**datetimeoffset**文字列です。  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*] [± *hh*:*mm*]  
   
--   形式**時間**文字列は。  
+-   **time** 型の文字列の形式は次のとおりです。  
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   形式**日付**文字列は。  
+-   形式**日付**文字列です。  
   
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 SQL Server の OLE DB ドライバーと同じ動作に依存して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client です。 その結果、SQL Server の OLE DB ドライバーによって実行されるいくつかの変換は、OLE DB 仕様によって異なります。  
+>  以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 同じ動作に依存して、OLE DB Driver for SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 その結果、SQL Server の OLE DB ドライバーによって実行されるいくつかの変換は、OLE DB 仕様によって異なります。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細についてを参照してください「データ形式: 文字列とリテラルをデータする」 [OLE DB の日付と時刻の強化に対するデータ型のサポート](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)です。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「データ形式: 文字列とリテラルをデータする」セクションを参照してください。 [OLE DB の日付と時刻の強化に対するデータ型のサポート](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)します。  
   
  一般的な変換規則を次に示します。  
   
@@ -71,12 +71,12 @@ ms.locfileid: "35666022"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クライアントからサーバーへの変換](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)  
- 間で実行される日付/時刻変換をについて説明します。 SQL Server の OLE DB ドライバーで作成されたクライアント アプリケーションと[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)](またはそれ以降)。  
+ OLE DB Driver for SQL Server を使用して作成されたクライアント アプリケーションと [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降) との間で実行される日付または時刻の変換について説明します。  
   
  [サーバーからクライアントへの変換](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
- 間で実行される日付/時刻の変換について説明[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)](またはそれ以降) と SQL Server の OLE DB ドライバーで作成されたクライアント アプリケーション。  
+ [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降) と OLE DB Driver for SQL Server を使用して作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化機能 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

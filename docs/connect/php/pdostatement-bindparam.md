@@ -1,5 +1,5 @@
 ---
-title: Pdostatement::bindparam |Microsoft ドキュメント
+title: Pdostatement::bindparam |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 683ee4dcfd797f49ccd297f0a88f8fc607ea7aae
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308324"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007141"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,21 +34,21 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*パラメーター*: (混合) パラメーター識別子。 ステートメントを使用して、名前付きプレース ホルダー、パラメーター名を使用して (: 名前)。 疑問符構文を使用して、準備されたステートメントのパラメーターの 1 から始まるインデックスを勧めします。  
+$*parameter*: (混合) パラメーター識別子。 名前付きプレースホルダーを使用するステートメントの場合、パラメーター名 (:name) を使用します。 疑問符構文を使用する準備されたステートメントの場合、これはパラメーターの 1 から始まるインデックスになります。  
   
-&$*変数*: (混合の) SQL ステートメントのパラメーターにバインドする PHP 変数の名前。  
+&$*variable*: SQL ステートメント パラメーターにバインドする PHP 変数の (混合の) 名前。  
   
-$*data_type*: 省略可能な (整数) pdo::param _ * 定数。 既定値は、pdo::param_str です。  
+$*data_type*: 省略可能な (整数の) PDO::PARAM_* 定数。 既定値は PDO::PARAM_STR です。  
   
-$*長さ*: データ型の省略可能な (整数) 長さ。 $ で PDO::param_int またはを使用する場合は、既定のサイズを示すように pdo::sqlsrv_param_out_default_size を指定する*data_type*です。  
+$*length*: データ型の省略可能な (整数の) 長さ。 $*data_type* で PDO::PARAM_INT または PDO::PARAM_BOOL を使用している場合は、既定のサイズを示すように PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE を指定できます。  
   
-$*指定する*: (混合の) ドライバー固有の省略可能なオプションです。 たとえば、PDO::SQLSRV_ENCODING_UTF8 と指定すると、UTF-8 でエンコードされた文字列として列を変数にバインドできます。  
+$*指定する*: 省略可能な (混合の) ドライバー固有のオプション。 たとえば、PDO::SQLSRV_ENCODING_UTF8 と指定すると、UTF-8 でエンコードされた文字列として列を変数にバインドできます。  
   
 ## <a name="return-value"></a>戻り値  
 成功した場合は TRUE、それ以外の場合は FALSE です。  
   
-## <a name="remarks"></a>コメント  
-型 varbinary、binary、または varbinary (max) のサーバー列に null データをバインドするときは、バイナリ エンコード (pdo::sqlsrv_encoding_binary) を使用して $a を指定する必要があります*を指定する*です。 エンコード定数の詳細については、次を参照してください。[定数](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。  
+## <a name="remarks"></a>Remarks  
+varbinary、binary、または varbinary(max) の各型のサーバー列に null データをバインドする場合は、$*driver_options* を使用してバイナリ エンコード (PDO::SQLSRV_ENCODING_BINARY) を指定する必要があります。 エンコード定数の詳細については、「[定数](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 」を参照してください。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
 
@@ -103,7 +103,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> 場合は、値がの範囲外に至る可能性があります、bigint 型出力パラメーターをバインドするときに、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)、:param_int ように pdo::sqlsrv_param_out_default_size にされる可能性があります「範囲外の値」例外が発生します。 したがって、既定の pdo::param_str を代わりに使用され、21 は、最大で、結果の文字列のサイズを指定します。 これは、bigint 値の負の符号を含め、桁の最大数です。 
+> 場合の範囲外の値が最終的には bigint 型に出力パラメーターをバインドするときに、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)、「値が範囲外」例外ように pdo::sqlsrv_param_out_default_size で:param_int の使用があります。 そのため、代わりに既定の pdo::param_str と 21 では最大で結果の文字列のサイズを指定します。 任意の bigint 値、負の符号を含め、桁の最大数になります。 
 
 ## <a name="example"></a>例  
 このコード サンプルは、入力/出力パラメーターを使用する方法を示しています。  
@@ -125,7 +125,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。 当てはまります bigint 型の列値の範囲は次の場合は特に、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)です。
+> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](http://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
 
 ## <a name="example"></a>例  
 このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  

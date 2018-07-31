@@ -32,7 +32,7 @@ ms.locfileid: "37246132"
   
 3.  接続**Cleanse Supplier Data**と**Pick Correct and Corrected Records**青色コネクタを使用します。  
   
-     ![Cleanse Supplier Data に正しいと修正済みの選択]-> [](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "Cleanse Supplier データが正しいと修正済みの選択]-> [")  
+     ![Cleanse Supplier Data に正しいと修正済みの選択](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "Cleanse Supplier データが正しいと修正済みの選択")  
   
 4.  ダブルクリック**Pick Correct and Corrected Records**で、**データ フロー**タブ。  
   

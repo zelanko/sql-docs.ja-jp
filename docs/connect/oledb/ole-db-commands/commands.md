@@ -1,6 +1,6 @@
 ---
-title: コマンド |Microsoft ドキュメント
-description: OLE DB Driver for SQL Server でのコマンド
+title: コマンド |Microsoft Docs
+description: OLE DB Driver for SQL Server のコマンド
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a518a4a718007e1c1efb3b7c53732beef7d7c0ab
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 4fcc1b32e3e27fc70b5d96585194152621fc1f7b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665392"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108004"
 ---
 # <a name="commands"></a>コマンド
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server を公開、 **ICommand**インターフェイスとコマンド オブジェクトのこのセクションで説明されます。  
+  OLE DB Driver for SQL Server は、**ICommand** インターフェイスとコマンド オブジェクトを公開します。それらについては、以下のセクションで説明されています。  
   
 -   [コマンドの構文](../../oledb/ole-db-commands/command-syntax.md)  
   

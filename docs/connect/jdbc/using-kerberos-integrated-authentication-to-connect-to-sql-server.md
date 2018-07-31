@@ -1,5 +1,5 @@
 ---
-title: Kerberos を使用して統合 SQL Server への接続に認証 |Microsoft ドキュメント
+title: Kerberos 統合認証による SQL Server への接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,86 +14,86 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e2019cba57870cf9e22bdeb4d27f52c055fcdc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9967b31d9b021147d02c981af54474f8967fe406
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852707"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085454"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  以降で[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]、アプリケーションで使用できます、 **authenticationScheme**タイプ 4 Kerberos 統合認証を使用してデータベースに接続したいことを示すために、接続プロパティです。 参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)接続のプロパティについての詳細。 Kerberos の詳細については、次を参照してください。 [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)です。  
+  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降、アプリケーションは、**authenticationScheme** 接続プロパティを使用して、タイプ 4 の Kerberos 統合認証を使用してデータベースに接続することを示すことができます。 参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)接続のプロパティの詳細についてはします。 Kerberos の詳細については、次を参照してください。 [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)します。  
   
- Java で統合認証を使用する場合**Krb5LoginModule**を使用して、モジュールを構成する[クラス Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html)です。  
+ Java **Krb5LoginModule** で統合認証を使用する場合、[Krb5LoginModule クラス](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html)を使用してモジュールを構成できます。  
   
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] IBM Java Vm 用に、次のプロパティを設定します。  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、IBM Java VM 用に次のプロパティが設定されます。  
   
 -   **useDefaultCcache = true**  
   
 -   **moduleBanner = false**  
   
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]他のすべての Java Vm 用に、次のプロパティを設定します。  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、他のすべての Java VM 用に次のプロパティが設定されます。  
   
 -   **useTicketCache = true**  
   
 -   **doNotPrompt = true**  
   
-## <a name="remarks"></a>解説  
- 前のバージョン[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]、アプリケーションが統合認証 (Kerberos または NTLM を使用して、使用可能なに合わせて) を指定できますを使用して、 **integratedSecurity**接続プロパティおよび参照することによって**sqljdbc_auth.dll**」の説明に従って、[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)です。  
+## <a name="remarks"></a>Remarks  
+ 前のバージョン[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]、アプリケーションは、統合認証 (Kerberos または NTLM を使用して、によって提供される) を指定できますを使用して、 **integratedSecurity**接続プロパティおよび参照することによって**sqljdbc_auth.dll**」の説明に従って、[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)します。  
   
- 以降で[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]、アプリケーションで使用できます、 **authenticationScheme** Kerberos を使用してデータベースに接続したいことを示すために、接続プロパティは、ピュア Java Kerberos を使用して認証を統合実装:  
+ [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降、アプリケーションは、**authenticationScheme** 接続プロパティを使用して、ピュア Java Kerberos 実装を使用した Kerberos 統合認証を使用してデータベースに接続することを示すことができます。  
   
--   統合認証を使用する場合**Krb5LoginModule**を指定する必要があります、 **integratedSecurity = true**接続プロパティです。 指定します、 **authenticationScheme = java Kerberos**接続プロパティです。  
+-   統合認証を使用する場合**Krb5LoginModule**を指定する必要があります、 **integratedSecurity = true**接続プロパティです。 指定し、 **authenticationScheme = java Kerberos**接続プロパティです。  
   
 -   による統合認証を使用し続ける**sqljdbc_auth.dll**を指定するだけ**integratedSecurity = true**接続プロパティ (および必要に応じて**authenticationScheme =NativeAuthentication**)。  
   
--   指定した場合**authenticationScheme = java Kerberos**もを指定しないで**integratedSecurity = true**、ドライバーは無視されます、 **authenticationScheme**接続プロパティと、接続文字列でユーザー名とパスワードの資格情報を検索していると見なします。  
+-   指定した場合**authenticationScheme = java Kerberos**も指定しないで**integratedSecurity = true**、ドライバーは無視されます、 **authenticationScheme**接続プロパティが、接続文字列にユーザー名とパスワードの資格情報を検索する期待します。  
   
- データ ソースを使用して、接続を作成する、setAuthenticationScheme を使用して認証スキームをプログラムで設定して (必要に応じて) を使用して Kerberos 接続用の SPN を設定**setServerSpn**です。  
+ データソースを使用して接続を作成する場合、setAuthenticationScheme を使用して認証スキームをプログラムで設定できます。また、必要に応じて、**setServerSpn** を使用して Kerberos 接続用の SPN を設定できます。  
   
- Kerberos 認証をサポートするために、新しいロガー com.microsoft.sqlserver.jdbc.internals.KerbAuthentication が追加されました。 詳細については、次を参照してください。[ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)です。  
+ Kerberos 認証をサポートするために、新しいロガー com.microsoft.sqlserver.jdbc.internals.KerbAuthentication が追加されました。 詳しくは、「[ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)」をご覧ください。  
   
  Kerberos を構成する場合は、次のガイドラインに従ってください。  
   
-1.  設定**AllowTgtSessionKey** Windows のレジストリで 1 にします。 詳細については、次を参照してください。 [Kerberos プロトコルのレジストリ エントリおよび KDC 構成キー Windows Server 2003 で](http://support.microsoft.com/kb/837361)です。  
+1.  設定**AllowTgtSessionKey** Windows 用のレジストリ内の 1 にします。 詳しくは、「[Kerberos protocol registry entries and KDC configuration keys in Windows Server 2003](http://support.microsoft.com/kb/837361)」(Windows Server 2003 における Kerberos プロトコルのレジストリ エントリおよび KDC 構成キー) をご覧ください。  
   
 2.  Kerberos 構成 (UNIX 環境の krb5.conf) で環境の適切な領域および KDC が指定されていることを確認します。  
   
 3.  kinit を使用するかまたはドメインにログインして、TGT キャッシュを初期化します。  
   
-4.  ときに使用するアプリケーションを**authenticationScheme = java Kerberos**オペレーティング システムを Windows Vista または Windows 7 が実行され、標準ユーザー アカウントを使用する必要があります。 ただし、管理者のアカウントでアプリケーションを実行する場合は、アプリケーションを管理者権限で実行する必要があります。  
+4.  **authenticationScheme=JavaKerberos** を使用するアプリケーションを Windows Vista または Windows 7 オペレーティング システムで実行する場合は、標準ユーザー アカウントを使用する必要があります。 ただし、管理者のアカウントでアプリケーションを実行する場合は、アプリケーションを管理者権限で実行する必要があります。  
   
 > [!NOTE]  
->  ServerSpn 接続属性には、Microsoft JDBC Drivers 4.2 によって以降のみサポートされます。  
+>  serverSpn 接続属性は、Microsoft JDBC Driver 4.2 以降でのみサポートされています。  
   
 ## <a name="service-principal-names"></a>サービス プリンシパル名  
  サービス プリンシパル名 (SPN) は、クライアントがサービスのインスタンスを一意に識別するための名前です。  
   
- 使用して、SPN を指定することができます、 **serverSpn**接続プロパティ、または単に、ドライバー (既定値) をビルドします。  このプロパティは、の形式で:"MSSQLSvc/fqdn:port@REALM"fqdn は完全修飾ドメイン名、port はポート番号、および領域とは大文字で SQL Server の Kerberos 領域をここでします。  Kerberos 構成の既定の領域が、サーバーと同じ領域であり、既定で含まれていない場合には、このプロパティの領域部分は省略可能です。  ここで、Kerberos 構成で既定の領域がサーバーの領域とは異なる領域であり、その領域間の認証のシナリオをサポートする場合には、serverSpn プロパティを使用して SPN を設定する必要があります。  
+ **serverSpn** 接続プロパティを使用して SPN を指定できますが、ドライバーで自動的に作成することもできます (既定)。  このプロパティの形式は "MSSQLSvc/fqdn:port\@REALM" です。ここで、fqdn は完全修飾ドメイン名、port はポート番号、REALM は大文字で表記された SQL Server の Kerberos 領域です。  Kerberos 構成の既定の領域が、サーバーと同じ領域であり、既定で含まれていない場合には、このプロパティの領域部分は省略可能です。  ここで、Kerberos 構成で既定の領域がサーバーの領域とは異なる領域であり、その領域間の認証のシナリオをサポートする場合には、serverSpn プロパティを使用して SPN を設定する必要があります。  
   
- たとえば、SPN のようになります:"MSSQLSvc/some-server.zzz.corp.contoso.com:1433@ZZZZ.CORP.CONTOSO.COM"。  
+ たとえば、SPN のようになります。:"MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ します。CORP.CONTOSO.COM"  
   
  サービス プリンシパル名 (SPN) の詳細については、以下を参照してください。  
   
 -   [SQL Server で Kerberos 認証を使用する方法](http://support.microsoft.com/kb/319723)  
   
--   [SQL Server で Kerberos を使用](http://go.microsoft.com/fwlink/?LinkId=207814)  
+-   [SQL Server での Kerberos の使用](http://go.microsoft.com/fwlink/?LinkId=207814)  
 
 > [!NOTE]  
-> 6.2.0 がレルム Kerberos の間の適切な使用の JDBC ドライバーの解放前に、明示的に設定する必要がありますが、 **serverSpn**です。
+> 6.2.0 を領域 Kerberos の間の適切な使用を JDBC ドライバーのリリース前に、明示的に設定する必要があります、 **serverSpn**します。
 >
-> 6.2.0 時点でリリースでは、ドライバーを構築できる、 **serverSpn**既定では、クロス レルム Kerberos を使用する場合でもです。 1 つを使用できますが**serverSpn**明示的にすぎます。 
+> 6.2.0 時点でリリースでは、ドライバーを構築することになります、 **serverSpn**交差領域の Kerberos を使用する場合でも、既定でします。 1 つを使用できますが**serverSpn**明示的にすぎます。 
   
 ## <a name="creating-a-login-module-configuration-file"></a>ログイン モジュール構成ファイルの作成  
  オプションで Kerberos 構成ファイルを指定できます。 構成ファイルを指定しない場合、次の設定が有効になります。  
   
  Sun JVM  
- com.sun.security.auth.module.Krb5LoginModule 必要 useTicketCache = true  
+ com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true;  
   
  IBM JVM  
- com.ibm.security.auth.module.Krb5LoginModule 必要 useDefaultCcache = true  
+ com.ibm.security.auth.module.Krb5LoginModule required useDefaultCcache = true;  
   
  ログイン モジュール構成ファイルを作成する場合は、次の形式に従ってファイルを作成する必要があります。  
   
@@ -118,12 +118,12 @@ SQLJDBCDriver {
   
  ドライバーは、指定されたログイン モジュールを使用してログインを試行する前に、既存の資格情報を使用できる場合はそれを使用します。 したがって、特定のコンテキストで Subject.doAs メソッドを使用してコードを実行した場合、Subject.doAs 呼び出しに渡された資格情報を使用して接続が作成されます。  
   
- 詳細については、次を参照してください。 [JAAS ログイン構成ファイル](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html)と[クラス Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html)です。  
+ 詳しくは、「[JAAS Login Configuration File](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html)」(JAAS ログイン構成ファイル) および「[Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html)」(Krb5LoginModule クラス) をご覧ください。  
 
- Microsoft JDBC Driver 6.2 以降は、接続プロパティ jaasConfigurationName を使用してログイン モジュール構成ファイルの名前を渡されることができます必要に応じて、これにより、独自のログイン構成を持つ各接続
+ Microsoft JDBC Driver 6.2 以降は接続プロパティ jaasConfigurationName を使用してログイン モジュール構成ファイルの名前を渡されることができます必要に応じて、これにより、独自のログインの構成を持つ各接続。
  
 ## <a name="creating-a-kerberos-configuration-file"></a>Kerberos 構成ファイルの作成  
- Kerberos 構成ファイルの詳細については、次を参照してください。 [Kerberos の要件](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html)です。  
+ Kerberos の構成ファイルについて詳しくは、「[Kerberos Requirements](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html)」(Kerberos の要件) をご覧ください。  
   
  サンプル ドメイン構成ファイルの例を次に示します。ここで、YYYY および ZZZZ は、サイトのドメイン名です。  
   
@@ -153,7 +153,7 @@ forwardable = yes
 ```  
   
 ## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>ドメイン構成ファイルおよびログイン モジュール構成ファイルの有効化  
- ドメイン構成ファイルを有効にするには、-Djava.security.krb5.conf を使用します。 ログイン モジュール構成ファイルを有効にすることができます **-Djava.security.auth.login.config**です。  
+ ドメイン構成ファイルを有効にするには、-Djava.security.krb5.conf を使用します。 ログイン モジュール構成ファイルを有効にすることができます **-Djava.security.auth.login.config**します。  
   
  たとえば、アプリケーションを起動するときに、次のコマンド ラインを使用できます。  
   
@@ -165,12 +165,12 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 ## <a name="verifying-that-sql-server-can-be-accessed-via-kerberos"></a>Kerberos を介して SQL Server にアクセスできるかどうかの確認  
  SQL Server Management Studio で次のクエリを実行します。  
   
- **sys.dm_exec_connections から auth_scheme を選択している session_id = @@spid**  
+ **sys.dm_exec_connections から auth_scheme を選択して、session_id =\@\@spid**  
   
  このクエリを実行するために必要な権限があることを確認してください。  
 
 ## <a name="constrained-delegation"></a>制約付き委任
-Microsoft JDBC Driver 6.2 以降は、ドライバーは、Kerberos 制約付き委任をサポートします。 Org.ietf.jgss.GSSCredential オブジェクトとしてで委任された資格情報を渡すことが、これらの資格情報は、ドライバーで接続を確立するために使用されます。 
+Microsoft JDBC Driver 6.2 以降は、ドライバーは Kerberos の制約付き委任をサポートします。 Org.ietf.jgss.GSSCredential オブジェクトとしての委任された資格情報を渡すことが、これらの資格情報は、ドライバーで接続を確立するために使用されます。 
 
 ```
 Properties driverProperties = new Properties();
@@ -182,11 +182,11 @@ Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 ```
 
 ## <a name="kerberos-connection-using-principal-names-and-password"></a>プリンシパル名とパスワードを使用して Kerberos 接続
-Microsoft JDBC Driver 6.2 以降は、ドライバーは接続文字列に Kerberos プリンシパル名とパスワードを使用して接続を渡すを確立できます。 
+Microsoft JDBC Driver 6.2 以降は、ドライバーは接続文字列で Kerberos プリンシパル名とパスワードを使用して接続が渡されるを確立できます。 
 ```
 jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
 ```
-Krb5.conf ファイルで設定 default_realm にユーザーが属している場合、ユーザー名プロパティによる領域は不要です。 ときに`userName`と`password`と共に設定されている`integratedSecurity=true;`と`authenticationScheme=JavaKerberos;`プロパティ、接続が確立されるユーザー名の値を持つに沿って Kerberos プリンシパルとして指定されたパスワードを使用します。
+Krb5.conf ファイルで設定 default_realm にユーザーが属している場合、username プロパティによる領域は不要です。 ときに`userName`と`password`と共に設定されている`integratedSecurity=true;`と`authenticationScheme=JavaKerberos;`プロパティ、接続を確立するにはユーザー名の値を持つに沿って Kerberos プリンシパルとして指定されたパスワードを使用しています。
  
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

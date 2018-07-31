@@ -1,5 +1,5 @@
 ---
-title: Sql ステートメントを使用して |Microsoft ドキュメント
+title: Sql ステートメントを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac74ec1c202341d6de099d97e2b7c719c2f72d27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851867"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978624"
 ---
 # <a name="using-statements-with-sql"></a>SQL でのステートメントの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  データを操作する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースを使用して、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]およびインライン SQL ステートメントがさまざまなクラスを使用することができます。 使用するクラスは、実行する SQL ステートメントの種類によって異なります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] およびインライン SQL ステートメントを使用して [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] データベースのデータを操作する場合は、さまざまなクラスを使用できます。 使用するクラスは、実行する SQL ステートメントの種類によって異なります。  
   
- 使用して、SQL ステートメントに IN パラメーターが含まれていない場合、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)クラス場合は、パラメーターが含まれて、使用、 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)クラスです。  
+ SQL ステートメントに IN パラメーターが含まれない場合は、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスを使用しますが、IN パラメーターが含まれる場合は [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを使用します。  
   
 > [!NOTE]  
->  両方に含まれる SQL ステートメントを使用する必要があり、OUT パラメーターにする必要がありますストアド プロシージャとして実装を使用して呼び出すこと、 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)クラスです。 詳細については、ストアド プロシージャを使用して、次を参照してください。[ストアド プロシージャを使用してステートメント](../../connect/jdbc/using-statements-with-stored-procedures.md)です。  
+>  IN パラメーターと OUT パラメーターの両方を含む SQL ステートメントを使用する必要がある場合は、それらをストアド プロシージャとして実装し、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスを使用して呼び出す必要があります。 詳細については、ストアド プロシージャを使用して、次を参照してください。[ストアド プロシージャを使用してステートメント](../../connect/jdbc/using-statements-with-stored-procedures.md)します。  
   
- 次のセクションでは、さまざまなシナリオでデータの操作についての説明、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL ステートメントを使用してデータベース。  
+ 以下のセクションでは、SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースのデータを処理するさまざまなシナリオについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[パラメーターのない SQL ステートメントの使用](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|パラメーターを含まない SQL ステートメントの使用方法について説明します。|  
 |[パラメーターがある SQL ステートメントの使用](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|パラメーターを含む SQL ステートメントの使用方法について説明します。|  

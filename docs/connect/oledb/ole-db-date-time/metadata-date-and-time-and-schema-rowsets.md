@@ -1,6 +1,6 @@
 ---
-title: 日付と時刻、およびスキーマ行セット |Microsoft ドキュメント
-description: 日付と時刻、およびスキーマ行セット
+title: 日付と時刻、およびスキーマ行セットの |Microsoft Docs
+description: 日付、時刻、スキーマ行セット
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c501274d977b924cb0dd478db26f9e39e399f61f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e2e1192cb0f69f72075a9e6164b91def61c80871
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666422"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109654"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>メタデータ - 日付と時刻、およびスキーマ行セット
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="metadata---date-and-time-and-schema-rowsets"></a>メタデータ - 日付、時刻、スキーマ行セット
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -36,11 +36,11 @@ ms.locfileid: "35666422"
 |列の型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |日付|DBTYPE_DBDATE|Clear|0|  
-|time|DBTYPE_DBTIME2|Set|0..7|  
+|time|DBTYPE_DBTIME2|オン|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
+|datetime2|DBTYPE_DBTIMESTAMP|オン|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|オン|0..7|  
   
  COLUMN_FLAG では、DBCOLUMNFLAGS_ISFIXEDLENGTH は日付/時刻型に対して常に true になり、次のフラグは常に false になります。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "35666422"
   
  COLUMN_FLAGS に用意されている新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE を使用すると、アプリケーションは、DATA_TYPE が DBTYPE_DBTIMESTAMP である列のサーバーの種類を判断できます。 サーバーの種類を識別するには、DATETIME_PRECISION も使用する必要があります。  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE は有効なに接続しているときにのみ、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]以降のサーバー。 下位レベルのサーバーに接続されている場合、DBCOLUMNFLAGS_SS_ISFIXEDSCALE は未定義となります。  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE は [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降のサーバーに接続されている場合にのみ有効です。 下位レベルのサーバーに接続されている場合、DBCOLUMNFLAGS_SS_ISFIXEDSCALE は未定義となります。  
   
 ## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 行セット  
  DATA_TYPE には COLUMNS スキーマ行セットと同じ値が格納され、TYPE_NAME にはサーバーの種類が格納されます。  
@@ -96,7 +96,7 @@ ms.locfileid: "35666422"
 |BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE (ただし、次のいずれかが当てはまる場合を除く)<br /><br /> 下位レベルのサーバーに接続されているクライアントの場合。<br /><br /> データ型の互換性の接続プロパティで、互換性レベルを 80 に指定している場合。|VARIANT_TRUE (ただし、次のいずれかが当てはまる場合を除く)<br /><br /> 下位レベルのサーバーに接続されているクライアントの場合。<br /><br /> データ型の互換性の接続プロパティで、互換性レベルを 80 に指定している場合。|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
- OLE DB 定義だけ MINIMUM_SCALE と MAXIMUM_SCALE 数値と 10 進数の種類では、OLE DB Driver for SQL Server を使用してこれらの列の時間、datetime2、datetimeoffset は非標準です。  
+ OLE DB では、MINIMUM_SCALE と MAXIMUM_SCALE が numeric 型および decimal 型用にしか定義されないため、OLE DB Driver for SQL Server でこれらの列を time、datetime2、および datetimeoffset で使用することは標準的ではありません。  
   
 ## <a name="see-also"></a>参照  
  [メタデータ&#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  

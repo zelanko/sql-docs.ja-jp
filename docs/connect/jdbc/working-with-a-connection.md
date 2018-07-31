@@ -1,5 +1,5 @@
 ---
-title: 接続の操作 |Microsoft ドキュメント
+title: 接続の操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbcd46cd9da1ab189aeafe77c7275aa103ea51f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060273"
 ---
 # <a name="working-with-a-connection"></a>接続の操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  次のセクションに接続するさまざまな方法の例を提供する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースを使用して、 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)のクラス、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]です。  
+  以下のセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] の [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに接続するさまざまな方法の例を示します。  
   
 > [!NOTE]  
->  接続に問題がある場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]JDBC ドライバーを使用して、参照してください[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)その修正方法の推奨事項についてです。  
+>  JDBC ドライバーを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] への接続で問題が発生した場合は、「[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)」で提案されている修正方法を参照してください。  
   
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>DriverManager クラスを使用した接続の作成  
- 接続を作成するための最も簡単な方法、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースは、JDBC ドライバーの読み込みおよび次のように、DriverManager クラスの getConnection メソッドを呼び出します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースへの接続を最も効率的に作成するには、JDBC ドライバーを読み込み、次のように DriverManager クラスの getConnection メソッドを呼び出します。  
   
 ```  
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
@@ -41,10 +41,10 @@ Connection con = DriverManager.getConnection(connectionUrl);
  この手法では、渡された URL で正常に接続できるドライバーを示す一覧から、最初の使用可能なドライバーを使用して、データベース接続を作成します。  
   
 > [!NOTE]  
->  Sqljdbc4.jar クラス ライブラリを使用する場合、アプリケーションでは、明示的に登録または Class.forName メソッドを使用して、ドライバーを読み込みに必要はありません。 DriverManager クラスの getConnection メソッドを呼び出したときに、一連の登録済みの JDBC ドライバーから適切なドライバーがあります。 詳細については、「JDBC ドライバーの使用」を参照してください。  
+>  sqljdbc4.jar クラス ライブラリを使用する場合は、アプリケーションから Class.forName メソッドを使用してドライバーの登録または読み込みを明示的に行う必要はありません。 DriverManager クラスの getConnection メソッドが呼び出されたときに、一連の登録済みの JDBC ドライバーから適切なドライバーがあります。 詳細については、「JDBC ドライバーの使用」を参照してください。  
   
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>SQLServerDriver クラスを使用した接続の作成  
- 使用して、データベース接続を作成するには、ドライバーの一覧で、特定のドライバーをドライバー マネージャーを指定する必要、[接続](../../connect/jdbc/reference/connect-method-sqlserverdriver.md)のメソッド、 [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md)クラスは、次のようにします。  
+ ドライバーの一覧で DriverManager 用に特定のドライバーを指定する必要がある場合は、次のように [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) クラスの [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) メソッドを使用して、データベース接続を作成できます。  
   
 ```  
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
@@ -53,7 +53,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 ```  
   
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>SQLServerDataSource クラスを使用した接続の作成  
- 使用して接続を作成する必要がある場合、 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)クラスを呼び出す前に、クラスのさまざまな setter メソッドを使用できます、 [getConnection](../../connect/jdbc/reference/getconnection-method.md)メソッドは、次のようにします。  
+ [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスを使用して接続を作成する必要がある場合は、次のように、クラスのさまざまな setter メソッドを使用してから [getConnection](../../connect/jdbc/reference/getconnection-method.md) メソッドを呼び出すことができます。  
   
 ```  
 SQLServerDataSource ds = new SQLServerDataSource();  
@@ -84,7 +84,7 @@ Connection con = ds.getConnection();
   
  `String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"`  
   
- 複数の接続 URL の例では、次を参照してください。[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)です。  
+ 複数の接続 URL の例では、次を参照してください。[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)します。  
   
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>カスタムのログイン タイムアウトを持つ接続の作成  
  サーバーの負荷またはネットワーク トラフィックを調整する必要がある場合は、次のように、特定のログイン タイムアウト値を秒数で指定した接続を作成できます。  
@@ -97,14 +97,14 @@ Connection con = ds.getConnection();
  `String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"`  
   
 ## <a name="closing-a-connection"></a>接続を閉じる  
- 明示的に呼び出すことによって、データベース接続を閉じることができます、[閉じる](../../connect/jdbc/reference/close-method-sqlserverconnection.md)次のように、SQLServerConnection クラスのメソッド。  
+ 次のように、SQLServerConnection クラスの [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) メソッドを呼び出すことで、データベース接続を明示的に閉じることができます。  
   
  `con.close();`  
   
- これは、SQLServerConnection オブジェクトが使用すると、データベース リソースを解放を返したり接続されるシナリオで、接続プールにします。  
+ これにより、SQLServerConnection オブジェクトが使用しているデータベース リソースが解放されます。また、接続がプールされるシナリオでは、接続が接続プールに戻されます。  
   
 > [!NOTE]  
->  Close メソッドを呼び出してもロールバックされます保留中のトランザクション。  
+>  また、close メソッドを呼び出すと、保留中のトランザクションもすべてロールバックされます。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

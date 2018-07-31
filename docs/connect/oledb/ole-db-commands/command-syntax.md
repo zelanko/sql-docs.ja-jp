@@ -1,6 +1,6 @@
 ---
-title: コマンドの構文 |Microsoft ドキュメント
-description: コマンド構文とストアド プロシージャ
+title: コマンドの構文 |Microsoft Docs
+description: コマンドの構文とストアド プロシージャ
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a3ea215d3596842503517a9485187ba2b1368059
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8e7fab68cc4a945bc34c64b2b832b182c734d927
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665752"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105938"
 ---
 # <a name="command-syntax"></a>コマンドの構文
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server の OLE DB Driver は、DBGUID_SQL マクロで指定されているコマンドの構文を認識します。 OLE DB ドライバーの SQL Server の指定子ことを示します ODBC SQL、ISO の混在と[!INCLUDE[tsql](../../../includes/tsql-md.md)]有効な構文です。 たとえば、次の SQL ステートメントでは、ODBC SQL のエスケープ シーケンスを使用して、LCASE 文字列関数を指定しています。  
+  OLE DB Driver for SQL Server は、DBGUID_SQL マクロで指定されたコマンド構文を認識します。 OLE DB Driver for SQL Server での指定子ことを示しますの ODBC SQL、ISO、ステートメントの混在と[!INCLUDE[tsql](../../../includes/tsql-md.md)]は有効な構文です。 たとえば、次の SQL ステートメントでは、ODBC SQL のエスケープ シーケンスを使用して、LCASE 文字列関数を指定しています。  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -43,10 +43,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- SQL Server の OLE DB Driver は、コマンドのテキストとして指定されたときに正常にステートメントのいずれかの形式を処理します。  
+ OLE DB Driver for SQL Server では、どちらの形式のステートメントも、コマンドのテキストとして指定された際には、正常に処理されます。  
   
 ## <a name="stored-procedures"></a>ストアド プロシージャ  
- 実行するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コマンドは SQL Server、OLE DB ドライバーを使用してストアド プロシージャは、コマンド テキストで、ODBC CALL エスケープ シーケンスを使用します。 SQL Server の OLE DB Driver は、リモート プロシージャ コールのメカニズムを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コマンドの処理を最適化します。 たとえば次のような場合、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント形式ではなく、ODBC SQL ステートメントをコマンド テキストとして使用することをお勧めします。  
+ OLE DB Driver for SQL Server のコマンドを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを実行するときには、コマンド テキストで ODBC CALL エスケープ シーケンスを使用します。 この操作を行うと、OLE DB Driver for SQL Server では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のリモート プロシージャ コールのメカニズムを使用して、コマンド処理が最適化されます。 たとえば次のような場合、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント形式ではなく、ODBC SQL ステートメントをコマンド テキストとして使用することをお勧めします。  
   
 -   ODBC SQL  
   

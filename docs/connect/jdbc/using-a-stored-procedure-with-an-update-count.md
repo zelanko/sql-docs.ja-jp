@@ -1,5 +1,5 @@
 ---
-title: 更新数がストアド プロシージャの使用 |Microsoft ドキュメント
+title: 更新数があるストアド プロシージャの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d858b255d5bdd6ce74509d36f4d0497220350694
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851707"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040820"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>更新数があるストアド プロシージャの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  データを変更する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ストアド プロシージャを使用して、データベース、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供、 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)クラスです。 SQLServerCallableStatement クラスを使用するは、データベースに含まれているデータを変更するストアド プロシージャを呼び出すし、更新数とも呼びます、影響を受ける行の数のカウントを返します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベース内のデータをストアド プロシージャを使用して変更する用途向けに、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスが用意されています。 SQLServerCallableStatement クラスを使用すると、データベースに格納されているデータに変更を加え、影響を受けた行数 (更新数) を返すストアド プロシージャを呼び出すことができます。  
   
- いずれかを使用して、ストアド プロシージャを呼び出すことができますし、SQLServerCallableStatement クラスを使用して、ストアド プロシージャへの呼び出しを設定した後、[実行](../../connect/jdbc/reference/execute-method-sqlserverstatement.md)または[executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)メソッドです。 ExecuteUpdate メソッドを返します、 **int** execute メソッドは、ストアド プロシージャでは、影響を受ける行の数を表す値は変わりません。 Execute メソッドを使用する場合に、影響を受ける行の数のカウントを取得するを呼び出すことができます、 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)ストアド プロシージャを実行した後のメソッドです。  
+ SQLServerCallableStatement クラスを使用してストアド プロシージャに対する呼び出しを設定すると、[execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドまたは [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) メソッドのいずれかを使用して、ストアド プロシージャを呼び出すことができます。 executeUpdate メソッドではストアド プロシージャの影響を受けた行数を示す **int** 値が返されますが、execute メソッドではこの値が返されません。 execute メソッドを使用して影響を受けた行数を取得する場合は、ストアド プロシージャの実行後に [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) メソッドを呼び出すことができます。  
   
 > [!NOTE]  
->  JDBC ドライバで、発生した可能性があるすべてのトリガが返した更新数を含む、すべての更新数を返す場合、lastUpdateCount 接続文字列プロパティを "false" に設定します。 LastUpdateCount プロパティの詳細については、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)です。  
+>  JDBC ドライバで、発生した可能性があるすべてのトリガが返した更新数を含む、すべての更新数を返す場合、lastUpdateCount 接続文字列プロパティを "false" に設定します。 LastUpdateCount プロパティの詳細については、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)します。  
   
- 例として、次のテーブルとストアド プロシージャを作成し、サンプル データを挿入、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで、次に示すテーブルおよびストアド プロシージャを作成し、サンプル データを挿入します。  
   
 ```  
 CREATE TABLE TestTable   
@@ -50,7 +50,7 @@ END;
 INSERT INTO dbo.TestTable (Col2, Col3) VALUES ('b', 10);  
 ```  
   
- 次の例では、開いている接続を[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベースが関数に渡された、UpdateTestTable ストアド プロシージャを呼び出して、execute メソッドを使用し、getUpdateCount メソッドが使用される行の数を返すストアド プロシージャを受けます。  
+ 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続を関数に渡し、execute メソッドを使用して UpdateTestTable ストアド プロシージャを呼び出し、次に getUpdateCount メソッドを使用して、ストアド プロシージャによって影響を受けた行数を取得しています。  
   
  [!code[JDBC#UsingSprocWithUpdateCount1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_0_1.java)]  
   

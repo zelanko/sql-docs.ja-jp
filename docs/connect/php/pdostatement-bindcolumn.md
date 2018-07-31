@@ -1,5 +1,5 @@
 ---
-title: Pdostatement::bindcolumn |Microsoft ドキュメント
+title: Pdostatement::bindcolumn |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308451"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006894"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,20 +34,20 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*列*: 列 (1 から始まるインデックス) または、結果セット内の列の名前の (混合の) の数。  
+$*column*: 結果セットの列 (1 から始まるインデックス) の (混合の) 番号または列の名前。  
   
-&$*param*: (混合の) 列をバインドする PHP 変数の名前。  
+&$*param*: 列をバインドする PHP 変数の (混合の) 名前。  
   
-$*型*: pdo::param _ * 定数によって表される、パラメーターの省略可能なデータ型。  
+$*type*: (省略可能) PDO::PARAM_* 定数で表されたパラメーターのデータ型。  
   
 $*maxLen*: (省略可能) 整数。Microsoft Drivers for PHP for SQL Server では使用されません。  
   
-$*driverdata*: 省略可能な混合ドライバーのパラメーターです。 たとえば、PDO::SQLSRV_ENCODING_UTF8 と指定すると、UTF-8 でエンコードされた文字列として列を変数にバインドできます。  
+$*driverdata*: (省略可能) ドライバーに対する混合パラメーター。 たとえば、PDO::SQLSRV_ENCODING_UTF8 と指定すると、UTF-8 でエンコードされた文字列として列を変数にバインドできます。  
   
 ## <a name="return-value"></a>戻り値  
 成功した場合は TRUE、それ以外の場合は FALSE。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

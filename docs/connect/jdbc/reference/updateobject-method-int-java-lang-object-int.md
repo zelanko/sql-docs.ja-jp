@@ -1,5 +1,5 @@
 ---
-title: updateObject (int、java.lang.Object, int) メソッド |Microsoft ドキュメント
+title: updateObject (int, java.lang.Object, int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f690ba95d40a2e9e43881b0e1c82d497cd5e26d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036170"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>updateObject (int, java.lang.Object, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された列の更新、**オブジェクト**列のインデックスと小数点以下桁数を指定された値。  
+  渡された列インデックスおよび小数点以下桁数を使用して、指定された列を **Object** 値で更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ public void updateObject(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *インデックス*  
+ *index*  
   
  列インデックスを示す **int** です。  
   
  *obj*  
   
- **オブジェクト**値。  
+ **Object** 値。  
   
  *scale*  
   
@@ -57,7 +57,7 @@ public void updateObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>参照  
- [updateObject メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
+ [updateObject メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

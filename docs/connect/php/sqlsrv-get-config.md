@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_get_config |Microsoft ドキュメント
+title: sqlsrv_get_config |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60437df28456c949d3a03cb58cef89136acbdf2d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309411"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991284"
 ---
 # <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,8 +45,8 @@ sqlsrv_get_config( string $setting )
 ## <a name="return-value"></a>戻り値  
 *$setting* パラメーターで指定された設定の値。 無効な設定を指定した場合は、 **false** が返されて、エラーがエラー コレクションに追加されます。  
   
-## <a name="remarks"></a>コメント  
-場合**false**によって返される**sqlsrv_get_config**、呼び出す必要があります[sqlsrv_errors](../../connect/php/sqlsrv-errors.md)エラーが発生した場合、または場合を決定する**false**は、指定された設定の値、 *$setting*パラメーター。  
+## <a name="remarks"></a>Remarks  
+**false** が **sqlsrv_get_config** によって返された場合は、[sqlsrv_errors](../../connect/php/sqlsrv-errors.md) を呼び出して、エラーが発生したかどうか、または **false** が *$setting* パラメーターで指定した設定の値かどうかを、判定する必要があります。  
   
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  

@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ (OLE DB) を実行している |Microsoft ドキュメント
+title: ストアド プロシージャ (OLE DB) の実行 |Microsoft Docs
 description: ストアド プロシージャの実行 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,31 +18,31 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611887"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108964"
 ---
-# <a name="stored-procedures---running"></a>ストアド プロシージャの実行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>ストアド プロシージャ - 実行
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  ステートメントを実行するときに、データ ソースではなく実行または直接クライアント アプリケーション内のステートメントを準備する) でストアド プロシージャの呼び出しを提供できます。  
+  ステートメントの実行時、データ ソースに対して (クライアント アプリケーション内で直接ステートメントを実行または準備せずに) ストアド プロシージャを呼び出すと、次のような利点があります。  
   
--   パフォーマンスを向上します。  
+-   高いパフォーマンス。  
   
--   ネットワーク オーバーヘッドの軽減します。  
+-   ネットワーク オーバーヘッドの軽減。  
   
 -   一貫性の向上  
   
 -   正確性の向上  
   
--   機能を追加します。  
+-   機能の追加。  
   
- OLE DB Driver for SQL Server をサポートしている 3 つのメカニズムを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すストアド プロシージャを使用します。  
+ OLE DB Driver for SQL Server は 3 つのメカニズムをサポートしているを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すストアド プロシージャを使用します。  
   
 -   プロシージャ内のすべての SELECT ステートメントで結果セットを生成する。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "35611887"
   
 -   プロシージャに整数のリターン コードを含めることができる。  
   
- アプリケーションは、すべてのストアド プロシージャからこれらの出力を処理できる必要があります。  
+ アプリケーションでは、ストアド プロシージャからのこれらすべての出力を処理できる必要があります。  
   
- 結果の処理中には、さまざまな OLE DB プロバイダーからさまざまなタイミングで出力パラメーターと戻り値が返されます。 OLE DB Driver for SQL Server が発生した場合、出力パラメーターとリターン コードはまで提供されません、コンシューマーが取得またはストアド プロシージャによって返される結果セットを取り消します。 これらのリターン コードと出力パラメーターは、サーバーからの最後の TDS パケットで返されます。  
+ 結果の処理中には、さまざまな OLE DB プロバイダーからさまざまなタイミングで出力パラメーターと戻り値が返されます。 OLE DB Driver for SQL Server の場合、出力パラメーターとリターン コードは、コンシューマーがストアド プロシージャから返された結果セットを取得または取り消すまで提供されません。 これらのリターン コードと出力パラメーターは、サーバーからの最後の TDS パケットで返されます。  
   
  プロバイダーでは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを使用して、出力パラメーターと戻り値を返すタイミングを報告します。 このプロパティは、DBPROPSET_DATASOURCEINFO プロパティ セットに含まれています。  
   
- SQL Server の OLE DB Driver は、DBPROPVAL_OA_ATROWRELEASE を示すリターン コードと出力パラメーターは返されていないこと、結果セットが処理または解放されるまでに、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを設定します。  
+ OLE DB Driver for SQL Server は、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを DBPROPVAL_OA_ATROWRELEASE に設定することにより、結果セットが処理または解放されるまでリターン コードと出力パラメーターが返されないことを示します。  
   
 ## <a name="see-also"></a>参照  
  [ストアド プロシージャ](../../oledb/ole-db/stored-procedures.md)  

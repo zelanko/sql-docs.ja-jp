@@ -1,5 +1,5 @@
 ---
-title: サポート リソースを Microsoft Drivers for PHP for SQL Server |Microsoft ドキュメント
+title: Microsoft drivers for PHP for SQL Server リソースをサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 125d571c30a201aa3934ea8e4d1e69b2cc88b263
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309861"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019270"
 ---
-# <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>サポート リソースを Microsoft Drivers for PHP for SQL Server
+# <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server リソースをサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を使用するアプリケーションを開発するときに役立つリソースを一覧表示します。  
@@ -31,32 +31,32 @@ ms.locfileid: "35309861"
 ## <a name="includessdriverphpincludesssdriverphpmdmd-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] サポート リソース  
 最新のドキュメントについては、 [の「](../../connect/php/microsoft-php-driver-for-sql-server.md) Microsoft SQL Server 用 PHP Driver [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]」を参照してください。  
   
-ピア ツー ピアのサポートを参照してください、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp)です。  
+ピア ツー ピアのサポートについては、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp)を参照してください。  
   
-フィードバックを提供、質問、開発チームが検討して新機能について、次を参照してください。、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [チームのブログ](https://blogs.msdn.microsoft.com/sqlphp/)です。  
+フィードバックの提供や、質問、開発チームが検討していることを確認するには、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [チームのブログ](https://blogs.msdn.microsoft.com/sqlphp/)を参照してください。  
   
-[Github のソース コードを SQL Server 用 Microsoft PHP driver](https://github.com/Microsoft/msphpsql)  
+[Microsoft PHP driver for SQL Server の Github のソース コード](https://github.com/Microsoft/msphpsql)  
   
 ## <a name="sql-servertransact-sql-support-resources"></a>SQL Server/Transact SQL サポート リソース  
-SQL Server と Transact SQL のドキュメントはあります[SQL Server のドキュメント](../../sql-server/sql-server-technical-documentation.md)です。  
+SQL Server と Transact-SQL のドキュメントは、「[SQL Server のドキュメント](../../sql-server/sql-server-technical-documentation.md)」にあります。  
   
-ピア ツー ピアのサポートを参照してください、 [MSDN SQL Server フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home)です。  
+ピア ツー ピアのサポートは、[MSDN SQL Server フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home)を参照してください。  
   
 ## <a name="internet-information-services-iis-support-resources"></a>インターネット インフォメーション サービス (IIS) サポート リソース  
-最新の IIS ニュースを参照してください。 [IIS ホーム](https://www.iis.net/)です。  
+最新の IIS ニュースについては、[IIS ホーム](https://www.iis.net/)を参照してください。  
   
-ピア ツー ピアのサポートを参照してください、 [IIS フォーラム](https://forums.iis.net/)です。  
+ピア ツー ピアのサポートについては、[IIS フォーラム](https://forums.iis.net/)を参照してください。  
   
 ## <a name="php-support-resources"></a>PHP サポート リソース  
 [PHP for Windows のドキュメント](http://windows.php.net/)  
   
-PHP に関する最新情報については、次を参照してください。 [ http://www.php.net/](http://www.php.net)です。  
+PHP に関する最新情報については、次を参照してください。 [ http://www.php.net/](http://www.php.net)します。  
   
-PHP に関するドキュメントを参照してください。 [ http://www.php.net/docs.php](http://www.php.net/docs.php)です。  
+PHP に関するドキュメントを参照してください。 [ http://www.php.net/docs.php](http://www.php.net/docs.php)します。  
   
 ## <a name="microsoft-customer-support"></a>マイクロソフト カスタマー サポート  
-に関するサポートを[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]に接続できる[Microsoft サポート](https://support.microsoft.com/contactus/)で求めるまたは、 [Github プロジェクト ページ](https://github.com/Microsoft/msphpsql/issues)です。  
+サポートに関する質問に関連する、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、連絡先[Microsoft サポート](https://support.microsoft.com/contactus/)で求めるまたは、 [Github プロジェクト ページ](https://github.com/Microsoft/msphpsql/issues)。  
   
 ## <a name="see-also"></a>参照  
-[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/overview-of-the-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)
   

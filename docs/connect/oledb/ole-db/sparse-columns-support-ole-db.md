@@ -1,5 +1,5 @@
 ---
-title: スパース列のサポート (OLE DB) |Microsoft ドキュメント
+title: スパース列のサポート (OLE DB) |Microsoft Docs
 description: スパース列のサポート (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,22 +14,22 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5acd9fc1a368f9f7701468887263129495b046e1
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: d2f4cd73d4d20d4b54573b300c5006bebd5fb6eb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611927"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109004"
 ---
 # <a name="sparse-columns-support-ole-db"></a>スパース列のサポート (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このトピックでは、スパース列の SQL Server のサポートの OLE DB ドライバーに関する情報を提供します。 スパース列の詳細については、次を参照してください。 [OLE DB Driver for SQL Server でスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)です。 サンプルについては、次を参照してください。[表示列およびカタログ メタデータのスパース列の&#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)です。  
+  このトピックでは、スパース列の SQL Server サポート用の OLE DB ドライバーについて説明します。 スパース列の詳細については、次を参照してください。 [OLE DB Driver for SQL Server でスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)します。 サンプルについては、次を参照してください。[表示列およびカタログ メタデータのスパース列の&#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)します。  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB ステートメント メタデータ  
- [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降では、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET を使用できます。 ある列に対するこの値を設定する必要があります**column_set**値。 DBCOLUMNFLAGS フラグを使用して取得できます、 *dwFlags* icolumnsinfo::getcolumnsinfo と icolumnsrowset::getcolumnsrowset によって返される行セットの DBCOLUMN_FLAGS 列のパラメーターです。  
+ [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降では、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET を使用できます。 この値は、**column_set** 値である列に対して設定する必要があります。 DBCOLUMNFLAGS フラグを使用して取得できます、 *dwFlags* icolumnsinfo::getcolumnsinfo と icolumnsrowset::getcolumnsrowset によって返される行セットの DBCOLUMN_FLAGS 列のパラメーター。  
   
 ## <a name="ole-db-catalog-metadata"></a>OLE DB カタログ メタデータ  
  DBSCHEMA_COLUMNS に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の列が 2 つ追加されています。  
@@ -37,33 +37,33 @@ ms.locfileid: "35611927"
 |列名|データ型|値およびコメント|  
 |-----------------|---------------|---------------------|  
 |SS_IS_SPARSE|DBTYPE_BOOL|列がスパース列の場合は VARIANT_TRUE、それ以外の場合は VARIANT_FALSE になります。|  
-|SS_IS_COLUMN_SET|DBTYPE_BOOL|列がスパースの場合**column_set**列で、これは、値 VARIANT_TRUE、それ以外の VARIANT_FALSE です。|  
+|SS_IS_COLUMN_SET|DBTYPE_BOOL|列がスパース **column_set** 列の場合は VARIANT_TRUE、それ以外の場合は VARIANT_FALSE になります。|  
   
- また、2 つのスキーマ行セットが追加されています。 これらの行セットは、構造は DBSCHEMA_COLUMNS と同じですが、返される内容が異なります。 DBSCHEMA_COLUMNS_EXTENDED は、すべての列に関係なくを返します**column_set**メンバーシップです。 DBSCHEMA_SPARSE_COLUMN_SET は、スパースのメンバーである列のみを返します**column_set**です。  
+ また、2 つのスキーマ行セットが追加されています。 これらの行セットは、構造は DBSCHEMA_COLUMNS と同じですが、返される内容が異なります。 DBSCHEMA_COLUMNS_EXTENDED は、スパース列かどうか、**column_set** のメンバーかどうかに関係なく、すべての列を返します。 DBSCHEMA_SPARSE_COLUMN_SET は、スパース **column_set** のメンバーである列のみを返します。  
   
 ## <a name="ole-db-datatypecompatibility-behavior"></a>OLE DB DataTypeCompatibility の動作  
- 動作**DataTypeCompatibility = 80** (、接続文字列に) と整合性が、[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]次のように、クライアント。  
+ 動作**DataTypeCompatibility = 80** (接続文字列) では、矛盾、[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]次のように、クライアント。  
   
 -   新しいスキーマ行セットは表示されず、スキーマ行セットの行セットにそれらのスキーマ行セットの行は含まれません。  
   
 -   COLUMNS 行セット内の新しい列は表示されません。  
   
--   ある DBCOLUMNFLAGS_SS_ISCOLUMNSET が設定されていない**column_set**列です。  
+-   DBCOLUMNFLAGS_SS_ISCOLUMNSET が **column_set** 列に対して設定されません。  
   
--   DBCOMPUTEMODE_NOTCOMPUTED に設定されている**column_set**列です。  
+-   DBCOMPUTEMODE_NOTCOMPUTED が **column_set** 列に対して設定されます。  
   
 ## <a name="ole-db-support-for-sparse-columns"></a>OLE DB によるスパース列のサポート  
  OLE DB Driver for SQL Server のスパース列をサポートするために、次の OLE DB インターフェイスが変更されました。  
   
-|型またはメンバー関数|説明|  
+|型またはメンバー関数|[説明]|  
 |-----------------------------|-----------------|  
-|IColumnsInfo::GetColumnsInfo|新しい DBCOLUMNFLAGS フラグ値のある DBCOLUMNFLAGS_SS_ISCOLUMNSET が設定されている**column_set**内の列*dwFlags*です。<br /><br /> DBCOLUMNFLAGS_WRITE に設定されている**column_set**列です。|  
-|IColumsRowset::GetColumnsRowset|設定は、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET が**column_set** DBCOLUMN_FLAGS 内の列です。<br /><br /> DBCOLUMN_COMPUTEMODE が DBCOMPUTEMODE_DYNAMIC 用に設定されている**column_set**列です。|  
-|IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS が、SS_IS_COLUMN_SET と SS_IS_SPARSE という 2 つの新しい列を返します。<br /><br /> DBSCHEMA_COLUMNS がのメンバーではない列のみを返します、 **column_set**です。<br /><br /> 2 つの新しいスキーマ行セットが追加されました。 DBSCHEMA_COLUMNS_EXTENDED はのスパースかどうかに関係なくすべての列を返します**column_set**メンバーシップです。 DBSCHEMA_SPARSE_COLUMN_SET のメンバーである列のみが返されます、 **column_set**です。 これらの新しい行セットの列と制限は DBSCHEMA_COLUMNS と同じです。|  
-|IDBSchemaRowset::GetSchemas|Idbschemarowset::getschemas には、使用可能なスキーマ行セットの一覧である DBSCHEMA_COLUMNS_EXTENDED と DBSCHEMA_SPARSE_COLUMN_SET の新しい行セットの Guid が含まれています。|  
-|ICommand::Execute|場合**選択\*から***テーブル*は、スパースのメンバーではないすべての列が返されます使用、 **column_set**、すべての値を含む XML 列null 以外の列、スパースのメンバーである**column_set**存在する場合、します。|  
-|IOpenRowset::OpenRowset|Iopenrowset::openrowset で icommand::execute と同じ列を含む行セットが返されます、**選択\*** 同じテーブルにクエリします。|  
-|ITableDefinition|スパース列も、このインターフェイスへの変更がない**column_set**列です。 スキーマを変更する必要のあるアプリケーションでは、適切な [!INCLUDE[tsql](../../../includes/tsql-md.md)] を直接実行する必要があります。|  
+|Icolumnsinfo::getcolumnsinfo|*dwFlags* で、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET が **column_set** 列に対して設定されます。<br /><br /> DBCOLUMNFLAGS_WRITE が **column_set** 列に対して設定されます。|  
+|IColumsRowset::GetColumnsRowset|DBCOLUMN_FLAGS で、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET が **column_set** 列に対して設定されます。<br /><br /> **column_set** 列に対して DBCOLUMN_COMPUTEMODE が DBCOMPUTEMODE_DYNAMIC に設定されます。|  
+|IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS が、SS_IS_COLUMN_SET と SS_IS_SPARSE という 2 つの新しい列を返します。<br /><br /> DBSCHEMA_COLUMNS は、**column_set** のメンバーでない列のみを返します。<br /><br /> 2 つの新しいスキーマ行セットが追加されています。DBSCHEMA_COLUMNS_EXTENDED は、スパース **column_set** のメンバーシップに関係なくすべての列を返します。 DBSCHEMA_SPARSE_COLUMN_SET は、**column_set** のメンバーである列のみを返します。 これらの新しい行セットの列と制限は DBSCHEMA_COLUMNS と同じです。|  
+|Idbschemarowset::getschemas|IDBSchemaRowset::GetSchemas の使用可能なスキーマ行セットの一覧に、新しい行セットである DBSCHEMA_COLUMNS_EXTENDED と DBSCHEMA_SPARSE_COLUMN_SET の GUID が含まれます。|  
+|ICommand::Execute|**select \* from** *table* を使用すると、スパース **column_set** のメンバーでないすべての列と、スパース **column_set** のメンバーであるすべての NULL 以外の列の値を含む XML 列が返されます (存在する場合)。|  
+|IOpenRowset::OpenRowset|Iopenrowset::openrowset が持つ icommand::execute と同じ列を含む行セットを返します、**選択\*** 同じテーブルにクエリします。|  
+|ITableDefinition|このインターフェイスには、スパース列や **column_set** 列のための変更はありません。 スキーマを変更する必要のあるアプリケーションでは、適切な [!INCLUDE[tsql](../../../includes/tsql-md.md)] を直接実行する必要があります。|  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

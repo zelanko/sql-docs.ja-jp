@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_close |Microsoft ドキュメント
+title: sqlsrv_close |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e071fc2ac51931a52ba6672e97936dc60ee12072
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309111"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006844"
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_close( resource $conn )
 関数が無効なパラメーターを使用して呼び出されている場合を除き、ブール値は **true** です。 関数が無効なパラメーターで呼び出された場合、 **false** を返します。  
   
 > [!NOTE]  
-> この関数のパラメーターとして、**Null** は有効です。 これにより、スクリプトで複数回関数を呼び出すことが可能になります。 たとえば、エラー状態で接続を終了し、スクリプトの最後でもう一度閉じる場合、2 つ目の呼び出し**sqlsrv_close**が返されます**true**最初の呼び出しため**sqlsrv_閉じる**(エラー条件) 接続リソースに設定**null**です。  
+> この関数のパラメーターとして、**Null** は有効です。 これにより、スクリプトで複数回関数を呼び出すことが可能になります。 たとえば、エラー状態で接続を閉じて、スクリプトの最後にもう一度閉じる場合、**sqlsrv_close** への 2 回目の呼び出しによって **true** が返されます。これは、(エラー状態での) **sqlsrv_close** への最初の呼び出しで接続リソースが **null** に設定されるためです。  
   
 ## <a name="example"></a>例  
 次の例では、接続を閉じます。 この例では、SQL Server がローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server プログラミング用の OLE DB ドライバー |Microsoft ドキュメント
-description: SQL Server プログラミング用の OLE DB ドライバー
+title: OLE DB Driver for SQL Server プログラミング |Microsoft Docs
+description: OLE DB Driver for SQL Server のプログラミング
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -22,23 +22,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 53b88cb2ecd2b74d8ea1a4670a5fbd34abbb1723
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: f009803808366fe784de790b01e412d7f6888194
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612187"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109154"
 ---
-# <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server プログラミング用の OLE DB ドライバー
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB Driver for SQL Server のプログラミング
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server の OLE DB Driver は、データへのアクセスに使用される低レベルの COM API です。 SQL Server の OLE DB Driver は、ツール、ユーティリティ、または高パフォーマンスが必要な低レベルのコンポーネントを開発するためお勧めします。 SQL Server の OLE DB Driver は、ネイティブな高パフォーマンス プロバイダーにアクセスする、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表形式データ ストリーム (TDS) プロトコルに直接できます。  
+  OLE DB Driver for SQL Server は、データにアクセスするために使用される低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、OLE DB Driver for SQL Server プロバイダーの使用をお勧めします。 OLE DB Driver for SQL Server は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
   
- OLE DB Driver for SQL Server に接続するアプリケーションに OLE DB サポートを提供する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ OLE DB Driver for SQL Server に接続するアプリケーションに OLE DB サポートを提供する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
- SQL Server の OLE DB Driver は、OLE DB バージョン 2.0 に準拠したプロバイダーです。  
+ OLE DB Driver for SQL Server は、OLE DB バージョン 2.0 に準拠したプロバイダーです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -58,13 +58,13 @@ ms.locfileid: "35612187"
   
 -   [データ型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
--   [スキーマ行セットのサポート&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+-   [スキーマ行セットのサポート &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [日付と時刻の強化&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [日付と時刻の強化機能 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [大きな CLR ユーザー定義型&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
+-   [大きな CLR ユーザー定義型 &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
 -   [FILESTREAM のサポート](../../oledb/features/filestream-support.md)  
   
@@ -72,11 +72,11 @@ ms.locfileid: "35612187"
   
 -   [エラー](../../oledb/ole-db-errors/errors.md)  
   
--   [サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [クライアント接続 &#40;OLE DB&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [スパース列のサポート&#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
+-   [スパース列のサポート &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [OLE DB Driver for SQL Server &#40;OLE DB&#41;参照](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [OLE DB Driver for SQL Server &#40;OLE DB&#41;リファレンス](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [OLE DB の使用法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

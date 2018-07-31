@@ -1,5 +1,5 @@
 ---
-title: PDO::getAvailableDrivers |Microsoft ドキュメント
+title: PDO::getAvailableDrivers |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be61e256b025d9bcf290176dd322132c1c2d3918
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308031"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975205"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ array PDO::getAvailableDrivers ();
 ## <a name="return-value"></a>戻り値  
 PDO ドライバーの一覧が格納された配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 PDO ドライバーの名前は、PDO インスタンスを作成するときに PDO::__construct で使用されます。  
   
 PHP ドライバーで実行する場合、PDO::getAvailableDrivers は必要ありません。 このメソッドの詳細については、PHP ドキュメントを参照してください。  

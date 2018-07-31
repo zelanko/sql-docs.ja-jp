@@ -1,5 +1,5 @@
 ---
-title: getExtraNameCharacters メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getExtraNameCharacters メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a0c226a972330dcd9985b4b7c93074b8f7d2d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 99ffe958cae6a13f4df573385b91143c7c259ea9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834247"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084814"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>getExtraNameCharacters メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +39,15 @@ public java.lang.String getExtraNameCharacters()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**余分な文字を格納しています。  
+ 特殊文字を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getExtraNameCharacters メソッドは、java.sql.DatabaseMetaData インターフェイスの getExtraNameCharacters メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getExtraNameCharacters メソッドは、java.sql.DatabaseMetaData インターフェイスで getExtraNameCharacters メソッドによって指定されます。  
   
- 使用する場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]で、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベースでは、このメソッドが戻る、$、#、および @ の特殊文字。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースで [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を使用している場合、このメソッドは $、#、および \@ の特殊文字を返します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

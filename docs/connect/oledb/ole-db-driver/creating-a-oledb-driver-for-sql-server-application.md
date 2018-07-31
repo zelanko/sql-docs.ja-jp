@@ -1,6 +1,6 @@
 ---
-title: SQL Server アプリケーションの OLE DB ドライバーの作成 |Microsoft ドキュメント
-description: OLE DB Driver for SQL Server アプリケーションを作成します。
+title: OLE DB Driver for SQL Server のアプリケーションの作成 | Microsoft Docs
+description: OLE DB Driver for SQL Server のアプリケーションの作成
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,28 +18,28 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 09cd1243859ef11dccf4a86084aa919a3cc5624a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0b995fb5171f8eda41045751bad2932e9afa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665312"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109464"
 ---
-# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server アプリケーション用の OLE DB ドライバーを作成します。
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>OLE DB Driver for SQL Server のアプリケーションの作成
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server アプリケーションを作成するには、次の手順が含まれます。  
   
-1.  データ ソースへの接続を確立します。  
+1.  データ ソースへの接続の確立。  
   
-2.  コマンドを実行します。  
+2.  コマンドの実行。  
   
 3.  結果を処理します。  
   
 > [!NOTE]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合、それらを暗号化する必要があります[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)です。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

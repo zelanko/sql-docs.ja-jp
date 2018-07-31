@@ -30,7 +30,7 @@ ms.locfileid: "37196584"
   
 2.  選択**Read Supplier Data from Excel ファイル**; 青色コネクタをドラッグして**Cleanse Supplier Data**します。 これでコンポーネントが接続されました。  
   
-     ![Read Supplier Data]-> [Cleanse Supplier Data](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "Read Supplier Data]-> [仕入先データのクレンジング")  
+     ![Read Supplier Data-> Cleanse Supplier Data](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "Read Supplier Data-> 仕入先データのクレンジング")  
   
 3.  ダブルクリック**仕入先データ クレンジング**します。  
   

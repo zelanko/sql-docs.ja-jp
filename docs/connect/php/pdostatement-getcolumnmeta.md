@@ -1,5 +1,5 @@
 ---
-title: Pdostatement::getcolumnmeta |Microsoft ドキュメント
+title: Pdostatement::getcolumnmeta |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8211a6a4cda4a5efa29b7379c24ba3fbbfa5458e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308531"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983010"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,12 +34,12 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$conn*: (整数) を取得するメタデータを持つ列の 0 から始まる番号。  
+*$conn*: (整数) メタデータを取得する列を示す 0 から始まる番号。  
   
 ## <a name="return-value"></a>戻り値  
 列のメタデータを格納している連想配列 (キーと値)。 配列内のフィールドの詳細については「解説」セクションを参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 次の表では、getColumnMeta によって返される配列内のフィールドについて説明します。  
   
 |NAME|VALUES|  

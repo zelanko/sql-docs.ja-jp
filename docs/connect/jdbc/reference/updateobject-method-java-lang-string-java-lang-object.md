@@ -1,5 +1,5 @@
 ---
-title: updateObject (java.lang.String, java.lang.Object) メソッド |Microsoft ドキュメント
+title: updateObject Method (java.lang.String, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2dcf906b0514f5b52b2367aef0a276cf66982271
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850627"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982364"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject"></a>updateObject (java.lang.String, java.lang.Object) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された列の更新、**オブジェクト**列の名前を指定された値。  
+  渡された列名を使用して、指定された列を **Object** 値で更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,20 +42,20 @@ public void updateObject(java.lang.String columnName,
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- A**文字列**列の名前を格納しています。  
+ 列名を含む**文字列**です。  
   
  *obj*  
   
- **オブジェクト**値。  
+ **Object** 値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この updateObject メソッドは、java.sql.ResultSet インターフェイスの updateObject メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この updateObject メソッドは、java.sql.ResultSet インターフェイスに updateObject メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateObject メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
+ [updateObject メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
