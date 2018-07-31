@@ -39,12 +39,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8b221c752e670d9894a1108e2dea8e01f564221
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 8965bcc4935e21d0f9c397630e9b5578646ce7d8
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788793"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228338"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -488,7 +488,7 @@ SELECT CAST('<Name><FName>Carol</FName><LName>Elliot</LName></Name>'  AS XML)
 他の例については、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」をご覧ください。
   
 ### <a name="g-using-cast-and-convert-with-datetime-data"></a>G. CAST および CONVERT を datetime データと共に使用する  
-GETDATE() の値以降、この例では、現在の日付と時刻を表示し、`CAST` を使用して現在の日付と時刻を文字列データ型に変更した後、`CONVERT` を使用して `ISO 8901` 形式で日付と時刻を表示します。
+GETDATE() の値以降、この例では、現在の日付と時刻を表示し、`CAST` を使用して現在の日付と時刻を文字列データ型に変更した後、`CONVERT` を使用して `ISO 8601` 形式で日付と時刻を表示します。
   
 ```sql
 SELECT   
