@@ -16,7 +16,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c429f832ec89abe78b77dd1e8ece10082aeb0026
 ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/02/2018
 ms.locfileid: "37331952"
@@ -30,7 +30,7 @@ ms.locfileid: "37331952"
 ## <a name="understanding-the-package-requirements"></a>パッケージ要件について  
  このチュートリアルには、Microsoft SQL Server Data Tools が必要です。  
   
- SQL Server Data Tools のインストールの詳細については、「[SQL Server Data Tools のダウンロード](https://docs.microsoft.com/ja-jp/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017)」を参照してください。  
+ SQL Server Data Tools のインストールの詳細については、「[SQL Server Data Tools のダウンロード](http://msdn.microsoft.com/data/hh297027)」を参照してください。  
   
  パッケージを作成する前に、ソース データの形式と変換先データの形式をよく理解する必要があります。 両方のデータ形式を理解しておけば、ソース データを変換先にマップするための変換を定義できます。  
   
