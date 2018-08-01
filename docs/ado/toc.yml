@@ -1,0 +1,10 @@
+- name: Microsoft ActiveX Data Objects (ADO)
+  href: microsoft-activex-data-objects-ado.md
+- name: 新規および更新のアーティクル
+  href: new-updated-ado.md
+- name: ADO の開発ガイド +
+  href: ./guide/ado-programmer-s-guide.md
+- name: ADO リファレンス +
+  href: ./reference/ado-glossary.md
+- name: ADO の用語集
+  href: ado-glossary.md

@@ -1,0 +1,353 @@
+- name: のレプリケーション
+  href: sql-server-replication.md
+  items:
+    - name: 新機能 (レプリケーション)
+      href: what-s-new-replication.md
+    - name: レプリケーションの旧バージョンとの互換性
+      href: replication-backward-compatibility.md
+    - name: SQL Server レプリケーションの非推奨の機能
+      href: deprecated-features-in-sql-server-replication.md
+    - name: SQL Server レプリケーションにおける重大な変更
+      href: breaking-changes-in-sql-server-replication.md
+- name: レプリケーション機能とタスク
+  href: replication-features-and-tasks.md
+  items:
+    - name: レプリケーションの種類
+      href: types-of-replication.md
+    - name: スナップショット レプリケーション
+      href: snapshot-replication.md
+    - name: トランザクション レプリケーション +
+      href: transactional/transactional-replication.md
+    - name: マージ レプリケーション +
+      href: merge/merge-replication.md
+    - name: 異種データベース レプリケーション +
+      href: non-sql/heterogeneous-database-replication.md
+    - name: メモリ最適化テーブル サブスクライバーへのレプリケーション
+      href: replication-to-memory-optimized-table-subscribers.md
+    - name: レプリケーション エージェント +
+      href: agents/replication-agents.md
+    - name: データの再パブリッシュ
+      href: republish-data.md
+    - name: インターネット経由のレプリケーション
+      href: replication-over-the-internet.md
+      items:
+        - name: VPN を使用したインターネット経由のデータのパブリッシュ
+          href: publish-data-over-the-internet-using-vpn.md
+        - name: マージ レプリケーションの Web 同期
+          href: web-synchronization-for-merge-replication.md
+        - name: Web 同期の構成
+          href: configure-web-synchronization.md
+        - name: Web 同期トポロジ
+          href: topologies-for-web-synchronization.md
+        - name: Web 同期用の IIS の構成
+          href: configure-iis-for-web-synchronization.md
+        - name: Web 同期用の IIS 7 の構成
+          href: configure-iis-7-for-web-synchronization.md
+    - name: セキュリティと保護 +
+      href: security/security-and-protection-replication.md
+    - name: 管理 +
+      href: administration/administration-replication.md
+    - name: '開発者ガイド : 操作方法に関するトピック'
+      href: developer-s-guide-how-to-topics-replication.md
+      items:
+        - name: 開発者ガイド (レプリケーション) +
+          href: concepts/replication-developer-documentation.md
+    - name: 監視 +
+      href: monitor/monitoring-replication-overview.md
+    - name: データとデータベース オブジェクトのパブリッシュ +
+      href: publish/publish-data-and-database-objects.md
+- name: エラーとイベントのリファレンス +
+  href: errors-events/errors-events-replication.md
+- name: テクニカル リファレンス (レプリケーション)
+  href: technical-reference-replication.md
+- name: プロパティ リファレンス
+  href: properties-reference-replication.md
+  items:
+    - name: ディストリビューターのプロパティ
+      href: distributor-properties.md
+      items:
+        - name: '[ディストリビューターのプロパティ]、[全般]'
+          href: distributor-properties-general.md
+        - name: '[ディストリビューターのプロパティ]、[パブリッシャー]'
+          href: distributor-properties-publishers.md
+        - name: '[ディストリビューション データベースのプロパティ]'
+          href: distribution-database-properties.md
+    - name: パブリッシャーのプロパティ
+      href: publisher-properties.md
+      items:
+        - name: '[パブリッシャーのプロパティ - ディストリビューター]'
+          href: publisher-properties-distributor.md
+        - name: '[パブリッシャーのプロパティ - パブリッシャー]、[全般]'
+          href: publisher-properties-publisher-general.md
+        - name: '[パブリッシャーのプロパティ - パブリッシャー]、[パブリケーション データベース]'
+          href: publisher-properties-publisher-publication-databases.md
+        - name: '[パブリッシャーのプロパティ - パブリッシャー]、[サブスクライバー]'
+          href: publisher-properties-publisher-subscribers.md
+    - name: '[サブスクライバーのプロパティ]'
+      href: subscriber-properties.md
+    - name: '[パブリケーションのプロパティ]  - <Publication>'
+      href: publication-properties-publication.md
+      items:
+        - name: '[パブリケーションのプロパティ]、[全般]'
+          href: publication-properties-general.md
+        - name: '[パブリケーションのプロパティ]、[アーティクル]'
+          href: publication-properties-articles.md
+        - name: '[パブリケーションのプロパティ]、[行のフィルター選択]'
+          href: publication-properties-filter-rows.md
+        - name: '[パブリケーションのプロパティ]、[スナップショット]'
+          href: publication-properties-snapshot.md
+        - name: '[パブリケーションのプロパティ]、[FTP スナップショットとインターネット]'
+          href: publication-properties-ftp-snapshot-and-internet.md
+        - name: '[パブリケーションのプロパティ]、[サブスクリプション オプション]'
+          href: publication-properties-subscription-options.md
+        - name: '[パブリケーションのプロパティ]、[パブリケーション アクセス リスト]'
+          href: publication-properties-publication-access-list.md
+        - name: '[パブリケーションのプロパティ]、[エージェント セキュリティ]'
+          href: publication-properties-agent-security.md
+        - name: '[パブリケーションのプロパティ], [データ パーティション]'
+          href: publication-properties-data-partitions.md
+    - name: アーティクルのプロパティ - <Article>
+      href: article-properties-article.md
+    - name: サブスクリプションのプロパティ - <Subscription>
+      href: subscription-properties-subscription.md
+      items:
+        - name: '[サブスクリプションのプロパティ - サブスクライバー]'
+          href: subscription-properties-subscriber.md
+        - name: '[サブスクリプションのプロパティ - パブリッシャー]'
+          href: subscription-properties-publisher.md
+- name: ツール リファレンス
+  href: tools-reference-replication.md
+  items:
+    - name: レプリケーション モニター
+      href: replication-monitor.md
+      items:
+        - name: レプリケーション モニター、メイン ページ
+          href: replication-monitor-main-page.md
+        - name: '[パブリッシャーの追加]'
+          href: add-publisher.md
+        - name: ディストリビューターの設定
+          href: distributor-settings.md
+        - name: ディストリビューター情報、パブリケーション
+          href: distributor-information-publications.md
+        - name: 'ディストリビューター情報、[サブスクリプション ウォッチ リスト] (トランザクション パブリケーション、SQL Server 2005 以降)'
+          href: distributor-info-subscription-watch-list-transaction-pub-sql-2005.md
+        - name: 'ディストリビューター情報、[サブスクリプション ウォッチ リスト] (マージ パブリケーション、SQL Server 2005 以降)'
+          href: distributor-info-subscription-watch-list-merge-pub-sql-2005.md
+        - name: 'ディストリビューター情報、[サブスクリプション ウォッチ リスト] (スナップショット パブリケーション、SQL Server 2005 以降)'
+          href: distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md
+        - name: ディストリビューター情報、エージェント
+          href: distributor-information-agents.md
+        - name: '[パブリッシャーの設定]'
+          href: publisher-settings.md
+        - name: 'パブリッシャー情報、[パブリケーション]'
+          href: publisher-information-publications.md
+        - name: 'パブリッシャー情報、[サブスクリプション ウォッチ リスト] (トランザクション パブリケーション、SQL Server 2005 以降)'
+          href: publisher-information-subscription-watch-list-transactional.md
+        - name: 'パブリッシャー情報、[サブスクリプション ウォッチ リスト] (マージ パブリケーション、SQL Server 2005 以降)'
+          href: publisher-information-subscription-watch-list-merge-publication.md
+        - name: 'パブリッシャー情報、[サブスクリプション ウォッチ リスト] (スナップショット パブリケーション、SQL Server 2005 以降)'
+          href: publisher-information-subscription-watch-list-snapshot.md
+        - name: 'パブリッシャー情報、[エージェント]'
+          href: publisher-information-agents.md
+        - name: 'パブリケーション情報、[すべてのサブスクリプション]\(トランザクション パブリケーション)'
+          href: publication-information-all-subscriptions-transactional-publication.md
+        - name: 'パブリケーション情報、[すべてのサブスクリプション] (マージ パブリケーション)'
+          href: publication-information-all-subscriptions-merge-publication.md
+        - name: 'パブリケーション情報、[すべてのサブスクリプション] (スナップショット パブリケーション)'
+          href: publication-information-all-subscriptions-snapshot-publication.md
+        - name: 'パブリケーション情報、[警告] (トランザクション パブリケーション、SQL Server 2005 以降)'
+          href: publication-information-warnings-transactional-publication.md
+        - name: 'パブリケーション情報、[警告] (マージ パブリケーション、SQL Server 2005 以降)'
+          href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
+        - name: 'パブリケーション情報、[警告] (スナップショット パブリケーション、SQL Server 2005 以降)'
+          href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
+        - name: 'パブリケーション情報、[エージェント] (トランザクション パブリケーション)'
+          href: publication-information-agents-transactional-publication.md
+        - name: 'パブリケーション情報、[エージェント] (マージ パブリケーション)'
+          href: publication-information-agents-merge-publication.md
+        - name: 'パブリケーション情報、[エージェント] (スナップショット パブリケーション)'
+          href: publication-information-agents-snapshot-publication.md
+        - name: パブリケーション情報、トレーサー トークン (トランザクション パブリケーション、SQL Server 2005 以降)
+          href: publication-information-tracer-tokens-sql-server-2005-and-later.md
+        - name: 'サブスクリプション、[未配布のコマンド] (トランザクション サブスクリプション、SQL Server 2005 以降)'
+          href: subscription-undistributed-commands-transactional-subscription.md
+        - name: 'サブスクリプション、[パブリッシャーからディストリビューターまでの履歴] (トランザクション サブスクリプション)'
+          href: subscription-publisher-to-distributor-history-transactional-subscription.md
+        - name: 'サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (トランザクション サブスクリプション)'
+          href: subscription-distributor-to-subscriber-history-transactional-subscription.md
+        - name: 'サブスクリプション、[同期の履歴] (マージ サブスクリプション、SQL Server 2005 以降)'
+          href: subscription-synchronization-history.md
+        - name: 'サブスクリプション、[同期の履歴] (マージ サブスクリプション、SQL Server 2000)'
+          href: subscription-synchronization-history-merge-subscription-sql-server-2000.md
+        - name: 'サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (スナップショット サブスクリプション)'
+          href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
+        - name: ログ リーダー エージェント (Log Reader Agent)
+          href: log-reader-agent.md
+        - name: キュー リーダー エージェント (Queue Reader Agent)
+          href: queue-reader-agent.md
+        - name: スナップショット エージェント
+          href: snapshot-agent.md
+        - name: '[フィルターの設定]'
+          href: filter-settings.md
+        - name: '[列の並べ替え]'
+          href: sort-columns.md
+    - name: ディストリビューションの構成ウィザード
+      href: configure-distribution-wizard.md
+      items:
+        - name: ディストリビューター
+          href: distributor.md
+        - name: '[スナップショット フォルダー]'
+          href: snapshot-folder.md
+        - name: ディストリビューション データベース
+          href: distribution-database.md
+        - name: '[ディストリビューターのプロパティ]'
+          href: publishers.md
+        - name: '[ディストリビューター パスワード]'
+          href: distributor-password.md
+    - name: New Publication Wizard
+      href: new-publication-wizard.md
+      items:
+        - name: Oracle パブリッシャー
+          href: oracle-publisher.md
+        - name: 管理パスワード
+          href: administrative-password.md
+        - name: パブリケーション データベース
+          href: publication-database.md
+        - name: '[パブリケーションの種類]'
+          href: publication-type.md
+        - name: サブスクライバーの種類
+          href: subscriber-types.md
+        - name: '[エージェント セキュリティ] (パブリケーションの新規作成ウィザード)'
+          href: agent-security-new-publication-wizard.md
+        - name: '[アーティクル]'
+          href: articles.md
+        - name: '[アーティクルの問題点]'
+          href: article-issues.md
+        - name: '[テーブル行のフィルター選択]'
+          href: filter-table-rows.md
+        - name: フィルターの追加または編集
+          href: add-or-edit-filter.md
+        - name: 結合の追加と編集
+          href: add-or-edit-join.md
+        - name: '[フィルターの生成]'
+          href: generate-filters.md
+        - name: '[スナップショット エージェント] (パブリケーションの新規作成ウィザード)'
+          href: snapshot-agent-new-publication-wizard.md
+    - name: サブスクリプションの新規作成ウィザード (UI リファレンス)
+      href: new-subscription-wizard-ui-reference.md
+      items:
+        - name: <AgentName> エージェントの場所
+          href: agentname-agent-location.md
+        - name: '[サブスクライバー]'
+          href: subscribers.md
+        - name: '[SQL Server 以外のサブスクライバーの追加]'
+          href: add-non-sql-server-subscriber.md
+        - name: <AgentName> エージェント セキュリティ
+          href: agentname-agent-security.md
+        - name: '[更新可能なサブスクリプション]'
+          href: updatable-subscriptions.md
+        - name: '[更新可能なサブスクリプション] のログイン'
+          href: login-for-updatable-subscriptions.md
+        - name: サブスクリプションの初期化
+          href: initialize-subscriptions.md
+        - name: Web サーバー情報
+          href: web-server-information.md
+        - name: サブスクリプションの種類
+          href: subscription-type.md
+        - name: '[HOST_NAME 値]'
+          href: host-name-values.md
+    - name: ピア ツー ピア トポロジ構成ウィザード
+      href: configure-peer-to-peer-topology-wizard.md
+      items:
+        - name: '[パブリケーション] (ピア ツー ピア レプリケーション)'
+          href: publication-peer-to-peer-replication.md
+        - name: '[トポロジの構成] (ピア ツー ピア レプリケーション)'
+          href: configure-topology-peer-to-peer-replication.md
+        - name: '[ログ リーダー エージェントのセキュリティ] (ピア ツー ピア レプリケーション)'
+          href: log-reader-agent-security-peer-to-peer-replication.md
+        - name: '[ディストリビューション エージェント セキュリティ] (ピア ツー ピア レプリケーション)'
+          href: distribution-agent-security-peer-to-peer-replication.md
+        - name: '[新しいピアの初期化] (ピア ツー ピア レプリケーション)'
+          href: new-peer-initialization-peer-to-peer-replication.md
+    - name: Microsoft レプリケーション競合表示モジュールとインタラクティブ競合回避モジュール
+      href: microsoft-replication-conflict-viewer-and-interactive-resolver.md
+      items:
+        - name: '[Microsoft レプリケーション競合表示モジュール] (マージ レプリケーション)'
+          href: microsoft-replication-conflict-viewer-merge-replication.md
+        - name: Microsoft レプリケーション競合表示モジュール (トランザクション レプリケーション)
+          href: microsoft-replication-conflict-viewer-transactional-replication.md
+        - name: Microsoft レプリケーション インタラクティブ競合回避モジュール
+          href: microsoft-replication-interactive-conflict-resolver.md
+        - name: '[フィルターの定義]'
+          href: define-filters.md
+- name: SQL Server Management Studio のレプリケーション ダイアログ ボックス
+  href: sql-server-management-studio-replication-dialog-boxes.md
+  items:
+    - name: '[スナップショット エージェントのセキュリティ]'
+      href: snapshot-agent-security.md
+    - name: '[ログ リーダー エージェントのセキュリティ]'
+      href: log-reader-agent-security.md
+    - name: '[ディストリビューション エージェント セキュリティ]'
+      href: distribution-agent-security.md
+    - name: '[マージ エージェント セキュリティ]'
+      href: merge-agent-security.md
+    - name: '[キュー リーダー エージェントのセキュリティ]'
+      href: queue-reader-agent-security.md
+    - name: '[エージェント プロファイル] (単独のエージェント)'
+      href: agent-profiles-single-agent.md
+    - name: '[エージェント プロファイル]'
+      href: agent-profiles.md
+    - name: <AgentProfileName> プロパティ
+      href: agentprofilename-properties.md
+    - name: '[新しいエージェント プロファイル]'
+      href: new-agent-profile.md
+    - name: '[すべてのサブスクリプションの検証]'
+      href: validate-all-subscriptions.md
+    - name: '[サブスクリプションの検証]'
+      href: validate-subscriptions.md
+    - name: '[サブスクリプションを検証する]'
+      href: validate-subscription.md
+    - name: '[サブスクリプションの検証オプション]\(トランザクション サブスクリプション)'
+      href: subscription-validation-options-transactional-subscriptions.md
+    - name: '[サブスクリプションの検証オプション] (マージ サブスクリプション)'
+      href: subscription-validation-options-merge-subscriptions.md
+    - name: '[サブスクリプションの再初期化] - [すべてのサブスクリプション]'
+      href: reinitialize-subscription-s-all-subscriptions.md
+    - name: '[サブスクリプションの再初期化] - 1 つのサブスクリプション'
+      href: reinitialize-subscription-s-one-subscription.md
+    - name: '[SQL スクリプトの生成](レプリケーション オブジェクト)'
+      href: generate-sql-script-replication-objects.md
+    - name: '[サーバーへの接続] (Oracle)、[ログイン]'
+      href: connect-to-server-oracle-login.md
+    - name: '[サーバーへの接続] (Oracle)、[接続プロパティ]'
+      href: connect-to-server-oracle-connection-properties.md
+- name: レプリケーションのチュートリアル
+  href: replication-tutorials.md
+  items:
+    - name: レプリケーションに備えたサーバーの準備
+      href: tutorial-preparing-the-server-for-replication.md
+      items:
+        - name: 'レッスン 1 : レプリケーション用の Windows アカウントの作成'
+          href: lesson-1-creating-windows-accounts-for-replication.md
+        - name: 'レッスン 2 : スナップショット フォルダーの準備'
+          href: lesson-2-preparing-the-snapshot-folder.md
+        - name: 'レッスン 3 : ディストリビューションの構成'
+          href: lesson-3-configuring-distribution.md
+    - name: 常時接続サーバー間でのデータのレプリケーション
+      href: tutorial-replicating-data-between-continuously-connected-servers.md
+      items:
+        - name: 'レッスン 1 : トランザクション レプリケーションを使用したデータのパブリッシュ'
+          href: lesson-1-publishing-data-using-transactional-replication.md
+        - name: 'レッスン 2 : トランザクション パブリケーションへのサブスクリプションの作成'
+          href: lesson-2-creating-a-subscription-to-the-transactional-publication.md
+        - name: 'レッスン 3 : サブスクリプションの検証と待機時間の計測'
+          href: lesson-3-validating-the-subscription-and-measuring-latency.md
+    - name: モバイル クライアントとの間のデータのレプリケーション
+      href: tutorial-replicating-data-with-mobile-clients.md
+      items:
+        - name: 'レッスン 1 : マージ レプリケーションを使用したデータのパブリッシュ'
+          href: lesson-1-publishing-data-using-merge-replication.md
+        - name: 'レッスン 2 : マージ パブリケーションへのサブスクリプションの作成'
+          href: lesson-2-creating-a-subscription-to-the-merge-publication.md
+        - name: 'レッスン 3:マージ パブリケーションへのサブスクリプションの同期'
+          href: lesson-3-synchronizing-the-subscription-to-the-merge-publication.md

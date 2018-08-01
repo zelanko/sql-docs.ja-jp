@@ -1,0 +1,16 @@
+- name: Analysis Services スクリプト言語 (XMLA 用 ASSL)
+  href: analysis-services-scripting-language-assl-for-xmla.md
+- name: コレクション +
+  href: ../../analysis-services/scripting/collections/accounts-element-assl.md
+- name: データ型 +
+  href: ../../analysis-services/scripting/data-type/action-data-type-assl.md
+- name: オブジェクト +
+  href: ../../analysis-services/scripting/objects/account-element-assl.md
+- name: プロパティ +
+  href: ../../analysis-services/scripting/properties/access-element-assl.md
+- name: Analysis Services スクリプト言語の XML データ型階層 (ASSL)
+  href: analysis-services-scripting-language-xml-data-type-hierarchy-assl.md
+- name: Analysis Services スクリプト言語の XML 要素の階層 (ASSL)
+  href: analysis-services-scripting-language-xml-element-hierarchy-assl.md
+- name: Analysis Services スクリプト言語の XML 要素 (ASSL)
+  href: analysis-services-scripting-language-xml-elements-assl.md

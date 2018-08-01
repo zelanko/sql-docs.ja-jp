@@ -1,0 +1,280 @@
+- name: XMLA 要素 - プロパティ
+  href: xml-elements-properties.md
+- name: AllowOverwrite 要素 (XMLA)
+  href: allowoverwrite-element-xmla.md
+- name: ApplyCompression 要素 (XMLA)
+  href: applycompression-element-xmla.md
+- name: Attribute 要素 (XMLA)
+  href: attribute-element-xmla.md
+- name: AttributeName 要素 (XMLA)
+  href: attributename-element-xmla.md
+- name: Attributes 要素 (XMLA)
+  href: attributes-element-xmla.md
+- name: Axes 要素 (XMLA)
+  href: axes-element-xmla.md
+- name: AxesInfo 要素 (XMLA)
+  href: axesinfo-element-xmla.md
+- name: Axis 要素 (XMLA)
+  href: axis-element-xmla.md
+- name: AxisInfo 要素 (XMLA)
+  href: axisinfo-element-xmla.md
+- name: BackupRemotePartitions 要素 (XMLA)
+  href: backupremotepartitions-element-xmla.md
+- name: Binding 要素 (XMLA)
+  href: binding-element-xmla.md
+- name: Bindings 要素 (XMLA)
+  href: bindings-element-xmla.md
+- name: CancelAssociated 要素 (XMLA)
+  href: cancelassociated-element-xmla.md
+- name: Capability 要素 (XMLA)
+  href: capability-element-xmla.md
+- name: Caption 要素 (XMLA)
+  href: caption-element-xmla.md
+- name: Cell 要素 (MDDataSet) (XMLA)
+  href: cell-element-mddataset-xmla.md
+- name: Cell 要素 (XMLA)
+  href: cell-element-xmla.md
+- name: CellData 要素 (XMLA)
+  href: celldata-element-xmla.md
+- name: CellInfo 要素 (XMLA)
+  href: cellinfo-element-xmla.md
+- name: CellOrdinal 要素 (XMLA)
+  href: cellordinal-element-xmla.md
+- name: Command 要素 (XMLA)
+  href: command-element-xmla.md
+- name: CommonIdentifierPosition 要素 (XML)
+  href: commonidentifierposition-element-xml.md
+- name: ConnectionID 要素 (XMLA)
+  href: connectionid-element-xmla.md
+- name: ConnectionString 要素 (XMLA)
+  href: connectionstring-element-xmla.md
+- name: ContextualNameRule 要素 (XML)
+  href: contextualnamerule-element-xml.md
+- name: CrossProduct 要素 (XMLA)
+  href: crossproduct-element-xmla.md
+- name: Cube 要素 (OlapInfo) (XMLA)
+  href: cube-element-olapinfo-xmla.md
+- name: Cube 要素 (XMLA)
+  href: cube-element-xmla.md
+- name: CubeID 要素 (XMLA)
+  href: cubeid-element-xmla.md
+- name: CubeInfo 要素 (XMLA)
+  href: cubeinfo-element-xmla.md
+- name: CubeName 要素 (XMLA)
+  href: cubename-element-xmla.md
+- name: CustomRollup 要素 (XMLA)
+  href: customrollup-element-xmla.md
+- name: CustomRollupProperties 要素 (XMLA)
+  href: customrollupproperties-element-xmla.md
+- name: Database 要素 (XMLA)
+  href: database-element-xmla.md
+- name: DatabaseID 要素 (XMLA)
+  href: databaseid-element-xmla.md
+- name: DatabaseName 要素 (XMLA)
+  href: databasename-element-xmla.md
+- name: DataSource 要素 (XMLA)
+  href: datasource-element-xmla.md
+- name: DataSourceID 要素 (XMLA)
+  href: datasourceid-element-xmla.md
+- name: DataSourceType 要素 (XMLA)
+  href: datasourcetype-element-xmla.md
+- name: DataSourceView 要素 (XMLA)
+  href: datasourceview-element-xmla.md
+- name: DbSchemaName 要素 (XMLA)
+  href: dbschemaname-element-xmla.md
+- name: DbStorageLocation 要素
+  href: dbstoragelocation-element.md
+- name: DbTableName 要素 (XMLA)
+  href: dbtablename-element-xmla.md
+- name: DefaultDetailsPosition 要素 (XML)
+  href: defaultdetailsposition-element-xml.md
+- name: DeleteWithDescendants 要素 (XMLA)
+  href: deletewithdescendants-element-xmla.md
+- name: Description 要素 (XMLA)
+  href: description-element-xmla.md
+- name: Dimension 要素 (XMLA)
+  href: dimension-element-xmla.md
+- name: DisplayInfo 要素 (XMLA)
+  href: displayinfo-element-xmla.md
+- name: DisplayKeyPosition 要素 (XML)
+  href: displaykeyposition-element-xml.md
+- name: EditionId 要素
+  href: editionid-element.md
+- name: Error 要素 (XMLA)
+  href: error-element-xmla.md
+- name: ErrorCode 要素 (XMLA)
+  href: errorcode-element-xmla.md
+- name: ErrorConfiguration 要素 (XMLA)
+  href: errorconfiguration-element-xmla.md
+- name: Exception 要素 (XMLA)
+  href: exception-element-xmla.md
+- name: File 要素 (XMLA)
+  href: file-element-xmla.md
+- name: Folder 要素 (XMLA)
+  href: folder-element-xmla.md
+- name: FolderPosition 要素 (XML)
+  href: folderposition-element-xml.md
+- name: Folders 要素 (XMLA)
+  href: folders-element-xmla.md
+- name: HelpFile 要素 (XMLA)
+  href: helpfile-element-xmla.md
+- name: HierarchyInfo 要素 (XMLA)
+  href: hierarchyinfo-element-xmla.md
+- name: ID 要素 (XMLA)
+  href: id-element-xmla.md
+- name: IsDefaultImage 要素 (XML)
+  href: isdefaultimage-element-xml.md
+- name: IsDefaultMeasure 要素 (XML)
+  href: isdefaultmeasure-element-xml.md
+- name: Key 要素 (XMLA)
+  href: key-element-xmla.md
+- name: Keys 要素 (XMLA)
+  href: keys-element-xmla.md
+- name: Language 要素 (XMLA)
+  href: language-element-xmla.md
+- name: LastDataUpdate 要素 (XMLA)
+  href: lastdataupdate-element-xmla.md
+- name: LastSchemaUpdate 要素 (XMLA)
+  href: lastschemaupdate-element-xmla.md
+- name: LName 要素 (XMLA)
+  href: lname-element-xmla.md
+- name: LNum 要素 (XMLA)
+  href: lnum-element-xmla.md
+- name: Location 要素 (XMLA)
+  href: location-element-xmla.md
+- name: Locations 要素 (XMLA)
+  href: locations-element-xmla.md
+- name: Materialize 要素 (XMLA)
+  href: materialize-element-xmla.md
+- name: MeasureGroupID 要素 (XMLA)
+  href: measuregroupid-element-xmla.md
+- name: Member 要素 (XMLA)
+  href: member-element-xmla.md
+- name: Members 要素 (XMLA)
+  href: members-element-xmla.md
+- name: Message 要素 (XMLA)
+  href: message-element-xmla.md
+- name: Messages 要素 (XMLA)
+  href: messages-element-xmla.md
+- name: Mode 要素 (XMLA)
+  href: mode-element-xmla.md
+- name: MoveWithDescendants 要素 (XMLA)
+  href: movewithdescendants-element-xmla.md
+- name: Name 要素 (Parameter) (XMLA)
+  href: name-element-parameter-xmla.md
+- name: Name 要素 (XMLA)
+  href: name-element-xmla.md
+- name: New 要素 (XMLA)
+  href: new-element-xmla.md
+- name: Object 要素 (Dimension) (XMLA)
+  href: object-element-dimension-xmla.md
+- name: Object 要素 (XMLA)
+  href: object-element-xmla.md
+- name: ObjectDefinition 要素 (XMLA)
+  href: objectdefinition-element-xmla.md
+- name: OlapInfo 要素 (XMLA)
+  href: olapinfo-element-xmla.md
+- name: Optimization 要素 (XMLA)
+  href: optimization-element-xmla.md
+- name: Original 要素 (XMLA)
+  href: original-element-xmla.md
+- name: Parallel Element (XMLA)
+  href: parallel-element-xmla.md
+- name: Parameter 要素 (XMLA)
+  href: parameter-element-xmla.md
+- name: Parameters 要素 (XMLA)
+  href: parameters-element-xmla.md
+- name: ParentObject 要素 (XMLA)
+  href: parentobject-element-xmla.md
+- name: PartitionID 要素 (XMLA)
+  href: partitionid-element-xmla.md
+- name: Password 要素 (XMLA)
+  href: password-element-xmla.md
+- name: ProductLabel 要素
+  href: productlabel-element.md
+- name: Properties 要素 (XMLA)
+  href: properties-element-xmla.md
+- name: PropertyList 要素 - サポートされる XMLA プロパティ
+  href: propertylist-element-supported-xmla-properties.md
+- name: PropertyList 要素 (XMLA)
+  href: propertylist-element-xmla.md
+- name: Queries 要素 (XMLA)
+  href: queries-element-xmla.md
+- name: Query 要素 (XMLA)
+  href: query-element-xmla.md
+- name: ReadWriteMode 要素
+  href: readwritemode-element.md
+- name: RequestType 要素 (XMLA)
+  href: requesttype-element-xmla.md
+- name: RestrictionList 要素 (XMLA)
+  href: restrictionlist-element-xmla.md
+- name: Restrictions 要素 (XMLA)
+  href: restrictions-element-xmla.md
+- name: results 要素 (XMLA)
+  href: results-element-xmla.md
+- name: return 要素 (XMLA)
+  href: return-element-xmla.md
+- name: Role 要素 (XMLA)
+  href: role-element-xmla.md
+- name: root 要素 (XMLA)
+  href: root-element-xmla.md
+- name: row 要素 (XMLA)
+  href: row-element-xmla.md
+- name: Security 要素 (XMLA)
+  href: security-element-xmla.md
+- name: ServerMode 要素
+  href: servermode-element.md
+- name: SessionID 要素 (XMLA)
+  href: sessionid-element-xmla.md
+- name: SkippedLevels 要素 (XMLA)
+  href: skippedlevels-element-xmla.md
+- name: SortPropertiesPosition 要素 (XML)
+  href: sortpropertiesposition-element-xml.md
+- name: Source 要素 (Error) (XMLA)
+  href: source-element-error-xmla.md
+- name: Source 要素 (Synchronize) (XMLA)
+  href: source-element-synchronize-xmla.md
+- name: Source 要素 (XMLA)
+  href: source-element-xmla.md
+- name: Sources 要素 (XMLA)
+  href: sources-element-xmla.md
+- name: SPID 要素 (XMLA)
+  href: spid-element-xmla.md
+- name: Steps 要素 (XMLA)
+  href: steps-element-xmla.md
+- name: Storage 要素 (XMLA)
+  href: storage-element-xmla.md
+- name: SynchronizeSecurity 要素 (XMLA)
+  href: synchronizesecurity-element-xmla.md
+- name: TableNotification 要素 (XMLA)
+  href: tablenotification-element-xmla.md
+- name: TableNotifications 要素 (XMLA)
+  href: tablenotifications-element-xmla.md
+- name: Target 要素 (XMLA)
+  href: target-element-xmla.md
+- name: Time 要素 (XMLA)
+  href: time-element-xmla.md
+- name: Translation 要素 (XMLA)
+  href: translation-element-xmla.md
+- name: Translations 要素 (XMLA)
+  href: translations-element-xmla.md
+- name: Tuple 要素 (XMLA)
+  href: tuple-element-xmla.md
+- name: Tuples 要素 (XMLA)
+  href: tuples-element-xmla.md
+- name: Type 要素 (XMLA)
+  href: type-element-xmla.md
+- name: UName 要素 (XMLA)
+  href: uname-element-xmla.md
+- name: UnaryOperator 要素 (XMLA)
+  href: unaryoperator-element-xmla.md
+- name: Value 要素 (Parameter) (XMLA)
+  href: value-element-parameter-xmla.md
+- name: Value 要素 (XMLA)
+  href: value-element-xmla.md
+- name: Warning 要素 (XMLA)
+  href: warning-element-xmla.md
+- name: Where 要素 (XMLA)
+  href: where-element-xmla.md
+- name: WritebackTableCreation 要素 (XMLA)
+  href: writebacktablecreation-element-xmla.md
