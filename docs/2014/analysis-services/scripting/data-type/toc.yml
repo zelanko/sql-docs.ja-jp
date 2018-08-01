@@ -1,0 +1,183 @@
+- name: Analysis Services スクリプト言語の XML データ型 (ASSL)
+  href: analysis-services-scripting-language-xml-data-types-assl.md
+  items:
+    - name: Action データ型
+      href: action-data-type-assl.md
+    - name: AggregationAttribute データ型
+      href: aggregationattribute-data-type-assl.md
+    - name: AggregationDesignAttribute データ型
+      href: aggregationdesignattribute-data-type-assl.md
+    - name: AggregationDesignDimension データ型
+      href: aggregationdesigndimension-data-type-assl.md
+    - name: AggregationDimension データ型
+      href: aggregationdimension-data-type-assl.md
+    - name: AggregationInstanceAttribute データ型
+      href: aggregationinstanceattribute-data-type-assl.md
+    - name: AggregationInstanceCubeDimension データ型
+      href: aggregationinstancecubedimension-data-type-assl.md
+    - name: AggregationInstanceMeasure データ型
+      href: aggregationinstancemeasure-data-type-assl.md
+    - name: Assembly データ型
+      href: assembly-data-type-assl.md
+    - name: AttributeBinding データ型
+      href: attributebinding-data-type-assl.md
+    - name: AttributeTranslation データ型
+      href: attributetranslation-data-type-assl.md
+    - name: Binding データ型
+      href: binding-data-type-assl.md
+    - name: ClrAssembly データ型
+      href: clrassembly-data-type-assl.md
+    - name: ClrAssemblyFile データ型
+      href: clrassemblyfile-data-type-assl.md
+    - name: ColumnBinding データ型
+      href: columnbinding-data-type-assl.md
+    - name: ComAssembly データ型
+      href: comassembly-data-type-assl.md
+    - name: CubeAttribute データ型
+      href: cubeattribute-data-type-assl.md
+    - name: CubeAttributeBinding データ型
+      href: cubeattributebinding-data-type-assl.md
+    - name: CubeBinding データ型 (不一致)
+      href: cubebinding-data-type-out-of-line-assl.md
+    - name: CubeDimension データ型
+      href: cubedimension-data-type-assl.md
+    - name: CubeDimensionBinding データ型
+      href: cubedimensionbinding-data-type-assl.md
+    - name: CubeDimensionPermission データ型
+      href: cubedimensionpermission-data-type-assl.md
+    - name: CubeHierarchy データ型
+      href: cubehierarchy-data-type-assl.md
+    - name: DataBlock データ型
+      href: datablock-data-type-assl.md
+    - name: DataItem データ型
+      href: dataitem-data-type-assl.md
+    - name: DataMiningMeasureGroupDimension データ型
+      href: dataminingmeasuregroupdimension-data-type-assl.md
+    - name: DataSource データ型
+      href: datasource-data-type-assl.md
+    - name: DataSourceViewBinding データ型
+      href: datasourceviewbinding-data-type-assl.md
+    - name: DegenerateMeasureGroupDimension データ型
+      href: degeneratemeasuregroupdimension-data-type-assl.md
+    - name: Dimension データ型
+      href: dimension-data-type-assl.md
+    - name: DimensionAttribute データ型
+      href: dimensionattribute-data-type-assl.md
+    - name: DimensionAttributeBinding データ型 (不一致)
+      href: dimensionattributebinding-data-type-out-of-line-assl.md
+    - name: DimensionBinding データ型
+      href: dimensionbinding-data-type-assl.md
+    - name: DimensionPermission データ型
+      href: dimensionpermission-data-type-assl.md
+    - name: DrillThroughAction データ型
+      href: drillthroughaction-data-type-assl.md
+    - name: DSVTableBinding データ型
+      href: dsvtablebinding-data-type-assl.md
+    - name: EventColumn データ型
+      href: eventcolumn-data-type-assl.md
+    - name: Hierarchy データ型
+      href: hierarchy-data-type-assl.md
+    - name: ImpersonationInfo データ型
+      href: impersonationinfo-data-type-assl.md
+    - name: IncrementalProcessingNotification データ型
+      href: incrementalprocessingnotification-data-type-assl.md
+    - name: InheritedBinding データ型
+      href: inheritedbinding-data-type-assl.md
+    - name: ManyToManyMeasureGroupDimension データ型
+      href: manytomanymeasuregroupdimension-data-type-assl.md
+    - name: MeasureBinding データ型
+      href: measurebinding-data-type-assl.md
+    - name: MeasureGroupAttribute データ型
+      href: measuregroupattribute-data-type-assl.md
+    - name: MeasureGroupAttributeBinding データ型 (不一致)
+      href: measuregroupattributebinding-data-type-out-of-line-assl.md
+    - name: MeasureGroupBinding データ型
+      href: measuregroupbinding-data-type-assl.md
+    - name: MeasureGroupBinding データ型 (不一致)
+      href: measuregroupbinding-data-type-out-of-line-assl.md
+    - name: MeasureGroupDimension データ型
+      href: measuregroupdimension-data-type-assl.md
+    - name: MeasureGroupDimensionBinding データ型
+      href: measuregroupdimensionbinding-data-type-assl.md
+    - name: MeasureGroupHierarchy データ型
+      href: measuregrouphierarchy-data-type-assl.md
+    - name: MiningModelColumn データ型
+      href: miningmodelcolumn-data-type-assl.md
+    - name: MiningModelingFlag データ型
+      href: miningmodelingflag-data-type-assl.md
+    - name: MiningStructureColumn データ型
+      href: miningstructurecolumn-data-type-assl.md
+    - name: OlapDataSource データ型
+      href: olapdatasource-data-type-assl.md
+    - name: PartitionBinding データ型
+      href: partitionbinding-data-type-assl.md
+    - name: Permission データ型
+      href: permission-data-type-assl.md
+    - name: PerspectiveAction データ型
+      href: perspectiveaction-data-type-assl.md
+    - name: PerspectiveAttribute データ型
+      href: perspectiveattribute-data-type-assl.md
+    - name: PerspectiveCalculation データ型
+      href: perspectivecalculation-data-type-assl.md
+    - name: PerspectiveDimension データ型
+      href: perspectivedimension-data-type-assl.md
+    - name: PerspectiveHierarchy データ型
+      href: perspectivehierarchy-data-type-assl.md
+    - name: PerspectiveKpi データ型
+      href: perspectivekpi-data-type-assl.md
+    - name: PerspectiveMeasure データ型
+      href: perspectivemeasure-data-type-assl.md
+    - name: PerspectiveMeasureGroup データ型
+      href: perspectivemeasuregroup-data-type-assl.md
+    - name: ProactiveCachingBinding データ型
+      href: proactivecachingbinding-data-type-assl.md
+    - name: ProactiveCachingIncrementalProcessingBinding データ型
+      href: proactivecachingincrementalprocessingbinding-data-type-assl.md
+    - name: ProactiveCachingInheritedBinding 要素
+      href: proactivecachinginheritedbinding-data-type-assl.md
+    - name: ProactiveCachingObjectNotificationBinding データ型
+      href: proactivecachingobjectnotificationbinding-data-type-assl.md
+    - name: ProactiveCachingQueryBinding データ型
+      href: proactivecachingquerybinding-data-type-assl.md
+    - name: ProactiveCachingTablesBinding
+      href: proactivecachingtablesbinding-data-type-assl.md
+    - name: PushedDataSource データ型
+      href: pusheddatasource-data-type-assl.md
+    - name: QueryBinding データ型
+      href: querybinding-data-type-assl.md
+    - name: ReferenceMeasureGroupDimension データ型
+      href: referencemeasuregroupdimension-data-type-assl.md
+    - name: RegularMeasureGroupDimension データ型
+      href: regularmeasuregroupdimension-data-type-assl.md
+    - name: RelationalDataSource データ型
+      href: relationaldatasource-data-type-assl.md
+    - name: Relationship データ型
+      href: relationship-data-type-assl.md
+    - name: RelationshipEnd データ型
+      href: relationshipend-data-type-assl.md
+    - name: RelationshipEndTranslation 要素
+      href: relationshipendtranslation-element-assl.md
+    - name: RelationshipEndVisualizationProperties データ型
+      href: relationshipendvisualizationproperties-data-type-assl.md
+    - name: ReportAction データ型
+      href: reportaction-data-type-assl.md
+    - name: RowBinding データ型
+      href: rowbinding-data-type-assl.md
+    - name: ScalarMiningStructureColumn データ型
+      href: scalarminingstructurecolumn-data-type-assl.md
+    - name: StandardAction データ型
+      href: standardaction-data-type-assl.md
+    - name: TableBinding データ型
+      href: tablebinding-data-type-assl.md
+    - name: TableMiningStructureColumn データ型
+      href: tableminingstructurecolumn-data-type-assl.md
+    - name: TabularBinding データ型
+      href: tabularbinding-data-type-assl.md
+    - name: TimeAttributeBinding データ型
+      href: timeattributebinding-data-type-assl.md
+    - name: TimeBinding データ型
+      href: timebinding-data-type-assl.md
+    - name: Translation データ型
+      href: translation-data-type-assl.md
+    - name: UserDefinedGroupBinding データ型
+      href: userdefinedgroupbinding-data-type-assl.md

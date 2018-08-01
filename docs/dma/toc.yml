@@ -1,0 +1,22 @@
+- name: Data Migration Assistant の概要
+  href: dma-overview.md
+- name: Data Migration Assistant の新機能
+  href: dma-whatsnew.md
+- name: SQL Server の移行の評価
+  href: dma-assesssqlonprem.md
+- name: SQL Server の新しいバージョンへのアップグレード
+  href: dma-migrateonpremsql.md
+- name: SQL Server の Azure SQL Database への移行
+  href: dma-migrateonpremsqltosqldb.md
+- name: SQL Server ログインの移行
+  href: dma-migrateserverlogins.md
+- name: Data Migration Assistant のベスト プラクティス
+  href: dma-bestpractices.md
+- name: 評価レポートの統合
+  href: dma-consolidatereports.md
+- name: 評価のための Power BI レポート
+  href: dma-powerbiassesreport.md
+- name: コマンド ラインからの実行
+  href: dma-commandline.md
+- name: 設定の構成
+  href: dma-configurationsettings.md

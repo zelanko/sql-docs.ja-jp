@@ -1,0 +1,21 @@
+- name: 概要
+  href: polybase-guide.md
+- name: はじめに
+  href: get-started-with-polybase.md
+- name: 機能の概要
+  href: polybase-versioned-feature-summary.md
+- name: スケール アウト グループ
+  href: polybase-scale-out-groups.md
+- name: インストール
+  href: polybase-installation.md
+- name: 構成
+  href: polybase-configuration.md
+- name: T-SQL オブジェクト
+  href: polybase-t-sql-objects.md
+- name: クエリ
+  href: polybase-queries.md
+- name: トラブルシューティング
+  href: polybase-troubleshooting.md
+  items:
+    - name: PolyBase Kerberos の接続性のトラブルシューティング
+      href: polybase-troubleshoot-connectivity.md

@@ -1,0 +1,26 @@
+- name: TMSL リファレンス - コマンド
+  href: tmsl-reference-commands.md
+- name: Alter コマンド (TMSL)
+  href: alter-command-tmsl.md
+- name: Attach コマンド (TMSL)
+  href: attach-command-tmsl.md
+- name: Backup コマンド (TMSL)
+  href: backup-command-tmsl.md
+- name: Create コマンド (TMSL)
+  href: create-command-tmsl.md
+- name: CreateOrReplace コマンド (TMSL)
+  href: createorreplace-command-tmsl.md
+- name: Delete コマンド (TMSL)
+  href: delete-command-tmsl.md
+- name: Detach コマンド (TMSL)
+  href: detach-command-tmsl.md
+- name: MergePartitions コマンド (TMSL)
+  href: mergepartitions-command-tmsl.md
+- name: Refresh コマンド (TMSL)
+  href: refresh-command-tmsl.md
+- name: Restore コマンド (TMSL)
+  href: restore-command-tmsl.md
+- name: Sequence コマンド (TMSL)
+  href: sequence-command-tmsl.md
+- name: Synchronize コマンド (TMSL)
+  href: synchronize-command-tmsl.md

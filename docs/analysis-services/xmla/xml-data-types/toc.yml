@@ -1,0 +1,12 @@
+- name: XMLA データ型
+  href: xml-data-types-xmla.md
+- name: EmptyResult データ型 (XMLA)
+  href: emptyresult-data-type-xmla.md
+- name: EnumString データ型 (XMLA)
+  href: enumstring-data-type-xmla.md
+- name: MDDataSet データ型 (XMLA)
+  href: mddataset-data-type-xmla.md
+- name: Resultset データ型 (XMLA)
+  href: resultset-data-type-xmla.md
+- name: Rowset データ型 (XMLA)
+  href: rowset-data-type-xmla.md

@@ -1,0 +1,14 @@
+- name: 互換性レベル 1050 から 1103 のテーブル モデルのプログラミング
+  href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+- name: 表現 +
+  href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
+- name: 概念スキーマ定義言語 (CSDL) +
+  href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md
+- name: ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)
+  href: csdl-annotations-for-business-intelligence-csdlbi.md
+- name: レポート デザインの CSDLBI 属性
+  href: csdlbi-attributes-for-report-design.md
+- name: CSDLBI の概念
+  href: csdlbi-concepts.md
+- name: IMDEmbeddedData インターフェイス
+  href: imdembeddeddata-interface.md

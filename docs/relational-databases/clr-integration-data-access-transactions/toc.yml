@@ -1,0 +1,10 @@
+- name: CLR 統合とトランザクション
+  href: clr-integration-and-transactions.md
+- name: 現在のトランザクションへのアクセス
+  href: accessing-the-current-transaction.md
+- name: トランザクションの有効期間
+  href: transaction-lifetimes.md
+- name: トランザクションの昇格
+  href: transaction-promotion.md
+- name: System.Transactions の使用
+  href: using-system-transactions.md

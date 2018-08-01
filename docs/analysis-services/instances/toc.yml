@@ -1,0 +1,78 @@
+- name: インスタンス管理
+  href: analysis-services-instance-management.md
+- name: Install
+  href: ../../analysis-services/instances/install-windows/install-analysis-services.md
+- name: Analysis Services 累積更新プログラムのビルド バージョンの確認
+  href: analysis-services-component-version.md
+- name: インストール後の構成
+  href: post-install-configuration-analysis-services.md
+  items:
+    - name: Windows ファイアウォールの構成
+      href: configure-the-windows-firewall-to-allow-analysis-services-access.md
+    - name: サービス アカウントの構成
+      href: configure-service-accounts-analysis-services.md
+    - name: 管理者の追加
+      href: grant-server-admin-rights-to-an-analysis-services-instance.md
+    - name: 既定でオフになている機能
+      href: features-off-by-default-analysis-services.md
+    - name: SSMS 内のサーバー グループ
+      href: register-an-analysis-services-instance-in-a-server-group.md
+    - name: サーバー モードの決定
+      href: determine-the-server-mode-of-an-analysis-services-instance.md
+    - name: Analysis Services インスタンスの名前変更
+      href: rename-an-analysis-services-instance.md
+- name: Analysis Services への接続
+  href: connect-to-analysis-services.md
+  items:
+    - name: クライアント アプリケーションからの接続
+      href: connect-from-client-applications-analysis-services.md
+    - name: 接続文字列プロパティ
+      href: connection-string-properties-analysis-services.md
+    - name: 認証方法
+      href: authentication-methodologies-supported-by-analysis-services.md
+    - name: Kerberos 認証
+      href: configure-analysis-services-for-kerberos-constrained-delegation.md
+    - name: SPN 登録
+      href: spn-registration-for-an-analysis-services-instance.md
+    - name: HTTP アクセス
+      href: configure-http-access-to-analysis-services-on-iis-8-0.md
+    - name: クライアント ライブラリ (データ プロバイダー)
+      href: data-providers-used-for-analysis-services-connections.md
+    - name: ユーザーとセッションの切断
+      href: disconnect-users-and-sessions-on-analysis-services-server.md
+- name: Analysis Services の監視
+  items:
+    - name: SQL Server Profiler
+      href: use-sql-server-profiler-to-monitor-analysis-services.md
+      items:
+        - name: SQL Server Profiler による Analysis Services の監視
+          href: introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+        - name: 再生用のプロファイラー トレースの作成
+          href: create-profiler-traces-for-replay-analysis-services.md
+    - name: 拡張イベント
+      href: monitor-analysis-services-with-sql-server-extended-events.md
+    - name: 動的管理ビュー (DMV)
+      href: use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+    - name: パフォーマンス カウンター
+      href: performance-counters-ssas.md
+    - name: Analysis Services キャッシュのクリア
+      href: clear-the-analysis-services-caches.md
+- name: 管理タスクのスクリプト作成
+  items:
+    - name: Management Studio でのスクリプトの作成
+      href: create-analysis-services-scripts-in-management-studio.md
+      items:
+        - name: SQL Server Management Studio での Analysis Services テンプレートの使用
+          href: use-analysis-services-templates-in-sql-server-management-studio.md
+        - name: Management Studio での Analysis Services スクリプトの使用
+          href: analysis-services-scripts-project-in-sql-server-management-studio.md
+    - name: SQL Server エージェントで管理タスクのスケジュール設定を行う
+      href: schedule-ssas-administrative-tasks-with-sql-server-agent.md
+    - name: SSIS による管理タスクの自動化
+      href: automate-analysis-services-administrative-tasks-with-ssis.md
+- name: 高可用性とスケーラビリティ
+  href: high-availability-and-scalability-in-analysis-services.md
+- name: Analysis Services でのログ記録
+  href: log-operations-in-analysis-services.md
+- name: Analysis Services 用 DBCC
+  href: database-consistency-checker-dbcc-for-analysis-services.md

@@ -1,0 +1,12 @@
+- name: CLR ユーザー定義関数
+  href: clr-user-defined-functions.md
+- name: CLR スカラー値関数
+  href: clr-scalar-valued-functions.md
+- name: CLR テーブル値関数
+  href: clr-table-valued-functions.md
+- name: CLR ユーザー定義集計 - 関数の呼び出し
+  href: clr-user-defined-aggregate-invoking-functions.md
+- name: CLR ユーザー定義集計 - 要件
+  href: clr-user-defined-aggregates-requirements.md
+- name: CLR ユーザー定義集計
+  href: clr-user-defined-aggregates.md

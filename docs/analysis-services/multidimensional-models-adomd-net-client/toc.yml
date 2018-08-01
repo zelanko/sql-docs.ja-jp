@@ -1,0 +1,30 @@
+- name: ADOMD.NET のクライアント機能
+  href: adomd-net-client-functionality.md
+- name: ADOMD.NET クライアント プログラミング
+  href: adomd-net-client-programming.md
+- name: ADOMD.NET での接続 - セキュリティ保護された接続の確立
+  href: connections-in-adomd-net-establishing-secure-connections.md
+- name: ADOMD.NET での接続 - トランザクションの実行
+  href: connections-in-adomd-net-performing-transactions.md
+- name: ADOMD.NET での接続 - 接続とセッションの使用
+  href: connections-in-adomd-net-working-with-connections-and-sessions.md
+- name: ADOMD.NET での接続
+  href: connections-in-adomd-net.md
+- name: 分析データ ソースに対するコマンドの実行
+  href: executing-commands-against-an-analytical-data-source.md
+- name: ADO MD から ADOMD.NET への移行
+  href: migrating-from-ado-md-to-adomd-net.md
+- name: 分析データ ソースからのデータの取得
+  href: retrieving-data-from-an-analytical-data-source.md
+- name: AdomdDataReader を使用したデータの取得
+  href: retrieving-data-using-the-adomddatareader.md
+- name: セルセットを使用したデータの取得
+  href: retrieving-data-using-the-cellset.md
+- name: XmlReader を使用したデータの取得
+  href: retrieving-data-using-the-xmlreader.md
+- name: メタデータの取得 - ADOMD.NET オブジェクト モデルの操作
+  href: retrieving-metadata-working-with-adomd-net-object-model.md
+- name: メタデータの取得 - Schema Rowsets の操作
+  href: retrieving-metadata-working-with-schema-rowsets.md
+- name: 分析データ ソースからのメタデータの取得
+  href: retrieving-metadata-from-an-analytical-data-source.md
