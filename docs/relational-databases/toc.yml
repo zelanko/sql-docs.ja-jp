@@ -6,6 +6,7 @@
   href: sql-server-guides.md
   items:
     - name: Always On 可用性グループのトラブルシューティングと監視のガイド
+      href: ../database-engine/availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md
     - name: インデックスのアーキテクチャと設計
       href: sql-server-index-design-guide.md
     - name: メモリ管理アーキテクチャ
