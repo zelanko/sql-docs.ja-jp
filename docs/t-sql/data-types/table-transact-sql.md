@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432241"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240684"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ SELECT select_list INTO table_variable;
   
 インデックスを明示的に作成することはできません **テーブル** 変数、および統計情報はありませんが上に保持されます **テーブル** 変数です。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、特定のインデックスの種類をテーブル定義にインライン作成できる新しい構文が導入されました。  この新しい構文を使うと、テーブル定義の一部として**テーブル**変数にインデックスを作成できます。 場合によっては、完全なインデックスのサポートと統計を提供する一時テーブルを使用した方が、パフォーマンスが向上する場合があります。 一時テーブルとインライン インデックス作成について詳しくは、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」をご覧ください。
 
-
 CHECK 制約、既定値、および計算列、 **テーブル** 型の宣言は、ユーザー定義関数を呼び出すことはできません。
   
 間における代入操作 **テーブル** 変数がサポートされていません。
@@ -115,6 +114,23 @@ CHECK 制約、既定値、および計算列、 **テーブル** 型の宣言�
 **テーブル** 、変数がスコープに制限されているし、永続的なデータベースの一部ではない、トランザクションのロールバックは影響ありません。
   
 table 変数は、作成後に変更できません。
+
+## <a name="table-variable-deferred-compilation"></a>テーブル変数の遅延コンパイル
+**テーブル変数の遅延コンパイル**を使用すると、テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のプランのコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報は、ダウンストリーム プラン操作を最適化するために使用されます。
+
+> [!NOTE]
+> テーブル変数の遅延コンパイルは、Azure SQL Database におけるパブリック プレビューの機能です。  
+
+テーブル変数の遅延コンパイルを使用すると、テーブル変数を参照するステートメントのコンパイルは、そのステートメントが最初に実際に実行されるまで遅延されます。 この遅延コンパイルの動作は、一時テーブルの動作と同じです。この変更によって、元の 1 行の推定値ではなく、実際のカーディナリティを使用できるようになります。 
+
+テーブル変数の遅延コンパイルのパブリック プレビューを有効にするには、クエリを実行する際に接続されるデータベースのデータベース互換レベル 150 を有効にします。
+
+テーブル変数の遅延コンパイルを使用することで、テーブル変数のその他の特性が変更されることは**ありません**。 たとえば、この機能はテーブル変数に列統計を追加しません。
+
+テーブル変数の遅延コンパイルによって**再コンパイルの頻度が増加することはありません**。  最初のコンパイルを行った場所でシフトします。 結果として得られるキャッシュされたプランは、最初の遅延コンパイルのテーブル変数の行数に基づいて生成されます。 キャッシュされたプランは、プランが削除されるか再コンパイルされるまで、連続するクエリによって再利用されます。 
+
+最初のプランのコンパイルに使用されるテーブル変数の行数が、固定された行数の推定値と大きく異なる標準値を表す場合は、ダウンストリームの演算が役立ちます。  テーブル変数の行数が実行全体で大幅に変化する場合は、この機能を使用してもパフォーマンスが改善しない可能性があります。
+
   
 ## <a name="examples"></a>使用例  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

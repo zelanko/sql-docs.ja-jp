@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 089819b4d0f8c58f048158055b47ec83cd33ccac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 60a079e80c4487a7af0f015992095d3f14666764
+ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288741"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350020"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,7 @@ ms.locfileid: "35288741"
 |**2422**|Resource Governor の REQUEST_MAX_CPU_TIME_SEC の構成によって設定されている最大時間を超えたときに、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が要求を中止できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/4038419)をご覧ください。<br /><br />**注:** このトレース フラグは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降のビルドに適用されます。<br /><br />**スコープ**: グローバル|
 |**2430**|代替ロック クラスのクリーンアップを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2754301)をご覧ください。<br /><br />**スコープ**: グローバルのみ| 
 |**2453**|十分な数の行が変更されたときに、テーブル変数が再コンパイルをトリガーできるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2952444)をご覧ください。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
+|**2467**|どのノードのスレッド割り当てが最も少ないかに基づいて、代替の並列ワーカー スレッド割り当てポリシーを有効にします。 詳細については、「[並列クエリ処理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)」をご覧ください。 max worker threads サーバー オプションの構成に関する情報については、「[max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)」を参照してください。<br /><br />**注:** この代替ポリシーを使用するには、クエリの並列処理の次数 (DOP) が 1 つのノードに収まる必要があります。そうでない場合は、既定のスレッド割り当てポリシーが代わりに使用されます。 このトレース フラグを使用する場合、1 つのノードのスケジューラの数以下の DOP を指定するクエリと共に、1 つのノードのスケジューラの数を超える DOP を指定するクエリを実行することはお勧めしません。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバルのみ|
 |**2469**|パーティション分割されている列ストア インデックスで、`INSERT INTO ... SELECT` の代替交換を有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/3204769)をご覧ください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
 |**2528**|DBCC CHECKDB、DBCC CHECKFILEGROUP、および DBCC CHECKTABLE によるオブジェクトの並列検査を無効にします。 既定では、並列処理の次数はクエリ プロセッサによって自動的に決定されます。 並列処理の最大限度は並列クエリと同様に構成します。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。<br /><br />**注:** 通常、並列 DBCC チェックは有効になっています (既定値)。 クエリ プロセッサは、DBCC CHECKDB によってチェックされるテーブルまたはテーブルの集合ごとに、並列処理を再評価して自動的に調節します。<br /><br />一般的な使用シナリオは、DBCC CHECKDB が完了する前にサーバーの負荷が増加することをシステム管理者が認識し、他のユーザーのワークロードでの同時実行性を高めるために、並列処理を手動で減らしたり無効にしたりする場合です。 ただし、DBCC CHECKDB での並列チェックを無効にすると、完了までの時間が長くなる場合があります。<br /><br />**注:** TABLOCK オプションを使って DBCC CHECKDB を実行していて、並列処理が無効になっている場合は、テーブルが長時間ロックされる可能性があります。<br /><br />
   **注:**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降では、ステートメントの sp_configure の最大並列度構成オプションを、MAXDOP オプションでオーバーライドできます。<br /><br />**スコープ**: グローバル、セッション|

@@ -1,7 +1,7 @@
 ---
 title: フィールド ターミネータと行ターミネータの指定 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2016
+ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: import-export
@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e23160b367d9e977de757acc3bd6883af43479
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940257"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278684"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,13 +98,21 @@ ms.locfileid: "32940257"
 -   多くの列によって領域が部分的にのみ使用されている、長い固定長の列。  
   
      この状況では、ターミネータを指定することで記憶領域が最小限になり、フィールドが可変長として処理されます。  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>`\n` を一括エクスポートの行ターミネータとして指定する
+
+`\n` を一括エクスポートの行ターミネータとして指定するか、既定の行ターミネータを暗黙的に使用する場合、bcp では復帰と改行の組み合わせ (CRLF) が行ターミネータとして出力されます。 行ターミネータとして改行文字のみ (LF) を出力する場合 (Unix および Linux コンピュータの標準)、16 進数表記を使用して LF 行ターミネータを指定します。 例 :
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### <a name="examples"></a>使用例  
  この例では、フィールド ターミネータにコンマ、行ターミネータに改行文字 (\n) を使用して、文字形式で `AdventureWorks.HumanResources.Department` テーブルから `Department-c-t.txt` データ ファイルにデータが一括エクスポートされます。  
   
  **bcp** コマンドには、次のスイッチがあります。  
   
-|スイッチ|Description|  
+|スイッチ|[説明]|  
 |------------|-----------------|  
 |**-t**|データ フィールドが文字データとして読み込まれることを指定します。|  
 |**-t** `,`|コンマ (,) をフィールド ターミネータとして指定します。|  
@@ -132,7 +140,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      次の表に示す修飾子を使用して、フォーマット ファイル内の個別のフィールドまたはデータ ファイル全体にターミネータを指定できます。  
   
-    |Qualifier|Description|  
+    |Qualifier|[説明]|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|文字データ ファイルや Unicode 文字データ ファイルに使用されるフィールド ターミネータを指定します。<br /><br /> 既定値は \t (タブ文字) です。|  
     |ROWTERMINATOR **='***row_terminator***'**|文字データ ファイルや Unicode 文字データ ファイルに使用される行ターミネータを指定します。<br /><br /> 既定値は \n (改行記号) です。|  
@@ -144,7 +152,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      OPENROWSET 一括行セット プロバイダーでは、ターミネータを指定できるのはフォーマット ファイルのみです (Large Object データ型を除き、これは必須です)。 文字データ ファイルで既定以外のターミネータが使用されている場合、フォーマット ファイルで定義する必要があります。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) および [データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
   
      OPENROWSET BULK 句の詳細については、「 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)を使用) を示すことができます。  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-import"></a>`\n` を一括インポートの行ターミネータとして指定する
+`\n` を一括インポートの行ターミネータとして指定するか、既定の行ターミネータを暗黙的に使用する場合、bcp および BULK INSERT ステートメントでは、復帰と改行の組み合わせ (CRLF) が行ターミネータとして想定されます。 ソース ファイルで改行文字のみ (LF) が行ターミネータとして使用されている場合 (Unix および Linux コンピュータで生成されたファイルの標準)、16 進数表記を使用して LF 行ターミネータを指定します。 BULK INSERT ステートメントの例を次に示します。
+
+```sql
+    ROWTERMINATOR = '0x0A'
+```
+ 
 ### <a name="examples"></a>使用例  
  この例では、前述の例で作成された `Department-c-t.txt` データ ファイルから、 `myDepartment` サンプル データベースの [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] テーブルに、文字データを一括インポートします。 このテーブルを作成しないと、例を実行できません。 **dbo** スキーマでこのテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  
   

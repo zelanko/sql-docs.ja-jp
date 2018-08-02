@@ -19,12 +19,12 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0bbeaa627bc1183fa6bdcb72538887132a5ba2b3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cffaa400fa9e3727d1bcc7a569827573b70b10a9
+ms.sourcegitcommit: d457bb828eb46ee83f8ff5bdecfff09b26d7b154
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768998"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39259747"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>可用性レプリカでの読み取り専用アクセスの構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -214,10 +214,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
  **フェールオーバー後にトリガーとジョブに影響する可能性がある要因**  
   
- 読み取り可能でないセカンダリ データベースまたは読み取り可能なセカンダリ データベースで実行されたときに失敗するトリガーとジョブがある場合は、トリガーとジョブをスクリプト化して、特定のレプリカに対して、データベースがプライマリ データベースか読み取り可能なセカンダリ データベースかを確認する必要があります。 この情報を入手するには、データベースの [Updatability](../../../t-sql/functions/databasepropertyex-transact-sql.md) プロパティを返す **DATABASEPROPERTYEX** 関数を使用します。 読み取り専用データベースを識別するには、次のように、値として READ_ONLY を指定します。  
+ 読み取り可能でないセカンダリ データベースまたは読み取り可能なセカンダリ データベースで実行されたときに失敗するトリガーとジョブがある場合は、トリガーとジョブをスクリプト化して、特定のレプリカに対して、データベースがプライマリ データベースか読み取り可能なセカンダリ データベースかを確認する必要があります。 この情報を入手するには、データベースの [Updateability](../../../t-sql/functions/databasepropertyex-transact-sql.md) プロパティを返す **DATABASEPROPERTYEX** 関数を使用します。 読み取り専用データベースを識別するには、次のように、値として READ_ONLY を指定します。  
   
 ```  
-DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’  
 ```  
   
  読み取り/書き込みデータベースを識別するには、値として READ_WRITE を指定します。  

@@ -26,17 +26,17 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54224c2b6f977f21764553ceddfb7e7be5fd10c7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 05bb6bb4ec9a34abf7669514f2ed1c18fe83817e
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788363"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228428"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-現在のデータベース内のデータ、ログ、またはフルテキスト ファイルについて、指定された論理ファイル名のファイル識別 (ID) 番号を返します。  
+この関数は、指定された現在のデータベースのデータ、ログ、フルテキスト ファイルの論理名に対する、ファイル識別 (ID) 番号を返します。 
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +48,22 @@ FILE_IDEX ( file_name )
   
 ## <a name="arguments"></a>引数  
  *file_name*  
- **sysname** 型の式です。ファイル ID を返すファイルの名前を表します。  
+ファイルの名前に対するファイル ID 値 "FILE_IDEX" を返す、**sysname** 型の式です。 
   
 ## <a name="return-types"></a>戻り値の型  
- **int**  
+**int**  
   
- エラー時は **NULL**  
+エラー時は **NULL**  
   
 ## <a name="remarks"></a>Remarks  
- *file_name* は、カタログ ビュー [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) または [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) の、**name** 列に表示される論理ファイル名に対応します。  
+*file_name* は、[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューまたは [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) カタログ ビューの **name** 列に表示される論理ファイル名に対応します。  
   
- FILE_IDEX は、選択リスト、WHERE 句、または式が許容される任意の場所で使用できます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
+`FILE_IDEX` は、SELECT リスト、WHERE 句、または式の使用がサポートされるあらゆる場所で使用します。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. 指定されたファイルのファイル ID を取得する  
-次の例では、`AdventureWorks_Data` というファイルのファイル ID が返されます。  
+この例では、`AdventureWorks_Data` ファイルのファイル ID が返されます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. ファイル名が不明の場合のファイル ID を取得する  
-次の例では、`sys.database_files` カタログ ビューからファイルの種類が `1` (ログ) に等しい論理ファイル名を選択することにより、`AdventureWorks` ログ ファイルのファイル ID を返します。  
+この例では、`AdventureWorks` ログ ファイルのファイル ID が返されます。 Transact-SQL (T-SQL) のコード スニペットで、`sys.database_files` カタログ ビューから論理ファイル名が選択されます (ファイルの種類は `1` (ログ) です)。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. フルテキスト カタログ ファイルのファイル ID を取得する  
-次の例では、`sys.database_files` カタログ ビューからファイルの種類が `4` (フル テキスト) に等しい論理ファイル名を選択することにより、フルテキスト ファイルのファイル ID を返します。 この例では、フルテキスト カタログが存在しない場合、NULL が返されます。  
+この例では、フルテキスト ファイルのファイル ID が返されます。 T-SQL のコード スニペットで、`sys.database_files` カタログ ビューから論理ファイル名が選択されます (ファイルの種類は `4` (フルテキスト) です)。 フルテキスト カタログが存在しない場合、このコードは "NULL" を返します。
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  

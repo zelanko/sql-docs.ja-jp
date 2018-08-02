@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080100"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228458"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>チュートリアル: SSMS を使用するためのヒントとテクニック
 このチュートリアルでは、SQL Server Management Studio (SSMS) の使用時に便利なその他のテクニックを紹介します。 この記事で取り上げるテクニック: 
@@ -189,6 +189,8 @@ ms.locfileid: "37080100"
     ![クエリでエラー ログを見つける](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>SQL Server に接続できない場合にエラー ログの場所を検索する
+SQL Server のエラー ログのパスは、構成設定によって異なる場合があります。 エラー ログの場所のパスは、SQL Server 構成マネージャー内の、起動時のパラメーターで確認できます。 次の手順に従って、SQL Server のエラー ログの場所を特定するための、関連する起動時のパラメーターを見つけます。 "*ユーザーのパスは次に示されるパスとは異なる場合があります*"。 
+
 1. SQL Server 構成マネージャーを開きます。 
 2. **[サービス]** を展開します。
 3. SQL Server インスタンスを右クリックし、**[プロパティ]** を選択します。

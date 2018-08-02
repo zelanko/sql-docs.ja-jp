@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのインテリジェントなクエリ処理 | Microsoft Docs
 description: SQL Server および Azure SQL Database のクエリ パフォーマンスを向上させるためのインテリジェントなクエリ処理の機能です。
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b3ca1aa0bf87fe08e65590ea506dad929455a90
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 6f1b215e95b7cc911cd2815493eabbbd53a47424
+ms.sourcegitcommit: a162a8f02d66c13b32d0b6255b0b52fc80e2187e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216823"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39250450"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -48,6 +48,8 @@ ms.locfileid: "39216823"
 テーブル変数の遅延コンパイルを使用すると、テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。  この正確な行数の情報は、ダウンストリーム プラン操作を最適化するために使用されます。
 
 テーブル変数の遅延コンパイルを使用すると、テーブル変数を参照するステートメントのコンパイルは、そのステートメントが最初に実際に実行されるまで遅延されます。 この遅延コンパイルの動作は、一時テーブルの動作と同じです。この変更によって、元の 1 行の推定値ではなく、実際のカーディナリティを使用できるようになります。 Azure SQL Database でテーブル変数の遅延コンパイルのパブリック プレビューを有効にするには、クエリを実行する際に接続されるデータベースのデータベース互換レベル 150 を有効にします。
+
+詳細については、「[テーブル変数の遅延コンパイル](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation )」をご覧ください。
 
 ## <a name="approximate-query-processing"></a>概数クエリ処理
 概数クエリ処理とは、絶対的な精度よりも応答性が重要となる場合に、大規模なデータ セット全体の集計を提供するために設計された、新しい機能ファミリです。  たとえば、ダッシュボードに表示するために、100 億の行に対する COUNT(DISTINCT()) を計算する場合などです。  この場合、重要なのは絶対的な精度ではなく、応答性です。 新しい集計関数 APPROX_COUNT_DISTINCT は、グループ内の一意の非 null 値の概数を返します。

@@ -15,12 +15,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12802d45792ea9d0fad4ba31a694c2ca0413a86f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7e29c2ec0c6063483268ddd95c39bfcc85e8a744
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771469"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278803"
 ---
 # <a name="install-sql-server-database-engine"></a>SQL Server データベース エンジンのインストール
 
@@ -40,7 +40,9 @@ ms.locfileid: "34771469"
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   レプリケーション (オプションのコンポーネント)  
-  
+
+-   [R と Python での Machine Learning Services (データベース内)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (オプションのコンポーネント)
+
 -   フルテキスト検索 (オプションのコンポーネント)  
   
 -   Data Quality Services (オプションのコンポーネント)  
