@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036180"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359599"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -158,7 +158,7 @@ CREATE CERTIFICATE certificate_name
  証明書が有効となる日付を指定します。 指定しない場合、START_DATE は現在の日付に設定されます。 START_DATE は UTC 時刻で、日時に変換可能な任意の形式で指定できます。  
   
  EXPIRY_DATE ='*datetime*'  
- 証明書が期限切れとなる日付を指定します。 指定しない場合、EXPIRY_DATE は START_DATE の 1 年後の日付に設定されます。 EXPIRY_DATE は UTC 時刻で、日時に変換可能な任意の形式で指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker は、有効期限の日付を確認します。 ただし、証明書が暗号化に使用される場合、有効期限は強制されません。  
+ 証明書が期限切れとなる日付を指定します。 指定しない場合、EXPIRY_DATE は START_DATE の 1 年後の日付に設定されます。 EXPIRY_DATE は UTC 時刻で、日時に変換可能な任意の形式で指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker は、有効期限の日付を確認します。 証明書を使用する暗号化されたバックアップでは、有効期限も確認され、期限切れの証明書を使用する新しいバックアップの作成は許可されません。ただし、期限切れの証明書を使用する復元は許可されます。 ただし、証明書がデータベースの暗号化または Always Encrypted のために使用される場合、有効期限は強制されません。  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の発信側で証明書を使用できるようにします。 既定値は ON です。  
