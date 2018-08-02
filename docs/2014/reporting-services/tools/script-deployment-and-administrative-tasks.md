@@ -58,7 +58,7 @@ ms.locfileid: "37159863"
 |暗号化キーをバックアップする。|暗号化キーのバックアップを自動化するには、次のいずれかのアプローチを使用します。<br /><br /> rskeymgmt.exe ユーティリティを実行してキーをバックアップする。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。<br /><br /> レポート サーバー WMI プロバイダーに対して実行するカスタム コードを作成する。|  
 |レポート サーバーの電子メールを構成する。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーに対して実行するカスタム コードを作成します。 プロバイダーでは、電子メールの構成設定のサブセットがサポートされています。<br /><br /> RSReportServer.config ファイルにはすべての設定が含まれていますが、このファイルの使用を自動化しないようにしてください。 特に、ファイルを別のレポート サーバーにコピーする場合は、バッチ ファイルを使用しないでください。 各構成ファイルには、現在のインスタンスに固有の値が含まれています。 これらの値は、別のレポート サーバー インスタンスでは無効になります。<br /><br /> 設定の詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。|  
 |自動実行アカウントを構成する。|自動実行アカウントの構成を自動化するには、次のいずれかのアプローチを使用します。<br /><br /> rsconfig.exe ユーティリティを実行してアカウントを構成する。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> レポート サーバー WMI プロバイダーを呼び出すカスタム コードを作成する。|  
-|既存のコンテンツを別のレポート サーバー上に配置する (フォルダー階層、ロールの割り当て、レポート、サブスクリプション、スケジュール、データ ソース、リソースなど)。|既存のレポート サーバー環境を再構築する最善の方法は、レポート サーバー データベースを新しいレポート サーバー インスタンスにコピーすることです。<br /><br /> カスタム コードを作成して、既存のレポート サーバーのコンテンツをプログラムによって再構築する方法もあります。 ただし、サブスクリプション、レポート スナップショット、レポート履歴は、プログラムによって再作成できないことに注意してください。<br /><br /> 場合によっては両者を組み合わせた方法も効果的です (つまり、レポート サーバー データベースを復元してから、カスタム コードによって、特定の環境に合わせてレポート サーバー データベースを更新します)。<br /><br /> 詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。<br /><br /> レポート サーバー データベースの再配置の詳細については、「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。 レポート サーバー環境をプログラムによって構築する方法の詳細については、このトピックの「スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行」を参照してください。|  
+|既存のコンテンツを別のレポート サーバー上に配置する (フォルダー階層、ロールの割り当て、レポート、サブスクリプション、スケジュール、データ ソース、リソースなど)。|既存のレポート サーバー環境を再構築する最善の方法は、レポート サーバー データベースを新しいレポート サーバー インスタンスにコピーすることです。<br /><br /> カスタム コードを作成して、既存のレポート サーバーのコンテンツをプログラムによって再構築する方法もあります。 ただし、サブスクリプション、レポート スナップショット、レポート履歴は、プログラムによって再作成できないことに注意してください。<br /><br /> 場合によっては両者を組み合わせた方法も効果的です (つまり、レポート サーバー データベースを復元してから、カスタム コードによって、特定の環境に合わせてレポート サーバー データベースを更新します)。<br /><br /> 詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。<br /><br /> レポート サーバー データベースの再配置の詳細については、「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。 レポート サーバー環境をプログラムによって構築する方法の詳細については、このトピックの「スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行」を参照してください。|  
   
 ## <a name="tools-and-technologies-for-automating-server-deployment"></a>サーバー配置を自動化するためのツールと技法  
  配置タスクとメンテナンス タスクを自動化するためのプログラムおよびインターフェイスを次に示します。  
@@ -78,7 +78,7 @@ ms.locfileid: "37159863"
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行  
  レポート サーバー環境を別のレポート サーバー インスタンスに複製するためのスクリプトを作成できます。 配置スクリプトは、一般的には [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で作成し、レポート サーバーのスクリプト ホスト ユーティリティで処理します。  
   
- 詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+ 詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
  スクリプトを使用して、フォルダー、共有データ ソース、リソース、レポート、ロールの割り当て、および設定を、あるサーバーから別のサーバーにコピーします。 1 つのレポート サーバー インスタンス用のスクリプトを作成してから、そのスクリプトを別のサーバーで実行して、レポート サーバー名前空間を再作成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で、複数のレポート サーバーを配置している場合は、各サーバーで個別にスクリプトを実行して、すべてのサーバーを同様に構成できます。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "37159863"
  スクリプトを使用するには、.rss 拡張子を持つファイルにスクリプトを保存し、rs.exe コマンド プロンプト ユーティリティを使用してレポート サーバー上でファイルを実行します。 スクリプトはコンパイルされないので [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]のインストールは不要です。 この例では、レポート サーバーをホストするローカル コンピューターに対する権限を持っていることを前提としています。 権限があるアカウントでログオンしていない場合は、追加のコマンド ライン引数を使用してアカウント情報を指定する必要があります。 詳細については、「[RS.exe ユーティリティ (SSRS)](rs-exe-utility-ssrs.md)」を参照してください。  
   
 > [!TIP]  
->  詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+>  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
 ```  
 Public Sub Main()  

@@ -48,6 +48,6 @@ ms.locfileid: "37236082"
 5.  オブジェクト エクスプローラーで、Azure ストレージに接続します。 コンテナーと、新しく作成したバックアップ ファイルを参照して指定します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [Lesson 4: Perform a Restore From a Full Database Backup](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)。  
+ [レッスン 4: データベースの完全バックアップから復元を実行する](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)します。  
   
   
