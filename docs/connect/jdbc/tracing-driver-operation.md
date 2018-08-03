@@ -1,7 +1,7 @@
 ---
 title: ドライバー操作のトレース |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32eecd4a6667dd25d58aa9fe09d3382f5dbc374f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991974"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279263"
 ---
 # <a name="tracing-driver-operation"></a>ドライバー操作のトレース」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37991974"
  次のセクションでは、ログ記録のレベルおよびログ記録可能なカテゴリについて説明し、アプリケーションでトレースを有効にする方法についての情報を提供します。  
   
 ## <a name="logging-levels"></a>ログ記録のレベル  
- 作成されるすべてのログ メッセージは、ログ記録のレベルと関連付けられています。 ログ記録のレベルはログ メッセージの重要度を決定し、java.util.logging の **Level** クラスで定義されます。 あるレベルでログ記録を有効にすると、それより上のすべてのレベルでログ記録が有効になります。 このセクションでは、ログ記録のパブリックなカテゴリと内部的なカテゴリの両方を対象に、ログ記録のレベルについて説明します。 ログ記録カテゴリの詳細については、このトピックの「ログ記録のカテゴリ」を参照してください。  
+ 作成されるすべてのログ メッセージは、ログ記録のレベルと関連付けられています。 ログ記録のレベルはログ メッセージの重要度を決定し、java.util.logging の **Level** クラスで定義されます。 あるレベルでログ記録を有効にすると、それより上のすべてのレベルでログ記録が有効になります。 このセクションでは、ログ記録のパブリックなカテゴリと内部的なカテゴリの両方を対象に、ログ記録のレベルについて説明します。 ログ記録カテゴリの詳細については、この記事の「ログ記録のカテゴリ」を参照してください。  
   
  次の表では、パブリックなログ記録のカテゴリで利用可能なログ記録の各レベルについて説明します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "37991974"
 |TDS.DATA|ドライバーと SQL Server の間で交わされる TDS プロトコル レベルのメッセージ交換を含んだメッセージを記録します。 送受信される各 TDS パケットの詳細な内容が ASCII および 16 進形式で記録されます。 ログイン資格情報 (ユーザー名とパスワード) は記録されません。 それ以外のすべてのデータが記録されます。<br /><br /> このカテゴリは非常に冗長で詳細なメッセージを作成します。ログ記録のレベルを FINEST に設定したときにのみ有効になります。|  
 |TDS.Channel|SQL Server との TCP 通信チャネルのアクションをトレースします。 記録されるメッセージには、読み取りや書き込みのほか、ソケットの開閉が含まれます。 SQL Server との SSL (Secure Sockets Layer) 接続の確立に関連したメッセージもトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINE、FINER、または FINEST に設定したときにのみ有効になります。|  
 |TDS.Writer|TDS チャネルへの書き込みをトレースします。 トレースされるのは書き込みの長さのみです。書き込みの内容がトレースされるわけではありません。 このカテゴリでは、アテンション シグナルがサーバーに送信され、ステートメントの実行がキャンセルされた場合にも、問題がトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINEST に設定したときにのみ有効になります。|  
-|TDS.Reader|TDS チャネルからの特定の読み取り操作を FINEST レベルでトレースします。 FINEST レベルのトレースは、非常に冗長になる場合があります。 WARNING レベルや SEVERE レベルでは、ドライバーが接続を閉じる前に SQL Server から無効な TDS プロトコルを受信した場合にトレースが行われます。<br /><br /> このカテゴリは、ログ記録レベルを FINER または FINEST に設定したときにのみ有効になります。|  
+|TDS.Reader|TDS チャネルからの特定の読み取り操作を FINEST レベルでトレースします。 FINEST レベルのトレースは冗長になる場合があります。 WARNING レベルや SEVERE レベルでは、ドライバーが接続を閉じる前に SQL Server から無効な TDS プロトコルを受信した場合にトレースが行われます。<br /><br /> このカテゴリは、ログ記録レベルを FINER または FINEST に設定したときにのみ有効になります。|  
 |TDS.Command|低レベルの状態遷移や、TDS コマンドの実行に関連したその他の情報 ([!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントの実行、ResultSet カーソルのフェッチ、コミットなど) をトレースします。<br /><br /> このカテゴリは、ログ記録レベルを FINEST に設定したときにのみ有効になります。|  
 |TDS.TOKEN|このカテゴリは、TDS パケット内のトークンのみを記録しますが、TDS.DATA カテゴリほど冗長ではありません。 ログ記録レベルを FINEST に設定したときにのみ有効になります。<br /><br /> FINEST レベルでは、応答で処理される TDS トークンがトレースされます。 SEVERE レベルでは、無効な TDS トークンが検出された場合にトレースが実行されます。|  
 |SQLServerDatabaseMetaData|[SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
@@ -110,27 +110,27 @@ ms.locfileid: "37991974"
 ## <a name="enabling-tracing-programmatically"></a>プログラムによるトレースの有効化  
  トレースは、Logger オブジェクトを作成し、ログ記録するカテゴリを指定することにより、プログラムで有効にすることができます。 たとえば、次のコードは SQL ステートメントのログ記録を有効にする方法を示しています。  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  コードの中でログ記録を無効にするには、次のようにします。  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  利用可能なすべてのカテゴリをログ記録するには、次のようにします。  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  特定のカテゴリのログ記録を無効にするには、次のようにします。  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  

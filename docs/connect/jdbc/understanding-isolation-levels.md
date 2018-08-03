@@ -1,7 +1,7 @@
 ---
 title: 分離レベルを理解する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 270ccbea5a7c12e8f7188cc4ad125e346a3eddd1
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039162"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278654"
 ---
 # <a name="understanding-isolation-levels"></a>分離レベルについて
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,19 +59,19 @@ ms.locfileid: "38039162"
   
  トランザクションの分離レベルを設定するには、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) メソッドを使用できます。 このメソッドは、引数として **int** 値を受け取ります。この値は、次のように接続定数のいずれかに基づいています。  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の新しいスナップショット分離レベルを使用するには、次のように SQLServerConnection 定数のいずれかを使用できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の新しいスナップショット分離レベルを使用するには、SQLServerConnection 定数のいずれかを使用できます。  
   
-```  
+```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
 ```  
   
  また、次のように使用することもできます。  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   

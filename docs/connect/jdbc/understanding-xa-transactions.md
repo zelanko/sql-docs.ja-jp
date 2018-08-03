@@ -1,7 +1,7 @@
 ---
 title: XA トランザクションについて |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040610"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278603"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "38040610"
   
 -   アプリケーションは、[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) フラグによって、XA ブランチ トランザクション ID (BQUAL) が異なりグローバル トランザクション ID (GTRID) および形式 ID (FormatID) が同じである、密に結合された XA トランザクションを使用できるようになります。 その機能を使用するために設定する必要があります、 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start メソッドのフラグ パラメーター。  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38040610"
   
 1.  分散トランザクションに参加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] コンピューターの LOG ディレクトリを開きます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の "ERRORLOG" ファイルを選択して開きます。 "ERRORLOG" ファイルで、"'SQLJDBC_XA.dll' バージョンを使用して..." というフレーズを探します。  
   
-2.  分散トランザクションに参加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] コンピューターの Binn ディレクトリを開き、sqljdbc_xa.dll アセンブリを選択します。  
+2.  分散トランザクションに参加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] コンピューターの Binn ディレクトリを開きます。 Sqljdbc_xa.dll アセンブリを選択します。  
   
     -   Windows Vista 以降の場合: sqljdbc_xa.dll を右クリックし、[プロパティ] を選択します。 次に **[詳細]** タブをクリックします。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスに現在インストールされている sqljdbc_xa.dll のバージョンが **[ファイル バージョン]** フィールドに表示されます。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38040610"
 ###  <a name="BKMK_ServerSide"></a> 準備されていないトランザクションを自動ロールバックするためのサーバー側のタイムアウト設定を構成します。  
   
 > [!WARNING]  
->  このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることをご確認ください。 クライアント側のタイムアウトの設定の詳細については、「[XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」を参照してください。  
+>  このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることをご確認ください。 クライアント側のタイムアウトの設定について詳しくは、「[XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」をご覧ください。  
   
  分散トランザクションのタイムアウトの動作を制御する 2 つのレジストリ設定 (DWORD 値) があります。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "38040610"
 ### <a name="configuring-the-user-defined-roles"></a>ユーザー定義ロールを構成する  
  JDBC Driver を使用して分散トランザクションに参加する、特定のユーザーに対してアクセス許可を与えるには、そのユーザーを SqlJDBCXAUser ロールに追加します。 たとえば、次の [!INCLUDE[tsql](../../includes/tsql_md.md)] コードを使用して、'shelby' というユーザー ('shelby' という名前の付いた、SQL の標準的なログイン ユーザー) を SqlJDBCXAUser ロールに追加します。  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -165,7 +165,7 @@ EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'
   
 ## <a name="example"></a>例  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  
