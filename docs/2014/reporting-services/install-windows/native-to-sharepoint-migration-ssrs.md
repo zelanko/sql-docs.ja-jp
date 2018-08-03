@@ -38,7 +38,7 @@ ms.locfileid: "37264318"
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS スクリプト:** レポート サーバー Web サービスの SOAP メソッドを呼び出してデータベース間でデータをコピーする Visual Basic スクリプトを作成します。 スクリプトを実行するには、 **RS.exe** ユーティリティを使用します。 RS.exe は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と共にインストールされます。  
   
-    -   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 このトピックでは、CodePlex からダウンロードできるサンプル スクリプトの使用方法について説明します。  
+    -   [レポート サーバー間でコンテンツを移行するサンプル Reporting Services rs.exe スクリプト](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) このトピックでは、CodePlex からダウンロードできるサンプル スクリプトの使用方法について説明します。  
   
     -   CodePlex にあるサンプル RSS スクリプト ( [レポート サーバー間でコンテンツを移行する Reporting Services RS.exe スクリプト](http://azuresql.codeplex.com/releases/view/115207))。  
   

@@ -123,7 +123,7 @@ ms.locfileid: "37255464"
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- 詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+ 詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
  その他の例については、「[Reporting Services スクリプト ファイルを実行する](run-a-reporting-services-script-file.md)」を参照してください。  
   
@@ -133,7 +133,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  スクリプトは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET のコードで記述し、.rss ファイル名拡張子が付いた Unicode または UTF-8 テキスト ファイルとして保存する必要があります。 **rs** ユーティリティを使用して、スクリプトをデバッグすることはできません。 スクリプトをデバッグするには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]内でコードを実行します。  
   
 > [!TIP]  
->  詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+>  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services スクリプト ファイルを実行します。](run-a-reporting-services-script-file.md)   

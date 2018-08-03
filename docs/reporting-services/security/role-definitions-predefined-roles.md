@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028559"
 ---
 # <a name="role-definitions---predefined-roles"></a>ロールの定義 - 定義済みのロール
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、定義済みのロールと共にインストールされます。このロールを使用すると、レポート サーバーの操作へのアクセスを許可することができます。 定義済みの各ロールは、関連するタスクのコレクションを示しています。 定義済みのロールにグループやユーザー アカウントを割り当てることで、レポート サーバーの操作にすぐにアクセスできます。  
@@ -211,7 +212,7 @@ ms.lasthandoff: 05/03/2018
 |レポート サーバーのプロパティを表示|アプリケーション名、個人用レポートの有効/無効、レポート履歴の既定値など、レポート サーバーに適用するプロパティを表示します。<br /><br /> **システム ユーザー** ロールからこのタスクを削除すると、[サイトの設定] ページを利用できなくなります。 また、各ページの上部にアプリケーションのタイトルが表示されません。 既定では、レポート マネージャーのタイトルは "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]" です。|  
 |共有スケジュールの表示|レポートの実行または更新に使用する共有スケジュールを表示します。<br /><br /> **システム ユーザー** ロールからこのタスクを削除すると、ユーザーはサブスクリプションおよびその他のスケジュールに設定された操作に使用する共有スケジュールを選択できなくなります。|  
   
- **システム ユーザー** ロールを使用して、既定のセキュリティを補完できます。 このロールは、レポート サーバーへのアクセスをレポート ユーザーに許可する新しいロールの割り当てに含めることができます。 詳細については、「 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
+ **システム ユーザー** ロールを使用して、既定のセキュリティを補完できます。 このロールは、レポート サーバーへのアクセスをレポート ユーザーに許可する新しいロールの割り当てに含めることができます。 詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
