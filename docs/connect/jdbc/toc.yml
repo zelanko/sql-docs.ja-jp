@@ -103,6 +103,8 @@
           href: basic-data-types-sample.md
         - name: SQLXML データ型のサンプル
           href: sqlxml-data-type-sample.md
+        - name: 空間データ型のサンプル
+          href: spatial-data-types-sample.md
     - name: 結果セットの処理
       href: working-with-result-sets.md
       items:
@@ -121,6 +123,8 @@
           href: reading-large-data-with-stored-procedures-sample.md
         - name: 大きなデータを更新するサンプル
           href: updating-large-data-sample.md
+    - name: データの検出と分類のサンプル
+      href: data-discovery-classification-sample.md
 - name: JDBC SQL ドライバーの準拠
   href: compliance-and-legal-for-the-jdbc-sql-driver.md
   items:
@@ -163,6 +167,8 @@
           href: using-parameter-metadata.md
         - name: 基本データ型の使用
           href: using-basic-data-types.md
+        - name: 空間データ型の使用
+          href: use-spatial-datatypes.md
         - name: トランザクションについて
           href: understanding-transactions.md
         - name: 接続の操作
@@ -241,6 +247,8 @@
           href: wrappers-and-interfaces.md
         - name: JDBC ドライバーでの一括コピーの使用
           href: using-bulk-copy-with-the-jdbc-driver.md
+        - name: バッチ挿入操作の一括コピー API の使用
+          href: use-bulk-copy-api-batch-insert-operation.md
         - name: 出力パラメーターがあるストアド プロシージャの使用
           href: using-a-stored-procedure-with-output-parameters.md
         - name: バッチ操作の実行
@@ -257,3 +265,5 @@
           href: azure-key-vault-sample-version-6.0.0.md
         - name: Azure Key Vault のサンプル版 6.2.2
           href: azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault のサンプル版 7.0.0
+          href: azure-key-vault-sample-version-7-0-0.md
