@@ -50,7 +50,7 @@ ms.locfileid: "37275628"
   
 7.  [プロジェクト] メニューで、次のようにクリックします。**参照の追加**します。  
   
-8.  **参照の追加** ダイアログ ボックスで、 **.NET**  タブで  **System.Web.Services**、順にクリックします**OK**します。  
+8.  **参照の追加** ダイアログ ボックスで、 **.NET** タブで **System.Web.Services**、順にクリックします**OK**します。  
   
  詳細については、「[SOAP API へのアクセス](../reporting-services/report-server-web-service/accessing-the-soap-api.md)」を参照してください。  
   
