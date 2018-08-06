@@ -1,7 +1,7 @@
 ---
-title: Azure SQL database への接続 |Microsoft ドキュメント
+title: Azure SQL database への接続 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,36 +14,36 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 183cd9c749cac8b1af3d97a9830d4d4288fd464f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e716ec94db3f37dc51136f55884ac0c9eb33d236
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832477"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278743"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL Database への接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  このトピックを使用する場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]への接続に、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]です。 接続の詳細については、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を参照してください。  
+  この記事では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に発生する問題について説明します。 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] への接続に関する詳細については、次のトピックを参照してください。  
   
 -   [SQL Azure データベース](http://go.microsoft.com/fwlink/?LinkID=202490)  
   
--   [方法: JDBC を使用して SQL Azure への接続](http://msdn.microsoft.com/library/gg715284.aspx)  
+-   [JDBC を使用して SQL Azure に接続する方法](http://msdn.microsoft.com/library/gg715284.aspx)  
   
--   [Java での SQL Azure を使用します。](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
+-   [Java での SQL Azure の使用](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
 
 -   [Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>詳細  
- 接続するとき、 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]、呼び出しに、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**です。  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ユーザー データベースからカタログのセット全体を返すことはできません。 **SQLServerDatabaseMetaData.getCatalogs** sys.databases ビューを使用して、カタログを取得します。 アクセス許可の説明を参照してください[sys.databases (SQL Azure データベース)](http://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs**の動作を[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]です。  
+ 接続するとき、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を呼び出す、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**します。  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData.getCatalogs では、sys.databases ビューを使用してカタログを取得します。 権限に関する情報を参照してください[sys.databases (SQL Azure データベース)](http://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs**での動作を[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]します。  
   
  接続のドロップ  
- 接続するとき、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]一定の期間の後に、ファイアウォールなどのネットワーク コンポーネントによってアイドル接続が終了する可能性があります。 このコンテキストでのアイドル接続には、次の 2 種類があります。  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] への接続時に非アクティブな状態が一定時間続くと、ファイアウォールなどのネットワーク コンポーネントにより、アイドル接続が終了されることがあります。 このコンテキストでのアイドル接続には、次の 2 種類があります。  
   
 -   TCP レイヤーでのアイドル状態。これは、任意の数のネットワーク デバイスによる切断が可能である状態です。  
   
--   SQL Azure ゲートウェイによってアイドル状態で TCP **keepalive** (接続の確立、TCP の観点からアイドル状態でない)、発生する可能性がありますあっていないアクティブなクエリが 30 分間です。 この場合ゲートウェイは、TDS 接続が 30 分間アイドル状態であると判断し、接続を終了します。  
+-   SQL Azure ゲートウェイによるアイドル状態。これは、TCP **keepalive** メッセージ (TCP から見て接続がアイドルでない状態にするため) が発生することはあっても、アクティブなクエリが 30 分間発生していないという状態です。 この場合ゲートウェイは、TDS 接続が 30 分間アイドル状態であると判断し、接続を終了します。  
   
  ネットワーク コンポーネントによってアイドル接続がドロップされる状況を回避するには、ドライバーが読み込まれているオペレーティング システムで、次のレジストリ設定 (Windows 以外の場合はこれらに相当する設定) を行う必要があります。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "32832477"
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ パラメーター \ KeepAliveInterval|1000|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ パラメーター \ TcpMaxDataRetransmissions|10|  
   
- レジストリ設定を有効にするには、設定後にコンピューターを再起動する必要があります。  
+ 設定後にコンピューターを再起動して、レジストリ設定を有効にします。  
   
  Windows Azure の実行時にこの操作を行うには、スタートアップ タスクを作成してこれらのレジストリ キーを追加します。  たとえば、次のスタートアップ タスクをサービス定義ファイルに追加します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "32832477"
   
  次に、AddKeepAlive.cmd ファイルをプロジェクトに追加します。 [出力ディレクトリにコピー] を [常にコピーする] に設定します。 AddKeepAlive.cmd ファイルのサンプルを次に示します。  
   
-```  
+```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
 REM Workaround for JDBC keep alive on SQL Azure  
@@ -78,14 +78,14 @@ shutdown /r /t 1
 ```  
   
  接続文字列内の UserId へのサーバー名の追加  
- バージョン 4.0 の前に、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]に接続するとき、 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]、接続文字列内の UserId にサーバー名を追加する必要がありました。 たとえば、 user@servernameのようにします。 以降のバージョン 4.0 では、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、追加する必要はなくなりました@servername接続文字列内の UserId にします。  
+ Version 4.0 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に、接続文字列内の UserId にサーバー名を追加する必要がありました。 たとえば、 user@servernameのようにします。 Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続文字列内の UserId に @servername を追加する必要がなくなりました。  
   
  暗号化の使用に必要な hostNameInCertificate の設定  
- 接続するとき、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を指定する必要があります**hostNameInCertificate**を指定する場合**暗号化 = true**です。 (接続文字列でサーバー名が場合*shortName*.*domainName*、設定、 **hostNameInCertificate**プロパティを\*.*domainName*)。  
+ 接続するとき、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を指定する必要があります**hostNameInCertificate**を指定する場合**暗号化 = true**します。 (接続文字列でサーバー名が場合*shortName*.*domainName*、設定、 **hostNameInCertificate**プロパティを\*.*domainName*)。  
   
- 以下に例を示します。  
+ 例 :  
   
-```  
+```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
 ```  
   

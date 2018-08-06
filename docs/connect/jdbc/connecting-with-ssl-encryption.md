@@ -1,7 +1,7 @@
 ---
-title: SSL 暗号化を使用した接続 |Microsoft ドキュメント
+title: SSL 暗号化を使用した接続 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,36 +14,36 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49c6aaf771bb5335b8ba649869a4a8cf13894e82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2c3b72cb8d69659202b9a8f138ca14860dfe275c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832617"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278554"
 ---
 # <a name="connecting-with-ssl-encryption"></a>SSL 暗号化を使用した接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  このトピックの例では、Java アプリケーションで SSL (Secure Sockets Layer) 暗号化を使用できるようにする接続文字列プロパティの使用方法について説明します。 これらの新しい接続の詳細については、文字列などのプロパティ**暗号化**、 **trustServerCertificate**、 **trustStore**、 **trustStorePassword**、および**hostNameInCertificate**を参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)です。  
+  この記事の例では、Java アプリケーションで SSL (Secure Sockets Layer) 暗号化を使用できるようにする接続文字列プロパティの使用方法について説明します。 これらの新しい接続文字列プロパティ (**encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword**、**hostNameInCertificate** など) の詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
   
- ときに、**暗号化**プロパティに設定されている**true**と**trustServerCertificate**プロパティに設定されている**true**、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]検証されません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 証明書。 これは通常、場所など、テスト環境での接続を許可する必要、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]インスタンスには、自己署名証明書のみです。  
+ **encrypt** プロパティが **true** に設定され、**trustServerCertificate** プロパティが **true** に設定されている場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の SSL 証明書を検証しません。 これは、通常、テスト環境 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスが自己署名入りの証明書しか備えていない環境など) で接続を許可する場合に必要になります。  
   
- 次のコード例は、設定する方法を示します、 **trustServerCertificate**接続文字列内のプロパティ。  
+ 次のコード例では、接続文字列内に **trustServerCertificate** プロパティを設定する方法を示します。  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
      "encrypt=true;trustServerCertificate=true";  
 ```  
   
- ときに、**暗号化**プロパティに設定されている**true**と**trustServerCertificate**プロパティに設定されている**false**、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]検証は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 証明書。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 サーバー証明書を検証するために使用するか、接続時にトラスト マテリアルを指定する必要があります**trustStore**と**trustStorePassword**接続のプロパティを明示的にまたはを使用して基になる Java 仮想マシン (JVM) の既定の信頼は、暗黙的に格納されます。  
+ **encrypt** プロパティが **true** に設定され、**trustServerCertificate** プロパティが **false** に設定されている場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の SSL 証明書を検証しません。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 サーバー証明書を検証するには、**trustStore** 接続プロパティと **trustStorePassword** 接続プロパティを明示的に使用するか、または基になる Java 仮想マシン (JVM) のトラスト ストアを暗黙的に使用して、接続時にトラスト マテリアルを提供する必要があります。  
   
- **TrustStore**プロパティは、クライアントが信頼する証明書のリストを含む証明書の trustStore ファイルへ (ファイル名を含む) のパスを指定します。 **TrustStorePassword**プロパティは trustStore データの整合性を確認するためのパスワードを指定します。 JVM の既定のトラスト ストアを使用する方法については、次を参照してください。、 [SSL 暗号化用のクライアントを構成する](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)です。  
+ **trustStore** プロパティでは、証明書の trustStore ファイルへのパス (ファイル名を含む) を指定します。このファイルには、クライアントが信頼する証明書の一覧が含まれています。 **trustStorePassword** プロパティでは、trustStore データの整合性の確認に使用するパスワードを指定します。 JVM の既定のトラスト ストアの使用に関する詳細については、次を参照してください。、 [SSL 暗号化用のクライアントを構成する](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)します。  
   
- 次のコード例は、設定する方法を示します、 **trustStore**と**trustStorePassword**接続文字列のプロパティ。  
+ 次のコード例では、接続文字列内に **trustStore** プロパティと **trustStorePassword** プロパティを設定する方法を示します。  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
@@ -51,11 +51,11 @@ String connectionUrl =
      "trustStore=storeName;trustStorePassword=storePassword";  
 ```  
   
- JDBC Driver は、追加のプロパティ**hostNameInCertificate**サーバーのホストの名前を指定します。 このプロパティの値は、証明書の subject プロパティと一致する必要があります。  
+ JDBC Driver には、サーバーのホスト名を指定するための追加プロパティである **hostNameInCertificate** が用意されています。 このプロパティの値は、証明書の subject プロパティと一致する必要があります。  
   
- 次のコード例を使用する方法を示しています、 **hostNameInCertificate**接続文字列内のプロパティ。  
+ 次のコード例では、接続文字列内で **hostNameInCertificate** プロパティを使用する方法を示します。  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
@@ -65,12 +65,12 @@ String connectionUrl =
 ```  
   
 > [!NOTE]  
->  適切なを使用して接続のプロパティの値を設定する代わりに、 **set アクセス操作子**によって提供されるメソッド、 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)クラスです。  
+>  または、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスによって提供される適切な **setter** メソッドを使用して、接続プロパティの値を設定することもできます。  
   
- 場合、**暗号化**プロパティに設定されている**true**と**trustServerCertificate**プロパティに設定されている**false**場合で、サーバーの名前と、接続文字列が内のサーバー名と一致しません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 証明書を次のエラーが発行されます: ドライバーは、安全な接続を確立できませんでした[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]安全な Sockets Layer (SSL) 暗号化を使用しています。 エラー: "java.security.cert.CertificateException: SSL (Secure Sockets Layer) の初期化中に、証明書内のサーバー名の検証が失敗しました。"  
+ **encrypt** プロパティが **true** に設定され、**trustServerCertificate** プロパティが **false** に設定され、接続文字列のサーバー名が [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 証明書のサーバー名に一致しない場合は、次のエラーが発行されます: ドライバーは SSL (Secure Sockets Layer) 暗号化を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] への安全な接続を確立できませんでした。 エラー: "java.security.cert.CertificateException: SSL (Secure Sockets Layer) の初期化中に、証明書内のサーバー名の検証が失敗しました。"  
   
 ## <a name="see-also"></a>参照  
- [SSL 暗号化を使用します。](../../connect/jdbc/using-ssl-encryption.md)   
+ [SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)   
  [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: 高度なデータ型を使用して |Microsoft ドキュメント
+title: 高度なデータ型の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,30 +14,30 @@ caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4bd8d2b92c6d998c10239f3502328b016de42045
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9ef615f695209cf01c2307c53effc7e84b06eb11
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852757"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278613"
 ---
 # <a name="using-advanced-data-types"></a>高度なデータ型の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] JDBC データ型の詳細を使用して変換する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型には、プログラミング言語を Java で認識できる形式にします。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、JDBC の高度なデータ型を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型を Java プログラミング言語によって認識できる形式に変換します。  
   
-## <a name="remarks"></a>解説  
- 次の表は、既定のマッピング、高度な[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]JDBC、および Java プログラミング言語のデータ型。  
+## <a name="remarks"></a>Remarks  
+ 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、JDBC、および Java プログラミング言語の高度なデータ型間で行われる既定のマッピングを示しています。  
   
 |SQL Server 型|JDBC 型 (java.sql.Types)|Java 言語型|  
 |----------------------|-----------------------------------|-------------------------|  
-|varbinary(max)<br /><br /> image|LONGVARBINARY|byte[]\(既定)、Blob、InputStream、文字列|  
+|varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(既定)、Blob、InputStream、String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (既定)、Clob、InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (既定)、Clob、NClob (Java SE 6.0)|  
 |xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (既定)、InputStream、Clob、byte[]、Blob、SQLXML (Java SE 6.0)|  
 |Udt<sup>1</sup>|VARBINARY|String (既定)、byte[]、InputStream|  
   
- <sup>1</sup> 、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]バイナリ データとしての CLR Udt の送受信をサポートしていますが、CLR メタデータの操作をサポートしていません。  
+ <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、バイナリ データとしての CLR UDT の送受信をサポートしていますが、CLR メタデータの操作はサポートしていません。  
   
  以下のセクションでは、JDBC ドライバーと高度なデータ型の使用方法の例を示します。  
   
@@ -45,36 +45,36 @@ ms.locfileid: "32852757"
  JDBC ドライバーは、java.sql.Blob、java.sql.Clob、および java.sql.NClob インターフェイスのすべてのメソッドを実装しています。  
   
 > [!NOTE]  
->  CLOB 値で使用できる[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)](またはそれ以降) の大きな値データ型。 具体的には、CLOB 型はで使用できる、 **varchar (max)** と**nvarchar (max)** データ型の場合は、BLOB 型で使用できます**varbinary (max)** と**イメージ**データ型、および NCLOB 型で使える**ntext**と**nvarchar (max)** です。  
+>  CLOB 値は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (以降) の大きな値のデータ型で使用できます。 具体的には、CLOB 型はで使用できる、 **varchar (max)** と**nvarchar (max)** データ型の場合は、BLOB の種類で使用できます**varbinary (max)** と**イメージ**で使用できるデータ型、および NCLOB 型**ntext**と**nvarchar (max)** します。  
   
 ## <a name="large-value-data-types"></a>大きな値のデータ型  
- 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、大きな値のデータ型の特別な処理が必要です。 大きな値をとるデータ型とは、最大行サイズが 8 KB を超えるデータ型のことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] max 指定子が導入されています**varchar**、 **nvarchar**、および**varbinary** 2 と同じ大きさの値を格納を許可するデータ型 ^31 バイトです。 テーブルの列と[!INCLUDE[tsql](../../includes/tsql_md.md)]変数を指定できます**varchar (max)**、 **nvarchar (max)**、または**varbinary (max)** データ型。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、大きな値のデータ型には特殊な処理が必要でした。 大きな値をとるデータ型とは、最大行サイズが 8 KB を超えるデータ型のことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、2^31 バイトまでの大きさの値を格納できる、**varchar** データ型、**nvarchar** データ型、**varbinary** データ型用の max 指定子が導入されました。 テーブル列や [!INCLUDE[tsql](../../includes/tsql_md.md)] 変数に、**varchar(max)** データ型、**nvarchar(max)** データ型、または **varbinary(max)** データ型を指定できます。  
   
  大きな値の型を操作する主要なシナリオには、データベースからの取得とデータベースへの追加があります。 以下のセクションでは、これらのタスクを実行するためのさまざまな方法について説明します。  
   
 ### <a name="retrieving-large-value-types-from-a-database"></a>データベースからの大きな値の型の取得  
- 非バイナリの大きな値データ型を取得する場合: など、 **varchar (max)** データ型 — をデータベースから 1 つの方法がデータを文字ストリームとして読み取ることができます。 次の例で、 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)クラスは、データベースからデータを取得し、結果セットとして返すに使用します。 続いて、 [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)クラスは、結果セットから大きな値データの読み取りに使用します。  
+ **varchar(max)** データ型などのバイナリ以外の大きな値のデータ型をデータベースから取得する場合は、データを文字ストリームとして読み取ることができます。 以下の例では、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用してデータベースからデータを取得し、これを結果セットとして返します。 次に、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) メソッドを使用し、大きな値のデータを結果セットから読み取ります。  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
 rs.next();  
 Reader reader = rs.getCharacterStream(2);  
 ```  
   
 > [!NOTE]  
->  これと同じアプローチにも使用できます、**テキスト**、 **ntext**、および**nvarchar (max)** データ型。  
+>  これと同じアプローチがのこともでき、**テキスト**、 **ntext**、および**nvarchar (max)** データ型。  
   
- バイナリの大きな値データ型を取得する場合: など、 **varbinary (max)** データ型: データベースからは、いくつかのアプローチを行うことができます。 最も効率的に行うには、次のようにバイナリ ストリームとしてデータを読み取ります。  
+ **varbinary(max)** データ型などのバイナリの大きな値のデータ型をデータベースから取得する場合は、いくつかの方法があります。 最も効率的に行うには、次のようにバイナリ ストリームとしてデータを読み取ります。  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
 rs.next();  
 InputStream is = rs.getBinaryStream(2);  
 ```  
   
- 使用することも、 [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)メソッドを次のように、バイト配列としてデータを読み取る。  
+ また、[getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) メソッドを使用し、次のように byte 配列としてデータを読み取ることもできます。  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
 rs.next();  
 byte [] b = rs.getBytes(2);  
@@ -88,7 +88,7 @@ byte [] b = rs.getBytes(2);
   
  次に示すように、文字列やバイトを使用する方法もあります。  
   
-```  
+```java
 PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (c1_id, c2_vcmax) VALUES (?, ?)");  
 pstmt.setInt(1, 1);  
 pstmt.setString(2, htmlStr);  
@@ -96,11 +96,11 @@ pstmt.executeUpdate();
 ```  
   
 > [!NOTE]  
->  この方法に格納されている値に対しても使用できます**テキスト**、 **ntext**、および**nvarchar (max)** 列です。  
+>  この方法に格納されている値に対しても使用できます**テキスト**、 **ntext**、および**nvarchar (max)** 列。  
   
- 全体のバイナリ イメージ ファイルをアップロードする必要があり、サーバーにイメージ ライブラリをした場合、 **varbinary (max)** 次のように、直接ストリームを使用する列、JDBC ドライバーで最も効率的な方法は。  
+ サーバーにイメージ ライブラリがあり、バイナリ イメージ ファイル全体を **varbinary(max)** 列にアップロードする必要がある場合、JDBC ドライバーで最も効率的にこれを行うには、次に示すようにストリームを直接使用します。  
   
-```  
+```java
 PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Col2) VALUES(?,?)");  
 File inputFile = new File("CLOBFile20mb.jpg");  
 FileInputStream inStream = new FileInputStream(inputFile);  
@@ -115,11 +115,11 @@ inStream.close();
 >  CLOB または BLOB メソッドの使用は、大きいデータをアップロードする際に効率的ではありません。  
   
 ### <a name="modifying-large-value-types-in-a-database"></a>データベースの大きな値の型の変更  
- ほとんどの場合、更新またはデータベースの大きい値を変更するための推奨される方法を使用したパラメーターを渡す、 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)と[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)クラス使用して[!INCLUDE[tsql](../../includes/tsql_md.md)]更新プログラム、書き込み、および SUBSTRING などのコマンド。  
+ 多くの場合、データベースの大きい値を更新または変更する際は、UPDATE、WRITE、SUBSTRING などの [!INCLUDE[tsql](../../includes/tsql_md.md)] コマンドを使用して、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) や [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラス経由でパラメーターを渡して行うことをお勧めします。  
   
- アーカイブされた HTML ファイルなど、大きなテキスト ファイルに含まれる単語のインスタンスを置換する必要がある場合は、次のように、Clob オブジェクトを使用できます。  
+ アーカイブされた HTML ファイルなどの大きいテキスト ファイル内で、ある単語を置き換える必要がある場合は、次のように Clob オブジェクトを使用することができます。  
   
-```  
+```java
 String SQL = "SELECT * FROM test1;";  
 Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);  
 ResultSet rs = stmt.executeQuery(SQL);  
@@ -137,11 +137,11 @@ rs.updateRow();
  大きな値の型の詳細については、SQL Server オンライン ブックの「大きな値をとるデータ型の使用」を参照してください。  
   
 ## <a name="xml-data-type"></a>XML データ型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供、 **xml**データ型を XML ドキュメントを格納して、フラグメント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 **Xml**データ型は、組み込みのデータ型で[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]などの他の組み込み型のようないくつかの方法であると**int**と**varchar**です。 他の組み込み型にも使用できるように、 **xml**型データ テーブルを作成するときに列の型として以外の場合は、変数の型、パラメーターの型、または関数の戻り値型であるとして、またはで[!INCLUDE[tsql](../../includes/tsql_md.md)]CAST や CONVERT 関数。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は、XML ドキュメントとフラグメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに格納できる **xml** データ型を提供します。 **xml** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] での組み込みデータ型の 1 つであり、**int** や **varchar** などの他の組み込みデータ型といくつかの点で似ています。 他の組み込み型と同様に、**xml** データ型は、テーブルの作成時に列型として使用したり、変数の型やパラメーターの型、関数の戻り値の型として使用したり、[!INCLUDE[tsql](../../includes/tsql_md.md)] CAST や CONVERT 関数内で使用したりすることができます。  
   
- JDBC ドライバーで、 **xml**データ型は、文字列、バイト配列、ストリーム、CLOB、BLOB、または SQLXML オブジェクトとしてマップすることができます。 文字列が既定値です。 JDBC Driver Version 2.0 以降では、SQLXML インターフェイスを導入した JDBC 4.0 API がサポートされます。 SQLXML インターフェイスは、対話し、XML データを操作するメソッドを定義します。 **SQLXML**データ型にマップ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**データ型。 リレーショナル データベースに XML データを読み書きする方法の詳細についての**SQLXML** Java データ型を参照してください[XML データをサポートする](../../connect/jdbc/supporting-xml-data.md)です。  
+ JDBC ドライバーでは、**xml** データ型は、文字列、byte 配列、ストリーム、CLOB、BLOB、または SQLXML オブジェクトとしてマップできます。 文字列が既定値です。 JDBC Driver Version 2.0 以降では、SQLXML インターフェイスを導入した JDBC 4.0 API がサポートされます。 SQLXML インターフェイスには、XML データを操作するための各種のメソッドが定義されています。 **SQLXML**データ型にマップされます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**データ型。 **SQLXML** Java データ型を使用して、リレーショナル データベースから XML データを読み取ったり、リレーショナル データベースに XML データを書き込んだりする方法については、「[XML データのサポート](../../connect/jdbc/supporting-xml-data.md)」を参照してください。  
   
- 実装、 **xml** JDBC ドライバーでのデータ型は、次のサポートを提供します。  
+ JDBC ドライバーにおける **xml** データ型の実装では、以下の操作がサポートされます。  
   
 -   最も一般的なプログラミング シナリオに対し、標準 Java UTF-16 文字列として XML にアクセスできます。  
   
@@ -149,16 +149,16 @@ rs.updateRow();
   
 -   他の XML プロセッサやディスク ファイルとのやり取りのために UTF-16 でエンコードされている場合、先頭に BOM の付いた byte 配列として XML にアクセスできます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] UTF 16 でエンコードされた XML に対して先頭の BOM が必要です。 XML パラメーターの値がバイト配列として指定されている場合は、アプリケーションでこれを提供する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 常に utf-16 BOM なしを使用した文字列または埋め込みエンコード宣言としては、XML 値を出力します。 XML 値が byte[]、BinaryStream、または Blob として取得される場合、UTF-16 BOM が値の前に付いています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は、UTF-16 でエンコードされた XML に対しては先頭の BOM が必要です。 XML パラメーターの値がバイト配列として指定されている場合は、アプリケーションでこれを提供する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は、常に BOM または埋め込みエンコード宣言のない UTF-16 文字列として XML 値を出力します。 XML 値が byte[]、BinaryStream、または Blob として取得される場合、UTF-16 BOM が値の前に付いています。  
   
- 詳細については、 **xml**データ型を参照してください"xml データ型"[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブック。  
+ **xml** データ型の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] オンライン ブックの「xml データ型」を参照してください。  
   
 ## <a name="user-defined-data-type"></a>ユーザー定義データ型  
- ユーザー定義型 (Udt) の導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]オブジェクトやカスタム データ構造を格納することにより、SQL 型システムを拡張し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 UDT は複数のデータ型を保持でき、動作を含むことができるので、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] システム データ型だけで構成される従来の別名データ型とは異なります。 UDT は、検証可能なコードを生成する、Microsoft .NET 共通言語ランタイム (CLR) によってサポートされている任意の言語を使用して定義されます。 その言語には、Microsoft Visual C# および Visual Basic .NET が含まれます。 データは .NET Framework ベースのクラスまたは構造体のフィールドとプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] にユーザー定義型 (UDT) が導入されたことにより、オブジェクトやカスタム データ構造を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに格納できるため、SQL 型システムを拡張することができます。 UDT は複数のデータ型を保持でき、動作を含むことができるので、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] システム データ型だけで構成される従来の別名データ型とは異なります。 UDT は、検証可能なコードを生成する、Microsoft .NET 共通言語ランタイム (CLR) によってサポートされている任意の言語を使用して定義されます。 その言語には、Microsoft Visual C# および Visual Basic .NET が含まれます。 データは .NET Framework ベースのクラスまたは構造体のフィールドとプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、UDT の変数として、テーブルの列の定義として使用できる、[!INCLUDE[tsql](../../includes/tsql_md.md)]バッチ、またはの引数として、[!INCLUDE[tsql](../../includes/tsql_md.md)]関数またはストアド プロシージャです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、UDT をテーブルの列定義、[!INCLUDE[tsql](../../includes/tsql_md.md)] バッチの変数、または [!INCLUDE[tsql](../../includes/tsql_md.md)] の関数やストアド プロシージャの引数として使用できます。  
   
- ユーザー定義データ型の詳細についてを参照してください"を使用してユーザー定義型のインスタンスを変更する"[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブック。  
+ ユーザー定義データ型の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] オンライン ブックの「ユーザー定義型のインスタンスの使用と変更」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

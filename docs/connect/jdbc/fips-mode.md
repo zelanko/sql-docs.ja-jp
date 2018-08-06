@@ -1,7 +1,7 @@
 ---
-title: FIPS モード |Microsoft ドキュメント
+title: FIPS モード |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,48 +14,48 @@ caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
-ms.openlocfilehash: 48c0ca49b743a012130a46dda30dd5053e52cea3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 792d843a2c11c7bde016aec513df9c8724b366b4
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833697"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278853"
 ---
 # <a name="fips-mode"></a>FIPS モード
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server をサポートしている*FIPS 140 準拠モード*です。 For Oracle を参照してください、Sun JVM/、 [FIPS 140 準拠モードによって](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html)FIPS を構成する Oracle によって提供されるセクションには、JVM が有効になっています。 
+Microsoft JDBC Driver for SQL Server サポート*FIPS 140 準拠モード*します。 For Oracle を参照してください、Sun JVM/、 [FIPS 140 準拠モード SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) FIPS 構成に Oracle によって提供されるセクションには、JVM が有効になっています。 
 
 **前提条件**:
 * FIPS JVM を構成します。
 * 適切な SSL 証明書。
 * 適切なポリシー ファイルです。 
-* 適切な構成パラメーターです。 
+* 適切な構成パラメーター。 
 
 
 ## <a name="fips-configured-jvm"></a>FIPS JVM を構成します。
 
-承認済みのモジュールは、FIPS 構成を参照してください、[検証 FIPS 140-1、FIPS 140-2 の暗号化モジュール](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)です。 
+FIPS 構成には、承認済みのモジュールを参照してくださいを参照してください、[検証 FIPS 140-1 と FIPS 140-2 暗号化モジュール](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)します。 
 
-ベンダーは、FIPS に JVM を構成する追加の手順があります。
+ベンダーは、FIPS JVM を構成する追加の手順があります。
 
-### <a name="ensure-your-jvm-is-in-fips-mode"></a>JVM が FIPS モードでを確認してください。
-JVM が FIPS が有効になっていることを確認するには、するためには、次のスニペットを実行します。 
+### <a name="ensure-your-jvm-is-in-fips-mode"></a>JVM が FIPS モードを確認します。
+JVM が FIPS を有効になっていることを確認するには、次のスニペットを実行します。 
 
-````
+```java
 public boolean isFIPS() throws Exception {
     Provider jsse = Security.getProvider("SunJSSE");
     return jsse != null && jsse.getInfo().contains("FIPS");
 }
-````
+```
 
 ## <a name="appropriate-ssl-certificate"></a>適切な SSL 証明書
-FIPS モードで SQL Server を接続するためには、有効な SSL 証明書が必要です。 インストールまたは FIPS が有効になって、クライアント マシン (JVM) の Java キー ストアにインポートします。 いないインポート/、適切な証明書をインストールして、セキュリティで保護された接続を確立できないと、SQL Server に接続できませんでしたできません。
+FIPS モードで SQL Server を接続するためには、有効な SSL 証明書が必要です。 インストールまたは FIPS が有効になっているクライアント マシン (JVM) での Java キー ストアにインポートします。
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>Java キーストアで SSL 証明書をインポートします。
-FIPS のほとんどの場合必要があります (して .cert) 証明書をインポートするか PKCS またはプロバイダー固有の書式。 次のスニペットを使用して、SSL 証明書をインポートし、適切なキーストア形式での作業ディレクトリに格納します。 _TRUST_STORE_PASSWORD_ Java キーストアのパスワードがします。 
+FIPS のほとんどの場合必要があります (.cert) 証明書をインポートするか PKCS またはプロバイダー固有の書式。 SSL 証明書をインポートし、適切なキーストア形式での作業ディレクトリに保存するには、次のスニペットを使用します。 _TRUST_STORE_PASSWORD_は Java キーストアのパスワードです。 
 
-````
+```java
     public void saveGenericKeyStore(String provider, String trustStoreType, String certName, String certPath) throws KeyStoreException, CertificateException, NoSuchAlgorithmException, NoSuchProviderException, IOException {
         KeyStore ks = KeyStore.getInstance(trustStoreType, provider);
         FileOutputStream os = new FileOutputStream("./MyTrustStore_" + trustStoreType);
@@ -72,30 +72,30 @@ FIPS のほとんどの場合必要があります (して .cert) 証明書を�
         return cf.generateCertificate(fis);
     }
 
-````
+```
 
 
-次の例は BouncyCastle プロバイダーと PKCS12 形式で Azure SSL 証明書をインポートしています。 という名前の作業ディレクトリに証明書をインポート_MyTrustStore_PKCS12_次のスニペットを使用しています。
+次の例は BouncyCastle プロバイダーと PKCS12 形式で Azure SSL 証明書をインポートしています。 という名前の作業ディレクトリに証明書をインポート_MyTrustStore_PKCS12_次のスニペットを使用します。
 
 ` saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer"); `
 
 ## <a name="appropriate-policy-files"></a>適切なポリシー ファイル
-FIPS プロバイダーによっては、無制限のポリシー jar ファイルが必要です。 このような場合、Sun/Oracle、ダウンロード、Java Cryptography Extension (JCE) 無制限 Strength Jurisdiction Policy Files の[JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)または[JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)です。 
+FIPS プロバイダーによっては、無制限のポリシーの jar が必要です。 このような場合は、sun、/、Oracle Java Cryptography Extension (JCE) 無制限強度管轄ポリシーのファイルをダウンロード[JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)または[JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)します。 
 
 ## <a name="appropriate-configuration-parameters"></a>適切な構成パラメーター
-FIPS 準拠モードでは、JDBC ドライバーを実行するためには、次の表に示すように、接続のプロパティを構成します。 
+FIPS 準拠モードでは、JDBC ドライバーを実行するには、次の表に示すように、接続のプロパティを構成します。 
 
 **プロパティ**: 
 
-|プロパティ|型|既定値|Description|注|
+|プロパティ|型|既定|[説明]|注|
 |---|---|---|---|---|
-|encrypt|ブール値を [「真/偽」]|"false"|JVM の暗号化プロパティ FIPS が有効にする必要があります**は true。**||
-|TrustServerCertificate|ブール値を [「真/偽」]|"false"|FIPS のユーザーはため、ユーザーが使用する必要があります、証明書チェーンを検証する必要があります **"false"** このプロパティの値。 ||
-|trustStore|文字列|null|証明書をインポートした、Java Keystore ファイル パス。 システムに何も渡す必要はありません証明書をインストールする場合。 ドライバーは、cacerts または jssecacerts ファイルを使用します。||
-|trustStorePassword|文字列|null|trustStore データの整合性を確認するために使用するパスワードです。||
-|fips|ブール値を [「真/偽」]|"false"|このプロパティは、fips が JVM を有効になっている**は true。**|6.1.4 で追加された (安定して 6.2.2 のリリース)||
-|fipsProvider|文字列|null|JVM で構成されている FIPS プロバイダーです。 たとえば、BCFIPS または SunPKCS11 NSS |6.1.2 で追加 (安定したリリース 6.2.2)、6.4.0 - で非推奨の詳細を参照してください[ここ](https://github.com/Microsoft/mssql-jdbc/pull/460)です。|
-|trustStoreType|文字列|JKS|PKCS12 または型のいずれかで FIPS プロバイダーによって定義 FIPS モード セット信頼ストアの種類 |6.1.2 で追加された (安定して 6.2.2 のリリース)||
+|encrypt|boolean ["true / false"]|"false"|JVM がプロパティを暗号化する FIPS が有効になっている必要があります**は true。**||
+|TrustServerCertificate|boolean ["true / false"]|"false"|ユーザーは、FIPS のため、ユーザーが使用する必要があります、証明書チェーンを検証する必要があります **"false"** このプロパティの値。 ||
+|trustStore|String|null|証明書をインポートする、Java Keystore ファイル パス。 証明書をインストールするには、システム上に何も渡す必要はありません。 場合、 ドライバーは、cacerts または jssecacerts ファイルを使用します。||
+|trustStorePassword|String|null|trustStore データの整合性を確認するために使用するパスワードです。||
+|fips|boolean ["true / false"]|"false"|このプロパティは、FIPS 対応 JVM**は true。**|6.1.4 で追加された (安定版 6.2.2 をリリース)||
+|fipsProvider|String|null|JVM で構成されている FIPS プロバイダー。 たとえば、BCFIPS または SunPKCS11 NSS |6.1.2 で追加 (安定した 6.2.2 をリリース)、詳細を参照してください - 6.4.0 で非推奨と[ここ](https://github.com/Microsoft/mssql-jdbc/pull/460)します。|
+|trustStoreType|String|JKS|FIPS モード セット信頼ストアの種類の PKCS12 または型プロバイダーによって定義された FIPS |6.1.2 で追加された (安定版 6.2.2 をリリース)||
 
 
 

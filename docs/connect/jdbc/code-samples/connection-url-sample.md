@@ -1,7 +1,7 @@
 ---
-title: 接続 URL のサンプル |Microsoft ドキュメント
+title: 接続 URL のサンプル |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,81 +14,64 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d0ae6f113968d2774ce5d842a34d38b2274609
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 31a3a492c9c6405e4d7f3c8d629adca38c2a3199
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829647"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278763"
 ---
 # <a name="connection-url-sample"></a>接続 URL のサンプル
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  これは、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]サンプル アプリケーションに接続する方法を示して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]接続 URL を使用してデータベース。 データを取得する方法も示します、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SQL ステートメントを使用してデータベース。  
+  この [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、接続 URL を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースに接続する方法を示しています。 また、SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースからデータを取得する方法も示します。  
   
- このサンプルのコード ファイルは connectURL.java という名前で、次の場所にあります。  
+ このサンプルのコード ファイルは ConnectURL.java という名前で、次の場所にあります。  
   
  \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \samples\connections  
   
 ## <a name="requirements"></a>必要条件  
- このサンプル アプリケーションを実行するには、クラスパスに sqljdbc.jar ファイルまたは sqljdbc4.jar ファイルを含めるを設定する必要があります。 クラスパスに sqljdbc.jar または sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 アクセスする必要も、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../../connect/jdbc/using-the-jdbc-driver.md)です。  
+ このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../../connect/jdbc/using-the-jdbc-driver.md)します。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Sqljdbc.jar と sqljdbc4.jar な Java ランタイム環境 (JRE) 設定によって使用されるクラス ライブラリ ファイルを提供します。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)です。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。  
   
 ## <a name="example"></a>例  
- 次の例で、サンプル コード、接続 URL でさまざまな接続プロパティを設定および DriverManager クラスを返すの getConnection メソッドを呼び出して、 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。  
+ 次の例では、サンプル コードにより接続 URL のさまざまな接続プロパティを設定し、DriverManager クラスの getConnection メソッドを呼び出して、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを返します。  
   
- 次に、使用するサンプル コード、 [createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 、SQLServerConnection オブジェクトを作成する方法、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト、し、 [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)メソッドSQL ステートメントを実行すると呼びます。  
+ 次に、サンプル コードは SQLServerConnection オブジェクトの [createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) メソッドを使用して [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを作成し、さらに [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドが呼び出されて SQL ステートメントを実行します。  
   
- 最後に、サンプルを使用して、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) SQL ステートメントによって返される結果を反復処理に executeQuery メソッドから返されたオブジェクト。  
+ 最後に、サンプルでは executeQuery メソッドから返された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを使用して、SQL ステートメントが返した結果を繰り返し処理します。  
   
 ```java  
-import java.sql.*;  
-  
-public class connectURL {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-         "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns some data.  
-         String SQL = "SELECT TOP 10 * FROM Person.Contact";  
-         stmt = con.createStatement();  
-         rs = stmt.executeQuery(SQL);  
-  
-         // Iterate through the data in the result set and display it.  
-         while (rs.next()) {  
-            System.out.println(rs.getString(4) + " " + rs.getString(6));  
-         }  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ConnectURL {
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
+            String SQL = "SELECT TOP 10 * FROM Person.Contact";
+            ResultSet rs = stmt.executeQuery(SQL);
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>参照  
- [接続およびデータの取得](../../../connect/jdbc/connecting-and-retrieving-data.md)  
-  
-  
+ [接続およびデータの取得](../../../connect/jdbc/connecting-and-retrieving-data.md)

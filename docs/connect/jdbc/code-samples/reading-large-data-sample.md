@@ -1,7 +1,7 @@
 ---
-title: 大量のデータ サンプルを読み取る |Microsoft ドキュメント
+title: 大規模なデータを読み取るサンプル |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,36 +14,36 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d75c6fcf4148a4aa27dee51300d41a8c42e80acf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 51f1925c55fc3ece88aa8354afb181af8aec38ce
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830057"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278643"
 ---
 # <a name="reading-large-data-sample"></a>大きなデータを読み取るサンプル
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  これは、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]サンプル アプリケーションから大きな単一列値を取得する方法を示して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベースを使用して、 [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)メソッドです。  
+  この [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] サンプル アプリケーションでは、[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) メソッドを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースから大きな単一列値を取得する方法を示します。  
   
- このサンプルのコード ファイルは readLargeData.java という名前で、次の場所にあります。  
+ このサンプルのコード ファイルは ReadLargeData.java という名前で、次の場所にあります。  
   
  \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \samples\adaptive  
   
 ## <a name="requirements"></a>必要条件  
- このサンプル アプリケーションを実行するにはアクセス許可が必要、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。 また、クラスパスの設定で sqljdbc.jar ファイルまたは sqljdbc4.jar ファイルを追加する必要があります。 クラスパスに sqljdbc.jar または sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../../connect/jdbc/using-the-jdbc-driver.md)です。  
+ このサンプル アプリケーションを実行するには、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権が必要です。 また mssql jdbc jar ファイルをインクルードするためのクラスパスを設定します。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../../connect/jdbc/using-the-jdbc-driver.md)します。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Sqljdbc.jar と sqljdbc4.jar な Java ランタイム環境 (JRE) 設定によって使用されるクラス ライブラリ ファイルを提供します。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)です。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、サンプル コードへの接続、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]データベース。 次に、サンプル データを作成し、パラメーター化クエリを使用して Production.Document テーブルを更新します。  
+ 次の例のサンプル コードでは、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] データベースへの接続を行います。 次に、サンプル データを作成し、パラメーター化クエリを使用して Production.Document テーブルを更新します。  
   
- さらに、サンプル コードが使用してアダプティブ バッファリング モードを取得する方法を示しています、 [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)クラスです。 JDBC Driver Version 2.0 リリース以降では、responseBuffering 接続プロパティが既定で "adaptive" に設定されていることに注意してください。  
+ さらに、このサンプル コードでは、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) メソッドを使用してアダプティブ バッファリング モードを取得する方法も示されています。 JDBC Driver Version 2.0 リリース以降では、responseBuffering 接続プロパティが既定で "adaptive" に設定されていることに注意してください。  
   
- 次に、SQL ステートメントを使用して、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト、サンプル コードは、SQL ステートメントを実行しに返されるデータを配置、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ 次に、サンプル コードでは、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトで SQL ステートメントを使用して、SQL ステートメントを実行し、返されたデータを [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトに配置します。  
   
- 最後に、サンプル コードは、結果セットに含まれているデータの行を反復処理しを使用して、 [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)メソッドが含まれているデータの一部にアクセスします。  
+ 最後に、結果セット内のデータ行を繰り返し処理し、[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) メソッドを使用してデータの一部にアクセスします。  
   
  [!code[JDBC#UsingAdaptiveBuffering1](../../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]  
   

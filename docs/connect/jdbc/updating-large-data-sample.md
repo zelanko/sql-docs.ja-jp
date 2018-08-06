@@ -1,7 +1,7 @@
 ---
-title: 大量のデータ サンプルの更新 |Microsoft ドキュメント
+title: 大規模なデータ サンプルの更新 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,38 +14,38 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ff0d903d9e4f47580fbce5b4c117a2a339dd22c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b8c4fe76531a4557e0c7915fa67a50e2da794095
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852917"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278703"
 ---
 # <a name="updating-large-data-sample"></a>大きなデータを更新するサンプル
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  これは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]サンプル アプリケーションは、データベース内の大きな列を更新する方法を示します。  
+  この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、データベース内の大きな列値を更新する方法を示しています。  
   
- このサンプルのコード ファイルは updateLargeData.java という名前で、次の場所にあります。  
+ このサンプルのコード ファイルは UpdateLargeData.java という名前で、次の場所にあります。  
   
  \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \samples\adaptive  
   
 ## <a name="requirements"></a>必要条件  
- このサンプル アプリケーションを実行するにはアクセス許可が必要、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベース。 また、クラスパスの設定で sqljdbc4.jar ファイルを追加する必要があります。 クラスパスに sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../connect/jdbc/using-the-jdbc-driver.md)です。  
+ このサンプル アプリケーションを実行するには、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権が必要です。 また、クラスパスの設定で sqljdbc4.jar ファイルを追加する必要があります。 クラスパスに sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../connect/jdbc/using-the-jdbc-driver.md)します。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar のクラス ライブラリ ファイルを必要な Java ランタイム環境 (JRE) 設定によって使い分けることが用意されています。 このサンプルでは、 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)と[unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)メソッドで、ドライバー固有の応答バッファリング メソッドにアクセスする、JDBC 4.0 API が導入されています。 このサンプルをコンパイルして実行するには、JDBC 4.0 をサポートする sqljdbc4.jar クラス ライブラリが必要となります。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)です。  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar のクラス ライブラリ ファイルが用意されており、必要な Java ランタイム環境 (JRE) 設定によって自由に使い分けることができます。 このサンプルは、JDBC 4.0 API で導入された [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) メソッドと [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) メソッドを使用して、ドライバー固有の応答バッファリング メソッドにアクセスします。 このサンプルをコンパイルして実行するには、JDBC 4.0 をサポートする sqljdbc4.jar クラス ライブラリが必要となります。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、サンプル コードへの接続、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]データベース。 サンプル コードのステートメント オブジェクトを作成しを使用して、 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 、Statement オブジェクトが、指定されたラッパーであるかどうかを確認する方法を[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)クラスです。 [Unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)ドライバー固有の応答バッファリング メソッドにアクセスするメソッドを使用します。  
+ 次の例のサンプル コードでは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] データベースへの接続を行います。 さらに、Statement オブジェクトを作成し、[isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) メソッドを使用して、Statement オブジェクトが、指定された [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスのラッパーであるかどうかをチェックします。 ドライバー固有の応答バッファリング メソッドにアクセスするために、[unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) メソッドが使用されています。  
   
- 次に、サンプル コードは設定応答バッファリング モードを"**アダプティブ**"を使用して、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)クラス、さらにアダプティブ バッファリング モードを取得する方法を示します。  
+ 次に、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用して、応答バッファリング モードを "**adaptive**" に設定します。サンプル コードを見ると、アダプティブ バッファリング モードの取得方法も確認できます。  
   
- 次に、SQL ステートメントを実行し、更新可能なに返されるデータを配置[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ さらに、SQL ステートメントを実行し、返されたデータを更新可能な [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトに設定しています。  
   
- 最後に、結果セットに格納されているデータ行を反復処理します。 が見つかった場合、空のドキュメント概要の組み合わせを使用して[updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)と[updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)データの行を更新し、再度データベースに保持できるメソッドです。 使用してデータが既にあるを場合、 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)に含まれるデータの一部を表示します。  
+ 最後に、結果セット内のデータ行を繰り返し処理します。 空のドキュメント概要が見つかった場合、[updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) メソッドと [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドを組み合わせて使用して、データの行を更新し、再度データベースに格納します。 既にデータが存在する場合は、[getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) メソッドを使用して、データの一部が表示されます。  
   
- ドライバーの既定の動作は"**アダプティブ**"。 ただし、順方向専用の更新可能な結果セットと、結果セット内のデータが、アプリケーションのメモリよりも大きい場合は、アプリケーションを使用して明示的にアダプティブ バッファリング モードを設定、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)メソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)クラスです。  
+ ドライバーの既定の動作は "**adaptive**" です。 ただし、順方向専用の更新可能な結果セットの場合で、なおかつ、結果セットのデータのサイズが、アプリケーションのメモリ容量を超える場合は、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用して、アプリケーションからアダプティブ バッファリング モードを明示的に設定する必要があります。  
   
  [!code[JDBC#UsingAdaptiveBuffering3](../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]  
   

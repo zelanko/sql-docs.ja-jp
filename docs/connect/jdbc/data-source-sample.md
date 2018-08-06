@@ -1,7 +1,7 @@
 ---
-title: データ ソースのサンプル |Microsoft ドキュメント
+title: データ ソースのサンプル |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,85 +14,74 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6aaa5427b90c46dc908e4b2dd7ba3c4eab51c01e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f43f757ce9d6ea8e16f400c71e4e7f3321a6bd4b
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830247"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278783"
 ---
 # <a name="data-source-sample"></a>データ ソースのサンプル
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  これは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]サンプル アプリケーションに接続する方法を示して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ ソース オブジェクトを使用してデータベース。 データを取得する方法も示します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース ストアド プロシージャを使用します。  
+  この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、データ ソース オブジェクトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに接続する方法を示しています。 また、ストアド プロシージャを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースからデータを取得する方法も示します。  
   
- このサンプルのコード ファイルは connectDS.java という名前で、次の場所にあります。  
+ このサンプルのコード ファイルは ConnectDS.java という名前で、次の場所にあります。  
   
  \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \samples\connections  
   
 ## <a name="requirements"></a>必要条件  
- このサンプル アプリケーションを実行するには、クラスパスに sqljdbc.jar ファイルまたは sqljdbc4.jar ファイルを含めるを設定する必要があります。 クラスパスに sqljdbc.jar または sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 アクセスする必要も、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベース。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../connect/jdbc/using-the-jdbc-driver.md)です。  
+ このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../connect/jdbc/using-the-jdbc-driver.md)します。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Sqljdbc.jar と sqljdbc4.jar な Java ランタイム環境 (JRE) 設定によって使用されるクラス ライブラリ ファイルを提供します。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)です。  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、サンプル コードの setter メソッドを使用して、さまざまな接続プロパティを設定、 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)オブジェクトを呼び出し、続いて、 [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)のメソッド、SQLServerDataSource オブジェクトを返す、 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。  
+ 次の例では、サンプル コードにより [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) オブジェクトの setter メソッドを使用してさまざまな接続プロパティを設定し、SQLServerDataSource オブジェクトの [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) メソッドを呼び出して、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを返します。  
   
- 次に、使用するサンプル コード、 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 、SQLServerConnection オブジェクトを作成する方法、 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)オブジェクト、し、 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)ストアド プロシージャを実行するメソッドが呼び出されます。  
+ 次に、サンプル コードは SQLServerConnection オブジェクトの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドを使用して [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを作成し、さらに [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) メソッドが呼び出されてストアド プロシージャを実行します。  
   
- 最後に、サンプルを使用して、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)ストアド プロシージャによって返される結果を反復処理に executeQuery メソッドから返されたオブジェクト。  
+ 最後に、サンプルでは executeQuery メソッドから返された [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを使用して、ストアド プロシージャが返した結果を繰り返し処理します。  
   
 ```java
-import java.sql.*;  
-import com.microsoft.sqlserver.jdbc.*;  
-  
-public class connectDS {  
-  
-   public static void main(String[] args) {  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      CallableStatement cstmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.   
-         SQLServerDataSource ds = new SQLServerDataSource();  
-         ds.setUser("UserName");  
-         ds.setPassword("*****");  
-         ds.setServerName("localhost");  
-         ds.setPortNumber(1433);   
-         ds.setDatabaseName("AdventureWorks");  
-         con = ds.getConnection();  
-  
-         // Execute a stored procedure that returns some data.  
-         cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");  
-         cstmt.setInt(1, 50);  
-         rs = cstmt.executeQuery();  
-  
-         // Iterate through the data in the result set and display it.  
-         while (rs.next()) {  
-            System.out.println("EMPLOYEE: " + rs.getString("LastName") +   
-               ", " + rs.getString("FirstName"));  
-            System.out.println("MANAGER: " + rs.getString("ManagerLastName") +   
-               ", " + rs.getString("ManagerFirstName"));  
-            System.out.println();  
-         }  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (cstmt != null) try { cstmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-         System.exit(1);  
-      }  
-   }  
-}  
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class ConnectDS {
+
+    public static void main(String[] args) {
+
+        // Create datasource.
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setUser("<user>");
+        ds.setPassword("<password>");
+        ds.setServerName("<server>");
+        ds.setPortNumber(<port>);
+        ds.setDatabaseName("AdventureWorks");
+
+        try (Connection con = ds.getConnection(); 
+                CallableStatement cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");) {
+            // Execute a stored procedure that returns some data.
+            cstmt.setInt(1, 50);
+            ResultSet rs = cstmt.executeQuery();
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println("EMPLOYEE: " + rs.getString("LastName") + ", " + rs.getString("FirstName"));
+                System.out.println("MANAGER: " + rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));
+                System.out.println();
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>参照  

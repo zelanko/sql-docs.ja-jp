@@ -1,7 +1,7 @@
 ---
-title: JDBC ドライバーで SQL Server への接続 |Microsoft ドキュメント
+title: JDBC ドライバーによる SQL Server への接続 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,38 +14,38 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6af836edb1585a07d54fb0742b73ac10a4852d8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5dd38c3fa9be49e4781a23f82d8ef0a007e9f43a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833587"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279223"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC ドライバーによる SQL Server への接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  行う最も基本的な機能の 1 つ、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]への接続を行うには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 使用するデータベースとすべてのやり取りが行われる、 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト、注目に値するほとんどすべての動作が、SQLServerConnection オブジェクトを関連 JDBC ドライバーには、このようなフラットなアーキテクチャがあるためです。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して行う最も基本的な操作の 1 つは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースへの接続を確立することです。 データベースとのやり取りは、すべて [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを介して行われます。JDBC ドライバーのアーキテクチャは非常にフラットであるため、注目に値するほとんどすべての動作が SQLServerConnection オブジェクトに関連します。  
   
- 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]はへの接続に IPv4 ではなく IPv6 を使用するかどうかを確認するために java.net.preferIPv6Addresses システム プロパティを設定、IPv6 のポートでリッスンしている、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が IPv6 ポートのみで待機している場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] への接続に IPv4 ではなく IPv6 を使用するために java.net.preferIPv6Addresses システム プロパティを設定します。  
   
-```  
+```java
 System.setProperty("java.net.preferIPv6Addresses", "true");  
 ```  
   
- このセクションのトピックを作成してへの接続を使用する方法について説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
+ このセクションのトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースへの接続を確立し、操作する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)|接続するため、接続 URL を構築する方法について説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 名前付きインスタンスへの接続についても説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。|  
-|[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)|さまざまな接続プロパティと、利用する方法に接続する場合について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。|  
+|[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに接続するための接続 URL の作成方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースの名前付きインスタンスへの接続についても説明します。|  
+|[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)|さまざまな接続プロパティについて、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに接続する際にそれらをどのように使用するかについて説明します。|  
 |[データ ソースのプロパティの設定](../../connect/jdbc/setting-the-data-source-properties.md)|Java Platform, Enterprise Edition (Java EE) 環境でデータ ソースを使用する方法について説明します。|  
-|[接続の操作](../../connect/jdbc/working-with-a-connection.md)|接続のインスタンスを作成するためのさまざまな方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。|  
+|[接続の操作](../../connect/jdbc/working-with-a-connection.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースへの接続をインスタンス化するためのさまざまな方法について説明します。|  
 |[接続プールの使用](../../connect/jdbc/using-connection-pooling.md)|JDBC ドライバーが接続プールをサポートするしくみについて説明します。|  
-|[データベース ミラーリングを使用して&#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC ドライバーがデータベース ミラーリングの使用をサポートするしくみについて説明します。|  
+|[データベース ミラーリングの使用 &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC ドライバーがデータベース ミラーリングの使用をサポートするしくみについて説明します。|  
 |[高可用性、ディザスター リカバリーのための JDBC Driver のサポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 可用性グループに接続するアプリケーションの開発方法について説明します。|  
-|[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|接続するアプリケーションの Java 実装について説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの Kerberos 統合認証を使用します。|  
+|[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Kerberos 統合認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに接続するアプリケーションの Java 実装について説明します。|  
 |[Azure SQL Database への接続](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure 上のデータベースに対する接続の問題について説明します。|  
   
 ## <a name="see-also"></a>参照  
