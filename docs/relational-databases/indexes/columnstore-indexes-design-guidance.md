@@ -14,13 +14,13 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4b49040b94f04625a027ec07a490117aebed278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2bae9d48b20109e129eb159f5d3d9e3e6c0651e5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941387"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564726"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列ストア インデックス - 設計ガイダンス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,6 +97,7 @@ ms.locfileid: "32941387"
   
 *   別のデータ ウェアハウスの必要をなくす場合。 従来、企業では行ストア テーブルでトランザクションを実行し、データを別のデータ ウェアハウスに読み込んで分析を実行しています。 多くのワークロードでは、トランザクション テーブルに非クラスター化列ストア インデックスを作成して、読み込みプロセスと別のデータ ウェアハウスを排除できます。
 
+  
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、このシナリオのパフォーマンスを高めるいくつかの方法が用意されています。 OLTP アプリケーションを変更せずに非クラスター化列ストア インデックスを有効にできるため、とても簡単に試すことができます。 
 
 処理リソースを追加するには、読み取り可能なセカンダリに対して分析を実行できます。 読み取り可能なセカンダリを使用すると、トランザクションのワークロードと分析ワークロードの処理が分離されます。 

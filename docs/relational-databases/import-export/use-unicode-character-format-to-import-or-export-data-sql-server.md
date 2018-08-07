@@ -18,13 +18,13 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ecc827d1b784ad81907443c42f80d69b6f7f05f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7305d11cfa471f7885684cefabd0817ceb86ef03
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940729"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564676"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ Unicode 文字形式のデータは [bcp](../../tools/bcp-utility.md)、[BULK IN
   
 Unicode 文字形式は、次のコマンド オプションでサポートされています。  
   
-|コマンド|オプション|Description|  
+|コマンド|オプション|[説明]|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Unicode 文字形式を使用します。|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|データの一括インポート時に Unicode 文字形式を使用します。|  
