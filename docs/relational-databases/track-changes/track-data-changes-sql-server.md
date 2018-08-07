@@ -25,13 +25,13 @@ caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 53c05afb9651f14f3d917d0d74e0b42f8cfdc056
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c2250ed27de30f400a665eaf14e5d992ac0e84da
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708880"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559562"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "34708880"
 |機能|変更データ キャプチャ|変更の追跡|  
 |-------------|-------------------------|---------------------|  
 |**追跡される変更**|||  
-|DML の変更|はい|はい|  
+|DML の変更|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
 |**追跡される情報**|||  
-|履歴データ|はい|いいえ|  
-|列が変更されたかどうか|はい|はい|  
-|DML 型|はい|はい|  
+|履歴データ|[ユーザー アカウント制御]|いいえ|  
+|列が変更されたかどうか|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|DML 型|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  変更データ キャプチャでは、DML の変更が行われたという事実と変更された実際のデータの両方がキャプチャされ、ユーザー テーブルの変更情報の履歴が提供されます。 変更は、非同期プロセスを使用してトランザクション ログを読み取ることによってキャプチャされます。これは、システムへの影響が少ない方法です。  
@@ -94,11 +94,11 @@ ms.locfileid: "34708880"
   
 |列の種類|変更テーブルで変更をキャプチャする|制限事項|  
 |--------------------|---------------------------------------|-----------------|  
-|スパース列|はい|columnset を使用する場合は変更のキャプチャをサポートしません。|  
+|スパース列|[ユーザー アカウント制御]|columnset を使用する場合は変更のキャプチャをサポートしません。|  
 |計算列|いいえ|計算列に対する変更は追跡されません。 列は適切な種類の変更テーブルに表示されますが、値は NULL になります。|  
-|XML|はい|個々の XML 要素に対する変更は追跡されません。|  
-|timestamp|はい|変更テーブル内のデータ型はバイナリに変換されます。|  
-|BLOB データ型|はい|BLOB 列の前の画像は、列自体が変更された場合にのみ保存されます。|  
+|XML|[ユーザー アカウント制御]|個々の XML 要素に対する変更は追跡されません。|  
+|timestamp|[ユーザー アカウント制御]|変更テーブル内のデータ型はバイナリに変換されます。|  
+|BLOB データ型|[ユーザー アカウント制御]|BLOB 列の前の画像は、列自体が変更された場合にのみ保存されます。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能  
  ここでは、次の機能と変更データ キャプチャとの連携について説明します。  

@@ -14,13 +14,13 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff8bbd4060e6aa309c3e98f52c04fe88b76721fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941067"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533822"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携�
 この ETW ターゲットは受信したデータを *同期的* に処理しますが、ほとんどのターゲットは *非同期的*に処理します。
 
 > [!NOTE]
-> Azure SQL Database データベースでは、ETW ターゲットはサポートされていません。 また、Azure SQL Database マネージ インスタンスもサポートされていません。
+> Azure SQL Database データベースでは、ETW ターゲットはサポートされていません。 また、Azure SQL Database Managed Instance もサポートされていません。
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -159,7 +159,7 @@ CREATE EVENT SESSION [event_counter_1]
 > [!NOTE]
 > Microsoft Azure SQL Database では、**event_file** ターゲットはサポートされていますが、Azure Storage で出力に BLOB を使用している場合にのみサポートされます。 SQL Database は、イベント出力をローカル ハード ドライブ上のファイルに格納できません。
 >
-> 特に SQL Database (および SQL Database マネージ インスタンス) の **event_file** のコード例については、「[SQL Database の拡張イベントのためのイベント ファイル ターゲット コード](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)」を参照してください。
+> 特に SQL Database (および SQL Database Managed Instance) の **event_file** のコード例については、「[SQL Database の拡張イベントのためのイベント ファイル ターゲット コード](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)」を参照してください。
 
 ::: moniker-end
 

@@ -18,13 +18,13 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d384ba04beface0d9d784fc3073722208d281095
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f2f0f79a6bd68c362382144b5f3185df9540678d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941248"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557002"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ Unicode ネイティブ形式のデータは、[bcp](../../tools/bcp-utility.md)
   
 Unicode ネイティブ形式は、次のコマンド オプションでサポートされています。  
   
-|コマンド|オプション|Description|  
+|コマンド|オプション|[説明]|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|**bcp** ユーティリティで Unicode ネイティブ形式が使用されるようにします。Unicode ネイティブ形式では、すべての非文字データに対してネイティブ (データベース) データ型が使用され、すべての文字 (**char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext**) データに対して Unicode 文字データ形式が使用されます。|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|データの一括インポート時に Unicode ネイティブ形式を使用します。|  

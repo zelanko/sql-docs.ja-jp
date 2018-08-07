@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973827"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538142"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Always Encrypted と .NET Framework Data Provider を使用して開発する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ cmd.ExecuteNonQuery();
 .NET Framework Data Provider for SQL Server には、次の組み込み列マスター キー ストア プロバイダーが付属しており、これらは特定のプロバイダー名 (プロバイダーの検索に使用) で事前に登録されています。
 
 
-| クラス | Description | プロバイダー (検索) 名 |
+| クラス | [説明] | プロバイダー (検索) 名 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider クラス| Windows 証明書ストアのプロバイダー。 | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注:** このプロバイダーは、.NET Framework 4.6.1 以降のバージョンで利用可能です。 |[Microsoft Cryptography API: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。  | MSSQL_CNG_STORE|
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|[オブジェクト名]|Description|導入された .NET バージョン
+|[オブジェクト名]|[説明]|導入された .NET バージョン
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 証明書ストアのキー ストア プロバイダー。|  4.6
 |[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft Cryptography API: Next Generation (CNG) のキー ストア プロバイダー。|  4.6.1

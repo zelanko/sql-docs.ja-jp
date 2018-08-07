@@ -15,13 +15,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73a61baa09c40042ad027f784531ce7989280419
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 028695e89f6958eef454e57723a3f1832d6aec2f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332563"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533802"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,27 +31,27 @@ ms.locfileid: "34332563"
   
 |データ列|型|[説明]|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
-|**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
-|**DatabaseID**|**int**|USE *database* ステートメントで指定されているデータベースの ID。 特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、 **DB_ID** 関数を使用して特定します。|3|はい|  
+|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|[ユーザー アカウント制御]|  
+|**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|[ユーザー アカウント制御]|  
+|**DatabaseID**|**int**|USE *database* ステートメントで指定されているデータベースの ID。 特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、 **DB_ID** 関数を使用して特定します。|3|[ユーザー アカウント制御]|  
 |**EventClass**|**int**|キャプチャされたイベント クラスの種類。 **Broker:Conversation** の場合は、常に **124**です。|27|いいえ|  
 |**EventSequence**|**int**|このイベントのシーケンス番号。|51|いいえ|  
-|**EventSubClass**|**nvarchar**|イベント サブクラスの種類。 各イベント クラスについての詳細情報を提供します。|21|はい|  
+|**EventSubClass**|**nvarchar**|イベント サブクラスの種類。 各イベント クラスについての詳細情報を提供します。|21|[ユーザー アカウント制御]|  
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
-|**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、 **HOST_NAME** 関数を使用します。|8|はい|  
+|**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、 **HOST_NAME** 関数を使用します。|8|[ユーザー アカウント制御]|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
-|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|[ユーザー アカウント制御]|  
 |**MethodName**|**nvarchar**|このメッセージ交換が属しているメッセージ交換グループ。|47|いいえ|  
-|**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
-|**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
+|**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|[ユーザー アカウント制御]|  
+|**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|[ユーザー アカウント制御]|  
 |**ObjectName**|**nvarchar**|ダイアログのメッセージ交換ハンドル。|34|いいえ|  
-|**[Priority]**|**int**|メッセージ交換の優先度レベル。|5|はい|  
+|**[Priority]**|**int**|メッセージ交換の優先度レベル。|5|[ユーザー アカウント制御]|  
 |**RoleName**|**nvarchar**|メッセージ交換ハンドルのロール。 **initiator** または **target**のいずれかです。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|26|いいえ|  
 |**Severity**|**int**|(このイベントによってエラーが報告された場合) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの重大度。|29|いいえ|  
-|**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**TextData**|**ntext**|メッセージ交換の現在の状態。 次のいずれかの値になります。|@shouldalert|はい|  
+|**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|[ユーザー アカウント制御]|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|[ユーザー アカウント制御]|  
+|**TextData**|**ntext**|メッセージ交換の現在の状態。 次のいずれかの値になります。|1|[ユーザー アカウント制御]|  
 |||**SO**。 送信開始状態。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこのメッセージ交換に対して BEGIN CONVERSATION が処理されましたが、メッセージはまだ送信されていません。|||  
 |||**SI**。 受信開始状態。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスで現在のインスタンスとの新しいメッセージ交換が開始されましたが、現在のインスタンスが最初のメッセージの受信を完了していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初のメッセージが分割されたものであるか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で順序どおりにメッセージが受け取られなかった場合は、この状態のメッセージ交換が作成されます。 ただし、メッセージ交換で受信された最初の転送データに最初のメッセージ全体が含まれている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CO 状態のメッセージ交換が作成されることがあります。|||  
 |||**CO**。 メッセージ交換中状態。 メッセージ交換が確立され、メッセージ交換の両側からメッセージを送信できます。 通常のサービスに関する通信の大部分は、メッセージ交換がこの状態のときに行われます。|||  
@@ -65,7 +65,7 @@ ms.locfileid: "34332563"
   
 |ID|サブクラス|[説明]|  
 |--------|--------------|-----------------|  
-|@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **で SEND ステートメントが実行されるときに、** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] イベントが生成されます。|  
+|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **で SEND ステートメントが実行されるときに、** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] イベントが生成されます。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **で WITH ERROR 句を指定しない END CONVERSATION ステートメントが実行されるときに、** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] イベントが生成されます。|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **で WITH ERROR 句を指定した END CONVERSATION ステートメントが実行されるときに、** END CONVERSATION WITH ERROR [!INCLUDE[ssDE](../../includes/ssde-md.md)] イベントが生成されます。|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **でエラー メッセージが作成されるたびに** Broker Initiated Error [!INCLUDE[ssSB](../../includes/sssb-md.md)] イベントが生成されます。 たとえば、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] がダイアログのメッセージをルーティングできないときは、ブローカーがそのダイアログのエラー メッセージを作成し、このイベントを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アプリケーション プログラムがエラーでメッセージ交換を終了しても、このイベントが生成されることはありません。|  

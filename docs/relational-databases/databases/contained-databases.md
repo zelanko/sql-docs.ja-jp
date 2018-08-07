@@ -21,13 +21,13 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 94dfc58639adda608a529244ac52c02e0a06a88d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 93281a558a4872c95b7f7e6edcb1debeb7ce88b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32933257"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557732"
 ---
 # <a name="contained-databases"></a>包含データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "32933257"
  データベース境界  
  部分的包含データベースはデータベースの機能をインスタンスの機能から分離するので、これらの 2 つの要素間には " *データベース境界*" と呼ばれる、明確に定義された区分線があります。  
   
- データベース境界の内側は " *データベース モデル*" で、ここではデータベースが開発および管理されます。 データベース内にあるエンティティの例としては、 **sys.tables**のようなシステム テーブル、パスワードを持つ包含データベース ユーザー、2 部構成の名前で参照されている現在のデータベース内のユーザー テーブルなどがあります。  
+ データベース境界の内側は *データベース モデル*で、ここではデータベースが開発および管理されます。 データベース内にあるエンティティの例としては、 **sys.tables**のようなシステム テーブル、パスワードを持つ包含データベース ユーザー、2 部構成の名前で参照されている現在のデータベース内のユーザー テーブルなどがあります。  
   
  データベース境界の外側は " *管理モデル*" で、ここではインスタンスレベルの機能と管理が扱われます。 データベース境界の外にあるエンティティの例としては、 **sys.endpoints**のようなシステム テーブル、ログインにマップされているユーザー、3 部構成の名前で参照されている他のデータベース内のユーザー テーブルなどがあります。  
   

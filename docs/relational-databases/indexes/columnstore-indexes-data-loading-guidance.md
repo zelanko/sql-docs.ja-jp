@@ -14,13 +14,13 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0af297906433fb8689b44812ae7936defe46b59d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2915f4b86069420c2d5ff89a322fa87d9adcff43
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940187"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565476"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列ストア インデックス - データ読み込みガイダンス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "32940187"
 |-----------------------|-------------------------------------------|--------------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 行グループのサイズ: 145,000|0|  
-|1,048,577|1,048,576<br /><br /> 行グループのサイズ: 1,048,576|@shouldalert|  
+|1,048,577|1,048,576<br /><br /> 行グループのサイズ: 1,048,576|1|  
 |2,252,152|2,252,152<br /><br /> 行グループのサイズ: 1,048,576、1,048,576、155,000|0|  
   
  次の例は、1,048,577 個の行をテーブルに読み込んだ結果を示しています。 この結果では、列ストアに 1 つの圧縮された行グループ (圧縮された列セグメントとして)、およびデルタストアに 1 行があります。  

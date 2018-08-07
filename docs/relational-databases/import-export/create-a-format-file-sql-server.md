@@ -17,13 +17,13 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b49b51f61faf046f5145267c7fa6d45deecc53f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1be1252c3504ae6c09530253b539d09577391023
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941047"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540952"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "32941047"
   
  **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|Description|  
+|修飾子|[説明]|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|XML 以外のフォーマット ファイルを指定します。|  
 |**-n**|ネイティブ データ型を指定します。|  
@@ -98,7 +98,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|Description|  
+|修飾子|[説明]|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|XML 以外のフォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
@@ -197,7 +197,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
   
  **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|Description|  
+|修飾子|[説明]|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|XML フォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
@@ -237,7 +237,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|Description|  
+|修飾子|[説明]|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|XML フォーマット ファイルを指定します。|  
 |**-n**|ネイティブ データ型を指定します。|  

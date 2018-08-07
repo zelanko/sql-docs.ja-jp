@@ -17,13 +17,13 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f342a9c7a90a3eb125bc87deacb272b109f82bdb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3732064c16563b0da4f0564a1db9edb0dc221e61
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013019"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547572"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "33013019"
 >  暗黙的または明示的なデータ型の変換が含まれる制約により、特定の操作が失敗することがあります。 たとえば、パーティションの切り替え元のテーブルに定義された制約により、ALTER TABLE...SWITCH 操作が失敗することがあります。 制約の定義ではデータ型を変換しないようにしてください。  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 制約の制限事項  
- CHECK 制約は、FALSE と評価された値を拒否します。 NULL 値は UNKNOWN と評価されるので、式に NULL 値が含まれていると制約が無効になる場合があります。 たとえば、 **int** 型の列 **MyColumn** に、 **MyColumn** には値 10 (**MyColumn=10**) しか格納できないことを指定する制約を適用したとします。 **MyColumn**に値 NULL を挿入すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって NULL が追加され、エラーは返されません。  
+ CHECK 制約は、FALSE と評価された値を拒否します。 NULL 値は UNKNOWN と評価されるので、式に NULL 値が含まれていると制約がオーバーライドされる場合があります。 たとえば、 **int** 型の列 **MyColumn** に、 **MyColumn** には値 10 (**MyColumn=10**) しか格納できないことを指定する制約を適用したとします。 **MyColumn**に値 NULL を挿入すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって NULL が追加され、エラーは返されません。  
   
  CHECK 制約は、チェックしている条件がテーブルのすべての行に対して FALSE でない場合、TRUE を返します。 CHECK 制約は行レベルで機能します。 作成したばかりのテーブルに行が含まれていない場合、このテーブルに適用された CHECK 制約は有効であると見なされます。 この場合、次の例に示すような予期しない結果が生成されることがあります。  
   

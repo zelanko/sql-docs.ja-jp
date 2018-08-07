@@ -14,13 +14,13 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 608ad6d5f7bef9ce21aa80e09699c2de3cc9c228
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9a49e28a45f673c114c700b7664b421ec2f4600a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333913"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538862"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>エディターの構成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34333913"
 ## <a name="settng-editor-options"></a>エディター オプションの設定  
  ほとんどのエディター オプションは、 **[ツール]** メニューで **[オプション]** を選択し、 **[オプション]** ダイアログを表示して設定します。 **[オプション]** ダイアログの左ペインの **[テキスト エディター]** ノードを開いて、コードとテキストの編集オプションを設定します。 [テキスト エディター] の下のノードは特定のエディターに適用されます。  
   
-1.  **[すべての言語]** – このノードを使用して設定されたオプションは、すべての [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] エディターに適用されます。 これらの設定は、他のノードを使用して特定のエディターの別のオプションを設定することにより上書きできます。  
+1.  **[すべての言語]** – このノードを使用して設定されたオプションは、すべての [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] エディターに適用されます。 これらの設定は、他のノードを使用して特定のエディターの別のオプションを設定することによりオーバーライドできます。  
   
 2.  **[プレーンテキスト]** – このノードを使用して設定されたオプションは、MDX エディター、DMX エディター、およびテキスト エディターに適用されます。  
   

@@ -28,12 +28,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f176dec2a4eca0cc313bd010729b5ba267ce6323
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bb0ca07aceed13e3da687716d8ccb02c17558bf6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549022"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/04/2018
      フルテキスト インデックスを作成するファイル グループを指定します。  
   
      e. 値を選択します。  
-      |ReplTest1|Description|  
+      |ReplTest1|[説明]|  
       |-----------|-----------------|
       |**<default>**| テーブルまたはビューがパーティション分割されていない場合に、基になるテーブルまたはビューと同じファイル グループを使用するには、この値を選択します。 テーブルまたはビューがパーティション分割されている場合は、プライマリ ファイル グループが使用されます。|
       |**PRIMARY**|新しいフルテキスト インデックスにプライマリ ファイル グループを使用する場合に選択します。|
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/04/2018
   
      次のいずれかの値を選択します。  
   
-   |ReplTest1|Description|  
+   |ReplTest1|[説明]|  
     |-----------|-----------------|  
     |**<system>**|新しいフルテキスト インデックスに対してシステム ストップリストを使用する場合に選択します。 これは既定値です。|  
     |**<off>**|新しいフルテキスト インデックスに対してストップリストを無効にする場合に選択します。|  

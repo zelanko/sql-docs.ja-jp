@@ -15,13 +15,13 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d46e07875a1f54cfb665128fd37be55fc45a3ede
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b8ee51700d57b0b8e276fbf3849b9e3773548827
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329513"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551582"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,20 +32,20 @@ ms.locfileid: "34329513"
 |データ列名|データ型|[説明]|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|**int**|216|27|いいえ|  
-|SPID|**int**|このイベントを発生させるサーバー プロセスの ID。|12|はい|  
-|EventSubClass|**int**|ユーザー定義の分類子関数の場合は 1。|21|はい|  
-|StartTime|**datetime**|ユーザー定義の分類子関数が開始された時刻。|14|はい|  
-|EndTime|**datetime**|ユーザー定義の分類子関数が開始された時刻。|15|はい|  
-|Duration|**bigint**|分類子関数によって使用された時間 (マイクロ秒)。|13|はい|  
-|ObjectID|**int**|ユーザー定義の分類オブジェクトの ID。|22|はい|  
-|CPU|**int**|CPU 使用率 (ミリ秒単位)。|18|はい|  
-|Reads|**int**|論理読み取りの数。|16|はい|  
-|Writes|**int**|論理書き込みの数。|17|はい|  
-|GroupID|**int**|分類されたワークロード グループの ID。|66|はい|  
-|[エラー]|**int**|ユーザー定義の分類子関数が実行に失敗した場合の最後のエラー番号。|31|はい|  
-|状態|**int**|最後のエラーの状態。|30|はい|  
-|TargetUserName|**sysname**|対応するアクティブなグループをシステムが見つけられない場合は、ユーザー定義の分類子関数の戻り値 (ワークロード グループ名)。 それ以外の場合は、この列は NULL に設定されます。|39|はい|  
-|ObjectName|**nvarchar (256)**|ユーザー定義の分類子関数の 2 部構成の名前 (dbo.classifier など)。|34|はい|  
+|SPID|**int**|このイベントを発生させるサーバー プロセスの ID。|12|[ユーザー アカウント制御]|  
+|EventSubClass|**int**|ユーザー定義の分類子関数の場合は 1。|21|[ユーザー アカウント制御]|  
+|StartTime|**datetime**|ユーザー定義の分類子関数が開始された時刻。|14|[ユーザー アカウント制御]|  
+|EndTime|**datetime**|ユーザー定義の分類子関数が開始された時刻。|15|[ユーザー アカウント制御]|  
+|Duration|**bigint**|分類子関数によって使用された時間 (マイクロ秒)。|13|[ユーザー アカウント制御]|  
+|ObjectID|**int**|ユーザー定義の分類オブジェクトの ID。|22|[ユーザー アカウント制御]|  
+|CPU|**int**|CPU 使用率 (ミリ秒単位)。|18|[ユーザー アカウント制御]|  
+|Reads|**int**|論理読み取りの数。|16|[ユーザー アカウント制御]|  
+|Writes|**int**|論理書き込みの数。|17|[ユーザー アカウント制御]|  
+|GroupID|**int**|分類されたワークロード グループの ID。|66|[ユーザー アカウント制御]|  
+|[エラー]|**int**|ユーザー定義の分類子関数が実行に失敗した場合の最後のエラー番号。|31|[ユーザー アカウント制御]|  
+|状態|**int**|最後のエラーの状態。|30|[ユーザー アカウント制御]|  
+|TargetUserName|**sysname**|対応するアクティブなグループをシステムが見つけられない場合は、ユーザー定義の分類子関数の戻り値 (ワークロード グループ名)。 それ以外の場合は、この列は NULL に設定されます。|39|[ユーザー アカウント制御]|  
+|ObjectName|**nvarchar (256)**|ユーザー定義の分類子関数の 2 部構成の名前 (dbo.classifier など)。|34|[ユーザー アカウント制御]|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)   

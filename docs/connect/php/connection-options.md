@@ -1,7 +1,7 @@
 ---
 title: 接続のオプション |Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174939"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367644"
 ---
 # <a name="connection-options"></a>接続オプション
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "39174939"
 |TraceFile|String|トレース データに使用するファイルのパスを指定します。|値は設定されません。|  
 |TraceOn|トレースを有効にするには、1 または **true** 。<br /><br />トレースを無効にするには、0 または **false** 。|確立中の接続に対して ODBC トレースを有効にする (1 または **true**) か、または無効にする (0 または **false**) かを指定します。|**false** (0)|  
 |TransactionIsolation|SQLSRV ドライバーは、次の値を使用します。<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />PDO_SQLSRV ドライバーは、次の値を使用します。<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|トランザクション分離レベルを指定します。<br /><br />トランザクション分離の詳細については、SQL Server のドキュメントの「[SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。|SQLSRV_TXN_READ_COMMITTED<br /><br />内の複数の<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|TransparentNetworkIPResolution|**[有効]** または **[無効]**|ホスト名に関連付けられているホスト名の IP が応答しないと、複数の ip アドレスがある 1 つ目が解決されると、接続シーケンスを影響を与えます。<br /><br />別の接続シーケンスを提供する MultiSubnetFailover とやり取りします。 詳細については、次を参照してください。[透過的なネットワーク IP 解決を使用して](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)します。|有効|
+|TransparentNetworkIPResolution|**[有効]** または **[無効]**|ホスト名に関連付けられているホスト名の IP が応答しないと、複数の ip アドレスがある 1 つ目が解決されると、接続シーケンスを影響を与えます。<br /><br />別の接続シーケンスを提供する MultiSubnetFailover とやり取りします。 詳細については、次を参照してください。[透過的なネットワーク IP 解決](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)または[透過的なネットワーク IP 解決を使用して](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)します。|有効|
 |TrustServerCertificate|証明書を信頼する場合は、1 または **true** 。<br /><br />証明書を信頼しない場合は、0 または **false** 。|クライアントが自己署名サーバー証明書を信頼する (1 または **true**) か、または拒否する (0 または **false**) かを指定します。|**false** (0)|  
 |UID<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|String|SQL Server 認証で接続するときに使用するユーザー ID を指定します<sup>4</sup>。|値は設定されません。|  
 |WSID|String|トレースするコンピューターの名前を指定します。|値は設定されません。|  
@@ -69,7 +69,7 @@ ms.locfileid: "39174939"
 
 4. 接続する *UID* 認証で接続する場合は、 *PWD* 属性と [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 属性の両方を設定する必要があります。  
 
-サポートされているキーの多くは、ODBC 接続文字列属性です。 ODBC 接続文字列については、「[SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
+サポートされているキーの多くは、ODBC 接続文字列属性です。 ODBC 接続文字列については、「[SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。
 
 ## <a name="see-also"></a>参照  
 [サーバーへの接続](../../connect/php/connecting-to-the-server.md)  

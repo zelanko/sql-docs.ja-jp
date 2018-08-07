@@ -15,13 +15,13 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 99ad6992ff407c74d30f8260267d3a5da01812b5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7299a533797a7dae9622d049b6b5548af0c9808e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332573"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554443"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,18 +69,18 @@ ms.locfileid: "34332573"
 |機能|DDL トリガー|DDL 操作のサーバーまたはデータベース トリガーがある場合は、メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャを作成または削除できません。 CREATE/DROP TABLE および CREATE/DROP PROCEDURE のサーバーおよびデータベース トリガーを削除します。|  
 |機能|EVENT NOTIFICATION|DDL 操作のサーバーまたはデータベース イベント通知がある場合は、メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャを作成または削除できません。 CREATE TABLE または DROP TABLE および CREATE PROCEDURE または DROP PROCEDURE のサーバーおよびデータベース イベント通知を削除します。|  
 |機能|FileTable|メモリ最適化テーブルをファイル テーブルとして作成できません。 引数 **AS FileTable** を **CREATE TABLE** ステートメントから削除してください。|  
-|操作|主キー列の更新|メモリ最適化テーブルおよびテーブル型の主キー列を更新できません。 主キーを更新する必要がある場合は、古い行を削除し、更新された主キーで新しい行を挿入します。|  
-|操作|CREATE INDEX|メモリ最適化テーブルのインデックスは、 **CREATE TABLE** ステートメントまたは **ALTER TABLE** ステートメントを使用してインラインで指定する必要があります。|  
-|操作|CREATE FULLTEXT INDEX|フルテキスト インデックスは、メモリ最適化テーブルでサポートされていません。|  
-|操作|スキーマの変更|メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでは、以下のスキーマの変更はサポートされていません。<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server: ALTER TABLE、ALTER PROCEDURE、および sp_rename 操作がサポートされています。 拡張プロパティの追加など、その他のスキーマの変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE および ALTER PROCEDURE 操作はサポートされています。 sp_rename など、その他のスキーマ変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: スキーマの変更はサポートされていません。 メモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャの定義を変更するには、まずオブジェクトを削除し、次に目的の定義でオブジェクトを再作成します。| 
-|操作|TRUNCATE TABLE|メモリ最適化テーブルでは TRUNCATE 操作はサポートされません。 テーブルからすべての行を削除するには、**DELETE FROM***table* を使ってすべての行を削除するか、テーブルを削除してから再作成します。|  
-|操作|ALTER AUTHORIZATION|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャでの所有者の変更はサポートされていません。 所有者を変更するには、テーブルまたはプロシージャを削除した後、再作成します。|  
-|操作|ALTER SCHEMA|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャを別のスキーマに転送することはサポートされていません。 スキーマ間で転送を行うには、オブジェクトを削除してから再作成します。|  
-|操作|DBCC CHECKTABLE|DBCC CHECKTABLE はメモリ最適化テーブルではサポートされていません。 ディスク上のチェックポイント ファイルの整合性を確認するには、MEMORY_OPTIMIZED_DATA ファイル グループのバックアップを実行します。|  
+|演算|主キー列の更新|メモリ最適化テーブルおよびテーブル型の主キー列を更新できません。 主キーを更新する必要がある場合は、古い行を削除し、更新された主キーで新しい行を挿入します。|  
+|演算|CREATE INDEX|メモリ最適化テーブルのインデックスは、 **CREATE TABLE** ステートメントまたは **ALTER TABLE** ステートメントを使用してインラインで指定する必要があります。|  
+|演算|CREATE FULLTEXT INDEX|フルテキスト インデックスは、メモリ最適化テーブルでサポートされていません。|  
+|演算|スキーマの変更|メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでは、以下のスキーマの変更はサポートされていません。<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server: ALTER TABLE、ALTER PROCEDURE、および sp_rename 操作がサポートされています。 拡張プロパティの追加など、その他のスキーマの変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE および ALTER PROCEDURE 操作はサポートされています。 sp_rename など、その他のスキーマ変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: スキーマの変更はサポートされていません。 メモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャの定義を変更するには、まずオブジェクトを削除し、次に目的の定義でオブジェクトを再作成します。| 
+|演算|TRUNCATE TABLE|メモリ最適化テーブルでは TRUNCATE 操作はサポートされません。 テーブルからすべての行を削除するには、**DELETE FROM***table* を使ってすべての行を削除するか、テーブルを削除してから再作成します。|  
+|演算|ALTER AUTHORIZATION|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャでの所有者の変更はサポートされていません。 所有者を変更するには、テーブルまたはプロシージャを削除した後、再作成します。|  
+|演算|ALTER SCHEMA|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャを別のスキーマに転送することはサポートされていません。 スキーマ間で転送を行うには、オブジェクトを削除してから再作成します。|  
+|演算|DBCC CHECKTABLE|DBCC CHECKTABLE はメモリ最適化テーブルではサポートされていません。 ディスク上のチェックポイント ファイルの整合性を確認するには、MEMORY_OPTIMIZED_DATA ファイル グループのバックアップを実行します。|  
 |機能|ANSI_PADDING OFF|メモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャを作成するときは、セッション オプション **ANSI_PADDING** は ON にする必要があります。 CREATE ステートメントを実行する前に、 **SET ANSI_PADDING ON** を実行します。|  
 |オプション|DATA_COMPRESSION|データ圧縮は、メモリ最適化テーブルではサポートされていません。 テーブル定義からオプションを削除します。|  
 |機能|DTC|メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャは、分散トランザクションからアクセスできません。 代わりに SQL トランザクションを使用してください。|  
-|操作|MERGE のターゲットとしてのメモリ最適化テーブル|メモリ最適化テーブルを **MERGE** 操作の対象にすることはできません。 代わりに、**INSERT**、**UPDATE**、または **DELETE** ステートメントを使用します。|  
+|演算|MERGE のターゲットとしてのメモリ最適化テーブル|メモリ最適化テーブルを **MERGE** 操作の対象にすることはできません。 代わりに、**INSERT**、**UPDATE**、または **DELETE** ステートメントを使用します。|  
   
 ## <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス  
  次の表に、メモリ最適化テーブルのインデックスに関連したエラー メッセージのテキストに表示される可能性がある [!INCLUDE[tsql](../../includes/tsql-md.md)] の機能およびキーワードと、エラーを解決するための修正措置を示します。  
@@ -89,7 +89,7 @@ ms.locfileid: "34332573"
 |----------|----------|----------------|  
 |機能|フィルター選択されたインデックス|フィルター選択されたインデックスは、メモリ最適化テーブルでサポートされていません。 インデックスの指定から **WHERE** 句を削除します。|  
 |機能|[付加列]|付加列の指定は、メモリ最適化テーブルにとって必須ではありません。 メモリ最適化テーブルのすべての列は、各メモリ最適化インデックスに暗黙的に含まれています。|  
-|操作|DROP INDEX|メモリ最適化テーブルのインデックスの削除はサポートされていません。 インデックスを削除するには、ALTER TABLE を使用します。<br /><br /> 詳細については、「 [メモリ最適化テーブルの変更](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)」を参照してください。|  
+|演算|DROP INDEX|メモリ最適化テーブルのインデックスの削除はサポートされていません。 インデックスを削除するには、ALTER TABLE を使用します。<br /><br /> 詳細については、「 [メモリ最適化テーブルの変更](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)」を参照してください。|  
 |インデックス オプション|*インデックス オプション*|1 つのインデックス オプション – HASH インデックスの BUCKET_COUNT のみがサポートされています。|  
   
 ## <a name="nonclustered-hash-indexes"></a>非クラスター化ハッシュ インデックス  
@@ -129,8 +129,8 @@ ms.locfileid: "34332573"
 |機能|DTC|メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャは、分散トランザクションからアクセスできません。 代わりに SQL トランザクションを使用してください。|  
 |機能|EXECUTE WITH RECOMPILE|オプション **WITH RECOMPILE** は、ネイティブ コンパイル ストアド プロシージャではサポートされていません。|  
 |機能|専用管理者接続からの実行|ネイティブ コンパイル ストアド プロシージャでは、専用管理者接続 (DAC) から実行することはできません。 通常の接続を使用してください。|  
-|操作|セーブポイント (savepoint)|ネイティブ コンパイル ストアド プロシージャは、アクティブなセーブポイントを含むトランザクションから呼び出すことはできません。 トランザクションからセーブポイントを削除します。|  
-|操作|ALTER AUTHORIZATION|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャでの所有者の変更はサポートされていません。 所有者を変更するには、テーブルまたはプロシージャを削除した後、再作成します。|  
+|演算|セーブポイント (savepoint)|ネイティブ コンパイル ストアド プロシージャは、アクティブなセーブポイントを含むトランザクションから呼び出すことはできません。 トランザクションからセーブポイントを削除します。|  
+|演算|ALTER AUTHORIZATION|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャでの所有者の変更はサポートされていません。 所有者を変更するには、テーブルまたはプロシージャを削除した後、再作成します。|  
 |演算子|OPENROWSET|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **OPENROWSET** を削除します。|  
 |演算子|OPENQUERY|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **OPENQUERY** を削除します。|  
 |演算子|OPENDATASOURCE|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **OPENDATASOURCE** を削除します。|  

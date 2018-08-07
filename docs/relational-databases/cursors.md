@@ -24,13 +24,13 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a955581a7148b16d6879303fca39adbb26e7eddb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5b214def1f6490a4b19ec97768ac25f6d8908f22
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930067"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556282"
 ---
 # <a name="cursors"></a>カーソル
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,8 @@ ms.locfileid: "32930067"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、3 つのカーソルの実装がサポートされています。  
   
  Transact-SQL カーソル  
- DECLARE CURSOR 構文に基づいていて、主に [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、およびトリガーで使用されます。 [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルはサーバー上で実装され、クライアントからサーバーに送信される [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントによって管理されます。 また、バッチ、ストアド プロシージャ、またはトリガーにも含まれている場合があります。  
+ DECLARE CURSOR 構文に基づいていて、主に [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、およびトリガーで使用されます。 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルはサーバー上で実装され、クライアントからサーバーに送信される [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントによって管理されます。 また、バッチ、ストアド プロシージャ、またはトリガーにも含まれている場合があります。  
   
  アプリケーション プログラミング インターフェイス (API) サーバー カーソル  
  OLE DB および ODBC の API カーソル関数をサポートします。 API サーバー カーソルはサーバー上に実装されます。 クライアント アプリケーションから API カーソル関数が呼び出されるたびに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の OLE DB プロバイダーまたは ODBC ドライバーによって、API サーバー カーソルに対するアクションの要求がサーバーに送信されます。  

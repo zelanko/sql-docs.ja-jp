@@ -19,21 +19,22 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff370e7b4814397b067fd82c566fe809bc27e18a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f9e1e7d2985bec6009530e2a010692c3a2020eed
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545032"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>テーブル値パラメーターの使用 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   テーブル値パラメーターは、ユーザー定義テーブル型を使用して宣言されます。 テーブル値パラメーターを使用すると、一時テーブルまたは多数のパラメーターを作成せずに、ストアド プロシージャや関数などの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはルーチンに複数行のデータを送信できます。  
   
- テーブル値パラメーターは OLE DB や ODBC のパラメーター配列に似ていますが、より柔軟性が高く、 [!INCLUDE[tsql](../../includes/tsql-md.md)]との統合も緊密です。 テーブル値パラメーターには、セットベースの操作に使用できるという利点もあります。  
+ テーブル値パラメーターは OLE DB や ODBC のパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターには、セットベースの操作に使用できるという利点もあります。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] では、入力データのコピーが作成されないようにするために、テーブル値パラメーターがルーチンに参照渡しされます。 テーブル値パラメーターを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンを作成して実行し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コード、および任意のマネージ言語のマネージ クライアントとネイティブ クライアントから呼び出すことができます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] では、入力データのコピーが作成されないようにするために、テーブル値パラメーターがルーチンに参照渡しされます。 テーブル値パラメーターを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンを作成して実行し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コード、および任意のマネージド言語のマネージド クライアントとネイティブ クライアントから呼び出すことができます。  
   
  **このトピックの内容**  
   

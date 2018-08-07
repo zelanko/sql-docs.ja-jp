@@ -1,4 +1,4 @@
-﻿---
+---
 title: 照合順序と Unicode のサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
@@ -30,17 +30,17 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6564212e16e123b18180d2996ff40cc9ae34f868
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 371b01ca0cf63fa51ba9ce82219066522484b534
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695963"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536002"
 ---
-# <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
+# <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 **char** や **varchar** などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については「[sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)」を参照してください。
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 **char** や **varchar** などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)」を参照してください。    
     
  サーバー、データベース、列、または式の照合順序を選択すると、データベースのさまざまな操作の結果に影響を与える特定の特性がデータに割り当てられます。 たとえば、ORDER BY を使用してクエリを構築する場合、結果セットの並べ替え順序は、データベースに適用される照合順序、またはクエリの式レベルで COLLATE 句に指定される照合順序に依存します。    
     
@@ -205,7 +205,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 -   アラビア語、インド諸語、タイ語の文字など、位置によって、または別の種類の文字と組み合わせた場合に、文字が変形する文字表記。    
 -   タイ語など、単語間に区切りがないため、単語を識別するための内部辞書を必要とする言語。    
     
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を操作するデータベース アプリケーションは、複雑な文字表記をサポートするコントロールを使用する必要があります。 マネージ コードで作成される標準の Windows フォーム コントロールは、複雑な文字表記を使用できます。    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を操作するデータベース アプリケーションは、複雑な文字表記をサポートするコントロールを使用する必要があります。 マネージド コードで作成される標準の Windows フォーム コントロールは、複雑な文字表記を使用できます。    
 
 ##  <a name="Japanese_Collations"></a> [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] に追加された日本語照合順序
  

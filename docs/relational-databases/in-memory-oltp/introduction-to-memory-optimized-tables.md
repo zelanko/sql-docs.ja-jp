@@ -15,13 +15,13 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3edda9ebc4f356302c1e6a01c87d026bdb8f5e9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 12058aef871aa14ec5daa8a92c22598cb9067350
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331743"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558332"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>メモリ最適化テーブルの概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ SQL Server 2016 以降、および Azure SQL Database では、インメモリ O
   
 |機能|ネイティブ コンパイル ストアド プロシージャを使用したアクセス|解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセス|CLR アクセス|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|メモリ最適化テーブル|はい|はい|なし*|  
-|メモリ最適化テーブル型|はい|はい|いいえ|  
-|ネイティブ コンパイル ストアド プロシージャ|ネイティブ コンパイル ストアド プロシージャの入れ子がサポートされるようになりました。 参照先のプロシージャがネイティブにコンパイルされている場合は、ストアド プロシージャ内で EXECUTE 構文を使用できます。|はい|なし*|  
+|メモリ最適化テーブル|[ユーザー アカウント制御]|[ユーザー アカウント制御]|なし*|  
+|メモリ最適化テーブル型|[ユーザー アカウント制御]|はい|いいえ|  
+|ネイティブ コンパイル ストアド プロシージャ|ネイティブ コンパイル ストアド プロシージャの入れ子がサポートされるようになりました。 参照先のプロシージャがネイティブにコンパイルされている場合は、ストアド プロシージャ内で EXECUTE 構文を使用できます。|[ユーザー アカウント制御]|なし*|  
   
  *コンテキスト接続 (CLR モジュールを実行するときの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からの接続) からメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャにアクセスすることはできません。 ただし、別の接続を作成して開き、そこからメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスできます。  
   

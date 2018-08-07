@@ -18,13 +18,13 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 163ea15a1293ce128725bdbb3d20baa4129fdb80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332226"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558882"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,10 +82,10 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 
 |タスク|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|はい|はい|いいえ|
-|データベース内にキー メタデータを作成する。|はい|はい|はい|
-|暗号化された列がある新しいテーブルを作成する|はい|はい|はい|
-|選択されたデータベース列内にあるデータを暗号化する|はい|はい|いいえ|
+|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|[ユーザー アカウント制御]|はい|いいえ|
+|データベース内にキー メタデータを作成する。|[ユーザー アカウント制御]|はい|[ユーザー アカウント制御]|
+|暗号化された列がある新しいテーブルを作成する|[ユーザー アカウント制御]|はい|[ユーザー アカウント制御]|
+|選択されたデータベース列内にあるデータを暗号化する|[ユーザー アカウント制御]|はい|いいえ|
 
 > [!NOTE]
 > 必ず、データベースをホストするコンピューターと異なるコンピューターで、キー プロビジョニングまたはデータ暗号化ツールを実行してください。 そうしないと、機密データやキーがサーバー環境に漏れ、Always Encrypted を使用する利点が少なくなる可能性があります。  

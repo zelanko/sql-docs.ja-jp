@@ -15,12 +15,13 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b4a0e50da7a6270030e4086a15c019a5201a96e7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2161e8c26d381278463c1bf8ab5c9aff830ae980
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538662"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,25 +31,25 @@ ms.lasthandoff: 05/19/2018
   
 |データ列|型|[説明]|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
-|ClientProcessID|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
-|DatabaseID|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
-|DatabaseName|**nvarchar**|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
+|ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|[ユーザー アカウント制御]|  
+|ClientProcessID|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|[ユーザー アカウント制御]|  
+|DatabaseID|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|[ユーザー アカウント制御]|  
+|DatabaseName|**nvarchar**|ユーザーのステートメントが実行されているデータベースの名前。|35|[ユーザー アカウント制御]|  
 |EventClass|**Int**|イベントの種類 = 200。|27|いいえ|  
 |EventSequence|**int**|このイベントのシーケンス番号。|51|いいえ|  
-|EventSubClass|**nvarchar**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> **Table created**: パラメーター テーブルがデータベース内で作成されたことを示します。<br /><br /> **Table drop attempt**: リソースを解放するために、未使用のパラメーター テーブルの自動削除がデータベースによって試行されたことを示します。<br /><br /> **Table drop attempt failed**: 未使用のパラメーター テーブルの削除がデータベースによって試行され、失敗したことを示します。 リソースを解放するために、パラメーター テーブルを削除するスケジュールが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に組み直されます。<br /><br /> **Table dropped**: パラメーター テーブルがデータベースによって正常に削除されたことを示します。<br /><br /> **Table pinned**: パラメーター テーブルが内部処理の現在の使用対象としてマークされていることを示します。<br /><br /> **Table unpinned**: パラメーター テーブルが固定解除されたことを示します。 内部処理によるこのテーブルの使用は完了しています。<br /><br /> **Number of users incremented**: パラメーター テーブルを参照するクエリ通知サブスクリプションの数が増加したことを示します。<br /><br /> **Number of users decremented**: パラメーター テーブルを参照するクエリ通知サブスクリプションの数が減少したことを示します。<br /><br /> **LRU counter reset**: パラメーター テーブルの使用カウントがリセットされたことを示します。<br /><br /> **Cleanup task started**: このパラメーター テーブル内のすべてのサブスクリプションのクリーンアップが開始されたことを示します。 このクリーンアップは、データベースを起動したとき、またはこのパラメーター テーブルのサブスクリプションが基づいているテーブルが削除されたときに発生します。<br /><br /> **Cleanup task finished**: このパラメーター テーブル内のすべてのサブスクリプションのクリーンアップが終了したことを示します。|21|はい|  
-|GroupID|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
-|HostName|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
+|EventSubClass|**nvarchar**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> **Table created**: パラメーター テーブルがデータベース内で作成されたことを示します。<br /><br /> **Table drop attempt**: リソースを解放するために、未使用のパラメーター テーブルの自動削除がデータベースによって試行されたことを示します。<br /><br /> **Table drop attempt failed**: 未使用のパラメーター テーブルの削除がデータベースによって試行され、失敗したことを示します。 リソースを解放するために、パラメーター テーブルを削除するスケジュールが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に組み直されます。<br /><br /> **Table dropped**: パラメーター テーブルがデータベースによって正常に削除されたことを示します。<br /><br /> **Table pinned**: パラメーター テーブルが内部処理の現在の使用対象としてマークされていることを示します。<br /><br /> **Table unpinned**: パラメーター テーブルが固定解除されたことを示します。 内部処理によるこのテーブルの使用は完了しています。<br /><br /> **Number of users incremented**: パラメーター テーブルを参照するクエリ通知サブスクリプションの数が増加したことを示します。<br /><br /> **Number of users decremented**: パラメーター テーブルを参照するクエリ通知サブスクリプションの数が減少したことを示します。<br /><br /> **LRU counter reset**: パラメーター テーブルの使用カウントがリセットされたことを示します。<br /><br /> **Cleanup task started**: このパラメーター テーブル内のすべてのサブスクリプションのクリーンアップが開始されたことを示します。 このクリーンアップは、データベースを起動したとき、またはこのパラメーター テーブルのサブスクリプションが基づいているテーブルが削除されたときに発生します。<br /><br /> **Cleanup task finished**: このパラメーター テーブル内のすべてのサブスクリプションのクリーンアップが終了したことを示します。|21|[ユーザー アカウント制御]|  
+|GroupID|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|[ユーザー アカウント制御]|  
+|HostName|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|[ユーザー アカウント制御]|  
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
 |LoginName|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DOMAIN *Username*\\*の形式で表された*セキュリティ ログインまたは Windows ログイン資格情報)。|11|いいえ|  
-|LoginSID|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
-|NTDomainName|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
-|NTUserName|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
-|RequestID|**int**|ステートメントを含む要求の ID。|49|はい|  
+|LoginSID|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|[ユーザー アカウント制御]|  
+|NTDomainName|**nvarchar**|ユーザーが属している Windows ドメイン。|7|[ユーザー アカウント制御]|  
+|NTUserName|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|[ユーザー アカウント制御]|  
+|RequestID|**int**|ステートメントを含む要求の ID。|49|[ユーザー アカウント制御]|  
 |ServerName|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
-|SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、アプリケーションから、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
-|SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
-|StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|このイベント固有の情報を含む XML ドキュメントを返します。 このドキュメントは、 [SQL Server Query Notification Profiler Event Schema](http://go.microsoft.com/fwlink/?LinkId=63331) ページから入手できる XML スキーマに準拠しています。|@shouldalert|はい|  
+|SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、アプリケーションから、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|[ユーザー アカウント制御]|  
+|SPID|**int**|イベントが発生したセッションの ID。|12|[ユーザー アカウント制御]|  
+|StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|[ユーザー アカウント制御]|  
+|TextData|**ntext**|このイベント固有の情報を含む XML ドキュメントを返します。 このドキュメントは、 [SQL Server Query Notification Profiler Event Schema](http://go.microsoft.com/fwlink/?LinkId=63331) ページから入手できる XML スキーマに準拠しています。|1|[ユーザー アカウント制御]|  
   
   
