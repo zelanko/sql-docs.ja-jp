@@ -19,13 +19,13 @@ caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f42360e4a0b3a23a7e39d390b711870e855129b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c099319c79b8bb31fcacdab20b6c590726cf3877
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956077"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561582"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,9 +107,9 @@ varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を�
 
 |エクステントの現在の使用状況 | GAM のビット設定 | SGAM のビット設定 |
 |---------|----------|------| 
-|空きがあり、未使用 |@shouldalert |0 |
+|空きがあり、未使用 |1 |0 |
 |単一エクステントであるか、空きページのない混合エクステント |0 |0 |
-|空きページがある混合エクステント |0 |@shouldalert |
+|空きページがある混合エクステント |0 |1 |
  
 このようなビット パターンの設定により、エクステントの管理アルゴリズムが簡素化されます。 
 -   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が単一エクステントを割り当てる際には、GAM の中から 1 のビットを検索し、そのビットを 0 に設定します。 

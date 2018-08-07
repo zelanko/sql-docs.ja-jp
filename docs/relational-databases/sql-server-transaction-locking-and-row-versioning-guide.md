@@ -21,13 +21,13 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0993d9437044b1eba713e2ac7cd10b2ab5372b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 50ae9731b974753b0a3fef174314ef5bbe3e03d5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973797"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563226"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "32973797"
 > UPDATE STATISTICS は、明示的なトランザクションで使用できます。 ただし、UPDATE STATISTICS は、このステートメントを含むトランザクションとは別にコミットされ、ロールバックすることはできません。  
   
  **自動コミット トランザクション**  
- 自動コミット モードは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定のトランザクション管理モードです。 すべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは完了時にコミットされるか、ロールバックされます。 ステートメントが正常に完了した場合はコミットされ、エラーが検出された場合はロールバックされます。 この既定のモードを明示的トランザクションまたは暗黙のトランザクションで上書きした場合を除いて、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスへの接続は自動コミット モードで動作します。 ADO、OLE DB、ODBC、および DB-Library の既定モードも自動コミット モードです。  
+ 自動コミット モードは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定のトランザクション管理モードです。 すべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは完了時にコミットされるか、ロールバックされます。 ステートメントが正常に完了した場合はコミットされ、エラーが検出された場合はロールバックされます。 この既定のモードを明示的トランザクションまたは暗黙のトランザクションでオーバーライドした場合を除いて、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスへの接続は自動コミット モードで動作します。 ADO、OLE DB、ODBC、および DB-Library の既定モードも自動コミット モードです。  
   
  **暗黙のトランザクション**  
  接続が暗黙のトランザクション モードで操作されている場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスでは、現在のトランザクションがコミットされるかロールバックされた後に新しいトランザクションが自動的に開始されます。 トランザクションの開始を指定する必要はありません。各トランザクションをコミットするかロールバックするだけです。 暗黙のトランザクション モードの場合、トランザクションが連鎖して生成されます。 暗黙のトランザクション モードは、API 関数または [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON ステートメントのいずれかを使用して設定します。  
@@ -302,9 +302,9 @@ GO
   
 |分離レベル|ダーティ リード|反復不可能読み取り|ファントム|  
 |---------------------|----------------|------------------------|-------------|  
-|**READ UNCOMMITTED**|はい|はい|はい|  
-|**READ COMMITTED**|いいえ|はい|はい|  
-|**REPEATABLE READ**|いいえ|いいえ|はい|  
+|**READ UNCOMMITTED**|[ユーザー アカウント制御]|はい|[ユーザー アカウント制御]|  
+|**READ COMMITTED**|いいえ|はい|[ユーザー アカウント制御]|  
+|**REPEATABLE READ**|いいえ|いいえ|[ユーザー アカウント制御]|  
 |**スナップショット**|いいえ|いいえ|いいえ|  
 |**SERIALIZABLE**|いいえ|いいえ|いいえ|  
   
@@ -318,7 +318,7 @@ GO
  ADO アプリケーションでは、**Connection** オブジェクトの `IsolationLevel` プロパティが adXactReadUncommitted、adXactReadCommitted、adXactRepeatableRead、または adXactReadSerializable に設定されます。  
   
  **ADO.NET**  
- `System.Data.SqlClient` マネージ名前空間を使用している ADO.NET アプリケーションは、`SqlConnection.BeginTransaction` メソッドを呼び出し、*IsolationLevel* オプションを Unspecified、Chaos、ReadUncommitted、ReadCommitted、RepeatableRead、Serializable、および Snapshot に設定することができます。  
+ `System.Data.SqlClient` マネージド名前空間を使用している ADO.NET アプリケーションは、`SqlConnection.BeginTransaction` メソッドを呼び出し、*IsolationLevel* オプションを Unspecified、Chaos、ReadUncommitted、ReadCommitted、RepeatableRead、Serializable、および Snapshot に設定することができます。  
   
  **OLE DB**  
  トランザクションを開始するとき、OLE DB を使用するアプリケーションは、*isoLevel* を ISOLATIONLEVEL_READUNCOMMITTED、ISOLATIONLEVEL_READCOMMITTED、ISOLATIONLEVEL_REPEATABLEREAD、ISOLATIONLEVEL_SNAPSHOT、または ISOLATIONLEVEL_SERIALIZABLE に設定して、`ITransactionLocal::StartTransaction` を呼び出します。  
@@ -346,7 +346,7 @@ GO
   
  次の表に、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]がロックできるリソースを示します。  
   
-|リソース|Description|  
+|リソース|[説明]|  
 |--------------|-----------------|  
 |RID|ヒープ内の 1 行をロックするのに使用される行識別子 (ROWID)。|  
 |KEY|シリアル化可能なトランザクションのキー範囲の保護に使用されるインデックス内の行ロック。|  
@@ -368,7 +368,7 @@ GO
   
  次の表に、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のリソース ロック モードを示します。  
   
-|ロック モード|Description|  
+|ロック モード|[説明]|  
 |---------------|-----------------|  
 |共有 (S)|`SELECT` ステートメントなど、データの変更や更新を伴わない読み取り操作で使用します。|  
 |更新 (U)|更新可能なリソースに使用します。 複数のセッションがリソースを読み取り、ロックして、後で更新する可能性がある場合に発生する一般的な形式のデッドロックを防ぎます。|  
@@ -403,7 +403,7 @@ GO
   
 <a name="lock_intent_table"></a> インテント ロックにはインテント共有 (IS)、インテント排他 (IX)、およびインテント排他付き共有 (SIX) があります。  
   
-|ロック モード|Description|  
+|ロック モード|[説明]|  
 |---------------|-----------------|  
 |インテント共有 (IS)|下位の階層に位置するリソースの (すべてではなく) 一部に対し、要求されているかかけられている共有ロックを保護します。|  
 |インテント排他 (IX)|下位の階層に位置するリソースの (すべてではなく) 一部に対し、要求されているかかけられている排他ロックを保護します。 IX は IS のスーパーセットです。また、下位のリソースに対する共有ロックの要求を保護します。|  
@@ -439,11 +439,11 @@ GO
 ||既に許可されているモード||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**要求されたモード**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**インテント共有 (IS)**|はい|はい|はい|はい|はい|いいえ|  
-|**共有 (S)**|はい|はい|はい|いいえ|いいえ|いいえ|  
-|**更新 (U)**|はい|はい|いいえ|いいえ|いいえ|いいえ|  
-|**インテント排他 (IX)**|はい|いいえ|いいえ|はい|いいえ|いいえ|  
-|**インテント排他付き共有 (SIX)**|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|**インテント共有 (IS)**|[ユーザー アカウント制御]|はい|はい|はい|はい|いいえ|  
+|**共有 (S)**|[ユーザー アカウント制御]|はい|はい|いいえ|いいえ|いいえ|  
+|**更新 (U)**|[ユーザー アカウント制御]|はい|いいえ|いいえ|いいえ|いいえ|  
+|**インテント排他 (IX)**|[ユーザー アカウント制御]|いいえ|いいえ|[ユーザー アカウント制御]|いいえ|いいえ|  
+|**インテント排他付き共有 (SIX)**|[ユーザー アカウント制御]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |**排他 (X)**|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
   
 > [!NOTE]  
@@ -467,7 +467,7 @@ GO
 -   行はインデックス エントリを保護するロック モードを表します。  
 -   モードは使用する組み合わされたロック モードを表します。 キー範囲ロック モードは 2 つの部分から成ります。 最初の部分はインデックス範囲 (Range*T*) をロックするのに使用するロックの種類を表し、その次の部分は特定のキー (*K*) をロックするのに使用するロックの種類を表します。 Range*T*-*K* のように、2 つの部分はハイフン (-) で連結されます。  
   
-    |範囲|行|モード|Description|  
+    |範囲|行|モード|[説明]|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共有範囲。共有リソース ロック、シリアル化可能範囲スキャン。|  
     |RangeS|U|RangeS-U|共有範囲。更新リソース ロック。シリアル化可能更新スキャン。|  
@@ -482,12 +482,12 @@ GO
 ||既に許可されているモード|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**要求されたモード**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**共有 (S)**|はい|はい|いいえ|はい|はい|はい|いいえ|  
-|**更新 (U)**|はい|いいえ|いいえ|はい|いいえ|はい|いいえ|  
-|**排他 (X)**|いいえ|いいえ|いいえ|いいえ|いいえ|はい|いいえ|  
-|**RangeS-S**|はい|はい|いいえ|はい|はい|いいえ|いいえ|  
-|**RangeS-U**|はい|いいえ|いいえ|はい|いいえ|いいえ|いいえ|  
-|**RangeI-N**|はい|はい|はい|いいえ|いいえ|はい|いいえ|  
+|**共有 (S)**|[ユーザー アカウント制御]|はい|いいえ|はい|はい|はい|いいえ|  
+|**更新 (U)**|[ユーザー アカウント制御]|いいえ|いいえ|[ユーザー アカウント制御]|いいえ|[ユーザー アカウント制御]|いいえ|  
+|**排他 (X)**|いいえ|いいえ|いいえ|いいえ|いいえ|[ユーザー アカウント制御]|いいえ|  
+|**RangeS-S**|[ユーザー アカウント制御]|はい|いいえ|はい|はい|いいえ|いいえ|  
+|**RangeS-U**|[ユーザー アカウント制御]|いいえ|いいえ|[ユーザー アカウント制御]|いいえ|いいえ|いいえ|  
+|**RangeI-N**|[ユーザー アカウント制御]|はい|はい|いいえ|いいえ|[ユーザー アカウント制御]|いいえ|  
 |**RangeX-X**|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
   
 #### <a name="lock_conversion"></a> 変換ロック  
@@ -663,7 +663,7 @@ INSERT mytable VALUES ('Dan');
   
  既定では、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]により、ロールバックに最もコストのかからないトランザクションを実行しているセッションがデッドロックの対象として選択されます。 また、ユーザーは、SET DEADLOCK_PRIORITY ステートメントを使用して、デッドロックが発生した場合のセッションの優先度を指定することもできます。 DEADLOCK_PRIORITY には、LOW、NORMAL、または HIGH を設定するか、あるいは -10 ～ 10 の範囲の整数値を設定することができます。 DEADLOCK_PRIORITY の既定値は NORMAL です。 2 つのセッションのデッドロックの優先度が異なる場合、優先度の低いセッションがデッドロックの対象として選択されます。 2 つのセッションのデッドロックの優先度が同じ場合、ロールバックに最もコストのかからないトランザクションを含むセッションがデッドロックの対象として選択されます。 デッドロック サイクルに関連するセッションのデッドロックの優先度とコストが同じ場合、対象はランダムに選択されます。  
   
- CLR を使用して作業する場合、デッドロック モニターでは、マネージ プロシージャ内でアクセスされる同期リソース (モニター、リーダー ロックとライター ロック、およびスレッド結合) のデッドロックが自動的に検出されます。 ただし、デッドロックは、デッドロックの対象として選択されたプロシージャに例外をスローすることによって解決されます。 デッドロックの対象が現在所有しているリソースは、この例外により自動的に解放されないことに注意してください。つまり、リソースは明示的に解放する必要があります。 例外の動作と一貫性があるため、デッドロックの対象の特定に使用された例外は、キャッチおよび破棄できます。  
+ CLR を使用して作業する場合、デッドロック モニターでは、マネージド プロシージャ内でアクセスされる同期リソース (モニター、リーダー ロックとライター ロック、およびスレッド結合) のデッドロックが自動的に検出されます。 ただし、デッドロックは、デッドロックの対象として選択されたプロシージャに例外をスローすることによって解決されます。 デッドロックの対象が現在所有しているリソースは、この例外により自動的に解放されないことに注意してください。つまり、リソースは明示的に解放する必要があります。 例外の動作と一貫性があるため、デッドロックの対象の特定に使用された例外は、キャッチおよび破棄できます。  
   
 ##### <a name="deadlock_tools"></a> デッドロック情報ツール  
  デッドロック情報を表示するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、system\_health xEvent セッション形式の監視ツール、2 種類のトレース フラグ、SQL Profiler の Deadlock Graph イベントが用意されています。  
@@ -1062,7 +1062,8 @@ BEGIN TRANSACTION
 ```   
   
 ##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]での行のバージョン管理に基づく分離レベル  
- [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降の[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、既存の READ COMMITTED トランザクション分離レベルで、行のバージョン管理によるステートメント レベルのスナップショットを使用できます。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、同じく行のバージョン管理によりトランザクション レベルのスナップショットを提供する SNAPSHOT トランザクション分離レベルも使用できます。  
+ [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降の[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、既存の READ COMMITTED トランザクション分離レベルで、行のバージョン管理によるステートメント レベルのスナップショットを使用できます。 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、同じく行のバージョン管理によりトランザクション レベルのスナップショットを提供する SNAPSHOT トランザクション分離レベルも使用できます。  
   
  行のバージョン管理とは、行が変更または削除されると書き込み時コピーのメカニズムを起動する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の一般的なフレームワークです。 このフレームワークでは、トランザクション内の一貫性に関する以前の状態を必要とするようなトランザクションの実行中に、行の古いバージョンをそのトランザクションで使用できることが求められます。 行のバージョン管理は、次の目的で使用されます。  
   
@@ -1500,7 +1501,7 @@ ALTER DATABASE AdventureWorks2016
   
  次の表では、ALLOW_SNAPSHOT_ISOLATION オプションの状態を一覧し、それぞれについて説明します。 ALLOW_SNAPSHOT_ISOLATION オプションを指定して ALTER DATABASE を使用すると、現在データベースのデータにアクセスしているユーザーはブロックされません。  
   
-|現在のデータベースのスナップショット分離フレームワークの状態|Description|  
+|現在のデータベースのスナップショット分離フレームワークの状態|[説明]|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|スナップショット分離トランザクションのサポートはアクティブになりません。 スナップショット分離トランザクションは許可されません。|  
 |PENDING_ON|スナップショット分離トランザクションのサポートが遷移中の状態 (OFF から ON) です。 開いているトランザクションが完了する必要があります。<br /><br /> スナップショット分離トランザクションは許可されません。|  
@@ -1611,7 +1612,7 @@ GO
  READ COMMITTED は、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定の分離レベルです。 アプリケーションを異なる分離レベルで動作させる必要がある場合、次の方法を使用して分離レベルを設定できます。  
   
 -   [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md) ステートメントを実行します。  
--   System.Data.SqlClient マネージ名前空間を使用している ADO.NET アプリケーションでは、SqlConnection.BeginTransaction メソッドを使用して *IsolationLevel* オプションを指定できます。  
+-   System.Data.SqlClient マネージド名前空間を使用している ADO.NET アプリケーションでは、SqlConnection.BeginTransaction メソッドを使用して *IsolationLevel* オプションを指定できます。  
 -   ADO を使用するアプリケーションでは、`Autocommit Isolation Levels` プロパティを設定できます。  
 -   トランザクションを開始するとき、OLE DB を使用しているアプリケーションでは、*isoLevel* を必要なトランザクション分離レベルに設定して ITransactionLocal::StartTransaction を呼び出すことができます。 OLE DB を使用するアプリケーションでは、自動コミット モードの分離レベルを指定するときに、DBPROPSET_SESSION プロパティの DBPROP_SESS_AUTOCOMMITISOLEVELS を必要なトランザクション分離レベルに設定できます。  
 -   ODBC を使用するアプリケーションでは、SQLSetConnectAttr を使用して SQL_COPT_SS_TXN_ISOLATION 属性を設定できます。  
@@ -1631,7 +1632,7 @@ SELECT BusinessEntityID
 GO  
 ```  
   
-分離レベルは、必要に応じて個別のクエリまたは DML ステートメントでテーブル レベルのヒントを指定することにより上書きできます。 テーブル レベルのヒントを指定しても、セッション内の他のステートメントに影響はありません。 テーブル レベルのヒントを使用して既定の動作を変更する操作は、どうしても必要な場合にのみ行うことをお勧めします。  
+分離レベルは、必要に応じて個別のクエリまたは DML ステートメントでテーブル レベルのヒントを指定することによりオーバーライドできます。 テーブル レベルのヒントを指定しても、セッション内の他のステートメントに影響はありません。 テーブル レベルのヒントを使用して既定の動作を変更する操作は、どうしても必要な場合にのみ行うことをお勧めします。  
   
 データの読み取り時に共有ロックが要求されない分離レベルを設定した場合でも、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]ではメタデータの読み取り時にロックの取得が必要になる場合があります。 たとえば、トランザクションが READ UNCOMMITTED 分離レベルで実行されている場合、データの読み取り時には共有ロックが取得されませんが、システム カタログ ビューの読み取り時にはロックが要求されることがあります。 つまり、READ UNCOMMITTED 分離レベルで実行されているトランザクションでは、同時実行トランザクションでテーブルのメタデータが変更されているときに、そのテーブルに対してクエリが実行されると、ブロッキングを発生させることがあります。  
   
@@ -1664,7 +1665,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ### <a name="locking-hints"></a>ロック ヒント  
- SELECT、INSERT、UPDATE、DELETE の各ステートメント内で参照する個別のテーブルにロック ヒントを指定できます。 ロック ヒントでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスがテーブル データに使用するロックの種類や行のバージョン管理が指定されます。 テーブルレベルのロック ヒントは、オブジェクトにかけるロックの種類を詳細に制御する場合に使用できます。 これらのロック ヒントは、セッションの現在のトランザクション分離レベルよりも優先されます。  
+ SELECT、INSERT、UPDATE、DELETE の各ステートメント内で参照する個別のテーブルにロック ヒントを指定できます。 ロック ヒントでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスがテーブル データに使用するロックの種類や行のバージョン管理が指定されます。 テーブルレベルのロック ヒントは、オブジェクトにかけるロックの種類を詳細に制御する場合に使用できます。 これらのロック ヒントは、セッションの現在のトランザクション分離レベルをオーバーライドします。  
   
  ロック ヒントの指定とその動作の詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   

@@ -18,13 +18,13 @@ caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f71734fbd6a59eaf7d176926bcde815bcbf16a6e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 915f38fca519a0c01864ecaf43086e53e2c02481
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332543"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562366"
 ---
 # <a name="subqueries-sql-server"></a>サブクエリ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +138,7 @@ WHERE Sales.Store.BusinessEntityID NOT IN
 GO
 ```
 
-テーブル名を明示的に記述しても間違いであるということはありません。明示的に修飾することで、テーブル名に関する暗黙的な修飾関係をいつでも無効にすることができます。   
+テーブル名を明示的に記述しても間違いであるということはありません。明示的に修飾することで、テーブル名に関する暗黙的な修飾関係をいつでもオーバーライドすることができます。   
 
 > [!IMPORTANT]
 > サブクエリで参照している列が、サブクエリの `FROM` 句で参照しているテーブルにない場合でも、外側のクエリの `FROM` 句で参照しているテーブルに存在すれば、エラーが発生することなくクエリが実行されます。 サブクエリで参照している列は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、外側のクエリのテーブル名で暗黙的に修飾されます。   

@@ -14,13 +14,13 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d9d0cffae7388f21b6df32e51669b946099a1c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 05e9ace70cc5b794693751d4ffac3202e5852706
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938757"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551262"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列ストア インデックス - データ ウェアハウス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>行レベルおよび行グループ レベルのロックを有効にしてパフォーマンスを改善する  
- 列ストア インデックス機能で非クラスター化インデックスを補完するために、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、選択、更新、および削除の各操作に対してより細分化されたロック機能が用意されています。 クエリの実行では、非クラスター化インデックスに対するインデックス検索に行レベルのロックを使用できます。また、列ストア インデックスに対するテーブル全体のスキャンに行グループ レベルのロックを使用できます。 行レベルのロックと行グループ レベルのロックを適切に使用すると、読み取り/書き込みの同時実行度を高めることができます。  
+ 列ストア インデックス機能で非クラスター化インデックスを補完するために、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、選択、更新、および削除の各操作に対してより細分化されたロック機能が用意されています。 クエリの実行では、非クラスター化インデックスに対するインデックス検索に行レベルのロックを使用できます。また、列ストア インデックスに対するテーブル全体のスキャンに行グループ レベルのロックを使用できます。 行レベルのロックと行グループ レベルのロックを適切に使用すると、読み取り/書き込みの同時実行度を高めることができます。  
   
 ```sql  
 --Granular locking example  

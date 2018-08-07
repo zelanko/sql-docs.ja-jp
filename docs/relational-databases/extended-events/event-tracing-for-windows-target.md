@@ -18,13 +18,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f3471f30347decd4a6a7f882aed43c8d1325107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c3f447e5c0ffa192262e26ade592d1e9c23fc741
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939787"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561012"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "32939787"
   
  次の表では、ETW ターゲットの構成に使用できるオプションについて説明します。  
   
-|オプション|指定できる値|Description|  
+|オプション|指定できる値|[説明]|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|256 文字までの任意の文字列。 この値は省略可能です。|拡張イベント セッション名。 既定値は、XE_DEFAULT_ETW_SESSION です。|  
 |default_etw_session_logfile_path|256 文字までの任意の文字列。 この値は省略可能です。|拡張イベント セッションのログ ファイルへのパス。 既定値は %TEMP%\ XEEtw.etl です。|  
@@ -82,7 +82,7 @@ ms.locfileid: "32939787"
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   マネージ オブジェクト形式 (MOF) のファイルは *\<インストール パス>* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「 [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) 」(マネージ オブジェクト形式) を参照してください。  
+-   マネージド オブジェクト フォーマット (MOF) ファイルは *\<インストール パス&gt;* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](http://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。  
   
 ## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  
  ETW ターゲットを拡張イベント セッションに追加するには、イベント セッションの作成時または変更時に次のステートメントを含める必要があります。  

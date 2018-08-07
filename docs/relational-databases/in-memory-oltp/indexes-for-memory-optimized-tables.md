@@ -15,12 +15,13 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b2ce7ce7e891e0750f80637c3ebc42176167834
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: aee77102736555249afa814d21cb0359b8a8e044
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563406"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -202,13 +203,13 @@ WHERE col1 = 'dn';
   
 次の表は、異なるインデックスの種類でサポートされるすべての操作を示しています。 *はい*はインデックスが要求に十分に対応できることを意味し、*いいえ*はインデックスが要求に十分に対応できないことを意味します。 
   
-| 操作 | メモリ最適化、 <br/> ハッシュ | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
+| 演算 | メモリ最適化、 <br/> ハッシュ | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| インデックス スキャン、すべてのテーブルの行を取得する。 | はい | はい | はい |  
-| 等値述語 (=) でのインデックス シーク。 | はい <br/> (フル キーが必要です。) | はい  | はい |  
-| 非等値述語と範囲述語でのインデックス シーク  <br/> (>, <, <=, >=, `BETWEEN`) | いいえ <br/> (インデックス スキャンが実行される) | 可 <sup>1</sup> | はい |  
-| インデックス定義と一致する行を並べ替え順序で取得する。 | いいえ | はい | はい |  
-| インデックス定義の反対と一致する行を並べ替え順序で取得する。 | いいえ | いいえ | はい |  
+| インデックス スキャン、すべてのテーブルの行を取得する。 | [ユーザー アカウント制御] | はい | [ユーザー アカウント制御] |  
+| 等値述語 (=) でのインデックス シーク。 | [ユーザー アカウント制御] <br/> (フル キーが必要です。) | [ユーザー アカウント制御]  | [ユーザー アカウント制御] |  
+| 非等値述語と範囲述語でのインデックス シーク  <br/> (>, <, <=, >=, `BETWEEN`) | いいえ <br/> (インデックス スキャンが実行される) | 可 <sup>1</sup> | [ユーザー アカウント制御] |  
+| インデックス定義と一致する行を並べ替え順序で取得する。 | いいえ | はい | [ユーザー アカウント制御] |  
+| インデックス定義の反対と一致する行を並べ替え順序で取得する。 | いいえ | いいえ | [ユーザー アカウント制御] |  
 
 <sup>1</sup> メモリ最適化された非クラスター化インデックスの場合、インデックス シークの実行にフル キーは必要ありません。  
 

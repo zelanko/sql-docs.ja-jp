@@ -19,13 +19,13 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae7ce7fbf55cffbc069eb7afcc15eebbb6833f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4002404d3547e9633bc2e7bc5fd4fb9884efaef7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941407"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563536"
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -257,7 +257,7 @@ ms.locfileid: "32941407"
   
  フィールドは、次の属性を使用して、対象となるテーブルにマップされます。  
   
-|COLUMN 要素の属性|Description|省略可能 /<br /><br /> Required|  
+|COLUMN 要素の属性|[説明]|省略可能 /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="***fieldID***"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE **="***fieldID***"**/> は \<FIELD ID **="***fieldID***"**/> にマップします|Required|  
 |NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|Required|  
