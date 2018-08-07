@@ -13,13 +13,13 @@ caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6874419218be60b58b11a2a3009b1eb8577e000a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 6f2642ece9de3e8a90a5ef18604bf287c46ce545
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769108"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509091"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services と Always On 可用性グループ
 
@@ -189,7 +189,7 @@ ms.locfileid: "34769108"
   
      次の手順は、セカンダリ レプリカに同期コミット モードが構成されていることを前提としています。  
   
-     同期を検証するには、プライマリ レプリカおよびセカンダリ レプリカをホストする各インスタンスへの接続を開き、データベースフォルダーを展開し、各レプリカ内でデータベースの名前に **[(同期済み)]** および **[(同期中)]** と追加されていることを確認します。  
+     同期を検証するには、プライマリ レプリカおよびセカンダリ レプリカをホストする各インスタンスへの接続を開き、データベース] フォルダーを展開し、各レプリカ内でデータベースの名前に **[(同期済み)]** および **[(同期中)]** と追加されていることを確認します。  
   
     > [!NOTE]  
     >  これらの手順は「[可用性グループの計画的な手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)」に記載されており、このタスクを実行するための追加情報と別の手順を示しています。  

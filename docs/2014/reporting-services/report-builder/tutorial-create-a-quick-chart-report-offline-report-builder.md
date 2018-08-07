@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216812"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39400785"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
   このチュートリアルでは、ウィザードを使用して円グラフを作成し、少し変更して実行可能な操作を確認します。 このチュートリアルは 2 つの異なる方法で実行できます。 どちらの方法でも、次の図に示すような円グラフが作成されます。  
   
- ![「最初円グラフ」実行の表示](../media/rs-my1stpierunview.gif"my First Pie Chart"の実行での表示)  
+ ![「最初円グラフ」実行の表示](../media/rs-my1stpierunview.gif"my First Pie Chart"実行の表示")  
   
 ## <a name="prerequisites"></a>前提条件  
  XML データを使用するか [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用するかにかかわらず、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーにアクセスできることが必要です。 スタンドアロン バージョン、またはレポート マネージャーや SharePoint サイトから利用できる ClickOnce バージョンを実行できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョンの異なる。 詳細については、次を参照してください。[インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)します。  
