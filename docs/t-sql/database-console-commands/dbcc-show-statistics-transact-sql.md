@@ -1,4 +1,4 @@
-﻿---
+---
 title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -36,13 +36,13 @@ caps.latest.revision: 75
 author: uc-msft
 ms.author: umajay
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ef8ab735511e5885fde7c3e5a218a75bc6f41fb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 45f0e42f637f452b12ff32a0b2f580c3c87e9bd3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262632"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454636"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>結果セット  
 次の表は、STAT_HEADER を指定した場合に結果セットに返される列を示しています。
   
-|列名|Description|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |[オブジェクト名]|統計オブジェクトの名前。|  
 |[更新]|統計情報が最後に更新された日付と時刻。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 関数でこの情報を取得することもできます。 詳細については、このページの「[解説](#Remarks)」セクションを参照してください。|  
@@ -115,7 +115,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 次の表は、DENSITY_VECTOR を指定した場合に結果セットに返される列を示しています。
   
-|列名|Description|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |[すべての密度]|密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、および (A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A, B, C) を使用すると、これらの各リストは個別の値リスト (3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7) のようになります。 プレフィックス (A, B) を使用すると、同じ列値の個別の値リストが (3, 5)、(4, 4)、および (4, 5) になります。|  
 |[平均の長さ]|列プレフィックスの列値のリストを格納する平均の長さ (バイト単位)。 たとえば、リスト (3, 5, 6) の値ごとに 4 バイト必要な場合は、長さは 12 バイトになります。|  
@@ -123,7 +123,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 次の表は、HISTOGRAM オプションを指定した場合に結果セットに返される列を示しています。
   
-|列名|Description|  
+|列名|[説明]|  
 |---|---|
 |[RANGE_HI_KEY]|ヒストグラム区間の上限の列値。 この列値はキー値とも呼ばれます。|  
 |RANGE_ROWS|ヒストグラム区間内 (上限は除く) に列値がある行の予測数。|  

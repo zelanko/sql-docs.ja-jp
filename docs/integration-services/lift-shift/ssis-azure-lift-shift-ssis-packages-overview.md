@@ -12,12 +12,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 3864a5ac0f4bb1ebd87ab54a0b949ec80b636bc6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304392"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482663"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
 SQL Server Integration Services (SSIS) プロジェクト、パッケージ、ワークロードを Azure クラウドに移動できるようになりました。 SQL Server Management Studio (SSMS) などのよく使われるツールを利用して、SSIS プロジェクトとパッケージを Azure SQL Database の SSIS カタログ (SSISDB) または SQL Database Managed Instance (プレビュー) でデプロイ、実行、管理します。
@@ -75,7 +75,7 @@ SSDT のオンプレミス、または SSDT がインストールされた Visua
 
 SSISDB をホストする SQL Database のインスタンスをプロビジョニングする際に、SSIS 用 Azure Feature Pack と Access Redistributable もインストールされます。 これらのコンポーネントは、組み込みのコンポーネントでサポートされるデータ ソースの他に、さまざまな **Azure** データ ソース、および **Excel ファイルと Access ファイル**への接続を提供します。
 
-追加のコンポーネントもインストールできます。たとえば、既定ではインストールされないドライバーをインストールできます。 詳しくは、「[Customize setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup)」(Azure-SSIS 統合ランタイムの設定をカスタマイズする) をご覧ください。
+追加のコンポーネントもインストールできます。たとえば、既定ではインストールされないドライバーをインストールできます。 詳しくは、「[Customize setup for the Azure-SSIS integration runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)」(Azure-SSIS 統合ランタイムの設定をカスタマイズする) をご覧ください。
 
 Enterprise Edition のライセンスがある場合は、追加コンポーネントを使用できます。 詳しくは、「[Azure-SSIS Integration Runtime の Enterprise Edition をプロビジョニングする](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition)」をご覧ください。
 

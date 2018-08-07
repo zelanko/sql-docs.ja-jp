@@ -20,13 +20,13 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f681d05c05d54762da3ba49206befa5ddfe0bd52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 5065bda0d38d08c71ca85288c407ecac36271963
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769358"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509081"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)
 
@@ -71,11 +71,11 @@ ms.locfileid: "34769358"
   
 ||FCI 内のノード|可用性グループ内のレプリカ|  
 |-|-------------------------|-------------------------------------------|  
-|**WSFC クラスターを使用する**|はい|はい|  
+|**WSFC クラスターを使用する**|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
 |**保護レベル**|Instance|[データベース]|  
 |**ストレージの種類**|Shared|非共有<br /><br /> 可用性グループ内のレプリカがストレージを共有しない一方、FCI によってホストされるレプリカは、FCI によって必要とされたときに共有ストレージ ソリューションを使用します。 ストレージ ソリューションは、可用性グループのレプリカ間ではなく、FCI 内のノードでのみ共有されます。|  
 |**ストレージ ソリューション**|直接接続、SAN、マウント ポイント、SMB|ノードの種類によって異なる|  
-|**読み取り可能なセカンダリ**|なし*|はい|  
+|**読み取り可能なセカンダリ**|なし*|[ユーザー アカウント制御]|  
 |**該当するフェールオーバー ポリシー設定**|WSFC クォーラム<br /><br /> FCI 固有<br /><br /> 可用性グループ設定**|WSFC クォーラム<br /><br /> 可用性グループ設定|  
 |**フェールオーバー リソース**|サーバー、インスタンス、およびデータベース|データベースのみ|  
   

@@ -23,13 +23,13 @@ caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8a39d64854d6cc63f0b607b9eaa5084ab250313
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b602df99872febd3ea3299b656aa98df8625075d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999424"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459986"
 ---
 # <a name="create-external-file-format-transact-sql"></a>外部のファイルの形式 (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -198,7 +198,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
 |datetime2|DATE_FORMAT = 'yyyy-mm-dd hh:mm:ss.ffffffftt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および AM/am/PM/pm が含まれます。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-mm-dd HH:mm:ss.fffffff zzz'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および `{+&#124;-}HH:ss` として入力ファイルに格納するタイムゾーンのオフセットが含まれます。 たとえば、Los Angeles 後 (夏時間) なしの節約は、UTC、-08 の値の背後にある、8 時間: 00 入力ファイルでは、ロサンゼルスのタイム ゾーンを指定します。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-mm-dd hh:mm:ss.ffffffftt zzz'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、AM/am/PM/pm、およびタイムゾーンのオフセットが含まれます。 前の行の説明を参照してください。|  
-|Time|DATE_FORMAT = 'HH:mm:ss'|00 ～ 23 ののみ、日付の値はありません時間、00 ～ 59 分、および 00 ～ 59 秒。|  
+|[時刻]|DATE_FORMAT = 'HH:mm:ss'|00 ～ 23 ののみ、日付の値はありません時間、00 ～ 59 分、および 00 ～ 59 秒。|  
   
  すべてには、日付の形式がサポートされています。
   

@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fb69ad94c2759a4f3bc55409212d9aedad2096f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792266"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456196"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -866,7 +866,7 @@ Azure SQL Database 論理サーバーでは、Azure SQL サーバーでこのス
 
 ## <a name="syntax"></a>構文 
 
-### <a name="create-a-database"></a>データベースを作成する
+### <a name="create-a-database"></a>データベースの作成
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 {  

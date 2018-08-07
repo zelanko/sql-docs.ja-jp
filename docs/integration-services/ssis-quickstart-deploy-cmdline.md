@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335866"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482703"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe を使用して、コマンド プロンプトから SSIS プロジェクトを配置する
 このクイック スタートでは、Integration Services 配置ウィザード `ISDeploymentWizard.exe` を実行して、コマンド プロンプトから、SSIS プロジェクトを配置する方法を示します。
@@ -47,7 +47,7 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>デプロイ ウィザードでの認証方法
+## <a name="wizard_auth"></a> デプロイ ウィザードでの認証方法
 
 デプロイ ウィザードで SQL Server にデプロイする場合、Windows 認証を使用する必要があります。SQL Server 認証は使用できません。
 

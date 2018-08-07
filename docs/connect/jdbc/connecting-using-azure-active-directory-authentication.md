@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278843"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452646"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を利用した接続
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > 包含ユーザーのデータベースが存在する必要がありますと、包含データベース ユーザーを表す、指定した Azure AD ユーザーまたはグループを指定された Azure AD ユーザーに属している、データベース内に存在する必要があります、(を除く Azure Active Directory CONNECT アクセス許可が必要サーバー管理者またはグループ)
 
-
 ## <a name="connecting-using-access-token"></a>アクセス トークンを使用した接続
-アプリケーション/サービスでは、Azure Active Directory からアクセス トークンを取得でき、SQL Azure データベースへの接続に使用することができます。 DriverManager クラスで getConnection() メソッドのプロパティのパラメーターを使用してその accessToken を設定することができますのみに注意してください。 これは、接続文字列で使用できません。
- 
+アプリケーション/サービスでは、Azure Active Directory からアクセス トークンを取得でき、SQL Azure データベースへの接続に使用することができます。
+
+> [!NOTE] 
+> **accessToken** DriverManager クラスで getConnection() メソッドのプロパティのパラメーターを使用してのみ設定できます。 これは、接続文字列で使用できません。
+
 次の例には、アクセス トークン ベース認証を使用して Azure SQL Database に接続する単純な Java アプリケーションが含まれています。 ビルドと、例を実行する前に、次の手順に従います。
 1.  Azure Active Directory で、サービスのアプリケーション アカウントを作成します。
     1. Azure portal にサインインします。

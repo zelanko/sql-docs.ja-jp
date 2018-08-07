@@ -17,13 +17,13 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7980cc5f02b5766ef30e06440cb6dfa30fdc5560
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: e693f27ef976afcc9fcb86ace9c16c114af90c70
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768718"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509201"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>柔軟な自動フェールオーバー ポリシーを構成する
 
@@ -91,7 +91,7 @@ ms.locfileid: "34768718"
   
         |[!INCLUDE[tsql](../../../includes/tsql-md.md)] の値|レベル|自動フェールオーバーが開始される条件|  
         |------------------------------|-----------|-------------------------------------------|  
-        |@shouldalert|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
+        |1|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
         |2|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
         |3|3|重大なサーバー エラー。 下限値の任意の条件が満たされるか、重大な内部サーバー エラーが発生した場合。<br /><br /> これは既定のレベルです。|  
         |4|4|中程度のサーバー エラー。 下限値の任意の条件が満たされるか、中程度のサーバー エラーが発生した場合。|  
