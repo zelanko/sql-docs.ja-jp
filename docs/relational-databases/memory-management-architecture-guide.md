@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239372"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541722"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,9 +92,9 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 |メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
-|単一ページ割り当て|はい|はい。"あらゆるサイズの" ページ割り当てに統合。|
+|単一ページ割り当て|[ユーザー アカウント制御]|はい。"あらゆるサイズの" ページ割り当てに統合。|
 |複数ページ割り当て|いいえ|はい。"あらゆるサイズの" ページ割り当てに統合。|
-|CLR 割り当て|いいえ|はい|
+|CLR 割り当て|いいえ|[ユーザー アカウント制御]|
 |スレッド スタック メモリ|いいえ|いいえ|
 |Windows からの直接割り当て|いいえ|いいえ|
 
@@ -120,10 +120,10 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
 |単一ページ割り当て|いいえ|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
-|複数ページ割り当て|はい|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
-|CLR 割り当て|はい|はい|
-|スレッド スタック メモリ|はい|はい|
-|Windows からの直接割り当て|はい|はい|
+|複数ページ割り当て|[ユーザー アカウント制御]|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
+|CLR 割り当て|[ユーザー アカウント制御]|[ユーザー アカウント制御]|
+|スレッド スタック メモリ|[ユーザー アカウント制御]|[ユーザー アカウント制御]|
+|Windows からの直接割り当て|[ユーザー アカウント制御]|[ユーザー アカウント制御]|
 
 ## <a name="dynamic-memory-management"></a> 動的メモリ管理
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の既定のメモリ管理動作では、システムでメモリ不足を発生させることなく、必要な量のメモリを獲得します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、Microsoft Windows の Memory Notification API を使用してこれを実現しています。
@@ -132,7 +132,8 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
   
 **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のメモリ割り当て、コンパイル メモリ、すべてのキャッシュ (バッファー プールを含む)、[クエリ実行メモリ許可](#effects-of-min-memory-per-query)、[ロック マネージャー メモリ](#memory-used-by-sql-server-objects-specifications)、CLR<sup>1</sup> メモリ (基本的に、**[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** で見つかったメモリ クラーク) を制御します。 
 
-<sup>1</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
+
+  <sup>1</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
 
 次のクエリでは、現在割り当てられているメモリに関する情報を返します。  
   
@@ -162,7 +163,8 @@ FROM sys.dm_os_process_memory;
 |x64 (64 ビット)|x64 (64 ビット)|2048 KB|
 |IA64 (Itanium)|IA64 (Itanium)|4096 KB|
 
-<sup>2</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
+
+  <sup>2</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、メモリ通知 API **QueryMemoryResourceNotification** を使用して、いつ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Manager がメモリの割り当てまたは解放を行うことができるかを判断します。  
 

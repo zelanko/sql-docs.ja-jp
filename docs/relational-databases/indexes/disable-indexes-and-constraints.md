@@ -27,13 +27,13 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eca111e19c0ab16b3f59c90ae42532b9b4192d7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2f5ac6744586a36cdc652002c9657a23bea4e1a5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939977"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537552"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "32939977"
   
      インデックスの無効化操作は正常に終了しました。  
   
--   **[エラー]**  
+-   **Error**  
   
      インデックスの無効化操作の実行中にエラーが発生したため、操作が正常に終了しませんでした。  
   
