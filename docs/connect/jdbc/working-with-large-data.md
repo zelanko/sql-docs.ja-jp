@@ -1,5 +1,5 @@
 ---
-title: 大きなデータの処理 |Microsoft ドキュメント
+title: 大規模なデータを扱う |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,33 +14,33 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 688c1f331e3f60868cc53a510308a58730819dd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a60bc049b02ca998119fd4741fa51589a029aeca
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851737"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452296"
 ---
 # <a name="working-with-large-data"></a>大きなデータの処理
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  JDBC ドライバーは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるアダプティブ バッファリングをサポートします。 アダプティブ バッファリングによる、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]からステートメントの実行結果を取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]一度にはなく、アプリケーションの必要に応じて、します。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。  
+JDBC ドライバーは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるアダプティブ バッファリングをサポートします。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でアダプティブ バッファリングを使用すると、ステートメントの実行結果を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] から取得する処理が、すべて一度にではなく、アプリケーションの必要に応じて行われます。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。
+
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] JDBC Driver バージョン 1.2 のバッファリング モードの既定値は "**full**" でした。 アプリケーションで、接続プロパティを使用するか、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用して、"responseBuffering" 接続プロパティを "**adaptive**" に設定しなかった場合、サーバーから結果全体を一度に読み取るという動作になっていました。 アダプティブ バッファリングの動作をアプリケーションに実装するには、明示的に "responseBuffering" 接続プロパティを "**adaptive**" に設定する必要があります。  
   
- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] JDBC Driver version 1.2 のバッファリング モードが"**完全**"既定でします。 アプリケーション"responseBuffering"接続プロパティを設定しなかったかどうか"**アダプティブ**"接続プロパティで、またはを使用して、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト、サーバーから結果全体を一度に読み取る、サポートされているドライバーです。 アダプティブ バッファリングの動作を取得するために、アプリケーションは"responseBuffering"接続プロパティを設定する必要がある"**アダプティブ**"明示的にします。  
+**adaptive** 値はバッファリング モードの規定値であり、JDBC ドライバーは、必要に応じて最小限のデータをバッファリングします。 アダプティブ バッファリングの使用に関する詳細については、次を参照してください。[アダプティブ バッファリングを使用して](../../connect/jdbc/using-adaptive-buffering.md)します。  
   
- **アダプティブ**値が既定のバッファリング モードであり、JDBC ドライバーが必要な場合に、最小の可能なデータをバッファーします。 アダプティブ バッファリングの使用の詳細については、次を参照してください。[アダプティブ バッファリングを使用して](../../connect/jdbc/using-adaptive-buffering.md)です。  
-  
- このセクションのトピックから大きな値データの取得に使用できるさまざまな方法を説明する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
+ このセクションのトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースから大きな値のデータを取得するための、さまざまな方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
-|-----------|-----------------|  
-|[大きなデータを読み取るサンプル](../../connect/jdbc/reading-large-data-sample.md)|SQL ステートメントを使用して大きな値のデータを取得する方法について説明します。|  
-|[ストアド プロシージャで大きなデータを読み取るサンプル](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)|大きな CallableStatement OUT パラメーター値を取得する方法について説明します。|  
-|[大きなデータを更新するサンプル](../../connect/jdbc/updating-large-data-sample.md)|データベース内の大きな値のデータを更新する方法について説明します。|  
+| トピック                                                                                                                      | [説明]                                                              |
+| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [大きなデータを読み取るサンプル](../../connect/jdbc/reading-large-data-sample.md)                                               | SQL ステートメントを使用して大きな値のデータを取得する方法について説明します。       |
+| [ストアド プロシージャで大きなデータを読み取るサンプル](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | 大きな CallableStatement OUT パラメーター値を取得する方法について説明します。 |
+| [大きなデータを更新するサンプル](../../connect/jdbc/updating-large-data-sample.md)                                             | データベース内の大きな値のデータを更新する方法について説明します。                |
   
-## <a name="see-also"></a>参照  
- [サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+[サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  

@@ -1,7 +1,7 @@
 ---
-title: 基本データ型の使用 |Microsoft ドキュメント
+title: 基本的なデータ型の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,79 +14,81 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab39b74b4e5a2c243622bbd352a71c943e07a3d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2aa87e34eb177b79af8a18aede6f54c56da3e10d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852673"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455686"
 ---
 # <a name="using-basic-data-types"></a>基本データ型の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を使用して、JDBC の基本データ型変換、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型を Java プログラミング言語によって、その逆に認識できる形式にします。 JDBC ドライバーが含まれています、JDBC 4.0 API のサポートを提供する、 **SQLXML**データ型、および、National (Unicode) データ型など**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**、および**NCLOB**です。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、JDBC の基本データ型を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型を Java プログラミング言語によって認識できる形式に変換します。この逆の変換も行います。 JDBC ドライバーを含む JDBC 4.0 api のサポートを提供する、 **SQLXML**データ型、および、National (Unicode) データ型など**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**、および**NCLOB**します。  
   
 ## <a name="data-type-mappings"></a>データ型マッピング  
- 次の表に、基本的な既定のマッピング[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]JDBC、および Java プログラミング言語のデータ型。  
+ 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、JDBC、および Java プログラミング言語の基本データ型間で行われる既定のマッピングを示しています。  
   
 |SQL Server 型|JDBC 型 (java.sql.Types)|Java 言語型|  
 |----------------------|-----------------------------------|-------------------------|  
-|bigint|bigint|long|  
+|BIGINT|bigint|long|  
 |binary|BINARY|byte[]|  
 |bit|BIT|boolean|  
-|char|CHAR|文字列|  
-|date|[DATE]|java.sql.Date|  
-|datetime|TIMESTAMP|java.sql.Timestamp|  
-|datetime2|TIMESTAMP|java.sql.Timestamp|  
+|char|CHAR|String|  
+|日付|[DATE]|java.sql.Date|  
+|DATETIME|timestamp|java.sql.Timestamp|  
+|datetime2|timestamp|java.sql.Timestamp|  
 |datetimeoffset (2)|microsoft.sql.Types.DATETIMEOFFSET|microsoft.sql.DateTimeOffset|  
-|decimal|[DECIMAL]|java.math.BigDecimal|  
-|float|DOUBLE|倍精度浮動小数点|  
+|Decimal|[DECIMAL]|java.math.BigDecimal|  
+|FLOAT|DOUBLE|倍精度浮動小数点|  
 |image|LONGVARBINARY|byte[]|  
-|int|INTEGER|int|  
+|ssNoversion|INTEGER|ssNoversion|  
 |money|[DECIMAL]|java.math.BigDecimal|  
-|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|文字列|  
-|ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|文字列|  
-|numeric|NUMERIC|java.math.BigDecimal|  
-|nvarchar|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|文字列|  
-|nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|文字列|  
-|real|REAL|float|  
-|smalldatetime|TIMESTAMP|java.sql.Timestamp|  
-|smallint|SMALLINT|short|  
-|smallmoney|[DECIMAL]|java.math.BigDecimal|  
-|text|LONGVARCHAR|文字列|  
+|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|String|  
+|ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String|  
+|NUMERIC|NUMERIC|java.math.BigDecimal|  
+|NVARCHAR|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|String|  
+|nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|String|  
+|REAL|real|FLOAT|  
+|smalldatetime|timestamp|java.sql.Timestamp|  
+|SMALLINT|SMALLINT|short|  
+|SMALLMONEY|[DECIMAL]|java.math.BigDecimal|  
+|text|LONGVARCHAR|String|  
 |time|TIME (1)|java.sql.Time (1)|  
-|timestamp|BINARY|byte[]|  
-|tinyint|TINYINT|short|  
+|TIMESTAMP|BINARY|byte[]|  
+|TINYINT|TINYINT|short|  
 |udt|VARBINARY|byte[]|  
-|uniqueidentifier|CHAR|文字列|  
+|UNIQUEIDENTIFIER|CHAR|String|  
 |varbinary|VARBINARY|byte[]|  
 |varbinary(max)|VARBINARY|byte[]|  
-|varchar|VARCHAR|文字列|  
-|varchar(max)|VARCHAR|文字列|  
-|xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|文字列<br /><br /> SQLXML|  
-|sqlvariant|SQLVARIANT|オブジェクト|  
+|varchar|VARCHAR|String|  
+|varchar(max)|VARCHAR|String|  
+|xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String<br /><br /> SQLXML|  
+|sqlvariant|SQLVARIANT|Object|  
+|geometry|VARBINARY|byte[]|  
+|geography|VARBINARY|byte[]|  
   
- (時間と共に java.sql.Time を使用するには 1)[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]型を設定する必要あります、 **sendTimeAsDatetime**接続プロパティを false にします。  
+ (1) 時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型を持つ java.sql.Time を使用する場合は、**sendTimeAsDatetime** 接続プロパティを false に設定します。  
   
- (値をプログラムでアクセスできます 2) **datetimeoffset**で[DateTimeOffset クラス](../../connect/jdbc/reference/datetimeoffset-class.md)です。  
+ (値をプログラムでアクセスできます 2) **datetimeoffset**で[DateTimeOffset クラス](../../connect/jdbc/reference/datetimeoffset-class.md)します。  
   
- 以下のセクションでは、JDBC ドライバーと基本データ型の使用方法の例を示します。 Java アプリケーションで、基本データ型を使用する方法の詳細な例を参照してください。[基本データ型のサンプル](../../connect/jdbc/basic-data-types-sample.md)です。  
+ 以下のセクションでは、JDBC ドライバーと基本データ型の使用方法の例を示します。 Java アプリケーションの基本データ型の使用方法の詳細例については、「[基本データ型のサンプル](../../connect/jdbc/basic-data-types-sample.md)」をご覧ください。  
   
 ## <a name="retrieving-data-as-a-string"></a>文字列としてのデータの取得  
- 文字列として表示するため、JDBC の基本データ型のいずれかにマップされるデータ ソースからデータを取得する必要があるまたは厳密に型指定されたデータが必要でない場合は、使用する場合、 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)クラスは、次のようにします。  
+ 文字列として参照するために JDBC 基本データ型にマップされるデータ ソースからデータを取得する必要がある場合、または厳密に型指定されたデータを必要としない場合は、次のように [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) メソッドを使用できます。  
   
  [!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
   
 ## <a name="retrieving-data-by-data-type"></a>データ型によるデータの取得  
- データ ソースからデータを取得する必要があるが取得されているデータの種類がわかっている場合は、get のいずれかを使用\<型 >、SQLServerResultSet のメソッド クラスとも呼ばれる、 *getter メソッド*です。 列名または列インデックスを使用するには、get\<型 > メソッドは、次のようにします。  
+ データ ソースからデータを取得する必要があり、取得するデータの型がわかっている場合は、SQLServerResultSet クラスのいずれかの get\<Type> メソッドを使用します。これらは、"*getter メソッド*" とも呼ばれます。 get\<Type> メソッドでは、次のように列名または列インデックスを使用できます。  
   
  [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
->  GetUnicodeStream と getBigDecimal スケール メソッドでは非推奨し、は、JDBC ドライバーではサポートされていません。  
+>  GetUnicodeStream とスケールの方法で getBigDecimal は非推奨し、は、JDBC ドライバーでサポートされていません。  
   
 ## <a name="updating-data-by-data-type"></a>データ型によるデータの更新  
- データ ソースのフィールドの値を更新した場合は、更新プログラムのいずれかを使用\<型 >、SQLServerResultSet クラスのメソッドです。 次の例で、 [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)と共にメソッドが使用される、 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)データ ソース内のデータを更新する方法。  
+ データ ソースのフィールドの値を更新した場合、更新プログラムのいずれかを使用して、\<型 >、SQLServerResultSet クラスのメソッド。 次の例では、[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) メソッドを [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドと組み合わせて使用し、データ ソース内のデータを更新します。  
   
  [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -94,31 +96,31 @@ ms.locfileid: "32852673"
 >  JDBC ドライバーは、127 文字を超える列名の SQL Server の列を更新できません。 列名が 127 文字を超える列を更新しようとすると、例外がスローされます。  
   
 ## <a name="updating-data-by-parameterized-query"></a>パラメーター化クエリによるデータの更新  
- セットのいずれかを使用して、パラメーターのデータ型を設定するには、パラメーター化クエリを使用してデータ ソース内のデータを更新する必要\<型 > のメソッド、 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)クラスとも呼ばれる、*setter メソッド*です。 次の例で、 [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)パラメーター化されたクエリをプリコンパイルするメソッドを使用し、 [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)メソッドを使用して、する前に、パラメーターの文字列値を設定[executeUpdate](../../connect/jdbc/reference/executeupdate-method.md)メソッドが呼び出されます。  
+ パラメーター化クエリを使用してデータ ソースのデータを更新する必要がある場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスのいずれかの set\<Type> メソッドを使用して、パラメーターのデータ型を設定できます。これらは、"*setter メソッド*" とも呼ばれます。 次の例では、[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) メソッドを使用して、パラメーター化クエリをプリコンパイルし、[setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) メソッドを使用してパラメーターの文字列値を設定してから、[executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) メソッドを呼び出します。  
   
  [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
- パラメーター化クエリの詳細については、次を参照してください。[パラメーターを使用して SQL ステートメントを使用して](../../connect/jdbc/using-an-sql-statement-with-parameters.md)です。  
+ パラメーター化クエリの詳細については、次を参照してください。[パラメーターの SQL ステートメントを使って](../../connect/jdbc/using-an-sql-statement-with-parameters.md)します。  
   
 ## <a name="passing-parameters-to-a-stored-procedure"></a>ストアド プロシージャにパラメーターを渡す  
- 名前またはインデックスでパラメーターを設定、セットのいずれかを使用した場合、ストアド プロシージャに型指定されたパラメーターを渡す、\<型 > のメソッド、 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)クラスです。 次の例で、 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)メソッドを使用して、ストアド プロシージャへの呼び出しを設定し、 [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md)メソッドを使用して前に、の呼び出しのパラメーターを設定、 [さらに executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)メソッドが呼び出されます。  
+ 入力されたパラメーターをストアド プロシージャに渡す必要がある場合は、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスのいずれかの set\<Type> メソッドを使用して、インデックスまたは名前でパラメーターを設定できます。 次の例では、[prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドを使用してストアド プロシージャへの呼び出しを設定し、[setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) メソッドを使用して呼び出し用のパラメーターを設定してから、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを呼び出します。  
   
  [!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 >  この例では、結果セットはストアド プロシージャの実行結果で返されます。  
   
- JDBC ドライバーでストアド プロシージャと入力パラメーターの使用の詳細については、次を参照してください。[入力パラメーターを使用してストアド プロシージャを使用して](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)です。  
+ JDBC ドライバーでストアド プロシージャと入力パラメーターの使用に関する詳細については、次を参照してください。[ストアド プロシージャを使用して、入力パラメーターを持つ](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)します。  
   
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>ストアド プロシージャからのパラメーターの取得  
- ストアド プロシージャからパラメーターを取得した場合必要があります最初に登録する名前で out パラメーターまたはインデックスを使用して、 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)を SQLServerCallableStatement クラスのメソッド、ストアド プロシージャへの呼び出しを実行した後、適切な変数に out パラメーター戻ります。 次の例では、prepareCall メソッドは、ストアド プロシージャへの呼び出しを設定に使用される、registerOutParameter メソッドを使用して、out パラメーターを設定し、 [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md)メソッドのパラメーター設定を使用しますexecuteQuery メソッドが呼び出される前に呼び出します。 使用して、ストアド プロシージャの out パラメーターによって返される値を取得、 [getShort](../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)メソッドです。  
+ ストアド プロシージャからパラメーターを取得する必要がある場合は、まず SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して名前またはインデックスで out パラメーターを登録し、ストアド プロシージャへの呼び出しを実行してから、返された out パラメーターを適切な変数に割り当てる必要があります。 次の例では、prepareCall メソッドを使用してストアド プロシージャへの呼び出しを設定し、registerOutParameter メソッドを使用して out パラメーターを設定します。次に、[setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) メソッドを使用して呼び出し用のパラメーターを設定してから、executeQuery メソッドを呼び出します。 ストアド プロシージャの out パラメーターによって返される値は、[getShort](../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md) メソッドを使用して取得します。  
   
  [!code[JDBC#UsingBasicDataTypes6](../../connect/jdbc/codesnippet/Java/using-basic-data-types_6.java)]  
   
 > [!NOTE]  
 >  out パラメーターが返されるだけでなく、ストアド プロシージャの実行結果により作成された結果セットが返されることもあります。  
   
- ストアド プロシージャと出力パラメーターで JDBC ドライバーを使用する方法の詳細については、次を参照してください。[出力パラメーターを持つストアド プロシージャを使用して](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)です。  
+ JDBC driver を使用して、ストアド プロシージャと出力パラメーターを使用する方法の詳細については、次を参照してください。[ストアド プロシージャを使用して、出力パラメーターを持つ](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)します。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

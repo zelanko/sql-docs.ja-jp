@@ -32,13 +32,13 @@ caps.latest.revision: 155
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3decb197568d28088e5206ac1ffc46b45108d734
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990414"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452736"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,8 +47,15 @@ ms.locfileid: "37990414"
 
  > Linux では、sqlcmd を使用して、参照してください[sqlcmd および bcp を Linux にインストール](../linux/sql-server-linux-setup-tools.md)します。
 
-  **sqlcmd** ユーティリティを使用すると、Transact-SQL ステートメント、システム プロシージャ、およびスクリプト ファイルを、コマンド プロンプト、SQLCMD モードの**クエリ エディター**、Windows スクリプト ファイル、または SQL Server エージェント ジョブのオペレーティング システム (Cmd.exe) ジョブ ステップで入力できます。 このユーティリティは ODBC を使用して、TRANSACT-SQL バッチを実行します。 
-  
+ **Sqlcmd**ユーティリティを使用して、TRANSACT-SQL ステートメント、システム プロシージャ、およびさまざまな使用可能なモードを使用してスクリプト ファイルを入力できます。
+
+- コマンド プロンプト。
+- **クエリ エディター** SQLCMD モード。
+- Windows スクリプト ファイル。
+- SQL Server エージェント ジョブのオペレーティング システム (Cmd.exe) ジョブ ステップ。
+
+ユーティリティでは、ODBC を使用して、TRANSACT-SQL バッチを実行します。 
+ 
 > [!NOTE]
 > sqlcmd ユーティリティの最近のバージョンは [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=825643)から Web リリースとして利用できます。 Always Encrypted をサポートするためには、13.1 以降のバージョンが必要です (`-g`) と Azure Active Directory 認証 (`-G`)。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)
 
@@ -57,10 +64,10 @@ ms.locfileid: "37990414"
   SSMS で sqlcmd ステートメントを実行するには、上部のナビゲーションの [クエリ] メニューのドロップダウン リストから SQLCMD モードを選択します。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) では、**クエリ エディター**の標準モードと SQLCMD モードでの実行に Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient を使用します。 コマンド ラインから **sqlcmd** を実行する場合、 **sqlcmd** では ODBC ドライバーが使用されます。 同じクエリでも、 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] の SQLCMD モードで実行する場合と **sqlcmd** ユーティリティで実行する場合とでは、適用される既定のオプションが異なるので、動作も異なる可能性があります。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) では、**クエリ エディター**の標準モードと SQLCMD モードでの実行に Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient を使用します。 コマンド ラインから **sqlcmd** を実行する場合、**sqlcmd** では ODBC ドライバーが使用されます。 同じクエリでも、 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] の SQLCMD モードで実行する場合と **sqlcmd** ユーティリティで実行する場合とでは、適用される既定のオプションが異なるので、動作も異なる可能性があります。  
 >   
   
- 現在、 **sqlcmd** ではコマンド ライン オプションと値の間に空白を入れる必要はありません。 ただし、将来のリリースでは、コマンド ライン オプションと値の間に空白が必要になる可能性があります。  
+ 現在、**sqlcmd** ではコマンドライン オプションと値の間に空白を入れる必要はありません。 ただし、将来のリリースでは、コマンドライン オプションと値の間に空白が必要になる可能性があります。  
  
  その他のトピック:
 - [sqlcmd ユーティリティの起動](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
@@ -121,13 +128,13 @@ sqlcmd
 ## <a name="command-line-options"></a>コマンド ライン オプション  
  **ログイン関連のオプション**  
   **-A**  
- 専用管理者接続 (DAC) を使用して SQL Server にログインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 またこの接続は、DAC をサポートしているサーバー コンピューターでのみ機能します。 DAC が使用できない場合は、 **sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -G オプションには、オプションがサポートされていません。 を使用して SQL Database に接続するときに、SQL server 管理者があります。 DAC は、Azure Active Directory 管理者の使用可能ではありません。
+ 専用管理者接続 (DAC) を使用して SQL Server にサインインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 この接続は、DAC をサポートしているサーバー コンピューターでのみ動作します。 DAC を使用できない場合は、**sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -G オプションには、オプションがサポートされていません。 を使用して SQL Database に接続するときに、SQL server 管理者があります。 DAC は、Azure Active Directory 管理者の使用可能ではありません。
   
  **-C**  
  クライアントでこのスイッチを使用して、サーバーの証明書を検証せずに暗黙的に信頼するようにクライアントを構成できます。 このオプションは、ADO.NET オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
   
  **-d** *db_name*  
- **sqlcmd** の開始時に `USE` *db_name* ステートメントを実行します。 このオプションにより、**sqlcmd** スクリプト変数 SQLCMDDBNAME が設定されます。 これにより初期データベースが指定されます。 既定値は、ログインの既定データベースのプロパティです。 データベースが存在しない場合は、エラー メッセージが生成され、 **sqlcmd** は終了します。  
+ **sqlcmd** の開始時に `USE` *db_name* ステートメントを実行します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDDBNAME が設定されます。 このパラメーターは、最初のデータベースを指定します。 既定値は、ログインの既定データベースのプロパティです。 データベースが存在しない場合は、エラー メッセージが生成され、 **sqlcmd** は終了します。  
   
  **-l** *login_timeout*  
  サーバーに接続を試みたときに、 **sqlcmd** が ODBC ドライバーにログインするまでのタイムアウトを秒数で指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDLOGINTIMEOUT が設定されます。 **sqlcmd** でのログインに関する既定のタイムアウトは 8 秒です。 **-G** オプションを使用して、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory で認証する場合は、タイムアウト値を少なくとも 30 秒にすることをお勧めします。 ログイン タイムアウトは、0 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。 この値に 0 を指定すると、タイムアウトは無制限になります。
@@ -149,10 +156,11 @@ sqlcmd
 - **Azure Active Directory のユーザー名とパスワード:** 
 
     Azure Active Directory のユーザー名とパスワードを使用には、 **-G** オプションを指定します。ユーザー名とパスワードは、 **-U** オプションと **-P** オプションを指定する方法でも使用できます。
+
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    これにより、バックエンドで次の接続文字列が生成されます。 
+    -G パラメーターには、バックエンドで次の接続文字列が生成されます。 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -192,7 +200,11 @@ sqlcmd
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
   
  **-P** *password*  
- ユーザーが指定するパスワードです。 パスワードでは大文字と小文字が区別されます。 -U オプションを使用して **-P** オプションを使用せず、SQLCMDPASSWORD 環境変数が設定されていない場合は、 **sqlcmd** はユーザーにパスワードを要求します。 null パスワードを指定するには (非推奨)、 **-P ""** を使用します。 常に注意すること:
+ ユーザーが指定するパスワードです。 パスワードでは大文字と小文字が区別されます。 -U オプションを使用して **-P** オプションを使用せず、SQLCMDPASSWORD 環境変数が設定されていない場合は、 **sqlcmd** はユーザーにパスワードを要求します。 Null のパスワードの使用はお勧めしませんが、パラメーター値の連続した二重引用符のペアを使用して null パスワードを指定することができます。
+
+- **-P ""**
+
+強力なパスワードを使用することをお勧めします。
  
 #### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**強力なパスワードを使用してください。**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
   
@@ -212,7 +224,7 @@ sqlcmd
   
  ユーザー名とパスワードの組み合わせが正しくない場合は、エラー メッセージが生成されます。  
   
-**注:**  OSQLPASSWORD 環境変数は旧バージョンとの互換性が維持されました。 SQLCMDPASSWORD 環境変数は OSQLPASSWORD 環境変数よりも優先されます。これにより、 **sqlcmd** と **osql** を競合することなく組み合わせて使用でき、既存のスクリプトは引き続き機能を実行できます。  
+**注:**  OSQLPASSWORD 環境変数は旧バージョンとの互換性が維持されました。 SQLCMDPASSWORD 環境変数は OSQLPASSWORD 環境変数よりも優先されます。 OSQLPASSWORD が共有されなくなったユーティリティ**sqlcmd**と**osql**干渉せずに相互の横にある使用できます。 従来のスクリプトは引き続き機能します。  
   
  **-P** オプションが **-E** オプションと共に使用されると、エラー メッセージが生成されます。  
   
@@ -260,7 +272,7 @@ sqlcmd
   
 -   **sqlcmd** では、ビッグ エンディアンとリトル エンディアンの両方の Unicode 入力ファイルが自動的に認識されます。 **-u** オプションを指定すると、出力は常にリトル エンディアン Unicode になります。  
   
--   出力ファイルを指定しないと、出力コード ページはコンソールのコード ページになります。 その結果、コンソールに出力が正しく表示されます。  
+-   出力ファイルを指定しないと、出力コード ページはコンソールのコード ページになります。 この方法では、コンソールに出力が正しく表示されます。  
   
 -   複数の入力ファイルの場合、同じコード ページが指定されているものと見なされます。 Unicode 入力ファイルと Unicode 以外の入力ファイルを混在させることができます。  
   
@@ -284,7 +296,7 @@ sqlcmd
  **-o** *output_file*  
  **sqlcmd**からの出力を受信するファイルを指定します。  
   
- **-u** が指定されている場合は、 *output_file* は Unicode 形式で格納されます。 ファイル名が無効な場合は、エラー メッセージが生成され、 **sqlcmd** が終了します。 **sqlcmd** は、同じファイルに対する複数の **sqlcmd** プロセスの同時書き込みはサポートしていません。 出力ファイルが破損するか、または不適切なファイルになる可能性があります。 ファイル形式の詳細については、 **-f** スイッチを参照してください。 このファイルが存在しない場合は作成されます。 以前の **sqlcmd** セッションで同じ名前のファイルが作成されていた場合は、上書きされます。 ここで指定されるファイルは **stdout** ファイルではありません。 **stdout** ファイルが指定されると、このファイルは使用されません。  
+ **-u** が指定されている場合は、 *output_file* は Unicode 形式で格納されます。 ファイル名が無効な場合は、エラー メッセージが生成され、 **sqlcmd** が終了します。 **sqlcmd** は、同じファイルに対する複数の **sqlcmd** プロセスの同時書き込みはサポートしていません。 出力ファイルが破損するか、または不適切なファイルになる可能性があります。 参照してください、 **-f**スイッチがファイル形式に関連することもできます。 このファイルが存在しない場合は作成されます。 以前の **sqlcmd** セッションで同じ名前のファイルが作成されていた場合は、上書きされます。 ここで指定されるファイルは **stdout** ファイルではありません。 **stdout** ファイルが指定されると、このファイルは使用されません。  
   
  パスの例:  
 
@@ -355,14 +367,14 @@ sqlcmd
  `sqlcmd -v MyVar1=something -v MyVar2="some thing"`  
   
  **-x**  
- **sqlcmd** ではスクリプト変数が無視されます。 これは、$(*variable_name*) などの標準変数と同じ形式の文字列を含む INSERT ステートメントが、スクリプトに多数含まれている場合に便利です。  
+ **sqlcmd** ではスクリプト変数が無視されます。 このパラメーターは、標準変数と同じ形式の文字列 ($(*variable_name*) など) を含む INSERT ステートメントが、スクリプトに多数含まれている場合に便利です。  
   
  **書式設定のオプション**  
   **-h** *headers*  
  列ヘッダーの間に出力する行数を指定します。 既定では、各クエリの結果に対して、ヘッダーは 1 つだけ表示されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDHEADERS が設定されます。 ヘッダーを出力しない場合は、 **-1** を指定します。 有効でない値があると、 **sqlcmd** はエラー メッセージを生成してから終了します。  
   
  **-k** [**1** | **2**]  
- タブ、改行文字などのすべての制御文字を出力から削除します。 これにより、データが返されたときの列の形式が維持されます。 1 を指定した場合、制御文字は 1 つの空白に置き換えられます。 2 を指定すると、連続する制御文字が 1 つの空白に置き換えられます。 **-k** は **-k1**と同じです。  
+ タブ、改行文字などのすべての制御文字を出力から削除します。 このパラメーターにより、データが返されたときの列の形式が維持されます。 1 を指定した場合、制御文字は 1 つの空白に置き換えられます。 2 を指定すると、連続する制御文字が 1 つの空白に置き換えられます。 **-k** は **-k1**と同じです。  
   
  **-s** *col_separator*  
  列の区切り文字を指定します。 既定では、空白になっています。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDCOLSEP が設定されます。 アンパサンド (&)、セミコロン (;) など、オペレーティング システムで特別な意味を持つ文字を使用する場合は、その文字を引用符 (") で囲みます。 列の区切り文字には、任意の 8 ビットの文字を指定できます。  
@@ -441,10 +453,10 @@ sqlcmd
 > [!NOTE]  
 >  ネットワーク上のブロードキャストの特性によっては、 **sqlcmd** は、一部のサーバーからタイムリーな応答を受信できない場合があります。 そのため、返されるサーバーのリストは、このオプションの実行ごとに異なる可能性があります。  
   
- 省略可能なパラメーター **c** を指定すると、出力結果には Servers: ヘッダー行が含まれません。このため、各サーバー行は、先頭に空白がない状態で一覧表示されます。 これは、クリーン アウトプットとも呼ばれます。 クリーン アウトプットを使用すると、スクリプト言語の処理パフォーマンスが向上します。  
+ 省略可能なパラメーター **c** を指定すると、出力結果には **Servers:** ヘッダー行が含まれません。このため、各サーバー行は、先頭に空白がない状態で一覧表示されます。 このプレゼンテーションは、クリーン アウトプットと呼ばれます。 クリーン アウトプットを使用すると、スクリプト言語の処理パフォーマンスが向上します。  
   
  **-p****[1]**  
- すべての結果セットのパフォーマンス統計を出力します。 次は、パフォーマンス統計の形式の例です。  
+ すべての結果セットのパフォーマンス統計を出力します。 パフォーマンス統計の形式の例を次に示します。  
   
  `Network packet size (bytes): n`  
   
@@ -490,7 +502,7 @@ sqlcmd
 > [!NOTE]  
 >  **-L**、 **-Q**、 **-Z** 、または **-i** のオプションを使用すると、 **sqlcmd** は実行後に終了します。  
   
- コマンド環境 (Cmd.exe) での **sqlcmd** コマンド ライン全体の長さは、すべての引数と拡張変数を含めて、オペレーティング システムの Cmd.exe によって決まります。  
+ コマンド環境 (Cmd.exe) での **sqlcmd** コマンドライン全体の長さは、すべての引数と拡張変数を含めて、オペレーティング システムが Cmd.exe のために決めます。  
   
 ## <a name="variable-precedence-low-to-high"></a>変数の優先順位 (低から高)  
   
@@ -678,7 +690,7 @@ sqlcmd
   
  このエラーが発生すると、 **sqlcmd** スクリプトは終了し、メッセージ ID 50001 がクライアントに返されます。  
   
- 戻り値 -1 から -99 は SQL Server によって予約済みです。**sqlcmd** では次のような追加の戻り値を定義しています。  
+ 戻り値 -1 から -99 は SQL Server によって予約済みです。また、**sqlcmd** では次のような追加の戻り値を定義しています。  
   
 |戻り値|[説明]|  
 |-------------------|-----------------|  
@@ -687,7 +699,7 @@ sqlcmd
 |-102|戻り値を選択するときに、変換エラーが発生した。|  
   
  **GO** [*count*]  
- GO は、バッチの終わりとキャッシュされた Transact-SQL ステートメントの実行を知らせます。バッチは個別バッチとして複数回実行されます。1 回のバッチで変数を複数回宣言することはできません。
+ GO は、バッチの終わりとキャッシュされた Transact-SQL ステートメントの実行を知らせます。 バッチの個別バッチとして複数回実行します。 1 つのバッチで 1 回以上の変数を宣言することはできません。
   
  **その他のコマンド**  
   **:r \<** *filename* **>**  
@@ -720,7 +732,7 @@ sqlcmd
   
  *timeout* を指定しないと、SQLCMDLOGINTIMEOUT 変数の値が既定値になります。  
   
- *user_name* のみを指定した場合 (オプションとして指定した場合も、環境変数として指定した場合も)、ユーザーはパスワードの入力を要求されます。 SQLCMDUSER 環境変数または SQLCMDPASSWORD 環境変数が設定されている場合は、この限りではありません。 オプションも環境変数も提供されない場合は、Windows 認証モードを使用してログインします。 たとえば、統合セキュリティを使用して、SQL Server `myserver` のインスタンス `instance1` に接続するには、次を使用します。  
+ *user_name* のみを指定した場合 (オプションとして指定した場合も、環境変数として指定した場合も)、ユーザーはパスワードの入力を要求されます。 SQLCMDUSER 環境変数または SQLCMDPASSWORD 環境変数が設定されている場合は、この限りではありません。 オプションも環境変数も指定されない場合は、Windows 認証モードを使用してサインインします。 たとえば、統合セキュリティを使用して、SQL Server `myserver` のインスタンス `instance1` に接続するには、次を使用します。  
   
  `:connect myserver\instance1`  
   
@@ -757,20 +769,21 @@ sqlcmd
   
 -   各新規 **sqlcmd** セッションにより、同じ名前の既存のファイルが上書きされます。  
   
-### <a name="informational-messages"></a>情報メッセージ  
- **sqlcmd** は、サーバーから送信されたすべての情報メッセージを出力します。 次の例では、Transact-SQL ステートメントが実行された後、情報メッセージが出力されます。  
+### <a name="informational-messages"></a>情報メッセージ
+
+**sqlcmd** は、サーバーから送信されたすべての情報メッセージを出力します。 次の例では、Transact-SQL ステートメントが実行された後、情報メッセージが出力されます。
   
- コマンド プロンプトで、次のように入力します:  
+コマンド プロンプトで、次のように入力します:
+
+`sqlcmd`
   
- `sqlcmd`  
-  
- `At the sqlcmd prompt type:`  
-  
- `USE AdventureWorks2012;`  
-  
- `GO`  
-  
- Enter キーを押すと、"データベース コンテキストが 'AdventureWorks2012' に変更されました。" という情報メッセージが出力されます。  
+Sqlcmd プロンプトの種類。
+
+`USE AdventureWorks2012;`
+
+`GO`
+
+Enter キーを押すと、"データベース コンテキストが 'AdventureWorks2012' に変更されました。" という情報メッセージが出力されます。  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL クエリからの出力形式  
  まず、**sqlcmd** は SELECT リストで指定した列名を含む列ヘッダーを出力します。 列名は、SQLCMDCOLSEP で指定された文字を使用して分割されます。 既定では、空白です。 列名が列幅よりも短い場合は、出力は次の列まで空白で埋められます。  

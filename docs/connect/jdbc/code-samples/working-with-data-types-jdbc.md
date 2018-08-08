@@ -1,7 +1,7 @@
 ---
-title: データ型 (JDBC) の使用 |Microsoft ドキュメント
+title: データ型 (JDBC) の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ccecd482516979a2f3ace2a4ce2c039af3ad1c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 857f05430f963e085d47fad633d0039e2bbd7fb2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828149"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453096"
 ---
 # <a name="working-with-data-types-jdbc"></a>データ型の処理 (JDBC)
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  主な機能、 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 、Java 開発者に含まれるデータにアクセスできるようにする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。 これを実現する、JDBC ドライバーは間で変換を仲介[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型と Java 言語型およびオブジェクト。  
+[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] の主な機能は、Java 開発者が、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースに含まれたデータにアクセスできるようにすることです。 これを可能にするために、JDBC ドライバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データ型と Java 言語の型やオブジェクトとの間の変換を仲介します。  
   
 > [!NOTE]  
->  詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]し、それらの相違点と Java 言語のデータ型に変換する方法を含む JDBC ドライバーのデータ型を参照してください[JDBC ドライバーのデータ型について](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)です。  
+> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] および JDBC ドライバーのデータ型の相違や、これらのデータ型を Java 言語のデータ型に変換する方法などの詳細については、「[JDBC ドライバーのデータ型について](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)」を参照してください。  
   
- SQL Server データ型を使用するために、JDBC ドライバーには get\<型 > 設定と\<型 > のメソッド、 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)と[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)クラス、およびその提供 get\<型 > および更新\<型 > のメソッド、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)クラス。 使用するメソッドは、処理するデータの型と、結果セットまたはクエリを使用するかどうかによって決まります。  
+SQL Server のデータ型を処理するために、JDBC ドライバーには、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスおよび [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスに get\<Type> メソッドおよび set\<Type> メソッドがあり、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスに get\<Type> メソッドおよび update\<Type> メソッドがあります。 使用するメソッドは、処理するデータの型と、結果セットまたはクエリを使用するかどうかによって決まります。  
   
- このセクションのトピックでは、JDBC ドライバーのデータ型を使用してアクセスする方法を説明[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Java アプリケーション内のデータ。  
+このセクションのトピックでは、JDBC ドライバーのデータ型を使用して Java アプリケーションの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データにアクセスする方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
-|-----------|-----------------|  
-|[基本データ型のサンプル](../../../connect/jdbc/basic-data-types-sample.md)|結果セットの getter メソッドを使用して基本的なを取得する方法について説明します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型の値、および結果セットの update メソッドを使用して、それらの値を更新する方法です。|  
-|[SQLXML データ型のサンプル](../../../connect/jdbc/sqlxml-data-type-sample.md)|リレーショナル データベースに XML データを格納する方法、データベースから XML データを取得する方法で XML データを解析する方法を説明、 **SQLXML** Java データ型。|  
+| トピック                                                                         | [説明]                                                                                                                                                                                                                                                  |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [基本データ型のサンプル](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | 結果セットの getter メソッドを使用して基本的な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データ型の値を取得する方法と、結果セットの update メソッドを使用してそれらの値を更新する方法を示しています。                                             |
+| [SQLXML データ型のサンプル](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | XML データのリレーショナル データベースへの格納、データベースからの XML データの取得、および、XML データの解析を、**SQLXML** Java データ型を使用して行う方法を示しています。                                                                                   |
+| [空間データ型のサンプル](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | SQL Server の空間データ型を格納する方法と SQL Server からこれらの型を取得する方法について説明します。 新しく定義したクラスを使用する方法についても説明します。 **Geometry**と**Geography** Java リファレンスのこれらのデータ型を管理するため、ドライバーから。 |
   
-## <a name="see-also"></a>参照  
- [サンプル JDBC Driver アプリケーション](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+[サンプル JDBC Driver アプリケーション](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  

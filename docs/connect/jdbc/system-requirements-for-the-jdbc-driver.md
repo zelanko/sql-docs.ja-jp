@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver のシステム要件 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 306c7bcd764ed70f23c51667580fb9f8e79f0e65
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978724"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454056"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC Driver のシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,6 +30,8 @@ ms.locfileid: "37978724"
 - Java ランタイム環境
 
 ## <a name="java-runtime-environment-requirements"></a>Java ランタイム環境の要件  
+ Microsoft JDBC Driver 7.0 for SQL Server 以降で、Sun Java SE Development Kit (JDK) 10.0 と Java Runtime Environment (JRE) 10.0 がサポートされています。
+
  Microsoft JDBC Driver 6.4 for SQL Server 以降で、Sun Java SE Development Kit (JDK) 9.0 と Java Runtime Environment (JRE) 9.0 がサポートされています。
 
  Microsoft JDBC Driver 4.2 for SQL Server 以降で、Sun Java SE Development Kit (JDK) 8.0 と Java Runtime Environment (JRE) 8.0 がサポートされています。 Java Database Connectivity (JDBC) Spec API のサポートが拡張され、JDBC 4.1 と 4.2 API が対象になりました。  
@@ -39,6 +41,30 @@ ms.locfileid: "37978724"
  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降では、JDBC 4.0 API を包含する形で Java Database Connectivity (JDBC) Spec API に対する JDBC ドライバー サポートが拡張されています。 JDBC 4.0 API は、Sun Java SE Development Kit (JDK) 6.0 および Java ランタイム環境 (JRE) 6.0 の一部として導入されました。 JDBC 4.0 は、JDBC 3.0 API のスーパーセットです。  
   
  Windows と UNIX オペレーティング システムで [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を展開する場合、インストール パッケージである *sqljdbc_\<version>_enu.exe* と *sqljdbc_\<version>_enu.tar.gz* をそれぞれ使用する必要があります。 JDBC Driver を展開する方法の詳細については、次を参照してください。 [JDBC Driver の展開](../../connect/jdbc/deploying-the-jdbc-driver.md)トピック。  
+  
+**Microsoft JDBC Driver 7.0 for SQL Server:**  
+
+  JDBC ドライバーの 7.0 には、各インストール パッケージの 2 つの JAR クラス ライブラリが含まれています: **mssql-jdbc-7.0.0.jre8.jar**、および**mssql-jdbc-7.0.0.jre10.jar**します。
+
+  JDBC Driver 7.0 は、Sun と同等のすべての主要な Java 仮想マシンで操作とサポートができるよう設計されていますが、テストが実行されるのは Sun JRE 8.0 と 10.0 上のみです。
+  
+  Microsoft JDBC Driver 7.0 for SQL Server に含まれている 2 つの JAR ファイルによって提供されるサポートの概要を以下に示します。  
+  
+  |JAR|JDBC バージョン準拠|Java バージョンをお勧めします。|[説明]|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 7.0 の新機能が含まれます JDK 10 のサポート、JDBC 4.2 仕様、空間データ型のサポート、cancelQueryTimeout 接続プロパティ、メソッドの境界の要求、useBulkCopyForBatchInsert 接続プロパティ、データ更新の既定のコンプライアンス レベル。検出と分類の情報、utf-8 の拡張機能、および CityHash サポートします。 |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Java Runtime Environment (JRE) 10.0 が必要です。 JRE 9.0 または低いがスローされます、例外を使用します。<br /><br /> 7.0 の新機能が含まれます JDK 10 のサポート、JDBC 4.2 仕様、空間データ型のサポート、cancelQueryTimeout 接続プロパティ、メソッドの境界の要求、useBulkCopyForBatchInsert 接続プロパティ、データ更新の既定のコンプライアンス レベル。検出と分類の情報、utf-8 の拡張機能、および CityHash サポートします。 |    
+
+
+  JDBC ドライバーの 7.0 では、Maven Central Repository の使用もし、POM で次のコードを追加することで、Maven プロジェクトに追加できます。XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.0.0.jre10</version>
+</dependency>
+```      
   
 **Microsoft JDBC Driver 6.4 for SQL Server:**  
 
@@ -64,6 +90,7 @@ ms.locfileid: "37978724"
     <version>6.4.0.jre9</version>
 </dependency>
 ```    
+
 **Microsoft JDBC Driver 6.2 for SQL Server:**  
   
   JDBC Driver 6.2 には、各インストール パッケージの 2 つの JAR クラス ライブラリが含まれています: **mssql-jdbc-6.2.1.jre7.jar**、および**mssql-jdbc-6.2.1.jre8.jar**します。 

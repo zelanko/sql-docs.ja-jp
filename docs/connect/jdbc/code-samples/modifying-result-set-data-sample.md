@@ -1,7 +1,7 @@
 ---
 title: 結果セットの変更データのサンプル |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,37 +14,42 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6d1a5b2952bbf2f628004c6884e8ce1bf3d7b95
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: f43960439d015bb9c23598d1182c13ced74347d2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278563"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454346"
 ---
 # <a name="modifying-result-set-data-sample"></a>結果セットのデータ サンプルの変更
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースから更新可能なデータ セットを取得する方法を示しています。 そして、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトのメソッドを使用して、データ セットのデータの行を挿入および変更し、最終的には削除します。  
-  
- このサンプルのコード ファイルは UpdateRS.java という名前で、次の場所にあります。  
-  
- \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \samples\resultsets  
-  
-## <a name="requirements"></a>必要条件  
- このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../../connect/jdbc/using-the-jdbc-driver.md)します。  
-  
+この [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースから更新可能なデータ セットを取得する方法を示しています。 そして、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトのメソッドを使用して、データ セットのデータの行を挿入および変更し、最終的には削除します。
+
+このサンプルのコード ファイルは UpdateResultSet.java という名前で、次の場所にあります。
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets
+```
+
+## <a name="requirements"></a>必要条件
+
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../../connect/jdbc/using-the-jdbc-driver.md)します。
+
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。  
-  
-## <a name="example"></a>例  
- 次の例では、サンプル コードは [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへの接続を行います。 次に、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトで SQL ステートメントを使用して、SQL ステートメントを実行し、返されたデータを更新可能な SQLServerResultSet オブジェクトに配置します。  
-  
- 次に、サンプル コードは [moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) メソッドを使用して結果セットのカーソルを挿入行に移動し、一連の [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) メソッドを使用して新しい行にデータを挿入してから、[insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) メソッドを呼び出してデータの新しい行をデータベースに戻して保持します。  
-  
- データの新しい行の挿入後、サンプル コードは前に挿入した行を SQL ステートメントを使用して取得し、さらに updateString メソッドと [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドを組み合わせて使用して、データの行を更新し、再度データベースに戻して保持します。  
-  
- 最後に、サンプル コードは前に更新したデータの行を取得してから、[deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) メソッドを使用してそのデータの行をデータベースから削除します。  
-  
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。
+
+## <a name="example"></a>例
+
+次の例では、サンプル コードは [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへの接続を行います。 次に、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトで SQL ステートメントを使用して、SQL ステートメントを実行し、返されたデータを更新可能な SQLServerResultSet オブジェクトに配置します。
+
+次に、サンプル コードは [moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) メソッドを使用して結果セットのカーソルを挿入行に移動し、一連の [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) メソッドを使用して新しい行にデータを挿入してから、[insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) メソッドを呼び出してデータの新しい行をデータベースに戻して保持します。
+
+データの新しい行の挿入後、サンプル コードは前に挿入した行を SQL ステートメントを使用して取得し、さらに updateString メソッドと [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドを組み合わせて使用して、データの行を更新し、再度データベースに戻して保持します。
+
+最後に、サンプル コードは前に更新したデータの行を取得してから、[deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) メソッドを使用してそのデータの行をデータベースから削除します。
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -52,7 +57,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UpdateRS {
+public class UpdateResultSet {
 
     public static void main(String[] args) {
 
@@ -107,9 +112,9 @@ public class UpdateRS {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a>参照  
- [結果セットの処理](../../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+
+```
+
+## <a name="see-also"></a>参照
+
+[結果セットの処理](../../../connect/jdbc/code-samples/working-with-result-sets.md)
