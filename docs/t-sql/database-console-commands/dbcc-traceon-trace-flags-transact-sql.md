@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60a079e80c4487a7af0f015992095d3f14666764
-ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
+ms.openlocfilehash: dcc08dfd4c4759f834a7371dd700c32c69c8de24
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350020"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536162"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "39350020"
 |**8048**|NUMA パーティション分割のメモリ オブジェクトを CPU パーティション分割に変換します。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2809338)をご覧ください。<br /><br />**注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8048 に効力はありません。<br /><br />**スコープ**: グローバルのみ|  
 |**8075**|64 ビット [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] でメモリ ページの割り当てエラーが発生したときに、[VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd) の断片化を減らします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/3074434)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10、および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3 に適用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8075 に効力はありません。<br /><br />**スコープ**: グローバルのみ|
 |**8079**|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 がハードウェア レイアウトを調査し、NUMA ノードあたり 8 個以上の CPU をレポートしたシステムにソフト NUMA を自動的に構成できるようにします。 自動ソフト NUMA の動作は、ハイパースレッド (HT/論理プロセッサ) に対応しています。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 に適用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8079 に効力はありません。<br /><br />**スコープ**: グローバルのみ| 
-|**8207**|トランザクション レプリケーションに対して単一の更新を有効にします。 サブスクライバーへの更新は、DELETE と INSERT のペアとしてレプリケートできます。 これは、UPDATE トリガーの起動など、ビジネス ルールを満たさない場合があります。 トレース フラグ 8207 を使用すると、1 行 (シングルトンの更新) のみに影響する一意の列への更新は、DELETE または INSERT のペアとしてではなく、UPDATE としてレプリケートされます。 一意の制約が存在する列に更新が影響を与える場合、または更新が複数行に影響する場合、更新は引き続き DELETE または INSERT のペアとしてレプリケートされます。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/302341)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
+|**8207**|トランザクション レプリケーションと CDC に対して単一の更新を有効にします。 サブスクライバーへの更新は、DELETE と INSERT のペアとしてレプリケートできます。 これは、UPDATE トリガーの起動など、ビジネス ルールを満たさない場合があります。 トレース フラグ 8207 を使用すると、1 行 (シングルトンの更新) のみに影響する一意の列への更新は、DELETE または INSERT のペアとしてではなく、UPDATE としてレプリケートされます。 一意の制約が存在する列に更新が影響を与える場合、または更新が複数行に影響する場合、更新は引き続き DELETE または INSERT のペアとしてレプリケートされます。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/302341)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
 |**8721**|統計の自動更新を実行するときに、エラー ログにレポートします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/195565)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
 |**8744**|入れ子になったループ演算子のプリフェッチを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**注:** このトレース フラグの使用が不適切な場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が入れ子になったループ演算子を含むプランを実行するときに、追加の物理読み取りが発生する可能性があります。<br /><br />**スコープ**: グローバル、セッション|
 |**9024**|グローバル ログ プールのメモリ オブジェクトを、NUMA ノードのパーティション分割されたメモリ オブジェクトに変換します。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2809338)をご覧ください。<br /><br />**注:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 以降、この動作はエンジンによって制御されるようになり、トレース フラグ 9024 に効力はありません。<br /><br />**スコープ**: グローバルのみ|

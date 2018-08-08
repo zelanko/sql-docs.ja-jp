@@ -16,13 +16,13 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9bc9c0f916a26a46d2bfc3aaed05ce8e4072f57a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279183"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549532"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  パフォーマンスが低下したクエリを特定する際に必要なアクションは、問題の性質によって異なります。  
   
--   クエリの実行プランが複数あり、最後のプランのパフォーマンスが前のプランよりも大幅に悪いような場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が今後は常に最適なプランを使用するよう、プランの強制適用メカニズムを使用することができます。  
+-   クエリの実行プランが複数あり、最後のプランのパフォーマンスが前のプランよりも大幅に悪いような場合は、プランの強制適用メカニズムを使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がオプティマイザーのプランを強制しようとします。 プランの適用に失敗した場合、XEvent が発生し、オプティマイザーは通常の方法で最適化するように指示します。 
   
      ![クエリ ストアのプランの強制](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 

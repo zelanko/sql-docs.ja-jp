@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083733"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400715"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "39083733"
 
 ## <a name="understand-distributed-availability-groups"></a>分散型可用性グループについて理解する
 
-分散型可用性グループは、2 つの異なる可用性グループにまたがるもので、特殊な種類の可用性グループです。 基になる可用性グループは、2 つの異なる Windows Server フェールオーバー クラスタリング (WSFC) クラスターで構成されます。 分散型可用性グループに参加する可用性グループは、同じ場所に存在している必要はありません。 物理、仮想、オンプレミス、パブリック クラウド、または可用性グループの配置をサポートする任意の場所のいずれでもかまいません。 2 つの可用性グループが通信できる限り、それらで分散型可用性グループを構成できます。
+分散型可用性グループは、2 つの異なる可用性グループにまたがるもので、特殊な種類の可用性グループです。 分散型可用性グループに参加する可用性グループは、同じ場所に存在している必要はありません。 物理、仮想、オンプレミス、パブリック クラウド、または可用性グループの配置をサポートする任意の場所のいずれでもかまいません。 これには、Linux と Windows でホストされている可用性グループの間などの、クロス ドメインおよびクロス プラットフォームが含まれます。 2 つの可用性グループが通信できる限り、それらで分散型可用性グループを構成できます。
 
 従来の可用性グループには、WSFC クラスター内に構成されたリソースがあります。 分散型可用性グループでは、WSFC クラスター内には何も構成されません。 分散型可用性グループに関するすべてのものは、SQL Server 内に保持されます。 分散型可用性グループの情報を表示する方法については、「[Viewing distributed availability group information](#viewing-distributed-availability-group-information)」(分散可用性グループの情報を表示する) を参照してください。 
 

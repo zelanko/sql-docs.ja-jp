@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0adbdba1c04ad4cc2e39f532ded83d3964a47ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787363"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582188"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "37787363"
 |--------------|------------------------|  
 |[既定のインスタンス]|'*servername*'|  
 |[名前付きインスタンス]|'*servername*\\*instancename*'|  
-|フェールオーバー クラスター インスタンス - 既定のインスタンス|'*virtualservername*'|  
-|フェールオーバー クラスター インスタンス - 名前付きインスタンス|'*virtualservername*\\*instancename*'|  
+|フェールオーバー クラスター インスタンス - 既定のインスタンス|'*network_name_for_fci_in_wsfc*'|  
+|フェールオーバー クラスター インスタンス - 名前付きインスタンス|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
  @@SERVERNAME 関数と SERVERPROPERTY 関数の SERVERNAME プロパティは、似たような形式の文字列を返す場合がありますが、情報は異なる可能性があります。 SERVERNAME プロパティの場合は、コンピューターのネットワーク名の変更を自動的にレポートします。  
   
