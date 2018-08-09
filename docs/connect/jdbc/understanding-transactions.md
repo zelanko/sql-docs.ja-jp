@@ -33,7 +33,7 @@ ms.locfileid: "32852497"
 ## <a name="using-local-transactions"></a>ローカル トランザクションの使用  
  単一フェーズであり、データベースによって直接処理されるトランザクションは、ローカル トランザクションであると見なされます。 JDBC ドライバーのさまざまなメソッドを使用して、ローカル トランザクションをサポートする、 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)クラスを含む[setAutoCommit](../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md)、[コミット](../../connect/jdbc/reference/commit-method-sqlserverconnection.md)、および[ロールバック](../../connect/jdbc/reference/rollback-method.md)です。 通常、ローカル トランザクションはアプリケーションによって明示的に管理されるか、Java Platform, Enterprise Edition (Java EE) アプリケーション サーバーによって自動的に管理されます。  
   
- 次の例の 2 つのステートメントで構成されるローカル トランザクションの実行、`try`ブロックします。 Production.ScrapReason テーブルに対して、ステートメントを実行、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベース、およびそれらがコミットされた例外がスローされなかった場合。 内のコード、`catch`ブロックはロールバック、トランザクション、例外がスローされた場合。  
+ 次の例の 2 つのステートメントで構成されるローカル トランザクションの実行、`try`ブロックします。 ステートメントは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベースの Production.ScrapReason テーブルに対して実行され、それらは例外がスローされなかった場合にコミットされます。 例外がスローされた場合、`catch`ブロックのコードがトランザクションをロールバックします。
   
  [!code[JDBC#UnderstandingTransactions1](../../connect/jdbc/codesnippet/Java/understanding-transactions_1.java)]  
   
