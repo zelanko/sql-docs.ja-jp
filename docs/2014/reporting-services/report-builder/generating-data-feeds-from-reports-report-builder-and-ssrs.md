@@ -118,7 +118,7 @@ ms.locfileid: "37202662"
   
  一般に、入れ子になったデータ領域のデータ行は幅が広くなります。入れ子になったテーブルおよびマトリックスにグループや合計が含まれる場合は特にそうです。 期待どおりのデータが生成されるかどうかを確認するには、レポートをデータ フィードにエクスポートした後でデータ フィードを表示すると便利です。  
   
- Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示した、サンプルの Atom サービス ドキュメントには、URL が含まれています。 http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1"。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
+ Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示した、サンプルの Atom サービス ドキュメントには、URL が含まれています。 http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1 "。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
   
  レポート アイテムの名前には、直感的でなく覚えにくい、レポート アイテムのレポート定義言語 (RDL) 要素の名前が既定で使用されます。 たとえば、レポートに配置された最初のマトリックスの既定の名前は Tablix 1 となります。 データ フィードでは、これらの名前が使用されます。  
   
