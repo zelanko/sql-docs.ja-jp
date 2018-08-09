@@ -20,5 +20,7 @@
       href: using-azure-active-directory.md
     - name: 透過的なネットワーク IP の解決の使用
       href: using-transparent-network-ip-resolution.md
+    - name: データ分類
+      href: data-classification.md
 - name: バグの修正
   href: bug-fixes.md
