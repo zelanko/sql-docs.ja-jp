@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988756"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367664"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio を使用して SQL Server インスタンスに接続し、クエリを行う
 このチュートリアルでは、SQL Server Management Studio (SSMS) を使って SQL Server インスタンスに接続し、いくつかの基本的な Transact-SQL (T-SQL) コマンドを実行する方法を説明します。 この記事では、以下のことを行う方法を示します。
@@ -184,5 +184,11 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
     > [!NOTE]
     > この操作では、クエリ ウィンドウが接続しているサーバーのみが変更され、オブジェクト エクスプローラーが接続しているサーバーは変更されません。 
 
+## <a name="next-steps"></a>次の手順
+次の記事では、SQL Server Management Studio 内のさまざまなオブジェクトのスクリプトを作成する方法について説明します。 
+
+詳細については、次の記事に進んでください
+> [!div class="nextstepaction"]
+> [次の手順](scripting-ssms.md)
 
 

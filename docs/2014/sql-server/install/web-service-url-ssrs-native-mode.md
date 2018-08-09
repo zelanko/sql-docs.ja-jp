@@ -59,7 +59,7 @@ ms.locfileid: "37270238"
  レポート サーバーの仮想ディレクトリ名を含む URL に対する HTTP 要求をレポート サーバーが監視するポートを指定します。  
   
  **[SSL 証明書]**  
- 指定した IP アドレスに証明書をバインドします。 証明書をコンピューターにインストールして構成する必要があります。 Reporting Services には証明書の管理機能は用意されていません。 証明書は、IP アドレスに解決されるホスト名またはコンピューター名に対して発行されている必要があります。 たとえば、発行された証明書を使用するhttp://salesreports、指定した IP アドレスが"salesreports"という名前のサーバーに解決する必要があります。  
+ 指定した IP アドレスに証明書をバインドします。 証明書をコンピューターにインストールして構成する必要があります。 Reporting Services には証明書の管理機能は用意されていません。 証明書は、IP アドレスに解決されるホスト名またはコンピューター名に対して発行されている必要があります。 たとえば、発行された証明書を使用する http://salesreports 、指定した IP アドレスが"salesreports"という名前のサーバーに解決する必要があります。  
   
  変更する必要があります証明書を使用する場合、`UrlRoot`構成設定、rsreportserver.config ファイルの証明書で登録されたコンピューターの完全修飾名を指定できるようにします。 詳細については、 [オンライン ブックの「](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) ネイティブ モードのレポート サーバーでの SSL 接続の構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   

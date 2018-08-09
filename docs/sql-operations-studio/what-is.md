@@ -48,7 +48,7 @@ T-SQL コード スニペットは、データベース、テーブル、ビュ�
 
 ## <a name="integrated-terminal"></a>統合ターミナル
 
-お気に入りのコマンド ライン ツールを使用して (たとえば、Bash、PowerShell、sqlcmd、bcp、および ssh) 統合ターミナル ウィンドウ内で右に、[!INCLUDE[name-sos](../includes/name-sos-short.md)]ユーザー インターフェイス。 統合ターミナル詳細については、[統合ターミナル](統合 terminal.md) を参照してください。
+お気に入りのコマンド ライン ツールを使用して (たとえば、Bash、PowerShell、sqlcmd、bcp、および ssh) 統合ターミナル ウィンドウ内で右に、[!INCLUDE[name-sos](../includes/name-sos-short.md)]ユーザー インターフェイス。 統合ターミナル詳細については、 [統合ターミナル統合](terminal.md) を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 - [ダウンロードとインストール [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
