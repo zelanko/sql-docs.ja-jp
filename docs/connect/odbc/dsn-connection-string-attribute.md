@@ -27,8 +27,7 @@ ms.locfileid: "32853017"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>サポートされている DSN または接続文字列キーワードとの接続属性
 
-次の表は、使用可能なキーワードと各プラットフォーム (l: Linux での属性M: Mac です。W: Windows の場合)。
-キーワードまたは属性の詳細をクリックします。
+次の表は、使用可能なキーワードと属性をプラットフォームごとにリスト化しています (L: Linux; M: Mac; W: Windows)。詳細を参照するには、キーワードまたは属性をクリックします。
 
 | DSN または接続文字列のキーワード | 接続属性 | プラットフォーム | 
 |-|-|-|
