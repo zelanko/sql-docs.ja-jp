@@ -1,7 +1,7 @@
 ---
-title: 接続およびデータの取得 |Microsoft ドキュメント
+title: 接続およびデータの取得 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86b7dce984408c7d49e302b9b450e07a32fdacc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 051593c5d3a37217a5ab4380fd947cb585532e3d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828107"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456636"
 ---
 # <a name="connecting-and-retrieving-data"></a>接続およびデータの取得
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  作業する場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]への接続を確立するための 2 つの主要な方法がある、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。 接続 URL における接続のプロパティを設定および DriverManager クラスを返すの getConnection メソッドを呼び出すには、1 つ、 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。  
+[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を使用する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースへの接続を確立する 2 つの主な方法があります。 1 つは、接続 URL の接続プロパティを設定してから、DriverManager クラスの getConnection メソッドが呼び出され、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトが返される方法です。  
   
 > [!NOTE]  
->  JDBC ドライバーでサポートされている接続のプロパティの一覧は、次を参照してください。[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)です。  
+> JDBC ドライバーでサポートされる接続のプロパティの一覧は、次を参照してください。[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)します。  
   
- 2 番目の方法では、setter メソッドを使用して接続プロパティの設定では、 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)クラス、および呼び出すことで、 [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)を SQLServerConnection を返すメソッドオブジェクト。  
+2 つ目の方法では、[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスの setter メソッドを使用して接続プロパティを設定してから、[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) メソッドが呼び出され、SQLServerConnection オブジェクトが返されます。  
   
- このセクションのトピックに接続できるさまざまな方法を説明する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース、およびそれらのデータを取得するためのさまざまな手法も示しています。  
+このセクションのトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースに接続するさまざまな方法について説明し、データを取得するさまざまな手法も示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[接続 URL のサンプル](../../../connect/jdbc/connection-url-sample.md)|接続 URL を使用してに接続する方法について説明[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]し、SQL ステートメントを使用して、データを取得します。|  
-|[データ ソースのサンプル](../../../connect/jdbc/data-source-sample.md)|データ ソースを使用して SQL Server に接続し、ストアド プロシージャを使用してデータを取得する方法について説明します。|  
+|[接続 URL のサンプル](../../../connect/jdbc/code-samples/connection-url-sample.md)|接続 URL を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] に接続してから、SQL ステートメントを使用してデータを取得する方法について説明します。|  
+|[データ ソースのサンプル](../../../connect/jdbc/code-samples/data-source-sample.md)|データ ソースを使用して SQL Server に接続し、ストアド プロシージャを使用してデータを取得する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
- [サンプル JDBC Driver アプリケーション](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a>参照
+
+[サンプル JDBC Driver アプリケーション](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

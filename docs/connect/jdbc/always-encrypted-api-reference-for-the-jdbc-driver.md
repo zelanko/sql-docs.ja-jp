@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーの Always Encrypted API のリファレンス | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/06/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1b720a607b702e93643d70b40a5e6ab036f2f56
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 1b305c9e42f1eb7dffec8bd00204723a142a6b2e
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279253"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582168"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC ドライバーの Always Encrypted API のリファレンス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "39279253"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|列暗号化キーの暗号化された指定値を暗号化解除します。 暗号化された値は、指定したキー パスと共に証明書を使用し、指定したアルゴリズムを使用して、暗号化されることが想定されています。<br /><br /> **キー パスの書式は次のいずれかになります。**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider.decryptColumnEncryptionKey(String, String, Byte[]) をオーバーライドします) decryptColumnEncryptionKey (, String, byte[]|  
+|public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|列暗号化キーの暗号化された指定値を暗号化解除します。 暗号化された値は、指定したキー パスと共に証明書を使用し、指定したアルゴリズムを使用して、暗号化されることが想定されています。<br /><br /> **キー パスの書式は次のいずれかになります。**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider.encryptColumnEncryptionKey(String, String, Byte[]) をオーバーライドします) decryptColumnEncryptionKey (, String, byte[]|  
 |public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)|指定したキー パスと共に証明書を使用し、指定したアルゴリズムを使用して、列暗号化キーを暗号化します。<br /><br /> **キー パスの書式は次のいずれかになります。**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider.encryptColumnEncryptionKey(String, String, Byte[]) をオーバーライドします) (, String, byte[] encryptColumnEncryptionKey|  
 |public void setName (文字列名)|このキー ストア プロバイダーの名前を設定します。|
 |public String getName ()|このキー ストア プロバイダーの名前を取得します。|
@@ -96,8 +96,8 @@ ms.locfileid: "39279253"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|列暗号化キーの暗号化された指定値を暗号化解除します。 暗号化された値は、指定した列キー IDmaster キーと指定したアルゴリズムを使用して、暗号化されることが想定されています。 <br />(SQLServerColumnEncryptionKeyStoreProvider.decryptColumnEncryptionKey(String, String, Byte[]) をオーバーライドします) decryptColumnEncryptionKey (, String, byte[]|  
-|public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)|指定した列マスター キーと指定したアルゴリズムを使用して列暗号化キーを暗号化します。 <br />(SQLServerColumnEncryptionKeyStoreProvider.encryptColumnEncryptionKey(String, String, Byte[]) をオーバーライドします) (, String, byte[] encryptColumnEncryptionKey|  
+| public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey) | Decryptes 暗号化された列暗号化キー (CEK)。 RSA 暗号化アルゴリズムのマスター _ キーのパスで指定された非対称キーを使用すると、この復号化が実現されます。<br />(SQLServerColumnEncryptionKeyStoreProvider.encryptColumnEncryptionKey(String, String, Byte[]) をオーバーライドします) decryptColumnEncryptionKey (, String, byte[] |  
+| public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey) | 指定した列マスター キーと指定したアルゴリズムを使用することで、列暗号化キーを暗号化します。<br />(SQLServerColumnEncryptionKeyStoreProvider.encryptColumnEncryptionKey(String, String, Byte[]) をオーバーライドします) (, String, byte[] encryptColumnEncryptionKey |  
 |public void setName (文字列名)|このキー ストア プロバイダーの名前を設定します。|
 |public String getName ()|このキー ストア プロバイダーの名前を取得します。|  
   
@@ -141,7 +141,7 @@ ms.locfileid: "39279253"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|パブリックの void registerOutParameter (int parameterIndex、sqlType の int、int の有効桁数、int のスケール)<br /><br /> public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)<br /><br /> パブリックの void registerOutParameter (文字列 parameterName、sqlType の int、int の有効桁数、int スケール)<br /><br /> public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)<br />パブリックの void setBigDecimal (文字列 parameterName、BigDecimal bd、int の有効桁数、int のスケール)<br /><br /> パブリックの void setTime (文字列 parameterName, java.sql.Time t, int スケール)<br /><br /> パブリックの void setTimestamp (文字列 parameterName, java.sql.Timestamp t, int スケール)<br /><br /> パブリックの void setDateTimeOffset (文字列 parameterName、microsoft.sql.DateTimeOffset t、int のスケール)<br/><br/>パブリックの最終的な void setObject (文字列 sCol、オブジェクトの x、int targetSqlType、整数の精度、int のスケール)|有効桁数またはスケール引数またはその両方の精度を必要とし、スケール情報を特定のデータ型の Always Encrypted をサポートするには、これらのメソッドがオーバー ロードします。|  
+|public void registerOutParameter(int parameterIndex, int sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(String parameterName, int sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)<br />パブリックの void setBigDecimal (文字列 parameterName、BigDecimal bd、int の有効桁数、int のスケール)<br /><br /> パブリックの void setTime (文字列 parameterName, java.sql.Time t, int スケール)<br /><br /> パブリックの void setTimestamp (文字列 parameterName, java.sql.Timestamp t, int スケール)<br /><br /> パブリックの void setDateTimeOffset (文字列 parameterName、microsoft.sql.DateTimeOffset t、int のスケール)<br/><br/>パブリックの最終的な void setObject (文字列 sCol、オブジェクトの x、int targetSqlType、整数の精度、int のスケール)|有効桁数またはスケール引数またはその両方の精度を必要とし、スケール情報を特定のデータ型の Always Encrypted をサポートするには、これらのメソッドがオーバー ロードします。|  
 |public void setDateTime (文字列 parameterName, java.sql.Timestamp x)<br /><br /> public void setSmallDateTime (文字列 parameterName, java.sql.Timestamp x)<br /><br /> パブリックの void setUniqueIdentifier (文字列パラメーター名、文字列の guid)<br /><br /> パブリックの void setMoney (文字列 parameterName、BigDecimal bd)<br /><br /> パブリックの void setSmallMoney (文字列 parameterName、BigDecimal bd)<br/><br/>パブリック タイムスタンプ getDateTime (int インデックス)<br/><br/>パブリック タイムスタンプ getDateTime (文字列 sCol)<br/><br/>パブリックのタイムスタンプ getDateTime (int インデックス、予定表の cal)<br/><br/>パブリック タイムスタンプ getSmallDateTime (int インデックス)<br/><br/>パブリック タイムスタンプ getSmallDateTime (文字列 sCol)<br/><br/>パブリックのタイムスタンプ getSmallDateTime (int インデックス、予定表の cal)<br/><br/>パブリックのタイムスタンプ getSmallDateTime (文字列名、予定表の cal)<br/><br/>パブリック BigDecimal getMoney (int インデックス)<br/><br/>パブリック BigDecimal getMoney (文字列 sCol)<br/><br/>パブリック BigDecimal getSmallMoney (int インデックス)<br/><br/>パブリック BigDecimal getSmallMoney (文字列 sCol)|これらのメソッドは、データ型の money、smallmoney、uniqueidentifier、datetime、smalldatetime の Always Encrypted をサポートするために追加されます。 <br/><br/>暗号化された datetime2 列にパラメーター値を送信するため既存 setTimestamp() メソッドが使用されることに注意してください。 暗号化された datetime および smalldatetime 列の新しいメソッド setDateTime() と setSmallDateTime() をそれぞれ使用します。|  
 |パブリックの void setObject (文字列パラメーター名、オブジェクト o、int n、m の int、ブール forceEncrypt)<br /><br /> パブリックの void setObject (文字列パラメーター名、オブジェクト obj、SQLType jdbcType、int スケール、ブール forceEncrypt)<br /><br /> public void setDate (文字列 parameterName、予定表 c の場合は、x java.sql.Date ブール forceEncrypt)<br /><br /> パブリックの void setTime (文字列 parameterName, java.sql.Time t、int スケール, ブール forceEncrypt)<br /><br /> public void setTime (文字列 parameterName, x, 予定表 c の場合、java.sql.Time ブール forceEncrypt)<br /><br /> パブリックの void setDateTime (パラメーター名の文字列、ブール forceEncrypt x, java.sql.Timestamp)<br /><br /> パブリックの void setDateTimeOffset (文字列 parameterName、microsoft.sql.DateTimeOffset t、int スケール、ブール forceEncrypt)<br /><br /> パブリックの void setSmallDateTime (パラメーター名の文字列、ブール forceEncrypt x, java.sql.Timestamp)<br /><br /> パブリックの void setTimestamp (文字列 parameterName, java.sql.Timestamp t、int スケール, ブール forceEncrypt)<br /><br /> パブリックの void setTimestamp (パラメーター名の文字列、ブール forceEncrypt x, java.sql.Timestamp)<br /><br /> パブリックの void setUniqueIdentifier (文字列 parameterName、guid の文字列、ブール forceEncrypt)<br /><br /> パブリックの void setBytes (文字列 parameterName, byte b, ブール forceEncrypt)<br /><br /> パブリックの void setByte (文字列 parameterName, バイト b, ブール forceEncrypt)<br /><br /> パブリックの void setString (文字列 parameterName, string, boolean forceEncrypt)<br /><br /> パブリックの最終的な void setNString (文字列パラメーター名、文字列値、ブール forceEncrypt)<br /><br /> パブリックの void setMoney (文字列 parameterName、BigDecimal bd、ブール forceEncrypt)<br /><br /> パブリックの void setSmallMoney (文字列 parameterName、BigDecimal bd、ブール forceEncrypt)<br /><br /> パブリックの void setBigDecimal (文字列 parameterName、BigDecimal bd、int の有効桁数、int スケール、ブール forceEncrypt)<br /><br /> パブリックの void setDouble (文字列 parameterName、ダブル d、ブール forceEncrypt)<br /><br /> パブリックの void setFloat (文字列 parameterName、f を浮動小数点、ブール forceEncrypt)<br /><br /> public void setInt (文字列 parameterName, int i, ブール forceEncrypt)<br /><br /> パブリックの void setLong (文字列 parameterName、時間の長い l、ブール forceEncrypt)<br /><br /> パブリックの void setShort (文字列 parameterName, short s, ブール forceEncrypt)<br /><br /> パブリックの void setBoolean (文字列 parameterNames、b をブール値、ブール forceEncrypt)<br/><br/>public void setTimeStamp (文字列 sCol、予定表 c の場合は、x java.sql.Timestamp ブール forceEncrypt)|指定されたパラメーターを、渡された java 値に設定します。<br /><br /> ブール forceEncrypt が設定されている場合は true、クエリにパラメーターが場合にのみ設定の指定の列は暗号化されており、接続またはステートメントでは、Always Encrypted が有効です。<br /><br /> ブール forceEncrypt が false に設定されている場合、ドライバーは、パラメーターで暗号化を強制しません。|
  

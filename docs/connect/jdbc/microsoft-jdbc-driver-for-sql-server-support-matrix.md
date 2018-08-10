@@ -1,7 +1,7 @@
 ---
-title: Microsoft JDBC Driver for SQL Server のサポート マトリックス |Microsoft ドキュメント
+title: Microsoft SQL Server 用 JDBC Driver のサポート表 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1aceb8c6c7077236d8bf7dcf4794a894adc16030
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d0b19f437021f3a2398ac1a0dc694c4c52259621
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832807"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456406"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft SQL Server 用 JDBC Driver のサポート表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "32832807"
   このページには、Microsoft SQL Server 用 JDBC Driver のサポート表とサポート ライフサイクル ポリシーがあります。  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Microsoft JDBC Driver サポート ライフサイクルの表とポリシー  
- マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 JDBC ドライバーのバージョン 3.0、4.x および 6.x リリース日 5 年ドライバーからメイン ストリーム サポートがあります。 メインストリーム サポートについては、マイクロソフト サポート ライフサイクルの Web サイトで定義されています。  
+ マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 JDBC ドライバーのバージョン 3.0、4.x、6.x、7.x には、ドライバーのリリース日から 5 年間のメインストリーム サポートが含まれています。 メインストリーム サポートについては、Microsoft ライフサイクル ポリシーの Web サイトで定義されています。  
   
  延長サポートとカスタム サポートのオプションは、Microsoft JDBC Driver では使用できません。  
     
@@ -35,9 +35,10 @@ ms.locfileid: "32832807"
   
 |ドライバー名|ドライバー パッケージのバージョン|該当する JAR(s)|メイン ストリーム サポートの終了|
 |-|-|-|-|  
-|Microsoft SQL Server 用 JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 1 月 22日|    
+|Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31日|  
+|Microsoft SQL Server 用 JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27日|    
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30日|    
-|Microsoft SQL Server 用 JDBC Driver 6.0|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14日|    
+|Microsoft SQL Server 用 JDBC Driver 6.0|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14 日|    
 |Microsoft SQL Server 用 JDBC Driver 4.2|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|  
 |Microsoft SQL Server 用 JDBC Driver 4.1|4.1|sqljdbc41.jar|2019 年 12 月 12日|  
   
@@ -55,7 +56,7 @@ ms.locfileid: "32832807"
   
 ## <a name="sql-version-compatibility"></a>SQL バージョンの互換性  
   
-|ドライバーのバージョン|SQL Server 2008:|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL のマネージ インスタンス (プライベート プレビューでは拡張)|  
+|ドライバーのバージョン|SQL Server 2008:|SQL Server 2008R2|SQL Server 2012|Azure SQL データベース|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL マネージ インスタンス (延長プライベート プレビュー)|  
 |-|-|-|-|-|-|-|-|-|-|
 |6.4|×|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|×|
@@ -71,25 +72,26 @@ ms.locfileid: "32832807"
 |1.0|×|×|×|×|×|×|×|×|×|  
 |2000|×|×|×|×|×|×|×|×|×|  
   
- <sup>1</sup>Microsoft SQL Server JDBC Driver version 3.0 は、下位クライアントとして SQL Server 2012 に接続できます。  
+ <sup>1</sup>Microsoft SQL Server JDBC Driver バージョン 3.0 では、下位クライアントの SQL Server 2012 に接続できます。  
   
- <sup>2</sup>修正プログラムとして 3.0 のドライバーに Azure SQL Database のサポートが導入されました。 Azure SQL Database のお客様は、最新バージョンのドライバーを使用することをおすすめします。  
+ <sup>2</sup>3.0 のドライバーには、修正プログラムとして Azure SQL Database のサポートが導入されています。 Azure SQL Database のお客様は、最新バージョンのドライバーを使用することをおすすめします。  
   
- <sup>3</sup>Microsoft SQL Server JDBC Driver version 2.0 および Microsoft SQL Server 2005 JDBC Driver version 1.2 下位クライアントとして SQL Server 2008 に接続できます。 下位変換が許可されている場合、アプリケーションはクエリを実行し、新しい SQL Server 2008 データ型 (time、date、datetime2、datetimeoffset、FILESTREAM など) の更新を実行できます。 これらの新しいデータ型を JDBC ドライバーで使用する方法の詳細については、「  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver (JDBC ドライバーを使用して SQL Server 2008 の日付/時刻データ型を操作する)](http://go.microsoft.com/fwlink/?LinkId=145198) 」および「  [Working with SQL Server 2008 FileStream using JDBC Driver (JDBC ドライバーを使用して SQL Server 2008 の FileStream を操作する](http://go.microsoft.com/fwlink/?LinkId=145199)」をご覧ください。 これらの新しいデータ型の下位互換性の詳細については、SQL Server オンライン ブックの「  [日時データの使用](http://go.microsoft.com/fwlink/?LinkId=145211)」および「  [FILESTREAM のサポート](http://go.microsoft.com/fwlink/?LinkId=145212) 」トピックをご覧ください。  
+ <sup>3</sup>Microsoft SQL Server JDBC Driver バージョン 2.0 と Microsoft SQL Server 2005 JDBC Driver バージョン 1.2 では、下位クライアントの SQL Server 2008 に接続できます。 下位変換が許可されている場合、アプリケーションはクエリを実行し、新しい SQL Server 2008 データ型 (time、date、datetime2、datetimeoffset、FILESTREAM など) の更新を実行できます。 これらの新しいデータ型を JDBC ドライバーで使用する方法の詳細については、「  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver (JDBC ドライバーを使用して SQL Server 2008 の日付/時刻データ型を操作する)](http://go.microsoft.com/fwlink/?LinkId=145198) 」および「  [Working with SQL Server 2008 FileStream using JDBC Driver (JDBC ドライバーを使用して SQL Server 2008 の FileStream を操作する](http://go.microsoft.com/fwlink/?LinkId=145199)」をご覧ください。 これらの新しいデータ型の下位互換性の詳細については、SQL Server オンライン ブックの「  [日時データの使用](http://go.microsoft.com/fwlink/?LinkId=145211)」および「  [FILESTREAM のサポート](http://go.microsoft.com/fwlink/?LinkId=145212) 」トピックをご覧ください。  
   
- <sup>4</sup>Microsoft JDBC Driver と並列データ ウェアハウス間の接続のサポートで初めて導入されました、Microsoft JDBC Driver 4.0 for SQL Server と Microsoft SQL Server 2008 R2 並列データ ウェアハウス アプライアンス更新プログラム 3 です。  
+ <sup>4</sup>Microsoft JDBC Driver と並列データ ウェアハウス間の接続のサポートが、Microsoft JDBC Driver 4.0 for SQL Server と Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3 で初めて導入されました。  
   
- <sup>5</sup>Microsoft SQL Server JDBC Driver version 3.0 は、下位クライアントとして SQL Server 2014 に接続できます。  
+ <sup>5</sup>Microsoft SQL Server JDBC Driver バージョン 3.0 では、下位クライアントの SQL Server 2014 に接続できます。  
   
 ## <a name="java-and-jdbc-specification-support"></a>Java と JDBC の仕様のサポート  
   
 |JDBC ドライバーのバージョン|JRE のバージョン|JDBC API のバージョン| 
 |-|-|-|  
-|6.4|1.7、1.8、1.9|4.1、4.2、4.3 (部分的)|  
-|6.2|1.7, 1.8|4.1, 4.2|  
-|6.1|1.7, 1.8|4.1, 4.2|  
-|6.0|1.7, 1.8|4.1, 4.2|  
-|4.2|1.7, 1.8|4.1, 4.2|  
+|7.0|1.8、10|4.2、4.3 (部分的)|  
+|6.4|1.7、1.8、9|4.1、4.2、4.3 (部分的)|  
+|6.2|1.7、1.8|4.1、4.2|  
+|6.1|1.7、1.8|4.1、4.2|  
+|6.0|1.7、1.8|4.1、4.2|  
+|4.2|1.7、1.8|4.1、4.2|  
 |4.1|1.7|4.0|  
 |4.0|1.5, 1.6, 1.7|3.0, 4.0|  
 |3.0|1.5, 1.6,|3.0, 4.0|  
