@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6045c482a931329e3d62c49dedea7ea86a14c545
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ms.locfileid: "32852497"
@@ -33,7 +33,7 @@ ms.locfileid: "32852497"
 ## <a name="using-local-transactions"></a>ローカル トランザクションの使用  
  単一フェーズであり、データベースによって直接処理されるトランザクションは、ローカル トランザクションであると見なされます。 JDBC ドライバーのさまざまなメソッドを使用して、ローカル トランザクションをサポートする、 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)クラスを含む[setAutoCommit](../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md)、[コミット](../../connect/jdbc/reference/commit-method-sqlserverconnection.md)、および[ロールバック](../../connect/jdbc/reference/rollback-method.md)です。 通常、ローカル トランザクションはアプリケーションによって明示的に管理されるか、Java Platform, Enterprise Edition (Java EE) アプリケーション サーバーによって自動的に管理されます。  
   
- 次の例の 2 つのステートメントで構成されるローカル トランザクションの実行、`try`ブロックします。 ステートメントは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベースの Production.ScrapReason テーブルに対して実行され、それらは例外がスローされなかった場合にコミットされます。 例外がスローされた場合、`catch`ブロックのコードがトランザクションをロールバックします。
+ 次の例の 2 つのステートメントで構成されるローカル トランザクションの実行、`try`ブロックします。 ステートメントは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベースの Production.ScrapReason テーブルに対して実行され、それらは例外がスローされなかった場合にコミットされます。 例外がスローされた場合、`catch`ブロックのコードがトランザクションをロールバックします。  
   
  [!code[JDBC#UnderstandingTransactions1](../../connect/jdbc/codesnippet/Java/understanding-transactions_1.java)]  
   
