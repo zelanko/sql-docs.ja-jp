@@ -1,1 +1,0 @@
-![ダウンロード](../ssdt/media/download.png)[Ruby Driver のインストール](http://msdn.microsoft.com/library/mt711041.aspx)
