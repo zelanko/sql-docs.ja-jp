@@ -1,5 +1,5 @@
 ---
-title: スキーマのキャッシュ (SQLXML 4.0) |Microsoft ドキュメント
+title: スキーマのキャッシュ (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebb2fd4b7e0b17f81f8e14f3bde60d56e3a60ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f6b9e9a8a6d9406def9e2adc90e1ef7e9b8545a1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971087"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559642"
 ---
 # <a name="schema-caching-sqlxml-40"></a>スキーマのキャッシュ (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Microsoft SQL Server 2000 Web Release 1、Microsoft SQLXML 2.0、および SQLXML 3.0 の XML のサイド バイ サイド インストールをスキーマの次のレジストリ キーを使用して、すべてのバージョンでキャッシュを明示的に制御できます。  
+  Microsoft SQL Server 2000 Web Release 1、Microsoft SQLXML 2.0、および SQLXML 3.0 の XML のサイド バイ サイドでインストール、すべてのバージョンでのキャッシュは、次のレジストリ キーを使用してスキーマを明示的に制御できます。  
   
  Web Release 1:  
   
@@ -52,21 +52,21 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- サイド バイ サイド インストールの詳細については、次を参照してください。 [SQLXML 4.0 SP1 の新](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)です。  
+ サイド バイ サイドでインストールの詳細については、次を参照してください。 [SQLXML 4.0 SP1 の新](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)します。  
   
  スキーマをキャッシュすると、XPath クエリのパフォーマンスが大きく向上します。 マッピング スキーマに対して XPath クエリを実行すると、スキーマはメモリに格納され、必要なデータ構造がメモリ内で作成されます。 スキーマのキャッシュを設定している場合、スキーマはメモリに残るので、以降の XPath クエリのパフォーマンスが向上します。  
   
  スキーマのキャッシュ サイズは、レジストリに上のキーを追加することで設定できます。  
   
- スキーマ サイズは、使用可能なメモリ量と、使用しているスキーマ数に基づいて設定します。 既定値**SchemaCacheSize**サイズは 31 です。 設定した場合**SchemaCacheSize**以降より多くのメモリを使用します。 スキーマのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
+ スキーマ サイズは、使用可能なメモリ量と、使用しているスキーマ数に基づいて設定します。 既定の**SchemaCacheSize**サイズは 31 です。 設定した場合**SchemaCacheSize**高くより多くのメモリが使用されます。 スキーマのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
   
- パフォーマンス上の理由をお勧めを設定すること**SchemaCacheSize**通常使用するスキーマのマッピング数よりも大きくします。 スキーマの数が増える場合**SchemaCacheSize**が小さい数よりも、スキーマがある場合、パフォーマンスが低下します。  
+ パフォーマンス上の理由をお勧め設定する**SchemaCacheSize**通常使用するスキーマのマッピングの数より大きい。 場合、スキーマの数を増やすと**SchemaCacheSize**が小さいするスキーマの数よりパフォーマンスが低下します。  
   
 > [!NOTE]  
 >  スキーマへの変更は約 2 分経たないとキャッシュに反映されないため、開発時はスキーマをキャッシュしないことをお勧めします。  
   
 ## <a name="see-also"></a>参照  
- [テンプレートのキャッシュ (&) #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [XSL のキャッシュ (&) #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+ [テンプレートのキャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [XSL のキャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

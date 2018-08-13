@@ -19,13 +19,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc385c19386a151625cbccf07e498f5a35b88827
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5c152794e719cd4337b54d628dae385734043668
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413581"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552152"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) インターフェイス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37413581"
   
  これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのプログラミング リファレンスは文書化されてすべての OLE DB インターフェイスと、メソッドを使用する場合は、プロバイダー固有の動作を発生を行うインターフェイスやメソッドのみ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DBプロバイダー。  
   
- OLE DB インターフェイスのコアとメソッドの詳細については、次を参照してください。、 [OLE DB プログラマーズ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45232)します。  
+ OLE DB の中核となるインターフェイスやメソッドの完全な説明については、[OLE DB のプログラマー リファレンス](http://go.microsoft.com/fwlink/?LinkId=45232)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

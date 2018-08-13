@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_missing_index_columns (Transact SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,17 +24,18 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c457cd76f0c1090147d2df41a47c4c6f3c2ef5ad
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 65f48f853fca55961a69e4e6905e5fa148cf739f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560192"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  空間インデックス以外のインデックスが欠落しているデータベース テーブル列に関する情報を返します。 **sys.dm_db_missing_index_columns**動的管理関数です。  
+  空間インデックス以外のインデックスが欠落しているデータベース テーブル列に関する情報を返します。 **sys.dm_db_missing_index_columns**は、動的管理関数。  
 
 ## <a name="syntax"></a>構文  
   
@@ -47,29 +48,29 @@ sys.dm_db_missing_index_columns(index_handle)
  *index_handle*  
  欠落インデックスを一意に識別する整数値です。 次の動的管理オブジェクトから取得できます。  
   
- [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [sys.dm_db_missing_index_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|列の ID です。|  
 |**column_name**|**sysname**|テーブル列の名前。|  
-|**column_usage**|**varchar(20)**|クエリでの列の使用方法。 使用可能な値とその説明です。<br /><br /> 等値: 列は、フォームの等しいかどうかを表す述語に使用できます。 <br />                        *table.column* = *constant_value*<br /><br /> 非等値: 列貢献不等、たとえば、述語にフォームの述語: *table.column* > *constant_value*です。 "=" 以外の比較演算子はすべて、不等値を表します。<br /><br /> INCLUDE: 列は述語の評価には使用されませんが、クエリをカバーするたとえば、別の理由から、使用されます。|  
+|**column_usage**|**varchar(20)**|クエリでの列の使用方法。 使用可能な値とその説明のとおり。<br /><br /> 等価性: 列は、等しいかどうか、フォームを表す述語に貢献します。 <br />                        *table.column* = *constant_value*<br /><br /> 非等値: 列に作用などの非等値を表す述語形式の述語: *table.column* > *constant_value*。 "=" 以外の比較演算子はすべて、不等値を表します。<br /><br /> インクルード: 列は、述語を評価するために使用されませんが、クエリをカバーするなどの理由により使用されます。|  
   
-## <a name="remarks"></a>解説  
- によって返される情報**sys.dm_db_missing_index_columns**クエリは、クエリ オプティマイザーによって最適化され、永続化されていないときに更新されます。 欠落インデックスの情報が保持されるまで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
+## <a name="remarks"></a>コメント  
+ によって返される情報**sys.dm_db_missing_index_columns**クエリは、クエリ ・ オプティマイザーによって最適化され、永続化されていない場合に更新されます。 までに限り、欠落インデックスの情報が保持される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
   
 ## <a name="transaction-consistency"></a>トランザクションの一貫性  
  トランザクションでテーブルを作成または削除する場合、削除されたオブジェクトに関する欠落インデックス情報を含む行は、トランザクションの一貫性を保持するためこの動的管理オブジェクトから削除されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  この動的管理関数をクエリするには、VIEW SERVER STATE 権限、または VIEW SERVER STATE が暗黙的に与えられる権限が許可されている必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、に対するクエリを実行、`Address`テーブルし、を使用してクエリを実行し、`sys.dm_db_missing_index_columns`動的管理ビューのインデックスが欠落しているテーブルの列を返します。  
+ に対してクエリを実行する次の使用例、`Address`テーブルが表示され、クエリを使用してを実行し、`sys.dm_db_missing_index_columns`動的管理ビューは、インデックスのないテーブルの列を返すにします。  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,8 +89,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

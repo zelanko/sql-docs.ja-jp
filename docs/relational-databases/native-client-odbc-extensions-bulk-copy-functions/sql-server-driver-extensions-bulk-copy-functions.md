@@ -19,15 +19,15 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 962c95767280780f0a9a9b168c5f78869db3d535
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: aca44a2fc471dc9ccdaa1ebc64f3a2b44ff782e0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414901"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558352"
 ---
-# <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server のドライバー拡張機能 - 一括コピー関数
+# <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server ドライバーの拡張機能 - 一括コピー関数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

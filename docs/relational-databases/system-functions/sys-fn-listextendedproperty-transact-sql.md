@@ -1,5 +1,5 @@
 ---
-title: sys.fn_listextendedproperty (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_listextendedproperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,13 +30,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3484c32c00c5f94f084cd5c0e49837181054df40
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d0480fcc7880febe136431ff50cb3405b8427c40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238439"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559722"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,13 +63,13 @@ fn_listextendedproperty (
   
 ## <a name="arguments"></a>引数  
  { default | '*property_name*' | NULL}  
- プロパティ名を指定します。 *property_name*は**sysname**です。 有効な値は、default、NULL、またはプロパティ名です。  
+ プロパティ名を指定します。 *property_name*は**sysname**します。 有効な値は、default、NULL、またはプロパティ名です。  
   
  { default | '*level0_object_type*' | NULL}  
  ユーザーまたはユーザーが定義した種類です。 *level0_object_type*は**varchar (128)**、既定値は NULL です。 有効な値は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER、および NULL です。  
   
 > [!IMPORTANT]  
->  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
+>  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
   
  { default | '*level0_object_name*' | NULL }  
  指定したレベル 0 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  
@@ -84,25 +84,25 @@ fn_listextendedproperty (
  指定したレベル 1 のオブジェクトの種類の名前です。 *level1_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  
   
  { default | '*level2_object_type*' |NULL }  
- レベル 2 のオブジェクトの型です。 *level2_object_type*は**varchar (128)** 既定値は NULL です。 有効な値は、DEFAULT、default (NULL に相当します)、または NULL です。 有効な入力*level2_object_type*は、列、制約、EVENT NOTIFICATION、インデックス、パラメーター、トリガー、および NULL です。  
+ レベル 2 のオブジェクトの型です。 *level2_object_type*は**varchar (128)** 既定値は NULL です。 有効な値は、DEFAULT、default (NULL に相当します)、または NULL です。 有効な入力*level2_object_type*は列、制約、EVENT NOTIFICATION、インデックス、パラメーター、トリガー、および NULL です。  
   
  { default | '*level2_object_name*' |NULL }  
  指定したレベル 2 のオブジェクトの種類の名前です。 *level2_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  
   
-## <a name="tables-returned"></a>返されたテーブル  
+## <a name="tables-returned"></a>返されるテーブル  
  次の表は、fn_listextendedproperty が返すテーブルの形式です。  
   
 |列名|データ型|  
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|name|**sysname**|  
+|NAME|**sysname**|  
 |value|**sql_variant**|  
   
  返されたテーブルが空の場合は、目的のオブジェクトに拡張プロパティがないか、またはユーザーがそのオブジェクトの拡張プロパティを一覧表示する権限を持っていないことを意味します。 データベース自体の拡張プロパティを返す場合、objtype および objname 列は NULL になります。  
   
-## <a name="remarks"></a>解説  
- 場合の値は、 *property_name*が NULL または既定、fn_listextendedproperty は指定したオブジェクトのすべてのプロパティを返します。  
+## <a name="remarks"></a>コメント  
+ 場合の値は、 *property_name*が NULL または既定では、fn_listextendedproperty は指定したオブジェクトのすべてのプロパティを返します。  
   
  指定されたオブジェクトの種類に対応するオブジェクト名の値が NULL または default である場合、fn_listextendedproperty は指定された種類のすべてのオブジェクトの、すべての拡張プロパティを返します。  
   
@@ -120,7 +120,7 @@ LEFT JOIN sys.fn_listextendedproperty(N'MS_Description', N'user',N'HumanResource
 WHERE o.name = 'Employee';  
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  オブジェクトの拡張プロパティを一覧表示する権限は、オブジェクトの種類によって異なります。  
   
 ## <a name="examples"></a>使用例  
@@ -147,7 +147,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. テーブル内のすべての列の拡張プロパティを表示する  
- 次の例は、内の列の拡張プロパティを一覧表示、`ScrapReason`テーブル。 これは、スキーマに含まれている`Production`です。  
+ 次の例では、列の拡張プロパティを一覧表示、`ScrapReason`テーブル。 これは、スキーマに含まれている`Production`します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +172,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. スキーマ内のすべてのテーブルの拡張プロパティを表示する  
- 次の例に含まれているすべてのテーブルの拡張プロパティを一覧表示、`Sales`スキーマです。  
+ 次の例に含まれているすべてのテーブルの拡張プロパティを一覧表示、`Sales`スキーマ。  
   
 ```  
 USE AdventureWorks2012;  

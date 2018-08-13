@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_threads (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_threads (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee180232114e311cf40a53d2e33f23acba7a0cd0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2109830ba21d60fa67eb33b1b1e5e8b5cb14a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543212"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,14 +37,14 @@ ms.lasthandoff: 05/23/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティング システム スレッドの一覧を返します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_threads**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_threads**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |thread_address|**varbinary(8)**|スレッドのメモリ アドレス (主キー)。|  
-|started_by_sqlservr|**bit**|スレッドの開始元。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってスレッドが開始されました。<br /><br /> 0 = 別コンポーネント内から拡張ストアド プロシージャなど、スレッドの開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|started_by_sqlservr|**bit**|スレッドの開始元。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってスレッドが開始されました。<br /><br /> 0 = 別コンポーネント内から拡張ストアド プロシージャなど、スレッドの開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |os_thread_id|**int**|オペレーティング システムによって割り当てられたスレッドの ID。|  
-|ステータス|**int**|内部状態フラグ。|  
+|status|**int**|内部状態フラグ。|  
 |instruction_address|**varbinary(8)**|現在実行されている命令のアドレス。|  
 |creation_time|**datetime**|スレッドが作成された日時。|  
 |kernel_time|**bigint**|スレッドで使用されたカーネル時間。|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/23/2018
 |stack_end_address|**varbinary(8)**|スレッドにおける最下位のスタック アドレスのメモリ アドレス。|  
 |stack_bytes_committed|**int**|スタックでコミットされたバイト数。|  
 |stack_bytes_used|**int**|スレッドでアクティブに使用されているバイト数。|  
-|affinity|**bigint**|このスレッドが実行されている CPU マスク。 これで構成される値は異なります、 **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY**ステートメントです。 ソフト アフィニティの場合は、スケジューラと異なることがあります。|  
+|affinity|**bigint**|このスレッドが実行されている CPU マスク。 これで構成される値によって異なります、 **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY**ステートメント。 ソフト アフィニティの場合は、スケジューラと異なることがあります。|  
 |[Priority]|**int**|スレッドの優先度値。|  
 |ロケール|**int**|スレッド用にキャッシュされているロケール LCID。|  
 |トークン|**varbinary(8)**|スレッド用にキャッシュされている権限借用トークン ハンドル。|  
@@ -61,22 +62,22 @@ ms.lasthandoff: 05/23/2018
 |fiber_data|**varbinary(8)**|スレッドで実行されている現在の Win32 ファイバー。 これは該当する場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]簡易プーリング用に構成されています。|  
 |thread_handle|**varbinary(8)**|内部使用のみです。|  
 |event_handle|**varbinary(8)**|内部使用のみです。|  
-|scheduler_address|**varbinary(8)**|スレッドに関連付けられているスケジューラのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)です。|  
-|worker_address|**varbinary(8)**|スレッドにバインドしているワーカーのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)です。|  
+|scheduler_address|**varbinary(8)**|スレッドに関連付けられているスケジューラのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)します。|  
+|worker_address|**varbinary(8)**|スレッドにバインドしているワーカーのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)します。|  
 |fiber_context_address|**varbinary(8)**|内部ファイバー コンテキスト アドレス。 これは該当する場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]簡易プーリング用に構成されています。|  
 |self_address|**varbinary(8)**|内部一貫性ポインター。|  
 |processor_group|**smallint**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> プロセッサ グループ ID。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
 
 ## <a name="examples"></a>使用例  
- 起動時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スレッドを開始して、ワーカー スレッドが関連付けられます。 ただし、拡張ストアド プロシージャなどの外部コンポーネントがでスレッドを開始できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これらのスレッドの制御できません。 sys.dm_os_threads がリソースを消費する悪意のあるスレッドに関する情報を提供できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスです。  
+ 起動時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスレッドを開始し、それらのスレッドでワーカーを関連付けます。 ただし、拡張ストアド プロシージャなどの外部コンポーネントがでスレッドを開始できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセス。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これらのスレッドの制御できません。 sys.dm_os_threads でリソースを消費する悪意のあるスレッドに関する情報を提供できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセス。  
   
- 次のクエリがによって開始されなかったスレッドを実行している、実行に使用される時間と共にのワーカーの検索に使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ 次のクエリはによって開始されなかったスレッドを実行するいると、実行するために使用される時間のワーカーの検索に使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!NOTE]  
 >  次のクエリでは、簡略化のため `*` ステートメントでアスタリスク (`SELECT`) を使用していますが、 特にカタログ ビュー、動的管理ビュー、およびシステム テーブル値関数では、アスタリスク (*) を使用しないようにしてください。 将来のアップグレードおよびリリースの[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列を追加し、これらのビューおよび関数を列の順序を変更する可能性があります。 このような変更により、特定の順序および列数を必要とするアプリケーションが機能しなくなる場合があります。  

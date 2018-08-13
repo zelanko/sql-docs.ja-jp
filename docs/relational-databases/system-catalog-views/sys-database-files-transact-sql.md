@@ -1,5 +1,5 @@
 ---
-title: sys.database_files (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.database_files (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: ''
@@ -24,32 +24,32 @@ caps.latest.revision: 61
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465a9f57e7787e992f61ec548bdfb8cabdada848
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f50b9b9da7eb904222ef307355e86c91a093db5b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181698"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550312"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベース自体に保存されているデータベースのファイルごとに 1 行のデータを格納します。 これはデータベース単位のビューです。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|データベース内のファイルの ID です。|  
 |**file_guid**|**uniqueidentifier**|ファイルの GUID です。<br /><br /> NULL = データベースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンからアップグレードされています。|  
-|**type**|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行 (にアップグレードまたはで作成されたフルテキスト カタログのファイルが含まれています[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
-|**type_desc**|**nvarchar(60)**|ファイルの種類の説明です。<br /><br /> 行 (にアップグレードまたはで作成されたフルテキスト カタログのファイルが含まれています[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。)|  
+|**type**|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行 (にアップグレードまたはで作成されたフルテキスト カタログのファイルが含まれます[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
+|**type_desc**|**nvarchar(60)**|ファイルの種類の説明です。<br /><br /> 行 (にアップグレードまたはで作成されたフルテキスト カタログのファイルが含まれます[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。)|  
 |**data_space_id**|**int**|値は 0 または 1 以上になります。 値が 0 の場合はデータベース ログ ファイルを表し、値が 1 以上の場合はこのデータ ファイルが格納されているファイル グループの ID を表します。|  
 |**name**|**sysname**|データベース内のファイルの論理名です。|  
-|**physical_name**|**nvarchar(260)**|オペレーティング システム ファイル名です。 データベースが AlwaysOn によってホストされている場合[読み取り可能なセカンダリ レプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)、 **physical_name**プライマリ レプリカ データベースのファイルの場所を示します。 読み取り可能なセカンダリ データベースの正しいファイルの場所、照会[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)です。|  
-|**状態**|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
+|**physical_name**|**nvarchar(260)**|オペレーティング システム ファイル名です。 データベースが AlwaysOn によってホストされている場合[読み取り可能セカンダリ レプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)、 **physical_name**プライマリ レプリカ データベースのファイルの場所を示します。 読み取り可能なセカンダリ データベースの適切なファイルの場所、クエリ[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)します。|  
+|**state**|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|ファイルの状態の説明です。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。|  
-|**size**|**int**|ファイルの現在のサイズ (8 KB ページ単位)。<br /><br /> 0 = 適用なし<br /><br /> データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> FILESTREAM ファイル グループ コンテナーのサイズでは、現在のコンテナーのサイズを使用するが反映されます。|  
-|**max_size**|**int**|8 KB ページ単位の最大ファイル サイズ:<br /><br /> 0 = 拡張は許可されません。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログ ファイルが最大 2 TB まで拡張することを表します。<br /><br /> FILESTREAM ファイル グループ コンテナーの場合は、max_size は、コンテナーの最大サイズを反映します。<br /><br /> 無制限のログ ファイル サイズにアップグレードしたデータベースがログ ファイルの最大サイズに達すると-1 を報告することに注意してください。|  
+|**size**|**int**|ファイルの現在のサイズ (8 KB ページ単位)。<br /><br /> 0 = 適用なし<br /><br /> データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> FILESTREAM ファイル グループ コンテナーでは、現在、コンテナーのサイズの使用済みサイズが反映されます。|  
+|**max_size**|**int**|8 KB ページ単位の最大ファイル サイズ:<br /><br /> 0 = 拡張は許可されません。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログ ファイルが最大 2 TB まで拡張することを表します。<br /><br /> FILESTREAM ファイル グループ コンテナーでは、max_size コンテナーの最大サイズが反映されます。<br /><br /> ログ ファイルの最大サイズに達すると-1 を無制限のログ ファイルのサイズにアップグレードしたデータベースに報告することに注意してください。|  
 |**growth**|**int**|0 = ファイル サイズは固定されてし、なることはありません。<br /><br /> >0 = ファイルは自動的に拡張されます。<br /><br /> is_percent_growth = 0 の場合、ファイルは 8 KB ページ単位で拡張され、最も近い 64 KB 単位の値に丸められます。<br /><br /> is_percent_growth が 1 の場合、拡張増分は、整数のパーセンテージで表されます。|  
 |**is_media_read_only**|**bit**|1 = ファイルは読み取り専用メディア上にあります。<br /><br /> 0 = ファイルは読み取り/書き込みメディアにあります。|  
 |**is_read_only**|**bit**|1 = ファイルは読み取り専用としてマークされます。<br /><br /> 0 = ファイルは読み取り/書き込み用としてマークされています。|  
@@ -70,13 +70,13 @@ ms.locfileid: "33181698"
 |**backup_lsn**|**numeric(25,0)**|ファイルの最新データまたは差分バックアップの LSN です。|  
   
 > [!NOTE]  
->  ドロップまたは大規模なインデックスを再構築またはドロップまたは大規模なテーブルを切り捨てるしたときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]トランザクションがコミットされた後に、まで、実際のページの割り当て解除と、関連するロックを延期します。 削除操作が延期された場合、割り当てられた領域は、すぐには解放されません。 このため、ラージ オブジェクトを削除するか切り捨てた直後に sys.database_files を実行して返された値は、実際に使用できるディスク領域を反映していないことがあります。  
+>  ドロップまたは大きなインデックスを再構築または削除や、大規模なテーブルを切り捨てる、[!INCLUDE[ssDE](../../includes/ssde-md.md)]トランザクションがコミットされた後に、まで、実際のページの割り当て解除と、関連するロックを延期します。 削除操作が延期された場合、割り当てられた領域は、すぐには解放されません。 このため、ラージ オブジェクトを削除するか切り捨てた直後に sys.database_files を実行して返された値は、実際に使用できるディスク領域を反映していないことがあります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
 
 ## <a name="examples"></a>使用例  
-次のステートメントは、名前、ファイル サイズ、および各データベース ファイルの空き領域の量を返します。
+次のステートメントは、名、ファイルのサイズ、および各データベース ファイルの空き領域の量を返します。
 
 ```
 SELECT name, size/128.0 FileSizeInMB,
@@ -92,6 +92,6 @@ FROM sys.database_files;
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
- [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

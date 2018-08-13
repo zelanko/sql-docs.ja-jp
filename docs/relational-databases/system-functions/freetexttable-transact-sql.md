@@ -1,5 +1,5 @@
 ---
-title: FREETEXTTABLE (TRANSACT-SQL) |Microsoft ドキュメント
+title: できません (Transact SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,19 +26,20 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f2d3c0c014db5a0cd5aab0dee22e6622fd24f20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5dbb201a507d168a06b6417c5648c209807bc773
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540562"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用される関数、[句から](../../t-sql/queries/from-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT ステートメントを実行する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フルテキスト検索をフルテキスト インデックス文字ベースのデータ型を含む列を作成します。 この関数は、0、1、または複数の行を意味し、正確な表現だけでなく、指定したテキストの一致する値を格納している列のテーブルを返します*freetext_string*です。 FREETEXTTABLE は、通常のテーブル名のように参照されます。  
+  使用される関数、[句から](../../t-sql/queries/from-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行する SELECT ステートメント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フル ・ テキストの全文検索が文字ベースのデータ型を含む列をインデックス付けします。 この関数は、0、1、または複数の行との関係だけでなく、完全な指定されたテキストに一致する値を含む列に対するテーブルを返します*freetext_string*。 FREETEXTTABLE は、通常のテーブル名のように参照されます。  
   
- FREETEXTTABLE は、同じ種類と一致するのに役立つ、 [FREETEXT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)、  
+ FREETEXTTABLE は、同じ種類と一致するのに便利です、 [FREETEXT &#40;Transact SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)、  
   
  FREETEXTTABLE を使用するクエリでは、各行の関連順位値 (RANK) とフルテキスト キー (KEY) が取得されます。  
   
@@ -61,9 +62,9 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>引数  
  *テーブル*  
- フルテキスト クエリ用に指定されているテーブルの名前を指定します。 *テーブル*または*ビュー*1 部、2 部、または 3 部構成のデータベース オブジェクトの名前を指定できます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
+ フルテキスト クエリ用に指定されているテーブルの名前を指定します。 *テーブル*または*ビュー*1、2、または 3 つのデータベース オブジェクトの名前にすることができます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
   
- *テーブル*とサーバー名を指定できません。 リンク サーバーに対するクエリでは使用できません。  
+ *テーブル*サーバー名を指定することはできませんし、リンク サーバーに対するクエリでは使用できません。  
   
  *column_name*  
  FROM 句で指定したテーブルのフルテキスト インデックス付きの列の名前を指定します。 列には、**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary**、**varbinary(max)** のいずれかの型を指定できます。  
@@ -72,12 +73,12 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  コンマ区切りで複数の列を指定できます。 *column_list* は、かっこで囲む必要があります。 *language_term* を指定しない場合、*column_list* で指定するすべての列の言語は同じにする必要があります。  
   
  \*  
- フルテキスト検索用に登録されているすべての列を使用して、指定した *freetext_string* を検索します。 しない限り、 *language_term*を指定すると、テーブル内のすべてのフルテキスト インデックス付き列の言語は同じである必要があります。  
+ フルテキスト検索用に登録されているすべての列を使用して、指定した *freetext_string* を検索します。 しない限り、 *language_term*が指定されているテーブル内のすべてのフルテキストのインデックス付きの列の言語は同じである必要があります。  
   
  *freetext_string*  
  *column_name* で検索するテキストです。 単語、フレーズ、文など、あらゆるテキストを入力できます。 用語または一定の形式になっている用語がフルテキスト インデックス内に見つかった場合、一致するものと判断されます。  
   
- 異なり、CONTAINS の検索条件では AND で使用されている場合は、キーワード*freetext_string*単語 'と'、ノイズ ワードと見なされますまたは[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)、され破棄されます。  
+ 異なり、CONTAINS 検索条件の場所とで使用する場合、キーワードは、 *freetext_string*単語 'と' は、ノイズ ワードと見なされますまたは[ストップ](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)、され破棄されます。  
   
  WEIGHT、FORMSOF、ワイルドカード、NEAR、およびその他の構文は使用できません。 *freetext_string* は単語、語幹に分割され、類義語がチェックされて渡されます。  
   
@@ -93,22 +94,22 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
  *top_n_by_rank*  
- だけを*n*降順で最高順位の一致が返されます。 整数値、場合にのみ適用されます*n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*最も重要なヒットだけを再度呼び出すことによってクエリ パフォーマンスを向上することができます。  
+ のみを指定します*n*の降順に並べ替え、最上位のランクと一致が返されます。 整数値では場合に、のみ適用されます*n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*を使用すると、最も関連性のヒット数のみを呼び戻すことによってクエリのパフォーマンスが向上します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
  FREETEXTTABLE では、FREETEXT 述語と同じ検索条件が使用されます。  
   
- CONTAINSTABLE と同様、返されるテーブルがという名前の列を持つ**キー**と**ランク**、適切な行を取得し、行の順位値を使用するクエリ内で参照されます。  
+ 返されたテーブルがという名前の列を作成のような**キー**と**ランク**、適切な行を取得し、行の値のランク付けを使用するクエリ内で参照されています。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  FREETEXTTABLE を呼び出すには、指定されるテーブルまたは参照されるテーブル列に対して適切な SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-simple-example"></a>A. 簡単な例  
- 次の例では、作成し、3 つの郡およびそのフラグの色の一覧を表示する 2 つの列の単純なテーブルを入力します。 It では、作成し、テーブルのインデックス、フルテキスト カタログを設定します。 続いて、 **FREETEXTTABLE**構文を説明します。  
+ 次の例では、作成し、3 つの郡およびそのフラグの色の一覧を表示する 2 つの列の単純なテーブルを入力します。 It では、作成し、テーブルのインデックス、フルテキスト カタログを設定します。 **できません**の構文を説明します。  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -129,7 +130,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### <a name="b-using-freetext-in-an-inner-join"></a>B. INNER JOIN での FREETEXT の使用  
- 次の例に関連するすべてのカテゴリの説明とカテゴリの名前を返します`sweet`、 `candy`、 `bread`、 `dry`、または`meat`です。  
+ 関連するすべてのカテゴリの説明とカテゴリ名を返す例を次`sweet`、 `candy`、 `bread`、 `dry`、または`meat`。  
   
 ```  
 USE AdventureWorks2012;  
@@ -147,7 +148,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. 言語および最高順位の一致の指定  
- 次の例と同じでありの使用方法を示します、 `LANGUAGE` *language_term*と*top_n_by_rank*パラメーター。  
+ 次の例と同じですしの使用を示しています、 `LANGUAGE` *language_term*と*top_n_by_rank*パラメーター。  
   
 ```  
 USE AdventureWorks2012;  
@@ -166,12 +167,12 @@ GO
 ```  
   
 > [!NOTE]  
->  言語*language_term* paramete*r*を使用する必要はありません、 *top_n_by_rank*パラメーター*です。*  
+>  言語*language_term* paramete*r*を使用する必要はありません、 *top_n_by_rank*パラメーター *。*  
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索の概要](../../relational-databases/search/get-started-with-full-text-search.md)   
  [フルテキスト カタログの作成と管理](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [フルテキスト カタログ & #40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   

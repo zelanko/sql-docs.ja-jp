@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_waiting_tasks (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_waiting_tasks (Transact SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540762"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,21 +37,21 @@ ms.lasthandoff: 05/23/2018
   リソースを待機しているタスクの待機キューに関する情報を返します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_waiting_tasks**です。  
+>  これを呼び出すと[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_waiting_tasks**。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|待機中のタスクのアドレス。|  
 |**session_id**|**smallint**|タスクに関連付けられているセッションの ID。|  
 |**exec_context_id**|**int**|タスクに関連付けられている実行コンテキストの ID。|  
-|**wait_duration_ms**|**bigint**|この待機の種類における総待機時間 (ミリ秒単位)。 この時間には**signal_wait_time**です。|  
+|**wait_duration_ms**|**bigint**|この待機の種類における総待機時間 (ミリ秒単位)。 Inclusive のこの時間は、 **signal_wait_time**。|  
 |**wait_type**|**nvarchar(60)**|待機の種類の名前。|  
 |**resource_address**|**varbinary(8)**|タスクが待機しているリソースのアドレス。|  
 |**blocking_task_address**|**varbinary(8)**|リソースを現在保持しているタスク。|  
 |**blocking_session_id**|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションが所有しています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を特定できませんでした。|  
 |**blocking_exec_context_id**|**int**|タスクをブロックしている実行コンテキストの ID。|  
 |**resource_description**|**nvarchar(3072)**|使用されているリソースの説明。 詳細については、以下の説明を参照してください。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="resourcedescription-column"></a>resource_description 列  
  Resource_description 列は、値は、次のとおりです。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/23/2018
   
  **並列クエリ リソース所有者:**  
   
--   exchangeEvent id = {ポート |パイプ}\<16 進 アドレス > WaitType =\<exchange の待機の種類 > nodeId =\<exchange ノード id >  
+-   exchangeEvent id = {0} ポート |パイプ}\<16 進アドレス > WaitType =\<exchange 待機の種類 > ノード =\<exchange >  
   
  **Exchange-wait-type:**  
   
@@ -81,41 +82,41 @@ ms.lasthandoff: 05/23/2018
   
  **ロック リソース所有者:**  
   
--   \<型の説明固有 & > id = = ロック\<ロックから 16 進 アドレス > モード =\<モード > associatedObjectId =\<関連付けられたオブジェクト id >  
+-   \<型固有の説明 > id = ロック\<ロックから 16 進アドレス > モード =\<モード > associatedObjectId =\<関連付けられているオブジェクト id >  
   
-     **\<型の説明固有 & > を指定できます。**  
+     **\<型固有の説明 > することができます。**  
   
-    -   データベースの場合: databaselock subresource =\<databaselock subresource > dbid =\<db id >  
+    -   データベース: databaselock subresource =\<databaselock subresource > dbid =\<db id >  
   
-    -   ファイルの場合: filelock fileid =\<ファイル id > subresource =\<filelock subresource > dbid =\<db id >  
+    -   ファイル: filelock ファイルの id =\<ファイル id > subresource =\<filelock subresource > dbid =\<db id >  
   
-    -   オブジェクト: objectlock lockPartition =\<ロックのパーティションの id > objid =\<obj id > subresource =\<objectlock subresource > dbid =\<db id >  
+    -   オブジェクト: objectlock lockPartition =\<ロック パーティション id > objid =\<オブジェクト id > subresource =\<objectlock subresource > dbid =\<db id >  
   
-    -   ページ: pagelock fileid =\<ファイル id > pageid =\<ページ id > dbid =\<db id > subresource =\<pagelock subresource >  
+    -   Pagelock ファイルのページの場合 =\<ファイル id > pageid =\<ページ id > dbid =\<db id > subresource =\<pagelock subresource >  
   
-    -   キー: keylock hobtid =\<hobt id > dbid =\<db id >  
+    -   キー: キーロック hobtid =\<hobt id > dbid =\<db id >  
   
-    -   EXTENT: extentlock fileid =\<ファイル id > pageid =\<ページ id > dbid =\<db id >  
+    -   範囲: extentlock ファイルの id =\<ファイル id > pageid =\<ページ id > dbid =\<db id >  
   
-    -   RID の場合: ridlock fileid =\<ファイル id > pageid =\<ページ id > dbid =\<db id >  
+    -   RID: の ridlock ファイルの id =\<ファイル id > pageid =\<ページ id > dbid =\<db id >  
   
-    -   アプリケーション: applicationlock ハッシュ =\<ハッシュ > databasePrincipalId =\<ロール id > dbid =\<db id >  
+    -   Applicationlock ハッシュのアプリケーション: =\<ハッシュ > databasePrincipalId =\<ロール id > dbid =\<db id >  
   
-    -   メタデータ: metadatalock subresource =\<メタデータ subresource & > classid =\<metadatalock 説明 > dbid =\<db id >  
+    -   メタデータ: metadatalock subresource =\<メタデータ subresource > クラス id =\<metadatalock 説明 > dbid =\<db id >  
   
-    -   HOBT の場合: hobtlock hobtid =\<hobt id > subresource =\<hobt subresource > dbid =\<db id >  
+    -   HOBT: の hobtlock hobtid =\<hobt id > subresource =\<hobt subresource > dbid =\<db id >  
   
-    -   Allocation_unit の場合: allocunitlock hobtid =\<hobt id > subresource =\<アロケーション-単位-subresource > dbid =\<db id >  
+    -   Allocunitlock hobtid の ALLOCATION_UNIT: =\<hobt id > subresource =\<subresource の割り当ての単位 > dbid =\<db id >  
   
-     **\<モード > を指定できます。**  
+     **\<モード > することができます。**  
   
      Sch-S、Sch-M、S、U、X、IS、IU、IX、SIU、SIX、UIX、BU、RangeS-S、RangeS-U、RangeI-N、RangeI-S、RangeI-U、RangeI-X、RangeX-、RangeX-U、RangeX-X  
   
- **外部リソース所有者:**  
+ **外部リソースの所有者:**  
   
 -   External ExternalResource=\<wait-type>  
   
- **汎用リソース所有者:**  
+ **汎用リソースの所有者:**  
   
 -   TransactionMutex TransactionInfo ワークスペース =\<ワークスペース id >  
   
@@ -137,13 +138,13 @@ ms.lasthandoff: 05/23/2018
   
 -   \<latch-class> (\<latch-address>)  
   
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
  
 ## <a name="example"></a>例
-この例では、ブロックされているセッションを識別します。  実行、[!INCLUDE[tsql](../../includes/tsql-md.md)]内のクエリを[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。
+この例では、ブロックされたセッションを識別します。  実行、[!INCLUDE[tsql](../../includes/tsql-md.md)]でクエリを[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 

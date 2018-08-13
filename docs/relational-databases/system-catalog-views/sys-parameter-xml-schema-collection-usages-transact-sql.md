@@ -1,5 +1,5 @@
 ---
-title: sys.parameter_xml_schema_collection_usages (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.parameter_xml_schema_collection_usages (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65fbd600295fe1766e5eeec4b3f0f517f727bcb8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 30129b7641c43d2390005315c59ef74ca71e2d35
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178038"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564356"
 ---
 # <a name="sysparameterxmlschemacollectionusages-transact-sql"></a>sys.parameter_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33178038"
  |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このパラメーターが属するオブジェクトの ID。|  
-|**parameter_id**|**int**|パラメーターの ID です。  オブジェクト内で一意です。|  
+|**parameter_id**|**int**|パラメーターの ID。  オブジェクト内で一意です。|  
 |**xml_collection_id**|**int**|パラメーターの検証 XML スキーマの名前空間を含む XML スキーマ コレクションの ID。|  
   
 ## <a name="permissions"></a>アクセス許可  

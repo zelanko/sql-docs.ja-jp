@@ -1,5 +1,5 @@
 ---
-title: CommandText プロパティを使用して、テンプレート ファイルの実行 |Microsoft ドキュメント
+title: CommandText プロパティを使用してテンプレート ファイルの実行 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5a6079aa56a74b85eddb9b9fa1135be008015cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619499"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563986"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText プロパティを使用した、テンプレート ファイルの実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この例では、SQL または XPath クエリで構成されるテンプレート ファイルを CommandTextproperty を使用して指定する方法を示しています。 CommandText の値として、SQL または XPath クエリを指定する、代わりに、値として、ファイル名を指定できます。 次の例では、CommandType プロパティが SqlXmlCommandType.TemplateFile として指定されます。  
+  この例では、SQL または XPath クエリで構成されるテンプレート ファイルを指定して、CommandTextproperty を使用して、方法を示します。 SQL または XPath クエリを指定する、CommandText の値として、代わりに、値としてファイル名を指定できます。 次の例では、CommandType プロパティは SqlXmlCommandType.TemplateFile として指定されます。  
   
  サンプル アプリケーションでは、次のテンプレートが実行されます。  
   
@@ -86,7 +86,7 @@ class Test
   
 2.  この例で提供される XML テンプレート (TemplateFile.xml) をフォルダーに保存します。  
   
-3.  この例では、スキーマが格納されている同じフォルダーに、c# コード (DocSample.cs が指定されている) を保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
+3.  スキーマが格納されている同じフォルダーには、この例では、c# コード (DocSample.cs されている) を保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
   
 4.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   
@@ -98,7 +98,7 @@ class Test
   
 5.  コマンド プロンプトで、DocSample.exe を実行します。  
   
- パラメーター名がアット マークで始まる必要がありますをテンプレートにパラメーターを渡す場合 (@) です。たとえば、p.Name="\@ContactID"SqlXmlParameter オブジェクトである場合、します。  
+ テンプレートにパラメーターを渡すと場合、でも、パラメーター名はアット マークで開始する必要があります (@)。たとえば、p.Name="\@ContactID"SqlXmlParameter オブジェクトである場合、します。  
   
  次は、1 つのパラメーターをとるように変更したテンプレートです。  
   

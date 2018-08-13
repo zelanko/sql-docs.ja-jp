@@ -1,5 +1,5 @@
 ---
-title: パラメーターをコマンド |Microsoft Docs
+title: コマンド パラメーター | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 37bf1eaf79ad3a26e5a1e19108850af05d276538
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 805af790d5a703f1fefca6173b119586b002bd95
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414431"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550772"
 ---
-# <a name="command-parameters"></a>コマンドのパラメーター
+# <a name="command-parameters"></a>コマンド パラメーター
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "37414431"
   
  ネットワーク トラフィックを削減してパフォーマンスを向上させるために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーはない自動的にパラメーター情報を取得しない限り、 **icommandwithparameters::getparameterinfo**または**Icommandprepare::prepare**コマンドを実行する前に呼び出されます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが自動的にしません。  
   
--   指定されたデータ型の正確性を検証**icommandwithparameters::setparameterinfo**します。  
+-   **ICommandWithParameters::SetParameterInfo** で指定されたデータ型の正当性を確認すること。  
   
 -   アクセサー バインド情報で指定された DBTYPE から、そのパラメーターに対する適切な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にマップすること。  
   
@@ -47,16 +47,16 @@ ms.locfileid: "37414431"
   
  このようなことが起きないようにするには、アプリケーションで次の条件を満たす必要があります。  
   
--   いることを確認*して*と一致する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ハード コーディングする場合に、パラメーターのデータ型**icommandwithparameters::setparameterinfo**します。  
+-   **ICommandWithParameters::SetParameterInfo** をハードコーディングしている場合、*pwszDataSourceType* をパラメーターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型と一致させます。  
   
 -   アクセサーをハードコーディングしている場合、パラメーターにバインドされている DBTYPE 値の型を、パラメーターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型と同じにします。  
   
--   呼び出すアプリケーションのコーディング**icommandwithparameters::getparameterinfo**プロバイダーが取得できるように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パラメーターのデータ型に動的にします。 これにより、ネットワーク上でサーバーとの余分なやり取りが増えることに注意してください。  
+-   **ICommandWithParameters::GetParameterInfo** を呼び出すようにアプリケーションをコーディングし、プロバイダーでパラメーターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を動的に取得できるようにします。 これにより、ネットワーク上でサーバーとの余分なやり取りが増えることに注意してください。  
   
 > [!NOTE]  
->  プロバイダーは呼び出しをサポートしていません**icommandwithparameters::getparameterinfo**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]UPDATE または DELETE ステートメントの FROM 句では; を含むすべての SQL ステートメントはパラメーターを含むサブクエリによってSQL ステートメントなど、比較の両方の式内のパラメーター マーカーを格納しているか、定量化された述語。または、関数のパラメーターをパラメーターのいずれかをクエリします。 SQL ステートメントのバッチを処理するときに、プロバイダーもサポートしていません通話**icommandwithparameters::getparameterinfo**のバッチの最初のステートメントの後のステートメントでパラメーター マーカー。 コメント (/* \*/) では使用できません、[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンド。  
+>  SQL Native Client OLE DB プロバイダーでは、FROM 句が含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UPDATE ステートメントや DELETE ステートメント、パラメーターを含むサブクエリに依存する SQL ステートメント、比較の両方の式、LIKE 述部、および定量化された述語内にパラメーター マーカーを含む SQL ステートメント、またはパラメーターのいずれかが、関数に対するパラメーターになっているクエリの場合は、**ICommandWithParameters::GetParameterInfo** を呼び出すことはできません。 また、SQL ステートメントをバッチ処理する場合、バッチ内の最初のステートメントの後にあるステートメント内のパラメーター マーカーに対して、**ICommandWithParameters::GetParameterInfo** を呼び出すことはできません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド内ではコメント (/* \*/) を使用できません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、SQL ステートメント コマンドの入力パラメーターをサポートしています。 プロシージャ呼び出しコマンドで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、入力、出力、および入力/出力パラメーターをサポートしています。 出力パラメーターの値は、実行時 (行セットが返されない場合のみ)、または返されたすべての行セットがアプリケーションによって使用されたときにアプリケーションに返されます。 返される値が有効であることを確認するを使用して**IMultipleResults**行セットの使用量を強制的にします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、SQL ステートメント コマンドの入力パラメーターをサポートしています。 プロシージャ呼び出しコマンドで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、入力、出力、および入力/出力パラメーターをサポートしています。 出力パラメーターの値は、実行時 (行セットが返されない場合のみ)、または返されたすべての行セットがアプリケーションによって使用されたときにアプリケーションに返されます。 返される値が有効であることを保証するには、**IMultipleResults** を使用して行セットを強制的に使用します。  
   
  ストアド プロシージャ パラメーターの名前を DBPARAMBINDINFO 構造体で指定する必要はありません。 NULL の値を使用、 *pwszName*メンバーを示すために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがパラメーター名を無視しで指定された序数だけを使用する必要があります、 *rgParamOrdinals*のメンバー **icommandwithparameters::setparameterinfo**します。 コマンド テキストに名前付きのパラメーターと名前のないパラメーターの両方が含まれている場合、どの名前付きパラメーターよりも前に、名前のないパラメーターをすべて指定する必要があります。  
   

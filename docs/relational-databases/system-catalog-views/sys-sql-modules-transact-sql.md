@@ -1,5 +1,5 @@
 ---
-title: sys.sql_modules (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sql_modules (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: af128c6c3b28c448111f49adf55c66c12ab4bbae
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7277009805307ed5f9208227cc98c72df3fc3e2a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222093"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542352"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SQL 言語定義モジュールであるオブジェクトごとに行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ネイティブを含むユーザー定義のスカラー関数をコンパイルします。 種類が P、RF、V、TR、FN、IF、TF、および R のオブジェクトには、SQL モジュールが関連付けられています。 スタンドアロンの既定値である種類 D のオブジェクトにも、このビューで SQL モジュール定義が関連付けられています。 これらの型の説明は、次を参照してください。、**型**内の列、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューです。  
+  SQL 言語定義モジュールであるオブジェクトごとの行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ネイティブを含むユーザー定義のスカラー関数をコンパイルします。 種類が P、RF、V、TR、FN、IF、TF、および R のオブジェクトには、SQL モジュールが関連付けられています。 スタンドアロンの既定値である種類 D のオブジェクトにも、このビューで SQL モジュール定義が関連付けられています。 これらの型の説明は、次を参照してください。、**型**内の列、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューです。  
   
  詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このオブジェクトが属するオブジェクトの ID です。 データベース内で一意です。|  
 |**definition**|**nvarchar(max)**|このモジュールを定義する SQL テキスト。 使用してこの値を取得することも、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)組み込み関数。<br /><br /> NULL は、暗号化されていることを示します。|  
@@ -49,16 +49,16 @@ ms.locfileid: "33222093"
 |**uses_database_collation**|**bit**|スキーマ バインドのモジュール定義が適切な評価のためにデータベースの既定の照合順序に依存する場合は 1 になります。それ以外の場合は 0 になります。 このような依存関係により、データベースの既定の照合順序は変更されないようになっています。|  
 |**is_recompiled**|**bit**|プロシージャは WITH RECOMPILE オプションを使用して作成されました。|  
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力上で NULL 出力を生成するように宣言されました。|  
-|**execute_as_principal_id**|**Int**|EXECUTE AS データベース プリンシパルの ID です。<br /><br /> 既定値または EXECUTE AS CALLER の場合は、NULL になります。<br /><br /> 場合は、指定されたプリンシパル ID EXECUTE AS SELF または EXECUTE AS\<プリンシパル >。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**Int**|EXECUTE AS データベース プリンシパルの ID です。<br /><br /> 既定値または EXECUTE AS CALLER の場合は、NULL になります。<br /><br /> 場合は、指定したプリンシパルの ID または EXECUTE AS SELF の実行\<プリンシパル >。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 0 = ネイティブでコンパイルされていない<br /><br /> 1 = ネイティブでコンパイルされている<br /><br /> 既定値は 0 です。|  
   
-## <a name="remarks"></a>解説  
- 既定の制約、D 型のオブジェクトの SQL 式に存在、 [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)カタログ ビューです。 CHECK 制約、C の型のオブジェクトの SQL 式に存在、 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)カタログ ビューです。  
+## <a name="remarks"></a>コメント  
+ 既定の制約では、種類 D のオブジェクトの SQL 式がある、 [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)カタログ ビューです。 CHECK 制約、C の型のオブジェクトの SQL 式がある、 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)カタログ ビューです。  
   
- この情報が記載されています[sys.dm_db_uncontained_entities &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)です。  
+ この情報が記載されても[sys.dm_db_uncontained_entities &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)します。  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、現在のデータベース内の各モジュールの名前、型、および定義を返します。  

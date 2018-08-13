@@ -17,13 +17,13 @@ caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 58e1abe1c2c0f69abacc6279113f49f75fd0ae79
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 01b8dfa06a36605fd4ef4bcb38b2bfa91fb8d538
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424121"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552542"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -174,7 +174,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  この属性を使用して接続を確立するには後からアプリケーションに照会できます[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)フェールオーバー パートナーの id を確認します。 プライマリ サーバーのフェールオーバー パートナーが存在しないと、この属性は空文字列を返します。 アプリケーションでは最後に判別したバックアップ サーバーをキャッシュできますが、この情報は最初に接続を確立したとき、または接続がリセットされたとき (接続がプールされている場合) にだけ更新されることに注意する必要があります。接続が長期にわたると、この情報は古くなることがあります。  
   
- 詳細については、次を参照してください。 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)します。  
+ 詳細については、「[データベース ミラーリングの使用](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY 属性は、サーバー ログインでアクセス違反を検出するために Windows 認証を使用することを強制します。 Windows 認証を使用すると、ドライバーがの一部として提供されるユーザー id とパスワードの値を無視**SQLConnect**、 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)、または[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)処理します。  

@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_runtime_stats_interval (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.query_store_runtime_stats_interval (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -25,28 +25,28 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4357eaf9abe519cc3238acddedc6fc8168db5fa5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5808cc6432087572946ea63436534dd6bfd35844
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180078"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559622"
 ---
 # <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   クエリの実行の統計情報が収集されたランタイムでは、各間隔の開始および終了時間について説明します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_interval_id**|**bigint**|主キー。|  
 |**start_time**|**datetimeoffset**|間隔の時間を開始します。|  
 |**end_time**|**datetimeoffset**|間隔の終了時刻です。|  
 |**comment**|**nvarchar(32)**|常に NULL になります。|  
   
-## <a name="permissions"></a>権限  
- 必要があります、 **VIEW DATABASE STATE**権限です。  
+## <a name="permissions"></a>アクセス許可  
+ 必要があります、 **VIEW DATABASE STATE**権限。  
   
 ## <a name="see-also"></a>参照  
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

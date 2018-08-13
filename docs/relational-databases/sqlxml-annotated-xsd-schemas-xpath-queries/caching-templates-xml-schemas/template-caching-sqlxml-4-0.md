@@ -1,5 +1,5 @@
 ---
-title: テンプレートのキャッシュ (SQLXML 4.0) |Microsoft Docs
+title: テンプレート キャッシュ (SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f4ba78383ac3b0b8b1065ae27aa064a99b3566d9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cfdf1b96171b101a8eae15196d2afdaff38441f7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050052"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560812"
 ---
 # <a name="template-caching-sqlxml-40"></a>テンプレートのキャッシュ (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- テンプレートのサイズは、使用できるメモリと使用しているテンプレートの数に基づいて設定します。 既定値は**TemplateCacheSize**サイズは 31 です。 テンプレートのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
+ テンプレートのサイズは、使用できるメモリと使用しているテンプレートの数に基づいて設定します。 デフォルトの**TemplateCacheSize**サイズは、31 です。 テンプレートのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
   
- パフォーマンスの向上のためお勧め設定した**TemplateCacheSize**通常使用するテンプレートの数より大きい。 場合**TemlateCacheSize**が小さいするテンプレートの数よりパフォーマンスが低下としてテンプレートの増加の数。 **TemplateCacheSize** 128 までの値に設定することができます。  
+ パフォーマンス向上のためお勧め設定する**TemplateCacheSize**通常使用するテンプレートの数よりも高い。 場合**TemlateCacheSize**は、以下のテンプレートの増加数と、あるテンプレートの数よりもパフォーマンスが低下します。 **TemplateCacheSize**最大値は 128 に設定することができます。  
   
  キャッシュされたテンプレートが使用されるときには、毎回テンプレート ファイルの変更回数がチェックされ、更新が必要がどうかが決定されます。 これは、ディスク コピーがキャッシュ コピーより新しいためです。  
   
@@ -50,7 +50,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 >  テンプレートのパラメーターとコマンド プロパティはキャッシュされません。  
   
 ## <a name="see-also"></a>参照  
- [スキーマのキャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)   
+ [スキーマ キャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)   
  [XSL のキャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

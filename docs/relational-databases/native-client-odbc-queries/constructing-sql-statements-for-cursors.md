@@ -1,5 +1,5 @@
 ---
-title: カーソル用の SQL ステートメントの作成 |Microsoft Docs
+title: カーソルの SQL ステートメントを構築します。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3fc247de8bfc69a1851f8c1bf820a9076cf562ad
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a2c9d73ec7599c9b1b969eb57d21beb1947355d2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416951"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561092"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>カーソル用の SQL ステートメントの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、サーバー カーソルを使用して、ODBC 仕様で定義されているカーソル機能を実装します。 ODBC アプリケーションを使用してカーソルの動作を制御する[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)別のステートメント属性を設定します。 次に、属性とその既定値を示します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは、ODBC の仕様で定義されているカーソル機能を実装するためにサーバー カーソルを使用します。 ODBC アプリケーションを使用して、カーソルの動作を制御する[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)別のステートメントの属性を設定します。 次に、属性とその既定値を示します。  
   
 |属性|既定|  
 |---------------|-------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "37416951"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- SQL ステートメントの実行時にこれらのオプションが既定値に設定されて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、結果セットを実装するために、サーバー カーソルを使用しません。 代わりに、既定の結果セットを使用します。 これらのオプションは、SQL ステートメントの実行時にその既定値から変更された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは結果セットを実装するために、サーバー カーソルを使用しようとしています。  
+ これらのオプションは、SQL ステートメントの実行時にデフォルト値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の結果セットを実装するためにネイティブ クライアントの ODBC ドライバーがサーバー カーソルを使用できません; 代わりに、既定の結果セットを使用します。 これらのオプションのいずれかが、SQL ステートメントの実行時に既定値から変更された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは結果セットを実装するためにサーバー カーソルを使用しようとしています。  
   
  既定の結果セットは、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをサポートします。 既定の結果セットを使用するときに実行できる SQL ステートメントの種類に制限はありません。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "37416951"
   
      キーワード FOR BROWSE または INTO を伴う SELECT ステートメント。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、上記の条件のいずれかに該当する SQL ステートメントをサーバー カーソルを使用して実行した場合、サーバー カーソルは暗黙的に既定の結果セットに変換されます。 後**SQLExecDirect**または**SQLExecute**属性は既定の設定に戻して、カーソル、SQL_SUCCESS_WITH_INFO が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、上記の条件のいずれかに該当する SQL ステートメントをサーバー カーソルを使用して実行した場合、サーバー カーソルは暗黙的に既定の結果セットに変換されます。 後**される**または**SQLExecute** SQL_SUCCESS_WITH_INFO、属性の既定の設定に戻す設定は、カーソルを返します。  
   
  上記の分類に該当しない SQL ステートメントは、ステートメント属性の設定がどのようであっても実行できます。既定の結果セット、サーバー カーソルを問わず、どちらも正常に機能します。  
   
@@ -80,7 +80,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- このメッセージを受信する ODBC アプリケーションで呼び出すことができます[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)現在のカーソル設定を決定します。  
+ このメッセージが表示、ODBC アプリケーションが呼び出すことができます[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)現在のカーソルの設定を決定します。  
   
  サーバー カーソルを使用しているときに、複数の SELECT ステートメントから構成されるプロシージャを実行すると、次のエラーが発生します。  
   

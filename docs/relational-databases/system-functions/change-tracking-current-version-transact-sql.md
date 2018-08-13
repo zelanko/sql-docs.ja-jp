@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_CURRENT_VERSION (TRANSACT-SQL) |Microsoft ドキュメント
+title: CHANGE_TRACKING_CURRENT_VERSION (Transact SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a83c0a60da4029892b258443833902f24c954d19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e317243066e51a9c253af8177d8245fa33dac5a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230239"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540472"
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  最後にコミットされたトランザクションに関連付けられているバージョンを返します。 使用して変更を列挙するときに、このバージョンを使用できる[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)です。  
+  最後にコミットされたトランザクションに関連付けられているバージョンを返します。 使用して変更を列挙する場合は、このバージョンを使用することができます[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="return-type"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースで変更の追跡が有効になっていない場合に、NULL を返します。  
   
 ## <a name="examples"></a>使用例  

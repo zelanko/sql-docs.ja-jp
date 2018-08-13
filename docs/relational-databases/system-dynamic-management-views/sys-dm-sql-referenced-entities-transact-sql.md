@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referenced_entities (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_sql_referenced_entities (Transact SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/09/2017
 ms.prod: sql
@@ -23,17 +23,18 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a5eef60da505ab939908c22ce47311dfb5f070ea
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9dff46e117f5c75162e7fd8e0f717a0e72829714
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541682"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定された参照元エンティティの定義で名前によって参照される各ユーザー定義エンティティに 1 つの行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 1 つのユーザー定義エンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる、別のユーザー定義エンティティの保存されている SQL 式で名前によって表示される、*エンティティを参照します*。 たとえば、参照元エンティティとしてストアド プロシージャを指定した場合、この関数は、そのストアド プロシージャの中で参照されたすべてのユーザー定義エンティティ (テーブル、ビュー、ユーザー定義型 (UDT)、他のストアド プロシージャなど) を返します。  
+  各ユーザー定義エンティティを名前で指定された参照元エンティティの定義で参照されている 1 つの行を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 1 つのユーザー定義エンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる、別のユーザー定義エンティティの保存されている SQL 式で名前によって表示される、*エンティティを参照します*。 たとえば、参照元エンティティとしてストアド プロシージャを指定した場合、この関数は、そのストアド プロシージャの中で参照されたすべてのユーザー定義エンティティ (テーブル、ビュー、ユーザー定義型 (UDT)、他のストアド プロシージャなど) を返します。  
   
  この動的管理関数に参照元エンティティを指定すると、そのエンティティによって参照された次の種類のエンティティをレポートできます。  
   
@@ -69,37 +70,37 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="arguments"></a>引数  
  [ *schema_name*. *referencing_entity_name*  
- 参照元エンティティの名前です。 *schema_name*参照元のクラスが OBJECT の場合は必須です。  
+ 参照元エンティティの名前です。 *schema_name*が参照するクラスがオブジェクトである場合に必要です。  
   
- *schema_name.referencing_entity_name*は**nvarchar (517)** です。  
+ *schema_name.referencing_entity_name* 、 **nvarchar(517)**。  
   
- *< Referencing_class >* :: = {オブジェクト |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER です。  
+ *< Referencing_class >* :: = {オブジェクト。DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  指定された参照元エンティティのクラスです。 クラスは 1 つのステートメントに 1 つだけ指定できます。  
   
- *< referencing_class >* は**nvarchar (60)** です。  
+ *< referencing_class >* 、 **nvarchar(60)**。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|参照元エンティティが列の場合は列 ID。それ以外の場合は 0。 NULL 値は許可されません。|  
-|referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> 有効な 4 部構成の名前を指定することによって作成されたサーバー間依存関係については、この列に値が格納されます。 マルチパート名については、次を参照してください。 [TRANSACT-SQL 構文表記規則&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)です。<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド依存関係の場合は NULL。<br /><br /> 同じデータベースに存在する必要がありますをのみ定義できます 2 つの部分を使用するためのスキーマ バインド エンティティの場合は NULL (*schema.object*) 名です。|  
-|referenced_database_name|**sysname**|参照先エンティティのデータベース名。<br /><br /> 有効な 3 部構成または 4 部構成の名前を指定することによって作成された複数データベースまたは複数サーバーにまたがる参照については、この列に値が格納されます。<br /><br /> 1 部構成または 2 部構成の名前を使って指定された非スキーマ バインド参照の場合は NULL。<br /><br /> 同じデータベースに存在する必要がありますをのみ定義できます 2 つの部分を使用するためのスキーマ バインド エンティティの場合は NULL (*schema.object*) 名です。|  
+|referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> 有効な 4 部構成の名前を指定することによって作成されたサーバー間依存関係については、この列に値が格納されます。 マルチパート名については、次を参照してください。 [TRANSACT-SQL 構文表記規則&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)します。<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド依存関係の場合は NULL。<br /><br /> のみ定義できます 2 つの部分を使用して、同じデータベースである必要がありますのでスキーマ バインド エンティティの場合は NULL (*schema.object*) の名前。|  
+|referenced_database_name|**sysname**|参照先エンティティのデータベース名。<br /><br /> 有効な 3 部構成または 4 部構成の名前を指定することによって作成された複数データベースまたは複数サーバーにまたがる参照については、この列に値が格納されます。<br /><br /> 1 部構成または 2 部構成の名前を使って指定された非スキーマ バインド参照の場合は NULL。<br /><br /> のみ定義できます 2 つの部分を使用して、同じデータベースである必要がありますのでスキーマ バインド エンティティの場合は NULL (*schema.object*) の名前。|  
 |referenced_schema_name|**sysname**|参照先エンティティが属しているスキーマ。<br /><br /> スキーマ名を指定せずにエンティティが参照される非スキーマ バインド参照の場合は NULL。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
 |referenced_entity_name|**sysname**|参照先エンティティの名前。 NULL 値は許可されません。|  
 |referenced_minor_name|**sysname**|参照先エンティティが列の場合は列名。それ以外の場合は NULL。 たとえば、参照先エンティティ自体を一覧表示する行では、referenced_minor_name は NULL になります。<br /><br /> 参照元エンティティの中で列が名前で指定されていた場合、または SELECT * ステートメントの中で親エンティティが使用されていた場合、参照先エンティティは列になります。|  
-|referenced_id|**int**|参照先エンティティの ID。 referenced_minor_id が 0 以外の場合、referenced_id は、その列が定義されているエンティティになります。<br /><br /> 複数サーバーにまたがる参照の場合は常に NULL。<br /><br /> 複数データベースにまたがる参照で、データベースがオフラインか、エンティティをバインドできないために ID を判別できない場合は NULL。<br /><br /> データベース内の参照で ID を判別できない場合は、NULL。 非スキーマ バインド参照のため、データベース内、または名前解決が呼び出し元に依存、参照先エンティティが存在しない場合に、ID を解決できません。  後者の場合は、is_caller_dependent は 1 に設定されます。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
+|referenced_id|**int**|参照先エンティティの ID。 referenced_minor_id が 0 以外の場合、referenced_id は、その列が定義されているエンティティになります。<br /><br /> 複数サーバーにまたがる参照の場合は常に NULL。<br /><br /> 複数データベースにまたがる参照で、データベースがオフラインか、エンティティをバインドできないために ID を判別できない場合は NULL。<br /><br /> データベース内の参照で ID を判別できない場合は、NULL。 非スキーマ バインド参照では、データベース、または名前解決は、呼び出し元に依存する参照先のエンティティが存在しない場合、ID を解決できません。  後者の場合、is_caller_dependent が 1 に設定されています。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
 |referenced_minor_id|**int**|参照先エンティティが列の場合は列 ID。それ以外の場合は 0。 たとえば、参照先エンティティ自体を一覧表示する行では、referenced_minor_id は 0 になります。<br /><br /> 非スキーマ バインド参照の場合、列の依存関係は、すべての参照先エンティティがバインドできる場合にのみ報告されます。 バインドできない参照先エンティティが 1 つでも存在した場合、列レベルの依存関係は報告されず、referenced_minor_id は 0 になります。 例 D を参照してください。|  
 |referenced_class|**tinyint**|参照先エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 6 = 型<br /><br /> 10 = XML スキーマ コレクション<br /><br /> 21 = パーティション関数|  
 |referenced_class_desc|**nvarchar(60)**|参照先エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
-|is_caller_dependent|**bit**|スキーマ バインド参照先エンティティが実行時に発生したことを示します。そのため、エンティティ ID の解決は、呼び出し元のスキーマに依存します。 これが該当するのは、参照先エンティティがストアド プロシージャ、拡張ストアド プロシージャ、または、EXECUTE ステートメント内で呼び出されるユーザー定義関数である場合です。<br /><br /> 1 = 参照先エンティティが呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティの ID は呼び出し元に依存しません。 スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただし、形式の参照`EXEC MyDatabase..MyProc`が呼び出し元が依存しています。|  
-|is_ambiguous|**bit**|参照があいまいで、実行時、ユーザー定義関数、ユーザー定義型 (UDT)、または型の列への xquery 参照に解決できることを示します**xml**です。 たとえば、ステートメント`SELECT Sales.GetOrder() FROM Sales.MySales`ストアド プロシージャで定義されています。 `Sales.GetOrder()` が `Sales` スキーマ内のユーザー定義関数なのか、`Sales` という名前のメソッドを持つ UDT 型の `GetOrder()` という名前の列なのかは、ストアド プロシージャが実行されるまで不明です。<br /><br /> 1 = ユーザー定義関数の参照なのか、列のユーザー定義型 (UDT) のメソッドなのかがあいまいです。<br /><br /> 0 = 参照は明確です。つまり、関数を呼び出したときに、エンティティを正しくバインドできます。<br /><br /> スキーマ バインド参照の場合は常に 0 になります。|  
+|is_caller_dependent|**bit**|参照先エンティティのスキーマ バインドが実行時に発生することを示します。したがって、エンティティ ID の解決方法は、呼び出し元のスキーマに依存します。 これが該当するのは、参照先エンティティがストアド プロシージャ、拡張ストアド プロシージャ、または、EXECUTE ステートメント内で呼び出されるユーザー定義関数である場合です。<br /><br /> 1 = 参照先エンティティが呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティの ID は呼び出し元に依存しません。 スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただしの形式での参照を`EXEC MyDatabase..MyProc`は呼び出し元が依存します。|  
+|is_ambiguous|**bit**|参照があいまいであり、実行時、ユーザー定義関数、ユーザー定義型 (UDT)、または型の列への xquery 参照に解決できることを示します**xml**します。 たとえば、ステートメント`SELECT Sales.GetOrder() FROM Sales.MySales`ストアド プロシージャで定義されています。 `Sales.GetOrder()` が `Sales` スキーマ内のユーザー定義関数なのか、`Sales` という名前のメソッドを持つ UDT 型の `GetOrder()` という名前の列なのかは、ストアド プロシージャが実行されるまで不明です。<br /><br /> 1 = ユーザー定義関数の参照なのか、列のユーザー定義型 (UDT) のメソッドなのかがあいまいです。<br /><br /> 0 = 参照は明確です。つまり、関数を呼び出したときに、エンティティを正しくバインドできます。<br /><br /> スキーマ バインド参照の場合は常に 0 になります。|  
 |is_selected|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトまたは列が選択されています。|  
 |is_updated|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトまたは列が変更されています。|  
 |is_select_all|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトは SELECT * 句で使用されています (オブジェクトレベルのみ)。|  
 |is_all_columns_found|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトに対するすべての列の依存関係が見つかりました。<br /><br /> 0 = オブジェクトに対する列の依存関係が見つかりませんでした。|
-|is_insert_all|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = 列のリスト (オブジェクト レベルのみ) のない INSERT ステートメントで、オブジェクトを使用します。|  
-|is_incomplete|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = オブジェクトまたは列を選択して、バインド エラーが完全ではありません。|
+|is_insert_all|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = INSERT ステートメントに列の一覧 (オブジェクト レベルのみ) で、オブジェクトが使用されます。|  
+|is_incomplete|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = オブジェクトまたは列バインド エラーが発生し、完全ではありません。|
   
 ## <a name="exceptions"></a>例外  
  次のいずれかの条件に該当した場合は、空の結果セットが返されます。  
@@ -116,14 +117,14 @@ sys.dm_sql_referenced_entities (
   
  列の依存関係を解決できない場合は、エラー 2020 が返されます。 このエラーによって、クエリからオブジェクト レベルの依存関係が返されなくなることはありません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数は、サーバー レベルの DDL トリガーを参照するエンティティを取得するために、任意のデータベースのコンテキストで実行できます。  
   
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 ルール、既定値、一時テーブル、一時ストアド プロシージャ、またはシステム オブジェクトについては、依存関係情報は作成も管理もされません。  
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
-|Table|可*|はい|  
+|テーブル|可*|はい|  
 |表示|はい|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
@@ -140,17 +141,17 @@ sys.dm_sql_referenced_entities (
 |XML スキーマ コレクション|いいえ|はい|  
 |パーティション関数|いいえ|はい|  
   
- \* テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
+ \* テーブルは、参照する場合にのみ、参照元エンティティとして追跡を[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
   
  ** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  sys.dm_sql_referenced_entities に対する SELECT 権限および参照元エンティティに対する VIEW DEFINITION 権限が必要です。 既定では、SELECT 権限が public に与えられます。 参照元エンティティがデータベース レベルの DDL トリガーである場合は、データベースに対する VIEW DEFINITION 権限またはデータベースに対する ALTER DATABASE DDL TRIGGER 権限が必要です。 参照元エンティティがサーバー レベルの DDL トリガーである場合は、サーバーに対する VIEW ANY DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. データベース レベルの DDL トリガーによって参照されるエンティティを取得する  
- 次の例は、データベース レベルの DDL トリガーによって参照されるエンティティ (テーブルおよび列) を返します`ddlDatabaseTriggerLog`です。  
+ 次の例は、データベース レベルの DDL トリガーによって参照されるエンティティ (テーブルおよび列) を返します`ddlDatabaseTriggerLog`。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -174,7 +175,7 @@ GO
 ```  
   
 ### <a name="c-returning-column-dependencies"></a>C. 列の依存関係を取得する  
- 次の例は、テーブルを作成`Table1`計算列を持つ`c`の列の合計として定義されている`a`と`b`です。 その後、`sys.dm_sql_referenced_entities` ビューが呼び出されます。 このビューは、2 つの行 (計算列で定義された各列につき 1 行) を返します。  
+ テーブルを作成する例を次`Table1`計算列を持つ`c`列の合計として定義されている`a`と`b`。 その後、`sys.dm_sql_referenced_entities` ビューが呼び出されます。 このビューは、2 つの行 (計算列で定義された各列につき 1 行) を返します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -203,7 +204,7 @@ GO
 ```
 
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. 非スキーマ バインド列の依存関係を取得する  
- 次の例では削除`Table1`を作成および`Table2`ストアド プロシージャと`Proc1`です。 プロシージャの参照`Table2`および存在しないテーブル`Table1`です。 ビュー`sys.dm_sql_referenced_entities`参照元エンティティとして指定されたストアド プロシージャを使用して実行します。 結果セットには、`Table1` に対する 1 行と `Table2` に対する 3 行があります。 `Table1`が存在しない列の依存関係を解決することはできませんし、エラー 2020 が返されます。 `is_all_columns_found` 列の `Table1` に対する 0 は、検出できなかった列があることを示します。  
+ 次の例`Table1`を作成し、`Table2`ストアド プロシージャと`Proc1`。 プロシージャの参照`Table2`と、存在しないテーブルの`Table1`です。 ビュー`sys.dm_sql_referenced_entities`参照元エンティティとして指定されているストアド プロシージャを使用して実行します。 結果セットには、`Table1` に対する 1 行と `Table2` に対する 3 行があります。 `Table1`が存在しない列の依存関係を解決することはできませんし、エラー 2020 が返されます。 `is_all_columns_found` 列の `Table1` に対する 0 は、検出できなかった列があることを示します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -268,7 +269,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. オブジェクトまたは列の使用状況を返す  
- 次の例では、ストアド プロシージャ `HumanResources.uspUpdateEmployeePersonalInfo` のオブジェクトと列の依存関係を返します。 この手順の列を更新する`NationalIDNumber`、 `BirthDate,``MaritalStatus`、および`Gender`の`Employee`テーブルに基づいて、指定された`BusinessEntityID`値。 別のストアド プロシージャ、 `upsLogError` TRY で定義されています.CATCH ブロックの実行エラーをキャプチャします。 `is_selected`、`is_updated`、および `is_select_all` 列では、参照元オブジェクト内でのこれらのオブジェクトと列の使用方法についての情報が返されます。 変更されているテーブルと列は、is_updated 列で 1 と示されます。 `BusinessEntityID`列のみが選択されていると、ストアド プロシージャ`uspLogError`は、選択も変更します。  
+ 次の例では、ストアド プロシージャ `HumanResources.uspUpdateEmployeePersonalInfo` のオブジェクトと列の依存関係を返します。 この手順は、列を更新`NationalIDNumber`、 `BirthDate,``MaritalStatus`、および`Gender`の`Employee`テーブルに基づいて、指定した`BusinessEntityID`値です。 別のストアド プロシージャでは、`upsLogError`に定義されています.CATCH ブロックに実行エラーをキャプチャします。 `is_selected`、`is_updated`、および `is_select_all` 列では、参照元オブジェクト内でのこれらのオブジェクトと列の使用方法についての情報が返されます。 変更されているテーブルと列は、is_updated 列で 1 と示されます。 `BusinessEntityID`のみ選択されている列とストアド プロシージャ`uspLogError`は、選択されても変更します。  
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

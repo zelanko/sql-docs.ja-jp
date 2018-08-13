@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM - ICommandText にバインドされた ISequentialStream へのデータの送信 |Microsoft Docs
+title: FILESTREAM の ISequentialStream のバインドする場合にデータを送信します。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e15ea6d968aef52c41c325bebfc6898f28050050
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 632fb5e95def0791be11969efb7714ddbe2ec50f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407623"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561052"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM - ICommandText にバインドされた ISequentialStream にデータを送信します。
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "37407623"
   
  Compile ICommandUpload.cpp、ISSHelper.cpp、ole32.lib、および oleaut32.lib をコンパイルします。  
   
- このサンプルを実行すると、する必要がありますに合格すると、サーバー、またはの server \instance_name 値の名前を 4 MB (0x400001) 間と 4 GB (0 xffffffff) データの量を示す記述にします。  
+ このサンプルを実行するには、サーバーの名前 (server\instance_name) に加えて、書き込むデータのサイズを指定する 4 MB (0x400001) から 4 GB (0xFFFFFFFF) の値を渡す必要があります。  
   
  4 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストは、このサンプルで作成したデータベースを削除します。  
   

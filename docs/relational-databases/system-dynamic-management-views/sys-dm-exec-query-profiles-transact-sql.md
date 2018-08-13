@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_profiles (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f515f52c624eb0fdb0570f9346c2e5a043efa6d2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046140"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540523"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "38046140"
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
- 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、標準的なクエリの実行統計プロファイリング インフラストラクチャでは、軽量なクエリの実行統計プロファイリング インフラストラクチャのサイド バイ サイドでが存在します。 新しいクエリ実行統計プロファイリング インフラストラクチャは、行の実際の数などの演算子ごとのクエリ実行統計を収集する場合のパフォーマンスのオーバーヘッドを大幅に削減します。 グローバルを使用してこの機能を有効にすることができますスタートアップ[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)が自動的にオン query_thread_profile 拡張イベントを使用する場合またはします。
+ 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、標準的なクエリの実行統計プロファイリング インフラストラクチャでは、軽量なクエリの実行統計プロファイリング インフラストラクチャのサイド バイ サイドでが存在します。 新しいクエリ実行統計プロファイリング インフラストラクチャは、行の実際の数などの演算子ごとのクエリ実行統計を収集する場合のパフォーマンスのオーバーヘッドを大幅に削減します。 グローバルを使用するか、この機能を有効にすることができますスタートアップ[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)query_thread_profile の拡張イベントを使用する場合自動的に有効または。
 
 >[!NOTE]
 > CPU と経過時間は、パフォーマンスに与える影響を軽減する軽量なクエリの実行統計プロファイリング インフラストラクチャでサポートされていません。

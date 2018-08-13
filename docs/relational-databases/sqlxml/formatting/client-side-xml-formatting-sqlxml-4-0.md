@@ -1,5 +1,5 @@
 ---
-title: クライアント側の XML 書式設定 (SQLXML 4.0) |Microsoft ドキュメント
+title: クライアント側の XML の書式設定 (SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8fa08dbdb74ae8fcf7aa61b5f35fa98249b40277
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a685297ebdfaaff343e6e404864989baabc1109d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972827"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560872"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>クライアント側の XML 書式設定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   ここでは、クライアント側の XML 書式設定に関する情報を提供します。 クライアント側の書式設定とは、中間層での XML の書式設定を指します。  
   
 > [!NOTE]  
->  ここでは、クライアント側での FOR XML 句の使用に関する追加情報を提供します。ここでは、FOR XML 句について理解していることを前提としています。 FOR XML の詳細については、次を参照してください。 [For を使用して XML](../../../relational-databases/xml/for-xml-sql-server.md)です。  
+>  ここでは、クライアント側での FOR XML 句の使用に関する追加情報を提供します。ここでは、FOR XML 句について理解していることを前提としています。 FOR XML の詳細についてを参照してください[を構築する XML を使用しての XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
   
- **重要な**に新しいクライアント側の FOR XML 機能を使用する**xml**データ型の場合は、クライアントで使用する常に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLOLEDB プロバイダーではなく Native Client (SQLNCLI11) データ プロバイダー。 SQLNCLI11 は、最新バージョンの SQL Server プロバイダーであり、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータ型を完全に認識します。 クライアント側では、SQLOLEDB プロバイダーでは FOR XML の処理の動作は、 **xml**データ型を文字列として。  
+ **重要な**新しいクライアント側の XML 機能を使用する**xml**データ型では、クライアントを使用する必要があります常に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLOLEDB プロバイダーではなくデータ プロバイダーのネイティブ クライアント (SQLNCLI11)。 SQLNCLI11 は、最新バージョンの SQL Server プロバイダーであり、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータ型を完全に認識します。 SQLOLEDB プロバイダーでは、FOR XML を処理するクライアント側の動作**xml**の文字列としてのデータ型です。  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>クライアント側での XML ドキュメントの書式設定  
  クライアント アプリケーションで次のクエリを実行するとします。  
@@ -53,7 +53,7 @@ SELECT FirstName, LastName
 FROM   Person.Contact  
 ```  
   
- サーバーは、クエリを実行し、クライアントに (FirstName および LastNamecolumns が含まれています) を行セットを返します。 次に、中間層で、行セットに FOR XML 変換が適用され、XML の書式設定がクライアントに返されます。  
+ サーバーはクエリを実行し、クライアントに行セットを含む] フィールドと [LastNamecolumns) を返します。 次に、中間層で、行セットに FOR XML 変換が適用され、XML の書式設定がクライアントに返されます。  
   
  同様に、XPath クエリを実行すると、サーバーからクライアントに行セットが返され、クライアント側で行セットに FOR XML EXPLICIT 変換が適用されて、目的の XML の書式設定が生成されます。  
   
@@ -95,7 +95,7 @@ AS
 </ROOT>  
 ```  
   
- **クライアント側の xml**属性は、テンプレートで 1 (true) に設定されて、サーバーで、ストアド プロシージャを実行、およびサーバーによって返される 2 つの列の行セットが、中間層で XML に変換されに返されますクライアントです。 次に示すのは結果の一部です。  
+ **クライアント側の xml**属性が 1 (true) に、テンプレートの設定、サーバー上でストアド プロシージャを実行し、サーバーによって返される 2 つの列の行セットが中間層で XML に変換してに返されるクライアントです。 次に示すのは結果の一部です。  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -105,7 +105,7 @@ AS
 ```  
   
 > [!NOTE]  
->  SQLXMLOLEDB プロバイダー、または SQLXML マネージ クラスを使用しているときに行うこともできます、 **ClientSideXml**プロパティを要求するクライアント側の XML 書式設定します。  
+>  SQLXMLOLEDB プロバイダーまたは SQLXML マネージ クラスを使用しているときに使用できます、 **ClientSideXml**プロパティをクライアント側の XML 書式設定を要求します。  
   
 ### <a name="the-workload-is-more-balanced"></a>ワークロードをより適切に分散できる。  
  クライアントで XML 書式設定を行うため、サーバーとクライアント間でワークロードがより適切に分散され、サーバーで他の処理を実行できるようになります。  
@@ -115,28 +115,28 @@ AS
   
 -   SQLXMLOLEDB プロバイダー  
   
--   SQLXML マネージ クラス  
+-   SQLXML マネージド クラス  
   
 -   拡張 XML テンプレートのサポート  
   
 -   SqlXmlCommand.ClientSideXml プロパティ  
   
-     SQLXML マネージ クラスのこのプロパティを true に設定すると、クライアント側の書式設定を指定できます。  
+     SQLXML マネージド クラスのこのプロパティを true に設定すると、クライアント側の書式設定を指定できます。  
   
-## <a name="enhanced-xml-template-support"></a>拡張 XML テンプレートのサポート  
- 以降で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、XML テンプレート[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を追加で強化されています、**クライアント側の xml**属性。 この属性を true に設定すると、XML がクライアント側で書式設定されます。 このテンプレート属性は機能は、SQLXMLOLEDB プロバイダー固有 ClientSideXML プロパティと同じことに注意してください。  
+## <a name="enhanced-xml-template-support"></a>強化された XML テンプレートのサポート  
+ 始まる[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、XML テンプレートに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の追加により強化されています、**クライアント側の xml**属性です。 この属性を true に設定すると、XML がクライアント側で書式設定されます。 SQLXMLOLEDB プロバイダーに固有の ClientSideXML プロパティと同じ機能でこのテンプレートの属性であるに注意してください。  
   
 > [!NOTE]  
->  SQLXMLOLEDB プロバイダーを使用している ADO アプリケーションで XML テンプレートを実行して、両方を指定する場合、**クライアント側の xml**テンプレートとプロバイダー、ClientSideXML プロパティで指定された値の属性、テンプレートが優先されます。  
+>  SQLXMLOLEDB プロバイダーを使用している ADO アプリケーションでの XML テンプレートを実行して、両方を指定する場合、**クライアント側の xml**テンプレートと ClientSideXML プロパティで指定された値プロバイダー内の属性、テンプレートが優先されます。  
   
 ## <a name="see-also"></a>参照  
- [クライアント側およびサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [クライアント側とサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
  [XML のセキュリティに関する考慮事項の&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [xml SQLXML 4.0 でのデータ型のサポート](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   
  [SQLXML マネージ クラス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [クライアント側とサーバー側の XML 書式設定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
- [SqlXmlCommand オブジェクト & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [SqlXmlCommand オブジェクト&#40;SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
  [XML データ &#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
   
   

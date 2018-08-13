@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sql_text (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_sql_text (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -23,17 +23,18 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21b22b837cc4e46bdd5169b0c669e7dde74c029c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5bc68b376f5524324756715497c00094eb2ed101
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557142"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  SQL のテキストがされているバッチを返しますが、指定したで識別される*sql_handle*です。 このテーブル値関数は、システム関数を置き換えます**fn_get_sql**です。  
+  SQL のテキストがされているバッチを返しますが、指定した識別*sql_handle*します。 このテーブル値関数は、システム関数を置き換える**fn_get_sql**します。  
   
  
 ## <a name="syntax"></a>構文  
@@ -44,7 +45,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>引数  
 *sql_handle*  
-検索するバッチの SQL ハンドルを指定します。 *sql_handle*は**varbinary (64)** です。 *sql_handle*次の動的管理オブジェクトから取得できます。  
+検索するバッチの SQL ハンドルを指定します。 *sql_handle*は**varbinary (64)** します。 *sql_handle*次の動的管理オブジェクトから取得できます。  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -59,7 +60,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-キャッシュ内または現在実行中のバッチのクエリ プランを一意に識別します。 *plan_handle*は**varbinary (64)** です。 *plan_handle*次の動的管理オブジェクトから取得できます。  
+キャッシュ内または現在実行中のバッチのクエリ プランを一意に識別します。 *plan_handle*は**varbinary (64)** します。 *plan_handle*次の動的管理オブジェクトから取得できます。  
   
 -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -69,33 +70,33 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|データベースの ID。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。|  
 |**objectid**|**int**|オブジェクトの ID。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合は NULL になります。|  
-|**number**|**smallint**|番号付きストアド プロシージャの場合、ストアド プロシージャの番号。 詳細については、次を参照してください。 [sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)です。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合は NULL になります。|  
+|**number**|**smallint**|番号付きストアド プロシージャの場合、ストアド プロシージャの番号。 詳細については、次を参照してください。 [sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)します。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合は NULL になります。|  
 |**encrypted**|**bit**|1 = SQL テキストは暗号化されています。<br /><br /> 0 = SQL テキストは暗号化されていません。|  
 |**text**|**nvarchar(max** **)**|SQL クエリのテキスト。<br /><br /> 暗号化されているオブジェクトの場合は NULL になります。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
-## <a name="remarks"></a>解説  
-アドホック クエリでは、SQL ハンドルは、サーバーに送信されている SQL テキストに基づくハッシュ値は、任意のデータベースから取得できます。 
+## <a name="remarks"></a>コメント  
+アドホック クエリでは、SQL ハンドルは、サーバーに送信されている SQL テキストに基づくハッシュ値と、任意のデータベースから取得できます。 
 
 ストアド プロシージャ、トリガー、関数などのデータベース オブジェクトでは、SQL ハンドルはデータベース ID、オブジェクト ID、オブジェクト番号から取得します。 
 
-プラン ハンドルは、バッチ全体のコンパイル済みプランから派生したハッシュ値です。 
+プラン ハンドルは、バッチ全体のコンパイル済みプランから取得したハッシュ値です。 
 
 > [!NOTE]
-> **dbid**からは判断できない*sql_handle*アドホック クエリ。 決定する**dbid**アドホック クエリに使用される*plan_handle*代わりにします。
+> **dbid**からは判断できない*sql_handle*アドホック クエリ。 決定**dbid** 、アドホック クエリを使用して*plan_handle*代わりにします。
   
 ## <a name="examples"></a>使用例 
 
 ### <a name="a-conceptual-example"></a>A. 概念の例
-渡すことを示すための基本的な例を次に示します、 **sql_handle** 、直接または**CROSS APPLY**です。
+渡すことを示すために基本的な例を次に、 **sql_handle** 、直接または**CROSS APPLY**します。
   1.  アクティビティを作成します。  
-新しいクエリ ウィンドウで、次の T-SQL を実行[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。   
+新しいクエリ ウィンドウで次の T-SQL を実行[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -105,8 +106,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  使用して**CROSS APPLY**です。  
-    Sql_handle **sys.dm_exec_requests**に渡される**sys.dm_exec_sql_text**を使用して**CROSS APPLY**です。 新しいクエリ ウィンドウを開き、手順 1. で識別される、spid の値を渡します。 この例で、spid の値は表示される`59`です。
+    2.  使用して**CROSS APPLY**します。  
+    Sql_handle **sys.dm_exec_requests**に渡される**sys.dm_exec_sql_text**を使用して**CROSS APPLY**します。 新しいクエリ ウィンドウを開き、手順 1. で識別される、spid の値を渡します。 この例で、spid の値がある`59`します。
 
         ```sql
         SELECT t.*
@@ -115,8 +116,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  渡す**sql_handle**直接です。  
-取得、 **sql_handle**から**sys.dm_exec_requests**です。 その後、渡す、 **sql_handle**に直接**sys.dm_exec_sql_text**です。 新しいクエリ ウィンドウを開き、手順 1 で識別される、spid の値を渡す**sys.dm_exec_requests**です。 この例で、spid の値は表示される`59`です。 さらに、返された渡す**sql_handle**への引数として**sys.dm_exec_sql_text**です。
+    2.  渡す**sql_handle**直接します。  
+取得、 **sql_handle**から**sys.dm_exec_requests**します。 次に、渡す、 **sql_handle**に直接**sys.dm_exec_sql_text**します。 新しいクエリ ウィンドウを開きを手順 1. で識別される、spid の値を渡す**sys.dm_exec_requests**します。 この例で、spid の値がある`59`します。 返された渡す**sql_handle**への引数として**sys.dm_exec_sql_text**します。
 
         ```sql
         -- acquire sql_handle
@@ -127,7 +128,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. 平均 CPU 時間ごとの上位 5 つのクエリに関する情報を取得します。  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. 平均 CPU 時間の上位 5 クエリに関する情報を取得します。  
  次の例では、上位 5 つのクエリにかかった平均 CPU 時間と SQL ステートメントのテキストを返します。  
   
 ```sql  

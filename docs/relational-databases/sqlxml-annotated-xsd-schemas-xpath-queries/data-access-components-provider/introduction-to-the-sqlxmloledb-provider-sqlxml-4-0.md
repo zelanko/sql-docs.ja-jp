@@ -1,5 +1,5 @@
 ---
-title: SQLXMLOLEDB プロバイダー (SQLXML 4.0) の概要 |Microsoft Docs
+title: SQLXMLOLEDB プロバイダー (SQLXML 4.0) の概要 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 602175a93d845693414d56e3f79048ef8560b05c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 945cf6145b1e7173dcadc5115f9e1ee9fc74a7a4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032410"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561502"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの概要 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  SQLXMLOLEDB プロバイダーは、ActiveX Data Objects (ADO) を介して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 機能へのアクセスを提供する OLE DB プロバイダーです。 ただし、このプロバイダーでは、ADO の "出力ストリームへの書き込み" モードでのみコマンドを実行できます。 SQLXMLOLEDB プロバイダーは行セット プロバイダーではありません。 コマンドを実行するときに、あらかじめ指定した出力ストリームを使用する ADO adExecuteStream フラグを指定する必要があります。  
+  SQLXMLOLEDB プロバイダーは、ActiveX Data Objects (ADO) を介して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 機能へのアクセスを提供する OLE DB プロバイダーです。 ただし、このプロバイダーでは、ADO の "出力ストリームへの書き込み" モードでのみコマンドを実行できます。 SQLXMLOLEDB プロバイダーは行セット プロバイダーではありません。 コマンドを実行するときは adExecuteStream フラグを指定した出力ストリームを使用する ADO に指示を指定してください。  
   
- 次の例は、adExecuteStream フラグが指定されている [実行] コマンドの構文を示しています。  
+ AdExecuteStream フラグが指定されている実行コマンドの構文の例を次に示します。  
   
 ```  
 Dim oTestCommand As New ADODB.Command  
@@ -52,16 +52,16 @@ oTestCommand.Execute , , adExecuteStream
   
 |コマンド<br /><br /> property|既定<br /><br /> (ある場合)|説明|  
 |--------------------------|----------------------------|-----------------|  
-|基本パス|""|基本ファイル パスを指定します。 基本ファイル パスは、XML Stylesheet Language (XSL) の場所またはマッピング スキーマ ファイルを指定するときに使用します。 基本ファイル パスは、XSL またはマッピング XSL またはマッピング スキーマのプロパティで指定されているスキーマ ファイルの相対パスを解決するのにも使用されます。<br /><br /> このプロパティが使用されている例では、次を参照してください。 [XPath クエリの実行&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)します。|  
-|ClientSideXML|False|行セットを XML に変換する処理をサーバーではなくクライアントで行う場合は、このプロパティを True に設定します。 これはパフォーマンスの負荷を中間層に移す場合に便利です。<br /><br /> このプロパティが使用されている例では、次を参照してください[SQL クエリの実行&#40;SQLXMLOLEDB プロバイダー&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)または[を実行するテンプレートを含む SQL クエリ&#40;SQLXMLOLEDB プロバイダー&#41; 。](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
-|コンテンツの種類||出力コンテンツの種類を返します。 これは READ ONLY プロパティです。<br /><br /> このプロパティは、コンテンツの種類 (TEXT/XML、TEXT/HTML、image/jpeg など) に関する情報をブラウザーに提供します。 このプロパティの値になります、**コンテンツの種類**を本文として送信されるドキュメントの MIME タイプ (Multipurpose Internet Mail Extensions) を含む HTTP ヘッダーの一部としてブラウザーに送信されるフィールド。|  
-|マッピング スキーマ|NULL|クライアント アプリケーションでマッピング スキーマ (XDR または XSD) に対して XPath クエリを実行する場合、このプロパティを使用してマッピング スキーマの名前を指定します。<br /><br /> パスは相対 (xyz/abc/MySchema.xml) または絶対 (C:\MyFolder\abc\MySchema.xml) パスで指定できます。<br /><br /> 相対パスを指定すると、相対パスを解決するのには基本パス プロパティで指定されている基本パスが使用します。 Base Path プロパティのパスが指定されていない場合、相対パスは、現在のディレクトリに対して相対的なは。<br /><br /> マッピング スキーマ プロパティの値を指定するのには、ローカル ディレクトリ パスまたは URL (http: http://) を指定できます。URL を指定する場合は、プロキシ サーバーを介して HTTP および HTTPS サーバーにアクセスするよう、WinHTTP を構成する必要があります。 これには、Proxycfg.exe ユーティリティを実行します。 詳細については、MSDN ライブラリの「Using the WinHTTP Proxy Configuration Utility」(英語) を参照してください。<br /><br /> このプロパティが使用されている例では、次を参照してください。 [XPath クエリの実行&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)します。|  
-|名前空間||名前空間を使用する XPath クエリを実行できるようにします。 このプロパティが使用されている例では、次を参照してください。[名前空間を持つ XPath クエリを実行する&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)します。|  
+|基本パス|""|基本ファイル パスを指定します。 基本ファイル パスは、XML Stylesheet Language (XSL) の場所またはマッピング スキーマ ファイルを指定するときに使用します。 基本ファイルのパスは、XSL またはマッピング スキーマ ファイル、XSL またはマッピング スキーマのプロパティで指定されている相対パスの解決にも使用されます。<br /><br /> このプロパティを使用する例についてを参照してください[を実行する XPath クエリ&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
+|ClientSideXML|False|行セットを XML に変換する処理をサーバーではなくクライアントで行う場合は、このプロパティを True に設定します。 これはパフォーマンスの負荷を中間層に移す場合に便利です。<br /><br /> このプロパティを使用する例についてを参照してください[を実行する SQL クエリ&#40;SQLXMLOLEDB プロバイダー&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)または[を実行するテンプレートを含む SQL クエリ&#40;SQLXMLOLEDB プロバイダー&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
+|コンテンツの種類||出力コンテンツの種類を返します。 これは READ ONLY プロパティです。<br /><br /> このプロパティは、コンテンツの種類 (TEXT/XML、TEXT/HTML、image/jpeg など) に関する情報をブラウザーに提供します。 このプロパティの値が、**コンテンツ タイプ**、本文として送信されるドキュメントの MIME タイプ (多目的インターネット メール拡張機能) が含まれている HTTP ヘッダーの一部としてブラウザーに送信されるフィールド。|  
+|マッピング スキーマ|NULL|クライアント アプリケーションでマッピング スキーマ (XDR または XSD) に対して XPath クエリを実行する場合、このプロパティを使用してマッピング スキーマの名前を指定します。<br /><br /> パスは相対 (xyz/abc/MySchema.xml) または絶対 (C:\MyFolder\abc\MySchema.xml) パスで指定できます。<br /><br /> 相対パスを指定すると、相対パスを解決するのには基本パス プロパティで指定されている基本パスが使用されます。 Base Path プロパティでパスが指定されていない、相対パスが現在のディレクトリに対する相対パスです。<br /><br /> スキーマのマッピング プロパティの値を指定するには、ローカル ディレクトリのパスまたは URL (http://) を指定できます。URL を指定する場合は、プロキシ サーバーを介して HTTP および HTTPS サーバーにアクセスするよう、WinHTTP を構成する必要があります。 これには、Proxycfg.exe ユーティリティを実行します。 詳細については、MSDN ライブラリの「Using the WinHTTP Proxy Configuration Utility」(英語) を参照してください。<br /><br /> このプロパティを使用する例についてを参照してください[を実行する XPath クエリ&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
+|名前空間||名前空間を使用する XPath クエリを実行できるようにします。 このプロパティを使用する例についてを参照してください[名前空間と XPath クエリを実行する&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)。|  
 |ss Stream Flags||特定の種類のセキュリティ制限を指定するときに使用します。 たとえば、外部サイトなどで、ファイルへの URL 参照やファイルへの絶対パスを許可しない場合や、 テンプレートでクエリを許可しない場合に使用できます。<br /><br /> このプロパティには次の値を割り当てることができます。<br /><br /> 1 = STREAM_FLAGS_DISALLOW_URL 2 = STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = STREAM_FLAGS_DISALLOW_QUERY 8 = STREAM_FLAGS_       DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL<br /><br /> これらの値の詳細については、次の表に示します。|  
-|xml root||結果の XML のルート タグを定義するときに使用します。 たとえば、データベースに対して SQL クエリを実行し、結果の XML ドキュメントに単一のルート要素がない場合は、このプロパティの値を使用して、ドキュメント内に単一のルート要素が追加されます。<br /><br /> このプロパティが使用されている例では、次を参照してください。 [SQL クエリの実行&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)します。|  
-|xsl||クエリで返された XML ドキュメントに XSL 変換を適用する場合に、XSL ファイルを指定するときに使用します。<br /><br /> パスは相対 (xyz/abc/MyXSL.xsl) または絶対 (C:\MyFolder\abc\MyXSL.xsl) パスで指定できます。<br /><br /> 相対パスを指定すると、相対パスを解決するのには基本パス プロパティで指定されている基本パスが使用します。 Base Path プロパティのパスが指定されていない場合、相対パスは、現在のディレクトリに対して相対的なは。<br /><br /> このプロパティが使用されている例では、XSL 変換 (SQLXMLOLEDB プロバイダー) の適用を参照してください。|  
+|xml root||結果の XML のルート タグを定義するときに使用します。 たとえば、データベースに対して SQL クエリを実行し、結果の XML ドキュメントに単一のルート要素がない場合は、このプロパティの値を使用して、ドキュメント内に単一のルート要素が追加されます。<br /><br /> このプロパティを使用する例についてを参照してください[を実行する SQL クエリ&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)。|  
+|xsl||クエリで返された XML ドキュメントに XSL 変換を適用する場合に、XSL ファイルを指定するときに使用します。<br /><br /> パスは相対 (xyz/abc/MyXSL.xsl) または絶対 (C:\MyFolder\abc\MyXSL.xsl) パスで指定できます。<br /><br /> 相対パスを指定すると、相対パスを解決するのには基本パス プロパティで指定されている基本パスが使用されます。 Base Path プロパティでパスが指定されていない、相対パスが現在のディレクトリに対する相対パスです。<br /><br /> このプロパティが使用されている例では、XSL 変換 (SQLXMLOLEDB プロバイダー) を適用するを参照してください。|  
   
- 次の表には、ss Stream フラグ プロパティの値の説明が含まれています。  
+ 次の表には、ストリームのフラグ プロパティの値の変動の説明が含まれています。  
   
 |プロパティの値|説明|  
 |--------------------|-----------------|  

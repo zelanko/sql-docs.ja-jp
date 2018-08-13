@@ -1,5 +1,5 @@
 ---
-title: sys.dm_clr_tasks (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_clr_tasks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,34 +23,34 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 581e89814828b9a5542d358abb5cb84025acfce4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 89395a39dbe163c095ac98db6777be30e574918f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468238"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550732"
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在実行中のすべての共通言語ランタイム (CLR) タスクについて、1 行のデータを返します。 A [!INCLUDE[tsql](../../includes/tsql-md.md)] CLR ルーチンへの参照が含まれたバッチは、そのバッチのタスクは、すべてのマネージ コードの実行を作成します。 バッチ内に、マネージ コードの実行を必要とするステートメントが複数ある場合は、それらのステートメントで同じ CLR タスクが使用されます。 オブジェクトと、マネージ コードの実行だけでなく、インスタンスの間の遷移に関連する状態を維持するため、CLR タスクは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と共通言語ランタイム。  
+  現在実行中のすべての共通言語ランタイム (CLR) タスクについて、1 行のデータを返します。 A [!INCLUDE[tsql](../../includes/tsql-md.md)] CLR ルーチンへの参照を含むバッチをそのバッチのすべてのマネージ コードを実行するための別のタスクを作成します。 バッチ内に、マネージド コードの実行を必要とするステートメントが複数ある場合は、それらのステートメントで同じ CLR タスクが使用されます。 CLR タスクがオブジェクトと関連するマネージ コードの実行だけでなく、インスタンスの間の遷移状態を維持する責任を負います[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と共通言語ランタイム。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|CLR タスクのアドレス。|  
 |**sos_task_address**|**varbinary(8)**|基になるアドレス[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ タスクです。|  
 |**appdomain_address**|**varbinary(8)**|このタスクが実行されているアプリケーション ドメインのアドレス。|  
-|**状態**|**nvarchar(128)**|タスクの現在の状態。|  
+|**state**|**nvarchar(128)**|タスクの現在の状態。|  
 |**abort_state**|**nvarchar(128)**|タスクが取り消された場合の、現在の中止の状態。中止には複数の状態があります。|  
 |**type**|**nvarchar(128)**|タスクの種類。|  
 |**affinity_count**|**int**|タスクの関係。|  
 |**forced_yield_count**|**int**|タスクが強制的に解放された回数。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

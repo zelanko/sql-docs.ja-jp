@@ -1,9 +1,9 @@
 ---
 title: SQL Server on Linux への接続の暗号化 |Microsoft Docs
 description: この記事には、Linux 上の SQL Server への接続の暗号化がについて説明します。
-author: tmullaney
+author: vin-yu
 ms.date: 01/30/2018
-ms.author: meetb
+ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085034"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009034"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux への接続の暗号化
 
@@ -32,7 +32,7 @@ ms.locfileid: "39085034"
 - 現在のシステム時刻は、証明書のプロパティをプロパティと有効期間の前に、証明書の発効後にする必要があります。
 - 証明書がサーバー認証に使用されていること。 つまり、証明書の [拡張キー使用法] プロパティで [ サーバー認証 ] (1.3.6.1.5.5.7.3.1) が指定されている必要があります。
 - AT_KEYEXCHANGE の KeySpec オプションを使用して証明書を作成する必要があります。 通常、証明書のキー使用法プロパティ (KEY_USAGE) では、キーの暗号化 (CERT_KEY_ENCIPHERMENT_KEY_USAGE) も含まれています。
-- 証明書の Subject プロパティは、共通名 (CN) が同じホスト名またはサーバー コンピューターの完全修飾ドメイン名 (FQDN) を示す必要があります。 注: ワイルドカード証明書がサポートされています。 
+- 証明書の Subject プロパティは、共通名 (CN) が同じホスト名またはサーバー コンピューターの完全修飾ドメイン名 (FQDN) を示す必要があります。 注: ワイルドカード証明書がサポートされています。
 
 ## <a name="overview"></a>概要
 TLS は、クライアント アプリケーションからの接続の暗号化に使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 正しく構成されている、ときに、TLS は、プライバシーと、クライアントとサーバー間の通信用のデータの整合性の両方を提供します。  TLS 接続が開始したクライアントまたはサーバーが開始した指定できます。 

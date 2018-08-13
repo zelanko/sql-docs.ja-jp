@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de537c60f8adf2d4860e236421dd0457871ea025
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984804"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556952"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW データベース カタログ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 スキーマ、テーブル、および WideWorldImportersDW データベース内のストアド プロシージャの説明。 
 
 WideWorldImportersDW データベースは、データ ウェアハウスと分析処理に使用されます。 売り上げ高と購入に関するトランザクション データは、WideWorldImporters データベースで生成され、WideWorldImportersDW を使って、データベースに読み込まれる、**毎日の ETL 処理**します。
@@ -51,11 +51,11 @@ WideWorldImportersDW には、次のディメンション テーブルがあり�
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |date|日付、会計年度などに関する情報を含む新しいテーブル (11 月 1 日に基づく会計年度の開始)。|
-|Employee|`Application.People`。|
+|Employee|`Application.People` 。|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |業者|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`。|
-|TransactionType|`Application.TransactionTypes`。|
+|PaymentMethod|`Application.PaymentMethods` 。|
+|TransactionType|`Application.TransactionTypes` 。|
 
 ### <a name="fact-tables"></a>ファクト テーブル
 

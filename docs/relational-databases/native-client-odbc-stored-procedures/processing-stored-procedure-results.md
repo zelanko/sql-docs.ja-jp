@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャの結果の処理 |Microsoft Docs
+title: ストアド プロシージャの結果を処理します。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 61d079bbc9bb7537ac50430a2659223c51cab87f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5bab085024fc53e60d2b217721c8a9e3d6b7670e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429861"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540832"
 ---
 # <a name="processing-stored-procedure-results"></a>ストアド プロシージャの結果の処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37429861"
   
 -   プロシージャに整数のリターン コードを含めることができる。  
   
- アプリケーションでは、ストアド プロシージャからのこれらすべての出力を処理できる必要があります。 CALL ステートメントや EXECUTE ステートメントには、リターン コードと出力パラメーター用のパラメーター マーカーを含める必要があります。 使用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)それらをすべて出力パラメーターとしてバインドして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは出力値をバインドされた変数に転送します。 出力パラメーターおよびリターン コードは、によってクライアントに返される最終項目[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; までアプリケーションに返されません[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) sql_no_data が返されます。  
+ アプリケーションでは、ストアド プロシージャからのこれらすべての出力を処理できる必要があります。 CALL ステートメントや EXECUTE ステートメントには、リターン コードと出力パラメーター用のパラメーター マーカーを含める必要があります。 使用[場合は、SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)にすべての出力パラメーターとしてバインドして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは出力値をバインド変数に転送されます。 出力パラメーターと戻り、コードによってクライアントに返される最後のアイテムとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; までのアプリケーションには返されません[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA が返されます。  
   
  ODBC は、[!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル パラメーターのバインドをサポートしません。 プロシージャの実行前にすべての出力パラメーターをバインドしておく必要があるので、出力カーソル パラメーターを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを ODBC アプリケーションから呼び出すことはできません。  
   

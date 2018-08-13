@@ -1,5 +1,5 @@
 ---
-title: sp_special_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_special_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f8de140a634f1fd6ec9ea7f1fe363efc680ef9a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a679d75d58d4e6c3fedea5fc528387b6695e3ddc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262785"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550272"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,19 +57,19 @@ sp_special_columns [ @table_name = ] 'table_name'
  [ @table_owner=] '*table_owner*'  
  カタログ情報を返すために使用するテーブルのテーブル所有者です。 *所有者*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*所有者*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーには、指定した名前を持つテーブルを所有している、そのテーブルの列が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定のテーブルを所有していないと*名前*、このプロシージャは、指定のテーブルを探します*名前*データベースによって所有されています。所有者。 テーブルが存在する場合は、その列が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルの列が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定のテーブルを所有していない*名前*、この手順は、指定のテーブルを探します*名前*データベースによって所有されています。所有者。 テーブルが存在する場合は、その列が返されます。  
   
  [ @qualifier=] '*修飾子*'  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 製品によっては、テーブルのデータベース環境のサーバー名を表す場合があります。  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 製品によっては、テーブルのデータベース環境のサーバー名を表す場合があります。  
   
  [ @col_type=] '*col_type*'  
- 列の種類です。 *col_type*は**char (** 1 **)** 既定値は r です種類 R 最適な列または列のセットを返します、または複数の列から値を取得することによって、指定した任意の行では、。一意に識別するテーブル。 列は、この目的のために特別に設計された疑似列、または、テーブルでインデックスが一意な 1 つ以上の列になります。 種類 V は、指定したテーブルに自動更新される列が 1 つ以上存在する場合、該当する列または列のセットを返します。この列は、トランザクションによって行の値が更新されると、データ ソースによって自動的に更新される列です。  
+ 列の種類です。 *col_type*は**char (** 1 **)**、既定値は r です種類 R 最適な列または列のセットを返します、または複数の列から値を取得することによって、指定した任意の行では、。一意に識別するテーブル。 列は、この目的のために特別に設計された疑似列、または、テーブルでインデックスが一意な 1 つ以上の列になります。 種類 V は、指定したテーブルに自動更新される列が 1 つ以上存在する場合、該当する列または列のセットを返します。この列は、トランザクションによって行の値が更新されると、データ ソースによって自動的に更新される列です。  
   
  [ @scope=] '*スコープ*'  
- ROWID の最低限必要な範囲を指定します。 *スコープ*は**char (** 1 **)** の既定値は t です。 範囲 C には、、ROWID がその行に配置されている場合にのみ有効であることを指定します。 範囲 T は、ROWID がトランザクションに対して有効であることを指定します。  
+ ROWID の最低限必要な範囲を指定します。 *スコープ*は**char (** 1 **)**、既定値は t です。 範囲 C には、、ROWID がその行に配置されている場合にのみ有効であることを指定します。 範囲 T は、ROWID がトランザクションに対して有効であることを指定します。  
   
  [ @nullable=] '*null 許容*'  
- 特別列に NULL 値を認めるかどうかを示します。 *null 許容*は**char (** 1 **)**、u です。 O の既定値は null 値を許容しない特別列を指定します。 U は部分的に NULL を許容する列を指定します。  
+ 特別列に NULL 値を認めるかどうかを示します。 *null 許容*は**char (** 1 **)**、既定値は u です。 O には、null 値を許容しない特別列を指定します。 U は部分的に NULL を許容する列を指定します。  
   
  [ @ODBCVer=] '*ODBCVer*'  
  使用する ODBC のバージョンを指定します。 *ODBCVer*は**int (** 4 **)**、既定値は 2 です。 既定値は ODBC Version 2.0 を示します。 ODBC version 2.0 と ODBC version 3.0 の違いの詳細については、ODBC version 3.0 の ODBC SQLSpecialColumns 仕様を参照してください。  
@@ -79,21 +79,21 @@ sp_special_columns [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|行 ID の実際の範囲。 0、1、または 2 になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 0 を返します。 このフィールドは常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID は、その行に位置している間のみ有効であることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID は現在のトランザクションの間は、有効であることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID は、セッションの間は (複数のトランザクションにまたがって) 有効であることが保証されます。|  
 |COLUMN_NAME|**sysname**|各列の列名、*テーブル*が返されます。 このフィールドは常に値を返します。|  
 |DATA_TYPE|**smallint**|ODBC SQL データ型。|  
-|TYPE_NAME|**sysname**|データ ソースに依存するデータ型の名前です。たとえば、 **char**、 **varchar**、 **money**、または**テキスト**です。|  
+|TYPE_NAME|**sysname**|データ ソースに依存するデータ型名です。たとえば、 **char**、 **varchar**、 **money**、または**テキスト**します。|  
 |PRECISION|**Int**|データ ソース上の列の有効桁数。 このフィールドは常に値を返します。|  
-|LENGTH|**Int**|、(バイト単位) に必要な長さのバイナリ形式にデータ ソースのデータ型などの 10 **char (** 10 **)**、4 の**整数**、および 2 を**smallint**.|  
+|LENGTH|**Int**|データ ソース内のバイナリ形式でのデータ型の長さ (バイト単位) の必須の 10 **char (** 10 **)**、4 の**整数**、および 2 の**smallint**.|  
 |SCALE|**smallint**|データ ソース上の列の小数点以下桁数。 NULL は、小数点以下桁数を適用できないデータ型に対して返されます。|  
 |PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>解説  
- sp_special_columns は、ODBC で SQLSpecialColumns と同じです。 返される結果は、SCOPE の順序に従って並べ替えられます。  
+## <a name="remarks"></a>コメント  
+ sp_special_columns は、odbc SQLSpecialColumns と同じです。 返される結果は、SCOPE の順序に従って並べ替えられます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

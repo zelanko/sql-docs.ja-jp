@@ -1,5 +1,5 @@
 ---
-title: 非同期モードと SQLCancel |Microsoft Docs
+title: 非同期モードと発生。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b81d9c0716a0bda54bdeab3c7d2b347a505e0ce2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d387f7c6183017799845aeb748aa0b54da57c7f3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409151"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561262"
 ---
-# <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>非同期モードと SQLCancel - ドライバー アプリケーションの作成
+# <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>ドライバー アプリケーションの作成 - 非同期モードと SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -54,7 +54,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  アプリケーションでコマンドが完了したかどうかをテストするときは、ドライバーに対して同じ関数を同じパラメーターを指定して呼び出します。 ドライバーがサーバーからまだ応答を受け取っていない場合、SQL_STILL_EXECUTING が再び返されます。 アプリケーションでは、リターン コードが SQL_STILL_EXECUTING 以外になるまで、定期的にコマンドをテストする必要があります。 アプリケーションで他のリターン コードを受け取ると、それが SQL_ERROR であっても、コマンドが完了したことがわかります。  
   
- コマンドが長時間未完了になることがあります。 アプリケーションの応答を待機することがなく、コマンドをキャンセルする場合、そのように呼び出すことによって**SQLCancel**同じステートメントを使用して、未完了のコマンドとして処理します。 これは、唯一の時間**SQLCancel**使用する必要があります。 プログラマによって使用**SQLCancel**の結果から途中、処理があるときに設定し、結果セットの残りの部分をキャンセルします。 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)または[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) 、未処理の結果セットの残りの部分にキャンセルするために使用する必要があります**SQLCancel**します。  
+ コマンドが長時間未完了になることがあります。 呼び出すことによって実行可能アプリケーションの応答を待つことがなく、コマンドをキャンセルする場合は、**発生**同じステートメントでは、未解決のコマンドとして処理します。 これだけの時間は、**発生**使用する必要があります。 いくつかのプログラマを使用して、**発生**とそれらの処理が途中の結果を設定し、結果セットの残りの部分をキャンセルします。 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)または[手段](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)、未処理の結果セットの残りの部分にキャンセルを使用する必要があります**発生**。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client ODBC ドライバー アプリケーションの作成](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

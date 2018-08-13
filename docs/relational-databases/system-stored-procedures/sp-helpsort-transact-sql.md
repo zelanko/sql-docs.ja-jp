@@ -1,5 +1,5 @@
 ---
-title: sp_helpsort (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpsort (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eed0e712a4cba2400b864b0170b08a6007d85e63
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b72de312f8d3ab7abadc592b14149d47f65dfa7a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253695"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539412"
 ---
 # <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_helpsort
 ## <a name="result-sets"></a>結果セット  
  サーバーの既定の照合順序を返します。  
   
-## <a name="remarks"></a>解説  
- インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はの以前のインストールに合うように指定された照合順序でインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **sp_helpsort**空の結果が返されます。 この動作が発生した場合、`SELECT SERVERPROPERTY ('Collation');` のように、SERVERPROPERTY オブジェクトに対してクエリを実行して、照合順序を決定できます。  
+## <a name="remarks"></a>コメント  
+ インスタンスの場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のインストールと互換性がある指定された照合順序でインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **sp_helpsort**空の結果が返されます。 この動作が発生した場合、`SELECT SERVERPROPERTY ('Collation');` のように、SERVERPROPERTY オブジェクトに対してクエリを実行して、照合順序を決定できます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_tran_version_store (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,21 +23,22 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7de332c09b586b1c3a7feba4097a940ba9f29a83
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561922"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  バージョン ストア内のすべてのバージョン レコードを表示する仮想テーブルを返します。 **sys.dm_tran_version_store**バージョン ストア全体のクエリを実行し、バージョン ストアが非常に大きくなることができますので、効率的ではありません。  
+  バージョン ストア内のすべてのバージョン レコードを表示する仮想テーブルを返します。 **sys.dm_tran_version_store** 、全体のバージョン ストアがクエリし、バージョン ストアが非常に大きくなることがあるため、効率的ではありません。  
   
  各バージョン レコードは、追跡情報または状態情報と共にバイナリ データとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
   
- バージョン レコードはバイナリとして格納されるので、複数のデータベースの照合順序が異なっていても問題にはなりません。 使用して**sys.dm_tran_version_store**バージョン ストアに存在している、バイナリ表記で、行の以前のバージョンが見つかりません。  
+ バージョン レコードはバイナリとして格納されるので、複数のデータベースの照合順序が異なっていても問題にはなりません。 使用**sys.dm_tran_version_store**バージョン ストア内に存在する、バイナリ表現での行の以前のバージョンを検索します。  
   
   
 ## <a name="syntax"></a>構文  
@@ -48,23 +49,23 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|レコード バージョンを生成するトランザクションのシーケンス番号。|  
 |**version_sequence_num**|**bigint**|バージョン レコードのシーケンス番号。 この値はバージョンを生成するトランザクション内で一意です。|  
 |**database_id**|**int**|バージョン レコードのデータベース ID。|  
 |**rowset_id**|**bigint**|レコードの行セット ID。|  
-|**ステータス**|**tinyint**|バージョン レコードが 2 つのレコードに分割されているかどうかを示します。 値が 0 の場合、レコードは 1 ページに格納されています。 値が 1 の場合、レコードは 2 つのレコードに分割され、2 つの異なるページに格納されています。|  
+|**status**|**tinyint**|バージョン レコードが 2 つのレコードに分割されているかどうかを示します。 値が 0 の場合、レコードは 1 ページに格納されています。 値が 1 の場合、レコードは 2 つのレコードに分割され、2 つの異なるページに格納されています。|  
 |**min_length_in_bytes**|**smallint**|レコードの最小長 (バイト単位)。|  
 |**record_length_first_part_in_bytes**|**smallint**|バージョン レコードの最初の部分の長さ (バイト単位)。|  
 |**record_image_first_part**|**varbinary(8000)**|バージョン レコードの最初の部分のバイナリ イメージ。|  
 |**record_length_second_part_in_bytes**|**smallint**|バージョン レコードの 2 番目の部分の長さ (バイト単位)。|  
 |**record_image_second_part**|**varbinary(8000)**|バージョン レコードの 2 番目の部分のバイナリ イメージ。|  
   
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="examples"></a>使用例  
  次の例では、4 つの同時実行トランザクションが存在するテスト シナリオを使用します。これらのトランザクションはそれぞれトランザクション シーケンス番号 (XSN) で識別され、ALLOW_SNAPSHOT_ISOLATION オプションと READ_COMMITTED_SNAPSHOT オプションが ON に設定されているデータベース内で実行されます。 実行されるトランザクションは次のとおりです。  

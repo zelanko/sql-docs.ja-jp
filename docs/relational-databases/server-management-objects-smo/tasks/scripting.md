@@ -1,5 +1,5 @@
 ---
-title: スクリプト |Microsoft Docs
+title: スクリプト |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 722c8f75c8fe759e632a3cefc5960e49ad0519f9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3ac1c9238b75d6431de4a6b836b6c6822ec69168
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970594"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560542"
 ---
 # <a name="scripting"></a>スクリプトの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO でのスクリプティングはによって制御されます、<xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトとその子オブジェクトまたは**スクリプト**個々 のオブジェクトに対するメソッド。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトのインスタンス上のオブジェクトの依存関係からのマッピングを制御する[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+  SMO でのスクリプティングはによって制御されます、<xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトとその子オブジェクトまたは**スクリプト**個々 のオブジェクトに対するメソッド。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトのインスタンス上のオブジェクトの依存関係のマッピングを制御する[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "37970594"
   
 3.  スクリプト生成  
   
- 検索フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> オブジェクトが使用されます。 オブジェクトの URN リストが指定されている場合、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> メソッドは、URN リスト内のオブジェクトに対応する <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトを返します。 ブール値を*fParents*親または指定したオブジェクトの子が検出するかどうかを選択するパラメーターを使用します。 依存関係ツリーはこの段階で変更することができます。  
+ 検索フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> オブジェクトが使用されます。 オブジェクトの URN リストが指定されている場合、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> メソッドは、URN リスト内のオブジェクトに対応する <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトを返します。 ブール値*fParents*パラメーターを使用して検出するのには、親または指定したオブジェクトの子かどうかを選択します。 依存関係ツリーはこの段階で変更することができます。  
   
  リスト生成フェーズでは、このツリーが渡され、結果リストが返されます。 このオブジェクト リストは記述順であり、変更することもできます。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_sessions (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
@@ -23,37 +23,38 @@ caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc1293a87ddfb743964a40377ba126a2f745d59d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fac27390005afad19f67c5e774c381067ee78745
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542102"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  認証済みセッションごとに 1 行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 sys.dm_exec_sessions は、すべてのアクティブなユーザー接続と内部タスクに関する情報を示すサーバー スコープのビューです。 この情報には、クライアント バージョン、クライアント プログラム名、クライアントのログイン日時、ログイン ユーザー、現在のセッション設定などが含まれます。 sys.dm_exec_sessions を使用して、最初に、現在のシステムの負荷を表示して目的のセッションを特定します。その後、他の動的管理ビューまたは動的管理関数を使用して、そのセッションの詳細を参照します。  
+  認証済みセッションごとに 1 行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 sys.dm_exec_sessions は、すべてのアクティブなユーザー接続と内部タスクに関する情報を示すサーバー スコープのビューです。 この情報には、クライアント バージョン、クライアント プログラム名、クライアントのログイン日時、ログイン ユーザー、現在のセッション設定などが含まれます。 sys.dm_exec_sessions を使用して、最初に、現在のシステムの負荷を表示して目的のセッションを特定します。その後、他の動的管理ビューまたは動的管理関数を使用して、そのセッションの詳細を参照します。  
   
  Sys.dm_exec_connections、sys.dm_exec_sessions、および sys.dm_exec_requests 動的管理ビューにマップする、 [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)システム テーブル。  
   
-> **注:** これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_exec_sessions**です。  
+> **注:** これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_exec_sessions**します。  
   
-|列名|データ型|説明とバージョンに固有の情報|  
+|列名|データ型|説明とバージョン固有の情報|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|アクティブな各プライマリ接続に関連付けられたセッションの識別子。 NULL 値は許可されません。|  
 |login_time|**datetime**|セッションが確立された時刻。 NULL 値は許可されません。|  
-|host_name|**nvarchar(128)**|セッション固有のクライアント ワークステーションの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。<br /><br /> **セキュリティに関する注意:** クライアント アプリケーションは、ワークステーション名を提供し、不正確なデータを提供できます。 セキュリティ機能として HOST_NAME に依存することは避けてください。|  
+|host_name|**nvarchar(128)**|セッション固有のクライアント ワークステーションの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。<br /><br /> **セキュリティに関する注意:** クライアント アプリケーションは、ワークステーション名を提供し、不正確なデータを提供することができます。 セキュリティ機能として HOST_NAME に依存することは避けてください。|  
 |program_name|**nvarchar(128)**|セッションを開始したクライアント プログラムの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |host_process_id|**int**|セッションを開始したクライアント プログラムのプロセス ID。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |client_version|**int**|クライアントでサーバーへの接続に使用されるインターフェイスの TDS プロトコル バージョン。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
-|client_interface_name|**nvarchar(32)**|サーバーと通信するために、クライアントによって使用されているライブラリ/ドライバーの名前です。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
+|client_interface_name|**nvarchar(32)**|サーバーと通信するクライアントによって使用されているライブラリとドライバーの名前です。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |security_id|**varbinary(85)**|ログインに関連付けられた、Microsoft Windows のセキュリティ ID。 NULL 値は許可されません。|  
-|login_name|**nvarchar(128)**|現在セッションを実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名。 セッションを作成した元のログイン名については、original_login_name を参照してください。 指定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名または Windows 認証済みのドメイン ユーザー名を認証します。 NULL 値は許可されません。|  
+|login_name|**nvarchar(128)**|現在セッションを実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名。 セッションを作成した元のログイン名については、original_login_name を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証済みログイン名または Windows 認証済みのドメインのユーザー名。 NULL 値は許可されません。|  
 |nt_domain|**nvarchar(128)**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションで Windows 認証または信頼された接続を使用している場合のクライアントの Windows ドメイン。 内部セッションまたはドメイン以外のユーザーの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |nt_user_name|**nvarchar(128)**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションで Windows 認証または信頼された接続を使用している場合のクライアントの Windows ユーザー名。 内部セッションまたはドメイン以外のユーザーの場合、この値は NULL になります。 NULL 値が許可されます。|  
-|ステータス|**nvarchar(30)**|セッションの状態です。 有効値は次のとおりです。<br /><br /> **実行している**-現在 1 つまたは複数の要求を実行します。<br /><br /> **スリープ**-現在実行されていない要求<br /><br /> **休止**– セッションはリセットされたため、接続プールとはログイン前の状態に移行します。<br /><br /> **Preconnect** -セッションは、リソース ガバナーの分類します。<br /><br /> NULL 値は許可されません。|  
-|context_info|**varbinary (128)**|セッションの CONTEXT_INFO 値。 コンテキスト情報を使用して、ユーザーが設定されて、 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)ステートメントです。 NULL 値が許可されます。|  
+|status|**nvarchar(30)**|セッションの状態です。 有効値は次のとおりです。<br /><br /> **実行している**-現在実行中の 1 つまたは複数の要求<br /><br /> **スリープ**-現在実行されていない要求<br /><br /> **休止**– セッションが接続プールが原因がリセットされ、ログイン前の状態になります。<br /><br /> **接続前手続き**-セッションがリソース ガバナー分類子であります。<br /><br /> NULL 値は許可されません。|  
+|context_info|**varbinary (128)**|セッションの CONTEXT_INFO 値。 使用して、ユーザーがコンテキスト情報を設定、 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)ステートメント。 NULL 値が許可されます。|  
 |cpu_time|**int**|セッションで使用された CPU 時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |memory_usage|**int**|セッションで使用されたメモリの 8 KB ページの数。 NULL 値は許可されません。|  
 |total_scheduled_time|**int**|セッション (セッション内にある要求) の実行予定時間の合計 (ミリ秒単位)。 NULL 値は許可されません。|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/23/2018
 |row_count|**bigint**|セッションでこの時点までに返された行の数。 NULL 値は許可されません。|  
 |prev_error|**int**|セッションで最後に返されたエラーの ID。 NULL 値は許可されません。|  
 |original_security_id|**varbinary(85)**|original_login_name に関連付けられている [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows セキュリティ ID。 NULL 値は許可されません。|  
-|original_login_name|**nvarchar(128)**|クライアントがこのセッションの作成に使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名。 指定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名、Windows 認証済みのドメイン ユーザー名、または包含データベース ユーザーを認証します。 最初の接続後、セッションでは暗黙的または明示的にコンテキストが切り替えられている可能性があります。 たとえば場合、 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)を使用します。 NULL 値は許可されません。|  
+|original_login_name|**nvarchar(128)**|クライアントがこのセッションの作成に使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名、Windows 認証済みのドメイン ユーザー名、または包含データベース ユーザーを認証します。 最初の接続後、セッションでは暗黙的または明示的にコンテキストが切り替えられている可能性があります。 たとえば場合、 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)使用されます。 NULL 値は許可されません。|  
 |last_successful_logon|**datetime**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在のセッションが開始する前に、original_login_name のログオンが最後に成功した時間。|  
 |last_unsuccessful_logon|**datetime**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在のセッションが開始する前に、original_login_name のログオン試行が最後に失敗した時間。|  
 |unsuccessful_logons|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> last_successful_logon と login_time の間に、original_login_name のログオン試行が失敗した回数。|  
@@ -91,15 +92,15 @@ ms.lasthandoff: 05/23/2018
 |database_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 各セッションの現在のデータベースの ID。|  
 |authenticating_database_id|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> プリンシパルを認証するデータベースの ID。 ログインの場合、値は 0 になります。 包含データベース ユーザーの場合、値は包含データベースのデータベース ID になります。|  
 |open_transaction_count|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションごとに開いているトランザクションの数。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限  
-すべてのユーザーは、独自のセッション情報を参照してくださいことができます。  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 必要`VIEW SERVER STATE`に対する権限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、サーバー上のすべてのセッションを表示します。  
+## <a name="permissions"></a>アクセス許可  
+すべてのユーザーには、独自のセッション情報がわかります。  
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 必要があります`VIEW SERVER STATE`に対する権限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]をサーバー上のすべてのセッションを参照してください。  
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 必要`VIEW DATABASE STATE`を現在のデータベースに対するすべての接続を確認します。 `VIEW DATABASE STATE` 付与することはできません、`master`データベース。 
   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ときに、**共通の条件のコンプライアンス対応が有効になっている**サーバー構成オプションが有効になっている場合、次の列にログオン統計値が表示されます。  
   
 -   last_successful_logon  
@@ -108,10 +109,10 @@ ms.lasthandoff: 05/23/2018
   
 -   unsuccessful_logons  
   
- このオプションが有効でない場合、これらの列は NULL 値を返します。 このサーバー構成オプションを設定する方法の詳細については、次を参照してください。[共通の criteria compliance enabled サーバー構成オプション](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)です。  
+ このオプションが有効でない場合、これらの列は NULL 値を返します。 このサーバー構成オプションを設定する方法の詳細については、次を参照してください。 [enabled サーバー構成オプションの一般的な条件のコンプライアンス対応](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)します。  
  
  
- Azure SQL データベース上の管理の接続には、認証済みセッションごとに 1 行が表示されます。 結果セットに表示される"sa"セッションは、セッションのユーザー クォータの影響がないです。 管理者以外の接続には、そのデータベースのユーザー セッションに関連する情報のみ表示されます。
+ Azure SQL Database で管理者接続は、認証済みセッションごとに 1 行に表示されます。 結果セットに表示される"sa"セッションは、セッションのユーザーのクォータの影響を及ぼすがありません。 管理者以外の接続には、そのデータベースのユーザー セッションに関連する情報のみ表示されます。
  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップの基数  
@@ -187,7 +188,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 
