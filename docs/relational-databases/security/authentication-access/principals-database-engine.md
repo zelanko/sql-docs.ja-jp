@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553102"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008964"
 ---
 # <a name="principals-database-engine"></a>プリンシパル (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553102"
   
 ## <a name="sql-server-level-principals"></a>SQL Server レベルのプリンシパル  
   
--  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ログイン   
--  Windows ユーザーの Windows 認証ログイン  
--  Windows グループの Windows 認証ログイン   
--  Active Directory ユーザーの Azure Active Directory 認証ログイン
--  Active Directory グループの Azure Active Directory 認証ログイン
--  サーバー ロール  
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ログイン   
+- Windows ユーザーの Windows 認証ログイン  
+- Windows グループの Windows 認証ログイン   
+- Active Directory ユーザーの Azure Active Directory 認証ログイン
+- Active Directory グループの Azure Active Directory 認証ログイン
+- サーバー ロール  
   
- ## <a name="database-level-principals"></a>データベースレベルのプリンシパル  
+## <a name="database-level-principals"></a>データベースレベルのプリンシパル
   
--   データベース ユーザー (11 種類のユーザーがあります。 詳細については、「[CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)」 (ユーザーの作成) を参照してください。) 
--   データベース ロール  
--   アプリケーション ロール  
+- データベース ユーザー (11 種類のユーザーがあります。 詳細については、「[CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)」 (ユーザーの作成) を参照してください。)
+- データベース ロール
+- アプリケーション ロール
   
 ## <a name="sa-login"></a>sa ログイン  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` ログインは、サーバー レベルのプリンシパルです。 このログインは、インスタンスのインストール時に既定で作成されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より、sa の既定のデータベースは master です。 これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の動作から変更されています。 `sa` ログインは `sysadmin` 固定データベース ロールに属します。 `sa` ログインにはサーバーのすべてのアクセス許可が与えられ、制限できません。 `sa` ログインは削除できませんが、無効にすれば誰も利用できません。

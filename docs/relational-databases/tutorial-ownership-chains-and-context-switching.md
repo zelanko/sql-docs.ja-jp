@@ -21,12 +21,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011639"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008804"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "33011639"
 ## <a name="1-configure-the-environment"></a>1.環境を構成する  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] と次のコードを使用して `AdventureWorks2012` データベースを開き、`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを使用して、dbo ユーザーがコンテキストとして表示されていることを確認します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -70,7 +70,7 @@ CURRENT_USER ステートメントの詳細については、「[CURRENT_USER (T
   
 次のコードを dbo ユーザーとして実行し、サーバー上と [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース内に 2 ユーザーを作成します。  
   
-```  
+```sql
 CREATE LOGIN TestManagerUser   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khx';  
 GO  
@@ -91,7 +91,7 @@ CREATE_USER ステートメントの詳細については、「[CREATE USER (Tra
   
 次のコードを実行し、 `Purchasing` スキーマの所有権を `TestManagerUser` アカウントに変更します。 所有権を与えられたアカウントでは、 `SELECT` 権限や `INSERT` 権限などすべてのデータ操作言語 (DML) のアクセス権限を、中のオブジェクトに対し使用できます。 `TestManagerUser` にもストアド プロシージャを作成する権限が付与されます。  
   
-```  
+```sql
 /* Change owner of the Purchasing Schema to TestManagerUser */  
 ALTER AUTHORIZATION   
    ON SCHEMA::Purchasing   
@@ -111,7 +111,7 @@ GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](
   
 次のコードでは、 `EXECUTE AS` ステートメントによりコンテキストを `TestManagerUser` に変更し、 `TestEmployeeUser`に必要とされるデータのみを表示するストアド プロシージャを作成します。 要件を満たすには、ストアド プロシージャでは発注番号を表す変数を 1 つ受け取ります。財務情報は表示せず、WHERE 句によって結果を一部配送のみに限定します。  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestManagerUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -135,7 +135,7 @@ GO
   
 この時点では、 `TestEmployeeUser` はどのデータベース オブジェクトにもアクセスできません。 コンテキストは引き続き `TestManagerUser` です。次のコードを実行し、ストアド プロシージャを介して  ユーザー アカウントがベース テーブル情報をクエリできるようにします。  
   
-```  
+```sql
 GRANT EXECUTE  
    ON OBJECT::Purchasing.usp_ShowWaitingItems  
    TO TestEmployeeUser;  
@@ -144,7 +144,7 @@ GO
   
 `Purchasing` は既定では `TestManagerUser` スキーマに割り当てられるため、スキーマが明示的に指定されていない場合でも、ストアド プロシージャは `Purchasing` スキーマの一部です。 次のコードに示すように、システム カタログ情報を使用してオブジェクトを特定できます。  
   
-```  
+```sql
 SELECT a.name AS 'Schema'  
    , b.name AS 'Object Name'  
    , b.type AS 'Object Type'  
@@ -157,7 +157,7 @@ GO
   
 例のこの部分が完了すると、コードでは `REVERT` ステートメントによってコンテキストが切り替えられ、コンテキストは dbo に戻ります。  
   
-```  
+```sql
 REVERT;  
 GO  
 ```  
@@ -167,7 +167,7 @@ REVERT ステートメントの詳細については、「[REVERT (Transact-SQL)
 ## <a name="3-access-data-through-the-stored-procedure"></a>3.ストアド プロシージャからデータにアクセスする  
 `TestEmployeeUser` は、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースのオブジェクトに対し、ログイン権限と public データベース ロールに割り当てられた権限だけを持ちます。 `TestEmployeeUser` がベース テーブルにアクセスしようとすると、次のコードによりエラーが返されます。  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -183,7 +183,7 @@ GO
   
 前のセクションで作成したストアド プロシージャで参照されるオブジェクトは、 `TestManagerUser` スキーマの所有権により `Purchasing` の所有となります。したがって、 `TestEmployeeUser` はストアド プロシージャを介してベース テーブルにアクセスできます。 次のコードでは、引き続き `TestEmployeeUser` をコンテキストとし、購買注文 952 をパラメーターとして渡します。  
   
-```  
+```sql
 EXEC Purchasing.usp_ShowWaitingItems 952  
 GO  
 ```  
@@ -191,7 +191,7 @@ GO
 ## <a name="4-reset-the-environment"></a>4.環境をリセットする  
 次のコードでは、 `REVERT` コマンドにより現在のアカウントのコンテキストを `dbo`に戻し、環境をリセットします。  
   
-```  
+```sql
 REVERT;  
 GO  
 ALTER AUTHORIZATION   
@@ -215,7 +215,7 @@ GO
 > [!NOTE]  
 > `TestEmployeeUser` はベース テーブルから選択することができないため、2 つのエラーが発生することが予測されますが、このコードには含まれていません。  
   
-```  
+```sql
 /*   
 Script:       UserContextTutorial.sql  
 Author:       Microsoft  

@@ -14,41 +14,42 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 157d6f1b3948dbe697afc5af018b197ede9fec9b
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 6bd763d709238c6bd25fbe7a90acb7b617004925
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279133"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661834"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>パラメーターのないストアド プロシージャの使用
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  呼び出すことができる最も簡単な種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ストアド プロシージャは、パラメーターを含まず、1 つの結果セットを返すプロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。  
-  
- JDBC ドライバーを使用してパラメーターのないストアド プロシージャを呼び出すときは、`call` SQL エスケープ シーケンスを使用する必要があります。 パラメーターを持たない `call` エスケープ シーケンスの構文は次のとおりです。  
-  
- `{call procedure-name}`  
-  
+呼び出すことができる最も簡単な種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ストアド プロシージャは、パラメーターを含まず、1 つの結果セットを返すプロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
+
+JDBC ドライバーを使用してパラメーターのないストアド プロシージャを呼び出すときは、`call` SQL エスケープ シーケンスを使用する必要があります。 パラメーターを持たない `call` エスケープ シーケンスの構文は次のとおりです。
+
+`{call procedure-name}`
+
 > [!NOTE]  
->  SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。  
-  
- たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで次のストアド プロシージャを作成します。  
-  
+> SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。
+
+たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで次のストアド プロシージャを作成します。
+
 ```sql
-CREATE PROCEDURE GetContactFormalNames   
+CREATE PROCEDURE GetContactFormalNames
 AS  
 BEGIN  
-   SELECT TOP 10 Title + ' ' + FirstName + ' ' + LastName AS FormalName   
+   SELECT TOP 10 Title + ' ' + FirstName + ' ' + LastName AS FormalName
    FROM Person.Contact  
 END  
-```  
-  
- このストアド プロシージャは、1 つのデータ列を含む 1 つの結果セットを返します。このデータは、Person.Contact テーブル内の先頭から 10 件の連絡先の役職、名、および姓の組み合わせです。  
-  
- 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続を関数に渡し、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用して GetContactFormalNames ストアド プロシージャを呼び出しています。  
-  
-```java  
+```
+
+このストアド プロシージャは、1 つのデータ列を含む 1 つの結果セットを返します。このデータは、Person.Contact テーブル内の先頭から 10 件の連絡先の役職、名、および姓の組み合わせです。
+
+次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続を関数に渡し、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用して GetContactFormalNames ストアド プロシージャを呼び出しています。
+
+```java
 public static void executeSprocNoParams(Connection con) throws SQLException {  
     try(Statement stmt = con.createStatement();) {  
 
@@ -58,9 +59,8 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
         }  
     }  
 }
-```  
-  
-## <a name="see-also"></a>参照  
- [ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)  
-  
-  
+```
+
+## <a name="see-also"></a>参照
+
+[ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)

@@ -14,31 +14,32 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c408fc703a3f6d9831cae226ce858b1a20a80c7
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 79f3198c1d8308ea2142683562a4c0d15a173504
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278773"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661764"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>入力パラメーターがあるストアド プロシージャの使用
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ストアド プロシージャのうち、呼び出すことができるのは、IN パラメーター (ストアド プロシージャにデータを渡す際に使用できるパラメーター) を少なくとも 1 つ持つストアド プロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。  
-  
- JDBC ドライバーを使用して IN パラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 IN パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。  
-  
- `{call procedure-name[([parameter][,[parameter]]...)]}`  
-  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ストアド プロシージャのうち、呼び出すことができるのは、IN パラメーター (ストアド プロシージャにデータを渡す際に使用できるパラメーター) を少なくとも 1 つ持つストアド プロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
+
+JDBC ドライバーを使用して IN パラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 IN パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
+
+`{call procedure-name[([parameter][,[parameter]]...)]}`
+
 > [!NOTE]  
->  SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。  
-  
- `call` エスケープ シーケンスを作成する場合、IN パラメーターは?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャに渡されるパラメーター値のプレースホルダーになります。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドのいずれかを使用できます。 使用できる setter メソッドは、IN パラメーターのデータ型で決まります。  
-  
- setter メソッドに値を渡す場合は、パラメーターで使用する実際の値だけでなく、ストアド プロシージャ内のパラメーターの順序も指定する必要があります。 たとえば、ストアド プロシージャに IN パラメーターが 1 つ存在する場合、その序数値は 1 になります。 ストアド プロシージャに 2 つのパラメーターが存在する場合、1 つ目の序数値は 1 に、2 つ目の序数値は 2 になります。  
-  
- IN パラメーターを含むストアド プロシージャの呼び出し方の例として、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで uspGetEmployeeManagers ストアド プロシージャを使用します。 このストアド プロシージャは EmployeeID という名前の入力パラメーターを 1 つ受け入れます。このパラメーターは整数値で、指定された EmployeeID に基づいて従業員およびそのマネージャーの再帰的にリストを返します。 このストアド プロシージャの Java コードは次のとおりです。  
-  
+> SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。
+
+`call` エスケープ シーケンスを作成する場合、IN パラメーターは?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャに渡されるパラメーター値のプレースホルダーになります。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドのいずれかを使用できます。 使用できる setter メソッドは、IN パラメーターのデータ型で決まります。
+
+setter メソッドに値を渡す場合は、パラメーターで使用する実際の値だけでなく、ストアド プロシージャ内のパラメーターの順序も指定する必要があります。 たとえば、ストアド プロシージャに IN パラメーターが 1 つ存在する場合、その序数値は 1 になります。 ストアド プロシージャに 2 つのパラメーターが存在する場合、1 つ目の序数値は 1 に、2 つ目の序数値は 2 になります。
+
+IN パラメーターを含むストアド プロシージャの呼び出し方の例として、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで uspGetEmployeeManagers ストアド プロシージャを使用します。 このストアド プロシージャは EmployeeID という名前の入力パラメーターを 1 つ受け入れます。このパラメーターは整数値で、指定された EmployeeID に基づいて従業員およびそのマネージャーの再帰的にリストを返します。 このストアド プロシージャの Java コードは次のとおりです。
+
 ```java
 public static void executeSprocInParams(Connection con) throws SQLException {  
     try(PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}"); ) {  
@@ -55,9 +56,8 @@ public static void executeSprocInParams(Connection con) throws SQLException {
         }  
     }
 }
-```  
-  
-## <a name="see-also"></a>参照  
- [ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)  
-  
-  
+```
+
+## <a name="see-also"></a>参照
+
+[ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)

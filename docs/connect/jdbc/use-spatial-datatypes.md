@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11d8ae48709f99f466fb0b0c6e387ad38336da5f
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: cc330f8d5dbc2a0f6c09adac0f61d4f603b4c02f
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467690"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662304"
 ---
 # <a name="using-spatial-datatypes"></a>空間データ型の使用
 
@@ -69,7 +69,7 @@ Geometry geomWKT = Geometry.STGeomFromText(geoWKT, 0);
 SQLServerPreparedStatement pstmt = (SQLServerPreparedStatement) connection.prepareStatement("insert into sampleTable values (?)");
 pstmt.setGeometry(1, geomWKT);  
 pstmt.execute();
-``` 
+```
 
 Geography 列を使用して、Geography 対応の同様の手法と**setGeography()** メソッド。
 

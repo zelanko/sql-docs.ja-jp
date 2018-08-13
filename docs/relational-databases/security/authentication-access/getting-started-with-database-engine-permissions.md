@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c8036ef72c9397a9f89c5536bdd598c6f560d78f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4c064b421de59e435522de1f08fa6ed01d3ba901
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543422"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008954"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -232,7 +232,7 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  開始に役立つトピックについては、次を参照してください。  
   
--   [チュートリアル: データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [データベースの作成 &#40;チュートリアル&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
+-   [チュートリアル: データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [データベースの作成 &#40;チュートリアル&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
 -   [チュートリアル: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

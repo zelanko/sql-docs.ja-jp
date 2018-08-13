@@ -14,12 +14,12 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1af25d246de93812aca83c490a7a11c7dc66fbdc
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456396"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661794"
 ---
 # <a name="using-the-jdbc-driver"></a>「JDBC ドライバーの使用」を参照してください。
 
@@ -35,7 +35,7 @@ SQL Server 用 Microsoft JDBC ドライバー 7.0 では、 **mssql-jdbc-7.0.0.j
 
 SQL Server 用 Microsoft JDBC Driver 6.4 の提供**mssql-jdbc-6.4.0.jre7.jar**、 **mssql-jdbc-6.4.0.jre8.jar**、および**mssql-jdbc-6.4.0.jre9.jar**クラス ライブラリファイル。
 
-Microsoft JDBC Driver 6.2 for SQL Server は、 **mssql-jdbc-6.2.1.jre7.jar**、および**mssql-jdbc-6.2.1.jre8.jar**クラス ライブラリ ファイル。
+Microsoft JDBC Driver 6.2 for SQL Server は、 **mssql-jdbc-6.2.2.jre7.jar**、および**mssql-jdbc-6.2.2.jre8.jar**クラス ライブラリ ファイル。
   
 Microsoft JDBC Drivers 6.0 と 4.2 for SQL Server 提供**sqljdbc41.jar**、および**sqljdbc42.jar**クラス ライブラリ ファイル。
   
@@ -49,7 +49,7 @@ Microsoft JDBC driver jar が Java SDK の一部ではないと、ユーザー �
 
 JDBC Driver 4.1 または 4.2 を使用して、クラスパスの設定が含まれている場合**sqljdbc41.jar**または**sqljdbc42.jar**それぞれのドライバーのダウンロードからファイル。
 
-JDBC Driver 6.2 を使用して、クラスパスの設定が含まれている場合、 **mssql-jdbc-6.2.1.jre7.jar**または**mssql-jdbc-6.2.1.jre8.jar**します。
+JDBC Driver 6.2 を使用して、クラスパスの設定が含まれている場合、 **mssql-jdbc-6.2.2.jre7.jar**または**mssql-jdbc-6.2.2.jre8.jar**します。
 
 JDBC Driver 6.4 を使用して設定されて、クラスパスに含める場合、 **mssql-jdbc-6.4.0.jre7.jar**、* * mssql jdbc-6.4.0.jre8.jar または**mssql-jdbc-6.4.0.jre9.jar**します。
 
@@ -62,9 +62,9 @@ JDBC ドライバーの 7.0 を使用して設定されて、クラスパスに�
 **Mssql-jdbc-7.0.0.jre8.jar**または**mssql-jdbc-7.0.0.jre10.jar**ファイルは、次の場所にインストールされます。
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-7.0.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre8.jar
 
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-7.0.0.jre10.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre10.jar
 ```
 
 次のスニペットは、Windows アプリケーションで使用される CLASSPATH ステートメントの例です。  
@@ -82,11 +82,11 @@ CLASSPATH ステートメントに、1 つだけ含まれているかどうか�
 **Mssql-jdbc-6.4.0.jre7.jar**、* * mssql jdbc-6.4.0.jre8.jar または**mssql-jdbc-6.4.0.jre9.jar**ファイルは次の場所にインストールされます。  
 
 ```bash  
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre7.jar
   
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre8.jar
 
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre9.jar
 ```
 
 次のスニペットは、Windows アプリケーションで使用される CLASSPATH ステートメントの例です。  
@@ -101,36 +101,36 @@ CLASSPATH ステートメントに、1 つだけ含まれているかどうか�
 
 ### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC driver 6.2
 
-**Mssql-jdbc-6.2.1.jre7.jar**または**mssql-jdbc-6.2.1.jre8.jar**ファイルは、次の場所にインストールされます。
+**Mssql-jdbc-6.2.2.jre7.jar**または**mssql-jdbc-6.2.2.jre8.jar**ファイルは、次の場所にインストールされます。
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\mssql-jdbc-6.2.2.jre7.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre7.jar
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\mssql-jdbc-6.2.2.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre8.jar
 ```
 
 次のスニペットは、Windows アプリケーションで使用される CLASSPATH ステートメントの例です。  
   
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.1.jre8.jar`  
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.2.jre8.jar`  
   
 次のスニペットは、Unix/Linux アプリケーションで使用される CLASSPATH ステートメントの例です。  
   
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.1.jre8.jar`  
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
-CLASSPATH ステートメントに、1 つだけ含まれているかどうかを確認[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql の jdbc-6.2.1.jre7.jar mssql-jdbc-6.2.1.jre8.jar など。  
+CLASSPATH ステートメントに、1 つだけ含まれているかどうかを確認[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql の jdbc-6.2.2.jre7.jar mssql-jdbc-6.2.2.jre8.jar など。  
 
 ### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC driver 4.1、4.2、および 6.0
 
 sqljdbc.jar ファイル、sqljdbc4.jar ファイル、sqljdbc41.jar ファイル、または sqljdbc42.jar ファイルは次の場所にインストールします。  
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc4.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc4.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc41.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc41.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc42.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar  
 ```
 
 次のスニペットは、Windows アプリケーションで使用される CLASSPATH ステートメントの例です。  
