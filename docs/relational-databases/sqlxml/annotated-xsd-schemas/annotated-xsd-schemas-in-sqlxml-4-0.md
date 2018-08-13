@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 での XSD スキーマ注釈が付けられた |Microsoft ドキュメント
+title: 注釈付き XSD スキーマの SQLXML 4.0 で |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: edf8e4836693eb67e9e6c4c3816d46d2b9d6ccc4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4209bf6b0ffbeef97e65b6c70896055d38c7478d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708760"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537952"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 における注釈付き XSD スキーマ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,28 +38,28 @@ ms.locfileid: "34708760"
  [注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  SQLXML 4.0 での注釈付き XSD スキーマの概要について説明します。  
   
- [XSD スキーマに注釈を使用して&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  
+ [XSD スキーマで注釈を使用して&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  
  数多くのシナリオでの XSD スキーマ注釈の使用方法について説明し、例を示します。  
   
  [クエリでの XSD スキーマを使用して注釈が付けられた&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
  クエリでの注釈付き XSD スキーマの使用方法について説明します。  
   
- [変換する XDR スキーマ同等の XSD スキーマから注釈が付けられた&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
+ [注釈付き XDR スキーマ同等の XSD スキーマからを変換する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
  XDR スキーマを、SQLXML 4.0 の同等の XSD スキーマに変換する方法について説明します。  
   
- [注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [注釈付き XDR スキーマ&#40;SQLXML 4.0 で非推奨とされます。&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
  以前のバージョンの SQLXML では、XDR スキーマの注釈がサポートされていました。 注釈付き XDR スキーマは SQLXML 4.0 では非推奨とされますが、ここでは、レガシ アプリケーションの参照用として説明します。  
   
 ## <a name="other-resources"></a>その他のリソース  
  XML スキーマ定義言語 (XSD)、XML パス言語 (XPath)、Extensible Stylesheet Language Transformations (XSLT) の詳細については、次の Web サイトを参照してください。  
   
--   XML Schema Part 0: Primer、W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C 推奨事項 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: 構造体、W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Structures」W3C 推奨事項 (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: datatypes」、W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: datatypes,、W3C 勧告 (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML パス言語 (XPath) (http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
 -   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
   

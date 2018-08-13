@@ -1,5 +1,5 @@
 ---
-title: sys.spatial_reference_systems (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.spatial_reference_systems (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: acdf8059c75ac6bec1bdd45fc7e1d348331a7e90
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f1cb77a5da692f17a790d2eb5ffca6f82a939449
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219923"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538292"
 ---
 # <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "33219923"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている空間参照系 (SRID) の一覧を表示します。  
 
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|spatial_reference_id|**int**|サポートされている SRID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|spatial_reference_id|**int**|サポートされている SRID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |authority_name|**nvarchar(128)**|SRID の機関。|  
-|authorized_spatial_reference_id|**int**|指定された証明機関によって与え SRID **authority_name**です。|  
+|authorized_spatial_reference_id|**int**|指定された証明機関によって与え SRID **authority_name**します。|  
 |well_known_text|**nvarchar (4000)**|SRID の WKT 表現。|  
 |unit_of_measure|**nvarchar(128)**|メジャーの単位の名前。|  
 |unit_conversion_factor|**float**|メートル単位の長さ。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
   

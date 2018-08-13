@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_session_space_usage (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_session_space_usage (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 61926a7bde695d1ca8af605373cf666653c1cee5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e6da45e2ff7a56dd458462fb6dd3f1f691031787
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538632"
 ---
 # <a name="sysdmdbsessionspaceusage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,35 +37,35 @@ ms.lasthandoff: 05/23/2018
   データベースの各セッションで割り当てられた、または割り当て解除されたページの数を返します。  
   
 > [!NOTE]  
->  このビューはのみに適用できる、 [tempdb データベース](../../relational-databases/databases/tempdb-database.md)です。  
+>  このビューはのみに適用できる、 [tempdb データベース](../../relational-databases/databases/tempdb-database.md)します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_db_session_space_usage**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_db_session_space_usage**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**smallint**|セッション ID。<br /><br /> **session_id**にマップ**session_id**で[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)です。|  
+|**session_id**|**smallint**|セッション ID。<br /><br /> **session_id**マップ**session_id**で[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)します。|  
 |**database_id**|**smallint**|データベース ID。|  
 |**user_objects_alloc_page_count**|**bigint**|セッションで、ユーザー オブジェクトに予約された、または割り当てられたページの数。|  
 |**user_objects_dealloc_page_count**|**bigint**|セッションで、ユーザー オブジェクトへの割り当てが解除され、予約されなくなったページの数。|  
 |**internal_objects_alloc_page_count**|**bigint**|セッションで、内部オブジェクトに予約された、または割り当てられたページの数。|  
 |**internal_objects_dealloc_page_count**|**bigint**|セッションで、内部オブジェクトへの割り当てが解除され、予約されなくなったページの数。|  
-|**user_objects_deferred_dealloc_page_count**|**bigint**|遅延割り当て解除のマークされているページ数です。<br /><br /> **注:** のサービス パックで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]と[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]です。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|遅延割り当て解除のマークされているページ数。<br /><br /> **注:** のサービス パックで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]と[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]します。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このビューでレポートされる割り当てまたは割り当て解除の数に、IAM ページは含まれません。  
   
  ページ カウンターはセッションの開始時に 0 に初期化されます。 このカウンターによって、セッションで完了したタスクに割り当てられた、または割り当て解除されたページの合計数が記録されます。 カウンターはタスクが終了したときにだけ更新され、実行中のタスクは反映されません。  
   
  1 つのセッションでは同時に複数の要求をアクティブにできます。 要求が並列クエリの場合、複数のスレッドやタスクを開始できます。  
   
- セッション、要求、およびタスクの詳細については、次を参照してください[sys.dm_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)、 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)、および。[sys.dm_os_tasks と組み合わせます&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)です。  
+ セッション、要求、およびタスクの詳細については、次を参照してください[sys.dm_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)、 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)、および。[sys.dm_os_tasks と組み合わせます&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)します。  
   
 ## <a name="user-objects"></a>ユーザー オブジェクト  
  次のオブジェクトは、ユーザー オブジェクト ページ カウンターに含まれます。  
@@ -82,16 +83,16 @@ ms.lasthandoff: 05/23/2018
 -   テーブル値関数で返されるテーブル  
   
 ## <a name="internal-objects"></a>内部オブジェクト  
- 内部オブジェクトにのみ含まれる**tempdb**です。 次のオブジェクトは、内部オブジェクト ページ カウンターに含まれます。  
+ 内部オブジェクトにのみ含まれる**tempdb**します。 次のオブジェクトは、内部オブジェクト ページ カウンターに含まれます。  
   
--   カーソルまたはスプール操作と一時的なラージ オブジェクト (LOB) の記憶域用の作業テーブル  
+-   カーソルまたはスプール操作と一時的なラージ オブジェクト (LOB) ストレージ用の作業テーブル  
   
 -   ハッシュ結合などの操作用の作業ファイル  
   
 -   並べ替え実行結果  
   
 ## <a name="physical-joins"></a>物理結合  
- ![Sys.dm_db_session_space_usage の物理結合](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "sys.dm_db_session_space_usage の物理の結合")  
+ ![Sys.dm_db_session_space_usage の物理結合](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "sys.dm_db_session_space_usage の物理への参加")  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップの基数  
   

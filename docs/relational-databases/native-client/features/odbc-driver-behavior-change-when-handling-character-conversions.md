@@ -12,13 +12,13 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 752c824b77da90c80620387cbdf2d42aa626367c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 104d08a50ba1521bca090fbcd741b432fbf3eb12
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408177"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532862"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>文字変換処理での ODBC ドライバーの動作の変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (Version 11.0.2100.60) 以降|-4 (SQL_NO_TOTAL)|**SQLFetch**使用可能なデータを返します。<br /><br /> **SQLMoreResults**使用可能なデータを返します。<br /><br /> 残りのデータは変換されていないため、長さは (-4) SQL_NO_TOTAL を示します。<br /><br /> 元のバッファーには 63 バイトと NULL ターミネータが含まれます。 バッファーは NULL 終端であることが保証されます。|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>CHAR と WCHAR の変換の実行  
- ph x="1" /&gt; Native Client ODBC ドライバーには、CHAR と WCHAR の変換を実行する方法が複数用意されています。 論理は BLOB (varchar(max)、nvarchar(max) など) の操作に似ています。  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC ドライバーには、CHAR と WCHAR の変換を実行する方法が複数用意されています。 論理は BLOB (varchar(max)、nvarchar(max) など) の操作に似ています。  
   
 -   データの保存またはでバインドする場合は、指定されたバッファーに切り捨てられます**SQLBindCol**または**SQLBindParameter**します。  
   

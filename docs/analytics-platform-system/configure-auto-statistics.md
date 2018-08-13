@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107140"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400915"
 ---
 # <a name="configure-auto-statistics"></a>統計の自動構成します。
 
@@ -45,7 +45,7 @@ APS AU7 へのアップグレード後は、自動統計は既定で有効にし
 すべての機能スイッチの値を変更するには、AP 上、サービスの再起動が必要です。
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>データベースの自動統計設定を変更します。
-使用することができます、システム管理者によって自動統計を有効にする、 [ALTER DATABASE (並列データ ウェアハウス)](/sql/t-sql/statements/alter-database-parallel-data-warehouse)データベースで統計情報の設定を変更します。 自動統計機能スイッチは、システム管理者によって有効になっている、AU7 へのアップグレード後に作成されたすべての新しいデータベースが自動統計が有効になります。 AU7 へのアップグレードの前に存在しているすべてのデータベースがある自動統計情報が無効になっています。 次の例で、既存のデータベース myPDW の自動統計。
+使用することができます、システム管理者によって自動統計を有効にする、 [ALTER DATABASE (並列データ ウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)データベースで統計情報の設定を変更します。 自動統計機能スイッチは、システム管理者によって有効になっている、AU7 へのアップグレード後に作成されたすべての新しいデータベースが自動統計が有効になります。 AU7 へのアップグレードの前に存在しているすべてのデータベースがある自動統計情報が無効になっています。 次の例で、既存のデータベース myPDW の自動統計。
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON

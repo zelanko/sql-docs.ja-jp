@@ -1,6 +1,6 @@
 ---
-title: T-SQL ステートメントの並列データ ウェアハウス |Microsoft ドキュメント
-description: T-SQL ステートメントの分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+title: T-SQL ステートメント - Parallel Data Warehouse |Microsoft Docs
+description: T-SQL ステートメントの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538892"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400765"
 ---
-# <a name="t-sql-statements-for-parallel-data-warehouse"></a>並列データ ウェアハウスの T-SQL ステートメント
-TRANSACT-SQL (T-SQL) ステートメントの分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse の T-SQL ステートメント
+TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 
 ## <a name="data-definition-language-ddl-statements"></a>データ定義言語 (DDL) ステートメント
-* [ALTER DATABASE](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [スキーマを変更します。](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [列ストア インデックスを作成します。](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [データベースを作成します。](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-* [データベース スコープを作成する資格情報](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [作成するデータベース スコープ資格情報](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [外部データ ソースを作成します。](../t-sql/statements/create-external-data-source-transact-sql.md)
-* [外部ファイル形式を作成します](../t-sql/statements/create-external-file-format-transact-sql.md)
+* [外部ファイル形式を作成します。](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [外部テーブルを作成します。](../t-sql/statements/create-external-table-transact-sql.md)
 * [関数を作成します。](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
@@ -37,7 +37,7 @@ TRANSACT-SQL (T-SQL) ステートメントの分析 Platform System (APS) SQL Se
 * [スキーマを作成します。](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
-* [作成テーブルとしての選択](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+* [CREATE TABLE AS を選択します](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 * [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
 * [外部データ ソースを削除します](../t-sql/statements/drop-external-data-source-transact-sql.md)
 * [外部ファイル形式を削除します](../t-sql/statements/drop-external-file-format-transact-sql.md)
@@ -72,7 +72,7 @@ TRANSACT-SQL (T-SQL) ステートメントの分析 Platform System (APS) SQL Se
 * [EXCEPT および INTERSECT](../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
 * [EXPLAIN](../t-sql/queries/explain-transact-sql.md)
 * [FROM](../t-sql/queries/from-transact-sql.md)
-* [PIVOT および UNPIVOT を使用します。](../t-sql/queries/from-using-pivot-and-unpivot.md)
+* [PIVOT および UNPIVOT の使用](../t-sql/queries/from-using-pivot-and-unpivot.md)
 * [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
 * [HAVING](../t-sql/queries/select-having-transact-sql.md)
 * [ORDER BY](../t-sql/queries/select-order-by-clause-transact-sql.md)
@@ -90,8 +90,8 @@ TRANSACT-SQL (T-SQL) ステートメントの分析 Platform System (APS) SQL Se
 * [証明書を変更します。](../t-sql/statements/alter-certificate-transact-sql.md)
 * [データベース暗号化キーを変更します](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
-* [マスター _ キーを変更します](../t-sql/statements/alter-master-key-transact-sql.md)
-* [ロールを変更します](../t-sql/statements/alter-role-transact-sql.md)
+* [マスター _ キーを変更します。](../t-sql/statements/alter-master-key-transact-sql.md)
+* [ロールを変更します。](../t-sql/statements/alter-role-transact-sql.md)
 * [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
@@ -102,15 +102,15 @@ TRANSACT-SQL (T-SQL) ステートメントの分析 Platform System (APS) SQL Se
 * [ロールを作成します。](../t-sql/statements/create-role-transact-sql.md)
 * [ユーザーを作成します。](../t-sql/statements/create-user-transact-sql.md)
 * [証明書を削除します。](../t-sql/statements/drop-certificate-transact-sql.md)
-* [データベース暗号化キーを削除します。](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
-* [ログインを削除します。](../t-sql/statements/drop-login-transact-sql.md)
+* [データベース暗号化キーを削除します](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
+* [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
 * [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
 * [ロールを削除します](../t-sql/statements/drop-role-transact-sql.md)
 * [ユーザーを削除します。](../t-sql/statements/drop-user-transact-sql.md)
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 
-## <a name="next-steps"></a>次の手順
-参照の詳細については、次を参照してください。 [T-SQL 言語要素](tsql-language-elements.md)と[T-SQL システム ビュー](tsql-system-views.md)です。
+## <a name="next-steps"></a>次のステップ
+参照の詳細については、次を参照してください。 [T-SQL 言語要素](tsql-language-elements.md)と[T-SQL システム ビュー](tsql-system-views.md)します。
 
 <!--Image references-->
 

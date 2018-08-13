@@ -20,13 +20,13 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9bf328072f8719bc88dbee956b89399b92d987e5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a1254cbf28a21fd670becd1006b63436133b778b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409682"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537322"
 ---
 # <a name="stored-procedures"></a>ストアド プロシージャ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37409682"
   
 -   ストアド プロシージャ  
   
-     1 つの実行可能なプロシージャにプリコンパイルされた 1 つまたは複数の SQL ステートメント。  
+     1 つの実行可能なプロシージャとしてプリコンパイルされた 1 つまたは複数の SQL ステートメント。  
   
 -   拡張ストアド プロシージャ  
   
@@ -44,9 +44,9 @@ ms.locfileid: "37409682"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ストアド プロシージャを実行している&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
+-   [ストアド プロシージャの実行 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
--   [ストアド プロシージャを呼び出す&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
+-   [ストアド プロシージャの呼び出し &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

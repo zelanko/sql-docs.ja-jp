@@ -1,5 +1,5 @@
 ---
-title: sp_updateextendedproperty (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_updateextendedproperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fef4a744e237d81edc15ec7dbcef79a67e5edc70
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9e8d86bbcb6a35babce5ce2da7a0c63a8c310ddf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261188"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533101"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_updateextendedproperty
  ユーザーまたはユーザーが定義した種類です。 *level0_object_type*は**varchar (128)**、既定値は NULL です。 有効な入力値は、アセンブリ、コントラクト、イベント通知、ファイル グループ、メッセージの種類、パーティション関数、パーティション構成、PLAN GUIDE、REMOTE SERVICE BINDING、ROUTE、スキーマ、サービス、ユーザー、トリガー、型、および NULL です。  
   
 > [!IMPORTANT]  
->  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
+>  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
   
  [ @level0name=] {'*level0_object_name*'}  
  指定したレベル 1 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。  
@@ -87,12 +87,12 @@ sp_updateextendedproperty
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- 内のオブジェクトの拡張プロパティを指定するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースは、次の 3 つのレベル (0、1、および 2) に分類されます。 レベル 0 は、最上位のレベルし、は、データベース スコープに含まれているオブジェクトとして定義します。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。 1 つのレベルにあるオブジェクトを参照する場合は、そのオブジェクトを所有または格納する上位レベルのオブジェクトの名前で修飾する必要があります。  
+## <a name="remarks"></a>コメント  
+ 内のオブジェクトの拡張プロパティを指定するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースは、次の 3 つのレベル (0、1、および 2) に分類されます。 レベル 0 は、最上位のレベルし、データベース スコープに含まれるオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。 1 つのレベルにあるオブジェクトを参照する場合は、そのオブジェクトを所有または格納する上位レベルのオブジェクトの名前で修飾する必要があります。  
   
  指定する有効な*property_name*と*値*プロパティが更新されましたが、現在のデータベースに属するすべてのオブジェクトの種類および名前が null の場合。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  固定データベース ロール db_owner および db_ddladmin のメンバーは、任意のオブジェクトの拡張プロパティを更新できます。ただし、例外として、db_ddladmin はデータベース自体、ユーザー、およびロールに対しては、プロパティを追加できません。  
   
  ユーザーは、自身が所有するオブジェクト、および ALTER 権限または CONTROL 権限を持つオブジェクトの拡張プロパティを更新できます。  
@@ -100,7 +100,7 @@ sp_updateextendedproperty
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-updating-an-extended-property-on-a-column"></a>A. 列の拡張プロパティを更新する  
- 次の例は、プロパティの値を更新`Caption`列で`ID`表内`T1`です。  
+ 次の例では、プロパティの値を更新する`Caption`列`ID`テーブルで`T1`します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="b-updating-an-extended-property-on-a-database"></a>B. データベースの拡張プロパティを更新する  
- 次の例は最初に、拡張プロパティを作成、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]サンプル データベースとそのプロパティの値を更新します。  
+ 次の例は最初に、拡張プロパティを作成、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]サンプル データベースし、そのプロパティの値を更新します。  
   
 ```  
 USE AdventureWorks2012;  

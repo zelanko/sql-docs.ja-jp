@@ -1,5 +1,5 @@
 ---
-title: sys.events (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.events (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95cc7112d42a0e2975d886dc8cfa58dc6d7193d3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7621b5aba9bb67a07421339e1e72b29f06f4c5ff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179368"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532733"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  トリガーまたはイベント通知を起動するイベントごとに 1 行のデータを格納します。 これらのイベントを使用して、トリガーまたはイベント通知が作成されるときに指定されているイベントの種類を表す[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)または[CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md)です。  
+  トリガーまたはイベント通知を起動するイベントごとに 1 行のデータを格納します。 これらのイベントを使用して、トリガーまたはイベント通知が作成されるときに指定されているイベントの種類を表す[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)または[CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md)します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|トリガーまたはイベント通知の ID。 この値と連携して**型**、一意に行を識別します。|  
+|**object_id**|**int**|トリガーまたはイベント通知の ID。 この値は、と共に**型**を一意に、行を識別します。|  
 |**type**|**int**|トリガーを起動するイベント。|  
 |**type_desc**|**nvarchar(60)**|トリガーを起動するイベントの説明。|  
 |**is_trigger_event**|**bit**|1 = トリガー イベント。<br /><br /> 0 = 通知イベント。|  
