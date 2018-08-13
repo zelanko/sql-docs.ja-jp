@@ -18,13 +18,13 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ed32d379c0a0a58af6a4239899af434027a904f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8a2ef0a97e9c94b7f61b9fbe9061716da03b0e68
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421561"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536784"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "37421561"
   
 -   ICommand::Execute  
   
- コンシューマーがへの呼び出し内のデータの単一の行のみをフェッチする必要があります (行セット プロパティ グループ) 内の DBPROP_ACCESSORDER プロパティが値 DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかに設定されている場合、 **GetNextRows**メソッド BLOB データがバッファーされていないためです。 DBPROP_ACCESSORDER の値が DBPROPVAL_AO_RANDOM に設定されている場合、コンシューマーが内のデータの複数の行をフェッチできます**GetNextRows**します。  
+ コンシューマーがへの呼び出し内のデータの単一の行のみをフェッチする必要があります (行セット プロパティ グループ) 内の DBPROP_ACCESSORDER プロパティが値 DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかに設定されている場合、 **GetNextRows**メソッド BLOB データがバッファーされていないためです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから大規模なデータが取得されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーの要求されるまでです。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
   
@@ -153,7 +153,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>参照  
- [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [大きな値の型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

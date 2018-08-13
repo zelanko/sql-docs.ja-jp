@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_languages (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fulltext_languages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,28 +25,28 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dabc9334091b5b545c78b069b3e9f31a5a68a1bd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b137d433f06eddcd57bc01bb2b26900c3fdd3483
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182058"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535212"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  このカタログ ビューにワード ブレーカーが登録されている言語ごとに 1 行が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 各行には、LCID と言語の名前が表示されます。 言語のワード ブレーカーを登録すると、他の言語リソース (ステミング機能、ノイズ ワード (ストップワード)、および類義語辞典ファイル) をフルテキスト インデックス/クエリ操作で使用できるようになります。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できる[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。  
+  このカタログ ビューには、ワード ブレーカーに登録されている言語ごとに 1 行が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 各行には、LCID と言語の名前が表示されます。 言語のワード ブレーカーを登録すると、他の言語リソース (ステミング機能、ノイズ ワード (ストップワード)、および類義語辞典ファイル) をフルテキスト インデックス/クエリ操作で使用できるようになります。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
    
-|列|データ型|Description|  
+|[列]|データ型|説明|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|言語の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ロケール識別子 (LCID) です。|  
-|**name**|**sysname**|内の別名のいずれかの値は、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の値に対応する**lcid**または LCID の数値の文字列形式。|  
+|**name**|**sysname**|内の別名のいずれかの値は、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の値に対応する**lcid**または LCID の数値の文字列表現。|  
   
 ## <a name="values-returned-for-default-languages"></a>既定の言語の戻り値  
  次の表に、ワード ブレーカーが既定で登録されている言語の値を示します。  
   
-|言語|LCID (LCID)|  
+|[言語]|LCID (LCID)|  
 |--------------|----------|  
 |アラビア語|1025|  
 |ベンガル語 (インド)|1093|  
@@ -102,18 +102,18 @@ ms.locfileid: "33182058"
 |ウルドゥ語|1056|  
 |ベトナム語|1066|  
   
-## <a name="remarks"></a>解説  
- 更新するには、フルテキスト検索に登録された言語の一覧を使用して[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' です。  
+## <a name="remarks"></a>コメント  
+ フルテキスト検索に登録された言語の一覧を更新する[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [sp_fulltext_load_thesaurus_file &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [構成して、フルテキスト検索の類義語辞典ファイルの管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [構成およびストップ ワードとストップ リストをフルテキスト検索の管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [構成して、フルテキスト検索の類義語辞典ファイルを管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

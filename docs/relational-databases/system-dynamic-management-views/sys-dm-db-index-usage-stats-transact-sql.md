@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_usage_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_index_usage_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3403150f88a11070c65de493c800d3c28312c74b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: dea81e4b8e67fa5faa0ca81a60595dafdef2c4ad
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533812"
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,17 +42,17 @@ ms.lasthandoff: 05/23/2018
 >  **sys.dm_db_index_usage_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、次を参照してください。 [sys.dm_db_xtp_index_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)  
   
 > [!NOTE]  
->  このビューからの呼び出しに[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を使用して**sys.dm_pdw_nodes_db_index_usage_stats**です。  
+>  このビューからの呼び出しに[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を使用して、 **sys.dm_pdw_nodes_db_index_usage_stats**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**smallint**|テーブルまたはビューが定義されているデータベースの ID。|  
 |**object_id**|**int**|インデックスが定義されているテーブルまたはビューの ID。|  
 |**index_id**|**int**|インデックスの ID。|  
 |**user_seeks**|**bigint**|ユーザー クエリによるシーク数。|  
-|**user_scans**|**bigint**|使用していないユーザー クエリによるスキャンの数は、述語を ' シーク '。|  
+|**user_scans**|**bigint**|使用していないユーザー クエリによるスキャン数 'シーク' 述語。|  
 |**user_lookups**|**bigint**|ユーザー クエリによるブックマーク参照数。|  
-|**user_updates**|**bigint**|ユーザー クエリによる更新数。 これは、Insert、Delete が含まれていて、実際に影響を受ける行にないを実行する操作の数を表すを更新します。 たとえば、1 つのステートメントで 1000 行を削除すると場合、このカウントを 1 ずつインクリメントします。|  
+|**user_updates**|**bigint**|ユーザー クエリによる更新数。 これは、Insert、Delete が含まれていて、実際に影響を受ける行にない実行された操作の数を表すを更新します。 たとえば、1 つのステートメントで 1000 行を削除する場合は、このカウントを 1 増や|  
 |**last_user_seek**|**datetime**|前回のユーザー シークの時刻。|  
 |**last_user_scan**|**datetime**|前回のユーザー スキャンの時刻。|  
 |**last_user_lookup**|**datetime**|前回のユーザー参照の時刻。|  
@@ -64,22 +65,22 @@ ms.lasthandoff: 05/23/2018
 |**last_system_scan**|**datetime**|前回のシステム スキャンの時刻。|  
 |**last_system_lookup**|**datetime**|前回のシステム参照の時刻。|  
 |**last_system_update**|**datetime**|前回のシステム更新の時刻。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定したインデックスに対し、1 回のクエリ実行でシーク、スキャン、参照、または更新が行われるたび、その操作はインデックスの使用としてカウントされ、このビュー内の対応するカウンターが 1 増えます。 情報は、ユーザーが送信したクエリによる操作と、統計収集のスキャンなど内部生成されたクエリによる操作の両方についてレポートされます。  
   
- **User_updates**カウンターは、insert によるインデックスのメンテナンスのレベルを示す、更新、または基になるテーブルまたはビューでの delete 操作。 このビューを使用して、アプリケーションであまり使用されないインデックスを特定できます。 また、メンテナンスのオーバーヘッドの原因になっているインデックスも特定できます。 メンテナンスのオーバーヘッドの原因になっており、クエリでほとんどまたはまったく使用されないインデックスが特定できれば、インデックスの削除を検討することもできます。  
+ **User_updates**カウンターは、挿入によって、インデックスのメンテナンスのレベルを示します、更新、または基になるテーブルまたはビューに対する操作を削除します。 このビューを使用して、アプリケーションであまり使用されないインデックスを特定できます。 また、メンテナンスのオーバーヘッドの原因になっているインデックスも特定できます。 メンテナンスのオーバーヘッドの原因になっており、クエリでほとんどまたはまったく使用されないインデックスが特定できれば、インデックスの削除を検討することもできます。  
   
- カウンターを初期化するたびに空にする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) サービスを開始します。 また、AUTO_CLOSE が ON に設定されているなどの理由によりデータベースがデタッチまたはシャットダウンされた場合は常に、そのデータベースに関連付けられた行がすべて削除されます。  
+ カウンターが初期化されるたびに空にする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) サービスを開始します。 また、AUTO_CLOSE が ON に設定されているなどの理由によりデータベースがデタッチまたはシャットダウンされた場合は常に、そのデータベースに関連付けられた行がすべて削除されます。  
   
- 行が追加、インデックスを使用すると**sys.dm_db_index_usage_stats**行が既にインデックスに存在しない場合。 行が追加されるときに、カウンターが 0 に初期設定されます。  
+ インデックスを使用すると、行に追加されます**sys.dm_db_index_usage_stats**行が既にインデックスに存在しない場合。 行が追加されるときに、カウンターが 0 に初期設定されます。  
   
- アップグレード中に[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]sys.dm_db_index_usage_stats 内のエントリが削除されます。 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]より前のバージョンと同様に、エントリが保持される[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]です。  
+ アップグレード中に[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]sys.dm_db_index_usage_stats でエントリが削除されます。 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]より前のバージョンと同様に、エントリが保持される[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]します。  
   
-## <a name="permissions"></a>権限  
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。  
+## <a name="permissions"></a>アクセス許可  
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。  
   
 ## <a name="see-also"></a>参照  
 

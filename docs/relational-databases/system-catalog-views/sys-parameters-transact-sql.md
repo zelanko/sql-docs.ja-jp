@@ -1,5 +1,5 @@
 ---
-title: sys.parameters (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.parameters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,40 +25,40 @@ caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2a86fe34d867fcda8e416065e73e780f2cbee851
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: da8d3e66ed1d6e835c6b4702fc7bbab31dd186f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181898"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535172"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   パラメーターを受け入れるオブジェクトのパラメーターごとに 1 行のデータを保持します。 オブジェクトがスカラー関数の場合、戻り値を説明する単一行も含まれます。 その行がある、 **parameter_id** 0 の値。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|パラメーターが属しているオブジェクトの ID。|  
-|**name**|**sysname**|パラメーターの名前です。 オブジェクト内で一意です。<br /><br /> オブジェクトがスカラー関数の場合、パラメーター名は、戻り値を表す行の空の文字列になります。|  
-|**parameter_id**|**int**|パラメーターの ID です。 オブジェクト内で一意です。<br /><br /> 場合は、オブジェクトがスカラー関数、 **parameter_id**戻り値 0 を = です。|  
+|**name**|**sysname**|パラメーターの名前。 オブジェクト内で一意です。<br /><br /> オブジェクトがスカラー関数の場合、パラメーター名は、戻り値を表す行の空の文字列になります。|  
+|**parameter_id**|**int**|パラメーターの ID。 オブジェクト内で一意です。<br /><br /> 場合は、オブジェクトがスカラー関数、 **parameter_id**戻り値 0 を = です。|  
 |**system_type_id**|**tinyint**|パラメーターのシステム型の ID です。|  
-|**user_type_id**|**int**|ユーザーが定義されているパラメーターの型の ID。<br /><br /> 型の名前を返すに参加させる、 [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログをこの列に表示します。|  
-|**max_length**|**smallint**|パラメーターの最大長 (バイト単位)。<br /><br /> 値列のデータ型がの場合は、-1 を = **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**です。|  
-|**有効桁数 (precision)**|**tinyint**|数値ベースの場合は、パラメーターの有効桁数です。それ以外の場合は、0 です。|  
+|**user_type_id**|**int**|ユーザーが定義されているパラメーターの型の ID。<br /><br /> 型の名前を返すには、この列で [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログ ビューに結合します。|  
+|**max_length**|**smallint**|パラメーターの最大長 (バイト単位)。<br /><br /> 値列のデータ型の場合は、-1 を = **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**します。|  
+|**有効桁数**|**tinyint**|数値ベースの場合は、パラメーターの有効桁数です。それ以外の場合は、0 です。|  
 |**scale**|**tinyint**|数値ベースの場合は、パラメーターの小数点以下桁数です。それ以外の場合は、0 です。|  
 |**is_output**|**bit**|1 = パラメーターは OUTPUT または RETURN です。それ以外の場合は 0 です。|  
-|**is_cursor_ref**|**bit**|1 = パラメーターはカーソル参照パラメーターです。|  
-|**has_default_value**|**bit**|1 = パラメーターに既定値です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このカタログ ビュー内の CLR オブジェクトの既定値のみが保持されます。したがって、[!INCLUDE[tsql](../../includes/tsql-md.md)] オブジェクトに対してこの列の値は 0 になります。 内のパラメーターの既定値を表示する、[!INCLUDE[tsql](../../includes/tsql-md.md)]オブジェクト、クエリ、**定義**の列、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビュー、またはを使用して、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)システム関数です。|  
-|**is_xml_document**|**bit**|1 = 内容が完全な XML ドキュメントです。<br /><br /> 0 = コンテンツは、ドキュメント フラグメント、または列のデータ型が**xml**です。|  
-|**default_value**|**sql_variant**|場合**has_default_value** 1 の場合は、この列の値のパラメーターの既定値です。 それ以外の場合は NULL です。|  
-|**xml_collection_id**|**int**|パラメーターのデータ型が場合は 0 以外**xml** XML が型指定されたとします。 この値は、パラメーターの検証 XML スキーマ名前空間を含むコレクションの ID です。<br /><br /> 0 = いいえの XML スキーマ コレクションです。|  
+|**is_cursor_ref**|**bit**|1 = パラメーターはカーソル参照パラメーター。|  
+|**has_default_value**|**bit**|1 = パラメーターに既定値。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このカタログ ビュー内の CLR オブジェクトの既定値のみが保持されます。したがって、[!INCLUDE[tsql](../../includes/tsql-md.md)] オブジェクトに対してこの列の値は 0 になります。 内のパラメーターの既定値を表示する、[!INCLUDE[tsql](../../includes/tsql-md.md)]オブジェクト、クエリ、**定義**の列、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビュー、またはを使用して、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)システム関数。|  
+|**is_xml_document**|**bit**|1 = 内容が完全な XML ドキュメントです。<br /><br /> 0 = 内容がドキュメント フラグメント、または列のデータ型でない**xml**します。|  
+|**default_value**|**sql_variant**|場合**has_default_value**は 1 です。 この列の値は NULL それ以外の場合、は、パラメーターの既定の値。|  
+|**xml_collection_id**|**int**|非ゼロの場合は、パラメーターのデータ型は**xml** XML が型指定されたとします。 この値は、パラメーターの検証 XML スキーマ名前空間を含むコレクションの ID です。<br /><br /> 0 = いいえの XML スキーマ コレクションです。|  
 |**is_readonly**|**bit**|1 = パラメーターは READONLY です。それ以外の場合は 0 です。|  
 |**is_nullable**|**bit**|1 = パラメーターで NULL が許可されます  (既定値です)。<br /><br /> 0 = ネイティブ コンパイル ストアド プロシージャをより効率的に実行するために、パラメーターで NULL が許可されません。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

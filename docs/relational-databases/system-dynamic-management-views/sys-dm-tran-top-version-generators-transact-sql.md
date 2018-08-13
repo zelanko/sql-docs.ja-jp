@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_top_version_generators (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_tran_top_version_generators (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,20 +23,21 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dad87c14f7b8f1af31b7a0245e3bbe0b634089c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54b55bec3dd52a014286457770a40b51e0dd35c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536012"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  バージョン ストアに最も多くバージョンを作成しているオブジェクトの仮想テーブルを返します。 **sys.dm_tran_top_version_generators**上位 256 個の集計でグループ化されているレコードの長さを返します、 **database_id**と**rowset_id**です。 **sys.dm_tran_top_version_generators**クエリを実行してデータを取得、 **dm_tran_version_store**仮想テーブルです。 **sys.dm_tran_top_version_generators**非効率的なビューをバージョン ストアにクエリを実行して、バージョン ストアが非常に大きくなることができます。 この関数は、バージョン ストアを最も多く使用しているオブジェクトを特定する場合に使用することをお勧めします。  
+  バージョン ストアに最も多くバージョンを作成しているオブジェクトの仮想テーブルを返します。 **sys.dm_tran_top_version_generators**上位 256 個の集計でグループ化されているレコードの長さを返します、 **database_id**と**rowset_id**します。 **sys.dm_tran_top_version_generators**クエリを実行してデータを取得、 **dm_tran_version_store**仮想テーブルです。 **sys.dm_tran_top_version_generators**非効率的なビューがバージョン ストアにクエリを実行して、バージョン ストアが非常に大きくなることができます。 この関数は、バージョン ストアを最も多く使用しているオブジェクトを特定する場合に使用することをお勧めします。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_tran_top_version_generators**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_tran_top_version_generators**します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,20 +48,20 @@ sys.dm_tran_top_version_generators
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|データベース ID。|  
 |**rowset_id**|**bigint**|行セット ID。|  
-|**aggregated_record_length_in_bytes**|**int**|ごとのレコード長の合計**database_id**と**rowset_id ペア**バージョン ストアにします。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**aggregated_record_length_in_bytes**|**int**|各レコードの長さの合計**database_id**と**rowset_id ペア**バージョン ストアにします。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
 
-## <a name="remarks"></a>解説  
- **Sys.dm_tran_top_version_generators**をバージョン ストア全体を実行しているスキャンの実行は、多くのページを読み取る必要があります**sys.dm_tran_top_version_generators**システムに干渉することができますパフォーマンスです。  
+## <a name="remarks"></a>コメント  
+ **Sys.dm_tran_top_version_generators**を実行して、全体のバージョン ストアのスキャン、多くのページを読み取る必要があります**sys.dm_tran_top_version_generators**システムに干渉することができますパフォーマンス。  
   
 ## <a name="examples"></a>使用例  
  次の例では、4 つの同時実行トランザクションが存在するテスト シナリオを使用します。これらのトランザクションはそれぞれトランザクション シーケンス番号 (XSN) で識別され、ALLOW_SNAPSHOT_ISOLATION オプションと READ_COMMITTED_SNAPSHOT オプションが ON に設定されているデータベース内で実行されます。 実行されるトランザクションは次のとおりです。  

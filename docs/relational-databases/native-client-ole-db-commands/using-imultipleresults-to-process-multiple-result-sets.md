@@ -1,5 +1,5 @@
 ---
-title: IMultipleResults を使用して複数の結果セットを処理する |Microsoft Docs
+title: IMultipleResults を使用した複数の結果セットの処理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7281208907af5405cd30d5c9ce4f964d3df7a8e7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 764ded67b0085cfa9a6710a8b5b0417fe2662992
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422301"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535842"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>IMultipleResults を使用した複数の結果セットの処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37422301"
   
  クライアントはコマンドの実行結果をすべて処理する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコマンドの実行が結果として複数の行セット オブジェクトを作成、使用、 **IMultipleResults**アプリケーション データの取得が完了したことを確認するインターフェイス、クライアントが開始したラウンド トリップします。  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントで生成する複数の行セット、いくつかの行データを含む、 **OrderDetails**テーブルと COMPUTE BY 句の結果を含むいくつか。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行すると複数の行セットが生成されます。行セットには、**OrderDetails** テーブルの行データを含むものや、COMPUTE BY 句の結果を含むものがあります。  
   
 ```  
 SELECT OrderID, FullPrice = (UnitPrice * Quantity), Discount,  
@@ -50,12 +50,12 @@ COMPUTE
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから DB_E_OBJECTOPEN を使用する場合に、出力パラメーターがストリーム送信され、アプリケーションが呼び出す前にすべての返された出力パラメーターの値を使用していないが返さも **:getresults**を次の結果セットを取得します。 MARS が有効でないと、接続がビジー状態の行セットを生成しないか、サーバー カーソルではない行セットを生成するコマンドを実行している場合と、DBPROP_MULTIPLECONNECTIONS データ ソースのプロパティが VARIANT_TRUE に設定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native ClientOLE DB プロバイダー作成コマンドの同時実行のオブジェクトをサポートする追加の接続、トランザクションがアクティブでを返します。 この場合、エラーされます。 トランザクションとロックは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって接続ごとに管理されます。 他の接続が作成されている場合でも、個別の接続のコマンドはロックを共有しません。 コマンドによって要求された行にロックを設定することで、そのコマンドが別のコマンドによってブロックされないようにする必要があります。 MARS を有効にしている場合、その接続では複数のコマンドをアクティブにできます。明示的なトランザクションを使用している場合、すべてのコマンドが共通のトランザクションを共有します。  
   
- 取り消すには、コマンドを使用するか[issabort::abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md)をコマンド オブジェクトおよび派生行セットで保持されているすべての参照を解放します。  
+ コマンドを取り消すには、[ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) を使用するか、コマンド オブジェクトおよび派生行セットのすべての参照を解放します。  
   
- 使用して**IMultipleResults**を適切に判断すると、コマンドの実行をキャンセルし、無料で使用するためのセッション オブジェクトはすべてのインスタンスで、コンシューマーがコマンドの実行によって生成されたすべての行セットを取得できその他のコマンド。  
+ すべてのインスタンスで **IMultipleResults** を使用すると、コマンド実行の結果生成されたすべての行セットをコンシューマーが取得し、コマンド実行を取り消して他のコマンドのためにセッションを解放するタイミングを適切に判断できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルを使用するときは、コマンドを実行するとカーソルが作成されます。 カーソルを作成するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は成功か失敗を返します。したがって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへのラウンド トリップが完了するのはコマンドを実行した結果が返ってきたときです。 各**GetNextRows**呼び出しのラウンド トリップになります。 このようなしくみによって、サーバー カーソルからのフェッチの結果である行セットを処理する、複数のアクティブなコマンド オブジェクトが存在できます。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)します。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルを使用するときは、コマンドを実行するとカーソルが作成されます。 カーソルを作成するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は成功か失敗を返します。したがって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへのラウンド トリップが完了するのはコマンドを実行した結果が返ってきたときです。 その後、**GetNextRows** 呼び出しはそれぞれがラウンド トリップになります。 このようなしくみによって、サーバー カーソルからのフェッチの結果である行セットを処理する、複数のアクティブなコマンド オブジェクトが存在できます。 詳細については、「[行セットと SQL Server カーソル](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [[コマンド]](../../relational-databases/native-client-ole-db-commands/commands.md)  

@@ -21,13 +21,13 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f1adbd4dee8194d0e91d9efd3a99a52b79988
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9b84c239c348f83f0da211f3efaa28863d4e607f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419661"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536173"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,9 +92,9 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字やバイナリ データ型、 *cbUserData* SQL_VARLEN_DATA、SQL_NULL_DATA、0 または正の値を指定できます。 場合*cbUserData* SQL_VARLEN_DATA は、システムは存在する場合は、長さのインジケーターやターミネータ シーケンスのいずれかを使用して、データの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 場合*cbUserData* SQL_VARLEN_DATA、データは、型が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字またはバイナリの型と長さのインジケーターもターミネータ シーケンスを指定すると、システムには、エラー メッセージが返されます。  
   
- 場合*cbUserData*が 0 または正の値をシステムを使用して*cbUserData*最大データ長として。 ただし、正の値の場合、 *cbUserData*長さのインジケーターとターミネータ シーケンスの提供、コピーするデータ量が少なくなる方法を使用してデータの長さを決定します。  
+ *cbUserData* が 0 または正の値の場合、システムは最大データ長として *cbUserData* を使用します。 ただし、*cbUserData* に正の値を指定し、長さのインジケーターやターミネータ シーケンスを指定した場合、システムはコピーするデータ量が少なくなる方法を使用してデータ長を決定します。  
   
- *CbUserData*値は、データのバイト数を表します。 文字データが Unicode ワイド文字では、正の値で表されている場合*cbUserData*パラメーターの値は、各文字のバイト単位でサイズを乗算する文字数を表します。  
+ *cbUserData* の値はデータのバイト数を表します。 文字データが Unicode ワイド文字で表されている場合、*cbUserData* パラメーターが正の値のときは、各文字のサイズ (バイト数) に文字数を掛けた数を表します。  
   
  *pUserDataTerm*  
  列に使用するターミネータ シーケンスです。 このパラメーターは主に文字データ型に対して有効です。これは、他のすべての型は固定長であったり、バイト数を正確に記録するために長さのインジケーターが必要になる (バイナリ データの場合) ためです。  

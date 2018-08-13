@@ -1,5 +1,5 @@
 ---
-title: sp_fkeys (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_fkeys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fdb582cf8e77e61d7723ea1c6ed2e854ef8f6940
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fc012a7b05f2387756e25bfb86c93896d3f94190
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258624"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536662"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,28 +55,28 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  [ @pktable_owner=] '*pktable_owner*'  
  カタログ情報を返すために使用する (主キー) を含むテーブルの所有者の名前です。 *pktable_owner*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*pktable_owner*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定した名前のテーブルを現在のユーザーが所有している場合、そのテーブルの列が返されます。 場合*pktable_owner*が指定されていない、現在のユーザーが、指定したテーブルを所有していないと*pktable_name*、プロシージャの指定したテーブルを探します*pktable_name*データベース所有者が所有します。 存在する場合は、そのテーブルの列が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定した名前のテーブルを現在のユーザーが所有している場合、そのテーブルの列が返されます。 場合*pktable_owner*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*pktable_name*、プロシージャは、指定したテーブルを探します*pktable_name*データベース所有者が所有します。 存在する場合は、そのテーブルの列が返されます。  
   
  [ @pktable_qualifier =] '*pktable_qualifier*'  
- (主キーが設定された) テーブル修飾子の名前を指定します。 *pktable_qualifier*は sysname で、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]修飾子は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+ (主キーが設定された) テーブル修飾子の名前を指定します。 *pktable_qualifier*が sysname で、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]修飾子は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
  [ @fktable_name=] '*fktable_name*'  
- カタログ情報を返すために使用する (外部キーが設定された) テーブルの名前を指定します。 *fktable_name*は sysname で、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 このパラメーターまたは*pktable_name*パラメーター、またはその両方を指定する必要があります。  
+ カタログ情報を返すために使用する (外部キーが設定された) テーブルの名前を指定します。 *fktable_name*が sysname で、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 このパラメーターまたは*pktable_name*パラメーター、またはその両方を指定する必要があります。  
   
  [ @fktable_owner =] '*fktable_owner*'  
  カタログ情報を返すために使用する (外部キーが設定された) テーブルの所有者の名前を指定します。 *fktable_owner*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*fktable_owner*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定した名前のテーブルを現在のユーザーが所有している場合、そのテーブルの列が返されます。 場合*fktable_owner*が指定されていない、現在のユーザーが、指定したテーブルを所有していないと*fktable_name*、プロシージャの指定したテーブルを探します*fktable_name*データベース所有者が所有します。 存在する場合は、そのテーブルの列が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定した名前のテーブルを現在のユーザーが所有している場合、そのテーブルの列が返されます。 場合*fktable_owner*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*fktable_name*、プロシージャは、指定したテーブルを探します*fktable_name*データベース所有者が所有します。 存在する場合は、そのテーブルの列が返されます。  
   
  [ @fktable_qualifier=] '*fktable_qualifier*'  
- (外部キーが設定された) テーブル修飾子の名前を指定します。 *fktable_qualifier*は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]修飾子は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+ (外部キーが設定された) テーブル修飾子の名前を指定します。 *fktable_qualifier*は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]修飾子は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|主キーが設定されたテーブルの修飾子の名前です。 このフィールドには NULL を指定できます。|  
 |PKTABLE_OWNER|**sysname**|主キーが設定されたテーブルの所有者名です。 このフィールドは常に値を返します。|  
@@ -94,7 +94,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  返される結果は、FKTABLE_QUALIFIER、FKTABLE_OWNER、FKTABLE_NAME、KEY_SEQ で並べ替えられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  無効な外部キーを持つテーブルを含むアプリケーションのコーディングは、以下のように実装できます。  
   
 -   そのテーブルで作業している間は、一時的に制約チェックを無効にして (ALTER TABLE NOCHECK または CREATE TABLE NOT FOR REPLICATION)、その後再び有効にします。  
@@ -103,13 +103,13 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 主キー テーブルの名前を指定され、外部キー テーブルの名前が NULL の場合、sp_fkeys は指定されたテーブルに対する外部キーを含むすべてのテーブルを返します。 外部キー テーブルの名前を指定し、主キー テーブルの名前が NULL の場合、sp_fkeys は、主キー/外部キー関係によって外部キー テーブルの外部キーに関係付けられるすべてのテーブルを返します。  
   
-Sp_fkeys ストアド プロシージャは、ODBC で SQLForeignKeys と同じです。  
+Sp_fkeys ストアド プロシージャは、odbc SQLForeignKeys と同じです。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  必要があります`SELECT`スキーマに対する権限。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、外部キーの一覧を取得、`HumanResources.Department`テーブルに、`AdventureWorks2012`データベース。  
+ 次の例の外部キーの一覧の取得、`HumanResources.Department`テーブルに、`AdventureWorks2012`データベース。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -119,7 +119,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例は、外部キーの一覧を取得、`DimDate`テーブルに、`AdventureWorksPDW2012`データベース。 行が返されないため[!INCLUDE[ssDW](../../includes/ssdw-md.md)]外部キーをサポートしていません。  
+ 次の例の外部キーの一覧の取得、`DimDate`テーブルに、`AdventureWorksPDW2012`データベース。 行が返されないため[!INCLUDE[ssDW](../../includes/ssdw-md.md)]は外部キーをサポートしていません。  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  
