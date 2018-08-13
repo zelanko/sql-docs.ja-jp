@@ -1,5 +1,5 @@
 ---
-title: XPath データ型 (SQLXML 4.0) |Microsoft Docs
+title: XPath データ型 (SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -32,22 +32,22 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7762ba02f4368b64fc4073936cb04c293029e9d2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2998ec10089c6c1c4a7d61f59ae2663cc311c510
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049781"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560752"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath、および XML Schema (XSD) のデータ型は大きく異なります。 たとえば、XPath に整数や日付のデータ型はありませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と XSD にはこれらのデータ型が多く用意されています。 また、XSD では時間値の精度はナノ秒ですが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の精度は最大でも 1/300 秒です。 このため、あるデータ型から別のデータ型へのマッピングが常に可能であるとは限りません。 マッピングの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XSD データ型のデータ型を参照してください[データ型の強制型変換と sql:datatype 注釈&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath、および XML Schema (XSD) のデータ型は大きく異なります。 たとえば、XPath に整数や日付のデータ型はありませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と XSD にはこれらのデータ型が多く用意されています。 また、XSD では時間値の精度はナノ秒ですが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の精度は最大でも 1/300 秒です。 このため、あるデータ型から別のデータ型へのマッピングが常に可能であるとは限りません。 マッピングの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XSD データ型にデータ型を参照してください[データ型の強制変換、sql:datatype 注釈&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
   
  XPath が 3 つのデータ型:**文字列**、**数**、および**ブール**します。 **数**データ型は、IEEE 754 倍精度浮動小数点では常にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float (53)** データ型が XPath に最も近い**数**します。 ただし、 **float (53)** IEEE 754 ではありません。 たとえば、非数 (NaN) も無限大も使用されません。 数値以外の文字列を変換しようとしています。**数**エラー 0 個の結果で除算しようとします。  
   
 ## <a name="xpath-conversions"></a>XPath 変換  
- `OrderDetail[@UnitPrice > "10.0"]` などの XPath クエリを使用する場合は、データ型の変換を暗黙的に行うか明示的に行うかによって、クエリの意味が微妙に変わります。 このため、XPath データ型の実装方法について理解しておくことが重要です。 XPath 言語仕様 XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999 にある W3C Web サイトにhttp://www.w3.org/TR/1999/PR-xpath-19991008.htmlします。  
+ `OrderDetail[@UnitPrice > "10.0"]` などの XPath クエリを使用する場合は、データ型の変換を暗黙的に行うか明示的に行うかによって、クエリの意味が微妙に変わります。 このため、XPath データ型の実装方法について理解しておくことが重要です。 XML パス言語 (XPath) version 1.0 W3C XPath 言語仕様の W3C Web サイトで 8 1999 年 10 月の推奨事項を提示するを参照してhttp://www.w3.org/TR/1999/PR-xpath-19991008.html。  
   
  XPath の演算子は、次の 4 つのカテゴリに分けられます。  
   
@@ -67,18 +67,18 @@ ms.locfileid: "38049781"
 |1 つは、他のノードのセットを**文字列**します。|ノード セット内のノードがある場合にのみ TRUE されるように変換される**数**での比較、**文字列**に変換**数**は TRUE です。|ノード セット内のノードがある場合にのみ TRUE されるように変換される**文字列**での比較、**文字列**は TRUE です。|  
 |1 つは、他のノードのセットを**数**します。|ノード セット内のノードがある場合にのみ TRUE されるように変換される**数**での比較、**数**は TRUE です。|同じ。|  
 |1 つは、他のノードのセットを**ブール**します。|ノード セット内のノードがある場合にのみ TRUE されるように変換される**ブール**し**数**での比較、**ブール**に変換**数**は TRUE です。|ノード セット内のノードがある場合にのみ TRUE されるように変換される**ブール**での比較、**ブール**は TRUE です。|  
-|どちらもノード セットでない場合|両方のオペランドを変換**数**し比較。|両方のオペランドを共通のデータ型に変換し比較。 変換**ブール**いずれかの場合**ブール**、**数**いずれかの場合**数**それ以外に変換**文字列。**.|  
+|どちらもノード セットでない場合|両方のオペランドを変換**数**し比較。|両方のオペランドを共通のデータ型に変換し比較。 変換**ブール**いずれかの場合**ブール**、**数**いずれかの場合**数**それ以外に変換**文字列**。|  
   
 > [!NOTE]  
->  XPath の関係演算子はオペランドを常に変換するため、**数**、**文字列**比較はできません。 日付の比較を含めるには、するは、SQL Server 2000 は、XPath 仕様にこのバリエーションの 1 つを提供しています: 関係演算子を比較すると、**文字列**を**文字列**、ノード セットと、**文字列**、または、文字列値ノード セットを文字列値ノード セットを**文字列**比較 (いない、**数**比較) が実行されます。  
+>  XPath の関係演算子はオペランドを常に変換するため、**数**、**文字列**比較はできません。 日付の比較は、SQL Server 2000 は、XPath 仕様には、このバリエーションを提供しています: 関係演算子を比較すると、**文字列**に、**文字列**、ノード セットに、**文字列**、または、文字列の値を持つノード セットを文字列の値を持つノード セット、**文字列**比較 (いない、**数**の比較) が使用されます。  
   
 ## <a name="node-set-conversions"></a>ノード セット変換  
  ノード セット変換は常に直感的なものとは限りません。 ノード セットに変換されます、**文字列**セット内の最初のノードのみの文字列値を取得しています。 ノード セットに変換されます**数**に変換してから、**文字列**、および変換し、**文字列**に**数**します。 ノード セットに変換されます**ブール**によってその存在をテストします。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ノード セットで位置の選択は実行されません。たとえば、XPath クエリ `Customer[3]` は 3 番目の顧客を意味しますが、このような位置の選択は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサポートされていません。 ノードではそのため、-設定-に-**文字列**またはノードの設定-に-**数**XPath 仕様での説明に従って、変換は実装されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XPath 仕様で "先頭" の意味で指定されているものが "任意" の意味として扱われます。 たとえば、W3C XPath 仕様、XPath クエリに基づく`Order[OrderDetail/@UnitPrice > 10.0]`最初の注文を選択します。 **OrderDetail**を持つ、 **UnitPrice** 10.0 を超える。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この XPath クエリは、これらの注文をいずれかを選択します。 **OrderDetail**を持つ、 **UnitPrice** 10.0 を超えています。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ノード セットで位置の選択は実行されません。たとえば、XPath クエリ `Customer[3]` は 3 番目の顧客を意味しますが、このような位置の選択は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサポートされていません。 ノードではそのため、-設定-に-**文字列**またはノードの設定-に-**数**XPath 仕様での説明に従って、変換は実装されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XPath 仕様で "先頭" の意味で指定されているものが "任意" の意味として扱われます。 W3C XPath 仕様に XPath クエリに基づいて、たとえば、 `Order[OrderDetail/@UnitPrice > 10.0]` 、最初にそれらの注文を選択**OrderDetail**は、 **[単価]** 10.0 よりも大きい。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、次の XPath クエリでこれらの注文を選択する**OrderDetail**は、 **[単価]** 10.0 よりも大きい。  
   
- 変換**ブール**、存在検査が生成されますテスト。 したがって、XPath クエリ`Products[@Discontinued=true()]`が SQL 式と同じ"products.discontinued is null でない"、SQL 式ではありません"Products.Discontinued = 1" です。 クエリを後者の SQL 式に相当するためには、以外を最初にノード セットを変換**ブール**などの入力**数**します。 たとえば、 `Products[number(@Discontinued) = true()]`のようにします。  
+ 変換**ブール**、存在検査が生成されますテスト。 したがって、XPath クエリ`Products[@Discontinued=true()]`が SQL 式と同じ"products.discontinued is null でない"、SQL 式ではありません"Products.Discontinued = 1" です。 クエリを後者の SQL 式に相当するためには、以外を最初にノード セットを変換**ブール**などの入力**数**します。 たとえば、 `Products[number(@Discontinued) = true()]` のようにします。  
   
  大半の演算子は、ノード セット内の 1 つ以上のノードに対して TRUE であれば TRUE となるように定義されているので、これらの演算はノード セットが空の場合は常に FALSE となります。 したがって、A が空の場合、`A = B` と `A != B` は両方とも FALSE になり、`not(A=B)` と `not(A!=B)` は TRUE になります。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "38049781"
  ノード セットに変換するときに**文字列**または**数**(ある場合) は、その XDR 型は、注釈付きスキーマで検証、および、その型に必要な変換が判別に使用されます。  
   
 ## <a name="mapping-xdr-data-types-to-xpath-data-types"></a>XDR データ型から XPath データ型へのマッピング  
- 次の表に示すように、ノードの XPath データ型は、スキーマ内の XDR データ型から派生した (ノード**EmployeeID**説明の目的に使用)。  
+ 次の表に示すように、ノードの XPath データ型は、スキーマ内の XDR データ型から派生した (ノード **[社員コード]** は、例示の目的に使用)。  
   
 |XDR データ型|同等の<br /><br /> XPath データ型|使用される SQL Server 変換|  
 |-------------------|------------------------------------|--------------------------------|  
@@ -148,7 +148,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `N'E-' + CONVERT(nvarchar(4000), Employees.EmployeeID, 126) = N'E-1'`  
   
- **EmployeeID**の 1 つ、 **id** (**idref**、 **idrefs**、 **nmtoken**、 **nmtokens**など)、XSD スキーマでのデータ型の値**EmployeeID**に変換されます、**文字列**前に説明した変換規則を使用して XPath データ型。  
+ **[社員コード]** の 1 つ、 **id** (**idref**、 **idrefs**、 **nmtoken**、 **nmtokens**というように)、XSD スキーマのデータ型の値 **[社員コード]** に変換され、**文字列**前に説明した変換規則を使用して、XPath のデータ型。  
   
  `CONVERT(nvarchar(4000), Employees.EmployeeID, 126)`  
   
@@ -157,7 +157,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. XPath クエリ内で複数のデータ型変換を実行する  
  注釈付き XSD スキーマに対して指定される XPath クエリ `OrderDetail[@UnitPrice * @OrderQty > 98]` を考えてみます。  
   
- この XPath クエリでは、すべてを返します、  **\<OrderDetail >** 、述語を満たす要素`@UnitPrice * @OrderQty > 98`します。 場合、 **UnitPrice**で注釈が、 **fixed14.4**データ型の注釈付きスキーマでは、この述語は SQL 式と同じです。  
+ 次の XPath クエリが返すすべての **\<OrderDetail >** 、述語を満たす要素`@UnitPrice * @OrderQty > 98`。 場合、 **UnitPrice**で注釈が、 **fixed14.4**データ型の注釈付きスキーマでは、この述語は SQL 式と同じです。  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
@@ -167,7 +167,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 CONVERT(money, OrderDetail.UnitPrice))   
 ```  
   
- 算術演算子はオペランドを変換するため、**数**XPath データ型に (別の XPath データ型に 1 つの XPath データ型) から 2 番目の変換が適用される値に変換が**float (53)** (**float (53)** 、XPath の近くにある**数**データ型)。  
+ 算術演算子にオペランドを変換するため、**数**XPath データ型から XPath データ型別の XPath データ型から) の 2 番目の変換が適用されるに値を変換する**float(53)** (**float(53)** 、XPath には、**数**データ型)。  
   
 ```  
 CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice))   
@@ -186,6 +186,6 @@ CONVERT(float(53), 98)
 ```  
   
 > [!NOTE]  
->  スキーマで使用される XSD データ型は、基になると互換性がない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベースのデータ型または不可能の XPath データ型の変換が実行される、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーを返す可能性があります。 たとえば場合、 **EmployeeID**属性は、注釈が付けられた**id プレフィックス**注釈、XPath`Employee[@EmployeeID=1]`ためエラーが発生**EmployeeID**が、**id プレフィックス**注釈に変換できないと**数**します。  
+>  スキーマで使用されている XSD データ型は、基になるとは互換性がない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベース内のデータ型または変換を実行することは不可能の XPath データ型の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーが返される場合があります。 などの場合、 **[社員コード]** 属性は、注釈が付けられた**id プレフィックス**アノテーションでは、XPath`Employee[@EmployeeID=1]`エラーが生成されますので **[社員コード]** は、**id プレフィックス**アノテーションに変換することはできませんと**数**。  
   
   
