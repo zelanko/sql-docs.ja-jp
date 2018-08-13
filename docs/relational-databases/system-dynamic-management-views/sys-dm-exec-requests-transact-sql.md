@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_requests (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_requests (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b8e51c1078ebe9b1fd2784a14e8c8e1575eae27
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 85c9decc6e59e3a35290081cbc0af59410c5db9d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467958"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548032"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "34467958"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時間の値には、プリエンプティブ モードで費やされた時間は含まれません。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|要求が関係しているセッションの ID。 NULL 値は許可されません。|  
 |request_id|**int**|要求の ID。 セッションのコンテキスト内で一意です。 NULL 値は許可されません。|  
 |start_time|**datetime**|要求到着時のタイムスタンプ。 NULL 値は許可されません。|  
-|ステータス|**nvarchar(30)**|要求の状態です。 これは、次のいずれかを指定できます。<br /><br /> 背景情報<br />実行中<br />実行可能<br />休止中<br />中断<br /><br /> NULL 値は許可されません。|  
-|command|**nvarchar(32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部のシステム処理では、実行するタスクの種類に基づいてコマンドが設定されます。 このタスクには次のものがあります。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
+|status|**nvarchar(30)**|要求の状態です。 これは、次のいずれかを指定できます。<br /><br /> 背景情報<br />実行中<br />実行可能<br />休止中<br />中断<br /><br /> NULL 値は許可されません。|  
+|command|**nvarchar(32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Del<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部のシステム処理では、実行するタスクの種類に基づいてコマンドが設定されます。 このタスクには次のものがあります。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
 |sql_handle|**varbinary(64)**|要求の SQL テキストのハッシュ マップ。 NULL 値が許可されます。|  
 |statement_start_offset|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが開始されるまでの文字数。 sql_handle、statement_end_offset、sys.dm_exec_sql_text 動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
 |statement_end_offset|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが終了するまでの文字数。 sql_handle、statement_end_offset、sys.dm_exec_sql_text 動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
@@ -54,7 +54,7 @@ ms.locfileid: "34467958"
 |user_id|**int**|要求を送信したユーザーの ID。 NULL 値は許可されません。|  
 |connection_id|**uniqueidentifier**|要求を受信した接続の ID。 NULL 値が許可されます。|  
 |blocking_session_id|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションが所有しています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を現時点では特定できませんでした。|  
-|wait_type|**nvarchar(60)**|要求が現在ブロックされている場合の待機の種類。 NULL 値が許可されます。<br /><br /> 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)です。|  
+|wait_type|**nvarchar(60)**|要求が現在ブロックされている場合の待機の種類。 NULL 値が許可されます。<br /><br /> 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)します。|  
 |wait_time|**int**|要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |last_wait_type|**nvarchar(60)**|要求がブロックされていた場合の最後の待機の種類。 NULL 値は許可されません。|  
 |wait_resource|**nvarchar (256)**|要求が現在ブロックされている場合の現在待機中のリソース。 NULL 値は許可されません。|  
@@ -95,14 +95,14 @@ ms.locfileid: "34467958"
 |query_hash|**binary(8)**|クエリで計算され、同様のロジックを持つクエリを識別するために使用される、バイナリのハッシュ値です。 クエリ ハッシュを使用して、リテラル値だけが異なるクエリの全体的なリソース使用率を決定できます。|  
 |query_plan_hash|**binary(8)**|クエリ実行プランで計算され、同様のクエリ実行プランを識別するために使用される、バイナリのハッシュ値です。 クエリ プラン ハッシュを使用して、同様の実行プランを持つクエリの累積コストを確認できます。|  
 |statement_sql_handle|**varbinary(64)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 個別のクエリの SQL ハンドル。 |  
-|statement_context_id|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> Sys.query_context_settings への省略可能な外部キーです。 |  
+|statement_context_id|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> Sys.query_context_settings の省略可能な外部キーです。 |  
 |dop |**int** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> クエリの並列処理の次数。 |  
 |parallel_worker_count |**int** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> これが、並列クエリの場合の予約済みの並列ワーカーの数。  |  
-|external_script_request_id |**uniqueidentifier** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在の要求に関連付けられている外部スクリプトの要求 ID。 |  
+|external_script_request_id |**uniqueidentifier** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在の要求に関連付けられている外部スクリプト要求 ID です。 |  
 |is_resumable |**bit** |**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 要求が再開可能なインデックス操作であるかどうかを示します。 |  
   
-## <a name="permissions"></a>権限  
- 場合、ユーザーは`VIEW SERVER STATE`サーバーに対する権限をユーザーに表示されるセッションの実行中のすべてのインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 それ以外の場合、ユーザーが現在のセッションのみを表示します。 `VIEW SERVER STATE` 付与することはできません[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ように`sys.dm_exec_requests`は常に現在の接続に限定されます。 
+## <a name="permissions"></a>アクセス許可  
+ ある場合、ユーザーは`VIEW SERVER STATE`サーバーに対する権限を実行中のすべてのセッションを表示のインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。 `VIEW SERVER STATE` 付与することはできません[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ように`sys.dm_exec_requests`現在の接続に制限は常にします。 
   
 ## <a name="examples"></a>使用例  
   
@@ -114,7 +114,7 @@ SELECT * FROM sys.dm_exec_requests;
 GO  
 ```  
   
- 次に、ステートメントのテキストを取得するを使用して、先ほどコピーした`sql_handle`をシステム関数`sys.dm_exec_sql_text(sql_handle)`です。  
+ 次に、ステートメントのテキストを取得するには、使用、コピーした`sql_handle`をシステム関数`sys.dm_exec_sql_text(sql_handle)`します。  
   
 ```  
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
@@ -129,7 +129,7 @@ SELECT * FROM sys.dm_exec_requests;
 GO  
 ```  
   
- 次に、ロックの情報を検索するを使用して、先ほどコピーした`transaction_id`をシステム関数**sys.dm_tran_locks**です。  
+ 次に、ロックの情報を検索するには、使用、コピーした`transaction_id`をシステム関数**sys.dm_tran_locks**します。  
   
 ```  
 SELECT * FROM sys.dm_tran_locks   

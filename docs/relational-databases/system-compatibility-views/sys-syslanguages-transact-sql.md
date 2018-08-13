@@ -1,5 +1,5 @@
 ---
-title: sys.syslanguages (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.syslanguages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,26 +25,26 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4c879ed679052a14d420211c5977d2152d5ccb8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c927af11c853a2cd2ff94049f4eb99de3c5e10f7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222073"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556392"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに存在する言語ごとに、1 行のデータを格納します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|一意な言語 ID。|  
 |dateformat|**nchar(3)**|日付の表示順序 (例 : DMY)。|  
 |datefirst|**tinyint**|週の最初の曜日。1 は月曜、2 は火曜のようになり、7 は日曜になります。|  
 |upgrade|**int**|システムでの使用のため予約済み。|  
-|name|**sysname**|たとえば、フランス語の公式言語名。|  
+|NAME|**sysname**|たとえば、フランス語の公式言語名。|  
 |別名 (alias)|**sysname**|言語の別名 (例 : French)。|  
 |months|**nvarchar(372)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形ではなく、それぞれ 20 文字までです。|  
 |shortmonths|**nvarchar(132)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形で、それぞれ 9 文字までです。|  

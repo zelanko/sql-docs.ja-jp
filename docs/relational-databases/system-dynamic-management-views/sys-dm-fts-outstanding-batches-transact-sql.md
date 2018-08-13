@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_outstanding_batches (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_fts_outstanding_batches (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -24,19 +24,20 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb67cfc9ae23c9779efdfccb436157b9a14349f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2c214242445ed6769b44f060cb563db1296006c1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547542"
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   各フルテキスト インデックス バッチに関する情報を返します。  
   
-  |列名|データ型|Description|  
+  |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|データベースの ID。|  
 |catalog_id|**int**|フルテキスト カタログの ID|  
@@ -52,10 +53,10 @@ ms.lasthandoff: 05/23/2018
 |doc_failed|**bigint**|バッチ内の失敗したドキュメントの数。|  
 |batch_timestamp|**timestamp**|バッチの作成時に取得されたタイムスタンプ値。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="examples"></a>使用例  
  次の例では、サーバー インスタンス内の各テーブルで現在処理されているバッチの数を調べます。  

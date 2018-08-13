@@ -1,5 +1,5 @@
 ---
-title: Visual c# .NET の概要 |Microsoft Docs
+title: Visual c# .NET の概要 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -17,15 +17,15 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff1a164c98fa04cdf2d490ece9f088e255a6e164
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1bb3a6ce20cad1f42ce6baf7f90424a6697ab029
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032626"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542992"
 ---
-# <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO プログラミング - Visual c# .NET の概要
+# <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO プログラミング - Visual C# .NET の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET は、共通言語ランタイム (CLR) でサポートされているマネージ プログラミング言語のいずれかで[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].NET。 C# 言語の詳細については多く、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET ドキュメント。 SMO アプリケーションを開発するには、[!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] および [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] を使用できます。  

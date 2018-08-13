@@ -1,5 +1,5 @@
 ---
-title: sp_pkeys (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_pkeys (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5321f34ae72051bc84a83dca70f12f772f22fc9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5d51be7029c9f9da4ef7a51958f756352c5ddc1f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259482"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562996"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,17 +54,17 @@ sp_pkeys [ @table_name = ] 'name'
  [ @table_owner=] '*所有者*'  
  指定したテーブルのテーブル所有者を指定します。 *所有者*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*所有者*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーには、指定した名前を持つテーブルを所有している、そのテーブルの列が返されます。 場合、*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していないと*名前*、このプロシージャは、指定したテーブルを探します*名前*が所有する、データベース所有者です。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルの列が返されます。 場合、*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*名前*、この手順は、指定したテーブルを探します*名前*によって所有されている、データベース所有者です。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
  [ @table_qualifier=] '*修飾子*'  
- テーブルの修飾名を指定します。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 製品によっては、テーブルのデータベース環境のサーバー名を表す場合があります。  
+ テーブルの修飾名を指定します。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 製品によっては、テーブルのデータベース環境のサーバー名を表す場合があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|テーブル識別子の名前。 このフィールドには NULL を指定できます。|  
 |TABLE_OWNER|**sysname**|テーブルの所有者の名前です。 このフィールドは常に値を返します。|  
@@ -73,12 +73,12 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|複数列の主キーにおける、列のシーケンス番号です。|  
 |PK_NAME|**sysname**|主キー識別子。 データ ソースに適用されない場合は NULL が返されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_pkeys では、PRIMARY KEY 制約で明示的に定義された列に関する情報が返されます。 すべてのシステムで、明示的に名前の付けられた主キーがサポートされているわけではないため、主キーの構成はゲートウェイのインプリメンタによって決定されます。 "主キー" という用語は、あるテーブルに対する論理的主キーを意味することに注意してください。 論理的主キーとして示されている各キーには、それぞれに一意なインデックスが定義されていることが前提となります。 sp_statistics には、この一意なインデックスも返されます。  
   
- Sp_pkeys ストアド プロシージャは、ODBC で SQLPrimaryKeys と同じです。 返される結果は、TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME、および KEY_SEQ の値で並べ替えられます。  
+ Sp_pkeys ストアド プロシージャは、odbc SQLPrimaryKeys と同じです。 返される結果は、TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME、および KEY_SEQ の値で並べ替えられます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

@@ -1,5 +1,5 @@
 ---
-title: エラーとメッセージの処理 |Microsoft Docs
+title: エラーとメッセージの処理 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c70fab6988fd095df645bfc467f4d66941a9839d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 997c94b83d45636d0fa99b1270b8a43f0c6e7bc5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431311"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546382"
 ---
 # <a name="handling-errors-and-messages"></a>エラーとメッセージの処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37431311"
   
  元の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] c には、Db-library のネイティブ API により、アプリケーションはエラー処理のコールバックをインストールして、メッセージ処理関数の戻り値のエラーやメッセージ。 PRINT、RAISERROR、DBCC、SET など、一部の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、結果セットではなく DB-Library メッセージ ハンドラー関数に結果を返します。 しかし、ODBC API にはそのようなコールバック機能がありません。 ときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーから返されるメッセージを検出した[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ODBC リターン コードを SQL_SUCCESS_WITH_INFO または SQL_ERROR に設定し、メッセージ、1 つ以上の診断レコードが返されます。 そのため、ODBC アプリケーションする必要があります慎重にテストするにはこれらのリターン コードと呼び出し**SQLGetDiagRec**メッセージ データを取得します。  
   
- エラーのトレースについては、次を参照してください。[データ アクセスのトレース](http://go.microsoft.com/fwlink/?LinkId=125805)します。 エラーのトレースで追加の機能強化については[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を参照してください[診断の情報を拡張イベント ログにアクセスする](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)します。  
+ エラーのトレースの詳細については、「[データ アクセスのトレース](http://go.microsoft.com/fwlink/?LinkId=125805)」を参照してください。 エラーのトレースで追加の機能強化については[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を参照してください[診断の情報を拡張イベント ログにアクセスする](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

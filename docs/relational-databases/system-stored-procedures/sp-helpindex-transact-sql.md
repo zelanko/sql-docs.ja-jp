@@ -1,5 +1,5 @@
 ---
-title: sp_helpindex (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpindex (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e6e64715eeb893e1a93df1c1c7c52b62e0d18d4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6560726bb583d823ad0cf0b36310eb68691705f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547622"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpindex [ @objname = ] 'name'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|インデックスの名前。|  
 |**index_description**|**varchar(210)**|インデックスがあるファイル グループを含むインデックスの説明。|  
@@ -61,12 +61,12 @@ sp_helpindex [ @objname = ] 'name'
   
  降順のインデックス列は結果セットに表示され、列名の後にマイナス記号 (-) が付けられます。既定の昇順のインデックス列の場合は、その名前だけが表示されます。  
   
-## <a name="remarks"></a>解説  
- UPDATE STATISTICS の NORECOMPUTE オプションを使用してインデックスを設定した場合にその情報が含まれます。、 **index_description**列です。  
+## <a name="remarks"></a>コメント  
+ その情報が含まれている UPDATE STATISTICS の NORECOMPUTE オプションを使用してインデックスが設定されている場合、 **index_description**列。  
   
- **sp_helpindex**公開並べ替え可能なインデックス列だけです。 したがって、XML インデックスまたは空間インデックスに関する情報公開されません。  
+ **sp_helpindex**は順序付け可能なインデックス列だけを公開します。 したがって、これは公開されません XML インデックスまたは空間インデックスに関する情報。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

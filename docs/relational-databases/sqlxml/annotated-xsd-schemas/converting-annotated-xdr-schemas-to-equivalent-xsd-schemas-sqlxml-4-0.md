@@ -1,5 +1,5 @@
 ---
-title: 注釈付き XDR スキーマから同等の XSD スキーマ (SQLXML 4.0) を変換する |Microsoft Docs
+title: 注釈付き XDR スキーマから同等の XSD スキーマ (SQLXML 4.0) を変換する |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a841cf9e5bcfe3c1de5c199fa29984c709631598
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 645450c160347efef88447c86c404c0f16b12e00
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047280"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544612"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>注釈付き XDR スキーマから同等の XSD スキーマへの変換 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

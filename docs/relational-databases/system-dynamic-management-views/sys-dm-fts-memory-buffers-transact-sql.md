@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_memory_buffers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_fts_memory_buffers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5704ea80a15713a006fefeb5442439b9762071c0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 91a0949d70898a470e3f5b57e7d42d0befedc38f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556522"
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,10 +37,10 @@ ms.lasthandoff: 05/23/2018
   フルテキスト クロールまたはフルテキスト クロール範囲の一部として使用される、特定のメモリ プールのメモリ バッファーに関する情報を返します。  
   
 > [!NOTE]
-> 次の列は、の将来のリリースで削除される予定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **row_count**です。 新しい開発作業では、この列の使用は避け、現在この列を使用しているアプリケーションは修正するようにしてください。  
+> 次の列はの将来のリリースで削除される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **row_count**します。 新しい開発作業では、この列の使用は避け、現在この列を使用しているアプリケーションは修正するようにしてください。  
 
   
-|列|データ型|Description|  
+|[列]|データ型|説明|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|割り当てられたメモリ プールの ID。<br /><br /> 0 = 小さいバッファー<br /><br /> 1 = 大きいバッファー|  
 |**memory_address**|**varbinary(8)**|割り当てられたメモリ バッファーのアドレス。|  
@@ -49,10 +50,10 @@ ms.lasthandoff: 05/23/2018
 |**bytes_used**|**int**|バッファーで使用されているメモリ サイズ (バイト単位)。|  
 |**percent_used**|**int**|割り当てられたメモリの使用パーセンテージ。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="physical-joins"></a>物理結合  
  ![この動的管理ビューの重要な結合](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-buffers-1.gif "この動的管理ビューの重要な結合")  

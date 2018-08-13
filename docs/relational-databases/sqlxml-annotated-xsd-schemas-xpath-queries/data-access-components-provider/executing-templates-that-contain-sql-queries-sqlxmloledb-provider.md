@@ -1,5 +1,5 @@
 ---
-title: SQL クエリ (SQLXMLOLEDB プロバイダー) を含むテンプレートの実行 |Microsoft ドキュメント
+title: SQL クエリ (SQLXMLOLEDB プロバイダー) を含むテンプレートの実行 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,26 +21,26 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6bbaf505a1a79c836a98f66ddf65bcc5f242d9b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3c84a9fd900e6a546265b9f4d4489d6dba722fe4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967797"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548903"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>SQL クエリを含むテンプレートの実行 (SQLXMLOLEDB プロバイダー)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この例では、SQLXMLOLEDB プロバイダー固有のプロパティ ClientSideXML の使用を示します。 このクライアント側の ADO サンプル アプリケーションでは、SQL クエリで構成される XML テンプレートがサーバーで実行されます。  
+  この例では、ClientSideXML SQLXMLOLEDB プロバイダー固有のプロパティの使用を示します。 このクライアント側の ADO サンプル アプリケーションでは、SQL クエリで構成される XML テンプレートがサーバーで実行されます。  
   
  ClientSideXML プロパティが True に設定されているために、FOR XML 句のない SELECT ステートメントは、サーバーに送信されます。 サーバーではクエリが実行され、クライアントに行セットが返されます。 次にクライアントではその行セットに FOR XML 変換が適用され、XML ドキュメントが作成されます。  
   
- XML テンプレートでは単一の最上位ルート要素 (\<ルート >) が生成される XML ドキュメントです。 したがって、xml ルート プロパティが指定されていません。  
+ XML テンプレートには、単一の最上位ルート要素が用意されています (\<ルート >) が生成される XML ドキュメントは、xml ルート プロパティが指定されていないため、します。  
   
  XML テンプレートを実行するには、言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を指定する必要があります。  
   
 > [!NOTE]  
->  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例で指定の使用、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]追加ネットワーク クライアント ソフトウェアをインストールする必要がありますデータ プロバイダー用の Native Client (SQLNCLI11)。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)です。  
+>  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例で指定の使用、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) データ プロバイダー追加ネットワーク クライアント ソフトウェアをインストールする必要があります。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)します。  
   
 ```  
 Option Explicit  

@@ -17,19 +17,19 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 154f12c61321e26a4e8b3e1415783aca54568cc7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3087558a80ab4ca6ac7c1f71187c2900cbdd40ce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416031"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554732"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>ブックマークを使用した行の取得 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  コンシューマーのセット、 **dwFlag**フィールドの値に DBCOLUMNSINFO_ISBOOKMARK をブックマークとして列を使用することを示すために、バインド構造体の。 また、コンシューマーは行セット プロパティ DBPROP_BOOKMARKS に VARIANT_TRUE を設定します。 これによって、列 0 を行セットに入れることができます。 **Irowsetlocate::getrowsat**フェッチを使用して、指定されたブックマークからのオフセットの行で始まる行。  
+  コンシューマーは、バインド構造体の **dwFlag** フィールド値に DBCOLUMNSINFO_ISBOOKMARK を設定して、その列がブックマークに使用されることを示します。 また、コンシューマーは行セット プロパティ DBPROP_BOOKMARKS に VARIANT_TRUE を設定します。 これによって、列 0 を行セットに入れることができます。 次に **IRowsetLocate::GetRowsAt** メソッドが使用され、ブックマークからのオフセットで指定される行から始まる行が取り出されます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -42,7 +42,7 @@ ms.locfileid: "37416031"
   
 3.  コマンドを実行します。  
   
-4.  設定、 **dwFlag**ブックマークとして使用される列の DBCOLUMNSINFO_ISBOOKMARK フラグ バインド構造体のフィールド。  
+4.  バインド構造体の **dwFlag** フィールドに、ブックマークとして使用される列の DBCOLUMNSINFO_ISBOOKMARK フラグを設定します。  
   
 5.  使用**irowsetlocate::getrowsat**ブックマークからのオフセットによって指定された行で始まる行をフェッチします。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "37416031"
   
  このサンプルでは、SELECT ステートメントの実行によって生成された結果セットから、5 番目の行が取得されます。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
+ このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

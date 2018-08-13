@@ -1,5 +1,5 @@
 ---
-title: 行セットのデータの更新 |Microsoft Docs
+title: 行セットのデータの更新 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ef5f2776d7e18e78ce364c0959811b7317e1675
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 17aeb29cd785723bdfa3fc8a83e0b404a79e3531
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417411"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563816"
 ---
 # <a name="updating-data-in-rowsets"></a>行セット内のデータの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

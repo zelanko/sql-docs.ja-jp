@@ -1,5 +1,5 @@
 ---
-title: 変更追跡関数 (TRANSACT-SQL) |Microsoft ドキュメント
+title: 変更追跡関数 (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c478d4ca59db55cefe5e13444fd81ea7bf64dbea
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f3629879f9ec1629d91db2e018149cf7225cd5ab
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33227267"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544462"
 ---
 # <a name="change-tracking-functions-transact-sql"></a>変更追跡関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "33227267"
 |--------------|-----------------|  
 |[CHANGETABLE (CHANGES)](../../relational-databases/system-functions/changetable-transact-sql.md)|指定したバージョン以降にテーブルに対して行われたすべての変更の追跡情報を返します。|  
 |[CHANGETABLE (VERSION)](../../relational-databases/system-functions/changetable-transact-sql.md)|指定した行に関する最新の変更追跡情報を返します。|  
-|[CHANGE_TRACKING_MIN_VALID_VERSION()](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|変更の追跡を使用しているときの指定したテーブルから情報を取得するに使用するための有効な最小バージョンを返します、 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)関数。|  
-|[CHANGE_TRACKING_CURRENT_VERSION](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)|最後にコミットされたトランザクションに関連付けられているバージョンを取得します。 次に CHANGETABLE を使用して変更を列挙するとき、このバージョンを使用できます。|  
+|[CHANGE_TRACKING_MIN_VALID_VERSION()](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|変更を使用しているときに、指定したテーブルから追跡情報を取得するに使用するために有効な最小バージョンを返します、 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)関数。|  
+|[CHANGE_TRACKING_CURRENT_VERSION](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)|最後にコミットされたトランザクションに関連付けられているバージョンを取得します。 次に CHANGETABLE を使用して変更を列挙するときのこのバージョンを使用することができます。|  
 |[CHANGE_TRACKING_IS_COLUMN_IN_MASK](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)|CHANGETABLE(CHANGES ...) 関数によって返される SYS_CHANGE_COLUMNS 値を解釈します。|  
 |[WITH CHANGE_TRACKING_CONTEXT](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)|アプリケーションにおけるデータ変更時の、実行者 ID などの変更コンテキストの指定を有効化します。|  
   

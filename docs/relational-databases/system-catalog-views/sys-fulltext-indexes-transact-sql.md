@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_indexes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fulltext_indexes (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,20 +25,20 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3d70bde5e89591257b185bbe52b8d9b1b8ec00a2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 34c97569e3cbb13dd5e66c56db685d16db5c0115
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182318"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548682"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   表形式オブジェクトのフルテキスト インデックスごとに 1 行のデータを保持します。  
 
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このフルテキスト インデックスが属するオブジェクトの ID です。|  
 |**unique_index_id**|**int**|対応するフルテキスト以外の一意なインデックスの ID です。このインデックスは、フルテキスト インデックスを行に関連付けるために使用されます。|  
@@ -54,16 +54,16 @@ ms.locfileid: "33182318"
 |**incremental_timestamp**|**binary(8)**|次回の増分クロールに使用するタイムスタンプ値です。<br /><br /> NULL = なし|  
 |**stoplist_id**|**int**|ID、[ストップ リスト](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)このフルテキスト インデックスに関連付けられています。|  
 |**data_space_id**|**int**|このフルテキスト インデックスが存在するファイル グループです。|  
-|**property_list_id**|**int**|このフルテキスト インデックスに関連付けられている検索プロパティ リストの ID です。 NULL は、フルテキスト インデックスに関連付けられている検索プロパティ リストがないことを示します。 詳細については、この検索プロパティ リストを取得するを使用して、 [sys.registered_search_property_lists &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)カタログ ビューです。|  
+|**property_list_id**|**int**|このフルテキスト インデックスに関連付けられている検索プロパティ リストの ID です。 NULL は、フルテキスト インデックスに関連付けられている検索プロパティ リストがないことを示します。 詳細については、この検索プロパティ リストを取得する、 [sys.registered_search_property_lists &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)カタログ ビューです。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="examples"></a>使用例  
  次の例では、`HumanResources.JobCandidate` サンプル データベースの `AdventureWorks2012` テーブルのフルテキスト インデックスを使用します。 この例では、テーブルのオブジェクト ID、検索プロパティ リストの ID、およびフルテキスト インデックスで使用されるストップリストのストップリスト ID が返されます。  
   
 > [!NOTE]  
->  このフルテキスト インデックスを作成するコード例は、の「例」セクションを参照してください。 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)です。  
+>  このフルテキスト インデックスを作成するコード例は、の「例」セクションを参照してください。 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,7 +80,7 @@ GO
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [DROP FULLTEXT INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   

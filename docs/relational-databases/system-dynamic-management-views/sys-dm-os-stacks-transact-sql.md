@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_stacks (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_stacks (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,35 +23,36 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5870f8b45d507a7f5eeffdee3ac46c1db2e669f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa139af60be9f2f6ef3584352ce76ba19caa4894
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563136"
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  この動的管理ビューは内部で使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を次を行うには。  
+  この動的管理ビューは内部で使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以下を実行します。  
   
 -   未処理の割り当てなど、デバッグ データの追跡  
   
--   想定または検証によって使用されるロジック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントが特定の呼び出しが行われたことを想定の場所でのコンポーネントです。  
+-   想定または検証で使用されるロジック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定の呼び出しが行われたことを想定の場所でのコンポーネント。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|このスタック割り当ての一意なアドレス。 NULL 値は許可されません。|  
-|**frame_index**|**int**|各行は、関数を表す、特定のフレーム インデックスを使用して昇順で並べ替えられたときに、呼び出す**stack_address**、完全なコール スタックを返します。 NULL 値は許可されません。|  
+|**frame_index**|**int**|各行は、関数を表す特定のフレーム インデックスを使用して昇順で並べ替えられる場合、呼び出す**stack_address**、完全なコール スタックを返します。 NULL 値は許可されません。|  
 |**frame_address**|**varbinary(8)**|関数呼び出しのアドレス。 NULL 値は許可されません。|  
   
-## <a name="remarks"></a>解説  
- **sys.dm_os_stacks**サーバーとその他のコンポーネントのシンボル情報を正しく表示するサーバー上に存在する必要があります。  
+## <a name="remarks"></a>コメント  
+ **sys.dm_os_stacks**サーバーとその他のコンポーネントのシンボル情報を正しく表示するサーバー上に存在できる必要があります。  
   
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
 
 
 ## <a name="see-also"></a>参照  

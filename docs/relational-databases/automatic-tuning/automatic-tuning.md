@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023860"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556472"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - なぜ情報を含む説明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]このプランの変更に、潜在的なパフォーマンスの低下があると認識します。
  - 日時を設定すると、潜在的な回帰が検出されました。
  - この推奨事項のスコア付けします。 
- - 検出されたプランを強制的に、問題を解決するプランの ID、後退したプランの ID の ID などの問題の詳細について [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- などの問題を修正する適用可能性があるスクリプトです。詳細が格納されている[JSON 形式](../../relational-databases/json/index.md)します。
+ - 検出されたプランを強制的に、問題を解決するプランの ID、後退したプランの ID の ID などの問題の詳細について[!INCLUDE[tsql_md](../../includes/tsql_md.md)]スクリプトなどの問題を修正するために適用可能性があります。詳細が格納されている[JSON 形式](../../relational-databases/json/index.md)します。
 
 使用して、問題と、推定に関する追加情報を修正するスクリプトを入手する次のクエリが得られます。
 

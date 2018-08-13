@@ -1,5 +1,5 @@
 ---
-title: 作成する有効な ID、IDREF、IDREFS 型属性 - sql:prefix (SQLXML 4.0) |Microsoft ドキュメント
+title: 作成する有効な ID、IDREF、IDREFS 型属性 - sql:prefix (SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -27,18 +27,19 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 891182053b28673b8a7a16c484b591f4924f3842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d7d84cbb4d4ca2fc7646d794698fe7c10e8188c9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547592"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix を使用した、有効な ID 型、IDREF 型、IDREFS 型の属性の作成 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   属性を ID 型属性として指定することができます。 ID 型属性を指定すると、IDREF または IDREFS として指定した属性から ID 型属性を参照でき、ドキュメント間をリンクできるようになります。  
   
- ID、IDREF、IDREFS は、データベースの PK と FK (主キーと外部キー) のリレーションシップにほぼ対応し、ほとんど違いはありません。 XML ドキュメントの ID 型属性の値が異なる必要があります。 場合**CustomerID**と**OrderID**属性が指定されて、XML ドキュメント内の ID 型としてこれらの値が異なる必要があります。 一方データベースでは、CustomerID 列と OrderID 列の値は同じにできます。 たとえば、CustomerID = 1、OrderID = 1 はデータベース内で有効です。  
+ ID、IDREF、IDREFS は、データベースの PK と FK (主キーと外部キー) のリレーションシップにほぼ対応し、ほとんど違いはありません。 XML ドキュメントの ID 型属性の値を個別にある必要があります。 場合**CustomerID**と**OrderID**属性が XML ドキュメントの ID 型として指定はこれらの値は一意である必要があります。 一方データベースでは、CustomerID 列と OrderID 列の値は同じにできます。 たとえば、CustomerID = 1、OrderID = 1 はデータベース内で有効です。  
   
  ID 属性、IDREF 属性、および IDREFS 属性が有効であるためには、次の条件を満たしている必要があります。  
   
@@ -48,19 +49,19 @@ ms.lasthandoff: 05/03/2018
   
 -   ID、IDREF、IDREFS の値が名前付きトークンであること。 たとえば、整数値 101 は ID 値にできません。  
   
--   ID、IDREF、および IDREFS 型の属性は、型の列にマップすることはできません**テキスト**、 **ntext**、または**イメージ**またはその他のバイナリ データ型 (たとえば、 **タイムスタンプ**)。  
+-   ID、IDREF、IDREFS 型の属性は、型の列にマップすることはできません**テキスト**、 **ntext**、または**イメージ**またはその他の任意のバイナリ データ型 (たとえば、 **タイムスタンプ**)。  
   
- XML ドキュメントに複数の Id が含まれている場合を使用して、 **sql:prefix**注釈を値が一意であることを確認します。  
+ XML ドキュメントに複数の Id が含まれている場合は、使用、 **sql:prefix**値が一意であることを確認する注釈。  
   
  なお**sql:prefix** XSD 固定属性で注釈を使用することはできません。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 型と IDREFS 型を指定する  
- 次のスキーマで、 **\<顧客 >** 要素から成る、 **\<順序 >** 子要素です。 **\<順序 >** 要素も、子要素を持つ、  **\<OrderDetail >** 要素。  
+ 次のスキーマで、 **\<顧客 >** 要素から成る、 **\<順序 >** 子要素。 **\<順序 >** 要素が子要素にも、 ** \<OrderDetail >** 要素。  
   
- **OrderIDList**の属性**\<顧客 >** IDREFS 型の属性を参照するには、 **OrderID**の属性、  **\<順序 >** 要素。  
+ **OrderIDList**属性の**\<顧客 >** IDREFS 型の属性を参照するには、 **OrderID**の属性、 ** \<順序 >** 要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -136,7 +137,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に使用する ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  結果の一部を次に示します。  
   

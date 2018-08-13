@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (TRANSACT-SQL) |Microsoft ドキュメント
+title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00c55659ddc52fb5e6299b82be8102d526bd9e43
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6f44cd13dbabc10aa228892f9ce927e746c4aff5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229462"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547512"
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 ## <a name="arguments"></a>引数  
  *column_id*  
- チェックする列の ID です。 使用して ID を取得できる列、 [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)関数。  
+ チェックする列の ID です。 列の ID を使用して取得できます、 [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)関数。  
   
  *change_columns*  
  バイナリ データの SYS_CHANGE_COLUMNS 列から、 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)データ。  
@@ -58,16 +58,16 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>戻り値  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK は次の値を返します。  
   
-|戻り値|Description|  
+|戻り値|説明|  
 |------------------|-----------------|  
-|0|指定した列がない、 *change_columns*  ボックスの一覧です。|  
-|1|指定された列は、 *change_columns*  ボックスの一覧です。|  
+|0|指定した列がない、 *change_columns*一覧。|  
+|1|指定した列は、 *change_columns*一覧。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK を検証するには、どのチェックは行われず、 *column_id*値、すなわち、 *change_columns*パラメーターは、元のテーブルから取得された、 *column_id*取得されました。  
   
 ## <a name="examples"></a>使用例  
- 次の例を決定するかどうか、`Salary`の列、`Employees`テーブルが更新されました。 `COLUMNPROPERTY`関数、列の ID を返します、`Salary`列です。 `@change_columns` CHANGETABLE をデータ ソースとして使用して、クエリの結果をローカル変数を設定する必要があります。  
+ 次の例を決定するかどうか、`Salary`の列、`Employees`テーブルが更新されました。 `COLUMNPROPERTY`関数の列の ID を返します、`Salary`列。 `@change_columns` CHANGETABLE をデータ ソースとして使用して、クエリの結果をローカル変数を設定する必要があります。  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  

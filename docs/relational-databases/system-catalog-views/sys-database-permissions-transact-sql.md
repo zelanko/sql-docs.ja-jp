@@ -1,5 +1,5 @@
 ---
-title: sys.database_permissions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.database_permissions (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -24,37 +24,37 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 330b1c61e877fb71bcf94d6c8161e40c9ff5e7ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 477c4a616973ed56cfd1063411870ae78cfdd67e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182448"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545752"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベースに含まれている、権限ごとまたは列例外の権限ごとに 1 行のデータを返します。 列権限が、対応するオブジェクトレベルの権限とは異なる場合、列権限ごとに行が存在します。 列権限が、対応するオブジェクトの権限と同じ場合は、その行がない、適用されるアクセス許可のオブジェクトの。  
+  データベースに含まれている、権限ごとまたは列例外の権限ごとに 1 行のデータを返します。 列権限が、対応するオブジェクトレベルの権限とは異なる場合、列権限ごとに行が存在します。 列権限がオブジェクトに対応する権限と同じである場合、その行がないと、適用されるアクセス許可は、オブジェクトの。  
   
 > [!IMPORTANT]  
 >  列レベルの権限は、同じエンティティ上のオブジェクトレベルの権限をオーバーライドします。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|権限が存在するクラスの識別子。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベース プリンシパル<br />5 = アセンブリ -**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />6 = 型<br />10 = XML スキーマ コレクション <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />15 = メッセージの種類 -**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />16 = サービス コントラクトの**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />17 = サービス -**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />18 = リモート サービス バインドの**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />19 = ルート -**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />23 = フルテキスト カタログの**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />24 = 対称キーと**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />25 = 証明書 -**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br />26 = 非対称キーと**対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。|  
+|**class**|**tinyint**|権限が存在するクラスの識別子。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベース プリンシパル<br />5 = アセンブリが**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />6 = 型<br />10 = XML スキーマ コレクションの場合 - <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />15 = メッセージの種類 -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />16 = サービス コントラクトの**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />17 = サービス -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />18 = リモート サービス バインドの**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />19 = ルート -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />23 = フルテキスト カタログ -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />24 = 対称キー -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />25 = 証明書 -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />26 = 非対称キー -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。|  
 |**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|権限が存在するリソースの ID。クラスに基づいて解釈されます。 通常、 **major_id**クラスが表す内容に適用される ID の種類を単純にします。 <br /><br /> 0 はデータベース自体を = <br /><br /> > 0 = ユーザー オブジェクトのためのオブジェクト Id <br /><br /> \<0 = システム オブジェクトのためのオブジェクト Id |  
+|**major_id**|**int**|権限が存在するリソースの ID。クラスに基づいて解釈されます。 通常、 **major_id**はクラス自体に適用される ID の種類だけです。 <br /><br /> 0 = データベース自体 <br /><br /> > 0 = ユーザー オブジェクトのためのオブジェクト Id <br /><br /> \<0 = システム オブジェクトのためのオブジェクト Id |  
 |**minor_id**|**int**|アクセス許可が存在するリソースのセカンダリ ID は、クラスに基づいて解釈されます。 多くの場合、 **major_id** 0 の場合は、オブジェクトのクラスのサブカテゴリがないためです。 それ以外の場合、テーブルの列 ID を勧めします。|  
 |**grantee_principal_id**|**int**|権限が許可されているデータベース プリンシパル ID。|  
 |**grantor_principal_id**|**int**|権限の許可者のデータベース プリンシパル ID。|  
 |**type**|**char(4)**|データベース権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
 |**permission_name**|**nvarchar(128)**|権限名。|  
-|**状態**|**char(1)**|権限の状態。<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = 許可の許可オプション|  
+|**state**|**char(1)**|権限の状態。<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = 許可の許可オプション|  
 |**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>データベース権限   
-次の種類のアクセス許可が可能です。
+次の種類のアクセス許可もあります。
   
 |権限の種類|アクセス許可の名前|適用されるセキュリティ保護可能なリソース|  
 |---------------------|---------------------|--------------------------|  
@@ -114,10 +114,10 @@ ms.locfileid: "33182448"
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|DELETE|DATABASE、OBJECT、SCHEMA|  
+|DL|Del|DATABASE、OBJECT、SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|EXECUTE|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
-|IM|IMPERSONATE|USER|  
+|IM|IMPERSONATE|User|  
 |IN|INSERT|DATABASE、OBJECT、SCHEMA|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY、ASYMMETRIC KEY、CERTIFICATE、CONTRACT、DATABASE、FULLTEXT CATALOG、MESSAGE TYPE、OBJECT、SCHEMA、SYMMETRIC KEY、TYPE、XML SCHEMA COLLECTION|  
@@ -133,10 +133,10 @@ ms.locfileid: "33182448"
 |VWCT|VIEW CHANGE TRACKING|TABLE、SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは自分の権限を参照できます。 他のユーザーの権限を参照するには、VIEW DEFINITION、ALTER ANY USER、またはユーザーに対するすべての権限が必要です。 ユーザー定義ロールを参照するには、ALTER ANY ROLE、またはロール (public など) のメンバーシップが必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_commit_table (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_tran_commit_table (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,29 +23,30 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e8eb01a2be2c65905cc2c97fb703c2a673d52d86
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a2864d44b35d34c29c55c0c4a82e4227bc4b288f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547432"
 ---
 # <a name="change-tracking---sysdmtrancommittable"></a>変更の追跡 - sys.dm_tran_commit_table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  によって追跡されたテーブルに対してコミットされたトランザクションごとに 1 行表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更の追跡します。 サポート用に提供されている sys.dm_tran_commit_table 管理ビューには、トランザクション関連の情報が表示されます。この情報は、変更の追跡によって sys.syscommittab システム テーブルに格納されます。 sys.syscommittab テーブルは、データベース固有のトランザクション ID からトランザクションのコミット ログ シーケンス番号 (LSN) とコミット タイムスタンプへの、効率的かつ永続的なマッピングを提供します。 sys.syscommittab テーブルに格納され、この管理ビューに表示されるデータは、変更の追跡が構成されたときに指定された保有期間に従ってクリーンアップされます。  
+  によって追跡されたテーブルに対してコミットされたトランザクションごとに 1 つの行を表示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更の追跡。 サポート用に提供されている sys.dm_tran_commit_table 管理ビューには、トランザクション関連の情報が表示されます。この情報は、変更の追跡によって sys.syscommittab システム テーブルに格納されます。 sys.syscommittab テーブルは、データベース固有のトランザクション ID からトランザクションのコミット ログ シーケンス番号 (LSN) とコミット タイムスタンプへの、効率的かつ永続的なマッピングを提供します。 sys.syscommittab テーブルに格納され、この管理ビューに表示されるデータは、変更の追跡が構成されたときに指定された保有期間に従ってクリーンアップされます。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_tran_commit_table**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_tran_commit_table**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |commit_ts|**bigint**|コミットされたトランザクションごとにデータベース固有のタイムスタンプとして機能する、1 ずつ増加する数。|  
 |xdes_id|**bigint**|データベース固有の内部トランザクション ID。|  
 |commit_lbn|**bigint**|トランザクションに関するコミット ログ レコードが含まれるログ ブロックの数。|  
 |commit_csn|**bigint**|インスタンス固有のトランザクションのコミット シーケンス番号。|  
 |commit_time|**smalldatetime**|トランザクションがコミットされた時刻。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

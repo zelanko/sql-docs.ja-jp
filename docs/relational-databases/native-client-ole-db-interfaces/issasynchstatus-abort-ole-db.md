@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus: (OLE DB) |Microsoft Docs'
+title: 'Issasynchstatus: (OLE DB) |マイクロソフトのドキュメント'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3edaceb5802299ec8637634bf0006fb66d5d6851
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e9b0f11d07b0180ddc75f7a64471a3ea7f311ac3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408681"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549892"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ HRESULT Abort(
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
- 非同期操作を取り消す要求が処理されました。 ただし、その操作自体が取り消されることが保証されるわけではありません。 操作が取り消されたかどうかを判断するコンシューマーを呼び出す必要があります[issasynchstatus::getstatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)と db_e_canceled。 ただし、その可能性がありますいない呼び出しで返される、非常に [次へ]。  
+ 非同期操作を取り消す要求が処理されました。 ただし、その操作自体が取り消されることが保証されるわけではありません。 実際に操作が取り消されたかどうかを判断するには、コンシューマーで [ISSAsynchStatus::GetStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) を呼び出し、DB_E_CANCELED が返されるかどうかを調べる必要があります。ただし、要求直後に呼び出しても、この値が返されないことがあります。  
   
  DB_E_CANTCANCEL  
  非同期操作をキャンセルできません。  
@@ -70,16 +70,16 @@ HRESULT Abort(
  E_UNEXPECTED  
  **Issasynchstatus:** をデータ ソース オブジェクトで呼び出された**idbinitialize::initialize**が呼び出されていない、またはが完了していません。  
   
- **Issasynchstatus:** をデータ ソース オブジェクトで呼び出された**idbinitialize::initialize** 、初期化する前に、その後に取り消されたが、呼び出されたかがタイムアウトしました。データ ソース オブジェクトはまだ初期化されていないことになります。  
+ または、**IDBInitialize::Initialize** が呼び出されたものの、その後初期化前に取り消されたか、タイムアウトになったデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。データ ソース オブジェクトはまだ初期化されていないことになります。  
   
  **Issasynchstatus:** を行セットに対して呼び出された**itransaction::commit**または**itransaction::abort** 、以前に呼び出された行セットのコミット後も存続または中止していないと、ゾンビ状態。  
   
- **Issasynchstatus:** が初期化フェーズで非同期に取り消された行セットに対して呼び出されました。 行セットはゾンビ状態になります。  
+ 初期化フェーズで非同期に取り消された行セットに対して **ISSAsynchStatus::Abort** が呼び出された場合も、この値が返されます。 行セットはゾンビ状態になります。  
   
 ## <a name="remarks"></a>コメント  
- ゾンビ状態の場合に行セットまたはデータ ソース オブジェクトを残す可能性があります行セットまたはデータ ソース オブジェクトの初期化を中止するよう以外のすべてのメソッド**IUnknown**メソッドは E_UNEXPECTED を返します。 この状態になると、コンシューマーはその行セットまたはデータ ソース オブジェクトの解放しか実行できません。  
+ 行セットまたはデータ ソース オブジェクトの初期化を中止すると、その行セットまたはデータ ソース オブジェクトはゾンビ状態になり、**IUnknown** メソッド以外のすべてのメソッドから E_UNEXPECTED が返されます。 この状態になると、コンシューマーはその行セットまたはデータ ソース オブジェクトの解放しか実行できません。  
   
- 呼び出す**issasynchstatus:** の値を渡すと*eOperation*以外の DBASYNCHOP_OPEN が S_OK を返します。 これは、操作が完了したか取り消されたことを示すわけではありません。  
+ *eOperation* に DBASYNCHOP_OPEN 以外の値を渡して **ISSAsynchStatus::Abort** を呼び出すと、S_OK が返されます。 これは、操作が完了したか取り消されたことを示すわけではありません。  
   
 ## <a name="see-also"></a>参照  
  [非同期操作の実行](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  

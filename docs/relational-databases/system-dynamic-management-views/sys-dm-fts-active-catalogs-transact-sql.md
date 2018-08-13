@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_active_catalogs (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_fts_active_catalogs (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 564f66e6207ebc79b7545a77af8da8f156faf673
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e54673cbbb85d359184a8a745f3f48d8456d2f53
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463988"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544202"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "34463988"
   サーバーで作成操作が進行中のフルテキスト カタログに関する情報を返します。  
   
 > [!NOTE]  
->  次の列は、の将来のバージョンで削除される予定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused、previous_status、previous_status_description、row_count_in_thousands、状態、status_description、および worker_count します。 新しい開発作業では、これらの列の使用は避け、現在これらの列のいずれかを使用しているアプリケーションは修正するようにしてください。  
+>  次の列は将来のバージョンで削除する[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused、previous_status、previous_status_description、row_count_in_thousands、状態、status_description、および worker_count します。 新しい開発作業では、これらの列の使用は避け、現在これらの列のいずれかを使用しているアプリケーションは修正するようにしてください。  
   
  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|アクティブなフルテキスト カタログを含むデータベースの ID。|  
 |**catalog_id**|**int**|アクティブなフルテキスト カタログの ID。|  
 |**memory_address**|**varbinary(8)**|フルテキスト カタログに関係する作成操作に割り当てられているメモリ バッファーのアドレス。|  
 |**name**|**nvarchar(128)**|アクティブなフルテキスト カタログの名前。|  
 |**is_paused**|**bit**|アクティブなフルテキスト カタログの作成が一時停止されているかどうかを示します。|  
-|**ステータス**|**int**|フルテキスト カタログの現在の状態。 次のいずれかです。<br /><br /> 0 = 初期化中<br /><br /> 1 = 準備完了<br /><br /> 2 = 一時停止<br /><br /> 3 = 一時エラー<br /><br /> 4 = 再マウントが必要<br /><br /> 5 = シャットダウン<br /><br /> 6 = バックアップのための休止<br /><br /> 7 = カタログからのバックアップ完了<br /><br /> 8 = カタログ破損|  
+|**status**|**int**|フルテキスト カタログの現在の状態。 次のいずれかです。<br /><br /> 0 = 初期化中<br /><br /> 1 = 準備完了<br /><br /> 2 = 一時停止<br /><br /> 3 = 一時エラー<br /><br /> 4 = 再マウントが必要<br /><br /> 5 = シャットダウン<br /><br /> 6 = バックアップのための休止<br /><br /> 7 = カタログからのバックアップ完了<br /><br /> 8 = カタログ破損|  
 |**status_description**|**nvarchar(120)**|アクティブなフルテキスト カタログの現在の状態に関する説明。|  
 |**previous_status**|**int**|フルテキスト カタログの以前の状態。 次のいずれかです。<br /><br /> 0 = 初期化中<br /><br /> 1 = 準備完了<br /><br /> 2 = 一時停止<br /><br /> 3 = 一時エラー<br /><br /> 4 = 再マウントが必要<br /><br /> 5 = シャットダウン<br /><br /> 6 = バックアップのための休止<br /><br /> 7 = カタログからのバックアップ完了<br /><br /> 8 = カタログ破損|  
 |**previous_status_description**|**nvarchar(120)**|アクティブなフルテキスト カタログの以前の状態に関する説明。|  
@@ -59,13 +59,13 @@ ms.locfileid: "34463988"
 |**row_count_in_thousands**|**int**|フルテキスト カタログ内にあるすべてのフルテキスト インデックス行の概数 (1,000 行単位)。|  
 |**is_importing**|**bit**|フルテキスト カタログがインポートされているかどうかを示します。<br /><br /> 1 = カタログがインポートされています。<br /><br /> 2 = カタログがインポートされていません。|  
   
-## <a name="remarks"></a>解説  
- Is_importing 列はで新しく[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]です。  
+## <a name="remarks"></a>コメント  
+ Is_importing 列はで新しく追加された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
    
 ## <a name="physical-joins"></a>物理結合  
  ![この動的管理ビューの重要な結合](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "この動的管理ビューの重要な結合")  

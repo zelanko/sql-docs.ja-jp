@@ -16,25 +16,25 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8a13d1b87bc67e68f7a984f5ff213718413d222
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 64fa6c3b169d6d206b2357e7f80e9c4447138882
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423921"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554532"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **IRow**インターフェイスにより、結果セット内の 1 つの行の列に直接アクセスします。 したがって、 **IRow**効率的に 1 つの行を含む結果セットから列を取得します。  
+  **IRow** インターフェイスでは、結果セット内の単一行の列に直接アクセスできます。 つまり、**IRow** では、1 つの行の結果セットから効率的に列を取得できます。  
   
- コード サンプルは、使用方法を使用して、1 つの行をフェッチする**IRow**します。 このサンプルでは、行から一度に 1 つの列を取得します。 このサンプルでは、次の方法が示されています。  
+ **IRow** を使用して単一行をフェッチする方法を示したコード サンプルがあります。 このサンプルでは、行から一度に 1 つの列を取得します。 このサンプルでは、次の方法が示されています。  
   
--   (順番に) 列のグループをフェッチする方法。  
+-   列のグループを (順番に) フェッチする方法。  
   
--   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体の場合は**pData** null と**cbMaxLen** 0 への呼び出しは、 **IRow**-**> GetColumns()** 実際の列の長さだけを返します。 この場合、 **IRow GetColumns()]-> [** 実際のデータを取得する同じ列に対してもう一度呼び出すことができます。  
+-   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体では、**pData** が NULL で **cbMaxLen** が 0 の場合、**IRow**-**>GetColumns()** を呼び出すと、列の実際の長さだけが返されます。 この場合、**IRow->GetColumns()** を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -58,11 +58,11 @@ ms.locfileid: "37423921"
   
  DBCOLUMNACCESS 構造体では、pData が NULL で cbMaxLen が 0 の場合、IRow->GetColumns を呼び出すと、列の実際の長さだけが返されます。 この場合、IRow->GetColumns を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。 このサンプルは IA64 ではサポートされていません。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
+ このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用したテーブルを削除します。  
   

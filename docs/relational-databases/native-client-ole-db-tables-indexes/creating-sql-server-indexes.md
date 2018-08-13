@@ -1,5 +1,5 @@
 ---
-title: SQL Server インデックスの作成 |Microsoft Docs
+title: SQL Server インデックスの作成 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 21d6af3f02baa2e5c3a0a70cc1bf48119b14f60e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 50e21ff63b0b3d6f531d6d31cb202b6e166ca5af
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424961"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565876"
 ---
 # <a name="creating-sql-server-indexes"></a>SQL Server インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,33 +33,33 @@ ms.locfileid: "37424961"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **iindexdefinition::createindex**関数を新しいインデックスを定義するコンシューマー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、インデックスまたは制約としてテーブルのインデックスを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、制約を作成する権限がテーブルの所有者、データベースの所有者、および特定の管理ロールのメンバーに許可されます。 テーブルにインデックスを作成できるのは、既定では、テーブルの所有者だけです。 そのため、成功または失敗の**CreateIndex**作成されたインデックスの種類にも、アプリケーション ユーザーのアクセス権だけでなくによって異なります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、インデックスまたは制約としてテーブルのインデックスを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、制約を作成する権限がテーブルの所有者、データベースの所有者、および特定の管理ロールのメンバーに許可されます。 テーブルにインデックスを作成できるのは、既定では、テーブルの所有者だけです。 したがって、**CreateIndex** が成功するか失敗するかは、アプリケーション ユーザーのアクセス権だけでなく、作成するインデックスの種類によっても異なります。  
   
- コンシューマーでは、テーブル名を指定の Unicode 文字の文字列として、 *pwszName*のメンバー、 *uName*共用体の*pTableID*パラメーター。 *EKind*のメンバー *pTableID* DBKIND_NAME にする必要があります。  
+ コンシューマーは、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列としてテーブル名を指定します。 *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
- *PIndexID*パラメーターは、NULL にしてがの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、インデックスの一意の名前を作成します。 コンシューマーに DBID への有効なポインターを指定することで、インデックスの名前をキャプチャすることができます、 *ppIndexID*パラメーター。  
+ *PIndexID*パラメーターは、NULL にしてがの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、インデックスの一意の名前を作成します。 *ppIndexID* パラメーターに DBID への有効なポインターを指定することで、インデックスの名前をキャプチャできます。  
   
- コンシューマーは、Unicode 文字列でインデックスの名前を指定できます、 *pwszName*のメンバー、 *uName*共用体の*pIndexID*パラメーター。 *EKind*のメンバー *pIndexID* DBKIND_NAME にする必要があります。  
+ インデックス名は、*pIndexID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定できます。 *pIndexID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
- コンシューマーは、インデックスに参加する列または複数の列を名前で指定します。 使用される各 DBINDEXCOLUMNDESC 構造の**CreateIndex**、 *eKind*のメンバー、 *pColumnID* DBKIND_NAME にする必要があります。 列の名前は Unicode 文字列で指定された、 *pwszName*のメンバー、 *uName*共用体の*pColumnID*します。  
+ コンシューマーは、インデックスに参加する列または複数の列を名前で指定します。 **CreateIndex** で使用する DBINDEXCOLUMNDESC 構造体ごとに、*pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。 列の名前は、*pColumnID* の *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インデックス内の値に基づいて昇順のサポート。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがコンシューマーの DBINDEXCOLUMNDESC 構造体に DBINDEX_COL_ORDER_DESC を指定する場合、E_INVALIDARG を返します。  
   
- **CreateIndex**インデックスのプロパティを次のように解釈します。  
+ **CreateIndex** では、インデックスのプロパティが次のように解釈されます。  
   
 |プロパティ ID|説明|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_CLUSTERED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスのクラスター化を制御します。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが、クラスター化インデックスを作成しようとしています。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どのテーブルでもクラスター化インデックスは 1 つしかサポートされません。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが、非クラスター化インデックスを作成しようとしています。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。|  
-|DBPROP_INDEX_FILLFACTOR|R/W 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明 : インデックス ページの格納に使用する割合を指定します。 詳細については、次を参照してください。 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)します。<br /><br /> バリアントの型は VT_I4 です。 値は 1 ～ 100 にする必要があります。|  
-|DBPROP_INDEX_INITIALIZE|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_NULLCOLLATION|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_NULLS|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_PRIMARYKEY|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE&lt;br&gt;&lt;/br&gt;説明 : 参照整合性 (PRIMARY KEY 制約) としてインデックスを作成します。<br /><br /> VARIANT_TRUE: インデックスは、テーブルの PRIMARY KEY 制約をサポートするために作成されます。 列には NULL 値を許容しないでください。<br /><br /> VARIANT_FALSE: インデックスは、テーブル内の行値の PRIMARY KEY 制約としては使用されません。|  
-|DBPROP_INDEX_SORTBOOKMARKS|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_TEMPINDEX|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_TYPE|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_UNIQUE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスに参加する列または複数の列に、UNIQUE 制約としてインデックスを作成します。<br /><br /> VARIANT_TRUE: インデックスを使用して、テーブル内の行値を一意に制約します。<br /><br /> VARIANT_FALSE: インデックスでは、行値が一意に制約されません。|  
+|DBPROP_INDEX_AUTOUPDATE|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_CLUSTERED|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスのクラスター化を制御します。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが、クラスター化インデックスを作成しようとしています。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どのテーブルでもクラスター化インデックスは 1 つしかサポートされません。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが、非クラスター化インデックスを作成しようとしています。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。|  
+|DBPROP_INDEX_FILLFACTOR|R/W: 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明 : インデックス ページの格納に使用する割合を指定します。 詳細については、「[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。<br /><br /> バリアントの型は VT_I4 です。 値は 1 ～ 100 にする必要があります。|  
+|DBPROP_INDEX_INITIALIZE|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_NULLCOLLATION|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_NULLS|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_PRIMARYKEY|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE&lt;br&gt;&lt;/br&gt;説明 : 参照整合性 (PRIMARY KEY 制約) としてインデックスを作成します。<br /><br /> VARIANT_TRUE: インデックスは、テーブルの PRIMARY KEY 制約をサポートするために作成されます。 列には NULL 値を許容しないでください。<br /><br /> VARIANT_FALSE: インデックスは、テーブル内の行値の PRIMARY KEY 制約としては使用されません。|  
+|DBPROP_INDEX_SORTBOOKMARKS|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_TEMPINDEX|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_TYPE|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 **CreateIndex** でこのプロパティの設定を試みると、戻り値として DB_S_ERRORSOCCURRED が返されます。 プロパティ構造体の *dwStatus* メンバーには、DBPROPSTATUS_BADVALUE が示されます。|  
+|DBPROP_INDEX_UNIQUE|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスに参加する列または複数の列に、UNIQUE 制約としてインデックスを作成します。<br /><br /> VARIANT_TRUE: インデックスを使用して、テーブル内の行値を一意に制約します。<br /><br /> VARIANT_FALSE: インデックスでは、行値が一意に制約されません。|  
   
  プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERINDEX、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、次のデータ ソース情報のプロパティを定義します。  
   

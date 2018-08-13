@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client Support for LocalDB |Microsoft Docs
+title: SQL Server Native Client Support for LocalDB |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bff3be07c128ec6fce7a0cec039978079ded7246
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 46462921a0a2632f7bc5bd431a78d23e8954c7c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432651"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548602"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client における LocalDB のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37432651"
   
 -   使用**sqllocaldb.exe は**を既定のインスタンスの名前を検出します。  
   
--   使用して、 **AttachDBFilename**データベース サーバーのファイルを指定する接続文字列キーワードをアタッチする必要があります。 使用する場合**AttachDBFilename**でデータベースの名前を指定しない場合は、**データベース**データベースは削除から接続文字列キーワード、LocalDB インスタンス アプリケーション閉じます。  
+-   **AttachDBFilename** 接続文字列キーワードを使用して、サーバーをアタッチするデータベース ファイルを指定できます。 **AttachDBFilename** を使用するときに、**Database** 接続文字列キーワードを使用してデータベース名を指定しなかった場合、データベースはアプリケーションの終了時に LocalDB インスタンスから削除されます。  
   
 -   接続文字列では、次のように LocalDB インスタンスを指定します。  
   

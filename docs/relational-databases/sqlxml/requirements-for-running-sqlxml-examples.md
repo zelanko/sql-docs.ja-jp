@@ -1,5 +1,5 @@
 ---
-title: SQLXML の例を実行するための要件 |Microsoft Docs
+title: SQLXML の例を実行するための要件 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9318904e6cf1509118711db228e30a7266647610
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4edb8f2d55a4f2938e6f81a6e8d610260e7ccfb2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049900"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545462"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>SQLXML のサンプル実行のための必要条件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

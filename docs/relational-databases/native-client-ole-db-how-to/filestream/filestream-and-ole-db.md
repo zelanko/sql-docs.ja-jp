@@ -1,5 +1,5 @@
 ---
-title: Filestream と OLE DB |Microsoft Docs
+title: Filestream と OLE DB |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b1a65aeafe125ee34fa00943758b6d7d663195c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2d6ecf2047b833c0ff58b330a3077e90902a7a20
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410981"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550032"
 ---
 # <a name="filestream-and-ole-db"></a>FILESTREAM と OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,8 +32,8 @@ ms.locfileid: "37410981"
   
 -   [ISequentialStream を使って FILESTREAM 列からデータを取得&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
   
--   [ICommandText パラメーターにバインドされた ISequentialStream を使用して、FILESTREAM 列にデータを送信&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText パラメーターにバインドされた ISequentialStream を使用したデータの FILESTREAM 列への送信 (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload を使用して FILESTREAM 列にデータを送信&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_system_stopwords (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fulltext_system_stopwords (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,25 +27,25 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56d8b1c92560e0a161c7b020d6e9f111bc8dd44d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 40ba819fcc6e488b76717c61c225180e91571473
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179028"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542932"
 ---
 # <a name="sysfulltextsystemstopwords-transact-sql"></a>sys.fulltext_system_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   システム ストップリストへのアクセスを提供します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**stopword**|**nvarchar(64)**|この用語は、ストップ ワードの一致と見なされます。|  
+|**stopword**|**nvarchar(64)**|ストップ ワードと見なされる期間と一致します。|  
 |**language_id**|**int**|言語のロケール識別子 (LCID) です。 この LCID は単語区切りに使用されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  

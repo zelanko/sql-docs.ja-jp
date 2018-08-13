@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_trigger_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_trigger_stats (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 01/10/2018
 ms.prod: sql
@@ -23,63 +23,64 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8dace7d8dccee89fadac0ff88fe7d1400b28b023
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb086e85072bf3b8a4713a7b4fb81c82fcaa1b5c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548512"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  キャッシュされたトリガーの集計パフォーマンス統計を返します。 このビューには、トリガーごとに 1 行が含まれており、その行の有効期間はトリガーがキャッシュに残っている間です。 つまり、トリガーがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点でパフォーマンス統計 SQL トレース イベントが発生したような**sys.dm_exec_query_stats**です。  
+  キャッシュされたトリガーの集計パフォーマンス統計を返します。 このビューには、トリガーごとに 1 行が含まれており、その行の有効期間はトリガーがキャッシュに残っている間です。 つまり、トリガーがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点では、パフォーマンス統計 SQL トレース イベントが発生するのような**sys.dm_exec_query_stats**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|トリガーが存在するデータベースの ID。|  
 |**object_id**|**int**|トリガーのオブジェクト ID 番号。|  
 |**type**|**char(2)**|次のいずれかのオブジェクトの種類。<br /><br /> TA = アセンブリ (CLR) トリガー<br /><br /> TR = SQL トリガー|  
 |**Type_desc**|**nvarchar(60)**|オブジェクトの種類の説明です。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary(64)**|これは、クエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、このトリガー内から実行されました。|  
-|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用することがあります、 **sys.dm_exec_cached_plans**動的管理ビュー。|  
+|**sql_handle**|**varbinary(64)**|これでのクエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、このトリガー内から実行されました。|  
+|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用できる、 **sys.dm_exec_cached_plans**動的管理ビュー。|  
 |**cached_time**|**datetime**|トリガーがキャッシュに追加された時刻。|  
 |**last_execution_time**|**datetime**|前回トリガーが実行された時刻。|  
-|**execution_count**|**bigint**|前回の後に、トリガーが実行された回数のコンパイル時。|  
-|**total_worker_time**|**bigint**|コンパイルされた後にこのトリガーの実行で使用された CPU 時間、マイクロ秒単位の合計サイズ。|  
+|**execution_count**|**bigint**|以降、トリガーが実行された回数を最後にコンパイルします。|  
+|**total_worker_time**|**bigint**|コンパイルされた後に、このトリガーの実行で使用されたマイクロ秒単位での CPU 時間の合計量。|  
 |**last_worker_time**|**bigint**|トリガーを前回実行したときに使用された CPU 時間 (マイクロ秒単位)。|  
 |**min_worker_time**|**bigint**|最大の CPU 時間、1 回の実行中にこのトリガーで使用された (マイクロ秒)。|  
 |**max_worker_time**|**bigint**|最大の CPU 時間、1 回の実行中にこのトリガーで使用された (マイクロ秒)。|  
-|**total_physical_reads**|**bigint**|コンパイルされた後にこのトリガーの実行によって実行される物理読み取りの合計数。|  
+|**total_physical_reads**|**bigint**|コンパイルされた後に、このトリガーの実行によって実行される物理読み取りの合計数。|  
 |**last_physical_reads**|**bigint**|物理読み取りの数は、トリガーが実行された最終時刻を実行します。|  
-|**min_physical_reads**|**bigint**|このトリガーの 1 回の実行中に行われた物理読み取りの最小数。|  
-|**max_physical_reads**|**bigint**|このトリガーの 1 回の実行中に行われた物理読み取りの最大数。|  
-|**total_logical_writes**|**bigint**|コンパイルされた後にこのトリガーの実行によって実行される論理書き込みの合計数。|  
+|**min_physical_reads**|**bigint**|このトリガーで 1 回の実行中に行われた物理読み取りの最小数。|  
+|**max_physical_reads**|**bigint**|このトリガーで 1 回の実行中に行われた物理読み取りの最大数。|  
+|**total_logical_writes**|**bigint**|コンパイルされた後に、このトリガーの実行によって実行される論理書き込みの合計数。|  
 |**last_logical_writes**|**bigint**|論理書き込みの数は、トリガーが実行された最終時刻を実行します。|  
-|**min_logical_writes**|**bigint**|このトリガーの 1 回の実行中に行われた論理書き込みの最小数。|  
-|**max_logical_writes**|**bigint**|このトリガーの 1 回の実行中に行われた論理書き込みの最大数。|  
-|**total_logical_reads**|**bigint**|コンパイルされた後にこのトリガーの実行によって実行される論理読み取りの合計数。|  
+|**min_logical_writes**|**bigint**|このトリガーで 1 回の実行中に行われた論理書き込みの最小数。|  
+|**max_logical_writes**|**bigint**|このトリガーで 1 回の実行中に行われた論理書き込みの最大数。|  
+|**total_logical_reads**|**bigint**|コンパイルされた後に、このトリガーの実行によって実行される論理読み取りの合計数。|  
 |**last_logical_reads**|**bigint**|論理読み取りの数は、トリガーが実行された最終時刻を実行します。|  
-|**min_logical_reads**|**bigint**|このトリガーの 1 回の実行中に行われた論理読み取りの最小数。|  
-|**max_logical_reads**|**bigint**|このトリガーの 1 回の実行中に行われた論理読み取りの最大数。|  
+|**min_logical_reads**|**bigint**|このトリガーで 1 回の実行中に行われた論理読み取りの最小数。|  
+|**max_logical_reads**|**bigint**|このトリガーで 1 回の実行中に行われた論理読み取りの最大数。|  
 |**total_elapsed_time**|**bigint**|このトリガーの実行完了のマイクロ秒単位で、合計経過時間。|  
 |**last_elapsed_time**|**bigint**|このトリガーの前回の実行完了までの経過時間 (マイクロ秒単位)。|  
 |**min_elapsed_time**|**bigint**|このトリガーの実行を完了する任意のマイクロ秒単位で、最小経過時間。|  
 |**max_elapsed_time**|**bigint**|このトリガーの実行を完了する任意のマイクロ秒単位で、最大経過時間。| 
-|**total_spills**|**bigint**|コンパイルされた後にこのトリガーの実行によって書き込まれたページの合計数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|ページの数には、トリガーが実行された最終時刻が書き込まれました。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|このトリガー 1 回の実行中に書き込まれたページの最小数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|このトリガー 1 回の実行中に書き込まれたページの最大数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_spills**|**bigint**|コンパイルされた後に、このトリガーの実行によって書き込まれたページの合計数。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|ページの数には、トリガーが実行された最終時刻が書き込まれます。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|このトリガーが 1 回の実行中に書き込まれたことがこれまでのページの最小数。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|このトリガーが 1 回の実行中に書き込まれたことがこれまでのページの最大数。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。  
 
 ビュー内の統計は、クエリが完了したときに更新されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="examples"></a>使用例  
  次の例では、平均経過時間で識別される上位 5 つのトリガーに関する情報を返します。  
@@ -97,8 +98,8 @@ ORDER BY [total_worker_time] DESC;
 ## <a name="see-also"></a>参照  
 [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+[sys.dm_exec_query_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
 [sys.dm_exec_procedure_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
-[sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+[sys.dm_exec_cached_plans &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

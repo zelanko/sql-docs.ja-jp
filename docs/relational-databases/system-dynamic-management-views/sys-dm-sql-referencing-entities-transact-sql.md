@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referencing_entities (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_sql_referencing_entities (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,17 +23,18 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b78b7d54b5065496b587b6493e986b263d8919fd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548952"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベース内で、他のユーザー定義エンティティを名前で参照する各エンティティについて、対応する 1 行を返します。 1 つのエンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる別のエンティティの保存されている SQL 式で名前によって表示される、*エンティティを参照している*です。 たとえば、参照先エンティティとしてユーザー定義型 (UDT) を指定した場合、定義の中でその型を名前で参照する各ユーザー定義エンティティが返されます。 この関数は、指定したエンティティを参照していたとしても、他のデータベース内のエンティティは返しません。 この関数は、サーバー レベルの DDL トリガーを参照元エンティティとして返す master データベースのコンテキストで実行する必要があります。  
+  現在のデータベース内で、他のユーザー定義エンティティを名前で参照する各エンティティについて、対応する 1 行を返します。 1 つのエンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる別のエンティティの永続化された SQL 式で名前が、*エンティティを参照する*します。 たとえば、参照先エンティティとしてユーザー定義型 (UDT) を指定した場合、定義の中でその型を名前で参照する各ユーザー定義エンティティが返されます。 この関数は、指定したエンティティを参照していたとしても、他のデータベース内のエンティティは返しません。 この関数は、サーバー レベルの DDL トリガーを参照元エンティティとして返す master データベースのコンテキストで実行する必要があります。  
   
  この動的管理関数に参照先エンティティを指定すると、現在のデータベース内で、そのエンティティを参照する次の種類のエンティティをレポートできます。  
   
@@ -68,16 +69,16 @@ sys.dm_sql_referencing_entities (
   
  *schema_name*参照先のクラスが PARTITION_FUNCTION である場合を除くが必要です。  
   
- *schema_name.referenced_entity_name*は**nvarchar (517)** です。  
+ *schema_name.referenced_entity_name*は**nvarchar (517)** します。  
   
- *< Referenced_class >* :: = {オブジェクト |型 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
+ *< Referenced_class >* :: = {オブジェクト |種類 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
  参照先エンティティのクラスを指定します。 クラスは 1 つのステートメントに 1 つだけ指定できます。  
   
  *< referenced_class >* は**nvarchar**(60)。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|参照元エンティティが属しているスキーマ。 NULL 値が許可されます。<br /><br /> データベース レベルおよびサーバー レベルの DDL トリガーの場合は NULL です。|  
 |referencing_entity_name|**sysname**|参照元エンティティの名前。 NULL 値は許可されません。|  
@@ -99,12 +100,12 @@ sys.dm_sql_referencing_entities (
   
  指定された参照先エンティティが番号付きストアド プロシージャの場合は、エラーが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 ルール、既定値、一時テーブル、一時ストアド プロシージャ、またはシステム オブジェクトについては、依存関係情報は作成も管理もされません。  
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
-|Table|可*|はい|  
+|テーブル|可*|はい|  
 |表示|はい|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
@@ -121,11 +122,11 @@ sys.dm_sql_referencing_entities (
 |XML スキーマ コレクション|いいえ|はい|  
 |パーティション関数|いいえ|はい|  
   
- \* テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
+ \* テーブルは、参照する場合にのみ、参照元エンティティとして追跡を[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
   
  ** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -157,7 +158,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 指定された型を参照するエンティティを取得する  
- 次の例は、別名型を参照するエンティティを返します`dbo.Flag`です。 結果セットには、この型を使用する 2 つのストアド プロシージャが示されます。 `dbo.Flag`型は、いくつかの列の定義では使用も、`HumanResources.Employee`テーブルですただし、、の型が計算列、CHECK 制約、またはテーブルの既定の制約の定義ではない行は返されません、 `HumanResources.Employee`。テーブル。  
+ 次の例は、別名型を参照するエンティティを返します`dbo.Flag`します。 結果セットには、この型を使用する 2 つのストアド プロシージャが示されます。 `dbo.Flag`で複数の列の定義で型を使用しても、`HumanResources.Employee`テーブルただし、計算列、CHECK 制約、またはテーブルの既定の制約の定義で型がないため、行は返されず、 `HumanResources.Employee`。テーブル。  
   
 ```sql  
 USE AdventureWorks2012;  

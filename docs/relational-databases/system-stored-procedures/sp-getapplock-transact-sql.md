@@ -1,5 +1,5 @@
 ---
-title: sp_getapplock (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_getapplock (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ce5a2f5350a16024dcefbdd3e162212a60d98059
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261671"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555682"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,24 +52,24 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>引数  
  [ @Resource=] '*resource_name*'  
- ロック リソースを識別するための名前を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)** 既定値はありません。 リソース文字列がより長い場合**nvarchar (255)** に切り捨てられます**nvarchar (255)** です。  
+ ロック リソースを識別するための名前を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)** 既定値はありません。 リソース文字列がより長い場合**nvarchar (255)** に切り捨てられます**nvarchar (255)** します。  
   
- *resource_name*はバイナリ比較、そのため、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。  
+ *resource_name*はバイナリ比較し、つまり現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。  
   
 > [!NOTE]  
 >  アプリケーション ロックが取得されると、プレーン テキストで抽出できるのは最初の 32 文字のみとなり、残りの部分はハッシュされます。  
   
  [ @LockMode=] '*lock_mode*'  
- 特定のリソースに対して取得されるロック モードを指定します。 *lock_mode* は **nvarchar (32)** 、既定値はありません。 値は、次のいずれかを指定できます: **Shared**、**更新**、 **IntentShared**、 **IntentExclusive**、または**排他**.  
+ 特定のリソースに対して取得されるロック モードを指定します。 *lock_mode* は **nvarchar (32)** 、既定値はありません。 値は、次のいずれかを指定できます: **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**、または**排他**.  
   
  [ @LockOwner=] '*lock_owner*'  
  ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)** です。 この値は **Transaction** (既定値) または **Session** のいずれかです。 ときに、 *lock_owner*値は**トランザクション**により、既定または明示的に指定すると、sp_getapplock 必要がありますから実行するトランザクション内で。  
   
  [ @LockTimeout=] '*値*'  
- ロック タイムアウト値をミリ秒単位で指定します。 既定値はによって返される値と同じ@LOCK_TIMEOUTです。 ロック要求がすぐに許可されない場合に、ロックを待機するのではなくエラーを返すようにするには、0 を指定します。  
+ ロック タイムアウト値をミリ秒単位で指定します。 既定値はによって返される値と同じ@LOCK_TIMEOUTします。 ロック要求がすぐに許可されない場合に、ロックを待機するのではなくエラーを返すようにするには、0 を指定します。  
   
  [ @DbPrincipal=] '*database_principal*'  
- データベース内のオブジェクトに対する権限を持つユーザー、ロール、またはアプリケーション ロールを指定します。 関数の呼び出し元のメンバーである必要があります*database_principal*dbo、または db_owner 固定データベース ロールの関数を正常に呼び出すことです。 既定値は public です。  
+ データベース内のオブジェクトに対する権限を持つユーザー、ロール、またはアプリケーション ロールを指定します。 関数の呼び出し元のメンバーである必要があります*database_principal*dbo、または、db_owner 固定データベース ロールの関数を呼び出します。 既定値は public です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  \>= 0 (成功) または < 0 (失敗)  
@@ -83,7 +83,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|ロック要求がデッドロックの対象になりました。|  
 |-999|パラメーターの検証エラーまたはその他の呼び出しエラー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  リソースに設定されたロックは、現在のトランザクションまたは現在のセッションのいずれかに関連付けられます。 現在のトランザクションに関連付けられたロックは、トランザクションがコミットまたはロールバックされるときに解放されます。 セッションに関連付けられたロックは、セッションがログアウトされるときに解放されます。サーバーがシャットダウンすると、すべてのロックは解放されます。  
   
  sp_getapplock によって作成されるロック リソースは、セッションの現在のデータベースで作成されます。 各ロック リソースは次の値の組み合わせで識別されます。  
@@ -98,7 +98,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  ロックは、sp_releaseapplock で明示的に解放できます。 アプリケーションで、同じロック リソースに対して sp_getapplock が複数回呼び出される場合は、同じ回数だけ sp_releaseapplock を呼び出して、ロックを解放する必要があります。  
   
- sp_getapplock が同じロック リソースに対して複数回呼び出されても、その要求で指定されるロック モードが既存のモードと異なる場合、リソースでは 2 つのロック モードが混在することになります。 このため、ロック モードは多くの場合、既存のモードと新しく要求されたモードのうち、より強力なモードに昇格します。 この強力なロック モードは、その時点より前にロックの解放呼び出しが行われた場合でも、ロックが最終的に解放されるまで保持されます。 たとえば、呼び出しのシーケンスを次に、リソース内に保持される`Exclusive`モードではなく`Shared`モード。  
+ sp_getapplock が同じロック リソースに対して複数回呼び出されても、その要求で指定されるロック モードが既存のモードと異なる場合、リソースでは 2 つのロック モードが混在することになります。 このため、ロック モードは多くの場合、既存のモードと新しく要求されたモードのうち、より強力なモードに昇格します。 この強力なロック モードは、その時点より前にロックの解放呼び出しが行われた場合でも、ロックが最終的に解放されるまで保持されます。 たとえば、呼び出しの次の順序でリソースに保持されて`Exclusive`モードではなく`Shared`モード。  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,7 +141,7 @@ GO
   
  sys.dm_tran_locks 動的管理ビューまたは sp_lock システム ストアド プロシージャを使ってロック情報を検証するか、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使ってロックを監視してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

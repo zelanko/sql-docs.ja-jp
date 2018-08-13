@@ -1,5 +1,5 @@
 ---
-title: メタデータの検出 |Microsoft Docs
+title: メタデータの検出 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -11,13 +11,13 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 51421229b4d5e8799e4a3995b9aed680fdaa026a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7c362f69e1491b8a031557c9e74f6ab4b19e3d5d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423431"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546242"
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "37423431"
   
 -   Icommandwithparameters::getparameterinfo (を参照してください[ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)詳細)  
   
- IBCPSession::BCPSetBulkMode を使用してメタデータ形式を指定するときにパフォーマンスの向上も表示されます。  
+ IBCPSession::BCPSetBulkMode を使用してメタデータ形式を指定したときのパフォーマンスも向上しています。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client でのメタデータ検出機能の強化は、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] への次の 2 つのストアド プロシージャの追加により実現されました。  
   

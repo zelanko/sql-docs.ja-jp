@@ -1,5 +1,5 @@
 ---
-title: 強化された日付と時刻型の以前の SQL Server バージョン (ODBC) での動作 |Microsoft Docs
+title: 強化された日付と時刻型の以前の SQL Server バージョン (ODBC) での動作 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee7aefcd01746b7af290746702ed94caab66837d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 61359be082f8b5fa9ea9a30df2c1d9888b6da6d7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426271"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563466"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,10 +44,10 @@ ms.locfileid: "37426271"
 |||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK] (1)|  
 |||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time (7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|[OK] (1)|  
+||Time(7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|[OK] (1)|  
 |||SQL_C_TYPE_TIMESTAMP|失敗します (時刻リテラルが無効です)。|[OK] (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK] (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|[OK]|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
+||datetime2 (7)|SQL_C_TYPE_TIMESTAMP|[OK]|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|[OK]|[OK]|  
 |||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK]|  

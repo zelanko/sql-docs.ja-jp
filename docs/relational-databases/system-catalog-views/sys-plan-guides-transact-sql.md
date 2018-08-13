@@ -1,5 +1,5 @@
 ---
-title: sys.plan_guides (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.plan_guides (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,19 +24,20 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4309a55a8c0b631cd1e5f49d6601bfba30245178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6faaeea0bfc19594bd2131c4b40bdf270e4f6d8d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548392"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   データベース内のプラン ガイドごとに 1 行のデータを保持します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**plan_guide_id**|**int**|データベース内のプラン ガイドの一意の識別子です。|  
 |**name**|**sysname**|プラン ガイドの名前です。|  
@@ -51,8 +52,8 @@ ms.lasthandoff: 05/04/2018
 |**parameters**|**nvarchar(max)**|プラン ガイドに関連付けられているパラメーターの一覧を定義する文字列です。<br /><br /> NULL = プラン ガイドにはパラメーターの一覧が関連付けられていません。|  
 |**ヒント**|**nvarchar(max)**|プラン ガイドに関連付けられている OPTION 句のヒントです。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

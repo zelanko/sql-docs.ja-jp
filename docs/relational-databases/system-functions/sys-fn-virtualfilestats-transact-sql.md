@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualfilestats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_virtualfilestats (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 396eee771ece7036906d1ef8e09cc69c1ab2c1da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 897c50ffd93d3d01f04b0f2c87497b3f2e3142b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238270"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542892"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,38 +49,38 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>引数  
  *database_id* | NULL  
- データベースの ID です。 *database_id* は **int**, 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。  
+ データベースの ID です。 *database_id* は** int**, 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。  
   
  *file_id* | NULL  
  ファイルの ID を指定します。 *file_id*は**int**、既定値はありません。 データベース内のすべてのファイルに関する情報を返すには NULL を指定します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|データベース ID。|  
 |**FileId**|**smallint**|ファイル ID。|  
-|**TimeStamp**|**bigint**|データが取り出されたデータベース タイムスタンプです。 **int**より前に、のバージョンで[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]です。 |  
+|**TimeStamp**|**bigint**|データが取り出されたデータベース タイムスタンプです。 **int**より前に、のバージョンで[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]します。 |  
 |**NumberReads**|**bigint**|ファイルで実行された読み取りの数。|  
 |**BytesRead**|**bigint**|そのファイルで実行された読み取りバイト数です。|  
 |**IoStallReadMS**|**bigint**|そのファイルで、ユーザーが読み取り I/O の完了を待機した時間の合計 (ミリ秒単位) です。|  
 |**NumberWrites**|**bigint**|そのファイルで実行された書き込みの数です。|  
 |**BytesWritten**|**bigint**|そのファイルで実行された書き込みバイト数です。|  
 |**IoStallWriteMS**|**bigint**|そのファイルで、ユーザーが書き込み I/O の完了を待機した時間の合計 (ミリ秒単位) です。|  
-|**IoStallMS**|**bigint**|合計**IoStallReadMS**と**IoStallWriteMS**です。|  
+|**IoStallMS**|**bigint**|合計**IoStallReadMS**と**IoStallWriteMS**します。|  
 |**FileHandle**|**bigint**|ファイル ハンドルの値です。|  
-|**BytesOnDisk**|**bigint**|ディスク上の物理ファイル サイズ (バイト数) です。<br /><br /> これと同じ値は、データベース ファイルの**サイズ**で**sys.database_files**ページではなくバイト単位で表されますが、します。<br /><br /> データベース スナップショット スパース ファイルの場合は、オペレーティング システムがこのファイル用に使用する領域です。|  
+|**BytesOnDisk**|**bigint**|ディスク上の物理ファイル サイズ (バイト数) です。<br /><br /> データベース ファイルの場合と同じ値は、この**サイズ**で**sys.database_files**ページではなくバイトで表現されますが、します。<br /><br /> データベース スナップショット スパース ファイルの場合は、オペレーティング システムがこのファイル用に使用する領域です。|  
   
-## <a name="remarks"></a>解説  
- **fn_virtualfilestats** I/o の合計数などの統計情報は、テーブル値関数が、ファイルに対して実行されるシステムです。 この関数を使用して、ユーザーがファイルに対する読み取りまたは書き込みを待機する時間の長さを追跡できます。 また、この関数は、大量の I/O 利用量が生じたファイルを確認する場合にも役立ちます。  
+## <a name="remarks"></a>コメント  
+ **fn_virtualfilestats**ファイルで I/o の合計数などの統計情報を提供するテーブル値関数は実行システムです。 この関数を使用して、ユーザーがファイルに対する読み取りまたは書き込みを待機する時間の長さを追跡できます。 また、この関数は、大量の I/O 利用量が生じたファイルを確認する場合にも役立ちます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. データベースの統計情報を表示する  
- 次の例の ID を使用してデータベース内のファイル ID 1 の統計情報を表示する`1`です。  
+ 次の例の ID を使用してデータベース内のファイル ID 1 の統計情報を表示する`1`します。  
   
 ```sql  
 SELECT *  
@@ -89,7 +89,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 指定されたデータベースおよびファイルの統計情報を表示する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースのログ ファイルの統計情報を表示します。 システム関数`DB_ID`指定に使用される、 *database_id*パラメーター。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースのログ ファイルの統計情報を表示します。 システム関数`DB_ID`を指定するために使用、 *database_id*パラメーター。  
   
 ```sql  
 SELECT *  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_fdhosts (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_fts_fdhosts (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9671d5a411b12b2cdc7225f215a43c27d19de10c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c58ddc69315ad43f0b5266a723cde41b19222d93
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548162"
 ---
 # <a name="sysdmftsfdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/23/2018
   サーバー インスタンス上のフィルター デーモン ホストの現在のアクティビティに関する情報を返します。  
   
  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|フィルター デーモン ホストの ID。|  
 |**fdhost_name**|**nvarchar(120)**|フィルター デーモン ホストの名前。|  
@@ -46,10 +47,10 @@ ms.lasthandoff: 05/23/2018
 |**max_thread**|**int**|フィルター デーモン ホストのスレッドの最大数。|  
 |**batch_count**|**int**|フィルター デーモン ホストで処理中のバッチ数。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
 
 ## <a name="examples"></a>使用例  
  次の例では、フィルター デーモン ホストの名前とフィルター デーモン ホストのスレッドの最大数を返します。 また、フィルター デーモン ホストで現在処理されているバッチの数も監視します。 この情報はパフォーマンスの診断に使用できます。  

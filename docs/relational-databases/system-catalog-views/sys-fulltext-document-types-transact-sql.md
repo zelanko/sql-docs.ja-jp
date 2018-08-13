@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_document_types (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fulltext_document_types (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,29 +24,29 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12ffa574d72bd2ee901015f5714eeb228524579c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2893dd860fc60714538e8365939a13153c62f6a4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179478"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543502"
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  フルテキスト インデックス操作に使用できるドキュメント型ごとに 1 行のデータを返します。 インスタンスに登録されている IFilter インターフェイスが各行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  フルテキスト インデックス操作に使用できるドキュメント型ごとに 1 行のデータを返します。 インスタンスに登録されている IFilter インターフェイスが各行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**document_type**|**sysname**|サポートされているドキュメント型のファイル拡張子。<br /><br /> この値は、型の列のフルテキスト インデックスの作成中に使用されるフィルターを特定する使用できる**varbinary (max)** または**イメージ**です。|  
+|**document_type**|**sysname**|サポートされているドキュメント型のファイル拡張子。<br /><br /> この値は、型の列のフルテキスト インデックスの作成中に使用されるフィルターを識別するために使用できます**varbinary (max)** または**イメージ**します。|  
 |**class_id**|**uniqueidentifier**|ファイル拡張子をサポートする IFilter クラスの GUID。|  
 |**path**|**nvarchar(260)**|IFilter DLL へのパス。 パスが表示のメンバーにのみ、 **serveradmin**固定サーバー ロール。|  
 |**version**|**sysname**|IFilter DLL のバージョン。|  
-|**manufacturer**|**sysname**|IFilter 製造元の名前。<br /><br /> 注: として、製造元のドキュメントのみ[!INCLUDE[msCoName](../../includes/msconame-md.md)]ではサポートされている[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。|  
+|**manufacturer**|**sysname**|IFilter 製造元の名前。<br /><br /> 注: として、製造元のドキュメントのみ[!INCLUDE[msCoName](../../includes/msconame-md.md)]ではサポートされている[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  

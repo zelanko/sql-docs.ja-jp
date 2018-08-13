@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーター (SQL Server Native Client) |Microsoft Docs
+title: テーブル値パラメーター (SQL Server Native Client) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc91ab6cb05dc43890c64267e872196e6e6d1e08
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 256b28ad04115cbbdcbcde9bda545f27dfe51cc5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407323"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562986"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>テーブル値パラメーター (SQL Server Native Client)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  テーブル値パラメーターがで導入された[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]、し、効率的にサーバーに複数行のデータを渡すことを指定します。 テーブル値パラメーターは、パラメーター配列と同様の機能を提供する詳細が柔軟性が高くとの統合も緊密[!INCLUDE[tsql](../../../includes/tsql-md.md)]、し、多くの場合、パフォーマンスを向上できます。 パラメーター配列は使用できませんが、テーブル値パラメーターの参加は、セット ベース操作でもできます。  
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] で導入されたテーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../../includes/tsql-md.md)] との統合も緊密です。また、多くの場合、パフォーマンスが向上します。 テーブル値パラメーターはセットベースの操作にも使用できますが、パラメーター配列は使用できません。  
   
  テーブル値パラメーターと ODBC については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   

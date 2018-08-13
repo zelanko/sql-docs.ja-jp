@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_memory_cache_hash_tables (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_memory_cache_hash_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,23 +23,23 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 50e261fb0c53da8caf9f9b41d15d0f96dc7a41e4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d1b533613840f34356858547d273965dcfd9361e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467778"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555492"
 ---
 # <a name="sysdmosmemorycachehashtables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  インスタンスでアクティブなキャッシュごとに 1 行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  インスタンスでアクティブなキャッシュごとに 1 行を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_memory_cache_hash_tables**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_memory_cache_hash_tables**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|キャッシュ エントリのアドレス (主キー)。 NULL 値は許可されません。|  
 |**name**|**nvarchar (256)**|キャッシュの名前。 NULL 値は許可されません。|  
@@ -55,12 +55,12 @@ ms.locfileid: "34467778"
 |**misses_count**|**bigint**|キャッシュ ミスの数。 NULL 値は許可されません。|  
 |**buckets_avg_scan_hit_length**|**int**|検索したアイテムが見つかるまでにバケットで検証したエントリの平均数。 NULL 値は許可されません。|  
 |**buckets_avg_scan_miss_length**|**int**|検索が失敗するまでにバケットで検証したエントリの平均数。 NULL 値は許可されません。|  
-|**pdw_node_id**|**int**|この分布はでは、ノードの識別子。<br /><br /> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|この配布であるノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>権限 
+## <a name="permissions"></a>アクセス許可 
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
 
 ## <a name="see-also"></a>参照  
  

@@ -1,5 +1,5 @@
 ---
-title: CONTAINSTABLE (TRANSACT-SQL) |Microsoft ドキュメント
+title: CONTAINSTABLE (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
@@ -37,20 +37,20 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c1741644ab38afd4003265b659c06b4b9448e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 22cb21d78757b1d5166c2443a8cde7dd5aef0403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238529"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547602"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での近接検索、または重み付き検索を行う列に対して、0 行以上の行を含むテーブルを返します。 CONTAINSTABLE で使用、 [FROM 句](../../t-sql/queries/from-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT ステートメントとは、通常のテーブル名の場合と同様に参照されています。 実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フルテキスト検索をフルテキスト インデックス文字ベースのデータ型を含む列を作成します。  
+  単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での近接検索、または重み付き検索を行う列に対して、0 行以上の行を含むテーブルを返します。 使用は CONTAINSTABLE、[句から](../../t-sql/queries/from-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT ステートメントとは通常のテーブル名の場合と同様に参照されます。 実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フルテキスト検索をフルテキスト インデックス文字ベースのデータ型を含む列を作成します。  
   
- CONTAINSTABLE は、同じ種類の照合、 [CONTAINS 述語](../../t-sql/queries/contains-transact-sql.md)CONTAINS として同じ検索条件を使用しています。  
+ CONTAINSTABLE は、同じ種類の照合、 [CONTAINS 述語](../../t-sql/queries/contains-transact-sql.md)CONTAINS として同じ検索条件を使用します。  
   
  ただし、CONTAINS とは異なり、CONTAINSTABLE を使用するクエリでは、各行の関連順位値 (RANK) とフルテキスト キー (KEY) が返されます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
@@ -119,9 +119,9 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>引数  
  *テーブル*  
- フルテキスト インデックスが作成されているテーブルの名前を指定します。 *テーブル*1 部、2 部、3、または 4 部構成のデータベース オブジェクトの名前を指定できます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
+ フルテキスト インデックスが作成されているテーブルの名前を指定します。 *テーブル*1、2 部、3 台、または 4 部構成のデータベース オブジェクトの名前にすることができます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
   
- *テーブル*とサーバー名を指定できません。 リンク サーバーに対するクエリでは使用できません。  
+ *テーブル*サーバー名を指定することはできませんし、リンク サーバーに対するクエリでは使用できません。  
   
  *column_name*  
  フルテキスト検索用にインデックスが作成される 1 つ以上の列の名前を指定します。 列には、**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary**、**varbinary(max)** のいずれかの型を指定できます。  
@@ -130,29 +130,29 @@ CONTAINSTABLE
  コンマ区切りで複数の列を指定できます。 *column_list* は、かっこで囲む必要があります。 *language_term* を指定しない場合、*column_list* で指定するすべての列の言語は同じにする必要があります。  
   
  \*  
- すべてのフルテキスト インデックス内の列を作成することを示す*テーブル*指定された検索条件の検索に使用する必要があります。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
+ すべてのフルテキスト インデックス内の列を作成することを指定します。*テーブル*特定の検索条件の検索に使用する必要があります。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
   
  LANGUAGE *language_term*  
- リソースが単語区切り、語幹検索、および類義語辞典、およびノイズ ワードを使用する言語は、(または[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))、クエリの一部として削除します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
+ リソースが使用される単語区切り、語幹検索、および類義語辞典、およびノイズ ワードの言語です (または[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))、クエリの一部として削除します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
   
  1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 そのような列に対してクエリを実行する場合は、*LANGUAGE**language_term* を指定すると検索結果の一致率が高まります。  
   
- 文字列として指定すると*language_term*に対応する、**エイリアス**列の値、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ 文字列として指定する*language_term*に対応する、**エイリアス**列の値、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
  値を 2 バイト文字セット (DBCS) の形式で指定すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Unicode に変換されます。  
   
  指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
  *top_n_by_rank*  
- だけを*n*降順で最高順位の一致が返されます。 整数値、場合にのみ適用されます*n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*最も重要なヒットだけを再度呼び出すことによってクエリ パフォーマンスを向上することができます。  
+ だけを*n*降順で最高順位の一致が返されます。 整数値では場合に、のみ適用されます*n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*を使用すると、最も関連性のヒット数のみを呼び戻すことによってクエリのパフォーマンスが向上します。  
   
  <contains_search_condition>  
- *column_name* で検索するテキストと、その一致条件を指定します。 検索条件については、次を参照してください。 [CONTAINS &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)です。  
+ *column_name* で検索するテキストと、その一致条件を指定します。 検索条件の詳細については、次を参照してください。 [CONTAINS &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
- 返されるテーブルがという名前の列を持つ**キー**フルテキスト キー値を格納しています。 各フルテキスト インデックス付きテーブルがあり、値を持つことが保証されます、一意である列で返される値、**キー**列で指定した選択条件に一致する行のフルテキスト キー値は、検索が含まれています条件です。 **TableFulltextKeyColumn** OBJECTPROPERTYEX 関数から取得したプロパティは、この一意のキー列の id を提供します。 フルテキスト インデックスのフルテキスト キーに関連付けられている列の ID を取得するには使用**sys.fulltext_indexes**です。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)です。  
+ 返されるテーブルがという名前の列**キー**フルテキスト キー値を格納しています。 各フルテキスト インデックス付きテーブルがあり、値が必ず一意である列に返される値、**キー**列で指定した選択基準に一致する行のフルテキスト キー値は、検索が含まれています条件。 **TableFulltextKeyColumn** OBJECTPROPERTYEX 関数から取得したプロパティは、この一意なキー列の id を提供します。 フルテキスト インデックスのフルテキスト キーに関連付けられた列の ID を取得する**sys.fulltext_indexes**します。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)します。  
   
  元のテーブルから目的の行を取得するには、CONTAINSTABLE 行との結合を指定してください。 CONTAINSTABLE を使用する場合、通常は次の形式で FROM 句を SELECT ステートメントに指定します。  
   
@@ -163,19 +163,19 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- CONTAINSTABLE で生成されたテーブルには、という名前の列が含まれています。**ランク**です。 **ランク**列には、行が選択基準にどの程度一致を示す行ごと (0 ~ 1000) からの値。 通常、順位値は SELECT ステートメント内で次のいずれかの方法で使用します。  
+ CONTAINSTABLE で生成されたテーブルには、という名前の列が含まれています。**ランク**します。 **ランク**列は (0 ~ 1000) の値を行が選択基準に適合する度合いを示す行ごとです。 通常、順位値は SELECT ステートメント内で次のいずれかの方法で使用します。  
   
 -   ORDER BY 句で使用し、最も順位値の高い行をテーブルの最初の行に返す。  
   
 -   選択リストで使用し、それぞれの行に割り当てられている順位値を表示する。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  実行権限は、対象テーブルまたは参照されるテーブル内の列に対して SELECT 特権を持っているユーザーにだけ与えられます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-simple-example"></a>A. 簡単な例  
- 次の例では、作成し、3 つの郡およびそのフラグの色の一覧を表示する 2 つの列の単純なテーブルを入力します。 It では、作成し、テーブルのインデックス、フルテキスト カタログを設定します。 続いて、 **CONTAINSTABLE**構文を説明します。 この例では、検索値を複数回を満たす場合に順位値が高いに拡張する方法を示します。 前回のクエリでは、タンザニア緑と黒の両方が含まれています。 これは、順位の高いクエリの色の 1 つだけが含まれているイタリアよりもにあります。  
+ 次の例では、作成し、3 つの郡およびそのフラグの色の一覧を表示する 2 つの列の単純なテーブルを入力します。 It では、作成し、テーブルのインデックス、フルテキスト カタログを設定します。 次に、 **CONTAINSTABLE**構文を説明します。 この例では、検索値を複数回を満たす場合に順位値が高いに拡張する方法を示します。 前回のクエリでは、タンザニア緑と黒の両方が含まれています。 これは、順位の高いクエリの色の 1 つだけが含まれているイタリアよりもにあります。  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -283,7 +283,7 @@ GO
 ```  
   
 > [!NOTE]  
->  言語*language_term*引数を使用するは必要ありません*top_n_by_rank です。*  
+>  言語*language_term*引数を使用してでは必要ありません*top_n_by_rank します。*  
   
 ## <a name="see-also"></a>参照  
  [検索結果を制限するランクを持つ](../../relational-databases/search/limit-search-results-with-rank.md)   

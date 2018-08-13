@@ -1,5 +1,5 @@
 ---
-title: sys.stats_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.stats_columns (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -24,28 +24,28 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d595953b3caf3cdc9d39ae92fab72a707221697
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 188b01d0f57751b6e62472cdd1f7ee5e947e95c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220683"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543432"
 ---
 # <a name="sysstatscolumns-transact-sql"></a>sys.stats_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   1 行の一部である各列のデータを含む**sys.stats**統計。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|この列がその一部を構成するオブジェクトの ID です。|  
-|**stats_id**|**int**|この列がその一部を構成する統計の ID です。<br /><br />統計、インデックスに対応する場合、 *stats_id*値は同じで、 *index_id*値で、 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。|  
+|**stats_id**|**int**|この列がその一部を構成する統計の ID です。<br /><br />統計、インデックスに対応する場合、 *stats_id*値は同じで、 *index_id*値、 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。|  
 |**stats_column_id**|**int**|統計列のセット内の 1 から始まる序数です。|  
-|**column_id**|**int**|列の ID **sys.columns**です。|  
+|**column_id**|**int**|列の ID **sys.columns**します。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: XPath クエリ (SQLXML 4.0) に論理関数を指定する |Microsoft ドキュメント
+title: XPath クエリ (SQLXML 4.0) でブール型の関数の指定 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,28 +21,28 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9366a70d31e286ec69610f3551642ec24b1e2cad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2c0d4902bd1ec3d1c5e1e1cf7f2178275f68f2b8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971187"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549652"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理関数の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下の例では、XPath クエリに論理関数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。[サンプル注釈付き XSD スキーマを XPath の例 & #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  以下の例では、XPath クエリに論理関数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
   
 ## <a name="examples"></a>使用例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. not() 論理関数を指定する  
- このクエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素がない**\<順序 >** 子要素。  
+ このクエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素を持たない**\<順序 >** 子要素。  
   
 ```  
 /child::Customer[not(child::Order)]  
 ```  
   
- **子**軸は、既定値です。 そのため、クエリは、として指定できます。  
+ **子**軸は既定値。 そのため、クエリは、として指定できます。  
   
 ```  
 /Customer[not(Order)]  
@@ -50,7 +50,7 @@ ms.locfileid: "32971187"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (BooleanFunctionsA.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "32971187"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  テンプレートを実行して得られる結果セットの一部を次に示します。  
   
@@ -84,19 +84,19 @@ ms.locfileid: "32971187"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. true() 論理関数と false() 論理関数を指定する  
- このクエリでは、すべてを返します**\<顧客 >** がない、コンテキスト ノードの要素の子**\<順序 >** 子要素です。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
+ このクエリはすべて返します**\<顧客 >** がない、コンテキスト ノードの要素の子**\<順序 >** 子要素。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
   
 ```  
 /child::Customer[child::Order=false()]  
 ```  
   
- **子**軸は、既定値です。 そのため、クエリは、として指定できます。  
+ **子**軸は既定値。 そのため、クエリは、として指定できます。  
   
 ```  
 /Customer[Order=false()]  
 ```  
   
- このクエリは、次のと同じです。  
+ このクエリは、次のと同等です。  
   
 ```  
 /Customer[not(Order)]  
@@ -116,7 +116,7 @@ ms.locfileid: "32971187"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (BooleanFunctionsB.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "32971187"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  テンプレートを実行して得られる結果セットの一部を次に示します。  
   

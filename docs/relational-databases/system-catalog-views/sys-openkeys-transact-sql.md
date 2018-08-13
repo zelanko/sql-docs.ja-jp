@@ -1,5 +1,5 @@
 ---
-title: sys.openkeys (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.openkeys (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,20 +24,20 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ae65fbb1eaf69788917982aedb63ffedbc9d7a71
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebc2e379d82c1b8a4e0406fd82900b7f21297123
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179918"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543132"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   このカタログ ビューは、現在のセッションで開かれている暗号化キーについての情報を返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|キーを含んでいるデータベースの ID。|  
 |**database_name**|**sysname**|キーを含んでいるデータベースの名前。|  
@@ -45,10 +45,10 @@ ms.locfileid: "33179918"
 |**key_name**|**sysname**|キーの名前。 データベース内で一意です。|  
 |**key_guid**|**varbinary**|キーの GUID。 データベース内で一意です。|  
 |**opened_date**|**datetime**|キーが開いた日付と時刻。|  
-|**ステータス**|**int**|キーがメタデータ内で有効である場合は 1 です。 キーがメタデータ内で見つからない場合は 0 です。|  
+|**status**|**int**|キーがメタデータ内で有効である場合は 1 です。 キーがメタデータ内で見つからない場合は 0 です。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   

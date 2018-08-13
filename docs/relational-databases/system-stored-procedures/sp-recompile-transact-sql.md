@@ -1,5 +1,5 @@
 ---
-title: sp_recompile (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_recompile (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7c04b6daf385a80f82dc39e1b1891f737e7fb19a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246140"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544642"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>引数  
  [ @objname=] '*オブジェクト*'  
- 現在のデータベースにあるストアド プロシージャ、トリガー、テーブル、ビュー、またはユーザー定義関数の修飾名または非修飾名を指定します。 *オブジェクト*は**nvarchar (776)**、既定値はありません。 場合*オブジェクト*ストアド プロシージャ、トリガー、またはユーザー定義関数、ストアド プロシージャ、トリガーの名前を指定します。 または、次回実行する関数を再コンパイルされます。 場合*オブジェクト*テーブルまたはビュー、すべてのストアド プロシージャ、トリガーの名前を指定します。 または、次回実行されるテーブルまたはビューを参照するユーザー定義関数を再コンパイルされます。  
+ 現在のデータベースにあるストアド プロシージャ、トリガー、テーブル、ビュー、またはユーザー定義関数の修飾名または非修飾名を指定します。 *オブジェクト*は**nvarchar (776)**、既定値はありません。 場合*オブジェクト*ストアド プロシージャ、トリガー、またはユーザー定義関数、ストアド プロシージャ、トリガーの名前を指定しますまたは、次回実行する関数を再コンパイルされます。 場合*オブジェクト*テーブルまたはビューでは、すべてのストアド プロシージャ、トリガーの名前を指定しますまたは、次回実行されるテーブルまたはビューを参照するユーザー定義関数を再コンパイルされます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 0 以外の数値 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_recompile は、現在のデータベース内でのみオブジェクトを検索します。  
   
  ストアド プロシージャ、トリガー、およびユーザー定義関数が使用するクエリは、コンパイル時にだけ最適化されます。 データベースにインデックスを追加したり、変更を加えたりすると、統計が変化するため、コンパイルされたストアド プロシージャ、トリガー、およびユーザー定義関数の効率が低下する場合があります。 そのテーブルに作用するストアド プロシージャやトリガーを再コンパイルすることにより、クエリを再び最適化できます。  
@@ -59,7 +59,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動的にこれを行うことをお勧めときにストアド プロシージャ、トリガー、およびユーザー定義関数を再コンパイルします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  指定したオブジェクトに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

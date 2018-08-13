@@ -1,5 +1,5 @@
 ---
-title: テーブル (TRANSACT-SQL) |Microsoft ドキュメント
+title: テーブル (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2b09913926798dfe4ff8eebcc46686a707c3332
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 68671053cfdcaf56a434afdc99d081042e7d1e1e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238309"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556302"
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在のユーザーが権限を持つ、現在のデータベース内のテーブルごとに 1 行のデータを返します。  
   
- これらのビューから情報を取得するには、完全修飾の名前を指定 **INFORMATION_SCHEMA. * * * view_name*です。  
+ これらのビューから情報を取得するには、完全修飾名を指定 **INFORMATION_SCHEMA. * * * view_name*します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューを照会する方法です。 INFORMATION_SCHEMA ビューは、すべての新機能が反映されるとは限らないため、不完全な可能性があります。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューを照会する方法です。 INFORMATION_SCHEMA ビューは、すべての新機能が反映されるとは限らないため、不完全な可能性があります。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
 |**TABLE_TYPE**|**varchar (** 10 **)**|テーブルの種類。 VIEW または BASE TABLE です。|  
   

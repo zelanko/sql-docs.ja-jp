@@ -1,5 +1,5 @@
 ---
-title: sys.change_tracking_tables (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.change_tracking_tables (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -25,29 +25,29 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f5e3702008c5913fa7321f89d14d06d47321499
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebea733f742efcc02d515eae685619820dbbfcd3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179018"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544682"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingtables"></a>変更の追跡カタログ ビューでは、sys.change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   変更の追跡が有効な現在のデータベース内のテーブルごとに 1 行のデータを返します。  
    
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|変更ジャーナルを持つテーブルの ID。 テーブルは、変更の追跡が現在無効になっている場合でも、変更ジャーナルを持つことができます。<br /><br /> テーブル ID はデータベース内で一意です。|  
 |is_track_columns_updated_on|**bit**|テーブルに対する変更の追跡の現在の状態。<br /><br /> 0 = OFF<br /><br /> 1 = ON |  
 |begin_version|**bigint**|テーブルに対する変更の追跡を開始したときのデータベースのバージョン。 通常、このバージョンは変更の追跡が有効にされた日時を示します。ただし、テーブルが切り捨てられると、この値はリセットされます。|  
 |cleanup_version|**bigint**|クリーンアップによって変更追跡情報が削除された可能性がある最大バージョン。|  
-|min_valid_version|**bigint**|テーブルで使用できる変更追跡情報の有効な最小バージョン。<br /><br /> この行に関連付けられているテーブルから変更を取得する場合、last_sync_version には、この列に表示されるバージョンと同じ値か、それよりも大きい値を指定する必要があります。 詳細については、次を参照してください。 [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)です。|  
+|min_valid_version|**bigint**|テーブルで使用できる変更追跡情報の有効な最小バージョン。<br /><br /> この行に関連付けられているテーブルから変更を取得する場合、last_sync_version には、この列に表示されるバージョンと同じ値か、それよりも大きい値を指定する必要があります。 詳細については、次を参照してください。 [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)します。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   

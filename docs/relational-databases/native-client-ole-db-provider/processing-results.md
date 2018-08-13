@@ -1,5 +1,5 @@
 ---
-title: 結果の処理 |Microsoft Docs
+title: 結果の処理 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3c8b6a1653fa089b5ef78211c4dd1ab4896dbcf6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 13ebd841699598c3489ca5fa84bcb64999bcb475
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425901"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562746"
 ---
 # <a name="processing-results"></a>結果の処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "37425901"
 
   コマンドの実行、またはプロバイダーからの行セット オブジェクトの直接生成のいずれかによって行セット オブジェクトを作成する場合、コンシューマーはその行セット内のデータにアクセスして、データを取得する必要があります。  
   
- 行セットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが表形式でデータを公開できるようにするための重要な機能を持つオブジェクトです。 概念的には、行セットは行の集まりを表し、各行には列データが格納されています。 行セット オブジェクトなどのインターフェイスを公開**IRowset** (行セットから行を順番にフェッチするメソッドを含む)、 **IAccessor** (を記述する列のバインドのグループの定義を許可します方法に表形式のデータがコンシューマー プログラム変数にバインド)、 **IColumnsInfo** (行セットの列に関する情報を提供します) と**IRowsetInfo** (行セットに関する情報を提供します)。  
+ 行セットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが表形式でデータを公開できるようにするための重要な機能を持つオブジェクトです。 概念的には、行セットは行の集まりを表し、各行には列データが格納されています。 行セット オブジェクトでは、**IRowset** (行セットから順番に行をフェッチするメソッドを含みます)、**IAccessor** (コンシューマーのプログラム変数に表形式のデータをバインドする方法を指定する一連の列バインドの定義を許可します)、**IColumnsInfo** (行セット内の列に関する情報を提供します)、**IRowsetInfo** (行セットに関する情報を提供します) などのインターフェイスが公開されます。  
   
- コンシューマーが呼び出すことができます、 **irowset::getdata**バッファーに行セットから 1 行のデータを取得するメソッド。 前に**GetData**が呼び出されると、コンシューマーは DBBINDING 構造体のセットを使用してバッファーについて説明します。 各バインドは、行セット内の列をコンシューマーのバッファーに格納する方法を記述するもので、次の情報が含まれます。  
+ コンシューマーは、**IRowset::GetData** メソッドを呼び出して、データ行を行セットからバッファーに取得できます。 **GetData** を呼び出す前に、DBBINDING 構造体のセットを使用してバッファーを記述します。 各バインドは、行セット内の列をコンシューマーのバッファーに格納する方法を記述するもので、次の情報が含まれます。  
   
 -   バインドが適用される列 (パラメーター) の序数  
   
@@ -47,7 +47,7 @@ ms.locfileid: "37425901"
   
  プロバイダーはデータを取得するときに、各バインドの情報を使用してコンシューマーのバッファーからデータを取得する位置と方法を決定します。 また、コンシューマーのバッファーにデータを設定するときに、各バインドの情報を使用してコンシューマーのバッファー内にあるデータを返す位置と方法を決定します。  
   
- DBBINDING 構造体を指定すると、アクセサーが作成されます (**iaccessor::createaccessor**)。 バインドの集まりであるアクセサーは、コンシューマーのバッファー内のデータを取得または設定するときに使用します。  
+ DBBINDING 構造体を指定したら、アクセサーを作成 (**IAccessor::CreateAccessor**) します。 バインドの集まりであるアクセサーは、コンシューマーのバッファー内のデータを取得または設定するときに使用します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client OLE DB プロバイダー アプリケーションの作成](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   

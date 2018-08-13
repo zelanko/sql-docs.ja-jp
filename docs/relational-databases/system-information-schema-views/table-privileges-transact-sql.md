@@ -1,5 +1,5 @@
 ---
-title: TABLE_PRIVILEGES (TRANSACT-SQL) |Microsoft ドキュメント
+title: TABLE_PRIVILEGES (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,26 +22,27 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 10f005190b8f1348353a09eb7cf607c13211cbe7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0eb4bc6b4b81e6c03334d966c181ffc3b1e4e391
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544582"
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在のデータベースにおける現在のユーザーに与えられたテーブル特権、またはこのユーザーが与えるテーブル特権ごとに、1 行のデータを返します。  
   
- これらのビューから情報を取得するには、完全修飾の名前を指定 **INFORMATION_SCHEMA. * * * view_name*です。  
+ これらのビューから情報を取得するには、完全修飾名を指定 **INFORMATION_SCHEMA. * * * view_name*します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**権限の許可者**|**nvarchar(** 128 **)**|特権の設定者です。|  
 |**権限付与対象ユーザー**|**nvarchar(** 128 **)**|特権の被設定者です。|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|特権のタイプです。|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|被設定者が別の人に権限を許可できるかどうかを示します。|  

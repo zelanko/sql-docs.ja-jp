@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 でのデータを変更するアップデート グラムの使用 |Microsoft Docs
+title: SQLXML 4.0 でのデータを変更するアップデート グラムの使用 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -29,13 +29,13 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 09ddba31de38f515cf6810d455d4d2264fb6ab97
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7a6e29fdb90e0e0eee35d6b072e25b1ffc6451e1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047310"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545552"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0 での、アップデートグラムを使用したデータ変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

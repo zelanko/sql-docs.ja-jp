@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_tasks と組み合わせます (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_tasks と組み合わせます (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,22 +23,23 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b800dc110baa7279edb2ce788befb433b7afd77a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 213dc89ebc9bbd398813440e1c965bbce2fb8c28
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548702"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  インスタンスでアクティブになっているタスクごとに 1 つの行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  インスタンスでアクティブになっているタスクごとに 1 行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_tasks**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_tasks**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|オブジェクトのメモリ アドレス。|  
 |**task_state**|**nvarchar(60)**|タスクの状態。 これは、次のいずれかを指定できます。<br /><br /> PENDING: ワーカー スレッドを待機しています。<br /><br /> RUNNABLE: 実行可能ですが、クォンタムの受信を待機しています。<br /><br /> RUNNING: スケジューラで現在実行中です。<br /><br /> SUSPENDED: ワーカーがありますが、イベントを待機しています。<br /><br /> DONE: 完了しました。<br /><br /> SPINLOOP: スピンロックで停止しています。|  
@@ -46,24 +47,24 @@ ms.lasthandoff: 05/23/2018
 |**pending_io_count**|**int**|タスクによって実行された物理 I/O の数。|  
 |**pending_io_byte_count**|**bigint**|タスクによって実行された I/O の総バイト数。|  
 |**pending_io_byte_average**|**int**|タスクによって実行された I/O の平均バイト数。|  
-|**scheduler_id**|**int**|親スケジューラの ID。 タスクのスケジューラ情報に対するハンドルです。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)です。|  
+|**scheduler_id**|**int**|親スケジューラの ID。 タスクのスケジューラ情報に対するハンドルです。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)します。|  
 |**session_id**|**smallint**|タスクに関連付けられているセッションの ID。|  
 |**exec_context_id**|**int**|タスクに関連付けられている実行コンテキスト ID。|  
-|**request_id**|**int**|タスクの要求の ID。 詳細については、次を参照してください。 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)です。|  
-|**worker_address**|**varbinary(8)**|タスクを実行しているワーカーのメモリ アドレス。<br /><br /> NULL = タスクがワーカーの実行待ちとなっているか、完了したばかりであることを表します。<br /><br /> 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)です。|  
-|**host_address**|**varbinary(8)**|ホストのメモリ アドレス。<br /><br /> 0 = ホストがタスクの作成に使用されなかったことを表します。 このタスクの作成に使用されたホストを特定する場合に役立ちます。<br /><br /> 詳細については、次を参照してください。 [sys.dm_os_hosts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)です。|  
+|**request_id**|**int**|タスクの要求の ID。 詳細については、次を参照してください。 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)します。|  
+|**worker_address**|**varbinary(8)**|タスクを実行しているワーカーのメモリ アドレス。<br /><br /> NULL = タスクがワーカーの実行待ちとなっているか、完了したばかりであることを表します。<br /><br /> 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)します。|  
+|**host_address**|**varbinary(8)**|ホストのメモリ アドレス。<br /><br /> 0 = ホストがタスクの作成に使用されなかったことを表します。 このタスクの作成に使用されたホストを特定する場合に役立ちます。<br /><br /> 詳細については、次を参照してください。 [sys.dm_os_hosts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)します。|  
 |**parent_task_address**|**varbinary(8)**|オブジェクトの親であるタスクのメモリ アドレス。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
 
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. 並列要求を監視する  
- 並列で実行される要求の場合の同じ組み合わせに対して複数の行が表示されます (\<**session_id**>、 \< **request_id**>)。 検索する次のクエリを使用して、 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)のすべてのアクティブな要求です。  
+ 並列で実行される要求の場合の同じ組み合わせに対して複数の行が表示されます (\<**session_id**>、 \< **request_id**>)。 検索する次のクエリを使用して、 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)のすべてのアクティブな要求。  
   
 > [!NOTE]  
 >  A **request_id**セッション内で一意です。  

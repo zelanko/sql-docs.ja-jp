@@ -1,5 +1,5 @@
 ---
-title: ドメイン (TRANSACT-SQL) |Microsoft ドキュメント
+title: ドメイン (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c12449f39c5c114907163b1c593ed6389a91c41b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10100f54381573bfc3000eb7c31e108aee9829ab
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236154"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554042"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在のデータベースの現在のユーザーがアクセスできる別名データ型ごとに 1 行のデータを返します。  
   
- これらのビューから情報を取得するには、完全修飾の名前を指定 **INFORMATION_SCHEMA. * * * view_name*です。  
+ これらのビューから情報を取得するには、完全修飾名を指定 **INFORMATION_SCHEMA. * * * view_name*します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|別名データ型が存在するデータベース。|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|別名データ型を含むスキーマの名前。<br /><br /> **\*\* 重要な\* \*** データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|別名データ型を含むスキーマの名前。<br /><br /> **\*\* 重要な\* \* **データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
 |**ドメイン名**|**sysname**|別名データ型。|  
 |**DATA_TYPE**|**sysname**|システム提供のデータ型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリ データ、文字データ、またはテキスト/イメージ データの最大長 (文字単位)。<br /><br /> 場合は-1 **xml**と大きな値型のデータ。 それ以外の場合は NULL が返されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
@@ -48,14 +48,14 @@ ms.locfileid: "33236154"
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|常に NULL が返されます。|  
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|常に NULL が返されます。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|列が文字データの場合は、並べ替え順序の一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
-|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|返します**マスター**です。 列が文字データの場合、文字セットが、配置されているデータベースを示すこのまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|返します**マスター**します。 列が文字データの場合、文字セットが置かれているデータベースを示しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|常に NULL が返されます。|  
 |**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|この列が文字データの場合、文字セットの一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION**|**tinyint**|概数データ、真数データ、整数データ、または通貨データの有効桁数。 それ以外の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|概数データ、真数データ、整数データ、または通貨データの有効桁数の基数。 それ以外の場合は NULL が返されます。|  
 |**NUMERIC_SCALE**|**tinyint**|概数データ、真数データ、整数データ、または通貨データの小数点以下桁数。 それ以外の場合は NULL が返されます。|  
 |**DATETIME_PRECISION**|**smallint**|サブタイプ コード**datetime**と ISO**間隔**データ型。 その他のデータ型の場合は、NULL が返されます。|  
-|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|定義の実際のテキスト[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。|  
+|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|実際のテキストの定義の[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

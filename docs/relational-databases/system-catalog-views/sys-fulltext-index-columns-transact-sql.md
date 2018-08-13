@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fulltext_index_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,28 +26,28 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bb9a5d874765c10343106ed8d401193918d5ee6c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2cc52ce48482c4470e595d4515c38a5e6a9123e6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179878"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552602"
 ---
 # <a name="sysfulltextindexcolumns-transact-sql"></a>sys.fulltext_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   フルテキスト インデックスの一部となっている列ごとに 1 行のデータを格納します。    
  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|列が属するオブジェクトの ID。|  
 |**column_id**|**int**|フルテキスト インデックスの一部となっている列の ID。|  
 |**type_column_id**|**int**|特定の行にあるドキュメント関するユーザー指定ドキュメント ファイル拡張子 (".doc"、".xls" など) を格納する型列の ID。 型列は、フルテキスト インデックスの作成中にフィルター選択する必要のあるデータを含む列に対してのみ指定されます。 該当しない場合は NULL になります。 詳細については、「 [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)」を参照してください。|  
-|**language_id**|**int**|このフルテキスト列にインデックスを付けるために使用するワード ブレーカーの言語の LCID。<br /><br /> 0 = ニュートラル。<br /><br /> 詳細については、次を参照してください。 [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)です。|  
+|**language_id**|**int**|このフルテキスト列にインデックスを付けるために使用するワード ブレーカーの言語の LCID。<br /><br /> 0 = ニュートラル。<br /><br /> 詳細については、次を参照してください。 [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)します。|  
 |**statistical_semantics**|**int**|1 = この列では、フルテキスト インデックス作成に加えて、統計的セマンティクスが有効になっています。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  

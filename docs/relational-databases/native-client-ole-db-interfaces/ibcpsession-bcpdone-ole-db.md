@@ -19,13 +19,13 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6d3fb5a42eaeb722c0abcb0ae3d3a964532009bc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421501"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555042"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,17 +41,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>コメント  
- その他の操作を呼び出すことはできません、 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)インターフェイスを呼び出した後、 **BCPDone**メソッド。 唯一の可能性を呼び出すことです、 [ibcpsession::bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)新しい一括コピー操作を開始する方法。 これは、呼び出しに似ています、 [irowsetfastload::commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)メソッド。  
+ **BCPDone** メソッドを呼び出すと、それ以後は [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
  メソッドが成功しました。  
   
  E_UNEXPECTED  
- メソッドの呼び出しが予期されませんでした。 たとえば、 **BCPInit**メソッドは、このメソッドを呼び出す前に呼び出されませんでした。  
+ メソッドの呼び出しが予期されませんでした。 たとえば、このメソッドを呼び出す前に、**BCPInit** メソッドが呼び出されなかった場合などです。  
   
 ## <a name="example"></a>例  
- このサンプルは、使用する方法を示します、 **IBCPSession**インターフェイス。  
+ このサンプルでは、**IBCPSession** インターフェイスの使用方法を示します。  
   
  このサンプルを実行する前に、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] を実行する必要があります。  
   
@@ -69,7 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP を使用する次のコマンドで、このデータをテーブルに追加し直すことができます。  
   
- **bcp マスター.outfile.dat-n-t-s で fltest** *サーバー*  
+ **bcp master..fltest in outfile.dat -n -T -S** *サーバー*  
   
  このサンプルをコンパイルする際には、sqlncli11.lib を指定する必要があります。  
   

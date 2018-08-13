@@ -1,5 +1,5 @@
 ---
-title: データ ソースへの接続を確立する |Microsoft Docs
+title: データ ソースへの接続を確立する |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c11867c12a05656c74fa01ebc05a7a805bdac71
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 67fa382f2703f4bcb81a62622dd95ee5ef84952c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425971"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549792"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>データ ソースへの接続の確立
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "37425971"
 
   アクセスする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを呼び出すことによって、コンシューマーはデータ ソース オブジェクトのインスタンスを作成する必要があります最初、 **CoCreateInstance**メソッド。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー、クラス識別子は、CLSID_SQLNCLI10 です。 解決する SQLNCLI_CLSID というシンボルを使用することも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで参照する、sqlncli.h で使用されています。  
   
- データ ソース オブジェクトの公開、 **IDBProperties**インターフェイスで、コンシューマーを使用してサーバー名、データベース名、ユーザー ID、パスワードなどの基本的な認証情報を提供します。 **Idbproperties::setproperties**メソッドが呼び出され、これらのプロパティを設定します。  
+ データ ソース オブジェクトは、**IDBProperties** インターフェイスを公開します。コンシューマーは、このインターフェイスを使用して、サーバー名、データベース名、ユーザー ID、パスワードなどの基本的な認証情報を提供します。 **IDBProperties::SetProperties** メソッドが呼び出されて、これらのプロパティが設定されます。  
   
  同じコンピューター上で複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが実行されている場合、サーバー名を ServerName\InstanceName のように指定します。  
   
- データ ソース オブジェクトも公開、 **IDBInitialize**インターフェイス。 呼び出すことによって、データ ソースへの接続が確立されているプロパティを設定すると、した後、 **idbinitialize::initialize**メソッド。 以下に例を示します。  
+ データ ソース オブジェクトは、**IDBInitialize** インターフェイスも公開します。 プロパティを設定した後、**IDBInitialize::Initialize** メソッドを呼び出して、データ ソースへの接続を確立します。 以下に例を示します。  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
@@ -47,7 +47,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- この呼び出しを**CoCreateInstance** CLSID_SQLNCLI10 に関連付けられているクラスの 1 つのオブジェクトを作成します (CSLID は、データとオブジェクトの作成に使用されるコードに関連付けられている)。 IID_IDBInitialize は、インターフェイスの識別子への参照 (**IDBInitialize**) オブジェクトとの通信に使用します。  
+ この呼び出しを**CoCreateInstance** CLSID_SQLNCLI10 に関連付けられているクラスの 1 つのオブジェクトを作成します (CSLID は、データとオブジェクトの作成に使用されるコードに関連付けられている)。 IID_IDBInitialize は、オブジェクトとの通信に使われるインターフェイス (**IDBInitialize**) の ID への参照です。  
   
  次に、データ ソースへの接続を初期化し、確立する関数の例を示します。  
   

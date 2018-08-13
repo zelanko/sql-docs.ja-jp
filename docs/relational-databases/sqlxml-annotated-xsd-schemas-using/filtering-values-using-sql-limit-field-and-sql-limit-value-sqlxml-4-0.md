@@ -1,5 +1,5 @@
 ---
-title: Sql:limit の値を使用してフィルター処理、および -(SQLXML 4.0) |Microsoft Docs
+title: Sql:limit の値を使用してフィルター処理、および -(SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc72a5c28166d3eac2b1ee9200bb1c6549b818cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4353c4bf00407e4295087ce10691f827a85c02c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032582"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549762"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ ms.locfileid: "38032582"
   
 ## <a name="see-also"></a>参照  
  [float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar および nvarchar &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [nchar および nvarchar &#40;Transact SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [SQL Server Native Client をインストールします。](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [クエリでの XSD スキーマを使用して注釈が付けられた&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
