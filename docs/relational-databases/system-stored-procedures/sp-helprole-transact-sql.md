@@ -1,5 +1,5 @@
 ---
-title: sp_helprole (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helprole (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd4ea621669688065075a3ff3894bbce369a54a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10d457eaf25531790df63d4128a3d77d4ed30fb9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250274"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538402"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,16 +53,16 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|現在のデータベースに存在するロールの名前。|  
-|**RoleId**|**smallint**|ID **RoleName**です。|  
+|**RoleId**|**smallint**|ID **RoleName**します。|  
 |**IsAppRole**|**int**|0 = **RoleName**アプリケーション ロールではありません。<br /><br /> 1 = **RoleName**アプリケーション ロールです。|  
   
-## <a name="remarks"></a>解説  
- 表示するには、ロールに関連付けられているアクセス許可を使用して**sp_helprotect**です。 表示するには、データベース ロールのメンバーを使用して**sp_helprolemember**です。  
+## <a name="remarks"></a>コメント  
+ ロールに関連付けられているアクセス許可を表示する使用**sp_helprotect**します。 データベース ロールのメンバーを表示する使用**sp_helprolemember**します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

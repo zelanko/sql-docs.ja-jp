@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7bc0a49035eeddfa014c39b9011fef85d98ce4cf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084354"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400705"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux でのチュートリアル: Active Directory を使用して認証
 
@@ -206,6 +206,9 @@ AD 認証を構成する前にする必要があります。
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
+   > [!NOTE]
+   > Spn で、ドメインが大きい場合は特に、数分に反映されるまで、ドメインがかかる場合があります。 エラーが発生した場合"kvno: サーバー データベースに見つかりません Kerberos MSSQLSvc の資格情報を取得中に/\*\*\<ホスト コンピューターの完全修飾ドメイン名\>\*\*:\* \* \<tcp ポート\>\*\*\@CONTOSO.COM"、数分待ってから、もう一度やり直してください。
+
 2. Keytab ファイルを作成**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 前の手順で作成した AD ユーザーにします。 入力を求められたら、その AD アカウントのパスワードを入力します。
 
    ```bash
@@ -223,18 +226,54 @@ AD 認証を構成する前にする必要があります。
    > [!NOTE]
    > Ktutil ツールはないパスワードの検証、ので正しく入力してください。
 
-3. これにアクセスできる人物による`keytab`ファイル権限を借用できます[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメインで、ようにしてこのようなファイルへのアクセスを制限するだけ、`mssql`アカウントは、読み取りアクセス。
+3. Keytab にコンピューター アカウントを追加 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** します。 (UPN とも呼ばれます) コンピューターのアカウントは存在`/etc/krb5.keytab`形式で"\<ホスト名\>$\@\<realm.com\>"(例: sqlhost$\@CONTOSO.COM)。 これらのエントリからコピーします`/etc/krb5.keytab`に`mssql.keytab`します。
+
+   ```bash
+   sudo ktutil
+
+   # Read all entries from /etc/krb5.keytab
+   ktutil: rkt /etc/krb5.keytab
+
+   # List all entries
+   ktutil: list
+
+   # Delete all entries by their slot number which are not the UPN one at a
+   # time.
+   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
+   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
+   # 1's entry is deleted)
+   ktutil: delent <slot num>
+   ktutil: delent <slot num>
+   ...
+
+   # List all entries to ensure only UPN entries are left
+   ktutil: list
+
+   # When only UPN entries are left, append these values to mssql.keytab
+   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+
+   quit
+   ```
+
+4. これにアクセスできる人物による`keytab`ファイル権限を借用できます[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメインで、ようにしてこのようなファイルへのアクセスを制限するだけ、`mssql`アカウントは、読み取りアクセス。
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. 構成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]これを使用する`keytab`Kerberos 認証用のファイル。
+5. 構成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]これを使用する`keytab`Kerberos 認証用のファイル。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
    sudo systemctl restart mssql-server
+   ```
+
+6. 省略可能: は、パフォーマンスを向上させるために、ドメイン コント ローラーへの UDP 接続を無効にします。 多くの場合、UDP 接続は常に失敗構成オプションを設定するために、ドメイン コント ローラーに接続するときに`/etc/krb5.conf`UDP 呼び出しをスキップします。 編集`/etc/krb5.conf`し、次のオプションを設定します。
+
+   ```/etc/krb5.conf
+   [libdefaults]
+   udp_preference_limit=0
    ```
 
 ## <a id="createsqllogins"></a> TRANSACT-SQL での AD ベースのログインを作成します。
@@ -280,7 +319,7 @@ AD 認証を構成する前にする必要があります。
   * JDBC: [Kerberos を使用して統合 SQL Server の接続の認証](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC:[統合認証を使用](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[接続文字列の構文](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-  
+ 
 ## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、SQL Server on Linux での Active Directory 認証を設定する方法を説明しました。 学習したします。

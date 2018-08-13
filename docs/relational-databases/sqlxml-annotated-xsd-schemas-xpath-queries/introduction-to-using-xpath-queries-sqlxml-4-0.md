@@ -1,5 +1,5 @@
 ---
-title: XPath クエリ (SQLXML 4.0) の使用の概要 |Microsoft Docs
+title: XPath クエリ (SQLXML 4.0) の使用の概要 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e620b704f7678a9af8510e7b1d81321aec6ba061
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a5e973b710da9dd9619b59749dc1caf65209ed89
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982554"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561862"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

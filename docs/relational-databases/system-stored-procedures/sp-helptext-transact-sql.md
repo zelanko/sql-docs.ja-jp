@@ -1,5 +1,5 @@
 ---
-title: sp_helptext (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helptext (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3cc2628e0c689f41ff954ae9e0d916f79e65c06b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8b71a693eeca059cdca695e17b5c0cde623863fa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259732"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558872"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  ユーザー定義ルール、デフォルト、暗号化されていない状態の定義を表示[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ、ユーザー定義[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャの関数、トリガー、計算列、CHECK 制約、ビュー、またはシステムなどのシステム オブジェクトです。  
+  ユーザー定義ルール、既定では、暗号化されていない状態の定義を表示します[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ、ユーザー定義[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャの関数、トリガー、計算列、CHECK 制約、ビュー、またはシステムなどのシステム オブジェクトです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,27 +49,27 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  ユーザー定義のスキーマ スコープ オブジェクトの修飾名または修飾されていない名前です。 引用符が必要なのは、修飾されているオブジェクトを指定する場合のみです。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 オブジェクトは現在のデータベースに存在していなければなりません。 *名前*は**nvarchar (776)**、既定値はありません。  
   
  [  **@columnname =** ] **'***computed_column_name***'**  
- 定義情報を表示する計算列の名前です。 列を含むテーブルとして指定する必要があります*名前*です。 *column_name*は**sysname**、既定値はありません。  
+ 定義情報を表示する計算列の名前です。 列を含むテーブルとして指定する必要があります*名前*します。 *column_name*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**テキスト**|**nvarchar (255)**|オブジェクトの定義|  
   
-## <a name="remarks"></a>解説  
- sp_helptext は、複数の行でオブジェクトを作成するために使用される定義を表示します。 各行には、255 文字が含まれています、[!INCLUDE[tsql](../../includes/tsql-md.md)]定義します。 定義が存在する、**定義**内の列、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューです。  
+## <a name="remarks"></a>コメント  
+ sp_helptext は、複数の行でオブジェクトを作成するために使用される定義を表示します。 行ごとに 255 文字が含まれています、[!INCLUDE[tsql](../../includes/tsql-md.md)]定義します。 定義が存在する、**定義**内の列、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューです。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-displaying-the-definition-of-a-trigger"></a>A. トリガーの定義を表示する  
- 次の例は、トリガーの定義を表示`dEmployee`で、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
+ 次の例は、トリガーの定義を表示します。`dEmployee`で、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
   
 ```  
 USE AdventureWorks2012;  
@@ -79,7 +79,7 @@ GO
 ```  
   
 ### <a name="b-displaying-the-definition-of-a-computed-column"></a>B. 計算列の定義を表示する  
- 次の例は、計算列の定義を表示`TotalDue`上、`SalesOrderHeader`テーブルに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
+ 次の例は、計算列の定義を表示します。`TotalDue`上、`SalesOrderHeader`テーブルに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
   
 ```  
 USE AdventureWorks2012;  

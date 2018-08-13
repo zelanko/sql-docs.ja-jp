@@ -1,5 +1,5 @@
 ---
-title: sp_help (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6b3effbe023b79ded3115eac3e62503d7a820993
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 20d86aae268c704b72310a3215756627d0662eb8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263490"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550522"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  データベース オブジェクトに関する情報をレポート (任意のオブジェクトに一覧表示、 **sys.sysobjects**互換性ビュー)、ユーザー定義データ型、またはデータ型。  
+  データベース オブジェクトに関する情報をレポート (で表示されている任意のオブジェクト、 **sys.sysobjects**互換性ビュー)、ユーザー定義データ型、またはデータ型。  
   
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,7 +47,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="arguments"></a>引数  
  [  **@objname=**] **'***名前***'**  
- 任意のオブジェクトの名前が、 **sysobjects**にすべてのユーザー定義データを入力または、 **systypes**テーブル。 *名前*は**nvarchar (** 776 **)**、既定値は NULL です。 データベース名は入力できません。  'Person.AddressType' や [Person.AddressType] など、2 つまたは 3 つの部分名を区切る必要があります。   
+ 任意のオブジェクトの名前は、 **sysobjects**に任意のユーザー定義データ型、または、 **systypes**テーブル。 *名前*は**nvarchar (** 776 **)**、既定値は NULL です。 データベース名は入力できません。  'Person.AddressType' や [Person.AddressType] など、2 つまたは 3 つの部分名を区切る必要があります。   
    
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -56,59 +56,59 @@ sp_help [ [ @objname = ] 'name' ]
 ## <a name="result-sets"></a>結果セット  
  返される結果セットが異なるかどうか*名前*を指定した場合とはどのようなデータベース オブジェクトを指定します。  
   
-1.  場合**sp_help**が実行される引数なしで、現在のデータベース内に存在するすべての型のオブジェクトの概要情報が返されます。  
+1.  場合**sp_help**が実行される、引数なしで、現在のデータベース内に存在するすべての型のオブジェクトの概要情報が返されます。  
   
-    |列名|データ型|Description|  
+    |列名|データ型|説明|  
     |-----------------|---------------|-----------------|  
     |**名前**|**nvarchar(** 128 **)**|オブジェクト名です。|  
-    |**所有者**|**nvarchar(** 128 **)**|オブジェクトの所有者です (これは、オブジェクトを所有するデータベース プリンシパルです。 既定値は、オブジェクトを含むスキーマの所有者です)。|  
-    |**object_type**|**nvarchar (** 31 **)**|オブジェクトの種類|  
+    |**[所有者]**|**nvarchar(** 128 **)**|オブジェクトの所有者です (これは、オブジェクトを所有するデータベース プリンシパルです。 既定値は、オブジェクトを含むスキーマの所有者です)。|  
+    |**Object_type**|**nvarchar (** 31 **)**|オブジェクトの種類|  
   
 2.  場合*名前*は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型またはユーザー定義データ型、 **sp_help**この結果セットを返します。  
   
-    |列名|データ型|Description|  
+    |列名|データ型|説明|  
     |-----------------|---------------|-----------------|  
-    |**type_name**|**nvarchar(** 128 **)**|データ型の名前です。|  
+    |**Type_name**|**nvarchar(** 128 **)**|データ型の名前です。|  
     |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型名。|  
-    |**長さ**|**smallint**|データ型の物理バイト数です。|  
-    |**Prec**|**int**|有効桁数 (総桁数) です。|  
+    |**Length**|**smallint**|データ型の物理バイト数です。|  
+    |**prec**|**int**|有効桁数 (総桁数) です。|  
     |**Scale**|**int**|小数点の右側にある数字の数。|  
-    |**[可]**|**varchar (** 35 **)**|NULL 値を許すかどうかを示します。この値は Yes または No です。|  
-    |**default_name**|**nvarchar(** 128 **)**|このデータ型にバインドされた既定値の名前です。<br /><br /> NULL = 既定値がバインドされていません。|  
-    |**rule_name**|**nvarchar(** 128 **)**|このデータ型にバインドされたルールの名前です。<br /><br /> NULL = 既定値がバインドされていません。|  
+    |**NULL 値の使用**|**varchar (** 35 **)**|NULL 値を許すかどうかを示します。この値は Yes または No です。|  
+    |**Default_name**|**nvarchar(** 128 **)**|このデータ型にバインドされた既定値の名前です。<br /><br /> NULL = 既定値がバインドされていません。|  
+    |**規則の名前**|**nvarchar(** 128 **)**|このデータ型にバインドされたルールの名前です。<br /><br /> NULL = 既定値がバインドされていません。|  
     |**[照合順序]**|**sysname**|データ型の照合順序です。 データ型が文字型以外の場合は、NULL です。|  
   
-3.  場合*名前*以外のデータ型では、データベース オブジェクトである**sp_help**設定でも追加の結果セットを指定したオブジェクトの型に基づくこの結果を返します。  
+3.  場合*名前*以外のデータ型では、任意のデータベース オブジェクトは、 **sp_help**この結果に指定したオブジェクトの種類に基づいて、設定済みでも追加の結果セットを返します。  
   
-    |列名|データ型|Description|  
+    |列名|データ型|説明|  
     |-----------------|---------------|-----------------|  
     |**名前**|**nvarchar(** 128 **)**|テーブル名|  
-    |**所有者**|**nvarchar(** 128 **)**|テーブルの所有者|  
+    |**[所有者]**|**nvarchar(** 128 **)**|テーブルの所有者|  
     |**型**|**nvarchar (** 31 **)**|テーブルの種類です。|  
     |**Created_datetime**|**datetime**|テーブルの作成日です。|  
   
-     指定すると、データベース オブジェクトによって**sp_help**の結果セットを返します。  
+     指定すると、データベース オブジェクトによって**sp_help**追加の結果セットが返されます。  
   
-     場合*名前*がシステム テーブル、ユーザー テーブルまたはビュー、 **sp_help**次の結果セットを返します。 ただし、ビューに対しては、データ ファイルがファイル グループ内のどこに配置されているかを表す結果セットは返されません。  
+     場合*名前*がシステム テーブル、ユーザー テーブルまたはビュー、 **sp_help**次の結果セットが返されます。 ただし、ビューに対しては、データ ファイルがファイル グループ内のどこに配置されているかを表す結果セットは返されません。  
   
     -   列オブジェクトに関して次の結果セットが返されます。  
   
-        |列名|データ型|Description|  
+        |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
-        |**column_name**|**nvarchar(** 128 **)**|列名|  
+        |**Column_name**|**nvarchar(** 128 **)**|列名|  
         |**型**|**nvarchar(** 128 **)**|列のデータ型です。|  
         |**計算**|**varchar (** 35 **)**|計算列かどうかを示します。この値は Yes または No です。|  
-        |**長さ**|**int**|列のバイト数です。<br /><br /> 注: 列のデータ型が大きな値の型 (**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**)、値は-1 として表示されます。|  
-        |**Prec**|**char (** 5 **)**|列の有効桁数です。|  
+        |**Length**|**int**|列のバイト数です。<br /><br /> 注: 列のデータ型が大きな値の型 (**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**)、値は-1 として表示されます。|  
+        |**prec**|**char (** 5 **)**|列の有効桁数。|  
         |**Scale**|**char (** 5 **)**|列の小数点以下桁数です。|  
-        |**[可]**|**varchar (** 35 **)**|列内で NULL 値を許すかどうかを示します。この値は Yes または No です。|  
+        |**NULL 値の使用**|**varchar (** 35 **)**|列内で NULL 値を許すかどうかを示します。この値は Yes または No です。|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|後続の空白を切り捨てます。 Yes または No を返します。|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|これは旧バージョンとの互換性のためにだけ用意されています。|  
         |**[照合順序]**|**sysname**|列の照合順序です。 文字型以外の場合は NULL です。|  
   
     -   ID 列に関して次の結果セットが返されます。  
   
-        |列名|データ型|Description|  
+        |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**Identity**|**nvarchar(** 128 **)**|ID として宣言されている列名です。|  
         |**シード**|**numeric**|ID 列の開始値です。|  
@@ -117,27 +117,27 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   列に関して次の結果セットが返されます。  
   
-        |列名|データ型|Description|  
+        |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|一意なグローバル識別子列の名前です。|  
   
     -   ファイル グループに関して次の結果セットが返されます。  
   
-        |列名|データ型|Description|  
+        |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|データが属いるファイルグループ (プライマリ、セカンダリ、またはトランザクション ログ)。|  
   
     -   インデックスに関して次の結果セットが返されます。  
   
-        |列名|データ型|Description|  
+        |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|インデックスの名前。|  
-        |**index_description**|**varchar (** 210 **)**|インデックスの説明です。|  
+        |**Index_description**|**varchar (** 210 **)**|インデックスの説明です。|  
         |**index_keys**|**nvarchar (** 2078 **)**|インデックス作成対象の列名です。 xVelocity メモリ最適化列ストア インデックスに対して NULL を返します。|  
   
     -   制約に関して次の結果セットが返されます。  
   
-        |列名|データ型|Description|  
+        |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar (** 146 **)**|制約の種類です。|  
         |**constraint_name**|**nvarchar(** 128 **)**|制約の名前です。|  
@@ -149,30 +149,30 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   参照元のオブジェクトに関して次の結果セットが返されます。  
   
-        |列名|データ型|Description|  
+        |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**によって参照されるテーブル**|**nvarchar (** 516 **)**|テーブルを参照するその他のデータベース オブジェクトを示します。|  
   
     -   ストアド プロシージャ、関数、または拡張ストアド プロシージャに関して次の結果セットが返されます。  
   
-        |列名|データ型|Description|  
+        |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
-        |**parameter_name**|**nvarchar(** 128 **)**|ストアド プロシージャ パラメーター名です。|  
+        |**Parameter_name**|**nvarchar(** 128 **)**|ストアド プロシージャ パラメーター名です。|  
         |**型**|**nvarchar(** 128 **)**|ストアド プロシージャ パラメーターのデータ型です。|  
-        |**長さ**|**smallint**|最大物理記憶容量 (バイト数) です。|  
-        |**Prec**|**int**|有効桁数または総桁数です。|  
+        |**Length**|**smallint**|最大物理記憶容量 (バイト数) です。|  
+        |**prec**|**int**|桁数または有効桁数の合計数。|  
         |**Scale**|**int**|小数点より右側の桁数です。|  
         |**Param_order**|**smallint**|パラメーターの順番です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Sp_help**プロシージャは、現在のデータベースのみでオブジェクトを検索します。  
   
- ときに*名前*が指定されていない**sp_help**オブジェクト名、所有者、およびオブジェクトの種類、現在のデータベース内のすべてのオブジェクトを表示します。 **sp_helptrigger**トリガーに関する情報を提供します。  
+ ときに*名前*が指定されていない**sp_help**名、所有者、および現在のデータベース内のすべてのオブジェクトのオブジェクトの種類のオブジェクトを表示します。 **sp_helptrigger**トリガーに関する情報を提供します。  
   
- **sp_help**公開並べ替え可能なインデックス列だけです。 したがって、XML インデックスまたは空間インデックスに関する情報公開されません。  
+ **sp_help**は順序付け可能なインデックス列だけを公開します。 したがって、これは公開されません XML インデックスまたは空間インデックスに関する情報。  
   
-## <a name="permissions"></a>権限  
- ロール **public** のメンバーシップが必要です。 ユーザーに対する権限が必要に少なくとも 1 つ*objname*です。 列の制約キー、既定値、またはルールを表示するには、テーブルに対する VIEW DEFINITION 権限が必要です。  
+## <a name="permissions"></a>アクセス許可  
+ ロール **public** のメンバーシップが必要です。 ユーザーに対する権限が必要に少なくとも 1 つ*objname*します。 列の制約キー、既定値、またはルールを表示するには、テーブルに対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -200,7 +200,7 @@ GO
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpserver & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

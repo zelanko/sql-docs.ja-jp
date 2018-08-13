@@ -1,5 +1,5 @@
 ---
-title: sp_helpconstraint (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpconstraint (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db7c4131c564dad86abe569862b364fbcc6c7288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d2b4e51dc08ba897145d689d5ea6a918e3e7afb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242259"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559452"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,18 +50,18 @@ sp_helpconstraint [ @objname = ] 'table'
  制約情報が返されるテーブルの名前です。 指定したテーブルは現在のデータベースに対してローカルである必要があります。 *テーブル*は**nvarchar (776)**、既定値はありません。  
   
  [  **@nomsg=**] **'***no_message***'**  
- テーブル名を出力する省略可能なパラメーターです。 *no_message*は**varchar (5)**、既定値は**msg**です。**nomsg**出力を抑制します。  
+ テーブル名を出力する省略可能なパラメーターです。 *no_message*は**varchar (5)**、既定値は**msg**します。**nomsg**印刷を抑制します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **sp_helpconstraint**主キーに参加している場合は、降順のインデックス付き列を表示します。 降順のインデックス列は結果セットに表示され、列名の後にマイナス記号 (-) が付けられます。 既定の昇順のインデックス列の場合は、その名前だけが表示されます。  
+ **sp_helpconstraint**これには、主キーに参加している場合は、降順のインデックス付き列を表示します。 降順のインデックス列は結果セットに表示され、列名の後にマイナス記号 (-) が付けられます。 既定の昇順のインデックス列の場合は、その名前だけが表示されます。  
   
-## <a name="remarks"></a>解説  
- 実行する **sp_help * * * テーブル*指定されたテーブルに関するすべての情報をレポートします。 制約情報だけを表示する**sp_helpconstraint**です。  
+## <a name="remarks"></a>コメント  
+ 実行 **sp_help * * * テーブル*指定されたテーブルに関するすべての情報を報告します。 制約情報だけを表示する**sp_helpconstraint**します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

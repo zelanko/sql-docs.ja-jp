@@ -1,5 +1,5 @@
 ---
-title: sp_helpstats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpstats (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eda430dedf39538c27f85d0ea11ca59bbfdc5e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 42d35f6890a5bfc686274510ee7ed4328e2860c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251638"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547562"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpstats[ @objname = ] 'object_name'
  統計情報の提供元となるテーブルを指定します。 *object_name*は**nvarchar (520)** null にすることはできません。 1 つまたは 2 つの部分で構成される名前を指定できます。  
   
  [  **@results=**] **'***値***'**  
- 提供する情報の範囲を指定します。 有効なエントリは**すべて**と**STATS**です。 **すべて**すべてのインデックスとも以外作例された統計がある列の統計情報を一覧表示**STATS**インデックスに関連付けられていない統計のみを表示します。 *値*は**nvarchar (5)** 既定値は STATS です。  
+ 提供する情報の範囲を指定します。 有効なエントリは**すべて**と**STATS**します。 **すべて**すべてのインデックスとも; 作例された統計がある列の統計情報を一覧表示されます。**STATS**インデックスに関連付けられていない統計のみを表示します。 *値*は**nvarchar (5)** 既定値は STATS です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -61,19 +61,19 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>結果セット  
  次の表では、結果セットの列について説明します。  
   
-|列名|Description|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**statistics_name**|統計の名前。 返します**sysname** null にすることはできません。|  
 |**statistics_keys**|統計の基準となるキー。 返します**nvarchar (2078)** null にすることはできません。|  
   
-## <a name="remarks"></a>解説  
- 特定のインデックスまたは統計に関する詳細な統計情報を表示するには、DBCC SHOW_STATISTICS を使用します。 詳細については、次を参照してください。 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)と[sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)です。  
+## <a name="remarks"></a>コメント  
+ 特定のインデックスまたは統計に関する詳細な統計情報を表示するには、DBCC SHOW_STATISTICS を使用します。 詳細については、次を参照してください。 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)と[sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`sp_createstats` を実行し、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のすべてのユーザー テーブルを対象にして、条件を満たすすべての列に関する統計を 1 列ずつ作成します。 その後、`sp_helpstats`で作成された結果統計を検索するために実行されて、`Customer`テーブル。  
+ 次の例では、`sp_createstats` を実行し、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のすべてのユーザー テーブルを対象にして、条件を満たすすべての列に関する統計を 1 列ずつ作成します。 次に、`sp_helpstats`で作成された結果統計を検索するために実行、`Customer`テーブル。  
   
 ```  
 USE AdventureWorks2012;  

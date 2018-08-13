@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepartition (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropmergepartition (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 890a265b51b5048f135401ac6e80fc7066bc5c24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1ca741c2fa97266d7237aabad000a2fd0c803cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990347"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539562"
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,19 +52,19 @@ sp_dropmergepartition [ @publication = ] 'publication'
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [ **@suser_sname**=] **'***suser_sname***'**  
- 値は、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数、パーティションを定義するために使用します。 *suser_sname*は**sysname**、既定値はありません。  
+ 値である、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数は、パーティションの定義に使用します。 *suser_sname*は**sysname**、既定値はありません。  
   
  [ **@host_name** =] **'***host_name***'**  
- 値は、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数、パーティションを定義するために使用します。 *host_name*は**sysname**、既定値はありません。  
+ 値である、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数は、パーティションの定義に使用します。 *host_name*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropmergepartition**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergepartition**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergepartition**します。  
   
 ## <a name="see-also"></a>参照  
  [パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)  

@@ -1,5 +1,5 @@
 ---
-title: ブール値述語を指定する XPath クエリ (SQLXML 4.0) |Microsoft ドキュメント
+title: XPath クエリ (SQLXML 4.0) でのブール値述語の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,17 +23,17 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aad334864e5b0aa26fa4d7e1a8e9a0e3ae4aff0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 44bb23ca6b42dbeb016c91baff519833d1180e74
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972867"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555502"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath クエリでのブール値述語の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下の例では、XPath クエリにブール値述語を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。[サンプル注釈付き XSD スキーマを XPath の例 & #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  以下の例では、XPath クエリにブール値述語を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -44,7 +44,7 @@ ms.locfileid: "32972867"
 /child::Customer[attribute::CustomerID="1"]/child::Order[attribute::OrderID="Ord-43860"]  
 ```  
   
- ショートカットを`attribute`軸 (@)、指定できるためと、`child`軸は、既定値、クエリから省略することができます。  
+ ショートカット、`attribute`軸 (@) を指定できますので、`child`軸は既定のクエリから省略できます。  
   
 ```  
 /Customer[@CustomerID="1"]/Order[@SalesOrderID="Ord-43860"]  
@@ -52,7 +52,7 @@ ms.locfileid: "32972867"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (BooleanValuedPredicatesA.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "32972867"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
      結果を次に示します。  
   
@@ -96,21 +96,21 @@ ms.locfileid: "32972867"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 連続する述語を入れ子で指定する  
- 次のクエリでは、述語を連続して使用しています。 クエリでは、すべてを返します、 **\<顧客 >** 両方がある、コンテキスト ノードの子要素、 **SalesPersonID** 277 の値を持つ属性と**TerritoryID**3 の値を持つ属性。  
+ 次のクエリでは、述語を連続して使用しています。 クエリでは、すべてを返します、 **\<顧客 >** 両方があるコンテキスト ノードの子要素を**SalesPersonID** 277 の値を持つ属性と**TerritoryID**属性値は 3 です。  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- クエリを返します、 **\<顧客 >** を述語で指定された両方の条件を満たす要素。  
+ クエリが返す、 **\<顧客 >** を述語で指定された両方の条件を満たす要素。  
   
- ショートカット、**属性**軸 (@)、指定できるためと、**子**軸は、既定値、クエリから省略することができます。  
+ ショートカット、**属性**軸 (@) を指定できますので、**子**軸は既定のクエリから省略できます。  
   
 ```  
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 次の XPath クエリでは、述語を入れ子にして使用しています。 クエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素を含む**\<順序 >** に少なくとも 1 つの子要素 **\<順序 >** を持つ要素を**SalesPersonID**属性の値は 2 です。  
+ 次の XPath クエリでは、述語を入れ子にして使用しています。 クエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素が含まれる**\<順序 >** に少なくとも 1 つの子要素 **\<順序 >** を持つ要素を**SalesPersonID**属性 2 の値。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -118,7 +118,7 @@ ms.locfileid: "32972867"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (nestedSuccessive.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "32972867"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  次は結果の一部です。  
   
@@ -173,13 +173,13 @@ ms.locfileid: "32972867"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 最上位の述語を指定する  
- 次のクエリを返します、 **\<顧客 >** がコンテキスト ノードの子要素ノード**\<順序 >** 子要素です。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
+ 次のクエリを返します、 **\<顧客 >** を持つコンテキスト ノードの子の要素ノード**\<順序 >** 子要素。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
   
 ```  
 /child::Customer[child::Order]  
 ```  
   
- **子**軸は、既定値です。 そのため、クエリは、として指定できます。  
+ **子**軸は既定値。 そのため、クエリは、として指定できます。  
   
 ```  
 /Customer[Order]  
@@ -187,7 +187,7 @@ ms.locfileid: "32972867"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (TopLevelPredicate.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "32972867"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  結果の一部を次に示します。  
   

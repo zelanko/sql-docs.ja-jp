@@ -1,5 +1,5 @@
 ---
-title: sp_helptrigger (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helptrigger (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255090"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566236"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ sp_helptrigger [ @tabname = ] 'table'
  トリガー情報を返す現在のデータベース内にあるテーブルの名前を指定します。 *テーブル*は**nvarchar (776)**、既定値はありません。  
   
  [ **@triggertype=** ] **'***type***'**  
- 情報を返す DML トリガーの種類を指定します。 *型*は**char (6)**、既定値は NULL、これらの値のいずれかを指定できます。  
+ 情報を返す DML トリガーの種類を指定します。 *型*は**char (6)**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**DELETE**|DELETE トリガー情報を返します。|  
 |**INSERT**|INSERT トリガー情報を返します。|  
@@ -64,7 +64,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>結果セット  
  次の表は、結果セットに表示される情報です。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|トリガーの名前。|  
 |**trigger_owner**|**sysname**|トリガーが定義されたテーブルの所有者の名前。|  
@@ -75,11 +75,11 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsteadof**|**int**|1 = INSTEAD OF トリガー。<br /><br /> 0 = INSTEAD OF トリガー以外。|  
 |**trigger_schema**|**sysname**|トリガーが属するスキーマの名前。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  必要があります[Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)テーブルに対する権限。  
   
 ## <a name="examples"></a>使用例  
- 次の例では実行`sp_helptrigger`でトリガーに関する情報を生成するために、`Person.Person`テーブル。  
+ 次の例では実行`sp_helptrigger`のトリガーに関する情報を生成するために、`Person.Person`テーブル。  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: sp_describe_parameter_encryption (TRANSACT-SQL) |Microsoft Docs
+title: sp_describe_parameter_encryption (TRANSACT-SQL) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7593c3ba25b97b97d3191a10f5d4506fbaa2a494
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085474"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542942"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

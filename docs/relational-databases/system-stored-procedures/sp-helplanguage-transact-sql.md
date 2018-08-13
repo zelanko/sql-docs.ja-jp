@@ -1,5 +1,5 @@
 ---
-title: sp_helplanguage (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helplanguage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260435"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560632"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>引数  
  [  **@language=** ] **'***言語***'**  
- 情報を表示する代替言語の名前です。 *言語*は**sysname**、既定値は NULL です。 場合*言語*が指定すると、指定した言語に関する情報が返されます。 言語が指定されていない場合のすべての言語に関する情報、 **sys.syslanguages**互換性ビューが返されます。  
+ 情報を表示する代替言語の名前です。 *言語*は**sysname**、既定値は NULL です。 場合*言語*が指定すると、指定した言語に関する情報が返されます。 言語が指定されていない場合は、すべての言語については、 **sys.syslanguages**互換性ビューが返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|言語 ID 番号です。|  
 |**dateformat**|**nchar(3)**|日付の形式です。|  
@@ -68,13 +68,13 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**lcid**|**int**|この言語を使用する Windows のロケール ID です。|  
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージ グループ id。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-information-about-a-single-language"></a>A. 特定の言語に関する情報を返す  
- 次の例には、代替言語に関する情報が表示されます。`French`です。  
+ 次の例では、代替言語に関する情報を表示する`French`します。  
   
 ```  
 sp_helplanguage French;  

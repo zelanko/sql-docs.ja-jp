@@ -1,5 +1,5 @@
 ---
-title: CDATA セクションを使用して sql:use を作成する-cdata (SQLXML 4.0) |Microsoft ドキュメント
+title: CDATA セクションを使用して sql:use を作成する-cdata (SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f25e8b2e46cccbca7a77abe30bae219eea8e2b75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a74e0edc5ce936534053a0ff908c0248f5052fbc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970555"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561392"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata を使用した、CDATA セクションの作成 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,17 +38,17 @@ ms.locfileid: "32970555"
   
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースには、XML パーサーでマークアップ文字として扱われる文字が含まれる場合があります。たとえば、山かっこ (< および >)、"以下" を示す記号 (<=)、アンパサンド (&) などはマークアップ文字として扱われます。 この種類の特殊文字は、CDATA セクションで囲むことでマークアップ文字として扱われないようにできます。 CDATA セクション内の文字は、XML パーサーでプレーン テキストとして扱われます。  
   
- **Sql:use-cdata**注釈は、データがによって返されることを指定するために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CDATA セクションに含める必要があります (つまり、ことを示すかどうかを列から値をで指定された**sql:field** 、CDATA セクションで囲む必要があります)。 **Sql:use-cdata**データベース列にマップされる要素だけに注釈を指定することができます。  
+ **Sql:use-cdata**によって、データが返されることを指定する注釈を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CDATA セクションにラップする必要があります (つまり、ことを示すかどうかの列から値をで指定された**sql:field** CDATA セクションで囲む必要があります)。 **Sql:use の cdata**アノテーションをデータベース列にマップされる要素でのみ指定できます。  
   
- **Sql:use-cdata**注釈はブール値 (0 = false、1 = true)。 指定できる値は 0、1、true、false です。  
+ **Sql:use の cdata**アノテーションは、ブール値 (0 = false、1 = true)。 指定できる値は 0、1、true、false です。  
   
- この注釈は併用できません**sql:url-エンコード**id、IDREF、IDREFS、NMTOKEN、および NMTOKENS 属性型またはします。  
+ このアノテーションは使用できません**sql:url-エンコード**または id、IDREF、IDREFS、NMTOKEN、および NMTOKENS 属性型です。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 要素に対して sql:use-cdata を指定する  
- 次のスキーマで**sql:use-cdata**の 1 (True) に設定されている、  **\<AddressLine1 >** 内で、 **\<アドレス >** 要素。 この結果、データは CDATA セクション内に返されます。  
+ 次のスキーマに**sql:use-cdata**の 1 (True) に設定されて、  **\<AddressLine1 >** 内の**\<アドレス >** 要素です。 この結果、データは CDATA セクション内に返されます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -89,7 +89,7 @@ ms.locfileid: "32970555"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  これは、結果セットの一部です。  
   

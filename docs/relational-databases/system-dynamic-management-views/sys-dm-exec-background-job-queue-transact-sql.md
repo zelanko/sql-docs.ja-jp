@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_background_job_queue (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,21 +23,22 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1c65f1333733936c8192ec5a4012a3a918dd69b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6b04f500b1603df57eace3b2d58fb158bda3f945
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550542"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   非同期 (バックグラウンド) で実行するようスケジュール設定されたクエリ プロセッサ ジョブごとに 1 行のデータを返します。  
   
-> **注:** これから**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** または**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**、名前を使用して**sys.dm_pdw_nodes_exec_background_job_queue**です。  
+> **注:** これから**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** または**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**、名前を使用して、 **sys.dm_pdw_nodes_exec_background_job_queue**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**time_queued**|**datetime**|ジョブがキューに追加された時刻。|  
 |**job_id**|**int**|ジョブ識別子。|  
@@ -51,15 +52,15 @@ ms.lasthandoff: 05/23/2018
 |**retry_count**|**smallint**|ジョブがキューから取得され、リソース不足またはその他の理由で再挿入された回数。|  
 |**in_progress**|**smallint**|ジョブが実行を開始したかどうかを示します。<br /><br /> 1 = 開始<br /><br /> 0 = 待機中|  
 |**session_id**|**smallint**|セッション識別子。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限
+## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
-## <a name="remarks"></a>解説  
- このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。  
+## <a name="remarks"></a>コメント  
+ このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)します。  
   
  値**object_id1**を通じて**object_id4**ジョブ要求の種類によって異なります。 次の表は、それぞれのジョブの種類の列に関する説明です。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/23/2018
 |統計の非同期更新|テーブルまたはビュー ID|統計 ID|使用しない|使用しない|  
   
 ## <a name="examples"></a>使用例  
- 次の例では、アクティブな非同期ジョブの数を返しますのインスタンス内の各データベースのバック グラウンド キューに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ 次の例では、アクティブな非同期ジョブの数を返しますのインスタンス内の各データベースのバック グラウンド キューに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ```  
 SELECT DB_NAME(database_id) AS [Database], COUNT(*) AS [Active Async Jobs]  

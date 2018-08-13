@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproperty (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addextendedproperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -22,12 +22,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ebd317abcd9fec6ee6e116c0bbacc63bf547be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9f415c295a45e2505bfa30afb34b76dba1d423c5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555102"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,8 +90,8 @@ sp_addextendedproperty
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- 内のオブジェクトの拡張プロパティを指定するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースは、次の 3 つのレベルに分類されます。 0、1、および 2 です。 レベル 0 は、データベース スコープに含まれる最上位レベルのオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。  
+## <a name="remarks"></a>コメント  
+ 内のオブジェクトの拡張プロパティを指定するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース 3 つのレベルに分類されます。 0、1、および 2 です。 レベル 0 は、データベース スコープに含まれる最上位レベルのオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。  
   
  1 つのレベルにあるオブジェクトを参照する場合は、そのオブジェクトを所有または格納する上位レベルのオブジェクトの名前で修飾する必要があります。 たとえば、拡張プロパティをテーブル列 (レベル 2) に追加する場合、その列を含むテーブル名 (レベル 1) とそのテーブルを含むスキーマ (レベル 0) も指定する必要があります。  
   
@@ -98,15 +99,15 @@ sp_addextendedproperty
   
  拡張プロパティは、システム オブジェクト、ユーザー定義データベースのスコープ外のオブジェクト、または「引数」で有効な入力として示されないオブジェクトでは使用できません。  
   
- 拡張プロパティは、メモリ最適化テーブルでは使用できません。  
+ 拡張プロパティは、メモリ最適化テーブルでは許可されません。  
   
 ## <a name="replicating-extended-properties"></a>拡張プロパティのレプリケート  
- 拡張プロパティは、パブリッシャーとサブスクライバー間で初期同期を実行するときにのみレプリケートされます。 初期同期の完了後に拡張プロパティを追加または変更した場合、その変更はレプリケートされません。 データベース オブジェクトをレプリケートする方法の詳細については、次を参照してください。[公開データおよびデータベース オブジェクト](../../relational-databases/replication/publish/publish-data-and-database-objects.md)です。  
+ 拡張プロパティは、パブリッシャーとサブスクライバー間で初期同期を実行するときにのみレプリケートされます。 初期同期の完了後に拡張プロパティを追加または変更した場合、その変更はレプリケートされません。 データベース オブジェクトをレプリケートする方法の詳細については、次を参照してください。[発行データおよびデータベース オブジェクト](../../relational-databases/replication/publish/publish-data-and-database-objects.md)します。  
   
 ## <a name="schema-vs-user"></a>スキーマとユーザー  
- 名前解決にあいまいさが発生する可能性があるため、拡張プロパティをデータベース オブジェクトに適用するときに USER をレベル 0 の種類として指定することをお勧めしません。 たとえば、ユーザー Mary が 2 つのスキーマ (Mary と MySchema) を所有し、これらのスキーマの両方に MyTable という名前のテーブルがある場合を考えます。 Mary が拡張プロパティをテーブル MyTable に追加し、指定かどうか **@level0type = N'USER'**、  **@level0name = Mary**、拡張プロパティを適用するテーブルをオフにされていません。 旧バージョンとの互換性を維持するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では Mary という名前のスキーマに含まれているテーブルにプロパティが適用されます。  
+ 名前解決にあいまいさが発生する可能性があるため、拡張プロパティをデータベース オブジェクトに適用するときに USER をレベル 0 の種類として指定することをお勧めしません。 たとえば、ユーザー Mary が 2 つのスキーマ (Mary と MySchema) を所有し、これらのスキーマの両方に MyTable という名前のテーブルがある場合を考えます。 Mary が拡張プロパティをテーブル MyTable に追加しを指定するかどうか **@level0type = N'USER'**、  **@level0name = Mary**、拡張プロパティを適用するテーブルのチェック ボックスをオフにではなくなります。 旧バージョンとの互換性を維持するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では Mary という名前のスキーマに含まれているテーブルにプロパティが適用されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  固定サーバー ロール db_owner および db_ddladmin のメンバーは、任意のオブジェクトに拡張プロパティを追加できます。ただし、例外として、db_ddladmin はデータベース自体、ユーザー、またはロールにプロパティを追加できません。  
   
  ユーザーは、自身が所有するオブジェクトや、ALTER 権限または CONTROL 権限を持つオブジェクトの拡張プロパティを追加できます。  
