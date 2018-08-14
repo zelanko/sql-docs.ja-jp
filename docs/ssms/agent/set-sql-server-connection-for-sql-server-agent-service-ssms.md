@@ -41,7 +41,7 @@ ms.locfileid: "38980234"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **SQL Server エージェントの SQL Server 接続を設定するために使用するもの:**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "38980234"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]以降は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証がサポートされません。 このオプションは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を管理している場合にのみ使用できます。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
 #### <a name="Permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの機能を実行するには、 **の** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]固定サーバー ロールのメンバーであるアカウントの資格情報を使用するように構成する必要があります。 このアカウントには、次の Windows 権限が必要です。  

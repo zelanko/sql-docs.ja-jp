@@ -180,7 +180,7 @@ ms.locfileid: "38049010"
   
 ##  <a name="KnownIssues"></a> ウィザードのトラブルシューティング  
  **Stretch Database ウィザードにエラーが発生しました。**  
- Stretch Database がサーバー レベルでまだ有効になっていなく、システム管理者に有効にする権限がないウィザードを実行すると、ウィザードでエラーが発生します。 システム管理者にローカル サーバー インスタンスの Stretch Database を有効にするように依頼し、ウィザードを再度実行します。 詳細については、「 [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。  
+ Stretch Database がサーバー レベルでまだ有効になっていなく、システム管理者に有効にする権限がないウィザードを実行すると、ウィザードでエラーが発生します。 システム管理者にローカル サーバー インスタンスの Stretch Database を有効にするように依頼し、ウィザードを再度実行します。 詳細については、「 [前提条件: サーバーで Stretch Database を有効にするためのアクセス許可](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。  
   
 ## <a name="next-steps"></a>次の手順  
  Stretch Database の追加のテーブルを有効にします。 データの移行を監視し、ストレッチが有効なデータベースとテーブルを管理します。  
