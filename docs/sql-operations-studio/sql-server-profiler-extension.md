@@ -49,7 +49,7 @@ ms.locfileid: "39147025"
 2. 接続を確立した後に「 **Alt + P** Profiler を起動します。
 3. Profiler を起動する入力**Alt + s.** 拡張イベントの表示を開始できます。
     ![プロファイラーの拡張機能マネージャー](media/extensions/sql-server-profiler-extension/view-profiler.png)    
-1. Profiler を停止する次のように入力します**Alt + s.。** このホットキー表示が切り替わります。
+1. Profiler を停止する次のように入力します**Alt + s。** このホットキー表示が切り替わります。
 
 ## <a name="next-steps"></a>次のステップ
 
