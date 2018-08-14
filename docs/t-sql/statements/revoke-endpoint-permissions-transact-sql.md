@@ -1,4 +1,4 @@
----
+﻿---
 title: REVOKE (エンドポイントの権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
