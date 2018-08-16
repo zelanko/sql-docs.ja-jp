@@ -1,5 +1,5 @@
 ---
-title: リリース ノート - Microsoft ODBC Driver for SQL Server on Linux と macOS |Microsoft Docs
+title: リリース ノート - Linux および macOS 上の Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 658cfd6ea66be82e243131eec9699c65708c2e5f
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
-ms.translationtype: MTE75
+ms.openlocfilehash: 7395524fd185afa03a317e49400822ad459dbf55
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024238"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662274"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "39024238"
 
 **追加された機能**:
 
-Azure SQL Database と SQL Server のデータ分類
+Azure SQL Database と SQL Server の詳細については、データの分類を参照してください[データ分類](../data-classification.md)
 
 SQLBrowseConnect
 

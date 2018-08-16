@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f54fce498fb1782c09c8caa24c7459432115cec
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9df60193005f6a83d6894a0718ba473f6b868d69
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451586"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609721"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Unicode 文字データの文字列を指定します。 *character_string* は **sysname** 128 文字までに制限されます。 128 文字を超える文字を入力すると、NULL が返されます。  
   
  '*quote_character*'  
- 区切り記号として使用する 1 つの文字を指定します。 単一引用符を指定できます ( **'** )、左または右の角かっこ ( **[]** )、または二重引用符 ( **"** )。 *quote_character* を指定しない場合は、角かっこが使用されます。  
+ 区切り記号として使用する 1 つの文字を指定します。 単一引用符 ( **'** )、左または右の角かっこ ( **[]** )、二重引用符 ( **"** )、左または右のかっこ ( **()** )、大なりまたは小なり記号 ( **><** )、左または右の中かっこ ( **{}** )、またはバッククォート ( **\`** ) を指定できます。 使用できない文字が指定された場合は、NULL が返されます。 *quote_character* を指定しない場合は、角かっこが使用されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(258)**  

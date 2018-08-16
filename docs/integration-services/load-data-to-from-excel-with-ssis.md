@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 610bb894ca3cf2bc974f980c6879351d70cf6bee
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137931"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609812"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
@@ -30,7 +30,7 @@ ms.locfileid: "37137931"
 
 2.  必要な[ファイル](#files-you-need)。
 
-3.  Excel から、または Excel にデータを読み込むときに、提供する必要がある接続情報、および構成する必要がある設定。
+3.  SSIS を使用して Excel から、または Excel にデータを読み込むときに、提供する必要がある接続情報、および構成する必要がある設定。
     -   データ ソースとして [Excel を指定](#specify-excel)します。
     -   [Excel ファイル名とパス](#excel-file)を指定します。
     -   [Excel のバージョン](#excel-version)を選択します。
@@ -44,15 +44,15 @@ ms.locfileid: "37137931"
 
 ## <a name="tools"></a> 使用できるツール
 
-次のいずれかのツールを使って、Excel からデータをインポートしたり、Excel にデータをエクスポートしたりできます。
+SSIS で次のいずれかのツールを使って、Excel からデータをインポートしたり、Excel にデータをエクスポートしたりできます。
 
--   **SQL Server Integration Services (SSIS)**. Excel 接続マネージャーで、Excel ソースまたは Excel 変換先を使用する SSIS パッケージを作成します。 (この記事では、SSIS パッケージの設計方法は説明しません。)
+-   **SQL Server Integration Services (SSIS)**. Excel 接続マネージャーで、Excel ソースまたは Excel 変換先を使用する SSIS パッケージを作成します。 (この記事では、SSIS パッケージの作成方法は説明しません)。
 
 -   SSIS に組み込まれている **SQL Server インポートおよびエクスポート ウィザード**。 詳しくは、「[SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」および「[Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。
 
 ## <a name="files-you-need"></a> Excel に接続するために必要なファイルを取得する
 
-Excel からデータをインポートしたり、データを Excel にエクスポートするには、事前に Excel の接続コンポーネントをダウンロードする必要があります (まだインストールされていない場合)。 Excel の接続コンポーネントは、既定ではインストールされません。
+SSIS を使用して Excel からデータをインポートしたり、データを Excel にエクスポートするには、事前に Excel の接続コンポーネントをダウンロードする必要があります (まだインストールされていない場合)。 Excel の接続コンポーネントは、既定ではインストールされません。
 
 [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)で、Excel の接続コンポーネントの最新バージョンをダウンロードします。 以前のバージョンの Excel で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
 

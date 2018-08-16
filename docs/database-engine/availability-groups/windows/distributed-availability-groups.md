@@ -1,7 +1,7 @@
 ---
 title: 分散型可用性グループ (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 02f4cc65d9dd19a30904de9f1b76091fb4723c6d
+ms.sourcegitcommit: 0cda14b1151d9bce1253d96dea038c038484f07a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400715"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39616090"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "39400715"
 
 次の図では、それぞれが専用の WSFC クラスターに構成されている 2 つの可用性グループ (AG 1 および AG 2) にまたがる分散型可用性グループの概略を示します。 分散型可用性グループには、可用性グループごとに 2 つずつ、合計で 4 つのレプリカがあります。 可用性グループごとにレプリカの最大数までサポートできるため、分散型の可用性ではレプリカを最大合計 18 個まで所有することができます。
 
-<a name="fig1"></a>
-![分散型可用性グループの概要][1]
+
+![分散型可用性グループの概要](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
 分散型可用性グループでのデータ移動は、同期または非同期として構成できます。 ただし、分散型可用性グループでのデータの移動は、従来の可用性グループと若干異なります。 各可用性グループにはプライマリ レプリカがありますが、挿入、更新、削除を受け付けることができるのは、分散型可用性グループに参加しているデータベースの 1 つのコピーだけです。 次の図に示すように、AG 1 はプライマリ可用性グループです。 AG 1 のプライマリ レプリカは、AG 1 のセカンダリ レプリカと AG 2 のプライマリ レプリカの両方にトランザクションを送信します。 AG 2 のプライマリ レプリカは、*フォワーダー*とも呼ばれます。 フォワーダーは、分散型可用性グループのセカンダリ可用性グループのプライマリ レプリカです。 フォワーダーは、プライマリ可用性グループ内のプライマリ レプリカからトランザクションを受信し、それを独自の可用性グループ内のセカンダリ レプリカに転送します。  そしてフォワーダーが、更新された AG 2 のセカンダリ レプリカを保持します。 
 
-![分散型可用性グループとそのデータ移動][2]
+![分散型可用性グループとそのデータ移動](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
 AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)」を参照してください。
 
@@ -79,7 +79,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 分散型可用性グループには複数の可用性グループが含まれ、それぞれに独自の基になる WSFC クラスターがあり、分散型可用性グループは SQL Server 専用の構成です。  つまり、個々の可用性グループを含む WSFC クラスターは、Windows Server のメジャー バージョンが異なっていてもかまいません。 前のセクションで説明したように、SQL Server のメジャー バージョンは同じである必要があります。 次の図では AG 1 と AG 2 が分散型可用性グループに参加しており、[最初の図](#fig1)とほとんど同じですが、各 WSFC クラスターの Windows Server のバージョンは異なっています。
 
 
-![Windows Server のバージョンが異なる WSFC クラスターを含む分散型可用性グループ][3]
+![Windows Server のバージョンが異なる WSFC クラスターを含む分散型可用性グループ](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
 
 個々の WSFC クラスターとそれに対応する可用性グループは、従来の規則に従います。 つまり、ドメインに参加してもしなくてもかまいません (Windows Server 2016 以降)。 2 つの異なる可用性グループを 1 つの分散型可用性グループに結合するときは、4 つのシナリオがあります。
 
@@ -104,7 +104,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 従来の可用性グループではすべてのサーバーが同じ WSFC クラスターの一部である必要があり、複数のデータ センターを使うのが困難な場合があります。 次の図は、従来のマルチサイト可用性グループのアーキテクチャとデータ フローを示したものです。 1 つのプライマリ レプリカが、すべてのセカンダリ レプリカにトランザクションを送信しています。 この構成は、いくつかの点で分散型可用性グループよりも劣ります。 たとえば、Active Directory (該当する場合) や、WSFC クラスター内のクォーラムに対するミラーリング監視サーバーといったものを、実装する必要があります。 また、ノードの投票の変更など、WSFC クラスターの他の側面の考慮も必要になることがあります。
 
-![従来のマルチサイト可用性グループ][4]
+![従来のマルチサイト可用性グループ](./media/distributed-availability-group/dag-04-traditional-multi-site-ag.png)
 
 分散型可用性グループでは、複数のデータ センターにまたがる可用性グループに対して、より柔軟な配置シナリオが提供されます。 [ログ配布]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)のような機能が、ディザスター リカバリーなどのシナリオで過去に使われていた場合でも、分散型可用性グループを使うことができます。 ただし、ログ配布とは異なり、分散型可用性グループではトランザクションの適用を遅延することはできません。 つまり、データが正しく更新または削除されないヒューマン エラーが発生した場合、可用性グループまたは分散型可用性グループでは役に立ちません。
 
@@ -139,12 +139,12 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 つまり、1 つのプライマリ レプリカが、2 つの異なる分散型可用性グループに参加できます。 次の図では、AG 1 と AG 2 はどちらも分散型 AG 1 に参加しており、AG 2 と AG 3 は分散型 AG 2 に参加しています。 AG 2 のプライマリ レプリカ (フォワーダー) は、分散型 AG 1 のセカンダリ レプリカであると同時に、分散型 AG 2 のプライマリ レプリカでもあります。
 
-![分散型可用性グループでの読み取りのスケールアウト][5]
+![分散型可用性グループでの読み取りのスケールアウト](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
 次の図の AG 1 は、2 つの異なる分散型可用性グループ (分散型 AG 1 (AG 1 と AG2 で構成) および分散型 AG 2 (AG 1 と AG 3 で構成)) のプライマリ レプリカになっています。
 
 
-![分散型可用性グループを使った読み取りのスケールアウトのもう 1 つの例][6]
+![分散型可用性グループを使った読み取りのスケールアウトのもう 1 つの例]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
 
 
 上のどちらの例でも、3 つの可用性グループ全体で最大 27 個のレプリカを持つことができ、そのすべてを読み取り専用クエリに使うことができます。 
@@ -157,7 +157,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>分散型可用性グループのセカンダリ可用性グループを初期化する
 
-分散型可用性グループは、第 2 の可用性グループのプライマリ レプリカを初期化するための主要な方法として[自動シード処理]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)を使うように設計されています。 第 2 の可用性グループのプライマリ レプリカでの完全なデータベース復元は、次のようにすることで可能です。
+分散型可用性グループは、第 2 の可用性グループのプライマリ レプリカを初期化するための主要な方法として[自動シード処理](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)を使うように設計されています。 第 2 の可用性グループのプライマリ レプリカでの完全なデータベース復元は、次のようにすることで可能です。
 
 1. WITH NORECOVERY を指定してデータベース バックアップを復元します。
 2. 必要な場合は、適切なトランザクション ログ バックアップを WITH NORECOVERY で復元します。
@@ -168,18 +168,18 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 * 第 2 の可用性グループのプライマリ レプリカの `sys.dm_hadr_automatic_seeding` で示される出力では、`current_state` が FAILED、理由が "Seeding Check Message Timeout" と表示されます。
 
-* 第 2 の可用性グループのプライマリ レプリカの現在の SQL Server ログでは、シード処理が行われて、[LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) が同期されたと表示されます。
+* 第 2 の可用性グループのプライマリ レプリカの現在の SQL Server ログでは、シード処理が行われて、[LSN](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) が同期されたと表示されます。
 
 * 第 1 の可用性グループのプライマリ レプリカの `sys.dm_hadr_automatic_seeding` で示される出力では、current_state が COMPLETED と表示されます。 
 
 * 分散型可用性グループではシード処理の動作も異なります。 第 2 のレプリカでシード処理が開始するためには、レプリカで `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE` コマンドを実行する必要があります。 この条件は基になる可用性グループに参加しているすべてのセカンダリ レプリカにやはり当てはまりますが、第 2 の可用性グループのプライマリ レプリカは、分散型可用性グループに追加された後でシード処理が開始するために必要な適切なアクセス許可を既に持っています。 
 
-### <a name="view-distributed-availability-group-information"></a>分散型可用性グループの情報を表示する 
-    
-前に説明したように、分散型可用性グループは SQL Server のみの構成であり、基になる WSFC クラスターでは認識されません。 次の図の 2 つの異なる WSFC クラスター (CLUSTER_A と CLUSTER_B) は、それぞれが独自の可用性グループを持っています。 ここでは、CLUSTER_A の AG1 と CLUSTER_B の AG2 についてのみ説明します。 
+## <a name="monitor-distributed-availability-group-health"></a>分散型可用性グループの正常性を監視する
 
-<!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
-<a name="fig7"></a>
+分散型可用性グループは SQL Server のみの構成であり、基になる WSFC クラスターでは認識されません。 次の図の 2 つの異なる WSFC クラスター (CLUSTER_A と CLUSTER_B) は、それぞれが独自の可用性グループを持っています。 ここでは、CLUSTER_A の AG1 と CLUSTER_B の AG2 についてのみ説明します。 
+
+[PowerShell Get-ClusterGroup コマンドを使用する可用性グループが複数ある 2 つの WSFC クラスター](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+
 
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
@@ -205,65 +205,203 @@ Cluster Group                   JC                    Online
 
 分散型可用性グループの詳細情報は、SQL Server の特に可用性グループの動的管理ビューに表示されます。 現在のところ、分散型可用性グループについて SQL Server Management Studio に表示される情報は、可用性グループのプライマリ レプリカについてのみです。 以下の図のように、SQL Server Management Studio の [可用性グループ] フォルダーに分散型可用性グループが表示されます。 この図では、分散型可用性グループではなく、そのインスタンスでローカルの各可用性グループのプライマリ レプリカとして AG1 が表示されます。
 
-![分散型可用性グループの最初の WSFC クラスター上のプライマリ レプリカが表示された SQL Server Management Studio のビュー][8]
+![分散型可用性グループの最初の WSFC クラスター上のプライマリ レプリカが表示された SQL Server Management Studio のビュー](./media/distributed-availability-group/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png)
 
 
 ただし、分散型可用性グループを右クリックしても使用できるオプションが表示されません (次の図を参照)。また、[可用性データベース]、[可用性グループ リスナー]、[可用性レプリカ] の各フォルダーを展開してもすべて空です。 SQL Server Management Studio 16 ではこの結果が表示されますが、今後のバージョンの SQL Server Management Studio では変更される可能性があります。
 
-![操作できるオプションがありません][9]
+![操作できるオプションがありません](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
 次の図のように、セカンダリ レプリカの場合、分散型可用性グループに関連する情報が SQL Server Management Studio に表示されません。 これらの可用性グループ名は、前述の「[CLUSTER_A WSFC クラスター](#fig7)」図に表示されるロールにマップされます。
 
-![SQL Server Management Studio のセカンダリ レプリカのビュー][10]
+![SQL Server Management Studio のセカンダリ レプリカのビュー](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
+
+### <a name="dmv-to-list-all-availability-replica-names"></a>すべての可用性レプリカ名を一覧表示する DMV
 
 動的管理ビューを使用する場合にも同じ概念が適用されます。 次のクエリを使用すると、すべての可用性グループ (通常と分散型) とそれに参加しているノードが表示されます。 この結果は、分散型可用性グループに参加しているいずれかの WSFC クラスター内のプライマリ レプリカに対してクエリを実行した場合にのみ表示されます。 動的管理ビュー `sys.availability_groups` には、`is_distributed` という新しい列があります。可用性グループが分散型可用性グループの場合、これは 1 です。 この列を表示するには:
 
 ```sql
-SELECT ag.[name] as 'AG Name', 
-    ag.Is_Distributed, 
-    ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar       
-    ON  ag.group_id = ar.group_id
+-- shows replicas associated with availability groups
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.Is_Distributed, 
+   ar.replica_server_name AS [Replica Name]
+FROM sys.availability_groups AS ag 
+INNER JOIN sys.availability_replicas AS ar       
+   ON ag.group_id = ar.group_id
+GO
 ```
 
 次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、DENNIS と JY という 2 つのレプリカで構成されています。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
 
-![上記のクエリの出力例][11]
+![上記のクエリの出力例](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
+
+### <a name="dmv-to-list-distribtued-ag-health"></a>分散型 AG の正常性を一覧表示する DMV
 
 SQL Server Management Studio で、ダッシュボードや他の領域に表示される状態は、その可用性グループ内のローカル同期についてのみです。 分散型可用性グループの正常性を表示するには、動的管理ビューに対してクエリを実行します。 次のクエリ例では、前のクエリを拡張して改善しています。
 
 ```sql
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar
-    ON ag.group_id = ar.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars       
-    ON ar.replica_id = ars.replica_id
+-- shows sync status of distributed AG
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.is_distributed, 
+   ar.replica_server_name AS [Underlying AG], 
+   ars.role_desc AS [Role], 
+   ars.synchronization_health_desc AS [Sync Status]
+FROM  sys.availability_groups AS ag
+INNER JOIN sys.availability_replicas AS ar 
+   ON  ag.group_id = ar.group_id        
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars       
+   ON  ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
        
        
-![分散型可用性グループの状態][12]
+![分散型可用性グループの状態](./media/distributed-availability-group/dag-12-distributed-ag-status.png)
 
+### <a name="dmv-to-view-underlying-performance"></a>基になるパフォーマンスを表示する DMV
 
 前のクエリをさらに拡張するために、`sys.dm_hadr_database_replicas_states` に追加して、動的管理ビューで基となるパフォーマンスを表示することもできます。 現在、動的管理ビューはセカンダリ可用性グループの情報のみを保存しています。 次のクエリ例は、プライマリ可用性グループ上で実行し、以下の出力例を生成します。
 
-```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs
-  INNER JOIN sys.dm_hadr_database_replica_states drs
-    ON dbs.database_id = drs.database_id
-  INNER JOIN sys.availability_groups ag
-    ON drs.group_id = ag.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars
-    ON ars.replica_id = drs.replica_id
-  INNER JOIN sys.availability_replicas ar
-    ON ar.replica_id = ars.replica_id
+```sql
+-- shows underlying performance of distributed AG
+SELECT 
+   ag.[name] AS [Distributed AG Name], 
+   ar.replica_server_name AS [Underlying AG], 
+   dbs.[name] AS [Database],
+   ars.role_desc AS [Role],
+   drs.synchronization_health_desc AS [Sync Status],
+   drs.log_send_queue_size,
+   drs.log_send_rate, 
+   drs.redo_queue_size, 
+   drs.redo_rate
+FROM sys.databases AS dbs
+INNER JOIN sys.dm_hadr_database_replica_states AS drs
+   ON dbs.database_id = drs.database_id
+INNER JOIN sys.availability_groups AS ag
+   ON drs.group_id = ag.group_id
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars
+   ON ars.replica_id = drs.replica_id
+INNER JOIN sys.availability_replicas AS ar
+   ON ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
 
-![分散型可用性グループのパフォーマンス情報][13]
+
+![分散型可用性グループのパフォーマンス情報](./media/distributed-availability-group/dag-13-performance-information-distributed-ag.png)
+
+### <a name="dmv-to-view-performance-counters-for-distributed-ag"></a>分散型 AG のパフォーマンス カウンターを表示する DMV
+次のクエリでは、分散型可用性グループに特別に関連付けられているパフォーマンス カウンターが表示されます。 
+
+
+ ```sql
+ -- displays OS performance counters related to the distributed ag named 'distributedag'
+ SELECT * FROM sys.dm_os_performance_counters WHERE instance_name LIKE '%distributed%'
+ ```
+
+ ![DAG の OS パフォーマンス カウンターを表示する DMV](./media/distributed-availability-group/dmv-os-performance-counters.png)
+
+
+ >[!NOTE]
+ >`LIKE` フィルターに分散型可用性グループの名前を指定する必要があります。 この例で、分散型可用性グループの名前は 'distributedag' です。 分散型可用性グループの名前を反映するように `LIKE` 修飾子を変更します。  
+
+### <a name="dmv-to-display-health-of-both-ag-and-distributed-ag"></a>AG と分散型 AG の両方の正常性を表示する DMV
+次のクエリでは、可用性グループと分散型可用性グループ両方の正常性に関するさまざまな情報が表示されます。 [Tracy Boggiano さん、ありがとうございます](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+
+ ```sql
+ -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
+ SELECT 
+    ag.name AS 'Distributed AG', 
+    ar.replica_server_name AS 'AG', 
+    dbs.name AS 'Database', 
+    ars.role_desc, 
+    drs.synchronization_health_desc, 
+    drs.log_send_queue_size, 
+    drs.log_send_rate, 
+    drs.redo_queue_size, 
+    drs.redo_rate,
+    drs.suspend_reason_desc,
+    drs.last_sent_time,
+    drs.last_received_time,
+    drs.last_hardened_time,
+    drs.last_redone_time,
+    drs.last_commit_time,
+    drs.secondary_lag_seconds
+ FROM sys.databases dbs 
+ INNER JOIN sys.dm_hadr_database_replica_states drs 
+    ON dbs.database_id = drs.database_id
+ INNER JOIN sys.availability_groups ag 
+    ON drs.group_id = ag.group_id
+ INNER JOIN sys.dm_hadr_availability_replica_states ars 
+    ON ars.replica_id = drs.replica_id
+ INNER JOIN sys.availability_replicas ar 
+    ON ar.replica_id =  ars.replica_id
+ --WHERE ag.is_distributed = 1
+ GO
+ ```
+
+![AG と分散型 AG の正常性](./media/distributed-availability-group/dmv-sync-status-send-rate.png)
+
+### <a name="dmvs-to-view-metadata-of-distributed-ag"></a>分散型 AG のメタデータを表示する DMV
+次のクエリでは、分散型可用性グループを含め、可用性グループが使用しているエンドポイント URL に関する情報が表示されます。  [David Barbarin さん、ありがとうございます](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+
+
+ ```sql
+ -- shows endpoint url and sync state for ag, and dag
+ SELECT
+    ag.name AS group_name,
+    ag.is_distributed,
+    ar.replica_server_name AS replica_name,
+    ar.endpoint_url,
+    ar.availability_mode_desc,
+    ar.failover_mode_desc,
+    ar.primary_role_allow_connections_desc AS allow_connections_primary,
+    ar.secondary_role_allow_connections_desc AS allow_connections_secondary,
+    ar.seeding_mode_desc AS seeding_mode
+ FROM sys.availability_replicas AS ar
+ JOIN sys.availability_groups AS ag
+    ON ar.group_id = ag.group_id
+ GO
+ ```
+
+
+![分散型 AG のメタデータ DMV](./media/distributed-availability-group/dmv-metadata-dag2.png)
+
+
+
+### <a name="dmv-to-show-current-state-of-seeding"></a>シード処理の現在の状態を表示する DMV
+次のクエリでは、シード処理の現在の状態に関する情報が表示されます。 このクエリは、レプリカ間の同期エラーを解決するために役立ちます。 [David Barbarin さんに改めて感謝](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+ ```sql
+ -- shows current_state of seeding 
+ SELECT
+    ag.name AS aag_name,
+    ar.replica_server_name,
+    d.name AS database_name,
+    has.current_state,
+    has.failure_state_desc AS failure_state,
+    has.error_code,
+    has.performed_seeding,
+    has.start_time,
+    has.completion_time,
+    has.number_of_attempts
+ FROM sys.dm_hadr_automatic_seeding AS has
+ JOIN sys.availability_groups AS ag
+    ON ag.group_id = has.ag_id
+ JOIN sys.availability_replicas AS ar
+    ON ar.replica_id = has.ag_remote_replica_id
+ JOIN sys.databases AS d
+    ON d.group_database_id = has.ag_db_id
+ GO
+ ```
+
+
+![シード処理の現在の状態](./media/distributed-availability-group/dmv-seeding.png)
+
+
 
 
 ### <a name="next-steps"></a>次の手順 
@@ -273,20 +411,5 @@ WHERE ag.is_distributed = 1
 * [[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Transact-SQL での可用性グループの作成](create-an-availability-group-transact-sql.md)
-
-<!--Image references-->
-[1]: ./media/dag-01-high-level-view-distributed-ag.png
-[2]: ./media/dag-02-distributed-ag-data-movement.png
-[3]: ./media/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png
-[4]: ./media/dag-04-traditional-multi-site-ag.png
-[5]: ./media/dag-05-scaling-out-reads-with-distributed-ags.png
-[6]: ./media/dag-06-another-scaling-out-reads-using-distributed-ags-example.png
-[7]: ./media/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png
-[8]: ./media/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png
-[9]: ./media/dag-09-no-options-available-action.png
-[10]: ./media/dag-10-view-ssms-secondary-replica.png
-[11]: ./media/dag-11-example-output-of-query-above.png
-[12]: ./media/dag-12-distributed-ag-status.png
-[13]: ./media/dag-13-performance-information-distributed-ag.png
 
  

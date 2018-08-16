@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324436"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008904"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server へのログイン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36324436"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールしたときに大文字と小文字を区別する照合順序を選択した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインでも大文字と小文字が区別されます。  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>SQL Server の名前を指定する形式  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが既定のインスタンス (名前のないインスタンス) である場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューターの名前または IP アドレスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが名前付きインスタンス (SQLEXPRESS など) である場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューターの名前または IP アドレスを指定し、スラッシュとインスタンス名を追加します。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが既定のインスタンス (名前のないインスタンス) である場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューターの名前または IP アドレスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが名前付きインスタンス (SQLEXPRESS など) である場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューターの名前または IP アドレスを指定し、スラッシュとインスタンス名を追加します。  
   
  次の例は、APPHOST という名前のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 名前付きインスタンスを指定する場合は、インスタンス名の SQLEXPRESS を使用します。  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36324436"
   
 |インスタンスの型|サーバー名の入力|  
 |----------------------|-------------------------------|  
-|既定のプロトコルによる既定のインスタンスへの接続 (これが既定のインスタンスへの推奨される入力です)。|APPHOST|  
-|既定のプロトコルによる名前付きインスタンスへの接続 (これが名前付きインスタンスへの推奨される入力です)。|APPHOST\SQLEXPRESS|  
+|既定のプロトコルによる既定のインスタンスへの接続|APPHOST|  
+|既定のプロトコルによる名前付きインスタンスへの接続 |APPHOST\SQLEXPRESS|  
 |ピリオドを使用して、インスタンスがローカル コンピューター上で実行されていることを示す、同じコンピューター上の既定のインスタンスへの接続。|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
 |ピリオドを使用して、インスタンスがローカル コンピューター上で実行されていることを示す、同じコンピューター上の名前付きインスタンスへの接続。|.\SQLEXPRESS|  
 |localhost を使用して、インスタンスがローカル コンピューター上で実行されていることを示す、同じコンピューター上の既定のインスタンスへの接続。|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324436"
 |共有メモリ接続を適用している同じコンピューター上の名前付きインスタンスへの接続。|lpc:APPHOST\SQLEXPRESS|  
 |IP アドレスを使用した、TCP アドレス 192.168.17.28 をリッスンしている既定のインスタンスへの接続。|192.168.17.28|  
 |IP アドレスを使用した、TCP アドレス 192.168.17.28 をリッスンしている名前付きインスタンスへの接続。|192.168.17.28\SQLEXPRESS|  
-|使用されているポート (ここでは 2828) の指定による、既定の TCP ポートをリッスンしていない既定のインスタンスへの接続 ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] が既定のポート (1433) をリッスンしている場合は不要)。|APPHOST,2828|  
-|指定された TCP ポート (ここでは 2828) 上の名前付きインスタンスへの接続 (ホスト コンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが実行されていない場合に、よく必要になります)。|APPHOST,2828|  
+|使用されているポート (ここでは 2828) の指定による、既定の TCP ポートをリッスンしていない既定のインスタンスへの接続 ([!INCLUDE[ssDE](../../includes/ssde-md.md)] が既定のポート (1433) をリッスンしている場合は、ポート番号を指定する必要はありません)。|APPHOST,2828|  
+|指定された TCP ポート (ここでは 2828) 上の名前付きインスタンスへの接続 (ホスト コンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが実行されていない場合に、ポート番号の指定が必要になることがよくあります)。|APPHOST,2828|  
 |IP アドレスと使用されている TCP ポート (ここでは 2828) の指定による、既定の TCP ポートをリッスンしていない既定のインスタンスへの接続。|192.168.17.28,2828|  
 |IP アドレスと使用されている TCP ポート (ここでは 2828) の指定による、名前付きインスタンスへの接続。|192.168.17.28\SQLEXPRESS,2828|  
 |TCP 接続を適用する、名前による既定のインスタンスへの接続。|tcp:APPHOST|  
@@ -96,6 +96,6 @@ WHERE session_id = @@SPID;
   
  [sqlcmd ユーティリティの使用](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [ログインの作成](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [ログインの作成](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

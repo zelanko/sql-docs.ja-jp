@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541722"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008894"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Windows 仮想メモリ マネージャー (VMM) は、使用可能な物理メ�
   
 仮想メモリ システムでは、仮想メモリと物理メモリの比率が 1:1 を超えるような物理メモリの設定を許可しています。 その結果、さまざまな物理メモリ構成のコンピューターで大規模なプログラムを実行できます。 しかし、すべてのプロセスの平均ワーキング セットを合わせた容量よりもはるかに大きな仮想メモリを使用すると、パフォーマンスが低下する可能性があります。 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ アーキテクチャ
+## <a name="sql-server-memory-architecture"></a>SQL Server のメモリ アーキテクチャ
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、メモリの確保と解放が必要に応じて動的に行われます。 通常、管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に割り当てるメモリ量を指定する必要はありませんが、このオプションは一部の環境で必要になるのでまだ存在しています。
 

@@ -1,5 +1,5 @@
 ---
-title: DSN と接続文字列のキーワードと for SQL Server ODBC ドライバーで使用される属性 |Microsoft ドキュメント
+title: DSN と接続文字列のキーワードと for SQL Server ODBC ドライバーで使用される属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -12,26 +12,26 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: d78b22eeb64d621c71e9339dd243d3ccd10ccc25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8924fa356b10264bb3116bd1eb40e8fdc94d7334
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853017"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020696"
 ---
-# <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列キーワードと属性
+# <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列のキーワードと属性
 
-このページは、SQLSetConnectAttr および SQLGetConnectAttr、ODBC Driver for SQL Server で使用できる接続文字列と、Dsn キーワードとの接続属性を一覧表示します。
+このページは、接続文字列と、Dsn キーワード、SQLSetConnectAttr と SQLGetConnectAttr、ODBC Driver for SQL Server で使用可能な接続属性を一覧表示します。
 
 
 
-## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>サポートされている DSN または接続文字列キーワードとの接続属性
+## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>DSN または接続文字列のキーワードと接続属性をサポート
 
-次の表は、使用可能なキーワードと属性をプラットフォームごとにリスト化しています (L: Linux; M: Mac; W: Windows)。詳細を参照するには、キーワードまたは属性をクリックします。
+次の表は、使用可能なキーワードと各プラットフォーム (l: Linux での属性M: Mac。W: Windows の場合)。 キーワードの詳細属性をクリックします。
 
-| DSN または接続文字列のキーワード | 接続属性 | プラットフォーム | 
+| DSN / 接続文字列のキーワード | 接続属性 | プラットフォーム | 
 |-|-|-|
-| [addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Address](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) |  [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -42,7 +42,7 @@ ms.locfileid: "32853017"
 | [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | LMW |
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
-| [データベース](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
+| [[データベース]](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [Description](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
 | [[ドライバー]](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -56,14 +56,14 @@ ms.locfileid: "32853017"
 | [言語](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [MARS_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MARS_ENABLED](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmarsenabled) | LMW |
 | [MultiSubnetFailover](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MULTISUBNET_FAILOVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmultisubnetfailover) | LMW |
-| [net](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [ネットワーク](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [Net](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [Network](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [PWD](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [QueryLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfquery) | W |
 | [QueryLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfquerylog) | W |
 | [QueryLogTIme](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_INTERVAL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfqueryinterval) | W |
 | [QuotedId](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_QUOTED_IDENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssquotedident) | LMW |
-| [地域](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [Regional](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [SaveFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [[サーバー]](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
@@ -121,9 +121,9 @@ ms.locfileid: "32853017"
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
 
 
-ここではいくつかの接続文字列キーワードとに記載されていない接続属性[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)と[SQLSetConnectAttr 関数](../../odbc/reference/syntax/sqlsetconnectattr-function.md)です。
+ここではいくつかの接続文字列キーワードとに記載されていない接続属性[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)と[SQLSetConnectAttr 関数](../../odbc/reference/syntax/sqlsetconnectattr-function.md)します。
 
-### <a name="description"></a>Description
+### <a name="description"></a>[説明]
 
 データ ソースの記述に使用されます。
 
@@ -131,88 +131,88 @@ ms.locfileid: "32853017"
 
 データの変換を OEM に ANSI を制御します。 
 
-| 属性値 | Description |
+| 属性値 | [説明] |
 |-|-|
-| SQL_AO_OFF | (既定値)変換は実行されません。 |
-| SQL_AO_ON | 変換を実行します。 |
+| SQL_AO_OFF | (既定値)変換は行われません。 |
+| SQL_AO_ON | 変換が実行されます。 |
 
 ### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
-SQL Server の代替の接続の使用を制御します。 この 1 つがサポートされていません。
+SQL Server のフォールバック接続の使用を制御します。 この 1 つがサポートされていません。
 
-| 属性値 | Description |
+| 属性値 | [説明] |
 |-|-|
-| SQL_FB_OFF | (既定値)代替の接続が無効になります。 |
-| SQL_FB_ON | 代替の接続を有効にします。 |
+| SQL_FB_OFF | (既定値)フォールバックの接続が無効です。 |
+| SQL_FB_ON | フォールバックの接続を有効にします。 |
 
 
 
-## <a name="new-connection-string-keywords-and-connection-attributes"></a>新しい接続文字列キーワード、接続属性
+## <a name="new-connection-string-keywords-and-connection-attributes"></a>新しい接続文字列のキーワードと接続属性
 
 ###  <a name="authentication---sqlcoptssauthentication"></a>認証 - SQL_COPT_SS_AUTHENTICATION
 
 SQL Server に接続するときに使用する認証モードを設定します。 参照してください[を使用して Azure の Active Directory](using-azure-active-directory.md)詳細についてはします。
 
-| キーワードの値 | 属性値 | Description |
+| キーワードの値 | 属性値 | [説明] |
 |-|-|-|
-| |SQL_AU_NONE|(既定値)設定されていません。 その他の属性の組み合わせでは、認証モードを決定します。|
-|SqlPassword|SQL_AU_PASSWORD|SQL Server 認証のユーザー名とパスワードを使用します。|
-|ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 統合認証です。|
+| |SQL_AU_NONE|(既定値)設定されていません。 その他の属性の組み合わせでは、認証モードによって決まります。|
+|SqlPassword|SQL_AU_PASSWORD|ユーザー名とパスワードを使用する SQL Server 認証。|
+|ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 統合認証。|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory パスワード認証。|
-|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory の 対話型の認証。|
-| |SQL_AU_RESET|設定を解除します。 任意の DSN または接続文字列の設定を上書きします。|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 対話型認証。|
+| |SQL_AU_RESET|未設定。 任意の DSN または接続文字列の設定をオーバーライドします。|
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
-(Always Encrypted) 透過的な列の暗号化を制御します。 参照してください[を使用して Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md)詳細についてはします。
+透過的な列の暗号化 (Always Encrypted) を制御します。 参照してください[を使用して Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md)詳細についてはします。
 
-| キーワードの値 | 属性値 | Description |
+| キーワードの値 | 属性値 | [説明] |
 |-|-|-|
 |有効|SQL_CE_ENABLED|Always Encrypted を有効にします。|
 |Disabled|SQL_CE_DISABLED|(既定値)Always Encrypted を無効にします。|
-| |SQL_CE_RESULTSETONLY|復号化のみ (結果と戻り値) を有効にします。|
+| |SQL_CE_RESULTSETONLY|解読のみ (結果と戻り値) を有効にします。|
 
 ### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
-コントロール、透過的なネットワーク IP 解決機能、高速再接続を許可する MultiSubnetFailover と対話しようとします。 参照してください[透過的なネットワーク IP 解決を使用して](using-transparent-network-ip-resolution.md)詳細についてはします。
+コントロールを短時間で再接続を許可する MultiSubnetFailover を使用した透過的なネットワーク IP 解決機能にしようとします。 参照してください[透過的なネットワーク IP 解決を使用して](using-transparent-network-ip-resolution.md)詳細についてはします。
 
-| キーワードの値 | 属性値| Description |
+| キーワードの値 | 属性値| [説明] |
 |-|-|-|
-|はい|SQL_IS_ON|(既定値)透過ネットワーク IP 解決を有効にします。|
-|いいえ|SQL_IS_OFF|透過ネットワーク IP 解決を無効にします。|
+|[ユーザー アカウント制御]|SQL_IS_ON|(既定値)透過ネットワーク IP 解決を有効にします。|
+|いいえ|SQL_IS_OFF|透過的なネットワーク IP の解決を無効にします。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
-以降と SQL Server 2012 に接続しているときは、メタデータの SET FMTONLY の使用を制御します。
+SQL Server 2012 への接続と新しい場合は、メタデータに SET FMTONLY の使用を制御します。
 
-| キーワードの値 | Description |
+| キーワードの値 | [説明] |
 |-|-|
 |いいえ|(既定値)使用可能な場合は、メタデータの sp_describe_first_result_set を使用します。 |
-|はい| メタデータには、SET FMTONLY を使用します。 |
+|[ユーザー アカウント制御]| メタデータに SET FMTONLY を使用します。 |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-認証に Azure Active Directory アクセス トークンの使用を許可します。 参照してください[を使用して Azure の Active Directory](using-azure-active-directory.md)詳細についてはします。
+認証のための Azure Active Directory のアクセス トークンの使用を許可します。 参照してください[を使用して Azure の Active Directory](using-azure-active-directory.md)詳細についてはします。
 
-| 属性値 | Description |
+| 属性値 | [説明] |
 |-|-|
-| NULL | (既定値)アクセス トークンが指定されていません。 |
-| ACCESSTOKEN * | アクセス トークンへのポインター。 |
+| NULL | (既定値)アクセス トークンが提供されていません。 |
+| ACCESSTOKEN* | アクセス トークンへのポインター。 |
 
 ### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
-読み込まれたキー ストア プロバイダー ライブラリと通信します。 コントロール透過的な列の暗号化 (Always Encrypted) を参照してください。 この属性には、既定値はありません。 参照してください[カスタム キー ストア プロバイダー](custom-keystore-providers.md)詳細についてはします。
+読み込まれたキーストア プロバイダー ライブラリと通信します。 コントロールの透過的な列暗号化 (Always Encrypted) を参照してください。 この属性には、既定値はありません。 参照してください[カスタム キーストア プロバイダー](custom-keystore-providers.md)詳細についてはします。
 
-| 属性値 | Description |
+| 属性値 | [説明] |
 |-|-|
-| CEKEYSTOREDATA * | キー ストア プロバイダー ライブラリの通信データ構造体 |
+| CEKEYSTOREDATA * | キーストア プロバイダー ライブラリの通信データの構造 |
 
 ### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
-Always Encrypted のキー ストア プロバイダー ライブラリを読み込むまたは読み込まれたキー ストア プロバイダー ライブラリの名前を取得します。 参照してください[カスタム キー ストア プロバイダー](custom-keystore-providers.md)詳細についてはします。 この属性には、既定値はありません。
+キーストア プロバイダー ライブラリを読み込み、Always encrypted または読み込まれたキーストア プロバイダー ライブラリの名前を取得します。 参照してください[カスタム キーストア プロバイダー](custom-keystore-providers.md)詳細についてはします。 この属性には、既定値はありません。
 
-| 属性値 | Description |
+| 属性値 | [説明] |
 |-|-|
-| char * | キー ストア プロバイダー ライブラリへのパス |
+| char * | キーストア プロバイダー ライブラリへのパス |
 
 

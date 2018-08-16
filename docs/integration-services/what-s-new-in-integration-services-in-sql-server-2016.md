@@ -171,7 +171,7 @@ ms.locfileid: "38020781"
  Always On 機能の詳細と SSISDB に対して有効にするための手順については、「[SSIS Catalog](../integration-services/catalog/ssis-catalog.md)」(SSIS カタログ) を参照してください。  
 
 ####  <a name="IncrementalDeployment"></a> パッケージの増分配置  
-パッケージの増分配置機能によって、プロジェクト全体を配置することなく、既存または新規のプロジェクトに&1; つ以上のパッケージを配置できます。 パッケージは、次のツールを使用して増分配置できます。  
+パッケージの増分配置機能によって、プロジェクト全体を配置することなく、既存または新規のプロジェクトに 1 つ以上のパッケージを配置できます。 パッケージは、次のツールを使用して増分配置できます。  
   
 -   配置ウィザード  
   
@@ -246,7 +246,7 @@ ms.locfileid: "38020781"
  新しい **AutoAdjustBufferSize** プロパティの値を **true**に設定すると、データ フロー エンジンによって、データ フローのバッファー サイズが自動的に計算されます。 詳細については、「 [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)」を参照してください。  
 
 ####  <a name="Templates"></a> 再利用できる制御フロー テンプレート  
- よく使用される制御フロー タスクまたはコンテナーをスタンドアロン テンプレート ファイルに保存し、制御フロー テンプレートを使用するプロジェクト内の&1; つまたは複数のパッケージで複数回再利用できます。 この再利用可能性によって、SSIS パッケージの設計と管理を容易に実行できます。 詳細については、「 [制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。  
+ よく使用される制御フロー タスクまたはコンテナーをスタンドアロン テンプレート ファイルに保存し、制御フロー テンプレートを使用するプロジェクト内の 1 つまたは複数のパッケージで複数回再利用できます。 この再利用可能性によって、SSIS パッケージの設計と管理を容易に実行できます。 詳細については、「 [制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。  
 
 ####  <a name="Parts"></a> パーツとして名前が変更された新しいテンプレート  
  CTP 3.0 でリリースされた新しい再利用できる制御フロー テンプレートが、制御フロー パーツまたはパッケージ パーツとしてその名前が変更されました。 この機能の詳細については、「 [制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。  

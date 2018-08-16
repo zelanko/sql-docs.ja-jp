@@ -19,12 +19,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 086a2051f5ef1900c90e55c2de21d365b24905d7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6fa260e1a20f13736b9df767508e4cf8a1b94de5
+ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978894"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39654237"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3 : dta コマンド プロンプト ユーティリティの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,67 @@ ms.locfileid: "37978894"
   
 データベース エンジン チューニング アドバイザーの XML 入力機能の使用方法は、このレッスンでは扱いません。  
   
-このレッスンでは、 **dta** コマンド プロンプト ユーティリティの基本的な構文を紹介するほか、ヘルプへのアクセス方法を説明し、簡単なワークロードをチューニングします。  
+ここでは、 **dta** ユーティリティを起動してヘルプを表示した後、同ユーティリティを使用してコマンド プロンプトからワークロードをチューニングします。 このユーティリティは、データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の実習「[ワークロードのチューニング](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)」で作成したワークロード MyScript.sql を使用します。  
   
-ここで説明する内容は次のとおりです。  
+このチュートリアルでは、AdventureWorks2017 のサンプル データベースを使用します。 セキュリティ上の理由から、既定ではサンプル データベースがインストールされません。 サンプル データベースをインストールするには、「 [SQL Server のサンプルとサンプル データベースのインストール](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)」を参照してください。  
   
--   **dta** コマンド プロンプト ユーティリティの起動とワークロードのチューニング  
+この後の実習では、コマンド プロンプトを開き、 **dta** コマンド プロンプト ユーティリティを起動して、構文ヘルプを表示します。さらに、「 [ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成した簡単なワークロード MyScript.sql をチューニングします。  
+
+## <a name="prerequisites"></a>Prerequisites 
+
+このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
+
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
+- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードします。
+
+
+SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)に関するページをご覧ください。
+
+  >[!NOTE]
+  > このチュートリアルは、SQL Server Management Studio と基本的なデータベース管理タスクの使用に慣れてユーザーのものでは。 
+
+## <a name="access-dta-command-prompt-utility-help-menu"></a>アクセス DTA コマンド プロンプト ユーティリティ [ヘルプ] メニュー
   
-## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントして、 **[コマンド プロンプト]** をクリックします。  
   
+2.  コマンド プロンプトで以下を入力し、Enter キーを押します。  
   
+    ```  
+    dta -? | more  
+    ```  
+  
+    このコマンドの `| more` の部分は省略可能です。 これを指定した場合は、ユーティリティの構文ヘルプが 1 画面ずつ表示されます。 ヘルプを 1 行ずつ表示するには Enter キーを押し、1 ページずつ表示するにはスペース キーを押します。  
+
+  ![DTA コマンド ユーティリティを使用したヘルプの使用](media/dta-tutorials/dta-cmd-help.png)
+
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>DTA コマンド プロンプト ユーティリティを使用して単純なワークロードをチューニングします。  
+
+
+  
+1.  コマンド プロンプトで、MyScript.sql ファイルが保存されているディレクトリに移動します。  
+  
+2.  コマンド プロンプトで次のコマンドを入力し、Enter キーを押します (コマンドの解釈時には大文字と小文字が区別される点に注意してください)。コマンドが実行され、チューニング セッションが開始されます。  
+  
+    ```  
+    dta -S YourServerName\YourSQLServerInstanceName -E -D AdventureWorks2012 -if MyScript.sql -s MySession2 -of MySession2OutputScript.sql -ox MySession2Output.xml -fa IDX_IV -fp NONE -fk NONE  
+    ```  
+  
+    ここで、 `-S` には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースがインストールされているサーバーおよび [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] インスタンスの名前を指定します。 設定 `-E` は、Windows ドメイン アカウントで接続している場合に、適切なインスタンスへの信頼できる接続を使用することを指定します。 設定 `-D` にはチューニングするデータベース名、 `-if` にはワークロード ファイル名、 `-s` にはセッション名を指定します。 `-of` には [!INCLUDE[tsql](../../includes/tsql-md.md)] の推奨設定スクリプトを書き込むファイルを指定し、 `-ox` には XML 形式で推奨設定を書き込むファイルを指定します。 最後の 3 つのスイッチは次のチューニング オプションを指定しています。 `-fa IDX_IV` は、インデックスとインデックス付きビューの追加のみを考慮するように指定します (クラスター化インデックス、非クラスター化インデックスが共に考慮されます)。 `-fp NONE` は、分析時にパーティション分割ストラテジを考慮しないように指定します。 `-fk NONE` は、データベース エンジン チューニング アドバイザーが推奨設定を作成する際に、データベースの既存の物理設計構造を保持しないように指定しています。  
+
+  ![DTA でのコマンドの使用](media/dta-tutorials/dta-cmd.png)
+  
+3.  データベース エンジン チューニング アドバイザーによるワークロードのチューニングが完了すると、チューニング セッションが正常に完了したことを知らせるメッセージが表示されます。 チューニング結果を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して MySession2OutputScript.sql および MySession2Output.xml を開きます。 また、データベース エンジン チューニング アドバイザーの GUI でチューニング セッション MySession2 を開き、その推奨設定とレポートを表示する方法もあります。これは、「 [チューニング推奨設定の表示](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) 」および「 [チューニング レポートの表示](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)」で行った操作と同様です。  
+  
+ 
+## <a name="after-you-finish-this-tutorial"></a>このチュートリアルが終了したら  
+このチュートリアルのレッスンが終了したら、次のトピックを参照し、データベース エンジン チューニング アドバイザーの詳細を学習してください。  
+  
+-   このツールを使用した作業の実行方法の説明については、「[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) 」を参照してください。 
+-   コマンド プロンプト ユーティリティおよびユーティリティの動作の制御に使用できるオプションの XML ファイルに関するリファレンス情報については、「[dta Utility](../../tools/dta/dta-utility.md) 」を参照してください。  
+  
+チュートリアルの開始に戻るには、「 [チュートリアル:データベース エンジン チューニング アドバイザー](../../tools/dta/tutorial-database-engine-tuning-advisor.md)」を参照してください。  
+  
+## <a name="see-also"></a>参照  
+[データベース エンジンのチュートリアル](../../relational-databases/database-engine-tutorials.md)  
+    

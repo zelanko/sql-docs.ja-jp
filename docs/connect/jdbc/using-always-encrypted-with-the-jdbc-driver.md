@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd5d3bb54c4587c177160cdf99f2f0dacc2bb086
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: b0dc1141fd4f01fef3e49380cdd048faba105ed9
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279283"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662474"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,11 +46,11 @@ Microsoft JDBC Driver for SQL Server と通信から派生したクラスのイ�
 ### <a name="using-built-in-column-master-key-store-providers"></a>組み込み列マスター キー ストア プロバイダーを使用する
 Microsoft JDBC Driver for SQL Server、次の組み込み列マスター キー ストア プロバイダーが付属します。 特定のプロバイダー名 (プロバイダーの検索に使用) に事前登録されているこれらのプロバイダーの一部と、一部は、追加の資格情報または明示的な登録が必要です。
 
-| クラス | [説明] | プロバイダー (検索) 名 |事前登録されているか。|
-|:---|:---|:---|:---|
-|**SQLServerColumnEncryptionAzureKeyVaultProvider**| Azure Key Vault のキーストアのプロバイダー。| AZURE_KEY_VAULT|いいえ|
-|**SQLServerColumnEncryptionCertificateStoreProvider**| Windows 証明書ストアのプロバイダー。|MSSQL_CERTIFICATE_STORE|[ユーザー アカウント制御]
-|**SQLServerColumnEncryptionJavaKeyStoreProvider**| Java キーストアのプロバイダー|MSSQL_JAVA_KEYSTORE|[ユーザー アカウント制御]|
+| クラス                                                 | [説明]                                        | プロバイダー (検索) 名  | 事前登録されているか。 |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault のキーストアのプロバイダー。 | AZURE_KEY_VAULT         | いいえ                 |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 証明書ストアのプロバイダー。      | MSSQL_CERTIFICATE_STORE | [ユーザー アカウント制御]                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java キーストアのプロバイダー                   | MSSQL_JAVA_KEYSTORE     | [ユーザー アカウント制御]                |
 
 事前登録されたキーストア プロバイダーの場合は、これらのプロバイダーを使用し、次の項目に注意してくださいアプリケーションのコード変更を加える必要はありません。
 
@@ -368,7 +368,7 @@ Always Encrypted は、個々のクエリに対しても有効にすることが
 - アプリケーションが、列暗号化キーを保護する列マスター キーにアクセスでき、クエリされたデータベース列を暗号化する。 Java キー ストア プロバイダーを使用するには、接続文字列に追加の資格情報を提供する必要があります。 詳細については、次を参照してください。[を使用する Java キー ストア プロバイダー](#using-java-key-store-provider)します。
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time の値をサーバーに送信する方法の構成
-**で sendTimeAsDatetime** java.sql.Time 値をサーバーに送信する方法を構成する接続プロパティを使用します。 時刻の値は false に設定すると、SQL Server 時の型として送信されます。 値が datetime 型として送信された時刻を true に設定するとします。 Time 列が暗号化されている場合、**で sendTimeAsDatetime**暗号化された列は、時間から datetime への変換をサポートしないプロパティが false に設定する必要があります。 このプロパティは、暗号化された列を使用する場合は、false に設定する必要がありますので、既定値は true にも注意してください。 それ以外の場合、ドライバーは、例外をスローします。 プログラムでこのプロパティの値を構成する 2 つのメソッドを SQLServerConnection クラスは、ドライバーのバージョン 6.0 以降、あります。
+java.sql.Time 値のサーバーへの送信方法を構成するために、**sendTimeAsDatetime** 接続プロパティを使用します。 時刻の値は false に設定すると、SQL Server 時の型として送信されます。 値が datetime 型として送信された時刻を true に設定するとします。 Time 列が暗号化されている場合、**で sendTimeAsDatetime**暗号化された列は、時間から datetime への変換をサポートしないプロパティが false に設定する必要があります。 このプロパティは、暗号化された列を使用する場合は、false に設定する必要がありますので、既定値は true にも注意してください。 それ以外の場合、ドライバーは、例外をスローします。 プログラムでこのプロパティの値を構成する 2 つのメソッドを SQLServerConnection クラスは、ドライバーのバージョン 6.0 以降、あります。
  
 * public void setSendTimeAsDatetime (ブール sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
@@ -385,12 +385,13 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 次の表は、Always Encrypted が有効かどうかに応じたクエリの動作をまとめたものです。
 
-|クエリの特性 | Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる|Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない | Always Encrypted が無効になっている|
-|:---|:---|:---|:---|
-| 暗号化された列をターゲットとするパラメーターを含むクエリ。 | パラメーター値は透過的に暗号化されます。 | [エラー] | [エラー]|
-| 暗号化された列をターゲットとするパラメーターを含まず、暗号化された列からデータを取得するクエリ。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションは、暗号化された列用に構成された SQL Server 型に対応する、JDBC データ型のプレーンテキスト値を受け取ります。 | [エラー] | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列 (byte[]) として受け取ります。
+| クエリの特性                                                                           | Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる                                                                                                                        | Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない | Always Encrypted が無効になっている                                                                                        |
+| :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| 暗号化された列をターゲットとするパラメーターを含むクエリ。                                           | パラメーター値は透過的に暗号化されます。                                                                                                                                                           | [エラー]                                                                             | [エラー]                                                                                                               |
+| 暗号化された列をターゲットとするパラメーターを含まず、暗号化された列からデータを取得するクエリ。 | 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションは、暗号化された列用に構成された SQL Server 型に対応する、JDBC データ型のプレーンテキスト値を受け取ります。 | [エラー]                                                                             | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列 (byte[]) として受け取ります。 |
 
-### <a name="inserting-and-retrieving-encrypted-data-examples"></a>挿入して、暗号化されたデータの例を取得します。 
+### <a name="inserting-and-retrieving-encrypted-data-examples"></a>挿入して、暗号化されたデータの例を取得します。
+
 次の例は、暗号化された列のデータを取得および変更する方法を示しています。 例には、次のスキーマおよび SSN と BirthDate の暗号化された列を使用して、対象テーブルがあるとします。 という名前の列マスター _ キーを構成した場合は"MyCMK"と列の暗号化キーという名前の"MyCEK"(上記のキーストア プロバイダー セクションで説明) と、このスクリプトを使用してテーブルを作成することができます。
 
 ```sql
@@ -436,7 +437,9 @@ Java キー ストアのキーストア プロバイダーを使用する: 場�
 ```
 
 ### <a name="inserting-data-example"></a>データの挿入の例
+
 この例では、Patients テーブルに列を挿入します。 次の項目に注意してください。
+
 - このサンプル コードの暗号化に固有のものは何もありません。 Microsoft JDBC Driver for SQL Server は自動的に検出し、暗号化された列をターゲットとするパラメーターを暗号化します。 この動作により、アプリケーションに対して暗号化が透過的に実行されます。
 - 暗号化された列を含め、データベース列に挿入された値は、SQLServerPreparedStatement を使用して、パラメーターとして渡されます。 暗号化されていない列に値を送信する場合、パラメーターの使用は省略可能です (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします) が、暗号化された列をターゲットとする値に対しては必須です。 暗号化された列に挿入された値は、クエリ ステートメントに埋め込まれているリテラルとして渡された、ドライバーがターゲットの暗号化された列の値を決定できませんし、値が暗号化されることはありませんので、クエリは失敗します。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
 - Microsoft JDBC Driver for SQL Server は、暗号化された列から取得されたデータを透過的に暗号化解除するので、プログラムで印刷される値はすべてプレーンテキストになります。
@@ -461,7 +464,9 @@ catch (SQLException e) {
 ```
 
 ### <a name="retrieving-plaintext-data-example"></a>プレーンテキスト データの取得の例
+
 次の例は、暗号化された値に基づいてデータをフィルター処理し、暗号化された列からプレーンテキスト データを取得する方法を示しています。 次の項目に注意してください。
+
 - SSN 列に対してフィルター処理するために WHERE 句で使用される値は、Microsoft JDBC Driver for SQL Server がデータベースに送信する前に透過的に暗号化できるように、パラメーターとして渡す必要があります。
 - Microsoft JDBC Driver for SQL Server は、SSN 列と BirthDate 列から取得されたデータを透過的に暗号化解除するので、プログラムで印刷される値はすべてプレーンテキストになります。
 
@@ -485,11 +490,13 @@ catch (SQLException e) {
     e.printStackTrace();
 }
 ```
-  
+
 ### <a name="retrieving-encrypted-data-example"></a>暗号化されたデータの取得の例
+
 Always Encrypted が有効になっていない場合でも、暗号化された列をターゲットとするパラメーターをクエリが含んでいなければ、クエリでは、暗号化された列からデータを取得できます。
 
 次の例は、暗号化された列から暗号化されたバイナリ データを取得する方法を示しています。 次の項目に注意してください。
+
 - 接続文字列で Always Encrypted が有効になっていないので、クエリは、SSN と BirthDate の暗号化された値をバイト配列として返します (プログラムによって値が文字列に変換されます)。
 - Always Encrypted が無効の状態で、暗号化された列からデータを取得するクエリは、暗号化された列をターゲットとするパラメーターがない場合に限り、パラメーターを含むことができます。 次のクエリは、データベースで暗号化されない LastName によってフィルター処理を行います。 クエリが SSN または BirthDate によってフィルター処理を行った場合、クエリは失敗します。
 
@@ -512,21 +519,26 @@ catch (SQLException e) {
 ```
 
 ### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>暗号化された列をクエリする際の一般的な問題を回避する
+
 ここでは、暗号化された列を Java アプリケーションからクエリする際のエラーの一般的なカテゴリと、その対処方法に関するいくつかのガイドラインを示します。
 
 ### <a name="unsupported-data-type-conversion-errors"></a>サポートされていないデータ型の変換エラー
+
 Always Encrypted では、暗号化されたデータ型に対するいくつかの変換がサポートされています。 サポートされている型の変換の詳細な一覧については、「[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 データ型の変換エラーを回避するには、 次のことを確認してください。
 
 - 暗号化された列を対象とするパラメーターの値を渡す場合は、適切な setter メソッドを使用します。 パラメーターの SQL Server データ型が正確に対象列の型と同じパラメーターの SQL Server データ型の列のターゲット型への変換はサポートされていることを確認します。 API のメソッドが特定の SQL Server データ型に対応するパラメーターを渡す SQLServerPreparedStatement や SQLServerCallableStatement、SQLServerResultSet クラスに追加されました。 たとえば、列が暗号化されていない場合、datetime2、datetime 型の列、パラメーターを渡す setTimestamp() メソッドを使用することができます。 列が暗号化されている場合は、データベース内の列の型を表す正確なメソッドを使用する必要があります。 たとえば、setTimestamp() を使用して、暗号化された datetime2 列に値を渡すし、暗号化された datetime 列に値を渡す setDateTime() を使用します。 参照してください[API リファレンスを常に、JDBC ドライバーは暗号化](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)新しい Api の完全な一覧についてはします。
 - 10 進数と数値の SQL Server データ型の列をターゲットとするパラメーターの有効桁数と小数点以下桁数が、ターゲット列に対して構成された有効桁数と小数点と同じである。 API のメソッドが、有効桁数と小数点と共に decimal および numeric のデータ型を表すパラメーター/列のデータ値をそのまま使用する SQLServerPreparedStatement、SQLServerCallableStatement、SQLServerResultSet クラスに追加されました。 参照してください[API リファレンスを常に、JDBC ドライバーは暗号化 ](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) /オーバー ロードされた新しい Api の完全な一覧についてはします。  
-- datetime2、datetimeoffset、または時刻の SQL Server データ型の列をターゲットとするパラメーターの秒の小数部桁数/いない対象列の値を変更するクエリでは、ターゲット列に対して秒の小数部桁数/より大きい. API のメソッドが、秒の小数部の有効桁数/スケールと共にこれらのデータ型を表すパラメーターのデータ値をそのまま使用する SQLServerPreparedStatement や SQLServerCallableStatement、SQLServerResultSet クラスに追加されました。 /オーバー ロードされた新しい Api の完全な一覧を参照してください。 [API リファレンスを常に、JDBC ドライバーは暗号化](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)します。   
+- datetime2、datetimeoffset、または時刻の SQL Server データ型の列をターゲットとするパラメーターの秒の小数部桁数/いない対象列の値を変更するクエリでは、ターゲット列に対して秒の小数部桁数/より大きい. API のメソッドが、秒の小数部の有効桁数/スケールと共にこれらのデータ型を表すパラメーターのデータ値をそのまま使用する SQLServerPreparedStatement や SQLServerCallableStatement、SQLServerResultSet クラスに追加されました。 /オーバー ロードされた新しい Api の完全な一覧を参照してください。 [API リファレンスを常に、JDBC ドライバーは暗号化](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)します。
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>不適切な接続プロパティに起因するエラー
-このセクションでは、常に暗号化されたデータを使用するには、正しく接続設定を構成する方法について説明します。 暗号化されたデータの種類、制限付きの変換をサポートするため、**で sendTimeAsDatetime**と**sendStringParametersAsUnicode**接続の設定は、暗号化された列を使用する場合、適切な構成を必要があります。 次のことを確認してください。 
+
+このセクションでは、常に暗号化されたデータを使用するには、正しく接続設定を構成する方法について説明します。 暗号化されたデータの種類、制限付きの変換をサポートするため、**で sendTimeAsDatetime**と**sendStringParametersAsUnicode**接続の設定は、暗号化された列を使用する場合、適切な構成を必要があります。 次のことを確認してください。
+
 - [sendTimeAsDatetime](setting-the-connection-properties.md)時間列の暗号化されたデータを挿入するとき、接続の設定が false に設定します。 詳細については、次を参照してください。 [java.sql.Time の値がサーバーに送信する方法を構成する](configuring-how-java-sql-time-values-are-sent-to-the-server.md)します。
 - [sendStringParametersAsUnicode](setting-the-connection-properties.md)接続設定に設定されて true (または既定値のままです) と、char/varchar/varchar(max) 列を暗号化するデータを挿入します。
 
 ### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>暗号化された値の代わりにプレーンテキストを渡すことによるエラー
+
 暗号化された列をターゲットとするすべての値は、アプリケーションの内部で暗号化される必要があります。 暗号化された列でプレーンテキスト値を挿入/変更したり、この値によってフィルター処理を行おうとしたりすると、次のようなエラーになります。
 
 ```java
@@ -534,6 +546,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 ```
 
 このようなエラーを防ぐには、次のことを確認してください。
+
 - Always Encrypted が、暗号化された列をターゲットとするアプリケーション クエリに対して有効になっている (接続文字列または特定のクエリで)。
 - 準備されたステートメントを使用して、暗号化された列のデータを対象とするを送信するパラメーター。 次の例は、パラメーターとしてリテラルを渡す代わりに、暗号化された列 (SSN) でリテラル/定数によって不正なフィルター処理を行うクエリを示しています。 このクエリは失敗します。
 
@@ -542,29 +555,38 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 ```
 
 ## <a name="force-encryption-on-input-parameters"></a>入力パラメーターで暗号化を強制します。
+
 Always Encrypted を使用する場合、強制的に暗号化機能は、パラメーターの暗号化を適用します。 強制的な暗号化が使用され、パラメーターの暗号化が不要であることが SQL Server からドライバーに通知された場合、このパラメーターを使用するクエリは失敗します。 攻撃を受けた SQL Server がクライアントに不正な暗号化メタデータを提供すると、データ漏えいが引き起こされる可能性がありますが、このプロパティは、そのようなセキュリティ攻撃に対する保護を強化します。 SQLServerPreparedStatement や SQLServerCallableStatement クラスおよび更新プログラム セット * メソッド\*強制暗号化の設定を指定するブール型の引数を受け入れるように SQLServerResultSet クラスのメソッドはオーバー ロードします。 この引数の値が false の場合、ドライバーは、パラメーターで暗号化を強制しません。 強制的に暗号化が設定されている場合は true、クエリに変換先列が暗号化されていて、接続またはステートメントでは、Always Encrypted が有効パラメーターは送信のみです。 このプロパティを使用すると、こと、ドライバーが誤ってにデータを送信 SQL Server として、プレーン テキストを暗号化することを想定している場合ことを確認して、セキュリティの層を追加します。
 
 暗号化設定を強制 SQLServerPreparedStatement、SQLServerCallableStatement のメソッドをオーバー ロードの詳細については、次を参照してください[API リファレンスを常に、JDBC ドライバーの暗号化。](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>Always Encrypted のパフォーマンスの影響を制御する
+
 Always Encrypted はクライアント側暗号化テクノロジであるため、ほとんどのパフォーマンス オーバーヘッドは、データベースではなくクライアント側で発生します。 暗号化および暗号化解除の操作のコストとは別に、クライアント側のパフォーマンス オーバーヘッドのその他の原因を次に示します。
+
 - クエリ パラメーターのメタデータを取得するためのデータベースへの追加のラウンド トリップ。
 - 列マスター キーにアクセスするための列マスター キー ストアの呼び出し。
 
 このセクションでは、Microsoft JDBC Driver for SQL Server の組み込みのパフォーマンス最適化、および上記の 2 つの要因によるパフォーマンスへの影響を制御する方法について説明します。
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>クエリ パラメーターのメタデータを取得するためのラウンド トリップを制御する
+
 既定では、接続に対して Always Encrypted が有効になっている場合、ドライバーは、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) はクエリ ステートメントを分析して、パラメーターを暗号化する必要があるかどうかを判断し、必要がある場合は、これらの各パラメーターに対して暗号化関連の情報を返します。この情報により、ドライバーはパラメーター値を暗号化できます。 この動作により、クライアント アプリケーションに対する高度な透明性が確保されます。 アプリケーションでは、ドライバーに暗号化された列をターゲットとする値を渡すパラメーターを使用する限り、アプリケーション (およびアプリケーション開発者) は、暗号化された列にアクセスするクエリを認識する必要ありません。
 
 ### <a name="setting-always-encrypted-at-the-query-level"></a>クエリ レベルで Always Encrypted を設定する
+
 パラメーター化クエリに対して暗号化メタデータを取得することによるパフォーマンスへの影響を制御するには、Always Encrypted を接続に対して設定する代わりに、個々のクエリに対して有効にします。 これにより、暗号化された列をターゲットとするパラメーターを含むことがわかっているクエリに対してのみ、sys.sp_describe_parameter_encryption が呼び出されるように設定できます。 ただし、これにより、暗号化の透明度が損なわれることに注意してください。データベース列の暗号化プロパティを変更する場合は、スキーマの変更に合わせてアプリケーション コードの変更が必要になる可能性があります。
 
 個々 のクエリの Always Encrypted の動作を制御するには列挙型であり、データの送信し、受信の読み取りと書き込みの際に指定する、SQLServerStatementColumnEncryptionSetting を渡すことによって、個々 のステートメント オブジェクトを構成する必要があります。その特定のステートメントに対して暗号化された列。 有用なガイドラインを次に示します。
+
 - クライアント アプリケーションがデータベース接続を介して送信するほとんどのクエリが、暗号化された列にアクセスする場合は、次のガイドラインを使用してください。
+
     - **columnEncryptionSetting** 接続文字列キーワードを **Enabled** に設定します。
     - 暗号化された列にアクセスしない個々のクエリに対して、SQLServerStatementColumnEncryptionSetting.Disabled を設定します。 この設定により、sys.sp_describe_parameter_encryption の呼び出しと、結果セット内の値を暗号化解除しようとする試みの両方が無効になります。
     - 暗号化を必要とするパラメーターを含まないが、暗号化された列からデータを取得する個々のクエリに対して、SQLServerStatementColumnEncryptionSetting.ResultSet を設定します。 この設定により、sys.sp_describe_parameter_encryption の呼び出しと、パラメーター暗号化が無効になります。 クエリは、暗号化列の結果を暗号化解除できます。
+
 - クライアント アプリケーションがデータベース接続を介して送信するほとんどのクエリが、暗号化された列にアクセスしない場合は、次のガイドラインを使用してください。
+
     - **columnEncryptionSetting** 接続文字列キーワードを **Disabled** に設定します。
     - 暗号化を必要とするパラメーターを含む個々のクエリに対して、SQLServerStatementColumnEncryptionSetting.Enabled を設定します。 この設定により、sys.sp_describe_parameter_encryption の呼び出しと、暗号化された列から取得されたクエリ結果の暗号化解除の両方が有効になります。
     - 暗号化を必要とするパラメーターを含まないが、暗号化された列からデータを取得するクエリに対して、SQLServerStatementColumnEncryptionSetting.ResultSet を設定します。 この設定により、sys.sp_describe_parameter_encryption の呼び出しと、パラメーター暗号化が無効になります。 クエリは、暗号化列の結果を暗号化解除できます。
@@ -603,6 +625,7 @@ catch (SQLException e) {
 ```
 
 ### <a name="column-encryption-key-caching"></a>列暗号化キーのキャッシュ
+
 列暗号化キーを暗号化解除するための列マスター キー ストアの呼び出し回数を減らすために、Microsoft JDBC Driver for SQL Server は、プレーンテキストの列暗号化キーをメモリにキャッシュします。 暗号化された列暗号化キー値をデータベース メタデータから受け取った後、ドライバーは、暗号化されたキー値に対応するプレーンテキストの列暗号化キーをまず見つけようとします。 ドライバーは、暗号化された列暗号化キー値がキャッシュ内に見つからない場合にのみ、列マスター キーを含むキー ストアを呼び出します。
 
 SetColumnEncryptionKeyCacheTtl()、API を使用して、SQLServerConnection クラスのキャッシュでは、列暗号化キー エントリの有効期限の値を構成できます。 キャッシュ内の列暗号化キー エントリの既定の有効期限値には、2 つの時間です。 キャッシュを無効にするには、値 0 を使用します。 任意の有効期限の値を設定するには、次の API を使用します。
@@ -620,6 +643,7 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 日、時間、分、または秒のみが、時間の単位としてサポートされます。  
 
 ## <a name="copying-encrypted-data-using-sqlserverbulkcopy"></a>SQLServerBulkCopy を使用して暗号化されたデータのコピー
+
 SQLServerBulkCopy を使用して、データの暗号化解除を行うことなく、既に暗号化されて 1 つのテーブルに格納されているデータを別のテーブルにコピーできます。 この手順は次のとおりです。
 
 - ターゲット テーブルの暗号化構成が、ソース テーブルの構成と同じであることを確認します。 具体的には、両方のテーブルで同じ列が暗号化されており、同じ暗号化タイプおよび同じ暗号化キーを使用してこれらの列が暗号化されている必要があります。 いずれかのターゲット列が、対応するソース列と異なる方法で暗号化されている場合、コピー操作の後でターゲット テーブル内のデータを暗号化解除することはできません。 データは破損します。
@@ -630,4 +654,5 @@ SQLServerBulkCopy を使用して、データの暗号化解除を行うこと�
 > データベースが破損する可能性があるので、AllowEncryptedValueModifications を指定する際には注意が必要です。このオプションは、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化のタイプ、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかを、Microsoft JDBC Driver for SQL Server がチェックしないためです。
 
 ## <a name="see-also"></a>参照
+
 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

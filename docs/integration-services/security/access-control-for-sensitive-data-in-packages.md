@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401494"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020646"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>パッケージ内の機微なデータへのアクセス制御
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータを保護するために、保護レベルを設定できます。保護レベルを使用すると、パッケージ内の機微なデータのみを保護することも、すべてのデータを保護することもできます。 さらに、パスワードまたはユーザー キーでこのデータを暗号化したり、データベースを使用してデータを暗号化したりすることもできます。 また、パッケージに使用する保護レベルは静的である必要はなく、パッケージのライフ サイクルの各段階で変更できます。 多くの場合、開発中に保護レベルを 1 つ設定し、パッケージを配置した時点で別の保護レベルを設定します。  
@@ -98,7 +98,7 @@ ms.locfileid: "35401494"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>SQL Server データ ツールでパッケージの保護レベルを設定または変更するには  
   
-1.  「 **パッケージの保護レベルの設定** 」で [ProtectionLevel](#set_protection)プロパティに使用可能な値を確認し、パッケージに適した値を判断します。  
+1.  「[保護レベル](#protection-levels)」セクションで **ProtectionLevel** プロパティに使用できる値を確認し、パッケージに適した値を判断します。  
   
 2.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401494"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>コマンド プロンプトでパッケージの保護レベルを設定または変更するには  
   
-1.  「**パッケージの保護レベルの設定**」セクションで [ProtectionLevel](#set_protection) プロパティに使用可能な値を確認し、パッケージに適した値を判断します。  
+1.  「[保護レベル](#protection-levels)」セクションで **ProtectionLevel** プロパティに使用できる値を確認し、パッケージに適した値を判断します。  
   
 2.  「 **dtutil ユーティリティ** 」で [Encrypt](../../integration-services/dtutil-utility.md)オプションのマッピングを確認し、選択した **ProtectionLevel** プロパティの値として使用するのに適した整数を判断します。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "35401494"
   
  パッケージ セキュリティの要件およびオプションを理解するため、「[セキュリティの概要 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)」を参照しておくと役立つ場合があります。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **Package protection level**  
  一覧から保護レベルを選択します。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "35401494"
 ## <a name="password_dialog"></a> [パッケージ パスワード] ダイアログ ボックス
   **[パッケージ パスワード]** ダイアログ ボックスを使用すると、パスワードによって暗号化されるパッケージのパッケージ パスワードを指定できます。 パッケージで使用される保護レベルが **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** の場合、パスワードを指定する必要があります。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **Password**  
  パスワードを入力します。  
   

@@ -1,58 +1,62 @@
 ---
-title: SQL Server から Azure SQL Data Warehouse にデータを読み込む (SSIS) | Microsoft Docs
-description: さまざまなデータ ソースから SQL Data Warehouse にデータを移動するための SQL Server Integration Services (SSIS) パッケージを作成する方法を示します。
+title: SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む | Microsoft Docs
+description: さまざまなデータ ソースから Azure SQL Data Warehouse にデータを移動するための SQL Server Integration Services (SSIS) パッケージを作成する方法を示します。
 documentationcenter: NA
-ms.service: sql-data-warehouse
-ms.component: data-movement
+ms.prod: sql
+ms.prod_service: integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 04/04/2018
+ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 75a352ff4bb1f074a89ad4cc007844261d20c431
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087584"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020656"
 ---
-# <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して SQL Server から Azure SQL Data Warehouse にデータを読み込む
+# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む
 
-SQL Server Integration Services (SSIS) パッケージを作成して、SQL Server から [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index) にデータを読み込みます。 SSIS データ フローを通過するときに、必要に応じてデータを再構築、変換、およびクレンジングすることができます。
+SQL Server Integration Services (SSIS) パッケージを作成して、[Azure SQL Data Warehouse](/azure/sql-data-warehouse/index) にデータを読み込みます。 SSIS データ フローを通過するときに、必要に応じてデータを再構築、変換、およびクレンジングすることができます。
 
-このチュートリアルでは、次の作業を行います。
+この記事では、以下の操作の実行方法について説明します。
 
 * Visual Studio で新しい Integration Services プロジェクトを作成する。
-* データ ソースに接続する。SQL Server (ソースとして) および SQL Data Warehouse (変換先として) を含む。
 * データをソースから変換先に読み込むための SSIS パッケージを設計する。
 * SSIS パッケージを実行してデータを読み込む。
 
-このチュートリアルでは、SQL Server をデータ ソースとして使用します。 SQL Server の場合は、オンプレミスでも Azure 仮想マシンでも実行することができます。
-
 ## <a name="basic-concepts"></a>基本的な概念
-このパッケージは SSIS での処理の単位です。 関連パッケージがプロジェクト内でグループ化されます。 SQL Server Data Tools を使用して Visual Studio でプロジェクトの作成およびパッケージの設計を行います。 設計プロセスは視覚的なプロセスであり、ツールボックスからデザイン画面にコンポーネントをドラッグ アンド ドロップし、コンポーネント同士を接続し、それらのプロパティを設定します。 パッケージが完成したら、包括的な管理、監視、およびセキュリティ保護のために必要に応じてパッケージを SQL Server に配置することができます。
 
-## <a name="options-for-loading-data-with-ssis"></a>SSIS を使用してデータを読み込むためのオプション
+このパッケージは SSIS での処理の基本単位です。 関連パッケージがプロジェクト内でグループ化されます。 SQL Server Data Tools を使用して Visual Studio でプロジェクトの作成およびパッケージの設計を行います。 設計プロセスは視覚的なプロセスであり、ツールボックスからデザイン画面にコンポーネントをドラッグ アンド ドロップし、コンポーネント同士を接続し、それらのプロパティを設定します。 パッケージが完成したら、パッケージを実行し、必要に応じて、包括的な管理、監視、およびセキュリティ保護のためにパッケージを SQL Server に配置することができます。
+
+SSIS の詳細については、この記事では説明しません。 詳細については、以下の記事をお読みください。
+
+- [SQL Server Integration Services](sql-server-integration-services.md)
+
+- [ETL パッケージを作成する方法](ssis-how-to-create-an-etl-package.md)
+
+## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>SSIS を使用して SQL Data Warehouse にデータを読み込むためのオプション
 SQL Server Integration Services (SSIS) とは、SQL Data Warehouse に接続するため、およびデータを読み込みのためのさまざまなオプションを提供する柔軟性に優れたツール セットです。
 
-1. ADO NET 変換先を使用して、SQL Data Warehouse に接続する。 ADO NET 変換先には最小限の構成オプションが含まれているので、このチュートリアルではこれを使用します。
-2. OLE DB 変換先を使用して SQL Data Warehouse に接続する。 このオプションは ADO NET 変換先よりも若干優れたパフォーマンスを発揮します。
-3. Azure Blob Upload Task を使用して、Azure Blob Storage でデータのステージングを行う。 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む Polybase スクリプトを起動します。 このオプションは、ここに示した 3 つのオプションの中で最も高いパフォーマンスを提供します。 Azure BLOB アップロード タスクを取得するには、「[Microsoft SQL Server 2016 Integration Services Feature Pack for Azure][Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]」をダウンロードしてください。 Polybase の詳細については、「[PolyBase Guide][PolyBase Guide]」 (PolyBase ガイド) を参照してください。
+1. 最適なパフォーマンスを提供する推奨される方法は、[Azure SQL DW アップロード タスク](control-flow/azure-sql-dw-upload-task.md)を使用してデータを読み込むパッケージを作成することです。 このタスクでは、ソースと変換先の情報の両方がカプセル化されます。 ソースのデータは、ローカルの区切りテキスト ファイルに保存されていることを前提としています。
 
-## <a name="before-you-start"></a>開始前の準備
-このチュートリアルの手順を実行するには、次のものが必要です。
+2. また、ソースと変換先を含むデータ フロー タスクを使用するパッケージを作成することもできます。 このアプローチは、SQL Server と Azure SQL Data Warehouse を含む幅広いデータ ソースをサポートしています。
 
-1. **SQL Server Integration Services (SSIS)**. SSIS は SQL Server のコンポーネントであり、使用するには SQL Server の評価版またはライセンス版が必要です。 SQL Server 2016 Preview の評価版を取得するには、「[SQL Server 評価版ソフトウェア][SQL Server Evaluations]」を参照してください。
-2. **Visual Studio**. 無料の Visual Studio Community Edition を取得するには、「[Visual Studio Community][Visual Studio Community]」を参照してください。
+## <a name="prerequisites"></a>Prerequisites
+このチュートリアルの手順を実行するには、以下の要素が必要です。
+
+1. **SQL Server Integration Services (SSIS)**. SSIS は SQL Server のコンポーネントであり、使用するには SQL Server のライセンス版、開発者版、または評価版が必要です。 SQL Server の評価版を取得するには、[SQL Server の評価](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)に関するページを参照してください。
+2. **Visual Studio** (省略可能)。 無料の Visual Studio Community Edition を取得するには、「[Visual Studio Community][Visual Studio Community]」を参照してください。 Visual Studio をインストールしない場合は、SQL Server Data Tools (SSDT) のみをインストールできます。 SSDT をインストールすると、機能が制限されたバージョンの Visual Studio がインストールされます。
 3. **Visual Studio 用 SQL Server Data Tools (SSDT)**。 Visual Studio 用 SQL Server Data Tools を取得するには、「[SQL Server Data Tools (SSDT) のダウンロード][Download SQL Server Data Tools (SSDT)]」を参照してください。
-4. **サンプル データ**。 このチュートリアルでは、SQL Data Warehouse に読み込むソース データとして、SQL Server の AdventureWorks サンプル データベースに格納されているサンプル データを使用します。 AdventureWorks サンプル データベースを取得するには、「[AdventureWorks 2014 Sample Databases][AdventureWorks 2014 Sample Databases]」 (AdventureWorks 2014 のサンプル データベース) を参照してください。
-5. **SQL Data Warehouse データベースとアクセス許可**。 このチュートリアルでは、SQL Data Warehouse のインスタンスに接続し、そのインスタンスにデータを読み込みます。 テーブルを作成してデータを読み込むためのアクセス許可が必要です。
-6. **ファイアウォール規則**。 SQL Data Warehouse にデータをアップロードするには、事前にローカル コンピューターの IP アドレスを使用して SQL Data Warehouse に対してファイアウォール規則を作成しておく必要があります。
+4. **Azure SQL Data Warehouse データベースとアクセス許可**。 このチュートリアルでは、SQL Data Warehouse のインスタンスに接続し、そのインスタンスにデータを読み込みます。 接続し、テーブルを作成し、データを読み込むことができるアクセス許可が必要です。
 
-## <a name="step-1-create-a-new-integration-services-project"></a>手順 1: 新しい Integration Services プロジェクトを作成する
+## <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する
 1. Visual Studio を起動します。
 2. **[ファイル]** メニューの **[新規 | プロジェクト]** を選択します。
 3. **[インストール済み | テンプレート | ビジネス インテリジェンス | Integration Services]** のプロジェクトの種類に移動します。
@@ -66,7 +70,55 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
   
     ![][01]
 
-## <a name="step-2-create-the-basic-data-flow"></a>手順 2: 基本的なデータ フローを作成する
+## <a name="option-1---use-the-sql-dw-upload-task"></a>オプション 1 - SQL DW アップロード タスクを使用する
+
+最初のアプローチは、SQL DW アップロード タスクを使用するパッケージです。 このタスクでは、ソースと変換先の情報の両方がカプセル化されます。 ソースのデータは、ローカルまたは Azure Blob Storage の区切りテキスト ファイルに保存されていることを前提としています。
+
+### <a name="prerequisites-for-option-1"></a>オプション 1 の前提条件
+
+このオプションを選択してチュートリアルを続行するには、次の要素が必要です。
+
+- [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。 SQL DW アップロード タスクは、Feature Pack のコンポーネントです。
+
+- [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) アカウント。 SQL DW アップロード タスクは、Azure Blob Storage から Azure SQL Data Warehouse にデータを読み込みます。 Blob Storage に既に格納されているファイルから読み込むか、ローカル コンピューターからファイルを読み込むことができます。 ローカル コンピューター上のファイルを選択すると、SQL DW アップロード タスクはまず BLOB Storage にアップロードし、ステージングしてから、SQL Data Warehouse に読み込みます。
+
+### <a name="add-and-configure-the-sql-dw-upload-task"></a>SQL DW アップロード タスクを追加および構成する
+
+1. ツールボックスからデザイン画面の (**[制御フロー]** タブの) 中央に SQL DW アップロード タスクをドラッグします。
+
+2. タスクをダブル クリックして **SQL DW アップロード タスク エディター**を開きます。
+
+    ![SQL DW アップロード タスク エディターの [全般] ページ](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
+
+3. [Azure SQL DW アップロード タスク](control-flow/azure-sql-dw-upload-task.md)に関する記事のガイダンスを参照して、タスクを構成します。 このタスクで、ソースと変換先の両方の情報と、ソースと変換先のテーブル間のマップがカプセル化されるので、タスク エディターには構成する設定ページが複数あります。
+
+### <a name="create-a-similar-solution-manually"></a>同様のソリューションを手動で作成する
+
+さらに細かく制御するには、SQL DW アップロード タスクによって実行される作業をエミュレートするパッケージを手動で作成する方法があります。 
+
+1. Azure Blob Upload Task を使用して、Azure Blob Storage でデータのステージングを行う。 Azure BLOB アップロード タスクを取得するには、[Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] をダウンロードしてください。
+
+2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む Polybase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル: Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)」を参照してください。
+
+## <a name="option-2---use-a-source-and-destination"></a>オプション 2 - ソースと変換先を使用する
+
+2 つ目のアプローチは、ソースと変換先を含むデータ フロー タスクを使用する一般的なパッケージです。 このアプローチは、SQL Server と Azure SQL Data Warehouse を含む幅広いデータ ソースをサポートしています。
+
+このチュートリアルでは、SQL Server をデータ ソースとして使用します。 SQL Server は、オンプレミスまたは Azure の仮想マシン上で実行されます。
+
+SQL Server と SQL Data Warehouse に接続するには、ADO.NET 接続マネージャー、ソース、および変換先を使用するか、OLE DB 接続マネージャー、ソース、および変換先を使用できます。 ADO.NET の構成オプションは最小限なので、このチュートリアルでは ADO.NET を使用します。 OLE DB は、ADO.NET よりもパフォーマンスがやや優れています。
+
+ショートカットとして、SQL Server インポートおよびエクスポート ウィザードを使用して基本パッケージを作成できます。 次にパッケージを保存し、Visual Studio または SSDT で開いて表示し、カスタマイズします。 詳しくは、「[SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」をご覧ください。
+
+### <a name="prerequisites-for-option-2"></a>オプション 2 の前提条件
+
+このオプションを選択してチュートリアルを続行するには、次の要素が必要です。
+
+1. **サンプル データ**。 このチュートリアルでは、SQL Data Warehouse に読み込むソース データとして、SQL Server の AdventureWorks サンプル データベースに格納されているサンプル データを使用します。 AdventureWorks サンプル データベースを取得するには、[AdventureWorks サンプル データベース][AdventureWorks 2014 Sample Databases]のページを参照してください。
+
+2. **ファイアウォール規則**。 SQL Data Warehouse にデータをアップロードするには、事前にローカル コンピューターの IP アドレスを使用して SQL Data Warehouse に対してファイアウォール規則を作成しておく必要があります。
+
+### <a name="create-the-basic-data-flow"></a>基本的なデータ フローを作成する
 1. ツールボックスからデザイン画面の中央にデータ フロー タスクをドラッグします (**[制御フロー]** タブ上で)。
    
     ![][02]
@@ -76,7 +128,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
    
     ![][09]
 
-## <a name="step-3-configure-the-source-adapter"></a>手順 3: ソース アダプターを構成する
+### <a name="configure-the-source-adapter"></a>ソース アダプターを構成する
 1. ソース アダプターをダブルクリックして、**ADO.NET 変換元エディター**を開きます。
    
     ![][03]
@@ -107,7 +159,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 8. **[クエリ結果のプレビュー]** ダイアログ ボックスで、**[閉じる]** をクリックして **ADO.NET 変換元エディター**に戻ります。
 9. **ADO.NET 変換元エディター**で、**[OK]** をクリックしてデータ ソースの構成を完了します。
 
-## <a name="step-4-connect-the-source-adapter-to-the-destination-adapter"></a>手順 4: ソース アダプターを変換先アダプターに接続する
+### <a name="connect-the-source-adapter-to-the-destination-adapter"></a>ソース アダプターを変換先アダプターに接続する
 1. デザイン画面でソース アダプターを選択します。
 2. ソース アダプターから延びている青い矢印を選択し、それが変換先エディターの所定の位置に固定されるまでドラッグします。
    
@@ -115,7 +167,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
    
     一般的な SSIS パッケージでは、ソースと変換先の間に SSIS ツールボックスからの他の複数のコンポーネントを使用して、データが SSIS データ フローを通過するときにデータの再構築、変換、およびクレンジングを行うことができます。 この例をできるだけ簡単に保持するには、ソースを直接変換先に接続します。
 
-## <a name="step-5-configure-the-destination-adapter"></a>手順 5: 変換先アダプターを構成する
+### <a name="configure-the-destination-adapter"></a>変換先アダプターを構成する
 1. 変換先アダプターをダブルクリックして、**ADO.NET 変換先エディター**を開きます。
    
     ![][11]
@@ -146,8 +198,10 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
     ![][13]
 9. **[OK]** をクリックして、データ ソースの構成を完了します。
 
-## <a name="step-6-run-the-package-to-load-the-data"></a>手順 6: パッケージを実行してデータを読み込む
+## <a name="run-the-package-to-load-the-data"></a>パッケージを実行してデータを読み込む
 ツールバーの **[開始]** ボタンをクリックするか、**[デバッグ]** メニューの **[実行]** オプションのいずれかを選択してパッケージを実行します。
+
+以下の段落では、この記事で説明した 2 つ目のオプション、つまりソースと変換先を含むデータ フローを使用してパッケージを作成した場合の表示について説明します。
 
 パッケージが実行を開始すると、アクティビティを示す黄色の糸車と、これまでに処理された行数が表示されます。
 
@@ -160,9 +214,10 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 これで、 SQL Server Integration Services を使用して Azure SQL Data Warehouse にデータを読み込むことに成功しました。
 
 ## <a name="next-steps"></a>次の手順
-* SSIS データ フローの詳細について説明します。 ここから開始: [データ フロー][Data Flow]。
-* デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始: [パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
-* Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 こちらから開始: [プロジェクトとパッケージの展開][Deployment of Projects and Packages]。
+
+- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始: [パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
+
+- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 こちらから開始: [プロジェクトとパッケージの展開][Deployment of Projects and Packages]。
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png
@@ -193,7 +248,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md
 
 <!--Other Web references-->
-[Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]: http://go.microsoft.com/fwlink/?LinkID=626967
-[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2016
+[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]: https://www.microsoft.com/download/details.aspx?id=54798
+[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2017
 [Visual Studio Community]: https://www.visualstudio.com/products/visual-studio-community-vs.aspx
 [AdventureWorks 2014 Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks

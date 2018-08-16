@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865367"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609671"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>特定の TCP ポートで受信待ちするようにサーバーを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,11 @@ ms.locfileid: "32865367"
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  **[IP***n* **のプロパティ]** ボックスの **[TCP ポート]** ボックスに、この IP アドレスが受信待ちするポート番号を入力し、**[OK]** をクリックします。  
+4.  **[IP***n* **のプロパティ]** ボックスの **[TCP ポート]** ボックスに、この IP アドレスが受信待ちするポート番号を入力し、**[OK]** をクリックします。 複数のポートを指定する場合は、コンマで区切ります。
+
+    > [!NOTE] 
+    > **[プロトコル]** タブの **[すべて受信待ち]** 設定が [はい] に設定されている場合、**[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の値のみが使用され、個々の **[IP***n]* セクションは完全に無視されます。 **[すべて受信待ち]** の設定が [いいえ] に設定されている場合、**[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の設定は無視され、個々の **[IP***n]* セクションの **[TCP ポート]**、**[TCP 動的ポート]**、および **[有効]** の設定が代わりに使用されます。
+    > 各 **[IP***n]* セクションには、既定値が [いいえ] の **[有効]** 設定があります。[いいえ] では、ポートが定義されている場合でも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの IP アドレスは無視されます。  
   
 5.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   

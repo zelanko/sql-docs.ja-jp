@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558882"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662484"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ ms.locfileid: "39558882"
 
 特定のクライアント ドライバーで Always Encrypted を使用してアプリケーションを開発する方法の詳細については、「 [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」(Always Encrypted (クライアント開発)) を参照してください。
 
+## <a name="remarks"></a>Remarks
+
+復号化はクライアントを介して実行されます。 つまり、Always Encrypted を使用する場合、サーバー側でのみ発生する一部のアクションは動作しないことを意味します。 
+
+結果セットをクライアントに返さず、暗号化された列から暗号化されない列にデータを移動する更新の例を次に示します。 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+SSN が常に暗号化を使用して暗号化されている列の場合、前述の更新ステートメントは次のようなエラーで失敗します。
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+列を正常に更新するには、次の手順を実行します。
+
+1. SELECT を使用して SSN 列からデータを選択し、結果セットとしてアプリケーションに格納します。 こうすることで、アプリケーション (クライアント *ドライバー*) は列を復号化できます。
+2. INSERT を使用して結果セットのデータを SQL Server に挿入します。 
+
+ >[!IMPORTANT]
+ > このシナリオで、対象の列は暗号化されたデータを受け入れない通常の varchar なので、データをサーバーに戻すと、暗号化は解除されます。 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>明確な暗号化またはランダム化された暗号化の選択  
  データベース エンジンは、暗号化された列に格納されているプレーンテキスト データに対して動作しませんが、列の暗号化の種類によっては、暗号化されたデータでも一部のクエリをサポートしています。 Always Encrypted は、ランダム化された暗号化と明確な暗号化の 2 種類の暗号化をサポートします。  

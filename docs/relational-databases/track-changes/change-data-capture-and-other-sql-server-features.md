@@ -18,12 +18,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29c9a2ee3c323c9689e7ece0b2b1318a7051321e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d973be20ee14975fce34e7712d44ea8338931fa
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011739"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661455"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,11 @@ ms.locfileid: "33011739"
   
 -   [トランザクション レプリケーション](#TransReplication)  
   
--   [変更データ キャプチャが有効になっているデータベースの復元またはアタッチ](#RestoreOrAttach)  
+-   [変更データ キャプチャが有効になっているデータベースの復元またはアタッチ](#RestoreOrAttach)
+
+-   [包含データベース](#Contained)
   
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> 変更の追跡  
  変更データ キャプチャと [変更の追跡](../../relational-databases/track-changes/about-change-tracking-sql-server.md) は、同じデータベースで有効にすることができます。 特に注意が必要な点はありません。 詳細については、「[変更の追跡のしくみ &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)」を参照してください。  
   
 ##  <a name="DatabaseMirroring"></a> データベース ミラーリング  
@@ -79,6 +81,9 @@ ms.locfileid: "33011739"
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   
  [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) を使用すると、復元またはアタッチされたデータベースから変更データ キャプチャを削除できます。  
+  
+##  <a name="Contained"></a> 包含データベース  
+ 変更データ キャプチャは、[包含データベース](../../relational-databases/databases/contained-databases.md)ではサポートされていません。
   
 ## <a name="change-data-capture-and-always-on"></a>変更データ キャプチャと AlwaysOn  
  AlwaysOn を使用する場合、セカンダリ レプリケーションに対して変更の列挙を行うことにより、プライマリへのディスク負荷を減らす必要があります。  

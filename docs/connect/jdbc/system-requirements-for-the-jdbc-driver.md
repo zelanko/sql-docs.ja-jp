@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: MTE75
+ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454056"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662284"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC Driver のシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -78,31 +78,30 @@ ms.locfileid: "39454056"
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.4 で新しい機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |  
 |mssql-jdbc-6.4.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.4 で新しい機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Java Runtime Environment (JRE) 9.0 が必要です。 JRE 8.0 または低いがスローされます、例外を使用します。<br /><br /> 6.4 で新しい機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Java Runtime Environment (JRE) 9.0 が必要です。 JRE 8.0 または低いがスローされます、例外を使用します。<br /><br /> 6.4 で新しい機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |
 
+JDBC Driver 6.4 は、Maven Central Repository の使用もし、POM で次のコードを追加することで、Maven プロジェクトに追加できます。XML 
 
-  JDBC Driver 6.4 は、Maven Central Repository の使用もし、POM で次のコードを追加することで、Maven プロジェクトに追加できます。XML 
-  
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.4.0.jre9</version>
 </dependency>
-```    
+```
 
 **Microsoft JDBC Driver 6.2 for SQL Server:**  
   
-  JDBC Driver 6.2 には、各インストール パッケージの 2 つの JAR クラス ライブラリが含まれています: **mssql-jdbc-6.2.1.jre7.jar**、および**mssql-jdbc-6.2.1.jre8.jar**します。 
+  JDBC Driver 6.2 の各インストール パッケージには、2 つの JAR クラス ライブラリ (**mssql-jdbc-6.2.2.jre7.jar** および **mssql-jdbc-6.2.2.jre8.jar**) が含まれています。 
   
- JDBC Driver 6.2 は、Sun と同等のすべての主要な Java 仮想マシンで操作とサポートができるよう設計されていますが、Sun JRE 5.0、6.0、7.0、8.0 のみでテストされます。 
+ JDBC Driver 6.2 は、Sun と同等のすべての主要な Java 仮想マシンで操作とサポートができるよう設計されていますが、Sun JRE 5.0、6.0、7.0、8.0 のみでテストされます。
   
  Microsoft JDBC Driver 6.0 for SQL Server および Microsoft JDBC Driver 4.2 for SQL Server に含まれている 2 つの JAR ファイルによって提供されるサポートの概要を以下に示します。  
   
 |JAR|JDBC バージョン準拠|Java バージョンをお勧めします。|[説明]|  
-|---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.2.1.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.2 の新機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |  
-|mssql-jdbc-6.2.1.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.2 の新機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルの再利用|    
+|---------|-----------------------------|----------------------|-----------------|
+|mssql-jdbc-6.2.2.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.2 の新機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |  
+|mssql-jdbc-6.2.3.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.2 の新機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルの再利用|    
 
   JDBC Driver 6.2 では、Maven Central Repository では使用可能なもあり、POM で次のコードを追加することで、Maven プロジェクトに追加できます。XML 
   
@@ -110,7 +109,7 @@ ms.locfileid: "39454056"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```    
 
