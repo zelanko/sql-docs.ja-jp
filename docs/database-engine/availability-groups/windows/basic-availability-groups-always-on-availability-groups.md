@@ -52,7 +52,7 @@ ms.locfileid: "34768658"
 ## <a name="configuration"></a>構成  
  基本的な AlwaysOn 可用性グループは、2 つの SQL Server 2016 Standard Edition サーバーで作成できます。 基本的な可用性グループを作成する場合、作成時に両方のレプリカを指定する必要があります。  
   
- 基本的な可用性グループを作成するには、**CREATE AVAILABILITY GROUP** という Transact-SQL コマンドを使用して、**WITH BASIC** (既定値は **ADVANCED**) オプションを指定します。 詳細については、「[CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)」を参照してください。なお、SQL Server Management Studio の バージョン 17.8 及び、それ以降のバージョンを利用することで UI から基本的な可用性グループを作成することが可能です。  
+ 基本的な可用性グループを作成するには、**CREATE AVAILABILITY GROUP** という Transact-SQL コマンドを使用して、**WITH BASIC** (既定値は **ADVANCED**) オプションを指定します。 また、バージョン 17.8 以降の SQL Server Management Studio では UI を使用して基本的な可用性グループを作成することが可能です。 詳細については、「[CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 >  基本的な可用性グループの制限は、 **WITH BASIC** を指定した **CREATE AVAILABILITY GROUP** に適用されます。 たとえば、読み取りアクセスを許可する基本的な可用性グループを作成しようとすると、エラーが発生します。 他の制限も同様に適用されます。 詳細については、このトピックの「制限事項」を参照してください。  
