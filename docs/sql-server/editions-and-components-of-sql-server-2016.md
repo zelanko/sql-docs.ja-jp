@@ -35,12 +35,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c1f1e78a10b2c0c87089531959a53abaa09e055
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fc94cc5272743371a242f5045d73dab86c95ad9b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047196"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40184697"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -307,7 +307,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションがサポートする Integration Services (SSIS) の機能については、「[SQL Server の各エディションがサポートする Integration Services の機能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)」をご覧ください。
 
 ##  <a name="MDS"></a> Master Data Services  
- [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションがサポートする [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] と Data Quality Services の機能については、「[マスター データ サービスと SQL Server のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)」をご覧ください。 
+ [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションがサポートする [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] と Data Quality Services の機能については、「[マスター データ サービスと SQL Server のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)」をご覧ください。 
 
   
 ##  <a name="DW"></a> Data Warehouse  
@@ -325,31 +325,31 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 <sup>1</sup> [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1 に適用されます。  
 ##  <a name="SSAS"></a> Analysis Services  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。 
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。 
   
 ##  <a name="BIMD"></a> BI Semantic Model (Multi Dimensional)  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
    
 ##  <a name="BIT"></a> BI Semantic Model (Tabular)  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Power Pivot for SharePoint の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションによってサポートされる Power Pivot for SharePoint の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
   
 ##  <a name="DM"></a> Data Mining  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされるデータ マイニングの機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションによってサポートされるデータ マイニングの機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
   
 ##  <a name="SSRS"></a> Reporting Services  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Reporting Services の機能については、「[SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションによってサポートされる Reporting Services の機能については、「[SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
 
 ##  <a name="BIC"></a> Business Intelligence クライアント  
 
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Business Intelligence クライアントの機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」または「[SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションによってサポートされる Business Intelligence クライアントの機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」または「[SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
   
 ##  <a name="SLS"></a> Spatial and Location Services  
   

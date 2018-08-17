@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4547d93c5cc85c47c641e474135488b8281b756a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: d540c39fc9e1f60d91ff500a3fbd1ff6494ba697
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535122"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40184702"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**適用対象:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server
+**適用対象:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server
 
 CASE 式は、ネイティブ コンパイル T-SQL モジュールでサポートされています。 次の例では、クエリで CASE 式を使用する方法を示します。 
 
