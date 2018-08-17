@@ -105,7 +105,7 @@ INNER JOIN sys.query_store_query_text AS Txt
   
  ![オブジェクト エクスプローラーのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "オブジェクト エクスプローラーのクエリ ストア ツリー")  
   
- **[機能低下したクエリ]** を選択し、 **で** [機能低下したクエリ] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部にあるドロップダウン ボックスを使用して、さまざまな条件に合わせてクエリを選択します。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で **[機能低下したクエリ]** を選択し、 **[機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部にあるドロップダウン ボックスを使用して、さまざまな条件に合わせてクエリを選択します。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
   
  ![オブジェクト エクスプローラーの機能低下したクエリ](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "オブジェクト エクスプローラーの機能低下したクエリ")  
   
@@ -137,7 +137,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 `STALE_QUERY_THRESHOLD_DAYS` 引数を構成して、クエリのストア内にデータを保持する日数を指定します。 既定値は、30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
   
 *DATA_FLUSH_INTERVAL_SECONDS*  
-クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は `DATA_FLUSH_INTERVAL_SECONDS` で構成されています。 既定値は **900** (15 分) です。  
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は `DATA_FLUSH_INTERVAL_SECONDS` で構成されています。 既定値は **900** (15 分) です。  
   
 *MAX_STORAGE_SIZE_MB*  
 クエリのストアの最大サイズを構成します。 クエリのストア内のデータが `MAX_STORAGE_SIZE_MB` の上限に達すると、クエリのストアは自動的に状態を読み取り/書き込みから読み取り専用に変更し、新しいデータの収集を停止します。  既定値は 100 MB です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は **1 GB**、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は **10 MB** です。
@@ -350,7 +350,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **去1; 時間で平均実行時間が長かったクエリの上位。**  
+ **過去 1 時間で平均実行時間が長かったクエリの上位。**  
   
 ```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -471,7 +471,7 @@ GROUP BY qt.query_text_id, q.query_id, p.plan_id
 ORDER BY sum_total_wait_ms DESC
  ```
  
- **最近パフォーマンスが低下したクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去1; 日間) とで実行を比較し、 `additional_duration_workload`の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
+ **最近パフォーマンスが低下したクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去 1 日間) とで実行を比較し、 `additional_duration_workload`の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
   
 ```sql  
 --- "Recent" workload - last 1 hour  
