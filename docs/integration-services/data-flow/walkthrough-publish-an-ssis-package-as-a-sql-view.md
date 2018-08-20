@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407954"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175231"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
   このチュートリアルでは、SSIS パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに SQL ビューとして公開する詳細な手順について説明します。  
@@ -66,7 +66,7 @@ ms.locfileid: "35407954"
   
         |ID|FirstName|LastName|  
         |--------|---------------|--------------|  
-        |@shouldalert|John|Doe|  
+        |1|John|Doe|  
         |2|Jane|Doe|  
   
     4.  **OLE DB Source** コンポーネントを **SSIS ツールボックス** から **データ フロー デザイナー**にドラッグします。  
@@ -130,7 +130,7 @@ ms.locfileid: "35407954"
   
         1.  ビューを作成するデータベース スキーマを指定します ([スキーマ] フィールド) 。  
   
-        2.  ネットワーク経由で送信する前にデータを暗号化するかどうかを指定します ([暗号化] フィールド)。 この設定と TrustServerCertificate 設定の詳細については、「 [検証を伴わない暗号化の使用](http://msdn.microsoft.com/library/ms131691.aspx) 」トピックを参照してください。  
+        2.  ネットワーク経由で送信する前にデータを暗号化するかどうかを指定します ([暗号化] フィールド)。 この設定と TrustServerCertificate 設定の詳細については、「 [検証を伴わない暗号化の使用](../../relational-databases/native-client/features/using-encryption-without-validation.md) 」トピックを参照してください。  
   
         3.  暗号化設定が有効な場合に自己署名サーバー証明書を使用できるかどうかを指定します ([**TrustServerCertificate]** フィールド)。  
   
@@ -213,7 +213,7 @@ GO
   
  実行時、ビューが実行されると、ビューに定義されたリンク サーバー クエリが、クエリに指定された SSIS パッケージを開始し、パッケージの出力を表形式の結果セットとして受信します。  
   
-1.  ビューを作成する前に、新しいクエリ ウィンドウで次のクエリを入力して実行します。 OPENQUERY は、SQL Server でサポートされている行セット関数です。 それは、指定されたパススルー クエリを、リンク サーバーに関連付けられた OLE DB Provider を使用するリンク サーバーで実行します。 OPENQUERY は、テーブル名と同じように、クエリの FROM 句で参照できます。 詳細については、 [MSDN ライブラリの OPENQUERY ドキュメント](http://msdn.microsoft.com/library/ms188427.aspx) を参照してください。  
+1.  ビューを作成する前に、新しいクエリ ウィンドウで次のクエリを入力して実行します。 OPENQUERY は、SQL Server でサポートされている行セット関数です。 それは、指定されたパススルー クエリを、リンク サーバーに関連付けられた OLE DB Provider を使用するリンク サーバーで実行します。 OPENQUERY は、テーブル名と同じように、クエリの FROM 句で参照できます。 詳細については、 [MSDN ライブラリの OPENQUERY ドキュメント](../../t-sql/functions/openquery-transact-sql.md) を参照してください。  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

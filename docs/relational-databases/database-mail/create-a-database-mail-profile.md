@@ -20,16 +20,16 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0f728e6c4ae949573206c5a13a73879c7f7a304
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a1a257f9ba24f18426f2f328dde0a061f9bed0c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932557"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175274"
 ---
 # <a name="create-a-database-mail-profile"></a>データベース メール プロファイルの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。 メール プロファイルの詳細については、「[データベース メール プロファイル](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2)」をご覧ください。
+  **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。 メール プロファイルの詳細については、「[データベース メール プロファイル](database-mail-configuration-objects.md)」をご覧ください。
   
 -   **作業を開始する準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
   

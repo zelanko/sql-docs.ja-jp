@@ -23,16 +23,16 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1872cef23e9680cbec037b1d2170e8e3b02c8564
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: e143abb330c114a9d03e0cd7c8a40a7f422e6134
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909862"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175250"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx)」をご覧ください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server Integration Services](sql-server-integration-services.md)」をご覧ください。
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、エンタープライズ レベルのデータ統合およびデータ変換ソリューションを構築するためのプラットフォームです。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用すると、ファイルのコピーやダウンロード、データ ウェアハウスの読み込み、データのクリーニングとマイニング、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のオブジェクトやデータの管理などにより、複雑なビジネスの問題を解決できます。
 

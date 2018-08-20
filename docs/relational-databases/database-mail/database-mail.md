@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931017"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175234"
 ---
 # <a name="database-mail"></a>データベース メール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "32931017"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成して、次のような場合に電子メール メッセージが指定のオペレーターに送信されるように設定できます。  
   
--   警告が発生した場合。 特定のイベントが発生したときに電子メールによる通知を送信するように警告を構成できます。 たとえば、すぐに対処しなければならない可能性がある特定のデータベース イベントまたはオペレーティング システムの状態がオペレーターに通知されるように、警告を構成できます。 警告の構成の詳細については、「 [警告](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)」を参照してください。  
+-   警告が発生した場合。 特定のイベントが発生したときに電子メールによる通知を送信するように警告を構成できます。 たとえば、すぐに対処しなければならない可能性がある特定のデータベース イベントまたはオペレーティング システムの状態がオペレーターに通知されるように、警告を構成できます。 警告の構成の詳細については、「 [警告](../../ssms/agent/alerts.md)」を参照してください。  
   
 -   データベースのバックアップやレプリケーション イベントなどの定期タスクが成功または失敗したとき。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント メールを使用して、月末に実行する処理でエラーが発生した場合にオペレーターに通知できます。  
   

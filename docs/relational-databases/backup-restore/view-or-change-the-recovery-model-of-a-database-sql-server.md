@@ -1,4 +1,4 @@
-﻿---
+---
 title: データベースの復旧モデルの表示または変更 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
@@ -22,12 +22,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d48fb1394319e9f6e43f59ecf35903b6cb1320f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f20f19ed92d7d8deff82daa130cc2d4e7275c441
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921384"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175218"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,13 +138,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [ジョブの作成](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
--   [ジョブの有効化または無効化](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [メンテナンス プラン](http://msdn.microsoft.com/library/ms187658.aspx) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
+-   [メンテナンス プラン](../maintenance-plans/maintenance-plans.md) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
   
 ## <a name="see-also"></a>参照  
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   

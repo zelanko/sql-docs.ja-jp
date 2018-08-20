@@ -18,13 +18,14 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 781bebda84fe0d4e48414fb327e45fe837ed9356
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 228202a91e14b7735cd0fba1f6eb60dad8832a7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771538"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175255"
 ---
 # <a name="sql-server-installation"></a>SQL Server のインストール
 
@@ -80,7 +81,7 @@ ms.locfileid: "34771538"
 [SharePoint を使用した SQL Server の BI 機能のインストール &#40;Power Pivot と Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を SharePoint 環境でインストールする方法について説明します。 ここでは、特定のバージョンとエディションの SharePoint で使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を示します。 また、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint と Reporting Services を SharePoint モードでインストールする手順についても説明します。  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 新しいサンプル データベース [Wide World importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)をインストールします。 
+![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 新しいサンプル データベース [Wide World importers](../../sample/world-wide-importers/wide-world-importers-documentation.md)をインストールします。 
   
 [その他の SQL Server サンプルとサンプル データベース](http://sqlserversamples.codeplex.com/)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサンプルおよびサンプル データベースをインストールして構成する方法について説明します。  
