@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store Source | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409304"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175199"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
   **Azure Data Lake Store Source** コンポーネントは、SSIS パッケージが Azure Data Lake Store からデータを読み取れるようにします。 サポートされるファイル形式は、テキストと Avro です。
@@ -44,3 +44,7 @@ ms.locfileid: "35409304"
         テキスト ファイル形式の場合は、 **[列の区切り文字]** に値を指定する必要があります。 さらに、ファイルの 1 行目に列名が含まれている場合は、 **[先頭データ行を列名として使用する]** も指定する必要があります。  
   
 3.  接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。   
+
+## <a name="text-qualifier"></a>テキスト修飾子
+
+**Azure Data Lake Store Source** はテキスト修飾子をサポートしません。 ファイルを正しく処理するためにテキスト修飾子を指定する必要がある場合、ファイルをローカル コンピューターにダウンロードし、**フラット ファイル ソース**を使用してファイルを処理することを検討してください。 フラット ファイル ソースでテキスト修飾子を指定できるようになります。 詳細については、「[フラット ファイル ソース](flat-file-source.md)」を参照してください。
