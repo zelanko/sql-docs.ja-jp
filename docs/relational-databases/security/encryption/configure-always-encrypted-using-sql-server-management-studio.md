@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543072"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175183"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Always Encrypted の構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>データベースまたは DACPAC で Always Encrypted が使用されている場合に DAC アップグレード操作を実行する
 
-[DAC 操作](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) は、暗号化された列がスキーマに含まれている DACPAC ファイルとデータベースに対してサポートされています。 DAC のアップグレード操作には、特別な考慮事項が適用されます。SSMS など、さまざまなツールで DAC のアップグレード操作を実行する方法については、 [データ層アプリケーションのアップグレード](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) を参照してください。 
+[DAC 操作](../../data-tier-applications/data-tier-applications.md) は、暗号化された列がスキーマに含まれている DACPAC ファイルとデータベースに対してサポートされています。 DAC のアップグレード操作には、特別な考慮事項が適用されます。SSMS など、さまざまなツールで DAC のアップグレード操作を実行する方法については、 [データ層アプリケーションのアップグレード](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) を参照してください。 
 
 DACPAC を使用してデータベースをアップグレードする場合、DACPAC またはターゲット データベースのいずれかに暗号化された列が含まれていると、次の条件がすべて満たされた場合に、アップグレード操作によってデータの暗号化操作をトリガーします。
 - データベースにデータを含む列が含まれています。
@@ -418,7 +418,7 @@ DACPAC またはターゲット データベースで Always Encrypted がセッ
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>暗号化された列を含むデータベースを BACPAC を使用して移行する
 
-データベースをエクスポートすると、暗号化された列に格納されているすべてのデータが取得され、結果として生成された [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) に入れられます (暗号化された形式で)。 生成された BACPAC には、Always Encrypted キーのメタデータも含まれます。
+データベースをエクスポートすると、暗号化された列に格納されているすべてのデータが取得され、結果として生成された [BACPAC](../../data-tier-applications/data-tier-applications.md) に入れられます (暗号化された形式で)。 生成された BACPAC には、Always Encrypted キーのメタデータも含まれます。
 
 BACPAC をデータベースにインポートすると、BACPAC からの暗号化されたデータがデータベースに読み込まれ、Always Encrypted キーのメタデータが再び作成されます。
 

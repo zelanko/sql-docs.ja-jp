@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950497"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175202"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server エージェントの Jobs オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32950497"
   
  次の表には **SQLAgent:Jobs** カウンターが含まれています。  
   
-|[オブジェクト名]|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |**Active Jobs**|このカウンターは、現在実行中のジョブの数を報告します。|  
 |**Failed jobs**|このカウンターは、失敗して終了したジョブの数を報告します。|  
@@ -43,7 +43,7 @@ ms.locfileid: "32950497"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|Instance|Description|  
+|Instance|[説明]|  
 |--------------|-----------------|  
 |**_Total**|すべてのジョブの情報です。|  
 |**警告**|警告によって開始されたジョブの情報です。|  
@@ -51,8 +51,8 @@ ms.locfileid: "32950497"
 |**スケジュール**|スケジュールによって開始されたジョブの情報です。|  
   
 ## <a name="see-also"></a>参照  
- [ジョブの実装](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [パフォーマンス オブジェクトの使用](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [ジョブの実装](../../ssms/agent/implement-jobs.md)   
+ [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
