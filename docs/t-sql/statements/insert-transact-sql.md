@@ -425,8 +425,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 |[標準的なテーブル以外の対象オブジェクトを指定する](#TargetObjects)|ビュー • テーブル変数|  
 |[リモート テーブルに行を挿入する](#RemoteTables)|リンク サーバー、OPENQUERY 行セット関数、OPENDATASOURCE 行セット関数|  
 |[テーブルまたはデータ ファイルのデータを一括読み込みする](#BulkLoad)|INSERT…SELECT • OPENROWSET 関数|  
-|
-  [ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント|  
+|[ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント|  
 |[INSERT ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
   
 ###  <a name="BasicSyntax"></a> 基本構文  
