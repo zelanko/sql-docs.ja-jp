@@ -483,8 +483,7 @@ ID     Value
 |[リモート テーブルの行を更新する](#RemoteTables)|リンク サーバー • OPENQUERY • OPENDATASOURCE|  
 |[ラージ オブジェクト データ型を更新する](#LOBValues)|.• OPENROWSET を記述します。|  
 |[ユーザー定義型を更新する](#UDTs)|ユーザー定義型|  
-|
-  [ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント • クエリ ヒント|  
+|[ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント • クエリ ヒント|  
 |[UPDATE ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
 |[その他のステートメントで UPDATE を使用する](#Other)|ストアド プロシージャ • TRY...CATCH|  
   
