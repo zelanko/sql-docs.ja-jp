@@ -1,323 +1,330 @@
+items:
 - name: 概要
   items:
-    - name: SQL Server Machine Learning Services とは
-      href: what-is-sql-server-machine-learning.md
-      items:
-        - name: データベース内分析
-          href: r/sql-server-r-services.md
-        - name: スタンドアロン サーバー
-          href: r/r-server-standalone.md
-    - name: 新しい機能
-      href: what-s-new-in-sql-server-machine-learning-services.md
-    - name: エディション別の機能
-      href: r/differences-in-r-features-between-editions-of-sql-server.md
+  - name: SQL Server Machine Learning Services とは
+    href: what-is-sql-server-machine-learning.md
+    items:
+    - name: データベース内分析
+      href: r/sql-server-r-services.md
+    - name: スタンドアロン サーバー
+      href: r/r-server-standalone.md
+  - name: 新しい機能
+    href: what-s-new-in-sql-server-machine-learning-services.md
+  - name: エディション別の機能
+    href: r/differences-in-r-features-between-editions-of-sql-server.md
 - name: Architecture
   href: architecture-overview-machine-learning.md
   items:
-    - name: R
-      href: r/architecture-overview-sql-server-r.md
-      items:
-        - name: R の相互運用性
-          href: r/r-interoperability-in-sql-server.md
-        - name: R 統合を実現するコンポーネント
-          href: r/new-components-in-sql-server-to-support-r.md
-        - name: R のセキュリティ
-          href: r/security-overview-sql-server-r.md
-    - name: Python
-      href: python/architecture-overview-sql-server-python.md
-      items:
-        - name: Machine Learning Services での Python
-          href: python/sql-server-python-services.md
-        - name: Python の相互運用性
-          href: python/python-interoperability.md
-        - name: Python をサポートするコンポーネント
-          href: python/new-components-in-sql-server-to-support-python-integration.md
-        - name: Python のセキュリティ
-          href: python/security-overview-sql-server-python-services.md
+  - name: R
+    href: r/architecture-overview-sql-server-r.md
+    items:
+    - name: R の相互運用性
+      href: r/r-interoperability-in-sql-server.md
+    - name: R 統合を実現するコンポーネント
+      href: r/new-components-in-sql-server-to-support-r.md
+    - name: R のセキュリティ
+      href: r/security-overview-sql-server-r.md
+  - name: Python
+    href: python/architecture-overview-sql-server-python.md
+    items:
+    - name: Machine Learning Services での Python
+      href: python/sql-server-python-services.md
+    - name: Python の相互運用性
+      href: python/python-interoperability.md
+    - name: Python をサポートするコンポーネント
+      href: python/new-components-in-sql-server-to-support-python-integration.md
+    - name: Python のセキュリティ
+      href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
-    - name: SQL Server 2017
-      items:
-        - name: データベース内分析
-          href: install/sql-machine-learning-services-windows-install.md
-        - name: スタンドアロン サーバー
-          href: install/sql-machine-learning-standalone-windows-install.md
-    - name: SQL Server 2016
-      items:
-        - name: R Services (データベース内)
-          href: install/sql-r-services-windows-install.md
-        - name: R Server (スタンドアロン)
-          href: install/sql-r-standalone-windows-install.md
-    - name: トレーニング済みモデル
-      href: install/sql-pretrained-models-install.md
-    - name: コマンド プロンプトのセットアップ
-      href: install/sql-ml-component-commandline-install.md
-    - name: オフラインのセットアップ (インターネットなし)
-      href: install/sql-ml-component-install-without-internet-access.md
-    - name: CAB のダウンロード (オフラインでのセットアップ)
-      href: install/sql-ml-cab-downloads.md
-    - name: R および Python のアップグレード
-      href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-    - name: R ツールの設定
-      href: r/set-up-a-data-science-client.md
-    - name: Python ツールの設定
-      href: python/setup-python-client-tools-sql.md
+  - name: SQL Server 2017
+    items:
+    - name: データベース内分析
+      href: install/sql-machine-learning-services-windows-install.md
+    - name: スタンドアロン サーバー
+      href: install/sql-machine-learning-standalone-windows-install.md
+  - name: SQL Server 2016
+    items:
+    - name: R Services (データベース内)
+      href: install/sql-r-services-windows-install.md
+    - name: R Server (スタンドアロン)
+      href: install/sql-r-standalone-windows-install.md
+  - name: トレーニング済みモデル
+    href: install/sql-pretrained-models-install.md
+  - name: コマンド プロンプトのセットアップ
+    href: install/sql-ml-component-commandline-install.md
+  - name: オフラインのセットアップ (インターネットなし)
+    href: install/sql-ml-component-install-without-internet-access.md
+  - name: CAB のダウンロード (オフラインでのセットアップ)
+    href: install/sql-ml-cab-downloads.md
+  - name: R および Python のアップグレード
+    href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+  - name: R ツールの設定
+    href: r/set-up-a-data-science-client.md
+  - name: Python ツールの設定
+    href: python/setup-python-client-tools-sql.md
 - name: クイック スタート
   items:
-    - name: R
-      items:
-        - name: R と SQL での Hello World
-          href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
-        - name: 入力と出力の処理
-          href: tutorials/rtsql-working-with-inputs-and-outputs.md
-        - name: データ型とオブジェクトの処理
-          href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
-        - name: 予測モデルの作成
-          href: tutorials/rtsql-create-a-predictive-model-r.md
-        - name: モデルからの予測とプロット
-          href: tutorials/rtsql-predict-and-plot-from-model.md
+  - name: R
+    items:
+    - name: R と SQL での Hello World
+      href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+    - name: 入力と出力の処理
+      href: tutorials/rtsql-working-with-inputs-and-outputs.md
+    - name: データ型とオブジェクトの処理
+      href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+    - name: 予測モデルの作成
+      href: tutorials/rtsql-create-a-predictive-model-r.md
+    - name: モデルからの予測とプロット
+      href: tutorials/rtsql-predict-and-plot-from-model.md
 - name: チュートリアル
   href: tutorials/machine-learning-services-tutorials.md
   items:
-    - name: R
-      href: tutorials/sql-server-r-tutorials.md
+  - name: R
+    href: tutorials/sql-server-r-tutorials.md
+    items:
+    - name: データベース内分析について
+      href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-        - name: データベース内分析について
-          href: tutorials/sqldev-in-database-r-for-sql-developers.md
-          items:
-            - name: 1 - データとスクリプトの取得
-              href: tutorials/sqldev-download-the-sample-data.md
-            - name: 2 - 環境の設定
-              href: r/sqldev-import-data-to-sql-server-using-powershell.md
-            - name: 3 - データの視覚化
-              href: tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 4 - データの機能の作成
-              href: tutorials/sqldev-create-data-features-using-t-sql.md
-            - name: 5 - トレーニングと SQL への保存
-              href: r/sqldev-train-and-save-a-model-using-t-sql.md
-            - name: 6 - 結果の予測
-              href: tutorials/sqldev-operationalize-the-model.md
-        - name: データ サイエンスのエンドツーエンドチュートリアル
-          href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-          items:
-            - name: データの準備
-              href: tutorials/walkthrough-prepare-the-data.md
-            - name: SQL を使用したデータの探索
-              href: tutorials/walkthrough-view-and-explore-the-data.md
-            - name: R を使用したデータの要約
-              href: tutorials/walkthrough-view-and-summarize-data-using-r.md
-            - name: グラフとプロットの作成
-              href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: データの機能の作成
-              href: tutorials/walkthrough-create-data-features.md
-            - name: モデルの構築と保存
-              href: tutorials/walkthrough-build-and-save-the-model.md
-            - name: モデルの配置と使用
-              href: tutorials/walkthrough-deploy-and-use-the-model.md
-        - name: RevoScaleR の詳細情報
-          href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-          items:
-            - name: データベースとアクセス許可の作成
-              href: tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: RxSqlServerData を使用したデータ オブジェクトの作成
-              href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: クエリおよびデータの変更
-              href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: コンピューティング コンテキストの定義
-              href: tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: R スクリプトの作成と実行
-              href: tutorials/deepdive-create-and-run-r-scripts.md
-            - name: データの視覚化
-              href: tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: モデルを作成する
-              href: tutorials/deepdive-create-models.md
-            - name: 新しいデータのスコア付け
-              href: tutorials/deepdive-score-new-data.md
-            - name: データの変換
-              href: tutorials/deepdive-transform-data-using-r.md
-            - name: rxImport を使用してメモリにデータを読み込む
-              href: tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: rxDataStep を使用したテーブルの作成
-              href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: rxDataStep を使用したチャンク分析の実行
-              href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: ローカル計算コンテキストでデータを分析する
-              href: tutorials/deepdive-analyze-data-in-local-compute-context.md
-            - name: SQL Server と XDF ファイル間のデータの移動
-              href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 簡単なシミュレーションを作成する
-              href: tutorials/deepdive-create-a-simple-simulation.md
-    - name: Python
-      href: tutorials/sql-server-python-tutorials.md
+      - name: 1 - デモ データの設定
+        href: tutorials/sqldev-download-the-sample-data.md
+      - name: 2 - データの視覚化
+        href: tutorials/sqldev-explore-and-visualize-the-data.md
+      - name: 3 - データの機能の作成
+        href: tutorials/sqldev-create-data-features-using-t-sql.md
+      - name: 4 - トレーニングと SQL への保存
+        href: r/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 5 - 結果の予測
+        href: tutorials/sqldev-operationalize-the-model.md
+    - name: データ サイエンスのエンドツーエンドチュートリアル
+      href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
-        - name: T-SQL を使用した Python の実行
-          href: tutorials/run-python-using-t-sql.md
-          items:
-            - name: ストアド プロシージャで Python をラップする
-              href: tutorials/wrap-python-in-tsql-stored-procedure.md
-            - name: SQL Server の Python モデルからトレーニングおよびスコア付けする
-              href: tutorials/train-score-using-python-in-tsql.md
-            - name: SQL Server の計算コンテキストで revoscalepy を使用してモデルを作成する
-              href: tutorials/use-python-revoscalepy-to-create-model.md
-        - name: データベース内分析について
-          href: tutorials/sqldev-in-database-python-for-sql-developers.md
-          items:
-            - name: データとスクリプトの取得
-              href: tutorials/sqldev-py1-download-the-sample-data.md
-            - name: データのインポート
-              href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-            - name: データの調査と視覚化
-              href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: データの機能の作成
-              href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-            - name: モデルのトレーニングと保存
-              href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-            - name: モデルを運用する
-              href: tutorials/sqldev-py6-operationalize-the-model.md
+      - name: データの準備
+        href: tutorials/walkthrough-prepare-the-data.md
+      - name: SQL を使用したデータの探索
+        href: tutorials/walkthrough-view-and-explore-the-data.md
+      - name: R を使用したデータの要約
+        href: tutorials/walkthrough-view-and-summarize-data-using-r.md
+      - name: グラフとプロットの作成
+        href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
+      - name: データの機能の作成
+        href: tutorials/walkthrough-create-data-features.md
+      - name: モデルの構築と保存
+        href: tutorials/walkthrough-build-and-save-the-model.md
+      - name: モデルの配置と使用
+        href: tutorials/walkthrough-deploy-and-use-the-model.md
+    - name: RevoScaleR の詳細情報
+      href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+      items:
+      - name: データベースとアクセス許可の作成
+        href: tutorials/deepdive-work-with-sql-server-data-using-r.md
+      - name: RxSqlServerData を使用したデータ オブジェクトの作成
+        href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
+      - name: クエリおよびデータの変更
+        href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
+      - name: コンピューティング コンテキストの定義
+        href: tutorials/deepdive-define-and-use-compute-contexts.md
+      - name: R スクリプトの作成と実行
+        href: tutorials/deepdive-create-and-run-r-scripts.md
+      - name: データの視覚化
+        href: tutorials/deepdive-visualize-sql-server-data-using-r.md
+      - name: モデルを作成する
+        href: tutorials/deepdive-create-models.md
+      - name: 新しいデータのスコア付け
+        href: tutorials/deepdive-score-new-data.md
+      - name: データの変換
+        href: tutorials/deepdive-transform-data-using-r.md
+      - name: rxImport を使用してメモリにデータを読み込む
+        href: tutorials/deepdive-load-data-into-memory-using-rximport.md
+      - name: rxDataStep を使用したテーブルの作成
+        href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
+      - name: rxDataStep を使用したチャンク分析の実行
+        href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
+      - name: ローカル計算コンテキストでデータを分析する
+        href: tutorials/deepdive-analyze-data-in-local-compute-context.md
+      - name: SQL Server と XDF ファイル間のデータの移動
+        href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
+      - name: 簡単なシミュレーションを作成する
+        href: tutorials/deepdive-create-a-simple-simulation.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: T-SQL を使用した Python の実行
+      href: tutorials/run-python-using-t-sql.md
+      items:
+      - name: ストアド プロシージャで Python をラップする
+        href: tutorials/wrap-python-in-tsql-stored-procedure.md
+      - name: SQL Server の Python モデルからトレーニングおよびスコア付けする
+        href: tutorials/train-score-using-python-in-tsql.md
+      - name: SQL Server の計算コンテキストで revoscalepy を使用してモデルを作成する
+        href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: データベース内分析について
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: データとスクリプトの取得
+        href: tutorials/sqldev-py1-download-the-sample-data.md
+      - name: データのインポート
+        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+      - name: データの調査と視覚化
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: データの機能の作成
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: モデルのトレーニングと保存
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: モデルを運用する
+        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: サンプル
-  href: 'https://github.com/Microsoft/sql-server-samples'
+  href: https://github.com/Microsoft/sql-server-samples
 - name: ソリューション
   href: tutorials/data-science-scenarios-and-solution-templates.md
 - name: 操作方法
   href: r/sql-server-machine-learning-tasks.md
   items:
-    - name: パッケージの管理
+  - name: パッケージの管理
+    items:
+    - name: 既定のパッケージ
+      href: r/installing-and-managing-r-packages.md
+    - name: パッケージ情報の取得
+      href: r/determine-which-packages-are-installed-on-sql-server.md
+    - name: 新しい Python パッケージのインストール
+      href: python/install-additional-python-packages-on-sql-server.md
+    - name: 新しい R パッケージのインストール
+      href: r/install-additional-r-packages-on-sql-server.md
       items:
-        - name: 既定のパッケージ
-          href: r/installing-and-managing-r-packages.md
-        - name: パッケージ情報の取得
-          href: r/determine-which-packages-are-installed-on-sql-server.md
-        - name: 新しい Python パッケージのインストール
-          href: python/install-additional-python-packages-on-sql-server.md
-        - name: 新しい R パッケージのインストール
-          href: r/install-additional-r-packages-on-sql-server.md
-          items:
-            - name: R パッケージ マネージャーの使用
-              href: r/use-r-package-managers-on-sql-server.md
-            - name: T-SQL の使用
-              href: r/install-r-packages-tsql.md
-            - name: RevoScaleR の使用
-              href: r/use-revoscaler-to-manage-r-packages.md
-              items:
-                - name: リモートの R パッケージ管理を有効にする
-                  href: r/r-package-how-to-enable-or-disable.md
-                - name: R パッケージの同期
-                  href: r/package-install-uninstall-and-sync.md
-            - name: miniCRAN リポジトリの作成
-              href: r/create-a-local-package-repository-using-minicran.md
-            - name: R パッケージを使用するためのヒント
-              href: r/packages-installed-in-user-libraries.md
-    - name: データ探索と予測モデリング
-      items:
-        - name: R ライブラリとデータ型
-          href: r/r-libraries-and-data-types.md
-        - name: Python ライブラリとデータ型
-          href: python/python-libraries-and-data-types.md
-        - name: ネイティブのスコアリング
-          href: sql-native-scoring.md
-        - name: リアルタイム スコアリング
-          href: real-time-scoring.md
-        - name: R を使用した予測モデリング
-          href: r/data-exploration-and-predictive-modeling-with-r.md
-        - name: リアルタイムまたはネイティブのスコアリングを実行する方法
-          href: r/how-to-do-realtime-scoring.md
-        - name: ODBC を使用して R オブジェクトを読み込む
-          href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-        - name: Machine Learning Services で使用する R コードの変換
-          href: r/converting-r-code-for-use-in-sql-server.md
-        - name: rxExecBy を使用して複数のモデルを作成する
-          href: r/creating-multiple-models-using-rxexecby.md
-        - name: R での OLAP キューブからのデータの使用
-          href: r/using-data-from-olap-cubes-in-r.md
-        - name: sqlrutils を使用してストアド プロシージャを作成する
-          href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
-    - name: '[パフォーマンス]'
-      items:
-        - name: R のパフォーマンス チューニング - 概要
-          href: r/sql-server-r-services-performance-tuning.md
-        - name: R のパフォーマンス チューニング - SQL Server の構成
-          href: r/sql-server-configuration-r-services.md
-        - name: R のパフォーマンス チューニング - R およびデータの最適化
-          href: r/r-and-data-optimization-r-services.md
-        - name: R のパフォーマンス チューニング - 結果
-          href: r/performance-case-study-r-services.md
-        - name: R コード プロファイル関数の使用
-          href: r/using-r-code-profiling-functions.md
-    - name: 管理
-      items:
-        - name: R の構成と管理
-          href: r/configuration-sql-server-r-services.md
-        - name: Machine Learning Services の高度な構成オプション
-          href: r/configure-and-manage-advanced-analytics-extensions.md
-        - name: SQL Server での R ランタイムのセキュリティに関する考慮事項
-          href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-        - name: SQL Server Machine Learning Services のユーザー アカウント プールを変更する
-          href: r/modify-the-user-account-pool-for-sql-server-r-services.md
-        - name: データベース ユーザーとしての SQLRUserGroup の追加
-          href: r/add-sqlrusergroup-to-database.md
-        - name: Web サービスを使用したモデルのデプロイと使用
-          href: operationalization-with-mrsdeploy.md
-        - name: ソリューションの管理および監視
-          href: r/managing-and-monitoring-r-solutions.md
-        - name: Machine Learning Services のリソース管理
-          href: r/resource-governance-for-r-services.md
-        - name: Machine Learning 用のリソース プールの作成
-          href: r/how-to-create-a-resource-pool-for-r.md
-        - name: Machine Learning Services の拡張イベント
-          href: r/extended-events-for-sql-server-r-services.md
-        - name: PREDICT ステートメントを監視するための拡張イベント
-          href: xe-event-predict-tsql.md
-        - name: Machine Learning Services の DMV
-          href: r/dmvs-for-sql-server-r-services.md
-        - name: R コード プロファイル関数の使用
-          href: r/using-r-code-profiling-functions.md
-        - name: Management Studio でカスタム レポートを使用して Machine Learning Services を監視する
-          href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+      - name: R パッケージ マネージャーの使用
+        href: r/use-r-package-managers-on-sql-server.md
+      - name: T-SQL の使用
+        href: r/install-r-packages-tsql.md
+      - name: RevoScaleR の使用
+        href: r/use-revoscaler-to-manage-r-packages.md
+        items:
+        - name: リモートの R パッケージ管理を有効にする
+          href: r/r-package-how-to-enable-or-disable.md
+        - name: R パッケージの同期
+          href: r/package-install-uninstall-and-sync.md
+      - name: miniCRAN リポジトリの作成
+        href: r/create-a-local-package-repository-using-minicran.md
+      - name: R パッケージを使用するためのヒント
+        href: r/packages-installed-in-user-libraries.md
+  - name: データ探索と予測モデリング
+    items:
+    - name: R ライブラリとデータ型
+      href: r/r-libraries-and-data-types.md
+    - name: Python ライブラリとデータ型
+      href: python/python-libraries-and-data-types.md
+    - name: R を使用した予測モデリング
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: ODBC を使用して R オブジェクトを読み込む
+      href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
+    - name: Machine Learning Services で使用する R コードの変換
+      href: r/converting-r-code-for-use-in-sql-server.md
+    - name: rxExecBy を使用して複数のモデルを作成する
+      href: r/creating-multiple-models-using-rxexecby.md
+    - name: R での OLAP キューブからのデータの使用
+      href: r/using-data-from-olap-cubes-in-r.md
+    - name: sqlrutils を使用してストアド プロシージャを作成する
+      href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+  - name: 予測
+    items:
+    - name: 予測を生成する方法
+      href: r/how-to-do-realtime-scoring.md
+    - name: sp_rxPredict でのリアルタイム スコアリング
+      href: real-time-scoring.md
+    - name: PREDICT T-SQL でのネイティブ スコアリング
+      href: sql-native-scoring.md
+  - name: '[パフォーマンス]'
+    items:
+    - name: R のパフォーマンス チューニング - 概要
+      href: r/sql-server-r-services-performance-tuning.md
+    - name: R のパフォーマンス チューニング - SQL Server の構成
+      href: r/sql-server-configuration-r-services.md
+    - name: R のパフォーマンス チューニング - R およびデータの最適化
+      href: r/r-and-data-optimization-r-services.md
+    - name: R のパフォーマンス チューニング - 結果
+      href: r/performance-case-study-r-services.md
+    - name: R コード プロファイル関数の使用
+      href: r/using-r-code-profiling-functions.md
+  - name: 管理
+    items:
+    - name: R の構成と管理
+      href: r/configuration-sql-server-r-services.md
+    - name: Machine Learning Services の高度な構成オプション
+      href: r/configure-and-manage-advanced-analytics-extensions.md
+    - name: SQL Server での R ランタイムのセキュリティに関する考慮事項
+      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+    - name: SQL Server Machine Learning Services のユーザー アカウント プールを変更する
+      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: データベース ユーザーとしての SQLRUserGroup の追加
+      href: r/add-sqlrusergroup-to-database.md
+    - name: Web サービスを使用したモデルのデプロイと使用
+      href: operationalization-with-mrsdeploy.md
+    - name: ソリューションの管理および監視
+      href: r/managing-and-monitoring-r-solutions.md
+    - name: Machine Learning Services のリソース管理
+      href: r/resource-governance-for-r-services.md
+    - name: Machine Learning 用のリソース プールの作成
+      href: r/how-to-create-a-resource-pool-for-r.md
+    - name: Machine Learning Services の拡張イベント
+      href: r/extended-events-for-sql-server-r-services.md
+    - name: PREDICT ステートメントを監視するための拡張イベント
+      href: xe-event-predict-tsql.md
+    - name: Machine Learning Services の DMV
+      href: r/dmvs-for-sql-server-r-services.md
+    - name: R コード プロファイル関数の使用
+      href: r/using-r-code-profiling-functions.md
+    - name: Management Studio でカスタム レポートを使用して Machine Learning Services を監視する
+      href: r/monitor-r-services-using-custom-reports-in-management-studio.md
 - name: パッケージ リファレンス
   href: r/machine-learning-services-r-reference.md
   items:
-    - name: SQL の MicrosoftML
-      href: using-the-microsoftml-package.md
-    - name: SQL の RevoScaleR
-      href: r/revoscaler-overview.md
-    - name: SQL Server データ用の RevoScaleR 関数リスト
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: SQL の sqlrutils
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
-    - name: SQL の olapR
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: SQL の revoscalepy
-      href: python/what-is-revoscalepy.md
+  - name: SQL の MicrosoftML
+    href: using-the-microsoftml-package.md
+  - name: SQL の RevoScaleR
+    href: r/revoscaler-overview.md
+  - name: SQL Server データ用の RevoScaleR 関数リスト
+    href: r/scaler-functions-for-working-with-sql-server-data.md
+  - name: SQL の sqlrutils
+    href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+  - name: SQL の olapR
+    href: r/how-to-create-mdx-queries-using-olapr.md
+  - name: SQL の revoscalepy
+    href: python/what-is-revoscalepy.md
 - name: リソース
   items:
-    - name: 既知の問題
-      href: known-issues-for-sql-server-machine-learning-services.md
-    - name: リリース ノート
-      href: 'https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes'
-    - name: 仮想マシンをセットアップする
-      href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
-    - name: トラブルシューティング
-      href: machine-learning-troubleshooting-faq.md
-      items:
-        - name: データ コレクション
-          href: data-collection-ml-troubleshooting-process.md
-        - name: インストールとアップグレードのエラー
-          href: r/upgrade-and-installation-faq-sql-server-r-services.md
-        - name: スタート パッドや外部スクリプトの実行エラー
-          href: common-issues-external-script-execution.md
-        - name: R スクリプトのエラー
-          href: r-script-execution-errors.md
-    - name: ブログ
-      items:
-        - name: SQL Server
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: R Server
-          href: 'https://blogs.msdn.microsoft.com/microsoftrservertigerteam/'
-        - name: Machine Learning
-          href: 'https://blogs.technet.microsoft.com/machinelearning/'
-    - name: フォーラム
-      items:
-        - name: SQL Server
-          href: 'https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver'
-        - name: Machine Learning Server
-          href: 'https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR'
+  - name: 既知の問題
+    href: known-issues-for-sql-server-machine-learning-services.md
+  - name: リリース ノート
+    href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
+  - name: 仮想マシンをセットアップする
+    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+  - name: トラブルシューティング
+    href: machine-learning-troubleshooting-faq.md
+    items:
+    - name: データ コレクション
+      href: data-collection-ml-troubleshooting-process.md
+    - name: インストールとアップグレードのエラー
+      href: r/upgrade-and-installation-faq-sql-server-r-services.md
+    - name: スタート パッドや外部スクリプトの実行エラー
+      href: common-issues-external-script-execution.md
+    - name: R スクリプトのエラー
+      href: r-script-execution-errors.md
+  - name: ブログ
+    items:
+    - name: SQL Server
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: R Server
+      href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
+    - name: Machine Learning
+      href: https://blogs.technet.microsoft.com/machinelearning/
+  - name: フォーラム
+    items:
+    - name: SQL Server
+      href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
+    - name: Machine Learning Server
+      href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
+ms.openlocfilehash: 85ed543ae5239ab46c388de63714756b15a58190
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427315"
