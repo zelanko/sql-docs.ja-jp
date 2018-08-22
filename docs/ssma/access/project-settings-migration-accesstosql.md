@@ -1,5 +1,5 @@
 ---
-title: プロジェクトの設定 (移行) (AccessToSQL) |Microsoft ドキュメント
+title: プロジェクトの設定 (移行) (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,21 +19,21 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8ee97b6e47a51a8ed2e8b69c0f4044d8e583e949
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 10346770784c94fe18357b5717e60f7e3f88a8c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774478"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395336"
 ---
 # <a name="project-settings-migration-accesstosql"></a>プロジェクトの設定 (移行) (AccessToSQL)
-移行プロジェクトの設定では、データに移行する方法を構成できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  
+移行プロジェクトの設定では、データを移行する方法を構成できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
   
-移行ペインがで使用できる、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
+移行のウィンドウが表示されます、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
   
--   使用して、**プロジェクト設定**ダイアログ ボックスを現在のプロジェクトの構成オプションを設定します。 移行の設定にアクセスする、**ツール**メニューの [**プロジェクト設定**、] をクリックして**全般**クリックして、左側のウィンドウの下部にある**移行**です。  
+-   使用して、**プロジェクト設定**ダイアログ ボックスを現在のプロジェクトの構成オプションを設定します。 移行の設定にアクセスする、**ツール**メニューの [**プロジェクト設定**、] をクリックして**全般**クリックし、左側のウィンドウの下部にある**移行**します。  
   
--   使用して、**プロジェクト設定の既定の**ダイアログ ボックスをすべてのプロジェクトの構成オプションを設定します。 移行の設定にアクセスする、**ツール**メニューの **プロジェクト設定の既定の**、プロジェクトの種類を選択**移行のターゲット バージョン**コンボ ボックスの設定にアクセスをクリックする**全般**クリックして、左側のウィンドウの下部にある**移行**です。  
+-   使用して、**プロジェクト設定の既定の**ダイアログ ボックスをすべてのプロジェクトの構成オプションを設定します。 移行の設定にアクセスする、**ツール**メニューの [**プロジェクト設定の既定の**、プロジェクトの種類を選択します**移行ターゲット バージョン**コンボ ボックスをします。設定にアクセスします] をクリックする**全般**クリックし、左側のウィンドウの下部にある**移行**します。  
   
 ## <a name="options"></a>および  
 **CHECK 制約**  
@@ -43,56 +43,56 @@ ms.locfileid: "34774478"
   
 -   **オプティミスティック モード**: True  
   
--   **Full モード**: False  
+-   **フル モード**: False  
   
 **[トリガーを起動する]**  
-データを追加する場合に、SSMA が挿入トリガーを起動するかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]テーブル。  
+データを追加するときに、SSMA が挿入トリガーを起動するかどうかを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。  
   
 -   **既定のモード**: False  
   
 -   **オプティミスティック モード**: True  
   
--   **Full モード**: False  
+-   **フル モード**: False  
   
 **[ID を保持する]**  
-SSMA では、データを追加する場合に、アクセスの id 値が保持されるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 この値が False の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]id 値を割り当てます。  
+SSMA では、データを追加する場合に、アクセス id の値が保持されるかどうかを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 この値が False の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]id 値を割り当てます。  
   
 -   **既定のモード**: True  
   
 -   **オプティミスティック モード**: True  
   
--   **Full モード**: False  
+-   **フル モード**: False  
   
 **[NULL を保持する]**  
-SSMA では、データを追加する場合に、ソース データ内の null 値が保持されるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]で指定されている既定値に関係なく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+SSMA では、データを追加する場合に、ソース データ内の null 値が保持されるかどうかを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で指定されている既定値に関係なく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 -   **既定のモード**: True  
   
 -   **オプティミスティック モード**: False  
   
--   **Full モード**: True  
+-   **フル モード**: True  
   
 **テーブル ロック**  
-SSMA がデータの移行中のテーブルにデータを追加する場合に、テーブルをロックするかどうかを指定します。 値が False の場合は、SSMA は、行ロックを使用します。  
+データ移行中にデータをテーブルに追加する場合、SSMA でテーブルをロックするかどうかを指定します。 値が False の場合は、SSMA は、行ロックを使用します。  
   
 -   **既定のモード**: True  
   
 -   **オプティミスティック モード**: True  
   
--   **Full モード**: True  
+-   **フル モード**: True  
   
 **サポートされていない日付を置き換えます**  
-SSMA はできるだけ早くより前のアクセスの日付を修正する必要があるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime の日付 (1753 年 1 月 01日)。  
+SSMA は、最も古いより前のアクセスの日付を修正する必要があるかどうかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime の日付 (1753 年 1 月 1)。  
   
--   現在の日付値を保持する次のように選択します。**何もしない**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 列には、01 1753 年 1 月より前に、の日付を受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。  
+-   現在の日付値を保持する次のように選択します。**何**します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 列 01 1753 年 1 月より前に、の日付は受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。  
   
--   01 1753 年 1 月より前に、の日付を NULL に変換する選択**NULL 置き換えます**です。  
+-   01 1753 年 1 月より前に、の日付を NULL に変換する選択**を NULL**します。  
   
--   サポートされている日付の 01 1753 年 1 月より前に、の日付を置き換えるには選択**でサポートされる日付に最も近い置き換えます**です。 既定では最も近い値を選択した場合、サポートされている日付は 01 1753 年 1 月として選択されます。  
+-   サポートされている日付を 01 1753 年 1 月より前に、の日付を置き換えるには選択**サポートされている日付に最も近い置き換えます**します。 最も近い既定で、この値を選択した場合、01 1753 年 1 月としてサポートされている日付が選択されます。  
   
 **バッチ サイズ**  
-バッチ サイズがデータの移行時に使用します。 各バッチの後にトランザクションが記録されます。 既定では、すべてのスキームのバッチ サイズは 10000 です。  
+データ移行中に使用されるバッチ サイズ。 各バッチの後にトランザクションが記録されます。 既定では、すべての構成のバッチ サイズは 10000 です。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ユーザー インターフェイスの Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

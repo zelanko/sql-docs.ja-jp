@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f90bdf2966092f003e45b3bb6c8d80710875b59a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3f8e2957802d527a4e4845e95eedb2ea7cdcd375
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554252"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395943"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_チューニング\_(TRANSACT-SQL) の推奨事項
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "39554252"
 | **valid\_since** | **datetime2** | 最初にこの推奨事項が生成されました。 |
 | **last\_refresh** | **datetime2** | この推奨事項が生成された最後の時刻。 |
 | **state** | **nvarchar (4000)** | 推奨事項の状態を記述する JSON ドキュメントです。 次のフィールドを使用できます。<br />-   `currentValue` -推奨事項の現在の状態。<br />-   `reason` -定数を推奨事項は、現在の状態の理由について説明します。|
-| **is\_executable\_action** | **bit** | 1 = を使用してデータベースに対して実行できる推奨事項[!INCLUDE[tsql_md](../../includes/tsql_md.md)]スクリプト。<br />0 = データベースに対して、推奨事項を実行することはできません (例: についてのみ、または元に戻された推奨事項) |
+| **is\_executable\_action** | **bit** | 1 = を使用してデータベースに対して実行できる推奨事項[!INCLUDE[tsql_md](../../includes/tsql-md.md)]スクリプト。<br />0 = データベースに対して、推奨事項を実行することはできません (例: についてのみ、または元に戻された推奨事項) |
 | **\_revertable\_アクション** | **bit** | 1 = 推奨事項を自動的に監視し、データベース エンジンによって元に戻されます。<br />0 = 推奨事項を自動的に監視および元に戻すできることはできません。 ほとんど&quot;実行可能ファイル&quot;アクション&quot;revertable&quot;します。 |
 | **execute\_action\_start\_time** | **datetime2** | 推奨事項の適用の日付。 |
 | **execute\_action\_duration** | **time** | Execute アクションは、の期間です。 |
@@ -59,7 +59,7 @@ ms.locfileid: "39554252"
 | **revert\_action\_initiated\_by** | **nvarchar (4000)** | `User` = 推奨プランの手動で unforced ユーザー。 <br /> `System` = システムは、推奨事項を自動的に元に戻されます。 |
 | **元に戻す\_アクション\_開始\_時間** | **datetime2** | 日付は、推奨事項が元に戻されます。 |
 | **score** | **int** | この推奨事項では、0 ~ 100 の値または影響を推定スケール (が大きいほど良い) |
-| **details** | **nvarchar(max)** | 推奨事項の詳細を含む JSON ドキュメントです。 次のフィールドを使用できます。<br /><br />`planForceDetails`<br />-    `queryId` -クエリ\_後退したクエリの id。<br />-    `regressedPlanId` -後退したプランの plan_id します。<br />-   `regressedPlanExecutionCount` -、回帰の前に、後退したプランとクエリの実行の数が検出されました。<br />-    `regressedPlanAbortedCount` -後退したプランの実行中にエラーが検出された数。<br />-    `regressedPlanCpuTimeAverage` -平均 CPU 時間が、回帰が検出される前に、後退したクエリで使用します。<br />-    `regressedPlanCpuTimeStddev` 標準偏差、回帰の前に、後退したクエリによって消費される CPU 時間が検出されました。<br />-    `recommendedPlanId` -plan_id プランを強制する必要があります。<br />-   `recommendedPlanExecutionCount`-プランの回帰が検出される前に強制する必要がありますを使用して、クエリの実行回数です。<br />-    `recommendedPlanAbortedCount` -適用する必要があるプランの実行中にエラーが検出された数。<br />-    `recommendedPlanCpuTimeAverage` -平均 CPU 時間を強制する必要があります (計算、回帰が検出される前に) プランで実行されるクエリによって消費されます。<br />-    `recommendedPlanCpuTimeStddev` 回帰直線の前に、後退したクエリで使用された CPU 時間の標準偏差が検出されました。<br /><br />`implementationDetails`<br />-  `method` -メソッド、回帰を修正するために使用する必要があります。 値は常に`TSql`します。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 推奨されるプランを強制的に実行されるスクリプトです。 |
+| **details** | **nvarchar(max)** | 推奨事項の詳細を含む JSON ドキュメントです。 次のフィールドを使用できます。<br /><br />`planForceDetails`<br />-    `queryId` -クエリ\_後退したクエリの id。<br />-    `regressedPlanId` -後退したプランの plan_id します。<br />-   `regressedPlanExecutionCount` -、回帰の前に、後退したプランとクエリの実行の数が検出されました。<br />-    `regressedPlanAbortedCount` -後退したプランの実行中にエラーが検出された数。<br />-    `regressedPlanCpuTimeAverage` -平均 CPU 時間が、回帰が検出される前に、後退したクエリで使用します。<br />-    `regressedPlanCpuTimeStddev` 標準偏差、回帰の前に、後退したクエリによって消費される CPU 時間が検出されました。<br />-    `recommendedPlanId` -plan_id プランを強制する必要があります。<br />-   `recommendedPlanExecutionCount`-プランの回帰が検出される前に強制する必要がありますを使用して、クエリの実行回数です。<br />-    `recommendedPlanAbortedCount` -適用する必要があるプランの実行中にエラーが検出された数。<br />-    `recommendedPlanCpuTimeAverage` -平均 CPU 時間を強制する必要があります (計算、回帰が検出される前に) プランで実行されるクエリによって消費されます。<br />-    `recommendedPlanCpuTimeStddev` 回帰直線の前に、後退したクエリで使用された CPU 時間の標準偏差が検出されました。<br /><br />`implementationDetails`<br />-  `method` -メソッド、回帰を修正するために使用する必要があります。 値は常に`TSql`します。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 推奨されるプランを強制的に実行されるスクリプトです。 |
   
 ## <a name="remarks"></a>コメント  
  によって返される情報`sys.dm_db_tuning_recommendations`データベース エンジンは、潜在的なクエリ パフォーマンスの低下を識別し、永続化されていないときに更新されます。 推奨事項がまでのみ保持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 データベース管理者は、サーバーの再利用後も保持する場合は、チューニング推奨設定のバックアップ コピーを定期的に作成する必要があります。 

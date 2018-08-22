@@ -18,14 +18,14 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c14e4422f0033df05dc259ad180f4f2baa380e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982344"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395130"
 ---
-# <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA コンソール (SybaseToSQL) コマンド ライン オプション
+# <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA コンソールのコマンド ライン オプション (SybaseToSQL)
 Microsoft は、堅牢なコマンド ライン オプションを実行し、制御 SSMA アクティビティのセットを提供します。 次のセクションでは、同じについて説明します。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA コンソールのコマンド ライン オプション  
@@ -128,7 +128,7 @@ Microsoft は、堅牢なコマンド ライン オプションを実行し、�
 ### <a name="secure-password-option-psecurepassword"></a>セキュリティで保護されたパスワード オプション:-p/securepassword  
 このオプションでは、サーバー接続の暗号化パスワードを指定します。 その他のすべてのオプションとは異なる: オプションで任意のスクリプトの実行も移行に関連するアクティビティが、移行プロジェクトで使用するサーバー接続のパスワードの暗号化の管理を支援します。  
   
-コマンド ライン パラメーターとして他のオプションまたはパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細についてを参照してください、[管理パスワード](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)セクション。  
+コマンド ライン パラメーターとして他のオプションまたはパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細についてを参照してください、[管理パスワード](managing-passwords-sybasetosql.md)セクション。  
   
 次のサブ オプションはサポートされて`–p/securepassword`:  
   

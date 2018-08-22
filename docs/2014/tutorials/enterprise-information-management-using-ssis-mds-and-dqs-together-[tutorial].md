@@ -1,5 +1,5 @@
 ---
-title: SSIS、MDS、および [チュートリアル] の [DQS の組み合わせを使用した Enterprise Information Management |Microsoft Docs
+title: SSIS、MDS、および [チュートリアル] の DQS の組み合わせを使用した Enterprise Information Management |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf4106c531dbb1f386f8c1b6745f773bbe3c0f4b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a31abaefd1fe55e3df24fab24a35ed4af336ac
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189659"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396585"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS、MDS、DQS の組み合わせを使用した Enterprise Information Management [チュートリアル]
   企業の情報管理には、一般に、企業の枠を超えたデータ統合、データのクレンジング、データ照合による重複項目の削除、データの標準化、データの拡充、法的およびコンプライアンス条件に対するデータの準拠、および必要なすべてのセキュリティ設定によるデータの集中管理などの作業が含まれます。  
@@ -38,7 +38,7 @@ ms.locfileid: "37189659"
   
  SQL Server Data Quality Services (DQS) ではデータのクレンジング、照合、標準化、および拡充が可能なため、ビジネス インテリジェンス、データ ウェアハウス、およびトランザクション処理ワークロードに対して信頼できる情報を提供できます。 参照してください[Data Quality Services の概要](http://msdn.microsoft.com/library/ff877917.aspx)DQS とどのようにニーズに対する DQS のビジネス ニーズのためのトピックです。  
   
- SQL Server マスター データ サービス (MDS) の中央データ ハブは、情報の整合性とデータの一貫性がアプリケーション間で変化していないかどうかを確認します。 参照してください[マスター データ サービスの概要](http://msdn.microsoft.com/library/ff487003.aspx)MDS の重要な機能の簡単な説明のトピックです。  
+ SQL Server マスター データ サービス (MDS) の中央データ ハブは、情報の整合性とデータの一貫性がアプリケーション間で変化していないかどうかを確認します。 参照してください[マスター データ サービスの概要](../master-data-services/master-data-services-overview-mds.md)MDS の重要な機能の簡単な説明のトピックです。  
   
  参照してください[クレンジングと EIM テクノロジを使用して、一致するマスター データ](http://msdn.microsoft.com/library/hh403491.aspx)EIM ソリューションのこれらの Microsoft EIM テクノロジを組み合わせて使用し、ウォッチの実装についての包括的なホワイト ペーパー [EnterpriseInformation Management (EIM): SSIS、DQS、および MDS がまとめて終了する](http://go.microsoft.com/fwlink/?LinkId=258672)EIM シナリオのデモについてすばらしいビデオ。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "37189659"
   
     4.  SQL Server Data Tools  
   
-         参照してください[SQL Server 2012 インストール ガイド](http://msdn.microsoft.com/library/bb500469.aspx)詳細については、製品をインストールします。  
+         参照してください[SQL Server 2012 インストール ガイド](../database-engine/install-windows/installation-for-sql-server.md)詳細については、製品をインストールします。  
   
 2.  [マスター データ サービス構成マネージャーを使用して MDS を構成します。](http://msdn.microsoft.com/library/ee633884.aspx)  
   

@@ -18,14 +18,14 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5606acac52bae2a97d0be1f6844970e81c051376
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2323c7c53571285d0e34365783b8b8d501de10c5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982245"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394351"
 ---
-# <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA コンソール (OracleToSQL) コマンド ライン オプション
+# <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA コンソールのコマンド ライン オプション (OracleToSQL)
 Microsoft を実行し、SSMA アクティビティを制御する信頼性の高い一連のコマンド ライン オプションを提供します。 次のセクションでは、同じについて説明します。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA コンソールのコマンド ライン オプション  
@@ -128,7 +128,7 @@ Microsoft を実行し、SSMA アクティビティを制御する信頼性の�
 ### <a name="secure-password-option-psecurepassword"></a>セキュリティで保護されたパスワード オプション:-p/securepassword  
 このオプションでは、サーバー接続の暗号化パスワードを指定します。 その他のすべてのオプションとは異なる: オプションで任意のスクリプトの実行も移行に関連するアクティビティが、移行プロジェクトで使用するサーバー接続のパスワードの暗号化の管理を支援します。  
   
-コマンド ライン パラメーターとして他のオプションまたはパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細についてを参照してください、[管理パスワード](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c)セクション。  
+コマンド ライン パラメーターとして他のオプションまたはパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細についてを参照してください、[管理パスワード](managing-passwords-oracletosql.md)セクション。  
   
 次のサブ オプションはサポートされて`–p/securepassword`:  
   
