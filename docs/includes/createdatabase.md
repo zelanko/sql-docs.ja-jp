@@ -4,4 +4,4 @@
  [Azure ポータルを使用して数分で SQL データベースを作成する](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)
  
  ## <a name="microsoft-sql-server"></a>Microsoft SQL Server 
- [Microsoft SQL Server データベース製品のサンプル (CodePlex)](http://msftdbprodsamples.codeplex.com/)
+ [GitHub の Microsoft SQL Server のサンプル](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
