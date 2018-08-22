@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d1bb94b040aee5ba1db6870edc71e3153a3c7a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165713"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392216"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>タスク 12: 派生列変換を追加して MDS で必要な列を追加する
-  ここでは、派生列変換をデータ フローに追加します。 2 つの派生列を追加する**ImportType**と**BatchTag**レコードは、この変換に渡されます。 MDS のステージング テーブルにデータをアップロードする前に、これらの列を追加する必要があります。 これら 2 つは、MDS のステージング テーブルに必要な列です。 参照してください[リーフ メンバー ステージング テーブル](http://msdn.microsoft.com/library/ee633854.aspx)の詳細。  
+  ここでは、派生列変換をデータ フローに追加します。 2 つの派生列を追加する**ImportType**と**BatchTag**レコードは、この変換に渡されます。 MDS のステージング テーブルにデータをアップロードする前に、これらの列を追加する必要があります。 これら 2 つは、MDS のステージング テーブルに必要な列です。 参照してください[リーフ メンバー ステージング テーブル](../master-data-services/leaf-member-staging-table-master-data-services.md)の詳細。  
   
 1.  ドラッグ アンド ドロップ**派生列変換**から**共通**セクション、 **SSIS ツールボックス**を**データ フロー**タブ。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "37165713"
   
      ![SSIS 変数 ウィンドウ](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS 変数 ウィンドウ")  
   
-7.  型**ImportType**の**名前**と**2**の**値**します。 MDS のエンティティに新しいメンバーを追加するため、値には 2 を指定します。 詳細については、このパラメーターは、次を参照してください。[リーフ メンバー ステージング テーブル](http://msdn.microsoft.com/library/ee633854.aspx)します。  
+7.  型**ImportType**の**名前**と**2**の**値**します。 MDS のエンティティに新しいメンバーを追加するため、値には 2 を指定します。 詳細については、このパラメーターは、次を参照してください。[リーフ メンバー ステージング テーブル](../master-data-services/leaf-member-staging-table-master-data-services.md)します。  
   
 8.  クリックして**変数の追加**ツール バー ボタンをもう一度です。  
   

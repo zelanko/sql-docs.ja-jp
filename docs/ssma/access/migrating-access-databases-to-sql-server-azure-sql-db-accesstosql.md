@@ -1,5 +1,5 @@
 ---
-title: SQL Server - Azure SQL DB への Access データベースの移行 |Microsoft ドキュメント
+title: SQL Server - Azure SQL DB への Access データベースの移行 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,48 +22,48 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 7690a6962c27536ef8923b127dd2786db954a7b2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f3552b4617d4579be7beebccae357b417ea6a563
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774058"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393511"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server - Azure SQL DB (AccessToSQL) へのアクセス データベースの移行
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) は短時間に Access データベースを移行するのに役立つ包括的な環境を提供するツール[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 SSMA を使用すると、アクセスを確認することができ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベース オブジェクト、Access データベースの移行の評価、データベース オブジェクトに変換、読み込みに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、し、データを移行します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) は、すばやくへの Access データベースを移行するのに役立つ包括的な環境を提供するツール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 SSMA を使用すると、アクセス権をレビューできますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース オブジェクト、Access データベースの移行の評価、Access データベース オブジェクトを変換、読み込みに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、し、データを移行します。  
   
 ## <a name="recommended-migration-process"></a>推奨される移行プロセス  
-正常に移行するオブジェクトとデータへのアクセスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、次のプロセスを使用します。  
+アクセスをオブジェクトとデータを正常に移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、次のプロセスを使用します。  
   
-1.  [新しい SSMA プロジェクトを作成](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)です。 プロジェクトを作成することができます[プロジェクト オプションを設定](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)(換算オプションの設定、移行オプション、およびデータ型のマッピングなど)。  
+1.  [新しい SSMA プロジェクト作成](creating-and-managing-projects-accesstosql.md)です。 後に、プロジェクトを作成する[プロジェクト オプションを設定](setting-conversion-and-migration-options-accesstosql.md)(変換オプションの移行オプション、データ型のマッピングなど)。  
   
-2.  [Access データベース ファイルを追加](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)をプロジェクトにします。  
+2.  [Access データベース ファイルを追加](adding-and-removing-access-database-files-accesstosql.md)をプロジェクトにします。  
   
-    コンピューターまたはネットワーク上にあるファイルを含む、個別のファイルを追加することができます。  
+    コンピューターまたはネットワーク上にあるファイルを含む、個々 のファイルを追加することができます。  
   
-3.  [SQL Server のターゲット インスタンスに接続する](http://msdn.microsoft.com/f84cf007-ddf1-4396-a07c-3e0729abc769)または[SQL Azure のターゲット インスタンスに接続する](http://msdn.microsoft.com/1ba0d113-dc05-4431-8689-e14a8821bafd)です。  
+3.  [SQL Server のターゲット インスタンスに接続する](connecting-to-sql-server-accesstosql.md)または[SQL Azure のターゲット インスタンスに接続する](connecting-to-azure-sql-db-accesstosql.md)します。  
   
     SQL Server または SQL Azure に接続できます。  
   
-4.  1 つまたは複数の Access データベースの間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure スキーマ[マップ ソースとターゲット データベース](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)です。  
+4.  1 つ以上の Access データベースの間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のスキーマ、[マップ ソースとターゲット データベース](mapping-source-and-target-databases-accesstosql.md)します。  
   
-5.  ことができます必要に応じて、[評価レポートを作成する](http://msdn.microsoft.com/8b9e23d6-da62-437a-8c05-8ad2628b9441)に Access データベース オブジェクトを正常に変換するかどうかを決定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  
+5.  必要に応じて、できます[評価レポートを作成する](assessing-access-database-objects-for-conversion-accesstosql.md)に Access データベースのオブジェクトを正常に変換するかどうかを判断する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
   
-6.  [データベース オブジェクトを変換](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクトの定義。  
+6.  [Access データベース オブジェクトを変換](converting-access-database-objects-accesstosql.md)に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトの定義。  
   
-7.  [SQL Server に変換後のデータベース オブジェクトを読み込む](http://msdn.microsoft.com/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)します。  
+7.  [SQL Server に変換されたデータベース オブジェクトを読み込む](loading-converted-database-objects-into-sql-server-accesstosql.md)します。  
   
-    データベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA、またはを使用して SQL Azure に保存したり[!INCLUDE[tsql](../../includes/tsql_md.md)]スクリプト。  
+    データベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]保存、SSMA を使用して SQL Azure または[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト。  
   
-8.  [SQL Server にデータへのアクセスを移行](http://msdn.microsoft.com/f3b18af7-1af0-499d-a00d-a0af94895625)です。  
+8.  [SQL Server にデータへのアクセスを移行](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)します。  
   
     > [!NOTE]  
-    > 変換し、読み込むには、スキーマと 1 つの手順でデータを移行できます。 1 回のクリックの移行を実行する をクリックして、**変換、読み込み、および移行**ボタンをクリックします。  
+    > 変換、読み込み、およびスキーマと 1 つの手順でデータを移行することができます。 1 回のクリックの移行を実行する をクリックして、**変換、読み込み、および移行**ボタンをクリックします。  
   
-9. ユーザー アクセス アプリケーション内のデータを使用するかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure を使用して[SQL Server テーブルにアクセス テーブルをリンク](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)です。  
+9. Access アプリケーションのデータを使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure を使用して[Access テーブル、SQL Server テーブルをリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)します。  
   
-またにこのプロセスを指示するのに、移行ウィザードを使用することができます。 詳細については、次を参照してください。[移行ウィザード](http://msdn.microsoft.com/5bab5914-b2ae-4795-8cf5-83e42d64bef2)です。  
+このプロセスを指示するのに、移行ウィザードを使用することもできます。 詳細については、次を参照してください。[移行ウィザード](migration-wizard-accesstosql.md)します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Migration Assistant for Access の概要](http://msdn.microsoft.com/462a731f-08f1-44e1-9eeb-4deac6d2f6c5)  
-[Access データベースの移行の準備](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)
+[SQL Server Migration Assistant for Access の概要](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+[Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)

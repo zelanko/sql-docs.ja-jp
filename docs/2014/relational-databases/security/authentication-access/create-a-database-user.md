@@ -26,12 +26,12 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299972"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392622"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
   このトピックでは、ログインにマップされるデータベース ユーザーを作成する方法を説明します[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../../includes/tsql-md.md)]します。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在することを前提としています。 ログインを作成する方法については、次を参照してください。[ログインを作成する](create-a-login.md)します。  
@@ -111,7 +111,7 @@ ms.locfileid: "37299972"
      オブジェクトの拡張プロパティを表示または指定します。 各拡張プロパティは、オブジェクトに関連付けられたメタデータの名前/値ペアで構成されています。  
   
      **省略記号 [...]**  
-     **[値]** の後ろにある省略記号 **[...]** をクリックすると、 **[拡張プロパティの値]** ダイアログ ボックスが開きます。 ここでは、より大きなテキスト ボックスを使用して拡張プロパティの値を入力または表示できます。 詳細については、「 [拡張プロパティの値ダイアログ ボックス](http://msdn.microsoft.com/library/ms189353.aspx)」を参照してください。  
+     **[値]** の後ろにある省略記号 **[...]** をクリックすると、 **[拡張プロパティの値]** ダイアログ ボックスが開きます。 ここでは、より大きなテキスト ボックスを使用して拡張プロパティの値を入力または表示できます。 詳細については、「 [拡張プロパティの値ダイアログ ボックス](../../databases/value-for-extended-property-dialog-box.md)」を参照してください。  
   
      **削除**  
      選択されている拡張プロパティを削除します。  

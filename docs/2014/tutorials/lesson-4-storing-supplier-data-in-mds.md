@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 778e28463c8fcb6b46a59e5929801dd56c819186
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180949"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393314"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>レッスン 4: MDS に仕入先データを格納する
   マスター データ サービス (MDS) は、マスター データ管理用の SQL Server ソリューションです。 マスター データ管理 (MDM) とは、データの非トランザクション リストを探索および定義するために組織が必要とする作業を表します。  
@@ -30,9 +30,9 @@ ms.locfileid: "37180949"
   
  モデルには 1 つ以上のエンティティを含めることができます。 各エンティティには属性 (列) とメンバー (行) があります。 各行にはマスター データが含まれます。 このレッスンでは、Supplier および State という 2 つのエンティティを持つ Suppliers モデルを作成します。 Supplier エンティティには、Code、Name、Contact First Name、Contact Last Name、Contact Email Address、Address Line、City、State、Zip、および Country の属性があります。 参照してください[属性 (マスター データ サービス)](http://msdn.microsoft.com/library/ee633745.aspx)詳細については詳細属性に関する一般にします。 Code および Name 属性は、Cleansed and Matched Suppliers Excel ファイルの SupplierID および Supplier Name 列に対応します。  
   
- ドメイン ベースの属性とは、別のエンティティからのメンバーによって値が設定される属性です。 ドメイン ベースの属性では、ユーザーは有効でない属性値を入力できません。 属性値は、別のエンティティによって設定されるドロップダウン リストからのみ選択できます。 このチュートリアルでは、Supplier エンティティの State 属性は State エンティティからの値を含むドメイン ベースの属性です。 Supplier エンティティの State 属性の値は、State エンティティのいずれかの値にのみ変更できます。 参照してください[ドメイン ベース属性](http://msdn.microsoft.com/library/ff487058.aspx)の詳細。  
+ ドメイン ベースの属性とは、別のエンティティからのメンバーによって値が設定される属性です。 ドメイン ベースの属性では、ユーザーは有効でない属性値を入力できません。 属性値は、別のエンティティによって設定されるドロップダウン リストからのみ選択できます。 このチュートリアルでは、Supplier エンティティの State 属性は State エンティティからの値を含むドメイン ベースの属性です。 Supplier エンティティの State 属性の値は、State エンティティのいずれかの値にのみ変更できます。 参照してください[ドメイン ベース属性](../master-data-services/domain-based-attributes-master-data-services.md)の詳細。  
   
- MDS 内の派生階層は、モデル内に存在するドメイン ベースの属性のリレーションシップにから派生します。 このチュートリアルでは、Supplier エンティティと State エンティティ間の派生階層を作成します。 派生階層を作成すると、マスター データ マネージャーのブラウザーに状態の一覧が表示されます。 一覧から状態をクリックすると、選択した状態の仕入先が右ペインに表示されます。 このリレーションシップに基づいて派生階層を後で作成します。 参照してください[派生階層](http://msdn.microsoft.com/library/ee633747.aspx)の詳細。  
+ MDS 内の派生階層は、モデル内に存在するドメイン ベースの属性のリレーションシップにから派生します。 このチュートリアルでは、Supplier エンティティと State エンティティ間の派生階層を作成します。 派生階層を作成すると、マスター データ マネージャーのブラウザーに状態の一覧が表示されます。 一覧から状態をクリックすると、選択した状態の仕入先が右ペインに表示されます。 このリレーションシップに基づいて派生階層を後で作成します。 参照してください[派生階層](../master-data-services/derived-hierarchies-master-data-services.md)の詳細。  
   
  DQS でナレッジ ベースを作成し、仕入先データのクレンジングと照合に使用して、結果を Cleansed and Matched Supplier Data.xls ファイルに保存しました。 このレッスンでは、クレンジングおよび照合済みのデータを MDS にアップロードします。 DQS にはデータ (メタデータ) に関するナレッジだけが含まれ、MDS はデータ自体 (マスター セット) を保存します。 たとえば、DQS に複数の仕入先に関するナレッジが含まれている場合でも、MDS は会社が使用する仕入先のみを管理します。  
   

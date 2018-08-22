@@ -1,132 +1,165 @@
 ---
-title: SQL Server での R 開発用のデータ サイエンス クライアントのセットアップ |Microsoft ドキュメント
+title: SQL Server での R 開発用データ サイエンス クライアントのセットアップ |Microsoft Docs
+description: SQL Server へのリモート接続用の開発ワークステーションにローカルの R ライブラリとツールをインストールします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dd0b420630846382b9d7cf456352bb606a4f0040
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f88c8d715fabb5af8d1af49c3b39b3aa0734c369
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204564"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40434842"
 ---
-# <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server での R 開発用のデータ サイエンス クライアントのセットアップします。
+# <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server での R 開発用のデータ サイエンス クライアントの設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-インスタンスを構成した後[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]機械学習をサポートするためには、リモート実行および配置用サーバーに接続できる開発環境を設定する必要があります。
+インスタンスを構成した後[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]機械学習をサポートするためには、リモート実行および配置のサーバーに接続できる R 開発環境を設定する必要があります。
 
-この記事では、SQL Server で R コードを実行する無料の Visual Studio Community エディションの構成を含む、いくつかの一般的なクライアント シナリオについて説明します。
-
-## <a name="install-r-libraries-on-the-client"></a>クライアントでの R ライブラリをインストールします。
-
-クライアント環境には、Microsoft R Open に加えて、SQL Server 上での R の分散的実行をサポートする RevoScaleR パッケージを含める必要があります。 R の標準のディストリビューションの R タスクの並列実行やリモート計算コンテキストをサポートするパッケージではありません。
-
-これらのライブラリを取得するには、次のいずれかをインストールします。
-  
-+ [Microsoft R Client](http://aka.ms/rclient/download)
-
-+ Microsoft R Server (for SQL Server 2016)
-
-    - SQL Server のセットアップからインストールするを参照してください[インストール SQL Server 2016 R Server (スタンドアロン)。](../install/sql-r-standalone-windows-install.md)
-
-    - 別の Windows ベースのインストーラーを使用するのを参照してください[Machine Learning Server for Windows のインストール。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
-
-+ 機械学習の (SQL Server 2017) 用サーバー
-
-    - SQL Server のセットアップからインストールするを参照してください[SQL Server サーバーをインストール 2017 Machine Learning (スタンドアロン)。](../install/sql-machine-learning-standalone-windows-install.md)
-
-    - 別の Windows ベースのインストーラーを使用するのを参照してください[Windows 用の R Server 9.1 のインストール。](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
-
-## <a name="r-tools"></a>R のツール
-
-いずれかでインストールされているのと同じ R ツールを取得する SQL Server で R をインストールするときに**基本**RGui、Rterm などの R のインストール。 このため実際があるすべてのツールを開発し、R コードをテストする必要があります。
-
-次の標準的な R ツールが含まれている、*基本インストール*R のし、そのため、既定でインストールされます。
-
-+ **RTerm**: R スクリプトを実行するためのコマンド ライン ターミナル
-
-+ **RGui.exe**:  R のための単純な対話型エディター。コマンドライン引数は RGui.exe と RTerm で同じです。
-
-+ **RScript**: R スクリプトをバッチ モードで実行するためのコマンドライン ツール。
-
-これらのツールを検索するには、SQL Server または機能を学習するスタンドアロンのマシンを設定するときにインストールされた R ライブラリを決定します。 たとえば、既定のインストールでは、R ツールはこれらのフォルダーにあります。
-
-+ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
-+ Microsoft R Server のスタンドアロン: `~\Program Files\Microsoft R\R_SERVER\bin\x64`
-+ SQL Server 2017 マシン サービスを学習します。 `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
-+ 機械学習のサーバー (スタンドアロン)。 `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
-
-R ツールのヘルプを必要がある場合は、開く**RGui**をクリックして**ヘルプ**オプションのいずれかを選択
-
-## <a name="microsoft-r-client"></a>Microsoft R Client
-
-Microsoft R クライアントは、開発用に、RevoScaleR パッケージに対するアクセスを提供する無料でダウンロードします。 R のクライアントをインストールするには、SQL Server データベース内の分析、および Hadoop、Spark、または Machine Learning のサーバーを使用して Linux 上の分散 R コンピューティングを含む、すべてのサポートされているコンピューティング コンテキストで実行できる R ソリューションを作成できます。
-
-別の R 開発環境が既にインストールされている場合 RStudio などは、ライブラリおよび Microsoft R クライアントによって提供される実行可能ファイルを使用する環境を再構成します。 により、RevoScaleR パッケージのすべての機能を使用することができますが、パフォーマンスが制限されます。
-
-詳細については、次を参照してください。 [Microsoft R クライアントは何ですか。](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
-
-## <a name="install-a-development-environment"></a>開発環境をインストールします。
-
-優先の R 開発環境がない場合、次のいずれかのお勧めします。
-
-+ R Tools for Visual Studio
-
-    Visual Studio 2015 で動作します。
-
-    セットアップについては、次を参照してください。 [R Tools for Visual Studio のインストール方法](https://docs.microsoft.com/visualstudio/rtvs/installation)です。
+### <a name="evaluation-and-independent-development"></a>評価と独立した開発
  
-    Microsoft R クライアント ライブラリを使用する RTVS を構成するのを参照してください[Microsoft R Client について。](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
+Developer edition および SQL Server に移動する場合、R スクリプトをローカルで作業する計画があれば、進んでに[IDE をインストールする](#install-ide)を SQL Server で使用されるローカルの R ライブラリ、ツールをポイントします。
 
-+ Visual Studio 2017
+> [!Tip]
+> デモとビデオ チュートリアルでは、次を参照してください。 [R を実行し、Jupyter Notebook または任意の IDE から SQL Server にリモートで Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)またはこの[YouTube ビデオ](https://youtu.be/D5erljpJDjE)します。
 
-    無料の Community Edition でもには、R、Python、および f# のプロジェクト テンプレートがインストールされるデータ サイエンス ワークロードが含まれています。
+## <a name="1---install-r-packages"></a>1 - R パッケージをインストールします。
 
-    Visual Studio からのダウンロード[このサイト](https://www.visualstudio.com/vs/)です。 
+Microsoft 製品での R 機能は、多階層です。 Microsoft のオープン ソース基本 R ディストリビューションから始まりますがなど、製品固有のパッケージで拡張し、 [RevoScaleR](revoscaler-overview.md)、リモート計算コンテキストと R タスクの並列実行を有効にします。
 
-+ RStudio
+クライアントとリモート サーバーの間の連携した操作には、両方のシステムと同じパッケージが必要です。 クライアント ワークステーション上のライブラリの完全な補完を取得するには、次の表にソフトウェア パッケージの 1 つをインストールします。 
 
-    RStudio を使用する場合は、RevoScaleR ライブラリを使用するために追加の手順が必要です。
+| ライブラリのプロバイダー | 使用方法  |
+|------------------|--------------------------------|
+| [Microsoft R Client](http://aka.ms/rclient/download) |  この無料のダウンロードは、RevoScaleR、MicrosoftML、およびその他の R パッケージを提供しますは 2 つのスレッドとメモリ内のデータに制限されます。 ただし、ローカルで起動する R ソリューションを作成し、できます実行のシフト (と呼ばれる*コンピューティング コンテキスト*) データへのアクセスとリモートの SQL Server インスタンスの計算能力にします。 これは、実稼働 SQL Server インスタンスとクライアントの統合の推奨されるアプローチです。 このツールの詳細については、次を参照してください。 [Microsoft R Client は](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)します。|
+| スタンドアロン サーバー | **共有機能**、SQL Server セットアップには、SQL Server 2016 R Services および SQL Server 2017 の machine learning 用のスタンドアロン サーバー インストール オプションが含まれています。 これらは、フル機能のサーバーに接続し、複数のデータ プラットフォームからデータを使用することができます、SQL Server から完全に分離します。 R と Python のタスクを実行している SQL Server データベース エンジン インスタンスにアクセスするクライアントの容量でソフトウェアを使用すること可能性がある可能性があります。 [SQL Server 2017 Machine Learning Server (スタンドアロン)](../install/sql-machine-learning-standalone-windows-install.md)が SQL Server 2017 machine learning のインスタンスとして同じライブラリです。 [SQL Server 2016 R Server (スタンドアロン)](../install/sql-r-standalone-windows-install.md)が SQL Server 2016 R Services と同じライブラリです。 |
 
-    - 必要なパッケージとライブラリを取得する Microsoft R クライアントをインストールします。
-    - Microsoft R ランタイムを使用する R パスを更新します。
 
-    詳細については、次を参照してください。 [R クライアントの構成、IDE](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client#step-2-configure-your-ide)です。
-
-## <a name="configure-your-ide"></a>IDE を構成します。
-
-+ R Tools for Visual Studio
-
-    参照してください[このサイト](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)ビルドし、R をデバッグする方法の例をいくつかのプロジェクト R Tools for Visual Studio を使用します。 
-
-+ Visual Studio 2017
-
-    Microsoft R クライアントまたは R サーバーをインストールする場合**する前に**Visual Studio をインストールして、R サーバー ライブラリを自動的に検出され、ライブラリ パスに使用します。 RevoScaleR ライブラリをインストールしていないかどうか、 **R ツール**メニューの  **R クライアントのインストール**です。
-
-## <a name="run-r-in-sql-server"></a>SQL Server で R を実行します。
-
-この例では、インストールされている、データ サイエンスのワークロードで Visual Studio の 2017 Community Edition を使用します。
-
-1. **ファイル**メニューの **新規**し、**プロジェクト**です。
-
-2. 手の形は、ウィンドウには、プレインストールされたテンプレートの一覧が含まれています。 をクリックして**R**を選択して**R プロジェクト**です。 **名前**ボックスに、入力`dbtest` をクリック**OK**です。
-
-3. Visual Studio は、フォルダーの新しいプロジェクトと既定のスクリプト ファイルが作成されます。`Script.R`です。 
-
-4. 型`.libPaths()`スクリプトの最初の行にファイルを開き、ctrl キーを押しながら ENTER キーを押します。
-
-5. 現在の R ライブラリ パスを表示するか、 **R 対話型**ウィンドウです。 
-
-6. をクリックして、 **R ツール**メニュー **Windows**ワークスペースに表示できる他の R に固有のウィンドウの一覧を表示します。
+<a name="r-tool"></a>
  
-    + 現在のライブラリ内のパッケージにヘルプを表示するには、CTRL + 3 です。
-    + R の変数を参照してください、**変数エクスプ ローラー**CTRL + 8 です。
+## <a name="2---open-an-r-prompt"></a>2 - R プロンプトを開きます
 
-7. SQL Server のインスタンスへの接続文字列を作成し、RxInSqlServer コンス トラクターで接続文字列を使用して、SQL Server データ ソース オブジェクトを作成します。 
+SQL Server で R をインストールするときに、RGui や Rterm などの R の基本インストールに標準的な同じ R ツールを取得します。 これらのツールは、軽量でパッケージとライブラリの情報を確認するか、アドホック コマンドまたはスクリプトを実行するか、またはチュートリアルのステップ実行する場合に便利です。 これらのツールを使用して、R バージョン情報を取得し、接続を確認することができます。
+
+SQL Server または R Client にインストールされている R のバージョンを使用するには、SQL Server または R Client のプログラム フォルダーから、R のプロンプトを開きます。 次の手順は R クライアントおよび RGui.exe です。
+
+1. R Client を参照してください`~\Program Files\Microsoft\R Client\R_SERVER\bin\x64`します。
+2. ダブルクリック**RGui.exe** R コマンド プロンプトで R セッションを開始します。
+
+Microsoft のプログラム フォルダーから R セッションを起動すると、RevoScaleR の場合を含め、いくつかのパッケージが自動的に読み込みます。 入力**法による search()** R プロンプトを確認します。
+
+   ![R の読み込み時にバージョン情報](../install/media/rclient-rgui-r-prompt.png "R プロンプトを開く")
+
+### <a name="tool-list-and-location"></a>ツールの一覧と場所
+
+| ツール | 説明 | 
+|------|-------------|
+| **RTerm**: | R スクリプトを実行するためのコマンド ライン ターミナル | 
+| **RGui.exe** | R 向けの単純な対話型エディターコマンドラインの引数は、RGui.exe と RTerm で同じです。 |
+| **RScript** | バッチ モードでの R スクリプトを実行するためのコマンド ライン ツールです。 |
+
+ツールがある**bin**としてインストールされている SQL Server の基本の R または R Client 用のフォルダー。 次のパスとは、インストールされている製品バージョンと機能によって、ツールの有効な場所です。
+
+| Microsoft の製品 | R ツールの場所 |
+|-------------------|-----------------|
+| Microsoft R Client | `~\Program Files\Microsoft\R Client\R_SERVER\bin\x64` |
+| Microsoft Machine Learning (R) サーバー | `~\Program Files\Microsoft\R_SERVER\bin\x64`
+| SQL Server 2016 R Services | `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`|
+| SQL Server 2016 R スタンドアロン サーバー | `~\Program Files\Microsoft SQL Server\130\R_SERVER\bin\x64` 
+| SQL Server 2017 の Machine Learning (R) のサービス | `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`|
+| SQL Server 2017 Machine Learning (R) スタンドアロン サーバー | `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` |
+
+## <a name="3---permissions"></a>3-アクセス許可
+
+スクリプトを実行してデータをアップロードする SQL Server のインスタンスに接続するには、データベース サーバーで有効なログインが必要です。 SQL ログインまたは統合 Windows 認証を使用できます。 私たちは一般に、Windows 統合認証を使用するが、いくつかのシナリオが簡単では SQL ログインを使用することお勧めします。
+
+少なくともコードを実行するために使用するアカウントを使用すると、特殊なアクセス許可が、外部スクリプトを実行、データベースから読み取る権限が必要です。 ほとんどの開発者も、スクリプトを含むストアド プロシージャの形式で新しいオブジェクトを作成するアクセス許可が必要しトレーニング データを含むテーブルにデータを書き込むまたはデータをスコア付けします。 
+
+R: を使用するデータベースで、アカウントの次のアクセス許可を構成するデータベース管理者に問い合わせてください。
+
++ **EXECUTE ANY EXTERNAL SCRIPT**サーバー上で R を実行します。
++ **db_datareader**モデルのトレーニングに使用するクエリを実行する特権。
++ **db_datawriter**トレーニング データまたはスコア付けされたデータを書き込む。
++ **db_owner**ストアド プロシージャなどのオブジェクトを作成するテーブル、関数。 
+  必要もあります**db_owner** sample と test のデータベースを作成します。 
+
+コードは、既定では、SQL Server がインストールされていないパッケージを必要とする場合は、インスタンスにインストールされているパッケージを作成するデータベース管理者に配置します。 SQL Server は、セキュリティで保護された環境とはパッケージをインストールできる場所に制限があります。 パッケージのコードの一部としてアドホックのインストールは使用しないで、権限を持っている場合でもです。 また、server ライブラリの新しいパッケージをインストールする前に、セキュリティに影響を常に慎重に検討します。
+
+> [!Tip]
+> SQL Server とローカル開発環境での作業に慣れていない場合は、ログインとアクセス許可の設定の詳細については、このチュートリアルをステップすることができます: [RevoScaleR をさらに探究](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+
+## <a name="4---test-connections"></a>4 - 接続をテストします。
+
+SQL Server を有効にする必要があります[リモート接続](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)などのユーザー ログインとデータベースに接続するためのアクセス許可が必要とします。 以下の手順は、デモ データベース[NYCTaxi_Sample](../tutorials/sqldev-download-the-sample-data.md)と Windows 認証。
+
+ 検証手順として、組み込みのツールと RevoScaleR を使用して、リモート サーバーへの接続を確認します。
+
+1. まず[、R ツールを開く](#r-tool)クライアント ワークステーションにします。 RevoScaleR を自動的に読み込みます。 たとえばに移動`~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` をダブルクリックします**RGui.exe**を開始します。
+
+2. デモ データセットに関する統計情報の要約を返します。 このコマンドを実行して、RevoScaleR が動作を確認します。 SQL Server データベース エンジンのインスタンスの有効なサーバー名を指定することを確認します。
+
+```r
+connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=TaxiNYC_Sample;Trusted_Connection=true"
+testQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+cc <-RxInSqlServer(connectionString=connStr)
+rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionString=connStr), computeContext=cc)
+```
+このスクリプトはリモート サーバー上のデータベースに接続、クエリを提供する、コンピューティング コンテキストを作成します`cc`、リモートでコードを実行するための命令が RevoScaleR 関数を提供し、 **rxSummary**統計を返すクエリ結果の概要です。
+
+<a name="install-ide"></a>
+
+## <a name="5---install-an-ide"></a>5 - IDE をインストールします。
+
+持続的なおよび重大な開発プロジェクトでは、統合開発環境 (IDE) をインストールする必要があります。 SQL Server のツールと組み込みの R ツールは、負荷の高い R 開発ツールが備わっていません。 作業中のコードをした後は、SQL Server で実行するためのストアド プロシージャとしてデプロイできます。
+
+ローカルの R ライブラリをお使いの IDE をポイントする必要があります: R、RevoScaleR などの基本です。 スクリプトがデータとそのサーバー上の操作にアクセスする SQL Server でリモート コンピューティング コンテキストを呼び出すと、スクリプトの実行中に発生リモート SQL サーバーでワークロードを実行します。
+
+### <a name="rstudio"></a>RStudio
+
+使用する場合[RStudio](https://www.rstudio.com/)、R ライブラリとリモートの SQL Server 上に対応する実行可能ファイルを使用する環境を構成することができます。
+
+1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、次を参照してください。[取得の R パッケージ情報](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)します。
+
+1. Microsoft R Client または RevoScaleR と SQL Server インスタンスで使用される基本の R ディストリビューションを含め、その他の R パッケージを追加するスタンドアロン サーバー オプションのいずれかをインストールします。 レベル以下で、同じバージョンを選択します (パッケージは、旧バージョンと互換性のある) サーバー上のものと同じパッケージ バージョンを提供します。 バージョンについては、この記事ではマップのバージョンを参照してください:[アップグレード R および Python コンポーネント](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
+
+1. Rstudio に、 [R パスを更新](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)RevoScaleR、Microsoft R Open、およびその他の Microsoft パッケージを提供する R 環境を指すようにします。 入手方法に応じて RevoScaleR とその他のライブラリでは、次のパスのいずれかがほとんどです。
+
+  + C:\Program files \microsoft SQL Server\130\R_SERVER\Library
+  + C:\Program files \microsoft SQL Server\140\R_SERVER\Library
+  + C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+
+### <a name="r-tools-for-visual-studio-rtvs"></a>R Tools for Visual Studio (RTVS)
+
+推奨かどうかは、R の好きな IDE を既にがない、 **R Tools for Visual Studio**します。
+
++ [Visual Studio (RTVS) の R Tools をダウンロードします。](https://visualstudio.microsoft.com/vs/features/rtvs/)
++ [インストール手順](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio)RTVS は Visual Studio の複数のバージョンで使用できます。
++ [Visual Studio の R ツールを概要します。](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
+
+### <a name="connect-to-sql-server-from-rtvs"></a>RTVS から SQL Server に接続します。
+
+この例では、データ サイエンスのワークロードがインストールされた Visual Studio 2017 Community Edition を使用します。
+
+1. **ファイル**メニューの **新規**選び**プロジェクト**します。
+
+2. 左側のウィンドウには、プレインストールされているテンプレートの一覧が含まれています。 クリックして**R**、選択および**R プロジェクト**します。 **名前**ボックスに「 `dbtest`  をクリック**OK**します。 
+
+  Visual Studio では、新しいプロジェクト フォルダーと既定のスクリプト ファイルを作成します。`Script.R`します。 
+
+3. 型`.libPaths()`スクリプトの最初の行にファイル、および ctrl キーを押しながら ENTER キーを押します。
+
+  現在の R ライブラリ パスを表示するか、 **R インタラクティブ**ウィンドウ。 
+
+4. をクリックして、 **R Tools**メニュー選択し、 **Windows**ワークスペースに表示できる他の R 固有ウィンドウの一覧を表示します。
+ 
+    + 現在のライブラリ内のパッケージで ctrl キーを押しながら 3 を押してヘルプを表示します。
+    + R の変数を参照してください、**変数エクスプ ローラー**CTRL + 8。
+
+5. SQL Server インスタンスへの接続文字列を作成し、RxInSqlServer コンス トラクターで接続文字列を使用して、SQL Server データ ソース オブジェクトを作成します。 
 
     ```r
     connStr <- "Driver=SQL Server;Server=MyServer;Database=MyTestDB;Uid=;Pwd="
@@ -137,17 +170,23 @@ Microsoft R クライアントは、開発用に、RevoScaleR パッケージに
     sampleDataQuery <- "SELECT TOP 100 * from [dbo].[MyTestTable]"
     inDataSource <- RxSqlServerData(sqlQuery = sampleDataQuery, connectionString = connStr, rowsPerRead = 500)
     ```
-
     > [!TIP]
-    > バッチを実行するを実行し、ctrl キーを押しながら ENTER キーを押してする行を選択します。
+    > バッチを実行するを実行し、ctrl キーを押しながら ENTER キーを押してたい行を選択します。
 
-8. サーバーに、計算コンテキストを設定し、データの単純な R コードを実行します。
+6. サーバーに、コンピューティング コンテキストを設定し、データの単純な R コードを実行します。
 
     ```r
     rxSetComputeContext(cc)
     rxGetVarInfo(data = inDataSource)
     ```
 
-    結果が返される、 **R 対話型**ウィンドウです。
+    結果が返されます、 **R インタラクティブ**ウィンドウ。
     
-    自分でコードが SQL Server インスタンスで実行されていることを保証する場合は、Profiler を使用してトレースを作成することができます。
+    SQL Server インスタンスで、コードが実行されていることを確認する場合は、Profiler を使用してトレースを作成することができます。
+
+## <a name="next-steps"></a>次のステップ
+
+異なる 2 つのチュートリアルには、リモートの SQL Server インスタンスからローカルのコンピューティング コンテキストの切り替えを行うように、演習が含まれます。
+
++ [SQL Server のデータのチュートリアル: 使用 RevoScaleR の R 関数](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [データ サイエンスのエンド ツー エンド チュートリアル](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

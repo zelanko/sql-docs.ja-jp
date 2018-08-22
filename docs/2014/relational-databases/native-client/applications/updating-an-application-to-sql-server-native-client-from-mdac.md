@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 476a0798431b05e939ff2f0f493a3023b44b5826
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 02aebb2c9a40139515f68c1755f1b1440e973828
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083464"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392401"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC (Microsoft Data Access Components) には多くの違いがあります (Windows Vista 以降、このデータ アクセス コンポーネントは Windows DAC (Windows Data Access Components) と呼ばれています)。 どちらを使用しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへのネイティブ データ アクセスは可能ですが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、旧バージョンとの互換性を維持しながら、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の新機能を公開することを主眼において作成されています。  

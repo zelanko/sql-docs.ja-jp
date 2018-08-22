@@ -19,15 +19,15 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4690c8db938d53dd290ce642a7fa4ae3884b2a29
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a66311fcb2a02e5366fad180a648bcdce117dec8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982564"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393541"
 ---
-# <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL と SQL Server データ型 (MySQLToSQL) のマッピング
-MySQL データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースの型。 MySQL のデータベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のオブジェクトから MySQL へのデータ型をマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  
+# <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL と SQL Server データ型のマッピング (MySQLToSQL)
+MySQL データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースの型。 MySQL のデータベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトから MySQL へのデータ型をマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
 SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクト設定&#40;型マッピングの&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)します。  
@@ -86,7 +86,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
     2.  **[削除]** をクリックします。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順は、いずれかに[評価レポートを作成する](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec)または[変換の MySQL データベースのオブジェクトを SQL Server または SQL Azure の構文に](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7)します。 レポートを作成する場合、MySQL のオブジェクトは、評価時に自動的に変換されます。  
+移行プロセスの次の手順は、いずれかに[評価レポートを作成する](assessing-mysql-databases-for-conversion-mysqltosql.md)または[変換の MySQL データベースのオブジェクトを SQL Server または SQL Azure の構文に](converting-mysql-databases-mysqltosql.md)します。 レポートを作成する場合、MySQL のオブジェクトは、評価時に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

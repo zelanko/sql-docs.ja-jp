@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 19da91838703adc4ae224a645e1f0a6e65fe032c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983874"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396378"
 ---
 # <a name="roles-object-tmsl"></a>Roles オブジェクト (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38983874"
                   および管理者。 参照してください[ロールとアクセス許可&#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)データベース アクセス許可についてはします。  
   
  メンバー  
- メンバーは、メンバーの名前と ID、メンバー名がエイリアスまたは、Windows セキュリティ プリンシパルのフレンドリ名、ID はセキュリティ識別子の両方で構成されます。 ロールの定義の両方を指定します。参照してください[SID コンポーネント](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx)詳細については、識別子。  
+ メンバーは、メンバーの名前と ID、メンバー名がエイリアスまたは、Windows セキュリティ プリンシパルのフレンドリ名、ID はセキュリティ識別子の両方で構成されます。 ロールの定義の両方を指定します。参照してください[SID コンポーネント](/windows/desktop/SecAuthZ/sid-components)詳細については、識別子。  
   
  テーブル アクセス許可  
  テーブルのアクセス許可は、DAX 式を使用して定義されているアクセス許可を持つ名前付きオブジェクトです。 このプロパティは省略可能でセキュリティ フィルターを適用するために使用します。  

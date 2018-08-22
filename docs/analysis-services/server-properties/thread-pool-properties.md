@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050603"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393730"
 ---
 # <a name="thread-pool-properties"></a>スレッド プール プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -273,9 +273,9 @@ ms.locfileid: "38050603"
 >  プロパティの設定方法については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [プロセスとスレッドの概要](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [複数のプロセッサ](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [プロセッサ グループ](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [プロセスとスレッドの概要](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [複数のプロセッサ](/windows/desktop/ProcThread/multiple-processors)   
+ [プロセッサ グループ](/windows/desktop/ProcThread/processor-groups)   
  [SQL server 2012 analysis Services のスレッド プールの変更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 の構成設定 (Wordpress ブログ)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [64 を超えるプロセッサを搭載したシステムのサポート](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

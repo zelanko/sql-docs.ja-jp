@@ -1,5 +1,5 @@
 ---
-title: SSMA MySQL コンソール (MySQLToSQL) 用の操作 |Microsoft ドキュメント
+title: SSMA for MySQL コンソール (MySQLToSQL) の操作 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -16,34 +16,34 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 871dd3bd3ea440ff0430d37b8d476c99cb07c0a2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3a3802661ea919083c1e058a186810719d80a38a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776798"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393539"
 ---
-# <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>SSMA MySQL コンソール (MySQLToSQL) 用の操作
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for MySQL では、コマンドラインで、コンソール アプリケーションからアクセスできるようになりました。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとして SSMA スクリプト レベルのやり取りを有効に、移行サイクルが減少し、移行作業のスケールを設定します。  
+# <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL コンソールの使用 (MySQLToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for MySQL は、コマンドラインでコンソール アプリケーションからアクセスできるようになりました。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとしては、SSMA はにより、スクリプト レベルのインターフェイス、移行サイクルが削減され、移行作業を拡大または縮小します。  
   
-このセクションでは、SSMA コンソール アプリケーションを使用して、MySQL データベースを移行する手順について説明します。  
+このセクションでは、SSMA コンソール アプリケーションを使用して MySQL データベースを移行する手順について説明します。  
   
-このセクションで説明されているトピックは次のとおりです。  
+このセクションで説明したトピックは次のとおりです。  
   
 |||  
 |-|-|  
-|**トピック**|**description**|  
-|[MySQL コンソール for SSMA の概要&#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|コンソール アプリケーションを実行する手順について説明します。|  
-|[SSMA コンソールでのコマンド ライン オプション&#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|SSMA コンソール アプリケーションを操作するには、コマンド ライン オプションとパラメーターについて説明します。|  
-|[スクリプト ファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|スクリプト ファイルを作成する方法について説明します。|  
-|[変数の値のファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)|変数値ファイルを作成する方法について説明します。|  
+|**トピック**|**[説明]**|  
+|[Ssma for MySQL コンソール作業の開始&#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|コンソール アプリケーションを実行する手順について説明します。|  
+|[SSMA コンソールのコマンド ライン オプション&#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|SSMA コンソールのアプリケーションを操作するには、コマンド ライン オプションとパラメーターについて説明します。|  
+|[スクリプト ファイルの作成&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|スクリプト ファイルを作成する方法について説明します。|  
+|[変数値ファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)|変数値ファイルを作成する方法について説明します。|  
 |[サーバー接続ファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)|サーバー接続ファイルを作成する方法について説明します。|  
-|[SSMA コンソールを実行する&#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|SSMA コンソール アプリケーションを操作するコマンドをスクリプト ファイルについて説明します。|  
-|[サンプルのコンソールのスクリプト ファイルで作業&#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|製品と共にファイルのサンプルで提供されているスクリプトを簡単にカスタマイズする方法について説明します|  
-|[パスワードを管理する&#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|パスワードの暗号化と復号化、およびインポート/エクスポートのパスワードの情報について説明します。|  
-|[レポートの生成&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|レポートを生成するコマンドを一覧表示します。|  
+|[SSMA コンソールの実行&#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|SSMA コンソールのアプリケーションを操作するコマンドをスクリプト ファイルについて説明します。|  
+|[サンプルのコンソール スクリプト ファイルを扱う&#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|製品と共にファイルのサンプルで提供されているスクリプトを簡単にカスタマイズする方法について説明します|  
+|[パスワードの管理&#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|パスワードの暗号化と復号化、およびインポート/エクスポートのパスワードの情報について説明します。|  
+|[レポートを生成する&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|レポートを生成するコマンドが表示されます。|  
 |[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|移行に関する問題の解決方法に関する簡単な情報を提供します。|  
   
 ## <a name="see-also"></a>参照  
-[MySQL コンソール for SSMA の概要](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
+[Ssma for MySQL コンソール作業の開始](getting-started-with-ssma-for-mysql-console-mysqltosql.md)  
   

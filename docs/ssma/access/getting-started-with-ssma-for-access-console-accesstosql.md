@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0e2a7465cc46e5ca2bb69ba4c7ef61dd85bf9882
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3a218ba28025f882d96cdfc122ceda01464419a3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985404"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393762"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Ssma for Access コンソール (AccessToSQL) 作業の開始
 このセクションを起動し、Access のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  
@@ -48,9 +48,9 @@ SSMA コンソール アプリケーションを起動するのにには、次�
   
 追加機能:  
   
-1.  [パスワードを指定して](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4)とエクスポート]、[ウィンドウの他のマシンにインポート  
+1.  [パスワードを指定して](managing-passwords-accesstosql.md)とエクスポート]、[ウィンドウの他のマシンにインポート  
   
-2.  [レポートの生成](http://msdn.microsoft.com/abb4264a-622e-4215-af5b-14e309b8a399)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
+2.  [レポートの生成](generating-reports-accesstosql.md)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力の規則  
 SSMA スクリプト コマンドとオプションを実行すると、コンソール プログラムは、コンソールのユーザーに、結果とメッセージ (情報、エラーなど) を表示します。 または、必要な場合は、xml 出力ファイルにリダイレクトします。 一意の色では、各種のメッセージが出力に表されます。 たとえば、白のカラーにテキスト メッセージがスクリプト ファイルのコマンドを表します緑のカラーで 1 つとユーザーの入力を求めるプロンプトを表します。  
@@ -69,5 +69,5 @@ SSMA スクリプト コマンドとオプションを実行すると、コン�
 |シアン|開始、終了日と操作の結果|  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Migration Assistant for Access をインストールします。](http://msdn.microsoft.com/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
+[SQL Server Migration Assistant for Access をインストールします。](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

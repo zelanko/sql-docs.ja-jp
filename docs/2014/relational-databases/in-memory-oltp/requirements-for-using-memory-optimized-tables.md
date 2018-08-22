@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -16,12 +15,12 @@ caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f4b47ee3a3f4274ca94175060f10722fa45b6693
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66edebe05c59ca8bcb0d755f3e6d530718cf1388
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190392"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392433"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
   加え、 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、インメモリ OLTP を使用するための要件を次に示します。  
@@ -42,7 +41,7 @@ ms.locfileid: "37190392"
   
 -   インメモリ OLTP をインストールする選択**データベース エンジン サービス**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
   
-     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-[詳細設定]** インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
+     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-[詳細設定]** インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] の使用に関する重要な注意事項  
   
@@ -56,7 +55,7 @@ ms.locfileid: "37190392"
   
 -   多数の行を一括処理で削除しようとした場合に、削除対象の行範囲に影響する同時実行の挿入または更新ワークロードが存在すると、削除は失敗する可能性があります。 回避策は、削除を行う前に挿入または更新ワークロードを停止することです。 また、トランザクションを分割し、同時実行ワークロードによって妨害されにくい小さなトランザクションに構成することもできます。 すべての書き込み、メモリ最適化テーブルでの操作と、同様の再試行ロジックを使用して、([Retry Logic for Transactions on Memory-Optimized Tables に関するガイドライン](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md))。  
   
--   メモリ最適化テーブルが含まれるデータベースを 1 つ以上作成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対してファイルの瞬時初期化を有効にする ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス開始アカウントに SE_MANAGE_VOLUME_NAME ユーザー権限を付与する) 必要があります。 ファイルの瞬時初期化を使用しない場合、メモリ最適化ストレージ ファイル (データ ファイルとデルタ ファイル) が作成時に初期化されるため、ワークロードのパフォーマンスが低下する場合があります。 ファイルの瞬時初期化に関する詳細については、「 [データベース ファイルの初期化](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx)」をご覧ください。 ファイルの瞬時初期化を有効にする方法については、「 [How and Why to Enable Instant File Initialization (ファイルの瞬時初期化を有効にする方法と理由)](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)」をご覧ください。  
+-   メモリ最適化テーブルが含まれるデータベースを 1 つ以上作成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対してファイルの瞬時初期化を有効にする ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス開始アカウントに SE_MANAGE_VOLUME_NAME ユーザー権限を付与する) 必要があります。 ファイルの瞬時初期化を使用しない場合、メモリ最適化ストレージ ファイル (データ ファイルとデルタ ファイル) が作成時に初期化されるため、ワークロードのパフォーマンスが低下する場合があります。 ファイルの瞬時初期化に関する詳細については、「 [データベース ファイルの初期化](../databases/database-instant-file-initialization.md)」をご覧ください。 ファイルの瞬時初期化を有効にする方法については、「 [How and Why to Enable Instant File Initialization (ファイルの瞬時初期化を有効にする方法と理由)](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)」をご覧ください。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
  どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page) にコメントをお送りください。  

@@ -35,24 +35,24 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f188e762ada8dd4f6da324af9e8ba6bfb8c28942
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b624a8375f0726dc73b8b71af7a75d0756e52e60
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983364"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395009"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>追加および Access データベース ファイル (AccessToSQL) を削除します。
-アクセス データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure では、SSMA プロジェクトに 1 つ以上の Access データベースを追加する必要があります。 これらのデータベースは、Access 97 または以降のバージョンである必要があります。 アクセスの以前のバージョンからのデータベースがある場合より新しいバージョンにデータベースを変換する必要があります。 これには開くして SSMA に追加する前に、Access 97 以降のバージョンでデータベースを保存します。  
+アクセス データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、SSMA プロジェクトに 1 つ以上の Access データベースを追加する必要があります。 これらのデータベースは、Access 97 または以降のバージョンである必要があります。 アクセスの以前のバージョンからのデータベースがある場合より新しいバージョンにデータベースを変換する必要があります。 これには開くして SSMA に追加する前に、Access 97 以降のバージョンでデータベースを保存します。  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>Access データベース ファイルを追加するとどうなりますか。  
-SSMA プロジェクトに Access データベースを追加して SSMA は、データベースのメタデータを読み取るし、このメタデータをプロジェクト ファイルを追加します。 このメタデータには、データベースとそのオブジェクトについて説明します。 SSMA は、オブジェクトを変換するときに、メタデータを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の構文にデータを移行するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 アクセス メタデータ エクスプ ローラーでこのメタデータを参照して、個々 のデータベース オブジェクトのプロパティを確認できます。  
+SSMA プロジェクトに Access データベースを追加して SSMA は、データベースのメタデータを読み取るし、このメタデータをプロジェクト ファイルを追加します。 このメタデータには、データベースとそのオブジェクトについて説明します。 SSMA は、オブジェクトを変換するときに、メタデータを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の構文にデータを移行するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 アクセス メタデータ エクスプ ローラーでこのメタデータを参照して、個々 のデータベース オブジェクトのプロパティを確認できます。  
   
 > [!NOTE]  
-> Access データベースは、複数のファイルに分割することができます。 テーブルを含むバックエンド データベースとクエリ、フォーム、レポート、マクロ、モジュール、およびショートカットが含まれているフロント エンドのデータベース。 分割データベースを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、SSMA をフロント エンドのデータベースを追加します。  
+> Access データベースは、複数のファイルに分割することができます。 テーブルを含むバックエンド データベースとクエリ、フォーム、レポート、マクロ、モジュール、およびショートカットが含まれているフロント エンドのデータベース。 分割データベースを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、SSMA をフロント エンドのデータベースを追加します。  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>SSMA で必要なアクセス許可  
-Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、ユーザー グループと管理者のユーザーには、管理のアクセス許可が必要です。 ワークグループの保護を持つデータベースを移行する方法については、次を参照してください[Access データベースを移行の準備。](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、ユーザー グループと管理者のユーザーには、管理のアクセス許可が必要です。 ワークグループの保護を持つデータベースを移行する方法については、次を参照してください。 [Access データベースを移行の準備](preparing-access-databases-for-migration-accesstosql.md)します。  
   
 ## <a name="selecting-databases-to-add"></a>追加するデータベースの選択  
 SSMA プロジェクトでは、1 つまたは複数のデータベースを追加して、ファイルはすべて 1 つの既知の場所に場合、は、次の手順を使用して、ファイルを追加できます。  
@@ -138,6 +138,6 @@ Access データベースは、次の手順に従って、プロジェクトか�
 移行プロセスの次の手順が、 [SQL Server に接続](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[作成して、プロジェクトの管理](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[作成して、プロジェクトの管理](creating-and-managing-projects-accesstosql.md)  
   

@@ -36,29 +36,29 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9519ef6b157b1f1d951b93c791f856d6066e7b19
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3db879598974e798c91fc274c0c2dff0d2205358
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981934"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395006"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access データベース オブジェクト (AccessToSQL) に変換します。
-Access データベースを追加してに接続した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、SSMA は、アクセスのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースのオブジェクト。 これで Access データベースのオブジェクトを選択してへのスキーマを変換し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のスキーマ。  
+Access データベースを追加してに接続した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、SSMA は、アクセスのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのオブジェクト。 これで Access データベースのオブジェクトを選択してへのスキーマを変換し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のスキーマ。  
   
 ## <a name="the-conversion-process"></a>変換プロセス  
-データベース オブジェクトの変換ではアクセス メタデータからオブジェクト定義が相当に変換する[!INCLUDE[tsql](../../includes/tsql_md.md)]構文、し、プロジェクトにこの情報を読み込みます。 表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のオブジェクトとそのプロパティを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラー。  
+データベース オブジェクトの変換ではアクセス メタデータからオブジェクト定義が相当に変換する[!INCLUDE[tsql](../../includes/tsql-md.md)]構文、し、プロジェクトにこの情報を読み込みます。 表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトとそのプロパティを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラー。  
   
 > [!IMPORTANT]  
-> オブジェクトの変換でオブジェクトを作成しません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 のみ、オブジェクトの定義を変換し、SSMA プロジェクトで情報を格納します。  
+> オブジェクトの変換でオブジェクトを作成しません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 のみ、オブジェクトの定義を変換し、SSMA プロジェクトで情報を格納します。  
   
-変換中は、SSMA は状態を出力ウィンドウ、およびエラー、警告、およびエラー一覧ペインに情報メッセージを出力します。 この情報を使用して、Access データベースまたは必要な変換の結果を得るため、変換プロセスを変更する必要があるかどうか判断します。 内の情報を使用することもできます、 [Access データベースを移行の準備](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)トピックを確認し、変換されません。  
+変換中は、SSMA は状態を出力ウィンドウ、およびエラー、警告、およびエラー一覧ペインに情報メッセージを出力します。 この情報を使用して、Access データベースまたは必要な変換の結果を得るため、変換プロセスを変更する必要があるかどうか判断します。 内の情報を使用することもできます、 [Access データベースを移行の準備](preparing-access-databases-for-migration-accesstosql.md)トピックを確認し、変換されません。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
 オブジェクトを変換する前に、プロジェクトの変換オプションを確認して、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA がインデックス付きのメモ列、主キー、外部キー制約、タイムスタンプ、およびインデックスなしテーブルに変換する方法を設定できます。 詳細については、次を参照してください[プロジェクトの設定 (変換)。](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>変換結果  
-次の表は、変換されますが、オブジェクトのアクセスと、その結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクト。  
+次の表は、変換されますが、オブジェクトのアクセスと、その結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure オブジェクト。  
   
 |オブジェクトにアクセス|SQL Server オブジェクトの結果として得られる|  
 |-----------------|-------------------------------|  
@@ -107,11 +107,11 @@ Access データベース オブジェクトを変換するには、最初に変
 4.  メッセージを確認して、**出力**ウィンドウおよびエラーと警告で、**エラー一覧**ウィンドウ。  
   
 ## <a name="altering-tables-and-indexes"></a>テーブルとパーティション インデックスの変更  
-メタデータにアクセスを変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]や SQL Azure メタデータを使ってオブジェクトを読み込む前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または変更できる SQL Azure、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure テーブルとパーティション インデックス。  
+メタデータにアクセスを変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]や SQL Azure メタデータを使ってオブジェクトを読み込む前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または変更できる SQL Azure、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure テーブルとパーティション インデックス。  
   
 **テーブルまたはインデックスのプロパティを変更するには**  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラーで、テーブルまたはインデックスを変更するを選択します。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラーで、テーブルまたはインデックスを変更するを選択します。  
   
 2.  **テーブル** タブで、変更をし、入力するか、新しい設定を選択するプロパティをクリックします。 たとえば、nvarchar (20)、nvarchar (15) に変更したり、テーブル列を null 許容にする チェック ボックスをオンにできます。  
   
@@ -122,8 +122,8 @@ Access データベース オブジェクトを変換するには、最初に変
 コードの変更を表示できるようになりました、 **SQL**タブ。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスでは、次の手順は[SQL Server に変換されたデータベース オブジェクトを読み込む](http://msdn.microsoft.com/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)  
+移行プロセスでは、次の手順は[SQL Server に変換されたデータベース オブジェクトを読み込む](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

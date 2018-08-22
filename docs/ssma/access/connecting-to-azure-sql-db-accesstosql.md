@@ -25,12 +25,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f54e23ee744f34ce3da70e1fd2a469d70b9063a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2b2ca3145c4152db92be0e55a4484c09727eaadb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983934"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392205"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL) への接続
 Access データベースを SQL Azure に移行するには、SQL Azure のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は SQL Azure のインスタンスのすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA では、SQL Azure のインスタンスについてに接続しているがパスワードを保存しない情報を格納します。  
@@ -42,14 +42,14 @@ SQL Azure のインスタンスに関するメタデータは、自動的に同�
 ## <a name="required-sql-azure-permissions"></a>SQL Azure に必要なアクセス許可  
 SQL Azure への接続に使用されるアカウントには、アカウントで実行された操作に応じてさまざまなアクセス許可が必要です。  
   
--   アクセス オブジェクトに変換する[!INCLUDE[tsql](../../includes/tsql_md.md)]スクリプトの構文は、SQL Azure からメタデータを更新するかに変換された構文を保存する、アカウントは SQL Azure のインスタンスにログオンする権限が必要です。  
+-   アクセス オブジェクトに変換する[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトの構文は、SQL Azure からメタデータを更新するかに変換された構文を保存する、アカウントは SQL Azure のインスタンスにログオンする権限が必要です。  
   
 -   を SQL Azure にデータベース オブジェクトを読み込むにはアクセス許可の最小要件、メンバーシップ、 **db_owner**ターゲット データベースのデータベース ロール。  
   
 ## <a name="establishing-a-sql-azure-connection"></a>SQL Azure を確立する接続  
 Access データベース オブジェクトを SQL Azure の構文に変換する前に、Access データベースまたはデータベースを移行する SQL Azure のインスタンスへの接続を確立する必要があります。  
   
-接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 SQL Azure に接続した後は、アクセス、スキーマ レベルでは、このマッピングをカスタマイズできます。 詳細については、次を参照してください[Access データベースを SQL Server スキーマへのマッピング。](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 SQL Azure に接続した後は、アクセス、スキーマ レベルでは、このマッピングをカスタマイズできます。 詳細については、次を参照してください[Access データベースを SQL Server スキーマへのマッピング。](mapping-source-and-target-databases-accesstosql.md)  
   
 > [!IMPORTANT]  
 > SQL Azure に接続する前に、SQL Azure のインスタンスが実行されていて、接続を受け入れることを確認します。  
@@ -105,14 +105,14 @@ SQL Azure に再接続するための手順では、接続を確立するため�
 ## <a name="next-step"></a>次の手順  
 移行の次の手順は、プロジェクトのニーズによって異なります。  
   
--   Access スキーマと SQL Azure データベースとスキーマ間のマッピングをカスタマイズするを参照してください。 [SQL Server スキーマへのマッピングの Access データベース](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)します。  
+-   Access スキーマと SQL Azure データベースとスキーマ間のマッピングをカスタマイズするを参照してください。 [SQL Server スキーマへのマッピングの Access データベース](mapping-source-and-target-databases-accesstosql.md)します。  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)します。  
+-   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定](setting-conversion-and-migration-options-accesstosql.md)します。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング ソースとターゲットのデータ型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)します。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング ソースとターゲットのデータ型](mapping-source-and-target-data-types-accesstosql.md)します。  
   
--   これらのタスクを実行する必要はありません場合、Access データベース オブジェクトの定義を SQL Azure のオブジェクトの定義に変換できます。 詳細については、次を参照してください[Access データベースの変換。](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   これらのタスクを実行する必要はありません場合、Access データベース オブジェクトの定義を SQL Azure のオブジェクトの定義に変換できます。 詳細については、次を参照してください[Access データベースの変換。](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

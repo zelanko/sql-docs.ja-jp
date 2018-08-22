@@ -1,5 +1,5 @@
 ---
-title: サーバー接続ファイル (OracleToSQL) |Microsoft ドキュメント
+title: サーバー接続ファイル (OracleToSQL) の作成 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776958"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395396"
 ---
-# <a name="creating-the-server-connection-files-oracletosql"></a>サーバー接続ファイル (OracleToSQL) を作成します。
-スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバー情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターは、`-c <serverconnectionfile>`です。 サーバーと同じ id が、スクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
+# <a name="creating-the-server-connection-files-oracletosql"></a>サーバー接続ファイルの作成 (OracleToSQL)
+スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバーの情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターがで`-c <serverconnectionfile>`します。 同じサーバー id がスクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
   
 **例 1:**  
   
@@ -106,8 +106,8 @@ ms.locfileid: "34776958"
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソールを実行する&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[SSMA コンソールの実行](executing-the-ssma-console-oracletosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_stop_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_stop_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67e1476e8f0612796e3f31644aca192c2c25a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e057b6c0178ca87803aede7d83c2054aac852f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258697"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393309"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,12 +70,12 @@ sp_stop_job
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **sp_stop_job**データベースに停止シグナルを送信します。 一部のプロセスをすぐに停止して、いくつかは、安定したポイント (または、コード パスのエントリ ポイント) に到達する必要があります未然に防ぐことができます。 いくつか実行時間の長い[!INCLUDE[tsql](../../includes/tsql-md.md)]バックアップ、復元、および一部の DBCC コマンドなどのステートメントは完了までに時間かかることができます。 これらが実行されている場合に、ジョブが取り消されるまでは、しばらくがかかる場合があります。 ジョブを停止すると、ジョブが取り消されたことを示すエントリがジョブ履歴に記録されます。  
+## <a name="remarks"></a>コメント  
+ **sp_stop_job**停止信号をデータベースに送信します。 一部のプロセスをすぐに停止して、いくつかは、安定したポイント (または、コード パスのエントリ ポイント) に到達する必要があります未然に防ぐことができます。 いくつか実行時間の長い[!INCLUDE[tsql](../../includes/tsql-md.md)]バックアップ、復元、および一部の DBCC コマンドなどのステートメントは完了までに時間かかることができます。 これらが実行されている場合に、ジョブが取り消されるまでは、しばらくがかかる場合があります。 ジョブを停止すると、ジョブが取り消されたことを示すエントリがジョブ履歴に記録されます。  
   
- 型のステップがジョブで実行されているかどうかは**CmdExec**または**PowerShell**、実行中のプロセス (MyProgram.exe など) は途中で強制終了します。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 その結果、 **sp_stop_job**ジョブには、型のステップが含まれている場合に、極端な状況でのみ使用する必要があります**CmdExec**または**PowerShell**です。  
+ ジョブが現在型のステップを実行するかどうかは**CmdExec**または**PowerShell**、実行中のプロセス (MyProgram.exe など) は途中で強制終了します。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 その結果、 **sp_stop_job**ジョブには、型のステップが含まれている場合、極端な状況でのみ使用する必要があります**CmdExec**または**PowerShell**します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -84,12 +84,12 @@ sp_stop_job
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバー **SQLAgentUserRole**と**SQLAgentReaderRole**だけ、自分が所有するジョブを停止できます。 メンバー **SQLAgentOperatorRole**など他のユーザーによって所有されているすべてのローカル ジョブを停止することができます。 メンバー **sysadmin**すべてローカル ジョブおよびマルチ サーバー ジョブを停止することができます。  
+ メンバーの**SQLAgentUserRole**と**SQLAgentReaderRole**だけ自分が所有するジョブを停止できます。 メンバーの**SQLAgentOperatorRole**他のユーザーによって所有されているものも含め、すべてのローカル ジョブを停止することができます。 メンバーの**sysadmin**すべてローカル ジョブおよびマルチ サーバー ジョブを停止することができます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、という名前のジョブを停止`Weekly Sales Data Backup`です。  
+ 次の例は、という名前のジョブを停止`Weekly Sales Data Backup`します。  
   
 ```  
 USE msdb ;  

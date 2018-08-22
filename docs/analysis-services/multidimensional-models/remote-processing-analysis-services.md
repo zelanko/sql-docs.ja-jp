@@ -1,5 +1,5 @@
 ---
-title: リモート処理 (Analysis Services) |Microsoft ドキュメント
+title: リモート処理 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e7afa72ef5a2f3ad9c27f0d8586b622c033be73
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022309"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395802"
 ---
 # <a name="remote-processing-analysis-services"></a>リモート処理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34022309"
 -   リモート処理を試みる前に、既存のローカル処理エラーを解決します。 処理要求がローカルの場合、外部リレーショナル データ ソースからデータを正常に取得できることを確認します。 データの取得に使用する資格情報を指定する手順については、「[権限借用オプションの設定 &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)」をご覧ください。  
   
 ## <a name="on-demand-remote-processing"></a>オンデマンドのリモート処理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]持つユーザーまたはアプリケーション アカウントから処理要求を受け入れます[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理者のアクセス許可。 管理者は、リモート インスタンスに接続し、リモート接続でデータベースを手動で処理できることを確認します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者権限を持つユーザー アカウントまたはアプリケーション アカウントからの処理要求を受け入れます。 管理者は、リモート インスタンスに接続し、リモート接続でデータベースを手動で処理できることを確認します。  
   
 1.  処理のスケジュールを設定する際に使用するコンピューターで、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を起動し、リモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続します。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "34022309"
   
  次のリンクを使用して権限を設定します。  
   
--   [SQL Server エージェントの構成](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [SQL Server エージェントの構成](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [sysadmin](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) 権限を付与することができない場合、 **SQL Server エージェントのコンポーネント** は代替の固定サーバー ロールを提示します。  
+-   [sysadmin](../../ssms/agent/sql-server-agent.md) 権限を付与することができない場合、 **SQL Server エージェントのコンポーネント** は代替の固定サーバー ロールを提示します。  
   
  アカウントの権限を構成したら、以下の手順を続行します。  
   
@@ -91,10 +91,10 @@ ms.locfileid: "34022309"
 2.  最後の手順として、ジョブを管理するために必要な警告や通知を追加して、定義したスケジュールで実行するようにジョブを変更します。 また、処理スクリプトを調整したり、ジョブ内に複数のステップを作成してオブジェクトを個別に処理したりできます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェント コンポーネント](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [SQL Server エージェント コンポーネント](../../ssms/agent/sql-server-agent.md)   
  [SQL Server エージェントで SSAS 管理タスクのスケジュール設定](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [バッチ処理 & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [バッチ処理&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [オブジェクトの処理 & #40 です。XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [オブジェクトの処理&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

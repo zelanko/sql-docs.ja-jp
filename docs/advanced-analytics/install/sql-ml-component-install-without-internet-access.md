@@ -1,6 +1,6 @@
 ---
-title: インターネットへのアクセスなしの SQL Server machine learning コンポーネントのインストール |マイクロソフトのドキュメント
-description: オフラインまたは未接続 Machine Learning R および Pytyon セットアップ分離の SQL Server インスタンスにします。
+title: SQL Server の学習のインターネット アクセスなしでコンポーネントを R と Python のインストール |Microsoft Docs
+description: オフラインまたは未接続 Machine Learning R と Python でセットアップ分離の SQL Server インスタンス。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546262"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437652"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>SQL Server コンピューターがインターネットにアクセスできないコンピューターで R と Python の機能の学習のインストールします。
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server マシンがインターネットにアクセスできないコンピューターでの R と Python の学習のインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 既定では、インストーラーが必要なを取得する、Microsoft ダウンロード サイトに接続しての更新されたコンポーネントでの機械学習 SQL Server。 ファイアウォールの制約は、これらのサイトからインストーラーを防ぐため場合、は、ファイルをダウンロード、サーバーがオフラインにファイルを転送し、セットアップを実行して、インターネットに接続されたデバイスを使用できます。

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_schedule (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14fd520f5447092e5f82dc786696148f3dbe3bd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a531b3673320e3c1e521e68c511e21b7976d1af
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255946"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393059"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,15 +48,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [ **@schedule_id=** ] *schedule_id*  
  削除するスケジュールの識別番号を指定します。 *schedule_id*は**int**、既定値は NULL です。  
   
-> **注:** か*schedule_id*または*schedule_name*指定する必要がありますが両方指定することはできません。  
+> **注:** か*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@schedule_name=** ] **'***schedule_name***'**  
  削除するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値は NULL です。  
   
-> **注:** か*schedule_id*または*schedule_name*指定する必要がありますが両方指定することはできません。  
+> **注:** か*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@force_delete** =] *force_delete*  
- スケジュールがジョブに関連付けられている場合にプロシージャを失敗させるかどうかを指定します。 *Force_delete*は bit で、既定値は**0**します。 ときに*force_delete*は**0**、ストアド プロシージャ、スケジュールがジョブにアタッチされている場合は失敗します。 ときに*force_delete*は**1**スケジュールをジョブにアタッチするかどうかに関係なく、スケジュールを削除します。  
+ スケジュールがジョブに関連付けられている場合にプロシージャを失敗させるかどうかを指定します。 *Force_delete*は bit で、既定値は、 **0**します。 ときに*force_delete*は**0**、ストアド プロシージャ、スケジュールがジョブに関連付けられている場合は失敗します。 ときに*force_delete*は**1**スケジュールをジョブにアタッチするかどうかに関係なく、スケジュールを削除します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -64,10 +64,10 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- 既定では、スケジュールがジョブに関連付けられている場合、スケジュールを削除することはできません。 ジョブに関連付けられているスケジュールを削除するには、値を指定**1**の*force_delete*です。 スケジュールを削除しても、現在実行中のジョブは停止しません。  
+## <a name="remarks"></a>コメント  
+ 既定では、スケジュールがジョブに関連付けられている場合、スケジュールを削除することはできません。 ジョブに関連付けられているスケジュールを削除するには、値を指定**1**の*force_delete*します。 スケジュールを削除しても、現在実行中のジョブは停止しません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -78,14 +78,14 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  ジョブ所有者は、同時にスケジュール所有者にならなくても、ジョブをスケジュールにアタッチしたり、スケジュールからデタッチしたりできます。 ただし、呼び出し元がスケジュール所有者ではない場合、デタッチによってスケジュールにジョブがなくなっても、スケジュールを削除することはできません。  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーにのみ、 **sysadmin**ロールは、別のユーザーによって所有されているジョブのスケジュールを削除できます。  
+ メンバーのみ、 **sysadmin**ロールは、別のユーザーによって所有されているジョブのスケジュールを削除できます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-deleting-a-schedule"></a>A. スケジュールを削除する  
- 次の例は、スケジュールを削除`NightlyJobs`です。 スケジュールがジョブに関連付けられている場合、この例ではスケジュールは削除されません。  
+ 次の例は、スケジュールを削除`NightlyJobs`します。 スケジュールがジョブに関連付けられている場合、この例ではスケジュールは削除されません。  
   
 ```  
 USE msdb ;  
@@ -110,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ジョブの実装](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [ジョブの実装](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

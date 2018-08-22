@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90d213daa9d5a17a6630142e06e5b7ef441a9e9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b4f55f1c4dd0d83f7db9f92027f95bcfeea7ad7c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262915"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393055"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  内部使用です。  
   
  [ **@delete_history=** ] *delete_history*  
- ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**、既定値は**1**です。 ときに*delete_history*は**1**ジョブのジョブ履歴は削除します。 ときに*delete_history*は**0**、ジョブ履歴は削除されません。  
+ ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**、既定値は**1**します。 ときに*delete_history*は**1**ジョブのジョブ履歴は削除します。 ときに*delete_history*は**0**、ジョブ履歴は削除されません。  
   
- ジョブが削除され、履歴は削除されませんが、ときに、ジョブの履歴情報は表示されませんで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント グラフィカル ユーザー インターフェイスのジョブ履歴が、この情報は存在して、 **sysjobhistory**テーブルに、 **msdb**データベース。  
+ ジョブの削除し、履歴は削除されませんが、ジョブの履歴情報が表示されないように注意してください、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント グラフィカル ユーザー インターフェイスのジョブ履歴が、この情報は存在、 **sysjobhistory**テーブルに、 **msdb**データベース。  
   
  [  **@delete_unused_schedule=** ] *@delete_unused_schedule*  
- このジョブにアタッチされたスケジュールが他のジョブにはアタッチされていない場合、そのスケジュールを削除するかどうかを指定します。 *@delete_unused_schedule*は**ビット**、既定値は**1**です。 ときに *@delete_unused_schedule*は**1**、他のジョブにスケジュールが参照されていない場合、このジョブにアタッチされたスケジュールは削除されます。 ときに *@delete_unused_schedule*は**0**スケジュールは削除されません。  
+ このジョブにアタッチされたスケジュールが他のジョブにはアタッチされていない場合、そのスケジュールを削除するかどうかを指定します。 *@delete_unused_schedule*は**ビット**、既定値は**1**します。 ときに *@delete_unused_schedule*は**1**、他のジョブにスケジュールが参照されていない場合、このジョブにアタッチされたスケジュールは削除されます。 ときに *@delete_unused_schedule*は**0**スケジュールは削除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -73,16 +73,16 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **@originating_server**引数は内部使用に予約されています。  
+## <a name="remarks"></a>コメント  
+ **@originating_server**引数は内部使用のため予約されています。  
   
- **@delete_unused_schedule**引数は自動的にすべてのジョブにアタッチされていないスケジュールを削除して SQL Server の以前のバージョンとの下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、値を指定する必要があります**0**として、 **@delete_unused_schedule**引数。  
+ **@delete_unused_schedule**引数が自動的にすべてのジョブにアタッチされていないスケジュールを削除して以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、値を指定する必要があります**0**として、 **@delete_unused_schedule**引数。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
  このストアド プロシージャでは、メンテナンス プランやメンテナンス プランの一部であるジョブを削除できません。 代わりに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、メンテナンス プランを削除します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -91,7 +91,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
  **sp_delete_job** を実行して任意のジョブを削除できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 **sysadmin** 固定サーバー ロールのメンバーでないユーザーは、自分が所有するジョブのみを削除できます。  
   

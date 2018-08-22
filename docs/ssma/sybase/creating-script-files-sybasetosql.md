@@ -21,12 +21,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 99ab3ab7debd5542f57d9008ae83baf1deb0e2c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979894"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393757"
 ---
 # <a name="creating-script-files-sybasetosql"></a>スクリプト ファイルの作成 (SybaseToSQL)
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
@@ -357,7 +357,7 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
   
 たとえば、Sybase データベース内の特定のテーブルの一般的なデータ移行は次の階層: データベース -&gt;スキーマ -&gt;テーブル。  
   
-スクリプト ファイル内のすべてのコマンドが正常に実行された、SSMA コンソールのアプリケーションは終了し、ユーザーにコントロールを返します。 スクリプト ファイルの内容は詳細またはのいずれかに含まれる小さい静的変数の情報を[変数値ファイル](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc)または変数の値をスクリプト ファイル内の別のセクションでします。  
+スクリプト ファイル内のすべてのコマンドが正常に実行された、SSMA コンソールのアプリケーションは終了し、ユーザーにコントロールを返します。 スクリプト ファイルの内容は詳細またはのいずれかに含まれる小さい静的変数の情報を[変数値ファイル](creating-variable-value-files-sybasetosql.md)または変数の値をスクリプト ファイル内の別のセクションでします。  
   
 **例:**  
   

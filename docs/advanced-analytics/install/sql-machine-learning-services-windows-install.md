@@ -1,23 +1,23 @@
 ---
-title: インストールの SQL Server 2017 のマシンが Windows でのサービス (In-database) の学習 |Microsoft Docs
+title: SQL Server コンピューターの Windows で Learning サービス (In-database) のインストール |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2c699a76d0a24bade258109fcee40e9e1f39a7d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093326"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437692"
 ---
-# <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>SQL Server 2017 のマシンで Windows サービス (In-database) を学習のインストールします。 
+# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>SQL Server コンピューターの Windows で Learning サービス (In-database) をインストールします。 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server の Machine Learning サービスのコンポーネントは、データベース内の予測分析、統計分析、視覚化、および機械学習アルゴリズムに追加します。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
+SQL Server 2017 以降、データベース内分析用の R と Python のサポートは、SQL Server Machine Learning Services、SQL Server 2016 で導入された R Services の機能の後継で提供されます。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
 
 この記事を実行して、machine learning コンポーネントをインストールする方法を説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザード、および次の画面に表示されます。
 
@@ -98,13 +98,7 @@ SQL Server の Machine Learning サービスのコンポーネントは、デー
 
     パスの下のフォルダーの場所をメモして`..\Setup Bootstrap\Log`構成ファイルが格納されます。 セットアップが完了したら、概要ファイルにインストールされているコンポーネントを確認できます。
 
-## <a name="restart-the-service"></a>サービスを再起動します。
-
-インストールが完了したら、スクリプトの実行を有効にすると、次に進む前に、データベース エンジンを再起動します。
-
-表記も自動的に再開すると、関連する再起動[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]サービス。
-
-右クリックを使用してサービスを再起動する**再起動**コマンドを使用してまたは SSMS では、インスタンスを**サービス**パネル コントロール パネルで、またはを使用して[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md).
+7. セットアップが完了したら、コンピューターを再起動するように指示される場合ようになりました。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
 
 ## <a name="bkmk_enableFeature"></a>外部スクリプトの実行を有効にします。
 
@@ -132,9 +126,13 @@ SQL Server の Machine Learning サービスのコンポーネントは、デー
     
     R 言語の機能が既に有効な場合は実行しないでください Python の 2 番目の時間を再構成します。 基になる拡張機能プラットフォームには、両方の言語がサポートしています。
 
-4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの SQL Server サービスを再起動します。 関連する再起動も自動的に SQL Server サービスを再起動する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]サービス。
+## <a name="restart-the-service"></a>サービスを再起動します。
 
-    右クリックを使用してサービスを再起動する**再起動**コマンドを使用してまたは SSMS では、インスタンスを**サービス**パネル コントロール パネルで、またはを使用して[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md).
+インストールが完了したら、スクリプトの実行を有効にすると、次に進む前に、データベース エンジンを再起動します。
+
+関連するサービスを再起動しても自動的に再起動[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]サービス。
+
+右クリックを使用してサービスを再起動する**再起動**コマンドを使用してまたは SSMS では、インスタンスを**サービス**パネル コントロール パネルで、またはを使用して[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>インストールの確認
 
@@ -148,7 +146,7 @@ SQL Server の Machine Learning サービスのコンポーネントは、デー
 
     この時点で、**run_value** が 1 に設定されている必要があります。
     
-2. 開く、**サービス**パネルまたは SQL Server 構成マネージャー、ことを確認および**SQL Server スタート パッド サービス**が実行されています。 R がデータベース エンジンのインスタンスごとに 1 つのサービスが必要または Python をインストールします。 実行されていない場合は、サービスを再起動します。 詳細については、次を参照してください。 [Python 統合をサポートするコンポーネント](../python/new-components-in-sql-server-to-support-python-integration.md)します。 
+2. 開く、**サービス**パネルまたは SQL Server 構成マネージャー、ことを確認および**SQL Server スタート パッド サービス**が実行されています。 R がデータベース エンジンのインスタンスごとに 1 つのサービスが必要または Python をインストールします。 詳細については、次を参照してください。 [Python 統合をサポートするコンポーネント](../python/new-components-in-sql-server-to-support-python-integration.md)します。 
    
 3. スタート パッドが実行されている場合は、外部スクリプトのランタイムは、SQL Server と通信できることを確認する単純な R と Python のスクリプトを実行できる必要があります。
 
@@ -298,7 +296,7 @@ Standard Edition を使用している、リソース ガバナーがない場�
 
 ### <a name="install-additional-r-packages"></a>追加の R パッケージをインストールします。
 
-SQL Server を作成する R ソリューションでは、基本的な R 関数、SQL Server、および SQL Server がインストールされているオープン ソース R のバージョンと互換性のあるサード パーティの R パッケージと共にインストール properietary packes から関数を呼び出すことができます。
+R ソリューションを SQL Server を作成する基本的な R 関数、SQL Server と共にインストールされている独自のパッケージと R パッケージのサード パーティからの関数は SQL Server がインストールされているオープン ソース R のバージョンと互換性のある呼び出すことができます。
 
 SQL Server で使用するパッケージは、インスタンスによって使用される既定のライブラリにインストールする必要があります。 コンピューターで、R の別のインストールがある場合、またはユーザー ライブラリにパッケージをインストールした場合は、T-SQL からそれらのパッケージを使用することはできません。
 

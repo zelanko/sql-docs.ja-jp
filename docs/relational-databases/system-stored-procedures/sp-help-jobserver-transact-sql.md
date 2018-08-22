@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobserver (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_jobserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e1efcd128c2c77bcac729c7a529f9dc909457cc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fdaa9481c51188767834679031b6cdc9084f969d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256087"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392601"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,23 +57,23 @@ sp_help_jobserver
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@show_last_run_details=** ] *show_last_run_details*  
- 前回の実行情報を結果セットに含めるかどうかを指定します。 *show_last_run_details*は**tinyint**、既定値は**0**します。 **0**前回の実行情報は含まれませんと**1**はします。  
+ 前回の実行情報を結果セットに含めるかどうかを指定します。 *show_last_run_details*は**tinyint**、既定値は**0**します。 **0**前回の実行の情報は含まれませんと**1**は。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|対象サーバーの識別番号|  
 |**server_name**|**nvarchar(30)**|対象サーバーのコンピューター名。|  
 |**enlist_date**|**datetime**|対象サーバーがマスター サーバーに参加した日付。|  
 |**last_poll_date**|**datetime**|対象サーバーが最後にマスター サーバーを呼び出した日付。|  
   
- 場合**sp_help_jobserver**を実行すると*show_last_run_details* 'éý' **1**、結果セットがこれらの列を追加します。  
+ 場合**sp_help_jobserver**を実行すると*show_last_run_details*設定**1**、結果セットがこれらの列。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|対象サーバーでジョブの実行を最後に開始した日付。|  
 |**last_run_time**|**int**|対象サーバーでジョブの実行を最後に開始した時刻|  
@@ -81,7 +81,7 @@ sp_help_jobserver
 |**last_outcome_message**|**nvarchar(1024)**|ジョブの最後の結果に関する説明|  
 |**last_run_outcome**|**int**|対象サーバーで最後に実行したときのジョブの結果。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **3** = キャンセル<br /><br /> **5** = unknown|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -90,12 +90,12 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバー **SQLAgentUserRole**のみ、自分が所有するジョブに関する情報を表示できます。  
+ メンバーの**SQLAgentUserRole**自分が所有するジョブの情報のみを表示できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、に関する前回の実行情報などの情報を返します、`NightlyBackups`ジョブです。  
+ 次の例については、に関する前回の実行の情報などを返します、`NightlyBackups`ジョブ。  
   
 ```  
 USE msdb ;  

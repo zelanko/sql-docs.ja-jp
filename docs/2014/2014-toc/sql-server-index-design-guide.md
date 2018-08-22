@@ -13,19 +13,19 @@ caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155423"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393526"
 ---
 # SQL Server インデックス デザイン ガイド
   不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この SQL Server インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
   
 **適用対象**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]を通じて[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]明記しない限りです。  
   
- このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](http://msdn.microsoft.com/library/ms175049.aspx)」を参照してください。  
+ このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
   
 ##  <a name="Top"></a> このガイドで  
  [インデックスのデザインの基礎](#Basics)  

@@ -2,7 +2,7 @@
 title: コマンドライン (SQL Server) から Data Migration Assistant を実行 |Microsoft Docs
 description: SQL Server データベースの移行を評価するためのコマンドラインから Data Migration Assistant を実行する方法について説明します
 ms.custom: ''
-ms.date: 09/01/2017
+ms.date: 08/18/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 6b364dc03d48cbc1c0487362712e10f7ab0b782e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b1435aa321d4bebbfd2747dbb634845eeeb6e137
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785463"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40392892"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行します。
 Data Migration Assistant をインストールするバージョン 2.1 以降で、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft Data Migration Assistant\\*します。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 このメソッドは、いくつかのデータベースや巨大なデータベースを評価するときに便利です。 
@@ -32,7 +32,7 @@ Data Migration Assistant をインストールするバージョン 2.1 以降�
 > 評価のみを実行している Dmacmd.exe をサポートします。 この時点では、移行はサポートされていません。
 
 
-## <a name="command-line-arguments"></a>コマンドライン引数
+## <a name="assessments-using-the-command-line-interface-cli"></a>コマンド ライン インターフェイス (CLI) を使用して評価
 
 ```
 DmaCmd.exe /AssessmentName="string"
@@ -42,7 +42,6 @@ DmaCmd.exe /AssessmentName="string"
 \[/AssessmentOverwriteResult\]
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
-
 
 |引数  |説明  | 必須 (はい/いいえ)
 |---------|---------|---------------|
@@ -58,15 +57,14 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentResultCsv`    | CSV 結果ファイルへの完全パス   | Y <br>(AssessmentResultJson または AssessmentResultCsv のいずれかが必要)
 
 
-
-
-## <a name="examples"></a>使用例
+## <a name="examples-of-assessments-using-the-cli"></a>CLI を使用して評価の例
 
 **Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
 **Windows 認証と実行の互換性規則を使用して単一データベースの評価**
+
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -75,8 +73,6 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 ***/AssessmentEvaluateCompatibilityIssues*** /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
-
-
 
 **SQL Server 認証と実行機能の推奨事項を使用して単一データベースの評価**
 
@@ -87,7 +83,6 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ***/AssessmentEvaluateRecommendations*** /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
-
 
 **ターゲット プラットフォームの SQL Server 2012 では、単一データベースの評価結果を .json および .csv のファイルに保存します。**
 
@@ -101,7 +96,6 @@ Catalog=DatabaseName;Integrated Security=true"
 ***/AssessmentResultCsv***="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-
 **ターゲット プラットフォームは、SQL Azure データベースの単一データベースの評価結果を .json および .csv のファイルに保存します。**
 
 ```
@@ -114,7 +108,6 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
-
 
 **複数データベースの評価**
 
@@ -131,8 +124,116 @@ Catalog=DatabaseName3;Integrated Security=true"***
 /AssessmentResultJson="C:\\Results\\test2016.json"
 ```
 
+## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>CLI を使用して azure の SQL データベースの SKU の推奨事項
 
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationInteractiveAuthentication=true
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+```
+
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true 
+```
+
+|引数  |説明  | 必須 (はい/いいえ)
+|---------|---------|---------------|
+|`/Action=SkuRecommendation` | DMA のコマンドラインを使用して SKU 評価を実行します。 | Y
+|`/SkuRecommendationInputDataFilePath`  | 収集されたパフォーマンス カウンターのファイル、データベースをホストするコンピューターの完全なパス |    Y
+|`/SkuRecommendationTsvOutputResultsFilePath`   | TSV 結果ファイルの完全なパス |    Y <br>(TSV または JSON または HTML ファイルのパスが必要)
+|`/SkuRecommendationJsonOutputResultsFilePath`  | JSON の結果ファイルへの完全パス |   Y <br>(TSV または JSON または HTML ファイルのパスが必要)
+|`/SkuRecommendationHtmlResultsFilePath` |  結果の HTML ファイルへの完全パス | Y <br>(TSV または JSON または HTML ファイルのパスが必要)
+|`/SkuRecommendationPreventPriceRefresh` |  価格の更新が発生するを防ぎます。 オフライン モードで実行されている場合に使用します。 |    Y <br>(静的な価格についてはこの引数が選択されているまたは下のすべての引数が最新の価格を取得するために選択する必要があります)
+|`/SkuRecommendationCurrencyCode` | (例: 価格を表示する通貨「(米ドル)」) | Y <br>(この場合、最新の価格を取得するには)
+|`/SkuRecommendationOfferName` |    プランの名前 (例。"MS-解決しない場合、0003 P")。 詳細については、次を参照してください。、 [Microsoft Azure プランの詳細](https://azure.microsoft.com/support/legal/offer-details/)ページ。 |   Y <br>(この場合、最新の価格を取得するには)
+|`/SkuRecommendationRegionName` |   領域の名前 (例。「米国西部」) |   Y <br>(この場合、最新の価格を取得するには)
+|`/SkuRecommendationSubscriptionId` | サブスクリプション ID です。 |    Y <br>(この場合、最新の価格を取得するには)
+|`/AzureAuthenticationTenantId` | 認証のテナント。 |  Y <br>(この場合、最新の価格を取得するには)
+|`/AzureAuthenticationClientId` | 認証に使用される AAD アプリのクライアント ID。 | Y <br>(この場合、最新の価格を取得するには)
+|`/AzureAuthenticationInteractiveAuthentication`    | ウィンドウがポップアップする場合は true に設定します。 |   Y <br>(この場合、最新の価格を取得するには) <br>(オプション 1 - 3 の認証オプションのいずれかを選択)
+|`/AzureAuthenticationCertificateStoreLocation` | (例: 証明書ストアの場所に設定します。"CurrentUser")。 | Y <br>(この場合、最新の価格を取得するには) <br>(オプション 2 - 3 の認証オプションのいずれかを選択)
+|`/AzureAuthenticationCertificateThumbprint`    | 証明書の拇印に設定します。 | Y <br>(この場合、最新の価格を取得するには) <br>(オプション 2 - 3 の認証オプションのいずれかを選択)
+|`/AzureAuthenticationToken` |  証明書トークンに設定します。 | Y <br>(この場合、最新の価格を取得するには) <br>(オプション 3 - 3 の認証オプションのいずれかを選択)
+
+## <a name="examples-of-sku-assessments-using-the-cli"></a>CLI を使用して SKU 評価の例
+
+**Dmacmd.exe**
+
+  `Dmacmd.exe /? or DmaCmd.exe /help`
+
+**価格の更新 (get 最新の価格) - azure SQL DB の SKU の推奨事項対話型認証** 
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationInteractiveAuthentication=true 
+```
+
+**価格の更新 (get 最新の価格) - azure SQL DB の SKU の推奨事項の証明書認証**
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationCertificateStoreLocation=<Your Certificate Store Location>
+/AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
+```
+
+**価格の更新 (get 最新の価格) - azure SQL DB の SKU の推奨事項のトークン認証**  
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationToken=<Your Authentication Token> 
+```
+
+**価格の更新 (静的な価格を使用) ことがなく azure SQL DB の SKU の推奨事項** 
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true  
+```
 
 ## <a name="see-also"></a>参照
-
-[データ移行アシスタントをダウンロード](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Data Migration Assistant](https://aka.ms/get-dma)をダウンロードします。
+- この記事[オンプレミス データベースの適切な Azure SQL データベース SKU を特定](https://aka.ms/dma-sku-recommend-sqldb)します。

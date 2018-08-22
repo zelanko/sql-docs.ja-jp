@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 094e74a3f4d63e46b21d74346b21132b6c616497
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 32da2824f4c169a76455293e09f334d6739230d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985764"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392170"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>SQL Server - Azure SQL DB (MySQLToSql) への MySQL データベースの移行
 SQL Server Migration Assistant (SSMA) for MySQL は、SQL Server または SQL Azure に MySQL データベースを迅速に移行するのに役立つ包括的な環境です。 SSMA for MySQL を使用してデータベース オブジェクトとデータを確認して、移行対象のデータベースを評価を SQL Server または SQL Azure のデータベース オブジェクトを移行でき、SQL Server または SQL Azure にデータを移行できます。  
@@ -45,7 +45,7 @@ SQL Server Migration Assistant (SSMA) for MySQL は、SQL Server または SQL A
   
 7.  [MySQL データベースの変換&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [同期](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+8.  [同期](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. これは、次の方法のいずれかで行います。  
   

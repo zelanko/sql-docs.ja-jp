@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_notify_operator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b07c05c67f0b4e199ad096d8f2a5f12951e46178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c99d4ca8eb182f8e4873acf97aec4ca5c101ce84
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261591"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392420"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_notify_operator
   
 ## <a name="arguments"></a>引数  
  [ **@profile_name=** ] **'***profilename***'**  
- メッセージの送信に使用するデータベース メール プロファイルの名前を指定します。 *profilename*は**nvarchar (128)** です。 場合*profilename*が指定されていない、既定のデータベース メール プロファイルを使用します。  
+ メッセージの送信に使用するデータベース メール プロファイルの名前を指定します。 *profilename*は**nvarchar (128)** します。 場合*profilename*が指定されていない、既定のデータベース メール プロファイルを使用します。  
   
  [ **@id=** ] *id*  
  メッセージ送信先のオペレーターの ID を指定します。 *id*は**int**、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
@@ -64,7 +64,7 @@ sp_notify_operator
 > **注:** メッセージを受信する前に、オペレーターの電子メール アドレスを定義する必要があります。  
   
  [  **@subject=** ] **'***サブジェクト***'**  
- 電子メール メッセージの件名です。 *サブジェクト*は**nvarchar (256)** 既定値はありません。  
+ 電子メール メッセージの件名。 *サブジェクト*は**nvarchar (256)** 既定値はありません。  
   
  [  **@body=** ] **'***メッセージ***'**  
  電子メール メッセージの本文です。 *メッセージ*は**nvarchar (max)** 既定値はありません。  
@@ -73,17 +73,17 @@ sp_notify_operator
  電子メール メッセージに添付するファイルの名前を指定します。 *添付ファイル*は**nvarchar (512)**、既定値はありません。  
   
  [ **@mail_database=** ] **'***mail_host_database***'**  
- メール ホスト データベースの名前を指定します。 *mail_host_database* is **nvarchar(128)**. ない場合は*mail_host_database*が指定されている、 **msdb**データベースは既定で使用します。  
+ メール ホスト データベースの名前を指定します。 *mail_host_database* is **nvarchar(128)**. ない場合は*mail_host_database*が指定されている、 **msdb**データベースが既定で使用されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ここでは、指定したメッセージが、指定したオペレーターの電子メール アドレスに送信されます。 オペレーターに電子メール アドレスが構成されていない場合、エラーが返されます。  
   
  通知をオペレーターに送信するには、データベース メールとメール ホスト データベースを構成する必要があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -92,7 +92,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、データベース メール プロファイル `François Ajenstat` を使用して、電子メールをオペレーター `AdventureWorks Administrator` に送信します。 電子メールの件名は`Test Notification`します。 電子メール メッセージには、"This is a test of notification via e-mail." という文が記載されています。  

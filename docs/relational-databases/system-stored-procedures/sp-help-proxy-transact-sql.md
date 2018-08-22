@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259802"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392617"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,51 +59,51 @@ sp_help_proxy
   
  次の表は、各サブシステムの ID に指定できる値の一覧です。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
 |スナップショット|レプリケーション スナップショット エージェント|  
 |LogReader|レプリケーション ログ リーダー エージェント|  
 |Distribution|レプリケーション ディストリビューション エージェント|  
-|Merge|レプリケーション マージ エージェント|  
-|QueueReader|レプリケーション キュー リーダー エージェント|  
+|Merge|Replication Merge Agent|  
+|QueueReader|Replication Queue Reader Agent|  
 |ANALYSISQUERY|Analysis Services コマンド|  
 |ANALYSISCOMMAND|Analysis Services クエリ|  
 |Dts|SSIS パッケージ実行|  
 |PowerShell|PowerShell スクリプト|  
   
  [ **@name** =] '*名前*'  
- 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロキシを一覧にログインします。 名前は**nvarchar (256)**、既定値は NULL です。 ときに*名前*が指定されている*subsystem_name*も指定する必要があります。  
+ 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン プロキシを一覧表示します。 名前は**nvarchar (256)**、既定値は NULL です。 ときに*名前*が指定されている*subsystem_name*も指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|プロキシの識別番号|  
 |**name**|**sysname**|プロキシの名前|  
 |**credential_identity**|**sysname**|プロキシに関連付けられている資格情報の Microsoft Windows ドメイン名およびユーザー名|  
 |**enabled**|**tinyint**|プロキシが有効かどうか  { **0** = 無効、 **1** = 有効}|  
-|**説明**|**nvarchar(1024)**|プロキシの説明|  
+|**description**|**nvarchar(1024)**|プロキシの説明|  
 |**user_sid**|**varbinary(85)**|プロキシに関する Windows ユーザーの Windows セキュリティ ID|  
 |**credential_id**|**int**|プロキシに関連付けられている資格情報の識別子|  
 |**credential_identity_exists**|**int**|credential_identity が存在するかどうか  {0 = 存在しない、1 = 存在する}|  
   
-## <a name="remarks"></a>解説  
- パラメーターが指定されていないときに**sp_help_proxy**インスタンス内のすべてのプロキシに関する情報を一覧表示します。  
+## <a name="remarks"></a>コメント  
+ パラメーターが指定されていないときに**sp_help_proxy**インスタンス内のすべてのプロキシ情報を一覧表示します。  
   
- 指定されたサブシステムに対して使用できますプロキシ ログインを特定するのには、指定*名前*と*subsystem_name*です。 これらの引数が指定された場合、 **sp_help_proxy**がアクセスおよびは使用する、指定したサブシステムのログインが指定されているプロキシを一覧表示します。  
+ プロキシ ログインできるサブシステムの使用を確認するのには、指定*名前*と*subsystem_name*します。 これらの引数が指定された場合、 **sp_help_proxy**がアクセスとを使用できます、指定したサブシステムのログインが指定されているプロキシを一覧表示されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 それ以外のユーザーには、 **msdb** データベースの **SQLAgentOperatorRole** 固定サーバー ロールを与える必要があります。  
   
- 詳細については**SQLAgentOperatorRole**を参照してください[SQL Server エージェント固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)です。  
+ 詳細については**SQLAgentOperatorRole**を参照してください[SQL Server エージェント固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)します。  
   
 > [!NOTE]  
->  **Credential_identity**と**user_sid**列にのみ返されます場合の結果セットのメンバー **sysadmin**このストアド プロシージャを実行します。  
+>  **Credential_identity**と**user_sid**でのみ列が返されます場合の結果セットのメンバー **sysadmin**このストアド プロシージャを実行します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="b-listing-information-for-a-specific-proxy"></a>B. 特定のプロキシに関する情報を一覧表示する  
- 次の例では、という名前のプロキシに関する情報を表示する`Catalog application proxy`です。  
+ 次の例では、という名前のプロキシ情報を一覧表示`Catalog application proxy`します。  
   
 ```  
 USE msdb ;  

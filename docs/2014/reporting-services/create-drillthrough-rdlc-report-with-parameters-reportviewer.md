@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb5bb2c0a02de9d4be433203996072bb218b8c0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0147922c6b52d83cde9dc9a3724e82a5e4f30a3a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157823"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396392"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>ReportViewer を使用してパラメーターを含む詳細 (RDLC) レポートを作成する (SSRS チュートリアル)
-  [詳細](http://technet.microsoft.com/library/ff519554.aspx)レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 このチュートリアルでは、次のレッスンを通じて、 [ローカル モード レポート](http://msdn.microsoft.com/library/ff487969.aspx)でパラメーターとクエリを使用した詳細レポートを作成します。  
+  [詳細](http://technet.microsoft.com/library/ff519554.aspx)レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 このチュートリアルではパラメーターと、クエリを含む詳細レポートを作成するには、次のレッスンを通じて[ローカル モード レポート](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)します。  
   
 ## <a name="requirements"></a>要件  
  このチュートリアルを使用するにはへのアクセスが必要、 **AdventureWorks2008**サンプル データベース。 このチュートリアルで使用されるクエリが使用しても**AdventureWorks2012**データベース。 詳細を取得する方法については、 **AdventureWorks2008**サンプル データベースは、「[チュートリアル: AdventureWorks データベースのインストール](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)for Microsoft Visual Studio 2010。  

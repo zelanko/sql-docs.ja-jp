@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobstep (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a614a40001e21fadf708cb2079dbe45171cafe62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e610198b2a7c26ad11811157b52a066639592a8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261771"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393304"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  によって使用されるジョブのステップに関する情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスを自動化された操作を実行します。  
+  によって使用されるジョブの手順については、情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動化された操作を実行するエージェントのサービスです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  ジョブ情報を返すジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
  [ **@job_name =**] **'***job_name***'**  
- ジョブの名前を指定します。 *job_name*は**sysname**NULL の既定値です。  
+ ジョブの名前を指定します。 *job_name*は**sysname**、既定値 NULL。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
@@ -63,25 +63,25 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  ジョブ ステップの名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
   
  [ **@suffix =**] *suffix*  
- テキストの説明を追加するかどうかを示すフラグ、**フラグ**出力内の列です。 *サフィックス*は**ビット**、既定値は**0**します。 場合*サフィックス*は**1**説明が追加されます。  
+ テキストの説明を追加するかどうかをフラグ、**フラグ**出力内の列。 *サフィックス*は**ビット**、既定値は**0**します。 場合*サフィックス*は**1**説明が追加されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|ステップの一意識別子。|  
 |**step_name**|**sysname**|ジョブ ステップの名前。|  
 |**subsystem**|**nvarchar(40)**|ステップ コマンドを実行するサブシステム。|  
 |**command**|**nvarchar(max)**|ステップで実行するコマンド。|  
 |**flags**|**int**|ステップの動作を制御する値のビットマスク。|  
-|**cmdexec_success_code**|**int**|**CmdExec**手順、これは、コマンドの成功のプロセス終了コード。|  
+|**cmdexec_success_code**|**int**|**CmdExec**手順では、これは、コマンドの成功のプロセス終了コード。|  
 |**on_success_action**|**tinyint**|ステップが成功した場合に実行する動作。<br /><br /> **1** = 成功を報告するジョブを終了します。<br /><br /> **2** = 失敗を報告するジョブを終了します。<br /><br /> **3** = 次の手順に移動します。<br /><br /> **4** = 手順に進みます。|  
-|**on_success_step_id**|**int**|場合**on_success_action** 4 を実行する次の手順を示します。|  
-|**on_fail_action**|**tinyint**|ステップが失敗した場合に実行する操作。 値と同じ**on_success_action**です。|  
-|**on_fail_step_id**|**int**|場合**on_fail_action** 4 を実行する次の手順を示します。|  
+|**on_success_step_id**|**int**|場合**on_success_action** 4 は、これは、実行する次の手順を示します。|  
+|**on_fail_action**|**tinyint**|ステップが失敗した場合に実行する操作。 値は同じ**on_success_action**します。|  
+|**on_fail_step_id**|**int**|場合**on_fail_action** 4 は、これは、実行する次の手順を示します。|  
 |**server**|**sysname**|予約されています。|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース。|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
@@ -96,10 +96,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|ステップの実行を最後に開始した時刻。|  
 |**proxy_id**|**int**|ジョブ ステップのプロキシ。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_jobstep**では、 **msdb**データベース。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -108,9 +108,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバー **SQLAgentUserRole**自分が所有しているジョブのジョブ ステップにのみ表示できます。  
+ メンバーの**SQLAgentUserRole**自分が所有するジョブのジョブ ステップのみを表示できます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -127,7 +127,7 @@ GO
 ```  
   
 ### <a name="b-return-information-about-a-specific-job-step"></a>B. 特定のジョブ ステップに関する情報を返す  
- 次の例は、最初のジョブ ステップという名前のジョブに関する情報を返します`Weekly Sales Data Backup`です。  
+ 次の例は、最初のジョブ ステップという名前のジョブに関する情報を返します`Weekly Sales Data Backup`します。  
   
 ```  
 USE msdb ;  

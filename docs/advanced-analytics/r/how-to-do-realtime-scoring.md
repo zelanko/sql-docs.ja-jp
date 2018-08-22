@@ -1,32 +1,30 @@
 ---
-title: リアルタイムのスコア付けまたは SQL Server Machine Learning でのネイティブ スコアリングを実行する方法 |Microsoft Docs
+title: リアルタイム スコアリングまたは SQL Server Machine Learning でのネイティブ スコアリングを実行する方法 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 265a40d01be772b36ce7e49d06aeef8d3f5d81e5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085854"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40393332"
 ---
-# <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>リアルタイムのスコア付けまたは SQL Server のネイティブ スコアリングを実行する方法
+# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>リアルタイム スコアリングまたは SQL Server のネイティブ スコアリングを実行する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL Server 2016 と SQL Server 2017 でのネイティブのスコア付け機能とリアルタイム スコアリングを実行する方法について手順とサンプル コードを提供します。 リアルタイムのスコアリングとネイティブ スコアリングの両方の目的は、小さなバッチでスコア付けの操作のパフォーマンスを向上させるためにです。
+この記事では、SQL Server で結果を予測する 2 つのアプローチをほぼリアルタイムの R で記述された事前トレーニング済みモデルを使用してを示しますリアルタイム スコアリングとネイティブ スコアリングの両方が機械学習モデルを R. をインストールすることがなくを使用するために設計されています事前トレーニング済みモデルを SQL Server データベースに保存されます-互換性のある形式で指定された新しい入力の予測スコアをすばやく生成するのに標準的なデータ アクセス手法を使用できます。
 
-リアルタイムのスコアリングとネイティブ スコアリングの両方が機械学習モデルを R. をインストールすることがなくを使用するために設計されています行う必要があるすべては、互換性のある形式で事前トレーニング済みモデルを取得し、SQL Server データベースに保存します。
-
-## <a name="choosing-a-scoring-method"></a>スコアリング方法の選択
+## <a name="choose-a-scoring-method"></a>スコアリング方法を選択します。
 
 高速のバッチ予測では、次のオプションがサポートされます。
 
-+ **ネイティブ スコアリング**: SQL Server 2017 での T-SQL の PREDICT 関数
-+ **リアルタイム スコアリング**: sp を使用して\_rxPredict ストアド プロシージャを SQL Server 2016 または SQL Server 2017 のいずれかでします。
++ **ネイティブ スコアリング**: SQL Server 2017 Windows、SQL Server 2017 Linux、および Azure SQL Database での関数の T-SQL を予測します。
++ **リアルタイム スコアリング**: sp を使用して\_rxPredict ストアド プロシージャを SQL Server 2016 または SQL Server 2017 (Windows のみ)。
 
 > [!NOTE]
 > SQL Server 2017 では、PREDICT 関数の使用をお勧めします。
@@ -168,16 +166,16 @@ go
 > [!NOTE]
 > 列と値がによって返されるため、 **PREDICT**はモデルの種類によって異なる場合を使用して、返されるデータのスキーマを定義する必要があります、 **WITH**句。
 
-## <a name="realtime-scoring-with-sprxpredict"></a>リアルタイム sp_rxPredict をスコア付け
+## <a name="real-time-scoring-with-sprxpredict"></a>リアルタイム sp_rxPredict をスコア付け
 
 このセクションは、セットアップに必要な手順を説明します**リアルタイム**予測、T-SQL から関数を呼び出す方法の例を示します。
 
-### <a name ="bkmk_enableRtScoring"></a> 手順 1 です。 リアルタイムのプロシージャをスコア付けを有効にします。
+### <a name ="bkmk_enableRtScoring"></a> 手順 1 です。 リアルタイムのスコアリングのプロシージャを有効にします。
 
 スコア付けに使用する各データベースに対してこの機能を有効にする必要があります。 サーバーの管理者は、RevoScaleR パッケージに含まれているコマンド ライン ユーティリティ、RegisterRExt.exe を実行する必要があります。
 
 > [!NOTE]
-> リアルタイム スコアリング動作するためには、SQL CLR の機能は、インスタンスで有効にする必要があります。さらに、データベースは、trustworthy としてマークする必要があります。 スクリプトを実行するときにこれらのアクションが実行されます。 ただし、これを行う前に、追加のセキュリティに影響を検討してください。
+> リアルタイムのスコアリング動作するためには、SQL CLR の機能はインスタンスで有効にする必要があります。さらに、データベースは、trustworthy としてマークする必要があります。 スクリプトを実行するときにこれらのアクションが実行されます。 ただし、これを行う前に、追加のセキュリティに影響を検討してください。
 
 1. 管理者特権でコマンド プロンプトを開くし、RegisterRExt.exe があるフォルダーに移動します。 次のパスは、既定のインストールで使用できます。
     
@@ -236,15 +234,17 @@ EXEC sp_rxPredict
 > 
 > そのため、リアルタイム スコアリングのために使用する前に、入力データでサポートされていない型を除外する必要があります。
 > 
-> 対応する SQL 型については、次を参照してください。 [SQL-CLR 型マッピング](https://msdn.microsoft.com/library/bb386947.aspx)または[CLR パラメーター データのマッピング](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)します。
+> 対応する SQL 型については、次を参照してください。 [SQL-CLR 型マッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)または[CLR パラメーター データのマッピング](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)します。
 
-## <a name="disable-realtime-scoring"></a>リアルタイムのスコアリングを無効にします。
+## <a name="disable-real-time-scoring"></a>リアルタイム スコアリングを無効にします。
 
 リアルタイムのスコア付け機能を無効にするには、管理者特権でコマンド プロンプトを開きし、次のコマンドを実行します。 `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>リアルタイムの Microsoft R Server または Machine Learning Server でのスコア付け
+## <a name="real-time-scoring-in-other-microsoft-product"></a>その他の Microsoft 製品のリアルタイム スコアリング
 
-Machine Learning Server は、分散型リアルタイムの web サービスとして公開されたモデルからスコア付けをサポートします。 詳細については、次の記事を参照してください。
+SQL Server データベース内分析ではなく、スタンドアロン サーバーまたは Microsoft の Machine Learning Server を使用する場合は、ストアド プロシージャと予測を生成するための T-SQL 関数だけでなく他のオプションがあります。
+
+スタンドアロン サーバーと Machine Learning Server の両方の概念をサポートする、 *web サービス*コードのデプロイ。 R をバンドルするまたは実行時に新しいデータ入力の評価と呼ばれる、web サービスとして事前トレーニング済みモデル Python。 詳細については、次の記事を参照してください。
 
 + [Machine Learning Server での web サービスとは](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [運用化とは何ですか。](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)

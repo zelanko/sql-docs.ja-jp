@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980644"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394784"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>概要、SSMA for Sybase Console (SybaseToSQL)
 このセクションでは、起動、SSMA for Sybase のコンソール アプリケーションの概要と手順を説明します。 記載されている規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -52,9 +52,9 @@ SSMA コンソール アプリケーションを起動するのにには、次�
   
 追加機能:  
   
-1.  [パスワードを指定して](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)とエクスポート/インポート、ウィンドウの他のコンピューターにします。  
+1.  [パスワードを指定して](managing-passwords-sybasetosql.md)とエクスポート/インポート、ウィンドウの他のコンピューターにします。  
   
-2.  [レポートの生成](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e)詳細な xml を表示するには、評価/変換とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成することもできます。  
+2.  [レポートの生成](generating-reports-sybasetosql.md)詳細な xml を表示するには、評価/変換とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成することもできます。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力の規則  
 SSMA スクリプト コマンドとオプションを実行すると、コンソール プログラム、コンソールのユーザーに、結果とメッセージ (情報、エラーなど) を表示します。 または、必要に応じて、xml 出力ファイルにリダイレクトします。 一意の色では、各種のメッセージが出力に表されます。 たとえば、白のカラーにテキスト メッセージがスクリプト ファイルのコマンドを表します緑のカラーで 1 つとユーザーの入力を求めるプロンプトを表します。  

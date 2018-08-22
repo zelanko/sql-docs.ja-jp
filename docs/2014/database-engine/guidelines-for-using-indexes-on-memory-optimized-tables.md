@@ -5,8 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ca4c8ea603df8b57cfb0bb603500ee1ffd74758
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51c68f8d566948dd1fc1583ff36650366f50169b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263388"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392848"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルでのインデックス使用のガイドライン
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルのデータに効率的にアクセスするためにインデックスを使用します。 適切なインデックスを指定することにより、クエリのパフォーマンスが大幅に向上します。 たとえば、クエリを考えてみます。  
@@ -71,7 +70,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 ### <a name="operations-on-memory-optimized-and-disk-based-indexes"></a>メモリ最適化インデックスおよびディスク ベース インデックスに対する操作  
   
-|演算|メモリ最適化された非クラスター化ハッシュ インデックス|メモリ最適化された非クラスター化インデックス|ディスク ベース インデックス|  
+|操作|メモリ最適化された非クラスター化ハッシュ インデックス|メモリ最適化された非クラスター化インデックス|ディスク ベース インデックス|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |インデックス スキャン、すべてのテーブルの行を取得する。|はい|はい|はい|  
 |等値述語 (=) に対するインデックス シーク。|はい<br /><br /> (フル キーが必要)|可 <sup>1</sup>|はい|  

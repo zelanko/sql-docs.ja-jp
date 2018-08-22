@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979325"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394568"
 ---
-# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>マッピングの Oracle と SQL Server データ型 (OracleToSQL)
-Oracle データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの型。 Oracle データベースのオブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクトの場合、oracle からのデータ型をマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次のセクションで示すようにします。  
+# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Oracle と SQL Server データ型のマッピング (OracleToSQL)
+Oracle データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの型。 Oracle データベースのオブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトの場合、oracle からのデータ型をマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次のセクションで示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
 SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクト設定&#40;型マッピングの&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)します。  
@@ -62,11 +62,11 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
         これにより、同じデータ型の値が小さくなりより大きなデータのマッピングをカスタマイズできます。  
   
-    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
+    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
         一部の種類には、対象のデータ型の長さが必要です。 必要な場合は、入力内の新しいデータ長、**置き換えます**ボックス。  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  データ型のマッピングを変更するには、次の操作を行います。  
   
@@ -78,9 +78,9 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
         これにより、同じデータ型の値が小さくなりより大きなデータのマッピングをカスタマイズできます。  
   
-    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
+    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
-        一部の種類には、対象のデータ型の長さが必要です。 必要な場合は、入力内の新しいデータ長、**で置き換えます**ボックスで、し、 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        一部の種類には、対象のデータ型の長さが必要です。 必要な場合は、入力内の新しいデータ長、**で置き換えます**ボックスで、し、 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  カスタム データ型のマッピングを削除するには、次の操作を行います。  
   
@@ -91,7 +91,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
         継承のマッピングを削除することはできません。 ただし、継承のマッピングは、特定のオブジェクトまたはオブジェクト カテゴリのカスタム マッピングによって上書きされます。  
   
 ## <a name="next-steps"></a>次の手順  
-移行プロセスの次の手順は、いずれかに[評価レポートを作成する](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357)または[Oracle データベースのオブジェクトを SQL Server の構文に変換](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272)します。 評価レポートを作成する場合、Oracle のオブジェクトは、評価時に自動的に変換されます。  
+移行プロセスの次の手順は、いずれかに[評価レポートを作成する](assessing-oracle-schemas-for-conversion-oracletosql.md)または[Oracle データベースのオブジェクトを SQL Server の構文に変換](converting-oracle-schemas-oracletosql.md)します。 評価レポートを作成する場合、Oracle のオブジェクトは、評価時に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

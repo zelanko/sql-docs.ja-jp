@@ -22,15 +22,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 604fe25d0b08ddc997baf381adb4a967ed8e9462
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979604"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392652"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>ソースとターゲットのデータ型 (AccessToSQL) のマッピング
-Access データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの型。 Access データベースのオブジェクトに変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクトへのアクセスからのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  
+Access データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの型。 Access データベースのオブジェクトに変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトへのアクセスからのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
 SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクトの設定 (型のマッピング)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)します。  
@@ -70,7 +70,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
         これにより、同じデータ型の値が小さくなりより大きなデータのマッピングをカスタマイズできます。  
   
-    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
+    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
         一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]**。  
   
@@ -84,7 +84,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
         これにより、同じデータ型の値が小さくなりより大きなデータのマッピングをカスタマイズできます。  
   
-    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
+    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
         一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]**。  
   
@@ -95,8 +95,8 @@ SSMA では、データ型マッピングの既定セットがあります。 �
     2.  **[削除]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
-移行プロセスでは、次の手順は[access データベース オブジェクトを SQL Server オブジェクトに変換します。](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+移行プロセスでは、次の手順は[access データベース オブジェクトを SQL Server オブジェクトに変換します。](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

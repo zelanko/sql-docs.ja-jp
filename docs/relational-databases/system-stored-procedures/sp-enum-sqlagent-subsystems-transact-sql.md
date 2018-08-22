@@ -1,5 +1,5 @@
 ---
-title: sp_enum_sqlagent_subsystems (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_enum_sqlagent_subsystems (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f3603b43640d1459d77edd610eca29baa611d77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2a816ae764e7348e85a4ae405fe3e57d268cb01
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241572"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394785"
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +51,28 @@ sp_enum_sqlagent_subsystems
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subsystem**|**nvarchar(40)**|サブシステムの名前。|  
-|**説明**|**nvarchar(512)**|サブシステムの説明|  
+|**description**|**nvarchar(512)**|サブシステムの説明|  
 |**subsystem_dll**|**nvarchar(510)**|サブシステムを格納している DLL モジュール|  
 |**agent_exe**|**nvarchar(510)**|サブシステムで使用される実行可能モジュール|  
 |**start_entry_point**|**nvarchar(30)**|SQL Server エージェントがジョブ ステップの実行中に呼び出すプロシージャ|  
 |**event_entry_point**|**nvarchar(30)**|SQL Server エージェントがジョブ ステップの実行中に呼び出すプロシージャ|  
 |**stop_entry_point**|**nvarchar(30)**|SQL Server エージェントがジョブ ステップの実行中に呼び出すプロシージャ|  
-|**max_worker_threads**|**int**|スレッドの最大数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブシステムのエージェントを開始します。|  
+|**max_worker_threads**|**int**|スレッドの最大数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このサブシステム用にエージェントが開始されます。|  
 |**subsystem_id**|**int**|サブシステムの識別子|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロシージャでは、インスタンス内で利用できるサブシステムが表示されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 それ以外のユーザーには、 **msdb** データベースの **SQLAgentOperatorRole** 固定サーバー ロールを与える必要があります。  
   
- 詳細については**SQLAgentOperatorRole**を参照してください[SQL Server エージェント固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)です。  
+ 詳細については**SQLAgentOperatorRole**を参照してください[SQL Server エージェント固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェントのセキュリティを実装します。](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [SQL Server エージェントのセキュリティを実装します。](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
   

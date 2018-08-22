@@ -15,18 +15,18 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a87d72a0d017be9b0f6e010d8ba5344e33469aad
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 277ad816d887a7f5641d8d37e7bdc60dc7ddb28a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982444"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394566"
 ---
-# <a name="converting-oracle-schemas-oracletosql"></a>Oracle スキーマ (OracleToSQL) に変換します。
-Oracle に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、プロジェクトの設定とデータ マッピング オプションでは、Oracle データベースのオブジェクトを変換できますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクト。  
+# <a name="converting-oracle-schemas-oracletosql"></a>Oracle スキーマの変換 (OracleToSQL)
+Oracle に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、プロジェクトの設定とデータ マッピング オプションでは、Oracle データベースのオブジェクトを変換できますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース オブジェクト。  
   
 ## <a name="the-conversion-process"></a>変換プロセス  
-Oracle からオブジェクトの定義は、データベース オブジェクトの変換と同様に変換して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト、および SSMA メタデータにこの情報を読み込みます。 インスタンスに情報は読み込まれません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 使用して、オブジェクトとそのプロパティを表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。  
+Oracle からオブジェクトの定義は、データベース オブジェクトの変換と同様に変換して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト、および SSMA メタデータにこの情報を読み込みます。 インスタンスに情報は読み込まれません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 使用して、オブジェクトとそのプロパティを表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラー。  
   
 変換中は、SSMA は、出力ウィンドウに出力メッセージとエラー一覧 ウィンドウにエラー メッセージを出力します。 出力とエラー情報を使用して、Oracle データベース、または必要な変換の結果を得るため、変換プロセスを変更しているかどうかを確認します。  
   
@@ -34,13 +34,13 @@ Oracle からオブジェクトの定義は、データベース オブジェク
 オブジェクトを変換する前に、プロジェクトの変換オプションを確認して、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA が関数とグローバル変数に変換する方法を設定できます。 詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)します。  
   
 ## <a name="conversion-results"></a>変換結果  
-次の表は、変換されますが、Oracle のオブジェクトし、その結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。  
+次の表は、変換されますが、Oracle のオブジェクトし、その結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト。  
   
 |||  
 |-|-|  
 |Oracle オブジェクト|SQL Server オブジェクトの結果として得られる|  
-|関数|関数を直接変換できる場合[!INCLUDE[tsql](../../includes/tsql_md.md)]、SSMA 関数を作成します。<br /><br />場合によっては、関数は、ストアド プロシージャに変換する必要があります。 この場合は、SSMA では、ストアド プロシージャおよびストアド プロシージャを呼び出す関数を作成します。|  
-|手順|プロシージャを直接変換できる場合[!INCLUDE[tsql](../../includes/tsql_md.md)]SSMA は、ストアド プロシージャを作成します。<br /><br />場合によっては、自律的なトランザクションでストアド プロシージャを呼び出す必要があります。 この場合は、SSMA が 2 つのストアド プロシージャを作成します: ストアド プロシージャのいずれかの手順と、実装を呼び出すために使用する別の実装します。|  
+|関数|関数を直接変換できる場合[!INCLUDE[tsql](../../includes/tsql-md.md)]、SSMA 関数を作成します。<br /><br />場合によっては、関数は、ストアド プロシージャに変換する必要があります。 この場合は、SSMA では、ストアド プロシージャおよびストアド プロシージャを呼び出す関数を作成します。|  
+|手順|プロシージャを直接変換できる場合[!INCLUDE[tsql](../../includes/tsql-md.md)]SSMA は、ストアド プロシージャを作成します。<br /><br />場合によっては、自律的なトランザクションでストアド プロシージャを呼び出す必要があります。 この場合は、SSMA が 2 つのストアド プロシージャを作成します: ストアド プロシージャのいずれかの手順と、実装を呼び出すために使用する別の実装します。|  
 |パッケージ|SSMA では、一連のストアド プロシージャと関数のようなオブジェクト名では統合を作成します。|  
 |シーケンス|SSMA は (SQL Server 2012 または SQL Server 2014) のシーケンス オブジェクトを作成または Oracle のシーケンスをエミュレートします。|  
 |インデックスおよびトリガーなどの依存オブジェクトを持つテーブル|SSMA は、依存オブジェクトをテーブルを作成します。|  
@@ -114,10 +114,10 @@ Oracle データベースのオブジェクトを変換する、変換するオ�
   
 -   削除または問題のあるコードを変更するには、Oracle データベースでオブジェクトを変更することができます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)します。  
   
--   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーと Oracle メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]と Oracle からデータを移行します。  
+-   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーと Oracle メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Oracle からデータを移行します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [SQL Server に変換されたオブジェクトを読み込む](http://msdn.microsoft.com/a8ae33b2-1883-4785-922b-ea0e31c0b37a)します。  
+移行プロセスの次の手順が、 [SQL Server に変換されたオブジェクトを読み込む](loading-converted-database-objects-into-sql-server-oracletosql.md)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

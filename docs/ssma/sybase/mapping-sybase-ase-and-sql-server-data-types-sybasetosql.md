@@ -19,15 +19,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9efd87a25802bd5610393beb4de0728807ea827d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985324"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393296"
 ---
-# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>マッピングの Sybase ASE と SQL Server データ型 (SybaseToSQL)
-Sybase Adaptive Server Enterprise (ASE) データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースの型。 ASE データベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のオブジェクトを ASE からのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次のセクションで示すようにします。  
+# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE と SQL Server データ型とのマッピング (SybaseToSQL)
+Sybase Adaptive Server Enterprise (ASE) データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースの型。 ASE データベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトを ASE からのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次のセクションで示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
 SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクト設定&#40;型マッピングの&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)します。  
@@ -66,7 +66,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
         これにより、同じデータ型の値が小さくなりより大きなデータのマッピングをカスタマイズできます。  
   
-    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のデータ型。  
+    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のデータ型。  
   
         一部の種類には、対象のデータ型の長さが必要です。 必要な場合は、入力内の新しいデータ長、**置き換えます**ボックス。  
   
@@ -82,7 +82,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
         これにより、同じデータ型の値が小さくなりより大きなデータのマッピングをカスタマイズできます。  
   
-    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のデータ型。  
+    4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のデータ型。  
   
         一部の種類には、対象のデータ型の長さが必要です。 必要な場合は、入力内の新しいデータ長、**で置き換えます**ボックスをクリックして **[ok]**。  
   
@@ -95,7 +95,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
         継承のマッピングを削除することはできません。 ただし、継承のマッピングは、特定のオブジェクトまたはオブジェクト カテゴリのカスタム マッピングによって上書きされます。  
   
 ## <a name="next-steps"></a>次の手順  
-移行プロセスの次の手順は、いずれかに[評価レポートを作成する](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)または[変換 Sybase ASE データベース オブジェクトを SQL Server または SQL Azure の構文を](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3)します。 評価レポートを作成する場合、Sybase ASE オブジェクトは、評価時に自動的に変換されます。  
+移行プロセスの次の手順は、いずれかに[評価レポートを作成する](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)または[変換 Sybase ASE データベース オブジェクトを SQL Server または SQL Azure の構文を](converting-sybase-ase-database-objects-sybasetosql.md)します。 評価レポートを作成する場合、Sybase ASE オブジェクトは、評価時に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

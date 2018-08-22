@@ -1,5 +1,5 @@
 ---
-title: sp_add_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4851db832cd587d486d3094eb23e8d64ba4b4cc2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b195a9ffc18fc01d8498d981bcaaaf835446888f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240222"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392222"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ sp_add_job [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>引数  
  [ **@job_name =** ] **'***job_name***'**  
- ジョブの名前を指定します。 名前が一意であり、割合を含めることはできません (**%**) 文字です。 *job_name*は**nvarchar (128)**、既定値はありません。  
+ ジョブの名前を指定します。 名前が一意であり、割合を含めることはできません (**%**) 文字。 *job_name*は**nvarchar (128)**、既定値はありません。  
   
  [ **@enabled =** ] *enabled*  
- 追加されるジョブの状態を指定します。 *有効になっている*は**tinyint**の既定値は 1 (有効) です。 場合**0**ジョブが有効でないと、そのスケジュールに従って実行されません。 ただし、これを手動で実行します。  
+ 追加されるジョブの状態を指定します。 *有効になっている*は**tinyint**、既定値は 1 (有効)。 場合**0**、ただし、これは手動で実行するには、ジョブが有効でないと、スケジュールに従って実行されません。  
   
  [ **@description =** ] **'***description***'**  
  ジョブの説明を指定します。 *説明*は**nvarchar (512)**、既定値は NULL です。 場合*説明*は省略すると、「使用可能な説明はありません」が使用されます。  
@@ -78,7 +78,7 @@ sp_add_job [ @job_name = ] 'job_name'
  ジョブ カテゴリを指定するための、言語に依存しないメカニズムを指定します。 *category_id*は**int**、既定値は NULL です。  
   
  [ **@owner_login_name =** ] **'***login***'**  
- ジョブを所有するログインの名前です。 *ログイン*は**sysname**の既定値は NULL には、現在のログイン名として解釈されます。 メンバーにのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できます **@owner_login_name**です。 場合のメンバーでもないユーザーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行は失敗し、エラーが返されます。  
+ ジョブを所有するログインの名前です。 *ログイン*は**sysname**の既定値は NULL には、現在のログイン名として解釈されます。 メンバーのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できる **@owner_login_name**します。 場合以外のユーザーがメンバーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行が失敗し、エラーが返されます。  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
  対象となるジョブのエントリをいつ Microsoft Windows アプリケーション ログに記録するかを示す値を指定します。 *eventlog_level*は**int**、これらの値のいずれかを指定できます。  
@@ -91,13 +91,13 @@ sp_add_job [ @job_name = ] 'job_name'
 |**3**|毎回|  
   
  [ **@notify_level_email =** ] *email_level*  
- 対象となるジョブの完了後、いつ電子メールを送信するかを示す値を指定します。 *email_level*は**int**、既定値は**0**、しないことを示します。 *email_level*と同じ値を使用して*eventlog_level*です。  
+ 対象となるジョブの完了後、いつ電子メールを送信するかを示す値を指定します。 *email_level*は**int**、既定値は**0**、しないことを示します。 *email_level*として同じ値を使用して*eventlog_level*します。  
   
  [ **@notify_level_netsend =** ] *netsend_level*  
- 対象となるジョブの完了後、いつネットワーク メッセージを送信するかを示す値を指定します。 *netsend_level*は**int**、既定値は**0**、しないことを示します。 *netsend_level*と同じ値を使用して*eventlog_level*です。  
+ 対象となるジョブの完了後、いつネットワーク メッセージを送信するかを示す値を指定します。 *netsend_level*は**int**、既定値は**0**、しないことを示します。 *netsend_level*として同じ値を使用して*eventlog_level*します。  
   
  [ **@notify_level_page =** ] *page_level*  
- 対象となるジョブの完了後、いつポケットベルのメッセージを送信するかを示す値を指定します。 *page_level*は**int**、既定値は**0**、しないことを示します。 *page_level*と同じ値を使用して*eventlog_level*です。  
+ 対象となるジョブの完了後、いつポケットベルのメッセージを送信するかを示す値を指定します。 *page_level*は**int**、既定値は**0**、しないことを示します。 *page_level*として同じ値を使用して*eventlog_level*します。  
   
  [ **@notify_email_operator_name =** ] **'***email_name***'**  
  ときに電子メールの送信先となる相手の電子メール名*email_level*に到達します。 *email_name*は**sysname**、既定値は NULL です。  
@@ -109,7 +109,7 @@ sp_add_job [ @job_name = ] 'job_name'
  対象となるジョブの完了時にポケットベルのメッセージの送信先となる相手の名前を指定します。 *page_name*は**sysname**、既定値は NULL です。  
   
  [ **@delete_level =** ] *delete_level*  
- いつジョブを削除するかを示す値を指定します。 *delete_value*は**int**、既定値は 0、つまりことはありません。 *delete_level*と同じ値を使用して*eventlog_level*です。  
+ いつジョブを削除するかを示す値を指定します。 *delete_value*は**int**、既定値は 0、つまりことはありません。 *delete_level*として同じ値を使用して*eventlog_level*します。  
   
 > [!NOTE]  
 >  ときに*delete_level*は**3**ジョブを 1 回だけ実行、ジョブのスケジュールに関係を定義します。 また、ジョブが自分自身を削除した場合、そのジョブのすべての履歴も削除されます。  
@@ -123,17 +123,17 @@ sp_add_job [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **@originating_server** 内に存在する**sp_add_job**は引数の下に記載されていません。 **@originating_server** 内部使用のために予約されています。  
+## <a name="remarks"></a>コメント  
+ **@originating_server** 内に存在する**sp_add_job**は引数の下に記載されていません。 **@originating_server** 内部使用のため予約されています。  
   
- 後に**sp_add_job** 、ジョブを追加するのには実行されて**sp_add_jobstep**ジョブの処理を実行するステップを追加するために使用できます。 **sp_add_jobschedule**に使用できるスケジュールを作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスが、ジョブの実行に使用します。 使用して**sp_add_jobserver**を設定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス ジョブを実行、および**sp_delete_jobserver**からジョブを削除する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
+ 後**sp_add_job** 、ジョブを追加が実行された**sp_add_jobstep**ジョブの処理を実行するステップを追加するために使用できます。 **sp_add_jobschedule**に使用できるスケジュールを作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスを使用して、ジョブを実行します。 使用**sp_add_jobserver**を設定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ジョブが実行されるインスタンスと**sp_delete_jobserver**からジョブを削除する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
   
- ジョブがマルチ サーバー環境に 1 つまたは複数の対象サーバーで実行される場合を使用して**sp_apply_job_to_targets**を対象サーバーを設定またはジョブのサーバー グループを対象とします。 対象サーバーまたは対象サーバー グループからジョブを削除するには、使用**sp_remove_job_from_targets**です。  
+ 場合は、マルチ サーバー環境で 1 つまたは複数の対象サーバーでジョブを実行するを使用して、 **sp_apply_job_to_targets**ターゲット サーバーを設定またはジョブのサーバー グループを対象にします。 対象サーバーまたは対象サーバー グループからジョブを削除するには使用**sp_remove_job_from_targets**します。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
-## <a name="permissions"></a>権限  
- このストアド プロシージャを実行するには、ユーザーがのメンバーをする必要があります、 **sysadmin**固定サーバー ロール、または、次のいずれかに付与する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント固定データベース ロールに存在する、 **msdb**データベース。  
+## <a name="permissions"></a>アクセス許可  
+ ユーザーをこのストアド プロシージャを実行するのメンバーである必要があります、 **sysadmin**固定サーバー ロール、または、次のいずれかに付与する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント固定データベース ロール内にある、 **msdb**データベース。  
   
 -   **SQLAgentUserRole**  
   
@@ -141,14 +141,14 @@ sp_add_job [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- これらの各固定に関連付けられている特定の権限については、データベース ロールを参照してください[SQL Server エージェント固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)です。  
+ これらの各固定に関連付けられている特定のアクセス許可については、データベース ロールを参照してください[SQL Server エージェント固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)します。  
   
- メンバーにのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できます **@owner_login_name**です。 場合のメンバーでもないユーザーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行は失敗し、エラーが返されます。  
+ メンバーのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できる **@owner_login_name**します。 場合以外のユーザーがメンバーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行が失敗し、エラーが返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-adding-a-job"></a>A. ジョブを追加する  
- この例は、という名前の新しいジョブを追加`NightlyBackups`です。  
+ この例では、という名前の新しいジョブを追加します。`NightlyBackups`します。  
   
 ```  
 USE msdb ;  
@@ -160,10 +160,10 @@ GO
 ```  
   
 ### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. ポケットベル、電子メール、Net Send で情報を送るジョブを追加する  
- この例は、という名前のジョブを作成`Ad hoc Sales Data Backup`ことを通知`François Ajenstat`(ポケットベル、電子メール、またはネットワーク ポップアップ メッセージ) をジョブが失敗した場合、正常完了時にジョブを削除するとします。  
+ この例は、という名前のジョブを作成します。`Ad hoc Sales Data Backup`通知`François Ajenstat`(ポケットベル、電子メール、またはネットワーク ポップアップ メッセージ) を、ジョブが失敗した場合、正常完了時にジョブを削除します。  
   
 > [!NOTE]  
->  この例では、オペレーターがという名前の`François Ajenstat`という名前のログインと`françoisa`既に存在します。  
+>  この例では、という名前のオペレーター`François Ajenstat`という名前のログインと`françoisa`既に存在します。  
   
 ```  
 USE msdb ;  

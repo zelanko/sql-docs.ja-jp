@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_category (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e131d1152c3deb2debf78a59686365b85953530
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a84cde301cf3c3db39f8df1999b9e4c39416c324
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254884"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396402"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +48,28 @@ sp_help_category [ [ @class = ] 'class' ]
   
 ## <a name="arguments"></a>引数  
  [  **@class=**] **'***クラス***'**  
- 要求する情報のクラスを指定します。 *クラス*は**varchar (8)**、既定値は**ジョブ**です。 *クラス*これらの値のいずれかになります。  
+ 要求する情報のクラスを指定します。 *クラス*は**varchar (8)** の既定値を持つ**ジョブ**します。 *クラス*これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**JOB**|ジョブ カテゴリに関する情報|  
 |**アラートを生成します。**|警告カテゴリに関する情報|  
 |**演算子**|オペレーター カテゴリに関する情報|  
   
  [ **@type=** ] **'***type***'**  
- 要求する情報に関するカテゴリの種類を指定します。 *型*は**varchar (12)**、既定値は NULL、これらの値のいずれかを指定できます。  
+ 要求する情報に関するカテゴリの種類を指定します。 *型*は**varchar (12)**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|**LOCAL**|ローカル ジョブ カテゴリです。|  
-|**複数のサーバー**|マルチ サーバー ジョブ カテゴリです。|  
-|**NONE**|以外のクラスのカテゴリ**ジョブ**です。|  
+|**LOCAL**|ローカル ジョブ カテゴリ。|  
+|**複数のサーバー**|マルチ サーバー ジョブ カテゴリ。|  
+|**NONE**|以外のクラスのカテゴリ**ジョブ**します。|  
   
  [ **@name=** ] **'***name***'**  
  要求する情報に関するカテゴリの名前を指定します。 *名前*は**sysname**、既定値は NULL です。  
   
  [ **@suffix=** ] *suffix*  
- 指定するかどうか、 **category_type**結果セット内の列が ID と名前。 *サフィックス*は**ビット**、既定値は**0**します。 **1**を示しています、 **category_type** 、名、および**0** ID として表示  
+ 指定するかどうか、 **category_type**結果セット内の列が ID と名前。 *サフィックス*は**ビット**、既定値は**0**します。 **1**を示しています、 **category_type** 、名前と、 **0** ID として表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -77,26 +77,26 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>結果セット  
  ときに**@suffix**は**0**、 **sp_help_category**次の結果セットを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
-|**category_type**|**tinyint**|カテゴリの種類です。<br /><br /> **1** = ローカル<br /><br /> **2** = マルチ サーバー<br /><br /> **3** = なし|  
+|**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチ サーバー<br /><br /> **3** = なし|  
 |**name**|**sysname**|カテゴリ名。|  
   
  ときに**@suffix**は**1**、 **sp_help_category**次の結果セットを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**sysname**|カテゴリの種類。 いずれかの**ローカル**、 **MULTI-SERVER**、または**NONE**|  
 |**name**|**sysname**|カテゴリ名。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_category**から実行する必要があります、 **msdb**データベース。  
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -105,7 +105,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
