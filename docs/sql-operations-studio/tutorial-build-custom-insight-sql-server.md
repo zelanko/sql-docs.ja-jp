@@ -64,7 +64,7 @@ ms.locfileid: "34235756"
 
 ## <a name="add-the-custom-insight-to-the-database-dashboard"></a>データベース ダッシュ ボードにカスタム インサイトを追加します。
 
-1. Insight ウィジェットの構成を開くをクリックして**作成洞察**で*グラフ ビューアー*:
+1. Insight ウィジェットの構成を開くには、*グラフ ビューアー* で **作成洞察** をクリックします:
 
    ![構成](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
