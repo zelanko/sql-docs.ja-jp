@@ -29,12 +29,12 @@ caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631bdc9fe69f16e3cb5b98e85a62fe30eccbdc46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8bf37ee58a365fdd2135e91d4d71e1818c407d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152683"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392131"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   次の各セクションでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントの旧バージョンとの互換性について説明します。 この内容には、非推奨の機能、提供が中止された機能、重大な変更、および動作変更に関する情報が含まれています。  
@@ -47,7 +47,7 @@ ms.locfileid: "37152683"
 |[SQL Server データベース エンジンの旧バージョンとの互換性](../database-engine/sql-server-database-engine-backward-compatibility.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、一部のアプリケーションは修正が必要になります。|  
 |[Analysis Services の旧バージョンとの互換性](../../2014/analysis-services/analysis-services-backward-compatibility.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、一部のアプリケーションは修正が必要になります。|  
 |[Integration Services の旧バージョンとの互換性](../integration-services/integration-services-backward-compatibility.md)|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存のデータ変換サービス アプリケーションを修正する必要があります。|  
-|[Reporting Services の旧バージョンとの互換性](../reporting-services/reporting-services-backward-compatibility.md)|[!INCLUDE[ssRS](../includes/ssrs-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ソリューションを修正する必要があります。|  
+|[Reporting Services の旧バージョンとの互換性](../reporting-services/reporting-services-backward-compatibility.md)|[!INCLUDE[ssRS](../includes/ssrs.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ソリューションを修正する必要があります。|  
 |[旧バージョンとの互換性&#40;マスター データ サービス&#41;](../master-data-services/backward-compatibility-master-data-services.md)|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ソリューションを修正する必要があります。|  
 |[レプリケーションの旧バージョンとの互換性](../../2014/relational-databases/replication/replication-backward-compatibility.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存のレプリケーション ソリューションを修正する必要があります。|  
   

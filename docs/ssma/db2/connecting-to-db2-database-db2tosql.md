@@ -16,15 +16,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 78ba615946600d082fd2533ecf81f7b2ba295196
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2228a08c2985f4e683ff860cd77e68159a0ecd0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980365"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393036"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 データベース (DB2ToSQL) に接続します。
-DB2 のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、移行する DB2 データベースに接続する必要があります。 接続すると、SSMA は、すべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
+DB2 のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行する DB2 データベースに接続する必要があります。 接続すると、SSMA は、すべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
   
 プロジェクトを閉じるまで、データベースへの接続をアクティブに保ちます。 プロジェクトを再度開くとする場合は、データベースにアクティブな接続を再接続する必要があります。  
   
@@ -38,7 +38,7 @@ DB2 データベースについてのメタデータは、自動的に更新さ�
 -   データ移行のためのデータ アクセスには、データ アクセスが必要です。  
   
 ## <a name="establishing-a-connection-to-db2"></a>DB2 への接続を確立します。  
-データベースに接続するときに SSMA は、データベースのメタデータを読み取るし、プロジェクト ファイルにこのメタデータを追加します。 このメタデータは、オブジェクトを変換するとき、SSMA によって使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文へのデータを移行する場合と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 DB2 メタデータ エクスプ ローラー ウィンドウでこのメタデータを参照して、個々 のデータベース オブジェクトのプロパティを確認できます。  
+データベースに接続するときに SSMA は、データベースのメタデータを読み取るし、プロジェクト ファイルにこのメタデータを追加します。 このメタデータは、オブジェクトを変換するとき、SSMA によって使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文へのデータを移行する場合と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 DB2 メタデータ エクスプ ローラー ウィンドウでこのメタデータを参照して、個々 のデータベース オブジェクトのプロパティを確認できます。  
   
 > [!IMPORTANT]  
 > 接続しようとすると、前に、データベース サーバーを実行しているし、接続を受け入れることを確認します。  
@@ -84,7 +84,7 @@ DB2 データベースについてのメタデータは、自動的に更新さ�
     詳細については、次を参照してください。 [Oracle に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)します。  
   
 ## <a name="reconnecting-to-db2"></a>DB2 への再接続  
-プロジェクトを閉じるまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くとする場合は、データベースにアクティブな接続を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要になるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データを移行します。  
+プロジェクトを閉じるまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くとする場合は、データベースにアクティブな接続を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要になるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行します。  
   
 ## <a name="refreshing-db2-metadata"></a>DB2 のメタデータの更新  
 DB2 データベースについてのメタデータは、自動的に更新されません。 DB2 メタデータ エクスプ ローラー内のメタデータは、初めて接続されたときのメタデータまたはメタデータを手動で更新された前回のスナップショットです。 すべてのスキーマ、1 つのスキーマ、または個々 のデータベース オブジェクトのメタデータを手動で更新することができます。  
@@ -109,7 +109,7 @@ DB2 データベースについてのメタデータは、自動的に更新さ�
   
     色の設定の定義を表示する をクリックして、**凡例**ボタンをクリックします。  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>次の手順  
   

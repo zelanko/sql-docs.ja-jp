@@ -16,20 +16,20 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d3097c1b4f52a53f7c2a846cc4d25707f9766313
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d8f95fad58c2cc0b4011a7a3b1dd34f1985e3777
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981646"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393500"
 ---
-# <a name="working-with-ssma-projects-sybasetosql"></a>SSMA プロジェクト (SybaseToSQL) での作業
-Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure では、まずプロジェクトを作成する SSMA またはします。 プロジェクトに移行する ASE のデータベースに関するメタデータを含むファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure でのターゲット インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure 移行済みのオブジェクトとデータを受信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure接続情報、およびプロジェクトの設定。  
+# <a name="working-with-ssma-projects-sybasetosql"></a>SSMA プロジェクトでの作業 (SybaseToSQL)
+Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure では、まずプロジェクトを作成する SSMA またはします。 プロジェクトに移行する ASE のデータベースに関するメタデータを含むファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure でのターゲット インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure 移行済みのオブジェクトとデータを受信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure接続情報、およびプロジェクトの設定。  
   
-切断されているプロジェクトを開くときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 これにより、オフラインで作業できます。 再接続できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 詳細については、次を参照してください。 [SQL Server に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [Azure SQL DB に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)します。  
+切断されているプロジェクトを開くときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 これにより、オフラインで作業できます。 再接続できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 詳細については、次を参照してください。 [SQL Server に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [Azure SQL DB に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)します。  
   
 ## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定を確認します。  
-SSMA は、変換、およびデータベース オブジェクトの読み込み、データの移行し、ASE での SSMA を同期するためのいくつかのオプションを含むと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 これらのオプションの既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前にする必要があります、オプションを確認し、する場合は、すべての新しいプロジェクトに使用される既定値を変更します。  
+SSMA は、変換、およびデータベース オブジェクトの読み込み、データの移行し、ASE での SSMA を同期するためのいくつかのオプションを含むと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 これらのオプションの既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前にする必要があります、オプションを確認し、する場合は、すべての新しいプロジェクトに使用される既定値を変更します。  
   
 **既定のプロジェクト設定を確認するには**  
   
@@ -45,7 +45,7 @@ SSMA は、変換、およびデータベース オブジェクトの読み込�
   
     -   移行オプションについては、次を参照してください。[プロジェクト設定&#40;移行&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)します。  
   
-    -   オブジェクトを読み込むためのオプションについては[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[プロジェクト設定&#40;同期&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)します。  
+    -   オブジェクトを読み込むためのオプションについては[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[プロジェクト設定&#40;同期&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)します。  
   
     -   GUI オプションの詳細については、次を参照してください。[プロジェクト設定&#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)します。  
   
@@ -57,7 +57,7 @@ SSMA は、変換、およびデータベース オブジェクトの読み込�
     > SQL Azure の設定が選択した場合にのみ表示されます**SQL Azure への移行**してプロジェクトを作成します。  
   
 ## <a name="creating-new-projects"></a>新しいプロジェクトの作成  
-ASE データベースからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のプロジェクトを最初に作成する必要があります。  
+ASE データベースからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のプロジェクトを最初に作成する必要があります。  
   
 **プロジェクトを作成するには**  
   
@@ -69,17 +69,17 @@ ASE データベースからデータを移行する[!INCLUDE[ssNoVersion](../..
   
 3.  **場所**ボックスで、入力するか、プロジェクトのフォルダーを選択します。  
   
-4.  **移行に**ドロップダウンで、ターゲットのバージョンを選択します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移行に使用します。 使用可能なオプションがあります。  
+4.  **移行に**ドロップダウンで、ターゲットのバージョンを選択します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行に使用します。 使用可能なオプションがあります。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -108,7 +108,7 @@ ASE データベースからデータを移行する[!INCLUDE[ssNoVersion](../..
         SSMA は Sybase ASE スキーマを解析し、プロジェクト ファイルにメタデータを保存します。  
   
 ## <a name="opening-projects"></a>プロジェクトを開く  
-ASE およびからは切断されて、プロジェクトを開いたときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 これにより、オフラインで作業できます。 メタデータを更新するにデータベース オブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 データを移行する必要があります、ASE に再接続し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  
+ASE およびからは切断されて、プロジェクトを開いたときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 これにより、オフラインで作業できます。 メタデータを更新するにデータベース オブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 データを移行する必要があります、ASE に再接続し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
   
 **プロジェクトを開く**  
   
@@ -120,10 +120,10 @@ ASE およびからは切断されて、プロジェクトを開いたときに[
   
 2.  ASE に再接続するには、**ファイル**メニューの  **Sybase への再接続**します。  
   
-3.  再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure では、上、**ファイル**メニューの  **SQL Server に再接続** / **SQL Azure に再接続**。  
+3.  再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、上、**ファイル**メニューの  **SQL Server に再接続** / **SQL Azure に再接続**。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [Sybase ASE への接続](http://msdn.microsoft.com/a45a2330-9175-4c9e-af38-ef920e350614)します。  
+移行プロセスの次の手順が、 [Sybase ASE への接続](connecting-to-sybase-ase-sybasetosql.md)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

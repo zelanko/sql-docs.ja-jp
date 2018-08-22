@@ -1,5 +1,5 @@
 ---
-title: SSMA の SAP ASE (SybaseToSQL) のインストール |Microsoft ドキュメント
+title: SSMA for SAP ASE (SybaseToSQL) のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2017
 ms.prod: sql
@@ -16,30 +16,30 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a904a7f17d90449406bef18f7f74022cf2fe049a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 1ef07d51a854e8c2e9842ea15f7224a4ce437862
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778998"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393033"
 ---
-# <a name="installing-ssma-for-sap-ase-sybasetosql"></a>SSMA の SAP ASE (SybaseToSQL) のインストール
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) の SAP Adaptive Server Enterprise (ASE) を SAP ASE からの移行の実行に使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。 移行されたデータベースのデータの移行と ASE システム関数の使用をサポートする拡張機能パックも含まれています。  
+# <a name="installing-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) のインストール
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (ASE) に SAP ASE からの移行を実行するために使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。 移行されたデータベースのデータの移行と、ASE システム関数の使用をサポートする拡張機能パックも含まれています。  
   
-移行手順を実行するコンピューターにクライアント アプリケーションをインストールします。 実行しているコンピューターに拡張機能パック ファイルのインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でホストされるようには、データベースを移行します。  
+移行手順を実行するコンピューターにクライアント アプリケーションをインストールします。 インストールを実行しているコンピューター上の拡張機能パック ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でホストされるようには、データベースの移行。  
   
-## <a name="upgrading-ssma-for-sap-ase"></a>SAP ASE for SSMA をアップグレードします。  
-SAP ASE for SSMA の以降のバージョンにアップグレードする場合は、クライアントとサーバーの拡張機能パックをアンインストールする必要があります最初。 新しいバージョンをインストールします。  
+## <a name="upgrading-ssma-for-sap-ase"></a>SAP ASE の SSMA のアップグレード  
+SAP ASE の SSMA の以降のバージョンにアップグレードする場合は、クライアントとサーバーの拡張機能パックをまずアンインストールする必要があります。 新しいバージョンをインストールします。  
   
-SAP ASE の SSMA の以前のバージョンからプロジェクトを開く場合 SSMA は、プロジェクトを新しいバージョンに変換するように求めます。 をクリックして**はい**SSMA の新しいバージョンでプロジェクトを使用します。  
+SAP ASE の SSMA の以前のバージョンからプロジェクトを開く場合、SSMA は、プロジェクトを新しいバージョンに変換するかどうかを要求します。 クリックして**はい**SSMA の新しいバージョンでプロジェクトを使用します。  
   
 ## <a name="contents"></a>目次  
   
 |[アーティクル]|説明|  
 |---------|---------------|  
-|[SSMA の SAP ASE クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|SSMA for SAP ASE クライアントをインストールするための手順と情報を提供します。|  
-|[SSMA コンポーネントを SQL Server インストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
-|[SAP ASE コンポーネントに対して SSMA を削除する&#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|プログラムと拡張機能パックのクライアントをアンインストールするための手順を説明します。|  
+|[SAP ASE クライアント用の SSMA のインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|に関する情報と SAP ASE クライアント用の SSMA のインストール手順を提供します。|  
+|[SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|インスタンスに拡張機能パックをインストールするための情報と手順を提供します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
+|[SSMA for SAP ASE のコンポーネントの削除&#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|クライアントをアンインストールする方法についてのプログラムと拡張機能パックを提供します。|  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL データベースにデータベースを移行する SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server - Azure SQL Database への移行の SAP ASE データベース&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

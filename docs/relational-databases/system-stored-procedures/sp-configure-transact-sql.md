@@ -1,5 +1,5 @@
 ---
-title: sp_configure (Transact SQL) |マイクロソフトのドキュメント
+title: sp_configure (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql
@@ -23,15 +23,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 05be6cd18d0617cb327c1b964ec19b4d275b1778
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: d141816fd2db6639b3e87cecc0d60610d4ba40e2
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560092"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393625"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pwd-md.md)]
 
   現在のサーバーのグローバル構成設定を表示または変更します。
 
@@ -81,23 +81,23 @@ RECONFIGURE
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- パラメーターなしで実行すると**sp_configure** 5 つの列を持つ結果セットを返すし、次の表に示すように、アルファベットの昇順で、オプションを注文します。  
+ パラメーターなしで実行されると**sp_configure** 5 つの列を含む結果セットを返し、次の表に示すように、昇順でアルファベット順にオプションを並べ替えます。  
   
- 値**config_value**と**run_value**に自動的に同じではありません。 使用して構成設定を更新した後**sp_configure**、システム管理者は再設定または再設定を上書きするのいずれかを使用して、実行中の構成値を更新する必要があります。 詳細については、「解説」を参照してください。  
+ 値は、 **config_value**と**run_value**自動的に同じではありません。 使用して、構成設定を更新した後**sp_configure**、システム管理者は、RECONFIGURE または RECONFIGURE WITH OVERRIDE のいずれかを使用して、実行中の構成値を更新する必要があります。 詳細については、「解説」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|構成オプションの名前。|  
 |**minimum**|**int**|構成オプションの最小値。|  
 |**maximum**|**int**|構成オプションの最大値。|  
-|**config_value**|**int**|構成オプションが設定値を使用して**sp_configure** (値**sys.configurations.value**)。 これらのオプションの詳細についてを参照してください[サーバーのコンフィギュレーション オプション&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)と[sys.configurations &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**config_value**|**int**|値を使用する構成オプションが設定された**sp_configure** (値**sys.configurations.value**)。 これらのオプションの詳細についてを参照してください[サーバーのコンフィギュレーション オプション&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)と[sys.configurations &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|現在実行中の構成オプションの値 (値**sys.configurations.value_in_use**)。<br /><br /> 詳細についてを参照してください[sys.configurations &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
 ## <a name="remarks"></a>コメント  
- 使用**sp_configure**を表示またはサーバー レベルの設定を変更します。 データベースレベルの設定を変更するには、ALTER DATABASE を使用します。 現在のユーザー セッションのみに影響する設定を変更するには、SET ステートメントを使用します。  
+ 使用**sp_configure**サーバー レベルの設定を表示または変更します。 データベースレベルの設定を変更するには、ALTER DATABASE を使用します。 現在のユーザー セッションのみに影響する設定を変更するには、SET ステートメントを使用します。  
   
 ## <a name="updating-the-running-configuration-value"></a>実行中の構成値の更新  
- 新しいを指定すると*値*の*オプション*、結果セット内でこの値には、 **config_value**列です。 この値が初期状態の値と異なる、 **run_value**列で、現在実行中の設定値を示しています。 実行中の構成値を更新するのには、 **run_value**  列で、システム管理者は再設定または再設定を上書きするのいずれかを実行する必要があります。  
+ 新しいを指定すると*値*の*オプション*、結果セット内でこの値には、 **config_value**列。 この値は、最初の値と異なる、 **run_value**列は、現在実行中の構成値が表示されます。 実行中の構成値を更新する、 **run_value**列、RECONFIGURE または RECONFIGURE WITH OVERRIDE のどちらか、システム管理者を実行する必要があります。  
   
  RECONFIGURE と RECONFIGURE WITH OVERRIDE は、どちらもすべての構成オプションと共に使用できます。 ただし、基本的な RECONFIGURE ステートメントでは、適切な範囲にないオプション値やオプション間の競合を招く可能性のあるオプション値は使用できません。 たとえば、再構成エラーが発生、**復旧間隔**の値は 60 分を超える場合は、**アフィニティ マスク**と値が重複して、**アフィニティ I/O マスク**値です。 これに対し、RECONFIGURE WITH OVERRIDE では、データ型が適切であればすべてのオプション値を使用でき、指定した値で再構成が行われます。  
   
@@ -106,10 +106,10 @@ RECONFIGURE
   
  一部のオプションは、RECONFIGURE ステートメントにより動的に更新されます。その他のオプションを使用する場合は、サーバーの停止と再起動が必要になります。 などの**最小サーバー メモリ**と**サーバーのメモリを最大**サーバー メモリ オプションが動的に更新される、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]; したがって、サーバーを再起動することがなく変更することができます。 対照的に、実行中の値の再設定、**フィル ファクター**オプションは、再起動する必要があります、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
- 再構成を実行すると構成オプションで、実行することによって、オプションが動的に更新されているかどうかを確認できます**sp_configure'***option_name***'**。 値、 **run_value**と**config_value**オプションを動的に更新される列が一致する必要があります。 参照して動的なオプションを確認するのにチェックすることも、 **is_dynamic**の列、 **sys.configurations**カタログを表示します。  
+ 構成オプションで RECONFIGURE を実行した後を実行して、オプションが動的に更新されたかどうかを確認できます**sp_configure'***option_name***'** します。 内の値、 **run_value**と**config_value**列が動的に更新されたオプションに一致する必要があります。 動的なオプションを見て確認することも、 **is_dynamic**の列、 **sys.configurations**カタログ ビューです。  
   
 > [!NOTE]  
->  指定した場合*値*が大きすぎる、オプションの**run_value**という事実を反映する列を[!INCLUDE[ssDE](../../includes/ssde-md.md)]が正しくない設定を使用するのではなく、動的なメモリをデフォルトに設定されました。  
+>  指定した場合*値*オプションについては、大きすぎる、 **run_value**という事実を反映する列を[!INCLUDE[ssDE](../../includes/ssde-md.md)]無効な設定を使用するのではなく、既定値が動的メモリにします。  
   
  詳細についてを参照してください[再構成&#40;Transact SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
@@ -119,7 +119,7 @@ RECONFIGURE
  構成オプションとその設定に関する詳細についてを参照してください[サーバーのコンフィギュレーション オプション&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
 ## <a name="permissions"></a>アクセス許可  
- パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 実行する**sp_configure**または RECONFIGURE ステートメントを実行する構成オプションを変更するのには両方のパラメーターを与える必要がありますサーバー レベルの設定の変更アクセス許可。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
+ パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 実行する**sp_configure**構成オプションを変更したり RECONFIGURE ステートメントを実行する両方のパラメーターを与える必要があります、ALTER SETTINGS サーバー レベル権限。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
 ## <a name="examples"></a>使用例  
   
@@ -160,7 +160,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 結果は、オプションの最小値と最大値が続くオプション名を返します。 **Config_value**は、値を[!INCLUDE[ssDW](../../includes/ssdw-md.md)]の再構成が完了したときに使用します。 **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
+ 結果は、オプションの最小値と最大値が続くオプション名を返します。 **Config_value**が値を[!INCLUDE[ssDW](../../includes/ssdw-md.md)]再構成が完了するときに使用されます。 **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 1 つの構成名の構成設定を一覧表示する  
   
@@ -169,7 +169,7 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. Hadoop 接続を設定する  
- Hadoop の接続を設定するには、sp_configure を実行することに加えて、いくつかの手順が必要です。 完全な手順を参照してください[外部データ ソースの作成&#40;Transact SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
+ Hadoop 接続を設定するには、sp_configure を実行しているだけでなく、いくつかの手順が必要です。 完全な手順を参照してください[外部データ ソースの作成&#40;Transact SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
   
 ## <a name="see-also"></a>参照  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

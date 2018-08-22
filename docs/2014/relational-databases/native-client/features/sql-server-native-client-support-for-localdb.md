@@ -1,11 +1,11 @@
 ---
-title: SQL Server Native Client Support for LocalDB |Microsoft Docs
+title: SQL Server Native Client Support for LocalDB |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
@@ -13,12 +13,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c62b4a7c6db2bc7a53c616079d75110ff8c3ad95
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1da6a606a8a79aa96cff1cd9b51dd234fe729b94
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414051"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393267"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client における LocalDB のサポート
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降、SQLServer の簡易バージョンである LocalDB を使用できるようになります。 ここでは、LocalDB インスタンス内のデータベースに接続する方法について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "37414051"
 SERVER=(localdb)\v11.0  
 ```  
   
- 必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、 `sqlcmd -S (localdb)\v11.0`のようにします。  
+ 必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、 `sqlcmd -S (localdb)\v11.0` のようにします。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](sql-server-native-client-features.md)  

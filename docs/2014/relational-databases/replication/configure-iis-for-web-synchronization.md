@@ -18,12 +18,12 @@ caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307592"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392129"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
   ここでは、マージ レプリケーション用に Web 同期を構成する 2 番目の手順を説明します。 この手順は、Web 同期用にパブリケーションを有効にした後に実行します。 構成プロセスの概要については、「 [[Web 同期の構成]](configure-web-synchronization.md)」を参照してください。 ここでの手順を完了したら、続いて、Web 同期が使用されるようにサブスクリプションを構成する 3 番目の手順を実行してください。 3 番目の手順については、次のトピックで説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "37307592"
   
 -   RMO: [Web 同期を使用するようにサブスクリプションを構成する方法 (RMO プログラミング)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Web 同期では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行するコンピューターを使用して、プル サブスクリプションをマージ パブリケーションに同期します。 IIS 5.0、IIS 6.0、および [!INCLUDE[iisver](../../includes/iisver-md.md)] がサポートされます。 [!INCLUDE[iisver](../../includes/iisver-md.md)]では、Web 同期の構成ウィザードはサポートされません。  
+ Web 同期では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行するコンピューターを使用して、プル サブスクリプションをマージ パブリケーションに同期します。 IIS バージョン 5.0、IIS バージョン 6.0、および IIS バージョン 7.0 がサポートされています。 IIS 7.0 では、Web 同期の構成ウィザードはサポートされていません。  
   
 > [!IMPORTANT]  
 >  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンを使用するとエラーが発生する可能性があります。 たとえば、"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
@@ -84,7 +84,7 @@ ms.locfileid: "37307592"
   
     4.  Web サーバー証明書ウィザードを実行します。  
   
-4.  [**OK**] をクリックします。  
+4.  **[OK]** をクリックします。  
   
  CA からサーバー証明書を取得できない場合は、テスト用に証明書を指定できます。 テスト用に IIS 6.0 を構成するには、SelfSSL ユーティリティを使用して証明書をインストールします。 このユーティリティは、IIS 6.0 リソース キットで使用できます。 ツールは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=30958)からダウンロードできます。 IIS 5.0 の場合は、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkId=46229)を参照してください。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "37307592"
   
     1.  **[別名]** ボックスに仮想ディレクトリの別名を入力します。  
   
-    2.  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、入力した`websync1`で、**エイリアス**ボックスに、入力`C:\Inetpub\wwwroot\websync1`で、**パス**ボックス。 [**次へ**] をクリックします。  
+    2.  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、入力した`websync1`で、**エイリアス**ボックスに、入力`C:\Inetpub\wwwroot\websync1`で、**パス**ボックス。 **[次へ]** をクリックします。  
   
     3.  両方のダイアログ ボックスで **[はい]** をクリックします。 これにより、新しいフォルダーを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (インターネット サーバー API) の DLL をコピーします。 .  
   
@@ -274,7 +274,7 @@ ms.locfileid: "37307592"
   
     6.  ディレクトリにアクセスする必要がないユーザーまたはグループを選択し、 **[削除]** をクリックします。  
   
-    7.  [**OK**] をクリックします。  
+    7.  **[OK]** をクリックします。  
   
 4.  **インターネット インフォメーション サービス (IIS) マネージャー**でアプリケーション プールを作成します。  
   
@@ -298,7 +298,7 @@ ms.locfileid: "37307592"
   
     4.  **[ユーザー名]** および **[パスワード]** フィールドに、手順 1. で作成したアカウントとパスワードを入力します。  
   
-    5.  [**OK**] をクリックします。  
+    5.  **[OK]** をクリックします。  
   
 6.  Web 同期に使用する仮想ディレクトリにアプリケーション プールを関連付けます。  
   
@@ -308,7 +308,7 @@ ms.locfileid: "37307592"
   
     3.  **[\<VirtualDirectoryName> のプロパティ]** ダイアログ ボックスの **[仮想ディレクトリ]** タブで、手順 5. で作成したアプリケーション プールを **[アプリケーション プール]** ボックスから選択します。  
   
-    4.  [**OK**] をクリックします。  
+    4.  **[OK]** をクリックします。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>replisapi.dll への接続のテスト  
  診断モードで Web 同期を実行すると、IIS を実行しているコンピューターへの接続をテストして、SSL (Secure Sockets Layer) 証明書が正しくインストールされているかどうかを確認できます。 診断モードで Web 同期を実行するには、IIS を実行しているコンピューターの管理者である必要があります。  
@@ -325,7 +325,7 @@ ms.locfileid: "37307592"
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]** チェック ボックスをオンにします。  
   
-    5.  [**OK**] をクリックします。  
+    5.  **[OK]** をクリックします。  
   
 2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 たとえば、「 https://server.domain.com/directory/replisapi.dll?diag」のように入力します。  
   

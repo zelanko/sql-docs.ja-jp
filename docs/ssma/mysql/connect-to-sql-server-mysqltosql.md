@@ -1,5 +1,5 @@
 ---
-title: SQL Server (MySQLToSQL) への接続 |Microsoft ドキュメント
+title: SQL Server (MySQLToSQL) への接続 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,40 +16,40 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 064d0485d5e621a0ac4d29268b6828b0209f908d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3baa63d272c18601e076137f18e65c452dec8d5e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775618"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396552"
 ---
-# <a name="connect-to-sql-server-mysqltosql"></a>SQL Server (MySQLToSQL) への接続します。
-使用して、 **SQL Server への接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に移行します。 アクセスする、 **SQL Server への接続** ダイアログ ボックスで、**ファイル** メニューのをクリックして**SQL Server への接続**です。  
+# <a name="connect-to-sql-server-mysqltosql"></a>SQL Server への接続 (MySQLToSQL)
+使用して、 **SQL サーバーへの接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行したいです。 アクセスする、 **SQL サーバーへの接続** ダイアログ ボックスで、**ファイル** メニューのをクリックして**SQL サーバーへの接続**します。  
   
 ## <a name="options"></a>および  
 **サーバー名**  
-入力またはへの接続に SQL Server のインスタンスを選択します。 既定では、最後に接続しているインスタンスが表示されます。  
+入力するかに接続する SQL Server のインスタンスを選択します。 既定では、最後に接続されているインスタンスが表示されます。  
   
--   ローカル コンピューターの既定のインスタンスに接続する場合は、いずれかを入力**localhost**またはドット (**.**)。  
+-   ローカル コンピューターの既定のインスタンスに接続する場合、いずれかを入力する**localhost**またはドット (**.**)。  
   
--   別のコンピューターの既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
+-   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   
--   別のコンピューターの名前付きインスタンスに接続する場合は、入力、コンピューター名、バック スラッシュ、およびインスタンス名など*MyServer*\\*MyInstance*です。  
+-   別のコンピューター上の名前付きインスタンスに接続する場合などを入力、コンピューター名、円記号、およびインスタンス名を*MyServer*\\*MyInstance*します。  
   
 **[サーバー ポート]**  
-場合のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が既定の接続のポート (1433)、ポート番号を入力を受け入れるように構成されていません。 それ以外の場合、この値を空白のままにします。  
+場合、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が既定の接続ポート (1433)、ポート番号を入力を受け入れるように構成されていません。 それ以外の場合、この値を空白のままにします。  
   
 **[データベース]**  
-オブジェクトとデータを移行するデータベースを指定します。 このオプションに再接続するときは使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+オブジェクトとデータを移行するデータベースを指定します。 このオプションに再接続する場合は使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 **[認証]**  
-接続に使用される認証方法の選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 現在の Windows アカウントを使用するのには、Windows 認証を選択します。 指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ログインとパスワードで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]認証します。  
+接続に使用される認証方法を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 現在の Windows アカウントを使用するには、Windows 認証を選択します。 指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインとパスワードで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
   
 **ユーザー名**  
-使用している場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]認証では、インスタンスのログイン名を入力[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 Windows 認証を使用している場合はこのオプションは利用できません。  
+使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証では、そのインスタンスのログイン名を入力[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 Windows 認証を使用している場合はこのオプションは利用できません。  
   
 **Password**  
-使用している場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]認証では、そのインスタンス上のログインのパスワードを入力[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 Windows 認証を使用している場合はこのオプションは利用できません。  
+使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証では、そのインスタンスのログインのパスワードを入力[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 Windows 認証を使用している場合はこのオプションは利用できません。  
   
 **[暗号化接続]**  
 SQL Server に安全に接続する場合は、調べることにより、暗号化接続の使用、**接続を暗号化**チェック ボックスをオンします。  
@@ -58,5 +58,5 @@ SQL Server に安全に接続する場合は、調べることにより、暗号
 このオプションを使用する場合は、選択、 **Trust Server Certificate**チェック ボックスをオンします。  
   
 > [!NOTE]  
-> 有効にする**Trust Server Certificate**に設定する必要があります「暗号化」 **True**です。  
+> 有効にする**Trust Server Certificate**に設定する必要があります「暗号化」 **True**します。  
   

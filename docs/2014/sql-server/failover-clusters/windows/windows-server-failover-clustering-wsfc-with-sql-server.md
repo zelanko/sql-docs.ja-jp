@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd03ce75d23d7cb98a8b1fcc8181fc6fcfa9523c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187739"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393505"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server
   *Windows Server フェールオーバー クラスタリング* (WSFC) クラスターは、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
@@ -65,7 +65,7 @@ ms.locfileid: "37187739"
  強制されたクォーラム  
  クォーラムに必要な少数の要素のみが通信しているときでもクラスターを開始するためのプロセスです。  
   
- 詳細については、「 [フェールオーバー クラスター用語集](http://msdn.microsoft.com/library/aa372869\(VS.85\).aspx)」を参照してください。  
+ 詳細については、「 [フェールオーバー クラスター用語集](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)」を参照してください。  
   
 ##  <a name="Overview"></a> Windows Server フェールオーバー クラスタリングの概要  
  Windows Server フェールオーバー クラスタリングは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] や Microsoft Exchange などのホストされるサーバー アプリケーションの高可用性とディザスター リカバリー シナリオをサポートするインフラストラクチャ機能を提供します。 クラスター ノードまたはサービスに障害が発生すると、そのノードでホストされていたサービスは自動的に、または手動で、他の可用性ノードに転送されます。このプロセスを *フェールオーバー*と呼びます。  

@@ -4,7 +4,7 @@ description: この記事では、リリース ノートが含まれていて、
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/18/2018
+ms.date: 08/14/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 29fa948938444471fcaaefc6869e4114c604686b
-ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
+ms.openlocfilehash: 55fc722a3205984fbb48f2a2c0945ebf4ff117b8
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146762"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396361"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-次のリリース ノートは、Linux で実行されている SQL Server 2017 に適用されます。 この記事では、各リリースについてのセクションに分割されます。 GA リリースがサポートの詳細し、既知の問題が一覧表示します。 累積的な更新プログラム (CU) の各リリースでは、CU 変更と、Linux のパッケージのダウンロードへのリンクを記述するサポートの記事にリンクがあります。
+次のリリース ノートは、Linux で実行されている SQL Server 2017 に適用されます。 この記事では、各リリースについてのセクションに分割されます。 GA リリースがサポートの詳細し、既知の問題が一覧表示します。 各累積更新プログラム (CU) または一般配布リリース (GDR) CU 変更と、Linux のパッケージのダウンロードへのリンクを記述するサポートの記事にリンクがあります。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -45,29 +45,60 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 次の表では、SQL Server 2017 のリリース履歴を一覧表示します。
 
-| リリース     | バージョン       | リリース日 |
-|-------------|---------------|--------------|
-| [CU9](#CU9) | 14.0.3030.27  | 2018-07-18   |
-| [CU8](#CU8) | 14.0.3029.16  | 2018-06-21   |
-| [CU7](#CU7) | 14.0.3026.27  | 2018-05-24   |
-| [CU6](#CU6) | 14.0.3025.34  | 2018-04-19   |
-| [CU5](#CU5) | 14.0.3023.8   | 2018-03-20   |
-| [CU4](#CU4) | 14.0.3022.28  | 2018-02-20   |
-| [CU3](#CU3) | 14.0.3015.40  | 2017-01-03   |
-| [CU2](#CU2) | 14.0.3008.27  | 2017-11-28   |
-| [CU1](#CU1) | 14.0.3006.16  | 2017-10-24   |
-| [GA](#GA)   | 14.0.1000.169 | 2017-10-02   |
+| リリース               | バージョン       | リリース日 |
+|-----------------------|---------------|--------------|
+| [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
+| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
+| [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
+| [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
+| [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
+| [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
+| [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
+| [CU3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
+| [GDR1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
+| [CU2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
+| [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
+| [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
-## <a id="cuinstall"></a> 累積的更新プログラムをインストールする方法
+## <a id="cuinstall"></a> 更新プログラムをインストールする方法
 
-累積的な更新リポジトリを構成した場合新規インストールを実行するときの SQL Server パッケージの最新の累積的な更新プログラムが表示されます。 累積更新プログラムのリポジトリでは、SQL Server on Linux のすべてのパッケージのインストールのアーティクルの既定値です。 リポジトリの構成の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
+CU リポジトリを構成している場合 (**mssql server-2017**)、新規インストールを実行すると、最新の SQL Server の CU パッケージが表示されます。 CU リポジトリでは、SQL Server on Linux のすべてのパッケージのインストールのアーティクルの既定値です。 GDR のリポジトリを構成している場合 (**mssql server 2017 gdr**)、一般以降にリリースされた重要なセキュリティ更新プログラムのみが取得されます Docker コンテナー CU または GDR 更新プログラムが必要な場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](http://hub.docker.com/r/microsoft/mssql-server-linux/)します。 リポジトリの構成の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
 
-SQL Server の既存のパッケージを更新する場合は、最新の累積的な更新プログラムを取得するには、各パッケージの適切な更新プログラムのコマンドを実行します。 各パッケージの特定の更新手順については、次のインストール ガイドを参照してください。
+SQL Server の既存のパッケージを更新する場合は、最新の CU を取得するには、各パッケージの適切な更新プログラムのコマンドを実行します。 各パッケージの特定の更新手順については、次のインストール ガイドを参照してください。
 
 - [SQL Server パッケージをインストールします。](sql-server-linux-setup.md#upgrade)
 - [フルテキスト検索のパッケージをインストールします。](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントを有効にします。](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU9-GDR2"></a> CU9 GDR2 (2018 の年 8 月)
+
+これは、SQL Server 2017 のも、以前にリリースされた CU (CU9) 含まれており、セキュリティ更新プログラムです。 このリリースの SQL Server エンジンのバージョンは、14.0.3035.2 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4293805](https://support.microsoft.com/en-us/help/4293805)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 14.0.3035.2-1 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm)| 
+| SLES RPM パッケージ | 14.0.3035.2-1 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
+| Debian パッケージを Ubuntu 16.04 | 14.0.3035.2-1 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
+
+## <a id="GDR2"></a> GDR2 (2018 の年 8 月)
+
+これは、SQL Server 2017 の GDR2 (および GDR1) のセキュリティ修正プログラムのみが含まれるセキュリティ更新プログラムです。  このリリースの SQL Server エンジンのバージョンは、14.0.2002.14 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4293803](https://support.microsoft.com/en-us/help/4293803)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 14.0.2002.14-1 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.2002.14-1 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
+| Debian パッケージを Ubuntu 16.04 | 14.0.2002.14-1 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
 ## <a id="CU9"></a> CU9 (2018 年 7 月)
 
@@ -173,6 +204,20 @@ sudo systemctl start mssql-server
 | Red Hat の RPM パッケージ | 14.0.3022.28-2 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM パッケージ | 14.0.3022.28-2 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Debian パッケージを Ubuntu 16.04 | 14.0.3022.28-2 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="GDR1"></a> GDR1 (2018 年 1 月)
+
+これは、セキュリティ上の SQL Server 2017 の修正 GDR1 のみを含む、セキュリティ更新プログラムです。 このリリースの SQL Server エンジンのバージョンは、14.0.2000.63 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4057122](https://support.microsoft.com/en-us/help/4057122)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 14.0.2000.63-3 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.2000.63-3 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
+| Debian パッケージを Ubuntu 16.04 | 14.0.2000.63-3 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
 ## <a id="CU3"></a> CU3 (2018 年 1 月)
 

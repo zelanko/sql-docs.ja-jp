@@ -15,28 +15,28 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f15152c782b16b7939f26e8b94b66a2ca20b234c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 76dd1388f5abdc2219270f0745c03fcdb0334030
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985244"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392140"
 ---
-# <a name="working-with-ssma-projects-oracletosql"></a>SSMA プロジェクト (OracleToSQL) での作業
-Oracle データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA プロジェクトを作成します。 プロジェクトは、次の情報を含むファイルです。  
+# <a name="working-with-ssma-projects-oracletosql"></a>SSMA プロジェクトの操作 (OracleToSQL)
+Oracle データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA プロジェクトを作成します。 プロジェクトは、次の情報を含むファイルです。  
   
--   移行する Oracle データベースに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
+-   移行する Oracle データベースに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
--   ターゲット インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移行済みのオブジェクトとデータを受信します。  
+-   ターゲット インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行済みのオブジェクトとデータを受信します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 接続情報です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続情報です。  
   
 -   プロジェクトの設定。  
   
-Oracle から切断されているプロジェクトを開くときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 オフラインで作業できます。 再接続する方法については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)します。  
+Oracle から切断されているプロジェクトを開くときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 オフラインで作業できます。 再接続する方法については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)します。  
   
 ## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定を確認します。  
-SSMA には、変換、およびデータベース オブジェクトの読み込み、データの移行し、Oracle との SSMA の同期のいくつかの設定が含まれていますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、設定を確認する必要があります。 たい場合は、すべての新しいプロジェクトに使用される既定の設定を変更できます。  
+SSMA には、変換、およびデータベース オブジェクトの読み込み、データの移行し、Oracle との SSMA の同期のいくつかの設定が含まれていますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、設定を確認する必要があります。 たい場合は、すべての新しいプロジェクトに使用される既定の設定を変更できます。  
   
 **既定のプロジェクト設定を確認するには**  
   
@@ -54,14 +54,14 @@ SSMA には、変換、およびデータベース オブジェクトの読み�
   
     -   システム オブジェクトの設定については、次を参照してください。[プロジェクト設定&#40;システム オブジェクトの読み込み&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md)します。  
   
-    -   同期するための設定について[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[プロジェクト設定&#40;同期&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)します。  
+    -   同期するための設定について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[プロジェクト設定&#40;同期&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)します。  
   
     -   GUI の設定については、次を参照してください。[プロジェクト設定&#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)します。  
   
     -   データ型マッピングの設定については、次を参照してください。[プロジェクト設定&#40;型マッピング&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)します。  
   
 ## <a name="creating-new-projects"></a>新しいプロジェクトの作成  
-Oracle データベースからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、まずプロジェクトを作成する必要があります。  
+Oracle データベースからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、まずプロジェクトを作成する必要があります。  
   
 **プロジェクトを作成するには**  
   
@@ -73,15 +73,15 @@ Oracle データベースからデータを移行する[!INCLUDE[ssNoVersion](..
   
 3.  **場所**ボックス、入力またはプロジェクトのフォルダーを選択し、クリックして**OK**します。  
   
-4.  **移行に**ドロップダウンで、ターゲットのバージョンを選択します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移行に使用します。 使用可能なオプションがあります。  
+4.  **移行に**ドロップダウンで、ターゲットのバージョンを選択します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行に使用します。 使用可能なオプションがあります。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -108,7 +108,7 @@ Oracle データベースからデータを移行する[!INCLUDE[ssNoVersion](..
         SSMA は Oracle スキーマを解析し、プロジェクト ファイルにメタデータを保存します。  
   
 ## <a name="opening-projects"></a>プロジェクトを開く  
-Oracle およびからは切断されて、プロジェクトを開いたときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 オフラインで作業できます。 メタデータを更新するにデータベース オブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 データを移行する必要があります、Oracle に再接続し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
+Oracle およびからは切断されて、プロジェクトを開いたときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 オフラインで作業できます。 メタデータを更新するにデータベース オブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 データを移行する必要があります、Oracle に再接続し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 **プロジェクトを開く**  
   
@@ -120,7 +120,7 @@ Oracle およびからは切断されて、プロジェクトを開いたとき�
   
 2.  Oracle に再接続するには、**ファイル** メニューのをクリックして**Oracle への再接続**します。  
   
-3.  再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]の**ファイル** メニューのをクリックして**SQL Server に再接続**します。  
+3.  再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**ファイル** メニューのをクリックして**SQL Server に再接続**します。  
   
 ## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順が、 [Oracle データベース (OracleToSQL) に接続する](http://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)します。  

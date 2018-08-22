@@ -2,7 +2,7 @@
 title: SSMA for Access(AccessToSQL) における新 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/05/2018
+ms.date: 08/14/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,32 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eabb6b1364b36a84da8acd4f70fe82f962b31081
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556592"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393504"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) の新機能新機能
-このトピックでは、アクセスの変更を各リリースでの SSMA を一覧表示します。  
+この記事では、アクセスの変更を各リリースでの SSMA が一覧表示します。  
+
+## <a name="ssma-v79"></a>SSMA v7.9
+SSMA for Access の v7.9 リリースには、次の変更が含まれています。
+- 品質と変換のメトリックを向上させる対象となる修正します。
+- データ型マッピングとプロジェクトの環境設定を変更するコマンドラインの SSMA でサポートします。
+- SSMA で Azure SQL Database の接続ダイアログが、完全修飾サーバー名を指定することも変更されました。 SSMA の以前のバージョンで、Azure SQL Database のプレフィックスは、プロジェクト設定内で明示的に説明する必要があります。
+
+> [!IMPORTANT]
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
+
+## <a name="ssma-v78"></a>SSMA v7.8
+SSMA for Access の v7.8 リリースには、次の変更が含まれています。
+- プロジェクトの設定で変更が強調表示されている型のマッピング。
+- ユーザーがテレメトリを無効にする機能を提供します。
+
+> [!IMPORTANT]
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 SSMA for Access の v7.7 リリースには、次の変更が含まれています。
@@ -143,8 +160,8 @@ SSMA for Access の 2011 年 7 月リリースには、次の変更が含まれ�
 ## <a name="april-2011"></a>2011 年 4 月  
 SSMA for Access の 2011 年 4 月リリースには、次の変更が含まれています。  
   
--   "SSMA for Access の"をサポートするインストール可能な 1 つの追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "Denali"と Azure SQL。  
--   接続する機能が追加されました[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]"Denali"  
+-   "SSMA for Access の"をサポートするインストール可能な 1 つの追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali"と Azure SQL。  
+-   接続する機能が追加されました[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"Denali"  
 -   旧バージョンとの互換性のため追加の SSMA for Access コンソールのバージョンをサポートします。 SSMA v5.0 を以前のバージョンで作成されたプロジェクトを開くことができます。
 -   SSMA 製品の以前のバージョンでの SSMA v5.0 製品サイド バイ サイド (SxS) をインストールする機能が追加されました。  
   
@@ -173,10 +190,10 @@ SSMA for Access の 2007 年 5 月リリースには、次の変更が含まれ�
 ## <a name="november-2006"></a>2006 年 11 月  
 SSMA for Access の 2006 年 11 月リリースには、次の変更が含まれています。  
   
--   新しいデータベースの移行ウィザードへのアクセスを 1 つのデータベースの移行をガイドする追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
--   新しい変換、読み込みを追加し、Access データベースに変換する移行コマンドに変換されたオブジェクトを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]へのデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]すべて 1 つの手順でします。  
--   強化されたクエリの移行。 移行をクエリに変換しますをビューにクエリをより選択するようになりました。 詳細については、次を参照してください。 [Access データベース オブジェクトの変換](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)します。  
--   テーブルとインデックスのプロパティを編集する機能を追加、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **テーブル**タブ。  
+-   新しいデータベースの移行ウィザードへのアクセスを 1 つのデータベースの移行をガイドする追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+-   新しい変換、読み込みを追加し、Access データベースに変換する移行コマンドに変換されたオブジェクトを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すべて 1 つの手順でします。  
+-   強化されたクエリの移行。 移行をクエリに変換しますをビューにクエリをより選択するようになりました。 詳細については、次を参照してください。 [Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)します。  
+-   テーブルとインデックスのプロパティを編集する機能を追加、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **テーブル**タブ。  
 -   新しいグローバル設定を追加するには。  
     -   エディターのウィンドウで行番号を表示できます。  
     -   重複するオブジェクトの置き換えを確認する SSMA を構成したり、スキーマの変換中に重複するオブジェクトを置き換えますかできます。  

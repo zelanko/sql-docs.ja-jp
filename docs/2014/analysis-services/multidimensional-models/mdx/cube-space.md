@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0bcd66844f5eaacca291cd67e84e34b6222788c
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282188"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40392123"
 ---
 # <a name="cube-space"></a>キューブ空間
   キューブ空間は、そのキューブのメジャーを伴った、キューブの属性階層のメンバーから構成されます。 したがって、キューブ空間はキューブ内のすべての属性階層のメンバーとキューブのメジャーの組み合わせによって決まり、キューブの最大サイズを定義します。 重要なのは、この空間には属性階層メンバーで考えられるすべての組み合わせが含まれるということです。現実世界において不可能と考えられるような組み合わせ (たとえば、都市を Paris、国を England、Spain、Japan、India などに指定する) も含まれます。  
@@ -59,7 +59,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  このクエリでは、列軸を表す axis(0) の略記である 0 を使用して、列軸を指定しています。  
   
- 上のクエリを実行すると、クエリ内の各属性階層から、共存できるメンバーのセルのみが返されます。 上のクエリは、 [* (クロス積) (MDX)](/sql/mdx/crossjoin-mdx) 関数の新しい * バリアントを使用して記述することもできます。  
+ 上のクエリを実行すると、クエリ内の各属性階層から、共存できるメンバーのセルのみが返されます。 前のクエリは、新しいを使用して書き込むこともできます * のバリアント、 [ \* (クロス積) (MDX)](/sql/mdx/crossjoin-mdx)関数。  
   
 ```  
 SELECT   

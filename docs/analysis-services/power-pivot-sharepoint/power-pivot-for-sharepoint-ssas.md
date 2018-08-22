@@ -1,5 +1,5 @@
 ---
-title: Power Pivot for SharePoint (SSAS) |Microsoft ドキュメント
+title: Power Pivot for SharePoint (SSAS) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc21ce644416c93367552e6ba19ac8aca9e0f48e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fcfce0a21e66e0ae1e5a440eda0fd32fd7d1964b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023639"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393237"
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot for SharePoint (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "34023639"
  そのデータをサーバーでホストするには、SharePoint、Excel Services、および [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールが必要です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint インスタンスにデータが読み込まれます。このデータは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新機能を使用してスケジュール設定された間隔で更新できます。この更新機能は、Excel 2010 ブックの場合はサーバーによって、Excel 2013 と 2016 ブックの場合は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] によって提供されます。  
   
 ## <a name="power-pivot-for-sharepoint-2016"></a>Power Pivot for SharePoint 2016  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 と [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] による、データ モデルと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View レポートを含む Excel ブックの使用をサポートします。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サポート[!INCLUDE[msCoName](../../includes/msconame-md.md)]データ モデルを含む Excel ブックの SharePoint 2016 と Office Online Server の使用状況と[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Power View レポートします。  
   
- Excel は、 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] 内では、ブラウザーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを操作できるようにするためのデータ モデル機能を含みます。 ファームに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 アドインを配置する必要はありません。 必要なのは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] モードでインストールし、そのサーバーを [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)]に登録することだけです。  
+ Office Online Server 内の Excel にはとの対話を有効にするためのデータ モデル機能が含まれています、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブラウザー内のブック。 ファームに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 アドインを配置する必要はありません。 のみをインストールする必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サーバー[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]モードと Office Online Server でサーバーを登録します。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 アドインを配置すると、SharePoint ファームで追加の機能を有効にすることができます。 追加の機能には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーとデータ更新のスケジュールがあります。  
   
- ![SSAS Power Pivot モード 3 のサーバー Office Online Server で](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot モード 3 のサーバー Office Online Server で")  
+ ![SSAS Power Pivot モード 3 のサーバー Office Online Server で](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot モード 3 サーバー Office Online Server を")  
   
 ## <a name="power-pivot-for-sharepoint-2013"></a>Power Pivot for SharePoint 2013  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 Excel Services による、データ モデルと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View レポートを含む Excel ブックの使用をサポートします。  
@@ -48,7 +48,7 @@ ms.locfileid: "34023639"
   
  ![SSAS PowerPivot モード 2 のサーバー配置](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot モード 2 のサーバー配置")  
   
-##  <a name="bkmk_RelatedContent"></a> このセクションの内容  
+##  <a name="bkmk_RelatedContent"></a> トピックの内容  
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Windows PowerShell を使用した Power Pivot の構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
@@ -84,6 +84,6 @@ ms.locfileid: "34023639"
   
 ## <a name="see-also"></a>参照  
  [Power Pivot Planning and Deployment (Power Pivot の計画と配置)](http://go.microsoft.com/fwlink/?linkID=220972)   
- [Power Pivot for SharePoint の災害復旧](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Power Pivot for SharePoint のディザスター リカバリー](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

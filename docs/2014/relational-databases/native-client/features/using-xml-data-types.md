@@ -5,7 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -33,15 +33,15 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5db3626a0e2eba0154e565907d9ca9a888453925
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1f58b1d71724d36d70bb95a6084a6f4a4fc6f3ef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417045"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393714"
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入された、 **xml**データ型を XML ドキュメントを保存することができ、フラグメントを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。 **Xml**データ型は組み込みのデータ型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]などの他の組み込み型のようないくつかの方法では、 **int**と**varchar**します。 他の組み込み型で使用できるように、 **xml**データ型の変数の型、パラメーターの型、または関数の戻り値型であるとして; CAST や CONVERT 関数内またはテーブルの作成時に列型として。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] には **xml** データ型が導入されています。このデータ型を使用すると XML ドキュメントや XML フラグメントを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに格納できます。 **xml** データ型は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、**int** や **varchar** などの他の組み込みデータ型といくつかの点で似ています。 **xml** データ型は、他の組み込みデータ型と同様に、テーブル作成時の列の型、変数の型、パラメーターの型、または関数の戻り値の型として使用したり、CAST 関数や CONVERT 関数でも使用できます。  
   
 ## <a name="programming-considerations"></a>プログラミングの考慮事項  
  XML は自己記述型で、必要に応じて、次のようにドキュメントのエンコードを指定する XML ヘッダーを含めることができます。  
@@ -68,10 +68,10 @@ ms.locfileid: "37417045"
   
  **ISequentialStream**大きな XML ドキュメントの取得のために使用をする必要があります。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、次を参照してください。[大きな値の型を使用して](using-large-value-types.md)します。  
   
- 行セットの XML も取得できる型の列に格納されたデータの挿入、またはなどの通常のインターフェイスを使用して、アプリケーションによって更新された**irow::getcolumns**、 **irowchange:**、および**Icommand::execute**します。 同様に取得の場合に、アプリケーション プログラムを渡すことができます、テキスト文字列または**ISequentialStream**を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー。  
+ 行セットの XML 型の列に格納されているデータは、アプリケーションで **IRow::GetColumns**、**IRowChange::SetColumns**、**ICommand::Execute** などの通常のインターフェイスを使用することにより、取得、挿入、または更新することもできます。 同様に取得の場合に、アプリケーション プログラムを渡すことができます、テキスト文字列または**ISequentialStream**を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー。  
   
 > [!NOTE]  
->  文字列形式で XML データを送信する、 **ISequentialStream**インターフェイスを取得する必要がある**ISequentialStream** DBTYPE_IUNKNOWN を指定して、設定をその*pObject*バインドで null への引数。  
+>  **ISequentialStream** インターフェイスを使用して XML データを文字列形式で送信するには、DBTYPE_IUNKNOWN を指定して **ISequentialStream** を取得し、その *pObject* 引数をバインドの際に NULL に設定する必要があります。  
   
  コンシューマーのバッファーが小さすぎて取得した XML データが切り捨てられるときは、データ長が 0xffffffff で返されます。この値は、長さが不明であることを意味します。 この動作は、実際のデータの前に長さの情報を送信しないでクライアントにストリーム送信されるデータ型の実装と一貫性を持たせています。 場合によっては、実際の長さは、プロバイダーがなど、値全体をバッファーがときに返される**irowset::getdata**データ変換が実行されます。  
   
@@ -80,40 +80,40 @@ ms.locfileid: "37417045"
  入力 XML が DBTYPE_WSTR にバインドされる場合、不要なデータ変換によってデータが破損しないようにするために、アプリケーションでは入力 XML が Unicode でエンコードされていることを確認する必要があります。  
   
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
- 次の表は、バインドおよび強制型変換型一覧表示されているデータを使用するときに発生する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml**データ型。  
+ 次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **xml** データ型と共に使用した場合に行われるバインドおよび強制型変換を示します。  
   
-|データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **XML 以外**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **XML 以外**|  
+|データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **XML 以外から**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **XML 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|通過<sup>6、7</sup>|エラー<sup>1</sup>|[OK]<sup>11、6</sup>|エラー<sup>8</sup>|  
-|DBTYPE_BYTES|通過<sup>6、7</sup>|該当なし<sup>2</sup>|[OK] <sup>11、6</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_WSTR|通過<sup>6、10</sup>|該当なし<sup>2</sup>|[OK]<sup>4、6、12</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_BSTR|通過<sup>6、10</sup>|該当なし<sup>2</sup>|[OK] <sup>3</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_STR|[OK]<sup>6、9、10</sup>|該当なし<sup>2</sup>|[OK]<sup>5、6、12</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|使用してバイト ストリーム**ISequentialStream**<sup>7</sup>|該当なし<sup>2</sup>|使用してバイト ストリーム**ISequentialStream**<sup>11</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|通過<sup>6、7</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|通過<sup>6、10</sup>|該当なし<sup>2</sup>|[OK]<sup>3</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_XML|パス スルー<sup>6、7</sup>|エラー<sup>1</sup>|[OK]<sup>11、6</sup>|エラー<sup>8</sup>|  
+|DBTYPE_BYTES|パス スルー<sup>6、7</sup>|該当なし<sup>2</sup>|可 <sup>11、6</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_WSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|[OK]<sup>4、6、12</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_BSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|可 <sup>3</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_STR|[OK]<sup>6、9、10</sup>|該当なし <sup>2</sup>|可<sup>5、6、12</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|**ISequentialStream** 経由のバイト ストリーム<sup>7</sup>|該当なし <sup>2</sup>|**ISequentialStream** 経由のバイト ストリーム<sup>11</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パス スルー<sup>6、7</sup>|該当なし <sup>2</sup>|なし|該当なし <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|可<sup>3</sup>|該当なし <sup>2</sup>|  
   
- <sup>1</sup>サーバー以外の型に dbtype_xml 型が指定されて場合**icommandwithparameters::setparameterinfo**アクセサーの型が dbtype_xml 型、およびステートメントが実行されたときにエラーが発生した (DB_E_ERRORSOCCURRED、パラメーターの状態は dbstatus_e_badaccessor になります) です。サーバーにデータが送信されるそれ以外の場合がサーバーには、XML からパラメーターのデータ型への暗黙的な変換がないことを示すエラーが返されます。  
+ <sup>1</sup>DBTYPE_XML 以外のサーバー型が **ICommandWithParameters::SetParameterInfo** で指定され、アクセサー型が DBTYPE_XML の場合、ステートメントの実行時にエラーが発生します (DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR)。それ以外の場合は、データがサーバーに送信されますが、XML 型からパラメーターのデータ型への暗黙の変換が行われないことを示すエラーがサーバーから返されます。  
   
  <sup>2</sup>このトピックの範囲を超えています。  
   
- <sup>3</sup>形式は utf-16、bye オーダー マーク (BOM) なしエンコード仕様、終端の null はありません。  
+ <sup>3</sup>形式は UTF-16 です。バイト順マーク (BOM)、エンコード仕様、および終端を示す NULL は付加されません。  
   
- <sup>4</sup>形式は utf-16、BOM なし、ありませんエンコード仕様、null で終端します。  
+ <sup>4</sup>形式は UTF-16 です。BOM とエンコード仕様は付加されず、NULL で終端が示されます。  
   
- <sup>5</sup>形式は、マルチバイト文字の null で終端のクライアント コード ページでエンコードします。 Unicode を使用できるサーバーから変換するとデータが破損する場合があるので、このバインドはお勧めしません。  
+ <sup>5</sup>クライアントのコード ページでエンコードされ、NULL で終端が示される、マルチバイト文字列形式です。 Unicode を使用できるサーバーから変換するとデータが破損する場合があるので、このバインドはお勧めしません。  
   
  <sup>6</sup>BY_REF を使用できます。  
   
- <sup>7</sup>bom が付加された utf-16 データを開始する必要があります。 BOM で始まらない場合は、サーバーでエンコードが正しく認識されないことがあります。  
+ <sup>7</sup>UTF-16 データは BOM で始まる必要があります。 BOM で始まらない場合は、サーバーでエンコードが正しく認識されないことがあります。  
   
- <sup>8</sup>アクセサーの作成時、またはフェッチ時に検証が実行できます。 エラーは DB_E_ERRORSOCCURRED です。その場合、バインドの状態は DBBINDSTATUS_UNSUPPORTEDCONVERSION に設定されます。  
+ <sup>8</sup>検証は、アクセサーの作成時、またはフェッチ時に行われます。 エラーは DB_E_ERRORSOCCURRED です。その場合、バインドの状態は DBBINDSTATUS_UNSUPPORTEDCONVERSION に設定されます。  
   
- <sup>9</sup>データは、サーバーに送信される前にクライアントのコード ページを使用して Unicode に変換します。 ドキュメントのエンコードがクライアントのコード ページと一致しない場合、変換によってデータが破損することがあるので、このバインドはお勧めしません。  
+ <sup>9</sup>データは、サーバーに送信される前にクライアントのコード ページを使用して Unicode に変換されます。 ドキュメントのエンコードがクライアントのコード ページと一致しない場合、変換によってデータが破損することがあるので、このバインドはお勧めしません。  
   
- <sup>10</sup>BOM が常に、サーバーに送信されるデータを追加します。 既にデータが BOM で始まる場合、この動作により、バッファーの先頭に 2 つの BOM が存在することになります。 サーバーは、utf-16 としてエンコードを認識するための最初の BOM を使用し、それを破棄します。 2 つ目の BOM は、幅が 0 の改行を行わない空白文字として解釈されます。  
+ <sup>10</sup>サーバーに送信されるデータには必ず BOM が追加されます。 既にデータが BOM で始まる場合、この動作により、バッファーの先頭に 2 つの BOM が存在することになります。 サーバーでは、1 つ目の BOM からエンコードを UTF-16 と認識した後、その BOM を破棄します。 2 つ目の BOM は、幅が 0 の改行を行わない空白文字として解釈されます。  
   
- <sup>11</sup>形式は utf-16 エンコード仕様、BOM は、サーバーから受信したデータに追加されます。 空の文字列が、サーバーによって返された場合、BOM がまだアプリケーションに返されます。 バッファーの長さがバイト単位の数が奇数の場合は、データが適切に切り捨てられます。 チャンク単位で値全体が返された場合は、適切な値を再構成する連結できます。  
+ <sup>11</sup>形式は UTF-16 です。エンコード仕様は付加されません。サーバーから受け取ったデータに BOM が追加されます。 サーバーから空文字列が返されても、アプリケーションには BOM が返されます。 バッファー長が奇数バイトの場合、データは適切に切り捨てられます。 1 つの値が複数のチャンクで返される場合、それぞれを連結して正しい値を再構成できます。  
   
  <sup>12</sup>バッファー長が 2 未満である文字、null で終端--の領域が不足している場合、オーバーフロー エラーが報告されます。  
   
@@ -122,11 +122,11 @@ ms.locfileid: "37417045"
   
  XML 標準では、UTF-16 でエンコードされた XML をバイト順マーク (BOM) で始める必要があります。BOM は UTF-16 の文字コードでは 0xFEFF です。 WSTR と BSTR のバインディングを使用する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client が必要がありますまたはバインドによってエンコードが暗黙的に BOM を追加していません。 BYTES バインド、XML バインド、または IUNKNOWN バインドを使用する場合、その目的は他の XML プロセッサや XML ストレージ システムでの処理を簡単にすることです。 この場合、BOM は UTF-16 でエンコードされた XML を示し、SQL Server を含め XML プロセッサの多くは値の先頭の数バイトを調べてエンコードを推定するので、アプリケーションで実際のエンコードを考慮する必要はありません。 受信した XML データ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (バイト)、XML、または IUNKNOWN を使用してバインドは常にでエンコードされた utf-16 BOM とエンコード宣言は埋め込まれません。  
   
- OLE DB core services で提供されるデータ変換 (**IDataConvert**) dbtype_xml 型には適用されません。  
+ OLE DB Core Services で提供されるデータ変換 (**IDataConvert**) は、DBTYPE_XML 型には適用できません。  
   
  検証はデータがサーバーに送信されたときに行われます。 クライアント側の検証とエンコードの変更はアプリケーションで処理する必要がありますが、直接処理するのではなく、DOM リーダーや SAX リーダーを使用して XML データを処理することを強くお勧めします。  
   
- 入力パラメーター、出力パラメーターまたは結果ではなく、DBTYPE_ および DBTYPE_EMPTY をバインドできます。 入力パラメーターにバインドした場合、状態を DBSTATUS_S_ISNULL または DBSTATUS_S_DEFAULT に設定する必要があります。  
+ DBTYPE_NULL と DBTYPE_EMPTY は入力パラメーターにバインドできますが、出力パラメーターや結果にはバインドできません。 入力パラメーターにバインドした場合、状態を DBSTATUS_S_ISNULL または DBSTATUS_S_DEFAULT に設定する必要があります。  
   
  DBTYPE_XML は DBTYPE_EMPTY および DBTYPE_NULL に変換でき、DBTYPE_EMPTY は DBTYPE_XML に変換できますが、DBTYPE_NULL を DBTYPE_XML に変換することはできません。 この動作は、DBTYPE_WSTR と一貫性があります。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "37417045"
 |SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|XML スキーマ コレクションの名前。 XML 型以外の列または型指定されていない XML 列の場合は NULL です。|  
   
 #### <a name="the-providertypes-schema-rowset"></a>PROVIDER_TYPES スキーマ行セット  
- PROVIDER_TYPES スキーマ行セット、COLUMN_SIZE の値は 0 を**xml**データ型、DATA_TYPE は DBTYPE_XML です。  
+ PROVIDER_TYPES スキーマ行では、**xml** データ型の COLUMN_SIZE の値は 0 で、DATA_TYPE は DBTYPE_XML です。  
   
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA スキーマ行セット  
  クライアントで XML スキーマ情報を取得できるように、新しいスキーマ行セット SS_XMLSCHEMA が導入されました。 SS_XMLSCHEMA 行セットには、次の列が含まれています。  
@@ -154,7 +154,7 @@ ms.locfileid: "37417045"
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML コレクションが属するカタログ。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML コレクションが属するスキーマ。|  
-|SCHEMACOLLECTIONNAME|DBTYPE_WSTR|型指定された XML 列では、XML スキーマ コレクション NULL それ以外の場合の名前。|  
+|SCHEMACOLLECTIONNAME|DBTYPE_WSTR|型指定された XML 列の場合は、XML スキーマ コレクションの名前です。それ以外の場合は、NULL です。|  
 |TARGETNAMESPACEURI|DBTYPE_WSTR|XML スキーマの対象名前空間。|  
 |SCHEMACONTENT|DBTYPE_WSTR|XML スキーマのコンテンツ。|  
   
@@ -172,7 +172,7 @@ ms.locfileid: "37417045"
   
 |名前|型|説明|  
 |----------|----------|-----------------|  
-|SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログ (データベース) の名前。 SQL の 3 つの部分の名前識別子の一部です。|  
+|SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログ (データベース) の名前。 SQL の 3 部構成による名前の識別子の一部になります。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|スキーマ コレクションに含まれている XML スキーマの名前。 SQL の 3 部構成による名前の識別子の一部になります。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|カタログに含まれている XML スキーマ コレクションの名前。SQL の 3 部構成による名前の識別子の一部になります。|  
   
@@ -191,10 +191,10 @@ ms.locfileid: "37417045"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、新しい値が追加または多くの主要な OLE DB インターフェイスに変更します。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters インターフェイス  
- サポートするために、 **xml** OLE DB でのデータ型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、多数の変更の追加など、 [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイス。 この新しいインターフェイスは、主要な OLE DB インターフェイスから継承**ICommandWithParameters**します。 継承した次の 3 つのメソッドだけでなく**ICommandWithParameters**;**GetParameterInfo**、 **MapParameterNames**、および**SetParameterInfo**;**ISSCommandWithParameters**提供、 [GetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)と[SetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)サーバー固有の処理に使用されるメソッドデータ型。  
+ サポートするために、 **xml** OLE DB でのデータ型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、多数の変更の追加など、 [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイス。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 継承した次の 3 つのメソッドだけでなく**ICommandWithParameters**;**GetParameterInfo**、 **MapParameterNames**、および**SetParameterInfo**;**ISSCommandWithParameters**提供、 [GetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)と[SetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)サーバー固有の処理に使用されるメソッドデータ型。  
   
 > [!NOTE]  
->  **ISSCommandWithParameters**インターフェイスもは、新しい SSPARAMPROPS 構造体。  
+>  **ISSCommandWithParameters** インターフェイスでは、新しい SSPARAMPROPS 構造体も使用されます。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、以下を追加します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定の列によって返される行セットに、 **:getcolumnsrowset**メソッド。 これらの列には、XML スキーマ コレクションの 3 部構成の名前が含まれます。 XML 以外の列または型指定されていない XML 列の場合、これら 3 列の既定値はすべて NULL になります。  
@@ -206,26 +206,26 @@ ms.locfileid: "37417045"
 |DBCOLUMN_SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|型指定された XML 列の場合は、XML スキーマ コレクションの名前です。それ以外の場合は、NULL です。|  
   
 #### <a name="the-irowset-interface"></a>IRowset インターフェイス  
- XML 列に XML インスタンスを取得、 **irowset::getdata**メソッド。 クライアントで指定されているバインドによって異なりますが、XML インスタンスは DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、DBTYPE_STR、DBTYPE_BYTES として、または DBTYPE_IUNKNOWN 経由のインターフェイスとして取得できます。 コンシューマーが DBTYPE_BSTR、DBTYPE_WSTR、または DBTYPE_VARIANT を指定すると、プロバイダーで XML インスタンスの型がユーザーが要求した型に変換され、対応するバインドで指定した場所に格納されます。  
+ XML 列内の XML インスタンスは **IRowset::GetData** メソッドを使用して取得されます。 クライアントで指定されているバインドによって異なりますが、XML インスタンスは DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、DBTYPE_STR、DBTYPE_BYTES として、または DBTYPE_IUNKNOWN 経由のインターフェイスとして取得できます。 コンシューマーが DBTYPE_BSTR、DBTYPE_WSTR、または DBTYPE_VARIANT を指定すると、プロバイダーで XML インスタンスの型がユーザーが要求した型に変換され、対応するバインドで指定した場所に格納されます。  
   
- 場合は、コンシューマーが DBTYPE_IUNKNOWN を指定し、設定、 *pObject* null の場合、またはセットへの引数、 *pObject*引数に IID_ISequentialStream、プロバイダーを返します、 **ISequentialStream**コンシューマーにインターフェイスのコンシューマーが列の XML データをストリーミングできるようにします。 **ISequentialStream**を Unicode 文字ストリームとして XML データを返します。  
+ コンシューマーが DBTYPE_IUNKNOWN を指定し、*pObject* 引数に NULL を設定した場合、または *pObject* 引数に IID_ISequentialStream を設定した場合、プロバイダーから **ISequentialStream** インターフェイスが返されるので、列の XML データをストリーム出力できます。 その後、**ISequentialStream** から XML データが Unicode 文字のストリームとして返されます。  
   
  プロバイダーは DBTYPE_IUNKNOWN にバインドされた XML 値を返すときに、`sizeof (IUnknown *)` でサイズ値を報告します。 この動作は、列が DBTYPE_IUnknown または DBTYPE_IDISPATCH としてバインドされる場合行われる動作、および正確な列のサイズを特定できない場合に DBTYPE_IUNKNOWN や ISequentialStream で行われる動作と同じです。  
   
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange インターフェイス  
- コンシューマーは、列の XML インスタンスを 2 とおりの方法で更新できます。 1 つ目は、ストレージ オブジェクトを介して**ISequentialStream**プロバイダーによって作成します。 コンシューマーは、呼び出すことができます、 **isequentialstream::write**メソッドを直接、プロバイダーによって返される XML インスタンスを更新します。  
+ コンシューマーは、列の XML インスタンスを 2 とおりの方法で更新できます。 1 つ目の方法では、プロバイダーで作成されるストレージ オブジェクト **ISequentialStream** を使用します。 コンシューマーは **ISequentialStream::Write** メソッドを呼び出して、プロバイダーから返された XML インスタンスを直接更新できます。  
   
- 2 番目の方法は、 **irowsetchange::setdata**または**irowsetchange::insertrow**メソッド。 この方法では、コンシューマーのバッファーに格納されている XML インスタンスを DBTYPE_BSTR 型、DBTYPE_WSTR 型、DBTYPE_VARIANT 型、DBTYPE_XML 型、または DBTYPE_IUNKNOWN 型のバインドで指定できます。  
+ 2 つ目の方法では、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを使用します。 この方法では、コンシューマーのバッファーに格納されている XML インスタンスを DBTYPE_BSTR 型、DBTYPE_WSTR 型、DBTYPE_VARIANT 型、DBTYPE_XML 型、または DBTYPE_IUNKNOWN 型のバインドで指定できます。  
   
  DBTYPE_BSTR、DBTYPE_WSTR、または DBTYPE_VARIANT の場合、コンシューマーのバッファーに存在する XML インスタンスがプロバイダーによって適切な列に格納されます。  
   
- DBTYPE_IUNKNOWN と isequentialstream をコンシューマーが、任意のストレージ オブジェクトを指定しない場合、コンシューマー作成する必要があります、 **ISequentialStream**オブジェクトをあらかじめ、オブジェクト、XML ドキュメントをバインドし、オブジェクトを渡します使用して、プロバイダー、 **irowsetchange::setdata**メソッド。 コンシューマーは、ストレージを作成できますもオブジェクト、pObject 引数に IID_ISequentialStream を設定して、作成、 **ISequentialStream**オブジェクトと、 **ISequentialStream**オブジェクトを**Irowsetchange::setdata**メソッド。 どちらの場合も、プロバイダーが使用して XML オブジェクトを取得できます、 **ISequentialStream**オブジェクトし、適切な列に挿入します。  
+ DBTYPE_IUNKNOWN と isequentialstream をコンシューマーが、任意のストレージ オブジェクトを指定しない場合、コンシューマー作成する必要があります、 **ISequentialStream**オブジェクトをあらかじめ、オブジェクト、XML ドキュメントをバインドし、オブジェクトを渡します使用して、プロバイダー、 **irowsetchange::setdata**メソッド。 また、ストレージ オブジェクトを作成して pObject 引数に IID_ISequentialStream を設定し、**ISequentialStream** オブジェクトを作成してから、その **ISequentialStream** オブジェクトを **IRowsetChange::SetData** メソッドに渡すこともできます。 どちらの場合も、プロバイダーは **ISequentialStream** オブジェクトを使用して XML オブジェクトを取得し、それを適切な列に挿入できます。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate インターフェイス  
- **IRowsetUpdate**インターフェイスは、遅延更新のための機能を提供します。 行セットで使用できるデータがコンシューマー呼び出されるまでは他のトランザクションから使用できない、 **IRowsetUpdate:Update**メソッド。  
+ **IRowsetUpdate** インターフェイスには遅延更新のための機能が用意されています。 行セットで使用できるデータがコンシューマー呼び出されるまでは他のトランザクションから使用できない、 **IRowsetUpdate:Update**メソッド。  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind インターフェイス  
- **:Findnextrow**メソッドでは機能しません、 **xml**データ型。 ときに **:findnextrow**が呼び出されます、 *hAccessor*引数には、DBTYPE_XML の列を指定します、DB_E_BADBINDINFO が返されます。 この動作は、検索対象の列の型とは無関係に行われます。 その他のバインド型の**FindNextRow**検索対象の列がある場合 db_e_badcompareop を返して失敗、 **xml**データ型。  
+ **IRowsetFind::FindNextRow** メソッドでは、**xml** データ型を処理できません。 *hAccessor* 引数に DBTYPE_XML の列を指定して **IRowsetFind::FindNextRow** を呼び出すと、DB_E_BADBINDINFO が返されます。 この動作は、検索対象の列の型とは無関係に行われます。 その他のバインドの型では、検索対象の列が **xml** データ型の場合、**FindNextRow** が DB_E_BADCOMPAREOP を返して失敗します。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、変更の数に加えさまざまな機能をサポートする、 **xml**データ型。  

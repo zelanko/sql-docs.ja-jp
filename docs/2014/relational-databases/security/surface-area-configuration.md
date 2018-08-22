@@ -20,12 +20,12 @@ caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 7032966cb0fb1975b65847ac1e6e0a6c5dc43b1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ed369dbd8cd63f7d1cb9e63adf0721fcb07e612
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172193"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392740"
 ---
 # <a name="surface-area-configuration"></a>セキュリティ構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストール時の既定の構成では、多くの機能が有効化されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 悪意あるユーザーの攻撃を受ける可能性がある機能を最小限にするために、主要なサービスおよび機能のみが選択的にインストールされ、起動されます。 システム管理者はインストール時のこれらの既定を変更することができ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス実行機能の有効化と無効化を選択的に行うこともできます。 また、別のコンピューターから接続する場合、一部のコンポーネントはプロトコルが構成されるまで使用できないことがあります。  
@@ -65,7 +65,7 @@ ms.locfileid: "37172193"
   
  `sp_configure` ストアド プロシージャを使って[!INCLUDE[ssDE](../../includes/ssde-md.md)] オプションを設定することもできます。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
   
- [!INCLUDE[ssRS](../../includes/ssrs-md.md)] の **EnableIntegrated Security** プロパティを変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のプロパティ設定を使用します。 **[定期的なイベントおよびレポート配信]** プロパティと **[Web サービスおよび HTTP アクセス]** プロパティを変更するには、 **RSReportServer.config** 構成ファイルを編集します。  
+ [!INCLUDE[ssRS](../../includes/ssrs.md)] の **EnableIntegrated Security** プロパティを変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のプロパティ設定を使用します。 **[定期的なイベントおよびレポート配信]** プロパティと **[Web サービスおよび HTTP アクセス]** プロパティを変更するには、 **RSReportServer.config** 構成ファイルを編集します。  
   
 ## <a name="command-prompt-options"></a>コマンド プロンプト オプション  
  **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用して、セキュリティ構成ポリシーを呼び出します。 詳細については、「 [データベース エンジン コマンドレットの使用](../../database-engine/use-the-database-engine-cmdlets.md)」を参照してください。  

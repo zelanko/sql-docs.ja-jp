@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobstep (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f877431a45f475bee0adb303724b63b544c943bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e47c28276cd555138c4360060186515cf6f5ecf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248137"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393272"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +63,16 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ジョブ ステップを削除すると、削除したステップを参照する他のジョブ ステップは自動的に更新されます。  
   
- 特定のジョブに関連付けられている手順の詳細については、実行**sp_help_jobstep**です。  
+ 特定のジョブに関連する手順の詳細については、実行**sp_help_jobstep**します。  
   
-> **注:** 呼び出す**sp_delete_jobstep**で、 *step_id*ゼロの値は、ジョブのすべてのジョブ ステップを削除します。  
+> **注:** 呼び出す**sp_delete_jobstep**で、 *step_id*ゼロの値はすべて、ジョブのジョブ ステップを削除します。  
   
  Microsoft SQL Server Management Studio は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、Microsoft SQL Server Management Studio を使用することをお勧めします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -81,12 +81,12 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーだけ**sysadmin**別のユーザーによって所有されているジョブ ステップを削除することができます。  
+ メンバーだけ**sysadmin**別のユーザーが所有するジョブ ステップを削除することができます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ジョブ ステップを削除する`1`ジョブから`Weekly Sales Data Backup`です。  
+ 次の例では、ジョブ ステップを削除する`1`ジョブから`Weekly Sales Data Backup`します。  
   
 ```  
 USE msdb ;  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [表示またはジョブを変更します。](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [表示またはジョブの変更](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

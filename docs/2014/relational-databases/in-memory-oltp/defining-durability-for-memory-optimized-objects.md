@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0f569def0dafcf0f185905a004685b14156079d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6423f92f639c7408cd66c4bdcf91fae02afff1d0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303972"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392590"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>メモリ最適化オブジェクトの持続性の定義
   インメモリ OLTP では、完全な原子性、一貫性、分離性、および完全な持続性 (ACID) の各プロパティが保証されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびメモリ最適化テーブルのコンテキストにおける持続性では、次の事項が保証されます。  

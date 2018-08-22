@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: f9207a9ccee4917b8c2aa1e7731da4afe6e15658
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085844"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392597"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上の SQL Server フルテキスト検索をインストールします。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-次の手順インストール[SQL Server フルテキスト検索](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql-サーバー-fts**) Linux 上。 フルテキスト検索では、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行することができます。 このリリースの既知の問題を参照してください、[リリース ノート](sql-server-linux-release-notes.md)します。
+次の手順インストール[SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)(**mssql-サーバー-fts**) Linux 上。 フルテキスト検索では、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行することができます。 このリリースの既知の問題を参照してください、[リリース ノート](sql-server-linux-release-notes.md)します。
 
 > [!NOTE]
 > SQL Server のフルテキスト検索を最初にインストールする前に[SQL Server インストール](sql-server-linux-setup.md#platforms)します。 これは、キーとをインストールするときに使用するリポジトリを構成します、 **mssql-サーバー-fts**パッケージ。

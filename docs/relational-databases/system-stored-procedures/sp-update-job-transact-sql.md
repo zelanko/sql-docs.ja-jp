@@ -1,5 +1,5 @@
 ---
-title: sp_update_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_update_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e36396f911c7506660fd82c5540307e95023950
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7412bc6defa6d25520570e23556e77e8824c8a88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262217"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393050"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,30 +62,30 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 ## <a name="arguments"></a>引数  
  [ **@job_id =**] *job_id*  
- 更新するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**です。  
+ 更新するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**します。  
   
  [ **@job_name =**] **'***job_name***'**  
- ジョブの名前を指定します。 *job_name*は**nvarchar (128)** です。  
+ ジョブの名前を指定します。 *job_name*は**nvarchar (128)** します。  
   
 > **注:** か*job_id*または*job_name*指定する必要がありますが両方指定することはできません。  
   
  [ **@new_name =**] **'***new_name***'**  
- ジョブの新しい名前を指定します。 *新しい名前*は**nvarchar (128)** です。  
+ ジョブの新しい名前を指定します。 *新しい名前*は**nvarchar (128)** します。  
   
  [ **@enabled =**] *enabled*  
- ジョブが有効になっているかどうかを指定します (**1**) または有効でない (**0**)。 *有効になっている*は**tinyint**です。  
+ ジョブが有効になっているかどうかを指定します (**1**) または有効になっていません (**0**)。 *有効になっている*は**tinyint**します。  
   
  [  **@description =**] **'***説明***'**  
- ジョブの説明を指定します。 *説明*は**nvarchar (512)** です。  
+ ジョブの説明を指定します。 *説明*は**nvarchar (512)** します。  
   
  [ **@start_step_id =**] *step_id*  
- ジョブで実行する最初のステップの ID 番号を指定します。 *step_id*は**int**です。  
+ ジョブで実行する最初のステップの ID 番号を指定します。 *step_id*は**int**します。  
   
  [  **@category_name =**] **'***カテゴリ***'**  
- ジョブのカテゴリ。 *カテゴリ*は**nvarchar (128)** です。  
+ ジョブのカテゴリ。 *カテゴリ*は**nvarchar (128)** します。  
   
  [  **@owner_login_name =**] **'***ログイン***'**  
- ジョブを所有するログインの名前です。 *ログイン*は**nvarchar (128)** のメンバーにのみ、 **sysadmin**ジョブの所有権を変更できるは、固定サーバー ロール。  
+ ジョブを所有するログインの名前です。 *ログイン*は**nvarchar (128)** のメンバーのみ、 **sysadmin**固定サーバー ロールは、ジョブの所有権を変更できます。  
   
  [ **@notify_level_eventlog =**] *eventlog_level*  
  対象となるジョブのエントリをいつ Microsoft Windows アプリケーション ログに記録するかを指定します。 *eventlog_level*は**int**、これらの値のいずれかを指定できます。  
@@ -98,25 +98,25 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**3**|毎回|  
   
  [ **@notify_level_email =**] *email_level*  
- ジョブの完了時にメールが送信されるタイミングを指定します。 *email_level*は**int**です。*email_level*と同じ値を使用して*eventlog_level*です。  
+ ジョブの完了時にメールが送信されるタイミングを指定します。 *email_level*は**int**します。*email_level*として同じ値を使用して*eventlog_level*します。  
   
  [ **@notify_level_netsend =**] *netsend_level*  
- ジョブの完了時にネットワーク メッセージが送信されるタイミングを指定します。 *netsend_level*は**int**です。*netsend_level*と同じ値を使用して*eventlog_level*です。  
+ ジョブの完了時にネットワーク メッセージが送信されるタイミングを指定します。 *netsend_level*は**int**します。*netsend_level*として同じ値を使用して*eventlog_level*します。  
   
  [ **@notify_level_page =**] *page_level*  
- ジョブの完了時にポケットベルによる通知が送信されるタイミングを指定します。 *page_level*は**int**です。*page_level*と同じ値を使用して*eventlog_level*です。  
+ ジョブの完了時にポケットベルによる通知が送信されるタイミングを指定します。 *page_level*は**int**します。*page_level*として同じ値を使用して*eventlog_level*します。  
   
- [  **@notify_email_operator_name =**] **'***@operator_name***'**  
- 電子メールを送信するときにオペレーターの名前*email_level*に到達します。 *email_name*は**nvarchar (128)** です。  
+ [  **@notify_email_operator_name =**] **'***operator_name***'**  
+ 電子メールを送信するときにオペレーターの名前*email_level*に到達します。 *email_name*は**nvarchar (128)** します。  
   
  [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
- ネットワーク メッセージの送信先のオペレーター名を指定します。 *netsend_operator*は**nvarchar (128)** です。  
+ ネットワーク メッセージの送信先のオペレーター名を指定します。 *netsend_operator*は**nvarchar (128)** します。  
   
  [ **@notify_page_operator_name =**] **'***page_operator***'**  
- ポケットベルによる通知の送信先のオペレーター名を指定します。 *page_operator*は**nvarchar (128)** です。  
+ ポケットベルによる通知の送信先のオペレーター名を指定します。 *page_operator*は**nvarchar (128)** します。  
   
  [ **@delete_level =**] *delete_level*  
- ジョブが削除されるタイミングを指定します。 *delete_value*は**int**です。*delete_level*と同じ値を使用して*eventlog_level*です。  
+ ジョブが削除されるタイミングを指定します。 *delete_value*は**int**します。*delete_level*として同じ値を使用して*eventlog_level*します。  
   
  [ **@automatic_post =**] *automatic_post*  
  予約されています。  
@@ -124,12 +124,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_update_job**から実行する必要があります、 **msdb**データベース。  
   
- **sp_update_job**のパラメーターの値が指定された設定のみを変更します。 パラメーターを省略した場合は、現在の設定が保持されます。  
+ **sp_update_job**パラメーター値が提供される設定のみを変更します。 パラメーターを省略した場合は、現在の設定が保持されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -138,12 +138,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーだけ**sysadmin**は他のユーザーによって所有されているジョブの属性を編集するこのストアド プロシージャを使用することができます。  
+ メンバーだけ**sysadmin**このストアド プロシージャを使用して、他のユーザーによって所有されているジョブの属性を編集できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例の名前、説明、およびジョブの有効な状態の変更`NightlyBackups`です。  
+ 次の例では、名前、説明、およびジョブの有効な状態の変更`NightlyBackups`します。  
   
 ```  
 USE msdb ;  
