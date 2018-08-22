@@ -1,49 +1,40 @@
+items:
 - name: '[ようこそ]'
   href: sql-server-technical-documentation.md
 - name: 概要
   items:
-    - name: SQL Server 2016 の新機能
-      href: what-s-new-in-sql-server-2016.md
-    - name: SQL Server 2017 の新機能
-      href: what-s-new-in-sql-server-2017.md
-    - name: SQL Server 2016 の各エディションとサポートされている機能
-      href: editions-and-components-of-sql-server-2016.md
-    - name: SQL Server 2017 の各エディションとサポートされている機能
-      href: editions-and-components-of-sql-server-2017.md
-    - name: SQL Server の最大容量仕様
-      href: maximum-capacity-specifications-for-sql-server.md
-    - name: SQLServer のエディション別の計算容量制限
-      href: compute-capacity-limits-by-edition-of-sql-server.md
-    - name: カスタマー エクスペリエンス向上プログラム
-      href: customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: SQL Server を構成して Microsoft にフィードバックを送信する
-      href: sql-server-customer-feedback.md
-    - name: パートナー
-      items:
-        - name: 監視
-          href: partner-monitor-sql-server.md
-        - name: 高可用性とディザスター リカバリー
-          href: partner-hadr-sql-server.md
-        - name: 管理
-          href: partner-management-sql-server.md
-        - name: 開発
-          href: partner-dev-sql-server.md
+  - name: SQL Server 2016 の新機能
+    href: what-s-new-in-sql-server-2016.md
+  - name: SQL Server 2017 の新機能
+    href: what-s-new-in-sql-server-2017.md
+  - name: SQL Server 2016 の各エディションとサポートされている機能
+    href: editions-and-components-of-sql-server-2016.md
+  - name: SQL Server 2017 の各エディションとサポートされている機能
+    href: editions-and-components-of-sql-server-2017.md
+  - name: SQL Server の最大容量仕様
+    href: maximum-capacity-specifications-for-sql-server.md
+  - name: SQLServer のエディション別の計算容量制限
+    href: compute-capacity-limits-by-edition-of-sql-server.md
+  - name: カスタマー エクスペリエンス向上プログラム
+    href: customer-experience-improvement-program-for-sql-server-data-tools.md
+  - name: SQL Server を構成して Microsoft にフィードバックを送信する
+    href: sql-server-customer-feedback.md
 - name: 新規および更新のアーティクル
   href: new-updated-sql-server.md
 - name: リリース ノート
   items:
-    - name: SQL Server 2017 ノート
-      href: sql-server-2017-release-notes.md
-    - name: SQL Server 2016 ノート
-      href: sql-server-2016-release-notes.md
-    - name: SQL Server 2014 ノート
-      href: sql-server-2014-release-notes.md
-    - name: SQL Server 2012 Service Pack のリリース ノート
-      href: sql-server-2012-sp4-release-notes.md
-    - name: SQL Server 2012 ノート
-      href: sql-server-2012-release-notes.md
-    - name: SQL Server 2008 R2 SP2 ノート
-      href: sql-server-2008-r2-sp2-release-notes.md
+  - name: SQL Server 2017 ノート
+    href: sql-server-2017-release-notes.md
+  - name: SQL Server 2016 ノート
+    href: sql-server-2016-release-notes.md
+  - name: SQL Server 2014 ノート
+    href: sql-server-2014-release-notes.md
+  - name: SQL Server 2012 Service Pack のリリース ノート
+    href: sql-server-2012-sp4-release-notes.md
+  - name: SQL Server 2012 ノート
+    href: sql-server-2012-release-notes.md
+  - name: SQL Server 2008 R2 SP2 ノート
+    href: sql-server-2008-r2-sp2-release-notes.md
 - name: SQL Server on Linux
   href: ../linux/sql-server-linux-overview.md
 - name: Analysis Services
@@ -76,35 +67,51 @@
   href: ../tools/overview-sql-tools.md
 - name: リソース
   items:
-    - name: ブログ
-      items:
-        - name: SQL Server
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server データベース エンジン
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server セキュリティ
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: 学習する
-      items:
-        - name: Microsoft Virtual Academy
-          href: 'https://mva.microsoft.com/product-training/sql-server#!lang=1033'
-        - name: Channel 9 での SQL
-          href: 'https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year'
-    - name: フィードバックとヘルプ
-      items:
-        - name: SQL ドキュメントへの投稿
-          href: sql-server-docs-contribute.md
-        - name: UserVoice - SQL Server の改善の提案
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: DBA Stack Exchange
-          href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow
-          href: 'http://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム
-          href: 'https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver'
-        - name: Reddit
-          href: 'https://www.reddit.com/r/SQLServer'
-    - name: ヘルプ ビューアーでのローカル コンテンツ
-      href: sql-server-help-installation.md
+  - name: ブログ
+    items:
+    - name: SQL Server
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: SQL Server データベース エンジン
+      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+    - name: SQL Server セキュリティ
+      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+    - name: SQL Server Data Tools
+      href: https://blogs.msdn.microsoft.com/ssdt/
+  - name: 学習する
+    items:
+    - name: Microsoft Virtual Academy
+      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+    - name: Channel 9 での SQL
+      href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
+  - name: フィードバックとヘルプ
+    items:
+    - name: SQL ドキュメントへの投稿
+      href: sql-server-docs-contribute.md
+    - name: UserVoice - SQL Server の改善の提案
+      href: https://feedback.azure.com/forums/908035-sql-server
+    - name: DBA Stack Exchange
+      href: https://dba.stackexchange.com/questions/tagged/sql-server
+    - name: Stack Overflow
+      href: http://stackoverflow.com/questions/tagged/sql-server
+    - name: MSDN フォーラム
+      href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
+    - name: Reddit
+      href: https://www.reddit.com/r/SQLServer
+  - name: パートナー
+    items:
+    - name: 監視
+      href: partner-monitor-sql-server.md
+    - name: 高可用性とディザスター リカバリー
+      href: partner-hadr-sql-server.md
+    - name: 管理
+      href: partner-management-sql-server.md
+    - name: 開発
+      href: partner-dev-sql-server.md
+  - name: ヘルプ ビューアーでのローカル コンテンツ
+    href: sql-server-help-installation.md
+ms.openlocfilehash: 0d29421fad73e4a36283ad042c5e467abb7a8a75
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40427312"
