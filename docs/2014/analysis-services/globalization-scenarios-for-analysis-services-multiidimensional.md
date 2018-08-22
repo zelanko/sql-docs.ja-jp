@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c8aeb19e6773b3f772ae0a62e7d72f647ee365e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 423cc509e4b7c915ae9170350090d866d66d6165
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185399"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395122"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多次元のグローバル化のシナリオ
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 格納して、多言語データおよびメタデータの両方のテーブルと多次元データ モデルを操作できます。 データは Unicode (UTF-16) で格納され、Unicode エンコードの文字セットを使用します。 データ モデルに ANSI データを読み込むと、文字は Unicode の等価なコード ポイントを使用して格納されます。  
@@ -79,7 +79,7 @@ ms.locfileid: "37185399"
 |[グローバリゼーションのヒントし、ベスト プラクティス&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|多言語データに関連した問題を回避するために役立ついくつかの設計およびコーディング手法について説明しています。|  
   
 ## <a name="see-also"></a>参照  
- [Windows アプリケーションの国際化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Windows アプリケーションの国際化](/windows/desktop/Intl/international-support)   
  [グローバル デベロッパー センターを参照してください。](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [Windows ストア アプリの作成では、ロケールに基づくアダプティブ デザイン](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# と XAML によるユニバーサル Windows アプリの開発](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  

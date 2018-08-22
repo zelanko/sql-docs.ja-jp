@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3db142c979aba9a2ac6b42782bc3d2beef8c1587
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0122769e599963658cc2f481c7273de7803505d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166313"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396002"
 ---
 # <a name="choosing-microsoft-reporting-and-analysis-tools"></a>Microsoft のレポートおよび分析用ツールの選択
   次の表は、データ分析とレポートに対応するワークロードを、これらのワークロードに最も適した Microsoft BI ツールに関連付けます。  
@@ -40,11 +40,11 @@ ms.locfileid: "37166313"
 |モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (表示をサポート < 250 MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI for Windows アプリ](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [Power BI 用 iPad アプリ](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
 |コラボレーションと共有|||[SharePoint サイト](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint チーム サイト](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI サイト](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
 |**企業 BI**|IT プロフェッショナル||||||  
-|多次元/表形式ビジネス モデルの作成||||||[Analysis Services](http://msdn.microsoft.com/library/bb522607\(v=sql.120\).aspx)|  
+|多次元/表形式ビジネス モデルの作成||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |アドホック データ視覚エフェクトの作成|||[For SharePoint の power View](http://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
 |ダッシュボードの作成|||[SharePoint ダッシュ ボード](http://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||||  
-|運用レポートの作成||||||<sup>1</sup> [reporting Services](http://msdn.microsoft.com/library/ms159106\(v=sql.120\).aspx)|  
-|カスタム レポートと埋め込みレポートの作成||||||<sup>1</sup> [reporting Services](http://msdn.microsoft.com/library/ms159106\(v=sql.120\).aspx)|  
+|運用レポートの作成||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|カスタム レポートと埋め込みレポートの作成||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Advanced Analytics**|データ サイエンティスト||||||  
 |セルフサービスの予測分析の実行||||||[データ マイニング Excel 用アドイン](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |データ マイニング アルゴリズムの使用||||||[Analysis Services 内でのデータ マイニング](http://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  

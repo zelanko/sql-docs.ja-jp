@@ -13,15 +13,15 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5368db04a4f5442620a8f347608bf5aded86703b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 917f18c705c5cb0615cc5ac0b702f31372cf8a8a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982374"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395969"
 ---
-# <a name="running-test-cases-oracletosql"></a>実行中のテスト ケース (OracleToSQL)
-SSMA のテスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Oracle の間でオブジェクトの対応と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
+# <a name="running-test-cases-oracletosql"></a>テスト ケースの実行 (OracleToSQL)
+SSMA のテスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Oracle の間でオブジェクトの対応と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
   
 成功したテストのために必要な要件では、Oracle のすべてのオブジェクトが変換され、ターゲット データベースに読み込まれることです。 また、両方のプラットフォーム上のテーブルの内容を同期できるようにテーブルのデータを移行する必要があります。  
   
@@ -32,7 +32,7 @@ SSMA のテスト担当者がテスト_ケースを実行すると、テスト�
   
 2.  **Connect to Oracle**  ダイアログ ボックスで、接続情報を入力し、順にクリックします**Connect**します。  
   
-テストが完了したら、テスト_ケースのレポートが作成されます。 をクリックして、**レポート**を表示するボタン、[テスト_ケース レポート](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0)します。 テスト (テスト ケース レポート) の結果がで自動的に格納されている、[テストの結果リポジトリ](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)後で使用します。  
+テストが完了したら、テスト_ケースのレポートが作成されます。 をクリックして、**レポート**を表示するボタン、[テスト_ケース レポート](viewing-test-case-reports-oracletosql.md)します。 テスト (テスト ケース レポート) の結果がで自動的に格納されている、[テストの結果リポジトリ](using-test-repositories-oracletosql.md)後で使用します。  
   
 ## <a name="test-case-execution-steps"></a>テスト_ケースの実行ステップ  
   
@@ -55,14 +55,14 @@ SSMA のテスト担当者は、テストの実行を開始する前に、テス
 |USER_TABLE$ NEW_ID|view|挿入および変更された行の id です。|  
 |USER_TABLE$ 古い|view|行の削除と上書きの簡略化された表現。|  
   
-次のオブジェクトで検証済みのテーブルのスキーマに作成されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
+次のオブジェクトで検証済みのテーブルのスキーマに作成されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ||||  
 |-|-|-|  
 |名前|型|説明|  
 |USER_TABLE$ Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
   
-次のオブジェクトを作成および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb データベースにします。  
+次のオブジェクトを作成および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb データベースにします。  
   
 ||||  
 |-|-|-|  

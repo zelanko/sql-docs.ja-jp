@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983314"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396574"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>ユーザー インターフェイス リファレンス (MySQLToSQL)
 このセクションでは、for MySQL の SQL Server Migration Assistant (SSMA) のヘルプ トピックを紹介します。  
@@ -39,7 +39,7 @@ SSMA のダイアログ ボックスを次の表に示します。
 |[Azure SQL DB に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|使用して、 **SQL Azure への接続**移行する SQL Azure のインスタンスに接続する ダイアログ ボックス。|  
 |[変換の設定 (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|使用して、**設定**ノード レベルの設定を設定するタブ。|  
 |[データ移行レポート&#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|結果を表示します。 SQL Server または SQL Azure に MySQL からデータを移行します。|  
-|[データの移行設定](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
+|[データの移行設定](data-migration-settings-mysqltosql.md)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
 |[型のマッピングの編集&#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|使用して、**型マッピングの編集** ダイアログ ボックスを作成したり、ソースとターゲット データベースおよびデータベース オブジェクト間のデータ型のマッピングを変更します。|  
 |[グローバル設定&#40;エディター&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|エディター ページを使用して、**グローバル設定**ダイアログ ボックスをコード エディターのオプションを構成します。|  
 |[グローバル設定&#40;ダイアログ&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|ダイアログ ボックスのページを使用して、**グローバル設定**ダイアログ ボックスを既定値 ダイアログ ボックスと警告の設定を構成します。|  

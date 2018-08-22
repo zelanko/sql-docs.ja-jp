@@ -19,14 +19,14 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8f33769bee5c8d6d9e134eb9dd5dcf8549d651cb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5ec1b7d62e3e765ee43624f0e97aef60c91309ee
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983084"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395548"
 ---
-# <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Ssma for MySQL コンソール (MySQLToSQL) 作業の開始
+# <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL コンソール入門 (MySQLToSQL)
 このセクションを起動し、MySQL のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  
   
 ## <a name="launching-ssma-console"></a>SSMA コンソールの起動  
@@ -51,9 +51,9 @@ SSMA コンソール アプリケーションを起動するのにには、次�
   
 追加機能:  
   
-1.  [パスワードをセキュリティで保護する](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e)とエクスポート]、[ウィンドウの他のマシンにインポート  
+1.  [パスワードをセキュリティで保護する](managing-passwords-mysqltosql.md)とエクスポート]、[ウィンドウの他のマシンにインポート  
   
-2.  [レポートの生成](http://msdn.microsoft.com/1c0202e8-546d-4cb3-a37f-1d2e35d53839)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
+2.  [レポートの生成](generating-reports-mysqltosql.md)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力の規則  
 SSMA スクリプト コマンドとオプションを実行すると、コンソール プログラムは、コンソールのユーザーに、結果とメッセージ (情報、エラーなど) を表示します。 または、必要な場合は、xml 出力ファイルにリダイレクトします。 一意の色では、各種のメッセージが出力に表されます。 たとえば、白のカラーにテキスト メッセージがスクリプト ファイルのコマンドを表します緑のカラーで 1 つとユーザーの入力を求めるプロンプトを表します。  
@@ -72,5 +72,5 @@ SSMA スクリプト コマンドとオプションを実行すると、コン�
 |シアン|開始、終了日と操作の結果|  
   
 ## <a name="see-also"></a>参照  
-[SSMA for MySQL のインストール](http://msdn.microsoft.com/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
+[SSMA for MySQL のインストール](installing-ssma-for-mysql-mysqltosql.md)  
   

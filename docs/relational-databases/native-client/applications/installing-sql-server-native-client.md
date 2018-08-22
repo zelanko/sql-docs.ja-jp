@@ -24,16 +24,16 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f3a80de83b8908f5e57ff3fb8f9493a2e0dd184e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a15a69f3d4b10be4be5deb11a2ac4194bb028c51
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564196"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394987"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client のインストール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。 [SQL Server Native Client をインストールする](https://msdn.microsoft.com/library/ms131321(SQL.120).aspx)します。
+ > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。 [SQL Server Native Client をインストールする](installing-sql-server-native-client.md)します。
 
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 

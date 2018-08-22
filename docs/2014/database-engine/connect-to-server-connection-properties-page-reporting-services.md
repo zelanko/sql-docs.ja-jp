@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ba5192de960d24bb918e9ec751e8c27c1e9d78
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308032"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395942"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>[サーバーへの接続] ([接続プロパティ] ページ) Reporting Services
-  このタブを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に接続するとき、または [!INCLUDE[ssRS](../includes/ssrs-md.md)] を**登録済みサーバー**に登録するときに、オプションを表示または指定できます。 接続時には、**[接続]** および **[オプション]** のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssRS](../includes/ssrs-md.md)]のみがこのダイアログ ボックスに表示されます。  
+  このタブを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に接続するとき、または [!INCLUDE[ssRS](../includes/ssrs.md)] を**登録済みサーバー**に登録するときに、オプションを表示または指定できます。 接続時には、**[接続]** および **[オプション]** のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssRS](../includes/ssrs.md)]のみがこのダイアログ ボックスに表示されます。  
   
 ## <a name="options"></a>[オプション]  
  **[接続のタイムアウト (ミリ秒)]**  
@@ -40,7 +40,7 @@ ms.locfileid: "37308032"
  クリックすると、ダイアログが切り替わり、パスワードの保存などの追加のサーバー接続オプションが非表示になります。  
   
  **を登録するときには、**  
- [!INCLUDE[ssRS](../includes/ssrs-md.md)] を **登録済みサーバー**に登録するときに、クリックして接続をテストします。  
+ [!INCLUDE[ssRS](../includes/ssrs.md)] を **登録済みサーバー**に登録するときに、クリックして接続をテストします。  
   
  **および**  
  **登録済みサーバー**に設定を保存します。  

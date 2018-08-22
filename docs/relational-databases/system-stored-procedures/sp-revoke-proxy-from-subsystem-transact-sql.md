@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_proxy_from_subsystem (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_revoke_proxy_from_subsystem (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c80739e4a888316837b22838b92f6d5919c998d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c19e54fe6f9d9280d19ab6861cf27ffa20df636
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261862"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395604"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ sp_revoke_proxy_from_subsystem
 |**4**|レプリケーション スナップショット エージェント|  
 |**5**|レプリケーション ログ リーダー エージェント|  
 |**6**|レプリケーション ディストリビューション エージェント|  
-|**7**|レプリケーション マージ エージェント|  
-|**8**|レプリケーション キュー リーダー エージェント|  
+|**7**|Replication Merge Agent|  
+|**8**|Replication Queue Reader Agent|  
 |**9**|Analysis Services コマンド|  
 |"**10**"|Analysis Services クエリ|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
@@ -74,28 +74,28 @@ sp_revoke_proxy_from_subsystem
  [ **@subsystem_name**=] **'***subsystem_name***'**  
  取り消すアクセス権の対象となるサブシステムの名前を指定します。 *Subsystem_name*は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表は、各サブシステムの ID に指定できる値の一覧です。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
 |スナップショット|レプリケーション スナップショット エージェント|  
 |LogReader|レプリケーション ログ リーダー エージェント|  
 |Distribution|レプリケーション ディストリビューション エージェント|  
-|Merge|レプリケーション マージ エージェント|  
-|QueueReader|レプリケーション キュー リーダー エージェント|  
+|Merge|Replication Merge Agent|  
+|QueueReader|Replication Queue Reader Agent|  
 |ANALYSISQUERY|Analysis Services コマンド|  
 |ANALYSISCOMMAND|Analysis Services クエリ|  
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |PowerShell|PowerShell スクリプト|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  サブシステムへのアクセス権を取り消しても、プロキシで指定されているプリンシパルに対する権限は変更されません。  
   
 > [!NOTE]  
->  プロキシを参照するジョブ ステップを特定するのには、右、**プロキシ**ノードの下**SQL Server エージェント**microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、クリックして**プロパティ**です。 **プロキシ アカウントのプロパティ**ダイアログ ボックスで、**参照**このプロキシを参照するすべてのジョブ ステップを表示するページ。  
+>  プロキシを参照するジョブ ステップを確認するを右クリックし、**プロキシ**ノードの下**SQL Server エージェント**microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 をクリックし、**プロパティ**。 **プロキシ アカウントのプロパティ**ダイアログ ボックスで、**参照**このプロキシを参照するすべてのジョブ ステップを表示するページ。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_revoke_proxy_from_subsystem**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_revoke_proxy_from_subsystem**します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、プロキシ `Catalog application proxy` が持つ [!INCLUDE[ssIS](../../includes/ssis-md.md)] サブシステムへのアクセス権を取り消します。  
@@ -111,7 +111,7 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
   
 ## <a name="see-also"></a>参照  
  [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [SQL Server エージェントのセキュリティを実装します。](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [SQL Server エージェントのセキュリティを実装します。](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

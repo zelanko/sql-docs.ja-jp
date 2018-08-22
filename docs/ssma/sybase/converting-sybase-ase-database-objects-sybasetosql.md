@@ -18,18 +18,18 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 86adf372dfd590f0cac1d8ac872501fb12ab1e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0ab4bb272f83a16cf8f5be009424499bc4e054c4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980664"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396352"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベース オブジェクト (SybaseToSQL) の変換
-SAP Adaptive Server Enterprise (ASE) に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SAP Adaptive Server Enterprise (ASE) のデータベース オブジェクトを変換できる Azure SQL とプロジェクトの設定とデータ マッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースオブジェクト。  
+SAP Adaptive Server Enterprise (ASE) に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SAP Adaptive Server Enterprise (ASE) のデータベース オブジェクトを変換できる Azure SQL とプロジェクトの設定とデータ マッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL データベースオブジェクト。  
   
 ## <a name="the-conversion-process"></a>変換プロセス  
-ASE からオブジェクトの定義は、データベース オブジェクトの変換と同様に変換して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクト、および SSMA メタデータにこの情報を読み込みます。 インスタンスに情報は読み込まれません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL。 使用して、オブジェクトとそのプロパティを表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL メタデータ エクスプ ローラー。
+ASE からオブジェクトの定義は、データベース オブジェクトの変換と同様に変換して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure オブジェクト、および SSMA メタデータにこの情報を読み込みます。 インスタンスに情報は読み込まれません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL。 使用して、オブジェクトとそのプロパティを表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL メタデータ エクスプ ローラー。
   
 SSMA に出力ウィンドウおよびエラー メッセージを出力メッセージの出力、変換中に、**エラー一覧**ウィンドウ。 ASE のデータベースまたは必要な変換の結果を得るため、変換プロセスを変更するのにかどうかを確認するのには、出力およびエラー情報を使用します。  
   
@@ -127,7 +127,7 @@ SQL Server、オンプレミスへの変換中に SAP ASE の次の T-SQL キー
   
 -   削除または問題のあるコードを変更するには、SAP ASE オブジェクトを変更することができます。 を SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。[への SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)します。  
   
--   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL のメタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL と SAP ASE からデータを移行します。  
+-   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL のメタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL と SAP ASE からデータを移行します。  
   
 ## <a name="next-steps"></a>次のステップ  
 移行プロセスでは、次の手順は[を SQL Server に変換されたデータベース オブジェクトの読み込み/SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)します。  

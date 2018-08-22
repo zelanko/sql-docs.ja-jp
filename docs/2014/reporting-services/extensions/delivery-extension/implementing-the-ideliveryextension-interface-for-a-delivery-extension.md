@@ -19,12 +19,12 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a3c3afeaadab1fd80c18a1dd428a93f7a2a66c28
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1f00fb1249254cf0adbcba84babe94e967b281b9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204872"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396269"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>配信拡張機能に対する IDeliveryExtension インターフェイスの実装
   配信拡張機能のクラスは、通知のコンテンツに基づいてレポート通知をユーザーに配信する場合に使用します。 配信拡張機能のクラスは、配信拡張機能に渡すユーザー設定を検証するためのインフラストラクチャも提供します。 また、配信拡張機能のクラスには、クライアントが拡張機能の名前に関する情報を取得する場合に使用できる特定のプロパティ、拡張機能がサポートする設定、および配信拡張機能で使用できる表示形式が含まれている必要があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "37204872"
  ![IDeliveryExtension インターフェイスの処理](../../media/bk-ext-02.gif "IDeliveryExtension インターフェイスの処理")  
 IDeliveryExtension インターフェイスを使用すると、ユーザー データを検証できることに加えて、クライアントが必要な配信設定を学習することもできます。  
   
- 配信拡張機能のクラスを作成するには、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> および <xref:Microsoft.ReportingServices.Interfaces.IExtension> を実装します。 **IDeliveryExtension** インターフェイスでは、配信拡張機能による <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> メソッドを使用したレポート通知の配信、および <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> メソッドを使用した受信済み拡張機能設定の検証が可能です。 **IExtension** インターフェイスでは、配信拡張機能によるローカライズされた拡張機能名の実装、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成ファイルに格納された拡張機能固有の構成情報の処理が可能です。 **IExtension** を実装すると、配信拡張機能に <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> プロパティが含まれます。 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 配信拡張機能で **LocalizedName** プロパティをサポートすることを強くお勧めします。これにより、レポート マネージャーなどのユーザー インターフェイスで使い慣れた拡張機能名がユーザーに表示されます。  
+ 配信拡張機能のクラスを作成するには、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> および <xref:Microsoft.ReportingServices.Interfaces.IExtension> を実装します。 **IDeliveryExtension** インターフェイスでは、配信拡張機能による <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> メソッドを使用したレポート通知の配信、および <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> メソッドを使用した受信済み拡張機能設定の検証が可能です。 **IExtension** インターフェイスでは、配信拡張機能によるローカライズされた拡張機能名の実装、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成ファイルに格納された拡張機能固有の構成情報の処理が可能です。 **IExtension** を実装すると、配信拡張機能に <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> プロパティが含まれます。 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 配信拡張機能で **LocalizedName** プロパティをサポートすることを強くお勧めします。これにより、レポート マネージャーなどのユーザー インターフェイスで使い慣れた拡張機能名がユーザーに表示されます。  
   
  配信拡張機能では **IDeliveryExtension** インターフェイスの **ExtensionSettings** プロパティも実装する必要があります。 レポート サーバーは、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ExtensionSettings%2A> プロパティから返された値を使用して、配信拡張機能が必要とする設定を評価します。 配信拡張機能と対話するクライアントは、レポート サーバー Web サービスの <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> メソッドを使用して、配信拡張機能の設定一覧を返します。  
   

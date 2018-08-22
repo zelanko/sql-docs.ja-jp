@@ -1,5 +1,5 @@
 ---
-title: SQL Server (SybaseToSQL) へ SSMA コンポーネントのインストール |Microsoft ドキュメント
+title: SQL Server (SybaseToSQL) での SSMA コンポーネントのインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,63 +16,63 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 17d9068497072660fd48888a2b4652dcb46815cf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c6090d5e24f7ba6fe6c06546f5f432a3c8eaa4ab
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779258"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394455"
 ---
-# <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL server (SybaseToSQL) SSMA コンポーネントのインストール
-サーバー側のデータ移行を使用するためには、SSMA をインストール、に加えて必要がありますもコンポーネントをインストールするを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、SSMA 拡張機能パックには、データの移行、および Sybase のプロバイダーをサーバーからサーバーへの接続を有効にするサポートが含まれます。  
+# <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server での SSMA コンポーネントのインストール (SybaseToSQL)
+に加えて、サーバー側のデータ移行を使用するため、SSMA をインストールする必要がありますもコンポーネントをインストールするを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 これらのコンポーネントには、データの移行、およびサーバー間の接続を有効にする Sybase プロバイダーをサポートする SSMA 拡張パックが含まれます。  
   
-## <a name="ssma-for-sybase-extension-pack"></a>SSMA for Sybase の拡張機能パック  
-SSMA 拡張機能パックには、データベースが追加されて**sysdb**と**ssmatesterdb_syb**のインスタンスを指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 **Sysdb**データベースには、テーブルとデータを移行するために必要なストアド プロシージャが含まれています。 **Ssmatester_syb**データベースには、スキーマが含まれています。 **ssma_sybase_utilities**、SSMA tester コンポーネントによって使用されるオブジェクト (テーブル、トリガー、ビュー) が作成されました。  
+## <a name="ssma-for-sybase-extension-pack"></a>SSMA for Sybase 拡張パック  
+SSMA の拡張機能パックでは、データベースを追加します。 **sysdb**と**ssmatesterdb_syb**、のインスタンスを指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 **Sysdb**データベースには、テーブルとデータを移行するために必要なストアド プロシージャが含まれています。 **Ssmatester_syb**データベースにはスキーマが含まれています**ssma_sybase_utilities**、SSMA テスター コンポーネントによって使用されるオブジェクト (テーブル、トリガー、ビュー) が作成されました。  
   
-データを移行する場合にも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA 作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェント ジョブ、データ移行のサーバー側のデータ移行のエンジンを使用するとします。  
+データを移行する場合にも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA 作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブのデータを移行するサーバー側のデータ移行のエンジンを使用するとします。  
   
 ### <a name="installing-the-extension-pack"></a>拡張機能パックをインストールします。  
-拡張機能パックをインストールするとデータを移行する前にいつでも[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+拡張機能パックをインストールするとデータを移行する前にいつ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!IMPORTANT]  
-> 拡張機能パックをインストールするには、インスタンスで sysadmin サーバー ロールのメンバーである[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+> 拡張機能パックをインストールするには、インスタンスで sysadmin サーバー ロールのメンバーである[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 **拡張機能パックをインストールするには**  
   
-1.  Sybase 拡張機能パックには、SSMA をコピーします。*n*です。Install.exe、場所*n*を実行しているコンピューターに、ビルド番号は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+1.  Sybase の拡張機能パックには、SSMA をコピーします。*n*します。Install.exe、場所*n*を実行しているコンピューターに、ビルド番号は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-2.  Sybase 拡張機能パックには、SSMA をダブルクリックします。*n*です。Install.exe です。  
+2.  Sybase の拡張機能パックには、SSMA をダブルクリックします。*n*します。Install.exe します。  
   
-3.  [ようこそ] ページで、をクリックして**次**です。  
+3.  [ようこそ] ページで、次のようにクリックします。**次**します。  
   
-4.  使用許諾契約書 ページで、使用許諾契約書を読み取る。 同意する場合は、選択、**ライセンス契約の条項に同意**チェック ボックスをクリックして**次**です。  
+4.  使用許諾契約書 ページで、ライセンス契約を読みます。 同意する場合は、選択、 **、使用許諾契約書に同意**チェック ボックスをオンにし**次**。  
   
-5.  セットアップの種類の選択 ページで、をクリックして**標準**です。  
+5.  セットアップの種類の選択 ページで、次のようにクリックします。**標準**します。  
   
-6.  準備完了 [インストール] ページで、をクリックして**インストール**です。  
+6.  準備完了 [インストール] ページで、をクリックして**インストール**します。  
   
-7.  最初のステップのインストール ページの完了 で、をクリックして**次**です。  
+7.  最初のステップのインストール ページの完了 で、をクリックして**次**します。  
   
-    インスタンスを選択して、新しいダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]拡張機能パックをインストールするためです。  
+    インスタンスを選択する、新しいダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の拡張機能パックのインストール。  
   
-8.  インスタンスを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]場所 ASE データベースを移行し、をクリックして**次**です。  
+8.  インスタンスを選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ASE のデータベースの移行およびする をクリックし、**次**。  
   
     既定のインスタンスには、コンピューターと同じ名前があります。 名前付きインスタンスの後に、円記号とインスタンス名が指定されます。  
   
-9. 接続パラメーター ページで、認証方法を選択し、をクリックして**次**です。  
+9. 接続パラメーター] ページで、[認証方法を選択してクリックして**次**します。  
   
-    Windows 認証は、Windows 資格情報を使用してのインスタンスにログオンしよう[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を入力する必要があります、認証、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ログイン名とパスワード。  
+    Windows 認証は、Windows 資格情報を使用してのインスタンスにログオンしようとする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を入力する必要があります、認証、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名とパスワード。  
   
-10. [サーバーの管理] ページで、**ユーティリティ データベースのインストール** *n*ここで、 *n*バージョン番号は、をクリックして**次**です。  
+10. サーバーの管理 ページで、次のように選択します。**ユーティリティ データベースのインストール** *n*ここで、 *n* 、バージョン番号は、順にクリックします**次**します。  
   
     **Sysdb**データベースが作成され、そのデータベースにストアド プロシージャが作成されます。  
   
-    場合**Tester データベースのインストール**オプションがオンになって、テスター **ssmatesterdb_syb**データベースが作成されます。  
+    場合**テスター データベースのインストール**オプションがオンになって、テスト担当者**ssmatesterdb_syb**データベースが作成されます。  
   
-11. 別のインスタンスにユーティリティをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**インスタンスに戻る**、順にクリック **[次へ]** です。 またはをクリックしてウィザードを終了するには、**終了**です。  
+11. 別のインスタンスにユーティリティをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を選択します**インスタンスを返す**、順にクリックします**次**します。 または、をクリックしてウィザードを終了するには、**終了**します。  
   
 ### <a name="sql-server-database-objects"></a>SQL Server データベース オブジェクト  
-「」を参照は、拡張機能パックをインストールした後、 **ssma_syb.bcp_migration_packages**テーブルに、 **sysdb**データベース。 次のストアド プロシージャも表示されます。  
+拡張機能パックをインストールした後を参照してください、 **ssma_syb.bcp_migration_packages**テーブルに、 **sysdb**データベース。 次のストアド プロシージャも表示されます。  
   
 -   **bcp_clean_migration_data**  
   
@@ -94,26 +94,26 @@ SSMA 拡張機能パックには、データベースが追加されて**sysdb**
   
 -   **stop_agent_process**  
   
-データを移行するたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA を作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェント ジョブ。 これらのジョブの名前は**ssma_syb データ移行パッケージ {GUID}** に表示されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のエージェント ノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Jobs フォルダーでします。  
+データを移行するたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA を作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブ。 これらのジョブの名前は**ssma_syb データ移行パッケージ {GUID}** に表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエージェント ノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs フォルダーでします。  
   
 ## <a name="sybase-providers"></a>Sybase プロバイダー  
-ASE からデータを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ASE 間で直接 SQL Azure データの移行と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure です。 これを経由しない SSMA データ移行の速度が低下はこのためです。  
+ASE からのデータを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE の間で直接 SQL Azure、データの移行と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure です。 データの移行が遅くなりますこのため、SSMA を通過にしません。  
   
 ### <a name="installing-the-sybase-providers"></a>Sybase プロバイダーをインストールします。  
-次の手順では、Sybase プロバイダーをインストールするため、基本的なインストール手順を説明します。 正確な手順については、Sybase セットアップ プログラムのバージョンによって異なります。  
+次の手順は、Sybase のプロバイダーをインストールするための基本的なインストール手順を提供します。 正確な手順については、Sybase のセットアップ プログラムのバージョンによって異なります。  
   
 > [!IMPORTANT]  
-> セットアップ プログラムを実行する前に、ライセンス認証契約に違反していないことを確認します。  
+> セットアップ プログラムを実行する前に、ライセンス契約に違反していないことを確認します。  
   
-1.  Sybase ASE セットアップ プログラムを実行します。  
+1.  Sybase ASE のセットアップ プログラムを実行します。  
   
 2.  カスタム セットアップを選択します。  
   
 3.  [機能の選択] ページで、ODBC、OLE DB および ADO.NET データ プロバイダーを選択します。  
   
-4.  選択した機能を確認し、をクリックして**完了**データ プロバイダーをインストールします。  
+4.  選択した機能を確認し、をクリックし、**完了**データ プロバイダーをインストールします。  
   
 ## <a name="see-also"></a>参照  
-[SSMA の Sybase クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[SQL Server - Azure SQL DB に ASE Sybase データベースを移行する&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SSMA for Sybase クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

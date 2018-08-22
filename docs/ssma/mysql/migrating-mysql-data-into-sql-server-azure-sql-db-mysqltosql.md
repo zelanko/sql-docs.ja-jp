@@ -19,25 +19,25 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6143733af6824518b8a54ed856844c5e01702d0a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4651ec2de2680d9c1c855f352768228e1835f22b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985214"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393753"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>MySQL のデータの移行には、SQL Server - Azure SQL DB (MySQLToSQL)
-変換後のオブジェクトが正常に同期[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のデータを移行する MySQL から[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  
+変換後のオブジェクトが正常に同期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のデータを移行する MySQL から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
   
 > [!IMPORTANT]  
-> 場合、エンジンが使用されているサーバー側のデータの移行のエンジン、その後、移行する前に、データの MySQL の拡張機能パックおよび SSMA を実行しているコンピューターに MySQL プロバイダー、SSMA をインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェント サービスが実行されてもする必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server (MySQL to SQL) での SSMA コンポーネントのインストール。](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> 場合、エンジンが使用されているサーバー側のデータの移行のエンジン、その後、移行する前に、データの MySQL の拡張機能パックおよび SSMA を実行しているコンピューターに MySQL プロバイダー、SSMA をインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスが実行されてもする必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server (MySQL to SQL) での SSMA コンポーネントのインストール。](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
-移行する前にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。  
+移行する前にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。  
   
 -   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)します。  
   
-    詳細については**データ移行の設定の拡張**を参照してください[データ移行の設定](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)  
+    詳細については**データ移行の設定の拡張**を参照してください[データ移行の設定](data-migration-settings-mysqltosql.md)  
   
 -   **移行エンジン**で、**プロジェクト設定**ダイアログ ボックスで、2 つの種類のデータ移行のエンジンを使用して、移行プロセスを実行できます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "38985214"
 > **クライアント側のデータ移行**オプションはのみ SQL Azure で使用できます。  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>SQL Server または SQL Azure にデータの移行  
-移行データは、MySQL のテーブルから行のデータを移動する一括読み込み操作[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のテーブルのトランザクション。 読み込まれた行の数[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]各トランザクションでは、プロジェクトの設定で構成されます。  
+移行データは、MySQL のテーブルから行のデータを移動する一括読み込み操作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のテーブルのトランザクション。 読み込まれた行の数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各トランザクションでは、プロジェクトの設定で構成されます。  
   
 移行のメッセージを表示するには、出力ウィンドウが表示されているを確認します。 それから、**ビュー**メニューの **出力**します。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "38985214"
   
         1.  SSMA for MySQL の拡張機能パックは、SQL Server のインスタンスにインストールされます。  
   
-        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェント サービスが SQL Server のインスタンスで実行されています。  
+        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスが SQL Server のインスタンスで実行されています。  
   
     -   実行するため**サーバー側のデータ移行**を選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定** ダイアログ ボックス。  
   

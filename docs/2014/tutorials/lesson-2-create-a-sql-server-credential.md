@@ -14,19 +14,19 @@ caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 358c88c0fef9c4ffaf7c7fc93458be1b1563d94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dbf7ee01520d139ce6b56912f6b35500ee35352
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163818"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396385"
 ---
-# <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2: SQL Server 資格情報を作成します。
+# <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2: SQL Server 資格情報の作成
   **資格情報:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]バックアップおよび復元プロセスでは、資格情報を使用して、Windows Azure Blob ストレージ サービスを認証します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 詳細については、表示、コピー、またはストレージ アカウントを再生成する方法についての**アクセス キー**を参照してください[ストレージ アカウント アクセス キー](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)します。  
   
- 資格情報の全般的な情報については、「 [資格情報](http://msdn.microsoft.com/library/ms161950.aspx)」を参照してください。  
+ 資格情報については、次を参照してください。[資格情報](../relational-databases/security/authentication-access/credentials-database-engine.md)します。  
   
- 資格情報が使用されるその他の例については、「 [SQL Server エージェント プロキシの作成](http://msdn.microsoft.com/library/ms175834.aspx)」参照してください。  
+ 資格情報が使用されているその他の例では、次を参照してください。 [SQL Server エージェント プロキシの作成](../ssms/agent/create-a-sql-server-agent-proxy.md)です。  
   
 > [!IMPORTANT]  
 >  次に示す SQL Server 資格情報を作成するための要件は次の SQL Server のバックアップ プロセスに固有 ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)、および[SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md))。 SQL Server では、Azure ストレージにアクセスしてバックアップの書き込みまたは読み取りを行う場合、ストレージ アカウント名とアクセス キーの情報を使用します。  Azure storage にデータベース ファイルを格納するための資格情報を作成する方法の詳細については、次を参照してください[レッスン 3: SQL Server 資格情報の作成。](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  

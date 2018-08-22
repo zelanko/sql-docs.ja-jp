@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 057d7d988fd6f7f5d490cbf30f06e83270438983
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042887"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394336"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>レッスン 3: 探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -277,8 +277,8 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 4: T-SQL を使用してデータ機能を作成します。](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[レッスン 3: T-SQL を使用してデータ機能を作成します。](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 2: PowerShell を使用して、チュートリアルの環境を準備します。](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[レッスン 1: NYC タクシーのデモ データの設定します。](sqldev-download-the-sample-data.md)

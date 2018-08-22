@@ -1,5 +1,5 @@
 ---
-title: sp_detach_schedule (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_detach_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df165b840d0785fb87e7e5abeffc72ca660317cf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 708dea0c3ba2c3abc9ca0827caa9f5c548c56902
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245133"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393931"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_detach_schedule
 >  いずれか*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
   
  [  **@delete_unused_schedule=** ] *@delete_unused_schedule*  
- 使用のジョブ スケジュールを削除するかどうかを指定します。 *@delete_unused_schedule*は**ビット**、既定値は**0**、つまりすべてのスケジュールは保持されることでもジョブ参照されていない場合にします。 場合設定**1**、未使用のジョブ スケジュールがジョブ参照されていない場合に削除されます。  
+ 使用のジョブ スケジュールを削除するかどうかを指定します。 *@delete_unused_schedule*は**ビット**、既定値は**0**、つまりすべてのスケジュールを保持することでもジョブ参照されていない場合にします。 場合設定**1**ジョブを参照しない場合、未使用のジョブ スケジュールは削除されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -74,7 +74,7 @@ sp_detach_schedule
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -83,14 +83,14 @@ sp_detach_schedule
   
 -   **SQLAgentOperatorRole**  
   
- ジョブ所有者は、同時にスケジュール所有者にならなくても、ジョブをスケジュールにアタッチしたり、スケジュールからデタッチしたりできます。 ただし、デタッチ後は、のままにジョブはありません、呼び出し元がスケジュールの所有者でない限り場合は、スケジュールを削除できません。  
+ ジョブ所有者は、同時にスケジュール所有者にならなくても、ジョブをスケジュールにアタッチしたり、スケジュールからデタッチしたりできます。 ただし場合は、デタッチがのままにジョブがいずれも、呼び出し元が、スケジュール所有者でない限り、スケジュールを削除できません。  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーがスケジュールを所有しているかどうかが判断されます。 メンバーにのみ、 **sysadmin**固定サーバー ロールは、別のユーザーが所有するジョブからスケジュールをデタッチできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーがスケジュールを所有しているかどうかが判断されます。 メンバーのみ、 **sysadmin**固定サーバー ロールは、別のユーザーが所有するジョブからスケジュールをデタッチできます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、間の関連付けを削除、`'NightlyJobs'`スケジュールと`'BackupDatabase'`ジョブです。  
+ 次の例では、間のアソシエーションの削除、`'NightlyJobs'`スケジュールと`'BackupDatabase'`ジョブ。  
   
 ```  
 USE msdb ;  

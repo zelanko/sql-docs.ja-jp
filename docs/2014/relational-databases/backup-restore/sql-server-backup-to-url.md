@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264878"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394142"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
   このトピックでは、バックアップ先として Windows Azure BLOB ストレージ サービスを使用するために必要な概念、要件、およびコンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 相違点、重要な例外、コード例についても、このトピックで説明しています。  
@@ -86,9 +86,9 @@ ms.locfileid: "37264878"
   
  作成する方法についてステップ バイ ステップの手順について、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資格情報を参照してください[資格情報を作成](#credential)このトピックで後述する例。  
   
- 資格情報の全般的な情報については、「 [資格情報](http://msdn.microsoft.com/en-us/library/ms161950.aspx)」をご覧ください。  
+ 資格情報の全般的な情報については、「 [資格情報](../security/authentication-access/credentials-database-engine.md)」をご覧ください。  
   
- 資格情報が使用されるその他の例については、「 [SQL Server エージェント プロキシの作成](http://msdn.microsoft.com/library/ms175834.aspx)」参照してください。  
+ 資格情報が使用されているその他の例では、次を参照してください。 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)です。  
   
 ###  <a name="limitations"></a> 制限事項  
   
@@ -282,7 +282,7 @@ ms.locfileid: "37264878"
 ###  <a name="credential"></a> Shared Access Signature の作成  
  次の例では、Windows Azure ストレージの認証情報を格納する資格情報を作成します。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -327,7 +327,7 @@ ms.locfileid: "37264878"
 ###  <a name="complete"></a> 完全なデータベースをバックアップします。  
  次の例では、AdventureWorks2012 データベースを Windows Azure BLOB ストレージ サービスにバックアップします。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -385,7 +385,7 @@ ms.locfileid: "37264878"
 ###  <a name="databaselog"></a> データベースおよびログをバックアップします。  
  次の例では、AdventureWorks2012 サンプル データベースをバックアップします。このデータベースでは、既定で単純復旧モデルが使用されています。 ここではまず、ログをバックアップするため、完全復旧モデルを使用するよう AdventureWorks2012 データベースを変更します。 その後、Windows Azure BLOB にデータベースの完全バックアップを作成し、更新操作の期間後、ログをバックアップします。 この例では、日付と時刻のタイム スタンプを含むバックアップ ファイル名を作成します。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -496,7 +496,7 @@ ms.locfileid: "37264878"
 ###  <a name="filebackup"></a> プライマリ ファイル グループのファイルの完全バックアップを作成します。  
  次の例では、プライマリ ファイル グループのファイル全体のバックアップを作成します。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -563,7 +563,7 @@ ms.locfileid: "37264878"
 ###  <a name="differential"></a> プライマリ ファイル グループのファイルの差分バックアップを作成します。  
  次の例では、プライマリ ファイル グループのファイルの差分バックアップを作成します。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -635,7 +635,7 @@ ms.locfileid: "37264878"
 ###  <a name="restoredbwithmove"></a> データベースを復元し、ファイルを移動します。  
  データベースの完全バックアップを復元し、復元したデータベースを C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data ディレクトリに移動するには、次の手順を実行します。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -752,7 +752,7 @@ ms.locfileid: "37264878"
 ###  <a name="PITR"></a> STOPAT を使って特定の時点の状態に復元する  
  次の例では、データベースを特定の時点の状態に復元し、復元操作を示します。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   

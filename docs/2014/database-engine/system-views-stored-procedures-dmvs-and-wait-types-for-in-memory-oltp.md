@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
@@ -14,14 +13,14 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a11867eafdcd747da207c2ff6783391ed3485f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8d886a95b0cb62ad2217478873e85fb2db5d7bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245222"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395987"
 ---
-# <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>システム ビュー、ストアド プロシージャ、Dmv およびインメモリ OLTP での待機の種類
+# <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>インメモリ OLTP 向けのシステム ビュー、ストアド プロシージャ、DMV、待機の種類
   このトピックでは、簡単な説明を行い、インメモリ OLTP をサポートする多くのデータベース オブジェクトへのリンクを提供します。  
   
 ### <a name="system-views"></a>システム ビュー  

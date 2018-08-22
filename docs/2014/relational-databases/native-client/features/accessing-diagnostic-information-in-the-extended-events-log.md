@@ -1,11 +1,11 @@
 ---
-title: 拡張イベント ログの診断情報へのアクセス |Microsoft Docs
+title: 拡張イベント ログの診断情報へのアクセス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
@@ -13,17 +13,17 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eab7a558054b423e3a18e54ad94bc91060082aad
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: beb758f6edb2e34dad108f89c7cd226c66353436
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420911"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396408"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス」を参照してください。
   以降で[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とデータ アクセスのトレース ([データ アクセスのトレース](http://go.microsoft.com/fwlink/?LinkId=125805))、接続リングからの接続エラーに関する診断情報を取得するが簡単に更新されました拡張イベント ログからバッファーやアプリケーションのパフォーマンス情報。  
   
- 拡張イベント ログの読み取り方法の詳細については、次を参照してください。[イベント セッション データの表示](../../../database-engine/view-event-session-data.md)します。  
+ 拡張イベント ログを表示する方法については、「[イベント セッション データの表示](../../../database-engine/view-event-session-data.md)」を参照してください。  
   
 > [!NOTE]  
 >  この機能は、トラブルシューティングおよび診断用であるため、監査やセキュリティの用途には適さない場合があります。  

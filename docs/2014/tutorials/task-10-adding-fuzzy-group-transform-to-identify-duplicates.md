@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 843d79da1d5e9aba58a80ea93ee36a68cd689916
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d3e5e71bf32b031552db2a888d17fa222c9f53f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312752"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394940"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>タスク 10: あいまいグループ化変換を追加して重複を識別する
-  ここでは、あいまいグループ化変換をデータ フローに追加します。 あいまいグループ化変換は、変換元データの重複を識別する際に役立ちます。 参照してください[Fuzzy Grouping Transformation](http://msdn.microsoft.com/library/ms141764.aspx)の詳細。  
+  ここでは、あいまいグループ化変換をデータ フローに追加します。 あいまいグループ化変換は、変換元データの重複を識別する際に役立ちます。 参照してください[Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)の詳細。  
   
 1.  ドラッグ アンド ドロップ**あいまいグループ化**変換**その他の変換**上、 **SSIS ツールボックス**を**データ フロー**タブ**正しいと修正済みレコードを結合**します。  
   

@@ -1,5 +1,5 @@
 ---
-title: テストに移行したデータベース オブジェクト (OracleToSQL) |Microsoft ドキュメント
+title: 移行されたデータベース オブジェクト (OracleToSQL) のテスト |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,21 +13,21 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3b908317227b497911084e4c5de1c27ccb8361d1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 037a58fc3fc9402c7148ec49d3a27ea0c0ace309
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778018"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396088"
 ---
-# <a name="testing-migrated-database-objects-oracletosql"></a>移行されたデータベース オブジェクト (OracleToSQL) のテスト
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant の Oracle Tester (SSMA テスター) は、データベース オブジェクトへの変換と SSMA によって行われたデータの移行を自動的にテストします。 SSMA のすべての移行手順が完了したら後、は、SSMA Tester を使用して、変換したオブジェクトが同じように動作し、すべてのデータが正常に転送されることを確認してください。  
+# <a name="testing-migrated-database-objects-oracletosql"></a>移行されたデータベース オブジェクトのテスト (OracleToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle のテスト担当者 (SSMA テスター) は、データベース オブジェクトの変換と SSMA によって行われたデータの移行を自動的にテストします。 SSMA のすべての移行手順が完了したら後、は、SSMA Tester を使用して、変換されたオブジェクトが同じように動作し、すべてのデータが適切に転送されることを確認します。  
   
-SSMA Tester では、次のオブジェクトの種類をテストできます。  
+SSMA テスターでは、次のオブジェクトの種類をテストできます。  
   
 -   テーブル  
   
--   ストアド プロシージャは、パッケージ化されたプロシージャを含むです。  
+-   パッケージ化されたプロシージャを含むストアド プロシージャ。  
   
 -   ユーザー定義関数、関数を含むパッケージ。  
   
@@ -35,36 +35,36 @@ SSMA Tester では、次のオブジェクトの種類をテストできます�
   
 -   スタンドアロンのステートメント。  
   
-SSMA テスターは、Oracle との対応するテスト用に選択されたオブジェクトを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 その後、次の条件に基づいて結果を比較します。  
+SSMA のテスト担当者は、Oracle との対応をテストするために選択したオブジェクトを実行します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 その後、次の条件に従って結果を比較します。  
   
--   変更テーブル データと同じですか。  
+-   同じテーブルのデータで、その変更ですか。  
   
--   プロシージャおよび関数の出力パラメーターの値が同じですか。  
+-   プロシージャと関数の出力パラメーターの値は同じですか。  
   
--   関数は同じ結果を返します。  
+-   同じ結果を返す関数の操作を行いますか。  
   
--   結果セットと同じですか。  
+-   結果セットと同じですか?  
   
 > [!NOTE]  
-> 注意してください。 実稼働システムでは、SSMA Tester を使用しないでください。 テストの実行中に、送信元スキーマとデータが変更されます。 一方で、元の状態の完全な復元はテスト対象コードの種類によって可能なでない可能性があります。  
+> 注意してください。 実稼働システムでの SSMA Tester を使用しないでください。 テストの実行中に、送信元スキーマとデータは変更されます。 その一方で、元の状態の完全な復元はテストされるコードの種類によっては可能でない可能性があります。  
   
 ## <a name="prerequisites"></a>前提条件  
-SSMA Tester を使用する場合は、SSMA Oracle 拡張機能パックをインストール、 **Tester データベースのインストール**オプションをオンにします。  
+SSMA Tester を使用する場合は、SSMA Oracle 拡張機能パックをインストール、**テスター データベースのインストール**オプションがオンにします。  
   
-結果として得られるテーブル データの比較を有効にするために次のように設定します。、**生成 ROWID 列**オプションを**はい**スキーマの変換を開始する前にします。 SSMA の実行中にすべてのテーブルに ROWID 列を追加するが、**変換スキーマ**コマンド。  
+結果として得られるテーブル データの比較を有効にするには次のように設定します。、**生成 ROWID 列**オプションを**はい**スキーマの変換を開始する前にします。 SSMA の実行中にすべてのテーブルに ROWID 列を追加するが、**スキーマの変換**コマンド。  
   
-さらに、次の点を確認します。  
+さらに、次を確認します。  
   
--   Oracle クライアント ツールがコンピューターにインストールされている場所[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を実行します。  
+-   Oracle クライアント ツールは、コンピューターにインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行します。  
   
--   共通言語ランタイム (CLR) 統合を有効になっている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース エンジン。  
+-   共通言語ランタイム (CLR) 統合が有効になって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース エンジン。  
   
-SSMA テスターの現在のバージョンによって、同じソースまたはターゲット サーバーに複数のユーザーによって並列実行がサポートされていないことに注意します。  
+SSMA のテスト担当者の現在のバージョン、同じソースまたはターゲット サーバー上、複数のユーザーによって並列実行がサポートしないことに注意してください。  
   
 ## <a name="getting-started"></a>作業の開始  
 [テスト_ケースの作成&#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンポーネントを SQL Server インストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
-[プロジェクト設定&#40;変換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
+[SQL Server での SSMA コンポーネントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[プロジェクトの設定&#40;変換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   

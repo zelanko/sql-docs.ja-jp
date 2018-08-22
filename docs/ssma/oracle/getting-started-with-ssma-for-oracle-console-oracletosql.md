@@ -16,14 +16,14 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 86b8adc8841e06d91d164c2c35e2329511ac0e28
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b15f982d6da89d669fbf80507459e0c419afbe73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985754"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395783"
 ---
-# <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Ssma for Oracle コンソール (OracleToSQL) 作業の開始
+# <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle コンソール入門 (OracleToSQL)
 このセクションを起動し、Oracle のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  
   
 ## <a name="launching-ssma-console"></a>SSMA コンソールの起動  
@@ -31,7 +31,7 @@ SSMA コンソール アプリケーションを起動するのにには、次�
   
 1.  移動して**開始** をポイント**すべてのプログラム**します。  
   
-2.  をクリックして、  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant Oracle コマンド プロンプトの**ショートカット。  
+2.  をクリックして、  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant Oracle コマンド プロンプトの**ショートカット。  
   
     SSMA コンソールの使用状況 メニューを表示および`(/? Help)`、コンソール アプリケーションを使用するためです。  
   
@@ -48,9 +48,9 @@ SSMA コンソール アプリケーションを起動するのにには、次�
   
 追加機能:  
   
-1.  [パスワードを指定して](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c)とエクスポート]、[ウィンドウの他のマシンにインポート  
+1.  [パスワードを指定して](managing-passwords-oracletosql.md)とエクスポート]、[ウィンドウの他のマシンにインポート  
   
-2.  [レポートの生成](http://msdn.microsoft.com/ccad6262-01e1-447a-bd2b-c105154c80ce)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
+2.  [レポートの生成](generating-reports-oracletosql.md)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力の規則  
 SSMA スクリプト コマンドとオプションを実行すると、コンソール プログラムは、コンソールのユーザーに、結果とメッセージ (情報、エラーなど) を表示します。 または、必要な場合は、xml 出力ファイルにリダイレクトします。 一意の色では、各種のメッセージが出力に表されます。 たとえば、白のカラーにテキスト メッセージがスクリプト ファイルのコマンドを表します緑のカラーで 1 つとユーザーの入力を求めるプロンプトを表します。  
@@ -69,5 +69,5 @@ SSMA スクリプト コマンドとオプションを実行すると、コン�
 |シアン|開始、終了日と操作の結果|  
   
 ## <a name="see-also"></a>参照  
-[SSMA for Oracle のインストール](http://msdn.microsoft.com/9211013a-ab24-4c52-9b26-87994b35e502)  
+[SSMA for Oracle のインストール](installing-ssma-for-oracle-oracletosql.md)  
   

@@ -23,15 +23,15 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985744"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394344"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>プロジェクトの設定 (型のマッピング) (AccessToSQL)
-プロジェクトの型マッピングの設定では、SSMA プロジェクトの既定の型マッピングを設定できます。 個々 のデータベース オブジェクトの型のマッピングを指定することもできます。 詳細については、次を参照してください。[マッピング ソースとターゲットのデータ型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)します。  
+プロジェクトの型マッピングの設定では、SSMA プロジェクトの既定の型マッピングを設定できます。 個々 のデータベース オブジェクトの型のマッピングを指定することもできます。 詳細については、次を参照してください。[マッピング ソースとターゲットのデータ型](mapping-source-and-target-data-types-accesstosql.md)します。  
   
 型のマッピングが表示されます、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "38985744"
 Access データ型にマップします。  
   
 **ターゲットの種類**  
-ターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または指定したアクセスのデータ型の SQL Azure のデータ型。  
+ターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または指定したアクセスのデータ型の SQL Azure のデータ型。  
   
 次の表では、ソースとターゲットのデータ型の既定のマッピングを示します。  
   
@@ -80,6 +80,6 @@ Access データ型にマップします。
 すべてのデータ型マッピングを SSMA の既定値にリセットする をクリックします。  
   
 ## <a name="see-also"></a>参照  
-[ソースとターゲットのデータ型のマッピング](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[ソースとターゲットのデータ型のマッピング](mapping-source-and-target-data-types-accesstosql.md)  
 [ユーザー インターフェイスの Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

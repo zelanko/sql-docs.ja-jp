@@ -1,5 +1,5 @@
 ---
-title: データ移行レポート (OracleToSQL) |Microsoft ドキュメント
+title: データ移行レポート (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,37 +13,37 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: b9001e61cb409be635f99780085a47656ab53b8d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 947015f7c22e65c8a42787df16cc5a7ee0455c94
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777038"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393840"
 ---
 # <a name="data-migration-report--oracletosql"></a>データ移行レポート (OracleToSQL)
-**データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+**データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="options"></a>および  
 **ステータス**  
-ソースからターゲット データベースへのデータ移行の状態を示しています。  
+ソースからターゲット データベースへのデータ移行の状態が表示されます。  
   
 **From**  
 ソース テーブル。  
   
 **変換先**  
-対象のテーブルです。  
+対象のテーブル。  
   
 **行の合計数**  
-ソース テーブル内のデータの行の数。  
+ソース テーブル内のデータ行の数。  
   
 **正常に移行済みの行の数**  
-データの行の数は、対象のテーブルに正常に移行します。  
+データの行の数は、対象のテーブルを正常に移行します。  
   
 **比率**  
 行の割合が正常に移行します。  
   
 **詳細**  
-データ移行に失敗した場合は、レポートで選択した行の移行の詳細を表示する をクリックします。 SSMA、失敗の理由が表示されます。  
+データ移行に失敗した場合は、レポートで選択した行の移行の詳細を表示する をクリックします。 SSMA は、失敗の理由で表示されます。  
   
 **レポートを保存します。**  
 レポートを保存します。CSV (コンマ区切り値) のファイルは、Microsoft Excel を使用して調べることができます。  

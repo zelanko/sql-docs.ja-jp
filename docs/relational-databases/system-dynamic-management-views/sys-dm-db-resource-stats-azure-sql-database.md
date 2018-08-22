@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 08/14/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ae25c2075fdb3cb618a38d1a4be2212c9135001d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d34b4a21b96554860a4e54abe0f274e7fb95aeda
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005697"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394255"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38005697"
 |end_time|**datetime**|UTC 時刻では、現在のレポートの間隔の終了を示します。|  
 |avg_cpu_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均コンピューティング使用率。|  
 |avg_data_io_percent|**10 進数 (5,2)**|データ サービス層の制限の割合での I/O 使用率は平均です。|  
-|avg_log_write_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均書き込みリソース使用率。|  
+|avg_log_write_percent|**10 進数 (5,2)**|平均は、I/O スループットの使用率のサービス層の上限に対するパーセンテージとしてを記述します。|  
 |avg_memory_usage_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均メモリ使用率。<br /><br /> これには、インメモリ OLTP オブジェクトのストレージに使用されるメモリが含まれます。|  
 |xtp_storage_percent|**10 進数 (5,2)**|記憶域使用率、インメモリ OLTP のサービス層の制限の割合で (レポートの期間の最後)。 これには、次のインメモリ OLTP オブジェクトの記憶域として使用されるメモリが含まれます。 メモリ最適化テーブル、インデックス、およびテーブル変数。 ALTER TABLE 操作を処理するために使用されるメモリも含まれています。<br /><br /> データベースでインメモリ OLTP を使用しない場合は、0 を返します。|  
 |max_worker_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合で表した最大同時実行ワーカー (要求)。|  
@@ -95,8 +95,8 @@ SELECT
     MAX(avg_cpu_percent) AS 'Maximum CPU Utilization In Percent',   
     AVG(avg_data_io_percent) AS 'Average Data IO In Percent',   
     MAX(avg_data_io_percent) AS 'Maximum Data IO In Percent',   
-    AVG(avg_log_write_percent) AS 'Average Log Write Utilization In Percent',   
-    MAX(avg_log_write_percent) AS 'Maximum Log Write Utilization In Percent',   
+    AVG(avg_log_write_percent) AS 'Average Log Write I/O Throughput Utilization In Percent',   
+    MAX(avg_log_write_percent) AS 'Maximum Log Write I/O Throughput Utilization In Percent',   
     AVG(avg_memory_usage_percent) AS 'Average Memory Usage In Percent',   
     MAX(avg_memory_usage_percent) AS 'Maximum Memory Usage In Percent'   
 FROM sys.dm_db_resource_stats;  

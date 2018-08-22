@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303032"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396164"
 ---
 # <a name="thread-pool-properties"></a>スレッド プール プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、多くの操作でマルチスレッドを使用し、複数のジョブを並列実行することによって、サーバーの全体的なパフォーマンスを向上させます。 スレッドをより効率的に管理するために、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスレッド プールを使用してスレッドの事前割り当てを実行し、次のジョブがスレッドを容易に利用できるようにします。  
@@ -59,7 +59,7 @@ ms.locfileid: "37303032"
   
  多数のプロセッサを使用した場合の副次的な影響の 1 つとして、クエリと処理の負荷が複数のプロセッサに分散され、共有データ構造に関する競合が増加するために、パフォーマンスの低下が発生する可能性があることが挙げられます。 この現象が発生する可能性があるのは、特に NUMA アーキテクチャを使用するハイエンド システムですが、データを集中的に使用する複数のアプリケーションを同じハードウェア上で実行する非 NUMA システムにも当てはまります。  
   
- この問題を緩和するために、特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 操作の種類と、特定の論理プロセッサ セットの間で関係を設定することができます。 ph x="1" /&gt; プロパティを使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理対象であるスレッド プールの種類ごとに、どのシステム リソースを使用するかを指定するカスタム関係マスクを作成できます。  
+ この問題を緩和するために、特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 操作の種類と、特定の論理プロセッサ セットの間で関係を設定することができます。 `GroupAffinity` プロパティを使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理対象であるスレッド プールの種類ごとに、どのシステム リソースを使用するかを指定するカスタム関係マスクを作成できます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のさまざまなワークロードに使用する次の 5 つのスレッド プールのいずれに対しても、カスタム関係を設定できます。  
   
@@ -279,9 +279,9 @@ ms.locfileid: "37303032"
 >  プロパティの設定方法については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [プロセスとスレッドの概要](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [複数のプロセッサ](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [プロセッサ グループ](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [プロセスとスレッドの概要](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [複数のプロセッサ](/windows/desktop/ProcThread/multiple-processors)   
+ [プロセッサ グループ](/windows/desktop/ProcThread/processor-groups)   
  [SQL server 2012 analysis Services のスレッド プールの変更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 の構成設定 (Wordpress ブログ)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [64 を超えるプロセッサを搭載したシステムのサポート](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

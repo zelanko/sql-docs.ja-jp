@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ce6d1ec5ab2fc9c57bd56e12b56b13231e74606
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cc4fd733c4a2d791c9b1332825cc91068554b36
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279998"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395094"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>タスク 6: Excel ソースをデータ フローに追加する
-  ここでは、Excel ソースをデータ フローに追加してソース Excel ファイルから仕入先データを読み取ります。 Excel ソースは、Microsoft Excel ブック内のワークシートまたは範囲からデータを抽出します。 参照してください[Excel ソース](http://msdn.microsoft.com/library/ms141683.aspx)詳細についてはトピック。  
+  ここでは、Excel ソースをデータ フローに追加してソース Excel ファイルから仕入先データを読み取ります。 Excel ソースは、Microsoft Excel ブック内のワークシートまたは範囲からデータを抽出します。 参照してください[Excel ソース](../integration-services/data-flow/excel-source.md)詳細についてはトピック。  
   
 1.  ドラッグ アンド ドロップ**Excel ソース**から**その他のソース**で**SSIS ツールボックス**を**データ フロー**タブ。  
   

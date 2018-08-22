@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
@@ -14,17 +13,17 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 78aea34abfc3621ea7ebbd50a3236c81308f128b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dad3747b1a597603f071ebdcea4d7f46b478015
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152563"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395551"
 ---
 # <a name="application-level-partitioning"></a>アプリケーション レベルのパーティション分割
   このサンプルでは、特定の日付の前か後どちらであるかによって、メモリ最適化テーブルかディスク ベース テーブルのいずれかにデータが保存される、アプリケーション レベルのパーティション分割を示します。 新しいまたはと等しいすべての注文、 *hotDate*は、メモリ最適化テーブルとすべての注文の前に、 *hotDate*ディスク ベース テーブルにします。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
   
- このサンプルを使用しません[Partitioned Tables](https://msdn.microsoft.com/library/ms190787.aspx)ディスク ベース テーブルが 2 つのテーブル間の明示的な分岐点がトラックを使用して、3 番目のテーブルします。 この分岐点を使用して、新しく挿入されるデータが日付に基づいて必ず適切なテーブルに挿入されることを保証できます。 また、どこでデータを検索するかを決定することもできます。 遅れて到着するデータも、引き続き適切なテーブルに配置されます。  
+ このサンプルを使用しません[Partitioned Tables](../partitions/partitioned-tables-and-indexes.md)ディスク ベース テーブルが 2 つのテーブル間の明示的な分岐点がトラックを使用して、3 番目のテーブルします。 この分岐点を使用して、新しく挿入されるデータが日付に基づいて必ず適切なテーブルに挿入されることを保証できます。 また、どこでデータを検索するかを決定することもできます。 遅れて到着するデータも、引き続き適切なテーブルに配置されます。  
   
  関連するサンプルには、パーティション分割されたテーブルを使用して、次を参照してください。[テーブルのパーティション分割に関するアプリケーションのパターン](memory-optimized-tables.md)します。  
   

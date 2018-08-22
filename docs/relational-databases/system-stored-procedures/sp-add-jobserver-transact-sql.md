@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_jobserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: c2bcb3132902669a6ea544b9962942ed3adadc4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262316"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395787"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@server_name =** ] **'***server***'**  
- 対象となるジョブを割り当てるサーバーの名前を指定します。 *サーバー*は**nvarchar (30)** N'(LOCAL) の既定値は ' です。 *サーバー*のいずれか **(ローカル)** ローカル サーバーまたは既存の対象サーバーの名前。  
+ 対象となるジョブを割り当てるサーバーの名前を指定します。 *server*は**nvarchar (30)**、既定値は、(local) ' です。 *server*かまいません **(LOCAL)** ローカル サーバーの場合、または既存の対象サーバーの名前。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -64,7 +64,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  なし  
   
 ## <a name="remarks"></a>コメント  
- **@automatic_post** 内に存在する**sp_add_jobserver**は引数の下に記載されていません。 **@automatic_post** 内部使用のために予約されています。  
+ **@automatic_post** 内に存在する**sp_add_jobserver**は引数の下に記載されていません。 **@automatic_post** 内部使用のため予約されています。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
@@ -77,14 +77,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_jobserver**の複数のサーバーに関連するジョブです。  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_jobserver**の複数のサーバーに関連するジョブ。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-assigning-a-job-to-the-local-server"></a>A. ローカル サーバーにジョブを割り当てる  
- 次の例には、ジョブが割り当てられます。 `NightlyBackups` 、ローカル サーバー上で実行します。  
+ 次の例には、ジョブが割り当てられます。`NightlyBackups`ローカル サーバー上で実行します。  
   
 > [!NOTE]  
 >  この例では、`NightlyBackups`ジョブが既に存在します。  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. 異なるサーバーで実行するようジョブを割り当てる  
- 次の例には、マルチ サーバー ジョブが割り当てられます。`Weekly Sales Backups`サーバーに`SEATTLE2`です。  
+ 次の例には、マルチ サーバー ジョブが割り当てられます。`Weekly Sales Backups`サーバーに`SEATTLE2`します。  
   
 > [!NOTE]  
 >  この例では、`Weekly Sales Backups` ジョブが既に存在し、`SEATTLE2` が現在のインスタンスに対する対象サーバーとして登録されていることを前提としています。  

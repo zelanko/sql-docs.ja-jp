@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
@@ -14,14 +13,14 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68d22f34ca98f2e7b98320a437a236269e7a9182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01d689554375e17b96ecbda1b10851cb5d7de94c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310472"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394958"
 ---
-# <a name="cross-container-transactions"></a>コンテナーにまたがるトランザクション
+# <a name="cross-container-transactions"></a>複数コンテナーにまたがるトランザクション
   複数コンテナーにまたがるトランザクションは、ネイティブ コンパイル ストアド プロシージャの呼び出しまたはメモリ最適化テーブルでの操作を含む、暗黙的または明示的なユーザー トランザクションです。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ストアド プロシージャの呼び出しでトランザクションが開始されることはありません。 ネイティブ コンパイル プロシージャの (ユーザー トランザクションのコンテキストではなく) 自動コミット モードでの実行は、複数コンテナーにまたがるトランザクションとは見なされません。  

@@ -16,17 +16,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e142150dab7002e8826a91680af56ee7f3900f17
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26546c4de1db3bd4f3f04c9ab64621d7fe864d17
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981078"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395582"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server の Migration Assistant for MySQL (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for MySQL の MySQL データベースへの移行ツールは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014/ [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows と Linux (プレビュー) で 2017/Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB します。 SSMA MySQL、SQL Server データベース オブジェクトへの MySQL データベースのオブジェクトの変換の作成でこれらのオブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に MySQL からデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for MySQL の MySQL データベースへの移行ツールは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014/ [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows と Linux (プレビュー) で 2017/Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB します。 SSMA MySQL、SQL Server データベース オブジェクトへの MySQL データベースのオブジェクトの変換の作成でこれらのオブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に MySQL からデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-このドキュメントは、MySQL の SSMA を紹介し、MySQL データベースへの移行の手順について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 次の表は、詳細を学習に役立つトピックを示しています。  
+このドキュメントは、MySQL の SSMA を紹介し、MySQL データベースへの移行の手順について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 次の表は、詳細を学習に役立つトピックを示しています。  
   
 ## <a name="contents"></a>目次  
   
@@ -38,6 +38,6 @@ ms.locfileid: "38981078"
 |[Ssma for MySQL 作業の開始&#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|ユーザー インターフェイス、プロジェクト、および構成オプションをについて説明します。|  
 |[SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)|変換プロセスと、プロセスの各手順に関する詳細情報の概要を示します。|  
 |[ユーザー インターフェイス リファレンス&#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)|SSMA for MySQL ダイアログ ボックスのドキュメントが含まれています。|  
-|[SSMA for MySQL コンソールの操作](http://msdn.microsoft.com/240aaad1-d65d-4dea-b60b-315cb1ac733d)|SSMA コンソールのアプリケーションに関するドキュメントします。|  
+|[SSMA for MySQL コンソールの操作](working-with-ssma-for-mysql-console-mysqltosql.md)|SSMA コンソールのアプリケーションに関するドキュメントします。|  
 |[MySQL アシスタンスの SSMA の取得](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|に関する追加情報についてを説明します。|  
   

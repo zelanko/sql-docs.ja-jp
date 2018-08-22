@@ -18,17 +18,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979484"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395585"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>データベースのウィザード (場所の選択) を検索 (AccessToSQL)
 データベースの検出ウィザードの [場所の選択] ページで、Access データベースを検索するための検索パラメーターを入力します。  
   
-データベースの検出ウィザードを開く、**ファイル** メニューのをクリックして**検索データベース**します。 このダイアログ ボックスを使用する方法の詳細については、次を参照してください[の追加と削除の Access データベース ファイル。](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+データベースの検出ウィザードを開く、**ファイル** メニューのをクリックして**検索データベース**します。 このダイアログ ボックスを使用する方法の詳細については、次を参照してください[の追加と削除の Access データベース ファイル。](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>および  
 **[参照]**  
@@ -65,6 +65,6 @@ SSMA はスキャンの場所を一覧表示します。 クリックすると�
 所有者の完全な Windows ユーザー名を入力します。 として書式設定することがありますこれ*ドメイン*\\*ユーザー*します。  
   
 ## <a name="see-also"></a>参照  
-[追加して、Access データベース ファイルを削除します。](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[追加して、Access データベース ファイルを削除します。](adding-and-removing-access-database-files-accesstosql.md)  
 [ユーザー インターフェイスの Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -21,12 +21,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f685c51851962c720093ef3c387332ce8de87766
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: daf26b975bbcf150b481e3d2dedfea75cafaa4f5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982514"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394759"
 ---
 # <a name="creating-script-files-mysqltosql"></a>スクリプト ファイルの作成 (MySQLToSQL)
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
@@ -357,7 +357,7 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
   
 たとえば、MySQL データベース内の特定のテーブルの一般的なデータ移行は次の階層: データベース -&gt;テーブル。  
   
-スクリプト ファイル内のすべてのコマンドが正常に実行された、SSMA コンソールのアプリケーションは終了し、ユーザーにコントロールを返します。 スクリプト ファイルの内容は詳細またはのいずれかに含まれる小さい静的変数の情報を[変数値ファイル](http://msdn.microsoft.com/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a)または変数の値をスクリプト ファイル内の別のセクションでします。  
+スクリプト ファイル内のすべてのコマンドが正常に実行された、SSMA コンソールのアプリケーションは終了し、ユーザーにコントロールを返します。 スクリプト ファイルの内容は詳細またはのいずれかに含まれる小さい静的変数の情報を[変数値ファイル](creating-variable-value-files-mysqltosql.md)または変数の値をスクリプト ファイル内の別のセクションでします。  
   
 **例:**  
   

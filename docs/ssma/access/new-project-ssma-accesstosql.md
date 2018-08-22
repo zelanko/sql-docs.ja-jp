@@ -1,5 +1,5 @@
 ---
-title: 新しいプロジェクト (SSMA) (AccessToSQL) |Microsoft ドキュメント
+title: 新しいプロジェクト (SSMA) (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,20 +18,20 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d819ecae91a1c5438e678ab3c62206c3fe76c785
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 81a1936393d725167eef04f9145b6be4ba75f0c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774718"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394247"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新しいプロジェクト (SSMA) (AccessToSQL)
-使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**です。  
+使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**します。  
   
 ## <a name="options"></a>および  
-**Name**  
+**名前**  
   
-プロジェクトの名前を入力します。 SSMA では、ファイルの拡張子を追加します。  
+プロジェクトの名前を入力します。 SSMA は、ファイル拡張子を追加します。  
   
 **場所**  
   
@@ -39,21 +39,21 @@ ms.locfileid: "34774718"
   
 **MigrateTo**  
   
-以下の一覧からターゲット データベースのバージョンのいずれかを選択します。  
+下の一覧からターゲット データベースのバージョンのいずれかを選択します  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> ' SQL Azure' 型の新しいプロジェクトを必要とする SQL Server Native Client (SNAC) バージョン 10.5 または上のアクセスをリンクするテーブルを SQL Azure データベースにします。   
-> SNAC の最新バージョンを取得する[Microsoft® SQL Server® 2008 R2 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940)です。  
+> 'SQL Azure' 型の新しいプロジェクトを必要とする SQL Server Native Client (SNAC) バージョン 10.5 またはの上へのアクセスをリンクするテーブルを SQL Azure データベース。   
+> SNAC の最新バージョンを取得する[Microsoft® SQL Server® 2008 R2 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940)します。  
   

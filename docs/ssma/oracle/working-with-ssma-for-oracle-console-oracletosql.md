@@ -1,5 +1,5 @@
 ---
-title: SSMA Oracle コンソール (OracleToSQL) 用の操作 |Microsoft ドキュメント
+title: SSMA for Oracle コンソール (OracleToSQL) の操作 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,34 +13,34 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: d80ae0d5124b5845292ceca2ff8de7659925e77f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: be1c2850b725fb2975f86ac30dcb527ae8f16281
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778258"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396588"
 ---
-# <a name="working-with-ssma-for-oracle-console-oracletosql"></a>SSMA Oracle コンソール (OracleToSQL) 用の操作
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Oracle 用移行 Assistant (SSMA) のリリースはコマンドラインで、コンソール アプリケーションを使用してアクセスれています。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとして SSMA スクリプト レベルのやり取りを有効に、移行サイクルが減少し、移行作業のスケールを設定します。  
+# <a name="working-with-ssma-for-oracle-console-oracletosql"></a>SSMA for Oracle コンソールの操作 (OracleToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] For Oracle migration Assistant (SSMA) のリリースは、コマンドラインでコンソール アプリケーションからアクセスできるようになりました。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとしては、SSMA はにより、スクリプト レベルのインターフェイス、移行サイクルが削減され、移行作業を拡大または縮小します。  
   
 このセクションでは、SSMA コンソール アプリケーションを使用して Oracle データベースを移行する手順について説明します。  
   
-このセクションで説明されているトピックは次のとおりです。  
+このセクションで説明したトピックは次のとおりです。  
   
 |||  
 |-|-|  
-|**トピック**|**description**|  
-|[Oracle コンソール for SSMA の概要&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|コンソール アプリケーションを実行する手順について説明します。|  
-|[SSMA コンソールでのコマンド ライン オプション&#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|SSMA コンソール アプリケーションを操作するには、コマンド ライン オプションとパラメーターについて説明します。|  
-|[スクリプト ファイルを作成する&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|スクリプト ファイルを作成する方法について説明します。|  
-|[変数の値のファイルを作成する&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|変数値ファイルを作成する方法について説明します。|  
+|**トピック**|**[説明]**|  
+|[Ssma for Oracle コンソール作業の開始&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|コンソール アプリケーションを実行する手順について説明します。|  
+|[SSMA コンソールのコマンド ライン オプション&#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|SSMA コンソールのアプリケーションを操作するには、コマンド ライン オプションとパラメーターについて説明します。|  
+|[スクリプト ファイルの作成&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|スクリプト ファイルを作成する方法について説明します。|  
+|[変数値ファイルを作成する&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|変数値ファイルを作成する方法について説明します。|  
 |[サーバー接続ファイルを作成する&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|サーバー接続ファイルを作成する方法について説明します。|  
-|[SSMA コンソールを実行する&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|SSMA コンソール アプリケーションを操作するコマンドをスクリプト ファイルについて説明します。|  
-|[サンプルのコンソールのスクリプト ファイルで作業&#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|製品と共にファイルのサンプルで提供されているスクリプトを簡単にカスタマイズする方法について説明します|  
-|[パスワードを管理する&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|パスワードの暗号化と復号化、およびインポート/エクスポートのパスワードの情報について説明します。|  
-|[レポートの生成&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|レポートを生成するコマンドを一覧表示します。|  
+|[SSMA コンソールの実行&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|SSMA コンソールのアプリケーションを操作するコマンドをスクリプト ファイルについて説明します。|  
+|[サンプルのコンソール スクリプト ファイルを扱う&#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|製品と共にファイルのサンプルで提供されているスクリプトを簡単にカスタマイズする方法について説明します|  
+|[パスワードの管理&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|パスワードの暗号化と復号化、およびインポート/エクスポートのパスワードの情報について説明します。|  
+|[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|レポートを生成するコマンドが表示されます。|  
 |[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|移行に関する問題の解決方法に関する簡単な情報を提供します。|  
   
 ## <a name="see-also"></a>参照  
-[Oracle コンソール for SSMA の概要](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
+[Ssma for Oracle コンソール作業の開始](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
   

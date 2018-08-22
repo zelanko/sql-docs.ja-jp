@@ -1,5 +1,5 @@
 ---
-title: sp_help_operator (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_operator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395379"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +47,21 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@operator_name=** ] **'***@operator_name***'**  
- オペレーター名を指定します。 *@operator_name*は**sysname**です。 場合 *@operator_name*が指定されていないすべての演算子に関する情報が返されます。  
+ [  **@operator_name=** ] **'***operator_name***'**  
+ オペレーター名を指定します。 *operator_name*は**sysname**します。 場合*operator_name*が指定されていないすべての演算子に関する情報が返されます。  
   
  [ **@operator_id=** ] *operator_id*  
  要求する情報の対象となるオペレーターの識別番号を指定します。 *operator_id*は**int**、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*operator_id*または *@operator_name*指定する必要がありますが、両方を指定することはできません。  
+>  いずれか*operator_id*または*operator_name*指定する必要がありますが、両方を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|オペレーター識別番号。|  
 |**name**|**sysname**|演算子の名前。|  
@@ -77,16 +78,16 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|土曜日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
 |**sunday_pager_start_time**|**int**|日曜日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
 |**sunday_pager_end_time**|**int**|日曜日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
-|**pager_days**|**tinyint**|ビットマスク (**1** = 日曜日、 **64** = 土曜日) 日の曜日にオペレーターがポケットベルによる通知の受信に使用できることを示すです。|  
+|**pager_days**|**tinyint**|ビットマスク (**1** = 日曜日、 **64** = 土曜日) のオペレーターがポケットベルによる通知の受信に使用できることを示す日の週。|  
 |**netsend_address**|**nvarchar(100)**|ネットワーク ポップアップ通知のオペレーター アドレス。|  
 |**last_netsend_date**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った日付。|  
 |**last_netsend_time**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った時刻。|  
 |**category_name**|**sysname**|このオペレーターが所属するオペレーター カテゴリの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_operator**から実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -95,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、オペレーター `François Ajenstat` についての情報をレポートします。  

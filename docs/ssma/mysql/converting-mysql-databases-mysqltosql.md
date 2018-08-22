@@ -16,18 +16,18 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ad0a909c9fce73955bee29070febfa32037a91c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83cd35918c6d2fbc3190ebcedd3606b622e549f1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985774"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394729"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL データベースの変換 (MySQLToSQL)
-MySQL に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に MySQL データベースのオブジェクトを変換できる SQL Azure、およびプロジェクトの設定とデータ マッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースのオブジェクト。  
+MySQL に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に MySQL データベースのオブジェクトを変換できる SQL Azure、およびプロジェクトの設定とデータ マッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのオブジェクト。  
   
 ## <a name="the-conversion-process"></a>変換プロセス  
-MySQL からオブジェクトの定義は、データベース オブジェクトの変換と同様に変換して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクト、および SSMA メタデータにこの情報を読み込みます。 インスタンスに情報は読み込まれません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。 使用して、オブジェクトとそのプロパティを表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラー。  
+MySQL からオブジェクトの定義は、データベース オブジェクトの変換と同様に変換して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure オブジェクト、および SSMA メタデータにこの情報を読み込みます。 インスタンスに情報は読み込まれません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 使用して、オブジェクトとそのプロパティを表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラー。  
   
 変換中は、SSMA は、出力ウィンドウに出力メッセージとエラー一覧 ウィンドウにエラー メッセージを出力します。 出力とエラー情報を使用して、MySQL データベースまたは必要な変換の結果を得るため、変換プロセスを変更しているかどうかを確認します。  
   
@@ -35,13 +35,13 @@ MySQL からオブジェクトの定義は、データベース オブジェク�
 オブジェクトを変換する前に、プロジェクトの変換オプションを確認して、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA がテーブルとインデックスに変換する方法を設定できます。 詳細については、「[プロジェクト設定&#40;変換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## <a name="conversion-results"></a>変換結果  
-次の表は、変換、MySQL のオブジェクトし、その結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。  
+次の表は、変換、MySQL のオブジェクトし、その結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト。  
   
 |||  
 |-|-|  
 |**MySQL のオブジェクト**|**SQL Server オブジェクトの結果として得られる**|  
-|インデックスなどの依存オブジェクトを持つテーブル|SSMA は、依存オブジェクトをテーブルを作成します。 テーブルは、すべてのインデックスと制約に変換されます。 インデックスは、個別に変換されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。<br /><br />**空間データ型マッピング**テーブル ノード レベルでのみ実行できます。<br /><br />テーブルの変換の設定の詳細については、次を参照してください[変換の設定。](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
-|関数|関数は、TRANSACT-SQL に直接変換できる、SSMA は、関数を作成します。 場合によっては、関数は、ストアド プロシージャに変換する必要があります。 これを使用して行うことができます**関数の変換**プロジェクトの設定にします。 この場合は、SSMA では、ストアド プロシージャおよびストアド プロシージャを呼び出す関数を作成します。<br /><br />**指定されたオプション:**<br /><br />プロジェクトの設定に従って変換します。<br /><br />関数への変換します。<br /><br />ストアド プロシージャへの変換します。<br /><br />関数の変換の設定の詳細については、次を参照してください[変換の設定。](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
+|インデックスなどの依存オブジェクトを持つテーブル|SSMA は、依存オブジェクトをテーブルを作成します。 テーブルは、すべてのインデックスと制約に変換されます。 インデックスは、個別に変換されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト。<br /><br />**空間データ型マッピング**テーブル ノード レベルでのみ実行できます。<br /><br />テーブルの変換の設定の詳細については、次を参照してください[変換の設定。](conversion-settings-mysqltosql.md)|  
+|関数|関数は、TRANSACT-SQL に直接変換できる、SSMA は、関数を作成します。 場合によっては、関数は、ストアド プロシージャに変換する必要があります。 これを使用して行うことができます**関数の変換**プロジェクトの設定にします。 この場合は、SSMA では、ストアド プロシージャおよびストアド プロシージャを呼び出す関数を作成します。<br /><br />**指定されたオプション:**<br /><br />プロジェクトの設定に従って変換します。<br /><br />関数への変換します。<br /><br />ストアド プロシージャへの変換します。<br /><br />関数の変換の設定の詳細については、次を参照してください[変換の設定。](conversion-settings-mysqltosql.md)|  
 |手順|プロシージャは、TRANSACT-SQL に直接変換できる、SSMA は、ストアド プロシージャを作成します。 場合によっては、自律的なトランザクションでストアド プロシージャを呼び出す必要があります。 この場合は、SSMA が 2 つのストアド プロシージャを作成します: ストアド プロシージャのいずれかの手順と、実装を呼び出すために使用する別の実装します。|  
 |データベースの変換|MySQL オブジェクトとしてのデータベースは直接変換されませんによって SSMA for MySQL。 MySQL データベースをスキーマ名のようにより処理され、物理的なすべてのパラメーターは変換中に失われます。 SSMA for MySQL を使用して[MySQL データベースを SQL Server スキーマへのマッピング&#40;MySQLToSQL&#41; ](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)に適切な SQL Server データベース/スキーマのペアに MySQL データベースからオブジェクトをマップします。|  
 |トリガーの変換|**SSMA では、次の規則に基づくトリガーが作成されます。**<br /><br />トリガーが INSTEAD OF T-SQL トリガーに変換される前に<br /><br />AFTER トリガーは、行ごとのイテレーションの有無の後に T-SQL トリガーに変換されます。|  
@@ -110,7 +110,7 @@ MySQL の一部のオブジェクトを変換できません可能性があり�
   
 -   削除または問題のあるコードを変更するには MySQL データベース内のオブジェクトを変更することができます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください[MySQL に接続する&#40;MySQLToSQL。&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラーと MySQL メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure と MySQL からデータを移行します。  
+-   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラーと MySQL メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure と MySQL からデータを移行します。  
   
 ## <a name="next-step"></a>次の手順  
 移行プロセスでは、次の手順は[を SQL Server に変換されたデータベース オブジェクトの読み込み&#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  

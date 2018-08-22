@@ -15,15 +15,15 @@ caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7322f12605256fe25bb533c0360467510be92e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277598"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395115"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 要素 (CSDLBI)
-  `EntityType` 要素は、データ モデルで顧客や注文などの高レベル エンティティの構造を表す複合型です。 `bi:EntityType`要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx)します。  
+  `EntityType` 要素は、データ モデルで顧客や注文などの高レベル エンティティの構造を表す複合型です。 `bi:EntityType`要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](/dotnet/framework/data/adonet/ef/overview)します。  
   
  EntityType 要素は、データ モデルに含まれる各エンティティに対して指定される必要があります。 EntityType のサブ要素では、テーブルの列とメジャーが記述されます。 テーブル間のリレーションシップは `EntityContainer` に含まれます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "37277598"
 |値|説明|  
 |-----------|-----------------|  
 |Regular|特に定義されていない場合。|  
-|[時刻]|年、半期、四半期、月、日などの時間間隔を表す属性。|  
+|Time|年、半期、四半期、月、日などの時間間隔を表す属性。|  
 |Geography|市区町村や郵便番号などの地理情報を表す属性。|  
 |Organization|従業員や子会社などの組織情報を表す属性。|  
 |BillOfMaterials|製品の部品表などの在庫情報や製造情報を表す属性。|  

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c7296c46bb6312d66c07c0bb63c9e97c37ec1db
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082434"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396565"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>チュートリアル: SQL Server で R を使用した in-database 分析を説明します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,17 +32,15 @@ SQL プログラマ向けのこのチュートリアルでは、R 言語をビ�
 
 ただし、ソリューションの作成後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の使い慣れた環境で [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを使用して、ソリューションを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]に容易に展開することができます。
 
-- [レッスン 1: サンプル データとスクリプトをダウンロードします。](../tutorials/sqldev-download-the-sample-data.md)
+- [レッスン 1: NYC タクシーのデモ データの設定します。](../tutorials/sqldev-download-the-sample-data.md)
 
-- [レッスン 2: チュートリアルの環境を設定します。](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [レッスン 2: の探索し、ストアド プロシージャで R 関数を呼び出すことによってデータのシェイプと分布を視覚化](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [レッスン 3: の探索し、ストアド プロシージャで R 関数を呼び出すことによってデータのシェイプと分布を視覚化](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [レッスン 4: T-SQL 関数で R を使用してデータ機能を作成します。](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [レッスン 3: T-SQL 関数で R を使用してデータ機能を作成します。](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
-- [レッスン 5: トレーニングし、関数およびストアド プロシージャを使用して R モデルの保存](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [レッスン 4: トレーニングし、関数およびストアド プロシージャを使用して R モデルの保存](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [レッスン 6: 運用化するためのストアド プロシージャのラップ R コード](../tutorials/sqldev-operationalize-the-model.md)します。 
+- [レッスン 5: 運用化するためのストアド プロシージャにラップ R コード](../tutorials/sqldev-operationalize-the-model.md)します。 
   データベースにモデルが保存されたら、ストアド プロシージャを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] から予測モデルを呼び出します。
 
 ## <a name="prerequisites"></a>前提条件

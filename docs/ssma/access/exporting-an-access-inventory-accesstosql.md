@@ -25,15 +25,15 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a6c94a1335c8ee20aa7f42e179cd924b6661f55
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980674"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393913"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Access インベントリ (AccessToSQL) のエクスポート
-複数の Access データベースがあるし、に移行するものがわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]プロジェクト内のすべての Access データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行するには、そのデータベース内のオブジェクトを決定するインベントリのメタデータを照会します。 このインベントリすることができます簡単に、次の質問に対する回答を検索します。  
+複数の Access データベースがあるし、に移行するものがわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロジェクト内のすべての Access データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行するには、そのデータベース内のオブジェクトを決定するインベントリのメタデータを照会します。 このインベントリすることができます簡単に、次の質問に対する回答を検索します。  
   
 -   最大級のデータベースとは  
   
@@ -48,15 +48,15 @@ ms.locfileid: "38980674"
 これらの質問回答に使用されるクエリの例は、このトピックの最後で提供されます。  
   
 ## <a name="exported-metadata"></a>エクスポートされたメタデータ  
-SSMA は、Access データベース、テーブル、列、インデックス、外部キー、クエリ、レポート、フォーム、マクロ、およびモジュールに関するメタデータをエクスポートします。 これらの項目のカテゴリのそれぞれについてのメタデータは、別のテーブルにエクスポートされます。 これらのテーブルのスキーマは、次を参照してください。 [Access のインベントリ スキーマ](http://msdn.microsoft.com/fdd3cff2-4d62-4395-8acf-71ea8f17f524)します。  
+SSMA は、Access データベース、テーブル、列、インデックス、外部キー、クエリ、レポート、フォーム、マクロ、およびモジュールに関するメタデータをエクスポートします。 これらの項目のカテゴリのそれぞれについてのメタデータは、別のテーブルにエクスポートされます。 これらのテーブルのスキーマは、次を参照してください。 [Access のインベントリ スキーマ](access-inventory-schemas-accesstosql.md)します。  
   
 ## <a name="exporting-inventory-data"></a>インベントリ データをエクスポートします。  
-Access インベントリをエクスポートするに最初に開くまたは SSMA プロジェクトを作成し分析する Access データベースを追加する必要があります。 指定したそれらのデータベースに関するメタデータをエクスポートする SSMA プロジェクトにデータベースを追加した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースおよびスキーマです。 必要に応じて、SSMA は、メタデータを格納するテーブルを作成します。 SSMA を Access データベースに関するメタデータを追加し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
+Access インベントリをエクスポートするに最初に開くまたは SSMA プロジェクトを作成し分析する Access データベースを追加する必要があります。 指定したそれらのデータベースに関するメタデータをエクスポートする SSMA プロジェクトにデータベースを追加した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースおよびスキーマです。 必要に応じて、SSMA は、メタデータを格納するテーブルを作成します。 SSMA を Access データベースに関するメタデータを追加し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
   
 > [!NOTE]  
-> Access データベースは、複数のファイルに分割することができます。 テーブル、クエリ、フォーム、レポート、マクロ、モジュール、およびショートカットが含まれているフロント エンドのデータベースを含むバックエンド データベース。 分割データベースを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA をフロント エンドのデータベースを追加します。  
+> Access データベースは、複数のファイルに分割することができます。 テーブル、クエリ、フォーム、レポート、マクロ、モジュール、およびショートカットが含まれているフロント エンドのデータベースを含むバックエンド データベース。 分割データベースを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA をフロント エンドのデータベースを追加します。  
   
-次の手順は、プロジェクトを作成、データベース プロジェクトを追加に接続する方法をについて説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、し、インベントリ データをエクスポートします。  
+次の手順は、プロジェクトを作成、データベース プロジェクトを追加に接続する方法をについて説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、し、インベントリ データをエクスポートします。  
   
 **プロジェクトを作成するには**  
   
@@ -72,7 +72,7 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
 5.  **移行先**コンボ ボックスに、移行、およびクリックするターゲット バージョンを選択**OK**します。  
   
-プロジェクトの作成の詳細については、次を参照してください。 [Creating and Managing Projects](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)します。  
+プロジェクトの作成の詳細については、次を参照してください。 [Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)します。  
   
 **検索データベースを追加するには**  
   
@@ -101,13 +101,13 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
 8.  確認してください ページで、次のようにクリックします。**完了**します。  
   
-データベースをプロジェクトに追加する方法の詳細については、次を参照してください。[の追加と削除の Access データベース ファイル](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)します。  
+データベースをプロジェクトに追加する方法の詳細については、次を参照してください。[の追加と削除の Access データベース ファイル](adding-and-removing-access-database-files-accesstosql.md)します。  
   
 **SQL Server に接続するには**  
   
 1.  **ファイル**メニューの  **SQL サーバーへの接続**します。  
   
-2.  接続ダイアログ ボックスで入力するかのインスタンスの名前を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
+2.  接続ダイアログ ボックスで入力するかのインスタンスの名前を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
     -   ローカル コンピューターの既定のインスタンスに接続する場合は、入力**localhost**またはドット (**.**)。  
   
@@ -117,11 +117,11 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
 3.  **データベース**ボックスに、エクスポートされたメタデータのターゲット データベースの名前を入力します。  
   
-4.  場合、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既定以外のポートで接続を受け入れる、使用されるポート番号を入力するように構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]内の接続、**サーバー ポート**ボックス。 既定のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既定のポート番号は 1433 です。 名前付きインスタンスは、SSMA の試行からポート番号を取得する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser サービス。  
+4.  場合、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定以外のポートで接続を受け入れる、使用されるポート番号を入力するように構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内の接続、**サーバー ポート**ボックス。 既定のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定のポート番号は 1433 です。 名前付きインスタンスは、SSMA の試行からポート番号を取得する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービス。  
   
-5.  **認証**ドロップダウン メニューで、接続に使用する、認証の種類を選択します。 現在の Windows アカウントを使用する**Windows 認証**します。 使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ログインで、 **SQL Server 認証**、およびユーザー名とパスワードを入力します。  
+5.  **認証**ドロップダウン メニューで、接続に使用する、認証の種類を選択します。 現在の Windows アカウントを使用する**Windows 認証**します。 使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインで、 **SQL Server 認証**、およびユーザー名とパスワードを入力します。  
   
-接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server に接続する&#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)します。  
+接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server に接続する&#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)します。  
   
 **インベントリ情報をエクスポートするには**  
   
@@ -138,11 +138,11 @@ Access インベントリをエクスポートするに最初に開くまたは 
 メタデータをエクスポートするたびに SSMA は、インベントリ データを追加します。 既存のインベントリ データが更新または削除されません。  
   
 ## <a name="querying-the-exported-metadata"></a>エクスポートされたメタデータのクエリを実行します。  
-Access データベースに関するメタデータをエクスポートした後は、メタデータを照会できます。 クエリ エディター ウィンドウを使用する、次の手順について説明する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]クエリを実行します。  
+Access データベースに関するメタデータをエクスポートした後は、メタデータを照会できます。 クエリ エディター ウィンドウを使用する、次の手順について説明する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]クエリを実行します。  
   
 **メタデータを照会するには**  
   
-1.  **開始**メニューで、**すべてのプログラム**、 をポイント**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005**または**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008**または**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012**、 をクリックし、 **SQL Server Management Studio**します。  
+1.  **開始**メニューで、**すべてのプログラム**、 をポイント**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005**または**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008**または**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**、 をクリックし、 **SQL Server Management Studio**します。  
   
 2.  **サーバーへの接続** ダイアログ ボックスでは、設定を確認し、順にクリックします**Connect**します。  
   
@@ -153,7 +153,7 @@ Access データベースに関するメタデータをエクスポートした�
 5.  クエリを実行する F5 キーを押します。  
   
 ## <a name="query-examples"></a>クエリ例  
-次のクエリを実行する前にを使用してを実行する必要があります*database_name*エクスポートされたメタデータを含むデータベースに対してクエリを実行することを確認するクエリ。 たとえば、MyAccessMetadata という名前のデータベースにメタデータをエクスポートする場合は追加する、次の先頭に、[!INCLUDE[tsql](../../includes/tsql_md.md)]コード。  
+次のクエリを実行する前にを使用してを実行する必要があります*database_name*エクスポートされたメタデータを含むデータベースに対してクエリを実行することを確認するクエリ。 たとえば、MyAccessMetadata という名前のデータベースにメタデータをエクスポートする場合は追加する、次の先頭に、[!INCLUDE[tsql](../../includes/tsql-md.md)]コード。  
   
 ```  
 USE MyAccessMetadata;  
@@ -220,7 +220,7 @@ ORDER BY DateModified;
 ```  
   
 ### <a name="which-databases-contain-private-information"></a>どのデータベースには、個人情報が含まれてでしょうか。  
-Access データベースには、機密情報や個人情報が含まれます。 これらのデータベースを移動する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のセキュリティ機能を活用するためにします。 機密データを含む列は、特定の名前、または、特定の文字を含めることがわかっている場合は、その情報が含まれているすべての列を検索するクエリを使用できます。 たとえば、「給与」、文字列が含まれるすべての列を見つけることができます。  クエリは、データベース名、テーブル名、および列名を返します。  
+Access データベースには、機密情報や個人情報が含まれます。 これらのデータベースを移動する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のセキュリティ機能を活用するためにします。 機密データを含む列は、特定の名前、または、特定の文字を含めることがわかっている場合は、その情報が含まれているすべての列を検索するクエリを使用できます。 たとえば、「給与」、文字列が含まれるすべての列を見つけることができます。  クエリは、データベース名、テーブル名、および列名を返します。  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   
@@ -234,5 +234,5 @@ WHERE ColumnName LIKE '%salary%';
 列名がわからない場合は、すべての列を返すクエリを記述できます。 これを行うには、前のクエリから WHERE 句を削除します。  
   
 ## <a name="see-also"></a>参照  
-[Access データベースの移行の準備](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+[Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)  
   

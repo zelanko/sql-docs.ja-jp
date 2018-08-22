@@ -1,8 +1,8 @@
 ---
-title: SSMA for MySQL (MySQLToSql) の新機能 |Microsoft ドキュメント
+title: SSMA for MySQL (MySQLToSql) における新 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 03/01/2018
+ms.date: 08/14/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,88 +16,107 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d818a1ce31d752898d5d1ebde5a27addbedd91ad
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ad86fed5cfa7eab443ce214cb7cc0965fd7062b8
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776678"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395960"
 ---
-# <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL (MySQLToSql) の新機能
-このトピックでは、MySQL での変更の各リリース SSMA が一覧表示します。 
+# <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
+この記事では、各リリースでの MySQL の変更の SSMA が一覧表示します。 
+
+## <a name="ssma-v79"></a>SSMA v7.9
+SSMA の MySQL の v7.9 リリースには、次の変更が含まれています。
+- 品質と変換のメトリックを向上させる対象となる修正します。
+- MySQL から Azure SQL Database への移行の空間データ型の部分的にサポートします。
+- データ型マッピングとプロジェクトの環境設定を変更するコマンドラインの SSMA でサポートします。
+- 移行のサポートを SQL Server Integration Services (SSIS) を使用してデータ。 スキーマを変換した後を右クリック コンテキスト メニュー オプションを使用して、SSIS パッケージを作成することができます。
+- SSMA で Azure SQL Database の接続ダイアログが、完全修飾サーバー名を指定することも変更されました。 SSMA の以前のバージョンで、Azure SQL Database のプレフィックスは、プロジェクト設定内で明示的に説明する必要があります。
+
+> [!IMPORTANT]
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
+
+## <a name="ssma-v78"></a>SSMA v7.8
+SSMA の MySQL の v7.8 リリースには、次の変更が含まれています。
+- プロジェクトの設定で変更が強調表示されている型のマッピング。
+- ユーザーがテレメトリを無効にする機能を提供します。
+
+> [!IMPORTANT]
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
 
 ## <a name="ssma-v77"></a>SSMA v7.7
-SSMA の MySQL v7.7 のリリースには、次の変更が含まれています。
-- SSMA for MySQL は、品質、および変換のメトリックを向上する対象となる修正プログラムで強化されています。
-- SSMA for MySQL の 32 ビット バージョンは戻るには、人気のある要求に基づいて、です。 (V7.4) より前の以前の実装と比較して、2 つのインストーラー パッケージがありますが、サイド バイ サイドでインストールできません。 その結果がある場合、接続コンポーネントに基づいて最も適切なバージョンを選択する必要があります。 可能であれば、64 ビット バージョンを使用することはお勧め常にします。
-- SSMA for MySQL では、ODBC 接続文字列の接続モードは、MySQL と互換性があるサード パーティ製 ODBC ドライバーを使用できるようにできるようになりました。
+SSMA の MySQL の v7.7 リリースには、次の変更が含まれています。
+- SSMA for MySQL は、品質と変換のメトリックを向上させる対象となる修正プログラムで拡張されています。
+- SSMA for MySQL の 32 ビット バージョンは戻るには、要望に基づき、です。 (V7.4) より前の以前の実装と比較して、2 つのインストーラー パッケージがあるが、並行してインストールことはできません。 その結果がある場合、接続コンポーネントに基づいて最も適切なバージョンを選択する必要があります。 可能であれば、64 ビット バージョンを使用することをお勧めは常にします。
+- SSMA for MySQL では、ODBC 接続文字列の接続モードでの MySQL を使用した互換性のあるサードパーティ製 ODBC ドライバーを使用できるようにできるようになりました。
 
 > [!IMPORTANT]
-> SSMA v7.4 とそれ以降のバージョンでは、.Net 4.5.2 は、インストールの前提がします。
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-品質と変換のメトリックを向上する対象となる修正プログラムと SQL Server 2017 (パブリック プレビュー) のサポートの SSMA for MySQL の v7.6 リリースが拡張されました。 Windows および Linux での SQL Server 2017 のサポートは、パブリック プレビューではの運用環境の移行は使用できません。
+MySQL 用の SSMA v7.6 リリース品質と変換のメトリックを向上させる修正プログラムを対象となると SQL Server 2017 (パブリック プレビュー) のサポートが強化されました。 Windows および Linux 上の SQL Server 2017 のサポートはパブリック プレビュー段階と、運用環境の移行のない使用する必要があります。
 
 > [!IMPORTANT]
-> SSMA v7.4 とそれ以降のバージョンでは、.Net 4.5.2 は、のインストール前提条件、およびツールの 32 ビット バージョンは廃止されました。
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストール前提条件、およびツールの 32 ビット バージョンは廃止されました。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
-SSMA の MySQL の v7.5 リリースは、障碍の大きいアクセシビリティを確認するいくつかの機能強化で強化されています。
+障碍を持つユーザーのアクセシビリティを確認します。 いくつかの機能強化の SSMA for MySQL の v7.5 リリースが強化されました。
 
 > [!IMPORTANT]
-> .Net 4.5.2 は、SSMA v7.5 をインストールするための事前必須コンポーネントです。 さらに、v7.4 から始まり、SSMA の 32 ビット バージョンは廃止されています。
+> .Net 4.5.2 は SSMA v7.5 をインストールするための前提条件です。 さらに、v7.4 以降では、SSMA の 32 ビット バージョンは中止されています。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
-SSMA の MySQL v7.4 のリリースには、次の変更が含まれています。
-- **クエリのタイムアウト**オプションは、ソースとターゲットのスキーマ オブジェクトの検出中に使用できるようになりました。
+MySQL 用の SSMA の v7.4 リリースには、次の変更が含まれています。
+- **クエリ タイムアウト**オプションは、ソースとターゲットのスキーマ オブジェクトの検出中に使用できるようになりました。
 ![query timeout オプション](../media/query-timeout_red.png)
 - 品質と変換のメトリックは、お客様のフィードバックに基づいて、対象となる修正プログラムが強化されています。
 
 > [!IMPORTANT]
-> .Net 4.5.2 は、SSMA v7.4 をインストールするための事前必須コンポーネントです。 さらに、v7.4 から始まり、SSMA の 32 ビット バージョンは廃止されています。 
+> .Net 4.5.2 は SSMA v7.4 をインストールするための前提条件です。 さらに、v7.4 以降では、SSMA の 32 ビット バージョンは中止されています。 
 
 ## <a name="ssma-v73"></a>SSMA v7.3
-SSMA の MySQL v7.3 のリリースには、次の変更が含まれています。
-- 改善の品質、および変換のメトリックを対象となる修正プログラムがお客様のフィードバックに基づきます。
-- SSMA 拡張性フレームワークが、次の項目を使用して公開します。
-  - SQL Server Data Tools (SSDT) プロジェクトに機能をエクスポートします。
-    -   SSMA から SSDT プロジェクトにスキーマ スクリプトをエクスポートできます。 スキーマ スクリプトを使用して、追加のスキーマ変更を加えるし、データベースを展開することができます。
+MySQL 用の SSMA の v7.3 リリースには、次の変更が含まれています。
+- お客様からのフィードバックに基づいて対象となる修正プログラムで強化された品質と変換メトリック。
+- SSMA 拡張性フレームワークは、次のものを使用して公開:
+  - SQL Server Data Tools (SSDT) プロジェクトにエクスポートする機能。
+    -   SSMA から SSDT プロジェクトにスキーマ スクリプトをエクスポートできます。 スキーマ スクリプトを使用して、追加のスキーマを変更して、データベースをデプロイすることができます。
 ![SSDT プロジェクト コマンドとして保存します。](../media/export-schema-scripts_red.png)
-  - カスタム変換を実行するの SSMA で利用できるライブラリ。
-    - これでカスタム構文変換および SSMA によって処理されなかったいた変換を処理できるコードを構築できます。
-      - カスタムのコンバーターを作成する方法の手順については、このブログの投稿[変換機能を拡張する SQL Server Migration Assistant の](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)します。
-      - この変換用のサンプル プロジェクトをダウンロードできる[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)です。
+  - カスタム変換を実行するために、SSMA で使用できるライブラリ。
+    - 構文のカスタム変換および変換 SSMA によって処理されなかった以前に対応するコードを作成します。
+      - カスタムのコンバーターを作成する方法の手順については、このブログ投稿「[変換機能を拡張する SQL Server Migration Assistant の](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)します。
+      - この変換用のサンプル プロジェクトをダウンロードできます[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)します。
 
 ## <a name="ssma-v72"></a>SSMA v7.2
-SSMA の MySQL v7.2 のリリースには、次の変更が含まれています。
-- 改善の品質、および変換のメトリックを対象となる修正プログラムがお客様のフィードバックに基づきます。
-- 製品利用統計情報をお客様の問題をトラブルシューティングし、SSMA の換算率を向上させる優れたデータ ポイントを提供する拡張機能です。
+SSMA の MySQL の v7.2 リリースには、次の変更が含まれています。
+- お客様からのフィードバックに基づいて対象となる修正プログラムで強化された品質と変換メトリック。
+- 顧客の問題をトラブルシューティングし、SSMA のコンバージョン率を向上させるより良いデータ ポイントを提供するテレメトリの機能強化。
 
 ## <a name="ssma-v71"></a>SSMA v7.1
 SSMA for Access の v7.1 リリースには、次の変更が含まれています。
-- Windows と Linux CTP1 では、SQL Server 2017 は、移行のサポート対象のターゲット プラットフォームではようになりました。 この機能は、technical preview ではあり、SQL の対象サーバーにスキーマとデータの移動を許可します。
+- Windows と Linux CTP1 で SQL Server 2017 は、移行のサポートされているターゲット プラットフォームではようになりました。 この機能は、technical preview ではあり、対象の SQL サーバーにスキーマとデータの移動を許可します。
 - SSMA は、使用可能になるとすぐには、SSMA の最新バージョンをダウンロードする自動更新をサポートします。
-- SSMA インストール可能なバイナリは、Windows インストーラー パッケージ ファイル (.msi) により配信されるようになりました。
+- SSMA のインストール可能なバイナリは、Windows インストーラー パッケージ ファイル (.msi) が配信されるようになりました。
 
 **リソース**
 
 [SQL Server Migration Assistant の変換機能を拡張します。](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
 
-[評価し、Microsoft 以外のデータ プラットフォームから SQL Server にデータを移行 *(Oracle など) の*](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/) 
+[評価し、Microsoft 以外のデータ プラットフォームから SQL Server にデータを移行 *(Oracle など) を含む*](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/) 
 
 ## <a name="may-2016"></a>2016 年 5 月  
-MySQL SSMA の 2016 年 5 月のリリースには、次の変更が含まれています: です。
+MySQL 用の SSMA の 2016 年 5 月リリースには、次の変更が含まれています。 します。
 
--  SQL Server 2016 のサポートを追加します。
--  強化されたパーサーとの競合回避モジュール。
+-  SQL Server 2016 のサポートが追加されました。
+-  強化されたパーサーと競合回避モジュール。
 -  .Net 2.0 のインストーラーのチェックを削除します。
--  更新された拡張機能パックの依存関係から .Net 3.5 を .Net 4.0 です。
--  MySql の既定の固定 BigInt typemapping です。
--  [保存] プロジェクト"固定と SSMA コンソールの「プロジェクトを開く」コマンド。
--  SSMA コンソールの"securepassword"コマンドを固定します。
--  初期読み込みのためのオブジェクトのカウントを修正しました。
--  固定 MsSql オブジェクトをロードします。
--  グローバル設定のバグを修正します。
+-  更新された拡張機能パックの依存関係から .Net 3.5 を .Net 4.0 にします。
+-  BigInt typemapping for MySql に固定の既定値。
+-  プロジェクト"保存"固定と SSMA コンソールの「プロジェクトを開く」コマンド。
+-  SSMA コンソールの"securepassword"コマンドを修正しました。
+-  オブジェクトの初期読み込みのカウントを修正しました。
+-  固定 MsSql オブジェクトを読み込みます。
+-  グローバル設定でバグを修正しました。
  
 ## <a name="march-2016"></a>2016 年 3 月  
 MySQL の SSMA の 2016 年 3 月のプレビュー リリースには、次の変更が含まれています。  
@@ -105,73 +124,73 @@ MySQL の SSMA の 2016 年 3 月のプレビュー リリースには、次の�
 -  SQL Server 2016 への移行のサポートが追加されました。 
   
 ## <a name="january-2016"></a>2016 年 1 月  
-MySQL SSMA の 2016 年 1 月メンテナンスのリリースには、次の変更が含まれています。  
+MySQL の SSMA の 2016 年 1 月のメンテナンス リリースには、次の変更が含まれています。  
   
--  SSMA (RFC 5706203) するには、ログ メニュー項目を追加したビューです。  
+-  追加の表示 メニュー項目をログ、SSMA (RFC 5706203) にします。  
 -  追加された製品利用統計情報。  
   
 ## <a name="july-2014"></a>2014 年 7 月  
-SSMA の MySQL の 2014 年 7 月リリースには、次の変更が含まれています。  
+MySQL 用の SSMA の 2014 年 7 月リリースには、次の変更が含まれています。  
   
--  Azure SQL DB コードの変換が向上します。 
+-  Azure SQL DB コード変換の改善。 
 -  拡張機能パックの機能は、Azure SQL DB をサポートするために、スキーマに移動します。  
--  パフォーマンスの向上は、10 k 個以上のデータベースのオブジェクトをテストします。  
--  多数のオブジェクトを処理するための UI の機能強化。  
--  (したがって、変換で無視する) の「既知」の LOB スキーマの強調表示します。  
+-  パフォーマンスの向上は、10 k を超えるデータベースのオブジェクトをテストします。  
+-  多数のオブジェクトを処理するための UI 機能強化。  
+-  (したがって、これらは、変換で無視されます)、「既知」の LOB スキーマの強調表示します。  
 -  速度の向上を変換します。  
 -  UI 内のオブジェクトの数を表示します。  
 -  25% 以上のレポート サイズの縮小します。  
 -  未解析のコンス トラクターに対して改善されたエラー メッセージ。  
   
 ## <a name="april-2014"></a>2014 年 4 月  
-SSMA の MySQL の 2011 年 7 月リリースには、次の変更が含まれています。  
+MySQL 用の SSMA の 2011 年 7 月リリースには、次の変更が含まれています。  
   
 -  MS SQL Server 2014 のサポートが追加されました。  
 -  Azure への変換に関する修正されたバグ  
--  IE 10 で非表示レポート ページに関する修正されたバグはします。  
+-  IE 10 で非表示レポート ページに関するバグを固定します。  
   
 ## <a name="july-2011"></a>2011 年 7 月  
-SSMA の MySQL の 2011 年 7 月リリースには、次の変更が含まれています。  
+MySQL 用の SSMA の 2011 年 7 月リリースには、次の変更が含まれています。  
   
--   制限の変換のサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]"Denali"のオフセットします。  
--   エラー報告データの移行中の強化。  
+-   制限の変換がサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"Denali"のオフセットします。  
+-   レポート データの移行中にエラーを改善しました。  
   
 ## <a name="april-2011"></a>2011 年 4 月  
-SSMA の MySQL の 2011 年 4 月リリースには、次の変更が含まれています。  
+MySQL 用の SSMA の 2011 年 4 月リリースには、次の変更が含まれています。  
   
--   1 つの"SSMA の MySQL"、サポートのインストール可能[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "Denali"と Azure SQL です。  
--   接続できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]"Denali"  
--   強化されたクライアント側のデータ移行エンジン、データの並列移行をサポートします。  
--   強化されたデータの移行とパフォーマンスを単純な一括ログ復旧モデルに記録します。  
--   MySQL コンソールのバージョンの SSMA では、旧バージョンとの互換性をサポートします。 SSMA v5.0 以前のバージョンで作成されたプロジェクトを開くことができます。  
--   SSMA for MySQL v5.0 製品であることには、SSMA 製品の以前のバージョンとサイド バイ サイド (SxS) がインストールされています。  
+-   1 つの"SSMA for MySQL"をサポートするインストール可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali"と Azure SQL。  
+-   接続する機能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"Denali"  
+-   データの並列移行のサポート、強化されたクライアント側のデータ移行エンジン。  
+-   強化されたデータの移行とパフォーマンスを単純な一括復旧モデルが記録されます。  
+-   SSMA for MySQL コンソールのバージョンでは、旧バージョンとの互換性をサポートします。 SSMA v5.0 を以前のバージョンで作成されたプロジェクトを開くことができます。  
+-   SSMA for MySQL v5.0 製品には、SSMA 製品の旧バージョンとサイド バイ サイド (SxS) がインストールされています。  
   
 ## <a name="july-2010"></a>2010 年 7 月  
-SSMA の MySQL の 2010 年 7 月リリースには、次の機能が含まれています。  
+MySQL 用の SSMA の 2010 年 7 月リリースには、次の機能が含まれています。  
   
 1.  **ユーザー インターフェイスの機能強化:**  
   
-    -   'SQL モード' MySQL データベースのオブジェクト タブ  
+    -   'SQL モード' の MySQL データベースのオブジェクト タブ  
     -   MySQL データベース オブジェクトの [設定] タブ  
     -   MySQL テーブルの 'データ' タブ  
-    -   変換と移行」ページで、更新されたプロジェクトの設定  
+    -   変換と移行のページで、更新されたプロジェクトの設定  
     -   テーブル レベルで [データ移行の設定]  
   
-2.  **MySQL および SQL Server への接続の機能強化:**  
+2.  **MySQL および SQL Server に接続するための機能強化:**  
   
     -   MySQL の SSL 接続  
     -   SQL Server で暗号化された接続  
   
 3.  **MySQL Metabase Explorer の機能強化:**  
   
-    -   すべての MySQL データベース オブジェクトと、それぞれのタブを読み込んでいます。  
+    -   MySQL データベースのすべてのオブジェクトと、それぞれのタブを読み込んでいます。  
   
 4.  **オブジェクトへの変換の機能強化:**  
   
-    -   MySQL メタベース オブジェクト – プロシージャ、関数、ビュー、トリガー、およびステートメントの変換。  
-    -   テーブルの空間データ型の制限付きサポートします。  
-    -   MySQL 関数を SQL Server ストアド プロシージャに変換するオプション  
-    -   オブジェクトへの変換中に SQL モードと文字セットのマッピングを適用するオプション  
+    -   MySQL のメタベース オブジェクト – プロシージャ、関数、ビュー、トリガー、およびステートメントの変換。  
+    -   テーブル内の空間データ型の制限付きのサポート。  
+    -   MySQL の機能を SQL Server ストアド プロシージャに変換するオプション  
+    -   オブジェクトの変換中に SQL モードと文字セットのマッピングを適用するオプション  
   
 5.  **データ移行の機能強化:**  
   
@@ -179,14 +198,14 @@ SSMA の MySQL の 2010 年 7 月リリースには、次の機能が含まれ�
     -   空間データの移行のサポート  
     -   カスタムの SQL テーブルのデータの移行  
   
-6.  **SSMA MySQL コンソール for:**  
+6.  **SSMA for MySQL コンソール:**  
   
     -   SSMA for MySQL のコンソール機能のサポート  
     -   スクリプト レベルのインターフェイスのサポート  
   
 ## <a name="january-2010"></a>2010 年 1 月  
-MySQL SSMA の 2010 年 1 月のリリースでは、最初のリリースをでした。 次の機能が含まれています。  
+MySQL 用の SSMA の 2010 年 1 月リリースは、最初のリリースでした。 次の機能が含まれています。  
   
--   両方への移行のサポートが追加のオンプレミス SQL Server および Azure SQL します。  
+-   両方への移行のサポートを追加でオンプレミス SQL Server と Azure SQL。  
   
--   **機能のスナップショット:** スキーマとデータの移行の MySQL テーブル/インデックス/の制約。
+-   **機能のスナップショット:** スキーマとデータの移行 MySQL テーブル/インデックスと制約の。

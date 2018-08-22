@@ -16,18 +16,18 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3af1de2e98b4baf4800603a8eb177b80fdb1da6f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26b95bc37f1ba7726c607e6275889ecd6a3fecd9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985504"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394715"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) への DB2 データベースの移行
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2 は、DB2 データベースを迅速に移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。 SSMA for DB2 を使用してデータベース オブジェクトとデータを確認して、移行対象のデータベースを評価をするデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB へのデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB。 SYS およびシステムの DB2 スキーマを移行できないことに注意してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 は、DB2 データベースを迅速に移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。 SSMA for DB2 を使用してデータベース オブジェクトとデータを確認して、移行対象のデータベースを評価をするデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB へのデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB。 SYS およびシステムの DB2 スキーマを移行できないことに注意してください。  
   
 ## <a name="recommended-migration-process"></a>移行プロセスをお勧めします。  
-DB2 データベースからオブジェクトとデータを正常に移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB は、次のプロセスを使用します。  
+DB2 データベースからオブジェクトとデータを正常に移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB は、次のプロセスを使用します。  
   
 1.  [新しい SSMA プロジェクト](http://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)します。  
   
@@ -47,7 +47,7 @@ DB2 データベースからオブジェクトとデータを正常に移行す�
   
     これは、次の方法のいずれかで行います。  
   
-    -   スクリプトを保存しで実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。  
+    -   スクリプトを保存しで実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
     -   データベース オブジェクトを同期します。  
   

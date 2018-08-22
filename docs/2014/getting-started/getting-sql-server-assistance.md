@@ -45,12 +45,12 @@ caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171163"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395980"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server の参考資料の入手
   [!INCLUDE[msCoName](../includes/msconame-md.md)] に関して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供している主な情報ソースは次の 3 つです。  
@@ -68,7 +68,7 @@ ms.locfileid: "37171163"
   
  オンライン ブックは次の方法で表示できます。  
   
--   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] オンライン ブックのコピーが、インターネット上の MSDN ライブラリと TechNet ライブラリの両方で公開されています。 このような [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックのコピーのトピックには、他のユーザーからの追加情報やコード例など、コミュニティからのコメントが含まれています。 MSDN ライブラリのコピーを表示することができます、 [SQL Server 2014 オンライン ブックの「](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)します。  
+-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] オンライン ブックのコピーが、インターネット上の MSDN ライブラリと TechNet ライブラリの両方で公開されています。 このような [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックのコピーのトピックには、他のユーザーからの追加情報やコード例など、コミュニティからのコメントが含まれています。 MSDN ライブラリのコピーを表示することができます、 [SQL Server 2014 オンライン ブックの「](../2014-toc/index.md)します。  
   
 -   ヘルプ ライブラリ マネージャーを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックをローカル コンピューターにインストールできます。 詳細については、次を参照してください。[の追加と SQL Server の製品ドキュメントを削除](../2014-toc/books-online-for-sql-server-2014.md)します。  
   

@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
-ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
+ms.openlocfilehash: 673f1bffeea908da211cd5ff76bad9d96dabcded
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39164213"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394335"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 ジョブのオブジェクト レベルで特定リソース消費量の統計と同様に、SQL Server プロセスを管理するジョブ オブジェクトの構成を記述する 1 つの行を返します。 SQL Server はジョブ オブジェクトで実行されていない場合は、空のセットを返します。 
 
-ジョブ オブジェクトは、オペレーティング システム レベルでの CPU、メモリ、および IO リソース ガバナンスを実装する Windows コンストラクトです。 ジョブ オブジェクトの詳細については、次を参照してください。[ジョブ オブジェクト](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)します。 
+ジョブ オブジェクトは、オペレーティング システム レベルでの CPU、メモリ、および IO リソース ガバナンスを実装する Windows コンストラクトです。 ジョブ オブジェクトの詳細については、次を参照してください。[ジョブ オブジェクト](/windows/desktop/ProcThread/job-objects)します。 
   
 |[列]|データ型|説明|  
 |-------------|---------------|-----------------|  

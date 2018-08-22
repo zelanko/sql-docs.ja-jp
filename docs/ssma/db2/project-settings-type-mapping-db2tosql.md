@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509221"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396282"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>プロジェクトの設定 (型のマッピング) (DB2ToSQL)
-[型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に DB2 データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
+[型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に DB2 データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
 型マッピング ページが表示されます、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "39509221"
 マップの DB2 データ型。  
   
 **ターゲットの種類**  
-ターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]指定の DB2 データ型のデータ型。  
+ターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定の DB2 データ型のデータ型。  
   
 SSMA for DB2 型のマッピングの既定の次のセクションでテーブルを参照してください。  
   
@@ -63,7 +63,7 @@ SSMA for DB2 は、引数、列、ローカル変数、および戻り値のカ�
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>既定の引数の型と値の型マッピングを返します  
 次の表には、引数と戻り値の既定のデータ型マッピングが含まれています。  
   
-|DB2 データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型|  
+|DB2 データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
@@ -119,7 +119,7 @@ SSMA for DB2 は、引数、列、ローカル変数、および戻り値のカ�
 ### <a name="default-column-type-mapping"></a>既定の列の型マッピング  
 次の表には、列の既定の型マッピングが含まれています。  
   
-|DB2 データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型|  
+|DB2 データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
@@ -187,7 +187,7 @@ SSMA for DB2 は、引数、列、ローカル変数、および戻り値のカ�
 ### <a name="default-local-variable-type-mapping"></a>既定のローカル変数の型マッピング  
 次の表には、ローカル変数の既定の型マッピングが含まれています。  
   
-|DB2 データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型|  
+|DB2 データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  

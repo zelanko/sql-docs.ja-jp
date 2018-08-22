@@ -1,5 +1,5 @@
 ---
-title: プロジェクトの設定 (型のマッピング) (SybaseToSQL) |Microsoft ドキュメント
+title: プロジェクトの設定 (型のマッピング) (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,47 +16,47 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b0c4e2743c4169bd7626ca66c9d9dba609facdaa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779448"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394252"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>プロジェクトの設定 (型のマッピング) (SybaseToSQL)
-[型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に Sybase Adaptive Server Enterprise (ASE) データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
+[型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に Sybase Adaptive Server Enterprise (ASE) のデータ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
-型マッピング ページがで使用できる、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
+型マッピング ページが表示されます、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
   
--   今後のすべての SSMA プロジェクトの種類のマッピングの設定を指定する、**ツール**メニューの **プロジェクト設定の既定の**、設定は表示または変更に必要な移行プロジェクトの種類を選択**移行のターゲット バージョン**ドロップダウンを選び、**型マッピング**左側のウィンドウの下部にあります。  
+-   今後のすべての SSMA プロジェクトの型マッピングの設定を指定する、**ツール**メニューの **プロジェクト設定の既定の**設定は表示に必要な移行プロジェクトの種類を選択しますまたは。変更**移行ターゲット バージョン**ドロップダウンを選択し、**型マッピングの**左側のウィンドウの下部にあります。  
   
--   現在のプロジェクトの設定を指定する、**ツール**メニューの **プロジェクト設定**、し、**型マッピング**左側のウィンドウの下部にあります。  
+-   現在のプロジェクトの設定を指定する、**ツール**メニューの **プロジェクト設定**、し、**型マッピングの**左側のウィンドウの下部にあります。  
   
 ## <a name="options"></a>および  
 **変換元の型**  
 マップされた ASE データ型。  
   
 **ターゲットの種類**  
-ターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ASE の指定したデータ型のデータ型。  
+ターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE の指定したデータ型のデータ型。  
   
-Sybase 型マッピングの既定 SSMA の次のセクションの表を参照してください。  
+SSMA for Sybase の型マッピングの既定の次のセクションの表を参照してください。  
   
 **[追加]**  
-マッピングのリストに、データ型を追加する をクリックします。  
+データ型をマッピングの一覧に追加する をクリックします。  
   
 **[編集]**  
 マッピングの一覧で選択したデータ型を編集する をクリックします。  
   
-**削除**  
-マッピングのリストから選択したデータ型のマッピングを削除する をクリックします。  
+**[削除]**  
+マッピングの一覧から選択したデータ型のマッピングを削除する をクリックします。  
   
 **既定値にリセット**  
 SSMA の既定値に型マッピングのリストをリセットする をクリックします。  
   
 ## <a name="default-type-mapping"></a>既定の型マッピング  
-次の表に、ASE 間の既定の型マッピングと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
+次の表に、ASE の既定の型マッピングと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
-|ASE データ型|SQL Server データ型|  
+|ASE のデータ型|SQL Server データ型|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**[バイナリ]**|**[バイナリ]**|  
@@ -66,13 +66,13 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**char**|**char**|  
 |**char varying**|**varchar**|  
 |**char のさまざまな [\*..8000]**|**varchar[\*]**|  
-|**char のさまざまな [8001..\*]**|**varchar(max)**|  
+|**char のさまざまな [8001...\*]**|**varchar(max)**|  
 |**char [\*..8000]**|**char[\*]**|  
-|**char [8001..\*です]。**|**varchar(max)**|  
+|**char [8001...\*;]**|**varchar(max)**|  
 |**character**|**char**|  
-|**可変の文字**|**varchar**|  
+|**文字がさまざまな**|**varchar**|  
 |**文字がさまざまな [\*..8000]**|**varchar[\*]**|  
-|**文字がさまざまな [8001..\*]**|**varchar(max)**|  
+|**文字がさまざまな [8001...\*]**|**varchar(max)**|  
 |**文字 [\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
@@ -96,21 +96,21 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**national char [\*..4000]**|**nchar[\*]**|  
 |**varying、national char**|**nvarchar**|  
 |**varying、national char [\*..4000]**|**nvarchar[\*]**|  
-|**varying、national char [4001..\*]**|**nvarchar(max)**|  
-|**national char [4001..\*]**|**nvarchar(max)**|  
+|**varying、national char [4001...\*]**|**nvarchar(max)**|  
+|**national char [4001...\*]**|**nvarchar(max)**|  
 |**各国語文字**|**nchar**|  
 |**各国語文字 [\*..4000]**|**nchar[\*]**|  
-|**各国語文字 [4001..\*]**|**nvarchar(max)**|  
-|**各国語文字 varying**|**nvarchar**|  
-|**各国語文字 varying [\*..4000]**|**nvarchar[\*]**|  
-|**各国語文字 varying [4001..\*]**|**nvarchar(max)**|  
-|**各国語 varchar**|**nvarchar**|  
-|**各国語 varchar [\*..4000]**|**nvarchar[\*]**|  
-|**各国語 varchar [4001..\*]**|**nvarchar(max)**|  
+|**各国語文字 [4001...\*]**|**nvarchar(max)**|  
+|**各国語文字がさまざまな**|**nvarchar**|  
+|**各国語文字がさまざまな [\*..4000]**|**nvarchar[\*]**|  
+|**各国語文字がさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**national varchar**|**nvarchar**|  
+|**national varchar [\*..4000]**|**nvarchar[\*]**|  
+|**national varchar [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
-|**nchar varying**|**nvarchar**|  
-|**nchar varying [\*..4000]**|**nvarchar[\*]**|  
-|**nchar varying [4001..\*]**|**nvarchar(max)**|  
+|**nchar の変化**|**nvarchar**|  
+|**nchar のさまざまな [\*..4000]**|**nvarchar[\*]**|  
+|**nchar のさまざまな [4001...\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -130,19 +130,19 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
-|**unichar varying**|**nvarchar**|  
-|**unichar varying [\*..4000]**|**nvarchar[\*]**|  
-|**unichar varying [4001..\*]**|**nvarchar(max)**|  
+|**unichar 可変**|**nvarchar**|  
+|**unichar がさまざまな [\*..4000]**|**nvarchar[\*]**|  
+|**unichar がさまざまな [4001...\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
 |**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
 |**univarchar[\*..4000]**|**nvarchar[\*]**|  
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**符号なしの bigint**|**numeric[20][0]**|  
+|**符号なし bigint**|**numeric[20][0]**|  
 |**unsigned int**|**bigint**|  
 |**unsigned smallint**|**int**|  
-|**符号なし tinyint**|**tinyint**|  
+|**符号なしの tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**varbinary[\*..8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  

@@ -1,5 +1,5 @@
 ---
-title: EntityType 要素 (CSDLBI) |Microsoft ドキュメント
+title: EntityType 要素 (CSDLBI) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,49 +9,49 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 60d1b91ab417343a9dffe7e83520ebcd868c5d6d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8fe1635c9360f2f00dc98348d64d2080f93332bf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044213"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394161"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  **EntityType**要素は複合型であり、顧客やデータ モデル内の注文などの高レベルのエンティティの構造体を表します。 **Bi: EntityType**要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx)です。  
+  **EntityType**要素は、顧客やデータ モデル内の注文などの高レベルのエンティティの構造を表す複合型。 **双: EntityType**要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](/dotnet/framework/data/adonet/ef/overview)します。  
   
- EntityType 要素は、データ モデルに含まれる各エンティティに対して指定される必要があります。 EntityType のサブ要素では、テーブルの列とメジャーが記述されます。 テーブル間のリレーションシップが含まれている、 **EntityContainer**です。  
+ EntityType 要素は、データ モデルに含まれる各エンティティに対して指定される必要があります。 EntityType のサブ要素では、テーブルの列とメジャーが記述されます。 テーブル間のリレーションシップが含まれて、 **EntityContainer**します。  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- 次の表は、要素と属性を定義する、 **EntityType**要素。 適用される属性を参照しても、 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx)要素。  
+ 次の表は、要素と属性を定義する、 **EntityType**要素。 関連項目に適用される属性、 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx)要素。  
   
 |名前|必須かどうか|説明|  
 |----------|-----------------|-----------------|  
 |目次|いいえ|列内のデータの種類を含む文字列です。 値は、データ モデルの DimensionAttributeTypeEnumType の値から取得されます。<br /><br /> DimensionAttributeTypeEnumType の値が ExtendedType の場合は、Contents の値は DimensionAttribute の ExtendedType 要素から取得されます。 クライアントはこれらの値に対応する必要はありません。|  
-|DefaultDetails|いいえ|プロパティ参照のリスト。テーブル内の列のセットを表します。<br /><br /> 参照してください[DefaultDetails 要素 & #40 です。CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
-|DefaultImage|いいえ|エンティティを示すイメージを含む列への参照。<br /><br /> 多次元モデルでは、この要素は、ディメンション属性のバイナリ属性に対応します。 この属性が存在する場合、要素にはただ 1 つの MemberRef 要素が必ず含まれます。<br /><br /> 参照してください[MemberRef 要素 & #40 です。CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DefaultMeasure|いいえ|エンティティ上での計算時に既定として使用されるエンティティのメジャーへの参照です。 指定しない場合は、SUM が既定値です。<br /><br /> 参照してください[MemberRef 要素 & #40 です。CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DisplayKey|いいえ|列またはロール エンドに対する参照のリスト。エンティティ インスタンスを一意に識別する強い識別子を構成します。<br /><br /> 参照してください[DisplayKey 要素 & #40 です。CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
-|階層|いいえ|モデルの階層のリスト。<br /><br /> 参照してください[Hierarchy 要素 & #40 です。CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
+|DefaultDetails|いいえ|プロパティ参照のリスト。テーブル内の列のセットを表します。<br /><br /> 参照してください[DefaultDetails 要素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md)します。|  
+|DefaultImage|いいえ|エンティティを示すイメージを含む列への参照。<br /><br /> 多次元モデルでは、この要素は、ディメンション属性のバイナリ属性に対応します。 この属性が存在する場合、要素にはただ 1 つの MemberRef 要素が必ず含まれます。<br /><br /> 参照してください[MemberRef 要素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md)します。|  
+|DefaultMeasure|いいえ|エンティティ上での計算時に既定として使用されるエンティティのメジャーへの参照です。 指定しない場合は、SUM が既定値です。<br /><br /> 参照してください[MemberRef 要素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md)します。|  
+|DisplayKey|いいえ|列またはロール エンドに対する参照のリスト。エンティティ インスタンスを一意に識別する強い識別子を構成します。<br /><br /> 参照してください[DisplayKey 要素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md)します。|  
+|Hieararchy|いいえ|モデルの階層のリスト。<br /><br /> 参照してください[Hierarchy 要素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md)します。|  
 |ReferenceName|はい|Data Analysis Expressions (DAX) クエリでこのエンティティを参照するために使用できる識別子。<br /><br /> この属性が存在しない場合は、エンティティの完全修飾されたフィールド名が使用されます。|  
 |SortMembers|いいえ|並べ替えるの基準となるプロパティの一覧です。 SortDirection 属性が昇順または降順を示します。|  
   
 ## <a name="contents-element"></a>Contents 要素  
- **内容**要素は、エンティティ内のデータの型を記述する単純な型です。  
+ **内容**要素は、エンティティ内のデータの型を記述する単純な型。  
   
  エンティティ (列) のコンテンツは次の値のいずれかです。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |Regular|特に定義されていない場合。|  
-|[時刻]|年、半期、四半期、月、日などの時間間隔を表す属性。|  
+|Time|年、半期、四半期、月、日などの時間間隔を表す属性。|  
 |Geography|市区町村や郵便番号などの地理情報を表す属性。|  
 |Organization|従業員や子会社などの組織情報を表す属性。|  
 |BillOfMaterials|製品の部品表などの在庫情報や製造情報を表す属性。|  
 |Accounts|財務報告用の勘定科目一覧表を表す属性。|  
 |Customers|顧客情報や連絡先情報を表す属性。|  
 |Products|製品情報を表す属性。|  
-|Scenario|計画的または戦略的な分析情報を表す属性。|  
+|シナリオ|計画的または戦略的な分析情報を表す属性。|  
 |Quantitative|量的な情報を表す属性。|  
 |Utility|その他の情報を表す属性。|  
 |通貨|通貨のデータとメタデータが含まれます。|  
@@ -60,9 +60,9 @@ ms.locfileid: "34044213"
 |Promotion|マーケティング関連のプロモーション情報を表す属性。|  
   
 ## <a name="example"></a>例  
- **表形式**  
+ **テーブル**  
   
- 次の例は、AdventureWorks のテーブル モデルで使用される Geography テーブルの CSDLBI Version 1.1 による表現の一部です。 RowNumber 列が非表示の列をテーブル モデルでの行識別子として自動的に生成され、そのため、内容が属性を持つ**RowNumber**です。  
+ 次の例は、AdventureWorks のテーブル モデルで使用される Geography テーブルの CSDLBI Version 1.1 による表現の一部です。 RowNumber 列は非表示の列をテーブル モデルで行識別子として自動的に生成され、そのため、Contents 属性を持つ**RowNumber**します。  
   
 ```  
   

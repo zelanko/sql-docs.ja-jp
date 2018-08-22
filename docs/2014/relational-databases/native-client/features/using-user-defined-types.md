@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,60 +24,60 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caf89d0013d95a4fc27937e854eb7a5af28017ef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7789a1f591b95ec5442697c5bfa6c7d730ba4faf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424791"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394780"
 ---
 # <a name="using-user-defined-types"></a>ユーザー定義型の使用
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、ユーザー定義型 (UDT) が導入されました。 Udt は、オブジェクトとカスタム データ構造を格納することにより、SQL 型システムを拡張する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。 UDT は複数のデータ型を保持でき、動作を含むことができるので、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム データ型だけで構成される従来の別名データ型とは異なります。 UDT は、検証可能なコードを生成する .NET 共通言語ランタイム (CLR) でサポートされる任意の言語を使用して定義されます。 これには Microsoft Visual c# が含まれています<sup>®</sup>および Visual Basic<sup>®</sup> .NET。 データは、.NET のクラスまたは構造体のフィールドやプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、ユーザー定義型 (UDT) が導入されました。 これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにオブジェクトやカスタム データ構造を格納できるようになり、SQL の型システムが拡張されます。 UDT は複数のデータ型を保持でき、動作を含むことができるので、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム データ型だけで構成される従来の別名データ型とは異なります。 UDT は、検証可能なコードを生成する .NET 共通言語ランタイム (CLR) でサポートされる任意の言語を使用して定義されます。 このような言語には、Microsoft Visual C#<sup>®</sup> や Visual Basic<sup>®</sup> .NET があります。 データは、.NET のクラスまたは構造体のフィールドやプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
   
- UDT の変数として、テーブルの列の定義として使用できる、[!INCLUDE[tsql](../../../includes/tsql-md.md)]バッチ、またはの引数として、[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数またはストアド プロシージャ。  
+ UDT は、テーブルの列定義、[!INCLUDE[tsql](../../../includes/tsql-md.md)] バッチの変数、または [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数やストアド プロシージャの引数として使用することができます。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのメタデータについては、オブジェクトとしての Udt を管理することができますを持つバイナリ型としての Udt をサポートしています。 UDT 列は、dbtype_udt 型として公開され、そのメタデータは、主要な OLE DB インターフェイスを通じて公開される**IColumnRowset**、および新しい[ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイス。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのメタデータについては、オブジェクトとしての Udt を管理することができますを持つバイナリ型としての Udt をサポートしています。 UDT 列は、DBTYPE_UDT 型として公開され、この列のメタデータは主要な OLE DB インターフェイスの **IColumnRowset** と新しいインターフェイスの [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) により公開されます。  
   
 > [!NOTE]  
->  **:Findnextrow**メソッドは、UDT データ型では機能しません。 UDT が検索列の型として使用されると、DB_E_BADCOMPAREOP が返されます。  
+>  **IRowsetFind::FindNextRow** メソッドでは、UDT データ型を処理できません。 UDT が検索列の型として使用されると、DB_E_BADCOMPAREOP が返されます。  
   
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
  次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列がを介して公開される、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにより dbtype_udt 型として。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
   
-|データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外**|  
+|データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外から**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|サポートされている<sup>6</sup>|エラー<sup>1</sup>|サポートされている<sup>6</sup>|エラー<sup>5</sup>|  
 |DBTYPE_BYTES|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_WSTR|サポートされている<sup>3,6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4,6</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_BSTR|サポートされている<sup>3,6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_STR|サポートされている<sup>3,6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4,6</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_WSTR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4、6</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_BSTR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_STR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4、6</sup>|該当なし<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|サポートされていません|該当なし<sup>2</sup>|サポートされていません|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3,6</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
   
- <sup>1</sup>サーバー以外の型 dbtype_udt 型を指定した場合**icommandwithparameters::setparameterinfo**アクセサーの型が dbtype_udt の場合と、ステートメントが実行されたときにエラーが発生します (DB_E_ERRORSOCCURRED です。パラメーターの状態は dbstatus_e_badaccessor になります) です。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT がパラメーターのデータ型に暗黙的に変換されないことを示すエラーが返されます。  
+ <sup>1</sup>**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合、ステートメントの実行時にエラー (DB_E_ERRORSOCCURRED) が発生します (パラメーターの状態は DBSTATUS_E_BADACCESSOR になります)。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT がパラメーターのデータ型に暗黙的に変換されないことを示すエラーが返されます。  
   
  <sup>2</sup>このトピックの範囲を超えています。  
   
- <sup>3</sup> 16 進文字列からバイナリ データへのデータの変換が発生します。  
+ <sup>3</sup> 16 進文字列からバイナリ データへのデータ変換が行われます。  
   
- <sup>4</sup> 16 進文字列へのバイナリ データからのデータ変換が行われます。  
+ <sup>4</sup> バイナリ データから 16 進文字列へのデータ変換が行われます。  
   
- <sup>5</sup>アクセサーの作成時、またはエラーは DB_E_ERRORSOCCURRED、バインドの状態は DBBINDSTATUS_UNSUPPORTEDCONVERSION に設定をフェッチ時に、検証はで発生します。  
+ <sup>5</sup>アクセサーの作成時またはフェッチ時に検証が行われることがあります。エラー DB_E_ERRORSOCCURRED が返され、バインドの状態は DBBINDSTATUS_UNSUPPORTEDCONVERSION になります。  
   
  <sup>6</sup>BY_REF を使用できます。  
   
- 入力パラメーター、出力パラメーターまたは結果ではなく、DBTYPE_ および DBTYPE_EMPTY をバインドできます。 入力パラメーターにバインドした場合、状態を DBSTATUS_S_ISNULL または DBSTATUS_S_DEFAULT に設定する必要があります。  
+ DBTYPE_NULL と DBTYPE_EMPTY は入力パラメーターにバインドできますが、出力パラメーターや結果にはバインドできません。 入力パラメーターにバインドした場合、状態を DBSTATUS_S_ISNULL または DBSTATUS_S_DEFAULT に設定する必要があります。  
   
  DBTYPE_UDT 型は、DBTYPE_EMPTY と DBTYPE_NULL に変換できますが、DBTYPE_EMPTY と DBTYPE_NULL は DBTYPE_UDT に変換できません。 この動作は、DBTYPE_BYTES 型と一貫性があります。  
   
 > [!NOTE]  
->  Udt パラメーターとして処理するための新しいインターフェイスが使用される**ISSCommandWithParameters**から継承される**ICommandWithParameters**します。 アプリケーションでは、少なくとも UDT パラメーターの SSPROP_PARAM_UDT_NAME プロパティ セットの DBPROPSET_SQLSERVERPARAMETER プロパティの設定に、このインターフェイスを使用する必要があります。 これを行わない場合**icommand::execute** DB_E_ERRORSOCCURRED が返されます。 このインターフェイスとプロパティ セットについては、このトピックの後半で説明します。  
+>  UDT をパラメーターとして処理するための新しいインターフェイス **ISSCommandWithParameters** が導入されました。これは、**ICommandWithParameters** インターフェイスから継承されます。 アプリケーションでは、少なくとも UDT パラメーターの SSPROP_PARAM_UDT_NAME プロパティ セットの DBPROPSET_SQLSERVERPARAMETER プロパティの設定に、このインターフェイスを使用する必要があります。 これを行わないと、**ICommand::Execute** から DB_E_ERRORSOCCURRED が返されます。 このインターフェイスとプロパティ セットについては、このトピックの後半で説明します。  
   
- ユーザー定義型がそのすべてのデータを保持するのに十分な大きさでない列に挿入された場合**icommand::execute**状態が DB_E_ERRORSOCCURRED の S_OK を返します。  
+ データをすべて格納できる大きさがない列にユーザー定義型を挿入した場合、**ICommand::Execute** は状態が DB_E_ERRORSOCCURRED の S_OK を返します。  
   
- OLE DB core services で提供されるデータ変換 (**IDataConvert**) dbtype_udt 型には適用されません。 また、その他のバインドもサポートされません。  
+ OLE DB Core Services で提供されるデータ変換 (**IDataConvert**) は、DBTYPE_UDT 型には適用できません。 また、その他のバインドもサポートされません。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行セットに関する追加事項と変更事項  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、新しい値が追加され、多くの主要な OLE DB スキーマ行セットへの変更します。  
@@ -90,7 +90,7 @@ ms.locfileid: "37424791"
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
 |SS_UDT_NAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
-|SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|アセンブリ修飾名、型名と、CLR が参照するために必要なすべてのアセンブリ id が含まれます。|  
+|SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|型名と、CLR での参照に必要なすべてのアセンブリ ID を含むアセンブリ修飾名。|  
   
 #### <a name="the-sqlassemblies-schema-rowset"></a>SQL_ASSEMBLIES スキーマ行セット  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、新しいプロバイダー固有のスキーマ行セットを登録済み Udt を記述するを公開します。 ASSEMBLY_SERVER を DBTYPE_WSTR 型として指定することはできますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLIES スキーマ行セットの定義を示します。  
@@ -110,7 +110,7 @@ ms.locfileid: "37424791"
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|このデータ型を含むアセンブリのカタログ名。|  
-|ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはデータベースによって、スキーマではなく、所有者は、ここで反映されますがあります。|  
+|ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはスキーマではなくデータベースによって決まりますが、アセンブリには依然として所有者が存在します。|  
 |ASSEMBLY_ID|DBTYPE_UI4|アセンブリのオブジェクト ID。|  
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|参照されるアセンブリのオブジェクト ID。|  
   
@@ -155,7 +155,7 @@ ms.locfileid: "37424791"
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
-|SSPROP_COL_UDT_NAME|UDT_NAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT の 1 部構成の名前を指定する文字列です。 その他の列の型は、このプロパティは、空の文字列を返します。|  
+|SSPROP_COL_UDT_NAME|UDT_NAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT の 1 部構成の名前を指定する文字列です。 他の列の型の場合、このプロパティでは空文字列が返されます。|  
   
 > [!NOTE]  
 >  UDT は PROVIDER_TYPES スキーマ行セットには表示されません。 すべての列は読み取り/書き込みアクセスです。  
@@ -174,10 +174,10 @@ ms.locfileid: "37424791"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、新しい値が追加または多くの主要な OLE DB インターフェイスに変更します。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters インターフェイス  
- OLE DB を介して Udt をサポートする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、多数の変更の追加など、 **ISSCommandWithParameters**インターフェイス。 この新しいインターフェイスは、主要な OLE DB インターフェイスから継承**ICommandWithParameters**します。 継承した次の 3 つのメソッドだけでなく**ICommandWithParameters**;**GetParameterInfo**、 **MapParameterNames**、および**SetParameterInfo**;**ISSCommandWithParameters**提供、 **GetParameterProperties**と**SetParameterProperties**サーバー固有の処理に使用されるメソッドデータ型。  
+ OLE DB を介して Udt をサポートする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、多数の変更の追加など、 **ISSCommandWithParameters**インターフェイス。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 継承した次の 3 つのメソッドだけでなく**ICommandWithParameters**;**GetParameterInfo**、 **MapParameterNames**、および**SetParameterInfo**;**ISSCommandWithParameters**提供、 **GetParameterProperties**と**SetParameterProperties**サーバー固有の処理に使用されるメソッドデータ型。  
   
 > [!NOTE]  
->  **ISSCommandWithParameters**インターフェイスもは、新しい SSPARAMPROPS 構造体。  
+>  **ISSCommandWithParameters** インターフェイスでは、新しい SSPARAMPROPS 構造体も使用されます。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
  加え、 **ISSCommandWithParameters**インターフェイス、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、呼び出しから返される行セットに新しい値を追加することも、 **icolumnsrowset::getcolumnrowset**メソッド次のようにします。  

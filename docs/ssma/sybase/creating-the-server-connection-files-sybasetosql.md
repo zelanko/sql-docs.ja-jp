@@ -1,5 +1,5 @@
 ---
-title: サーバー接続ファイル (SybaseToSQL) |Microsoft ドキュメント
+title: サーバー接続ファイル (SybaseToSQL) の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 758d450a9e47605a05cb411d532babfaefe109e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c51bc4e86c14fa1f7f45818f8ca18f751c8cd892
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779298"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395113"
 ---
-# <a name="creating-the-server-connection-files-sybasetosql"></a>サーバー接続ファイル (SybaseToSQL) を作成します。
-スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバー情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターは、`-c <serverconnectionfile>`です。 サーバーと同じ id が、スクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
+# <a name="creating-the-server-connection-files-sybasetosql"></a>サーバー接続ファイルの作成 (SybaseToSQL)
+スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバーの情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターがで`-c <serverconnectionfile>`します。 同じサーバー id がスクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
   
 **例:**  
   
@@ -109,11 +109,11 @@ ms.locfileid: "34779298"
 ```  
   
 ## <a name="server-connection-file-validation"></a>サーバー接続ファイルの検証  
-ユーザーが、スキーマ定義ファイルに対する自分のサーバー接続ファイルを簡単に検証**S2SSConsoleScriptServersSchema.xsd** 'スキーマ' フォルダー内にあります。  
+ユーザーがスキーマ定義ファイルに対して自分のサーバー接続ファイルを簡単に検証できます**S2SSConsoleScriptServersSchema.xsd** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソールを実行する&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[SSMA コンソールの実行](executing-the-ssma-console-sybasetosql.md)  
   

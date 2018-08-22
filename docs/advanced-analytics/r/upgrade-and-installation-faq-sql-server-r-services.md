@@ -1,5 +1,5 @@
 ---
-title: SQL Server の Machine Learning のアップグレードとインストールに関する FAQ |Microsoft ドキュメント
+title: SQL Server Machine Learning のアップグレードとインストールに関する FAQ |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,46 +7,46 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 52ff43f13ff3f17f21ed96313d3134d8ee31dd86
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 695fd6a801b8b8846d297aa0695aa4ebc04e71e5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204214"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395265"
 ---
-# <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server の Machine Learning の R Server のアップグレードとインストールに関する FAQ
+# <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning の R Server のアップグレードとインストールに関する FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、機械学習の SQL Server 機能のインストールに関してよく寄せられる質問に対する回答を示します。 アップグレードに関する一般的な質問についても説明します。
+このトピックでは、machine learning の SQL Server 機能のインストールに関するよく寄せられる質問に対する回答を提供します。 アップグレードに関する一般的な質問についても説明します。
 
-+ いくつかの問題は、プレリリース版からアップグレードでのみ発生します。 したがって、するを識別するバージョンおよびエディション最初にこれらの注意事項を読み取る前にお勧めします。 バージョン情報を取得するには実行`@@VERSION`SQL Server Management Studio からのクエリにします。
-+ 最近のリリースで修正された問題を解決するには、最新のリリースまたはできるだけ早くのサービスのリリースにアップグレードします。
++ いくつかの問題は、プレリリース版からのアップグレードでのみ発生します。 そのため、ことをバージョンとエディションを識別最初にこれらの注意事項を読む前にお勧めします。 バージョン情報を取得するには実行`@@VERSION`SQL Server Management Studio からのクエリでします。
++ 最近のリリースで修正された問題を解決するのには、最新のリリースまたはできるだけ早くのサービス リリースにアップグレードします。
 
-**適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習の Services (In-database)
+**適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning Services (In-database)
 
-## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>要件と SQL Server 2016 の以前のバージョンの制限 
+## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>要件と SQL Server 2016 の以前のバージョンに関する制限事項 
 
-インストールする SQL Server のビルドによって、次の制限の一部は、次の場合がありますに適用。
+インストールする SQL Server のビルド、に応じて次の制限事項のいくつかの可能性があります適用されます。
 
-- 以前のバージョンの SQL Server 2016 の R Services では、8dot3 表記は、作業ディレクトリを含むドライブに必要でした。 プレリリース版をインストールした場合 SQL Server 2016 Service Pack 1 にアップグレードすると、この問題を解決する必要があります。 SP1 以降後は、この要件はリリースに適用されません。
+- 以前のバージョンの SQL Server 2016 R Services では、8dot3 表記が作業ディレクトリを含むドライブに必要でした。 リリース前のバージョンをインストールした場合は、SQL Server 2016 Service Pack 1 にアップグレードするとこの問題を解決する必要があります。 SP1 以降後は、この要件はリリースに適用されません。
 
-- R の別のバージョンまたは Revolution Analytics からの他のリリースとサイド バイ サイド インストールはサポートされていません。
+- R の別のバージョンまたは Revolution Analytics から他のリリースのサイド バイ サイドでインストールがサポートされていません。
 
-- セットアップを開始する前にウイルスを無効にします。 セットアップが完了したら、ことをお勧めウイルス スキャンが使用するフォルダーを中断[!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]です。 可能であれば、全体のスキャンを中断[!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]ツリー。
+- セットアップを開始する前にウィルス対策を無効にします。 ウイルス スキャンが使用するフォルダーの中断をお勧めのセットアップが完了すると、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]します。 可能であれば、全体のスキャンを中断[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]ツリー。
 
- - Windows Core にインストールされている SQL Server のインスタンスに Microsoft R Server をインストールします。 RTM バージョンの SQL Server 2016 でが既知の問題 Microsoft R Server を Windows Server Core エディションでインスタンスに追加するときにします。 この問題は修正されています。 この問題が発生した場合は、修正プログラムを適用することができます[プログラム KB3164398](https://support.microsoft.com/kb/3164398)を Windows Server Core 上の既存のインスタンスに R の機能を追加します。 詳細については、 [「Can't install Microsoft R Server Standalone on a Windows Server Core operating system」](https://support.microsoft.com/kb/3168691)(Windows Server Core オペレーティング システムに Microsoft R Server (スタンドアロン) をインストールすることはできません) を参照してください。
+ - Windows Core にインストールされている SQL Server のインスタンスには、Microsoft R Server をインストールします。 SQL Server 2016 の RTM バージョンであった既知の問題を Windows Server Core エディションにインスタンスに Microsoft R Server を追加するときにします。 この問題は修正されています。 この問題に遭遇した場合は、記載の修正プログラムを適用できます[KB3164398](https://support.microsoft.com/kb/3164398) Windows Server Core では、既存のインスタンスに R 機能を追加します。 詳細については、 [「Can't install Microsoft R Server Standalone on a Windows Server Core operating system」](https://support.microsoft.com/kb/3168691)(Windows Server Core オペレーティング システムに Microsoft R Server (スタンドアロン) をインストールすることはできません) を参照してください。
 
 
-## <a name="offline-installation-of-machine-learning-components-for-a-localized-version-of-sql-server-2016"></a>SQL Server 2016 のローカライズされたバージョンの machine learning コンポーネントのオフライン インストール
+## <a name="offline-installation-of-machine-learning-components-for-a-localized-version-of-sql-server-2016"></a>SQL Server 2016 のローカライズされたバージョンで machine learning コンポーネントのオフライン インストール
 
-SQL Server 2016 の初期リリース バージョンは、インターネットに接続せず、オフライン セットアップ時にロケール固有の .cab ファイルをインストールできませんでした。 この問題は、今後のリリースで修正されましたが、インストーラーには、適切な言語をインストールできないことを示すメッセージが返された場合は、セットアップを続行を許可するファイル名を編集できます。
+SQL Server 2016 の初期リリース バージョンは、インターネットに接続せずにオフラインのセットアップ中にロケール固有の .cab ファイルをインストールできませんでした。 この問題は今後のリリースで修正されましたが、インストーラーには、適切な言語をインストールできないことを示すメッセージが返された場合は、セットアップを続行を許可するファイル名を編集できます。
 
-+ 適切な言語がインストールされていることを確認するインストーラー ファイルを手動で編集します。 たとえば、日本語バージョンの SQL Server をインストールするには変更するファイルの名前 SRS_8.0.3.0_ から**1033**SRS_8.0.3.0_ に .cab**1041**.cab です。
-+ 機械学習のコンポーネントに使用される言語識別子には、SQL Server セットアップの言語と同じである必要がありますか、セットアップを完了することはできません。
++ 適切な言語がインストールされていることを確認するインストーラー ファイルを手動で編集するには。 たとえば、日本語バージョンの SQL Server をインストールするには変更するファイルの名前 srs_8.0.3.0_**1033**.cab SRS_8.0.3.0_ から**1041**.cab です。
++ Machine learning コンポーネントに使用される言語識別子には、SQL Server セットアップの言語と同じである必要があります。 またはセットアップを完了することはできません。
 
 ## <a name="pre-release-versions-support-policies-upgrade-and-known-issues"></a>プレリリース版: ポリシー、アップグレード、および既知の問題のサポート
 
-プレリリース バージョンの新規インストール[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]は現在サポートされていません。 リリース前のバージョンを使用している場合はできるだけ早くアップグレードします。
+プレリリース版の新規インストール[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]現在サポートされていません。 リリース前のバージョンを使用している場合、できるだけ早くにアップグレードします。
 
 このセクションには、特定のアップグレード シナリオの詳細な手順が含まれています。
 
@@ -57,14 +57,14 @@ SQL Server のバージョンをアップグレードするには、セットア
 + [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)
 + [インストール ウィザードを使用して SQL Server をアップグレードします。](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
-バインディングと呼ばれるプロセスを使用してコンポーネントを学習、マシンだけをアップグレードすることができます。 
-+ [Machine learning のコンポーネントをアップグレードする SqlBindR を使用します。](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+コンポーネントのバインドと呼ばれるプロセスを使用して学習マシンだけをアップグレードできます。 
++ [SqlBindR を使用して、machine learning コンポーネントをアップグレードするには](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>プレリリース バージョンからのインプレース アップグレードのサポートの終了
 
-SQL Server 2016 のプレリリース バージョンからのアップグレードがサポートされていません。 これには、SQL Server 2016 CTP3、CTP3.1、CTP3.2、RC0、または RC1 が含まれます。
+SQL Server 2016 のプレリリース バージョンからのアップグレードがサポートされていません。 これは、SQL Server 2016 CTP3、CTP3.1、CTP3.2、RC0、または RC1 に含まれます。
 
-次のバージョンは、SQL Server 2016 のプレリリース バージョンと共にインストールされました。
+次のバージョンは、SQL Server 2016 のプレリリース版と共にインストールされました。
 
 | バージョン | ビルド         |
 |---------|---------------|
@@ -76,15 +76,15 @@ SQL Server 2016 のプレリリース バージョンからのアップグレー
 | RC2     | 13.0.1300.275 |
 | RC3     | 13.0.1400.361 |
 
-バージョンを使用している疑いがある場合は、実行`@@VERSION`SQL Server Management Studio からのクエリにします。
+バージョンを使用している疑いがある場合は、実行`@@VERSION`SQL Server Management Studio からのクエリでします。
 
-一般に、アップグレードのプロセスのとおりです。
+一般に、アップグレード プロセスのとおりです。
 
 1. スクリプトとデータをバックアップします。
 2. プレリリース版をアンインストールします。
 3. リリース バージョンをインストールします。
 
-SQL Server のプレリリース版をアンインストールするマシン ラーニング コンポーネントは複雑になることができ、特別なスクリプトを実行する必要があります。 についてのテクニカル サポートに問い合わせてください。
+SQL Server のプレリリース バージョンをアンインストールする machine learning コンポーネントは複雑になることし、特別なスクリプトを実行する必要があります。 ご購入元に問い合わせてください。
 
 ###  <a name="bkmk_Uninstall"></a> Microsoft R Server の以前のバージョンからアップグレードする前にアンインストールします。
 
@@ -96,21 +96,21 @@ Microsoft R Server のプレリリース版がインストールされている�
   
 3.  **[機能の選択]** ページの **[共有機能]** で **[R Server (スタンドアロン)]** を選択します。 **[次へ]** をクリックし、**[完了]** をクリックして、選択したコンポーネントのみをアンインストールします。
 
-## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services と R Server (スタンドアロン) のサイド バイ サイドのエラー 
+## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services と R Server (スタンドアロン) のサイド バイ サイドでのエラー 
 
-SQL Server 2016 の以前のバージョンでも同時に R Server (スタンドアロン) と R Services (In-database) の両方をインストールすると、「アクセス拒否」メッセージで失敗するセットアップが発生します。 この問題は、SQL Server 2016 の Service Pack 1 で修正されました。
+SQL Server 2016 の以前のバージョンでセットアップが「アクセス拒否」メッセージで失敗する原因となったも同時に、R Server (スタンドアロン) と R Services (In-database) の両方をインストールします。 この問題は、SQL Server 2016 用 Service Pack 1 で修正されました。
 
-このエラーが発生しました、これらの機能をアップグレードする必要がある場合は、SQL Server 2016 sp1 のスリップ ストリーム インストールを実行します。 アンインストールと再インストールを必要とする、問題を解決するのには 2 つの方法ができます。
+、エラーが発生してこれらの機能をアップグレードする必要がある場合は、SQL Server 2016 SP1 のスリップ ストリーム インストールを実行します。 アンインストールして再インストールを必要とする、問題を解決するのには 2 つの方法はあります。
 
 1. R Services (In-database) をアンインストールし、SQLRUserGroup のユーザー アカウントが削除されたかどうかを確認します。
 
 2. サーバーを再起動し、R Server (スタンドアロン) を再インストールします。
 
-3. 実行の SQL Server セットアップの詳細を 1 回、この時間を選択**を既存の SQL Server の機能の追加**です。
+3. 実行の SQL Server セットアップの詳細を 1 回と、この時間を選択**を既存の SQL Server 機能の追加**します。
 
-4. インスタンスを選択してから、 **R Services (In-database)** を追加するオプションです。
+4. インスタンスを選択し、選択、 **R Services (In-database)** を追加するオプション。
 
-この手順は、問題を解決するのには失敗すると、次の回避策を試してください。
+この手順では、問題を解決するのには失敗した場合、次の回避策を試してください。
 
 1. 同時に、R Services (In-database) と R Server (スタンドアロン) をアンインストールします。
 
@@ -118,19 +118,19 @@ SQL Server 2016 の以前のバージョンでも同時に R Server (スタン�
 
 3. サーバーを再起動します。
 
-4. SQL Server セットアップを実行し、R Services (In-database) の機能のみを追加します。 選択しない**R Server (スタンドアロン)** です。
+4. SQL Server セットアップを実行し、R Services (In-database) の機能のみを追加します。 選択しない**R Server (スタンドアロン)** します。
 
-一般に、同じコンピューターに R Services (In-database) と R Server (スタンドアロン) の両方をインストールしないようにお勧めします。 ただし、サーバーを持っていれば、十分な容量、あります R Server のスタンドアロンの開発ツールとして役立ちます可能性。 もう 1 つの可能なシナリオに、R サーバーの操作運用の機能を使用するものデータ移動なしの SQL Server データにアクセスする必要があります。
+一般に、同じコンピューターに R Services (In-database) と R Server (スタンドアロン) の両方をインストールしないことお勧めします。 ただし、サーバーに十分な容量と仮定すると、ありますスタンドアロンの R Server 開発ツールとして便利な場合。 もう 1 つの考えられるシナリオは、R Server の運用化機能を使用して、データ移動することがなく SQL Server データにアクセスすることも必要です。
 
 ## <a name="incompatible-version-of-r-client-and-r-server"></a>R Client および R Server の互換性のないバージョン
 
-Microsoft R クライアントをインストール、使用して、リモート SQL Server のコンピューティング コンテキストで R を実行する場合は、次のようなエラーが発生した可能性があります。
+Microsoft R Client をインストールしてリモートの SQL Server 計算コンテキストで R を実行して、このようなエラーが発生した可能性があります。
 
-*Microsoft R Server 8.0.3 のバージョンの互換性がないコンピューターに 9.0.0 のバージョンの Microsoft R クライアントを実行しています。互換性のあるバージョンをダウンロードしてインストールしてください。*
+*Microsoft R server バージョン 8.0.3 と互換性がないコンピューターには、バージョン 9.0.0 の Microsoft R client を実行しています。互換性のあるバージョンをダウンロードしてインストールしてください。*
 
-SQL Server 2016 が必要な SQL Server R Services で実行されていた R のバージョンが Microsoft R クライアントでのライブラリと同じであること。 以降のバージョンで、その要件が削除されました。 ただし、常に、機械学習のコンポーネントの最新バージョンを取得してインストールするすべてのサービス パックお勧めします。 
+SQL Server 2016 では必要な SQL Server R Services で実行されていた R のバージョンが Microsoft R Client でのライブラリと同じであること。 以降のバージョンでその要件が削除されました。 ただし、常に、機械学習、コンポーネントの最新バージョンを取得してインストールするすべてのサービス パックお勧めします。 
 
-Microsoft R Server の以前のバージョンをした Microsoft R クライアント 9.0.0 との互換性を確保する必要がある場合は、この説明されている更新プログラムをインストール[サポートの記事](https://support.microsoft.com/kb/3210262)です。
+Microsoft R Server の以前のバージョンを Microsoft R Client 9.0.0 との互換性を確保する必要がある場合は、これで説明されている更新プログラムをインストール[サポート記事](https://support.microsoft.com/kb/3210262)します。
 
 
 ## <a name="installation-fails-with-error-only-one-revolution-enterprise-product-can-be-installed-at-a-time"></a>インストールに失敗し "Revolution Enterprise 製品は一度に 1 つしかインストールできません" というエラーが表示される
@@ -159,6 +159,6 @@ Microsoft R Server の以前のバージョンをした Microsoft R クライア
 
 ## <a name="see-also"></a>参照
 
- [SQL Server コンピューターのサービス (In-database) を学習](../r/sql-server-r-services.md)
+ [SQL Server Machine Learning Services (In-database)](../r/sql-server-r-services.md)
 
- [SQL Server コンピューターがサーバー (スタンドアロン) を学習](../r/r-server-standalone.md)
+ [SQL Server Machine Learning Server (スタンドアロン)](../r/r-server-standalone.md)

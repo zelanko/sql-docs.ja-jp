@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collection_set (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syscollector_create_collection_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cefec5de4c7bba8d2b184a202f5a21c4a25901c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e709e05834ed30701d2944547945ba439b8d418d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261611"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395357"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,36 +63,36 @@ sp_syscollector_create_collection_set
  [  **@name =** ] '*名前*'  
  コレクション セットの名前を指定します。 *名前*は**sysname**空の文字列または NULL にすることはできません。  
   
- *名前*一意である必要があります。 現在のコレクション セットの名前の一覧については、syscollector_collection_sets システム ビューにクエリを実行します。  
+ *名前*で一意である必要があります。 現在のコレクション セットの名前の一覧については、syscollector_collection_sets システム ビューにクエリを実行します。  
   
  [  **@target =** ] '*ターゲット*'  
- 将来の使用のために予約されています。 *名前*は**nvarchar (128)** で、既定値は NULL です。  
+ 将来使用するために予約されています。 *名前*は**nvarchar (128)** 既定値は NULL です。  
   
  [ **@collection_mode =** ] *collection_mode*  
- データを収集し、格納する方法を指定します。 *collection_mode*は**smallint**値は次のいずれかを持つことができます。  
+ データを収集し、格納する方法を指定します。 *collection_mode*は**smallint**値は次のいずれかを指定できます。  
   
  0 - キャッシュ モード。 データの収集とアップロードは個別のスケジュールに従います。 連続コレクションのキャッシュ モードを指定します。  
   
- 1 - 非キャッシュ モード。 データの収集とアップロードは、同じスケジュールでです。 アドホック コレクションまたはスナップショット コレクションの非キャッシュ モードを指定します。  
+ 1 - 非キャッシュ モード。 データの収集とアップロードは、同じスケジュールでは。 アドホック コレクションまたはスナップショット コレクションの非キャッシュ モードを指定します。  
   
- 既定値*collection_mode*は 0 です。 ときに*collection_mode* 0 の場合は、 *schedule_uid*または*schedule_name*指定する必要があります。  
+ 既定値*collection_mode*は 0 です。 ときに*collection_mode*は 0 です。 *schedule_uid*または*schedule_name*指定する必要があります。  
   
  [ **@days_until_expiration =** ] *days_until_expiration*  
  収集したデータを管理データ ウェアハウスに保管しておく日数です。 *days_until_expiration*は**smallint**で、既定値は 730 (2 年)。 *days_until_expiration* 0 または正の整数にする必要があります。  
   
  [ **@proxy_id =** ] *proxy_id*  
- 一意の識別子は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**で、既定値は NULL です。 指定した場合*proxy_name* NULL にする必要があります。 取得する*proxy_id*、sysproxies システム テーブルにクエリします。 dc_admin 固定データベース ロールには、プロキシにアクセスする権限が必要です。 詳細については、次を参照してください。 [SQL Server エージェント プロキシを作成する](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)です。  
+ 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**既定値は NULL です。 指定した場合*proxy_name* NULL にする必要があります。 取得する*proxy_id*、sysproxies システム テーブルをクエリします。 dc_admin 固定データベース ロールには、プロキシにアクセスする権限が必要です。 詳細については、次を参照してください。 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)です。  
   
  [  **@proxy_name =** ] '*proxy_name*'  
- プロキシ アカウントの名前です。 *proxy_name*は**sysname**で、既定値は NULL です。 指定した場合*proxy_id* NULL にする必要があります。 取得する*proxy_name*、sysproxies システム テーブルにクエリします。  
+ プロキシ アカウントの名前です。 *proxy_name*は**sysname**既定値は NULL です。 指定した場合*proxy_id* NULL にする必要があります。 取得する*proxy_name*、sysproxies システム テーブルをクエリします。  
   
  [  **@schedule_uid =** ] '*schedule_uid*'  
- スケジュールを参照する GUID です。 *schedule_uid*は**uniqueidentifier**で、既定値は NULL です。 指定した場合*schedule_name* NULL にする必要があります。 取得する*schedule_uid*、sysschedules システム テーブルにクエリします。  
+ スケジュールを参照する GUID です。 *schedule_uid*は**uniqueidentifier**既定値は NULL です。 指定した場合*schedule_name* NULL にする必要があります。 取得する*schedule_uid*、sysschedules システム テーブルをクエリします。  
   
  ときに*collection_mode*を 0 に設定されている*schedule_uid*または*schedule_name*指定する必要があります。 ときに*collection_mode*を 1 に設定されている*schedule_uid*または*schedule_name*指定されている場合は無視されます。  
   
  [  **@schedule_name =** ] '*schedule_name*'  
- スケジュールの名前です。 *schedule_name*は**sysname**で、既定値は NULL です。 指定した場合*schedule_uid* NULL にする必要があります。 取得する*schedule_name*、sysschedules システム テーブルにクエリします。  
+ スケジュールの名前です。 *schedule_name*は**sysname**既定値は NULL です。 指定した場合*schedule_uid* NULL にする必要があります。 取得する*schedule_name*、sysschedules システム テーブルをクエリします。  
   
  [ **@logging_level =** ] *logging_level*  
  ログ レベルです。 *logging_level*は**smallint**次の値のいずれかの。  
@@ -109,19 +109,19 @@ sp_syscollector_create_collection_set
   
 -   実行の統計  
   
--   コレクションの進行状況を継続的に実行します。  
+-   コレクションの進行状況を継続的に実行  
   
 -   警告イベント [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- 2 – レベル 1 ログに記録してから詳細なイベント情報 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+ 2-1 レベルのログ記録とから詳細なイベント情報 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  既定値*logging_level*は 1 です。  
   
  [  **@description =** ] '*説明*'  
- コレクション セットの説明です。 *説明*は**nvarchar (4000)** で、既定値は NULL です。  
+ コレクション セットの説明です。 *説明*は**nvarchar (4000)** 既定値は NULL です。  
   
  [ **@collection_set_id =** ] *collection_set_id*  
- コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**で出力が必要とします。  
+ コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**出力を含む必要があります。  
   
  [  **@collection_set_uid =** ] '*collection_set_uid*'  
  コレクション セットの場合は GUID です。 *collection_set_uid*は**uniqueidentifier**出力で、既定値は NULL です。  
@@ -129,16 +129,16 @@ sp_syscollector_create_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 既定値を使用してコレクション セットを作成する  
- 次の例では、必須パラメーターのみを指定してコレクション セットを作成します。 `@collection_mode` 必須ではありませんが (キャッシュ済み)、既定のコレクション モードは、スケジュール ID またはスケジュール名を指定する必要があります。  
+ 次の例では、必須パラメーターのみを指定してコレクション セットを作成します。 `@collection_mode` 必須ではありませんが (キャッシュ済み)、既定のコレクション モードは、スケジュール ID またはスケジュール名のいずれかを指定する必要があります。  
   
 ```  
 USE msdb;  
@@ -173,7 +173,7 @@ EXEC dbo.sp_syscollector_create_collection_set
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  

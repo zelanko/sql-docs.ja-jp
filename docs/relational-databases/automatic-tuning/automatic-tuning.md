@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556472"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394240"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "39556472"
 
 ## <a name="why-automatic-tuning"></a>なぜ自動チューニングでしょうか。
 
-従来のデータベース管理の主な作業の 1 つは、ワークロードを監視、重大を識別する[!INCLUDE[tsql_md](../../includes/tsql_md.md)]クエリ、インデックスのパフォーマンスを向上させるために追加する必要がありますし、ほとんどのインデックスを使用します。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] クエリおよび監視する必要のあるインデックスの詳細な洞察を提供します。 ただし、多数のデータベースを扱う場合は特に、ハード面倒なタスクがは常にデータベースを監視します。 膨大な数のデータベースを管理するは、効率的に実行することでない可能性があります。 監視と、データベースを手動でチューニング、代わりに委任する一部の監視とチューニング アクションを検討する可能性があります[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自動チューニング機能を使用します。
+従来のデータベース管理の主な作業の 1 つは、ワークロードを監視、重大を識別する[!INCLUDE[tsql_md](../../includes/tsql-md.md)]クエリ、インデックスのパフォーマンスを向上させるために追加する必要がありますし、ほとんどのインデックスを使用します。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] クエリおよび監視する必要のあるインデックスの詳細な洞察を提供します。 ただし、多数のデータベースを扱う場合は特に、ハード面倒なタスクがは常にデータベースを監視します。 膨大な数のデータベースを管理するは、効率的に実行することでない可能性があります。 監視と、データベースを手動でチューニング、代わりに委任する一部の監視とチューニング アクションを検討する可能性があります[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自動チューニング機能を使用します。
 
 ### <a name="how-does-automatic-tuning-works"></a>自動チューニングの動作のしくみですか。
 
@@ -58,7 +58,7 @@ ms.locfileid: "39556472"
 
 ### <a name="what-is-sql-plan-choice-regression"></a>SQL プラン選択の回帰とは何ですか。
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] さまざまな SQL プランを使用して実行することがあります、[!INCLUDE[tsql_md](../../includes/tsql_md.md)]クエリ。 クエリ プランは、統計、インデックス、およびその他の要因に依存します。 いくつかを実行するために使用する必要があります、最適なプラン[!INCLUDE[tsql_md](../../includes/tsql_md.md)]クエリは、時間の経過と共に変更可能性があります。 場合によっては、新しいプランを先ほどよりも優れていますできない可能性があり、新しいプラン、パフォーマンスの低下が発生する可能性があります。
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] さまざまな SQL プランを使用して実行することがあります、[!INCLUDE[tsql_md](../../includes/tsql-md.md)]クエリ。 クエリ プランは、統計、インデックス、およびその他の要因に依存します。 いくつかを実行するために使用する必要があります、最適なプラン[!INCLUDE[tsql_md](../../includes/tsql-md.md)]クエリは、時間の経過と共に変更可能性があります。 場合によっては、新しいプランを先ほどよりも優れていますできない可能性があり、新しいプラン、パフォーマンスの低下が発生する可能性があります。
 
  ![SQL プラン選択の回帰](media/plan-choice-regression.png "SQL プラン選択の回帰") 
 
@@ -94,7 +94,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] すべての必要なビューとパフォーマンスを監視し、クエリ ストアで問題を修正するために必要な手順を説明します。
 
-[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、クエリ ストアのシステム ビューを使用したプランの選択による後退を見つけることができます。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]を検出し、潜在的なプランの選択による後退とに適用される推奨される操作を示しています、 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)ビュー。 問題、機能低下したプランの ID、比較については、ベースラインとして使用されていたプランの ID は、識別されたクエリなどの詳細と、問題の重要性に関する情報を表示、[!INCLUDE[tsql_md](../../includes/tsql_md.md)]ステートメントを修正するために実行できますが、問題があります。
+[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、クエリ ストアのシステム ビューを使用したプランの選択による後退を見つけることができます。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]を検出し、潜在的なプランの選択による後退とに適用される推奨される操作を示しています、 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)ビュー。 問題、機能低下したプランの ID、比較については、ベースラインとして使用されていたプランの ID は、識別されたクエリなどの詳細と、問題の重要性に関する情報を表示、[!INCLUDE[tsql_md](../../includes/tsql-md.md)]ステートメントを修正するために実行できますが、問題があります。
 
 | type | description | DATETIME | score | 詳細情報 | … |
 | --- | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - なぜ情報を含む説明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]このプランの変更に、潜在的なパフォーマンスの低下があると認識します。
  - 日時を設定すると、潜在的な回帰が検出されました。
  - この推奨事項のスコア付けします。 
- - 検出されたプランを強制的に、問題を解決するプランの ID、後退したプランの ID の ID などの問題の詳細について[!INCLUDE[tsql_md](../../includes/tsql_md.md)]スクリプトなどの問題を修正するために適用可能性があります。詳細が格納されている[JSON 形式](../../relational-databases/json/index.md)します。
+ - 検出されたプランを強制的に、問題を解決するプランの ID、後退したプランの ID の ID などの問題の詳細について[!INCLUDE[tsql_md](../../includes/tsql-md.md)]スクリプトなどの問題を修正するために適用可能性があります。詳細が格納されている[JSON 形式](../../relational-databases/json/index.md)します。
 
 使用して、問題と、推定に関する追加情報を修正するスクリプトを入手する次のクエリが得られます。
 

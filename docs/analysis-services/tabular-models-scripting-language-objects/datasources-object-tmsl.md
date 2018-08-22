@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0a83ac3429a3012269a35c64ba5fdcbec18b2d4c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981334"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393954"
 ---
-# <a name="datasources-object-tmsl"></a>データ ソース オブジェクト (TMSL)
+# <a name="datasources-object-tmsl"></a>DataSources オブジェクト (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   モデルまたは DirectQuery モードを使用して、クエリ パスでは、データを追加するインポート中にいずれかのモデルで使用されるデータ ソースへの接続を定義します。  DirectQuery モードのモデルのいずれかができますのみ**DataSource**オブジェクト。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "38981334"
  DataSource の種類。 現時点では、唯一の有効な値は、プロバイダー (1) の通常の接続文字列です。  
   
  connectionString  
- 接続文字列を最小限のデータベースとサーバーを指定しますが、データ プロバイダーまたはユーザー アカウントなど、外部の RDBMS でサポートされるその他のプロパティを含めることもできます。 この値は必須です。 参照してください[SqlConnectionStringBuilder クラス](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx)詳細については、SQL Server データベースの接続文字列プロパティ。  
+ 接続文字列を最小限のデータベースとサーバーを指定しますが、データ プロバイダーまたはユーザー アカウントなど、外部の RDBMS でサポートされるその他のプロパティを含めることもできます。 この値は必須です。 参照してください[SqlConnectionStringBuilder クラス](/dotnet/framework/data/adonet/connection-string-syntax)詳細については、SQL Server データベースの接続文字列プロパティ。  
   
  impersonationMode  
  Analysis Services がクエリを要求するユーザーの id を偽装する必要があるかどうかを指定します。 このプロパティは、偽装に使用する資格情報を指定する数値です。 列挙値は次のとおりです。  

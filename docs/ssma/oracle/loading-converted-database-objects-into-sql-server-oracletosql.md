@@ -16,20 +16,20 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 31b7f6b63aadd36d9d933da27a817adea9aeb9ac
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b1e1f8d4efe504680b5b6fb5decc8497e6ec7844
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982274"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394988"
 ---
-# <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>SQL Server (OracleToSQL) へのデータベース オブジェクトの変換後の読み込み
+# <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (OracleToSQL)
 Oracle スキーマを SQL Server に変換した後は、SQL Server に結果のデータベース オブジェクトを読み込むことができます。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 また、SSMA には、SQL Server データベースの実際の内容で対象のメタデータを更新することができます。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>同期とスクリプトの選択  
-SQL Server に変更しなくても、変換後のデータベース オブジェクトを読み込む場合は、SSMA を直接作成またはデータベース オブジェクトを再作成してもかまいません。 メソッドは、簡単ですのカスタマイズは許可されません、[!INCLUDE[tsql](../../includes/tsql_md.md)]ストアド プロシージャ以外の SQL Server オブジェクトを定義するコードです。  
+SQL Server に変更しなくても、変換後のデータベース オブジェクトを読み込む場合は、SSMA を直接作成またはデータベース オブジェクトを再作成してもかまいません。 メソッドは、簡単ですのカスタマイズは許可されません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ以外の SQL Server オブジェクトを定義するコードです。  
   
-変更する場合、[!INCLUDE[tsql](../../includes/tsql_md.md)]オブジェクトを作成またはオブジェクトの作成より詳細に制御する場合は、SSMA を使用して、スクリプトを作成するに使用されます。 これらのスクリプトを変更し、個別に、各オブジェクトを作成しも SQL Server エージェントを使用して、それらのオブジェクトを作成するスケジュールを設定できます。  
+変更する場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]オブジェクトを作成またはオブジェクトの作成より詳細に制御する場合は、SSMA を使用して、スクリプトを作成するに使用されます。 これらのスクリプトを変更し、個別に、各オブジェクトを作成しも SQL Server エージェントを使用して、それらのオブジェクトを作成するスケジュールを設定できます。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>SSMA を使用して、SQL server オブジェクトを同期するには  
 SSMA を使用して SQL Server データベース オブジェクトを作成するには、SQL Server メタデータ エクスプ ローラーでオブジェクトを選択し、次の手順で示すように SQL server でのオブジェクトを同期します。 既定では、SSMA メタデータが、SQL Server 内のオブジェクトよりも新しい場合は、オブジェクトは、SQL Server で既に存在する場合、SSMA によって変わることで SQL Server オブジェクトの定義。 編集して、既定の動作を変更する**プロジェクト設定**します。  
@@ -64,7 +64,7 @@ SSMA を使用して SQL Server データベース オブジェクトを作成�
 状態を変更するアクションの記号をクリックします。 クリックすると、実際の同期が行われます**OK**のボタン、**データベースと同期する**ダイアログ。  
   
 ## <a name="scripting-objects"></a>オブジェクトのスクリプト作成  
-保存する[!INCLUDE[tsql](../../includes/tsql_md.md)]、変換後のデータベース オブジェクトのオブジェクトの定義を変更し、自分でスクリプトの実行にまたは定義を保存できます変換されたデータベース オブジェクトの定義[!INCLUDE[tsql](../../includes/tsql_md.md)]スクリプト。  
+保存する[!INCLUDE[tsql](../../includes/tsql-md.md)]、変換後のデータベース オブジェクトのオブジェクトの定義を変更し、自分でスクリプトの実行にまたは定義を保存できます変換されたデータベース オブジェクトの定義[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト。  
   
 **オブジェクトをスクリプトとして保存するには**  
   
@@ -75,11 +75,11 @@ SSMA を使用して SQL Server データベース オブジェクトを作成�
 2.  **名前を付けて保存** ダイアログ ボックスで、ファイルの名前を入力、スクリプトを保存フォルダーを探して、**ファイル名**ボックスし、順にクリックします ok の SSMA は、.sql というファイル名拡張子を追加します。  
   
 ### <a name="modifying-scripts"></a>スクリプトを変更します。  
-使用することができます、1 つ以上のスクリプトの SQL Server オブジェクトの定義を保存した後[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]を表示したり、スクリプトを変更します。  
+使用することができます、1 つ以上のスクリプトの SQL Server オブジェクトの定義を保存した後[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を表示したり、スクリプトを変更します。  
   
 **スクリプトを変更するには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **ファイル**メニューで、**オープン**、 をクリックし、**ファイル**。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **ファイル**メニューで、**オープン**、 をクリックし、**ファイル**。  
   
 2.  **オープン**ダイアログ ボックスでは、スクリプト ファイルを選択し、[ok] をクリックします。
   
@@ -90,11 +90,11 @@ SSMA を使用して SQL Server データベース オブジェクトを作成�
 4.  ファイル メニューの スクリプトを保存する**保存**します。  
   
 ### <a name="running-scripts"></a>スクリプトを実行します。  
-スクリプト、または個々 のステートメントを実行できる[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]します。  
+スクリプト、または個々 のステートメントを実行できる[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 **スクリプトを実行するには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **ファイル**メニューで、**オープン**、 をクリックし、**ファイル**。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **ファイル**メニューで、**オープン**、 をクリックし、**ファイル**。  
   
 2.  **オープン**ダイアログ ボックスで、スクリプト ファイルを選択して [ok] をクリックして  
   
@@ -102,7 +102,7 @@ SSMA を使用して SQL Server データベース オブジェクトを作成�
   
 4.  一連のステートメントを実行するクエリ エディター ウィンドウで、ステートメントを選択し、キーを押します、 **F5**キー。  
   
-クエリ エディターを使用してスクリプトを実行する方法の詳細については、次を参照してください。"[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)]クエリ"SQL Server オンライン ブックの「します。  
+クエリ エディターを使用してスクリプトを実行する方法の詳細については、次を参照してください。"[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ"SQL Server オンライン ブックの「します。  
   
 使用して、コマンドラインからスクリプトを実行することも、 **sqlcmd**ユーティリティ、および SQL Server エージェントから。 詳細については**sqlcmd**、SQL Server オンライン ブックの「"sqlcmd ユーティリティ"を参照してください。 SQL Server エージェントの詳細については、「管理タスクを自動化する (SQL Server エージェント)」で SQL Server オンライン ブックを参照してください。  
   
@@ -110,7 +110,7 @@ SSMA を使用して SQL Server データベース オブジェクトを作成�
 変換後のデータベース オブジェクトは、SQL Server に読み込まれるが後、を付与し、それらのオブジェクトに対する権限の拒否できます。 移行する前にそうことをお勧めする SQL Server のデータ。 SQL Server のセキュリティで保護されたオブジェクトを支援する方法については、「セキュリティの考慮事項のデータベースとデータベース アプリケーション」で SQL Server オンライン ブックを参照してください。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、[データを SQL Server に移行](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)します。  
+移行プロセスの次の手順が、[データを SQL Server に移行](migrating-oracle-data-into-sql-server-oracletosql.md)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

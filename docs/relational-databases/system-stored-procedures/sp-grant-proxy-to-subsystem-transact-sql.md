@@ -1,5 +1,5 @@
 ---
-title: sp_grant_proxy_to_subsystem (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_grant_proxy_to_subsystem (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a52e19c374c0b1ac14749e1e1bcc53f3a30d2b2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6c8764394ad12a3080a03970a252bfc5a7f56099
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262446"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395104"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ sp_grant_proxy_to_subsystem
 |**4**|レプリケーション スナップショット エージェント|  
 |**5**|レプリケーション ログ リーダー エージェント|  
 |**6**|レプリケーション ディストリビューション エージェント|  
-|**7**|レプリケーション マージ エージェント|  
-|**8**|レプリケーション キュー リーダー エージェント|  
+|**7**|Replication Merge Agent|  
+|**8**|Replication Queue Reader Agent|  
 |**9**|Analysis Services クエリ|  
 |"**10**"|Analysis Services コマンド|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
@@ -72,25 +72,25 @@ sp_grant_proxy_to_subsystem
  [  **@subsystem_name =** ] **'***subsystem_name***'**  
  アクセス権の対象となるサブシステムの名前を指定します。 **Subsystem_name**は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表は、各サブシステムの ID に指定できる値の一覧です。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX スクリプト|  
 |**CmdExec**|オペレーティング システム (**CmdExec**)|  
 |**スナップショット**|レプリケーション スナップショット エージェント|  
 |**LogReader**|レプリケーション ログ リーダー エージェント|  
 |**Distribution**|レプリケーション ディストリビューション エージェント|  
-|**Merge**|レプリケーション マージ エージェント|  
-|**QueueReader**|レプリケーション キュー リーダー エージェント|  
+|**Merge**|Replication Merge Agent|  
+|**QueueReader**|Replication Queue Reader Agent|  
 |**ANALYSISQUERY**|Analysis Services クエリ|  
 |**ANALYSISCOMMAND**|Analysis Services コマンド|  
 |**Dts**|SSIS パッケージ実行|  
 |**PowerShell**|PowerShell スクリプト|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  サブシステムへのアクセス権をプロキシに与えても、プロキシで指定されているプリンシパルに対する権限は変更されません。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_grant_proxy_to_subsystem**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_grant_proxy_to_subsystem**します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -121,7 +121,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェントのセキュリティを実装します。](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [SQL Server エージェントのセキュリティを実装します。](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_revoke_proxy_from_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   

@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f148f625a690a680709ac9466bc67e0909a5a3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7813bd9d7e5bb0fec74bbf9249755355765c3fd9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151383"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394143"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>論理アーキテクチャ (Analysis Services - 多次元データ)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーとクライアントの両方のコンポーネントを使用して、オンライン分析処理 (OLAP) およびビジネス インテリジェンス アプリケーション用のデータ マイニング機能を提供します。  
@@ -53,7 +53,7 @@ ms.locfileid: "37151383"
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
  **ユーザー アクセス セキュリティ**  
- [ユーザー アクセスのセキュリティ アーキテクチャ](https://msdn.microsoft.com/library/bb522595(SQL.120).aspx)  
+ [ユーザー アクセスのセキュリティ アーキテクチャ](understanding-microsoft-olap-logical-architecture.md)  
   
 ## <a name="see-also"></a>参照  
  [Microsoft OLAP アーキテクチャをについてください。](../olap-physical/understanding-microsoft-olap-architecture.md)   

@@ -1,11 +1,11 @@
 ---
-title: SQL Server Native Client ODBC ドライバー アプリケーションを作成する |Microsoft Docs
+title: SQL Server ネイティブ クライアント ODBC ドライバー アプリケーションを作成します。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,12 +26,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1912079b4bb85426a89517179ac7d79eadaf108
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 406ee95a3fac911c53fc6ad1e2c5cd50b579508b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412901"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394991"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>SQL Server Native Client ODBC ドライバー アプリケーションの作成
   ODBC アーキテクチャには、次の機能を実行する 4 つのコンポーネントがあります。  
@@ -43,7 +43,7 @@ ms.locfileid: "37412901"
 |Driver|アプリケーションからのすべての ODBC 関数呼び出しを処理し、データ ソースに接続して、SQL ステートメントをアプリケーションからデータ ソースに渡し、結果をアプリケーションに返します。 必要に応じて、アプリケーションの ODBC SQL をデータ ソースで使用されるネイティブ SQL に変換します。|  
 |データ ソース|DBMS 内にあるデータの特定のインスタンスにアクセスするためにドライバーが必要とするすべての情報が含まれています。|  
   
- 使用するアプリケーション、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのインスタンスとの通信に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は、次のタスクを実行します。  
+ 使用するアプリケーション、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスと通信するクライアントのネイティブの ODBC ドライバー[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]次のタスクを実行します。  
   
 -   データ ソースとの接続  
   
@@ -51,11 +51,11 @@ ms.locfileid: "37412901"
   
 -   データ ソースから返されたステートメント結果の処理  
   
--   プロセス エラーおよびメッセージ  
+-   プロセスのエラーとメッセージ  
   
 -   データ ソースへの接続の終了  
   
- 用に記述されたより複雑なアプリケーション、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次のタスクも実行可能性があります。  
+ 書かれてより複雑なアプリケーション、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは、次のタスクを実行も可能性があります。  
   
 -   カーソルを使用した結果セット内の位置の制御  
   
@@ -69,7 +69,7 @@ ms.locfileid: "37412901"
   
 -   一括コピー操作を実行します。  
   
--   大規模なデータの管理 (**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)** 列) の操作  
+-   大規模なデータの管理 (**では**、 **nvarchar(max)**、および**varbinary(max)** 列) の操作  
   
 -   データベース ミラーリングが構成されているときにフェールオーバーを容易にするための再接続ロジックの使用  
   
@@ -77,21 +77,21 @@ ms.locfileid: "37412901"
   
  ODBC 関数を呼び出すには、C または C++ アプリケーションで sql.h ヘッダー ファイル、sqlext.h ヘッダー ファイル、および sqltypes.h ヘッダー ファイルをインクルードする必要があります。 ODBC インストーラーの API 関数を呼び出す場合は、アプリケーションで odbcinst.h ヘッダー ファイルをインクルードする必要があります。 Unicode ODBC アプリケーションでは、sqlucode.h ヘッダー ファイルをインクルードする必要があります。 ODBC アプリケーションは、odbc32.lib ファイルとリンクする必要があります。 ODBC インストーラーの API 関数を呼び出す ODBC アプリケーションは、odbccp32.lib ファイルとリンクする必要があります。 これらのファイルは、Windows プラットフォーム SDK に含まれています。  
   
- など、多くの ODBC ドライバー、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー、ドライバー固有の ODBC 拡張機能を提供します。 活用するために[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー固有の拡張機能、アプリケーションは、sqlncli.h ヘッダー ファイルを含める必要があります。 このヘッダー ファイルには、次の要素が含まれています。  
+ など、多くの ODBC ドライバー、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーでは、ドライバー固有の ODBC 拡張機能を提供します。 利用する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーに固有の拡張機能、アプリケーションは、sqlncli.h のヘッダー ファイルを含める必要があります。 このヘッダー ファイルには、次の要素が含まれています。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の接続属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネイティブ クライアントの ODBC ドライバーに固有の接続の属性です。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有のステートメント属性  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネイティブ クライアントの ODBC ドライバーに固有のステートメントの属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の列の属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネイティブ クライアントの ODBC ドライバーを指定する列の属性。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有のデータ型  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有のユーザー定義データ型  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有[SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md)型。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネイティブ クライアントの ODBC ドライバーに対応した[SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md)型です。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの診断フィールド。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネイティブ クライアントの ODBC ドライバーの診断フィールドです。  
   
 -   診断に役立つ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の動的関数コード  
   
@@ -103,14 +103,14 @@ ms.locfileid: "37412901"
   
 -   リンク サーバーとリンク サーバーのカタログ一覧を取得するための分散クエリ メタデータ API 関数呼び出し  
   
- C または C++ ODBC の一括コピー機能を使用するアプリケーション、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、sqlncli11.lib ファイルとリンクする必要があります。 分散クエリ メタデータ API 関数を呼び出すアプリケーションも、sqlncli11.lib とリンクする必要があります。 Sqlncli.h と sqlncli11.lib ファイルは、の一部として配布される、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開発者用ツール。 次のように、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の Include ディレクトリはコンパイラの INCLUDE パスに、Lib ディレクトリは LIB パスに含める必要があります。  
+ 一括コピー機能を使用する C または C++ の ODBC アプリケーションの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは、sqlncli11.lib ファイルにリンクする必要があります。 分散クエリ メタデータ API 関数を呼び出すアプリケーションも、sqlncli11.lib とリンクする必要があります。 Sqlncli.h と sqlncli11.lib ファイルは、の一部として配布、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開発者向けのツールです。 次のように、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の Include ディレクトリはコンパイラの INCLUDE パスに、Lib ディレクトリは LIB パスに含める必要があります。  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- アプリケーションで複数の ODBC 呼び出しが同時に未処理状態になる必要があるかどうかというデザイン上の決定を、アプリケーションのビルド処理の初期段階で行います。 複数の同時実行 ODBC 呼び出しをサポートするには 2 つの方法があり、このセクションの残りのトピックで説明されています。 詳細については、次を参照してください。、 [ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45250)します。  
+ アプリケーションで複数の ODBC 呼び出しが同時に未処理状態になる必要があるかどうかというデザイン上の決定を、アプリケーションのビルド処理の初期段階で行います。 複数の同時実行 ODBC 呼び出しをサポートするには 2 つの方法があり、このセクションの残りのトピックで説明されています。 詳細についてを参照してください、 [ODBC プログラマーズ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

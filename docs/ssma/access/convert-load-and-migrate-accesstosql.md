@@ -1,5 +1,5 @@
 ---
-title: 変換、読み込み、および移行 (AccessToSQL) |Microsoft ドキュメント
+title: 変換、読み込み、および移行 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,25 +20,25 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 292a8dc91c5ebe19e2b835698c1310061d6377e3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5f49573fabc1c4012dea3bdb7d1ac25b0b316d06
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773298"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394547"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>変換、読み込み、および (AccessToSQL) の移行
-**変換、読み込み、および移行** ダイアログ ボックスが、変換、読み込み、および移行ボタンまたは移行ウィザードを使用する場合に、移行の状態を報告します。  
+**変換、読み込み、および移行** ダイアログ ボックスが、変換、読み込み、および移行のボタンまたは移行ウィザードを使用する場合に、移行の状態を報告します。  
   
-移行が完了したら、情報メッセージ、警告を表示でき、各セクションでリンクをクリックして、エラー メッセージします。 数のエラー、警告、および情報メッセージは「エラーなし、4 の警告です」など、使用可能なリンクを示しています  
+移行が完了したら後、は、各セクションでリンクをクリックして、エラー メッセージし、情報、警告を表示できます。 エラー、警告、および情報メッセージの数は、「エラーなし、4 の警告」など、使用可能なリンクを示しています  
   
 **選択したオブジェクトのデータを移行**ページのセクションにも含まれています、**レポート**ボタンをクリックします。 データ移行レポートを表示するには、このボタンをクリックすることができます。  
   
 ## <a name="options"></a>および  
 **レポート**  
-関連付けられている変換または移行レポートを表示します。  
+関連付けられている変換または移行レポートが表示されます。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
-[移行ウィザード](http://msdn.microsoft.com/en-us/5bab5914-b2ae-4795-8cf5-83e42d64bef2)  
+[ユーザー インターフェイスの Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[移行ウィザード](migration-wizard-accesstosql.md)  
   

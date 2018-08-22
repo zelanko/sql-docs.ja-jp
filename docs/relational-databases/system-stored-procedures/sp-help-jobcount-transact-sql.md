@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobcount (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_jobcount (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6165d86e2a086ef52e627451e613b021296082d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ff9c148455fd1e917b63ecae69a9bf977d69a280
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252950"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394989"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,14 +58,14 @@ sp_help_jobcount
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|指定されたスケジュールに対するジョブの数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロシージャでは、指定されたスケジュールにアタッチされたジョブの数が一覧表示されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -74,9 +74,9 @@ sp_help_jobcount
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーだけ**sysadmin**は他のユーザーによって所有されているジョブのカウントを表示できます。  
+ メンバーだけ**sysadmin**他のユーザーによって所有されているジョブの数を表示できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`NightlyJobs` スケジュールにアタッチされたジョブの数を一覧表示します。  

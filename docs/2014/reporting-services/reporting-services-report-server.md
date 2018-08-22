@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189839"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395076"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   このトピックでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールの中心となるコンポーネントである [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーの概要を説明します。 処理エンジンのペアと、認証、データ処理、表示、配信の各操作を行う用途別拡張機能の集合で構成されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport) 」セクションを参照してください。  
@@ -119,7 +119,7 @@ ms.locfileid: "37189839"
  サード パーティの開発者は、追加の拡張機能を作成して、レポート サーバーの処理能力を置き換えたり、拡張したりできます。 アプリケーション開発者が利用できるプログラマティック インターフェイスの詳細については、「 [テクニカル リファレンス](../../2014/reporting-services/technical-reference-ssrs.md)」を参照してください。  
   
 ###  <a name="bkmk_nativewithwebparts"></a> SharePoint Web パーツ対応ネイティブ モード  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インスタンスにインストールし、登録する 2 つの Web パーツを提供します。 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 以降、または[!INCLUDE[spPortalServ](../includes/spportalserv-md.md)]2003 またはそれ以降。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の前のリリースで導入されたものです。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インスタンスにインストールし、登録する 2 つの Web パーツを提供します。 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 以降、または SharePoint Portal Server 2003 またはそれ以降。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の前のリリースで導入されたものです。  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint モード  
  SharePoint モードでは、レポート サーバーが SharePoint サーバー ファーム内で実行される必要があります。 レポート サーバーの処理、レンダリング、および管理機能が実行されている SharePoint アプリケーション サーバーによって表される、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスと 1 つ以上[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。 レポート サーバーのコンテンツや操作へのフロントエンド アクセスを、SharePoint サイトが提供します。  

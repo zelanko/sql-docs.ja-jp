@@ -1,5 +1,5 @@
 ---
-title: SQL Server Migration Assistant for Access (AccessToSQL) をインストールする |Microsoft ドキュメント
+title: SQL Server Migration Assistant for Access (AccessToSQL) をインストールする |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -29,73 +29,73 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44df200b0b3f24ddcac48e42bfcc33df1b4a2a70
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dacd6634e57043ca53dfceb9bf3d793b35c90a47
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773668"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395794"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) をインストールします。
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) のアクセスは、Windows インストーラー ベースのウィザードを使用してインストールされます。 このトピックでは、インストール前提条件については、SSMA の最新バージョンへのリンクとインストール、ライセンス、アンインストール、および SSMA をアップグレードするための手順を提供します。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスは、Windows インストーラー ベースのウィザードを使用してインストールされます。 ここでは、インストールの前提条件についての情報、SSMA の最新バージョンへのリンクとインストール、ライセンス、アンインストール、および SSMA をアップグレードする方法について説明します。  
   
 ## <a name="prerequisites"></a>前提条件  
-SSMA をインストールする前に、システムが、次の要件を満たしていることを確認してください。  
+SSMA をインストールする前に、システムが、次の要件を満たしていることを確認します。  
   
--   Windows 7 以降のバージョンまたは Windows Server 2008 またはそれ以降のバージョン。  
+-   Windows 7 または以降のバージョンまたは Windows Server 2008 またはそれ以降のバージョン。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 以降。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 またはそれ以降のバージョン。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework バージョン 4.0 またはそれ以降のバージョン。 .NET Framework バージョン 4.0 で使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]製品ディスク、およびで情報を使用して、 [Microsoft .NET ガイド](https://docs.microsoft.com/dotnet/framework/)です。
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework バージョン 4.0 またはそれ以降のバージョン。 .NET Framework バージョン 4.0 で使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品ディスクとで情報を使用して、 [Microsoft .NET ガイド](https://docs.microsoft.com/dotnet/framework/)。
   
--   アクセスおよびのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure DB が移行される先があるデータベース オブジェクトとデータ。  
+-   アクセスとのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure DB に移行するデータベース オブジェクトとデータ。  
   
--   Microsoft データ アクセス オブジェクト (DAO) 12.0 または 14.0 プロバイダーのバージョン。 Microsoft Office 2010/2007 製品から DAO プロバイダーをインストールしたり、Microsoft web サイトからダウンロードできます。  
+-   Microsoft データ アクセス オブジェクト (DAO) プロバイダーのバージョン 12.0 または 14.0 です。 Microsoft Office 2010/2007 製品から DAO プロバイダーをインストールしたり、Microsoft web サイトからダウンロードできます。  
   
 -   SQL Server Native Access Client (SNAC) バージョン 10.5 以降の SQL Azure に移行します。 SNAC の最新バージョンを取得する[Microsoft® SQL Server® 2008 R2 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940)  
   
--   4 GB の RAM (推奨)。  
+-   4 GB RAM (推奨)。  
   
 ## <a name="installing-ssma"></a>SSMA のインストール  
-SSMA は Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](http://aka.ms/ssmaforaccess)です。  
+SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](http://aka.ms/ssmaforaccess)します。  
   
-最新バージョンをダウンロードした後は、SSMA をインストールする前のインストール ファイルを抽出する必要があります。
+最新バージョンをダウンロードした後は、SSMA をインストールする前からインストール ファイルを抽出する必要があります。
 
 > [!IMPORTANT]  
-> -   SSMA for Access の以前のバージョンをすべてを新しいバージョンをインストールする前にアンインストールしてください。  
+> -   SSMA for Access のすべての旧バージョンを新しいバージョンをインストールする前にアンインストールしてください。  
   
-**SSMA をインストールするには**  
+**SSMA のインストール**  
   
 1.  SSMA for Access をダブルクリックして*n*.msi、場所*n*ビルド番号です。  
   
-2.  [ようこそ] ページで、をクリックして**次**です。  
+2.  [ようこそ] ページで、次のようにクリックします。**次**します。  
   
-    インストールの前提条件がない、必要なコンポーネントをインストールする必要があります最初を示すメッセージが表示されます。 すべての前提条件がインストールされているし、インストール プログラムをもう一度実行していることを確認してください。  
+    前提条件のインストールがない、必要なコンポーネントをインストールする必要がありますまずことを示すメッセージが表示されます。 すべての前提条件をインストールし、インストール プログラムをもう一度実行してください。  
   
-3.  読み取り、使用許諾契約書です。同意する場合は、選択**同意**、順にクリック **[次へ]** です。  
+3.  使用許諾契約書に; の読み取り同意する場合は、選択**契約書に同意**、順にクリックします**次**します。  
   
-4.  セットアップの種類の選択 ページで、をクリックして**標準**です。  
+4.  セットアップの種類の選択 ページで、次のようにクリックします。**標準**します。  
   
 5.  **[インストール]** をクリックします。  
   
 既定のインストール場所は C:\Program files \microsoft SQL Server Migration Assistant for Access です。  
   
 ## <a name="uninstalling-ssma-for-access"></a>アンインストールの SSMA for Access  
-SSMA を使用してアンインストール**プログラム追加と削除**コントロール パネルの します。 プログラムのアンインストールはありません SSMA プロジェクト ファイルを削除するファイルまたはログ ファイルに注意してください。  
+SSMA を使用してアンインストール**プログラム追加と削除**コントロール パネルの します。 あるプログラムをアンインストールする SSMA プロジェクト ファイルを削除またはしませんログ ファイルを認識します。  
   
 **SSMA をアンインストールするには**  
   
-1.  をクリックして**開始**、] をクリックして**コントロール パネルの [**、順にクリック**プログラム追加と削除**です。  
+1.  クリックして**開始**、] をクリックして**コントロール パネルの [**、順にクリックします**プログラム追加と削除**します。  
   
-2.  選択**Microsoft SQL Server Migration Assistant for Access**、クリックして**削除**です。  
+2.  選択**Microsoft SQL Server Migration Assistant for Access**、 をクリックし、**削除**します。  
   
 ## <a name="upgrading-to-a-later-version"></a>以降のバージョンにアップグレードします。  
-SSMA for Access の以降のバージョンにアップグレードする場合は、まず SSMA for Access をアンインストールして、新しいバージョンをインストールします。 アンインストールする SSMA でこのプロセスを完了するアクセス セクションの手順に従います。  
+SSMA for Access の以降のバージョンにアップグレードする場合は、SSMA for Access をアンインストールし、新しいバージョンをインストールする必要があります。 アンインストール SSMA のこのプロセスを完了するアクセス セクションの指示に従います。  
   
-SSMA for Access の以前のバージョンで作成されたプロジェクトを開くと、SSMA は、プロジェクトを新しいバージョンに変換するかどうかを確認します。 をクリックして**はい**SSMA の新しいバージョンでプロジェクトを使用します。  
+SSMA for Access の以前のバージョンで作成したプロジェクトを開くには、SSMA は、プロジェクトを新しいバージョンに変換するかどうかを要求します。 クリックして**はい**SSMA の新しいバージョンでプロジェクトを使用します。  
   
 ## <a name="see-also"></a>参照  
-[Access データベースの移行の準備](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
-[SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[SQL Server へのリンクの Access アプリケーション](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
+[Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)  
+[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[SQL Server への Access アプリケーションのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   

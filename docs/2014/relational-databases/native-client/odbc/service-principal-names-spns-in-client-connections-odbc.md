@@ -1,11 +1,11 @@
 ---
-title: クライアント接続 (ODBC) でサービス プリンシパル名 (Spn) |Microsoft Docs
+title: クライアント接続 (ODBC) でのサービス プリンシパル名 (Spn)。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
@@ -13,15 +13,15 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92231cca501a2b1d79a3c4a2cdbf15f1310af904
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8b89902c1949252c18d08c441e1e7ce1ba5a4e31
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422997"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394153"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>クライアント接続におけるサービス プリンシパル名 (SPN) (ODBC)
-  ここでは、クライアント アプリケーションのサービス プリンシパル名 (SPN) をサポートする ODBC 属性および関数について説明します。 クライアント アプリケーションでの Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../features/service-principal-name-spn-support-in-client-connections.md)と[Kerberos 相互認証の取得](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md)します。  
+  ここでは、クライアント アプリケーションのサービス プリンシパル名 (SPN) をサポートする ODBC 属性および関数について説明します。 クライアント アプリケーションでの Spn の詳細についてを参照してください[サービス プリンシパル名&#40;SPN&#41;のクライアント接続のサポート](../features/service-principal-name-spn-support-in-client-connections.md)と[相互の Kerberos 認証を取得する](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md)。  
   
 ## <a name="connection-string-keywords"></a>接続文字列キーワード  
  次の接続文字列キーワードを使用すると、クライアント アプリケーションは SPN を指定できます。  

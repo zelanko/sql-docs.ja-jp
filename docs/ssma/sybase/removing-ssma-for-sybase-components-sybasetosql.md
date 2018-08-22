@@ -1,5 +1,5 @@
 ---
-title: Sybase コンポーネント (SybaseToSQL) に対して SSMA を削除する |Microsoft ドキュメント
+title: SSMA for Sybase コンポーネント (SybaseToSQL) の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,51 +16,51 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f5a9434f0fbaab5188a275af279626832df528b6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6e676ff9adb8d098cf795d7599788bcfa3d0f515
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779313"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394935"
 ---
-# <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Sybase コンポーネント (SybaseToSQL) に対して SSMA を削除します。
-終了したらデータベースから Sybase Adaptive Server Enterprise (ASE) への移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA コンポーネントをアンインストールする場合があります。 いつでも、クライアント コンポーネントをアンインストールすることができますが、拡張機能パックからをアンインストールしないでください[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ない場合は、移行されたデータベースが不要になったで関数を使用していることを確認して、 **ssma_syb**のスキーマ、 **sysdb**データベース。  
+# <a name="removing-ssma-for-sybase-components-sybasetosql"></a>SSMA for Sybase コンポーネントの削除 (SybaseToSQL)
+終了したらデータベースを移行してから Sybase Adaptive Server Enterprise (ASE) に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA コンポーネントをアンインストールしたい場合があります。 いつでも、クライアント コンポーネントをアンインストールすることができますから拡張機能パックをアンインストールしないでください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、移行されたデータベース内の関数を使用できなくする場合を除き、 **ssma_syb** のスキーマ**sysdb**データベース。  
   
-## <a name="uninstalling-the-ssma-for-sybase-client"></a>Sybase クライアントの SSMA をアンインストールしています  
-SSMA をアンインストールするを使用**プログラム追加と削除**です。  
+## <a name="uninstalling-the-ssma-for-sybase-client"></a>Sybase クライアント用の SSMA のアンインストール  
+SSMA をアンインストールするにを使用して**プログラム追加と削除**します。  
   
 **SSMA をアンインストールするには**  
   
-1.  コントロール パネルで、開く**プログラム追加と削除**です。  
+1.  コントロール パネルで、開く**プログラム追加と削除**します。  
   
-2.  選択**Microsoft SQL Server Migration Assistant for Sybase**、クリックして**削除**です。  
+2.  選択**Microsoft SQL Server Migration Assistant for Sybase**、 をクリックし、**削除**します。  
   
-3.  SSMA をアンインストールすることを確認する をクリックして**はい**です。  
+3.  SSMA をアンインストールすることを確認するには、次のようにクリックします。**はい**します。  
   
 ## <a name="uninstalling-the-extension-pack"></a>拡張機能パックをアンインストールします。  
-移行したデータベースが内のオブジェクトを使用しないことを確認する場合は、 **sysdb.ssma_syb**スキーマを使用して、拡張機能パックを削除することができます**プログラム追加と削除**です。  
+データベースを移行は、内のオブジェクトを使用しない場合は、確認、 **sysdb.ssma_syb**スキーマ、拡張機能パックを削除するを使用**プログラム追加と削除**します。  
   
 拡張機能パックをアンインストールするには  
   
-1.  コントロール パネルで、開く**プログラム追加と削除**です。  
+1.  コントロール パネルで、開く**プログラム追加と削除**します。  
   
-2.  選択**Microsoft SQL Server Migration Assistant for Sybase 拡張機能パック**、クリックして**削除**です。  
+2.  選択**Microsoft SQL Server Migration Assistant for Sybase 拡張パック**、 をクリックし、**削除**します。  
   
-3.  拡張機能パックをアンインストールすることを確認する をクリックして**はい**です。  
+3.  拡張機能パックをアンインストールすることを確認するには、次のようにクリックします。**はい**します。  
   
-4.  ユーティリティのデータベースのスクリプト ページで、インスタンスで次のようにクリックします。**次**です。  
+4.  ユーティリティのデータベースのスクリプト ページで、インスタンスで次のようにクリックします。**次**します。  
   
-5.  接続パラメーター ページで、認証方法を選択し、をクリックして**次**です。  
+5.  接続パラメーター ページで、認証方式を選択し、クリックして**次**します。  
   
-    Windows 認証は SQL Server のインスタンスにログオンしようとするのに Windows 資格情報を使用します。 SQL Server 認証を選択した場合は、SQL Server ログイン名とパスワードを入力する必要があります。  
+    Windows 認証は SQL Server のインスタンスにログオンしようとするのに Windows 資格情報を使用します。 SQL Server 認証を選択した場合、SQL Server ログイン名とパスワードを入力する必要があります。  
   
-6.  操作の完了 ページで、 **OK**です。  
+6.  操作の完了 ページで、 **OK**します。  
   
-7.  [完了] ページで、をクリックして**終了**です。  
+7.  [完了] ページで、次のようにクリックします。**終了**します。  
   
-をアンインストールした後できることを確認して、 **sysdb.ssma_syb**スキーマ、および場合によっては、全体**sysdb**データベースを使用して、が取り外されて[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]です。 ただし、他の SSMA 製品を使用する場合も使用、 **sysdb**データベース。 場合は、データベースが存在し、他のデータベースにはこのデータベース内のオブジェクトが参照されていないことを確認して、データベースをデタッチすることができます。  
+をアンインストールした後、ことを確認できる、 **sysdb.ssma_syb**スキーマ、および場合によっては、全体**sysdb**データベース、を使用して削除されました[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 ただし、他の SSMA 製品を使用する場合も使用、 **sysdb**データベース。 場合は、データベースが存在し、他のデータベースにこのデータベース内のオブジェクトが参照されていないことを確認したら、データベースをデタッチすることができます。  
   
 ## <a name="see-also"></a>参照  
-[SSMA の Sybase クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[SSMA コンポーネントを SQL Server インストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[SSMA for Sybase クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
   
