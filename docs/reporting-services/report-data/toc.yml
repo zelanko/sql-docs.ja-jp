@@ -70,8 +70,6 @@ items:
   href: store-credentials-in-a-reporting-services-data-source.md
 - name: レポート データ ソース内の資格情報を SharePoint サイトから更新する
   href: update-credentials-in-report-data-sources-from-a-sharepoint-site.md
-- name: '[データ ソースの資格情報の入力] ダイアログ ボックス'
-  href: enter-data-source-credentials-dialog-box-report-builder.md
 - name: カスタム データ処理拡張機能の接続を指定する
   href: specify-connections-for-custom-data-processing-extensions.md
 - name: レポートまたはモデルを共有データ ソースにバインドする
@@ -140,9 +138,9 @@ items:
     href: dataset-properties-dialog-box-query-report-builder.md
   - name: レポート埋め込みデータセットと共有データセット
     href: report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
-ms.openlocfilehash: 6bbd47205998e0b16b44f4e98cfe6d02718713bb
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: c39c31507d2f09585fac426cf6f864516853359b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40427368"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432454"
