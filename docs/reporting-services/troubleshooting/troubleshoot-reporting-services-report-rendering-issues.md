@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e98809ab3981cc1af2482ef518be3ddfc639a574
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047124"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "40409513"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services のレポート レンダリングの問題のトラブルシューティング
 レポートのデータとレイアウトの情報が結合されると、コンパイルされたレポートがレポート レンダラーに送信されます。 たとえば、レポートをローカルでプレビューする場合、HTML レンダラーを使用してコンパイル済みのレポートが表示されます。 このトピックでは、レポートの表示に固有の問題のトラブルシューティングを行います。   
@@ -78,5 +78,5 @@ Reporting Services には、レポートの最後にある空白を保持する�
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
