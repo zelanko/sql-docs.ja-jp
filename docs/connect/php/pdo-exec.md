@@ -57,7 +57,7 @@ PDO::exec の動作に影響する属性は次のとおりです。
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  
-この例では、Table1 の col1 に 'xxxyy' がある行を削除します。 次いで例では削除した行数を報告します。  
+この例では、Table1 の col1 に 'xxxyy' がある行を削除します。 次に、削除された行数を表示します。
   
 ```  
 <?php  
