@@ -1,7 +1,6 @@
+items:
 - name: SQL Server のツールとユーティリティの概要
   href: ../tools/overview-sql-tools.md
-- name: 新規および更新のアーティクル
-  href: new-updated-tools.md
 - name: SQL Operations Studio (プレビュー)
   href: ../sql-operations-studio/what-is.md
 - name: SQL Server Management Studio (SSMS)
@@ -25,35 +24,41 @@
 - name: コマンド プロンプト ユーティリティ
   href: command-prompt-utility-reference-database-engine.md
   items:
-    - name: 一括コピー ユーティリティ (bcp)
-      href: bcp-utility.md
-    - name: SqlLocalDB ユーティリティ
-      href: sqllocaldb-utility.md
-    - name: osql ユーティリティ
-      href: osql-utility.md
-    - name: profiler ユーティリティ
-      href: profiler-utility.md
-    - name: sqlagent90 アプリケーション
-      href: sqlagent90-application.md
-    - name: sqlcmd Utility
-      href: sqlcmd-utility.md
-    - name: SQLdiag ユーティリティ
-      href: sqldiag-utility.md
-    - name: sqlmaint ユーティリティ
-      href: sqlmaint-utility.md
-    - name: sqllogship アプリケーション
-      href: sqllogship-application.md
-    - name: sqlps ユーティリティ
-      href: sqlps-utility.md
-    - name: sqlservr アプリケーション
-      href: sqlservr-application.md
-    - name: tablediff ユーティリティ
-      href: tablediff-utility.md
+  - name: 一括コピー ユーティリティ (bcp)
+    href: bcp-utility.md
+  - name: SqlLocalDB ユーティリティ
+    href: sqllocaldb-utility.md
+  - name: osql ユーティリティ
+    href: osql-utility.md
+  - name: profiler ユーティリティ
+    href: profiler-utility.md
+  - name: sqlagent90 アプリケーション
+    href: sqlagent90-application.md
+  - name: sqlcmd Utility
+    href: sqlcmd-utility.md
+  - name: SQLdiag ユーティリティ
+    href: sqldiag-utility.md
+  - name: sqlmaint ユーティリティ
+    href: sqlmaint-utility.md
+  - name: sqllogship アプリケーション
+    href: sqllogship-application.md
+  - name: sqlps ユーティリティ
+    href: sqlps-utility.md
+  - name: sqlservr アプリケーション
+    href: sqlservr-application.md
+  - name: tablediff ユーティリティ
+    href: tablediff-utility.md
 - name: sqlpackage
   items:
-    - name: sqlpackage のインストール
-      href: sqlpackage-download.md
-    - name: リリース ノート
-      href: sqlpackage-release-notes.md
-    - name: sqlpackage ref
-      href: sqlpackage.md
+  - name: sqlpackage のインストール
+    href: sqlpackage-download.md
+  - name: リリース ノート
+    href: sqlpackage-release-notes.md
+  - name: sqlpackage ref
+    href: sqlpackage.md
+ms.openlocfilehash: 9d141d9c690b017185f7cfd790fbf9b009ecf1e5
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899552"

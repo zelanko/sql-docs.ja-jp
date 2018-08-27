@@ -1,16 +1,15 @@
+items:
 - name: SSMS とは
   href: sql-server-management-studio-ssms.md
 - name: SSMS のダウンロード
   href: download-sql-server-management-studio-ssms.md
   items:
-    - name: SSMS の変更ログと以前のリリース
-      href: sql-server-management-studio-changelog-ssms.md
-    - name: リリース ノート
-      href: 'download-sql-server-management-studio-ssms.md#release-notes'
-    - name: 英語以外の SSMS のインストール
-      href: install-other-languages.md
-    - name: 新規および更新のアーティクル
-      href: new-updated-ssms.md
+  - name: SSMS の変更ログと以前のリリース
+    href: sql-server-management-studio-changelog-ssms.md
+  - name: リリース ノート
+    href: download-sql-server-management-studio-ssms.md#release-notes
+  - name: 英語以外の SSMS のインストール
+    href: install-other-languages.md
 - name: SQL Server PowerShell モジュールのインストール
   href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
 - name: SQL Server エージェント +
@@ -55,7 +54,7 @@
   href: the-sql-server-management-studio-environment.md
 - name: SSMS のプロパティ ページ
   href: property-pages-in-sql-server-management-studio.md
-- name: 'SSMS の [プロパティ] ウィンドウ'
+- name: SSMS の [プロパティ] ウィンドウ
   href: properties-window-management-studio.md
 - name: SSMS の出力ウィンドウ
   href: output-window.md
@@ -81,3 +80,9 @@
   href: sql-server-management-studio-keyboard-shortcuts.md
 - name: 匿名の利用状況データ
   href: sql-server-management-studio-telemetry-ssms.md
+ms.openlocfilehash: 82996fe6b504a872c7eba7f662e30519400f3c1e
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899691"

@@ -47,7 +47,7 @@ ms.locfileid: "39560752"
  XPath が 3 つのデータ型:**文字列**、**数**、および**ブール**します。 **数**データ型は、IEEE 754 倍精度浮動小数点では常にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float (53)** データ型が XPath に最も近い**数**します。 ただし、 **float (53)** IEEE 754 ではありません。 たとえば、非数 (NaN) も無限大も使用されません。 数値以外の文字列を変換しようとしています。**数**エラー 0 個の結果で除算しようとします。  
   
 ## <a name="xpath-conversions"></a>XPath 変換  
- `OrderDetail[@UnitPrice > "10.0"]` などの XPath クエリを使用する場合は、データ型の変換を暗黙的に行うか明示的に行うかによって、クエリの意味が微妙に変わります。 このため、XPath データ型の実装方法について理解しておくことが重要です。 XML パス言語 (XPath) version 1.0 W3C XPath 言語仕様の W3C Web サイトで 8 1999 年 10 月の推奨事項を提示するを参照してhttp://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ `OrderDetail[@UnitPrice > "10.0"]` などの XPath クエリを使用する場合は、データ型の変換を暗黙的に行うか明示的に行うかによって、クエリの意味が微妙に変わります。 このため、XPath データ型の実装方法について理解しておくことが重要です。 XML パス言語 (XPath) version 1.0 W3C XPath 言語仕様の W3C Web サイトで 8 1999 年 10 月の推奨事項を提示するを参照して http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath の演算子は、次の 4 つのカテゴリに分けられます。  
   

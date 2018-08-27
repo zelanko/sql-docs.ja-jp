@@ -65,7 +65,7 @@ ms.locfileid: "37265658"
 ## <a name="namespace-and-schema"></a>名前空間とスキーマ  
   
 ### <a name="namespace"></a>Namespace  
- この仕様で定義されたスキーマが XML 名前空間を使用してhttp://schemas.microsoft.com/AnalysisServices/2003/Engineと標準の省略形"DDL"にします。  
+ この仕様で定義されたスキーマが XML 名前空間を使用して http://schemas.microsoft.com/AnalysisServices/2003/Engine と標準の省略形"DDL"にします。  
   
 ### <a name="schema"></a>スキーマ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義言語の XML Schema Definition Language (XSD) スキーマの定義は、このセクションのスキーマ要素および階層の定義に基づいています。  

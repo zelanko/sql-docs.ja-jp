@@ -128,7 +128,7 @@ ms.locfileid: "37277078"
   
      バックアップ データベースが異常終了しています。  
   
--   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイスhttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
+-   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイス http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
   
  トレース フラグ 3051 を使用して詳細ログを有効にすると、ログに次のメッセージが表示される場合もあります。  
   
