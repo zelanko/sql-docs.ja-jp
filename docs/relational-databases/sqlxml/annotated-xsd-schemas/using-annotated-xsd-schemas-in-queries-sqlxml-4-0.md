@@ -125,7 +125,7 @@ ms.locfileid: "39551602"
   
  テンプレートでは、インライン スキーマを指定するときに、 **sql: はマッピング スキーマ**注釈はでも指定する必要があります、  **\<xsd:schema >** 要素。 **Sql: はマッピング スキーマ**はブール値 (0 = false、1 = true)。 インライン スキーマ**sql: はマッピング スキーマ =「1」** はインライン注釈付きスキーマとして扱われ、XML ドキュメントでは返されません。  
   
- **Sql: はマッピング スキーマ**注釈は、テンプレートの名前空間に属する**urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-sql**します。  
+ **Sql: はマッピング スキーマ**注釈は、テンプレートの名前空間に属する **urn:schemas-microsoft-com:xml-sql** します。  
   
  この例をテストするには、テンプレート (InlineSchemaTemplate.xml) をローカルのディレクトリに保存した後、SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   

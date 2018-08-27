@@ -47,7 +47,7 @@ ms.locfileid: "39561986"
 >  このドキュメントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるテンプレートとマッピング スキーマについて理解していることを前提としています。 詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)します。 XDR を使用する従来のアプリケーションでは、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)します。  
   
 ## <a name="required-namespaces-in-the-updategram"></a>アップデートグラムで必要な名前空間  
- アップデート グラムでは、キーワードなど**\<同期 >**、 **\<する前に >**、および**\<後 >**、内に存在**urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'、アップデート グラム**名前空間。 名前空間プレフィックスは、任意のものを使用できます。 このドキュメントで、 **updg**プレフィックスを示します、**アップデート グラム**名前空間。  
+ アップデート グラムでは、キーワードなど**\<同期 >**、 **\<する前に >**、および**\<後 >**、内に存在 **urn:schemas-microsoft-com:xml-updategram** 名前空間。 名前空間プレフィックスは、任意のものを使用できます。 このドキュメントで、 **updg**プレフィックスを示します、**アップデート グラム**名前空間。  
   
 ## <a name="reviewing-syntax"></a>構文の確認  
  アップデート グラムはテンプレートを**\<同期 >**、 **\<する前に >**、および**\<後 >** ブロックの構文を形成する、アップデート グラムです。 次のコードは、最も単純な構文です。  
