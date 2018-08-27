@@ -103,7 +103,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 このビューから一部の列は、次の一覧について説明します。
  - -推奨されるアクションの種類`FORCE_LAST_GOOD_PLAN`します。
- - なぜ情報を含む説明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]このプランの変更に、潜在的なパフォーマンスの低下があると認識します。
+ - [!INCLUDE[ssde_md](../../includes/ssde_md.md)]が、このプランの変更に潜在的なパフォーマンスの低下があると認識する理由を含む説明。
  - 日時を設定すると、潜在的な回帰が検出されました。
  - この推奨事項のスコア付けします。 
  - 検出されたプランを強制的に、問題を解決するプランの ID、後退したプランの ID の ID などの問題の詳細について[!INCLUDE[tsql_md](../../includes/tsql-md.md)]スクリプトなどの問題を修正するために適用可能性があります。詳細が格納されている[JSON 形式](../../relational-databases/json/index.md)します。
