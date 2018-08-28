@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 801281b337586d298af8bd8b2dbe42b22be2d3d5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969284"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406751"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>アクセス許可: GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ REVOKE
  暗黙のアクセス許可は、包含または親のアクセス許可からも継承できます。 たとえば、テーブルの **UPDATE** アクセス許可は、テーブルが含まれるスキーマに対する **UPDATE** アクセス許可、またはテーブルの **CONTROL** アクセス許可を持つことによって継承できます。  
   
 ### <a name="ownership-chaining"></a>組み合わせ所有権  
- 複数のデータベース オブジェクトが連続して互いにアクセスしている場合、このシーケンスは*チェーン*と呼ばれます。 このようなチェーンは単独では存在しませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がチェーン内のリンクを移動する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、構成要素であるオブジェクトに対する権限が、オブジェクトに個別にアクセスした場合とは異なる方法で評価されます。 所有権の継承は、セキュリティを管理するための重要な影響を与えます。 所有権の継承の詳細については、次を参照してください「[所有権の継承](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx)」および「[チュートリアル: 所有権の継承とコンテキストの切り替え](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx)」です。  
+ 複数のデータベース オブジェクトが連続して互いにアクセスしている場合、このシーケンスは*チェーン*と呼ばれます。 このようなチェーンは単独では存在しませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がチェーン内のリンクを移動する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、構成要素であるオブジェクトに対する権限が、オブジェクトに個別にアクセスした場合とは異なる方法で評価されます。 所有権の継承は、セキュリティを管理するための重要な影響を与えます。 所有権の継承の詳細については、次を参照してください「[所有権の継承](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx)」および「[チュートリアル: 所有権の継承とコンテキストの切り替え](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)」です。  
   
 ## <a name="permission-list"></a>アクセス許可の一覧  
   

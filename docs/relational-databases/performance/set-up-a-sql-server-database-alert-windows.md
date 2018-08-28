@@ -15,17 +15,18 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0aefc9bac8fc8ca26b759f1229bbe98cbb20ba93
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a7fba093060622267bef43624a349b3220a8d540
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405588"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>SQL Server データベースの警告のセットアップ (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   システム モニターでは、システム モニターのカウンターがしきい値に達したときに発生する警告を作成できます。 システム モニターは、この警告に応答して、警告状況を処理するために記述されたカスタム アプリケーションなどのアプリケーションを起動できます。 たとえば、デッドロックの数が特定の値を超えたときに生成される警告を作成できます。 
   
- 警告は、Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して定義することもできます。 詳細については、「 [警告](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)」を参照してください。  
+ 警告は、Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して定義することもできます。 詳細については、「 [警告](../../ssms/agent/alerts.md)」を参照してください。  
   
 ## <a name="set-up-a-sql-server-database-alert"></a>SQL Server データベースの警告をセットアップする  
   

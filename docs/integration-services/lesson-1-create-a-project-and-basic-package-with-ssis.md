@@ -15,16 +15,16 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead61697c2db5bc574699ac460584225564e5774
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332706"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406210"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>レッスン 1: SSIS によるプロジェクトと基本パッケージの作成
 
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[レッスン 1: プロジェクトと基本パッケージの作成](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[レッスン 1: プロジェクトと基本パッケージの作成](lesson-1-create-a-project-and-basic-package-with-ssis.md)」を参照してください。
 
 このレッスンでは、簡単な ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換コンポーネントを使用してそのデータを変換します。さらに、変換したデータを、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  
   
@@ -72,7 +72,7 @@ SQL Server Data Tools のインストールの詳細については、「[SQL Se
 |フラット ファイルの列|テーブル名|列名|データ型|  
 |--------------------|--------------|---------------|-------------|  
 |0|AdventureWorksDW2012|AverageRate|FLOAT|  
-|@shouldalert|DimCurrency|CurrencyAlternateKey|nchar (3)|  
+|1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|日付|  
 |3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   
@@ -89,9 +89,9 @@ SQL Server Data Tools のインストールの詳細については、「[SQL Se
   
 -   [手順 5: フラット ファイル ソースの追加と構成](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [手順 6 : 参照変換の追加と構成](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [手順 6: 参照変換の追加と構成](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [手順 7 : OLE DB 変換先の追加と構成](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [手順 7: OLE DB 変換先の追加と構成](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 -   [手順 8: レッスン 1 のパッケージをわかりやすくする作業](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   

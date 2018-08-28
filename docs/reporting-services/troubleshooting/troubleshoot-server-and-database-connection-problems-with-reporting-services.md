@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 020a53efdc65a1460698eb631b516832ab31f057
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969324"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405436"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
 このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」と「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
@@ -125,5 +125,5 @@ SQL Server 2008 Reporting Services では、データベースへのアクセス
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

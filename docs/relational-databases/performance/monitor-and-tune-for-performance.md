@@ -33,12 +33,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 61dcf1b12a4bcf782f00a2a40f3d9336e67db7d3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3a9720e0b2db4ef1dbbdf2738e019d4107e00ee2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538842"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406232"
 ---
 # <a name="monitor-and-tune-for-performance"></a>パフォーマンスの監視とチューニング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "39538842"
 |[クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)|クエリ ストアの使用に関してアドバイスします。|  
   
 ## <a name="see-also"></a>参照  
- [エンタープライズ全体の管理の自動化](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)   
+ [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

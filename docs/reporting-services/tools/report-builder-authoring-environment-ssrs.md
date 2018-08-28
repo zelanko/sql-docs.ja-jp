@@ -15,15 +15,15 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ea2db3668b6be4f71aa5e7d8f325f3032e203e50
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550073"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409399"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>レポート ビルダーの作成環境 (SSRS)
-  レポート ビルダー [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、Visual Studio 以外で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページネーションのあるレポートを作成するためのスタンドアロンの作成環境です。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
+  レポート ビルダー [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio 以外で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページネーションのあるレポートを作成するためのスタンドアロンの作成環境です。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
   
  Microsoft ダウンロード センターから[レポート ビルダーをインストール](../../reporting-services/install-windows/install-report-builder.md) します。  
   

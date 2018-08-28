@@ -35,18 +35,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 67c5b75e86ca504f0dfde749902da6f2f1a7dd98
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a41a9fc5dc233604ae9dcbddd7487b26a80af0b8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39539132"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409419"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>インデックスの再構成と再構築
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!NOTE]
-> 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関連するコンテンツについては、「[インデックスの再構成と再構築](https://msdn.microsoft.com/library/ms189858(SQL.120).aspx)」を参照してください。
+> 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関連するコンテンツについては、「[インデックスの再構成と再構築](reorganize-and-rebuild-indexes.md)」を参照してください。
 
 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、断片化したインデックスを再構成または再構築する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、基になるデータに対して挿入、更新、または削除の各操作が行われるたびに、インデックスが自動的に変更されます。 このような変更が長期にわたると、インデックス内の情報がデータベース内に散在 (断片化) することになります。 インデックスに、キー値に基づく論理順序とデータ ファイル内の物理順序が一致しないページが存在すると、断片化が発生します。 インデックスが大量に断片化されると、クエリのパフォーマンスが低下し、アプリケーションの応答が遅くなる場合があります。特にスキャン操作が遅くなります。  
   

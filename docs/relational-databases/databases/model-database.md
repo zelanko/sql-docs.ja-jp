@@ -20,12 +20,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08498dcec9823006babd265e79945d1273953a57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03aada845eaf77e83833f3cc3252bca4a2d49e42
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931507"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405596"
 ---
 # <a name="model-database"></a>model データベース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "32931507"
 |プライマリ データ|modeldev|model.mdf|ディスクがいっぱいになるまで 64 MB ずつ自動拡張|  
 |Log|modellog|modellog.ldf|最大 2 TB まで 64 MB ずつ自動拡張|  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]より前のバージョンでの既定のファイル拡張値については、「 [model データベース](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)」を参照してください。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]より前のバージョンでの既定のファイル拡張値については、「 [model データベース](model-database.md)」を参照してください。  
   
  **model** データベースまたはログ ファイルを移動するには、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   
@@ -58,33 +58,33 @@ ms.locfileid: "32931507"
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
-|ANSI_NULL_DEFAULT|OFF|はい|  
-|ANSI_NULLS|OFF|はい|  
-|ANSI_PADDING|OFF|はい|  
-|ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
-|AUTO_CLOSE|OFF|はい|  
-|AUTO_CREATE_STATISTICS|ON|はい|  
-|AUTO_SHRINK|OFF|はい|  
-|AUTO_UPDATE_STATISTICS|ON|はい|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
+|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
+|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
+|ARITHABORT|OFF|[ユーザー アカウント制御]|  
+|AUTO_CLOSE|OFF|[ユーザー アカウント制御]|  
+|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_SHRINK|OFF|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
-|CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
+|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
+|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> [ユーザー アカウント制御]|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
 |DB_CHAINING|OFF|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|ON|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|はい|  
-|PAGE_VERIFY|CHECKSUM|はい|  
-|PARAMETERIZATION|SIMPLE|はい|  
-|QUOTED_IDENTIFIER|OFF|はい|  
-|READ_COMMITTED_SNAPSHOT|OFF|はい|  
-|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションによって異なる*|はい|  
-|RECURSIVE_TRIGGERS|OFF|はい|  
+|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
+|PAGE_VERIFY|CHECKSUM|[ユーザー アカウント制御]|  
+|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
+|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
+|READ_COMMITTED_SNAPSHOT|OFF|[ユーザー アカウント制御]|  
+|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションによって異なる*|[ユーザー アカウント制御]|  
+|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
 |Service Broker のオプション|DISABLE_BROKER|いいえ|  
 |TRUSTWORTHY|OFF|いいえ|  
   

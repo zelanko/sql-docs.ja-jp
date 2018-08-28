@@ -27,16 +27,16 @@ caps.latest.revision: 58
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97a03d0cbb0108a4a7cdba27dd0394446a3bb556
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b16ce62f2a955e8b8f3cede71722c746dc0601fa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983064"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406772"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 構成マネージャー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server 構成マネージャー](https://msdn.microsoft.com/library/ms174212(SQL.120).aspx)」をご覧ください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server 構成マネージャー](sql-server-configuration-manager.md)」をご覧ください。
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に関連付けられているサービスの管理、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が使用するネットワーク プロトコルの設定、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クライアント コンピューターからのネットワーク接続の設定を行うためのツールです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、[スタート] メニューから利用できる [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール スナップインであり、他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール画面に追加することも可能です。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール (**mmc.exe**) は、**SQLServerManager\<バージョン>.msc** ファイル ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)] の **SQLServerManager13.msc** など) を使用して構成マネージャーを開きます。 最新の 4 つのバージョンへのパスを次に示します (Windows が C ドライブにインストールされている場合)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "38983064"
 > -   **Windows 8**:  
 >          [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーを開くには、**検索**チャームの **[アプリ]** で、「**SQLServerManager\<バージョン>.msc**」(「**SQLServerManager13.msc**」など) と入力し、**Enter** キーを押します。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーと SQL Server Management Studio では、一部のサーバー設定を表示および変更するために、Windows Management Instrumentation (WMI) を使用します。 WMI には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各種ツールによって要求されるレジストリ操作を管理する API 呼び出しに対する統一的なインターフェイスが用意されており、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャー スナップイン コンポーネントの選択された SQL サービスを制御し、操作するための機能も充実しています。 WMI に関連した権限を構成する方法については、「[SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーと SQL Server Management Studio では、一部のサーバー設定を表示および変更するために、Windows Management Instrumentation (WMI) を使用します。 WMI には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各種ツールによって要求されるレジストリ操作を管理する API 呼び出しに対する統一的なインターフェイスが用意されており、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャー スナップイン コンポーネントの選択された SQL サービスを制御し、操作するための機能も充実しています。 WMI に関連した権限を構成する方法については、「[SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーを使用して、他のコンピューター上のサービスの開始、停止、一時停止、再開、構成を行う方法については、「[別のコンピューターへの接続 &#40;SQL Server 構成マネージャー&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)」を参照してください。  
   

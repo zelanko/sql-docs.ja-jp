@@ -12,13 +12,14 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 979cb0b59ba0528ef7450de0fc4a7b96dd9d4338
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7535f5b73859b59848e08bce9c74b0670bc3a867
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770918"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406648"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 
@@ -44,15 +45,15 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 |機能|Supported|追加情報|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|はい||  
-|フルテキスト検索|はい||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|[ユーザー アカウント制御]||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|[ユーザー アカウント制御]||  
+|フルテキスト検索|[ユーザー アカウント制御]||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|はい||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|はい||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|いいえ||  
-|クライアント ツール接続|はい||  
-|Integration Services サーバー|はい||  
+|クライアント ツール接続|[ユーザー アカウント制御]||  
+|Integration Services サーバー|[ユーザー アカウント制御]||  
 |クライアント ツールの旧バージョンとの互換性|いいえ||  
 |クライアント ツール SDK|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック|いいえ||  
@@ -60,8 +61,8 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |管理ツール - 完全|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
 |分散再生コントローラー|いいえ||  
 |分散再生クライアント|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
-|SQL クライアント接続 SDK|はい||  
-|Microsoft Sync Framework|はい|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
+|SQL クライアント接続 SDK|[ユーザー アカウント制御]||  
+|Microsoft Sync Framework|[ユーザー アカウント制御]|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|いいえ||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|いいえ||  
   

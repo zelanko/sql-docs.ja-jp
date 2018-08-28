@@ -63,12 +63,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6855a5f92cd6f8b25d3a7ea9ecf4f4d05e7a015
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b3d3f48fedf04980a8dff9acad2f381e5cbfcd0f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452746"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409511"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -630,13 +630,13 @@ ADD
 > ALTER TABLE ステートメントを使用しない場合、メモリ最適化テーブルのインデックスに対してステートメント CREATE INDEX、DROP INDEX、ALTER INDEX を使用することはできません。 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  レコードの有効期間を記録する、システムを使用する列の名前を指定します。 既存の列を指定したり、追加期間 FOR SYSTEM_TIME 引数の一部として、新しい列を作成することができます。 列は、datetime2 データ型があります。 と NOT として定義する必要が NULL です。 期間の列が NULL として定義される場合は、エラーがスローされます。 system_start_time 列と system_end_time 列の [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) を定義し、[列の既定値の指定する](../../relational-databases/tables/specify-default-values-for-columns.md)ことができます。 system_end_time 列の既定値の使用方法については、後述する「[システムのバージョン管理](#system_versioning)」の例 A を参照してください。  
   
  SYSTEM_VERSIONING の設定の引数と組み合わせてこの引数を使用して、既存のテーブルにシステムのバージョン管理を有効にします。 詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[Azure SQL Database のテンポラル テーブルの概要](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)」を参照してください。  
   
- [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 以降、1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM***\<table>* がこのような列の値を返さないようにすることができるようになります。 既定では、期間の列は非表示にします。 を使用するために非表示の列を時間的なテーブルを直接参照するすべてのクエリに明示的に含まする必要があります。  
+ [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 以降、1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM***\<table>* がこのような列の値を返さないようにすることができるようになります。 既定では、期間の列は非表示にします。 を使用するために非表示の列を時間的なテーブルを直接参照するすべてのクエリに明示的に含まする必要があります。  
   
 DROP  
 指定のある 1 つまたは複数の列の定義、計算列の定義、またはテーブルの制約を削除すると、システムは、システムのバージョン管理を使用する列の仕様を削除したりします。  

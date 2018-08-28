@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993954"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405698"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "37993954"
   
  **SQL Server Management Studio を使用して WMI 警告を作成するには**  
   
--   [WMI イベント警告の作成](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [WMI イベント警告の作成](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>ミラー化されたデータベースに対するイベント通知の動作のしくみ  
  ミラー化されたデータベースはフェールオーバーできるため、ミラー化されたデータベースに関するイベント通知の複数データベースにまたがる配信は、定義上はリモートで行われます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] には、 *ミラー化されたルート*の形式で、ミラー化されたデータベース用の特別なサポートが用意されています。 ミラー化されたルートには、プリンシパル サーバー インスタンス用とミラー サーバー インスタンス用の 2 つのアドレスがあります。  
@@ -214,11 +214,11 @@ ms.locfileid: "37993954"
   
 -   ジョブによって使用されるログイン  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するには、まず、ジョブに必要なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを対象のサーバー インスタンスに追加する必要があります。 詳細については、「 [SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)」を参照してください。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するには、まず、ジョブに必要なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを対象のサーバー インスタンスに追加する必要があります。 詳細については、「 [SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス開始アカウント  
   
-     サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 SQL Server エージェント サービスのコンテキストは、ジョブとその実行環境の設定に影響します。 アカウントは、ジョブで必要とされるネットワーク共有などのリソースにアクセスできる必要があります。 サービス開始アカウントの選択方法と変更方法の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7)」を参照してください。  
+     サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 SQL Server エージェント サービスのコンテキストは、ジョブとその実行環境の設定に影響します。 アカウントは、ジョブで必要とされるネットワーク共有などのリソースにアクセスできる必要があります。 サービス開始アカウントの選択方法と変更方法の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)」を参照してください。  
   
      正しく稼働するには、適切なドメイン、ファイル システム、およびレジストリの権限を持つようにサービス開始アカウントを構成する必要があります。 また、サービス アカウント用に構成する必要がある共有ネットワーク リソースがジョブで必要になる場合があります。 詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
@@ -229,35 +229,35 @@ ms.locfileid: "37993954"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシでは、指定されたジョブ ステップのセキュリティ コンテキストを定義します。 ジョブを対象のサーバー インスタンス上で実行する場合、そのジョブに必要なすべてのプロキシをそのインスタンス上で手動で再作成する必要があります。 詳細については、「 [SQL Server エージェント プロキシの作成](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) 」および「 [プロキシを使用するマルチサーバー ジョブのトラブルシューティング](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280)」を参照してください。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシでは、指定されたジョブ ステップのセキュリティ コンテキストを定義します。 ジョブを対象のサーバー インスタンス上で実行する場合、そのジョブに必要なすべてのプロキシをそのインスタンス上で手動で再作成する必要があります。 詳細については、「 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md) 」および「 [プロキシを使用するマルチサーバー ジョブのトラブルシューティング](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)」を参照してください。  
   
  詳細については、次のトピックも参照してください。  
   
--   [ジョブの実装](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [ジョブの実装](../../ssms/agent/implement-jobs.md)  
   
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (データベース ミラーリングの場合)  
   
 -   [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをインストールする場合)  
   
--   [SQL Server エージェントの構成](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをインストールする場合)  
+-   [SQL Server エージェントの構成](../../ssms/agent/configure-sql-server-agent.md) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをインストールする場合)  
   
--   [SQL Server エージェントのセキュリティの実装](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **既存のジョブと各ジョブのプロパティを表示するには**  
   
--   [ジョブの利用状況の監視](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [ジョブの利用状況の監視](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [ジョブ ステップ情報の表示](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [ジョブ ステップ情報の表示](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **ジョブを作成するには**  
   
--   [ジョブの作成](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
--   [ジョブの作成](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>ジョブを再作成するスクリプトを使用する場合の推奨事項  
  まず、簡単なジョブのスクリプトを作成し、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスでジョブを再作成し、そのジョブを実行して適切に動作するかどうかを確認することをお勧めします。 これにより、互換性のない部分を確認し、それらの解決に取り組むことができます。 スクリプト化したジョブが新しい環境で正常に動作しない場合、新しい環境で正常に動作する同等のジョブを作成することをお勧めします。  

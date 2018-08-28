@@ -1,7 +1,7 @@
 ---
 title: 組み込み Globals および Users 参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022069"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405361"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>組み込みコレクション - 組み込み Globals および Users 参照 (レポート ビルダー)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す **Globals** コレクションと **User** コレクションの両方が含まれています。 **Globals** コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 **User** コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "33022069"
 ### <a name="renderformat"></a>RenderFormat  
  次の表では、 **RenderFormat**のメンバーについて説明します。  
   
-|メンバー|型|Description|  
+|メンバー|型|[説明]|  
 |------------|----------|-----------------|  
 |[オブジェクト名]|**String**|RSReportServer 構成ファイルに登録されているレンダラーの名前です。<br /><br /> レポート処理または表示サイクルの特定の部分で使用できます。|  
 |IsInteractive|**ブール値**|現在の表示要求で対話型の表示形式を使用するかどうかを示します。|  
@@ -81,9 +81,7 @@ ms.locfileid: "33022069"
 |----------------|--------------|---------------------|  
 |**言語**|**文字列**|レポートを実行しているユーザーの言語です。 たとえば、 `en-US`のようにします。|  
 |**UserID**|**String**|レポートを実行しているユーザーの ID です。 Windows 認証を使用している場合、この値は現在のユーザーのドメイン アカウントです。 値は、Windows 認証またはカスタム認証を使用できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能によって決まります。|  
-  
- レポートにおける複数言語のサポートの詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server オンライン ブック [にある](http://go.microsoft.com/fwlink/?LinkId=120955)のマニュアルの「多言語配置やグローバル配置のソリューション設計に関する考慮事項」を参照してください。  
-  
+ 
 ### <a name="using-locale-settings"></a>ロケール設定の使用  
  式を使用し、 **User.Language** 値でクライアント コンピューターのロケール設定を参照して、ユーザーに対してどのようにレポートを表示するかを指定できます。 たとえば、ロケール値に基づいて異なるクエリ式を使用するレポートを作成できます。 クエリは、返された言語に応じて異なる列からローカライズされた情報を取得するように変更できます。 また、この変数を基にしてレポートまたはレポート アイテムの言語設定に式を使用することもできます。  
   

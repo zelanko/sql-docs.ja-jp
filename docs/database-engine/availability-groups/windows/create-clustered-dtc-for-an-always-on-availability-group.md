@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13deb284a73027321bd0bd051dce91f642078c96
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 96a8a4e87167adc8243f8f313b9801966c1c32f0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509111"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405238"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>AlwaysOn 可用性グループのクラスター化された DTC を作成する
 
@@ -29,7 +29,7 @@ ms.locfileid: "39509111"
 
 このチュートリアルでは、クラスター化された DTC リソースと SQL Server 可用性グループを「[Cluster MSDTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)」(SQL Server 可用性グループの DTC をクラスター化する) の要件に基づいて作成します。
 
-このチュートリアルでは、PowerShell スクリプトと Transact-SQL (T-SQL) スクリプトが使用されます。  T-SQL スクリプトの多くで **SQLCMD モード** を有効にする必要があります。  **SQLCMD モード**に関する情報については、「 [クエリ エディターで SQLCMD スクリプト操作を有効にする方法](https://msdn.microsoft.com/library/ms174187.aspx#Anchor_1)」を参照してください。  PowerShell モジュール **FailoverClusters** をインポートする必要があります。  PowerShell モジュールのインポートに関する詳細については、「 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)」 (PowerShell モジュールのインポート) を参照してください。  このチュートリアルは以下を前提条件とします。
+このチュートリアルでは、PowerShell スクリプトと Transact-SQL (T-SQL) スクリプトが使用されます。  T-SQL スクリプトの多くで **SQLCMD モード** を有効にする必要があります。  **SQLCMD モード**に関する情報については、「 [クエリ エディターで SQLCMD スクリプト操作を有効にする方法](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。  PowerShell モジュール **FailoverClusters** をインポートする必要があります。  PowerShell モジュールのインポートに関する詳細については、「 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)」 (PowerShell モジュールのインポート) を参照してください。  このチュートリアルは以下を前提条件とします。
 - 「[Always On 可用性グループの前提条件、制限事項、推奨事項 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」の要件をすべて満たしています。  
 - ドメインが `contoso.lab`です。
 - DTC ネットワーク名リソースが作成される OU でコンピューター オブジェクトを作成する権限がユーザーに与えられています。

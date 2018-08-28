@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031469"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406745"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio の Reporting Services (SSRS)
   レポート サーバー管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して次の操作を実行できます。  
   
 -   機能を有効化し、サーバーの既定値を設定して、実行中のジョブを管理する。  
   
--   カスタム レポートを表示および作成する。 オブジェクト エクスプローラーでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]と共にインストールされた一連の標準レポートが多数のノードに表示されます。 管理者権限が必要です。 カスタム レポートのスキーマは、インストールされているレポートのスキーマと一致する必要があります。 詳細については、「[Management Studio におけるカスタム レポート](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979)」と「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
+-   カスタム レポートを表示および作成する。 オブジェクト エクスプローラーでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]と共にインストールされた一連の標準レポートが多数のノードに表示されます。 管理者権限が必要です。 カスタム レポートのスキーマは、インストールされているレポートのスキーマと一致する必要があります。 詳細については、「[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)」と「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
  レポート作成者は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して次の操作を実行できます。  
   

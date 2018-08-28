@@ -19,19 +19,19 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9cbcb449c2e8d1705093ca40c21244e3cb7eb056
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770188"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406771"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 **の** [オブジェクト エクスプローラーの詳細] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  
   
 > [!NOTE]  
->  [オブジェクト エクスプローラーの詳細] ペインの使用方法の詳細については、「 [[オブジェクト エクスプローラーの詳細] ペイン](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)」を参照してください。  
+>  [オブジェクト エクスプローラーの詳細] ペインの使用方法の詳細については、「 [[オブジェクト エクスプローラーの詳細] ペイン](../../../ssms/object/object-explorer-details-pane.md)」を参照してください。  
   
 -   **作業を開始する準備:**  [前提条件](#Prerequisites)  
   

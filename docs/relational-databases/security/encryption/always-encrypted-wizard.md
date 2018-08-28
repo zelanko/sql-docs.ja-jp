@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a202d9dfb063979fbae76d6402909674bd163033
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 0277d5f8388cbbfb917f121c77249473a9eec4d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549702"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405247"
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted ウイザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "39549702"
  
  - 列のマスター キーの格納場所を選択します。  
  
-   - **Windows cert にマスター キーを保存** 詳細については、「 [Using Certificate Stores (証明書ストアの使用)](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+   - **Windows cert にマスター キーを保存** 詳細については、「 [Using Certificate Stores (証明書ストアの使用)](/windows/desktop/SecCrypto/using-certificate-stores)  
  
    - **AKV (Azure Key Vault) にマスター キーを保存** 詳細については、「 [Azure Key Vault の使用を開始する](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)」を参照してください。  
  

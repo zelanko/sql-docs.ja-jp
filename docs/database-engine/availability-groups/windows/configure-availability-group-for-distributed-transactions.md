@@ -19,12 +19,12 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0655653463bc48ad0de71799f2e521f10e5c13b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7c8bb8f52eac86a0439185b77cb175d990d659a5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769028"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40406090"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "34769028"
 
 分散トランザクションでは、クライアント アプリケーションは Microsoft 分散トランザクション コーディネーター (MS DTC または DTC) と連携して、複数のデータ ソース間でトランザクションの整合性を保証します。 DTC は、サポートされている Windows Server ベースのオペレーティング システムで使用可能なサービスです。 分散トランザクションの場合は、DTC が "*トランザクション コーディネーター*" です。 通常は、SQL Server インスタンスが "*リソース マネージャー*" です。 データベースが可用性グループ内にある場合、各データベースがそれ自体のリソース マネージャーである必要があります。 
 
-可用性グループが分散トランザクション用に構成されていない場合であっても、[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] は可用性グループ内のデータベースに対する分散トランザクションを妨げません。 ただし、可用性グループが分散トランザクション対応に構成されていない場合は、一部の状況でフェールオーバーが失敗する可能性があります。 具体的には、新しいプライマリ レプリカの [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] インスタンスが、DTC からトランザクションの結果を取得できない場合があります。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] インスタンスがフェールオーバー後に DTC から未確定トランザクションの結果を取得できるようにするには、可用性グループを分散トランザクション対応に構成します。 
+可用性グループが分散トランザクション用に構成されていない場合であっても、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] は可用性グループ内のデータベースに対する分散トランザクションを妨げません。 ただし、可用性グループが分散トランザクション対応に構成されていない場合は、一部の状況でフェールオーバーが失敗する可能性があります。 具体的には、新しいプライマリ レプリカの [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンスが、DTC からトランザクションの結果を取得できない場合があります。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンスがフェールオーバー後に DTC から未確定トランザクションの結果を取得できるようにするには、可用性グループを分散トランザクション対応に構成します。 
 
 ## <a name="prerequisites"></a>Prerequisites
 
 分散トランザクションをサポートするように可用性グループを構成するには、次の前提条件が満たされている必要があります。
 
-* 分散トランザクションに参加する [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] のすべてのインスタンスが、[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] またはそれ以降である必要があります。
+* 分散トランザクションに参加する [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] のすべてのインスタンスが、[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] またはそれ以降である必要があります。
 
 * 可用性グループは、Windows Server 2016 または Windows Server 2012 R2 上で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
 
@@ -94,7 +94,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散トランザクション - 技術的概念
 
-分散トランザクションとは、2 つ以上のデータベースにまたがるトランザクションです。 トランザクション マネージャーとしての DTC は、SQL Server インスタンス間、および他のデータ ソース間でトランザクションを調整します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] データベース エンジンの各インスタンスは、リソース マネージャーとして動作できます。 可用性グループが `DTC_SUPPORT = PER_DB` で構成されていると、データベースはリソース マネージャーとして動作できます。 詳細については、MS DTC のドキュメントを参照してください。
+分散トランザクションとは、2 つ以上のデータベースにまたがるトランザクションです。 トランザクション マネージャーとしての DTC は、SQL Server インスタンス間、および他のデータ ソース間でトランザクションを調整します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] データベース エンジンの各インスタンスは、リソース マネージャーとして動作できます。 可用性グループが `DTC_SUPPORT = PER_DB` で構成されていると、データベースはリソース マネージャーとして動作できます。 詳細については、MS DTC のドキュメントを参照してください。
 
 データベース エンジンの 1 つのインスタンスに複数のデータベースが含まれるトランザクションは、実際には分散トランザクションです。 ただし、SQL Server インスタンスは分散トランザクションを内部で処理するため、ユーザーにはローカル トランザクションとして動作しているように見えます。 データベースが `DTC_SUPPORT = PER_DB` で構成された可用性グループ内にある場合は、たとえ SQL Server の 1 つのインスタンス内に存在する場合であっても、[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] はすべてのクロスデータベース トランザクションを DTC に送ります。 
 
@@ -123,16 +123,16 @@ ALTER AVAILABILITY GROUP MyaAG
 
 分散トランザクションに参加している各エンティティは、リソース マネージャーと呼ばれます。 リソース マネージャーの例を次に示します。
 
-* [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] インスタンス。 
+* [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンス。 
 * 分散トランザクション対応に構成されている可用性グループのデータベース。
 * DTC サービスもトランザクション マネージャーになることができます。
 * その他のデータ ソース。 
 
-分散トランザクションに参加するため、[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] のインスタンスは DTC に登録します。 通常、[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] のインスタンスはローカル サーバー上の DTC に登録します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] の各インスタンスは、一意のリソース マネージャー ID (RMID) でリソース マネージャーを作成し、それを DTC に登録します。 既定の構成では、[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] のインスタンスのすべてのデータベースが同じ RMID を使います。 
+分散トランザクションに参加するため、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] のインスタンスは DTC に登録します。 通常、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] のインスタンスはローカル サーバー上の DTC に登録します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] の各インスタンスは、一意のリソース マネージャー ID (RMID) でリソース マネージャーを作成し、それを DTC に登録します。 既定の構成では、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースが同じ RMID を使います。 
 
-データベースが可用性グループ内にある場合、データベースの読み取り/書き込みコピー (プライマリ レプリカ) は、[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] の異なるインスタンスに移動できます。 この移動中に分散トランザクションをサポートするためには、各データベースが独立したリソース マネージャーとして機能し、一意の RMID を持っている必要があります。 可用性グループで `DTC_SUPPORT = PER_DB` が指定されていると、[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] はデータベースごとにリソース マネージャーを作成し、一意の RMID を使って DTC に登録します。 この構成では、データベースは DTC トランザクションのリソース マネージャーになります。
+データベースが可用性グループ内にある場合、データベースの読み取り/書き込みコピー (プライマリ レプリカ) は、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] の異なるインスタンスに移動できます。 この移動中に分散トランザクションをサポートするためには、各データベースが独立したリソース マネージャーとして機能し、一意の RMID を持っている必要があります。 可用性グループで `DTC_SUPPORT = PER_DB` が指定されていると、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] はデータベースごとにリソース マネージャーを作成し、一意の RMID を使って DTC に登録します。 この構成では、データベースは DTC トランザクションのリソース マネージャーになります。
 
-[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] での分散トランザクションについて詳しくは、「[分散トランザクション](#distTran)」をご覧ください。
+[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] での分散トランザクションについて詳しくは、「[分散トランザクション](#distTran)」をご覧ください。
 
 ## <a name="manage-unresolved-transactions"></a>未解決のトランザクションを管理する
 
@@ -142,9 +142,9 @@ RMID の変更中に存在しているアクティブなトランザクション
 * 可用性グループのデータベースを追加または削除する。 
 * 可用性グループを削除する。
 
-これらの場合、プライマリ レプリカが [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] の新しいインスタンスにフェールオーバーすると、インスタンスは DTC に接続してトランザクションの結果を取得しようとします。 データベースが復旧中に未確定トランザクションの結果を取得するために使う RMID が以前に登録されていないため、DTC は結果を返すことができません。 そのため、データベースは SUSPECT 状態になります。
+これらの場合、プライマリ レプリカが [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] の新しいインスタンスにフェールオーバーすると、インスタンスは DTC に接続してトランザクションの結果を取得しようとします。 データベースが復旧中に未確定トランザクションの結果を取得するために使う RMID が以前に登録されていないため、DTC は結果を返すことができません。 そのため、データベースは SUSPECT 状態になります。
 
-[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] の新しいエラー ログには、次の例のようなエントリが含まれます。
+[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] の新しいエラー ログには、次の例のようなエントリが含まれます。
 
 ```
 Microsoft Distributed Transaction Coordinator (MS DTC) 
@@ -158,7 +158,7 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-この例は、DTC がフェールオーバー後に作成されたトランザクションの新しいプライマリ レプリカからデータベースを再登録できなかったことを示します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] のインスタンスは分散トランザクションの結果を判断できないので、データベースを SUSPECT としてマークします。 トランザクションは作業単位 (UOW) としてマークされ、GUID によって参照されます。 データベースを復旧するには、トランザクションを手動でコミットまたはロールバックします。 
+この例は、DTC がフェールオーバー後に作成されたトランザクションの新しいプライマリ レプリカからデータベースを再登録できなかったことを示します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] のインスタンスは分散トランザクションの結果を判断できないので、データベースを SUSPECT としてマークします。 トランザクションは作業単位 (UOW) としてマークされ、GUID によって参照されます。 データベースを復旧するには、トランザクションを手動でコミットまたはロールバックします。 
 
 >[!WARNING]
 >トランザクションを手動でコミットまたはロールバックすると、アプリケーションに影響する可能性があります。 コミットまたはロールバックのアクションが、アプリケーションの要件と整合していることを確認してください。 

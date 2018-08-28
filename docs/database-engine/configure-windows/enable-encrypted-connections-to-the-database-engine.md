@@ -24,12 +24,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4fea89d75e74db8f14eeedf692bf50c37469239f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4e000a327c0994addeb27199024958f522001fdf
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585564"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405217"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "34585564"
 ### <a name="wildcard-certificates"></a>ワイルドカード証明書  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、ワイルドカード証明書がサポートされます。 他のクライアントでは、ワイルドカード証明書がサポートされていない可能性があります。 詳しくは、クライアントのドキュメントをご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使ってワイルドカード証明書を選択することはできません。 ワイルドカード証明書を使うには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` のレジストリ キーを編集し、**Certificate** の値に証明書の拇印を (スペースを含めずに) 入力する必要があります。  
 > [!WARNING]  
-> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 <a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> 暗号化された接続を要求するクライアントを構成するには  

@@ -16,12 +16,12 @@ caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1715f116d875a0037a926ab36900e52701b7bf98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15828ee511caeb99e7fc6123edff84df3e9fca8c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921477"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406781"
 ---
 # <a name="back-up-database-general-page"></a>[データベースのバックアップ] \([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "32921477"
 -   [データベースの差分バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  データベース メンテナンス プランを定義して、データベース バックアップを作成できます。 詳細については、 [オンライン ブックの「](http://msdn.microsoft.com/library/ms187658.aspx) メンテナンス プラン [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 」を参照してください。  
+    >  データベース メンテナンス プランを定義して、データベース バックアップを作成できます。 詳細については、 [オンライン ブックの「](../maintenance-plans/maintenance-plans.md) メンテナンス プラン [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 」を参照してください。  
   
  **部分バックアップを作成するには**  
   
 -   部分バックアップを作成するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントで PARTIAL オプションを使用する必要があります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
   
 ### <a name="source"></a>Source  
  **[ソース]** パネルのオプションでは、データベースを特定し、バックアップ操作のバックアップの種類とコンポーネントを指定します。  

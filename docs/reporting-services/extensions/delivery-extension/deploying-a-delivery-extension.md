@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99ada408d4f2a783d2a545d00f780763b7a27796
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c348f71719a25ae4b4ea6c180fb7dfe8a08157f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016369"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405935"
 ---
 # <a name="deploying-a-delivery-extension"></a>配信拡張機能の配置
   配信拡張機能では、その構成情報を XML 構成ファイルの形式で指定します。 XML ファイルは、配信拡張機能に定義された XML スキーマに従います。 配信拡張機能により、構成ファイルを設定および変更するためのインフラストラクチャが提供されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "33016369"
   
  次の表では、配信拡張機能の **Extension** 要素の属性について説明します。  
   
-|属性|Description|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**名前**|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |**型**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
@@ -93,7 +93,7 @@ ms.locfileid: "33016369"
     </CodeGroup>  
     ```  
   
-     URL 構成要素は、配信拡張機能に選択できる多くの構成要素条件のうちの 1 つにすぎません。 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)」を参照してください。  
+     URL 構成要素は、配信拡張機能に選択できる多くの構成要素条件のうちの 1 つにすぎません。 [!INCLUDE[ssRS](../../../includes/ssrs.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)」を参照してください。  
    
 ## <a name="verifying-the-deployment"></a>配置の確認  
  配信拡張機能が正常にレポート サーバーに配置されたかどうかを確認するには、Web サービスの <xref:ReportService2010.ReportingService2010.ListExtensions%2A> メソッドを使用します。 また、Web ポータルを開き、配信拡張機能がサブスクリプションに有効な配信拡張機能の一覧に含まれていることを確認する方法もあります。 Web ポータルとサブスクリプションの詳細については、「[サブスクリプションと配信 &#40;Reporting Services&#41](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  

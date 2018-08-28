@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0480ac34db87ee4dca4675998946c60e28667586
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: f8ff9ce3660da3c2586eee9c7f71d905a4730457
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559242"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406110"
 ---
 # <a name="execute-a-stored-procedure"></a>ストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャの実行](https://msdn.microsoft.com/library/ms189915(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャの実行](execute-a-stored-procedure.md)」を参照してください。
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを実行する方法について説明します。  
   

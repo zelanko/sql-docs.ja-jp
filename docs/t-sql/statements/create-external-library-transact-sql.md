@@ -21,12 +21,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23f57dcabfa354d68aef8aafa7a27a1ae1960bd6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9b03dd4e3e18a9e67bcdf07c867d0ddb93c19a73
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452166"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40409403"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -34,7 +34,7 @@ ms.locfileid: "39452166"
 
 指定したバイト ストリームまたはファイル パスから R パッケージをデータベースにアップロードします。
 
-このステートメントは、データベース管理者が新しい外部言語ランタイム (R、Python、Java など) に必要な成果物および [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] でサポートされる OS プラットフォームをアップロードするための汎用メカニズムとして機能します。 
+このステートメントは、データベース管理者が新しい外部言語ランタイム (R、Python、Java など) に必要な成果物および [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされる OS プラットフォームをアップロードするための汎用メカニズムとして機能します。 
 
 現在、R 言語と Windows プラットフォームのみがサポートされています。 Python および Linux は、今後のリリースでサポートされる予定です。
 

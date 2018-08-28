@@ -29,19 +29,19 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32fbe22707d4704b29195fd88098b94a4ee2d968
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 54b456761b7a2055f7eb52e95abf7e6dacba182f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350344"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405834"
 ---
 # <a name="replication-agents-overview"></a>レプリケーション エージェントの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   レプリケーションでは、エージェントと呼ばれる多数のスタンドアロン プログラムを使用して、変更の監視やデータの配信に関連するタスクを実行します。 既定では、レプリケーション エージェントは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでスケジュールされたジョブとして実行されるため、ジョブを実行するためには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントが実行中であることが必要です。 レプリケーション エージェントはコマンド ラインから実行することも、レプリケーション管理オブジェクト (RMO) を使用するアプリケーションから実行することもできます。 レプリケーション エージェントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターおよび [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]から管理できます。  
   
 ## <a name="sql-server-agent"></a>SQL Server エージェント  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、レプリケーションで使用するエージェントをホストし、スケジュールを設定することによって、レプリケーション エージェントを簡単に実行できるようになっています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、レプリケーション以外の操作も管理および監視します。 詳細については、「 [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)」をご覧ください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、レプリケーションで使用するエージェントをホストし、スケジュールを設定することによって、レプリケーション エージェントを簡単に実行できるようになっています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、レプリケーション以外の操作も管理および監視します。 詳細については、「 [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)」をご覧ください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール時に、サービスがインストール中に自動開始されるように明示的に選択しない限り、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスは既定で無効になります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスを開始する方法の詳細については、「[SQL Server エージェント サービスの開始、停止、または一時停止](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)」を参照してください。  

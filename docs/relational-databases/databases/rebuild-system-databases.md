@@ -21,12 +21,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bc4b141721417b3097dc9142e2f47404021f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae2466902ae6cd60a69687b33aab38fc6a72fd5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932949"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406196"
 ---
 # <a name="rebuild-system-databases"></a>システム データベースの再構築
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "32932949"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |[パラメーター名]|Description|  
+    |[パラメーター名]|[説明]|  
     |--------------------|-----------------|  
     |/QUIET または /Q|セットアップがユーザー インターフェイスなしで実行されるように指定します。|  
     |/ACTION=REBUILDDATABASE|セットアップでシステム データベースを再作成することを指定します。|  
@@ -168,7 +168,7 @@ ms.locfileid: "32932949"
 > [!WARNING]  
 >  **instmsdb** スクリプトを使用して **msdb** データベースを再構築すると、ジョブ、警告、オペレーター、メンテナンス プラン、バックアップ履歴、ポリシー ベースの管理設定、データベース メール、パフォーマンス データ ウェアハウスなど、 **msdb** に格納されていた情報がすべて消去されます。  
   
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]エージェント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、および [!INCLUDE[ssRS](../../includes/ssrs-md.md)]と、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]をデータ ストアとして使用しているすべてのアプリケーションを含め、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続しているすべてのサービスを停止します。  
+1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]エージェント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、および [!INCLUDE[ssRS](../../includes/ssrs.md)]と、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]をデータ ストアとして使用しているすべてのアプリケーションを含め、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続しているすべてのサービスを停止します。  
   
 2.  というコマンドを使用して、コマンド ラインから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始します。 `NET START MSSQLSERVER /T3608`  
   

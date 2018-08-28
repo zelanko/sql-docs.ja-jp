@@ -29,15 +29,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d744de4921f4cd3c77bffa98c5b07be6fce8d160
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 8c1f73e87f747ac88d6b42aee391f87c60598905
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455786"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405211"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   1 つ以上のユーザー データベースまたはデータベース スナップショットを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから削除します。  
   

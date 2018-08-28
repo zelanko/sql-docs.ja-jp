@@ -23,12 +23,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fe44ad4d9c80e97f6bc94e08c66af9d7f312fa5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a6fadd30e1db32354c52fcef92b249765948c667
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401555"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405344"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>スクリプト コンポーネントによる変換先の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内では、変換先コンポーネントを使用して、上流の変換元や変換から受け取ったデータをデータ ソースに保存します。 通常、変換先コンポーネントをデータ ソースに接続するには、既存の接続マネージャーを使用します。  
@@ -48,7 +48,7 @@ ms.locfileid: "35401555"
  スクリプト変換先で使用するスクリプト言語を選択するには、**[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** ページにある **[ScriptLanguage]** プロパティを設定します。  
   
 > [!NOTE]  
->  スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)」を参照してください。  
+>  スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
  データ フローの変換先コンポーネントには、1 つの入力があり、出力はありません。 コンポーネントの入力の設定は、メタデータ デザイン モードでカスタム スクリプトを記述する前に完了する必要のある作業の 1 つです。これを行うには、**[スクリプト変換エディター]** を使用します。  
   

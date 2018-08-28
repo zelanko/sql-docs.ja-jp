@@ -16,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 6dbc4b3fe31419f89dba28b1f8c067ef74e70edd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558272"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405452"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio によるインメモリ OLTP のサポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39558272"
   
 2.  テンプレートのパラメーターを置き換えるには、 **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。  
   
-     テンプレートの使用方法の詳細については、「 [テンプレート エクスプローラー](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)」を参照してください。  
+     テンプレートの使用方法の詳細については、「 [テンプレート エクスプローラー](../../ssms/template/template-explorer.md)」を参照してください。  
   
 3.  **オブジェクト エクスプローラー**では、テーブルはまずディスク ベース テーブル、次にメモリ最適化テーブルの順に並べ替えられます。 すべてのテーブルを名前順で確認するには、「 **オブジェクト エクスプローラーの詳細** 」を使用します。  
   

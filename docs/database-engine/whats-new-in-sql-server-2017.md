@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: af6354b14d7b820edafe42bf3e709645e949ea20
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: b3d32cba82f35066cd66a130e8d2cb12aafcb4c3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509071"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405682"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>データベース エンジンの新機能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "39509071"
 - 再開可能なオンライン インデックス リビルド。 再開可能なオンライン インデックス リビルドを使用すると、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、停止した場所からオンライン インデックス リビルド操作を再開できます。 また、一時停止し、オンライン インデックス リビルド操作を後で再開することもできます。 たとえば、利用できるメンテナンス期間が大規模なテーブルには短すぎる場合、別のメンテナンス期間に優先度の高いタスクを実行したり、インデックスのリビルドを完了したりするために、システム リソースの解放が必要になる場合があります。 最終的に、再開可能なオンライン インデックス リビルドでは大量のログ領域は必要ないため、再開可能なリビルド操作の実行中に、ログの切り捨てを実行できます。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。
 - **ALTER DATABASE SCOPED CONFIGURATION の IDENTITY_CACHE オプション**。 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL ステートメントに追加された新しい IDENTITY_CACHE オプションです。 このオプションを `OFF` に設定すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、データベースが ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。   
 -  
-  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] には、より意味のあるリレーションシップ指向データをモデリングできるグラフ データベース機能が追加されました。 これには、ノードとエッジ テーブルを作成するための新しい [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 構文と、クエリ用の [MATCH](../t-sql/queries/match-sql-graph.md) キーワードが含まれています。 詳細については、[SQL Server 2017 でのグラフ処理](../relational-databases/graphs/sql-graph-overview.md)に関するページをご覧ください。   
+  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] には、より意味のあるリレーションシップ指向データをモデリングできるグラフ データベース機能が追加されました。 これには、ノードとエッジ テーブルを作成するための新しい [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 構文と、クエリ用の [MATCH](../t-sql/queries/match-sql-graph.md) キーワードが含まれています。 詳細については、[SQL Server 2017 でのグラフ処理](../relational-databases/graphs/sql-graph-overview.md)に関するページをご覧ください。   
 - 新世代のクエリ処理では、最適化戦略がアプリケーション ワークロードの実行時条件に適用される点が改善されています。 **アダプティブ クエリ処理**機能ファミリのこの最初のバージョンでは、3 つの新しい改善点があります。**バッチ モード適応型結合**、**バッチ モード メモリ許可フィードバック**、そして複数ステートメントのテーブル値関数の**インターリーブ実行**です。  「[Microsoft SQL データベースでのアダプティブ クエリの処理](../relational-databases/performance/adaptive-query-processing.md)」を参照してください。
-- 自動チューニングは、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決するデータベース機能です。 潜在的なパフォーマンスの問題が検出されると必ず、[!INCLUDE[ssnoversion](../includes/ssnoversion.md)] の自動チューニングにより通知されます。また、修正措置を適用したり、[!INCLUDE[ssde-md](../includes/ssde-md.md)]でパフォーマンスの問題を自動修復したりすることも可能です。 詳しくは、「[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)」をご覧ください。
+- 自動チューニングは、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決するデータベース機能です。 潜在的なパフォーマンスの問題が検出されると必ず、[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] の自動チューニングにより通知されます。また、修正措置を適用したり、[!INCLUDE[ssde-md](../includes/ssde-md.md)]でパフォーマンスの問題を自動修復したりすることも可能です。 詳しくは、「[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)」をご覧ください。
 - メモリ最適化テーブルでの非クラスター化インデックス ビルドのパフォーマンス向上。 データベース復旧中の MEMORY_OPTIMIZED テーブルにおける bwtree (非クラスター化) インデックス リビルドのパフォーマンスが大幅に最適化されました。 この機能強化により、非クラスター化インデックス使用時のデータベースの復旧時間が大幅に短縮されます。  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) には、socket_count、cores_per_socket、numa_node_count の 3 つの新しい列があります。 過度の NUMA はホストの過剰な介入につながり、最終的にパフォーマンスの問題に変わる可能性があるため、これは VM でサーバーを実行する場合に便利です。
 - 新しい列 modified_extent_page_count\, は、データベースの各データベース ファイルの差分変更を追跡するために [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) に導入されました。 新しい列 modified_extent_page_count を使用すると、スマート バックアップ ソリューションをビルドできます。このソリューションは、データベース内の変更されたページの割合がしきい値 (たとえば、70 ～ 80%) を下回る場合は差分バックアップを実行し、それ以外の場合はデータベースの完全バックアップを実行します。

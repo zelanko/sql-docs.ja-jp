@@ -18,14 +18,14 @@ caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 76e11f1afb39cb8ddd82f99d74e2d2a21c776664
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 278ac96f3c4517e998ae21516c5c7584cc17993d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942547"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405836"
 ---
-# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] ([フィルターの設定])
+# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] \([フィルターの設定])
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、ジョブの利用状況モニターに表示される行数を削減できます。 1 つまたは複数の利用可能なボックスに基準を入力すると、指定した値に一致する行のみが表示されます。 一部のボックス ( **[状態]** や **[ブロッキングの種類]** ) は指定できる有効な値が決まっており、ドロップダウン リストによって提供されます。 他のボックス ( **[アプリケーション]** など) は、任意の値をコンマ区切りのリストにして必要な数だけ入力できます。 ツール バーのアイコンを使用すると、利用可能なボックスをカテゴリ別またはアルファベット順に並べ替えることができます。 基準をクリックすると、それぞれの簡単な説明が表示されます。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "32942547"
  フィルター設定を既定の設定に戻します。  
   
 ## <a name="see-also"></a>参照  
- [ジョブの利用状況の監視](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+ [ジョブの利用状況の監視](../../ssms/agent/monitor-job-activity.md)  
   
   

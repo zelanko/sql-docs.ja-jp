@@ -26,15 +26,15 @@ caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d80d99520035244f8181b678d800e85d385ec41b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 662380b6f86131dd01cbe6cb235cbfdf98fe851b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409154"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405944"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>プログラムによるローカル パッケージの読み込みと実行
-  「[パッケージの実行](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx)」で説明されている方法を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを必要に応じて実行したり、事前に定義した時刻に実行したりすることができます。 また、数行のコードを記述するだけで、Windows フォーム アプリケーション、コンソール アプリケーション、ASP.NET Web フォームや Web サービス、または Windows サービスなどのカスタム アプリケーションから、パッケージを実行することもできます。  
+  「[パッケージの実行](../packages/run-integration-services-ssis-packages.md)」で説明されている方法を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを必要に応じて実行したり、事前に定義した時刻に実行したりすることができます。 また、数行のコードを記述するだけで、Windows フォーム アプリケーション、コンソール アプリケーション、ASP.NET Web フォームや Web サービス、または Windows サービスなどのカスタム アプリケーションから、パッケージを実行することもできます。  
   
  このトピックの内容:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "35409154"
 >  SSIS パッケージ ストアを操作するための <xref:Microsoft.SqlServer.Dts.Runtime.Application> クラスのメソッドは、"."、localhost、またはローカル サーバーのサーバー名のみをサポートします。 "(local)" は使用できません。  
   
 ## <a name="running-a-package-programmatically"></a>プログラムによるパッケージの実行  
- ローカル コンピューターでマネージ コードを使用して、パッケージを実行するカスタム アプリケーションを開発するには、次の方法が必要です。 ここにまとめた手順は、後のサンプル コンソール アプリケーションで示します。  
+ ローカル コンピューターでマネージド コードを使用して、パッケージを実行するカスタム アプリケーションを開発するには、次の方法が必要です。 ここにまとめた手順は、後のサンプル コンソール アプリケーションで示します。  
   
 #### <a name="to-run-a-package-on-the-local-computer-programmatically"></a>プログラムによってローカル コンピューターでパッケージを実行するには  
   

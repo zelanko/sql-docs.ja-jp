@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c3ab951e8364e8d6ca7c920493c6dee026f2d011
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: ec52d2e2c0b6c88e26472d21bbe8d9eff42397bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544782"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406767"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャからデータを返す](https://msdn.microsoft.com/library/ms188655(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャからデータを返す](return-data-from-a-stored-procedure.md)」を参照してください。
 
   プロシージャからのデータを呼び出し元のプログラムに返す手段には、結果セット、出力パラメーター、リターン コードの 3 つがあります。 このトピックでは、3 つのアプローチについて説明します。  
   

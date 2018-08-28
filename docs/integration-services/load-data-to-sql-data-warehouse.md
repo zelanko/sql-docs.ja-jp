@@ -14,12 +14,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020656"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406657"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む
 
@@ -33,7 +33,7 @@ SQL Server Integration Services (SSIS) パッケージを作成して、[Azure S
 
 ## <a name="basic-concepts"></a>基本的な概念
 
-このパッケージは SSIS での処理の基本単位です。 関連パッケージがプロジェクト内でグループ化されます。 SQL Server Data Tools を使用して Visual Studio でプロジェクトの作成およびパッケージの設計を行います。 設計プロセスは視覚的なプロセスであり、ツールボックスからデザイン画面にコンポーネントをドラッグ アンド ドロップし、コンポーネント同士を接続し、それらのプロパティを設定します。 パッケージが完成したら、パッケージを実行し、必要に応じて、包括的な管理、監視、およびセキュリティ保護のためにパッケージを SQL Server に配置することができます。
+このパッケージは SSIS での処理の基本単位です。 関連パッケージがプロジェクト内でグループ化されます。 SQL Server Data Tools を使用して Visual Studio でプロジェクトの作成およびパッケージの設計を行います。 設計プロセスは視覚的なプロセスであり、ツールボックスからデザイン画面にコンポーネントをドラッグ アンド ドロップし、コンポーネント同士を接続し、それらのプロパティを設定します。 パッケージが完成したら、パッケージを実行し、必要に応じて、包括的な管理、監視、およびセキュリティ保護のためにパッケージを SQL Server または SQL Database に配置することができます。
 
 SSIS の詳細については、この記事では説明しません。 詳細については、以下の記事をお読みください。
 
@@ -196,7 +196,7 @@ SQL Server と SQL Data Warehouse に接続するには、ADO.NET 接続マネ�
 8. **ADO.NET 変換先エディター**で、**[マッピング]** タブを選択して、ソース内の列が変換先の列にどのようにマップされているか確認してください。
    
     ![][13]
-9. **[OK]** をクリックして、データ ソースの構成を完了します。
+9. **[OK]** をクリックして、変換先の構成を完了します。
 
 ## <a name="run-the-package-to-load-the-data"></a>パッケージを実行してデータを読み込む
 ツールバーの **[開始]** ボタンをクリックするか、**[デバッグ]** メニューの **[実行]** オプションのいずれかを選択してパッケージを実行します。

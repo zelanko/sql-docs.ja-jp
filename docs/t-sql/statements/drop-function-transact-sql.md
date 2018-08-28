@@ -26,15 +26,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1654d9d81598edb09c3fafe09b808ecbabe8c812
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 4d4ac6a599ae50b7dcbf84731e3e754a1e27b6ef
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458256"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40406201"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   1 つ以上のユーザー定義関数を現在のデータベースから削除します。 ユーザー定義関数は [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) を使って作成し、[ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) を使って変更します。  
   
@@ -61,7 +61,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## <a name="arguments"></a>引数  
  *IF EXISTS*    
- 条件付きでは既に存在する場合にのみ、関数を削除します。 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 以降および [!INCLUDE[sssds_md](../../includes/sssds_md.md)] で使用できます。
+ 条件付きでは既に存在する場合にのみ、関数を削除します。 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 以降および [!INCLUDE[sssds_md](../../includes/sssds-md.md)] で使用できます。
   
  *schema_name*  
  ユーザー定義関数が属するスキーマの名前を指定します。  

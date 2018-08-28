@@ -22,12 +22,12 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b60892548f532385ff12a011b3cb89d631dabbf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b9fcea82b032cd709385e7d981d04d108295f19e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404704"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406653"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>スクリプト コンポーネントによる同期変換の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内で変換コンポーネントを使用することにより、変換元から変換先にデータが受け渡される過程で、データを修正または分析できます。 同期出力型の変換では、各入力列はコンポーネントを通過するたびに処理されます。 非同期出力型の変換では、処理を完了するための入力列をすべて受け取ってから、処理が行われます。 このトピックでは、同期変換について説明します。 非同期変換については、「[スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)」を参照してください。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。  
@@ -45,7 +45,7 @@ ms.locfileid: "35404704"
  スクリプト コンポーネントのスクリプト言語を設定するには、**[スクリプト変換エディター]** の **[スクリプト]** ページにある **[ScriptLanguage]** プロパティを設定します。  
   
 > [!NOTE]  
->  スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「[[全般] ページ](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)」を参照してください。  
+>  スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「[[全般] ページ](../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
  データ フロー変換コンポーネントには 1 つの入力があり、1 つ以上の出力がサポートされます。 コンポーネントの入力および出力の設定は、メタデータ デザイン モードでカスタム スクリプトを記述する前に完了する必要のある手順の 1 つです。これを行うには、**[スクリプト変換エディター]** を使用します。  
   

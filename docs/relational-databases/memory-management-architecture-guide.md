@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: d214a7cbc835bb9fa3401ea3268027547cd752f3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008894"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405958"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008894"
 ## <a name="windows-virtual-memory-manager"></a>Windows 仮想メモリ マネージャー  
 Windows 仮想メモリ マネージャー (VMM) は、使用可能な物理メモリにコミット済みのアドレス空間をマップします。  
   
-さまざまなオペレーティング システムでサポートされている物理メモリ量の詳細については、Windows のマニュアルの「[Windows のリリース別のメモリ制限](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)」を参照してください。  
+さまざまなオペレーティング システムでサポートされている物理メモリ量の詳細については、Windows のマニュアルの「[Windows のリリース別のメモリ制限](/windows/desktop/Memory/memory-limits-for-windows-releases)」を参照してください。  
   
 仮想メモリ システムでは、仮想メモリと物理メモリの比率が 1:1 を超えるような物理メモリの設定を許可しています。 その結果、さまざまな物理メモリ構成のコンピューターで大規模なプログラムを実行できます。 しかし、すべてのプロセスの平均ワーキング セットを合わせた容量よりもはるかに大きな仮想メモリを使用すると、パフォーマンスが低下する可能性があります。 
 

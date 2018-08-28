@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 107a0ff4075d2071052657e7d38d71650c07fbf5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538142"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406753"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Always Encrypted と .NET Framework Data Provider を使用して開発する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 この例では、Patients テーブルに列を挿入します。 次のことを考慮してください。
 - このサンプル コードの暗号化に固有のものは何もありません。 .NET Framework Data Provider for SQL Server は、暗号化された列をターゲットとする *paramSSN* および *paramBirthdate* パラメーターを自動的に検出し、暗号化します。 これにより、アプリケーションに対して暗号化が透過的に実行されます。 
 - 暗号化された列を含め、データベース列に挿入された値は、 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) オブジェクトとして渡されます。 暗号化されていない列に値を送信する場合、 **SqlParameter** の使用は省略可能です (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします) が、暗号化された列をターゲットとする値に対しては必須です。 SSN 列または BirthDate 列に挿入された値が、クエリ ステートメントに埋め込まれているリテラルとして渡された場合、クエリは失敗します。これは、.NET Framework Data Provider for SQL Server が、暗号化されたターゲットの列の値を決定できず、値を暗号化できないためです。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
-- SSN 列をターゲットとするパラメーターのデータ型は、ANSI (非 Unicode) 文字列に設定され、char/varchar SQL Server データ型にマップされます。 パラメーターの型が Unicode 文字列 (String) に設定された場合、これらは nchar/nvarchar にマップされ、クエリは失敗します。これは、暗号化された nchar/nvarchar 値から暗号化された char/varchar 値への変換が Always Encrypted でサポートされていないためです。 データ型のマッピングについては、「 [SQL Server データ型のマッピング](https://msdn.microsoft.com/library/cc716729.aspx) 」を参照してください。
+- SSN 列をターゲットとするパラメーターのデータ型は、ANSI (非 Unicode) 文字列に設定され、char/varchar SQL Server データ型にマップされます。 パラメーターの型が Unicode 文字列 (String) に設定された場合、これらは nchar/nvarchar にマップされ、クエリは失敗します。これは、暗号化された nchar/nvarchar 値から暗号化された char/varchar 値への変換が Always Encrypted でサポートされていないためです。 データ型のマッピングについては、「 [SQL Server データ型のマッピング](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 」を参照してください。
 - BirthDate 列に挿入されるパラメーターのデータ型は、 [SqlParameter.DbType プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)の使用時に適用される SQL Server データ型への .NET 型の暗黙的なマッピングに依存することなく、 [SqlParameter.SqlDbType プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx)を使用してターゲット SQL Server データ型に明示的に設定されます。 既定では、 [DateTime 構造体](https://msdn.microsoft.com/library/system.datetime.aspx) は datetime の SQL Server データ型にマップされます。 BirthDate 列のデータ型は日付であり、暗号化された datetime 値から暗号化された date 値の変換は Always Encrypted でサポートされていないので、既定のマッピングを使用するとエラーになります。 
 
 ```

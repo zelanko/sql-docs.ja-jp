@@ -25,12 +25,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 811376d76608af8d75ab68649f0eea61bfb8a5c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041940"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405707"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -242,7 +242,7 @@ WHEN_SUPPORTED
   
 **DacFx**  
   
- ALTER DATABASE SCOPED CONFIGURATION は Azure SQL Database と SQL Server 2016 以降の SQL Server の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] など、以前のバージョンの SQL Server にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] データベースから [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) または [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) にエクスポートしたものは、下位レベルのサーバーにインポートできません。  
+ ALTER DATABASE SCOPED CONFIGURATION は Azure SQL Database と SQL Server 2016 以降の SQL Server の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] など、以前のバージョンの SQL Server にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] データベースから [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) または [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) にエクスポートしたものは、下位レベルのサーバーにインポートできません。  
 
 **ELEVATE_ONLINE** 
 

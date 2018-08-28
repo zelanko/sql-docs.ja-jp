@@ -17,19 +17,19 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2f957c9579d5474f2f8d33593ceb37e4fc9c8de3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 27198cb419bf47a73442f3dbc5708680230cf44f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39551472"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405726"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Always Encrypted で保護された機微なデータの移行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] から従来のツールで使用するためのものです。Always Encrypted を使用できないサードパーティの ETL (Extract-Transform-Load) ワークフローで使用する場合もあります。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプション  
- [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) と [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) の両方に ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションがあります。 このオプションを ON に設定すると (既定値は OFF)、一括コピー操作でサーバーに対する暗号化メタデータ チェックが抑制されます。これにより、ユーザーはデータの暗号化を解除せずにテーブルまたはデータベース間で暗号化されたデータの一括コピーを行うことができます。  
+ [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) と [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) の両方に ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションがあります。 このオプションを ON に設定すると (既定値は OFF)、一括コピー操作でサーバーに対する暗号化メタデータ チェックが抑制されます。これにより、ユーザーはデータの暗号化を解除せずにテーブルまたはデータベース間で暗号化されたデータの一括コピーを行うことができます。  
   
 ## <a name="data-migration-scenarios"></a>データの移行シナリオ  
 次の表では、いくつかの移行シナリオに適した推奨設定を示しています。  

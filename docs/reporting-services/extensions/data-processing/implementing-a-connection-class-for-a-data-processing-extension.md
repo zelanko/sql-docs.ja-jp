@@ -21,21 +21,21 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f77a34196a6299e07942fc5809b80cb81955cf08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 584087ad10018a0ba6f020c55256a8cb2d7486fe
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016349"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406730"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>データ処理拡張機能の Connection クラスの実装
   **Connection** オブジェクトはデータベース接続や類似するリソースを表し、ユーザーにとっては [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能の出発点です。 このオブジェクトはデータベース サーバーへの接続を表しますが、類似する動作を持つエンティティが **Connection** として表示される可能性があります。  
   
  **Connection** オブジェクトを実装するには、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> を実装し、オプションで <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> を実装するクラスを作成します。  
   
- 実装では、接続が作成され、開かれていることを確認した後でコマンドを実行する必要があります。 実装にはクライアントが接続を明示的に開閉する必要があります。実装がクライアントの接続を暗黙的に開閉するのではありません。 接続を取得したら、セキュリティ チェックを実行します。 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能で他のクラスの既存接続が必要な場合は、データ ソースの操作時にセキュリティ チェックが常に確実に実行されるようにします。  
+ 実装では、接続が作成され、開かれていることを確認した後でコマンドを実行する必要があります。 実装にはクライアントが接続を明示的に開閉する必要があります。実装がクライアントの接続を暗黙的に開閉するのではありません。 接続を取得したら、セキュリティ チェックを実行します。 [!INCLUDE[ssRS](../../../includes/ssrs.md)] データ処理拡張機能で他のクラスの既存接続が必要な場合は、データ ソースの操作時にセキュリティ チェックが常に確実に実行されるようにします。  
   
- 該当する接続のプロパティは、接続文字列として表されます。 OLE DB によって定義されている使い慣れた名前と値のペアを使用して、[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能で <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> プロパティをサポートすることを強くお勧めします。  
+ 該当する接続のプロパティは、接続文字列として表されます。 OLE DB によって定義されている使い慣れた名前と値のペアを使用して、[!INCLUDE[ssRS](../../../includes/ssrs.md)] データ処理拡張機能で <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> プロパティをサポートすることを強くお勧めします。  
   
 > [!NOTE]  
 >  **Connection** オブジェクトの取得にリソースが大きく消費されることがあるため、接続のプールなどの技法を検討してこの問題を緩和してください。  

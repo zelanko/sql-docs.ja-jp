@@ -14,13 +14,14 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7846c9f5cfbc15f88a1cc10f38eaa9542f6c0648
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5ef475eecf39d57e0ae27fae5e80c18d85a67ff8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050230"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405343"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 管理ツールのアップグレード
 
@@ -36,7 +37,7 @@ ms.locfileid: "38050230"
   
 ### <a name="for-all-upgrade-scenarios"></a>すべてのアップグレード シナリオに共通  
   
-- MSX サーバーをアップグレードする前に、すべての TSX サーバーをアップグレードする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の MSX と TSX の詳細については、「 [エンタープライズ全体の管理の自動化](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)」を参照してください。  
+- MSX サーバーをアップグレードする前に、すべての TSX サーバーをアップグレードする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の MSX と TSX の詳細については、「 [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)」を参照してください。  
   
 -   1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのコンポーネントはすべて同時にアップグレードする必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのバージョン番号は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンス内で同一であることが必要です。  
   

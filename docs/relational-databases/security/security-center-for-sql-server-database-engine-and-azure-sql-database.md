@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 02cd230fa1ec5201d58daffeb3adcfb1c776258c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b30f2aab84336108d7bbeb11d870cc2c999ddaf5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559292"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405718"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "39559292"
   
  アプリケーション プログラマ向けのその他のリンク:  
   
--   [SQL Server におけるアプリケーション セキュリティのシナリオ](https://msdn.microsoft.com/library/bb669057.aspx)  
+-   [SQL Server におけるアプリケーション セキュリティのシナリオ](/dotnet/framework/data/adonet/sql/application-security-scenarios-in-sql-server)  
   
--   [SQL Server での安全な動的 SQL の作成](https://msdn.microsoft.com/library/bb669091.aspx)  
+-   [SQL Server での安全な動的 SQL の作成](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
 -   [How To: ASP.NET で SQL インジェクションから保護する方法](https://msdn.microsoft.com/library/ff648339.aspx)  
   

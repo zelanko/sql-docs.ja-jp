@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7785f0ad361b88931123f2dd9eb229064a9ca953
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983124"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406637"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 の各エディションがサポートする Reporting Services の機能
 
@@ -96,13 +96,13 @@ Evaluation Edition および Developer Edition でサポートされている機
   
 |ツール名|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl、.rds)|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl、.rds)|[ユーザー アカウント制御]|はい|||||[ユーザー アカウント制御]|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
 |モバイル デバイス (iOS、Windows 10、Android) 用 Power BI アプリ (.rsmobile)|[ユーザー アカウント制御]||||||[ユーザー アカウント制御]|  
   
 > [!NOTE]  
 > 1.  上記の表は、これらのクライアント ツールを有効にするために必要な [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションを示しています。ただし、これらのツールは、どのエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]にホストされているデータにもアクセスできます。  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] モバイル レポートの作成の単一ポイントです。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバーに接続してデータ ソースにアクセスし、レポートを作成します。 次に、それらを [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバーにパブリッシュすることで、組織内の他のユーザーがサーバーまたはモバイル デバイスでアクセスできるようにします。 ローカル データ ソースの場合は、 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] スタンド アロンを使用することもできます。  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] モバイル レポートの作成の単一ポイントです。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバーに接続してデータ ソースにアクセスし、レポートを作成します。 次に、それらを [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバーにパブリッシュすることで、組織内の他のユーザーがサーバーまたはモバイル デバイスでアクセスできるようにします。 ローカル データ ソースの場合は、 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] スタンド アロンを使用することもできます。  
 > 3.  オンプレミスの  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 、クラウドの [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 、またはその両方のいずれをレポート配信ソリューションとして使用しても、モバイル デバイスでダッシュボードおよびモバイル レポートにアクセスするために必要なのは、1 つのモバイル アプリのみです。 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] アプリは Windows、iOS、または Android アプリ ストアからダウンロードできます。  
 
 ## <a name="next-steps"></a>次の手順

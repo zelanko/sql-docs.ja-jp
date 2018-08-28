@@ -1,7 +1,7 @@
 ---
 title: レポート サーバーの構成と管理 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-server-sharepoint
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7959539dde52351bc9679b9b4629e2d1a4105562
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c84d2843e967c9fd825f84635b9f7f25a6a8b380
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049140"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406563"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>SQL Server Reporting Services (SSRS) レポート サーバーの構成と管理
 
@@ -63,6 +63,4 @@ SQL Server Reporting Services は、組織で利用するレポートの作成�
   
 -   [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- Reporting Services に関する一般的な情報については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネント、ツール、およびリソースについては、 [SQL Server オンライン ブック](../../sql-server/sql-server-technical-documentation.md)を参照してください。  
-
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

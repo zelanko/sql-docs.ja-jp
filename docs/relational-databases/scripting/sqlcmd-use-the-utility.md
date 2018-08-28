@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b5704d8ceee75ee6943f331ee532902901e9f4f2
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: e6ac7b37662a3435a8824616cc609882b552b672
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548652"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406749"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -562,7 +562,7 @@ SQLCMD –E –N –C
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
  [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [クエリ エディターによる SQLCMD スクリプトの編集](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
- [ジョブ ステップの管理](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [CmdExec ジョブ ステップの作成](http://msdn.microsoft.com/library/b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c)  
+ [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)   
+ [CmdExec ジョブ ステップの作成](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

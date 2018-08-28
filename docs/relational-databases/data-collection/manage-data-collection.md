@@ -19,12 +19,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 777204c7192a9b74f8730f47898a3fb175b5c322
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2405449dad69e386aa267f683c672533b3c02276
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145563"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406752"
 ---
 # <a name="manage-data-collection"></a>データ コレクションの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "33145563"
   
 >**[重要です!]** 通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、付属のコード サンプルを作成して実行します。 詳細については、「 [オブジェクト エクスプローラー](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 このクエリは、Windows コマンド プロンプトから **sqlcmd** ユーティリティを使用して実行できます。 詳細については、「 [sqlcmd Utility の使用](../../relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、付属のコード サンプルを作成して実行します。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 このクエリは、Windows コマンド プロンプトから **sqlcmd** ユーティリティを使用して実行できます。 詳細については、「 [sqlcmd Utility の使用](../../relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
   
 ### <a name="stored-procedures-and-views"></a>ストアド プロシージャとビュー  
  **データ コレクターの操作**  
   
  次の表に、データ コレクターの操作に使用できるストアド プロシージャを示します。  
   
-|プロシージャ名|Description|  
+|プロシージャ名|[説明]|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|データ コレクターを有効にします。|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|データ コレクターを無効にします。|  
@@ -84,7 +84,7 @@ ms.locfileid: "33145563"
   
  次の表に、コレクション セットの操作に使用できるストアド プロシージャを示します。  
   
-|プロシージャ名|Description|  
+|プロシージャ名|[説明]|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|コレクション セットを要求時に実行します。|  
 |[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|コレクション セットを開始します。|  
@@ -98,7 +98,7 @@ ms.locfileid: "33145563"
   
  次の表に、コレクション アイテムの操作に使用できるストアド プロシージャを示します。  
   
-|プロシージャ名|Description|  
+|プロシージャ名|[説明]|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|コレクション アイテムを作成します。|  
 |[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|コレクション アイテムを削除します。|  
@@ -108,7 +108,7 @@ ms.locfileid: "33145563"
   
  次の表に、コレクター型の操作に使用できるストアド プロシージャを示します。  
   
-|プロシージャ名|Description|  
+|プロシージャ名|[説明]|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|コレクター型を作成します。|  
 |[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|コレクター型を更新します。|  
@@ -118,7 +118,7 @@ ms.locfileid: "33145563"
   
  次の表に、構成情報や実行ログ データの取得に使用できるビューを示します。  
   
-|ビュー名|Description|  
+|ビュー名|[説明]|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|データ コレクターの構成を取得します。|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|コレクション アイテムの情報を取得します。|  
@@ -132,7 +132,7 @@ ms.locfileid: "33145563"
   
  次の表に、管理データ ウェアハウスへのアクセスの構成に使用できるストアド プロシージャを示します。  
   
-|プロシージャ名|Description|  
+|プロシージャ名|[説明]|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|管理データ ウェアハウスの接続文字列で定義されているデータベース名を指定します。|  
 |[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|管理データ ウェアハウスの接続文字列で定義されているインスタンスを指定します。|  
@@ -141,7 +141,7 @@ ms.locfileid: "33145563"
   
  次の表に、管理データ ウェアハウスの構成の操作に使用できるストアド プロシージャを示します。  
   
-|プロシージャ名|Description|  
+|プロシージャ名|[説明]|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|管理データ ウェアハウス内にコレクションのスナップショットを作成します。|  
 |[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|データ コレクションのデータ ソースを更新します。|  
@@ -153,7 +153,7 @@ ms.locfileid: "33145563"
   
  次の表に、アップロード パッケージの操作に使用できるストアド プロシージャを示します。  
   
-|プロシージャ名|Description|  
+|プロシージャ名|[説明]|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|データのアップロードの再試行回数を構成します。|  
 |[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|アップロードを次に再試行するまでのデータの一時ストレージを指定します。|  
@@ -162,14 +162,14 @@ ms.locfileid: "33145563"
   
  次の表に、データ コレクションの実行ログの操作に使用できるストアド プロシージャを示します。  
   
-|プロシージャ名|Description|  
+|プロシージャ名|[説明]|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|実行ログからコレクション セットのエントリを削除します。|  
   
 ### <a name="functions"></a>関数  
  次の表に、実行情報とトレース情報の取得に使用できる関数を示します。  
   
-|関数名|Description|  
+|関数名|[説明]|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|特定のパッケージに関する [!INCLUDE[ssIS](../../includes/ssis-md.md)] の実行ログ データを取得します。|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|コレクション セットまたはパッケージの実行統計を取得します。 この情報には、ログに記録されたエラーが含まれます。|  

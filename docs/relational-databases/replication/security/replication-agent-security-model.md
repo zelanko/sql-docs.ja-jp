@@ -25,12 +25,12 @@ caps.latest.revision: 72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ec5d963309568078b0fa942c8285f7189e7e7eb
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 676a3f07347ed69d68661c2406f26c0c00c901fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358364"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405716"
 ---
 # <a name="replication-agent-security-model"></a>レプリケーション エージェントのセキュリティ モデル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "37358364"
   
  レプリケーション エージェントは、他の実行可能プログラムと同様に、Windows アカウントのコンテキストで実行されます。 このアカウントを使用して、Windows 統合セキュリティ接続が作成されます。 エージェントを実行するアカウントは、エージェントの開始方法で決まります。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブからエージェントを開始する (既定) : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブを使用してレプリケーション エージェントを開始すると、エージェントはレプリケーションを構成するときに指定したアカウントのコンテキストで実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントおよびレプリケーションの詳細については、このトピックの「SQL Server エージェントのエージェント セキュリティ」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを実行するアカウントに必要な権限の詳細については、「[Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)」 (SQL Server エージェントの構成) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブからエージェントを開始する (既定) : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブを使用してレプリケーション エージェントを開始すると、エージェントはレプリケーションを構成するときに指定したアカウントのコンテキストで実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントおよびレプリケーションの詳細については、このトピックの「SQL Server エージェントのエージェント セキュリティ」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを実行するアカウントに必要な権限の詳細については、「[Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)」 (SQL Server エージェントの構成) を参照してください。  
   
 -   MS-DOS コマンド ラインから直接、またはスクリプトによってエージェントを開始する : エージェントは、コマンド ラインでエージェントを実行しているユーザーのアカウントのコンテキストで実行されます。  
   

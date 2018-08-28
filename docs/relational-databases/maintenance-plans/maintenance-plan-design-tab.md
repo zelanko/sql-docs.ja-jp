@@ -20,18 +20,18 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2459b8508cc7b69225b21aef96148978897d3ff7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f069527720dd29cf9491f9a42b6b0acfab66f28
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945718"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409410"
 ---
 # <a name="maintenance-plan-design-tab"></a>[メンテナンス プラン] ([デザイン] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[メンテナンス プラン]** ([デザイン] タブ) では、メンテナンス プランとそのサブプランのプロパティを指定します。 ツールボックスのタスクをプラン デザイナーにドラッグします。 タスクのグループを右クリックし、分岐する実行パスを作成します。 メンテナンス プランは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブで実行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージとして保存されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[サブプランの追加]**  
  構成できるサブプランを追加します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32945718"
  **[レポートとログ記録]** ダイアログ ボックスが表示されます。これは、メンテナンス プランの利用状況に関するレポートの管理、およびローカル サーバーやリモート サーバーへのログ記録の構成に使用されます。  
   
  **サーバー**  
- **[サーバー]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、サブプラン タスクを実行するサーバーを選択します。 このオプションは、マルチサーバー環境のマスター サーバーのみで有効になります。 詳細については、「 [マルチサーバー環境の作成](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)」を参照してください。  
+ **[サーバー]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、サブプラン タスクを実行するサーバーを選択します。 このオプションは、マルチサーバー環境のマスター サーバーのみで有効になります。 詳細については、「 [マルチサーバー環境の作成](../../ssms/agent/create-a-multiserver-environment.md)」を参照してください。  
   
  **名前**  
  メンテナンス プランの名前が表示されます。 新しいメンテナンス プランの名前は、メンテナンス プラン デザイナーを開く前にダイアログ ボックスで指定します。 メンテナンス プランの名前を変更するには、オブジェクト エクスプローラーでプランを右クリックし、 **[名前の変更]** をクリックします。  

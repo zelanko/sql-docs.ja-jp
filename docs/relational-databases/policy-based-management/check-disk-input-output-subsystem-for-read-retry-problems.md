@@ -18,12 +18,12 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92c20aa9e6cdd5d7747093583b2230299702df85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30d264f29716d954e0b627e1b3ce14c34de86660
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951897"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406552"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>ディスク I/O サブシステムの読み取り再試行の問題の確認
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "32951897"
 -   ドライバーの最新の更新があるかどうか、ディスクの製造元に問い合わせる。  
   
 ## <a name="for-more-information"></a>詳細情報  
- [MSSQLSERVER_825](http://msdn.microsoft.com/library/f69f8214-5af1-4769-878b-117ad6eaff52)  
+ [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)  
   
  [SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?linkid=69370)  
   

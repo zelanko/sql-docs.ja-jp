@@ -1,4 +1,4 @@
-﻿---
+---
 title: ページ復元 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -23,12 +23,12 @@ caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ad3206ff6ccec7db89dcf745b4dd03066e076589
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d62309de45f34f341857c806051df372145e1e64
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922467"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405571"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ ms.locfileid: "32922467"
     > [!WARNING]  
     >  破損していない特定のページを復元するには、 **[追加]** をクリックし、復元するページの **[ファイル ID]** と **[ページ ID]** を入力します。  
   
-5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「[suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)」を参照してください。  
+5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
   
 6.  **[バックアップ セット]** グリッドに、既定の復元プランのバックアップ セットが一覧表示されます。 必要に応じて **[確認]** をクリックし、バックアップが読み取り可能かどうか、また、バックアップ セットに不備がないかどうかを、実際には復元せずに確認します。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」をご覧ください。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "32922467"
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |エラー ログ|[SQL Server エラー ログの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |イベント トレース|[イベントの監視と応答](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
+    |イベント トレース|[イベントの監視と応答](../../ssms/agent/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |WMI プロバイダー|[WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   

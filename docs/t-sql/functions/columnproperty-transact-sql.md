@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782593"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405809"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ COLUMNPROPERTY ( id , column , property )
 |**IsCursorType**|プロシージャ パラメーターは CURSOR 型です。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
 |**IsDeterministic**|列は決定的です。 このプロパティは、計算列およびビュー列にのみ適用されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力 (計算列またはビュー列ではありません)|  
 |**IsFulltextIndexed**|列はフルテキスト インデックス作成用に登録されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
-|**IsHidden**|システムによって生成された列の値です。 **sys.columns.is_hidden** に対応します|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0 = 非表示ではない<br /><br /> 1: 非表示|  
+|**IsHidden**|システムによって生成された列の値です。 **sys.columns.is_hidden** に対応します|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0 = 非表示ではない<br /><br /> 1: 非表示|  
 |**IsIdentity**|列で IDENTITY プロパティを使用します。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
 |**IsIdNotForRepl**|列で IDENTITY_INSERT の設定が確認されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
 |**IsIndexable**|列にインデックスを作成できます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  

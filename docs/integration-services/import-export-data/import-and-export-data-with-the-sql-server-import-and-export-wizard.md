@@ -27,16 +27,16 @@ caps.latest.revision: 160
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c97ea19edfb53ddbf09316fa61f0ad6f97743cf6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4284526fac130ede0cf85ef0c02ca9d0487b2554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402144"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406099"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする
 
- > 以前のバージョンの SQL Server に関するコンテンツについては、「[SQL Server インポートおよびエクスポート ウィザードを実行する](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx)」をご覧ください。
+ > 以前のバージョンの SQL Server に関するコンテンツについては、「[SQL Server インポートおよびエクスポート ウィザードを実行する](start-the-sql-server-import-and-export-wizard.md)」をご覧ください。
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは、変換元から変換先にデータをコピーするための単純な方法です。 この概要では、ウィザードで変換元および変換先として使うことができるデータ ソースと、ウィザードを実行するために必要なアクセス許可について説明します。
 

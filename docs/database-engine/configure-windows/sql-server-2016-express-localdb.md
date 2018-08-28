@@ -20,18 +20,18 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ffd3813cef86b31c439981ab03aa318b152620c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984504"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406641"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 以前のバージョンの SQL Server に関連するコンテンツの詳細については、「[SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx)」を参照してください。
 
-Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) の機能です。 SQL Server 2016 Express with Advanced Services で利用できます。  
+Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) の機能です。 SQL Server 2016 Express with Advanced Services で利用できます。  
 
  **LocalDB** インストールによって、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の開始に最低限必要なファイルがコピーされます。 LocalDB のインストール後に、特殊な接続文字列を使用して接続を開始できます。 接続時に、必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャが自動的に作成および開始されるため、複雑な構成タスクを行わなくてもアプリケーションでデータベースを使用できます。 開発者ツールによって、開発者は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを記述してテストすることができ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の完全なサーバー インスタンスを管理する必要はありません。 
  

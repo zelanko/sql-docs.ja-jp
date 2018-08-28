@@ -18,7 +18,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 61359be082f8b5fa9ea9a30df2c1d9888b6da6d7
 ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/06/2018
 ms.locfileid: "39563466"
@@ -40,18 +40,18 @@ ms.locfileid: "39563466"
   
 |SQL Server 2005 の型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降)型|ODBC クライアントの型|結果の変換 (SQL から C へ)|パラメーターの変換 (C から SQL へ)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|date|SQL_C_TYPE_DATE|[OK]|[OK] /(1)|  
-|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK /(2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK] /(1)|  
+|DATETIME|date|SQL_C_TYPE_DATE|[OK]|[OK] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK \(2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK] \(1)|  
 |||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time(7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|[OK] /(1)|  
-|||SQL_C_TYPE_TIMESTAMP|失敗します (時刻リテラルが無効です)。|[OK] /(1)|  
-||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK] /(1)|  
+||Time(7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|[OK] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|失敗します (時刻リテラルが無効です)。|[OK] \(1)|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK] \(1)|  
 ||datetime2 (7)|SQL_C_TYPE_TIMESTAMP|[OK]|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|[OK]|[OK]|  
-|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK \(2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK]|  
-|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK \(2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK]|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
