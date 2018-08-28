@@ -18,11 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037dce27c8c237b28a5575de76d0f9adb36a4054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0227077885117994437fc6f2d9bb4aa712706d70
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774345"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,12 +40,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>Remarks  
 **[編集]** コマンドおよび **[変更]** コマンドを実行した場合は、同じオプション設定に対して **[<object> をスクリプト化]** コマンドを実行した場合と異なる結果になることがあります。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **[<object> をスクリプト化]** コマンドは、後でオブジェクトの作成に使用できるスクリプトを生成するために設計されています。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。  
   
 ### <a name="general-scripting-options"></a>全般スクリプト作成オプション  
 **[各ステートメントを区切る]**  
-バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)」を参照してください。  
+バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)」を参照してください。  
   
 **[説明用ヘッダーを含める]**  
 スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、「 [/*...*/ (コメント) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)」を参照してください。  
@@ -69,7 +70,7 @@ vardecimal ストレージ オプションを含めます。 既定値は False 
 選択したオブジェクトのスクリプトを実行する際に必要な追加オブジェクトのスクリプトを生成します。 既定値は False です。  
   
 **[オブジェクト名を修飾するスキーマ]**  
-オブジェクト名をオブジェクト スキーマで修飾します。 既定値は False です。 詳細については、「 [データベース スキーマの作成](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739)」を参照してください。  
+オブジェクト名をオブジェクト スキーマで修飾します。 既定値は False です。 詳細については、「 [データベース スキーマの作成](../../relational-databases/security/authentication-access/create-a-database-schema.md)」を参照してください。  
 
 **[データ圧縮オプションのスクリプトを作成]** データ圧縮オプションをスクリプトに含めます。 既定値は False です。
 
@@ -80,7 +81,7 @@ vardecimal ストレージ オプションを含めます。 既定値は False 
 生成されたスクリプトに所有者を含めます。 既定値は False です。  
   
 **[権限のスクリプトを作成]**  
-データベース オブジェクトに対する権限をスクリプトに含めます。 既定値は True です。 詳細については、「 [アクセス許可](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9)」を参照してください。  
+データベース オブジェクトに対する権限をスクリプトに含めます。 既定値は True です。 詳細については、「 [アクセス許可](../../relational-databases/security/permissions-database-engine.md)」を参照してください。  
   
 ### <a name="tableview-options"></a>テーブル/ビュー オプション  
 次のオプションは、テーブルまたはビューのスクリプトのみに適用されます。  
@@ -92,7 +93,7 @@ vardecimal ストレージ オプションを含めます。 既定値は False 
 各 CREATE TABLE ステートメントの前後に SET ANSI_PADDING ステートメントを追加します。 既定値は True です。 詳細については、「 [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0)」を参照してください。  
   
 **[照合順序を含める]**  
-列定義に照合順序を含めます。 既定値は True です。 詳細については、「 [Collation and Unicode Support](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb)」を参照してください。  
+列定義に照合順序を含めます。 既定値は True です。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
 **[IDENTITY プロパティを含める]**  
 IDENTITY シードおよび IDENTITY インクリメントの定義を含めます。 既定値は True です。 詳細については、「 [IDENTITY (プロパティ) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c)」を参照してください。  
@@ -104,7 +105,7 @@ FOREIGN KEY 制約のテーブル参照にスキーマ名を追加します。 �
 バインド ストアド プロシージャ **sp_bindefault** および **sp_bindrule** の呼び出しを含めます。 既定値は True です。 詳細については、「 [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) 」と「 [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67)」を参照してください。  
   
 **[CHECK 制約のスクリプトを作成]**  
-スクリプトに [CHECK 制約](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) を追加します。 既定値は True です。  
+スクリプトに [CHECK 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md) を追加します。 既定値は True です。  
   
 **[既定のスクリプトを作成]**  
 スクリプトに列の既定値を含めます。 既定値は False です。 詳細については、「 [CREATE DEFAULT (Transact-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41)」を参照してください。  
@@ -113,7 +114,7 @@ FOREIGN KEY 制約のテーブル参照にスキーマ名を追加します。 �
 テーブル定義で ON 句にファイル グループを指定します。 既定値は False です。 詳細については、「 [CREATE TABLE (Transact-SQL)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b)」を参照してください。  
   
 **[外部キーのスクリプトを作成]**  
-スクリプトに [FOREIGN KEY 制約](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) を含めます。 既定値は False です。  
+スクリプトに [FOREIGN KEY 制約](../../relational-databases/tables/primary-and-foreign-key-constraints.md) を含めます。 既定値は False です。  
   
 **[フルテキスト インデックスのスクリプトを作成]**  
 スクリプトにフルテキスト インデックスを含めます。 既定値は False です。 詳細については、「 [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)」を参照してください。  
@@ -125,7 +126,7 @@ FOREIGN KEY 制約のテーブル参照にスキーマ名を追加します。 �
 スクリプトにテーブル パーティション分割構成を含めます。 既定値は False です。 詳細については、「 [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4)」を参照してください。  
   
 **[主キーのスクリプトを作成]**  
-スクリプトに [PRIMARY KEY 制約](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) を含めます。 既定値は True です。  
+スクリプトに [PRIMARY KEY 制約](../../relational-databases/tables/primary-and-foreign-key-constraints.md) を含めます。 既定値は True です。  
   
 **[統計のスクリプトを作成]**  
 スクリプトにユーザー定義統計を含めます。 既定値は False です。 詳細については、「 [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2)」をご覧ください。  
@@ -134,7 +135,7 @@ FOREIGN KEY 制約のテーブル参照にスキーマ名を追加します。 �
 スクリプトにトリガーを含めます。 既定値は False です。 詳細については、「 [CREATE TRIGGER (Transact-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7)」をご覧ください。  
   
 **[一意キーのスクリプトを作成]**  
-スクリプトに [UNIQUE 制約と CHECK 制約](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) を含めます。 既定値は False です。  
+スクリプトに [UNIQUE 制約と CHECK 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md) を含めます。 既定値は False です。  
   
 **[ビュー列のスクリプトを作成]**  
 ビュー ヘッダーにビュー列を宣言します。 既定値は False です。 詳細については、「 [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9)」を参照してください。  
@@ -151,7 +152,7 @@ FOREIGN KEY 制約のテーブル参照にスキーマ名を追加します。 �
 **[データベース エンジンの種類に対応したスクリプト]** 生成されたスクリプトは、指定した[データベース エンジンの種類](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx)のターゲットになります。
 
 **[サーバーのバージョン互換のスクリプト]**  
-生成されたスクリプトは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の指定したバージョンのターゲットになります。 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] の新機能のスクリプトを以前のバージョン用に生成することはできません。 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 用に作成したスクリプトには、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]で動作しているサーバーや、以前の [データベース互換性レベルの設定](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6)が適用されているデータベースに対して実行できないものもあります。  
+生成されたスクリプトは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したバージョンのターゲットになります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の新機能のスクリプトを以前のバージョン用に生成することはできません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用に作成したスクリプトには、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で動作しているサーバーや、以前の [データベース互換性レベルの設定](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が適用されているデータベースに対して実行できないものもあります。  
 
 ## <a name="see-also"></a>参照  
 [スクリプトの生成 (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  

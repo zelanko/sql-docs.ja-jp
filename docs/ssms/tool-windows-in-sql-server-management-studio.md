@@ -18,26 +18,26 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1a7706eb126c28a40f06917ea6b7e976ce89efb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d5ba9b644ab7712b6ac52c26761e1a15435be1fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031999"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775415"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio のツール ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] には、開発と管理のあらゆる段階で使用できる強力なツール ウィンドウが数多く用意されています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] のあらゆるコンポーネントで使用できるツールもあれば、特定のコンポーネントだけで使用できるツールもあります。 次の表に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]のすべてのコンポーネントで使用できるツールを示します。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、開発と管理のあらゆる段階で使用できる強力なツール ウィンドウが数多く用意されています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のあらゆるコンポーネントで使用できるツールもあれば、特定のコンポーネントだけで使用できるツールもあります。 次の表に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのコンポーネントで使用できるツールを示します。  
   
 |||  
 |-|-|  
 |**ツール**|**用途**|  
 |[[オブジェクト エクスプローラー]](../ssms/object/object-explorer.md)|サーバー内の表示、オブジェクトの作成と検索、データ ソースの管理、ログの表示を行います。 このツールには、 **[表示]** メニューからアクセスできます。|  
-|[ソリューション エクスプローラー](../ssms/solution/solution-explorer.md)|[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] スクリプトというプロジェクトにスクリプトや関連する接続情報を格納して整理します。 複数の [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] スクリプトをソリューションとして格納することや、ソース管理を使用してスクリプトの開発過程を管理することも可能です。 このツールには、 **[表示]** メニューからアクセスできます。|  
+|[ソリューション エクスプローラー](../ssms/solution/solution-explorer.md)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スクリプトというプロジェクトにスクリプトや関連する接続情報を格納して整理します。 複数の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スクリプトをソリューションとして格納することや、ソース管理を使用してスクリプトの開発過程を管理することも可能です。 このツールには、 **[表示]** メニューからアクセスできます。|  
 |[テンプレート エクスプローラー](../ssms/template/template-explorer.md)|既存のテンプレートに基づいてクエリを作成します。 カスタム クエリを作成することや、既存のテンプレートをそれぞれのシナリオに合わせて変更することも可能です。 このツールには、 **[表示]** メニューからアクセスできます。|  
 |[ダイナミック ヘルプを表示する](../ssms/user-assistance-in-sql-server-management-studio.md)|コンポーネントのクリックやコードの入力に対応して、関連するヘルプ トピックの一覧を表示します。|  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] の各ツールは、連携して機能します。 たとえば、以下のような操作が可能です。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の各ツールは、連携して機能します。 たとえば、以下のような操作が可能です。  
   
 -   オブジェクト エクスプローラーでサーバーを登録する。  
   

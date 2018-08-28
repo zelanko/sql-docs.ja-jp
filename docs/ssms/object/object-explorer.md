@@ -31,27 +31,27 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5409a2d155631e72d29752751d8fb294acc8ca8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cb565e830ac0f773299c3cace9afb36d19f1bbb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041559"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774082"
 ---
 # <a name="object-explorer"></a>オブジェクト エクスプローラー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] には、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]のインスタンス内のオブジェクトを管理するための機能が備わっています。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンス内のオブジェクトを管理するための機能が備わっています。  
   
 ## <a name="benefits-of-object-explorer"></a>オブジェクト エクスプローラーの利点  
 オブジェクト エクスプローラーは、SQL Server の各インスタンスのオブジェクトを表示し、管理するための階層形式のユーザー インターフェイスを備えています。 [オブジェクト エクスプローラーの詳細] ペインには、インスタンス オブジェクトの表形式のビューと、特定のオブジェクトを検索する機能が用意されています。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
   
 ## <a name="object-explorer-tasks"></a>オブジェクト エクスプローラーのタスク  
   
-|Description|トピック|  
+|[説明]|トピック|  
 |---------------|---------|  
 |オブジェクト エクスプローラーを開いて、その動作を定義するオプションを構成する方法について説明します。|[オブジェクト エクスプローラーを開き、構成する](../../ssms/object/open-and-configure-object-explorer.md)|  
-|[!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]のインスタンスにオブジェクト エクスプローラーを接続する方法について説明します。|[オブジェクト エクスプローラーからインスタンスへの接続](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
+|[!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスにオブジェクト エクスプローラーを接続する方法について説明します。|[オブジェクト エクスプローラーからインスタンスへの接続](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |オブジェクト エクスプローラーの階層内のノードとして表されるオブジェクトを管理する方法について説明します。|[オブジェクト エクスプローラーを使用したオブジェクトの管理](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |サーバーのすべてのオブジェクトを表形式で表示し、それらを管理するためのユーザー インターフェイスを備えた [オブジェクト エクスプローラーの詳細] ペインについて説明します。|[[オブジェクト エクスプローラーの詳細] ペイン](../../ssms/object/object-explorer-details-pane.md)|  
-|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]でカスタム レポートを実行する方法について説明します。|[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)|  
+|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でカスタム レポートを実行する方法について説明します。|[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)|  
   

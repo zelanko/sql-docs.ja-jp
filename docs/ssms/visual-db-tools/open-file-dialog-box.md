@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997924"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775739"
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37997924"
 このダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[開く]** をクリックし、 **[ファイル]** をクリックします。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスなどの他の要素のファイルを開く場合にも表示されます。 **[ファイル]** メニューの **[開く]** を選択し、 **[プロジェクト/ソリューション]** を選択して、同様の **[プロジェクトを開く]** ダイアログ ボックスを開きます。  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]でプロジェクトやコンポーネントを開く前に、コードが信頼できるものかどうかを確認してください。 プロジェクトまたはコンポーネントを [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] で開くと、それらのコードがローカル コンピューター上で信頼されたプロセスとして実行される場合があります。  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でプロジェクトやコンポーネントを開く前に、コードが信頼できるものかどうかを確認してください。 プロジェクトまたはコンポーネントを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で開くと、それらのコードがローカル コンピューター上で信頼されたプロセスとして実行される場合があります。  
   
 ## <a name="option"></a>オプション  
 **[探す場所]**  

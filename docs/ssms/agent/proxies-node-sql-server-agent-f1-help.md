@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6ccdfa2a2592fab6157231823d321358120955f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79edc3ecdc1af47ffbdb9f263de30f29817961c3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039769"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774316"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>[プロキシ] ノード (SQL Server エージェントの F1 ヘルプ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-ここでは、 **のオブジェクト エクスプローラーの** [プロキシ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]ノードに関する F1 ヘルプについて紹介します。  
+ここでは、 **のオブジェクト エクスプローラーの** [プロキシ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードに関する F1 ヘルプについて紹介します。  
   

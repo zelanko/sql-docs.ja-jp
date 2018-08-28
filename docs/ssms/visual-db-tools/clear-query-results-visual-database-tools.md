@@ -21,16 +21,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87ad2f292481d44c10dba92fe6e122ac71560f91
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dc8b19a65fa85972915774d14315ac67ef85391b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988892"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774916"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>クエリ結果の消去 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**クエリおよびビュー デザイナー**でクエリを実行した後、結果ペインの内容を消去できます。 この手順は、オブジェクト エクスプローラーで **[ビューを開く]** オプション、または **[テーブルを開く]** オプションを使用して作成されたクエリに当てはまります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]のクエリ エディターでクエリを実行した場合は、クエリ エディター ウィンドウを閉じるか別のクエリを実行しないと結果ペインの内容が消去されません。  
+**クエリおよびビュー デザイナー**でクエリを実行した後、結果ペインの内容を消去できます。 この手順は、オブジェクト エクスプローラーで **[ビューを開く]** オプション、または **[テーブルを開く]** オプションを使用して作成されたクエリに当てはまります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターでクエリを実行した場合は、クエリ エディター ウィンドウを閉じるか別のクエリを実行しないと結果ペインの内容が消去されません。  
   
 > [!NOTE]  
 > 結果ペインを消去しても、データベースに対して行った変更は取り消されません。 結果ペインの動作については、「 [結果ペインのデータの操作 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)」を参照してください。  

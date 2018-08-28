@@ -21,16 +21,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4eac1ca30c2b83ca3086d602b58985c0436ff5eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a84882745a60e3a13c95072f1792e468d04a37cd
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042629"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775411"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>サーバー接続の F1 ヘルプ (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-ここでは、 **の** [サーバーへの接続] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
+ここでは、 **の** [サーバーへの接続] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
   
 [[サーバーの参照] ([ローカル サーバー])](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

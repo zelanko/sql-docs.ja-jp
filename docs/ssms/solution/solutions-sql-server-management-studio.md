@@ -21,19 +21,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9741b7db06a3be3adb6eb86f044fd7403fe1c2c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a69fb847726732f3b1321593655f29c3bb2f6d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043469"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774319"
 ---
 # <a name="solutions-sql-server-management-studio"></a>ソリューション (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ソリューションは、1 つまたは複数の関連プロジェクトのコレクションです。 プロジェクトは、一般的に使用される管理スクリプトなどの関連ファイルを編成するために開発者が使用できるコンテナーです。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ソリューションは、1 つまたは複数の関連プロジェクトのコレクションです。 プロジェクトは、一般的に使用される管理スクリプトなどの関連ファイルを編成するために開発者が使用できるコンテナーです。  
   
 ## <a name="solution-overview"></a>ソリューションの概要  
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde_md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]のスクリプト開発プラットフォームとして使用できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] コード エディターでは、リレーショナル データベースや多次元データベースのスクリプトおよびクエリを開発し、プロジェクト内で関連するスクリプトおよびクエリをまとめて収集することができます。  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde_md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]のスクリプト開発プラットフォームとして使用できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] コード エディターでは、リレーショナル データベースや多次元データベースのスクリプトおよびクエリを開発し、プロジェクト内で関連するスクリプトおよびクエリをまとめて収集することができます。  
   
 プロジェクトには以下を含めることができます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33043469"
   
 -   クエリおよびスクリプトで使用される接続情報およびファイル  
   
-ソリューションに 1 つまたは複数の関連プロジェクトを組み合わせることができます。 ソリューションおよびプロジェクトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]のエクスプ ローラー ウィンドウを使用して管理できます  
+ソリューションに 1 つまたは複数の関連プロジェクトを組み合わせることができます。 ソリューションおよびプロジェクトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のエクスプ ローラー ウィンドウを使用して管理できます  
   
 開発変更の追跡とライフサイクル管理のために、ソリューションおよびプロジェクトを [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual SourceSafe (VSS) データベースまたは他のサードパーティのソース管理プロバイダーに統合できます。  
   

@@ -21,21 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64cf56df3d9e7ff4f2cb82bf157226b9a8f33993
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 307253f2bf44c24872a4ba90e6b6132819071250
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984774"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776483"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>管理タスクの自動化 (SQL Server エージェント)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 
-  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、管理タスクを自動化することができます。 管理を自動化するには、予想される管理タスクを明確にして、それぞれのタスクが発生する条件を指定します。 定型的なタスクやイベントを自動管理によって処理することで、ユーザーは他の管理業務に時間を充てることができます。  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、管理タスクを自動化することができます。 管理を自動化するには、予想される管理タスクを明確にして、それぞれのタスクが発生する条件を指定します。 定型的なタスクやイベントを自動管理によって処理することで、ユーザーは他の管理業務に時間を充てることができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  

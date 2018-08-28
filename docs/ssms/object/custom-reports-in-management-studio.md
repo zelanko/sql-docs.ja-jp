@@ -19,23 +19,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9f7b9bd64829a337fc64639d0f65709df54336a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71651e644d3547345a3e3c9b89637d3273e1f72e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776521"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]では、 [!INCLUDE[msCoName](../../includes/msconame_md.md)]で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]から実行できるようになりました。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、[!INCLUDE[msCoName](../../includes/msconame_md.md)] で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行できるようになりました。  
   
 ## <a name="implementation"></a>実装  
-カスタム レポートはレポート定義言語 (RDL) を使用して作成し、レポート定義 (.rdl) ファイルとして保存します。 RDL には、レポートのデータ取得情報とレイアウト情報が XML 形式で含まれています。 RDL はオープン スキーマです。 開発者は、属性や要素を追加して RDL を拡張することができます。 レポートは、任意の有効な [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントをレポート内で実行できます。  
+カスタム レポートはレポート定義言語 (RDL) を使用して作成し、レポート定義 (.rdl) ファイルとして保存します。 RDL には、レポートのデータ取得情報とレイアウト情報が XML 形式で含まれています。 RDL はオープン スキーマです。 開発者は、属性や要素を追加して RDL を拡張することができます。 レポートは、任意の有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをレポート内で実行できます。  
   
-オブジェクト エクスプローラーがサーバーに接続されている場合、オブジェクト エクスプローラーで現在選択されている内容のコンテキストでカスタム レポートを実行できます (ただし、そのノードのレポート パラメーターがレポートで参照されている必要があります)。 これにより、現在のデータベースなど現在のコンテキストをレポートで使用することができます。あるいは、カスタム レポートに含まれている [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントに特定のデータベースを使用するなどの形態で、一貫したコンテキストをレポートで使用することもできます。  
+オブジェクト エクスプローラーがサーバーに接続されている場合、オブジェクト エクスプローラーで現在選択されている内容のコンテキストでカスタム レポートを実行できます (ただし、そのノードのレポート パラメーターがレポートで参照されている必要があります)。 これにより、現在のデータベースなど現在のコンテキストをレポートで使用することができます。あるいは、カスタム レポートに含まれている [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに特定のデータベースを使用するなどの形態で、一貫したコンテキストをレポートで使用することもできます。  
   
 ## <a name="running-a-custom-report"></a>カスタム レポートの実行  
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] では次の方法でカスタム レポートを実行できます。  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では次の方法でカスタム レポートを実行できます。  
   
 -   オブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、 **[カスタム レポート]** を左クリックします。 **[ファイルを開く]** ダイアログ ボックスで .rdl ファイルを含むフォルダーを見つけ、適切なレポート ファイルを開きます。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="limitations"></a>制限事項  
 カスタム レポートを操作する場合は、次の制限事項に注意してください。  
   
--   悪意あるコードが誤って実行されないようにするために、ファイル システムで .rdl ファイルが [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] に関連付けられていても、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]でレポートの自動実行を構成できないようになっています。 レポートは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] でプログラムから実行することも、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]のコマンド ラインから実行することもできません。  
+-   悪意あるコードが誤って実行されないようにするために、ファイル システムで .rdl ファイルが [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] に関連付けられていても、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でレポートの自動実行を構成できないようになっています。 レポートは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でプログラムから実行することも、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のコマンド ラインから実行することもできません。  
   
 -   カスタム レポートは、意図した値が生成されないコンテキストでも実行できます。 たとえば、レプリケーションに関係のないデータベースのコンテキストでレプリケーションに関するレポートを実行することも、正確なレポートの生成に必要な情報にアクセスする権限のないユーザーとしてレポートを実行することもできます。 レポートの構造およびコンテキストの妥当性については、カスタム レポートの作成者が注意する必要があります。  
   
@@ -68,12 +69,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="permissions"></a>アクセス許可  
 カスタム レポートは、現在のユーザーの権限を使用して実行されます。 レポートで実行されるクエリが悪意あるユーザーによって変更されないようにするために、レポート ファイルが格納されるファイル システム フォルダーに権限を設定してアクセスを制限する必要があります。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] サービスによって使用されるユーザーとアカウントの両方に、レポート ファイルが格納されるファイル システム フォルダーへの読み取りアクセスが必要です。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスによって使用されるユーザーとアカウントの両方に、レポート ファイルが格納されるファイル システム フォルダーへの読み取りアクセスが必要です。  
   
 レポートには任意の有効な [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] コマンドを埋め込むことができますが、そのコマンドは実行されません。  
   
 > [!CAUTION]  
-> レポートには任意の有効な [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントを埋め込み、レポートから実行することができます。 高い特権を持つユーザー アカウントでレポートを実行すると、このように埋め込まれた命令を容易に実行できるようになります。  
+> レポートには任意の有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを埋め込み、レポートから実行することができます。 高い特権を持つユーザー アカウントでレポートを実行すると、このように埋め込まれた命令を容易に実行できるようになります。  
   
 
   

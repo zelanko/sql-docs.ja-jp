@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 31f3a7f0efa120cae62d2390d2d4bf5b571ee6f0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981315"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774205"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]のクエリの管理と開発のための豊富な機能を提供する環境です。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のクエリの管理と開発のための豊富な機能を提供する環境です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [一般的なユーザー インターフェイス要素](../ssms/general-user-interface-elements.md)  
@@ -36,5 +36,5 @@ ms.locfileid: "38981315"
 プロジェクトとそのファイルを整理して表示し、それらを管理するコマンドをすぐに利用できるソリューション エクスプローラーを紹介します。  
   
 [ソリューション エクスプローラーのソース管理](https://msdn.microsoft.com/library/ms173879.aspx)  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] がどのようにソース管理製品と統合されているかを説明します。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] がどのようにソース管理製品と統合されているかを説明します。  
   

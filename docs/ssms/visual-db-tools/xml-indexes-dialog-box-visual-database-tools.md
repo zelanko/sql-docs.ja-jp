@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00757208c128ef00ea58c5139b6edc8461621307
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 977188f99e56c67afca657fd881555c896c6ae03
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988644"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773990"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,5 +94,5 @@ XML インデックスの名前を表示します。 新しいキーまたはイ
 該当するインデックスで行レベルのロックを許可するかどうかを指定します。 行レベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。  
   
 ## <a name="see-also"></a>参照  
-[XML インデックスの作成](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[XML インデックスの作成](../../relational-databases/xml/create-xml-indexes.md)  
   

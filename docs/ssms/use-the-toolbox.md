@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7eef59e5e20ff33936e0db32849c4f1be4bf6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06ce90737135ad4eb6e098d6d8005663c1e47338
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050099"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776111"
 ---
 # <a name="use-the-toolbox"></a>ツールボックスの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-ツールボックスから、アイテム、テキスト、およびコントロールを選択してフォーム、ページ、およびデザイナーにドラッグできます。また、アイテムを後で再利用するために、ドラッグ先からツールボックスに戻すことができます。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] では、タスクをメンテナンス プラン上にドラッグできます。  
+ツールボックスから、アイテム、テキスト、およびコントロールを選択してフォーム、ページ、およびデザイナーにドラッグできます。また、アイテムを後で再利用するために、ドラッグ先からツールボックスに戻すことができます。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、タスクをメンテナンス プラン上にドラッグできます。  
   
 ツールボックス内のアイテムは、タブと呼ばれるセクションにグループ分けされています。 よく使用されるツールボックスのタスクとその実行方法について、参照用一覧を次に示します。  
   

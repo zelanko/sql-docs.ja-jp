@@ -21,12 +21,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54714f5d4c1cd0db5c9117e3812107caf039676e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dfa43eb6ced096a5ae4facd215cf06a87a97976f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997664"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774925"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナーの設定 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "37997664"
 3.  データベースのダイアグラム化を設定するかどうかをたずねるメッセージが表示されたら、 **[はい]** を選択します。  
   
     > [!NOTE]  
-    > これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースにデータベース ダイアグラム テーブル、システム ストアド プロシージャ、およびシステム関数が作成されます。  
+    > これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにデータベース ダイアグラム テーブル、システム ストアド プロシージャ、およびシステム関数が作成されます。  
   
-4.  Visual Studio では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のインスタンスに次のオブジェクトが作成されます。  
+4.  Visual Studio では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに次のオブジェクトが作成されます。  
   
     1.  sysdiagrams テーブル  
   

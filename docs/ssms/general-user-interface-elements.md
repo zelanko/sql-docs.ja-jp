@@ -18,26 +18,26 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f0894a8b02d730d71684dcfb5e5a3e2861c7ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 761d807f6b2490cdd456d03f935d2293a5a7cbb3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040359"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775854"
 ---
 # <a name="general-user-interface-elements"></a>一般的なユーザー インターフェイス要素
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] の基本的な要素には、**エディター**、**[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
+[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、**[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [[バージョン情報] ダイアログ ボックス](../ssms/about-dialog-box.md)  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 、およびそれを実行しているコンピューターに関する情報を提供するダイアログ ボックスについて説明します。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 、およびそれを実行しているコンピューターに関する情報を提供するダイアログ ボックスについて説明します。  
   
 [SQL Server Management Studio の Web ブラウザー](../ssms/sql-server-management-studio-web-browser.md)  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] がドキュメント ウィンドウで Web ブラウザーをホストする方法について説明します。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] がドキュメント ウィンドウで Web ブラウザーをホストする方法について説明します。  
   
 [[外部ツール] ダイアログ ボックス](../ssms/external-tools-dialog-box.md)  
-**[ツール]** メニューに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]の外部のツールを追加する方法について説明します。  
+**[ツール]** メニューに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の外部のツールを追加する方法について説明します。  
   
 [[プロパティ] ウィンドウ &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 エディターやデザイナーで選択したオブジェクトのプロパティやイベントを表示する方法を説明します。 ファイル、プロジェクト、ソリューションのプロパティの編集や表示の方法についても説明します。 一部のプロパティは、[プロパティ] ウィンドウで編集できます。  

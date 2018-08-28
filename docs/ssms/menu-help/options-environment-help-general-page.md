@@ -17,22 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774716"
 ---
 # <a name="options-environment---help---general-page"></a>オプション (環境 - ヘルプ - [全般] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[オプション]** ダイアログ ボックスを使用すると、ドキュメントのセットを選択し、トピックを [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] の内部に表示するか、別の外部ウィンドウに表示するかを指定できます。 このダイアログ ボックスを開くには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[環境]** ノードの **[ヘルプ]** を展開し、 **[全般]** をクリックします。  
+**[オプション]** ダイアログ ボックスを使用すると、ドキュメントのセットを選択し、トピックを [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の内部に表示するか、別の外部ウィンドウに表示するかを指定できます。 このダイアログ ボックスを開くには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[環境]** ノードの **[ヘルプ]** を展開し、 **[全般]** をクリックします。  
   
 > [!NOTE]  
 > このページのオプションに加えた変更は、環境が再起動されるまで有効になりません。  
   
 ## <a name="settings"></a>[設定]  
 **[次を使用してヘルプを表示する]**  
-ヘルプの表示方法を指定します。 ドロップダウン リストで **[外部ヘルプ ビューアー]** を選択すると、外部のフローティング ウィンドウにトピックが表示されます。 **[統合ヘルプ ビューアー]** を選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]の内側にドッキングした Web ブラウザー ウィンドウにヘルプ トピックを表示します。  
+ヘルプの表示方法を指定します。 ドロップダウン リストで **[外部ヘルプ ビューアー]** を選択すると、外部のフローティング ウィンドウにトピックが表示されます。 **[統合ヘルプ ビューアー]** を選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の内側にドッキングした Web ブラウザー ウィンドウにヘルプ トピックを表示します。  
   
 **[ページ毎の検索結果]**  
 1 つの **[検索結果]** ページに表示するトピックの数を指定します。  

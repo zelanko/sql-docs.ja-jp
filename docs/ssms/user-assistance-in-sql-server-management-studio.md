@@ -18,56 +18,57 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c176bad0f2cf71e2b805f74eb65daa4fe5dae85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 774b8b970f08c256bd7fb9a2c8c9bb8c6d39c07a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774223"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] には、[ヘルプ] メニューと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックという形のユーザー サポートがあります。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] の [ヘルプ] メニューでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]に関する情報にアクセスするための方法がいくつか用意されています。 旧バージョンの [ヘルプ] 環境内からは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] コミュニティや MSDN オンラインのリソースにアクセスすることはできませんでしたが、このバージョンからは可能になりました。 さらに、[ヘルプ] 環境を [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境内に起動するか、専用の外部ウィンドウに起動するかも設定できるようになりました。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、[ヘルプ] メニューと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックという形のユーザー サポートがあります。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の [ヘルプ] メニューでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に関する情報にアクセスするための方法がいくつか用意されています。 旧バージョンの [ヘルプ] 環境内からは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティや MSDN オンラインのリソースにアクセスすることはできませんでしたが、このバージョンからは可能になりました。 さらに、[ヘルプ] 環境を [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境内に起動するか、専用の外部ウィンドウに起動するかも設定できるようになりました。  
   
 ## <a name="the-help-interface"></a>[ヘルプ] のインターフェイス  
-**[目次]** と **[キーワード]** の機能やインターフェイスは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] のユーザーには既におなじみです。 他のオプションは次のとおりです。  
+**[目次]** と **[キーワード]** の機能やインターフェイスは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のユーザーには既におなじみです。 他のオプションは次のとおりです。  
   
 -   **[カテゴリから検索]**  
   
-    [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] の一般的なタスクに関する有用なトピックのページがリンクによって階層的にまとめられています。 内容はコンポーネント別、タスク別に編成されており、たとえば、レプリケーションならレプリケーションに関するトピックがひとまとめになっています。  
+    [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の一般的なタスクに関する有用なトピックのページがリンクによって階層的にまとめられています。 内容はコンポーネント別、タスク別に編成されており、たとえば、レプリケーションならレプリケーションに関するトピックがひとまとめになっています。  
   
 -   **検索**  
   
-    トピックの検索を実行します。事前定義のフィルターを指定することも可能です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] の検索機能は、別個のタブ付きのページになっています。 トピックの種類、言語、テクノロジに基づく事前定義のフィルターを 1 つ以上指定して検索の精度を高めることもできます。 既定では、事前定義のフィルターなしで検索が実行され、インストールされているコレクション内のトピックだけが検索対象になります。  
+    トピックの検索を実行します。事前定義のフィルターを指定することも可能です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の検索機能は、別個のタブ付きのページになっています。 トピックの種類、言語、テクノロジに基づく事前定義のフィルターを 1 つ以上指定して検索の精度を高めることもできます。 既定では、事前定義のフィルターなしで検索が実行され、インストールされているコレクション内のトピックだけが検索対象になります。  
   
-    オンライン ヘルプを有効にして、検索対象にオンライン リソースを含めることも可能です。 詳細については、この後の「MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] コミュニティ」を参照してください。  
+    オンライン ヘルプを有効にして、検索対象にオンライン リソースを含めることも可能です。 詳細については、この後の「MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティ」を参照してください。  
   
 -   **ダイナミック ヘルプを表示する**  
   
-    ユーザーが [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 環境内で作業しているときに、関連する情報へのリンクが自動的に表示されます。  
+    ユーザーが [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境内で作業しているときに、関連する情報へのリンクが自動的に表示されます。  
   
 -   **ヘルプの [お気に入り] を表示する**  
   
     後からアクセスしやすくするために、ユーザー トピックのブックマークを格納します。  
   
-[ヘルプに関するヘルプ] ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] を選択してください。  
+[ヘルプに関するヘルプ] \([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]コミュニティから情報を得るための方法も用意されています。 可能な代替手段としては以下の方法があります。  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 可能な代替手段としては以下の方法があります。  
   
--   [操作方法] ページから [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] コミュニティにアクセスする。  
+-   [操作方法] ページから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティにアクセスする。  
   
--   MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] コミュニティのサイトを検索する。  
+-   MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティのサイトを検索する。  
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>[操作方法] ページから SQL Server コミュニティにアクセスするには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]の **[ヘルプ]** メニューの **[カテゴリから検索]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[ヘルプ]** メニューの **[カテゴリから検索]** をクリックします。  
   
-2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] **[カテゴリから検索]** ページが表示されます。 コミュニティ リンク サイドバーで、アクセスするコミュニティ サイトの名前をクリックします。  
+2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **[操作方法]** ページが表示されます。 コミュニティ リンク サイドバーで、アクセスするコミュニティ サイトの名前をクリックします。  
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] を実行しているコンピューターは、Web に直接接続している必要があります。  
+    > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行しているコンピューターは、Web に直接接続している必要があります。  
   
-    MSDN オンラインまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] コミュニティを検索するには、まずオンライン検索を有効にする必要があります。  
+    MSDN オンラインまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティを検索するには、まずオンライン検索を有効にする必要があります。  
   
 #### <a name="to-enable-online-search"></a>オンライン検索を有効にするには  
   
@@ -90,12 +91,12 @@ ms.lasthandoff: 05/03/2018
 用意されているフィルター (テクノロジ、言語、トピックの種類) を検索操作に使用しているかどうかにかかわらず、検索の対象は選択したすべての検索プロバイダーになります。  
   
 ## <a name="launching-help"></a>ヘルプの起動  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]からヘルプを表示するには、2 つの方法があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 内から [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]オンライン ブックを開いた場合は、既定で [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 環境の外部のドキュメント ウィンドウに表示されます。 そのウィンドウは [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]に関連付けられており、 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] の一部のイベントに応答することもできます。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]を閉じれば、オンライン ブックも閉じます。 この方法でオンライン ブックを開くのは、特に 2 つのモニターを使用しているときに便利です。オンライン ブックのウィンドウを第 2 のモニターにドラッグすれば、第 1 のモニターでの実際の作業に支障がなく、しかも簡単に参照できます。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]からヘルプを表示するには、2 つの方法があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内から [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]オンライン ブックを開いた場合は、既定で [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境の外部のドキュメント ウィンドウに表示されます。 そのウィンドウは [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に関連付けられており、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の一部のイベントに応答することもできます。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を閉じれば、オンライン ブックも閉じます。 この方法でオンライン ブックを開くのは、特に 2 つのモニターを使用しているときに便利です。オンライン ブックのウィンドウを第 2 のモニターにドラッグすれば、第 1 のモニターでの実際の作業に支障がなく、しかも簡単に参照できます。  
   
-[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]内のドキュメント ウィンドウにオンライン ブックを開くこともできます。 画面のスペースが限られている場合は、この方法で開いて、 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] のウィンドウを隠す機能を活用すると便利です。  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]内のドキュメント ウィンドウにオンライン ブックを開くこともできます。 画面のスペースが限られている場合は、この方法で開いて、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のウィンドウを隠す機能を活用すると便利です。  
   
 > [!NOTE]  
-> オンライン ブックを [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]から完全に切り離す場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックを **[スタート]** メニューから開きます。こうすると、 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 環境内の操作に応答することも、 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]の終了時に閉じることもありません。  
+> オンライン ブックを [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]から完全に切り離す場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを **[スタート]** メニューから開きます。こうすると、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境内の操作に応答することも、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]の終了時に閉じることもありません。  
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>Management Studio のウィンドウ内でヘルプと SQL Server オンライン ブックを起動するための構成を行うには  
   

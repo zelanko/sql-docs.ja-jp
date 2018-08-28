@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee8da38abc3b4725530abaf812381d0197812fe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e74ee9c4579071b14072dcccbab493126d69a0cb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049539"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775271"
 ---
 # <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33049539"
   
 ## <a name="printer"></a>[プリンター]  
 **名前**  
-プリンターを指定します。 一覧からプリンターを選択します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を閉じるか別のプリンターを選択するまで、選択したプリンターが既定のプリンターになります。 一覧の下のフィールドに表示される情報が、選択したプリンターに適用されます。  
+プリンターを指定します。 一覧からプリンターを選択します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を閉じるか別のプリンターを選択するまで、選択したプリンターが既定のプリンターになります。 一覧の下のフィールドに表示される情報が、選択したプリンターに適用されます。  
   
 **ステータス**  
 選択したプリンターの状態を表します (ビジーや準備完了など)。  
@@ -44,7 +44,7 @@ ms.locfileid: "33049539"
 **解説**  
 選択したプリンターに関する追加情報が含まれます。  
   
-**[プロパティ]**  
+**Properties**  
 クリックすると、[\<*プリンター名のプロパティ*>] ダイアログ ボックスが開きます。  
   
 **[ファイルへ出力]**  
