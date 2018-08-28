@@ -15,7 +15,7 @@ manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 859945ae5f255327ff6dc12b58b126849db66ba8
 ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/06/2018
 ms.locfileid: "39551953"
@@ -47,8 +47,8 @@ SQL Server または Azure SQL データベースのエディションに対応�
 SQL Server インスタンスにバックアップを復元するには、Management Studio を使用できます。
 
 1. SQL Server Management Studio を開き、対象の SQL Server インスタンスに接続します。
-2. **データベース**ノードを右クリックし、**Restore Database** を選択します。
-3. 選択**デバイス** ボタンをクリックします **.。**
+2. 右クリックし、**データベース**ノード、および選択**Restore Database**します。
+3. 選択**デバイス** ボタンをクリックします **。**
 4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**サーバーのファイル システム内のデータベースのバックアップに移動して、バックアップを選択します。 **[OK]** をクリックします。
 5. 必要に応じて、データのターゲットの場所を変更し、ログ ファイルで、**ファイル**ウィンドウ。 ベスト プラクティスとしてデータを配置し、ログ ファイルを別のドライブにあるに注意してください。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters 必要があります。

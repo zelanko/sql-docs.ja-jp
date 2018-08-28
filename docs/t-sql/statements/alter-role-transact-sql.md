@@ -25,16 +25,16 @@ caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84ba7cea614adc50ad3f3d94aa978fa3fa0deb2a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 621a49f9cc30b254390c50c00d3879912900fc58
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453676"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058962"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベース ロールのメンバーを追加または削除するか、ユーザー定義のデータベース ロールの名前を変更します。  
   
@@ -124,7 +124,7 @@ WITH NAME = *new_name*
 ### <a name="a-change-the-name-of-a-database-role"></a>A. データベース ロールの名前の変更  
  **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 次の例では、ロール `buyers` の名前を `purchasing` に変更します。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ 次の例では、ロール `buyers` の名前を `purchasing` に変更します。   この例では、[AdventureWorks](http://msftdbprodsamples.codeplex.com/) サンプル データベースで実行できます。
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -133,7 +133,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. ロール メンバーの追加または削除  
  **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- この例では、`Sales` という名前のデータベース ロールを作成します。 メンバーシップに Barry という名前のデータベース ユーザーを追加してから、メンバー Barry を削除する方法を示します。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ この例では、`Sales` という名前のデータベース ロールを作成します。 メンバーシップに Barry という名前のデータベース ユーザーを追加してから、メンバー Barry を削除する方法を示します。   この例では、[AdventureWorks](http://msftdbprodsamples.codeplex.com/) サンプル データベースで実行できます。
   
 ```sql  
 CREATE ROLE Sales;  
