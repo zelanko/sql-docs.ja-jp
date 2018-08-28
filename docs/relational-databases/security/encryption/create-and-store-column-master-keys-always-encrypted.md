@@ -14,13 +14,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549832"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073743"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>列マスター キーを作成して保存する (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Always Encrypted の列マスター キーは、Cryptography Next Generation (CN
 
 特定のコンピューターのアプリケーションから HSM を使用できるようにするには、CNG を実装するキー記憶域プロバイダー (KSP) をコンピューターにインストールして構成する必要があります。 Always Encrypted のクライアント ドライバー (ドライバー内部の列マスター キー ストア プロバイダー) は KSP を使用して、キー ストアに格納された列マスター キーで保護されている列暗号化キーを暗号化および暗号化解除します。
 
-Windows にはソフトウェアベースの KSP である Microsoft ソフトウェア キー記憶域プロバイダーが含まれており、テスト目的で使用することができます。 「 [CNG Key Storage Providers](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)」(CNG キー記憶域プロバイダー) を参照してください。
+Windows にはソフトウェアベースの KSP である Microsoft ソフトウェア キー記憶域プロバイダーが含まれており、テスト目的で使用することができます。 「 [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers)」(CNG キー記憶域プロバイダー) を参照してください。
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>CNG/KSP を使用してキー ストア内の列マスター キーを作成する
 

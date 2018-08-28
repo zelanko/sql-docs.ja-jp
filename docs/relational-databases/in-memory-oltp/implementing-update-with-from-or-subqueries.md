@@ -15,13 +15,13 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6db977181a23c439db636e1ba2013e1690f2d5e8
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 294d72011c44f39dbafa73929ba3c53515ab8424
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560002"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111585"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>FROM またはサブクエリを使用した UPDATE を実装する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

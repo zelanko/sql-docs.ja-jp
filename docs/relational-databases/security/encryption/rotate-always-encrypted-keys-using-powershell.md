@@ -14,13 +14,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bf032b05c962c1dc9788e890c59491ef81ea16da
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 330ba9c9f8703a31b2686327e6ed1b36d80be331
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538302"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100085"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell を使用した Always Encrypted キーの交換
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Always Encrypted は 2 種類のキーを使用するので、列マスター �
 
 | タスク | [アーティクル] | プレーンテキストのキー/キーストアへのアクセス| データベースへのアクセス
 |:---|:---|:---|:---
-|手順 1. キー ストアで新しい列マスター キーを作成します。<br><br>**注:** SqlServer PowerShell モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアに固有のツールを使用する必要があります。 | 列マスター キーを作成して保存する (Always Encrypted)| [ユーザー アカウント制御] | いいえ
+|手順 1. キー ストアで新しい列マスター キーを作成します。<br><br>**注:** SqlServer PowerShell モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアに固有のツールを使用する必要があります。 | [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| [ユーザー アカウント制御] | いいえ
 |手順 2. PowerShell 環境を起動し、SqlServer モジュールをインポートします | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
 |手順 3. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | [ユーザー アカウント制御]
 |手順 4. 新しい列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 作成するには、キー ストアに固有のコマンドレットを使用する必要があります。 |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | いいえ | いいえ

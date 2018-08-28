@@ -1,7 +1,7 @@
 ---
 title: カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77c4ede074611b60c33777d64b8ff5308fc343f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 980f17539e4230d5064ad9cc6d7cfc387b7dad84
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021559"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40415898"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
   カスケード型パラメーターを使用すると、大量のレポート データの管理が可能になります。 パラメーターの値の一覧が、別のパラメーターで選択された値によって決まるように、関連するパラメーターのセットを定義できます。 たとえば、最初のパラメーターが独立しており、製品カテゴリの一覧を表すとします。 ユーザーが任意のカテゴリを選択すると、2 番目のパラメーターは最初のパラメーターの値によって決まります。 その値は、選択したカテゴリ内のサブカテゴリの一覧で更新されます。 ユーザーがレポートを表示するとき、カテゴリ パラメーターとサブカテゴリ パラメーターの両方の値を使用して、レポート データにフィルターが適用されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "33021559"
   
     1.  データ ソース フィールドの一覧。 たとえば [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、SELECT ステートメントは指定されたテーブルまたはビューのデータベース列名の一覧を指定します。  
   
-    2.  カスケード型パラメーターごとに 1 つのクエリ パラメーター。 クエリ パラメーターは、クエリに含める特定の値またはクエリから除外する特定の値を指定することによって、データ ソースから取得するデータを制限します。 通常、クエリ パラメーターはクエリの制約句で使用されます。 たとえば [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントでは、クエリ パラメーターは WHERE 句で使用されます。 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server オンライン ブック [にある](http://go.microsoft.com/fwlink/?linkid=120955)のマニュアルの「WHERE と HAVING を使ったフィルターによる行選択」を参照してください。  
+    2.  カスケード型パラメーターごとに 1 つのクエリ パラメーター。 クエリ パラメーターは、クエリに含める特定の値またはクエリから除外する特定の値を指定することによって、データ ソースから取得するデータを制限します。 通常、クエリ パラメーターはクエリの制約句で使用されます。 たとえば [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントでは、クエリ パラメーターは WHERE 句で使用されます。  
   
 6.  **[実行]** (**!**) をクリックします。 クエリ パラメーターを指定し、クエリを実行したら、クエリ パラメーターに対応するレポート パラメーターが自動的に作成されます。  
   

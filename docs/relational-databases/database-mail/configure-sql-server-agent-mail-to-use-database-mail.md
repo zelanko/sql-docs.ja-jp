@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a49117cfe2bb24b4a5f47f22c9bff9e1afb9910
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbfb5af92127ab9d08d3bfabcb589250d748f1d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32924837"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415883"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>データベース メールを使用するように SQL Server エージェント メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,11 +77,11 @@ ms.locfileid: "32924837"
 ##  <a name="Follow_Up"></a> フォロー アップ タスク  
  警告および通知を送信できるようにエージェントを構成するには、次のタスクが必要となります。  
   
--   [警告](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
+-   [警告](../../ssms/agent/alerts.md)  
   
      特定のデータベース イベントまたはオペレーティング システムの状態がオペレーターに通知されるように、警告を構成できます。  
   
--   [演算子](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
+-   [演算子](../../ssms/agent/operators.md)  
   
      オペレーターとは、電子通知を受け取ることのできる人またはグループの別名です。  
   
