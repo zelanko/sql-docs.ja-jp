@@ -13,11 +13,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 521fac21807393cfce0bffd7f2c6219c3a07359b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ce07cf1898291221f0c33111468d3f8e7187ce6c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775663"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server エージェントでの Windows PowerShell ステップの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ SQL Server エージェントを使用して、スケジュールされた時刻
 ##  <a name="PShellJob"></a> PowerShell ジョブ ステップの作成  
  **PowerShell ジョブ ステップを作成するには**  
   
-1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)」を参照してください。  
+1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](../ssms/agent/create-jobs.md)」を参照してください。  
   
 2.  **[ジョブのプロパティ]** ダイアログで **[ステップ]** ページをクリックし、 **[新規作成]** をクリックします。  
   
@@ -63,7 +64,7 @@ SQL Server エージェントを使用して、スケジュールされた時刻
 ##  <a name="CmdExecJob"></a> コマンド プロンプト ジョブ ステップの作成  
  **CmdExec ジョブ ステップを作成するには**  
   
-1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)」を参照してください。  
+1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](../ssms/agent/create-jobs.md)」を参照してください。  
   
 2.  **[ジョブのプロパティ]** ダイアログで **[ステップ]** ページをクリックし、 **[新規作成]** をクリックします。  
   

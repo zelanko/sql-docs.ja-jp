@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997324"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775775"
 ---
 # <a name="failover-cluster-troubleshooting"></a>フェールオーバー クラスターのトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "37997324"
   
      この方法でオペレーティング システムの障害から復旧すると、時間がかかる場合があります。 オペレーティング システムの障害から簡単に復旧できる場合には、この方法は使用しないでください。  
   
-     詳細については、「[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)」および「[フェールオーバー クラスター障害のシナリオ 2 で障害から回復する方法](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx)」を参照してください。  
+     詳細については、「[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)」および「[フェールオーバー クラスター障害のシナリオ 2 で障害から回復する方法](recover-from-failover-cluster-instance-failure.md)」を参照してください。  
   
 ## <a name="resolving-common-problems"></a>一般的な問題の解決  
  次に、一般的な使用上の問題とその解決策を示します。  

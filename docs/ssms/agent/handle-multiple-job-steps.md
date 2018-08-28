@@ -22,41 +22,42 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b88a2d50bd748da3e56d43367706715fa4739f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f136453aadd5562a5d6263752af7413abed86c1c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775097"
 ---
 # <a name="handle-multiple-job-steps"></a>複数のジョブ ステップの処理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 ジョブに複数のジョブ ステップがある場合、ジョブ ステップを実行する順序を指定する必要があります。 この順序指定を*フロー制御*と呼びます。 いつでも新しいジョブ ステップを追加して、フローを再構成できます。変更が有効になるのは、次にジョブを実行するときです。 次の図は、データベース バックアップ ジョブのフロー制御を示しています。  
   
 ![SQL Server エージェントのジョブ ステップのフロー制御](../../ssms/agent/media/dbflow01.gif "SQL Server エージェントのジョブ ステップのフロー制御")  
   
-最初のステップは "データベースのバックアップ" です。 このステップが失敗すると、通知を受け取るオペレーターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントから失敗が報告されます。 "データベースのバックアップ" ステップに成功すると、次のステップの "顧客データのスクラビング" に進みます。 このステップに失敗すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントにより "データベースの復元" までスキップされます。 "顧客データのスクラビング" に成功すると、次のステップの "統計の更新" に進みます。以降、最後のステップが "レポート成功" または "レポート失敗" になるまで続きます。  
+最初のステップは "データベースのバックアップ" です。 このステップが失敗すると、通知を受け取るオペレーターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントから失敗が報告されます。 "データベースのバックアップ" ステップに成功すると、次のステップの "顧客データのスクラビング" に進みます。 このステップに失敗すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントにより "データベースの復元" までスキップされます。 "顧客データのスクラビング" に成功すると、次のステップの "統計の更新" に進みます。以降、最後のステップが "レポート成功" または "レポート失敗" になるまで続きます。  
   
 各ジョブ ステップの成功と失敗に対して、フロー制御アクションを定義します。 ジョブ ステップが成功した場合のアクション、およびジョブ ステップが失敗した場合のアクションを指定する必要があります。 また、失敗したジョブ ステップに対して、再試行の回数とその間隔を定義することもできます。  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのグラフィカル ユーザー インターフェイス (GUI) を使用し、複数のステップのジョブから 1 つ以上のステップを削除する場合、GUI では、すべてのジョブ ステップを削除してから、修正された成功時または失敗時の参照で、残りのステップを戻します。 たとえば 5 つのステップのジョブがあり、最初のステップが正常に終了した場合には、ステップ 4 に移動するように構成されているとします。 ステップ 3 を削除する場合、GUI ではこのジョブのすべてのステップを削除し、残りの 4 つのステップ (1、2、4、および 5) を修正した参照と共に追加します。 この場合、ステップ 1 の参照は、ステップ 1 が正常に終了したらステップ 3 に移動するように再構成されます。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのグラフィカル ユーザー インターフェイス (GUI) を使用し、複数のステップのジョブから 1 つ以上のステップを削除する場合、GUI では、すべてのジョブ ステップを削除してから、修正された成功時または失敗時の参照で、残りのステップを戻します。 たとえば 5 つのステップのジョブがあり、最初のステップが正常に終了した場合には、ステップ 4 に移動するように構成されているとします。 ステップ 3 を削除する場合、GUI ではこのジョブのすべてのステップを削除し、残りの 4 つのステップ (1、2、4、および 5) を修正した参照と共に追加します。 この場合、ステップ 1 の参照は、ステップ 1 が正常に終了したらステップ 3 に移動するように再構成されます。  
   
-ジョブ ステップは自己完結型である必要があります。 つまり、ジョブ ステップ間でブール値、データ、または数値を受け渡すことはできません。 ただし、パーマネント テーブルまたはグローバル一時テーブルを使用することで、 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップ間で値を受け渡すことができます。 実行可能プログラムを実行するジョブ ステップの値をジョブ ステップ間で受け渡すには、ファイルを使用します。 たとえば、あるジョブ ステップで実行される実行可能プログラムでファイルに書き込み、後続のジョブ ステップで実行される実行可能プログラムでそのファイルを読み取ります。  
+ジョブ ステップは自己完結型である必要があります。 つまり、ジョブ ステップ間でブール値、データ、または数値を受け渡すことはできません。 ただし、パーマネント テーブルまたはグローバル一時テーブルを使用することで、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップ間で値を受け渡すことができます。 実行可能プログラムを実行するジョブ ステップの値をジョブ ステップ間で受け渡すには、ファイルを使用します。 たとえば、あるジョブ ステップで実行される実行可能プログラムでファイルに書き込み、後続のジョブ ステップで実行される実行可能プログラムでそのファイルを読み取ります。  
   
 > [!NOTE]  
-> ジョブ ステップ 1 の次にジョブ ステップ 2 が続き、ジョブ ステップ 2 の次にジョブ ステップ 1 に戻るような、ループするジョブ ステップを作成した場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]でそのジョブを作成したときに警告メッセージが表示されます。  
+> ジョブ ステップ 1 の次にジョブ ステップ 2 が続き、ジョブ ステップ 2 の次にジョブ ステップ 1 に戻るような、ループするジョブ ステップを作成した場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でそのジョブを作成したときに警告メッセージが表示されます。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントにより、ジョブとジョブ ステップの情報がジョブ履歴に記録されます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントにより、ジョブとジョブ ステップの情報がジョブ履歴に記録されます。  
   
 ## <a name="see-also"></a>参照  
-[sp_add_job](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
-[sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
+[sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
 [sysjobs (Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
-[sysjobsteps](http://msdn.microsoft.com/en-us/978b8205-535b-461c-91f3-af9b08eca467)  
+[sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [ジョブの実装](../../ssms/agent/implement-jobs.md)  
 [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)  
   

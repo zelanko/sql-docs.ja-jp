@@ -13,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d03b293418329fe6eeeba532778acca45ec9c860
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063630"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774114"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38063630"
      
 -   チュートリアルでいずれかの [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] データベースが使われている場合は、最新のバージョンを CodePlex からダウンロードして使う必要があります。 詳しくは、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。    
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] チュートリアルで使用する [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ブックと [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] レポートをダウンロードし、 [「SQL Server 2012 用の Power View のサンプル」](http://go.microsoft.com/fwlink/?LinkId=220734)にアクセスしてください。  
-- [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub リポジトリに提供されている [Wide World Importers](https://github.com/Microsoft/sql-server-samples) の新しいサンプルを確認します。 
+- [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub リポジトリに提供されている [Wide World Importers](https://github.com/Microsoft/sql-server-samples) の新しいサンプルを確認します。 
 
  
 ## <a name="current-tutorials"></a>現在のチュートリアル  

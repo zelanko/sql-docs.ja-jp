@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6d7190bb75167f55a8cf5c741d46f7f0134f5bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054969"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774844"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>チュートリアル: データベース ダイアグラムの追加と変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33054969"
 ## <a name="prerequisites"></a>Prerequisites  
 このチュートリアルを完了するには、以下が必要です。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] サンプル データベースへのアクセス権  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースへのアクセス権  
   
 -   データベース所有者 **dbo** 特権のあるアカウント  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33054969"
   
 1.  **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
-2.  [データベース] ノードを展開し、[ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] ] ノードを展開します。  
+2.  [データベース] ノードを展開し、[ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ] ノードを展開します。  
   
 3.  [データベース ダイアグラム] ノードを右クリックし、**[新しいデータベース ダイアグラム]** をクリックします。  
   
@@ -217,7 +217,7 @@ XML を含めて、ほとんどの種類のデータにインデックスを作�
 [データベース ダイアグラム デザイナーの設定 (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [ダイアグラムへのテーブルの追加 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [ダイアグラムでテーブル間のリレーションシップを作成する方法 (Visual Database Tools)](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[XML インデックスの作成](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[XML インデックスの作成](../../relational-databases/xml/create-xml-indexes.md)  
 [クリップボードへのデータベース ダイアグラムのイメージのコピー (Visual Database Tools)](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [ダイアグラムのレイアウトの操作 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

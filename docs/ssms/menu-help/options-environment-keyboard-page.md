@@ -18,21 +18,21 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6218358bced6d36056b33ce82720d53cbc32bdab
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26d1e4734ae01e751a17c3a088c3e1a5e0f7af7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982494"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775331"
 ---
 # <a name="options-environment---keyboard-page"></a>[オプション] \([環境]/[キーボード] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のキーボード スキームをカスタマイズできます。 このオプションを使用して、キーボード スキームを選択します。 このページにアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを選択して、 **[キーボード]** をクリックします。  
+**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のキーボード スキームをカスタマイズできます。 このオプションを使用して、キーボード スキームを選択します。 このページにアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを選択して、 **[キーボード]** をクリックします。  
   
-**[キーボード スキーム]** ドロップダウン リストに、使用できるショートカット キーのコレクションが表示されます。 一覧からスキームを選択すると、特定のスキームが読み込まれます。 **[オプション]** ダイアログ ボックスの操作が終わったら、 **[OK]** をクリックします。 選択したスキームが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]に読み込まれます。  
+**[キーボード スキーム]** ドロップダウン リストに、使用できるショートカット キーのコレクションが表示されます。 一覧からスキームを選択すると、特定のスキームが読み込まれます。 **[オプション]** ダイアログ ボックスの操作が終わったら、 **[OK]** をクリックします。 選択したスキームが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に読み込まれます。  
   
 **Standard**  
-標準スキームは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の既定のスキームです。 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio のショートカット キーに類似しています。  
+標準スキームは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のスキームです。 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio のショートカット キーに類似しています。  
   
 ストアド プロシージャをキーボード ショートカットと関連付けるには、 **[クエリ ショートカット]** グリッドを使用します。  
   
@@ -42,5 +42,5 @@ ms.locfileid: "38982494"
 **ストアド プロシージャ**  
 キーボード ショートカットを押したときに実行されるストアド プロシージャです。  
   
-各スキームにおけるキーボード ショートカットの一覧については、「 [SQL Server Management Studio のキーボード ショートカット](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8)」を参照してください。  
+各スキームにおけるキーボード ショートカットの一覧については、「 [SQL Server Management Studio のキーボード ショートカット](../sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
   

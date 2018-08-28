@@ -19,16 +19,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83752eac337db70ea2aa382cc426c7eb1859d096
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979874"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773995"
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[外部ツール]** ダイアログ ボックスは、SQLCMD やメモ帳などの外部ツールを **[ツール]** メニューに追加するために使用します。 外部ツールを追加すると、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境で作業しながら、簡単に他のアプリケーションを起動できるようになります。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 また、一部のツールからの出力を **[出力]** ウィンドウに表示することもできます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
+**[外部ツール]** ダイアログ ボックスは、SQLCMD やメモ帳などの外部ツールを **[ツール]** メニューに追加するために使用します。 外部ツールを追加すると、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境で作業しながら、簡単に他のアプリケーションを起動できるようになります。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 また、一部のツールからの出力を **[出力]** ウィンドウに表示することもできます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
   
 ## <a name="options"></a>[変数]  
 **[メニューの内容]**  
@@ -56,7 +56,7 @@ ms.locfileid: "38979874"
 メニューでツールが選択されたときにツールに渡される変数を指定します。 引数によって、ツールやコマンドの起動時に渡す値を指定できます。 たとえば、ファイル名またはディレクトリを指定できます。 矢印ボタンをクリックして表示される定義済みの引数の一覧から選択します。 複数の引数を追加できます。 定義済み引数および定義の完全な一覧については、「 [外部ツールの引数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)」を参照してください。 使用するコマンドまたはツールに応じて、カスタム引数 (コマンド ライン スイッチなど) を入力することもできます。  
   
 **[出力ウィンドウを使用]**  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] の出力ウィンドウを開いて、実行中のコマンドの出力を表示します。 ツールによっては、出力ウィンドウに表示可能な形式の出力が提示されないものもあります。 詳細については、「 [[出力ウィンドウ]](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747)」を参照してください。  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の出力ウィンドウを開いて、実行中のコマンドの出力を表示します。 ツールによっては、出力ウィンドウに表示可能な形式の出力が提示されないものもあります。 詳細については、「 [[出力ウィンドウ]](../relational-databases/scripting/transact-sql-debugger-output-window.md)」を参照してください。  
   
 **[Unicode で出力を処理する]**  
 出力を Unicode として解釈します。  
@@ -76,7 +76,7 @@ ms.locfileid: "38979874"
 |ボックス|ReplTest1|  
 |-------|---------|  
 |**Title**|DAC (DAC)|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
+|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**引数**|-A|  
   
 ## <a name="see-also"></a>参照  

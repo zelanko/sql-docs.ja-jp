@@ -28,11 +28,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7320b1f4d91d94b4e53da3640458030057a45f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 399b756b0530079c6f38732da4ebf1ef94755e73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776673"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 **[プロパティ]** ウィンドウには、さまざまな種類の編集フィールドが表示されます。表示されるフィールドは、特定のプロパティで必要となる内容に応じて異なります。 淡色で表示されているプロパティは変更できません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **オブジェクト名です。**  
 現在選択している 1 つまたは複数のオブジェクトを一覧に表示します。 アクティブなエディターまたはデザイナーのオブジェクトのみが表示されます。  
   
@@ -57,5 +58,5 @@ ms.lasthandoff: 05/03/2018
 説明ペインは **[プロパティ]** ウィンドウの下部に配置され、プロパティの種類とプロパティの簡単な説明を表示します。 ショートカット メニューの **[説明]** を使用して、プロパティの説明の表示と非表示を切り替えることができます。  
   
 ## <a name="see-also"></a>参照  
-[Management Studio の [プロパティ] ウィンドウの使用](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
+[Management Studio の [プロパティ] ウィンドウの使用](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

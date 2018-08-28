@@ -18,19 +18,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08c4c10b613f39e428a24d37e0e6f4e94e0148c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984994"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774966"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>[インデックス/キー] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスを使用すると、インデックス、主キー、および一意キーを作成したり、変更したりできます。 このダイアログ ボックスにアクセスするには、インデックスまたはキーを持つテーブルのテーブル定義を開いて、テーブル定義グリッドを右クリックし、 **[インデックス/キー]** をクリックします。  
   
 > [!NOTE]  
-> テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
+> テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
 ## <a name="options"></a>[変数]  
 **[選択された主/一意キーまたはインデックス]**  
@@ -67,7 +67,7 @@ ms.locfileid: "38984994"
 展開して **[CLUSTERED として作成]** の情報を表示します。  
   
 **[CLUSTERED として作成]**  
-キーまたはインデックスをクラスター化します。 1 つのテーブルでクラスター化できるインデックスは、1 つだけです。 テーブル内のデータは、クラスター化インデックスの順序で保存されます。 詳細については、「 [クラスター化インデックスの作成](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 」と「 [非クラスター化インデックスの作成](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943)」を参照してください。  
+キーまたはインデックスをクラスター化します。 1 つのテーブルでクラスター化できるインデックスは、1 つだけです。 テーブル内のデータは、クラスター化インデックスの順序で保存されます。 詳細については、「 [クラスター化インデックスの作成](../../relational-databases/indexes/create-clustered-indexes.md) 」と「 [非クラスター化インデックスの作成](../../relational-databases/indexes/create-nonclustered-indexes.md)」を参照してください。  
   
 **[データ スペースの指定]**  
 展開して **[(データ スペースの種類)]**、 **[ファイル グループまたはパーティション スキーム名]**、および **[パーティション列の一覧]** の情報を表示します。  
@@ -97,9 +97,9 @@ ms.locfileid: "38984994"
 **[重複するキーを無視]**  
 一括挿入操作で、既存のキー値と等しいキー値を持つ行が挿入された場合の動作を指定します。 次のうちのどちらかを選択します。  
   
--   **[はい]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は警告を表示し、不正な挿入行を無視して、残りの行の挿入を試行します。  
+-   **[はい]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は警告を表示し、不正な挿入行を無視して、残りの行の挿入を試行します。  
   
--   **[いいえ]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] はエラー メッセージを表示し、一括挿入操作全体をロールバックします。  
+-   **[いいえ]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はエラー メッセージを表示し、一括挿入操作全体をロールバックします。  
   
 **[インクルードされた列]**  
 インデックス キーを構成するすべての列の名前を、コンマ区切りで一覧表示します。 サブキー列が指定できるのは、クラスター化されていないインデックスの場合だけです。 このプロパティは、XML インデックスに対して隠ぺいされます。  

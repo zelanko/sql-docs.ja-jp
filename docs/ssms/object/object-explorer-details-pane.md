@@ -23,24 +23,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f75fac8ec104d32b84383b4303c3a9d3de1d53b8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984024"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774238"
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
   
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] では、[オブジェクト エクスプローラーの詳細] ペインが既定で表示されます。 オブジェクト エクスプローラーが表示されていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラーの詳細]** をクリックするか、 **F7**キーを押します。  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、[オブジェクト エクスプローラーの詳細] ペインが既定で表示されます。 オブジェクト エクスプローラーが表示されていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラーの詳細]** をクリックするか、 **F7**キーを押します。  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] では、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] の起動時に有効になっていた Microsoft Windows の [地域と言語のオプション] に基づく形式で日付が表示されます。 新しい設定を有効にするには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] を再起動する必要があります。  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の起動時に有効になっていた Microsoft Windows の [地域と言語のオプション] に基づく形式で日付が表示されます。 新しい設定を有効にするには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を再起動する必要があります。  
   
 ## <a name="object-explorer-details"></a>[オブジェクト エクスプローラーの詳細]  
-[オブジェクト エクスプローラーの詳細] を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンス上のフォルダーやオブジェクト内を移動できます。 32 ビット オペレーティング システムでは、オブジェクト エクスプローラーに表示できるオブジェクトは最大で 64,000 個です。 追加のオブジェクトにアクセスするアイコンを選択する必要があります。  
+[オブジェクト エクスプローラーの詳細] を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上のフォルダーやオブジェクト内を移動できます。 32 ビット オペレーティング システムでは、オブジェクト エクスプローラーに表示できるオブジェクトは最大で 64,000 個です。 追加のオブジェクトにアクセスするアイコンを選択する必要があります。  
   
 [オブジェクト エクスプローラーの詳細] には、次の表に説明するアイコンが用意されたツール バーがあります。 アイコンは、適切な場合にのみ使用できます。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "38984024"
 |**検索**|特定のデータベース オブジェクトの検索語句を入力するための領域を提供します。|  
   
 ### <a name="column-header-selections"></a>列ヘッダーの選択  
-[オブジェクト エクスプローラーの詳細] には、選択可能な列があります。 任意の列ヘッダーを右クリックし、表示する項目を選択します。 選択内容は、オブジェクト間を移動しても保持されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]をいったん終了して再起動した場合でも、各ユーザーの選択内容は保持されます。  
+[オブジェクト エクスプローラーの詳細] には、選択可能な列があります。 任意の列ヘッダーを右クリックし、表示する項目を選択します。 選択内容は、オブジェクト間を移動しても保持されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をいったん終了して再起動した場合でも、各ユーザーの選択内容は保持されます。  
   
 > [!CAUTION]  
 > 特定のオブジェクトの種類 (たとえばデータベース) についてすべての列を表示する場合、オブジェクトのセットが大量にあると表示速度が低下することがあります。  
   
 ### <a name="sorting"></a>並べ替え  
-列ヘッダーを 1 回クリックすると、その列のデータを使用して並べ替えが行われます。 同じヘッダーを再度クリックすると、その列のデータを使用して逆順に並べ替えが行われます。 並べ替えに関する選択内容は、別のオブジェクトやフォルダーに移動しても、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] を再起動した後も、ユーザーごとに保持されます。  
+列ヘッダーを 1 回クリックすると、その列のデータを使用して並べ替えが行われます。 同じヘッダーを再度クリックすると、その列のデータを使用して逆順に並べ替えが行われます。 並べ替えに関する選択内容は、別のオブジェクトやフォルダーに移動しても、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を再起動した後も、ユーザーごとに保持されます。  
   
 ### <a name="filtering"></a>フィルター  
 [オブジェクト エクスプローラーの詳細] に表示される特定のオブジェクトのリストは、[オブジェクト エクスプローラーの詳細] ツール バーの **[フィルター]** アイコンを使用してフィルター処理できます。 アイコンは、フィルター処理が可能な場合に有効になります。  
@@ -93,7 +93,7 @@ ms.locfileid: "38984024"
 ## <a name="sql-server-object-search"></a>SQL Server オブジェクトの検索  
 ワイルドカード  
   
--   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「 [ワイルドカードを使用して検索する方法](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40)」を参照してください。  
+-   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「 [ワイルドカードを使用して検索する方法](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
   
 検索範囲  
   

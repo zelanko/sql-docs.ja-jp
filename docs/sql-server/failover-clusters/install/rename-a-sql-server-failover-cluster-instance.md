@@ -18,12 +18,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e77e2f11cef4859412c0805d6dd1e082274b82ac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 567b2bf3e75de80ca32ec22f4efb8b353bda173c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772238"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774606"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server のフェールオーバー クラスター インスタンスの名前変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "34772238"
   
 -   コンピューター/クラスターのネットワーク名が変更されている場合は、マスター サーバー (MSX) と対象サーバー (TSX) のインスタンス名を修正します。 詳細については、次の各トピックを参照してください。  
   
-    -   [マスター サーバーからの複数の対象サーバーの参加の解除](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
+    -   [マスター サーバーからの複数の対象サーバーの参加の解除](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [マルチサーバー環境の作成](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
+    -   [マルチサーバー環境の作成](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   ログ配布を再構成して、更新されたサーバー名を使ってログがバックアップおよび復元されるようにします。 詳細については、次の各トピックを参照してください。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34772238"
   
     -   [ログ配布の削除 &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   サーバー名を使用するジョブ ステップを更新します。 詳細については、 [ジョブ ステップの管理](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)を参照してください。  
+-   サーバー名を使用するジョブ ステップを更新します。 詳細については、 [ジョブ ステップの管理](../../../ssms/agent/manage-job-steps.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

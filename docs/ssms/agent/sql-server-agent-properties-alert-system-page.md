@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 493e81d1d245920b391374ef146d6b4dfb0586a9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a9a27740fe2aaa85a4341baf44dcb8b8e99e1fd2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035944"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775321"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server エージェントのプロパティ ([警告システム] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,23 +32,23 @@ ms.locfileid: "38035944"
 > 
   [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告によって送信されるメッセージの設定を表示および変更できます。  
+このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告によって送信されるメッセージの設定を表示および変更できます。  
   
 ## <a name="options"></a>[変数]  
 **[メール セッション]**  
-このセクションのオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのメールを構成します。  
+このセクションのオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのメールを構成します。  
   
 **[メール プロファイルを有効にする]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのメールを有効にします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのメールは有効ではありません。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのメールを有効にします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのメールは有効ではありません。  
   
 **[メール システム]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントで使用するメール システムを設定します。 データベース メール  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するメール システムを設定します。 データベース メール  
   
 > [!NOTE]  
-> 電子メール システムを変更したら、変更内容を有効にするために [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスを再起動する必要があります。  
+> 電子メール システムを変更したら、変更内容を有効にするために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを再起動する必要があります。  
   
 **[メール プロファイル]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントで使用するプロファイルを設定します。 **[\<新しいデータベース メール プロファイル>]** を選択して新しいプロファイルを作成できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するプロファイルを設定します。 **[\<新しいデータベース メール プロファイル>]** を選択して新しいプロファイルを作成できます。  
   
 **[ポケットベル メール]**  
 このセクションのオプションを使用すると、ポケットベル アドレスに送信される電子メール メッセージをポケットベル システムに対応させることができます。  
@@ -105,18 +105,18 @@ ms.locfileid: "38035944"
 緊急時のオペレーターへの通知方法を設定します。  
   
 **[トークンの置換]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント警告によって実行されるジョブで使用するジョブ ステップ トークンを有効にできます。 ジョブ ステップ トークンの詳細については、「 [ジョブ ステップでのトークンの使用](../../ssms/agent/use-tokens-in-job-steps.md)」をご覧ください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント警告によって実行されるジョブで使用するジョブ ステップ トークンを有効にできます。 ジョブ ステップ トークンの詳細については、「 [ジョブ ステップでのトークンの使用](../../ssms/agent/use-tokens-in-job-steps.md)」をご覧ください。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント警告でアクティブになるジョブ ステップには、Windows イベント ログに書き込み権限を持つ任意の Windows ユーザーがアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント トークンは、既定で無効になっています。 無効になっているトークンは、 **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)**、 **$(A-MSG)** です。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント警告でアクティブになるジョブ ステップには、Windows イベント ログに書き込み権限を持つ任意の Windows ユーザーがアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 無効になっているトークンは、 **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)**、 **$(A-MSG)** です。  
 >   
-> これらのトークンを使用する必要がある場合は、有効にする前に、信頼された Windows セキュリティ グループ (Administrators など) のメンバーだけが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が動作するコンピューターのイベント ログに書き込み権限を持つことを確認してください。  
+> これらのトークンを使用する必要がある場合は、有効にする前に、信頼された Windows セキュリティ グループ (Administrators など) のメンバーだけが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が動作するコンピューターのイベント ログに書き込み権限を持つことを確認してください。  
   
 **[警告に応答するすべてのジョブのトークンを置き換える]**  
-このチェック ボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] によってアクティブになるジョブに対してトークンの置換が有効になります。  
+このチェック ボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってアクティブになるジョブに対してトークンの置換が有効になります。  
   
 ## <a name="see-also"></a>参照  
 [演算子](../../ssms/agent/operators.md)  
-[データベース メールを使用するように SQL Server エージェント メールを構成する](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
-[データベース メール](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[データベース メールを使用するように SQL Server エージェント メールを構成する](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+[データベース メール](../../relational-databases/database-mail/database-mail.md)  
   

@@ -17,11 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26112fd5fa3052e6aa5f873a436aafce7430d498
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76ca616057ba53fa60fb9d53bd7ff79ff2598864
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774957"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>[制約式の確認] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +60,7 @@ NOT (payment_method = 'credit card') OR
   
 SQL 構文は、次のパラメーターで構成されています。  
   
-|パラメーター|Description|  
+|パラメーター|[説明]|  
 |-------------|---------------|  
 |定数 (constant)|数値データ、文字データなどのリテラル値です。 文字データは単一引用符 (') で囲む必要があります。|  
 |column_name|列を指定します。|  
@@ -70,6 +71,6 @@ SQL 構文は、次のパラメーターで構成されています。
 |[NOT]|LIKE、NULL、BETWEEN、IN、EXISTS などのキーワードを含むすべてのブール式を否定します。<br /><br />1 つのステートメントで複数の論理演算子が使用されているときは、NOT が先に処理されます。 実行順序は、かっこを使用して変更できます。|  
   
 ## <a name="see-also"></a>参照  
-[UNIQUE 制約と CHECK 制約](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[UNIQUE 制約の作成](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
+[UNIQUE 制約と CHECK 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
+[UNIQUE 制約の作成](../../relational-databases/tables/create-unique-constraints.md)  
   

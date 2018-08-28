@@ -26,20 +26,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0245dbc2322c5a0e19fcd18eb5b213422403094
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13403b3941f1d5c14779b0230ede0d1d85a02f11
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044389"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775658"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>エンタープライズ全体の管理の自動化
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の複数のインスタンスにわたって管理を自動化することを *マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスにわたって管理を自動化することを*マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
   
 -   2 台以上のサーバーを管理する場合  
   
@@ -69,10 +69,10 @@ ms.locfileid: "33044389"
 マスター サーバーおよび対象サーバーを作成および管理する方法について説明します。  
   
 [マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスに管理者以外の Windows アカウントまたはローカル システム アカウントを使用することによる、マルチサーバー環境への影響について説明します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスに管理者以外の Windows アカウントまたはローカル システム アカウントを使用することによる、マルチサーバー環境への影響について説明します。  
   
 [対象サーバーでの暗号化オプションの設定](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-対象サーバーでの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの MsxEncryptChannelOptions レジストリ サブキーの設定について説明します。  
+対象サーバーでの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの MsxEncryptChannelOptions レジストリ サブキーの設定について説明します。  
   
 [エンタープライズ全体におけるジョブの管理](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 ジョブ ステータスの確認、ジョブの対象サーバーの変更、対象サーバーのクロックの同期、およびマスター サーバーの現在のジョブ ステータスに対するポーリングについて説明します。  
@@ -87,20 +87,20 @@ ms.locfileid: "33044389"
 対象サーバーからマスター サーバーに転送されるイベントについて説明します。  
   
 [企業全体の自動管理のチューニング](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
-マルチサーバー環境で自動化された管理により [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]の自己チューニング機能を活用する方法について説明します。  
+マルチサーバー環境で自動化された管理により [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の自己チューニング機能を活用する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server データベース エンジンのインストールに関する旧バージョンとの互換性のトピック](http://msdn.microsoft.com/en-us/10de5ec6-d3cf-42ef-aa62-1bdf3fbde841)  
-[サーバーの登録](http://msdn.microsoft.com/en-us/c2a2513e-fa09-419c-99e7-a12d57c5a0db)  
-[sp_add_targetservergroup](http://msdn.microsoft.com/en-us/acb69343-d766-46ff-b771-0c7655c5231a)  
-[sp_delete_targetserver](http://msdn.microsoft.com/en-us/cc438701-ad91-419d-9f23-ebc4c548c700)  
-[sp_delete_targetservergroup](http://msdn.microsoft.com/en-us/d8dd838e-64aa-419f-9ccb-ff04908cf3e4)  
-[sp_help_downloadlist](http://msdn.microsoft.com/en-us/745b265b-86e8-4399-b928-c6969ca1a2c8)  
-[sp_help_jobserver](http://msdn.microsoft.com/en-us/57971787-f9f5-4199-9f64-c2b61a308906)  
-[sp_help_targetservergroup](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)  
-[sp_resync_targetserver](http://msdn.microsoft.com/en-us/40e44df7-d3e3-44ee-b149-08aba629a21f)  
-[sp_update_targetservergroup](http://msdn.microsoft.com/en-us/4ac65ed6-e07e-40e4-a282-13bfd92dfa41)  
-[sysjobservers](http://msdn.microsoft.com/en-us/9abcc20f-a421-4591-affb-62674d04575e)  
-[syslogins](http://msdn.microsoft.com/en-us/4cb34f17-a4bb-469f-a218-71f074e6308f)  
-[systargetservers](http://msdn.microsoft.com/en-us/479d1314-be37-4d19-ac9c-419fc9110e53)  
+[SQL Server データベース エンジンのインストールに関する旧バージョンとの互換性のトピック](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+[サーバーの登録](../register-servers/register-servers.md)  
+[sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
+[sp_delete_targetserver](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
+[sp_delete_targetservergroup](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)  
+[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)  
+[sp_help_jobserver](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)  
+[sp_help_targetservergroup](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)  
+[sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)  
+[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  
+[sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
+[syslogins](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+[systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
   
