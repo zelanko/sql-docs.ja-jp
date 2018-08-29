@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_distributed_sql_requests (Transact SQL) |マイクロソフトのドキュメント
+title: sys.dm_exec_distributed_sql_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ee6ce9ae453eb58bfa8dde2406c630b966287007
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0fb08fe6acae5630ae2be35721b48155fc5509b8
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540582"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43091269"
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "39540582"
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|execution_id と step_index は、このビューのキーを構成します。 要求に関連付けられている一意の数値 id です。|内の ID を参照してください[sys.dm_exec_requests &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|このような配布の一部であるクエリのステップのインデックスです。|Step_index を参照してください[sys.dm_exec_distributed_request_steps &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
-|compute_node_id|**int**|この手順で表される操作の種類。|Compute_node_id を参照してください[sys.dm_exec_compute_nodes &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|execution_id|**nvarchar(32)**|execution_id と step_index は、このビューのキーを構成します。 要求に関連付けられている一意の数値 id です。|内の ID を参照してください[sys.dm_exec_requests &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|このような配布の一部であるクエリのステップのインデックスです。|Step_index を参照してください。 [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)します。|  
+|compute_node_id|**int**|この手順で表される操作の種類。|Compute_node_id を参照してください。 [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)します。|  
 |distribution_id|**int**|手順を実行しています。|配布のスコープではないのノードのスコープで実行される要求の場合は-1 に設定されます。|  
 |status|**nvarchar(32)**|この手順の状態|作業中、取り消し済み、完了した、障害が発生した、キューに置かれました。|  
-|error_id|**nvarchar(36)**|存在する場合は、このステップに関連付けられているエラーの一意の id|Id を参照してください[sys.dm_exec_compute_node_errors &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)すると、エラーが発生していない場合は NULL です。|  
+|error_id|**nvarchar(36)**|存在する場合は、このステップに関連付けられているエラーの一意の id|Id を参照してください。 [sys.dm_exec_compute_node_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)、エラーが発生しなかった場合は NULL です。|  
 |start_time|**datetime**|ステップの実行開始時刻|小さいまたは現在の時刻と等しい、大きいか等しい end_compile_time が、この手順が属している、クエリのです。|  
 |end_time|**datetime**|このステップ実行を完了したが取り消された場合、または失敗したの時間です。|小さいまたは現在の時刻に等しいと大きいか等しい start_time、手順については、現在実行中に NULL を設定するか、キューに登録します。|  
 |total_elapsed_time|**int**|クエリのステップが実行されて、ミリ秒単位で時間の合計|0 ～ start_time と end_time の間の違いです。 手順についてはキューに置かれた 0 を返します。|  

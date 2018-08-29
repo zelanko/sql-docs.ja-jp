@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c3f420269314667729836d0f6f536935ebe6ec5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 395663802627a0dfac8f9fa314fe2a0fe51f8be7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467780"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786367"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-これは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]サンプル アプリケーションは、結果セットの getter メソッドを使用して取得する方法を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]'SQL データの検出と分類' テーブルからの情報、そのような情報を保持します。
+これは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]サンプル アプリケーションは、結果セットの getter メソッドを使用して取得する方法を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]'SQL データの検出と分類' テーブルからの情報、そのような情報を保持します。
   
 このサンプルのコード ファイルが、DataDiscoveryAndClassification.java をという名前し、次の場所で見つかります。  
 

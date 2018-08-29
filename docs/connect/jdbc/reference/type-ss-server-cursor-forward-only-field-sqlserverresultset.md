@@ -1,5 +1,5 @@
 ---
-title: TYPE_SS_SERVER_CURSOR_FORWARD_ONLY フィールド (SQLServerResultSet) |Microsoft ドキュメント
+title: TYPE_SS_SERVER_CURSOR_FORWARD_ONLY フィールド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7af382db57ad0fbd3ecc615e2ab4f142398ec2b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 457c2a8e537b06d444e122f3e3ea1b0e4d6bf5f9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848677"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787408"
 ---
 # <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY フィールド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定するため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]高速順方向専用、読み取り専用のカーソルの種類。  
+  カーソルの種類を、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の高速順方向専用かつ読み取り専用カーソルに指定する場合に使用します。  
   
 ## <a name="syntax"></a>構文  
   

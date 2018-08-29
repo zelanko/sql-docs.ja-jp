@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINE_COLUMNS view
 - INFORMATION_SCHEMA.ROUTINE_COLUMNS view
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ca7c277ab96cfc12a44b6b650f5f28a1821c08b5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e976804e34e7074b23f89ba8c61eeb46a7d3d9e7
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557662"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43110465"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39557662"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル値関数のカタログ名またはデータベース名です。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブル値関数を含むスキーマ名です。<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブル値関数を含むスキーマ名です。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|テーブル値関数の名前です。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|列名|  
 |**ORDINAL_POSITION**|**int**|列の識別番号。|  
@@ -60,7 +59,7 @@ ms.locfileid: "39557662"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|常に NULL が返されます。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|列が文字データの場合は、並べ替え順序の一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL を返します。|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|列が別名データ型の場合、この列はユーザー定義のデータ型が作成されたデータベースの名前になります。 それ以外の場合は NULL を返します。|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|列がユーザー定義データ型の場合、この列はユーザー定義データ型を含むスキーマの名前です。 それ以外の場合は NULL を返します。<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|列がユーザー定義データ型の場合、この列はユーザー定義データ型を含むスキーマの名前です。 それ以外の場合は NULL を返します。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**ドメイン名**|**nvarchar(** 128 **)**|列がクエリ アナライザーの場合、この列はクエリ アナライザーの名前になります。 それ以外の場合は NULL を返します。|  
   
 ## <a name="see-also"></a>参照  

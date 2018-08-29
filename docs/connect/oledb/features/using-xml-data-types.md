@@ -32,14 +32,14 @@ helpviewer_keywords:
 - XML [SQL Server], OLE DB Driver for SQL Server
 - COLUMNS rowset
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 94a0dbc9e60711f61a5ba4ad86e7914b7327e75d
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: fa67c09d301c5932ccd128129b3beccf57c1a1e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107068"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025231"
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "39107068"
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
  次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **xml** データ型と共に使用した場合に行われるバインドおよび強制型変換を示します。  
   
-|データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **XML 以外へ**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **XML 以外から**|  
+|データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **XML 以外から**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **XML 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|パス スルー<sup>6、7</sup>|エラー<sup>1</sup>|[OK]<sup>11、6</sup>|エラー<sup>8</sup>|  
 |DBTYPE_BYTES|パス スルー<sup>6、7</sup>|該当なし<sup>2</sup>|可 <sup>11、6</sup>|該当なし <sup>2</sup>|  

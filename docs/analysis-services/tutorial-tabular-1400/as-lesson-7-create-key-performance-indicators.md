@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services チュートリアル-レッスン 7: 主要業績評価指標の作成 |Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03dd09c8f06c8e4d96176f47dcc310008feaf564
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979134"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087567"
 ---
 # <a name="create-key-performance-indicators"></a>主要業績評価指標の作成
 
@@ -24,7 +24,7 @@ ms.locfileid: "37979134"
   
 このレッスンの推定所要時間: **15 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 6: メジャーを作成](../tutorial-tabular-1400/as-lesson-6-create-measures.md)です。   
   

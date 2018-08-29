@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_waiting_tasks (Transact SQL) |マイクロソフトのドキュメント
+title: sys.dm_os_waiting_tasks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 528759c3acb3519b9dbe1cbb457fe47502cc4289
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540762"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43091748"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "39540762"
   リソースを待機しているタスクの待機キューに関する情報を返します。  
   
 > [!NOTE]  
->  これを呼び出すと[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_waiting_tasks**。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_waiting_tasks**します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|待機中のタスクのアドレス。|  
 |**session_id**|**smallint**|タスクに関連付けられているセッションの ID。|  
 |**exec_context_id**|**int**|タスクに関連付けられている実行コンテキストの ID。|  
-|**wait_duration_ms**|**bigint**|この待機の種類における総待機時間 (ミリ秒単位)。 Inclusive のこの時間は、 **signal_wait_time**。|  
+|**wait_duration_ms**|**bigint**|この待機の種類における総待機時間 (ミリ秒単位)。 この時間には**signal_wait_time**します。|  
 |**wait_type**|**nvarchar(60)**|待機の種類の名前。|  
 |**resource_address**|**varbinary(8)**|タスクが待機しているリソースのアドレス。|  
 |**blocking_task_address**|**varbinary(8)**|リソースを現在保持しているタスク。|  
@@ -106,7 +106,7 @@ ms.locfileid: "39540762"
   
     -   HOBT: の hobtlock hobtid =\<hobt id > subresource =\<hobt subresource > dbid =\<db id >  
   
-    -   Allocunitlock hobtid の ALLOCATION_UNIT: =\<hobt id > subresource =\<subresource の割り当ての単位 > dbid =\<db id >  
+    -   Allocation_unit の場合: allocunitlock hobtid =\<hobt id > subresource =\<アロケーション-単位-subresource > dbid =\<db id >  
   
      **\<モード > することができます。**  
   

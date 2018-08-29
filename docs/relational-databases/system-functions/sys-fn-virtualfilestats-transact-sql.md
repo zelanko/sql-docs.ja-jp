@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualfilestats (TRANSACT-SQL) |マイクロソフトのドキュメント
+title: sys.fn_virtualfilestats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 897c50ffd93d3d01f04b0f2c87497b3f2e3142b6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f8e8bf556d721ac18af7fa552db558395bff76f2
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542892"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43090990"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>引数  
  *database_id* | NULL  
- データベースの ID です。 *database_id* は** int**, 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。  
+ データベースの ID です。 *database_id* は **int**, 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。  
   
  *file_id* | NULL  
  ファイルの ID を指定します。 *file_id*は**int**、既定値はありません。 データベース内のすべてのファイルに関する情報を返すには NULL を指定します。  

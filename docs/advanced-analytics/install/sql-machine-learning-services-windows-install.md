@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437692"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118580"
 ---
-# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>SQL Server コンピューターの Windows で Learning サービス (In-database) をインストールします。 
+# <a name="install-sql-server-machine-learning-services"></a>SQL Server Machine Learning サービスをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 以降、データベース内分析用の R と Python のサポートは、SQL Server Machine Learning Services、SQL Server 2016 で導入された R Services の機能の後継で提供されます。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
@@ -100,7 +100,7 @@ SQL Server 2017 以降、データベース内分析用の R と Python のサ�
 
 7. セットアップが完了したら、コンピューターを再起動するように指示される場合ようになりました。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
 
-## <a name="bkmk_enableFeature"></a>外部スクリプトの実行を有効にします。
+## <a name="bkmk_enableFeature"></a>スクリプトの実行を有効にします。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 
 
@@ -313,7 +313,7 @@ SQL Server で使用するパッケージは、インスタンスによって使
 
 * [SQL Server R Services 用のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 

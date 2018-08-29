@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278823"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784591"
 ---
 # <a name="building-the-connection-url"></a>接続 URL の構築
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39278823"
 > [!NOTE]  
 >  前の例では接続文字列でユーザー名とパスワードを使用していますが、より安全な統合セキュリティを使用する必要があります。 詳細については、後の「[Windows 上で統合認証を使用する接続](#Connectingintegrated)」セクションを参照してください。  
   
- 次の接続文字列は、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でサポートされている任意のオペレーティング システム上で実行中のアプリケーションから統合認証および Kerberos を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに接続する方法の例を示しています。  
+ 次の接続文字列は、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でサポートされている任意のオペレーティング システム上で実行中のアプリケーションから統合認証および Kerberos を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する方法の例を示しています。  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>名前付きおよび複数の SQL Server インスタンス  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、サーバーごとに複数のデータベース インスタンスをインストールできます。 各インスタンスは個別の名前によって識別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の名前付きインスタンスに接続するには、名前付きインスタンスのポート番号を指定するか (推奨)、またはインスタンス名を JDBC URL プロパティまたは **datasource** プロパティとして指定することができます。 インスタンス名またはポート番号のプロパティを指定しない場合は、既定のインスタンスへの接続が作成されます。 次の例を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーごとに複数のデータベース インスタンスをインストールできます。 各インスタンスは個別の名前によって識別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、名前付きインスタンスのポート番号を指定するか (推奨)、またはインスタンス名を JDBC URL プロパティまたは **datasource** プロパティとして指定することができます。 インスタンス名またはポート番号のプロパティを指定しない場合は、既定のインスタンスへの接続が作成されます。 次の例を参照してください。  
   
  ポート番号を使用するには、次のように指定します。  
   

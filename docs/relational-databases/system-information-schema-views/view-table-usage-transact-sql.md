@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.VIEW_TABLE_USAGE view
 - VIEW_TABLE_USAGE view
 ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d470f3a5e8d38a0ead1342724ab581cca7573909
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c2afb2559917d670b23037eb372840de47bf875
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557322"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43093320"
 ---
 # <a name="viewtableusage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39557322"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar(** 128 **)**|ビュー修飾子です。|  
-|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**VIEW_NAME**|**sysname**|ビュー名です。|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|ベース テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|ベース テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**sysname**|ビューの基になるベース テーブル|  
   
 ## <a name="see-also"></a>参照  

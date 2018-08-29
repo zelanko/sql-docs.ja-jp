@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51310c2848526942e23152b9c02a4ad914118392
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: c582cfcd744d009cae0c966c4640f7406c200246
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459556"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786128"
 ---
 # <a name="sparse-columns"></a>スパース列
 
@@ -27,7 +27,7 @@ ms.locfileid: "39459556"
 
 スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 少なくとも 20 ～ 40% の領域を削減できる場合は、スパース列の使用を検討してください。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 では、[!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (以降) のサーバーに接続する場合、スパース列がサポートされます。 スパース列および列セットの列を特定するために、[SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)、または [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) を使用できます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 では、[!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (以降) のサーバーに接続する場合、スパース列がサポートされます。 スパース列および列セットの列を特定するために、[SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)、または [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) を使用できます。
 
 このサンプルのコード ファイルは SparseColumns.java という名前で、次の場所にあります。  
 

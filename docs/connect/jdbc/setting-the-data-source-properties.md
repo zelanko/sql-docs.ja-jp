@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9957a3273f2e33fea59560c4af30ec0315eea92
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 000d33df0320333e688051f1888659d152f62dde
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458026"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785654"
 ---
 # <a name="setting-the-data-source-properties"></a>データ ソースのプロパティの設定」を参照してください。
 
@@ -29,7 +29,7 @@ ms.locfileid: "39458026"
 
 アプリケーション サーバーやサーブレット/JSP エンジンなどの Java EE 製品では、通常、データベース アクセス用にデータ ソースを構成できます。 構成で "プロパティ=値" ペアとしてプロパティを入力できる場合は、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」に記載されているすべてのプロパティを指定できます。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のデータ ソースの詳細については、「[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラス」を参照してください。 SQLServerDataSource クラスを使用して接続を確立する方法の例については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースを参照してください[データ ソースのサンプル](../../connect/jdbc/data-source-sample.md)します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースの詳細については、「[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラス」を参照してください。 SQLServerDataSource クラスを使用して接続を確立する方法の例については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください[データ ソースのサンプル](../../connect/jdbc/data-source-sample.md)します。
 
 ## <a name="see-also"></a>参照
 

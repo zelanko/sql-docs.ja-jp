@@ -1,5 +1,5 @@
 ---
-title: CONCUR_SS_SCROLL_LOCKS フィールド (SQLServerResultSet) |Microsoft ドキュメント
+title: CONCUR_SS_SCROLL_LOCKS フィールド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3965327a41cacb25e76346b82128fb583aaf83b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04915501bf8e4618b35c8019779af5e60cda8057
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828007"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785392"
 ---
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>CONCUR_SS_SCROLL_LOCKS フィールド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  行ロックを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 読み取り/書き込みのオプティミスティック同時実行制御の種類を指定する場合に使用します。  
+  行ロックを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 読み取り/書き込みのオプティミスティック同時実行制御の種類を指定する場合に使用します。  
   
 ## <a name="syntax"></a>構文  
   

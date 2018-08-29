@@ -33,17 +33,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3decb197568d28088e5206ac1ffc46b45108d734
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 318ce145febf62b282c96560be91cc08b7de9ea8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452736"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785202"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 と下位の場合は、次を参照してください。 [sqlcmd ユーティリティ](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)します。
+ > SQL Server 2014 と下位の場合は、次を参照してください。 [sqlcmd ユーティリティ](sqlcmd-utility.md)します。
 
  > Linux では、sqlcmd を使用して、参照してください[sqlcmd および bcp を Linux にインストール](../linux/sql-server-linux-setup-tools.md)します。
 

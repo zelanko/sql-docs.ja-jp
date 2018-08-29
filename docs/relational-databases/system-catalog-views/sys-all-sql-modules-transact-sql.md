@@ -1,5 +1,5 @@
 ---
-title: sys.all_sql_modules (Transact SQL) |マイクロソフトのドキュメント
+title: sys.all_sql_modules (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - sys.all_sql_modules catalog view
 ms.assetid: 7477a3fe-afb3-44c8-bb2c-c6e1d9bdee6f
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 81f8779fbb25d092ea40298516f8fd395915b02e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 43b895fbad59748fd853e7d8697bbe05177708ef
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541532"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083125"
 ---
 # <a name="sysallsqlmodules-transact-sql"></a>sys.all_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  和集合を返す**sys.sql_modules**と**sys.system_sql_modules**。  
+  和集合を返します**sys.sql_modules**と**sys.system_sql_modules**します。  
   
  このビューでは、各ネイティブ コンパイル、スカラー ユーザー定義関数の行を返します。 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "39541532"
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.system_sql_modules &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-system-sql-modules-transact-sql.md)   
+ [sys.system_sql_modules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-sql-modules-transact-sql.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

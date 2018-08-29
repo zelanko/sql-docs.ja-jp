@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74cc593c494c80492a96644f25fe4a7b6bc7a85e
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f4a91678f90164a85907a21f50d74b50561ceaff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662214"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783917"
 ---
 # <a name="understanding-isolation-levels"></a>分離レベルについて
 
@@ -65,7 +65,7 @@ ms.locfileid: "39662214"
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の新しいスナップショット分離レベルを使用するには、`SQLServerConnection` 定数のいずれかを使用できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいスナップショット分離レベルを使用するには、`SQLServerConnection` 定数のいずれかを使用できます。  
 
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -77,7 +77,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の分離レベルの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] オンライン ブックの「[!INCLUDE[ssDE](../../includes/ssde_md.md)]における分離レベル」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の分離レベルの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[!INCLUDE[ssDE](../../includes/ssde_md.md)]における分離レベル」を参照してください。  
 
 ## <a name="see-also"></a>参照
 

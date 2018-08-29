@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services チュートリアル-レッスン 6: メジャーの作成 |Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ead234a52f258f2c535f85c0992523b5b4e146
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37973094"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43093965"
 ---
 # <a name="create-measures"></a>メジャーを作成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "37973094"
   
 このレッスンの推定所要時間: **30 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 5: 計算列を作成](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)です。  
   

@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b69c0b2d5df0a9d8d0608093cde626666e136116
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 16ab7dd1f4a083c51108ef86ff9c9428df1649da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107694"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029561"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "39107694"
 |DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |date|SQLDATE|de|  
-|[時刻]|SQLTIME|te|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "39107694"
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
 |date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|[時刻]|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -104,7 +104,7 @@ ms.locfileid: "39107694"
 |変換先 --><br /><br /> From|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |date|1|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
-|[時刻]|なし|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
+|Time|なし|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
 |Smalldatetime|1、2|1、4、10|1|1|1、10|1、5、10|1、11|1、11|  
 |DATETIME|1、2|1、4、10|1、12|1|1、10|1、5、10|1、11|1、11|  
 |Datetime2|1、2|1、4、10|1、12|1、10|1、10|1、5、10|1、3|1、3|  

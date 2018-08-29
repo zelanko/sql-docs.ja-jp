@@ -21,17 +21,19 @@ helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 5e866f5a9856fe1308bc5233432e053b18d207f7
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086174"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118320"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   外部の場所に引数として指定されたスクリプトを実行します。 サポートされていると、登録済みの言語 (R または Python) では、スクリプトを記述する必要があります。 実行する**sp_execute_external_script**、ステートメントを使用して外部スクリプトを有効にする必要があります最初`sp_configure 'external scripts enabled', 1;`します。  
@@ -249,7 +251,7 @@ Python コードで使われている列見出しは、SQL Server への出力�
 
 スコアリングには、ネイティブな [PREDICT](../../t-sql/queries/predict-transact-sql.md) 関数を使うこともできます。通常、これは Python や R のランタイムを呼び出さないので高速です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Python ライブラリとデータ型](../../advanced-analytics/python/python-libraries-and-data-types.md)  

@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: abd4df2a4f08cd8f47bacc4a209375b65a541e1a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982314"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787407"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server への接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データベースへの接続を作成する方法について説明します。  
+このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへの接続を作成する方法について説明します。  
   
 ## <a name="connection-properties"></a>接続プロパティ  
 
@@ -67,7 +67,7 @@ Server = [protocol:]server[,port]
  - **OutFile.dat-s out、bcp master.INFORMATION_SCHEMA.TABLES <server> -u <name> -p <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Secure Sockets Layer (SSL) を使用する  
-Secure Sockets Layer (SSL) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] への接続を暗号化できます。 SSL は、ネットワーク上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] のユーザー名とパスワードを保護します。 また、サーバーの ID を検証して、man-in-the-middle (MITM) 攻撃に対して保護することもできます。  
+Secure Sockets Layer (SSL) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続を暗号化できます。 SSL は、ネットワーク上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザー名とパスワードを保護します。 また、サーバーの ID を検証して、man-in-the-middle (MITM) 攻撃に対して保護することもできます。  
 
 暗号化を有効にすると、セキュリティは向上しますが、パフォーマンスは低下します。
 
@@ -78,7 +78,7 @@ Secure Sockets Layer (SSL) を使用して [!INCLUDE[ssNoVersion](../../../inclu
 ||**TrustServerCertificate = いいえ**|**TrustServerCertificate = [はい]**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されません。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されません。|  
-|**Encrypt=yes**|サーバー証明書は確認されます。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 証明書のサブジェクトの共通名 (CN) またはサブジェクトの別名 (SAN) の名前 (または IP アドレス) は、接続文字列に指定されているサーバー名 (または IP アドレス) と正確に一致する必要があります。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。|  
+|**Encrypt=yes**|サーバー証明書は確認されます。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 証明書のサブジェクトの共通名 (CN) またはサブジェクトの別名 (SAN) の名前 (または IP アドレス) は、接続文字列に指定されているサーバー名 (または IP アドレス) と正確に一致する必要があります。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。|  
 
 既定では、暗号化された接続はサーバーの証明書を必ず検証します。 ただし、自己署名証明書を持つサーバーに接続する場合も追加、`TrustServerCertificate`信頼された証明書機関の一覧に対して証明書の確認を省略するオプション。  
 

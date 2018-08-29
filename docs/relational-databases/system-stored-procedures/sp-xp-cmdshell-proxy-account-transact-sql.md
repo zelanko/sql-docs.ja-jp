@@ -1,5 +1,5 @@
 ---
-title: sp_xp_cmdshell_proxy_account (Transact SQL) |マイクロソフトのドキュメント
+title: sp_xp_cmdshell_proxy_account (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,24 +20,24 @@ helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 48a92be607ea1d57740587840cb854299443b285
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dd3ffc5ae80845ffbf61cc0ff83cd1d34f53f095
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560562"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43089648"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  プロキシの資格情報を作成する**xp_cmdshell**。  
+  プロキシ資格情報を作成します。 **xp_cmdshell**します。  
   
 > [!NOTE]  
->  **xp_cmdshell**デフォルトでは無効です。 有効にする**xp_cmdshell**を参照してください[xp_cmdshell サーバー コンフィギュレーション オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  **xp_cmdshell**は既定で無効になります。 有効にする**xp_cmdshell**を参照してください[xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,9 +62,9 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- プロキシの資格情報と呼ばれる **# xp_cmdshell_proxy_account #**。  
+ プロキシ資格情報が呼び出される **##xp_cmdshell_proxy_account##** します。  
   
- [NULL] オプションを使用して実行時**sp_xp_cmdshell_proxy_account**プロキシの資格情報を削除します。  
+ NULL オプションを使用して実行されると**sp_xp_cmdshell_proxy_account**プロキシ資格情報を削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
@@ -88,7 +88,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [xp_cmdshell &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
+ [xp_cmdshell &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

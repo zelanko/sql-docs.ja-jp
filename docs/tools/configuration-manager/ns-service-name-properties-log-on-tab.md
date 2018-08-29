@@ -1,34 +1,32 @@
 ---
-title: NS$&lt;サービス名&gt;プロパティ (ログのタブ) |Microsoft ドキュメント
+title: NS$&lt;サービス名&gt;プロパティ ([ログオン] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: configuration-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bfe2aa22e110339e84403c6bbef2807ff0275076
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: 565240a59fc38cadec5addf42d047b89eb73047a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786928"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;サービス名&gt; プロパティ ([ログオン] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   **[Notification Services のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   

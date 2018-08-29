@@ -12,40 +12,40 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd77c85b089c0167306aeaad5c6d65a313e77624
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983438"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785683"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-macOS と Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] のプログラミング機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) の ODBC に基づいています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client は、Windows Data Access Components の ODBC に基づいています ([ODBC プログラマー リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
+macOS と Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプログラミング機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) の ODBC に基づいています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、Windows Data Access Components の ODBC に基づいています ([ODBC プログラマー リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
-複数のアクティブな結果セット (MARS) およびその他の ODBC アプリケーションで使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定の機能を含めることによって`/usr/local/include/msodbcsql.h`unixODBC ヘッダーを含めた後 (`sql.h`、 `sqlext.h`、 `sqltypes.h`、および`sqlucode.h`)。 次に、Windows ODBC アプリケーションで使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 固有の項目に、同じシンボル名を使用します。
+複数のアクティブな結果セット (MARS) およびその他の ODBC アプリケーションで使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定の機能を含めることによって`/usr/local/include/msodbcsql.h`unixODBC ヘッダーを含めた後 (`sql.h`、 `sqlext.h`、 `sqltypes.h`、および`sqlucode.h`)。 次に、Windows ODBC アプリケーションで使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の項目に、同じシンボル名を使用します。
 
 ## <a name="available-features"></a>利用可能な機能  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ODBC 用 Native Client のドキュメント ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) の次のセクションは、macOS と Linux で ODBC ドライバーを使用する場合に有効です。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 用 Native Client のドキュメント ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) の次のセクションは、macOS と Linux で ODBC ドライバーを使用する場合に有効です。  
 
 -   [SQL Server との通信 (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
--   [接続とクエリのタイムアウトのサポート](http://msdn.microsoft.com/library/ms130822.aspx)  
--   [カーソル](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
+-   [接続とクエリのタイムアウトのサポート](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [カーソル](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
 -   [日付/時刻の強化 (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
 -   [クエリの実行 (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [エラーとメッセージの処理](http://msdn.microsoft.com/library/ms131289.aspx)  
--   [Kerberos 認証](http://msdn.microsoft.com/library/cc280459.aspx)  
+-   [エラーとメッセージの処理](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
+-   [Kerberos 認証](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
 -   [大きな CLR ユーザー定義型 (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [トランザクションの実行 (ODBC) (分散トランザクションを除く)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [結果の処理 (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [ストアド プロシージャの実行](http://msdn.microsoft.com/library/ms131440.aspx)
+-   [ストアド プロシージャの実行](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [スパース列のサポート (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL 暗号化](http://msdn.microsoft.com/library/ms131691.aspx)
+-   [SSL 暗号化](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [テーブル値パラメーター](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [コマンドおよびデータ API の UTF-8 および UTF-16](http://msdn.microsoft.com/library/ff878241.aspx)
--   [カタログ関数の使用](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [カタログ関数の使用](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>サポートされていない機能
 
@@ -110,7 +110,7 @@ ODBC Driver 17 では、次の文字セットとエンコーディングのい�
 
 SQLWCHAR データは UTF 16LE (リトル エンディアン) である必要があります。
 
-ドライバーがクライアントの既定値 (コード ページ 1252 通常) にエンコーディングから、指定されたデータを変換 SQL_VARCHAR が指定したなどのナロー文字 SQL 型の場合は、SQLBindParameter の入力パラメーターをバインドする場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]エンコードします。 出力パラメーターの場合は、ドライバーは、クライアントのエンコーディングのデータに関連付けられた照合順序の情報に指定されたエンコーディングからに変換します。 ただし、データ損失が---ソースのエンコード中にターゲット エンコードで表現できない文字が疑問符 () に変換されます ('? ')。
+ドライバーがクライアントの既定値 (コード ページ 1252 通常) にエンコーディングから、指定されたデータを変換 SQL_VARCHAR が指定したなどのナロー文字 SQL 型の場合は、SQLBindParameter の入力パラメーターをバインドする場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エンコードします。 出力パラメーターの場合は、ドライバーは、クライアントのエンコーディングのデータに関連付けられた照合順序の情報に指定されたエンコーディングからに変換します。 ただし、データ損失が---ソースのエンコード中にターゲット エンコードで表現できない文字が疑問符 () に変換されます ('? ')。
 
 このデータの損失を避けるためには、入力パラメーターをバインドするときに、SQL_NVARCHAR などの Unicode SQL 文字型を指定します。 この場合、ドライバーは、クライアントのすべての Unicode 文字を表すことができます、utf-16 エンコーディングから変換します。 さらに、ターゲット列またはパラメーター、サーバーである必要がありますも Unicode 型 (**nchar**、 **nvarchar**、 **ntext**) または 1 つで、照合順序/エンコードすることができます元のソース データのすべての文字を表します。 出力パラメーターを持つデータの損失を回避するには、Unicode SQL 型と型を指定か、Unicode C (SQL_C_WCHAR)、utf-16; としてデータを返す、ドライバーの原因または、幅が狭い C 型、およびクライアントのエンコーディングが (これは常に utf-8 でできること). ソース データのすべての文字を表すことを確認して
 
@@ -122,14 +122,14 @@ ODBC Driver 13 および 13.1 では、UTF-8 マルチバイト文字または U
 
 ## <a name="additional-notes"></a>追加情報  
 
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 認証と **host,port** を使用して、専用管理者接続 (DAC) を作成できます。 Sysadmin ロールのメンバーはまず、DAC ポートを検出する必要があります。 参照してください[データベース管理者用の診断接続](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)を検出する方法。 たとえば、DAC ポートが 33000 である場合、次のように `sqlcmd` でそれに接続することができます。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証と **host,port** を使用して、専用管理者接続 (DAC) を作成できます。 Sysadmin ロールのメンバーはまず、DAC ポートを検出する必要があります。 参照してください[データベース管理者用の診断接続](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)を検出する方法。 たとえば、DAC ポートが 33000 である場合、次のように `sqlcmd` でそれに接続することができます。  
 
     ```
     sqlcmd –U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  
-    > DAC 接続では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 認証を使用する必要があります。  
+    > DAC 接続では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する必要があります。  
     
 2.  UnixODBC ドライバー マネージャーは、すべてのステートメント属性に対し、それらが SQLSetConnectAttr 経由で渡される場合に、「属性またはオプション識別子が無効です」を返します。 Windows で、SQLSetConnectAttr がステートメント属性値を受け取ると、ドライバーは接続ハンドルの子であるすべてのアクティブなステートメントにその値を設定します。  
 

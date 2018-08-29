@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6548433059e4537f58b70681b1958e40af0bb7f5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6f67563ccf884c47b7fc3b86d32cd2b09fa393c9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456736"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786130"
 ---
 # <a name="basic-data-types-sample"></a>基本データ型のサンプル
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、結果セットの getter メソッドを使用して基本的な [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型の値を取得する方法と、結果セットの update メソッドを使用してそれらの値を更新する方法を示しています。
+この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、結果セットの getter メソッドを使用して基本的な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の値を取得する方法と、結果セットの update メソッドを使用してそれらの値を更新する方法を示しています。
 
 このサンプルのコード ファイルは BasicDT.java という名前で、次の場所にあります。
 

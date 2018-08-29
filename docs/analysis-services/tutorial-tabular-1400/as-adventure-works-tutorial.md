@@ -1,6 +1,6 @@
 ---
 title: Analysis Services Adventure Works チュートリアル (1400) |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28aa401eb037fecadca17ededf041ab82a4bc498
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7abd968db3aacbb71ed238e3f6ae6b857c8b1d99
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042450"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084715"
 ---
-# <a name="tabular-modeling-1400-compatibility-level"></a>テーブル モデリング (1400 互換性レベル)
+# <a name="tabular-modeling-1400-compatibility-level"></a>表形式のモデリング (1400 互換性レベル)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "38042450"
   
 -   表形式モデルをデプロイする方法、 **Azure Analysis Services**サーバーまたは**SQL Server 2017 Analysis Services** SSDT を使用してサーバー。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 このチュートリアルでは、次の操作をする必要があります。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "38042450"
 |[不規則階層](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)|20 分| 
 
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 
 最初に、次を参照してください。[レッスン 1: 新しい表形式モデル プロジェクトを作成する](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)します。  
   

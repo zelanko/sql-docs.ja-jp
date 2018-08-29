@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 75e962b9be2acb1d44451081f0aef2bccd5a09fc
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437621"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118510"
 ---
-# <a name="install-sql-server-2016-r-services-in-database"></a>SQL Server 2016 R Services (In-Database) をインストールする 
+# <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事は、インストールして構成する方法を説明します**SQL Server 2016 R Services (In-database)** します。 SQL Server 2016 をした場合は、SQL Server で R コードの実行を有効にするには、この機能をインストールします。
@@ -85,7 +85,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
 7. セットアップが完了したら、コンピューターを再起動するように指示される場合ようになりました。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
 
 
-##  <a name="bkmk_enableFeature"></a>外部スクリプトの実行を有効にします。
+##  <a name="bkmk_enableFeature"></a>スクリプトの実行を有効にします。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 
 
@@ -272,7 +272,7 @@ SQL Server で使用するパッケージは、インスタンスによって使
 
 * [SQL Server R Services 用のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 

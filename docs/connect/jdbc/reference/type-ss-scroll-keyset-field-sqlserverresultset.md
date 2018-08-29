@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f6f5bc493af3ea74c5c96448f293376a2dc036a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5cf2964996a6e09159acdb0bde3c23baf37660ec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020070"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786694"
 ---
 # <a name="typessscrollkeyset-field-sqlserverresultset"></a>TYPE_SS_SCROLL_KEYSET フィールド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  カーソルの種類を、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] キーセット カーソルに指定する場合に使用します。  
+  カーソルの種類を、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] キーセット カーソルに指定する場合に使用します。  
   
 ## <a name="syntax"></a>構文  
   

@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 9b2eb246686e69c6c890b069b400662515dc71cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661864"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786503"
 ---
 # <a name="using-savepoints"></a>セーブポイントの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-セーブポイントは、トランザクションを部分的にロールバックするメカニズムです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、SAVE TRANSACTION savepoint_name ステートメントを使用してセーブポイントを作成できます。 その後 ROLLBACK TRANSACTION savepoint_name ステートメントを実行すると、トランザクションの最初にロールバックするのではなく、セーブポイントにロールバックされます。
+セーブポイントは、トランザクションを部分的にロールバックするメカニズムです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、SAVE TRANSACTION savepoint_name ステートメントを使用してセーブポイントを作成できます。 その後 ROLLBACK TRANSACTION savepoint_name ステートメントを実行すると、トランザクションの最初にロールバックするのではなく、セーブポイントにロールバックされます。
 
 セーブポイントは、エラーが発生する可能性が小さい状況で役立ちます。 エラーの頻度が低い場合には、セーブポイントを使用してトランザクションの一部をロールバックする方法は、更新が有効であるかどうかを更新を行う前にトランザクションごとにテストするよりも効率的です。 更新とロールバックは負荷の大きい処理です。そのため、セーブポイントが効果を発揮するのは、エラーの発生確率が低く、なおかつ更新の有効性を事前にチェックするコストの方が高い場合に限られます。
 

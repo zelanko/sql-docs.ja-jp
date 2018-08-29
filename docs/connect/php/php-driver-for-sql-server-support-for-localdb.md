@@ -13,22 +13,22 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f408cb1f6cb82610cfa74a4d59a3ce15e4307e64
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992914"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784218"
 ---
 # <a name="support-for-localdb"></a>LocalDB のサポート
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-LocalDB はの軽量版[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]から使用可能なが経ち[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]します。 ここでは、LocalDB インスタンス内のデータベースに接続する方法について説明します。
+LocalDB はの軽量版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から使用可能なが経ち[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。 ここでは、LocalDB インスタンス内のデータベースに接続する方法について説明します。
 
 ## <a name="remarks"></a>Remarks
 
-LocalDB は、LocalDB をインストールして、LocalDB インスタンスを構成する方法などの詳細については、次を参照してください。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブックのトピック「 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB です。
+LocalDB は、LocalDB をインストールして、LocalDB インスタンスを構成する方法などの詳細については、次を参照してください。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックのトピック「 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB です。
 
 簡単に言うと、LocalDB を使用します。
 

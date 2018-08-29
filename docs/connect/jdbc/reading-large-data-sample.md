@@ -14,18 +14,18 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 450119d178c1c7961ee50c84d6bc737d49f23b08
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 60870d659112f8d2309d571588cc9ddd7e3e40ee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456266"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784819"
 ---
 # <a name="reading-large-data-sample"></a>大きなデータを読み取るサンプル
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションでは、[getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) メソッドを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースから大きな単一列値を取得する方法を示します。
+この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションでは、[getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) メソッドを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースから大きな単一列値を取得する方法を示します。
 
 このサンプルのコード ファイルは ReadLargeData.java という名前で、次の場所にあります。
 

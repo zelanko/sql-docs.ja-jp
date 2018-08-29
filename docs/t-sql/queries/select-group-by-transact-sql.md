@@ -34,13 +34,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1a8bd2df095f771866ca8cb96e25dfb1e4612b6a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455406"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43105913"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,19 +108,20 @@ GROUP BY {
   
 次のようなステートメントは使用できます。  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
+```  
   
 次のようなステートメントは使用できません。  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+```  
+
 列の式には次を含めることはできません。
 
 - SELECT リストで定義されている列の別名。 FROM 句で定義されている派生テーブルの列の別名を使用できます。
@@ -135,7 +136,7 @@ GROUP BY {
 
 たとえば、このクエリは、Country (国)、Region (地域)、および Sales (売上) の列を持つ Sales テーブルを作成します。 4 つの行を挿入し、そのうちの 2 行は Country と Region の一致する値を持ちます。  
 
-```
+```sql
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
@@ -154,7 +155,7 @@ Sales テーブルには、次の行が含まれています。
 
 次のクエリでは、Country と Region をグループ化し、値の組み合わせごとの合計を返します。  
  
-``` 
+```sql 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
@@ -183,7 +184,7 @@ Country と Region には値の 3 つの組み合わせがあるため、クエ�
 
 前の例のテーブルを使用して、このコードは、単純な GROUP BY の代わりに GROUP BY ROLLUP 操作を実行します。
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region);
@@ -206,7 +207,7 @@ GROUP BY CUBE では、列の可能なすべての組み合わせのグループ
 
 このコードは、前の例のテーブルを使用して、Country と Region で GROUP BY CUBE 操作を実行します。 
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY CUBE (Country, Region);
@@ -234,7 +235,7 @@ GROUPING SETS オプションを使用すると、複数の GROUP BY 句を 1 �
 
 GROUPING SETS に 2 つ以上の要素がある場合、結果はそれらの要素の和集合になります。 この例では、Country と Region の ROLLUP と CUBE の結果の和集合を返します。
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
@@ -242,15 +243,14 @@ GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 
 結果は、この 2 つの GROUP BY ステートメントの和集合を返すクエリと同じです。
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region)
 UNION ALL
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
-GROUP BY CUBE (Country, Region)
-;
+GROUP BY CUBE (Country, Region);
 ```
 
 SQL では、GROUPING SETS リストに対して生成された重複するグループの統合は行われません。 たとえば、`GROUP BY ( (), CUBE (Country, Region) )` では、両方の要素が総計の行を返し、両方の行が結果に表示されます。 
@@ -258,7 +258,7 @@ SQL では、GROUPING SETS リストに対して生成された重複するグ�
  ### <a name="group-by-"></a>GROUP BY ()  
 総計を生成する空のグループを指定します。 これは、GROUPING SET の要素の 1 つとして役立ちます。 たとえば、このステートメントは、各国の売上合計と、すべての国の総計を提供します。
 
-```
+```sql
 SELECT Country, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
@@ -363,7 +363,7 @@ GROUP BY 句では、SQL-2006 標準規格に含まれているすべての GROU
 ### <a name="a-use-a-simple-group-by-clause"></a>A. 単純な GROUP BY 句を使用する  
  次の例では、`SalesOrderID` テーブルから `SalesOrderDetail` ごとの合計を取得します。 この例では、AdventureWorks を使用します。  
   
-```  
+```sql  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
 FROM Sales.SalesOrderDetail AS sod  
 GROUP BY SalesOrderID  
@@ -373,7 +373,7 @@ ORDER BY SalesOrderID;
 ### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. GROUP BY 句を複数のテーブルで使用する  
  次の例では、`City` テーブルと `Address` テーブルを結合したものから、`EmployeeAddress` ごとに従業員の数を取得します。 この例では、AdventureWorks を使用します。 
   
-```  
+```sql  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
 FROM Person.BusinessEntityAddress AS bea   
     INNER JOIN Person.Address AS a  
@@ -385,7 +385,7 @@ ORDER BY a.City;
 ### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. GROUP BY 句を式と共に使用する  
  次の例では、`DATEPART` 関数を使用して各年の売上合計を取得します。 `SELECT` リストと `GROUP BY` 句の両方に同じ式が存在する必要があります。  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -396,7 +396,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. GROUP BY 句を HAVING 句と共に使用する  
  次の例では、`HAVING` 句で生成されたグループのうち結果セットに含めるグループを、`GROUP BY` 句を使用して指定します。  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -410,7 +410,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 句の基本的な使用方法  
  次の例では、各日のすべての売上の合計金額を検索します。 各日に、すべての売上の合計を含む 1 つの行が返されます。  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales  
@@ -420,7 +420,7 @@ GROUP BY OrderDateKey ORDER BY OrderDateKey;
 ### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. DISTRIBUTED_AGG ヒントの基本的な使用方法  
  この例では、DISTRIBUTED_AGG クエリ ヒントを使用して、集計を実行する前に `CustomerKey` 列でテーブルをシャッフルするようにアプライアンスに強制します。  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT CustomerKey, SUM(SalesAmount) AS sas  
@@ -432,7 +432,7 @@ ORDER BY CustomerKey DESC;
 ### <a name="g-syntax-variations-for-group-by"></a>G. GROUP BY の構文の種類  
  選択リストに集計がない場合、選択リスト内の各列を GROUP BY リストに含める必要があります。 選択リスト内の計算列は、GROUP BY リストに一覧表示することができますが、必須ではありません。 構文が有効な SELECT ステートメントの例を次に示します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName FROM DimCustomer GROUP BY LastName, FirstName;  
@@ -445,7 +445,7 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 ### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. 複数の GROUP BY 式で GROUP BY を使用する  
  次の例では、複数の `GROUP BY` 条件を使用して結果をグループ化します。 各 `OrderDateKey` グループ内に、`DueDateKey` によって区別できるサブグループがある場合、結果セットに新しいグループが定義されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
@@ -457,7 +457,7 @@ ORDER BY OrderDateKey;
 ### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>I. GROUP BY 句を HAVING 句と共に使用する  
  次の例では、`HAVING` 句を使用して、結果セットに含める必要がある `GROUP BY` 句で生成されたグループを指定します。 注文日が 2004 年以降のグループのみが結果に含まれます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

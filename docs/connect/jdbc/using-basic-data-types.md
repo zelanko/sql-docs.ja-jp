@@ -14,22 +14,22 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d58e4913be6db14bec53f5e8bbf63055b2a1344
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662354"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786381"
 ---
 # <a name="using-basic-data-types"></a>基本データ型の使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、JDBC の基本データ型を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型を Java プログラミング言語によって認識できる形式に変換します。この逆の変換も行います。 JDBC ドライバーを含む JDBC 4.0 api のサポートを提供する、 **SQLXML**データ型、および、National (Unicode) データ型など**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**、および**NCLOB**します。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、JDBC の基本データ型を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を Java プログラミング言語によって認識できる形式に変換します。この逆の変換も行います。 JDBC ドライバーを含む JDBC 4.0 api のサポートを提供する、 **SQLXML**データ型、および、National (Unicode) データ型など**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**、および**NCLOB**します。  
   
 ## <a name="data-type-mappings"></a>データ型マッピング
 
-次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、JDBC、および Java プログラミング言語の基本データ型間で行われる既定のマッピングを示しています。  
+次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC、および Java プログラミング言語の基本データ型間で行われる既定のマッピングを示しています。  
   
 | SQL Server 型   | JDBC 型 (java.sql.Types)                        | Java 言語型          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ ms.locfileid: "39662354"
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) 時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型を持つ java.sql.Time を使用する場合は、**sendTimeAsDatetime** 接続プロパティを false に設定します。  
+(1) 時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を持つ java.sql.Time を使用する場合は、**sendTimeAsDatetime** 接続プロパティを false に設定します。  
   
 (値をプログラムでアクセスできます 2) **datetimeoffset**で[DateTimeOffset クラス](../../connect/jdbc/reference/datetimeoffset-class.md)します。  
   

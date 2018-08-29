@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services のチュートリアル レッスン 8: パースペクティブを作成 |Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 69511478e6580328776548d354e6801323a5f7e0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 080b20dbcf7438d26102a3bf906256343271af45
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37973064"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43085323"
 ---
 # <a name="create-perspectives"></a>パースペクティブを作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "37973064"
   
 このレッスンを完了するまでに時間を推定: **5 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 7: 主要業績評価指標の作成](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)です。  
   

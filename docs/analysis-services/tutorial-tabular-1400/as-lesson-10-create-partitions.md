@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services チュートリアル-レッスン 10: パーティションの作成 |Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 4bfa52e31f2e2fb46acf10bf6f6e02e7a15a3c15
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b7a4cfcb32023c20e05728a3faac3715278c1019
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38017885"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43091330"
 ---
 # <a name="create-partitions"></a>パーティションの作成
 
@@ -24,7 +24,7 @@ ms.locfileid: "38017885"
   
 このレッスンの推定所要時間: **15 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 9: 階層の作成](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)です。  
   

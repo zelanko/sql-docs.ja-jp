@@ -25,13 +25,13 @@ caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e291474c080374a0b0e92d6500610f16f73c818
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6ab119a6e98bcf7065ec7cf5dd2cd39d6bb57a1b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564916"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43089042"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "39564916"
 |NAME|**sysname**|オブジェクト名です。|  
 |id|**int**|オブジェクト ID 番号です。|  
 |xtype|**char(2)**|オブジェクトの種類です。 オブジェクトの種類は次のいずれかです。<br /><br /> AF = 集計関数 (CLR)<br /><br /> C = CHECK 制約<br /><br /> D = Default 制約または DEFAULT 制約<br /><br /> F = FOREIGN KEY 制約<br /><br /> L = ログ<br /><br /> FN = スカラー関数<br /><br /> FS = アセンブリ (CLR) スカラー関数<br /><br /> FT = アセンブリ (CLR) テーブル値関数<br /><br /> IF = インライン テーブル関数<br /><br /> IT = 内部テーブル<br /><br /> P = ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> PK = PRIMARY KEY 制約 (種類は K)<br /><br /> RF = レプリケーション フィルター ストアド プロシージャ<br /><br /> S = システム テーブル<br /><br /> SN = シノニム<br /><br /> SQ = サービス キュー<br /><br /> TA = アセンブリ (CLR) DML トリガー<br /><br /> TF = テーブル関数<br /><br /> TR = SQL DML トリガー<br /><br /> TT = テーブルの種類<br /><br /> U = ユーザー テーブル<br /><br /> UQ = UNIQUE 制約 (種類は K)<br /><br /> V = ビュー<br /><br /> X = 拡張ストアド プロシージャ|  
-|uid|**smallint**|オブジェクト所有者のスキーマ ID です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。 ユーザーとロールの数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。<br /><br /> **\*\* 重要な\* \* **場合は、次のいずれかを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、DDL ステートメントを使用する必要がある、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ sys.sysobjects ではなくビュー。<br /><br /> 作成&AMP;#124;ALTER&AMP;#124;ドロップ ユーザー<br /><br /> 作成&AMP;#124;ALTER&AMP;#124;ドロップ ロール<br /><br /> 作成&AMP;#124;ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|オブジェクト所有者のスキーマ ID です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。 ユーザーとロールの数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。<br /><br /> **\*\* 重要な\* \*** 場合は、次のいずれかを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、DDL ステートメントを使用する必要がある、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ sys.sysobjects ではなくビュー。<br /><br /> 作成&AMP;#124;ALTER&AMP;#124;ドロップ ユーザー<br /><br /> 作成&AMP;#124;ALTER&AMP;#124;ドロップ ロール<br /><br /> 作成&AMP;#124;ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |info|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

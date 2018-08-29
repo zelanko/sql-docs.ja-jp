@@ -1,5 +1,5 @@
 ---
-title: sys.registered_search_properties (Transact SQL) |マイクロソフトのドキュメント
+title: sys.registered_search_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -28,13 +28,13 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a174f95ef4c6519c88002ca7393c0d5b1123e4a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79fddbbaa06dc5486b08a1c7209d5952b1a10dcd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541572"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43107145"
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "39541572"
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|このプロパティが属する検索プロパティ リストの ID。|  
 |**property_set_guid**|**uniqueidentifier**|検索プロパティが属するプロパティ セットを識別するグローバル一意識別子 GUID。|  
-|**property_int_id**|**int**|プロパティ セット内でこの検索プロパティを識別する整数。 **property_int_id**プロパティ セット内で一意です。|  
+|**property_int_id**|**int**|プロパティ セット内でこの検索プロパティを識別する整数。 **property_int_id 句**プロパティ セット内で一意です。|  
 |**property_name**|**nvarchar(64)**|検索プロパティ リスト内のこの検索プロパティを一意に識別する名前。<br /><br /> 注: のプロパティを検索するにでは、このプロパティ名を指定します[含む](../../t-sql/queries/contains-transact-sql.md)述語です。|  
 |**property_description**|**nvarchar(512)**|プロパティの説明。|  
-|**property_id**|**int**|検索プロパティで指定された検索プロパティ リスト内のプロパティの内部 ID、 **property_list_id**の値です。<br /><br /> 特定のプロパティが特定の検索プロパティ リストに追加されると、Full-Text Engine は、プロパティを登録し、このプロパティ リストに固有の内部プロパティ ID を、そのプロパティに割り当てます。 内部プロパティ ID は、特定の検索プロパティ リストに固有の整数です。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。<br /><br /> 注: 内部プロパティ ID は、検索プロパティ リストにプロパティを追加するときに指定されるプロパティ整数識別子とは異なります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。<br /><br /> フルテキスト インデックスのプロパティに関連するコンテンツを参照してください。 <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**property_id**|**int**|によって識別される検索プロパティ リスト内の検索プロパティの内部プロパティ ID、 **property_list_id**値。<br /><br /> 特定のプロパティが特定の検索プロパティ リストに追加されると、Full-Text Engine は、プロパティを登録し、このプロパティ リストに固有の内部プロパティ ID を、そのプロパティに割り当てます。 内部プロパティ ID は、特定の検索プロパティ リストに固有の整数です。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。<br /><br /> 注: 内部プロパティ ID は、検索プロパティ リストにプロパティを追加するときに指定されるプロパティ整数識別子とは異なります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。<br /><br /> フルテキスト インデックスのプロパティに関連するコンテンツを参照してください。 <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
 ## <a name="remarks"></a>コメント  
  検索プロパティ リストについて詳しくは、「[検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」をご覧ください。  

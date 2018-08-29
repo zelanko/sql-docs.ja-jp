@@ -12,17 +12,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 7395524fd185afa03a317e49400822ad459dbf55
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: a12475a1f759be12949d5642e5af865b10e4af99
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662274"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787041"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の新機能
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能
 
 **新しいディストリビューションがサポートされている**: Ubuntu 18.04
 
@@ -45,7 +45,7 @@ ConnectRetryCount と ConnectRetryInterval の接続文字列キーワードで�
 
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Linux and macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の新機能
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux and macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能
 
 **追加された機能**:
 
@@ -61,7 +61,7 @@ ConnectRetryCount と ConnectRetryInterval の接続文字列キーワードで�
 
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の新機能
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能
 
 **新しいディストリビューションがサポートされている**: macOS High Sierra と Ubuntu 17.10 
 
@@ -87,9 +87,9 @@ Azure SQL マネージ インスタンス (延長プライベート プレビュ
 > -   [Dbname1] ALTER DATABASE MODIFY NAME = [dbname2] はサポートされていません
 > -   エラー メッセージが英語では、言語に関係なく常に表示される設定 (Azure と同じ) 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の新機能  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能  
 
-ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Always Encrypted と Microsoft SQL Server 2016 と組み合わせて使用する場合は、Azure Active Directory のサポートを追加します。
+ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always Encrypted と Microsoft SQL Server 2016 と組み合わせて使用する場合は、Azure Active Directory のサポートを追加します。
 
 **新しいディストリビューションがサポートされている**: OS X 10.11 と macOS 10.12 macOS 上の ODBC ドライバーの最初のリリースでサポートされます。 Ubuntu 16.10 もサポートされます、と共に、Red Hat 6、7、および SUSE 12。 各プラットフォームには、プラットフォームに関連するパッケージ (RPM または DEB) のインストールと構成が容易になります。  参照してください[ドライバーをインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)インストール手順についてはします。
 
@@ -97,7 +97,7 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)
 
 **BCP API サポート**: Linux と macOS の ODBC ドライバーでは、使用をサポート、 [BCP API 関数 (**bcp_init**など)。](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
-## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>新機能については、Microsoft ODBC Driver 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux  
+## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>新機能については、Microsoft ODBC Driver 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux  
 SQL Server 用 Microsoft ODBC Driver 13.0、SQL Server 2014 および SQL Server 2016 が今すぐもサポートされます。  
 
 **新しいディストリビューションがサポートされている**:
@@ -110,7 +110,7 @@ Red Hat、SUSE に加え、Ubuntu のサポートが追加されました。 各
 
 **TLS 1.2 サポート**: の Microsoft ODBC Driver 13.0 for SQL Server on Linux は、SQL Server のセキュリティで保護された通信を使用する場合これで TLS 1.2 をサポートします。
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の新機能  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能  
 ODBC Driver on SUSE Linux (Preview) は、64 ビット SUSE Linux Enterprise 11 Service Pack 2 をサポートします。 詳しくは、「[System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)」(システム要件) をご覧ください。  
 
 Linux 上の ODBC ドライバーは、[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]をサポートしています。 詳細については、次を参照してください。 [ODBC Driver on Linux のサポートの高可用性、ディザスター リカバリー](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)します。  
