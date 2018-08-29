@@ -14,18 +14,18 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2556a8d637b78dbc0c0ab9c8740d1e63f156e3b
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662174"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786830"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>出力パラメーターがあるストアド プロシージャの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ストアド プロシージャのうち、呼び出すことができるのは、OUT パラメーター (呼び出し元のアプリケーションにデータを返す目的で使用されるパラメーター) を少なくとも 1 つ返すストアド プロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャのうち、呼び出すことができるのは、OUT パラメーター (呼び出し元のアプリケーションにデータを返す目的で使用されるパラメーター) を少なくとも 1 つ返すストアド プロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
 
 JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 OUT パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
 
@@ -36,12 +36,12 @@ JDBC ドライバーを使用してこの種類のストアド プロシージ�
 
 `call` エスケープ シーケンスを作成する場合、OUT パラメーターは ?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 OUT パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
 
-registerOutParameter メソッドで OUT パラメーターに指定する値は、java.sql.Types に含まれる JDBC データ型のいずれかである必要があります。この値は、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型の 1 つに順にマップされます。 JDBC の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 、データ型を参照してください[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)します。
+registerOutParameter メソッドで OUT パラメーターに指定する値は、java.sql.Types に含まれる JDBC データ型のいずれかである必要があります。この値は、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の 1 つに順にマップされます。 JDBC の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データ型を参照してください[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)します。
 
 registerOutParameter メソッドに OUT パラメーターの値を渡す場合は、パラメーターに使用するデータ型だけでなく、ストアド プロシージャ内のパラメーターの順序またはパラメーター名も指定する必要があります。 たとえば、ストアド プロシージャに 1 つの OUT パラメーターがある場合、その序数値は 1 です。ストアド プロシージャに 2 つのパラメーターがある場合、最初の序数値は 1 で、2 番目の序数値は 2 になります。
 
 > [!NOTE]  
-> JDBC ドライバーでは、CURSOR、SQLVARIANT、TABLE、および TIMESTAMP の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型を OUT パラメーターとして使用することはできません。
+> JDBC ドライバーでは、CURSOR、SQLVARIANT、TABLE、および TIMESTAMP の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を OUT パラメーターとして使用することはできません。
 
 たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで次のストアド プロシージャを作成します。
 

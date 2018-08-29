@@ -1,5 +1,5 @@
 ---
-title: '[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー) | Microsoft Docs'
+title: '[フィルターの設定]\(オブジェクト エクスプローラーおよびユーティリティ エクスプローラー) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb8e11f7d9b63e321b547595b10381f693f08cd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5609fc2e347665246bb42b66d446d7e83868a399
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043139"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776405"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] \(オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,5 +80,5 @@ ms.locfileid: "33043139"
   
 ## <a name="see-also"></a>参照  
 [SQL Server Management Studio の使用 [SQL Server]](../../ssms/use-sql-server-management-studio.md)  
-[SQL Server ユーティリティの概要](http://msdn.microsoft.com/en-us/6e6cbd25-6b1c-4e21-9ade-4584e243fd8f)  
+[SQL Server ユーティリティの概要](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_restoredbreplication (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_restoredbreplication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_restoredbreplication
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea73a77c47b4579cda2e97dcea77a8f6516157c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21cdf75f248890bcf6fd18f53f4797cbebae36a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996989"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022321"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  バックアップ元以外のサーバー、データベース、またはシステムにデータベースを復元するとき、レプリケーション プロセスを実行できない場合に、レプリケーションの設定を削除します。 レプリケートされたデータベースを、バックアップが作成されたサーバーやデータベースとは別のサーバーまたはデータベースに復元する場合、レプリケーションの設定は保持できません。 サーバーは、復元時に、呼び出します**sp_restoredbreplication**自動的に復元されたデータベースからレプリケーション メタデータを削除するには、直接です。  
+  バックアップ元以外のサーバー、データベース、またはシステムにデータベースを復元するとき、レプリケーション プロセスを実行できない場合に、レプリケーションの設定を削除します。 レプリケートされたデータベースを、バックアップが作成されたサーバーやデータベースとは別のサーバーまたはデータベースに復元する場合、レプリケーションの設定は保持できません。 復元には、サーバーを呼び出す**sp_restoredbreplication**自動的に復元されたデータベースからレプリケーション メタデータを削除するには、直接します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,11 +63,11 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_restoredbreplication**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**または**dbcreator**固定サーバー ロールまたは**dbo**データベース スキーマが実行できる**sp_restoredbreplication**.  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**または**dbcreator**固定サーバー ロールまたは**dbo**データベース スキーマが実行できる**sp_restoredbreplication**.  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

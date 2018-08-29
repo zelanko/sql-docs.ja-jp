@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepullsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropmergepullsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepullsubscription
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f623dfa9aa2f00f681092543c4539da37ab7485
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fa2a31c5ef60b869fe387e4a3ac8155a73d3690
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992619"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017958"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>引数  
  [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 このパラメーターは必須です。 値を指定して**すべて**すべてのパブリケーションに対するサブスクリプションを削除するには  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 このパラメーターは必須です。 値を指定**すべて**すべてのパブリケーションに対するサブスクリプションを削除するには  
   
  [ **@publisher=**] **'***publisher***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。 このパラメーターは必須です。  
@@ -63,16 +63,16 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropmergepullsubscription**はマージ レプリケーションで使用します。  
   
- **sp_dropmergepullsubscription**でマージ エージェントは作成されませんが、このマージ プル サブスクリプションのマージ エージェントを削除**sp_addmergepullsubscription**です。  
+ **sp_dropmergepullsubscription**でマージ エージェントは作成されませんが、このマージ プル サブスクリプションのマージ エージェントを削除**sp_addmergepullsubscription**します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたはマージ プル サブスクリプションを作成したユーザーが実行できる**sp_dropmergepullsubscription**です。 **Db_owner**固定データベース ロールが実行できる**sp_dropmergepullsubscription**マージ プル サブスクリプションを作成したユーザーがこのロールに属している場合。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたはマージ プル サブスクリプションを作成したユーザーが実行できる**sp_dropmergepullsubscription**します。 **Db_owner**固定データベース ロールを実行することがのみ**sp_dropmergepullsubscription**マージ プル サブスクリプションを作成したユーザーがこのロールに属している場合。  
   
 ## <a name="see-also"></a>参照  
  [プル サブスクリプションを削除します。](../../relational-databases/replication/delete-a-pull-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_category (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_category (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f98fd4dbccc6b47297c8b0ebb2073dd23d35c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c884d126356f4347616370ce9cd8b8eb41089fc0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238912"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021926"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +47,22 @@ sp_add_category
   
 ## <a name="arguments"></a>引数  
  [  **@class =** ] **'***クラス***'**  
- 追加するカテゴリのクラスを指定します。 *クラス*は**varchar (8)** ジョブの既定値は、これらの値のいずれかを指定できます。  
+ 追加するカテゴリのクラスを指定します。 *クラス*は**varchar (8)** でジョブの既定値は、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |JOB|ジョブ カテゴリを追加します。|  
 |ALERT|警告カテゴリを追加します。|  
 |OPERATOR|オペレーター カテゴリを追加します。|  
   
  [ **@type =** ] **'***type***'**  
- 追加するカテゴリの種類を指定します。 *型*は**varchar (12)**、既定値は**ローカル**、これらの値のいずれかを指定できます。  
+ 追加するカテゴリの種類を指定します。 *型*は**varchar (12)** の既定値を持つ**ローカル**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |LOCAL|ローカル ジョブ カテゴリ|  
 |マルチ サーバー|マルチサーバー ジョブ カテゴリ|  
-|なし|JOB 以外のクラスのカテゴリ**です。**|  
+|なし|JOB 以外のクラスのカテゴリ**します。**|  
   
  [ **@name =** ] **'***name***'**  
  追加するカテゴリの名前を指定します。 名前は指定したクラス内で一意であることが必要です。 *名前*は**sysname**、既定値はありません。  
@@ -74,11 +73,11 @@ sp_add_category
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_add_category**から実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_category**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_category**します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`AdminJobs` というローカル ジョブ カテゴリを作成します。  
@@ -98,7 +97,7 @@ GO
  [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

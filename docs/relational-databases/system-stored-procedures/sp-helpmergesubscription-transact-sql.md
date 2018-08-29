@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergesubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpmergesubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb5387d011b3987262415e3a88b5fd8bc65a8e2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37939073edaef5c8647cd173a83dfb05e63ae3cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002919"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019771"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="arguments"></a>引数  
  [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** です。 パブリケーションが存在し、識別子の規則に従っている必要があります。 NULL の場合、または**%**、すべてのマージ パブリケーションと、現在のデータベース内のサブスクリプションに関する情報が返されます。  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** します。 パブリケーションが存在し、識別子の規則に従っている必要があります。 NULL の場合、または**%**、すべてのマージ パブリケーションと、現在のデータベース内のサブスクリプションに関する情報が返されます。  
   
  [  **@subscriber=**] **'***サブスクライバー***'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は **%** です。 NULL または % の場合は、指定したパブリケーションへのすべてのサブスクリプションに関する情報が返されます。  
+ サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は **%** します。 NULL または % の場合は、指定したパブリケーションへのすべてのサブスクリプションに関する情報が返されます。  
   
  [  **@subscriber_db=**] **'***@subscriber_db***'**  
  サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は**%**、すべてのサブスクリプション データベースに関する情報が返されます。  
@@ -69,51 +69,51 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  [  **@subscription_type=**] **'***subscription_type***'**  
  サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (15)**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**プッシュ**(既定値)|プッシュ サブスクリプション|  
 |**プル**|プル サブスクリプション|  
 |**両方**|プッシュおよびプル サブスクリプションの両方|  
   
  [  **@found=**] **'***見つかった***' 出力**  
- 行を返すことを示すフラグです。 *見つかった*は**int**と出力パラメーター、既定値は NULL です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
+ 行を返すことを示すフラグです。 *見つかった*は**int**は出力パラメーター、既定値は NULL です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|サブスクリプションの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前です。|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前です。|  
+|**パブリケーション**|**sysname**|パブリケーションの名前。|  
+|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前です。|  
 |**サブスクライバー**|**sysname**|サブスクライバーの名前です。|  
-|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前です。|  
-|**ステータス**|**int**|サブスクリプションの状態。<br /><br /> **0** = すべてのジョブが開始を待機しています。<br /><br /> **1** = 1 つ以上のジョブが起動中<br /><br /> **2** = すべてのジョブが正常に実行されました<br /><br /> **3** = 少なくとも 1 つジョブが実行中<br /><br /> **4** = すべてのジョブがスケジュールされ、アイドル状態<br /><br /> **5** = 少なくとも 1 つジョブが前回のエラーの後に実行しようとしています<br /><br /> **6** = 少なくとも 1 つは正常に実行するジョブが失敗しました|  
-|**subscriber_type**|**int**|サブスクライバーの種類です。|  
-|**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0**プッシュを =<br /><br /> **1**プルを =<br /><br /> **2** = 両方|  
+|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
+|**status**|**int**|サブスクリプションの状態。<br /><br /> **0** = すべてのジョブが起動待ち<br /><br /> **1** = 1 つ以上のジョブが起動中<br /><br /> **2** = すべてのジョブが正常に実行されました<br /><br /> **3** = 少なくとも 1 つジョブが実行中<br /><br /> **4** = すべてのジョブがスケジュールされ、アイドル状態<br /><br /> **5** = 少なくとも 1 つジョブが前回のエラーの後に実行しようとしています<br /><br /> **6** = 少なくとも 1 つが正常に実行するジョブが失敗しました|  
+|**subscriber_type**|**int**|サブスクライバーの種類。|  
+|**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0**プッシュを =<br /><br /> **1** = プル<br /><br /> **2** = 両方|  
 |**priority**|**float(8)**|サブスクリプションの優先度を示す数値。|  
 |**sync_type**|**tinyint**|サブスクリプションの同期の種類。|  
-|**説明**|**nvarchar (255)**|マージ サブスクリプションの簡単な説明。|  
+|**description**|**nvarchar (255)**|マージ サブスクリプションの簡単な説明。|  
 |**merge_jobid**|**binary(16)**|マージ エージェントのジョブ ID。|  
 |**full_publication**|**tinyint**|完全なパブリケーションとフィルター選択されたパブリケーションのどちらに対するサブスクリプションであるかを示します。|  
 |**offload_enabled**|**bit**|レプリケーション エージェントの負荷を軽減するためにサブスクライバーでの実行が設定されているかどうかを示します。 NULL の場合は、パブリッシャー側で実行されます。|  
 |**offload_server**|**sysname**|エージェントが動作しているサーバーの名前。|  
-|**use_interactive_resolver**|**int**|調整時に対話型の競合回避モジュールを使用するかどうかを示します。 場合**0**、インタラクティブ競合回避モジュールが使用されません。|  
-|**ホスト名**|**sysname**|値によってサブスクリプションがフィルター処理されるときに指定された値、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数。|  
-|**subscriber_security_mode**|**smallint**|セキュリティ モードをサブスクライバーで、ここで**1** Windows 認証を意味と**0**意味[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
+|**use_interactive_resolver**|**int**|調整時に対話型の競合回避モジュールを使用するかどうかを示します。 場合**0**、インタラクティブ競合回避モジュールを使用しません。|  
+|**ホスト名**|**sysname**|値によってサブスクリプションがフィルター選択するときに指定された値、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数。|  
+|**subscriber_security_mode**|**smallint**|セキュリティ モードをサブスクライバーで、場所**1** Windows 認証では、ことを意味と**0**意味[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名です。|  
-|**subscriber_password**|**sysname**|実際のサブスクライバー パスワードは返されません。 によって、結果がマスクされており、"**\*\*\*\*\*\***"文字列。|  
+|**@subscriber_password**|**sysname**|実際のサブスクライバー パスワードは返されません。 によってマスクされる結果は、"**\*\*\*\*\*\***"文字列。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergesubscription**パブリッシャーまたは再パブリッシュ サブスクライバーで格納されているサブスクリプション情報を返すためにマージ レプリケーションで使用します。  
   
- 匿名サブスクリプションの場合、 *subscription_type*値は常に**1** (プル) です。 ただし、実行する必要があります[sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)匿名サブスクリプションに関する情報のサブスクライバーでします。  
+ 匿名サブスクリプションの場合、 *subscription_type*値は常に**1** (プル) します。 ただし、実行する必要があります[sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)匿名サブスクリプションに関する情報は、サブスクライバーでします。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールまたはサブスクリプションが属するパブリケーションのパブリケーション アクセス リストが実行できる**sp _helpmergesubscription**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールまたはサブスクリプションが属しているパブリケーションのパブリケーション アクセス リストが実行できる**sp _helpmergesubscription**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

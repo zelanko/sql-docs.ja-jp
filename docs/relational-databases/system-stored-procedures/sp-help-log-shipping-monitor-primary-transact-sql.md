@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor_primary (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_log_shipping_monitor_primary (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor_primary
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
-caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a818e8b944a7fbb296ee17a1b892cd2c6ebf77d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 07b8769d1c466b9f70f0a84cfab53dea518227c2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243868"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029283"
 ---
 # <a name="sphelplogshippingmonitorprimary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_help_log_shipping_monitor_primary
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|Description|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**primary_id**|ログ配布構成におけるプライマリ データベースの ID。|  
 |**primary_server**|ログ配布構成における [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のプライマリ インスタンスの名前。|  
@@ -70,14 +69,14 @@ sp_help_log_shipping_monitor_primary
 |**last_backup_date_utc**|プライマリ データベースに対して最後にトランザクション ログのバックアップ操作を行った日時。協定世界時 (UTC) で表されます。|  
 |**history_retention_period**|指定したプライマリ データベースでログ配布履歴レコードが保持される時間 (分単位)。この時間を過ぎるとレコードは削除されます。|  
   
-## <a name="remarks"></a>解説  
- **sp_help_log_shipping_monitor_primary**から実行する必要があります、**マスター**監視サーバー上のデータベースです。  
+## <a name="remarks"></a>コメント  
+ **sp_help_log_shipping_monitor_primary**から実行する必要があります、**マスター**監視サーバー上のデータベース。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
   
 ## <a name="see-also"></a>参照  
- [ログ配布 & #40; についてSQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

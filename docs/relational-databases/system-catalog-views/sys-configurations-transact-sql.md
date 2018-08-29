@@ -1,5 +1,5 @@
 ---
-title: sys.configurations (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.configurations (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25de8a6eb70c79551caca8188c4f67a786e62172
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4f006cdbe3fa99f206af97dcae5edf97a6a86be0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181718"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030561"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   システムでは、サーバー全体の構成オプションの値ごとに行が含まれています。  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|構成値の一意 ID|  
 |**name**|**nvarchar(35)**|構成オプションの名前。|  
@@ -43,16 +43,16 @@ ms.locfileid: "33181718"
 |**minimum**|**sql_variant**|構成オプションの最小値|  
 |**maximum**|**sql_variant**|構成オプションの最大値|  
 |**value_in_use**|**sql_variant**|オプションで現在有効な実行値|  
-|**説明**|**nvarchar (255)**|構成オプションの説明|  
+|**description**|**nvarchar (255)**|構成オプションの説明|  
 |**is_dynamic**|**bit**|1 = RECONFIGURE ステートメントの実行時に影響を与える変数|  
-|**is_advanced**|**bit**|1 = 変数が表示される場合にのみ、 **advancedoption を表示する**設定されています。|  
+|**is_advanced**|**bit**|1 = 変数が表示される場合にのみ、 **advancedoption を表示する**設定されます。|  
   
- すべてのサーバー構成オプションの一覧は、次を参照してください。[サーバー構成オプション&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)です。  
+ すべてのサーバー構成オプションの一覧は、次を参照してください。[サーバー構成オプションの&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)します。  
   
 > [!NOTE]  
->  データベース レベルの構成オプションについては、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)です。 ソフト NUMA を構成するのを参照してください。[ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)です。  
+>  データベース レベルの構成のオプションを参照してください[データベース スコープの構成の変更&#40;Transact SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 ソフト NUMA を構成するのにを参照してください[ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

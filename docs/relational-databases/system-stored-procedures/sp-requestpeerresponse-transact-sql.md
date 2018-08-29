@@ -1,5 +1,5 @@
 ---
-title: sp_requestpeerresponse (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_requestpeerresponse (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83f5cfcac2f109b88fc63ab96942d7682bdb2a90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b722bac6727e6d64bb0c2c475ca900ea78c8fc1d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998209"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024374"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,20 +54,20 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  個々の状態要求の識別に使用できるユーザー定義情報 *説明*は**nvarchar (4000)**、既定値は NULL です。  
   
  [ **@request_id** =] *request_id*  
- 新しい要求の ID を返します。 *request_id*は**int**は出力パラメーターです。 実行するときに、この値を使用できます[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)状態要求に応答するすべての表示にします。  
+ 新しい要求の ID を返します。 *request_id*は**int**は出力パラメーター。 実行するときに、この値を使用できます[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)状態要求に応答するすべての表示にします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_requestpeerresponse**はピア ツー ピア トランザクション レプリケーションで使用します。  
   
- **sp_requestpeerresponse**ピア ツー ピア トポロジでパブリッシュされたデータベースを復元する前に、すべてのコマンドがその他のすべてのノードに受信されたことを確認するために使用します。 また、ノードがオフラインの間に行われたデータ定義言語 (DDL) の変更をレプリケートするときに、これらの変更が他のノードに到達する時間を推定する場合にも使用できます。  
+ **sp_requestpeerresponse**ピア ツー ピア トポロジでパブリッシュされたデータベースを復元する前に、すべてのコマンドがその他のすべてのノードで受信されたことを確認するために使用します。 また、ノードがオフラインの間に行われたデータ定義言語 (DDL) の変更をレプリケートするときに、これらの変更が他のノードに到達する時間を推定する場合にも使用できます。  
   
  **sp_requestpeerresponse**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_requestpeerresponse**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_requestpeerresponse**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

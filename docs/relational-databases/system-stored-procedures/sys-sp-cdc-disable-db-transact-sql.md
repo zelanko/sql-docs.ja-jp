@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_db (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_cdc_disable_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_db
 - change data capture [SQL Server], disabling databases
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cd6a97984889be0c7a9e8b9d9aca0a0eaf4a4a2a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b9b2c437c356b5e956f5658d76064930cb6887a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255820"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023227"
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +53,13 @@ sys.sp_cdc_disable_db
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **sys.sp_cdc_disable_db**変更データ キャプチャ現在有効になっているデータベースのすべてのテーブルで無効にします。 変更テーブル、ジョブ、ストアド プロシージャ、関数など、変更データ キャプチャに関連したシステム オブジェクトはすべて削除されます。 **Is_cdc_enabled**列、データベース内のエントリ、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューは 0 に設定します。  
+## <a name="remarks"></a>コメント  
+ **sys.sp_cdc_disable_db**変更データ キャプチャを有効になっている現在のデータベースのすべてのテーブルを無効にします。 変更テーブル、ジョブ、ストアド プロシージャ、関数など、変更データ キャプチャに関連したシステム オブジェクトはすべて削除されます。 **Is_cdc_enabled**列内のデータベース エントリを[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューは 0 に設定します。  
   
 > [!NOTE]  
 >  変更データ キャプチャが無効なときにデータベースに対して多数のキャプチャ インスタンスが定義されている場合、実行時間の長いトランザクションがあると sys.sp_cdc_disable_db が実行できなくなる場合があります。 sys.sp_cdc_disable_db を実行する前に sys.sp_cdc_disable_table を使用して個々のキャプチャ インスタンスを無効にすれば、この問題を防ぐことができます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

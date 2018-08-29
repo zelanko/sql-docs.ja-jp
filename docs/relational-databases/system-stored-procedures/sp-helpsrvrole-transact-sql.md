@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrole (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpsrvrole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3addbb80d8423147a34c5b9fd9b1e3eab29471ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 03da770b709c30d02ef785f747bde2d4c403b105
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253764"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020757"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="arguments"></a>引数  
  [  **@srvrolename=** ] **'***ロール***'**  
- 固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 *ロール*値は次のいずれかになります。  
+ 固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 *ロール*値は次のいずれかを指定できます。  
   
-|固定サーバー ロール|Description|  
+|固定サーバー ロール|説明|  
 |-----------------------|-----------------|  
 |sysadmin|システム管理者。|  
 |securityadmin|セキュリティ管理者。|  
@@ -63,21 +63,21 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|サーバー ロールの名前。|  
-|Description|**sysname**|サーバー ロールの説明|  
+|説明|**sysname**|サーバー ロールの説明|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  固定サーバー ロールは、サーバー レベルで定義され、特定のサーバーレベルの管理操作を実行する権限が与えられます。 固定サーバー ロールは、追加、削除、または変更することはできません。  
   
- 追加するサーバーの役割から削除されたメンバーを参照してくださいまたは[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)です。  
+ 追加するサーバーの役割から削除されたメンバーを参照してくださいまたは[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)します。  
   
  すべてのログインは、public のメンバーです。 sp_helpsrvrole が public ロールを認識していないため、内部的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリック ロールとして実装しません。  
   
- sp_helpsrvrole には、引数としてユーザー定義サーバー ロールはなりません。 ユーザー定義サーバー ロールを一覧するには、例を参照してください。 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)です。  
+ sp_helpsrvrole には、引数としてユーザー定義サーバー ロールはなりません。 ユーザー定義サーバー ロールの一覧、例を参照してください。 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

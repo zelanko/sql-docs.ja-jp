@@ -1,5 +1,5 @@
 ---
-title: sys.trigger_event_types (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.trigger_event_types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,28 +21,29 @@ helpviewer_keywords:
 - sys.trigger_event_types catalog view
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b9d5f6df14e02395ea204f7037d2324a0f936b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c2db90c3796263171c90ded10ef95ab6c632e4d1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024929"
 ---
 # <a name="systriggereventtypes-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   トリガーを起動できるイベントまたはイベント グループごとに 1 行のデータを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**type**|**int**|トリガーを起動するイベントまたはイベント グループの種類。|  
-|**type_name**|**nvarchar(64)**|イベントまたはイベント グループの名前。 これは、FOR 句で指定することができます、 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)ステートメントです。|  
+|**type_name**|**nvarchar(64)**|イベントまたはイベント グループの名前。 これは、FOR 句で指定できます、 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)ステートメント。|  
 |**parent_type**|**int**|イベントまたはイベント グループの親イベント グループの種類。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

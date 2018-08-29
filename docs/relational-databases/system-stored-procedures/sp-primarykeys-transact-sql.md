@@ -1,5 +1,5 @@
 ---
-title: sp_primarykeys (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_primarykeys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_primarykeys
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4377ac2958a2c5e1f00cf83985f6730d8194e6b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 072654778b1f2485d0d425f450209ddabcb994fe
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262672"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024090"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ sp_primarykeys [ @table_server = ] 'table_server'
  テーブル スキーマを指定します。 *table_schema、* は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。  
   
  [  **@table_catalog =** ] **'***table_catalog***'**  
- カタログの名前を指定した*table_name*が存在します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]環境では、このデータベース名に対応します。 *table_catalog*は**sysname**、既定値は NULL です。  
+ カタログの名前は、指定した*table_name*が存在します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]環境では、これは、データベース名に対応します。 *table_catalog*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|テーブル カタログ。|  
 |**TABLE_SCHEM**|**sysname**|テーブル スキーマ。|  
@@ -73,16 +73,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|複数列の主キーにおける、列のシーケンス番号です。|  
 |**PK_NAME**|**sysname**|主キー識別子。 データ ソースに適用されない場合は NULL が返されます。|  
   
-## <a name="remarks"></a>解説  
- **sp_primarykeys**の PRIMARY_KEYS 行セットをクエリすることによって実行される、 **IDBSchemaRowset**に対応する OLE DB プロバイダーのインターフェイス*table_server*です。 *Table_name*、 *、table_schema、*、 *table_catalog*、および*列*行を制限するには、このインターフェイスにパラメーターを渡す返されます。  
+## <a name="remarks"></a>コメント  
+ **sp_primarykeys**の PRIMARY_KEYS 行セットのクエリを実行することによって実行される、 **IDBSchemaRowset**に対応する OLE DB プロバイダーのインターフェイス*table_server*します。 *Table_name*、 *、table_schema、*、 *table_catalog*、および*列*行を制限するには、このインターフェイスに渡されるパラメーター返されます。  
   
- **sp_primarykeys**設定の指定したリンク サーバーの OLE DB プロバイダーがの PRIMARY_KEYS 行セットをサポートしていない場合、空の結果を返します、 **IDBSchemaRowset**インターフェイスです。  
+ **sp_primarykeys**設定の PRIMARY_KEYS 行セットを指定したリンク サーバーの OLE DB プロバイダーがサポートしていない場合、空の結果を返します、 **IDBSchemaRowset**インターフェイス。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例の主キー列を返して、`LONDON1`用のサーバー、`HumanResources.JobCandidate`テーブルに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
+ 次の例の主キー列を返します、`LONDON1`用のサーバー、`HumanResources.JobCandidate`テーブルに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
   
 ```  
 EXEC sp_primarykeys @table_server = N'LONDON1',   
@@ -97,7 +97,7 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
  [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

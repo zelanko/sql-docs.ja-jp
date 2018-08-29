@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergepartition (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpmergepartition (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21f209b61786b07bac4a9941073d3e75b282b846
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ef6a1192ac2216ff335a98709520f10610cb373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996079"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027930"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,17 +54,17 @@ sp_helpmergepartition [ @publication= ] 'publication'
  パーティションの定義に使用する SUSER_SNAME 値を指定します。 *suser_sname*は**sysname**既定値は NULL です。 このパラメーターを指定して、結果セットを、SUSER_SNAME が指定された値を解決するパーティションのみに制限します。  
   
 > [!NOTE]  
->  ときに*suser_sname*が指定されている*host_name* NULL にする必要があります  
+>  ときに*suser_sname*は、指定した*host_name* NULL にする必要があります  
   
  [  **@host_name=** ] **'***host_name***'**  
  パーティションの定義に使用する HOST_NAME 値を指定します。 *host_name*は**sysname**既定値は NULL です。 このパラメーターを指定して、結果セットを、HOST_NAME が指定された値を解決するパーティションのみに制限します。  
   
 > [!NOTE]  
->  ときに*suser_sname*が指定されている*host_name* NULL にする必要があります  
+>  ときに*suser_sname*は、指定した*host_name* NULL にする必要があります  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**パーティション**|**int**|サブスクライバーのパーティションを指定します。|  
 |**host_name**|**sysname**|値によってフィルター選択は、サブスクリプションのパーティションを作成するときに使用される値、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数。|  
@@ -76,11 +76,11 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergepartition**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergepartition**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergepartition**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergepartition &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   

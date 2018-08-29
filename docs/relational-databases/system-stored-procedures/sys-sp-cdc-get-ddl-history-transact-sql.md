@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cafbdcab4ad480493181cc7b2f6b160e34ea681
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2a5b652807c0392e7c55c51173aa1aeecbae4dba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252631"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036360"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|ソース テーブルのスキーマ名です。|  
 |source_table|**sysname**|ソース テーブルの名前です。|  
@@ -66,14 +65,14 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|DDL の変更に関連付けられたログ シーケンス番号 (LSN) です。|  
 |ddl_time|**datetime**|DDL の変更に関連付けられた時刻です。|  
   
-## <a name="remarks"></a>解説  
- 追加することや、列を削除または既存の列のデータ型の変更など、ソースのテーブルの列構造を変更する、ソース テーブルに対する DDL の変更が保持される、 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)テーブル。 このストアド プロシージャでは、こうした変更をレポートできます。 cdc.ddl_history のエントリは、キャプチャ プロセスで、ログから DDL トランザクションが読み取られた時点で作成されます。  
+## <a name="remarks"></a>コメント  
+ ソース テーブルの列構造の追加や、列を削除する既存の列のデータ型の変更などを変更するソース テーブルに対する DDL の変更が保持されます、 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)テーブル。 このストアド プロシージャでは、こうした変更をレポートできます。 cdc.ddl_history のエントリは、キャプチャ プロセスで、ログから DDL トランザクションが読み取られた時点で作成されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  データベースのすべてのキャプチャ インスタンスの行を取得するには、db_owner 固定データベース ロールのメンバーシップが必要です。 それ以外のすべてのユーザーについては、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。さらに、キャプチャ インスタンスのゲーティング ロールが定義されている場合は、そのデータベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ソース テーブルに列を追加`HumanResources.Employee`し、実行、`sys.sp_cdc_get_ddl_history`ストアド プロシージャ、キャプチャ インスタンスに関連付けられているソース テーブルに適用される DDL の変更を報告する`HumanResources_Employee`です。  
+ 次の例では、ソース テーブルに列を追加`HumanResources.Employee`し、実行、`sys.sp_cdc_get_ddl_history`ストアド プロシージャは、キャプチャ インスタンスに関連付けられているソース テーブルに適用される DDL の変更を報告する`HumanResources_Employee`します。  
   
 ```  
 USE AdventureWorks2012;  

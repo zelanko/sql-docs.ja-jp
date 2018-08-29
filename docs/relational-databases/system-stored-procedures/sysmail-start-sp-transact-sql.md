@@ -1,5 +1,5 @@
 ---
-title: sysmail_start_sp (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmail_start_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sysmail_start_sp
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9513e95d52aed4ee7fb525504dfb112092e1807d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2fa805836387ae94cca2cba189eb4a9a9b20d8a3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255012"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024181"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  開始してデータベース メールを開始、[!INCLUDE[ssSB](../../includes/sssb-md.md)]外部プログラムによって使用されるオブジェクト。  
+  開始してデータベース メールを開始、[!INCLUDE[ssSB](../../includes/sssb-md.md)]外部プログラムが使用するオブジェクト。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,21 +52,21 @@ sysmail_start_sp
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- データベース メールは有効になっている、または時にインストールされていません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールします。 データベース メール オブジェクトを有効化およびインストールするには、データベース メール構成ウィザードを使用します。  
+## <a name="remarks"></a>コメント  
+ データベース メールが有効になっているかにインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールします。 データベース メール オブジェクトを有効化およびインストールするには、データベース メール構成ウィザードを使用します。  
   
  このストアド プロシージャは、 **msdb**データベース。 このストアド プロシージャは、送信メッセージ要求を保持しているデータベース メール キューを開始し、外部プログラムに対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] のアクティブ化を有効にします。  
   
- キューが開始されると、データベース メール外部プログラムではメッセージを処理できます。 この手順で、キューを停止した後に、キューを再起動することができます、 **sysmail_stop_sp**ストアド プロシージャです。  
+ キューが開始されると、データベース メール外部プログラムではメッセージを処理できます。 この手順で、キューを停止した後に、キューを再起動するように、 **sysmail_stop_sp**ストアド プロシージャ。  
   
 > [!NOTE]  
 >  このストアド プロシージャは、データベース メールのキューだけを開始します。 データベースでの [!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ配信はアクティブになりません。  
   
-## <a name="permissions"></a>権限  
- メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例でデータベース メールの起動、 **msdb**データベース。 ここではデータベース メールが有効になっていることを前提としています。  
+ 次の例は、以降ではデータベース メール、 **msdb**データベース。 ここではデータベース メールが有効になっていることを前提としています。  
   
 ```  
 USE msdb ;  

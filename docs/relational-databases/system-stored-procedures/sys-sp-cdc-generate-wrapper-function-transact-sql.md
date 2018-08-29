@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_generate_wrapper_function (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_cdc_generate_wrapper_function (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f8f81b97ad6b1c1bf09ee33bd460aab01872327
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6ddf84aa517b7f7e21e605264e1efa7ca1977d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259262"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022942"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sys.sp_cdc_generate_wrapper_function
  スクリプトが生成されるキャプチャ インスタンスです。 *capture_instance*は**sysname**あり、既定値は NULL です。 値を省略するか、明示的に NULL に設定すると、すべてのキャプチャ インスタンスに対してラッパー スクリプトが作成されます。  
   
  [ @closed_high_end_point=] *high_end_pt_flag*  
- コミット時間が上端と等しい変更を、生成されたプロシージャによって抽出範囲内に含めるかどうかを示すフラグ ビットです。 *high_end_pt_flag*は**ビット**で、既定値は 1 で、エンドポイントを含める必要があることを示します。 値に 0 を指定すると、すべてのコミット時間は上端よりも厳密に短くなります。  
+ コミット時間が上端と等しい変更を、生成されたプロシージャによって抽出範囲内に含めるかどうかを示すフラグ ビットです。 *high_end_pt_flag*は**ビット**あり、既定値は 1 で、エンドポイントを含める必要があることを示します。 値に 0 を指定すると、すべてのコミット時間は上端よりも厳密に短くなります。  
   
  [ @column_list=] '*column_list*'  
  ラッパー関数から返される結果セットに含めるキャプチャ対象列の一覧です。 *column_list*は**nvarchar (max)** あり、既定値は NULL です。 NULL が指定されている場合、キャプチャされたすべての列が含まれます。  
@@ -72,12 +71,12 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|列の型|Description|  
+|列名|列の型|説明|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar(145)**|生成された関数の名前です。|  
 |**create_script**|**nvarchar(max)**|キャプチャ インスタンスのラッパー関数を作成するスクリプトです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  キャプチャ インスタンスのすべての変更クエリをラップする関数を作成するスクリプトが常に生成されます。 キャプチャ インスタンスが差分変更クエリをサポートする場合、このクエリのラッパーを生成するスクリプトも生成されます。  
   
 ## <a name="examples"></a>使用例  

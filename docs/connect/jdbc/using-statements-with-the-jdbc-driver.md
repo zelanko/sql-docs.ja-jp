@@ -14,20 +14,20 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7320c90f1ec0517ccc7d22a30b0678074a24e7e6
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 983cf2bcbdbfd91f10331310dbf4318cd5b3fb5e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661724"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786871"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>JDBC ドライバーでのステートメントの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] データベース内のデータは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] を使用して、さまざまな方法で操作することができます。 入力パラメーターや出力パラメーターを使用して、データベースに SQL ステートメントを実行したり、データベースのストアド プロシージャを呼び出したりできます。 JDBC ドライバーは、バッチ操作による SQL エスケープ シーケンス、更新数、自動生成キーの使用、および更新の実行もサポートしています。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] データベース内のデータは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、さまざまな方法で操作することができます。 入力パラメーターや出力パラメーターを使用して、データベースに SQL ステートメントを実行したり、データベースのストアド プロシージャを呼び出したりできます。 JDBC ドライバーは、バッチ操作による SQL エスケープ シーケンス、更新数、自動生成キーの使用、および更新の実行もサポートしています。  
   
-JDBC ドライバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースからデータを取得するための 3 つのクラスがあります。  
+JDBC ドライバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからデータを取得するための 3 つのクラスがあります。  
   
 1. [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) - パラメーターを指定せずに SQL ステートメントを実行するために使用されます。  
   
@@ -35,14 +35,14 @@ JDBC ドライバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_m
   
 3. [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) - (SQLServerPreparedStatement から継承されます) IN パラメーター、OUT パラメーター、またはその両方を含むストアド プロシージャを実行するために使用されます。  
   
- このセクションのトピックでは、これら 3 つのステートメント クラスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースのデータを処理する方法について説明します。  
+ このセクションのトピックでは、これら 3 つのステートメント クラスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
 | トピック                                                                                                    | [説明]                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [SQL でのステートメントの使用](../../connect/jdbc/using-statements-with-sql.md)                             | JDBC ドライバーで SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースのデータを処理する方法について説明します。    |
-| [ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md) | JDBC ドライバーでストアド プロシージャを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースのデータを処理する方法について説明します。 |
+| [SQL でのステートメントの使用](../../connect/jdbc/using-statements-with-sql.md)                             | JDBC ドライバーで SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する方法について説明します。    |
+| [ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md) | JDBC ドライバーでストアド プロシージャを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する方法について説明します。 |
 | [複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)                           | JDBC ドライバーを使用して複数の結果セットからデータを取得する方法について説明します。                                                                       |
 | [SQL エスケープ シーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)                           | 日付および時刻のリテラルや関数のような SQL エスケープ シーケンスの使用方法について説明します。                                                               |
 | [自動生成キーの使用](../../connect/jdbc/using-auto-generated-keys.md)                             | 自動生成キーの使用方法について説明します。                                                                                                     |

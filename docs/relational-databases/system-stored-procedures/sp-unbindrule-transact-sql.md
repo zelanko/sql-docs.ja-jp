@@ -1,5 +1,5 @@
 ---
-title: sp_unbindrule (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_unbindrule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be14a4885cea481edda6ba7465ac2c5aa969ec1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d7a014b00a5fba5192e3bd9227f88968980dfd89
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257438"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028935"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33257438"
   現在のデータベース内の列または別名データ型のルールをバインド解除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] DEFAULT キーワードを使用して既定の定義を作成することをお勧め、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ステートメント代わりにします。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] DEFAULT キーワードを使用して、既定の定義を作成することをお勧め、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ステートメント代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,19 +55,19 @@ sp_unbindrule [ @objname = ] 'object_name'
 >  *object_name*角かっこを含めることができます **:operator[]** として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 別名データ型からルールをバインド解除する場合にのみ使用します。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、そのデータ型の既存の列には、指定されたルールは失われません。  
+ 別名データ型からルールをバインド解除する場合にのみ使用します。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、そのデータ型の既存の列には指定されたルールは解除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ルールのテキストを表示するには、ルール名をパラメーターに使用して **sp_helptext** を実行します。  
   
- ルールがバインド解除、バインドに関する情報はから削除、 **sys.columns**テーブルの列との間に、ルールがバインドされていた場合、 **sys.types**テーブルの場合は、ルールを別名データ型にバインドされました。  
+ バインドに関する情報を削除ルールがバインドできない場合は、 **sys.columns**テーブル、列との間に、ルールがバインドされていた場合、 **sys.types**テーブルの別名データ型にルールがバインドされていた場合。  
   
- 別名データ型からルールをバインド解除すると、その別名データ型のすべての列からも該当するルールがバインド解除されます。 ルールは、列のデータ型が変更されたか後で ALTER TABLE ステートメントの ALTER COLUMN 句にもバインド可能性がありますを使用してこれらの列からルールをバインド解除する必要があります具体的には**sp_unbindrule**を指定して、列の名前。  
+ 別名データ型からルールをバインド解除すると、その別名データ型のすべての列からも該当するルールがバインド解除されます。 ルールは、データ型を持つが、ALTER TABLE ステートメントの ALTER COLUMN 句によって変更された後で列にバインドも可能性がありますを使用してこれらの列からルールをバインド解除する必要があります具体的には**sp_unbindrule**を指定して、列の名前。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  テーブル列からルールをバインド解除するには、そのテーブルに対する ALTER 権限が必要です。 別名データ型からルールをバインド解除するには、そのデータ型に対する CONTROL 権限、またはそのデータ型が属するスキーマに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -80,7 +80,7 @@ EXEC sp_unbindrule 'employees.startdate';
 ```  
   
 ### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>B. 別名データ型からルールをバインド解除する  
- 次の例では、別名データ型 `ssn` からルールをバインド解除します。 これには、現在および将来の型の列からルールがバインド解除します。  
+ 次の例では、別名データ型 `ssn` からルールをバインド解除します。 既存および将来の型の列からルールがバインド解除します。  
   
 ```  
 EXEC sp_unbindrule ssn;  

@@ -1,5 +1,5 @@
 ---
-title: sp_helpqreader_agent (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpqreader_agent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be49f8a6303096487ef2c36593280fcc72e38a91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d240d66768ee4b812542f959108ebea6baec4d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995949"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022710"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,26 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="arguments"></a>引数  
  [  **@frompublisher=** ] *frompublisher*  
- ストアド プロシージャをパブリッシャー側とディストリビューター側のどちらで呼び出すかを指定します。 *frompublisher*は bit で、既定値は 0 です。 **1** 、パブリッシャーからストアド プロシージャを呼び出すことを意味し、 **0**ディストリビューターからストアド プロシージャを呼び出すことを意味します。  
+ ストアド プロシージャをパブリッシャー側とディストリビューター側のどちらで呼び出すかを指定します。 *frompublisher*は bit で、既定値は 0 です。 **1**パブリッシャーで、ストアド プロシージャを呼び出すことを意味し、 **0**ディストリビューターからストアド プロシージャを呼び出すことを意味します。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|エージェントの ID です。|  
+|**id**|**int**|エージェントの ID。|  
 |**name**|**nvarchar(100)**|エージェントの名前。|  
 |**job_id**|**uniqueidentifier**|エージェント ジョブの一意な ID。|  
-|**job_login**|**nvarchar(512)**|形式で返される、ディストリビューション エージェントを実行する Windows アカウントは、*ドメイン*\\*username*です。|  
-|**job_password**|**sysname**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
+|**job_login**|**nvarchar(512)**|形式で返されるディストリビューション エージェントを実行する Windows アカウントは、*ドメイン*\\*username*します。|  
+|**job_password**|**sysname**|セキュリティ上の理由から、値の**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_helpqreader_agent**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_helpqreader_agent**はトランザクション レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- ときの値*frompublisher*は**1**のメンバーにのみ、 **sysadmin**のメンバーまたはパブリッシャーの固定サーバー ロール、 **db_owner**、パブリケーション データベースの固定データベース ロールが実行できる**sp_helpqreader_agent**です。 それ以外の場合のメンバーにのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp_helpqreader_エージェント**です。  
+## <a name="permissions"></a>アクセス許可  
+ ときに、値の*frompublisher*は**1**のメンバーだけ、 **sysadmin**固定サーバー ロールのメンバー、またはパブリッシャー、 **db_owner**パブリケーション データベースの固定データベース ロールが実行できる**sp_helpqreader_agent**します。 それ以外の場合のメンバーのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner** 、ディストリビューション データベースの固定データベース ロールが実行できる**sp_helpqreader_エージェント**します。  
   
 ## <a name="see-also"></a>参照  
  [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  

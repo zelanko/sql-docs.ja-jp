@@ -1,5 +1,5 @@
 ---
-title: sp_helpuser (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpuser (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 343439dd04f9f74c0a5444afef25921072d9d14c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2f69c77b548de159a6b6c40ceddccb169e477ede
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261128"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028945"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33261128"
   現在のデータベースに存在するデータベース レベルのプリンシパルに関する情報をレポートします。  
   
 > [!IMPORTANT]  
->  **sp_helpuser**で導入されたセキュリティ保護可能な情報を返さない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用して[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)代わりにします。  
+>  **sp_helpuser**で導入されたセキュリティ保護可能な情報は返されません[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。 使用[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,38 +54,38 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 次の表は、結果セットのどちらの場合、ユーザー アカウントも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]か、または Windows ユーザーが指定*これ*です。  
+ 次の表は、結果セットのどちらの場合、ユーザー アカウントも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]か、または Windows ユーザーが指定*これ*。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|現在のデータベースに存在するユーザー。|  
 |**RoleName**|**sysname**|ロール**UserName**が属しています。|  
-|**LoginName**|**sysname**|ログイン**UserName**です。|  
-|**DefDBName**|**sysname**|既定のデータベース**UserName**です。|  
+|**LoginName**|**sysname**|ログイン**UserName**します。|  
+|**DefDBName**|**sysname**|既定のデータベース**UserName**します。|  
 |**DefSchemaName**|**sysname**|データベース ユーザーの既定のスキーマ。|  
 |**UserID**|**smallint**|ID **UserName**現在のデータベースでします。|  
 |**SID**|**smallint**|ユーザーのセキュリティ識別番号 (SID)。|  
   
  次の表は、ユーザー アカウントを指定せず、別名が現在のデータベース内に存在する場合の結果セットです。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|現在のデータベースに存在するユーザーの別名であるログイン。|  
 |**UserNameAliasedTo**|**sysname**|ログインを別名として使用する、現在のデータベース内のユーザー名。|  
   
- 次の表は、ロールが指定されている場合の結果セット*これ*です。  
+ 次の表は、ロールが指定されている場合の結果セット*これ*します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**role_name**|**sysname**|現在のデータベースに存在するロールの名前。|  
+|**Role_name**|**sysname**|現在のデータベースに存在するロールの名前。|  
 |**Role_id**|**smallint**|現在のデータベースに存在するロールの ID。|  
 |**Users_in_role**|**sysname**|現在のデータベースに存在するロールのメンバー。|  
-|**ユーザー id**|**smallint**|ロールのメンバーのユーザー ID。|  
+|**ユーザー Id**|**smallint**|ロールのメンバーのユーザー ID。|  
   
-## <a name="remarks"></a>解説  
- データベース ロールのメンバーシップに関する情報を表示する[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)です。 サーバー ロールのメンバーに関する情報を表示する[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)、サーバー レベル プリンシパルに関する情報を表示するを使用して[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)です。  
+## <a name="remarks"></a>コメント  
+ データベース ロールのメンバーシップに関する情報を表示する[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)します。 サーバー ロールのメンバーに関する情報を表示する[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)、サーバー レベル プリンシパルに関する情報を表示する[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
  返される情報は、メタデータへのアクセスに関する制限の対象となります。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

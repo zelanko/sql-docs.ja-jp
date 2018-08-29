@@ -1,5 +1,5 @@
 ---
-title: sp_changemergesubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_changemergesubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2426efe2b47c5bdd6fbf952202d70dbc4fc5e365
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82fcd86e9b80c2492da938000a0510d52583dc55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018058"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,22 +61,22 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  指定したパブリケーションを変更するプロパティです。 *プロパティ*は**sysname**テーブル内の値のいずれかを指定できます。  
   
  [  **@value=**] **'***値***'**  
- 指定された新しい値は、*プロパティ*です。 *値*は**nvarchar (255)** テーブル内の値のいずれかを指定できます。  
+ 指定した新しい値は、*プロパティ*します。 *値*は**nvarchar (255)** テーブル内の値のいずれかを指定できます。  
   
-|プロパティ|値|Description|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
-|**説明**||マージ サブスクリプションの説明。|  
+|**description**||マージ サブスクリプションの説明。|  
 |**priority**||サブスクリプションの優先度。 優先度は、競合の検出時、既定の競合回避モジュールによって実行される操作を選択する場合に使用されます。|  
 |**merge_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
 |**merge_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
 |**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。|  
-||**0**|使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。|  
+||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。|  
 |**publisher_login**||パブリッシャーでのログイン名。|  
 |**publisher_password**||指定したパブリッシャー ログインに対する複雑なパスワード。|  
 |**subscriber_security_mode**|**1**|サブスクライバーに接続するときに Windows 認証を使用。|  
-||**0**|使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに接続するときに認証します。|  
+||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに接続するときに認証します。|  
 |**subscriber_login**||サブスクライバーでのログイン名。|  
-|**subscriber_password**||指定したサブスクライバー ログインに対する複雑なパスワード。|  
+|**@subscriber_password**||指定したサブスクライバー ログインに対する複雑なパスワード。|  
 |**sync_type**|**自動**|パブリッシュされたテーブルのスキーマと初期データが、最初にサブスクライバーに転送されます。|  
 ||**[なし]**|サブスクライバーには、パブリッシュされたテーブルに関するスキーマと初期データがあります。システム テーブルとデータが常に転送されます。|  
 |**use_interactive_resolver**|**true**|対話的に競合を回避できるすべてのアーティクルについて、対話的に競合を解決できるようにします。|  
@@ -85,13 +86,13 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changemergesubscription**はマージ レプリケーションで使用します。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changemergesubscription**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changemergesubscription**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

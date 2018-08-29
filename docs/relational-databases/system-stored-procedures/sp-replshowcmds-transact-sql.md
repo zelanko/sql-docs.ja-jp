@@ -1,5 +1,5 @@
 ---
-title: sp_replshowcmds (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_replshowcmds (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74526c46a3758829a89c71d41c071070ec907d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4572fb1e09be2064fda17860ac64beb495783177
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998689"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023431"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,29 +51,29 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="result-sets"></a>結果セット  
  **sp_replshowcmds**実行元のパブリケーション データベースに関する情報を返す診断プロシージャです。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|コマンドのシーケンス番号です。|  
-|**originator_id**|**int**|ID コマンド実行者、常に**0**します。|  
+|**originator_id**|**int**|常にコマンド オリジネータの ID **0**します。|  
 |**publisher_database_id**|**int**|常にパブリッシャー データベースの ID **0**します。|  
 |**article_id**|**int**|アーティクルの ID です。|  
 |**type**|**int**|コマンドの種類です。|  
 |**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド。|  
   
-## <a name="remarks"></a>解説  
- **sp_replshowcmds**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_replshowcmds**はトランザクション レプリケーションで使用します。  
   
- 使用して**sp_replshowcmds**、表示することができますが現在のトランザクション (残っているトランザクションのトランザクション ログで、ディストリビューター側に送信されていない) に配布されません。  
+ 使用して**sp_replshowcmds**、表示することは現在のトランザクションに残っているトランザクション、トランザクション ログで、ディストリビューターに送信されていない) 配布されません。  
   
- 実行するクライアント**sp_replshowcmds**と**sp_replcmds**の同じデータベース内には、エラー 18752 を受け取ります。  
+ 実行しているクライアント**sp_replshowcmds**と**sp_replcmds**同じデータベース内には、エラー 18752 を受け取ります。  
   
- このエラーを避けるためには、最初のクライアントを切断するかを実行してログ リーダーとクライアントの役割を解放する必要があります**sp_replflush**です。 すべてのクライアントが、ログ リーダーから切断後**sp_replshowcmds**が正常に実行することができます。  
+ このエラーを避けるためには、最初のクライアントを切断する必要がありますまたはログ リーダーとクライアントの役割を実行することによって解放する必要が**sp_replflush**します。 すべてのクライアントが、ログ リーダーから切断後**sp_replshowcmds**正常に実行できます。  
   
 > [!NOTE]  
 >  **sp_replshowcmds**レプリケーションに関する問題のトラブルシューティングにのみ実行する必要があります。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replshowcmds**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replshowcmds**します。  
   
 ## <a name="see-also"></a>参照  
  [エラー メッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

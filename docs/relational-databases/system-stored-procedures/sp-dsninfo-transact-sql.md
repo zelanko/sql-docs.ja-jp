@@ -1,5 +1,5 @@
 ---
-title: sp_dsninfo (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dsninfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a9c04611a342f81b6aa0a0b403eb6ff4ce8a643
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63e4783420f9298e2e820341993774b81bbab7e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992579"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017495"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
  ODBC DSN または OLE DB リンク サーバーの名前を指定します。 *dsn*は**varchar (128)**、既定値はありません。  
   
  [  **@infotype =**] **'***検査***'**  
- 返される情報の種類です。 場合*検査*が指定されていないか、NULL を指定すると、すべての種類の情報が返されます。 *検査*は**varchar (128)**、既定値は NULL、これらの値のいずれかを指定できます。  
+ 返される情報の種類です。 場合*検査*が指定されていないか、NULL を指定すると、あらゆる種類の情報が返されます。 *検査*は**varchar (128)**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**DBMS_NAME**|データ ソースのベンダーの名前を指定します。|  
 |**DBMS_VERSION**|データ ソースのバージョンを指定します。|  
@@ -71,7 +71,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@dso_type=**]*ス*  
  データ ソースの種類を指定します。 *ス*は**int**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|ODBC データ ソース (ODBC data source)|  
 |**3**|OLE DB データ ソース|  
@@ -81,18 +81,18 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**情報の種類**|**nvarchar(64)**|DBMS_NAME、DBMS_VERSION、DATABASE_NAME、SQL_SUBSCRIBER などの情報の種類です。|  
-|**値**|**nvarchar(512)**|関連する情報の種類の値です。|  
+|**[値]**|**nvarchar(512)**|関連する情報の種類の値です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dsninfo**はあらゆる種類のレプリケーションで使用します。  
   
- **sp_dsninfo**レプリケーション、またはクエリを実行するデータベースを使用できるかどうかを示す ODBC または OLE DB のデータ ソース情報を取得します。  
+ **sp_dsninfo**レプリケーションまたはクエリ、データベースを使用できるかどうかを示す ODBC または OLE DB のデータ ソース情報を取得します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dsninfo**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dsninfo**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_enumdsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_getqueuedrows (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ec0e31b852a1aea3cfd964a47660fd4953c196d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7aa57cc268f5bc70bc0c2ebf03e0f05a4d8950d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994419"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029003"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,20 +62,20 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="result-sets"></a>結果セット  
  サブスクライブされたテーブルについて、現在、キューに少なくとも 1 つのトランザクションが登録されているすべての行を表示します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**操作**|**nvarchar(10)**|同期を実行するときに行われるアクションの種類。<br /><br /> INS= 挿入<br /><br /> DEL = 削除<br /><br /> UPD = 更新|  
-|**Tranid**|**nvarchar (70)**|コマンドが実行されたときのトランザクション ID。|  
-|**テーブルの列 1... n**||指定されたテーブルの各列の値*tablename*です。|  
+|**tranid**|**nvarchar (70)**|コマンドが実行されたときのトランザクション ID。|  
+|**テーブルの列 1... n**||指定したテーブルの各列の値*tablename*します。|  
 |**msrepl_tran_version**|**uniqueidentifier**|この列は、レプリケートされたデータの変更を追跡し、パブリッシャーで競合を検出するために使用されます。 またこの列は、自動的にテーブルに追加されます。|  
   
-## <a name="remarks"></a>解説  
- **sp_getqueuedrows**キュー更新に参加しているサブスクライバーで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_getqueuedrows**キュー更新に参加しているサブスクライバーで使用されます。  
   
- **sp_getqueuedrows**検索するデータベースのサブスクリプションで指定されたテーブルの行は、キュー更新に参加しているまだ現在解決されていないキュー リーダー エージェントによってです。  
+ **sp_getqueuedrows**サブスクリプションで指定されたテーブルの行のデータベースを検索しますが、キュー更新に参加している、まだ現在解決されていない、キュー リーダー エージェントによってです。  
   
-## <a name="permissions"></a>権限  
- **sp_getqueuedrows**で指定されたテーブルに対する SELECT 権限が必要です*tablename*です。  
+## <a name="permissions"></a>アクセス許可  
+ **sp_getqueuedrows**で指定されたテーブルに対する SELECT 権限が必要です*tablename*します。  
   
 ## <a name="see-also"></a>参照  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

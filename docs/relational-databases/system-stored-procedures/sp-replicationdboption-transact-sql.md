@@ -1,5 +1,5 @@
 ---
-title: sp_replicationdboption (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_replicationdboption (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replicationdboption
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a88d295f6ae5ff0fcfab7121a4057dd84f75957
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b577600e5757ee630795724d965603f3478391ce
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024451"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [**@optname=**] **'***optname***'**  
  有効または無効にするレプリケーション データベース オプションを指定します。 *optname*は**sysname**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**マージ パブリッシュします。**|データベースは、マージ パブリケーションで使用できます。|  
 |**発行**|データベースは、他の種類のパブリケーションで使用できます。|  
 |**サブスクライブ**|データベースは、サブスクリプション データベースです。|  
-|**バックアップと同期させる**|データベースが連携バックアップに対して有効になっています。 詳細については、次を参照してください。[トランザクション レプリケーションの連携バックアップを有効にする&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)です。|  
+|**バックアップと同期します。**|データベースが連携バックアップに対して有効になっています。 詳細については、次を参照してください。[トランザクション レプリケーションの連携バックアップの有効化&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)します。|  
   
  [  **@value=**] **'***値***'**  
- 指定したデータベース オプションを有効にするか無効にするかを指定します。 *値*は**sysname**、でき、 **true**または**false**です。 この値が**false**と*optname*は**マージ パブリッシュ**、マージ パブリッシュされたデータベースへのサブスクリプションが削除されます。  
+ 指定したデータベース オプションを有効にするか無効にするかを指定します。 *値*は**sysname**、でき、 **true**または**false**します。 この値が**false**と*optname*は**マージ パブリッシュ**、マージ パブリッシュされたデータベースへのサブスクリプションが削除されます。  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
- ディストリビューターに接続せずに、このストアド プロシージャを実行するかどうかを指定します。 *ignore_distributor*は**ビット**、既定値は**0**ディストリビューターを意味する必要がありますに接続して、パブリッシング データベースの新しい状態を反映します。 値**1**がのみ、指定するかどうかは、ディストリビューターにアクセスできなくなってと**sp_replicationdboption**パブリッシングを無効にされています。  
+ ディストリビューターに接続せずに、このストアド プロシージャを実行するかどうかを指定します。 *ignore_distributor*は**ビット**、既定値は**0**、ディストリビューターに接続して、パブリッシング データベースの新しい状態を反映します。 値**1**のみ指定してください、ディストリビューターがアクセスできるかどうかと**sp_replicationdboption**パブリッシングを無効にされています。  
   
  [  **@from_scripting=**] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -73,15 +73,15 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_replicationdboption**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
   
- このプロシージャでは、指定したオプションに従って、特定のレプリケーション システム テーブル、セキュリティ アカウントなどが作成または削除されます。 内の対応するカテゴリ ビット、 **master.sysdatabases**システム テーブルし、必要なシステム テーブルを作成します。  
+ このプロシージャでは、指定したオプションに従って、特定のレプリケーション システム テーブル、セキュリティ アカウントなどが作成または削除されます。 対応するカテゴリ ビットがセット、 **master.sysdatabases**システム テーブルと必要なシステム テーブルを作成します。  
   
  パブリッシングを無効にするには、パブリケーション データベースがオンラインであることが必要です。 パブリケーション データベースにデータベース スナップショットが存在する場合は、パブリッシングを無効にする前に削除する必要があります。 データベース スナップショットは、データベースの読み取り専用のオフライン コピーであり、レプリケーション スナップショットには関係していません。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_replicationdboption**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_replicationdboption**します。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   

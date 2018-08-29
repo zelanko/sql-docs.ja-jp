@@ -1,5 +1,5 @@
 ---
-title: sp_redirect_publisher (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_redirect_publisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8df59d709ef04d94626ac2ab6a3ba268d63ab76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8085bbdea45ba9d537f110fb4979d29b8b72d04f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022232"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  既存のパブリッシャーとデータベースのペアのリダイレクトされたパブリッシャーを指定します。 パブリッシャー データベースに属する場合、Always On 可用性グループ、可用性グループに関連付けられている可用性グループ リスナー名は、リダイレクトされたパブリッシャーです。  
+  既存のパブリッシャーとデータベースのペアのリダイレクトされたパブリッシャーを指定します。 パブリッシャー データベースが Always On 可用性グループに所属している場合、リダイレクトされたパブリッシャーは可用性グループに関連付けられている可用性グループ リスナー名にします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,13 +63,13 @@ sp_redirect_publisher
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **sp_redirect_publisher**がレプリケーション パブリッシャーを可用性グループのリスナーと、パブリッシャー/データベース ペアを関連付けることによって Always On 可用性グループの現在のプライマリにリダイレクトを許可するために使用します。 実行**sp_redirect_publisher**パブリッシュされたデータベースを含む可用性グループに対して AG リスナーを構成した後です。  
+## <a name="remarks"></a>コメント  
+ **sp_redirect_publisher**パブリッシャー/データベース ペアを可用性グループのリスナーに関連付けることによって、Always On 可用性グループの現在のプライマリにリダイレクトされるレプリケーションのパブリッシャーを許可するために使用します。 実行**sp_redirect_publisher**パブリッシュされたデータベースを含む可用性グループに対して AG リスナーを構成した後。  
   
- 元のパブリッシャーでパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合は、実行**sp_redirect_publisher**の値を指定せず、 *@redirected_publisher*パブリッシャー/データベース ペアのリダイレクトを削除するパラメーターです。 パブリッシャーのリダイレクトの詳細についてを参照してください[AlwaysOn パブリケーション データベースのメンテナンス&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)です。  
+ 元のパブリッシャーでパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合は、実行**sp_redirect_publisher**の値を指定せず、 *@redirected_publisher*パブリッシャー/データベース ペアのリダイレクトを削除するパラメーター。 パブリッシャーのリダイレクトの詳細についてを参照してください[AlwaysOn パブリケーション データベースのメンテナンス&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)します。  
   
-## <a name="permissions"></a>権限  
- 呼び出し元必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**定義済みパブリケーションのパブリケーション アクセス リストのメンバーまたはディストリビューション データベースの固定データベース ロールパブリッシャー データベースと関連付けられています。  
+## <a name="permissions"></a>アクセス許可  
+ 呼び出し元する必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールには、ディストリビューション データベースまたは定義済みパブリケーションのパブリケーション アクセス リストのメンバーパブリッシャー データベースと関連付けられています。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

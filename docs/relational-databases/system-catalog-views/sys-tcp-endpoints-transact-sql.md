@@ -1,5 +1,5 @@
 ---
-title: sys.tcp_endpoints (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.tcp_endpoints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5ca1f1dae30d432ec339825cc5ab5815351150b4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221293"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034881"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  システム内の各 TCP エンドポイントごとに 1 行のデータを保持します。 によって記述されるエンドポイント**sys.tcp_endpoints**を許可して、接続権限を取り消すオブジェクトを提供します。 ポートおよび IP アドレスに関して表示される情報は、プロトコルの構成に使用されるものではなく、実際のプロトコルの構成と一致しない場合もあります。 表示をプロトコルの構成は、次のように使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager です。  
+  システム内の各 TCP エンドポイントごとに 1 行のデータを保持します。 によって記述されるエンドポイント**sys.tcp_endpoints**許可し、接続権限を取り消すオブジェクトを提供します。 ポートおよび IP アドレスに関して表示される情報は、プロトコルの構成に使用されるものではなく、実際のプロトコルの構成と一致しない場合もあります。 表示し、プロトコルの構成を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。  
   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**< 継承された列 >**||列を継承[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)です。|  
+|**< 継承された列 >**||列を継承[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)します。|  
 |**port**|ssNoversion|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
 |**is_dynamic_port**|bit|1 = ポート番号が動的に割り当てられました。<br /><br /> NULL 値は許可されません。|  
 |**ip_address**|**nvarchar(45)**|LISTENER_IP 句で指定されたリスナーの IP アドレスです。 NULL 値が許可されます。|  

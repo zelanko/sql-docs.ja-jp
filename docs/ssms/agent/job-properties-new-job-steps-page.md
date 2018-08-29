@@ -18,20 +18,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8beaff6457919ea892715dbd527b8cb17ef9cef2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d51e053e6ac4518743a737000baf926ccfd5adc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987824"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774217"
 ---
 # <a name="job-properties---new-job-steps-page"></a>ジョブのプロパティ - [新しいジョブ] \([ステップ] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 
+  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブのジョブ ステップを表示したり整理したりできます。  
+このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのジョブ ステップを表示したり整理したりできます。  
   
 ## <a name="options"></a>および  
 **[ジョブ ステップの一覧]**  
@@ -41,7 +42,7 @@ ms.locfileid: "37987824"
 一覧内で 1 ステップ上または下にジョブを移動します。  
   
 **[開始ステップ]**  
-ジョブを開始するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが開始するステップを選択します。  
+ジョブを開始するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが開始するステップを選択します。  
   
 **[新規作成]**  
 選択したジョブ ステップの下に新しいジョブ ステップを作成します。  

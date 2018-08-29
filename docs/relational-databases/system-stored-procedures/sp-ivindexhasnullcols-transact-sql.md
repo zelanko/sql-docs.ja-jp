@@ -1,5 +1,5 @@
 ---
-title: sp_ivindexhasnullcols (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_ivindexhasnullcols (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4431ae915c43d6ceb96200c3ebbf6aa976dd4ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7ca9be2e67f49a2881171dcfb4e0a99a6672bd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995059"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023732"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,18 +53,18 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
  NULL が許容される列がビュー インデックスにあるかどうかを示すフラグです。 *view_name*は**sysname**、既定値はありません。 値を返します**1**場合は NULL が許容される列がビュー インデックスにします。 値を返します**0**ビューに NULL を許容する列が含まれていない場合。  
   
 > [!NOTE]  
->  ストアド プロシージャ自体がのリターン コードを返すかどうか**1**エラーつまり、ストアド プロシージャの実行が、この値は、 **0**無視してください。  
+>  ストアド プロシージャ自体でのリターン コードを返すかどうか**1**、障害がストアド プロシージャの実行の意味、この値は**0**無視する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_ivindexhasnullcols**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_ivindexhasnullcols**トランザクション レプリケーションで使用されます。  
   
  既定では、サブスクライバー側でパブリケーション内のインデックス付きビュー アーティクルはテーブルとして作成されます。 ただし、インデックス列で NULL 値が許容される場合、サブスクライバー側でインデックス付きビューはテーブルではなくインデックス付きビューとして作成されます。 このストアド プロシージャを実行することによって、現在のインデックス付きビューにこの問題があるかどうかをユーザーに知らせることができます。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_ivindexhasnullcols**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_ivindexhasnullcols**します。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

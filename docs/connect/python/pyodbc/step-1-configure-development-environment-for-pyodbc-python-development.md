@@ -14,12 +14,12 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d591227354a950b36e085b350e207c4a8e89ff25
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 7f588174ea80677066628cb3e756d7c38bd42fba
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890983"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42784449"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>手順 1: pyodbc Python 開発用に開発環境を構成する
 
@@ -29,7 +29,7 @@ Python の Windows で pyodbc を使用して SQL Database に接続します。
 1. **Python インストーラーをダウンロード**します。  
   コンピューターに Python があるない場合はインストールします。 移動して、 [Python をダウンロードできるページ](https://www.python.org/downloads/windows/)し、適切なインストーラーをダウンロードします。 たとえば、64 ビット コンピューターの場合は、Python 2.7 または 3.7 (x 64) インストーラーをダウンロードします。  
   
-2. **Python をインストール**します。  インストーラーがダウンロードされると、次の手順を実行します。 をします。 インストーラーを起動するファイルをダブルクリックします。 B. 言語を選択し、条項に同意します。 c. 画面の指示に従って、Python は、コンピューターにインストールする必要があります。 d. 移動して、Python がインストールされていることを確認する`C:\Python27`または`C:\Python37`実行`python -v`または`py -v`(3.x) の 
+2. **Python をインストール**します。  インストーラーがダウンロードされると、次の手順を実行します。 をします。 インストーラーを起動するファイルをダブルクリックします。 B. 言語を選択し、条項に同意します。 c. 画面の指示に従って、Python は、コンピューターにインストールする必要があります。 d. 移動して、Python がインストールされていることを確認する`C:\Python27`または`C:\Python37`実行`python -V`または`py -V`(3.x) の 
       
 3. [**Microsoft ODBC Driver for SQL Server on Windows をインストール**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)します。
   

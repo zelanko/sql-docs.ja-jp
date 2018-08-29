@@ -1,5 +1,5 @@
 ---
-title: sys.server_audits (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.server_audits (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f71da894aa31fa192c5abc6f64683fa1c2036f99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f6dd82c3232e941d4db08f9e5079d9e821e84804
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221923"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024534"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー インスタンス内の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査について行を 1 つずつ含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|監査の ID。|  
-|**name**|**sysname**|監査の名前です。|  
+|**name**|**sysname**|監査の名前。|  
 |**audit_guid**|**uniqueidentifier**|列挙に使用される監査の GUID がメンバー サーバーと #124 を使用した監査は、アタッチ操作の中に、サーバーの開始とデータベースのデータベース監査の仕様。|  
 |**create_date**|**datetime**|監査が作成された UTC 日付。|  
 |**modify_date**|**datetime**|監査が最後に変更された UTC 日付。|  
@@ -52,10 +52,10 @@ ms.locfileid: "33221923"
 |**queue_delay**|**int**|ディスクに書き込むまでに待機する最大時間 (ミリ秒)。 0 の場合は、イベントが続行する前に書き込みが行われます。|  
 |**述語**|**nvarchar(3000)**|イベントに適用される述語式。|  
   
-## <a name="permissions"></a>権限  
- 持つプリンシパル、 **ALTER ANY SERVER AUDIT**または**VIEW ANY DEFINITION**アクセス許可があるこのカタログ ビューにアクセスします。 さらに、プリンシパル拒否されていない**VIEW ANY DEFINITION**権限です。  
+## <a name="permissions"></a>アクセス許可  
+ 持つプリンシパル、 **ALTER ANY SERVER AUDIT**または**VIEW ANY DEFINITION**このカタログ ビューにアクセス許可にアクセスします。 さらに、プリンシパル必要があります拒否されていない**VIEW ANY DEFINITION**権限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

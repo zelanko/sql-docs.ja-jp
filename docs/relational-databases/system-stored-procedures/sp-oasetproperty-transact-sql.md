@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_OASetProperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aeadb381a7bb5c55d9a26e5e0e8b9e148f7b120
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 689549b2741e4b334f664cf7662204702686a93f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258614"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023742"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- 作成した OLE オブジェクトのオブジェクト トークン**sp_OACreate**です。  
+ によって以前に作成された OLE オブジェクトのオブジェクト トークン**sp_OACreate**します。  
   
  *propertyname*  
  新しい値を設定する OLE オブジェクトのプロパティ名を指定します。  
@@ -53,20 +53,20 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  *newvalue*  
  プロパティの新しい値を指定します。指定する場合は、適切なデータ型の値にする必要があります。  
   
- *インデックス*  
- インデックス パラメーターです。 指定した場合*インデックス*適切なデータ型の値にする必要があります。  
+ *index*  
+ インデックス パラメーターです。 指定した場合*インデックス*適切なデータ型の値を指定する必要があります。  
   
  プロパティの一部はパラメーターを持っています。 このようなプロパティをインデックス付きプロパティ、パラメーターをインデックス パラメーターと呼びます。 1 つのプロパティが複数のインデックス パラメーターを持つことができます。  
   
 > [!NOTE]  
->  このストアド プロシージャのパラメーターは名前ではなく位置で指定します。  
+>  このストアド プロシージャのパラメーターは、名前ではなく位置で指定されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)です。  
+ HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

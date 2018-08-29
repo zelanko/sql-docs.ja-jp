@@ -1,5 +1,5 @@
 ---
-title: sp_addscriptexec (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addscriptexec (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e3122de37c27e8372c2aca77f4dde0b267a8d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50606c2b80e5aeae4cb68c453a130dc557111988
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989597"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035194"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,39 +54,39 @@ sp_addscriptexec [ @publication = ] publication
  SQL スクリプト ファイルへの完全なパスを指定します。 *scriptfile*は**nvarchar (4000)**、既定値はありません。  
   
  [  **@skiperror=** ] **'***skiperror***'**  
- スクリプト処理の最中にエラーが発生したときに、ディストリビューション エージェントまたはマージ エージェントを停止させる必要があるかどうかを示します。 *SkipError*は**ビット**、既定値は 0 です。  
+ スクリプト処理の最中にエラーが発生したときに、ディストリビューション エージェントまたはマージ エージェントを停止させる必要があるかどうかを示します。 *SkipError*は**ビット**、既定値は 0。  
   
- **0** = エージェントは停止します。  
+ **0** = は、エージェントを停止します。  
   
  **1** = エージェントはスクリプトを続行し、エラーを無視します。  
   
  [  **@publisher=** ] **'***パブリッシャー***'**  
- 指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*から発行するときに使用しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  *パブリッシャー*から発行するときに使用されません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_addscriptexec**は、トランザクション レプリケーションおよびマージ レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_addscriptexec**はトランザクション レプリケーションおよびマージ レプリケーションで使用します。  
   
- **sp_addscriptexec**スナップショット レプリケーションでは使用されません。  
+ **sp_addscriptexec**スナップショット レプリケーションは使用されません。  
   
  使用する**sp_addscriptexec**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントの読み取りが必要し、いずれかのスクリプトの場所にスナップショットの場所と読み取りアクセス許可に対する書き込みアクセス許可が格納されます。  
   
- [Sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)サブスクライバーでスクリプトを実行するために使用され、スクリプトは、サブスクリプション データベースに接続するときに、ディストリビューション エージェントまたはマージ エージェントによって使用されるセキュリティ コンテキストで実行します。 以前のバージョンので、エージェントを実行するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [osql ユーティリティ](../../tools/osql-utility.md)の代わりに使用される[sqlcmd](../../tools/sqlcmd-utility.md)です。  
+ [Sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)サブスクライバーでスクリプトを実行するために使用され、スクリプトは、サブスクリプション データベースに接続するときに、ディストリビューション エージェントまたはマージ エージェントで使用されるセキュリティ コンテキストで実行されます。 以前のバージョンので、エージェントを実行するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [osql ユーティリティ](../../tools/osql-utility.md)の代わりに使用が[sqlcmd](../../tools/sqlcmd-utility.md)します。  
   
- **sp_addscriptexec**使用してサブスクライバーにスクリプトを適用する面で役に立ちます[sqlcmd](../../tools/sqlcmd-utility.md)サブスクライバーにスクリプトの内容を適用します。 ただし、サブスクライバー構成は異なることがあるので、パブリッシャーにポストする前にテストしたスクリプトでも、サブスクライバーでエラーが生じる可能性があります。 *skiperror*にディストリビューション エージェントまたはマージ エージェントはエラーを無視して続行する機能を提供します。 使用して[sqlcmd](../../tools/sqlcmd-utility.md)を実行する前にスクリプトをテストする**sp_addscriptexec**です。  
+ **sp_addscriptexec**を使用してサブスクライバーにスクリプトを適用することで役に立ちます[sqlcmd](../../tools/sqlcmd-utility.md)サブスクライバーにスクリプトの内容を適用します。 ただし、サブスクライバー構成は異なることがあるので、パブリッシャーにポストする前にテストしたスクリプトでも、サブスクライバーでエラーが生じる可能性があります。 *skiperror*にディストリビューション エージェントまたはマージ エージェントはエラーを無視して続行する機能を提供します。 使用[sqlcmd](../../tools/sqlcmd-utility.md)を実行する前にスクリプトをテストする**sp_addscriptexec**します。  
   
 > [!NOTE]  
 >  スキップされたエラーは、参考情報として、引き続きエージェント履歴に記録されます。  
   
- 使用して**sp_addscriptexec**パブリケーションの FTP スナップショット配信はサポートされてのみを使用してスクリプト ファイルを送信する[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
+ 使用して**sp_addscriptexec** FTP スナップショット配信は、に対してのみサポートを使用してパブリケーションのスクリプト ファイルをポストする[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addscriptexec**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addscriptexec**します。  
   
 ## <a name="see-also"></a>参照  
  [同期中にスクリプトを実行&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   

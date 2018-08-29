@@ -1,5 +1,5 @@
 ---
-title: sys.backup_devices (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.backup_devices (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,21 +21,20 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be1c29322063c33797ff56451b55c619fd07db82
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4f7ec178a19cc62891f41e1431d3272aca3237ca
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178248"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026003"
 ---
 # <a name="sysbackupdevices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  使用して登録されている各バックアップ デバイスの行を格納**sp_addumpdevice**またはで作成された[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+  1 行を使用して登録されている各バックアップ デバイスのデータを含む**sp_addumpdevice**またはで作成された[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

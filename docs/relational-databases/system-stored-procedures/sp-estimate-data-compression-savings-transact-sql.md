@@ -1,5 +1,5 @@
 ---
-title: sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25798372f2b949446b746164665dbfe6752443d7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260585"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027541"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "33260585"
   要求されたオブジェクトの現在のサイズ、および要求された圧縮状態での推定オブジェクト サイズを返します。 圧縮は、テーブル全体またはテーブルの一部について評価できます。 これには、ヒープ、クラスター化インデックス、非クラスター化インデックス、インデックス付きビュー、およびテーブル パーティションとインデックス パーティションが含まれます。 オブジェクトは、行の圧縮またはページの圧縮を使用して圧縮できます。 テーブル、インデックス、またはパーティションが既に圧縮されている場合は、このプロシージャを使用して、再圧縮された場合のテーブル、インデックス、またはパーティションのサイズを推定できます。  
   
 > [!NOTE]  
->  圧縮と**sp_estimate_data_compression_savings**のすべてのエディションでは使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+>  圧縮と**sp_estimate_data_compression_savings**のすべてのエディションでは使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  要求された圧縮設定を使用した場合のオブジェクト サイズを推定するために、このストアド プロシージャでは、ソース オブジェクトがサンプリングされ、そのデータが tempdb に作成された同等のテーブルとインデックスに読み込まれます。 さらに、tempdb に作成されたテーブルまたはインデックスが要求された設定に圧縮され、圧縮で削減される推定領域が計算されます。  
   
- テーブル、インデックス、またはパーティションの使用の圧縮状態を変更する、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)ステートメントです。 圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。  
+ テーブル、インデックス、またはパーティションの使用の圧縮状態を変更する、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)ステートメント。 圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)します。  
   
 > [!NOTE]  
 >  既存のデータが断片化されている場合は、インデックスを再構築することで、圧縮を使用しなくてもデータのサイズを削減できる可能性があります。 インデックスについては、再構築中に FILL FACTOR が適用されます。 これによってインデックスのサイズが増える可能性があります。  
@@ -62,21 +62,21 @@ sp_estimate_data_compression_savings
   
 ## <a name="arguments"></a>引数  
  [ @schema_name=] '*schema_name*'  
- テーブルまたはインデックス付きビューを含んでいるデータベース スキーマの名前です。 *schema_name*は**sysname**です。 場合*schema_name* NULL の場合は、現在のユーザーの既定のスキーマを使用します。  
+ テーブルまたはインデックス付きビューを含んでいるデータベース スキーマの名前です。 *schema_name*は**sysname**します。 場合*schema_name*が null の場合、現在のユーザーの既定のスキーマを使用します。  
   
  [ @object_name=] '*object_name*'  
  インデックスが有効になっているテーブルまたはインデックス付きビューの名前です。 *object_name* は **sysname** です。  
   
  [ @index_id=] '*index_id*'  
- インデックスの ID です。 *index_id*は**int**、値は次のいずれかを指定できます。 インデックス、NULL の場合、または 0 の場合の ID 番号*object_id*ヒープ。 ベース テーブルまたはビューのすべてのインデックスについて情報を返すには、NULL を指定します。 NULL を指定する場合も NULL を指定する必要があります*partition_number*です。  
+ インデックスの ID です。 *index_id*は**int**、値は次のいずれかを指定できます。 インデックスや NULL の場合は 0 の ID 番号*object_id*ヒープ。 ベース テーブルまたはビューのすべてのインデックスについて情報を返すには、NULL を指定します。 NULL を指定する場合は NULL も指定する必要があります*partition_number*します。  
   
  [ @partition_number=] '*partition_number*'  
- オブジェクトのパーティション番号です。 *partition_number*は**int**値は次のいずれかを指定できます。 インデックスまたはヒープ、NULL または 1 パーティション分割されていないインデックスまたはヒープのパーティション番号。  
+ オブジェクトのパーティション番号です。 *partition_number*は**int**値は次のいずれかを指定できます。 インデックスまたはヒープ、NULL、または 1 をパーティション分割されていないインデックスまたはヒープのパーティション番号。  
   
- パーティションを指定するには、指定することも、 [$partition](../../t-sql/functions/partition-transact-sql.md)関数。 所有するオブジェクトのすべてのパーティションについて情報を返すには、NULL を指定します。  
+ パーティションを指定するには、指定の[$partition](../../t-sql/functions/partition-transact-sql.md)関数。 所有するオブジェクトのすべてのパーティションについて情報を返すには、NULL を指定します。  
   
  [ @data_compression=] '*data_compression*'  
- 評価される圧縮の種類です。 *data_compression*値は次のいずれかになります。 [なし]、行、またはページです。  
+ 評価される圧縮の種類です。 *data_compression*値は次のいずれかを指定できます。 NONE、行、またはページ。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -84,7 +84,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>結果セット  
  テーブル、インデックス、またはパーティションの現在のサイズと推定サイズの情報を提供する以下の結果セットが返されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|テーブルまたはインデックス付きビューの名前。|  
 |schema_name|**sysname**|テーブルまたはインデックス付きビューのスキーマ。|  
@@ -95,7 +95,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|現在の圧縮設定を使用するサンプルのサイズ。 この列には、断片化も含まれます。|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|要求された圧縮設定を使用して作成されたサンプルのサイズ。該当する場合は既存の FILL FACTOR を適用し、断片化は考慮していません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_estimate_data_compression_savings は、テーブルまたはパーティションで行またはページの圧縮を有効にした場合に削減できる領域を推定する場合に使用します。 たとえば、行の平均サイズを 40% 削減できれば、オブジェクトのサイズを 40% 削減できる可能性があります。 これは FILL FACTOR と行サイズに左右されるため、領域を削減できない場合もあります。 たとえば、長さ 8,000 バイトの行があり、そのサイズを 40% 削減したとしても、データ ページに収まるのは 1 行のみであることに変わりはないので、 領域は削減されません。  
   
  sp_estimate_data_compression_savings を実行してテーブルが増大するという結果が示される場合は、テーブルの多くの行でデータ型の有効桁数がほとんど使用されており、圧縮された形式に必要なわずかなオーバーヘッドが積み重なって、圧縮による削減量を上回ることを意味しています。 このようなまれなケースでは、圧縮を使用しないでください。  
@@ -108,7 +108,7 @@ sp_estimate_data_compression_savings
   
  インデックス ID またはパーティション ID が存在しない場合は、結果が返されません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  テーブルに対する SELECT 権限が必要です。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  

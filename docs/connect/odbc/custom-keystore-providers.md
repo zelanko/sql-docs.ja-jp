@@ -14,12 +14,12 @@ caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 613f8809003ba8f4501ea95371dedd44cff18a8d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047517"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785682"
 ---
 # <a name="custom-keystore-providers"></a>カスタム キーストア プロバイダー
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ ECEK 復号化プロバイダーによって定義された関数のプレース
 |`alg`|[入力]値、[アルゴリズム](../../t-sql/statements/create-column-encryption-key-transact-sql.md)特定 ECEK のメタデータ属性。 Null で終わるワイド-文字 * 文字列。 これは、指定された ECEK の暗号化に使用される暗号化アルゴリズムを識別するものです。|
 |`ecek`|[入力]暗号化を解除する ECEK へのポインター。|
 |`ecekLen`|[入力]ECEK の長さ。|
-|`cekOut`|[出力]プロバイダーは暗号化解除された ECEK のメモリを割り当てるものとし、そのアドレスを cekOut を指すポインターに書き込みます。 メモリを使用するには、このブロックを解放できる必要があります、 [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) または (Linux または Mac) 関数を解放します。 プロバイダーを設定するものとそれ以外の場合、またはエラーのために割り当てられたメモリがない場合、* cekOut を null ポインター。|
+|`cekOut`|[出力]プロバイダーは暗号化解除された ECEK のメモリを割り当てるものとし、そのアドレスを cekOut を指すポインターに書き込みます。 メモリを使用するには、このブロックを解放できる必要があります、 [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) または (Linux または Mac) 関数を解放します。 プロバイダーを設定するものとそれ以外の場合、またはエラーのために割り当てられたメモリがない場合、* cekOut を null ポインター。|
 |`cekLen`|[出力]プロバイダーは本 cekLen によって示されるアドレスには書き込まれている暗号化解除された ECEK の長さに書き込む * * cekOut します。|
 |`Return Value`|0 以外の場合、成功を示す、または失敗を示すには 0 を返します。|
 
@@ -164,7 +164,7 @@ CEK の暗号化プロバイダーによって定義された関数のプレー�
 |`alg`|[入力]値、[アルゴリズム](../../t-sql/statements/create-column-encryption-key-transact-sql.md)特定 ECEK のメタデータ属性。 Null で終わるワイド-文字 * 文字列。 これは、指定された ECEK の暗号化に使用される暗号化アルゴリズムを識別するものです。|
 |`cek`|[入力]CEK を暗号化するへのポインター。|
 |`cekLen`|[入力]CEK の長さ。|
-|`ecekOut`|[出力]プロバイダーは暗号化された CEK のメモリを割り当てるものとし、そのアドレスを ecekOut を指すポインターに書き込みます。 メモリを使用するには、このブロックを解放できる必要があります、 [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) または (Linux または Mac) 関数を解放します。 プロバイダーを設定するものとそれ以外の場合、またはエラーのために割り当てられたメモリがない場合、* ecekOut を null ポインター。|
+|`ecekOut`|[出力]プロバイダーは暗号化された CEK のメモリを割り当てるものとし、そのアドレスを ecekOut を指すポインターに書き込みます。 メモリを使用するには、このブロックを解放できる必要があります、 [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) または (Linux または Mac) 関数を解放します。 プロバイダーを設定するものとそれ以外の場合、またはエラーのために割り当てられたメモリがない場合、* ecekOut を null ポインター。|
 |`ecekLen`|[出力]プロバイダーは本 ecekLen によって示されるアドレスに書き込まれますが、暗号化された CEK の長さに書き込む * * ecekOut します。|
 |`Return Value`|0 以外の場合、成功を示す、または失敗を示すには 0 を返します。|
 
@@ -190,7 +190,7 @@ void (*Free)();
 |引数|[説明]|
 |:--|:--|
 |`ctx`|[入力]エラーを報告するコンテキスト。|
-|`msg`|[入力]レポートにエラー メッセージ。 Null で終わるワイド文字列です。 存在するパラメーター化された情報を許可するのには、この文字列がで受け入れられる形式のシーケンスを挿入の書式設定を含めることができます、 [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx)関数。 拡張機能は、以下に示すようにこのパラメーターで指定できます。|
+|`msg`|[入力]レポートにエラー メッセージ。 Null で終わるワイド文字列です。 存在するパラメーター化された情報を許可するのには、この文字列がで受け入れられる形式のシーケンスを挿入の書式設定を含めることができます、 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)関数。 拡張機能は、以下に示すようにこのパラメーターで指定できます。|
 |[...]|[入力]必要に応じて、メッセージの書式指定子に合わせて追加の可変個引数パラメーター。|
 
 エラーが発生した日時を報告するには、コンテキスト パラメーターを指定して、プロバイダーの呼び出し onError は、ドライバーとに書式設定する省略可能な追加のパラメーターと共にエラー メッセージによってプロバイダー関数に渡します。 プロバイダーは、1 つのプロバイダー関数の呼び出し内で連続して複数のエラー メッセージを投稿するこの関数複数回を呼び出すことができます。 例 :

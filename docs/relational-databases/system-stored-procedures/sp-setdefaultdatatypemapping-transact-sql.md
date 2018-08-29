@@ -1,5 +1,5 @@
 ---
-title: sp_setdefaultdatatypemapping (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_setdefaultdatatypemapping (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b8d3751448d553666f7b7301c42329f32a7713a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c980adc28cfa99348cd771652d23df424c92d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019325"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  既存のデータ型マッピングとの間のマークを付けます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース管理システム (DBMS)、既定値として。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  既存のデータ型マッピングの間のマーク[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース管理システム (DBMS)、既定値として。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,19 +68,19 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@source_dbms**=] **'***source_dbms***'**  
  データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|**MSSQLSERVER**|ソースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
+|**MSSQLSERVER**|ソースが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
 |**ORACLE**|マップ元は Oracle データベース。|  
 |NULL (既定値)||  
   
- 場合は、このパラメーターを指定する必要があります*mapping_id*は NULL です。  
+ 場合、このパラメーターを指定する必要があります*mapping_id*は NULL です。  
   
  [  **@source_version=** ] **'***source_version***'**  
  マップ元 DBMS のバージョン番号を指定します。 *source_version*は**varchar (10)** 既定値は NULL です。  
   
  [ **@source_type**=] **'***source_type***'**  
- マップ元 DBMS のデータ型です。 *source_type*は**sysname**です。 場合は、このパラメーターを指定する必要があります*mapping_id*は NULL です。  
+ マップ元 DBMS のデータ型です。 *source_type*は**sysname**します。 場合、このパラメーターを指定する必要があります*mapping_id*は NULL です。  
   
  [  **@source_length_min=** ] *source_length_min*  
  マップ元 DBMS でのデータ型の最小の長さです。 *source_length_min*は**bigint**既定値は NULL です。  
@@ -105,7 +106,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  マップ先 DBMS の名前です。 *destination_dbms*は**sysname**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**ORACLE**|マップ先は Oracle データベース。|  
@@ -134,13 +135,13 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_setdefaultdatatypemapping**間のレプリケーションのすべての種類で使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DBMS します。  
+## <a name="remarks"></a>コメント  
+ **sp_setdefaultdatatypemapping**はすべての種類の間のレプリケーションで使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DBMS します。  
   
  既定のデータ型マッピングは、指定した DBMS を含むすべてのレプリケーション トポロジに適用されます。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_setdefaultdatatypemapping**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_setdefaultdatatypemapping**します。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャーのデータ型マッピングを指定します。](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   

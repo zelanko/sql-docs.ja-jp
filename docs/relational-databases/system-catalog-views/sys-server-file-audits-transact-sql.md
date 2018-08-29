@@ -1,5 +1,5 @@
 ---
-title: sys.server_file_audits (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.server_file_audits (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,30 +21,30 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222103"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035932"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ファイル監査タイプに関する拡張情報を含む、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバー インスタンス上の監査します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|監査の ID。|  
-|name|**sysname**|監査の名前です。|  
+|NAME|**sysname**|監査の名前。|  
 |audit_guid|**uniqueidentifier**|監査の GUID。|  
 |create_date|**datetime**|ファイル監査が作成された UTC 日付。|  
 |modify_date|**datatime**|ファイル監査が最後に変更された UTC 日付。|  
 |principal_id|**int**|サーバーに登録されている監査の所有者の ID。|  
-|型|**char(2)**|監査の種類。<br /><br /> 0 = NT セキュリティ イベント ログ<br /><br /> 1 = NT アプリケーション イベント ログ<br /><br /> 2 = ファイル システムのファイル|  
+|type|**char(2)**|監査の種類。<br /><br /> 0 = NT セキュリティ イベント ログ<br /><br /> 1 = NT アプリケーション イベント ログ<br /><br /> 2 = ファイル システムのファイル|  
 |type_desc|**nvarchar(60)**|監査タイプの説明。|  
 |on_failure|**tinyint**|失敗した場合 : <br /><br /> 0 = 続行<br /><br /> 1 = サーバー インスタンスのシャットダウン<br /><br /> 2 = 失敗の操作|  
 |on_failure_desc|**nvarchar(60)**|アクション エントリの書き込みに失敗した場合 : <br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
@@ -58,10 +58,10 @@ ms.locfileid: "33222103"
 |log_file_path|**nvarchar(260)**|監査が配置される場所のパス。 ファイル監査の場合はファイルのパス、アプリケーション ログ監査の場合はアプリケーション ログのパス。|  
 |log_file_name|**nvarchar(260)**|CREATE AUDIT DDL で提供されるログ ファイルの基本名。 base_log_name ファイルにサフィックスとして連番が付加されて、ログ ファイル名が作成されます。|  
   
-## <a name="permissions"></a>権限  
- 持つプリンシパル、 **ALTER ANY SERVER AUDIT**または**VIEW ANY DEFINITION**アクセス許可があるこのカタログ ビューにアクセスします。 さらに、プリンシパル拒否されていない**VIEW ANY DEFINITION**権限です。  
+## <a name="permissions"></a>アクセス許可  
+ 持つプリンシパル、 **ALTER ANY SERVER AUDIT**または**VIEW ANY DEFINITION**このカタログ ビューにアクセス許可にアクセスします。 さらに、プリンシパル必要があります拒否されていない**VIEW ANY DEFINITION**権限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

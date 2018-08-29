@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specification_details (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.database_audit_specification_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,27 +21,27 @@ helpviewer_keywords:
 - sys.database_audit_specification_details catalog view
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95acf20e3ec873910eeecf6e9c3b66b5c9ededa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4cf364f771797a16302fcdcb09e19bf60dba77e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182438"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019749"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 すべての一覧の audit_action_id とその名前を照会[sys.dm_audit_actions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)です。  
+  すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 すべての一覧の audit_action_id とその名前のクエリ[sys.dm_audit_actions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|監査仕様の ID。|  
 |**audit_action_id**|**int**|監査アクションの ID。|  
 |**audit_action_name**|**sysname**|監査アクションまたは監査アクション グループの名前。|  
-|**クラス**|**int**|監査対象のオブジェクトのクラスを識別します。|  
+|**Class**|**int**|監査対象のオブジェクトのクラスを識別します。|  
 |**class_ desc**|**nvarchar (60)**|監査対象のオブジェクトのクラスの説明。<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|監査対象のオブジェクトのメジャー ID (テーブル監査アクションのテーブル ID など)。|  
 |**minor_id**|**Int**|クラスに応じて解釈される監査対象のオブジェクトのセカンダリ ID (テーブル監査アクションの列 ID など)。|  
@@ -49,10 +49,10 @@ ms.locfileid: "33182438"
 |**audited_result**|**nvarchar (60)**|監査アクションの結果。<br /><br /> - SUCCESS AND FAILURE (成功および失敗) – SUCCESS (成功)<br /><br /> - FAILURE (失敗)|  
 |**is_group**|**Bit**|オブジェクトがグループかどうかを示します。<br /><br /> 0 - グループではない<br /><br /> 1 - グループ|  
   
-## <a name="permissions"></a>権限  
- 持つプリンシパル、 **ALTER ANY DATABASE AUDIT**または**VIEW DEFINITION** 、アクセス許可、 **dbo**ロール、およびのメンバー、 **db_owners**固定データベース ロールでは、このカタログ ビューにアクセスします。 さらに、プリンシパル拒否されていない**VIEW DEFINITION**権限です。  
+## <a name="permissions"></a>アクセス許可  
+ 持つプリンシパル、 **ALTER ANY DATABASE AUDIT**または**VIEW DEFINITION** 、アクセス許可、 **dbo**ロール、およびメンバーの**db_owners**固定データベース ロールでは、このカタログ ビューにアクセスします。 さらに、プリンシパル必要があります拒否されていない**VIEW DEFINITION**権限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

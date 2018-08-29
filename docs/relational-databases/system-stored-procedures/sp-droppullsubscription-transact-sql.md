@@ -1,5 +1,5 @@
 ---
-title: sp_droppullsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_droppullsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87d5298d9f67c349a71faf8cff95b2ac23304d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c7f78803805c03acef7e0c7055c60eab2b1924
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021115"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +49,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>引数  
  [  **@publisher=** ] **'***パブリッシャー***'**  
- リモート サーバー名を指定します。 *パブリッシャー*は**sysname**、既定値はありません。 場合**すべて**サブスクリプションが削除されるすべてのパブリッシャーです。  
+ リモート サーバー名を指定します。 *パブリッシャー*は**sysname**、既定値はありません。 場合**すべて**、サブスクリプションがすべてのパブリッシャーで削除されます。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。 **すべて**はすべてのパブリッシャー データベースを意味します。  
   
  [  **@publication=** ] **'***パブリケーション***'**  
- パブリケーション名を指定します。 *パブリケーション*は**sysname**、既定値はありません。 場合**すべて**、すべてのパブリケーションにサブスクリプションを削除します。  
+ パブリケーション名を指定します。 *パブリケーション*は**sysname**、既定値はありません。 場合**すべて**、すべてのパブリケーションに対するサブスクリプションが削除されます。  
   
  [  **@reserved=** ]*予約済み*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -62,16 +63,16 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_droppullsubscription**はスナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_droppullsubscription**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
   
- **sp_droppullsubscription**に対応する行を削除、 [MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)テーブルと、サブスクライバーで対応するディストリビューター エージェントです。 内の行が残っていない場合[MSreplication_subscriptions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)、テーブルを削除します。  
+ **sp_droppullsubscription** 、対応する行を削除、 [MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)テーブルと、サブスクライバーで対応するディストリビューター エージェントです。 行が残っていない場合[MSreplication_subscriptions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)、テーブルを削除します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたはプル サブスクリプションを作成したユーザーが実行できる**sp_droppullsubscription**です。 **Db_owner**固定データベース ロールが実行できる**sp_droppullsubscription**プル サブスクリプションを作成したユーザーがこのロールに属している場合。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたはプル サブスクリプションを作成したユーザーが実行できる**sp_droppullsubscription**します。 **Db_owner**固定データベース ロールを実行することがのみ**sp_droppullsubscription**プル サブスクリプションを作成したユーザーがこのロールに属している場合。  
   
 ## <a name="see-also"></a>参照  
  [プル サブスクリプションを削除します。](../../relational-databases/replication/delete-a-pull-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_dropdynamicsnapshot_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropdynamicsnapshot_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_dropdynamicsnapshot_job
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f4166aa3cfed68aae16bdccd09a001ef55f3661
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 89de049ad17ac51f6b166da59269b41b1101d258
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988787"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028732"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パラメーター化された行フィルターを持つパブリケーションに関する、フィルター選択されたデータ スナップショット ジョブを削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 すべての関連するデータはから削除、ジョブが削除されると、 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)システム テーブル。  
+  パラメーター化された行フィルターを持つパブリケーションに関する、フィルター選択されたデータ スナップショット ジョブを削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 すべての関連データが削除ジョブが削除されたときに、 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)システム テーブル。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
  フィルター選択されたデータ スナップショット ジョブを削除するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
- 削除対象となる、フィルター選択されたデータ スナップショット ジョブの名前を指定します。 *dynamic_snapshot_jobname*sysname で、既定の設定ではない場合にどのようなジョブ名に関連付けられて*dynamic_snapshot_jobid*です。  
+ 削除対象となる、フィルター選択されたデータ スナップショット ジョブの名前を指定します。 *dynamic_snapshot_jobname*が sysname で、既定の設定でない場合にどのようなジョブ名に関連付けられている*dynamic_snapshot_jobid*します。  
   
  [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
  削除対象となる、フィルター選択されたデータ スナップショット ジョブの ID を指定します。 *dynamic_snapshot_jobid*は**uniqueidentifier**、既定値は NULL です。  
@@ -66,11 +66,11 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropdynamicsnapshot**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropdynamicsnapshot**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropdynamicsnapshot**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_adddynamicsnapshot_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  

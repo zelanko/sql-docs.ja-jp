@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f4f5ef8c72155b83595f04c92cdeb2c1cf16a34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40e4e8e4ab9603648abe6f92ae99a287755390a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239212"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019942"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +70,13 @@ sp_add_log_shipping_secondary_primary
  バックアップ ファイルのコピー先となるセカンダリ サーバーのディレクトリ。 *backup_destination_directory*は**nvarchar (500)** NULL にすることはできません。  
   
  [ **@copy_job_name** = ] '*copy_job_name*'  
- 使用する名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクション ログ バックアップをセカンダリ サーバーにコピーするために作成されているエージェント ジョブ。 *copy_job_name*は**sysname** NULL にすることはできません。  
+ 使用する名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクション ログ バックアップをセカンダリ サーバーにコピーに作成されているエージェント ジョブ。 *copy_job_name*は**sysname** NULL にすることはできません。  
   
  [ **@restore_job_name** =] '*restore_job_name*'  
- 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セカンダリ データベースにバックアップを復元するセカンダリ サーバー上のエージェント ジョブ。 *restore_job_name*は**sysname** NULL にすることはできません。  
+ 名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セカンダリ データベースにバックアップを復元するセカンダリ サーバー上のエージェント ジョブ。 *restore_job_name*は**sysname** NULL にすることはできません。  
   
  [ **@file_retention_period** =] '*file_retention_period*'  
- 分単位で指定されたパスのセカンダリ サーバーでバックアップ ファイルが保持される時間の長さ、@backup_destination_directoryパラメーターを削除する前にします。 *ヒストリは削除*は**int**、既定値は NULL です。 値 14420 は、指定されていない場合に使用されます。  
+ 指定されたパスのセカンダリ サーバーでバックアップ ファイルが保持される分単位の時間の長さ、@backup_destination_directoryパラメーターを削除する前にします。 *history_retention_period*は**int**、既定値は NULL です。 指定されていない場合、値 14420 が使用されます。  
   
  [ **@monitor_server** =] '*monitor_server*'  
  監視サーバーの名前を指定します。 *Monitor_server*は**sysname**、既定値はありません、NULL にすることはできません。  
@@ -85,7 +84,7 @@ sp_add_log_shipping_secondary_primary
  [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  監視サーバーへの接続に使用されるセキュリティ モード。  
   
- 1 = Windows 認証です。  
+ 1 = Windows 認証。  
   
  0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
   
@@ -112,14 +111,14 @@ sp_add_log_shipping_secondary_primary
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **sp_add_log_shipping_secondary_primary**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベースです。 このストアド プロシージャでは次の処理が行われます。  
+## <a name="remarks"></a>コメント  
+ **sp_add_log_shipping_secondary_primary**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベース。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  指定したプライマリ サーバーとプライマリ データベースのセカンダリ ID を生成する。  
   
 2.  また、次の処理が行われます。  
   
-    1.  セカンダリ ID のエントリを追加**log_shipping_secondary**指定された引数を使用します。  
+    1.  セカンダリ ID のエントリを追加します。 **log_shipping_secondary**指定された引数を使用します。  
   
     2.  無効になったセカンダリ ID のコピー ジョブを作成する。  
   
@@ -127,13 +126,13 @@ sp_add_log_shipping_secondary_primary
   
     4.  無効になったセカンダリ ID の復元ジョブを作成する。  
   
-    5.  復元ジョブの ID を設定、 **log_shipping_secondary**復元ジョブのジョブ ID を入力します。  
+    5.  復元ジョブ ID を設定、 **log_shipping_secondary**復元ジョブのジョブ ID を入力します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
   
 ## <a name="examples"></a>使用例  
- この例を使用して、 **sp_add_log_shipping_secondary_primary**ストアド プロシージャをプライマリ データベースの情報を設定する[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]セカンダリ サーバーでします。  
+ この例を使用して、 **sp_add_log_shipping_secondary_primary**ストアド プロシージャをプライマリ データベースの情報を設定する[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]セカンダリ サーバーです。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -153,7 +152,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ログ配布 & #40; についてSQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

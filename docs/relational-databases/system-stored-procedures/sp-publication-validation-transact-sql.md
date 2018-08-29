@@ -1,5 +1,5 @@
 ---
-title: sp_publication_validation (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_publication_validation (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f893c6a42d16c9d36d2a28a2c77c80bc62fa56bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 878d8bc69813664d29a09e58daa7e6f7e4b8db76
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000569"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030536"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |値|説明|  
 |-----------|-----------------|  
-|**0**|実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 互換のチェックサム。<br /><br /> 注: アーティクルが行方向にフィルター選択される場合は、チェックサム操作ではなく rowcount 操作が実行します。|  
+|**0**|実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 互換のチェックサム。<br /><br /> 注: アーティクルが水平方向にフィルター選択されたときに、チェックサム操作ではなく rowcount 操作が実行します。|  
 |**1** (既定値)|行数のチェックのみを実行します。|  
 |**2**|行数とバイナリのチェックサムを実行します。<br /><br /> : 注[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン 7.0 サブスクライバーの場合、行数検証のみを実行します。|  
   
@@ -67,30 +67,30 @@ sp_publication_validation [ @publication = ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**0**|COUNT(*) を使用してフル カウントします。|  
-|**1**|高速カウントから**sysindexes.rows**です。 行のカウント[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)実際のテーブル内の行のカウントより高速です。 ただし、ため[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)遅れてが更新されると、行カウントことができます。|  
-|**2** (既定値)|最初に高速カウントを試み、条件高速カウントを行います。 高速カウントに違いが見られる場合、フル カウントに戻されます。 場合*expected_rowcount*ストアド プロシージャの中を NULL 値を取得する、フル カウントが常に使用します。|  
+|**1**|高速カウントから**sysindexes.rows**します。 行のカウント[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)実際のテーブル内の行のカウントより高速です。 ただし、ため[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)が遅れて更新されると、行カウントが不正確になります。|  
+|**2** (既定値)|最初に高速カウントを試み、条件高速カウントを行います。 高速カウントに違いが見られる場合、フル カウントに戻されます。 場合*expected_rowcount*ストアド プロシージャの中を NULL 値を取得する、フル カウント(\*) が常に使用します。|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
- 検証の完了後すぐにディストリビューション エージェントをシャットダウンするかどうかを指定します。 *shutdown_agent*は**ビット**、既定値は**0**します。 場合**0**、レプリケーション エージェントがシャット ダウンできません。 場合**1**、最後のアーティクルが検証された後にレプリケーション エージェントがシャット ダウンします。  
+ 検証の完了後すぐにディストリビューション エージェントをシャットダウンするかどうかを指定します。 *shutdown_agent*は**ビット**、既定値は**0**します。 場合**0**、レプリケーション エージェントがシャット ダウンされません。 場合**1**、前回の記事の検証後にレプリケーション エージェントがシャット ダウンします。  
   
  [ **@publisher** =] **'***パブリッシャー***'**  
- 指定以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*検証を要求するときに使用しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  *パブリッシャー*で検証を要求するときに使用されません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_publication_validation**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_publication_validation**はトランザクション レプリケーションで使用します。  
   
- **sp_publication_validation**パブリケーションに関連付けられているアーティクルがアクティブ化された後、いつでも呼び出すことができます。 このプロシージャは、指定日時に手動で実行するか、またはデータを検証する定期的スケジュールに組み込んだジョブの一部として実行することができます。  
+ **sp_publication_validation**パブリケーションに関連付けられているアーティクルがアクティブになった後、いつでも呼び出すことができます。 このプロシージャは、指定日時に手動で実行するか、またはデータを検証する定期的スケジュールに組み込んだジョブの一部として実行することができます。  
   
- 場合は、アプリケーションがある即時更新サブスクライバー、 **sp_publication_validation**疑似エラーを検出することがあります。 **sp_publication_validation**行数またはチェックサムがパブリッシャーとサブスクライバー側でしをまずを計算します。 行数またはチェックサムがパブリッシャーで完了していて、サブスクライバーでは完了していない場合、即時更新トリガーはサブスクライバーからパブリッシャーに更新を通知できるため、値が変更される可能性があります。 パブリケーションの検証中にサブスクライバーとパブリッシャーの値が変更されないようにするには、検証中のパブリッシャーでの Microsoft 分散トランザクション コーディネーター (MS DTC) サービスを停止します。  
+ 場合は、アプリケーションがある即時更新サブスクライバー、 **sp_publication_validation**疑似エラーを検出することがあります。 **sp_publication_validation**まず行数またはチェックサムがパブリッシャーとサブスクライバー側でしを計算します。 行数またはチェックサムがパブリッシャーで完了していて、サブスクライバーでは完了していない場合、即時更新トリガーはサブスクライバーからパブリッシャーに更新を通知できるため、値が変更される可能性があります。 パブリケーションの検証中にサブスクライバーとパブリッシャーの値が変更されないようにするには、検証中のパブリッシャーでの Microsoft 分散トランザクション コーディネーター (MS DTC) サービスを停止します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_publication_validation**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_publication_validation**します。  
   
 ## <a name="see-also"></a>参照  
  [サブスクライバーでのデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_helplogins (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helplogins (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40a25164c12e9a1c886a7cba6b8f9b0277daf0ed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d497fdd54fd0a8fce44282a2caa819fef60a76fb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253928"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028791"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,40 +53,40 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>結果セット  
  最初のレポートには、次の表に示すとおり、指定した各ログインに関する情報が含まれます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|ログイン名。|  
 |**SID**|**varbinary(85)**|ログイン セキュリティ識別子 (SID)。|  
 |**DefDBName**|**sysname**|既定のデータベースを**LoginName**のインスタンスに接続するときは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|**DefLangName**|**sysname**|既定の言語で使用される**LoginName**です。|  
+|**DefLangName**|**sysname**|既定の言語で使用される**LoginName**します。|  
 |**Auser**|**char (5)**|Yes = **LoginName**データベースに関連付けられているユーザー名を持っています。<br /><br /> いいえ = **LoginName**関連付けられているユーザー名がありません。|  
-|**ARemote**|**char (7)**|Yes = **LoginName**が関連付けられているリモート ログインします。<br /><br /> いいえ = **LoginName**関連付けられたログインはありません。|  
+|**ARemote**|**char (7)**|Yes = **LoginName**が関連付けられたリモート ログインします。<br /><br /> いいえ = **LoginName**関連付けられたログインはありません。|  
   
  2 番目のレポートには、次の表に示すとおり、各ログインにマップされているユーザーに関する情報、およびログインのロール メンバーシップが含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|ログイン名。|  
-|**DBName**|**sysname**|既定のデータベースを**LoginName**のインスタンスに接続するときは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|**UserName**|**sysname**|ユーザー アカウントは、 **LoginName**でマップ**DBName**、およびロールを**LoginName**でのメンバーである**DBName**です。|  
-|**UserOrAlias**|**char (8)**|MemberOf = **UserName**ロールします。<br /><br /> ユーザー = **UserName**ユーザー アカウントです。|  
+|**データベース名**|**sysname**|既定のデータベースを**LoginName**のインスタンスに接続するときは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
+|**UserName**|**sysname**|ユーザー アカウントは、 **LoginName**でマップが**DBName**、およびロールを**LoginName**でのメンバーである**DBName**します。|  
+|**UserOrAlias**|**char (8)**|MemberOf = **UserName**は、ロールです。<br /><br /> ユーザー = **UserName**はユーザー アカウントです。|  
   
-## <a name="remarks"></a>解説  
- ログインを削除する前に使用して**sp_helplogins**ログインにマップされているユーザー アカウントを識別します。  
+## <a name="remarks"></a>コメント  
+ ログインを削除する前に、使用して**sp_helplogins**ログインにマップされているユーザー アカウントを特定します。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **securityadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **securityadmin**固定サーバー ロール。  
   
- 特定のログインにマップされたすべてのユーザー アカウントを識別する**sp_helplogins**サーバー内のすべてのデータベースを確認する必要があります。 これを行うには、サーバーの各データベースに対して、少なくとも次のいずれか 1 つの条件を満たしている必要があります。  
+ 指定されたログインにマップされているすべてのユーザー アカウントを識別するために**sp_helplogins**サーバー内のすべてのデータベースを確認する必要があります。 これを行うには、サーバーの各データベースに対して、少なくとも次のいずれか 1 つの条件を満たしている必要があります。  
   
--   実行しているユーザー **sp_helplogins**データベースにアクセスする権限を持っています。  
+-   実行しているユーザー **sp_helplogins**データベースへのアクセス権があります。  
   
 -   **ゲスト**ユーザー アカウントが、データベースで有効にします。  
   
- 場合**sp_helplogins** 、データベースにアクセスできない**sp_helplogins**してエラー メッセージ 15622 が表示と同じ情報が返されます。  
+ 場合**sp_helplogins** 、データベースにアクセスできない**sp_helplogins**およびエラー メッセージ 15622 が表示できる限り多くの情報を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、ログイン情報をレポート`John`です。  
+ 次の例は、ログイン情報を報告`John`します。  
   
 ```  
 EXEC sp_helplogins 'John';  

@@ -1,5 +1,5 @@
 ---
-title: sp_get_distributor (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_get_distributor (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f4cd34760ff4bd447bc5a2621508629264adee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 088b2d2c6e334d48fae3e9257f76c5fd8129c15d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994099"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021291"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**インストールされています。**|**int**|**0** = No です。**1** = [はい]|  
+|**インストールされています。**|**int**|**0** = はありません。**1** = [はい]|  
 |**ディストリビューション サーバー**|**sysname**|ディストリビューター サーバーの名前。|  
-|**ディストリビューション db がインストールされています。**|**int**|**0** = No です。**1** = [はい]|  
-|**ディストリビューション パブリッシャーは、します。**|**int**|**0** = No です。**1** = [はい]|  
-|**リモート ディストリビューション パブリッシャーします。**|**int**|**0** = No です。**1** = [はい]|  
+|**ディストリビューション db がインストールされています。**|**int**|**0** = はありません。**1** = [はい]|  
+|**ディストリビューション パブリッシャーは、します。**|**int**|**0** = はありません。**1** = [はい]|  
+|**リモート ディストリビューション パブリッシャーがあります。**|**int**|**0** = はありません。**1** = [はい]|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_get_distributor**で主に使用される、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スナップショット、トランザクション、およびマージ レプリケーションでします。  
   
-## <a name="permissions"></a>権限  
- すべてのユーザーが実行できる**sp_get_distributor**です。 NULL 以外の結果セットが返されます場合、このストアド プロシージャがのメンバーによって実行される、 **db_owner**または**replmonitor**のメンバー、ディストリビューション データベースの固定データベース ロール、 **db_owner**に少なくとも 1 つのパブリッシュされたデータベースの固定データベース ロール。 NULL 以外の結果セットも返されるには、少なくともこのストアド プロシージャがのパブリケーション アクセス リスト (PAL) のユーザーによって実行されたときに 1 つのパブリッシュされたデータベース、またはディストリビューション データベースの SQL Server 以外のパブリッシャーの PAL でも実行できます**sp_get_distributor**です。  
+## <a name="permissions"></a>アクセス許可  
+ すべてのユーザーが実行できる**sp_get_distributor**します。 NULL 以外の結果セットが返されます場合、このストアド プロシージャがのメンバーによって実行される、 **db_owner**または**replmonitor**固定データベース ロールのメンバー、ディストリビューション データベース、 **db_owner**に少なくとも 1 つのパブリッシュされたデータベースの固定データベース ロール。 NULL 以外の結果セットもときに返されるこのストアド プロシージャの実行のパブリケーション アクセス リスト (PAL) 内のユーザーが少なくとも 1 つのパブリッシュされたデータベース、またはディストリビューション データベースの SQL Server 以外のパブリッシャーの PAL でを実行できますも**sp_get_distributor**します。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   

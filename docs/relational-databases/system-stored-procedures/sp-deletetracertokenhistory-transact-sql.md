@@ -1,5 +1,5 @@
 ---
-title: sp_deletetracertokenhistory (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_deletetracertokenhistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fdfe59e931fe224106eddb9358a5cba06e57c61a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2734c4f1922ccd7258383dd5e79665cf26c8b4fc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989657"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023516"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
  トレーサー トークンが挿入されたパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@tracer_id=** ] *tracer_id*  
- 削除するトレーサー トークンの ID です。 *tracer_id*は**int**既定値は NULL です。 場合**null**、パブリケーションに属するすべてのトレーサー トークンが削除されます。  
+ 削除するトレーサー トークンの ID です。 *tracer_id*は**int**既定値は NULL です。 場合**null**パブリケーションに属するすべてのトレーサー トークンが削除されます。  
   
  [  **@cutoff_date=** ] *cutoff_date*  
  終了日を指定します。それ以前にパブリケーションに挿入されたすべてのトレーサー トークンが削除されます。 *cutoff_date*は datetime で、既定値は NULL です。  
@@ -70,17 +70,17 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_deletetracertokenhistory**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_deletetracertokenhistory**はトランザクション レプリケーションで使用します。  
   
- 実行時に**sp_deletetracertokenhistory**のいずれかを指定することができますのみ*tracer_id*または*cutoff_date*です。 パラメーターを 2 つ指定するとエラーが発生します。  
+ 実行時に**sp_deletetracertokenhistory**のいずれかを指定することができますのみ*tracer_id*または*cutoff_date*します。 パラメーターを 2 つ指定するとエラーが発生します。  
   
- 実行しないようにする場合**sp_deletetracertokenhistory**を削除するトレーサー トークン メタデータを定期的にスケジュールされた履歴のクリーンアップが発生すると、情報は削除されます。  
+ 実行されなかった場合**sp_deletetracertokenhistory**トレーサー トークン メタデータを削除するには、定期的にスケジュールされた履歴のクリーンアップが発生した場合、情報は削除されます。  
   
- トレーサー トークン Id を実行することで決定できます[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)またはクエリを実行して、 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)システム テーブル。  
+ 実行することによって、トレーサー トークン Id を決定できます[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)またはクエリを実行して、 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)システム テーブル。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**パブリケーション データベースの固定データベース ロールまたは**db_owner**固定データベースまたは**replmonitor**ディストリビューション データベース内のロールが実行できる**sp_deletetracertokenhistory**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner** 、パブリケーション データベースの固定データベース ロールまたは**db_owner**固定データベースまたは**replmonitor**ディストリビューション データベース内のロールが実行できる**sp_deletetracertokenhistory**します。  
   
 ## <a name="see-also"></a>参照  
  [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_removedistpublisherdbreplication (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_removedistpublisherdbreplication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_removedistpublisherdbreplication
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02194543d95dc03491d4b882555e48698c100ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a99244a59c0022ed92797fc8c5e10bd3bf3dae63
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022570"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +55,10 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_removedistpublisherdbreplication**トランザクションおよびスナップショット レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_removedistpublisherdbreplication**トランザクションとスナップショット レプリケーションで使用されます。  
   
- **sp_removedistpublisherdbreplication**もディストリビューション データベースを削除しない限り、パブリッシュされたデータベースを再作成する必要があるときに使用します。 次のメタデータが削除されます。  
+ **sp_removedistpublisherdbreplication**もディストリビューション データベースを削除しない限り、パブリッシュされたデータベースを再作成する必要があるときに使用されます。 次のメタデータが削除されます。  
   
 -   すべてのパブリケーション メタデータ  
   
@@ -67,8 +68,8 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 -   そのパブリケーションに属するすべてのレプリケーション エージェント ジョブのメタデータ  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp _removedistpublisherdbreplication**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp _removedistpublisherdbreplication**します。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

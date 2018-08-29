@@ -1,5 +1,5 @@
 ---
-title: sp_procoption (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_procoption (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d78b81013f7101cce34dcdc4713a800ce36e8930
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3c4c9907c52ad99e1a397b4ad08f9897b6a0c4d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254346"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018212"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ストアド プロシージャの自動実行を設定または解除します。 ストアド プロシージャは、自動実行の実行に毎回のインスタンスの設定を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始します。  
+  ストアド プロシージャの自動実行を設定または解除します。 ストアド プロシージャに設定されている自動実行の実行時間のすべてのインスタンスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,18 +50,18 @@ sp_procoption [ @ProcName = ] 'procedure'
  オプションを設定する対象のプロシージャの名前です。 *プロシージャ*は**nvarchar (776)**、既定値はありません。  
   
  [  **@OptionName =** ] **'***オプション***'**  
- 設定するオプションの名前です。 唯一の値*オプション*は**スタートアップ**です。  
+ 設定するオプションの名前です。 値だけ*オプション*は**スタートアップ**します。  
   
  [  **@OptionValue =** ] **'***値***'**  
- オプションを設定するかどうか (**true**または**で**)] または [オフ (**false**または**オフ**)。 *値*は**varchar (12)**、既定値はありません。  
+ オプションを設定するかどうか (**true**または**で**) かオフ (**false**または**オフ**)。 *値*は**varchar (12)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0 を、失敗した場合はエラー番号をそれぞれ返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  スタートアップ プロシージャがである必要があります、**マスター**データベースし、入力または出力パラメーターを含めることはできません。 ストアド プロシージャの実行は、すべてのデータベースが復旧され、スタートアップ時に "復元が完了しました" というメッセージがログに記録されると開始されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

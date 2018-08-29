@@ -1,5 +1,5 @@
 ---
-title: sp_mergedummyupdate (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_mergedummyupdate (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d31ad74486c8be2b964f4dd3f02c5b5a04ac0b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c06f7c39d495808bd700947082b7416f7dd2853
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994839"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021571"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_mergedummyupdate**はマージ レプリケーションで使用します。  
   
  **sp_mergedummyupdate**レプリケーション競合表示モジュール (Wzcnflct.exe) する代わりに、独自に記述する場合に便利です。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **db_owner**固定データベース ロールが実行できる**sp_mergedummyupdate**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **db_owner**固定データベース ロールが実行できる**sp_mergedummyupdate**します。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

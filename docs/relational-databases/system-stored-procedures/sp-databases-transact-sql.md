@@ -1,5 +1,5 @@
 ---
-title: sp_databases (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_databases (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c22415c34f0e25dc1117b6a5f86839c66f0ba53b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3fefa914e8b4eb591dcd222df1de6753770d85c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238003"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029215"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,20 +50,20 @@ sp_databases
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|データベースの名前です。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に格納されている、この列は、データベース名を表す、 **sys.databases**カタログ ビューです。|  
+|**DATABASE_NAME**|**sysname**|データベースの名前です。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に格納されている、この列はデータベース名を表す、 **sys.databases**カタログ ビューです。|  
 |**DATABASE_SIZE**|**int**|データベースのサイズをキロバイト数で表します。|  
 |**「解説」**|**varchar(254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]、このフィールドは常に NULL を返します。|  
   
 ## <a name="remarks"></a>コメント  
  返されるデータベース名は、現在のデータベース状況を変更するために USE ステートメントでパラメーターとして使えます。  
   
- **sp_databases**を持たないそれと同等にオープン データベース コネクティビティ)。  
+ **sp_databases**を持たないと同等で開いているデータベースの接続 (ODBC)。  
   
 ## <a name="permissions"></a>アクセス許可  
  CREATE DATABASE 権限、ALTER ANY DATABASE 権限、または VIEW ANY DEFINITION 権限と、データベースへのアクセス許可が必要です。 また、VIEW ANY DEFINITION 権限は拒否されないことが条件となります。  
   
 ## <a name="examples"></a>使用例  
- 次の例を実行する`sp_databases`です。  
+ 次の例を実行する`sp_databases`します。  
   
 ```sql  
 USE master;  
@@ -73,6 +73,6 @@ EXEC sp_databases;
   
 ## <a name="see-also"></a>参照  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [&#40;TRANSACT-SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
+ [HAS_DBACCESS &#40;TRANSACT-SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

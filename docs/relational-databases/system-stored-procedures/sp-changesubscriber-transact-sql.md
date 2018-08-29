@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriber (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_changesubscriber (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2cb0047dd66b0c3fd96d399e404b801401d202a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 799a2a8b398d3ff6eff13a83a3cc60af90421cc4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019833"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクライバーのオプションを変更します。 このパブリッシャーのサブスクライバーに対するディストリビューション タスクはすべて更新されます。 このストアド プロシージャに書き込みます、 **MSsubscriber_info**ディストリビューション データベース内のテーブルです。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  サブスクライバーのオプションを変更します。 このパブリッシャーのサブスクライバーに対するディストリビューション タスクはすべて更新されます。 このストアド プロシージャが書き込む、 **MSsubscriber_info**ディストリビューション データベース内のテーブル。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,13 +68,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  オプションを変更するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値はありません。  
   
  [  **@type=**]*型*  
- サブスクライバーの種類です。 *型*は**tinyint**、既定値は NULL です。 **0**を示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。 **1**以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはその他の ODBC データ ソース サーバー サブスクライバーです。  
+ サブスクライバーの種類です。 *型*は**tinyint**、既定値は NULL です。 **0**を示します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。 **1**以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはその他の ODBC データ ソース サーバー サブスクライバーです。  
   
  [  **@login=**] **'***ログイン***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
  [  **@password=**] **'***パスワード***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のパスワード。 *パスワード*は**sysname**、既定値は **%** です。 **%** プロパティのパスワードの変更がないことを示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のパスワード。 *パスワード*は**sysname**、既定値は **%** します。 **%** パスワード プロパティに変更がないことを示します。  
   
  [  **@commit_batch_size=**] *commit_batch_size*  
  旧バージョンとの互換性のためにのみサポートされています。  
@@ -99,7 +100,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**128**|定期的|  
   
  [  **@frequency_interval=**] *frequency_interval*  
- 間隔は、 *frequency_type*です。 *frequency_interval*は**int**、既定値は NULL です。  
+ 間隔は、 *frequency_type*します。 *frequency_interval*は**int**、既定値は NULL です。  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  ディストリビューション タスクを実施する日を指定します。 このパラメーターが使用されるときに*frequency_type*に設定されている**32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
@@ -113,7 +114,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**16**|Last|  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 定義済みの中にディストリビューション タスクを繰り返す頻度*frequency_type*です。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
+ 定義済みの中にディストリビューション タスクを繰り返す頻度*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
   
  [  **@frequency_subday=**] *frequency_subday*  
  定義した期間にスケジュールを組み直す頻度を指定します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
@@ -126,7 +127,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Hour|  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔は、 *frequence_subday*です。 *frequency_subday_interval*は**int**、既定値は NULL です。  
+ 間隔は、 *frequence_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
  ディストリビューション タスクを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は NULL です。  
@@ -152,25 +153,25 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|[Windows 認証]|  
   
  [ **@publisher**=] **'***パブリッシャー***'**  
- 指定以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*でアーティクルのプロパティを変更するときに使用しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  *パブリッシャー*でアーティクルのプロパティを変更する場合、使用されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changesubscriber**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changesubscriber**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changesubscriber**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

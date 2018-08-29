@@ -1,5 +1,5 @@
 ---
-title: sys.column_type_usages (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.column_type_usages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,29 +20,28 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_type_usages catalog view
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ef7e360d755d02b37a8146c4ba4fa881b009c469
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e9ed8dcdb1296d958b213706c0ea011bb4c3e24
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177768"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023641"
 ---
 # <a name="syscolumntypeusages-transact-sql"></a>sys.column_type_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ユーザー定義型の列ごとに 1 行のデータを保持します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|この列が属するオブジェクトの ID です。|  
 |**column_id**|**int**|列の ID です。 オブジェクト内で一意です。|  
-|**user_type_id**|**int**|ユーザー定義データ型の ID。<br /><br /> 型の名前を返すに参加させる、 [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログをこの列に表示します。|  
+|**user_type_id**|**int**|ユーザー定義データ型の ID。<br /><br /> 型の名前を返すには、この列で [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログ ビューに結合します。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

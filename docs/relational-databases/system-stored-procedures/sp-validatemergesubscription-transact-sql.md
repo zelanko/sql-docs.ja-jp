@@ -1,5 +1,5 @@
 ---
-title: sp_validatemergesubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_validatemergesubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_validatemergesubscription
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2533df98905501a9253769200a56fb66a27a56d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d124c472a02f0a30cf73bb9597ebf934304e4a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999429"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023281"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_validatemergesubscription [@publication=] 'publication'
  [  **@level=** ]*レベル*  
  実行する検証の種類を指定します。 *レベル*は**tinyint**、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
-|レベル値|Description|  
+|レベル値|説明|  
 |-----------------|-----------------|  
 |**1**|行数のみの検証。|  
 |**2**|行数とチェックサムの検証。|  
@@ -69,11 +69,11 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_validatemergesubscription**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_validatemergesubscription**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_validatemergesubscription**します。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

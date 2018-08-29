@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d284bd4cd7dc81ebf1e5915854613b41680033b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3a9b661c2f4529ed3e6731dc5c38d05953ec43f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031005"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776280"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>ジョブ ステップのプロパティ - [新しいジョブ ステップ]\([全般] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "38031005"
 > 
   [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このページでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
+このページでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
-このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  
+このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  
   
 ## <a name="options"></a>および  
 **[ステップ名]**  
@@ -71,7 +71,7 @@ ms.locfileid: "38031005"
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX スクリプト ジョブ ステップのオプション  
   
 > [!IMPORTANT]  
-> ActiveX スクリプティング サブシステムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の将来のバージョンで [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
+> ActiveX スクリプティング サブシステムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
   
 **[VBScript]**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition をジョブ ステップの言語として指定します。  
@@ -214,7 +214,7 @@ JScript をジョブ ステップの言語として指定します。
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Integration Services パッケージ実行ジョブ ステップのオプション  
   
 ### <a name="general-tab"></a>全般タブ  
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) パッケージの場所と、使用する認証方法を指定します。 このタブを選択するとき、次のオプションを利用できます。  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) パッケージの場所と、使用する認証方法を指定します。 このタブを選択するとき、次のオプションを利用できます。  
   
 **[パッケージ ソース]**  
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージが格納されている場所を指定します。 次のいずれかを選択します。  
@@ -229,19 +229,19 @@ JScript をジョブ ステップの言語として指定します。
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージが格納されているサーバーの名前を入力します。 このオプションは、 **[パッケージ ソース]** に **[SQL Server]** または **[SSIS パッケージ ストア]** が指定されている場合のみ使用できます。  
   
 **[Windows 認証を使用する]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] へのログインに [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認証を使用します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインに [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認証を使用します。  
   
 **[SQL Server 認証を使用する]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] へのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を使用します。 この認証方法を選択した場合は、適切な **[ユーザー名]** および **[パスワード]** を入力してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用します。 この認証方法を選択した場合は、適切な **[ユーザー名]** および **[パスワード]** を入力してください。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証は旧バージョンとの互換性を維持するために提供されます。 セキュリティを向上させるためには、可能な限り、Windows 認証を使用してください。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は旧バージョンとの互換性を維持するために提供されます。 セキュリティを向上させるためには、可能な限り、Windows 認証を使用してください。  
   
 **[パッケージ]**  
 パッケージの場所を入力します。  
   
 > [!IMPORTANT]  
-> パスワードで保護された [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージについては、 **[構成]** タブをクリックし、 **[パッケージ パスワード]** ダイアログ ボックスにパスワードを入力します。 入力しないと、パスワードで保護されたパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブは失敗します。  
+> パスワードで保護された [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージについては、 **[構成]** タブをクリックし、 **[パッケージ パスワード]** ダイアログ ボックスにパスワードを入力します。 入力しないと、パスワードで保護されたパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは失敗します。  
   
 ### <a name="configurations-tab"></a>[構成] タブ  
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージの構成オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
@@ -381,6 +381,6 @@ JScript をジョブ ステップの言語として指定します。
   
 ## <a name="see-also"></a>参照  
 [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)  
-[パッケージに対する SQL Server エージェント ジョブ](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[レプリケーション エージェントの管理](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

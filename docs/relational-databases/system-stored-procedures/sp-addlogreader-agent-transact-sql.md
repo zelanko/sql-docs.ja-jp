@@ -1,5 +1,5 @@
 ---
-title: sp_addlogreader_agent (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addlogreader_agent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addlogreader_agent
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96954747e39c2b5740af743d2d55c8bf02d2f66b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de60712c8ad865881e04c01c0a43bb5a46baee0b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991129"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017440"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,10 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
   
 ## <a name="arguments"></a>引数  
  [ **@job_login**=] **'***job_login***'**  
- 用のログイン、[!INCLUDE[msCoName](../../includes/msconame-md.md)]エージェントを実行する Windows アカウントです。 *job_login*は**nvarchar (257)** 既定値は NULL です。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。  
+ 用のログイン、[!INCLUDE[msCoName](../../includes/msconame-md.md)]エージェントを実行する Windows アカウントします。 *job_login*は**nvarchar (257)** 既定値は NULL です。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。  
   
 > [!NOTE]  
->  非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、こので指定された同じログインをする必要があります[sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)です。  
+>  非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、こので指定されたのと同じログインをする必要があります[sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)します。  
   
  [ **@job_password**=] **'***job_password***'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**既定値は NULL です。  
@@ -70,10 +69,10 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
  既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってエージェントを起動するときにだけ指定します。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**smallint**、既定値は**1**です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+ パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**smallint**、既定値は**1**します。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値は NULL です。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login* null と*publisher_security_mode*は**1**で指定した Windows アカウント*job_login*使用されますパブリッシャーへの接続時に  
+ パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値は NULL です。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login* null と*publisher_security_mode*は**1**で指定した Windows アカウント*job_login*使用されますときに、パブリッシャーに接続します。  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
  パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**sysname**、既定値は NULL です。  
@@ -90,13 +89,13 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_addlogreader_agent**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_addlogreader_agent**はトランザクション レプリケーションで使用します。  
   
- 実行する必要があります**sp_addlogreader_agent**のこのバージョンへのレプリケーションが有効になっているデータベースをアップグレードした場合は、ログ リーダー エージェントを追加する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを使用する、パブリケーションを作成する前にします。  
+ 実行する必要があります**sp_addlogreader_agent**のこのバージョンへのレプリケーションの有効化されたデータベースをアップグレードした場合は、ログ リーダー エージェントを追加する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションを作成、データベースを使用する前にします。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addlogreader_agent**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addlogreader_agent**します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql)]  

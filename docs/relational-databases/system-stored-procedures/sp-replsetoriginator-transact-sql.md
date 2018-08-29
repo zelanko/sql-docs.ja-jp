@@ -1,5 +1,5 @@
 ---
-title: sp_replsetoriginator (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_replsetoriginator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 680fdf8c36c87549de43825ffd2a7aa5c8fba0f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bfba001bb6890c4a15975c78aee7818f02835b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996139"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026821"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_replsetoriginator**がレプリケーションによって適用されるトランザクションのソースを記録するディストリビューション エージェントにより実行されます。 この情報は、ループバック プロパティ セットを持つ双方向のトランザクション サブスクリプションに対するループバックの検出を開始するために使用されます。  
+## <a name="remarks"></a>コメント  
+ **sp_replsetoriginator**レプリケーションで適用するトランザクションのソースを記録するディストリビューション エージェントによって実行されます。 この情報は、ループバック プロパティ セットを持つ双方向のトランザクション サブスクリプションに対するループバックの検出を開始するために使用されます。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールのメンバー、パブリッシャー側で、 **db_owner** を実行できるは、パブリケーションデータベースまたはパブリケーションアクセスリスト(PAL)のユーザーの固定データベースロール**sp_replsetoriginator**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールのメンバー、パブリッシャーで、 **db_owner** を実行できるは、パブリケーションデータベースまたはパブリケーションアクセスリスト(PAL)内のユーザーの固定データベースロール**sp_replsetoriginator**します。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_reinitpullsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_reinitpullsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ed19307a7a79856b808ade07338e2e8d595fdf4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997079"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018255"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,27 +54,27 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
  [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、すべての既定値は、再初期化のすべてのサブスクリプションを設定します。  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、すべての既定値は、すべてのサブスクリプションに再初期化をマークします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_reinitpullsubscription**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_reinitpullsubscription**はトランザクション レプリケーションで使用します。  
   
  **sp_reinitpullsubscription**ピア ツー ピア トランザクション レプリケーションはサポートされていません。  
   
- **sp_reinitpullsubscription**ディストリビューション エージェントの次回実行時に、サブスクリプションを再初期化するサブスクライバーから呼び出すことができます。  
+ **sp_reinitpullsubscription**ディストリビューション エージェントの次回の実行中に、サブスクリプションを再初期化するサブスクライバーから呼び出すことができます。  
   
  値で作成されたパブリケーションに対するサブスクリプション**false**の**@immediate_sync**サブスクライバーから再初期化することはできません。  
   
- いずれかを実行してプル サブスクリプションを再初期化することができます**sp_reinitpullsubscription**サブスクライバーまたは**sp_reinitsubscription**パブリッシャー側でします。  
+ いずれかを実行してプル サブスクリプションを再初期化できます**sp_reinitpullsubscription**サブスクライバーまたは**sp_reinitsubscription**パブリッシャー側でします。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_reinitpullsubscription**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_reinitpullsubscription**します。  
   
 ## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-a-subscription.md)   

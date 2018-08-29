@@ -1,5 +1,5 @@
 ---
-title: sp_addpullsubscription_agent (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addpullsubscription_agent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82689b234a6294ef4c13c801ba88a7d700b0db44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee712bc90f8f820fabe2b8dedc6a0967fc1f0932
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993169"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026783"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -112,43 +111,43 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int、** 既定値は NULL です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 ディストリビューション エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 場合は NULL 以外の値または**1**が指定されているこのパラメーターは、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 ディストリビューション エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 NULL 以外の値または**1**指定は、このパラメーターは、警告メッセージが返されます。  
   
  [  **@subscriber_login =**] **'***subscriber_login***'**  
- 同期するときに、サブスクライバーに接続するときに使用するサブスクライバー ログインです。*subscriber_login*は**sysname**、既定値は NULL です。  
+ 同期するサブスクライバーに接続するときに使用するサブスクライバー ログインです。*subscriber_login*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターの値を指定すると、警告メッセージが返されますが、値は無視されます。  
   
- [  **@subscriber_password=**] **'***subscriber_password***'**  
- サブスクライバーのパスワードです。 *subscriber_password*場合は必須*subscriber_security_mode*に設定されている**0**します。 *subscriber_password*は**sysname**、既定値は NULL です。 サブスクライバー パスワードを使用する場合、サブスクライバー パスワードは自動的に暗号化されます。  
+ [  **@subscriber_password=**] **'***@subscriber_password***'**  
+ サブスクライバーのパスワードです。 *@subscriber_password*場合は必須です*subscriber_security_mode*に設定されている**0**します。 *@subscriber_password*は**sysname**、既定値は NULL です。 サブスクライバー パスワードを使用する場合、サブスクライバー パスワードは自動的に暗号化されます。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターの値を指定すると、警告メッセージが返されますが、値は無視されます。  
   
  [  **@distributor=**] **'***ディストリビューター***'**  
- ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値で指定された値は*パブリッシャー*です。  
+ ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値で指定された値は*パブリッシャー*します。  
   
  [  **@distribution_db=**] **'***distribution_db***'**  
  ディストリビューション データベースの名前を指定します。 *distribution_db*は**sysname**既定値は NULL です。  
   
  [  **@distributor_security_mode=**] *distributor_security_mode*  
- ディストリビューターへ接続して同期するときに使用するセキュリティ モードを指定します。 *distributor_security_mode*は**int**、既定値は**1**です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
+ ディストリビューターへ接続して同期するときに使用するセキュリティ モードを指定します。 *distributor_security_mode*は**int**、既定値は**1**します。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [  **@distributor_login=**] **'***distributor_login***'**  
- ディストリビューターへ接続して同期するときに使用するディストリビューター ログインを指定します。 *distributor_login*場合は必須*distributor_security_mode*に設定されている**0**します。 *distributor_login*は**sysname**、既定値は NULL です。  
+ ディストリビューターへ接続して同期するときに使用するディストリビューター ログインを指定します。 *distributor_login*場合は必須です*distributor_security_mode*に設定されている**0**します。 *distributor_login*は**sysname**、既定値は NULL です。  
   
  [  **@distributor_password =**] **'***distributor_password***'**  
- ディストリビューターのパスワードです。 *distributor_password*場合は必須*distributor_security_mode*に設定されている**0**します。 *distributor_password*は**sysname**、既定値は NULL です。  
+ ディストリビューターのパスワードです。 *distributor_password*場合は必須です*distributor_security_mode*に設定されている**0**します。 *distributor_password*は**sysname**、既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
  [  **@optional_command_line=**] **'***optional_command_line***'**  
- ディストリビューション エージェントに与えられるコマンド プロンプトで、省略可能です。 たとえば、 **-definitionfile** C:\Distdef.txt または **- CommitBatchSize** 10 です。 *optional_command_line*は**nvarchar (4000)**、空の文字列の既定値です。  
+ ディストリビューション エージェントに与えられるコマンド プロンプトで、省略可能です。 たとえば、 **-definitionfile** C:\Distdef.txt または **- CommitBatchSize** 10。 *optional_command_line*は**nvarchar (4000)**、既定値は空の文字列。  
   
  [  **@frequency_type=**] *frequency_type*  
  ディストリビューション エージェントをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**値は次のいずれかを指定できます。  
@@ -165,15 +164,15 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**128**|定期的|  
   
 > [!NOTE]  
->  値を指定する**64**によりディストリビューション エージェントを連続モードで実行します。 これは、設定に対応しています、 **-連続**エージェントのパラメーターです。 詳細については、「 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
+>  値を指定する**64**により、ディストリビューション エージェントが連続モードで実行します。 これは設定に対応、 **-継続的な**エージェントのパラメーター。 詳細については、「 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
   
  [  **@frequency_interval=**] *frequency_interval*  
- 設定した頻度に適用する値は、 *frequency_type*です。 *frequency_interval*は**int**、既定値は 1 です。  
+ 設定した頻度に適用する値は、 *frequency_type*します。 *frequency_interval*は**int**、既定値は 1 です。  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  ディストリビューション エージェントを実行する日付です。 このパラメーターが使用されるときに*frequency_type*に設定されている**32** (月単位)。 *frequency_relative_interval*は**int**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First|  
 |**2**|第 2 週|  
@@ -182,12 +181,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**16**|Last|  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- によって使用される定期実行係数*frequency_type*です。 *frequency_recurrence_factor*は**int**、既定値は**1**です。  
+ 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は**1**します。  
   
  [  **@frequency_subday=**] *frequency_subday*  
  定義した期間にスケジュールを組み直す頻度を指定します。 *frequency_subday*は**int**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|1 回。|  
 |**2**|第 2 週|  
@@ -195,7 +194,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**8**|Hour|  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*です。 *frequency_subday_interval*は**int**、既定値は**1**です。  
+ 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は**1**します。  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
  ディストリビューション エージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は**0**します。  
@@ -210,13 +209,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  ディストリビューション エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は**0**します。  
   
  [  **@distribution_jobid =**] *distribution_jobid * * * 出力**  
- このジョブのディストリビューションの ID を指定します。 *distribution_jobid*は**binary (16)** NULL の場合は、既定値は、出力パラメーターです。  
+ このジョブのディストリビューションの ID を指定します。 *distribution_jobid*は**binary (16)**、既定値は null には、出力パラメーター。  
   
  [  **@encrypted_distributor_password=**] *encrypted_distributor_password*  
- 設定*encrypted_distributor_password*は現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
+ 設定*encrypted_distributor_password*現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
   
  [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
- 使用、サブスクリプションを同期させるかどうかが[!INCLUDE[msCoName](../../includes/msconame-md.md)]同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションは同期マネージャーに登録されていません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+ サブスクリプションを介した同期が可能かどうかは、[!INCLUDE[msCoName](../../includes/msconame-md.md)]同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
  [  **@ftp_address=**] **'***ftp_address***'**  
  これは旧バージョンとの互換性のためにだけ用意されています。  
@@ -240,33 +239,33 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  標準のプロトコルの代わりに FTP を使用してスナップショットを取得します。 *@use_ftp*は**nvarchar (5)**、既定値は FALSE。  
   
  [ **@publication_type**=] *publication_type*  
- パブリケーションのレプリケーションの種類を指定します。 *publication_type*は、 **tinyint** 、既定値は**0**します。 場合**0**パブリケーションがトランザクションの種類。 場合**1**パブリケーションはスナップショット タイプ。 場合**2**パブリケーションはマージ タイプ。  
+ パブリケーションのレプリケーションの種類を指定します。 *publication_type*は、 **tinyint** 、既定値は**0**します。 場合**0**パブリケーションがトランザクションの種類。 場合**1**パブリケーションがスナップショットの種類。 場合**2**パブリケーションはマージの種類。  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
  DTS パッケージの名前を指定します。 *dts_package_name*は、 **sysname**既定値は NULL です。 たとえば、`DTSPub_Package` というパッケージを指定するには、パラメーターを `@dts_package_name = N'DTSPub_Package'` と設定します。  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- パッケージのパスワード (ある場合) を指定します。 *dts_package_password*は**sysname**既定値は NULL には、つまり、パスワードがパッケージにします。  
+ パッケージのパスワード (ある場合) を指定します。 *dts_package_password*は**sysname**既定値は NULL には、つまり、パッケージにパスワードがないです。  
   
 > [!NOTE]  
 >  場合は、パスワードを指定する必要があります*dts_package_name*を指定します。  
   
  [ **@dts_package_location**=] **'***dts_package_location***'**  
- パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は**サブスクライバー**です。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**です。  
+ パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は**サブスクライバー**します。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**します。  
   
  [ **@reserved**=] **'***予約***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@offloadagent**=] '*remote_agent_activation*'  
  > [!NOTE]  
->  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**false**でエラーが発生します。  
+>  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**false**エラーが生成されます。  
   
  [ **@offloadserver**=] '*remote_agent_server_name*'  
  > [!NOTE]  
 >  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
   
  [ **@job_name**=] '*job_name*'  
- 既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーではない場合、 **sysadmin**固定サーバー ロールを指定してください*job_login*と*job_password*を指定すると*job_name*.  
+ 既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーになっていない場合、 **sysadmin**するを指定する必要があります固定サーバー ロール、 *job_login*と*job_password*を指定すると*job_name*.  
   
  [ **@job_login**=] **'***job_login***'**  
  エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはサブスクライバーへのエージェント接続で常に使用されます。  
@@ -280,18 +279,18 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_addpullsubscription_agent**はスナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_addpullsubscription_agent**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpullsubscription_agent**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpullsubscription_agent**します。  
   
 ## <a name="see-also"></a>参照  
- [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
- [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

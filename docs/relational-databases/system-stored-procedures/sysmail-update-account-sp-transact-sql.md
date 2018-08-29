@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_account_sp (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmail_update_account_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 51
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ad64d1d455a4419c66949ba0196f9a9557a8ae52
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3aa7b018044aca4dec144e2be66bfba68cef5597
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262184"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021835"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,20 +93,20 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  メール サーバーへのログオンに使用する新しいパスワードを指定します。 *パスワード*は**sysname**、既定値はありません。  
   
  [ **@use_default_credentials** =] use_default_credentials  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用してメールを SMTP サーバーに送信するかどうかを指定します。 **use_default_credentials**は bit で、既定値はありません。 データベース メールがの資格情報を使用してこのパラメーターが 1 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 データベース メールを使用してこのパラメーターが 0 の場合、 **@username**と**@password** SMTP サーバーでの認証にします。 場合**@username**と**@password** NULL は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用してメールを SMTP サーバーに送信するかどうかを指定します。 **use_default_credentials**ビットは、既定値はありません。 データベース メールでの資格情報を使用してこのパラメーターが 1 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 データベース メールを使用してこのパラメーターが 0 の場合、 **@username**と**@password** SMTP サーバーでの認証。 場合**@username**と**@password** NULL は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。  
   
  [ **@enable_ssl** =] enable_ssl  
- データベース メールで SSL (Secure Sockets Layer) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**は bit で、既定値はありません。  
+ データベース メールで SSL (Secure Sockets Layer) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**ビットは、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  アカウント名とアカウント ID の両方を指定すると、ストアド プロシージャではアカウント情報の更新だけでなく、アカウント名の変更も行われます。 アカウント名の変更は、アカウント名のエラーを修正する場合に利用できます。  
   
- ストアド プロシージャ**sysmail_update_account_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
+ ストアド プロシージャ**sysmail_update_account_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -133,7 +132,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ```  
   
 ### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. アカウントの名前とアカウントの情報を変更する  
- 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前が`Backup Mail Server`です。  
+ 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前が`Backup Mail Server`します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

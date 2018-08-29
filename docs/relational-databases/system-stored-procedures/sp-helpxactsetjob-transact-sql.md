@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef643efb849a0f178ac98bf439360fca87d21983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58ebd1b5592a7a4b17f665555689b32e8456d714
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997209"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027518"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**仕事番号**|**int**|Oracle のジョブ番号です。|  
 |**lastdate**|**varchar(22)**|ジョブが最後に実行された日付です。|  
@@ -60,7 +60,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**間隔**|**varchar(200)**|ジョブの間隔です。|  
 |**エラー**|**int**|ジョブの失敗の回数です。|  
 |**xactsetjobwhat**|**varchar(200)**|ジョブによって実行されるプロシージャの名前です。|  
-|**xactsetjob**|**varchar (1)**|ジョブの状態です。次のいずれかになります。<br /><br /> **1** -ジョブが有効にします。<br /><br /> **0** -ジョブが無効にします。|  
+|**xactsetjob**|**varchar (1)**|ジョブの状態です。次のいずれかになります。<br /><br /> **1** -ジョブが有効にします。<br /><br /> **0** -ジョブは無効です。|  
 |**xactsetlonginterval**|**int**|ジョブの長い間隔です。|  
 |**xactsetlongthreshold**|**int**|ジョブの長いしきい値です。|  
 |**xactsetshortinterval**|**int**|ジョブの短い間隔です。|  
@@ -69,13 +69,13 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_helpxactsetjob**はスナップショット レプリケーションおよび Oracle パブリッシャーに対してトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_helpxactsetjob**スナップショット レプリケーションと、Oracle パブリッシャーのトランザクション レプリケーションで使用されます。  
   
  **sp_helpxactsetjob**常に、パブリッシャーで Xactset ジョブ (HREPL_XactSetJob) の現在の設定を返します。 Xactset ジョブが現在ジョブ キューに入っている場合は、Oracle パブリッシャーにおいて、管理者アカウントで作成された USER_JOB データ辞書ビューから、ジョブの属性も返します。  
   
-## <a name="permissions"></a>権限  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_helpxactsetjob**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_helpxactsetjob**します。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   

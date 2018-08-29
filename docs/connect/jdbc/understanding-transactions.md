@@ -14,12 +14,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20ec695090a164fb0cb5509833db78bd6b38fe69
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: b6d923bce43ad2f9ed3fd0a7d33d456910125768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662114"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784033"
 ---
 # <a name="understanding-transactions"></a>トランザクションについて
 
@@ -43,7 +43,7 @@ ms.locfileid: "39662114"
 
 分散トランザクションは、トランザクション処理の重要な ACID (原子性、一貫性、分離性、および持続性) のプロパティを維持しながら、ネットワーク上の複数のデータベースのデータを更新します。 分散トランザクションのサポートは、JDBC 2.0 オプション API 仕様で JDBC API に追加されました。 分散トランザクションの管理は、通常、Java EE アプリケーション サーバー環境内で Java Transaction Service (JTS) トランザクション マネージャーによって自動的に実行されます。 ただし、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、すべての Java Transaction API (JTA) 準拠のトランザクション マネージャーで分散トランザクションをサポートします。
 
-JDBC ドライバーは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] 分散トランザクション コーディネーター (MS DTC) とシームレスに統合することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] による真の分散トランザクション サポートを提供します。 MS DTC は、[!INCLUDE[msCoName](../../includes/msconame_md.md)] によって [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows システム用に提供される分散トランザクション機能です。 MS DTC は、[!INCLUDE[msCoName](../../includes/msconame_md.md)] の実証済みのトランザクション処理技術を使用して、完全な 2 フェーズ分散コミット プロトコルや分散トランザクションの回復などの XA 機能をサポートします。
+JDBC ドライバーは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] 分散トランザクション コーディネーター (MS DTC) とシームレスに統合することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による真の分散トランザクション サポートを提供します。 MS DTC は、[!INCLUDE[msCoName](../../includes/msconame_md.md)] によって [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows システム用に提供される分散トランザクション機能です。 MS DTC は、[!INCLUDE[msCoName](../../includes/msconame_md.md)] の実証済みのトランザクション処理技術を使用して、完全な 2 フェーズ分散コミット プロトコルや分散トランザクションの回復などの XA 機能をサポートします。
 
 分散トランザクションを使用する方法の詳細については、次を参照してください。 [XA トランザクションの概要](../../connect/jdbc/understanding-xa-transactions.md)します。
 

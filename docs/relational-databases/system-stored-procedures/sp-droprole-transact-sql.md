@@ -1,5 +1,5 @@
 ---
-title: sp_droprole (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_droprole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39ef6031494b8e5bd4718c26d7635be4f916517e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cdc97dbb75487300d228a53b7550f4687abf8a0f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263407"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024712"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33263407"
   現在のデータベースからデータベース ロールを削除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 **Sp_droprole** DROP ROLE ステートメントに置き換えられました。 **sp_droprole**が以前のバージョンと互換性のためだけに含まれる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来のリリースではサポートされない可能性があります。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 **Sp_droprole** DROP ROLE ステートメントに置き換えられています。 **sp_droprole**が以前のバージョンの互換性のためだけに含まれる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来のリリースではサポートされない可能性があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,10 +53,10 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- 使用してデータベース ロールのみを削除することができます**sp_droprole**です。  
+## <a name="remarks"></a>コメント  
+ 使用してデータベースの役割のみを削除できる**sp_droprole**します。  
   
- メンバーが既に存在するデータベース ロールは削除できません。 データベース ロールを削除するには、あらかじめそのデータベース ロールのすべてのメンバーを削除しておく必要があります。 ロールからユーザーを削除するには使用**sp_droprolemember の各**です。 すべてのユーザーは、ロールのメンバーではまだ場合**sp_droprole**それらのメンバーが表示されます。  
+ メンバーが既に存在するデータベース ロールは削除できません。 データベース ロールを削除するには、あらかじめそのデータベース ロールのすべてのメンバーを削除しておく必要があります。 ロールからユーザーを削除するには使用**sp_droprolemember**します。 すべてのユーザーは、ロールのメンバーではまだ場合**sp_droprole**それらのメンバーが表示されます。  
   
  固定ロールと**パブリック**ロールは削除できません。  
   
@@ -64,7 +64,7 @@ sp_droprole [ @rolename= ] 'role'
   
  **sp_droprole**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロールに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

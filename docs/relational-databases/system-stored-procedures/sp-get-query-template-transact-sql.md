@@ -1,5 +1,5 @@
 ---
-title: sp_get_query_template (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_get_query_template (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fac47c5b84894f681ffc9c6729dd526f9e8488c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2d96ffa9a2375905246a515601c77afdc50d231
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253508"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027748"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パラメーター化形式のクエリを返します。 返される結果は、強制パラメーター化の使用によるパラメーター化形式のクエリに似ています。 sp_get_query_template は、主に TEMPLATE プラン ガイドを作成するときに使用されます。  
+  パラメーター化形式のクエリを返します。 返される結果は、強制パラメーター化の使用によるパラメーター化形式のクエリに似ています。 sp_get_query_template は、主に TEMPLATE プラン ガイドの作成時に使用されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,24 +48,24 @@ sp_get_query_template
   
 ## <a name="arguments"></a>引数  
  '*ステートメント*'  
- パラメーター化バージョンを生成する基となるクエリです。 '*ステートメント*' 単一引用符で囲む必要があるあり、前に、n 個の Unicode を指定します。 N'*ステートメント*' に割り当てられた値は、@querytextパラメーター。 これは、型の**nvarchar (max)** です。  
+ パラメーター化バージョンを生成する基となるクエリです。 '*ステートメント*' 単一引用符で囲む必要があり、前に、n 個の Unicode を指定します。 N'*ステートメント*' に割り当てられた値は、@querytextパラメーター。 これは、型の**nvarchar (max)** します。  
   
  @templatetext  
- 型の出力パラメーター **nvarchar (max)**、指定したとおり、パラメーター化形式を受信する*ステートメント*文字列リテラルとして。  
+ 型の出力パラメーター **nvarchar (max)** に示されるように、パラメーター化形式の受信に用意されている*ステートメント*文字列リテラルとして。  
   
  @parameters  
- 型の出力パラメーター **nvarchar (max)**、指定したとおりでパラメーター化されたがパラメーター名とデータ型の文字列リテラルを受信する@templatetextです。  
+ 型の出力パラメーター **nvarchar (max)** でパラメーター化されたパラメーター名とデータ型のリテラル文字列を受信する、指定したとおりに提供@templatetextします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_get_query_template は、以下のことが発生した場合にエラーを返します。  
   
--   内の定数リテラル値をパラメーター化は*ステートメント*です。  
+-   内の定数リテラル値をパラメーター化は*ステートメント*します。  
   
--   *ステートメント*が NULL の場合、Unicode 文字列ではなく、構文が正しくない、またはコンパイルすることはできません。  
+-   *ステートメント*が null の場合、Unicode 文字列ではなく、構文が正しくない、またはコンパイルすることはできません。  
   
- Sp_get_query_template にエラーが返される場合の値は変更されません、@templatetextと@parameters出力パラメーターです。  
+ Sp_get_query_template は、エラーを返した場合の値は変更されません、@templatetextと@parameters出力パラメーター。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  public データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -90,7 +90,7 @@ SELECT @my_templatetext;
 SELECT @my_parameters;  
 ```  
   
- ここでは、パラメーター化された結果、`@my_templatetext``OUTPUT`パラメーター。  
+ パラメーター化の結果の次のとおり、`@my_templatetext``OUTPUT`パラメーター。  
   
  `select pi . ProductID , SUM ( pi . Quantity ) as Total`  
   
@@ -106,9 +106,9 @@ SELECT @my_parameters;
   
  `having SUM ( pi . Quantity ) > 400`  
   
- 最初の定数、リテラル`2`パラメーターに変換します。 2 番目のリテラル `400` は `HAVING` 句の内部にあるため、変換されません。 sp_get_query_template によって返される結果は、ALTER DATABASE の PARAMETERIZATION オプションが FORCED に設定されている場合のパラメーター化形式クエリに似ています。  
+ なお、最初の定数リテラル`2`パラメーターに変換されます。 2 番目のリテラル `400` は `HAVING` 句の内部にあるため、変換されません。 sp_get_query_template によって返される結果は、ALTER DATABASE の PARAMETERIZATION オプションが FORCED に設定されている場合のパラメーター化形式クエリに似ています。  
   
- ここでは、パラメーター化された結果、`@my_parameters OUTPUT`パラメーター。  
+ パラメーター化の結果の次のとおり、`@my_parameters OUTPUT`パラメーター。  
   
 ```  
 @0 int  

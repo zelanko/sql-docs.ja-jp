@@ -1,5 +1,5 @@
 ---
-title: '[ファイルを開くアプリケーションの選択] ([新しいファイル]) | Microsoft Docs'
+title: '[ファイルを開くアプリケーションの選択]\([新しいファイル]) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa285718d089457b70543fbd4d060c3a51ab3c9f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043799"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776663"
 ---
 # <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] \([新しいファイル])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "33043799"
 プログラムを削除するには、プログラムを選択して **[削除]** をクリックします。  
   
 **[既定に設定]**  
-選択したファイルの種類に対して既定のエディター (適用可能であれば言語エンコード オプションも) を指定するには、 **[このファイルを開くのに使用するプログラムを選択してください]** の一覧からプログラムを選択して **[既定に設定]** をクリックします。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]でこのファイルの種類を次に開いたときには、新しい既定のエディターでドキュメントが開きます。  
+選択したファイルの種類に対して既定のエディター (適用可能であれば言語エンコード オプションも) を指定するには、 **[このファイルを開くのに使用するプログラムを選択してください]** の一覧からプログラムを選択して **[既定に設定]** をクリックします。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのファイルの種類を次に開いたときには、新しい既定のエディターでドキュメントが開きます。  
   
 > [!NOTE]  
 > **[このファイルを開くのに使用するプログラムを選択してください]** のプログラムの一覧で、選択したファイルの種類の既定のエディターの名前には、 **(既定)** が末尾に付加されます。  
   
 ## <a name="see-also"></a>参照  
-[ファイル拡張子をコード エディターに関連付ける](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[ファイル拡張子をコード エディターに関連付ける](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

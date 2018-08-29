@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergealternatepublisher (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpmergealternatepublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f51c69c6034963dff80377570120dcd65027b762
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8cba4d17060e32ef24b8e5b07e689992982ca94
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995329"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035255"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**alternate_publisher**|**sysname**|代替パブリッシャーの名前です。|  
-|**alternate_publisher_db**|**sysname**|パブリケーション データベースの名前です。|  
-|**alternate_publication**|**sysname**|パブリケーションの名前です。|  
+|**alternate_publisher_db**|**sysname**|パブリケーション データベースの名前。|  
+|**alternate_publication**|**sysname**|パブリケーションの名前。|  
 |**alternate_distributor**|**sysname**|ディストリビューターの名前。|  
 |**friendly_name**|**nvarchar (255)**|代替パブリッシャーの説明。|  
 |**enabled**|**bit**|サーバーが代替パブリッシャーかどうかを示します。 **1**パブリッシャーが代替パブリッシャーとして有効になっているを指定します。 **0**は無効になっているを指定します。|  
@@ -68,13 +68,13 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergealternatepublisher**はマージ レプリケーションで使用します。  
   
  マージ セッションごとに、システムではパブリッシャーとサブスクライバーの両方に対し、代替パブリッシャーの一覧を求めるクエリが実行されます。 マージ処理では代替パブリッシャーの一覧に対してエントリの追加や削除が行われ、サブスクライバーとパブリッシャーの両方に一致する代替パブリッシャーの一覧が生成されます。  
   
-## <a name="permissions"></a>権限  
- パブリケーションのパブリケーション アクセス リストのメンバーだけが実行できる**sp_helpmergealternatepublisher**です。  
+## <a name="permissions"></a>アクセス許可  
+ パブリケーションのパブリケーション アクセス リストのメンバーだけが実行できる**sp_helpmergealternatepublisher**します。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

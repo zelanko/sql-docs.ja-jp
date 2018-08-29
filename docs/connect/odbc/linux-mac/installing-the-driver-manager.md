@@ -16,12 +16,12 @@ caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18827f8e2e001700319d47516ba1694c384b26b7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 517ebaea849cad131742211f68dc1ac9fe0f9731
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052689"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784065"
 ---
 # <a name="installing-the-driver-manager"></a>ドライバー マネージャーのインストール
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,15 +47,15 @@ ms.locfileid: "38052689"
   
 1.  ルートのアクセス許可があることを確認します。  
   
-2.  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ODBC ドライバーのダウンロードで `msodbcsql-11.0.2270.0.tar.gz` という名前のファイルを配置したディレクトリに移動します。 使用している Linux のバージョンに対応する \*.tar.gz ファイルがあることを確認します。 ファイルを解凍するには、コマンド **tar xvzf msodbcsql-11.0.2270.0.tar.gz** を実行します。  
+2.  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC ドライバーのダウンロードで `msodbcsql-11.0.2270.0.tar.gz` という名前のファイルを配置したディレクトリに移動します。 使用している Linux のバージョンに対応する \*.tar.gz ファイルがあることを確認します。 ファイルを解凍するには、コマンド **tar xvzf msodbcsql-11.0.2270.0.tar.gz** を実行します。  
 
-3.  変更、`msodbcsql-11.0.2270.0`ディレクトリとそこという名前のファイルが確認`build_dm.sh`します。 実行することができます`build_dm.sh`unixODBC ドライバー マネージャーをインストールします。
+3.  `msodbcsql-11.0.2270.0` のディレクトリに移動すると、ディレクトリ内に `build_dm.sh`install.sh というファイルがあることを確認できます。 実行することができます`build_dm.sh`unixODBC ドライバー マネージャーをインストールします。
 
 4.  使用可能なオプションの一覧を表示するには、コマンド **./build_dm.sh --help** を実行します。  
   
 5.  インストールの準備ができたら、コマンド **./build_dm.sh** を実行します (お使いのコンピューターが FTP 経由で外部のサイトにアクセスできる場合)。
 
-お使いのコンピューターが FTP 経由で外部のサイトにアクセスできない場合は、`unixODBC-2.3.0.tar.gz` を取得します。 取得できる`unixODBC-2.3.0.tar.gz`から[ http://www.unixodbc.org](http://www.unixodbc.org/)します。ページの左側にある [ダウンロード] リンクをクリックして、ダウンロード ページに移動します。 適切なリンクをクリックして、unixODBC-2.3.0 (unixODBC-2.3.1 ではなく) をダウンロードします。 unixODBC-2.3.1 は、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の今回のリリースではサポートされていません。 UnixODBC ドライバー マネージャーのインストールを開始するには、次のコマンドを実行します。 **./build_dm.sh--ダウンロード url = file://unixODBC-2.3.0.tar.gz**します。  
+お使いのコンピューターが FTP 経由で外部のサイトにアクセスできない場合は、`unixODBC-2.3.0.tar.gz` を取得します。 取得できる`unixODBC-2.3.0.tar.gz`から[ http://www.unixodbc.org](http://www.unixodbc.org/)します。ページの左側にある **[ダウンロード]** リンクをクリックして、ダウンロード ページに移動します。 適切なリンクをクリックして、unixODBC-2.3.0 (unixODBC-2.3.1 ではなく) をダウンロードします。 unixODBC-2.3.1 は、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の今回のリリースではサポートされていません。 UnixODBC ドライバー マネージャーのインストールを開始するには、次のコマンドを実行します。 **./build_dm.sh--ダウンロード url = file://unixODBC-2.3.0.tar.gz**します。  
 
 6.  **YES** を入力してファイルの解凍を続行します。 プロセスのこの部分は完了までに最大 5 分かかります。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "38052689"
 
 1.  インストールされている古いバージョンの unixODBC (unixODBC 2.2.11 など) を削除します。 Red Hat Enterprise Linux 5 または 6 では、コマンド **yum remove unixODBC** を実行します。 On SUSE Linux Enterprise、 **zypper 削除 unixODBC**します。  
   
-2.  [http://www.unixodbc.org](http://www.unixodbc.org/) に移動します。ページの左側にある **[ダウンロード]** リンクをクリックして、ダウンロード ページに移動します。 適切なリンクをクリックして、ファイル unixODBC-2.3.0.tar.gz をコンピューターに保存します。 UnixODBC-2.3.1 は、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の今回のリリースではサポートされていません。  
+2.  [http://www.unixodbc.org](http://www.unixodbc.org/) に移動します。ページの左側にある **[ダウンロード]** リンクをクリックして、ダウンロード ページに移動します。 適切なリンクをクリックして、ファイル unixODBC-2.3.0.tar.gz をコンピューターに保存します。 UnixODBC-2.3.1 は、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の今回のリリースではサポートされていません。  
   
 3.  Linux コンピューター上のコマンドを実行します: **tar xvzf unixodbc-2.3.0.tar.gz**します。  
   

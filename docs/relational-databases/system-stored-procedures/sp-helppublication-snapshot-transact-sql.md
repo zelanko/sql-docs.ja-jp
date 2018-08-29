@@ -1,5 +1,5 @@
 ---
-title: sp_helppublication_snapshot (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helppublication_snapshot (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 166ddc44f6543a5c95ee2650504dcd3f71d45236
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 628b07fee13a2d0dc62d3dc5be3dfa131f995a8d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002719"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021225"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,29 +50,29 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@publisher =** ] **'***パブリッシャー***'**  
- 指定以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*にアーティクルを追加するときに使用しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  *パブリッシャー*にアーティクルを追加するときに使用されません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|スナップショット エージェントの ID です。|  
 |**name**|**nvarchar(100)**|スナップショット エージェント名です。|  
-|**publisher_security_mode**|**smallint**|次のいずれかと、パブリッシャーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証です。|  
+|**publisher_security_mode**|**smallint**|次のいずれかの値と、パブリッシャーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログイン。|  
-|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
+|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由から、値の**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
 |**job_id**|**uniqueidentifier**|エージェント ジョブの一意な ID。|  
-|**job_login**|**nvarchar(512)**|形式で返される、スナップショット エージェントを実行する Windows アカウントは、*ドメイン*\\*username*です。|  
-|**job_password**|**sysname**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
+|**job_login**|**nvarchar(512)**|これは、形式で返されますスナップショット エージェントを実行する Windows アカウントは、*ドメイン*\\*username*します。|  
+|**job_password**|**sysname**|セキュリティ上の理由から、値の**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
 |**schedule_name**|**sysname**|このエージェント ジョブに使用されるスケジュールの名前です。|  
-|**frequency_type**|**int**|スケジュールに組み込まれているエージェントの実行の頻度。次のいずれかの値になります。<br /><br /> **1** = 1 回<br /><br /> **2** = 要求時<br /><br /> **4** = 毎日<br /><br /> **8** = 毎週<br /><br /> **16**毎月を =<br /><br /> **32** = 月単位<br /><br /> **64**自動開始を =<br /><br /> **128** = 定期的|  
-|**frequency_interval**|**int**|エージェントの実行日。次のいずれかの値になります。<br /><br /> **1**日曜日を =<br /><br /> **2**月曜日を =<br /><br /> **3** = 火曜日<br /><br /> **4** = 水曜日<br /><br /> **5** = 木曜日<br /><br /> **6** = 金曜日<br /><br /> **7** = 土曜日<br /><br /> **8** = 日<br /><br /> **9** = 平日<br /><br /> **10**週末の曜日を =|  
-|**frequency_subday_type**|**int**|エージェントを実行時にどのくらいの頻度を定義する型は、 *frequency_type*は**4** (毎日)、これらの値のいずれかを指定できます。<br /><br /> **1** = 指定した時刻<br /><br /> **2**秒を =<br /><br /> **4**分を =<br /><br /> **8**時間を =|  
+|**frequency_type**|**int**|スケジュールに組み込まれているエージェントの実行の頻度。次のいずれかの値になります。<br /><br /> **1** = 1 回<br /><br /> **2** = 要求時<br /><br /> **4** = 毎日<br /><br /> **8** = 毎週<br /><br /> **16**毎月を =<br /><br /> **32** = 月単位<br /><br /> **64** = 自動開始<br /><br /> **128** = 定期的|  
+|**frequency_interval**|**int**|エージェントの実行日。次のいずれかの値になります。<br /><br /> **1**日曜日を =<br /><br /> **2** = 月曜日<br /><br /> **3** = 火曜日<br /><br /> **4** = 水曜日<br /><br /> **5** = 木曜日<br /><br /> **6** = 金曜日<br /><br /> **7** = 土曜日<br /><br /> **8** = 日<br /><br /> **9** = 平日<br /><br /> **10**週末の曜日を =|  
+|**frequency_subday_type**|**int**|エージェントを実行ときにどのくらいの頻度を定義する型*frequency_type*は**4** (毎日)、これらの値のいずれかを指定できます。<br /><br /> **1** = 指定した時刻<br /><br /> **2**秒を =<br /><br /> **4**分を =<br /><br /> **8**時間を =|  
 |**frequency_subday_interval**|**int**|間隔数*frequency_subday_type*エージェントのスケジュールされた実行の間で発生します。|  
-|**frequency_relative_interval**|**int**|特定の月にエージェントを実行する週とき*frequency_type*は**32** (月単位)、これらの値のいずれかを指定できます。<br /><br /> **1**最初を =<br /><br /> **2**秒を =<br /><br /> **4**サードパーティを =<br /><br /> **8**第 4 を =<br /><br /> **16**最後を =|  
+|**frequency_relative_interval**|**int**|指定された月にエージェントを実行する週と*frequency_type*は**32** (月単位)、これらの値のいずれかを指定できます。<br /><br /> **1**最初を =<br /><br /> **2**秒を =<br /><br /> **4** = サード<br /><br /> **8**第 4 を =<br /><br /> **16**最後を =|  
 |**frequency_recurrence_factor**|**int**|週または月を単位とした、エージェントの予定実行間隔。|  
 |**active_start_date**|**int**|エージェントの最初の実行予定日。日付の形式は YYYYMMDD です。|  
 |**active_end_date**|**int**|エージェントの最後の実行予定日。日付の形式は YYYYMMDD です。|  
@@ -82,11 +82,11 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_publication_snapshot**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**のメンバーまたはパブリッシャーの固定サーバー ロール、 **db_owner** 、パブリケーション データベースの固定データベース ロールが実行できる**sp_help_publication_snapshot**.  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールのメンバー、または発行元、 **db_owner**パブリケーション データベースの固定データベース ロールが実行できる**sp_help_publication_snapshot**.  
   
 ## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

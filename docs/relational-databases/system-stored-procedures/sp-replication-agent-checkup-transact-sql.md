@@ -1,5 +1,5 @@
 ---
-title: sp_replication_agent_checkup (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_replication_agent_checkup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replication_agent_checkup
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fcb953c182dd6f4e9726a45a6fbf10efd8584cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 927bd9990148112c05874f6589a7c0a33ac21f43
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028217"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +45,16 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
   
 ## <a name="arguments"></a>引数  
  [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- エージェントが進捗状況を示すメッセージをログに記録しなくてもよい最大時間を分単位で示します。 *heartbeat_interval*は**int**、10 分間の既定値です。  
+ エージェントが進捗状況を示すメッセージをログに記録しなくてもよい最大時間を分単位で示します。 *heartbeat_interval*は**int**、既定値は 10 分です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **sp_replication_agent_checkup**と思われる各エージェントに対してエラー 14151 を発生させます。 また、これらのエージェントに関する障害履歴メッセージをログに記録します。  
+ **sp_replication_agent_checkup** suspect として検出された各エージェントに対してエラー 14151 を発生させます。 また、これらのエージェントに関する障害履歴メッセージをログに記録します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_replication_agent_checkup**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_replication_agent_checkup**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_replication_agent_checkup**します。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

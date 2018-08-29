@@ -1,5 +1,5 @@
 ---
-title: sp_check_for_sync_trigger (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_check_for_sync_trigger (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f389415adf06d6c7fce1862d42655bf4e96e2c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed3cd29b694e0e87f207376ad54b06fc0827b45b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991459"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020261"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザー定義トリガーまたはストアド プロシージャが、即時更新サブスクリプションに使われるレプリケーション トリガーのコンテキストで呼び出されているかどうかを判別します。 このストアド プロシージャは、パブリッシャー側のパブリケーション データベースまたはサブスクライバーのサブスクリプション データベースで実行されます。  
+  ユーザー定義トリガーまたはストアド プロシージャが、即時更新サブスクリプションに使われるレプリケーション トリガーのコンテキストで呼び出されているかどうかを判別します。 このストアド プロシージャは、パブリケーション データベースに対して、パブリッシャーまたはサブスクライバーのサブスクリプション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [ **@trigger_op =** ] '*trigger_output_parameters*' 出力  
  出力パラメーターが呼び出し元のトリガーの種類を返すかどうかを指定します。 *trigger_output_parameters*は**char (10)** これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**アドイン**|INSERT トリガーです。|  
 |**Upd**|UPDATE トリガーです。|  
@@ -64,12 +64,12 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  ストアド プロシージャの実行場所を指定します。 *fonpublisher*は**ビット**既定値は 0 です。 0 の場合はサブスクライバー側、1 の場合はパブリッシャー側で実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 の場合、ストアド プロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1 はことを示しますが、即時更新トリガーのコンテキスト内で呼び出されるに返されるトリガーの種類 *@trigger_op*です。  
+ 0 の場合、ストアド プロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1 が即時更新トリガーのコンテキスト内で呼び出されるで返されるトリガーの種類は、そのことを示します。  *@trigger_op*します。  
   
-## <a name="remarks"></a>解説  
- **sp_check_for_sync_trigger**はスナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_check_for_sync_trigger**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
   
- **sp_check_for_sync_trigger**レプリケーションおよびユーザー定義トリガー間を調整するために使用します。 このストアド プロシージャは、レプリケーション トリガーのコンテキスト内で呼び出されているかどうかを判別します。 たとえば、プロシージャを呼び出すことができます**sp_check_for_sync_trigger**ユーザー定義のトリガーの本文にします。 場合**sp_check_for_sync_trigger**返します**0**、ユーザー定義トリガーは処理を続行します。 場合**sp_check_for_sync_trigger**返します**1**、ユーザー定義トリガーは終了します。 ユーザー定義トリガーは、レプリケーション トリガーがテーブルを更新するときには起動されません。  
+ **sp_check_for_sync_trigger**レプリケーションとユーザー定義トリガー間を調整するために使用します。 このストアド プロシージャは、レプリケーション トリガーのコンテキスト内で呼び出されているかどうかを判別します。 たとえば、プロシージャを呼び出すことができます**sp_check_for_sync_trigger**ユーザー定義トリガーの本文にします。 場合**sp_check_for_sync_trigger**返します**0**、ユーザー定義トリガーは処理を続行します。 場合**sp_check_for_sync_trigger**返します**1**、ユーザー定義トリガーは終了します。 ユーザー定義トリガーは、レプリケーション トリガーがテーブルを更新するときには起動されません。  
   
 ## <a name="example"></a>例  
  次の例は、サブスクライバー テーブルのトリガーで使用できるコードを示しています。  
@@ -83,7 +83,7 @@ RETURN
 ```  
   
 ## <a name="example"></a>例  
- コードは、パブリッシャーの; テーブルのトリガーにも追加できます。コードと同様への呼び出しが、 **sp_check_for_sync_trigger**追加のパラメーターが含まれています。  
+ コードは、パブリッシャーの; テーブルのトリガーにも追加できます。コードは似ていますを呼び出して**sp_check_for_sync_trigger**追加のパラメーターが含まれています。  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int, @fonpublisher int  
@@ -94,8 +94,8 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="permissions"></a>権限  
- **sp_check_for_sync_trigger**で SELECT 権限を持つユーザーがストアド プロシージャを実行することができます、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)システム ビューです。  
+## <a name="permissions"></a>アクセス許可  
+ **sp_check_for_sync_trigger**で SELECT 権限を持つ任意のユーザーがストアド プロシージャを実行することができます、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)システム ビュー。  
   
 ## <a name="see-also"></a>参照  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  

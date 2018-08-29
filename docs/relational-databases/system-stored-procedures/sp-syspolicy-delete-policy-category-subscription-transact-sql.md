@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_category_subscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syspolicy_delete_policy_category_subscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_category_subscription
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fb514ae527e7b3a116dfa96974e1b8342a953363
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2df8a0c11270371ea793081008b1cd1cccc7d33a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261458"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025683"
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +44,17 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
   
 ## <a name="arguments"></a>引数  
  [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- ポリシー カテゴリのサブスクリプションの識別子を指定します。 *policy_category_subscription_id*は**int**です。  
+ ポリシー カテゴリのサブスクリプションの識別子を指定します。 *policy_category_subscription_id*は**int**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syspolicy_delete_policy_category_subscription は msdb システム データベースのコンテキストで実行する必要があります。  
   
  サブスクリプションが必須の場合は、ポリシー カテゴリのサブスクリプションを削除できません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャは、ストアド プロシージャの現在の所有者のコンテキストで実行されます。  
   
  値を取得する*policy_category_subscription_id*、次のクエリを使用することができます。  

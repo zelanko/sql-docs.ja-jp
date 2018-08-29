@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_add_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_cdc_add_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c42d2150a148f1a288c1fa447f4bb1d9020fe09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5d218512e68e3d96a95e43ba3d155ad11f997449
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261961"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017873"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 ## <a name="arguments"></a>引数  
  [  **@job_type=** ] **'***job_type***'**  
- 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は **'capture'** と **'cleanup'** です。  
+ 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は **'capture'** と **'cleanup'** します。  
   
  [  **@start_job=** ] *start_job*  
  ジョブの追加後、そのジョブを直ちに開始するかどうかを指定するフラグです。 *start_job*は**ビット**既定値は 1 です。  
@@ -72,16 +71,16 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  [ **@continuous** ] **= * * * 継続的な*  
  キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を指定します。 *継続的な*は**ビット**既定値は 1 です。  
   
- ときに*連続*= 1,、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブはログをスキャンし、最大処理 (*max_trans* \* *max_scans*)トランザクション。 指定された秒数待機し、 *polling_interval*次のログ スキャンを開始する前にします。  
+ ときに*連続*= 1、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブは、ログをスキャンし、最大処理 (*max_trans* \* *max_scans*)トランザクション。 指定された秒数待機し、 *polling_interval*次のログ スキャンを開始する前にします。  
   
- ときに*連続*= 0 の場合、 **sp_cdc_scan**ジョブが実行されるまで*max_scans*まで処理、ログのスキャン*max_trans*トランザクション中に各スキャン、およびし終了します。  
+ ときに*連続*= 0 の場合、 **sp_cdc_scan**ジョブが実行されるまで*max_scans*までの処理、ログのスキャン*max_trans*トランザクション中に各スキャン、およびし終了します。  
   
  *継続的な*はキャプチャ ジョブでのみ有効です。  
   
  [ **@pollinginterval** ] **= * * * polling_interval*  
  ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は 5 です。  
   
- *polling_interval*キャプチャに対してのみ有効ではジョブの場合に*連続*が 1 に設定します。 指定する場合、値には負の数を指定できず、24 時間が上限になります。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
+ *polling_interval*キャプチャに対してのみ有効ですがジョブの場合に*連続*が 1 に設定します。 指定する場合、値には負の数を指定できず、24 時間が上限になります。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
   
  [ **@retention** ] **= * * * 保有期間*  
  変更データ行が変更テーブルに保持される分数を指定します。 *保有期間*は**bigint**既定値は 4320 (72 時間)。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数にする必要があります。  
@@ -97,17 +96,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クリーンアップ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたときに既定値を使って作成されます。 キャプチャ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたとき、そのデータベースにトランザクション パブリケーションが存在しなかった場合に、既定値を使って作成されます。 トランザクション パブリケーションが存在する場合、トランザクション ログ リーダーを使ってキャプチャ メカニズムが実現されます。別個のキャプチャ ジョブは必要ありません (使用することもできません)。  
   
  クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
   
- ジョブの名前は**cdc ***。< database_name >***_cleanup**または**cdc ***。< database_name >***_capture**ここで、 *< database_name >* 現在のデータベースの名前を指定します。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 (**.**) 一意の識別子をたとえば続く: **cdc です。AdventureWorks_capture です。A1ACBDED-13FC-428C-8302-10100EF74F52**です。  
+ ジョブの名前は**cdc ***。< database_name >***_cleanup**または**cdc ***。< database_name >***_capture**ここで、 *< database_name >* 現在のデータベースの名前を指定します。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 (**.**) などの一意の識別子が続く: **cdc です。AdventureWorks_capture します。A1ACBDED-13FC-428C-8302-10100EF74F52**します。  
   
- 表示するには、クリーンアップ ジョブまたはキャプチャ ジョブの現在の構成を使用して[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)です。 ジョブの構成を変更するには、使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)です。  
+ クリーンアップまたはキャプチャ ジョブの現在の構成を表示する使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)します。 ジョブの構成を変更する[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)します。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **db_owner**固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
   

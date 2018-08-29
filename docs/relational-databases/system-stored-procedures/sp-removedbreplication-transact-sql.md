@@ -1,5 +1,5 @@
 ---
-title: sp_removedbreplication (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_removedbreplication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee6f832fda56d69e064ef49c669ab2d945c5140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeda476ae204ce33c44dd858f90e19a677e74e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998006"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026578"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,25 +57,25 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
 |||  
 |-|-|  
-|**tran ステートメント**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
+|**tran**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
 |**マージ**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
-|**両方**(既定値)|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
+|**どちらも**(既定値)|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_removedbreplication**はあらゆる種類のレプリケーションで使用します。  
   
  **sp_removedbreplication**を復元するが必要なレプリケーション オブジェクトを持たないレプリケートされたデータベースを復元する場合に便利です。  
   
- **sp_removedbreplication**読み取り専用とマークされているデータベースに対して使用することはできません。  
+ **sp_removedbreplication**読み取り専用とマークされているデータベースに対しては使用できません。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_removedbreplication**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_removedbreplication**します。  
   
 ## <a name="example"></a>例  
   

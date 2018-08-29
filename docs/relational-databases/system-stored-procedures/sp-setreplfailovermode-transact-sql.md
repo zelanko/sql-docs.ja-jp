@@ -1,5 +1,5 @@
 ---
-title: sp_setreplfailovermode (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_setreplfailovermode (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6e61491e5764bd6bf5d4f3727532d5bd6790c7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eff9cf8dea592fdf711634e29ba4b175f18c9f22
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998339"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028351"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクリプションが、フェールオーバーとしてキュー更新を使用する即時更新に対して有効になっている場合、このサブスクリプションのフェールオーバー操作モードを設定できます。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。 フェールオーバー モードの詳細については、次を参照してください。[トランザクション レプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)です。  
+  サブスクリプションが、フェールオーバーとしてキュー更新を使用する即時更新に対して有効になっている場合、このサブスクリプションのフェールオーバー操作モードを設定できます。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。 フェールオーバー モードの詳細については、次を参照してください。[更新可能な Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,13 +61,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  [**@failover_mode=**] **'***failover_mode***'**  
  サブスクリプションのフェールオーバー モードを指定します。 *failover_mode*は**nvarchar (10)** これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**イミディ エイト**または**同期**|サブスクライバーで行われたデータ変更は、変更の発生時にパブリッシャーに一括コピーされます。|  
-|**キューに置かれました。**|データ変更は、格納、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー。|  
+|**キューに登録**|データの変更は、格納、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー。|  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キューは廃止されており、現在サポートされていません。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キューは、非推奨とされましたし、現在サポートされていません。  
   
  [ **@override**=]*オーバーライド*  
  内部使用のみです。  
@@ -75,14 +75,14 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_setreplfailovermode**はスナップショット レプリケーションまたはトランザクション レプリケーションでのサブスクリプションを有効にするか、キュー更新を即時更新にフェールオーバーを伴うまたは使用フェールオーバーを伴う即時更新キューに登録するには更新しています。  
+## <a name="remarks"></a>コメント  
+ **sp_setreplfailovermode**や使用されるスナップショット レプリケーションまたはトランザクション レプリケーションでのサブスクリプションを有効にするか、即時更新へのフェールオーバーとするキュー更新のフェールオーバーを即時更新キューに入れる更新しています。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_setreplfailovermode**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_setreplfailovermode**します。  
   
 ## <a name="see-also"></a>参照  
- [更新可能トランザクション サブスクリプションの更新モードを切り替える](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
+ [Switch Between Update Modes for an Updatable Transactional Subscription](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_snapshot_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_MSchange_snapshot_agent_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ad2369da53ddd339fadafac0b16e9c9a2bd2ac4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 67bd8a178ba3e7759257567fdb46af6ddd79daa4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003489"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019681"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  実行されるスナップショット エージェント ジョブのプロパティを変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降のバージョンのディストリビューター。 プロパティを変更するパブリッシャーのインスタンス上の実行時にこのストアド プロシージャを使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]です。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
+  実行されるスナップショット エージェント ジョブのプロパティを変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降のバージョンのディストリビューター。 このストアド プロシージャがパブリッシャーのインスタンス上の実行時にプロパティを変更する使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -87,10 +87,10 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
   
  [  **@frequency_interval =** ] *frequency_interval*  
- 設定した頻度に適用する値は、 *frequency_type*です。 *frequency_interval*は**int**、既定値はありません。  
+ 設定した頻度に適用する値は、 *frequency_type*します。 *frequency_interval*は**int**、既定値はありません。  
   
  [  **@frequency_subday =** ] *frequency_subday*  
- 単位*freq_subday_interval*です。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
+ 単位*freq_subday_interval*します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -100,13 +100,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**8**|Hour|  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*です。 *frequency_subday_interval*は**int**、既定値はありません。  
+ 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値はありません。  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  スナップショット エージェントを実行する日付を指定します。 *frequency_relative_interval*は**int**、既定値はありません。  
   
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- によって使用される定期実行係数*frequency_type*です。 *frequency_recurrence_factor*は**int**、既定値はありません。  
+ 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値はありません。  
   
  [ **@active_start_date =** ] *active_start_date*  
  スナップショット エージェントを最初にスケジュール設定する日付を、YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値はありません。  
@@ -127,7 +127,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**int**、既定値はありません。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値はありません。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login*が NULL で publisher *_ * * security_mode*は**1**で指定した Windows アカウント*job_login*されますパブリッシャーに接続するときに使用されます。  
+ パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値はありません。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login*が NULL で publisher *_ * * security_mode*は**1**で指定した Windows アカウント*job_login*になりますパブリッシャーに接続するときに使用されます。  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
  パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**nvarchar (524)**、既定値はありません。  
@@ -147,26 +147,26 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [ **@publisher_type**=] **'***publisher_type***'**  
  パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで実行されていないときのパブリッシャーの種類を指定します。 *publisher_type*は**sysname**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。|  
 |**ORACLE**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE GATEWAY**|Oracle ゲートウェイ パブリッシャーを指定します。|  
   
- Oracle パブリッシャーと Oracle ゲートウェイ パブリッシャーとの違いの詳細については、次を参照してください。 [Oracle 公開の概要](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)です。  
+ Oracle パブリッシャーと Oracle ゲートウェイ パブリッシャーとの違いの詳細については、次を参照してください。 [Oracle 公開の概要](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_MSchange_snapshot_agent_properties**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
   
- 実行する際は、すべてのパラメーターを指定する必要があります**sp_MSchange_snapshot_agent_properties**です。 実行[sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)をスナップショット エージェント ジョブの現在のプロパティを返します。  
+ 実行するときに、すべてのパラメーターを指定する必要があります**sp_MSchange_snapshot_agent_properties**します。 実行[sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)をスナップショット エージェント ジョブの現在のプロパティを返します。  
   
- インスタンスで、パブリッシャーを実行するときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンを使用する必要ありますまたは[sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)スナップショット エージェント ジョブのプロパティを変更します。  
+ インスタンスで、パブリッシャーを実行するときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンを使用する必要がありますまたは[sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)スナップショット エージェント ジョブのプロパティを変更します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_MSchange_snapshot_agent_properties**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_MSchange_snapshot_agent_properties**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  

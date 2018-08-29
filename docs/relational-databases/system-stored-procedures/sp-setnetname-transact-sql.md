@@ -1,5 +1,5 @@
 ---
-title: sp_setnetname (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_setnetname (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671aea34c2a6ffb4e8da9791a535f0dfd0d0baf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 71dcca516c1533c048d424e68d6aaae197d032ba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251628"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024886"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ネットワーク名を設定**sys.servers**リモート インスタンスの場合、実際のネットワーク コンピューターの名前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 含むネットワーク名を持つコンピューターをリモート ストアド プロシージャ呼び出しの実行を有効にするこの手順を使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子が無効です。  
+  ネットワーク名を設定**sys.servers**のリモート インスタンスの場合は、その実際のネットワーク コンピューター名に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 含むネットワーク名を持つコンピューターにリモート ストアド プロシージャ呼び出しの実行を有効にするこの手順を使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効な識別子です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +46,13 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引数  
- **@server = '** *サーバー* **'**  
- ユーザーが作成したリモート ストアド プロシージャ呼び出しの構文で参照しているリモート サーバーの名前を指定します。 内のただ 1 つの行**sys.servers**これを使用する存在していなければなりません*サーバー*です。 *server* のデータ型は **sysname**で、既定値はありません。  
+ **@server = '** *server* **'**  
+ ユーザーが作成したリモート ストアド プロシージャ呼び出しの構文で参照しているリモート サーバーの名前を指定します。 1 行の**sys.servers**これを使用して既に存在する必要があります*server*します。 *server* のデータ型は **sysname**で、既定値はありません。  
   
  **@netname ='** *network_name* **'**  
  リモート ストアド プロシージャ呼び出しが行われるコンピューターのネットワーク名を指定します。 *network_name*は**sysname**、既定値はありません。  
   
- この名前は一致する必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コンピューター名、および名前で許可されていない文字を含めることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。  
+ この名前は一致する必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コンピューターの名前と名前で許可されていない文字を含めることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -60,10 +60,10 @@ sp_setnetname
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  コンピューター名に無効な識別子が含まれている場合は、Windows コンピューターに対するリモート ストアド プロシージャの呼び出しで問題が生じることがあります。  
   
- リンク サーバーとリモート サーバーは同じ名前空間に存在するため、同じ名前にはできません。 ただし、定義できます、リンク サーバーと特定のサーバーに対してリモート サーバーの両方を使用して別の名前を割り当てることによって**sp_setnetname**うちの 1 つのネットワーク名を基になるサーバーのネットワーク名に設定します。  
+ リンク サーバーとリモート サーバーは同じ名前空間に存在するため、同じ名前にはできません。 ただし、定義できますリンク サーバーと特定のサーバーに対してリモート サーバーの両方を使用して別の名前を割り当てることで**sp_setnetname**うち 1 つのネットワーク名を基になるサーバーのネットワーク名に設定します。  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -76,13 +76,13 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  使用して**sp_setnetname**ローカル サーバーへのリンク サーバーをポイントすることはできません。 この方法で参照されたサーバーを分散トランザクションに加えることはできません。  
+>  使用して**sp_setnetname**ローカル サーバーにリンク サーバーを指すはサポートされていません。 この方法で参照されたサーバーを分散トランザクションに加えることはできません。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **sysadmin**と**setupadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **sysadmin**と**setupadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例で使用される一般的な管理順序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を発行、リモート ストアド プロシージャの呼び出しです。  
+ 次の例で使用される、一般的な管理順序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を発行、リモート ストアド プロシージャの呼び出し。  
   
 ```  
 USE master;  

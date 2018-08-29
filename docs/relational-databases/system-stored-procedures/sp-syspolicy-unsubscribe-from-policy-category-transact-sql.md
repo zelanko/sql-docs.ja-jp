@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_unsubscribe_from_policy_category は (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syspolicy_unsubscribe_from_policy_category は (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_unsubscribe_from_policy_category
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0c448584efd1921b7e88a84f17d2f53bb0596944
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1bad5bdd2dafa962689d3952b649388f20620722
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243921"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025251"
 ---
 # <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +44,17 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
   
 ## <a name="arguments"></a>引数  
  [ **@policy_category=** ] **'***policy_category***'**  
- 削除するポリシー カテゴリのサブスクリプションの名前を指定します。 *policy_category*は**sysname**が必要とします。  
+ 削除するポリシー カテゴリのサブスクリプションの名前を指定します。 *policy_category*は**sysname**、必要があります。  
   
- 値を取得する*policy_category*、msdb.dbo.syspolicy_policy_categories システム ビューにクエリします。  
+ 値を取得する*policy_category*、msdb.dbo.syspolicy_policy_categories システム ビューをクエリします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syspolicy_unsubscribe_from_policy_category は、ポリシー カテゴリのサブスクリプションを削除するデータベースのコンテキストで実行する必要があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

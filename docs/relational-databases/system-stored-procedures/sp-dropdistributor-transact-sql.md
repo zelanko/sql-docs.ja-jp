@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributor (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropdistributor (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0288daacc8f88decf6af642d0a864f3f08057fbd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e321b5e5976192146f9cd8d993304d5f5ae55e67
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989737"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029062"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,34 +47,34 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="arguments"></a>引数  
  [  **@no_checks=**] *no_checks*  
- ディストリビューターを削除する前に、従属オブジェクトを確認するかどうかを指定します。 *no_checks*は**ビット**、既定値は 0 です。  
+ ディストリビューターを削除する前に、従属オブジェクトを確認するかどうかを指定します。 *no_checks*は**ビット**、既定値は 0。  
   
- 場合**0**、 **sp_dropdistributor**をディストリビューター以外のすべてのパブリッシングおよびディストリビューション オブジェクトが破棄されたかどうかを確認します。  
+ 場合**0**、 **sp_dropdistributor**ディストリビューター以外のすべてのパブリッシングおよびディストリビューション オブジェクトが破棄されたことを確認します。  
   
  場合**1**、 **sp_dropdistributor**ディストリビューターをアンインストールする前にすべてのパブリッシングおよびディストリビューション オブジェクトを削除します。  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
  ディストリビューターに接続せずに、このストアド プロシージャを実行するかどうかを指定します。 *ignore_distributor*は**ビット**、既定値は**0**します。  
   
- 場合**0**、 **sp_dropdistributor**ディストリビューターに接続して、すべてのレプリケーション オブジェクトを削除します。 場合**sp_dropdistributor**ストアド プロシージャが失敗する、ディストリビューターに接続することはありません。  
+ 場合**0**、 **sp_dropdistributor**ディストリビューターに接続して、すべてのレプリケーション オブジェクトを削除します。 場合**sp_dropdistributor**は、ストアド プロシージャは失敗、ディストリビューターに接続できません。  
   
  場合**1**ディストリビューターに接続が確立されませんし、レプリケーション オブジェクトは削除されません。 これが使用されるのは、ディストリビューターがアンインストールされているか、完全にオフラインになっている場合です。 ディストリビューターでのパブリッシャーに関連するオブジェクトは、後でディストリビューターが再インストールされるまで削除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropdistributor**はあらゆる種類のレプリケーションで使用します。  
   
- サーバーで、その他のパブリッシャーまたはディストリビューション オブジェクトが存在しない場合**sp_dropdistributor**失敗しない限り、 **@no_checks**に設定されている**1**です。  
+ サーバーで、その他のパブリッシャーまたはディストリビューション オブジェクトが存在しない場合**sp_dropdistributor**失敗しない限り、 **@no_checks**に設定されている**1**します。  
   
- このストアド プロシージャを実行することによって、ディストリビューション データベースの削除後に実行する必要があります**sp_dropdistributiondb**です。  
+ 実行して、ディストリビューション データベースを削除した後、このストアド プロシージャを実行する必要があります**sp_dropdistributiondb**します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dropdistributor**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dropdistributor**します。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   

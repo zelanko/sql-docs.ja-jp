@@ -1,5 +1,5 @@
 ---
-title: sp_change_agent_profile (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_change_agent_profile (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_change_agent_profile
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66d4bb93d94492b572b9653c0be6a458f38565b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 441877f6212af070da39b828e5aaaae40e6a3ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988937"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035184"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,18 +58,18 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  次の表は、変更が可能なプロファイルのプロパティです。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
-|**説明**|プロファイルの説明。|  
+|**description**|プロファイルの説明。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_change_agent_profile**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_change_agent_profile**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_change_agent_profile**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

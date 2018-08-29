@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributiondb (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_changedistributiondb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79a09738a497dd2398005494189e4af83d99075c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4056a3cc6e8dada73358a896dbe8925b09363166
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029578"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +53,12 @@ sp_changedistributiondb [ @database= ] 'database'
  [  **@property=**] **'***プロパティ***'**  
  指定されたデータベースの変更の対象となるプロパティです。 *プロパティ*は**sysname**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**history_retention**|履歴テーブルの保持期間です。|  
 |**max_distretention**|ディストリビューションの最長保持期間です。|  
 |**min_distretention**|ディストリビューションの最短保持期間です。|  
-|NULL (既定値)|使用可能なすべて*プロパティ*値を出力します。|  
+|NULL (既定値)|使用可能なすべて*プロパティ*値が出力されます。|  
   
  [  **@value=**] **'***値***'**  
  指定したプロパティの新しい値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
@@ -65,14 +66,14 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changedistributiondb**はあらゆる種類のレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changedistributiondb**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changedistributiondb**します。  
   
 ## <a name="see-also"></a>参照  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

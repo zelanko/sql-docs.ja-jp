@@ -1,5 +1,5 @@
 ---
-title: sp_catalogs (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_catalogs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 360cc30c65068ffe2b3b6b38eab57cc7b9fe1f91
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: d4a5f266872a8e16932fb2fd52c06636ecdcb54e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33239372"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030109"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したリンク サーバーにあるカタログの一覧を返します。 これは、データベース内に相当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  指定したリンク サーバーにあるカタログの一覧を返します。 これは、データベース内に相当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +50,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**catalog_name**|**nvarchar(** 128 **)**|カタログの名前。|  
+|**Catalog_name**|**nvarchar(** 128 **)**|カタログの名前。|  
 |**description**|**nvarchar (** 4000 **)**|カタログの説明。|  
   
 ## <a name="permissions"></a>アクセス許可  

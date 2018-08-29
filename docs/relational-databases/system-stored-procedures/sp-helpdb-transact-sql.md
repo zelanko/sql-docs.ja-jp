@@ -1,5 +1,5 @@
 ---
-title: sp_helpdb (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpdb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7961664bce12a2f1b73e8ca90c6cca11e1075d27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09dc7e451e5122600b0ea32222f6fa913c2716f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255136"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027706"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +52,19 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|データベース名。|  
 |**db_size**|**nvarchar (13)**|データベースの総サイズです。|  
-|**所有者**|**sysname**|データベースの所有者は、のように**sa**です。|  
+|**所有者**|**sysname**|データベースの所有者は、 **sa**します。|  
 |**dbid**|**smallint**|データベース ID。|  
 |**created**|**nvarchar (11)**|データベースの作成日です。|  
-|**ステータス**|**nvarchar (600)**|データベースで現在設定されているデータベース オプションの、コンマで区切られたリストです。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 形式でそれらの値がブール型以外のオプションが表示されている*option_name*=*値*です。<br /><br /> 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
+|**status**|**nvarchar (600)**|データベースで現在設定されているデータベース オプションの、コンマで区切られたリストです。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 形式でそれらの値、ブール型以外のオプションが表示*option_name*=*値*します。<br /><br /> 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
 |**compatibility_level**|**tinyint**|データベースの互換性レベル (60、65、70、80、および 90) です。|  
   
- 場合*名前*を指定すると、指定されたデータベースのファイルの割り当てを示す追加の結果セットが存在します。  
+ 場合*名前*を指定すると、指定されたデータベースのファイルの割り当てを表示する追加の結果セットが存在します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|論理ファイル名です。|  
 |**fileid**|**smallint**|ファイル ID。|  
@@ -73,15 +73,15 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**size**|**nvarchar(18)**|ファイル サイズ (MB 単位) です。|  
 |**maxsize**|**nvarchar(18)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**growth**|**nvarchar(18)**|ファイルを拡張するときの増分です。 これは、新たに領域が必要になるたびにファイルに追加する容量を示します。|  
-|**使用状況**|**varchar (9)**|ファイルの使い方を示します。 データ ファイルの場合は、値は **'data only'** と、値は、ログ ファイルの **'ログのみ'** です。|  
+|**使用状況**|**varchar (9)**|ファイルの使い方を示します。 データ ファイルの場合、値は **'data only'** とログ ファイルの値が **'ログのみ'** します。|  
   
-## <a name="remarks"></a>解説  
- **ステータス**結果内の列がどのオプションは、データベースで ON に設定されているレポートを設定します。 すべてのデータベース オプションがによって報告されていない、**ステータス**列です。 現在のデータベース オプションの設定の完全な一覧を表示する、 **sys.databases**カタログ ビューです。  
+## <a name="remarks"></a>コメント  
+ **状態**結果の列は、オプションは、データベースで ON に設定されているレポートを設定します。 すべてのデータベース オプションがによって報告されていない、**状態**列。 現在のデータベース オプションの設定の完全な一覧を表示する、 **sys.databases**カタログ ビューです。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  1 つのデータベースが指定されている場合、メンバーシップ、**パブリック**データベース内のロールが必要です。 データベースが指定されていない場合のメンバーシップ、**パブリック**における役割、**マスター**データベースが必要です。  
   
- データベースにアクセスすることはできない場合、 **sp_helpdb**可能な限り、データベースに関するエラー メッセージ 15622 と情報が表示されます。  
+ データベースにアクセスできない場合**sp_helpdb**可能な限り、データベースに関するエラー メッセージ 15622 とあまり情報が表示されます。  
   
 ## <a name="examples"></a>使用例  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_unsetapprole (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_unsetapprole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unsetapprole
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad1bc32a3d1eb6b42ccd7c709217427d2926bac6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f57eb690c679218d9bd8f639e3f3215652351f5b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252337"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026941"
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,26 +45,26 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>引数  
  **@cookie**  
- アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 Cookie がによって作成された[sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)です。 **varbinary (8000)** です。  
+ アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 Cookie がによって作成された[sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)します。 **varbinary (8000)** します。  
   
 > [!NOTE]  
->  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションが継続して予約する必要があります**varbinary (8000)** アプリケーションのサイズの増加、将来のリリースでクッキーの戻り値が正しく動作を継続できるようにします。  
+>  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションが引き続き予約**varbinary (8000)** サイズの増加、将来のリリースでクッキーの戻り値が正しく動作するアプリケーションが引き続き行われるようにします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または 1 (失敗)  
+ 0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- 使用して、アプリケーション後ロールがアクティブ化された**sp_setapprole**、ユーザーがサーバーからの接続が切断またはが実行されるまで、ロールがアクティブなまま**sp_unsetapprole**です。  
+## <a name="remarks"></a>コメント  
+ 使用して、アプリケーション後ロールをアクティブ化**sp_setapprole**、ユーザーがサーバーから切断またはを実行するまで、ロールがアクティブなまま**sp_unsetapprole**します。  
   
- アプリケーション ロールの概要については、次を参照してください。[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)です。  
+ アプリケーション ロールの概要については、次を参照してください。[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)します。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要**パブリック**とアプリケーション ロールがアクティブ化されたときに保存されたクッキーの情報です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要**パブリック**とアプリケーション ロールがアクティブ化時に保存する cookie の知識。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>クッキーの作成を指定してアプリケーション ロールをアクティブ化し、その後以前のコンテキストに戻す  
- 次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 例では、現在のユーザーの名前を返し、し、実行して元のコンテキストに戻します**sp_unsetapprole**です。  
+ 次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 例では、現在のユーザーの名前を返し、し、実行して、元のコンテキストに戻します**sp_unsetapprole**します。  
   
 ```  
 DECLARE @cookie varbinary(8000);  

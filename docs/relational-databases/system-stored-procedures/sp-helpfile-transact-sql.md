@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile を実行 (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpfile を実行する (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4de2e386d30c718177482cd50d38f169922f5d8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 74acb22b50ce918f070c817cb8954b46e47bb876
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023840"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,22 +52,22 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|論理ファイル名です。|  
-|**fileid**|**smallint**|ファイルの数値識別子。 場合は返されません*名前*が指定されている*です。*|  
+|**fileid**|**smallint**|ファイルの数値識別子。 場合は返されません*名前*が指定されて*します。*|  
 |**filename**|**nchar(260)**|物理ファイル名|  
-|**filegroup**|**sysname**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルは、ログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
+|**filegroup**|**sysname**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルは、ログ ファイル。 ログ ファイルはファイル グループのメンバーにはなりません。|  
 |**size**|**nvarchar(15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar(15)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**growth**|**nvarchar(15)**|ファイルを拡張するときの増分です。 これは、新しい領域が必要になるたびにファイルに追加される容量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
-|**使用状況**|**varchar (9)**|データ ファイルの場合、値は **'data only'** と、値は、ログ ファイルの **'ログのみ'** です。|  
+|**使用状況**|**varchar (9)**|データ ファイルの場合、値は **'data only'** とログ ファイルの値が **'ログのみ'** します。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、内のファイルに関する情報を返します[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]です。  
+ 次の例は、内のファイルに関する情報を返します[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]します。  
   
 ```sql  
 USE AdventureWorks2012;  

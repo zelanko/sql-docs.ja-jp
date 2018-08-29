@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_change_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 499c95fc980bd6e8d996b14c47907b814cbb94aa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 284aca27c2c75cb23d489e915acf1ef48a082c7a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240002"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019488"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_change_log_shipping_secondary_primary
  バックアップ ファイルのコピー先となるセカンダリ サーバーのディレクトリ。 *backup_destination_directory*は**nvarchar (500)** NULL にすることはできません。  
   
  [ **@file_retention_period** =] '*file_retention_period*'  
- 履歴を保持する期間を分単位で指定します。 *ヒストリは削除*は**int**、既定値は NULL です。 値 14420 は、指定されていない場合に使用されます。  
+ 履歴を保持する期間を分単位で指定します。 *history_retention_period*は**int**、既定値は NULL です。 指定されていない場合、値 14420 が使用されます。  
   
  [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  監視サーバーへの接続に使用されるセキュリティ モード。  
@@ -86,18 +86,18 @@ sp_change_log_shipping_secondary_primary
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **sp_change_log_shipping_secondary_primary**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベースです。 このストアド プロシージャでは次の処理が行われます。  
+## <a name="remarks"></a>コメント  
+ **sp_change_log_shipping_secondary_primary**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベース。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  設定を変更、 **log_shipping_secondary**に応じてを記録します。  
   
-2.  変更が内のレコードを監視して、監視サーバーがセカンダリ サーバーと異なる場合は、 **log_shipping_monitor_secondary**モニターでサーバーを使用して、指定された引数に必要な場合です。  
+2.  変更が内のレコードを監視して、監視サーバーがセカンダリ サーバーと異なる場合は、 **log_shipping_monitor_secondary**モニターでサーバーを使用して、指定された引数に必要な場合。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
   
 ## <a name="see-also"></a>参照  
- [ログ配布 & #40; についてSQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

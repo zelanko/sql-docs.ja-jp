@@ -1,5 +1,5 @@
 ---
-title: sp_articlecolumn (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_articlecolumn (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlecolumn
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 407c4470ae7dad6a871736df822cb00a22882122
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e01dd3b2c0a7592520c63462de4e4e41bc15c8d3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993199"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020149"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,10 +67,10 @@ sp_articlecolumn [ @publication = ] 'publication'
  アーティクルの列を追加するか削除するかを指定します。 *操作*は**nvarchar (5)**、既定値は add です。 **追加**レプリケーションする列をマークします。 **drop**列のマークを解除します。  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
- レプリケートされた列数と一致するように、即時更新サブスクリプションをサポートするストアド プロシージャを再生成するかどうかを指定します。 *refresh_synctran_procs*は**ビット**、既定値は**1**です。 場合**1**、ストアド プロシージャを再生成します。  
+ レプリケートされた列数と一致するように、即時更新サブスクリプションをサポートするストアド プロシージャを再生成するかどうかを指定します。 *refresh_synctran_procs*は**ビット**、既定値は**1**します。 場合**1**、ストアド プロシージャが再生成します。  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
- ディストリビューターに接続しなくてもこのストアド プロシージャが実行されるかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。 場合**0**パブリッシング用のデータベースを有効にする必要があります、およびアーティクルによってレプリケートされた新しい列を反映するようにアーティクル キャッシュを更新する必要があります。 場合**1**アーティクルの列はパブリッシュされていないデータベースに存在する; 復元状況でのみ使用する必要があるアーティクルに対して削除を許可します。  
+ ディストリビューターに接続しなくてもこのストアド プロシージャが実行されるかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。 場合**0**パブリッシング用のデータベースを有効にする必要があります、アーティクルによってレプリケートされた新しい列を反映するようにアーティクル キャッシュを更新する必要があります。 場合**1**アーティクルの列はパブリッシュされていないデータベースの回復の状況でのみ使用する必要がありますをアーティクルに対して削除を許可します。  
   
  [  **@change_active =** ] *@change_active*  
  サブスクリプションを持つパブリケーションの列の変更を許可します。 *@change_active*は、 **int** 、既定値は**0**します。 場合**0**列は変更されません。 場合**1**列を追加またはサブスクリプションを持つアクティブなアーティクルから削除されることができます。  
@@ -81,15 +80,15 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  
   
- **1**アーティクルへの変更がスナップショットが無効であることがあり、新しいスナップショットが必要となる既存のサブスクリプションがある場合は、アクセス許可を与える不使用とマークするのには、既存のスナップショットと、新しいスナップショットを生成するように指定します。  
+ **1**アーティクルへの変更はスナップショットが無効であることがあり、新しいスナップショットを必要とする既存のサブスクリプションがある場合は、アクセス許可を付与 obsolete としてマーク済みである既存のスナップショットを新しいスナップショットを生成を指定します。  
   
  [ **@force_reinit_subscription =** ]*更によって*  
  このストアド プロシージャが実行する操作によって、既存のサブスクリプションの再初期化が必要になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
   
- **0**アーティクルへの変更によってが再初期化するサブスクリプションを指定します。 場合は、ストアド プロシージャを再初期化するサブスクリプションを変更が必要で検出されると、エラーが発生し、変更は行われません。 **1**アーティクルへの変更が既存のサブスクリプションが初期化されることを指定します、サブスクリプションの再初期化を許可します。  
+ **0**アーティクルへの変更では、サブスクリプションを再初期化するのには発生しないことを指定します。 ストアド プロシージャが、変更がサブスクリプションの再初期化する必要になることを検出した場合は、エラーが発生し、変更は行われません。 **1**アーティクルへの変更が発生する既存のサブスクリプションを再初期化することを指定します。 サブスクリプションの再初期化を許可します。  
   
  [  **@publisher=** ] **'***パブリッシャー***'**  
- 指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*では使用できません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
@@ -100,20 +99,20 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_articlecolumn**はスナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_articlecolumn**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
   
- 使用してサブスクライブされていないアーティクルのみをフィルター処理すること**sp_articlecolumn**です。  
+ 使用して、サブスクライブされていないアーティクルのみをフィルター処理すること**sp_articlecolumn**します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_articlecolumn**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_articlecolumn**します。  
   
 ## <a name="see-also"></a>参照  
- [アーティクルを定義します。](../../relational-databases/replication/publish/define-an-article.md)   
- [列フィルター定義および変更](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define and Modify a Column Filter](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
  [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   

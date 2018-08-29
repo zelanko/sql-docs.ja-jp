@@ -16,16 +16,15 @@ helpviewer_keywords:
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7135846a7d442f9f43bfac505ed35a903c6b874a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4836c7e6c6ce0199b280a3f2d4534f506591aad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283098"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020349"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
   このページのセキュリティと保護に関して必要な情報の検索に役立つリンクを提供する、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]します。  
@@ -107,7 +106,7 @@ ms.locfileid: "37283098"
   
  `Restricting Data Access to Selected Data Elements`  
   
--    [ビュー](../views/views.md) と [プロシージャ](../stored-procedures/stored-procedures-database-engine.md)を使用したデータ アクセスの制限  
+-   [ビュー](../views/views.md) と [プロシージャ](../stored-procedures/stored-procedures-database-engine.md)を使用したデータ アクセスの制限  
   
 -   [行レベルのセキュリティ](http://msdn.microsoft.com/library/azure/dn765131.aspx)  
   

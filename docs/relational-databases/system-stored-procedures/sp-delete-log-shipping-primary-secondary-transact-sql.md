@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_primary_secondary (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_log_shipping_primary_secondary (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_primary_secondary
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a209eeacb1f43006cb3d5fff224f120bbf0f447
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d8ab661a4f11d6669700a4f0963acf55f99c26f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258919"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023401"
 ---
 # <a name="spdeletelogshippingprimarysecondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +61,14 @@ sp_delete_log_shipping_primary_secondary
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>解説  
- **sp_delete_log_shipping_primary_secondary**から実行する必要があります、**マスター**プライマリ サーバー上のデータベースです。 このストアド プロシージャからのセカンダリ データベースのエントリを削除する**log_shipping_primary_secondaries**プライマリ サーバーでします。  
+## <a name="remarks"></a>コメント  
+ **sp_delete_log_shipping_primary_secondary**から実行する必要があります、**マスター**プライマリ サーバー上のデータベース。 このストアド プロシージャからのセカンダリ データベースのエントリを削除する**log_shipping_primary_secondaries**プライマリ サーバーでします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`sp_delete_log_shipping_primary_secondary`をセカンダリ データベースを削除するために使用`LogShipAdventureWorks`、セカンダリ サーバーから`FLATIRON`です。  
+ 次の例では、`sp_delete_log_shipping_primary_secondary`セカンダリ データベースを削除するために使用`LogShipAdventureWorks`セカンダリ サーバーから`FLATIRON`します。  
   
 ```  
 EXEC master.dbo.sp_delete_log_shipping_primary_secondary  
@@ -80,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ログ配布 & #40; についてSQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

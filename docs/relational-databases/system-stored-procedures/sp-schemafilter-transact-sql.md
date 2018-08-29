@@ -1,5 +1,5 @@
 ---
-title: sp_schemafilter (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_schemafilter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce33fa1ffb73f3ba663eb9ec7fedf0e13d5ec8e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da23d87736d7ad9af4c00c5f4704e9cbbdd5160
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997519"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027036"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
  [**@operation** =] **'***操作***'**  
  このスキーマで実行されるアクションです。 *操作*は**nvarchar (4)** 値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**add**|指定されたスキーマを、パブリケーションに適さないスキーマの一覧に追加します。|  
 |**drop**|指定されたスキーマを、パブリケーションに適さないスキーマの一覧から削除します。|  
@@ -64,18 +64,18 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**スキーマ名**|**sysname**|パブリケーションに適さないスキーマの名前です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_schemafilter**異種パブリッシャーでのみ使用する必要があります。  
+## <a name="remarks"></a>コメント  
+ **sp_schemafilter**異種パブリッシャーのみに使用する必要があります。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_schemafilter**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_schemafilter**します。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

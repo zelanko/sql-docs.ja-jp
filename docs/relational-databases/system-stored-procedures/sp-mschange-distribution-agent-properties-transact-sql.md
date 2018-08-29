@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_distribution_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_MSchange_distribution_agent_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_MSchange_distribution_agent_properties
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1387dc3bfa669187f221a60f4d6f6f126410975f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75b89dab3a8e8e1aaaf967101ffaac566ec34d06
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002179"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022871"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  実行されるディストリビューション エージェント ジョブのプロパティを変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降のバージョンのディストリビューター。 プロパティを変更するパブリッシャーのインスタンス上の実行時にこのストアド プロシージャを使用[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]です。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
+  実行されるディストリビューション エージェント ジョブのプロパティを変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降のバージョンのディストリビューター。 このストアド プロシージャがパブリッシャーのインスタンス上の実行時にプロパティを変更する使用[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,23 +74,23 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  次の表に、変更可能なディストリビューション エージェント ジョブのプロパティと、プロパティの値に関する制限を示します。  
   
-|プロパティ|値|Description|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
 |**distrib_job_password**||エージェント ジョブを実行する Windows アカウントのパスワード。|  
-|**対応する、**||OLE DB プロバイダーに接続するときに使用されるカタログ。 *このプロパティはに対してのみ有効以外*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバーです。*|  
-|**subscriber_datasource**||OLE DB プロバイダーで認識されるデータ ソースの名前。 *このプロパティはに対してのみ有効以外*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバーです。*|  
-|**subscriber_location**||OLE DB プロバイダーで認識されるデータベースの場所。 *このプロパティはに対してのみ有効以外*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバーです。*|  
+|**対応します。**||OLE DB プロバイダーに接続するときに使用されるカタログ。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
+|**subscriber_datasource**||OLE DB プロバイダーで認識されるデータ ソースの名前。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
+|**subscriber_location**||OLE DB プロバイダーで認識されるデータベースの場所。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
 |**subscriber_login**||サブスクリプションの同期で、サブスクライバーに接続するときに使用するログイン。|  
-|**subscriber_password**||サブスクライバーのパスワード。<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
-|**subscriber_provider**||一意なプログラム識別子 (PROGID) を OLE DB provider for 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソースを登録します。 *このプロパティはに対してのみ有効以外*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバーです。*|  
-|**subscriber_providerstring**||データ ソースを識別する、OLE DB プロバイダー固有の接続文字列。 *このプロパティは有効の SQL Server 以外のサブスクライバーだけです。*|  
+|**@subscriber_password**||サブスクライバーのパスワード。<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
+|**subscriber_provider**||一意なプログラム識別子 (PROGID) を OLE DB provider for 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソースを登録します。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
+|**subscriber_providerstring**||データ ソースを識別する、OLE DB プロバイダー固有の接続文字列。 *このプロパティでは、有効の SQL Server 以外のサブスクライバーのみです。*|  
 |**subscriber_security_mode**|**1**|Windows 認証。<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。|  
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー|  
 ||**1**|ODBC データ ソース サーバー|  
 ||**3**|OLE DB プロバイダー|  
-|**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数を表します。 *サポートされていません。 非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー、Oracle パブリッシャーの場合、またはピア ツー ピア サブスクリプションです。*|  
+|**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数を表します。 *サポートされていません以外*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー、Oracle パブリッシャーの場合、またはピア ツー ピア サブスクリプションです。*|  
   
 > [!NOTE]  
 >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
@@ -98,13 +98,13 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_MSchange_distribution_agent_properties**はスナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_MSchange_distribution_agent_properties**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
   
- インスタンスで、パブリッシャーを実行するときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンを使用する必要がある、または[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)ディストリビューター側で実行されているプッシュ サブスクリプションを同期するマージ エージェント ジョブのプロパティを変更します。  
+ インスタンスで、パブリッシャーを実行するときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンを使用する必要がありますまたは[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)ディストリビューターで実行されているプッシュ サブスクリプションを同期するマージ エージェント ジョブのプロパティを変更します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_MSchange_distribution_agent_properties**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_MSchange_distribution_agent_properties**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addpushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   

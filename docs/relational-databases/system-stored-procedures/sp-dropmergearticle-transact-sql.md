@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergearticle (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropmergearticle (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adcb52b18b12c61f8ea0154d668e000c9ca47020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87a999b49b7239531b7aa374c1695226af3df1a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991284"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028971"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
  アーティクルを削除するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@article=**] **'***記事***'**  
- 指定したパブリケーションから削除するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。 場合**すべて**、指定したマージ パブリケーションのすべての既存のアーティクルが削除されます。 場合でも*記事*は**すべて**パブリケーションを削除しなければなりませんとは別に、アーティクルからです。  
+ 指定したパブリケーションから削除するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。 場合**すべて**、指定したマージ パブリケーションのすべての既存のアーティクルを削除します。 場合でも*記事*は**すべて**パブリケーションを削除しなければなりませんとは別に、アーティクルからです。  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
  ディストリビューターに接続せずに、このストアド プロシージャを実行するかどうかを指定します。 *ignore_distributor*は**ビット**、既定値は**0**します。  
@@ -62,18 +62,18 @@ sp_dropmergearticle [ @publication= ] 'publication'
  将来の使用に備えて予約されています。 *予約済み*は**nvarchar (20)**、既定値は NULL です。  
   
  [  **@force_invalidate_snapshot=**]*更によって*  
- スナップショットを無効にする機能を有効または無効にします。 *更によって*は、**ビット**、既定で**0**します。  
+ スナップショットを無効にする機能を有効または無効にします。 *更によって*は、**ビット**、既定値は、 **0**します。  
   
  **0**スナップショットが無効であることをマージ アーティクルへの変更が発生しないことを指定します。  
   
- **1**スナップショットが無効であることが発生する可能性があります、マージ アーティクルに変更することを意味し、この場合の値であるかどうかは**1**新しいスナップショットを作成する権限が与えられます。  
+ **1**スナップショットが無効であることをマージ アーティクルへの変更が生じる場合、値があるかどうかと**1**新しいスナップショットを作成する権限が与えられます。  
   
  [  **@force_reinit_subscription =** ]*更によって*  
  アーティクルを削除したとき、既存のサブスクリプションが必ず再初期化されるようにします。 *更によって*は、**ビット**、既定値は**0**します。  
   
- **0**が、アーティクルを削除するがでないを再初期化するサブスクリプションを指定します。  
+ **0**アーティクルを削除するも、サブスクリプションを再初期化するのには発生しませんを指定します。  
   
- **1**アーティクルが初期化されることを既存のサブスクリプションを削除して、サブスクリプションの再初期化が発生する許可を意味します。  
+ **1**記事により、再初期化するために既存のサブスクリプションを削除すると、サブスクリプションを再初期化が発生するの許可します。  
   
  [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
  内部使用のみです。  
@@ -81,13 +81,13 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_dropmergearticle**はマージ レプリケーションで使用します。 詳細については、アーティクルを削除する、次を参照してください。[をにアーティクルを追加し、既存のパブリケーションのアーティクルのドロップ](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)です。  
+## <a name="remarks"></a>コメント  
+ **sp_dropmergearticle**はマージ レプリケーションで使用します。 アーティクルを削除する詳細については、次を参照してください。[記事を追加し、既存のパブリケーションからアーティクル](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)します。  
   
- 実行する**sp_dropmergearticle**パブリケーションからアーティクルを削除する削除されませんオブジェクトから、パブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 必要であれば `DROP <object>` を使用して、手動でこれらのオブジェクトを削除します。  
+ 実行**sp_dropmergearticle**パブリケーションからアーティクルを削除してから削除されません、オブジェクト、パブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 必要であれば `DROP <object>` を使用して、手動でこれらのオブジェクトを削除します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergearticle**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergearticle**します。  
   
 ## <a name="example"></a>例  
   

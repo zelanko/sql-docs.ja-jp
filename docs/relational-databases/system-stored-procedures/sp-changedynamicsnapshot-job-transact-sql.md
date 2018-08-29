@@ -1,5 +1,5 @@
 ---
-title: sp_changedynamicsnapshot_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_changedynamicsnapshot_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c31883e19d688dd7158ece061144ae7d44ccf30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a87e787339fec7991d1cc4a1bee5e14b79a1a3fc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992169"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018395"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- 変更するスナップショット ジョブの名前を指定します。 *dynamic_snapshot_jobname*は**sysname**既定値は N '%' です。 場合*dynamic_snapshot_jobid*を指定すると、既定値を使用する必要があります*dynamic_snapshot_jobname*です。  
+ 変更するスナップショット ジョブの名前を指定します。 *dynamic_snapshot_jobname*は**sysname**既定値は N '%' です。 場合*dynamic_snapshot_jobid*の既定値を使用する必要があります指定*dynamic_snapshot_jobname*します。  
   
  [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- 変更するスナップショット ジョブの ID を指定します。 *dynamic_snapshot_jobid*は**uniqueidentifier**既定値は NULL です。 場合*dynamic_snapshot_jobname*を指定すると、既定値を使用する必要があります*dynamic_snapshot_jobid*です。  
+ 変更するスナップショット ジョブの ID を指定します。 *dynamic_snapshot_jobid*は**uniqueidentifier**既定値は NULL です。 場合*dynamic_snapshot_jobname*の既定値を使用する必要があります指定*dynamic_snapshot_jobid*します。  
   
  [  **@frequency_type =** ] *frequency_type*  
  エージェントをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**値は次のいずれかを指定できます。  
@@ -112,7 +112,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |NULL (既定値)||  
   
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*です。 *frequency_subday_interval*は**int**、既定値は NULL です。  
+ 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  マージ エージェントを実行する日付を指定します。 このパラメーターが使用されるときに*frequency_type*に設定されている**32** (月単位)。 *frequency_relative_interval*は**int**値は次のいずれかを指定できます。  
@@ -127,7 +127,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |NULL (既定値)||  
   
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- によって使用される定期実行係数*frequency_type*です。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
+ 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
   
  [ **@active_start_date =** ] *active_start_date*  
  マージ エージェントを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値は NULL です。  
@@ -142,7 +142,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  マージ エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
   
  [  **@job_login=** ] **'***job_login***'**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]パラメーター化された行フィルターを使用してサブスクリプションのスナップショットを生成するときに、スナップショット エージェントを実行する Windows アカウントです。 *job_login*は**nvarchar (257)** 既定値は NULL です。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]パラメーター化された行フィルターを使用してサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する Windows アカウント。 *job_login*は**nvarchar (257)** 既定値は NULL です。  
   
  [  **@job_password=** ] **'***job_password***'**  
  パラメーター化された行フィルターを使ってサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password*は**nvarchar (257)** 既定値は NULL です。  
@@ -153,13 +153,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_changedynamicsnapshot_job**はパブリケーションのパラメーター化された行フィルターを使用してマージ レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_changedynamicsnapshot_job**はパブリケーションのパラメーター化された行フィルターを使用したマージ レプリケーションで使用します。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changedynamicsnapshot_job**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changedynamicsnapshot_job**します。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

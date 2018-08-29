@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_actions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.server_event_session_actions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,33 +22,33 @@ helpviewer_keywords:
 - xe
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5593ee2852542af4bee958846172f30a2b0a07
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cfb1abc59c30f9524c026bbe48095a1a0bcb7cc4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220563"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026951"
 ---
 # <a name="sysservereventsessionactions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   イベント セッションの各イベントのアクションごとに 1 行のデータを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
 |event_id|**int**|イベントの ID。 この ID は、イベント セッション オブジェクト内で一意です。 NULL 値は許可されません。|  
-|name|**sysname**|アクションの名前です。 NULL 値が許可されます。|  
+|NAME|**sysname**|アクションの名前。 NULL 値が許可されます。|  
 |パッケージ (package)|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値が許可されます。|  
 |モジュール (module)|**sysname**|イベントを含むモジュールの名前。 NULL 値が許可されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このビューは、次に示すリレーションシップの基数を持ちます。  
   
 ||||  

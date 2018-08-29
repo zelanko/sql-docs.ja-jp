@@ -1,5 +1,5 @@
 ---
-title: sp_changereplicationserverpasswords (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_changereplicationserverpasswords (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7c27142aa0e628e7041202429ae6bbaee0b87a1f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae1883006db7eaffe1e10ffcee2c36619f66c73
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989697"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029963"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  保存されたパスワードを変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントまたは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーション トポロジ内のサーバーに接続するときに、レプリケーション エージェントによって使用されるログインです。 通常は、サーバーで実行中のエージェントがすべて同じログインまたはアカウントを使用している場合でも、個々のエージェントごとにパスワードを変更する必要があります。 このストアド プロシージャにより、サーバーで実行中のすべてのレプリケーション エージェントが使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows アカウントのすべてのインスタンスに対するパスワードを変更することができます。 このストアド プロシージャは、レプリケーション トポロジ内の任意のサーバー側で master データベースについて実行されます。  
+  保存されたパスワードの変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントまたは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーション トポロジ内のサーバーに接続するときに、レプリケーション エージェントで使用されるログイン。 通常は、サーバーで実行中のエージェントがすべて同じログインまたはアカウントを使用している場合でも、個々のエージェントごとにパスワードを変更する必要があります。 このストアド プロシージャにより、サーバーで実行中のすべてのレプリケーション エージェントが使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows アカウントのすべてのインスタンスに対するパスワードを変更することができます。 このストアド プロシージャは、レプリケーション トポロジ内の任意のサーバー側で master データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,18 +55,18 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証  
   
  [ **@login** =] **'***ログイン***'**  
- Windows アカウントの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを変更します。 *ログイン*は**nvarchar (257)**、既定値はありません  
+ Windows アカウントの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を変更するログイン。 *ログイン*は**nvarchar (257)**、既定値はありません  
   
  [ **@password** =] **'***パスワード***'**  
- 新しいパスワードを格納する、指定された*ログイン*です。 *パスワード*は**sysname**、既定値はありません。  
+ 新しいパスワードを格納する、指定された*ログイン*します。 *パスワード*は**sysname**、既定値はありません。  
   
 > [!NOTE]  
 >  レプリケーション パスワードを変更したら、そのパスワードを使用する各エージェントを停止して再起動し、エージェントに対して変更を反映させる必要があります。  
   
- [ **@server** =] **'***サーバー***'**  
- 保存パスワードを変更するサーバー接続を指定します。 *サーバー*は**sysname**、これらの値のいずれかを指定できます。  
+ [ **@server** =] **'***server***'**  
+ 保存パスワードを変更するサーバー接続を指定します。 *server*は**sysname**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**ディストリビューター**|ディストリビューターへのすべてのエージェント接続です。|  
 |**パブリッシャー**|パブリッシャーへのすべてのエージェント接続です。|  
@@ -77,11 +76,11 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changereplicationserverpasswords**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changereplicationserverpasswords**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changereplicationserverpasswords**します。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  

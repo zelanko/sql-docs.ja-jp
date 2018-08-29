@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproperty (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropextendedproperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 750b1df6bff427c2e5c4931ad3007a66ddbb1917
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9652fbb73cb3efc8d2ddd562593e2c2b457ab0e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258431"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023187"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_dropextendedproperty
  有効な値は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、および NULL です。  
   
 > [!IMPORTANT]  
->  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
+>  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
   
  [ @level0name=] {'*level0_object_name*'}  
  指定したレベル 0 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。  
@@ -84,12 +84,12 @@ sp_dropextendedproperty
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- 内のオブジェクトの拡張プロパティを指定するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースは、次の 3 つのレベルに分類されます。 0、1、および 2 です。 レベル 0 は、最上位のレベルし、は、データベース スコープに含まれているオブジェクトとして定義します。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。 あるレベルのオブジェクトを参照する場合は、その上位レベルにあるすべてのオブジェクトの種類と名前で修飾する必要があります。  
+## <a name="remarks"></a>コメント  
+ 内のオブジェクトの拡張プロパティを指定するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース 3 つのレベルに分類されます。 0、1、および 2 です。 レベル 0 は、最上位のレベルし、データベース スコープに含まれるオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。 あるレベルのオブジェクトを参照する場合は、その上位レベルにあるすべてのオブジェクトの種類と名前で修飾する必要があります。  
   
  指定する有効な*property_name*プロパティが削除されるか、すべてのオブジェクトの種類および名前が null と、プロパティは、現在のデータベースに存在するかどうか。 このトピックの例 B を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  固定データベース ロール db_owner および db_ddladmin のメンバーは、任意のオブジェクトの拡張プロパティを削除できます。ただし、例外として、db_ddladmin はデータベース自体、ユーザー、およびロールに対しては、プロパティを追加できません。  
   
  ユーザーは、自身が所有するオブジェクト、および ALTER 権限または CONTROL 権限を持つオブジェクトの拡張プロパティを削除できます。  

@@ -1,5 +1,5 @@
 ---
-title: syspolicy_system_health_state (TRANSACT-SQL) |Microsoft ドキュメント
+title: syspolicy_system_health_state (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,23 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_system_health_state view
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2978c1f2e79e0f519b46fb47d67778187c4ef1db
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dbdc22b03d58bb3aac10b684d4fdc2e0c074123b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220293"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027871"
 ---
 # <a name="syspolicysystemhealthstate-transact-sql"></a>syspolicy_system_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ポリシー ベースの管理ポリシーと対象のクエリ式の組み合わせごとに 1 つの行を表示します。 サーバーのポリシー正常性をプログラムで確認するには、syspolicy_system_health_state ビューを使用します。 次の表では、syspolicy_system_health_state ビュー内の列について説明します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |health_state_id|**bigint**|ポリシー正常性状態レコードの識別子。|  
 |policy_id|**int**|ポリシーの識別子。|  
@@ -43,14 +42,14 @@ ms.locfileid: "33220293"
 |target_query_expression|**nvarchar(max)**|ポリシーが評価される対象を定義する式。|  
 |result|**bit**|ポリシーに対するこの対象の正常性状態:<br /><br /> 0 = 失敗<br /><br /> 1 = 成功|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  syspolicy_system_health_state ビューには、対象のクエリ式の最新の正常性状態が、アクティブ (有効) なポリシーごとに表示されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーと [オブジェクト エクスプローラーの詳細] ページでは、このビューのポリシー正常性が集計され、重大な正常性状態が表示されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用して、サーバーを管理します。](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

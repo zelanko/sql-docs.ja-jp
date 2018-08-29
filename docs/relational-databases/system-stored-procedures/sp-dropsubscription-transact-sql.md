@@ -1,5 +1,5 @@
 ---
-title: sp_dropsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6477b090fd3a98626b79a6db83cea729b4dec07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dc8bba63c8b1ffef6e1c24810c9457e1e9b5242
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993759"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029114"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>引数  
  [  **@publication=** ] **'***パブリケーション***'**  
- 関連付けられているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。 場合**すべて**、指定したサブスクライバーのすべてのパブリケーションのすべてのサブスクリプションが取り消されました。 *パブリケーション*必須パラメーターです。  
+ 関連付けられているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。 場合**すべて**、指定のサブスクライバーのすべてのパブリケーションのすべてのサブスクリプションが取り消されました。 *パブリケーション*必須パラメーターです。  
   
  [  **@article=** ] **'***記事***'**  
- アーティクルの名前を指定します。 *記事*は**sysname**既定値は NULL です。 場合**すべて**、ごとにすべてのアーティクルに対してサブスクリプションがパブリケーションとサブスクライバーが削除を指定します。 使用して**すべて**即時を許可するパブリケーションを更新します。  
+ アーティクルの名前を指定します。 *記事*は**sysname**既定値は NULL です。 場合**すべて**、ごとにすべてのアーティクルに対してサブスクリプションがパブリケーションとサブスクライバーの削除を指定します。 使用**すべて**即時を許可するパブリケーションを更新します。  
   
  [  **@subscriber=** ] **'* **サブスクライブ*r**' * *  
  削除するサブスクリプションがあるサブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。 場合**すべて**、すべてのサブスクライバーのすべてのサブスクリプションが削除されます。  
@@ -71,16 +71,16 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_dropsubscription**は、スナップショットおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_dropsubscription**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
  即時同期パブリケーションでアーティクルのサブスクリプションを削除した場合は、パブリケーション内のすべてのアーティクルのサブスクリプションを削除するのと同時に、これらすべてのサブスクリプションを追加し直さない限り、元に戻すことはできません。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはサブスクリプションを作成したユーザーが実行できる**sp_dropsubscription**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはサブスクリプションを作成したユーザーが実行できる**sp_dropsubscription**します。  
   
 ## <a name="see-also"></a>参照  
  [プッシュ サブスクリプションを削除します。](../../relational-databases/replication/delete-a-push-subscription.md)   

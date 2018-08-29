@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_mergearticlecolumn (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e426586be6229cb62e36d8fdcab13663785240b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50886bd5bd4ab34852362e678a2f8c2f4a2fc459
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023930"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,35 +58,35 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  パブリケーションのアーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
  [  **@column =**] **'***列***'**  
- 列方向にパーティション分割する列の名前を指定します。 *列*は**sysname**、既定値は NULL です。 値が NULL で `@operation = N'add'` の場合、既定ではソース テーブルのすべての列がアーティクルに追加されます。 *列*場合、NULL にすることはできません*操作*に設定されている**ドロップ**です。 アーティクルから列を除外するには実行**sp_mergearticlecolumn**し、指定*列*と`@operation = N'drop'`を削除するには、各列の指定された対象から*記事*.  
+ 列方向にパーティション分割する列の名前を指定します。 *列*は**sysname**、既定値は NULL です。 値が NULL で `@operation = N'add'` の場合、既定ではソース テーブルのすべての列がアーティクルに追加されます。 *列*ときに、NULL にすることはできません*操作*に設定されている**ドロップ**します。 アーティクルから列を除外するには実行**sp_mergearticlecolumn**指定と*列*と`@operation = N'drop'`を削除するには、各列の指定した*記事*.  
   
  [  **@operation =**] **'***操作***'**  
- レプリケーションの状態を指定します。 *操作*は**nvarchar (4)**、既定値は ADD です。 **追加**レプリケーションする列をマークします。 **drop**列を消去します。  
+ レプリケーションの状態を指定します。 *操作*は**nvarchar (4)**、既定値は ADD です。 **追加**レプリケーションする列をマークします。 **drop**列をクリアします。  
   
  [  **@schema_replication=**] **'***schema_replication***'**  
  マージ エージェントが実行されたときにスキーマの変更を通知します。 *schema_replication*は**nvarchar (5)**、既定値は FALSE。  
   
 > [!NOTE]  
->  のみ**FALSE**はサポートされて*schema_replication*です。  
+>  のみ**FALSE**はサポートされて*schema_replication*します。  
   
  [  **@force_invalidate_snapshot =** ]*更によって*  
  スナップショットを無効にする機能を有効または無効にします。 *更によって*は、**ビット**、既定値は**0**します。  
   
- **0**マージ アーティクルへの変更は、スナップショットが無効であることをされませんを指定します。  
+ **0**にマージ アーティクルへの変更はスナップショットが無効であることがありません。  
   
- **1**マージ アーティクルへの変更は、スナップショットが無効であることで発生する可能性がありますを指定し、この場合の値であるかどうか**1**新しいスナップショットを作成する権限が与えられます。  
+ **1**マージ アーティクルへの変更は、スナップショットが無効であることで発生する可能性がありますを指定します。 場合、値がある場合と**1** 、新しいスナップショットを作成する権限が与えられます。  
   
  [* *@force_reinit_subscription =] * * * 更によって*  
  サブスクリプションを再初期化する機能を有効または無効にします。 *更によって*は bit で、既定値は**0**します。  
   
  **0**マージ アーティクルへの変更では、サブスクリプションを再初期化するのには発生しませんを指定します。  
   
- **1**マージ アーティクルへの変更が、再初期化するサブスクリプションが場合がある場合、値であるかどうかと**1**サブスクリプションを再初期化が発生するを許可します。  
+ **1**マージ アーティクルへの変更は、再初期化されるサブスクリプションで発生する可能性がありますを指定します。 場合、値がある場合と**1**のサブスクリプションの再初期化を許可します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_mergearticlecolumn**はマージ レプリケーションで使用します。  
   
  自動 ID 範囲管理が使用されている場合、アーティクルから ID 列を削除することはできません。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
@@ -97,11 +98,11 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_mergearticlecolumn**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_mergearticlecolumn**します。  
   
 ## <a name="see-also"></a>参照  
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [マージ アーティクル間の結合フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

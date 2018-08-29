@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_server_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0715ea7f2f58b8212b48e990c3e2d2f76301b373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9355b4a6ca344111c5b3d9365823b2175942bcea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261118"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026209"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|属性の ID 番号です。|  
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|属性名です。|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|属性の現在の設定です。|  
   
- 次の表に属性の一覧を示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC クライアント ライブラリは、現在の属性を使用して**1**、 **2**、 **18**、 **22**、および**500**接続時間です。  
+ 次の表に属性の一覧を示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC クライアント ライブラリは現在の属性を使用して**1**、 **2**、 **18**、 **22**、および**500**接続時間です。  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME の説明|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -75,12 +75,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> このサーバーの文字セットの順序です。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 基になる DBMS が、名前付きセーブポイントをサポートするかどうかを示します。|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> 基になるデータベースまたはゲートウェイ自体が、複数の結果セットをサポートするかどうか (複数のステートメントをゲートウェイを使用して送り、複数の結果セットをクライアントに返すことができるかどうか) を示します。|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> 指定でかどうか**sp_tables**、唯一のテーブル、ビュー、およびに、現在のユーザー (つまり、テーブルの少なくとも SELECT 権限を持っているユーザー) がアクセスできるゲートウェイが返されます。|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> 指定するかどうか**sp_tables**ゲートウェイは、唯一のテーブル、ビュー、およびに、現在のユーザー (つまり、テーブルの少なくとも SELECT 権限を持つユーザー) がアクセスを返します。|Y|  
 |"**100**"|USERID_LENGTH<br /><br /> ユーザー名の最大文字数を示します。|128|  
 |**101**|QUALIFIER_TERM<br /><br /> DBMS ベンダーの用語で、テーブル修飾子 (3 つの要素から成る名前の最初の部分) を示します。|[データベース]|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 基になる DBMS が、名前付きトランザクションをサポートするかどうかを示します。|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> ストアド プロシージャを言語イベントとして実行できるかどうかを示します。|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> 指定では、ある**sp_stored_procedures**ゲートウェイが現在のユーザーが実行可能なストアド プロシージャのみを返します。|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> 指定するかどうか**sp_stored_procedures**ゲートウェイは、現在のユーザーによって実行可能なストアド プロシージャのみを返します。|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> DBMS のインデックス内の列の最大数を示します。|16|  
 |**106**|RENAME_TABLE<br /><br /> テーブルの名前を変更できるかどうかを示します。|Y|  
 |**107**|RENAME_COLUMN<br /><br /> 列の名前を変更できるかどうかを示します。|Y|  
@@ -92,10 +92,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> ストアド プロシージャを DB-Library のリモート ストアド プロシージャ関数を使用して実行できるかどうかを示します。|Y|  
 |**500**|SYS_SPROC_VERSION<br /><br /> 現在実装されているストアド プロシージャ カタログのバージョンを示します。|現在のバージョン番号です。|  
   
-## <a name="remarks"></a>解説  
- **sp_server_info**によって提供される情報のサブセットを返します**SQLGetInfo** ODBC にします。  
+## <a name="remarks"></a>コメント  
+ **sp_server_info**によって提供される情報のサブセットを返す**SQLGetInfo** ODBC にします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

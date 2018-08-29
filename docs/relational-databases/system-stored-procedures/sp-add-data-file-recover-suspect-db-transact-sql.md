@@ -1,5 +1,5 @@
 ---
-title: sp_add_data_file_recover_suspect_db (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_data_file_recover_suspect_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_data_file_recover_suspect_db
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
-caps.latest.revision: 51
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13c08441680744d38f870fc5b6ebd5d7a1e20c91
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d6d2facde85a46db3c54d3d94e7502e6341ae57a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239162"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021701"
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ファイル グループの領域が不足していたため (エラー 1105)、データベースの復旧を完了できなかったときに、データ ファイルをファイル グループに追加します。 ファイルが追加された後、このストアド プロシージャは未復旧の設定をオフにして、データベースの復旧を完了します。 パラメーターは、ALTER DATABASE の場合と同じ*database_name*ファイルを追加します。  
+  ファイル グループの領域が不足していたため (エラー 1105)、データベースの復旧を完了できなかったときに、データ ファイルをファイル グループに追加します。 ファイルが追加された後、このストアド プロシージャは未復旧の設定をオフにして、データベースの復旧を完了します。 パラメーターでは ALTER DATABASE のと同じ*database_name*ファイルを追加します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,11 +80,11 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>権限  
- メンバーに権限は、既定の実行、 **sysadmin**固定サーバー ロール。 この権限は譲渡できません。  
+## <a name="permissions"></a>アクセス許可  
+ 実行権限は、既定のメンバーに、 **sysadmin**固定サーバー ロール。 この権限は譲渡できません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、データベース`db1`ファイル グループに十分な領域 (エラー 1105)、復旧中に問題ありとして`fg1`です。  
+ 次の例では、データベース`db1`ファイル グループの空き容量が不足しています (エラー 1105)、復旧中に問題ありとして`fg1`します。  
   
 ```  
 USE master;  

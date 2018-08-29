@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: a717bcf2a5c7b0c0b80bece12b77871573414a31
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278713"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786651"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  詳細については、「[ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)」を参照してください。 このトレース フラグは、JDBC Driver で ActivityId をトレースおよび送信するかどうかを決定するために、対応する JDBC オブジェクト ロガーと共に使用されます。 Logging.Properties ファイルの更新に加えて、ロガー com.microsoft.sqlserver.jdbc を FINER 以上で有効にする必要があります。 特定のクラスによる要求に対してサーバーに ActivityId を送信する場合は、対応するクラス ロガーを FINER または FINEST で有効にする必要があります。 たとえば、クラスが SQLServerStatement であれば、ロガー com.microsoft.sqlserver.jdbc.SQLServerStatement を有効にします。  
   
- 次のサンプルでは、[!INCLUDE[tsql](../../includes/tsql_md.md)] を使用して、拡張イベント セッションを開始しています。この拡張イベント セッションはリング バッファーに格納され、RPC 操作およびバッチ操作でクライアントから送信されたアクティビティ ID を記録します。  
+ 次のサンプルでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、拡張イベント セッションを開始しています。この拡張イベント セッションはリング バッファーに格納され、RPC 操作およびバッチ操作でクライアントから送信されたアクティビティ ID を記録します。  
   
 ```sql
 create event session MySession on server  

@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_principalprofile_sp (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmail_update_principalprofile_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 caps.latest.revision: 46
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a86fc4775ee1096d72451ace855bb19a1094c3c5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e4e6a55660f3b5a4acc17147de269271fd2c2b1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260575"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022771"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  データベース ユーザーまたはロールの ID、 **msdb**の関連付けを変更するデータベース。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
   
  [ **@principal_name** =] **'***principal_name***'**  
- データベース ユーザーまたはロールの名前、 **msdb**データベースの関連付けを更新します。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
+ データベース ユーザーまたはロールの名前、 **msdb**を更新するアソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
   
  [ **@profile_id** = ] *profile_id*  
  関連付けを変更するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
@@ -67,22 +67,22 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このストアド プロシージャでは、指定したプロファイルを、データベース ユーザーの既定のプロファイルにするかどうかを変更します。 データベース ユーザーが持つことのできる既定のプライベート プロファイルは 1 つだけです。  
   
- アソシエーションのプリンシパルの名前は、いつ**パブリック**またはアソシエーションのプリンシパルの id は**0**、このストアド プロシージャは、パブリック プロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
+ アソシエーションのプリンシパル名の場合は**パブリック**、アソシエーションのプリンシパル id がまたは**0**、このストアド プロシージャは、パブリック プロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
   
- ときに**@is_default**は '**1**' と、プリンシパルが複数のプロファイルに関連付けられた、指定されたプロファイルのプリンシパルの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きプリンシパルに関連付けられますが、既定のプロファイルではなくなります。  
+ ときに**@is_default**は '**1**' と、プリンシパルが 1 つ以上のプロファイルに関連付けられた、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きプリンシパルに関連付けられますが、既定のプロファイルではなくなります。  
   
- ストアド プロシージャ**sysmail_update_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
+ ストアド プロシージャ**sysmail_update_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
  **A.データベースの既定のパブリック プロファイルに、プロファイルの設定**  
   
- 次の例と、プロファイル設定`General Use Profile`内のユーザーの既定のパブリック プロファイルに、 **msdb**データベース。  
+ 次の例では、設定、プロファイル`General Use Profile`内のユーザーの既定のパブリック プロファイルを**msdb**データベース。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -93,7 +93,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B.ユーザーの既定のプライベート プロファイルに、プロファイルの設定**  
   
- 次の例と、プロファイル設定`AdventureWorks Administrator`プリンシパルの既定のプロファイルに`ApplicationUser`で、 **msdb**データベース。 このプロファイルはプリンシパルに既に関連付けられている必要があります。 それまで既定のプロファイルであったプロファイルは、引き続きプリンシパルに関連付けられますが、既定のプロファイルではなくなります。  
+ 次の例では、設定、プロファイル`AdventureWorks Administrator`プリンシパルの既定のプロファイルに`ApplicationUser`で、 **msdb**データベース。 このプロファイルはプリンシパルに既に関連付けられている必要があります。 それまで既定のプロファイルであったプロファイルは、引き続きプリンシパルに関連付けられますが、既定のプロファイルではなくなります。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

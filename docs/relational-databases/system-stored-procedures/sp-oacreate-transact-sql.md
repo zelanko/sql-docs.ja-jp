@@ -1,5 +1,5 @@
 ---
-title: sp_OACreate (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_OACreate (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c7f4598f309549a34cc9dbc39b0ba1a964160bc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 02a05fb8b97c1ae74682b442c45ca54552052236
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263500"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019451"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,32 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>引数  
  *progid*  
- 作成する OLE オブジェクトのプログラム ID (ProgID) を指定します。 この文字の文字列が OLE オブジェクトのクラスについて説明しは、形式があります: **'***OLEComponent***.***オブジェクト***'**  
+ 作成する OLE オブジェクトのプログラム ID (ProgID) を指定します。 この文字の文字列が OLE オブジェクトのクラスをについて説明し、フォーム: **'***OLEComponent***.***オブジェクト***'**  
   
- *OLEComponent* OLE オートメーション サーバーのコンポーネント名と*オブジェクト*OLE オブジェクトの名前を指定します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイスです。  
+ *OLEComponent* 、OLE オートメーション サーバーのコンポーネントの名前と*オブジェクト*OLE オブジェクトの名前を指定します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイス。  
   
- たとえば、SQLDMO です。Sql Server は、SQL-DMO の ProgID **SQLServer**オブジェクト。 SQL-DMO は SQLDMO のコンポーネント名を持ち、 **SQLServer**オブジェクトが有効であり、(すべての SQL-DMO のようなオブジェクト)、 **SQLServer**オブジェクトのサポート**IDispatch**です。  
+ たとえば、SQLDMO です。Sql Server は、SQL-DMO の ProgID **SQLServer**オブジェクト。 SQL-DMO は SQLDMO のコンポーネント名、 **SQLServer**オブジェクトが、有効であり (すべての SQL-DMO のようなオブジェクト)、 **SQLServer**オブジェクト サポート**IDispatch**します。  
   
  *clsid*  
- 作成する OLE オブジェクトのクラス ID (CLSID) を指定します。 この文字の文字列が OLE オブジェクトのクラスについて説明しは、形式があります: **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'** です。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイスです。  
+ 作成する OLE オブジェクトのクラス ID (CLSID) を指定します。 この文字の文字列が OLE オブジェクトのクラスをについて説明し、フォーム: **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'** します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイス。  
   
- たとえば、SQL-DMO の CLSID は、{00026BA1-0000-0000-C000-000000000046} **SQLServer**オブジェクト。  
+ たとえば、{00026BA1-0000-0000-C000-000000000046} には、SQL-DMO の CLSID **SQLServer**オブジェクト。  
   
  *objecttoken* **出力**  
- 返されるオブジェクト トークンは、データ型のローカル変数でなければなりません**int**です。このオブジェクト トークンは、作成する OLE オブジェクトを識別するもので、その他の OLE オートメーション ストアド プロシージャの呼び出しに使用されます。  
+ 返されるオブジェクト トークンは、データ型のローカル変数にする必要があります**int**します。このオブジェクト トークンは、作成する OLE オブジェクトを識別するもので、その他の OLE オートメーション ストアド プロシージャの呼び出しに使用されます。  
   
  *context*  
  新しく作成した OLE オブジェクトを実行するときの実行条件を指定します。 指定する場合は、次のいずれかの値を指定する必要があります。  
   
- **1** = 組み込み (.dll) OLE サーバーのみです。  
+ **1**プロセス (.dll) OLE サーバーのみを = です。  
   
  **4** = ローカル (.exe) OLE サーバーのみです。  
   
- **5**許可されるインプロセスおよびローカル OLE サーバーを =  
+ **5** = インプロセスおよびローカル OLE サーバーが許可されています。  
   
- 指定されていない場合、既定値は**5**です。 この値は、 *dwClsContext*への呼び出しのパラメーター **CoCreateInstance**です。  
+ 指定されていない場合、既定値は**5**します。 この値は、 *dwClsContext*への呼び出しのパラメーター **CoCreateInstance**します。  
   
- インプロセス OLE サーバーが許可された場合 (のコンテキスト値を使用して**1**または**5**またはされたコンテキストの値が指定されない) メモリへのアクセス権を持つ、およびその他のリソースを所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 組み込み OLE サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリやリソースに損傷を与え、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス違反など予期しない結果を招く場合があります。  
+ インプロセス OLE サーバーが許可されている場合 (のコンテキスト値を使用して**1**または**5**またはコンテキストの値を指定しない)、メモリへのアクセス権があるし、その他のリソースを所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 組み込み OLE サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリやリソースに損傷を与え、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス違反など予期しない結果を招く場合があります。  
   
  コンテキストの値を指定すると**4**、ローカル OLE サーバーでは、いずれかにアクセスできない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リソース、およびそれが破損することはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリまたはリソースします。  
   
@@ -80,20 +80,20 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)です。  
+ HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
   
-## <a name="remarks"></a>解説  
- OLE オートメーション プロシージャが有効な場合に呼び出し**sp_OACreate** OLE オートメーションの共有実行環境を開始します。 OLE オートメーションを有効にする方法の詳細については、次を参照してください。 [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)です。  
+## <a name="remarks"></a>コメント  
+ OLE オートメーション プロシージャが有効な場合に呼び出し**sp_OACreate** OLE オートメーションの共有実行環境が開始します。 OLE オートメーションを有効にする方法の詳細については、次を参照してください。 [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)します。  
   
  作成された OLE オブジェクトは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの最後に自動的に破棄されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-progid"></a>A. ProgID を使用する  
- 次の例は、SQL-DMO **SQLServer**オブジェクトの ProgID を使用しています。  
+ 次の例は、SQL-DMO **SQLServer** ProgID を使用してオブジェクト。  
   
 ```  
 DECLARE @object int;  
@@ -110,7 +110,7 @@ GO
 ```  
   
 ### <a name="b-using-clsid"></a>B. CLSID を使用する  
- 次の例は、SQL-DMO **SQLServer**オブジェクトの CLSID を使用しています。  
+ 次の例は、SQL-DMO **SQLServer**の CLSID を使用してオブジェクト。  
   
 ```  
 DECLARE @object int;  

@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_notifications (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.server_event_notifications (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7736946316131a6760d7bd9d9f2ab7b258b560ed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91e033b5931f00761cb79e208287c784cf3ecd5e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222123"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026530"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー レベルのイベント通知オブジェクトごとに 1 行のデータを返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|サーバーのイベント通知名です。 すべてのサーバー レベルのイベント通知で一意です。|  
 |**object_id**|**int**|オブジェクト ID 番号。 内で一意では、**マスター**データベース。|  
@@ -50,8 +50,8 @@ ms.locfileid: "33222123"
 |**creator_sid**|**varbinary(85)**|イベント通知を作成するステートメントを実行するログインの SID です。 イベント通知の定義で WITH FAN_IN が指定されていない場合は NULL です。|  
 |**principal_id**|**int**|これを所有しているサーバー プリンシパルの ID です。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

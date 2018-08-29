@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpdistributiondb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02065dbaa89a16c0d00ce8737bb79f29c5256495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df4a44be4ef3271e6af8e7148bfee50f40c71617
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996929"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018298"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,34 +46,34 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="arguments"></a>引数  
  [  **@database=**] **'***database_name***'**  
- プロパティを返すデータベース名を指定します。 *database_name*は**sysname**、既定値は**%** ユーザーが権限を持っていると、ディストリビューターに関連付けられているすべてのデータベースです。  
+ プロパティを返すデータベース名を指定します。 *database_name*は**sysname**、既定値は**%** とをディストリビューターに関連付けられているすべてのデータベース、ユーザーがアクセス許可。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|ディストリビューション データベースの名前です。|  
 |**min_distretention**|**int**|トランザクションが削除されるまでの時間の最小保有期間。|  
-|**max_distretention**|**int**|最大保有期間を時間単位でトランザクションが削除される前にします。|  
+|**max_distretention**|**int**|トランザクションが削除されるまでの時間の最大保有期間。|  
 |**履歴の保有期間**|**int**|履歴を保持する時間数。|  
 |**history_cleanup_agent**|**sysname**|履歴後処理エージェントの名前。|  
 |**distribution_cleanup_agent**|**sysname**|ディストリビューション後処理エージェントの名前。|  
-|**ステータス**|**int**|内部使用のみです。|  
+|**status**|**int**|内部使用のみです。|  
 |**data_folder**|**nvarchar (255)**|データベース ファイルを格納するときに使用するディレクトリの名前。|  
 |**data_file**|**nvarchar (255)**|データベース ファイルの名前。|  
 |**data_file_size**|**int**|データ ファイルの初期サイズ (MB 単位)。|  
 |**log_folder**|**nvarchar (255)**|データベース ログ ファイルを格納するディレクトリの名前。|  
-|**log_file**|**nvarchar (255)**|ログ ファイルの名前です。|  
+|**log_file**|**nvarchar (255)**|ログ ファイルの名前。|  
 |**log_file_size**|**int**|ログ ファイルの初期サイズ (MB 単位)。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpdistributiondb**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバー、 **db_owner**固定データベース ロール、または**replmonitor**ディストリビューション データベース内のロールと、ディストリビューション データベースを使用するパブリケーションのパブリケーション アクセス リスト内のユーザーを実行できます**sp_helpdistributiondb**ファイルに関連する情報を返します。 メンバー、**パブリック**実行できるロール**sp_helpdistributiondb**アクセス権が、あるディストリビューション データベースのファイル関連以外の情報を返します。  
+## <a name="permissions"></a>アクセス許可  
+ メンバー、 **db_owner**固定データベース ロール、または**replmonitor**ディストリビューション データベースでロールと、ディストリビューション データベースを使用するパブリケーションのパブリケーション アクセス リスト内のユーザーが実行できます。**sp_helpdistributiondb**ファイル関連の情報を返します。 メンバー、**パブリック**実行できるロール**sp_helpdistributiondb**アクセスあるディストリビューション データベースのファイルには関連の情報を返します。  
   
 ## <a name="see-also"></a>参照  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

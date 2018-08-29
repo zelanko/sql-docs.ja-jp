@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergepullsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpmergepullsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905ead01709a932639f72e874f1246228f2f9c21
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65c0ab3d3b5766c2e4cf4878fe81707295c01120
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003939"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024270"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,75 +49,75 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
   
 ## <a name="argument"></a>引数  
  [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** です。 場合*パブリケーション*は**%**、すべてのマージ パブリケーションと、現在のデータベース内のサブスクリプションに関する情報が返されます。  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** します。 場合*パブリケーション*は**%**、すべてのマージ パブリケーションと、現在のデータベース内のサブスクリプションに関する情報が返されます。  
   
  [ **@publisher=**] **'***publisher***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は **%** です。  
+ パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は **%** します。  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は **%** です。  
+ パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は **%** します。  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- プル サブスクリプションを表示するかどうかを指定します。 *subscription_type*は**nvarchar (10)**、既定値は **'pull'** です。 有効な値は **'push'**、 **'pull'**、または **'both'** です。  
+ プル サブスクリプションを表示するかどうかを指定します。 *subscription_type*は**nvarchar (10)**、既定値は **'pull'** します。 有効な値は **'push'**、 **'pull'**、または **'both'** します。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|サブスクリプションの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前です。|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前です。|  
+|**パブリケーション**|**sysname**|パブリケーションの名前。|  
+|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前です。|  
 |**サブスクライバー**|**sysname**|サブスクライバーの名前です。|  
-|**subscription_db**|**sysname**|サブスクリプション データベースの名前です。|  
-|**ステータス**|**int**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブなサブスクリプション<br /><br /> **1** = アクティブなサブスクリプション<br /><br /> **2** = 削除されたサブスクリプション<br /><br /> **3**デタッチされたサブスクリプションを =<br /><br /> **4**アタッチされたサブスクリプションを =<br /><br /> **5** = アップロードと共に再初期化するサブスクリプションにマークされています。<br /><br /> **6** = 失敗したサブスクリプションのアタッチ<br /><br /> **7** = バックアップから復元されたサブスクリプション|  
+|**subscription_db**|**sysname**|サブスクリプション データベースの名前。|  
+|**status**|**int**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブなサブスクリプション<br /><br /> **1** = アクティブなサブスクリプション<br /><br /> **2** = 削除されたサブスクリプション<br /><br /> **3** = デタッチされたサブスクリプション<br /><br /> **4** = アタッチされたサブスクリプション<br /><br /> **5** = アップロードと共に再初期化のマークされているサブスクリプション<br /><br /> **6** = 失敗したサブスクリプションのアタッチ<br /><br /> **7** = バックアップから復元されたサブスクリプション|  
 |**subscriber_type**|**int**|サブスクライバーの種類。<br /><br /> **1** = グローバル<br /><br /> **2** = ローカル<br /><br /> **3** = 匿名|  
-|**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0**プッシュを =<br /><br /> **1**プルを =<br /><br /> **2** = 匿名|  
-|**priority**|**float(8)**|サブスクリプションの優先度です。 値がある必要がありますより小さい**100.00**です。|  
-|**sync_type**|**tinyint**|サブスクリプションの同期の種類。<br /><br /> **1**自動を =<br /><br /> **2** = スナップショットは使用されません。|  
-|**説明**|**nvarchar (255)**|プル サブスクリプションの簡単な説明です。|  
+|**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0**プッシュを =<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
+|**priority**|**float(8)**|サブスクリプションの優先度です。 値がある必要がありますより小さい**100.00**します。|  
+|**sync_type**|**tinyint**|サブスクリプションの同期の種類。<br /><br /> **1** = 自動<br /><br /> **2** = スナップショットは使用されません。|  
+|**description**|**nvarchar (255)**|プル サブスクリプションの簡単な説明です。|  
 |**merge_jobid**|**binary(16)**|マージ エージェントのジョブ ID。|  
 |**enabled_for_syncmgr**|**int**|サブスクリプションを介した同期が可能かどうか、[!INCLUDE[msCoName](../../includes/msconame-md.md)]同期マネージャーです。|  
 |**last_updated**|**nvarchar(26)**|マージ エージェントがサブスクリプションの同期に最後に成功した時刻です。|  
 |**publisher_login**|**sysname**|パブリッシャーのログイン名です。|  
 |**publisher_password**|**sysname**|パブリッシャーのパスワード。|  
 |**publisher_security_mode**|**int**|パブリッシャーのセキュリティ モードを指定します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
-|**ディストリビューター**|**sysname**|ディストリビューターの名前です。|  
+|**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
 |**distributor_login**|**sysname**|ディストリビューターのログイン名。|  
 |**distributor_password**|**sysname**|ディストリビューターのパスワード。|  
 |**distributor_security_mode**|**int**|ディストリビューターのセキュリティ モードを指定します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
-|**ftp_address**|**sysname**|旧バージョンとの互換性を保つのために利用できます。 ディストリビューター用のファイル転送プロトコル (FTP) サービスのネットワーク アドレスです。|  
-|**ftp_port**|**int**|旧バージョンとの互換性を保つのために利用できます。 ディストリビューター用の FTP サービスのポート番号です。|  
-|**ftp_login**|**sysname**|旧バージョンとの互換性を保つのために利用できます。 FTP サービスに接続するときに使用するユーザー名です。|  
-|**ftp_password**|**sysname**|旧バージョンとの互換性を保つのために利用できます。 FTP サービスに接続するときに使用するユーザー パスワードです。|  
+|**ftp_address**|**sysname**|旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用のファイル転送プロトコル (FTP) サービスのネットワーク アドレスです。|  
+|**ftp_port**|**int**|旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用の FTP サービスのポート番号です。|  
+|**ftp_login**|**sysname**|旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー名です。|  
+|**ftp_password**|**sysname**|旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー パスワードです。|  
 |**alt_snapshot_folder**|**nvarchar (255)**|スナップショット フォルダーが格納されている場所。スナップショット フォルダーが既定の場所以外、または既定の場所とさらに別の場所に保存されている場合が対象となります。|  
 |**working_directory**|**nvarchar (255)**|該当するオプションが指定され、FTP を使ってスナップショット ファイルを転送する場合の、転送先のディレクトリの完全修飾パスです。|  
 |**@use_ftp**|**bit**|サブスクリプションはインターネットを経由してパブリケーションにサブスクライブしており、FTP アドレス プロパティが構成されています。 場合**0**サブスクリプションは FTP を使用していません。 場合**1**サブスクリプションは FTP を使用しています。|  
 |**offload_agent**|**bit**|エージェントをリモートから起動できるかどうかを指定します。 場合**0**エージェントをリモートでアクティブにできません。|  
 |**offload_server**|**sysname**|リモートから起動するときに使用するサーバーの名前です。|  
-|**use_interactive_resolver**|**int**|調整時に対話型の競合回避モジュールを使用するかどうかを示します。 場合**0**、インタラクティブ競合回避モジュールは使用されません。|  
+|**use_interactive_resolver**|**int**|調整時に対話型の競合回避モジュールを使用するかどうかを示します。 場合**0**、インタラクティブ競合回避のモジュールは使用されません。|  
 |**subid**|**uniqueidentifier**|サブスクライバーの ID です。|  
 |**dynamic_snapshot_location**|**nvarchar (255)**|スナップショット ファイルが保存されるフォルダーへのパス。|  
-|**last_sync_status**|**int**|同期の状態です。<br /><br /> **1** = 起動中<br /><br /> **2** = に成功しました<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル状態<br /><br /> **5**失敗後再試行中を =<br /><br /> **6** = に失敗しました<br /><br /> **7** = 検証失敗<br /><br /> **8** = 検証合格<br /><br /> **9**シャット ダウンの要求を =|  
+|**last_sync_status**|**int**|同期の状態です。<br /><br /> **1** = 起動中<br /><br /> **2** = に成功しました<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル状態<br /><br /> **5**失敗後再試行を =<br /><br /> **6** = に失敗しました<br /><br /> **7** = 検証失敗<br /><br /> **8** = 検証合格<br /><br /> **9**シャット ダウンの要求を =|  
 |**last_sync_summary**|**sysname**|前回の同期化の結果に関する説明。|  
-|**@use_web_sync**|**bit**|HTTPS 経由で、サブスクリプションを同期させることができるかどうかの値を指定します**1**この機能が有効になっていることを意味します。|  
+|**@use_web_sync**|**bit**|HTTPS 経由でサブスクリプションを同期することができるかどうかの値が指定**1**この機能が有効になっていることを意味します。|  
 |**internet_url**|**nvarchar(260)**|Web 同期中にレプリケーション リスナーの位置を表す URL です。|  
 |**internet_login**|**nvarchar(128)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインです。|  
 |**internet_password**|**nvarchar (524)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインのパスワードです。|  
-|**internet_security_mode**|**int**|Web 同期をホストしている Web サーバーに接続するときに使用される認証モードです。 値**1** 、Windows 認証を示し、値は**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
+|**internet_security_mode**|**int**|Web 同期をホストしている Web サーバーに接続するときに使用される認証モードです。 値**1** 、Windows 認証を示し、値の**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**internet_timeout**|**int**|Web 同期要求が期限切れとなるまでの時間 (秒単位)。|  
-|**ホスト名**|**nvarchar(128)**|オーバー ロードされた値を指定[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化された行フィルターの WHERE 句でこの関数を使用する場合。|  
-|**job_login**|**nvarchar(512)**|形式で返される、マージ エージェントを実行する Windows アカウントは、*ドメイン*\\*username*です。|  
+|**ホスト名**|**nvarchar(128)**|オーバー ロードの値を指定します[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化された行フィルターの WHERE 句でこの関数を使用する場合。|  
+|**job_login**|**nvarchar(512)**|形式で返される、マージ エージェントを実行する Windows アカウントは、*ドメイン*\\*username*します。|  
 |**job_password**|**sysname**|セキュリティ上の理由の値"**\*\*\*\*\*\*\*\*\*\***"が常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_helpmergepullsubscription**はマージ レプリケーションで使用します。 結果セットで返される日付に**last_updated**としてフォーマットされている*YYYYMMDD hh:mm:ss.fff*です。  
+## <a name="remarks"></a>コメント  
+ **sp_helpmergepullsubscription**はマージ レプリケーションで使用します。 結果セットで返される日付で**last_updated**としてフォーマットされている*YYYYMMDD hh:mm:ss.fff*します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergepullsubscription**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergepullsubscription**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   

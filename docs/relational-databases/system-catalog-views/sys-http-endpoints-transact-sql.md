@@ -1,5 +1,5 @@
 ---
-title: sys.http_endpoints (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.http_endpoints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ helpviewer_keywords:
 - sys.http_endpoints catalog view
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0bd82aa39d7639c52c7c18c35091adc18b4b485
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f27d3aa958625974fa6b11313cecb831f2308b1c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180778"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028600"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   HTTP プロトコルを使用するサーバー内で作成されたエンドポイントごとに 1 行のデータを保持します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**< 継承された列 >**||列を継承[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)です。|  
+|**< 継承された列 >**||列を継承[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)します。|  
 |**サイト**|**nvarchar(128)**|SITE = オプションで指定された、サイトに対するホスト コンピューター名です。|  
 |**url_path**|**nvarchar (4000)**|PATH = オプションで指定された、この HTTP エンドポイントの URL のパスのみの部分です。|  
 |**is_clear_port_enabled**|**bit**|1 = ポートの消去は、PORT = CLEAR オプションを使用して有効になっています。|  
@@ -55,8 +55,8 @@ ms.locfileid: "33180778"
 |**default_logon_domain**|**nvarchar(128)**|BASIC 認証を有効にしている場合は、既定のログイン ドメインです。 DEFAULT LOGON DOMAIN オプションの値です。<br /><br /> 指定されていない場合、または BASIC 認証が有効になっていない場合、NULL です。|  
 |**is_compression_enabled**|**bit**|1 = COMPRESSION = ENABLED オプションが設定されています。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

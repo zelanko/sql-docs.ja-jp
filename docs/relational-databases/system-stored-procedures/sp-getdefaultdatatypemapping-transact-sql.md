@@ -1,5 +1,5 @@
 ---
-title: sp_getdefaultdatatypemapping (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_getdefaultdatatypemapping (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9acad164a82b8506ecceebeab01fb5f4c03b75b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff9df7e27545aa130398e0a81ffcf24855503aba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999130"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025711"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +62,9 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [ **@source_dbms**=] **'***source_dbms***'**  
  データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|**MSSQLSERVER**|ソースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
+|**MSSQLSERVER**|ソースが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
 |**ORACLE**|マップ元は Oracle データベース。|  
   
  このパラメーターを指定する必要があります。  
@@ -85,12 +85,12 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  マップ元 DBMS におけるデータ型の小数点以下桁数を指定します。 *source_scale*は**int**既定値は NULL です。  
   
  [  **@source_nullable=** ] *source_nullable*  
- マップ元 DBMS でデータ型が NULL の値をサポートするかどうかを指定します。 *source_nullable*は**ビット**、既定値は**1**NULL 値がサポートされていることを意味します。  
+ マップ元 DBMS でデータ型が NULL の値をサポートするかどうかを指定します。 *source_nullable*は**ビット**の既定値を持つ**1**NULL 値がサポートされていることを意味します。  
   
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  マップ先 DBMS の名前です。 *destination_dbms*は**sysname**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**ORACLE**|マップ先は Oracle データベース。|  
@@ -118,18 +118,18 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  マップ先 DBMS でデータ型が NULL の値をサポートするかどうかを指定します。 *destination_nullable*は**ビット**既定値は NULL です。 **1** NULL 値がサポートされていることを意味します。  
   
  [  **@dataloss=** ]*データ消失 * * * 出力**  
- マッピングでデータ損失の可能性があるかどうかを示します。 *データ消失*は**ビット**既定値は NULL です。 **1**データ損失の可能性があることを意味します。  
+ マッピングでデータ損失の可能性があるかどうかを示します。 *データ損失*は**ビット**既定値は NULL です。 **1**データ損失の可能性があることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_getdefaultdatatypemapping**間のレプリケーションのすべての種類で使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DBMS します。  
+## <a name="remarks"></a>コメント  
+ **sp_getdefaultdatatypemapping**はすべての種類の間のレプリケーションで使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DBMS します。  
   
- **sp_getdefaultdatatypemapping**となる、既定のマッピング先データ型指定されたソースのデータ型に最も近い一致を返します。  
+ **sp_getdefaultdatatypemapping**既定のマッピング先データである型指定されたソースのデータ型に最も近い一致を返します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_getdefaultdatatypemapping**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_getdefaultdatatypemapping**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_helpdatatypemap &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   

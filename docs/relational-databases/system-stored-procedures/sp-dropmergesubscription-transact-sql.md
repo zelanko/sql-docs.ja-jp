@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergesubscription (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropmergesubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0fb4d9bcd2f72db252380fe3ee0d914645255b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d639b189f1b271f6563c32090992c376113ccfa2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027215"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +62,13 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
  [  **@subscription_type=** ] **'***subscription_type***'**  
  サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (15)**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**すべての**|プッシュ サブスクリプション、プル サブスクリプション、および匿名サブスクリプションです。|  
 |**匿名**|匿名サブスクリプションです。|  
 |**プッシュ**|プッシュ サブスクリプションです。|  
 |**プル**|プル サブスクリプションです。|  
-|**両方**(既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
+|**どちらも**(既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  ディストリビューターに接続せずに、このストアド プロシージャを実行するかどうかを指定します。 *ignore_distributor*は**ビット**、既定値は**0**します。 このパラメーターは、ディストリビューターでクリーンアップ タスクを実行せずにサブスクリプションを削除するために使用できます。 また、ディストリビューターを再インストールする必要がある場合も便利です。  
@@ -78,14 +79,14 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropmergesubscription**はマージ レプリケーションで使用します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergesubscription**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergesubscription**します。  
   
 ## <a name="see-also"></a>参照  
  [プッシュ サブスクリプションを削除します。](../../relational-databases/replication/delete-a-push-subscription.md)   

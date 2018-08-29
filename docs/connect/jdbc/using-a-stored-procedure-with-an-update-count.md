@@ -14,18 +14,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cebd655a20c49525585cb414cfd7409745391bdc
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d00ebf37c52e1b5dc88f4afe758aec7c8af287d1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662124"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786674"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>更新数があるストアド プロシージャの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベース内のデータをストアド プロシージャを使用して変更する用途向けに、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスが用意されています。 SQLServerCallableStatement クラスを使用すると、データベース内のデータに変更を加え、影響を受けた行数 (更新数) を返すストアド プロシージャを呼び出すことができます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のデータをストアド プロシージャを使用して変更する用途向けに、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスが用意されています。 SQLServerCallableStatement クラスを使用すると、データベース内のデータに変更を加え、影響を受けた行数 (更新数) を返すストアド プロシージャを呼び出すことができます。
 
 SQLServerCallableStatement クラスを使用してストアド プロシージャに対する呼び出しを設定すると、[execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドまたは [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) メソッドのいずれかを使用して、ストアド プロシージャを呼び出すことができます。 executeUpdate メソッドではストアド プロシージャの影響を受けた行数を示す **int** 値が返されますが、execute メソッドではこの値が返されません。 execute メソッドを使用して影響を受けた行数を取得する場合は、ストアド プロシージャの実行後に [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) メソッドを呼び出すことができます。
 

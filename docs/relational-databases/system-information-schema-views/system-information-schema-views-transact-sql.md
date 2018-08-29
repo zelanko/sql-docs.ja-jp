@@ -1,5 +1,5 @@
 ---
-title: システム情報スキーマ ビュー (TRANSACT-SQL) |Microsoft ドキュメント
+title: システム情報スキーマ ビュー (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,29 +18,29 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2a3c0ef6d8a3c4c774b441e807c4ca513b214f26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 155073a76c84f7f90af44386f63a2b90a2144bb8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022597"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>システム情報スキーマ ビュー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  情報スキーマ ビューは、いくつかの方法のいずれかの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータの取得を提供します。 情報スキーマ ビューでは、システム テーブルに依存しない、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メタデータの内部ビューが提供されます。 基になるシステム テーブルに大きな変更が加えられても、情報スキーマ ビューによって、アプリケーションは正しく動作できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に含まれる情報スキーマ ビューは、ISO 標準定義の INFORMATION_SCHEMA に従います。  
+  情報スキーマ ビューは、いくつかのメソッドのいずれかの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータを取得するために提供します。 情報スキーマ ビューでは、システム テーブルに依存しない、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メタデータの内部ビューが提供されます。 基になるシステム テーブルに大きな変更が加えられても、情報スキーマ ビューによって、アプリケーションは正しく動作できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に含まれる情報スキーマ ビューは、ISO 標準定義の INFORMATION_SCHEMA に従います。  
   
 > [!IMPORTANT]  
 >  情報スキーマ ビューに対しては、旧バージョンとの互換性を維持できない変更がいくつか加えられています。 これらの変更は、個々のビューのトピックで説明します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現在のサーバーを参照するときは、3 部構成の名前付け規則をサポートしています。 ISO 標準も、3 つの要素で構成される名前付け規則をサポートします。 しかし、両方の名前付け規則で使用される名前は同じではありません。 情報スキーマ ビューは、INFORMATION_SCHEMA という特殊スキーマで定義されます。 このスキーマは、各データベースに含まれます。 各情報スキーマ ビューは、特定のデータベースに格納されているすべてのデータ オブジェクトのメタデータで構成されています。 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名と SQL 標準名の関係を示しています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現在のサーバーを参照する場合は、3 つの部分の名前付け規則をサポートしています。 ISO 標準も、3 つの要素で構成される名前付け規則をサポートします。 しかし、両方の名前付け規則で使用される名前は同じではありません。 情報スキーマ ビューは、INFORMATION_SCHEMA という特殊スキーマで定義されます。 このスキーマは、各データベースに含まれます。 各情報スキーマ ビューは、特定のデータベースに格納されているすべてのデータ オブジェクトのメタデータで構成されています。 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名と SQL 標準名の関係を示しています。  
   
 |SQL Server 名|対応する等価な SQL 標準名|  
 |---------------------|-----------------------------------------------|  
-|データベース|Catalog|  
+|[データベース]|Catalog|  
 |スキーマ|スキーマ|  
 |オブジェクト|オブジェクト|  
 |ユーザー定義データ型|[ドメイン]|  

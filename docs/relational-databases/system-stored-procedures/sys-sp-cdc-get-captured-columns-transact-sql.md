@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_captured_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_cdc_get_captured_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024147"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ sys.sp_cdc_get_captured_columns
  [ @capture_instance =] '*capture_instance*'  
  ソース テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname** NULL にすることはできません。  
   
- 報告するために、テーブルのキャプチャ インスタンスの実行、 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)ストアド プロシージャです。  
+ レポート テーブルのキャプチャ インスタンスを実行、 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)ストアド プロシージャ。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|ソース テーブルのスキーマ名です。|  
 |source_table|**sysname**|ソース テーブルの名前です。|  
@@ -73,12 +73,12 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|数値ベースの場合は、列の小数点以下桁数です。それ以外の場合は、NULL です。|  
 |datetime_precision|**smallint**|datetime ベースの場合は、列の有効桁数です。それ以外の場合は NULL です。|  
   
-## <a name="remarks"></a>解説  
- Sys.sp_cdc_get_captured_columns を使用して、キャプチャ インスタンスのクエリ関数によって返されたキャプチャ対象列の列情報を取得する[cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)または[cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)です。 列名、ID、および位置は、キャプチャ インスタンスの有効期間中は常に一定です。 追跡対象テーブルの基になるソース列のデータ型が変更された場合にのみ、列のデータ型が変化します。 追加またはソース テーブルから削除されている列は、既存のキャプチャ インスタンスのキャプチャ対象列に対する影響を与えるありません。  
+## <a name="remarks"></a>コメント  
+ Sys.sp_cdc_get_captured_columns を使用して、キャプチャ インスタンスのクエリ関数によって返されたキャプチャ対象列の列情報を取得する[cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)または[cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)します。 列名、ID、および位置は、キャプチャ インスタンスの有効期間中は常に一定です。 追跡対象テーブルの基になるソース列のデータ型が変更された場合にのみ、列のデータ型が変化します。 追加またはソース テーブルから削除される列は、既存のキャプチャ インスタンスのキャプチャ対象列に対する影響を与えるありません。  
   
- 使用して[sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)情報を取得するデータ定義言語 (DDL) ステートメントのソース テーブルに適用します。 DDL の変更によって追跡対象ソース列の構造が変更された場合、そのような DDL の変更がすべて結果セットとして返されます。  
+ 使用[sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)情報を取得するデータ定義言語 (DDL) ステートメントのソース テーブルに適用します。 DDL の変更によって追跡対象ソース列の構造が変更された場合、そのような DDL の変更がすべて結果セットとして返されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。 それ以外のすべてのユーザーについては、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。さらに、キャプチャ インスタンスのゲーティング ロールが定義されている場合は、そのデータベース ロールのメンバーシップが必要です。 呼び出し元にソース データを表示する権限がない場合、エラー 22981 (オブジェクトが存在しないか、アクセスが拒否されました。) が返されます。  
   
 ## <a name="examples"></a>使用例  

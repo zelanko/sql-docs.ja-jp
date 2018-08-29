@@ -1,5 +1,5 @@
 ---
-title: sys.numbered_procedure_parameters (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.numbered_procedure_parameters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sys.numbered_procedure_parameters catalog view
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c64c6eadb57cf8e1c2d431a7d8af5164f704e21b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0594feab6b69a9917b084cfa20c71af9885a880a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181148"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021899"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  番号付きプロシージャのパラメーターごとに 1 行のデータを格納します。 番号付きストアド プロシージャを作成する場合は、ベース プロシージャの番号が 1 になり、 以降のプロシージャの番号は 2、3 のように続きます。 **sys.numbered_procedure_parameters**番号 2、後続のすべてのプロシージャのパラメーターの定義が含まれていますを超えています。 このビューでは、ベース ストアド プロシージャ (番号 = 1) のパラメーターは示されません。 ベース ストアド プロシージャは番号なしのストアド プロシージャと類似しており、 パラメーターを表現するため、 [sys.parameters (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)です。  
+  番号付きプロシージャのパラメーターごとに 1 行のデータを格納します。 番号付きストアド プロシージャを作成する場合は、ベース プロシージャの番号が 1 になり、 以降のプロシージャの番号は 2、3 のように続きます。 **sys.numbered_procedure_parameters**番号が 2 のすべての後続プロシージャのパラメーターの定義が含まれています以上。 このビューでは、ベース ストアド プロシージャ (番号 = 1) のパラメーターは示されません。 ベース ストアド プロシージャは番号なしのストアド プロシージャと類似しており、 そのため、そのパラメーターはで表されます[sys.parameters (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)します。  
   
 > [!IMPORTANT]  
 >  番号付きプロシージャは非推奨とされました。 番号付きプロシージャの使用はお勧めしません。 このカタログ ビューを使用するクエリをコンパイルすると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
@@ -42,25 +42,25 @@ ms.locfileid: "33181148"
 > [!NOTE]  
 >  XML および CLR パラメーターは、番号付きプロシージャではサポートされていません。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|パラメーターが属しているオブジェクトの ID。|  
 |**procedure_number**|**smallint**|オブジェクト内のプロシージャの番号 (2 以降)。|  
-|**name**|**sysname**|パラメーターの名前です。 内で一意では、 **procedure_number**です。|  
-|**parameter_id**|**int**|パラメーターの ID です。 内で一意では、 **procedure_number**です。|  
+|**name**|**sysname**|パラメーターの名前。 内で一意では、 **procedure_number**します。|  
+|**parameter_id**|**int**|パラメーターの ID。 内で一意では、 **procedure_number**します。|  
 |**system_type_id**|**tinyint**|パラメーターのシステム型の ID。|  
 |**user_type_id**|**int**|ユーザーが定義したパラメーターの型の ID。|  
-|**max_length**|**smallint**|バイト単位でパラメーターの最大長。<br /><br /> -1 = 列データ型は varchar(max)、nvarchar(max)、varbinary(max) です。|  
-|**有効桁数 (precision)**|**tinyint**|数値ベースの場合は、パラメーターの有効桁数です。それ以外の場合は、0 です。|  
+|**max_length**|**smallint**|(バイト単位) のパラメーターの最大長。<br /><br /> -1 = 列データ型は varchar(max)、nvarchar(max)、varbinary(max) です。|  
+|**有効桁数**|**tinyint**|数値ベースの場合は、パラメーターの有効桁数です。それ以外の場合は、0 です。|  
 |**scale**|**tinyint**|数値ベースの場合は、パラメーターの小数点以下桁数です。それ以外の場合は、0 です。|  
 |**is_output**|**bit**|1 = パラメーターは出力または戻り値です。それ以外の場合は 0 です。|  
-|**is_cursor_ref**|**bit**|1 = パラメーターはカーソル参照パラメーターです。|  
+|**is_cursor_ref**|**bit**|1 = パラメーターはカーソル参照パラメーター。|  
   
 > [!NOTE]  
 >  XML および CLR パラメーターは、番号付きプロシージャではサポートされていません。  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

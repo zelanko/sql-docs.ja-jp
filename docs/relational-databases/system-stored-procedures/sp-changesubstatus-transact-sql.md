@@ -1,5 +1,5 @@
 ---
-title: sp_changesubstatus (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_changesubstatus (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94c26330636d4e13fe84a2776a72315a418d3d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 269b2eab987560b2c043c887d7a90c2c4ddc1a95
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993469"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019439"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,37 +73,37 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>引数  
  [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** です。 場合*パブリケーション*が指定されていない、すべてのパブリケーションが影響を受けます。  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** します。 場合*パブリケーション*が指定されていない、すべてのパブリケーションが影響を受けます。  
   
  [  **@article=**] **'***記事***'**  
- アーティクルの名前を指定します。 アーティクルの名前はパブリケーションに対して一意である必要があります。 *記事*は**sysname**、既定値は **%** です。 場合*記事*が指定されていない、すべてのアーティクルが影響を受けます。  
+ アーティクルの名前を指定します。 アーティクルの名前はパブリケーションに対して一意である必要があります。 *記事*は**sysname**、既定値は **%** します。 場合*記事*が指定されていない、すべてのアーティクルが影響を受けます。  
   
  [  **@subscriber=**] **'***サブスクライバー***'**  
- 状態を変更するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値は **%** です。 場合*サブスクライバー*が指定されていない、すべてのサブスクライバーの指定したアーティクルの状態が変更されました。  
+ 状態を変更するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値は **%** します。 場合*サブスクライバー*が指定されていない、すべてのサブスクライバーに対して、指定したアーティクルの状態が変更されました。  
   
- [  **@status =**] **'***ステータス***'**  
+ [  **@status =**] **'***状態***'**  
  サブスクリプションの状態で、 **syssubscriptions**テーブル。 *ステータス*は**sysname**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**アクティブ**|サブスクライバーの同期がとられ、データを受信しています。|  
 |**非アクティブ**|サブスクライブはしていませんが、サブスクライバーのエントリが存在します。|  
 |**サブスクライブしています。**|サブスクライバーはデータを要求していますが、まだ同期はとられていません。|  
   
  [  **@previous_status=**] **'***previous_status***'**  
- サブスクリプションの前の状態を指定します。 *previous_status*は**sysname**、既定値は NULL です。 このパラメーターでは、現在のサブスクリプションの特定のグループの機能できるように、ステータスを持つ任意のサブスクリプションを変更することができます (たとえば、すべてのアクティブな設定をバックアップするサブスクリプション**サブスクライブしている**)。  
+ サブスクリプションの前の状態を指定します。 *previous_status*は**sysname**、既定値は NULL です。 このパラメーターは、一連のサブスクリプションの特定のグループの機能できます。 つまり、その状態を現在持っているすべてのサブスクリプションを変更することができます (たとえば、すべてのアクティブな設定サブスクリプションにバックアップ**サブスクライブ**)。  
   
  [  **@destination_db=**] **'***destination_db***'**  
- 対象データベース名を指定します。 *destination_db*は**sysname**、既定値は **%** です。  
+ 対象データベース名を指定します。 *destination_db*は**sysname**、既定値は **%** します。  
   
  [  **@frequency_type=**] *frequency_type*  
  ディストリビューション タスクをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**、既定値は NULL です。  
   
  [  **@frequency_interval=**] *frequency_interval*  
- 設定した頻度に適用する値は、 *frequency_type*です。 *frequency_interval*は**int**、既定値は NULL です。  
+ 設定した頻度に適用する値は、 *frequency_type*します。 *frequency_interval*は**int**、既定値は NULL です。  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- ディストリビューション タスクを実施する日を指定します。 このパラメーターが使用されるときに*frequency_type* 32 (月単位) に設定されています。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
+ ディストリビューション タスクを実施する日を指定します。 このパラメーターが使用されるときに*frequency_type* 32 (月単位) に設定されます。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -115,7 +115,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |NULL (既定値)||  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- によって使用される定期実行係数*frequency_type*です。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
+ 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
   
  [  **@frequency_subday=**] *frequency_subday*  
  定義した期間にスケジュールを組み直す頻度を分単位で指定します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
@@ -129,7 +129,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |NULL (既定値)||  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*です。 *frequency_subday_interval*は**int**、既定値は NULL です。  
+ 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
  ディストリビューション タスクを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は NULL です。  
@@ -157,23 +157,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  [  **@offloadagent=** ] *remote_agent_activation*  
  > [!NOTE]  
->  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**0**でエラーが生成されます。  
+>  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**0**エラーが生成されます。  
   
  [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
 >  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
- データ変換サービス (DTS) パッケージの名前。 *dts_package_name*は、 **sysname**、既定値は NULL です。 たとえば、という名前のパッケージ**DTSPub_Package**を指定する場合`@dts_package_name = N'DTSPub_Package'`です。  
+ データ変換サービス (DTS) パッケージの名前。 *dts_package_name*は、 **sysname**、既定値は NULL です。 たとえば、という名前のパッケージ**DTSPub_Package**指定`@dts_package_name = N'DTSPub_Package'`します。  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は NULL の場合、変更されていないパスワード プロパティのままにすることを指定します。  
+ パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は null の場合、変更せずに残すパスワード プロパティが指定します。  
   
 > [!NOTE]  
 >  DTS パッケージにはパスワードが必要です。  
   
  [ **@dts_package_location**=] *dts_package_location*  
- パッケージの場所を指定します。 *dts_package_location*は、 **int**、既定値は**0**します。 場合**0**ディストリビューターでは、パッケージの場所。 場合**1**パッケージの場所はサブスクライバーです。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**です。  
+ パッケージの場所を指定します。 *dts_package_location*は、 **int**、既定値は**0**します。 場合**0**パッケージの場所は、ディストリビューター側では。 場合**1**パッケージの場所はサブスクライバーです。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**します。  
   
  [ **@skipobjectactivation**=] *skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -182,21 +182,21 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  ディストリビューション ジョブの名前を指定します。 *distribution_job_name*は**sysname**、既定値は NULL です。  
   
  [ **@publisher**=] **'***パブリッシャー***'**  
- 指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*でアーティクルのプロパティを変更するときに使用しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  *パブリッシャー*でアーティクルのプロパティを変更する場合、使用されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_changesubstatus**はスナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_changesubstatus**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
   
- **sp_changesubstatus**でサブスクライバーの状態変更、 **syssubscriptions**変更されたステータスを持つテーブルです。 内のアーティクルの状態を更新、必要な場合、 **sysarticles**アクティブまたは非アクティブを示す表。 必要な場合、そのレプリケーション フラグを設定、オンまたはオフ、 **sysobjects**レプリケートされたテーブルのテーブルです。  
+ **sp_changesubstatus** 、サブスクライバー側での状態を変更、 **syssubscriptions**状態が変更されたテーブル。 アーティクルの状態を更新、必要な場合、 **sysarticles**アクティブまたは非アクティブなを示す表。 必要な場合、そのフラグを設定、レプリケーション オンまたはオフ、 **sysobjects**レプリケートされたテーブルのテーブル。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはサブスクリプションの作成者が実行できる**sp_changesubstatus**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはサブスクリプションの作成者が実行できる**sp_changesubstatus**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_attributes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.xml_schema_attributes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,29 +20,29 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_attributes catalog view
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e7271dd8521ad4f84c0c3fa528b088dc217dbe9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a40f4cbe1e3f1a4f2fa2ba39023f0840a201b3a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017246"
 ---
 # <a name="sysxmlschemaattributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  属性である XML スキーマ コンポーネントごとに 1 行を返します**symbol_space**の**A**です。  
-|列名|データ型|Description|  
+  属性を表す XML スキーマ コンポーネントごとに 1 行を返します**symbol_space**の**A**します。  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<継承された列 >**|--|継承[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)です。|  
-|**is_default_fixed**|**bit**|1 = デフォルト値は固定値です。 この値は、XML インスタンスでオーバーライドされることはできません。<br /><br /> 0 = デフォルト値は属性の固定値ではありません  (既定値)。|  
+|**\<列を継承 >**|--|継承[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)します。|  
+|**is_default_fixed**|**bit**|1 = デフォルト値は固定値です。 XML インスタンスでは、この値をオーバーライドできません。<br /><br /> 0 = デフォルト値は属性の固定値ではありません  (既定値)。|  
 |**must_be_qualified**|**bit**|1 = 属性には明示的に名前空間の修飾名を追加する必要があります。<br /><br /> 0 = 属性には暗黙的に名前空間の修飾名を追加できます  (既定値)。|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|属性の既定値。 既定値が提供されない場合は NULL になります。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML スキーマ&#40;XML 型システム&#41;カタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   

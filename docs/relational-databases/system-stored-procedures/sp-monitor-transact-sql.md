@@ -1,5 +1,5 @@
 ---
-title: sp_monitor (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_monitor (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 277062160e01f0111eeade2dc4a05b3c6a3ab59d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f7e84891d55949751645e3b3d35d8b13fc3a742
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259632"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024057"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  に関する統計情報を表示[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  に関する統計情報を表示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,28 +48,28 @@ sp_monitor
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|Description|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**last_run**|時間**sp_monitor**が最後に実行します。|  
 |**current_run**|時間**sp_monitor**が実行されています。|  
-|**seconds**|以降の経過秒数**sp_monitor**を実行します。|  
-|**cpu_busy**|サーバー コンピューターの CPU が実行されている秒数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作業します。|  
+|**seconds**|経過秒数**sp_monitor**を実行します。|  
+|**cpu_busy**|サーバー コンピューターの CPU が実行されている秒数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動作します。|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が入出力操作に費やした秒数|  
 |**アイドル状態します。**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアイドル状態だった秒数|  
-|**packets_received**|入力パケットの数がによって読み取られた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|**packets_received**|入力パケットの数によって読み取られた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**packets_sent**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が書き込んだ出力パケット数|  
 |**@packet_errors**|発生したエラーの数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パケットを読み書き中にします。|  
-|**total_read**|読み取り回数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
-|**total_write**|書き込み回数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|**total_read**|読み取り回数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
+|**total_write**|書き込み回数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み書き中に発生したエラー数|  
 |**接続**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインまたはログイン試行の回数|  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかの関数によって処理量が追跡されます。 実行する**sp_monitor**これらの関数によって返される現在の値を表示し、プロシージャが実行された最終時刻以降に変更がどの程度を示します。  
+## <a name="remarks"></a>コメント  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかの関数によって処理量が追跡されます。 実行**sp_monitor**これらの関数によって返される現在の値を表示し、プロシージャが実行された最終時刻から変更されている量を示します。  
   
- 各列の統計情報は、フォームで出力*数*(*数*)-*数*% または*数*(*数*). 最初の*数*秒の数を示します (の**cpu_busy**、 **io_busy**、および**アイドル**) または合計数 (他の変数の場合) から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が再起動されました。 *数*かっこで囲まれた秒数または前回の合計数を指します**sp_monitor**を実行します。 経過時間の割合が割合**sp_monitor**が最後に実行します。 たとえば、レポートには表示**cpu_busy**として 4250 (215) 68% の場合は、CPU がされてから 4250 ビジー状態の秒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から 215 の秒数を最後に起動されて**sp_monitor**最後の実行、およびの 68% が、経過時間の合計**sp_monitor**が最後に実行します。  
+ フォームで、各列の統計情報を印刷*数*(*数*)-*数*% または*数*(*数*). 最初の*数*の秒数を示します (の**cpu_busy**、 **io_busy**、および**アイドル**) または (用、もう一方の合計数変数) ため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が再起動されました。 *数*かっこで囲まれた秒数または前回の合計数を指します**sp_monitor**を実行します。 割合からの経過時間の割合が、 **sp_monitor**が最後に実行します。 たとえば、レポートに表示**cpu_busy**として 4250 (215) 68% の場合は、CPU がされてから 4250 ビジー状態の秒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から 215 の秒数を最後に起動されて**sp_monitor**最後の実行、およびの 68% が、経過時間の合計**sp_monitor**が最後に実行します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

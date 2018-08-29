@@ -1,5 +1,5 @@
 ---
-title: sp_helprolemember (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helprolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbe422aff07694ee7358f3be9906890d795f46b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7e59f3c4b97beaa700fab07a66d60ddb447dcd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254356"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022222"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,20 +52,20 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|現在のデータベースに存在するロールの名前。|  
-|**メンバー名**|**sysname**|メンバーの名前**DbRole です。**|  
-|**MemberSID**|**varbinary(85)**|セキュリティ識別子**MemberName です。**|  
+|**メンバー名**|**sysname**|メンバーの名前**DbRole します。**|  
+|**MemberSID**|**varbinary(85)**|セキュリティ識別子**MemberName します。**|  
   
-## <a name="remarks"></a>解説  
- データベースには、入れ子になったロールが含まれている場合**MemberName**ロールの名前を指定できます。 **sp_helprolemember**入れ子になったロールを介して取得されたメンバーシップは表示されません。 たとえば、Role1 のメンバーである User1 Role1、Role2 のメンバーである場合`EXEC sp_helprolemember 'Role2'`; は、Role1 が Role1 のメンバー以外を返します (この例では、User1)。 入れ子になったメンバーシップを返すを実行する必要があります**sp_helprolemember**入れ子になった各ロールの繰り返しです。  
+## <a name="remarks"></a>コメント  
+ データベースには、入れ子になったロールが含まれている場合**MemberName**ロールの名前があります。 **sp_helprolemember**入れ子になったロールを介して取得されたメンバーシップは表示されません。 たとえば、Role1 のメンバーである User1 Role1、Role2 のメンバーである場合`EXEC sp_helprolemember 'Role2'`; は、Role1 が Role1 のメンバーではなくを返します (この例では、User1)。 入れ子になったメンバーシップを返すを実行する必要があります**sp_helprolemember**入れ子になった各ロールの繰り返しです。  
   
- 使用して**sp_helpsrvrolemember**固定サーバー ロールのメンバーを表示します。  
+ 使用**sp_helpsrvrolemember**固定サーバー ロールのメンバーを表示します。  
   
- 使用して[IS_ROLEMEMBER &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/is-rolemember-transact-sql.md)を指定したユーザー ロールのメンバーシップを確認します。  
+ 使用[IS_ROLEMEMBER &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/is-rolemember-transact-sql.md)指定されたユーザー ロールのメンバーシップを確認します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -78,7 +78,7 @@ EXEC sp_helprolemember 'Sales';
 ## <a name="see-also"></a>参照  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember の各&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helpsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
