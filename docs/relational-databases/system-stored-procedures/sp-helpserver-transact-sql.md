@@ -1,5 +1,5 @@
 ---
-title: sp_helpserver (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa1a9a5841f5b43a6dea6f0650a7686f499b4965
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5252f299a0d542fe2f91f75d658ff63aec980712
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258594"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038635"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,47 +47,47 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="arguments"></a>引数  
  [ **@server =** ] **'***server***'**  
- レポート対象のサーバーを指定します。 ときに*サーバー*が指定されていないすべてのサーバーに関するレポート**master.sys.servers**です。 *サーバー*は**sysname**、既定値は NULL です。  
+ レポート対象のサーバーを指定します。 ときに*server*が指定されていないすべてのサーバーに関するレポート**master.sys.servers**します。 *server*は**sysname**、既定値は NULL です。  
   
  [  **@optname =** ] **'***オプション***'**  
- サーバーを説明するオプションを指定します。 *オプション*は**varchar (** 35 **)**、既定値は NULL、これらの値のいずれかを指定する必要があります。  
+ サーバーを説明するオプションを指定します。 *オプション*は**varchar (** 35 **)**、既定値は null の場合、これらの値のいずれかを指定する必要があります。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|**互換性のある照合順序**|リンク サーバーに対するディストリビュートされたクエリの実行に影響します。 このオプションを true に設定した場合、|  
-|**データ アクセス**|分散クエリ アクセスに対してリンク サーバーを有効または無効にします。|  
+|**collation compatible**|リンク サーバーに対するディストリビュートされたクエリの実行に影響します。 このオプションを true に設定した場合、|  
+|**data access**|分散クエリ アクセスに対してリンク サーバーを有効または無効にします。|  
 |**dist**|ディストリビューターです。|  
 |**dpub**|ディストリビューターへのリモート パブリッシャーです。|  
-|**限定的なスキーマの検証**|クエリ開始時のリモート テーブルのスキーマ チェックをスキップします。|  
+|**lazy schema validation**|クエリ開始時のリモート テーブルのスキーマ チェックをスキップします。|  
 |**pub**|パブリッシャーです。|  
 |**rpc**|指定されたサーバーからの RPC を有効にします。|  
-|**[rpc 出力]**|指定されたサーバーへの RPC を有効にします。|  
+|**rpc out**|指定されたサーバーへの RPC を有効にします。|  
 |**sub**|サブスクライバーです。|  
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**リモート照合順序を使用します。**|ローカル サーバーの照合順序ではなく、リモート列の照合順序を使用します。|  
+|**use remote collation**|ローカル サーバーの照合順序ではなく、リモート列の照合順序を使用します。|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- 指定したサーバーと他のサーバーとの関係を指定します。 *show_topology*は**varchar (** 1 **)**、既定値は NULL です。 場合*show_topology*は等しくありません**t**が NULL の場合、または**sp_helpserver**結果セット セクションに示されている列を返します。 場合*show_topology*と等しい**t**、結果セットに示されている列だけでなく**sp_helpserver**も返します**topx**と**topy**情報。  
+ 指定したサーバーと他のサーバーとの関係を指定します。 *show_topology*は**varchar (** 1 **)**、既定値は NULL です。 場合*show_topology*が等しくない**t**が null の場合、または**sp_helpserver**結果セット セクションに示されている列を返します。 場合*show_topology*と等しい**t**、結果セットには、示されている列だけでなく**sp_helpserver**も返します**topx**と**topy**情報。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|サーバー名。|  
 |**network_name**|**sysname**|サーバーのネットワーク名|  
-|**ステータス**|**varchar (** 70 **)**|サーバーの状態|  
+|**status**|**varchar (** 70 **)**|サーバーの状態|  
 |**id**|**char (** 4 **)**|サーバーの識別番号|  
 |**collation_name**|**sysname**|サーバーの照合順序です。|  
 |**connect_timeout**|**int**|リンク サーバーへの接続のタイムアウト値|  
 |**query_timeout**|**int**|リンク サーバーに対するクエリのタイムアウト値|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  1 つのサーバーについて複数の状態値が返されることもあります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  権限は確認されません。  
   
 ## <a name="examples"></a>使用例  

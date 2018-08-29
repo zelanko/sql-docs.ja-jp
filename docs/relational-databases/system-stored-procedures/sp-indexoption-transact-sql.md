@@ -1,5 +1,5 @@
 ---
-title: sp_indexoption (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_indexoption (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,24 +19,25 @@ helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bc44ee2cbce8c96b314172a2bb856a9c3346e2a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 07e18340d595a133311a05fc1a788aee92233053
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036419"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ユーザー定義のクラスター化インデックスおよび非クラスター化インデックス、またはクラスター化インデックスを持たないテーブルに対するロック オプションの値を設定します。  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、ページレベル、行レベル、またはテーブルレベルのロックを自動的に選択します。 これらのオプションを手動で設定する必要はありません。 **sp_indexoption**適切を特定の種類のロックは常に明確に理解しているエキスパート ユーザー向けに提供します。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、ページレベル、行レベル、またはテーブルレベルのロックを自動的に選択します。 これらのオプションを手動で設定する必要はありません。 **sp_indexoption**のために、特定の種類のロックは常に確実に理解している上級ユーザーに適切な提供されます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 代わりに、 [ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)です。  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 代わりに、 [ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,9 +55,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
  ユーザー定義テーブルまたはインデックスの修飾名または非修飾名です。 *table_or_index_name*は**nvarchar (1035)**、既定値はありません。 引用符が必要なのは、修飾されたインデックス名またはテーブル名を指定する場合のみです。 データベース名も含めてフル パスで指定した場合は、そのデータベース名は現在のデータベース名である必要があります。 インデックスなしでテーブル名を指定する場合、指定したオプションの値は、そのテーブルのすべてのインデックス、およびクラスター化インデックスが存在しない場合にはそのテーブル自体に設定されます。  
   
  [  **@OptionName =**] **'***option_name***'**  
- インデックス オプション名です。 *option_name*は**varchar (35)**、既定値はありません。 *option_name*値は次のいずれかを持つことができます。  
+ インデックス オプション名です。 *option_name*は**varchar (35)**、既定値はありません。 *option_name*値は次のいずれかであることができます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**AllowRowLocks**|TRUE の場合、インデックスにアクセスするときに行ロックが許可されます。 いつ行ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。 FALSE の場合、行ロックは使用されません。 既定値は TRUE です。|  
 |**AllowPageLocks**|TRUE の場合、インデックスにアクセスするときにページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。 FALSE の場合、ページ ロックは使用されません。 既定値は TRUE です。|  
@@ -64,35 +65,35 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowPageLocks**|TRUE の場合、ページ ロックは使用されません。 FALSE の場合、インデックスにアクセスするときにページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。|  
   
  [  **@OptionValue =**] **'***値***'**  
- 指定するかどうか、 *option_name*設定が有効になっている (TRUE、ON、はい、または 1) または無効に (FALSE、OFF、いいえ、または 0) です。 *値*は**varchar (12)**、既定値はありません。  
+ 指定するかどうか、 *option_name*設定が有効になっている (TRUE、ON、はい、または 1) か無効 (FALSE、OFF、いいえ、または 0)。 *値*は**varchar (12)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0 を、失敗した場合は 1 以上の値をそれぞれ返します。  
   
-## <a name="remarks"></a>解説  
- XML インデックスはサポートされていません。 XML インデックスを指定した場合、またはテーブル名をインデックス名なしで指定し、テーブルに XML インデックスが含まれている場合、このステートメントは失敗します。 これらのオプションを設定するには使用[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)代わりにします。  
+## <a name="remarks"></a>コメント  
+ XML インデックスはサポートされていません。 XML インデックスを指定した場合、またはテーブル名をインデックス名なしで指定し、テーブルに XML インデックスが含まれている場合、このステートメントは失敗します。 これらのオプションを設定する[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)代わりにします。  
   
- 表示するには、現在の行とページ ロックのプロパティを使用して[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)または[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。  
+ 現在の行とページ ロックのプロパティを表示する使用[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)または[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。  
   
--   インデックスへのアクセス時に行、ページ、およびテーブル レベルのロックが許可されるときに**AllowRowLocks** = TRUE または**DisAllowRowLocks** = FALSE、および**AllowPageLocks** = TRUE または**DisAllowPageLocks** = FALSE。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。  
+-   インデックスへのアクセス時に行、ページ、およびテーブル レベルのロックが許可されるときに**AllowRowLocks** = TRUE または**DisAllowRowLocks** = FALSE、および**AllowPageLocks** = TRUE"または" **DisAllowPageLocks** = FALSE。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。  
   
- インデックスにアクセスするときにテーブル レベルのロックのみが許可されているときに**AllowRowLocks** = FALSE または**DisAllowRowLocks** = TRUE と**AllowPageLocks** = FALSE または**DisAllowPageLocks** = TRUE です。  
+ インデックスにアクセスするときにテーブル レベルのロックのみが許可されているときに**AllowRowLocks** = FALSE または**DisAllowRowLocks** = TRUE と**AllowPageLocks** = FALSE または**DisAllowPageLocks** = TRUE。  
   
  テーブル名をインデックスなしで指定すると、設定はそのテーブルのすべてのインデックスに適用されます。 基になるテーブルにクラスター化インデックスがない (つまりヒープである) 場合、設定は次のように適用されます。  
   
 -   ときに**AllowRowLocks**または**DisAllowRowLocks**は TRUE または FALSE に設定すると、設定が、ヒープに適用され、関連するすべての非クラスター化インデックス。  
   
--   ときに**AllowPageLocks**オプションが TRUE に設定されているまたは**DisAllowPageLocks**設定を FALSE に設定は、ヒープに適用され、関連するすべての非クラスター化インデックス。  
+-   ときに**AllowPageLocks**オプションが TRUE に設定または**DisAllowPageLocks**設定が FALSE に設定が、ヒープに適用され、関連するすべての非クラスター化インデックス。  
   
 -   ときに**AllowPageLocks**オプションが FALSE に設定または**DisAllowPageLocks**が TRUE に設定、設定は、完全に非クラスター化インデックスにします。 つまり、非クラスター化インデックスでは、すべてのページ ロックが許可されません。 ヒープで許可されないのは、ページに対する共有 (S)、更新 (U)、および排他 (X) ロックのみです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部目的用にインテント ページ ロック (IS、IU、または IX) を引き続き取得できます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  テーブルに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. 特定のインデックスに対してオプションを設定する  
- 次の例では、ページのロックが許可されていません、`IX_Customer_TerritoryID`のインデックス、`Customer`テーブル。  
+ 次の例でページ ロックが許可されていません、`IX_Customer_TerritoryID`のインデックス、`Customer`テーブル。  
   
 ```sql  
 USE AdventureWorks2012;  

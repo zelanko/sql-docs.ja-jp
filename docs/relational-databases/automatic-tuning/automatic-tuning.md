@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40394240"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43068749"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 このビューから一部の列は、次の一覧について説明します。
  - -推奨されるアクションの種類`FORCE_LAST_GOOD_PLAN`します。
- - [!INCLUDE[ssde_md](../../includes/ssde_md.md)]が、このプランの変更に潜在的なパフォーマンスの低下があると認識する理由を含む説明。
+ - なぜ情報を含む説明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]このプランの変更に、潜在的なパフォーマンスの低下があると認識します。
  - 日時を設定すると、潜在的な回帰が検出されました。
  - この推奨事項のスコア付けします。 
  - 検出されたプランを強制的に、問題を解決するプランの ID、後退したプランの ID の ID などの問題の詳細について[!INCLUDE[tsql_md](../../includes/tsql-md.md)]スクリプトなどの問題を修正するために適用可能性があります。詳細が格納されている[JSON 形式](../../relational-databases/json/index.md)します。

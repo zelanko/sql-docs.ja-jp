@@ -1,5 +1,5 @@
 ---
-title: sp_add_notification (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79b98fb3f44f3c69e7b4108502a3e6ea14e5c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d17936912a9adca46ddf64724401432c7ef9d43f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238409"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038292"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  警告が発生したときに通知を受け取るオペレーターを指定します。 *演算子*は**sysname**、既定値はありません。  
   
  [  **@notification_method=** ] *notification_method*  
- オペレーターが通知を受ける方法を指定します。 *notification_method*は**tinyint**、既定値はありません。 *notification_method*と共にこれらの値の 1 つ以上にすることができます、 **OR**論理演算子です。  
+ オペレーターが通知を受ける方法を指定します。 *notification_method*は**tinyint**、既定値はありません。 *notification_method*と組み合わせてこれらの値の 1 つ以上を指定することができます、 **OR**論理演算子です。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -66,7 +65,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_add_notification**から実行する必要があります、 **msdb**データベース。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。 警告システムを構成するときには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用することをお勧めします。  
@@ -75,13 +74,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
  電子メールのメッセージやポケットベルによる通知に失敗した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス エラー ログに失敗がレポートされます。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_notification**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_notification**します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、指定された警告 (`Test Alert`) に対応する電子メールでの通知を追加します。  
   
-> **注:** この例では、`Test Alert`既に存在することと`François Ajenstat`有効な演算子の名前を指定します。  
+> **注:** この例では、`Test Alert`既に存在することと`François Ajenstat`は有効な演算子の名前です。  
   
 ```  
 USE msdb ;  
@@ -94,7 +93,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

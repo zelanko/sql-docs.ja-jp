@@ -1,5 +1,5 @@
 ---
-title: sp_updatestats (Transact SQL) |マイクロソフトのドキュメント
+title: sp_updatestats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cd4eada4db6af75ad794efdba231407b23f79354
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 02b1a54da680b9db09cbc488072a9ed0a4c906f1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560582"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43068124"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (成功) または 1 (失敗)  
   
 ## <a name="arguments"></a>引数  
- [ **@resample** =] **'を ' リサンプル**  
- 指定する**sp_updatestats**のリサンプリング オプションが使用されます、[統計の更新](../../t-sql/statements/update-statistics-transact-sql.md)ステートメントです。 場合 **'リサンプル'** が指定されていない、 **sp_updatestats**既定のサンプリングを使用して統計情報を更新します。 **リサンプル**、 **varchar(8)** を既定値は [いいえ]  
+ [ **@resample** =] **'resample'**  
+ 指定します**sp_updatestats**の RESAMPLE オプションを使用、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメント。 場合 **'resample'** が指定されていない**sp_updatestats**既定のサンプリングを使用して統計を更新します。 **リサンプル**、 **varchar(8)** を既定値は [いいえ]  
   
 ## <a name="remarks"></a>コメント  
- **sp_updatestats**データベース内のすべてのユーザー定義および内部テーブルのすべてのキーワードを指定することで、統計の更新を実行します。 sp_updatestats は、その進行状況を示すメッセージが表示されます。 更新が完了すると、すべてのテーブルの統計が更新されたことをレポートします。  
+ **sp_updatestats**データベース内のすべてのユーザー定義および内部テーブルのすべてのキーワードを指定することで、統計を更新を実行します。 sp_updatestats は、その進行状況を示すメッセージが表示されます。 更新が完了すると、すべてのテーブルの統計が更新されたことをレポートします。  
   
  sp_updatestats は、無効化された非クラスター化インデックスの統計を更新しますが、無効化されたクラスター化インデックスの統計は更新しません。  
   
- ディスク ・ ベースのテーブルでは、 **sp_updatestats**に基づく統計情報を更新、 **modification_counter**内の情報、 **sys.dm_db_stats_properties**カタログを表示、少なくとも 1 つの行が変更されている統計情報を更新しています。 実行するときに、テーブルのメモリの最適化に関する統計情報が常に更新される**sp_updatestats**。 実行されません**sp_updatestats**以上必要です。  
+ ディスク ベース テーブルでは、 **sp_updatestats**に基づいて統計を更新、 **modification_counter**内の情報、 **sys.dm_db_stats_properties**カタログ ビュー少なくとも 1 つの行が変更されている統計を更新しています。 実行するときに常にメモリ最適化テーブルで統計が更新される**sp_updatestats**します。 実行されません**sp_updatestats**以上必要です。  
   
- **sp_updatestats**ストアド プロシージャやその他のコンパイル済みコードの再コンパイルをトリガーすることができます。 ただし、 **sp_updatestats**だけ 1 つのクエリ プランが参照しているテーブルとそれらのインデックスの使用可能な再コンパイルする必要を発生可能性があります。 このような場合は、統計が更新されても再コンパイルの必要はありません。  
+ **sp_updatestats**ストアド プロシージャやその他のコンパイル済みコードの再コンパイルをトリガーできます。 ただし、 **sp_updatestats** 1 つのクエリ プランが参照されているテーブルやインデックスに対するだけの場合、再コンパイルをされない可能性があります。 このような場合は、統計が更新されても再コンパイルの必要はありません。  
   
- データベース互換性レベルが 90 を実行する次の**sp_updatestats**特定の統計情報を最新の変更の設定は保持されません。 互換性レベルが 90 以上のデータベースは、sp_updatestats は特定の統計に対する最新の NORECOMPUTE オプションを保持します。 統計の更新の無効化および再有効化について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。  
+ 実行 90 未満の互換性レベル データベースについて**sp_updatestats**は特定の統計に対する最新の NORECOMPUTE 設定は保持されません。 互換性レベルが 90 以上のデータベースは、sp_updatestats は特定の統計に対する最新の NORECOMPUTE オプションを保持します。 統計の更新の無効化および再有効化について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **sysadmin**固定サーバー ロール、またはデータベースの所有権 (**dbo**)。  

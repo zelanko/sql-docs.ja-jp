@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referenced_entities (Transact SQL) |マイクロソフトのドキュメント
+title: sys.dm_sql_referenced_entities (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9dff46e117f5c75162e7fd8e0f717a0e72829714
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: de28f90a9863ebc1ee24f571da03ac460e9ad411
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541682"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067248"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,14 +70,14 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="arguments"></a>引数  
  [ *schema_name*. *referencing_entity_name*  
- 参照元エンティティの名前です。 *schema_name*が参照するクラスがオブジェクトである場合に必要です。  
+ 参照元エンティティの名前です。 *schema_name*が参照元のクラスが OBJECT の場合に必要です。  
   
- *schema_name.referencing_entity_name* 、 **nvarchar(517)**。  
+ *schema_name.referencing_entity_name*は**nvarchar (517)** します。  
   
- *< Referencing_class >* :: = {オブジェクト。DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
+ *< Referencing_class >* :: = {オブジェクト |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER です。  
  指定された参照元エンティティのクラスです。 クラスは 1 つのステートメントに 1 つだけ指定できます。  
   
- *< referencing_class >* 、 **nvarchar(60)**。  
+ *< referencing_class >* は**nvarchar (60)** します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -89,7 +89,7 @@ sys.dm_sql_referenced_entities (
 |referenced_schema_name|**sysname**|参照先エンティティが属しているスキーマ。<br /><br /> スキーマ名を指定せずにエンティティが参照される非スキーマ バインド参照の場合は NULL。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
 |referenced_entity_name|**sysname**|参照先エンティティの名前。 NULL 値は許可されません。|  
 |referenced_minor_name|**sysname**|参照先エンティティが列の場合は列名。それ以外の場合は NULL。 たとえば、参照先エンティティ自体を一覧表示する行では、referenced_minor_name は NULL になります。<br /><br /> 参照元エンティティの中で列が名前で指定されていた場合、または SELECT * ステートメントの中で親エンティティが使用されていた場合、参照先エンティティは列になります。|  
-|referenced_id|**int**|参照先エンティティの ID。 referenced_minor_id が 0 以外の場合、referenced_id は、その列が定義されているエンティティになります。<br /><br /> 複数サーバーにまたがる参照の場合は常に NULL。<br /><br /> 複数データベースにまたがる参照で、データベースがオフラインか、エンティティをバインドできないために ID を判別できない場合は NULL。<br /><br /> データベース内の参照で ID を判別できない場合は、NULL。 非スキーマ バインド参照では、データベース、または名前解決は、呼び出し元に依存する参照先のエンティティが存在しない場合、ID を解決できません。  後者の場合、is_caller_dependent が 1 に設定されています。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
+|referenced_id|**int**|参照先エンティティの ID。 referenced_minor_id が 0 以外の場合、referenced_id は、その列が定義されているエンティティになります。<br /><br /> 複数サーバーにまたがる参照の場合は常に NULL。<br /><br /> 複数データベースにまたがる参照で、データベースがオフラインか、エンティティをバインドできないために ID を判別できない場合は NULL。<br /><br /> データベース内の参照で ID を判別できない場合は、NULL。 非スキーマ バインド参照では、データベース、または名前解決は、呼び出し元に依存する参照先のエンティティが存在しない場合、ID を解決できません。  後者の場合、is_caller_dependent は 1 に設定します。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
 |referenced_minor_id|**int**|参照先エンティティが列の場合は列 ID。それ以外の場合は 0。 たとえば、参照先エンティティ自体を一覧表示する行では、referenced_minor_id は 0 になります。<br /><br /> 非スキーマ バインド参照の場合、列の依存関係は、すべての参照先エンティティがバインドできる場合にのみ報告されます。 バインドできない参照先エンティティが 1 つでも存在した場合、列レベルの依存関係は報告されず、referenced_minor_id は 0 になります。 例 D を参照してください。|  
 |referenced_class|**tinyint**|参照先エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 6 = 型<br /><br /> 10 = XML スキーマ コレクション<br /><br /> 21 = パーティション関数|  
 |referenced_class_desc|**nvarchar(60)**|参照先エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  

@@ -17,13 +17,13 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6af4153b94a5c7733b0c91dc31d5a5323642879
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 604eb2ec51be8cd5e8ee8c1573ff994be19b02ca
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542062"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43080179"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "39542062"
   
 |変換先 -><br /><br /> From|[DATE]|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1,7|[OK]|-|-|1|1,3|1,7|-|[OK] (VT_BSTR)|[OK]|[OK]|4|4|  
-|Time|5,6,7|-|9|[OK]|6|3,6|5,6|-|[OK] (VT_BSTR)|[OK]|[OK]|4|4|  
+|date|1,7|[OK]|-|-|1|1,3|1,7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
+|Time|5,6,7|-|9|[OK]|6|3,6|5,6|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
 |Smalldatetime|7|8|9,10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
 |DATETIME|5,7|8|9,10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Datetime2|5,7|8|9,10|10|7|3|5,7|-|[OK] (VT_BSTR)|[OK]|[OK]|4|4|  
-|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|[OK]|5,7,11|-|[OK] (VT_BSTR)|[OK]|[OK]|4|4|  
+|Datetime2|5,7|8|9,10|10|7|3|5,7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
+|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|[OK]|5,7,11|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
 |Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12,9|12|12|12|7,13|なし|なし|なし|なし|なし|なし|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  

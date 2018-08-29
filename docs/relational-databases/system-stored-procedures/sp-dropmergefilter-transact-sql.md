@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergefilter (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropmergefilter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergefilter
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e44ef9e0fe6dec28143a1d017da37732491d4441
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72df83ad770e380136a954f6f8abaf9726bee650
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990067"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036093"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,27 +57,27 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
  削除するフィルターの名前を指定します。 *filtername*は**sysname**、既定値はありません。  
   
  [  **@force_invalidate_snapshot=** ]*更によって*  
- スナップショットを無効にする機能を有効または無効にします。 *更によって*は、**ビット**、既定で**0**します。  
+ スナップショットを無効にする機能を有効または無効にします。 *更によって*は、**ビット**、既定値は、 **0**します。  
   
  **0**スナップショットが無効であることをマージ アーティクルへの変更が発生しないことを指定します。  
   
- **1**スナップショットが無効であることが発生する可能性があります、マージ アーティクルに変更することを意味します。 この場合の値であるかどうかは**1**新しいスナップショットを作成する権限が与えられます。  
+ **1**マージ アーティクルへの変更、スナップショットを無効になる場合があります。 場合、値があるかどうかは**1**新しいスナップショットを作成する権限が与えられます。  
   
  [ **@force_reinit_subscription**=]*更によって*  
- サブスクリプションを無効としてマーク付けする機能を有効または無効にします。 *更によって*は、**ビット**、既定で**0**します。  
+ サブスクリプションを無効としてマーク付けする機能を有効または無効にします。 *更によって*は、**ビット**、既定値は、 **0**します。  
   
- **0**無効であるサブスクリプションをマージ アーティクル フィルターへの変更が発生しないことを指定します。  
+ **0**無効になるサブスクリプションをマージ アーティクル フィルターへの変更が発生しないことを指定します。  
   
- **1**と、無効であるサブスクリプションのマージ アーティクル フィルターを変更することを意味します。  
+ **1**と、無効であるサブスクリプションのマージ アーティクルのフィルターを変更することを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropmergefilter**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergefilter**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergefilter**します。  
   
 ## <a name="see-also"></a>参照  
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

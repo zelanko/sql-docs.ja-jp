@@ -21,13 +21,13 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eb9b7473935e87e0bca27f90505471a142d12010
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cdfe34072c9eeda158cc36279e2e4371a197447e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554142"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43077511"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "39554142"
  アップデートグラムでは、パラメーター値として NULL を渡すことができます。 指定した、NULL パラメーターの値を渡すため、 **nullvalue**属性。 割り当てられている値、 **nullvalue**属性は、パラメーター値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
   
 > [!NOTE]  
->  ** \<Sql:header >** と** \<updg:header >**、指定する必要があります、 **nullvalue**として修飾されていない一方で、 ** 。\<updg:sync >** を指定する、 **nullvalue**として修飾 (たとえば、 **updg:nullvalue**)。  
+>  **\<Sql:header >** と **\<updg:header >**、指定する必要があります、 **nullvalue**として修飾されていない一方で、  **。\<updg:sync >** を指定する、 **nullvalue**として修飾 (たとえば、 **updg:nullvalue**)。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要があります[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  

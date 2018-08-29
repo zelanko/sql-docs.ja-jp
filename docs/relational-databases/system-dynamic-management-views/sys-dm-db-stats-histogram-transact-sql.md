@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_histogram (Transact SQL) |マイクロソフトのドキュメント
+title: sys.dm_db_stats_histogram (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99c01084174fb87b023dec50aea0ac8dd77509a9
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dba0361e897d907af1eb6cd0b706168c41c616c4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541412"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43065627"
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 現在の指定されたデータベース オブジェクト (テーブルまたはインデックス付きビュー)、統計ヒストグラムを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 ような`DBCC SHOW_STATISTICS WITH HISTOGRAM`です。
@@ -69,7 +69,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
  
  結果セット`sys.dm_db_stats_histogram`のような情報を返します`DBCC SHOW_STATISTICS WITH HISTOGRAM`も含まれています`object_id`、 `stats_id`、および`step_number`します。
 
- 列`range_high_key`は、sql_variant 型のデータ型を使用する必要があります`CAST`または`CONVERT`場合、述語は文字列ではない定数との比較。
+ 列`range_high_key`sql_variant データ型を使用する必要があります`CAST`または`CONVERT`の場合、述語は、非文字列定数と比較します。
 
 ### <a name="histogram"></a>ヒストグラム
   
@@ -149,6 +149,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>参照  
-[DBCC SHOW_STATISTICS (Transact SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+[DBCC show_statistics で (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [オブジェクト関連の動的管理ビューおよび関数 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

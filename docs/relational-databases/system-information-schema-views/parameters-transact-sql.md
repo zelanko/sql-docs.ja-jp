@@ -18,17 +18,16 @@ helpviewer_keywords:
 - PARAMETERS view
 - INFORMATION_SCHEMA.PARAMETERS view
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 62156897510a969bc0ed99de56b59ae3251067e1
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9289f3db5d046d3922340c33e79ef02c266b39d4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564806"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062325"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39564806"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンのカタログ名。|  
-|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンのスキーマ名。<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンのスキーマ名。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**SPECIFIC_NAME**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンの名前。|  
 |**ORDINAL_POSITION**|**int**|1 から始まるパラメーターの順序を表す位置。 関数の戻り値の場合、この値は 0 です。|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|入力パラメーターの場合は IN、出力パラメーターの場合は OUT、入出力パラメーターの場合は INOUT を返します。|  

@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_replmonitorsubscriptionpendingcmds (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c94d01031094e03ddde2fc9bcdf234729ecd11c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7be00206267ea37c74c3b1055598ac9a2770a622
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001048"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038535"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**pendingcmdcount**|**int**|サブスクリプションで保留中のコマンドの数。|  
 |**estimatedprocesstime**|**int**|保留中のコマンドをサブスクライバーに配信するのに必要な予想時間 (秒単位)。|  
@@ -83,11 +83,11 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_replmonitorsubscriptionpendingcmds**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_replmonitorsubscriptionpendingcmds**はトランザクション レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp _replmonitorsubscriptionpendingcmds**です。 パブリケーション アクセス リストのメンバー、ディストリビューション データベースを使用するパブリケーションを実行できるの**sp_replmonitorsubscriptionpendingcmds**を返すそのパブリケーションの保留コマンド。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp _replmonitorsubscriptionpendingcmds**します。 実行できる、ディストリビューション データベースを使用するパブリケーションのパブリケーション アクセスのメンバーが一覧表示**sp_replmonitorsubscriptionpendingcmds**保留中のパブリケーション用のコマンドを返す。  
   
 ## <a name="see-also"></a>参照  
  [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

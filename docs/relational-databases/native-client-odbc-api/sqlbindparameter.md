@@ -17,13 +17,13 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f609aee041f08c53b65dcb6a5b187457c1cfb4fd
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 56b968deddc35cbac7790cce23332cfee79416e3
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541402"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076212"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,21 +41,21 @@ ms.locfileid: "39541402"
  [では](../../relational-databases/native-client-odbc-api/sqlrowcount.md)の信頼性が低い、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーの場合は、バインドされたパラメーター配列の配列要素、ステートメントの実行でエラーが発生します。 また、ODBC ステートメント属性 SQL_ATTR_PARAMS_PROCESSED_PTR は、エラーが発生する前に処理された行数を報告します。 その後、必要に応じてパラメーター状態配列全体をアプリケーションで調査することにより、正常に実行されたステートメント数を検出できます。  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 文字型のパラメーターのバインド  
- 渡される SQL データ型が、文字型の場合*ColumnSize*文字 (バイトではなく) のサイズです。 バイト単位でデータの文字列の長さが 8000 を超える場合*ColumnSize*に設定する必要があります**SQL_SS_LENGTH_UNLIMITED**SQL 型のサイズに制限がないことを示します。  
+ 渡される SQL データ型が、文字型の場合*ColumnSize*文字 (バイトではなく) のサイズです。 (バイト単位)、データの文字列の長さが 8000 より大きい場合*ColumnSize*に設定する必要があります**SQL_SS_LENGTH_UNLIMITED**SQL 型のサイズに制限がないことを示します。  
   
- たとえば、SQL データ型の場合**SQL_WVARCHAR**、 *ColumnSize* 4000 を超えていない場合があります。 実際のデータ長が 4000 を超える、 *ColumnSize*に設定する必要があります**SQL_SS_LENGTH_UNLIMITED** 、 **nvarchar(max)** ドライバーによって使用されます。  
+ たとえば、SQL データ型の場合**SQL_WVARCHAR**、 *ColumnSize* 4000 より大きくする必要がありますできません。 実際のデータ長がより大きいかどうか、4000、 *ColumnSize*に設定する必要があります**SQL_SS_LENGTH_UNLIMITED**ように**nvarchar (max)** ドライバーによって使用されます。  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter とテーブル値パラメーター  
  テーブル値パラメーターは、他のパラメーターの型のような場合は、SQLBindParameter がバインドされます。  
   
- テーブル値パラメーターがバインドされた後、そのパラメーターの列もバインドされます。 呼び出すに列をバインドするには、 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) SQL_SOPT_SS_PARAM_FOCUS をテーブル値パラメーターの序数に設定します。 テーブル値パラメーターの列ごとに、場合は、SQLBindParameter を呼び出してください。 最上位パラメーター バインドに戻るには、SQL_SOPT_SS_PARAM_FOCUS に 0 を設定します。  
+ テーブル値パラメーターがバインドされた後、そのパラメーターの列もバインドされます。 列をバインドするを呼び出す[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) SQL_SOPT_SS_PARAM_FOCUS にテーブル値パラメーターの序数を設定します。 テーブル値パラメーターの列ごとに、場合は、SQLBindParameter を呼び出してください。 最上位パラメーター バインドに戻るには、SQL_SOPT_SS_PARAM_FOCUS に 0 を設定します。  
   
  テーブル値パラメーターの記述子フィールドへのマッピングのパラメーターに関する情報を参照してください[バインドおよび Data Transfer of Table-Valued パラメーターと列の値](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)です。  
   
  テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter による機能強化された日付と時刻のサポート  
- 日付/時刻型のパラメーターの値で説明したように変換[C から SQL への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。 メモ型のパラメーターは、**時間**と**datetimeoffset**必要があります*ValueType*として指定された**SQL_C_DEFAULT**または**SQL_C_BINARY**構造体の対応する場合 (**SQL_SS_TIME2_STRUCT**と**SQL_SS_TIMESTAMPOFFSET_STRUCT**) を使用します。  
+ 日付/時刻型のパラメーターの値で説明したように変換[C から SQL への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。 注型のパラメーター**時間**と**datetimeoffset**必要があります*ValueType*として指定された**SQL_C_DEFAULT**または**SQL_C_BINARY**場合、対応する構造体 (**SQL_SS_TIME2_STRUCT**と**SQL_SS_TIMESTAMPOFFSET_STRUCT**) 使用されます。  
   
  詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_articleview (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_articleview (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68d7b62faa098eedb77bf1576020f01c090fcbd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d16749d8ee75a177597a288454a3f0a806fa71da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993389"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037181"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,27 +73,27 @@ sp_articleview [ @publication = ] 'publication'
   
  **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  
   
- **1**アーティクルへの変更がスナップショットが無効であることがあり、新しいスナップショットが必要となる既存のサブスクリプションがある場合は、アクセス許可を与える不使用とマークするのには、既存のスナップショットと、新しいスナップショットを生成するように指定します。  
+ **1**アーティクルへの変更はスナップショットが無効であることがあり、新しいスナップショットを必要とする既存のサブスクリプションがある場合は、アクセス許可を付与 obsolete としてマーク済みである既存のスナップショットを新しいスナップショットを生成を指定します。  
   
  [  **@force_reinit_subscription =]** *更によって*  
  このストアド プロシージャが実行する操作によって、既存のサブスクリプションの再初期化が必要になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
   
- **0**アーティクルへの変更によってが再初期化するサブスクリプションを指定します。 場合は、ストアド プロシージャを再初期化するサブスクリプションを変更が必要で検出されると、エラーが発生し、変更は行われません。  
+ **0**アーティクルへの変更では、サブスクリプションを再初期化するのには発生しないことを指定します。 ストアド プロシージャが、変更がサブスクリプションの再初期化する必要になることを検出した場合は、エラーが発生し、変更は行われません。  
   
- **1**を指定するアーティクルの変更が既存のサブスクリプションを初期化すると、サブスクリプションの再初期化を許可します。  
+ **1**アーティクルの変更の場合、既存のサブスクリプションが初期化されることを指定します。 サブスクリプションの再初期化を許可します。  
   
  [ **@publisher**=] **'***パブリッシャー***'**  
- 指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*から発行するときに使用しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  *パブリッシャー*から発行するときに使用されません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
  [ **@refreshsynctranprocs** =] *refreshsynctranprocs*  
  レプリケーションの同期に使用するストアド プロシージャを自動的に再作成するかどうかを指定します。 *refreshsynctranprocs*は**ビット**、既定値は 1 です。  
   
  **1**ストアド プロシージャが再作成することを意味します。  
   
- **0**ストアド プロシージャは再作成していないことを意味します。  
+ **0**ストアド プロシージャが再作成しないことを意味します。  
   
  [ **@internal**=]*内部*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -102,27 +101,27 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_articleview** 、パブリッシュされたアーティクルを定義し、このビューでの ID を挿入するビューを作成、 **sync_objid**の列、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブル、および制限句のテキストを挿入、 **filter_clause**列です。 すべての列をレプリケートがある場合はない**filter_clause**、 **sync_objid**で、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)の ID に設定しているテーブル、ベース テーブルと、使用して**sp_articleview**は必要ありません。  
+## <a name="remarks"></a>コメント  
+ **sp_articleview**パブリッシュされたアーティクルを定義しでは、このビューの ID を挿入するビューを作成、 **sync_objid**の列、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブル、および制限句のテキストを挿入、 **filter_clause**列。 すべての列がレプリケートされる場合は、ない**filter_clause**、 **sync_objid**で、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルの ID には設定されて、ベース テーブルと、使用して**sp_articleview**は必要ありません。  
   
- 垂直方向にフィルター選択されたテーブルをパブリッシュする (つまり、列をフィルター) 最初に実行**sp_addarticle**なし*sync_object*実行パラメーター [sp_articlecolumn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) (縦方向のフィルターを定義する) をレプリケートし、実行するには、各列に対して 1 回**sp_articleview**パブリッシュされたアーティクルを定義するビューを作成します。  
+ 垂直方向にフィルター選択されたテーブルをパブリッシュする (つまり、列をフィルター) 最初に実行**sp_addarticle**なしで*sync_object*実行パラメーター [sp_articlecolumn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) (垂直方向のフィルターを定義する) をレプリケートし実行するには、各列に対して 1 回**sp_articleview**パブリッシュされたアーティクルを定義するビューを作成します。  
   
- 水平方向にフィルター選択されたテーブルをパブリッシュする (つまり、フィルター行を)、実行[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)なし*フィルター*パラメーター。 実行[sp_articlefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)を含むすべてのパラメーターを提供する*filter_clause*です。 実行して**sp_articleview**を同じを含むすべてのパラメーターを提供する*filter_clause*です。  
+ 水平方向にフィルター選択されたテーブルをパブリッシュする (つまり、フィルター処理する行)、実行[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)なしで*フィルター*パラメーター。 実行[sp_articlefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)を含むすべてのパラメーターを指定*filter_clause*します。 実行して**sp_articleview**を同じを含むすべてのパラメーターを提供する*filter_clause*します。  
   
- 垂直方向および水平方向にフィルター選択されたテーブルをパブリッシュするには実行[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)なし*sync_object*または*フィルター*パラメーター。 実行[sp_articlecolumn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)をレプリケートする列ごとに 1 回し、 [sp_articlefilter &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)と**sp _articleview**です。  
+ 垂直方向および水平方向にフィルター選択されたテーブルを公開するには、実行[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)なしで*sync_object*または*フィルター*パラメーター。 実行[sp_articlecolumn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)をレプリケートする列ごとに 1 回とし実行[sp_articlefilter &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)と**sp _articleview**します。  
   
- 場合、アーティクルがパブリッシュされたアーティクルを定義するビュー **sp_articleview**既存のビューを削除し、新しいものを自動的に作成されます。 ビューが手動で作成された場合 (**型**で[sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)は**5**)、既存のビューは削除されません。  
+ 場合、アーティクルがパブリッシュされたアーティクルを定義するビューを既には**sp_articleview**既存のビューを削除し、新しいものを自動的に作成されます。 ビューが手動で作成された場合 (**型**で[sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)は**5**)、既存のビューは削除されません。  
   
- カスタム フィルター ストアド プロシージャと、パブリッシュされたアーティクルを手動で定義するビューを作成する場合は実行されません**sp_articleview**です。 代わりに、提供するよう、*フィルター*と*sync_object*パラメーター [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)、適切なと共に*型*値。  
+ カスタム フィルター ストアド プロシージャと、パブリッシュされたアーティクルを手動で定義するビューを作成する場合は実行しないでください**sp_articleview**します。 代わりに、提供するよう、*フィルター*と*sync_object*パラメーター [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)、適切なと共に*型*値。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_articleview**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_articleview**します。  
   
 ## <a name="see-also"></a>参照  
- [アーティクルを定義します。](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [静的行フィルターの定義と変更](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   

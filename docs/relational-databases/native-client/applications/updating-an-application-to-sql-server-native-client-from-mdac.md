@@ -18,13 +18,13 @@ ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2065b627d9a3b9083451df6088dcb5944b436478
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3b8015e130ce45c7d3864532b9cb841a4f2fc16d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540702"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43061285"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "39540702"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、MSDASQL (Microsoft OLE DB Provider for ODBC) からはサポートされません。 MDAC SQLODBC ドライバーを MSDASQL と共に使用しているか、MDAC SQLODBC ドライバーを ADO と共に使用している場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の OLE DB を使用してください。  
   
--   MDAC の接続文字列は、ブール値を許可する (**真**) は、**度**キーワードです。 A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 接続文字列を使用する必要があります**はい**または**ありません**します。  
+-   MDAC 接続文字列は、ブール値を許可する (**true**) の**Trusted_Connection**キーワード。 A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 接続文字列を使用する必要があります**はい**または**ありません**します。  
   
 -   警告とエラーが一部変更されています。 サーバーから返される警告とエラーの重大度は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client に渡されるときも保持されるようになりました。 特定の警告やエラーのトラッピングに依存しているアプリケーションは、十分にテストする必要があります。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "39540702"
     |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
-     この型マッピングは、列のメタデータに返される値に影響を与えます。 などの**テキスト**列には、最大サイズは 2,147, 483,647 が、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント ODBC の最大サイズを報告する**では**と SQL_SS_LENGTH_UNLIMITED、および列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB の最大サイズを報告する**では**と 2,147, 483,647 または-1 で、プラットフォームの列。  
+     この型マッピングは、列のメタデータに返される値に影響を与えます。 たとえば、**テキスト**列が最大サイズは 2,147, 483,647 が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC の最大サイズを報告する**varchar (max)** SQL_SS_LENGTH_UNLIMITED と列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB の最大サイズを報告する**varchar (max)** 2,147, 483,647 または-1 プラットフォームとしての列。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、旧バージョンとの互換性を維持するために接続文字列のあいまい性が許可されます。たとえば、キーワードを複数回指定したり、位置と優先順位に基づいた解決方法を使用して、競合するキーワードを指定することができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の今後のリリースでは、あいまいな接続文字列を使用できなくなる可能性があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用するアプリケーションでは、あいまいな接続文字列を利用しないように変更することをお勧めします。  
   

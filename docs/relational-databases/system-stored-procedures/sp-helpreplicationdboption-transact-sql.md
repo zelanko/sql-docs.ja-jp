@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplicationdboption (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpreplicationdboption (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1066644508c586fe2542d2e86bd3f67059d22663
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c67c6c6f6f74d3cedf2aa8acc4232886b6d52a9f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999859"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038754"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,41 +48,41 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="arguments"></a>引数  
  [ **@dbname=**] **'***dbname***'**  
- データベースの名前です。 *dbname*は**sysname**、既定値は **%** です。 場合**%**、その結果セットには、パブリッシャーのすべてのデータベースが含まれています、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 ユーザーに適切な権限がないデータベースについての情報は返されません。詳細については以下を参照してください。  
+ データベースの名前です。 *dbname*は**sysname**、既定値は **%** します。 場合**%**、その結果、パブリッシャーのすべてのデータベースには、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 ユーザーに適切な権限がないデータベースについての情報は返されません。詳細については以下を参照してください。  
   
  [  **@type=**] **'***型***'**  
- 結果セットを含まれているデータベースのみに制限、指定したレプリケーション オプション*型*値が有効になっています。 *型*は**sysname**値は次のいずれかを指定できます。  
+ 結果セットをいるデータベースのみに制限指定したレプリケーション オプション*型*値が有効になっています。 *型*は**sysname**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**発行**|トランザクション レプリケーションを許可します。|  
 |**マージ パブリッシュします。**|マージ レプリケーションを許可します。|  
 |**レプリケーションを許可**(既定値)|トランザクション レプリケーションまたはマージ レプリケーションを許可します。|  
   
  [  **@reserved=** ]*予約済み*  
- 既存のパブリケーションとサブスクリプションに関する情報を返すかどうかを指定します。 *予約済み*は**ビット**既定値は 0 です。 場合**1**、結果セットには、既存のパブリケーションまたはサブスクリプションに指定されたデータベースがあるかどうかに関する情報が含まれています。  
+ 既存のパブリケーションとサブスクリプションに関する情報を返すかどうかを指定します。 *予約済み*は**ビット**既定値は 0 です。 場合**1**、結果セットに指定されたデータベースが任意の既存のパブリケーションまたはサブスクリプションにあるかどうかに関する情報が含まれています。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|データベースの名前です。|  
 |**id**|**int**|データベースの識別子です。|  
 |**transpublish**|**bit**|スナップショット パブリケーションまたはトランザクション パブリッシング; のデータベースを有効になっている場合値が**1**スナップショット パブリケーションまたはトランザクション パブリッシングが有効になっていることを意味します。|  
-|**mergepublish**|**bit**|マージ パブリッシング; のデータベースが有効にされている場合値が**1**マージ パブリッシュすることを意味が有効にします。|  
-|**dbowner**|**bit**|ユーザーのメンバーである場合、 **db_owner**値が、固定データベース ロールの場合は; **1**ユーザーがこのロールのメンバーであることを示します。|  
+|**mergepublish**|**bit**|データベースがマージ パブリッシング; を有効になっている場合値が**1**マージ パブリッシュ方法を有効にします。|  
+|**dbowner**|**bit**|ユーザーのメンバーである場合、 **db_owner**の値が、固定データベース ロール**1**ユーザーがこのロールのメンバーであることを示します。|  
 |**dbreadonly**|**bit**|データベースが読み取り専用としてマークされているかどうかは、します。値が**1**データベースが読み取り専用であることを意味します。|  
-|**haspublications**|**bit**|データベースにあるすべての既存のパブリケーション値が**1**既存のパブリケーションがあることを意味します。|  
-|**haspullsubscriptions**|**bit**|データベースにある既存のプル サブスクリプションです。値が**1**ことは既存のプル サブスクリプションを意味します。|  
+|**haspublications**|**bit**|データベースに既存のパブリケーションがあります。値が**1**既存のパブリケーションがあることを意味します。|  
+|**haspullsubscriptions**|**bit**|データベースにある既存のプル サブスクリプションです。値が**1**プル サブスクリプションがある、既存のことを意味します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_helpreplicationdboption**はスナップショット、トランザクション、およびマージ レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_helpreplicationdboption**スナップショット、トランザクション、およびマージ レプリケーションで使用されます。  
   
-## <a name="permissions"></a>権限  
- メンバー、 **sysadmin**固定サーバー ロールが実行できる**sp_helpreplicationdboption**任意のデータベースにします。 メンバー、 **db_owner**固定データベース ロールが実行できる**sp_helpreplicationdboption**データベース。  
+## <a name="permissions"></a>アクセス許可  
+ メンバー、 **sysadmin**固定サーバー ロールが実行できる**sp_helpreplicationdboption**任意のデータベース。 メンバー、 **db_owner**固定データベース ロールが実行できる**sp_helpreplicationdboption**データベース。  
   
 ## <a name="see-also"></a>参照  
  [sp_replicationdboption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

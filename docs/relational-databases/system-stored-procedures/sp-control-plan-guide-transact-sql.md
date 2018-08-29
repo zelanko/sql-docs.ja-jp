@@ -1,5 +1,5 @@
 ---
-title: sp_control_plan_guide (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_control_plan_guide を (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f7514e07f4a363072dc527827a858becab8dc0d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dd0be5eaefe85082de07b9d815e836016407ee00
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238379"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038422"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,34 +56,34 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
 ## <a name="arguments"></a>引数  
  **N'** *plan_guide_name* **'**  
- 削除するか、有効または無効にするプラン ガイドを指定します。 *plan_guide_name*は、現在のデータベースに解決します。 指定しない場合、 *plan_guide_name*既定値は NULL です。  
+ 削除するか、有効または無効にするプラン ガイドを指定します。 *plan_guide_name*は、現在のデータベースに解決されます。 指定しない場合、 *plan_guide_name*既定値は NULL です。  
   
  DROP  
- 指定されたプラン ガイドを削除*plan_guide_name*です。 プラン ガイドの削除後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
+ 指定されたプラン ガイドを削除*plan_guide_name*します。 プラン ガイドの削除後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DROP ALL  
- 現在のデータベースのすべてのプラン ガイドを削除します。 **N' * * * plan_guide_name* DROP ALL が指定されている場合に指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを削除します。 **N' * * * plan_guide_name* DROP ALL が指定されると指定することはできません。  
   
  DISABLE  
- 指定したプラン ガイドを無効に*plan_guide_name*です。 プラン ガイドが無効になった後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
+ 指定したプラン ガイドを無効にします。 *plan_guide_name*します。 プラン ガイドが無効になった後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DISABLE ALL  
- 現在のデータベースのすべてのプラン ガイドを無効にします。 **N' * * * plan_guide_name* DISABLE ALL が指定されている場合に指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを無効にします。 **N' * * * plan_guide_name* DISABLE ALL が指定されると指定することはできません。  
   
  ENABLE  
- 指定したプラン ガイドを有効に*plan_guide_name*です。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プラン ガイドは作成時に有効になります。  
+ 指定したプラン ガイドを有効*plan_guide_name*します。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プラン ガイドは作成時に有効になります。  
   
  ENABLE ALL  
  現在のデータベースのすべてのプラン ガイドを有効にします。 **N'***plan_guide_name***'** ENABLE ALL を指定すると指定することはできません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。  
   
  無効なプラン ガイドを無効にする場合や、有効なプラン ガイドを有効にする場合は影響は生じず、エラーなしで実行できます。  
   
- プラン ガイドはすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、実行できます。 **sp_control_plan_guide**の任意のエディションで DROP または DROP ALL オプションを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ プラン ガイドはすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、実行できます。 **sp_control_plan_guide**の任意のエディションで DROP または DROP ALL オプションを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  実行する**sp_control_plan_guide** OBJECT 型のプラン ガイドで (指定して作成 **@type ='** オブジェクト **'** ) オブジェクトに対する ALTER 権限が必要ですプラン ガイドによって参照されます。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

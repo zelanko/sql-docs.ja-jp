@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services チュートリアル-レッスン 2: データの取得 |Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007203"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062213"
 ---
 # <a name="get-data"></a>データを取得します。
 
@@ -22,14 +22,14 @@ ms.locfileid: "38007203"
 
 このレッスンでは使用して**データの取得**AdventureWorksDW サンプル データベースに接続するの データ、プレビューおよびフィルターを選択し、モデル ワークスペースにインポートします。  
   
-データの取得を使用すると、さまざまなソースからデータをインポートすることができます。 データは、Power Query M 数式を使用して照会することもできますまたは[ネイティブ SQL クエリ式](../tabular-models/ssas-import-query.md)します。
+内部的なデータの取得は Power Query への接続およびデータ モデリングと分析のための変形、多数のツールを提供します。 詳細についてを参照してください。 [Power Query のドキュメント](https://docs.microsoft.com/power-query/)します。 
 
 > [!NOTE]
 > このチュートリアルのタスクと画像は、オンプレミス サーバー上の AdventureWorksDW2014 データベースへの接続を表示します。 場合によっては、Azure SQL Data Warehouse では、AdventureWorksDW データベースが別のオブジェクトを表示します。ただし、これらは基本的に、同じです。
   
 このレッスンの推定所要時間: **10 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 1: 新しい表形式モデル プロジェクトを作成する](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)します。  
   

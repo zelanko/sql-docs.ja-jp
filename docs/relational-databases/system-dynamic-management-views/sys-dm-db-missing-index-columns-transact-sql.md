@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_columns (Transact SQL) |マイクロソフトのドキュメント
+title: sys.dm_db_missing_index_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 65f48f853fca55961a69e4e6905e5fa148cf739f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0d931f3a77c8994b5cd2cf822b84f3f679c31655
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560192"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43075515"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  空間インデックス以外のインデックスが欠落しているデータベース テーブル列に関する情報を返します。 **sys.dm_db_missing_index_columns**は、動的管理関数。  
+  空間インデックス以外のインデックスが欠落しているデータベース テーブル列に関する情報を返します。 **sys.dm_db_missing_index_columns**は動的管理関数です。  
 
 ## <a name="syntax"></a>構文  
   
@@ -48,9 +48,9 @@ sys.dm_db_missing_index_columns(index_handle)
  *index_handle*  
  欠落インデックスを一意に識別する整数値です。 次の動的管理オブジェクトから取得できます。  
   
- [sys.dm_db_missing_index_details &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [sys.dm_db_missing_index_groups &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -58,10 +58,10 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|列の ID です。|  
 |**column_name**|**sysname**|テーブル列の名前。|  
-|**column_usage**|**varchar(20)**|クエリでの列の使用方法。 使用可能な値とその説明のとおり。<br /><br /> 等価性: 列は、等しいかどうか、フォームを表す述語に貢献します。 <br />                        *table.column* = *constant_value*<br /><br /> 非等値: 列に作用などの非等値を表す述語形式の述語: *table.column* > *constant_value*。 "=" 以外の比較演算子はすべて、不等値を表します。<br /><br /> インクルード: 列は、述語を評価するために使用されませんが、クエリをカバーするなどの理由により使用されます。|  
+|**column_usage**|**varchar(20)**|クエリでの列の使用方法。 使用可能な値とその説明のとおり。<br /><br /> 等価性: 列は、等しいかどうか、フォームを表す述語に貢献します。 <br />                        *table.column* = *constant_value*<br /><br /> 非等値: 列に貢献するなどの非等値を表す述語フォームの述語: *table.column* > *constant_value*します。 "=" 以外の比較演算子はすべて、不等値を表します。<br /><br /> インクルード: 列は、述語を評価するために使用されませんが、クエリをカバーするなどの理由により使用されます。|  
   
 ## <a name="remarks"></a>コメント  
- によって返される情報**sys.dm_db_missing_index_columns**クエリは、クエリ ・ オプティマイザーによって最適化され、永続化されていない場合に更新されます。 までに限り、欠落インデックスの情報が保持される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
+ によって返される情報**sys.dm_db_missing_index_columns**クエリが、クエリ オプティマイザーによって最適化されて永続化されていないときに更新されます。 までに限り、欠落インデックスの情報が保持される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
   
 ## <a name="transaction-consistency"></a>トランザクションの一貫性  
  トランザクションでテーブルを作成または削除する場合、削除されたオブジェクトに関する欠落インデックス情報を含む行は、トランザクションの一貫性を保持するためこの動的管理オブジェクトから削除されます。  
@@ -89,8 +89,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_db_missing_index_details &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

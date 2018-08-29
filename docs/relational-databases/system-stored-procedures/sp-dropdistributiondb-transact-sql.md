@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributiondb (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropdistributiondb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7dacdf22808f4bc3a4192a7adebafdd66eeb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6cf4ab210cfd94cfc2f35ec6adadb47fb47a184f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989277"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038144"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +51,20 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropdistributiondb**はあらゆる種類のレプリケーションで使用します。  
   
- このストアド プロシージャを実行してディストリビューターを削除する前に実行する必要があります**sp_dropdistributor**です。  
+ このストアド プロシージャを実行してディストリビューターを削除する前に実行する必要があります**sp_dropdistributor**します。  
   
- **sp_dropdistributiondb**も存在する場合、ディストリビューション データベースのキュー リーダー エージェント ジョブを削除します。  
+ **sp_dropdistributiondb**も存在する場合に、ディストリビューション データベースのキュー リーダー エージェント ジョブを削除します。  
   
  ディストリビューションを無効にするには、ディストリビューション データベースがオンラインであることが必要です。 ディストリビューション データベースに対してデータベース スナップショットが存在する場合は、ディストリビューションを無効にする前に、このスナップショットを削除する必要があります。 データベース スナップショットは、データベースの読み取り専用のオフライン コピーであり、レプリケーション スナップショットには関係していません。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dropdistributiondb**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dropdistributiondb**します。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   

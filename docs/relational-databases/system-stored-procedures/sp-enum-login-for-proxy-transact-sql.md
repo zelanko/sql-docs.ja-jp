@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_enum_login_for_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3c4751f3d9dfaa60110f7e859bc8157de2c9246
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249934"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036274"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,24 +59,24 @@ sp_enum_login_for_proxy
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|プロキシの識別番号|  
 |**proxy_name**|**sysname**|プロキシの名前|  
 |**name**|**sysname**|関連付けを表示するセキュリティ プリンシパルの名前|  
-|**flags**|**int**|セキュリティ プリンシパルの種類<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン<br /><br /> **1** = 固定システム ロール<br /><br /> **2**のデータベース ロールを = **msdb**|  
+|**flags**|**int**|セキュリティ プリンシパルの種類<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン<br /><br /> **1** = 固定システム ロール<br /><br /> **2**データベース ロールを = **msdb**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  パラメーターが指定されていないときに**sp_enum_login_for_proxy**各プロキシのインスタンス内のすべてのログインに関する情報を一覧表示します。  
   
- プロキシ id またはプロキシ名を指定した場合、 **sp_enum_login_for_proxy**をプロキシへのアクセスを持つログインを一覧表示します。 ログイン名を指定すると、 **sp_enum_login_for_proxy**へのアクセスをログインのあるプロキシを一覧表示します。  
+ プロキシ id またはプロキシ名を指定する、 **sp_enum_login_for_proxy**をプロキシへのアクセスを持つログインを一覧表示されます。 ログイン名を指定すると、 **sp_enum_login_for_proxy**へのアクセスをログインにはプロキシは、リスト。  
   
  プロキシ情報とログイン名の両方を指定した場合、結果セットでは、指定のログインが指定のプロキシにアクセスできる場合に 1 行のデータが返されます。  
   
- このストアド プロシージャにある**msdb**です。  
+ このストアド プロシージャにある**msdb**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにこのプロシージャの既定の実行のアクセス許可、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
   

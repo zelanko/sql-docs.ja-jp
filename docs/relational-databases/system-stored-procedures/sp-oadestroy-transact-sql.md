@@ -1,5 +1,5 @@
 ---
-title: sp_OADestroy (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_OADestroy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OADestroy
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 745b9f47c6fded870a6a4453e868cebdc88eb2b3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 758f9be98c13f599fabcea77d1007c73a688d5e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251222"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037379"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- 使用して作成した OLE オブジェクトのオブジェクト トークン**sp_OACreate**です。  
+ 使用して作成した OLE オブジェクトのオブジェクト トークン**sp_OACreate**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)です。  
+ HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
   
-## <a name="remarks"></a>解説  
- 場合**sp_OADestroy**呼び出さないと、作成した OLE オブジェクトは、バッチの最後に自動的に破棄されます。  
+## <a name="remarks"></a>コメント  
+ 場合**sp_OADestroy**が呼び出されない、作成した OLE オブジェクトは、バッチの最後に自動的に破棄されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例を以前に作成された破棄**SQLServer**オブジェクト。  
+ 次の例では、破棄、以前に作成した**SQLServer**オブジェクト。  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  

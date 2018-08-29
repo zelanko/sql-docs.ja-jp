@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_scan (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_cdc_scan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_scan
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a295451cc5894d55d2e61ed941fb46af93d53c1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f321deee03c7231287a02d03472e637731e62926
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255893"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038395"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  [  **@maxscans=** ] *max_scans*  
  ログからすべての行を抽出するために実行する最大スキャン サイクル数を指定します。 *max_scans*は**int**既定値は 10 です。  
   
- [  **@continuous=** ]*連続*  
- ストアド プロシージャが単一のスキャン サイクル (0) の実行後に終了するかによって指定された時間一時停止、継続的に実行するかどうかを示す*polling_interval*してスキャン サイクル (1) の前にします。 *継続的な*は**tinyint**既定値は 0 です。  
+ [  **@continuous=** ]*継続的な*  
+ ストアド プロシージャが単一のスキャン サイクル (0) 後に終了する必要があるかどうか、または連続して実行で指定された時間一時停止かどうかを示す*polling_interval*してスキャン サイクル (1) する前にします。 *継続的な*は**tinyint**既定値は 0。  
   
  [  **@pollinginterval=** ] *polling_interval*  
- ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は 0 です。  
+ ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は 0。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -67,10 +66,10 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのキャプチャ ジョブが変更データ キャプチャによって使用されている場合、sys.sp_cdc_scan は sys.sp_MScdc_capture_job によって内部的に呼び出されます。 変更データ キャプチャのログ スキャン操作が既にアクティブである場合、またはデータベースのトランザクション レプリケーションが有効になっている場合は、プロシージャは明示的に実行できません。 自動的に構成されているキャプチャ ジョブの動作をカスタマイズする管理者向けでは、このストアド プロシージャを使用してください。  
+## <a name="remarks"></a>コメント  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのキャプチャ ジョブが変更データ キャプチャによって使用されている場合、sys.sp_cdc_scan は sys.sp_MScdc_capture_job によって内部的に呼び出されます。 変更データ キャプチャのログ スキャン操作が既にアクティブである場合、またはデータベースのトランザクション レプリケーションが有効になっている場合は、プロシージャは明示的に実行できません。 自動的に構成されているキャプチャ ジョブの動作をカスタマイズする管理者によってこのストアド プロシージャを使用する必要があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  

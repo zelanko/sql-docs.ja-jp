@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services チュートリアル-レッスン 4: リレーションシップの作成 |Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 564126e1de4a8019778e33718b48462f633ae232
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981064"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063733"
 ---
 # <a name="create-relationships"></a>リレーションシップの作成
 
@@ -24,7 +24,7 @@ ms.locfileid: "37981064"
   
 このレッスンの推定所要時間: **10 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 3: 日付テーブルとしてマーク](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)します。 
   

@@ -1,5 +1,5 @@
 ---
-title: sp_who (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_who (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f21ac270ac0f448291b5e6eb8874182598e933ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 17d178f1fdf5784ca1e9d9f7dc9042a70611137c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261921"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036942"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のユーザー、セッション、およびプロセスのインスタンスに関する情報を提供、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]です。 フィルター処理により、アイドルではないプロセスや、特定のユーザーまたはセッションに属するプロセスだけを返すことができます。  
+  現在のユーザー、セッション、およびプロセスのインスタンスに関する情報を提供、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 フィルター処理により、アイドルではないプロセスや、特定のユーザーまたはセッションに属するプロセスだけを返すことができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +48,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  *ログイン*は**sysname**特定のログインに属するプロセスを識別します。  
   
- *セッション ID*に属するセッション識別番号、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 *セッション ID*は**smallint**です。  
+ *セッション ID*に属するセッション識別番号、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 *セッション ID*は**smallint**します。  
   
  **アクティブな**ユーザーからの次のコマンドを待機しているセッションを除外します。  
   
@@ -59,36 +58,36 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **sp_who**結果セットには、次の情報を返します。  
+ **sp_who**次の情報を含む結果セットを返します。  
   
-|列|データ型|Description|  
+|[列]|データ型|説明|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|セッション ID。|  
-|**ecid**|**smallint**|特定のセッション ID に関連付けられている、指定されたスレッドの実行コンテキスト ID。<br /><br /> ECID = {0、1、2、3、...*n*} で 0 常を表しますメインまたは親スレッドと {1、2、3、...、*n*}、サブスレッドを表します。|  
-|**ステータス**|**nchar(30)**|プロセスの状態。 可能な値は次のとおりです。<br /><br /> **休止**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でセッションがリセットされています。<br /><br /> **実行している**です。 セッションで 1 つ以上のバッチが実行中です。 複数のアクティブな結果セット (MARS) が有効な場合、1 回のセッションで複数のバッチを実行できます。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 & #40 です。MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **バック グラウンド**です。 セッションで、デッドロック検出などのバックグラウンド タスクが実行中です。<br /><br /> **ロールバック**です。 セッションでトランザクション ロールバックが実行中です。<br /><br /> **保留中**です。 セッションは、ワーカー スレッドが使用可能になるのを待機しています。<br /><br /> **実行可能な**します。 セッションのタスクはスケジューラの実行可能なキューにあり、クォンタムの取得を待機しています。<br /><br /> **spinloop**です。 セッションのタスクはスピンロックの空きを待機しています。<br /><br /> **中断**です。 セッションは I/O などのイベントの完了を待機しています。|  
+|**ecid**|**smallint**|特定のセッション ID に関連付けられている、指定されたスレッドの実行コンテキスト ID。<br /><br /> ECID = {0、1、2、3、...*n*} 0 常を表しますメインまたは親スレッド、および {1、2、3、...、*n*}、サブスレッドを表します。|  
+|**status**|**nchar(30)**|プロセスの状態。 可能な値は次のとおりです。<br /><br /> **休止**します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でセッションがリセットされています。<br /><br /> **実行している**します。 セッションで 1 つ以上のバッチが実行中です。 複数のアクティブな結果セット (MARS) が有効な場合、1 回のセッションで複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **バック グラウンド**します。 セッションで、デッドロック検出などのバックグラウンド タスクが実行中です。<br /><br /> **ロールバック**します。 セッションでトランザクション ロールバックが実行中です。<br /><br /> **保留中**します。 セッションは、ワーカー スレッドが使用可能になるのを待機しています。<br /><br /> **実行可能な**します。 セッションのタスクはスケジューラの実行可能なキューにあり、クォンタムの取得を待機しています。<br /><br /> **spinloop**します。 セッションのタスクはスピンロックの空きを待機しています。<br /><br /> **中断**します。 セッションは I/O などのイベントの完了を待機しています。|  
 |**loginame**|**nchar(128)**|特定のプロセスに関連付けられているログイン名。|  
 |**ホスト名**|**nchar(128)**|各プロセスのホストまたはコンピューター名。|  
 |**blk**|**char (5)**|ブロック中のプロセスが存在する場合は、そのプロセスのセッション ID。 存在しない場合は、この列は 0 になります。<br /><br /> 指定したセッション ID に関連付けられているトランザクションが、孤立した分散トランザクションによってブロックされている場合、この列はブロックしている孤立したトランザクションに対して '-2' を返します。|  
 |**dbname**|**nchar(128)**|プロセスで使用されているデータベース。|  
-|**Cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] コマンド ([!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントでは、内部[!INCLUDE[ssDE](../../includes/ssde-md.md)]プロセスが、)、プロセスを実行します。|  
+|**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] コマンド ([!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントでは、内部[!INCLUDE[ssDE](../../includes/ssde-md.md)]プロセスが、)、プロセスを実行します。|  
 |**request_id**|**int**|特定のセッションで実行されている要求の ID。|  
   
- 並列処理の場合は、特定のセッション ID に対してサブスレッドが生成されます。 メイン スレッドは `spid = <xxx>` および `ecid =0` のように示されます。 その他のサブスレッドが同じである`spid = <xxx>`、ですが、 **ecid** > 0 です。  
+ 並列処理の場合は、特定のセッション ID に対してサブスレッドが生成されます。 メイン スレッドは `spid = <xxx>` および `ecid =0` のように示されます。 その他のサブスレッドが同じである`spid = <xxx>`、ですが、 **ecid** > 0。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  排他ロックを保持していると考えられる、ブロック中のプロセスとは、他のプロセスが必要としているリソースを保持しているプロセスです。  
   
  孤立したすべての分散トランザクションにセッション ID 値 '-2' が割り当てられます。 孤立した分散トランザクションとは、どのセッション ID にも関連付けられていない分散トランザクションです。 詳細については、「 [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」を参照してください。  
   
- クエリ、 **is_user_process**ユーザー プロセスからシステム プロセスを分離する sys.dm_exec_sessions の列です。  
+ クエリ、 **is_user_process**ユーザー プロセスからシステム プロセスを分離する sys.dm_exec_sessions の列。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで実行されているすべてのセッションを確認するには、サーバーに対する VIEW SERVER STATE 権限が必要です。 権限がない場合、ユーザーは現在のセッションだけを確認できます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-listing-all-current-processes"></a>A. 現在のすべてのプロセスを一覧表示する  
- 次の例では`sp_who`現在のすべてのユーザーをレポートにパラメーターを指定しません。  
+ 次の例では`sp_who`すべて現在のユーザーをレポートにパラメーターを指定せずします。  
   
 ```  
 USE master;  

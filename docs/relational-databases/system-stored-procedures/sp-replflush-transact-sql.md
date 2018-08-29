@@ -1,5 +1,5 @@
 ---
-title: sp_replflush (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_replflush (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replflush
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfab78fd3cbb9fb6750c7259ab2c0efd20b23006
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44a23ee5d38ba1caf9a16297215d5b21bb1401f7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997589"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037990"
 ---
 # <a name="spreplflush-transact-sql"></a>sp_replflush (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32997589"
   アーティクル キャッシュをフラッシュします。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
 > [!IMPORTANT]  
->  このプロシージャは手動で実行しないでください。 **sp_replflush**プロフェッショナル経験豊富なレプリケーションのサポートの指示に従って、レプリケーションのトラブルシューティングにのみ使用する必要があります。  
+>  このプロシージャは手動で実行しないでください。 **sp_replflush**サポート プロフェッショナルの経験豊富なレプリケーションのレプリケーションのトラブルシューティングにのみ使用する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,15 +50,15 @@ sp_replflush
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_replflush**トランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_replflush**はトランザクション レプリケーションで使用します。  
   
- 効率を上げるため、アーティクル定義がキャッシュに格納されます。 **sp_replflush**アーティクル定義が変更または削除されるたびには、その他のレプリケーションのストアド プロシージャによって使用されます。  
+ 効率を上げるため、アーティクル定義がキャッシュに格納されます。 **sp_replflush**アーティクル定義を変更または削除されるときに、その他のレプリケーションのストアド プロシージャによって使用されます。  
   
- 1 つのクライアント接続だけが、指定されたデータベースに対するログ リーダー アクセス権を持つことができます。 実行するとき、クライアントは、データベースに対するログ リーダー アクセス権を持つ、 **sp_replflush**場合、クライアントがそのアクセス権を解放します。 その他のクライアントがトランザクション ログを使用して、スキャンできますし、 **sp_replcmds**または**sp_replshowcmds**です。  
+ 1 つのクライアント接続だけが、指定されたデータベースに対するログ リーダー アクセス権を持つことができます。 実行するとき、クライアントは、データベースに対するログ リーダー アクセス権を持っている、 **sp_replflush**により、クライアントのアクセスを解放します。 他のクライアントでは、トランザクション ログを使用してをスキャンできますし、 **sp_replcmds**または**sp_replshowcmds**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replflush**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replflush**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_addlinkedsrvlogin (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addlinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedsrvlogin
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ce75eed42db1d03848b5ba905ce972b829596870
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6f9afac01a491031a31a8fc96022d391bdb75659
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239482"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035997"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,33 +51,33 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  ログイン マッピングの対象となるリンク サーバーの名前を指定します。 *rmtsrvname*は**sysname**、既定値はありません。  
   
  [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
- 接続するかどうかを判断*rmtsrvname*のローカル ログインの権限を借用または明示的にログインとパスワードを送信します。 データ型は**varchar (** 8 **)**、既定値は TRUE です。  
+ 接続するかどうかを判断します*rmtsrvname*ローカル ログインの権限を借用または明示的にログインとパスワードを送信します。 データ型は**varchar (** 8 **)**、既定値は TRUE。  
   
- TRUE の値は、ログインがへの接続に自身の資格情報を使用することを指定します*rmtsrvname*で、 *rmtuser*と*rmtpassword*引数は無視されます。 FALSE を指定する、 *rmtuser*と*rmtpassword*引数がへの接続に使用される*rmtsrvname* 、指定された*locallogin*. 場合*rmtuser*と*rmtpassword*も、NULL でないログインまたはパスワードに設定が、リンク サーバーへの接続に使用します。  
+ TRUE の値は、ログインがへの接続に自身の資格情報を使用することを指定します*rmtsrvname*で、 *rmtuser*と*rmtpassword*引数は無視されます。 FALSE を指定する、 *rmtuser*と*rmtpassword*引数がへの接続に使用される*rmtsrvname* 、指定された*locallogin*. 場合*rmtuser*と*rmtpassword*も NULL でないログインまたはパスワードに設定を使用して、リンク サーバーに接続します。  
   
  [ @locallogin **=** ] **'***locallogin***'**  
- ローカル サーバー上のログインを指定します。 *locallogin*は**sysname**、既定値は NULL です。 NULL では、このエントリに接続するすべてのローカル ログインに適用されることを示す*rmtsrvname*です。 NULL 以外の場合*locallogin*できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 Windows ログインが与えられているへのアクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いずれかを直接または Windows グループのメンバーシップを介してアクセスを許可します。  
+ ローカル サーバー上のログインを指定します。 *locallogin*は**sysname**、既定値は NULL です。 NULL では、このエントリに接続するすべてのローカル ログインに適用されることを示す*rmtsrvname*します。 NULL 以外の場合*locallogin*できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 Windows ログインが与えられているへのアクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いずれかを直接または Windows グループのメンバーシップを介してアクセスを許可します。  
   
  [ @rmtuser **=** ] **'***rmtuser***'**  
- 接続に使用するリモート ログイン*rmtsrvname*とき@useselfは FALSE です。 インスタンスがリモート サーバーの場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 認証を使用しない*rmtuser*は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 *rmtuser*は**sysname**、既定値は NULL です。  
+ 接続するために使用するリモート ログイン*rmtsrvname*とき@useselfは FALSE です。 インスタンスがリモート サーバーの場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 認証を使用しない*rmtuser*は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 *rmtuser*は**sysname**、既定値は NULL です。  
   
  [ @rmtpassword **=** ] **'***rmtpassword***'**  
- パスワードに関連付けられている*rmtuser*です。 *rmtpassword*は**sysname**、既定値は NULL です。  
+ パスワードに関連付けられている*rmtuser*します。 *rmtpassword*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ユーザーがローカル サーバーにログインして、リンク サーバー上のテーブルにアクセスする分散クエリを実行する場合、ローカル サーバーは、目的のテーブルにアクセスするために、ユーザーの代理でリンク サーバーにログインする必要があります。 sp_addlinkedsrvlogin を使用して、ローカル サーバーがリンク サーバーへのログインに使用するログイン資格情報を指定します。  
   
 > [!NOTE]  
->  リンク サーバー上のテーブルを使用するときに最善のクエリ プランを作成するには、クエリ プロセッサがリンク サーバーからデータ分布統計情報を取得する必要があります。 テーブルの列に対するユーザーの権限が制限されていると、必要な統計情報を取得できるだけの十分な権限がないためにクエリ プランが非効率になり、高いパフォーマンスが得られない場合があります。 リンク サーバーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスである場合、利用可能な統計情報をすべて取得するには、ユーザーがテーブルを所有しているか、リンク サーバーの固定サーバー ロール sysadmin、固定データベース ロール db_owner、または固定データベース ロール db_ddladmin のメンバーである必要があります。 SQL Server 2012 SP1 では、統計を取得するための権限の制限が変更され、SELECT 権限を持つユーザーは DBCC SHOW_STATISTICS で入手可能な統計にアクセスできます。 詳細については、アクセス許可のセクションを参照してください。 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)です。  
+>  リンク サーバー上のテーブルを使用するときに最善のクエリ プランを作成するには、クエリ プロセッサがリンク サーバーからデータ分布統計情報を取得する必要があります。 テーブルの列に対するユーザーの権限が制限されていると、必要な統計情報を取得できるだけの十分な権限がないためにクエリ プランが非効率になり、高いパフォーマンスが得られない場合があります。 リンク サーバーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスである場合、利用可能な統計情報をすべて取得するには、ユーザーがテーブルを所有しているか、リンク サーバーの固定サーバー ロール sysadmin、固定データベース ロール db_owner、または固定データベース ロール db_ddladmin のメンバーである必要があります。 SQL Server 2012 SP1 では、統計を取得するための権限の制限が変更され、SELECT 権限を持つユーザーは DBCC SHOW_STATISTICS で入手可能な統計にアクセスできます。 詳細については、アクセス許可のセクションを参照してください。 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)します。  
   
- sp_addlinkedserver を実行することにより、ローカル サーバー上のすべてのログインとリンク サーバー上のリモート ログインとの間の既定のマッピングが自動的に作成されます。 既定のマッピングでは、ことを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインの代わりに、リンク サーバーに接続するときに、ローカル ログインのユーザーの資格情報を使用します。 これで sp_addlinkedsrvlogin を実行する@useselfに設定**true**リンク サーバーをローカル ユーザー名を指定せずにします。 既定のマッピングを変更するときや、特定のローカル ログインに対応する新しいマッピングを追加するときだけ sp_addlinkedsrvlogin を使用します。 既定のマッピングまたはその他のマッピングを削除するには、sp_droplinkedsrvlogin を使用します。  
+ sp_addlinkedserver を実行することにより、ローカル サーバー上のすべてのログインとリンク サーバー上のリモート ログインとの間の既定のマッピングが自動的に作成されます。 既定のマッピングでは、ことを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインの代わりに、リンク サーバーに接続するときに、ローカル ログインのユーザーの資格情報を使用します。 Sp_addlinkedsrvlogin を実行するのと同じ@useself設定**true**ローカル ユーザー名を指定せず、リンク サーバー。 既定のマッピングを変更するときや、特定のローカル ログインに対応する新しいマッピングを追加するときだけ sp_addlinkedsrvlogin を使用します。 既定のマッピングまたはその他のマッピングを削除するには、sp_droplinkedsrvlogin を使用します。  
   
  次のすべての条件が成立する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、sp_addlinkedsrvlogin を使用してあらかじめ決められたログイン マッピングを作成する代わりに、クエリを実行するユーザーの Windows セキュリティ資格情報 (Windows のログイン名とパスワード) を自動的に使用して、リンク サーバーに接続できます。  
   
--   ユーザーが接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 認証モードを使用します。  
+-   ユーザーが接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 認証モードを使用しています。  
   
 -   クライアントと送信側サーバーで、セキュリティ アカウント委任が利用可能になっている。  
   
@@ -91,19 +90,19 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
  ユーザー定義のトランザクション内から sp_addlinkedsrvlogin を実行することはできません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-connecting-all-local-logins-to-the-linked-server-by-using-their-own-user-credentials"></a>A. ログイン自身のユーザー資格情報を使用してすべてのローカル ログインをリンク サーバーに接続する  
- 次の例では、ローカル サーバーにすべてのログインがリンク サーバーに接続を通じてことを確認へのマッピングを`Accounts`自身のユーザー資格情報を使用しています。  
+ 次の例では、ローカル サーバーにすべてのログインをリンク サーバーに接続を確認するマッピングを作成する`Accounts`自身のユーザー資格情報を使用しています。  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- または  
+ スイッチまたは  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  
@@ -113,7 +112,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'true';
 >  個々のログイン用に作成された明示的なマッピングがある場合、それらのマッピングは、リンク サーバーに存在する可能性のあるどのグローバル マッピングよりも優先されます。  
   
 ### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>B. 別のユーザー資格情報を使用して特定のログインをリンク サーバーに接続する  
- 次の例は、ことを確認して、マッピングを作成した Windows ユーザー `Domain\Mary` 、リンク サーバーに接続`Accounts`、ログインを使用して`MaryP`とパスワード`d89q3w4u`です。  
+ 次の例では、ことを確認するマッピングを作成する Windows ユーザー`Domain\Mary`をリンク サーバー経由で接続`Accounts`、ログインを使用して`MaryP`とパスワード`d89q3w4u`します。  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u';  

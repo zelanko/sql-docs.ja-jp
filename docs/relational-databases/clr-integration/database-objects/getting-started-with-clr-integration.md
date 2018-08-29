@@ -6,7 +6,7 @@ ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: clr
-ms.topic: get-started-article
+ms.topic: quickstart
 dev_langs:
 - TSQL
 - VB
@@ -27,12 +27,12 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7f5d4385a8f4687688a15029a898ccfecd2f9c44
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349464"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036584"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
    drop assembly helloworld  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR ストアド プロシージャ](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [SQL Server のインプロセス固有の拡張 ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [CLR データベース オブジェクトのデバッグ](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   

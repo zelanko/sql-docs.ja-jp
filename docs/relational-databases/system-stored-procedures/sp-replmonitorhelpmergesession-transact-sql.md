@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesession (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_replmonitorhelpmergesession (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1d59aba126e66d523e23c680c55f679cbbfa6ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25bacdedf9ed9be6baa5e467cf81b809ff9cab1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003589"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037675"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@hours** =]*時間*  
  履歴エージェント セッション情報を返す時間の範囲を時間単位で指定します。 *時間*は**int**、次の範囲のいずれかを指定することができます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |< **0**|過去のエージェント実行に関する情報を、最大 100 回分まで返します。|  
 |**0** (既定値)|過去のすべてのエージェント実行に関する情報を返します。|  
@@ -65,26 +65,26 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@session_type** =] *session_type*  
  セッションの終了結果に応じて結果セットにフィルターを適用します。 *session_type*は**int**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|再試行されたか成功したエージェント セッション。|  
 |**0**|失敗したエージェント セッション。|  
   
  [ **@publisher** =] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。 実行時にこのパラメーターは使用**sp_replmonitorhelpmergesession**サブスクライバーです。  
+ パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。 実行するときに、このパラメーターは使用**sp_replmonitorhelpmergesession**サブスクライバー。  
   
  [ **@publisher_db** =] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 実行時にこのパラメーターは使用**sp_replmonitorhelpmergesession**サブスクライバーです。  
+ パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 実行するときに、このパラメーターは使用**sp_replmonitorhelpmergesession**サブスクライバー。  
   
  [  **@publication=** ] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 実行時にこのパラメーターは使用**sp_replmonitorhelpmergesession**サブスクライバーです。  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 実行するときに、このパラメーターは使用**sp_replmonitorhelpmergesession**サブスクライバー。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|エージェント ジョブ セッションの ID。|  
-|**[状態]**|**int**|エージェント実行状態。<br /><br /> **1**開始を =<br /><br /> **2** = 成功<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル状態<br /><br /> **5** = 再試行<br /><br /> **6** = 失敗|  
+|**Session_id**|**int**|エージェント ジョブ セッションの ID。|  
+|**ステータス**|**int**|エージェント実行状態。<br /><br /> **1** = 開始<br /><br /> **2** = 成功<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル状態<br /><br /> **5** = 再試行<br /><br /> **6** = 失敗|  
 |**StartTime**|**datetime**|エージェント ジョブ セッションが開始した時刻。|  
 |**EndTime**|**datetime**|エージェント ジョブ セッションが完了した時刻。|  
 |**Duration**|**int**|ジョブ セッションの累積時間 (秒単位)。|  
@@ -94,19 +94,19 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**ErrorID**|**int**|発生したエラーの ID です。|  
 |**PercentageDone**|**decimal**|アクティブなセッションで既に配信された総変更数の割合を推定します。|  
 |**TimeRemaining**|**int**|アクティブなセッションでの推定残り秒数。|  
-|**CurrentPhase**|**int**|アクティブなセッションの現在のフェーズ。次のいずれかになります。<br /><br /> **1**アップロードを =<br /><br /> **2** = ダウンロード|  
+|**CurrentPhase**|**int**|アクティブなセッションの現在のフェーズ。次のいずれかになります。<br /><br /> **1** = アップロード<br /><br /> **2** = ダウンロード|  
 |**LastMessage**|**nvarchar(500)**|セッション中にマージ エージェントによってログに記録された最後のメッセージです。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_replmonitorhelpmergesession**はマージ レプリケーションの監視に使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_replmonitorhelpmergesession**マージ レプリケーションを監視するために使用します。  
   
- サブスクライバーで実行されたときに**sp_replmonitorhelpmergesession**過去 5 回のマージ エージェント セッションに関する情報だけを返します。  
+ サブスクライバーで実行されたときに**sp_replmonitorhelpmergesession**のみ、最後の 5 つのマージ エージェント セッションに関する情報が返されます。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **db_owner**または**replmonitor** 、ディストリビューターのディストリビューション データベースまたはサブスクライバー側でサブスクリプション データベースの固定データベース ロールが実行できる**sp _replmonitorhelpmergesession**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **db_owner**または**replmonitor**ディストリビューターでディストリビューション データベースまたはサブスクライバー側でサブスクリプション データベースの固定データベース ロールが実行できる**sp _replmonitorhelpmergesession**します。  
   
 ## <a name="see-also"></a>参照  
  [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
