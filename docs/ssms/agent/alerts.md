@@ -28,21 +28,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc18be0111569885414ab861a8b7f978e1bd128c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 27ac7d69367739e074a7d5c94ced4cdd9325097d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985684"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775497"
 ---
 # <a name="alerts"></a>オブジェクト エクスプローラーには
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 
-  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-イベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] によって生成され、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows アプリケーション ログに記録されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、アプリケーション ログを読み取り、そこに書き込まれているイベントを、定義済みの警告と比較します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントによって一致が検出されると、イベントに対する自動応答である警告を発します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] イベントの監視だけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントはパフォーマンス状態および Windows Management Instrumentation (WMI) イベントも監視します。  
+イベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成され、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows アプリケーション ログに記録されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、アプリケーション ログを読み取り、そこに書き込まれているイベントを、定義済みの警告と比較します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって一致が検出されると、イベントに対する自動応答である警告を発します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントの監視だけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントはパフォーマンス状態および Windows Management Instrumentation (WMI) イベントも監視します。  
   
 警告を定義するには、次の項目を指定します。  
   
@@ -50,17 +49,17 @@ ms.locfileid: "38985684"
   
 -   警告をトリガーするイベントまたはパフォーマンス状態  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントがそのイベントまたはパフォーマンス状態への応答として実行するアクション  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがそのイベントまたはパフォーマンス状態への応答として実行するアクション  
   
 ## <a name="naming-an-alert"></a>警告の命名  
-すべての警告に名前を付ける必要があります。 警告名は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンス内で一意である必要があります。使用できる文字数は最大 **128** 文字です。  
+すべての警告に名前を付ける必要があります。 警告名は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があります。使用できる文字数は最大 **128** 文字です。  
   
 ## <a name="selecting-an-event-type"></a>イベントの種類の選択  
 警告は特定の種類のイベントに応答します。 警告は次のイベントの種類に応答します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] イベント  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベント  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のパフォーマンス状態  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス状態  
   
 -   WMI イベント  
   
@@ -71,22 +70,22 @@ ms.locfileid: "38985684"
   
 -   **エラー番号**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、特定のエラーが発生したときに警告を発します。 たとえば、データベース コンソール コマンド (DBCC) の不正な起動試行に対する応答をエラー番号 2571 と指定できます。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、特定のエラーが発生したときに警告を発します。 たとえば、データベース コンソール コマンド (DBCC) の不正な起動試行に対する応答をエラー番号 2571 と指定できます。  
   
 -   **重大度レベル**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、特定の重大度のエラーが発生したときに警告を発します。 たとえば、Transact-SQL ステートメントでの構文エラーに重大度 15 を指定できます。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、特定の重大度のエラーが発生したときに警告を発します。 たとえば、Transact-SQL ステートメントでの構文エラーに重大度 15 を指定できます。  
   
 -   **[データベース]**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、特定のデータベースでイベントが発生した場合のみ警告を発します。 このオプションは、エラー番号または重大度に加えて適用できます。 たとえば、1 つのインスタンスで運用データベースとレポート用データベースを使用している場合、運用データベースで構文エラーが発生した場合のみ、警告を発するように定義できます。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、特定のデータベースでイベントが発生した場合のみ警告を発します。 このオプションは、エラー番号または重大度に加えて適用できます。 たとえば、1 つのインスタンスで運用データベースとレポート用データベースを使用している場合、運用データベースで構文エラーが発生した場合のみ、警告を発するように定義できます。  
   
 -   **イベント テキスト**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、指定されたイベントのイベント メッセージに特定の文字列が含まれている場合に警告を発します。 たとえば、特定のテーブル名または特定の定数を含んでいるメッセージに応答する警告を定義できます。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたイベントのイベント メッセージに特定の文字列が含まれている場合に警告を発します。 たとえば、特定のテーブル名または特定の定数を含んでいるメッセージに応答する警告を定義できます。  
   
 ## <a name="selecting-a-performance-condition"></a>パフォーマンス状態の選択  
-特定のパフォーマンス状態に応答する警告を指定できます。 この場合、監視するパフォーマンス カウンター、警告を発生するしきい値、および警告発生時にカウンターが示す動作を指定します。 パフォーマンス状態を設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
+特定のパフォーマンス状態に応答する警告を指定できます。 この場合、監視するパフォーマンス カウンター、警告を発生するしきい値、および警告発生時にカウンターが示す動作を指定します。 パフォーマンス状態を設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
   
 -   **オブジェクト**  
   
@@ -98,7 +97,7 @@ ms.locfileid: "38985684"
   
 -   **インスタンス**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスでは、監視する属性に特定のインスタンスがある場合、そのインスタンスを定義します。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでは、監視する属性に特定のインスタンスがある場合、そのインスタンスを定義します。  
   
 -   **[警告カウンター]** および **[値]**  
   
@@ -110,15 +109,15 @@ ms.locfileid: "38985684"
     > パフォーマンス データは定期的にサンプリングされます。したがって、しきい値に達してからパフォーマンス警告が発せられるまでの間にわずかな遅延 (数秒) が生じる可能性があります。  
   
 ## <a name="selecting-a-wmi-event"></a>WMI イベントの選択  
-特定の WMI イベントに応答して警告が発生するように指定できます。 WMI イベントを選択するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
+特定の WMI イベントに応答して警告が発生するように指定できます。 WMI イベントを選択するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
   
 -   **Namespace**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを WMI クライアントとして、イベントをクエリするために用意された WMI 名前空間に登録します。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを WMI クライアントとして、イベントをクエリするために用意された WMI 名前空間に登録します。  
   
 -   **Query**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、Windows Management Instrumentation Query Language (WQL) ステートメントを使用して、特定のイベントを識別します。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、Windows Management Instrumentation Query Language (WQL) ステートメントを使用して、特定のイベントを識別します。  
   
 一般的なタスクへのリンクは次のとおりです。  
   

@@ -19,21 +19,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 101dad288e673a597a1e3bb5110bf8870b289135
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 44d895479d0de91a6a721ef1d41b2df60386533c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980254"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775557"
 ---
 # <a name="create-a-job"></a>ジョブの作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 
-  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、[!INCLUDE[tsql](../../includes/tsql_md.md)] で SQL Server エージェント ジョブを作成する方法について説明します。  
+このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] で SQL Server エージェント ジョブを作成する方法について説明します。  
   
 オペレーターに送信できるジョブ ステップ、スケジュール、警告、および通知を追加するには、「参照」セクションのトピックをご覧ください。  
   
@@ -55,11 +54,11 @@ ms.locfileid: "38980254"
   
 ### <a name="Restrictions"></a>制限事項と制約事項  
   
--   ジョブを作成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント固定データベース ロールか **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ジョブの編集は、ジョブの所有者または **sysadmin** ロールのメンバーのみが行うことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント固定データベース ロールの詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
+-   ジョブを作成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールか **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ジョブの編集は、ジョブの所有者または **sysadmin** ロールのメンバーのみが行うことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールの詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
 -   別のログインにジョブを割り当てた場合に、新しい所有者がそのジョブを正常に実行できる十分な権限を持っていないこともあります。  
   
--   ローカル ジョブはローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントによってキャッシュに格納されます。 したがって、ジョブを変更すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは暗黙的にジョブをキャッシュに再登録します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sp_add_jobserver **が呼び出されるまで** エージェントはジョブをキャッシュに格納しないので、 **sp_add_jobserver** を最後に呼び出す方が効率的です。  
+-   ローカル ジョブはローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってキャッシュに格納されます。 したがって、ジョブを変更すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは暗黙的にジョブをキャッシュに再登録します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_add_jobserver **が呼び出されるまで** エージェントはジョブをキャッシュに格納しないので、 **sp_add_jobserver** を最後に呼び出す方が効率的です。  
   
 ### <a name="Security"></a>Security  
   
@@ -91,7 +90,7 @@ ms.locfileid: "38980254"
   
 7.  **[警告]** ページで、ジョブの警告を編成します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([警告] ページ)](../../ssms/agent/job-properties-new-job-alerts-page.md)」を参照してください。  
   
-8.  **[通知]** ページで、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが実行するアクションを設定します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([通知] ページ)](../../ssms/agent/job-properties-new-job-notifications-page.md)」を参照してください。  
+8.  **[通知]** ページで、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([通知] ページ)](../../ssms/agent/job-properties-new-job-notifications-page.md)」を参照してください。  
   
 9. **[ターゲット]** ページで、ジョブの対象サーバーを管理します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
   
@@ -151,5 +150,5 @@ ms.locfileid: "38980254"
 ## <a name="SMOProcedure"></a>SQL Server 管理オブジェクトの使用  
 **SQL Server エージェントのジョブを作成するには**  
   
-Visual Basic、Visual C#、PowerShell などの選択したプログラミング言語で **Job** クラスの **Create** メソッドを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16)」を参照してください。  
+Visual Basic、Visual C#、PowerShell などの選択したプログラミング言語で **Job** クラスの **Create** メソッドを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)」を参照してください。  
   

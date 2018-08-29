@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74dc369cb88d644f02a6db142fbf3e320fe15e8a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fac8561bcc2fb119918937b00e91c48afc3749fa
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979854"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776232"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>[オプション] ダイアログ ボックスの F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-ここでは、 **の** [ツール] **メニューの** [オプション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]をクリックして表示されるダイアログ ボックスの F1 ヘルプについて紹介します。  
+ここでは、 **の** [ツール] **メニューの** [オプション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をクリックして表示されるダイアログ ボックスの F1 ヘルプについて紹介します。  
   
 [オプション (デザイナー - Analysis Services デザイナー - 全般)](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

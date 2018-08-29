@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083814"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776409"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>CLR データベース オブジェクトを使用する方法
-Transact\-SQL プログラミング言語の他にも、.NET Framework 言語を使用して、データの取得と更新を行うデータベース オブジェクトを作成できます。 マネージド コードで記述したデータベース オブジェクトは、SQL Server 共通言語ランタイム (CLR: Common Language Run) データベース オブジェクトと呼ばれます。 SQL Server でホストされる CLR データベース オブジェクトを使用する利点と、Transact\-SQL と CLR の間での選択方法については、「[CLR 統合の利点](http://msdn.microsoft.com/en-us/library/ms131045.aspx)」および「[マネージド コードを使用したデータベース オブジェクトの作成の利点](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)」をご覧ください。  
+Transact\-SQL プログラミング言語の他にも、.NET Framework 言語を使用して、データの取得と更新を行うデータベース オブジェクトを作成できます。 マネージド コードで記述したデータベース オブジェクトは、SQL Server 共通言語ランタイム (CLR: Common Language Run) データベース オブジェクトと呼ばれます。 SQL Server でホストされる CLR データベース オブジェクトを使用する利点と、Transact\-SQL と CLR の間での選択方法については、「[CLR 統合の利点](../relational-databases/clr-integration/clr-integration-overview.md)」および「[マネージド コードを使用したデータベース オブジェクトの作成の利点](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)」をご覧ください。  
   
 SQL Server Data Tools で CLR データベース オブジェクトを作成するには、データベース プロジェクトを作成し、これに CLR データベース オブジェクトを追加します。 以前のバージョンの Visual Studio とは異なり、CLR プロジェクトを別に作成したうえで、データベース プロジェクトからこのプロジェクトへの参照を追加する必要がありません。 データベース プロジェクトをビルドして公開すると、自動的にプロジェクト内の CLR オブジェクトも同時に公開されます。 このように公開された CLR オブジェクトは、他のデータベース オブジェクトと同じように呼び出して実行できます。  
   
@@ -86,7 +86,7 @@ CLR データベース オブジェクトをビルドするための要件につ
   
 1.  **SQL Server オブジェクト エクスプローラー**で、プロジェクトを配置する先のローカル データベースに移動します。  
   
-2.  既定では、SQL Server の CLR 統合機能はオフになっています。 CLR データベース オブジェクトを使用するには、CLR 統合機能を有効にする必要があります。 CLR 統合を有効にするには、sp_configure ストアド プロシージャの "clr enabled" オプションを使用します。 詳しくは、[clr enabled オプションに関するトピック](http://msdn.microsoft.com/en-us/library/ms131048.aspx)をご覧ください。  
+2.  既定では、SQL Server の CLR 統合機能はオフになっています。 CLR データベース オブジェクトを使用するには、CLR 統合機能を有効にする必要があります。 CLR 統合を有効にするには、sp_configure ストアド プロシージャの "clr enabled" オプションを使用します。 詳しくは、[clr enabled オプションに関するトピック](../relational-databases/clr-integration/clr-integration-enabling.md)をご覧ください。  
   
     データベースを右クリックし、**[新しいクエリ]** をクリックします。 クエリ ペインに次のコードを貼り付け、**[クエリの実行]** をクリックします。  
   
@@ -105,7 +105,7 @@ CLR データベース オブジェクトをビルドするための要件につ
 5.  入力を「**425 312 1222**」に変更して Tab キーで移動します。 今回は入力が受け入れられます。  
   
 ## <a name="see-also"></a>参照  
-[CLR 統合機能の利点](http://msdn.microsoft.com/en-us/library/ms131045.aspx)  
+[CLR 統合機能の利点](../relational-databases/clr-integration/clr-integration-overview.md)  
 [マネージド コードを使用してデータベース オブジェクトを作成する利点](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)  
 [共通言語ランタイム (CLR) 統合を使用したデータベース オブジェクトの構築](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

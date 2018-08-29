@@ -16,12 +16,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e43296dc139f2e8b53454f088fc341ab40656f5f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036020"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775445"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server のオフライン ヘルプとヘルプ ビューアー
 
@@ -105,7 +105,7 @@ SSMS 17.x と VS 2015 および 2017 ではヘルプ ビューアー 2.x が使�
 |XQuery 言語リファレンス (SQL Server) | XQuery 言語リファレンス (SQL Server)|
 
 > [!NOTE]
-> コンテンツの追加中にヘルプ ビューアーがフリーズ (ハング) した場合は、%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings ファイル内の Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行を将来の日付に変更します。 この問題の詳細については、「 [Visual Studio ヘルプ ビューアーがフリーズする](https://msdn.microsoft.com/en-us/library/dd831853.aspx)」を参照してください。
+> コンテンツの追加中にヘルプ ビューアーがフリーズ (ハング) した場合は、%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings ファイル内の Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行を将来の日付に変更します。 この問題の詳細については、「 [Visual Studio ヘルプ ビューアーがフリーズする](/visualstudio/welcome-to-visual-studio)」を参照してください。
 
 **SSMS でヘルプ ビューアー v2.x を使用してオフライン ヘルプ コンテンツを表示するには**
 

@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ca866e29f6499224bdaa03ce723ac13befd6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03a98a1e29f251663c962795fac0e64382526ff9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041799"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775633"
 ---
 # <a name="open-and-configure-object-explorer"></a>オブジェクト エクスプローラーを開き、構成する
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] の **[表示]** メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[表示]** メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
   
 ## <a name="viewing-object-explorer"></a>オブジェクト エクスプローラーの表示  
-オブジェクト エクスプローラーは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 内に既定で表示されます。 オブジェクト エクスプローラーが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックしてください。  
+オブジェクト エクスプローラーは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 内に既定で表示されます。 オブジェクト エクスプローラーが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックしてください。  
   
 ## <a name="configuring-object-explorer-options"></a>オブジェクト エクスプローラーのオプションの構成  
 オブジェクト エクスプローラーの設定を構成するには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[SQL Server オブジェクト エクスプローラー]** をクリックします。  

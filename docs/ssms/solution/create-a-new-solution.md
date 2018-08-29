@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b7a760a15c8ea953e87b8ff9ab550212c29cd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c28c04376a010c3329dcd1df28e716229cab8f27
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043169"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776237"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-プロジェクトを作成すると、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] によって、そのプロジェクトを含むソリューションが作成されます。 同時に開くことのできるソリューションは 1 つだけです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] では、プロジェクト内にフォルダーを作成することはできません。 作業を整理するには、複数のプロジェクトを作成してください。  
+プロジェクトを作成すると、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって、そのプロジェクトを含むソリューションが作成されます。 同時に開くことのできるソリューションは 1 つだけです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、プロジェクト内にフォルダーを作成することはできません。 作業を整理するには、複数のプロジェクトを作成してください。  
   
 ソリューション エクスプローラーにアクセスするには、 **[表示]** メニューの **[ソリューション エクスプローラー]** をクリックします。  
   

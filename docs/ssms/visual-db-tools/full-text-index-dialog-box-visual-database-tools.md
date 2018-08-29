@@ -17,22 +17,22 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddafa3150bff469209eff2f8166da0b831787506
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 52ba9962b6192ce6ba6a403d35e3ff9559786c1f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984264"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775434"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスを使用すると、データベース テーブルのテキスト ベースの列に対するフルテキスト検索用にフルテキスト インデックスを作成できます。 フルテキスト インデックスは、通常のインデックスに基づくため、最初に通常のインデックスを作成する必要があります。 通常のインデックスは、単一の非 null 列に作成する必要があります。大きな値を格納している列ではなく、小さな値を格納している列を選択するのが最も適切です。  
   
 > [!NOTE]  
-> フルテキスト インデックスを作成する場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 、Enterprise Manager などの外部ツールを使用して、あらかじめデータベースのフルテキスト カタログを作成しておく必要があります。  
+> フルテキスト インデックスを作成する場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、Enterprise Manager などの外部ツールを使用して、あらかじめデータベースのフルテキスト カタログを作成しておく必要があります。  
   
 > [!NOTE]  
-> フルテキスト インデックスの機能は、 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のすべてのエディションで利用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)」を参照してください。  
+> フルテキスト インデックスの機能は、 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)」を参照してください。  
   
 ## <a name="options"></a>[変数]  
 **[選択されたフルテキスト インデックス]**  
@@ -54,7 +54,7 @@ ms.locfileid: "38984264"
 フルテキスト インデックスが格納されているフルテキスト カタログの名前を表示します。 インデックスを別のカタログに格納するには、カタログ名をクリックし、ドロップダウン リストから別のカタログを選択します。  
   
 > [!NOTE]  
-> カタログは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または Enterprise Manager などの外部ツールで、あらかじめ作成しておく必要があります。  
+> カタログは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Enterprise Manager などの外部ツールで、あらかじめ作成しておく必要があります。  
   
 **[IDENTITY] カテゴリ**  
 展開してインデックスの名前フィールドを表示します。  

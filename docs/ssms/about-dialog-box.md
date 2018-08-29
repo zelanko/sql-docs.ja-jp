@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba51c2cba1f2032fe6c55fc27dac7c3f5416cb8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef2fe44791cc401c5f71ee3c3bd6ff09d33d45b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038779"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775647"
 ---
 # <a name="about-dialog-box"></a>[バージョン情報] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-**[バージョン情報]** ダイアログ ボックスには、製品情報が記載されており、このダイアログ ボックスから製品を実行しているコンピューターに関する情報にアクセスできます。 評価版の場合、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] のエントリにはインストールの期限切れまでの日数が表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。  
+**[バージョン情報]** ダイアログ ボックスには、製品情報が記載されており、このダイアログ ボックスから製品を実行しているコンピューターに関する情報にアクセスできます。 評価版の場合、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のエントリにはインストールの期限切れまでの日数が表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **[コンポーネント名]**  
-インストールされているすべての [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] の項目の名前が一覧表示されます。  
+インストールされているすべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の項目の名前が一覧表示されます。  
   
 **バージョン**  
 インストールされている各コンポーネントのバージョンが表示されます。  

@@ -15,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926203"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776398"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed act
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**回避策:** SQL Server エンジンまたは Analysis Services のインストールに失敗したときに、このエラーが発生する場合があります。 この問題を解決するには、SQL Server セットアップ ログを参照して、SQL Server エンジンと Analysis Services のエラーをトラブルシューティングします。 詳細については、「SQL Server セットアップ ログ ファイルの表示と読み取り」をご覧ください。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx)」を参照してください。  
+**回避策:** SQL Server エンジンまたは Analysis Services のインストールに失敗したときに、このエラーが発生する場合があります。 この問題を解決するには、SQL Server セットアップ ログを参照して、SQL Server エンジンと Analysis Services のエラーをトラブルシューティングします。 詳細については、「SQL Server セットアップ ログ ファイルの表示と読み取り」をご覧ください。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 SQL Server 2008 または 2008 R2 の Analysis Services フェールオーバー クラスターのネットワーク名の変更後に SQL Server 2012 へのアップグレードが失敗する場合がある  
 **問題点:** Windows クラスター アドミニストレーター ツールを使用して Microsoft SQL Server 2008 または 2008 R2 の Analysis Services フェールオーバー クラスターの名前を変更した後でアップグレードを実行すると、処理が失敗する場合があります。  
@@ -225,7 +225,7 @@ SQL Server 2012 は、Windows Vista SP2、Windows Server 2008 SP2、Windows 2008
   
 8.  **[修復の進行状況]** ページに、修復操作の進行状況が表示されます。 **[完了]** ページでは、操作が完了したことが示されます。  
   
-SQL Server のインスタンスを修復する方法の詳細については、「 [失敗した SQL Server 2012 のインストールの修復](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx)」をご覧ください。  
+SQL Server のインスタンスを修復する方法の詳細については、「 [失敗した SQL Server 2012 のインストールの修復](../database-engine/install-windows/repair-a-failed-sql-server-installation.md)」をご覧ください。  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 OS のアップグレード後に SQL Server 2012 のインスタンスが失敗する場合がある  
 **問題点:** SQL Server 2012 のインスタンスが、オペレーティング システムを Windows Vista から Windows 7 SP1 にアップグレードした後で、次のエラーで失敗する場合があります。  
@@ -237,7 +237,7 @@ SQL Server のインスタンスを修復する方法の詳細については、
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server エディションのアップグレードには再起動が必要  
 **問題点:** SQL Server 2012 のインスタンスのエディションをアップグレードすると、新しいエディションに関連付けられた機能の一部がすぐにアクティブにならない場合があります。  
   
-**回避策:** SQL Server 2012 のインスタンスのエディションのアップグレード後は、コンピューターを再起動します。 SQL Server 2012 でサポートされているアップグレードの詳細については、「 [サポートされているバージョンとエディションのアップグレード](http://msdn.microsoft.com/library/ms143393.aspx)」をご覧ください。  
+**回避策:** SQL Server 2012 のインスタンスのエディションのアップグレード後は、コンピューターを再起動します。 SQL Server 2012 でサポートされているアップグレードの詳細については、「 [サポートされているバージョンとエディションのアップグレード](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)」をご覧ください。  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 読み取り専用のファイル グループまたはファイルを含むデータベースをアップグレードできない  
 **問題点:** データベースまたはそのファイルやファイル グループが読み取り専用に設定されている場合、データベースをアタッチしたり、バックアップからデータベースを復元したりして、データベースをアップグレードすることができません。  エラー 3415 が返されます。  この問題は、SQL Server のインスタンスのインプレース アップグレードを実行するときにも適用されます。 つまり、SQL Server 2012 をインストールして SQL Server の既存のインスタンスを置き換えようとしたときに、既存のデータベースの 1 つ以上が読み取り専用に設定されています。  
@@ -247,7 +247,7 @@ SQL Server のインスタンスを修復する方法の詳細については、
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 同じ IP アドレスを使用すると SQL Server フェールオーバー クラスターのインスタンスの再インストールに失敗する  
 **問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に正しくない IP アドレスを指定すると、インストールが失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
   
-**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストールする前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](http://msdn.microsoft.com/library/ms191545)」をご覧ください。  
+**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストールする前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -361,7 +361,7 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
 **回避策:** DQS クレンジング コンポーネントを使用してデータ列を処理する前に、データ変換の変換を使用して、これらの列を **DT_STR** データ型または **DT_WSTR** データ型に変換する必要があります。  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 [スタート] メニューの DQSInstaller.exe を実行するアイテムが新しい SQL Server インスタンスのインストールで上書きされる  
-**問題点:** SQL Server インスタンスに Data Quality Services をインストールすることを選択した場合、SQL Server セットアップの完了後に、 **[スタート]** メニューの **[Data Quality Services]** プログラム グループに **[Data Quality Server インストーラー]** というアイテムが作成されます。 ただし、同じコンピューターに複数の SQL Server インスタンスをインストールした場合でも、 **[スタート]** メニューに作成される **[Data Quality Server インストーラー]** アイテムは 1 つです。 このアイテムをクリックすると、最後にインストールされた SQL Server インスタンスの DQSInstaller.exe ファイルが実行されます。  
+**問題点:** SQL Server インスタンスに Data Quality Services をインストールすることを選択した場合、SQL Server セットアップの完了後に、 **[スタート]** メニューの **[Data Quality Services]** プログラム グループに **[Data Quality Server インストーラー]** というアイテムが作成されます。 ただし、同じコンピューターに複数の SQL Server インスタンスをインストールした場合でも、 **[スタート]** メニューに作成される **[Data Quality Server インストーラー]** アイテムは&1; つです。 このアイテムをクリックすると、最後にインストールされた SQL Server インスタンスの DQSInstaller.exe ファイルが実行されます。  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 [アクティビティ監視] 画面に、失敗した Integration Services クレンジング アクティビティについて正しくないステータスが表示される  
 [アクティビティ監視] 画面の **[現在の状態]** 列に、失敗した Integration Services クレンジング アクティビティに対しても **[成功]** と表示されます。  
@@ -405,7 +405,7 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
   
 このエラーは、DQS では SQL Server データベースの文字列と C# の文字列を比較する方法が異なるため発生します。 SQL Server データベースの文字列比較では大文字と小文字が区別されませんが、C# では区別されます。  
   
-例を挙げてこの問題を説明します。 Domain\user1 というユーザーがいるとします。 このユーザーが "user1" アカウントを使用して Data Quality Client コンピューターにログオンし、ナレッジ ベースの作業を行います。 各ユーザーが最近使用したナレッジ ベースは、DQS_MAIN データベースの A_CONFIGURATION テーブルにレコードとして格納されています。 このユーザーの場合、レコードは RecentList:KB:Domain\user1 という名前で格納されます。 その後で、このユーザーが Data Quality Client コンピューターに "User1" という名前でログオンし (最初の U が大文字)、ドメイン管理アクティビティの **[最近使用したナレッジ ベース]** 一覧でナレッジ ベースを開くとします。 DQS の基になるコードで RecentList:KB:DOMAIN\user1 と DOMAIN\User1 という 2 つの文字列が比較されますが、このときに大文字と小文字が区別される C# の方法が使用されます。この 2 つの文字列は一致しないと見なされるため、DQS_MAIN データベースの A_CONFIGURATION テーブルにこのユーザー (User1) 用の新しいレコードを挿入しようとします。 しかし、SQL データベースでは文字列の比較で大文字と小文字が区別されないため、DQS_MAIN データベースの A_CONFIGURATION テーブルにその文字列が既に存在することになり、挿入操作が失敗します。  
+例を挙げてこの問題を説明します。 Domain\user1 というユーザーがいるとします。 このユーザーが "user1" アカウントを使用して Data Quality Client コンピューターにログオンし、ナレッジ ベースの作業を行います。 各ユーザーが最近使用したナレッジ ベースは、DQS_MAIN データベースの A_CONFIGURATION テーブルにレコードとして格納されています。 このユーザーの場合、レコードは RecentList:KB:Domain\user1 という名前で格納されます。 その後で、このユーザーが Data Quality Client コンピューターに "User1" という名前でログオンし (最初の U が大文字)、ドメイン管理アクティビティの **[最近使用したナレッジ ベース]** 一覧でナレッジ ベースを開くとします。 DQS の基になるコードで RecentList:KB:DOMAIN\user1 と DOMAIN\User1 という&2; つの文字列が比較されますが、このときに大文字と小文字が区別される C# の方法が使用されます。この&2; つの文字列は一致しないと見なされるため、DQS_MAIN データベースの A_CONFIGURATION テーブルにこのユーザー (User1) 用の新しいレコードを挿入しようとします。 しかし、SQL データベースでは文字列の比較で大文字と小文字が区別されないため、DQS_MAIN データベースの A_CONFIGURATION テーブルにその文字列が既に存在することになり、挿入操作が失敗します。  
   
 **回避策:** この問題を解決するには、次のいずれかの操作を行います。  
   
@@ -503,11 +503,11 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
   
 |Driver|マルチサブネット フェールオーバー|アプリケーションの目的|読み取り専用ルーティング|マルチサブネット フェールオーバー: より高速な単一サブネット エンドポイント フェールオーバー|マルチサブネット フェールオーバー: SQL クラスター インスタンスの名前付きインスタンスの解決|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|はい|はい|はい|はい|はい|  
+|SQL Native Client 11.0 ODBC|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]|  
 |SQL Native Client 11.0 OLEDB|いいえ|はい|はい|いいえ|いいえ|  
-|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム**\&#42;**|はい|はい|はい|はい|[ユーザー アカウント制御]|  
-|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム **\&#42;\&#42;**|はい|はい|はい|はい|はい|  
-|Microsoft JDBC Driver 4.0 for SQL Server|はい|はい|はい|はい|はい|  
+|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム**\&#42;**|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]|  
+|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム **\&#42;\&#42;**|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]|  
+|Microsoft JDBC Driver 4.0 for SQL Server|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]|  
   
 **\&#42;** ADO .NET with .NET Framework 4.0 用の接続性に関する修正プログラムをダウンロードしてください ([http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211))。  
   
@@ -515,7 +515,7 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
   
 **MultiSubnetFailover のキーワードおよび関連機能**  
   
-MultiSubnetFailover は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で MultiSubnetFailover=True が設定されていると、次の 3 つのサブ機能が有効になります。  
+MultiSubnetFailover は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で MultiSubnetFailover=True が設定されていると、次の&3; つのサブ機能が有効になります。  
   
 -   AlwaysOn 可用性グループまたはフェールオーバー クラスター インスタンスに対する複数サブネット リスナーへのより高速なマルチサブネット フェールオーバー。  
   
@@ -624,7 +624,7 @@ SQL Server 2012 Reporting Services から Microsoft SQL Server PDW Appliance Upd
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsight 2.0 を使用するには、Microsoft SQL Server 2012 のライセンスと .NET Framework 4.0 が必要です。 StreamInsight 2.0 には、いくつかのバグ修正に加え、さまざまなパフォーマンスの改善が施されています。 詳細については、「 [Microsoft StreamInsight 2.0 RC0 Release Notes (Microsoft StreamInsight 2.0 のリリース ノート)](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)」をご覧ください。 StreamInsight 2.0 を単独でダウンロードするには、Microsoft ダウンロード センターの [Microsoft StreamInsight 2.0 のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=241593) にアクセスしてください。  
+SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsight 2.0 を使用するには、Microsoft SQL Server 2012 のライセンスと .NET Framework 4.0 が必要です。 StreamInsight&2;.0 には、いくつかのバグ修正に加え、さまざまなパフォーマンスの改善が施されています。 詳細については、「 [Microsoft StreamInsight 2.0 RC0 Release Notes (Microsoft StreamInsight 2.0 のリリース ノート)](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)」をご覧ください。 StreamInsight 2.0 を単独でダウンロードするには、Microsoft ダウンロード センターの [Microsoft StreamInsight 2.0 のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=241593) にアクセスしてください。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

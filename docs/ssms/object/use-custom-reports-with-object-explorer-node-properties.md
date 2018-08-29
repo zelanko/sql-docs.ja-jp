@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ac0e1dee00d57400f24a17932bddb8e6183e11b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71f2c1bce85c86a19a12fa1c00f2643d7aa2f6f4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046209"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775281"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "33046209"
   
 2.  カスタム レポート用にデータベース サーバーで作成しておいたフォルダーに、このレポート ファイルをコピーします。  
   
-3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]のオブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、[カスタム レポート] をクリックします。 **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーを見つけてレポート ファイルを選択し、 **[開く]** をクリックします。  
+3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のオブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、[カスタム レポート] をクリックします。 **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーを見つけてレポート ファイルを選択し、 **[開く]** をクリックします。  
   
     新しいカスタム レポートは、初めてオブジェクト エクスプローラーのノードから開いたときに、最近使用した一覧に追加されます。この一覧はノードのショートカット メニューの **[カスタム レポート]** の下に表示されます。 標準レポートも、初めて開いたときに **[カスタム レポート]** の下の最近使用した一覧に表示されます。 カスタム レポート ファイルを削除した場合は、次にそのアイテムを選択したときに、最近使用した一覧からアイテムを削除するというプロンプトが表示されます。  
   

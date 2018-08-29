@@ -25,12 +25,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4152bca5efcafb59de4f08c299b4ff3c9a66b9d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bcca6b82d28f350571105826131c0fd99152a12
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045869"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774911"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,7 +164,7 @@ Ctrl キーを使用したストアド プロシージャのキーボード シ�
 6.  **[ユーザー設定]** ダイアログ ボックスの **[閉じる]** をクリックします。  
   
 > [!NOTE]  
-> 関連する内容が [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] で表示されている場合にしか使用できないコマンドもあります。 メニューに使用できるコマンドが存在しない場合、メニュー項目は使用できません。  
+> 関連する内容が [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で表示されている場合にしか使用できないコマンドもあります。 メニューに使用できるコマンドが存在しない場合、メニュー項目は使用できません。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server Management Studio の機能](../ssms/features-in-sql-server-management-studio.md)  

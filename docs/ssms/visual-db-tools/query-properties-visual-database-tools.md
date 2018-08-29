@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecdcf360a7aad1b9468367cc706849d4da2f90c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d3c8c92a78dd0548c115b9bdfa3baed3a396df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053599"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775767"
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "33053599"
 > [!NOTE]  
 > このトピックでは、アルファベット順ではなくカテゴリ別にプロパティが示されています。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **[IDENTITY] カテゴリ**  
 展開して **[オブジェクト名]** プロパティを表示します。  
   
 **名前**  
-現在のクエリの名前を表示します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]では変更できません。  
+現在のクエリの名前を表示します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では変更できません。  
   
 **Database Name**  
 選択したテーブルのデータ ソースの名前が表示されます。  
@@ -60,7 +60,7 @@ MAKE TABLE クエリの場合は、新しいテーブルの名前を入力しま
 クエリが結果セットから重複した値を取り除くように指定します。 このオプションは、テーブルの一部の列だけを使用するときに、使用する列に重複した値が含まれる可能性のある場合、または 2 つ以上のテーブルを結合するプロセスによって結果セットに重複した行が生成される場合に便利です。 このオプションを選択することは、SQL ペインでステートメントに DISTINCT という単語を挿入することと同じです。  
   
 **[GROUP BY 拡張子]**  
-集計クエリに基づくクエリの追加オプションが使用できるように指定します。 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]にのみ適用されます)。  
+集計クエリに基づくクエリの追加オプションが使用できるように指定します。 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にのみ適用されます)。  
   
 **[すべての列を出力]**  
 現在のクエリのすべてのテーブルからすべての列を結果セットに含めるように指定します。 このオプションを選択することは、SQL ステートメントの SELECT キーワードの後でそれぞれの列名の代わりにアスタリスク (*) を指定することと同じです。  
@@ -69,7 +69,7 @@ MAKE TABLE クエリの場合は、新しいテーブルの名前を入力しま
 クエリ パラメーターを表示します。 パラメーターを編集するには、プロパティをクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 汎用 OLE DB だけに適用されます。  
   
 **[SQL コメント]**  
-SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 クエリの使用者やクエリをいつ使用するかなどの情報をコメントに含めることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 以降のデータベースだけに適用されます。  
+SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 クエリの使用者やクエリをいつ使用するかなどの情報をコメントに含めることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降のデータベースだけに適用されます。  
   
 **[Top の指定] カテゴリ**  
 展開すると、 **[Top]**、 **[パーセント]**、 **[式]**、および **[With Ties]** の各プロパティが表示されます。  
@@ -77,16 +77,16 @@ SQL ステートメントの説明を表示します。 説明全体を表示し
 **[[(Top)]]**  
 クエリに TOP 句が含まれるように指定します。この場合、最初の *n* 行または最初の *n* % の行だけが結果セットに返されます。 既定では、クエリは最初の 10 行を結果セットに返します。  
   
-このボックスは、返される行数を変更するか、異なるパーセントを指定する場合に使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 以降だけに適用されます。  
+このボックスは、返される行数を変更するか、異なるパーセントを指定する場合に使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降だけに適用されます。  
   
 **[式]**  
-クエリが返す行の数または割合を指定します。 **[パーセント]** を [はい] に設定すると、この数値はクエリが返す行の割合を表し、 **[パーセント]** を [いいえ] に設定すると、この数値はクエリが返す行の数を表します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 以降だけに適用されます。  
+クエリが返す行の数または割合を指定します。 **[パーセント]** を [はい] に設定すると、この数値はクエリが返す行の割合を表し、 **[パーセント]** を [いいえ] に設定すると、この数値はクエリが返す行の数を表します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降だけに適用されます。  
   
 **[パーセント]**  
-クエリが最初の *n* % の行だけを結果セットに返すように指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 以降だけに適用されます。  
+クエリが最初の *n* % の行だけを結果セットに返すように指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降だけに適用されます。  
   
 **[With Ties]**  
-ビューに WITH TIES 句を含むことを指定します。 WITH TIES は、ビューに ORDER BY 句とパーセンテージに基づく TOP 句が含まれる場合に便利です。 このオプションを設定すると、ORDER BY 句の列で同一の値を持つ行がセットになり、セットの一部の行がパーセンテージによる制限で切り捨てられてしまう場合は、すべての行が含まれるように、クエリで指定されるパーセンテージが増やされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 以降だけに適用されます。  
+ビューに WITH TIES 句を含むことを指定します。 WITH TIES は、ビューに ORDER BY 句とパーセンテージに基づく TOP 句が含まれる場合に便利です。 このオプションを設定すると、ORDER BY 句の列で同一の値を持つ行がセットになり、セットの一部の行がパーセンテージによる制限で切り捨てられてしまう場合は、すべての行が含まれるように、クエリで指定されるパーセンテージが増やされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降だけに適用されます。  
   
 ## <a name="see-also"></a>参照  
 [パラメーターを使用したクエリ (Visual Database Tools)](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

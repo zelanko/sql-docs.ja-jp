@@ -19,20 +19,20 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7e8ba6dcb66fbf962e70cc5175b07095ffa2f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c24de46da06f069ce147907a18db1c7640713f5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043159"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776385"
 ---
 # <a name="options-environment---general-page"></a>[オプション] \([環境]/[全般] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して **[全般]** をクリックします。  
+**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して **[全般]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
 **[スタートアップ時]**  
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] の起動時に実行されるアクションを選択します。 使用可能なオプションは次のとおりです。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の起動時に実行されるアクションを選択します。 使用可能なオプションは次のとおりです。  
   
 -   **[オブジェクト エクスプローラーを開く]** 。接続を要求してからオブジェクト エクスプローラーを開きます。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "33043159"
   
 -   **[オブジェクト エクスプローラーと新しいクエリを開く]** 。接続を要求してから、その接続でオブジェクト エクスプローラーおよび SQL クエリ エディターの両方を開きます。  
   
--   **[空の環境を開く]** 。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を開きますが、[SQL クエリ エディター] ウィンドウを表示せず、オブジェクト エクスプローラーをサーバーに接続しません。  
+-   **[空の環境を開く]** 。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開きますが、[SQL クエリ エディター] ウィンドウを表示せず、オブジェクト エクスプローラーをサーバーに接続しません。  
   
 **[オブジェクト エクスプローラーのシステム オブジェクトを非表示にする]**  
-このチェック ボックスをオンにすると、システム データベース、システム テーブル、システム ビュー、およびシステム ストアド プロシージャがオブジェクト エクスプローラーのツリー ビューから削除されます。 システム関数およびシステム型は非表示になりません。 このオプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスにのみ適用され、既にオブジェクト エクスプローラーに接続されているサーバーに影響を与えません。  
+このチェック ボックスをオンにすると、システム データベース、システム テーブル、システム ビュー、およびシステム ストアド プロシージャがオブジェクト エクスプローラーのツリー ビューから削除されます。 システム関数およびシステム型は非表示になりません。 このオプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにのみ適用され、既にオブジェクト エクスプローラーに接続されているサーバーに影響を与えません。  
   
 ## <a name="environment-layout"></a>[環境レイアウト]  
-タブ付きドキュメントとマルチ ドキュメント インターフェイス (MDI) 環境モードを切り替えるには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を閉じてから再度開く必要があります。  
+タブ付きドキュメントとマルチ ドキュメント インターフェイス (MDI) 環境モードを切り替えるには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を閉じてから再度開く必要があります。  
   
 **[タブ付きドキュメント]**  
 このオプションをオンにすると、エディター内にタブの付いたドキュメント ウィンドウが表示されます。 タブ付きドキュメント ウィンドウは、開いている複数のドキュメントの編成と切り替えを行う場合に便利です。  

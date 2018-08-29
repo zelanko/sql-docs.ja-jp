@@ -19,20 +19,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8784beb120a0d9bdfbe9e558984ff01fa3054a59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf1609438ec0306fa6b374db2d5ed6b921121062
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040669"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776234"
 ---
 # <a name="about-sql-server-management-studio"></a>[Microsoft SQL Server Management Studio のバージョン情報]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このダイアログ ボックスを使用すると、インストール済みの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]に関する情報を表示したり、コピーしたりできます。 評価版の場合、製品の有効期限を示す日数が表示されます。  
+このダイアログ ボックスを使用すると、インストール済みの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に関する情報を表示したり、コピーしたりできます。 評価版の場合、製品の有効期限を示す日数が表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
 **[コンポーネント名]**  
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のインストール済みコンポーネントの名前とオペレーティング システムの名前が一覧表示されます。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のインストール済みコンポーネントの名前とオペレーティング システムの名前が一覧表示されます。  
   
 -   **[Microsoft SQL Server Management Studio]**  
   

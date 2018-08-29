@@ -24,28 +24,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a2035ca0780e873f5d3cee8d9b649faa4f6ee8a9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981904"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775641"
 ---
 # <a name="manage-events"></a>イベントの管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 
-  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスには、特定のエラー重大度レベル以上のあらゆるイベント メッセージを転送できます。 この処理を *イベントの転送*と呼びます。 転送先サーバーは、マスター サーバーにもなる専用のサーバーです。 イベントの転送を使用して、サーバーのグループに対する警告を集中管理できます。その結果、使用頻度の高いサーバーの負荷を減少させることができます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスには、特定のエラー重大度レベル以上のあらゆるイベント メッセージを転送できます。 この処理を *イベントの転送*と呼びます。 転送先サーバーは、マスター サーバーにもなる専用のサーバーです。 イベントの転送を使用して、サーバーのグループに対する警告を集中管理できます。その結果、使用頻度の高いサーバーの負荷を減少させることができます。  
   
 1 台のサーバーが別のサーバー グループのイベントを受信する場合、イベントを受信するサーバーは *警告管理サーバー*と呼ばれます。 マルチサーバー環境では、マスター サーバーを警告管理サーバーとして指定します。  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>警告管理サーバーを使用する利点  
 警告管理サーバーのセットアップには、次の利点があります。  
   
--   **集中化**。 1 台のサーバーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の複数のインスタンスのイベントを集中管理したり統合表示したりできます。  
+-   **集中化**。 1 台のサーバーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスのイベントを集中管理したり統合表示したりできます。  
   
 -   **スケーラビリティ**。 多くの物理サーバーを 1 台の論理サーバーとして管理できます。 必要に応じて、この物理サーバー グループに対してサーバーを追加または削除できます。  
   
@@ -69,15 +68,15 @@ ms.locfileid: "38981904"
   
 -   多くのサーバーで同じ警告管理サーバーが共有されるように構成する場合、それに伴うネットワーク トラフィックについて慎重に検討します。 トラフィックが集中してしまった場合は、特定の警告管理サーバーを使用するサーバーの台数を減らします。  
   
-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 内で登録されたサーバーは、警告転送サーバーとして選択できるサーバーの一覧に含まれます。  
+    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内で登録されたサーバーは、警告転送サーバーとして選択できるサーバーの一覧に含まれます。  
   
--   警告管理サーバーに警告を転送するのではなく、サーバー固有の応答を必要とする [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のローカル インスタンスで警告を定義します。  
+-   警告管理サーバーに警告を転送するのではなく、サーバー固有の応答を必要とする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスで警告を定義します。  
   
     警告管理サーバーは、警告を転送してくるすべてのサーバーを 1 台の論理サーバーと見なします。 たとえば、警告管理サーバーは、サーバー A からの 605 イベントと、サーバー B からの 605 イベントに同じように応答します。  
   
--   警告システムを構成した後は、Microsoft Windows アプリケーション ログで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント イベントの有無を定期的に確認します。  
+-   警告システムを構成した後は、Microsoft Windows アプリケーション ログで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント イベントの有無を定期的に確認します。  
   
-    警告エンジンによって検出されたエラー状況は、"SQL Server エージェント" のソース名でローカル Windows アプリケーション ログに書き込まれます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが定義に従って電子メールによる通知を送信できない場合は、アプリケーション ログにイベントが記録されます。  
+    警告エンジンによって検出されたエラー状況は、"SQL Server エージェント" のソース名でローカル Windows アプリケーション ログに書き込まれます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが定義に従って電子メールによる通知を送信できない場合は、アプリケーション ログにイベントが記録されます。  
   
 ローカルで定義された警告が無効になっていて、その警告の発生原因となるイベントが発生した場合、そのイベントが (警告転送の条件を満たしていれば) 警告管理サーバーに転送されます。 この場合、ローカル サイトのユーザーの必要に応じて、ローカルオーバーライド (つまりローカル サーバーで定義され、警告管理サーバーでも定義される警告) を有効または無効にすることができます。 また、イベントがローカル警告によって処理される場合でも、必ずイベントが転送されるように要求することもできます。  
   
