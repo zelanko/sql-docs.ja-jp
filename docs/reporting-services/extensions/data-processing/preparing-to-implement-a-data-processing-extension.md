@@ -20,15 +20,15 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 457524a8fb05069961a80ccebbe719261b616bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05b2a471086e49bf6bf4acb73543144af79f76fb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016419"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412610"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>データ処理拡張機能を実装する準備
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を実装する前に、実装するインターフェイスを定義しておく必要があります。 インターフェイスのセット全体にわたって拡張機能固有の実装を行うことができます。<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスや <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> インターフェイスなど、サブセットだけを実装することもできます。このようなインターフェイスでは、クライアントが **DataReader** オブジェクトとして主に結果セットと対話し、[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能を結果セットとデータ ソース間のブリッジとして使用します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を実装する前に、実装するインターフェイスを定義しておく必要があります。 インターフェイスのセット全体にわたって拡張機能固有の実装を行うことができます。<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスや <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> インターフェイスなど、サブセットだけを実装することもできます。このようなインターフェイスでは、クライアントが **DataReader** オブジェクトとして主に結果セットと対話し、[!INCLUDE[ssRS](../../../includes/ssrs.md)] データ処理拡張機能を結果セットとデータ ソース間のブリッジとして使用します。  
   
  データ処理拡張機能は、次の 2 種類の方法のいずれかで実装できます。  
   
@@ -71,12 +71,12 @@ ms.locfileid: "33016419"
 ## <a name="available-extension-interfaces"></a>使用可能な拡張機能インターフェイス  
  以下は使用可能なインターフェイスの一覧です。実装が必須かどうかも記載されています。  
   
-|インターフェイス|Description|実装|  
+|インターフェイス|[説明]|実装|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|データソースとの一意のセッションを表します。 クライアント/サーバー データベース システムの場合は、セッションがサーバーとのネットワーク接続と同じことがあります。|Required|  
-|IDbConnectionExtension|[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能によって実装できる、セキュリティと承認に関する追加の接続プロパティを表します。|省略可|  
+|IDbConnectionExtension|[!INCLUDE[ssRS](../../../includes/ssrs.md)] データ処理拡張機能によって実装できる、セキュリティと承認に関する追加の接続プロパティを表します。|省略可|  
 |IDbTransaction|ローカル トランザクションを表します。|Required|  
-|IDbTransactionExtension|[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能によって実装できる追加のトランザクション プロパティを表します。|省略可|  
+|IDbTransactionExtension|[!INCLUDE[ssRS](../../../includes/ssrs.md)] データ処理拡張機能によって実装できる追加のトランザクション プロパティを表します。|省略可|  
 |IDbCommand|データ ソースと接続するときに使用するクエリまたはコマンドを表します。|Required|  
 |IDbCommandAnalysis|クエリを分析し、クエリで使用されるパラメーター名の一覧を返す追加コマンド情報を表します。|省略可|  
 |IDataParameter|コマンドまたはクエリに渡すパラメーターまたは名前と値のペアを表します。|Required|  

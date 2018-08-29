@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e5970629622e5f1e219bcdb80ec31341c12d585e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b231d5402bef7b9a092278dfd5b0f809411c1e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206012"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409527"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 
@@ -79,7 +80,7 @@ ms.locfileid: "37206012"
  ユーザー データベースの移行後、多様な方法 (サーバー名の変更、DNS エントリの使用、接続文字列の変更など) のいずれかを使用して、新しいユーザーを新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに指示します。  新規インストール アプローチは、インプレース アップグレードと比較して、リスクとダウンタイムを減らし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレードと同時のハードウェアとオペレーティング システムのアップグレードを容易にします。  
   
 > [!NOTE]  
->  既に高可用性 (HA) ソリューションを設置しているなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが複数ある環境の場合は、「 [ローリング アップグレード](#RollingUpgrade)」に進みます。 高可用性ソリューションを設定していない場合は、 [データベース ミラーリング](http://msdn.microsoft.com/library/ms190941.aspx) を一時的に構成して、ダウンタイムを最小にして、このアップグレードを容易にするか、またはこの機会を利用して、永続的な HA ソリューションとして、 [Always On 可用性グループ](http://msdn.microsoft.com/library/hh510260.aspx) を構成することを考慮できます。  
+>  既に高可用性 (HA) ソリューションを設置しているなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが複数ある環境の場合は、「 [ローリング アップグレード](#RollingUpgrade)」に進みます。 高可用性ソリューションを設定していない場合は、 [データベース ミラーリング](../database-mirroring/setting-up-database-mirroring-sql-server.md) を一時的に構成して、ダウンタイムを最小にして、このアップグレードを容易にするか、またはこの機会を利用して、永続的な HA ソリューションとして、 [Always On 可用性グループ](http://msdn.microsoft.com/library/hh510260.aspx) を構成することを考慮できます。  
   
  たとえば、このアプローチは、次をアップグレードする場合に使用できます。  
   

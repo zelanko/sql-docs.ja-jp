@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002944"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415847"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
   
 ##  <a name="bkmk_sample_data"></a> AdventureWorks データのサンプル  
- このセクションでは、サンプル クエリを紹介すると共に、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] でデータ ソースとデータセットを作成するための基本的な手順について説明します。 レポートにデータ ソースとデータセットが既に存在する場合、このセクションは省略できます。  
+ このセクションでは、サンプル クエリを紹介すると共に、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] でデータ ソースとデータセットを作成するための基本的な手順について説明します。 レポートにデータ ソースとデータセットが既に存在する場合、このセクションは省略できます。  
   
  クエリでは、AdventureWorks の販売注文の詳細なデータを返します。これには販売区域、製品カテゴリ、製品サブカテゴリ、および販売理由のデータが含まれます。  
   

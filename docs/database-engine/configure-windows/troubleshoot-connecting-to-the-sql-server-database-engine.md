@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634672a3f769029549727c571c011ae5e4b03aef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870807"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410071"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
 ## <a name="testing-a-local-connection"></a>ローカル接続をテストする
 
 別のコンピューターから接続する場合の問題を解決する前に、SQL Server を実行しているコンピューターにインストールされているクライアント コンピューターから接続できるか最初にテストします。 (これでファイアウォールの問題が除外されます。)この手順では、SQL Server Management Studio が使用されます。 Management Studio をインストールしていない場合、「[SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。 (Management Studio をインストールできない場合、データベース エンジンと共にインストールされた `sqlcmd.exe` ユーティリティで接続をテストできます。 `sqlcmd.exe`の詳細については、「 [sqlcmd Utility](../../tools/sqlcmd-utility.md)」を参照してください。
-1.  SQL Server にアクセスする権限が与えられているログインを利用し、SQL Server がインストールされているコンピューターにログインします。 (インストール中、SQL Server は、最低 1 つのログインが SQL Server 管理者として指定されることを必要とします。 管理者を知らない場合、「 [システム管理者がロックアウトされた場合の SQL Server への接続](http://msdn.microsoft.com/library/dd207004.aspx)」を参照してください。)
+1.  SQL Server にアクセスする権限が与えられているログインを利用し、SQL Server がインストールされているコンピューターにログインします。 (インストール中、SQL Server は、最低 1 つのログインが SQL Server 管理者として指定されることを必要とします。 管理者を知らない場合、「 [システム管理者がロックアウトされた場合の SQL Server への接続](connect-to-sql-server-when-system-administrators-are-locked-out.md)」を参照してください。)
 2.   [スタート] ページで、「 **SQL Server Management Studio**」と入力します。あるいは、以前のバージョンの Windows の場合、[スタート] メニューで、 **[すべてのプログラム]** をポイントし、 **[Microsoft SQL Server]** をポイントし、 **[SQL Server Management Studio]** をクリックします。
 3.  **[サーバーへの接続]** ダイアログ ボックスの **[サーバーの種類]** ボックスの一覧で、 **[データベース エンジン]** を選択します。 **[認証]** ボックスで、 **[Windows 認証]** を選択します。 **[サーバー名]** ボックスに、次のいずれかを入力します。
 
@@ -107,7 +107,7 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
 この時点でエラーが発生する場合、続行する前に解決する必要があります。 問題にはさまざまな要因が考えられます。 ログインの接続が認証されないことがあります。 既定のデータベースがないことがあります。
 
 >    [!NOTE] 
->    クライアントに渡されるエラー メッセージの一部は、問題を解決するために十分な情報を意図的に与えません。 これはセキュリティ機能であり、SQL Server に関する情報を攻撃者に与えることを回避します。 エラーに関する完全な情報は、SQL Server エラー ログを調べてください。 そこに詳細があります。 エラー **18456 ユーザーはログインできませんでした**を受け取った場合、オンライン ブックのトピック、 [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、非常に広範囲なエラー コード リストが紹介されています ( [エラー 18456 のトラブルシューティング](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。  
+>    クライアントに渡されるエラー メッセージの一部は、問題を解決するために十分な情報を意図的に与えません。 これはセキュリティ機能であり、SQL Server に関する情報を攻撃者に与えることを回避します。 エラーに関する完全な情報は、SQL Server エラー ログを調べてください。 そこに詳細があります。 エラー **18456 ユーザーはログインできませんでした**を受け取った場合、オンライン ブックのトピック、 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、非常に広範囲なエラー コード リストが紹介されています ( [エラー 18456 のトラブルシューティング](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。  
 
 4.   共有メモリで接続できない場合、TCP による接続をテストしてください。 名前の前に **tcp:** を指定すると、TCP 接続を強制できます。 例 :
 
@@ -123,7 +123,7 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
 ## <a name="opening-a-port-in-the-firewall"></a>ファイアウォールでポートを開く
 
 何年も前に Windows XP Service Pack 2 から導入された Windows ファイアウォールをオンにすると、別のコンピューターからの接続がブロックされます。 別のコンピューターから TCP/IP で接続するには、SQL Server コンピューターで、データベース エンジンで使用される TCP ポートへの接続を許可するようにファイアウォールを構成する必要があります。 前述のように、既定のインスタンスは通常 TCP ポート 1433 でリッスンします。 名前付きインスタンスを使用している場合、または既定値を変更した場合は、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の TCP ポートが別のポートでリッスンしている可能性があります。 ポートを特定する情報の収集については、最初のセクションを参照してください。  
-名前付きインスタンスまたは TCP ポート 1433 以外のポートに接続する場合、SQL Server Browser サービスの UDP ポート 1434 を開く必要もあります。 Windows ファイアウォールでポートを開くための詳細な手順については、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](https://msdn.microsoft.com/library/ms175043)」を参照してください。
+名前付きインスタンスまたは TCP ポート 1433 以外のポートに接続する場合、SQL Server Browser サービスの UDP ポート 1434 を開く必要もあります。 Windows ファイアウォールでポートを開くための詳細な手順については、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。
 
 ## <a name="testing-the-connection"></a>接続をテストする
 

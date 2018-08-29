@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216933"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40411022"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -543,7 +543,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  クラスター化インデックスの作成時に、テーブルの FILESTREAM データの配置を指定します。 FILESTREAM_ON 句を使用すると、異なる FILESTREAM ファイル グループやパーティション構成に FILESTREAM データを移動できます。  
   
@@ -606,7 +606,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
  FILESTREAM  
    
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  **varbinary(max)** 列に対してのみ有効です。 **varbinary (max)** BLOB データの FILESTREAM ストレージを指定します。  
   

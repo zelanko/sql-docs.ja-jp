@@ -18,12 +18,12 @@ caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 652fa02e7410d9d62f8b4787c87bb02bc0e88816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52160a10a8b404588103f36c90a103f9067530ba
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942247"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412771"
 ---
 # <a name="job-activity-monitor-refresh"></a>ジョブの利用状況モニターの更新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32942247"
   
  このダイアログを開くには、ジョブの利用状況モニターの **[状態]** セクションの **[更新の設定を表示します]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[次の間隔で自動更新する]**  
  オンにすると、ジョブの利用状況モニターの情報の自動更新が有効になります。 既定では、このオプションはオフになっています。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "32942247"
  自動更新の間隔 (秒数) です。 既定値は 60 秒です。 5 秒以下に設定した場合は、5 秒ごとに情報が更新されます。  
   
 ## <a name="see-also"></a>参照  
- [ジョブの利用状況の監視](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+ [ジョブの利用状況の監視](../../ssms/agent/monitor-job-activity.md)  
   
   

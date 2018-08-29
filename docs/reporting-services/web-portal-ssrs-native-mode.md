@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0c88c0e5710a85b8e29e3d0852ac608f5cfca30d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cd0de35d2bf5b18e1ccb9cdeadd8198f522c4135
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018067"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40410365"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Web ポータル (SSRS ネイティブ モード)
 
@@ -61,7 +61,7 @@ Web ポータルでは、レポート サーバー フォルダーを参照し�
 
 Web ポータルは、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 SharePoint 統合モード用に構成されたレポート サーバーでは使用できません。
 
-一部の Web ポータル機能は、特定のエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)] だけで利用できます。 詳細については、「[SQL Server 2016 の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
+一部の Web ポータル機能は、特定のエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] だけで利用できます。 詳細については、「[SQL Server 2016 の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
 
 新しくインストールした場合、コンテンツおよび設定を操作するのに十分な権限を持っているのはローカル管理者のみです。 他のユーザーに権限を与えるには、ローカル管理者がレポート サーバーへのアクセスを許可するロールの割り当てを作成する必要があります。 ロールの割り当てが作成された後、ユーザーがアクセスできるようになるアプリケーション ページとタスクは、そのユーザーに対するロールの割り当てによって異なります。 詳細については、「[レポート サーバーへのユーザー アクセスを許可する](security/grant-user-access-to-a-report-server-report-manager.md)」をご覧ください。
 

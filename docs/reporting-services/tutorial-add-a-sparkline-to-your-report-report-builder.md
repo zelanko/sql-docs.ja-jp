@@ -17,15 +17,16 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411806"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)
 
-[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポート内にスパークライン グラフを含む基本的なテーブルを作成します。   
+[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポート内にスパークライン グラフを含む基本的なテーブルを作成します。   
   
 スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レポートで使用されます。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   

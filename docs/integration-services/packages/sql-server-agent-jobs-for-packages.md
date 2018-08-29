@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405154"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409535"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>パッケージに対する SQL Server エージェント ジョブ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行を自動化およびスケジュール設定できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージ、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、ファイル システムに格納されているパッケージのスケジュールを設定できます。  
@@ -121,7 +121,7 @@ ms.locfileid: "35405154"
   
 6.  ジョブ ステップの種類として **[Integration Services パッケージ]** をクリックします。  
   
-7.  **[実行するアカウント名]** ボックスの一覧で、 **[SQL Server エージェント サービスのアカウント]** をクリックするか、ジョブ ステップで使用する資格情報を備えたプロキシ アカウントをクリックします。 プロキシ アカウントの作成方法の詳細については、「 [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)」を参照してください。  
+7.  **[実行するアカウント名]** ボックスの一覧で、 **[SQL Server エージェント サービスのアカウント]** をクリックするか、ジョブ ステップで使用する資格情報を備えたプロキシ アカウントをクリックします。 プロキシ アカウントの作成方法の詳細については、「 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
   
      **[SQL Server エージェント サービスのアカウント]** の代わりにプロキシ アカウントを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してパッケージを実行する場合に発生する一般的な問題を解決できる場合があります。 それらの問題の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [SQL Server エージェント ジョブ ステップから SSIS パッケージを呼び出したときに、SSIS パッケージが実行されない](http://support.microsoft.com/kb/918760)」を参照してください。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "35405154"
   
      **パッケージ ソース**: SSIS カタログ  
   
-    |タブ|および|  
+    |タブ|[変数]|  
     |---------|-------------|  
     |**[パッケージ]**|**[サーバー]**<br /><br /> SSISDB カタログをホストしているデータベース サーバー インスタンスの名前を入力または選択します。<br /><br /> **[SSIS カタログ]** がパッケージ ソースである場合、サーバーへのログオンに使用できるのは Microsoft Windows ユーザー アカウントだけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は使用できません。|  
     ||**[パッケージ]**<br /><br /> 参照ボタンをクリックして、パッケージを選択します。<br /><br /> **オブジェクト エクスプローラー** の **[Integration Services カタログ]** ノードの下にあるフォルダー内のパッケージを選択します。|  
@@ -162,7 +162,7 @@ ms.locfileid: "35405154"
   
      SQL Server、SSIS パッケージ ストア、またはファイル システムに格納されるパッケージに設定できるオプションの多くは、 **dtexec** コマンド プロンプト ユーティリティのコマンド ライン オプションに対応しています。 ユーティリティとコマンド ライン オプションの詳細については、「 [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
-    |タブ|および|  
+    |タブ|[変数]|  
     |---------|-------------|  
     |**[パッケージ]**<br /><br /> これらは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されるパッケージのタブ オプションです。|**[サーバー]**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのデータベース サーバー インスタンスの名前を入力または選択します。|  
     ||**[Windows 認証を使用する]**<br /><br /> Microsoft Windows ユーザー アカウントを使用してサーバーにログオンする場合に、このオプションを選択します。|  
@@ -190,7 +190,7 @@ ms.locfileid: "35405154"
     >   
     >  変数を含むサーバー環境が、 **[構成]** タブのリスト ボックスで選択されていない。  
   
-10. ジョブ ステップのスケジュールを作成するには、 **[ページの選択]** ペインの **[スケジュール]** をクリックします。 スケジュールを構成する方法の詳細については、「 [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)」を参照してください。  
+10. ジョブ ステップのスケジュールを作成するには、 **[ページの選択]** ペインの **[スケジュール]** をクリックします。 スケジュールを構成する方法の詳細については、「 [Schedule a Job](../../ssms/agent/schedule-a-job.md)」を参照してください。  
   
     > [!TIP]  
     >  スケジュールに名前を付けるときには、他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールとの区別がより簡単にできるように、一意でわかりやすい名前を使用してください。  

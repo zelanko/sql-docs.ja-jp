@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21835671518515b1efe02698a0f01f4dcd051179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4746f6d8cdc836f98d8f2d33369e65af2d111a81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951817"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411849"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server エージェントの JobSteps オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951817"
   
  次の表は、 **SQLAgent:JobSteps** カウンターの一覧です。  
   
-|[オブジェクト名]|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |**Active steps**|このカウンターは、現在実行中のジョブ ステップの数を報告します。|  
 |**Queued steps**|このカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行する準備が整っているジョブ ステップで、まだ実行が開始されていないジョブ ステップの数を報告します。|  
@@ -40,7 +40,7 @@ ms.locfileid: "32951817"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|Instance|Description|  
+|Instance|[説明]|  
 |--------------|-----------------|  
 |**_Total**|すべてのジョブ ステップの情報です。|  
 |**ActiveScripting**|**ActiveScripting** サブシステムを使用するジョブ ステップの情報です。|  
@@ -57,8 +57,8 @@ ms.locfileid: "32951817"
 |**TSQL**|[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行するジョブ ステップの情報です。|  
   
 ## <a name="see-also"></a>参照  
- [ジョブ ステップの管理](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [パフォーマンス オブジェクトの使用](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)   
+ [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

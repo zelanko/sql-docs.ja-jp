@@ -21,12 +21,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31aa4d36f1b978cb50e99b9350e3d04b1c1564d4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 157842419692f2fbb70f7fc3d28c4cf920e8f228
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312451"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412634"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,9 +118,9 @@ ms.locfileid: "35312451"
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **SQL Server Management Studio を使用して警告を作成するには**  
   
--   [エラー番号を使用して警告を作成する](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [エラー番号を使用して警告を作成する](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [WMI イベント警告の作成](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [WMI イベント警告の作成](../../ssms/agent/create-a-wmi-event-alert.md)  
   
  **データベース ミラーリングを監視するには**  
   

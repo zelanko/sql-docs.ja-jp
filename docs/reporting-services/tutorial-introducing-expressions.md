@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c77179704548ef164d61dae18bb311704247768c
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036959"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410494"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
-[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 強力かつ柔軟性のあるページネーション付きのレポートを作成するために、式と共に一般的な関数や演算子を使用します。 
+[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 強力かつ柔軟性のあるページネーション付きのレポートを作成するために、式と共に一般的な関数や演算子を使用します。 
 
 名前値の連結、独立したデータセット内の値の参照、フィールド値に基づいた色の表示などを行うための式を作成します。  
   
