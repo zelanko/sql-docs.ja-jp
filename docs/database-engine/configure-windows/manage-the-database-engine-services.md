@@ -28,12 +28,12 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b3275cf1deed00bb838144825b8cef243a6aa8e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37dd984acf7af31ba65772d038c30ac84dfed47c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867837"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411846"
 ---
 # <a name="manage-the-database-engine-services"></a>データベース エンジン サービスの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "32867837"
 |[SQL Server のインスタンスが自動的に開始されるようにする設定 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[データベース エンジン アクセスのファイル システム権限の構成](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [SQL Server エージェントの構成](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+ [SQL Server エージェントの構成](../../ssms/agent/configure-sql-server-agent.md)  
   
  [SQL Server へのログイン](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   

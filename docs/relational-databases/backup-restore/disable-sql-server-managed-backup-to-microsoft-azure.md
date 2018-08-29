@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure への SQL Server マネージ バックアップを無効にする | Microsoft Docs
+title: Microsoft Azure への SQL Server マネージド バックアップを無効にする | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1117eaebd9e4ed5c44077966bc9b3d2874548248
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e3e8c2ce2a936b17b018722ae118ea142773723
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921013"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437632"
 ---
-# <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップを無効にする
+# <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップを無効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、データベース レベルとインスタンス レベルの両方で、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効または一時停止する方法について説明します。  
   
@@ -125,8 +125,7 @@ GO
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  
-                    @database_name = 'TestDB'   
-                    ,@enable_backup = 0;  
+                    @enable_backup = 0;  
     GO  
   
     ```  
@@ -167,6 +166,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Azure への SQL Server マネージ バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)  
+ 
+  [Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)  
   
   

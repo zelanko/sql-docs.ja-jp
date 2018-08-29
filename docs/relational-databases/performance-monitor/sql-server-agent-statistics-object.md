@@ -19,11 +19,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe30b9faca81825b140259996af1fc6b0fedc2fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3da81b9f7683aec5bbbe5e2e6562128a3c66d702
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411820"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server エージェントの Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,12 +32,12 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、 **SQLAgent:Statistics** カウンターを示します。  
   
-|[オブジェクト名]|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |**SQL Server restarted**|前回の SQL Server エージェントの起動以降に Microsoft SQL Server が SQL Server エージェントによって正常に再起動された回数。|  
   
 ## <a name="see-also"></a>参照  
- [パフォーマンス オブジェクトの使用](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.database_scoped_configurations (Transact SQL) |マイクロソフトのドキュメント
+title: sys.database_scoped_configurations (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -18,19 +18,18 @@ f1_keywords:
 helpviewer_keywords:
 - sys.database_scoped_configurations catalog view
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
-caps.latest.revision: 13
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f26b144228c3c2da61a339038d62eb582b1b0272
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e127f8935b10003a1ecfbd70d7237c5911d7f34f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540398"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43107243"
 ---
-# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact SQL)
+# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   構成ごとに 1 行が含まれています。 
@@ -48,7 +47,7 @@ ms.locfileid: "39540398"
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="remarks"></a>コメント  
- 値として NULL が返されたとき**value_for_secondary**、これは、セカンダリをプライマリに設定されていることを意味します。  
+ 値として NULL が返される**value_for_secondary**、これは、セカンダリがプライマリに設定されていることを意味します。  
  
  データベース スコープ構成設定はデータベースで継承されます。 つまり、特定のデータベースが復元されたり、アタッチされたりしたとき、既存の構成設定が残ります。
   

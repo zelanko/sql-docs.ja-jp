@@ -19,26 +19,26 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 06f2f1115fe1e4f7aaeafe69ab73a6734fe8d6fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9baa94d3f791ba8c058efe6074d561f121428fd
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017809"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410493"
 ---
 # <a name="data-processing-extensions-overview"></a>データ処理拡張機能の概要
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を使用することによって、データ ソースに接続し、データを取得できます。 データ処理拡張機能は、データ ソースとデータセット間のブリッジとしても機能します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダー インターフェイスのサブセットと似ています。  
   
  次の表は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] が備えているデータ処理拡張機能を示しています。  
   
-|データ処理拡張機能|Description|  
+|データ処理拡張機能|[説明]|  
 |-------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 向けデータ処理拡張機能|.NET Framework Data Provider for SQL Server を使用して [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]と接続し、データを取得します。|  
 |OLE DB 向けデータ処理拡張機能|.NET Framework Data Provider for OLE DB を使用します。 この拡張機能を使用して、レポート サーバーは、OLE DB プロバイダーを持つすべてのデータ ソースをクエリできます。|  
 |Oracle 向けデータ処理拡張機能|.NET Framework Data Provider for Oracle を使用します。 この拡張機能を使用して、レポート サーバーは、Oracle クライアント接続ソフトウェアをとおして Oracle データ ソースにアクセスできます。|  
 |ODBC 向けデータ処理拡張機能|.NET Framework Data Provider for ODBC を使用します。 この拡張機能を使用して、レポート サーバーは、ODBC ドライバーが存在するすべてのデータベースのデータにアクセスできます。|  
   
- [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理 API を使用して、カスタム データ処理をレポート サーバーに追加できます。  
+ [!INCLUDE[ssRS](../../../includes/ssrs.md)] データ処理 API を使用して、カスタム データ処理をレポート サーバーに追加できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のデータ プロバイダーに対するサポートが組み込まれています。 既に完全なデータ プロバイダーを実装している場合は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を実装する必要がありません。 ただし、セキュリティで保護された接続の資格情報やサーバー側の集計など、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005 に固有の機能を含むようにデータ プロバイダーの拡張を検討してください。  

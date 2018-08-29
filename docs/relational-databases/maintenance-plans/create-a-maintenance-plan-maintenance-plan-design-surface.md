@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d67c538bb27eddd84ee7b254fd1beec8f22ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948397"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410516"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>メンテナンス プランの作成 (メンテナンス プラン デザイン画面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "32948397"
      **[レポートとログ記録]** ダイアログ ボックスを表示します。 このダイアログ ボックスの詳細については、以下を参照してください。  
   
      **サーバー**  
-     **[サーバー]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、サブプラン タスクを実行するサーバーを選択します。 このオプションは、マルチサーバー環境のマスター サーバーのみで有効になります。 詳細については、「[マルチサーバー環境の作成](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)」と「[メンテナンス プラン &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)」を参照してください。  
+     **[サーバー]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、サブプラン タスクを実行するサーバーを選択します。 このオプションは、マルチサーバー環境のマスター サーバーのみで有効になります。 詳細については、「[マルチサーバー環境の作成](../../ssms/agent/create-a-multiserver-environment.md)」と「[メンテナンス プラン &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)」を参照してください。  
   
      **名前**  
      メンテナンス プランの名前が表示されます。 新しいメンテナンス プランの名前は、メンテナンス プラン デザイナーを開く前にダイアログ ボックスで指定します。 メンテナンス プランの名前を変更するには、オブジェクト エクスプローラーでプランを右クリックし、 **[名前の変更]** をクリックします。  

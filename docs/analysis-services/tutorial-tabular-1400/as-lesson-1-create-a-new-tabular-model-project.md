@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services チュートリアル-レッスン 1: 新しい表形式モデル プロジェクトの作成 |Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 403e6d04d339e3126afe964bd919304d04295c0b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007130"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43108671"
 ---
 # <a name="create-a-tabular-model-project"></a>表形式モデル プロジェクトを作成します。
 
@@ -24,7 +24,7 @@ ms.locfileid: "38007130"
   
 このレッスンの推定所要時間: **10 分**  
   
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 この記事では、表形式のモデル作成チュートリアルの最初のレッスンです。 このレッスンを完了するには、必要があります、インプレースいくつかの前提条件があります。 詳細についてを参照してください。 [Analysis Services - Adventure Works チュートリアル](../tutorial-tabular-1400/as-adventure-works-tutorial.md)します。  
   

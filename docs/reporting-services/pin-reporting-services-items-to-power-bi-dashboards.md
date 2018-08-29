@@ -21,12 +21,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: caf018aab189a27901effcdc95204881b5b903b9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4065422e0be3f8570e91cc05d6c5cd2c86af24ec
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980324"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410352"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI ダッシュボードへの Reporting Services のアイテムのピン留め
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] では、レポート ビューアー ツール バーから [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードに新しいタイルとしてピン留めできます。   ピン留めするには、管理者がレポート サーバーを Azure Active Directory および [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合しておく必要があります。  
@@ -41,7 +41,7 @@ ms.locfileid: "38980324"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   ピン留めは、[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] の[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート ビューアー (例: `http://myserver/Reports`) から実行します。  [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のレポート デザイナー、またはレポート サーバーの URL  たとえば、`http://myserver/ReportServer` のようにします。  
+-   ピン留めは、[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] の[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート ビューアー (例: `http://myserver/Reports`) から実行します。  [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のレポート デザイナー、またはレポート サーバーの URL  たとえば、`http://myserver/ReportServer` のようにします。  
   
 -   レポート サーバー サイトからのポップアップを許可するようにブラウザーを構成する必要があります。  
   

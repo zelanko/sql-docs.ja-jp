@@ -12,13 +12,14 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48ae5549290ab4c8701da6bd75641dfabfc02872
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a8b7e7fdc732376e58d9b7923f2889a0ebc055e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771078"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415884"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>構成ファイルを使用した SQL Server のインストール
 
@@ -26,7 +27,7 @@ ms.locfileid: "34771078"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、システムの既定値および実行時入力に基づいて構成ファイルを生成する機能が用意されています。 構成ファイルを使用すると、同じ構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を企業全体に配置できます。 また、Setup.exe を起動するバッチ ファイルを作成して、企業全体で手動によるインストールを標準化することもできます。 
  
-この記事は、特に SQL Server 2016 および SQL Server 2017 に関して更新されています。 古いバージョンの SQL Server については、「[構成ファイルを使用した SQL Server 2014 のインストール](http://msdn.microsoft.com/library/dd239405(v=sql.120).aspx)」をご覧ください。
+この記事は、特に SQL Server 2016 および SQL Server 2017 に関して更新されています。 古いバージョンの SQL Server については、「[構成ファイルを使用した SQL Server 2014 のインストール](install-sql-server-2016-using-a-configuration-file.md)」をご覧ください。
  
 セットアップでは、コマンド プロンプトからのみ構成ファイルを使用できます。 以下に、構成ファイルを使用する際のパラメーターの処理順序について説明します。  
   

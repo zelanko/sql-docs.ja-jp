@@ -1,5 +1,5 @@
 ---
-title: sp_bindrule (Transact SQL) |マイクロソフトのドキュメント
+title: sp_bindrule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 15576737e238ebd81d36e1ab2ff3090f6aa30791
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 610bd8a1676bc732c887c92b1a291d4254614e0e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560722"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43110590"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,26 +55,26 @@ sp_bindrule [ @rulename = ] 'rule' ,
  [  **@objname=**] **'***object_name***'**  
  ルールがバインドされるテーブルと列、または別名データ型です。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 また、計算列にもバインドできません。  
   
- *object_name* 、 **nvarchar(776)** の既定値はありません。 場合*object_name*は、1 つの要素の名前、エイリアス データ型として解釈されます。 2 部構成または 3 部構成の名前の場合は、最初にテーブルおよび列として解決されます。この解決が失敗すると、別名データ型として解決されます。 既存の別名データ型の列を継承する既定では、*ルール*ルールを直接その列にバインドしない限り、します。  
+ *object_name*は**nvarchar (776)** 既定値はありません。 場合*object_name*は 1 つの要素名では、別名データ型として解決されます。 2 部構成または 3 部構成の名前の場合は、最初にテーブルおよび列として解決されます。この解決が失敗すると、別名データ型として解決されます。 既存の別名データ型の列を継承する既定では、*ルール*ルールを直接その列にバインドしない限り、します。  
   
 > [!NOTE]  
->  *object_name* 、角かっこを含めることができます **[** と **]** 文字は区切り記号識別子の文字として。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
+>  *object_name* 、角かっこを含めることができます **[** と **]** 文字で区切られた識別子の文字として。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
 > [!NOTE]  
 >  別名データ型を使用する式に対して作成されたルールは、列または別名データ型にバインドできますが、参照されてもコンパイルできません。 別名データ型に対して作成されたルールは使用しないでください。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- ルールを別名データ型にバインドするときにのみ使用されます。 *future_only_flag* 、 **varchar(15)** 既定値は NULL です。 このパラメーターを設定すると**futureonly**エイリアス データ型の既存の列を新しいルールを継承しないようにします。 場合*futureonly_flag*が NULL の場合、新規のルールを現在の規則またはエイリアス データ型の既存のルールを使用している別名データ型の列にバインドします。  
+ ルールを別名データ型にバインドするときにのみ使用されます。 *future_only_flag*は**varchar (15)** 既定値は NULL です。 このパラメーターを設定すると**futureonly**エイリアス データ型の既存の列を新しいルールを継承しないようにします。 場合*futureonly_flag*が null の場合、新しいルールを現在ルールがあるいないか、別名データ型の既存のルールを使用している別名データ型の列にバインドされます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- (ただし、CHECK 制約を使用することをお勧め) 列に新しいルールをバインドすることができますまたはエイリアス データ型を持つ**sp_bindrule**既存のルールをアンバインドせず。 元のルールはオーバーライドされます。 既に CHECK 制約のある列にルールをバインドすると、すべての制限が評価されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にはルールをバインドできません。  
+ (ただし、CHECK 制約を使用することを推奨)、新しいルールを列にバインドすることができます、別名データ型にする、または**sp_bindrule**せず、既存のルールをバインド解除します。 元のルールはオーバーライドされます。 既に CHECK 制約のある列にルールをバインドすると、すべての制限が評価されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にはルールをバインドできません。  
   
  ルールは、バインド時ではなく INSERT ステートメントを試行したときに設定されます。 列に文字のルールをバインドすることができます**数値**このような INSERT 操作は有効ではありませんが、データを入力します。  
   
- 既存の別名データ型の列が新しい規則を継承しない限り、 *futureonly_flag*として指定されている**futureonly**。 別名データ型が定義された新しい列は、常にルールを継承します。 しかし、ALTER TABLE ステートメントの ALTER COLUMN 句によって、列のデータ型をルールがバインドされた別名データ型に変更すると、データ型にバインドしているルールはその列に継承されません。 ルールする必要があります具体的には列を使用してバインドする**sp_bindrule**。  
+ 別名データ型の既存の列がない限り、新しい規則を継承*futureonly_flag*として指定されて**futureonly**します。 別名データ型が定義された新しい列は、常にルールを継承します。 しかし、ALTER TABLE ステートメントの ALTER COLUMN 句によって、列のデータ型をルールがバインドされた別名データ型に変更すると、データ型にバインドしているルールはその列に継承されません。 ルールする必要があります具体的には列にバインドするを使用して**sp_bindrule**します。  
   
  関連情報を追加する列にルールをバインドすると、 **sys.columns**テーブルです。 関連情報を追加するエイリアス データ型にルールをバインドすると、 **sys.types**テーブルです。  
   
@@ -94,7 +93,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 別名データ型にルールをバインドする  
- `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントで、型の列で`ssn`を継承、`rule_ssn`ルールです。 型の既存の列`ssn`も継承、`rule_ssn`ルールの場合を除き、 **futureonly**に指定された*futureonly_flag*、または`ssn`に直接バインドされているルールには。 列にバインドされているルールは、データ型にバインドされているルールより常に優先します。  
+ `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントで、型の列で`ssn`を継承、`rule_ssn`ルールです。 型の既存の列`ssn`も継承、`rule_ssn`ルールは、しない限り、 **futureonly**が指定されて*futureonly_flag*、または`ssn`に直接バインドされたルールがあります。 列にバインドされているルールは、データ型にバインドされているルールより常に優先します。  
   
 ```  
 USE master;  
@@ -112,7 +111,7 @@ EXEC sp_bindrule rule_ssn, 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. 区切られた識別子を使用する  
- 次の例で区切られた識別子を使用して*object_name*パラメーター。  
+ 次の例で区切られた識別子の使用を示しています。 *object_name*パラメーター。  
   
 ```  
 USE master;  

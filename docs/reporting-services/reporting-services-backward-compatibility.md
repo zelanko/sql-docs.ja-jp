@@ -20,12 +20,12 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 947d4664d042818d7955f45252d2986accd86f8d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 447bf776d24143cb14423987234d8f898de5a193
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982794"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412639"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services の旧バージョンとの互換性
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の動作の変更点について説明します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。
@@ -36,10 +36,10 @@ ms.locfileid: "38982794"
   
 |トピック|[説明]|  
 |-----------|-----------------|  
-|[SQL Server Reporting Services SQL Server 2016 で廃止された機能](http://msdn.microsoft.com/d529cc96-3483-480b-9bfc-bd28b1d0ef52)|以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には存在するが、以降のバージョンからは削除されている機能について説明します。|  
-|[SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](http://msdn.microsoft.com/3876c01e-f81d-4cce-9104-5106a8c369e6)|旧バージョンとの互換性を維持するために [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のこのリリースには存在するが、SQL Server の今後のバージョンでは削除される予定の機能について説明します。|  
-|[SQL Server 2016 における SQL Server Reporting Services の重大な変更](http://msdn.microsoft.com/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をアップグレードする場合に発生する可能性のある問題について説明します。|  
-|[SQL Server 2016 における SQL Server Reporting Services の動作変更](http://msdn.microsoft.com/2a767f0f-84f2-4099-8784-1e37790f858e)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]で変更されている機能について説明します。|  
+|[SQL Server Reporting Services SQL Server 2016 で廃止された機能](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には存在するが、以降のバージョンからは削除されている機能について説明します。|  
+|[SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](deprecated-features-in-sql-server-reporting-services-ssrs.md)|旧バージョンとの互換性を維持するために [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のこのリリースには存在するが、SQL Server の今後のバージョンでは削除される予定の機能について説明します。|  
+|[SQL Server 2016 における SQL Server Reporting Services の重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をアップグレードする場合に発生する可能性のある問題について説明します。|  
+|[SQL Server 2016 における SQL Server Reporting Services の動作変更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]で変更されている機能について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [旧バージョンとの互換性 | Analysis Services](http://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  

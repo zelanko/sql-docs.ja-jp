@@ -17,15 +17,15 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0ab84785d74c876e67784d1781f0503a1771be18
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08fd8749f2d5756192aa2e05a5b01a3a0ff7dce
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985134"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412608"
 ---
 # <a name="tutorial-map-report-report-builder"></a>チュートリアル: マップ レポート (レポート ビルダー)
-この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] チュートリアルでは、地図を背景として、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートのデータを表示するときに使用できるマップ機能について学習できます。 
+この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] チュートリアルでは、地図を背景として、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートのデータを表示するときに使用できるマップ機能について学習できます。 
   
 マップは、空間データに基づいています。空間データは通常、ポイント、線、および多角形で構成され (郡の輪郭を表す多角形、道路を表す線、市区町村の場所を表すポイントなど)、 種類ごとに異なるマップ レイヤーにマップ要素のセットとして表示されます。  
   

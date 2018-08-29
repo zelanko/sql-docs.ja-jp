@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e3a7c929dd3335c5200efc3d4009ba05053f84a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3be991897702d63aa505c3c18b4a86fed5f9840c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403124"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411835"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
   次の 1 つ以上のツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行、プロジェクトの検証、およびその他の操作を監視できます。 データ タップなどの特定のツールは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトに対してのみ使用できます。  
@@ -75,7 +75,7 @@ ms.locfileid: "35403124"
   
 |||  
 |-|-|  
-|Integration Services の初期化|@shouldalert|  
+|Integration Services の初期化|1|  
 |操作のクリーンアップ (SQL エージェント ジョブ)|2|  
 |プロジェクト バージョンのクリーンアップ (SQL エージェント ジョブ)|3|  
 |プロジェクトの配置|101|  
@@ -92,7 +92,8 @@ ms.locfileid: "35403124"
 ## <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services サーバーで実行中のパッケージの表示と停止
   **SSISDB** データベースでは、ユーザーに表示されない内部テーブルに実行履歴を格納します。 ただし、必要な情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、パッケージに関連した一般的なタスクを実行するために呼び出すことができるストアド プロシージャも用意されています。  
   
- 通常、サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクトは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で管理します。 また、データベース ビューに対してクエリを実行し、ストアド プロシージャを直接呼び出すことや、マネージ API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] およびマネージ API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャを呼び出します。 たとえば、サーバーで現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの一覧を表示し、必要に応じてパッケージの停止を要求できます。  
+ 通常、サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクトは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で管理します。 また、データベース ビューに対してクエリを実行し、ストアド プロシージャを直接呼び出すことや、マネージド API を呼び出すカスタム コードを記述することもできます。 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] およびマネージド API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャを呼び出します。 たとえば、サーバーで現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの一覧を表示し、必要に応じてパッケージの停止を要求できます。  
   
 ### <a name="viewing-the-list-of-running-packages"></a>実行中のパッケージの一覧の表示  
  **[アクティブな操作]** ダイアログ ボックスでは、サーバーで現在実行中のパッケージの一覧を表示できます。 詳しくは、「 [Active Operations Dialog Box](#active_ops)」をご覧ください。  
@@ -102,7 +103,7 @@ ms.locfileid: "35403124"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセス  
  サーバーで実行中のパッケージの一覧を表示するには、ステータスが 2 のパッケージに対してビュー [catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md) をクエリします。  
   
- マネージ API を使用したプログラムによるアクセス  
+ マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
 ### <a name="stopping-a-running-package"></a>実行中のパッケージの停止  
@@ -113,7 +114,7 @@ ms.locfileid: "35403124"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセス  
  サーバーで実行中のパッケージを停止するには、ストアド プロシージャ [catalog.stop_operation (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md) を呼び出します。  
   
- マネージ API を使用したプログラムによるアクセス  
+ マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>実行したパッケージの履歴の表示  
@@ -124,7 +125,7 @@ ms.locfileid: "35403124"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセス  
  実行したパッケージに関する情報を表示するには、ビュー [catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md) をクエリします。  
   
- マネージ API を使用したプログラムによるアクセス  
+ マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
@@ -184,7 +185,7 @@ ms.locfileid: "35403124"
 > [!NOTE]  
 >  **[データベース]** ノードの下の **[SSISDB]** ノードにカスタム レポートを追加した場合、SSISDB プレフィックスは必要ありません。  
   
- カスタム レポートの作成および追加方法については、「 [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f)」(Management Studio へのカスタム レポートの追加) を参照してください。  
+ カスタム レポートの作成および追加方法については、「 [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)」(Management Studio へのカスタム レポートの追加) を参照してください。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
   現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」を参照してください。  
