@@ -1,5 +1,5 @@
 ---
-title: sp_configure_peerconflictdetection (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_configure_peerconflictdetection (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ad2e7b3c0fd877dad8b14360d7c3f65331cb8cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07555d1f5e26538b1bdf980c65d5f08cfa546717
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991679"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031659"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,14 +58,14 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action=] '*アクション*'  
  パブリケーションの競合検出を有効にするか無効にするかを指定します。 *アクション*は**nvarchar (5)** 値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**enable**|パブリケーションの競合検出を有効にします。|  
 |**disable**|パブリケーションの競合検出を無効にします。|  
 |NULL (既定値)||  
   
  [ @originator_id= ] *originator_id*  
- ピア ツー ピア トポロジ内のノードの ID を指定します。 *originator_id*は**int**、既定値は NULL です。 場合、この ID は競合検出に対して使用*アクション*に設定されている**を有効にする**です。 トポロジで使用されていないゼロ以外の正の ID を指定してください。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。  
+ ピア ツー ピア トポロジ内のノードの ID を指定します。 *originator_id*は**int**、既定値は NULL です。 場合、この ID は競合検出に対して使用*アクション*に設定されている**を有効にする**します。 トポロジで使用されていないゼロ以外の正の ID を指定してください。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。  
   
  [ @conflict_retention= ] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -85,15 +85,15 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- sp_configure_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。 競合の検出を使用するのには、すべてのノードを実行する必要がある[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]かすべてのノードで、以降のバージョンと検出が有効にする必要があります。  
+## <a name="remarks"></a>コメント  
+ sp_configure_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。 競合の検出を使用するすべてのノードを実行する必要があります[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]またはすべてのノードは、以降のバージョンと検出を有効にする必要があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
  [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

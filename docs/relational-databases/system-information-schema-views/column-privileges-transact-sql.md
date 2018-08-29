@@ -1,5 +1,5 @@
 ---
-title: COLUMN_PRIVILEGES (TRANSACT-SQL) |マイクロソフトのドキュメント
+title: COLUMN_PRIVILEGES (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - COLUMN_PRIVILEGES view
 - INFORMATION_SCHEMA.COLUMN_PRIVILEGES view
 ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdcae5e35710bee65ebcd8c8b712ffecd692828c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d0dded3497f4852d31d3ddf324006a2b942e0806
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562456"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43105669"
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "39562456"
 |**権限の許可者**|**nvarchar(** 128 **)**|特権の設定者です。|  
 |**権限付与対象ユーザー**|**nvarchar(** 128 **)**|特権の被設定者です。|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
 |**COLUMN_NAME**|**sysname**|列名|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|特権のタイプです。|  

@@ -1,5 +1,5 @@
 ---
-title: sp_enumcustomresolvers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_enumcustomresolvers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_enumcustomresolvers
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb49ae55f4bde2304713f4fd336076585a987904
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f0b23d39e365a27cc2734e7e051e431055a21f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993159"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032445"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
   
 ## <a name="arguments"></a>引数  
  [  **@distributor =**] **'***ディストリビューター***'**  
- カスタム競合回避モジュールが配置されているディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値は NULL です。 *このパラメーターは推奨されておらず、将来のリリースで削除される予定です。*  
+ カスタム競合回避モジュールが配置されているディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値は NULL です。 *このパラメーターは非推奨し、将来のリリースで削除される予定です。*  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**article_resolver**|**nvarchar (255)**|ビジネス ロジック ハンドラーまたは競合回避モジュールの表示名です。|  
 |**resolver_clsid**|**nvarchar (50)**|COM ベースの競合回避モジュールのクラス ID (CLSID) です。 ビジネス ロジック ハンドラーの場合、この列は 0 の CLSID 値を返します。|  
@@ -61,11 +61,11 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_enumcustomresolvers**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_enumcustomresolvers**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_enumcustomresolvers**します。  
   
 ## <a name="see-also"></a>参照  
  [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

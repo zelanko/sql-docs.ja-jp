@@ -19,13 +19,13 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6ee9528f9f1a85b0d23d6a5b3de23f50a63a85cf
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540862"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43101812"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AND Person1.Name = 'John';
 ### <a name="tooling-and-ecosystem"></a>ツールとエコシステム  
 ユーザーは、既存のツールおよびエコシステムによってメリットを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を提供します。 バックアップと復元などのツールのインポートし、エクスポート、すぐ BCP だけ作業します。 その他のツールまたは SSIS、SSRS、PowerBI などのサービスは、グラフ テーブルでは、リレーショナル テーブルで動作する方法です。
  
- ## <a name="next-steps"></a>次のステップ  
+ ## <a name="next-steps"></a>次の手順  
 読み取り、 [SQL グラフ データベース - アーキテクチャ](./sql-graph-architecture.md)
    
 

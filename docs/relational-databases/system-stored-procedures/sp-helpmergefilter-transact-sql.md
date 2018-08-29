@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpmergefilter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996039"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030818"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|結合フィルターの ID。|  
 |**filtername**|**sysname**|フィルターの名前。|  
@@ -66,7 +66,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**join_filterclause**|**nvarchar(2000)**|結合を修飾するフィルター句。|  
 |**join_unique_key**|**int**|一意なキーを基に結合を行うかどうかを示します。|  
 |**ベース テーブルの所有者**|**sysname**|テーブル所有者の名前。|  
-|**ベース テーブル名**|**sysname**|ベース テーブルの名前。|  
+|**ベース テーブルの名前**|**sysname**|ベース テーブルの名前。|  
 |**結合テーブルの所有者**|**sysname**|ベース テーブルに結合するテーブルの所有者の名前。|  
 |**結合テーブルの名前**|**sysname**|ベース テーブルに結合するテーブルの名前。|  
 |**アーティクルの名前**|**sysname**|ベース テーブルに結合するテーブル アーティクルの名前。|  
@@ -75,11 +75,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergefilter**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergefilter**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergefilter**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

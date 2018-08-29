@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINES view
 - INFORMATION_SCHEMA.ROUTINES view
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b4404c25500d6732db6f2346b1fdedb34e9bed8f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548892"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102019"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "39548892"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|カタログの固有の名前。 この名前は ROUTINE_CATALOG と同じです。|  
-|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|スキーマの固有の名前。<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|スキーマの固有の名前。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |SPECIFIC_NAME|**nvarchar(** 128 **)**|カタログの固有の名前。 この名前は ROUTINE_NAME と同じです。|  
 |ROUTINE_CATALOG|**nvarchar(** 128 **)**|関数のカタログの名前。|  
-|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|関数を含むスキーマの名前。<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|関数を含むスキーマの名前。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |ROUTINE_NAME|**nvarchar(** 128 **)**|関数の名前。|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|ストアド プロシージャの場合は PROCEDURE、関数の場合は FUNCTION。|  
 |MODULE_CATALOG|**nvarchar(** 128 **)**|NULL。 将来使用するために予約されています。|  

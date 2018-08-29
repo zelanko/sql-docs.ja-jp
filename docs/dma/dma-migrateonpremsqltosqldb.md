@@ -2,7 +2,7 @@
 title: Data Migration Assistant を使用して Azure SQL Database へのオンプレミス SQL Server の移行 |Microsoft Docs
 description: Data Migration Assistant を使用して Azure SQL Database に、オンプレミスの SQL Server を移行する方法について説明します
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 5de33f3a78a68f0afac0ead0d42b244cc78a85ad
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.openlocfilehash: faf8e0c056ba6f12e84d2b8fab69971061ba4037
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935839"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152813"
 ---
 # <a name="migrate-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server または Data Migration Assistant を使用して Azure Vm 上の SQL Server にオンプレミスの SQL Server を移行します。
 
@@ -122,7 +122,7 @@ Data Migration Assistant を使用して Azure SQL Database に移行する SQL 
 
    ![移行の状態](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 - [Data Migration Assistant: 構成の設定](../dma/dma-configurationsettings.md)

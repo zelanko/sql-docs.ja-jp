@@ -1,5 +1,5 @@
 ---
-title: sp_droparticle (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_droparticle (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droparticle
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a05199bb255a3ae4050f2bca7a6d2f4352d5533a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5a59df61730eba41316454c58afc3695689bd9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990867"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033294"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ sp_droparticle [ @publication= ] 'publication'
   
  **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  
   
- **1**アーティクルへの変更がスナップショットが無効であることがあり、新しいスナップショットが必要となる既存のサブスクリプションがある場合は、アクセス許可を与える不使用とマークするのには、既存のスナップショットと、新しいスナップショットを生成するように指定します。  
+ **1**アーティクルへの変更はスナップショットが無効であることがあり、新しいスナップショットを必要とする既存のサブスクリプションがある場合は、アクセス許可を付与 obsolete としてマーク済みである既存のスナップショットを新しいスナップショットを生成を指定します。  
   
  [ **@publisher**=] **'***パブリッシャー***'**  
- 指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*でアーティクルのプロパティを変更するときに使用しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  *パブリッシャー*でアーティクルのプロパティを変更する場合、使用されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
  [ **@from_drop_publication**=] *from_drop_publication*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -78,18 +78,18 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_droparticle**は、スナップショットおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_droparticle**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
- 水平方向にフィルター選択されたアーティクルで**sp_droparticle**チェック、**型**内のアーティクルの列、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルビューまたはフィルターを削除するもあるかどうかを決定します。 自動作成されたビューまたはフィルターは、アーティクルと共に削除されます。 手動で作成した場合は、削除されません。  
+ 水平方向にフィルター選択されたアーティクルで**sp_droparticle**チェック、**型**内のアーティクルの列、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルビューやフィルターを削除することもどうを決定します。 自動作成されたビューまたはフィルターは、アーティクルと共に削除されます。 手動で作成した場合は、削除されません。  
   
- 実行する**sp_droparticle**パブリケーションからアーティクルを削除する削除されませんオブジェクトから、パブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 これらのオブジェクトは、必要に応じて `DROP <object>` を使用して手動で削除します。  
+ 実行**sp_droparticle**パブリケーションからアーティクルを削除してから削除されません、オブジェクト、パブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 これらのオブジェクトは、必要に応じて `DROP <object>` を使用して手動で削除します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_droparticle](../../relational-databases/replication/codesnippet/tsql/sp-droparticle-transact-_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_droparticle**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_droparticle**します。  
   
 ## <a name="see-also"></a>参照  
  [アーティクルを削除します。](../../relational-databases/replication/publish/delete-an-article.md)   

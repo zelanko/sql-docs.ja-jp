@@ -1,5 +1,5 @@
 ---
-title: sp_addtabletocontents (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addtabletocontents (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addtabletocontents
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47400ed08fed28f8b2c6a83189cd640b9c727f9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8b3a99fc475bfe7e3ab7cddfa31f0449c81e05d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031994"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 このオプションを使用する一括で読み込んだ大量のデータを使用して**bcp**、マージ追跡トリガーを起動しません。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 このオプションを使用して一括で読み込んだ大量のデータを使用して**bcp**がマージ追跡トリガーは起動しません。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,13 +58,13 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_addtabletocontents**はマージ レプリケーションでのみ使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_addtabletocontents**マージ レプリケーションでのみ使用されます。  
   
- 内の行、 *table_name*によって参照される、 **rowguidcol**され、参照がマージ追跡テーブルに追加されます。 **sp_addtabletocontents**一括マージ レプリケーションを使用してパブリッシュされるテーブルにデータをコピーした後に使用する必要があります。 このストアド プロシージャは、コピーされた行のトラッキングを実行し、次の同期処理の際に新しい行を確実に挿入します。  
+ 内の行、 *table_name*によって参照される、 **rowguidcol**参照がマージ追跡テーブルに追加されます。 **sp_addtabletocontents**一括マージ レプリケーションを使用してパブリッシュされるテーブルにデータをコピーした後に使用する必要があります。 このストアド プロシージャは、コピーされた行のトラッキングを実行し、次の同期処理の際に新しい行を確実に挿入します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addtabletocontents**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addtabletocontents**します。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

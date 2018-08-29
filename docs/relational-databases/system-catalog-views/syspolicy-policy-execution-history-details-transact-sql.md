@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history_details (TRANSACT-SQL) |Microsoft ドキュメント
+title: syspolicy_policy_execution_history_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history_details view
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1c3c5836dd2811e95db27392e9bd77cbe91f6e38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 252c61b6fbaf5635361df79f89a4f9ec7ec66e50
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031838"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
   実行された条件式、式の対象、各実行の結果、およびエラーの詳細 (発生した場合) を表示します。 次の表では、syspolicy_execution_history_details ビューの列について説明します。  
   
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|このレコードの識別子。 各レコードは、ポリシーに含まれる 1 つの条件式に関する評価または適用の試行を表します。 複数の対象に適用された場合、条件ごと、対象ごとに明細レコードが作成されます。|  
 |history_id|**bigint**|履歴イベントの識別子。 各履歴イベントは、ポリシー実行の試行 1 回を表します。 条件には複数の条件式や複数の対象が含まれる場合があるため、1 つの history_id に対して複数の詳細レコードが作成されることもあります。 このビューに参加するには history_id 列を使用して、 [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)ビュー。|  
@@ -45,10 +45,10 @@ ms.lasthandoff: 05/04/2018
 |exception_message|**nvarchar(max)**|例外が発生した場合に、その例外によって生成されたメッセージ。|  
 |exception|**nvarchar(max)**|例外が発生した場合、その説明。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ポリシー ベースの管理のトラブルシューティングを行う場合に、失敗した対象と条件式の組み合わせ、失敗した日時、および関連するエラーを調べるには、syspolicy_policy_execution_history_details ビューに対してクエリを実行します。  
   
- 次のクエリの結合、`syspolicy_policy_execution_history_details`ビューを`syspolicy_policy_execution_history_details`と`syspolicy_policies`ポリシーは、条件の名前の名前を表示するビューし、エラーの詳細。  
+ 次のクエリの結合、`syspolicy_policy_execution_history_details`を見る、`syspolicy_policy_execution_history_details`と`syspolicy_policies`条件の名前は、ポリシーの名前を表示するビューし、エラーの詳細。  
   
 ```  
 SELECT Pol.name AS Policy,   
@@ -69,11 +69,11 @@ JOIN msdb.dbo.syspolicy_policy_execution_history_details AS PolHistDet
 WHERE PolHistDet.result = 0 ;  
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用して、サーバーを管理します。](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_cursorfetch (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_cursorfetch (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bbffe757b6b9c76bc1eb0b95e883f3d4d30b461
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 830e298365f3414c57f4419b8f0f9309ba908607
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034655"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベースから 1 つ以上の行のバッファーをフェッチします。 このバッファー内の行グループは、カーソルと呼ばれる*フェッチ バッファー*です。 sp_cursorfetch は、ID を指定して呼び出される、表形式のデータ ストリーム (TDS) パケットで 7 を = です。  
+  データベースから 1 つ以上の行のバッファーをフェッチします。 このバッファー内の行のグループは、カーソルのと呼ばれる*フェッチ バッファー*します。 sp_cursorfetch は、ID を指定して呼び出される、表形式のデータ ストリーム (TDS) パケットで 7 を = です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,45 +46,45 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>引数  
  *カーソル (cursor)*  
- *処理*によって生成される値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]され、sp_cursoropen から返されます。 *カーソル*必須パラメーターですが、 **int**値を入力します。 詳細については、このトピックの後半の「解説」セクションを参照してください。  
+ *処理*によって生成される値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_cursoropen から返されるとします。 *カーソル*が必要なパラメーターです、 **int**値を入力します。 詳細については、このトピックの後半の「解説」を参照してください。  
   
  *fetchtype*  
  フェッチするカーソル バッファーを指定します。 *fetchtype*省略可能なパラメーターで、次の整数入力値のいずれかが必要です。  
   
-|値|名前|Description|  
+|値|名前|説明|  
 |-----------|----------|-----------------|  
-|0x0001|FIRST|最初のバッファーをフェッチ*nrows*行です。 場合*nrows*が 0 と等しい、カーソルが結果セットの前に、行は返されません。|  
-|0x0002|NEXT|次のバッファーをフェッチ*nrows*行です。|  
-|0x0004|PREV|以前のバッファーをフェッチ*nrows*行です。<br /><br /> 注: のみ FORWARD_ONLY では一方向のスクロールがサポートされるため、エラー メッセージを返します、FORWARD_ONLY カーソルに対して PREV を使用します。|  
-|0x0008|LAST|最後のバッファーをフェッチ*nrows*行です。 場合*nrows*が 0 と等しい、カーソルが結果セットし、行は返されません。<br /><br /> 注: のみ FORWARD_ONLY では一方向のスクロールがサポートされるため、エラー メッセージを返します、FORWARD_ONLY カーソルに対して LAST を使用します。|  
-|0x10|ABSOLUTE|バッファーをフェッチ*nrows*で始まる行、 *rownum*行です。<br /><br /> 注: のみ FORWARD_ONLY では一方向のスクロールがサポートされるため、エラー メッセージを返します、動的カーソルまたは FORWARD_ONLY カーソルに対して ABSOLUTE を使用します。|  
-|0x20|RELATIVE|バッファーをフェッチ*nrows*として指定されている行で始まる行、 *rownum*現在のブロックの最初の行からの行の値。 ここでは*rownum*負数にすることができます。<br /><br /> 注: のみ FORWARD_ONLY では一方向のスクロールがサポートされるため、エラー メッセージを返します、FORWARD_ONLY カーソルに対して RELATIVE を使用します。|  
+|0x0001|FIRST|最初のバッファーをフェッチ*nrows*行。 場合*nrows*が 0 と等しい、カーソルが結果セットの前に、行は返されません。|  
+|0x0002|NEXT|次のバッファーをフェッチ*nrows*行。|  
+|0x0004|PREV|以前のバッファーをフェッチ*nrows*行。<br /><br /> 注: は、FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返します、FORWARD_ONLY カーソルに対して PREV を使用します。|  
+|0x0008|LAST|最後のバッファーをフェッチ*nrows*行。 場合*nrows*が 0 と等しい、カーソルが結果セットし、行は返されません。<br /><br /> 注: は、FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返します、FORWARD_ONLY カーソルに対して LAST を使用します。|  
+|0x10|ABSOLUTE|バッファーをフェッチ*nrows*で始まる行、 *rownum*行。<br /><br /> 注: は、FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返します、動的カーソルまたは FORWARD_ONLY カーソルに対して ABSOLUTE を使用します。|  
+|0x20|RELATIVE|バッファーをフェッチ*nrows*として指定されている行で始まる行、 *rownum*現在のブロックの最初の行からの行の値。 ここで*rownum*負の数を指定できます。<br /><br /> 注: は、FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返します、FORWARD_ONLY カーソルに対して RELATIVE を使用します。|  
 |0x80|REFRESH|基になるテーブルのデータをバッファーに再読み込みします。|  
-|0x100|INFO|カーソルについての情報を取得します。 使用してこの情報が返されます、 *rownum*と*nrows*パラメーター。 そのため、情報を指定すると、 *rownum*と*nrows*出力パラメーターになります。|  
+|0x100|INFO|カーソルについての情報を取得します。 使用してこの情報が返されます、 *rownum*と*nrows*パラメーター。 そのため、情報を指定した場合、 *rownum*と*nrows*出力パラメーターになります。|  
 |0x200|PREV_NOADJUST|PREV と同じように使用されます。 ただし、途中で結果セットの先頭に到達した場合に結果が変わる可能性があります。|  
 |0x400|SKIP_UPDT_CNCY|その他のいずれかで使用する必要があります*fetchtype* INFO 以外の値。|  
   
 > [!NOTE]  
 >  値 0x40 はサポートされていません。  
   
- 詳細については、このトピックの後半の「解説」セクションを参照してください。  
+ 詳細については、このトピックの後半の「解説」を参照してください。  
   
  *rownum*  
- ABSOLUTE または INFO の行位置を指定するために使用する省略可能なパラメーターです*fetchtype*入力または出力、あるいはその両方の整数値のみを使用して値にします。 *rownum*行オフセットとして機能、 *fetchtype*ビット値が RELATIVE です。 *rownum*の他のすべての値は無視されます。 詳細については、このトピックの後半の「解説」セクションを参照してください。  
+ ABSOLUTE または INFO の行の位置を指定するために使用するオプションのパラメーターは、 *fetchtype*入力または出力、あるいはその両方の整数値のみを使用して値。 *rownum*行オフセットとして機能、 *fetchtype*ビット値が RELATIVE です。 *rownum*の他のすべての値は無視されます。 詳細については、このトピックの後半の「解説」を参照してください。  
   
  *nrows*  
- フェッチする行数を指定するために使用される省略可能なパラメーターです。 場合*nrows*が指定されていない、既定値は 20 行です。 データを返さずに位置を設定するには、値 0 を指定します。 ときに*nrows*に適用される、 *fetchtype* INFO であるクエリ、そのクエリで行の合計数を返すことです。  
+ フェッチする行数を指定するために使用される省略可能なパラメーターです。 場合*nrows*が指定されていない、既定値は 20 行です。 データを返さずに位置を設定するには、値 0 を指定します。 ときに*nrows*に適用される、 *fetchtype* INFO であるクエリ、そのクエリで行の合計数を返しますにします。  
   
 > [!NOTE]  
->  *nrows*更新では無視されます*fetchtype*ビット値。  
+>  *nrows*更新では無視されて*fetchtype*ビット値。  
 >   
->  詳細については、このトピックの後半の「解説」セクションを参照してください。  
+>  詳細については、このトピックの後半の「解説」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  ビット値 INFO を指定した場合の戻り値を次の表に示します。  
   
 > [!NOTE]  
->  : 行が返されない場合、バッファーの内容のままにします。  
+>  行が返されない場合と同様に、バッファーの内容が残ります。  
   
 |*\<rownum >*|を設定します。|  
 |------------------|------------|  
@@ -92,15 +93,15 @@ sp_cursorfetch cursor
 |結果セットより後ろの場合|-1|  
 |KEYSET カーソルおよび STATIC カーソルの場合|結果セット内の現在位置の絶対行番号。|  
 |DYNAMIC カーソルの場合|1|  
-|ABSOLUTE の場合|-1 を指定すると、セット内の最後の行が返されます。<br /><br /> -2 を指定すると、セット内の最後から 2 番目の行が返されます (以降、同様に続きます)。<br /><br /> 注意: ここでフェッチする 1 つ以上の行が要求されると、結果セットの最後の 2 つの行が返されます。|  
+|ABSOLUTE の場合|-1 を指定すると、セット内の最後の行が返されます。<br /><br /> -2 を指定すると、セット内の最後から 2 番目の行が返されます (以降、同様に続きます)。<br /><br /> 注: ここでフェッチする 1 つ以上の行が要求された場合、結果セットの最後の 2 つの行が返されます。|  
   
 |*\<nrows >*|を設定します。|  
 |-----------------|------------|  
 |開いていない場合|0|  
-|KEYSET カーソルおよび STATIC カーソルの場合|通常は現在のキーセットのサイズ。<br /><br /> **– m**場合は、カーソルが非同期に作成される*m*現時点までに見つかった行の数。|  
+|KEYSET カーソルおよび STATIC カーソルの場合|通常は現在のキーセットのサイズ。<br /><br /> **– m**カーソルが非同期に作成される場合*m*行には、このポイントが見つかりませんでした。|  
 |DYNAMIC カーソルの場合|-1|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="cursor-parameter"></a>cursor パラメーター  
  フェッチ操作がまだ一度も行われていないときのカーソルの既定の位置は、結果セットの最初の行の前です。  
@@ -119,25 +120,25 @@ sp_cursorfetch cursor
 ## <a name="rownum-parameter"></a>rownum パラメーター  
  使用すると*rownum*、指定した行で始まる、バッファーを入力します。  
   
- *Fetchtype*値が絶対値の位置を指す*rownum*全体の結果内で設定します。 ABSOLUTE で負の値を指定すると、結果セットの末尾から行がカウントされます。  
+ *Fetchtype*値の位置を指す絶対*rownum*全体の結果内で設定します。 ABSOLUTE で負の値を指定すると、結果セットの末尾から行がカウントされます。  
   
- *Fetchtype*相対の位置を指す値*rownum*現在のバッファーの先頭にカーソルの位置に関連しています。 RELATIVE で負の値を指定すると、カーソルが現在のカーソル位置から後方に移動します。  
+ *Fetchtype*値が相対の位置を指す*rownum*現在のバッファーの先頭にカーソルの位置に関連します。 RELATIVE で負の値を指定すると、カーソルが現在のカーソル位置から後方に移動します。  
   
 ## <a name="nrows-parameter"></a>nrows パラメーター  
  *Fetchtype* REFRESH および INFO の値は、このパラメーターを無視します。  
   
- 指定すると、 *fetchtype*を持つ最初の値、 *nrow*値 0、カーソルがフェッチ バッファー内の行を持たない結果セットの前に位置付けられます。  
+ 指定すると、 *fetchtype*を持つ最初の値、 *nrow*値 0、カーソルがフェッチ バッファー内の行を持たない結果セットの前に配置されます。  
   
- 指定すると、 *fetchtype*を持つ最後の値、 *nrow* 0 の場合、カーソルの値が現在のフェッチ バッファーに行を持たない結果セットの後に配置します。  
+ 指定すると、 *fetchtype*を持つ最後の値、 *nrow* 0 の場合、カーソルの値が現在のフェッチ バッファー内の行を持たない結果セットの後に配置します。  
   
- *Fetchtype* 次へ、PREV、ABSOLUTE、RELATIVE、および PREV_NOADJUST での値、 *nrow* 0 の値が無効です。  
+ *Fetchtype*次へ、PREV、ABSOLUTE、RELATIVE、および PREV_NOADJUST では、値、 *nrow* 0 の値が無効です。  
   
 ## <a name="rpc-considerations"></a>RPC に関する考慮事項  
  RPC の戻りステータスでは、キーセット サイズのパラメーターが final かどうか (keyset テーブル (一時テーブル) が非同期に作成されるかどうか) が示されます。  
   
  RPC 状態パラメーターは、次のいずれかの値に設定されます。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |0|プロシージャが正常に実行されました。|  
 |0x0001|プロシージャは失敗しました。|  
@@ -146,14 +147,14 @@ sp_cursorfetch cursor
   
  行は、通常の結果セットとして返されます (列の形式 (0x2a)、行 (0xd1)、完了 (0xfd))。 メタデータ トークンは、sp_cursoropen に指定したのと同じ形式で送信されます (SQL Server 7.0 ユーザーの場合は 0x81、0xa5、および 0xa4 など)。 行の状態インジケーターは、ブラウズ モードのように、各行の末尾の非表示の列として送信されます (列名は rowstat、データ型は INT4)。 この rowstat 列には、次のいずれかの値が含まれます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
   
  TDS プロトコルでは、前の列を送信せずに末尾の状態列だけを送信することはできないため、欠けている行に対してはダミー データが送信されます (NULL 値許容フィールドは NULL に設定され、固定長フィールドは 0、空白、または列の既定値に設定されます)。  
   
- DONE の行数は、0 を常になります。 DONE メッセージに結果セットの実際の行数が含まれます。TDS メッセージの間にエラー メッセージや情報メッセージが表示される場合もあります。  
+ DONE rowcount 常に 0 になります。 DONE メッセージに結果セットの実際の行数が含まれます。TDS メッセージの間にエラー メッセージや情報メッセージが表示される場合もあります。  
   
  カーソルの選択リストに関するメタデータを TDS ストリームで返すように要求するには、RPC の RETURN_METADATA 入力フラグを 1 に設定します。  
   
@@ -171,13 +172,13 @@ row 5 contents
 row 6 contents  
 ```  
   
- 次に、sp_cursorfetch PREV を持つ、 *nrows* 5 の値を 2 つのカーソル行の結果セットの最初の行の前に論理的に配置します。 このような場合、カーソルが最初の行で開始されるように調整されて、要求した数の行が返されます。 その結果、通常は、前のフェッチ バッファーに含まれていた行が返されることになります。  
+ 次に、sp_cursorfetch PREV を持つ、 *nrows*結果セットの最初の行の前に 2 つのカーソルの行を位置は論理的に 5 の値。 このような場合、カーソルが最初の行で開始されるように調整されて、要求した数の行が返されます。 その結果、通常は、前のフェッチ バッファーに含まれていた行が返されることになります。  
   
 > [!NOTE]  
 >  これは、RPC 状態パラメーターが 2 に設定される典型的な例です。  
   
 ### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>B. PREV_NOADJUST を使用して PREV より少ない行を返す  
- PREV_NOADJUST では、返される行のブロックに現在のカーソル位置以降の行が含まれることはありません。 [前へ] が現在の位置の後に行を返す場合、PREV_NOADJUST に行数で要求されたより少なくなりますが返されます。 *nrows*です。 現在位置の例に、以前のバージョンを PREV を適用した場合、sp_cursorfetch (h2, 4, 1, 5)、次の行がフェッチされます。  
+ PREV_NOADJUST では、返される行のブロックに現在のカーソル位置以降の行が含まれることはありません。 PREV が現在の位置より後に行を返す場合、PREV_NOADJUST に行数で要求されたより少なくなりますが返されます*nrows*します。 現在位置の例に、以前のバージョンを PREV を適用した場合、sp_cursorfetch (h2, 4, 1, 5)、次の行がフェッチされます。  
   
 ```  
 row1 contents   
@@ -187,7 +188,7 @@ row4 contents
 row5 contents  
 ```  
   
- ただし、PREV_NOADJUST を適用した場合、sp_cursorfetch (h2, 512, 6, 5) は次の行のみがフェッチされます。  
+ ただし、PREV_NOADJUST を適用した場合、sp_cursorfetch (h2, 512, 6, 5) 次の行のみがフェッチされます。  
   
 ```  
 row1 contents   

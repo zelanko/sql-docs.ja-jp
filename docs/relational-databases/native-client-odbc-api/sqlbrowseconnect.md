@@ -17,13 +17,13 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ad3a4853ae82592b0c996ce8ca595cc1db315df
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 34565484d2a7b40a3502b3f7fb836a6ae0ee422c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541912"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43104174"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,14 +55,14 @@ ms.locfileid: "39541912"
 |DATABASE|はい|はい|名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースです。|  
 |LANGUAGE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  
   
- **SQLBrowseConnect** ODBC データ ・ ソースの定義に格納されているデータベースと言語のキーワードの値を無視します。 渡されるデータベースまたは接続文字列で指定された言語の場合**SQLBrowseConnect**有効ではない**SQLBrowseConnect**送らとレベル 3 の接続属性を返します。  
+ **SQLBrowseConnect** ODBC データ ・ ソースの定義に格納されているデータベースと言語のキーワードの値を無視します。 渡されたデータベースまたは接続文字列で指定された言語場合**SQLBrowseConnect**が有効でない**SQLBrowseConnect** SQL_NEED_DATA とレベル 3 の接続属性を返します。  
   
  呼び出すことによって設定されている次の属性は、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)、によって返される結果セットを決定する**SQLBrowseConnect**。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|SQL_COPT_SS_BROWSE_CONNECT|設定されている場合に SQL_MORE_INFO_YES、 **SQLBrowseConnect**サーバーのプロパティの拡張文字列を返します。<br /><br /> 次の拡張によって返される文字列の例では**SQLBrowseConnect**。<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> この文字列では、サーバーに関するさまざまな情報がセミコロンで区切られます。 コンマは、異なるサーバー インスタンスを区切るために使用します。|  
-|SQL_COPT_SS_BROWSE_SERVER|サーバー名を指定すると場合、 **SQLBrowseConnect**は指定されたサーバーの情報を返します。 SQL_COPT_SS_BROWSE_SERVER が NULL に設定されている場合**SQLBrowseConnect**ドメイン内のすべてのサーバーに関する情報を返します。<br /><br /> <br /><br /> ネットワークの問題があるため注意してください**SQLBrowseConnect**のすべてのサーバーからタイムリーな応答を受信しない場合があります。 したがって、要求ごとに返されるサーバーの一覧が異なる可能性があります。|  
+|SQL_COPT_SS_BROWSE_CONNECT|場合は、この属性を SQL_MORE_INFO_YES に設定されている**SQLBrowseConnect**サーバーのプロパティの拡張文字列を返します。<br /><br /> 次の拡張によって返される文字列の例では**SQLBrowseConnect**。<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> この文字列では、サーバーに関するさまざまな情報がセミコロンで区切られます。 コンマは、異なるサーバー インスタンスを区切るために使用します。|  
+|SQL_COPT_SS_BROWSE_SERVER|サーバー名を指定すると場合、 **SQLBrowseConnect**は指定されたサーバーの情報を返します。 SQL_COPT_SS_BROWSE_SERVER に NULL が設定されている場合**SQLBrowseConnect**ドメイン内のすべてのサーバー情報を返します。<br /><br /> <br /><br /> ネットワークの問題があるため注意してください**SQLBrowseConnect**のすべてのサーバーからタイムリーな応答を受信しない場合があります。 したがって、要求ごとに返されるサーバーの一覧が異なる可能性があります。|  
 |SQL_COPT_SS_BROWSE_CACHE_DATA|SQL_COPT_SS_BROWSE_CACHE_DATA 属性が SQL_CACHE_DATA_YES に設定されている場合は、バッファー長の不足が原因で結果を保持できないときにデータをチャンクでフェッチできます。 この長さは、SQLBrowseConnect BufferLength 引数で指定されます。<br /><br /> バッファー長を超えるデータがあるときは SQL_NEED_DATA が返されます。 取得対象のデータがそれ以上ないときは SQL_SUCCESS が返されます。<br /><br /> 既定値は SQL_CACHE_DATA_NO です。|  
   
 ## <a name="sqlbrowseconnect-support-for-high-availability-disaster-recovery"></a>SQLBrowseConnect の HADR サポート  

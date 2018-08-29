@@ -1,5 +1,5 @@
 ---
-title: sp_mergesubscription_cleanup (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_mergesubscription_cleanup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,22 +20,23 @@ helpviewer_keywords:
 - sp_mergesubscription_cleanup
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adf9d388beb4d86aef7745890292a312c9273389
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3135d0576d09efc2fa00804ab47a2e1a7836dd07
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031204"
 ---
 # <a name="spmergesubscriptioncleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トリガーやエントリなど、メタデータが削除**sysmergesubscriptions**と**sysmergearticles**パブリッシャー側で指定されたマージ プッシュ サブスクリプションが削除された後にします。 このストアド プロシージャがサブスクリプション データベースで、サブスクライバーで実行します。  
+  内のエントリ、およびトリガーなどのメタデータが削除**sysmergesubscriptions**と**sysmergearticles**パブリッシャー側で、指定されたマージ プッシュ サブスクリプションを削除した後。 このストアド プロシージャは、サブスクリプション データベースで、サブスクライバーで実行されます。  
   
 > [!NOTE]  
->  プル サブスクリプションのメタデータが削除されたときに[sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)を実行します。  
+>  プル サブスクリプションのメタデータが削除されるとき[sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)を実行します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,11 +62,11 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_mergesubscription_cleanup**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_mergesubscription_cleanup**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_mergesubscription_cleanup**します。  
   
 ## <a name="see-also"></a>参照  
  [プッシュ サブスクリプションを削除します。](../../relational-databases/replication/delete-a-push-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_script_synctran_commands (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_script_synctran_commands (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_script_synctran_commands
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3705a28d85c7375aad701d77a517719778954c25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b86c1064eb96174243ea15cba6f5f84a77e40a1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997759"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031809"
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  含むスクリプトを生成、 **sp_addsynctrigger**更新可能なサブスクリプションのサブスクライバーで適用される呼び出しです。 1 つを使用する必要がある**sp_addsynctrigger**パブリケーションの各アーティクルに呼び出します。 生成されるスクリプトにも含まれています、 **sp_addqueued_artinfo**作成の呼び出し、 **MSsubsciption_articles**キュー パブリケーションの処理に必要なテーブルです。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  含むスクリプトを生成、 **sp_addsynctrigger**更新可能なサブスクリプションのサブスクライバーで適用される呼び出しです。 1 つである**sp_addsynctrigger**パブリケーション内の各アーティクルに対して呼び出します。 生成されるスクリプトにも含まれています、 **sp_addqueued_artinfo**作成の呼び出し、 **MSsubsciption_articles**キュー パブリケーションの処理に必要なテーブルです。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,15 +56,15 @@ sp_script_synctran_commands [@publication = ] 'publication'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="results-set"></a>結果セット  
- **sp_script_synctran_commands** 、1 つので構成される結果セットを返します**nvarchar (4000)** 列です。 結果セットのフォーム、完全なスクリプトを両方を作成するために必要な**sp_addsynctrigger**と**sp_addqueued_artinfo**サブスクライバーで適用される呼び出しです。  
+ **sp_script_synctran_commands**結果セットを返しますが、1 つから成る**nvarchar (4000)** 列。 結果セットのフォーム、完全なスクリプト作成の両方に必要な**sp_addsynctrigger**と**sp_addqueued_artinfo**の呼び出しをサブスクライバーで適用します。  
   
-## <a name="remarks"></a>解説  
- **sp_script_synctran_commands**は、スナップショットおよびトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_script_synctran_commands**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
  **sp_addqueued_artinfo**キュー更新サブスクリプションに対して使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_script_synctran_commands**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_script_synctran_commands**します。  
   
 ## <a name="see-also"></a>参照  
  [sp_addsynctriggers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   

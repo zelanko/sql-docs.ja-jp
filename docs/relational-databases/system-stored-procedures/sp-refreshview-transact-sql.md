@@ -1,5 +1,5 @@
 ---
-title: sp_refreshview (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_refreshview (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9871a4ce62ce2916a1cd27c3ca8735de28cfa1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed5f50b9b95f2f156632fb14c2cd471ef010bcac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249434"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031480"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sp_refreshview [ @viewname = ] 'viewname'
   
 ## <a name="arguments"></a>引数  
  [  **@viewname=** ] **'***viewname***'**  
- ビューの名前を指定します。 *viewname*は**nvarchar**、既定値はありません。 *viewname*マルチパートの識別子を指定できますが、現在のデータベース内のビューに参照できるのみです。  
+ ビューの名前を指定します。 *viewname*は**nvarchar**、既定値はありません。 *viewname* 、マルチパート識別子を指定できますが、現在のデータベース内のビューに参照できるのみです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 0 以外の数値 (失敗)  
   
-## <a name="remarks"></a>解説  
- ビューがスキーマ バインドで作成されていない場合**sp_refreshview**ビューの定義に影響を与える、ビューを基になるオブジェクトが変更されたときに実行する必要があります。 この操作を行わないと、ビューのクエリ時に、予期しない結果が表示される可能性があります。  
+## <a name="remarks"></a>コメント  
+ ビューは、schemabinding を指定して作成されていない場合**sp_refreshview**ビューの定義に影響を与える、ビューの基になるオブジェクトに変更されたときに実行する必要があります。 この操作を行わないと、ビューのクエリ時に、予期しない結果が表示される可能性があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ビューに対する ALTER 権限と、共通言語ランタイム (CLR) ユーザー定義型およびビュー列で参照される XML スキーマ コレクションに対する REFERENCES 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

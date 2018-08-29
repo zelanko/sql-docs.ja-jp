@@ -1,5 +1,5 @@
 ---
-title: オブジェクト階層構文 (TRANSACT-SQL) |Microsoft ドキュメント
+title: オブジェクト階層構文 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7b3df2aad780cabe33855374cc5b6372366eeaf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238053"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032540"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>オブジェクト階層構文 (Transac-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  *Propertyname* sp_OAGetProperty および sp_OASetProperty のパラメーターと*methodname* sp_OAMethod のパラメーターをサポートするのに似ていますが、オブジェクト階層構文[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. この特殊な構文を使用する場合、パラメーターの一般的な形式は次のようになります。  
+  *Propertyname* sp_OAGetProperty および sp_OASetProperty のパラメーターと*methodname* sp_OAMethod のパラメーターの次のようなオブジェクト階層構文をサポートして[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. この特殊な構文を使用する場合、パラメーターの一般的な形式は次のようになります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +48,7 @@ ms.locfileid: "33238053"
  二重引用符 (") が必要です。 コレクションに [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 感嘆符 (!) 構文を使用することはできません。  
   
  *PropertyOrMethod*  
- プロパティの名前またはのメソッドでは、 *TraversedObject*です。  
+ メソッドまたはプロパティの名前には、 *TraversedObject*します。  
   
  sp_OAGetProperty、sp_OASetProperty、または sp_OAMethod パラメーター (sp_OAMethod 出力パラメーターのサポートを含む) を使用して、すべてのインデックスまたはメソッド パラメーターを指定するには、次の構文を使用します。  
   
@@ -61,16 +60,16 @@ ms.locfileid: "33238053"
   
  二重引用符 (") が必要です。 すべての名前付きのパラメーターは、位置で決まるパラメーターをすべて指定した後で指定する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  場合*TraversedObject*が指定されていない*PropertyOrMethod*が必要です。  
   
- 場合*PropertyOrMethod*が指定されていない、 *TraversedObject* OLE オートメーション ストアド プロシージャからオブジェクト トークン出力パラメーターとして返されます。 場合*PropertyOrMethod*が指定されているプロパティまたはメソッドの*TraversedObject*が呼び出されると、プロパティの値またはメソッドの戻り値から返された出力パラメーターとして、OLE オートメーションストアド プロシージャです。  
+ 場合*PropertyOrMethod*が指定されていない、 *TraversedObject* OLE オートメーション ストアド プロシージャからオブジェクト トークン出力パラメーターとして返されます。 場合*PropertyOrMethod*が指定されているプロパティまたはメソッドの*TraversedObject*が呼び出され、OLE オートメーションから、プロパティ値またはメソッドの戻り値は出力パラメーターとして返されますが、ストアド プロシージャです。  
   
  いずれかの項目の場合、 *TraversedObject*一覧が OLE オブジェクトを返さない、エラーが発生します。  
   
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] OLE オブジェクト構文の詳細については、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のマニュアルを参照してください。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [sp_OACreate &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)です。  
+ HRESULT のリターン コードの詳細については、次を参照してください。 [sp_OACreate &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)します。  
   
 ## <a name="examples"></a>使用例  
  SQL-DMO SQLServer オブジェクトを使用するオブジェクト階層構文の例を次に示します。  

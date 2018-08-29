@@ -1,8 +1,8 @@
 ---
-title: インポートして、Data Migration Assistant の評価レポート (SQL Server) の統合 |Microsoft Docs
-description: Data Migration Assistant から評価レポートを SQL Server データベースにインポートして、複数のレポートを統合する方法について説明します
+title: エンタープライズを評価し、評価レポート (SQL Server) の統合 |Microsoft Docs
+description: DMA を使用して、企業を評価し、Azure SQL Database に SQL Server をアップグレードまたは移行する前に評価レポートを統合する方法について説明します。
 ms.custom: ''
-ms.date: 04/16/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,130 +16,230 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: be9fc224093f0d5ae14372d4674a52589a2d4801
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781773"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152633"
 ---
-# <a name="import-and-consolidate-data-migration-assistant-assessment-reports"></a>インポートして、Data Migration Assistant の評価レポートの統合
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
-コマンドラインを使用して、Data Migration Assistant v2.1 以降無人モードでの移行の評価を実行することができます。 この機能を使用して、スケールで評価を実行するのに役立ちます。 JSON または CSV ファイルの形式で評価の結果。
+次の手順では、Data Migration Assistant を使用して、オンプレミスの SQL Server または Azure vm で SQL Server の実行をアップグレードするため、または Azure SQL Database に移行するために、成功したスケールの評価を実行することができます。
 
-Data Migration Assistant のコマンド ライン ユーティリティの 1 つのインスタンス化で複数のデータベースを評価し、すべての評価結果を 1 つの JSON ファイルにエクスポートできます。 または、時に 1 つのデータベースを評価し、後で SQL データベースにこれら複数の JSON ファイルからの結果を統合できます。
+## <a name="prerequisites"></a>Prerequisites
 
-コマンドラインから Data Migration Assistant を実行する方法については、次を参照してください。[実行 Data Migration Assistant のコマンドラインから](../dma/dma-commandline.md)します。 
+- DMA の開始元となるネットワーク上のツールのコンピューターを指定します。 このコンピューターに、SQL Server のターゲットへの接続があることを確認します。
+- ダウンロードしてインストールします。
+    - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 以降。
+    - [PowerShell](http://aka.ms/wmf5download) v5.0 以降。
+    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 以上。
+    - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 以降。
+    - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)します。
+- ダウンロードして抽出します。
+    - [DMA レポートの Power BI テンプレート](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)します。
+    - [LoadWarehouse スクリプト](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip)します。
 
-## <a name="import-assessment-results-into-a-sql-server-database"></a>評価の結果、SQL Server データベースにインポートします。
+## <a name="loading-the-powershell-modules"></a>PowerShell モジュールの読み込み
+PowerShell モジュールを PowerShell モジュールのディレクトリに保存するを使用する前にそれらを明示的に読み込むことがなくモジュールを呼び出すことができます。
 
-この PowerShell スクリプトを使用して[Github リポジトリ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)評価の結果を JSON ファイルから SQL Server データベースにインポートします。
+モジュールを読み込むには、次の手順に従います。
+1. C:\Program \windowspowershell\modules に移動し、という名前のフォルダーを作成し、 **DataMigrationAssistant**します。
+2. 開く、 [PowerShell モジュール](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)、し、作成したフォルダーに保存します。
+
+      ![PowerShell モジュール](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
+
+    各フォルダーには、次の図に示すように、関連付けられている psm1 ファイルが含まれています。
+
+   ![PowerShell モジュールの psm1 ファイル](../dma/media//dma-consolidatereports/dma-powershell-modules-psm1-files.png)
+
+   > [!NOTE]
+   > フォルダーとが含まれている psm1 ファイルには、同じ名前がある場合があります。
+
+   > [!IMPORTANT]
+   > PowerShell ファイルを正しく読み込むモジュールを確実に WindowsPowerShell ディレクトリに保存した後のブロックを解除する必要があります。 ファイルを右クリックし、PowerShell ファイルのブロックを解除するには、**プロパティ**を選択、**ブロックの解除**テキスト ボックス、および選択し**Ok**。
+
+   ![psm1 ファイルのプロパティ](../dma/media//dma-consolidatereports/dma-psm1-file-properties.png)
+
+    PowerShell が今すぐ自動的に読み込まこれらのモジュール、新しい PowerShell セッションの開始時にします。
+
+## <a name="create-an-inventory-of-sql-servers"></a>SQL サーバーのインベントリを作成します。
+SQL Server を評価する PowerShell スクリプトを実行する前に評価する SQL サーバーのインベントリを作成する必要があります。
+
+このインベントリは、2 つの形式のいずれかにできます。
+- Excel の CSV ファイル
+- SQL Server テーブル
+
+### <a name="if-using-a-csv-file"></a>CSV ファイルを使用する場合
+を、データをインポートする csv ファイルを使用する場合は、データの 2 つの列があることを確認**インスタンス名**と**データベース名**、および列ヘッダー行があるはありません。
+ 
+ ![csv ファイルの内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
+
+### <a name="if-using-sql-server-table"></a>SQL Server テーブルを使用する場合
+という名前のデータベースを作成する**EstateInventory**テーブルと呼ばれる、 **DatabaseInventory**します。 このインベントリ データを含むテーブルは、次の 4 つの列が存在する限り、列の任意の数を持つことができます。
+- ServerName
+- InstanceName
+- DatabaseName
+- AssessmentFlag
+
+![SQL Server テーブルの内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+
+ツール コンピューターにこのデータベースでない場合は、ツールのコンピューターにこの SQL Server インスタンスへのネットワーク接続を確認します。
+
+SQL Server テーブルを CSV ファイルを使用する利点は、インスタンスを制御]、[データベースの評価より小さいチャンクに分割しやすく、評価の取得が選択する評価のフラグ列を使用することができます。  複数の評価をまたがることができますし (この記事の後半で、評価の実行に関するセクションを参照します) (セクションを参照で、この記事の後半で、評価を実行している)、複数の CSV ファイルを管理するより簡単であります。
+
+でオブジェクトとその複雑さの数に応じて、評価が取る著しく長い時間 (時間 +) できるようになりますが、評価を管理しやすいチャンクに分割することをお勧め留意してください。
+
+## <a name="running-a-scaled-assessment"></a>スケールの評価の実行
+モジュール ディレクトリに PowerShell モジュールを読み込むと、インベントリの作成、スケールの評価を実行して PowerShell を開き、dmaDataCollector 関数を実行する必要があります。
+ 
+  ![dmaDataCollector 関数の一覧](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
+
+DmaDataCollector 関数に関連付けられているパラメーターは、次の表で説明します。
+
+|パラメーター  |説明
+|---------|---------|
+|**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。 |
+|**サーバー名** | SQL Server のインスタンス名を使用する場合は、在庫の**SqlServer**で、 **getServerListFrom**パラメーター。 |
+|**DatabaseName** | インベントリ テーブルをホストするデータベース。 |
+|**%Assessmentname** | DMA 評価の名前。 |
+|**TargetPlatform** | 実行する評価対象の型。  指定できる値は**AzureSQLDatabase**、 **SQLServer2012**、 **SQLServer2014**、 **SQLServer2016**、 **SQLServerLinux2017**、および**SQLServerWindows2017**します。 |
+|**AuthenticationMethod** | 評価する SQL Server のターゲットに接続するための認証方法。 指定できる値は**SQLAuth**と**WindowsAuth**します。 |
+|**OutputLocation** | 評価の出力ファイル、JSON を格納するディレクトリ。 評価されているデータベースの数と、データベース内のオブジェクトの数に応じて、評価に異常に長い時間がかかることができます。 すべての評価が完了した後、ファイルが書き込まれます。 |
+
+予期しないエラーがある場合は、このプロセスによって開始されたコマンド ウィンドウを終了します。  失敗の理由を特定のエラー ログを確認します。
+ 
+  ![エラー ログの場所](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
+
+## <a name="consuming-the-assessment-json-file"></a>評価の JSON ファイルの使用
+
+評価が完了した後は、する分析のため、データを SQL Server にインポートする準備ができました。 評価の JSON ファイルを使用するには、PowerShell を開き、dmaProcessor 関数を実行します。
+ 
+  ![dmaProcessor 関数の一覧](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
+
+DmaProcessor 関数に関連付けられているパラメーターは、次の表で説明します。
+
+|パラメーター  |説明
+|---------|---------|
+|**プロセス**  | JSON ファイルの処理される場所です。 指定できる値は**SQLServer**と**AzureSQLDatabase**します。 |
+|**サーバー名** | SQL Server インスタンスは、データを処理します。  指定した場合**AzureSQLDatabase**の**プロセス**パラメーター、SQL Server の名前のみを含める (含まれていません。 database.windows.net)。 Azure SQL データベースを対象とする場合に 2 つのログインする要求します。最初の 2 つ目は、Azure の SQL Server の管理者ログイン中に、Azure テナントの資格情報です。 |
+|**CreateDMAReporting** | JSON ファイルを処理するために作成するステージング データベースです。  既に指定したデータベースが存在する、いずれかにこのパラメーターを設定すると、し、オブジェクトは作成できません。  このパラメーターは、削除された 1 つのオブジェクトを再作成するために便利です。 |
+|**CreateDataWarehouse** | Power BI レポートで使用されるデータ ウェアハウスを作成します。 |
+|**DatabaseName** | DMAReporting データベースの名前。 |
+|**warehouseName** | データ ウェアハウス データベースの名前。 |
+|**jsonDirectory** | 評価の JSON ファイルを含むディレクトリ。  ディレクトリに複数の JSON ファイルがある場合は、それらは 1 つずつ処理します。 |
+
+DmaProcessor 関数は 1 つのファイルを処理するまで数秒かかる場合のみ必要があります。
+
+## <a name="loading-the-data-warehouse"></a>Data warehouse の読み込み
+DmaProcessor は、評価ファイルの処理の完了をデータは DMAReporting ・ レポートデータ ・ テーブル データベースに読み込まれます。 この時点では、data warehouse を読み込む必要があります。
+
+1. LoadWarehouse スクリプトを使用して、次元内のすべての欠損値の設定。
+
+    このスクリプトは DMAReporting データベースの・ レポートデータ ・ テーブルからデータを取得し、ウェアハウスに読み込むこと。  この読み込みプロセス中にエラーがある場合は、ディメンション テーブル内の不足しているエントリの結果と可能性があります。
+
+2. データ ウェアハウスを読み込みます。
+ 
+      ![読み込まれた LoadWarehouse 内容](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+## <a name="set-your-database-owners"></a>データベースの所有者を設定します。
+必須ではありませんが、レポートから最大限の価値をお勧めデータベースの所有者を設定すること、 **dimDBOwner**ディメンション、および更新**DBOwnerKey**で、 **FactAssessment**テーブル。  このプロセスに従うと、スライスと特定のデータベース所有者に基づく Power BI レポートをフィルター処理が許可されます。
+
+データベース所有者を設定するための基本的な TSQL ステートメントを提供するのに LoadWarehouse スクリプトを使用することもできます。
+
+  ![LoadWarehouse 設定所有者](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+
+## <a name="dma-reports"></a>DMA レポート
+
+1. Power BI Desktop では、DMA レポートの Power BI テンプレートを開きます。
+2. をポイント サーバーの詳細を入力、 **DMAWarehouse**データベースし、**ロード**します。
+
+    > [!IMPORTANT]
+    > 値をそのままにしてを押さないでください。
+
+      ![読み込まれた DMA レポートの Power BI テンプレート](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   レポートがからデータを更新した後、 **DMAWarehouse**データベースでは、次のようなレポートが表示されます。
+
+   ![DMAWarehouse レポート ビュー](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+
+   > [!TIP]
+   > 予想したデータが表示されない場合は、アクティブなブックマークを変更してみてください。  詳細については、機能のセクションを参照してください。
+
+## <a name="working-with-dma-reports"></a>DMA レポートの使用
+DMA レポートを使用するには、スライサーを使用してフィルター処理します。
+- [インスタンス名]
+- データベース名
+- チーム名
+
+レポート間でコンテキストを切り替えるブックマークを使用することもできます。
+- クラウドの評価
+- オンプレミスの評価
+
+  ![DMA レポートのブックマーク](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
 
 > [!NOTE]
-> PowerShell v5 以上が必要です。
+> Azure SQL Database の評価のみ実行すると、クラウド レポートのみが設定されます。 逆に、評価をオンプレミスでのみ実行すると、オンプレミスのレポートのみが設定されます。 ただし、Azure とオンプレミスの評価の両方を実行し、ウェアハウスに両方の評価を読み込む場合は切り替えることクラウドおよびオンプレミスのレポート ctrl キーをクリックして、関連付けられているアイコン。
 
-スクリプトを実行するときに、次の情報を提供する必要があります。 
+## <a name="reports-visuals"></a>レポートのビジュアル
+次のセクションでは、Power BI レポートに表示される詳細に表示されます。
 
-- **serverName**: 評価をインポートする SQL Server インスタンス名が JSON ファイルから結果します。
+### <a name="readiness-"></a>準備の %
 
-- **databaseName**: 結果のインポートを取得するデータベース名。
+  ![DMA の準備完了の割合](../dma/media//dma-consolidatereports/dma-readiness-percentage.png)
 
-- **jsonDirectory**: 評価の結果が、1 つまたは複数の JSON ファイルに保存されているフォルダー。
+このビジュアルは選択コンテキストに基づく更新 (すべてのインスタンス、データベース [の倍数])。
 
-- **プロセス**: SQLServer
+### <a name="readiness-count"></a>準備状態の数
 
-「関数を実行する」セクションよう上記値を追加します。
+  ![DMA の準備完了数](../dma/media//dma-consolidatereports/dma-readiness-count.png)
 
-```
-dmaProcessor -serverName localhost \`\
--databaseName DMAReporting \`\
--jsonDirectory "C:\\temp\\DMACmd\\output\\" \`\
--processTo SQLServer
-```
+このビジュアルには、移行する準備ができていないデータベースの数を移行する準備ができているデータベースの数が表示されます。
 
-PowerShell スクリプトでは、オブジェクトがまだ存在しない場合に、指定した SQL インスタンスで、次のオブジェクトを作成します。
+### <a name="readiness-bucket"></a>バケットの準備
 
-- **データベース**– PowerShell パラメーターで指定された名前
+  ![DMA Readiness バケット](../dma/media//dma-consolidatereports/dma-readiness-bucket.png)
 
-  - メイン リポジトリ
+このビジュアルは、次の準備のバケットによってデータベースの内訳を示しています。
+- 100% の準備完了
+- 75 ~ 99% の準備完了
+- 50 ~ 75% の準備完了
+- 準備ができていません
 
-- **テーブル**– ・ レポートデータ ・
+### <a name="issues-word-cloud"></a>ワード クラウドの問題
+ 
+  ![DMA 問題 WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-  - レポートのデータ
+このビジュアルでの選択コンテキスト内で現在発生している問題を示しています (すべてのインスタンス、データベース [の倍数])。 大きいほど、単語が表示される、大きい画面で、そのカテゴリで問題の数。 単語にマウス ポインターを合わせると、そのカテゴリ内に発生した問題数が表示されます。
 
-- **テーブル**-BreakingChangeWeighting
+### <a name="database-readiness"></a>データベースの準備
 
-  - 参照テーブルのすべての重大な変更。 ここでより正確な割合 (%) アップグレードの成功のランクに影響する独自の重み付け値を定義できます。
+  ![DMA データベース準備レポート](../dma/media//dma-consolidatereports/dma-database-readiness-report.png)
 
-- **ビュー** – UpgradeSuccessRanking\_OnPrem
+このセクションでは、インスタンスのデータベースの準備状態を表示すると、レポートの主な部分です。 このレポートには、ドリル ダウン階層があります。
+- InstanceDatabase
+- ChangeCategory
+- [タイトル]
+- ObjectType
+- ImpactedObjectName
 
-  - オンプレミスに移行するのには、各データベースの成功の鍵を表示するビュー。
+ ![DMA データベース準備レポートのドリルダウン](../dma/media//dma-consolidatereports/dma-database-readiness-report-drilldown.png)
 
-- **ビュー** – UpgradeSuccessRanking\_Azure
+このレポートは、修復計画レポートを作成するためのフィルターの点としても機能します。
 
-  - オンプレミスに移行するのには、各データベースの成功の鍵を表示するビュー。
+修復計画レポートをドリルダウンして、このグラフのデータ ポイントを右クリックをポイントして**ドリルスルー**、し、**修復プラン**します。
 
-- **ストアド プロシージャ**– JSONResults\_挿入
+このタスクは、ドリルスルー オプションを選択した位置の点に基づく現在の階層レベルの修復計画レポートをフィルター処理します。
 
-  - SQL Server に JSON ファイルからデータをインポートするために使用します。
+  ![フィルター処理された DMA データベース準備レポートのドリルダウン](../dma/media//dma-consolidatereports/dma-database-readiness-report-drilldown-filtered.png)
 
-- **ストアド プロシージャ**– AzureFeatureParityResults\_挿入
+  ![DMA 修復計画レポート](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
-  - Azure の機能パリティの結果を JSON ファイルから SQL Server にインポートするために使用します。
+内のフィルターを使用して、カスタムの修復を構築するための独自のプランで修復プランのレポートを使用することもできます、**視覚エフェクト フィルター**ブレード。
+ 
+  ![レポートのフィルター オプションの DMA 修復の計画](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
-- **テーブル型**– JSONResults
-
-  - オンプレミスの評価のための JSON 結果を保持し、JSONResults に渡すために使用\_ストアド プロシージャの挿入
-
-- **テーブル型**– AzureFeatureParityResults
-
-  - Azure の機能に azure 評価の結果をパリティを保持して、AzureFeatureParityResults に渡すために使用\_ストアド プロシージャの挿入
-
-PowerShell スクリプトを作成、**処理**が処理される JSON ファイルを含む指定したディレクトリ内のディレクトリ。
-
-スクリプトが完了すると、結果は、テーブル、・ レポートデータ ・にインポートされます。
-
-### <a name="viewing-the-results-in-sql-server"></a>SQL Server で結果を表示します。
-
-データが読み込まれた後は、SQL Server インスタンスに接続します。 画面は、次の図に示すように表示されます。
-
-![SQL Server データベースに統合されたレポート](../dma/media/DMAReportingDatabase.png)
-
-Dbo します。・ レポートデータ ・ テーブルには、未加工の形式で JSON ファイルの内容が含まれています。
-
-## <a name="on-premises-upgrade-success-ranking"></a>オンプレミスでアップグレードの成功の順位付け
-
-データベースとその割合 (%) の成功の順位の一覧を表示するには、dbo を選択します。UpgradeSuccessRanking_OnPrem ビュー:
-
-![UpgradeSuccessRaning_OnPrem 内のデータを表示します。](../dma/media/UpgradeSuccessRankingView.png)
-
-ご覧のとおり、特定のデータベースを別の互換性レベルのアップグレードの成功の可能性とは何です。 そのため、たとえば、HR データベースは 100、110、120 と 130 の互換性レベルに対して評価されました。 この評価では、どの程度の労力は、データベースが現在実行している現在のバージョンからそれ以降のバージョンの SQL Server への移行に関係を視覚的に確認できます。
-
-通常、メトリックの関心のあるでは、特定のデータベースの数の重大な変更がありますが、です。 前の例では、HR データベースに 100、110、120 と 130 の互換性レベルの 50% のアップグレードの成功要因がわかります。
-
-このメトリックは、dbo で重み値を変更することで影響を受けることができます。BreakingChangeWeighting テーブルです。
-
-次の例では、HR データベース内の構文の問題の修正に必要な作業と見なされます高に値 3 が割り当てられるように**労力**します。 値 1 が割り当てられているため、構文の問題を解決するのに時間がかかるでしょう、 **FixTime**します。 値 2 が割り当てられているため、若干のコストを変更を行ったに関連するは、**コスト**します。 この値を使用してブレンドされた Changerank を 2 に変更します。
-
-> [!NOTE]
-> 1 ~ 5 の小数点以下桁数には、スコア付けします。  1 が低いと 5 が増加します。 また、ChangeRank は計算列です。
-
-![構文の問題の作業、FixTime、およびコストの値します。](../dma/media/SyntaxIssueEffort.png)
-
-Dbo を照会する際に、この例のようになりましたUpgradeSuccessRanking_OnPrem ビューでは、重大な変更の HR データベースのアップグレードの成功の鍵は削除します。
-
-![HR データベースのアップグレードの成功の鍵](../dma/media/UpgradeSuccessFactor_HR.png)
-
-## <a name="azure-upgrade-success-ranking"></a>Azure のアップグレードの成功の順位付け
-
-Azure SQL DB と順位成功に移行するデータベースの一覧を表示するには、dbo を選択します。UpgradeSuccessRanking_Azure を表示します。
-
-![UpgradeSuccessRanking_Azure 内のデータを表示します。](../dma/media/UpgradeSuccessRankingView_Azure.png)
-
-ここで関心がある MigrationBlocker 値。 100.00 では、Azure SQL Database v12 へのデータベースを移動するための 100% の成功のランクがあることを意味します。
-
-このビューとの違いがない現在移行ブロック規則に対する重み付けを変更するためにオーバーライドします。
-
-Power BI を使用してこのデータの報告方法の詳細については、次を参照してください。[レポートを power Bi との統合、評価](../dma/dma-powerbiassesreport.md)します。
+### <a name="script-disclaimer"></a>スクリプトの免責事項
+*この記事で説明するサンプル スクリプトは、Microsoft の標準サポート プログラムまたはサービスではサポートされていません。すべてのスクリプトは、いかなる保証も伴わず IS として提供されます。さらに、Microsoft は黙示の保証を含め、これらに限定の商品性または特定目的に対する適合性の保証も行いません暗黙的に指定します。すべての使用または性能のドキュメントとサンプル スクリプトによって生じるリスクなります。イベントなしで Microsoft、その作成者、またはそれ以外の場合、作成、生産、またはスクリプトの配信に関連するすべてのユーザー負いませんのいかなる損害を含め、制限の損失、業務利益、業務の中断の喪失、ビジネス情報、またはその他の金銭損失) Microsoft がこのような損害の可能性について知らされていた場合でも、サンプル スクリプトまたはドキュメントについては、使用すること、または使用から生じる。その他のサイト/リポジトリ/ブログでこれらのスクリプトを再構成する前に権限をシークします。*

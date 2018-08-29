@@ -1,5 +1,5 @@
 ---
-title: sys.spatial_indexes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.spatial_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,30 +21,30 @@ helpviewer_keywords:
 - sys.spatial_indexes catalog view
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39b12f5bfd0a3227120a9f38950e5265e8b262dd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3b3a8337b40a3d6a6ff397775301f3e2d7aa4103
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220283"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031307"
 ---
 # <a name="sysspatialindexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   空間インデックスの主インデックス情報を表します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|\<継承された列 >||列を継承[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)です。|  
+|\<列を継承 >||列を継承[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。|  
 |spatial_index_type|**tinyint**|空間インデックスの種類です。<br /><br /> 1 = 幾何学的空間インデックス<br /><br /> 2 = 地理的空間インデックス|  
 |spatial_index_type_desc|**nvarchar(60)**|空間インデックスの種類の説明です。<br /><br /> GEOMETRY = 幾何学的空間インデックス<br /><br /> GEOGRAPHY = 地理的空間インデックス|  
-|tessellation_scheme|**sysname**|テセレーション スキームの名前です。<br /><br /> GEOMETRY_GRID、GEOMETRY_AUTO_GRID、<br /><br /> GEOGRAPHY_GRID、GEOGRAPHY_AUTO_GRID<br /><br /> 注: テセレーション スキームの詳細についてを参照してください[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。|  
-|\<継承された列 >||列を継承[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)です。<br /><br /> 継承した列 has_filter と filter_definition は、空間インデックスに固有の列の後に表示されます。|  
+|tessellation_scheme|**sysname**|テセレーション スキームの名前です。<br /><br /> GEOMETRY_GRID、GEOMETRY_AUTO_GRID、<br /><br /> GEOGRAPHY_GRID、GEOGRAPHY_AUTO_GRID<br /><br /> 注: テセレーション スキームについては、参照してください[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)します。|  
+|\<列を継承 >||列を継承[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。<br /><br /> 継承した列 has_filter と filter_definition は、空間インデックスに固有の列の後に表示されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  

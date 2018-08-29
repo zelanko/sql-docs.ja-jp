@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_start_job (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_cdc_start_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_start_job
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d5d423c3bf0eea7488839928b9c11b9e266a16c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e744a907cf7991c0e913bc8a240a5743b91d8a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249771"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031550"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>引数  
  [  **@job_type=** ] **'***job_type***'** ]  
- 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** 、既定値は**キャプチャ**です。 有効な入力は**キャプチャ**と**クリーンアップ**です。  
+ 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** 、既定値は**キャプチャ**します。 有効な入力は**キャプチャ**と**クリーンアップ**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -55,16 +54,16 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  管理者は sys.sp_cdc_start_job を使用してキャプチャ ジョブまたはクリーンアップ ジョブのいずれかを明示的に開始できます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-starting-a-capture-job"></a>A. キャプチャ ジョブを開始する  
- 次の例では、`AdventureWorks2012` データベースのキャプチャ ジョブを開始します。 値を指定する*job_type*は、既定のジョブの種類があるために、不要**キャプチャ**です。  
+ 次の例では、`AdventureWorks2012` データベースのキャプチャ ジョブを開始します。 値を指定する*job_type*ため、既定のジョブの種類は必要ありません**キャプチャ**します。  
   
 ```  
 USE AdventureWorks2012;  

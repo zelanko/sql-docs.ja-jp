@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepublication (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropmergepublication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a360ce767a80dd9f77f35a22d92b65d3a52777c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8876bc0e1007d942bde42a9a5a2472b58f6fa1f5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990567"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030790"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>引数  
  [ **@publication=**] **'***publication***'**  
- 削除するパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。 場合**すべて**、それらに関連付けられたスナップショット エージェント ジョブおよびすべての既存のマージ パブリケーションが削除されます。 特定の値を指定する場合*パブリケーション*、そのパブリケーションのみと、関連付けられているスナップショット エージェント ジョブが削除されます。  
+ 削除するパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。 場合**すべて**、それらに関連付けられているスナップショット エージェント ジョブおよびすべての既存のマージ パブリケーションが削除されます。 特定の値を指定する場合*パブリケーション*、そのパブリケーションのみとその関連付けられているスナップショット エージェント ジョブが削除されます。  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
  ディストリビューター側でクリーンアップを行わずに、パブリケーションを削除する場合に使用します。 *ignore_distributor*は**ビット**、既定値は**0**します。 このパラメーターは、ディストリビューターを再インストールするときにも使用します。  
@@ -63,18 +63,18 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropmergepublication**はマージ レプリケーションで使用します。  
   
- **sp_dropmergepublication**再帰的には、パブリケーションに関連付けられているすべてのアーティクルを削除し、し、パブリケーションそのものを削除します。 1 つでもサブスクリプションがあると、パブリケーションを削除することはできません。 サブスクリプションを削除する方法については、次を参照してください。 [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)と[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)です。  
+ **sp_dropmergepublication**再帰的には、パブリケーションに関連付けられているすべてのアーティクルを削除し、後、パブリケーション自体が削除されます。 1 つでもサブスクリプションがあると、パブリケーションを削除することはできません。 サブスクリプションを削除する方法については、次を参照してください。 [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)と[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)します。  
   
- 実行する**sp_dropmergepublication**パブリケーションを削除するオブジェクトは削除されませんパブリッシュされたパブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクトからです。 ドロップを使用して\<オブジェクト > 必要な場合に、これらのオブジェクトを手動で削除します。  
+ 実行**sp_dropmergepublication**パブリケーションを削除するオブジェクトは削除されませんパブリッシュされたパブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 ドロップを使用して\<オブジェクト > に必要な場合は、これらのオブジェクトを手動で削除します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergepublication**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergepublication**します。  
   
 ## <a name="see-also"></a>参照  
  [パブリケーションを削除します](../../relational-databases/replication/publish/delete-a-publication.md)   

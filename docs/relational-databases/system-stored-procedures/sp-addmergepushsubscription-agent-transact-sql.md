@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepushsubscription_agent (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addmergepushsubscription_agent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0e9b278672b8358c3b8c7db42cc629d2207179c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60058b5f9779ee9fead3284641cce81ae3702dfb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993229"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032822"
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,19 +79,19 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は NULL です。  
   
  [  **@subscriber_security_mode =** ] *subscriber_security_mode*  
- サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int**、既定値は 1 です。 場合**0**、指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 場合**1**、Windows 認証を指定します。  
+ サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int**、既定値は 1 です。 場合**0**を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 場合**1**、Windows 認証を指定します。  
   
  [  **@subscriber_login =** ] **'***subscriber_login***'**  
- サブスクライバーへ接続して同期するときに使用するサブスクライバー ログインを指定します。 *subscriber_login*場合は必須*subscriber_security_mode*に設定されている**0**します。 *subscriber_login*は**sysname**、既定値は NULL です。  
+ サブスクライバーへ接続して同期するときに使用するサブスクライバー ログインを指定します。 *subscriber_login*場合は必須です*subscriber_security_mode*に設定されている**0**します。 *subscriber_login*は**sysname**、既定値は NULL です。  
   
- [  **@subscriber_password =** ] **'***subscriber_password***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で使用するサブスクライバーのパスワードを指定します。 *subscriber_password*場合は必須*subscriber_security_mode*に設定されている**0**します。 *subscriber_password*は**sysname**、既定値は NULL です。 サブスクライバー パスワードを使用する場合、サブスクライバー パスワードは自動的に暗号化されます。  
+ [  **@subscriber_password =** ] **'***@subscriber_password***'**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で使用するサブスクライバーのパスワードを指定します。 *@subscriber_password*場合は必須です*subscriber_security_mode*に設定されている**0**します。 *@subscriber_password*は**sysname**、既定値は NULL です。 サブスクライバー パスワードを使用する場合、サブスクライバー パスワードは自動的に暗号化されます。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
- パブリッシャーへ接続して同期するときに使用するセキュリティ モードを指定します。 *publisher_security_mode*は**int**、既定値は 1 です。 場合**0**、指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 場合**1**、Windows 認証を指定します。  
+ パブリッシャーへ接続して同期するときに使用するセキュリティ モードを指定します。 *publisher_security_mode*は**int**、既定値は 1 です。 場合**0**を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 場合**1**、Windows 認証を指定します。  
   
  [  **@publisher_login =** ] **'***publisher_login***'**  
  パブリッシャーへ接続して同期するときに使用するログインを指定します。 *publisher_login*は**sysname**、既定値は NULL です。  
@@ -113,7 +112,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
  [ **@job_name =** ] **'***job_name***'**  
- 既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成されたジョブ (既定) の代わりに既存のジョブを使用してサブスクリプションを同期するときにのみ指定されます。 メンバーではない場合、 **sysadmin**固定サーバー ロールを指定してください*job_login*と*job_password*を指定すると*job_name*.  
+ 既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成されたジョブ (既定) の代わりに既存のジョブを使用してサブスクリプションを同期するときにのみ指定されます。 メンバーになっていない場合、 **sysadmin**するを指定する必要があります固定サーバー ロール、 *job_login*と*job_password*を指定すると*job_name*.  
   
  [  **@frequency_type =** ] *frequency_type*  
  マージ エージェントをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**値は次のいずれかを指定できます。  
@@ -131,7 +130,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |NULL (既定値)||  
   
 > [!NOTE]  
->  値を指定する**64**により、マージ エージェントを連続モードで実行します。 これは、設定に対応しています、 **-連続**エージェントのパラメーターです。 詳細については、「 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  
+>  値を指定する**64**により、マージ エージェントを連続モードで実行します。 これは設定に対応、 **-継続的な**エージェントのパラメーター。 詳細については、「 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  マージ エージェントを実行する曜日を指定します。 *frequency_interval*は**int**値は次のいずれかを指定できます。  
@@ -163,7 +162,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |NULL (既定値)||  
   
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- によって使用される定期実行係数*frequency_type*です。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
+ 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
   
  [  **@frequency_subday =** ] *frequency_subday*  
  定義した期間にスケジュールを組み直す頻度を指定します。 *frequency_subday*は**int**値は次のいずれかを指定できます。  
@@ -177,7 +176,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |NULL (既定値)||  
   
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*です。 *frequency_subday_interval*は**int**、既定値は NULL です。  
+ 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
  マージ エージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は NULL です。  
@@ -192,23 +191,23 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  マージ エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は NULL です。  
   
  [  **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
- Windows 同期マネージャーを介したサブスクリプションの同期が可能かどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションは同期マネージャーに登録されていません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+ Windows 同期マネージャーを介したサブスクリプションの同期が可能かどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_addmergepushsubscription_agent**はマージ レプリケーションで使用されと同様の機能を使用して[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)です。  
+## <a name="remarks"></a>コメント  
+ **sp_addmergepushsubscription_agent**はマージ レプリケーションで使用してと同様の機能を使用して[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepushsubscript_1.sql)]  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addmergepushsubscription_agent**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addmergepushsubscription_agent**します。  
   
 ## <a name="see-also"></a>参照  
- [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   

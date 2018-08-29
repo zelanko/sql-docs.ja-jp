@@ -1,5 +1,5 @@
 ---
-title: sp_create_plan_guide_from_handle (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_create_plan_guide_from_handle (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c57ad0976f2079fb1f5129b1cea59817157af01a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 78d466a6860eb145c409f32735c812f17a051e44
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032972"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,29 +47,29 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
 ## <a name="arguments"></a>引数  
  [ @name =] N'*plan_guide_name*'  
- プラン ガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name* 、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)番号記号で始めることもできません (#)。 最大長*plan_guide_name* 124 文字です。  
+ プラン ガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name*の規則に従っている必要があります[識別子](../../relational-databases/databases/database-identifiers.md)番号記号で始めることはできません (#)。 最大長*plan_guide_name*は 124 文字です。  
   
  [ @plan_handle =] *plan_handle*  
- プラン キャッシュのバッチを識別します。 *plan_handle*は**varbinary (64)** です。 *plan_handle*から取得できます、 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動的管理ビュー。  
+ プラン キャッシュのバッチを識別します。 *plan_handle*は**varbinary (64)** します。 *plan_handle*から取得できます、 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動的管理ビュー。  
   
  [ @statement_start_offset =] { *statement_start_offset* |NULL}]  
- 指定したバッチ内のステートメントの開始位置を識別*plan_handle*です。 *statement_start_offset*は**int**、既定値は NULL です。  
+ 指定したバッチ内のステートメントの開始位置を識別する*plan_handle*します。 *statement_start_offset*は**int**、既定値は NULL です。  
   
- 内の statement_start_offset 列に対応しています、ステートメント オフセット、 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動的管理ビュー。  
+ ステートメント オフセットは statement_start_offset 列に対応する、 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動的管理ビュー。  
   
  NULL を指定した場合や、ステートメント オフセットを指定しない場合は、指定したプラン ハンドルのクエリ プランを使用してバッチ内の各ステートメントに対してプラン ガイドが作成されます。 結果のプラン ガイドは、USE PLAN クエリ ヒントを使用して特定のプランを強制的に使用させるプラン ガイドと同等になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  すべての種類のステートメントに対してプラン ガイドを作成できるわけではありません。 プラン ガイドを作成できないステートメントがバッチ内にあった場合、そのステートメントは無視されて、バッチ内の次のステートメントが処理されます。 同じバッチ内に複数回出現するステートメントがあった場合は、最後に出現した箇所のプランが有効になり、それより前のプランは無効になります。 プラン ガイドで使用できるステートメントがバッチ内になかった場合は、エラー 10532 が発生してステートメントが失敗します。 このエラーを回避するため、常に sys.dm_exec_query_stats 動的管理ビューからプラン ハンドルを取得することをお勧めします。  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle では、プラン キャッシュに含まれているとおりのプランに基づいてプラン ガイドが作成されます。 したがって、バッチ テキスト、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、および XML プラン表示が、プラン キャッシュから結果のプラン ガイドに文字単位で (クエリに渡されたリテラル値も含め) 取り込まれます。 これらのテキスト文字列に機密情報が含まれていた場合、それらはデータベースのメタデータに格納されます。 適切なアクセス許可を持つユーザーは、sys.plan_guides カタログ ビューを使用して、この情報を表示することができます、**プラン ガイド プロパティ** ダイアログ ボックスで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。 プラン ガイドから機密情報が漏洩しないように、プラン キャッシュから作成されたプラン ガイドを確認することをお勧めします。  
+>  sp_create_plan_guide_from_handle では、プラン キャッシュに含まれているとおりのプランに基づいてプラン ガイドが作成されます。 したがって、バッチ テキスト、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、および XML プラン表示が、プラン キャッシュから結果のプラン ガイドに文字単位で (クエリに渡されたリテラル値も含め) 取り込まれます。 これらのテキスト文字列に機密情報が含まれていた場合、それらはデータベースのメタデータに格納されます。 適切なアクセス許可を持つユーザーは、sys.plan_guides カタログ ビューを使用してこの情報を表示することができます、**プラン ガイド プロパティ** ダイアログ ボックスで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 プラン ガイドから機密情報が漏洩しないように、プラン キャッシュから作成されたプラン ガイドを確認することをお勧めします。  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>クエリ プラン内の複数のステートメントに対するプラン ガイドの作成  
  sp_create_plan_guide_from_handle では、sp_create_plan_guide と同様に、対象となるバッチやモジュールのクエリ プランがプラン キャッシュから削除されます。 これは、新しいプラン ガイドがすべてのユーザーによって使用されるようにするための措置です。 1 つのクエリ プラン内の複数のステートメントに対してプラン ガイドを作成する場合は、すべてのプラン ガイドを明示的なトランザクションの中で作成することによって、キャッシュからプランが削除されるのを遅らせることができます。 これにより、そのトランザクションが完了して、指定した各ステートメントのプラン ガイドが作成されるまで、プランがキャッシュに保持されます。 例 B を参照してください。  
   
-## <a name="permissions"></a>権限  
- VIEW SERVER STATE 権限が必要です。 その他、sp_create_plan_guide_from_handle を使用して作成するプラン ガイドごとに必要な個々の権限があります。 型のプラン ガイドを作成するのには、オブジェクトには、参照先オブジェクトに対する ALTER 権限が必要です。 SQL または TEMPLATE 型のプラン ガイドを作成するには、現在のデータベースに対する ALTER 権限が必要です。 作成されるプラン ガイドの型を特定するには、次のクエリを実行します。  
+## <a name="permissions"></a>アクセス許可  
+ VIEW SERVER STATE 権限が必要です。 その他、sp_create_plan_guide_from_handle を使用して作成するプラン ガイドごとに必要な個々の権限があります。 型のプラン ガイドを作成するには、オブジェクトには、参照先オブジェクトに対する ALTER 権限が必要です。 SQL または TEMPLATE 型のプラン ガイドを作成するには、現在のデータベースに対する ALTER 権限が必要です。 作成されるプラン ガイドの型を特定するには、次のクエリを実行します。  
   
 ```  
 SELECT cp.plan_handle, sql_handle, st.text, objtype   
@@ -77,7 +78,7 @@ JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle
 CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;  
 ```  
   
- プラン ガイドを作成するステートメントを含む行を調べて、`objtype`結果セット内の列です。 値`Proc`プラン ガイドは OBJECT 型を示します。 その他の値など`AdHoc`または`Prepared`SQL 型のプラン ガイドを指定します。  
+ プラン ガイドを作成するステートメントを含む行を調べて、`objtype`結果セット内の列。 値`Proc`プラン ガイドは OBJECT 型を示します。 その他の値など`AdHoc`または`Prepared`SQL 型のプラン ガイドを示します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -120,7 +121,7 @@ GO
 ```  
   
 ### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>B. 複数のステートメントで構成されるバッチに対して複数のプラン ガイドを作成する  
- 次の例では、複数のステートメントで構成されるバッチ内の 2 つのステートメントに対してプラン ガイドを作成します。 最初のプラン ガイドの作成後にバッチのクエリ プランがプラン キャッシュから削除されないように、明示的なトランザクションの中でプラン ガイドを作成します。 まず、複数のステートメントで構成されるバッチを実行します。 次に、動的管理ビューを使用してバッチのプランを調べます。 バッチ内の各ステートメントに対して行が返されていることに注目してください。 指定して、バッチ内の最初と 3 番目のステートメントに対してプラン ガイドが作成し、`@statement_start_offset`パラメーター。 最後のステートメントの例では、プラン ガイドが存在することを確認します。  
+ 次の例では、複数のステートメントで構成されるバッチ内の 2 つのステートメントに対してプラン ガイドを作成します。 最初のプラン ガイドの作成後にバッチのクエリ プランがプラン キャッシュから削除されないように、明示的なトランザクションの中でプラン ガイドを作成します。 まず、複数のステートメントで構成されるバッチを実行します。 次に、動的管理ビューを使用してバッチのプランを調べます。 バッチ内の各ステートメントに対して行が返されていることに注目してください。 指定して、バッチ内の最初と 3 番目のステートメントのプラン ガイドが作成し、`@statement_start_offset`パラメーター。 最後のステートメントの例では、プラン ガイドが存在することを確認します。  
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
   

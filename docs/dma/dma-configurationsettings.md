@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server) の設定の構成 |Microsoft Docs
 description: 構成ファイル内の値を更新することで、Data Migration Assistant の設定を構成する方法について説明します
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: a8ab80d5e83ef5f7650f87f8c4618466eb3dee74
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 79d32d9d1ceb60e3cb3433bd5d9d5a06c9976403
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783993"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152803"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant の設定を構成します。
 
@@ -146,6 +146,6 @@ Data Migration Assistant の v2.0 以降、recommendedNumberOfRows 構成値を�
 ```
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [データ移行アシスタントをダウンロード](https://www.microsoft.com/download/details.aspx?id=53595)

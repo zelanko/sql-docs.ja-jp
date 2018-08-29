@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_describe_first_result_set (Transact SQL) |マイクロソフトのドキュメント
+title: sys.dm_exec_describe_first_result_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4e949abb2dc970235e03ac5389b7910c038da5d8
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aa8fb54a40b6530ec22ce1d91040c42a2ed32fa4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542011"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102806"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   この動的管理関数には、[!INCLUDE[tsql](../../includes/tsql-md.md)]をパラメーターとしてステートメントと最初の結果、ステートメントのセットのメタデータについて説明します。  
   
- **sys.dm_exec_describe_first_result_set**は、同じ結果セットの定義として[sys.dm_exec_describe_first_result_set_for_object &#40;Transact SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)のような[sp _describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+ **sys.dm_exec_describe_first_result_set**が、同じ結果セットの定義[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)と似ています[sp _describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)します。  
   
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,12 +48,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>引数  
  *\@tsql*  
- 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*可能性があります**nvarchar (***n***)** または**nvarchar(max)**。  
+ 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
   
  *\@params*  
- \@パラメーターのパラメーター宣言文字列を提供する、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、sp_executesql に似ています。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
+ \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
   
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 Stmt に指定する各パラメーターを定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない\@params は必要ありません。 NULL は、このパラメーターの既定値です。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 Stmt に指定する各パラメーターを定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない\@params は必要ありません。 NULL は、このパラメーターの既定値です。  
   
  *\@include_browse_information*  
  1 に設定すると、各クエリは FOR BROWSE オプションが指定されているように分析されます。 追加のキー列とソース テーブル情報が返されます。  
@@ -67,9 +67,9 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**column_ordinal**|**int**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は 1 として指定されます。|  
 |**name**|**sysname**|列の名前を確認できる場合は、その名前を格納します。 確認できない場合は、NULL が格納されます。|  
 |**is_nullable**|**bit**|次の値を格納します。<br /><br /> 列が NULL を許容する場合は 1。<br /><br /> 列 が NULL を許容しない場合は 0。<br /><br /> 列が NULL を許容することを確認できない場合は 1。|  
-|**system_type_id**|**int**|Sys.types で指定されている列のデータ型の system_type_id が含まれています。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
+|**system_type_id**|**int**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar (256)**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。<br /><br /> データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。<br /><br /> データ型が CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
-|**max_length**|**smallint**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**します。<br /><br /> **テキスト**列、 **max_length**の値は 16 かによって設定された値になります**sp_tableoption 'text in row'**。|  
+|**max_length**|**smallint**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**します。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'** します。|  
 |**有効桁数**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合 0 を返します。|  
 |**scale**|**tinyint**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合 0 を返します。|  
 |**collation_name**|**sysname**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合、NULL を返します。|  
@@ -97,7 +97,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_sparse_column_set**|**bit**|この列がスパース列の場合は 1、それ以外の場合は 0 を返します。 スパース列セットの一部であることを確認できない場合は NULL を返します。|  
 |**ordinal_in_order_by_list**|**smallint**|このコラムの ihe 位置は、ORDER BY リスト内です。 列が ORDER BY リストに表示されない場合、または ORDER BY リストを一意に特定できない場合は、NULL を返します。|  
 |**order_by_list_length**|**smallint**|ORDER BY リストの長さ。 ORDER BY リストが存在しない場合、または ORDER BY リストを一意に特定できない場合は、NULL が返されます。 この値は、sp_describe_first_result_set によって返されるすべての行に対して同じであることに注意してください。|  
-|**order_by_is_descending**|**smallint NULL**|Ordinal_in_order_by_list が NULL でない場合、 **order_by_is_descending**列は、この列に ORDER BY 句の方向を報告します。 それ以外の場合は、NULL が報告されます。|  
+|**order_by_is_descending**|**smallint NULL**|Ordinal_in_order_by_list が NULL でない場合、 **order_by_is_descending**列は、この列の ORDER BY 句の方向を報告します。 それ以外の場合は、NULL が報告されます。|  
 |**error_number**|**int**|関数によって返されるエラー番号が格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
 |**error_severity**|**int**|関数によって返される重大度が格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
 |**error_state**|**int**|関数によって返される 状態メッセージが格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
@@ -106,7 +106,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
 ## <a name="remarks"></a>コメント  
- この関数は、同じアルゴリズムを使用して**sp_describe_first_result_set**。 詳細については、次を参照してください。 [sp_describe_first_result_set & #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+ この関数と同じアルゴリズムを使用して**sp_describe_first_result_set**します。 詳細については、次を参照してください。 [sp_describe_first_result_set & #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  次の表に、エラーの種類とその説明を示します。  
   
@@ -121,16 +121,16 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |7|EXTENDED_PROCEDURE|拡張ストアド プロシージャが最初の結果を返す可能性があるため、結果を特定できませんでした。|  
 |8|UNDECLARED_PARAMETER|1 つまたは複数の結果セットの列のデータ型が、宣言されていないパラメーターに依存している可能性があるため、結果を特定できませんでした。|  
 |9|RECURSION|バッチに再帰的なステートメントが含まれているため、結果を特定できませんでした。|  
-|10|TEMPORARY_TABLE|バッチが一時テーブルが含まれていてでサポートされていないために、結果を特定できませんでした**sp_describe_first_result_set** 。|  
-|11|UNSUPPORTED_STATEMENT|によってサポートされていないステートメントがバッチに含まれているために、結果を特定できませんでした**sp_describe_first_result_set** (例えば、フェッチ、元に戻すなど。)。|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|\@関数に渡される object_id ではありません (つまりストアド プロシージャではなく) をサポート|  
-|13|OBJECT_DOES_NOT_EXIST|\@Object_id が関数に渡されるは、システム カタログにありませんでした。|  
+|10|TEMPORARY_TABLE|バッチの一時テーブルが含まれていますでサポートされていないために、結果を判別できませんでした**sp_describe_first_result_set**します。|  
+|11|UNSUPPORTED_STATEMENT|サポートされていないステートメントがバッチに含まれているために、結果を判別できませんでした**sp_describe_first_result_set** (FETCH、REVERT など。)。|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@Object_id 関数に渡されるでない (つまりストアド プロシージャは) のサポート|  
+|13|OBJECT_DOES_NOT_EXIST|\@関数に渡される object_id がシステム カタログに見つかりませんでした。|  
   
 ## <a name="permissions"></a>アクセス許可  
  実行する権限が必要です、 \@tsql 引数。  
   
 ## <a name="examples"></a>使用例  
- トピック内の他の例[sp_describe_first_result_set &#40;Transact SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)を使用するように変えることができます**sys.dm_exec_describe_first_result_set**。  
+ その他の例のトピックで[sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)を使用することできます**sys.dm_exec_describe_first_result_set**します。  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 単一の Transact-SQL ステートメントに関する情報を返す  
  次のコードは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果に関する情報を返します。  
@@ -143,7 +143,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 ```  
   
 ### <a name="b-returning-information-about-a-procedure"></a>B. プロシージャに関する情報を返す  
- 次の例では、次の 2 つの結果セットを返す pr_TestProc をという名前のストアド プロシージャを作成します。 例を示しますが、 **sys.dm_exec_describe_first_result_set**の手順で設定する最初の結果に関する情報を返します。  
+ 次の例では、次の 2 つの結果セットを返す pr_TestProc をという名前のストアド プロシージャを作成します。 例を示しますが、 **sys.dm_exec_describe_first_result_set**セットの手順で最初の結果に関する情報を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -174,8 +174,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

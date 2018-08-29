@@ -1,8 +1,8 @@
 ---
-title: Linux での SQL Server カスタマー フィードバック |Microsoft ドキュメント
-description: SQL Server カスタマー フィードバックの収集方法と Linux のように構成する方法について説明します。
-author: annashres
-ms.author: anshrest
+title: SQL Server on Linux のお客様からのフィードバック |Microsoft Docs
+description: SQL Server カスタマー フィードバックの収集方法と Linux で構成する方法について説明します。
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 06/22/2018
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
-ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
+ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329507"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072181"
 ---
-# <a name="customer-feedback-for-sql-server-on-linux"></a>Linux での SQL Server カスタマー フィードバック
+# <a name="customer-feedback-for-sql-server-on-linux"></a>SQL Server on Linux のお客様からのフィードバック
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Microsoft SQL Server は既定で、お客様のアプリケーションの使用状態に関する情報を収集します。 具体的には、SQL Server はインストール エクスペリエンス、利用状況、およびパフォーマンスに関する情報を収集します。 この情報は、Microsoft が製品の向上を図り、お客様のニーズをさらに満たすのに役立ちます。 たとえば Microsoft では、お客様が受け取るエラー コードの種類に関する情報を収集して、関連するバグの修正、SQL Server の使用方法に関するドキュメントの改善、より良いサービスのために製品に機能を追加すべきかどうかの判断を行います。
 
-このドキュメントではどのような種類の情報が収集および送信を収集する Linux の Microsoft SQL Server を構成する方法に関する詳細情報がマイクロソフトにします。 SQL Server 2017 には、お行い、ユーザーから収集することはありませんは、どのような情報を説明するプライバシーに関する声明が含まれています。 詳細については、次を参照してください。、[のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)です。
+このドキュメントではどのような種類の情報を収集および送信を収集する Linux 上の Microsoft SQL Server を構成する方法についての詳細情報を Microsoft にします。 SQL Server 2017 には、ユーザーから収集することはできませんし、どのような情報を説明するプライバシーに関する声明が含まれています。 詳細については、次を参照してください。、[プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)します。
 
 具体的には、Microsoft はこのメカニズムでは次の種類の情報は送信しません。
 
@@ -31,21 +31,21 @@ Microsoft SQL Server は既定で、お客様のアプリケーションの使�
 - すべてのログオン資格情報またはその他の認証情報
 - 個人を特定できる情報 (PII)
 
-SQL Server 2017 は、インストール エクスペリエンスに関する情報をセットアップ時点から常に収集および送信して、お客様側で発生しているインストールの問題をすばやく発見し修正できるようにします。 SQL Server 2017 されません (サーバー インスタンスごと) に関する情報を Microsoft に送信を構成できます**mssql conf**です。 mssql conf は、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu Server 2017 年 SQL と共にインストールされる構成スクリプトを示します。
+SQL Server 2017 は、インストール エクスペリエンスに関する情報をセットアップ時点から常に収集および送信して、お客様側で発生しているインストールの問題をすばやく発見し修正できるようにします。 SQL Server 2017 にを介して Microsoft に (サーバーのインスタンスごと) に関する情報を送信しないように構成できます**mssql conf**します。 mssql conf は、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu 用 SQL Server 2017 をインストールする構成スクリプトです。
 
 > [!NOTE]
 > Microsoft への情報送信を無効にできるのは、有料版の SQL Server のみです。
 
-## <a name="disable-customer-feedback"></a>お客様のフィードバックを無効にします。
+## <a name="disable-customer-feedback"></a>お客様からのフィードバックを無効にします。
 
-このオプションを使用して、か、SQL Server が Microsoft にフィードバックを送信する場合に変更できます。 既定では、この設定は true に設定します。 値を変更するには、次のコマンドを実行します。
+このオプションを使用して、SQL Server は、かどうかを Microsoft にフィードバックを送信する場合に変更できます。 既定では、この値を設定を true にします。 値を変更するには、次のコマンドを実行します。
 
 > [!IMPORTANT]
-> できますされませんオフにするお客様のフィードバックを無料の SQL Server、Express、および Developer エディション。
+> いないオフにできますお客様からのフィードバックを無料の SQL Server、Express、および Developer エディション。
 
-### <a name="on-red-hat-suse-and-ubuntu"></a>Red Hat、SUSE、Ubuntu で
+### <a name="on-red-hat-suse-and-ubuntu"></a>Red Hat、SUSE、Ubuntu 上
 
-1. ルートととして mssql conf スクリプトを実行、**設定**コマンドを**telemetry.customerfeedback**です。 指定して、次の例がお客様のフィードバックをオフに**false**です。
+1. Mssql conf スクリプトをルートとして実行、**設定**コマンドを**telemetry.customerfeedback**します。 指定することで、次の例がお客様からのフィードバックをオフに**false**します。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -58,9 +58,9 @@ SQL Server 2017 は、インストール エクスペリエンスに関する情
    ```
    
 ### <a name="on-docker"></a>Docker で
-Docker でお客様のフィードバックを無効にする必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 
+Docker では、お客様のフィードバックを無効にするするには Docker が必要[のデータを保存](sql-server-linux-configure-docker.md)します。 
 
-1. 追加、`mssql.conf`の行を含むファイル`[telemetry]`と`customerfeedback = false`ホスト ディレクトリ。
+1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`customerfeedback = false`ホスト ディレクトリ。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -78,30 +78,30 @@ Docker でお客様のフィードバックを無効にする必要がありま�
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
    ```
    
-## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>ローカルの監査 for SQL Server on Linux の使用状況のフィードバックの収集
+## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>SQL Server on Linux Usage Feedback Collection の local Audit
 
-Microsoft SQL Server 2017 には収集し、コンピューターやデバイス (以下「標準的なコンピューター情報」) に関する情報をマイクロソフトに送信するインターネット対応機能にはが含まれています。 SQL Server の使用状況に関するフィードバックのコレクションのローカルの監査コンポーネントは、Microsoft に送信されるデータ (ログ) を表す、指定したフォルダに、サービスによって収集されたデータを記述できます。 Local Audit の目的は、Microsoft がこの機能で収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。
+Microsoft SQL Server 2017 を収集し、コンピューターやデバイス (以下「標準的なコンピューター情報」) に関する情報を Microsoft に送信するインターネット対応機能にはが含まれています。 SQL Server Usage Feedback collection の Local Audit コンポーネントは、Microsoft に送信されるデータ (ログ) を表す、指定されたフォルダーに、サービスによって収集されたデータを記述できます。 Local Audit の目的は、Microsoft がこの機能で収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。
 
-Linux 上の SQL server ではローカルの監査は SQL Server データベース エンジンのインスタンス レベルで構成できます。 他の SQL Server コンポーネントおよび SQL Server ツールには、使用状況のフィードバックの収集のローカルの監査機能はありません。
+Linux 上の SQL server では Local Audit は SQL Server データベース エンジンのインスタンス レベルで構成できます。 他の SQL Server コンポーネントおよび SQL Server ツールには、usage feedback collection の Local Audit 機能はありません。
 
-### <a name="enable-local-audit"></a>ローカルの監査を有効にします。
+### <a name="enable-local-audit"></a>Local Audit を有効にします。
 
-このオプションは、ローカルの監査を有効にし、ローカルの監査ログが作成される場所にディレクトリを設定することができます。
+このオプション Local Audit を有効にし、ローカルの監査ログが作成されるディレクトリを設定することができます。
 
-1. 新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例は、新しい作成**tmp/監査**ディレクトリ。
+1. 新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例では、作成、新しい**tmp/監査**ディレクトリ。
 
    ```bash
    sudo mkdir /tmp/audit
    ```
 
-1. 所有者とするディレクトリのグループを変更、 **mssql**ユーザー。
+1. 所有者とグループをディレクトリの変更、 **mssql**ユーザー。
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. ルートととして mssql conf スクリプトを実行、**設定**コマンドを**telemetry.userrequestedlocalauditdirectory**:
+1. Mssql conf スクリプトをルートとして実行、**設定**コマンドを**telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
@@ -114,16 +114,16 @@ Linux 上の SQL server ではローカルの監査は SQL Server データベ�
    ```
    
 ### <a name="on-docker"></a>Docker で
-で docker をローカルの監査を有効にする必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 
+Docker で Local Audit を有効にするには Docker が必要[のデータを保存](sql-server-linux-configure-docker.md)します。 
 
-1. 新しいローカルの監査ログのターゲット ディレクトリをコンテナーになります。 コンピューターにホスト ディレクトリ内には、新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例は、新しい作成**監査/** ディレクトリ。
+1. 新しいローカルの監査ログのターゲット ディレクトリは、コンテナーになります。 コンピューターにホスト ディレクトリに新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例では、作成、新しい **/監査**ディレクトリ。
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
    
-1. 追加、`mssql.conf`の行を含むファイル`[telemetry]`と`userrequestedlocalauditdirectory = <host directory>/audit`ホスト ディレクトリ。
+1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`userrequestedlocalauditdirectory = <host directory>/audit`ホスト ディレクトリ。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -141,6 +141,6 @@ Linux 上の SQL server ではローカルの監査は SQL Server データベ�
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
    ```
    
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。、 [Linux に SQL Server の概要](sql-server-linux-overview.md)です。
+Linux 上の SQL Server に関する詳細については、次を参照してください。、 [Linux に SQL Server の概要](sql-server-linux-overview.md)します。

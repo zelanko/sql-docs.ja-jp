@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_primary_database (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_change_log_shipping_primary_database (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fd020ff499dfb230478434e70cee94edb45ba92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b064cf2e2005a495f077682404fb7569f683d245
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238782"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033465"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
  監視サーバーへの接続に使用されるセキュリティ モード。  
   
- 1 = Windows 認証です。  
+ 1 = Windows 認証。  
   
  0 = SQL Server 認証。  
   
@@ -83,13 +82,13 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  監視サーバーへのアクセスに使用するアカウントのパスワードを指定します。  
   
  [  **@backup_threshold =** ] '*backup_threshold*'  
- 前に最後のバックアップ後の分単位の時間の長さ、 *threshold_alert*エラーが発生します。 *backup_threshold*は**int**で、既定値は 60 分です。  
+ 前に前回のバックアップ後の分の時間の長さ、 *threshold_alert*エラーが発生します。 *backup_threshold*は**int**、既定値は 60 分です。  
   
  [  **@threshold_alert =** ] '*threshold_alert*'  
  バックアップのしきい値を超えたときに発生する警告。 *threshold_alert*は**int** NULL にすることはできません。  
   
  [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- アラートが発生するかどうかを指定と*backup_threshold*を超過します。  
+ アラートが発生したかどうかを指定します。 ときに*backup_threshold*を超過します。  
   
  1 = 有効。  
   
@@ -97,17 +96,17 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled*は**ビット**NULL にすることはできません。  
   
- [  **@history_retention_period =** ] '*ヒストリは削除*'  
- 分の履歴を保持する時間の長さです。 *ヒストリは削除*は**int**です。何も指定しない場合は、値 14420 が使用されます。  
+ [  **@history_retention_period =** ] '*history_retention_period*'  
+ 履歴を保持する分単位の時間の長さです。 *history_retention_period*は**int**します。何も指定しない場合は、値 14420 が使用されます。  
   
  [ **@backup_compression**=] *backup_compression_option*  
- ログ配布構成を使用するかどうかを示す[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)です。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
+ ログ配布構成を使用するかどうかを指定[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)します。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
   
  0 = 無効。 ログ バックアップは圧縮されません。  
   
  1 = 有効にします。 ログ バックアップを常に圧縮します。  
   
- 2 = の設定を使用して、[表示または backup compression default サーバー構成オプションを構成する](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)です。 これが既定値です。  
+ 2 = の設定を使用して、 [backup compression default サーバー構成オプションの構成を表示または](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)します。 これが既定値です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -115,20 +114,20 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- **sp_change_log_shipping_primary_database**から実行する必要があります、**マスター**プライマリ サーバー上のデータベースです。 このストアド プロシージャでは次の処理が行われます。  
+## <a name="remarks"></a>コメント  
+ **sp_change_log_shipping_primary_database**から実行する必要があります、**マスター**プライマリ サーバー上のデータベース。 このストアド プロシージャでは次の処理が行われます。  
   
-1.  設定を変更、 **log_shipping_primary_database**必要な場合は、記録します。  
+1.  設定を変更、 **log_shipping_primary_database**に応じてを記録します。  
   
-2.  ローカルのレコードを変更**log_shipping_monitor_primary**プライマリ サーバーを使用して、指定された引数に必要な場合です。  
+2.  ローカル レコードを変更**log_shipping_monitor_primary**プライマリ サーバーを使用して、指定された引数に必要な場合。  
   
-3.  監視サーバーがプライマリ サーバーから異なる場合に変更を記録**log_shipping_monitor_primary**モニターでサーバーを使用して、指定された引数に必要な場合です。  
+3.  変更を記録、監視サーバーがプライマリ サーバーと異なる場合は、 **log_shipping_monitor_primary**モニターでサーバーを使用して、指定された引数に必要な場合。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
   
 ## <a name="examples"></a>使用例  
- この例で使用する**sp_change_log_shipping_primary_database** 、プライマリ データベースに関連付けられている設定を更新する[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]です。  
+ この例の使用を示します**sp_change_log_shipping_primary_database**プライマリ データベースに関連付けられた設定を更新する[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]します。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -145,7 +144,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>参照  
- [ログ配布 & #40; についてSQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policies (TRANSACT-SQL) |Microsoft ドキュメント
+title: syspolicy_policies (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,26 +18,25 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policies view
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
-caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c05a24d94ba5b65eff8c3aec2791c9993b99589
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5eb4c6d9586b2e7b6e946b461e9d6c200042223c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221503"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031253"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのポリシー ベースの管理ポリシーごとに 1 つの行を表示します。 syspolicy_policies は、msdb データベースの dbo スキーマに属します。 次の表では、syspolicy_policies ビューの列について説明します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|ポリシーの識別子。|  
-|name|**sysname**|ポリシーの名前。|  
+|NAME|**sysname**|ポリシーの名前。|  
 |condition_id|**int**|このポリシーによって適用またはテストされる条件の ID。|  
 |root_condition_id|**int**|内部使用のみです。|  
 |date_created|**datetime**|ポリシーが作成された日時。|  
@@ -54,14 +53,14 @@ ms.locfileid: "33221503"
 |modified_by|**sysname**|ポリシーを最後に変更したログイン。 変更されていない場合は NULL です。|  
 |date_modified|**datetime**|ポリシーが作成された日時。 変更されていない場合は NULL です。|  
   
-## <a name="remarks"></a>解説  
- ポリシー ベースの管理のトラブルシューティングを行うときは、クエリ、 [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)ビューによってポリシーが有効になっているかどうかを決定します。 このビューには、ポリシーを作成したユーザーや最後に変更したユーザーも表示されます。  
+## <a name="remarks"></a>コメント  
+ ポリシー ベースの管理のトラブルシューティングを行う場合は、クエリ、 [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)ポリシーが有効になっているかどうかを判断するビュー。 このビューには、ポリシーを作成したユーザーや最後に変更したユーザーも表示されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用して、サーバーを管理します。](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

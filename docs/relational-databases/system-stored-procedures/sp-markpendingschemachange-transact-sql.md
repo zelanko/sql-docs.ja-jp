@@ -1,5 +1,5 @@
 ---
-title: sp_markpendingschemachange (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_markpendingschemachange (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3bfd0bb51e6d269b84fdb57a5a64139ce23cedc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08d059d2a2a01ba7f0c4fe86fee0673adb0041ef
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994819"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032345"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,21 +52,21 @@ sp_markpendingschemachange [@publication = ] 'publication'
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@schemaversion=** ] *schemaversion*  
- 保留中のスキーマ変更を指定します。 *schemaversion*は**int**、既定値は**0**します。 使用して[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 、パブリケーションの保留中のスキーマ変更を一覧表示します。  
+ 保留中のスキーマ変更を指定します。 *schemaversion*は**int**の既定値を持つ**0**します。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 、パブリケーションの保留中のスキーマ変更を一覧表示します。  
   
- [  **@status=** ] **'***ステータス***'**  
- 保留中のスキーマ変更をスキップするかどうかを指定します。 *ステータス*は**nvarchar (10)** で、既定値は**active**です。 場合の値*ステータス*は**スキップ**、選択したスキーマの変更はレプリケートされません。  
+ [  **@status=** ] **'***状態***'**  
+ 保留中のスキーマ変更をスキップするかどうかを指定します。 *ステータス*は**nvarchar (10)** の既定値を持つ**active**します。 場合の値*状態*は**スキップ**、選択したスキーマの変更はレプリケートされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_markpendingschemachange**はマージ レプリケーションで使用します。  
   
- **sp_markpendingschemachange**はストアド プロシージャは、マージ レプリケーションのサポートのためのものし、再初期化などの他の解決策状況の修正に失敗したかで高価すぎる場合にのみ使用する必要がありますパフォーマンスの条件。  
+ **sp_markpendingschemachange**はストアド プロシージャは、マージ レプリケーションのサポートのためのものし、再初期化などの他の修正操作状況の修正に失敗したかがでコストが高すぎる場合にのみ使用する必要がありますパフォーマンスの条件。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_markpendingschemachange**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_markpendingschemachange**します。  
   
 ## <a name="see-also"></a>参照  
  [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  

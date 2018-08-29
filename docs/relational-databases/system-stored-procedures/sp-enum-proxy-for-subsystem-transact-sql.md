@@ -1,5 +1,5 @@
 ---
-title: sp_enum_proxy_for_subsystem (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_enum_proxy_for_subsystem (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b524d44236cb9c5a070b460a3f3a0d0736b16aca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53ab72a592ca0d99bf9e19d68a886de8c1e091db
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251920"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030858"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,24 +63,24 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|サブシステムの識別番号|  
 |**subsystem_name**|**sysname**|サブシステムの名前です。|  
 |**proxy_id**|**int**|プロキシの識別番号|  
 |**proxy_name**|**sysname**|プロキシの名前|  
   
-## <a name="remarks"></a>解説  
- パラメーターが指定されていないときに**sp_enum_proxy_for_subsystem**各サブシステムのインスタンスのすべてのプロキシに関する情報を表示します。  
+## <a name="remarks"></a>コメント  
+ パラメーターが指定されていないときに**sp_enum_proxy_for_subsystem**各サブシステムのインスタンス内のすべてのプロキシに関する情報を一覧表示します。  
   
- プロキシ id またはプロキシ名を指定した場合、 **sp_enum_proxy_for_subsystem**にプロキシが一覧のサブシステムにアクセスします。 サブシステム id またはサブシステム名を指定した場合、 **sp_enum_proxy_for_subsystem**そのサブシステムにアクセスできるプロキシが一覧表示します。  
+ プロキシ id またはプロキシ名を指定する、 **sp_enum_proxy_for_subsystem**へのアクセスをプロキシ リスト サブシステム。 サブシステム id またはサブシステム名を指定する、 **sp_enum_proxy_for_subsystem**そのサブシステムにアクセスできるプロキシが一覧表示されます。  
   
  プロキシ情報とサブシステム情報の両方を指定した場合、結果セットでは、指定のプロキシが指定のサブシステムにアクセスできる場合に 1 行のデータが返されます。  
   
- このストアド プロシージャにある**msdb**です。  
+ このストアド プロシージャにある**msdb**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにこのプロシージャの既定の実行のアクセス許可、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
   
@@ -98,7 +96,7 @@ GO
 ```  
   
 ### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. プロキシが特定のサブシステムにアクセスできるかどうかを確認する  
- 場合、次の例は、行を返しますプロキシ`Catalog application proxy`へのアクセスを持つ、`ActiveScripting`サブシステムです。 それ以外の場合は空の結果セットが返されます。  
+ 場合、次の例は、行を返しますプロキシ`Catalog application proxy`にアクセスする、`ActiveScripting`サブシステム。 それ以外の場合は空の結果セットが返されます。  
   
 ```  
 USE msdb ;  

@@ -1,5 +1,5 @@
 ---
-title: sp_unbindefault (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_unbindefault (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80453657de70133f269b35387813389ecb7cff0a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 51d6461bf5ad23cc39853a86054652bb8d20b63a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262320"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031924"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33262320"
   現在のデータベースの列または別名データ型から、デフォルトをバインド解除 (削除) します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] DEFAULT キーワードを使用して既定の定義を作成することをお勧め、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ステートメント代わりにします。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] DEFAULT キーワードを使用して、既定の定義を作成することをお勧め、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ステートメント代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,15 +57,15 @@ sp_unbindefault [ @objname = ] 'object_name'
 >  *object_name*角かっこを含めることができます **:operator[]** として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 別名データ型からデフォルトをバインド解除する場合にのみ使用します。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、既存のデータ型の列には、指定されたデフォルトは失われません。  
+ 別名データ型からデフォルトをバインド解除する場合にのみ使用します。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、既存のデータ型の列には、指定された既定は失われません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- 表示するには、既定値のテキスト実行**sp_helptext**パラメーターとして既定の名前に置き換えます。  
+## <a name="remarks"></a>コメント  
+ 既定のテキストを表示するには、実行**sp_helptext**パラメーターとして既定の名前に置き換えます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  テーブルの列からデフォルトをバインド解除するには、そのテーブルに対する ALTER 権限が必要です。 別名データ型からデフォルトをバインド解除するには、そのデータ型に対する CONTROL 権限、またはそのデータ型が属するスキーマに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -85,7 +85,7 @@ EXEC sp_unbindefault 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonlyflag"></a>C. futureonly_flag を使用する  
- 次の例は、別名データ型の将来の使用をバインド解除`ssn`既存の影響を与えずに`ssn`列です。  
+ 次の例では、別名データ型の将来の使用をバインド解除`ssn`既存の影響を与えずに`ssn`列。  
   
 ```  
 EXEC sp_unbindefault 'ssn', 'futureonly';  

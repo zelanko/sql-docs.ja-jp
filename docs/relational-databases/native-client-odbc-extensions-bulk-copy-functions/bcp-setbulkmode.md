@@ -1,5 +1,5 @@
 ---
-title: bcp_setbulkmode |マイクロソフトのドキュメント
+title: bcp_setbulkmode |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0b114ef8b2e52b060f30c5537fb9dc83ffb136d4
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 48a3d9ef9299eb26bea2d41b2744ad311e2bfacd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541842"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43103273"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  bcp_setbulkmode では、1 つの関数の呼び出しですべての列属性を設定、一括コピー操作で列の形式を指定することができます。  
+  bcp_setbulkmode では、1 つの関数の呼び出しですべての列属性を設定、一括コピー操作で列の形式を指定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,24 +67,24 @@ RETCODE bcp_setbulkmode (
  SUCCEED または FAIL を返します。  
   
 ## <a name="remarks"></a>コメント  
- bcp_setbulkmode は、クエリまたはテーブルのいずれかから一括コピーを使用できます。 Bcp_setbulkmode をクエリ ステートメントの一括コピーに使用する場合は、BCP_HINT と bcp_control を呼び出す前に呼び出す必要があります。  
+ bcp_setbulkmode は、一括コピー出力、クエリまたはテーブルのいずれかを使用できます。 Bcp_setbulkmode はクエリ ステートメントの一括コピーに使用する場合は、BCP_HINT を bcp_control を呼び出す前に呼び出す必要があります。  
   
- bcp_setbulkmode は、使用する代わりに[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)、のみ関数を呼び出すたびに 1 つの列の形式を指定することができます。  
+ bcp_setbulkmode が使用する代わりに[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)、のみ関数呼び出しごとに 1 つの列の形式を指定できます。  
   
  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。EXE、および bcp_setcolfmt で**BCP_FMT_TYPE**プロパティに設定**SQLCHARACTER**。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP で – w のオプションに対応します。EXE と bcp_setcolfmt で**BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP で – N オプションに対応します。EXE と bcp_setcolfmt で**BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**列のデータ型が文字列 (デフォルトがない場合、文字列) の場合です。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP で – n オプションに対応します。EXE と bcp_setcolfmt で**BCP_FMT_TYPE**プロパティが既定値に設定します。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLCHARACTER**します。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の – w オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**します。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の – N オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**列の型が文字列 (既定文字列でない場合) の場合。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の – n オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティが既定値に設定します。|  
   
- Bcp_setcolfmt、bcp_control、bcp_readfmt を含む一連の関数呼び出しでは、bcp_setbulkmode を使用しないでください。 たとえば、呼び出さないでください。 bcp_control(BCPTEXTFILE) と bcp_setbulkmode。  
+ Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスでは、bcp_setbulkmode を使用しないでください。 たとえば、bcp_control(BCPTEXTFILE) と bcp_setbulkmode をしない呼び出す必要があります。  
   
- Bcp_control オプション bcp_setbulkmode と競合しないのは、bcp_control と bcp_setbulkmode を呼び出すことができます。 たとえば、bcp_control(BCPFIRST) と bcp_setbulkmode を呼び出すことができます。  
+ Bcp_setbulkmode と競合しない bcp_control オプションについては、bcp_control と bcp_setbulkmode を呼び出すことができます。 たとえば、bcp_control(BCPFIRST) と bcp_setbulkmode を呼び出すことができます。  
   
- Bcp_setcolfmt、bcp_control、bcp_readfmt を含む一連の関数呼び出しで bcp_setbulkmode を呼び出すしようとすると、関数呼び出しのいずれかのシーケンス エラーを返します。 エラーを修正する場合は、すべての設定をリセットして初めからやり直すに bcp_init を呼び出してください。  
+ Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスを持つ bcp_setbulkmode を呼び出すしようとした場合、シーケンス エラーが関数呼び出しの 1 つ戻ります。 エラーを修正する場合は、すべての設定をリセットし、最初からやり直す bcp_init を呼び出します。  
   
  関数シーケンス エラーが発生する関数呼び出しの例を次に示します。  
   

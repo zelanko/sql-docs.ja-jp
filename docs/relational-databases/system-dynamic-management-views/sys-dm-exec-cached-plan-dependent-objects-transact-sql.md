@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_cached_plan_dependent_objects (Transact SQL) |マイクロソフトのドキュメント
+title: sys.dm_exec_cached_plan_dependent_objects (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f272098fcb86893fa98b33245769909d176282d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1d53372bd1ff1ae214e605d7fb5f8a27f211a9e9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540382"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102160"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>引数  
  *plan_handle*  
- バッチに関するクエリ実行プランの一意識別子を指定します。このバッチは既に実行されていて、そのプランはプラン キャッシュに格納されています。 *plan_handle* 、 **varbinary(64)**。 *Plan_handle*次の動的管理オブジェクトから取得することができます。  
+ バッチに関するクエリ実行プランの一意識別子を指定します。このバッチは既に実行されていて、そのプランはプラン キャッシュに格納されています。 *plan_handle*は**varbinary (64)** します。 *Plan_handle*次の動的管理オブジェクトから取得できます。  
   
--   [sys.dm_exec_cached_plans &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   

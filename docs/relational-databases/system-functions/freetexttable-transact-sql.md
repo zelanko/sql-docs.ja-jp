@@ -26,18 +26,18 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5dbb201a507d168a06b6417c5648c209807bc773
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4a7b4b30de62c47460a6877daadd4c803508526d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540562"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102368"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用される関数、[句から](../../t-sql/queries/from-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行する SELECT ステートメント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フル ・ テキストの全文検索が文字ベースのデータ型を含む列をインデックス付けします。 この関数は、0、1、または複数の行との関係だけでなく、完全な指定されたテキストに一致する値を含む列に対するテーブルを返します*freetext_string*。 FREETEXTTABLE は、通常のテーブル名のように参照されます。  
+  使用される関数、[句から](../../t-sql/queries/from-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行する SELECT ステートメント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フル ・ テキストの全文検索が文字ベースのデータ型を含む列をインデックス付けします。 この関数は 0、1、または複数の行を意味し、正確な表現だけでなく、指定したテキストに一致する値を格納している列のテーブルを返します*freetext_string*します。 FREETEXTTABLE は、通常のテーブル名のように参照されます。  
   
  FREETEXTTABLE は、同じ種類と一致するのに便利です、 [FREETEXT &#40;Transact SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)、  
   
@@ -73,12 +73,12 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  コンマ区切りで複数の列を指定できます。 *column_list* は、かっこで囲む必要があります。 *language_term* を指定しない場合、*column_list* で指定するすべての列の言語は同じにする必要があります。  
   
  \*  
- フルテキスト検索用に登録されているすべての列を使用して、指定した *freetext_string* を検索します。 しない限り、 *language_term*が指定されているテーブル内のすべてのフルテキストのインデックス付きの列の言語は同じである必要があります。  
+ フルテキスト検索用に登録されているすべての列を使用して、指定した *freetext_string* を検索します。 しない限り、 *language_term*を指定すると、テーブル内のすべてのフルテキスト インデックス付き列の言語は同じである必要があります。  
   
  *freetext_string*  
  *column_name* で検索するテキストです。 単語、フレーズ、文など、あらゆるテキストを入力できます。 用語または一定の形式になっている用語がフルテキスト インデックス内に見つかった場合、一致するものと判断されます。  
   
- 異なり、CONTAINS 検索条件の場所とで使用する場合、キーワードは、 *freetext_string*単語 'と' は、ノイズ ワードと見なされますまたは[ストップ](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)、され破棄されます。  
+ 異なり、CONTAINS の検索条件であり、キーワードで使用すると*freetext_string*という単語 'と'、ノイズ ワードと見なされますまたは[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)、され破棄されます。  
   
  WEIGHT、FORMSOF、ワイルドカード、NEAR、およびその他の構文は使用できません。 *freetext_string* は単語、語幹に分割され、類義語がチェックされて渡されます。  
   
@@ -94,7 +94,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
  *top_n_by_rank*  
- のみを指定します*n*の降順に並べ替え、最上位のランクと一致が返されます。 整数値では場合に、のみ適用されます*n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*を使用すると、最も関連性のヒット数のみを呼び戻すことによってクエリのパフォーマンスが向上します。  
+ のみを指定します*n*の降順に並べ替え、最上位のランクと一致が返されます。 整数値では場合に、のみ適用されます*n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*最も重要なヒットだけを再度呼び出すことによってクエリのパフォーマンスを向上することができます。  
   
 ## <a name="remarks"></a>コメント  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. 言語および最高順位の一致の指定  
- 次の例と同じですしの使用を示しています、 `LANGUAGE` *language_term*と*top_n_by_rank*パラメーター。  
+ 次の例と同じし、の使用例を示します、 `LANGUAGE` *language_term*と*top_n_by_rank*パラメーター。  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
 ```  
   
 > [!NOTE]  
->  言語*language_term* paramete*r*を使用する必要はありません、 *top_n_by_rank*パラメーター *。*  
+>  言語*language_term* paramete*r*を使用する必要はありません、 *top_n_by_rank*パラメーター*します。*  
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索の概要](../../relational-databases/search/get-started-with-full-text-search.md)   

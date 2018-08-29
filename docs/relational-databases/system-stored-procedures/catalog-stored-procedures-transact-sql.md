@@ -1,5 +1,5 @@
 ---
-title: カタログ ストアド プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント
+title: カタログ ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,20 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], catalog
 - catalog system stored procedures [SQL Server]
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad6d9b8642f9331952dd5c779d27279e727ddfcb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: da1a487a073461f4fd1c48d2037165763a58cf27
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237349"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031675"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>ストアド プロシージャ カタログ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステムはストアド プロシージャを ODBC データ辞書関数を実装し、基になるシステム テーブルが変更されても、ODBC アプリケーションを分離です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステムはストアド プロシージャを ODBC データ辞書関数を実装し、基になるシステム テーブルに変更が ODBC アプリケーションの分離です。  
   
 |||  
 |-|-|  

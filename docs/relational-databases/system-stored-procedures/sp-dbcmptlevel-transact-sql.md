@@ -1,5 +1,5 @@
 ---
-title: sp_dbcmptlevel (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dbcmptlevel (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 416842d369700f0ac7e0ecd18f84fc0b546a49f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: acd4d6a2d87d97bd31b35779a9bc605dde41db04
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236851"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031945"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33236851"
   データベースの特定の動作に、指定したバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を設定します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用して[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,13 +70,13 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>結果セット  
  パラメーターが指定されていない場合、または場合、*名前*パラメーターが指定されていない**sp_dbcmptlevel**はエラーを返します。  
   
- 場合*名前*なしで指定された*バージョン*、[!INCLUDE[ssDE](../../includes/ssde-md.md)]指定されたデータベースの現在の互換性レベルを表示するメッセージが返されます。  
+ 場合*名前*なしで指定した*バージョン*、[!INCLUDE[ssDE](../../includes/ssde-md.md)]指定されたデータベースの現在の互換性レベルを表示するメッセージが返されます。  
   
-## <a name="remarks"></a>解説  
- 互換性レベルの説明を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)です。  
+## <a name="remarks"></a>コメント  
+ 互換性レベルの説明では、次を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)します。  
   
-## <a name="permissions"></a>権限  
- データベースの所有者のメンバーのみ、 **sysadmin**固定サーバー ロール、および**db_owner**固定データベース ロール (現在のデータベースを変更している) 場合は、このプロシージャを実行できます。  
+## <a name="permissions"></a>アクセス許可  
+ データベース所有者のメンバーのみ、 **sysadmin**固定サーバー ロール、および**db_owner**固定データベース ロール (現在のデータベースを変更している) 場合は、このプロシージャを実行できます。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

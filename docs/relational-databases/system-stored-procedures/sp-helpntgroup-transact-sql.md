@@ -1,5 +1,5 @@
 ---
-title: sp_helpntgroup (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_helpntgroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d47be90ed518d818dfc731121215935f30bf9a1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f049e76dc7d31331c0939c9d24809f8752ea9f7c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247813"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032594"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,24 +45,24 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
   
 ## <a name="arguments"></a>引数  
  [ **@ntname =** ] **'***name***'**  
- Windows グループの名前を指定します。 *名前*は**sysname**、既定値は NULL です。 *名前*現在のデータベースへのアクセスの有効な Windows グループをする必要があります。 場合*名前*が指定されていない、現在のデータベースへのアクセスを持つすべての Windows グループは、出力に含まれています。  
+ Windows グループの名前を指定します。 *名前*は**sysname**、既定値は NULL です。 *名前*現在のデータベースにアクセスできる有効な Windows グループである必要があります。 場合*名前*が指定されていない、現在のデータベースへのアクセス権を持つすべての Windows グループは、出力に含めます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**NTGroupName**|**sysname**|Windows グループの名前。|  
+|**Nt グループ名**|**sysname**|Windows グループの名前。|  
 |**NTGroupId**|**smallint**|グループの識別子 (ID)。|  
-|**SID**|**varbinary(85)**|セキュリティ識別子 (SID) **NTGroupName**です。|  
+|**SID**|**varbinary(85)**|セキュリティ識別子 (SID) **NTGroupName**します。|  
 |**HasDbAccess**|**int**|1 = Windows グループにはデータベースへのアクセス権が与えられています。|  
   
-## <a name="remarks"></a>解説  
- 一覧を表示する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、現在のデータベース内のロールを使用して**sp_helprole**です。  
+## <a name="remarks"></a>コメント  
+ 一覧を表示する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在のデータベース内のロールを使用して、 **sp_helprole**します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

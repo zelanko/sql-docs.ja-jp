@@ -1,5 +1,5 @@
 ---
-title: sys.cryptographic_providers (Transact SQL) |マイクロソフトのドキュメント
+title: sys.cryptographic_providers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.cryptographic_providers catalog view
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 465540093a84a1c49426803469021aed5ac8e617
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c7f0d08ce632e228ae93dcd9bfb578155897437
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540488"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074059"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "39540488"
 |**is_enabled**|**bit**|サーバーでプロバイダーが有効になっているかどうか。<br /><br /> 0 = 有効ではない (既定)<br /><br /> 1 = 有効になっています。|  
   
 ## <a name="remarks"></a>コメント  
- **Sys.cryptographic_providers**ビューは、一般ユーザーに表示します。  
+ **Sys.cryptographic_providers**ビューは、パブリックに表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

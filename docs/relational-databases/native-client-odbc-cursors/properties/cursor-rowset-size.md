@@ -18,19 +18,19 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4e812938bdb8f38008f61bd43339dc694564fdf9
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d2e0a9c6ec517eb2eec56bf89cb7603adca08185
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541632"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070492"
 ---
 # <a name="cursor-rowset-size"></a>カーソルの行セット サイズ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  ODBC カーソルでは、一度にフェッチできる行数は制限されません。 呼び出すたびに複数の行を取得することができます**SQLFetch**または[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のようなクライアント/サーバー型のデータベースで作業しているときは、1 回に複数行を取得する方が効率的です。 回のフェッチで返される行の数を選択し、行セットのサイズと呼ばれるの SQL_ATTR_ROW_ARRAY_SIZE を使用して指定[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
+  ODBC カーソルでは、一度にフェッチできる行数は制限されません。 呼び出すたびに複数の行を取得することができます**SQLFetch**または[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のようなクライアント/サーバー型のデータベースで作業しているときは、1 回に複数行を取得する方が効率的です。 フェッチで返される行の数が行セットのサイズという名前の SQL_ATTR_ROW_ARRAY_SIZE を使用して指定されて[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。  
   
 ```  
 SQLUINTEGER uwRowsize;  

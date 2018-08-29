@@ -1,5 +1,5 @@
 ---
-title: sys.messages (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.messages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,30 +23,30 @@ helpviewer_keywords:
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07a5a426c0a2cf0b4b7c0385850471c3580d4fd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac13b8d68accd744803b7524f9d6d179cca0446b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178998"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032435"
 ---
-# <a name="messages-for-errors-catalog-views---sysmessages"></a>メッセージ (エラー) 用のカタログ ビューの sys.messages
+# <a name="messages-for-errors-catalog-views---sysmessages"></a>メッセージ (エラー) 用のカタログ ビュー - sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  それぞれの行を含みます**message_id**または**language_id**システムでは、システム定義し、ユーザー定義の両方のメッセージのエラー メッセージのです。 詳細については、「[sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)」を参照してください。  
+  それぞれの行を含む**message_id**または**language_id**のシステム定義し、ユーザー定義の両方のメッセージについて、システム内のエラー メッセージ。 詳細については、「[sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)」を参照してください。  
    
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|メッセージの ID です。 これはサーバー内で一意です。 50000 未満のメッセージ ID はシステム メッセージです。|  
-|**language_id**|**smallint**|対象の言語 ID 内のテキスト**テキスト**で定義されているように、使用は**syslanguages**です。 これは、指定された一意**message_id**です。|  
-|**severity**|**tinyint**|メッセージの重大度レベルです。有効値は 1 ～ 25 です。 これは、同じすべてのメッセージ内での言語、 **message_id**です。|  
-|**is_event_logged**|**bit**|1 = メッセージは、エラーが発生するとイベントがログに記録されます。 これは、同じすべてのメッセージ内での言語、 **message_id**です。|  
-|**text**|**nvarchar(2048)**|メッセージのテキストで使用されるときに、対応する**language_id**がアクティブです。|  
+|**language_id**|**smallint**|対象の言語 ID 内のテキスト**テキスト**で定義されているは、使用**syslanguages**します。 これは、指定した一意**message_id**します。|  
+|**severity**|**tinyint**|メッセージの重大度レベルです。有効値は 1 ～ 25 です。 これは、同じすべてのメッセージ内での言語、 **message_id**します。|  
+|**is_event_logged**|**bit**|1 = メッセージは、エラーが発生するとイベントがログに記録されます。 これは、同じすべてのメッセージ内での言語、 **message_id**します。|  
+|**text**|**nvarchar(2048)**|メッセージのテキストに使用されるときに、対応する**language_id**がアクティブになっています。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

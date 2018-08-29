@@ -18,17 +18,16 @@ helpviewer_keywords:
 - COLUMNS view
 - INFORMATION_SCHEMA.COLUMNS view
 ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8294d3cabda817f68999fc80de45171b09451d4e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0a151bbc75924c6051f946df490d1d7399df5ba7
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39536192"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43101628"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39536192"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \* **オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|テーブル名です。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|列名|  
 |**ORDINAL_POSITION**|**int**|列の識別番号。|  
@@ -60,7 +59,7 @@ ms.locfileid: "39536192"
 |**COLLATION_SCHEMA**|**nvarchar(** 128 **)**|常に NULL が返されます。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|列が文字データの場合は、照合順序の一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|列が別名データ型の場合、この列はユーザー定義のデータ型が作成されたデータベースの名前になります。 それ以外の場合は NULL が返されます。|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|列がユーザー定義のデータ型の場合、この列にはユーザー定義のデータ型のスキーマ名が返されます。 それ以外の場合は NULL が返されます。<br /><br /> **\*\* 重要な\* \* **データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|列がユーザー定義のデータ型の場合、この列にはユーザー定義のデータ型のスキーマ名が返されます。 それ以外の場合は NULL が返されます。<br /><br /> **\*\* 重要な\* \*** データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
 |**ドメイン名**|**nvarchar(** 128 **)**|列がクエリ アナライザーの場合、この列はクエリ アナライザーの名前になります。 それ以外の場合は NULL が返されます。|  
   
 ## <a name="remarks"></a>コメント  

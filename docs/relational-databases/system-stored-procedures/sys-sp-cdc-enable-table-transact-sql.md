@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_enable_table (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_cdc_enable_table (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ed70b21e667a1738433335e3e3c869c3b410523
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 309c72bea23d32f50070e140f641030703ee42b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263520"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032892"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,30 +74,30 @@ sys.sp_cdc_enable_table
  [  **@capture_instance =** ] **'***capture_instance***'**  
  インスタンス固有の変更データ キャプチャ オブジェクトを識別するために使用されるキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname** NULL にすることはできません。  
   
- 名前がソース スキーマ名の形式でソース テーブル名から派生した指定しない場合、 *schemaname_sourcename*です。 *capture_instance* 100 文字を超えることはできませんし、データベース内で一意である必要があります。 指定されるか、派生*capture_instance*文字列の右側にある空白は切り捨てられます。  
+ 名前が、ソース スキーマ名の形式でソース テーブル名から派生した指定しない場合、 *schemaname_sourcename*します。 *capture_instance* 100 文字を超えることはできませんし、データベース内で一意である必要があります。 指定されたか、派生*capture_instance*文字列の右側にある空白は切り捨てられます。  
   
- ソース テーブルには、最大 2 つのキャプチャ インスタンスを割り当てることができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)です。  
+ ソース テーブルには、最大 2 つのキャプチャ インスタンスを割り当てることができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)します。  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
- 差分変更クエリのサポートをこのキャプチャ インスタンスで有効にするかどうかを示します。 *supports_net_changes*は**ビット**、既定値は、テーブルに主キーまたはテーブルに一意のインデックスを使用して識別された場合は 1、@index_nameパラメーター。 それ以外の場合、既定値は 0 になります。  
+ 差分変更クエリのサポートをこのキャプチャ インスタンスで有効にするかどうかを示します。 *supports_net_changes*は**ビット**、既定値は、テーブルに主キーまたはテーブルに一意のインデックスを使用して識別されている場合は 1、@index_nameパラメーター。 それ以外の場合、既定値は 0 になります。  
   
  0 の場合は、すべての変更のクエリをサポートする関数のみが生成されます。  
   
  1 の場合は、差分変更のクエリに必要な関数も生成されます。  
   
- 場合*supports_net_changes*を 1 に設定されている*index_name*指定する必要がありますか、ソース テーブルが主キーが定義にあります。  
+ 場合*supports_net_changes*を 1 に設定されている*index_name*指定する必要がありますか、ソース テーブルは主キーが定義されている必要があります。  
   
  [  **@index_name =** ] **' * * * index_name*'  
- ソース テーブル内の行を一意に識別するために使用する、一意のインデックスの名前を指定します。 *index_name*は**sysname** NULL にすることができます。 指定した場合*index_name*ソース テーブルの一意のインデックスを有効にする必要があります。 場合*index_name*が指定されているインデックス列よりも優先、定義された主キー列として、テーブルの一意の行の識別子。  
+ ソース テーブル内の行を一意に識別するために使用する、一意のインデックスの名前を指定します。 *index_name*は**sysname** NULL にすることができます。 指定した場合*index_name*ソース テーブルに一意のインデックスを有効にする必要があります。 場合*index_name*インデックス列よりも優先、定義された主キー列、テーブルの一意の行識別子として指定します。  
   
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
  変更テーブルに追加するソース テーブルの列を指定します。 *captured_column_list*は**nvarchar (max)** NULL にすることができます。 NULL の場合、すべての列が変更テーブルに追加されます。  
   
  列名は、ソース テーブル内の有効な列であることが必要です。 主キー インデックスで定義された列または列によって参照されるインデックスで定義されている*index_name*含める必要があります。  
   
- *captured_column_list*列名のコンマ区切り一覧を示します。 個々の列名は、二重引用符 ("") または角かっこ ([]) で囲んで指定することもできます。 列名そのものにコンマが含まれる場合は、列名をこれらの記号で囲んで指定する必要があります。  
+ *captured_column_list*は列名のコンマ区切りのリスト。 個々の列名は、二重引用符 ("") または角かっこ ([]) で囲んで指定することもできます。 列名そのものにコンマが含まれる場合は、列名をこれらの記号で囲んで指定する必要があります。  
   
- *captured_column_list*次の予約済みの列名を含めることはできません: **_ _ $start_lsn**、 **_ _ $end_lsn**、 **_ _ $$seqval**、 **_ _ $操作**、および **_ _ $update_mask**です。  
+ *captured_column_list*次の予約済みの列名を含めることはできません: **_ _ $start_lsn**、 **_ _ $end_lsn**、 **_ _ $$seqval**、 **_ _ $操作**、および **_ _ $update_mask**します。  
   
  [  **@filegroup_name =** ] **'***filegroup_name***'**  
  キャプチャ インスタンスに対して作成された変更テーブルに使用するファイル グループを指定します。 *filegroup_name*は**sysname** NULL にすることができます。 指定した場合*filegroup_name*現在のデータベースを定義する必要があります。 NULL の場合は、既定のファイル グループが使用されます。  
@@ -119,8 +118,8 @@ sys.sp_cdc_enable_table
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- テーブルに対して変更データ キャプチャを有効にする前に、データベースに対して変更データ キャプチャを有効にする必要があります。 データベースが変更データ キャプチャを有効になっているかどうかを確認するのには、クエリ、 **is_cdc_enabled**内の列、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューです。 データベースを有効にするを使用して、 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)ストアド プロシージャです。  
+## <a name="remarks"></a>コメント  
+ テーブルに対して変更データ キャプチャを有効にする前に、データベースに対して変更データ キャプチャを有効にする必要があります。 データベースで変更データ キャプチャが有効かどうかを確認するのには、クエリ、 **is_cdc_enabled**内の列、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューです。 データベースを有効にするには使用、 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)ストアド プロシージャ。  
   
  テーブルに対して変更データ キャプチャを有効にすると、変更テーブルと 1 つまたは 2 つのクエリ関数が生成されます。 変更テーブルは、キャプチャ プロセスによってトランザクション ログから抽出されたソース テーブルの変更に関するリポジトリとして機能します。 クエリ関数は、変更テーブルからデータを抽出するために使用されます。 これらの関数の名前がから派生した、 *capture_instance*次の方法でパラメーター。  
   
@@ -128,13 +127,13 @@ sys.sp_cdc_enable_table
   
 -   差分変更関数: **cdc.fn_cdc_get_net_changes_ < capture_instance >**  
   
- **sys.sp_cdc_enable_table**ソース テーブルが変更データ キャプチャを有効にする、データベース内の最初のテーブルおよびデータベースのトランザクション パブリケーションが存在しない場合も、データベース用にキャプチャとクリーンアップ ジョブを作成します。 設定、 **is_tracked_by_cdc**内の列、 [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)カタログ ビューを 1 です。  
+ **sys.sp_cdc_enable_table**ソース テーブルが変更データ キャプチャを有効にするデータベース内の最初のテーブルおよびデータベースのトランザクション パブリケーションが存在しない場合も、データベースのキャプチャとクリーンアップ ジョブを作成します。 設定、 **is_tracked_by_cdc**内の列、 [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)カタログ ビューを 1 にします。  
   
 > [!NOTE]  
 >  テーブルで変更データ キャプチャが有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されている必要はありません。 ただし、キャプチャ プロセスがトランザクション ログの処理されず、しない限り、変更テーブルにエントリを書き込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントが実行されています。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **db_owner**固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
   

@@ -2,7 +2,7 @@
 title: (Data Migration Assistant)、オンプレミス データベースの適切な Azure SQL データベース SKU の識別 |Microsoft Docs
 description: Data Migration Assistant を使用して、オンプレミス データベースの右側の Azure SQL データベースの SKU を特定する方法について説明します
 ms.custom: ''
-ms.date: 08/18/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0bd7c1f96bb4ff55a35eda24aa70984e9a359f83
-ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
+ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40395399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152833"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>オンプレミス データベースの適切な Azure SQL データベース SKU の識別します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "40395399"
 
 次の手順では、Azure SQL データベースの SKU の推奨事項を特定し、Data Migration Assistant を使用して azure に関連付けられているデータベースをプロビジョニングできます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 V4.0 の Database Migration Assistant をダウンロードまたはそれ以降、し、インストールします。 既にある場合は、ツールがインストール、閉じると、もう一度開き、ツールのアップグレードを求められます。
 
@@ -166,6 +166,6 @@ HTML ファイルには、グラフィカルな形式では、この情報が含
 
 すべての手順を実行するには 1 台のコンピューター上でこのプロセスでまたは大規模の SKU の推奨事項を決定する複数のコンピューター上で実行することができます。 DMA によって、コマンド ライン インターフェイスを使用してこれらすべての手順をサポートすることで、シンプルかつスケーラブルなエクスペリエンスがなります。 ここでも、DMA のユーザー インターフェイスを使用してこの機能のサポートは、今年の後半で使用してになります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 - 最新バージョンのダウンロード[Data Migration Assistant](https://aka.ms/get-dma)します。
 - 記事をご覧ください[実行 Data Migration Assistant、コマンドラインから](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017)CLI から DMA を実行するためのコマンドの完全な一覧についてはします。

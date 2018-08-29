@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelppublicationthresholds (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_replmonitorhelppublicationthresholds (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c77f8e36cc33dfee704ef8f5b945a58c7011a23b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d87de8d4ab74bc5c9d776b9d08e9e0680e2530cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032240"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,22 +70,22 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**int**|レプリケーション パフォーマンス測定基準の ID。次のいずれかになります。<br /><br /> **1expiration** -トランザクション パブリケーションに対するサブスクリプションの期限が近づいているを監視します。<br /><br /> **2latency** -トランザクション パブリケーションに対するサブスクリプションのパフォーマンスを監視します。<br /><br /> **4mergeexpiration** -マージ パブリケーションへのサブスクリプションに期限が迫っていないか監視します。<br /><br /> **5mergeslowrunduration** -低帯域 (ダイアル アップ) 接続でのマージ同期の期間を監視します。<br /><br /> **6mergefastrunduration** -高帯域 (LAN) 接続でのマージ同期の期間を監視します。<br /><br /> **7mergefastrunspeed** -高帯域 (LAN) 接続でのマージ同期の同期率を監視します。<br /><br /> **8mergeslowrunspeed** -低帯域 (ダイアル アップ) 接続でのマージ同期の同期率を監視します。|  
+|**metric_id**|**int**|レプリケーション パフォーマンス測定基準の ID。次のいずれかになります。<br /><br /> **1expiration** -トランザクション パブリケーションに対するサブスクリプションの期限が迫っていないか監視します。<br /><br /> **2latency** -トランザクション パブリケーションに対するサブスクリプションのパフォーマンスを監視します。<br /><br /> **4mergeexpiration** -マージ パブリケーションへのサブスクリプションが迫っていないか有効期限を監視します。<br /><br /> **5mergeslowrunduration** -低帯域 (ダイアル アップ) 接続でのマージ同期の期間を監視します。<br /><br /> **6mergefastrunduration** -高帯域 (LAN) 接続でのマージ同期の期間を監視します。<br /><br /> **7mergefastrunspeed** -高帯域 (LAN) 接続でのマージ同期の同期率を監視します。<br /><br /> **8mergeslowrunspeed** -低帯域 (ダイアル アップ) 接続でのマージ同期の同期率を監視します。|  
 |**title**|**sysname**|レプリケーション パフォーマンス測定基準の名前。|  
 |**value**|**int**|パフォーマンス測定単位のしきい値。|  
-|**shouldalert**|**bit**|メトリックです。 このパブリケーションに対して定義されたしきい値を超えたときに、アラートが生成するかどうかは、します。値**1**アラートを発生させることを示します。|  
-|**isenabled**|**bit**|このレプリケーション パフォーマンス基準です。 このパブリケーション用の監視が有効になっているかどうかは、します。値**1**監視が有効になっていることを示します。|  
+|**shouldalert**|**bit**|メトリックがこのパブリケーションに定義されたしきい値を超えた場合にアラートを生成するかどうかは、します。値**1**アラートを発生させることを示します。|  
+|**isenabled**|**bit**|このパブリケーションのこのレプリケーションのパフォーマンス メトリックの監視が有効になっているかどうかは、します。値**1**監視が有効になっていることを示します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_replmonitorhelppublicationthresholds**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **db_owner**または**replmonitor**ディストリビューション データベースの固定データベース ロールが実行できる**sp_replmonitorhelppublicationthresholds**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **db_owner**または**replmonitor** 、ディストリビューション データベースの固定データベース ロールが実行できる**sp_replmonitorhelppublicationthresholds**します。  
   
 ## <a name="see-also"></a>参照  
  [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

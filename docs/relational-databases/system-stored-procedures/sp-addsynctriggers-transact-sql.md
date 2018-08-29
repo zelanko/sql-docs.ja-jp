@@ -1,5 +1,5 @@
 ---
-title: sp_addsynctriggers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addsynctriggers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 711126c199480bd1d8ef836b9b587f51db8e4552
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229daeed8cc9c38fc1379565d3f1acffd83317ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992199"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032572"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "32992199"
   すべての種類の更新可能なサブスクリプション (即時更新、キュー更新、およびフェールオーバーとしてキュー更新を使用する即時更新) と共に使用できるトリガーを、サブスクライバー側で作成します。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
   
 > [!IMPORTANT]  
->  [Sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)の代わりにプロシージャを使用する必要があります**sp_addsynctrigger**です。 [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)を含むスクリプトを生成、 **sp_addsynctrigger**呼び出しです。  
+>  [Sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)の代わりにプロシージャを使用する必要があります**sp_addsynctrigger**します。 [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)を含むスクリプトを生成、 **sp_addsynctrigger**呼び出し。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -99,7 +98,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  パブリッシャーでの ID 列の名前を指定します。 *identity_col*は**sysname**、既定値は NULL です。  
   
  [  **@ts_col=**] **'***timestamp_col***'**  
- 名前を指定、**タイムスタンプ**パブリッシャーの列です。 *timestamp_col*は**sysname**、既定値は NULL です。  
+ 名前を指定します、**タイムスタンプ**パブリッシャーの列。 *timestamp_col*は**sysname**、既定値は NULL です。  
   
  [  **@filter_clause=**] **'***filter_clause***'**  
  行フィルターを定義する制限句 (WHERE) を指定します。 制限句を入力する場合は、WHERE キーワードを省略します。 *filter_clause*は**nvarchar (4000)**、既定値は NULL です。  
@@ -108,25 +107,25 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  テーブル内の主キー列のビットマップを指定します。 *primary_key_bitmap*は**varbinary (4000)**、既定値はありません。  
   
  [  **@identity_support =** ] *identity_support*  
- キュー更新を使用するときの自動 ID 範囲処理を有効または無効にします。 *identity_support*は、**ビット**、既定値は**0**します。 **0**の id がないことを意味の範囲のサポート、 **1**自動 id 範囲処理を有効にします。  
+ キュー更新を使用するときの自動 ID 範囲処理を有効または無効にします。 *identity_support*は、**ビット**、既定値は**0**します。 **0** id がないことを意味の範囲のサポート、 **1**自動 id 範囲処理を有効にします。  
   
  [  **@independent_agent =** ] *independent_agent*  
- このパブリケーションに対して単独のディストリビューション エージェント (独立エージェント) があるか、パブリケーション データベースとサブスクリプション データベースの 1 つのペアにつき 1 つのディストリビューション エージェント (共有エージェント) があるかを示します。 この値には、パブリッシャーで定義されているパブリケーションの independent_agent プロパティの値が反映されます。 *independent_agent*は bit で、既定値は**0**します。 場合**0**エージェントが共有エージェントです。 場合**1**エージェントが独立したエージェントです。  
+ このパブリケーションに対して単独のディストリビューション エージェント (独立エージェント) があるか、パブリケーション データベースとサブスクリプション データベースの 1 つのペアにつき 1 つのディストリビューション エージェント (共有エージェント) があるかを示します。 この値には、パブリッシャーで定義されているパブリケーションの independent_agent プロパティの値が反映されます。 *independent_agent*は bit で、既定値は**0**します。 場合**0**エージェントが共有エージェント。 場合**1**エージェントが独立したエージェント。  
   
  [  **@distributor =** ] **'***ディストリビューター***'**  
  ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値はありません。  
   
  [ **@pubversion**=] *pubversion*  
- パブリッシャーのバージョンを指定します。 *pubversion*は**int**、既定値は 1 です。 **1**パブリッシャーのバージョンであることを意味[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 以前です。**2**パブリッシャーであることを意味[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 3 (SP3) 以降。 *pubversion*に明示的に設定する必要があります**2**パブリッシャーのバージョンがいつ[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]SP3 またはそれ以降。  
+ パブリッシャーのバージョンを指定します。 *pubversion*は**int**、既定値は 1 です。 **1**パブリッシャーのバージョンであることを意味[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 以前です。**2**パブリッシャーであることを意味[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 3 (SP3) 以降。 *pubversion*に明示的に設定する必要があります**2**とパブリッシャーのバージョンが[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]SP3 以降。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_addsynctriggers**は、ディストリビューション エージェントによってサブスクリプションの初期化の一部として使用します。 このストアド プロシージャは、ユーザーが頻繁に実行するものではありません。ただし、同期なしサブスクリプションを手動で設定する場合に利用できるストアド プロシージャです。  
+## <a name="remarks"></a>コメント  
+ **sp_addsynctriggers**サブスクリプションの初期化の一部として、ディストリビューション エージェントによって使用されます。 このストアド プロシージャは、ユーザーが頻繁に実行するものではありません。ただし、同期なしサブスクリプションを手動で設定する場合に利用できるストアド プロシージャです。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addsynctriggers**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addsynctriggers**します。  
   
 ## <a name="see-also"></a>参照  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
