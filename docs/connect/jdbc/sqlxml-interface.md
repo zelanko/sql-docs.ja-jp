@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 406c1c25c346680caba70c467e20e99df9977f13
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454196"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787395"
 ---
 # <a name="sqlxml-interface"></a>SQLXML インターフェイス
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この JDBC ドライバーがサポートする JDBC 4.0 API には、java.sql.SQLXML インターフェイスが導入されています。 SQLXML インターフェイスには、XML データを操作するための各種のメソッドが定義されています。 **SQLXML**データ型にマップされます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**データ型。  
+この JDBC ドライバーがサポートする JDBC 4.0 API には、java.sql.SQLXML インターフェイスが導入されています。 SQLXML インターフェイスには、XML データを操作するための各種のメソッドが定義されています。 **SQLXML**データ型にマップされます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**データ型。  
   
 SQLXML インターフェイスとして XML 値にアクセスするためのメソッドを提供、**文字列**、**リーダー**または**ライター**、または、 **Stream**します。 XML 値は **Source** を介してアクセスしたり、**Result** として設定したりすることもでき、これらを XSLT 変換や XPath のほか、Document Object Model (DOM)、Simple API for XML (SAX)、Streaming API for XML (StAX) などの XML パーサー API と組み合わせて利用することが可能です。  
   

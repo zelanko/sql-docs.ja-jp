@@ -14,26 +14,26 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 819a1a2a3a5203d8f706cba5a2daad2d83e835cf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661774"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786117"
 ---
 # <a name="using-adaptive-buffering"></a>アダプティブ バッファリングの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-アダプティブ バッファリングは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 アプリケーションでは、ドライバーによってサポートされるすべてのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] でアダプティブ バッファリング機能を使用できます。
+アダプティブ バッファリングは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 アプリケーションでは、ドライバーによってサポートされるすべてのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でアダプティブ バッファリング機能を使用できます。
 
-通常、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] がクエリを実行するときは、すべての結果をサーバーからアプリケーション メモリに取り出します。 この方法では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] でのリソースの消費が最小化されますが、非常に大きな結果を生成するクエリの場合は、JDBC アプリケーションで OutOfMemoryError がスローされることがあります。
+通常、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] がクエリを実行するときは、すべての結果をサーバーからアプリケーション メモリに取り出します。 この方法では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのリソースの消費が最小化されますが、非常に大きな結果を生成するクエリの場合は、JDBC アプリケーションで OutOfMemoryError がスローされることがあります。
 
-アプリケーションで非常に大きな結果を処理できるようにするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] はアダプティブ バッファリングを提供しています。 ドライバーでアダプティブ バッファリングを使用すると、ステートメントの実行結果を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] から取得する処理が、すべて一度にではなく、アプリケーションの必要に応じて行われます。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。 アダプティブ バッファリングは次のような場合に効果的です。
+アプリケーションで非常に大きな結果を処理できるようにするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] はアダプティブ バッファリングを提供しています。 ドライバーでアダプティブ バッファリングを使用すると、ステートメントの実行結果を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から取得する処理が、すべて一度にではなく、アプリケーションの必要に応じて行われます。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。 アダプティブ バッファリングは次のような場合に効果的です。
 
 - **クエリが非常に大きな結果セットを生成する:** アプリケーションでは、メモリに格納できる行よりも多くの行を生成する SELECT ステートメントを実行できます。 以前のリリースでは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要がありました。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。
 
-- **クエリが非常に大きな** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **列または** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT パラメーター値を生成する:** アプリケーションでは、アプリケーション メモリに完全に含めるには大きすぎる単一の値 (列または OUT パラメーター) を取得できます。 アダプティブ バッファリングはにより、getAsciiStream、getBinaryStream または getCharacterStream メソッドを使用して、ストリームとして、このような値を取得するクライアント アプリケーションです。 アプリケーションは、ストリームから読み取るときと同じようにして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] から値を取得します。
+- **クエリが非常に大きな** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **列または** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT パラメーター値を生成する:** アプリケーションでは、アプリケーション メモリに完全に含めるには大きすぎる単一の値 (列または OUT パラメーター) を取得できます。 アダプティブ バッファリングはにより、getAsciiStream、getBinaryStream または getCharacterStream メソッドを使用して、ストリームとして、このような値を取得するクライアント アプリケーションです。 アプリケーションは、ストリームから読み取るときと同じようにして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から値を取得します。
 
 > [!NOTE]  
 > アダプティブ バッファリングでは、必要な量のデータだけが、JDBC ドライバーによってバッファリングされます。 ドライバーにバッファーのサイズを制御したり制限したりするためのパブリック メソッドは備わっていません。
@@ -56,7 +56,7 @@ JDBC Driver Version 1.2 を使用している場合、[setResponseBuffering](../
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>アダプティブ バッファリングによる大きなデータの取得
 
-get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] によって返された順序で ResultSet 列および CallableStatement OUT パラメーターにアクセスする場合、アダプティブ バッファリングにより、結果を処理するときのアプリケーション メモリの使用量を最小限に抑えることができます。 アダプティブ バッファリングを使用すると、次のようになります。
+get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって返された順序で ResultSet 列および CallableStatement OUT パラメーターにアクセスする場合、アダプティブ バッファリングにより、結果を処理するときのアプリケーション メモリの使用量を最小限に抑えることができます。 アダプティブ バッファリングを使用すると、次のようになります。
 
 - [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスおよび [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスで定義されている get\<Type>Stream メソッドは、既定では 1 回だけ読み取るストリームを返します。ただし、アプリケーションによってマークされていれば、このストリームをリセットできます。 アプリケーションでストリームの `reset` を行う必要がある場合、まずそのストリームに対して `mark` メソッドを呼び出す必要があります。
 
@@ -83,7 +83,7 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 
 - いくつかあります。 を使用した**selectMethod = カーソル**の代わりに**responseBuffering = adaptive**など、より便利になります。
 
-  - 読み取り専用の結果セットを使用して入力すると、ユーザーはいくつかの後の行ごとの読み取りなどの時間がかかり、順方向専用、アプリケーションが処理する場合**selectMethod = カーソル**の代わりに**responseBuffering = adaptive**可能性がありますによるリソース使用量を減らす[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]します。
+  - 読み取り専用の結果セットを使用して入力すると、ユーザーはいくつかの後の行ごとの読み取りなどの時間がかかり、順方向専用、アプリケーションが処理する場合**selectMethod = カーソル**の代わりに**responseBuffering = adaptive**可能性がありますによるリソース使用量を減らす[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。
 
   - 同じ接続で順方向専用、読み取り専用の複数の結果セットを同時に処理するようなアプリケーションでは、**responseBuffering=adaptive** の代わりに **selectMethod=cursor** を使用することで、ドライバーがこれらの結果セットを処理する際に必要となるメモリ量を減らすことができます。
 

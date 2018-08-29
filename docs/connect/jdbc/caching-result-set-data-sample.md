@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26a8c38f11fe4860437dda427ba3e2046b9b4867
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 62be6ad99231fb6fde258e145fb6c29e86759309
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456236"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785795"
 ---
 # <a name="caching-result-set-data-sample"></a>結果セットのデータ サンプルのキャッシング
 
@@ -30,7 +30,7 @@ ms.locfileid: "39456236"
 > [!NOTE]  
 > クライアント上でキャッシュされる行数の制限は、結果セットが含むことのできる行の総数の制限とは異なります。 結果セットに含まれる行の総数を制御するには、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) メソッドを使用します。これは、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトと [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトの両方に継承されます。
 
-クライアント上でキャッシュされる行数に制限を設定するには、Statement オブジェクトの作成に使用するカーソルの種類を指定することで、いずれかの Statement オブジェクトを作成するときに、最初にサーバー側のカーソルを使用する必要があります。 たとえば、JDBC ドライバーでは TYPE_SS_SERVER_CURSOR_FORWARD_ONLY というカーソルの種類が提供されます。これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースで使用する高速順方向専用、読み取り専用のサーバー側カーソルです。
+クライアント上でキャッシュされる行数に制限を設定するには、Statement オブジェクトの作成に使用するカーソルの種類を指定することで、いずれかの Statement オブジェクトを作成するときに、最初にサーバー側のカーソルを使用する必要があります。 たとえば、JDBC ドライバーでは TYPE_SS_SERVER_CURSOR_FORWARD_ONLY というカーソルの種類が提供されます。これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで使用する高速順方向専用、読み取り専用のサーバー側カーソルです。
 
 > [!NOTE]  
 > SQL Server 固有のカーソルの種類を使用する代わりに、selectMethod 接続文字列プロパティの値を "cursor" に設定して使用する方法もあります。 JDBC ドライバーでサポートされるカーソルの種類の詳細については、次を参照してください。[カーソルの種類について](../../connect/jdbc/understanding-cursor-types.md)します。

@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f5a705de3823ea04d1cb79f8e6106152599fc0b
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: bb31601b55af1b95c53b37c846c3a8bbf17b10f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467740"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786100"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-これは、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]サンプル アプリケーションは、結果セットの getter メソッドを使用して取得する方法を示します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]'SQL データの検出と分類' テーブルからの情報、そのような情報を保持します。
+これは、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]サンプル アプリケーションは、結果セットの getter メソッドを使用して取得する方法を示します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]'SQL データの検出と分類' テーブルからの情報、そのような情報を保持します。
   
 このサンプルのコード ファイルが、DataDiscoveryAndClassification.java をという名前し、次の場所で見つかります。  
 

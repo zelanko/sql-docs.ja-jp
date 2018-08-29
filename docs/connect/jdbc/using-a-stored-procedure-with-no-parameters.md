@@ -14,18 +14,18 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bd763d709238c6bd25fbe7a90acb7b617004925
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 01ec347bd34786fe3dc9f8533972c212847b1faa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661834"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786472"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>パラメーターのないストアド プロシージャの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-呼び出すことができる最も簡単な種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ストアド プロシージャは、パラメーターを含まず、1 つの結果セットを返すプロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
+呼び出すことができる最も簡単な種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャは、パラメーターを含まず、1 つの結果セットを返すプロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
 
 JDBC ドライバーを使用してパラメーターのないストアド プロシージャを呼び出すときは、`call` SQL エスケープ シーケンスを使用する必要があります。 パラメーターを持たない `call` エスケープ シーケンスの構文は次のとおりです。
 

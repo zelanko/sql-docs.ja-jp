@@ -14,22 +14,22 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0164fdcfebdf0fb92aac1f37820495ad8e591a41
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 615ffd21ab333a312bd14dd92348146130a6e231
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662204"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784391"
 ---
 # <a name="understanding-data-type-conversions"></a>データ型変換について
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Java プログラミング言語のデータ型を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型へ容易に変換できるようにするため、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、JDBC の仕様で必要とされるデータ型変換が用意されています。 柔軟性を高め、すべての型を変換できるとの間**オブジェクト**、**文字列**、および**byte[]** データ型。
+Java プログラミング言語のデータ型を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型へ容易に変換できるようにするため、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、JDBC の仕様で必要とされるデータ型変換が用意されています。 柔軟性を高め、すべての型を変換できるとの間**オブジェクト**、**文字列**、および**byte[]** データ型。
 
 ## <a name="getter-method-conversions"></a>getter メソッドの変換
 
-次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型に基づいて、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの get\<Type>() メソッド用の JDBC ドライバーの変換マップ、および [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの get\<Type> メソッドでサポートされている変換を示しています。
+次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいて、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの get\<Type>() メソッド用の JDBC ドライバーの変換マップ、および [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの get\<Type> メソッドでサポートされている変換を示しています。
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -59,7 +59,7 @@ JDBC ドライバーの updater メソッドでサポートされている変換
 
 に対して updateString を呼び出したときに、**バイナリ**、 **varbinary**、 **varbinary (max)**、または**イメージ**文字列値を処理する列データ型16 進数の文字列値。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の列データ型が **XML** の場合、データ値は有効な **XML** であることが必要です。 UpdateBytes や updateBinaryStream、updateBlob メソッドを呼び出すときに、データ値は、XML 文字の 16 進数文字列形式をする必要があります。 例 :
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の列データ型が **XML** の場合、データ値は有効な **XML** であることが必要です。 UpdateBytes や updateBinaryStream、updateBlob メソッドを呼び出すときに、データ値は、XML 文字の 16 進数文字列形式をする必要があります。 例 :
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -81,13 +81,13 @@ JDBC ドライバーの setter メソッドでサポートされている変換�
 
 - **データ損失なし (x)**: setter 型が、基になるサーバーの型と同じか、またはそれより小さい場合の数値変換です。 たとえば、基になるサーバーの **decimal** 列で setBigDecimal を呼び出すとき、変換は必要ありません。 数値を文字に変換する場合、Java の **numeric** データ型は **String** に変換されます。 たとえば、varchar(50) 列で "53" の値を使用して setDouble を呼び出すと、変換先の列に文字列値 "53" が作成されます。
 
-- **変換 (y)**: Java の **numeric** 型から基になるサーバーの **numeric** 型への変換です。これは変換前より小さくなります。 この変換は通常の変換で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の変換規則に従って行われます。 有効桁数は常に切り捨てられ、四捨五入されることはありません。オーバーフローするとサポートされていない変換のエラーがスローされます。 たとえば、"1.9999" の値を持つ基になる整数列に updateDecimal を使用すると、変換先の列は "1" になりますが、"3000000000" が渡されるとドライバーはエラーをスローします。
+- **変換 (y)**: Java の **numeric** 型から基になるサーバーの **numeric** 型への変換です。これは変換前より小さくなります。 この変換は通常の変換で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換規則に従って行われます。 有効桁数は常に切り捨てられ、四捨五入されることはありません。オーバーフローするとサポートされていない変換のエラーがスローされます。 たとえば、"1.9999" の値を持つ基になる整数列に updateDecimal を使用すると、変換先の列は "1" になりますが、"3000000000" が渡されるとドライバーはエラーをスローします。
 
-- **データに依存 (z)**: Java の **String** 型から基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型への変換は、次の条件に依存します。ドライバーが **String** 値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] に送信し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が必要に応じて変換を実行します。 sendStringParametersAsUnicode が true に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では **nvarchar** の **image** への変換が許可されず、SQLServerException がスローされます。 sendStringParametersAsUnicode が false に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のデータ型が **image** である場合、**varchar** から **image** への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] によって許可され、例外はスローされません。
+- **データに依存 (z)**: Java の **String** 型から基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換は、次の条件に依存します。ドライバーが **String** 値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が必要に応じて変換を実行します。 sendStringParametersAsUnicode が true に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **nvarchar** の **image** への変換が許可されず、SQLServerException がスローされます。 sendStringParametersAsUnicode が false に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、**varchar** から **image** への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって許可され、例外はスローされません。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は変換を行い、問題が発生すると JDBC ドライバーにエラーを返します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は変換を行い、問題が発生すると JDBC ドライバーにエラーを返します。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の列データ型が **XML** の場合、データ値は有効な **XML** であることが必要です。 UpdateBytes や updateBinaryStream、updateBlob メソッドを呼び出すときに、データ値は、XML 文字の 16 進数文字列形式をする必要があります。 例 :
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の列データ型が **XML** の場合、データ値は有効な **XML** であることが必要です。 UpdateBytes や updateBinaryStream、updateBlob メソッドを呼び出すときに、データ値は、XML 文字の 16 進数文字列形式をする必要があります。 例 :
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -110,13 +110,13 @@ JDBC ドライバーの setObject メソッドでサポートされている変�
 
 - **データ損失なし (x)**: setter 型が、基になるサーバーの型と同じか、またはそれより小さい場合の数値変換です。 たとえば、基になるサーバーの **decimal** 列で setBigDecimal を呼び出すとき、変換は必要ありません。 数値を文字に変換する場合、Java の **numeric** データ型は **String** に変換されます。 たとえば、varchar(50) 列で "53" の値を使用して setDouble を呼び出すと、変換先の列に文字列値 "53" が作成されます。
 
-- **変換 (y)**: Java の **numeric** 型から基になるサーバーの **numeric** 型への変換です。これは変換前より小さくなります。 この変換は通常の変換で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の変換規則に従って行われます。 有効桁数は常に切り捨てられ、四捨五入されることはありません。オーバーフローするとサポートされていない変換のエラーがスローされます。 たとえば、"1.9999" の値を持つ基になる整数列に updateDecimal を使用すると、変換先の列は "1" になりますが、"3000000000" が渡されるとドライバーはエラーをスローします。
+- **変換 (y)**: Java の **numeric** 型から基になるサーバーの **numeric** 型への変換です。これは変換前より小さくなります。 この変換は通常の変換で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換規則に従って行われます。 有効桁数は常に切り捨てられ、四捨五入されることはありません。オーバーフローするとサポートされていない変換のエラーがスローされます。 たとえば、"1.9999" の値を持つ基になる整数列に updateDecimal を使用すると、変換先の列は "1" になりますが、"3000000000" が渡されるとドライバーはエラーをスローします。
 
-- **データに依存 (z)**: Java の **String** 型から基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型への変換は、次の条件に依存します。ドライバーが **String** 値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] に送信し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が必要に応じて変換を実行します。 sendStringParametersAsUnicode 接続プロパティが true に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では **nvarchar** の **image** への変換が許可されず、SQLServerException がスローされます。 sendStringParametersAsUnicode が false に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のデータ型が **image** である場合、**varchar** から **image** への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] によって許可され、例外はスローされません。
+- **データに依存 (z)**: Java の **String** 型から基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換は、次の条件に依存します。ドライバーが **String** 値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が必要に応じて変換を実行します。 sendStringParametersAsUnicode 接続プロパティが true に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **nvarchar** の **image** への変換が許可されず、SQLServerException がスローされます。 sendStringParametersAsUnicode が false に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、**varchar** から **image** への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって許可され、例外はスローされません。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は一括して設定の変換を行い、問題が発生すると JDBC ドライバーにエラーを返します。 クライアント側の変換の例外し、のみの場合は実行**日付**、**時間**、**タイムスタンプ**、**ブール**、および**文字列**値。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は一括して設定の変換を行い、問題が発生すると JDBC ドライバーにエラーを返します。 クライアント側の変換の例外し、のみの場合は実行**日付**、**時間**、**タイムスタンプ**、**ブール**、および**文字列**値。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の列データ型が **XML** の場合、データ値は有効な **XML** であることが必要です。 setObject(byte[], SQLXML)、setObject(inputStream, SQLXML)、setObject(Blob, SQLXML) のいずれかのメソッドを呼び出す場合、データ値は、XML 文字の 16 進形式の文字列表記である必要があります。 例 :
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の列データ型が **XML** の場合、データ値は有効な **XML** であることが必要です。 setObject(byte[], SQLXML)、setObject(inputStream, SQLXML)、setObject(Blob, SQLXML) のいずれかのメソッドを呼び出す場合、データ値は、XML 文字の 16 進形式の文字列表記である必要があります。 例 :
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E

@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946906"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787255"
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
-このページには、以降では、各リリースで修正されたバグの一覧が含まれています[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+このページには、以降では、各リリースで修正されたバグの一覧が含まれています[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>バグ修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバー 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>バグ修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバー 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Azure Active Directory 認証に関するエラー メッセージを修正しました
 - エンコードの検出が異なるロケールの環境変数が設定されている場合を修正しました
@@ -40,7 +40,7 @@ ms.locfileid: "37946906"
 - Windows 上の ADAL 認証を使用する場合は、キャッシュの問題を修正しました
 - ロックされた問題が修正し、Windows 上のログ トレースの上書き
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>バグ修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバー 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>バグ修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバー 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - SQLFreeHandle を MARS を有効になっていると接続属性を呼び出すときに、1 秒の遅延を固定"Encrypt = [はい]"
 - SQLGetData で渡されたバッファーのサイズが小さい場合、取得されるデータ (Windows) で、エラー 22003 クラッシュを修正しました
@@ -50,7 +50,7 @@ ms.locfileid: "37946906"
 - MacOS のインストーラーに関する警告を修正しました
 - 固定接続の回復性と接続プールが有効な場合、サーバーを削除するセッションの原因とは、セッション復旧試行中に SQL Server に不適切な状態を送信
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>バグ修正、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>バグ修正、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - バグを修正しましたが、Kerberos 認証を使用して一括挿入は、「アクセス拒否」エラーで失敗でした
 - UnixODBC 2.3.1 の下のバージョンに存在するバグの回避策を削除しました (ドライバーには、unixODBC に渡される特定のバッファーのサイズが 2 倍に)

@@ -14,18 +14,18 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 1ece23b74de9265f28468ae11702c07cdca1cecc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661794"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786107"
 ---
 # <a name="using-the-jdbc-driver"></a>「JDBC ドライバーの使用」を参照してください。
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-このセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースへのシンプルな接続を作成する方法について簡単に説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに接続する前に、まず [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] をローカル コンピューターまたはサーバーのどちらかにインストールし、JDBC ドライバーをローカル コンピューターにインストールする必要があります。  
+このセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへのシンプルな接続を作成する方法について簡単に説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する前に、まず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をローカル コンピューターまたはサーバーのどちらかにインストールし、JDBC ドライバーをローカル コンピューターにインストールする必要があります。  
   
 ## <a name="choosing-the-right-jar-file"></a>最適な JAR ファイルの選択
 

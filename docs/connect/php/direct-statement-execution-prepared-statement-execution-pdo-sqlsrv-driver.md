@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1c721a32936bf39d91042d6b7ac89a03a5fd85d6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042221"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42784560"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "38042221"
 このトピックでは、PDO::SQLSRV_ATTR_DIRECT_QUERY 属性を使用して、準備されたステートメントの実行である既定ではなく、直接のステートメントの実行を指定する方法について説明します。 準備されたステートメントを使用すると、2 回以上のパラメーターのバインドを使用してステートメントを実行する場合にパフォーマンスを向上させるが発生することができます。  
   
 ## <a name="remarks"></a>Remarks  
-送信する場合、[!INCLUDE[tsql](../../includes/tsql_md.md)]ステートメントでは、ドライバーによってステートメントの準備なしでサーバーに直接、pdo::sqlsrv_attr_direct_query 属性を設定する[pdo::setattribute](../../connect/php/pdo-setattribute.md) (または、ドライバーのオプションに渡されます[:: _ _Construct](../../connect/php/pdo-construct.md)) を呼び出すとまたは[pdo::prepare](../../connect/php/pdo-prepare.md)します。 既定では pdo::sqlsrv_attr_direct_query の値は False です (準備ステートメントの実行を使用します)。  
+送信する場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントでは、ドライバーによってステートメントの準備なしでサーバーに直接、pdo::sqlsrv_attr_direct_query 属性を設定する[pdo::setattribute](../../connect/php/pdo-setattribute.md) (または、ドライバーのオプションに渡されます[:: _ _Construct](../../connect/php/pdo-construct.md)) を呼び出すとまたは[pdo::prepare](../../connect/php/pdo-prepare.md)します。 既定では pdo::sqlsrv_attr_direct_query の値は False です (準備ステートメントの実行を使用します)。  
   
 使用する場合[pdo::query](../../connect/php/pdo-query.md)、直接実行する場合があります。 呼び出しの前に[pdo::query](../../connect/php/pdo-query.md)、呼び出す[pdo::setattribute](../../connect/php/pdo-setattribute.md) pdo::sqlsrv_attr_direct_query を True に設定します。  呼び出しごとに[pdo::query](../../connect/php/pdo-query.md) pdo::sqlsrv_attr_direct_query のさまざまな設定で実行できます。  
   

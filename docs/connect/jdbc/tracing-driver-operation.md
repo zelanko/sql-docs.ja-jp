@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: bcb5b6636fcabab8d6cb5eb3709f632f9968c3a7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279263"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786272"
 ---
 # <a name="tracing-driver-operation"></a>ドライバー操作のトレース」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39279263"
 |TDS.Channel|SQL Server との TCP 通信チャネルのアクションをトレースします。 記録されるメッセージには、読み取りや書き込みのほか、ソケットの開閉が含まれます。 SQL Server との SSL (Secure Sockets Layer) 接続の確立に関連したメッセージもトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINE、FINER、または FINEST に設定したときにのみ有効になります。|  
 |TDS.Writer|TDS チャネルへの書き込みをトレースします。 トレースされるのは書き込みの長さのみです。書き込みの内容がトレースされるわけではありません。 このカテゴリでは、アテンション シグナルがサーバーに送信され、ステートメントの実行がキャンセルされた場合にも、問題がトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINEST に設定したときにのみ有効になります。|  
 |TDS.Reader|TDS チャネルからの特定の読み取り操作を FINEST レベルでトレースします。 FINEST レベルのトレースは冗長になる場合があります。 WARNING レベルや SEVERE レベルでは、ドライバーが接続を閉じる前に SQL Server から無効な TDS プロトコルを受信した場合にトレースが行われます。<br /><br /> このカテゴリは、ログ記録レベルを FINER または FINEST に設定したときにのみ有効になります。|  
-|TDS.Command|低レベルの状態遷移や、TDS コマンドの実行に関連したその他の情報 ([!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントの実行、ResultSet カーソルのフェッチ、コミットなど) をトレースします。<br /><br /> このカテゴリは、ログ記録レベルを FINEST に設定したときにのみ有効になります。|  
+|TDS.Command|低レベルの状態遷移や、TDS コマンドの実行に関連したその他の情報 ([!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの実行、ResultSet カーソルのフェッチ、コミットなど) をトレースします。<br /><br /> このカテゴリは、ログ記録レベルを FINEST に設定したときにのみ有効になります。|  
 |TDS.TOKEN|このカテゴリは、TDS パケット内のトークンのみを記録しますが、TDS.DATA カテゴリほど冗長ではありません。 ログ記録レベルを FINEST に設定したときにのみ有効になります。<br /><br /> FINEST レベルでは、応答で処理される TDS トークンがトレースされます。 SEVERE レベルでは、無効な TDS トークンが検出された場合にトレースが実行されます。|  
 |SQLServerDatabaseMetaData|[SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
 |SQLServerResultSetMetaData|[SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  

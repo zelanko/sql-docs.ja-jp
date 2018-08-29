@@ -14,25 +14,25 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f5878e83f9b23f273da46f356b05f8ce6563712e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662384"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784734"
 ---
 # <a name="working-with-a-connection"></a>接続の操作
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-以下のセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] の [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースに接続するさまざまな方法の例を示します。
+以下のセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] の [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するさまざまな方法の例を示します。
 
 > [!NOTE]  
-> JDBC ドライバーを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] への接続で問題が発生した場合は、「[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)」で提案されている修正方法を参照してください。
+> JDBC ドライバーを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続で問題が発生した場合は、「[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)」で提案されている修正方法を参照してください。
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>DriverManager クラスを使用した接続の作成
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースへの接続を最も効率的に作成するには、JDBC ドライバーを読み込み、次のように DriverManager クラスの getConnection メソッドを呼び出します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続を最も効率的に作成するには、JDBC ドライバーを読み込み、次のように DriverManager クラスの getConnection メソッドを呼び出します。
 
 ```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
