@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca46ace5ee5e5c0c461687d1e84ef5e0072506e5
 ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/11/2018
 ms.locfileid: "35308191"
@@ -57,7 +57,7 @@ PDO::exec の動作に影響する属性は次のとおりです。
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  
-この例では、Table1 の col1 に 'xxxyy' がある行を削除します。 次に、削除された行数を表示します。
+この例では、Table1 の col1 に 'xxxyy' がある行を削除します。 次に、削除された行数を表示します。  
   
 ```  
 <?php  

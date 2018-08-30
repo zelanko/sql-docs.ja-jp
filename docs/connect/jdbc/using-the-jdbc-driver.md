@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/14/2018
 ms.locfileid: "42786107"
 ---
-# <a name="using-the-jdbc-driver"></a>「JDBC ドライバーの使用」を参照してください。
+# <a name="using-the-jdbc-driver"></a>JDBC ドライバーの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
