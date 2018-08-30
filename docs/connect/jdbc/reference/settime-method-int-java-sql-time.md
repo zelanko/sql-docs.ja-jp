@@ -1,5 +1,5 @@
 ---
-title: setTime (int, java.sql.Time) メソッド |Microsoft ドキュメント
+title: setTime (int, java.sql.Time) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c064f13e960209cbdeb23428ddf96629ba20197b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bb880fec736c6efe2d88140b852a4c9c4a646fc2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845377"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786364"
 ---
 # <a name="settime-method-int-javasqltime"></a>setTime (int, java.sql.Time) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,24 +42,24 @@ public final void setTime(int n,
 #### <a name="parameters"></a>パラメーター  
  *n*  
   
- **Int**パラメーター数を示すです。  
+ パラメーターの番号を示す **int** です。  
   
  *x*  
   
- Time オブジェクト。  
+ 時刻のオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この setTime メソッドは、setTime、java.sql.PreparedStatement インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドで規定されています。  
   
- 以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0 では、このメソッドの動作は、によって変更が、 **sendTimeAsDatetime**接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) および[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)です。  
+ 以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0 では、このメソッドの動作は変更、**で sendTimeAsDatetime**接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) と[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)します。  
   
- 詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)です。  
+ 詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)します。  
   
 ## <a name="see-also"></a>参照  
- [setTime メソッド&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)   
+ [execute メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

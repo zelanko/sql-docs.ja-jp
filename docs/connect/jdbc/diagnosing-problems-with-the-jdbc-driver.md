@@ -1,5 +1,5 @@
 ---
-title: JDBC ドライバーに関する問題の診断 |Microsoft ドキュメント
+title: JDBC ドライバーで問題を診断する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b5c6dc1791451302ead0675a0dee33cc0d27336
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 36380a9201dc7bdae74f2735c21857fc1e2cce20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828862"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787394"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC ドライバーで発生した問題の診断
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  アプリケーションの設計および開発がいかに優れていても、問題は必然的に発生します。 問題が発生した場合に備え、それらを診断するための手法を知っておくことが重要になります。 使用する場合、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、発生する可能性がある一般的な問題がない適切なドライバーのバージョンまたはデータベースに接続することができません。  
+  アプリケーションの設計および開発がいかに優れていても、問題は必然的に発生します。 問題が発生した場合に備え、それらを診断するための手法を知っておくことが重要になります。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用する場合に発生する一般的な問題として、適切なバージョンのドライバーがないことや、データベースに接続できないことなどがあります。  
   
  このセクションのトピックでは、これらの問題や、エラー処理、ドライバー バージョンの確認、トレース、接続のトラブルシューティングなどを含むその他の問題を診断するためのさまざまな手法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[エラーの処理](../../connect/jdbc/handling-errors.md)|返されるエラーを処理する方法について説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
+|[エラーの処理](../../connect/jdbc/handling-errors.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から返されたエラーを処理する方法について説明します。|  
 |[ドライバー バージョンの取得](../../connect/jdbc/getting-the-driver-version.md)|インストールされている JDBC ドライバーのバージョンを特定する方法について説明します。|  
 |[ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)|JDBC ドライバーを使用しているときにトレースを有効にする方法について説明します。|  
 |[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)|データベース接続のトラブルシューティングを行う方法について説明します。|  

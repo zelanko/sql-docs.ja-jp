@@ -12,14 +12,14 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c5522edf4fe8c41b0f9b1af4db57d83065a05954
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 6e8108127c3a25cb3a040cefbf782d7d0f2a2681
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109844"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024405"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>クライアント接続 (OLE DB) でのサービス プリンシパル名 (SPN)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "39109844"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
-  このトピックでは、クライアント アプリケーションでサービス プリンシパル名 (SPN) をサポートする OLE DB のプロパティとメンバー関数について説明します。 クライアント アプリケーションでの Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)します。 サンプルについては、次を参照してください。[統合 Kerberos 認証&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)します。  
+  このトピックでは、クライアント アプリケーションでサービス プリンシパル名 (SPN) をサポートする OLE DB のプロパティとメンバー関数について説明します。 SPN および Kerberos 認証の詳細については、「[クライアント接続でのサービス プリンシパル名 &#40;SPN&#41; のサポート](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。 サンプルについては、次を参照してください。[統合 Kerberos 認証&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)します。  
   
 ## <a name="provider-initialization-string-keywords"></a>プロバイダー初期化文字列のキーワード  
  次に示すプロバイダー初期化文字列のキーワードは、OLE DB アプリケーションで SPN をサポートします。 次の表の "キーワード" 列の値は、IDBInitialize::Initialize のプロバイダー文字列に使用されます。 "説明" 列の値は、ADO または IDataInitialize::GetDataSource を使用して接続するときに初期化文字列で使用されます。  

@@ -1,5 +1,5 @@
 ---
-title: SQLServerBlob クラス |Microsoft ドキュメント
+title: SQLServerBlob クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83662d032d762eb4109576ab2f2aa253aaabb6fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c6f9ccb8e9a479d026430dece3ec1fed9bc8c33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845507"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783910"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "32845507"
   
  **拡張:** java.lang.Object  
   
- **実装:** java.sql.Blob、java.io.Serializable  
+ 実装 :** java.sql.Blob、java.io.Serializable  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,11 +44,11 @@ ms.locfileid: "32845507"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>解説  
- BLOB が格納されている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]IMAGE データ型として。  
+## <a name="remarks"></a>Remarks  
+ BLOB は、IMAGE データ型として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に格納されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerBlob のメンバー](../../../connect/jdbc/reference/sqlserverblob-members.md)   
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

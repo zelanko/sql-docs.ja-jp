@@ -1,5 +1,5 @@
 ---
-title: リリース ノート Microsoft Drivers for PHP for SQL Server |Microsoft Docs
+title: Microsoft SQL Server 用 Drivers for PHP のリリース ノート
 ms.custom: ''
 ms.date: 07/20/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ef89936cb49105690795cd6c0312f7d81ed0b86
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: d06042b61e96da8e003cf893f86dac905832743b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174959"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786097"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のリリース ノート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "39174959"
 
 - PHP 5.4 のサポート  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3 では、PHP 5.2 はサポートされていません。  
 - AttachDBFileName 接続オプションが追加されています。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
-- [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]で追加された LocalDB のサポート。 詳細については、次を参照してください。 [LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)します。
+- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で追加された LocalDB のサポート。 詳細については、次を参照してください。 [LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)します。
 - AttachDBFileName 接続オプションが追加されています。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
 - 高可用性のディザスター リカバリー機能のサポート。 詳細については、次を参照してください。[高可用性、ディザスター リカバリーのサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)します。
 - クライアント側のカーソル (結果セットのメモリ内キャッシュ) のサポート。 詳細については、「[カーソルの種類 &#40;SQLSRV ドライバー&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)」および「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。

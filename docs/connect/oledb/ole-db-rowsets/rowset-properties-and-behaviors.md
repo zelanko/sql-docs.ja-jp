@@ -17,14 +17,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 11b4361f43ff05ff009f70a2baeb627656443f9b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 7c98299d1dc55a19d2199222ea3e639ae1e5d4bb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108654"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037435"
 ---
 # <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "39108654"
 |DBPROP_ACCESSORDER|R/W: 読み取り/書き込み<br /><br /> 既定値 : DBPROPVAL_AO_RANDOM <br /><br /> 説明 : アクセスの順序です。 行セット内の列にアクセスする順序を指定します。<br /><br /> DBPROPVAL_AO_RANDOM: 任意の順序で列にアクセスできます。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: ストレージ オブジェクトとしてバインドされている列は、列序数で決まるシーケンシャルな順序でしかアクセスできません。<br /><br /> DBPROPVAL_AO_SEQUENTIAL: すべての列には、列序数で決まるシーケンシャルな順序でアクセスする必要があります。|  
 |DBPROP_APPENDONLY|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: OLE DB Driver の SQL Server ストレージ オブジェクトのブロックが他の行セット メソッドを使用します。|  
-|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : OLE DB Driver for SQL Server は、DBPROP_BOOKMARKS または DBPROP_LITERALBOOKMARKS が VARIANT_TRUE のとき、行セットの行 ID のブックマークをサポートします。<br /><br /> いずれかのプロパティを VARIANT_TRUE に設定しても、ブックマークによる行セットの位置指定が有効になるわけではありません。 ブックマークによる行セットの位置指定をサポートする行セットを作成するには、DBPROP_IRowsetLocate または DBPROP_IRowsetScroll を VARIANT_TRUE に設定します。<br /><br /> OLE DB Driver for SQL Server を使用して、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ブックマークを含む行セットをサポートするカーソル。 詳細については、「[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。<br /><br /> 注: その他の OLE DB Driver for SQL Server カーソル定義プロパティと競合してこれらのプロパティの設定エラーが発生します。 たとえば、DBPROP_OTHERINSERT が VARIANT_TRUE のときに、DBPROP_BOOKMARKS を VARIANT_TRUE に設定すると、コンシューマーが行セットを開く時点でエラーが発生します。|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : OLE DB Driver for SQL Server は、DBPROP_BOOKMARKS または DBPROP_LITERALBOOKMARKS が VARIANT_TRUE のとき、行セットの行 ID のブックマークをサポートします。<br /><br /> いずれかのプロパティを VARIANT_TRUE に設定しても、ブックマークによる行セットの位置指定が有効になるわけではありません。 ブックマークによる行セットの位置指定をサポートする行セットを作成するには、DBPROP_IRowsetLocate または DBPROP_IRowsetScroll を VARIANT_TRUE に設定します。<br /><br /> OLE DB Driver for SQL Server を使用して、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ブックマークを含む行セットをサポートするカーソル。 詳細については、「[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。<br /><br /> これらのプロパティ設定と、OLE DB Driver for SQL Server のその他のカーソル定義プロパティ設定の間に一貫性がないと、エラーが発生します。 たとえば、DBPROP_OTHERINSERT が VARIANT_TRUE のときに、DBPROP_BOOKMARKS を VARIANT_TRUE に設定すると、コンシューマーが行セットを開く時点でエラーが発生します。|  
 |DBPROP_BOOKMARKSKIPPED|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : ブックマークが設定された行セットの位置指定または検索を実行する際に、コンシューマーが無効なブックマークを報告した場合、OLE DB Driver for SQL Server は DB_E_BADBOOKMARK を返します。|  
 |DBPROP_BOOKMARKTYPE|R/W: 読み取り専用<br /><br /> 既定値 : DBPROPVAL_BMK_NUMERIC <br /><br /> 説明: SQL Server の OLE DB Driver は、数値ブックマークのみを実装します。 OLE DB Driver for SQL Server のブックマークでは、32 ビット符号なし整数、DBTYPE_UI4 を入力します。|  
 |DBPROP_CACHEDEFERRED|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  

@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
-ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367644"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783905"
 ---
 # <a name="connection-options"></a>接続オプション
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "39367644"
 |KeyStoreSecret|String|Azure Key Vault にアクセスしようとしました。 アカウントの資格情報シークレット。 <br /><br />KeyStoreAuthentication 場合**KeyVaultPassword**、Azure Active Directory パスワードを必要があります。 <br /><br />KeyStoreAuthentication 場合**KeyVaultClientSecret**アプリケーションのクライアント シークレットがあります。|未設定。|
 |LoginTimeout|整数 (SQLSRV ドライバー)<br /><br />文字列 (PDO_SQLSRV ドライバー)|接続の試行に失敗するまで待機する秒数を指定します。|タイムアウトはありません。|  
 |MultipleActiveResultSets|複数のアクティブな結果セットを使用するには、1 または **true** 。<br /><br />複数のアクティブな結果セットを無効にするには、0 または **false** 。|複数のアクティブな結果セット (MARS) のサポートを無効にするか、または明示的に有効にします。<br /><br />詳細については、「[方法: 複数のアクティブな結果セット &#40;MARS&#41; を無効にする](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)」を参照してください。|true (1)|  
-|MultiSubnetFailover|String|[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **multiSubnetFailover=yes** を指定してください。 **multiSubnetFailover=yes** によって、(現在) アクティブなサーバーを迅速に検出し、接続するように [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] が構成されます。 可能な値は Yes と No です。<br /><br />詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、ディザスター リカバリーのためサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)します。|いいえ|  
+|MultiSubnetFailover|String|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **multiSubnetFailover=yes** を指定してください。 **multiSubnetFailover=yes** によって、(現在) アクティブなサーバーを迅速に検出し、接続するように [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] が構成されます。 可能な値は Yes と No です。<br /><br />詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、ディザスター リカバリーのためサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)します。|いいえ|  
 |PWD<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|String|SQL Server 認証で接続するときに使用するユーザー ID に関連付けるパスワードを指定します<sup>4</sup>。|値は設定されません。|  
 |QuotedId|SQL-92 ルールを使用するには、1 または **true**。<br /><br />レガシ ルールを使用するには、0 または **false** 。|引用符で囲まれた識別子に SQL-92 ルールを使用する (1 または **true**) か、またはレガシ Transact-SQL ルールを使用する (0 または **false**) かを指定します。|**true** (1)|  
 |ReturnDatesAsStrings<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|日付/時刻型を文字列として返すには、1 または **true** 。<br /><br />日付/時刻型を PHP **DateTime** 型として返すには、0 または **false** 。|日付/時刻型 (datetime、date、time、datetime2、および datetimeoffset) を文字列または PHP 型として取得します。 PDO_SQLSRV ドライバーを使用する場合、日付は文字列として返されます。 PDO_SQLSRV ドライバーには **datetime** 型はありません。<br /><br />詳細については、「 [方法: SQLSRV ドライバーを利用し、日付/時刻型を取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」を参照してください。|**false**|  
 |スクロール可能|String|「buffered」は、結果セット全体をメモリ内にキャッシュするために、クライアント側の (バッファー) カーソルが必要ですることを示します。 詳細については、「[カーソルの種類 &#40;SQLSRV ドライバー&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)」を参照してください。|順方向専用カーソル|  
-|[サーバー]<br /><br />(SQLSRV ドライバーではサポートされていません)|String|接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンス。<br /><br />また、AlwaysOn 可用性グループへの接続に仮想ネットワーク名を指定することもできます。 詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、ディザスター リカバリーのためサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)します。|サーバーは必須キーワードです (ただし、接続文字列の最初のキーワードである必要はありません)。 サーバー名がキーワードに渡されない場合は、ローカル インスタンスへの接続が試行されます。<br /><br />サーバーに渡される値には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスの名前またはインスタンスの IP アドレスを指定できます。 必要に応じて、ポート番号を指定できます (たとえば、`sqlsrv:server=(local),1033`)。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン 3.0 以降では、 `server=(localdb)\instancename`で LocalDB インスタンスを指定することもできます。 詳細については、次を参照してください。 [LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)します。|  
+|[サーバー]<br /><br />(SQLSRV ドライバーではサポートされていません)|String|接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス。<br /><br />また、AlwaysOn 可用性グループへの接続に仮想ネットワーク名を指定することもできます。 詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、ディザスター リカバリーのためサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)します。|サーバーは必須キーワードです (ただし、接続文字列の最初のキーワードである必要はありません)。 サーバー名がキーワードに渡されない場合は、ローカル インスタンスへの接続が試行されます。<br /><br />サーバーに渡される値には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前またはインスタンスの IP アドレスを指定できます。 必要に応じて、ポート番号を指定できます (たとえば、`sqlsrv:server=(local),1033`)。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン 3.0 以降では、 `server=(localdb)\instancename`で LocalDB インスタンスを指定することもできます。 詳細については、次を参照してください。 [LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)します。|  
 |TraceFile|String|トレース データに使用するファイルのパスを指定します。|値は設定されません。|  
 |TraceOn|トレースを有効にするには、1 または **true** 。<br /><br />トレースを無効にするには、0 または **false** 。|確立中の接続に対して ODBC トレースを有効にする (1 または **true**) か、または無効にする (0 または **false**) かを指定します。|**false** (0)|  
 |TransactionIsolation|SQLSRV ドライバーは、次の値を使用します。<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />PDO_SQLSRV ドライバーは、次の値を使用します。<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|トランザクション分離レベルを指定します。<br /><br />トランザクション分離の詳細については、SQL Server のドキュメントの「[SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。|SQLSRV_TXN_READ_COMMITTED<br /><br />内の複数の<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
@@ -67,7 +67,7 @@ ms.locfileid: "39367644"
 
 3. *Encryption* を有効にすると、データの暗号化に必要な計算オーバーヘッドにより、いくつかのアプリケーションのパフォーマンスに影響を与える可能性があります。  
 
-4. 接続する *UID* 認証で接続する場合は、 *PWD* 属性と [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 属性の両方を設定する必要があります。  
+4. 接続する *UID* 認証で接続する場合は、 *PWD* 属性と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 属性の両方を設定する必要があります。  
 
 サポートされているキーの多くは、ODBC 接続文字列属性です。 ODBC 接続文字列については、「[SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。
 

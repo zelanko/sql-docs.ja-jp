@@ -16,17 +16,17 @@ caps.latest.revision: 69
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6d26bdd9d3d91ca138e6ae4413acd122eb4676b3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ab32d1ac12bbe6f81241590a1e61b9579772cb7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946946"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787487"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-この記事は、インストールする方法を説明します、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS、SQL Server 用の省略可能なコマンド ライン ツールで (`bcp`と`sqlcmd`) および unixODBC 開発ヘッダー。
+この記事は、インストールする方法を説明します、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux と macOS、SQL Server 用の省略可能なコマンド ライン ツールで (`bcp`と`sqlcmd`) および unixODBC 開発ヘッダー。
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
 
@@ -439,7 +439,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 Linux の Microsoft ODBC ドライバーが正常に登録されたことを確認するには、コマンド ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"``` を実行します。  
   
-「[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux (Linux の ODBC ドライバーに既存の MSDN C++ ODBC サンプルを使用する)](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 」には、Linux の ODBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] に接続するコード サンプルが紹介されています。  
+「[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux (Linux の ODBC ドライバーに既存の MSDN C++ ODBC サンプルを使用する)](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 」には、Linux の ODBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するコード サンプルが紹介されています。  
   
 **アンインストール**  
   
@@ -454,7 +454,7 @@ Linux の ODBC ドライバー 11 をアンインストールするには、次�
 4.  `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
   
 ## <a name="troubleshooting-connection-problems"></a>接続の問題のトラブルシューティング  
-ODBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] に接続できない場合、次の情報を使用して問題を特定します。  
+ODBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続できない場合、次の情報を使用して問題を特定します。  
   
 最も一般的な接続の問題は、2 つの UnixODBC ドライバー マネージャーがインストールされている場合です。 /usr で libodbc\*.so\*を検索します。 複数バージョンのファイルがある場合、複数のドライバー マネージャーがインストールされている可能性があります。 また、アプリケーションに不適切なバージョンが使用される可能性があります。
   
@@ -510,7 +510,7 @@ Linux および MacOS 上の ODBC ドライバーは、次のコンポーネン�
 
 |コンポーネント|[説明]|  
 |---------------|-----------------|  
-|libmsodbcsql 17。X.so.X.X または libmsodbcsql 13。X.so.X.X|共有のオブジェクト (`so`) すべてのドライバーの機能を含むダイナミック ライブラリ ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`Driver 17 for し`/opt/microsoft/msodbcsql/lib64/`Driver 13 の。|  
+|libmsodbcsql 17。X.so.X.X または libmsodbcsql 13。X.so.X.X|ドライバーのすべての機能を含むダイナミック ライブラリ (`so`) ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`Driver 17 for し`/opt/microsoft/msodbcsql/lib64/`Driver 13 の。|  
 |`msodbcsqlr17.rll` または `msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルにインストールされます。 `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> 内 msodbcsql.h がインストールされている`/opt/microsoft/msodbcsql17/include/`Driver 17 for し`/opt/microsoft/msodbcsql/include/`Driver 13 の。 |
 |LICENSE.txt|使用許諾契約書の用語を含むテキスト ファイル。 このファイルが配置されます`/usr/share/doc/msodbcsql17/`Driver 17 for し`/usr/share/doc/msodbcsql/`Driver 13 の。|

@@ -14,17 +14,17 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662284"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785800"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC Driver のシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] または [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] のデータにアクセスするには、次のコンポーネントをコンピューターにインストールする必要があります。
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] のデータにアクセスするには、次のコンポーネントをコンピューターにインストールする必要があります。
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([ダウンロード](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java ランタイム環境
@@ -44,7 +44,7 @@ ms.locfileid: "39662284"
   
 **Microsoft JDBC Driver 7.0 for SQL Server:**  
 
-  JDBC ドライバーの 7.0 には、各インストール パッケージの 2 つの JAR クラス ライブラリが含まれています: **mssql-jdbc-7.0.0.jre8.jar**、および**mssql-jdbc-7.0.0.jre10.jar**します。
+  JDBC Driver 6.2 の各インストール パッケージには、2 つの JAR クラス ライブラリ (**mssql-jdbc-6.2.2.jre7.jar** および **mssql-jdbc-6.2.2.jre8.jar**) が含まれています。
 
   JDBC Driver 7.0 は、Sun と同等のすべての主要な Java 仮想マシンで操作とサポートができるよう設計されていますが、テストが実行されるのは Sun JRE 8.0 と 10.0 上のみです。
   
@@ -68,7 +68,7 @@ ms.locfileid: "39662284"
   
 **Microsoft JDBC Driver 6.4 for SQL Server:**  
 
-  JDBC Driver 6.4、には 3 つの JAR クラス ライブラリには、各インストール パッケージが含まれています: **mssql-jdbc-6.4.0.jre7.jar**、 **mssql-jdbc-6.4.0.jre8.jar**と**mssql-jdbc-6.4.0.jre9.jar**.
+  JDBC Driver 6.2 の各インストール パッケージには、2 つの JAR クラス ライブラリ (**mssql-jdbc-6.2.2.jre7.jar** および **mssql-jdbc-6.2.2.jre8.jar**) が含まれています。
 
   JDBC Driver 6.4 は、Sun と同等のすべての主要な Java 仮想マシンで操作とサポートができるよう設計されていますが、Sun JRE 7.0、8.0、9.0 のみでテストされます。
   
@@ -149,9 +149,9 @@ JDBC Driver 6.4 は、Maven Central Repository の使用もし、POM で次の�
  JDBC ドライバーは、Java 仮想マシン (JVM) の使用をサポートするすべてのオペレーティング システムで機能するように設計されています。 ただし、公式にテストされているのは、Sun Solaris、SUSE Linux、および Windows オペレーティング システムだけです。  
   
 ## <a name="supported-languages"></a>サポートされる言語  
- JDBC ドライバーは、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 列の照合順序をサポートしています。 JDBC ドライバーでサポートされる照合順序の詳細については、次を参照してください。 [JDBC Driver の国際対応](../../connect/jdbc/international-features-of-the-jdbc-driver.md)します。  
+ JDBC ドライバーは、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列の照合順序をサポートしています。 JDBC ドライバーでサポートされる照合順序の詳細については、次を参照してください。 [JDBC Driver の国際対応](../../connect/jdbc/international-features-of-the-jdbc-driver.md)します。  
   
- 照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] オンライン ブックの「照合順序の使用」を参照してください。  
+ 照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「照合順序の使用」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

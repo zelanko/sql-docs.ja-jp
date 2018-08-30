@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd787ee638e570419362fd62a4844ff856e8dbf1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3287815e6622d2d44693b401e2829275d22a2785
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982354"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784441"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows の機能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,28 +35,28 @@ Azure Active Directory を Azure Active Directory (Azure AD での id を使用�
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Windows の Microsoft ODBC Driver 11 for SQL Server  
 
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] には、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] に付属の [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]Native Client ODBC ドライバーのすべての機能が含まれています。 詳細については、「 [SQL Server Native Client プログラミング](http://msdn.microsoft.com/library/ms130892.aspx)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ODBC ドライバーは、Windows オペレーティング システムに付属の ODBC ドライバーに基づいています。 詳細については、「 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)」を参照してください。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に付属の [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native Client ODBC ドライバーのすべての機能が含まれています。 詳細については、「 [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、Windows オペレーティング システムに付属の ODBC ドライバーに基づいています。 詳細については、「 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)」を参照してください。  
   
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] のこのリリースには、次の新機能が含まれています。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のこのリリースには、次の新機能が含まれています。  
   
 ### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>ログイン タイムアウトを指定するための bcp.exe の – l オプション
  
-- l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] への `bcp.exe` のログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp.exe` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。 (約) 10 秒未満のログイン タイムアウトは信頼できません。  
+- l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への `bcp.exe` のログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp.exe` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。 (約) 10 秒未満のログイン タイムアウトは信頼できません。  
   
 ### <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] は、[ドライバー対応の接続プール](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)をサポートしています。 詳細については、「 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)」を参照してください。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[ドライバー対応の接続プール](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)をサポートしています。 詳細については、「 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)」を参照してください。  
   
 ### <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] は、[非同期実行 (通知方法)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx) をサポートしています。 使用例については、「[非同期実行 &#40;通知方法&#41; の例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)」を参照してください。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[非同期実行 (通知方法)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx) をサポートしています。 使用例については、「[非同期実行 &#40;通知方法&#41; の例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)」を参照してください。  
   
 ### <a name="connection-resiliency"></a>接続の回復
 アプリケーションを Microsoft Azure SQL データベースに接続されたままにするため、Windows 上の ODBC ドライバーは、アイドル状態の接続を復元できます。 詳細については、「 [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)」を参照してください。  
   
 ## <a name="behavior-changes"></a>動作の変更
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client の場合、`-y0`オプション`sqlcmd.exe`表示幅が 0 の場合、1 MB で切り捨てられる出力を原因となった。
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の場合、`-y0`オプション`sqlcmd.exe`表示幅が 0 の場合、1 MB で切り捨てられる出力を原因となった。
   
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 以降では、`–y0` を指定したときに、1 つの列で取得できるデータの量に制限がなくなりました。 `sqlcmd.exe` は、最大 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] のデータ型の最大値) の列をストリームするようになりました。  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降では、`–y0` を指定したときに、1 つの列で取得できるデータの量に制限がなくなりました。 `sqlcmd.exe` は、最大 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型の最大値) の列をストリームするようになりました。  
   
 別の相違点は、その両方を指定する`-h`と`-y0`オプションは互換性がないことを報告するエラーが生成されます。 列見出し間に出力する行数を指定する `-h` は、`-y0` と互換性がなく、ヘッダーは出力されませんでしたが、無視されました。
   

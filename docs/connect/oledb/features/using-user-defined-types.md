@@ -23,14 +23,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], user-defined types
 - ISSCommandWithParameters interface
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 5bc34584a052dc916540966690e54aecf7716092
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a92307ff23b9e267c79a573e10d091290f98c463
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107088"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037135"
 ---
 # <a name="using-user-defined-types"></a>ユーザー定義型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "39107088"
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
  次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列は、dbtype_udt 型として SQL Server の OLE DB ドライバーを通じて公開されます。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
   
-|データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外へ**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外から**|  
+|データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外から**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|サポートされている<sup>6</sup>|エラー<sup>1</sup>|サポートされている<sup>6</sup>|エラー<sup>5</sup>|  
 |DBTYPE_BYTES|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|  
@@ -154,7 +154,7 @@ ms.locfileid: "39107088"
  SSPROP_PARAM_UDT_NAME は必須です。 SSPROP_PARAM_UDT_CATALOGNAME と SSPROP_PARAM_UDT_SCHEMANAME は省略可能です。 いずれかのプロパティが適切に指定されていない場合、DB_E_ERRORSINCOMMAND が返されます。 SSPROP_PARAM_UDT_CATALOGNAME プロパティと SSPROP_PARAM_UDT_SCHEMANAME プロパティがどちらも指定されていない場合、UDT は、テーブルと同じデータベースおよびスキーマ内に定義する必要があります。 UDT の定義が、テーブルと同じデータベース内にあって、同じスキーマ内にない場合、SSPROP_PARAM_UDT_SCHEMANAME プロパティを指定する必要があります。 UDT の定義が異なるデータベースにある場合、SSPROP_PARAM_UDT_CATALOGNAME と SSPROP_PARAM_UDT_SCHEMANAME の両方を指定する必要があります。  
   
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
- 内のテーブルの作成をサポートするために、 **ITableDefinition**インターフェイスの場合は、SQL Server では、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに次の 3 つの新しい列を追加の OLE DB ドライバー。  
+ **ITableDefinition** インターフェイスでのテーブルの作成をサポートするため、OLE DB Driver for SQL Server では、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに次の 3 つの新しい列が追加されました。  
   
 |[オブジェクト名]|[説明]|型|[説明]|  
 |----------|-----------------|----------|-----------------|  

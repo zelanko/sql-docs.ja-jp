@@ -15,12 +15,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cd3bb6f733b9d9cac1dc3973e65199c9357bbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a4a07cb8f8c5c3043ee307b7b7653846cc2d4e6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054720"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784844"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>このバージョンのドライバーの既知の問題
 
@@ -30,7 +30,7 @@ ms.locfileid: "38054720"
 
 その他の問題は、 [Microsoft ODBC ドライバー チームのブログ](http://blogs.msdn.com/b/sqlnativeclient/)に投稿されます。  
 
-- Windows、Linux、および macOS では、私用領域 (PUA) またはエンド ユーザー定義文字 (EUDC) の文字を異なる方法で変換します。 [!INCLUDE[tsql](../../../includes/tsql_md.md)] 内のサーバーで実行される変換では、Windows 変換ライブラリを使用します。 ドライバーの変換では、Windows、Linux、または macOS の変換ライブラリを使用します。 各ライブラリは、これらの変換を実行するときに異なる結果を生成する可能性があります。 詳細については、「 [エンド ユーザーによって定義されており、秘密の使用領域文字](http://msdn.microsoft.com/library/dd317802.aspx)」を参照してください。
+- Windows、Linux、および macOS では、私用領域 (PUA) またはエンド ユーザー定義文字 (EUDC) の文字を異なる方法で変換します。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 内のサーバーで実行される変換では、Windows 変換ライブラリを使用します。 ドライバーの変換では、Windows、Linux、または macOS の変換ライブラリを使用します。 各ライブラリは、これらの変換を実行するときに異なる結果を生成する可能性があります。 詳細については、「 [エンド ユーザーによって定義されており、秘密の使用領域文字](/windows/desktop/Intl/end-user-defined-characters)」を参照してください。
 
 - クライアントのエンコーディングが utf-8 の場合は、ドライバー マネージャーは常に正しく変換されません utf-8 から utf-16 に。 現時点では、データの破損は、文字列内の 1 つまたは複数の文字が有効な utf-8 文字でない場合に発生します。 ASCII 文字が正しくマップされます。 SQLCHAR バージョンの ODBC API (たとえば、SQLDriverConnectA) を呼び出すときに、ドライバー マネージャーはこの変換を試行します。 SQLWCHAR バージョンの ODBC API (たとえば、SQLDriverConnectW) を呼び出す際には、ドライバー マネージャーはこの変換を試行しません。  
 

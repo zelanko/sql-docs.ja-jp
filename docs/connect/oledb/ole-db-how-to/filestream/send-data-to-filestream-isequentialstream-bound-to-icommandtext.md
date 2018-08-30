@@ -12,14 +12,14 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 36461107cf11c9119bd9e11b73cb7b96383483e7
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 2c23800d0da22e48d89131cf1933d601cc893c3d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108774"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019461"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "39108774"
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- INCLUDE 環境変数に、sqlncli.h が保存されているディレクトリが含まれていることを確認します。  
+ INCLUDE 環境変数に、msoledbsql.h が保存されているディレクトリが含まれていることを確認します。  
   
  サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "39108774"
   
  Compile ICommandUpload.cpp、ISSHelper.cpp、ole32.lib、および oleaut32.lib をコンパイルします。  
   
- このサンプルを実行するには、サーバーの名前 (server\instance_name) に加えて、書き込むデータのサイズを指定する 4 MB (0x400001) ～ 4 GB (0xFFFFFFFF) の値を渡す必要があります。  
+ このサンプルを実行するには、サーバーの名前 (server\instance_name) に加えて、書き込むデータのサイズを指定する 4 MB (0x400001) から 4 GB (0xFFFFFFFF) の値を渡す必要があります。  
   
  4 つ目の ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) コード リストは、このサンプルで作成したデータベースを削除します。  
   

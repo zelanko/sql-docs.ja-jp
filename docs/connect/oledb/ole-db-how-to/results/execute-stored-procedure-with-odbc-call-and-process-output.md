@@ -15,21 +15,21 @@ helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 772ab1a29c99c2e88e9c076c8a9d58ea5123b444
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 26c09dd874d8cd1fafafb627d4e7985d6586368c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109864"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033087"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 呼び出しと処理の出力でのストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合の出力パラメーター データが使用可能な場合に**imultipleresults::getresult** DB_S_NORESULT を返すまたは**IMultipleResults**インターフェイスが完全にリリースされると、最初にどちらかに発生します。  
+  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、**IMultipleResults::GetResult** が DB_S_NORESULT を返すとき、または **IMultipleResults** インターフェイスが完全に解放されるとき、いずれか早いほうの時点で、出力パラメーター データを使用できるようになります。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  

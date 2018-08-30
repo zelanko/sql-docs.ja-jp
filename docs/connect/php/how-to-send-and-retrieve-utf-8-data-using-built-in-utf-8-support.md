@@ -1,5 +1,5 @@
 ---
-title: '方法: 組み込みの utf-8 サポートを使用した utf-8 データの送受信 |Microsoft ドキュメント'
+title: '方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得'
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01baad352386b88b54412b4390df7cce40df6996
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307761"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784741"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,12 +40,12 @@ UTF-8 でエンコードされたデータを送信または取得するには:
   
     接続オプションの一部として文字セットを指定すると、ドライバーは、その他の接続オプション文字列で同じ文字セットを使用すると見なします。 サーバー名およびクエリ文字列も同じ文字セットを使用すると見なします。  
   
-Utf-8 または SQLSRV_ENC_CHAR を渡すことができます**CharacterSet**SQLSRV_ENC_BINARY を渡すことはできませんが、します。 既定のエンコーディングは SQLSRV_ENC_CHAR です。  
+UTF-8 または SQLSRV_ENC_CHAR はCharacterSet** に渡すことができることに注意してください (SQLSRV_ENC_BINARY を渡すことはできません)。 既定のエンコーディングは SQLSRV_ENC_CHAR です。  
   
 ## <a name="example"></a>例  
-次の例では、接続の作成時に、UTF-8 文字セットを指定して、UTF-8 でエンコードされたデータを送信および取得する方法を示します。 この例では、Production.ProductReview テーブルの指定したレビュー ID の Comments 列を更新します。 この例では、新規に更新したデータも取得し、それを表示します。 なお、Comments 列は、型の**nvarchar(3850) です。** なお、データがサーバーに送信される前に、PHP を使用してエンコーディング utf-8 に変換されます**utf8_encode**関数。 これはデモンストレーションのみを目的としています。 実際のアプリケーション シナリオでは、utf-8 でエンコードされたデータで開始します。  
+次の例では、接続の作成時に、UTF-8 文字セットを指定して、UTF-8 でエンコードされたデータを送信および取得する方法を示します。 この例では、Production.ProductReview テーブルの指定したレビュー ID の Comments 列を更新します。 この例では、新規に更新したデータも取得し、それを表示します。 なお、Comments 列は、nvarcahr(3850)** 型です。 また、サーバーに送信される前に、データは PHP utf8_encode** 関数を使用して UTF-8 エンコードに変換されます。 これはデモンストレーションのみを目的としています。 実際のアプリケーションのシナリオでは、UTF-8 でエンコード済みのデータで開始します。  
   
-例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]と[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
+この例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
   
 ```  
 <?php  
@@ -129,7 +129,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Unicode データを格納する方法については、次を参照してください。 [Unicode データを扱う](https://msdn.microsoft.com/library/ms175180.aspx)です。  
+Unicode データを格納する方法の詳細については、「 [Unicode データを使用した作業](https://msdn.microsoft.com/library/ms175180.aspx)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例は最初のサンプルと似ていますが、このサンプルでは接続で UTF-8 文字セットを指定する代わりに、列に UTF-8 文字セットを指定する方法を示します。  

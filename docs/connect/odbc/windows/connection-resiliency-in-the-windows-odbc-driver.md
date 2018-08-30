@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1acbbfea1c1ce1a477644b64938b3e5c98ff7429
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060333"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784236"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC ドライバーの接続レジリエンシー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38060333"
   
  アイドル接続の回復性に関する詳細については、「[Technical Article – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996)」 (技術記事 - アイドル接続の回復性) を参照してください。  
   
- Windows の場合、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] には再接続動作を変更する方法が 2 つあります。  
+ Windows の場合、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には再接続動作を変更する方法が 2 つあります。  
   
 -   接続の再試行回数。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "38060333"
   
      次の場合に接続再試行回数を変更できます。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 接続の再試行回数 **制御で ODBC Driver for** を使用するデータ ソースを定義または変更する。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続の再試行回数 **制御で ODBC Driver for** を使用するデータ ソースを定義または変更する。  
   
     -   **ConnectRetryCount** 接続文字列キーワードを使用する。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "38060333"
   
      次の場合に接続再試行間隔を変更できます。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 接続の再試行間隔 **制御で ODBC Driver for** を使用するデータ ソースを定義または変更する。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続の再試行間隔 **制御で ODBC Driver for** を使用するデータ ソースを定義または変更する。  
   
     -   **ConnectRetryInterval** 接続文字列キーワードを使用する。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "38060333"
 |IMC06|接続が切断され、復旧は不可能です。 クライアント ドライバーは接続を復旧不可能としてマークしています。 接続復旧は試行されませんでした。|  
   
 ## <a name="example"></a>例  
- 次の例には、2 つの関数が含まれています。 **func1** は、Windows の場合に、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] を使用するデータ ソース名 (DSN) で接続する方法を示しています。 DSN は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 認証を使用し、ユーザー ID を指定します。 **func1**で接続再試行回数を取得し、 **SQL_COPT_SS_CONNECT_RETRY_COUNT**します。  
+ 次の例には、2 つの関数が含まれています。 **func1** は、Windows の場合に、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用するデータ ソース名 (DSN) で接続する方法を示しています。 DSN は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用し、ユーザー ID を指定します。 **func1**で接続再試行回数を取得し、 **SQL_COPT_SS_CONNECT_RETRY_COUNT**します。  
   
  **func2** は **SQLDriverConnect**、 **ConnectRetryCount** 接続文字列キーワード、接続属性を使用し、接続再試行と再試行間隔の設定を取得します。  
   

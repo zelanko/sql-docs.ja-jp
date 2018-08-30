@@ -14,19 +14,19 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf422903a4c03258a7c3fc9a4d42f6525ababd9b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8317d2a9f638b2233991d7d53240733c1564182b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039250"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787480"
 ---
 # <a name="updatedatetimeoffsetstring-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(string, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  このメソッドは [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 で追加されました。  
+  このメソッドは [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 で追加されました。  
   
- 指定した列の値を更新、 [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値、列の名前を指定します。  
+ 0 から始まる列の序数を使用して、指定された列の値を [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値に更新します。  
   
 ## <a name="syntax"></a>構文  
   

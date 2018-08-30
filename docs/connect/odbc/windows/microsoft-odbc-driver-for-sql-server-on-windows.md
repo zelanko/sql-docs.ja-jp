@@ -14,17 +14,17 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 08d1c94854e4d073d4cb26a3e2e320a0d93c08f1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047440"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786699"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Microsoft ODBC Drivers for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]を Microsoft には、標準の ODBC インターフェイスを実装するアプリケーション プログラミング インターフェイス (API) を提供するスタンドアロンの ODBC ドライバーは[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]します。
+Microsoft ODBC Drivers for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を Microsoft には、標準の ODBC インターフェイスを実装するアプリケーション プログラミング インターフェイス (API) を提供するスタンドアロンの ODBC ドライバーは[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。
 
 Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケーションを作成できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server を使用すると、Azure SQL Database、Azure SQL Data Warehouse、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、SQL Server 2005 に接続できます。  
 
@@ -38,7 +38,7 @@ Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケー�
 | Microsoft SQL Server 用 ODBC Driver 11 | <ul><li>ドライバー対応接続プール</li><li>接続の回復</li><li>非同期実行 (ポーリング メソッド)</li></ul> |    
 
 ## <a name="documentation"></a>ドキュメント  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 用 Microsoft ODBC Driver に関するこのドキュメントの内容は次のとおりです。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用 Microsoft ODBC Driver に関するこのドキュメントの内容は次のとおりです。  
   
 -   [リリース ノート](../../../connect/odbc/windows/release-notes.md)  
 -   [Microsoft ODBC Driver for SQL Server on Windows の機能](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  

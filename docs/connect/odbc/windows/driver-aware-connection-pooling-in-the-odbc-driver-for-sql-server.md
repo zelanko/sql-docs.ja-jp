@@ -14,20 +14,20 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3cc9428f84db56675dbf58c977078fa4dcca6ae
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b5bbe5489392ec9fbce5e55e1ad72d90416b5242
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060010"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785193"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>OLE DB Provider for SQL Server のドライバー対応接続プール
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] は、[ドライバー対応の接続プール](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)をサポートしています。 このトピックでは、Windows 上の Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] のドライバー対応接続プールに追加された機能強化について説明します。  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[ドライバー対応の接続プール](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)をサポートしています。 このトピックでは、Windows 上の Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のドライバー対応接続プールに追加された機能強化について説明します。  
   
 -   `SQLDriverConnect` を使用する接続は、接続のプロパティに関係なく、`SQLConnect` を使用する接続とは別のプールに移動されます。
-- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 認証とドライバー対応接続プールを使用する場合、ドライバーはプール内の接続を分離するために現在のスレッドに Windows ユーザーのセキュリティ コンテキストは使用しません。 つまり、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 認証での Windows での権限借用シナリオでの接続と、接続パラメーターが同じで、バックエンドとの接続に同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 認証資格証明を使用する場合、別の Windows ユーザーが同じプール接続を使用できる可能性があります。 Windows 認証とドライバー対応接続プールを使用する場合、ドライバーは、プール内の接続を分離するために現在の Windows ユーザーのセキュリティ コンテキストを使用します。 つまり、Windows での権限借用のシナリオでは、接続で同じパラメーターを使用していても、別の Windows ユーザーは同じ接続を使用しません。
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証とドライバー対応接続プールを使用する場合、ドライバーはプール内の接続を分離するために現在のスレッドに Windows ユーザーのセキュリティ コンテキストは使用しません。 つまり、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証での Windows での権限借用シナリオでの接続と、接続パラメーターが同じで、バックエンドとの接続に同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証資格証明を使用する場合、別の Windows ユーザーが同じプール接続を使用できる可能性があります。 Windows 認証とドライバー対応接続プールを使用する場合、ドライバーは、プール内の接続を分離するために現在の Windows ユーザーのセキュリティ コンテキストを使用します。 つまり、Windows での権限借用のシナリオでは、接続で同じパラメーターを使用していても、別の Windows ユーザーは同じ接続を使用しません。
 - Azure Active Directory とドライバー対応接続プールを使用する場合、ドライバーも、接続プールのメンバーシップを決定する認証の値を使用します。
   
 -   ドライバー対応接続プールは、無効な接続がプールから返されないようにします。  

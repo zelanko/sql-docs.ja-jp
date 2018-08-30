@@ -12,21 +12,21 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d2f4cd73d4d20d4b54573b300c5006bebd5fb6eb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1cfbd5bce17c658a7dff33bc7a590a22d525c193
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109004"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018191"
 ---
 # <a name="sparse-columns-support-ole-db"></a>スパース列のサポート (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このトピックでは、スパース列の SQL Server サポート用の OLE DB ドライバーについて説明します。 スパース列の詳細については、次を参照してください。 [OLE DB Driver for SQL Server でスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)します。 サンプルについては、次を参照してください。[表示列およびカタログ メタデータのスパース列の&#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)します。  
+  このトピックでは、スパース列の SQL Server サポート用の OLE DB ドライバーについて説明します。 スパース列の詳細については、次を参照してください。 [OLE DB Driver for SQL Server でスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)します。 [スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB ステートメント メタデータ  
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降では、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET を使用できます。 この値は、**column_set** 値である列に対して設定する必要があります。 DBCOLUMNFLAGS フラグを使用して取得できます、 *dwFlags* icolumnsinfo::getcolumnsinfo と icolumnsrowset::getcolumnsrowset によって返される行セットの DBCOLUMN_FLAGS 列のパラメーター。  

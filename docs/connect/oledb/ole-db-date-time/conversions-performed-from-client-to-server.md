@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4b68de60f6d1ffa345018478b5abc70ecf2839b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109824"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028031"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  間で実行される日付/時刻の変換について説明します OLE DB ドライバーを使用した SQL Server 用に記述されたクライアント アプリケーションと[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)](またはそれ以降)。  
+  OLE DB Driver for SQL Server を使用して作成されたクライアント アプリケーションと [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降) との間で実行される日付または時刻の変換について説明します。  
   
 ## <a name="conversions"></a>コンバージョン  
  この記事では、クライアントで行われる変換について説明します。 パラメーターに対して、サーバーで定義されているのとは異なる、秒の小数部の有効桁数をクライアントで指定した場合、サーバー側で変換すると処理に成功するのに、クライアント側で変換すると処理に失敗することがあります。 具体的には、クライアントでは、秒の小数部の切り捨てがエラーとして処理されますが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では時刻値が最も近い秒単位の値に丸められます。  

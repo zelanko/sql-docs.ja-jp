@@ -14,25 +14,25 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44d58351f0a120268983500166aeafdbfa773ee0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1ea9d74a413af299808155a3b8c8083360031db6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023980"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787034"
 ---
 # <a name="converting-data-types"></a>データ型の変換
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] では、データを送信するとき、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]からデータを取得するときにデータ型を指定できます。 データ型の指定は省略できます。 データ型を指定しない場合、既定の型が使用されます。 このセクションのトピックでは、データ型を指定する方法と既定のデータ型の詳細について説明します。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] では、データを送信するとき、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からデータを取得するときにデータ型を指定できます。 データ型の指定は省略できます。 データ型を指定しない場合、既定の型が使用されます。 このセクションのトピックでは、データ型を指定する方法と既定のデータ型の詳細について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|[説明]|  
 |---------|---------------|  
-|[既定の SQL Server のデータ型](../../connect/php/default-sql-server-data-types.md)|サーバーにデータを送信するときの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型について説明します。|  
+|[既定の SQL Server のデータ型](../../connect/php/default-sql-server-data-types.md)|サーバーにデータを送信するときの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型について説明します。|  
 |[既定の PHP データ型](../../connect/php/default-php-data-types.md)|サーバーからデータを取得するときの既定の PHP データ型について説明します。|  
-|[方法: SQL Server データ型を指定する](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|サーバーにデータを送信する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型を指定する方法について説明します。|  
+|[方法: SQL Server データ型を指定する](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|サーバーにデータを送信する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定する方法について説明します。|  
 |[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)|サーバーからデータを取得するときに PHP データ型を指定する方法について説明します。|  
 |[方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] に備わっている UTF-8 データ サポートを使用する方法について説明します。<br /><br />UTF-8 文字のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン 1.1 で追加されました。|  
 |[方法: Linux および macOS での ASCII データの送信と取得](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|使用する方法を示します[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の Linux または macOS での ASCII データをサポートします。<br /><br />バージョン 5.2 の Windows 以外の環境での ASCII 文字のサポートが追加されました、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]します。|

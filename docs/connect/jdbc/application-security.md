@@ -1,5 +1,5 @@
 ---
-title: アプリケーションのセキュリティ |Microsoft ドキュメント
+title: アプリケーションのセキュリティ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8226badb1031792badc1601cd12c2a0e2f13c9bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4132dfdc915f45f67b267a197dbfeef2004eb36f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827767"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786845"
 ---
 # <a name="application-security"></a>アプリケーション セキュリティ
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  使用すると、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]をアプリケーションのセキュリティを確保する予防措置を講じることが重要です。 以下のセクションでは、アプリケーションをセキュリティ保護するために実行できる手順に関する情報を提供します。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用するときは、アプリケーションのセキュリティを確保するための対策を講じることが重要です。 以下のセクションでは、アプリケーションをセキュリティ保護するために実行できる手順に関する情報を提供します。  
   
 ## <a name="using-java-policy-permissions"></a>Java のポリシー アクセス許可の使用  
- 使用すると、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、JDBC ドライバーで必要な Java ポリシーの必須のアクセス許可を指定することが重要です。 Java ランタイム環境 (JRE) には、スレッドがリソースにアクセスできるかどうかを判断するために実行時に使用できる拡張セキュリティ モデルがあります。 セキュリティ ポリシー ファイルでこのアクセスを制御することができます。 ポリシー ファイル自体は開発者およびコンテナーのシステム管理者が管理しますが、このトピックで挙げるアクセス許可は JDBC ドライバーの機能に影響します。  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用するときは、JDBC ドライバーに必要な Java のポリシー アクセス許可を指定することが重要です。 Java ランタイム環境 (JRE) には、スレッドがリソースにアクセスできるかどうかを判断するために実行時に使用できる拡張セキュリティ モデルがあります。 セキュリティ ポリシー ファイルでこのアクセスを制御することができます。 ポリシー ファイル自体は開発者およびコンテナーのシステム管理者が管理しますが、このトピックで挙げるアクセス許可は JDBC ドライバーの機能に影響します。  
   
  ポリシー ファイルの一般的なアクセス許可は、次のようになっています。  
   
@@ -63,9 +63,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  コード "file:/install_dir/lib/-" は、JDBC ドライバーのインストール ディレクトリを指します。  
   
 ## <a name="protecting-server-communication"></a>サーバーとの通信の保護  
- 通信するために、JDBC ドライバーを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース、インターネット プロトコル セキュリティ (IPSEC) または安全な Sockets Layer (SSL); のいずれかを使用して通信チャネルを保護することができます、または両方を使用することができます。  
+ JDBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信する場合、インターネット プロトコル セキュリティ (IPSec) または SSL (Secure Sockets Layer) を使用して、通信チャネルをセキュリティで保護できます。また、IPSec と SSL の両方を使用することも可能です。  
   
- SSL のサポートは、IPSec 以外の追加の保護レベルを提供するために使用できます。 SSL の使用に関する詳細については、次を参照してください。 [SSL 暗号化を使用して](../../connect/jdbc/using-ssl-encryption.md)です。  
+ SSL のサポートは、IPSec 以外の追加の保護レベルを提供するために使用できます。 SSL の使用方法の詳細については、次を参照してください。 [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)します。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)  

@@ -1,5 +1,5 @@
 ---
-title: システム要件 (ODBC Driver for SQL Server) |Microsoft Docs
+title: OLE DB Driver for SQL Server のシステム要件 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -18,17 +18,17 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bab69d8a2ebf405e99cc9cff7e4cdadb94d79f98
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fcac85e31f20d84377a2788e373892e05e8fddfa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047485"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786369"
 ---
 # <a name="system-requirements"></a>システム要件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-このトピックでは、Linux および macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] を使用する要件について説明します。
+このトピックでは、Linux および macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用する要件について説明します。
 
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>Microsoft ODBC Driver 13、13.1、17 for SQL Server
@@ -52,7 +52,7 @@ Linux と macOS のドライバーは、次のオペレーティング システ
 |Ubuntu Linux 16.10|13、13.1|
 |Ubuntu Linux 17.10|17|
 
-パッケージのインストール、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13、13.1、17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS で、ドライバーの依存関係」の説明に従って、お使いのディストリビューションのパッケージ管理システムを使用してインストールされているときに自動的に解決します。[ドライバーをインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。
+パッケージのインストール、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13、13.1、17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux と macOS で、ドライバーの依存関係」の説明に従って、お使いのディストリビューションのパッケージ管理システムを使用してインストールされているときに自動的に解決します。[ドライバーをインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver 11  
   
