@@ -110,7 +110,7 @@ ms.locfileid: "42783886"
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、ANSI_DEFAULTS および IMPLICIT_TRANSACTIONS 以外の接続プロパティのサーバー既定値を受け取ります。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって、ANSI_DEFAULTS は ON に、IMPLICIT_TRANSACTIONS は OFF に自動的に設定されます。
 
 > [!Important]
-> 認証に ActiveDirectoryPassword が設定されている場合、次のライブラリがクラスパスに含められている必要があります: [azure-active-directory-library-java](https://github.com/AzureAD/azure-activedirectory-library-for-java)。 [Maven リポジトリ](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j) で見つけることができます。 ライブラリとその依存関係をダウンロードする最も簡単な方法は、Maven を使用してください。 
+> 認証に ActiveDirectoryPassword が設定されている場合、次のライブラリがクラスパスに含められている必要があります: [azure-active-directory-library-java](https://github.com/AzureAD/azure-activedirectory-library-for-java)。 [Maven リポジトリ](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j) で見つけることができます。 ライブラリとその依存関係をダウンロードする最も簡単な方法は、Maven を使用することです。 
 > 1. 最初に、システムに Maven をインストールします。 
 > 2. ドライバーの [GitHub ページ](https://github.com/Microsoft/mssql-jdbc) へ移動します。
 > 3. Pom.xml ファイルをダウンロードします。
