@@ -1,6 +1,6 @@
 ---
-title: 'レッスン 4: 日付テーブルとしてマーク |Microsoft Docs'
-ms.date: 05/08/2018
+title: 'レッスン 3: 日付テーブルとしてマーク |Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77f29250621485f5606a0bf33615e8d15eb7d80b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cb63b6cb67303dd763263b7d9dbeea30cfc4e3b
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057810"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791983"
 ---
-# <a name="lesson-3-mark-as-date-table"></a>レッスン 3: 日付テーブルとしてマークします。
+# <a name="lesson-3-mark-as-date-table"></a>レッスン 3: 日付テーブルとしてマーク
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 「レッスン 2: データの追加」では、DimDate という名前のディメンション テーブルをインポートしました。 モデルでこのテーブルは DimDate と命名、中にそのことができますとも呼ばれます、*日付テーブル*日付と時刻のデータが含まれていることにします。  
@@ -29,7 +29,7 @@ ms.locfileid: "38057810"
   
 このレッスンの推定所要時間: **3 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 2: データを追加する](../analysis-services/lesson-2-add-data.md)します。 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>FullDateAlternateKey 列の名前を変更するには

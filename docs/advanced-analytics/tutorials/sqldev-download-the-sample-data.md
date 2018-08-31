@@ -1,28 +1,28 @@
 ---
-title: 埋め込まれた R (SQL Server Machine Learning) の NYC タクシーのデモ データとスクリプトのダウンロード |Microsoft Docs
-description: ニューヨーク市タクシーのサンプル データをダウンロードして、データベースの作成の手順です。 データは、SQL Server のストアド プロシージャおよび T-SQL 関数で R を埋め込む方法を示す SQL Server チュートリアルで使用されます。
+title: R と Python (SQL Server Machine Learning) の埋め込みの NYC タクシーのデモ データとスクリプトのダウンロード |Microsoft Docs
+description: ニューヨーク市タクシーのサンプル データをダウンロードして、データベースの作成の手順です。 データを R を埋め込む方法を示す SQL Server チュートリアルで使用して、SQL Server での Python にはストアド プロシージャと T-SQL 関数します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aca4450bdc152449fd30e974305d14a4ccbf77c5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395997"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703605"
 ---
-# <a name="load-nyc-taxi-demo-data-for-sql-server-tutorials"></a>SQL Server チュートリアルの NYC タクシーのデモ データを読み込みます
+# <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server 用の NYC タクシーのデモ データ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL server データベース内分析に R を使用する方法のチュートリアルについては、システムを準備します。
+この記事では、SQL server データベース内分析に R と Python を使用する方法のチュートリアルについては、システムを準備します。
 
 この演習では、サンプル データを環境を準備するための PowerShell スクリプトをダウンロードし、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルのいくつかのチュートリアルで使用します。 完了したら、 **NYCTaxi_Sample**データベースが実践的な学習のデモにデータを提供する、ローカルのインスタンスで使用できます。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 インターネット接続、PowerShell、およびコンピューターのローカル管理者権限を必要があります。 おく[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)やその他のツールをオブジェクトの作成を確認します。
 
@@ -30,9 +30,9 @@ ms.locfileid: "40395997"
 
 1.  Windows PowerShell コマンド コンソールを開きます。
   
-    保存先のディレクトリの作成や、指定した宛先へのファイルの書き込みに管理者特権が必要な場合、**[管理者として実行]** オプションを使用します。
+    使用して、**管理者として実行**先ディレクトリを作成するか、または指定したコピー先にファイルを書き込みます。
   
-2.  パラメーター *DestDir* の値を任意のローカル ディレクトリに変更し、次の PowerShell コマンドを実行します。  ここで使用した既定値は **TempRSQL**です。
+2.  パラメーター *DestDir* の値を任意のローカル ディレクトリに変更し、次の PowerShell コマンドを実行します。 ここで使用した既定値は **TempRSQL**です。
   
     ```ps
     $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
@@ -45,7 +45,7 @@ ms.locfileid: "40395997"
     *DestDir* で指定したフォルダーが存在しない場合、PowerShell スクリプトによって作成されます。
   
     > [!TIP]
-    > エラーが発生した場合は、このチュートリアルで使用するためのみに PowerShell スクリプトの実行ポリシーを、Bypass 引数を使用し、変更を現在のセッションにスコープして、一時的に **unrestricted** に設定できます。
+    > エラーが発生する場合は PowerShell スクリプトの実行ポリシーを一時的に設定できます**無制限**を Bypass 引数を使用し、変更、現在のセッションにスコープには、このチュートリアルでのみです。
     >   
     >````
     > Set\-ExecutionPolicy Bypass \-Scope Process
@@ -54,7 +54,7 @@ ms.locfileid: "40395997"
   
     インターネット接続によっては、ダウンロードに時間がかかる場合があります。
   
-3.  すべてのファイルがダウンロードされると、  *DestDir*で指定したフォルダーが PowerShell スクリプトによって開かれます。 PowerShell コマンド プロンプトで次のコマンドを実行し、ダウンロードされたファイルを確認します。
+3.  すべてのファイルがダウンロードされると、PowerShell スクリプトが表示されます、 *DestDir*フォルダー。 PowerShell コマンド プロンプトで次のコマンドを実行し、ダウンロードされたファイルを確認します。
   
     ```
     ls
@@ -93,7 +93,7 @@ C:\tempRSQL で、管理者の PowerShell コマンド プロンプトを使用�
 
 - サーバー インスタンスの[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]がインストールされています。 既定のインスタンスには、コンピューター名だけでこれができます。
 
-- データベース名。 このチュートリアルでは、スクリプトを想定して`TaxiNYC_Sample`します。
+- データベース名。 このチュートリアルでは、スクリプトを想定して`NYCTaxi_Sample`します。
 
 - ユーザー名とユーザーのパスワード。 これらの値には、SQL Server データベースのログインを入力します。 または、信頼できる Windows id を受け入れるようにスクリプトを変更した場合は、これらの値を空白のままにするには Enter を押します。 Windows id は、接続で使用されます。
 
@@ -128,7 +128,7 @@ C:\tempRSQL で、管理者の PowerShell コマンド プロンプトを使用�
 |**PredictTipSingleMode**  |ストアド プロシージャ (stored procedure)| PredictTipSingleMode.sql スクリプトによって作成されます。 モデルを使用して予測を作成するトレーニング済みモデルを呼び出します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の機能の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。 このストアド プロシージャがで使用される[R モデルを運用する](sqldev-operationalize-the-model.md)します。|
 |**TrainTipPredictionModel**  |ストアド プロシージャ (stored procedure)|TrainTipPredictionModel.sql スクリプトによって作成されます。 R パッケージを呼び出すことによって、ロジスティック回帰モデルをトレーニングします。 モデルは、tipped 列の値を予測し、ランダムに選択した 70% のデータを使用してトレーニングされます。 ストアド プロシージャの出力は、テーブル nyc_taxi_models に保存されているトレーニング済みのモデルです。 このストアド プロシージャが使用される[トレーニング、モデルを保存および](../r/sqldev-train-and-save-a-model-using-t-sql.md)します。|
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 NYC タクシーのサンプル データは、実践的な学習をご利用いただけます。
 

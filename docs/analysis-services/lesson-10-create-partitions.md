@@ -1,6 +1,6 @@
 ---
-title: 'レッスン 11: パーティションの作成 |Microsoft Docs'
-ms.date: 05/08/2018
+title: 'レッスン 10: パーティションの作成 |Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d738649ea357b172975505ff7993b56181ce0b4f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3ce1bc8aa83b376aecdf5bd80a180a4777044bce
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985894"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791933"
 ---
 # <a name="lesson-10-create-partitions"></a>レッスン 10: パーティションを作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "37985894"
   
 このレッスンの推定所要時間: **15 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 9: 階層の作成](../analysis-services/lesson-9-create-hierarchies.md)です。  
   
 ## <a name="create-partitions"></a>パーティションの作成  

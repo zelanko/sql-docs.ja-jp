@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394336"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703625"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>レッスン 3: 探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "40394336"
 
 使用して、プロットを作成する[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)で提供される拡張 R 関数のいずれかの[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)します。 この手順からのデータに基づいてヒストグラムをプロットする[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 この関数をラップするには、ストアド プロシージャで**PlotHistogram**します。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーで右クリックし、 **TaxiNYC_Sample**データベースを展開**プログラミング**、順に展開**Stored Procedures**を表示する、レッスン 2 で作成されたプロシージャ。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーで右クリックし、 **NYCTaxi_Sample**データベースを展開**プログラミング**、順に展開**Stored Procedures**を表示する、レッスン 2 で作成されたプロシージャ。
 
 2. 右クリック**PlotHistogram**選択**変更**ソースを表示します。 呼び出すには、この手順を実行できる**rxHistogram** tipped nyctaxi_sample テーブルの列に含まれるデータにします。
 
@@ -126,7 +126,9 @@ ms.locfileid: "40394336"
     > [!NOTE]
     > Bcp コマンド スイッチは大文字小文字を区別します。
   
-3.  接続に成功した場合は、グラフィック ファイル形式に関する詳細情報を入力するように求められます。 プロンプトのたびに ENTER キーを押し、初期設定を適用します。ただし、次については変更します。
+3.  接続に成功した場合は、グラフィック ファイル形式に関する詳細情報を入力するように求められます。 
+
+   プロンプトのたびに ENTER キーを押し、初期設定を適用します。ただし、次については変更します。
     
     -   **フィールド プロットのプレフィックス長**に「0」を入力します。
   

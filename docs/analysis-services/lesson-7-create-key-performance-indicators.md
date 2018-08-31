@@ -1,6 +1,6 @@
 ---
-title: 'レッスン 8: 主要業績評価指標の作成 |Microsoft Docs'
-ms.date: 05/08/2018
+title: 'レッスン 7: 主要業績評価指標の作成 |Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: multidimensional-models
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033410"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790103"
 ---
-# <a name="lesson-7-create-key-performance-indicators"></a>レッスン 7: 主要業績評価指標を作成します。
+# <a name="lesson-7-create-key-performance-indicators"></a>レッスン 7: 主要業績評価指標の作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、主要業績評価指標 (KPI) を作成します。 KPI は、値のパフォーマンスを測定するために使用されます。パフォーマンスは、 *"ベース"* メジャーと *"ターゲット"* 値の対比によって定義されます (メジャーまたは絶対値によっても定義できます)。 KPI を使用すると、ビジネス プロフェッショナルがレポート クライアント アプリケーションを通じて、ビジネスの成功度や傾向をすばやく簡単に把握できるようになります。 詳細についてを参照してください。 [Kpi](../analysis-services/tabular-models/kpis-ssas-tabular.md)します。  
   
 このレッスンの推定所要時間: **15 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 6: メジャーの作成](../analysis-services/lesson-6-create-measures.md)です。   
   
 ## <a name="create-key-performance-indicators"></a>主要業績評価指標の作成  
