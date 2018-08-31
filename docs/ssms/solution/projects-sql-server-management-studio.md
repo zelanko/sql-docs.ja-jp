@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60f0a9ef2b0d1345d7f1ef7605a861e9283f8c18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045029"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774444"
 ---
 # <a name="projects-sql-server-management-studio"></a>プロジェクト (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] のプロジェクトは、論理的に関連したスクリプトやファイルの集合体であり、データベースの管理と開発のためにスクリプトやファイルをまとめて保存できるようになっています。  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のプロジェクトは、論理的に関連したスクリプトやファイルの集合体であり、データベースの管理と開発のためにスクリプトやファイルをまとめて保存できるようになっています。  
   
 ## <a name="script-project-overview"></a>スクリプト プロジェクトの概要  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] スクリプト プロジェクトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]のコンポーネントであるソリューション エクスプローラーに表示されます。 1 つのスクリプト プロジェクトにはゼロ個以上のプロジェクト ファイルを組み込めます。 1 つのソリューションに 1 つのプロジェクトを追加することも、複数のプロジェクトをまとめて組み込むことも可能です。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のコンポーネントであるソリューション エクスプローラーに表示されます。 1 つのスクリプト プロジェクトにはゼロ個以上のプロジェクト ファイルを組み込めます。 1 つのソリューションに 1 つのプロジェクトを追加することも、複数のプロジェクトをまとめて組み込むことも可能です。  
   
 プロジェクトには、次のようなものがあります。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "33045029"
 プロジェクトをソース コード管理システムに統合することもできます。  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>スクリプト プロジェクトから SQL Server インスタンスへの接続  
-スクリプト プロジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]への接続を組み込めます。 その接続をクリックすることで、プロジェクト内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスに接続できます。 接続できた時点で、その選択した接続に定義されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスに接続している SQL スクリプト ウィンドウが開きます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を使用する接続で [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] または MDX のスクリプトを開いた場合、エディターが開き、スクリプトが読み込まれてから、 **[SQL Server への接続]** ダイアログ ボックスでパスワードを入力するよう求められます。  
+スクリプト プロジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続を組み込めます。 その接続をクリックすることで、プロジェクト内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できます。 接続できた時点で、その選択した接続に定義されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している SQL スクリプト ウィンドウが開きます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する接続で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または MDX のスクリプトを開いた場合、エディターが開き、スクリプトが読み込まれてから、 **[SQL Server への接続]** ダイアログ ボックスでパスワードを入力するよう求められます。  
   
 ウィンドウを閉じると、それに対応する接続も終了します。  
   
-接続情報の修正には、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]の [プロパティ] ウィンドウを使用します。  
+接続情報の修正には、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の [プロパティ] ウィンドウを使用します。  
   
 ## <a name="project-tasks"></a>プロジェクト タスク  
   

@@ -25,11 +25,12 @@ caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13258b6c570aa0e40c5cca7cbde7b583abd5f297
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce5c4f7872003f3d2f74dddd31cf93929202185
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409521"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
 
@@ -137,43 +138,43 @@ ms.lasthandoff: 05/03/2018
   
  初めてレポートを作成する場合は、「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。 レポート デザイナーで使用できるクエリ デザイナーの詳細については、「 [SQL Server データ ツールのレポート デザイナーのクエリ デザイン ツール (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)を使用するスキルを学ぶことができるその他のチュートリアルへお進みください。  
   
-##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) はスタンドアロンのアプリケーションであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部で改ページ調整されたレポートを作成するために使用できます。 レポート デザイナーで作成したレポートであっても、以前のバージョンの [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でデザインしたレポートであっても、あらゆる既存レポートのカスタマイズおよび更新が可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
+##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) はスタンドアロンのアプリケーションであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部で改ページ調整されたレポートを作成するために使用できます。 レポート デザイナーで作成したレポートであっても、以前のバージョンの [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でデザインしたレポートであっても、あらゆる既存レポートのカスタマイズおよび更新が可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
   
  Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](http://go.microsoft.com/fwlink/?LinkID=219138) します。  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd"></a>を開始するには [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>を開始するには [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルの  **[新規]** メニューで、 **[改ページ調整されたレポート]** を選択します。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] がコンピューターにまだインストールされていない場合は、**[[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] の入手]** を選択します。  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] がコンピューターにまだインストールされていない場合は、**[[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の入手]** を選択します。  
   
      スイッチまたは  
   
      Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](http://go.microsoft.com/fwlink/?LinkID=219138) します。  
   
-3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] が開き、改ページ調整されたレポートを作成したり開いたりできます。  
+3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] が開き、改ページ調整されたレポートを作成したり開いたりできます。  
   
-##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]  
+##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
  [Web ポータルおよび iPad や iPhone などのモバイル デバイスで表示できるモバイル レポートを作成するには、](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) SQL Server Mobile Report Publisher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用します。   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
   
  Microsoft ダウンロード センターから[SQL Server Mobile Report Publisher をダウンロード](http://go.microsoft.com/fwlink/?LinkID=733527) します。  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-short-mdmd"></a>を開始するには [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]  
+### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>を開始するには [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルの  **[新規]** メニューで、 **[モバイル レポート]** を選択します。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] がコンピューターにまだインストールされていない場合は、**[[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] の入手]** を選択します。  
+2.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] がコンピューターにまだインストールされていない場合は、**[[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] の入手]** を選択します。  
   
      スイッチまたは  
   
      Microsoft ダウンロード センターから[SQL Server Mobile Report Publisher をダウンロード](http://go.microsoft.com/fwlink/?LinkID=733527) します。  
   
-3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] が開き、モバイル レポートを作成したり開いたりできます。  
+3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] が開き、モバイル レポートを作成したり開いたりできます。  
 
 ## <a name="next-steps"></a>次の手順
 

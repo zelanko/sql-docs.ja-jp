@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e3d71bc8ebf7ddcc0d0fcd725b74567834bd4d00
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 888cfce4963b7ed118aa2cb20fbe97da65508734
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023330"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774359"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Service Pack は、インストール メディアではなくオンラインで
 - **DBCC INPUTBUFFER に置き換わる新しい DMF**: DBCC INPUTBUFFER を置き換えるため、session_id をパラメーターとして受け取る新しい動的管理関数 sys.dm_input_buffer が導入されました。
 - **可用性グループの読み取りルーティングの障害に対する Xevent の機能強化**: 現在、read_only_rout_fail XEvent は、ルーティング リストがあるが、リスト内のどのサーバーも接続に使用できない場合にのみ起動されます。 この機能強化には、トラブルシューティングに役立つ追加情報と、XEvent が起動するコード ポイントの拡張も含まれます。 
 - **可用性グループのフェールオーバーを使用した Service Broker の処理の向上**: 現在、可用性グループのデータベースで Service Broker が有効になっていると、プライマリ レプリカで開始されたすべての Service Broker の接続は、AG フェールオーバー中に開いたままになります。 この機能強化により、AG フェールオーバー中、これらの開いたままの接続がすべて閉じられます。
-- **自動ソフト NUMA のパーティション分割**: サーバー レベルでトレース フラグ 8079 が有効になっている場合、SQL 2014 SP2 で自動[ソフト NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) パーティション分割が導入されます。 スタートアップ時にトレース フラグ 8079 が有効になっていると、SQL Server 2014 SP2 はハードウェア レイアウトを問い合わせて、NUMA ノードあたり 8 個以上の CPU をレポートするシステムにソフト NUMA を自動的に構成します。 自動ソフト NUMA の動作は、ハイパースレッド (HT/論理プロセッサ) に対応しています。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。 自動ソフト NUMA を実稼働環境でオンにする前に、最初にワークロードのパフォーマンスをテストすることをお勧めします。
+- **自動ソフト NUMA のパーティション分割**: サーバー レベルでトレース フラグ 8079 が有効になっている場合、SQL 2014 SP2 で自動[ソフト NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) パーティション分割が導入されます。 スタートアップ時にトレース フラグ 8079 が有効になっていると、SQL Server 2014 SP2 はハードウェア レイアウトを問い合わせて、NUMA ノードあたり 8 個以上の CPU をレポートするシステムにソフト NUMA を自動的に構成します。 自動ソフト NUMA の動作は、ハイパースレッド (HT/論理プロセッサ) に対応しています。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。 自動ソフト NUMA を実稼働環境でオンにする前に、最初にワークロードのパフォーマンスをテストすることをお勧めします。
 
 ## <a name="service-pack-3-release-notes"></a>Service Pack 3 リリース ノート
 
@@ -133,7 +133,7 @@ Service Pack は、インストール メディアではなくオンラインで
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>同じ IP アドレスを使用すると SQL Server フェールオーバー クラスターのインスタンスの再インストールに失敗する  
 **問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に正しくない IP アドレスを指定すると、インストールが失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
   
-**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストールする前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](http://msdn.microsoft.com/library/ms191545)」をご覧ください。 
+**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストールする前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services と PowerPivot  
   

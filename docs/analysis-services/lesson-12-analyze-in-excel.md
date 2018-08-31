@@ -1,6 +1,6 @@
 ---
-title: 'レッスン 13: Excel で分析 |Microsoft Docs'
-ms.date: 05/08/2018
+title: 'レッスン 12: Excel で分析 |Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a59a91b86da12dc9df4b9d3ce2b65ef456439627
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971674"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795651"
 ---
-# <a name="lesson-12-analyze-in-excel"></a>レッスン 12: Excel で分析します。
+# <a name="lesson-12-analyze-in-excel"></a>レッスン 12: Excel での分析
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは SSDT での Excel 機能で分析を使用して、Microsoft Excel を開き、モデル ワークスペースへのデータ ソース接続を自動的に作成し、ワークシートにピボット テーブルを自動的に追加します。 "Excel で分析" 機能を使用すると、モデルを配置する前に、モデル デザインの有効性をすばやく簡単にテストできます。 このレッスンでは、データの分析は行いません。 このレッスンの目的は、モデル作成者が、モデル デザインのテストに使用できるツールに慣れることです。 In Excel 機能は、モデル作成者向けのものが、分析を使用するとは異なりエンドユーザーはクライアント アプリケーションをデプロイされたモデル データを Excel または Power BI に接続し、参照するようにレポートを使用します。  
@@ -25,7 +25,7 @@ ms.locfileid: "37971674"
   
 このレッスンの推定所要時間: **20 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 11: ロールの作成](../analysis-services/lesson-11-create-roles.md)です。  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>既定のパースペクティブと Internet Sales パースペクティブを使用した参照  

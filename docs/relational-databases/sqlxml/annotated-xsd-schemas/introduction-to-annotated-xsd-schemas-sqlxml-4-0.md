@@ -51,7 +51,7 @@ ms.locfileid: "43083188"
 </xsd:schema>  
 ```  
   
- **\<Xsd:schema >** 要素は XML スキーマ名前空間の仕様にから派 生http://www.w3.org/2001/XMLSchema します。  
+ **\<Xsd:schema >** 要素は XML スキーマ名前空間の仕様にから派 生 http://www.w3.org/2001/XMLSchema します。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD スキーマへの注釈  
  データベースへのマッピングを記述する注釈付きの XSD スキーマを使用して、データベースにクエリを実行し、結果を XML ドキュメントの形式で返すことができます。 注釈は、データベースのテーブルと列に XSD スキーマをマップするために指定します。 XSD スキーマで作成した XML ビューに対して XPath クエリを指定すると、データベースにクエリが実行され、結果を XML として取得できます。  

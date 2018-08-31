@@ -17,16 +17,16 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4459d482fad2639e8aa3ff35dccb38e2aa5cd25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4be2922f005d96a7db71ff642a1a05054e5e479
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045239"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774005"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio へのカスタム レポートの追加
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-ここでは、簡単な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] レポートを作成し、.rdl ファイルとして保存した後、そのファイルを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] にカスタム レポートとして追加する方法について説明します。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] では、さまざまな高度なレポートを作成できます。 このトピックを使用してレポートを作成するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] がコンピューターにインストールされている必要があります。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] を使用してカスタム レポートを実行する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] に [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]をインストールする必要はありません。  
+ここでは、簡単な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを作成し、.rdl ファイルとして保存した後、そのファイルを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にカスタム レポートとして追加する方法について説明します。 [!INCLUDE[ssRS](../../includes/ssrs.md)] では、さまざまな高度なレポートを作成できます。 このトピックを使用してレポートを作成するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] がコンピューターにインストールされている必要があります。 [!INCLUDE[ssRS](../../includes/ssrs.md)] を使用してカスタム レポートを実行する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]をインストールする必要はありません。  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>簡単なレポートを作成し、.rdl ファイルとして保存するには  
@@ -47,11 +47,11 @@ ms.locfileid: "33045239"
   
 8.  **[接続プロパティ]** ダイアログ ボックスの **[サーバー名]** ボックスに、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]インスタンスの名前を入力します。  
   
-9. **[データベース名の選択または入力]** ボックスに、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの名前 (「 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]」など) を入力して、 **[OK]** をクリックします。  
+9. **[データベース名の選択または入力]** ボックスに、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの名前 (「 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]」など) を入力して、 **[OK]** をクリックします。  
   
 10. **[データ ソースを選択します]** ページで、 **[次へ]** をクリックします。  
   
-11. **[クエリのデザイン]** ページの **[クエリ文字列]** ボックスに、次の [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントを入力して、 [!INCLUDE[ssDE](../../includes/ssde_md.md)][次へ] **をクリックします。これは**への現在の接続一覧を表示するステートメントです。 レポート ウィザードの [クエリ文字列] ボックスにレポート パラメーターは使用できません。 複雑なカスタム レポートは、手動で作成する必要があります。  
+11. **[クエリのデザイン]** ページの **[クエリ文字列]** ボックスに、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力して、 [!INCLUDE[ssDE](../../includes/ssde_md.md)][次へ] **をクリックします。これは**への現在の接続一覧を表示するステートメントです。 レポート ウィザードの [クエリ文字列] ボックスにレポート パラメーターは使用できません。 複雑なカスタム レポートは、手動で作成する必要があります。  
   
     **SELECT session_id, net_transport FROM sys.dm_exec_connections;**  
   
@@ -59,13 +59,13 @@ ms.locfileid: "33045239"
   
 13. **[ウィザードの完了]** ページの **[レポート名]** ボックスに「 **ConnectionsReport**」と入力し、 **[完了]** をクリックすると、レポートが作成され、保存されます。  
   
-14. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio_md.md)]を終了します。  
+14. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を終了します。  
   
 15. データベース サーバー上でカスタム レポート用に作成したフォルダーに、 **ConnectionsReport.rdl** をコピーします。  
   
 ### <a name="to-add-a-report-to-management-studio"></a>レポートを Management Studio に追加するには  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]のオブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、 **[カスタム レポート]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーに移動し、 **ConnectionsReport.rdl** ファイルを選択して、 **[開く]** をクリックします。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のオブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、 **[カスタム レポート]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーに移動し、 **ConnectionsReport.rdl** ファイルを選択して、 **[開く]** をクリックします。  
   
     新しいカスタム レポートは、初めてオブジェクト エクスプローラーのノードから開いたときに、最近使用した一覧に追加されます。この一覧はノードのショートカット メニューの **[カスタム レポート]** の下に表示されます。 標準レポートも、初めて開いたときに **[カスタム レポート]** の下の最近使用した一覧に表示されます。 カスタム レポート ファイルを削除した場合は、次にそのアイテムを選択したときに、最近使用した一覧からアイテムを削除するというプロンプトが表示されます。  
   
@@ -77,5 +77,5 @@ ms.locfileid: "33045239"
 [Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)  
 [カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [カスタム レポート実行時の警告の抑制を解除する方法](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[SQL Server Reporting Services (SQL Server Reporting Services)](http://msdn.microsoft.com/en-us/b8d18d3d-9db0-43e7-8286-7b46cc3a37ed)  
+[SQL Server Reporting Services (SQL Server Reporting Services) (SQL Server Reporting Services (SQL Server Reporting Services))](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

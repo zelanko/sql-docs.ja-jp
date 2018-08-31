@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e781ee8330400a7b6e40ed249ce072cc8f9f83e6
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174799"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795661"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server インスタンス内のマシン ラーニング (R および Python) コンポーネントをアップグレードします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ OutputDataSet <- data.frame(Name, Version);'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-SQL Server 2016 R Services が Machine Learning Server 9.3 にバインドされている、R ベースのパッケージは、3.4.1 をすることは、RevoScaleR が、9.3 にする必要がありますおよび MicrosoftML 9.3 必要もあります。 
+SQL Server 2016 R Services が Machine Learning Server 9.3 にバインドされている、R 基本パッケージ 3.4.3 をする必要があります、RevoScaleR が、9.3 にする必要がありますおよび MicrosoftML 9.3 必要もあります。 
 
 事前トレーニング済みモデルを追加した場合、モデルが MicrosoftML ライブラリに埋め込まれているし、MicrosoftML 関数を使用して、それらを呼び出すことができます。 詳細については、次を参照してください。 [MicrosoftML の R サンプル](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)します。
 
@@ -183,7 +183,7 @@ SQL Server 2016 R Services が Machine Learning Server 9.3 にバインドされ
     |---------|----------|
     | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
-    | 事前トレーニング済みモデル | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
+    | トレーニング済みモデル | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
 
 1. .Zip や .cab ファイルをターゲット サーバーに転送します。
 
@@ -325,7 +325,7 @@ Microsoft Machine Learning Server 9.2.1 および 9.3 には、この問題は�
 > [!NOTE]
 > インストールが完了するまで待機することを確認します。 1 つのバージョンに関連付けられている R ライブラリを削除し、新しい R ライブラリを追加する長い時間がかかることができます。 操作が完了したら、一時フォルダーは削除されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [Machine Learning Server for Windows (インターネットに接続) をインストールします。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Machine Learning Server for Windows (オフライン) のインストールします。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)

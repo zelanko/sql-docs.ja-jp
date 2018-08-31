@@ -29,21 +29,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980434"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774479"
 ---
 # <a name="operators"></a>演算子
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 
-  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  
+オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  
   
 ## <a name="operator-attributes-and-concepts"></a>オペレーターの属性と概念  
 オペレーターの主な属性は次のとおりです。  
@@ -53,13 +52,13 @@ ms.locfileid: "38980434"
 -   連絡先情報  
   
 ### <a name="naming-an-operator"></a>オペレーターの名前付け  
-すべてのオペレーターに名前を付ける必要があります。 オペレーター名は [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンス内で一意である必要があります。使用できる文字数は最大 **128** 文字です。  
+すべてのオペレーターに名前を付ける必要があります。 オペレーター名は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があります。使用できる文字数は最大 **128** 文字です。  
   
 ### <a name="contact-information"></a>連絡先情報  
 オペレーターの連絡先情報では、オペレーターに通知する方法を定義します。 オペレーターへの通知には、電子メール、ポケットベル、または **net send** コマンドを使用できます。  
   
 > [!IMPORTANT]  
-> 今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] net send [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+> 今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
 -   **電子メールによる通知**  
   
@@ -81,7 +80,7 @@ ms.locfileid: "38980434"
   
         このソフトウェアは、ポケットベル サービスのプロバイダーがライセンスを持っています。 このソフトウェアは、ポケットベルの番号として電子メール アドレス情報の全部または一部を解釈するか、変換テーブルで電子メールの名前をポケットベル番号と照合することによって、定期的に受信トレイを処理する電子メール クライアントとして動作します。  
   
-        すべてのオペレーターが同じポケットベル プロバイダーを利用している場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して、ポケットベル電子メール間システムが要求する特別な電子メール書式を指定できます。 この特別な書式は、プレフィックスまたはサフィックスの形式で、電子メールの次の行に含めることができます。  
+        すべてのオペレーターが同じポケットベル プロバイダーを利用している場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、ポケットベル電子メール間システムが要求する特別な電子メール書式を指定できます。 この特別な書式は、プレフィックスまたはサフィックスの形式で、電子メールの次の行に含めることができます。  
   
         **Subject:**  
   
@@ -97,7 +96,7 @@ ms.locfileid: "38980434"
     この方法では、 **net send** コマンドを使用して、オペレーターにメッセージを送信します。 **net send**では、ネットワーク メッセージの受信者 (コンピューターまたはユーザー) を指定します。  
   
     > [!NOTE]  
-    > **net send** コマンドでは、Microsoft Windows Messenger を使用します。 警告を正しく送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] を実行しているコンピューターと、オペレーターが使用しているコンピューターの両方で、このサービスを実行する必要があります。  
+    > **net send** コマンドでは、Microsoft Windows Messenger を使用します。 警告を正しく送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターと、オペレーターが使用しているコンピューターの両方で、このサービスを実行する必要があります。  
   
 ## <a name="alerting-and-fail-safe-operators"></a>警告通知先オペレーターと緊急時のオペレーター  
 警告に応答して通知を受けるオペレーターを選択できます。 警告のスケジュールを設定して、オペレーターへの通知を順番に割り当てることも可能です。 たとえば、月曜日、水曜日、金曜日に発生した警告は管理者 A に通知し、火曜日、木曜日、土曜日に発生した警告は管理者 B に通知することができます。  
@@ -110,7 +109,7 @@ ms.locfileid: "38980434"
   
     プライマリ オペレーターに通知できなかった理由には、ポケットベル アドレスが誤っているか、オペレーターが非番であるなどがあります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが **msdb** データベースのシステム テーブルにアクセスできない場合  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが **msdb** データベースのシステム テーブルにアクセスできない場合  
   
     **sysnotifications** システム テーブルは、警告に関してオペレーターが担う責任を指定します。  
   
@@ -134,5 +133,5 @@ ms.locfileid: "38980434"
 |警告の割り当てに関連するタスク|[オペレーターへの警告の割り当て](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[警告への応答の定義 (SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[オペレーターへの警告の割り当て](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>参照  
-[データベース メール](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[データベース メール](../../relational-databases/database-mail/database-mail.md)  
   
