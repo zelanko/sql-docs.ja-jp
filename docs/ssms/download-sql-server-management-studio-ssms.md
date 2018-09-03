@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cee1d100be0597bc5483d6df9666062d1046bb48
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 36acedbe323b1b28c4b8db11d3241e77b8a8f322
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452526"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899762"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -71,10 +71,10 @@ SSMS 17.x のインストールでは、16.x 以前のバージョンの SSMS �
 SSMS の今回のリリースは、次の言語でインストールできます。
 
 SQL Server Management Studio 17.8.1:<br>
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 SQL Server Management Studio 17.8.1 アップグレード パッケージ (17.x から 17.8.1 へのアップグレード):<br>
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールになりました。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。

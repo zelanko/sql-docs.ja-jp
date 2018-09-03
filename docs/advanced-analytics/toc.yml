@@ -1,62 +1,31 @@
 items:
-- name: 概要
+- name: SQL Server Machine Learning
   items:
-  - name: SQL Server Machine Learning Services とは
+  - name: Machine Learning Services (R、Python)
     href: what-is-sql-server-machine-learning.md
-    items:
-    - name: データベース内分析
-      href: r/sql-server-r-services.md
-    - name: スタンドアロン サーバー
-      href: r/r-server-standalone.md
-  - name: 新しい機能
+  - name: R Services
+    href: r/sql-server-r-services.md
+  - name: スタンドアロン サーバー
+    href: r/r-server-standalone.md
+  - name: 新機能
     href: what-s-new-in-sql-server-machine-learning-services.md
-  - name: エディション別の機能
-    href: r/differences-in-r-features-between-editions-of-sql-server.md
-- name: Architecture
-  href: architecture-overview-machine-learning.md
-  items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R の相互運用性
-      href: r/r-interoperability-in-sql-server.md
-    - name: R 統合を実現するコンポーネント
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: R のセキュリティ
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: Machine Learning Services での Python
-      href: python/sql-server-python-services.md
-    - name: Python の相互運用性
-      href: python/python-interoperability.md
-    - name: Python をサポートするコンポーネント
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python のセキュリティ
-      href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
-  - name: SQL Server 2017
-    items:
-    - name: データベース内分析
-      href: install/sql-machine-learning-services-windows-install.md
-    - name: スタンドアロン サーバー
-      href: install/sql-machine-learning-standalone-windows-install.md
-  - name: SQL Server 2016
-    items:
-    - name: R Services (データベース内)
-      href: install/sql-r-services-windows-install.md
-    - name: R Server (スタンドアロン)
-      href: install/sql-r-standalone-windows-install.md
+  - name: Machine Learning Services (R、Python)
+    href: install/sql-machine-learning-services-windows-install.md
+  - name: R Services
+    href: install/sql-r-services-windows-install.md
+  - name: スタンドアロン サーバー (R、Python)
+    href: install/sql-machine-learning-standalone-windows-install.md
   - name: トレーニング済みモデル
     href: install/sql-pretrained-models-install.md
   - name: コマンド プロンプトのセットアップ
     href: install/sql-ml-component-commandline-install.md
   - name: オフラインのセットアップ (インターネットなし)
     href: install/sql-ml-component-install-without-internet-access.md
-  - name: CAB のダウンロード (オフラインでのセットアップ)
-    href: install/sql-ml-cab-downloads.md
+    items:
+    - name: CAB のダウンロード (オフラインでのセットアップ)
+      href: install/sql-ml-cab-downloads.md
   - name: R および Python のアップグレード
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: R ツールの設定
@@ -177,6 +146,29 @@ items:
   href: https://github.com/Microsoft/sql-server-samples
 - name: ソリューション
   href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: 概念
+  href: architecture-overview-machine-learning.md
+  items:
+  - name: R
+    href: r/architecture-overview-sql-server-r.md
+    items:
+    - name: R の相互運用性
+      href: r/r-interoperability-in-sql-server.md
+    - name: R 統合を実現するコンポーネント
+      href: r/new-components-in-sql-server-to-support-r.md
+    - name: R のセキュリティ
+      href: r/security-overview-sql-server-r.md
+  - name: Python
+    href: python/architecture-overview-sql-server-python.md
+    items:
+    - name: Machine Learning Services での Python
+      href: python/sql-server-python-services.md
+    - name: Python の相互運用性
+      href: python/python-interoperability.md
+    - name: Python をサポートするコンポーネント
+      href: python/new-components-in-sql-server-to-support-python-integration.md
+    - name: Python のセキュリティ
+      href: python/security-overview-sql-server-python-services.md
 - name: 操作方法
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -322,9 +314,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 85ed543ae5239ab46c388de63714756b15a58190
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 33275daaa46f1e85f30e28bab34bcbcd84e81d38
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40427315"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118079"

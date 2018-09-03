@@ -15,16 +15,17 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3138ff1f34120234c47b826195e5102e44aa617
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a054f12d9581204eb6cb0fe66d9c206bc83a47d1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899592"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - ライセンス条項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>使用できる言語:  
-[中国語 (中華人民共和国)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [中国語 (台湾)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [英語 (米国)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [フランス語](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[中国語 (簡体字)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [中国語 (繁体字)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [英語 (米国)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [フランス語](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [ドイツ語](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [イタリア語](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [日本語](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [韓国語](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [ポルトガル語 (ブラジル)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [ロシア語](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [スペイン語](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>マイクロソフト ソフトウェア ライセンス条項  

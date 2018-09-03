@@ -15,12 +15,12 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957725"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899502"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ Always Encrypted:
 ビルド番号: 14.0.17254.0<br>
 リリース日: 2018 年 5 月 9 日
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>新機能
@@ -174,7 +174,7 @@ SSMS ユーザー設定:
 ビルド番号: 14.0.17230.0<br>
 リリース日: 2018 年 3 月 20 日
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>新機能
 
@@ -182,8 +182,7 @@ SSMS ユーザー設定:
 
 SQL Database Managed Instance:
 
-- 
-  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) のサポートが追加されました。 Azure SQL Database Managed Instance (プレビュー) は Azure SQL Database の新しい種類であり、SQL Server オンプレミスとのほぼ 100% の互換性、セキュリティに関する一般的な問題に対応するネイティブな[仮想ネットワーク (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) の実装、およびオンプレミスの SQL Server ユーザーに適した[ビジネス モデル](https://azure.microsoft.com/pricing/details/sql-database/)を提供します。
+- [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) のサポートが追加されました。 Azure SQL Database Managed Instance (プレビュー) は Azure SQL Database の新しい種類であり、SQL Server オンプレミスとのほぼ 100% の互換性、セキュリティに関する一般的な問題に対応するネイティブな[仮想ネットワーク (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) の実装、およびオンプレミスの SQL Server ユーザーに適した[ビジネス モデル](https://azure.microsoft.com/pricing/details/sql-database/)を提供します。
 - 次のような一般的な管理シナリオをサポートします。
    - データベースの作成と変更。
    - データベースのバックアップと復元。
@@ -203,8 +202,7 @@ SQL Database Managed Instance:
 
 **Integration Services (IS)**
 
-- 
-  [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) にパッケージを展開するサポートが追加されました。
+- [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) にパッケージを展開するサポートが追加されました。
 
 ### <a name="bug-fixes"></a>バグの修正
 
@@ -259,7 +257,7 @@ SMO:
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 一般公開 | ビルド番号: 14.0.17224.0
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 ### <a name="whats-new"></a>新機能
 
@@ -324,7 +322,7 @@ SMO:
 ## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 一般公開 | ビルド番号: 14.0.17213.0
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>新機能
@@ -420,7 +418,7 @@ XE プロファイラー:
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 一般公開 | ビルド番号: 14.0.17199.0
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
 
 ### <a name="enhancements"></a>機能強化
@@ -514,7 +512,7 @@ XE プロファイラー:
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 一般公開 | ビルド番号: 14.0.17177.0
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 ### <a name="enhancements"></a>機能強化
 
@@ -644,7 +642,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 一般公開 | ビルド番号: 14.0.17119.0
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
 
 ### <a name="enhancements"></a>機能強化
 
@@ -671,7 +669,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 ## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
 一般公開 | ビルド番号: 14.0.17099.0
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
 
 ### <a name="enhancements"></a>機能強化 
 
@@ -838,7 +836,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 一般公開 | ビルド番号: 13.0.16106.4
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 このリリースでは次の問題が修正されました。
 
@@ -881,7 +879,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 一般公開 | ビルド番号: 13.0.16000.28
 
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
 
 * テーブル名に ";:" が含まれるデータベースをクリックするとクラッシュすることがあるという問題を修正しました。
 * [AS Tabular Database Properties] (AS 表形式データベースのプロパティ) ウィンドウの [モデル] ページに変更を加えると、元の定義がスクリプト出力されるという問題を修正しました。 
@@ -907,7 +905,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 16.4.1 (2016 年 9 月)](http://go.microsoft.com/fwlink/?LinkID=828615)
 一般公開 | ビルド番号: 13.0.15900.1
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
 
 *  ストアド プロシージャの ALTER/変更を実行しようとすると失敗するという問題を修正しました。  
 [Microsoft Connect アイテム #3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -972,7 +970,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 一般公開 |バージョン番号: 13.0.15700.28
 
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
 
 * SSMS の毎月のリリースは番号が付けられるようになりました。
 
@@ -1029,7 +1027,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 2016 年 7 月の修正プログラム](http://go.microsoft.com/fwlink/?LinkID=822301)
 一般公開 |バージョン番号: 13.0.15600.2
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
 
 * **不足している右クリック メニュー項目を有効にするよう SSMS のバグを修正**。  
 *リンクされている、顧客のバグ要求:*  
@@ -1099,7 +1097,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 2016 年 6 月](http://go.microsoft.com/fwlink/?LinkID=799832)
 一般公開 |バージョン番号: 13.0.15000.23
 
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * SSMS を 2016年 6 月リリースから一般公開。
 

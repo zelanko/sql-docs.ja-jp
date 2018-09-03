@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087194"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775441"
 ---
 # <a name="database-project-settings"></a>データベース プロジェクトの設定
 データベース プロジェクト設定を使用して、データベースの特性とデバッグおよびビルドの構成を制御します。 これらの設定は、以下のカテゴリに分けられます。  
@@ -108,7 +108,7 @@ ms.locfileid: "39087194"
 拡張 Transact-SQL 検証は、データベース プロジェクト システム内の機能です。この機能を使用すると、開発者はビルド時にデータベース プロジェクトを Transact-SQL コンパイラ サービスに送信し、SQL Server エンジンのパーサーおよびインタープリターに対してコードを検証できます。  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL コンパイラ サービス  
-Transact-SQL コンパイラ サービスは、Microsoft SQL Server 2012 データベース エンジンに基づくコンポーネントです。 このサービスでは、Microsoft SQL Server 2012 データベース エンジンと同じ忠実性で DDL ステートメントの構文とセマンティクスを検証することができます。 つまり、本質的に、コンパイラ サービスは Microsoft SQL Server 2012 で非推奨になっている構文や機能をサポートしません。 非推奨の機能の詳細については、「 [SQL Server 2012 で廃止されたデータベース エンジンの機能](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx)」を参照してください。  
+Transact-SQL コンパイラ サービスは、Microsoft SQL Server 2012 データベース エンジンに基づくコンポーネントです。 このサービスでは、Microsoft SQL Server 2012 データベース エンジンと同じ忠実性で DDL ステートメントの構文とセマンティクスを検証することができます。 つまり、本質的に、コンパイラ サービスは Microsoft SQL Server 2012 で非推奨になっている構文や機能をサポートしません。 非推奨の機能の詳細については、「[SQL Server 2012 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。  
   
 データベース プロジェクトを検証するために、コンパイラ サービスは部分的包含データベースを作成し、そのデータベースに対して DDL ステートメントの実行をシミュレートします。 詳細については、「 [部分的包含データベース](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx)」を参照してください。  
   
