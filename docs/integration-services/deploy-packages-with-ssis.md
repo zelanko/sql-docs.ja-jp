@@ -1,14 +1,14 @@
 ---
 title: SSIS によるパッケージの配置 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -24,12 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f7abdad422347e140e230eac9b7f19a78d5ba47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f28ae86cab01c86aa7360618b080ec4ff124e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328266"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028816"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS によるパッケージの配置
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを別のコンピューターへ簡単に配置できるツールが用意されています。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、対象のコンピューターにパッケージとその依存関係をインストールする方法を学習します。    
@@ -45,37 +45,49 @@ ms.locfileid: "35328266"
 最後に、パッケージ実行ユーティリティを使用して、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でパッケージを実行します。    
     
 このチュートリアルの目的は、実際の配置で発生する可能性のある複雑な問題をシミュレーションすることです。 ただし、パッケージを別のコンピューターに配置できない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のローカル インスタンスの msdb データベースにパッケージをインストールし、パッケージを同じインスタンスの [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] から実行して、このチュートリアルを行うこともできます。    
-    
-## <a name="what-you-will-learn"></a>学習する内容    
+
+**このチュートリアルの推定所要時間:** 2 時間
+
+## <a name="what-you-learn"></a>学習する内容    
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。    
     
-## <a name="requirements"></a>必要条件    
+## <a name="prerequisites"></a>Prerequisites    
 このチュートリアルは、ファイル システムの基本的な操作は理解していても、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能はほとんど使用したことがないユーザーを対象にしています。 このチュートリアルで使用する基本的な [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の概念をよく理解するためには、最初に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のチュートリアルの「 [SSIS ETL パッケージを作成する方法](../integration-services/ssis-how-to-create-an-etl-package.md)」を終えることをお勧めします。    
     
-**ソース コンピューター** 配置バンドルを作成するコンピューターには、 **次のコンポーネントがインストールされている必要があります。**
-- SQL Server  
-- サンプル データ、完成したパッケージ、構成、Readme。 これらのファイルは、 [Adventure Works 2014 サンプル データベース](https://msftdbprodsamples.codeplex.com/releases/view/125550)をダウンロードしている場合、共にインストールされています。     
-> **注:** AdventureWorks または使用する他のデータでテーブルを作成および削除する権限があることを確認します。         
+### <a name="on-the-source-computer"></a>ソース コンピューターの場合
+
+配置バンドルを作成するコンピューターには、**次のコンポーネントがインストールされている必要があります。**
+
+- SQL Server :  ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
+
+- サンプル データ、完成したパッケージ、構成、Readme。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。 Zip ファイル内のファイルのほとんどは、意図しない変更を回避するために読み取り専用になっています。 ファイルに出力を書き込んだり、ファイルを変更したりするには、ファイルのプロパティで読み取り専用属性をオフにする必要がある場合があります。
+
+-   **AdventureWorks2014** サンプル データベース。 **AdventureWorks2014** データベースをダウンロードするには、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)から `AdventureWorks2014.bak` をダウンロードし、バックアップを復元します。  
+
+-   AdventureWorks データベースでテーブルを作成および削除するための権限が必要です。
     
 -   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。    
     
-**配置先コンピューター** パッケージを配置するコンピューターには、 **次のコンポーネントがインストールされている必要があります。**    
+### <a name="on-the-destination-computer"></a>配置先コンピューターの場合
+
+パッケージを配置するコンピューターには、 **次のコンポーネントがインストールされている必要があります。**    
     
-- SQL Server
-- サンプル データ、完成したパッケージ、構成、Readme。 これらのファイルは、 [Adventure Works 2014 サンプル データベース](https://msftdbprodsamples.codeplex.com/releases/view/125550)をダウンロードしている場合、共にインストールされています。 
+- SQL Server :  ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
+
+- サンプル データ、完成したパッケージ、構成、Readme。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。 Zip ファイル内のファイルのほとんどは、意図しない変更を回避するために読み取り専用になっています。 ファイルに出力を書き込んだり、ファイルを変更したりするには、ファイルのプロパティで読み取り専用属性をオフにする必要がある場合があります。
+
+-   **AdventureWorks2014** サンプル データベース。 **AdventureWorks2014** データベースをダウンロードするには、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)から `AdventureWorks2014.bak` をダウンロードし、バックアップを復元します。  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]」を参照してください。    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]」を参照してください。 SSIS をインストールする場合は、「[Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。
     
--   AdventureWorks でテーブルを作成および削除する権限と、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でパッケージを実行する権限が必要です。    
+-   AdventureWorks データベースでテーブルを作成および削除するための権限と、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で SSIS パッケージを実行するための権限が必要です。    
     
--   msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム データベースの sysssispackages テーブルの読み取り権限と書き込み権限が必要です。    
+-   `sysssispackages` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム データベースの `msdb` テーブルの読み取り権限と書き込み権限が必要です。    
     
 配置バンドルを作成したコンピューターにパッケージを配置する場合は、そのコンピューターが配置元コンピューターと配置先コンピューターの両方の必要条件を満たしている必要があります。    
-    
-**このチュートリアルの推定所要時間:** 2 時間    
-    
+        
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン    
 [レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 このレッスンでは、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加して、ETL ソリューションを配置する準備を行います。    

@@ -1,7 +1,7 @@
 ---
 title: Azure BLOB Source | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.openlocfilehash: 5404b7bc7e7543f85890816973fdbd0c1e39022f
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964354"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405855"
 ---
 # <a name="azure-blob-source"></a>Azure BLOB Source
   **Azure BLOB Source** コンポーネントは、SSIS パッケージが Azure BLOB のデータを読み取ることを可能にします。 サポートされるファイル形式は、CSV および AVRO です。
@@ -39,7 +39,9 @@ ms.locfileid: "36964354"
   
 4.  **[BLOB ファイル形式]** フィールドで、使用する BLOB 形式 (**[テキスト]** または **[Avro]**) を選択します。  
   
-5.  ファイル形式が **[テキスト]** の場合は、**[列の区切り文字]** に値を指定する必要があります。 さらに、ファイルの 1 行目に列名が含まれている場合は、 **[先頭データ行を列名として使用する]** も指定する必要があります。
+5.  ファイル形式が **[テキスト]** の場合は、**[列の区切り文字]** に値を指定する必要があります。 (複数の文字による区切り記号はサポートされません)。
+
+    さらに、ファイルの 1 行目に列名が含まれている場合は、 **[先頭データ行を列名として使用する]** も指定する必要があります。
 
 6.  ファイルが圧縮されている場合は、**[Decompress the file]** (ファイルの圧縮解除) を選択します。
 

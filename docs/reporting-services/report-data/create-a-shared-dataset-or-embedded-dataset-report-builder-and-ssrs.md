@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022679"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432585"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
 埋め込みデータセットは、単一の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポートで使用されます。 レポート サーバーの共有データセットはモバイルとページ分割があるタイプの、複数のレポートで使用できます。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが必要です。  
   
- **レポート ビルダー** を使用して、次の作業を行います。  
+## <a name="report-builder-tasks"></a>レポート ビルダーのタスク
+
+レポート ビルダーを使用して、次の作業を行います。  
   
 1.  データセットのデザイン ビューで共有データセットを作成します。 共有データセットには、パブリッシュされた共有データ ソースを使用する必要があります。  
   
@@ -33,7 +35,9 @@ ms.locfileid: "33022679"
   
 3.   レポート サーバーまたは SharePoint サイトにデータセットを直接保存します。  
   
- **の** レポート デザイナー [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、次の作業を行います。  
+## <a name="report-designer-tasks"></a>レポート デザイナーのタスク
+
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーを使用して、次の作業を行います。  
   
 1.  ソリューション エクスプローラーで共有データセットを作成します。 共有データセットには、ソリューション エクスプローラーの [共有データ ソース] フォルダーのデータ ソースを使用する必要があります。  
   
@@ -41,12 +45,12 @@ ms.locfileid: "33022679"
   
 3.  必要に応じて、共有データセットと共有データ ソースをレポートと一緒に配置します。 アイテムの種類ごとに、プロジェクトのプロパティを使用して、レポート サーバーまたは SharePoint サイト上のフォルダーへのパスを指定します。  
   
- 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>レポート ビルダーを開き、共有データセットを作成するには  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>レポート ビルダーで共有データセットを作成するには
   
 1.  レポート ビルダーを開きます。 次の図のように、 **[新しいレポートまたはデータセット]** ペインが開きます。  
   

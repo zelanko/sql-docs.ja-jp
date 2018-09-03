@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted (クライアント開発) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2016
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -14,13 +14,13 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f2d372307528366248c5830626aee2b8fd14816
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 887603c4da7eb9a582d8068a98690116dc14128c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39547152"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076469"
 ---
 # <a name="always-encrypted-client-development"></a>Always Encrypted (クライアント開発)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,8 +32,10 @@ Always Encrypted の保護するデータベースを使用したアプリケー
 - [Always Encrypted と .NET Framework Data Provider for SQL Server を使用する](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [JDBC ドライバーで Always Encrypted を使用する](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
 - [ODBC ドライバーで Always Encrypted を使用する](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [PHP ドライバーで Always Encrypted を使用する](../../../connect/php/using-always-encrypted-php-drivers.md)
 
-
+> [!NOTE]
+> [.NET CORE](https://docs.microsoft.com/dotnet/core/) では現在、Always Encrypted はサポートされていません。
 
 ## <a name="see-also"></a>参照
 

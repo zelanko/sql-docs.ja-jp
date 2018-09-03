@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f032e856363bca6d84b420260eed53b734d88d82
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3cd07d9db6cd372a635ddc492064bcaa3ffd92d3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769348"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40409572"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性モード (AlwaysOn 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "34769348"
   
 |現在のプライマリ レプリカ|自動フェールオーバー ターゲット|同期コミット モードの動作の対象|非同期コミット モードの動作の対象|自動フェールオーバー|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 と 03|04|はい|  
-|02|01|01 と 03|04|はい|  
+|01|02|02 と 03|04|[ユーザー アカウント制御]|  
+|02|01|01 と 03|04|[ユーザー アカウント制御]|  
 |03||01 と 02|04|いいえ|  
 |04|||01、02、03|いいえ|  
   
@@ -143,6 +143,15 @@ ms.locfileid: "34769348"
   
 > [!NOTE]  
 >  WSFC クォーラムと [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。  
+
+### <a name="data-latency-on-secondary-replica"></a>セカンダリ レプリカでのデータ待機時間
+セカンダリ レプリカへの読み取り専用アクセスの実装が役立つのは、読み取り専用ワークロードである程度のデータ待機時間を許容できる場合です。 データ待機時間が許容できない場合は、読み取り専用ワークロードをプライマリ レプリカに対して実行することを検討してください。
+
+プライマリ レプリカは、プライマリ データベースでの変更のログ レコードをセカンダリ レプリカに送信します。 それぞれのセカンダリ データベースで、専用の再実行スレッドがログ レコードに適用されます。 読み取りアクセス セカンダリ データベースでは、その変更を含むログ レコードがセカンダリ データベースに適用され、トランザクションがプライマリ データベース上でコミットされない限り、特定のデータの変更はクエリ結果に反映されません。+
+
+つまり、プライマリ レプリカとセカンダリ レプリカの間には待機時間 (通常は数秒程度) が発生します。 ただし、ネットワークの問題のためにスループットが低下するなどの特殊なケースでは、待機時間が長くなることがあります。 I/O ボトルネックが生じた場合やデータの移動が中断された場合は、待機時間が増加します。 データ移動の中断を監視する場合、[Always On ダッシュボード](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)または [sys.dm_hadr_database_replica_states 動的管理ビュー](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)を使用できます。
+
+セカンダリ レプリカでの再実行待機時間の調査方法について詳しくは、[プライマリの変更がセカンダリ レプリカで反映されない場合のトラブルシューティング](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md)に関するページを参照してください。
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **可用性モードとフェールオーバー モードを変更するには**  

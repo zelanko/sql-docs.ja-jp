@@ -19,12 +19,12 @@ caps.latest.revision: 144
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 191155643b072cc2963d3de5e4b1651e219e35f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b43a8008fcfddc43cad78b049483b6ff3b1fb75
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863238"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405973"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 におけるデータベース エンジン機能の重大な変更
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,14 @@ ms.locfileid: "32863238"
   
 ## <a name="previous-versions"></a>以前のバージョン  
   
--   [SQL Server 2014 におけるデータベース エンジン機能の重大な変更](https://msdn.microsoft.com/library/ms143179\(v=sql.120\))  
+-   [SQL Server 2014 におけるデータベース エンジン機能の重大な変更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
--   [SQL Server 2012 におけるデータベース エンジン機能の重大な変更](https://msdn.microsoft.com/library/ms143179\(v=sql.110\))  
+-   [SQL Server 2012 におけるデータベース エンジン機能の重大な変更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
--   [SQL Server 2008 におけるデータベース エンジン機能の重大な変更](https://msdn.microsoft.com/library/ms143179\(v=sql.100\))  
+-   [SQL Server 2008 におけるデータベース エンジン機能の重大な変更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
 ## <a name="see-also"></a>参照  
- 
-  [SQL Server 2016 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2016 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [SQL Server データベース エンジンの旧バージョンとの互換性](../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   

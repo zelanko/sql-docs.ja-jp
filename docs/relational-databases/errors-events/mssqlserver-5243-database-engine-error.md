@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14a58546faa866cb4508ce6481cf04bdf02a3618
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 7bd57d6e3d853ca38731f54c3de949618155105b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412752"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,21 @@ ms.lasthandoff: 05/19/2018
 メモリ内ストレージ エンジン構造の一貫性が損なわれていることが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により検出されました。  
   
 ## <a name="user-action"></a>ユーザーの操作  
-[!INCLUDE[dbccBoilerPlate](../../includes/dbccboilerplate-md.md)]  
+ハードウェア障害を調査します。 ハードウェアの診断を実行し、問題があれば修正します。 また、Windows のシステム ログとアプリケーション ログ、および SQL Server エラー ログを調査し、ハードウェア障害の結果としてエラーが発生しているかどうかを確認します。 ログに記録されているハードウェア\-に関する問題があれば、それを修正します。
+
+データ破損の問題が解決しない場合は、ハードウェア コンポーネントを他のものと交換し、問題の原因を特定するようにしてください。 システムで、ディスク コントローラーの書き込み\-キャッシュが有効になっていないことを確認します。 書き込み\-キャッシュが問題と思われる場合は、ハードウェア ベンダーにお問い合わせください。
+
+それでも問題が解決しない場合は、新しいハードウェア システムの導入をご検討ください。 導入の際には、ディスク ドライブの再フォーマットとオペレーティング システムの再インストールが必要になる場合があります。
+
+バックアップからの復元 問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。
+
+DBCC CHECKDB の実行 クリーン バックアップがない場合には、REPAIR 句を付けずに DBCC CHECKDB を実行して破損の程度を調べます。 DBCC CHECKDB によって使用が推奨される REPAIR 句が表示されたら、 適切な REPAIR 句を付けて DBCC CHECKDB を実行し、破損を修復します。
+
+> **アラート タグはサポートされていません!!!** 
+>  **tr タグはサポートされていません!!!** 
+>  **tr タグはサポートされていません!!!**
+
+いずれかの REPAIR 句を付けて DBCC CHECKDB を実行しても問題が解決しない場合は、購入元にお問い合わせください。
   
 ## <a name="see-also"></a>参照  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  

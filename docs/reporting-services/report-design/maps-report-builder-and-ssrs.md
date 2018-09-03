@@ -1,7 +1,7 @@
 ---
 title: マップ (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -22,12 +22,12 @@ caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e5a6a0c2bfb86e57f900a89c48e84ca68e6689f
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028919"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410530"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -84,7 +84,7 @@ ms.locfileid: "33028919"
   
 -   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI) のシェープファイル空間データ形式に準拠するデータが格納されています。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](http://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
--   **データベースに格納されている SQL Server 空間データ** **リレーショナル データベース内の** SQLGeometry **データ型または** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定するクエリを使用できます。 詳細については、 [SQL Server オンライン ブック](../../relational-databases/spatial/spatial-data-types-overview.md) の「 [空間データ型の概要](http://go.microsoft.com/fwlink/?linkid=98335)」を参照してください。  
+-   **データベースに格納されている SQL Server 空間データ** **リレーショナル データベース内の** SQLGeometry **データ型または** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定するクエリを使用できます。 詳細については、「[空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)」を参照してください。  
   
      クエリ デザイナーに表示される結果セットでは、空間データの各行が 1 単位として扱われ、1 つのマップ要素に格納されます。 たとえば、結果セットの 1 つの行に複数のポイントが定義されている場合、そのマップ要素のすべてのポイントに表示プロパティが適用されます。  
   

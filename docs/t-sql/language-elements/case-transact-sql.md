@@ -24,13 +24,13 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e65dd6ddbb2b71c92e7e3dd967a4cf50af2d687
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 58c276a0e70857b09c30bc405a0437cb2fbba61f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453916"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087801"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ END
   
  CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御言語の一覧については、「[フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)」を参照してください。  
   
- CASE ステートメントは条件を順に評価していき、最初に条件が満たされた時点で評価を止めます。 CASE ステートメントには、評価された式の結果が入力として渡されることがあります。 こうした式の評価中にエラーが発生する可能性もあります。 CASE ステートメントの WHEN 引数に指定された集計式は、あらかじめ評価されて CASE ステートメントに渡されます。 たとえば、次のクエリでは、MAX 集計値を生成する際に 0 除算エラーが発生します。 このエラーが発生するのは、CASE 式が評価される前です。  
+ CASE 式ではその条件が順に評価され、最初に条件が満たされた時点で評価が停止されます。 CASE 式には、評価された式の結果が入力として渡されることがあります。 こうした式の評価中にエラーが発生する可能性もあります。 CASE 式の WHEN 引数に指定された集計式は、あらかじめ評価されて CASE 式に渡されます。 たとえば、次のクエリでは、MAX 集計値を生成する際に 0 除算エラーが発生します。 このエラーが発生するのは、CASE 式が評価される前です。  
   
 ```sql  
 WITH Data (value) AS   

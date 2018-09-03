@@ -19,23 +19,23 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ff4d216b7122e3500a99871834029d92d9aa072
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fb6a3891e7adb4c0159f2b98e78336c51196dac
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022419"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409516"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
 
-  このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]の改ページ調整されたレポートに円グラフを作成します。 次に、パーセンテージを追加し、円グラフを少し変更します。 
+  このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のページ分割されたレポートに円グラフを作成します。 次に、パーセンテージを追加し、円グラフを少し変更します。 
   
 このチュートリアルは 2 つの異なる方法で実行できます。 どちらの方法でも、次の図に示すような円グラフが作成されます。  
   
  ![レポート ビルダー クイック円グラフ](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "レポート ビルダー クイック円グラフ")  
   
 ## <a name="prerequisites"></a>Prerequisites  
- XML データを使用するか [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用するかにかかわらず、レポート ビルダーにアクセスできることが必要です。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、ネイティブ モードまたは SharePoint 統合モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から起動するか、Microsoft ダウンロード センターから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をダウンロードできます。 詳細については、「 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。  
+ XML データを使用するか [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用するかにかかわらず、レポート ビルダーにアクセスできることが必要です。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、ネイティブ モードまたは SharePoint 統合モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から起動するか、Microsoft ダウンロード センターから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をダウンロードできます。 詳細については、「 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。  
   
 ##  <a name="TwoWays"></a> このチュートリアルを実行する 2 つの方法  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33022419"
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>このチュートリアル用のデータを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用する  
  データを含むクエリをこのトピックからコピーし、ウィザードに貼り付けることができます。 SQL Server のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 チュートリアルのデータセット クエリでは、リテラル データを使用します。ただし、クエリは、レポート データセットに必要なメタデータを返すように、SQL Server のインスタンスで処理される必要があります。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用する利点は、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] の他のすべてのチュートリアルで同じ方法が使用されているため、他のチュートリアルを実行するときに既に手順がわかっていることです。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用する利点は、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の他のすべてのチュートリアルで同じ方法が使用されているため、他のチュートリアルを実行するときに既に手順がわかっていることです。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリの場合、他にもいくつか必要な前提条件があります。 詳細については、「[チュートリアルの前提条件 &#40;レポート ビルダー&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33022419"
  グラフのラベルと凡例をカスタマイズする方法の詳細については、「[円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」および「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   
 ##  <a name="WhatsNext"></a> 次の課題  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための *接続文字列*が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための*接続文字列* が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
   
  他のチュートリアルを実行するには、SQL Server のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 これもシステム管理者が設定できます。  
   

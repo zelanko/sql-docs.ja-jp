@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 25acdc921c925d3882fb8282a3f78a7ed04a757f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5195e5c7c6e1c3126db3c2335fac605bbb869f2b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042600"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415879"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -70,7 +70,7 @@ Power BI Report Server については、「[Power BI Report Server とは](http
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] を利用できます。 これは、KPI、モバイル レポート、ページ分割されたレポート、Excel および Power BI Desktop ファイルが組み込まれた最新のポータルです。 以前のリリースの Report Manager がこの [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] に置き換えられています。 Mobile Report Publisher と Report Builder を [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] からダウンロードすることもできます。ClickOnce テクノロジは必要ありません。
  
- モバイル レポートを作成するには、 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short-md.md)]が必要です。  
+ モバイル レポートを作成するには、[!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)] が必要です。  
   
  [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]の詳細については、「 [Web ポータル (SSRS ネイティブ モード)](../reporting-services/web-portal-ssrs-native-mode.md)」を参照してください。  
   
@@ -95,7 +95,7 @@ Power BI Report Server については、「[Power BI Report Server とは](http
 Reporting Services モバイル レポートは、多様なフォーム ファクター用に最適化された専用レポートであり、モバイル デバイスでレポートにアクセスするユーザーに最適なエクスペリエンスを提供します。 モバイル レポートでは、時間グラフ、カテゴリ グラフ、比較グラフ、ツリーマップ、カスタム マップなどの多種多様な視覚エフェクトを使用できます。 モバイル レポートは、オンプレミスの SQL Server Analysis Services 多次元およびテーブル データを含むさまざまなデータ ソースに接続できます。 調整可能なグリッド行とグリッド列と柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応するモバイル レポートをレイアウトできます。 その後、これらのモバイル レポートを Reporting Service サーバーに保存しておき、iPad、iPhone、Android フォン、および Windows 10 デバイスのブラウザーまたはPower BI モバイル アプリで表示と操作を実行できます。
   
 #### <a name="mobile-report-publisher"></a>Mobile Report Publisher  
- [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
+ [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -134,8 +134,7 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
 
 **レポートの埋め込み:** iframe を URL パラメーターと共に使用して、モバイル レポートやページ分割されたレポートを他の Web ページやアプリケーションに埋め込むことができるようになりました。  
 
-**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択できます。   
-  ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
+**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択できます。   ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
@@ -171,7 +170,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ### <a name="report-builder-improvements"></a>レポート ビルダーの機能強化
 
-**新しいレポート ビルダーのユーザー インターフェイス:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] コア ユーザー インターフェイスの UI 要素が簡素化され、最新の外観になりました。  
+**新しいレポート ビルダーのユーザー インターフェイス:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] コア ユーザー インターフェイスの UI 要素が簡素化され、最新の外観になりました。  
   
 |||  
 |-|-|  
@@ -183,7 +182,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![レポート データ ペインとパラメーター ペインのパラメーター リスト](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "レポート データ ペインとパラメーター ペインのパラメーター リスト")  
 
   
-**High DPI のサポート:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] では、高 DPI (インチあたりのドット数) スケーリングと高 DPI デバイスをサポートします。  高 DPI の詳細については、次の記事をご覧ください。  
+**高 DPI のサポート:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] では、高 DPI (インチあたりのドット数) スケーリングと高 DPI デバイスがサポートされます。  高 DPI の詳細については、次の記事をご覧ください。  
   
 -   [Windows 8.1 の DPI スケーリング拡張機能](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -193,7 +192,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 [Analysis Services の新機能](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)   
-[旧バージョンとの互換性](http://msdn.microsoft.com/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
+[旧バージョンとの互換性](reporting-services-backward-compatibility.md)   
 [SQL Server 2016 の各エディションがサポートする Reporting Services の機能](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Reporting Services のアップグレードと移行](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

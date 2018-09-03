@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8a8ee44c055d9679656ec5cf15b23096dc8c257
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053350"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409517"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services レポート サーバー
 
@@ -85,7 +85,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>SharePoint Web パーツ対応ネイティブ モード
 
- Reporting Services には、[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 以降、または [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 以降のインスタンスにインストールおよび登録できる Web パーツが 2 つ用意されています。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、Reporting Services の前のリリースで導入されたものです。  
+ Reporting Services には、[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 以降、または SharePoint Portal Server 2003 以降のインスタンスにインストールおよび登録できる Web パーツが 2 つ用意されています。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、Reporting Services の前のリリースで導入されたものです。  
   
 ## <a name="sharepoint-mode"></a>SharePoint モード
 

@@ -17,11 +17,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0eead8d73153621430037141e0a509adac4cd1fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1f8ba05e8969d2758e33c64ff43cb006a2b6a03
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406735"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの SSL 接続の構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  テスト目的の場合は、ローカルで証明書を生成できます。 **MakeCert** ユーティリティとサンプル コマンドをテンプレートとして使用する場合は、ホストとしてサーバー名を指定し、コマンドの実行前にすべての改行を削除してください。 コマンドを DOS ウィンドウで実行する場合、コマンド全体を含めるためにウィンドウのバッファー サイズを増やす必要があることがあります。  
   
- IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じコンピューター上で実行している場合は、 [!INCLUDE[iismgr](../../includes/iismgr-md.md)] コンソール アプリケーションを使用して、証明書をコンピューター上にインストールできます。 [!INCLUDE[iismgr](../../includes/iismgr-md.md)] には、信頼されている証明機関が行う後続の処理のために、証明書要求 (.crt) ファイルを作成およびパッケージ化するオプションが用意されています。 利用している証明機関によって、証明書 (.cer) ファイルが生成されて送り返されます。 IIS 管理コンソールを使用して、その証明書ファイルをローカル ストアにインストールできます。 詳細については、Technet の「 [SSL を使用して資格情報データを暗号化する](http://go.microsoft.com/fwlink/?LinkId=71123) 」を参照してください。  
+ IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じコンピューター上で実行している場合は、IIS マネージャー コンソール アプリケーションを使用して、証明書をコンピューター上にインストールできます。 IIS マネージャーには、信頼されている証明機関が行う後続の処理のために、証明書要求 (.crt) ファイルを作成およびパッケージ化するオプションが用意されています。 利用している証明機関によって、証明書 (.cer) ファイルが生成されて送り返されます。 IIS 管理コンソールを使用して、その証明書ファイルをローカル ストアにインストールできます。 詳細については、Technet の「 [SSL を使用して資格情報データを暗号化する](http://go.microsoft.com/fwlink/?LinkId=71123) 」を参照してください。  
   
 ## <a name="interoperability-issues-with-iis"></a>IIS との相互運用性の問題  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と同じコンピューターに IIS が存在する場合、レポート サーバーへの SSL 接続に大きく影響します。  

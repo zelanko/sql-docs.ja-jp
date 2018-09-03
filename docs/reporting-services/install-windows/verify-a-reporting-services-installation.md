@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 886143cc00831cd6921a07738f6ffbd1e6ef36ef
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983778"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405480"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブまたは SharePoint の 2 つのモードのうちのいずれかのモードでインストールできます。 インストールの確認に必要な手順は、レポート サーバーのモードによって変わります。  
@@ -39,7 +39,7 @@ ms.locfileid: "38983778"
   
 2.  **SQL Server Reporting Services サービス** がインストールされ、 **実行中** の状態であることを確認します。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスが一覧に表示されない場合は、サービスがインストールされていることを確認します。 詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)」をご覧ください。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスが一覧に表示されない場合は、サービスがインストールされていることを確認します。 詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」をご覧ください。  
   
 ### <a name="to-verify-the-service-application"></a>サービス アプリケーションを確認するには  
   
@@ -71,7 +71,7 @@ ms.locfileid: "38983778"
   
 1.  SharePoint ドキュメント ライブラリ内で、タイトルなどに使用するテキスト ボックスのみを含む基本的な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを作成します。 このレポートには、データ ソースやデータセットは何も含めません。 目標は、レポート ビルダーを開いて基本的なレポートをプレビューできることの確認です。  
   
-2.  レポートをドキュメント ライブラリに保存し、ライブラリからレポートを実行します。 レポート ビルダーでレポートを作成する方法について詳しくは、「[レポート ビルダーの起動](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259)」をご覧ください。  
+2.  レポートをドキュメント ライブラリに保存し、ライブラリからレポートを実行します。 レポート ビルダーでレポートを作成する方法について詳しくは、「[レポート ビルダーの起動](../report-builder/start-report-builder.md)」をご覧ください。  
   
 ### <a name="reporting-services-samples"></a>Reporting Services のサンプル  
   

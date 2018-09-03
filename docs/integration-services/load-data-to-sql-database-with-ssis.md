@@ -1,6 +1,6 @@
 ---
-title: SQL Server Integration Services (SSIS) を使用して Azure SQL Database にデータを読み込む | Microsoft Docs
-description: さまざまなデータ ソースから Azure SQL Database にデータを移動するための SQL Server Integration Services (SSIS) パッケージを作成する方法を示します。
+title: SQL Server Integration Services (SSIS) を使用して SQL Server または Azure SQL Database にデータを読み込む | Microsoft Docs
+description: さまざまなデータ ソースから SQL Server または Azure SQL Database にデータを移動するための SQL Server Integration Services (SSIS) パッケージを作成する方法を示します。
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,26 +10,27 @@ ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 08/14/2018
+ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ed87e5a83e992ba5de6289d72465d92c94126748
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175024"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405484"
 ---
-# <a name="load-data-into-azure-sql-database-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure SQL Database にデータを読み込む
+# <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して SQL Server または Azure SQL Database にデータを読み込む
 
-SQL Server Integration Services (SSIS) パッケージを作成して、[Azure SQL Database](/azure/sql-database/) にデータを読み込みます。 SSIS データ フローを通過するときに、必要に応じてデータを再構築、変換、およびクレンジングすることができます。
+SQL Server Integration Services (SSIS) パッケージを作成して、SQL Server または [Azure SQL Database](/azure/sql-database/) にデータを読み込みます。 SSIS データ フローを通過するときに、必要に応じてデータを再構築、変換、およびクレンジングすることができます。
 
 この記事では、以下の操作の実行方法について説明します。
 
 * Visual Studio で新しい Integration Services プロジェクトを作成する。
 * データをソースから変換先に読み込むための SSIS パッケージを設計する。
 * SSIS パッケージを実行してデータを読み込む。
+
 
 ## <a name="basic-concepts"></a>基本的な概念
 
@@ -57,9 +58,13 @@ SQL Server と SQL Database に接続するには、ADO.NET 接続マネージ�
 1. **SQL Server Integration Services (SSIS)**. SSIS は SQL Server のコンポーネントであり、使用するには SQL Server のライセンス版、開発者版、または評価版が必要です。 SQL Server の評価版を取得するには、[SQL Server の評価](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)に関するページを参照してください。
 2. **Visual Studio** (省略可能)。 無料の Visual Studio Community Edition を取得するには、「[Visual Studio Community][Visual Studio Community]」を参照してください。 Visual Studio をインストールしない場合は、SQL Server Data Tools (SSDT) のみをインストールできます。 SSDT をインストールすると、機能が制限されたバージョンの Visual Studio がインストールされます。
 3. **Visual Studio 用 SQL Server Data Tools (SSDT)**。 Visual Studio 用 SQL Server Data Tools を取得するには、「[SQL Server Data Tools (SSDT) のダウンロード][Download SQL Server Data Tools (SSDT)]」を参照してください。
-4. **Azure SQL Database データベースとアクセス許可**。 このチュートリアルでは、SQL Database のインスタンスに接続し、そのインスタンスにデータを読み込みます。 接続し、テーブルを作成し、データを読み込むことができるアクセス許可が必要です。
-5. **サンプル データ**。 このチュートリアルでは、SQL Database に読み込むソース データとして、SQL Server の AdventureWorks サンプル データベースに格納されているサンプル データを使用します。 AdventureWorks サンプル データベースを取得するには、[AdventureWorks サンプル データベース][AdventureWorks 2014 Sample Databases]のページを参照してください。
-6. **ファイアウォール規則**。 SQL Database にデータをアップロードするには、事前にローカル コンピューターの IP アドレスを使用して SQL Database に対してファイアウォール規則を作成しておく必要があります。
+4. このチュートリアルでは、SQL Server または SQL Database のインスタンスに接続し、そのインスタンスにデータを読み込みます。 接続し、テーブルを作成し、次のいずれかにデータを読み込むためのアクセス許可が必要です。
+   - **Azure SQL Database データベース**。 詳細については、[Azure SQL Database](/azure/sql-database/) に関するページを参照してください。  
+      内の複数の
+   - **SQL Server インスタンス**。 SQL Server は、オンプレミスまたは Azure の仮想マシン上で実行されます。 無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードする場合は、[SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページを参照してください。
+
+5. **サンプル データ**。 このチュートリアルでは、ソース データとして、SQL Server の AdventureWorks サンプル データベースに格納されているサンプル データを使用します。 AdventureWorks サンプル データベースを取得するには、[AdventureWorks サンプル データベース][AdventureWorks 2014 Sample Databases]のページを参照してください。
+6. **ファイアウォール規則** (SQL Database にデータを読み込む場合)。 SQL Database にデータをアップロードするには、事前にローカル コンピューターの IP アドレスを使用して SQL Database に対してファイアウォール規則を作成しておく必要があります。
 
 ## <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する
 1. Visual Studio を起動します。
@@ -81,7 +86,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
     ![][02]
 2. [データ フロー タスク] をダブルクリックして [データ フロー] タブに切り替えます。
 3. ツールボックスにあるその他のソースの一覧から、ADO.NET ソースをデザイン画面にドラッグします。 ソース アダプターが選択された状態で、**[プロパティ]** ウィンドウでその名前を **SQL Server ソース**に変更します。
-4. ツールボックスにあるその他の変換先の一覧から、ADO.NET 変換先をデザイン画面にドラッグし、ADO.NET ソースの下に配置します。 変換先アダプターが選択された状態で、**[プロパティ]** ウィンドウでその名前を **SQL DB 変換先**に変更します。
+4. ツールボックスにあるその他の変換先の一覧から、ADO.NET 変換先をデザイン画面にドラッグし、ADO.NET ソースの下に配置します。 変換先アダプターが選択された状態で、**[プロパティ]** ウィンドウでその名前を **SQL 変換先**に変更します。
    
     ![][09]
 
@@ -128,16 +133,16 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 1. 変換先アダプターをダブルクリックして、**ADO.NET 変換先エディター**を開きます。
    
     ![][11]
-2. **ADO.NET 変換先エディター**の **[接続マネージャー]** タブで、**[接続マネージャー]** リストの横にある **[新規]** ボタンをクリックして、**[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを開き、このチュートリアルでのデータの読み込み先である Azure SQL Database データベースに対する接続設定を作成します。
+2. **ADO.NET 変換先エディター**の **[接続マネージャー]** タブで、**[接続マネージャー]** リストの横にある **[新規]** ボタンをクリックして、**[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを開き、このチュートリアルでのデータの読み込み先であるデータベースに対する接続設定を作成します。
 3. **[ADO.NET 接続マネージャーの構成]** ダイアログ ボックスで、**[新規]** ボタンをクリックして **[接続マネージャー]** ダイアログ ボックスを開き、新しいデータ接続を作成します。
 4. **[接続マネージャー]** ダイアログ ボックスで、次の操作を行います。
    1. **[プロバイダー]** で、SqlClient データ プロバイダーを選択します。
-   2. **[サーバー名]** に、SQL Database の名前を入力します。
+   2. **[サーバー名]** には、SQL Server または SQL Database サーバーの名前を入力します。
    3. **[サーバー ログオン]** セクションで、**[SQL Server 認証を使用する]** を選択し、認証情報を選択または入力します。
-   4. **[データベースへの接続]** セクションで、既存の SQL Database データベースを選択します。
-   5. **[接続テスト]** をクリックします。
-   6. 接続テストの結果をレポートするダイアログ ボックスで、**[OK]** をクリックして、**[接続マネージャー]** ダイアログ ボックスに戻ります。
-   7. **[接続マネージャー]** ダイアログ ボックスで、**[OK]** をクリックして **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスに戻ります。
+   4. **[データベースへの接続]** セクションで、既存のデータベースを選択します。
+    A. **[接続テスト]** をクリックします。
+    B. 接続テストの結果をレポートするダイアログ ボックスで、**[OK]** をクリックして、**[接続マネージャー]** ダイアログ ボックスに戻ります。
+    c. **[接続マネージャー]** ダイアログ ボックスで、**[OK]** をクリックして **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスに戻ります。
 5. **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスで、**[OK]** をクリックして、**ADO.NET 変換先エディター**に戻ります。
 6. **ADO.NET 変換先エディター**で、**[Use a table or view]\(テーブルまたはビューの使用\)** リストの横にある **[新規]** をクリックして **[テーブルの作成]** ダイアログ ボックスを開き、ソース テーブルと一致する列リストが含まれた新しい変換先テーブルを作成します。
    
@@ -167,7 +172,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 ![][15]
 
-これで、 SQL Server Integration Services を使用して Azure SQL Database にデータを読み込むことに成功しました。
+これで、 SQL Server Integration Services を使用して SQL Server または Azure SQL Database にデータを読み込むことに成功しました。
 
 ## <a name="next-steps"></a>次の手順
 
