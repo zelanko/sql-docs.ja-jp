@@ -17,12 +17,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d5e99d7bfd140af1e26217118211da98a167a93
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145603"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348177"
 ---
 # <a name="data-collection"></a>データ コレクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,12 +115,12 @@ ms.locfileid: "33145603"
   
 ## <a name="things-you-can-do"></a>可能な操作  
   
-|Description|トピック|  
+|[説明]|トピック|  
 |----------------------|-----------|  
 |データ コレクションの有効化または無効化、コレクション セットの構成の変更、管理データ ウェアハウスのデータの表示など、データ コレクションのさまざまな側面を管理します。|[データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)|  
 |レポートを使用し、システム容量の監視やシステム パフォーマンスのトラブルシューティングに役立つ情報を取得します。|[システム データ コレクション セット レポート](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |管理データ ウェアハウスを使用し、データ コレクションの対象であるサーバーからデータを収集します。|[管理データ ウェアハウス (management data warehouse)](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|SQL Server Profiler のサーバー側のトレース機能を利用し、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。| [SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|SQL Server Profiler のサーバー側のトレース機能を利用し、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。| [SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

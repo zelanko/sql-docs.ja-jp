@@ -1,14 +1,10 @@
 ---
 title: Reporting Services のサブスクリプションを監視する | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 1b81bf16cc4f9352da7b0a4c37cac91dd73f5eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8f95bd3da2aefb0fc98388231641d94b3442311
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035739"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282634"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services のサブスクリプションを監視する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの監視は、ユーザー インターフェイス、Windows PowerShell、またはログ ファイルから行うことができます。 監視のために使用できるオプションは、実行しているレポート サーバーのモードによって異なります。  
@@ -50,7 +44,7 @@ ms.locfileid: "33035739"
   
  **[状態]** 列に表示されることのある値を、次の表に示します。  
   
-|状態|Description|  
+|状態|[説明]|  
 |------------|-----------------|  
 |新しいサブスクリプション|初めてサブスクリプションを作成するときに表示されます。|  
 |無効|サブスクリプションを処理できないときに表示されます。 詳細については、このトピックの「無効なサブスクリプションの管理」を参照してください。|  

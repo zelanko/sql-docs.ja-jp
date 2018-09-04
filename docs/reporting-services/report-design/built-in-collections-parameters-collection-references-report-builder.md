@@ -1,25 +1,20 @@
 ---
 title: Parameters コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 6f4f702b15f214c43a5d866f27eba0519932d6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70f4c9c14b2c79a6b97370ebf71298540399a93e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280282"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>組み込みコレクション - Parameters コレクションの参照 (レポート ビルダー)
   レポート パラメーターは、式から参照できる組み込みコレクションの 1 つです。 パラメーターを式に含めると、レポートのデータと外観をユーザーの選択に基づいてカスタマイズできます。 式は、(*Fx*) オプションまたは [\<**式**>] オプションを利用できる、すべてのレポート アイテム プロパティやテキスト ボックス プロパティで使用できます。 式は、他の方法でレポートの内容と外観を制御する場合にも使用されます。 詳細については、「[式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)」を参照してください。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="Single"></a> 式での単独値パラメーターの使用  
  次の表は、任意のデータ型の単独値パラメーターへの参照を式に含めるときに使用する構文の例を示しています。  
   
-|例|Description|  
+|例|[説明]|  
 |-------------|-----------------|  
 |`=Parameters!` *\<ParameterName>* `.IsMultiValue`|**False**が返されます。<br /><br /> パラメーターが複数値であるかどうかを確認します。 **True**の場合、パラメーターは複数値でオブジェクトのコレクションです。 **False**の場合、パラメーターは単一値で 1 つのオブジェクトです。|  
 |`=Parameters!` *\<ParameterName>* `.Count`|整数値 1 が返されます。 単一値パラメーターの場合、カウントは常に 1 です。|  
@@ -48,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="Multi"></a> 式での複数値パラメーターの使用  
  次の表は、任意のデータ型の複数の値を持つパラメーターへの参照を式に含めるときに使用する構文の例を示しています。  
   
-|例|Description|  
+|例|[説明]|  
 |-------------|-----------------|  
 |`=Parameters!` *\<MultivalueParameterName>* `.IsMultiValue`|**True** または **False**が返されます。<br /><br /> パラメーターが複数値であるかどうかを確認します。 **True**の場合、パラメーターは複数値でオブジェクトのコレクションです。 **False**の場合、パラメーターは単一値で 1 つのオブジェクトです。|  
 |`=Parameters!` *\<MultivalueParameterName>* `.Count`|整数値が返されます。<br /><br /> 値の数を表します。 単一値パラメーターの場合、カウントは常に 1 です。 複数値パラメーターの場合、カウントは 0 以上です。|  

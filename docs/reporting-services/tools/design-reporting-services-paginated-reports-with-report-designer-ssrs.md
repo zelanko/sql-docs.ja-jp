@@ -1,27 +1,22 @@
 ---
 title: レポート デザイナーを使用してレポートをデザインする (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 09311458bc7815a7a63d58ad19c8d8b0a3845da4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1607193731e20f4111d38da44ee21375dfff09e0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282794"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用して Reporting Services の改ページ調整されたレポートをデザインする (SSRS)
 
@@ -174,10 +169,10 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、エラー レベルを示します。  
   
-|エラー レベル|Description|  
+|エラー レベル|[説明]|  
 |-----------------|-----------------|  
 |0|レポートのプレビューおよび配置を妨げる、最も重大で避けることのできないビルドの問題。|  
-|@shouldalert|レポートのレイアウトが大幅に変更される重大なビルドの問題。|  
+|1|レポートのレイアウトが大幅に変更される重大なビルドの問題。|  
 |2|レポートのレイアウトが大きく変更される重大度のやや低いビルドの問題。|  
 |3|レポートのレイアウトが目立たない程度に若干変更されるマイナーなビルドの問題。|  
 |4|パブリッシュ上の警告としてのみ使用される。|  

@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64793249bab1d862d401e0c8b8d2d78a8392edbc
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409556"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348152"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "40409556"
 -   リソースについての制約。ハードウェア、スタッフ、バックアップ メディアを保管する場所、保管されたメディアの物理的なセキュリティなど。  
 
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>バックアップおよび復元に対する復旧モデルの影響  
- バックアップ操作および復元操作は、復旧モデルのコンテキストで発生します。 復旧モデルは、トランザクション ログの管理方法を制御するデータベース プロパティです。 また、データベースの復旧モデルでは、そのデータベースでサポートされるバックアップの種類および復元シナリオが判断されます。 通常、データベースは単純復旧モデルまたは完全復旧モデルを使用します。 完全復旧モデルを補完するには、一括操作を行う前に一括ログ復旧モデルに切り替えます。 これらの復旧モデルの概要とトランザクション ログの管理への影響については、「 [トランザクション ログ (SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)」を参照してください。  
+ バックアップ操作および復元操作は、復旧モデルのコンテキストで発生します。 復旧モデルは、トランザクション ログの管理方法を制御するデータベース プロパティです。 また、データベースの復旧モデルでは、そのデータベースでサポートされるバックアップの種類および復元シナリオが判断されます。 通常、データベースは単純復旧モデルまたは完全復旧モデルを使用します。 完全復旧モデルを補完するには、一括操作を行う前に一括ログ復旧モデルに切り替えます。 これらの復旧モデルの概要とトランザクション ログの管理への影響については、「 [トランザクション ログ (SQL Server)](../logs/the-transaction-log-sql-server.md)」を参照してください。  
   
  データベースに対する復旧モデルの最善の選択は、ビジネス要件によって異なります。 トランザクション ログの管理を不要にし、バックアップと復元を簡単にするには、単純復旧モデルを使用します。 作業損失の可能性を最小に抑えるには、管理のオーバーヘッドが発生するという犠牲を払っても、完全復旧モデルを使用します。 バックアップおよび復元に対する復旧モデルの影響については、「 [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
   

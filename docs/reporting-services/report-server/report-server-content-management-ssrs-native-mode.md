@@ -1,14 +1,10 @@
 ---
 title: レポート サーバー コンテンツの管理 (SSRS ネイティブ モード) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9669a8356c4f20705bfb18e220d49f68fa93f0ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2da94a527e34d53996573173b4e823df945187dc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028359"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282701"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理とはレポート サーバー アイテムの管理を指します。 すべてのアイテムは、プロパティおよびセキュリティの設定を通して、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 以降では、  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルを使用できます。 この記事では、レポート マネージャーと新しい Web ポータルのエクスペリエンスを取り上げます。  
@@ -135,7 +129,7 @@ ms.locfileid: "33028359"
 ### <a name="adding-and-viewing-a-resource"></a>リソース ファイルの追加と表示  
  レポート サーバーにリソースを追加するには、ファイルをアップロードまたはパブリッシュします。  
   
-|操作|ファイルの種類|  
+|演算|ファイルの種類|  
 |---------------|---------------|  
 |アップロード|リソースをアップロードするには、レポート サーバーがネイティブ モードで動作している場合はレポート マネージャーを使用し、レポート サーバーが SharePoint 統合モードで動作している場合は SharePoint サイト上のアプリケーション ページを使用する必要があります。 詳細については、「[ファイルまたはレポートをアップロードする &#40;レポート マネージャー&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)」または「[SharePoint ライブラリへのドキュメントのアップロード &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)」を参照してください。|  
 |パブリッシュ|プロジェクト内にある、レポート、レポート パーツ、データ ソース、またはデータセット以外のすべてのファイルは、リソースとしてアップロードされます。 リソースをパブリッシュするには、既存のアイテムをレポート デザイナーのプロジェクトに追加した後で、そのプロジェクトをレポート サーバーにパブリッシュします。|  

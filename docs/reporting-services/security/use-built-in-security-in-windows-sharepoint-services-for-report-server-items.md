@@ -1,30 +1,24 @@
 ---
 title: レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5155c5689a4c7a51f2d392e8560a2c87dbf44fdd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6733d9db27ce01e7fcc063e1f6affa13be7b276
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033229"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280185"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する
   SharePoint は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセスに使用できる、組み込みのセキュリティ機能を提供します。 サイトおよびリストに対する権限がユーザーに割り当て済みである場合は、SharePoint とレポート サーバーの間の統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。  
@@ -32,7 +26,7 @@ ms.locfileid: "33033229"
 ## <a name="securable-items"></a>セキュリティ保護可能なアイテム  
  サイトやライブラリに対して定義する権限は、レポート サーバー アイテムへのアクセスを許可するために使用できます。 ただし、個々のアイテムのセキュリティを保護する場合は、次のコンテンツ タイプに対する権限を設定できます。  
   
-|ファイルの種類|Description|  
+|ファイルの種類|[説明]|  
 |---------------|-----------------|  
 |.rdl|レポート レイアウトおよびデータの取得に使用するコマンドを定義するレポート定義ファイルです。 レポートが処理されると、レポート定義はデータ ソース接続情報を使用してデータを取得します。 レポート定義がレポート ビルダーで作成されたアドホック レポートである場合、表示されたレポートに対するデータ探索スコープを設定するレポート モデル (.smdl) ファイルがレポートに付属しています。|  
 |.smdl|データ構造およびデータ構造の関連付けを記述するレポート モデル ファイルです。 このファイルは、レポート ビルダーのレポートの作成および実行に使用します。|  
