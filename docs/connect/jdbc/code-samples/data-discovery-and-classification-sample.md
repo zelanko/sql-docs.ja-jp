@@ -25,8 +25,8 @@ ms.locfileid: "42786100"
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
 この [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、結果セットの getter メソッドを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 'SQL データの検出と分類' の情報を取得する方法を示します。
-
-このサンプルのコード ファイルは DataDiscoveryAndClassification.java という名前で、次の場所で見つけることができます。
+  
+このサンプルのコード ファイルは DataDiscoveryAndClassification.java という名前で、次の場所で見つけることができます。  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
@@ -34,7 +34,7 @@ ms.locfileid: "42786100"
 
 ## <a name="requirements"></a>必要条件  
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスを設定する方法の詳細については [JDBC ドライバーを使用して](../../jdbc/using-the-jdbc-driver.md) を参照してください。
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../jdbc/using-the-jdbc-driver.md)します。
 
 ```java
 import java.sql.Connection;
