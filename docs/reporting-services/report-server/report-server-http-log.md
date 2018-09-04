@@ -1,28 +1,22 @@
 ---
 title: レポート サーバーの HTTP ログ |Microsoft ドキュメント
-ms.custom: ''
 ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 55682735cb578c7f01f3c64caa057f5f4bcec6c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a528b55edcadfa54a0b1cad4095b384d89de5c6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028119"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272734"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
   レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
@@ -61,20 +55,20 @@ ms.locfileid: "33028119"
 ## <a name="log-file-fields"></a>ログ ファイル フィールド  
  次の表は、ログで利用できるフィールドの一覧です。 ログに含めるフィールドは、 **HTTPTraceSwitches** 構成設定で指定できます。 **既定** 列は、 **HTTPTraceSwitches**を指定しなかった場合に、対応するフィールドがログ ファイルに自動的に追加されるかどうかを示しています。  
   
-|フィールド|Description|既定|  
+|フィールド|[説明]|既定|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|この値は省略可能です。 既定値は ReportServerServiceHTTP_ です。 別のファイル名前付け規則 (ログ ファイルを一元管理する場合はサーバー名など) を使用する場合は、異なる値を指定できます。|はい|  
+|HttpTraceFileName|この値は省略可能です。 既定値は ReportServerServiceHTTP_ です。 別のファイル名前付け規則 (ログ ファイルを一元管理する場合はサーバー名など) を使用する場合は、異なる値を指定できます。|[ユーザー アカウント制御]|  
 |HTTPTraceSwitches|この値は省略可能です。 指定した場合、ログ ファイルに使用するフィールドをコンマ区切り形式で構成できます。|いいえ|  
 |date|アクティビティが発生した日付。|いいえ|  
-|[時刻]|アクティビティが発生した時刻。|いいえ|  
-|ClientIp|レポート サーバーにアクセスしているクライアントの IP アドレス。|はい|  
+|Time|アクティビティが発生した時刻。|いいえ|  
+|ClientIp|レポート サーバーにアクセスしているクライアントの IP アドレス。|[ユーザー アカウント制御]|  
 |UserName|レポート サーバーにアクセスしたユーザー名。|いいえ|  
 |ServerPort|接続に使用されたポート番号。|いいえ|  
 |ホスト|ホスト ヘッダーの内容。|いいえ|  
-|方法|クライアントから呼び出されたアクションまたは SOAP メソッド。|はい|  
-|UriStem|アクセスされたリソース。|はい|  
+|方法|クライアントから呼び出されたアクションまたは SOAP メソッド。|[ユーザー アカウント制御]|  
+|UriStem|アクセスされたリソース。|[ユーザー アカウント制御]|  
 |UriQuery|リソースへのアクセスに使用されたクエリ。|いいえ|  
-|ProtocolStatus|HTTP 状態コード。|はい|  
+|ProtocolStatus|HTTP 状態コード。|[ユーザー アカウント制御]|  
 |BytesReceived|サーバーが受信したバイト数。|いいえ|  
 |TimeTaken|HTTP.SYS が要求データを返してから、サーバーが最後の送信を完了するまでのミリ秒単位の時間 (ネットワークの伝送時間を除く)。|いいえ|  
 |ProtocolVersion|クライアントが使用するプロトコル バージョン。|いいえ|  

@@ -1,14 +1,10 @@
 ---
 title: グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
@@ -28,16 +24,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7b18f14d4a21b1515438715d24378a8e272a317
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027979"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273369"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
   座標ベースのグラフ (縦棒グラフ、横棒グラフ、面グラフ、散布図、線グラフ、および範囲グラフ) では、2 本の軸を使用してデータ間の関係を分類および表示します。 それぞれの軸には、異なる書式が適用されます。  
@@ -63,7 +57,7 @@ ms.locfileid: "33027979"
   
  軸のスケールは、軸上に表示するデータ範囲を定義するための最小値と最大値によって決定されます。 グラフでは、結果セットの値に基づいて各軸の最小値と最大値が計算されます。 値軸では、スケールは常に値フィールドの最大値と最小値によって決まります。 カテゴリ軸では、最小値と最大値の型がカテゴリ フィールドの型に応じて決まります。 データセット内のすべてのフィールドは、カテゴリ フィールドの 3 つの型のいずれかに分類できます。 次の表では、カテゴリ フィールドの 3 つの型を説明しています。  
   
-|カテゴリ フィールドの型|Description|例|  
+|カテゴリ フィールドの型|[説明]|例|  
 |-------------------------|-----------------|-------------|  
 |数値|カテゴリは、X 軸に数値順にプロットされます。|従業員の ID 番号別の売上レポートでは、従業員の ID 番号が X 軸に表示されます。|  
 |日付/時刻|カテゴリは、X 軸に日時順にプロットされます。|月別の売上レポートでは、書式設定された日付が X 軸に表示されます。|  
@@ -93,7 +87,7 @@ ms.locfileid: "33027979"
   
  Quantity フィールドは値軸にプロットされます。 最小値は 112、最大値は 494 になります。 この場合、スケールは 0 から始まり 500 で終わるように計算されます。 また、等間隔に設定された 5 つの間隔が 100 と計算され、0、100、200、300、400、および 500 にラベルが作成されます。  
   
- Name フィールドはカテゴリ軸にプロットされます。 グラフでは、4 ～ 6 個のラベルが計算され、ラベルが重ならないようにカテゴリ軸でラベルを調整する方法を決定する自動調整設定が計算されます。 その結果、一部のカテゴリ ラベルは省略される場合があります。 各軸の自動調整オプションを個別に無効にすることができます。  
+ Name フィールドはカテゴリ軸にプロットされます。 グラフでは、4 ～ 6 個のラベルが計算され、ラベルが重ならないようにカテゴリ軸でラベルを調整する方法を決定する自動調整設定が計算されます。 その結果、一部のカテゴリ ラベルは省略される場合があります。 各軸の自動調整オプションを個別にオーバーライドすることができます。  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>カテゴリ軸のすべてのラベルの表示  
  値軸では、軸の間隔により、グラフ上のデータ ポイントに一貫性のある基準が提供されます。 ただしカテゴリ軸では、この機能により、軸ラベルなしでカテゴリが表示されることがあります。 ところが、カテゴリにはすべてラベルを付けるのが普通です。 間隔数を 1 に設定すると、すべてのカテゴリを表示できます。  詳細については、「 [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)をクリックします。  

@@ -1,26 +1,20 @@
 ---
 title: XML へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: aef21b126ae81b8821943f70594f04c5118e8446
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0723ade590ea7474882c822b9155bec43f2bc2fa
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023109"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267550"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、改ページ調整されたレポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
@@ -104,7 +98,7 @@ ms.locfileid: "33023109"
  ゲージとインジケーターは XML でレンダリングされます。 データは構造化されます。  
   
 ### <a name="subreports"></a>サブレポート  
- サブレポートは要素としてレンダリングされます。 要素名は DataElementName RDL プロパティから取得されます。 レポートの TextBoxesAsElements プロパティ設定は、サブレポートのプロパティ設定に優先します。 サブレポート要素に名前空間および XSLT 属性は追加されません。  
+ サブレポートは要素としてレンダリングされます。 要素名は DataElementName RDL プロパティから取得されます。 レポートの TextBoxesAsElements プロパティ設定は、サブレポートのプロパティ設定をオーバーライドします。 サブレポート要素に名前空間および XSLT 属性は追加されません。  
   
 ### <a name="rectangles"></a>四角形  
  四角形は要素としてレンダリングされます。 要素名は DataElementName RDL プロパティから取得されます。  

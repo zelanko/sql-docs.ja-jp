@@ -1,28 +1,22 @@
 ---
 title: 'レッスン 1: 新しい Web サイトを作成する | Microsoft Docs'
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a2828e7d40cc6f9be756401b4891fa8c96a943da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a657b8e85c82c62943e6095ad73b0392f9995e2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017359"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267159"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>レッスン 1: 新しい Web サイトを作成する
 このレッスンでは、Visual C# 向けの ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成する方法について説明します。  

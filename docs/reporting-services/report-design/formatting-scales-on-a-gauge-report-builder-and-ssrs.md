@@ -1,26 +1,20 @@
 ---
 title: ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 74928d39b6a658cecff715bab0aab58922fe15c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77d1170d0760abd542db1d3a5b84f2ebd4682af4
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023989"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272812"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、ゲージのスケールは、最小値と最大値で決められた範囲の数値であり、ゲージ上に表示されます。 通常、ゲージのスケールにはゲージ ラベルと目盛りがあり、ゲージ ポインターによって示された値を正確に読み取れるようになっています。 1 つのゲージ スケールに 1 つまたは複数のゲージ ポインターが関連付けられているのが普通です。 同じゲージに複数のスケールを指定できます。  
@@ -50,7 +44,7 @@ ms.locfileid: "33023989"
   
 2.  間隔の値を指定しない場合、既定値は Auto です。この場合、最初の手順で指定された最小値と最大値に基づいて、等間隔の数値がアプリケーションによって計算されます。 間隔の値を指定した場合は、ゲージで最大値と最小値の差が計算され、その数が間隔のプロパティに指定された値で除算されます。  
   
- ラベルおよび目盛りの間隔を定義するプロパティもあります。 これらのプロパティの値を指定すると、スケール間隔のプロパティとして指定された値よりも優先されます。 たとえば、スケール間隔が Auto で、ラベルの間隔に 4 を指定した場合、ラベルは 0、4、8 などと表示されますが、目盛りはゲージ固有の計算に基づいて算出されます。 これによって、ラベルと目盛りが同期しないという状況が生じます。 ラベルの間隔を設定する場合は、目盛りを非表示にすることを考慮してください。  
+ ラベルおよび目盛りの間隔を定義するプロパティもあります。 これらのプロパティの値を指定すると、スケール間隔のプロパティとして指定された値はオーバーライドされます。 たとえば、スケール間隔が Auto で、ラベルの間隔に 4 を指定した場合、ラベルは 0、4、8 などと表示されますが、目盛りはゲージ固有の計算に基づいて算出されます。 これによって、ラベルと目盛りが同期しないという状況が生じます。 ラベルの間隔を設定する場合は、目盛りを非表示にすることを考慮してください。  
   
  最初のラベルが表示される前に、スキップされる単位の数が間隔のオフセットによって決まります。 スケールに表示される後続の目盛りおよびラベルはすべて、指定された間隔を使用します。 ラベルまたは目盛りの間隔を 0 にした場合は、間隔を Auto にリセットした場合と同じです。  
   

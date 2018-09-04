@@ -1,15 +1,11 @@
 ---
 title: RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -18,19 +14,17 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 00f7c8ec10f402e8c1246f81c5ab929536ebb024
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 615b14cc4d79f4ce206744946f55a0e9ddd0ed37
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016759"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274327"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする
-  RSReportServer 構成ファイルで表示拡張機能パラメーターを設定すると、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーで実行されるレポートについて、既定のレポート表示動作を上書きできます。 表示拡張機能パラメーターは、次のように目的に応じて変更できます。  
+  RSReportServer 構成ファイルで表示拡張機能パラメーターを設定すると、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーで実行されるレポートについて、既定のレポート表示動作をオーバーライドできます。 表示拡張機能パラメーターは、次のように目的に応じて変更できます。  
   
 -   レポート ツール バーのエクスポートの一覧での表示拡張機能の名前の表示方法を変更します (たとえば、"Web アーカイブ" を "MHTML" に変更する処理など)。または、別の言語に名前をローカライズします。  
   
@@ -38,7 +32,7 @@ ms.locfileid: "33016759"
   
 -   既定の表示拡張機能パラメーターを変更して、別の値を使用します (たとえば、画像表示拡張機能で既定の出力形式として TIFF を使用している場合、拡張機能パラメーターを変更して EMF を使用できます)。  
   
- 表示拡張機能パラメーターへの変更は、レポート サーバーの表示操作にのみ影響します。 レポート デザイナーのレポート プレビューで表示拡張機能の設定は上書きできません。  
+ 表示拡張機能パラメーターへの変更は、レポート サーバーの表示操作にのみ影響します。 レポート デザイナーのレポート プレビューで表示拡張機能の設定はオーバーライドできません。  
   
  構成ファイルでの表示拡張機能パラメーターの設定は、表示拡張機能全体に影響を与えます。 構成ファイルの設定は、特定の表示拡張機能が使用されるたびに既定値に代わって使用されます。 特定のレポートまたは表示操作の表示拡張機能パラメーターを設定する場合は、 <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを使用するか、レポート URL にデバイス情報設定を指定することにより、デバイス情報をプログラムで指定する必要があります。 表示操作のデバイス情報設定の詳細について、およびデバイス情報設定の一覧表示については、 [「表示拡張機能にデバイス情報設定を渡す」](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)を参照してください。  
   
@@ -52,7 +46,7 @@ ms.locfileid: "33016759"
  テキスト エディターでファイルを変更できます。 RSReportServer.config ファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。 構成ファイルの変更方法の詳細については、「[Reporting Services の構成ファイルの変更 &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
 ## <a name="changing-the-display-name"></a>表示名の変更  
- 表示拡張機能の表示名は、レポート ツール バーのエクスポート一覧に表示されます。 既定の表示名の例として、Web アーカイブ、TIFF ファイル、Acrobat (PDF) ファイルなどがあります。 構成ファイルで **OverrideNames** 要素を指定すると、既定の表示名をカスタム値に置き換えることができます。 また、単一の表示拡張機能の 2 つのインスタンスを定義する場合は、 **OverrideNames** 要素を使用して、エクスポート一覧の各インスタンスを区別できます。  
+ 表示拡張機能の表示名は、レポート ツール バーのエクスポート一覧に表示されます。 既定の表示名の例として、Web アーカイブ、TIFF ファイル、Acrobat (PDF) ファイルなどがあります。 構成ファイルで **OverrideNames** 要素を指定すると、既定の表示名をカスタム値に置き換えることができます。 また、単一の表示拡張機能の 2 つのインスタンスを定義する場合は、**OverrideNames** 要素を使用して、エクスポート一覧の各インスタンスを区別できます。  
   
  表示名はローカライズされるので、既定の表示名をカスタム値に置き換える場合は **Language** 属性を設定する必要があります。 この設定を行わないと、指定した名前が無視されます。 このとき、レポート サーバーのコンピューターに対して有効な言語値を設定する必要があります。 たとえば、フランス語のオペレーティング システムでレポート サーバーを実行している場合は、属性値に "fr-FR" を指定する必要があります。  
   
@@ -100,7 +94,7 @@ ms.locfileid: "33016759"
   
 -   各出力形式の違いをユーザーが理解できるように、一意な表示名を指定します。  
   
-     同じ拡張機能の複数のバージョンを構成している場合、 **OverrideNames**に値を設定して、各バージョンに一意な名前を指定できます。 このように指定しなかった場合は、すべてのバージョンの拡張機能が、レポート ツール バーのエクスポート オプションの一覧に同じ名前で表示されます。  
+     同じ拡張機能の複数のバージョンを構成している場合、**OverrideNames** に値を設定して、各バージョンに一意な名前を指定できます。 このように指定しなかった場合は、すべてのバージョンの拡張機能が、レポート ツール バーのエクスポート オプションの一覧に同じ名前で表示されます。  
   
  次の例では、既定の画像表示拡張機能 (TIFF 出力を生成) を使用して縦モードの EMF を出力する方法と共に、横モードの EMF にレポートを出力する 2 番目のインスタンスを示します。 各拡張機能名が一意であることに注意してください。 この例をテストする際には、表示/非表示オプション、マトリックス、ドリルスルー リンクなどの対話機能が含まれないレポートを選択してください (対話機能は、画像表示拡張機能で動作しません)。  
   

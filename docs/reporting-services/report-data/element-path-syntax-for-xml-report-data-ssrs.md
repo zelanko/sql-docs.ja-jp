@@ -1,29 +1,23 @@
 ---
 title: XML レポート データの要素パス構文 (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e9ef6761a754f9f25dc47cb033ef491be544ee74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d756cca30be1b6bc74be577c0b5498cd34c11292
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022659"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265278"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
   レポート デザイナーでは、大文字と小文字が区別される要素パスを定義して、レポートに使用するデータを XML データ ソースから指定します。 要素パスとは、XML データ ソースにおける XML 階層のノードとその属性の走査方法を指定するものです。 データセット クエリを空にするか、XML **Query** の XML **ElementPath** を空にした場合、既定の要素パスが使用されます。 XML データ ソースからデータが取得されると、テキスト値を持つ要素ノードおよび要素ノードの属性が、結果セットにおける列になります。 クエリを実行すると、これらのノードと属性の値が、行データになります。 [レポート データ] ペインでは、列がデータセット フィールド コレクションとして表示されます。 このトピックでは、要素パス構文について説明します。  
@@ -86,7 +80,7 @@ XMLLocalName :: =
 |**FieldList**|データの取得に使用する一連の要素と属性を定義します。<br /><br /> 指定しなかった場合は、すべての属性およびサブ要素がフィールドとして使用されます。 空のフィールド リストが指定されている場合 (**{}**)、このノードのフィールドは使用されません。<br /><br /> **FieldList** には、 **Value** と **Element** または **ElementNode**の両方が含まれない場合があります。|  
 |**フィールド**|データセットのフィールドとして取得するデータを指定します。|  
 |**属性**|**ElementNode**内に指定される名前と値のペアです。 たとえば、要素ノード \<Customer ID="1"> において、**ID** は属性です。**@ID(Integer)** は、対応するデータ フィールド (**ID**) に整数型の "1" を返します。|  
-|**[値]**|要素の値です。 **Value** は、要素パス内で最後の **ElementNode** でのみ使用できます。 たとえば、\<Return> はリーフ ノードであるため、これを要素パスの最後に追加した場合、**Return {@}** は **Chair** になります。|  
+|**Value**|要素の値です。 **Value** は、要素パス内で最後の **ElementNode** でのみ使用できます。 たとえば、\<Return> はリーフ ノードであるため、これを要素パスの最後に追加した場合、**Return {@}** は **Chair** になります。|  
 |**Element**|指定されたサブ要素の値です。 たとえば、Customers {}/Customer {}/LastName とすると、LastName 要素についてのみ値が取得されます。|  
 |**型**|この要素から作成されたフィールドに使用するデータ型 (省略可) です。|  
 |**NamespacePrefix**|**NamespacePrefix** は XML Query 要素で定義されます。 XML Query 要素が存在しない場合、XML **ElementPath** の名前空間は無視されます。 XML Query 要素が存在する場合は、XML **ElementPath** に属性 **IgnoreNamespaces**を使用できます (省略可)。 IgnoreNamespaces が **true**の場合、XML **ElementPath** と XML ドキュメントの名前空間は無視されます。 詳細については、「[XML レポート データの XML クエリ構文 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)」を参照してください。|  
@@ -101,8 +95,8 @@ XMLLocalName :: =
   
 |書|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|@shouldalert|Bobby|Moore|11|http://www.adventure-works.com|  
-|テーブル|@shouldalert|2|Bobby|Moore|11|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
+|テーブル|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
 |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
 |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
@@ -127,7 +121,7 @@ XMLLocalName :: =
 |書|Qty|  
 |-----------|---------|  
 |Chair|6|  
-|テーブル|@shouldalert|  
+|テーブル|1|  
 |Sofa|2|  
 |EndTables|2|  
   
@@ -135,7 +129,7 @@ XMLLocalName :: =
   
 |Order.ID|FirstName|LastName|ID|  
 |--------------|---------------|--------------|--------|  
-|@shouldalert|Bobby|Moore|11|  
+|1|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  

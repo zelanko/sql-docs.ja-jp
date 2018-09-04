@@ -1,14 +1,10 @@
 ---
 title: レポート サーバー Web サービスのメソッド | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +16,14 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6f0730ea9ab0ea2a79e6716922739203568977d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96f6e5773d5b85f3af5a9217c56eefc424112ea5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026649"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267503"
 ---
 # <a name="report-server-web-service-methods"></a>レポート サーバー Web サービスのメソッド
   レポート サーバー Web サービスには、コンポーネントの機能に基づいた、複数のカテゴリのメソッドが含まれています。 これらのメソッドは、Web サービスのいくつかのエンドポイントを介して (レポート管理用に 3 つ、レポート実行用に 1 つ)、<xref:ReportService2010.ReportingService2010> クラスおよび <xref:ReportExecution2005.ReportExecutionService> クラスのメンバーとして提供されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK に含まれる wsdl.exe などのプロキシ クラス ツールを使用して、これらのクラスを生成できます。 Report Server Web サービスと [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の詳細については、「[Web サービスと、.NET Framework を使用してのアプリケーションの構築](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)」を参照してください。  
@@ -37,7 +31,7 @@ ms.locfileid: "33026649"
 ## <a name="endpoints-and-methods"></a>エンドポイントおよびメソッド  
  次の表に、レポート サーバー Web サービスのエンドポイントと、<xref:ReportService2010.ReportingService2010> エンドポイントにより提供されるメソッドのカテゴリを示します。 他のエンドポイントで利用可能なメソッドの詳細については、「[テクニカル リファレンス (SSRS)](../../../reporting-services/technical-reference-ssrs.md)」を参照してください。  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[レポート サーバー Web サービス, エンドポイント](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|レポート サーバー Web サービスの管理用エンドポイントと実行用エンドポイントについて説明します。|  
 |[レポート サーバー名前空間管理メソッド](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|レポート サーバー データベースの管理に使用できるメソッドについて説明します。 フォルダーとリソースの管理、アイテム プロパティの設定を行えます。|  

@@ -1,29 +1,23 @@
 ---
 title: XML デバイス情報設定 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML [Reporting Services], rendering
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9d7c8eff2db3715b24a41e6f529f32ac4a9f3d6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4d095fe3821bcb3376ee20b6c01a7f0edf69fe9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033299"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274071"
 ---
 # <a name="xml-device-information-settings"></a>XML デバイス情報設定
   次の表は、XML 形式で表示するためのデバイス情報設定を示しています。  
@@ -35,7 +29,7 @@ ms.locfileid: "33033299"
 |**UseFormattedValues**|**true**<br /><br /> **false**|XML データを生成するときにテキスト ボックスの書式設定された値を表示するかどうかを示します。<br /><br /> false の値は、テキスト ボックスの基になる値を使用することを示します。|  
 |**Indented**|**true**<br /><br /> **false**|インデントされた XML を生成するかどうかを示します。 既定値の **false** の場合、インデントなしの圧縮された XML が生成されます。|  
 |**OmitNamespace**|**true**<br /><br /> **false**|XML から既定の名前空間を省略するかどうかを示します。<br /><br /> true の場合、XML で既定の名前空間が指定されません。<br /><br /> false の場合、XML ではレポートの DataSchema プロパティの値を使用して既定の名前空間が指定されます。 DataSchema プロパティは、既定でレポートの名前になります。<br /><br /> 既定値は**false**です。|  
-|**OmitSchema**|**true**<br /><br /> **false**|XML からスキーマの場所を省略するかどうかを示します。 場所は SchemaLocation 属性です。<br /><br /> OmitSchema の既定値は OmitNamespace の値によって決まります。<br /><br /> OmitNamespace = False の場合、既定では、OmitSchema = **False** です。 ユーザーは OmitSchema = True を設定して既定値を上書きできます。<br /><br /> OmitNamespace = True の場合、OmitShema に明示的に構成した値に関係なく、OmitSchema は **True** として機能します。|  
+|**OmitSchema**|**true**<br /><br /> **false**|XML からスキーマの場所を省略するかどうかを示します。 場所は SchemaLocation 属性です。<br /><br /> OmitSchema の既定値は OmitNamespace の値によって決まります。<br /><br /> OmitNamespace = False の場合、既定では、OmitSchema = **False** です。 ユーザーは OmitSchema = True を設定して既定値をオーバーライドできます。<br /><br /> OmitNamespace = True の場合、OmitShema に明示的に構成した値に関係なく、OmitSchema は **True** として機能します。|  
 |**[エンコード]**|.NET Framework でサポートされている文字エンコードの Internet Assigned Numbers Authority (IANA) 名。|既定値は **UTF-8**です。 他の値には、ASCII、UTF-7、UTF-16 などがあります。|  
 |**FileExtension**|生成されたファイルに使用するファイル拡張子。||  
 |**[スキーマ]**|**true** の値は、XML スキーマを表示することを示します。 既定値は **false**です。|XML スキーマ定義 (XSD) を表示するか、実際の XML データを表示するかを示します。|  
