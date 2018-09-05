@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (プレビュー) のリリース ノート |Microsoft ドキュメント
 description: Microsoft SQL Operations Studio (プレビュー) のリリース ノート
 ms.custom: tools|sos
-ms.date: 07/19/2018
+ms.date: 08/30/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,71 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
-ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
+ms.openlocfilehash: 8d38e568aba12f8124035505b8ce1565f0c9b2cd
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39188958"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348422"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (プレビュー) のリリース ノート
 
-**[7 月のパブリック プレビューをダウンロードします。](download.md)**
+**[8 月のパブリック プレビューをダウンロードします。](download.md)**
+
+
+## <a name="august-2018-august-public-preview"></a>8 月 2018 (パブリック プレビューの年 8 月)
+
+リリース日: 2018 年 8 月 30 日  
+バージョン: 0.32.8
+
+*0.32.8 には 0.32.7 で見つかったいくつかの回帰の修正プログラムが含まれています ([#1971](https://github.com/Microsoft/sqlopsstudio/issues/1971)、 [#2372](https://github.com/Microsoft/sqlopsstudio/issues/2372)*)
+
+*年 8 月のパブリック プレビュー*のバグ修正、製品の安定化、既存のシナリオの矛盾点の入力に重点を置いています。  
+
+- SQL Server インポート拡張機能の発表
+- SQL Server Profiler のセッションの管理
+- SQL Server Profiler セッション テンプレートのサポート
+- SQL Server エージェントの機能強化
+- コミュニティの新しい拡張機能: 最初の応答側キット
+- 品質の改善: 接続文字列
+
+### <a name="bug-fixes"></a>バグの修正
+
+- 使用して SQL クエリ エディター ウィンドウ内の解析、`Parse Syntax`コマンド。
+- 修正[発行 #143](https://github.com/Microsoft/sqlopsstudio/issues/143): 変数名で選択しない をダブルクリックします。
+- 修正[発行 #387](https://github.com/Microsoft/sqlopsstudio/issues/387): SQL タブ DB アイコンが赤。
+- 修正[#825 を発行](https://github.com/Microsoft/sqlopsstudio/issues/825): 要求: 自動がスクリプト化した後の現在のサーバーに接続しています. 
+- 修正[発行 #1278](https://github.com/Microsoft/sqlopsstudio/issues/1278): sqlops.desktop [デスクトップ エントリ] - 名前とコメントの冗長の値。
+- 修正[発行 #1285](https://github.com/Microsoft/sqlopsstudio/issues/1285): Windows での削除/置換のあるアプリケーションのアイコンを更新するとします。
+- 修正[発行 #1317](https://github.com/Microsoft/sqlopsstudio/issues/1317): 10 進数の区切り記号を修正します。
+- 修正[#1474 発行](https://github.com/Microsoft/sqlopsstudio/issues/1474): 現在の接続を切断する接続の変更をキャンセルします。
+- 修正[発行 #1497](https://github.com/Microsoft/sqlopsstudio/issues/1497): ビューをグラフとして下部にあるオプションは切り捨てられます。
+- 修正[発行 #1524](https://github.com/Microsoft/sqlopsstudio/issues/1524): シェル/ダッシュ ボード: メイン viewlet アイコンはドラッグと、アプリがクラッシュすることができます。
+- 修正[発行 #1578](https://github.com/Microsoft/sqlopsstudio/issues/1578): 名前をクリックしてリモート ファイル ブラウザー フォルダーの展開/折りたたみできません。
+- 修正[発行 #1620](https://github.com/Microsoft/sqlopsstudio/issues/1620): 機能の提案: 既存の接続の接続文字列を取得します。
+- 修正[発行 #1624](https://github.com/Microsoft/sqlopsstudio/issues/1624): ください ボックスが無効にした場合の色を変更しません。
+- 修正[発行 #1728](https://github.com/Microsoft/sqlopsstudio/issues/1728): JSON/EXCEL/CSV 作業していないとして保存します。
+- 修正[発行 #1744](https://github.com/Microsoft/sqlopsstudio/issues/1744): 結果ペインがタブを切り替えるときのスクロール位置を失った。
+- 修正[発行 #1748](https://github.com/Microsoft/sqlopsstudio/issues/1748): Excel ファイルを 2 回目 (以降) の時間を保存するときにエラー メッセージ。
+- 修正[発行 # ~ 1782](https://github.com/Microsoft/sqlopsstudio/issues/1782): データの編集: エスケープ キーを押すことで元の値にセルが元に戻します。
+- 修正[発行 #1836](https://github.com/Microsoft/sqlopsstudio/issues/1836): .sql ファイルが SQL Operations Studio と関連付けられていません。
+- 修正[#1850 発行](https://github.com/Microsoft/sqlopsstudio/issues/1850): 入力 N 'N にオートコンプリート' '。
+- 修正[発行 #1985](https://github.com/Microsoft/sqlopsstudio/issues/1985): クエリ結果グリッドからのコピーが 1 つの列ではオフです。
+- 修正[発行 #1998](htpts://github.com/Microsoft/sqlopsstudio/pull/1998): VS コードの追加バージョンをバージョン情報ダイアログ。
+- 修正[発行 #2042](https://github.com/Microsoft/sqlopsstudio/pull/2042): エージェント: sql ファイルからクエリをインポートする有効なボタンをクリックします。
+- 修正[発行 #2091](https://github.com/Microsoft/sqlopsstudio/issues/2091): Ctrl + C ショートカットを使用して、結果ウィンドウからコピーできません。
+- 修正[発行 #2099](https://github.com/Microsoft/sqlopsstudio/pull/2099): saveAsCsv の他のオプションを追加します。
+- 修正[発行 #2107](https://github.com/Microsoft/sqlopsstudio/issues/2107): ダッシュ ボードと Profiler のドキュメントのドキュメント アイコンを更新します。
+- 修正[発行 #2129](https://github.com/Microsoft/sqlopsstudio/pull/2129): タブを切り替えると、保存データの編集スクロール位置。
+- 修正[発行 #2152](https://github.com/Microsoft/sqlopsstudio/issues/2152): 結果グリッド行インジケーター ゼロ ベースします。
+
+## <a name="known-issues"></a>既知の問題
+
+- [発行 #2371](https://github.com/Microsoft/sqlopsstudio/issues/2371) Excel のデータの先頭行のみを保存して保存.
+- [問題 #2150](https://github.com/Microsoft/sqlopsstudio/issues/2150): コンテナー内の SQL を Ubuntu 16.04 に接続できません
+
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/sqlopsstudio/releases)します。
+
 
 ## <a name="july-2018-july-public-preview"></a>2018 年 7 月 (7 月のパブリック プレビュー)
 
@@ -61,10 +116,6 @@ ms.locfileid: "39188958"
  - 修正[発行 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): エラー de Ortografia
  - 修正[発行 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): component() が呼び出された後、ButtonComponent で iconPath を設定してもアイコンは変更されません
  - 修正[発行 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): 優れたテーブルの編成
-
-
-詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/sqlopsstudio/releases)します。
-
 
 
 ## <a name="june-2018-june-public-preview"></a>2018 年 6 月 (6 月のパブリック プレビュー)

@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9d55275269ee09daf933521330b093a8d98411fd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c1d6116509a87fae2e91307f06f527910c204510
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087114"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381170"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上の SQL Server の active Directory 認証
 
@@ -52,7 +52,6 @@ AD の認証を構成する方法の詳細については、チュートリア�
 ## <a name="known-issues"></a>既知の問題
 
 - この時点では、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は、証明書です。 将来のリリースでは、WINDOWS 認証方法を有効になります。
-- Centrify、Powerbroker および Vintela などのサード パーティ製 AD ツールはサポートされていません。
 
 ## <a name="next-steps"></a>次の手順
 

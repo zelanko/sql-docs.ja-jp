@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 2804197643c96e21bd0f412cf757ba0b4e2bdfbc
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400705"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381260"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux でのチュートリアル: Active Directory を使用して認証
 
@@ -35,7 +35,11 @@ ms.locfileid: "39400705"
 > * TRANSACT-SQL で AD に基づくログインを作成する
 > * AD Authentication を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] へ接続する
 
-## <a name="prerequisites"></a>前提条件
+> [!NOTE]
+>
+> 構成する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サード パーティ製の AD プロバイダーを使用する linux を参照してください[サード パーティの Active Directory プロバイダーを使用して、SQL Server on Linux で](./sql-server-linux-active-directory-third-party-providers.md)します。
+
+## <a name="prerequisites"></a>Prerequisites
 
 AD 認証を構成する前にする必要があります。
 
@@ -93,7 +97,7 @@ AD 認証を構成する前にする必要があります。
 
       これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
 
-      ```Code
+      ```/etc/resolv.conf
       nameserver **<AD domain controller IP address>**
       ```
 
@@ -115,7 +119,28 @@ AD 認証を構成する前にする必要があります。
 
      これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
 
-     ```Code
+     ```/etc/resolv.conf
+     nameserver **<AD domain controller IP address>**
+     ```
+
+   - **SLES**:
+
+     編集、 `/etc/sysconfig/network/config` AD ドメイン コント ローラー IP が DNS クエリに使用するように、ファイルと、AD ドメインがドメインの検索リストには。
+
+     ```/etc/sysconfig/network/config
+     <...>
+     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+     ```
+
+     このファイルを編集した後、ネットワーク サービスを再起動します。
+
+     ```bash
+     sudo systemctl restart network
+     ```
+
+     これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。
+
+     ```/etc/resolv.conf
      nameserver **<AD domain controller IP address>**
      ```
 
@@ -307,20 +332,28 @@ AD 認証を構成する前にする必要があります。
    インストールされていることを確認、 [mssql ツール](sql-server-linux-setup-tools.md)をパッケージ化しを使用して接続`sqlcmd`任意の資格情報の指定なし。
 
    ```bash
-   sqlcmd -S mssql.contoso.com
+   sqlcmd -S mssql-host.contoso.com
    ```
 
 * ドメインに参加している Windows クライアント上の SSMS
 
-   ドメインの資格情報を使用してドメインに参加している Windows クライアントにログインします。 確認します[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]がインストールされているしへの接続、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスを指定して**Windows 認証**で、**サーバーへの接続**ダイアログ。
+   ドメインの資格情報を使用してドメインに参加している Windows クライアントにログインします。 確認[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]がインストールされている場合、その後に接続、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンス (例:"mssql-host.contoso.com") を指定して**Windows 認証**で、**サーバーへの接続**ダイアログ。
 
 * その他のクライアント ドライバーを使用して AD 認証
 
   * JDBC: [Kerberos を使用して統合 SQL Server の接続の認証](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC:[統合認証を使用](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[接続文字列の構文](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
- 
-## <a name="next-steps"></a>次のステップ
+
+## <a name="performance-improvements"></a>パフォーマンスの強化
+AD の構成は手順で有効な AD アカウントの参照は、しばらく時間をチェックすることを確認する場合[サード パーティ製 AD プロバイダー経由の Linux 上の SQL Server と Active Directory 認証を使用して](sql-server-linux-active-directory-third-party-providers.md)、追加することができます、線の下に`/var/opt/mssql/mssql.conf`を SSSD 呼び出しをスキップし、直接の LDAP 呼び出しを使用します。
+
+```/var/opt/mssql/mssql.conf
+[network]
+disablesssd = true
+```
+
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、SQL Server on Linux での Active Directory 認証を設定する方法を説明しました。 学習したします。
 > [!div class="checklist"]
