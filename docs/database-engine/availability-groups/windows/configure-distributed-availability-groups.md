@@ -13,12 +13,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769068"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348203"
 ---
 # <a name="configure-distributed-availability-group"></a>分散型可用性グループを構成する  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ GO
 ## <a name="create-first-availability-group"></a>最初の可用性グループを作成する
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>最初のクラスターにプライマリ可用性グループを作成する  
-最初の WSFC に可用性グループを作成します。   この例では、データベース `ag1` の `db1`という可用性グループです。      
+最初の WSFC に可用性グループを作成します。   この例では、データベース `ag1` の `db1`という可用性グループです。 プライマリ可用性グループのプライマリ レプリカは、分散型可用性グループでは**グローバル プライマリ**と呼ばれます。 この例の server1 はグローバル プライマリです。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -114,7 +114,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>2 つ目の可用性グループを作成する  
- 2 つ目の WSFC に 2 つ目の可用性グループ `ag2`を作成します。 この場合、データベースはプライマリ可用性グループから自動的にシード処理されるため、データベースを指定しません。  
+ 2 つ目の WSFC に 2 つ目の可用性グループ `ag2`を作成します。 この場合、データベースはプライマリ可用性グループから自動的にシード処理されるため、データベースを指定しません。  セカンダリ可用性グループのプライマリ レプリカは、分散型可用性グループでは**フォワーダー**と呼ばれます。 この例の server3 はフォワーダーです。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -217,33 +217,37 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 現在のところ、手動フェールオーバーのみがサポートされています。 次の Transact-SQL ステートメントは、`distributedag` という分散型可用性グループでフェールオーバーします。  
 
 
-1. 両方の可用性グループに対して、可用性モードを同期コミットに設定します。 
+1. グローバル プライマリとフォワーダーの "*両方*" で次のコードを実行して、分散型可用性グループを同期コミットに設定します。   
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
-      'ag2' WITH  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
         ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
       ```  
    >[!NOTE]
    >標準の可用性グループと同様に、分散型可用性グループの 2 つの可用性グループのレプリカ部分の同期状態は、両方のレプリカの可用性モードによって異なります。 たとえば、同期コミットを発生させるには、現在のプライマリ可用性グループとセカンダリ可用性グループの両方が、synchronous_commit 可用性モードで構成されている必要があります。  
 
 
-1. 分散型可用性グループの状態が `SYNCHRONIZED`に変化するまで待機します。 プライマリ可用性グループのプライマリ レプリカをホストする SQL Server で、次のクエリを実行します。 
+1. 分散型可用性グループの状態が `SYNCHRONIZED`に変化するまで待機します。 プライマリ可用性グループのプライマリ レプリカであるグローバル プライマリで次のクエリを実行します。 
     
       ```sql  
       SELECT ag.name
@@ -259,7 +263,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     可用性グループ **synchronization_state_desc** が `SYNCHRONIZED`になってから先に進みます。 **synchronization_state_desc** が `SYNCHRONIZED`にならない場合は、その状態に変化するまで 5 秒間隔でコマンドを実行します。 **synchronization_state_desc** = `SYNCHRONIZED`の条件が満たされるまで、先に進まないでください。 
 
-1. プライマリ可用性グループのプライマリ レプリカをホストする SQL Server で、分散型可用性グループのロールを `SECONDARY` に設定します。 
+1. グローバル プライマリで、分散型可用性グループのロールを `SECONDARY` に設定します。 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 

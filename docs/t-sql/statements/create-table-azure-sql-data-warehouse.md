@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 701de1160cad251691253b32b828c6ad91c945db
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058750"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348322"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> 列のオプション
 
  `COLLATE` *Windows_collation_name*  
- 式の照合順序を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている Windows 照合順序のいずれかを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている Windows 照合順序の一覧については、「[Windows 照合順序名 (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/)」を参照してください。  
+ 式の照合順序を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている Windows 照合順序のいずれかを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている Windows 照合順序の一覧については、「[Windows 照合順序名 (Transact-SQL)](windows-collation-name-transact-sql.md)」を参照してください。  
   
  `NULL` | `NOT NULL`  
  列で `NULL` 値を許可するかどうかを指定します。 既定値は `NULL` です。  

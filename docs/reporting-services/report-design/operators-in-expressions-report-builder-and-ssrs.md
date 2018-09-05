@@ -1,26 +1,20 @@
 ---
 title: 式で使用される演算子 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8c2d21c06a97b78bb774911078b6e9e5e00f1859
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a098567515f7f5884c787c288ea01b09bb34c06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027439"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266728"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  
@@ -31,7 +25,7 @@ ms.locfileid: "33027439"
 ### <a name="arithmetic"></a>算術  
  算術演算子は、1 つの式に含まれる 2 つの項に対して数学的な操作を実行します。  
   
-|演算子|Description|  
+|演算子|[説明]|  
 |--------------|-----------------|  
 |^|一方の数値をもう一方の数値で累乗します。|  
 |*|2 つの値を乗算します。|  
@@ -44,7 +38,7 @@ ms.locfileid: "33027439"
 ### <a name="comparison"></a>比較  
  比較演算子は、2 つの式が同じかどうかをテストします。  
   
-|演算子|Description|  
+|演算子|[説明]|  
 |--------------|-----------------|  
 |<|より小さい。|  
 |\<=|以下。|  
@@ -58,7 +52,7 @@ ms.locfileid: "33027439"
 ### <a name="string-concatenation"></a>文字列連結  
  文字列連結では、式に含まれる 2 番目の文字列が 1 番目の文字列の最後に追加されます。 その他の文字列操作では、組み込み関数を使用してください。  
   
-|演算子|Description|  
+|演算子|[説明]|  
 |--------------|-----------------|  
 |&|2 つの文字列を連結します。|  
 |+|2 つの文字列を連結します。|  
@@ -66,7 +60,7 @@ ms.locfileid: "33027439"
 ### <a name="logical-and-bitwise"></a>論理演算子とビット演算子  
  論理演算子およびビット演算子は、式に含まれる 2 つの整数項の間の論理操作を実行します。  
   
-|演算子|Description|  
+|演算子|[説明]|  
 |--------------|-----------------|  
 |And|2 つのブール式の場合は論理積、2 つの数値式の場合はビットごとの積を求めます。|  
 |Not|ブール式の場合は論理否定、数値式の場合はビットごとの否定を求めます。|  
@@ -78,7 +72,7 @@ ms.locfileid: "33027439"
 ### <a name="bit-shift"></a>ビット シフト  
  ビットごとの演算子は、式に含まれる 2 つの整数項の間のビット操作を実行します。  
   
-|演算子|Description|  
+|演算子|[説明]|  
 |--------------|-----------------|  
 |<\<|ビット パターン上で算術左シフトを実行します。|  
 |>>|ビット パターン上で算術右シフトを実行します。|  

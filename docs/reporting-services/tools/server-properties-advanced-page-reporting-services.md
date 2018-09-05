@@ -2,25 +2,18 @@
 title: '[サーバーのプロパティ] ([詳細設定] ページ) - Reporting Services | Microsoft Docs'
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40412625"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266270"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
 
@@ -139,15 +132,15 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 
 **OfficeOnlineDiscoveryURL** ***(Power BI Report Server のみ)*** Excel ブックを表示するための Office Online Server インスタンスのアドレスを設定します。
 
-**RequireIntune** Intune から Power BI モバイル アプリ経由で組織のレポートにアクセスする必要がある場合は、これを設定します。 *既定値は False です。*
+**RequireIntune** Intune は、Power BI モバイル アプリ経由で組織のレポートにアクセスする必要があります。 *既定値は False です。*
 
-**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server のみ)*** スケジュールされた更新がタイムアウトになるまでの時間を設定します。 *既定値は 120 です。*
+**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server のみ)*** スケジュールされた更新がタイムアウトになるまでの時間を設定します。*既定値は 120 です。*
 
-**ShowDownloadMenu** クライアント ツールのダウンロード メニューを有効にする場合は、これを設定します。 *既定値は true です。*
+**ShowDownloadMenu** クライアント ツールのダウンロード メニューを有効にします。 *既定値は true です。*
 
 **TimeInitialDelaySeconds** 初期時間を遅延させる時間を秒単位で設定します。 *既定値は 60 です。*
 
-**TrustedFileFormat** 保存できるすべての外部ファイル形式を設定します。 *既定値は、jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web、png です。*
+**TrustedFileFormat** Reporting Services ポータル サイトにおいてブラウザーで開くすべての外部ファイルの形式を設定します。 外部ファイルの形式が一覧に含まれない場合は、オプションのダウンロードを求めるメッセージがブラウザーに表示されます。 既定値は、jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web、png です。
 
 **EnablePowerBIReportExportData** ***(Power BI Report Server のみ)***  
 Power BI ビジュアルからの Power BI Report Server のデータ エクスポートを有効にします。 値は True、False です。  既定値は True です。  
