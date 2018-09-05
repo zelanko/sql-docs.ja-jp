@@ -17,13 +17,13 @@ caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78eb769a8f37ca055628a89aeebe7dd444673434
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 6989aaf0ccef6a9cb7656a23ffdc28062a33839b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988224"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084931"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,8 +70,8 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。  
 
-[中国語 (中華人民共和国)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
-[中国語 (台湾)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
+[中国語 (簡体字)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
+[中国語 (繁体字)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
 [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
 [フランス語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
 [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
@@ -100,8 +100,8 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
   
 **SSDT for VS 2015** の今回のリリースは、次の言語でインストールできます。  
 
-[中国語 (中華人民共和国)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
-[中国語 (台湾)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
+[中国語 (簡体字)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
+[中国語 (繁体字)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
 [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
 [フランス語]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
 [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
@@ -119,8 +119,8 @@ SSDT のインストールまたは管理者用インストール ポイント�
 > [!NOTE]
 > VS 2015 17.4 ISO イメージの SSDT が使用可能になりました。
 
-[中国語 (中華人民共和国)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
-[中国語 (台湾)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
+[中国語 (簡体字)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
+[中国語 (繁体字)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
 [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
 [フランス語]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
 [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |
