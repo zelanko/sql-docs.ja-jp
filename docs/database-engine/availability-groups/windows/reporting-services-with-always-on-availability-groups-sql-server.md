@@ -46,8 +46,7 @@ ms.locfileid: "40412604"
   
     -   [可用性グループに使用するレポート サーバー データベースの準備](#bkmk_prepare_databases)  
   
-    -   
-            [レポート サーバー データベースのディザスター リカバリーの手順](#bkmk_steps_to_complete_failover)  
+    -   [レポート サーバー データベースのディザスター リカバリーの手順](#bkmk_steps_to_complete_failover)  
   
     -   [フェールオーバー時のレポート サーバーの動作](#bkmk_failover_behavior)  
   
