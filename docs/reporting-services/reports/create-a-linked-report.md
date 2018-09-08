@@ -1,27 +1,22 @@
 ---
 title: リンク レポートを作成する | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d666a071193ad436cadb83c24692231e10ab2857
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2fe56792237235d86a6ac59c8ac5e3e98c8f961f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265429"
 ---
 # <a name="create-a-linked-report"></a>リンク レポートを作成する
   リンク レポートは、既存のレポートへのアクセス ポイントとなるレポート サーバー アイテムです。 概念的には、プログラムを実行したりファイルを開くのに使用する、プログラム ショートカットに似ています。  

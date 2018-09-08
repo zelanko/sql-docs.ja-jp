@@ -1,23 +1,18 @@
 ---
 title: SharePoint モードでの最初のレポート サーバーのインストール | Microsoft Docs
-ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8c4dc2d101dac523058192a4acd45034f38dadc6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d30bb50979d583452e7ae77d73d0eac26f395fbc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988114"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268397"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -275,7 +270,7 @@ ms.locfileid: "37988114"
   
 1.  次の手順は、SharePoint 2013 の場合に、SharePoint サイトが 2013 の **体験版**用に構成されていることを前提としています。  
   
-     ブラウザーで目的の SharePoint サイトを開きます。 たとえば、http://\<サーバー名>/sites/bi などです。  
+     ブラウザーで目的の SharePoint サイトを開きます。 たとえば、 http://\<サーバー名>/sites/bi などです。  
   
 2.  **[設定]** ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") を選びます。  
   

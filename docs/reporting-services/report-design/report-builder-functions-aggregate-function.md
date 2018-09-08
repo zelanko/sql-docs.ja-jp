@@ -1,26 +1,20 @@
 ---
 title: 集計関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: c3419907e4eff4407ea22c266882f7c0cfd66794
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cacc7bd4ba240badc7b2d29eb02b42e7963f9fec
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025959"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273821"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>レポート ビルダー関数 - 集計関数
   データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。  

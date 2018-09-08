@@ -1,26 +1,20 @@
 ---
 title: SQL Azure の接続の種類 (SSRS) | Microsoft Docs
-ms.custom: ''
-ms.date: 02/24/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3183a2d7ec717cfd5f00768c16a142727d3fc058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd5a2d961b31a4d4714f0c0c2bea1aa02fb2ce3d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022789"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274923"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure の接続の種類 (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] は、ホストされているクラウドベースのリレーショナル データベースで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジを利用して構築されています。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の種類のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]からのデータに接続し、そのデータを取得します。  
@@ -126,7 +120,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  既定値が指定されたパラメーターがストアド プロシージャに含まれている場合、パラメーターの値として DEFAULT キーワードを使用してその値にアクセスできます。 クエリ パラメーターがレポート パラメーターにリンクされている場合は、レポート パラメーターの入力ボックスで DEFAULT キーワードを入力または選択できます。  
   
- ストアド プロシージャの詳細については、msdn.microsoft.com にある [SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=98335) の「ストアド プロシージャ (データベース エンジン)」を参照してください。  
+ ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)」を参照してください。  
   
   
 ##  <a name="Parameters"></a> パラメーター  

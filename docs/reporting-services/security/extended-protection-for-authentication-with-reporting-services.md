@@ -1,26 +1,20 @@
 ---
 title: Reporting Services での認証の拡張保護 | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6abe1579a0b54f701ed648746b4a5fc5ae597b08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49827ffcafca3131554ec806afa61e49ad03dd58
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028309"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281368"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
 
@@ -117,7 +111,7 @@ SSRS では、オペレーティング システムで有効になっている�
 ###  <a name="ConfigurationSettings"></a> Reporting Services の拡張保護の構成設定  
  次の表では、拡張保護の **rsreportserver.config** に含まれる構成設定について説明します。  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**RSWindowsExtendedProtectionLevel**|拡張保護の適用レベルを指定します。 有効な値は、<br /><br /> **Off**: 既定値。 チャネル バインドまたはサービス バインドの検証は行われません。<br /><br /> **Allow** は拡張保護をサポートしますが、要求しません。  以下を指定します。<br /><br /> - 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。 保護の適用方法は、 **RsWindowsExtendedProtectionScenario**設定によって決まります<br /><br /> - 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証が許可されます。<br /><br /> **Require** は以下を指定します。<br /><br /> - 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。<br /><br /> - 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証は許可 **されません** 。|  
 |**RsWindowsExtendedProtectionScenario**|検証する拡張保護の形式を指定します (チャネル バインド、サービス バインド、またはその両方)。 有効な値は、<br /><br /> **Proxy**: 既定値。 以下を指定します。<br /><br /> - チャネル バインド トークンが存在する場合は、Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証が行われます。<br /><br /> - サービス バインドが適用されます。<br /><br /> **Any** は以下を指定します。<br /><br /> - Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証とチャネル バインドは要求されません。<br /><br /> - サービス バインドが適用されます。<br /><br /> **Direct** は以下を指定します。<br /><br /> - CBT と現在のサービスへの SSL 接続が存在し、SSL 接続の CBT が NTLM、Kerberos、またはネゴシエート トークンの CBT に一致する場合に、それぞれ Windows NTLM 認証、Kerberos 認証、またはネゴシート認証が行われます。<br /><br /> - サービス バインドは適用されません。<br /><br /> <br /><br /> 注: **RsWindowsExtendedProtectionLevel** を **OFF** に設定した場合、 **RsWindowsExtendedProtectionScenario**設定は無視されます。|  
@@ -149,7 +143,7 @@ SSRS では、オペレーティング システムで有効になっている�
 ### <a name="hosts-collection-sources"></a>ホスト コレクションのソース  
  次の表に、ホスト コレクションのソースとなり得るものを示します。  
   
-|ソースの種類|Description|  
+|ソースの種類|[説明]|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|ローカル コンピューターに割り当てられた DNS ドメインの名前。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの DNS ドメイン名が使用されます。|  
 |ComputerNameDnsFullyQualified|ローカル コンピューターを一意に識別する完全修飾 DNS 名。 この名前は、 *HostName*.*DomainName*という形式で DNS ホスト名と DNS ドメイン名を組み合わせたものです。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの完全修飾 DNS 名が使用されます。|  

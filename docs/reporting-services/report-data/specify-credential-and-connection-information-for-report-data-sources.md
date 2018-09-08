@@ -1,14 +1,10 @@
 ---
 title: レポート データ ソースに関する資格情報と接続情報を指定する | Microsoft Docs
-ms.custom: ''
-ms.date: 05/28/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -29,16 +25,14 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3a1f446235811eaf6bf1f01890fedf67f9e800a3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550733"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276431"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
   レポート サーバーは、資格情報を使用して、レポートにコンテンツを提供したり、データ ドリブン サブスクリプションに受信者の情報を提供する外部データ ソースに接続します。 Windows 認証、データベース認証、認証なし、またはカスタム認証を使用する資格情報を指定できます。 ネットワーク経由で接続要求を送信するときに、レポート サーバーはユーザー アカウントまたは自動実行アカウントのいずれかの権限を借用します。 接続要求の実行時に使用されるセキュリティ コンテキストの詳細については、このトピックの「 [データ ソースの構成とネットワーク接続](#DataSourceConfigurationConnections) 」をご覧ください。  
@@ -51,7 +45,7 @@ ms.locfileid: "34550733"
 ## <a name="when-credentials-are-used-in-report-builder"></a>レポート ビルダーの資格情報を使用する場合  
  レポート ビルダーでは、資格情報はレポート サーバーに接続するときと、埋め込みデータ ソースの作成、データセット クエリの実行、レポートのプレビューなどのデータ関連タスクに使用されます。 資格情報はレポートに格納されません。 資格情報は、レポート サーバー上またはローカル クライアント上で個別に管理されます。 次の一覧に、指定する必要がある資格情報の種類、それらの資格情報の格納場所、およびそれらの資格情報の使用方法を示します。  
   
--   [[Reporting Services ログイン] ダイアログ ボックス &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md) で入力するレポート サーバーの資格情報。  
+-   [Reporting Services ログイン] ダイアログ ボックスで入力するレポート サーバーの資格情報。  
   
      レポート サーバーまたは SharePoint サイトに対して最初に保存、パブリッシュ、または参照を実行するとき、資格情報を入力する必要がある場合があります。 入力した資格情報は、レポート ビルダー セッションが終了するまで使用されます。 資格情報の保存を選択した場合、資格情報はユーザー設定と共に、使用しているコンピューターに安全に格納されます。 以降のレポート ビルダー セッションでは、同じレポート サーバーまたは SharePoint サイトへの接続に、保存した資格情報が使用されます。 レポート サーバーの管理者または SharePoint 管理者は、使用する資格情報を指定します。  
   
@@ -59,7 +53,7 @@ ms.locfileid: "34550733"
   
      これらの資格情報は、外部データ ソースへのデータ接続を行うために、レポート サーバーによって使用されます。 一部の種類のデータ ソース用に、資格情報をレポート サーバーに安全に格納できます。 これらの資格情報により、他のユーザーは基になるデータ接続の資格情報を指定することなく、レポートを実行できます。  
   
--   データセット クエリの実行時、データセット フィールドの更新時、またはレポートのプレビュー時に [[データ ソースの資格情報の入力] ダイアログ ボックス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) で入力するデータ ソースの資格情報。  
+-   データセット クエリの実行時、データセット フィールドの更新時、またはレポートのプレビュー時に **[データ ソースの資格情報の入力]** ダイアログ ボックスで入力するデータ ソースの資格情報。  
   
      これらの資格情報は、レポート ビルダーから外部データ ソースにデータ接続を行うために、または資格情報の入力を求めるように構成されたレポートをプレビューするために使用されます。 このダイアログ ボックスで入力した資格情報は、レポート サーバーに格納されず、他のユーザーが使用することはできません。 レポート ビルダーは、クエリの実行またはレポートのプレビューのたびに資格情報を入力しなくても済むように、レポート編集セッション中に資格情報をキャッシュします。  
   

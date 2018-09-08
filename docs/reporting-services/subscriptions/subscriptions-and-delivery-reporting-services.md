@@ -1,14 +1,10 @@
 ---
 title: サブスクリプションと配信 (Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -22,16 +18,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 47ac8b682f2e31fc104c91203b9174ea0a4f0297
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 91e4972f3ae67422801ce360ee6e007bb72bcb99
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980844"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273426"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>サブスクリプションと配信 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションは、特定の時刻で、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。  

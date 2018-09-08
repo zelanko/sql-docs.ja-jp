@@ -1,14 +1,10 @@
 ---
 title: Reporting Services データ ソースに資格情報を保存する | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - credentials [Reporting Services]
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - stored credentials [Reporting Services]
 - data sources [Reporting Services], stored credentials
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8511d948e0e942451e4c304e6a381686c0023a08
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c04dafe38d1560a59c3a2e276da9d37058f67dce
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550683"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269596"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーが、レポートに必要な外部データにアクセスするときに使用する、保存された資格情報を構成できます。 保存された資格情報は、レポートを自動実行する場合に使用されます。たとえば、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションがレポートを電子メールとしてパブリッシュする場合などです。 この資格情報は、レポート処理がスケジュールで設定されている場合、または、レポート処理がトリガーされた場合に、レポート サーバーによって取得されて使用されます。 このトピックでは、ネイティブ モードと SharePoint モードの両方のレポート サーバーに対して、保存された資格情報を構成する方法について説明します。  

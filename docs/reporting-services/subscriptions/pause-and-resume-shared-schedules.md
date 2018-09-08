@@ -1,14 +1,10 @@
 ---
 title: 共有スケジュールの一時停止と再開 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
@@ -19,15 +15,14 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ecaa6780e3b3f10809f11d3aa329cb69e645123a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c770331e58e65ef5a70f9743c49d2854054b7d2b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278852"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
   使用中の共有スケジュールは、一時停止および再開することができます。 共有スケジュールを一時停止すると、レポート処理とサブスクリプションのトリガーとして使用しているスケジュールが一時的に無効になります。 一時停止や再開を行うことができるのは共有スケジュールだけです。 レポート固有のスケジュールは一時停止できません。  

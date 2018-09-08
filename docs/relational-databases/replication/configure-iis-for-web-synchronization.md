@@ -19,12 +19,12 @@ caps.latest.revision: 88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ffab68d239f7992d7f3b1c3a289f8c67c17b53
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ed503598b4a093876b0323ee1284a7bb9d782171
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358814"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405332"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37358814"
   
 -   RMO: [Web 同期を使用するようにサブスクリプションを構成する方法 (RMO プログラミング)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Web 同期では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行するコンピューターを使用して、プル サブスクリプションをマージ パブリケーションに同期します。 IIS 5.0、IIS 6.0、および [!INCLUDE[iisver](../../includes/iisver-md.md)] がサポートされます。 [!INCLUDE[iisver](../../includes/iisver-md.md)]では、Web 同期の構成ウィザードはサポートされません。  
+ Web 同期では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行するコンピューターを使用して、プル サブスクリプションをマージ パブリケーションに同期します。 IIS バージョン 5.0、IIS バージョン 6.0、および IIS バージョン 7.0 がサポートされます。 IIS 7.0 では、Web 同期の構成ウィザードはサポートされていません。  
   
 > [!IMPORTANT]  
 >  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンを使用するとエラーが発生する可能性があります。 たとえば、"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  

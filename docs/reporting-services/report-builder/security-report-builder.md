@@ -1,26 +1,20 @@
 ---
 title: セキュリティ (レポート ビルダー) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2ee5186a812aac4cec049c7624bbb514d6d42914
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6349054c473068ce09d0352dfe852d6a77ad1f27
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021215"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282023"
 ---
 # <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
   レポート ビルダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
@@ -66,7 +60,7 @@ ms.locfileid: "33021215"
   
  レポート サーバーまたは SharePoint サイトでは、レポートとレポート関連アイテムおよび操作を個別にセキュリティ保護できます。 アイテムと操作にアクセスするための権限は、セキュリティ ポリシーによって与えられます。このポリシーは、ユーザー アカウントやグループ アカウントをアイテムに対して相対的に権限レベルにマップするものです。 多数のポリシーを維持する際の複雑さとオーバーヘッドを軽減するため、フォルダーなどのコンテナーに対する権限はコンテナー内のアイテムに継承されます。 たとえば、フォルダーに対する "レポートの表示" 権限を持つユーザーは、フォルダー内のアイテムに対する "レポートの表示" 権限も持ちます。  
   
- アイテムまたはフォルダーに対する権限は、アイテム レベルのセキュリティを使用して無効にすることができます。 アイテム レベルのセキュリティが適用されると、親コンテナーからの権限の継承はアイテムに適用されなくなります。 アイテム レベルのセキュリティがフォルダーに適用された場合、入れ子になったフォルダーは同じ権限を継承します。  
+ アイテムまたはフォルダーに対する権限は、アイテム レベルのセキュリティを使用してオーバーライドすることができます。 アイテム レベルのセキュリティが適用されると、親コンテナーからの権限の継承はアイテムに適用されなくなります。 アイテム レベルのセキュリティがフォルダーに適用された場合、入れ子になったフォルダーは同じ権限を継承します。  
   
  他のユーザーがパブリッシュしたアイテムを参照して見つけることができない場合は、アイテムまたはフォルダーに対する権限に問題がある可能性があります。  
   

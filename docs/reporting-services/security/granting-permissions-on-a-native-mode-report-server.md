@@ -1,14 +1,10 @@
 ---
 title: ネイティブ モードのレポート サーバーに対するアクセス許可の許可 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -23,16 +19,14 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 60
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9c20c3f24a1a6698ef86446e0be9df4f91b6ba80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: adaabe453550990eb276132bfe2e1a62678c2192
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028819"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273832"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーに対する権限の許可
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ロールベースの承認および認証サブシステムを使用して、操作の実行およびレポート サーバーのアイテムへのアクセスを行えるユーザーを決定します。 ロールベースの承認では、ユーザーまたはグループが実行できる一連のアクションがロールに分類されます。 認証は、組み込みの Windows 認証、または指定したカスタム認証モジュールに基づいて行われます。 どちらの種類の認証でも、定義済みロールまたはカスタム ロールを使用できます。  

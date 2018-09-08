@@ -1,14 +1,10 @@
 ---
 title: パフォーマンス カウンター MSRS 2011 SharePoint モード パフォーマンス オブジェクト | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - Scheduling and Delivery Processor performance object [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4b71aab05f6e9fe43b5077ef04cf3d7bd8dbc41d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 934267601abcedd1499e45c5a5eafdcee6ab8f35
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028419"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267112"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>パフォーマンス カウンター MSRS 2011 SharePoint モード パフォーマンス オブジェクト
   このトピックでは、 **SharePoint モード配置の一部である** MSRS 2011 Web Service SharePoint Mode **と** MSRS 2011 Windows Service SharePoint Mode [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -52,7 +46,7 @@ ms.locfileid: "33028419"
   
  次の表は、 **MSRS 2011 Web Service SharePoint Mode** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
-|カウンター|Description|  
+|カウンター|[説明]|  
 |-------------|-----------------|  
 |**Active sessions**|アクティブなセッションの数。 このカウンターは、レポートの実行によって生成されたすべてのブラウザー セッション (アクティブであるかどうかにかかわらず) の累積数を表示します。<br /><br /> セッション レコードが削除されると、カウンターの値は減少します。 既定では、セッションは利用されない状態が 10 分間続くと削除されます。|  
 |**Cache Hits/Sec**|キャッシュされたレポートに対する 1 秒あたりの要求数。 これはレポートの再表示の要求であり、キャッシュから直接処理されるレポートの要求ではありません (このトピックで後述する「 **Total Cache Hits** 」を参照してください)。|  
@@ -82,7 +76,7 @@ ms.locfileid: "33028419"
   
  次の表は、 **MSRS 2011 Windows Service SharePoint mode** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
-|カウンター|Description|  
+|カウンター|[説明]|  
 |-------------|-----------------|  
 |**Active sessions**|レポート サーバー データベースに格納されるアクティブ セッションの数です。 このカウンターは、レポート サブスクリプションから生成される使用可能なすべてのブラウザー セッションの累積数と、セッションがまだアクティブかどうかを示します。|  
 |**Alerting: event queue length**||  

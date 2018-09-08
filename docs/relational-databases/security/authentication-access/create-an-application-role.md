@@ -15,16 +15,16 @@ helpviewer_keywords:
 - application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7e079874a1fac2b3eab65dcf442ac16a2b7baa8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c9515e20828247364db73e8702d05a2a15043c8e
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43111202"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118400"
 ---
 # <a name="create-an-application-role"></a>アプリケーション ロールの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,8 +75,7 @@ ms.locfileid: "43111202"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- 
-  **[アプリケーション ロール – 新規]** ダイアログ ボックスには、 **[セキュリティ保護可能なリソース]** と **[拡張プロパティ]** という 2 つのページもあり、それぞれにオプションが用意されています。  
+ **[アプリケーション ロール – 新規]** ダイアログ ボックスには、 **[セキュリティ保護可能なリソース]** と **[拡張プロパティ]** という 2 つのページもあり、それぞれにオプションが用意されています。  
   
 -   **[セキュリティ保護可能なリソース]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
   

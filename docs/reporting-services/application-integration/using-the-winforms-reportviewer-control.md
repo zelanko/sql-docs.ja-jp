@@ -1,30 +1,24 @@
 ---
 title: WinForms ReportViewer コントロールの使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7af7b112d6139fa168c09a3174badc065fa90d53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18b4820e6df822687e32b9054ebcb26f21bc4e8d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018089"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266084"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WinForms ReportViewer コントロールを使用して Windows アプリケーションでレポートを表示します。  

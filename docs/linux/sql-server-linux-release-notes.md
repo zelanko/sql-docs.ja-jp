@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 55fc722a3205984fbb48f2a2c0945ebf4ff117b8
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: bcc1b86da4da46575279b373d288800e5ea6a35c
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396361"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381180"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -47,6 +47,7 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 | リリース               | バージョン       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
 | [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
@@ -71,6 +72,20 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 - [フルテキスト検索のパッケージをインストールします。](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントを有効にします。](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU10"></a> CU10 (2018 の年 8 月)
+
+これは、SQL Server 2017 の累積的な更新プログラム 10 (CU10) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3037.1 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4342123](https://support.microsoft.com/en-us/help/4342123)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 14.0.3037.1-2 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3037.1-2 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
+| Debian パッケージを Ubuntu 16.04 | 14.0.3037.1-2 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU9-GDR2"></a> CU9 GDR2 (2018 の年 8 月)
 
@@ -456,7 +471,7 @@ Linux 上の SQL Server に接続されている Windows 上の SSMS には次�
 
 - 保持するログ ファイルの数を変更できません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 開始するには、次のクイック スタートを参照してください。
 

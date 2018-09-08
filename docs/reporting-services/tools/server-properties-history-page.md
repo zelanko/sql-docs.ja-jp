@@ -1,28 +1,22 @@
 ---
 title: '[サーバーのプロパティ] ([履歴] ページ) | Microsoft Docs'
-ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e0c9f8065d9d66f52a86554bcb219eb4e4406cd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c6a19bc699a048cf6ac80228caa2a1ca442b266
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030079"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276071"
 ---
 # <a name="server-properties-history-page"></a>[サーバーのプロパティ]\([履歴] ページ)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] この [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ページを使用すると、保持されるレポート履歴のコピー数の既定値を設定できます。 既定値には、すべてのレポートのレポート履歴の制限を規定する初期設定が用意されています。 これらの設定は、レポートごとに変えることができます。  
@@ -37,7 +31,7 @@ ms.locfileid: "33030079"
  3) レポート サーバー名を右クリックして、 **[プロパティ]** をクリックします。
  4) **[履歴]** をクリックすると、このページが開きます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[レポート履歴に無制限の数のスナップショットを保持する]**  
  すべてのレポート履歴スナップショットを保持します。 このレポート ヒストリのサイズを減らすには、スナップショットを手動で削除する必要があります。  
   

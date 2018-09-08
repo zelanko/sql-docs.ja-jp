@@ -1,24 +1,19 @@
 ---
 title: SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する | Microsoft Docs
-ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 55eedb4a18476046786ef81fdbeb918d2241a0f3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049130"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272870"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
 

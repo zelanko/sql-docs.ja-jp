@@ -1,14 +1,10 @@
 ---
 title: Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -16,16 +12,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8eb51a0c7240f1eff35ecc754d3a6b1d6fdc1000
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8ec3075444b0885cb6e6ea5b52c2f2fe6b60941
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028669"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281347"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。 多くの場合、テーブル、マトリックス、または一覧の既定の構造を使用してデータを表示できます。 詳細については、「[テーブル (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」、「[マトリックスの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)」、または「[一覧がある請求書とフォームを作成する (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
@@ -43,7 +37,7 @@ ms.locfileid: "33028669"
 ### <a name="row-and-column-handles"></a>行ハンドルと列ハンドル  
  Tablix データ領域を選択すると、行ハンドルと列ハンドルのグラフィックが各行および列の目的を示します。 ハンドルは、グループ内に含まれている行および列、またはグループの外にある行および列を示します。 次の表で、さまざまなハンドル表示について説明します。  
   
-|アイコン|Description|  
+|アイコン|[説明]|  
 |----------|-----------------|  
 |![詳細行の 3 本の平行線がある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")|行グループ階層に詳細グループのみ|  
 |![詳細行と 1 つの外部グループがある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "詳細行と 1 つの外部グループがある行ハンドル")|1 つの外部グループと子詳細グループ|  

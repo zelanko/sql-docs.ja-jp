@@ -1,14 +1,10 @@
 ---
 title: Reporting Services のコード アクセス セキュリティ | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +16,14 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0a6b82f5b7aae4d92b50334f14d51b0b6d17ac79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e1d6fcf86d77351354f2061182b2613ef3efb86
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017369"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269018"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services のコード アクセス セキュリティ
   コード アクセス セキュリティの中核を成す概念として、証拠、コード グループ、名前付き権限セットがあります。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、レポート マネージャー、レポート デザイナー、およびレポート サーバー コンポーネントには、それぞれ、データ、配信、表示、セキュリティ拡張機能はもとより、カスタム アセンブリのコード アクセス セキュリティを設定するポリシー ファイルが存在します。 以下のセクションでは、コード アクセス セキュリティの概要について説明します。 このセクションで取り上げられているトピックの詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ドキュメントの「セキュリティ ポリシー モデル」を参照してください。  

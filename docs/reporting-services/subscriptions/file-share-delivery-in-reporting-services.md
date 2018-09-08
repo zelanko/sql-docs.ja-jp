@@ -1,28 +1,23 @@
 ---
 title: Reporting Services でのファイル共有の配信 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: bad4004a0bd151256397df94c329ae11fca1955b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19048897e0f9e90f40a0821ad8275025260f750c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278761"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能が用意されています。 ファイル共有配信拡張機能は既定で使用できるため、追加で構成する必要はありません。 ファイルの配信を正常に実行するためには、共有フォルダーに書き込みアクセス権を設定する必要があります。 ライター権限を必要とするアカウントには、サブスクリプションに構成された資格情報またはレポート サーバー用に構成された **ファイル共有アカウント** を使用できます。 ファイル共有アカウントの詳細については、「 [サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。 また、レポートへのアクセスを要求するユーザーは、共有フォルダーの読み取り権限を持っている必要があります。  

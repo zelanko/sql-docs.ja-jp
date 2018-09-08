@@ -1,14 +1,10 @@
 ---
 title: ロールを作成、削除、または変更する (Management Studio) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8841b9091b4fafb563f624e6b61dca40233e7294
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6d28f0b423e8e06c192510ef6874b5cf451112a5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088134"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278164"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>ロールの定義 - 作成、削除、または変更
   Reporting Services には、レポート サーバーへのアクセス レベルをあらかじめ定義したロールが用意されています。 レポート サーバーにアクセスする各ユーザーまたはグループは、実行できるタスクが定義されたロールを介して、レポート サーバーにアクセスすることになります。 ロールは、レポート サーバー全体に対して定義されます。 レポート サーバーの特定の部分についてロール定義を変更したり、状況に依存するようなロールを指定したりすることはできません。  

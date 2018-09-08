@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702983"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925992"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
     このケースでは、パート I で作成した Azure Active Directory サービス プリンシパルを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを承認してみましょう。  
   
     > [!IMPORTANT]  
-    >  Azure Active Directory サービス プリンシパルには、Key Vault に対して少なくとも `get`、 `list`、 `wrapKey`、 `unwrapKey` の権限が必要です。  
+    >  Azure Active Directory サービス プリンシパルには、Key Vault に対して少なくとも `get`、`wrapKey`、および `unwrapKey` の権限が必要です。  
   
      **パラメーターには、以下のように、パート I でコピーした** クライアント ID `ServicePrincipalName` を使用します。 `Set-AzureRmKeyVaultAccessPolicy` は、メッセージを伴わずに実行されます。正常に実行されたとしても何も出力されません。  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      権限を確認するには、 `Get-AzureRmKeyVault` コマンドレットを呼び出します。 このステートメントから返された出力結果の "Access Policies" に、この Key Vault にアクセスできるもう 1 つのテナントとして AAD アプリケーションの名前が表示されます。  

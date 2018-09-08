@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
-ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
+ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130608"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348341"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>サービス アカウントの構成 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39130608"
  グループの唯一のメンバーは、サービスごとの SID です。 その隣にログオン アカウントが示されます。 ログオン アカウント名は、サービスごとの SID のコンテキストを示して、分かりやすくする目的で表示されています。 後でログオン アカウントを変更してからこのページに戻ると、セキュリティ グループとサービスごとの SID には変化がないにもかかわらず、ログオン アカウントのラベルが異なっていることが分かります。  
   
 ##  <a name="bkmk_winpriv"></a> Analysis Services サービス アカウントに割り当てられた Windows 特権  
- Analysis Services では、サービスを開始し、システム リソースを要求するには、オペレーティング システムからの権限が必要です。 要件は、サーバー モードおよびインスタンスがクラスター化されているかどうかによって異なります。 Windows 特権の詳細については、「 [特権](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 」および「 [特権の制約 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) 」を参照してください。  
+ Analysis Services では、サービスを開始し、システム リソースを要求するには、オペレーティング システムからの権限が必要です。 要件は、サーバー モードおよびインスタンスがクラスター化されているかどうかによって異なります。 Windows 特権の詳細については、「 [特権](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 」および「 [特権の制約 (Windows)](/windows/desktop/SecAuthZ/privilege-constants) 」を参照してください。  
   
  Analysis Services のすべてのインスタンスには、 **[サービスとしてログオン]** (SeServiceLogonRight) 特権が必要です。 SQL Server セットアップによって、インストール時に指定されたサービス アカウントに特権が割り当てられます。 多次元モードおよびデータ マイニング モードで実行されるサーバーの場合、これは スタンドアロン サーバー インストール環境において Analysis Services サービス アカウントが必要とする唯一の Windows 特権であり、セットアップによって Analysis Services 用に構成される唯一の特権です。 クラスター インスタンスおよび表形式インスタンスの場合、追加の Windows 特権を手動で追加する必要があります。  
   
@@ -147,8 +147,8 @@ ms.locfileid: "39130608"
  [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server サービス アカウントとサービスごとの SID (ブログ)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server では、サービス SID を使用してサービスを分離 (サポート技術情報の記事)](http://support.microsoft.com/kb/2620201)   
- [アクセス トークン (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [セキュリティ識別子 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [アクセス トークン (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [セキュリティ識別子 (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [アクセス トークン (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [アクセス制御リスト (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

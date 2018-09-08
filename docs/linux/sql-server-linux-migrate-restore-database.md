@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 8cc1010f2492054a467abfc53e859d39a86e1c78
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e779e3bd3958f440234bdc5f078d52088803a78
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086704"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240068"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して Windows から Linux へ SQL Server データベースを移行する
 
@@ -34,7 +34,7 @@ Windows 上の SQL Server から Linux 上の SQL Server 2017 にデータベー
 
 SQL Server Always On 可用性グループ Windows から Linux に SQL Server データベースを移行するを作成することもできます。 参照してください[sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを完了するには、次の前提条件が必要です。
 
@@ -166,6 +166,44 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
 
    データベースの復元が正常にメッセージを取得する必要があります。
 
+   `RESTORE DATABASE` 次の例のようなエラーを返す可能性があります。
+
+   ```bash
+   File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.
+   Msg 5133, Level 16, State 1, Server servername, Line 1
+   Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
+   ```
+   
+   この場合、データベースには、セカンダリ ファイルが含まれています。 これらのファイルがで指定されていない場合、`MOVE`の句`RESTORE DATABASE`、復元手順は、元のサーバーと同じパスで作成しようとしています。 
+
+   バックアップに含まれるすべてのファイルを一覧表示することができます。
+   ```sql
+   RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   GO
+   ```
+   (最初の 2 つの列のみを一覧表示する) 次のような一覧を取得する必要があります。
+   ```sql
+   LogicalName         PhysicalName                                                                 ..............
+   ----------------------------------------------------------------------------------------------------------------------
+   YourDB              Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB.mdf          ..............
+   YourDB_Product      Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf  ..............
+   YourDB_Customer     Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Customer.ndf ..............
+   YourDB_log          Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
+   ```
+   
+   この一覧を使用するには作成する`MOVE`追加のファイルの句。 この例で、`RESTORE DATABASE`は。
+
+   ```sql
+   RESTORE DATABASE YourDB
+   FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   WITH MOVE 'YourDB' TO '/var/opt/mssql/data/YourDB.mdf',
+   MOVE 'YourDB_Product' TO '/var/opt/mssql/data/YourDB_Product.ndf',
+   MOVE 'YourDB_Customer' TO '/var/opt/mssql/data/YourDB_Customer.ndf',
+   MOVE 'YourDB_Log' TO '/var/opt/mssql/data/YourDB_Log.ldf'
+   GO
+   ```
+
+
 1. 復元を確認するには、サーバー上のデータベースのすべてを一覧表示します。 復元されたデータベースの一覧を表示する必要があります。
 
    ```sql
@@ -185,7 +223,7 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
 
 1. 完了したら、リモートで作業して**ssh**セッションで、「`exit`もう一度です。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、Windows 上のデータベースをバックアップし、SQL Server 2017 を実行している Linux サーバーに移動する方法について説明しました。 学習したします。
 > [!div class="checklist"]

@@ -1,15 +1,11 @@
 ---
 title: Power BI ダッシュボードへの Reporting Services のアイテムのピン留め | Microsoft Docs
-ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pbi
 - dashboard
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4065422e0be3f8570e91cc05d6c5cd2c86af24ec
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ffcd2000c54c25abc7ab417a6c8cb9846ccaabee
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40410352"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281856"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI ダッシュボードへの Reporting Services のアイテムのピン留め
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] では、レポート ビューアー ツール バーから [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードに新しいタイルとしてピン留めできます。   ピン留めするには、管理者がレポート サーバーを Azure Active Directory および [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合しておく必要があります。  
@@ -80,8 +74,7 @@ ms.locfileid: "40410352"
   
 4. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にピン留めするレポート アイテムをクリックします。 ピン留めできるアイテムは一度に 1 つに限られます。  レポート ビューアーにレポートの影付きのビューが表示されます。ピン留めできるレポート アイテムは強調表示され、ピン留めできないアイテムは濃い影付きになります。  
   
-    **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択します。   
-  ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
+    **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択します。   ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   

@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9531e174c95f43d93f0b041094af842c2487a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c8a7aeb998b9a79faa644a3d371bb5f4f98c8f5
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106262"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694695"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "43106262"
 |**default_language_name**|**sysname**|プリンシパルの既定の言語。|  
 |**credential_id**|**int**|プリンシパルに関連付けられている証明書の ID。 プリンシパルに関連付けられている証明書がない場合、credential_id は NULL になります。|  
 |**owning_principal_id**|**int**|**Principal_id**サーバー ロールの所有者のです。 プリンシパルがサーバー ロールでない場合は NULL です。|  
-|**is_fixed_role**|**bit**|プリンシパルが固定サーバー ロールの場合、1 を返します。 詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。|  
+|**is_fixed_role**|**bit**|プリンシパルが固定のアクセス許可を持つ組み込みのサーバー ロールのいずれかの場合は、1 を返します。 詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。|  
   
 ## <a name="permissions"></a>アクセス許可  
  すべてのログインは自分のログイン名、システム ログイン、および固定サーバー ロールを参照できます。 他のログインを参照するには、ALTER ANY LOGIN、またはログインに対する権限が必要です。 ユーザー定義のサーバー ロールを参照するには、ALTER ANY SERVER ROLE、またはロールのメンバーシップが必要です。  
@@ -61,7 +61,7 @@ ms.locfileid: "43106262"
  次のクエリは、サーバー プリンシパルに対して明示的に付与または拒否されている権限を一覧表示します。  
   
 > [!IMPORTANT]  
->  固定サーバー ロールの権限は、sys.server_permissions には表示されません。 したがって、サーバー プリンシパルには、ここに一覧表示されていない追加の権限がある可能性があります。  
+>  (パブリック) 以外の固定サーバー ロールのアクセス許可は、sys.server_permissions には表示されません。 したがって、サーバー プリンシパルには、ここに一覧表示されていない追加の権限がある可能性があります。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

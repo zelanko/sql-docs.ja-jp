@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008804"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024465"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 このチュートリアルでは、1 つのシナリオを使用して、所有権の継承とユーザー コンテキストの切り替えに関係する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセキュリティ概念について説明します。  
   
 > [!NOTE]  
-> このチュートリアルのコードを実行するには、混合モードのセキュリティが構成されていることと、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースがインストールされていることが条件となります。 混合モードのセキュリティの詳細については、「 [認証モードの選択](../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
+> このチュートリアルのコードを実行するには、混合モードのセキュリティが構成されていることと、AdventureWorks2017 データベースがインストールされていることが条件となります。 混合モードのセキュリティの詳細については、「 [認証モードの選択](../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
   
 ## <a name="scenario"></a>シナリオ  
-このシナリオでは、2 人のユーザーが、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースに格納されている購買発注データにアクセスするためのアカウントを必要としていることを想定します。 要件は次のとおりです。  
+このシナリオでは、2 人のユーザーが、AdventureWorks2017 データベースに格納されている購買発注データにアクセスするためのアカウントを必要としていることを想定します。 要件は次のとおりです。  
   
 -   最初のアカウント (TestManagerUser) では、すべての購買注文のすべての詳細を確認できる必要があります。  
-  
 -   2 番目のアカウント (TestEmployeeUser) では、配送の一部が受領された場合の品目に関して、発注番号、発注日、出荷日、製品 ID 番号、発注品目数と受領品目数を、購買注文ごとに発注番号で確認できる必要があります。  
-  
--   他のすべてのアカウントでは、各自の現在の権限を保持する必要があります。  
-  
+-   他のすべてのアカウントでは、各自の現在の権限を保持する必要があります。   
 このシナリオの要件を満たすため、ここでは例を次のように 4 分割して、所有権の継承とコンテキストの切り替えの各概念を示します。  
   
-1.  環境を構成する。  
-  
-2.  購買注文によってデータにアクセスするストアド プロシージャを作成する。  
-  
+1.  環境を構成する。   
+2.  購買注文によってデータにアクセスするストアド プロシージャを作成する。   
 3.  ストアド プロシージャからデータにアクセスする。  
-  
 4.  環境をリセットする。  
   
-以下で、この例の各コード ブロックについて説明します。 完全なサンプル コードをコピーするには、このチュートリアルの最後の「 [完全なサンプル コード](#CompleteExample) 」を参照してください。  
+以下で、この例の各コード ブロックについて説明します。 完全なサンプル コードをコピーするには、このチュートリアルの最後の「 [完全なサンプル コード](#CompleteExample) 」を参照してください。
+
+## <a name="prerequisites"></a>Prerequisites
+このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
+
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
+- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
+
+SQL Server Management Studio でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。   
   
 ## <a name="1-configure-the-environment"></a>1.環境を構成する  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] と次のコードを使用して `AdventureWorks2012` データベースを開き、`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを使用して、dbo ユーザーがコンテキストとして表示されていることを確認します。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] と次のコードを使用して `AdventureWorks2017` データベースを開き、`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを使用して、dbo ユーザーがコンテキストとして表示されていることを確認します。  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 CURRENT_USER ステートメントの詳細については、「[CURRENT_USER (Transact-SQL)](../t-sql/functions/current-user-transact-sql.md)」を参照してください。  
   
-次のコードを dbo ユーザーとして実行し、サーバー上と [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース内に 2 ユーザーを作成します。  
+次のコードを dbo ユーザーとして実行し、サーバー上と AdventureWorks2017 データベース内に 2 ユーザーを作成します。  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+返されるエラー:
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 前のセクションで作成したストアド プロシージャで参照されるオブジェクトは、 `TestManagerUser` スキーマの所有権により `Purchasing` の所有となります。したがって、 `TestEmployeeUser` はストアド プロシージャを介してベース テーブルにアクセスできます。 次のコードでは、引き続き `TestEmployeeUser` をコンテキストとし、購買注文 952 をパラメーターとして渡します。  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

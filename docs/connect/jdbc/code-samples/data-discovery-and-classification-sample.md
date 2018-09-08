@@ -24,9 +24,9 @@ ms.locfileid: "42786100"
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-これは、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]サンプル アプリケーションは、結果セットの getter メソッドを使用して取得する方法を示します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]'SQL データの検出と分類' テーブルからの情報、そのような情報を保持します。
+この [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、結果セットの getter メソッドを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 'SQL データの検出と分類' の情報を取得する方法を示します。
   
-このサンプルのコード ファイルが、DataDiscoveryAndClassification.java をという名前し、次の場所で見つかります。  
+このサンプルのコード ファイルは DataDiscoveryAndClassification.java という名前で、次の場所で見つけることができます。  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  

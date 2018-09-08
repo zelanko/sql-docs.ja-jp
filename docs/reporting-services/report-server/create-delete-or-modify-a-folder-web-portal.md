@@ -1,26 +1,20 @@
 ---
 title: フォルダーの作成、削除、または変更 (Web ポータル) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0622d84da89af1f2cfda36500e5257168417ba14
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dff7a3a711b0462e7c47869a390f8b171370877c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082454"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270668"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>フォルダーの作成、削除、または変更 (Web ポータル)
   フォルダーを作成すると、レポート サーバーにパブリッシュするアイテムを整理して管理できます。 フォルダーを作成することには、関心のあるレポートをユーザーが見つけやすくなるという利点があります。 コンテンツ マネージャーは、権限を適用するためのフレームワークとしてフォルダーを利用できます。 特定のフォルダーに対してロールの割り当てを作成することで、開発中のレポートや限定されたユーザーのみを対象としたレポートへのアクセスを制限できます。  
@@ -33,7 +27,7 @@ ms.locfileid: "39082454"
   
      **[新しいフォルダーを作成する]** ダイアログが開きます。  
   
-3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字 (; ? : \@ & = + , $ / * < > | など) は使用できません。 フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
+3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字は使用できません。予約文字は、\; \?  \: \@ \& \= \+ \, \$ \/ \* \< \> \| です。 フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
   
 4.  **[作成]** を選択します。  
   

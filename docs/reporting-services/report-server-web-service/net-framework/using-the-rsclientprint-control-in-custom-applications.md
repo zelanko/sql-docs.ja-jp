@@ -1,14 +1,10 @@
 ---
 title: カスタム アプリケーション内での RSClientPrint コントロールの使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 67ee94b303f8d75e3249b1f20b2ed891c632dc92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef2cedf56fd314244a598ddc77df391f44237ca
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027869"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272981"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>カスタム アプリケーション内での RSClientPrint コントロールの使用
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX コントロールである **RSPrintClient** を使用すると、HTML ビューアーで表示されたレポートをクライアント側で印刷することができます。 このコントロールには **[印刷]** ダイアログ ボックスがあり、印刷ジョブの開始、レポートのプレビュー、印刷するページの指定、余白の変更を行うことができます。 クライアント側での印刷操作の間、レポート サーバーが画像 (EMF) 表示拡張機能でレポートを表示し、オペレーティング システムの印刷機能を使用して印刷ジョブを作成し、そのジョブをプリンターに送ります。  
@@ -72,7 +66,7 @@ ms.locfileid: "33027869"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint プロパティ  
   
-|プロパティ|型|RW|既定|Description|  
+|プロパティ|型|RW|既定|[説明]|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|レポートにより設定|左余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
 |MarginRight|Double|RW|レポートにより設定|右余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
@@ -109,7 +103,7 @@ ms.locfileid: "33027869"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient による Print メソッドのサポート  
  **RSClientPrint** オブジェクトは、[印刷] ダイアログ ボックスを表示するための **Print** メソッドをサポートしています。 **Print** メソッドには、以下の引数があります。  
   
-|引数|I/O|型|Description|  
+|引数|I/O|型|[説明]|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|レポート サーバーの仮想ディレクトリを指定します (`https://adventure-works/reportserver` など)。|  
 |ReportPathParameters|In|String|パラメーターを含む、レポート サーバー フォルダー名前空間内のレポートの完全な名前を指定します。 レポートは、URL にアクセスすることによって取得されます。 たとえば、「/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234」のように指定します。|  

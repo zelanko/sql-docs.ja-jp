@@ -1,40 +1,34 @@
 ---
 title: レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 5cba98e1d3aacddfe191dfec324d664e905fc1f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7dbc7243f4d794ce8ff29cfa4a718940e5c7c79
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020369"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276889"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)
   レポート パラメーターは、レポート データの選択、他のレポートとの関連付け、レポートの表示方法の変更などの用途に使用されます。 既定値や使用可能な値のリストを指定できるほか、ユーザーに選択内容を変更させることもできます。  
   
  レポートをパブリッシュした後、レポート サーバーから、レポート パラメーターの各種プロパティ (既定値や使用可能な値など) を変更できます。 リンク レポートを作成して、既定のパラメーター値の複数のセットを指定できます。 詳細については、「 [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
- この記事では、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで改ページされたレポートにレポート パラメーターを追加する方法について説明します。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]でモバイル レポートにレポート パラメーターを追加することもできます。 詳細については、「 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 」をご覧ください。  
+ この記事では、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーでページ分割されたレポートにレポート パラメーターを追加する方法について説明します。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] でモバイル レポートにレポート パラメーターを追加することもできます。 詳細については、「 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 」をご覧ください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>レポート パラメーターを追加または編集するには  
   
-1.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーの **レポート データ** ペインで、 **[パラメーター]** ノードを右クリックし、 **[パラメーターの追加]** をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーの **レポート データ** ペインで、**[パラメーター]** ノードを右クリックし、**[パラメーターの追加]** をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  **[名前]** にパラメーターの名前を入力するか、既定の名前をそのまま使用します。  
   

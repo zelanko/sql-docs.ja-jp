@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3ab8635837723b99a559bffcd546ff99d27fe283
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411804"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40409525"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -109,6 +109,9 @@ Azure の仮想マシンでは、この構成手順の他に追加の手順が�
 ## <a name="9-add-the-scale-out-workers"></a>9.Scale Out Worker を追加する
 
 これで、[Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md) を使用して、Scale Out Worker を追加できます。 接続ページで「`[SQL Server Availability Group Listener DNS name],[Port]`」と入力します。
+
+# <a name="upgrade-scale-out-in-high-availability-environment"></a>高可用性環境で Scale Out をアップグレードする
+高可用性環境で Scale Out をアップグレードするには、[Always On for SSIS Catalog のアップグレード手順](../catalog/ssis-catalog.md#Upgrade)に従い、各コンピューター上の Scale Out Master と Scale Out Worker をアップグレードし、上記の手順 7 の Windows Server フェールオーバー クラスター ロールを新しいバージョンの Scale Out Master サービスを使用して再作成します。
 
 ## <a name="next-steps"></a>次の手順
 詳細については、次の記事をご覧ください。

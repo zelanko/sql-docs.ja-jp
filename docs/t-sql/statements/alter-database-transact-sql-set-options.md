@@ -2,7 +2,7 @@
 title: ALTER DATABASE の SET オプション (Transact-SQL) | Microsoft Docs
 description: SQL Server および Azure SQL Database で、自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -32,13 +32,13 @@ caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 16505ba07dcd1035ad260b68785eea763c050d1b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 84ee6c7ac1161f53d8878161580cc3fe0f68abd0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560502"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067574"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
 
@@ -46,9 +46,31 @@ ms.locfileid: "39560502"
 
 お使いの特定バージョンの SQL の構文、引数、注釈、権限、例を表示するには、以下のいずれかのタブをクリックします。
 
-構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。 
+構文表記規則の詳細については、[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-synt に関するページを参照してください。構文表記規則の詳細については、[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)に関するページを参照してください。 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>製品をクリックしてください
+
+次の行から興味がある製品名をクリックしてみてください。 この Web ページでは、クリックした製品に合わせて、異なるコンテンツが表示されます。
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />論理サーバー</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
   
 データベース ミラーリング、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルは `SET` オプションですが、長くなるため別の記事で説明します。 詳しくは、「[ALTER DATABASE データベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)」、「[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)」、および「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。  
   
@@ -89,7 +111,7 @@ SET
   | <service_broker_option>  
   | <snapshot_option>  
   | <sql_option>   
-  | <target_recovery_time_option>   
+  | <target_recovery_time_option> 
   | <termination>  
 }  
 ;
@@ -118,7 +140,7 @@ SET
    }  
 }  
   
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF }   
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -362,7 +384,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは OFF に設定されており、クエリ オプティマイザーによる統計の更新は同期更新になります。  
   
 OFF  
-AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待ってからクエリをコンパイルします。  
+AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。  
   
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを OFF に設定しても、効果はありません。  
   
@@ -377,9 +399,9 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
   
 FORCE_LAST_GOOD_PLAN = { ON | OFF }  
 ON  
-新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql_md](../../includes/tsql_md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、強制プランを使用する [!INCLUDE[tsql_md](../../includes/tsql_md.md)] クエリのクエリ パフォーマンスを継続的に監視します。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。   
+新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。   
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql_md](../../includes/tsql_md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
 
 **\<change_tracking_option> ::=**  
   
@@ -685,7 +707,7 @@ FORCED
   
 **\<query_store_options> ::=**  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   
 ON |オフ |[すべて] をオフに  
 コントロールは、このデータベースにクエリ ストアが有効になっている場合とそのコントロールが、クエリのストアの内容を削除します。  
@@ -706,7 +728,7 @@ CLEANUP_POLICY
 クエリのストアのデータ保有ポリシーをについて説明します。 STALE_QUERY_THRESHOLD_DAYS をクエリの情報は、クエリのストアに保存日数の数を決定します。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。  
   
 DATA_FLUSH_INTERVAL_SECONDS  
-クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度を構成するには、DATA_FLUSH_INTERVAL_SECONDS 引数を使用します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。  
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度を構成するには、DATA_FLUSH_INTERVAL_SECONDS 引数を使用します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。  
   
 MAX_STORAGE_SIZE_MB  
 クエリのストアに割り当てられた領域を判断します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。  
@@ -1086,7 +1108,7 @@ MINUTES
 データベースの状態が変更されるときに、未完了のトランザクションをいつロールバックするかを指定します。 データベースがロックされている場合に終了句を省略すると、ALTER DATABASE ステートメントが無限に待機します。 指定できる終了句は 1 つだけで、SET 句の後に指定します。  
   
 > [!NOTE]  
->  すべてのデータベース オプションで WITH \<termination> 句が使用できるわけではありません。 詳細については、このトピックの「解説」セクションの「[オプションの設定](#SettingOptions)」にある表をご覧ください。  
+>  すべてのデータベース オプションで WITH \<termination> 句が使用できるわけではありません。 詳細については、この記事の「解説」セクションの「[オプションの設定](#SettingOptions)」にある表をご覧ください。  
   
 ROLLBACK AFTER "*整数*" [SECONDS] | ROLLBACK IMMEDIATE  
 指定した秒数の後、または直ちにロールバックするかどうかを指定します。  
@@ -1232,7 +1254,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. クエリのストアを有効にします。  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   
 次の例では、クエリのストアを有効にして、ストアのクエリ パラメーターを構成します。  
   
@@ -1263,8 +1285,27 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 論理サーバー](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />論理サーバー</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 論理サーバー
 互換性レベルは `SET` のオプションですが、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」で説明されています。  
   
 > [!NOTE]  
@@ -1308,14 +1349,11 @@ SET
 }
 
 <automatic_tuning_option> ::=  
-{  AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+{   AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
   | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
-}  
-
-ALTER DATABASE current SET AUTOMATIC_TUNING = AUTO | INHERIT | CUSTOM
-ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = DEFAULT, DROP_INDEX = OFF)
+}
 
 <change_tracking_option> ::=  
 {  
@@ -1327,7 +1365,7 @@ ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_I
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -1448,7 +1486,7 @@ OFF
   
 > [!NOTE]  
 > AUTO_SHRINK オプションは、包含データベースでは使用できません。  
-  
+
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
 ON  
 クエリで使用される統計が古くなっている可能性がある場合にクエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。  
@@ -1477,7 +1515,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは OFF に設定されており、クエリ オプティマイザーによる統計の更新は同期更新になります。  
   
 OFF  
-AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待ってからクエリをコンパイルします。  
+AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。  
   
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを OFF に設定しても、効果はありません。  
   
@@ -1485,35 +1523,57 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
   
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。  
 
-**\<automatic_tuning_option> ::=**  
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
 **適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
-
-データベースの[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)が有効または無効になります。
-
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO 自動調整の値を AUTO に設定すると、自動調整に Azure 構成の既定値が適用されます。
-INHERIT 値 INHERIT を使用すると、親サーバーから既定の構成が継承されます。 親サーバー上の自動調整の構成をカスタマイズする必要があり、これらのカスタム設定を継承 (INHERIT) する、このようなサーバー上にデータベースがすべて存在する場合に特に便利です。 継承が機能するために、3 つの個別の調整オプションである FORCE_LAST_GOOD_PLAN、CREATE_INDEX、DROP_INDEX をデータベース上で DEFAULT に設定する必要があることに注意してください。
-CUSTOM 値 CUSTOM を使用すると、データベース上で利用可能なそれぞれの自動調整オプションを手動でカスタムに構成する必要があります。
-
-[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動インデックス管理 `CREATE_INDEX` オプションを有効または無効になります。
-
-CREATE_INDEX = { DEFAULT | ON | OFF } 既定 サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
-ON 有効にすると、不足しているインデックスがデータベース上で自動的に生成されます。 インデックスの作成に従って、ワークロードのパフォーマンスの向上が確認されます。 このような作成されたインデックスでこれ以上ワークロード パフォーマンスに利点が提供されなくなると、自動的に元に戻されます。 自動的に作成されたインデックスは、システムで生成されたインデックスとしてフラグが設定されます。
-OFF データベース上で不足しているインデックスが自動的に生成されません。
-
-[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動インデックス管理 `DROP_INDEX` オプションを有効または無効になります。
-
-DROP_INDEX = { DEFAULT | ON | OFF } 既定 サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
-ON パフォーマンス ワークロードに対する重複または不要になったインデックスが自動的にドロップされます。 OFF データベース上で不足しているインデックスが自動的にドロップされません。
-
-[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動プラン修正 `FORCE_LAST_GOOD_PLAN` オプションを有効または無効になります。
-
-FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
-既定 サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
+  
+[自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)に関する自動オプションを制御します。  
+  
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }  
+AUTO  
+自動チューニングの値を AUTO に設定すると、自動チューニングに Azure 構成の既定値が適用されます。  
+    
+INHERIT  
+値 INHERIT を使用すると、親サーバーから既定の構成が継承されます。 親サーバー上の自動調整の構成をカスタマイズする必要があり、これらのカスタム設定を継承 (INHERIT) する、このようなサーバー上にデータベースがすべて存在する場合に特に便利です。 継承が機能するために、3 つの個別の調整オプションである FORCE_LAST_GOOD_PLAN、CREATE_INDEX、DROP_INDEX をデータベース上で DEFAULT に設定する必要があることに注意してください。  
+  
+CUSTOM  
+値 CUSTOM を使用すると、データベース上で利用可能なそれぞれの自動チューニング オプションを手動でカスタムに構成する必要があります。  
+  
+[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動インデックス管理 `CREATE_INDEX` オプションを有効または無効になります。  
+  
+CREATE_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。  
+  
 ON  
-新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql_md](../../includes/tsql_md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、強制プランを使用する [!INCLUDE[tsql_md](../../includes/tsql_md.md)] クエリのクエリ パフォーマンスを継続的に監視します。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。   
+有効にすると、不足しているインデックスがデータベース上で自動的に生成されます。 インデックスの作成に従って、ワークロードのパフォーマンスの向上が確認されます。 このような作成されたインデックスでこれ以上ワークロード パフォーマンスに利点が提供されなくなると、自動的に元に戻されます。 自動的に作成されたインデックスは、システムで生成されたインデックスとしてフラグが設定されます。  
+  
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql_md](../../includes/tsql_md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
-
+データベース上で不足しているインデックスが自動的に生成されません。  
+  
+[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動インデックス管理 `DROP_INDEX` オプションを有効または無効になります。  
+  
+DROP_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。  
+  
+ON  
+パフォーマンス ワークロードに対する重複または不要になったインデックスが自動的にドロップされます。   
+  
+OFF  
+データベース上で不足しているインデックスが自動的にドロップされません。  
+  
+[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動プラン修正 `FORCE_LAST_GOOD_PLAN` オプションを有効または無効になります。  
+  
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
+DEFAULT  
+サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。  
+  
+ON  
+新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。   
+  
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。  
+  
 **\<change_tracking_option> ::=**  
   
 変更の追跡のオプションを制御します。 変更の追跡の有効化、オプションの設定、オプションの変更、および変更の追跡の無効化が可能です。 例については、後の「例」のセクションをご覧ください。  
@@ -1641,7 +1701,7 @@ CLEANUP_POLICY
 クエリのストアのデータ保有ポリシーをについて説明します。 STALE_QUERY_THRESHOLD_DAYS をクエリの情報は、クエリのストアに保存日数の数を決定します。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。  
   
 DATA_FLUSH_INTERVAL_SECONDS  
-クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度を構成するには、DATA_FLUSH_INTERVAL_SECONDS 引数を使用します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。  
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度を構成するには、DATA_FLUSH_INTERVAL_SECONDS 引数を使用します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。  
   
 MAX_STORAGE_SIZE_MB  
 クエリのストアに割り当てられた領域を判断します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。  
@@ -2021,7 +2081,26 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />論理サーバー</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 互換性レベルは `SET` のオプションですが、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」で説明されています。  
   
@@ -2062,6 +2141,11 @@ SET
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
 
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 <change_tracking_option> ::=  
 {  
   CHANGE_TRACKING 
@@ -2072,7 +2156,7 @@ SET
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -2209,7 +2293,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは OFF に設定されており、クエリ オプティマイザーによる統計の更新は同期更新になります。  
   
 OFF  
-AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待ってからクエリをコンパイルします。  
+AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。  
   
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを OFF に設定しても、効果はありません。  
   
@@ -2217,6 +2301,17 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
   
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。  
   
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
+
+`FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)オプションを有効または無効にします。  
+  
+FORCE_LAST_GOOD_PLAN = { ON | OFF }  
+ON  
+新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。   
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
+
 **\<change_tracking_option> ::=**  
   
 変更の追跡のオプションを制御します。 変更の追跡の有効化、オプションの設定、オプションの変更、および変更の追跡の無効化が可能です。 例については、後の「例」のセクションをご覧ください。  
@@ -2341,7 +2436,7 @@ CLEANUP_POLICY
 クエリのストアのデータ保有ポリシーをについて説明します。 STALE_QUERY_THRESHOLD_DAYS をクエリの情報は、クエリのストアに保存日数の数を決定します。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。  
   
 DATA_FLUSH_INTERVAL_SECONDS  
-クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度を構成するには、DATA_FLUSH_INTERVAL_SECONDS 引数を使用します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。  
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度を構成するには、DATA_FLUSH_INTERVAL_SECONDS 引数を使用します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。  
   
 MAX_STORAGE_SIZE_MB  
 クエリのストアに割り当てられた領域を判断します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。  
@@ -2695,3 +2790,4 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
+::: moniker-end

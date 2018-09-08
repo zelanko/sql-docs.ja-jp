@@ -1,25 +1,20 @@
 ---
 title: 式で使用されるデータ型 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 61d9e125f12d9c642408316ccb936e54f2a29372
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 205d970baa75e34a20633d2a746f40646dc3f2d8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271667"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
   データを効率よく格納し、処理できるように、さまざまなデータの種類を表すデータ型が用意されています。 代表的なデータ型としては、テキスト (文字列) 型、数値型 (小数点以下桁数を含む)、数値型 (小数点以下桁数を含まない)、日付/時刻型、イメージ型などがあります。 レポート内の値は、レポート定義言語 (RDL) データ型である必要があります。 値は、レポートに表示する場合に目的に応じて書式設定できます。 たとえば、通貨を表すフィールドの場合、データを浮動小数点数としてレポート定義に格納しておき、実際には、指定した書式設定プロパティに従ってさまざまな形式で表示することができます。  
@@ -142,9 +137,9 @@ ms.lasthandoff: 05/03/2018
   
      `2008-07-01 06:05:07             2008                   480`  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、[SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=120955) の「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」および「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」と「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ型の詳細については、 [SQL Server オンライン ブック](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) の「 [SQL Server Books Onlの「e](http://go.microsoft.com/fwlink/?linkid=120955)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ型の詳細については、「[Analysis Services で使用するデータ型](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

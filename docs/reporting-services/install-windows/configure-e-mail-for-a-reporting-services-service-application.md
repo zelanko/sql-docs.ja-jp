@@ -1,25 +1,19 @@
 ---
 title: Reporting Services サービス アプリケーションの電子メールの構成 | Microsoft Docs
-ms.custom: ''
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e0f0918eec2d790081715d261d5a6755da63c665
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c347a5aa80734ee5fdddb39db63911ed39186aa9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971717"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265645"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services サービス アプリケーションの電子メールの構成
 
@@ -48,8 +42,7 @@ ms.locfileid: "37971717"
   
      このアドレスはすべての警告電子メール メッセージの送信元になります。  
   
-     
-  **[差出人アドレス]** に指定するユーザーのアカウントは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションのアプリケーション プールを構成するときに指定した管理アカウントである必要があります。 権限がある場合、SharePoint サーバーの全体管理の [サービス アカウント] ページで既存の管理アカウントの一覧を表示できます。  
+     **[差出人アドレス]** に指定するユーザーのアカウントは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションのアプリケーション プールを構成するときに指定した管理アカウントである必要があります。 権限がある場合、SharePoint サーバーの全体管理の [サービス アカウント] ページで既存の管理アカウントの一覧を表示できます。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

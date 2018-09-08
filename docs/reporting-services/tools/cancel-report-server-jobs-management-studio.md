@@ -1,28 +1,22 @@
 ---
 title: '[レポート サーバー ジョブのキャンセル] (Management Studio) | Microsoft Docs'
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2ad15367b678ae9a304feb3d5a384d0611d6a9c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6ef08992dcab31e2631bdc180ddec0d40fae398
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029409"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277095"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル] (Management Studio)
   実行中のレポートの表示や実行のキャンセルを行うには、 **[レポート サーバー ジョブのキャンセル]** ダイアログ ボックスを使用します。 このダイアログ ボックスには、レポート サーバーで現在実行中のすべてのジョブが表示されます。 現在処理中のジョブを一時停止または再開することはできませんが、すべてのジョブ、または時間がかかりすぎて完了できない場合は個々のジョブをキャンセルできます。  
@@ -40,7 +34,7 @@ ms.locfileid: "33029409"
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services ではサポートされません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を実行している場合、このページは表示されません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **名前**  
  レポートの名前が表示されます。 サブスクリプションは、説明で識別されます。  
   

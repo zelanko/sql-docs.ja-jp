@@ -1,26 +1,20 @@
 ---
 title: 対数スケールの指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: dd0d45392caaee0b046b7cfafa1da2dc8af5c7d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d90feceb685fe70038bfa1e9af14ddc95fb6087c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023839"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276254"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>対数スケールの指定 (レポート ビルダーおよび SSRS)
   対数比例するデータがある場合は、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートのグラフ上での対数スケールの使用を検討します。 これにより、データの管理が容易になり、グラフの外観が向上します。 ほとんどの対数スケールでは、底に 10 を使用します。  

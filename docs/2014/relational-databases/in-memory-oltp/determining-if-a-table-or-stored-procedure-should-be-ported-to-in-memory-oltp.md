@@ -16,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393531"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348432"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス コレクターは、インメモリ OLTP によってデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、トランザクション パフォーマンス分析レポートによって、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。  
@@ -126,7 +126,7 @@ ms.locfileid: "40393531"
   
  SQL Server 2012 またはそれ以降のバージョンのでは、データ コレクターを構成できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
- トランザクションがプロファイルされる場所とは異なるインスタンス上の管理データ ウェアハウス データベースにデータ コレクターがデータをアップロードするためには、適切な資格情報が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシが必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシを有効にするには、ドメイン対応のログインを持つ資格情報を最初に設定する必要があります。 ドメイン対応のログインは、管理データ ウェアハウス データベースの `mdw_admin` グループのメンバーである必要があります。 参照してください[方法: 資格情報 (SQL Server Management Studio) 作成](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx)資格情報を作成する方法についてはします。  
+ トランザクションがプロファイルされる場所とは異なるインスタンス上の管理データ ウェアハウス データベースにデータ コレクターがデータをアップロードするためには、適切な資格情報が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシが必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシを有効にするには、ドメイン対応のログインを持つ資格情報を最初に設定する必要があります。 ドメイン対応のログインは、管理データ ウェアハウス データベースの `mdw_admin` グループのメンバーである必要があります。 参照してください[方法: 資格情報 (SQL Server Management Studio) 作成](../security/authentication-access/create-a-credential.md)資格情報を作成する方法についてはします。  
   
  別のインスタンスの管理データ ウェアハウス データベースにアップロードするようにデータ コレクションを構成するには  
   

@@ -1,30 +1,24 @@
 ---
 title: グループ化ペイン (レポート ビルダー) | Microsoft Docs
-ms.custom: ''
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: c9fc7f5f5caab253bf0a38aa17d9d7db0d878fd1
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 39f044c894d014b82ca59b2afd120588a26f69e2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40412654"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275772"
 ---
 # <a name="grouping-pane-report-builder"></a>グループ化ペイン (レポート ビルダー)
   グループ化ペインには、現在選択されている Tablix データ領域の行グループと列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインには、行グループ ペインと列グループ ペインが含まれています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  

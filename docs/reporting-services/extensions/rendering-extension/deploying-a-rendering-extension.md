@@ -1,14 +1,10 @@
 ---
 title: 表示拡張機能の配置 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0ed8216bce2b7112c709330f1d65a0bc5d5011c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c31ae1a893448dd2947c0263390a2c55690e602
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018079"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268444"
 ---
 # <a name="deploying-a-rendering-extension"></a>表示拡張機能の配置
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のレポート表示拡張機能は、作成して [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ライブラリにコンパイルした後、レポート サーバーおよびレポート デザイナーで検出できるようにする必要があります。 それには、拡張機能を適切なディレクトリにコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加します。  
@@ -35,7 +29,7 @@ ms.locfileid: "33018079"
   
  次の表では、表示拡張機能の **Extension** 要素の属性について説明します。  
   
-|属性|Description|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**名前**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |**型**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  

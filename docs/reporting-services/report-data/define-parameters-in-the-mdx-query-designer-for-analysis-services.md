@@ -1,14 +1,10 @@
 ---
 title: Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f8818e32f48d094d67da1ba828f5b5a5049cace0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 759f6118736192db17042704157b21cbf7eda5ad
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019689"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280561"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Analysis Services の MDX クエリ デザイナーでのパラメーターの定義
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに対する MDX クエリをパラメーター化するには、そのクエリにクエリ パラメーターを追加する必要があります。 MDX クエリ デザイナーでは、デザイン モードとクエリ モードの両方で、フィルターを指定することによって、クエリ パラメーターを追加できます。 クエリ パラメーターを使用してクエリを定義すると、Reporting Services によってレポート パラメーターとデータセットが自動的に作成され、有効な値の一覧が示されます。 これにより、クエリに直接渡される値を指定できます。  

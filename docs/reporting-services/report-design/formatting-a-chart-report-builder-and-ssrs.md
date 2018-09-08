@@ -1,14 +1,10 @@
 ---
 title: グラフの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10214"
@@ -52,16 +48,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 744758362c1c9a9e8b76fbd28dc652ed7a4e4699
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3dafdd7b8eb5b8a96e94c1efe1623c1392d9d3ed
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023479"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265229"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>グラフの書式設定 (レポート ビルダーおよび SSRS)
   グラフのデータを定義し、そのデータが希望どおりに表示されるようになったら、書式を追加して、全体的な外観を改善したり主要なデータ ポイントを強調したりすることができます。 最も一般的な書式設定オプションは、グラフ要素を右クリックして表示されるショートカット メニューを使用すると表示できるプロパティ ダイアログ ボックスから変更できます。 各グラフ要素には、独自のダイアログ ボックスがあります。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  

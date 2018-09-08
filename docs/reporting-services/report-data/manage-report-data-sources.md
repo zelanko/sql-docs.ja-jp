@@ -1,14 +1,10 @@
 ---
 title: レポート データ ソースを管理する | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5271a770bc8118ce08cb4794bd4a082204b96656
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 84743e8ca158ed17435c3c6da4c844972320bdf1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550753"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268561"
 ---
 # <a name="manage-report-data-sources"></a>レポート データ ソースを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート、レポート モデル、およびデータ ドリブン サブスクリプションが外部データ ソースからデータを取得します。 レポート サーバーは外部データ ソースに接続するために、レポート、モデル、またはサブスクリプションで定義または参照されているデータ ソース接続情報を使用します。 データ ソース接続プロパティは常に、レポートやモデルの作成時にそれらと共に定義されますが、レポートやモデルをレポート サーバーにパブリッシュした後は、それらとは別に管理できます。  
@@ -44,12 +38,12 @@ ms.locfileid: "34550753"
   
  クエリの変更はデータ ソース接続の管理には含まれません。 レポートやモデルのクエリを変更するには、レポート作成ツールを使用してレポートやモデルの定義に変更を加える必要があります。  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>マネージ プロパティ : データ ソースの種類、接続文字列、および資格情報  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>マネージド プロパティ : データ ソースの種類、接続文字列、および資格情報  
  レポート サーバー上で管理できるデータ ソース プロパティは次のとおりです。  
   
 |プロパティ|[説明]|管理する方法|  
 |--------------|-----------------|----------------------|  
-|[データ ソースの種類]|外部データに対して使用するレポート サーバーのデータ処理拡張機能を指定します。 データ プロセッサには、SQL Server、Analysis Services、Oracle などがあります。|データ ソースの種類は構成可能なため、マネージ プロパティです。 ただし、データ ソースの種類を構成するのは、新しい共有データ ソースを作成する場合だけにしてください。<br /><br /> パブリッシュされたレポートやモデルのプロパティ ページでデータ ソースの種類を変更しないでください。変更すると、ほぼ間違いなく接続が無効になります。 レポートやモデルで必要とされるデータ構造が別のデータ プラットフォームでも同じになることはまずありません。|  
+|[データ ソースの種類]|外部データに対して使用するレポート サーバーのデータ処理拡張機能を指定します。 データ プロセッサには、SQL Server、Analysis Services、Oracle などがあります。|データ ソースの種類は構成可能なため、マネージド プロパティです。 ただし、データ ソースの種類を構成するのは、新しい共有データ ソースを作成する場合だけにしてください。<br /><br /> パブリッシュされたレポートやモデルのプロパティ ページでデータ ソースの種類を変更しないでください。変更すると、ほぼ間違いなく接続が無効になります。 レポートやモデルで必要とされるデータ構造が別のデータ プラットフォームでも同じになることはまずありません。|  
 |[接続文字列]|外部データ ソースへの初期接続を確立します。 レポートでは、静的な接続文字列を使用することも、動的な接続文字列を使用することもできます。<br /><br /> *静的な接続文字列* とは、レポートが実行されるたびに同じデータ ソースに接続するために常に使用される一連の値です。<br /><br /> *動的な接続文字列* とは、使用するデータ ソースをユーザーが実行時に選択できるようにするためにレポートに組み込まれる式です。 レポート デザイナーでレポートを作成するときに、式とデータ ソース選択一覧をレポートに組み込む必要があります。|接続文字列の変更は、データ ソースを別のコンピューターに移動する場合や、テスト データを使用して作成したレポートを、実稼働データベースを使用して配置する場合などに便利です。<br /><br /> 静的な接続文字列を管理する場合は、元の文字列を別の文字列に置き換えることができます。<br /><br /> Web ポータルまたは SharePoint サイトで動的な接続文字列を管理する場合は、静的な接続文字列に置き換えることしかできません。 式そのものを編集したり、データ ソース選択一覧を変更したりすることはできません。 式や有効な値の一覧を変更するには、レポート定義を編集して、レポート サーバーにパブリッシュし直す必要があります。 詳細については、「 [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。|  
 |[資格情報]|データ ソースのデータを読み取る権限を持っているユーザーの名前とパスワードを指定します。<br /><br /> データ ソースで認証がサポートされていない場合は (データ ソースがファイル システム上の XML ファイルの場合など)、自動実行アカウントを構成して、レポート サーバーが資格情報を渡さずに外部データ ソースに接続できるようにすることが可能です。|資格情報の管理では、ユーザー アカウントを更新したり、有効期限が切れたパスワードを更新したりすることができます。<br /><br /> そのほか、資格情報の取得方法を変更することもできます (実行時に資格情報の入力をユーザーに求めるなど)。<br /><br /> ユーザーがレポートをサブスクライブできるようにする場合は、保存された資格情報を使用するようにレポートを構成する必要があります。|  
   

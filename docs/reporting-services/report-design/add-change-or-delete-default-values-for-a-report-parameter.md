@@ -1,29 +1,24 @@
 ---
 title: レポート パラメーターの既定値の追加、変更、または削除 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10460"
 - sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 86e726e458454a5f1016b36b5a63f0e4fdaaf542
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ada91659b6ad5a2324bd20a80c778616058c42e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266502"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>レポート パラメーターの既定値の追加、変更、または削除
   レポート パラメーターを作成した後、既定値のリストを指定できます。 すべてのパラメーターに有効な既定値がある場合、レポートは、最初に表示またはプレビューしたときに自動的に実行します。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- レポートをパブリッシュした後、パラメーター プロパティの値をレポート サーバーに設定して、レポート作成ツールのレポートで定義される既定値を上書きできます。 リンク レポートを作成して、既定のパラメーター値の複数のセットを指定することもできます。 詳細については、「  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ レポートをパブリッシュした後、パラメーター プロパティの値をレポート サーバーに設定して、レポート作成ツールのレポートで定義される既定値をオーバーライドできます。 リンク レポートを作成して、既定のパラメーター値の複数のセットを指定することもできます。 詳細については、「  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
 ### <a name="to-add-or-change-the-default-values-for-a-report-parameter"></a>レポート パラメーターの既定値を追加または変更するには  
   

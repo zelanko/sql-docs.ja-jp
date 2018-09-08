@@ -1,26 +1,20 @@
 ---
 title: 式 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2e0630d23d308c061f5d3adf69e17473b5cfbf2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0e20a42c42702e99e1ed607b7ebb7a74a88e6b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024349"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273135"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>式 (レポート ビルダーおよび SSRS)
   式は [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート全体にわたって、データの取得、計算、表示、グループ化、並べ替え、フィルター処理、パラメーター化、書式設定などのために広く使用されます。 
@@ -86,7 +80,7 @@ ms.locfileid: "33024349"
   
  次の表に、式に含めることのできる参照の種類の一覧を示します。  
   
-|References|Description|例|  
+|References|[説明]|例|  
 |----------------|-----------------|-------------|  
 |[定数](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|定数値を必要とするプロパティ (フォントの色など) に対話的にアクセスできる定数について説明します。|`="Blue"`|  
 |[演算子](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|式の中で参照を組み合わせる際に使用できる演算子について説明します。 たとえば、 **&** 演算子は、文字列を連結する場合に使用されます。|`="The report ran at: " & Globals!ExecutionTime & "."`|  

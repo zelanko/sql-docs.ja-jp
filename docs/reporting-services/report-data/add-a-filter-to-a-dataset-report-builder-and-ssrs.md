@@ -1,26 +1,20 @@
 ---
 title: データセットへのフィルターの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: fa07a8ea7240f7cd06d302a2b39cca942f12d643
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 199c9b89fbf55850a2a887b42ceabb013cf210f4
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020509"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277904"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)
   データが外部データ ソースから取得された後に、データセットにフィルターを追加してレポート内のデータを制限できます。 データセットにフィルターを追加すると、すべてのレポート パーツまたはデータ領域では、フィルター条件に一致するデータのみが使用されます。  

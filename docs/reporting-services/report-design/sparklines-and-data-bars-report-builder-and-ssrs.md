@@ -1,28 +1,23 @@
 ---
 title: スパークラインとデータ バー (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 6bde9dbc2bc91c5de90b65c0173d4b691e888086
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ef2ccd0ea5c57d73656b0811cd468a7ab727711
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270698"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、インライン テキストが含まれています。   

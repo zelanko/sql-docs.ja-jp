@@ -19,17 +19,17 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bb9b031042c9653c62f46b901359a79be587975
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 44efdde3da4f8a74305798b4cbee4aa682034392
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43100062"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348103"
 ---
 # <a name="transparent-data-encryption-tde"></a>透過的なデータ暗号化 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[透過的なデータ暗号化 (TDE)](https://msdn.microsoft.com/library/bb934049(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[透過的なデータ暗号化 (TDE)](transparent-data-encryption-tde.md)」を参照してください。
 
   *透過的なデータ暗号化* (TDE) では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]、 [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] のデータ ファイルを暗号化します。これは、静止したデータの暗号化として知られています。 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
   

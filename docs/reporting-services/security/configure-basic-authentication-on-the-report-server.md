@@ -1,29 +1,23 @@
 ---
 title: レポート サーバーで基本認証を構成する | Microsoft Docs
-ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 999ebd9aad00dff3418e48d3768588cd16d3fbbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 268fa0a3dc73642ffa188a4c5be1d2a123703998
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028019"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278118"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>レポート サーバーで基本認証を構成する
   Reporting Services は、既定では、ネゴシエート認証および NTLM 認証を指定する要求を受け入れます。 基本認証を使用するクライアント アプリケーションやブラウザーが配置に含まれる場合は、サポートされる種類の一覧に基本認証を追加する必要があります。 また、レポート ビルダーを使用する場合は、レポート ビルダーのファイルへの匿名アクセスを有効にする必要もあります。  
@@ -89,7 +83,7 @@ ms.locfileid: "33028019"
   
 |要素|Required|有効な値|  
 |-------------|--------------|------------------|  
-|LogonMethod|はい<br /><br /> 値を指定しない場合は 3 が使用されます。|**2** = ネットワーク ログオン。プレーン テキスト パスワードを認証する高パフォーマンス サーバー向けです。<br /><br /> **3** = クリア テキスト ログオン。各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報が保持されます。これにより、ネットワーク内の他のサーバーに接続する際に、サーバーがユーザーの権限を借用できます (既定値)。<br /><br /> 注: 値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、 **では** サポートされません [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|  
+|LogonMethod|[ユーザー アカウント制御]<br /><br /> 値を指定しない場合は 3 が使用されます。|**2** = ネットワーク ログオン。プレーン テキスト パスワードを認証する高パフォーマンス サーバー向けです。<br /><br /> **3** = クリア テキスト ログオン。各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報が保持されます。これにより、ネットワーク内の他のサーバーに接続する際に、サーバーがユーザーの権限を借用できます (既定値)。<br /><br /> 注: 値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、 **では** サポートされません [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|  
 |Realm|省略可|組織内の保護されたリソースへのアクセスを制御するための承認機能や認証機能を含んだリソース パーティションを指定します。|  
 |DefaultDomain|省略可|サーバーがユーザーを認証する際のドメインを指定します。 この値はオプションです。ただし、省略した場合、レポート サーバーでは、コンピューター名がドメインとして使用されます。 コンピューターがドメインのメンバーになっている場合は、そのドメインが既定のドメインです。 レポート サーバーをドメイン コントローラーにインストールした場合、そのコンピューターによって制御されるドメインを指定します。|  
   

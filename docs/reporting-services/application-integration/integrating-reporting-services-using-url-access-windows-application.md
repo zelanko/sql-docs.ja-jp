@@ -1,14 +1,10 @@
 ---
 title: Windows アプリケーションでの URL アクセスの使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,15 +15,14 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: dd8e76d7bb66bee51001ab3884a0cd8d9c412685
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb604f69b155d278fe233be16100ea2e0becc8d9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266649"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL アクセスを使用した Reporting Services の統合 - Windows アプリケーション
   レポート サーバーへの URL アクセスは Web 環境用に最適化されていますが、URL アクセスを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションに埋め込むこともできます。 ただし、Windows フォームに関連する URL アクセスでは、Web ブラウザー テクノロジを使用する必要があります。 URL アクセスと Windows フォームでは、次の統合シナリオを使用できます。  

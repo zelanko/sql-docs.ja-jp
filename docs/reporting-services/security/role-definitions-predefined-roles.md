@@ -1,30 +1,24 @@
 ---
 title: 定義済みのロール | Microsoft Docs
-ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 480578f2454ed6410038800194336fc3cb831b65
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028559"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282434"
 ---
 # <a name="role-definitions---predefined-roles"></a>ロールの定義 - 定義済みのロール
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、定義済みのロールと共にインストールされます。このロールを使用すると、レポート サーバーの操作へのアクセスを許可することができます。 定義済みの各ロールは、関連するタスクのコレクションを示しています。 定義済みのロールにグループやユーザー アカウントを割り当てることで、レポート サーバーの操作にすぐにアクセスできます。  
@@ -44,7 +38,7 @@ ms.locfileid: "33028559"
   
  次の表に、定義済みのロール、スコープ、およびその使用方法を示します。  
   
-|定義済みロール|スコープ|Description|  
+|定義済みロール|スコープ|[説明]|  
 |---------------------|-----------|-----------------|  
 |[コンテンツ マネージャー ロール](#bkmk_content)|アイテム|アイテムレベルのタスクがすべて含まれます。 このロールに割り当てられたユーザーには、レポート サーバーのコンテンツを管理するための完全な権限が付与されます。たとえば、他のユーザーに権限を付与したり、レポートなどのアイテムを格納するフォルダー構造を定義したりできます。|  
 |[パブリッシャー ロール](#bkmk_publisher)|アイテム|このロールに割り当てられたユーザーは、レポート サーバーにアイテムを追加することができます。たとえば、追加したアイテムを格納するフォルダーを作成および管理できます。|  
@@ -62,7 +56,7 @@ ms.locfileid: "33028559"
 ### <a name="content-manager-tasks"></a>コンテンツ マネージャーのタスク  
  次の表は、 **コンテンツ マネージャー** ロールに含まれるタスクの一覧です。  
   
-|タスク|Description|  
+|タスク|[説明]|  
 |----------|-----------------|  
 |レポートの使用|レポート定義を読み込みます。|  
 |リンク レポートの作成|リンク レポートではないレポートを基にしたリンク レポートを作成します。|  
@@ -99,7 +93,7 @@ ms.locfileid: "33028559"
 ### <a name="publisher-tasks"></a>パブリッシャーのタスク  
  **パブリッシャー** ロールに含まれているタスクを、以下の表に示します。  
   
-|タスク|Description|  
+|タスク|[説明]|  
 |----------|-----------------|  
 |リンク レポートの作成|リンク レポートを作成し、レポート サーバー フォルダーにパブリッシュします。|  
 |データ ソースの管理|共有データ ソース アイテムの作成および削除、データ ソースのプロパティとコンテンツの表示および変更を行います。|  
@@ -121,7 +115,7 @@ ms.locfileid: "33028559"
 ### <a name="browser-tasks"></a>閲覧者のタスク  
  **閲覧者** ロールの定義に含まれているタスクを、次の表に示します。  
   
-|タスク|Description|  
+|タスク|[説明]|  
 |----------|-----------------|  
 |レポートの表示|レポートを実行し、レポートのプロパティを表示します。|  
 |リソースの表示|リソースおよびリソースのプロパティを表示します。|  
@@ -140,7 +134,7 @@ ms.locfileid: "33028559"
 ### <a name="report-builder-tasks"></a>レポート ビルダーのタスク  
  **レポート ビルダー** ロールの定義に含まれているタスクを、次の表に示します。  
   
-|タスク|Description|  
+|タスク|[説明]|  
 |----------|-----------------|  
 |レポートの使用|レポート定義を読み込みます。|  
 |レポートの表示|レポートを実行し、レポートのプロパティを表示します。|  
@@ -162,7 +156,7 @@ ms.locfileid: "33028559"
 ### <a name="my-reports-tasks"></a>個人用レポートのタスク  
  **個人用レポート** ロールに含まれているタスクを、以下の表に示します。  
   
-|タスク|Description|  
+|タスク|[説明]|  
 |----------|-----------------|  
 |リンク レポートの作成|ユーザーの [個人用レポート] フォルダーに格納されているレポートを基にしたリンク レポートを作成します。|  
 |フォルダーの管理|フォルダーの作成、表示、削除、およびフォルダーのプロパティの表示と変更を行います。|  
@@ -190,7 +184,7 @@ ms.locfileid: "33028559"
 ### <a name="system-administrator-tasks"></a>システム管理者タスク  
  **システム管理者** ロールに含まれているタスクを、次の表に示します。  
   
-|タスク|Description|  
+|タスク|[説明]|  
 |----------|-----------------|  
 |レポート定義の実行|レポート サーバーにパブリッシュせずにレポート定義の実行を開始します。|  
 |ジョブの管理|実行中のジョブを表示および取り消します。 詳細については、「 [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)」を参照してください。|  
@@ -206,7 +200,7 @@ ms.locfileid: "33028559"
   
 ### <a name="system-user-tasks"></a>システム ユーザー タスク  
   
-|タスク|Description|  
+|タスク|[説明]|  
 |----------|-----------------|  
 |レポート定義の実行|レポート サーバーにパブリッシュせずにレポートを実行します。|  
 |レポート サーバーのプロパティを表示|アプリケーション名、個人用レポートの有効/無効、レポート履歴の既定値など、レポート サーバーに適用するプロパティを表示します。<br /><br /> **システム ユーザー** ロールからこのタスクを削除すると、[サイトの設定] ページを利用できなくなります。 また、各ページの上部にアプリケーションのタイトルが表示されません。 既定では、レポート マネージャーのタイトルは "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]" です。|  

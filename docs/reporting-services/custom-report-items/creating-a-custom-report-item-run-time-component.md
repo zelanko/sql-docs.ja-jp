@@ -1,29 +1,24 @@
 ---
 title: カスタム レポート アイテムの実行時コンポーネントの作成 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: custom-report-items
-ms.reviewer: ''
+ms.technology: custom-report-items
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 49f121f8937eb3625f4290a69881d986264502df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 156ae80057f778c2f5b808b0c70ab67c15b64cf3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265044"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>カスタム レポート アイテムの実行時コンポーネントの作成
   カスタム レポート アイテムの実行時コンポーネントは、任意の CLS 準拠の言語を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装され、実行時にレポート プロセッサによって呼び出されます。 実行時コンポーネントのプロパティをデザイン環境で定義するには、カスタム レポート アイテムの対応するデザイン時コンポーネントを変更します。  

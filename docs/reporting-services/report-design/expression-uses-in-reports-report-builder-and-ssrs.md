@@ -1,28 +1,22 @@
 ---
 title: レポートでの式の使用 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 59
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: d3f8432e1e1ce62e37d2f875eb071db76afd685f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf030c6f87c7f7fc524873e7426f2db27b76e475
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024459"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267221"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 (**[fx]**) ボタンが表示されるダイアログ ボックスや、**[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  

@@ -1,30 +1,24 @@
 ---
 title: レポートを開閉する (レポート マネージャー) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 034e566858cda5fcc150d807d4a74ff3937e16b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01e8574905e4f7788c6ab00fb4ec4da8d86b3525
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025729"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269073"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>レポートを開閉する (レポート マネージャー)
   レポート サーバーにパブリッシュされたレポートは、レポート マネージャーを使って閲覧できます。 既定では、すべてのレポートが HTML 形式で表示されます。 開いたレポートをエクスポートすることにより、他のアプリケーションの形式で閲覧することもできます。 対話機能を持ったレポートや対話型データを含んだレポート ビルダーのレポートでは、リンクをクリックして追加のレポートまたはデータを閲覧できます。  

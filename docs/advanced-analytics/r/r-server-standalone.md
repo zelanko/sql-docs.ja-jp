@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 34be09f068196ce51f44c47a02e36a9149ff17bf
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118300"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240030"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (スタンドアロン) と SQL Server での Machine Learning Server (スタンドアロン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ SQL Server 2016 には R のみです。 SQL Server 2017 では、R と Python �
 | Python のサンプルとスクリプト | R と Python には、組み込みのデータ セットとスクリプトが含まれています。 Revoscalepy データを掲載 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample データ。 |
 | R および Python で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 事前トレーニング済みモデルはサポートされていると、スタンドアロン サーバーで使用できますが、SQL Server セットアップでインストールすることはできません。 詳細については、次を参照してください。[インストールには、SQL Server で機械学習モデルが事前トレーニング済み](../install/sql-pretrained-models-install.md)します。 |
 
-## <a name="use-cases"></a>ユース ケース
+## <a name="using-a-standalone-server"></a>スタンドアロン サーバーを使用します。
 
 R と Python の開発者は、通常、スタンドアロン サーバーにとどまらず、オープン ソース R と Python のメモリと処理の制約を選択します。 R と Python ライブラリがスタンドアロン サーバー上で実行は、ロードし複数コアで大量のデータを処理し、単一の統合の出力に結果を集計できます。 スケールとユーティリティの両方の高パフォーマンスな関数が設計されていますエンジニア リングとでサポートされている予測分析、統計モデリング、データの視覚化、および最先端の機械学習、商用のサーバー製品でアルゴリズムを提供する。Microsoft。
 

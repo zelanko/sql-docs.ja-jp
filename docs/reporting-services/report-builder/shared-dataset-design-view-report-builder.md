@@ -1,26 +1,20 @@
 ---
 title: 共有データセット デザイン ビュー (レポート ビルダー) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 7348789d794cb10892ed4a6c7f22c68b1bfb75cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95fa8b79e7ec59efb3bfeb20cbb32e408630e0a3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021369"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280203"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 共有データセットはレポート サーバー上でパブリッシュされ、複数のレポートで使用できます。 他のユーザーと共有するデータセットを作成できます。 共有データセット デザイン ウィンドウで、共有データ ソースの選択、共有データセットのプロパティの指定、およびクエリ デザイナーによるクエリの作成を行います。  
@@ -53,7 +47,7 @@ ms.locfileid: "33021369"
   
  設定した値は、レポート サーバー上で共有データセット定義の一部となります。 レポート作成者がこの共有データセットをレポートに含めると、指定したオプションがそのデータセット インスタンスに適用されます。  
   
- 共有データセットをレポートに追加した後に、レポート作成者が上書きできるオプションは、照合順序、大文字と小文字の区別、アクセントの区別、かなの区別、文字幅の区別、および小計です。 追加のデータセット フィルターを作成して、レポート内のデータを制限することもできます。  
+ 共有データセットをレポートに追加した後に、レポート作成者がオーバーライドできるオプションは、照合順序、大文字と小文字の区別、アクセントの区別、かなの区別、文字幅の区別、および小計です。 追加のデータセット フィルターを作成して、レポート内のデータを制限することもできます。  
   
  詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   

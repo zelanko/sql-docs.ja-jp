@@ -1,29 +1,23 @@
 ---
 title: ネイティブ モード レポート サーバーのサブスクリプションの作成と管理 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1aae0ce86304b3093e9151ed1741b615f423c1e4
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26e0b185a66be83ad649a5b6ccb88326c3421d32
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984964"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278077"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>ネイティブ モード レポート サーバーのサブスクリプションの作成と管理
   標準のサブスクリプションは、電子メールまたは共有フォルダーを使用してレポートを配信する個々のユーザーによって作成されるサブスクリプションです。 このトピックでは、個別のユーザーが作成および管理する標準のサブスクリプションに関する情報を記載しています。 データ ドリブン サブスクリプションについては、必要条件および手順が異なるため、別のトピックで説明します。 詳細については、「 [データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)」を参照してください。  

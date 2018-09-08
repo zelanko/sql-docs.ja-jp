@@ -1,14 +1,10 @@
 ---
 title: URL アクセスを使用した Reporting Services の統合| Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 73b3b700a3aee874d2f18a0fb00d342cff9ee02b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fc211bc0c43c5716a9753a2e3df5fe489c81c01
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014449"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281448"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>URL アクセスを使用した Reporting Services の統合
   URL アクセスでは、レポート サーバー URL によりレポートにアクセスします。 URL 要求を使用すると、特定のレポート サーバー、およびレポート サーバー データベースのレポート、リソースなどのアイテムにアクセスできます。 また、ユーザーへのレポート表示とナビゲーション方法もカスタマイズできます。 URL のクエリ文字列にはデバイス情報設定、およびレポートと特定の表示出力を対象としたレポート パラメーターが含まれます。 レポート サーバーで URL 要求を処理する方法は、URL を使用してアクセスするパラメーター、パラメーター プレフィックス、およびアイテムの種類によって異なります。  

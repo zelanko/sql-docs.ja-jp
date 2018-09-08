@@ -1,14 +1,10 @@
 ---
 title: ListReportServersInDatabase メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,15 +14,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ListReportServersInDatabase method
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: dfb91a3cc4326f1fa52661002b2a9d8c69c6e52a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16c9bbfbd26f51fb32083a4376b76175b5ec4580
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278411"
 ---
 # <a name="configurationsetting-method---listreportserversindatabase"></a>ConfigurationSetting メソッド - ListReportServersInDatabase
   セキュリティで保護された情報にアクセスできるかどうかに関係なく、レポート サーバー データベースにあるレポート サーバー インストールの一覧を返します。  

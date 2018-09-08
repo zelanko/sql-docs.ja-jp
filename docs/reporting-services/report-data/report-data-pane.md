@@ -1,14 +1,10 @@
 ---
 title: '[レポート データ] ペイン | Microsoft Docs'
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10039"
@@ -17,21 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Report Data pane
 ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1127a9a14af35096bb284638417c7992e497d710
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d751cb78db33d1decaaad7f61b445ec6bbfc3681
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018939"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267240"
 ---
 # <a name="report-data-pane"></a>レポート データ ペイン
   **[レポート データ]** ペインを使用すると、レポート内で現在定義されているパラメーター、データ ソース、データセット、フィールド コレクション、および画像が表示されます。 [レポート データ] ペインでは、レポート内のデータを表すアイテムの階層ビューが表示されます。 最上位のノードは、組み込みフィールド、パラメーター、画像、およびデータ ソース参照を表します。 データ アイテムを表示するには、各ノードを展開します。 たとえば、データ ソース ノードを展開すると、そのデータ ソース用に定義されたデータセットが表示されます。 データセットを展開すると、そのフィールド コレクションが表示されます。 データをレポート ページ上のレポート アイテムにリンクするには、アイテムをレポート デザイン画面にドラッグします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **組み込みフィールド**  
  レポート名やページ番号など、レポートでよく使用される、Reporting Services に用意されているフィールドを表します。 詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   

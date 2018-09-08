@@ -1,27 +1,21 @@
 ---
 title: Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール | Microsoft Docs
-ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6163dcad3fcc755b6d75a0758fce42afed2320cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dc6ad2402df5b8c95439ada3a5554fbdc88f9600
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978004"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266210"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール
 
@@ -73,7 +67,7 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
 -   レポート サーバー インスタンスを既定の構成でインストール。URL 予約でポート 80 を指定し、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] アプリケーションで仮想ディレクトリ名 "Reports" を使用。  
   
- この構成では、http://\<コンピューター名>:80/reports に送信された要求は、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。 レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
+ この構成では、 http://\<コンピューター名>:80/reports に送信された要求は、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。 レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新旧のバージョンをサイド バイ サイド配置で実行した場合、前述したルーティングの問題が発生する可能性があります。 これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのバージョンでは、レポート サーバーと [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] アプリケーションの仮想ディレクトリ名として "ReportServer" と "Reports" が使用されているため、IIS には "reports" と "reportserver" という仮想ディレクトリが高い確率で存在していると考えられるためです。  
   

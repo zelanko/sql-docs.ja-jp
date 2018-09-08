@@ -1,13 +1,9 @@
 ---
 title: 暗号化キーの削除と再作成 (SSRS 構成マネージャー) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 012333e2584041c42c3901ef22be90f7591fdffb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: b52d7521d46aa19f452f95f9af3381328672dcc1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322271"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264825"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーの削除と再作成
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  

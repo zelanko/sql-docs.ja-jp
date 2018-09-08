@@ -1,27 +1,22 @@
 ---
 title: SQL Server データ ツールの Reporting Services (SSDT) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cea1558510664ff545d0762d430bb239c40b52a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277224"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
@@ -285,7 +280,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でのウィンドウおよびモードの制御:  
   
-    |Description|キーの組み合わせ|  
+    |[説明]|キーの組み合わせ|  
     |-----------------|---------------------|  
     |選択したプロジェクトをビルドする|Ctrl + Shift + B|  
     |[プロパティ] ウィンドウを表示する|F4|  
@@ -295,7 +290,7 @@ ms.lasthandoff: 05/03/2018
   
 -   レポート デザイン画面でのアイテムの制御:  
   
-    |Description|キーの組み合わせ|  
+    |[説明]|キーの組み合わせ|  
     |-----------------|---------------------|  
     |あるレポート アイテムから次のレポート アイテムにフォーカスを移動する|Tab|  
     |選択したレポート アイテムを移動する|方向キー|  
@@ -312,7 +307,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-steps"></a>次の手順
 
 [SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)
-[ソリューション エクスプローラー](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)   
 [Reporting Services レポート](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [レポート定義言語](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server Data Tools の配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

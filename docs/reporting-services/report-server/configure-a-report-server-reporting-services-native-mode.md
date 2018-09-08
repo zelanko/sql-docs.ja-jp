@@ -1,28 +1,23 @@
 ---
 title: レポート サーバーの構成 (Reporting Services ネイティブ モード) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 175688c6892a0cb16613a55d168e971681d5ea0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5752645a905322a31618294cf5a7cbe03189ccc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267941"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>レポート サーバーの構成 (Reporting Services ネイティブ モード)
   インストール中に選択したオプションによっては、レポート サーバーを使用する前に追加の構成が必要になる場合があります。 少なくともレポート サーバーの構成には以下が必要です。  

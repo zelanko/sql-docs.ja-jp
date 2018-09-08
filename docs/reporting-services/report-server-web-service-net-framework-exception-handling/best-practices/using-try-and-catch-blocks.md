@@ -1,14 +1,10 @@
 ---
 title: Try ブロックと Catch ブロックの使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: ''
+ms.technology: report-server-web-service-net-framework-exception-handling
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - exceptions [Reporting Services], try/catch blocks
 - try/catch blocks [Reporting Services]
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 30276eb82355c5b36d5e4d0bbfa9e5a5a8e899df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ac2acf49654425aede1347e4307161835214e3c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023789"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281413"
 ---
 # <a name="using-try-and-catch-blocks"></a>Try ブロックと Catch ブロックの使用
   条件ステートメントをコードに追加し、レポート サーバーに無効な要求が発行されないようにしたら、try ブロックと catch ブロックを使用して十分な例外処理を指定してください。 これによって、レポート サーバーを無効な要求からさらに保護することができます。 レポート サーバーへの要求を try ブロックに入れ、要求が原因でレポート サーバーが例外をスローしたときは、その例外を catch ブロックでキャッチすることで、アプリケーションが異常終了するのを防ぐことができます。 例外をキャッチしたら、例外を使用して別のことを実行するようにユーザーに指示することができます。または、エラーが発生したことだけをわかりやすくユーザーに通知することもできます。 最終的には、ブロックを使用してすべてのリソースをクリーンアップできます。 try ブロックや catch ブロックの不必要な重複を避けるために、汎用的な例外処理プランを生成することが理想的です。  

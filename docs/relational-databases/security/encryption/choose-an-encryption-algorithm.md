@@ -1,7 +1,7 @@
 ---
 title: 暗号化アルゴリズムの選択 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549602"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096560"
 ---
 # <a name="choose-an-encryption-algorithm"></a>暗号化アルゴリズムの選択
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549602"
   
 -   通常、短いキーより長いキーの方が、強力な暗号化を行えます。  
   
--   非対称暗号化は、同じキー長を使用した対称暗号化よりも弱くなりますが、処理速度は比較的遅くなります。  
+-   非対称暗号化は、対称暗号化よりも遅くなります。  
   
 -   長いキーを使用したブロック暗号は、ストリーム暗号よりも強力です。  
   
 -   長い複雑なパスワードは、短いパスワードよりも強力です。  
+
+-   対称暗号化は一般的にキーがローカルでのみ格納されているときに、非対称暗号化はキーを有線ネットワーク上で共有する必要があるときに推奨されます。
   
 -   大量のデータを暗号化する場合は、対称キーを使用してデータを暗号化し、非対称キーを使用して対称キーを暗号化します。  
   

@@ -1,14 +1,10 @@
 ---
 title: レポート サーバー アイテムのプロパティ | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,15 +14,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267638"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services のプロパティ - レポート サーバー アイテムのプロパティ
   アイテム プロパティは、レポート サーバー データベースのアイテムに固有のプロパティです。 アイテム プロパティには、レポート、リンク レポート、フォルダー、リソース、モデル、データ ソースなどがあります。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="item-properties"></a>アイテム プロパティ  
  次のプロパティは、レポート サーバー データベースのすべてのアイテムに適用されます。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**CreatedBy**|レポート サーバー データベースへアイテムを最初に追加したユーザーの名前。|  
 |**CreationDate**|アイテムがレポート サーバー データベースに追加された日付と時刻。|  
@@ -54,14 +49,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="folder-properties"></a>フォルダー プロパティ  
  これまで説明したアイテム プロパティの他に、次のプロパティがレポート サーバー データベースのフォルダーに適用されます。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**Reserved**|フォルダーの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドが返す値は、レポート サーバーによって予約されています。 予約されたフォルダーには Users、My Reports、および / が含まれています。 予約されたフォルダーは、変更も削除もできません。|  
   
 ## <a name="report-properties"></a>レポート プロパティ  
  これまで説明したアイテム プロパティの他に、次のプロパティがレポート サーバー データベースのレポートに適用されます。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**言語**|レポートで使用される言語。 値は、Internet Engineering Task Force (IETF) RFC1766 仕様で定義されている言語コードです。 先頭の 2 文字は基本言語を指定します。 ハイフンで区切られた 2 番目の部分は、言語のバリエーションや方言を指定します。 レポート定義の **Body**要素に関連付けられた **Style** 要素に値が指定されていない場合は、既定値がレポート サーバーの言語になります。|  
 |**ReportProcessingTimeout**|各レポートのタイムアウト値 (秒単位)。 この値を設定すると、指定した時間が経過した時点でレポートの処理が中止されます。 有効値は **-1** ～ **2**、**147**、**483**、**647**です。 値が **-1** の場合、処理中にレポートがタイムアウトしません。 値が **null** の場合、レポート処理のタイムアウトとしてシステム プロパティ **ReportProcessingTimeout** の値が使用されます。既定値は、**null** です。 詳細については、「[レポート サーバーのシステム プロパティ](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)」を参照してください。|  
@@ -75,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="resource-properties"></a>リソース プロパティ  
  これまで説明したアイテム プロパティの他に、次のプロパティがレポート サーバー データベースのリソースに適用されます。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**MimeType**|レポート サーバー データベースのリソースの MIME の種類。|  
   

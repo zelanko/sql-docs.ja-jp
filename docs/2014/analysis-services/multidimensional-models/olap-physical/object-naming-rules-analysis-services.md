@@ -17,12 +17,12 @@ caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28929d0d09e9cf0d05631ed3b95da30b95dc4ab
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202082"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348393"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
   このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
@@ -73,7 +73,7 @@ ms.locfileid: "37202082"
   
 |オブジェクト|無効な文字|  
 |------------|------------------------|  
-|`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 参照してください[名前付け規則 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx)詳細についてはします。|  
+|`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 参照してください[名前付け規則 (Windows)](/windows/desktop/DNS/naming-conventions)詳細についてはします。|  
 |`DataSource`|: / \ * &#124; ? "() {} <>|  
 |`Level` または `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` または `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<、>|  

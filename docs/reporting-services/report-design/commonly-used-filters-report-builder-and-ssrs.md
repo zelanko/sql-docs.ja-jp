@@ -1,14 +1,10 @@
 ---
 title: 一般的に使用されるフィルター (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multivalued parameters [Reporting Services]
@@ -16,15 +12,14 @@ helpviewer_keywords:
 - parameters [Reporting Services], multivalued
 - valid values [Reporting Services]
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4b1dee78e6edf4137d1fa50f2f81492989edd752
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5552d0464fd245cbdad9a133420779b70dd12c31
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272354"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>一般的に使用されるフィルター (レポート ビルダーおよび SSRS)
   フィルターを作成するには、1 つ以上のフィルター式を指定する必要があります。 フィルター式には、式、データ型、演算子、および値が含まれます。 ここでは、一般的に使用されるフィルターの例を示します。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="filter-examples"></a>フィルターの例  
  次の表は、さまざまなデータ型と演算子を使用するフィルター式の例を示します。 比較のスコープは、フィルターが定義されたレポート アイテムによって決まります。 たとえば、データセットに定義されたフィルターの場合、 **[上位 10%]** はデータセットの値の上位 10% になります。グループに定義されたフィルターの場合、 **[上位 10%]** はグループの値の上位 10% になります。  
   
-|単純式|データ型|演算子|ReplTest1|Description|  
+|単純式|データ型|演算子|ReplTest1|[説明]|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|7 より大きいデータ値が含まれます。|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|上位 10 データ値が含まれます。|  

@@ -1,28 +1,22 @@
 ---
 title: レポート サーバー コンピューターの名前の変更 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 85833e353cd0c12f6fb20e516214743678c4cbcc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfa856c392dd133ff94c4079faceea95f5c422b0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026319"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270604"
 ---
 # <a name="rename-a-report-server-computer"></a>レポート サーバー コンピューターの名前の変更
   コンピューターの名前を変更すると、同じコンピューター上に存在する Web サーバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前が対応して変更されます。 場合によっては、コンピューター名を変更した後に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にアクセスできなくなることがあります。 コンピューター名を変更した後にレポート サーバーを再構成するには、このトピックで説明する手順を使用します。  

@@ -1,26 +1,20 @@
 ---
 title: Hyperion Essbase の接続の種類 (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4856d84a8ee9cc8917ca6791260ca13fa083320e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de14db5c0e0d527f740f15cbbac653de61b0c074
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023019"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280371"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase の接続の種類 (SSRS)
   [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のデータ拡張機能に基づいています。この拡張機能を使用すると、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースから多次元データを取得できます。  
@@ -86,7 +80,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**プロパティ**|**型**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
-|**[値]**|**オブジェクト**|フィールドのデータ値を指定します。<br /><br /> ディメンション プロパティの場合は、MEMBER_CAPTION にマッピングされます。 メジャーの場合は、データ値にマッピングされます。|  
+|**Value**|**オブジェクト**|フィールドのデータ値を指定します。<br /><br /> ディメンション プロパティの場合は、MEMBER_CAPTION にマッピングされます。 メジャーの場合は、データ値にマッピングされます。|  
 |**IsMissing**|**ブール値**|フィールドが結果データセットに存在するかどうかを示します。|  
 |**FormattedValue**|**String**|主要データの書式設定した値を返します。<br /><br /> MDX 式の FORMATTED_VALUE からマッピングされます。|  
 |**BackgroundColor**|**String**|データベースで定義されたフィールドの背景色を返します。<br /><br /> MDX 式の BACK_COLOR からマッピングされます。|  

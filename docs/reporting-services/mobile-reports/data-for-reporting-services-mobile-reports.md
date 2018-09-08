@@ -1,26 +1,20 @@
 ---
 title: Reporting Services モバイル レポートのデータ | Microsoft Docs
-ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: b505c769fc86dd62b738a54c20c98adafd69db60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4e8b6f7561ff2af54652787ce95e2368d3fa882e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018269"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274913"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートのデータ
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] のデータ モデルは単純です。 データは、データセットのコレクションとして [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] にインポートされます。 データセット間の正式なリレーションシップは必要ありません。 あるデータセットから別のデータセットの参照は、キーの値が一致する限り機能します。 日付/時刻の集計は、モバイル レポート ランタイムによって処理されます。日付/時刻データの細分性がデータセットの間で異なる場合でも、この集計は異なるデータセットの間で一致します。   
@@ -29,7 +23,7 @@ ms.locfileid: "33018269"
   
 * **ローカルの Excel ファイル**: Excel のドキュメントを選択し、インポートするワークシートを選択します。 インポート後に、データはモバイル レポート定義内に保存されます。 元の Excel ファイルからのデータを更新するには、 **の** [データ] [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab.詳細については、[SSRS モバイル レポート用の Excel データの準備](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)に関するページを参照してください。  
   
-* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] 共有データセット**: サーバー上のパブリッシュされたデータセットの一覧を参照し、モバイル レポートに追加するデータセットを選択します。 サーバー データに基づくモバイル レポートは、常に元のサーバーのデータセットに接続され、サーバー上のデータの最新の状態が反映されます。 「 [サポートされるデータ ソースの一覧](https://msdn.microsoft.com/library/ms159219.aspx)」を参照してください。   
+* **SQL Server Mobile Report Publisher 共有データセット**: サーバー上のパブリッシュされたデータセットの一覧を参照し、モバイル レポートに追加するデータセットを選択します。 サーバー データに基づくモバイル レポートは、常に元のサーバーのデータセットに接続され、サーバー上のデータの最新の状態が反映されます。 [サポートされるデータ ソースの一覧](../report-data/data-sources-supported-by-reporting-services-ssrs.md)に関するページを参照してください。   
   
   詳細については、 [Mobile Report Publisher での共有データセットからのデータの取得](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)に関する記事を参照してください。  
   
@@ -37,7 +31,7 @@ ms.locfileid: "33018269"
   
 ## <a name="connect-mobile-report-elements-to-data"></a>モバイル レポート要素とデータの接続 ##  
   
-各 [!INCLUDE[PRODUCT_NAME](../../includes/short-product-name.md)] 要素には、1 つ以上のデータ設定が含まれています。 たとえば、放射状ゲージの要素には 2 つのデータ設定が含まれます。メイン値と比較対象値です。 これらの各設定は、特定のデータセット内の 1 つのフィールド (列) を正確にポイントします。   
+SQL Server Mobile Report Publisher の各要素には、1 つ以上のデータ設定が含まれています。 たとえば、放射状ゲージの要素には 2 つのデータ設定が含まれます。メイン値と比較対象値です。 これらの各設定は、特定のデータセット内の 1 つのフィールド (列) を正確にポイントします。   
   
 モバイル レポート ランタイムでは、ユーザーの選択に基づいて、ゲージの集計値を提供します。 同じ放射状ゲージ インスタンスの比較対象値は、異なるデータセットのフィールドにバインドされることがあります。   
   

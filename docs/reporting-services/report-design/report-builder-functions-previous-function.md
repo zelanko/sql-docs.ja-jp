@@ -1,26 +1,20 @@
 ---
 title: Previous 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f5ce25413eb30996ed6003f33801800a9a132fea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01b2a6dc4b0d396fe6985ab0c4cefd689171fb2a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025519"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280858"
 ---
 # <a name="report-builder-functions---previous-function"></a>レポート ビルダー関数 - Previous 関数
   アイテムの、指定されたスコープ内の直前のインスタンスに対応する値または指定された集計値を返します。  
@@ -65,7 +59,7 @@ Previous(expression, scope)
   
 ## <a name="examples"></a>使用例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>[説明]  
  次のコード例は、データ領域の既定のデータ行に配置されると、直前の行の `LineTotal` フィールドの値が表示されます。  
   
 ### <a name="code"></a>コード  
@@ -74,7 +68,7 @@ Previous(expression, scope)
 =Previous(Fields!LineTotal.Value)  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>[説明]  
  次の例では、特定の月日の売上合計と、前年のその月日の値を計算する式を示します。 この式は、子グループ `GroupbyDay`に属する行内のセルに追加されます。 その親グループは `GroupbyMonth`で、このグループの親グループは `GroupbyYear`です。 この式では、GroupbyDay (既定のスコープ) の結果、次に `GroupbyYear` (親グループ `GroupbyMonth`の親) の結果が表示されます。  
   
  たとえば、親グループが `Year`、その子グループが `Month`、そのまた子グループが `Day` という名前のデータ領域 (入れ子レベル 3) の場合、 グループ `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` に関連付けられた行内の式 `Day` は、前年の同じ月日の売上高の値を返します。  

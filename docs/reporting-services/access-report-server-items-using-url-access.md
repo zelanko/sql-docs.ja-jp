@@ -1,29 +1,23 @@
 ---
 title: URL アクセスを使用したレポート サーバー アイテムへのアクセス | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: edd381205ea4cb5f8ae3709543d4c6a50e8933df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48b0df64244d5428b019625647d312448277d5bc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016249"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275119"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL アクセスを使用したレポート サーバー アイテムへのアクセス
   このトピックでは、*rs:Command*=*Value* を使用してレポート サーバー データベースまたは SharePoint サイトにある異なる種類のカタログ アイテムにアクセスする方法について説明します。 実際にこのパラメーター文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL に *rs:Command*=*Value* 文字列を使用することで、レポート サーバーのパフォーマンスを向上できます。  
@@ -34,7 +28,7 @@ ms.locfileid: "33016249"
  ブラウザーでレポートを表示するには、 *rs:Command*=*Render* パラメーターを使用します。 例 :  
   
  - **ネイティブ** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
- - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  SharePoint および `_vti_bin` HTTP プロキシ経由で要求をルーティングする [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] プロキシ構文を URL に含めることは重要です。 プロキシによって、HTTP 要求にいくつかのコンテキストが追加されます。これは、SharePoint モード レポート サーバーに対してレポートを適切に実行するために必要なコンテキストです。  
@@ -44,14 +38,14 @@ ms.locfileid: "33016249"
   
  **ネイティブ** `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>データ ソースへのアクセス  
  データ ソースにアクセスするには、 *rs:Command*=*GetDataSourceContents* パラメーターを使用します。 ブラウザーで XML がサポートされている場合、そのデータ ソース定義が表示されます。ただし、目的のデータ ソースに対して **Read Contents** 権限が与えられている認証ユーザーであることが条件となります。 例 :  
   
  **ネイティブ** `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  XML 構造は、次の例のようになります。  
   
@@ -74,7 +68,7 @@ ms.locfileid: "33016249"
   
  **ネイティブ** `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
  表示されるユーザー インターフェイスは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) で使用されるディレクトリ参照モードと似ています。 ビルド番号を含むレポート サーバーのバージョン番号もフォルダー一覧の下に表示されます。  
   

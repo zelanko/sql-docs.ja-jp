@@ -39,12 +39,12 @@ caps.latest.revision: 100
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 024986a082bee4e823d66fdb588e65fc6d4f4c88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9b801380bb6bc37fb419eedfa91d510fb8ad1076
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989708"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410381"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016 で廃止されたデータベース エンジンの機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +61,14 @@ ms.locfileid: "37989708"
   
 ## <a name="previous-versions"></a>以前のバージョン  
   
--   [SQL Server 2014 で廃止されたデータベース エンジンの機能](https://msdn.microsoft.com/library/ms144262\(v=sql.120\))  
+-   [SQL Server 2014 で廃止されたデータベース エンジンの機能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
--   [SQL Server 2012 で廃止されたデータベース エンジンの機能](https://msdn.microsoft.com/library/ms144262\(v=sql.110\))  
+-   [SQL Server 2012 で廃止されたデータベース エンジンの機能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
--   [SQL Server 2008 で廃止されたデータベース エンジンの機能](https://msdn.microsoft.com/library/ms144262\(v=sql.100\))  
+-   [SQL Server 2008 で廃止されたデータベース エンジンの機能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
 ## <a name="see-also"></a>参照  
- 
-  [SQL Server 2016 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2016 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server レプリケーションの非推奨の機能](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
   
  

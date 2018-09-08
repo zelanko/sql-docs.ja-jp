@@ -1,14 +1,10 @@
 ---
 title: ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10538"
@@ -21,16 +17,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12f65c737b17c62c925a1b129a2d527ac849aeaf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027459"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278841"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   マップ レイヤー上の多角形、線、およびポイントの表示オプションを制御する方法として、レイヤーのオプションを設定する方法、レイヤー上のマップ要素ルールを設定する方法、およびレイヤー上の特定の埋め込みマップ要素のオプションをオーバーライドする方法があります。  
@@ -126,7 +120,7 @@ ms.locfileid: "33027459"
   
  次の表に、使用できるさまざまな書式を示します。  
   
-|キーワードおよび書式|Description|凡例のテキストとして表示される内容の例|  
+|キーワードおよび書式|[説明]|凡例のテキストとして表示される内容の例|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|小数部のない合計金額を表示します。|$400|  
 |`#FROMVALUE {C2}`|合計金額を小数点以下 2 桁で表示します。|$400.55|  

@@ -1,28 +1,22 @@
 ---
 title: 'チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs'
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: eb1fa8539eb0ba96edb5c48d29af160507e61998
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fd54e59c30a03cc918bc080ab64b21db8983ba1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037229"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278480"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにパラメーターを追加し、レポート閲覧者が 1 つまたは複数の値でレポート データをフィルター処理できるようにします。 

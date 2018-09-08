@@ -1,31 +1,26 @@
 ---
 title: レポート サーバー アプリケーションで利用可能なメモリの構成 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: cd3c8b2a1d803610d0e1e6f086097d56aead9f77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f9d35736f76dc7795cf4cf1d7fe8317eee723d8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282574"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>レポート サーバー アプリケーションで利用可能なメモリの構成
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、利用可能なすべてのメモリを使用できますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー アプリケーションに割り当てることのできる合計メモリ リソース量に上限を設けることによって、既定の動作よりも、そちらを優先させることができます。 また、しきい値を設定することにより、メモリの圧迫度 (低、中、高) に応じて、要求の優先度付けや処理の方法を変えることもできます。 メモリ圧迫の度合いが低い場合、レポート サーバーは、対話型のレポート処理またはオンデマンドのレポート処理に若干高い優先度を割り当てます。 メモリ圧迫の度合いが高い場合、レポート サーバーは、さまざまな手法を用いながら、利用できる限られたリソースで稼働状態を保ちます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、利用可能なすべてのメモリを使用できますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー アプリケーションに割り当てることのできる合計メモリ リソース量に上限を設けることによって、既定の動作をオーバーライドすることができます。 また、しきい値を設定することにより、メモリの圧迫度 (低、中、高) に応じて、要求の優先度付けや処理の方法を変えることもできます。 メモリ圧迫の度合いが低い場合、レポート サーバーは、対話型のレポート処理またはオンデマンドのレポート処理に若干高い優先度を割り当てます。 メモリ圧迫の度合いが高い場合、レポート サーバーは、さまざまな手法を用いながら、利用できる限られたリソースで稼働状態を保ちます。  
   
  このトピックでは、指定できる構成設定について取り上げ、さらに、要求の処理に影響するメモリ不足が発生した場合に、サーバーがどのように対処するかについて説明します。  
   
@@ -70,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、 **WorkingSetMaximum**、 **WorkingSetMinimum**、 **MemorySafetyMargin**、 **MemoryThreshold** の各設定について説明します。 構成設定は、 [RSReportServer.config ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)で指定されます。  
   
-|要素|Description|  
+|要素|[説明]|  
 |-------------|-----------------|  
 |**WorkingSetMaximum**|メモリのしきい値を指定します。この値を超えた場合、レポート サーバー アプリケーションに対する、新しいメモリ割り当て要求は許可されません。<br /><br /> 既定では、コンピューターで使用可能なメモリ量が **WorkingSetMaximum** として設定されます。 この値は、サービスの開始時に検出されます。<br /><br /> この設定は、手動で追加しない限り、RSReportServer.config ファイルには存在しません。 レポート サーバーによって使用されるメモリ量を少なくしたい場合は、RSReportServer.config ファイルにこの要素と値を追加します。 有効な値は、0 から整数型の最大値までです。 この値はキロバイト単位で指定します。<br /><br /> **WorkingSetMaximum** の値に達すると、レポート サーバーは新しい要求を受け付けなくなります。 現在実行中の要求は最後まで実行されます。 メモリ使用量が **WorkingSetMaximum**で指定した値を下回っている場合のみ、新しい要求が受け付けられます。<br /><br /> **WorkingSetMaximum** 値に達した後、既存の要求によって引き続き追加のメモリが消費された場合、レポート サーバーのすべてのアプリケーション ドメインがリサイクルされます。 詳細については、「 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)」を参照してください。|  
 |**WorkingSetMinimum**|リソース消費の下限を指定します。全体的なメモリ使用量がこの値を下回っている場合、レポート サーバーはメモリを解放しません。<br /><br /> 既定では、この値がサービスの開始時に計算されます。 初回メモリ割り当て要求時に **WorkingSetMaximum**の 60% として計算されます。<br /><br /> この設定は、手動で追加しない限り、RSReportServer.config ファイルには存在しません。 この値をカスタマイズするには、RSReportServer.config ファイルに **WorkingSetMinimum** 要素を追加する必要があります。 有効な値は、0 から整数型の最大値までです。 この値はキロバイト単位で指定します。|  

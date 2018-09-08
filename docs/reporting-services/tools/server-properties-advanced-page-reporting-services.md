@@ -1,28 +1,19 @@
 ---
 title: '[サーバーのプロパティ] ([詳細設定] ページ) - Reporting Services | Microsoft Docs'
-ms.custom: ''
-ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.technology: tools
+ms.suite: reporting-services
+ms.topic: conceptual
+ms.date: 08/16/2018
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999454"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266270"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
 
@@ -49,11 +40,12 @@ ms.locfileid: "37999454"
 **ExecutionLogDaysKept**  
 レポート実行情報を実行ログに保持する日数。 このプロパティの有効値は、 **-1** - **2**、**147**、**483**、**647**です。 値が **-1** の場合、エントリは実行ログ テーブルから削除されません。 既定値は **60**です。  
 
-> [!NOTE] 
+> [!NOTE]
 > **0** の値を設定すると、実行ログからすべてのエントリが*削除*されます。 値が **-1** の場合、実行ログのエントリは保持され、それらは削除されません。
 
-**SessionTimeout**  
-セッションがアクティブな状態になっている期間 (秒単位)。 既定値は **600**です。  
+**RDLXReportTimetout** RDLX レポート *(SharePoint Server の Power View レポート)* レポート サーバーの名前空間で管理されるすべてのレポートに対する、処理タイムアウト値 (秒単位)。 この値はレポート レベルでオーバーライドできます。 このプロパティを設定すると、レポート サーバーは指定された時間が経過した後、レポートの処理を停止しようとします。 有効値は **-1** ～ **2**、**147**、**483**、**647**です。 値に **-1**を設定すると、名前空間内のレポートが処理中にタイムアウトしません。 既定値は **1800**です。
+
+**SessionTimeout** セッションがアクティブな状態になっている期間 (秒単位)。 既定値は **600**です。  
 
 **SharePointIntegratedMode**  
 この読み取り専用プロパティは、サーバー モードを示します。 この値が False の場合、レポート サーバーはネイティブ モードで実行されます。  
@@ -61,8 +53,7 @@ ms.locfileid: "37999454"
 **SiteName**  
 Web ポータルのページ タイトルに表示されるレポート サーバー サイトの名前。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 このプロパティには空の文字列を指定できます。 最大長は 8,000 文字です。  
 
-**StoredParametersLifetime**  
-保存したパラメーターを保持できる最大日数を指定します。 有効値は **-1**、 **+1** ～ **2,147,483,647**です。 既定値は **180** 日です。  
+**StoredParametersLifetime** 格納されたパラメーターを保持できる最大日数を指定します。 有効値は **-1**、 **+1** ～ **2,147,483,647**です。 既定値は **180** 日です。  
 
 **StoredParametersThreshold**  
 レポート サーバーが保存できるパラメーター値の最大数を指定します。 有効値は **-1**、 **+1** ～ **2,147,483,647**です。 既定値は **1500**です。  
@@ -72,6 +63,8 @@ Web ポータルのページ タイトルに表示されるレポート サー�
 
 **ExternalImagesTimeout**  
 この時間以内に外部画像ファイルを取得しないと接続がタイムアウトになる時間の長さを指定します。既定値は **600** 秒です。  
+
+**SnapshotCompression** その時点のレポート サーバーのスナップショット。
 
 **SnapshotCompression**  
 スナップショットの圧縮方法を定義します。 既定値は **SQL**です。 有効な値は次のとおりです。
@@ -97,7 +90,7 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 |**False**|Windows 統合セキュリティは無効になります。 Windows 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。|
 
 **EnableLoadReportDefinition**  
-ユーザーがレポート ビルダーのレポートからアドホック レポートを実行できるかどうかを指定するには、このオプションを選択します。 このオプションをオンにすると、レポート サーバーの **EnableLoadReportDefinition** プロパティが設定されます。  
+ユーザーがレポート ビルダーのレポートから計画されていないレポートを実行できるかどうかを指定するには、このオプションを選択します。 このオプションをオンにすると、レポート サーバーの **EnableLoadReportDefinition** プロパティが設定されます。  
 
 このオプションをオフにした場合は、このプロパティが False に設定されます。 データ ソースとしてレポート モデルを使用するレポートのクリックスルー レポートは、レポート サーバーによって生成されません。 LoadReportDefinition メソッドへの呼び出しはいずれもブロックされます。  
 
@@ -105,27 +98,6 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 
 **EnableRemoteErrors**  
 リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効値は **true** および **false**です。 既定値は **false**です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)」を参照してください。  
-
-**EnableReportDesignClientDownload**  
-レポート ビルダーのインストール パッケージをレポート サーバーからダウンロードできるかどうかを指定します。 この設定をオフにすると、レポート ビルダーの URL は機能しません。 
-
-**EditSessionCacheLimit**  
-レポート編集セッションでアクティブにできるデータ キャッシュ エントリの数を指定します。 既定の数は 5 です。  
-
-**EditSessionTimeout**  
-レポート編集セッションがタイムアウトするまでの秒数を指定します。既定値は 7,200 秒 (2 時間) です。  
-
-**EnableCustomVisuals** ***(Power BI Report Server のみ)***  
-PowerBI ReportServer で PowerBI カスタム ビジュアルの表示を有効にします。 値は True、False です。  既定値は True です。  
-
-**EnablePowerBIReportExportData** ***(Power BI Report Server のみ)***  
-PowerBI ReportServer で PowerBI ビジュアルからのデータのエクスポートを有効にします。 値は True、False です。  既定値は True です。  
-
-**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server のみ)***  
-AS モデルが埋め込まれた PowerBI レポートでのスケジュールされた更新のデータ更新のタイムアウト (分)。 既定値は 120 分です。
-
-**EnableTestConnectionDetailedErrors**  
-ユーザーがレポート サーバーを使用してデータ ソース接続をテストする際に、クライアント コンピューターに詳細なエラー メッセージを送信するかどうかを指定します。 既定値は **true**です。 このオプションを **false**に設定した場合は、一般的なエラー メッセージだけが送信されます。
 
 **AccessControlAllowCredentials**  
 'credentials' フラグが true に設定されている場合に、クライアント要求への応答を公開できるかどうかを示します。 既定値は **false**です。
@@ -139,6 +111,45 @@ AS モデルが埋め込まれた PowerBI レポートでのスケジュール�
 **AccessControlExposeHeaders** サーバーがクライアントに公開するヘッダーのコンマ区切りリスト。 既定値は空白です。
 
 **AccessControlMaxAge** プリフライト要求の結果をキャッシュできる秒数を指定します。 既定値は 600 (10 分) です。
+
+**EditSessionCacheLimit**  
+レポート編集セッションでアクティブにできるデータ キャッシュ エントリの数を指定します。 既定の数は 5 です。  
+
+**EditSessionTimeout**  
+レポート編集セッションがタイムアウトするまでの秒数を指定します。既定値は 7,200 秒 (2 時間) です。  
+
+**EnableCustomVisuals** ***(Power BI Report Server のみ)*** Power BI カスタム ビジュアルの表示を有効にします。 値は True と False です。 *既定値は True です。*  
+
+**ExecutionLogLevel** 実行ログのレベルを設定します。 *既定値は Normal です。*
+
+**InterProcessTimeoutMinutes** プロセスのタイムアウトを分単位で設定します。 *既定値は 30 です。*
+
+**MaxFileSizeMb** レポートの最大ファイル サイズを MB 単位で設定します。 *既定値は 1000 です。最大値は 2000 です。*
+
+**ModelCleanupCycleminutes** モデルのクリーンアップ サイクルを分単位で設定します。 *既定値は 15 です。*
+
+**OfficeAccessTokenExpirationSeconds** ***(Power BI Report Server のみ)*** Office Access トークンの有効期限を秒単位で設定します。 *既定値は 60 です。*
+
+**OfficeOnlineDiscoveryURL** ***(Power BI Report Server のみ)*** Excel ブックを表示するための Office Online Server インスタンスのアドレスを設定します。
+
+**RequireIntune** Intune は、Power BI モバイル アプリ経由で組織のレポートにアクセスする必要があります。 *既定値は False です。*
+
+**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server のみ)*** スケジュールされた更新がタイムアウトになるまでの時間を設定します。*既定値は 120 です。*
+
+**ShowDownloadMenu** クライアント ツールのダウンロード メニューを有効にします。 *既定値は true です。*
+
+**TimeInitialDelaySeconds** 初期時間を遅延させる時間を秒単位で設定します。 *既定値は 60 です。*
+
+**TrustedFileFormat** Reporting Services ポータル サイトにおいてブラウザーで開くすべての外部ファイルの形式を設定します。 外部ファイルの形式が一覧に含まれない場合は、オプションのダウンロードを求めるメッセージがブラウザーに表示されます。 既定値は、jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web、png です。
+
+**EnablePowerBIReportExportData** ***(Power BI Report Server のみ)***  
+Power BI ビジュアルからの Power BI Report Server のデータ エクスポートを有効にします。 値は True、False です。  既定値は True です。  
+
+**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server のみ)***  
+AS モデルが埋め込まれた Power BI レポートでのスケジュールされた更新用のデータ更新のタイムアウト (分)。 既定値は 120 分です。
+
+**EnableTestConnectionDetailedErrors**  
+ユーザーがレポート サーバーを使用してデータ ソース接続をテストする際に、クライアント コンピューターに詳細なエラー メッセージを送信するかどうかを指定します。 既定値は **true**です。 このオプションを **false**に設定した場合は、一般的なエラー メッセージだけが送信されます。
 
 ## <a name="see-also"></a>参照
 

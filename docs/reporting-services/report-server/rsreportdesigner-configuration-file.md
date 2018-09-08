@@ -1,29 +1,23 @@
 ---
 title: RSReportDesigner 構成ファイル | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 45a1ca0907f5572f8409503fcb7227bcc8a08a62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e73cebccd25798f067bc807d01c3c110b8084e4d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026779"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280999"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 構成ファイル
   RSReportDesigner.config ファイルには、レポート デザイナーに利用できる表示拡張機能およびデータ処理拡張機能に関する設定が保存されています。 データ処理拡張機能の情報は、 **Data** 要素に保存されます。 表示拡張機能の情報は、 **Render** 要素に保存されます。 **Designer** 要素には、レポート デザイナーで使用されるクエリ ビルダーが列挙されます。  
@@ -59,7 +53,7 @@ ms.locfileid: "33026779"
   
 ## <a name="configuration-settings"></a>構成設定  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|Web サービス接続のセキュリティ レベルを指定します。 有効な値は、0 ～ 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)」を参照してください。|  
 |**InstanceName**|プレビュー サーバーの識別子です。 この値は変更しないでください。|  

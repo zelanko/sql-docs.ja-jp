@@ -1,14 +1,10 @@
 ---
 title: ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10125"
@@ -24,15 +20,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 1835b4d7a6ede5de5d442f36fe2ea7c85e9e330d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8382dd31be42486fb2d92f120dda2c793385fd8b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277914"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
   レポートには、各ページの上部と下部にヘッダーとフッターを含めることができます。 ヘッダーとフッターには、静的テキスト、画像、線、四角形、罫線、背景色、背景画像、式などを含めることができます。 式には、データセットが 1 つしかないレポートでのデータセット フィールド参照と、スコープとしてデータセットを指定する集計関数呼び出しが含まれます。  
@@ -61,9 +56,9 @@ ms.lasthandoff: 05/03/2018
   
 |式でサポート|ReportItems の集計|データセットの集計 (スコープがデータセット名であること)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|レポート本文のテキスト ボックス|はい|いいえ|  
-|&PageNumber|はい|いいえ|  
-|&TotalPages|はい|いいえ|  
+|レポート本文のテキスト ボックス|[ユーザー アカウント制御]|いいえ|  
+|&PageNumber|[ユーザー アカウント制御]|いいえ|  
+|&TotalPages|[ユーザー アカウント制御]|いいえ|  
 |集計関数|可能。 例を次に示します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|可能。 例を次に示します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |ページ上のアイテムのフィールド コレクション|間接的。 例を次に示します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例を次に示します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |データバインド画像|間接的。 例を次に示します。 `=ReportItems!TXT_Photo.Value`|可能。 例を次に示します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

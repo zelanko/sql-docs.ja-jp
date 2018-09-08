@@ -1,7 +1,7 @@
 ---
 title: クエリ ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331598"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240290"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "39331598"
  クエリで非クラスター化メモリ最適化列ストア インデックスが使用されないようにします。 クエリに、列ストア インデックスの使用を回避するクエリ ヒントと、列ストア インデックスを使用するためのインデックス ヒントがある場合、ヒントが競合してクエリはエラーを返します。  
   
  MAX_GRANT_PERCENT = *percent*  
- 最大メモリ サイズ (% 単位) を付与します。 クエリは、この制限を超えることはできないことが保証されます。 Resource Governor の設定がこの値より小さい場合、実際の制限はこれよりも小さくなる可能性があります。 有効な値では、0.0 ～ 100.0 します。  
+ 最大メモリ サイズ (% 単位) を付与します。 クエリは、この制限を超えることはできないことが保証されます。 Resource Governor の設定がこのヒントで指定されている値より小さい場合、実際の制限はこれよりも小さくなる可能性があります。 有効な値では、0.0 ～ 100.0 します。  
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -285,11 +285,17 @@ ms.locfileid: "39331598"
  バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  バッチ モード アダプティブ結合を無効にします。 詳細については、「[バッチ モード アダプティブ結合](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)」を参照してください。
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ クエリがデータベース互換レベル *n* でコンパイルされている場合と同じように、クエリ レベルでのクエリ オプティマイザーの動作を設定します。*n* はサポートされているデータベース互換レベルです。 現在サポートされている *n* の値の一覧については、「[sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)」をご覧ください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。   
  
-> [!TIP]
-> ヒント名では大文字と小文字が区別されません。
+    > [!NOTE]
+    > 既定またはレガシのカーディナリティ推定の設定が、データベース スコープ構成、トレース フラグ、または QUERYTRACEON などの別のクエリ ヒントによって適用されている場合、QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ヒントはそれをオーバーライドしません。   
+    > このヒントは、クエリ オプティマイザーの動作にのみ影響します。 特定のデータベース機能の可用性など、[データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)に依存する可能性のある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他の機能には影響しません。   
   
   サポートされているすべての USE HINT 名の一覧は、動的管理ビューの [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) を使用して照会できます。    
+
+> [!TIP]
+> ヒント名では大文字と小文字が区別されません。   
   
 > [!IMPORTANT] 
 > 一部の USE HINT ヒントは、グローバルまたはセッション レベルで有効になっているトレース フラグや、データベース スコープ構成設定と競合する場合があります。 この場合、クエリ レベル ヒント (USE HINT) が常に優先されます。 USE HINT が別のクエリ ヒントまたはクエリ レベルで (QUERYTRACEON などによって) 有効になっているトレース フラグと競合する場合、クエリを実行しようとすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成されます。 

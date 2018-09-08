@@ -1,14 +1,10 @@
 ---
 title: Web アプリケーションでの URL アクセスの使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +16,14 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8a58a909596dbe36f3dde3a8f0017a75c428b177
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c60148777a2dff9b0ae35df549f690e5e32e9cef
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014889"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281093"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>URL アクセスを使用した Reporting Services の統合 - Web アプリケーション
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL アクセスは、ネットワークを介して各レポートにアクセスできるように特別に設計されています。 この種類のアクセスは、レポートの表示およびナビゲーションをカスタム Web アプリケーションに統合するのに最適です。 Web アプリケーションで URL アクセスを使用するには、次の方法があります。  

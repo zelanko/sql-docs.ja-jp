@@ -1,28 +1,22 @@
 ---
 title: ファイルのみのインストール (Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - files-only installation [Reporting Services]
 - installation options [Reporting Services]
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6f8ceefbfa7998380e7f65e9a31eecd3c8bbb3a4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8c55108cab5fb57dbcca1e9f1ab2d3fd9d45489d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322161"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266280"
 ---
 # <a name="files-only-installation-reporting-services"></a>ファイルのみのインストール (Reporting Services)
   *ファイルのみのインストール* とは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストール形態の 1 つです。このインストールでは、セットアップで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] プログラム ファイルのフォルダー構造の作成、ディスクへのファイルのコピー、ローカル コンピューターへのレポート サーバー サービスの登録、サービス アカウントの構成、サービス アカウントへのファイル権限の付与、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーの登録を行います。  

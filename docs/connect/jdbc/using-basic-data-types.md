@@ -25,7 +25,7 @@ ms.locfileid: "42786381"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、JDBC の基本データ型を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を Java プログラミング言語によって認識できる形式に変換します。この逆の変換も行います。 JDBC ドライバーを含む JDBC 4.0 api のサポートを提供する、 **SQLXML**データ型、および、National (Unicode) データ型など**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**、および**NCLOB**します。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、JDBC の基本データ型を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を Java プログラミング言語によって認識できる形式に変換します。この逆の変換も行います。 JDBC ドライバー は **SQLXML** データ型を含む JDBC 4.0 api および **NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**、そして **NCLOB** のような National (Unicode) データ型のサポートを提供します。  
   
 ## <a name="data-type-mappings"></a>データ型マッピング
 

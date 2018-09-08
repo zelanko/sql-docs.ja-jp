@@ -1,14 +1,10 @@
 ---
 title: Reporting Services SoapException クラス | Microsoft Docs
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: ''
+ms.technology: report-server-web-service-net-framework-exception-handling
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - exceptions [Reporting Services], SoapException class
 - SoapException class
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 12d98493c8e83688ee0eb5938e1ee078103bc5fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d2039bed34ded12a15db1b6b8192c915a99fb3d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024639"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275313"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException クラス
   発生が予想される [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のエラーには、対処が必要です。 たとえば、ユーザーにフォルダーの作成を要求するアプリケーションでは、ユーザーが既に存在するフォルダーを作成する可能性があります。 開発者としては、アプリケーションのフォルダー名フィールドとパス フィールドにユーザーが入力する内容を制限することはできません。ただし、既に存在するアイテムをユーザーが誤って作成しようとしたとき、どのように対処するかを指定することは可能です。  
@@ -34,7 +28,7 @@ ms.locfileid: "33024639"
   
  次の表は、**SoapException** クラスのパブリック プロパティを示しています。  
   
-|パブリック プロパティ|Description|  
+|パブリック プロパティ|[説明]|  
 |---------------------|-----------------|  
 |**Actor**|例外の原因となったコード。 値は Web サービス メソッドへの URL です。|  
 |**Detail**|アプリケーション固有のエラー情報。 この値は、レポート サーバーによって XML 形式で設定されます。 詳細については、「[Detail プロパティ](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)」と「[Detail プロパティを使用したエラー処理](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)」を参照してください。|  

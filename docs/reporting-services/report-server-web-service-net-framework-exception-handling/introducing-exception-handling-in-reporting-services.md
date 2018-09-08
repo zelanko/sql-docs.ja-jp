@@ -1,14 +1,10 @@
 ---
 title: Reporting Services における例外処理の概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: ''
+ms.technology: report-server-web-service-net-framework-exception-handling
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - Report Server Web service, exception handling
 - XML Web service [Reporting Services], exception handling
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 589a7350778afea966db0ce7754ad196ed28fc5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 823cf50514c9eae18b000d28f72e9f3f3c7ef81c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024269"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265728"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Reporting Services における例外処理の概要
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションが要求をレポート サーバー Web サービスに送信し、サービスが要求を処理できない場合、サービスは SOAP 例外をクライアントに返します。 レポート サーバー Web サービスによってスローされた例外の処理は、開発するアプリケーションの重要な部分です。エラーが発生した場合にユーザーに有益な情報を返すことができるからです。  
@@ -37,7 +31,7 @@ ms.locfileid: "33024269"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[Reporting Services での例外を処理](../../reporting-services/report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] における例外および Web サービスからエラーを返すときの SOAP の役割について説明します。|  
 |[Reporting Services 例外処理のベスト プラクティス](../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling.md)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] での例外処理に関する推奨事項が記載されています。|  

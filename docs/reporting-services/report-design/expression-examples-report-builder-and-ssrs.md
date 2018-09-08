@@ -1,15 +1,11 @@
 ---
 title: 式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
 - green-bar reports [Reporting Services]
@@ -26,15 +22,14 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: a09dc43bec25c2cd98366b0c093702aaf91417ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54c91dba3d59b4960ca193c5bbb8c1c7e761ba76
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273438"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  

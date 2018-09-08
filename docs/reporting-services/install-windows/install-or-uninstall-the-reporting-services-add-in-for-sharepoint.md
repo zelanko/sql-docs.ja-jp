@@ -1,25 +1,19 @@
 ---
 title: SharePoint 用 Reporting Services アドインのインストールまたはアンインストール | Microsoft Docs
-ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8c68b455a8d37a7cb7b796a46a7ba1589100a54f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 94cb70a82569712ce60592b9803f670150cf2188
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980984"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279631"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint 用 Reporting Services アドインのインストールまたはアンインストール
 
@@ -31,7 +25,7 @@ ms.locfileid: "38980984"
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
 ##  <a name="bkmk_prereq"></a> 前提条件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインのインストールは、レポート サーバーと SharePoint 製品のインスタンスを統合するために必要ないくつかの手順の 1 つです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールと構成について詳しくは、「[SharePoint モードでの最初のレポート サーバーのインストール](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)」をご覧ください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインのインストールは、レポート サーバーと SharePoint 製品のインスタンスを統合するために必要ないくつかの手順の 1 つです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールと構成について詳しくは、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」をご覧ください。  
   
 -   複数の Web フロントエンド アプリケーションがある SharePoint ファームに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する場合は、Web サーバー フロントエンドがあるファームの各コンピューターにアドインをインストールします。 この作業は、レポート サーバー コンテンツのアクセスに使用する Web フロントエンドに対してのみ行ってください。  
   
@@ -83,7 +77,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  SharePoint サーバーの全体管理で、レポート サーバーの設定と機能のアクティブ化を構成します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのインストールと構成の詳細については、「 [SharePoint モードでの最初のレポート サーバーのインストール](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)」を参照してください。  
+3.  SharePoint サーバーの全体管理で、レポート サーバーの設定と機能のアクティブ化を構成します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのインストールと構成の詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。  
   
 ###  <a name="bkmk_files_only_installation"></a> ファイルのみのインストール  
  インストールのカスタム アクション フェーズをスキップしてファイルをインストールするには、SKIPCA オプションを指定してコマンド ラインから rssharepoint.msi を実行します。  
@@ -271,11 +265,11 @@ Rssharepoint.msi /?
 |t|SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005 のみ。 レポート サーバーにレポート サーバー データベースに対して機能する接続があるかどうかをテストします。|  
   
 ## <a name="configuring-reporting-services"></a>Reporting Services の構成  
- 必要なコンピューターにアドインをインストールしたら、SharePoint サーバーの全体管理からレポート サーバーを構成する必要があります。 必要な手順は、さまざまなテクノロジがインストールされた順序によって異なります。 詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)」および「[Reporting Services Report Server &#40;SharePoint Mode&#41; (Reporting Services レポート サーバー &#40;SharePoint モード&#41;)](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)」をご覧ください。  
+ 必要なコンピューターにアドインをインストールしたら、SharePoint サーバーの全体管理からレポート サーバーを構成する必要があります。 必要な手順は、さまざまなテクノロジがインストールされた順序によって異なります。 詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」および「[Reporting Services レポート サーバー &#40;SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照
 
-[SharePoint モードでの最初のレポート サーバーのインストール](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
+[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)   
 [Reporting Services Report Server &#40;SharePoint Mode&#41; (Reporting Services レポート サーバー &#40;SharePoint モード&#41;)](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

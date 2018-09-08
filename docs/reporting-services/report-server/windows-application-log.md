@@ -1,29 +1,24 @@
 ---
 title: Windows アプリケーション ログ | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows application logs [Reporting Services]
 - logs [Reporting Services], Windows application logs
 - application logs [Reporting Services]
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f5e4aea6d0558e7bbb09b96aad3f3520f9de7add
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45ab5d984fe98fd4358b17a482a0226caafcbf9b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264613"
 ---
 # <a name="windows-application-log"></a>Windows アプリケーション ログ
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、イベント メッセージが Windows アプリケーション ログに書き込まれます。 アプリケーション ログに書き込まれたメッセージ情報を使用して、ローカル システムで実行されているレポート サーバー アプリケーションで生成されたイベントを確認できます。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、レポート サーバーがアプリケーション イベント ログに書き込むイベントの種類を説明します。  
   
-|イベントの種類|Description|  
+|イベントの種類|[説明]|  
 |----------------|-----------------|  
 |[情報]|正常に行われた操作を表すイベント (たとえば、レポート サーバー サービスの開始時)|  
 |警告|発生する可能性のある問題を示すイベント (たとえば、空きディスク容量の不足)|  

@@ -1,31 +1,25 @@
 ---
 title: Reporting Services インストール時の問題解決 | Microsoft Docs
-ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0a61f022087de7f3055281252b43ba088e4b5bff
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9e925d48778f1487bea074cf8dae304754d7ce92
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980894"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279659"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
 
-  セットアップ中にエラーが発生して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールできない場合は、このトピックで示す手順に従って、インストール エラーの原因として最も可能性が高い状況に対処してください。  
+  セットアップ中にエラーが発生して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールできない場合は、この記事の手順を使用して、インストール エラーの原因として最も可能性が高い状況に対処してください。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に関連するその他のエラーや問題については、「 [SSRS の問題とエラーのトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に関連するその他のエラーや問題については、[SSRS の問題とエラーのトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)に関するページを参照してください。  
   
  発生した問題がリリース ノートに記載されている場合があるので、[オンライン リリース ノート](http://go.microsoft.com/fwlink/?linkid=236893)を参照してください。  
   
@@ -53,7 +47,7 @@ ms.locfileid: "38980894"
   
 -   System32 フォルダーに Authz.dll があることが必要です。  
   
- インターネット インフォメーション サービス (IIS) または [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]はセットアップでチェックされなくなりました。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には MDAC 2.0 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 が必要です。これらがインストールされていない場合は、セットアップで自動的にインストールされます。  
+ インターネット インフォメーション サービス (IIS) または [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]はセットアップでチェックされなくなりました。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には MDAC 2.0 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] バージョン 2.0 が必要です。これらがまだインストールされていない場合は、セットアップで自動的にインストールされます。  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> SharePoint モードのインストールでのトラブルシューティング  
   
@@ -88,11 +82,11 @@ ms.locfileid: "38980894"
   
 -   [SharePoint 2013/2016 サーバーの全体管理] -> [アプリケーション構成の管理] -> [サービス アプリケーションの管理] -> [新規作成] メニュー  
   
- **解決方法:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services を登録して起動するには、次の手順を実行します。  
+ **解決方法:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services を登録して起動するには、次の手順を完了します。  
   
 1.  SharePoint 2013/2016 サーバーの全体管理を実行するコンピューターで、次を実行します。  
   
-    1.  管理者特権を使用して、SharePoint 2013/2016 管理シェルを開きます。 アイコンを右クリックし、[管理者として実行] をクリックします。 シェルから次の 3 つのコマンドレットを実行します。  
+    1.  管理者特権を使用して、SharePoint 2013/2016 管理シェルを開きます。 アイコンを右クリックし、**[管理者として実行]** をクリックします。 シェルから次の 3 つのコマンドレットを実行します。  
   
     2.  ```  
         Install-SPRSService  
@@ -113,9 +107,9 @@ ms.locfileid: "38980894"
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services の PowerShell コマンドレットが使用できず、コマンドが認識されない  
  **説明:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の PowerShell コマンドレットを実行しようとすると、次のようなエラー メッセージが表示されます。  
   
--   用語 'Install-SPRSServiceInstall-SPRSService' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として **認識されません** 。 名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   用語 'Install-SPRSServiceInstall-SPRSService' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として **認識されません** 。 名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。 発生場所 行:1 文字:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
- **解決方法:** 次のいずれかの手順を実行します。  
+ **解決方法:** 次のいずれかのアクションを行います。  
   
 -   SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインを実行します。 **rssharepoint.msi**。  
   
@@ -123,11 +117,11 @@ ms.locfileid: "38980894"
   
  解決方法のいずれかを完了したときに **SharePoint 2013/2016 管理シェル**が開いていた場合は、管理シェルをいったん閉じてから開き直します。  
   
- 詳細については、以下を参照してください。  
+ 詳細については、次の各資料を参照してください。  
   
 -   [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
--   [SharePoint モードでの最初のレポート サーバーのインストール](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
+-   [SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [SharePoint モードのインストールでのトラブルシューティング](#bkmk_tshoot_sharepoint)  
   
@@ -168,9 +162,9 @@ ms.locfileid: "38980894"
 ###  <a name="bkmk_central_admin_blank"></a> SharePoint サーバーの全体管理ページが空白である  
  **説明:** SharePoint 2013/2016 をインストール エラーなく正常にインストールできました。 [サーバーの全体管理] を表示すると空白のページしか表示されないことがあります。  
   
- **解決方法:** この問題は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に固有のものではなく、SharePoint 環境全体における権限の構成に関連するものです。 考えられる解決方法は次のとおりです。  
+ **解決方法:** この問題は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に固有のものではなく、SharePoint 環境全体における権限の構成に関連するものです。 推奨事項をいくつか以下に示します。  
   
--   開発環境に関する SharePoint トピックを参照します。 [SharePoint の全般的な開発環境をセットアップする](https://msdn.microsoft.com/library/ee554869)  
+-   開発環境に関する SharePoint 記事を確認します。 [SharePoint の全般的な開発環境をセットアップする](https://msdn.microsoft.com/library/ee554869)  
   
 -   フォーラムの投稿「 [Windows 7 へのインストール後、[サーバーの全体管理] が空白ページを返す](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)」を参照します。  
   
@@ -183,7 +177,7 @@ ms.locfileid: "38980894"
   
  SQL Server Reporting Services サービス アプリケーションが存在しないか、またはレポート サーバーの URL がサーバーの全体管理で構成されていないため、この機能はサポートされません。  
   
- **解決方法:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションが存在し、正しく構成されていることを確認します。 詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)」をご覧ください。
+ **解決方法:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションが存在し、正しく構成されていることを確認します。 詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」をご覧ください。
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [SharePoint モードのインストールでのトラブルシューティング](#bkmk_tshoot_sharepoint)  
   
@@ -220,7 +214,7 @@ ms.locfileid: "38980894"
   
  手順が正しく行われたことを確認するには、Web ブラウザーを開き、Web ポータルの URL またはレポート サーバーの URL に移動します。 その後、パフォーマンス モニターを開き、カウンターが機能していることを確認します。  
   
-#### <a name="to-re-add-the-performance-registry-keys-by-using-registry-editor"></a>レジストリ エディターを使用して Performance のレジストリ キーをもう一度追加するには  
+#### <a name="to-add-the-performance-registry-keys-again-by-using-registry-editor"></a>レジストリ エディターを使用してパフォーマンス レジストリ キーをもう一度追加するには  
   
 1.  レジストリ エディターを開きます。  
   
@@ -258,11 +252,11 @@ ms.locfileid: "38980894"
 
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] にアップグレードする場合に、レポート サーバー サービス アカウントにビルトイン アカウントを使って NTLM 認証を使っていると、アップグレード後にレポート サーバーや Web ポータルにアクセスするときに "401 - 権限がありません" エラーが表示される場合があります。  
   
- この問題が発生するのは、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] で Windows 認証の既定の構成が変更されているためです。 レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合はネゴシエートが構成され、 レポート サーバー サービス アカウントがこれらのビルトイン アカウントではない場合は NTLM が構成されます。 アップグレード後にこの問題を修正するには、RSReportServer.config ファイルを編集して **AuthenticationType** を **RSWindowsNTLM**に設定します。 詳細については、「 [レポート サーバーで Windows 認証を構成する](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)」を参照してください。  
+ このメッセージが表示されるのは、Windows 認証用の既定の [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 構成が変更されているためです。 レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合はネゴシエートが構成され、 レポート サーバー サービス アカウントがこれらのビルトイン アカウントではない場合は NTLM が構成されます。 アップグレード後にこの問題を修正するには、RSReportServer.config ファイルを編集して **AuthenticationType** を **RSWindowsNTLM**に設定します。 詳細については、「 [レポート サーバーで Windows 認証を構成する](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)」を参照してください。  
 
 ### <a name="Uninstall32BitBreaks64Bit"></a> SQL Server 2016 Reporting Services の 32 ビット インスタンスと 64 ビット インスタンスのサイド バイ サイド配置で 32 ビット インスタンスをアンインストールすると、64 ビット インスタンスが破損する
 
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] の 32 ビット インスタンスと 64 ビット インスタンスをサイド バイ サイドでコンピューターにインストールしている場合に 32 ビット インスタンスをアンインストールすると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の 4 つのレジストリ キーが削除されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の 64 ビット インスタンスが破損します。 32 ビット インスタンスをアンインストールすると削除されるのは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の以下のレジストリ キーです。  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] の 32 ビット インスタンスと 64 ビット インスタンスをサイド バイ サイドでコンピューターにインストールしている場合に 32 ビット インスタンスをアンインストールすると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の 4 つのレジストリ キーが削除されます。 キーを削除すると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の 64 ビット インスタンスが破損します。 32 ビット インスタンスをアンインストールすると削除されるのは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の以下のレジストリ キーです。  
   
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Windows Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance:Counter Types` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Windows Service\Performance:Counter Types`  
   

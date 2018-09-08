@@ -1,14 +1,10 @@
 ---
 title: レポート サーバー Web サービスのエンドポイント | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 66feb1faf61d3d317fdbae4d70d1344782608c6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c7c0362271c57f9e69a3b2d628d95b1ec629a07
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028689"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271856"
 ---
 # <a name="report-server-web-service-endpoints"></a>レポート サーバー Web サービスのエンドポイント
   レポート サーバー Web サービスでは、レポートの実行およびナビゲーションに加えて、レポート サーバーの管理に利用できる複数のエンドポイントが提供されます。  

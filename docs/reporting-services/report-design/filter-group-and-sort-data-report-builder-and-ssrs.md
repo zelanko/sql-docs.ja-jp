@@ -1,14 +1,10 @@
 ---
 title: データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.categorygroupproperties.general.f1
@@ -20,16 +16,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 11081d98ab0f182e81a499b9222c15f3cf979141
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: c9192032176d81542d26df9465f80c323cd852b0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40410096"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265984"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)
   レポートでは、式を使用してレポート データの制御、整理、および並べ替えを行うことができます。 既定では、データセットを作成してレポート レイアウトをデザインすると、データセット フィールドやパラメーターなど、レポート データ ペインに表示されるアイテムに基づいて、レポート アイテムのプロパティが式に自動的に設定されます。 グループまたはグループ内の行の並べ替え順序をユーザーが対話的に変更できるように、テーブルまたはマトリックスのセルに対話的な並べ替えボタンを追加することもできます。  

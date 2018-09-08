@@ -1,14 +1,10 @@
 ---
 title: Reporting Services での例外を処理 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: ''
+ms.technology: report-server-web-service-net-framework-exception-handling
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - exceptions [Reporting Services], about exception handling
 - SoapException object
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 75bc7d7f057c9207a0f70525acf61072b82f3469
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65cd20ffca2b8f2915db43c2a0c114ba303594c0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024469"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268059"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Reporting Services の例外の処理
   Reporting Services SOAP API クライアント要求を完了できない場合は、レポート サーバーが予期した呼び出しの結果ではなくエラーを返します。 呼び出しを完了できない場合は、レポート サーバー Web サービスのエラーが SOAP **Fault** XML 要素として返されます。 エラー解消の鍵となる要素は **detail** 要素です。この要素には、レポート サーバーが提供するすべてのエラー情報に加えて、Web サービス エラー情報も含まれています。 **detail** 要素の中の最重要情報は、レポート サーバー エラー コードです。 メッセージとエラー コードから、アプリケーションで次にとるべき適切な処理を判断することができます。 SOAP エラーの詳細については、W3C (World Wide Web Consortium) の Web サイト (http://www.w3.org/TR/SOAP) を参照してください。  

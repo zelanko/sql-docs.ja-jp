@@ -1,13 +1,12 @@
 ---
-title: common criteria compliance enabled サーバー構成オプション | Microsoft Docs
+title: Common Criteria Compliance Enabled 構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - common criteria compliance
@@ -17,27 +16,26 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: 24
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 320c81ef93d11e1ebd73c861617be322a99f2655
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 5f259daef42200f05fe3bc495559d1ed4292638f
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863707"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40427282"
 ---
-# <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled サーバー構成オプション
+# <a name="common-criteria-compliance-enabled-server-configuration"></a>Common Criteria Compliance Enabled サーバー構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [情報セキュリティ国際評価基準 (Common Criteria) への準拠を有効にする] オプションを使用すると、情報セキュリティ国際評価基準で必要とされる次の要素を有効にできます。  
+[情報セキュリティ国際評価基準 (Common Criteria) への準拠] オプションを使用すると、[情報技術セキュリティ評価のためのコモンクライテリア](https://www.commoncriteriaportal.org/)で必要とされる次の要素を有効にできます。  
   
-|[抽出条件]|Description|  
+|[抽出条件]|[説明]|  
 |--------------|-----------------|  
 |残存情報保護 (RIP)|RIP の要件とは、新しいリソースにメモリを再度割り当てる前に、メモリ割り当てを既知のビット パターンで上書きすることです。 RIP 標準を満たすとセキュリティの向上が図れますが、メモリ割り当てを上書きすることによってパフォーマンスが低下する場合があります。 [情報セキュリティ国際評価基準 (Common Criteria) への準拠を有効にする] を有効にすると、この上書きが行われます。|  
 |ログインの統計を表示する機能|[情報セキュリティ国際評価基準 (Common Criteria) への準拠を有効にする] を有効にすると、ログイン監査が有効になります。 ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのログインに成功するたびに、最後にログインに成功した時間、最後にログインに失敗した時間、最後にログインした時間から現在のログイン時間までのログイン試行回数について、情報を確認できます。 このログインに関する統計情報は、 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 動的管理ビューにクエリを実行すると表示できます。|  
-|列の `GRANT` がテーブルの `DENY` より優先されないこと|[common criteria compliance enabled] オプションを有効にすると、テーブル レベルの `DENY` が列レベルの `GRANT` より優先されます。 このオプションが有効でない場合は、列レベルの `GRANT` がテーブル レベルの `DENY` より優先されます。|  
+|列の `GRANT` がテーブルの `DENY` をオーバーライドしないこと|[common criteria compliance enabled] オプションを有効にすると、テーブル レベルの `DENY` が列レベルの `GRANT` より優先されます。 このオプションが有効でない場合は、列レベルの `GRANT` がテーブル レベルの `DENY` より優先されます。|  
   
  [Common Criteria Compliance Enabled] オプションは拡張オプションです。 情報セキュリティ国際評価基準は、Enterprise Edition と Datacenter Edition についてのみ評価され、認定されています。 情報セキュリティ国際評価基準の最新の状況については、 [Microsoft SQL Server の情報セキュリティ国際評価基準](http://go.microsoft.com/fwlink/?LinkId=616319) の Web サイトを参照してください。  
   
@@ -67,6 +65,4 @@ GO
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]を再起動します。
   
 ## <a name="see-also"></a>参照  
- [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
-  
+ [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

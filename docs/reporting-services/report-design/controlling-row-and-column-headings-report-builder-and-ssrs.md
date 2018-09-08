@@ -1,26 +1,20 @@
 ---
 title: 行見出しと列見出しの制御 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 696cb735a8ec9c596cc67f6b4c130f77e832e694
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8d5240e64e5b69c187e64cf25324394b108b04ba
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550443"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276640"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>行見出しと列見出しの制御 (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、一覧のいずれのデータ領域も、上下または左右に、複数のページにわたって続く場合があります。 行見出しや列見出しを各ページに繰り返し表示するかどうかは、適宜指定することが可能です。 また、Web ポータルやレポート プレビューなどの対話的なレンダラーでは、行見出しまたは列見出しを固定することにより、レポートを上下左右にスクロールしても、見出しが隠れないようにすることができます。 通常、テーブルまたはマトリックスでは、先頭行には、列データのラベルとしての列見出しが、先頭列には、行データのラベルとしての行見出しが表示されます。 入れ子構造のグループの場合は、グループ ラベルを含んでいる、先頭から数行分の行見出しまたは列見出しをひとまとめにして、繰り返し表示することもできます。 既定では、一覧データ領域に見出しは含まれません。  

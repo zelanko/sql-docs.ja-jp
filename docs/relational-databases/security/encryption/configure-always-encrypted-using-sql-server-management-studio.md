@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3896929bae7f2ee8b15904e10fdb6983c52e052e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 61b01e1054e06247923ce5524099e585c4113706
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097282"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240230"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Always Encrypted の構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

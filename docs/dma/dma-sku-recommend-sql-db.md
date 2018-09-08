@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152833"
+ms.locfileid: "43240150"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>オンプレミス データベースの適切な Azure SQL データベース SKU の識別します。
 
@@ -34,11 +34,14 @@ ms.locfileid: "43152833"
 > [!NOTE] 
 > この機能は現在使用可能なのみを使用して、コマンド ライン インターフェイス (CLI) です。 DMA のユーザー インターフェイスを使用してこの機能のサポートは、今後のリリースで追加されます。
 
+> [!IMPORTANT]
+> Azure SQL Database の SKU の推奨事項は、現在使用できる SQL Server 2016 から、またはそれ以降の移行は。
+
 次の手順では、Azure SQL データベースの SKU の推奨事項を特定し、Data Migration Assistant を使用して azure に関連付けられているデータベースをプロビジョニングできます。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-V4.0 の Database Migration Assistant をダウンロードまたはそれ以降、し、インストールします。 既にある場合は、ツールがインストール、閉じると、もう一度開き、ツールのアップグレードを求められます。
+V4.0 の Database Migration Assistant をダウンロードまたはそれ以降、し、インストールします。 既にある場合、ツールがインストール、閉じると、もう一度開き、ツールのアップグレードを求められます。
 
 ## <a name="collect-performance-counters"></a>パフォーマンス カウンターを収集します。
 
@@ -58,7 +61,7 @@ V4.0 の Database Migration Assistant をダウンロードまたはそれ以降
     - **OutputFilePath**: 出力ファイルのパスを収集したカウンターを保存します。
     - **CollectionTimeInSeconds**: パフォーマンス カウンター データを収集する場合、時間数。
       意味のある推奨事項を取得するには少なくとも 40 分のパフォーマンス カウンターをキャプチャします。 がキャプチャ期間を長く、より正確な推奨事項になります。
-    - **DbConnectionString**: パフォーマンス カウンター データの収集元となるコンピューターでホストされている master データベースを指す接続文字列。
+    - **DbConnectionString**: 元のパフォーマンス カウンター データを収集しているコンピューターでホストされている master データベースを指す接続文字列。
      
     呼び出しの例を次に示します。
 
@@ -144,7 +147,7 @@ TSV の出力ファイルには次の図に表示される列が含まれます�
 - **ExclusionReasons** -この値は、階層が推奨される場合は空白です。 各層は推奨されませんが、なぜこれが選択されません。 上の理由から提供されています。
 - **AppliedRules** -適用された規則の短い表記します。
 
-推奨値は、クエリの成功率が、オンプレミス データベースと同様に、Azure で実行するために必要な最小の SKU であることに注意してください。 たとえば、S3 を選択し、または以下の推奨される SKU の最小の standard レベルの S4 場合をにより、クエリがタイムアウトまたは実行に失敗します。
+推奨値は、Azure、オンプレミス データベースのような成功率で実行するようにクエリに必要な最小の SKU。 たとえば、S3 を選択し、または以下の推奨される SKU の最小の standard レベルの S4 場合をにより、クエリがタイムアウトまたは実行に失敗します。
 
 HTML ファイルには、グラフィカルな形式では、この情報が含まれています。 HTML ファイルを使用して、Azure サブスクリプションの情報を入力、価格レベルの選択、データベース、レベルとデータの最大サイズを計算し、データベースをプロビジョニングするスクリプトを生成することができます。 このスクリプトは、PowerShell を使用して実行できます。
 

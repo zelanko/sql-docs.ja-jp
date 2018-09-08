@@ -1,26 +1,20 @@
 ---
 title: 共有データセット アイテムをセキュリティで保護する | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: dff365e2bee4f15ef72892d2a80fa7759161644d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e37457eb57f1276e8a822bf82e28f79769d63ff3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029639"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278920"
 ---
 # <a name="secure-shared-dataset-items"></a>共有データセット アイテムをセキュリティで保護する
   レポート サーバーでは、複数のレポートで共有データセット アイテムを使用できます。 共有データセットをセキュリティ保護することによって、共有データセットにユーザーがアクセスする度合いを制御できます。 既定では、あらかじめ登録された **Administrators** グループのメンバーであるユーザーのみが、共有データセットの表示、プロパティの変更、キャッシュの有効化、キャッシュ更新計画の作成、およびアイテムの削除を行えます。 他のすべてのユーザーについては、共有データセットへのアクセスを許可するロールの割り当てを作成する必要があります。  
@@ -39,7 +33,7 @@ ms.locfileid: "33029639"
 ## <a name="shared-dataset-parameters"></a>共有データセット パラメーター  
  共有データセット パラメーターを使用して、特定のユーザーに対してデータを制限することはできません。 共有データセット パラメーターの目的は、共有データセットの処理時に含めるデータを指定する方法を用意することです。 レポート サーバーでは、共有データセット パラメーターの値をセキュリティ保護することはできません。  
   
- 共有データセット定義では、パラメーターを読み取り専用としてマークしたり、既定値を指定したりできます。 読み取り専用としてマークされたパラメーターは、サーバー上で上書きできません。 たとえば、共有データセットのキャッシュ更新計画では、読み取り専用パラメーターに値を指定することはできません。 共有データセット パラメーターに、User グローバル コレクションを参照する式や、ユーザーに関連するその他の依存関係が含まれている場合は、その共有データセットに対してキャッシュ更新計画を作成することはできません。  
+ 共有データセット定義では、パラメーターを読み取り専用としてマークしたり、既定値を指定したりできます。 読み取り専用としてマークされたパラメーターは、サーバー上でオーバーライドできません。 たとえば、共有データセットのキャッシュ更新計画では、読み取り専用パラメーターに値を指定することはできません。 共有データセット パラメーターに、User グローバル コレクションを参照する式や、ユーザーに関連するその他の依存関係が含まれている場合は、その共有データセットに対してキャッシュ更新計画を作成することはできません。  
   
 ## <a name="tasks-access-to-items-and-default-roles"></a>タスク、アイテムへのアクセス、および既定のロール  
  共有データセットは、レポートと同じセキュリティ モデルに準拠しています。 特定のアクションを実行できる権限をユーザーに対して付与するには、そのアクションを実行可能なタスクを含むロールを選択します。 次の表に、タスクとそのタスクに含まれているアクションを示します。  

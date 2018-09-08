@@ -29,7 +29,7 @@ ms.locfileid: "39662304"
 
 ## <a name="creating-a-geometry--geography-object"></a>Geometry の作成/Geography オブジェクト
 
-Geometry を作成する 2 つの主な方法がある/Geography オブジェクトのいずれかの変換から Well-Known Text (WKT) または、Well-Known Binary (WKB)。
+Geometry / Geography オブジェクトを作成する主な方法は 2 つあります - Well-Known Text (WKT) または、Well-Known Binary (WKB) のいずれかから変換します。
 
 ### <a name="creating-from-wkt"></a>WKT から作成します。
 
@@ -55,7 +55,7 @@ Geography geogWKT = Geography.deserialize(geogWKB);
 
 ## <a name="working-with-a-geometry--geography-object"></a>ジオメトリの使用/Geography オブジェクト
 
-次のように SQL Server のテーブルがあると仮定すると、ユーザー。
+ユーザーは SQL Server に次のようなテーブルを持つと仮定します。
 
 ```sql
 CREATE TABLE sampleTable (c1 geometry)  

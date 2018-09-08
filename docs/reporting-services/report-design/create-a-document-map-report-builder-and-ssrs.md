@@ -1,26 +1,20 @@
 ---
 title: ドキュメント マップの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 6d417f39deeb44e38eba83ca6a3f34c4dd6e822c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3145a395ed0f24e2442ec59772cf3fb9e9a0da12
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550413"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279154"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
 
@@ -28,7 +22,7 @@ ms.locfileid: "34550413"
   
  ドキュメント マップにリンクを追加するには、レポート アイテムの **DocumentMapLabel** プロパティを、作成したテキストに設定するか、またはドキュメント マップに表示するテキストになる式に設定します。 テーブル グループやマトリックス グループの一意の値を、ドキュメント マップに追加することもできます。 たとえば、色別に分けられたグループの場合、それぞれの色は、その色のグループ インスタンスが表示されているレポート ページへのリンクとなります。  
   
- また、ドキュメント マップの表示に優先されるレポートの URL を作成することもできます。このようにすると、ドキュメント マップを表示せずにレポートを実行し、レポート ビューアーのツール バーの **[ドキュメント マップの表示/非表示]** ボタンをクリックして表示を切り替えることができます。  
+ また、ドキュメント マップの表示にオーバーライドされるレポートの URL を作成することもできます。このようにすると、ドキュメント マップを表示せずにレポートを実行し、レポート ビューアーのツール バーの **[ドキュメント マップの表示/非表示]** ボタンをクリックして表示を切り替えることができます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

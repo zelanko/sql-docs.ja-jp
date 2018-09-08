@@ -1,29 +1,23 @@
 ---
 title: グループについて (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 43dc5ff283b55d76aa31e9317131508fcafdc395
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2eb3c54cc36512d9806146606b936e6f48d99f7
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028869"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277952"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>グループについて (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、グループは、データ領域にバインドされたレポート データセットの名前付きセットです。 グループは基本的に、レポート データセットのビューを整理します。 データ領域のグループはすべて、同じレポート データセットの異なるビューを指定します。  

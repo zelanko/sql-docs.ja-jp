@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184694"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780763"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|基本的な R 統合|はい|はい|はい|はい|いいえ|   
-|高度な R 統合|はい|いいえ|いいえ|いいえ|いいえ| 
+|基本的な R 統合 <sup>1</sup>|はい|はい|はい|はい|いいえ|   
+|高度な R 統合 <sup>2</sup>|はい|いいえ|いいえ|いいえ|いいえ| 
 |基本的な Python 統合|はい|はい|はい|はい|いいえ|
 |高度な Python 統合|はい|いいえ|いいえ|いいえ|いいえ| 
 |Machine Learning Server (スタンドアロン)|はい|いいえ|いいえ|いいえ|いいえ|   
-|Polybase コンピューティング ノード|はい|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup> | 
+|Polybase コンピューティング ノード|はい|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup> | 
 |Polybase ヘッド ノード|はい|いいえ|いいえ|いいえ|いいえ| 
 |JSON|はい|はい|はい|はい|はい|   
 |クエリ ストア|はい|はい|はい|はい|はい|   
@@ -322,7 +322,12 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |グラフ|はい|はい|はい|はい|はい|  
 
 
-<sup>1</sup> 複数のコンピューティング ノードでのスケール アウトにはヘッド ノードが必要です。
+<sup>1</sup> 基本的な統合は 2 コアとメモリ内データ セットに制限されます。 
+
+<sup>2</sup> 高度な統合では、使用可能な全てのコアを、ハードウェア制限の対象となるすべてのサイズのデータ セットの並列処理で使用できます。 
+
+<sup>3</sup> 複数のコンピューティング ノードでのスケール アウトにはヘッド ノードが必要です。
+
 
 ## <a name="IS"></a> Integration Services
 

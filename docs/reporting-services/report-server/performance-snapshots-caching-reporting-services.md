@@ -1,29 +1,23 @@
 ---
 title: パフォーマンス、スナップショット、キャッシュ (Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 24c182e366b52e57baf73027112cf4c8314c4271
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8df3226d2b1cc72730ded58f96c4f0f9e92b2a8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027739"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273885"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>パフォーマンス、スナップショット、キャッシュ (Reporting Services)
   レポート サーバーのパフォーマンスには、ハードウェア、レポートに同時にアクセスするユーザー数、レポートのデータ量、出力形式など、さまざまな要因が絡み合って影響を与えます。 環境に固有のパフォーマンス要因を把握し、期待した結果を得るための対策を講じるには、ベースライン データを用意し、テストを実行する必要があります。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](http://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  
@@ -52,7 +46,7 @@ ms.locfileid: "33027739"
  要求時にキャッシュから、またはスケジュールに従ってレポート スナップショットとして、実行するレポートを構成する方法を説明します。  
   
  [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
- 既定のメモリ管理動作を無効にする方法を説明します。  
+ 既定のメモリ管理動作をオーバーライドする方法を説明します。  
   
  [レポートのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
  レポート サーバー上でのレポートのキャッシュの動作を説明します。  

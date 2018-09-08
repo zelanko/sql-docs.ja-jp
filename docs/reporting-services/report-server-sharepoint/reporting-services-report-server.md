@@ -1,24 +1,19 @@
 ---
 title: Reporting Services レポート サーバー | Microsoft Docs
-ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f39da2fe550309e73f8cdf0a32336fd3669cfa08
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053350"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271550"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services レポート サーバー
 
@@ -85,7 +80,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>SharePoint Web パーツ対応ネイティブ モード
 
- Reporting Services には、[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 以降、または [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 以降のインスタンスにインストールおよび登録できる Web パーツが 2 つ用意されています。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、Reporting Services の前のリリースで導入されたものです。  
+ Reporting Services には、[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 以降、または SharePoint Portal Server 2003 以降のインスタンスにインストールおよび登録できる Web パーツが 2 つ用意されています。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、Reporting Services の前のリリースで導入されたものです。  
   
 ## <a name="sharepoint-mode"></a>SharePoint モード
 

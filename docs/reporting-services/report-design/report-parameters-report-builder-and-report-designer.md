@@ -1,14 +1,10 @@
 ---
 title: レポート パラメーター (レポート ビルダーおよびレポート デザイナー) | Microsoft Docs
-ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -18,23 +14,21 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db1356dd296ab2936ab67de9cf72cfdf61fd5284
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028289"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266230"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
-  このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] やレポート デザイナーで作成する改ページ調整されたレポートのほか、 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
+  このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] やレポート デザイナーで作成するページ分割されたレポートのほか、[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードおよびネイティブ モード|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードおよびネイティブ モード|  
   
  ご自分でレポートにパラメーターを追加してみる場合には、「 [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)で作成するモバイル レポートで使用できます。  
     
@@ -108,7 +102,7 @@ ms.locfileid: "33028289"
   
 4.  [データセットのプロパティ] ダイアログ ボックスにリストされているパラメーター。  
   
- データセットは、埋め込みデータセットまたは共有データセットにすることができます。 レポートに共有データセットを追加する場合、内部としてマークされているデータセット パラメーターはレポートで上書きできません。 内部としてマークされていないデータセット パラメーターは上書きできます。  
+ データセットは、埋め込みデータセットまたは共有データセットにすることができます。 レポートに共有データセットを追加する場合、内部としてマークされているデータセット パラメーターはレポートでオーバーライドできません。 内部としてマークされていないデータセット パラメーターはオーバーライドできます。  
   
  詳細については、このトピックの「 [データセット クエリ](#bkmk_Dataset_Parameters) 」をご覧ください。  
   
@@ -144,7 +138,7 @@ ms.locfileid: "33028289"
 ##  <a name="bkmk_Report_Parameters"></a> レポート パラメーター プロパティ  
  [レポートのプロパティ] ダイアログ ボックスを使用して、レポート パラメーター プロパティを変更できます。 次の表に、各パラメーターに設定できるプロパティの概要を示します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |[オブジェクト名]|パラメーターの名前を入力します (大文字と小文字が区別されます)。 名前は文字で始まる必要があります。また、名前には、文字、数字、アンダースコア (_) を使用できます。 空白は使用しないでください。 自動的に生成されたパラメーターの名前は、データセット クエリのパラメーターと同じ名前になります。 既定では、手動で作成されたパラメーターの名前は、ReportParameter1 のようになります。|  
 |[プロンプト]|レポート ビューアー ツール バーでパラメーターの横に表示されるテキストです。|  
@@ -196,7 +190,7 @@ ms.locfileid: "33028289"
   
 -   **要求時レポート。**  要求時レポートでは、レポートに一覧表示された各パラメーターのパブリッシュされた値とは異なる、別のパラメーター値を指定できます。 たとえば、 *期間* パラメーターを使用して、顧客に現在の日付、週、または月のサービス要求を返すサービスの呼び出しレポートを保持していると仮定します。 レポートの既定のパラメーター値が **今日**に設定されている場合、サブスクリプションでは別のパラメーター値 ( **週** 、 **月**など) を使用して、週単位または月単位の数値を含むレポートを生成できます。  
   
--   **スナップショット。**  スナップショットでは、サブスクリプションはスナップショットに対して定義されているパラメーター値を使用する必要があります。 サブスクリプションを使用して、スナップショットに定義されているパラメーター値を上書きすることはできません。 たとえば、レポート スナップショットとして実行される西地区の売上レポートをサブスクライブしていて、そのスナップショットに地域のパラメーター値として **Western** が指定されていると仮定します。 この場合、このレポートへのサブスクリプションを作成するには、サブスクリプションで **Western** パラメーター値を使用する必要があります。 パラメーターが無視されることを示すために、サブスクリプション ページのパラメーター フィールドは読み取り専用フィールドに設定されます。  
+-   **スナップショット。**  スナップショットでは、サブスクリプションはスナップショットに対して定義されているパラメーター値を使用する必要があります。 サブスクリプションを使用して、スナップショットに定義されているパラメーター値をオーバーライドすることはできません。 たとえば、レポート スナップショットとして実行される西地区の売上レポートをサブスクライブしていて、そのスナップショットに地域のパラメーター値として **Western** が指定されていると仮定します。 この場合、このレポートへのサブスクリプションを作成するには、サブスクリプションで **Western** パラメーター値を使用する必要があります。 パラメーターが無視されることを示すために、サブスクリプション ページのパラメーター フィールドは読み取り専用フィールドに設定されます。  
   
      レポート実行オプションは、パラメーターの処理方法に影響します。 レポート スナップショットとして実行されるパラメーター化されたレポートでは、レポート スナップショットに定義されているパラメーター値が使用されます。 パラメーター値は、レポートのパラメーター プロパティ ページで定義されています。 スナップショットとして実行されるレポートは、クエリがパラメーターの既定値を含まない限り、クエリから派生したパラメーターを使用できません。  
   

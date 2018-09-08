@@ -1,30 +1,24 @@
 ---
 title: レポートの実行プロパティを構成する (レポート マネージャー) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - reports [Reporting Services], properties
 - reports [Reporting Services], execution options
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: c06fe377c42a46cfc2adb4bdc7216cc52b6973ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48260aac6f3935d9b3c2010e5cc2c2d7fdcd45aa
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026139"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268810"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>レポートの実行プロパティを構成する (レポート マネージャー)
   レポートの処理オプションでは、レポート データが取得されるタイミングを指定できます。 レポート データ処理のスケジュールを設定することは、外部データ ソースが特定の時刻に更新される場合 (日次または週次で更新されるデータ ウェアハウスなど) や、レポート要求のたびに同じデータが取得されるオーバーヘッドを回避したい場合などに効果的です。 また、外部のデータベース サーバーにかかる処理負荷を制御する場合や、まったく同じ一連のデータを扱う複数のユーザーに一貫性した結果を提供する場合に役立てることもできます。 変化しやすいデータを使用した場合、レポートを要求するたびに異なる結果が生成される可能性があります。 一方、レポート スナップショットでは、同時点のデータを含む他のレポートや分析ツールとの有効な比較が可能になります。  

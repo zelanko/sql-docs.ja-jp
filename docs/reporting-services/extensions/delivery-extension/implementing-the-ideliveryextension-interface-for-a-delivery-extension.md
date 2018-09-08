@@ -1,14 +1,10 @@
 ---
 title: 配信拡張機能に対する IDeliveryExtension インターフェイスの実装 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], class creation
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5cc3961c8cebd111572666f1da5bb5a92fae7580
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 6dce9390578cb64171e451f5e0cea65ab504f81d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40409514"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279503"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>配信拡張機能に対する IDeliveryExtension インターフェイスの実装
   配信拡張機能のクラスは、通知のコンテンツに基づいてレポート通知をユーザーに配信する場合に使用します。 配信拡張機能のクラスは、配信拡張機能に渡すユーザー設定を検証するためのインフラストラクチャも提供します。 また、配信拡張機能のクラスには、クライアントが拡張機能の名前に関する情報を取得する場合に使用できる特定のプロパティ、拡張機能がサポートする設定、および配信拡張機能で使用できる表示形式が含まれている必要があります。  

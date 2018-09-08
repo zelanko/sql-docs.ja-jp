@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f0fc76b5ffd86d351c9199acc0b227ed1fd4b96
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 853067176f9b779d86e52e9199674adf6e6e99c5
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087588"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348533"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "43087588"
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar (256)** |オペレーティング システムの種類: Windows または Linux |
 |**host_distribution** |**nvarchar (256)** |オペレーティング システムの説明です。 |
-|**host_release**|**nvarchar (256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムのリリース (バージョン番号)。 値と説明の一覧は、次を参照してください。[オペレーティング システムのバージョン (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)します。 <br> Linux の場合は、空の文字列を返します。 |  
+|**host_release**|**nvarchar (256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムのリリース (バージョン番号)。 値と説明の一覧は、次を参照してください。[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)します。 <br> Linux の場合は、空の文字列を返します。 |  
 |**host_service_pack_level**|**nvarchar (256)**|Windows オペレーティング システムの Service Pack のレベル。 <br> Linux の場合は、空の文字列を返します。 |  
 |**host_sku**|**int**|Windows 在庫商品識別番号 (SKU) ID。 SKU Id と説明の一覧は、次を参照してください。 [GetProductInfo 関数](http://msdn.microsoft.com/library/ms724358.aspx)します。 NULL 値が許可されます。 <br> Linux の場合は、NULL を返します。 |  
 |**os_language_version**|**int**|オペレーティング システムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧は、次を参照してください。 [Microsoft によるロケール Id 割り当て](http://go.microsoft.com/fwlink/?LinkId=208080)します。 null にすることはできません。|  

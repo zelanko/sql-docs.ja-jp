@@ -1,14 +1,10 @@
 ---
 title: 表示拡張機能の概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,15 +12,14 @@ helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e8ba9ec6f9e6e629a7f6019c362824363e546583
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c7a7f9791681621d5e1f6666cd8457a5a6441d0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270683"
 ---
 # <a name="rendering-extensions-overview"></a>表示拡張機能の概要
   表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、7 種類の表示拡張機能 (HTML、Excel、Word、CSV (Text)、XML、Image、PDF) を備えています。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] が備えている表示拡張機能の説明です。  
   
-|Extension Name|Description|  
+|Extension Name|[説明]|  
 |--------------------|-----------------|  
 |**XML**|XML 形式でレポートを表示します。 レポートは任意のブラウザーで開きます。 この XML 出力にさらに手を加えれば、新しい表示拡張機能を開発しなくても、必要な表示拡張機能を効率的に追加することができます。|  
 |**CSV**|コンマ区切り形式でレポートを表示します。 レポートは、CSV ファイル形式に関連付けられている表示ツールで開きます。|  
@@ -60,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 -   XML 表現形式の出力に XSL 変換 (XSLT) を組み合わせることで、カスタムの形式と表現機能を追加する。  
   
- カスタム表示拡張機能の記述は難しい作業です。 表示拡張機能は、一般的には、レポートの要素のあらゆる組み合わせをサポートする必要があり、多くのクラス、インターフェイス、メソッド、およびプロパティを実装しなければなりません。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によりサポートされていない形式でレポートを表示する必要があり、独自の表示拡張機能のコードを記述して実装する場合、開発する表示拡張機能のコードは **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** インターフェイスを実装する必要があります。このインターフェイスはレポート サーバーにより必要とされます。  
+ カスタム表示拡張機能の記述は難しい作業です。 表示拡張機能は、一般的には、レポートの要素のあらゆる組み合わせをサポートする必要があり、多くのクラス、インターフェイス、メソッド、およびプロパティを実装しなければなりません。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によりサポートされていない形式でレポートを表示する必要があり、独自の表示拡張機能のマネージド コードを記述して実装する場合、開発する表示拡張機能のコードは **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** インターフェイスを実装する必要があります。このインターフェイスはレポート サーバーにより必要とされます。  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に関する補足資料とホワイト ペーパーについては、[Reporting Services Web サイト](http://go.microsoft.com/fwlink/?LinkId=19951)の最新の技術文書を参照してください。  
   

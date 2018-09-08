@@ -1,28 +1,22 @@
 ---
 title: '[スケジュールのプロパティ] ([レポート] ページ) | Microsoft Docs'
-ms.custom: ''
 ms.date: 06/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 46bdc17a5cc7f6933b423c27e1397c7d22286bf2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc838b08ee59a6f3599d9d74da8fc4f4e2a1a123
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029739"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264933"
 ---
 # <a name="schedule-properties-reports-page"></a>[スケジュールのプロパティ] ([レポート] ページ)
   特定の共有スケジュールを使用するすべてのレポートの一覧を見るには、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] スケジュール プロパティを使用します。 スケジュールを使用して、レポート スナップショットの更新、レポート履歴の生成、サブスクリプションのトリガー、またはレポートのキャッシュされたコピーの期限の終了を実行できます。 スケジュールがどのように使用されているかを確認するには、レポートのプロパティおよびサブスクリプション情報を参照します。  
@@ -41,7 +35,7 @@ ms.locfileid: "33029739"
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **フォルダー**  
  レポートのパスを指定します。  
   

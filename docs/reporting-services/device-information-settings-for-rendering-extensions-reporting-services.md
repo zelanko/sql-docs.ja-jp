@@ -1,33 +1,27 @@
 ---
 title: 表示拡張機能のデバイス情報設定 (Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/15/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ea4aec909a5d65582ae59b507c3948e4484b3e49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00b14f80b7e6cc316fb5857b44140bd30cc92765
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015979"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268152"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>表示拡張機能のデバイス情報設定 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、デバイス情報設定を使用して、表示パラメーターを表示拡張機能に渡します。 各表示拡張機能では、特定の設定セットを使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[ATOM デバイス情報の設定](../reporting-services/atom-device-information-settings.md)|Atom 準拠の表示出力に関連するデバイス情報設定について説明します。|  
 |[CSV デバイス情報設定](../reporting-services/csv-device-information-settings.md)|CSV 表示出力に関連するデバイス情報設定について説明します。|  

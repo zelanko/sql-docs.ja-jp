@@ -1,14 +1,10 @@
 ---
 title: データ処理拡張機能の実装 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services]
 - extensions [Reporting Services], data processing
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5f1a83936f219fb95e03554383f6374b9f696f47
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: b31e1adec1e975f7fbdda7c7b0f7e732a39eaa47
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40410523"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269122"
 ---
 # <a name="implementing-a-data-processing-extension"></a>データ処理拡張機能の実装
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を使用することによって、データ ソースに接続し、データを取得できます。 データ処理拡張機能は、データ ソースとデータセット間のブリッジとしても機能します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダー インターフェイスのサブセットと似ています。  

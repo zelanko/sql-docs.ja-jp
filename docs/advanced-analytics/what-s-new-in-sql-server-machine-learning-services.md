@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3dc4c730ea9c7c9ba0126a50ed4bb8129efc9c
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152582"
+ms.locfileid: "43193028"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能新機能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,21 @@ ms.locfileid: "43152582"
 
 このリリースで追加[Python のサポートと業界最先端の機械学習アルゴリズム](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)します。 新しいスコープを反映するように名前変更、SQL Server 2017 のマークの導入に伴い[SQL Server Machine Learning サービス (In-database)](what-is-sql-server-machine-learning.md)Python と R. の両方の言語サポート 
 
-また、このリリース[SQL Server Machine Learning Server (スタンドアロン)](r/r-server-standalone.md)R と Python のワークロード専用のシステム上で実行する SQL Server の完全に独立しました。 スタンドアロン サーバーで、配布でき、SQL Server を使用せず、R または Python のソリューションをスケールできます。
+### <a name="r-enhancements"></a>R の機能強化
+
+SQL Server 2017 Machine Learning Services の R コンポーネントには、基本の R、RevoScaler、およびその他のパッケージの更新バージョンでの SQL Server 2016 R Services では、次世代です。
+
+R 用の新しい機能が含まれます[**パッケージ管理**](r/install-additional-r-packages-on-sql-server.md)、次の点で。 
+
++ データベース ロールは、パッケージの管理、およびパッケージのインストールのアクセス許可を割り当て、Dba を支援します。
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)により Dba は、使い慣れた T-SQL 言語でパッケージを管理します。
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)関数は、インストール、削除、またはパッケージの一覧は、ユーザーが所有するを支援します。 詳細については、次を参照してください。 [RevoScaleR 関数を使用して、見つからないか、R をインストールする方法は、SQL Server にパッケージ](r/use-revoscaler-to-manage-r-packages.md)します。
+
+### <a name="r-libraries"></a>R ライブラリ
+
+| [パッケージ] | 説明 |
+|---------|-------------|
+| [**MicrosoftML**](using-the-microsoftml-package.md) | このリリースで MicrosoftML 前の SQL Server 2016 R Services で必要なアップグレード手順を排除することに既定の R インストールで含まれます。 MicrosoftML は、最新の状態の機械学習アルゴリズムとスケールまたはリモート計算コンテキストで実行できるデータの変換を提供します。 カスタマイズ可能なディープ ニューラル ネットワーク、高速なデシジョン ツリーとデシジョン フォレスト、線形回帰、およびロジスティック回帰アルゴリズムが含まれます。  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>データベース内分析用の Python 統合
 
@@ -39,16 +53,13 @@ T-SQL を使用することができます[PREDICT](../t-sql/queries/predict-tra
 [**revoscalepy**](python/what-is-revoscalepy.md)| Python と同等の RevoScaleR します。 線形およびロジスティック回帰、デシジョン ツリー、ブースト ツリー、およびランダム フォレスト、並列処理がすべて、およびリモート計算コンテキストで実行中の対応の Python のモデルを作成することができます。 このパッケージは、複数のデータ ソースとリモート コンピューティング コンテキストの使用をサポートします。 データ サイエンティストまたは開発者は、データの探索や、データを移動せずにモデルを構築する、リモートの SQL Server での Python コードを実行できます。 |
 |[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |MicrosoftML の R パッケージの Python と等価です。 |
 
-### <a name="r-libraries"></a>R ライブラリ
-
-| [パッケージ] | 説明 |
-|---------|-------------|
-| [**MicrosoftML (R)**](using-the-microsoftml-package.md) | 最新の機械学習アルゴリズムとデータ変換の実行のサイズまたはリモートにできるコンテキストを計算します。 カスタマイズ可能なディープ ニューラル ネットワーク、高速なデシジョン ツリーとデシジョン フォレスト、線形回帰、およびロジスティック回帰アルゴリズムが含まれます。  |
-| [**R パッケージの管理**](r/install-additional-r-packages-on-sql-server.md) | このリリースでは、次の点で強化されていますデータベースのパッケージの管理と、パッケージをインストールするアクセス許可を割り当てる DBA のためのロールを[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) dba がないパッケージの管理には、t-sql ステートメント。R、および豊富な一連の R 関数を知らなくても[RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)ユーザーによって所有されているため、インストール、削除、またはパッケージをリストします。 |
-
 ### <a name="pre-trained-models"></a>トレーニング済みモデル
 
 [**事前トレーニング済みモデル**](install/sql-pretrained-models-install.md) Python と R. は、画像認識と正、負のセンチメント分析、これらのモデルを使用して、独自のデータで予測を生成するを利用します。 
+
+### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>SQL Server セットアップで、共有機能として、スタンドアロン サーバー
+
+このリリースでも追加[SQL Server Machine Learning Server (スタンドアロン)](r/r-server-standalone.md)R と Python の統計および予測分析をサポートしている、完全に独立したデータ サイエンス サーバー。 R のサービスと同様、このサーバーは、SQL Server 2016 R Server (スタンドアロン) の次のバージョン。 スタンドアロン サーバーで、配布でき、SQL Server の依存関係のない R または Python のソリューションをスケールできます。
 
 
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016 の新機能

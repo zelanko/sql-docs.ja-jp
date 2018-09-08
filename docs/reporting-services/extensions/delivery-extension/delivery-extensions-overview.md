@@ -1,14 +1,10 @@
 ---
 title: 配信拡張機能の概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,22 +12,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], delivery extensions
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: b327b03cf8de5b4a48a6b7ff7fff429c2985786e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9207ea9e53c0b7ad63d5756d2d857de2f88b9ee0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276954"
 ---
 # <a name="delivery-extensions-overview"></a>配信拡張機能の概要
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] により、ユーザーはレポートを作成し、パブリッシュできます。レポートは、作成しパブリッシュした後、さまざまな場所に配信できます。 さらに、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には配信拡張機能と配信 API も用意されています。開発者は別の配信拡張機能を作成し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信機能をさらに拡張することもできます。  
   
  次の表は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] が備えている配信拡張機能を示しています。  
   
-|配信拡張機能|Description|  
+|配信拡張機能|[説明]|  
 |------------------------|-----------------|  
 |レポート サーバーの電子メール|SMTP サーバーを使用して個々のユーザーまたはグループに電子メールでレポートを送信します。|  
 |レポート サーバーのファイル共有|組織内のレポートをネットワーク ファイル共有に配布するときに使用します。 指定したスケジュールでファイル共有にレポートを自動的にコピーできます。|  

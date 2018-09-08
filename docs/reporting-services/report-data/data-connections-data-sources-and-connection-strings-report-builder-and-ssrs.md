@@ -1,24 +1,19 @@
 ---
 title: レポート ビルダーと SSRS でのデータ接続、データ ソース、接続文字列 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/21/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f97f05c9c12e91cbab6be3b65120530a7946d8a3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969417"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276343"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
 
@@ -26,11 +21,23 @@ ms.locfileid: "37969417"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] および  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにデータを含めるには、最初に *データ ソース* および *データセット*を作成する必要があります。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] および  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにデータを含めるには、最初に *データ ソース* および *データセット*を作成する必要があります。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
 
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のデータ  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
+1.  **レポート データ ペインのデータ ソース** 埋め込みデータ ソースを作成するか、共有データ ソースを追加すると、レポート データ ペインにデータ ソースが表示されます。  
+  
+2.  **[接続] ダイアログ ボックス** 接続文字列を作成したり、接続文字列を貼り付けたりするには、[接続] ダイアログ ボックスを使用します。  
+  
+3.  **データ接続情報** 接続文字列は、データ拡張機能に渡されます。  
+  
+4.  **資格情報** 資格情報は、接続文字列とは別個に管理されます。  
+  
+5.  **データ拡張機能/データ プロバイダー** データへの接続は、複数のデータ アクセス レイヤーを通じて行われる場合があります。  
+  
+6.  **外部データ ソース** リレーショナル データベース、多次元データベース、SharePoint リスト、Web サービス、またはレポート モデルからデータを取得します。  
+
 ##  <a name="bkmk_data_sources"></a> 埋め込みデータ ソースおよび共有データ ソース  
  共有データ ソースは、よく使用するデータ ソースがある場合に役立ちます。 可能な限り共有データ ソースを使用することをお勧めします。 レポートやレポートへのアクセスが管理しやすくなり、レポートやレポートからアクセスするデータ ソースの安全性を高めることができます。 共有データ ソースが必要な場合は、システム管理者に依頼して作成してもらってください。  
   
@@ -44,7 +51,7 @@ ms.locfileid: "37969417"
   
      <xref:Microsoft.ReportingServices.DataProcessing> API を使ってデータ処理拡張機能を作成すると、その他の種類のデータ ソースもサポートできます。  
   
--   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]で、レポート サーバーまたは SharePoint サイト上の保存先を参照して共有データ ソースを選択するか、または、レポートに埋め込みデータ ソースを作成します。 共有データ ソースは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]で作成することはできません。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でカスタム データ拡張機能を使用することはできません。  
+-   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]で、レポート サーバーまたは SharePoint サイト上の保存先を参照して共有データ ソースを選択するか、または、レポートに埋め込みデータ ソースを作成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] で共有データ ソースを作成することはできません。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] でカスタム データ拡張機能を使用することはできません。  
   
  次の表は、埋め込みデータ ソースと共有データ ソースの違いをまとめたものです。  
   
@@ -86,22 +93,6 @@ ms.locfileid: "37969417"
 -   Power View 用 Microsoft BI セマンティック モデル: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーおよび [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]用に構成されている SharePoint サイトでは、このデータ ソースの種類を使用できます。 このデータ ソースの種類は、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] プレゼンテーションにのみ使用されます。 詳細については、「 [Power View に適した BI セマンティック表形式モデルの作成 (ビデオ)](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)」を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるデータ ソースおよびバージョンの一覧については、「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
-  
-## <a name="data-in-includessrbnoversionincludesssrbnoversion-mdmd"></a>データ: [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
-  
-1.  **レポート データ ペインのデータ ソース** 埋め込みデータ ソースを作成するか、共有データ ソースを追加すると、レポート データ ペインにデータ ソースが表示されます。  
-  
-2.  **[接続] ダイアログ ボックス** 接続文字列を作成したり、接続文字列を貼り付けたりするには、[接続] ダイアログ ボックスを使用します。  
-  
-3.  **データ接続情報** 接続文字列は、データ拡張機能に渡されます。  
-  
-4.  
-  **資格情報** 資格情報は、接続文字列とは別個に管理されます。  
-  
-5.  **データ拡張機能/データ プロバイダー** データへの接続は、複数のデータ アクセス レイヤーを通じて行われる場合があります。  
-  
-6.  **外部データ ソース** リレーショナル データベース、多次元データベース、SharePoint リスト、Web サービス、またはレポート モデルからデータを取得します。  
   
 ##  <a name="bkmk_connection_examples"></a> 一般的な接続文字列の例  
  接続文字列は、データ プロバイダーの接続プロパティのテキスト表現です。 次の表に、さまざまなデータ接続に使用される接続文字列の例を示します。  

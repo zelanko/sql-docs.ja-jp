@@ -1,13 +1,9 @@
 ---
 title: Power BI Report Server の統合 (構成マネージャー) | Microsoft Docs
-ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - pbi
@@ -15,13 +11,12 @@ f1_keywords:
 - power bi integration
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 26d9e1dee4b18de1d90920a9ad88c09b2bc84419
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76ce650fba286a81e803a304d22ae5b30e79f3dc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975312"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277798"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI レポート サーバーの統合 (構成マネージャー)
 
@@ -35,8 +30,7 @@ ms.locfileid: "37975312"
 
 - **Azure Active Directory:** 組織で Azure Active Directory を使用する必要があります。Azure Active Directory では、Azure サービスと Web アプリケーションのディレクトリと ID を管理できます。 詳細については、「[Azure Active Directory とは](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)」を参照してください。
 
-- 
-  **管理対象テナント:** レポート アイテムをピン留めする [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードは、Azure AD 管理対象テナントに属している必要があります。  管理対象テナントは、組織が Office 365 や Microsoft Intune などの Azure サービスに初めてサブスクライブしたときに自動的に作成されます。   バイラル テナントは現在サポートされていません。  詳細については、「 [Azure AD ディレクトリとは](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)」の「Azure AD テナントとは」および「Azure AD ディレクトリを取得する方法」を参照してください。
+- **管理対象テナント:** レポート アイテムをピン留めする [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードは、Azure AD 管理対象テナントに属している必要があります。  管理対象テナントは、組織が Office 365 や Microsoft Intune などの Azure サービスに初めてサブスクライブしたときに自動的に作成されます。   バイラル テナントは現在サポートされていません。  詳細については、「 [Azure AD ディレクトリとは](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)」の「Azure AD テナントとは」および「Azure AD ディレクトリを取得する方法」を参照してください。
 
 - [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合を実行するユーザーは、Azure AD テナントのメンバーで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] システム管理者であり、ReportServer カタログ データベースのシステム管理者でもある必要があります。
 

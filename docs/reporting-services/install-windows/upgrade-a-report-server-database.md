@@ -1,37 +1,31 @@
 ---
 title: レポート サーバー データベースのアップグレード | Microsoft Docs
-ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4a15d4ee21977d16ed3f8b0a49d12b4c9e88cbd2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 5b3f2406a73010cf590c4711b397b997232364bd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322611"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277241"
 ---
 # <a name="upgrade-a-report-server-database"></a>レポート サーバー データベースのアップグレード
 
 レポート サーバー データベースは、1 台以上のレポート サーバー インスタンスの記憶域になります。 レポート サーバー データベースのスキーマは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が新たにリリースされるたびに変更される可能性があります。そのため、使用中のレポート サーバー インスタンスのバージョンとデータベースのバージョンを一致させる必要があります。 ほとんどの場合、レポート サーバー データベースは自動的にアップグレードされます。ユーザーは何も処理する必要がありません。  
   
- **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、実際には、レポート サーバー データベースは、"ReportServer" および "ReportServerTempDB" という既定の名前の付いた 2 つのデータベースで構成されます。  
+ **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、実際にはレポート サーバー データベースは、ReportServer および ReportServerTempDB という既定の名前の付いた 2 つのデータベースで構成されます。  
   
- **SharePoint モード:** SQL Server 2016 Reporting Services の SharePoint モードでは、実際には、レポート サーバー データベースは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの各インスタンスに対して作成されたデータベースのコレクションです。  
+ **SharePoint モード:** SQL Server 2016 Reporting Services の SharePoint モードでは、実際にはレポート サーバー データベースは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの各インスタンスに対して作成されたデータベースのコレクションです。  
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースをアップグレードする方法
 
@@ -73,8 +67,7 @@ ms.locfileid: "35322611"
 ## <a name="next-steps"></a>次の手順
 
 [Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[データベースの変更ウィザード](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services のインストールを移行する](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 

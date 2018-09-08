@@ -1,14 +1,10 @@
 ---
 title: レポート サーバー システムのプロパティ | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,22 +12,21 @@ helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a5c76d55357aeda9c66b2de668eb80426dd8fa22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4d49b97eba1684e7b3ad50209cf2fee2fbfb64f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274848"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services のプロパティ - レポート サーバーのシステム プロパティ
   次のシステム プロパティ名は予約されています。 同じ名前のユーザー定義プロパティは作成できません。 Web サービス メソッドを使用すると、これらのプロパティの多くの読み取りや修正ができます。  
   
 ## <a name="properties"></a>[プロパティ]  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |SiteName|ユーザー インターフェイスに表示されるレポート サーバー サイトの名前。 既定値は **Microsoft Report Server** です。 このプロパティには空の文字列を指定できます。 最大長は 8,000 文字です。|  
 |SystemSnapshotLimit|レポートに格納されるスナップショットの最大数。 有効値は **-1** ～ **2**、**147**、**483**、**647**です。 値が **-1**の場合、スナップショットに制限はありません。|  

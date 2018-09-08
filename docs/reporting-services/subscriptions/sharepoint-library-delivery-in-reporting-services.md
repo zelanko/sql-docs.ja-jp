@@ -1,30 +1,24 @@
 ---
 title: Reporting Services での SharePoint ライブラリへの配信 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: c15986016792e0cc1f98f428e39ce9324b1ceb6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c202fbf1eda198208026a986c135aeb0f6e72e7
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032279"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273039"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  

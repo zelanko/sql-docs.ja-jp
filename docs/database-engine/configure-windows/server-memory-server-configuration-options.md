@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870237"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405980"
 ---
 # <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,8 @@ ms.locfileid: "32870237"
 このオプションを設定しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [動的メモリ管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)には影響が出ません。他のメモリ クラークの要求で拡大縮小できます。 *Lock Pages in Memory* ユーザー権利を使用するとき、[上記](#max_server_memory)のように **max server memory** の上限を設定することが推奨されます。
 
 > [!IMPORTANT]
-> このオプションの設定は、必要なときにのみ、具体的には、sqlservr プロセスがページ アウトされているという兆候があるときにのみ使用します。その場合、次のようなエラー 17890 がエラー ログに報告されます。`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、Standard Edition の場合、[トレース フラグ 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) はロックされたページの使用で不要になりました。 
+> このオプションの設定は、必要なときにのみ、具体的には、sqlservr プロセスがページ アウトされているという兆候があるときにのみ使用します。その場合、次の例のようなエラー 17890 がエラー ログで報告されます。`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、Standard Edition で Lock Pages を使用するのに[トレース フラグ 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) は必要ありません。 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Lock Pages in Memory を有効にするには  
 lock pages in memory オプションを有効にするには:  
@@ -122,7 +123,7 @@ lock pages in memory オプションを有効にするには:
  これらの設定はインスタンスを再起動しなくても変更できるので、簡単にいろいろな設定を試して、使用パターンに最適な設定を見つけることができます。  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>SQL Server に対する最大メモリ容量の指定  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで、プロセス仮想アドレス空間の制限までメモリを構成できます。 詳細については、「[Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016)」 (Windows リリースと Windows Server リリースのメモリ上限) を参照してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで、プロセス仮想アドレス空間の制限までメモリを構成できます。 詳細については、「[Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)」 (Windows リリースと Windows Server リリースのメモリ上限) を参照してください。
   
 ## <a name="examples"></a>使用例  
   
@@ -168,5 +169,5 @@ FROM sys.dm_os_process_memory;
  [エディションと SQL Server 2016 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Linux 上の SQL Server 2017 のエディションとサポートされる機能](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Windows リリースと Windows Server リリースのメモリ上限](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Windows リリースと Windows Server リリースのメモリ上限](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

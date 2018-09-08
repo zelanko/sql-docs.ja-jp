@@ -1,30 +1,25 @@
 ---
 title: パラメーターを含む詳細 (RDLC) レポートを作成する - ReportViewer | Microsoft Docs
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f90ac792fe849ca91735e5a9b22a399d7798cf23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b36374d792820d70e537049052bc89341fa80a5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274323"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>パラメーターを含む詳細 (RDLC) レポートを作成する - ReportViewer
-[詳細](http://technet.microsoft.com/library/ff519554.aspx) レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 このチュートリアルでは、次のレッスンを通じて、 [ローカル モード レポート](http://msdn.microsoft.com/library/ff487969.aspx)でパラメーターとクエリを使用した詳細レポートを作成します。  
+[詳細](http://technet.microsoft.com/library/ff519554.aspx) レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 このチュートリアルでは、次のレッスンを通じて、[ローカル モード レポート](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)でパラメーターとクエリを使用した詳細レポートを作成します。  
   
 ## <a name="requirements"></a>必要条件  
 このチュートリアルを使用するには、 **AdventureWorks2014** サンプル データベースへのアクセス権が必要です。 **AdventureWorks2014** サンプル データベースの取得方法の詳細については、「[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)」 (AdventureWorks のサンプル データベース) を参照してください。  

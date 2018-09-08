@@ -1,28 +1,23 @@
 ---
 title: キーボード ショートカット (レポート ビルダー) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4e2fa3d574930cbf03ee9fbf1664431668b808c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8e3346a95c8b03f1f256088901d99579faf433a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264541"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>キーボード ショートカット (レポート ビルダー)
   レポート ビルダーで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを作成および編集する際には、Windows 環境が提供しているナビゲーション用ショートカット キーのすべてにアクセスできます。 複数ある標準キーボード マッピング スキームから選択できます。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>レポート ビルダーでのキーボード ショートカット  
   
-|Description|キーの組み合わせ|  
+|[説明]|キーの組み合わせ|  
 |-----------------|---------------------|  
 |レポート ビルダーのメニューを開く。|Alt + F|  
 |レポートを作成する。|Ctrl + N|  

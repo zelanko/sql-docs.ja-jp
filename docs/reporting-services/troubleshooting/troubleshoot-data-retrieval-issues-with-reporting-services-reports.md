@@ -1,26 +1,20 @@
 ---
 title: Reporting Services レポートのデータ取得に関する問題のトラブルシューティング | Microsoft Docs
-ms.custom: ''
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a02761dd1c583c3e58a69cf67709412c4757f2ed
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066670"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281691"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services レポートのデータ取得に関する問題のトラブルシューティング
 レポート処理の最初の手順は、データセット クエリを実行して各データセットのレポート データを取得することです。 レポートをローカルでプレビューする場合は、データ ソースの接続と資格情報で十分な権限を使用して、コンピューターにデータを取得する必要があります。 レポートをレポート サーバーで実行する場合は、データ ソースの接続と資格情報で十分な権限を使用して、レポート サーバーでデータを取得する必要があります。 このトピックでは、レポート データの取得に関する問題のトラブルシューティングを行います。   
@@ -47,7 +41,7 @@ ms.locfileid: "38066670"
 パスワードに特殊文字が使用されていないことを確認してください。 パスワードを変更できない場合は、データベース管理者と連携して、適切な資格情報をシステム ODBC データ ソース名 (DSN) の一部としてローカルおよびサーバーに格納します。 詳細については、MSDN の .NET Framework SDK ドキュメントの「OdbcConnection.ConnectionString」を参照してください。   
   
 > [!NOTE]  
->パスワードなどのログイン情報を接続文字列に追加しないことをお勧めします。 レポート デザイナーでは、 **[データ ソースのプロパティ]** ダイアログ ボックスまたは [[共有データ ソース プロパティ] ダイアログ ボックス](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) の [[資格情報]](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) ページから、資格情報を入力できます。 ここで入力した資格情報は、レポート作成コンピューター上に安全に保管されます。  
+>パスワードなどのログイン情報を接続文字列に追加しないことをお勧めします。 レポート デザイナーでは、**[データ ソースのプロパティ]** ダイアログ ボックスまたは **[共有データ ソース プロパティ]** ダイアログ ボックスの **[資格情報]** ページから、資格情報を入力できます。 ここで入力した資格情報は、レポート作成コンピューター上に安全に保管されます。  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>クエリ デザイナーでクエリを実行してもデータが表示されない  
 データセットを作成すると、データセット フィールド コレクションがレポート データ ペインに表示されます。 場合によっては、データセット フィールド コレクションが想定どおりに表示されないことがあります。   
@@ -71,7 +65,7 @@ ms.locfileid: "38066670"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

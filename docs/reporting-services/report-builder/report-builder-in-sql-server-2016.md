@@ -1,34 +1,28 @@
 ---
 title: SQL Server 2016 のレポート ビルダー | Microsoft Docs
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 7b0e65fda3c8aab492d45546428db43b8af7fc1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91b33f6aabc245bd79ff48b1202f20d71ae9293d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022929"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269648"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 のレポート ビルダー
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、改ページ調整されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] でレポートをプレビューすることも、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、ページ分割されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] でレポートをプレビューすることも、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -48,9 +42,9 @@ ms.locfileid: "33022929"
   
 -   **テーブル、マトリックス、グラフ、および自由形式のレポート レイアウトの改ページ調整されたレポートを作成します。** 列単位のデータにはテーブル形式のレポート、集約されたデータにはマトリックス形式のレポート (クロス集計レポートや PivotTable レポートなど)、グラフィック データにはグラフ形式のレポート、これ以外のすべてのデータには自由形式のレポートを作成します。 レポートでは、Web ベースの動的アプリケーションのリスト、グラフィック、およびコントロールと共に、他のレポートやグラフを埋め込むことができます。  
   
--   **さまざまなデータ ソースからレポートを作成します。** [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] マネージ データ プロバイダー、OLE DB プロバイダー、ODBC データ ソースのいずれかを含む任意のデータ ソースの種類のデータを使用してレポートを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion、およびその他のデータベースのリレーショナル データおよび多次元データを使用するレポートを作成できます。 XML データ処理拡張機能を使用すると、任意の XML データ ソースからデータを取得できます。 テーブル値関数を使用すると、カスタム データ ソースをデザインできます。  
+-   **さまざまなデータ ソースからレポートを作成します。** [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] マネージド データ プロバイダー、OLE DB プロバイダー、ODBC データ ソースのいずれかを含む任意のデータ ソースの種類のデータを使用してレポートを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion、およびその他のデータベースのリレーショナル データおよび多次元データを使用するレポートを作成できます。 XML データ処理拡張機能を使用すると、任意の XML データ ソースからデータを取得できます。 テーブル値関数を使用すると、カスタム データ ソースをデザインできます。  
   
--   **既存のレポートを変更します。** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]を使用すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで作成されたレポートをカスタマイズおよび更新できます。  
+-   **既存のレポートを変更します。** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]を使用すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで作成されたレポートをカスタマイズおよび更新できます。  
   
 -   データのフィルター選択、グループ化と並べ替え、または数式や式の追加によって、**データを変更します。**   
   
@@ -79,15 +73,15 @@ ms.locfileid: "33022929"
   [レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md)
 
   [SQL Server 2016 の Reporting Services とレポート ビルダーの新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-  このバージョンの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]の新機能について説明します。   
+  このバージョンの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]の新機能について説明します。   
   [チュートリアル: オフラインでのクイック グラフ レポートの作成](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] とレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] とレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  
   
  [レポートの計画 (レポート ビルダー)](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  レポートを作成する前の考慮事項について説明します。  
   
  [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] のドキュメント全体で使用する主要な概念について説明します。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]のドキュメント全体で使用する主要な概念について説明します。  
   
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  レポート デザイン ビューの各ペインと領域について説明します。  
@@ -96,6 +90,6 @@ ms.locfileid: "33022929"
  共有データセット デザイン ビューの各ペインと領域について説明します。  
   
  [キーボード ショートカット (レポート ビルダー)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でレポートのナビゲーションとデザインに使用できるショートカット キーについて説明します。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートのナビゲーションとデザインに使用できるショートカット キーについて説明します。  
   
 

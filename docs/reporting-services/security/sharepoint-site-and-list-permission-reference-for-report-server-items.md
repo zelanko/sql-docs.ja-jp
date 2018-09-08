@@ -1,14 +1,10 @@
 ---
 title: レポート サーバー アイテムの SharePoint サイトおよびリスト アクセス許可のリファレンス | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,15 +12,14 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 79bfc468d44f86fad3aca24637ab66b25700cb39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c89daa9b9ede26b005480abdcfc2dfc2a675d065
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278704"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
   ここでは、SharePoint 統合モードで動作するレポート サーバーに関して、レポート サーバー処理に対するアクセスの許可に使用できる、SharePoint の権限のリファレンス情報を提供します。 このトピックは、カスタム権限レベルを作成する場合に使用する権限を選択するのに役立ちます。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="list-permissions"></a>リスト権限  
  ユーザーがレポート サーバー アイテムにアクセスする方法は、それらのアイテムが格納されているライブラリに設定した権限によって決まります。  
   
-|権限|Description|F|c|V|レポート サーバーの処理|  
+|権限|[説明]|F|c|V|レポート サーバーの処理|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |リストの管理|リストの作成と削除、リストの列の追加と削除、およびリストのパブリック ビューの追加と削除を行います。|×|||レポート作成ツールから発行操作を行う際、SharePoint ライブラリにフォルダーを作成します。 レポート履歴の管理にもこの権限が必要です。|  
 |[項目の追加]|リストへのアイテムの追加、ドキュメント ライブラリへのドキュメントの追加、および Web ディスカッションのコメントの追加を行います。|×|×||レポート、レポート モデル、共有データ ソース、およびリソース (外部イメージ ファイル) を SharePoint ライブラリに追加します。 共有データ ソースを作成します。 共有データ ソースからレポート モデルを生成します。 レポート ビルダーを起動して新しいレポートを作成するか、レポート ビルダーにモデルを読み込みます。|  
@@ -60,12 +55,12 @@ ms.lasthandoff: 05/03/2018
 |バージョンの削除|リスト アイテムまたはドキュメントの過去のバージョンを削除します。|×|×||ドキュメントおよびレポート スナップショットの過去のバージョンを削除します。|  
   
 > [!NOTE]  
->  上記以外のリスト権限には、"チェックアウトの上書き"、"アイテムの承認"、および "アプリケーション ページの表示" があります。 レポート サーバーでは、これらの権限が評価されません。 レポート サーバーでは、これらの操作が処理されません。  
+>  上記以外のリスト権限には、"チェックアウトのオーバーライド"、"アイテムの承認"、および "アプリケーション ページの表示" があります。 レポート サーバーでは、これらの権限が評価されません。 レポート サーバーでは、これらの操作が処理されません。  
   
 ## <a name="site-permissions"></a>サイト権限  
  サイト権限は、特定のライブラリに格納されているアイテムには直接関係しない、レポート サーバー処理へのアクセスを決定します。 たとえば、複数のライブラリのアイテムで使用できる共有スケジュールの作成と管理、サイト全体で使用できるレポート ビューアー Web パーツの構成などです。  
   
-|権限|Description|F|c|V|レポート サーバーの処理|  
+|権限|[説明]|F|c|V|レポート サーバーの処理|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |権限の管理|Web サイトの権限レベルを作成および変更し、権限をユーザーおよびグループに割り当てます。|×|||すべてのレポート サーバー アイテムおよび処理について権限を変更できます。 モデル アイテム セキュリティを設定できます。|  
 |Web サイトの管理|コンテンツの管理に加え、Web サイトのあらゆる管理作業を行います。|×|||共有スケジュールを作成、変更、または削除します。|  

@@ -1,28 +1,23 @@
 ---
 title: パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 537dfe4f3ef8f6f73cf7bcdeda5c26a0b91265a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 741c377f848c67a71dc34b0191a892e3e1389426
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269358"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード
   パラメーター化されたレポートとは、レポートの実行時にデータのフィルター処理に使用する入力値を受け取るレポートです。 パラメーターは、レポートの作成時に定義します。 レポート定義でレポート パラメーターがどのように定義されているかによって、単一の値、複数の値、または動的な値を受け入れることができます。動的な値は、直前の選択に応じて変化します (たとえば、製品カテゴリを選択したとき、次の選択ではそのカテゴリの特定の製品を選択するなど)。 パラメーターには既定値を指定することもできます。フィルター選択したレポートを自動的に実行する場合に既定値を使用することも、既定値を別の値に置き換えることもできます。  
@@ -69,11 +64,11 @@ ms.lasthandoff: 05/03/2018
   
     1.  レポートの作成時に定義された既定値を使用するには、 **[レポート定義で指定されている値式を使用]** を選択します。 レポート定義で既定値が指定されていない場合、このオプションは使用できません。  
   
-    2.  レポート定義の既定値を置き換える値を指定するには、 **[レポートの既定値を上書き]** を選択します。 NULL 値が許可されるレポート パラメーターについては、 **[Null]** チェック ボックスをオンにすることで、そのパラメーターに基づくフィルター処理を無効にすることができます。  
+    2.  レポート定義の既定値を置き換える値を指定するには、**[レポートの既定値をオーバーライド]** を選択します。 NULL 値が許可されるレポート パラメーターについては、 **[Null]** チェック ボックスをオンにすることで、そのパラメーターに基づくフィルター処理を無効にすることができます。  
   
     3.  レポートが処理される前に各ユーザーが値を指定できるようにするには、 **[パラメーターは既定値を持たない]** を選択します。 このオプションを選択した場合、ユーザーに値の指定を求めるための表示設定を行う必要があります。  
   
-     すべてのパラメーターに既定値があれば、ユーザーがレポートを開くと自動的にその既定値を使用してレポートが実行されます。 ただし、レポート領域が表示される場合には、ユーザーは既定値を変更してレポートを再実行することができます。  
+     すべてのパラメーターに既定値があれば、ユーザーがレポートを開くと自動的にその既定値を使用してレポートが実行されます。 ただし、レポート領域が表示される場合には、ユーザーは既定値をオーバーライドしてレポートを再実行することができます。  
   
 6.  パラメーターを表示するかどうかを決定する表示オプションを設定します。  
   

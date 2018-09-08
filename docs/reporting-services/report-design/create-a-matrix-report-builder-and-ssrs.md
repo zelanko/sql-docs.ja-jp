@@ -1,26 +1,20 @@
 ---
 title: マトリックスの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8d28d9071a245185e9801d1b1c482a058752e6da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a15a323bdffeac0671cf04c3fd91df120c8b31f6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022099"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279353"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>マトリックスの作成 (レポート ビルダーおよび SSRS)
   グループ化されたデータと概要情報を表示するには、マトリックスを使用します。 データは、複数のフィールドまたは式によって、行グループと列グループにグループ化できます。 マトリックスには、クロスタブやピボット テーブルと同様の機能があります。 実行時にレポート データとデータ領域が組み合わされると、マトリックスはページ上で縦横に拡大します。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。 行と列の書式を設定すると、強調するデータをハイライトできます。 ドリルダウン トグルを含めて、最初は詳細データを非表示にすることもできます。ユーザーは、トグルをクリックすることにより、表示するデータの量を調整できます。  

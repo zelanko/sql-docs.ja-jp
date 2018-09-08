@@ -1,28 +1,22 @@
 ---
 title: レポートのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9c4b6d1ac7e16cc7260667ffc786b68a5f2d9a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035452208fbd27c3669239f9177136d71051d854
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022409"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268131"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>レポートのエクスポート (レポート ビルダーおよび SSRS)
 
@@ -119,7 +113,7 @@ ms.locfileid: "33022409"
 ##  <a name="ExportFormats"></a> レポートの表示中にエクスポートできる形式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、さまざまな形式でレポートを表示する表示拡張機能が用意されています。 選択したファイル形式に合わせてレポート デザインを最適化する必要があります。  次の表に、ユーザー インターフェイスからエクスポートできる形式を示します。  これに加え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションで利用できる形式や URL へのアクセスによってエクスポートできる形式もあります。  このトピックの「 [レポートをエクスポートするその他の方法](#OtherWaysExportingReports)」セクションを参照してください。  
   
-|[形式]|表示拡張機能の種類|Description|  
+|[形式]|表示拡張機能の種類|[説明]|  
 |------------|------------------------------|-----------------|  
 |Acrobat (PDF) ファイル|ハード改ページ|PDF 表示拡張機能を使用すると、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことのできるファイルとしてレポートが表示されます。 PDF 1.3 は Adobe Acrobat 4 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では Adobe Acrobat 6 以降がサポートされています。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。<br /><br /> 詳細については、「[PDF ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)」を参照してください。|  
 |Atom|data|Atom 表示拡張機能では、Atom 準拠のデータ フィードがレポートから生成されます。 データ フィードは、Atom 準拠のデータ フィードを使用するアプリケーション (Power Pivot や Power BI など) で読み取りと交換が可能です。<br /><br /> 出力は、レポートで使用可能なデータ フィードを一覧表示する Atom サービス ドキュメントです。 レポート内の各データ領域について、少なくとも 1 つのデータ フィードが作成されます。 データ領域の種類およびデータ領域に表示されるデータによっては、複数のデータ フィードが生成される場合があります。<br /><br /> 詳細については、「[複数のレポートからのデータ フィードの生成](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。|  

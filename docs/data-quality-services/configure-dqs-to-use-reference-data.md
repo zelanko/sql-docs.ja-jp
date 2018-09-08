@@ -19,19 +19,22 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72392490f9f462145b033e150577164baa86206a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: a1185bbfdcbaff6cdf763aa72d0219b573669ca9
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310031"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42776444"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>参照データを使用する DQS の構成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   このトピックでは、データのクレンジングに参照データを使用するように [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) を構成する方法について説明します。 Windows Azure Marketplace、またはダイレクト オンライン サード パーティ参照データ プロバイダーの参照データを使用することができます。  
-  
+
+> [!IMPORTANT]
+> この記事では、以前は Azure DataMarket から利用できたサード パーティ参照データ サービスについて説明します。 DataMarket および Data Services (Melissa アドレス データなどを含む) は、2016 年 12 月 31 日以降廃止となりました。 その結果、DataMarket から指定されたサービスを使用して、この記事に示されている例を実行できなくなりました。 サード パーティ参照データ プロバイダーからオンラインで直接利用可能な参照データ サービスは引き続き使用できます。
+
 ## <a name="before-you-begin"></a>はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Always On 可用性グループのパフォーマンスを監視する (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 06/13/2017
@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e576153f1e9f0fc43360bc3ce25af284c402b14e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75b17cc357f3affc8fac293c771fbc63940d4fb4
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870057"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40405861"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "32870057"
   
 -   [有用な拡張イベント](#BKMK_XEVENTS)  
   
-##  <a name="BKMK_DATA_SYNC_PROCESS"></a> データ同期プロセス  
+##  <a name="data-synchronization-process"></a>データ同期プロセス  
  完全に同期するまでの時間を推定し、ボトルネックを特定するには、同期プロセスを理解する必要があります。 パフォーマンスのボトルネックはプロセス内の任意の箇所で発生する可能性があります。ボトルネックの場所を特定することで、基になっている問題をさらに詳しく調べることができます。 次の図と表に、データの同期プロセスを示します。  
   
  ![可用性グループのデータ同期](media/always-onag-datasynchronization.gif "可用性グループのデータ同期")  
@@ -55,7 +55,7 @@ ms.locfileid: "32870057"
 |5|書き込み|書き込みのためログがセカンダリ レプリカにフラッシュされます。 ログのフラッシュ後、プライマリ レプリカに確認応答が返送されます。<br /><br /> ログが書き込まれると、データ損失は回避されます。|パフォーマンス カウンター [SQL Server: データベース > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 待機の種類 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|やり直し|セカンダリ レプリカでページのフラッシュを再実行します。 再実行されるのを待機する間、ページは再実行キューに保持されます。|[SQL Server: データベース レプリカ > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) と [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /> 待機の種類 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
-##  <a name="BKMK_FLOW_CONTROL_GATES"></a> フロー制御ゲート  
+##  <a name="flow-control-gates"></a>フロー制御ゲート  
  プライマリ レプリカではフロー制御ゲートを使用して可用性グループが設計されています。このため、すべての可用性レプリカ上でネットワークやメモリ リソースなどのリソースが過剰消費されるのを回避することができます。 このようなフロー制御ゲートは、可用性レプリカの同期の正常性状態に影響を及ぼしませんが、可用性データベースの全体的なパフォーマンス (RPO を含む) には影響する可能性があります。  
   
  次の表に示すように、ログはプライマリ レプリカ上でキャプチャされると、フロー制御の 2 つのレベルの影響を受けるようになります。  
@@ -72,7 +72,7 @@ ms.locfileid: "32870057"
   
  2 つの有用なパフォーマンス カウンターである [SQL Server: 可用性レプリカ > フロー制御/秒](~/relational-databases/performance-monitor/sql-server-availability-replica.md)と [SQL Server: 可用性レプリカ > フロー制御時間 (ミリ秒/秒)](~/relational-databases/performance-monitor/sql-server-availability-replica.md)では、最後の 1 秒以内に、フロー制御がアクティブになった回数とフロー制御を待機していた時間を示します。 フロー制御の待機時間が長いと、RPO が大きくなります。 フロー制御の待機時間を長くする可能性のある問題の種類の詳細については、[Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md) (トラブルシューティング: 可用性グループが RPO を超過した) を参照してください。  
   
-##  <a name="BKMK_RTO"></a> フェールオーバー時間 (RTO) の推定  
+##  <a name="estimating-failover-time-rto"></a>フェールオーバー時間 (RTO) の推定  
  SLA での RTO は、特定の時点での Always On 実装のフェールオーバー時間に依存し、次の数式で表すことができます。  
   
  ![可用性グループの RTO の計算](media/always-on-rto.gif "可用性グループの RTO の計算")  
@@ -90,7 +90,7 @@ ms.locfileid: "32870057"
   
  フェールオーバーのオーバーヘッド時間 Toverhead には、WSFC クラスターをフェールオーバーしてデータベースをオンラインにするのにかかる時間が含まれます。 この時間は通常は短く一定です。  
   
-##  <a name="BKMK_RPO"></a> データ損失の可能性 (RPO) の推定  
+## <a name="estimating-potential-data-loss-rpo"></a>データ損失の可能性 (RPO) の推定  
  SLA での RPO は、特定の時点での Always On 実装のデータ損失の可能性に依存します。 このデータ損失の可能性は次の式で表すことができます。  
   
  ![可用性グループの RPO の計算](media/always-on-rpo.gif "可用性グループの RPO の計算")  
@@ -103,8 +103,234 @@ ms.locfileid: "32870057"
  ログ送信キューは、重大なエラーによって失われる可能性のあるすべてのデータを表します。 一見して、ログ送信速度 ([log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) を参照) ではなく、ログ生成速度が使用されているのは興味深いことです。 なお、RPO ではデータを同期する速度ではなく、データを生成する速度に基づいてデータ損失が測定されるにも関わらず、ログ送信速度を使用した場合は同期のための時間しか得られません。  
   
  Tdata_loss を推定するには、[last_commit_time](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) を使用する方法が簡単です。 プライマリ レプリカ上の DMV は、この値をすべてのレプリカにレポートします。 プライマリ レプリカの値とセカンダリ レプリカの値との差を計算することで、セカンダリ レプリカ上のログがプライマリ レプリカに追いつく速さを推定することができます。 前述のように、この計算からは、ログが生成される速度に基づいたデータ損失の可能性は得られませんが、近似値を指定する必要があります。  
+
+## <a name="estimate-rto--rpo-with-the-ssms-dashboard"></a>SSMS ダッシュボードを使用して RTO と RPO を推定する
+Always On 可用性グループで、セカンダリ レプリカでホストされているデータベースに対する RTO と RPO が計算され、表示されます。 プライマリ レプリカのダッシュボードで、RTO と RPO がセカンダリ レプリカごとにグループ化されます。 
+
+ダッシュボード内に RTO と RPO を表示するには、次の操作を行います。
+1. SQL Server Management Studio で、**[Always On 可用性グループ]** ノードを展開し、可用性グループの名前を右クリックして **[ダッシュボードの表示]** を選択します。 
+1. **[グループ化]** タブで、**[列の追加と削除]** を選択します。**[推定復旧時間 (秒)]** (RTO) と **[推定データ損失 (時間)]** (RPO) の両方のチェック ボックスをオンにします。 
+
+   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+
+### <a name="calculation-of-secondary-database-rto"></a>セカンダリ データベースの RTO の計算 
+フェールオーバーが発生した後、*セカンダリ データベース* の復旧に必要な時間は、復旧時間の計算で決まります。  フェールオーバー時間は通常は短く一定です。 この検出時間は、個々の可用性レプリカではなく、クラスター レベルの設定に依存します。 
+
+
+セカンダリ データベース (DB_sec) の場合、その RTO の計算と表示は **redo_queue_size** と **redo_rate** に基づきます。
+
+![RTO の計算](media/calculate-rto.png)
+
+まれなケースを除き、セカンダリ データベースの RTO を計算する数式は次のようになります。
+
+![RTO の計算式](media/formula-calc-second-dba-rto.png)
+
+
+
+### <a name="calculation-of-secondary-database-rpo"></a>セカンダリ データベースの RPO の計算
+
+セカンダリ データベース (DB_sec) の場合、その RPO の計算と表示は、is_failover_ready、last_commit_time、および関連付けられているプライマリ データベース (DB_pri) の last_commit_time に基づきます。 セカンダリ データベースの is_failover_ready が 1 の場合、データは同期され、フェールオーバー時にデータの損失は発生しません。 しかし、この値が 0 の場合、プライマリ データベースの **last_commit_time** とセカンダリ データベースの **last_commit_time** には差が生じます。 
+
+プライマリ データベースの場合、**last_commit_time** は最後のトランザクションがコミットされた時間となります。 セカンダリ データベースの場合、**last_commit_time** は、同様にセカンダリ データベースに正常に書き込まれた、プライマリ データベースでのトランザクションに対する最後のコミット時間となります。 この数値は、プライマリ データベースとセカンダリ データベースで同じである必要があります。 これら 2 つの値の間の差は、保留中のトランザクションがセカンダリ データベースに書き込まれず、フェールオーバーの発生時に失われる期間です。 
+
+![RPO の計算](media/calculate-rpo.png)
+
+### <a name="performance-counters-used-in-rtorpo-formulas"></a>RTO と RPO の数式で使用されるパフォーマンス カウンター
+
+- **redo_queue_size** (KB) (*RTO で使用*): 再実行キューのサイズは、**last_received_lsn** と **last_redone_lsn** の間のトランザクション ログのサイズです。 **last_received_lsn** は、このセカンダリ データベースをホストするセカンダリ レプリカによって受信されたすべてのログ ブロックの最後のポイントを示すログ ブロック ID です。 **Last_redone_lsn** は、セカンダリ データベースで再実行された最後のログ レコードのログ シーケンス番号です。 これら 2 つの値に基づき、開始ログ ブロック (**last_received_lsn**) と終了ログ ブロック (**last_redone_lsn**) の ID を見つけることができます。 これら 2 つのログ ブロックの間のスペースで、まだ再実行されていないトランザクション ログ ブロックの数を表すことができます。 これはキロバイト (KB) で測定されます。
+-  **redo_rate** (KB/秒) (*RTO で使用*): 一定の経過時間において、セカンダリ データベースでトランザクション ログ (KB) がどれくらい再実行されたかをキロバイト (KB)/秒で表す累積値。 
+- **last_commit_time** (日時) (*RPO で使用*): プライマリ データベースの場合、**last_commit_time** は最後のトランザクションがコミットされた時間となります。 セカンダリ データベースの場合、**last_commit_time** は、同様にセカンダリ データベースに正常に書き込まれた、プライマリ データベースでのトランザクションに対する最後のコミット時間となります。 セカンダリのこの値はプライマリの同じ値と同期する必要があるため、これら 2 つの値の間の差はデータ損失の推定値 (RPO) となります。  
+ 
+## <a name="estimate-rto-and-rpo-using-dmvs"></a>DMV を使用して RTO と RPO を推定する
+
+DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) と [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) をクエリして、データベースの RPO と RTO を推定することができます。 以下のクエリでは、両方に実行するストアド プロシージャが作成されます。 
+
+  >[!NOTE]
+  > 必ず、最初に RTO を推定するためのストアド プロシージャを作成して実行してください。生成される値は、RPO を推定するためのストアド プロシージャを実行するために必要になります。 
+
+### <a name="create-a-stored-procedure-to-estimate-rto"></a>RTO を推定するためのストアド プロシージャを作成する 
+
+1. ターゲット セカンダリ レプリカで、ストアド プロシージャ **proc_calculate_RTO** を作成します。 このストアド プロシージャが既に存在する場合は、まず、削除してから再作成します。 
+
+ ```sql
+    if object_id(N'proc_calculate_RTO', 'p') is not null
+        drop procedure proc_calculate_RTO
+    go
+    
+    raiserror('creating procedure proc_calculate_RTO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RTO
+    --
+    -- description: Calculate RTO of a secondary database.
+    -- 
+    -- parameters:  @secondary_database_name nvarchar(max): name of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RTO
+    (
+    @secondary_database_name nvarchar(max)
+    )
+    as
+    begin
+      declare @db sysname
+      declare @is_primary_replica bit 
+      declare @is_failover_ready bit 
+      declare @redo_queue_size bigint 
+      declare @redo_rate bigint
+      declare @replica_id uniqueidentifier
+      declare @group_database_id uniqueidentifier
+      declare @group_id uniqueidentifier
+      declare @RTO float 
+
+      select 
+      @is_primary_replica = dbr.is_primary_replica, 
+      @is_failover_ready = dbcs.is_failover_ready, 
+      @redo_queue_size = dbr.redo_queue_size, 
+      @redo_rate = dbr.redo_rate, 
+      @replica_id = dbr.replica_id,
+      @group_database_id = dbr.group_database_id,
+      @group_id = dbr.group_id 
+      from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs    on dbr.replica_id = dbcs.replica_id and 
+      dbr.group_database_id = dbcs.group_database_id  where dbcs.database_name = @secondary_database_name
+
+      if  @is_primary_replica is null or @is_failover_ready is null or @redo_queue_size is null or @replica_id is null or @group_database_id is null or @group_id is null
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else if @is_primary_replica = 1
+      begin
+        print 'You are visiting wrong replica';
+        return
+      end
+
+      if @redo_queue_size = 0 
+        set @RTO = 0 
+      else if @redo_rate is null or @redo_rate = 0 
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else 
+        set @RTO = CAST(@redo_queue_size AS float) / @redo_rate
+    
+      print 'RTO of Database '+ @secondary_database_name +' is ' + convert(varchar, ceiling(@RTO))
+      print 'group_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_id)
+      print 'replica_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @replica_id)
+      print 'group_database_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_database_id)
+    end
+ ```
+
+2. ターゲット セカンダリ データベース名を指定して **proc_calculate_RTO** を実行します。
+  ```sql
+   exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
+  ```
+3. 出力には、ターゲット セカンダリ レプリカ データベースの RTO の値が表示されます。 RPO 推定ストアド プロシージャで使用する *group_id*、*replica_id*、*group_database_id* を保存します。 
+   
+   サンプル出力:
+<br>データベース DB_sec の RTO は 0 です
+<br>データベース DB4 の group_id は F176DD65-C3EE-4240-BA23-EA615F965C9B です
+<br>データベース DB4 の replica_id は 405554F6-3FDC-4593-A650-2067F5FABFFD です
+<br>データベース DB4 の group_database_id は 39F7942F-7B5E-42C5-977D-02E7FFA6C392 です
+
+### <a name="create-a-stored-procedure-to-estimate-rpo"></a>RPO を推定するためのストアド プロシージャを作成する 
+1. プライマリ レプリカで、ストアド プロシージャ **proc_calculate_RPO** を作成します。 既に存在する場合は、まず、ドロップしてから再作成します。 
+
+ ```sql
+    if object_id(N'proc_calculate_RPO', 'p') is not null
+                    drop procedure proc_calculate_RPO
+    go
+    
+    raiserror('creating procedure proc_calculate_RPO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RPO
+    --
+    -- description: Calculate RPO of a secondary database.
+    -- 
+    -- parameters:  @group_id uniqueidentifier: group_id of the secondary database.
+    --              @replica_id uniqueidentifier: replica_id of the secondary database.
+    --              @group_database_id uniqueidentifier: group_database_id of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RPO
+    (
+     @group_id uniqueidentifier,
+     @replica_id uniqueidentifier,
+     @group_database_id uniqueidentifier
+    )
+    as
+    begin
+          declare @db_name sysname
+          declare @is_primary_replica bit
+          declare @is_failover_ready bit
+          declare @is_local bit
+          declare @last_commit_time_sec datetime 
+          declare @last_commit_time_pri datetime      
+          declare @RPO nvarchar(max) 
+
+          -- secondary database's last_commit_time 
+          select 
+          @db_name = dbcs.database_name,
+          @is_failover_ready = dbcs.is_failover_ready, 
+          @last_commit_time_sec = dbr.last_commit_time 
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.replica_id = @replica_id and dbr.group_database_id = @group_database_id
+
+          -- correlated primary database's last_commit_time 
+          select
+          @last_commit_time_pri = dbr.last_commit_time,
+          @is_local = dbr.is_local
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.is_primary_replica = 1 and dbr.group_database_id = @group_database_id
+
+          if @is_local is null or @is_failover_ready is null
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+
+          if @is_local = 0
+          begin
+            print 'You are visiting wrong replica'
+            return
+          end  
+
+          if @is_failover_ready = 1
+            set @RPO = '00:00:00'
+          else if @last_commit_time_sec is null or  @last_commit_time_pri is null 
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+          else
+          begin
+            if DATEDIFF(ss, @last_commit_time_sec, @last_commit_time_pri) < 0
+            begin
+                print 'RPO of database '+ @db_name +' is not available'
+                return
+            end
+            else
+                set @RPO =  CONVERT(varchar, DATEADD(ms, datediff(ss ,@last_commit_time_sec, @last_commit_time_pri) * 1000, 0), 114)
+          end
+          print 'RPO of database '+ @db_name +' is ' + @RPO
+      end
+ ```
+
+2. ターゲット セカンダリ データベースの *group_id*、*replica_id*、*group_database_id* を指定して、**proc_calculate_RPO** を実行します。 
+
+ ```sql
+   exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
+        @replica_id =  '405554F6-3FDC-4593-A650-2067F5FABFFD',
+        @group_database_id  = '39F7942F-7B5E-42C5-977D-02E7FFA6C392'
+ ```
+3. 出力には、ターゲット セカンダリ レプリカ データベースの RPO の値が表示されます。 
+
   
-##  <a name="BKMK_Monitoring_for_RTO_and_RPO"></a> RTO と RPO の監視  
+##  <a name="monitoring-for-rto-and-rpo"></a>RTO と RPO の監視  
  このセクションでは、可用性グループの RTO および RPO メトリックを監視する方法を実演します。 この実演の内容は、「[The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」 (Always On 正常性モデル、パート 2: 正常性モデルの拡張) で提供している GUI のチュートリアルに類似しています。  
   
  [フェールオーバー時間 (RTO) の推定](#BKMK_RTO) および[データ損失の可能性 (RPO) の推定](#BKMK_RPO) におけるフェールオーバー時間の計算およびデータ損失の可能性の計算の要素は、ポリシー管理ファセット "**データベース レプリカ状態**" の中でパフォーマンス メトリックとして便利に提供されています (「[SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)」を参照)。 この 2 つのメトリックはスケジュールに従って監視することができます。メトリックが指定の RTO および RPO を超えた場合はそれぞれアラートが返されます。  
@@ -232,7 +458,7 @@ ms.locfileid: "32870057"
 ##  <a name="BKMK_SCENARIOS"></a> パフォーマンスのトラブルシューティング シナリオ  
  次の表に、一般的なパフォーマンスに関連するトラブルシューティング シナリオを示します。  
   
-|シナリオ|Description|  
+|シナリオ|[説明]|  
 |--------------|-----------------|  
 |[トラブルシューティング: 可用性グループ接続の超過 RTO ](troubleshoot-availability-group-exceeded-rto.md)|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
 |[トラブルシューティング: 可用性グループ接続の超過 RPO ](troubleshoot-availability-group-exceeded-rpo.md)|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  

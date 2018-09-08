@@ -1,29 +1,23 @@
 ---
 title: グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028149"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269672"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、データ ポイントは、グラフにおける最小単位のエンティティです。 図形以外のグラフのデータ ポイントは、そのグラフの種類に応じて表されます。 たとえば、線系列は 1 つまたは複数の連続したデータ ポイントで構成されます。 図形グラフのデータ ポイントは、個々のスライスやセグメントによって表され、これらのスライスやセグメントがグラフ全体を形成します。 たとえば、円グラフでは、それぞれのピースがデータ ポイントです。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -43,7 +37,7 @@ ms.locfileid: "33028149"
   
  `=Iif(Fields!MyField.Value >= Max(Fields!MyField.Value, "MyDataSet"), "Red", "Green")`  
   
- この例では、 `MyField` の最大値は赤色になり、その他のすべてのデータ ポイントは緑色になります。 系列で **Fill** プロパティを使用して系列の色を指定する場合、パレットで指定された色は無効になります。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
+ この例では、 `MyField` の最大値は赤色になり、その他のすべてのデータ ポイントは緑色になります。 系列で **Fill** プロパティを使用して系列の色を指定する場合、パレットで指定された色をオーバーライドします。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
 ## <a name="positioning-data-point-labels-on-a-chart"></a>グラフへのデータ ポイント ラベルの配置  
  すべての種類のグラフで、グラフを右クリックして **[データ ラベルの表示]** を選択すると、データ ポイント ラベルを表示できます。 データ ポイント ラベルの位置は、グラフの種類に応じて指定されます。  
@@ -63,7 +57,7 @@ ms.locfileid: "33028149"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>データ ポイント ラベル、ツールヒント、および凡例テキストへのキーワードの追加  
  大文字と小文字の区別があるグラフに固有のキーワードを使用すると、グラフ内に存在する項目を表すことができます。 これらのキーワードは、ツールヒント、カスタムの凡例テキスト、データ ポイント ラベルのプロパティにのみ適用されます。 多くの場合、グラフ キーワードには同等の簡単な式がありますが、キーワードを入力する方がすばやく簡単です。 グラフ キーワードの一覧は次のとおりです。  
   
-|グラフ キーワード|Description|適用可能なグラフの種類|同等の簡単な式の例|  
+|グラフ キーワード|[説明]|適用可能なグラフの種類|同等の簡単な式の例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|データ ポイントの Y 値|All|`=Fields!MyDataField.Value`|  
 |#VALY2|データ ポイントの Y 値の 2 番目の値|範囲、バブル|なし|  

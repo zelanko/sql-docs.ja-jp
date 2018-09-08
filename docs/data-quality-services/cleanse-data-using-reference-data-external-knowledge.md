@@ -15,19 +15,22 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b1aa5dfe6a501548a3a7e0914eacda93169a89c6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 75cf72c26c7a9baf1e4361b053325d655797c238
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310021"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42788853"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>参照データ (外部) のナレッジを使用したデータのクレンジング
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   このトピックでは、参照データ プロバイダーから提供されるナレッジを使用してデータをクレンジングする方法について説明します。 クレンジング アクティビティを実行する手順は、参照データ プロバイダーから提供されるナレッジを使ってデータをクレンジングする場合も「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」で説明した手順とすべて同じですが、このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での参照データ サービスを使ったデータ クレンジングに固有の情報を示します。  
-  
+
+> [!IMPORTANT]
+> この記事では、以前は Azure DataMarket から利用できたサード パーティ参照データ サービスについて説明します。 DataMarket および Data Services (Melissa アドレス データなどを含む) は、2016 年 12 月 31 日以降廃止となりました。 その結果、DataMarket から指定されたサービスを使用して、この記事に示されている例を実行できなくなりました。 サード パーティ参照データ プロバイダーからオンラインで直接利用可能な参照データ サービスは引き続き使用できます。
+ 
  DQS の参照データ サービス機能を使用してデータをクレンジングする場合、DQS のクレンジング プロセスで、マップされたドメイン値がバッチ要求として参照データ サービス プロバイダーに送信されます。 参照データ サービスから、次の情報を含む応答が返されます。  
   
 -   修正案  

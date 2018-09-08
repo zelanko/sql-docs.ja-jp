@@ -1,28 +1,22 @@
 ---
 title: SharePoint リストのクエリ デザイナー (レポート ビルダー) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9acc8cf74386c8f0fceae524bf516ff9e29e2219
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 965f5c84bfeba49c5f918ab9d2725d71ecbb482f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021809"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277884"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint リストのクエリ デザイナー (レポート ビルダー)
   レポート ビルダーおよびレポート デザイナーには、グラフィカル クエリ デザイナーとテキストベースのクエリ デザイナーが用意されており、レポート データセット用に SharePoint サイトから取得するデータを指定するクエリの作成に使用できます。 SharePoint リスト メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示、クエリの変更、またはクエリ コマンドの入力を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -92,7 +86,7 @@ ms.locfileid: "33021809"
 ### <a name="graphical-query-designer-toolbar"></a>グラフィカル クエリ デザイナーのツール バー  
  リレーショナル クエリ デザイナーのツール バーにある次のボタンを使用すると、クエリを指定したりその結果を表示したりすることができます。  
   
-|ボタン|Description|  
+|ボタン|[説明]|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーに切り替えて、自動的に生成されたクエリの表示や変更を行います。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は .sql と .rdl です。|  

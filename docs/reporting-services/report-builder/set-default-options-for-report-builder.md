@@ -1,28 +1,22 @@
 ---
 title: レポート ビルダーの既定のオプションを設定する | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: a60776397119840d9042b872160c33f2228605d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 389bfa6930841a2395c0b4be82a6fd0355444145
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018729"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282661"
 ---
 # <a name="set-default-options-for-report-builder"></a>レポート ビルダーの既定のオプションを設定する
   レポート ビルダーで、レポート作成を簡単かつ迅速にすることができる既定値を設定できます。  たとえば、既定のレポート サーバーを設定または変更すると、特に指定しない限り、同じレポート サーバーに自動的にレポートが保存されます。  
@@ -31,7 +25,7 @@ ms.locfileid: "33018729"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[既定で使用するレポート サーバーまたは SharePoint サイト]**  
- このオプションは、管理者によって設定されている可能性があります。 値には、http:// または https:// で始まる整形式の URL を設定できます。 この設定によって、テーブル/マトリックス ウィザードやグラフ ウィザードで既定で表示されるデータ ソース接続が決まります。 また、レポートはこのサーバーで処理され、このサーバーのリソースを参照できます。  
+ このオプションは、管理者によって設定されている可能性があります。 値には、 http:// または https:// で始まる整形式の URL を設定できます。 この設定によって、テーブル/マトリックス ウィザードやグラフ ウィザードで既定で表示されるデータ ソース接続が決まります。 また、レポートはこのサーバーで処理され、このサーバーのリソースを参照できます。  
   
  別のレポート サーバーを選択した場合、変更を有効にするにはレポート ビルダーの再起動が必要になることがあります。  
   

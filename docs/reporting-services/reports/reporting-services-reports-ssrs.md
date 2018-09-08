@@ -1,27 +1,22 @@
 ---
 title: Reporting Services レポート (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-caps.latest.revision: 54
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 514a36e61bc452a76accdcc6319046ff168aa117
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5c0e06e5692f730ea6a438ab64b265972611e7a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268240"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services レポート (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートは、レポート データ要素とレポート レイアウト要素を含む XML ベースのレポート定義です。 クライアント ファイル システムでは、レポート定義に .rdl というファイル拡張子が付きます。 改ページ調整されたレポートをパブリッシュすると、そのレポートによって、レポート サーバーまたは SharePoint サイトに格納されたレポート アイテムが使用されます。 改ページ調整されたレポートは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によって提供されるサーバー ベースのレポート プラットフォームの一部です。 また、 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)操作も可能です。  
