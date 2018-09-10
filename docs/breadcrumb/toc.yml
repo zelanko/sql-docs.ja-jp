@@ -378,7 +378,7 @@
                 - name: ログ配布
                   href: /sql/database-engine/log-shipping/
                   homepage: /sql/database-engine/log-shipping/about-log-shipping-sql-server
-            - name: '[データベース エンジン サービス]'
+            - name: Data Quality Services
               href: /sql/data-quality-services/
               homepage: /sql/data-quality-services/data-quality-services
               items:

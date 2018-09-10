@@ -1,1 +1,1 @@
- [データベース エンジン サービス] 
+ Data Quality Services 
