@@ -64,7 +64,7 @@ ms.locfileid: "43084729"
  省略可能なブロックです。DiffGram の処理ロジックでは無視されます。  
   
 ## <a name="diffgram-annotations"></a>DiffGram の注釈  
- これらの注釈は DiffGram 名前空間で定義されている **"urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-diffgram-01"**:  
+ これらの注釈は DiffGram 名前空間で定義されている **"urn:schemas-microsoft-com:xml-diffgram-01"**:  
   
  **id**  
  この属性を使用して要素のペアを**\<する前に >** と **\<DataInstance >** ブロックします。  

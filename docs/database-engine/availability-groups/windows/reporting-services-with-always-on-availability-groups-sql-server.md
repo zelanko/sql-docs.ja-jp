@@ -168,9 +168,7 @@ ms.locfileid: "40412604"
   
 -   リスナーの DNS 名を使用するようにデータベース接続を更新します。 ネイティブ モードのレポート サーバーの場合、 **構成マネージャーで** [レポート サーバー データベース名] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を変更します。 SharePoint モードの場合、 **サービス アプリケーションの** データベース サーバー名 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を変更します。  
   
-###  
-            <a name="bkmk_steps_to_complete_failover">
-            </a> レポート サーバー データベースのディザスター リカバリーの手順  
+###  <a name="bkmk_steps_to_complete_failover"></a> レポート サーバー データベースのディザスター リカバリーの手順  
  次の手順は、セカンダリ レプリカへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバー後に実施する必要があります。  
   
 1.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータベースをホストするプライマリ データベース エンジンによって使用されている SQL エージェント サービスのインスタンスを停止します。  
