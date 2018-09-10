@@ -44,13 +44,13 @@ ms.locfileid: "43083655"
   > 各内部オブジェクトでは、少なくとも 9 つのページが使用されます (IAM ページと 8 ページ分のエクステント)。 ページとエクステントの詳細については、「[ページとエクステント](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)」を参照してください。
 
   > [!IMPORTANT]
-  > Azure SQL Database 論理サーバーは、tempdb に保存され、データベース レベルまで調べられるグローバル一時テーブルとグローバル一時ストアド プロシージャをサポートしています。 グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ Azure SQL データベース内ですべてのユーザーのセッションで共有されます。 他の Azure SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) では、SQL Server と同じ一時オブジェクトがサポートされます。 Azure SQL Database 論理サーバーでは、master データベースと tempdb データベースのみが適用されます。 論理サーバーと論理 master データベースの概念については、「[Azure SQL 論理サーバーとは何か](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)」を参照してください。 Azure SQL Database 論理サーバーのコンテキストでの tempdb の詳細については、[Azure SQL Database 論理サーバーでの tempdb データベース](#tempdb-database-in-sql-database)に関するページをご覧ください。 Azure SQL Database Managed Instance の場合、すべてのシステム データベースが適用されます。 
+  > Azure SQL Database 論理サーバーは、tempdb に保存され、スコープがデータベース レベルに設定されるグローバル一時テーブルとグローバル一時ストアド プロシージャをサポートしています。 グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ Azure SQL データベース内ですべてのユーザーのセッションで共有されます。 他の Azure SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) では、SQL Server と同じ一時オブジェクトがサポートされます。 Azure SQL Database 論理サーバーでは、master データベースと tempdb データベースのみが適用されます。 論理サーバーと論理 master データベースの概念については、「[Azure SQL 論理サーバーとは何か](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)」を参照してください。 Azure SQL Database 論理サーバーのコンテキストでの tempdb の詳細については、[Azure SQL Database 論理サーバーでの tempdb データベース](#tempdb-database-in-sql-database)に関するページをご覧ください。 Azure SQL Database Managed Instance の場合、すべてのシステム データベースが適用されます。 
 
 - **バージョン ストア**。これは行のバージョン管理を使用する機能のサポートに必要なデータ行を保持するデータ ページのコレクションです。 共通バージョン ストアとオンライン インデックス構築用のバージョン ストアの 2 つのバージョン ストアがあります。 バージョン ストアに保持される内容:
   - 行のバージョン管理を伴う READ COMMITTED 分離トランザクションまたはスナップショット分離トランザクションを使用するデータベースで、データ変更トランザクションによって生成される行バージョン。  
   - オンライン インデックス操作、複数のアクティブな結果セット (MARS)、AFTER トリガーなどの機能に対してデータ変更トランザクションによって生成される行バージョン。  
   
-トランザクションをロールバックできるように、**tempdb** のログ記録は最小限に抑えられます。 **が起動されるたびに** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再作成され、システムが常にデータベースのクリーンなコピーで起動されるようにします。 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるセッションから別のセッションに保存されるものは一切含まれません。 **tempdb**では、バックアップ操作と復元操作は実行できません。  
+トランザクションをロールバックできるように、**tempdb** のログ記録は最小限に抑えられます。 **tempdb** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動されるたびに再作成され、システムが常にデータベースのクリーンなコピーで起動されるようにします。 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるセッションから別のセッションに保存されるものは一切含まれません。 **tempdb**では、バックアップ操作と復元操作は実行できません。  
   
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server の tempdb の物理プロパティ
  次の表は、SQL Server の **tempdb** のデータ ファイルとログ ファイルの初期構成値 (Model データベースの既定値に基づく) の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
@@ -74,34 +74,34 @@ ms.locfileid: "43083655"
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|[ユーザー アカウント制御]|  
-|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
-|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
-|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
-|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
-|ARITHABORT|OFF|[ユーザー アカウント制御]|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
+|ANSI_NULL_DEFAULT|OFF|はい|  
+|ANSI_NULLS|OFF|はい|  
+|ANSI_PADDING|OFF|はい|  
+|ANSI_WARNINGS|OFF|はい|  
+|ARITHABORT|OFF|はい|  
 |AUTO_CLOSE|OFF|いいえ|  
-|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_CREATE_STATISTICS|ON|はい|  
 |AUTO_SHRINK|OFF|いいえ|  
-|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS|ON|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
-|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
+|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
+|CURSOR_DEFAULT|GLOBAL|はい|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|OFF|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|[ユーザー アカウント制御]|  
-|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
-|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
+|NUMERIC_ROUNDABORT|OFF|はい|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|はい|  
+|PARAMETERIZATION|SIMPLE|はい|  
+|QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
 |RECOVERY|SIMPLE|いいえ|  
-|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
-|Service Broker のオプション|ENABLE_BROKER|[ユーザー アカウント制御]|  
+|RECURSIVE_TRIGGERS|OFF|はい|  
+|Service Broker のオプション|ENABLE_BROKER|はい|  
 |TRUSTWORTHY|OFF|いいえ|  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
@@ -113,7 +113,7 @@ ms.locfileid: "43083655"
 
 |SLO|最大 Tempdb データ ファイル サイズ (MB)|tempdb データ ファイルの数|最大 tempdb データ サイズ (MB)|
 |---|---:|---:|---:|
-|[標準]|14,225|1|14,225|
+|Basic|14,225|1|14,225|
 |S0|14,225|1|14,225| 
 |S1|14,225|1|14,225| 
 |S2|14,225| 1|14,225| 
