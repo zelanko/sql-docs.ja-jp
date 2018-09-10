@@ -75,7 +75,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  OPENXML の XPath 式の行および列で使用される名前空間宣言を指定します。 *xpath_namespaces*テキスト パラメーターです: **char**、 **nchar**、 **varchar**、 **nvarchar**、**テキスト**、 **ntext**または**xml**します。  
   
- 既定値は **\<root xmlns:mp ="urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'--microsoft-com:xml-metaprop">** します。 *xpath_namespaces*ウェルフォームド XML ドキュメントを使用して、OPENXML の XPath 式で使用されるプレフィックスの名前空間 Uri を提供します。 *xpath_namespaces*名前空間を参照するために使用する必要がありますプレフィックスを宣言します**urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'--microsoft-com:xml-metaprop**; この解析された XML 要素に関するメタデータを提供します。 この方法を使用して、メタプロパティ名前空間に対する名前空間プレフィックスを再定義できますが、再定義してもこの名前空間が失われることはありません。 プレフィックス**mp**に対して引き続き有効**urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'--microsoft-com:xml-metaprop**場合でも*xpath_namespaces*このような宣言が含まれていません。  
+ 既定値は **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** します。 *xpath_namespaces*ウェルフォームド XML ドキュメントを使用して、OPENXML の XPath 式で使用されるプレフィックスの名前空間 Uri を提供します。 *xpath_namespaces*名前空間を参照するために使用する必要がありますプレフィックスを宣言します**urn:schemas-microsoft-com:xml-metaprop**; この解析された XML 要素に関するメタデータを提供します。 この方法を使用して、メタプロパティ名前空間に対する名前空間プレフィックスを再定義できますが、再定義してもこの名前空間が失われることはありません。 プレフィックス**mp**に対して引き続き有効**urn:schemas-microsoft-com:xml-metaprop**場合でも*xpath_namespaces*このような宣言が含まれていません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
