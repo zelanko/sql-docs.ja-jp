@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9c5f4509735b763e6ea5752c9f6dd3c1e07a06e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 46930e648b72b03453a05f1a55da92a8325f9bda
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456996"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171714"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>バックアップの復元、復旧、管理用の RESTORE ステートメント (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   ここでは、バックアップ用の RESTORE ステートメントについて説明します。 バックアップを復元および復旧するためのメインの RESTORE {DATABASE | LOG} ステートメントの他に、いくつか補助的な RESTORE ステートメントを使用すると、バックアップの管理や復元シーケンスの計画で役立ちます。 補助的な RESTORE のコマンドには、RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY があります。  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!IMPORTANT]  
 >  以前のバージョンの SQL Server では、RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、および RESTORE VERIFYONLY という Transact-SQL ステートメントを使用すると、すべてのユーザーがバックアップ セットやバックアップ デバイスに関する情報を入手できました。 これらのステートメントではバックアップ ファイルの内容に関する情報が明らかになるため、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、これらのステートメントの実行に CREATE DATABASE 権限が必要になります。 この要件により、以前のバージョンよりも、バックアップ ファイルの安全性が高くなり、バックアップ情報が十分保護されます。 このアクセス許可の詳細については、「[データベースの権限の許可&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
   

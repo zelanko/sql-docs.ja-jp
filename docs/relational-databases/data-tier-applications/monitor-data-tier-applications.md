@@ -3,41 +3,34 @@ title: データ層アプリケーションの監視 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: data-tier-applications
-ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], data-tier applications
 - monitoring server performance [SQL Server], DACs
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f25b948403332fe5edf048e68bc210f786f9898c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb974864c6a4bc2a90308873a02a305e6d69acd2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32928957"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811988"
 ---
 # <a name="monitor-data-tier-applications"></a>データ層アプリケーションの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   データ層アプリケーション (DAC) は、システム ビューおよびシステム テーブルと共に **(SSMS) で** ユーティリティ エクスプローラー **および** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から監視できます。 さらに、DAC に含まれるデータベース内のオブジェクトもすべて、データベースと [!INCLUDE[ssDE](../../includes/ssde-md.md)] の標準的な監視方法を使用して監視できます。  
   
 ## <a name="before-you-begin"></a>はじめに  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]のマネージ インスタンスに DAC を配置した場合、その配置した DAC の情報は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー**を使用すると、DAC に関する基本的な正常性の情報を表示できます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]のマネージド インスタンスに DAC を配置した場合、その配置した DAC の情報は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー**を使用すると、DAC に関する基本的な正常性の情報を表示できます。  
   
  SSMS **オブジェクト エクスプローラー** では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが SQL Server ユーティリティに管理されているかどうかにかかわらず、インスタンスに配置された各 DAC についての基本的な構成情報が表示されます。 また、データベースの監視と同じ手順で、配置された DAC に関連付けられたデータベースを監視することもできます。  
   
 ## <a name="using-the-sql-server-utility"></a>SQL Server ユーティリティの使用  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** 詳細ページにダッシュボードが表示されます。このダッシュボードに[!INCLUDE[ssDE](../../includes/ssde-md.md)]のマネージ インスタンスに配置済みのすべての DAC に関するリソース使用状況が報告されます。 詳細ページの上部ペインには、配置済みの各 DAC が視覚インジケーターと共に表示されます。視覚インジケーターは、CPU およびファイル リソースの使用状況が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのために定義されたポリシーに適合しているかどうかを示します。 リスト ビュー内の任意の DAC を選択すると、さらに詳細な情報がページの下部ペインにあるタブに表示されます。 詳細ページに示される情報の詳細については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)」を参照してください。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** 詳細ページにダッシュボードが表示されます。このダッシュボードに[!INCLUDE[ssDE](../../includes/ssde-md.md)]のマネージド インスタンスに配置済みのすべての DAC に関するリソース使用状況が報告されます。 詳細ページの上部ペインには、配置済みの各 DAC が視覚インジケーターと共に表示されます。視覚インジケーターは、CPU およびファイル リソースの使用状況が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのために定義されたポリシーに適合しているかどうかを示します。 リスト ビュー内の任意の DAC を選択すると、さらに詳細な情報がページの下部ペインにあるタブに表示されます。 詳細ページに示される情報の詳細については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)」を参照してください。  
   
  **[配置済みのデータ層アプリケーション]** の詳細ページを使用すると、ハードウェア リソースを十分に活用していない DAC や、ハードウェア リソースに負荷を生じている DAC を迅速に特定でき、問題に対処するための計画を立てることができます。 現在のハードウェア リソースを十分に活用していない DAC が複数ある場合には、1 台のサーバーに統合して、一部のサーバーを別の用途のために解放することもできます。 現在のサーバー上のリソースに負荷を生じている DAC がある場合は、その DAC を規模の大きいサーバーに移動することも、現在のサーバーにリソースを追加することもできます。  
   
@@ -56,7 +49,7 @@ ms.locfileid: "32928957"
  **[配置済みのデータ層アプリケーション]** 詳細ページに表示される情報は、ユーティリティ管理データ ウェアハウスのデータから取得されます。データ ウェアハウスは、既定で 15 分ごとにデータを収集します。 この間隔も **[ユーティリティ管理]** 詳細ページで調整できます。  
   
 ## <a name="using-object-explorer"></a>オブジェクト エクスプローラーの使用  
- SSMS **オブジェクト エクスプローラー** には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置された各 DAC についての基本的な構成情報が表示されます。 これには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録済みのマネージ インスタンスと、 **ユーティリティ エクスプローラー**では表示できないスタンドアロン インスタンスの両方が含まれます。  
+ SSMS **オブジェクト エクスプローラー** には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置された各 DAC についての基本的な構成情報が表示されます。 これには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録済みのマネージド インスタンスと、 **ユーティリティ エクスプローラー**では表示できないスタンドアロン インスタンスの両方が含まれます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置された DAC の詳細を表示するには  
   
