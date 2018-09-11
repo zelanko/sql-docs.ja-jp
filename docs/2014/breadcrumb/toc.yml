@@ -217,7 +217,7 @@
                 - name: スクリプトによるパッケージの拡張
                   tocHref: /sql/integration-services/extending-packages-scripting/
                   topicHref: /sql/integration-services/extending-packages-scripting/extending-packages-with-scripting
-            - name: '[データベース エンジン サービス]'
+            - name: Data Quality Services
               tocHref: /sql/data-quality-services/
               topicHref: /sql/data-quality-services/data-quality-services
             - name: リレーショナル データベースの機能

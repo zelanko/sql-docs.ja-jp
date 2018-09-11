@@ -1,4 +1,4 @@
-- name: '[データベース エンジン サービス]'
+- name: Data Quality Services
   href: data-quality-services.md
 - name: Data Quality Services の概要
   href: introduction-to-data-quality-services.md

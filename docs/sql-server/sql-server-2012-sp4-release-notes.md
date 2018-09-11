@@ -184,7 +184,7 @@ Service Pack は、インストール メディアではなくオンラインで
   
 **回避策**: Power View ブックで **Scheduled Data Refresh** を使用するには、データ モデルだけの PowerPivot ブックを作成します。 Excel シートと Power View シートを含む別のブックを作成し、データ モデルを含む PowerPivot ブックにリンクします。 データ モデルを含む PowerPivot ブックに対してのみ、定期データ更新を実行します。  
   
-### <a name="data-quality-services"></a>[データベース エンジン サービス]  
+### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS がサポートされていないエディションの SQL Server 2012 で使用可能になる  
 **問題点:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM リリースでは、Enterprise、Business Intelligence、および Developer 以外のエディションの SQL Server でも Data Quality Services (DQS) 機能を使用できます。 SQL Server 2012 SP1 のインストール後は、Enterprise、Business Intelligence、および Developer 以外のエディションで DQS を使用できなくなります。  

@@ -326,7 +326,7 @@ sudo systemctl start mssql-server
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
-| &nbsp; | [データベース エンジン サービス] |
+| &nbsp; | Data Quality Services |
 | &nbsp; | マスター データ サービス |
 | &nbsp; | 分散トランザクション コーディネーター (DTC) |
 
