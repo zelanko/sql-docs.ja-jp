@@ -1,29 +1,30 @@
 ---
 title: SQL Server コンピューターの Windows で Learning サービス (In-database) のインストール |Microsoft Docs
+description: SQL Server または SQL Server での Python での R は、Windows 上の SQL Server 2017 Machine Learning Services をインストールするときに使用できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118580"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311652"
 ---
 # <a name="install-sql-server-machine-learning-services"></a>SQL Server Machine Learning サービスをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 以降、データベース内分析用の R と Python のサポートは、SQL Server Machine Learning Services、SQL Server 2016 で導入された R Services の機能の後継で提供されます。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
+SQL Server 2017 以降、R と Python のサポートのデータベース内分析は、SQL Server Machine Learning Services の後継で提供されます[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 で導入されました。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
 
 この記事を実行して、machine learning コンポーネントをインストールする方法を説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザード、および次の画面に表示されます。
 
 ## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
 
-+ SQL Server 2017 セットアップは、R、Python、またはその両方の言語サポートと Machine Learning サービスをインストールする場合に必要です。 インストールすることができる場合、代わりに SQL Server 2016 のインストール メディアがある、 [SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) R 言語サポートを取得します。
++ SQL Server 2017 セットアップは、R、Python での Machine Learning サービスに必要です。 代わりに SQL Server 2016 のインストール メディアがある、場合[SQL Server の 2016 R Services をインストール](sql-r-services-windows-install.md)R 言語サポートを取得します。
 
 + データベース エンジンのインスタンスが必要です。 機能をインストールするだけ R または Python を既存のインスタンスに増分の追加にできます。
 
@@ -146,7 +147,7 @@ SQL Server 2017 以降、データベース内分析用の R と Python のサ�
 
     この時点で、**run_value** が 1 に設定されている必要があります。
     
-2. 開く、**サービス**パネルまたは SQL Server 構成マネージャー、ことを確認および**SQL Server スタート パッド サービス**が実行されています。 R がデータベース エンジンのインスタンスごとに 1 つのサービスが必要または Python をインストールします。 詳細については、次を参照してください。 [Python 統合をサポートするコンポーネント](../python/new-components-in-sql-server-to-support-python-integration.md)します。 
+2. 開く、**サービス**パネルまたは SQL Server 構成マネージャー、ことを確認および**SQL Server スタート パッド サービス**が実行されています。 R がデータベース エンジンのインスタンスごとに 1 つのサービスが必要または Python をインストールします。 サービスの詳細については、次を参照してください。 [Extensibility framework](../concepts/extensibility-framework.md)します。 
    
 3. スタート パッドが実行されている場合は、外部スクリプトのランタイムは、SQL Server と通信できることを確認する単純な R と Python のスクリプトを実行できる必要があります。
 

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_latch_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_latch_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375685"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +35,23 @@ ms.lasthandoff: 05/23/2018
   すべてのラッチ待機に関する情報を、クラスごとに返します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_latch_stats**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_latch_stats**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|ラッチ クラスの名前。|  
 |waiting_requests_count|**bigint**|クラス内のラッチに対する待機数。 このカウンターは、ラッチ待機の開始時に増加します。|  
-|wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列はラッチの待機中に、ラッチ待機の最後に、5 分ごとに更新します。|  
+|wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列が、ラッチ待機中に、ラッチ待機の最後に、5 分ごとに更新されます。|  
 |max_wait_time_ms|**bigint**|メモリ オブジェクトがラッチを待機した最大時間。 この値が著しく大きい場合、内部デッドロックを示している可能性があります。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
-## <a name="remarks"></a>解説  
- sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 状況によっては、ラッチの競合を自分で解決または緩和できます。 ただし、ある可能性がありますが必要になるような場合にお問い合わせください[!INCLUDE[msCoName](../../includes/msconame-md.md)]カスタマー サポート サービス。  
+## <a name="remarks"></a>コメント  
+ sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 状況によっては、ラッチの競合を自分で解決または緩和できます。 ただし、状況もあります。 が必要になることにお問い合わせください[!INCLUDE[msCoName](../../includes/msconame-md.md)]カスタマー サポート サービス。  
   
  次のように `DBCC SQLPERF` を使用すると、sys.dm_os_latch_stats の内容をリセットできます。  
   
@@ -76,7 +77,7 @@ GO
   
  次の表では、さまざまなラッチ クラスについて簡単に説明します。  
   
-|ラッチ クラス|Description|  
+|ラッチ クラス|説明|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で使用され、割り当てリング バッファーの作成の同期を初期化します。|  
 |ALLOC_CREATE_FREESPACE_CACHE|ヒープ用の内部空き領域キャッシュの同期を初期化するために使用します。|  
@@ -104,7 +105,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|DBCC を使用した差分バックアップ操作を同期するために使用します。|  
 |BACKUP_OPERATION|バックアップ操作で、データベース、ログ、ファイルのバックアップなどの内部データ構造を同期するために使用します。|  
 |BACKUP_FILE_HANDLE|復元操作中にファイルを開く操作を同期するために使用します。|  
-|BUFFER|データベース ページへの短時間アクセスを同期するために使用します。 いずれのデータベース ページを読み取りまたは修正する場合も、事前にバッファー ラッチが必要です。 バッファー ラッチの競合によって、ホット ページや低速な I/O など、いくつかの問題が発生する場合があります。<br /><br /> このラッチ クラスは、ページ ラッチを使用するすべての状況に対応しています。 sys.dm_os_wait_stats では、I/O 操作および読み取りが発生し、書き込み、ページ上操作ページ ラッチ待機の違いにより、します。|  
+|BUFFER|データベース ページへの短時間アクセスを同期するために使用します。 いずれのデータベース ページを読み取りまたは修正する場合も、事前にバッファー ラッチが必要です。 バッファー ラッチの競合によって、ホット ページや低速な I/O など、いくつかの問題が発生する場合があります。<br /><br /> このラッチ クラスは、ページ ラッチを使用するすべての状況に対応しています。 sys.dm_os_wait_stats は、ページ ラッチ待機は、I/O 操作および読み取りによって発生し、ページに対する書き込み操作間の差です。|  
 |BUFFER_POOL_GROW|バッファー プールの拡張操作中、内部バッファー マネージャーの同期に使用します。|  
 |DATABASE_CHECKPOINT|データベース内のチェックポイントをシリアル化するために使用します。|  
 |CLR_PROCEDURE_HASHTABLE|内部使用のみです。|  
@@ -125,7 +126,7 @@ GO
 |FCB|ファイル制御ブロックへのアクセスを同期するために使用します。|  
 |FCB_REPLICA|内部使用のみです。|  
 |FGCB_ALLOC|ファイル グループ内のラウンド ロビン割り当て情報へのアクセスを同期するために使用します。|  
-|FGCB_ADD_REMOVE|ADD および DROP ファイル操作を行うファイル グループへのアクセスを同期するために使用します。|  
+|FGCB_ADD_REMOVE|追加のファイル グループへのアクセスを同期、削除、拡張、および圧縮ファイルの操作を使用します。|  
 |FILEGROUP_MANAGER|内部使用のみです。|  
 |FILE_MANAGER|内部使用のみです。|  
 |FILESTREAM_FCB|内部使用のみです。|  
@@ -168,7 +169,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|内部使用のみです。|  
 |SERVICE_BROKER_HOST_NAME|内部使用のみです。|  
 |SERVICE_BROKER_READ_CACHE|内部使用のみです。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 待機キューのインスタンス レベルのマップを同期するために使用されます。 データベースの ID、データベースのバージョン、およびキューの ID の組ごとに 1 つのキューが存在します。 接続数が、このクラスのラッチ競合が発生する可能性が:、WAITFOR(RECEIVE) で待ち状態です。呼び出し元 WAITFOR(RECEIVE) です。WAITFOR のタイムアウトを超過メッセージの受信コミットまたは WAITFOR(RECEIVE); を含むトランザクションをロールバックしていますWAITFOR(RECEIVE) 待機状態のスレッドの数を減らすことによっての競合を減らすことができます。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 待機キューのインスタンス レベルのマップを同期するために使用します。 データベースの ID、データベースのバージョン、およびキューの ID の組ごとに 1 つのキューが存在します。 多くの接続が場合に、このクラスのラッチの競合が発生する可能性が:、WAITFOR(RECEIVE) で待ち状態です。呼び出し元 WAITFOR(RECEIVE);WAITFOR タイムアウト。メッセージの受信コミットまたは WAITFOR(RECEIVE); を含むトランザクションをロールバックします。WAITFOR(RECEIVE) 待機状態のスレッドの数を減らすことでの競合を減らすことができます。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|内部使用のみです。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|内部使用のみです。|  
 |SERVICE_BROKER_TRANSPORT|内部使用のみです。|  

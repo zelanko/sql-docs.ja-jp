@@ -1,27 +1,28 @@
 ---
 title: SQL Server 2016 R Services (In-database) のインストール |Microsoft Docs
+description: SQL Server で R は、Windows 上の SQL Server 2016 R Services をインストールするときに使用できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118510"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311682"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事は、インストールして構成する方法を説明します**SQL Server 2016 R Services (In-database)** します。 SQL Server 2016 をした場合は、SQL Server で R コードの実行を有効にするには、この機能をインストールします。
+この記事は、インストールして構成する方法を説明します**SQL Server 2016 R Services**します。 SQL Server 2016 をした場合は、SQL Server で R コードの実行を有効にするには、この機能をインストールします。
+
+SQL Server 2017 での R 統合が提供されています[Machine Learning サービス](../r/r-server-standalone.md)Python の加算を反映します。 R 統合し SQL Server 2017 インストール メディアがある場合は、次を参照してください。 [SQL Server 2017 Machine Learning Services のインストール](sql-machine-learning-services-windows-install.md)機能を追加します。 
 
 ## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
-
-+ SQL Server 2016 セットアップは、R Services をインストールする場合に必要です。 インストールする必要がある場合、代わりに SQL Server 2017 インストール メディアがある、 [SQL Server 2017 の Machine Learning Services (In-database)](sql-machine-learning-services-windows-install.md)そのバージョンの SQL Server の R 統合を取得します。
 
 + データベース エンジンのインスタンスが必要です。 既存のインスタンスに増分追加できますが、だけの R をインストールすることはできません。
 
@@ -31,7 +32,7 @@ ms.locfileid: "43118510"
 
 + インストールしない**共有機能** > **R Server (スタンドアロン)** 同じコンピューター上の in-database インスタンスを実行します。 
 
-+ SQL Server インスタンスは、独自のコピーのオープン ソース R および Anaconda ディストリビューションを使用するため、R と Python の他のバージョンとサイド バイ サイドでインストールがあります。 ただし、SQL Server の外部の SQL Server コンピューターで R と Python を使用するコードを実行している可能性をさまざまな問題があります。
+  SQL Server インスタンスは、独自のコピーのオープン ソース R および Anaconda ディストリビューションを使用するため、R と Python の他のバージョンとサイド バイ サイドでインストールがあります。 ただし、SQL Server の外部の SQL Server コンピューターで R と Python を使用するコードを実行している可能性をさまざまな問題があります。
     
   + 別のライブラリと、さまざまな実行可能ファイルを使用して SQL Server で実行するときよりも、異なる結果を取得します。
   + リソースの競合をリードする、SQL Server が外部ライブラリで実行されている R と Python スクリプトを管理することはできません。
@@ -128,7 +129,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
 
     この時点で、**run_value** が 1 に設定されている必要があります。
 
-2. 開く、**サービス**パネルまたは SQL Server 構成マネージャー、ことを確認および**SQL Server スタート パッド サービス**が実行されています。 R がデータベース エンジンのインスタンスごとに 1 つのサービスが必要または Python をインストールします。 詳細については、次を参照してください。 [Python 統合をサポートするコンポーネント](../python/new-components-in-sql-server-to-support-python-integration.md)します。
+2. 開く、**サービス**パネルまたは SQL Server 構成マネージャー、ことを確認および**SQL Server スタート パッド サービス**が実行されています。 R がデータベース エンジンのインスタンスごとに 1 つのサービスが必要または Python をインストールします。 サービスの詳細については、次を参照してください。 [Extensibility framework](../concepts/extensibility-framework.md)します。
 
 7. スタート パッドが実行されている場合は、外部スクリプトのランタイムは、SQL Server と通信できることを確認する単純な R を実行できる必要があります。 
 

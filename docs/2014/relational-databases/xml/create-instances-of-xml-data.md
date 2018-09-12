@@ -5,8 +5,7 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81971c9b0fb1c6ebcdf4f90650dc5af3da558e90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc4afe2f1897d1dda0aeb444a449dcef02140242
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215062"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890188"
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
   このトピックでは、XML インスタンスを生成する方法について説明します。  
@@ -44,7 +43,7 @@ ms.locfileid: "37215062"
 -   一括読み込みを使用する。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>文字列インスタンスとバイナリ インスタンスの型キャスト  
- いずれかを解析することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの文字列データ型 [**n**] [**var**]**char**、 **[n] text**、 **varbinary**、および**イメージ**に、`xml`のデータ型をキャスト (CAST) または (変換)、文字列に変換する、`xml`データ型。 型指定されていない XML は、正しい形式かどうかが確認されます。 存在する場合は、スキーマが関連付け、`xml`型、検証が実行されることもできます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ いずれかを解析することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの文字列データ型 **[n]** **[var]****char**、 **[n] text**、 **varbinary**、および**イメージ**に、`xml`のデータ型をキャスト (CAST) または (変換)、文字列に変換する、`xml`データ型。 型指定されていない XML は、正しい形式かどうかが確認されます。 存在する場合は、スキーマが関連付け、`xml`型、検証が実行されることもできます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
  XML ドキュメントは、UTF-8、UTF-16、windows-1252 など、さまざまなエンコードを使用してエンコードできます。 ここでは、文字列およびバイナリの元のデータ型と XML ドキュメントのエンコード間の相互作用における規則、およびパーサーの動作に関する規則を概説します。  
   

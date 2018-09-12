@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b977d079589dbb4c54d5c31fec644d9f984dd61
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 384c8c94bdef65e41af999848c9bac63fc0c8d40
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434852"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888368"
 ---
 # <a name="python-libraries-and-data-types"></a>Python ライブラリとデータ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,16 +29,14 @@ RevoScaleR の機能のサブセット (rxLinMod、rxLogit、rxPredict、rxDTree
 
 詳細については、次を参照してください。 [revoscalepy のとは何ですか?](what-is-revoscalepy.md)します。
 
+Python では、SQL Server とのデータ型の数に制限をサポートします。 その結果、SQL Server からデータを Python スクリプトを使用するたびにデータ可能性があります暗黙的に型に変換を互換性のあるデータ。 ただし、実際の変換を自動的に実行できない多くの場合、エラーが返されます。
+
 ## <a name="python-and-sql-data-types"></a>Python と SQL データ型
-
-Python では、SQL Server とのデータ型の数に制限をサポートします。
-
-データを使用する場合にその結果、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python スクリプトでデータが暗黙的に変換を互換性のあるデータ型にします。 ただし、実際の変換を自動的に実行できない多くの場合、エラーが返されます。
 
 このテーブルには、提供されている暗黙的な変換が一覧表示します。 他のデータ型はサポートされていません。
 
 |SQLtype|Python の種類|
-|-|-|
+|-------|-----------|
 |**bigint**|`numeric`|
 |**[バイナリ]**|`raw`|
 |**bit**|`bool`|

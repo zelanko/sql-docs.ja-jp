@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ac7345e2e4f71db13801e2813ea77aa88f5cdc69
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084675"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343087"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>SQL Server のデータのチュートリアル: 使用 RevoScaleR の R 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ RevoScaleR とは、データ サイエンスと機械学習のワークロー�
 > [!TIP]
 > 中断した箇所からを容易に再開できるように、レッスンの合間に R ワークスペースを保存してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - **SQL Server で R のサポート**
   
@@ -72,9 +72,9 @@ RevoScaleR とは、データ サイエンスと機械学習のワークロー�
 
 ## <a name="r-development-tools"></a>R 開発ツール
 
-R 開発者は、通常記述および R コードをデバッグするための Ide を使用します。 推奨事項を次に示します。
+R 開発者は、通常記述および R コードをデバッグするための Ide を使用します。 推奨事項をいくつか以下に示します。
 
-- **R Tools for Visual Studio** (RTVS) は、無料プラグインを Intellisense、デバッグを提供し、R Server と SQL Server Machine Learning サービスの両方で使用できる Microsoft R をサポートします。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
+- **R Tools for Visual Studio** (RTVS) は、無料プラグインを Intellisense、デバッグを提供し、Microsoft R 向けサポートR Server と SQL Server Machine Learning サービスの両方で使用できます。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
 
 - **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、次を参照してください。 [ https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)します。
 
@@ -82,7 +82,7 @@ R 開発者は、通常記述および R コードをデバッグするための
 
 RevoScaleR がローカルとリモートの両方のコンピューターに必要なことを思い出してください。 RStudio または他の Microsoft R ライブラリが不足している環境の一般的なインストールを使用して、このチュートリアルを完了できません。 詳しくは、「 [データ サイエンス クライアントのセットアップ](../r/set-up-a-data-science-client.md)」を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [レッスン 1: データベースとアクセス許可を作成します。](deepdive-work-with-sql-server-data-using-r.md)

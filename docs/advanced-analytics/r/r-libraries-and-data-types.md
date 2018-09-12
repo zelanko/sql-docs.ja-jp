@@ -1,5 +1,5 @@
 ---
-title: SQL Server の Machine Learning における R データ型の作業 |Microsoft ドキュメント
+title: SQL Server Machine Learning で R データ型の使用 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,41 +7,41 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586044"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890068"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R ライブラリと R データ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、R ライブラリに含まれていると、次の製品でサポートされているデータ型について説明します。
+この記事では、R ライブラリに含まれていると、次の製品でサポートされているデータ型について説明します。
 
 + SQL Server 2016 R Services (In-database)
-+ SQL Server コンピューターのサービス (In-database) を学習
++ SQL Server Machine Learning Services (In-database)
 
-このトピックは、サポートされていないデータ型も一覧表示されます。 とリスト、データ型の変換 R と SQL Server の間でデータが渡されるときに暗黙的に実行することができます。
+この記事では、サポートされていないデータ型も一覧表示されます。 し、一覧データが R と SQL Server の間でデータが渡されるときに暗黙的に実行することが変換を入力します。
 
 ## <a name="r-libraries"></a>R ライブラリ
 
-Microsoft R Open の特定のリリースでは、両方の製品では、R Services およびの R、マシン学習サービスを配置します。 たとえば、最新のリリースでは、SQL Server 2017 Machine Learning サービスは Microsoft R Open 上に構築された 3.3.3 です。
+両方の製品では、R Services と、R を使用した Machine Learning サービスは、Microsoft R Open の特定のリリースに揃えて配置されます。 たとえば、最新のリリースでは、SQL Server 2017 Machine Learning サービスは Microsoft R Open 上に構築された 3.3.3 します。
 
-SQL Server の特定のインスタンスに関連付けられた R のバージョンを表示するには、RGui を開きます。
+SQL Server の特定のインスタンスに関連付けられている R のバージョンを表示するには、RGui を開きます。
 
-1. 既定のインスタンスのパスはとおりなります。 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. R ディストリビューションおよび Microsoft R Open のバージョン番号を示すメッセージが表示されます。
+1. 既定のインスタンスのパスとして次のようになります。 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+2. R の配布と Microsoft R Open のバージョン番号を一覧表示するメッセージが表示されます。
 
 Microsoft R Server の特定のバージョンに含まれている R のバージョンを検索するには、次を参照してください。 [R Server の新機能](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)します。
 
-SQL server パッケージ管理システムでは、複数のユーザー、同じパッケージの共有または同じパッケージの別のバージョンを使用して、R パッケージの複数のバージョンが、同じコンピューターにインストールできますということに注意してください。 詳細については、次を参照してください。 [SQL Server で R パッケージの管理](../r/install-additional-r-packages-on-sql-server.md)です。
+SQL Server でのパッケージ管理システムは、複数のユーザー、同じパッケージの共有または同じパッケージの異なるバージョンを使用して、R パッケージの複数のバージョンが、同じコンピューターにインストールできます意味に注意してください。 詳細については、次を参照してください。 [SQL Server での R パッケージ管理](../r/install-additional-r-packages-on-sql-server.md)します。
 
 ## <a name="r-and-sql-data-types"></a>R と SQL データ型
 
-一方[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いくつかの十種類データ型をサポートしている R が限定された数のスカラー データ型 (数値、整数、複合、論理、文字、日付/時刻と生) です。 データを使用する場合にその結果、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R スクリプトでデータが暗黙的に変換を互換性のあるデータ型にします。 ただし、正確な変換が自動的に実行できない多くの場合、「未処理の SQL データ型」など、エラーが返されます。
+一方[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いくつかの十種類データ型をサポートしています。 R が限定された数のスカラー データ型 (数値、整数、複合、論理、文字、日付/時刻と生)。 データを使用する場合にその結果、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、R スクリプトでデータが暗黙的に変換を互換性のあるデータ型にします。 ただし、実際の変換を自動的に実行できない多くの場合、「ハンドルされていない SQL データ型」など、エラーが返されます。
 
-このセクションでは、暗黙の変換についても説明し、サポートされていないデータ型の一覧を示します。 R と SQL Server の間のデータ型のマッピングのガイダンスは提供されます。
+このセクションでは、暗黙的な変換が提供し、サポートされていないデータ型の一覧を示します。 R と SQL Server 間のデータ型をマッピングするためのガイダンスが提供されます。
 
 ## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>R と SQL Server 間の暗黙のデータ型変換
 
@@ -75,7 +75,7 @@ SQL server パッケージ管理システムでは、複数のユーザー、同
 
 [SQL Server 型システム](../../t-sql/data-types/data-types-transact-sql.md)でサポートされるデータ型のカテゴリのうち、次の型は R コードに渡されるときに問題が発生する可能性があります。
 
-+ 示されたデータ型、**他**SQL 型システム」の「:**カーソル**、**タイムスタンプ**、 **hierarchyid**、 **uniqueidentifier**、 **sql_variant**、 **xml**、**テーブル**
++ データ型が記載されて、**他**SQL 型システムの記事のセクション:**カーソル**、**タイムスタンプ**、 **hierarchyid**、 **uniqueidentifier**、 **sql_variant**、 **xml**、**テーブル**
 + すべての空間型
 + **image**
 
@@ -102,7 +102,7 @@ Microsoft SQL Server 2016 と Microsoft Azure SQL Database には、データ型
 
 一般的に、特定のデータ型またはデータ構造を R で使用する方法についてわからない点がある場合は、  `str()` 関数を使用して内部構造と R オブジェクトの種類を取得してください。 この関数の結果は R コンソールに出力され、 **の** [メッセージ] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]タブのクエリ結果で確認することもできます。 
 
-R コードで使用するためのデータをデータベースから取得する場合、R で使用できない列だけでなく、GUID (一意識別子)、タイムスタンプ、監査に使用されるその他の列など、分析に使用できない列と、ETL プロセスによって作成された系列情報を常に除外する必要があります。 
+GUID (一意識別子)、タイムスタンプ、監査に使用されるその他の列などの分析または系列は不要な列と同様に、R で使用できない列を排除する必要があります常に R コードで使用するためのデータベースからデータを取得するときにETL プロセスによって作成された情報。 
 
 不要な列を含めると、カーディナリティの大きい列が係数として使用されている場合には特に、R コードのパフォーマンスが大幅に低下することがあります。 そのため、SQL Server システム ストアド プロシージャと情報ビューを使用して、事前に特定のテーブルのデータ型を取得し、互換性のない列を排除または変換することをお勧めします。 詳しくは、「[システム情報スキーマ ビュー (TRANSACT-SQL)](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)」をご覧ください
 
@@ -118,7 +118,7 @@ R コードで使用するためのデータをデータベースから取得す
 
 次の例では、SQL Server と R の間を往復するときにデータを変換する方法を示しています。
 
-クエリが、一連から値を取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル、およびストアド プロシージャを使用して[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) R ランタイムを使用して値を出力します。
+クエリは、一連からの値を取得します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル、およびストアド プロシージャを使用して[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) R ランタイムを使用して値を出力します。
 
 ```SQL
 CREATE TABLE MyTable (    
@@ -148,8 +148,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|@shouldalert|@shouldalert|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|@shouldalert|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 R で `str` 関数を使用すると、出力データのスキーマが取得されます。 この関数からは、次の情報が返されます。
 
@@ -190,4 +190,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## <a name="see-also"></a>参照
 
-[Python ライブラリとデータ型](../python/python-libraries-and-data-types.md)

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,28 +15,28 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa867d399d11b65be61617a51991d6cc2dd2a8f2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d3966ec508c7b9b4858c3982b28a5f634ce7b426
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083224"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889288"
 ---
 # <a name="columns-with-a-name"></a>名前のある列
   行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
   
--   列の名前で始まり、アット マーク (\@)。  
+-   列名がアット マーク (\@) で始まる場合。  
   
--   列の名前値で始まらない、アット マーク (\@)。  
+-   列名がアット マーク (\@) で始まらない場合。  
   
--   列の名前値で始まらない、アット マーク\@スラッシュ (/) が含まれています。  
+-   列名がアット マーク (\@) で始まらず、スラッシュ (/) を含む場合。  
   
 -   複数の列に同一のプレフィックスがある場合  
   
 -   名前の異なる列がある場合  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>列の名前で始まり、アット マーク (\@)  
- 列名で始まる場合、アット マーク (\@) にスラッシュ記号 (/) の属性が含まれていないと、<`row`> を対応する列の値を持つ要素が作成されます。 たとえば、次のクエリが 2 つの列を返します (\@PmId、名) の行セット。 結果の XML では、対応する <`row`> 要素に **PmId** 属性が追加され、この属性に ProductModelID の値が設定されます。  
+## <a name="column-name-starts-with-an-at-sign-"></a>列名がアット マーク (\@) で始まる場合  
+ 列名で始まる場合、アット マーク (\@) にスラッシュ記号 (/) の属性が含まれていないと、<`row`> を対応する列の値を持つ要素が作成されます。 たとえば、次のクエリは 2 列 (\@PmId、Name) の行セットを返します。 結果の XML では、対応する <`row`> 要素に **PmId** 属性が追加され、この属性に ProductModelID の値が設定されます。  
   
 ```  
   
@@ -69,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名は値で始まらない、アット マーク (\@)  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名がアット マーク (\@) で始まらない場合  
  列名が始まっていない場合、アット マーク (\@)、XPath ノード テストのいずれかで、ない場合、スラッシュ記号 (/)、行要素のサブ要素である XML 要素を含まない <`row`> 既定では、作成されます。  
   
  次のクエリでは列名 result が指定されています。 したがって、<`row`> 要素には、<`result`> 子要素が追加されます。  
@@ -116,8 +115,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>列名は値で始まらない、アット マーク (\@) とスラッシュ (/) が含まれています  
- 列名が始まっていない場合、アット マーク (\@)、スラッシュ (/) が含まれていますが、列名には、XML 階層が示されます。 たとえば、列名を "Name1/Name2/Name3.../Name***n*** " とすると、Name***i*** は、i = 1 の場合は現在の行要素の入れ子である要素を表し、それ以外の場合は Name***i-1***要素の下にある要素を表します。 名前***n***で始まる '\@'、名前の属性にマップされている***n-1***要素。  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>列名がアット マーク (\@) で始まらず、スラッシュ (/) を含む場合  
+ 列名がアット マーク (\@) で始まらず、スラッシュ (/) を含んでいる場合、列名は XML 階層を示します。 たとえば、列名を "Name1/Name2/Name3.../Name***n*** " とすると、Name***i*** は、i = 1 の場合は現在の行要素の入れ子である要素を表し、それ以外の場合は Name***i-1***要素の下にある要素を表します。 Name***n*** が '\@' で始まる場合は、Name***n-1*** 要素の属性にマップされます。  
   
  たとえば次のクエリは、従業員の ID と名前を返します。従業員名は、First、Middle、および Last から構成される複合型の要素 EmpName で表現されます。  
   

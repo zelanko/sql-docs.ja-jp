@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62e2583de85ca20944b4e86c321ca661d98d2825
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327345"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890138"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml データ型に対する FOR XML サポート
   FOR XML クエリの列を指定する場合`xml`型 SELECT 句で列の値は、ELEMENTS ディレクティブを指定するかどうかに関係なく、返された xml 要素としてマップされます。 `xml` 型の列内の XML 宣言はシリアル化されません。  

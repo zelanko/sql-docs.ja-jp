@@ -1,7 +1,7 @@
 ---
 title: sys.servers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038815"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171754"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   登録されると、リンクまたはリモート サーバーごとに 1 行と 1 行を持つ、ローカル サーバーのデータを含む**server_id** = 0。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|リンク サーバーのローカル ID です。|  
-|**name**|**sysname**|ときに**server_id** = 0 の場合、サーバー名になります。<br /><br /> ときに**server_id** > 0 で、リンク サーバーのローカル名です。|  
-|**product**|**sysname**|リンク サーバーの製品名 "SQL Server" の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスであることを示します。|  
+|**name**|**sysname**|ときに**server_id** = 0 の場合、サーバー名が返されます。<br /><br /> ときに**server_id** > 0 の場合、返される値は、リンク サーバーのローカル名。|  
+|**product**|**sysname**|リンク サーバーの製品名 "SQL Server"の値を別のインスタンスを示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**provider**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。|  
 |**data_source**|**nvarchar (4000)**|OLE DB データ ソース接続プロパティです。|  
 |**location**|**nvarchar (4000)**|OLE DB 場所接続プロパティです。 ない場合は NULL です。|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038815"
   
  アクセス許可がローカル サーバーを表示する必要はありません (**server_id** = 0)。  
   
- リンクまたはリモート サーバーを作成するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、既定のログイン マッピングを作成、**パブリック**サーバーの役割。 つまり、既定ではすべてのログインが、すべてのリンク サーバーおよびリモート サーバーを表示できます。 これらのサーバーへの可視性を制限するには、実行することによって既定のログイン マッピングを削除[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) NULL を指定して、 *locallogin*パラメーター。  
+ リンクまたはリモート サーバーを作成するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、既定のログイン マッピングを作成、**パブリック**サーバーの役割。 既定のログイン マッピングは、すべてのログインがすべてのリンクとリモート サーバーを表示できることを意味します。 これらのサーバーへの可視性を制限するには、実行することによって既定のログイン マッピングを削除[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) NULL を指定して、 *locallogin*パラメーター。  
   
- 既定のログイン マッピングを削除すると、リンク ログインまたはリモート ログイン ユーザーとして明示的に追加されたユーザーだけが、対象のリンク サーバーやリモート サーバーを表示できるようになります。 既定のログイン マッピングを削除した後、すべてのリンク サーバーおよびリモート サーバーを表示するには、次の権限が必要です。  
+ 既定のログイン マッピングを削除すると、リンク ログインまたはリモート ログイン ユーザーとして明示的に追加されたユーザーだけが、対象のリンク サーバーやリモート サーバーを表示できるようになります。  次のアクセス許可は、既定のログイン マッピング後のすべてのリンクとリモート サーバーを表示する必要があります。  
   
--   ALTER ANY LINKED SERVER または ALTER ANY LOGIN ON SERVER  
-  
--   メンバーシップ、 **setupadmin**または**sysadmin**固定サーバー ロール  
+- `ALTER ANY LINKED SERVER` または `ALTER ANY LOGIN ON SERVER`  
+- メンバーシップ、 **setupadmin**または**sysadmin**固定サーバー ロール  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

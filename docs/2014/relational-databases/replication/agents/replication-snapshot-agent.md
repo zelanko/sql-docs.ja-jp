@@ -1,7 +1,7 @@
 ---
 title: レプリケーション スナップショット エージェント | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190172"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311692"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
   レプリケーション スナップショット エージェントは、パブリッシュされたテーブルおよびデータベース オブジェクトのスキーマとデータを含むスナップショット ファイルを作成し、これらのファイルをスナップショット フォルダーに格納し、同期ジョブをディストリビューション データベースに記録する実行可能ファイルです。  
@@ -62,7 +62,8 @@ ms.locfileid: "37190172"
 [-MaxNetworkOptimization [0|1]]  
 [-Outputoutput_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
-[-PacketSizepacket_size]  
+[-PacketSizepacket_size]
+[-PrefetchTables [0|1] ]  
 [-ProfileNameprofile_name]  
 [-PublisherDBpublisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -194,6 +195,14 @@ ms.locfileid: "37190172"
 |**0**|エラー メッセージのみが記録されます。|  
 |**1** (既定値)|すべての進行状況レポート メッセージが出力されます (既定)。|  
 |**2**|すべてのエラー メッセージと進行状況レポート メッセージが出力されます。これはデバッグの際に役立ちます。|  
+
+ **-PrefetchTables** [ **0**| **1**]  
+ テーブル オブジェクトがプリフェッチし、キャッシュされているかどうかを指定する省略可能なパラメーター。  既定の動作では、内部の計算に基づいて、SMO コンポーネントを使用して特定のテーブルのプロパティをプリフェッチします。  このパラメーターは、操作はかなりのプリフェッチ SMO になったシナリオで実行する場合に便利にすることはできます。 このパラメーターを使用しない場合は、パブリケーションにアーティクルとして追加されるテーブルの割合に基づいて実行時にこの決定が行われます。  
+  
+|OutputVerboseLevel の値|説明|  
+|------------------------------|-----------------|  
+|**0**|SMO コンポーネントのプリフェッチ メソッドの呼び出しは無効です。|  
+|**1**|スナップショット エージェントは SMO を使用していくつかのテーブルのプロパティをキャッシュするプリフェッチ メソッドを呼び出します|  
   
  **-PacketSize** *packet_size*  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]への接続中にスナップショット エージェントが使用するパケット サイズ (バイト) です。 既定値は 8,192 バイトです。  

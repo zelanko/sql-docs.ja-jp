@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 68cfc33604bee9ed3e4b7d0c34c1ebfb6dec2454
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084014"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888558"
 ---
 # <a name="examples-using-path-mode"></a>例 : PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
@@ -126,7 +125,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>XPath 形式の列名の指定  
- 次のクエリでは、`ProductModelID`で始まる列の名前を指定された '\@'、スラッシュ (/) を含んでいません。 したがって、結果の XML では、<`row`> 要素の属性が生成され、対応する列値が設定されます。  
+ 次のクエリでは、`ProductModelID` 列に指定した名前が '\@' で始まり、スラッシュ ('/') を含んでいません。 したがって、結果の XML では、<`row`> 要素の属性が生成され、対応する列値が設定されます。  
   
 ```  
 USE AdventureWorks2012;  

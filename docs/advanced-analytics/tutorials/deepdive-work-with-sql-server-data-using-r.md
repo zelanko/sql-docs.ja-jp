@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084184"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375675"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>レッスン 1: データベースとアクセス許可を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     スキーマは、1 つの特定のユーザー名に関連付けられたが、ユーザーに対して、_スキーマの所有者_します。 オブジェクトを作成するときは、別のスキーマに作成することを明示的に要求しない限り、常に自分用のスキーマに作成されます。
   
-    たとえば、名前のテーブルを作成する`*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< database_name > .db_datareader します。TestData'。
+    名前のテーブルを作成する場合など**TestData**、既定のスキーマは、 **db_datareader**、名前のテーブルが作成された`<database_name>.db_datareader.TestData`。
   
     このため、テーブルが異なるスキーマに属していれば、1 つのデータベースに同じ名前の複数のテーブルを含めることができます。
    

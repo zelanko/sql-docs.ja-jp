@@ -1,26 +1,26 @@
 ---
-title: Machine Learning サービスでは、SQL Server |Microsoft Docs
-description: SQL Server 2017 Machine Learning サービス、R および Python の概要概要がデータベース内分析のサポートします。
+title: R と Python Machine Learning の SQL Server のサービス |Microsoft Docs
+description: SQL Server と SQL Server, データ サイエンスと統計モデリング、機械学習モデル、予測分析、データの視覚化などのリレーショナル データとの統合での Python での R です。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 09/10/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: cf67348b703677035435e54c323334478a1dfdf4
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240190"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343117"
 ---
-# <a name="machine-learning-services-in-sql-server-2017"></a>Machine Learning サービスでは、SQL Server 2017
+# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 での machine Learning サービス (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 Machine Learning Services とは、データベース エンジン インスタンス、SQL Server で R と Python のコードを実行するためのアドオンです。 コア エンジンのプロセスから分離されたが、R または Python のステートメントを含む T-SQL スクリプトまたは R または Python のコードを含む T-SQL ストアド プロシージャとしてのリレーショナル データを完全に使用可能な機能拡張フレームワークでコードが実行されます。 
 
-SQL Server 2016 R Services を使用していた場合、SQL Server 2017 での Machine Learning サービスは基本の R、RevoScaleR、MicrosoftML、および 2016年で導入されたその他のライブラリの更新バージョンでの R のサポートの次世代になります。
+使用していた場合[SQL Server 2016 R Services](r/sql-server-r-services.md)、SQL Server 2017 での Machine Learning サービスは、基本の R で RevoScaleR の MicrosoftML の更新バージョンでの R のサポートの次世代および他のライブラリは、2016年で導入されました。
 
 Machine Learning サービスのキーの価値提案は、スケール、および計算と、データが存在する処理を統合する機能での高度な分析を提供する、企業の R と Python パッケージの電源間でデータをプルする必要はありませんネットワーク。
 
@@ -44,6 +44,8 @@ SQL Server 2017 では、R と Python がサポートされています。 次�
 ## <a name="using-sql-mls"></a>SQL MLS を使用します。
 
 開発者およびアナリスト多くの場合、ローカルの SQL Server インスタンス上で実行されるコードがあります。 Machine Learning サービスを追加し、外部スクリプトの実行を有効にして、SQL Server のモダリティで R と Python のコードを実行することができますストアド プロシージャにスクリプトをラップする、モデルを格納する SQL Server テーブル、または T-SQL と R または Python 関数の組み合わせ。クエリ。
+
+データのセキュリティ モデルの境界内にスクリプトの実行: リレーショナル データベースの権限は、スクリプト内のデータ アクセスの基礎です。 R または Python スクリプトを実行しているユーザーは、任意のデータを SQL クエリでは、そのユーザーにアクセスできませんでしたを使用する必要がありますできません。 標準的なデータベースの読み取りと書き込みのアクセス許可、および外部のスクリプトを実行する追加のアクセス許可必要があります。 モデルとリレーショナル データを記述するコードがラップ ストアド プロシージャ、またはバイナリ形式にシリアル化して、テーブルに格納または生のバイト ストリームをファイルにシリアル化する場合は、ディスクから読み込まれます。
 
 データベース内分析の最も一般的なアプローチは、使用する[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)、R または Python スクリプトを入力パラメーターとして渡します。
 

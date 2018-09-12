@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
-ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
+ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43193028"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888858"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能新機能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,6 +23,8 @@ ms.locfileid: "43193028"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 
 このリリースで追加[Python のサポートと業界最先端の機械学習アルゴリズム](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)します。 新しいスコープを反映するように名前変更、SQL Server 2017 のマークの導入に伴い[SQL Server Machine Learning サービス (In-database)](what-is-sql-server-machine-learning.md)Python と R. の両方の言語サポート 
+
+機能のお知らせすべて時に、次を参照してください。 [SQL Server 2017 の新](../sql-server/what-s-new-in-sql-server-2017.md)します。
 
 ### <a name="r-enhancements"></a>R の機能強化
 
@@ -42,7 +44,11 @@ R 用の新しい機能が含まれます[**パッケージ管理**](r/install-a
 
 ### <a name="python-integration-for-in-database-analytics"></a>データベース内分析用の Python 統合
 
-T-SQL と Python の統合はサポートされています、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)システム ストアド プロシージャ。 このストアド プロシージャを使用してすべての Python コードを呼び出すことができます。 Python のモデルとスクリプトでは、単純なストアド プロシージャを使用してアプリケーションから呼び出すことのエンタープライズ レベルの展開を可能にするセキュリティで保護された、デュアル アーキテクチャでコードが実行されます。 SQL から Python プロセスと MPI リングの並列処理にデータをストリーミングでは、追加のパフォーマンスの向上を達成します。
+Python は優れた柔軟性と、さまざまな機械学習タスクのための電力を提供する言語です。 Python 用のオープン ソース ライブラリには、カスタマイズ可能なニューラル ネットワークでは、いくつかのプラットフォームと自然言語処理の人気のあるライブラリが含まれます。 ここで、この広く使用されている言語は、SQL Server 2017 の Machine Learning でサポートされます。
+
+Python は、データベース エンジンと統合されているので、データの近くで分析し、コストとデータの移動に関連付けられているセキュリティ上のリスクを排除できます。 Visual Studio などのツールを使用して Python に基づく機械学習ソリューションを展開することができます。 運用アプリケーションが、モデルの予測を取得または SQL Server のデータを使用して、Python 3.5 ランタイムからビジュアル メソッドにアクセスします。
+
+T-SQL と Python の統合はによってサポート、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)システム ストアド プロシージャ。 このストアド プロシージャを使用してすべての Python コードを呼び出すことができます。 Python のモデルとスクリプトでは、単純なストアド プロシージャを使用してアプリケーションから呼び出すことのエンタープライズ レベルの展開を可能にするセキュリティで保護された、デュアル アーキテクチャでコードが実行されます。 SQL から Python プロセスと MPI リングの並列処理にデータをストリーミングでは、追加のパフォーマンスの向上を達成します。
 
 T-SQL を使用することができます[PREDICT](../t-sql/queries/predict-transact-sql.md)関数を実行する[ネイティブ スコアリング](sql-native-scoring.md)以前指定したバイナリ形式で保存されている事前トレーニング済みモデルにします。
 
@@ -67,6 +73,8 @@ T-SQL を使用することができます[PREDICT](../t-sql/queries/predict-tra
 学習の機能を使用して SQL Server にこのリリースに導入されたマシン**SQL Server 2016 R Services**、データベース エンジンのインスタンス内の常駐のデータの処理 R スクリプトのためのデータベース内分析エンジン。
 
 さらに、 **SQL Server 2016 R Server (スタンドアロン)** Windows サーバー上の R Server をインストールする方法としてリリースされました。 最初に、SQL Server セットアップでは、R Server for Windows をインストールする唯一の方法が用意されています。 以降のリリースの Windows での R Server を望むデータ サイエンティストと開発者は同じ目標を達成するために別のスタンドアロン インストーラーを使用できます。 SQL Server のスタンドアロン サーバーは機能的には、スタンドアロンのサーバー製品[Microsoft R Server の用 Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)します。
+
+機能のお知らせすべて時に、次を参照してください。 [SQL Server 2016 の新](../sql-server/what-s-new-in-sql-server-2016.md)します。
 
 | リリース |機能更新プログラム |
 |---------|----------------|
