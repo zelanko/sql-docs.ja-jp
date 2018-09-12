@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3243b5fbf5fda0afea9fdbfa3fc26fbfbeee1bae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55dcd47ae1fa14b1d23cccf41f6aed1beae061c2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210382"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817098"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
   ダイアグラム ペインには、データ接続で選択したテーブルまたはテーブル値オブジェクトが、グラフィカルに表示されます。 また、テーブル間の結合リレーションシップも示されます。  
@@ -69,7 +68,7 @@ ms.locfileid: "37210382"
   
 |チェック ボックスまたは記号|説明|  
 |-------------------------|-----------------|  
-|![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi7.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi8.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi9.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbia.gif "Visual Database Tools のアイコン")|データ列をクエリの結果セットに表示するかどうか (選択クエリ)、または更新クエリ、結果の挿入クエリ、テーブルの作成クエリ、値の挿入クエリで使用するかどうかを指定します。 結果に列を追加するには、その列のチェック ボックスをオンにします。 **[* (すべての列)]** を選択すると、すべてのデータ列が出力に表示されます。<br /><br /> チェック ボックスに表示されるアイコンは、作成するクエリの種類によって変わります。 削除クエリを作成するときは、列を個別に選択することはできません。|  
+|![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi7.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi8.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi9.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbia.gif "Visual Database Tools のアイコン")|データ列をクエリの結果セットに表示するかどうか (選択クエリ)、または更新クエリ、結果の挿入クエリ、テーブルの作成クエリ、値の挿入クエリで使用するかどうかを指定します。 結果に列を追加するには、その列のチェック ボックスをオンにします。 **[すべての列]** を選択すると、すべてのデータ列が出力に表示されます。<br /><br /> チェック ボックスに表示されるアイコンは、作成するクエリの種類によって変わります。 削除クエリを作成するときは、列を個別に選択することはできません。|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbib.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbic.gif "Visual Database Tools のアイコン")|クエリ結果の並べ替えに使用される (ORDER BY 句の一部である) データ列を示します。 並べ替え順序が昇順の場合はアイコンに A-Z と表示されます。降順の場合は Z-A と表示されます。|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbid.gif "Visual Database Tools のアイコン")|集計クエリで結果セットをグループ化するために使用される (GROUP BY 句の一部である) データ列を示します。|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbie.gif "Visual Database Tools のアイコン")|クエリの検索条件に含まれる (WHERE 句または HAVING 句の一部である) データ列を示します。|  

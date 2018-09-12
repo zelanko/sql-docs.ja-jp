@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c16bb74d3b6f1b77b7cc96bc7585feb2df084ef8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fac75535720e15fa5325e3b44ca00d99e3b71bdf
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317372"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810328"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>アクセス許可と Visual Database Tools (Visual Database Tools)
   ユーザーがデータ ソース オブジェクトにアクセスできるようにするアクセス許可は、Visual Database Tools ではなくデータ ソースで与えられます。 データ ソース オブジェクトに対して与えられるアクセス許可は、適用されているセキュリティ ポリシーによって制御されます。 特定のデータベース オブジェクトに対するアクセス許可がない場合は、データベース管理者に連絡してください。  

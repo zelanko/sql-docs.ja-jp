@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34e1fb7b3744cd07f58f47dd68b8055908bdeb3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a89fd3a76997655fb7f4a01498df9e05a8d6e59
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216492"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808788"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>結果の挿入クエリの作成 (Visual Database Tools)
   結果の挿入クエリを使用すると、テーブル間またはテーブル内で行をコピーできます。 たとえば、 `titles` テーブルで結果の挿入クエリを使用すると、特定の出版社のすべての書名に関する情報を別のテーブルにコピーして、その出版社に提供できます。 結果の挿入クエリは、テーブルの作成と似ていますが、既存のテーブルに行をコピーする点が異なります。  

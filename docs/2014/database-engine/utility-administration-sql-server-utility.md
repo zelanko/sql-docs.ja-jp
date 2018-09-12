@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3dcd50c691d4ca9373010c5e26ef97771c49e7a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96c81c4f6913c4e355ca368ae67f04c1c5fde12b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271608"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815278"
 ---
 # <a name="utility-administration-sql-server-utility"></a>ユーティリティの管理 (SQL Server ユーティリティ)
   ユーティリティの管理の各タブでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのポリシー設定、セキュリティ設定、およびデータ ウェアハウス設定を管理できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
@@ -88,8 +87,7 @@ ms.locfileid: "37271608"
  [データ ウェアハウス] タブ - ユーティリティ管理データ ウェアハウスの構成の詳細が表示されます。  
   
  [データ保有期間]  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のマネージド インスタンス用に収集された使用率情報のデータ保有期間を指定します。 既定の期間は 1 年です。 最小値は 1 か月です。 指定可能な最長期間は 2 年です。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のマネージド インスタンス用に収集された使用率情報のデータ保有期間を指定します。 既定の期間は 1 年です。 最小値は 1 か月です。 指定可能な最長期間は 2 年です。  
   
  [ユーティリティ データ ウェアハウスの構成情報]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のこのリリースで構成できない構成設定は次のとおりです。  
@@ -109,8 +107,7 @@ ms.locfileid: "37271608"
 ## <a name="see-also"></a>参照  
  [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- 
-  [マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [マネージド インスタンスの詳細 &amp;amp;#40;SQL Server ユーティリティ&amp;amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

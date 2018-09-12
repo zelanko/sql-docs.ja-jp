@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8ecb71fc2a9dce37bf3797da0326c16d5965afb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7bbbb25feece65f880299b862ae86c4bdefa5e6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232402"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814318"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>ダイアグラムのフォントの色、サイズ、およびスタイルを変更する (Visual Database Tools)
   データベース ダイアグラムのテキストの表示方法は、フォントの色、サイズ、スタイルを変更することによってカスタマイズできます。 変更が行われた時点で変更内容が新しいダイアグラムと既存のダイアグラムに適用されます。  

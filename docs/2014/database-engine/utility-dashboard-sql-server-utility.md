@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c37387c3a5a47a624cdcac57d73552c8eeda9b3e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61519602a7387c11b1374c827628c7063a499ed8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192142"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818848"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>ユーティリティ ダッシュボード (SQL Server ユーティリティ)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードにデータを表示するには、ユーティリティ エクスプローラーのツリーで最上位ノード "Utility<UCP 名>\\(ComputerName\UCP)" を選択します。 ダッシュボードには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのマネージド インスタンス、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのすべてのデータ層アプリケーションに関する概要データと詳細データが表示されます。 ダッシュボードのデータを更新するには、ユーティリティ エクスプローラーのツリーで最上位ノードを右クリックし、 **[更新]** をクリックします。  
@@ -28,7 +27,7 @@ ms.locfileid: "37192142"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  マネージド インスタンスの正常性  
- ph x="1" /&gt; のマネージド インスタンスの正常性状態は、ユーティリティ エクスプローラーのコンテンツ ペインの左側に表示されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの正常性状態は、ユーティリティ エクスプローラーのコンテンツ ペインの左側に表示されます。  
   
  マネージド インスタンスの正常性パラメーターは次のとおりです。  
   
@@ -52,14 +51,14 @@ ms.locfileid: "37192142"
   
  各正常性パラメーターの詳細な状態は、スライド式インジケーターに一覧表示されます。 スライド式インジケーターの右側にある部分は、何個のマネージド インスタンスが各状態カテゴリに存在するかを示します。  
   
- ph x="1" /&gt; のマネージド インスタンスまたはデータ層アプリケーションについてフィルターを適用したビューを作成するには、ユーティリティ ダッシュボードのスライド式インジケーターの横にある使用率カテゴリのリンクをクリックします。 たとえば、 **ユーティリティ エクスプローラーのコンテンツ** ペインで **[使用率が高いインスタンス CPU]** をクリックすると、SSMS では、現在のポリシー設定に基づいてフィルターが適用され、CPU 使用率の高い [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスについてのリスト ビューが作成されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスまたはデータ層アプリケーションについてフィルターを適用したビューを作成するには、ユーティリティ ダッシュボードのスライド式インジケーターの横にある使用率カテゴリのリンクをクリックします。 たとえば、 **ユーティリティ エクスプローラーのコンテンツ** ペインで **[使用率が高いインスタンス CPU]** をクリックすると、SSMS では、現在のポリシー設定に基づいてフィルターが適用され、CPU 使用率の高い [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスについてのリスト ビューが作成されます。  
   
  使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]**、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、**[フィルター]**、**[フィルターの削除]** の順にクリックします。  
   
  個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)」を参照してください。  
   
  ユーティリティの概要  
- ph x="1" /&gt; のマネージド インスタンスの数と、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティによって管理されるデータ層アプリケーションの数を表示します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数と、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティによって管理されるデータ層アプリケーションの数を表示します。  
   
  データ層アプリケーションの正常性  
  データ層アプリケーションの正常性状態は、ユーティリティ エクスプローラーのコンテンツ ペインの右側に表示されます。  

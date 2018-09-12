@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 50
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ca5884a90b3e6e94eca1bc98988417e7b8a8bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9f4e2c226324950f21ea27b00e1b8a47d590e50
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169353"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810078"
 ---
 # <a name="use-sql-server-management-studio"></a>SQL Server Management Studio の使用 [SQL Server]
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) はへのアクセス、構成、管理、管理、および開発するためのすべてのコンポーネントの統合環境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 SSMS では、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターが用意されており、これらを使用して、あらゆるスキル レベルの開発者や管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできます。  

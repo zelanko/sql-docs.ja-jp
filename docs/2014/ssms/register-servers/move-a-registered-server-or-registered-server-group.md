@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2472a88caaf08616a12bb0b4fb54458c141115c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 347909a9152299c3df702330abe779d84b8d98ec
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189619"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813028"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>登録済みサーバーまたは登録済みサーバー グループの移動 (SQL Server Management Studio)
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で登録済みサーバーまたは登録済みサーバー グループを移動して、登録済みサーバー内のサーバーを整理する方法について説明します。 サーバー グループには、登録済みサーバーまたは他のサーバー グループを含めることができます。 サーバー グループ間でサーバーおよびサーバー グループを移動できます。  

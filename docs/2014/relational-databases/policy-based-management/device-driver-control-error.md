@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 25de2e0ab2e5921bf0e83c2d22d1040d9728f7ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2b86ded9832513ad0aa992256f99ce81ba1e7bd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296392"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819458"
 ---
 # <a name="device-driver-control-error"></a>デバイス ドライバー制御エラー
   このルールでは、システム イベント ログの EventId 11 を確認します。 このエラーは、デバイス ドライバーの破損、ハードウェアの問題、ケーブル接続の不具合、または接続の問題が原因で発生する場合があります。  

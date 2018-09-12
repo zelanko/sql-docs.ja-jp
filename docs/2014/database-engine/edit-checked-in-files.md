@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 065f8d2d32d8ad16fe955ba8e36c7e65926bec95
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165293"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808288"
 ---
 # <a name="edit-checked-in-files"></a>チェックインされているファイルの編集
   通常、ソース管理の対象であるファイルは、チェックアウトしてから編集する必要があります。 ただし、チェックアウトしていないファイルを編集できるように、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を設定できます。チェックアウトしていないファイルを編集するとき、行った変更はファイルを保存するまでメモリに保持されます。 ファイルの保存時に、ファイルをソース管理からチェックアウトするよう求められます。  

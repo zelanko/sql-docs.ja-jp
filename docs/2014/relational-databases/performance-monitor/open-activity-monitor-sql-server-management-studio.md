@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8b1910e465e9f2f5d8341c5dd51596d5a6710bb0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c823440cb47f8c1a6d8a020856214291bdac5a3
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262438"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809758"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>利用状況モニターを開く方法 (SQL Server Management Studio)
   このトピックでは、に関する情報を取得、利用状況モニターを開く方法を説明します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスおよびこれらのプロセスの現在のインスタンスに与える影響[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 また、利用状況モニターの更新間隔の設定方法についても説明します。  

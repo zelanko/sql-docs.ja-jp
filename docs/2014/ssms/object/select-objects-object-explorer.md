@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd13264cfe88799c50eec23bab8e06d52feb399f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e887cccec4a7f03626639624c2c109280a31614
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265678"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818138"
 ---
 # <a name="select-objects-object-explorer"></a>[オブジェクトの選択]\(オブジェクト エクスプローラー)
   **[オブジェクトの選択]** ダイアログ ボックスを使用すると、オブジェクトを別のダイアログ ボックスの一覧に追加できます。 ダイアログ ボックスを開いた方法に応じて、ダイアログ ボックスのタイトルおよび使用できるオプションが異なります。 利用可能なオプションだけが表示されます。たとえば、新しいオブジェクトの所有者を選択する場合は、利用可能なログインだけが表示されます。  

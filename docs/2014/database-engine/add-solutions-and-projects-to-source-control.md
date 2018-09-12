@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,14 +18,14 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8365cf854d78f30be02ad3e15cd5d29c49205ce6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb720843f38c9fb7718f5bd3f2453cb42448e5d9
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171443"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813358"
 ---
-# <a name="add-solutions-and-projects-to-source-control"></a>ソリューションとプロジェクトをソース管理に追加します。
+# <a name="add-solutions-and-projects-to-source-control"></a>ソース管理へのソリューションとプロジェクトの追加
   ソース管理にソリューションを追加すると、そのソリューションは動的バージョン管理アーカイブに組み込まれます。動的バージョン管理アーカイブの作成と保守には、ソース管理プロバイダーを使用します。 だれかが新しいバージョンのソリューションをチェックインすると、そのバージョンがアーカイブに組み込まれ、他のソース管理ユーザーからの利用が可能になります。  
   
  ソース管理にソリューションを追加すると、ファイル管理システムを集中化することにもなります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe などのソース管理プロバイダーがソース管理の対象項目に対するアクセスを制御するので、ソース管理クライアントは、ファイルをチェックアウトしない限り、ソース管理の対象ファイルへの書き込みを行えなくなります。  

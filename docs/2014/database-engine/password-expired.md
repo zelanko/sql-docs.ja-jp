@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,15 +17,15 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fabcfd609f5463cea9012ee779a41b87cf143f2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 982795a23e2fc45a3c15feaa2d81a433f0c281bd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224142"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819098"
 ---
 # <a name="password-expired"></a>[パスワードの有効期限が切れました]
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバー接続するときに、入力したパスワードが正しくてもそのパスワードの有効期限が切れている場合に表示されます。 また、 **[ユーザーは次回ログイン時にパスワードを変更する]** オプションを使用して作成された新しいアカウントでサーバーに接続した場合にも表示されます。 **[パスワードの有効期限が切れました]** ダイアログ ボックスを使用すると、この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログインのパスワードを変更できます。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバー接続するときに、入力したパスワードが正しくてもそのパスワードの有効期限が切れている場合に表示されます。 また、 **[ユーザーは次回ログイン時にパスワードを変更する]** オプションを使用して作成された新しいアカウントでサーバーに接続した場合にも表示されます。 **[パスワードの有効期限が切れました]** ダイアログ ボックスを使用すると、この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログインのパスワードを変更できます。  
   
 ## <a name="options"></a>および  
  **Login**  

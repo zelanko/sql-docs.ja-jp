@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
@@ -14,15 +13,15 @@ caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 81b35d1af874c97bf2e61e9c1234d7ad7876e229
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d059ac17d901ca7eec0bf451ba7babaecce607a8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328142"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815748"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server ユーティリティのトラブルシューティング
-  ph x="1" /&gt; ユーティリティのトラブルシューティングの項目としては、UCP を使用した SQL Server インスタンスの登録処理の失敗の解決、データ収集の失敗 (UCP のマネージド インスタンスのリスト ビューで灰色のアイコンが表示される) に対するトラブルシューティング、パフォーマンス ボトルネックの緩和、リソースの正常性に関する問題の解決などがあります。 識別されるリソース正常性の問題を緩和する方法の詳細について、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP を参照してください[のトラブルシューティングを行う SQL Server リソースの正常性&#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)します。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのトラブルシューティングの項目としては、UCP を使用した SQL Server インスタンスの登録処理の失敗の解決、データ収集の失敗 (UCP のマネージド インスタンスのリスト ビューで灰色のアイコンが表示される) に対するトラブルシューティング、パフォーマンス ボトルネックの緩和、リソースの正常性に関する問題の解決などがあります。 識別されるリソース正常性の問題を緩和する方法の詳細について、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP を参照してください[のトラブルシューティングを行う SQL Server リソースの正常性&#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)します。  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>SQL Server インスタンスを SQL Server ユーティリティに登録する処理の失敗  
  インスタンスに接続する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用して登録[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証、および UCP があるドメインとは異なる Active Directory ドメインに属するプロキシ アカウントを指定するインスタンスの検証が成功したが、登録操作は、次のエラー メッセージで失敗します。  
@@ -46,9 +45,9 @@ ms.locfileid: "37328142"
  この問題を回避するには、上の例の場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに登録する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに "sa" を使用して接続し、"Domain_1" からのプロキシ アカウントを指定します。  
   
 ## <a name="failed-wmi-validation"></a>WMI 検証の失敗  
- ph x="1" /&gt; インスタンスで WMI が正しく構成されていない場合は、UCP の作成操作とマネージド インスタンスの登録操作で警告が表示されますが、操作はブロックされません。 さらに、変更した場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]エージェント アカウントの構成ように[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]エージェントには、目的の WMI クラスの影響を受けるマネージ インスタンス上のデータ収集するアクセス許可はありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP へのアップロードに失敗します。 この結果、UCP に灰色のアイコンが表示されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで WMI が正しく構成されていない場合は、UCP の作成操作とマネージド インスタンスの登録操作で警告が表示されますが、操作はブロックされません。 さらに、変更した場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]エージェント アカウントの構成ように[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]エージェントには、目的の WMI クラスの影響を受けるマネージ インスタンス上のデータ収集するアクセス許可はありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP へのアップロードに失敗します。 この結果、UCP に灰色のアイコンが表示されます。  
   
- データ収集が失敗した結果、影響を受ける [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの UCP リスト ビューに灰色の状態アイコンが表示されます。 ph x="1" /&gt; のマネージド インスタンスのジョブ履歴には、sysutility_mi_collect_and_upload がステップ 2 (PowerShell スクリプトから収集されたデータのステージング) で失敗したことが示されます。  
+ データ収集が失敗した結果、影響を受ける [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの UCP リスト ビューに灰色の状態アイコンが表示されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスのジョブ履歴には、sysutility_mi_collect_and_upload がステップ 2 (PowerShell スクリプトから収集されたデータのステージング) で失敗したことが示されます。  
   
  エラー メッセージの要約は次のとおりです。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "37328142"
   
 -   Windows Server 2003 では、SQL Server エージェント サービスがのマネージ インスタンスの Windows パフォーマンスの監視グループの一部をする必要があります[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
--   ph x="1" /&gt; のマネージド インスタンス上で、WMI サービスが有効になっており、構成されている必要があります。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンス上で、WMI サービスが有効になっており、構成されている必要があります。  
   
 -   WMI リポジトリのマネージ インスタンスで破損している場合があります[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
@@ -96,8 +95,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
 ## <a name="failed-data-collection"></a>データ収集の失敗  
  場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ユーティリティのデータ コレクション イベントが失敗し、次のようなを検討してください。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のマネージド インスタンス上の "ユーティリティ情報" コレクション セットのプロパティは一切変更しないでください。また、データ コレクションはユーティリティ エージェント ジョブによって制御されるため、データ コレクションのオン/オフを手動で切り替えることも避けてください。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のマネージド インスタンス上の "ユーティリティ情報" コレクション セットのプロパティは一切変更しないでください。また、データ コレクションはユーティリティ エージェント ジョブによって制御されるため、データ コレクションのオン/オフを手動で切り替えることも避けてください。  
   
 -   WMI 検証に失敗したか、この機能がサポートされていません。 詳細については、このトピックの前半の「WMI 検証の失敗」を参照してください。  
   
@@ -113,7 +111,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
      タイムアウトの既定値は 30 秒です。  
   
--   ph x="1" /&gt; のインスタンスがクラスター化されていない場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスが実行されていることと、このサービスが UCP、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスで自動的に開始するように設定されていることを確認します。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスがクラスター化されていない場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスが実行されていることと、このサービスが UCP、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスで自動的に開始するように設定されていることを確認します。  
   
 -   マネージ インスタンスでデータ収集を実行する有効なアカウントが使用されていることを確認[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 たとえば、パスワードの有効期限が切れている可能性があります。 プロキシ パスワードの有効期限が切れている場合は、次のように、SSMS でパスワード資格情報を更新します。  
   
@@ -155,9 +153,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   確認のインスタンスを管理する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ネットワークに接続しています。  
   
--   ph x="1" /&gt; のマネージド インスタンス上に、名前が同じでも大文字と小文字の区別に関する設定が異なるデータベースがある場合は、データベースとそのビューポイントが正しく識別されず、データ収集に失敗することがあります。 たとえば、"MYDATABASE" という名前のデータベースで、実際には "MyDatabase" という名前のデータベースの正常性状態が示される場合があります。 この場合、エラーにはなりません。 データ収集の失敗は、データベース ファイルやファイル グループの名前など、UCP に表示される他のオブジェクトの大文字と小文字の不一致から発生することもあります。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンス上に、名前が同じでも大文字と小文字の区別に関する設定が異なるデータベースがある場合は、データベースとそのビューポイントが正しく識別されず、データ収集に失敗することがあります。 たとえば、"MYDATABASE" という名前のデータベースで、実際には "MyDatabase" という名前のデータベースの正常性状態が示される場合があります。 この場合、エラーにはなりません。 データ収集の失敗は、データベース ファイルやファイル グループの名前など、UCP に表示される他のオブジェクトの大文字と小文字の不一致から発生することもあります。  
   
--   ph x="1" /&gt; のマネージド インスタンスが Windows Server 2003 コンピューター上でホストされている場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービス アカウントは、Performance Monitor Users セキュリティ グループまたはローカルの Administrators グループに属している必要があります。 属していない場合は、アクセス拒否エラーが発生してデータ収集が失敗します。 追加する、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Performance Monitor Users セキュリティ グループにエージェント サービス アカウントは、次の手順を使用します。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスが Windows Server 2003 コンピューター上でホストされている場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービス アカウントは、Performance Monitor Users セキュリティ グループまたはローカルの Administrators グループに属している必要があります。 属していない場合は、アクセス拒否エラーが発生してデータ収集が失敗します。 追加する、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Performance Monitor Users セキュリティ グループにエージェント サービス アカウントは、次の手順を使用します。  
   
     1.  **[コンピューターの管理]** を開き、 **[ローカル ユーザーとグループ]**、 **[グループ]** の順に展開します。  
   

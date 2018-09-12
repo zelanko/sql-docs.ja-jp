@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70760f93bc60de7c8c4d8e86d7a32383647beee8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d2fbe465ade65e6db42ccc6d17b139f8b3bcb3a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308822"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817228"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>クエリへの列の追加 (Visual Database Tools)
   クエリで列を使用するには、クエリに列を追加する必要があります。 列の追加は、クエリ出力に列を追加する場合、列を並べ替える場合、列の内容を検索する場合、または列の内容を集計する場合に行います。 クエリで使用する列のうち、クエリを実行したときに結果ペインに含める列を指定できます。 詳細については、「 [クエリ結果からの列の削除 (Visual Database Tools)](visual-database-tools.md)」を参照してください。  
@@ -44,7 +43,7 @@ ms.locfileid: "37308822"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>1 つのテーブルまたはテーブル値オブジェクトの列をすべて追加するには  
   
--   **ダイアグラム ペイン**、横にチェック ボックスをオン** \*(すべての列)** します。  
+-   **ダイアグラム ペイン**、横にチェック ボックスをオン **\*(すべての列)** します。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>すべてのテーブルおよびテーブル構造オブジェクトの列をすべて追加するには  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cb0c2cd4f715c947e11b5ae68d8d7ea9f7618a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0e422a938822982ea716a9b4c7d90f57d2c597a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290078"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814108"
 ---
 # <a name="customize-toolbars-page"></a>[ユーザー設定] ([ツール バー] ページ)
   **[ツール バー]** タブを使用すると、ツール バーの作成、名前の変更、削除、リセットができます。 このタブを開くには、 **[ツール]** メニューの **[ユーザー設定]** をクリックした後、 **[ツール バー]** をクリックします。  

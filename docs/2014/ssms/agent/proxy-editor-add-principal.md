@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80187c230268c7316856b83ce5c94f4b3ff67bac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 397eeb90ce4e2c3c15298f332d44b9776e35fb60
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210522"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816688"
 ---
-# <a name="proxy-editor-and--add-principal"></a>プロキシ エディターとプリンシパルの追加
+# <a name="proxy-editor-and--add-principal"></a>プロキシ エディターおよび [プリンシパルの追加]
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントにサーバー プリンシパル アクセス権を付与できます。  
   
 ## <a name="options"></a>および  

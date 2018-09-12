@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f360b9553c754c5e6fa9ee2bdd5e39d73f9194b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 24dd9f4ca5b4f551f958a24636a942d50bcc68f3
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329012"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820088"
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
   一部のデータベース オブジェクトには、他のデータベース オブジェクトと依存関係があります。 たとえば、ビューとストアド プロシージャは、そのビューまたはプロシージャが返すデータを格納するテーブルの存在に依存します。 現在のオブジェクトの **[オブジェクトの依存関係]\([全般] ページ)** には、オブジェクトが正常に動作するために必要なデータベース オブジェクト、および選択されているオブジェクトに依存するオブジェクトの両方が一覧表示されます。 オブジェクトは、その定義で別のオブジェクトを参照する場合 (この定義はシステム カタログに格納されます)、 *参照元エンティティ*と呼ばれます。 別のオブジェクトによって参照されるオブジェクトは、 *参照先エンティティ*と呼ばれます。  
@@ -31,10 +30,10 @@ ms.locfileid: "37329012"
  このダイアログ ボックスを使用すると、選択されているオブジェクトを変更または削除する前に依存関係について理解できます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
- **オブジェクトに依存する***\<選択したオブジェクト >  *  
+ **オブジェクトに依存する***\<選択したオブジェクト >*   
  このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトに依存するオブジェクトの一覧が表示されます。  
   
- **対象のオブジェクト***\<選択したオブジェクト >***依存    **  
+ **対象のオブジェクト***\<選択したオブジェクト >***依存**   
  このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトが依存するオブジェクトの一覧が表示されます。  
   
  **依存関係**  

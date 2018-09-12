@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,22 +15,22 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0f67935fd46e27ad107221de96d8816e056e421
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90a94189b138cb61f7ae542ec755ab7d148d2852
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294082"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818088"
 ---
 # <a name="options-environment-help-general-page"></a>オプション (環境-ヘルプ-[全般] ページ)
-   **[オプション]** ダイアログ ボックスを使用すると、ドキュメントのセットを選択し、トピックを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の内部に表示するか、別の外部ウィンドウに表示するかを指定できます。 このダイアログ ボックスを開くには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[環境]** ノードの **[ヘルプ]** を展開し、 **[全般]** をクリックします。  
+  **[オプション]** ダイアログ ボックスを使用すると、ドキュメントのセットを選択し、トピックを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の内部に表示するか、別の外部ウィンドウに表示するかを指定できます。 このダイアログ ボックスを開くには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[環境]** ノードの **[ヘルプ]** を展開し、 **[全般]** をクリックします。  
   
 > [!NOTE]  
 >  このページのオプションに加えた変更は、環境が再起動されるまで有効になりません。  
   
 ## <a name="settings"></a>[設定]  
  **[次を使用してヘルプを表示する]**  
- ヘルプの表示方法を指定します。 ドロップダウン リストで **[外部ヘルプ ビューアー]** を選択すると、外部のフローティング ウィンドウにトピックが表示されます。  **[統合ヘルプ ビューアー]** を選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の内側にドッキングした Web ブラウザー ウィンドウにヘルプ トピックを表示します。  
+ ヘルプの表示方法を指定します。 ドロップダウン リストで **[外部ヘルプ ビューアー]** を選択すると、外部のフローティング ウィンドウにトピックが表示されます。 **[統合ヘルプ ビューアー]** を選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の内側にドッキングした Web ブラウザー ウィンドウにヘルプ トピックを表示します。  
   
  **[ページ毎の検索結果]**  
  1 つの **[検索結果]** ページに表示するトピックの数を指定します。  

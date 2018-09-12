@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c3752d1012122e7fa2adb6b5470dcefd558449e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f61636f76642d495c6b9d1321008a5c56361febd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312762"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810658"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>[上書き保存] ダイアログ ボックス (Visual Database Tools)
   テーブル デザイナーで保存する作業内容が他のテーブルに影響を与える場合に表示されます。 このダイアログ ボックスでは、保存するテーブルを確認できます。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68124364dfe73693758dfe9a83df14d267324a90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3e75b93be21e650ca4e22445d77ae87437d6cc3
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181269"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819288"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio のツール ウィンドウ
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、開発と管理のあらゆる段階で使用できる強力なツール ウィンドウが数多く用意されています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のあらゆるコンポーネントで使用できるツールもあれば、特定のコンポーネントだけで使用できるツールもあります。 次の表に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのコンポーネントで使用できるツールを示します。  

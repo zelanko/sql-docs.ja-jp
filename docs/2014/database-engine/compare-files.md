@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d65cce1e96cbf3bb8ec8e6d428074c89424c8636
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d04fcf3113aeed4c2cd1512375956921029c992f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314472"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819038"
 ---
 # <a name="compare-files"></a>ファイルの比較
   ファイルを比較して、ファイルがどのような過程で現在の状態になったのかを確認できます。 たとえば、ソース ファイルのバージョンをチェックインした後に、コード プロジェクトのビルドで不具合を発見した場合、現在のファイル バージョンと以前のファイル バージョンを比較できます。 そうすれば、不具合を引き起こしたコードの位置を正確に検出できます。  

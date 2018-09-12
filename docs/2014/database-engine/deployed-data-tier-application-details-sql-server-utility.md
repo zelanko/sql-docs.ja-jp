@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4761049c87ee75e4b0bc6dc4511200f0b607d287
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54b12c13823acf51b5004eb43ee18ab8e1705135
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178439"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815908"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>配置済みのデータ層アプリケーションの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [配置済みのデータ層アプリケーション] ビュー内の情報では、個々のデータ層アプリケーションの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を確認できるほか、ポリシーのしきい値を表示および更新できます。 ポリシーのしきい値は、データ層アプリケーション レベルで CPU 使用率やデータベース データ ファイルおよびログ ファイルを対象に制御できます。 個々のデータ層アプリケーションについて、プロパティの詳細を表示することもできます。  
@@ -170,8 +169,7 @@ ms.locfileid: "37178439"
 -   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、SQL Server オンライン ブックの「[datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071)」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- 
-  [マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [マネージド インスタンスの詳細 &amp;amp;#40;SQL Server ユーティリティ&amp;amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

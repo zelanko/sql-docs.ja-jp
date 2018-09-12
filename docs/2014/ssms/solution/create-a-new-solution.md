@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cb0a41dca5a081aa1774b6aeef17e3671c89afd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f19e49a14939da626c5ec647794aa795ef6e8f8c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244012"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816808"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
   プロジェクトを作成すると、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって、そのプロジェクトを含むソリューションが作成されます。 同時に開くことのできるソリューションは 1 つだけです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、プロジェクト内にフォルダーを作成することはできません。 作業を整理するには、複数のプロジェクトを作成してください。  
