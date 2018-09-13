@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d161129b14da33645c1a9238307c0eefe9539097
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca191a101ebdeafd05c25255ddbf2c178c653558
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181539"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808184"
 ---
 # <a name="create-a-job"></a>ジョブの作成
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] で SQL Server エージェント ジョブを作成する方法について説明します。  
@@ -77,7 +76,7 @@ ms.locfileid: "37181539"
   
 4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティと新しいジョブ&#40;[全般] ページ。&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  **[ステップ]** ページで、ジョブ ステップを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: [新しいジョブ&#40;[ステップ] ページ。&#41;](job-properties-new-job-steps-page.md)  
+5.  **[ステップ]** ページで、ジョブ ステップを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: 新しいジョブ&#40;[ステップ] ページ。&#41;](job-properties-new-job-steps-page.md)  
   
 6.  **[スケジュール** ] ページで、ジョブのスケジュールを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: [新しいジョブ&#40;スケジュール] ページ。&#41;](job-properties-new-job-schedules-page.md)  
   

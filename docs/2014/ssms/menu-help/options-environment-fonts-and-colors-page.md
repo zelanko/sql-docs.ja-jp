@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e16da651d51054293303f38598a1168eb1474226
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200782"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808458"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>オプション (環境: フォントおよび色 ページ)
+# <a name="options-environment-fonts-and-colors-page"></a>[オプション] ([環境]: [フォントおよび色] ページ)
   **[オプション]** ダイアログ ボックスを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のさまざまなユーザー インターフェイス要素にカスタム フォントや配色を設定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[フォントおよび色]** を選択します。  
   
  配色を変更するセッション中は、変更は適用されません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の別のインスタンスを開き、変更が適用されると思われる条件を作ることで、色の変更を確認できます。  

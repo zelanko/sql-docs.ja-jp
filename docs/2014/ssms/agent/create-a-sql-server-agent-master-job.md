@@ -5,8 +5,7 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4146d8b0011255f923a386b3dbcb38cf8b13c7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0387bda982e45c4ef1c269052aca4c08a2567e80
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226962"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807888"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブの作成
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブを作成する方法について説明します。  
@@ -61,7 +60,7 @@ ms.locfileid: "37226962"
   
 4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティと新しいジョブ&#40;[全般] ページ。&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  **[ステップ]** ページで、ジョブ ステップを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: [新しいジョブ&#40;[ステップ] ページ。&#41;](job-properties-new-job-steps-page.md)  
+5.  **[ステップ]** ページで、ジョブ ステップを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: 新しいジョブ&#40;[ステップ] ページ。&#41;](job-properties-new-job-steps-page.md)  
   
 6.  **[スケジュール** ] ページで、ジョブのスケジュールを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: [新しいジョブ&#40;スケジュール] ページ。&#41;](job-properties-new-job-schedules-page.md)  
   

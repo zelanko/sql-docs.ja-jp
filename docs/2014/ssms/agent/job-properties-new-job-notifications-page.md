@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 170456c9aeacb804a02d0e7450647b67453e635f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73654020285dc96844df3220fd352c7d7c389f4b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196772"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809708"
 ---
-# <a name="job-properties-new-job-notifications-page"></a>新しいジョブをジョブのプロパティ ([通知] ページ)
+# <a name="job-properties-new-job-notifications-page"></a>[ジョブのプロパティ]: [新しいジョブ] ([通知] ページ)
   このページを使用すると、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。  
   
 ## <a name="options"></a>および  
