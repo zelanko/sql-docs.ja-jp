@@ -1,5 +1,5 @@
 ---
-title: getTime (int) メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getTime (int) メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d86e6ad808d69b64e5dd9abed03cf5513cf5c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9c8ee07ffe5d88d7c959d40b51d4a4c9f1864793
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838437"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784571"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>getTime (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語の java.sql.Time オブジェクトとして。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の java.sql.Time オブジェクトとして取得されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ public java.sql.Time getTime(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- Time オブジェクト。  
+ 時刻のオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getTime メソッドは、java.sql.ResultSet インターフェイスの getTime メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getTime メソッドは、java.sql.ResultSet インターフェイスで getTime メソッドによって指定されます。  
   
- このメソッドの有効な時刻部分を返します、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime または smalldatetime データ型の日付部分を Java のベースライン 1970/01/01 の日付に設定します。  
+ このメソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な時間部分が返されます。日付部分は、Java のベースラインの日付である 1970/01/01 に設定されます。  
   
 ## <a name="see-also"></a>参照  
  [getTime メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   

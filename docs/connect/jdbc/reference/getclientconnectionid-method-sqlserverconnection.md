@@ -1,5 +1,5 @@
 ---
-title: getClientConnectionID メソッド (SQLServerConnection) |Microsoft ドキュメント
+title: getClientConnectionID メソッド (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcd24325ca26bacc9f474e925f99848d68351417
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 83f20b5da967972b1b1d8c6381506468a9de3f6b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832527"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785095"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,8 +38,8 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- 拡張イベント ログの診断情報にアクセスする方法の詳細については、次を参照してください。[診断の情報を拡張イベント ログへのアクセス](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)です。  
+## <a name="remarks"></a>Remarks  
+ 拡張イベント ログの診断情報にアクセスする方法の詳細については、次を参照してください。[拡張のイベント ログへのアクセスの診断情報](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)します。  
   
  次のサンプルは、接続 ID の取得方法を示しています。  
   
@@ -60,9 +60,9 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getClientConnectionID**に接続するサーバーのバージョンに関係なく動作は、拡張イベント ログおよび接続リング バッファー エラーに関するエントリが存在していない[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008 R2 以前のバージョン。  
+ **getClientConnectionID** は、接続先のサーバーのバージョンに関係なく使用できますが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 以前のサーバーの場合は、拡張イベント ログと、接続リング バッファー エラーに関するエントリが提供されません。  
   
- 接続 ID のログ記録に関する拡張イベントが有効になっている場合は、拡張イベント ログ内で接続 ID を探し、エラーがサーバー上のものであるかどうかを確認できます。 接続リング バッファーに、接続 ID を検索することもできます ([、接続リング バッファーによる SQL Server 2008 の接続のトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=207752)) 特定の接続エラーです。 接続 ID が接続リング バッファー内にない場合は、ネットワーク エラーであると考えることができます。  
+ 接続 ID のログ記録に関する拡張イベントが有効になっている場合は、拡張イベント ログ内で接続 ID を探し、エラーがサーバー上のものであるかどうかを確認できます。 また、一部の接続エラーについては、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=207752)) 内で接続 ID を検索することもできます。 接続 ID が接続リング バッファー内にない場合は、ネットワーク エラーであると考えることができます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

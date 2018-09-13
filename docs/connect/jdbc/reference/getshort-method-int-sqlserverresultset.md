@@ -1,5 +1,5 @@
 ---
-title: getShort (int) メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getShort (int) メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3b8071bc458696e0cb5dcaf654a52f1ddd5442b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 78f37af4ff69b6a4a4040981d0787e398c6d635c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838897"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784910"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**短い**java プログラミング言語です。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の **short** として取得されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,13 +49,13 @@ public short getShort(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getShort メソッドは、java.sql.ResultSet インターフェイスの getShort メソッドによって指定されます。  
   
- このメソッドでのみサポート[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]smallint、tinyint、bit などの整数値を安全に返すことができるデータ型。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、smallint、tinyint、bit などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
- [getShort メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)   
+ [getShort メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

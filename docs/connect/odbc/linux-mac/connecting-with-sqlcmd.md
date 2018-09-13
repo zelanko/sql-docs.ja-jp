@@ -16,19 +16,19 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015806"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787876"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) ユーティリティは、Linux および macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] で使用できます。
+[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) ユーティリティは、Linux および macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用できます。
   
-次のコマンドは、Windows 認証 (Kerberos) を使用する方法を示してと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]認証では、それぞれします。
+次のコマンドは、Windows 認証 (Kerberos) を使用する方法を示してと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]認証では、それぞれします。
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -73,12 +73,12 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 > [!NOTE]  
 > **-K** は、CTP for SUSE Linux ではサポートされていません。 ただし、**に渡される DSN ファイルで**ApplicationIntent=ReadOnly`sqlcmd` キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
   
-- -l*タイムアウト*するまでの秒数を指定する`sqlcmd`サーバーに接続しようとすると、ログインがタイムアウトします。
+- -l *timeout* サーバーへの接続の試行時に、`sqlcmd` のログインがタイムアウトするまでの秒数を指定します。
 
 - -m *error_level* stdout に送信されるエラー メッセージを制御します。  
   
 - **-M * * * multisubnet_failover*  
-[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、フェールオーバーを迅速に検出して、(現在) アクティブなサーバーに接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を参照してください[ODBC Driver on Linux と macOS の高可用性とディザスター リカバリー](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)します。  
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、フェールオーバーを迅速に検出して、(現在) アクティブなサーバーに接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を参照してください[ODBC Driver on Linux と macOS の高可用性とディザスター リカバリー](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)します。  
   
 > [!NOTE]  
 > **-M** は、CTP for SUSE Linux ではサポートされていません。 ただし、`sqlcmd` に渡される DSN ファイルで **MultiSubnetFailover=Yes** キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
@@ -102,7 +102,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 - -s *column_separator_char*列の区切り文字を指定します。  
 
 - -S [*protocol*:] *server*[**,***port*]  
-インスタンスを指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]に接続するかどうか、-d はまたはを使用する DSN。 Linux および macOS 上の ODBC ドライバーが必要です-%s なお**tcp**は唯一の有効なプロトコルです。  
+インスタンスを指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続するかどうか、-d はまたはを使用する DSN。 Linux および macOS 上の ODBC ドライバーが必要です-%s なお**tcp**は唯一の有効なプロトコルです。  
   
 - -t *query_timeout* コマンド (または SQL ステートメント) がタイムアウトになるまでの時間を秒数で指定します。  
   
@@ -162,7 +162,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 ## <a name="unavailable-options"></a>利用できないオプション
 現在のリリースでは、次のオプションは使用できません。  
 
-- -A  専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] にログインします。 専用管理者接続 (DAC) を作成する方法については、「[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)」を参照してください。  
+- -A  専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にログインします。 専用管理者接続 (DAC) を作成する方法については、「[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)」を参照してください。  
   
 - -f *code_page* 入力と出力のコード ページを指定します。  
   

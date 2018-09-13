@@ -1,5 +1,5 @@
 ---
-title: setInstanceName メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: setInstanceName メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30a04c2c4094f8265a829b6b130b1e7423d154f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29b2c2033c705858577ac759b34b53fa2f9395c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841927"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784911"
 ---
 # <a name="setinstancename-method-sqlserverdatasource"></a>setInstanceName メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  セット、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]インスタンス名。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名が設定されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ public void setInstanceName(java.lang.String instanceName)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *InstanceName*  
+ *instanceName*  
   
  A**文字列**インスタンス名を格納しています。  
   

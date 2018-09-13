@@ -1,5 +1,5 @@
 ---
-title: getDate (java.lang.String) メソッドのパラメーター |Microsoft ドキュメント
+title: getDate (java.lang.String) メソッドのパラメーター |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 004e82182e71cb1f37f466cc89e86eb0a0399ba9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c767fecf4a803566e26ef8239a58666d00033e51
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834157"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787857"
 ---
 # <a name="getdate-method-javalangstring"></a>getDate (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,21 +41,21 @@ public java.sql.Date getDate(java.lang.String sCol)
 #### <a name="parameters"></a>パラメーター  
  *sCol*  
   
- A**文字列**パラメーター名を格納しています。  
+ パラメーターの名前を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- Date オブジェクトです。  
+ Date オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getDate メソッドは、getDate、java.sql.CallableStatement インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getDate メソッドは、java.sql.CallableStatement インターフェイスの getDate メソッドで規定されています。  
   
- このメソッドの有効な日付部分を返します、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime**または**smalldatetime**データ型、時刻部分は、Java のベースラインの時刻 00:00 (午前 0 時) に設定します。  
+ このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **datetime** または **smalldatetime** データ型の有効な日付部分が返されます。時刻部分は Java のベースラインの時刻である 00:00 (午前 0 時) に設定されます。  
   
 ## <a name="see-also"></a>参照  
- [getDate メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
+ [getDate メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

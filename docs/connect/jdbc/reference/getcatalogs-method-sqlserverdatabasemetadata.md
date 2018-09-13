@@ -1,5 +1,5 @@
 ---
-title: getCatalogs メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getCatalogs メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20537ecc2ecb42b1384e52e3e95dd611f7ad8797
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84f5f8668dea2b06a6390235be315ee25a27ba80
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832207"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785955"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,25 +39,25 @@ public java.sql.ResultSet getCatalogs()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getCatalogs メソッドは、java.sql.DatabaseMetaData インターフェイスの getCatalogs メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getCatalogs メソッドは、java.sql.DatabaseMetaData インターフェイスで getCatalogs メソッドによって指定されます。  
   
 > [!NOTE]  
->  SQL Azure の呼び出しに、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**です。 SQL Azure は、ユーザー データベースからカタログのセット全体を返すことをサポートしていません。 **SQLServerDatabaseMetaData.getCatalogs** sys.databases ビューを使用して、カタログを取得します。 アクセス許可の説明を参照してください[sys.databases (SQL Azure データベース)](http://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs** SQL Azure で動作します。  
+>  SQL Azure でを呼び出す、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**します。 SQL Azure では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData.getCatalogs** sys.databases ビューを使用して、カタログを取得します。 権限に関する情報を参照してください[sys.databases (SQL Azure データベース)](http://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs** SQL Azure で動作します。  
   
- GetCatalogs メソッドによって返される結果セットには、次の情報が含まれます。  
+ getCatalogs メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**文字列**|システム データベースを含む、カタログの名前[!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。|  
+|TABLE_CAT|**String**|[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のシステム データベースを含むカタログの名前です。|  
   
 ## <a name="example"></a>例  
- 次の例に含まれているすべてのデータベースの名前を取得する getCatalogs メソッドを使用して[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]、システム データベースを含むです。  
+ 次の例では、getCatalogs メソッドを使用して、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に含まれるすべてのデータベース (システム データベースを含む) の名前を返す方法を示します。  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  

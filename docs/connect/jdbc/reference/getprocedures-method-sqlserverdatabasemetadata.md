@@ -1,5 +1,5 @@
 ---
-title: getProcedures メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getProcedures メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df6101068f9d64ac243666d28c231c88a7926001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9841158629f4103540374c324e56fc54fd3f9446
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839257"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786485"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,43 +43,43 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 #### <a name="parameters"></a>パラメーター  
  *sCatalog*  
   
- A**文字列**カタログ名を格納しています。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
+ カタログ名を含む**文字列**です。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
   
  *スキーマ*  
   
- A**文字列**スキーマ名のパターンを格納しています。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
+ スキーマ名のパターンを含む**文字列**です。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
   
  *proc*  
   
- A**文字列**プロシージャ名のパターンを格納しています。  
+ プロシージャ名のパターンを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getProcedures メソッドは、java.sql.DatabaseMetaData インターフェイスの getProcedures メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getProcedures メソッドは、java.sql.DatabaseMetaData インターフェイスで getProcedures メソッドによって指定されます。  
   
- GetProcedures メソッドによって返される結果セットには、次の情報が含まれます。  
+ getProcedures メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**文字列**|指定したストアド プロシージャが存在するデータベースの名前です。|  
-|PROCEDURE_SCHEM|**文字列**|ストアド プロシージャのスキーマです。|  
-|PROCEDURE_NAME|**文字列**|ストアド プロシージャの名前です。|  
+|PROCEDURE_CAT|**String**|指定したストアド プロシージャが存在するデータベースの名前です。|  
+|PROCEDURE_SCHEM|**String**|ストアド プロシージャのスキーマです。|  
+|PROCEDURE_NAME|**String**|ストアド プロシージャの名前です。|  
 |NUM_INPUT_PARAMS|**int**|今後の使用のために予約されています。現在は -1 の値を返します。|  
 |NUM_OUTPUT_PARAMS|**int**|今後の使用のために予約されています。現在は -1 の値を返します。|  
 |NUM_RESULT_SETS|**int**|今後の使用のために予約されています。現在は -1 の値を返します。|  
-|REMARKS|**文字列**|プロシージャ列の記述です。<br /><br /> <br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]はこの列の値を返しません。  |  
-|PROCEDURE_TYPE|**smallint**|ストアド プロシージャの種類です。 次の値のいずれかを指定できます。<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
+|REMARKS|**String**|プロシージャ列の記述です。<br /><br /> <br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、この列の値は返されません。|  
+|PROCEDURE_TYPE|**smallint**|ストアド プロシージャの種類です。 次のいずれかの値を指定できます。<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  
->  GetProcedures メソッドによって返されるデータに関する詳細については、「sp_stored_procedures (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
+>  getProcedures メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_stored_procedures (Transact-SQL)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例で uspGetBillOfMaterials ストアド プロシージャに関する情報を返す、getProcedures メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースで、getProcedures メソッドを使用して uspGetBillOfMaterials ストアド プロシージャに関する情報を返す方法を示します。  
   
 ```  
 public static void executeGetProcedures(Connection con) {  

@@ -1,5 +1,5 @@
 ---
-title: getIndexInfo メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getIndexInfo メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cef7b37818e5bc7bf46c7181a3816edd5bbad860
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 68595a385022f9bd42ccc8e925068e1d1e0ed1d3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836873"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784568"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,56 +45,56 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 #### <a name="parameters"></a>パラメーター  
  *cat*  
   
- A**文字列**カタログ名を格納しています。  
+ カタログ名を含む**文字列**です。  
   
  *schema*  
   
- A**文字列**スキーマ名を格納しています。  
+ スキーマ名を含む**文字列**です。  
   
  *テーブル*  
   
- A**文字列**テーブル名を格納しています。  
+ テーブル名を含む**文字列**です。  
   
- *一意*  
+ *unique*  
   
- **true**のみ場合、一意の値のインデックスが返されます。 **false**のすべてのインデックスが返される場合。  
+ **true**のみ場合、インデックスが一意の値が返されます。 **false**場合、すべてのインデックスが返されます。  
   
- *概数*  
+ *approximate*  
   
  **true**場合は、結果に概数または期限切れの値が反映されます。 **false**結果が正確である場合。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getIndexInfo メソッドは、java.sql.DatabaseMetaData インターフェイスの getIndexInfo メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getIndexInfo メソッドは、java.sql.DatabaseMetaData インターフェイスで getIndexInfo メソッドによって指定されます。  
   
- GetIndexInfo メソッドによって返される結果セットには、次の情報が含まれます。  
+ getIndexInfo メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**文字列**|指定したテーブルが存在するデータベースの名前。|  
-|TABLE_SCHEM|**文字列**|テーブルのスキーマです。|  
-|TABLE_NAME|**文字列**|テーブルの名前です。|  
+|TABLE_CAT|**String**|指定したテーブルが含まれているデータベースの名前です。|  
+|TABLE_SCHEM|**String**|テーブルのスキーマです。|  
+|TABLE_NAME|**String**|テーブルの名前です。|  
 |NON_UNIQUE|**boolean**|インデックス値が重複可能であるかどうかを示します。|  
-|INDEX_QUALIFIER|**文字列**|インデックスの所有者の名前。 TYPE が tableIndexStatistic の場合は null になります。|  
-|INDEX_NAME|**文字列**|インデックスの名前。|  
-|TYPE|**short**|インデックスの種類。 次の値のいずれかを指定できます。<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|INDEX_QUALIFIER|**String**|インデックス所有者の名前です。 TYPE が tableIndexStatistic の場合は null になります。|  
+|INDEX_NAME|**String**|インデックスの名前です。|  
+|TYPE|**short**|インデックスの型です。 次のいずれかの値を指定できます。<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|インデックス内での列の位置を示す序数です。 インデックスの最初の列は 1 です。|  
-|COLUMN_NAME|**文字列**|列の名前です。|  
-|ASC_OR_DESC|**文字列**|インデックスの照合で使用される順序です。 次の値のいずれかを指定できます。<br /><br /> A (昇順)<br /><br /> D (降順)<br /><br /> NULL (適用なし)<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に"A"を返します。  |  
+|COLUMN_NAME|**String**|列の名前です。|  
+|ASC_OR_DESC|**String**|インデックスの照合で使用される順序です。 次のいずれかの値を指定できます。<br /><br /> A (昇順)<br /><br /> D (降順)<br /><br /> NULL (適用なし)<br /><br /> **注:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からは常に "A" が返されます。|  
 |CARDINALITY|**int**|テーブル内の行数またはインデックス内の一意の値の個数です。|  
 |PAGES|**int**|インデックスまたはテーブルの格納に使用するページ数です。|  
-|FILTER_CONDITION|**文字列**|フィルター条件です。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に null を返します。  |  
+|FILTER_CONDITION|**String**|フィルター条件です。<br /><br /> **注:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からは常に "null" が返されます。|  
   
 > [!NOTE]  
->  GetIndexInfo メソッドによって返されるデータに関する詳細については、「sp_indexes (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
+>  getIndexInfo メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_indexes (Transact-SQL)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、インデックスと内の Person.Contact テーブルの統計に関する情報を返す getIndexInfo メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、getIndexInfo メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースにある Person.Contact テーブルのインデックスと統計情報に関する情報を返す方法を示します。  
   
 ```  
 public static void executeGetIndexInfo(Connection con) {  

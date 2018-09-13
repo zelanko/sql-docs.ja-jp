@@ -1,5 +1,5 @@
 ---
-title: SQLServerConnection クラス |Microsoft ドキュメント
+title: SQLServerConnection クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f59867c195a333d0bd4bee7996d19fbeae156c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4746e09839e2015e4b7b14963ae698c66066ac78
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845887"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785656"
 ---
 # <a name="sqlserverconnection-class"></a>SQLServerConnection クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  JDBC の接続を表し、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。  
+  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへの JDBC 接続を表します。  
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
@@ -37,18 +37,18 @@ ms.locfileid: "32845887"
 public class SQLServerConnection  
 ```  
   
-## <a name="remarks"></a>解説  
- SQLServerConnection では、JDBC 接続プールをサポートし、物理的な JDBC 接続または論理的な JDBC 接続のいずれかを指定できます。 SQLServerConnection が、そこから作成されたすべてのステートメントのトランザクション制御を管理し、XAResource アダプターを通じて管理される XA 分散トランザクションに参加できます。  
+## <a name="remarks"></a>Remarks  
+ SQLServerConnection では、JDBC 接続プールがサポートされており、JDBC の物理接続または JDBC の論理接続のいずれかを使用できます。 SQLServerConnection は、それから作成されたすべてのステートメントのトランザクション制御を管理し、XAResource アダプター経由で管理される XA の分散トランザクションに参加できます。  
   
  SQLServerConnection では、準備されたステートメント ハンドルのプールを管理します。 ステートメントは 1 回だけ準備され、通常はパラメーターに対して異なるデータ値を指定し、何度も実行されます。 準備されたステートメントは、論理 (プール) 接続の終了後も維持されます。  
   
 > [!NOTE]  
 >  SQLServerConnection はスレッド セーフではありません。 ただし、単一の接続から作成された複数のステートメントは、同時スレッドで同時に処理することができます。  
   
- このクラスは、SQLServerConnection クラス、java.sql.connection インターフェイス、および ISQLServerConnection インターフェイスへのアンラッピングをサポートします。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)です。  
+ このクラスは、SQLServerConnection クラス、java.sql.connection インターフェイス、および ISQLServerConnection インターフェイスへのアンラッピングをサポートしています。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

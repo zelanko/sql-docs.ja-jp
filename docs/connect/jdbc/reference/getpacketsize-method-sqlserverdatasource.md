@@ -1,5 +1,5 @@
 ---
-title: getPacketSize メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: getPacketSize メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4350bb6f3d6213548b298b45052ca009e8f99cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7067b0a96fdde31afdd8d4a4f67c757346385b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836797"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785801"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  通信するために使用される現在のネットワーク パケット サイズを返します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]、バイト単位で指定します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との通信に使用される現在のネットワーク パケット サイズを返します (バイト数で指定します)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,10 +39,10 @@ public int getPacketSize()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **Int**現在のネットワーク パケット サイズを含む値です。  
+ 現在のネットワーク パケット サイズを含む **int** 値です。  
   
-## <a name="remarks"></a>解説  
- PacketSize プロパティが設定されていない場合、getPacketSize メソッドは、既定値の 8000 を返します。  
+## <a name="remarks"></a>Remarks  
+ packetSize プロパティが設定されていない場合、getPacketSize メソッドは既定値の 8000 が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

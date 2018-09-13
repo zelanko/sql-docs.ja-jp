@@ -1,5 +1,5 @@
 ---
-title: getUser メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: getUser メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cd095dc3968ae89dfedb110cc5a75eb1b19844a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4d35f898c93e7764bd9436b24ac4a5d7989ac91e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839237"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784955"
 ---
 # <a name="getuser-method-sqlserverdatasource"></a>getUser メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,10 +39,10 @@ public java.lang.String getUser()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**ユーザー名を格納しています。  
+ ユーザー名を含む**文字列**です。  
   
-## <a name="remarks"></a>解説  
- [SetUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)メソッドのインスタンスに接続するときに使用されるユーザー名を設定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。 ユーザー名の値が設定されていない場合、getUser メソッドは既定値の null を返します。  
+## <a name="remarks"></a>Remarks  
+ [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) メソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続するときに使用されるユーザー名が設定されます。 ユーザー名の値が設定されていない場合、getUser メソッドは既定値の null を返します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

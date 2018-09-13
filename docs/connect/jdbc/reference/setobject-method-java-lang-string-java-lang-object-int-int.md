@@ -1,5 +1,5 @@
 ---
-title: setObject (java.lang.String、java.lang.Object、int, int) メソッド |Microsoft ドキュメント
+title: setObject メソッド (java.lang.String, java.lang.Object, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42124090d8caac8290d30b9000bf73de5ca916ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6cf5eae5524ae2737acff20d516eecad2ac40243
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844567"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784050"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int-int"></a>setObject (java.lang.String, java.lang.Object, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定したオブジェクト、ターゲットの種類、および小数点以下桁数を使用して、指定されたパラメーターの値を設定します。  
+  渡されたオブジェクト、変換先の型、および小数点以下桁数を使用して、指定されたパラメーターの値が設定されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,32 +44,32 @@ public void setObject(java.lang.String sCol,
 #### <a name="parameters"></a>パラメーター  
  *sCol*  
   
- A**文字列**パラメーター名を格納しています。  
+ パラメーターの名前を含む**文字列**です。  
   
  *o*  
   
- **オブジェクト**値。  
+ **Object** 値。  
   
  *n*  
   
- **Int** java.sql.Types で定義されているターゲットの種類を示すです。  
+ java.sql.Types での定義に従って変換先の型を示す **int** です。  
   
  *m*  
   
- **Int**小数点の右側にある数字の数を示すです。 このパラメーターは、NUMERIC および DECIMAL を除き、すべての型で無視されます。  
+ 小数点以下の桁数を示す **int** です。 このパラメーターは、NUMERIC および DECIMAL を除き、すべての型で無視されます。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この setObject メソッドは、java.sql.CallableStatement インターフェイスの setObject メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setObject メソッドは、java.sql.CallableStatement インターフェイスの setObject メソッドで指定されています。  
   
- 以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0 では、このメソッドの動作は、によって変更が、 **sendTimeAsDatetime**接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) および[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)です。  
+ 以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0 では、このメソッドの動作は変更、**で sendTimeAsDatetime**接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) と[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)します。  
   
- 詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)です。  
+ 詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)します。  
   
 ## <a name="see-also"></a>参照  
- [setObject メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
+ [setObject メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

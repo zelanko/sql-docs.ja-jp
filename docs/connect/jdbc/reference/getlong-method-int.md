@@ -1,5 +1,5 @@
 ---
-title: getLong (int) メソッド |Microsoft ドキュメント
+title: getLong (int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2152de272ccfd5f2bcdfa87b2af909b8a2f3950
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2fbd9011cc7b698ee657773f379c1075faca080a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834857"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785951"
 ---
 # <a name="getlong-method-int"></a>getLong (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  として指定されたパラメーターの値を取得、**長い**java プログラミング言語のパラメーターのインデックスを指定します。  
+  パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値が Java プログラミング言語の **long** として取得されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,9 +39,9 @@ public long getLong(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *インデックス*  
+ *index*  
   
- **Int**パラメーター インデックスを示すです。  
+ パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
  A**長い**値。  
@@ -49,13 +49,13 @@ public long getLong(int index)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getLong メソッドは、java.sql.CallableStatement インターフェイスの getLong メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getLong メソッドは、java.sql.CallableStatement インターフェイスの getLong メソッドで規定されています。  
   
- このメソッドでのみサポートされて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型など、bigint、int、smallint、tinyint、およびビットの整数値を安全に返すことができます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、bigint、int、smallint、tinyint、bit などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
- [getLong メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
+ [getLong メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

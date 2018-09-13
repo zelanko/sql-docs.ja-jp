@@ -1,5 +1,5 @@
 ---
-title: getVersionColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getVersionColumns メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 449af2fc385e569c8a08051f155f704108153f84
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841627"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787877"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,43 +43,43 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>パラメーター  
  *catalog*  
   
- A**文字列**カタログ名を格納しています。  
+ カタログ名を含む**文字列**です。  
   
  *schema*  
   
- A**文字列**スキーマ名のパターンを格納しています。  
+ スキーマ名のパターンを含む**文字列**です。  
   
  *テーブル*  
   
- A**文字列**テーブル名を格納しています。  
+ テーブル名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getVersionColumns メソッドは、java.sql.DatabaseMetaData インターフェイスの getVersionColumns メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getVersionColumns メソッドは、java.sql.DatabaseMetaData インターフェイスで getVersionColumns メソッドによって指定されます。  
   
- GetVersionColumns メソッドによって返される結果セットには、次の情報が含まれます。  
+ getVersionColumns メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|JDBC ドライバーではサポートされていません。|  
-|COLUMN_NAME|**文字列**|列名。|  
+|COLUMN_NAME|**String**|列名。|  
 |DATA_TYPE|**short**|java.sql.Types の SQL データ型です。|  
-|TYPE_NAME|**文字列**|データ型の名前です。|  
+|TYPE_NAME|**String**|データ型の名前です。|  
 |COLUMN_SIZE|**int**|列の完全桁数です。|  
 |BUFFER_LENGTH|**int**|列の長さです (バイト)。|  
 |DECIMAL_DIGITS|**short**|列の小数点以下の桁数です。|  
-|PSEUDO_COLUMN|**short**|列が擬似列かどうかを示します。 次の値のいずれかを指定できます。<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
+|PSEUDO_COLUMN|**short**|列が擬似列かどうかを示します。 次のいずれかの値を指定できます。<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
->  GetVersionColumns メソッドによって返されるデータに関する詳細については、「sp_datatype_info (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
+>  getVersionColumns メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_datatype_info (Transact-SQL)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、内の Person.Contact テーブルには自動的に更新される列に関する情報を返す getVersionColumns メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、getVersionColumns メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースの Person.Contact テーブルで自動的に更新される列に関する情報を返す方法を示します。  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  

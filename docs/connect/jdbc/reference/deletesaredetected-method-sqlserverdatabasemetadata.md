@@ -1,5 +1,5 @@
 ---
-title: deletesAreDetected メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: deletesAreDetected メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be04cfff99afb70570cf00fc7191738593be2cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6def9d94b1cbfb1b3e6bee07454d5f5adad2392
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832287"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787263"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  表示されている行を削除するかどうかを取得しますを呼び出すことによって検出できる、 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)クラスです。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) メソッドを呼び出すことで可視の行が削除されたことを検出できるかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ public boolean deletesAreDetected(int type)
 #### <a name="parameters"></a>パラメーター  
  *type*  
   
- **Int**を示す結果セットの種類で、java.sql.ResultSet または SQLServerResultSet で定義されている、次の値のいずれかを指定することができます。  
+ 結果セットの種類を示す **int** です。java.sql.ResultSet または SQLServerResultSet での定義に従って、次のいずれかの値を指定できます。  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet の種類  
  TYPE_FORWARD_ONLY  
@@ -62,18 +62,18 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>戻り値  
- **true**場合は、削除された行が穴に置き換えられます。 **false**削除された行が削除された場合。  
+ **true**削除された行が穴に置き換えられる場合。 **false**削除された行が削除された場合。  
   
- 使用する場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]で、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベースで、このメソッドが戻る**true** TYPE_SS_SCROLL_KEYSET カーソルと**false**他のすべての結果セットの種類のです。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドは TYPE_SS_SCROLL_KEYSET カーソルに対して **true** を返し、それ以外のすべての結果セットの種類に対して **false** が返されます。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この deletesAreDetected メソッドは、java.sql.DatabaseMetaData インターフェイスの deletesAreDetected メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この deletesAreDetected メソッドは、java.sql.DatabaseMetaData インターフェイスで deletesAreDetected メソッドによって指定されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 検出は順方向カーソルと動的カーソルの一時的なものですが、すべての更新可能なカーソルの種類の削除された行を検出します。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は更新可能なすべてのカーソルの種類の削除された行を検出しますが、順方向カーソルと動的カーソルについては、検出は一時的です。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

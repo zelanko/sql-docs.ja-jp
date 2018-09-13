@@ -1,5 +1,5 @@
 ---
-title: ISQLServerPreparedStatement インターフェイス |Microsoft ドキュメント
+title: ISQLServerPreparedStatement インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ec1e10bc98fe8e1f61c15d97777e1c85a27031e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5710c5345508f3172814d8960cfce18bb11ba5ec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839047"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784949"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement インターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  JDBC の準備されたステートメント機能の基本的な実装を表します。 このインターフェイスが追加されました[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0 です。  
+  JDBC の準備されたステートメント機能の基本的な実装を表します。 このインターフェイスは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 で追加されました。  
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
- **拡張:** java.sql.PreparedStatement、 [ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
+ **拡張:** java.sql.PreparedStatement、[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +37,16 @@ ms.locfileid: "32839047"
 public interface ISQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>解説  
- このインターフェイスはによって実装[SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ このインターフェイスによって実装されます[SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)します。  
   
- このインターフェイスは、次を公開[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定のメソッド。  
+ このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   
 |方法|詳細については、「|  
 |------------|-------------------------------|  
 |public void setDateTimeOffset(int, microsoft.sql.DateTimeOffset)|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

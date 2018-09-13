@@ -1,5 +1,5 @@
 ---
-title: getDate (java.lang.String) メソッドの列 |Microsoft ドキュメント
+title: getDate (java.lang.String) メソッドの列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0f2a8524366b84fb127444e6389e7db9b0560ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d8700eea4ae7516fdedc0357a055c812d5d987d2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834767"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786495"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列名の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語の java.sql.Date オブジェクトとして。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の java.sql.Date オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,18 +41,18 @@ public java.sql.Date getDate(java.lang.String columnName)
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- A**文字列**列の名前を格納しています。  
+ 列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- Date オブジェクトです。  
+ Date オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getDate メソッドは、getDate、java.sql.ResultSet インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getDate メソッドは、java.sql.ResultSet インターフェイスの getDate メソッドによって指定されます。  
   
- このメソッドの有効な日付部分を返します、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime または smalldatetime のデータ型、時刻部分は、Java のベースラインの時刻 00:00 (午前 0 時) に設定します。  
+ このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な日付部分が返されます。時刻部分は Java のベースラインの時刻である 00:00 (午前 0 時) に設定されます。  
   
 ## <a name="see-also"></a>参照  
  [getDate メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   

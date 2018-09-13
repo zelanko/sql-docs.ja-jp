@@ -1,5 +1,5 @@
 ---
-title: エラー処理 |Microsoft ドキュメント
+title: エラーの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ac872fa0c59b285de97494874099e6235a8332d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: eee315022a94795dd27ae8ae7fee6cc784912bec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827487"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786113"
 ---
 # <a name="handling-errors"></a>エラーの処理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  使用する場合、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、すべてのデータベース エラー状態は、例外として Java アプリケーションに返される、 [SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md)クラスです。 SQLServerException クラスの次のメソッドは、java.sql.SQLException および java.lang.Throwable; から継承されます。特定の情報を返すに使用されることがあると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]発生したエラー。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] の使用時に発生するデータベース エラー状態はすべて、[SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md) クラスの例外として Java アプリケーションに返されます。 SQLServerException クラスの次のメソッドは、java.sql.SQLException および java.lang.Throwable から継承されます。これらのメソッドを使用して、発生した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーに関する特定の情報を返すことができます。  
   
--   getSQLState は、標準的な x/open または SQL99 状態コードの例外を返します。  
+-   getSQLState は、例外の標準的な X/Open または SQL99 状態コードが返されます。  
   
--   getErrorCode では、特定のデータベース エラー番号を返します。  
+-   getErrorCode は、具体的なデータベース エラー番号が返されます。  
   
--   getMessage では、例外の全文を返します。 エラー メッセージ テキストは問題について説明します。そして、オブジェクト名のような情報のプレースホルダーを含むことがよくあります。こうしたプレースホルダーは、エラー メッセージが表示されるとき、その中に挿入されます。  
+-   getMessage は、例外の全文が返されます。 エラー メッセージ テキストは問題について説明します。そして、オブジェクト名のような情報のプレースホルダーを含むことがよくあります。こうしたプレースホルダーは、エラー メッセージが表示されるとき、その中に挿入されます。  
   
 -   返す例外オブジェクトがある場合は、getNextException、SQLServerException の次のオブジェクトまたは null を返します。  
   
- 次の例では、開いている接続を[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプル データベースが関数に渡され、FROM 句がない不適切な SQL ステートメントが構築されます。 次に、ステートメントが実行され、SQL 例外が処理されます。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続が関数に渡され、FROM 句のない不適切な SQL ステートメントが作成されます。 次に、ステートメントが実行され、SQL 例外が処理されます。  
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   

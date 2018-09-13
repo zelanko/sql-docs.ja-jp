@@ -1,5 +1,5 @@
 ---
-title: getImportedKeys メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getImportedKeys メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de5ae39ff10c32737df637c9a6f29aab19d27574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e086d412777dcb67e5e59bc9dad89a46e925d004
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836687"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787292"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,49 +43,49 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 #### <a name="parameters"></a>パラメーター  
  *cat*  
   
- A**文字列**カタログ名を格納しています。  
+ カタログ名を含む**文字列**です。  
   
  *schema*  
   
- A**文字列**スキーマ名を格納しています。  
+ スキーマ名を含む**文字列**です。  
   
  *テーブル*  
   
- A**文字列**テーブル名を格納しています。  
+ テーブル名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getImportedKeys メソッドは、java.sql.DatabaseMetaData インターフェイスの getImportedKeys メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getImportedKeys メソッドは、java.sql.DatabaseMetaData インターフェイスで getImportedKeys メソッドによって指定されます。  
   
- GetImportedKeys メソッドによって返される結果セットには、次の情報が含まれます。  
+ getImportedKeys メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|PKTABLE_CAT|**文字列**|主キー テーブルを含むカタログの名前です。|  
-|PKTABLE_SCHEM|**文字列**|主キー テーブルのスキーマの名前です。|  
-|PKTABLE_NAME|**文字列**|主キー テーブルの名前です。|  
-|PKCOLUMN_NAME|**文字列**|主キーの列名です。|  
-|FKTABLE_CAT|**文字列**|外部キー テーブルを含むカタログの名前です。|  
-|FKTABLE_SCHEM|**文字列**|外部キー テーブルのスキーマの名前です。|  
-|FKTABLE_NAME|**文字列**|外部キー テーブルの名前です。|  
-|FKCOLUMN_NAME|**文字列**|外部キーの列名です。|  
+|PKTABLE_CAT|**String**|主キー テーブルを含むカタログの名前です。|  
+|PKTABLE_SCHEM|**String**|主キー テーブルのスキーマの名前です。|  
+|PKTABLE_NAME|**String**|主キー テーブルの名前です。|  
+|PKCOLUMN_NAME|**String**|主キーの列名です。|  
+|FKTABLE_CAT|**String**|外部キー テーブルを含むカタログの名前です。|  
+|FKTABLE_SCHEM|**String**|外部キー テーブルのスキーマの名前です。|  
+|FKTABLE_NAME|**String**|外部キー テーブルの名前です。|  
+|FKCOLUMN_NAME|**String**|外部キーの列名です。|  
 |KEY_SEQ|**short**|複数列の主キーにおける列のシーケンス番号です。|  
-|UPDATE_RULE|**short**|SQL の操作が更新プログラムのとき、外部キーに適用されるアクション。 次の値のいずれかを指定できます。<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|DELETE_RULE|**short**|SQL の操作が削除であるとき、外部キーに適用されるアクション。 次の値のいずれかを指定できます。<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|FK_NAME|**文字列**|外部キーの名前です。|  
-|PK_NAME|**文字列**|主キーの名前です。|  
-|DEFERRABILITY|**short**|外部キーの制限の評価を、コミット時まで遅延できるかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
+|UPDATE_RULE|**short**|SQL の操作が更新であるとき、外部キーに適用される動作です。 次のいずれかの値を指定できます。<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|DELETE_RULE|**short**|SQL の操作が削除であるとき、外部キーに適用される動作です。 次のいずれかの値を指定できます。<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|FK_NAME|**String**|外部キーの名前です。|  
+|PK_NAME|**String**|主キーの名前です。|  
+|DEFERRABILITY|**short**|外部キーの制限の評価を、コミット時まで遅延できるかどうかを示します。 次のいずれかの値を指定できます。<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  GetImportedKeys メソッドによって返されるデータに関する詳細については、「sp_fkeys (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
+>  getImportedKeys メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_fkeys (Transact-SQL)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、Person.Address テーブルの外部キーを参照するすべてのプライマリ キーに関する情報を返す getImportedKeys メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、getImportedKeys メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースの Person.Address テーブルにある外部キーを参照するすべての主キーに関する情報を返す方法を示します。  
   
 ```  
 public static void executeGetImportedKeys(Connection con) {  

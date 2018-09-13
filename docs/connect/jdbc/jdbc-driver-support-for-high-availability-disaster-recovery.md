@@ -1,5 +1,5 @@
 ---
-title: 高可用性、災害復旧の JDBC ドライバー サポート |Microsoft ドキュメント
+title: 高可用性、ディザスター リカバリーのための JDBC Driver のサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -14,37 +14,37 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77ebc4b570d74fca0ec5bfbde5fc8d34c3f3aa30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1136f55327ad68063c55e8f841930759a28fe576
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833467"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784052"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>高可用性、障害回復のための JDBC Driver のサポート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  このトピックについて説明[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]の高可用性、災害復旧--サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]です。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]の詳細については、 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] オンライン ブックを参照してください。  
+  このトピックでは、高可用性のディザスター リカバリーを実現する [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] のための [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] のサポートについて説明します。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]の詳細については、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] オンライン ブックを参照してください。  
   
- 以降のバージョン 4.0 では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]の可用性グループ リスナーを指定することができます (高可用性、災害復旧) 接続プロパティの可用性グループ (AG)。 場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]アプリケーションがフェールオーバーが発生した AlwaysOn データベースに接続している、元の接続が切断され、アプリケーションは、フェールオーバー後の作業を続行する新しい接続を開く必要があります。 次[接続プロパティ](../../connect/jdbc/setting-the-connection-properties.md)で追加された[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
+ Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続プロパティを使用して、(高可用性のディザスター リカバリー) 可用性グループ (AG) の可用性グループ リスナーを指定できます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] アプリケーションを AlwaysOn データベースに接続しているときにフェールオーバーが発生した場合、元の接続は切断され、アプリケーションではフェールオーバー後に処理を続行するために新しい接続を開く必要があります。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、次の[接続プロパティ](../../connect/jdbc/setting-the-connection-properties.md)が追加されました。  
   
 -   **multiSubnetFailover**  
   
 -   **applicationIntent**
  
-MultiSubnetFailover を指定して、可用性グループまたはフェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する場合に true を = です。 なお**multiSubnetFailover**は既定で false に設定します。 使用して**applicationIntent**アプリケーション ワークロードの種類を宣言します。 詳細については次のセクションを参照してください。
+可用性グループまたはフェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、multiSubnetFailover=true を指定してください。 なお**multiSubnetFailover**は既定では false。 使用**applicationIntent**アプリケーション ワークロードの種類を宣言します。 詳細については、以下のセクションを参照してください。
  
-以降、Microsoft JDBC Driver のバージョン 6.0 では、SQL Server の新しい接続プロパティの**transparentNetworkIPResolution** (TNIR) が Always On 可用性グループまたはがサーバーに透過的な接続の追加複数の IP アドレスが関連付けられています。 ときに**transparentNetworkIPResolution**が true の場合、ドライバーは最初の IP アドレスに接続しようとしています。 最初の試行が失敗すると、ドライバーはタイムアウトになると、それらのいずれかが成功した場合、保留中の接続試行を破棄するまで並列内のすべての IP アドレスに接続しようとします。   
+Microsoft JDBC Driver 6.0 for SQL Server では、新しい接続プロパティ以降**transparentNetworkIPResolution** (TNIR) が Always On 可用性グループまたはサーバーに透過的な接続の追加複数の IP アドレスが関連付けられています。 ときに**transparentNetworkIPResolution**が true の場合、ドライバーは、最初の IP アドレスに接続を試行します。 最初の試行に失敗した場合、ドライバーはタイムアウトになると、それらのいずれかが成功すると、保留中の接続の試行を破棄するまで、並列ですべての IP アドレスに接続しようとします。   
 
 注意してください。
-* transparentNetworkIPResolution が既定では true
-* multiSubnetFailover が true の場合、transparentNetworkIPResolution は無視されます。
+* transparentNetworkIPResolution は既定で true
+* multiSubnetFailover が true の場合は、transparentNetworkIPResolution が無視されます。
 * データベース ミラーリングを使用する場合、transparentNetworkIPResolution は無視されます。
 * 64 を超える IP アドレスがある場合は、transparentNetworkIPResolution が無視されます。
-* TransparentNetworkIPResolution が true の場合、最初の接続試行は、500 ミリ秒のタイムアウト値を使用します。 接続試行の残りの部分では、multiSubnetFailover 機能と同様に、同じロジックに従います。 
+* TransparentNetworkIPResolution が true の場合、最初の接続試行は 500 ミリ秒のタイムアウト値を使用します。 接続の試行の残りの部分では、multiSubnetFailover 機能と同じロジックに従います。 
 
 > [!NOTE]  
-ユーザーは Microsoft JDBC Driver 4.2 を使用して (または削減) for SQL Server で、 **multiSubnetFailover**が false の場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]最初の IP アドレスに接続しようとしています。 場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]接続に失敗した最初の IP アドレスとの接続を確立できません。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]サーバーに関連付けられているその他の IP アドレスに接続することはしません。 
+ユーザーは Microsoft JDBC Driver 4.2 を使用して (または削減) SQL Server の場合、 **multiSubnetFailover**が false の場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]最初の IP アドレスに接続しようとしています。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が 1 つ目の IP アドレスとの間に接続を確立できない場合、接続は失敗します。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、サーバーに関連付けられているその他の IP アドレスとの接続は試行されません。 
 
   
 > [!NOTE]  
@@ -53,29 +53,29 @@ MultiSubnetFailover を指定して、可用性グループまたはフェール
  
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続  
- 常に指定**multiSubnetFailover = true**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]可用性グループ、または[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]フェールオーバー クラスター インスタンス。 **multiSubnetFailover**すべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効に[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]し、単一サブネットおよびマルチ サブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に低下します。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネットのフェールオーバー中に、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]は積極的に TCP 接続を再試行します。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **multiSubnetFailover=true** を指定してください。 **multiSubnetFailover** を使用することで、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のすべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバー中、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では TCP 接続が積極的に再試行されます。  
   
- **MultiSubnetFailover**接続プロパティは、可用性グループまたはフェールオーバー クラスター インスタンスで、アプリケーションが展開されていることを示します、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] プライマリ上のデータベースに接続しようとして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]すべての ip アドレスに接続しようとしてのインスタンスに対応します。 ときに**MultiSubnetFailover = true**が指定されている接続の場合、クライアントは、オペレーティング システムの既定の TCP 再転送間隔よりも高速接続試行を再試行します。 これにより、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
+ **multiSubnetFailover** 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ではすべての IP アドレスに対して接続を試行することで、プライマリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続が試行されます。 接続に対して **MultiSubnetFailover=true** を指定した場合、クライアントにより、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で TCP 接続が再試行されます。 これにより、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
   
- 接続文字列キーワードの詳細については、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)です。  
+ 接続文字列キーワードの詳細については、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)します。  
   
- 指定する**multiSubnetFailover = true**可用性グループ リスナーまたはフェールオーバー クラスター インスタンス以外のものへの接続は負の値のパフォーマンスに影響されない可能性があり、サポートされていません。  
+ 可用性グループ リスナーまたはフェールオーバー クラスター インスタンス以外に接続するときに **multiSubnetFailover=true** を指定すると、パフォーマンスが低下する可能性があるため、このような指定はサポートされていません。  
   
- セキュリティ マネージャーがインストールされていない場合、Java 仮想マシンにより仮想 IP アドレス (VIP) が期限付きでキャッシュされます。この期限は、既定で JDK 実装および Java プロパティ (networkaddress.cache.ttl および networkaddress.cache.negative.ttl) によって定義されます。 JDK セキュリティ マネージャーがインストールされている場合、Java 仮想マシンにより VIP がキャッシュされます。このキャッシュは、既定で更新されません。 Java 仮想マシン キャッシュの "有効期限" (networkaddress.cache.ttl) を 1 日に設定する必要があります。 既定値を 1 日 (またはその他の値) に変更しない場合、VIP が追加または更新されたときに古い値が削除されません。 Networkaddress.cache.ttl と networkaddress.cache.negative.ttl の詳細については、次を参照してください。 [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)です。  
+ セキュリティ マネージャーがインストールされていない場合、Java 仮想マシンにより仮想 IP アドレス (VIP) が期限付きでキャッシュされます。この期限は、既定で JDK 実装および Java プロパティ (networkaddress.cache.ttl および networkaddress.cache.negative.ttl) によって定義されます。 JDK セキュリティ マネージャーがインストールされている場合、Java 仮想マシンにより VIP がキャッシュされます。このキャッシュは、既定で更新されません。 Java 仮想マシン キャッシュの "有効期限" (networkaddress.cache.ttl) を 1 日に設定する必要があります。 既定値を 1 日 (またはその他の値) に変更しない場合、VIP が追加または更新されたときに古い値が削除されません。 Networkaddress.cache.ttl と networkaddress.cache.negative.ttl の詳細については、次を参照してください。 [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)します。  
   
  可用性グループまたはフェールオーバー クラスター インスタンス内のサーバーに接続する際には、次のガイドラインに従います。  
   
--   場合に、ドライバーがエラーを生成、 **instanceName**と同じ接続文字列で接続プロパティが使用される、 **multiSubnetFailover**接続プロパティです。 これは、SQL ブラウザーは可用性グループ内で使用されないという事実を反映しています。 ただし場合、 **portNumber**接続プロパティが指定されても、ドライバーは無視されます**instanceName**して**portNumber**です。  
+-   場合、ドライバーのエラーが発生する、 **instanceName**と同じ接続文字列で接続プロパティが使用される、 **multiSubnetFailover**接続プロパティです。 これは、SQL ブラウザーは可用性グループ内で使用されないという事実を反映しています。 ただし場合、 **portNumber**接続プロパティが指定されても、ドライバーは無視**instanceName**して**portNumber**します。  
   
--   使用して、 **multiSubnetFailover**接続プロパティの両方のパフォーマンスの向上が単一のサブネットまたはマルチ サブネットに接続する、ときにします。  
+-   単一サブネットまたはマルチサブネットに接続する場合に **multiSubnetFailover** 接続プロパティを使用すると、両方の場合のパフォーマンスを向上させることができます。  
   
 -   可用性グループに接続するには、接続文字列でサーバーとして、可用性グループの可用性グループ リスナーを指定します。 たとえば、jdbc:sqlserver://VNN1 のように指定します。  
   
--   64 個を超える数の IP アドレスが構成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスに接続すると、接続エラーが発生します。  
+-   64 個を超える数の IP アドレスが構成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続すると、接続エラーが発生します。  
   
--   使用するアプリケーションの動作、 **multiSubnetFailover**接続プロパティが認証の種類に基づく影響を受けません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]認証、Kerberos 認証、または Windows 認証です。  
+-   **multiSubnetFailover** 接続プロパティを使用するアプリケーションの動作は、認証の種類 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、または Windows 認証) の影響を受けません。  
   
--   値を大きく**loginTimeout**フェールオーバー時間に対応し、アプリケーションの接続再試行回数を削減します。  
+-   **loginTimeout** の値を増やすことで、フェールオーバー時間に対応し、アプリケーションの接続試行回数を減らすことができます。  
   
 -   分散トランザクションはサポートされていません。  
   
@@ -83,21 +83,21 @@ MultiSubnetFailover を指定して、可用性グループまたはフェール
   
 1.  セカンダリ レプリカの場所が、接続を許可するように構成されていない。  
   
-2.  アプリケーションで使用する場合**applicationIntent = ReadWrite** (後述) セカンダリ レプリカの場所は読み取り専用アクセス用に構成されたとします。  
+2.  アプリケーションに **applicationIntent=ReadWrite** (後述します) が使用されているが、セカンダリ レプリカの場所が読み取り専用アクセスとして構成されている。  
   
  プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されているとき、接続文字列に **ApplicationIntent=ReadOnly** が含まれていると、接続は失敗します。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>データベース ミラーリングの使用からマルチサブネット クラスターの使用へのアップグレード  
- アップグレードする場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]アプリケーション現在データベース ミラーリングを使用して、マルチ サブネットのシナリオでは、削除する必要あります、 **failoverPartner**接続プロパティと、コードに置き換えます**multiSubnetFailover** 'éý' **true**し、接続文字列でサーバー名を可用性グループ リスナーに置き換えます。 接続文字列で使用する場合**failoverPartner**と**multiSubnetFailover = true**ドライバーでエラーが発生します。 ただし、接続文字列で使用する場合**failoverPartner**と**multiSubnetFailover = false** (または**ApplicationIntent = ReadWrite**)、アプリケーション データベースが使用されますミラー化できます。  
+ 現在、データベース ミラーリングを使用している [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] アプリケーションをマルチサブネットのシナリオにアップグレードする場合、**failoverPartner** 接続プロパティを削除して **multiSubnetFailover** に置き換え、それを **true** に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列で **failoverPartner** および **multiSubnetFailover=true** が使用されている場合、ドライバーによってエラーが生成されます。 ただし、接続文字列に **failoverPartner** と **multiSubnetFailover=false** (または **ApplicationIntent=ReadWrite**) が使用されている場合、アプリケーションではデータベース ミラーリングが使用されます。  
   
- ドライバーが場合と、AG のプライマリ データベースでデータベース ミラーリングを使用する場合に、エラーが返されます**multiSubnetFailover = true**は可用性グループにはなく、プライマリ データベースに接続する接続文字列で使用リスナー。  
+ AG のプライマリ データベースでデータベース ミラーリングが使用されている場合、および可用性グループ リスナーではなく、プライマリ データベースに接続する接続文字列内で **multiSubnetFailover=true** が使用されている場合、ドライバーによってエラーが返されます。  
 
 
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>multiSubnetFailover および applicationIntent をサポートする新しいメソッド  
- 次の方法では、プログラムによるアクセスを**multiSubnetFailover**、 **applicationIntent**と**transparentNetworkIPResolution**接続文字列キーワード:  
+ 次のメソッドを使用するプログラムによるアクセス、 **multiSubnetFailover**、 **applicationIntent**と**transparentNetworkIPResolution**接続文字列キーワード:  
   
 -   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
   
@@ -113,13 +113,13 @@ MultiSubnetFailover を指定して、可用性グループまたはフェール
 
 -   SQLServerDataSource.getTransparentNetworkIPResolution
   
- **GetMultiSubnetFailover**、 **setMultiSubnetFailover**、 **getApplicationIntent**、 **setApplicationIntent**、 **getTransparentNetworkIPResolution**と**setTransparentNetworkIPResolution**にメソッドが追加されても[SQLServerDataSource クラス](../../connect/jdbc/reference/sqlserverdatasource-class.md)、 [SQLServerConnectionPoolDataSource クラス](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および[SQLServerXADataSource クラス](../../connect/jdbc/reference/sqlserverxadatasource-class.md)です。  
+ **GetMultiSubnetFailover**、 **setMultiSubnetFailover**、 **getApplicationIntent**、 **setApplicationIntent**、 **getTransparentNetworkIPResolution**と**setTransparentNetworkIPResolution**にメソッドが追加されても[SQLServerDataSource クラス](../../connect/jdbc/reference/sqlserverdatasource-class.md)、 [SQLServerConnectionPoolDataSource クラス](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および[SQLServerXADataSource クラス](../../connect/jdbc/reference/sqlserverxadatasource-class.md)します。  
   
 ## <a name="ssl-certificate-validation"></a>SSL 証明書の検証  
- 可用性グループは、複数の物理サーバーで構成されます。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] サポートが追加されました**サブジェクト代替名**で SSL 証明書の複数のホストは、同じ証明書を関連付けることができるようにします。 SSL の詳細については、次を参照してください。[について SSL サポート](../../connect/jdbc/understanding-ssl-support.md)です。  
+ 可用性グループは、複数の物理サーバーで構成されます。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、SSL 証明書における **Subject Alternate Name** のサポートが追加されているため、複数のホストを同じ証明書に関連付けることができます。 SSL の詳細については、「[SSL のサポートについて](../../connect/jdbc/understanding-ssl-support.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーで SQL Server に接続します。](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
+ [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
  [接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

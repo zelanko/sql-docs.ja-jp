@@ -1,5 +1,5 @@
 ---
-title: getTablePrivileges メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getTablePrivileges メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a7bcc60d73aba7e0939d70224a765168738b64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 43b6de38738f8bea736d3c156dadb2a288fcbc65
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840325"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786696"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,42 +43,42 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>パラメーター  
  *catalog*  
   
- A**文字列**カタログ名を格納しています。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
+ カタログ名を含む**文字列**です。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
   
  *schema*  
   
- A**文字列**スキーマ名のパターンを格納しています。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
+ スキーマ名のパターンを含む**文字列**です。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
   
  *テーブル*  
   
- A**文字列**テーブル名のパターンを格納しています。  
+ テーブル名のパターンを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getTablePrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスの getTablePrivileges メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getTablePrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスで getTablePrivileges メソッドによって指定されます。  
   
- GetTablePrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
+ getTablePrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**文字列**|カタログ名。|  
-|TABLE_SCHEM|**文字列**|テーブル スキーマ名です。|  
-|TABLE_NAME|**文字列**|テーブル名。|  
-|GRANTOR|**文字列**|アクセス許可を与えるオブジェクトです。|  
-|GRANTEE|**文字列**|アクセスを受け入れるオブジェクトです。|  
-|PRIVILEGE|**文字列**|許可されたアクセスの種類です。|  
-|IS_GRANTABLE|**文字列**|権限を与えられたユーザーが他のユーザーへのアクセスを許可できるかどうかを示します。|  
+|TABLE_CAT|**String**|カタログ名。|  
+|TABLE_SCHEM|**String**|テーブル スキーマ名です。|  
+|TABLE_NAME|**String**|テーブル名。|  
+|GRANTOR|**String**|アクセス許可を与えるオブジェクトです。|  
+|GRANTEE|**String**|アクセスを受け入れるオブジェクトです。|  
+|PRIVILEGE|**String**|許可されたアクセスの種類です。|  
+|IS_GRANTABLE|**String**|権限を与えられたユーザーが他のユーザーへのアクセスを許可できるかどうかを示します。|  
   
 > [!NOTE]  
->  GetTablePrivileges メソッドによって返されるデータに関する詳細については、「sp_table_privileges (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
+>  getTablePrivileges メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_table_privileges (Transact-SQL)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、getTablePrivileges メソッド内の Person.Contact テーブルのアクセス権を使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、getTablePrivileges メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースにおける Person.Contact テーブルのアクセス権を返す方法を示します。  
   
 ```  
 public static void executeGetTablePrivileges(Connection con) {  

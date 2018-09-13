@@ -1,5 +1,5 @@
 ---
-title: getEncrypt メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: getEncrypt メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9262c2fb18160f5072d21a71c082bd00d17fc302
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d20e5e88359b944dc144321d5fcd2e78782ecfb3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835007"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785778"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>getEncrypt メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返します、**ブール**encrypt プロパティが有効になっているかどうかを示す値。  
+  encrypt プロパティが有効であるかどうかを示す **Boolean** 値が返されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,12 +39,12 @@ public boolean getEncypt()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**場合の暗号化を有効にします。 それ以外の場合は、 **false**です。  
+ encrypt プロパティが有効である場合は、**true** です。 それ以外の場合は、 **false**です。  
   
-## <a name="remarks"></a>解説  
- Encrypt プロパティ設定されている場合**true**、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]確実[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サーバーにインストールされている証明書がある場合に、クライアントとサーバー間で送信されるすべてのデータに SSL 暗号化を使用します。  
+## <a name="remarks"></a>Remarks  
+ encrypt プロパティが **true** に設定されている場合、サーバーに証明書がインストールされていれば、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] によって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で SSL 暗号化が確実に使用されるようになります。暗号化の対象となるのは、サーバーとクライアントの間で送信されるすべてのデータです。  
   
- Encrypt プロパティが指定されていないかに設定する場合**false**、ドライバーは強制されません、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 暗号化をサポートするためにします。 場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]インスタンスが SSL 暗号化を強制的に構成されていない、すべての暗号化を使用せず、接続が確立します。 場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]インスタンスが SSL 暗号化を強制的に構成されている、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]は自動的に SSL 暗号化を有効にする接続は終了しますか、または適切に構成されて Java 仮想マシン (JVM) と、ドライバーが発生します。エラーがあります。 暗号化プロパティが設定されていない場合、 [getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)メソッドの既定値を返します**false**です。  
+ encrypt プロパティが指定されていないか、または **false** に設定されている場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がドライバーによって SSL 暗号化のサポートを強制されることはありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが SSL 暗号化を強制的に使用するように構成されていない場合、接続は暗号化なしで確立されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが SSL 暗号化を強制的に使用するように構成されている場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] は、使用中の Java 仮想マシン (JVM) が正常に構成されていれば自動的に SSL 暗号化を有効にし、そうでなければ接続を終了してエラーを生成します。 暗号化プロパティが設定されていない場合、[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md) メソッドは既定値の **false** が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

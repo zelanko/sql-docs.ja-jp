@@ -1,5 +1,5 @@
 ---
-title: getTime (java.lang.String, java.util.Calendar) メソッド |Microsoft ドキュメント
+title: getTime (java.lang.String, java.util.Calendar) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d24681d9cb7ff5f8f0488c4bdeb4c0be1d9993f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b72cbb765ae11de0ece12547dd0b8a15e87f393f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838394"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787390"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime (java.lang.String, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターの値を Java プログラミング言語を渡された Calendar オブジェクトを使用して、パラメーター名を指定の java.sql.Time オブジェクトとして取得します。  
+  パラメーターに渡された名前と Calendar オブジェクトを使用して、指定されたパラメーターの値を Java プログラミング言語の java.sql.Time オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,25 +42,25 @@ public java.sql.Time getTime(java.lang.String sCol,
 #### <a name="parameters"></a>パラメーター  
  *sCol*  
   
- A**文字列**パラメーター名を格納しています。  
+ パラメーターの名前を含む**文字列**です。  
   
  *cal*  
   
- 予定表オブジェクトです。  
+ 暦オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- Time オブジェクト。  
+ 時刻のオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getTime メソッドは、java.sql.CallableStatement インターフェイスの getTime メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getTime メソッドは、java.sql.CallableStatement インターフェイスの getTime メソッドで規定されています。  
   
- 「Get アクセス操作子メソッドの変換」というタイトル図を参照してください[データ型変換について](../../../connect/jdbc/understanding-data-type-conversions.md)を確認するため[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型は、このメソッドを使用して取得することができます。  
+ 「Get アクセス操作子メソッドの変換」というタイトル図を参照してください[データ型変換について](../../../connect/jdbc/understanding-data-type-conversions.md)を確認する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型は、このメソッドで取得できます。  
   
 ## <a name="see-also"></a>参照  
- [getTime メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
+ [getTime メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

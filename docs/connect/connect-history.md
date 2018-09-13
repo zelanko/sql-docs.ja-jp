@@ -1,5 +1,5 @@
 ---
-title: Microsoft SQL Server のドライバー履歴 |Microsoft ドキュメント
+title: Microsoft SQL Server のドライバーの履歴 |Microsoft Docs
 ms.custom: ''
 ms.date: 5/4/2018
 ms.prod: sql
@@ -11,137 +11,137 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 2f2f4bafe48018da5c6f634b272a540021fd4ca2
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: MT
+ms.openlocfilehash: d6b261b1ce38a0819e0780f7bb45c01f933b4b18
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34236036"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42787900"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server のドライバーの履歴
 
-このページでは、SQL Server に接続するためのマイクロソフトの履歴データの接続テクノロジについて説明します。
+このページには、SQL Server に接続するためのマイクロソフトの履歴データの接続テクノロジについて説明します。
 
 ## <a name="odbc"></a>ODBC
 
-SQL Server 用 Microsoft ODBC ドライバーの 3 つの異なる世代があります。 最初の"SQL Server"ODBC ドライバーは、引き続きの一部として出荷[Windows Data Access Components](#microsoft-or-windows-data-access-components)です。 このドライバーを使用して、新規の開発には推奨されません。 SQL Server 2005 以降で、 [SQL Server Native Client](#sql-server-native-client) SQL Server 2005 で SQL Server 2012 に同梱されている ODBC ドライバーであり、ODBC インターフェイスが含まれています。 このドライバーを使用して、新規の開発には推奨されません。 SQL Server 2012 以降後、 [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server)いき、最新のサーバー機能と更新されたドライバーがします。
+SQL Server 用 Microsoft ODBC ドライバーの 3 つの異なる世代があります。 最初の"SQL Server"ODBC ドライバーの一部としても出荷[Windows Data Access Components](#microsoft-or-windows-data-access-components)します。 このドライバーを使用して、新規の開発には推奨されません。 SQL Server 2005 以降、 [SQL Server Native Client](#sql-server-native-client) SQL Server 2005 から SQL Server 2012 に同梱されている ODBC ドライバーであり、ODBC インターフェイスが含まれています。 このドライバーを使用して、新規の開発には推奨されません。 SQL Server 2012 では、以降後、 [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server)は今後、最新のサーバー機能と更新されたドライバー。
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
-SQL Server Native Client は、OLE DB と ODBC の両方に使用されるスタンドアロンのライブラリです。 SQL Server Native Client (SNAC 多くの場合、省略形) は、2012 年まで SQL Server 2005 に含まれていました。 SQL Server 2005 で SQL Server 2012 で導入された新機能を利用する必要があるアプリケーションは、SQL Server Native Client を使用できます。 (Microsoft/Windows Data Access Components は更新されません SQL Server でのこれらの新機能です。)SQL Server 2012 を超える新しい機能の SQL Server Native Client は更新されません。 切り替えます Microsoft ODBC Driver の SQL Server または Microsoft OLE DB Driver for SQL Server 今後新しい SQL Server の機能を利用する場合。
+SQL Server Native Client は、OLE DB と ODBC の両方に使用されるスタンドアロン ライブラリです。 SQL Server Native Client (SNAC 多くの場合、省略形) は、2012 年までに SQL Server 2005 に含まれていました。 SQL Server Native Client は、SQL Server 2005 から SQL Server 2012 で導入された新機能を活用するために必要とするアプリケーションで使用できます。 (Microsoft/Windows Data Access Components は SQL Server でのこれらの新機能の更新されません)。SQL Server 2012 を超える新しい機能については、SQL Server Native Client は更新されません。 切り替える Microsoft ODBC Driver for SQL Server または Microsoft OLE DB Driver for SQL Server の新しい SQL Server 機能が今後利用する場合。
 
-SQL Server Native Client の完全なドキュメントについては、次を参照してください。、 [SQL Server Native Client のドキュメント](../relational-databases/native-client/sql-server-native-client-programming.md)です。
+SQL Server Native Client の完全なドキュメントについては、次を参照してください。、 [SQL Server Native Client のドキュメント](../relational-databases/native-client/sql-server-native-client-programming.md)します。
 
 ### <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
 
-SQL Server 2012 以降後、プライマリの ODBC driver for SQL Server を開発し、SQL Server 用 Microsoft ODBC Driver としてリリースされているがします。 詳細については、次を参照してください。、 [Microsoft ODBC Driver for SQL Server のマニュアル](./odbc/microsoft-odbc-driver-for-sql-server.md)です。
+SQL Server 2012 では後、プライマリ ODBC driver for SQL Server を開発し、SQL Server 用 Microsoft ODBC Driver としてリリースされています。 詳細については、次を参照してください。、 [Microsoft ODBC Driver for SQL Server のドキュメント](./odbc/microsoft-odbc-driver-for-sql-server.md)します。
 
 ## <a name="ole-db"></a>OLE DB (OLE DB)
 
-SQL Server の Microsoft OLE DB プロバイダーの 3 つの個別の世代があります。 一部として、最初「Microsoft OLE DB Provider for SQL Server」(SQLOLEDB) がまだ出荷[Windows Data Access Components](#microsoft-or-windows-data-access-components)です。 このプロバイダーは、新しい機能には更新されませんし、このドライバーを使用して、新規の開発をお勧めできません。 SQL Server 2005 以降で、 [SQL Server Native Client](#sql-server-native-client) SQL Server 2005 で SQL Server 2017 に同梱されている OLE DB プロバイダーであり、OLE DB プロバイダー インターフェイス (SQLNCLI) が含まれています。 [2011年で非推奨と発表](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)し、このドライバーを使用して、新規の開発をお勧めできません。 2017、OLE DB データ アクセス テクノロジは、後で[undeprecated し、計画済みの新しいリリースが発表されました](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)2018年用です。 新しい OLE DB プロバイダー、"Microsoft OLE DB Driver for SQL Server"(MSOLEDBSQL) と呼びますと現在管理およびサポートされています。
+SQL Server の Microsoft OLE DB プロバイダーの 3 つの個別の世代があります。 一部として、最初"Microsoft OLE DB Provider for SQL Server"(SQLOLEDB) が同梱されてまだ[Windows Data Access Components](#microsoft-or-windows-data-access-components)します。 このプロバイダーは、新機能では更新されませんし、このドライバーを使用して、新規の開発をお勧めできません。 SQL Server 2005 以降、 [SQL Server Native Client](#sql-server-native-client)から SQL Server 2017 までの SQL Server 2005 に同梱されている OLE DB プロバイダーであり、OLE DB プロバイダー インターフェイス (SQLNCLI) が含まれています。 [2011年で非推奨と発表](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)し、このドライバーを使用して、新規の開発をお勧めできません。 OLE DB データ アクセス テクノロジをその後が 2017年では、[取り消すと、新しい計画的なリリースが発表されました](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)2018 年。 新しい OLE DB プロバイダーは、"Microsoft OLE DB Driver for SQL Server"(MSOLEDBSQL) とは現在保持し、呼ばサポートされています。
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.NET では、Microsoft .NET Framework で導入されたし、続行を改善し、管理します。 これは、Microsoft .NET Framework の主要なコンポーネントです。 詳細については、次を参照してください。 [for SQL Server の Microsoft ADO.NET](ado-net/microsoft-ado-net-for-sql-server.md)です。
+ADO.NET は、Microsoft .NET Framework で導入され、引き続き改善され、維持します。 Microsoft .NET Framework の主要なコンポーネントになります。 詳細については、次を参照してください。 [SQL Server 向けの Microsoft ADO.NET](ado-net/microsoft-ado-net-for-sql-server.md)します。
 
 ## <a name="jdbc"></a>JDBC
 
 ### <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver
 
-Microsoft JDBC Driver for SQL Server 2000 で導入されたを改善し、管理を続行します。 2016 でオープン ソースがありました。 最新情報については、ドライバーをダウンロードする方法を含む、次を参照してください。 [JDBC ドライバーの概要](./jdbc/overview-of-the-jdbc-driver.md)です。
+2000 で導入された、Microsoft JDBC Driver for SQL Server は引き続き改善され、維持します。 2016 でオープン ソース化でした。 ドライバーをダウンロードする方法など、最新の情報を参照してください。 [JDBC ドライバーの概要](./jdbc/overview-of-the-jdbc-driver.md)します。
 
 ## <a name="php"></a>PHP (PHP)
 
 ### <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP
 
-Microsoft Drivers for PHP for SQL Server 2009 で導入された、オープン ソース プロジェクトとしてを改善し、管理を続行します。 PHP driver のダウンロードする方法を含む、最新の情報を参照してください。 [Microsoft Drivers for PHP for SQL Server](./php/microsoft-php-driver-for-sql-server.md)です。
+2009 で導入された、オープン ソース プロジェクトとして、Microsoft Drivers for PHP for SQL Server は引き続き改善され、維持されます。 PHP のドライバーをダウンロードする方法など、最新の情報を参照してください。 [Microsoft Drivers for PHP for SQL Server](./php/microsoft-php-driver-for-sql-server.md)します。
 
 ## <a name="nodejs"></a>Node.js
 
-### <a name="microsoft-driver-for-nodejs-for-sql-server"></a>SQL Server 用の Node.js 用の Microsoft ドライバー
+### <a name="microsoft-driver-for-nodejs-for-sql-server"></a>Microsoft Driver for Node.js for SQL Server
 
-Microsoft Driver for SQL Server 用の Node.js では、Microsoft Windows および Microsoft Windows Azure 上の Node.js アプリケーションを Microsoft SQL Server および Microsoft Windows Azure SQL Database へのアクセスを許可します。 開発作業は不要になったされている重点このドライバー。 Node.js 用 SQL Server の Microsoft Driver を使用して新しいアプリケーションを作成するのには推奨されません。
+Microsoft Driver for Node.js for SQL Server では、Microsoft SQL Server および Microsoft Windows Azure SQL Database にアクセスする Microsoft Windows と Microsoft Windows Azure で Node.js アプリケーションを使用します。 このドライバーでは、開発作業が絞りできなくします。 For Node.js for SQL Server、Microsoft ドライバーを使用して新しいアプリケーションを作成することは推奨されません。
 
-SQL Server 用の Node.js の Microsoft ドライバーの詳細については、次を参照してください。 [WindowsAzure/ノード sqlserver](https://github.com/Azure/node-sqlserver)です。
+詳細については、Microsoft Driver for Node.js for SQL Server を参照してください。 [WindowsAzure/ノード sqlserver](https://github.com/Azure/node-sqlserver)します。
 
-### <a name="tedious"></a>面倒
+### <a name="tedious"></a>面倒です
 
-現在、Microsoft に寄与し、JavaScript を使用して SQL Server への接続を Node.js でオープン ソースの面倒なモジュールをサポートします。 詳細については、次を参照してください。 [Node.js Driver for SQL Server](./node-js/node-js-driver-for-sql-server.md)です。
+Microsoft は現在に貢献して、オープン ソースの面倒なモジュールを Node.js で JavaScript を使用して SQL Server への接続をサポートしています。 詳細については、次を参照してください。 [Node.js Driver for SQL Server](./node-js/node-js-driver-for-sql-server.md)します。
 
-## <a name="microsoft-or-windows-data-access-components"></a>Microsoft アカウントまたは Windows Data Access Components
+## <a name="microsoft-or-windows-data-access-components"></a>Microsoft または Windows Data Access Components
 
-Microsoft/Windows Data Access Components (MDAC または WDAC) に付属する Windows でサポートされるアプリケーションの旧バージョンとの互換性と、現在の SQL Server テクノロジ スタックの一部ではないです。 MDAC/WDAC 内のコンポーネントに新しい機能は追加されませんし、新しいアプリケーションの開発用に使用するには使用しないでいます。
+Microsoft/Windows Data Access Components (MDAC または WDAC) に付属するサポートされている Windows でアプリケーションの下位互換性と、現在の SQL Server テクノロジ スタックの一部ではないです。 MDAC/WDAC 内のコンポーネントに新しい機能は追加されませんし、新しいアプリケーションの開発に使用するには使用しないでいます。
 
-このドキュメントの目的で、MDAC/WDAC スタックをテクノロジと製品に基づいて、次のコンポーネントに分けることができます。
+このドキュメントの目的で、テクノロジと製品に基づいて、次のコンポーネント MDAC/WDAC スタックに分割することができます。
 
 * **ADO** (ADOMD と ADOX を含む)
-* **OLE DB** (ODBC ドライバー、データ プロバイダー、およびリモートのデータ プロバイダーの OLE DB Core Services、SQL Server OLE DB プロバイダー、Oracle OLE DB Provider、OLE DB プロバイダーを含む)
+* **OLE DB** (ODBC ドライバー、データ プロバイダー、およびリモートのデータ プロバイダー、OLE DB Core Services、SQL Server OLE DB プロバイダー、Oracle OLE DB Provider、OLE DB プロバイダーを含む)
 * **ODBC** (ODBC ドライバー マネージャー、SQL ODBC ドライバーでは、Oracle ODBC ドライバーを含む)
 
 ### <a name="mdacwdac-components"></a>MDAC/WDAC コンポーネント
 
-MDAC または WDAC には、これらのコンポーネントが含まれます。
+MDAC または WDAC には、これらのコンポーネントが含まれています。
 
-* **ODBC:** Microsoft オープン データベース コネクティビティ) インターフェイスがさまざまなデータベース管理システム (DBMS) のデータにアクセスするアプリケーションを使用する C プログラミング言語インターフェイスです。 この API を使用するアプリケーションは、リレーショナル データ ソースのみへのアクセスに制限されます。
-* **OLE DB:** OLE DB は、さまざまなデータ ストア内のデータにアクセスするための COM インターフェイスのセット。 OLE DB プロバイダーは、データベース、ファイル システム、メッセージ ストア、ディレクトリ サービス、ワークフロー、およびドキュメントのストア内のデータにアクセスするためが存在します。
-* **ADO:** ActiveX データ オブジェクト (ADO) は、高度なプログラミング モデルを提供します。 パフォーマンスの高い、直接 OLE DB または ODBC をコーディングするより少ない少し ADO が簡単に理解して使用します。 これは、Microsoft Visual Basic Scripting Edition (VBScript) または Microsoft JScript などのスクリプト言語から使用できます。
-* **ADOMD:** Microsoft OLAP プロバイダー、Microsoft Analysis Services プロバイダーとも呼ばれるなどの多次元データ プロバイダーで使用するのには、ADO 多次元 (ADOMD)。 主要な機能強化は行われていませんに MDAC 2.0 以降。
-* **ADOX:** DDL およびセキュリティ (ADOX) 用の ADO 拡張機能が作成およびデータベース、テーブル、インデックス、またはストアド プロシージャの定義の変更を有効にします。 ADOX は、すべてのプロバイダーで使用できます。 Microsoft Jet OLE DB プロバイダーは、Microsoft SQL Server OLE DB プロバイダーには、制限付きサポートが用意されています。 ADOX、完全にサポートを提供します。
-* **Microsoft SQL Server のネットワーク ライブラリ:** SQLOLEDB と SQLODBC、SQL Server データベースと通信する SQL Server のネットワーク ライブラリができるようにします。 次の SQL Server のネットワーク ライブラリが廃止された MDAC または WDAC のリリースで: Banyan Vines、AppleTalk、ServerNet、IPX/SPX、Giganet、および RPC。 TCP/IP および名前付きパイプをサポートするのには引き続きし、は、64 ビット Windows オペレーティング システムで使用できます。
-* **MSDASQL:** Microsoft OLE DB Provider for ODBC (MSDASQL) により、ODBC ドライバーを通じてデータ ソースのアクセスを OLE DB と ADO (を内部的に、OLEDB を使用します) に基づいて構築されているアプリケーション。 MSDASQL はではなく、データベースに接続する ODBC、OLEDB プロバイダーです。 ものではブリッジとして OLE DB から ODBC ドライバーは、データ ソースの直接の OLE DB プロバイダーが存在しない場合。 MSDASQL Windows オペレーティング システムに付属していて、Windows Server 2008 および Vista SP1 された最初の Windows リリース テクノロジの 64 ビット バージョンが含まれています。
+* **ODBC:** Microsoft Open Database Connectivity (ODBC) インターフェイスは、さまざまなデータベース管理システム (DBMS) のデータにアクセスするアプリケーションを使用する C プログラミング言語インターフェイス。 この API を使用するアプリケーションは、リレーショナル データ ソースのみへのアクセスに制限されます。
+* **OLE DB:** OLE DB は、さまざまなデータ ストア内のデータにアクセスするための COM インターフェイスのセット。 データベース、ファイル システム、メッセージ ストア、ディレクトリ サービス、ワークフロー、およびドキュメント ストア内のデータにアクセスするための OLE DB プロバイダーが存在します。
+* **ADO:** ActiveX Data Objects (ADO)、高度なプログラミング モデルを提供します。 OLE DB または ODBC を直接コーディングよりパフォーマンスが向上より少し ADO が簡単に理解して使用します。 これは、Microsoft Visual Basic Scripting Edition (VBScript) または Microsoft JScript などのスクリプト言語から使用できます。
+* **ADOMD:** ADO 多次元 (ADOMD) は、Microsoft Analysis Services プロバイダーとも呼ばれる Microsoft OLAP プロバイダーなどの多次元データ プロバイダーで使用します。 主要な機能強化がない以降に加え、MDAC 2.0。
+* **ADOX:** DDL およびセキュリティ (ADOX) 用の ADO 拡張機能を作成し、データベース、テーブル、インデックス、またはストアド プロシージャの定義を変更します。 ADOX は、任意のプロバイダーで使用できます。 Microsoft Jet OLE DB プロバイダーは、制限付きサポートを提供しますが、Microsoft SQL Server OLE DB プロバイダーの ADOX、完全にサポートを提供します。
+* **Microsoft SQL Server のネットワーク ライブラリ:** SQLOLEDB と SQLODBC、SQL Server データベースと通信する SQL Server のネットワーク ライブラリを許可します。 次の SQL Server のネットワーク ライブラリが非推奨とされました MDAC/WDAC のリリースで: Banyan Vines、AppleTalk、ServerNet、IPX/SPX、Giganet、および RPC。 TCP/IP および名前付きパイプは引き続きサポートされ、64 ビット Windows オペレーティング システムでは使用できます。
+* **MSDASQL:** Microsoft OLE DB Provider for ODBC (MSDASQL) により、ODBC ドライバーを通じてデータ ソースのアクセスを OLE DB と ADO (内部的に OLEDB を使用) する上で構築されるアプリケーション。 MSDASQL はデータベースの代わりに、ODBC に接続する OLEDB プロバイダーです。 ものでは、ブリッジから OLE DB、ODBC ドライバーにデータ ソースの直接の OLE DB プロバイダーが存在しない場合。 MSDASQL は、Windows オペレーティング システムが付属していて、Windows Server 2008 および Vista SP1 が最初の Windows リリース テクノロジの 64 ビット バージョンが含まれます。
 
-### <a name="deprecated-mdacwdac-components"></a>廃止された MDAC または WDAC コンポーネント
+### <a name="deprecated-mdacwdac-components"></a>非推奨の MDAC/WDAC コンポーネント
 
-これらのコンポーネントは、MDAC または WDAC の現在のリリースでもサポートされますが、これらは、今後のリリースで削除する場合があります。 新しいアプリケーションを開発する場合は、これらのコンポーネントを使用しないことをお勧めします。 さらに、アップグレードまたは既存のアプリケーションを変更するときは、これらのコンポーネントに依存関係を削除します。
+これらのコンポーネントは引き続き MDAC または WDAC の現在のリリースでサポートされますが、今後のリリースでは削除される可能性があります。 新しいアプリケーションを開発するには、Microsoft では、これらのコンポーネントを使用しないことをお勧めします。 さらに、アップグレードするか、既存のアプリケーションを変更するときに、これらのコンポーネントへの依存関係を削除します。
 
-* **SQLOLEDB:** Microsoft OLE DB プロバイダーの SQL Server (SQLOLEDB)、Microsoft SQL Server へのアクセスをサポートするには、これは推奨されていません。 SQL Server の将来のバージョンへの接続性は、サポートされていません。 SQL Server 7 よりも前のバージョンに接続する機能は、Windows 7 の後に、オペレーティング システムから削除される予定です。 新しいアプリケーションでは、SQL Server (MSOLEDBSQL)、SQL Server の新機能をサポートする Microsoft OLE DB Driver を使用する必要があります。 既存のアプリケーションに移行 Microsoft OLE DB Driver for SQL Server も優れたパフォーマンス、信頼性、およびサポート性のです。 詳細については、次を参照してください。 [MDAC から SQL Server の OLE DB Driver をアプリケーションの更新](oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)です。
-* **SQLODBC:** Microsoft SQL Server ODBC ドライバー (SQLODBC)、Microsoft SQL Server へのアクセスをサポートするには、これは推奨されていません。 SQL Server の将来のバージョンへの接続性は、サポートされていません。 SQL Server 7 よりも前のバージョンに接続する機能は、Windows 7 の後に、オペレーティング システムから削除される予定です。 新しいアプリケーションでは、Windows では、SQL Server の新機能をサポートする SQL Server 用 Microsoft ODBC Driver を使用する必要があります。 既存のアプリケーションに移行 Microsoft ODBC Driver for SQL Server も優れたパフォーマンス、信頼性、およびサポート性のです。 関連する情報は、次を参照してください。 [MDAC から SQL Server Native Client へのアプリケーションの更新](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)です。
-* **Microsoft Jet 4.0:** version 2.6 以降では、MDAC が存在しない Jet コンポーネントです。 つまり、MDAC 2.6、2.7、および 2.8 は、Microsoft Jet、Microsoft Jet OLE DB プロバイダー、ODBC データベース ドライバーはデスクトップ、または Jet データ アクセス オブジェクト (DAO) には含まれません。 Microsoft Jet データベース エンジンの 4.0 コンポーネントは、非推奨の機能の状態になったとエンジニア リング、持続し、Windows 2000 で Microsoft Windows のメンバーになるためレベルの機能強化を入手していません。
+* **SQLOLEDB:** Microsoft OLE DB Provider for SQL Server (SQLOLEDB)、Microsoft SQL Server へのアクセスをサポートするには、これは非推奨とされました。 SQL Server の将来のバージョンへの接続性は、サポートされていません。 SQL Server 7 より前のバージョンに接続する機能は、Windows 7 の後に、オペレーティング システムから削除される予定です。 新しいアプリケーションは、Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)、新しい SQL Server の機能をサポートするを使用する必要があります。 既存のアプリケーションに移行 Microsoft OLE DB Driver for SQL Server も優れたパフォーマンス、信頼性、およびサポート性の。 詳細については、次を参照してください。 [MDAC から SQL Server の OLE DB ドライバーへのアプリケーションの更新](oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)します。
+* **SQLODBC:** Microsoft SQL Server ODBC ドライバー (SQLODBC)、Microsoft SQL Server へのアクセスをサポートするには、これは非推奨とされました。 SQL Server の将来のバージョンへの接続性は、サポートされていません。 SQL Server 7 より前のバージョンに接続する機能は、Windows 7 の後に、オペレーティング システムから削除される予定です。 新しいアプリケーションでは、新しい SQL Server の機能をサポートする、Windows 上の SQL Server の Microsoft ODBC Driver を使用する必要があります。 既存のアプリケーション移行に Microsoft ODBC Driver for SQL Server も優れたパフォーマンス、信頼性、およびサポート性のください。 関連する情報は、次を参照してください。 [MDAC から SQL Server Native Client へアプリケーションの更新](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)します。
+* **Microsoft Jet データベース エンジン 4.0:** バージョン 2.6 以降、MDAC が Jet コンポーネント。 つまり、MDAC 2.6 や 2.7、2.8 は、Microsoft Jet、Microsoft Jet OLE DB プロバイダー、ODBC デスクトップ データベース ドライバー、または Jet データ アクセス オブジェクト (DAO) には含まれません。 Microsoft Jet データベース エンジンの 4.0 コンポーネントは非推奨の機能の状態になったエンジニア リング、継続的なし、以降、Windows 2000 で Microsoft Windows の一部としてレベルの機能強化が届かない。
 
-  64 ビット バージョンの Jet データベース エンジン、Jet ole DB ドライバー、Jet ODBC ドライバーまたは Jet DAO はありません。 詳細については、次を参照してください。[サポート技術情報記事 957570](http://support.microsoft.com/kb/957570)です。 64 ビット バージョンの Windows では、32 ビット Jet は、Windows の WOW64 サブシステムで実行されます。 WOW64 の詳細については、次を参照してください。、 [MSDN WOW64 ドキュメント](https://msdn.microsoft.com/library/windows/desktop/aa384274(v=vs.85).aspx)です。 ネイティブの 64 ビット アプリケーションは WOW64 で実行されている 32 ビット Jet ドライバーと通信できません。
+  Jet データベース エンジン、Jet OLEDB ドライバー、Jet ODBC ドライバー、または Jet DAO の 64 ビット バージョンはありません。 詳細については、[サポート技術情報の記事 957570](http://support.microsoft.com/kb/957570) を参照してください。 Windows の 64 ビット バージョンでは、32 ビットの Jet は、Windows の WOW64 サブシステムで実行されます。 WOW64 の詳細については、次を参照してください。、 [MSDN WOW64 ドキュメント](/windows/desktop/WinProg64/wow64-implementation-details)します。 ネイティブの 64 ビット アプリケーションは WOW64 で実行されている 32 ビットの Jet ドライバーと通信できません。
 
-  Microsoft Jet の代わりに使用をお勧めします。 [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)新規、リレーショナル データ ストアを必要とする Microsoft Access 以外のアプリケーションを開発するときにします。 これらの新しいまたは変換された Jet アプリケーションは、Microsoft Office 2003 およびそれ以前のファイル (.mdb、.xls) を使用してプライマリ以外のデータ記憶域の Jet を使用する続行できます。 ただし、これらのアプリケーションには、Jet から 2007 Office System ドライバーへの移行を計画してください。 実行できます[2007 Office System ドライバーをダウンロード](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891)、Office 2003 (.mdb ファイルと .xls) または Office 2007 (読み取り、*.xlsm、*.xlsx および *.xlsb) のファイル形式のいずれかで既存のファイルを読み書きすることができます。
+  Microsoft Jet では、代わりに使用をお勧めします。 [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)新規、リレーショナル データ ストアを必要とする Microsoft Access 以外のアプリケーションを開発するときにします。 非プライマリ データ ストレージ用の Microsoft Office 2003 およびそれ以前のファイル (.mdb ファイルと .xls) を使用して Jet を使用するこれら新しいと、変換後の Jet アプリケーションを続行できます。 ただし、これらのアプリケーションでは、Jet から 2007 Office System ドライバーへの移行を計画する必要があります。 できます[、2007 Office System ドライバーをダウンロード](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891)からの読み取りを Office 2003 (.mdb ファイルと .xls) または Office 2007 (*.accdb、*.xlsm、*.xlsx および *.xlsb) のファイル形式のいずれかで既存のファイルに書き込むことのできます。
 
   > [!IMPORTANT]
-  > 特定の使用法の制限に 2007 Office システムのエンド ユーザー ライセンス契約をお読みください。
+  > 特定の使用量の制限については 2007 Office System のエンド ユーザー ライセンス契約をお読みください。
 
   > [!NOTE]
-  > SQL Server アプリケーションでは、2007 Office System をアクセスすることもと、前のファイルから SQL Server の異種データ接続と Integration Services 機能にも、2007 Office System ドライバーを使用しています。 さらに、64 ビット SQL Server アプリケーションは、64 ビット Windows で 32 ビット SQL Server Integration Services (SSIS) を使用して、32 ビット Jet と 2007 Office System ファイルにアクセスできます。
+  > SQL Server アプリケーションは、2007 Office System にアクセスできることもおよび以前では、ファイルから SQL Server の異種データ接続と Integration Services 機能にも、2007 Office System ドライバーを経由しています。 さらに、64 ビット SQL Server のアプリケーションは、64 ビット Windows で 32 ビット SQL Server Integration Services (SSIS) を使用して、32 ビットの Jet と 2007 Office System のファイルにアクセスできます。
 
-* **MSDADS:** Microsoft OLE DB プロバイダーでデータの整形 (MSDADS) のアプリケーションでキー、フィールド、または行セット間の階層リレーションシップを作成することができます。 MDAC 2.1 以降の主要な機能強化が行われていません。 このプロバイダーは廃止されました。 MSDADS ではなく、XML を使用することをお勧めします。
-* **Oracle ODBC および Oracle OLE DB:** の Microsoft Oracle ODBC ドライバー (Oracle ODBC) と Microsoft OLE DB Provider for Oracle (Oracle OLE DB) は、Oracle データベース サーバーへのアクセスを提供します。 Oracle Call Interface (OCI) バージョン 7 を使用して作成された、Oracle 7 のサポートを提供します。 また、Oracle 7 エミュレーションを使用して Oracle 8 のデータベースの制限付きサポートを提供します。 Oracle では、OCI バージョン 7 の呼び出しを使用するアプリケーションがサポートされていません。 これらのテクノロジが使用されなくなりました。 Oracle データ ソースを使用している場合は、Oracle によって提供されるドライバーおよびプロバイダーに移行する必要があります。
-* **RDS:** リモート データ サービス (RDS) は、インターネットまたはイントラネット経由でリモートの ADO レコード セット オブジェクトにアクセスするための独自の Microsoft メカニズムです。 RDS は廃止されました。主要な機能強化に加えられたありません RDS MDAC 2.1 以降。 Microsoft は、.NET Framework に広範な SOAP 機能を備え、RDS のコンポーネントを置き換えるをリリースしました。 RDS のすべてのサーバー コンポーネントは、Windows 7 の後に、オペレーティング システムから削除されます。
-* **JRO:** Jet JRO) は推奨されなくなりました。 JRO が ADO Jet と内で使用される (*.mdb) データベースを作成し、Jet データベース (.mdb) を圧縮し、Jet レプリケーション管理を実行します。MDAC 2.7、最終リリースになります。JRO は 64 ビット Windows オペレーティング システムで使用できません。Microsoft Access 2007 のファイル形式で JRO はサポートされていません (*.accdb) です。
-* **16 ビット ODBC サポート:** 16 ビット アプリケーションを使用している場合は、32 ビット アプリケーションに移行する必要があります。 16 ビットの機能は推奨されておらず、64 ビット オペレーティング システムから削除しています。 詳細については、次を参照してください。[サポート技術情報の記事 896458](http://support.microsoft.com/kb/896458)です。
-* **単純な ole DB プロバイダー (MSDAOSP):** OLEDB の単純なプロバイダーは、単純なデータを OLE DB プロバイダーをすばやく構築するためのフレームワークを提供します。 MSDAOSP は推奨されません。
-* **ODBC カーソル ライブラリ:** ODBC カーソル ライブラリ (ODBCCR32.dll) は、限定されたクライアント側のデータ カーソルを提供します。 ODBC カーソル ライブラリは推奨されていません。アプリケーションは、代わりに、サーバー側カーソルの実装を使用できます。
-* **アウト プロセスのインターフェイスのリモート処理を OLE DB:** OLEDB インターフェイスのリモート処理 (msdaps.dll) OLE DB プロバイダーがプロセス外で実行できるようにしようとしました。 OLEDB アウト プロセスのインターフェイスのリモート処理は推奨されません。
-* **AppleTalk と Banyan Vines SQL ネットワーク ライブラリ:** Banyan Vines、AppleTalk、ServerNet、IPX/SPX、Giganet、および RPC SQL のネットワーク ライブラリが推奨されなくなりました。 これらのテクノロジのいずれかを使用している場合は、他のネットワーク ライブラリは、TCP/IP および名前付きパイプなどのいずれかを使用するアプリケーションを変更する必要があります。
+* **MSDADS:** Microsoft OLE DB プロバイダーでデータの整形 (MSDADS) のアプリケーションでキー、フィールド、または行セット間の階層リレーションシップを作成することができます。 MDAC 2.1 以降の主要な機能強化が行われていません。 このプロバイダーは非推奨とされました。 MSDADS ではなく、XML を使用することをお勧めします。
+* **Oracle ODBC および Oracle OLE DB:** The Microsoft Oracle ODBC ドライバー (Oracle ODBC) と Microsoft OLE DB Provider for Oracle (Oracle OLE DB) は、Oracle データベース サーバーへのアクセスを提供します。 Oracle Call Interface (OCI) バージョン 7 を使用して作成された、Oracle 7 の完全なサポートを提供します。 また、Oracle 7 エミュレーションを使用して Oracle 8 データベースの制限付きサポートを提供します。 Oracle は、OCI バージョン 7 の呼び出しを使用するアプリケーションをサポートしていません。 これらのテクノロジが非推奨とされます。 Oracle データ ソースを使用している場合は、Oracle によって提供されるドライバーおよびプロバイダーに移行する必要があります。
+* **RDS:** リモート データ サービス (RDS) は、インターネットまたはイントラネットの間でリモートの ADO レコード セット オブジェクトにアクセスするための独自の Microsoft メカニズム。 RDS で非推奨とされます。主要な機能が強化されてありません RDS MDAC 2.1 以降。 マイクロソフトは、.NET Framework は、SOAP の幅広い機能を備え、RDS のコンポーネントを置き換えるをリリースしました。 すべての RDS サーバー コンポーネントは、Windows 7 の後に、オペレーティング システムから削除されます。
+* **JRO:** Jet JRO) が非推奨とされます。 JRO は Jet で ADO で使用されます (*.mdb) データベースを作成し、Jet データベース (.mdb) を圧縮して Jet レプリケーション管理を実行します。MDAC 2.7 は、最終リリースになります。JRO は 64 ビットの Windows オペレーティング システムで使用できません。JRO は、Microsoft Access 2007 ファイル形式でサポートされていません (*.accdb)。
+* **16 ビット ODBC サポート:** 16 ビット アプリケーションを使用している場合は、32 ビット アプリケーションに移行する必要があります。 16 ビットの機能は非推奨し、64 ビット オペレーティング システムから削除しています。 詳細については、[サポート技術情報の記事 896458](http://support.microsoft.com/kb/896458) を参照してください。
+* **単純な ole DB プロバイダー (MSDAOSP):** OLEDB の単純なプロバイダーは、単純なデータを OLE DB プロバイダーをすばやく構築するためのフレームワークを提供しています。 MSDAOSP が非推奨とされます。
+* **ODBC カーソル ライブラリ:** ODBC カーソル ライブラリ (ODBCCR32.dll) が制限されたクライアント側データ カーソルを提供します。 ODBC カーソル ライブラリは非推奨とされました。アプリケーションは、代わりに、サーバー側カーソルの実装を使用できます。
+* **プロセス外のインターフェイスのリモート処理を OLE DB:** OLEDB インターフェイスのリモート処理 (msdaps.dll) OLE DB プロバイダーがプロセス外で実行できるようにしようとしました。 OLEDB プロセス外のインターフェイスのリモート処理で非推奨とされます。
+* **AppleTalk、Banyan Vines SQL ネットワーク ライブラリ:** Banyan Vines、AppleTalk、ServerNet、IPX/SPX、Giganet、および RPC SQL のネットワーク ライブラリが非推奨とされます。 これらのテクノロジのいずれかを使用する場合は、TCP/IP および名前付きパイプなど、他のネットワーク ライブラリのいずれかを使用するアプリケーションを変更する必要があります。
 
 ### <a name="mdacwdac-releases"></a>MDAC/WDAC リリース
 
-次に、古いものから順の過去の MDAC/WDAC リリースのサポートのシナリオの一覧を示します。
+以降で、最も早い、過去の MDAC/WDAC リリースのサポート シナリオの一覧を示します。
 
-* **MDAC 1.5 では、MDAC 2.0、および MDAC 2.1:** MDAC のこれらのバージョンが Microsoft Windows NT オプション Pack、Microsoft Windows プラットフォーム SDK、または MDAC Web サイトを介してリリースされた独立したリリースします。 MDAC のこれらのバージョンがサポートされていません。
-* **MDAC 2.5:** MDAC のこのバージョンでは、Windows 2000 オペレーティング システムに含まれています。 MDAC 2.5 のサービス パックは、対応する Windows 2000 service pack に含まれていました。
-* **MDAC 2.6:** MDAC 2.6 RTM、SP1、および SP2 はそれぞれ、SP1、および SP2 では、Microsoft SQL Server 2000 の RTM で含まれていた。 また、MDAC service pack は、Microsoft SQL Server 2000 サービス パックのリリースのスケジュールに従って MDAC Web サイトにリリースされました。 Windows 2000、Windows Millennium Edition、Windows NT、Windows 95 および Windows 98 プラットフォームでは、このバージョンの MDAC とそのサービス パックをインストールできます。 このバージョンの MDAC 現在はサポートされていません。
-* **MDAC 2.7:** MDAC のこのバージョンでは、Microsoft Windows XP の RTM および SP1 のオペレーティング システムに付属します。 Windows 2000、Windows Millennium、Windows NT、および Windows 98 プラットフォームでは、このバージョンの MDAC とそのサービス パックをインストールできます。 オペレーティング システムまたはそのサービス パックを通じてのみ、Windows XP プラットフォームでは、このバージョンをインストールできます。 このバージョンの MDAC 現在はサポートされていません。
-* **MDAC 2.8:** MDAC のこのバージョンには、Windows Server 2003 および Windows XP SP2 に含まれて以降。 また、このバージョンの MDAC とそのサービス パックを Windows 2000 にインストールすることもできます。
+* **MDAC 1.5、MDAC 2.0、および MDAC 2.1:** MDAC のこれらのバージョンが Microsoft Windows NT のオプションの Pack、Microsoft Windows Platform SDK、または MDAC の Web サイトを介してリリースされた独立したリリースです。 MDAC のこれらのバージョンがサポートされていません。
+* **MDAC 2.5:** MDAC のこのバージョンが、Windows 2000 オペレーティング システムに含まれています。 MDAC 2.5 のサービス パックが、対応する Windows 2000 service pack に含まれています。
+* **MDAC 2.6:** MDAC 2.6 RTM、SP1、および SP2 はそれぞれ、SP1、および SP2、Microsoft SQL Server 2000 の RTM に含まれていた。 さらに、これらの MDAC サービス パックは、Microsoft SQL Server 2000 service pack のリリースのスケジュールに従って MDAC の Web サイトにリリースされました。 Windows 2000、Windows Millennium Edition、Windows NT、Windows 95、Windows 98 プラットフォームでは、このバージョンの MDAC とそのサービス パックをインストールできます。 このバージョンの MDAC はサポートされていません。
+* **MDAC 2.7:** MDAC のこのバージョンは、Microsoft Windows XP RTM および SP1 オペレーティング システムに含まれています。 Windows 2000、Windows Millennium、Windows NT、および Windows 98 プラットフォームでは、このバージョンの MDAC とそのサービス パックをインストールできます。 このバージョンは、オペレーティング システムまたはそのサービス パックを通じてのみ、Windows XP のプラットフォームにインストールできます。 このバージョンの MDAC はサポートされていません。
+* **MDAC 2.8:** MDAC のこのバージョンが Windows Server 2003 および Windows XP SP2 に付属しており、それ以降。 また、このバージョンの MDAC とそのサービス パックを Windows 2000 にインストールすることもできます。
 
-  * MDAC 2.8 の 32 ビット版もリリースされました MDAC Web サイトに同時に Windows Server 2003 が顧客にリリースされたこと。
-  * MDAC 2.8 の 64 ビット バージョンは、Windows Server 2003 および Windows XP の 64 ビット バージョンとリリースされました。
+  * MDAC 2.8 の 32 ビット バージョンもリリースされました MDAC の Web サイトに同時に Windows Server 2003 は、顧客にリリースされました。
+  * MDAC 2.8 の 64 ビット バージョンは、Windows Server 2003 および Windows XP の 64 ビット版でリリースされました。
 
-* **Windows Data Access Components (WDAC):** MDAC WDAC -"Windows Data Access Components"Windows Vista および Windows Server 2008 以降にその名前に変更します。 WDAC では、オペレーティング システムの一部として含まれてしとは別に再配布では使用できません。 保守 WDAC では、オペレーティング システムのライフ サイクルに従います。
+* **Windows Data Access Components (WDAC):** MDAC WDAC -"Windows Data Access Components"Windows Vista および Windows Server 2008 以降にその名前に変更します。 WDAC では、オペレーティング システムの一部として含まれてし、再頒布用に個別にご利用いただけません。 WDAC の保守性は、オペレーティング システムのライフ サイクルが適用されます。
 
-  WDAC の 32 ビットおよび 64 ビット バージョンがそれぞれの Windows オペレーティング システムの 32 ビットおよび 64 ビット バージョンと解放されます。
+  WDAC の 32 ビットおよび 64 ビットのバージョンについては、それぞれ、Windows オペレーティング システムの 32 ビットおよび 64 ビット バージョンでリリースします。
 
 ## <a name="obsolete-data-access-technologies"></a>古いデータ アクセス テクノロジ
 
-旧式のテクノロジは、将来の製品リリースを除外していない拡張またはされたいくつかの製品リリースで更新されるテクノロジです。 新しいアプリケーションを記述するときに、これらのテクノロジを使用しないでください。 これらのテクノロジを使用して記述されている既存のアプリケーションを変更するときに、ADO.NET または現在の別のテクノロジへの移行を検討してください。
+旧式のテクノロジは、技術は、将来の製品のリリースから除外して、しない強化またはされたいくつかの製品リリースで更新します。 新しいアプリケーションを記述するときに、これらのテクノロジを使用しないでください。 これらのテクノロジを使用して記述されている既存のアプリケーションを変更するときに、ADO.NET などの現在のテクノロジへの移行を検討してください。
 
-次のコンポーネントは、不使用と見なされます。
+次のコンポーネントは古い形式と見なされます。
 
-* **Db-library:** DB ライブラリは、SQL Server 固有のプログラミング モデルを C Api が含まれています。 ない DB ライブラリへの機能強化 SQL Server 6.5 以降。 SQL Server 2000 では、最終リリースの 64 ビット Windows オペレーティング システムに移植しません。
-* **埋め込まれた SQL (SQL E):** E SQL では、SQL Server 固有のプログラミング モデルを Visual C のコードに埋め込まれる TRANSACT-SQL ステートメントを有効にします。 機能強化は行われていませんが E sql SQL Server 6.5 以降。 SQL Server 2000 では、最終リリースの 64 ビット Windows オペレーティング システムに移植しません。
-* **データ アクセス オブジェクト (DAO):** DAO は、JET (Access) データベースへのアクセスを提供します。 この API は、Microsoft Visual Basic、Microsoft Visual C、およびスクリプト言語から使用できます。 Microsoft Office 2000 および Office XP には含まれています。 DAO 3.6 は、このテクノロジの最終バージョンです。 64 ビット Windows オペレーティング システムで利用できることはできません。
-* **リモート データ オブジェクト (RDO):** RDO が、ODBC のリモートのリレーショナル データ ソースにアクセスするために設計および ODBC を使用して、複雑なアプリケーション コードを使用せずに簡単に実現します。 Microsoft Visual Basic バージョン 4、5、および 6 には含まれています。 RDO version 2.0 では、このテクノロジの最終バージョンをでした。
+* **DB ライブラリ:** DB ライブラリは C Api を含む SQL Server 固有のプログラミング モデル。 ない、Db-library の機能強化 SQL Server 6.5 以降。 SQL Server 2000 では、最終リリースの 64 ビット Windows オペレーティング システムに移植しません。
+* **埋め込み SQL (SQL E):** E SQL では、SQL Server 固有のプログラミング モデルにより、Visual C のコードに埋め込まれる TRANSACT-SQL ステートメントをします。 機能が強化されてありません E SQL SQL Server 6.5 以降。 SQL Server 2000 では、最終リリースの 64 ビット Windows オペレーティング システムに移植しません。
+* **データ アクセス オブジェクト (DAO):** DAO JET (アクセス) データベースへのアクセスを提供します。 この API は、Microsoft Visual Basic、Microsoft Visual C、およびスクリプト言語から使用できます。 Microsoft Office 2000 および Office XP には含まれています。 DAO 3.6 は、このテクノロジの最終バージョンです。 これは、64 ビット Windows オペレーティング システムで使用できるされません。
+* **リモート データ オブジェクト (RDO):** RDO が具体的には、リモート ODBC リレーショナル データ ソースにアクセスするように設計および ODBC を使用して、複雑なアプリケーションのコードを使用せずに容易になりました。 Microsoft Visual Basic バージョン 4、5、および 6 には含まれています。 RDO バージョン 2.0 は、このテクノロジの最終バージョンでした。

@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream (int) メソッド |Microsoft ドキュメント
+title: getBinaryStream (int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5147934e43cd1e0ae50262aa3de35dee8bc7763c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6cae82023ce19760ae3ed324458f6a6fae6e46f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831977"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787417"
 ---
 # <a name="getbinarystream-method-int"></a>getBinaryStream (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして解釈されないバイトのバイナリ ストリーム。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、未解釈のバイトのバイナリ ストリームとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,18 +49,18 @@ public java.io.InputStream getBinaryStream(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getBinaryStream メソッドは、java.sql.ResultSet インターフェイスの getBinaryStream メソッドによって指定されます。  
   
- このメソッドでのみ使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]binary、varbinary、varbinary (max)、およびイメージのデータ型。 他のデータ型で使用すると、例外がスローされます。  
+ このメソッドを使用できる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型は、binary、varbinary、varbinary(max)、および image だけです。 他のデータ型で使用すると、例外がスローされます。  
   
  このメソッドで値をストリームとして取得した後は、ストリームからこの値をチャンク単位で読み取ることができます。 このメソッドは、大きな LONGVARBINARY 値を取得する場合に適しています。  
   
 > [!NOTE]  
->  返されたストリーム内のデータはすべて、他の列の値を取得する前に読み取る必要があります。 次に getter メソッドを呼び出すと、ストリームは暗黙的に閉じます。 また、ストリーム 0 を返します InputStream.available メソッドが呼び出されると、データが使用できるかどうかどうか。  
+>  返されたストリーム内のデータはすべて、他の列の値を取得する前に読み取る必要があります。 次に getter メソッドを呼び出すと、ストリームは暗黙的に閉じます。 また、メソッド InputStream.available を呼び出した場合、使用可能なデータがあるかどうかにかかわらず、ストリームから 0 が返される可能性があります。  
   
 ## <a name="see-also"></a>参照  
- [getBinaryStream メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
+ [getBinaryStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

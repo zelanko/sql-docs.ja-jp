@@ -1,5 +1,5 @@
 ---
-title: ISQLServerResultSet インターフェイス |Microsoft ドキュメント
+title: ISQLServerResultSet インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e49f78882fd135c9bb9363644423dd54d54f7c80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ec793a4f7cebd39adc1d3663e53217370831e25e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843227"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783916"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet インターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  JDBC 結果セットを表します。 このインターフェイスが追加されました[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0 です。  
+  JDBC 結果セットを表します。 このインターフェイスは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 で追加されました。  
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
@@ -37,8 +37,8 @@ ms.locfileid: "32843227"
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>解説  
- このインターフェイスはによって実装[SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ このインターフェイスによって実装されます[SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)します。  
   
  このインターフェイスを公開、 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定のメソッド。  
   
@@ -49,7 +49,7 @@ public interface ISQLServerResultSet
 |public void updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|  
 |public void updateDateTimeOffset(String, microsoft.sql.DateTimeOffset)|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|  
   
- このインターフェイスは、次を公開[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定のフィールド。  
+ このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のフィールドが公開されます。  
   
 |フィールド|詳細については、「|  
 |-----------|-------------------------------|  
@@ -63,6 +63,6 @@ public interface ISQLServerResultSet
 |public static final int TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|[TYPE_SS_SERVER_CURSOR_FORWARD_ONLY](../../../connect/jdbc/reference/type-ss-server-cursor-forward-only-field-sqlserverresultset.md)|  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

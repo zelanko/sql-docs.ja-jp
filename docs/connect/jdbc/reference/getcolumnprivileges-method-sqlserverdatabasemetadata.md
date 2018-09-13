@@ -1,5 +1,5 @@
 ---
-title: getColumnPrivileges メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getColumnPrivileges メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54f6ef742ac4d61e195e33590d7bdee6ebbc0739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 16c0b0314d4e0e3b2b28e81c118ef0533ba55768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833317"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785808"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,47 +44,47 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>パラメーター  
  *catalog*  
   
- A**文字列**カタログ名を格納しています。  
+ カタログ名を含む**文字列**です。  
   
  *schema*  
   
- A**文字列**スキーマ名を格納しています。  
+ スキーマ名を含む**文字列**です。  
   
  *テーブル*  
   
- A**文字列**テーブル名を格納しています。  
+ テーブル名を含む**文字列**です。  
   
  *col*  
   
- A**文字列**列名のパターンを格納しています。  
+ 列名のパターンを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getColumnPrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスの getColumnPrivileges メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getColumnPrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスで getColumnPrivileges メソッドによって指定されます。  
   
- GetColumnPrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
+ GetColumnPrivileges メソッドによって返される結果セットは、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**文字列**|カタログ名。|  
-|TABLE_SCHEM|**文字列**|テーブル スキーマ名です。|  
-|TABLE_NAME|**文字列**|テーブル名。|  
-|COLUMN_NAME|**文字列**|列名。|  
-|GRANTOR|**文字列**|アクセス許可を与えるオブジェクトです。|  
-|GRANTEE|**文字列**|アクセスを受け入れるオブジェクトです。|  
-|PRIVILEGE|**文字列**|許可されたアクセスの種類です。|  
-|IS_GRANTABLE|**文字列**|権限を与えられたユーザーが他のユーザーへのアクセスを許可できるかどうかを示します。|  
+|TABLE_CAT|**String**|カタログ名。|  
+|TABLE_SCHEM|**String**|テーブル スキーマ名です。|  
+|TABLE_NAME|**String**|テーブル名。|  
+|COLUMN_NAME|**String**|列名。|  
+|GRANTOR|**String**|アクセス許可を与えるオブジェクトです。|  
+|GRANTEE|**String**|アクセスを受け入れるオブジェクトです。|  
+|PRIVILEGE|**String**|許可されたアクセスの種類です。|  
+|IS_GRANTABLE|**String**|権限を与えられたユーザーが他のユーザーへのアクセスを許可できるかどうかを示します。|  
   
 > [!NOTE]  
->  GetColumnPrivileges メソッドによって返されるデータに関する詳細については、「sp_column_privileges (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
+>  getColumnPrivileges メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_column_privileges (Transact-SQL)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、getColumnPrivileges メソッド内の Person.Contact テーブルの FirstName 列に対するアクセス権を使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、getColumnPrivileges メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースにある Person.Contact テーブルの FirstName 列に対するアクセス権を返す方法を示します。  
   
 ```  
 public static void executeGetColumnPrivileges(Connection con) {  

@@ -1,5 +1,5 @@
 ---
-title: SQLServerPreparedStatement クラス |Microsoft ドキュメント
+title: SQLServerPreparedStatement クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c7b37e26faedf7cb064880d68e17f4688bfbe73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0f0189a7a3a12f41c6e07414a1f548eab15404ed
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847027"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786492"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "32847027"
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
- **拡張:** SQLServerStatement  
+ **継承:** SQLServerStatement  
   
  **実装:** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
   
@@ -39,15 +39,15 @@ ms.locfileid: "32847027"
 public class SQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>解説  
- SQLServerPreparedStatement は、Java のネイティブ型および多数の Java オブジェクト型としてパラメーターを指定するのに便利なメソッドを提供します。 SQLServerPreparedStatement を使用してステートメントを準備、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **sp_prepare**ストアド プロシージャとし、返されたステートメントが各以降を実行するため、通常を使用してステートメントのさまざまな処理を再利用ユーザーによって提供されるパラメーター。  
+## <a name="remarks"></a>Remarks  
+ SQLServerPreparedStatement は、任意の Java ネイティブ型および多数の Java オブジェクト型としてパラメーターを指定できるメソッドを提供します。 SQLServerPreparedStatement は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sp_prepare** ストアド プロシージャを使用してステートメントを準備し、それ以降のそのステートメントの実行は、返されたステートメント ハンドルを再利用し、通常はユーザーが提供するさまざまなパラメーターを使用して行われます。  
   
- SQLServerPreparedStatement バッチ処理をサポートするには、ここで準備されたステートメントのセットで実行されます 1 つのデータベース ラウンド トリップは、実行時のパフォーマンスを向上させるためにします。  
+ SQLServerPreparedStatement ではバッチ処理がサポートされており、準備されたステートメントのセットが単一のデータベースのラウンド トリップで実行され、実行時パフォーマンスが向上します。  
   
- このクラスは、SQLServerPreparedStatement クラス、ISQLServerPreparedStatement インターフェイス、java.sql.PreparedStatement インターフェイスとクラスおよびアンラッピング用 SQLServerStatement でサポートされるインターフェイスへのアンラッピングをサポートします。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)です。  
+ このクラスは、SQLServerPreparedStatement クラス、ISQLServerPreparedStatement インターフェイス、java.sql.PreparedStatement インターフェイス、クラスおよびアンラッピング用 SQLServerStatement でサポートされるインターフェイスへのアンラッピングをサポートしています。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

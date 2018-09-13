@@ -1,5 +1,5 @@
 ---
-title: getByte (java.lang.String) メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getByte メソッド (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac43acc93f9a08439b5acfe42612a1a38feafe0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8509cdaa97609249babaa45af4a0533dc3c9d443
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830717"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787030"
 ---
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>getByte (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列名の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**バイト**java プログラミング言語です。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の**バイト**として取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,18 +41,18 @@ public byte getByte(java.lang.String columnName)
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- A**文字列**列の名前を格納しています。  
+ 列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A**バイト**値。  
+ **バイト**値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getByte メソッドは、java.sql.ResultSet インターフェイスの getByte メソッドによって指定されます。  
   
- このメソッドでのみサポートされて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]tinyint や bit などのバイト値を安全に返すことができるデータ型。 その他のデータ型では例外がスローされます。  
+ このメソッドは、tinyint や bit などのバイト値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされています。 その他のデータ型では例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getByte メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   

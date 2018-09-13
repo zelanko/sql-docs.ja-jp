@@ -1,5 +1,5 @@
 ---
-title: setPortNumber メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: setPortNumber メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5665bd5ed6f10a755f3980607995b19887908379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 608c83e843941f80d4f6c9805711394975fb0c20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844507"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787293"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  通信するために使用するポート番号を設定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との通信に使用されるポート番号を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,12 +39,12 @@ public void setPortNumber(int portNumber)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *PortNumber*  
+ *portNumber*  
   
- **Int**ポート番号を含む値です。  
+ ポート番号を含む **int** 値です。  
   
-## <a name="remarks"></a>解説  
- ポート番号へのソケット接続を開くときに使用される TCP/IP ポート番号は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。 PortNumber プロパティが設定されていない場合、 [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)メソッドは、既定値の 1433 を返します。  
+## <a name="remarks"></a>Remarks  
+ このポート番号は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのソケット接続を開くときに使用される TCP/IP ポート番号です。 portNumber プロパティが設定されていない場合、[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) メソッドは既定値の 1433 が返されます。  
   
 > [!NOTE]  
 >  SetPortNumber メソッドでは、任意の範囲に渡されたポート値のチェックは実行しません。 エラーをトリガーすることがなく 99999 などの無効なポート番号を渡すことができます。  

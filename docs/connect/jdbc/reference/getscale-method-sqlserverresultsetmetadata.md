@@ -1,5 +1,5 @@
 ---
-title: getScale メソッド (SQLServerResultSetMetaData) |Microsoft ドキュメント
+title: getScale メソッド (SQLServerResultSetMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a16a779cef867e5ce3550832be8ec4d5640e3b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 08f640544101f72dbe2ddda875eed701a7eb306f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837107"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784927"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>getScale メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,18 +44,18 @@ public int getScale(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **Int**列の小数点以下桁数を示すです。  
+ 列の小数点以下桁数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getScale メソッドは、java.sql.ResultSetMetaData インターフェイスの getScale メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getScale メソッドは、java.sql.ResultSetMetaData インターフェイスで getScale メソッドによって指定されます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 では、DECIMAL_DIGITS 列に動作の変更を持ちます。 参照してください[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)詳細についてはします。  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 では、DECIMAL_DIGITS 列の動作が変更されています。 詳細については、[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLServerResultSetMetaData のメンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+ [SQLServerResultSetMetaData メンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData クラス](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: getURL メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getURL メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a247a542516c9579a31be0e8a0ad8e3401f36e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5fd0cfcf85edcab84d6488dd733f72fdbebfe8b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840517"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784596"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>getURL メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,21 +39,21 @@ public java.lang.String getURL()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**URL を格納しています。  
+ URL を含む**文字列**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getURL メソッドは、java.sql.DatabaseMetaData インターフェイスの getURL メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getURL メソッドは、java.sql.DatabaseMetaData インターフェイスの getURL メソッドで規定されています。  
   
- 使用する場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]で、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベースで、このメソッドが戻る、**文字列**次の情報を含む値です。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドによって次の情報を含む **String** 値が返されます。  
   
 -   URL 値の "jdbc:sqlserver://"  
   
--   省略可能な接続プロパティなど**serverName**、 **instanceName**、および**portNumber**  
+-   省略可能な接続のプロパティなど**serverName**、 **instanceName**、および**portNumber**  
   
--   他の接続プロパティによって、ユーザーとすべての接続プロパティが空または null 以外のドライバーを既定値の設定を除く**userName**、**パスワード**、および**integratedSecurity**.  
+-   ユーザーにより設定されるその他の接続プロパティと、ドライバーの既定値が空または null ではないすべての接続プロパティ (ただし、**userName**、**password**、**integratedSecurity** を除きます)。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

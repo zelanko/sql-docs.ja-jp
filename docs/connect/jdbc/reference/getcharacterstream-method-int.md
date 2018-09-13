@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream (int) メソッド |Microsoft ドキュメント
+title: getCharacterStream (int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7541baecfd25c9c5cc65923686ab9bfb2dc6c51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b11668ad05cd06fac0579f894667b286d25cfbee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832037"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783883"
 ---
 # <a name="getcharacterstream-method-int"></a>getCharacterStream (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを java.io.Reader オブジェクトとして。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、java.io.Reader オブジェクトとして取得されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,13 +49,13 @@ public java.io.Reader getCharacterStream(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getCharacterStream メソッドは、java.sql.ResultSet インターフェイスの getCharacterStream メソッドによって指定されます。  
   
- このメソッドは読み取り専用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]nchar、nvarchar、nvarchar (max)、および ntext などの Unicode 文字データ型。 ASCII 文字型などのその他のデータ型では、例外がスローされます。 ASCII データ型を読み取り、使用、 [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)メソッドです。  
+ このメソッドでは、nchar、nvarchar、nvarchar(max)、ntext などの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の Unicode 文字データ型のみが読み取られます。 ASCII 文字型などのその他のデータ型では、例外がスローされます。 ASCII データ型を読み取るには、[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) メソッドを使用します。  
   
 ## <a name="see-also"></a>参照  
- [getCharacterStream メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
+ [getCharacterStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

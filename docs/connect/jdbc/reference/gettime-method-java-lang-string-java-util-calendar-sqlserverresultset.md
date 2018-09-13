@@ -1,5 +1,5 @@
 ---
-title: getTime (java.lang.String, java.util.Calendar) メソッド |Microsoft ドキュメント
+title: getTime (java.lang.String, java.util.Calendar) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f8ce9d623a940c2e55a17e376d872d388a13ede
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f9c78428add1b57063f7bd6e55ff1902140316d0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839447"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786291"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getTime (java.lang.String, java.util.Calendar) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列名の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語を渡された Calendar オブジェクトを使用しての java.sql.Time オブジェクトとして。  
+  この [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、渡された Calendar オブジェクトを使用し、Java プログラミング言語の java.sql.Time オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,24 +40,24 @@ public java.sql.Time getTime(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ColName*  
+ *colName*  
   
- A**文字列**列の名前を格納しています。  
+ 列名を含む**文字列**です。  
   
  *cal*  
   
- 予定表オブジェクトです。  
+ 暦オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- Time オブジェクト。  
+ 時刻のオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getTime メソッドは、java.sql.ResultSet インターフェイスの getTime メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getTime メソッドは、java.sql.ResultSet インターフェイスで getTime メソッドによって指定されます。  
   
- このメソッドの有効な時刻部分を返します、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime または smalldatetime データ型の日付部分の 1970/01/01 から、指定されたカレンダーのタイムゾーンにおける Java のベースラインの日付に設定します。  
+ このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な時刻部分が返されます。日付部分は、指定されたカレンダーのタイムゾーンにおける Java のベースラインの日付である 1970/01/01 に設定されます。  
   
 ## <a name="see-also"></a>参照  
  [getTime メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   

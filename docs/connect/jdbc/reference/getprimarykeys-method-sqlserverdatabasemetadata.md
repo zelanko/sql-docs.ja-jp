@@ -1,5 +1,5 @@
 ---
-title: getPrimaryKeys メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getPrimaryKeys メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15e8882067a67ec5d276e23c7cb3d2ea3684bf38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 80ea0345ffa8e608c3e67ab90b0ad108cde143d4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837447"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784413"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,41 +43,41 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 #### <a name="parameters"></a>パラメーター  
  *cat*  
   
- A**文字列**カタログ名を格納しています。  
+ カタログ名を含む**文字列**です。  
   
  *schema*  
   
- A**文字列**スキーマ名を格納しています。  
+ スキーマ名を含む**文字列**です。  
   
  *テーブル*  
   
- A**文字列**テーブル名を格納しています。  
+ テーブル名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getPrimaryKeys メソッドは、java.sql.DatabaseMetaData インターフェイスの getPrimaryKeys メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getPrimaryKeys メソッドは、java.sql.DatabaseMetaData インターフェイスで getPrimaryKeys メソッドによって指定されます。  
   
- GetPrimaryKeys メソッドによって返される結果セットには、次の情報が含まれます。  
+ getPrimaryKeys メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|TABLE_CAT|文字列|指定したテーブルが存在するデータベースの名前。|  
-|TABLE_SCHEM|文字列|テーブルのスキーマです。|  
-|TABLE_NAME|文字列|テーブルの名前です。|  
-|COLUMN_NAME|文字列|列の名前です。|  
+|TABLE_CAT|String|指定したテーブルが含まれているデータベースの名前です。|  
+|TABLE_SCHEM|String|テーブルのスキーマです。|  
+|TABLE_NAME|String|テーブルの名前です。|  
+|COLUMN_NAME|String|列の名前です。|  
 |KEY_SEQ|short|複数列の主キーにおける列のシーケンス番号です。|  
-|PK_NAME|文字列|主キーの名前です。|  
+|PK_NAME|String|主キーの名前です。|  
   
 > [!NOTE]  
->  GetPrimaryKeys メソッドによって返されるデータに関する詳細については、「sp_pkeys (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
+>  getPrimaryKeys メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_pkeys (Transact-SQL)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、getPrimaryKeys メソッド内の Person.Contact テーブルの主キーに関する情報を使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、getPrimaryKeys メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースにある Person.Contact テーブルの主キーに関する情報を返す方法を示します。  
   
 ```  
 public static void executeGetPrimaryKeys(Connection con) {  

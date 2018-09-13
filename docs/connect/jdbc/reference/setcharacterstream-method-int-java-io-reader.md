@@ -1,5 +1,5 @@
 ---
-title: setCharacterStream (int, java.io.Reader) メソッド |Microsoft ドキュメント
+title: setCharacterStream (int, java.io.Reader) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fa0e3edcc88e105f631105fb6d3735c6baa6348
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a0c8554e85a3341a79c80b1b4e6c6c050cfcda1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843457"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786835"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>setCharacterStream (int, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定した java.io.Reader オブジェクトを指定されたパラメーターを設定します。  
+  指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。  
   
 > [!NOTE]  
->  以降でこの機能が導入された、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver version 2.0。  
+>  この機能は、[!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver Version 2.0 から導入されました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,20 +40,20 @@ public final void setCharacterStream(int parameterIndex,
 #### <a name="parameters"></a>パラメーター  
  *parameterIndex*  
   
- **Int**パラメーター数を示すです。  
+ パラメーターの番号を示す **int** です。  
   
- *リーダー*  
+ *reader*  
   
  Unicode データを含む、java.io.Reader オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この setCharacterStream メソッドは、setCharacterStream、java.sql.PreparedStatement インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setCharacterStream メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [setCharacterStream メソッド&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   
+ [setCharacterStream &#40;SQLServerPreparedStatement&#41; メソッド](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

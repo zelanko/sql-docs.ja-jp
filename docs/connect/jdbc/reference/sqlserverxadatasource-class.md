@@ -1,5 +1,5 @@
 ---
-title: SQLServerXADataSource クラス |Microsoft ドキュメント
+title: SQLServerXADataSource クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69edd13e84599e4e3e11ba56a3a1c34ee1d36ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d53011410bec69b795a5f50464ce0bb4a5eac425
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850527"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784048"
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  ファクトリを表します[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)内部的に使用されるオブジェクト。  
+  内部で使用されている [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) オブジェクトのファクトリを表します。  
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
  **拡張:** [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
- **実装:** javax.sql.XADataSource  
+ **実装**: javax.sql.XADataSource  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,17 +39,17 @@ ms.locfileid: "32850527"
 public class SQLServerXADataSource  
 ```  
   
-## <a name="remarks"></a>解説  
- SQLServerXADataSource インターフェイスを実装するオブジェクトは、通常、名前付けサービスを Java Naming and Directory Interface (JNDI) を使用して登録します。  
+## <a name="remarks"></a>Remarks  
+ SQLServerXADataSource インターフェイスを実装するオブジェクトは、通常、JNDI (Java Naming and Directory Interface) を使用するネーム サービスに登録されます。  
   
- SQLServerXADataSource クラスは、分散 (XA) トランザクションで使用されるデータベース接続を提供します。 SQLServerXADataSource クラスは、物理接続の接続プールもサポートします。 Javax.sql パッケージで定義されている SQLServerXADataSource と SQLServerXAConnection インターフェイスはによって実装される[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
+ SQLServerXADataSource クラスでは、分散 (XA) トランザクションで使用するデータベース接続が提供されます。 SQLServerXADataSource クラスは、物理接続の接続プールもサポートします。 Javax.sql パッケージで定義されている SQLServerXADataSource と SQLServerXAConnection インターフェイスによって実装が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
- SQLServerXAConnection オブジェクトは、分散トランザクションに参加できるプール接続です。 メソッドを追加することによって、SQLServerXAConnection が SQLServerPooledConnection インターフェイスを拡張する具体的には、 [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)です。 このメソッドを生成、 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)トランザクション マネージャーによって、分散トランザクションに他の参加者とは、この接続で行われる作業を調整するために使用するオブジェクト。 SQLServerPooledConnection インターフェイスを拡張するため、SQLServerXAConnection オブジェクトは、SQLServerPooledConnection オブジェクトのすべてのメソッドをサポートします。 これらは基になるデータ ソースへの再利用可能な物理的接続であり、JDBC アプリケーションに返される論理接続ハンドルを生成します。  
+ SQLServerXAConnection オブジェクトは、分散トランザクションに参加できるプール接続です。 SQLServerXAConnection が SQLServerPooledConnection インターフェイスを拡張メソッドを追加することで正確には、 [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)します。 このメソッドでは、[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトが生成されます。トランザクション マネージャーでは、このオブジェクトを使用して、該当する接続で行われる処理を分散トランザクションの他の参加要素と調整できます。 SQLServerPooledConnection インターフェイスを拡張する SQLServerXAConnection オブジェクトは、SQLServerPooledConnection オブジェクトのすべてのメソッドをサポートします。 これらは基になるデータ ソースへの再利用可能な物理的接続であり、JDBC アプリケーションに返される論理接続ハンドルを生成します。  
   
- SQLServerXAConnection オブジェクトは、SQLServerXADataSource オブジェクトによって生成されます。 SQLServerConnectionPoolDataSource オブジェクトおよび SQLServerXADataSource オブジェクトは、いずれも JDBC アプリケーションに表示されているデータ ソース層の下実装はため似ています。 このアーキテクチャにより[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]アプリケーションに透過的な方法で分散トランザクションをサポートします。 SQLServerXADataSource と統合するように構成できる[!INCLUDE[msCoName](../../../includes/msconame_md.md)]する場合は true、分散トランザクション コーディネーター (DTC) トランザクション処理を分散します。  
+ SQLServerXAConnection オブジェクトは、SQLServerXADataSource オブジェクトによって生成されます。 SQLServerConnectionPoolDataSource オブジェクトと SQLServerXADataSource オブジェクトは、いずれも JDBC アプリケーションに表示されているデータ ソース層の下実装されるため、似ています。 このアーキテクチャでは、アプリケーションに対して透過的な方法で分散トランザクションが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によってサポートされます。 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 分散トランザクション コーディネーター (DTC) と統合して、真の分散トランザクション サポートが提供されるように、SQLServerXADataSource を構成することができます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXADataSource のメンバー](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

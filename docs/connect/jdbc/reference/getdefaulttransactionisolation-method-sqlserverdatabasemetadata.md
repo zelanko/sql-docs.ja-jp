@@ -1,5 +1,5 @@
 ---
-title: getDefaultTransactionIsolation メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getDefaultTransactionIsolation メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c016a97d3e1494b046377d1ce6cd481385e8516b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 406881e33395f0071f06a16df4e789c70ab95e0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834167"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787256"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>getDefaultTransactionIsolation メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +39,15 @@ public int getDefaultTransactionIsolation()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **Int**既定のトランザクション分離レベルを示すです。  
+ 既定のトランザクション分離レベルを示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getDefaultTransactionIsolation メソッドは、java.sql.DatabaseMetaData インターフェイスの getDefaultTransactionIsolation メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getDefaultTransactionIsolation メソッドは、java.sql.DatabaseMetaData インターフェイスで getDefaultTransactionIsolation メソッドによって指定されます。  
   
- 使用する場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]で、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベースでは、このメソッドが戻る TRANSACTION_READ_COMMITTED のどちらかの値または**int** 2 の値します。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドは TRANSACTION_READ_COMMITTED の値または **int** 値 2 が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: setEncrypt メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: setEncrypt メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 723c5c5402fb32f0ad74bf303dd7c682b88d1c84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9e0a40414bb388e6063e4be6525e986975ccf0af
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843207"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784397"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  セット、**ブール**encrypt プロパティが有効になっているかどうかを示す値。  
+  encrypt プロパティが有効であるかどうかを示す **Boolean** 値が設定されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,24 +39,24 @@ public void setEncypt(boolean encrypt)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *暗号化します。*  
+ *encrypt*  
   
- **true**クライアント間で Secure Sockets Layer (SSL) 暗号化が有効になっているかどうか、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。 それ以外の場合は、 **false**です。  
+ クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の間で SSL (Secure Sockets Layer) 暗号化が有効である場合は、**true** です。 それ以外の場合は、 **false**です。  
   
-## <a name="remarks"></a>解説  
- Encrypt プロパティ設定されている場合**true**、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]確実[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サーバーにインストールされている証明書がある場合に、クライアントとサーバー間で送信されるすべてのデータに SSL 暗号化を使用します。 既定値は **false**です。  
+## <a name="remarks"></a>Remarks  
+ encrypt プロパティが **true** に設定されている場合、サーバーに証明書がインストールされていれば、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] によって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で SSL 暗号化が確実に使用されるようになります。暗号化の対象となるのは、サーバーとクライアントの間で送信されるすべてのデータです。 既定値は **false**です。  
   
  JDBC ドライバーは、SSL ハンドシェイクの確立を試みる際に、使用中の Java 仮想マシン (JVM) を検出します。  
   
- Encrypt プロパティ設定されている場合**true**、 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] JVM の既定の JSSE セキュリティ プロバイダーを使用して、SSL 暗号化をネゴシエートする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。 既定のセキュリティ プロバイダーでは、SSL 暗号化の正常なネゴシエートに必要なすべての機能がサポートされているとは限りません。 たとえば、既定のセキュリティ プロバイダーがサポートしていませんで使用される RSA 公開キーのサイズ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 証明書。 この場合、既定のセキュリティ プロバイダーでエラーが発生し、その結果 JDBC ドライバーが接続を終了する可能性があります。 この問題を解決するには、次のいずれかを実行します。  
+ encrypt プロパティが **true** に設定されている場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] は、JVM の既定の JSSE セキュリティ プロバイダーを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と SSL 暗号化をネゴシエートします。 既定のセキュリティ プロバイダーでは、SSL 暗号化の正常なネゴシエートに必要なすべての機能がサポートされているとは限りません。 たとえば、既定のセキュリティ プロバイダーでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SSL 証明書で使用されている RSA 公開キーのサイズがサポートされていない場合があります。 この場合、既定のセキュリティ プロバイダーでエラーが発生し、その結果 JDBC ドライバーが接続を終了する可能性があります。 この問題を解決するには、次のいずれかを実行します。  
   
--   構成、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]小さい RSA 公開キーを持つサーバー証明書を使用  
+-   サイズの小さい RSA 公開キーを持つサーバー証明書を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を構成します。  
   
--   別の JSSE セキュリティ プロバイダーを使用するように JVM を構成する、"\<java ホーム >/lib/security/java.security"セキュリティ プロパティ ファイル  
+-   "\<java-home>/lib/security/java.security" セキュリティ プロパティ ファイルで、別の JSSE セキュリティ プロバイダーを使用するように JVM を構成します。  
   
 -   別の JVM を使用します。  
   
- Encrypt プロパティが指定されていないかに設定する場合**false**、ドライバーは強制されません、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 暗号化をサポートするためにします。 場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]インスタンスが SSL 暗号化を強制的に構成されていない、すべての暗号化を使用せず、接続が確立します。 場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]インスタンスが SSL 暗号化を強制的に構成されている、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]は自動的に SSL 暗号化を有効にする接続は終了しますか、または、JVM で正しく実行されているように構成し、ドライバーは、エラーが発生します。  
+ encrypt プロパティが指定されていないか、または **false** に設定されている場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がドライバーによって SSL 暗号化のサポートを強制されることはありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが SSL 暗号化を強制的に使用するように構成されていない場合、接続は暗号化なしで確立されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが SSL 暗号化を強制的に使用するように構成されている場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、使用中の JVM が適切に構成されていれば、自動的に SSL 暗号化が有効にされ、そうでなければ接続が終了されてエラーが生成されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

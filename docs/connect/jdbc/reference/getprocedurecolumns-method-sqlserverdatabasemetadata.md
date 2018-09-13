@@ -1,5 +1,5 @@
 ---
-title: getProcedureColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getProcedureColumns メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d323f4ba70e439eb5ec6ee1ec6178c8d8ec69dc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cae6530dc0b37b57d986ab160ce9be0bf4d5a33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843277"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787039"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,67 +44,67 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 #### <a name="parameters"></a>パラメーター  
  *sCatalog*  
   
- A**文字列**カタログ名を格納しています。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
+ カタログ名を含む**文字列**です。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
   
  *スキーマ*  
   
- A**文字列**スキーマ名のパターンを格納しています。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
+ スキーマ名のパターンを含む**文字列**です。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
   
  *proc*  
   
- A**文字列**プロシージャ名のパターンを格納しています。  
+ プロシージャ名のパターンを含む**文字列**です。  
   
  *col*  
   
- A**文字列**列名のパターンを格納しています。 このパラメーターに null を指定すると、各列の行が返されます。  
+ 列名のパターンを含む**文字列**です。 このパラメーターに null を指定すると、各列の行が返されます。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getProcedureColumns メソッドは、java.sql.DatabaseMetaData インターフェイスの getProcedureColumns メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getProcedureColumns メソッドは、java.sql.DatabaseMetaData インターフェイスで getProcedureColumns メソッドによって指定されます。  
   
- GetProcedureColumns メソッドによって返される結果セットには、次の情報が含まれます。  
+ GetProcedureColumns メソッドによって返される結果セットは、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**文字列**|指定したストアド プロシージャが存在するデータベースの名前です。|  
-|PROCEDURE_SCHEM|**文字列**|ストアド プロシージャのスキーマです。|  
-|PROCEDURE_NAME|**文字列**|ストアド プロシージャの名前です。|  
-|COLUMN_NAME|**文字列**|列の名前です。|  
-|COLUMN_TYPE|**short**|列の型。 次の値のいずれかを指定できます。<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
+|PROCEDURE_CAT|**String**|指定したストアド プロシージャが存在するデータベースの名前です。|  
+|PROCEDURE_SCHEM|**String**|ストアド プロシージャのスキーマです。|  
+|PROCEDURE_NAME|**String**|ストアド プロシージャの名前です。|  
+|COLUMN_NAME|**String**|列の名前です。|  
+|COLUMN_TYPE|**short**|列の型。 次のいずれかの値を指定できます。<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|java.sql.Types の SQL データ型です。|  
-|TYPE_NAME|**文字列**|データ型の名前です。|  
+|TYPE_NAME|**String**|データ型の名前です。|  
 |PRECISION|**int**|有効桁数の合計数。|  
 |LENGTH|**int**|データの長さです (バイト)。|  
 |SCALE|**short**|小数点以下の桁数です。|  
-|RADIX|**short**|数値型の基数。|  
-|NULLABLE|**short**|列に null 値を含めることができるかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**文字列**|プロシージャ列の記述です。<br /><br /> <br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]はこの列の値を返しません。|  
-|COLUMN_DEF|**文字列**|列の既定値です。|  
-|SQL_DATA_TYPE|**smallint**|この列は、同じ、 **DATA_TYPE**列を除き、 **datetime**と ISO**間隔**データ型。|  
-|SQL_DATETIME_SUB|**smallint**|**Datetime** ISO**間隔**サブコードの場合の値**SQL_DATA_TYPE**は**SQL_DATETIME**または**SQL_INTERVAL**. 型のデータ型以外の**datetime**と ISO**間隔**、この列は NULL です。|  
+|RADIX|**short**|数値型の基数です。|  
+|NULLABLE|**short**|列に null 値を含めることができるかどうかを示します。 次のいずれかの値を指定できます。<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
+|REMARKS|**String**|プロシージャ列の記述です。<br /><br /> <br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、この列の値は返されません。|  
+|COLUMN_DEF|**String**|列の既定値です。|  
+|SQL_DATA_TYPE|**smallint**|この列は、**datetime** データ型と ISO **interval** データ型以外は、**DATA_TYPE** 列と同じです。|  
+|SQL_DATETIME_SUB|**smallint**|**SQL_DATA_TYPE** の値が **SQL_DATETIME** または **SQL_INTERVAL** の場合は、**datetime** ISO **interval** サブコードになります。 **datetime** および **ISO interval** 以外のデータ型の場合、この列は NULL です。|  
 |CHAR_OCTET_LENGTH|**int**|列の最大バイト数です。|  
 |ORDINAL_POSITION|**int**|テーブル内の列のインデックスです。|  
-|IS_NULLABLE|**文字列**|列で null 値が許容されるかどうかを示します。|  
-|SS_TYPE_CATALOG_NAME|**文字列**|ユーザー定義型 (UDT) を含むカタログの名前。|  
-|SS_TYPE_SCHEMA_NAME|**文字列**|UDT (ユーザー定義型) を含むスキーマの名前です。|  
-|SS_UDT_CATALOG_NAME|**文字列**|完全修飾名の UDT (ユーザー定義型) です。|  
-|SS_UDT_SCHEMA_NAME|**文字列**|XML スキーマ コレクション名が定義されているカタログの名前です。 カタログ名が見つからない場合、この変数には、空の文字列が含まれています。|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**文字列**|XML スキーマ コレクション名が定義されているスキーマの名前です。 スキーマ名が見つからない場合は、空文字列です。|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**文字列**|XML スキーマ コレクションの名前です。 名前が見つからない場合は、空文字列です。|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**文字列**|ユーザー定義型 (UDT) を含むカタログの名前。|  
-|SS_XML_SCHEMACOLLECTION_NAME|**文字列**|UDT (ユーザー定義型) を含むスキーマの名前です。|  
-|SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]拡張ストアド プロシージャによって使用されるデータ型。<br /><br /> <br /><br /> **注:** によって返されるデータ型の詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]、「データ型 (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。|  
+|IS_NULLABLE|**String**|列で null 値が許容されるかどうかを示します。|  
+|SS_TYPE_CATALOG_NAME|**String**|UDT (ユーザー定義型) を含むカタログの名前です。|  
+|SS_TYPE_SCHEMA_NAME|**String**|UDT (ユーザー定義型) を含むスキーマの名前です。|  
+|SS_UDT_CATALOG_NAME|**String**|完全修飾名の UDT (ユーザー定義型) です。|  
+|SS_UDT_SCHEMA_NAME|**String**|XML スキーマ コレクション名が定義されているカタログの名前です。 カタログ名が見つからない場合は、この変数に空文字列が含まれます。|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|XML スキーマ コレクション名が定義されているスキーマの名前です。 スキーマ名が見つからない場合は、空文字列です。|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|XML スキーマ コレクションの名前です。 名前が見つからない場合は、空文字列です。|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|UDT (ユーザー定義型) を含むカタログの名前です。|  
+|SS_XML_SCHEMACOLLECTION_NAME|**String**|UDT (ユーザー定義型) を含むスキーマの名前です。|  
+|SS_DATA_TYPE|**tinyint**|拡張ストアド プロシージャによって使用される [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型です。<br /><br /> <br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって返されるデータ型の詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「データ型 (Transact-SQL)」を参照してください。|  
   
 > [!NOTE]  
->  GetProcedureColumns メソッドによって返されるデータに関する詳細については、「sp_sproc_columns (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
+>  getProcedureColumns メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_sproc_columns (Transact-SQL)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例で uspGetBillOfMaterials ストアド プロシージャに関する情報を返す getProcedureColumns メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースで、getProcedureColumns メソッドを使用して uspGetBillOfMaterials ストアド プロシージャに関する情報を返す方法を示します。  
   
 ```  
 public static void executeGetProcedureColumns(Connection con) {  

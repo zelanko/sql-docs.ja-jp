@@ -1,5 +1,5 @@
 ---
-title: ISQLServerConnection インターフェイス |Microsoft ドキュメント
+title: ISQLServerConnection インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ca0e0504a7f28622ba2419545d2167ad917f784
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f7b9c02332b5a680fcb04c2a9d38c27f6fe5a9e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841437"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787260"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection インターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  JDBC の接続を表し、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。 このインターフェイスが追加されました[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0 です。  
+  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへの JDBC 接続を表します。 このインターフェイスは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 で追加されました。  
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
- **拡張:** java.sql.Connection  
+ **継承:** java.sql.Connection  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32841437"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>解説  
- このインターフェイスはによって実装[SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ このインターフェイスによって実装されます[SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)します。  
   
- このインターフェイスは、次を公開[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定のフィールド。  
+ このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のフィールドが公開されます。  
   
 |フィールド|詳細については、「|  
 |-----------|-------------------------------|  
@@ -48,6 +48,6 @@ public interface ISQLServerConnection
 |public UUID getClientConnectionId()|[getClientConnectionID()](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

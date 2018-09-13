@@ -1,5 +1,5 @@
 ---
-title: getColumnType メソッド (SQLServerResultSetMetaData) |Microsoft ドキュメント
+title: getColumnType メソッド (SQLServerResultSetMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9296af59ce9defaa764e56a8ec426ac8b60cad4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8183c5f28b747bee1fa61cb5843d5bb39b0cf794
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833127"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787854"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>getColumnType メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,18 +44,18 @@ public int getColumnType(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **Int** java.sql.Types で定義されている JDBC の型を示すです。  
+ java.sql.Types での定義に従って JDBC 型を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getColumnType メソッドは、java.sql.ResultSetMetaData インターフェイスの getColumnType メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getColumnType メソッドは、java.sql.ResultSetMetaData インターフェイスで getColumnType メソッドによって指定されます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 では、DATA_TYPE 列に動作の変更を持ちます。 参照してください[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)詳細についてはします。  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 では、DATA_TYPE 列の動作が変更されています。 詳細については、[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLServerResultSetMetaData のメンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+ [SQLServerResultSetMetaData メンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData クラス](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

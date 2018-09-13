@@ -1,5 +1,5 @@
 ---
-title: isDefinitelyWritable メソッド (SQLServerResultSetMetaData) |Microsoft ドキュメント
+title: isDefinitelyWritable メソッド (SQLServerResultSetMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17d20197426efa622efb0be8c8a58b7bfcd9adc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 74d4cc4cc5f1f9032fce0b8e73c66cd01043bb86
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841117"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784940"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,20 +44,20 @@ public boolean isDefinitelyWritable(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **true**列への書き込みが確実に行われる場合。 それ以外の場合は、 **false**です。  
+ 列への書き込みが確実に成功する場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この isDefinitelyWritable メソッドは、java.sql.ResultSetMetaData インターフェイスの isDefinitelyWritable メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この isDefinitelyWritable メソッドは、java.sql.ResultSetMetaData インターフェイスで isDefinitelyWritable メソッドによって指定されます。  
   
 > [!NOTE]  
->  使用する場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]で、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベースでは、このメソッドは常に false を返します。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドでは常に false が返されます。  
   
 ## <a name="see-also"></a>参照  
- [SQLServerResultSetMetaData のメソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
- [SQLServerResultSetMetaData のメンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+ [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
+ [SQLServerResultSetMetaData メンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData クラス](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

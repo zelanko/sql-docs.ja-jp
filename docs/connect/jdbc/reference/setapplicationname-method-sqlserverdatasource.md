@@ -1,5 +1,5 @@
 ---
-title: setApplicationName メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: setApplicationName メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83dc2762c52a8564755355199faa59b1eb25991e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 661e8a31ad3fc240c1e8e51f03f2e4132e96fdc7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841517"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784217"
 ---
 # <a name="setapplicationname-method-sqlserverdatasource"></a>setApplicationName メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public void setApplicationName(java.lang.String applicationName)
 #### <a name="parameters"></a>パラメーター  
  *applicationName*  
   
- A**文字列**アプリケーションの名前を格納しています。  
+ アプリケーションの名前を表す**文字列**です。  
   
-## <a name="remarks"></a>解説  
- アプリケーション名を特定のアプリケーションで各種の識別に使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]プロファイリング ツールおよびロギング ツールです。 GetApplicationName メソッドがローカライズされていない文字列を返します、アプリケーション名が設定されていない場合は、"[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]"です。  
+## <a name="remarks"></a>Remarks  
+ アプリケーション名は、個別のアプリケーションを識別するために、さまざまな [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロファイリング ツールおよびロギング ツールで使用されます。 アプリケーション名を設定しない場合は、getApplicationName メソッドによって非ローカライズ文字列 "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]" が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

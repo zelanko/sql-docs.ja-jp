@@ -1,5 +1,5 @@
 ---
-title: execute メソッド (java.lang.String, int[]) |Microsoft ドキュメント
+title: execute メソッド (java.lang.String, int[]) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afe080df57157ae62e604ff8057027a45df39fc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84d3b4d916b91c95efaff5ad9e995e6bad40a9ad
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833327"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42785775"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute (java.lang.String, int[]) メソッド
 
-  指定された SQL ステートメントを実行、複数の結果、および信号を返す可能性のある[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)]渡された配列に示される自動生成キーを検索可能にする必要があることです。
+  複数の結果を返す可能性のある渡された SQL ステートメントを実行し、渡された配列に示される自動生成キーを検索可能にするように、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,24 +41,24 @@ public final boolean execute(
 #### <a name="parameters"></a>パラメーター
 *sql*
 
-A**文字列**SQL ステートメントを含むです。
+A**文字列**SQL ステートメントを格納しています。
 
 *columnIndexes*
 
-配列**int**を可能にするか、自動生成キーの列インデックスを示すです。
+検索可能にする自動生成キーの列インデックスを示す **int** 配列です。
 
 ## <a name="return-value"></a>戻り値
-**true**最初の結果が結果セットである場合。 それ以外の場合は、 **false**です。
+最初の結果が結果セットの場合は **true** です。 それ以外の場合は、 **false**です。
   
 ## <a name="exceptions"></a>例外
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>解説
-この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドによって指定されます。
+## <a name="remarks"></a>Remarks
+この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。
 
 ## <a name="see-also"></a>参照
 
-[メソッドを実行する&#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
+[execute メソッド&#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 
 [SQLServerStatement のメンバー](./sqlserverstatement-members.md)
 
