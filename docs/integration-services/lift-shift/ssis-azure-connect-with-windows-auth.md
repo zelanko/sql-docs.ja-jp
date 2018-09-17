@@ -12,21 +12,21 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c2b7a091b4bfe5add722ad224adc175b06817a74
-ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
+ms.openlocfilehash: 8979512a2ac2edeba8a5a6479fe0ef8bb6c3179a
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066022"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564008"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Azure の SSIS パッケージから Windows 認証を使用してデータ ソースとファイル共有に接続する
 Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS 統合ランタイム (IR) と同じ仮想ネットワーク内のデータ ソースとファイル共有に接続できます。 Azure SSIS IR で実行されている SSIS パッケージから Windows 認証を使用してデータ ソースとファイル共有に接続する方法は次の 3 とおりです。
 
 | 接続方法 | 有効な範囲 | セットアップ手順 | パッケージにおけるアクセス方法 | 資格情報のセットと接続されるリソースの数 | 接続されるリソースの種類 | 
 |---|---|---|---|---|---|
-| `cmdkey` コマンドを使用して資格情報を保持する | Azure SSIS IR 単位 | Azure SSIS IR のプロビジョニングまたは再構成の際にカスタム セットアップ スクリプト (`main.cmd`) の `cmdkey` コマンドを実行します。たとえば、次のように指定します。`cmdkey /add:fileshareserver /user:xxx /pass:yyy`<br/><br/> 詳細については、「[Azure-SSIS 統合ランタイムの設定のカスタマイズ](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)」を参照してください。 | UNC パスを使用して、パッケージ内のリソースに直接アクセスします。たとえば、次のように指定します。`\\fileshareserver\folder` | 接続されるリソースごとに複数の資格情報のセットをサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) <br/><br/> - Windows 認証を使用する SQL Server<br/><br/> - Windows 認証を使用するその他のリソース |
-| カタログ レベルの実行コンテキストを設定する | Azure SSIS IR 単位 | SSISDB `catalog.set_execution_credential` ストアド プロシージャを実行し、"～として実行" コンテキストを設定します。<br/><br/> 詳細については、この記事の以降の内容を参照してください。 | パッケージ内のリソースに直接アクセスします。 | 接続されるすべてのリソースに対して資格情報のセットを 1 つだけサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) <br/><br/> - Windows 認証を使用する SQL Server<br/><br/> - Windows 認証を使用するその他のリソース | 
-| パッケージの実行時にドライブをマウントする (非永続化) | パッケージ単位 | プロセス実行タスクの `net use` コマンドを実行します。このコマンドは、パッケージ内の制御フローの先頭に追加されます。たとえば、次のように指定します。`net use D: \\fileshareserver\sharename` | マップ済みドライブを使用してファイル共有にアクセスします。 | ファイル共有ごとに複数のドライブをサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) |
+| `cmdkey` コマンドを使用して資格情報を保持する | Azure SSIS IR 単位 | Azure SSIS IR のプロビジョニングまたは再構成の際にカスタム セットアップ スクリプト (`main.cmd`) の `cmdkey` コマンドを実行します。たとえば、次のように指定します。`cmdkey /add:fileshareserver /user:xxx /pass:yyy`<br/><br/> 詳細については、「[Azure-SSIS 統合ランタイムの設定のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)」を参照してください。 | UNC パスを使用して、パッケージ内のリソースに直接アクセスします。たとえば、次のように指定します。`\\fileshareserver\folder` | 接続されるリソースごとに複数の資格情報のセットをサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) <br/><br/> - Windows 認証を使用する SQL Server<br/><br/> - Windows 認証を使用するその他のリソース |
+| カタログ レベルの実行コンテキストを設定する | Azure SSIS IR 単位 | SSISDB `catalog.set_execution_credential` ストアド プロシージャを実行し、"～として実行" コンテキストを設定します。<br/><br/> 詳細については、この記事の以降の内容を参照してください。 | パッケージ内のリソースに直接アクセスします。 | 接続されるすべてのリソースに対して資格情報のセットを 1 つだけサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) <br/><br/> - Windows 認証を使用する SQL Server<br/><br/> - Windows 認証を使用するその他のリソース | 
+| パッケージの実行時にドライブをマウントする (非永続化) | パッケージ単位 | プロセス実行タスクの `net use` コマンドを実行します。このコマンドは、パッケージ内の制御フローの先頭に追加されます。たとえば、次のように指定します。`net use D: \\fileshareserver\sharename` | マップ済みドライブを使用してファイル共有にアクセスします。 | ファイル共有ごとに複数のドライブをサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) |
 |||||||
 
 > [!WARNING]

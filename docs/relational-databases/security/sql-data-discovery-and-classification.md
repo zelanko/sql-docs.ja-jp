@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084635"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563838"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "39084635"
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-メタデータには、拡張プロパティ カタログ ビュー [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) を使用してアクセスすることができます。
+メタデータには、拡張プロパティ カタログ ビュー [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) を使用してアクセスすることができます。
 
 次のコード例では、対応する分類を使用して分類済みのすべての列が返されます。
 
@@ -150,8 +150,8 @@ Azure SQL Database については、「[Azure SQL Database のデータの検�
 
 次の列レベルのセキュリティ メカニズムを適用して、機微な列の保護を検討してください。
 
-* [動的データ マスク](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking): 使用中の機微な列を難読化します。
-* [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine): 保存中の機微な列を暗号化します。
+* [動的データ マスク](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking): 使用中の機微な列を難読化します。
+* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine): 保存中の機微な列を暗号化します。
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

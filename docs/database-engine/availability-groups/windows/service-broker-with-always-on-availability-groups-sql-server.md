@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a5a475f73f7c6db799bebb4477613679883e470c
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770738"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564028"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker と Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34770738"
      詳細については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。  
 
     > [!NOTE]  
-    SQL Server Broker はマルチサブネット対応ではありません。 0 に設定されている "registerallprovidersip" を必ず使用してください。また、DNS で静的 IP を使用し、https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server で定義されているように、DNS のクラスターに必要な許可を与えていないことを確認してください。 無効になっている IP を使用しようとして Broker がメッセージを送らせることがあります。そのとき、ステータスは "CONVERSING" になります。
+    SQL Server Broker はマルチサブネット対応ではありません。 0 に設定されている "registerallprovidersip" を必ず使用してください。また、DNS で静的 IP を使用し、 https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server で定義されているように、DNS のクラスターに必要な許可を与えていないことを確認してください。 無効になっている IP を使用しようとして Broker がメッセージを送らせることがあります。そのとき、ステータスは "CONVERSING" になります。
 
 3.  **エンドポイントに対する CONNECT 権限を許可する。**  
   

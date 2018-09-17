@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: dcc08dfd4c4759f834a7371dd700c32c69c8de24
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 088c7b60bff2c050cec0b486fd4c91f3b9df1213
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39536162"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564118"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39536162"
 |**3226**|既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 頻度の高いログ バックアップを作成すると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。<br /><br />このトレース フラグを使用すると、これらのログ エントリを除外できます。 この機能は、頻度の高いログ バックアップを実行している場合やスクリプトがこれらのエントリに依存していない場合に役立ちます。<br /><br />**スコープ**: グローバルのみ|   
 |**3427**|temp テーブルにデータを挿入する多数の連続するトランザクションが、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] では [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のときより多くの CPU を消費する場合に、問題を解決できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/3216543)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 以降のビルドに適用されます。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU4 以降には、このトレース フラグは影響しません。<br /><br />**スコープ**: グローバルのみ|  
 |**3459**|並列再実行を無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/3200975)および [Microsoft サポート技術情報](http://support.microsoft.com/help/4101554)を参照してください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] に適用されます。<br /><br />**スコープ**: グローバルのみ| 
-|**3468**|TempDB で[間接チェックポイント](https://docs.microsoft.com/en-us/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt)を無効にします。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1、およびそれ以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|  
+|**3468**|TempDB で[間接チェックポイント](https://docs.microsoft.com/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt)を無効にします。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1、およびそれ以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|  
 |**3608**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、**master** データベース以外のすべてのデータベースを自動的に開始および復旧しないようにします。 **tempdb** を必要とする操作が開始されると、**model** が復旧され、**tempdb** が作成されます。 他のデータベースはアクセス時に開始および復旧されます。 スナップショット分離や READ COMMITTED スナップショットなど、一部の機能を使用できない場合があります。 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)と[ユーザー データベースの移動](../../relational-databases/databases/move-user-databases.md)の場合に使用します。<br /><br />**注:** 通常の運用中は使用しないでください。<br /><br />**スコープ**: グローバルのみ|   
 |**3625**|"\*\*\*\*\*\*" を使用する一部のエラー メッセージのパラメーターをマスクすることによって、sysadmin 固定サーバー ロールのメンバーでないユーザーに返される情報の量を制限します。 これは、機密情報の公開を防ぐために役立ちます。<br /><br />**スコープ**: グローバルのみ|  
 |**4136**|OPTION(RECOMPILE)、WITH RECOMPILE 、または OPTIMIZE FOR \<value> が使われていない場合、パラメーター スニッフィングを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/980653)をご覧ください。<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降に、データベース レベルでこの処理を行う方法については、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」の PARAMETER_SNIFFING オプションを参照してください。<br /><br />クエリ レベルでこれを行うには、OPTIMIZE FOR UNKNOWN [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降では、クエリ レベルでこれを行うもう 1 つのオプションとして、このトレース フラグの代わりに、USE HINT 'DISABLE_PARAMETER_SNIFFING' [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加することもできます。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション|  

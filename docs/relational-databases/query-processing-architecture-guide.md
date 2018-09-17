@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087564"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564208"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1023,7 +1023,7 @@ XML プラン表示出力では、 `SeekPredicateNew` 要素がその要素を�
 * 高速なプロセッサおよびできるだけ多くのプロセッサ コアを搭載したサーバーを使用して、並列クエリ処理機能を活用します。
 * サーバーに十分な I/O コントローラーの帯域幅があることを確認します。 
 * すべての大きなパーティション テーブルにクラスター化インデックスを作成して、B ツリーのスキャンの最適化を活用します。
-* パーティション テーブルへのデータの一括読み込みを行う場合は、 [データ読み込みのパフォーマンス ガイド](http://msdn.microsoft.com/en-us/library/dd425070.aspx)に関するホワイト ペーパーで説明されている推奨事項に従ってください。
+* パーティション テーブルへのデータの一括読み込みを行う場合は、 [データ読み込みのパフォーマンス ガイド](http://msdn.microsoft.com/library/dd425070.aspx)に関するホワイト ペーパーで説明されている推奨事項に従ってください。
 
 ### <a name="example"></a>例
 
@@ -1099,7 +1099,6 @@ GO
  [プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [拡張イベント](../relational-databases/extended-events/extended-events.md)  
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
- 
-  [カーディナリティ推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [カーディナリティ推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [アダプティブ クエリ処理](../relational-databases/performance/adaptive-query-processing.md)   
  [演算子の優先順位](../t-sql/language-elements/operator-precedence-transact-sql.md)
