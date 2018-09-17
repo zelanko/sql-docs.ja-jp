@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085944"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564018"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL エディターのオプション
 このトピックでは、Transact-SQL エディターのいくつかのオプションについて説明します。 これらのオプションを設定するには、**[ツール] > [オプション]** を選択して、**[オプション]** ダイアログ ボックスに移動します。  
@@ -57,7 +57,7 @@ ms.locfileid: "39085944"
 |**SET NOEXEC**|**ON** のとき、Microsoft® SQL Server™ に対して、Transact-SQL ステートメントの各バッチをコンパイルしても実行しないように指示します。 **OFF** のとき、Microsoft® SQL Server™ に対して、コンパイルした後にすべてのバッチを実行するように指示します。詳しくは、「[SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770)」をご覧ください。|  
 |**SET PARSEONLY**|各 Transact-SQL ステートメントのコンパイルや実行を行わずに、ステートメントの構文をチェックし、エラーがあるときはエラー メッセージを返します。 詳細については、「 [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734)」を参照してください。|  
 |**SET CONCAT_NULL_YIELDS_NULL**|連結の結果を NULL として取り扱うのか、空文字列として取り扱うのかを制御します。詳しくは、「[SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733)」をご覧ください。|  
-|**SET ARITHABORT**|クエリ実行中にオーバーフローまたは 0 除算のエラーが発生した場合に、クエリを終了します。 詳しくは、「[SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx)」をご覧ください。|  
+|**SET ARITHABORT**|クエリ実行中にオーバーフローまたは 0 除算のエラーが発生した場合に、クエリを終了します。 詳しくは、「[SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx)」をご覧ください。|  
 |**SET SHOWPLAN_TEXT**|Microsoft® SQL Server™ で Transact-SQL ステートメントを実行せず、 代わりにステートメントの実行方法に関する詳細情報を返します。 詳しくは、「[SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737)」をご覧ください。|  
 |**SET STATISTICS TIME**|各ステートメントの解析、コンパイル、および実行に必要な時間をミリ秒単位で表示します。|  
 |**SET STATISTICS IO**|Microsoft® SQL Server™ で、Transact-SQL ステートメントのディスク利用状況に関する情報を表示します。|  

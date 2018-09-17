@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 319abf02d87a12e8df96e6e22666da54ade16d1d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0a26f0ef02fbe9c6b1dd47c9ff0d111a89340469
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084504"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563890"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する方法
 この例では、Microsoft SQL Server 2012 をターゲットとするデータベース プロジェクトに、シーケンス オブジェクトを追加します。  
   
-シーケンスは、Microsoft SQL Server 2012 で導入されたものです。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。  シーケンス オブジェクトについて詳しくは、「[シーケンス番号](htttp://msdn.microsoft.com/en-us/library/ff878058(SQL.110).aspx)」をご覧ください。 Microsoft SQL Server 2012 の新機能に関する情報は、「[SQL Server 2012 における新機能」](http://msdn.microsoft.com/en-us/library/bb500435(SQL.110).aspx)」をご覧ください。  
+シーケンスは、Microsoft SQL Server 2012 で導入されたものです。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。  シーケンス オブジェクトについて詳しくは、「[シーケンス番号](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)」をご覧ください。 Microsoft SQL Server 2012 の新機能に関する情報は、「[SQL Server 2012 における新機能」](http://msdn.microsoft.com/library/bb500435(SQL.110).aspx)」をご覧ください。  
   
 > [!WARNING]  
 > 以下に示す手順では、「[接続されているデータベース開発](../ssdt/connected-database-development.md)」および「[プロジェクト指向のオフライン データベース開発](../ssdt/project-oriented-offline-database-development.md)」に示されているこれまでの手順で作成したエンティティを使用します。  

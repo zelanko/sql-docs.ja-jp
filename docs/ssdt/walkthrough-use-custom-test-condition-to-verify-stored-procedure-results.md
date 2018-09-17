@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1dcc845c366b912f762e9bbf805c54c5de920fca
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 85393d548550f58d43533a0c7e11e0b951288dbb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085834"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563908"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する
 機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」をご覧ください。  
@@ -98,7 +98,7 @@ ms.locfileid: "39085834"
     **ソリューション エクスプローラー**で、プロジェクトの **[参照設定]** ノードの下に必要な参照が表示されます。  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>ResultSetColumnCountCondition クラスを作成する  
-**Class1** の名前を **ResultSetColumnCountCondition** に変更し、[testcondition](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) から派生するようにします。 **ResultSetColumnCountCondition** クラスは、ResultSet に返される列数を検証する簡単なテスト条件です。 この条件は、ストアド プロシージャのコントラクトに誤りがないことを確認するために使用できます。  
+**Class1** の名前を **ResultSetColumnCountCondition** に変更し、[testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) から派生するようにします。 **ResultSetColumnCountCondition** クラスは、ResultSet に返される列数を検証する簡単なテスト条件です。 この条件は、ストアド プロシージャのコントラクトに誤りがないことを確認するために使用できます。  
   
 1.  **ソリューション エクスプローラー**で、Class1.cs を右クリックし、**[名前の変更]** をクリックして「**ResultSetColumnCountCondition.cs**」と入力します。  
   
@@ -118,13 +118,13 @@ ms.locfileid: "39085834"
         public class ResultSetColumnCountCondition  
     ```  
   
-4.  [testcondition](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) からクラスを派生します。  
+4.  [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) からクラスを派生します。  
   
     ```  
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) を追加します。 UnitTesting.Conditions.ExportTestConditionAttribute について詳しくは、「[SQL Server 単体テスト デザイナーのテスト条件を作成する方法](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)」をご覧ください。  
+5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) を追加します。 UnitTesting.Conditions.ExportTestConditionAttribute について詳しくは、「[SQL Server 単体テスト デザイナーのテスト条件を作成する方法](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)」をご覧ください。  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  

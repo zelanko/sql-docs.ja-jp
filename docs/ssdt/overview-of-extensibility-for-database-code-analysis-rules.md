@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82381b0fd553c57353847f714f09c02abc51a5b2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c7f850f6fe3277a0026371d096454c16d0cf5a84
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082795"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563588"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>データベース コード分析ルールの機能拡張の概要
-SQL Server Data Tools を含む Visual Studio エディションには、Transact\-SQL のデータベース コードの設計、命名、およびパフォーマンスに関する警告についてレポートするコード分析ルールが用意されています。 詳細については、「[データベース コードの分析によるコードの品質の向上](http://msdn.microsoft.com/en-us/library/dd172133(v=vs.100).aspx)」を参照してください。  
+SQL Server Data Tools を含む Visual Studio エディションには、Transact\-SQL のデータベース コードの設計、命名、およびパフォーマンスに関する警告についてレポートするコード分析ルールが用意されています。 詳細については、「[データベース コードの分析によるコードの品質の向上](http://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)」を参照してください。  
   
 組み込みのコード分析ルールに、必要な Transact\-SQL の問題がない場合は、カスタムのデータベース コード分析ルールを作成できます。 たとえば、「[チュートリアル: SQL Server のカスタムの静的コード分析ルール アセンブリを作成する](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md)」のように、WAITFOR DELAY ステートメントを使用しないカスタム ルールを作成できます。 カスタムのデータベース コード分析ルールを作成するには、[CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx) 名前空間のクラスを使用します。  
   
@@ -36,7 +36,7 @@ SQL Server Data Tools を含む Visual Studio エディションには、Transac
   
 ![データベース コード分析ルールのコンポーネント](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "データベース コード分析ルールのコンポーネント")  
   
-静的コード分析を直接実行するか (詳細については、「[方法: Transact-SQL コードを分析して障害を検出する](http://msdn.microsoft.com/en-us/library/dd172119(v=vs.100).aspx)」を参照してください)、ビルドを実行して、データベース コード分析ルール機能を使用すると、すべてのルールが読み込まれ、プロジェクトの構成に従って使用されます。 詳細については、「[方法: データベース コードのスタティック分析の特定の規則を有効または無効にする](http://msdn.microsoft.com/en-us/library/dd172131(v=vs.100).aspx)」を参照してください。 拡張機能マネージャーには、作成、登録したカスタム ルール アセンブリも読み込まれます。 詳細については、「[方法: 機能拡張のインストールと管理](../ssdt/how-to-install-and-manage-feature-extensions.md)」を参照してください。  
+静的コード分析を直接実行するか (詳細については、「[方法: Transact-SQL コードを分析して障害を検出する](http://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)」を参照してください)、ビルドを実行して、データベース コード分析ルール機能を使用すると、すべてのルールが読み込まれ、プロジェクトの構成に従って使用されます。 詳細については、「[方法: データベース コードのスタティック分析の特定の規則を有効または無効にする](http://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)」を参照してください。 拡張機能マネージャーには、作成、登録したカスタム ルール アセンブリも読み込まれます。 詳細については、「[方法: 機能拡張のインストールと管理](../ssdt/how-to-install-and-manage-feature-extensions.md)」を参照してください。  
   
 カスタムのコード分析ルール クラスは、[SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx) から継承します。 カスタムのルール クラスからは、ルール実行コンテキスト経由で便利なオブジェクトにアクセスできます。 たとえば、次のオブジェクトにアクセスできます。  
   
@@ -46,9 +46,9 @@ SQL Server Data Tools を含む Visual Studio エディションには、Transac
   
 -   特定の要素を確認するルールの場合、モデル内のそのスキーマ要素を表す Dac.Model.TSqlObject をコンテキストに含めます。  
   
--   多くのスキーマ オブジェクトには、このコンテキスト経由でアクセスできる [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) 表現も含まれます。これは、要素の AST ベースの表現です。[SelectStarExpression](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.selectstarexpression.aspx) の存在など、構文の問題を確認するときに便利です。  
+-   多くのスキーマ オブジェクトには、このコンテキスト経由でアクセスできる [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) 表現も含まれます。これは、要素の AST ベースの表現です。[SelectStarExpression](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.selectstarexpression.aspx) の存在など、構文の問題を確認するときに便利です。  
   
-Dac.CodeAnalysis.SqlRuleProblem は、検出された問題を表すルールで作成されます。 このルールを作成すると、関連する Dac.Model.TSqlObject と場合によっては [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) 表現要素がコンストラクターに渡され、ソース コード ファイルの問題の場所を特定するために使用されます。 分析が完了すると、すべての問題がエラー マネージャーに渡され、エラー一覧に表示されます。  
+Dac.CodeAnalysis.SqlRuleProblem は、検出された問題を表すルールで作成されます。 このルールを作成すると、関連する Dac.Model.TSqlObject と場合によっては [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) 表現要素がコンストラクターに渡され、ソース コード ファイルの問題の場所を特定するために使用されます。 分析が完了すると、すべての問題がエラー マネージャーに渡され、エラー一覧に表示されます。  
   
 ## <a name="see-also"></a>参照  
 [データベース機能の拡張](../ssdt/extending-the-database-features.md)  

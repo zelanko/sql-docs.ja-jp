@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae6d78109eb4a6898efc9bc3e972c9f65503cf63
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 197e6130a33df4413d9c936fca9291c02557acb7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088524"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563887"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>2 つのデータベースのデータを比較および同期する方法
 2 つのデータベースに含まれるデータを比較できます。 比較するデータベースは、*ソース*と*ターゲット*と呼ばれます。  
@@ -86,7 +86,7 @@ ms.locfileid: "39088524"
   
     プレースホルダー (*sServerName*、*sDatabaseName*、*sUserName*、*sPassword*、*sDisplayName*、*tServerName*、*tDatabaseName*、*tUserName*、*tPassword*、*tDisplayName*) をソース データベースとターゲット データベースの値に置き換えます。  
   
-    ソースおよびターゲットを指定しない場合は、**[新しいデータの比較]** ダイアログ ボックスが表示されます。 Sql.NewDataComparison コマンドのパラメーターについて詳しくは、「[Visual Studio のデータベース機能のオートメーション コマンド リファレンス](https://msdn.microsoft.com/en-us/library/dd470565.aspx)」をご覧ください。  
+    ソースおよびターゲットを指定しない場合は、**[新しいデータの比較]** ダイアログ ボックスが表示されます。 Sql.NewDataComparison コマンドのパラメーターについて詳しくは、「[Visual Studio のデータベース機能のオートメーション コマンド リファレンス](https://msdn.microsoft.com/library/dd470565.aspx)」をご覧ください。  
   
     指定したソース データベースとターゲット データベースのデータが比較されます。 結果が [データ比較] セッションに表示されます。 結果の表示方法またはデータの同期方法について詳しくは、「[データの差異の表示](#ViewDifferences)」および「[データベース データの同期](#Synchronize)」をご覧ください。  
   

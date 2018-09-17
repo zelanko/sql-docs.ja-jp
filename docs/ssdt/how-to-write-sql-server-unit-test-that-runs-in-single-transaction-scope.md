@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab996710a0c88d004b36f7bed1e6304a494bc9eb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b20a2432ae509923b2befd240a66de04c50502c4
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085074"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564128"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法
 単体テストは、単一のトランザクションのスコープ内で実行されるように変更できます。 この方法を使用すると、テストの終了後、テストによって行われた変更をロールバックできます。 次の手順では、以下の操作方法について説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "39085074"
     ROLLBACK TRANSACTION がストアド プロシージャおよびトリガーとどのように連携するかについて詳しくは、Microsoft Web サイトの「[ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927)」をご覧ください。  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>単一のテスト メソッドのトランザクションを作成するには  
-この例では、[System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 型を使用するときにアンビエント トランザクションを使用します。 既定では、実行接続および特権接続ではアンビエント トランザクションが使用されません。これらの接続は、メソッドが実行される前に作成されるためです。 SqlConnection には、トランザクションにアクティブな接続を関連付ける [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) メソッドがあります。 アンビエント トランザクションを作成すると、そのトランザクション自体が現在のトランザクションとして登録されるため、[System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) プロパティを介してそのトランザクションにアクセスできます。 この例では、アンビエント トランザクションが破棄されると、トランザクションはロールバックされます。 単体テストの実行時に行われたすべての変更をコミットする場合は、[System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) メソッドを呼び出す必要があります。  
+この例では、[System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 型を使用するときにアンビエント トランザクションを使用します。 既定では、実行接続および特権接続ではアンビエント トランザクションが使用されません。これらの接続は、メソッドが実行される前に作成されるためです。 SqlConnection には、トランザクションにアクティブな接続を関連付ける [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) メソッドがあります。 アンビエント トランザクションを作成すると、そのトランザクション自体が現在のトランザクションとして登録されるため、[System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) プロパティを介してそのトランザクションにアクセスできます。 この例では、アンビエント トランザクションが破棄されると、トランザクションはロールバックされます。 単体テストの実行時に行われたすべての変更をコミットする場合は、[System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) メソッドを呼び出す必要があります。  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>単一のテスト メソッドのトランザクションを作成するには  
   

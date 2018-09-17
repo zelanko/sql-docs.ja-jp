@@ -16,16 +16,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 413ee4cac6f8cb6ca60ad92165f50177e4801cf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 93aec2aa71e4ab5bcbadd9eb4f7a1d6a400af216
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987944"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564108"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-  ここでは、SQL Server 2016 リリースでの制限事項と問題について説明します。Service Pack についても説明します。 新機能については、「 [SQL Server 2016 の新機能](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)」をご覧ください。
+  ここでは、SQL Server 2016 リリースでの制限事項と問題について説明します。Service Pack についても説明します。 新機能については、「 [SQL Server 2016 の新機能](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)」をご覧ください。
 
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** から SQL Server 2016 をダウンロードする
 - [![Azure Virtual Machine のアイコン](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。
@@ -122,7 +122,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 
 さらに、次の修正に注意してください。
 - DBA と SQL コミュニティからのフィードバックに基づき、SQL 2016 SP1 以降では Hekaton のログ メッセージが最小限に減ります。
-- 新しい[トレース フラグ](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)を確認してください。
+- 新しい[トレース フラグ](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)を確認してください。
 - SQL Server 2016 SP1 以降では、WideWorldImporters サンプル データベースの完全バージョンが Standard Edition と Express Edition で動作するようになります。このサンプルは、[Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) から入手できます。 サンプルを変更する必要はありません。 Enterprise Edition 用に RTM で作成されたデータベース バックアップが、SP1 の Standard と Express で動作します。 
 
 SQL Server 2016 SP1 のインストールでは、インストール後に再起動が必要な場合があります。 ベスト プラクティスとして、SQL Server 2016 SP1 インストール後の再起動を計画して実行することをお勧めします。
