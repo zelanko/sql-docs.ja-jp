@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703605"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724336"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server 用の NYC タクシーのデモ データ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ C:\tempRSQL で、管理者の PowerShell コマンド プロンプトを使用�
 
 |**オブジェクト名です。**|**オブジェクトの種類**|**[説明]**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | [データベース] |作成-db-tb のアップロード-data.sql スクリプトによって作成されます。 データベースと 2 つのテーブルを作成します。<br /><br />dbo.nyctaxi_sample テーブル: メインの NYC タクシー データセットが含まれています。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルは、このテーブルに挿入されます。<br /><br />dbo.nyc_taxi_models テーブル: トレーニング済みの高度な分析モデルを保持するために使用します。|
+|**NYCTaxi_Sample** | [データベース] |作成-db-tb のアップロード-data.sql スクリプトによって作成されます。 データベースと 2 つのテーブルを作成します。<br /><br />dbo.nyctaxi_sample テーブル: メインの NYC タクシー データセットが含まれています。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルは、このテーブルに挿入されます。<br /><br />dbo.nyc_taxi_models テーブル: トレーニング済みの高度な分析モデルを保持するために使用します。|
 |**fnCalculateDistance** |スカラー値関数 (scalar-valued function) | FnCalculateDistance.sql スクリプトによって作成されます。 乗車と降車場所間の直線距離を計算します。 この関数が使用される[データ機能を作成](sqldev-create-data-features-using-t-sql.md)、[トレーニング、モデルを保存および](../r/sqldev-train-and-save-a-model-using-t-sql.md)と[R モデルを運用する](sqldev-operationalize-the-model.md)。|
 |**fnEngineerFeatures** |テーブル値関数 (table-valued function) | FnEngineerFeatures.sql スクリプトによって作成されます。 モデルのトレーニング用の新しいデータ機能を作成します。 この関数で使用[データ機能を作成](sqldev-create-data-features-using-t-sql.md)と[R モデルを運用する](sqldev-operationalize-the-model.md)します。|
 |**PlotHistogram** |ストアド プロシージャ (stored procedure) | PlotHistogram.sql スクリプトによって作成されます。 変数のヒストグラムをプロットする R 関数を呼び出すし、バイナリ オブジェクトとしてプロットを返します。 このストアド プロシージャが使用される[の探索し、視覚化データ](sqldev-explore-and-visualize-the-data.md)します。|

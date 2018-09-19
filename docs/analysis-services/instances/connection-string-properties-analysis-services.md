@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24f7302b94477b76b161be184cd27839f8516564
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 198f2f184a703f270c4fb52a775c47330c68888b
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994974"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563848"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37994974"
 |--------------|-----------------|-------------|  
 |**Data Source** または **DataSource**|サーバー インスタンスを指定します。 このプロパティは、すべての接続に必要です。 有効な値には、サーバーのネットワーク名または IP アドレス、ローカル接続の local または localhost、URL (サーバーが HTTP または HTTPS アクセス用に構成されている場合)、またはローカル キューブ (.cub) ファイルの名前があります。 <br /><br /> Azure Analysis services では、有効な値`<protocol>://<region>/<servername>`文字列 asazure をプロトコルには、リージョンは、サーバーが作成された Uri (たとえば、westus.asazure.windows.net)、servername は、リージョン内で一意なサーバーの名前です。 |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01` : 既定のインスタンスとポート (TCP 2383) の場合。<br /><br /> `Data source=AW-SRV01$Finance:8081` : 名前付きインスタンス ($Finance) と固定ポートの場合。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` : 完全修飾ドメイン名の場合。既定のインスタンスとポートを想定しています。<br /><br /> `Data source=172.16.254.1` : サーバーの IP アドレスの場合。DNS サーバーの参照をバイパスします。接続の問題をトラブルシューティングする場合に便利です。|  
 |**Initial Catalog** または **Catalog**|接続先の Analysis Services データベースの名前を指定します。 データベースが Analysis Services に配置されており、データベースに接続するための権限を持っている必要があります。 このプロパティは、AMO 接続では省略できますが、ADOMD.NET では必須です。|`Initial catalog=AdventureWorks2016`|  
-|**Provider**|有効な値には、MSOLAP が含まれます。\<バージョン > ここで、\<バージョン > 4、5、6 または 7 です。<br /><br /> -   MSOLAP.4 は、SQL Server 2008 でリリースされ、SQL Server 2008 R2 で再度リリースされました (ファイル名は SQL Server 2008 および 2008 R2 では msolap100.dll です)。<br />-   MSOLAP.5 は、SQL Server 2012 でリリースされました (ファイル名は msolap110.dll です)。<br />-   MSOLAP.6 は、SQL Server 2014 でリリースされました (ファイル名は msolap1200.dll です)。<br />-   MSOLAP.7 は、SQL Server 2016 でリリースされました (ファイル名は msolap130.dll です)。<br /><br /> このプロパティは省略可能です。 既定では、クライアント ライブラリは、レジストリから現在のバージョンの OLE DB プロバイダーを読み取ります。 SQL Server 2012 インスタンスに接続するなど、特定のバージョンのデータ プロバイダーが必要な場合のみ、このプロパティを設定する必要があります。<br /><br /> MSOLAP.4 は、SQL Server 2008 と SQL Server 2008 R2 の両方でリリースされました。 2008 R2 バージョンは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをサポートしており、SharePoint サーバーに手動でインストールすることが必要な場合があります。 これらのバージョンを区別するには、プロバイダーのファイル プロパティでビルド番号を確認する必要があります。それには、Program files\Microsoft Analysis Services\AS OLEDB\10 に移動します。 msolap110.dll を右クリックし、 **[プロパティ]** をクリックします。 **[詳細]** をクリックします。 ファイルのバージョン情報が表示されます。 バージョンは 10.50 を含める必要があります。\<buildnumber > の SQL Server 2008 R2。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 」および「 [Analysis Services 接続に使用するデータ プロバイダー](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)」を参照してください。|`Provider=MSOLAP.7` は、SQL Server 2016 バージョンの OLE DB Provider for Analysis Services を必要とする接続に使用します。|  
+|**Provider**|有効な値には、MSOLAP が含まれます。\<バージョン > ここで、\<バージョン > 4、5、6 または 7 です。<br /><br /> -   MSOLAP.4 は、SQL Server 2008 でリリースされ、SQL Server 2008 R2 で再度リリースされました (ファイル名は SQL Server 2008 および 2008 R2 では msolap100.dll です)。<br />-   MSOLAP.5 は、SQL Server 2012 でリリースされました (ファイル名は msolap110.dll です)。<br />-   MSOLAP.6 は、SQL Server 2014 でリリースされました (ファイル名は msolap1200.dll です)。<br />-   MSOLAP.7 は、SQL Server 2016 でリリースされました (ファイル名は msolap130.dll です)。<br /><br /> このプロパティは省略可能です。 既定では、クライアント ライブラリは、レジストリから現在のバージョンの OLE DB プロバイダーを読み取ります。 SQL Server 2012 インスタンスに接続するなど、特定のバージョンのデータ プロバイダーが必要な場合のみ、このプロパティを設定する必要があります。<br /><br /> MSOLAP.4 は、SQL Server 2008 と SQL Server 2008 R2 の両方でリリースされました。 2008 R2 バージョンは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをサポートしており、SharePoint サーバーに手動でインストールすることが必要な場合があります。 これらのバージョンを区別するには、プロバイダーのファイル プロパティでビルド番号を確認する必要があります。それには、Program files\Microsoft Analysis Services\AS OLEDB\10 に移動します。 msolap110.dll を右クリックし、 **[プロパティ]** をクリックします。 **[詳細]** をクリックします。 ファイルのバージョン情報が表示されます。 バージョンは 10.50 を含める必要があります。\<buildnumber > の SQL Server 2008 R2。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 」および「 [Analysis Services 接続に使用するデータ プロバイダー](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)」を参照してください。|`Provider=MSOLAP.7` は、SQL Server 2016 バージョンの OLE DB Provider for Analysis Services を必要とする接続に使用します。|  
 |**Cube**|キューブ名またはパースペクティブ名。 データベースには、複数のキューブおよびパースペクティブを含めることができます。 複数の対象が考えられる場合は、接続文字列にキューブ名またはパースペクティブ名を含めます。|`Cube=SalesPerspective` は、Cube 接続文字列プロパティを使用して、キューブの名前またはパースペクティブの名前を指定できることを示しています。|  
   
 ##  <a name="bkmk_auth"></a> 認証およびセキュリティ  
@@ -153,11 +153,11 @@ ms.locfileid: "37994974"
   
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック (.xlsx、.xlsb、または .xlsm ファイル) への Http(s) 接続**  
   
- `Data Source=<URL>`。URL には、SharePoint ライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの SharePoint パスを指定します。 たとえば、 `Data Source=http://localhost/Shared Documents/Sales.xlsx`のようにします。  
+ `Data Source=<URL>`。URL には、SharePoint ライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの SharePoint パスを指定します。 たとえば、 `Data Source=http://localhost/Shared Documents/Sales.xlsx` のようにします。  
   
  **BI Semantic Model 接続ファイルへの Http(s) 接続**  
   
- `Data Source=<URL>` 。URL には、.bism ファイルへの SharePoint パスを指定します。 たとえば、 `Data Source=http://localhost/Shared Documents/Sales.bism`のようにします。  
+ `Data Source=<URL>` 。URL には、.bism ファイルへの SharePoint パスを指定します。 たとえば、 `Data Source=http://localhost/Shared Documents/Sales.bism` のようにします。  
   
  **埋め込み [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 接続**  
   

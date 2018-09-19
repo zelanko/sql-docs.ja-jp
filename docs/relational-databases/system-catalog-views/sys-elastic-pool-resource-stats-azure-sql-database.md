@@ -1,7 +1,7 @@
 ---
 title: sys.elastic_pool_resource_stats (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f7f13ebb5699fc0fe2174e7ee1af9d6c44bcbfb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997984"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563268"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,8 @@ ms.locfileid: "37997984"
 |**max_worker_percent**|**decimal(5,2)**|プールの上限に基づく割合の最大同時実行ワーカー (要求)。|  
 |**max_session_percent**|**decimal(5,2)**|プールの上限に基づくパーセンテージで最大同時セッション数です。|  
 |**elastic_pool_dtu_limit**|**int**|最大の柔軟なプール DTU の現在の設定この柔軟なプールこの時間内にします。|  
-|**elastic_pool_storage_limit_mb**|**bigint**|現在の最大の柔軟なプール記憶域制限がこの時間内に、メガバイト単位で柔軟なこのプールの設定です。|  
+|**elastic_pool_storage_limit_mb**|**bigint**|現在の最大の柔軟なプール記憶域制限がこの時間内に、メガバイト単位で柔軟なこのプールの設定です。|
+|**avg_allocated_storage_percent**|**decimal(5,2)**|エラスティック プール内のすべてのデータベースで割り当てられているデータ領域の割合。  これは、エラスティック プールの最大サイズのデータに割り当てられているデータ領域の比率です。  詳細については、次を参照してください: [SQL DB 内のファイル領域管理。](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>コメント  
  このビューは、論理サーバーの master データベースに存在します。 クエリに、master データベースに接続する必要がある必要があります**sys.elastic_pool_resource_stats**します。  

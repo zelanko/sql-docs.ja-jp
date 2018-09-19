@@ -1,6 +1,6 @@
 ---
-title: 作成し、ロールの管理 |Microsoft ドキュメント
-ms.date: 05/07/2018
+title: 作成し、ロールの管理 |Microsoft Docs
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d97cd04228b13d0f57d99b6f8808a955bba1bea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045616"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975671"
 ---
 # <a name="create-and-manage-roles"></a>作成し、ロールの管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 モデル プロジェクトのロールは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義します。 モデルが配置されると、データベース管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してロールを管理することができます。  
+  テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 モデル プロジェクトのロールは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義します。 
+
+> [!IMPORTANT]
+> Azure Analysis Services にプロジェクトをデプロイする場合は、使用**統合ワークスペース**ワークスペース データベースとします。 詳細についてを参照してください。[ワークスペース データベース](workspace-database-ssas-tabular.md)します。
   
- この記事でタスクを作成し、[ロール マネージャー] ダイアログ ボックスを使用して、モデルの作成時にロールを管理する方法について説明[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。 配置済みモデル データベースでロールを管理する方法の詳細については、次を参照してください。[表形式モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)です。  
+ この記事のタスクを作成し、ロール マネージャー ダイアログ ボックスを使用してモデルの作成時にロールを管理する方法を説明する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]します。 配置済みモデル データベース内のロールを管理する方法の詳細については、次を参照してください。[テーブル モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)します。  
   
 ## <a name="tasks"></a>処理手順  
  ロールの作成、編集、コピー、削除の各操作を実行するには、 **[ロール マネージャー]** ダイアログ ボックスを使用します。 **[ロール マネージャー]** ダイアログ ボックスを表示するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[モデル]** メニューをクリックし、 **[ロール マネージャー]** をクリックします。  
@@ -39,7 +42,7 @@ ms.locfileid: "34045616"
   
 4.  **[権限]** フィールドで下矢印をクリックしてから、次の権限の種類から 1 つを選択します。  
   
-    |権限|Description|  
+    |権限|説明|  
     |----------------|-----------------|  
     |**なし**|メンバーは、モデル スキーマを変更したり、データをクエリしたりすることはできません。|  
     |**読み取り**|メンバーは、(行フィルターに基づいて) データをクエリできますが、モデル スキーマを変更することはできません。|  
@@ -54,13 +57,13 @@ ms.locfileid: "34045616"
 7.  このロールにメンバーを追加するには、 **[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、配置済みモデルにロール メンバーを追加することもできます。 詳細については、次を参照してください。 [SSMS を使用してロールの管理](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)です。  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、配置済みモデルにロール メンバーを追加することもできます。 詳細については、次を参照してください。 [SSMS を使用してロールの管理](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)します。  
   
 8.  **[ユーザーまたはグループの選択]** ダイアログ ボックスで、メンバーとして Windows ユーザーまたは Windows グループ オブジェクトを入力します。  
   
 9. **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Excel で分析します。](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   

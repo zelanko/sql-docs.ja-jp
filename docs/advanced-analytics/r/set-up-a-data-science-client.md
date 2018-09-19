@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f88c8d715fabb5af8d1af49c3b39b3aa0734c369
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 309a78a2195f55a3ec39604b0c2bd385bb06a271
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434842"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724316"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server での R 開発用のデータ サイエンス クライアントの設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ SQL Server を有効にする必要があります[リモート接続](https://d
 2. デモ データセットに関する統計情報の要約を返します。 このコマンドを実行して、RevoScaleR が動作を確認します。 SQL Server データベース エンジンのインスタンスの有効なサーバー名を指定することを確認します。
 
 ```r
-connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=TaxiNYC_Sample;Trusted_Connection=true"
+connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 testQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
 cc <-RxInSqlServer(connectionString=connStr)
 rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionString=connStr), computeContext=cc)
@@ -184,7 +184,7 @@ rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionSt
     
     SQL Server インスタンスで、コードが実行されていることを確認する場合は、Profiler を使用してトレースを作成することができます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 異なる 2 つのチュートリアルには、リモートの SQL Server インスタンスからローカルのコンピューティング コンテキストの切り替えを行うように、演習が含まれます。
 

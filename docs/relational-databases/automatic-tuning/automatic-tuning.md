@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068749"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534004"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "43068749"
 
 ## <a name="why-automatic-tuning"></a>なぜ自動チューニングでしょうか。
 
-従来のデータベース管理の主な作業の 1 つは、ワークロードを監視、重大を識別する[!INCLUDE[tsql_md](../../includes/tsql-md.md)]クエリ、インデックスのパフォーマンスを向上させるために追加する必要がありますし、ほとんどのインデックスを使用します。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] クエリおよび監視する必要のあるインデックスの詳細な洞察を提供します。 ただし、多数のデータベースを扱う場合は特に、ハード面倒なタスクがは常にデータベースを監視します。 膨大な数のデータベースを管理するは、効率的に実行することでない可能性があります。 監視と、データベースを手動でチューニング、代わりに委任する一部の監視とチューニング アクションを検討する可能性があります[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自動チューニング機能を使用します。
+特定の重要なワークロードを監視で従来のデータベース管理の主要なタスクのうち 3 つ[!INCLUDE[tsql_md](../../includes/tsql-md.md)]クエリ、インデックスをほとんど使用のパフォーマンスを向上させるために追加し、識別する必要があります。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] クエリおよび監視する必要のあるインデックスの詳細な洞察を提供します。 ただし、多数のデータベースを扱う場合は特に、ハード面倒なタスクがは常にデータベースを監視します。 膨大な数のデータベースを管理するは、効率的に実行することでない可能性があります。 監視と、データベースを手動でチューニング、代わりに委任する一部の監視とチューニング アクションを検討する可能性があります[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自動チューニング機能を使用します。
 
-### <a name="how-does-automatic-tuning-works"></a>自動チューニングの動作のしくみですか。
+### <a name="how-does-automatic-tuning-work"></a>どのように自動チューニング機能でしょうか。
 
 自動チューニングと、継続的監視と分析プロセス、ワークロードの特性についての継続的に学習するには、潜在的な問題と改善点を識別します。
 

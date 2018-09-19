@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c46c6b83d820d7c970d16e2e84a3a81a0e07b340
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 823b3be3ee731857e9307c7cf1bb15f512310d2e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029572"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563709"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "38029572"
 |source_info|**nvarchar (4000)**|リーダー、ソース テーブルと列の仕様では。||  
 |destination_info|**nvarchar (4000)**|ライターの場合、変換先テーブルの仕様です。||  
   
- このビューで保持される最大行数は、詳細については、次を参照してください。[システム ビューの最大値](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9)します。  
+ このビューで保持される最大行数は、詳細については、次を参照してください。[システム ビューの最大値](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

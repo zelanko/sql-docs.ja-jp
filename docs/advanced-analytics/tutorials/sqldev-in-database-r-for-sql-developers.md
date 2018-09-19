@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396565"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724306"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>チュートリアル: SQL Server で R を使用した in-database 分析を説明します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ SQL プログラマ向けのこのチュートリアルでは、R 言語をビ�
 - [レッスン 5: 運用化するためのストアド プロシージャにラップ R コード](../tutorials/sqldev-operationalize-the-model.md)します。 
   データベースにモデルが保存されたら、ストアド プロシージャを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] から予測モデルを呼び出します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルは、データベースとテーブルを作成、データをインポートする SQL クエリの記述などの基本的なデータベース操作に関する知識を前提とします。 R. を把握することを想定しませんそのため、すべての R コードが提供されます。 スキルを持つ SQL プログラマが提供されている PowerShell スクリプトでは、github のサンプル データを使用し、[!INCLUDE[tsql](../../includes/tsql-md.md)]で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]この例を完了します。 
 
@@ -57,7 +57,7 @@ SQL プログラマ向けのこのチュートリアルでは、R 言語をビ�
 > 
 > デバッグをお勧めなどのツールを使用する[!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)]、RStudio またはします。 このチュートリアルで示す R スクリプトは、従来の R ツールを使用して既に開発およびデバッグされています。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [レッスン 1: サンプル データをダウンロードします。](../tutorials/sqldev-download-the-sample-data.md)

@@ -1,5 +1,5 @@
 ---
-title: SQL Server データ (SQL と R deep dive) クエリや変更 |Microsoft ドキュメント
+title: クエリおよび SQL Server のデータ (SQL と R の詳細情報) の変更 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,21 +7,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 90b836cd09fd0c6f130ff65c531f6077a28c2014
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202224"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975651"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>クエリおよび SQL Server のデータ (SQL と R deep dive) の変更
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>クエリおよび SQL Server のデータ (SQL と R の詳細情報) の変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
+この記事では、データ サイエンスの詳細情報を使用する方法のチュートリアルの一部[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
 
 これで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを読み込んだので、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]で R 関数への引数として作成したデータ ソースを使用して、変数に関する基本情報を取得したり、概要やヒストグラムを生成したりできます。
 
-このステップでクイック分析を実行し、データを強化するには、データ ソースを再利用します。
+この手順で簡単な分析を行い、データを強化し、データ ソースを再利用します。
 
 ## <a name="query-the-data"></a>データのクエリ
 
@@ -29,7 +29,7 @@ ms.locfileid: "31202224"
 
 1.  関数を使用して[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)し分析するデータ ソースを指定します。
 
-    RevoScaleR のバージョンによって、使用することも[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)です。 
+    RevoScaleR のバージョンによって、使用することも[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)します。 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -58,11 +58,11 @@ ms.locfileid: "31202224"
 
 ## <a name="modify-metadata"></a>メタデータを変更します。
 
-すべての変数は整数として格納されますが、一部の変数はカテゴリ データ (R で *要因変数* と呼ばれる) を表します。たとえば、 *state* 列には、50 の州およびコロンビア特別区の識別子として使用される数値が含まれています。  データをわかりやすくするために、この数値を州の略称の一覧で置き換えます。
+すべての変数は、整数として格納されますが、いくつかの変数と呼ばれるカテゴリのデータを表す*要因変数*r.たとえば、列*状態*50 の州およびコロンビア、識別子として使用する番号が含まれています。  データをわかりやすくするために、この数値を州の略称の一覧で置き換えます。
 
-このステップではの省略形を含む文字列のベクトルを作成し、元の整数識別子をこれらのカテゴリの値をマップします。 新しい変数を使用して、 *colInfo*的要因としてこの列を処理することを指定の引数。 データを分析したり、移動したときに、列が、要素として処理され、省略形が使用されます。
+この手順で、省略形を含む文字列ベクトルを作成し、元の整数識別子をこれらのカテゴリ値をマップします。 新しい変数を使用して、 *colInfo*この列が係数として処理することを指定するための引数。 データを分析したり、移動したときに、省略形が使用され、列が係数として処理されます。
 
-列を略称にマップしてから要因として使用すると、パフォーマンスも改善されます。 詳細については、次を参照してください。 [R とデータの最適化](..\r\r-and-data-optimization-r-services.md)です。
+列を略称にマップしてから要因として使用すると、パフォーマンスも改善されます。 詳細については、次を参照してください。 [R とデータの最適化](..\r\r-and-data-optimization-r-services.md)します。
 
 1. まず、次のように R 変数 *stateAbb*を作成し、この変数に追加する文字列のベクトルを定義します。
   
@@ -120,11 +120,11 @@ ms.locfileid: "31202224"
     
     *Var 1: custID, Type: integer*
     
-    *Var 2: 2 つの要素レベルの性別: 男性女性*
+    *Var 2: 2 つの因子水準の性別: 男性、女性*
     
-    *Var 3: 51 要素レベルの状態: AK AL AR AZ CA しています.VT WA WI WV WY*
+    *Var 3: 状態 51 factor levels: AK AL AR AZ CA.VT WA WI WV WY*
     
-    *Var 4: カード会員 2 要素のレベル: プリンシパル セカンダリ*
+    *Var 4: 2 カード名義人の因子水準: プリンシパルのセカンダリ*
     
     *Var 5: balance, Type: integer*
     

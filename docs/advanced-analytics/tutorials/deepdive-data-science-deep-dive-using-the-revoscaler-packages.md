@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 4aa45d7ee690d55672c86be256e66d454860c2b6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343087"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563892"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>SQL Server のデータのチュートリアル: 使用 RevoScaleR の R 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +60,7 @@ RevoScaleR とは、データ サイエンスと機械学習のワークロー�
   
     ローカルおよびリモート計算コンテキストの間で交互に切り替えるには、2 つのシステム必要があります。 ローカルは、通常、データ サイエンスのワークロード用の十分な能力の開発ワークステーションです。 リモートここでは、SQL Server 2017 または SQL Server 2016 R 機能を有効にします。 
     
-    コンピューティング コンテキストの切り替えは、ローカルとリモートの両方のシステムで同じバージョンの RevoScaleR に実行されます。 ローカルのワークステーションで取得できます、RevoScaleR パッケージと関連するプロバイダーをインストールするか、次のいずれかを使用して: [Azure でのデータ サイエンス VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)、 [(無料) の Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client)、または[Microsoft Machine Learning Server (スタンドアロン)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)します。 スタンドアロン サーバー オプションでは、Linux または Windows インストーラーを使用して、無料の developer edition をインストールします。 スタンドアロン サーバーをインストールするのに SQL Server セットアップを使用することもできます。
+    コンピューティング コンテキストの切り替えは、ローカルとリモートの両方のシステムで同じバージョンの RevoScaleR に実行されます。 ローカルのワークステーションで取得できます、RevoScaleR パッケージと関連するプロバイダーをインストールするか、次のいずれかを使用して: [Azure でのデータ サイエンス VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)、 [(無料) の Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)、または[Microsoft Machine Learning Server (スタンドアロン)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)します。 スタンドアロン サーバー オプションでは、Linux または Windows インストーラーを使用して、無料の developer edition をインストールします。 スタンドアロン サーバーをインストールするのに SQL Server セットアップを使用することもできます。
       
 -   **追加の R パッケージ**
   

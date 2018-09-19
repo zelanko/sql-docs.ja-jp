@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095317"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563630"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Azure SQL マネージ インスタンスの CPU 使用量、IO、およびス�
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|15 秒のレポート期間の開始を示す UTC 時刻|  
 |end_time|**datetime**|15 秒のレポート期間の終了を示す UTC 時刻|
-|resource_type|Nvarchar (128)|メトリックが提供されているリソースの種類|
+|resource_type|nvarchar (128)|メトリックが提供されているリソースの種類|
 |resource_name|nvarchar (128)|リソースの名前。|
 |sku|nvarchar (128)|インスタンスのインスタンスのサービス階層を管理します。 使用できる値を次に示します。 <br><ul><li>General Purpose</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar (128)|ハードウェアの世代の識別子 Gen 4 など Gen 5。|
@@ -59,7 +59,7 @@ Azure SQL マネージ インスタンスの CPU 使用量、IO、およびス�
 
  
 > [!TIP]  
->  これらの制限とサービス レベルに関する詳細なコンテキスト、トピックを参照してください。[マネージ インスタンスのサービス レベル](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)します。  
+>  これらの制限とサービス レベルに関する詳細なコンテキスト、トピックを参照してください。[マネージ インスタンスのサービス レベル](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)します。  
     
 ## <a name="permissions"></a>アクセス許可  
  このビューに接続するアクセス許可を持つすべてのユーザー ロールが使用できる、**マスター**データベース。  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>参照  
- [インスタンスのサービス レベルの管理](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [インスタンスのサービス レベルの管理](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

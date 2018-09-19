@@ -1,6 +1,6 @@
 ---
 title: ロール |Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981534"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975691"
 ---
 # <a name="roles"></a>ロール
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。 
   
  SQL Server の Analysis Services の役割には、Windows ユーザー名または Windows グループ、およびアクセス許可 (読み取り、処理、管理者) にユーザーのメンバーが含まれます。 Azure Analysis services では、ユーザーは、Azure Active Directory とユーザー名である必要があり、指定されたグループは、組織の電子メール アドレスまたは UPN である必要があります。 
-  
+
+> [!IMPORTANT]  
+>  ときに SSDT を使用してロールを作成し、表形式モデルに組織のユーザーがプロジェクトに追加展開する Azure Analysis Services を使用して[統合ワークスペース](workspace-database-ssas-tabular.md)します。
+
 > [!IMPORTANT]  
 >  ユーザーがレポート クライアント アプリケーションを使用して配置済みモデルへの接続に、作成する必要がで少なくとも 1 つのロールには少なくとも読み取りアクセス許可には、それらのユーザーがのメンバー。  
   

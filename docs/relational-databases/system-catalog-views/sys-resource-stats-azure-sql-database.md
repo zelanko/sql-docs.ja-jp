@@ -1,7 +1,7 @@
 ---
 title: sys.resource_stats (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,17 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c2f8a0e0cebcf64bedac33861184e806f322d7d1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea822937f8bdf6fe0a79c20a391976169d336610
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038851"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563988"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Azure SQL データベースの CPU 使用率とストレージのデータを返します。 データは、5 分間隔で収集と集計が実行されます。 ユーザー データベース別に、リソース消費量に変化があった 5 分間が報告され、1 つの行に表示されます。 返されるデータには、CPU 使用率、ストレージ サイズの変化またはデータベース SKU の変更が含まれています。 アイドル状態のデータベースを変更せずに 5 分間隔の行がありません。 履歴データは約 14 日間保持されます。  
+  Azure SQL データベースの CPU 使用率とストレージのデータを返します。 データは、5 分間隔で収集と集計が実行されます。 各ユーザー データベースの 1 行では、リソースの消費量の変更をすべて 5 分間のレポート ウィンドウのデータがあります。 返されるデータには、CPU 使用率、ストレージ サイズの変更、およびデータベース SKU の変更が含まれています。 アイドル状態のデータベースを変更せずに 5 分間隔の行がありません。 履歴データは約 14 日間保持されます。  
   
  **Sys.resource_stats**ビューでは、データベースが関連付けられている Azure SQL Database サーバーのバージョンによって異なる定義します。 新しいサーバー バージョンにアップグレードする際は、それら定義の違いとアプリケーションに必要な変更を考慮してください。  
   
@@ -56,6 +56,7 @@ ms.locfileid: "38038851"
 |max_worker_percent|**decimal(5,2)**|データベースのサービス層の限度に対する割合で表した最大同時実行ワーカー (要求)。<br /><br /> 最大値を現在の同時実行ワーカー数の 15 秒サンプルに基づいた、5 分間隔を計算します。|  
 |max_session_percent|**decimal(5,2)**|データベースのサービス層の限度に対する割合で表した最大同時セッション数。<br /><br /> 最大値は現在の同時セッション数の 15 秒サンプルに基づいた、5 分間隔の計算されます。|  
 |dtu_limit|**int**|現在データベースの最大 DTU このデータベースの設定この間隔中にします。 |  
+|allocated_storage_in_megabytes|**float**|量では、ファイルの空き領域 (mb) のデータベースのデータを格納するために使用できる書式設定されます。 書式設定されたファイル領域は、"割り当てられているデータ領域"とも呼ばれます。  詳細については、次を参照してください: [SQL DB 内のファイル領域管理。](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  これらの制限とサービス レベルに関する詳細なコンテキスト、トピックを参照してください。[サービス階層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)します。  
@@ -68,7 +69,7 @@ ms.locfileid: "38038851"
   
  データベースがエラスティック プールのメンバーである場合は、割合の値として表示されるリソース統計は、エラスティック プールの構成で設定されているデータベースの最大制限の割合として表されます。  
   
- このデータの詳細なビューを使用して**sys.dm_db_resource_stats**ユーザー データベースでの動的管理ビュー。 このビューは、15 秒ごとにデータをキャプチャし、1 時間の履歴データを保持します。  詳細については、次を参照してください。 [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)します。  
+ このデータの詳細なビューを使用して**sys.dm_db_resource_stats**ユーザー データベースでの動的管理ビュー。 このビューはデータを 15 秒ごとにキャプチャし、履歴データを 1 時間保持します。  詳細については、次を参照してください。 [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)します。  
 
 ## <a name="examples"></a>使用例  
  次の例では、過去 1 週間で平均してコンピューティング使用率が 80% 以上になっているすべてのデータベースが返されます。  
