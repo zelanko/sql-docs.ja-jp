@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795661"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563748"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server インスタンス内のマシン ラーニング (R および Python) コンポーネントをアップグレードします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server で R と Python の統合には、オープン ソースと Microsoft 独自のパッケージが含まれます。 標準の SQL Server サービスで R と Python のパッケージは、現在のバージョンで既存のパッケージにはバグ修正で、SQL Server のリリース サイクルに従って更新されます。 
 
-ほとんどのデータ サイエンティストは、利用可能になる新しいパッケージを使用した作業に慣れています。 SQL Server 2017 の Machine Learning Services (In-database) と SQL Server 2016 R Services (In-database) の両方で変更することで R と Python の新しいバージョンを取得できます、*バインド*に SQL Server のサービスから[MicrosoftMachine Learning Server](https://docs.microsoft.com/en-us/machine-learning-server/index)と[モダン ライフ サイクル サポート ポリシー](https://support.microsoft.com/help/30881/modern-lifecycle-policy)します。
+ほとんどのデータ サイエンティストは、利用可能になる新しいパッケージを使用した作業に慣れています。 SQL Server 2017 の Machine Learning Services (In-database) と SQL Server 2016 R Services (In-database) の両方で変更することで R と Python の新しいバージョンを取得できます、*バインド*に SQL Server のサービスから[MicrosoftMachine Learning Server](https://docs.microsoft.com/machine-learning-server/index)と[モダン ライフ サイクル サポート ポリシー](https://support.microsoft.com/help/30881/modern-lifecycle-policy)します。
 
 バインドは、インストールの基礎を変更していない: R と Python の統合は、データベース エンジンのインスタンスの一部ではまだ (しない追加コスト バインドに関連付けられた)、ライセンスが変更されていないし、SQL Server サポート ポリシーは引き続き、データベースの保持エンジン。 R と Python のパッケージの処理方法変更の再バインドします。 この記事の残りの部分では、バインド メカニズムと SQL Server のバージョンごとにそのしくみについて説明します。
 
