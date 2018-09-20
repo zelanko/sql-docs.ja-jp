@@ -74,34 +74,34 @@ ms.locfileid: "43083655"
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|[ユーザー アカウント制御]|  
-|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
-|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
-|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
-|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
-|ARITHABORT|OFF|[ユーザー アカウント制御]|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
+|ANSI_NULL_DEFAULT|OFF|はい|  
+|ANSI_NULLS|OFF|はい|  
+|ANSI_PADDING|OFF|はい|  
+|ANSI_WARNINGS|OFF|はい|  
+|ARITHABORT|OFF|はい|  
 |AUTO_CLOSE|OFF|いいえ|  
-|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_CREATE_STATISTICS|ON|はい|  
 |AUTO_SHRINK|OFF|いいえ|  
-|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS|ON|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
-|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
+|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
+|CURSOR_DEFAULT|GLOBAL|はい|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|OFF|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|[ユーザー アカウント制御]|  
-|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
-|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
+|NUMERIC_ROUNDABORT|OFF|はい|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|はい|  
+|PARAMETERIZATION|SIMPLE|はい|  
+|QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
 |RECOVERY|SIMPLE|いいえ|  
-|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
-|Service Broker のオプション|ENABLE_BROKER|[ユーザー アカウント制御]|  
+|RECURSIVE_TRIGGERS|OFF|はい|  
+|Service Broker のオプション|ENABLE_BROKER|はい|  
 |TRUSTWORTHY|OFF|いいえ|  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  

@@ -64,7 +64,7 @@ ms.locfileid: "37150113"
 |Web (64 ビットおよび 32 ビット)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web Edition は、大小さまざまな規模の Web 資産に対応できるスケーラビリティ、経済性、および管理性を備えた、Web ホスティング企業および Web VAP 向けの総保有コストの低いオプションです。|  
   
 ## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>拡張エディション [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- ph x="1" /&gt; の拡張エディションは、特定の顧客シナリオに合わせて設計されており、無料または非常に低い価格で提供されます。 次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の拡張エディションについて説明します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の拡張エディションは、特定の顧客シナリオに合わせて設計されており、無料または非常に低い価格で提供されます。 次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の拡張エディションについて説明します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|説明|  
 |---------------------------------------|-----------------|  
