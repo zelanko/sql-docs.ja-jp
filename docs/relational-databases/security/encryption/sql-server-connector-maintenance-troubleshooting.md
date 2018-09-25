@@ -3,7 +3,7 @@ title: SQL Server コネクタのメンテナンスとトラブルシューテ�
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 21
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9735b7d12bf8042436c6b554e6bb3c32fd5083b3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 88bcc9874dbbef707ac727111515a298033168b2
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013697"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ Active Directory の詳細については、「 [Azure サブスクリプショ�
 エラー コード  |記号  |[説明]    
 ---------|---------|---------  
 0 | scp_err_Success | 操作は成功しました。    
-@shouldalert | scp_err_Failure | 操作は失敗しました。    
+1 | scp_err_Failure | 操作は失敗しました。    
 2 | scp_err_InsufficientBuffer | バッファーに割り当てるメモリ量を増やすようエンジンに指示が出されます。    
 3 | scp_err_NotSupported | この操作はサポートされていません。 たとえば、指定されたキーの種類やアルゴリズムは、EKM プロバイダーでサポートされていません。    
 4 | scp_err_NotFound | 指定されたキーまたはアルゴリズムを EKM プロバイダーが検出できませんでした。    
