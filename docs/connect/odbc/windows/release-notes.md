@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ff40299845ab92822d223f177cc9674ce9fd67f4
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 3988a3387e5b33e5bdc5ebc757643be2a0e1de1f
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786675"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049522"
 ---
 # <a name="release-notes"></a>リリース ノート
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -31,6 +31,8 @@ ms.locfileid: "42786675"
 **追加された機能**:
 
 Azure SQL Database と SQL Server の詳細については、データの分類を参照してください[データ分類](../data-classification.md)
+
+サーバーの utf-8 エンコードのサポート
 
 [バグの修正](../bug-fixes.md)
 
