@@ -24,7 +24,7 @@ ms.lasthandoff: 08/16/2018
 ms.locfileid: "40392631"
 ---
 # <a name="memory-optimization-advisor"></a>メモリ最適化アドバイザー
-  トランザクション パフォーマンス レポート ツール ( [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)を参照) では、インメモリ OLTP を使用するように移植した場合に効果が得られる、データベース内のテーブルが通知されます。 インメモリ OLTP を使用するように移植するテーブルを特定した後に、メモリ最適化アドバイザーを使用すると、ディスク ベースのデータベース テーブルをインメモリ OLTP に移行できます。  
+  トランザクション パフォーマンス レポート ツール ( [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)を参照) では、インメモリ OLTP を使用するように移植した場合に効果が得られる、データベース内のテーブルが通知されます。 インメモリ OLTP を使用するように移植するテーブルを特定した後に、メモリ最適化アドバイザーを使用すると、ディスク ベースのデータベース テーブルをインメモリ OLTP に移行できます。  
   
  まず、ディスク ベースのデータベース テーブルが格納されているインスタンスに接続します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインスタンスに接続できます。 ただし、アドバイザーを使用して移行操作を実行する場合は、インメモリ OLTP 機能が有効になっている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] インスタンスに接続する必要があります。 インメモリ OLTP の要件の詳細については、「 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)」を参照してください。  
   

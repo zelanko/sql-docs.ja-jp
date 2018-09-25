@@ -64,7 +64,7 @@ ms.locfileid: "43272274"
   
      これで SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ウィザードが起動します。  
   
-3.  「 [To install Report Builder from the download site](#download)」の残りの手順を完了します。  
+3.  「 [ダウンロード サイトからレポート ビルダーをインストールするには](#download)」の残りの手順を完了します。  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>コマンド ラインから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をインストールするには 
 
