@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: sql-linux
-ms.openlocfilehash: b0a16d3818195da0a98557025d0fe96c3d5333ee
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5016bbd8d461ce4b165b645f79c0b6c6865bcb8b
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086774"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713574"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio を使用して、Linux 上の SQL Server を管理するには
 
@@ -26,7 +26,7 @@ ms.locfileid: "39086774"
 この記事で紹介[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)するいくつかの一般的なタスクについて説明します。 SSMS は、Windows アプリケーション、ため Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。
 
 > [!TIP]
-> Windows コンピューターで SSMS を実行する必要はない場合を検討して、新しい[SQL Server Operations Studio](../sql-operations-studio/index.md)します。 SQL Server を管理するためのグラフィカルなツールを提供し、Linux と Windows の両方で実行します。
+> Windows コンピューターで SSMS を実行する必要はない場合を検討して、新しい[Azure Data Studio](../azure-data-studio/index.md)します。 SQL Server を管理するためのグラフィカルなツールを提供し、Linux と Windows の両方で実行します。
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)は Microsoft の無料の開発と管理のニーズの SQL ツールのスイートの一部です。 SSMS は、アクセス、構成、管理、管理、および SQL Server のすべてのコンポーネントを開発するための統合環境です。 これは、Docker コンテナー、およびクラウド、オンプレミスを任意のプラットフォームで実行する SQL Server に接続できます。 また Azure SQL Database と Azure SQL Data Warehouse に接続します。 SSMS は、あらゆるスキルレベルの開発者や管理者に SQL Server へのアクセスを提供する高機能スクリプト エディターの数が、グラフィカルなツールの広範なグループを結合します。
 
@@ -44,7 +44,7 @@ SSMS では、ツールなど、SQL Server のさまざまな開発および管�
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>最新バージョンの SQL Server Management Studio (SSMS) のインストールします。
 
-SQL Server を使用する場合は、最新バージョンの SQL Server Management Studio (SSMS) を常に使用する必要があります。 SSMS の最新バージョンは更新は継続的に最適化し、2017 on Linux を SQL Server で現在動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)します。 最新の情報、ダウンロード可能な新しいバージョンがある場合にする最新バージョンの SSMS を求めます。
+SQL Server を使用する場合は、最新バージョンの SQL Server Management Studio (SSMS) を常に使用する必要があります。 SSMS の最新バージョンを継続的に更新および最適化し、現在、SQL Server on Linux で動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)します。 最新の情報、ダウンロード可能な新しいバージョンがある場合にする最新バージョンの SSMS を求めます。
 
 > [!NOTE]
 > SSMS を使用して、Linux の管理を開始する前に、[既知の問題](sql-server-linux-release-notes.md)Linux 上の SSMS の。
@@ -63,7 +63,7 @@ SQL Server を使用する場合は、最新バージョンの SQL Server Manage
    |-----|-----|
    | **サーバーの種類** | 既定値はデータベース エンジンです。この値は変更しないでください。 |
    | **サーバー名** | 対象の Linux SQL Server コンピューターまたは IP アドレスの名前を入力します。 |
-   | **[認証]** | Linux 上の SQL Server 2017 を使用して**SQL Server 認証**します。 |
+   | **[認証]** | SQL Server on Linux では、使用**SQL Server 認証**します。 |
    | **Login** | サーバー上のデータベースにアクセス権を持つユーザーの名前を入力します (既定ではたとえば、 **SA**セットアップ中に作成したアカウント)。 |
    | **Password** | 指定したユーザーのパスワードを入力します (用、 **SA**アカウントを作成したこのセットアップ中に)。 |
 
@@ -101,11 +101,11 @@ Transact SQL クエリと管理タスクほぼすべてを実行することは�
 
 ## <a name="create-and-manage-databases"></a>作成し、データベースの管理
 
-接続されている、*マスター*データベース、サーバーにデータベースを作成および変更したり既存のデータベースを削除します。 次の手順では、いくつかの一般的なデータベース管理タスク Management studio を実行する方法について説明します。 これらのタスクを実行することを確認に接続している、*マスター* SQL Server 2017 on Linux を設定するときに作成した、サーバー レベル プリンシパル ログインを持つデータベース。
+接続されている、*マスター*データベース、サーバーにデータベースを作成および変更したり既存のデータベースを削除します。 次の手順では、いくつかの一般的なデータベース管理タスク Management studio を実行する方法について説明します。 これらのタスクを実行することを確認に接続している、*マスター* Linux 上の SQL Server を設定するときに作成した、サーバー レベル プリンシパル ログインを持つデータベース。
 
 ### <a name="create-a-new-database"></a>新しいデータベースの作成
 
-1. SSMS を開始し、SQL Server 2017 on Linux で、サーバーに接続します。
+1. SSMS を開始し、SQL Server on Linux で、サーバーに接続します。
 
 2. オブジェクト エクスプ ローラーを右クリックし、*データベース*フォルダー、およびクリック * 新しいデータベース"
 
@@ -115,7 +115,7 @@ Transact SQL クエリと管理タスクほぼすべてを実行することは�
 
 ### <a name="drop-a-database"></a>データベースを削除します。
 
-1. SSMS を開始し、SQL Server 2017 on Linux で、サーバーに接続します。
+1. SSMS を開始し、SQL Server on Linux で、サーバーに接続します。
 
 2. オブジェクト エクスプ ローラーで、*データベース*サーバー上のすべてのデータベースの一覧を表示するフォルダー。
 
@@ -129,7 +129,7 @@ Transact SQL クエリと管理タスクほぼすべてを実行することは�
 
 [の利用状況モニター](../relational-databases/performance-monitor/activity-monitor.md)ツールは、SQL Server Management Studio (SSMS) には構築され、SQL Server のプロセスおよびこれらのプロセスが現在の SQL Server インスタンスに与える影響についての情報が表示されます。
 
-1. SSMS を開始し、SQL Server 2017 on Linux で、サーバーに接続します。
+1. SSMS を開始し、SQL Server on Linux で、サーバーに接続します。
 
 1. オブジェクト エクスプ ローラーで右クリックし、 *server*ノード、およびクリック*の利用状況モニター*
 
@@ -144,7 +144,7 @@ Transact SQL クエリと管理タスクほぼすべてを実行することは�
 
 ペインを展開すると、利用状況モニターはインスタンスに対して情報を照会します。 ペインを折りたたむと、そのペインのすべての利用状況クエリが停止します。 1 つまたは複数のペインを展開し、同時インスタンスのさまざまな種類のアクティビティを表示することができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [SSMS とは](../ssms/sql-server-management-studio-ssms.md)
 - [エクスポートし、SSMS でデータベースをインポートします。](sql-server-linux-migrate-ssms.md)
 - [チュートリアル: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)

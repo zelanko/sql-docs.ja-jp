@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 448db7c77d26e06651e01a7e790917757aff0e9d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268810"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713604"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux Frequently Asked Questions (FAQ)
 
@@ -60,7 +60,7 @@ ms.locfileid: "39268810"
 
    No. 現在、Windows 10 で実行されている Linux は SQL Server と関連ツールのサポートされているプラットフォームではできません。
 
-1. **SQL Server 2017 はデータ ファイルに対して、どの Linux ファイル システムを使用できますか。**
+1. **SQL Server はデータ ファイルに対して、どの Linux ファイル システムを使用できますか。**
 
    現在 SQL Server on Linux には、ext4、XFS がサポートしています。 今後必要に応じて、他のファイル システムのサポートが追加されます。
 
@@ -80,7 +80,7 @@ ms.locfileid: "39268810"
 
 1. **Linux 上で実行される SSMS などのツールはありますか。**
 
-   新しい Microsoft SQL Operations Studio (preview) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL Operations Studio (プレビュー) は、どのような](../sql-operations-studio/what-is.md)します。
+   新しい Azure Data Studio (プレビュー) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Azure データ Studio (プレビュー) は](../azure-data-studio/what-is.md)します。
 
 1. **Sqlcmd および bcp のようなコマンドは、Linux で利用可能ですか。**
 
@@ -125,7 +125,7 @@ ms.locfileid: "39268810"
 
 1. **移行できますデータ Oracle および他のデータベース エンジンから SQL Server on Linux でしょうか。**
 
-   可能。 SSMA は、いくつかの種類のデータベース エンジンからの移行をサポートしています: Microsoft Access、DB2、MySQL、Oracle、および SAP ASE (旧称 SAP Sybase ASE の場合)。 SSMA を使用する方法の例は、次を参照してください。 [Oracle スキーマを SQL Server Migration Assistant を使った Linux 上の SQL Server 2017 に移行](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)します。
+   可能。 SSMA は、いくつかの種類のデータベース エンジンからの移行をサポートしています: Microsoft Access、DB2、MySQL、Oracle、および SAP ASE (旧称 SAP Sybase ASE の場合)。 SSMA を使用する方法の例は、次を参照してください。 [Oracle スキーマを SQL Server Migration Assistant を使った Linux 上の SQL Server に移行](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)します。
 
 1. **どのようなアクセス許可は、SQL Server のファイルに必要なでしょうか。**
 

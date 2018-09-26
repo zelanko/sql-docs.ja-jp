@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348213"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712474"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>予測および SQL Server で機械学習モデルを使用して予測を生成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "43348213"
 
 | 手法           | インターフェイス         | ライブラリの要件 | 処理速度 |
 |-----------------------|-------------------|----------------------|----------------------|
-| 機能拡張フレームワーク | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | [なし] : モデルは、任意の R または Python 関数に基づくことができます。 | 数百ミリ秒かかります。 <br/>ランタイム環境の読み込みとが固定コストは、新しいデータをスコア付けする前に 3 つを 600 ミリ秒単位の平均を計算します。 |
-| リアルタイム スコアリングの CLR の拡張機能 | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)でシリアル化されたモデル | R: RevoScaleR、MicrosoftML <br/>Python: revoscalepy、microsoftml | 数十ミリ秒単位の平均です。 |
-| ネイティブの C++ 拡張機能をスコア付け| [T-SQL の予測関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)でシリアル化されたモデル | R: RevoScaleR <br/>Python: revoscalepy | 平均の数は 20 ミリ秒です。 | 
+| 機能拡張フレームワーク | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | [なし] : モデルは、任意の R または Python 関数に基づくことができます。 | 数百ミリ秒かかります。 <br/>ランタイム環境の読み込みとが固定コストは、新しいデータをスコア付けする前に 3 つを 600 ミリ秒単位の平均を計算します。 |
+| [リアルタイム スコアリングの CLR の拡張機能](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)でシリアル化されたモデル | R: RevoScaleR、MicrosoftML <br/>Python: revoscalepy、microsoftml | 数十ミリ秒単位の平均です。 |
+| [ネイティブの C++ 拡張機能をスコア付け](../sql-native-scoring.md) | [T-SQL の予測関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)でシリアル化されたモデル | R: RevoScaleR <br/>Python: revoscalepy | 平均の数は 20 ミリ秒です。 | 
 
 処理の速度と出力のない物質は、差別化機能です。 同じ機能および入力と仮定すると、スコア付けされた出力が変わることはありませんを使用するアプローチを。
 
@@ -44,12 +44,13 @@ _スコア付け_は 2 段階のプロセスです。 最初に、テーブル�
 
 一歩モデルを準備するプロセス全体のバックアップし、スコアを生成し、要約できるこのように。
 
-1. サポートされているアルゴリズムを使用してモデルを作成します。
-2. 特別なバイナリ形式を使用して、モデルをシリアル化します。
-3. モデルを SQL Server が使用できるようにします。 つまり、通常、シリアル化されたモデルを SQL Server テーブルに格納します。
-4. 関数またはパラメーターとして、モデルと入力データの指定のストアド プロシージャを呼び出します。
+1. サポートされているアルゴリズムを使用してモデルを作成します。 サポートは、選択したスコア付けの方法論では異なります。
+2. モデルをトレーニングします。
+3. 特別なバイナリ形式を使用して、モデルをシリアル化します。
+3. SQL Server には、モデルを保存します。 つまり、通常、シリアル化されたモデルを SQL Server テーブルに格納します。
+4. 関数またはモデルとデータの入力を指定するパラメーターとして、ストアド プロシージャを呼び出します。
 
-入力には、多くのデータ行が含まれているときにこれは通常高速化、スコア付けプロセスの一環として、テーブルに、予測値を挿入します。  1 つのスコアを生成するはするフォームまたはユーザーの要求からの入力値を取得し、クライアント アプリケーションにスコアを返すシナリオではより一般的です。 パフォーマンスを向上させるには、連続するスコアを生成するときにメモリに再読み込みできるように、SQL Server は、モデルをキャッシュする可能性があります。
+入力には、多くのデータ行が含まれているときにこれは通常高速化、スコア付けプロセスの一環として、テーブルに、予測値を挿入します。 1 つのスコアを生成するはするフォームまたはユーザーの要求からの入力値を取得し、クライアント アプリケーションにスコアを返すシナリオではより一般的です。 パフォーマンスを向上させるには、連続するスコアを生成するときにメモリに再読み込みできるように、SQL Server は、モデルをキャッシュする可能性があります。
 
 ## <a name="compare-methods"></a>メソッドを比較します。
 

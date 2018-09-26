@@ -1,5 +1,5 @@
 ---
-title: Linux 上の SQL Server 2017 のインストールのガイダンス |Microsoft Docs
+title: Linux 上の SQL Server のインストールのガイダンス |Microsoft Docs
 description: インストール、更新、および Linux 上の SQL Server をアンインストールします。 この記事では、オンライン、オフライン、および無人のシナリオについて説明します。
 author: rothja
 ms.author: jroth
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 5157bd9bbadec02fe21c9b552f05c6f5635c31a4
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: ce9a2c9956ab4c40c2a5840f65bf8a630fb25065
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268750"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713004"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンスについて
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、インストール、更新、および Linux 上の SQL Server 2017 をアンインストールするためのガイダンスを提供します。
+この記事では、インストール、更新、および SQL Server 2017 と Linux 上の SQL Server 2019 プレビューをアンインストールするためのガイダンスを提供します。
 
 > [!TIP]
 > このガイドには、いくつかの展開シナリオ項目について説明します。 段階的インストール手順だけを検索する場合は、クイック スタートのいずれかに移動します。
@@ -71,20 +71,24 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 
 ## <a id="repositories"></a> ソース リポジトリを構成します。
 
-インストールまたは SQL Server をアップグレードするときは、構成されている Microsoft リポジトリから SQL Server 2017 の最新バージョンを取得します。 クイック スタートを使用して、**累積的な更新プログラム (CU)** リポジトリ。 代わりに構成することができますが、 **GDR**リポジトリ。 リポジトリとその構成方法の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
+インストールまたは SQL Server をアップグレードするときは、構成済みの Microsoft リポジトリから最新バージョンの SQL Server を取得します。 クイック スタートを使用して、SQL Server 2017 Cumulative Update **CU**リポジトリ。 代わりに構成することができますが、 **GDR**リポジトリまたは**プレビュー (vNext)** リポジトリ。 リポジトリとその構成方法の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
 
 > [!IMPORTANT]
 > CTP または SQL Server 2017 の RC バージョンを以前インストールした場合は、プレビューのリポジトリを削除する必要があり、一般公開 (GA) 1 つを登録します。 詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
 
-## <a id="platforms"></a> SQL Server のインストール
+## <a id="platforms"></a> SQL Server 2017 をインストールします。
 
-コマンドラインから Linux 上の SQL Server をインストールできます。 手順については、次のクイック スタートのいずれかを参照してください。
+コマンドラインから Linux 上の SQL Server 2017 をインストールできます。 手順については、次のクイック スタートのいずれかを参照してください。
 
 - [Red Hat Enterprise Linux をインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
 - [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+## <a id="sqlvnext"></a> SQL Server 2019 preview をインストールします。
+
+SQL Server 2019 プレビューは、前のセクションで、同じのクイック スタートのリンクを使用して Linux にインストールできます。 ただし、登録する必要があります、**プレビュー (vNext)** リポジトリの代わりに、 **CU**リポジトリ。 クイック スタートでは、これを行う方法についてを説明します。  
 
 インストールした後、最適なパフォーマンスの追加の構成の変更を検討してください。 詳細については、次を参照してください。[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)します。
 
@@ -99,6 +103,9 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 これらのコマンドは、最新のパッケージをダウンロードし、下にあるバイナリを置き換えます`/opt/mssql/`します。 ユーザー データベースを生成して、システム データベースをこの操作では受けません。
+
+> [!TIP]
+> 場合する最初[、構成されているリポジトリを変更する](sql-server-linux-change-repo.md)、可能性があります、**更新**コマンドを SQL Server のバージョンをアップグレードします。 これは、2 つのリポジトリ間でアップグレードのパスがサポートされている場合、大文字と小文字のみです。
 
 ## <a id="rollback"></a> SQL Server のロールバック
 

@@ -1,18 +1,19 @@
 ---
 title: SQL Server Machine Learning のアップグレードとインストールに関する FAQ |Microsoft Docs
+ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
-author: HeidiSteen
 ms.author: heidist
+author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 695fd6a801b8b8846d297aa0695aa4ebc04e71e5
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395265"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712304"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning の R Server のアップグレードとインストールに関する FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -20,7 +21,7 @@ ms.locfileid: "40395265"
 このトピックでは、machine learning の SQL Server 機能のインストールに関するよく寄せられる質問に対する回答を提供します。 アップグレードに関する一般的な質問についても説明します。
 
 + いくつかの問題は、プレリリース版からのアップグレードでのみ発生します。 そのため、ことをバージョンとエディションを識別最初にこれらの注意事項を読む前にお勧めします。 バージョン情報を取得するには実行`@@VERSION`SQL Server Management Studio からのクエリでします。
-+ 最近のリリースで修正された問題を解決するのには、最新のリリースまたはできるだけ早くのサービス リリースにアップグレードします。
++ 最新のリリースまたは最近のリリースで修正された問題を解決するのには、できるだけ早くサービス リリースにアップグレードします。
 
 **適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning Services (In-database)
 
@@ -29,6 +30,10 @@ ms.locfileid: "40395265"
 インストールする SQL Server のビルド、に応じて次の制限事項のいくつかの可能性があります適用されます。
 
 - 以前のバージョンの SQL Server 2016 R Services では、8dot3 表記が作業ディレクトリを含むドライブに必要でした。 リリース前のバージョンをインストールした場合は、SQL Server 2016 Service Pack 1 にアップグレードするとこの問題を解決する必要があります。 SP1 以降後は、この要件はリリースに適用されません。
+
+- 現時点では、インストールすることはできません[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]フェイル オーバー クラスター。 ただし、SQL Server 2019 プレビューは、テスト環境では、この機能を評価したい場合、フェールオーバーのサポートを提供しています。 詳細については、次を参照してください。[新](../what-s-new-in-sql-server-machine-learning-services.md)します。
+
+- Azure VM では、追加の構成が必要にあります。 たとえば、リモート アクセスをサポートするファイアウォール例外を作成する必要があります。
 
 - R の別のバージョンまたは Revolution Analytics から他のリリースのサイド バイ サイドでインストールがサポートされていません。
 
@@ -157,7 +162,7 @@ Microsoft R Server の以前のバージョンを Microsoft R Client 9.0.0 と�
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (7.5.0 の場合)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [SQL Server Machine Learning Services (In-database)](../r/sql-server-r-services.md)
 

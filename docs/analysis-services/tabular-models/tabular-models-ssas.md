@@ -1,6 +1,6 @@
 ---
-title: 表形式モデル |Microsoft ドキュメント
-ms.date: 05/07/2018
+title: 表形式モデル |Microsoft Docs
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,22 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e85a618379b5b3c6da010c8b25782ed6836edb4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1f894ad30f6344eb832cb9549a60c7f60071188c
+ms.sourcegitcommit: e34e9cd1b1ec02393dc88b1f0471023a7f7f278b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040347"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46506136"
 ---
 # <a name="tabular-models"></a>テーブル モデル
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  表形式モデルは、インメモリ モードまたは DirectQuery モードで実行される Analysis Services データベースで、バックエンド リレーショナル データ ソースから直接取得したデータにアクセスします。 最新の圧縮アルゴリズムおよびマルチ スレッド クエリ プロセッサを使用するは、分析エンジンは、Power BI と Excel などのクライアント アプリケーションを報告することによって、表形式モデル オブジェクトとデータを高速アクセスを提供します。  
-  
- DirectQuery は、代替クエリ モードでは、モデルのインメモリ モデルでは、既定値が、大きすぎて、メモリ内、またはデータの揮発性によって妥当な処理方法。 DirectQuery ではさまざまなデータ ソース、DirectQuery モデルでは、バックエンド データベースにアクセスし、クエリを実行する DAX 式を使用して行レベルのセキュリティの計算されるテーブルと列を処理する機能のサポートにより、インメモリ モデルと同等の機能高速なスループットを最適化します。
-  
- 表形式モデルに作成されますが[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]モデル、テーブル、リレーションシップ、および DAX 式を作成するためのデザイン画面を提供する表形式モデル プロジェクト テンプレートを使用します。 複数のソースからデータをインポートした後、リレーションシップ、計算テーブルおよび列、メジャー、KPI、階層、および翻訳を追加して、モデルを拡充することができます。  
-  
- Azure Analysis Services に配置できるモデルまたは表形式サーバー モード用 SQL Server Analysis Services のインスタンスに構成します。 配置済みテーブル モデルは、SQL Server Management Studio で管理できます。 モデルが増すにつれて、処理を最適化するためにパーティション分割し、ロール ベース セキュリティを使用して、行レベルに保護することがことができます。  
 
+  Analysis Services における表形式モデルには、メモリ内またはバックエンドのリレーショナル データから直接ソース データに接続して、DirectQuery モードで実行しているデータベースです。 最新の圧縮アルゴリズムおよびマルチ スレッド クエリ プロセッサを使用して、Analysis Services Vertipaq の分析エンジンが Power BI や Excel などのクライアント アプリケーションを報告することによって表形式モデル オブジェクトおよびデータに高速アクセスを提供します。  
   
+ DirectQuery は、代替クエリ モードでは、モデル、インメモリ モデルでは、既定値が、大きすぎて、メモリ内、またはデータの揮発性のため、適切な処理の方法に収まりません。 DirectQuery の幅広いデータ ソース、計算テーブルおよび DirectQuery モデルではバックエンド データベースにアクセスし、クエリを実行する DAX 式を使用して行レベルのセキュリティ列を処理する機能のサポートにより、インメモリ モデルと同等を実現します。高速なスループットを最適化します。
+  
+ 表形式モデルで作成[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]表形式モデル プロジェクト テンプレートを使用します。 プロジェクト テンプレートは、テーブル、パーティション、リレーションシップ、階層、メジャー、Kpi などのセマンティック モデル オブジェクトを作成するためのデザイン サーフェイスを提供します。 
+  
+ 表形式モデルは、Azure Analysis Services または表形式サーバー モード用に構成された SQL Server Analysis Services のインスタンスに配置することができます。 配置済みテーブル モデルは、SQL Server Management Studio で管理できます。 
+
+ここに含まれる表形式モデルのドキュメントは、ほとんどの場合、SQL Server Analysis Services と Azure Analysis Services の両方に適用されます。 Azure Analysis Services に固有の記事は、他の Azure ドキュメントと共に公開されます。 詳細についてを参照してください。 [Azure Analysis Services のドキュメント](https://docs.microsoft.com/azure/analysis-services/)します。
   

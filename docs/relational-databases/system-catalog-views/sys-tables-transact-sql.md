@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 330c8be09065d6c08ba0cc8468b8a5c687fdca6b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 960ffccc2945531aa525c9a1d1db45cc47951190
+ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096816"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47178318"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "43096816"
 |history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>History_retention_period_unit で指定された単位でテンポラル履歴保有期間を表す数値。 |  
 |history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の型を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 1 日 <br /><br />4: 週 <br /><br />5: 1 か月 <br /><br />6: 年 |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />INFINITE <br /><br />[DAY] <br /><br />[WEEK] <br /><br />[MONTH] <br /><br />[YEAR] |  
-  
+|is_node|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのノード テーブルです。 <br /><br />0 = これはグラフのノード テーブルではありません。 |  
+|is_edge|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのエッジ テーブルです。 <br /><br />0 = これはグラフのエッジ テーブルではありません。 |  
+
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   

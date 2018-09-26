@@ -1,6 +1,6 @@
 ---
 title: SQL Server on Linux のパフォーマンスのベスト プラクティス |Microsoft Docs
-description: このトピックでは、Linux で SQL Server 2017 を実行する場合の、パフォーマンスのベスト プラクティスとガイドラインを提供します。
+description: この記事では、Linux 上の SQL Server を実行するため、パフォーマンスのベスト プラクティスとガイドラインを提供します。
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f27cda67baa5d4101f94a8351bacd1ef3ecbff05
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 42e3c137a4284a3d190051251b875926a4ff532d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101140"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713674"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン
 
@@ -110,7 +110,7 @@ SQL Server のデータおよびログ ファイルを格納するファイル �
 
 仮想マシンで SQL Server on Linux を実行している場合は、仮想マシン用に予約されたメモリの量を修正するオプションが選択されていることを確認します。 HYPER-V 動的メモリなどの機能を使用しないでください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)します。
 

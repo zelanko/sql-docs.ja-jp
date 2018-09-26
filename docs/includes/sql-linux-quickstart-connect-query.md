@@ -108,7 +108,7 @@ Linux 上の SQL Server をインストールした後、運用環境のシナ�
 
 |||
 |---|---|
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | クロス プラットフォーム GUI データベース管理ユーティリティです。 |
+| [Azure Data Studio](../azure-data-studio/index.md) | クロス プラットフォーム GUI データベース管理ユーティリティです。 |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL コマンドを実行するためのクロス プラットフォーム コマンド ライン インターフェイス。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 拡張機能による TRANSACT-SQL ステートメントを実行するクロス プラットフォーム GUI コード エディターです。 |
 
@@ -138,7 +138,7 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 > [!TIP]
 > よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](../linux/sql-server-linux-faq.md)します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Linux 上の SQL Server、チュートリアルを確認します。](../linux/sql-server-linux-migrate-restore-database.md)

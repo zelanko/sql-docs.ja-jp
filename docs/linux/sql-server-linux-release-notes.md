@@ -12,18 +12,21 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: bcc1b86da4da46575279b373d288800e5ea6a35c
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 291e38a59212a179683ec0c3eb8ff661a5243fcc
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381180"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049712"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 次のリリース ノートは、Linux で実行されている SQL Server 2017 に適用されます。 この記事では、各リリースについてのセクションに分割されます。 GA リリースがサポートの詳細し、既知の問題が一覧表示します。 各累積更新プログラム (CU) または一般配布リリース (GDR) CU 変更と、Linux のパッケージのダウンロードへのリンクを記述するサポートの記事にリンクがあります。
+
+> [!TIP]
+> これらのリリース ノートは SQL Server 2017 のリリースのために特別にします。 新しい SQL Server 2019 プレビュー リリースの詳細については、次を参照してください。 [Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)します。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -47,6 +50,7 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 | リリース               | バージョン       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
@@ -64,7 +68,7 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 ## <a id="cuinstall"></a> 更新プログラムをインストールする方法
 
-CU リポジトリを構成している場合 (**mssql server-2017**)、新規インストールを実行すると、最新の SQL Server の CU パッケージが表示されます。 CU リポジトリでは、SQL Server on Linux のすべてのパッケージのインストールのアーティクルの既定値です。 GDR のリポジトリを構成している場合 (**mssql server 2017 gdr**)、一般以降にリリースされた重要なセキュリティ更新プログラムのみが取得されます Docker コンテナー CU または GDR 更新プログラムが必要な場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](http://hub.docker.com/r/microsoft/mssql-server-linux/)します。 リポジトリの構成の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
+CU リポジトリを構成している場合 (**mssql server-2017**)、新規インストールを実行すると、最新の SQL Server の CU パッケージが表示されます。 CU リポジトリでは、SQL Server on Linux のすべてのパッケージのインストールのアーティクルの既定値です。 GDR のリポジトリを構成している場合 (**mssql server 2017 gdr**)、一般以降にリリースされた重要なセキュリティ更新プログラムのみが取得されます Docker コンテナー CU または GDR 更新プログラムが必要な場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](https://hub.docker.com/r/microsoft/mssql-server)します。 リポジトリの構成の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
 
 SQL Server の既存のパッケージを更新する場合は、最新の CU を取得するには、各パッケージの適切な更新プログラムのコマンドを実行します。 各パッケージの特定の更新手順については、次のインストール ガイドを参照してください。
 
@@ -72,6 +76,20 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 - [フルテキスト検索のパッケージをインストールします。](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントを有効にします。](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU11"></a> CU11 (2018 の年 9 月)
+
+これは、SQL Server 2017 の累積的な更新プログラム 11 (CU11) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3038.14 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4462262](https://support.microsoft.com/en-us/help/4462262)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 14.0.3038.14-2 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3038.14-2 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
+| Debian パッケージを Ubuntu 16.04 | 14.0.3038.14-2 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU10"></a> CU10 (2018 の年 8 月)
 

@@ -1,7 +1,7 @@
 ---
 title: sys.column_master_keys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -32,12 +32,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4251ecafad275e64021729abe54fc243d9077f9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079725"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713544"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,6 +52,10 @@ ms.locfileid: "43079725"
 |**modify_date**|**datetime**|列のマスター_キーが前回変更された日付。|  
 |**key_store_provider_name**|**sysname**|CMK を格納している列のマスター_キーのストアのプロバイダーの名前。 使用できる値は次のとおりです。<br /><br /> 列のマスター キー ストアが証明書ストアである場合は – MSSQL_CERTIFICATE_STORE です。<br /><br /> ユーザー定義値をカスタム型の列マスター キー ストアがある場合。|  
 |**key_path**|**nvarchar (4000)**|キーの列マスター_キー ストア固有のパス。 パスの形式は、列のマスター_キーのストアの種類によって異なります。 例:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 開発者は、責任を定義するためのカスタム列マスター_キー ストアでは、カスタムの列のマスター_キーのストアの場合、どのようなキーのパスをします。|  
+|**allow_enclave_computations**|**bit**|かどうか、列マスター_キーがエンクレーブ対応、(場合、このマスター _ キーで暗号化された列暗号化キーは、サーバー側のセキュリティで保護された enclaves 内の計算に使用できます) を示します。 詳細については、次を参照してください。[セキュリティで保護された enclaves で Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)します。|  
+|**signature**|**varbinary(max)**|デジタル署名**key_path**と**allow_enclave_computations**、列マスター_キーを使用して生成された、によって参照される**key_path**します。|
+
+
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります、 **VIEW ANY COLUMN MASTER KEY**権限。  

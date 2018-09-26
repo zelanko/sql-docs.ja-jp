@@ -12,18 +12,18 @@ ms.custom: sql-linux
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 317c2ea2064f7ffc286671a8fff7eef2f8149ee7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c50b0ad1798f161d945a54e0e9a080a04a6eca05
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084923"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712974"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 向けのアプリケーションの開発を開始する方法
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-接続して、c#、Java、Node.js、PHP、Python、Ruby、および C++ などのプログラミング言語のさまざまな Linux 上の SQL Server 2017 を使用するアプリケーションを作成することができます。 一般的な web フレームワークやオブジェクト リレーショナル マッピング (ORM) フレームワークを使用することもできます。
+接続して、c#、Java、Node.js、PHP、Python、Ruby、および C++ などのプログラミング言語のさまざまな Linux 上の SQL Server を使用するアプリケーションを作成することができます。 一般的な web フレームワークやオブジェクト リレーショナル マッピング (ORM) フレームワークを使用することもできます。
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
@@ -39,7 +39,7 @@ ms.locfileid: "39084923"
 - コード サンプルを実行してください。
 
 > [!TIP]
-> Docker で SQL Server 2017 用の開発する場合を見て、 **macOS**チュートリアル。
+> SQL Server on Docker 用の開発する場合を見て、 **macOS**チュートリアル。
 
 ## <a name="create-new-applications"></a>新しいアプリケーションを作成する
 
@@ -47,11 +47,11 @@ ms.locfileid: "39084923"
 
 ## <a name="use-existing-applications"></a>既存のアプリケーションを使用します。
 
-既存のデータベース アプリケーションの場合は、ターゲット SQL Server 2017 on Linux に単にその接続文字列を変更できます。 詳細を閲覧することを確認、[既知の問題](sql-server-linux-release-notes.md)SQL Server 2017 on Linux でします。
+既存のデータベース アプリケーションがあれば、SQL Server on Linux をターゲットに単にその接続文字列を変更できます。 詳細を閲覧することを確認、[既知の問題](sql-server-linux-release-notes.md)SQL Server on Linux でします。
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>SQL Server on Linux での Windows で既存の SQL ツールを使用します。
 
-SSMS、SSDT では、PowerShell などの Windows で現在実行しているツールは、SQL Server 2017 on Linux でも動作します。 実行していないネイティブ Linux 上では、Linux 上のリモートの SQL Server インスタンスを管理できます。 
+SSMS、SSDT では、PowerShell などの Windows で現在実行しているツールは、SQL Server on Linux でも動作します。 実行していないネイティブ Linux 上では、Linux 上のリモートの SQL Server インスタンスを管理できます。 
 
 詳細については、次のトピックを参照してください。
 
@@ -74,7 +74,7 @@ Linux のネイティブな新しいコマンド ライン ツールを使用す
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 開始するには、次のクイック スタートのいずれかを使用して Linux に SQL Server をインストールします。
 

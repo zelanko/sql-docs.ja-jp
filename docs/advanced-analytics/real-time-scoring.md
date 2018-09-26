@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 576526801188bc9459ec9e26470e5d17dd775f74
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348302"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713515"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>リアルタイムのスコアリングでは、SQL Server machine learning で sp_rxPredict
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-リアルタイム スコアリング機能を使用して CLR 拡張機能で SQL Server の高パフォーマンスの予測やワークロードの予測にスコア。 リアルタイム スコアリングは言語に依存しないのため、R で依存関係のない実行または Python 回の実行します。 モデル Microsoft 関数からを作成、トレーニング、および SQL Server のバイナリ形式にシリアル化すると仮定すると、リアルタイム スコアリングする際の R または Python のアドオン機能がない SQL Server インスタンスで新しいデータの入力から予測される結果を生成インストールされています。
+リアルタイムのスコアリングは、 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)システム ストアド プロシージャと CLR の拡張機能で SQL Server の高パフォーマンスの予測やワークロードの予測にスコア。 リアルタイム スコアリングし、言語に依存しないのは、R または Python の実行時間に依存関係のない実行します。 モデルの作成し、Microsoft の関数を使用してトレーニングし、SQL Server のバイナリ形式にシリアル化すると仮定すると、リアルタイム スコアリングする際の R または Python のアドオンがない SQL Server インスタンスで新しいデータの入力から予測される結果を生成インストールされています。
 
 ## <a name="how-real-time-scoring-works"></a>リアルタイムのスコアリング動作
 
-SQL Server 2017 と SQL Server 2016 の両方で RevoScaleR または MicrosoftML 関数をなどに基づいて特定のモデルの種類でのリアルタイム スコアリングはサポートされて[rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)または[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Machine learning の特別なバイナリ形式で格納されているモデルに提供されるユーザー入力に基づいてスコアを生成するのにネイティブの C++ ライブラリを使用します。
+SQL Server 2017 と SQL Server 2016 でのリアルタイム スコアリングはサポートされて[モデルの種類がサポートされている](#bkmk_py_supported_algos)線形およびロジスティック回帰、デシジョン ツリー モデル化の。 Machine learning の特別なバイナリ形式で格納されているモデルに提供されるユーザー入力に基づいてスコアを生成するのにネイティブの C++ ライブラリを使用します。
 
 トレーニング済みモデルは、外部言語のランタイムを呼び出さずにスコア付けに使用できます、ため、複数のプロセスのオーバーヘッドが減少します。 運用環境のシナリオをスコア付け用の予測パフォーマンスを向上させる多くをサポートしています。 データが SQL Server を越える、ため、結果は生成され、R と SQL の間のデータ変換されることがなく新しいテーブルに挿入します。
 
@@ -30,13 +30,13 @@ SQL Server 2017 と SQL Server 2016 の両方で RevoScaleR または MicrosoftM
 
 1. スコア付けを行うストアド プロシージャは、データベースごとに有効にする必要があります。
 2. バイナリ形式で事前トレーニング済みモデルを読み込みます。
-3. 新しい入力データを表形式または 1 つのいずれかの行は、モデルへの入力として提供します。
-4. スコアを生成するには、sp_rxPredict ストアド プロシージャを呼び出します。
+3. スコア付けする、表形式または 1 つのいずれかの行では、モデルへの入力として新しい入力データを入力します。
+4. スコアを生成するには、呼び出し、 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)ストアド プロシージャ。
 
 > [!TIP]
 > リアルタイムのスコア付けの動作の例は、次を参照してください[エンド ツー エンド ローン償却予測ビルドを使用して Azure HDInsight Spark クラスターと SQL Server 2016 R サービス。](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + [SQL Server の CLR 統合を有効にする](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)します。
 
@@ -45,6 +45,8 @@ SQL Server 2017 と SQL Server 2016 の両方で RevoScaleR または MicrosoftM
 + 事前に、サポートされているのいずれかを使用してモデルをトレーニングする必要があります**rx**アルゴリズム。 リアルタイムのスコアリングと、R 用`sp_rxPredict`連携[RevoScaleR と MicrosoftML アルゴリズムをサポートされています。](#bkmk_rt_supported_algos)します。 Python の場合、次を参照してください。 [revoscalepy と microsoftml アルゴリズムをサポートされています。](#bkmk_py_supported_algos)
 
 + モデルを使用して、シリアル化[rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) 、R 用と[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) Python 用です。 これらのシリアル化関数は、高速のスコア付けをサポートするために最適化されています。
+
++ それを呼び出す対象となるデータベース エンジンのインスタンスにモデルを保存します。 このインスタンスには、R または Python のランタイム拡張機能は必要ありません。
 
 > [!Note]
 > リアルタイム スコアリングは現在の小さいデータ セット、少数の行から数百行の何千ものまで高速の予測に最適化されています。 使用して、大規模なデータセットで[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)高速な場合があります。

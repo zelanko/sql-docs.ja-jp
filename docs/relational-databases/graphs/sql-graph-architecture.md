@@ -1,7 +1,7 @@
 ---
 title: SQL グラフのアーキテクチャ |Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: graphs
@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 186d65c28eefc4fc350738932ba404202c067a61
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ebf687fb162b1c5c2ec17c0a0a5ec096dcfdd69d
+ms.sourcegitcommit: 07d4ebb8438f7c348880c39046e2b452b2152fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090365"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47158073"
 ---
 # <a name="sql-graph-architecture"></a>SQL グラフ アーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 
 ## <a name="edge-table"></a>エッジ テーブル
-エッジ テーブルでは、グラフ内のリレーションシップを表します。 エッジは常に送られ、2 つのノードを接続します。 エッジ テーブルでは、グラフ内の多対多リレーションシップをモデル化することができます。 エッジ テーブルもかまいませんが、ユーザー定義の属性がない可能性があります。 ユーザー定義の属性と共に、エッジ テーブルが作成されるたびに、暗黙的な 3 つの列は、エッジ テーブルに作成されます。
+エッジ テーブルでは、グラフ内のリレーションシップを表します。 エッジは常に送られ、2 つのノードを接続します。 エッジ テーブルでは、グラフ内の多対多リレーションシップをモデル化することができます。 エッジ テーブルもかまいませんが、ユーザー定義の属性がない可能性があります。 ユーザー定義の属性の場合、と共に、エッジ テーブルが作成されるたびに、暗黙的な 3 つの列がエッジ テーブルで作成されます。
 
 |列名    |説明  |
 |---   |---  |
@@ -105,32 +105,32 @@ SQL グラフを構築する方法について説明します。 基本事項を
 ノード テーブルで暗黙的な列  
 |列名    |データ型  |is_hidden  |解説  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |内部 graph_id 列  |
-|$node_id_\<hex_string> |NVARCHAR   |0  |外部のノードの id 列  |
+|graph_id_\<hex_string> |bigint |1  |内部`graph_id`列  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |外部ノード`node_id`列  |
 
 エッジ テーブルで暗黙的な列  
 |列名    |データ型  |is_hidden  |解説  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |内部 graph_id 列  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |id 列の外部境界  |
-|from_obj_id_\<hex_string>  |INT    |1  |オブジェクト id のノードから内部  |
-|from_id_\<hex_string>  |bigint |1  |内部ノード graph_id から  |
-|$from_id_\<hex_string> |NVARCHAR   |0  |外部のノード id から  |
-|to_obj_id_\<hex_string>    |INT    |1  |オブジェクト id のノードの内部  |
-|to_id_\<hex_string>    |bigint |1  |ノード graph_id の内部  |
-|$to_id_\<hex_string>   |NVARCHAR   |0  |外部のノード id  |
+|graph_id_\<hex_string> |bigint |1  |内部`graph_id`列  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |外部`edge_id`列  |
+|from_obj_id_\<hex_string>  |INT    |1  |ノードから内部 `object_id`  |
+|from_id_\<hex_string>  |bigint |1  |ノードから内部 `graph_id`  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |ノードから外部 `node_id`  |
+|to_obj_id_\<hex_string>    |INT    |1  |ノードの内部 `object_id`  |
+|to_id_\<hex_string>    |bigint |1  |ノードの内部 `graph_id`  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |外部のノード `node_id`  |
  
 ### <a name="system-functions"></a>システム関数
 次の組み込み関数が追加されます。 これらは、生成された列から情報を抽出するユーザーができます。 これらのメソッドでは、ユーザーからの入力は検証されませんが、注意してください。 ユーザーが、無効なを指定した場合`sys.node_id`メソッドは適切な部分を抽出し、それを返します。 たとえば、OBJECT_ID_FROM_NODE_ID になります、`$node_id`として入力し、object_id を返す、このノードが属するテーブルの。 
  
 |組み込み   |説明  |
 |---  |---  |
-|OBJECT_ID_FROM_NODE_ID |Node_id object_id を抽出します。  |
-|GRAPH_ID_FROM_NODE_ID  |Node_id、graph_id を抽出します。  |
-|NODE_ID_FROM_PARTS |Object_id と、graph_id からの node_id を構築します。  |
-|OBJECT_ID_FROM_EDGE_ID |$Edge_id から object_id を抽出します。  |
-|GRAPH_ID_FROM_EDGE_ID  |$Edge_id からの id を抽出します。  |
-|EDGE_ID_FROM_PARTS |Object_id と id から $edge_id を構築します。  |
+|OBJECT_ID_FROM_NODE_ID |Object_id を抽出します。 `node_id`  |
+|GRAPH_ID_FROM_NODE_ID  |Graph_id を抽出します。 `node_id`  |
+|NODE_ID_FROM_PARTS |Node_id を構築、`object_id`と `graph_id`  |
+|OBJECT_ID_FROM_EDGE_ID |抽出`object_id`から `edge_id`  |
+|GRAPH_ID_FROM_EDGE_ID  |Id を抽出します。 `edge_id`  |
+|EDGE_ID_FROM_PARTS |構築`edge_id`から`object_id`と id  |
 
 
 
@@ -138,25 +138,26 @@ SQL グラフを構築する方法について説明します。 基本事項を
 学習、 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] SQL Server と Azure SQL Database で導入された拡張機能を有効にするグラフ オブジェクトに対するクエリの作成とします。 クエリ言語の拡張機能では、クエリのヘルプし、ASCII アート構文を使用してグラフを走査します。
  
 ### <a name="data-definition-language-ddl-statements"></a>データ定義言語 (DDL) ステートメント
-|タスク   |関連トピック  |注
+|タスク   |関連記事  |注
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` AS ノードまたは AS エッジ テーブルの作成をサポートするために拡張されています。 属性で定義、エッジ テーブルは可能性がありますか、すべてのユーザーがない可能性がありますに注意してください。  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` AS ノードまたは AS エッジ テーブルの作成をサポートするために拡張されています。 エッジ テーブルは可能性がありますか、任意のユーザー定義の属性がない可能性がありますに注意してください。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|ノードとエッジ テーブルには、リレーショナル テーブルを使用して、同じ方法を変更できる、`ALTER TABLE`します。 ユーザーでは、追加したり、ユーザー定義の列、インデックスまたは制約を変更することができます。 ただし、内部グラフ列を変更するには、ような`$node_id`または`$edge_id`エラーになります。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |ユーザーは、擬似列およびノードとエッジ テーブル内のユーザー定義の列にインデックスを作成できます。 非クラスター化列ストア インデックスを含むすべてのインデックスの種類がサポートされます。  |
+|エッジの制約を作成します。    |[エッジ制約&#40;TRANSACT-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |ユーザーが特定のセマンティクスを適用するエッジ テーブルでのエッジの制約を作成およびもデータの整合性を維持  |
 |DROP TABLE |[DROP TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |同様のリレーショナル テーブルを使用して、ノードとエッジ テーブルを削除することができます、`DROP TABLE`します。 ただし、このリリースではありません制約を十分に削除されたノードにエッジがポイントありませんし、ノードまたはノード テーブルの削除時に、エッジの連鎖削除がサポートされていません。 ノード テーブルが削除された場合は、ユーザー、グラフの整合性を維持するために手動でそのノード テーブル内のノードに接続されている、エッジと削除することをお勧めします。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>データ操作言語 (DML) ステートメント
-|タスク   |関連トピック  |注
+|タスク   |関連記事  |注
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|ノード テーブルに挿入すると、リレーショナル テーブルに挿入するよりも同じです。 値は、`$node_id`列が自動的に生成されます。 値を挿入しようとしています。`$node_id`または`$edge_id`列はエラーになります。 ユーザーが値を指定する必要があります`$from_id`と`$to_id`エッジ テーブルを挿入するときに列。 `$from_id` `$to_id`は、`$node_id`接続する特定のエッジ ノードの値。  |
 |Del | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|リレーショナル テーブルから削除されると、同じ方法でノードまたはエッジ テーブルからデータを削除できます。 ただし、このリリースではありません制約を十分に削除されたノードにエッジがポイントありませんし、ノードの削除時に、エッジの連鎖削除がサポートされていません。 ノードが削除されると、そのノードに接続するすべてのエッジも削除されたこと、グラフの整合性を維持するをお勧めします。  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |ユーザー定義の列の値は、UPDATE ステートメントを使用して更新できます。 内部グラフ列を更新`$node_id`、 `$edge_id`、`$from_id`と`$to_id`は許可されていません。  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` ステートメントは、ノードまたはエッジ テーブルでサポートされていません。  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` ステートメントは、ノードまたはエッジ テーブルでサポートされます。  |
 
 
 ### <a name="query-statements"></a>クエリ ステートメント
-|タスク   |関連トピック  |注
+|タスク   |関連記事  |注
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|ノードとエッジ テーブルとして内部的に格納されます、ノードとエッジ テーブルでの SQL Server または Azure SQL Database のテーブルでサポートされている操作のほとんどをサポートするため  |
 |MATCH  | [一致&#40;TRANSACT-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|一致の組み込みは、パターン マッチングとグラフをトラバースをサポートするために導入されました。  |
@@ -169,7 +170,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 * ノードまたはエッジ テーブルとしては、テーブルの種類とテーブル変数を宣言することはできません。 
 * ノードとエッジ テーブルは、システム バージョン管理されたテンポラル テーブルとして作成することはできません。   
 * ノードとエッジ テーブルには、メモリ最適化テーブルをすることはできません。  
-* ユーザーには、$from_id と UPDATE ステートメントを使用してエッジの $to_id 列を更新できません。 エッジを接続するノードを更新するには、ユーザーは、新しいノードを指す新しいエッジを挿入し、前の 1 つを削除する必要があります。
+* ユーザーが更新できない、`$from_id`と`$to_id`UPDATE ステートメントを使用してエッジの列。 エッジを接続するノードを更新するには、ユーザーは、新しいノードを指す新しいエッジを挿入し、前の 1 つを削除する必要があります。
 * データベースをまたがるグラフ オブジェクトのクエリにはサポートされていません。 
 
 

@@ -1,6 +1,6 @@
 ---
 title: Linux 上の SQL Server の設定の構成 |Microsoft Docs
-description: この記事では、mssql-conf ツールを使用して、Linux 上の SQL Server 2017 の設定を構成する方法について説明します。
+description: この記事では、mssql-conf ツールを使用して、Linux 上の SQL Server の設定を構成する方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,16 +12,19 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2982ae05fd54a09b6ae5640c969bcb77d73c4a4c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 57ef9a199979c2538f536d3c9a2bf8aa7e0b37fa
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086264"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713534"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Linux 上の SQL Server を mssql-conf ツールを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 **mssql conf** Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu 用 SQL Server 2017 をインストールする構成スクリプトです。 このユーティリティを使用するには、次のパラメーターを設定します。
 
@@ -40,12 +43,44 @@ ms.locfileid: "39086264"
 | [既定のバックアップ ディレクトリ](#backupdir) | 新しいバックアップ ファイルの既定のディレクトリを変更します。 |
 | [ダンプの種類](#coredump) | 収集するダンプ メモリ ダンプ ファイルの種類を選択します。 |
 | [高可用性](#hadr) | 可用性グループを有効にします。 |
-| [Local Audit ディレクトリ](#localaudit) | 設定、Local Audit ファイルを追加するディレクトリ。 |
+| [Local Audit ディレクトリ](#localaudit) | Local Audit ファイルを追加するディレクトリを設定します。 |
 | [ロケール](#lcid) | 使用する SQL Server のロケールを設定します。 |
 | [メモリの制限](#memorylimit) | SQL Server のメモリ制限を設定します。 |
 | [TCP ポート](#tcpport) | SQL Server が接続をリッスンするポートを変更します。 |
 | [TLS](#tls) | トランスポート レベルのセキュリティを構成します。 |
 | [トレース フラグ](#traceflags) | サービスが使用しているトレース フラグを設定します。 |
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+**mssql conf**と共にインストールされる構成スクリプトは、 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu します。 このユーティリティを使用するには、次のパラメーターを設定します。
+
+|||
+|---|---|
+| [エージェント](#agent) | SQL Server エージェントを有効にします。 |
+| [[照合順序]](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
+| [お客様からのフィードバック](#customerfeedback) | SQL Server が Microsoft にフィードバックを送信するかどうかを選択します。 |
+| [[データベース メール プロファイル]](#dbmail) | Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。 |
+| [既定のデータ ディレクトリ](#datadir) | 新しい SQL Server データベースのデータ ファイル (.mdf) の既定のディレクトリを変更します。 |
+| [既定のログ ディレクトリ](#datadir) | 新しい SQL Server データベースのログ (.ldf) ファイルの既定のディレクトリを変更します。 |
+| [既定の master データベース ファイル ディレクトリ](#masterdatabasedir) | 既存の SQL インストール上の master データベース ファイルの既定のディレクトリを変更します。|
+| [既定の master データベース ファイル名](#masterdatabasename) | Master データベース ファイルの名前を変更します。 |
+| [既定のダンプ ディレクトリ](#dumpdir) | 新しいメモリ ダンプおよびその他のトラブルシューティング ファイルの既定のディレクトリを変更します。 |
+| [既定のエラー ログ ディレクトリ](#errorlogdir) | 新しい SQL Server エラー ログ、Profiler の既定のトレース、システム正常性セッション XE、および Hekaton セッション XE ファイルの既定のディレクトリを変更します。 |
+| [既定のバックアップ ディレクトリ](#backupdir) | 新しいバックアップ ファイルの既定のディレクトリを変更します。 |
+| [ダンプの種類](#coredump) | 収集するダンプ メモリ ダンプ ファイルの種類を選択します。 |
+| [高可用性](#hadr) | 可用性グループを有効にします。 |
+| [Local Audit ディレクトリ](#localaudit) | Local Audit ファイルを追加するディレクトリを設定します。 |
+| [ロケール](#lcid) | 使用する SQL Server のロケールを設定します。 |
+| [メモリの制限](#memorylimit) | SQL Server のメモリ制限を設定します。 |
+| [Microsoft 分散トランザクション コーディネーター](#msdtc) | 構成し、Linux 上の MSDTC をトラブルシューティングします。 |
+| [MLServices Eula](#mlservices-eula) | Mlservices パッケージの R と Python の Eula を受け入れます。 SQL Server 2019 のみに適用されます。|
+| [TCP ポート](#tcpport) | SQL Server が接続をリッスンするポートを変更します。 |
+| [TLS](#tls) | トランスポート レベルのセキュリティを構成します。 |
+| [トレース フラグ](#traceflags) | サービスが使用しているトレース フラグを設定します。 |
+
+::: moniker-end
 
 > [!TIP]
 > これらの設定の一部は、環境変数を構成できます。 詳細については、次を参照してください。[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)します。
@@ -56,7 +91,7 @@ ms.locfileid: "39086264"
 
 * 共有ディスク クラスターのシナリオをしようとしないで再起動、 **mssql server**変更を適用するサービス。 SQL Server のアプリケーションとして実行します。 代わりに、オフラインとオンラインに復帰し、リソースを実行します。
 
-* Mssql-conf でを実行するこれらの例の完全なパスを指定する: **/opt/mssql/bin/mssql-conf**します。 代わりにそのパスに移動することを選択した場合は、現在のディレクトリのコンテキストで mssql conf を実行します。 **。/mssql conf**します。
+* これらの例の完全なパスを指定することで mssql conf を実行する: **/opt/mssql/bin/mssql-conf**します。 代わりにそのパスに移動することを選択した場合は、現在のディレクトリのコンテキストで mssql conf を実行します。 **。/mssql conf**します。
 
 ## <a id="agent"></a> SQL Server エージェントを有効にします。
 
@@ -70,7 +105,7 @@ ms.locfileid: "39086264"
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
-1. SQL Server サービスを再起動します。
+2. SQL Server サービスを再起動します。
 
    ```bash
    sudo systemctl restart mssql-server
@@ -384,6 +419,7 @@ sudo systemctl restart mssql-server
 - [SQL Server on Linux の可用性グループで常に構成します。](sql-server-linux-availability-group-configure-ha.md)
 - [SQL Server on Linux の読み取りスケール可用性グループを構成します。](sql-server-linux-availability-group-configure-rs.md)
 
+
 ## <a id="localaudit"></a> 監査のローカル ディレクトリのセット
 
 **Telemetry.userrequestedlocalauditdirectory**設定は、Local Audit を有効にし、Local Audit がログ記録ディレクトリを設定できますが作成されます。
@@ -447,6 +483,81 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="msdtc"></a> MSDTC を構成します。
+
+**Network.rpcport**と**distributedtransaction.servertcpport** Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する設定が使用されます。 これらの設定を変更するには、次のコマンドを実行します。
+
+1. Mssql conf スクリプトをルートとして実行、**設定**"network.rpcport"のコマンド。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
+   ```
+
+2. "Distributedtransaction.servertcpport"設定を設定します。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
+   ```
+
+これらの値を設定するだけでなくもルーティングを構成して、ポート 135 に関するファイアウォールを更新する必要があります。 これを行う方法の詳細については、次を参照してください。 [Linux で MSDTC を構成する方法](sql-server-linux-configure-msdtc.md)します。
+
+Mssql conf を監視し、MSDTC をトラブルシューティングする際の他のいくつかの設定があります。 次の表は、これらの設定を簡単に説明します。 使用の詳細については、Windows のサポートの記事で詳細をご覧ください。 [MS DTC の診断トレースを有効にする方法](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)します。
+
+| mssql conf 設定 | 説明 |
+|---|---|
+| distributedtransaction.allowonlysecurerpccalls | 分散トランザクションのセキュリティで保護された唯一の rpc 呼び出しを構成します。 |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 分散型のセキュリティのみ rpc 呼び出しを構成します。 |トランザクション
+| distributedtransaction.maxlogsize | DTC トランザクション ログ ファイルのサイズ (MB 単位)。 既定値は 64 MB です。 |
+| distributedtransaction.memorybuffersize | トレースを格納する循環バッファー サイズ。 このサイズを mb 単位では、既定値は 10 MB |
+| distributedtransaction.servertcpport | MSDTC rpc サーバー ポート |
+| distributedtransaction.trace_cm | 接続マネージャーでのトレース |
+| distributedtransaction.trace_contact | プールの連絡先と連絡先をトレースします。 |
+| distributedtransaction.trace_gateway | トレースのゲートウェイのソース |
+| distributedtransaction.trace_log | ログのトレース |
+| distributedtransaction.trace_misc | その他のカテゴリに分類されるトレース |
+| distributedtransaction.trace_proxy | MSDTC プロキシで生成されるトレース |
+| distributedtransaction.trace_svc | サービスと .exe ファイルのスタートアップをトレースします。 |
+| distributedtransaction.trace_trace | トレース インフラストラクチャ自体 |
+| distributedtransaction.trace_util | 複数の場所から呼び出されるトレース ユーティリティのルーチン |
+| distributedtransaction.trace_xa | XA トランザクション マネージャー (XATM) のトレース ソース |
+| distributedtransaction.tracefilepath | トレース ファイルを保存するフォルダー |
+| distributedtransaction.turnoffrpcsecurity | 有効にするか、分散トランザクションの RPC セキュリティを無効にします。 |
+
+::: moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="mlservices-eula"></a> MLServices Eula に同意します。
+
+追加[machine learning の R または Python パッケージ](sql-server-linux-setup-machine-learning.md)R と Python のオープン ソース ディストリビューションのライセンス条項に同意することがエンジン、データベースに必要です。 次の表では、すべての使用可能なコマンドまたは mlservices Eula に関連するオプションを列挙します。 同じ使用許諾契約書パラメーターは、インストールされている内容に応じて R、Python に使用されます。
+
+```bash
+# For all packages: database engine and mlservices
+# Setup prompts for mlservices EULAs, which you need to accept
+sudo /opt/mssql/bin/mssql-conf setup
+
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+
+# Alternative valid syntax
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+
+# Rescind EULA acceptance
+sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
+```
+
+直接使用許諾契約書への同意を追加することも、 [mssql.conf ファイル](#mssql-conf-format):
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+```
+
+:::moniker-end
+
 ## <a id="tcpport"></a> TCP ポートを変更します。
 
 **Network.tcpport**設定では、SQL Server が接続をリッスンする TCP ポートを変更します。 既定では、このポートは 1433 に設定されます。 ポートを変更するには、次のコマンドを実行します。
@@ -457,13 +568,13 @@ sudo systemctl restart mssql-server
    sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
    ```
 
-1. SQL Server サービスを再起動します。
+2. SQL Server サービスを再起動します。
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-1. これで、SQL Server に接続して、ときに、ホスト名または IP アドレスの後、コンマ (,) でカスタム ポートを指定する必要があります。 たとえば、SQLCMD で接続するには、次のコマンドを使用します。
+3. これで、SQL Server に接続して、ときに、ホスト名または IP アドレスの後、コンマ (,) でカスタム ポートを指定する必要があります。 たとえば、SQLCMD で接続するには、次のコマンドを使用します。
 
    ```bash
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
@@ -538,9 +649,13 @@ sudo cat /var/opt/mssql/mssql.conf
 
 このファイルに表示されていないすべての設定が既定値を使用していることに注意してください。 次のセクションで、サンプル**mssql.conf**ファイル。
 
-## <a name="mssqlconf-format"></a>mssql.conf 形式
+
+## <a id="mssql-conf-format"></a> mssql.conf 形式
 
 次 **/var/opt/mssql/mssql.conf**ファイルは、各設定の例を示します。 変更を手動で行うこの形式を使用することができます、 **mssql.conf**に応じてファイルします。 場合は、ファイルを手動で変更しないでください、変更が適用される前に SQL Server を再起動する必要があります。 使用する、 **mssql.conf**ファイル Docker を使用する必要があります Docker[のデータを保存](sql-server-linux-configure-docker.md)します。 最初に完全な追加**mssql.conf**ホスト ディレクトリにファイルを開き、コンテナーを実行します。 この例は[お客様からのフィードバック](sql-server-linux-customer-feedback.md)します。
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ```ini
 [EULA]
@@ -590,7 +705,66 @@ traceflag1 = 2345
 traceflag = 3456
 ```
 
-## <a name="next-steps"></a>次のステップ
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[distributedtransaction]
+servertcpport = 51999
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+rpcport = 13500
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
+
+::: moniker-end
+
+## <a name="next-steps"></a>次の手順
 
 代わりにこれらの構成変更の一部を環境変数を使用して、次を参照してください。[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)します。
 

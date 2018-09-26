@@ -1,6 +1,6 @@
 ---
-title: Kubernetes での高可用性 SQL Server のコンテナーを構成する |Microsoft Docs
-description: このチュートリアルでは、Azure Container Service で Kubernetes を使用した SQL Server の高可用性ソリューションをデプロイする方法を説明します。
+title: Azure Kubernetes サービス (AKS) での Kubernetes での SQL Server のコンテナーのデプロイ |Microsoft Docs
+description: このチュートリアルでは、Azure Kubernetes Service で Kubernetes を使用した SQL Server の高可用性ソリューションをデプロイする方法を説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -11,20 +11,20 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 5c6e794fa2e76a0fec58d767d14e9ac73fb72534
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fba598abb0431d2e9a80b0cdc0976f72c6eadc15
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980124"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712684"
 ---
-# <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Kubernetes での高可用性 SQL Server のコンテナーを構成します。
+# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes サービス (AKS) での Kubernetes での SQL Server のコンテナーをデプロイします。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Azure Container Service (AKS) では、Kubernetes で高可用性 (HA) の永続的なストレージを SQL Server インスタンスを構成する方法について説明します。 ソリューションでは、回復性を提供します。 SQL Server インスタンスが失敗した場合は、Kubernetes に自動的にし再作成します新しいポッドにします。 AKS は、Kubernetes ノードの障害に対する復元性を提供します。 
+Azure Kubernetes Service (AKS) では、Kubernetes で高可用性 (HA) の永続的なストレージを SQL Server インスタンスを構成する方法について説明します。 ソリューションでは、回復性を提供します。 SQL Server インスタンスが失敗した場合は、Kubernetes に自動的にし再作成します新しいポッドにします。 Kubernetes では、ノードの障害に対する復元性も提供します。
 
-このチュートリアルでは、AKS を使用して、コンテナーで高可用性 SQL Server インスタンスを構成する方法を示します。 
+このチュートリアルでは、AKS でのコンテナーで高可用性 SQL Server インスタンスを構成する方法を示します。 できます[Kubernetes に SQL Server 可用性グループを作成](tutorial-sql-server-ag-kubernetes.md)です。 2 つの異なる Kubernetes ソリューションを比較するを参照してください。[の高可用性 SQL Server のコンテナーを](sql-server-linux-container-ha-overview.md)します。
 
 > [!div class="checklist"]
 > * SA パスワードを作成します。
@@ -33,7 +33,7 @@ Azure Container Service (AKS) では、Kubernetes で高可用性 (HA) の永続
 > * SQL Server Management Studio (SSMS) による接続します。
 > * エラーと回復を確認します。
 
-## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>HA ソリューションを使用する Azure Container Service で実行されている Kubernetes
+## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Azure Kubernetes サービスで実行されている Kubernetes 上の HA ソリューション
 
 Kubernetes バージョン 1.6 およびそれ以降はサポートしています[ストレージ クラス](http://kubernetes.io/docs/concepts/storage/storage-classes/)、[永続ボリューム要求](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)、および[Azure ディスク ボリュームの種類](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)します。 作成して Kubernetes でネイティブに、SQL Server インスタンスを管理します。 この記事の例では、作成する方法を示します、[展開](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)共有ディスク フェールオーバー クラスター インスタンスと同様の高可用性構成を実現するためにします。 この構成では、Kubernetes は、クラスター オーケストレーターの役割を果たします。 コンテナー内の SQL Server インスタンスが失敗したときに、orchestrator を別のインスタンスが同じ永続的な記憶域に接続しているコンテナーのブートス トラップします。
 
@@ -43,11 +43,11 @@ Kubernetes バージョン 1.6 およびそれ以降はサポートしていま�
 
 次の図に、`mssql-server`コンテナーが失敗しました。 レプリカの正常なインスタンスの正しい数設定、および構成に従って、新しいコンテナーを開始、オーケストレーターとして Kubernetes が保証されます。 オーケストレーターは、同じノードで、新しいポッドを開始し、`mssql-server`が同じ永続的な記憶域に再接続します。 サービスに再作成された接続`mssql-server`します。
 
-![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 次の図では、ノードのホスト、`mssql-server`コンテナーが失敗しました。 オーケストレーターは、別のノードに新しいポッドを開始し、`mssql-server`が同じ永続的な記憶域に再接続します。 サービスに再作成された接続`mssql-server`します。
 
-![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -176,7 +176,7 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: microsoft/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server/mssql-server-linux
            ports:
            - containerPort: 1433
            env:
@@ -326,7 +326,7 @@ Kubernetes に自動的に再作成ポッドを SQL Server インスタンスを
 > * SQL Server Management Studio (SSMS) の接続します。
 > * エラーと回復を確認します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 >[Kubernetes の概要](http://docs.microsoft.com/azure/aks/intro-kubernetes)

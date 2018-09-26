@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edb89a58c6ca1b845d1705bd3a7d92138fe2bfd6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 47c8bac2f70ccae8a265590577cfed4fdd9242d6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098006"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712654"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,8 @@ ms.locfileid: "43098006"
 |parallel_worker_count |**int** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> これが、並列クエリの場合の予約済みの並列ワーカーの数。  |  
 |external_script_request_id |**uniqueidentifier** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在の要求に関連付けられている外部スクリプト要求 ID です。 |  
 |is_resumable |**bit** |**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 要求が再開可能なインデックス操作であるかどうかを示します。 |  
-  
+|page_resource |**binary(8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 バイトの 16 進数表現ページ リソースの場合、`wait_resource`列には、ページが含まれています。 |
+
 ## <a name="permissions"></a>アクセス許可  
  ある場合、ユーザーは`VIEW SERVER STATE`サーバーに対する権限を実行中のすべてのセッションを表示のインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。 `VIEW SERVER STATE` 付与することはできません[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ように`sys.dm_exec_requests`現在の接続に制限は常にします。 
   

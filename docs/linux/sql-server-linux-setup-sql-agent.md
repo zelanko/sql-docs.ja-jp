@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 32adfba6edf8497f7ea10f8f68401c99c246ae5c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: af15f6243dc29fc3c7596a758295cc53c66a55c0
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084364"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713564"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上の SQL Server エージェントをインストールします。
 
@@ -45,7 +45,7 @@ sudo systemctl restart mssql-server
 ## <a name="InstallAgentBelowCU4">バージョン 2017 CU3 と以下では、SQL Server エージェントをインストールします。</a>
 
 > [!NOTE]
-> SQL Server のバージョン 2017 CU3 と下、次のインストール手順が適用されます。 まず、SQL Server エージェントをインストールする前に[SQL Server 2017 をインストール](sql-server-linux-setup.md#platforms)します。 これは、キーとをインストールするときに使用するリポジトリを構成します、 **mssql server エージェント**パッケージ。
+> SQL Server のバージョン 2017 CU3 と下、次のインストール手順が適用されます。 まず、SQL Server エージェントをインストールする前に[SQL Server インストール](sql-server-linux-setup.md#platforms)します。 これは、キーとをインストールするときに使用するリポジトリを構成します、 **mssql server エージェント**パッケージ。
 
 お使いのプラットフォームの SQL Server エージェントをインストールします。
 - [Red Hat Enterprise Linux](#RHEL)
@@ -112,5 +112,5 @@ sudo systemctl restart mssql-server
 
 オフライン インストールが必要な場合に、SQL Server エージェント パッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 この記事で説明されている同じオフライン インストール手順を使用して[SQL Server のインストール](sql-server-linux-setup.md#offline)します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 SQL Server エージェントを使用して、作成、スケジュール、およびジョブを実行する方法の詳細については、次を参照してください。 [Linux 上の SQL Server エージェント ジョブの実行](sql-server-linux-run-sql-server-agent-job.md)します。

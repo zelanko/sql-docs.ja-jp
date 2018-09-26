@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2018
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -25,21 +25,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e866f5a9856fe1308bc5233432e053b18d207f7
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118320"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712845"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  外部の場所に引数として指定されたスクリプトを実行します。 サポートされていると、登録済みの言語 (R または Python) では、スクリプトを記述する必要があります。 実行する**sp_execute_external_script**、ステートメントを使用して外部スクリプトを有効にする必要があります最初`sp_configure 'external scripts enabled', 1;`します。  
+プロシージャへの入力引数として指定されたスクリプトを実行します。 スクリプトで実行される、[拡張性フレームワーク](../../advanced-analytics/concepts/extensibility-framework.md)します。 スクリプトは、少なくとも 1 つの拡張機能を持つ、データベース エンジン、サポートされていると、登録済みの言語で記述する必要があります: [ **R**](../../advanced-analytics/concepts/extension-r.md)、 [ **Python** ](../../advanced-analytics/concepts/extension-python.md)、または[ **Java** (SQL Server 2019 のプレビューのみ)](../../advanced-analytics/java/extension-java.md)します。 
+
+実行する**sp_execute_external_script**、ステートメントを使用して外部スクリプトを有効にする必要があります最初`sp_configure 'external scripts enabled', 1;`します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!Note]
+> Machine learning (R および Python) と拡張機能をプログラミングは、データベース エンジンのインスタンスへのアドオンとしてインストールされます。 特定の拡張機能のサポートは、SQL Server のバージョンによって異なります。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax"></a>構文
 
 ```
@@ -47,70 +53,98 @@ sp_execute_external_script
     @language = N'language',   
     @script = N'script'  
     [ , @input_data_1 = N'input_data_1' ]   
-    [ , @input_data_1_name = N'input_data_1_name' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]    
+    [ , @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]  
     [ , @output_data_1_name = N'output_data_1_name' ]  
     [ , @parallel = 0 | 1 ]  
     [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
+::: moniker-end
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-2017-and-earlier"></a>2017 と以前の構文
+
+```
+sp_execute_external_script   
+    @language = N'language',   
+    @script = N'script'  
+    [ , @input_data_1 = N'input_data_1' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @output_data_1_name = N'output_data_1_name' ]  
+    [ , @parallel = 0 | 1 ]  
+    [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
+    [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
+```
+::: moniker-end
 
 ## <a name="arguments"></a>引数
- \@言語 = N'*言語*'  
- スクリプト言語を示します。 *言語*は**sysname**します。  
+ **@language** = N'*言語*'  
+ スクリプト言語を示します。 *言語*は**sysname**します。  SQL Server のバージョンによって、有効な値は、(SQL Server 2016 以降) の R、Python (SQL Server 2017 以降)、および Java (SQL Server 2019 プレビュー)。 
+  
+ **@script** = N'*スクリプト*' 外部言語のスクリプト リテラルまたは変数の入力として指定します。 *スクリプト*は**nvarchar (max)** します。  
 
- 有効な値は `Python` または `R` です。 
-  
- \@スクリプト = N'*スクリプト*'  
- 外部の言語のスクリプト リテラルまたは変数の入力として指定します。 *スクリプト*は**nvarchar (max)** します。  
-  
- [ \@input_data_1_name = N'*input_data_1_name*']  
- によって定義されたクエリを表すために使用する変数の名前を示す\@input_data_1 します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 *input_data_1_name*は**sysname**します。  
-  
- 既定値は`InputDataSet`します。  
-  
- [ \@input_data_1 = N'*input_data_1*']  
+  [ **@input_data_1** = N'*input_data_1*']  
  形式で外部のスクリプトで使用する入力データを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 データ型*input_data_1*は**nvarchar (max)** します。
-  
- [ \@output_data_1_name = N'*output_data_1_name*']  
- 返されるデータを含む外部スクリプトで変数の名前を指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームである必要があります。 Python、出力は、pandas データ フレームである必要があります。 *output_data_1_name*は**sysname**します。  
-  
- 既定値は、"OutputDataSet"です。  
-  
- [\@並列 0 を = | 1]
 
- R スクリプトの並列実行を有効に設定して、`@parallel`パラメーターを 1 にします。 このパラメーターに既定では 0 (並列処理です)。  
+ [ **@input_data_1_name** = N'*input_data_1_name*']  
+ によって定義されたクエリを表すために使用する変数の名前を示す@input_data_1します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 *input_data_1_name*は**sysname**します。  既定値は*InputDataSet*します。  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*']  
+ SQL Server 2019 にのみ適用されます、パーティションごとのモデルの構築に使用されます。 たとえば、製品名を結果セットの並べ替えに使用される列の名前を指定します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。
+
+  [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*']  
+ SQL Server 2019 にのみ適用されます、パーティションごとのモデルの構築に使用されます。 地理的リージョンや日付など、データを分割するために使用する列の名前を指定します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 
+::: moniker-end
+
+ [ **@output_data_1_name** = N'*output_data_1_name*']  
+ 返されるデータを含む外部スクリプトで変数の名前を指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームである必要があります。 Python、出力は、pandas データ フレームである必要があります。 *output_data_1_name*は**sysname**します。  既定値は*OutputDataSet*します。  
+
+ [ **@parallel** = 0 | 1]  
+ R スクリプトの並列実行を有効に設定して、`@parallel`パラメーターを 1 にします。 このパラメーターに既定では 0 (並列処理です)。 場合`@parallel = 1`出力が、クライアント コンピューターに直接ストリーミングされていると、`WITH RESULTS SETS`句は必須であり、出力スキーマを指定する必要があります。  
   
- R スクリプトを使用して、RevoScaleR 関数を使用して、`@parallel`パラメーターをスクリプトが普通に並列化と仮定すると、大規模なデータセットを処理するために役立つことができます。 たとえば、R を使用して`predict`に新しい予測を生成して設定するには、モデルで関数を`@parallel = 1`クエリ エンジンへのヒントとして。 に従って行が分散クエリを並列に処理できる場合、 **MAXDOP**設定します。  
+ + R スクリプトを使用して、RevoScaleR 関数を使用して、`@parallel`パラメーターをスクリプトが普通に並列化と仮定すると、大規模なデータセットを処理するために役立つことができます。 たとえば、R を使用して`predict`に新しい予測を生成して設定するには、モデルで関数を`@parallel = 1`クエリ エンジンへのヒントとして。 に従って行が分散クエリを並列に処理できる場合、 **MAXDOP**設定します。  
   
- 場合`@parallel = 1`出力が、クライアント コンピューターに直接ストリーミングされていると、`WITH RESULTS SETS`句は必須であり、出力スキーマを指定する必要があります。  
+ + RevoScaleR 関数を使用する R スクリプトでは、並列処理は自動的に処理され、指定しないでください`@parallel = 1`を**sp_execute_external_script**呼び出します。  
   
- RevoScaleR 関数を使用する R スクリプトでは、並列処理は自動的に処理され、指定しないでください`@parallel = 1`を**sp_execute_external_script**呼び出します。  
-  
- [ \@params = N'*\@parameter_name data_type* [OUT |出力] [、.. .n]']  
+[ **@params** = N' *@parameter_name data_type* [OUT |出力] [、.. .n]']  
  外部のスクリプトで使用される入力パラメーターの宣言の一覧。  
   
- [ \@parameter1 = '*value1*' [OUT |出力] [、.. .n]  
-
+[ **@parameter1** = '*value1*' [OUT |出力] [、.. .n]  
  外部のスクリプトで使用される入力パラメーターの値の一覧。  
 
 ## <a name="remarks"></a>コメント
 
-使用**sp_execute_external_script**サポートされている言語で記述されたスクリプトを実行します。 現在、サポートされている言語は、SQL Server 2016、および Python 用の R と SQL Server 2017 の R は。 
-
 > [!IMPORTANT]
 > クエリ ツリーがによって制御される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、ユーザーは、クエリに任意の操作を実行できません。 
+
+使用**sp_execute_external_script**サポートされている言語で記述されたスクリプトを実行します。 現時点では、サポートされている言語は、SQL Server 2016 R Services、および Python および R 用 SQL Server 2017 Machine Learning Services の R です。 
 
 既定では、このストアド プロシージャによって返される結果セットは、名前のない列と出力が。 スクリプト内で使用する列名は、スクリプト環境をローカルであり、出力される結果セットには反映されません。 結果セット列名を使用して、`WITH RESULTS SET`の句[ `EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md)します。
   
  結果セットを返すことに加えてをスカラー値を返すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]出力パラメーターを使用しています。 次の例は、スクリプトへの入力として使用されたシリアル化された R モデルを返す出力パラメーターの使用を示しています。  
-
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]と共にインストールされるサーバー コンポーネントで構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、一連のワークステーションのツールとの高パフォーマンスの環境にデータ サイエンティストを接続する接続ライブラリと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 機械学習中にコンポーネントをインストールする必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を外部スクリプトの実行を有効に設定します。 詳細については、次を参照してください。[を設定する SQL Server Machine Learning Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)します。  
   
 外部リソース プールを構成することで、外部スクリプトで使用されるリソースを制御できます。 詳細については、「[CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)」を参照してください。 ワークロードに関する情報は、リソース ガバナーのカタログ ビュー、DMV のカウンターから取得できます。 詳細については、次を参照してください[リソース ガバナーのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)、[リソース ガバナー関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)、および。[SQL Server の External Scripts オブジェクト](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)します。  
 
+### <a name="monitor-script-execution"></a>スクリプトの実行を監視します。
+
 監視スクリプトの実行を使用して[sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)と[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)します。 
 
-## <a name="streaming-execution-for-r-and-python-scripts"></a>R と Python スクリプトの実行 (ストリーミング)  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="parameters-for-partition-modeling"></a>パーティションのモデリングのパラメーター
+
+ SQL Server の 2019 で現在パブリック プレビュー中パラメーターを設定できます 2 つ追加パーティションは 1 つに基づいてまたは位置を論理パーティションに自然なセグメントのデータ セットを提供する多くの列が作成し、使用して、パーティション分割されたデータのモデリングを有効にします。スクリプトの実行中にのみ 年齢、性別、地域、日付や時刻などの繰り返しの値を含む列は、パーティション分割されたデータ セットに役立つ、いくつかの例を示します。
+ 
+ 2 つのパラメーターが**input_data_1_partition_by_columns**と**input_data_1_order_by_columns**2 番目のパラメーターが、結果セットの並べ替えに使用されます。 入力として渡されたパラメーター`sp_execute_external_script`外部スクリプトの実行に 1 回のすべてのパーティション。 詳細と例については、次を参照してください。[チュートリアル: パーティションに基づくモデルを作成する](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)します。
+
+ 並列でスクリプトを実行するには指定することによって`@parallel=1`します。 設定する必要がある場合は、入力クエリを並列化できる、`@parallel=1`に渡す引数の一部として`sp_execute_external_script`します。 既定では、クエリ オプティマイザーがの下で稼働`@parallel=1`このスクリプトにはでこれを明示的に処理する場合は、256 個を超える行を持つテーブルには示されているように、パラメーターが含まれています。
+
+ > [!Tip]
+> トレーニングの workoads を使用することができます`@parallel`任意のトレーニング スクリプトを使用しても含め、Microsoft rx ではないアルゴリズムを使用します。 通常、RevoScaleR のアルゴリズムのみ (rx プレフィックス) では、SQL Server のトレーニングのシナリオでの並列処理を提供します。 SQL Server vNext の新しいパラメーター、特にその機能エンジニア リングする関数を呼び出すスクリプトを並列化できます。
+::: moniker-end
+
+### <a name="streaming-execution-for-r-and-python-scripts"></a>R と Python スクリプトの実行 (ストリーミング)  
 
 ストリーミングには、メモリ内に収まるよりも多くのデータを使用する R または Python スクリプトが使用できます。 ストリーミング中に渡される行の数を制御するには、パラメーターには、整数値を指定`@r_rowsPerRead`で、`@params`コレクション。  たとえば、非常に大きなデータを使用するモデルをトレーニングする場合は、データの 1 つのチャンクですべての行を送信できることを確認するが少ない行を読み取る値を調整できます。 読み取りし、サーバー パフォーマンスの問題を軽減するために、一度に処理されている行の数を管理するのにこのパラメーターを使用することも可能性があります。 
   

@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c87533096357117fda518794d961dfacca2ce481
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394327"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712914"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux 上の SQL Server を管理するための適切なツールを選択します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 2017 on Linux を管理するいくつかの方法はあります。 次のセクションでは、さまざまな管理ツールとその他のリソースへのポインターと手法の概要を示します。
+Linux 上の SQL Server を管理するいくつかの方法はあります。 次のセクションでは、さまざまな管理ツールとその他のリソースへのポインターと手法の概要を示します。
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
@@ -33,9 +33,9 @@ SQL Server 2017 on Linux を管理するいくつかの方法はあります。 
 
 TRANSACT-SQL ステートメントでほとんどのクライアント ツールで行うことができますも実現できます。 SQL Server が提供[動的管理ビュー (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)状態と SQL Server の構成を照会します。 [TRANSACT-SQL コマンド](../t-sql/language-reference.md)データベースの管理タスク。 これらのコマンドを実行するには SQL Server に接続して、たとえば、TRANSACT-SQL クエリを実行しているをサポートする任意のクライアント ツールで[sqlcmd](sql-server-linux-setup-tools.md)または[Visual Studio Code](sql-server-linux-develop-use-vscode.md)します。
 
-## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (プレビュー)
+## <a name="azure-data-studio-preview"></a>Azure Data Studio (プレビュー)
 
-新しい Microsoft SQL Operations Studio (preview) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)です。
+新しい Azure Data Studio (プレビュー) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Azure Data Studio (プレビュー)](../azure-data-studio/what-is.md)します。
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows 上の SQL Server Management Studio
 
@@ -49,6 +49,6 @@ SQL server の新しいクロスプラット フォームでのスクリプト �
 
 PowerShell では、SQL Server on Linux を管理する場合は、豊富なコマンドライン環境を提供します。 詳細については、次を参照してください。 [Linux 上の SQL Server の管理に PowerShell を使用して](sql-server-linux-manage-powershell.md)します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux](sql-server-linux-overview.md)します。

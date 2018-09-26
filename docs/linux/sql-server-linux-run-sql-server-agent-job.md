@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: fab956d80dcc7694d3823a030c08507283494d8e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e91385974730facf657d28febe94c4320cf3799
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085814"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713264"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>作成し、Linux 上の SQL Server エージェント ジョブの実行
 
@@ -38,7 +38,7 @@ Linux 上の SQL Server エージェントに関する既知の問題を参照�
 このチュートリアルを完了するには、次の前提条件が必要です。
 
 * 次の前提条件を使用して Linux マシン:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、または[Ubuntu](quickstart-install-connect-ubuntu.md)) コマンド ライン ツールを使用します。
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、または[Ubuntu](quickstart-install-connect-ubuntu.md)) コマンド ライン ツールを使用します。
 
 次の前提条件はオプションです。
 
@@ -47,7 +47,7 @@ Linux 上の SQL Server エージェントに関する既知の問題を参照�
 
 ## <a name="enable-sql-server-agent"></a>SQL Server エージェントを有効にします。
 
-Linux 上の SQL Server エージェントを使用して、既に SQL Server 2017 がインストールされているコンピューターで SQL Server エージェントをまず有効にする必要があります。
+Linux 上の SQL Server エージェントを使用して、既に SQL Server がインストールされているコンピューターで SQL Server エージェントをまず有効にする必要があります。
 
 1. SQL Server エージェントを有効にするには、以下の手順に従います。
   ```bash

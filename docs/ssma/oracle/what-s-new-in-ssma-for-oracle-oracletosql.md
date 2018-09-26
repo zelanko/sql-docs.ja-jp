@@ -2,7 +2,7 @@
 title: SSMA for Oracle (OracleToSQL) における新 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -13,15 +13,23 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e5a819910b898c4527b5cad24edb62aa9142395e
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 78f1615e375dfeafbcf25a8b0466ed92fbcc16ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394721"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362046"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) の新機能新機能
 この記事では、各リリースで変更を Oracle の SSMA が一覧表示します。  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+SSMA for Oracle の v7.10 リリースには、次の変更が含まれています。
+- 対象となる修正プログラムが追加のセキュリティとプライバシーの保護をグローバル要件の変更を満たすために提供するように設計します。
+- 階層のクエリに関連する変換の改善。
+
+> [!IMPORTANT]
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SSMA for Oracle の v7.9 リリースには、次の変更が含まれています。
@@ -50,14 +58,14 @@ SSMA for Oracle の v7.8 リリースには、次の変更が含まれていま�
 SSMA for Oracle の v7.7 リリースには、次の変更が含まれています。
 - SSMA for Oracle は、品質と変換のメトリックを向上させる対象となる修正プログラムで拡張されています。
 - SSMA for Oracle の 32 ビット バージョンは戻るには、要望に基づき、です。 (V7.4) より前の以前の実装と比較して、2 つのインストーラー パッケージがあるが、並行してインストールことはできません。 その結果がある場合、接続コンポーネントに基づいて最も適切なバージョンを選択する必要があります。 可能であれば、64 ビット バージョンを使用することをお勧めは常にします。
-- SQL Server 2017 のサポートは、Oracle の拡張機能パックでも Linux でサポートされています (新しいリモート インストール オプション) は正式なようになりました。 Linux では、テスト担当者としてインストールされている場合、拡張機能パックの機能が制限されることに注意してくださいし、サーバー側のデータの移行機能はサポートされていません 
+- SQL Server 2017 のサポートは、Oracle の拡張機能パックでも Linux でサポートされています (新しいリモート インストール オプション) は正式なようになりました。 Linux では、テスト担当者としてインストールされている場合、拡張機能パックの機能が制限されることに注意してくださいし、サーバー側のデータの移行機能はサポートされていません。
 - SSMA for Oracle では、通常のテーブルとして具体化されたビューを移行できます (で設定を使用して構成可能な**プロジェクト設定** -> **同期** ->  **具体化されたビューのテーブルのバッキングの検出**)。
 
 > [!IMPORTANT]
 > SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-SSMA for Oracle の v7.6 リリース品質と変換のメトリックを向上させる修正プログラムを対象となると SQL Server 2017 (パブリック プレビュー) のサポートが強化されました。 Windows および Linux 上の SQL Server 2017 のサポートはパブリック プレビュー段階と、運用環境の移行のない使用する必要があります。
+SSMA for Oracle の v7.6 リリース品質と変換のメトリックを向上させる修正プログラムを対象となると SQL Server 2017 (パブリック プレビュー) のサポートが強化されました。 Windows および Linux 上の SQL Server 2017 のサポートはパブリック プレビューであり、運用環境の移行のために使用しないでください。
 
 > [!IMPORTANT]
 > SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストール前提条件、およびツールの 32 ビット バージョンは廃止されました。
@@ -128,8 +136,8 @@ SSMA for Oracle の 2016 年 5 月リリースには、次の変更が含まれ�
 - SQL Server 2016 のサポートが追加されました。
 - SQL Server のテンポラル テーブルへの Oracle 後記アーカイブ テーブルの追加の変換。
 
-    **注**-SSMA 後記データ アーカイブの Oracle テーブルから履歴データをコピーしません。 その結果、履歴データは、移行プロセス中に手動でコピーする必要があります。 さらに、システム テーブルとして扱われるために、SSMA は、SQL Server メタデータ エクスプ ローラーで、履歴テーブルを表示しない、中には、SQL Server Management Studio で履歴テーブルを表示できます。
-    SQL Server 2016 では、いくつかの Oracle 後記機能 (など) はサポートされません。
+    **注**-SSMA は、Oracle 後記データ アーカイブ テーブルから履歴データをコピーしません。 その結果、履歴データは、移行プロセス中に手動でコピーする必要があります。 さらに、SSMA は、システム テーブルとして扱われるため、履歴テーブルを SQL Server メタデータ エクスプ ローラーに表示されない、中には、SQL Server Management Studio で履歴テーブルを表示できます。
+    SQL Server 2016 では、いくつかの Oracle 後記機能 (など) をサポートされていません。
     - Oracle 後記トランザクション クエリ
     - DBMS_FLASHBACK パッケージ
     - フラッシュ バック ・ トランザクション

@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348613"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713154"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>T-SQL の予測関数を使用して、ネイティブのスコアリング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-予測値を生成する SQL Server 2017 でネイティブの C++ の拡張機能の機能を活用してネイティブ スコアリングまたは*スコア*のほぼリアルタイムでの新しいデータ入力します。 この手法は、ワークロードの予測および予測の最も高速な処理速度を提供していますが、プラットフォームとライブラリの要件が付属して: RevoScaleR と revoscalepy から関数の C++ 実装だけです。
+ネイティブ スコアリングは[T-SQL の予測関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)と予測値を生成する SQL Server 2017 でネイティブの C++ の拡張機能の機能または*スコア*のほぼリアルタイムでの新しいデータ入力します。 この手法は、ワークロードの予測および予測の最も高速の可能な処理速度を提供していますが、プラットフォームとライブラリの要件が付属して: RevoScaleR と revoscalepy から関数の C++ 実装だけです。
 
-ネイティブ スコアリングでは、既にトレーニング済みのモデルがあることが必要です。 SQL Server 2017 Windows または Linux、または Azure SQL Database では、ネイティブ スコアリングを起動するのに TRANSACT-SQL の PREDICT 関数を使用できます。 PREDICT 関数は、事前トレーニング済みモデルを受け取り、指定したデータ入力のスコアを生成します。
+ネイティブ スコアリングでは、既にトレーニング済みのモデルがあることが必要です。 SQL Server 2017 Windows または Linux、または Azure SQL Database では、呼び出せる PREDICT 関数を呼び出すには、TRANSACT-SQL でネイティブの入力パラメーターとして指定する新しいデータに対してスコア付けします。 PREDICT 関数では、指定したデータ入力に対するスコアを返します。
 
 ## <a name="how-native-scoring-works"></a>ネイティブのスコアリング動作
 
@@ -33,7 +33,7 @@ ms.locfileid: "43348613"
 
 関数は、通過するソース データの列と共に、入力データの予測を返します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 予測が SQL Server 2017 データベース エンジンのすべてのエディションで使用可能な Windows、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) または Azure SQL Database で SQL Server 2017 Machine Learning サービスを含む、既定で有効にします。 R、Python をインストールまたはその他の機能を有効にする必要はありません。
 

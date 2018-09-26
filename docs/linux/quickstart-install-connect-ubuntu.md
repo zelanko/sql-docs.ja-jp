@@ -1,6 +1,6 @@
 ---
-title: Ubuntu の SQL Server 2017 の概要 |Microsoft ドキュメント
-description: このクイック スタート チュートリアルでは、Ubuntu に SQL Server 2017 をインストールし、sqlcmd によりデータベースを作成してクエリを実行する方法を示します。
+title: Ubuntu 上の SQL Server の概要 |Microsoft Docs
+description: このクイック スタートでは、SQL Server 2017 または SQL Server 2019 を Ubuntu にインストールを作成および sqlcmd を使用したデータベースの照会する方法を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,18 +12,29 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 30c05b25301004afbd1d9ed0b2a365b5a37f256d
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 0741669f8a35125ad1a7312c4a014f1fba0c291a
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101824"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712334"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート: SQL Server をインストールし、Ubuntu 上でデータベースを作成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このクイック スタート チュートリアルでは、初めに Ubuntu 16.04 に SQL Server 2017 をインストールします。 その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+このクイック スタートでは、Ubuntu 16.04 に SQL Server 2017 または SQL Server 2019 CTP 2.0 をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+このクイック スタートでは、Ubuntu 16.04 に SQL Server 2019 CTP 2.0 をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+
+::: moniker-end
 
 > [!TIP]
 > このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended) または [オフライン](sql-server-linux-setup.md#offline) インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
@@ -39,12 +50,12 @@ Ubuntu 16.04 コンピューターに **少なくとも 2 GB** メモリを搭�
 
 その他のシステム要件については、次を参照してください。 [Linux の SQL Server のシステム要件](sql-server-linux-setup.md#system)
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 ## <a id="install"></a>SQL Server をインストールします。
 
 Ubuntu で SQL Server を構成するには、ターミナルで次のコマンドを実行し、**mssql-server** パッケージをインストールします。
-
-> [!IMPORTANT]
-> 既に SQL Server 2017 の CTP または RC リリースをインストールしている場合は、古いリポジトリを削除してからその GA リポジトリの一つを登録する必要があります。 詳細については、 [リポジトリをプレビュー リポジトリからGA リポジトリに変更する](sql-server-linux-change-repo.md) を参照してください。
 
 1. パブリック リポジトリ GPG キーをインポートします。
 
@@ -52,43 +63,95 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Microsoft SQL Server の Ubuntu リポジトリを登録します。
+2. Microsoft SQL Server の Ubuntu リポジトリを登録します。
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
-   > [!NOTE]
-   > これは、累積的な更新プログラム (CU) リポジトリです。 リポジトリ オプションとそれらの相違点についての詳細は、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
+   > [!TIP]
+   > SQL Server 2019 を試す場合は、代わりに登録する必要あります、**プレビュー (2019)** リポジトリ。 次のコマンドを使用して、SQL Server 2019 のインストール用。
+   >
+   > ```bash
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   > ```
 
-1. SQL Server をインストールするには、次のコマンドを実行します。
+3. SQL Server をインストールするには、次のコマンドを実行します。
 
    ```bash
    sudo apt-get update
    sudo apt-get install -y mssql-server
    ```
 
-1. パッケージのインストールが完了したら、**mssql-conf setup** の実行後に、SA パスワードの設定とエディションを選択する指示に従います。
+4. パッケージのインストールが完了したら、**mssql-conf setup** の実行後に、SA パスワードの設定とエディションを選択する指示に従います。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > このチュートリアルで SQL Server 2017 を試す場合、次のエディションはライセンスフリーです: Evaluation、Developer、および Express
+   > 無料でライセンスは、次の SQL Server 2017 エディション: Evaluation、Developer、および高速です。
 
    > [!NOTE]
    > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。
 
-1. 構成が完了したら、サービスが実行されていることを確認します。
+5. 構成が完了したら、サービスが実行されていることを確認します。
 
    ```bash
    systemctl status mssql-server
    ```
 
-1. リモートで接続する場合はファイアウォールで SQL Server の TCP ポート (既定は 1433) を開く必要もあります。
+6. リモートで接続する場合はファイアウォールで SQL Server の TCP ポート (既定は 1433) を開く必要もあります。
 
 この時点で、Ubuntu コンピューター上で SQL Server を実行し、使用する準備ができました!
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="install"></a>SQL Server をインストールします。
+
+Ubuntu で SQL Server を構成するには、ターミナルで次のコマンドを実行し、**mssql-server** パッケージをインストールします。
+
+1. パブリック リポジトリ GPG キーをインポートします。
+
+   ```bash
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
+2. SQL Server 2019 プレビュー用の Microsoft SQL Server の Ubuntu リポジトリを登録します。
+
+   ```bash
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   ```
+
+3. SQL Server をインストールするには、次のコマンドを実行します。
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y mssql-server
+   ```
+
+4. パッケージのインストールが完了したら、**mssql-conf setup** の実行後に、SA パスワードの設定とエディションを選択する指示に従います。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
+
+   > [!NOTE]
+   > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。
+
+5. 構成が完了したら、サービスが実行されていることを確認します。
+
+   ```bash
+   systemctl status mssql-server
+   ```
+
+6. リモートで接続する場合はファイアウォールで SQL Server の TCP ポート (既定は 1433) を開く必要もあります。
+
+この時点では、SQL Server 2019 CTP 2.0 では、Ubuntu コンピューター上で実行しを使用する準備ができました!
+
+::: moniker-end
 
 ## <a id="tools"></a>SQL Server コマンド ライン ツールをインストールします。
 

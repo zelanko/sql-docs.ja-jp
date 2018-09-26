@@ -12,18 +12,20 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: c4390990701f95dddf19ca53354ffcb5af241d30
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6ccb65aad24ca84f95bb1022c7f074450823e2e9
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083534"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049442"
 ---
-# <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 の新機能については
+# <a name="whats-new-for-sql-server-on-linux"></a>Linux 上の SQL Server の新機能については
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux で実行されている SQL Server 2017 の主要な機能と使用可能なサービスについて説明します。
+
+SQL Server 2019 プレビューがリリースされました。 この記事では、SQL Server 2019 プレビュー リリースは含まれません。 SQL Server 2019 プレビューについては、次を参照してください。[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)します。
 
 > [!NOTE]
 > この記事ではこれらの機能だけでなく累積的更新プログラムは、GA リリース後一定の間隔でリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、次を参照してください。 [ http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)します。 パッケージのダウンロードと既知の問題は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)します。
@@ -58,7 +60,7 @@ ms.locfileid: "39083534"
 - クロスプラット フォームでスクリプト ジェネレーター、 [mssql scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md)します。
 - クロス プラットフォームの動的管理ビュー (DMV) のモニター、 [DBFS ツール](https://github.com/Microsoft/dbfs)します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Linux 上の SQL Server をインストールするには、次のチュートリアルのいずれかを使用します。
 

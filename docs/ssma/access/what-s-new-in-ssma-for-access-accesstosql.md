@@ -2,7 +2,7 @@
 title: SSMA for Access(AccessToSQL) における新 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,21 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 290a88698052e8bf65ebe45e4cc0ba48ccc396ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "40393504"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362026"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) の新機能新機能
 この記事では、アクセスの変更を各リリースでの SSMA が一覧表示します。  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+SSMA for Access の v7.10 リリースは、対象となる修正プログラムの追加のセキュリティとプライバシーの保護をグローバル要件の変更を満たすために提供するように設計で拡張されています。
+
+> [!IMPORTANT]
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SSMA for Access の v7.9 リリースには、次の変更が含まれています。
@@ -84,7 +90,7 @@ SSMA for Access の v7.3 リリースには、次の変更が含まれていま�
   - カスタム変換を実行するために、SSMA で使用できるライブラリ。
     - 構文のカスタム変換および変換 SSMA によって処理されなかった以前に対応するコードを作成します。
       - カスタムのコンバーターを作成する方法の手順については、このブログ投稿「[変換機能を拡張する SQL Server Migration Assistant の](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)します。
-      - この変換用のサンプル プロジェクトをダウンロードできます[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)します。
+      - これからの変換のサンプル プロジェクトをダウンロード[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)します。
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 SSMA for Access の v7.2 リリースには、次の変更が含まれています。

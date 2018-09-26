@@ -1,6 +1,6 @@
 ---
 title: Windows から Linux への SQL Server データベースの移行 |Microsoft Docs
-description: このチュートリアルでは、Windows上のSQL Serverデータベースのバックアップし、Linuxコンピューターにて実行しているSQL Server 2017に復元する方法を示します。
+description: このチュートリアルでは、Windows の SQL Server データベースをバックアップし、SQL Server を実行する Linux マシンに復元する方法を示します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 6e779e3bd3958f440234bdc5f078d52088803a78
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: e3aa22603fa79a2d03b69b1043ea9b0200706925
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240068"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713014"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して Windows から Linux へ SQL Server データベースを移行する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Windows 上の SQL Server から Linux 上の SQL Server 2017 にデータベースを移行させるには、SQL Serverのバックアップと復元機能を使用することをお勧めします。 このチュートリアルでは、バックアップと復元の方法を使用して、データベースを Linux に移動させるのに必要な手順について説明します。
+SQL Server のバックアップと復元機能は Windows 上の SQL Server からデータベースを SQL Server on Linux に移行することをお勧めの方法です。 このチュートリアルでは、バックアップと復元の方法を使用して、データベースを Linux に移動させるのに必要な手順について説明します。
 
 > [!div class="checklist"]
 > * SSMS を使用して Windows にバックアップ ファイルを作成します。
@@ -34,7 +34,7 @@ Windows 上の SQL Server から Linux 上の SQL Server 2017 にデータベー
 
 SQL Server Always On 可用性グループ Windows から Linux に SQL Server データベースを移行するを作成することもできます。 参照してください[sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには、次の前提条件が必要です。
 
@@ -44,7 +44,7 @@ SQL Server Always On 可用性グループ Windows から Linux に SQL Server �
   * ターゲット データベースを移行します。
 
 * インストールされている次の Linux マシンの場合:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、または[Ubuntu](quickstart-install-connect-ubuntu.md)) コマンド ライン ツールを使用します。
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、または[Ubuntu](quickstart-install-connect-ubuntu.md)) コマンド ライン ツールを使用します。
 
 ## <a name="create-a-backup-on-windows"></a>Windows でバックアップを作成する
 
@@ -225,7 +225,7 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、Windows 上のデータベースをバックアップし、SQL Server 2017 を実行している Linux サーバーに移動する方法について説明しました。 学習したします。
+このチュートリアルでは、Windows 上のデータベースをバックアップし、SQL Server を実行している Linux サーバーに移動する方法について説明しました。 学習したします。
 > [!div class="checklist"]
 > * SSMSとTransact SQLを使用して、Windows上のバックアップ ファイルを作成する
 > * Windows上に、Bash シェルをインストールする

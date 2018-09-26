@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101812"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058901"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>完全に統合された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エンジン 
-グラフの拡張機能は統合されます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エンジン。 同じストレージ エンジン、メタデータ、クエリ プロセッサなどを使用して格納し、グラフ データを照会します。 これにより、グラフおよびリレーショナル データを 1 つのクエリにわたりクエリを実行できます。 ユーザーは他のグラフ機能を組み合わせることからも利用できるよう[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストア、HA、R services でのようなテクノロジなど。SQL グラフ データベースは、すべてのセキュリティとコンプライアンスで使用できる機能もサポートしています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。
+グラフの拡張機能は統合されます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エンジン。 格納およびグラフ データを照会するには、同じストレージ エンジン、メタデータ、クエリ プロセッサなどを使用します。 グラフや単一のクエリでリレーショナル データ間のクエリ。 その他のグラフ機能を組み合わせる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストア、HA、R services でのようなテクノロジなど。SQL グラフ データベースは、すべてのセキュリティとコンプライアンスで使用できる機能もサポートしています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。
  
-### <a name="tooling-and-ecosystem"></a>ツールとエコシステム  
-ユーザーは、既存のツールおよびエコシステムによってメリットを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を提供します。 バックアップと復元などのツールのインポートし、エクスポート、すぐ BCP だけ作業します。 その他のツールまたは SSIS、SSRS、PowerBI などのサービスは、グラフ テーブルでは、リレーショナル テーブルで動作する方法です。
- 
+### <a name="tooling-and-ecosystem"></a>ツールとエコシステム
+
+既存のツールとエコシステムを利用している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を提供します。 バックアップと復元などのツールのインポートし、エクスポート、すぐ BCP だけ作業します。 その他のツールまたは SSIS、SSRS、Power BI などのサービスは、グラフ テーブルでは、リレーショナル テーブルで動作する方法です。
+
+## <a name="edge-constraints"></a>エッジの制約
+エッジの制約はグラフのエッジ テーブルで定義されて、特定の境界の種類が接続可能なノード テーブルのペアです。 これにより、ユーザーはグラフ スキーマを制御を強化します。 エッジの制約のヘルプのユーザーは特定のエッジは接続を許可するノードの種類を制限できます。 
+
+作成して、エッジの制約を使用する方法の詳細を参照して[のエッジの制約](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>DML をマージします。 
+[マージ](../../t-sql/statements/merge-transact-sql.md)ステートメントで挿入を実行、更新、またはソース テーブルと結合の結果に基づいてターゲット テーブルに対する操作を削除します。 たとえば、挿入、更新、または、対象のテーブルとソース テーブルの間の違いに基づいて、ターゲット テーブル内の行を削除して、2 つのテーブルを同期できます。 Azure SQL Database と SQL Server vNext には、一致する述語を使用して、MERGE ステートメントではサポートされています。 つまり、新しいデータが一致する述語を使用して、挿入/更新/削除の個別のステートメントではなく、単一のステートメントでグラフのリレーションシップを指定すると、現在のグラフ データ (ノードまたはエッジ テーブル) をマージすることはようになりました。
+
+マージ DML での一致の使用方法の詳細を参照して[MERGE ステートメント](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>次の手順  
 読み取り、 [SQL グラフ データベース - アーキテクチャ](./sql-graph-architecture.md)
    

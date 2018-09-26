@@ -10,12 +10,12 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 31bd8be73051349c122eb4a99dc99417b491669d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072181"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713586"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>SQL Server on Linux のお客様からのフィードバック
 
@@ -60,6 +60,9 @@ SQL Server 2017 は、インストール エクスペリエンスに関する情
 ### <a name="on-docker"></a>Docker で
 Docker では、お客様のフィードバックを無効にするするには Docker が必要[のデータを保存](sql-server-linux-configure-docker.md)します。 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`customerfeedback = false`ホスト ディレクトリ。
  
    ```bash
@@ -69,15 +72,43 @@ Docker では、お客様のフィードバックを無効にするするには 
    ```bash
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
+
 2. コンテナー イメージを実行します。
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`customerfeedback = false`ホスト ディレクトリ。
+
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'customerfeedback = false' >> <host directory>/mssql.conf
+   ```
+
+2. コンテナー イメージを実行します。
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>SQL Server on Linux Usage Feedback Collection の local Audit
 
 Microsoft SQL Server 2017 を収集し、コンピューターやデバイス (以下「標準的なコンピューター情報」) に関する情報を Microsoft に送信するインターネット対応機能にはが含まれています。 SQL Server Usage Feedback collection の Local Audit コンポーネントは、Microsoft に送信されるデータ (ログ) を表す、指定されたフォルダーに、サービスによって収集されたデータを記述できます。 Local Audit の目的は、Microsoft がこの機能で収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。
@@ -94,20 +125,20 @@ Linux 上の SQL server では Local Audit は SQL Server データベース エ
    sudo mkdir /tmp/audit
    ```
 
-1. 所有者とグループをディレクトリの変更、 **mssql**ユーザー。
+2. 所有者とグループをディレクトリの変更、 **mssql**ユーザー。
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. Mssql conf スクリプトをルートとして実行、**設定**コマンドを**telemetry.userrequestedlocalauditdirectory**:
+3. Mssql conf スクリプトをルートとして実行、**設定**コマンドを**telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
    ```
 
-1. SQL Server サービスを再起動します。
+4. SQL Server サービスを再起動します。
 
    ```bash
    sudo systemctl restart mssql-server
@@ -116,13 +147,15 @@ Linux 上の SQL server では Local Audit は SQL Server データベース エ
 ### <a name="on-docker"></a>Docker で
 Docker で Local Audit を有効にするには Docker が必要[のデータを保存](sql-server-linux-configure-docker.md)します。 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. 新しいローカルの監査ログのターゲット ディレクトリは、コンテナーになります。 コンピューターにホスト ディレクトリに新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例では、作成、新しい **/監査**ディレクトリ。
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-   
 1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`userrequestedlocalauditdirectory = <host directory>/audit`ホスト ディレクトリ。
  
    ```bash
@@ -132,15 +165,49 @@ Docker で Local Audit を有効にするには Docker が必要[のデータを
    ```bash
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
-2. コンテナー イメージを実行します。
+
+1. コンテナー イメージを実行します。
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. 新しいローカルの監査ログのターゲット ディレクトリは、コンテナーになります。 コンピューターにホスト ディレクトリに新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例では、作成、新しい **/監査**ディレクトリ。
+
+   ```bash
+   sudo mkdir <host directory>/audit
+   ```
+
+1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`userrequestedlocalauditdirectory = <host directory>/audit`ホスト ディレクトリ。
+ 
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   ```
+
+1. コンテナー イメージを実行します。
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="next-steps"></a>次の手順
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。、 [Linux に SQL Server の概要](sql-server-linux-overview.md)します。

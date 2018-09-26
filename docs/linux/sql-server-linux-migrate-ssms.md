@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 1ce94cb159e552b147ad1798eeacf60b9c7ff25a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 36e18344efe0e3e329d4cb2672b51f23f0900128
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085094"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713184"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>エクスポートし、SSMS または SqlPackage.exe で Windows を使った Linux 上のデータベースのインポート
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、使用する方法を示しています。 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)と[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)をエクスポートし、SQL Server 2017 on Linux でのデータベースをインポートします。 SSMS および SqlPackage.exe は Windows アプリケーション、Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合、そのためこの手法を使用します。
+この記事では、使用する方法を示しています。 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)と[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)をエクスポートし、SQL Server on Linux でのデータベースをインポートします。 SSMS および SqlPackage.exe は Windows アプリケーション、Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合、そのためこの手法を使用します。
 
 常にインストールし、」の説明に従って、最新バージョンの SQL Server Management Studio (SSMS) を使用する必要があります[SQL Server on Linux への接続に Windows 上の SSMS の使用](sql-server-linux-manage-ssms.md)
 
@@ -83,5 +83,5 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 SSMS を使用する方法の詳細については、次を参照してください。 [SQL Server Management Studio を使用して](https://msdn.microsoft.com/library/ms174173.aspx)します。 SqlPackage.exe の詳細については、次を参照してください。、 [SqlPackage のリファレンス ドキュメント](https://msdn.microsoft.com/library/hh550080.aspx)します。

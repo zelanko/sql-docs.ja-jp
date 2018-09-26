@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: f0c6e0e8b6999ce2ebcce009a4ac1c298ededdff
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40009034"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712124"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux への接続の暗号化
 
@@ -34,9 +34,13 @@ ms.locfileid: "40009034"
 - AT_KEYEXCHANGE の KeySpec オプションを使用して証明書を作成する必要があります。 通常、証明書のキー使用法プロパティ (KEY_USAGE) では、キーの暗号化 (CERT_KEY_ENCIPHERMENT_KEY_USAGE) も含まれています。
 - 証明書の Subject プロパティは、共通名 (CN) が同じホスト名またはサーバー コンピューターの完全修飾ドメイン名 (FQDN) を示す必要があります。 注: ワイルドカード証明書がサポートされています。
 
+## <a name="configuring-the-openssl-libraries-for-use-optional"></a>(省略可能) を使用するため、OpenSSL ライブラリを構成します。
+シンボリック リンクを作成することができます、`/opt/mssql/lib/`ディレクトリを参照する`libcrypto.so`と`libssl.so`ライブラリは、暗号化に使用する必要があります。 これは、システムによって提供される既定以外の特定のバージョンの OpenSSL を使用する SQL Server を強制する場合に便利です。 これらのシンボリック リンクが存在しない場合、SQL Server は、システムの既定の構成の OpenSSL ライブラリを読み込みます。
+
+これらのシンボリック リンクに名前を付ける`libcrypto.so`と`libssl.so`に置かれていると、`/opt/mssql/lib/`ディレクトリ。
+
 ## <a name="overview"></a>概要
 TLS は、クライアント アプリケーションからの接続の暗号化に使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 正しく構成されている、ときに、TLS は、プライバシーと、クライアントとサーバー間の通信用のデータの整合性の両方を提供します。  TLS 接続が開始したクライアントまたはサーバーが開始した指定できます。 
-
 
 ## <a name="client-initiated-encryption"></a>クライアントが暗号化を開始 
 - **証明書の生成**(/CN は、SQL Server ホストの完全修飾ドメイン名を一致する必要があります)

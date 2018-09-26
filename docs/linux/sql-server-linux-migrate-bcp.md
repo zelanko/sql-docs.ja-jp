@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 3542ee739d2c5e47a2203b8c2eed9d243f0cb5d8
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a8294523e2e6b74ff461fba6d19287f63a00ee83
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086474"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712114"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux に bcp を使用したデータの一括コピー
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、使用する方法を示します、 [bcp](../tools/bcp-utility.md)コマンド ライン ユーティリティを SQL Server 2017 on Linux のインスタンスと、ユーザー指定の形式でデータ ファイルのデータの一括コピーします。
+この記事では、使用する方法を示します、 [bcp](../tools/bcp-utility.md)コマンド ライン ユーティリティを Linux 上の SQL Server のインスタンスと、ユーザー指定の形式でデータ ファイルのデータの一括コピーします。
 
 使用することができます`bcp`SQL Server テーブルに大量の行をインポートするか、SQL Server テーブルからデータをデータ ファイルにエクスポートします。 Queryout オプションと共に使用する場合を除く`bcp`Transact SQL の知識は必要ありません。 `bcp`コマンド ライン ユーティリティで、オンプレミスで実行されている Microsoft SQL Server または Linux、Windows または Docker と Azure SQL Database および Azure SQL Data Warehouse では、クラウドでの動作します。
 
@@ -138,7 +138,7 @@ cat ~/test_export.txt
 3,Tom,Germany
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [bcp ユーティリティ](../tools/bcp-utility.md)
 - [Bcp を使用した互換性のためのデータの形式](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [一括挿入を使用した一括データのインポート](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)

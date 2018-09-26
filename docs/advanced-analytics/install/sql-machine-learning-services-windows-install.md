@@ -3,19 +3,19 @@ title: SQL Server コンピューターの Windows で Learning サービス (In
 description: SQL Server または SQL Server での Python での R は、Windows 上の SQL Server 2017 Machine Learning Services をインストールするときに使用できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311652"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713034"
 ---
-# <a name="install-sql-server-machine-learning-services"></a>SQL Server Machine Learning サービスをインストールします。
+# <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning では、Windows サービスをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 以降、R と Python のサポートのデータベース内分析は、SQL Server Machine Learning Services の後継で提供されます[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 で導入されました。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
@@ -24,12 +24,12 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 
 ## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
 
-+ SQL Server 2017 セットアップは、R、Python での Machine Learning サービスに必要です。 代わりに SQL Server 2016 のインストール メディアがある、場合[SQL Server の 2016 R Services をインストール](sql-r-services-windows-install.md)R 言語サポートを取得します。
++ SQL Server 2017 (またはそれ以上) のセットアップは、R、Python、または Java 言語のサポートと Machine Learning サービスをインストールする場合に必要です。 インストールすることができる場合、代わりに SQL Server 2016 のインストール メディアがある、 [SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) R 言語サポートを取得します。
 
 + データベース エンジンのインスタンスが必要です。 機能をインストールするだけ R または Python を既存のインスタンスに増分の追加にできます。
 
-+ フェールオーバー クラスターでは、Machine Learning サービスをインストールしないでください。 R と Python のプロセスを分離するために使用されるセキュリティ メカニズムは、Windows Server フェールオーバー クラスター環境と互換性がありません。
-
+- Machine Learning サービスのインストールは*はサポートされていません*で SQL Server 2017 フェールオーバー クラスターにします。 ただし、その*はサポートされて*SQL Server 2019 とします。 
+ 
 + ドメイン コント ローラーで Machine Learning サービスをインストールできません。 セットアップの Machine Learning サービスの部分は失敗します。
 
 + インストールしない**共有機能** > **Machine Learning Server (スタンドアロン)** 同じコンピューター上の in-database インスタンスを実行します。 スタンドアロン サーバーは、同じリソースを両方のインストールのパフォーマンスを弱体化の競合が発生します。
@@ -108,7 +108,7 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
     > [!TIP]
     > ダウンロードして、このページから、適切なバージョンをインストールすることができます:[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。
     > 
-    > プレビュー リリースのも試すことができます[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)、管理タスクと SQL Server に対してクエリをサポートします。
+    > プレビュー リリースを試すこともできます[Azure Data Studio](../../azure-data-studio/what-is.md)、管理タスクと SQL Server に対してクエリをサポートします。
   
 2. Machine Learning サービスがインストールされているインスタンスに接続し、をクリックして**新しいクエリ**クエリ ウィンドウを開いて、次のコマンドを実行します。
 
@@ -193,34 +193,31 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 
 ## <a name="additional-configuration"></a>その他の構成
 
-外部スクリプトの検証手順が成功した場合は、SQL Server Management Studio、Visual Studio Code、または T-SQL ステートメントをサーバーに送信できるその他のクライアントから Python のコマンドを実行できます。
+外部スクリプトの検証手順が成功した場合は、SQL Server Management Studio、Visual Studio Code、または T-SQL ステートメントをサーバーに送信できるその他のクライアントから R または Python のコマンドを実行することができます。
 
 コマンドの実行時にエラーを取得した場合は、このセクションでは追加の構成手順を確認します。 サービスまたはデータベースに追加の適切な構成を作成する必要があります。
 
-追加の変更を必要とする一般的なシナリオは次のとおりです。
+インスタンス レベルでは、追加の構成が含まれます。
 
 * [Windows ファイアウォールの着信接続を構成します。](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 * [その他のネットワーク プロトコルを有効にします。](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続を有効にします。](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+
+データベースでは、次の構成の更新する必要があります。
+
 * [リモート ユーザーに組み込みの権限を拡張します。](#bkmk_configureAccounts)
 * [外部スクリプトを実行するアクセス許可を付与](#permissions-external-script)
 * [個々 のデータベースへのアクセスを許可](#permissions-db)
 
 > [!NOTE]
-> 表示されているすべての変更が必要ですと必要なしに可能性があります。 要件は、SQL Server、およびユーザーがデータベースに接続し、外部スクリプトの実行が予想される方法をインストールした、セキュリティ スキーマによって異なります。 追加のトラブルシューティングのヒントについてはこちら:[アップグレードとインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> 追加の構成が必要かどうかは、SQL Server、およびユーザーがデータベースに接続し、外部スクリプトの実行が予想される方法をインストールした、セキュリティ スキーマに依存します。 
 
-###  <a name="bkmk_configureAccounts"></a> スタート パッド アカウントのグループの暗黙の認証を有効にします。
+###  <a name="bkmk_configureAccounts"></a> SQL の制限されたユーザー グループ (SQLRUserGroup) アカウント グループの暗黙の認証を有効にします。
 
-セットアップの間に、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスのセキュリティ トークンの下でタスクを実行するために、新しい Windows ユーザー アカウントが多数作成されます。 ユーザーは、外部のクライアントから Python または R スクリプトを送信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可能なワーカー アカウントをアクティブにします。 呼び出し元のユーザーの id にマップし、ユーザーの代理として、スクリプトを実行します。
+リモート データ サイエンス クライアントでは、スクリプトを実行する必要があると Windows 認証を使用する、追加の構成は R を実行しているワーカー アカウントを提供するために必要と Python プロセスにサインインするためのアクセス許可がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あなたに代わってインスタンス。 この動作と呼ばれる*暗黙の認証*、SQL Server 2016 および SQL Server 2017 での外部スクリプトのセキュリティで保護された実行をサポートするために、データベース エンジンによって実装されます。
 
-これは呼び出されます*暗黙の認証*、し、データベース エンジンのサービスです。 このサービスは、SQL Server 2016 および SQL Server 2017 での外部スクリプトのセキュリティで保護された実行をサポートします。
-
-これらのアカウントは、Windows ユーザー グループ **SQLRUserGroup**で見ることができます。 既定では、20 個のワーカー アカウントは作成になり、外部スクリプトを実行するための十分な数のジョブは通常します。
-
-> [!IMPORTANT]
-> Worker グループの名前は**SQLRUserGroup** R または Python をインストールするかどうかに関係なく。 インスタンスごとに 1 つのグループがあります。
-
-リモート データ サイエンス クライアントでは、スクリプトを実行する必要がある Windows 認証を使用している場合は、追加の考慮事項があります。 これらのワーカー アカウントにサインインするためのアクセス許可が指定する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あなたに代わってインスタンス。
+> [!NOTE]
+> 使用する場合、 **SQL ログイン**のスクリプトを実行して、SQL Server のコンピューティング コンテキストで、この余分な手順は必要ありません。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーを展開**セキュリティ**します。 右クリックし、**ログイン**、選択および**新しいログイン**します。
 2. **ログイン - 新規**ダイアログ ボックスで、**検索**します。
@@ -230,8 +227,13 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 6. 既定では、グループが割り当てられている、**パブリック**ロール、データベース エンジンに接続する権限を持つとします。
 7. **[OK]** を選択します。
 
-> [!NOTE]
-> 使用する場合、 **SQL ログイン**のスクリプトを実行して、SQL Server のコンピューティング コンテキストで、この余分な手順は必要ありません。
+セキュリティ トークンの下にタスクを実行するために、さまざまなローカルの Windows ユーザー アカウントが作成された SQL Server 2017 以降では、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]サービス。 これらのアカウントは、Windows ユーザー グループ **SQLRUserGroup**で見ることができます。 既定では、20 個のワーカー アカウントは作成になり、外部スクリプトを実行するための十分な数のジョブは通常します。 
+
+これらのアカウントは、次のように使用されます。 ユーザーは、外部のクライアントから Python または R スクリプトを送信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可能なワーカー アカウントをアクティブに、呼び出し元のユーザーの id にマップし、ユーザーの代理としてスクリプトを実行します。 SQL Server からデータやリソースを取得する、スクリプトでは、外部の SQL Server を実行する場合は、SQL Server への接続のログが必要です。 データベース ログインを作成する**SQLRUserGroup**接続が成功することもできます。
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+SQL Server の 2019 でワーカー アカウントは、SQL Server スタート パッド サービスの下で実行中のプロセスで AppContainers に置き換えられます。 データベース ログインを追加する必要がありますが、ワーカー アカウントは使用されなくが**SQLRUsergroup**暗黙の認証が必要な場合。 ワーカー アカウントには、ログインの権限があるありませんでしたと同様、でもはスタート パッド サービスの id。 ログインを作成する**SQLRUserGroup**、暗黙の認証が機能するは、このリリースで、スタート パッド サービスから構成されます。
+::: moniker-end
 
 ### <a name="permissions-external-script"></a> 外部スクリプトを実行するアクセス許可をユーザーに与える
 
