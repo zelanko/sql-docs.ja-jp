@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1c6de6fd77de2594f4d2942fa5e5c4c82c614cc6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086974"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46714034"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して、Linux 上の SQL Server のデータベースを作成するには
 
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT) は、Visual Studio を SQL Server on Linux の強�
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio と SQL Server Data Tools をインストールします。
 
-1. 既にインストールしていない Visual Studio、Windows コンピューターの場合[ダウンロードおよび Visual Studio のインストール]します。 Visual Studio Community エディションは、受講者、完全に機能を備えた無料の IDE、Visual Studio のライセンスがない、オープン ソース、個人の開発者。
+1. 既にインストールしていない Visual Studio、Windows コンピューターの場合[ダウンロードして Visual Studio のインストール]します。 Visual Studio Community エディションは、受講者、完全に機能を備えた無料の IDE、Visual Studio のライセンスがない、オープン ソース、個人の開発者。
 
 2. Visual Studio のインストール中に次のように選択します。**カスタム**の、**インストールの種類を選択**オプション。 **[次へ]** をクリックします。
 
@@ -39,7 +39,7 @@ SQL Server Data Tools (SSDT) は、Visual Studio を SQL Server on Linux の強�
 
 ## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>SQL Server Data Tools を SSDT 17.0 RC リリースにアップグレードします。
 
-SQL Server 2017 on Linux は、SSDT 17.0 RC またはそれ以降のバージョンによってサポートされます。
+Linux 上の SQL Server は、SSDT 17.0 RC またはそれ以降のバージョンによってサポートされます。
 
 * [ダウンロードしてインストール SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939)します。
 
@@ -79,13 +79,13 @@ SQL Server 2017 on Linux は、SSDT 17.0 RC またはそれ以降のバージョ
 
 ## <a name="build-and-validate-the-database"></a>ビルドして、データベースの検証
 
-1. データベース プロジェクト メニューを開く**TutorialDB**選択と**ビルド**します。 SSDT では、プロジェクトに .sql のソース コード ファイルをコンパイルし、データ層アプリケーション パッケージ (dacpac) ファイルのビルドします。 Linux 上の SQL Server 2017 インスタンスにデータベースをパブリッシュするために使用できます。 
+1. データベース プロジェクト メニューを開く**TutorialDB**選択と**ビルド**します。 SSDT では、プロジェクトに .sql のソース コード ファイルをコンパイルし、データ層アプリケーション パッケージ (dacpac) ファイルのビルドします。 Linux 上の SQL Server インスタンスにデータベースをパブリッシュするために使用できます。 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. ビルドの成功メッセージをチェックイン**出力**Visual Studio のウィンドウ。 
 
-## <a name="publish-the-database-to-sql-server-2017-instance-on-linux"></a>Linux 上の SQL Server 2017 インスタンスにデータベースをパブリッシュします。
+## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Linux 上の SQL Server インスタンスにデータベースをパブリッシュします。
 
 1. データベース プロジェクト メニューを開く**TutorialDB**選択**発行**します。
 
@@ -107,13 +107,13 @@ SQL Server 2017 on Linux は、SSDT 17.0 RC またはそれ以降のバージョ
 
 Linux 上の SQL Server インスタンスに新しいデータベースを作成し、ソース管理の対象のデータベース プロジェクトへのデータベース開発の基本を学習できました。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 T-SQL に慣れていない場合は、次を参照してください。[チュートリアル: TRANSACT-SQL ステートメントの作成]と[TRANSACT-SQL リファレンス (データベース エンジン)]します。
 
 SQL Data Tools でのデータベース開発の詳細については、次を参照してください[SSDT MSDN ドキュメント]
 
-[ダウンロードおよび Visual Studio のインストール]:https://www.visualstudio.com/downloads/
+[ダウンロードして Visual Studio のインストール]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN ドキュメント]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [チュートリアル: Transact-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx

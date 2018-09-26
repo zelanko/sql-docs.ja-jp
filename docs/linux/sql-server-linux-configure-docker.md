@@ -1,6 +1,6 @@
 ---
-title: Docker で SQL Server 2017 の構成オプション |Microsoft Docs
-description: さまざまな方法を使用して、Docker で SQL Server 2017 コンテナー イメージとの対話について説明します。 これには、データ永続化ファイルのコピー、およびトラブルシューティングにはが含まれます。
+title: Docker で SQL Server の構成オプション |Microsoft Docs
+description: さまざまな方法を使用して、SQL Server 2017 と 2019 CTP 2.0 のコンテナー イメージを Docker での対話について説明します。 これには、データ永続化ファイルのコピー、およびトラブルシューティングにはが含まれます。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,12 +12,13 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+ms.openlocfilehash: fbb8364b555d7e0a7a7c083641e8194b8c9094c7
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085874"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713274"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -30,11 +31,34 @@ ms.locfileid: "39085874"
 
 ## <a name="pull-and-run-the-container-image"></a>コンテナー イメージのプルと実行
 
-でプルして、SQL Server 2017 の Docker コンテナー イメージを実行するには、前提条件と次のクイック スタートの手順に従います。
+でプルして、SQL Server 2017 と SQL Server 2019 CTP 2.0 の Docker コンテナー イメージを実行するには、前提条件と次のクイック スタートの手順に従います。
 
-- [Docker を使用した SQL Server 2017 コンテナー イメージを実行します。](quickstart-install-connect-docker.md)
+- [Docker を使用した SQL Server 2017 コンテナー イメージを実行します。](quickstart-install-connect-docker.md?view=sql-server-2017)
+- [Docker を使用した SQL Server 2019 CTP 2.0 コンテナー イメージを実行します。](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 この構成に関する記事では、次のセクションでは、追加の使用シナリオを提供します。
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="rhel"></a> RHEL ベースのコンテナー イメージを実行します。
+
+すべての SQL Server Linux コンテナー イメージのドキュメントは、Ubuntu ベースのコンテナーをポイントします。 SQL Server 2019 CTP 2.0 以降では、Red Hat Enterprise Linux (RHEL) に基づくコンテナーを使用できます。 コンテナー リポジトリから変更**mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu**に**mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0**ですべての docker コマンド。
+
+たとえば、次のコマンドでは、RHEL を使用する最新の SQL Server 2019 CTP 2.0 コンテナーは取得します。
+
+```bash
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+```
+
+```PowerShell
+docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+```
+
+::: moniker-end
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="production"></a> 運用環境にコンテナー イメージを実行します。
 
@@ -52,9 +76,9 @@ ms.locfileid: "39085874"
       docker login
       ```
 
-   1. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux)、 をクリックして**チェック アウトを続行**指示に従います。
+   2. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux)、 をクリックして**チェック アウトを続行**指示に従います。
 
-   1. プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)します。 2 つの違いがあります。 イメージをプルする必要があります**ストア、microsoft、mssql-サーバー-linux:\<タグ名\>** Docker ストアから。 実稼働エディションを指定する必要があり、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
+   3. プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)します。 2 つの違いがあります。 イメージをプルする必要があります**ストア、microsoft、mssql-サーバー-linux:\<タグ名\>** Docker ストアから。 実稼働エディションを指定する必要があり、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
 
       ```bash
       docker run --name sqlenterprise \
@@ -75,6 +99,8 @@ ms.locfileid: "39085874"
 
       > [!NOTE]
       > 使用できる値の完全な一覧については**MSSQL_PID**を参照してください[on Linux の環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)します。
+
+::: moniker-end
 
 ## <a name="connect-and-query"></a>接続し、クエリ
 
@@ -135,17 +161,38 @@ SQL Server 2017 CTP 2.0 以降、 [SQL Server コマンド ライン ツール](
 
 Docker は、同じホスト コンピューターで複数の SQL Server のコンテナーを実行する方法を提供します。 これは、同じホスト上の SQL Server の複数のインスタンスを必要とするシナリオのアプローチです。 各コンテナーは、別のポートで自体を公開する必要があります。
 
-次の例は、2 つの SQL Server のコンテナーを作成し、ポートにマッピング**1401**と**1402**ホスト コンピューターにします。
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+次の例は、2 つの SQL Server 2017 コンテナーを作成し、ポートにマッピング**1401**と**1402**ホスト コンピューターにします。
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:2017-latest
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:2017-latest
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+次の例は、SQL Server 2019 CTP 2.0 の 2 つのコンテナーを作成し、ポートにマッピング**1401**と**1402**ホスト コンピューターにします。
+
+```bash
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+```PowerShell
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+::: moniker-end
 
 2 つの個別のコンテナーで実行されている SQL Server インスタンスがあるようになりました。 クライアントは、コンテナーの Docker ホストとポート番号の IP アドレスを使用して、各 SQL Server インスタンスに接続できます。
 
@@ -158,6 +205,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
 sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
+
 ## <a id="customcontainer"></a> カスタマイズされたコンテナーを作成します。
 
 独自に作成することは[Dockerfile](https://docs.docker.com/engine/reference/builder/#usage)カスタマイズされた SQL Server のコンテナーを作成します。 詳細については、次を参照してください。[を SQL Server および Node アプリケーションを組み合わせたデモ](https://github.com/twright-msft/mssql-node-docker-demo-app)します。 独自の Dockerfile を作成する場合は、このプロセスは、コンテナーの有効期間を制御するため、フォア グラウンド プロセスでは、注意します。 セッションを終了する場合に、コンテナーはシャット ダウンします。 たとえば、スクリプトを実行し、SQL Server を起動する場合は、ことを SQL Server プロセスが、右端のコマンドであることを確認します。 その他のすべてのコマンドは、バック グラウンドで実行されます。 これは、Dockerfile 内の次のコマンドに示します。
@@ -179,13 +227,30 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 
 最初のオプションでは、ディレクトリをホスト上では、コンテナー データ ボリュームとしてマウントします。 そのために使用して、`docker run`コマンドと、`-v <host directory>:/var/opt/mssql`フラグ。 これにより、コンテナーの実行間で復元するデータ。
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
 ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```bash
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+```PowerShell
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+::: moniker-end
 
 この手法では、共有し、Docker の外部でホスト上のファイルを表示することもできます。
 
@@ -196,13 +261,29 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 2 番目のオプションでは、データのボリューム コンテナーを使用します。 データ ボリューム コンテナーを作成するにはホストのディレクトリではなくボリューム名を指定することによって、`-v`パラメーター。 次の例では、という名前の共有データ ボリュームを作成する**sqlvolume**します。
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
 ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```bash
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+```PowerShell
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+::: moniker-end
 
 > [!NOTE]
 > 以前のバージョンの Docker run コマンドでデータ ボリュームを暗黙的に作成するためには、この手法が機能しません。 その場合は、Docker のドキュメントに記載されている明示的な手順を使用して、[の作成とデータ ボリューム コンテナーをマウント](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container)します。
@@ -281,32 +362,29 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 
-## <a name="run-a-specific-sql-server-container-image"></a>特定の SQL Server のコンテナー イメージを実行します。
+## <a id="tags"></a> 特定の SQL Server のコンテナー イメージを実行します。
 
 最新の SQL Server のコンテナー イメージを使用する可能性がありますいないシナリオがあります。 特定の SQL Server のコンテナー イメージを実行するには、次の手順を使用します。
 
 1. Docker を識別する**タグ**リリースを使用します。 使用可能なタグを表示するを参照してください。 [mssql server-linux の Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)します。
 
-1. タグを持つ SQL Server のコンテナー イメージをプルします。 たとえば、RC1 のイメージをプルするには、次のように置換します。`<image_tag>`した次のコマンドで`rc1`します。
+2. タグを持つ SQL Server のコンテナー イメージをプルします。 たとえば、RC1 のイメージをプルするには、次のように置換します。`<image_tag>`した次のコマンドで`rc1`します。
 
    ```bash
-   docker pull microsoft/mssql-server-linux:<image_tag>
+   docker pull mcr.microsoft.com/mssql/server:<image_tag>
    ```
 
-1. をそのイメージを新しいコンテナーを実行するには、タグ名を指定します、`docker run`コマンド。 次のコマンドで置き換える`<image_tag>`バージョンを実行するとします。
+3. をそのイメージを新しいコンテナーを実行するには、タグ名を指定します、`docker run`コマンド。 次のコマンドで置き換える`<image_tag>`バージョンを実行するとします。
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:<image_tag>
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:<image_tag>
    ```
 
 次の手順を既存のコンテナーをダウン グレードすることもできます。 たとえば、ロールバックするまたは、トラブルシューティングやテストの実行中のコンテナーをダウン グレードする場合があります。 実行中のコンテナーにダウン グレードにはデータ フォルダーの永続化手法を使用する必要があります。 記載されている同じ手順に従って、[アップグレード セクション](#upgrade)が、新しいコンテナーを実行すると、以前のバージョンのタグ名を指定します。
-
-> [!IMPORTANT]
-> アップグレードおよびダウン グレードは、この時点で RC1 と RC2 の間のみサポートされます。
 
 ## <a id="version"></a> コンテナーのバージョンを確認してください。
 
@@ -324,17 +402,17 @@ docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd `
    -Q 'SELECT @@VERSION'
 ```
 
-SQL Server のバージョンを識別し、ターゲットの docker コンテナー イメージのビルド番号もできます。 次のコマンドは、SQL Server バージョンおよびビルドの情報を表示、 **microsoft mssql-サーバー-linux: 2017 最新**イメージ。 これは、環境変数に新しいコンテナーの実行で**PAL_PROGRAM_INFO = 1**します。 結果のコンテナーがすぐに終了して、`docker rm`コマンドで削除します。
+SQL Server のバージョンを識別し、ターゲットの docker コンテナー イメージのビルド番号もできます。 次のコマンドは、SQL Server バージョンおよびビルドの情報を表示、 **microsoft/server mssql-linux:2017-最新**イメージ。 これは、環境変数に新しいコンテナーの実行で**PAL_PROGRAM_INFO = 1**します。 結果のコンテナーがすぐに終了して、`docker rm`コマンドで削除します。
 
 ```bash
 sudo docker run -e PAL_PROGRAM_INFO=1 --name sqlver \
-   -ti microsoft/mssql-server-linux:2017-latest && \
+   -ti mcr.microsoft.com/mssql/server:2017-latest && \
    sudo docker rm sqlver
 ```
 
 ```PowerShell
 docker run -e PAL_PROGRAM_INFO=1 --name sqlver `
-   -ti microsoft/mssql-server-linux:2017-latest; `
+   -ti mcr.microsoft.com/mssql/server:2017-latest; `
    docker rm sqlver
 ```
 
@@ -369,7 +447,7 @@ Packages
 Docker でコンテナー イメージをアップグレードするには、最初のアップグレードのリリースのタグを特定します。 レジストリからのこのバージョンのプル、`docker pull`コマンド。
 
 ```bash
-docker pull microsoft/mssql-server-linux:<image_tag>
+docker pull mcr.microsoft.com/mssql/server:<image_tag>
 ```
 
 これを作成すると、すべての新しいコンテナーの SQL Server イメージを更新しますが、実行中のコンテナー内の SQL Server は更新されません。 これを行うには、最新の SQL Server のコンテナー イメージで新しいコンテナーを作成し、その新しいコンテナーにデータを移行する必要があります。
@@ -416,13 +494,30 @@ SQL Server のコンテナーは、実行に失敗した場合、次のテスト
 
 - など、エラーが発生した場合 **' エンドポイント CONTAINER_NAME をネットワーク ブリッジを作成できませんでした。プロキシの開始エラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。**、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターのローカル SQL Server を実行している場合に発生することができます。 2 つの SQL Server のコンテナーを開始し、それら両方を同じホストのポートにマップする場合にも発生します。 この場合、使用、`-p`コンテナー ポート 1433 を別のホストのポートにマッピングするパラメーター。 以下に例を示します。 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
     ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+    ```bash
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu`.
+    ```
+
+    ```PowerShell
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu`.
+    ```
+
+::: moniker-end
 
 - コンテナーからすべてのエラー メッセージがあるかどうかを確認します。
 
@@ -440,9 +535,22 @@ SQL Server のコンテナーは、実行に失敗した場合、次のテスト
 
 コンテナー内では、SQL Server プロセスが失敗する場合で新しいコンテナーを作成する必要があります**SYS_PTRACE**を有効にします。 これには、例外のダンプ ファイルを作成するために必要なプロセスをトレースする Linux 機能が追加されます。 ダンプ ファイルは、問題のトラブルシューティングに役立つサポートで使用できます。 次の docker run コマンドでは、この機能を使用できます。
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+::: moniker-end
 
 ### <a name="sql-server-connection-failures"></a>SQL Server 接続エラー
 
@@ -492,8 +600,10 @@ cat errorlog
 > [!TIP]
 > マウントするディレクトリをホストしている場合 **/var/opt/mssql**に確認できる代わりに、コンテナーを作成したときに、**ログ**ホスト上のマップされたパスのサブディレクトリ。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 使用する Docker で SQL Server 2017 コンテナー イメージの概要、[クイック スタート](quickstart-install-connect-docker.md)します。
 
 またを参照してください、 [mssql docker GitHub リポジトリ](https://github.com/Microsoft/mssql-docker)リソース、フィードバック、および既知の問題。
+
+[SQL Server のコンテナーの高可用性を調べる](sql-server-linux-container-ha-overview.md)

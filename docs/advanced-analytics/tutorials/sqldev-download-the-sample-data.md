@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724336"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712755"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server 用の NYC タクシーのデモ データ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "44724336"
 
 この演習では、サンプル データを環境を準備するための PowerShell スクリプトをダウンロードし、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルのいくつかのチュートリアルで使用します。 完了したら、 **NYCTaxi_Sample**データベースが実践的な学習のデモにデータを提供する、ローカルのインスタンスで使用できます。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 インターネット接続、PowerShell、およびコンピューターのローカル管理者権限を必要があります。 おく[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)やその他のツールをオブジェクトの作成を確認します。
 
@@ -127,6 +127,14 @@ C:\tempRSQL で、管理者の PowerShell コマンド プロンプトを使用�
 |**PredictTip**  |ストアド プロシージャ (stored procedure) |PredictTip.sql スクリプトによって作成されます。 モデルを使用して予測を作成するトレーニング済みモデルを呼び出します。 ストアド プロシージャは、その入力パラメーターとしてクエリを受け取り、入力行のスコアを格納する数値の列を返します。 このストアド プロシージャがで使用される[R モデルを運用する](sqldev-operationalize-the-model.md)します。|
 |**PredictTipSingleMode**  |ストアド プロシージャ (stored procedure)| PredictTipSingleMode.sql スクリプトによって作成されます。 モデルを使用して予測を作成するトレーニング済みモデルを呼び出します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の機能の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。 このストアド プロシージャがで使用される[R モデルを運用する](sqldev-operationalize-the-model.md)します。|
 |**TrainTipPredictionModel**  |ストアド プロシージャ (stored procedure)|TrainTipPredictionModel.sql スクリプトによって作成されます。 R パッケージを呼び出すことによって、ロジスティック回帰モデルをトレーニングします。 モデルは、tipped 列の値を予測し、ランダムに選択した 70% のデータを使用してトレーニングされます。 ストアド プロシージャの出力は、テーブル nyc_taxi_models に保存されているトレーニング済みのモデルです。 このストアド プロシージャが使用される[トレーニング、モデルを保存および](../r/sqldev-train-and-save-a-model-using-t-sql.md)します。|
+
+## <a name="query-data-for-verification"></a>検証のためのデータを照会します。
+
+検証手順として、データがアップロードされたことを確認するためのクエリを実行します。
+
+1. オブジェクト エクスプ ローラーで、[データベース] で、 **NYCTaxi_Sample**データベース、[テーブル] フォルダーを開きます。
+
+2. 右クリックし、 **dbo.nyctaxi_sample**選択**上位 1000 行**をいくつかのデータを返します。
 
 ## <a name="next-steps"></a>次の手順
 

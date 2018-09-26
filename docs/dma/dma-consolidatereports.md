@@ -2,7 +2,7 @@
 title: エンタープライズを評価し、評価レポート (SQL Server) の統合 |Microsoft Docs
 description: DMA を使用して、企業を評価し、Azure SQL Database に SQL Server をアップグレードまたは移行する前に評価レポートを統合する方法について説明します。
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,18 +18,18 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 7cb08a66d0cc81268517b1ddf742bcdf0451d11b
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152633"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493763"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
 次の手順では、Data Migration Assistant を使用して、オンプレミスの SQL Server または Azure vm で SQL Server の実行をアップグレードするため、または Azure SQL Database に移行するために、成功したスケールの評価を実行することができます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - DMA の開始元となるネットワーク上のツールのコンピューターを指定します。 このコンピューターに、SQL Server のターゲットへの接続があることを確認します。
 - ダウンロードしてインストールします。
@@ -88,7 +88,7 @@ SQL Server を評価する PowerShell スクリプトを実行する前に評価
 
 ツール コンピューターにこのデータベースでない場合は、ツールのコンピューターにこの SQL Server インスタンスへのネットワーク接続を確認します。
 
-SQL Server テーブルを CSV ファイルを使用する利点は、インスタンスを制御]、[データベースの評価より小さいチャンクに分割しやすく、評価の取得が選択する評価のフラグ列を使用することができます。  複数の評価をまたがることができますし (この記事の後半で、評価の実行に関するセクションを参照します) (セクションを参照で、この記事の後半で、評価を実行している)、複数の CSV ファイルを管理するより簡単であります。
+SQL Server テーブルを CSV ファイルを使用する利点は、インスタンスを制御]、[データベースの評価より小さいチャンクに分割しやすく、評価の取得が選択する評価のフラグ列を使用することができます。  複数の評価をまたがることができますし (セクションを参照で、この記事の後半で、評価を実行している)、複数の CSV ファイルを管理するより簡単であります。
 
 でオブジェクトとその複雑さの数に応じて、評価が取る著しく長い時間 (時間 +) できるようになりますが、評価を管理しやすいチャンクに分割することをお勧め留意してください。
 
@@ -102,7 +102,7 @@ DmaDataCollector 関数に関連付けられているパラメーターは、次
 |パラメーター  |説明
 |---------|---------|
 |**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。 |
-|**サーバー名** | SQL Server のインスタンス名を使用する場合は、在庫の**SqlServer**で、 **getServerListFrom**パラメーター。 |
+|**serverName** | SQL Server のインスタンス名を使用する場合は、在庫の**SqlServer**で、 **getServerListFrom**パラメーター。 |
 |**DatabaseName** | インベントリ テーブルをホストするデータベース。 |
 |**%Assessmentname** | DMA 評価の名前。 |
 |**TargetPlatform** | 実行する評価対象の型。  指定できる値は**AzureSQLDatabase**、 **SQLServer2012**、 **SQLServer2014**、 **SQLServer2016**、 **SQLServerLinux2017**、および**SQLServerWindows2017**します。 |
@@ -124,7 +124,7 @@ DmaProcessor 関数に関連付けられているパラメーターは、次の�
 |パラメーター  |説明
 |---------|---------|
 |**プロセス**  | JSON ファイルの処理される場所です。 指定できる値は**SQLServer**と**AzureSQLDatabase**します。 |
-|**サーバー名** | SQL Server インスタンスは、データを処理します。  指定した場合**AzureSQLDatabase**の**プロセス**パラメーター、SQL Server の名前のみを含める (含まれていません。 database.windows.net)。 Azure SQL データベースを対象とする場合に 2 つのログインする要求します。最初の 2 つ目は、Azure の SQL Server の管理者ログイン中に、Azure テナントの資格情報です。 |
+|**serverName** | SQL Server インスタンスは、データを処理します。  指定した場合**AzureSQLDatabase**の**プロセス**パラメーター、SQL Server の名前のみを含める (含まれていません。 database.windows.net)。 Azure SQL データベースを対象とする場合に 2 つのログインする要求します。最初の 2 つ目は、Azure の SQL Server の管理者ログイン中に、Azure テナントの資格情報です。 |
 |**CreateDMAReporting** | JSON ファイルを処理するために作成するステージング データベースです。  既に指定したデータベースが存在する、いずれかにこのパラメーターを設定すると、し、オブジェクトは作成できません。  このパラメーターは、削除された 1 つのオブジェクトを再作成するために便利です。 |
 |**CreateDataWarehouse** | Power BI レポートで使用されるデータ ウェアハウスを作成します。 |
 |**DatabaseName** | DMAReporting データベースの名前。 |
