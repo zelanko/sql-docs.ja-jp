@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b46b7a869b37518051555dd802e989b92f918da
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9e0420481b54fe906c54110060248c80905ddc57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744296"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>[インデックスの列] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "42774364"
 **列名**  
 このインデックスに加える列を選択します。 その列をインデックスから削除するには、 **<None>** を選択します。  
   
-**並べ替え順序**  
+**[並べ替え順序]**  
 指定した列の並べ替え順を選択します。 **[昇順]** または **[降順]** オプションを使用できます。  
   
 ## <a name="see-also"></a>参照  

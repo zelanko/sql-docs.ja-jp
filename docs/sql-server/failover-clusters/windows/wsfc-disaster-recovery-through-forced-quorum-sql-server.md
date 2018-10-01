@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 428315adfdf9b0535fd349c18f61c4f741b90823
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 703131ee76d1e48a64adc326ce3e34d04802f5cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772958"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685480"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "34772958"
   
  WSFC クラスターをオンラインに戻すには、既存の構成でクォーラム障害の根本的な原因を解決し、影響を受けたデータベースを必要に応じて復元する必要があります。また、稼働しているクラスター トポロジを反映させるために、WSFC クラスター内の残りのノードの再構成が必要になることもあります。  
   
- WSFC クラスター ノードで *強制クォーラム* の手順を使用して、クラスターをオフラインにした安全管理を無効にすることができます。  これにより、クラスターでのクォーラム投票のチェックが実質的に中断され、クラスター内の任意のノードで WSFC クラスター リソースと SQL Server をオンラインに戻すことができます。  
+ WSFC クラスター ノードで *強制クォーラム* の手順を使用して、クラスターをオフラインにした安全管理をオーバーライドすることができます。  これにより、クラスターでのクォーラム投票のチェックが実質的に中断され、クラスター内の任意のノードで WSFC クラスター リソースと SQL Server をオンラインに戻すことができます。  
   
  この種のディザスター リカバリー プロセスの手順を次に示します。  
   

@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
 - sql.data.tools.dropdatabaseconfirmation.dialog
 - sql.data.tools.dropmultipledatabasesconfirmation.dialog
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae1375a871598a1bf4ce4bd217336450c50d3264
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1c52b2bcd700d4b7399fe27c79063f4b27d4e68a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676172"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>オブジェクトを削除し、依存関係を解決する方法
 **SQL Server オブジェクト エクスプローラー** でオブジェクトの名前変更または削除を行うと、SQL Server Data Tools によって自動的に、依存関係オブジェクトがすべて検出され、必要に応じて名前の変更または依存関係の削除を行うための ALTER スクリプトが用意されます。  

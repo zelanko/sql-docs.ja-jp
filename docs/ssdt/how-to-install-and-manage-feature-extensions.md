@@ -6,20 +6,17 @@ ms.date: 04/26/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 078e69c2df09253141aa55d66e387f7972ce8b2e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b77952b6c0d5985f4f93a7f3e81ced856e9907ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613230"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>方法: 機能拡張のインストールと管理
 データベース コードを分析するルール、データベース単体テストの条件、およびビルド/配置コントリビューターを追加すると、SQL Server Data Tools などの Visual Studio エディションに用意されている機能を拡張できます。 ただし、機能拡張を自分で作成したか、他のユーザーが作成したかにかかわらず、機能拡張を使用するには、あらかじめインストールしておく必要があります。  

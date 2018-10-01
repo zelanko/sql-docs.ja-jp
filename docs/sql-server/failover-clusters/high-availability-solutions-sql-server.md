@@ -5,9 +5,7 @@ ms.date: 05/19/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], solutions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef76ce9bfa54ad7e3c87b492644a74e8e7fa9fb3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c53eba08ad0e2ce91fe873c1072e262076a0cde4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655990"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性ソリューション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +41,7 @@ ms.locfileid: "38038200"
  詳細については、「 [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。    
     
 *  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]    
- 
-            [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、「[Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。    
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、「[Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。    
     
   
 >  **メモ** FCI は、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[フェールオーバー クラスタリングと Always On 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。    
@@ -68,8 +64,7 @@ ms.locfileid: "38038200"
 ## <a name="see-also"></a>参照    
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)     
  [データベース ミラーリング: 相互運用性と共存 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)     
- 
-  [SQL Server 2016 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
+ [SQL Server 2016 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
     
   
 

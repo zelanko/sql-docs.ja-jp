@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6995ca87cfd4c4c82c78e7859da9222e67c41e98
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 52829a433526e10b3170610a1f9281bfbd9a5796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840480"
 ---
 # <a name="manage-job-steps"></a>ジョブ ステップの管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -201,8 +197,7 @@ MDX の詳細については、「 [MDX ステートメントの基礎 (MDX)](ht
   
 -   コマンド ライン オプションを追加または変更します。  
   
-SSIS カタログにパッケージを配置し、 **[SSIS カタログ]** をパッケージのソースとして指定した場合、この構成情報の多くがパッケージから自動的に得られることに注意してください。 
-  **[構成]** タブでは、環境、パラメーターの値、接続マネージャーの値、プロパティのオーバーライド設定、およびパッケージが 32 ビット ランタイム環境で実行するかどうかを指定できます。  
+SSIS カタログにパッケージを配置し、 **[SSIS カタログ]** をパッケージのソースとして指定した場合、この構成情報の多くがパッケージから自動的に得られることに注意してください。 **[構成]** タブでは、環境、パラメーターの値、接続マネージャーの値、プロパティのオーバーライド設定、およびパッケージが 32 ビット ランタイム環境で実行するかどうかを指定できます。  
   
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行するジョブ ステップの作成に関する詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。  
   

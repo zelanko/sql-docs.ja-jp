@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4ded4a4ff7298df9d28f5f54997637ec5a5c0b54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776409"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640741"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>CLR データベース オブジェクトを使用する方法
 Transact\-SQL プログラミング言語の他にも、.NET Framework 言語を使用して、データの取得と更新を行うデータベース オブジェクトを作成できます。 マネージド コードで記述したデータベース オブジェクトは、SQL Server 共通言語ランタイム (CLR: Common Language Run) データベース オブジェクトと呼ばれます。 SQL Server でホストされる CLR データベース オブジェクトを使用する利点と、Transact\-SQL と CLR の間での選択方法については、「[CLR 統合の利点](../relational-databases/clr-integration/clr-integration-overview.md)」および「[マネージド コードを使用したデータベース オブジェクトの作成の利点](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)」をご覧ください。  

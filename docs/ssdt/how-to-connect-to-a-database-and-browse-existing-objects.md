@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f342f1427b9943d14216fc5b785036036dd57345
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a0ac1a6b3363b826bab1530fb162ee6c0cb76c75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082684"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608097"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>操作方法:データベースに接続し、既存のオブジェクトを参照する
 データベース管理者と開発者の間で特に共通するタスクとして、ライブ データベースへの接続、データベースのスキーマのデザインまたは参照、データベース オブジェクトの照会などがあります。 Visual Studio の SQL Server オブジェクト エクスプローラーには、専用の **[SQL Server]** ノードが用意されました。このノードの下で、接続されているすべての SQL Server インスタンスとそのデータベースが SSMS のような階層構造でグループ化されます。 接続されている SQL Server インスタンスは、実行中の SQL Server 2008 などのオンプレミス インスタンスであることも、オフプレミスの SQL Azure インスタンスであることも想定されています。  

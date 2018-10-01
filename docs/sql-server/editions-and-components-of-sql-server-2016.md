@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -35,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 766b7fc1f43cb4ba00dfbac60ece3974095a1573
-ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
+ms.openlocfilehash: 1adfdcbc706000b795b4a7c74c354d408b27f59e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42775109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711620"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +141,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |ログ配布|はい|はい|はい|いいえ|いいえ|  
 |データベース ミラーリング|はい|はい<br /><br /> FULL SAFETY のみ|ミラーリング監視のみ|ミラーリング監視のみ|ミラーリング監視のみ| 
 |バックアップ圧縮|はい|はい|いいえ|いいえ|いいえ| 
-|データベース スナップショット|はい|はい <sup>3</sup>|はい <sup>3</sup>|はい <sup>3</sup>|はい <sup>3</sup>|
+|データベース スナップショット|はい|はい <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|
 |Always On フェールオーバー クラスター インスタンス|はい<br /><br /> ノードの数はオペレーティング システムの最大容量|はい<br /><br /> 2 つのノードのサポート|いいえ|いいえ|いいえ|  
 |Always On 可用性グループ|はい<br /><br /> 2 個の同期セカンダリ レプリカを含む最大 8 個のセカンダリ レプリカ|いいえ|いいえ|いいえ|いいえ|
 |基本的な可用性グループ <sup>2</sup>|いいえ|はい<br /><br /> 2 つのノードのサポート|いいえ|いいえ|いいえ|
@@ -167,13 +165,13 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|列ストア <sup>1</sup>|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい<sup>2</sup>|はい<sup>2</sup>|  
-|インメモリ OLTP <sup>1</sup>|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>、 <sup>3</sup>|はい <sup>2</sup>|
+|列ストア <sup>1</sup>|はい|はい <sup>2</sup>|可 <sup>2</sup>|はい<sup>2</sup>|はい<sup>2</sup>|  
+|インメモリ OLTP <sup>1</sup>|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>、 <sup>3</sup>|可 <sup>2</sup>|
 |Stretch Database|はい|はい|はい|はい|はい|
 |恒久的なメイン メモリ|はい|はい|はい|はい|はい|
 |複数インスタンスのサポート|50|50|50|50|50|
-|テーブルとインデックスのパーティション分割|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|  
-|データ圧縮|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|
+|テーブルとインデックスのパーティション分割|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|可 <sup>2</sup>|  
+|データ圧縮|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|可 <sup>2</sup>|
 |[リソース ガバナー]|はい|いいえ|いいえ|いいえ|いいえ|  
 |パーティション テーブルの並列処理|はい|いいえ|いいえ|いいえ|いいえ|
 |複数の Filestream コンテナー|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|
@@ -191,9 +189,9 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
   
 |機能|Enterprise|Standard|Web|Express|Express with Advanced Services|  
 |-------------|----------------|--------------|---------|-------------|------------------------------------| 
-|行レベルのセキュリティ|はい|はい|はい <sup>1</sup>|はい <sup>1</sup>|はい <sup>1</sup>|  
+|行レベルのセキュリティ|はい|はい|はい <sup>1</sup>|はい <sup>1</sup>|可 <sup>1</sup>|  
 |Always Encrypted|はい|はい <sup>1</sup>|はい <sup>1</sup>|はい <sup>1</sup>|はい <sup>1</sup>| 
-|動的なデータ マスキング|はい|はい|はい <sup>1</sup>|はい <sup>1</sup>|はい <sup>1</sup>|   
+|動的なデータ マスキング|はい|はい|はい <sup>1</sup>|はい <sup>1</sup>|可 <sup>1</sup>|   
 |基本的な監査|はい|はい|はい|はい|はい| 
 |詳細な監査|はい|はい <sup>1</sup>|はい <sup>1</sup>|はい <sup>1</sup>|はい <sup>1</sup>| 
 |透過的なデータベースの暗号化|はい|いいえ|いいえ|いいえ|いいえ|   
@@ -213,7 +211,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |ピア ツー ピア トランザクション レプリケーション|はい|いいえ|いいえ|いいえ|いいえ|   
 |スナップショット レプリケーション|はい|はい|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|   
 |SQL Server の変更の追跡|はい|はい|はい|はい|はい| 
-|トランザクション レプリケーション|はい|はい|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|   
+|トランザクション レプリケーション|はい|はい|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|可 (サブスクライバーのみ)|   
 |Azure へのトランザクション レプリケーション|はい|はい|いいえ|いいえ|いいえ|   
 |トランザクション レプリケーションの更新可能サブスクリプション|はい|いいえ|いいえ|いいえ|いいえ|  
   
@@ -230,7 +228,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |SQL Profiler|はい|はい|不可 <sup>1</sup>|不可 <sup>1</sup>|不可 <sup>1</sup>|  
 |SQL Server エージェント|はい|はい|はい|いいえ|いいえ| 
 |Microsoft System Center Operations Manager 管理パック|はい|はい|はい|いいえ|いいえ|  
-|データベース チューニング アドバイザー (DTA)|はい|はい <sup>2</sup>|はい <sup>2</sup>|いいえ|いいえ|      
+|データベース チューニング アドバイザー (DTA)|はい|はい <sup>2</sup>|可 <sup>2</sup>|いいえ|いいえ|      
   
  <sup>1</sup> SQL Server Web、SQL Server Express、SQL Server Express with Tools、および SQL Server Express with Advanced Services は、SQL Server Standard および SQL Server Enterprise の各エディションを使用してプロファイルできます。  
   
@@ -280,7 +278,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |基本的な R 統合|はい|はい|はい|はい|いいえ|   
 |高度な R 統合|はい|いいえ|いいえ|いいえ|いいえ| 
 |R Server (スタンドアロン)|はい|いいえ|いいえ|いいえ|いいえ|   
-|Polybase コンピューティング ノード|はい|はい <sup>1</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>| 
+|Polybase コンピューティング ノード|はい|可 <sup>1</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>| 
 |Polybase ヘッド ノード|はい|いいえ|いいえ|いいえ|いいえ| 
 |JSON|はい|はい|はい|はい|はい|   
 |クエリ ストア|はい|はい|はい|はい|はい|   
@@ -316,7 +314,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |データベースを使用しないキューブ作成|はい|はい|いいえ|いいえ|いいえ |   
 |自動生成ステージングとデータ ウェアハウス スキーマ|はい|はい|いいえ|いいえ|いいえ| 
-|変更データ キャプチャ|はい|はい <sup>1</sup>|いいえ|いいえ|いいえ| 
+|変更データ キャプチャ|はい|可 <sup>1</sup>|いいえ|いいえ|いいえ| 
 |スター結合クエリ最適化|はい|いいえ|いいえ|いいえ|いいえ| 
 |スケーラブルな読み取り専用の Analysis Services 構成|はい|いいえ|いいえ|いいえ|いいえ| 
 |パーティション テーブルとパーティション インデックスに対する並列クエリ処理|はい|いいえ|いいえ|いいえ|いいえ|   

@@ -5,21 +5,18 @@ ms.date: 03/14/2018
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7dafd722700fa0fe7f1d165d3120a6f35765f9bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627020"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -227,7 +224,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**回避策:** 2; つの回避策が推奨されます。  
+**回避策:** &2; つの回避策が推奨されます。  
   
 1.  次の例のように、式にかっこを追加します。  
   
@@ -243,7 +240,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
     ```  
   
-2.  SHOWPLAN を対象にして、わずかに簡略化した式を使用する2; 番目のプロシージャを作成します。プランの全般的な形式は同じままにします。 たとえば、次の表記の代わりに、  
+2.  SHOWPLAN を対象にして、わずかに簡略化した式を使用する&2; 番目のプロシージャを作成します。プランの全般的な形式は同じままにします。 たとえば、次の表記の代わりに、  
   
     ```  
     SELECT @v0 +@v1 +@v2 +...+@v199  

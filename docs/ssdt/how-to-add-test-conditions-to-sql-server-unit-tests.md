@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86e450a6eb6c1e169d5c9dc6147f0ab3cc2a9fb6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 63446667e82beef51798f7b1d97e3b13911898b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731229"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>SQL Server の単体テストにテスト条件を追加する方法
 SQL Server の単体テストにテスト条件を追加するには、**SQL Server 単体テスト デザイナー**を使用します。 テスト クラスを保存すると、テスト条件は、テスト クラスを含むソース コード ファイルの Visual C\# コードまたは Visual Basic コードとして、テスト プロジェクトに自動的に保存されます。 保存したテスト条件は、**SQL Server 単体テスト デザイナー**またはソース コード ファイルで編集できます。  

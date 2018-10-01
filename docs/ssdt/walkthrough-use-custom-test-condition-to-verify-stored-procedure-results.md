@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85393d548550f58d43533a0c7e11e0b951288dbb
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833000"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する
 機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」をご覧ください。  

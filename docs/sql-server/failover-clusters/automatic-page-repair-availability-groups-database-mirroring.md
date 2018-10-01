@@ -5,9 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d76ab4cee846252b749a664619d1117eacd4aa93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844649"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>ページの自動修復 (可用性グループ: データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "33036699"
 ##  <a name="ErrorTypes"></a> ページの自動修復が試行されるエラーの種類  
  次の表に示すいずれかのエラーが原因でデータ ファイル操作が失敗した場合のみ、そのページにデータベース ミラーリングの自動修復が適用されます。  
   
-|エラー番号|Description|ページの自動修復の原因となるインスタンス|  
+|エラー番号|[説明]|ページの自動修復の原因となるインスタンス|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|オペレーティング システムがデータの巡回冗長検査 (CRC) を実行し、それに失敗した場合のみ処理が行われます。|ERROR_CRC。 このエラーのオペレーティング システムの値は 23 です。|  
 |824|論理エラー。|破損した書き込みや不適切なページ チェックサムなどの論理データ エラー。|  
