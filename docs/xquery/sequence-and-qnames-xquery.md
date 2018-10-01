@@ -154,7 +154,7 @@ WHERE ProductModelID=7;
  各データベースを作成するには、 **sys** XML スキーマ コレクションです。 各データベースにはこれらのスキーマが保持されるため、ユーザーが作成した XML スキーマ コレクションからアクセスすることができます。  
   
 > [!NOTE]  
->  この実装がサポートしていません、`local`の XQuery 仕様に記載されているプレフィックスhttp://www.w3.org/2004/07/xquery-local-functionsします。  
+>  この実装がサポートしていません、`local`の XQuery 仕様に記載されているプレフィックス http://www.w3.org/2004/07/xquery-local-functions します。  
   
 ## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)  
