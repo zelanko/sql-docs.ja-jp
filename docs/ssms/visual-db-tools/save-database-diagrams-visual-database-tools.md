@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa10fd70f4202f659eaa41f58b40612b70d6987
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 829d8af7da228ab9fbd778fb59c68074cfaa502d
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999414"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47442756"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>データベース ダイアグラムの保存 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37999414"
   
 ### <a name="to-save-the-database-diagram"></a>データベース ダイアグラムを保存するには  
   
-1.  **[ファイル]** メニューの **[\<***テーブル名***> を保存]** をクリックします。  
+1.  **[ファイル]** メニューの **[\<**_tablename_**> を保存]** をクリックします。  
   
 2.  このダイアグラムを初めて保存する場合は、 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ダイアグラムの名前を入力します。  
   

@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01be4cebd589f5d30c4036a0a66f9fa29a4b48c7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0838b0d6620e5cfeaf528755ca5abe7d21f694df
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774486"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47440246"
 ---
 # <a name="use-performance-objects"></a>パフォーマンス オブジェクトの使用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "42774486"
   
 |インスタンスの種類|オブジェクト名です。|  
 |-----------------|---------------|  
-|既定|**SQLAgent:***object*:*counter*|  
-|名前付き|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
+|既定|**SQLAgent:**_オブジェクト_:_カウンター_|  
+|名前付き|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_オブジェクト_:_カウンター_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの次のパフォーマンス オブジェクトが含まれています。  
   
