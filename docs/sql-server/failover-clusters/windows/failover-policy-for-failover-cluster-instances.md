@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
@@ -14,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6132834fccf80bad897fbc272f9e86a95540523e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f3448583d07f73c23f19c2eec68eb59b71fd06af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709050"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +96,7 @@ ms.locfileid: "34772568"
 |レベル|条件|[説明]|  
 |-----------|---------------|-----------------|  
 |0|自動フェールオーバーまたは再起動なし|どのようなエラー状態でも、フェールオーバーまたは再起動が自動的に行われないことを示します。 このレベルは、システム メンテナンスの目的でのみ使用されます。|  
-|@shouldalert|サーバーの停止によるフェールオーバーまたは再起動|次の状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。|  
+|1|サーバーの停止によるフェールオーバーまたは再起動|次の状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。|  
 |2|サーバーの応答停止によるフェールオーバーまたは再起動|次のいずれかの状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。<br /><br /> SQL Server インスタンスが応答しない (リソース DLL が HealthCheckTimeout の設定時間内に sp_server_diagnostics からデータを受け取れない)。|  
 |3*|重大なサーバー エラーによるフェールオーバーまたは再起動|次のいずれかの状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。<br /><br /> SQL Server インスタンスが応答しない (リソース DLL が HealthCheckTimeout の設定時間内に sp_server_diagnostics からデータを受け取れない)。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から "system エラー" が返される。|  
 |4|中程度のサーバー エラーによるフェールオーバーまたは再起動|次のいずれかの状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。<br /><br /> SQL Server インスタンスが応答しない (リソース DLL が HealthCheckTimeout の設定時間内に sp_server_diagnostics からデータを受け取れない)。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から "system エラー" が返される。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から "resource エラー" が返される。|  
