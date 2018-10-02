@@ -1,31 +1,28 @@
 ---
-title: Ruby Driver for SQL Server |Microsoft ドキュメント
+title: Ruby Driver for SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8eca6928d28a3126346afc477b8e9c644d09b8c2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 3f11f3b474bdfb224fff8f563bf04bb30c0b99d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309761"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699655"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Ruby Driver for SQL Server
 
-![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[SQL の Ruby ドライバーをダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード下方向丸](../../ssdt/media/download.png)[Ruby driver for SQL ダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Windows、Linux、またはファルダに Ruby を使用して SQL データベースに接続することができます。   
+Windows、Linux、またはファルダに Ruby を使用して SQL Database に接続することができます。   
   
 ## <a name="getting-started"></a>作業の開始  
 * [ステップ 1: Ruby 開発用に開発環境を構成する](step-1-configure-development-environment-for-ruby-development.md)  
@@ -33,12 +30,12 @@ Windows、Linux、またはファルダに Ruby を使用して SQL データベ
 * [ステップ 3: Ruby を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>ドキュメント  
-[Ruby lang.org のドキュメント](https://www.ruby-lang.org/en/documentation/)  
+[Ruby lang.org ドキュメント](https://www.ruby-lang.org/en/documentation/)  
   
 ## <a name="community"></a>コミュニティ  
 [Azure Ruby デベロッパー センター](https://azure.microsoft.com/develop/ruby/)  
   
 ## <a name="samples"></a>サンプル
-* [Macos Ruby の概要](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
-* [Ubuntu で Ruby の概要](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
-* [Red Hat Enterprise linux (RHEL) Ruby の概要](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)
+* [MacOS で Ruby の概要](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
+* [Ubuntu での Ruby の概要](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
+* [Ruby on Red Hat Enterprise Linux (RHEL) の概要](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)

@@ -5,9 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring recovery interval [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - maximum number of minutes per database recovery
 - recovery [SQL Server], recovery interval option
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e6d64f240f0840eb3a21072f1a70dadce24b4b56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0604d33ec26d959d4f319f05fa625951e69c4a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765000"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ms.locfileid: "32868437"
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   recovery interval が作用するのは、既定のターゲット復旧時間 (0) を使用するデータベースだけです。 データベース上のサーバー復旧間隔を上書きするには、データベースの既定のターゲット復旧時間を既定以外の値に変更します。 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
+-   recovery interval が作用するのは、既定のターゲット復旧時間 (0) を使用するデータベースだけです。 データベース上のサーバー復旧間隔をオーバーライドするには、データベースの既定のターゲット復旧時間を既定以外の値に変更します。 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -67,7 +64,7 @@ ms.locfileid: "32868437"
   
 -   通常は、パフォーマンス上の問題が発生する場合を除いて、recovery interval は 0 のままにすることをお勧めします。 recovery interval 設定を長くする場合には、少しずつ値を増やして、そのたびに復旧のパフォーマンスへの影響を評価することをお勧めします。  
   
--   **sp_configure** を使用し、 **recovery interval** オプションの値を 60 (分) よりも大きくするには、RECONFIGURE WITH OVERRIDE を指定する必要があります。 WITH OVERRIDE は、構成値のチェック (無効な値や非推奨値のチェック) を無効にします。  
+-   **sp_configure** を使用し、**recovery interval** オプションの値を 60 (分) よりも大きくするには、RECONFIGURE WITH OVERRIDE を指定する必要があります。 WITH OVERRIDE は、構成値のチェック (無効な値や非推奨値のチェック) を無効にします。  
   
 ###  <a name="Security"></a> セキュリティ  
   

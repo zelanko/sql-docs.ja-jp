@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 11/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,21 +18,20 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 436e09d9639d7c90c4561833952e4f1efb21ce0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956907"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749670"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージ コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
+  レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージド コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
   
  以下のセクションのトピックでは、レプリケーション タスクをプログラムから制御する場合の RMO の使用方法について説明します。  
   
@@ -60,7 +54,7 @@ ms.locfileid: "32956907"
  ここでは、プログラムからレプリケーション トポロジを監視する方法を説明します。  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO プログラミングの概要  
- RMO は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションのすべての機能をプログラミングできるように設計されています。 RMO の名前空間は <xref:Microsoft.SqlServer.Replication> です。これは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework アセンブリである Microsoft.SqlServer.Rmo.dll により実装されます。 同様に <xref:Microsoft.SqlServer.Replication> 名前空間に属している Microsoft.SqlServer.Replication.dll アセンブリにより、さまざまなレプリケーション エージェント (スナップショット エージェント、ディストリビューション エージェント、マージ エージェント) のプログラミングのためのマネージ コード インターフェイスが実装されます。 そのクラスには RMO からアクセスしてサブスクリプションを同期できます。 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll アセンブリにより実装される、<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間のクラスを使用して、マージ レプリケーション用のカスタム ビジネス ロジックを作成できます。 このアセンブリは RMO から独立しています。  
+ RMO は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションのすべての機能をプログラミングできるように設計されています。 RMO の名前空間は <xref:Microsoft.SqlServer.Replication> です。これは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework アセンブリである Microsoft.SqlServer.Rmo.dll により実装されます。 同様に <xref:Microsoft.SqlServer.Replication> 名前空間に属している Microsoft.SqlServer.Replication.dll アセンブリにより、さまざまなレプリケーション エージェント (スナップショット エージェント、ディストリビューション エージェント、マージ エージェント) のプログラミングのためのマネージド コード インターフェイスが実装されます。 そのクラスには RMO からアクセスしてサブスクリプションを同期できます。 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll アセンブリにより実装される、<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間のクラスを使用して、マージ レプリケーション用のカスタム ビジネス ロジックを作成できます。 このアセンブリは RMO から独立しています。  
   
 ## <a name="deploying-applications-based-on-rmo"></a>RMO に基づくアプリケーションの配置  
  RMO は、SQL Server Compact を除く [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべてのバージョンに含まれるレプリケーション コンポーネントとクライアント接続コンポーネントに依存しています。 RMO に基づいてアプリケーションを配置するには、アプリケーションを実行するコンピューターに、レプリケーション コンポーネントとクライアント接続コンポーネントを含むバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする必要があります。  

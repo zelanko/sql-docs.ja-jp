@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updating data [SQL Server]
@@ -21,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0c3f3824225fdb50380c5681d02a2d4313091fd9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: ef4f863e4aca24cff654469f6447c02814008089
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030885"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706110"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server カーソルでのデータ更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "43030885"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルによってデータをフェッチおよび更新する場合、OLE DB Driver for SQL Server のコンシューマー アプリケーションについても、他のクライアント アプリケーションと同様の考慮事項や制約があてはまります。  
   
- 同時実行データアクセス制御に関係するのは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソル内の行だけです。 コンシューマーから変更可能な行セットが要求されるときは、同時実行制御が DBPROP_LOCKMODE によって制御されます。 同時実行アクセス制御のレベルを変更するには、コンシューマーで行セットを開く前に DBPROP_LOCKMODE プロパティを設定します。  
+ 同時実行データアクセス制御に関係するのは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソル内の行だけです。 コンシューマーから変更可能な行セットが要求されるときは、コンカレンシー制御が DBPROP_LOCKMODE によって制御されます。 同時実行アクセス制御のレベルを変更するには、コンシューマーで行セットを開く前に DBPROP_LOCKMODE プロパティを設定します。  
   
  クライアント アプリケーションのデザインにより、トランザクションが長時間開かれたままの状態になる場合、トランザクション分離レベルが原因で行の位置指定が大幅に遅れる可能性があります。 既定では、OLE DB Driver for SQL Server は、DBPROPVAL_TI_READCOMMITTED によって指定される READ COMMITTED 分離レベルを使用します。 OLE DB Driver for SQL Server は、行セットの同時実行は読み取り専用である場合に、ダーティ リード分離をサポートします。 そのため、コンシューマーは変更可能な行セットで、より高い分離レベルを要求できますが、より低い分離レベルは要求できません。  
   
