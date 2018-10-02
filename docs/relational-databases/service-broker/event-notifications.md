@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: service-broker
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37602cb45dabc2c00d47dd3c7be28ed6e8fe63e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15b3453a06a1c2ef05cc4ffefc1f6c513b486421
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649080"
 ---
 # <a name="event-notifications"></a>イベント通知
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +62,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |トリガー|イベント通知|  
 |--------------|-------------------------|  
 |DML トリガーは DML (データ操作言語) イベントに応答します。 DDL トリガーは DDL (データ定義言語) イベントに応答します。|イベント通知は、DDL イベントと SQL トレース イベントのサブセットに応答します。|  
-|トリガーでは、Transact-SQL または CLR (共通言語ランタイム) マネージ コードを実行できます。|イベント通知ではコードは実行されません。 代わりに、Service Broker サービスに **xml** メッセージが送信されます。|  
+|トリガーでは、Transact-SQL または CLR (共通言語ランタイム) マネージド コードを実行できます。|イベント通知ではコードは実行されません。 代わりに、Service Broker サービスに **xml** メッセージが送信されます。|  
 |トリガーを起動させるトランザクションのスコープ内では、トリガーは同期的に処理されます。|イベント通知は非同期に処理され、イベント通知を発生させるトランザクションのスコープ内では実行されません。|  
 |トリガーのコンシューマーは、トリガーを起動させるイベントに緊密に結び付けられます。|イベント通知のコンシューマーは、イベント通知を起動させるイベントからは切り離されます。|  
 |トリガーは、ローカル サーバーで処理される必要があります。|イベント通知はリモート サーバーで処理できます。|  

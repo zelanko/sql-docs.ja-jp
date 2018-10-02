@@ -4,36 +4,30 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SQL Server Integration Services, scripting
 - SSIS, scripting
 - scripts [Integration Services], about scripting
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8465b0500ae313a66b9750080f0194fb95dce75b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c66db1148c702bcfce378648e3d0b3bc59563508
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621270"
 ---
 # <a name="extending-packages-with-scripting"></a>スクリプトによるパッケージの拡張
   組み込みコンポーネントの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の機能を拡張できます。 パッケージを拡張するには 2 つの方法があります。1 つ目は、スクリプト タスクおよびスクリプト コンポーネントによって提供される強力なラッパー内でコードを記述する方法です。2 つ目は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルによって提供される基本クラスを基にカスタム [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 拡張機能を最初から作成する方法です。  
   
  ここでは、より簡単な方法である、スクリプトを使用したパッケージの拡張について説明します。  
   
- スクリプト タスクおよびスクリプト コンポーネントを利用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローとデータ フローを、コードをほとんど記述することなく拡張できます。 これらの両オブジェクトでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 開発環境と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のプログラミング言語を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリやカスタム アセンブリで提供されるすべての機能を活用できます。 スクリプト タスクおよびスクリプト コンポーネントを使用すると、カスタム タスクやカスタム データ フロー コンポーネントの開発時に通常必要となるインフラストラクチャ コードを一切記述せずにカスタム機能を作成できます。  
+ スクリプト タスクおよびスクリプト コンポーネントを利用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローとデータ フローを、コードをほとんど記述することなく拡張できます。 これらの両オブジェクトでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 開発環境と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のプログラミング言語を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリやカスタム アセンブリで提供されるすべての機能を活用できます。 スクリプト タスクおよびスクリプト コンポーネントを使用すると、カスタム タスクやカスタム データ フロー コンポーネントの開発時に通常必要となるインフラストラクチャ コードを一切記述せずにカスタム機能を作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [スクリプト タスクとスクリプト コンポーネントの比較](../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  

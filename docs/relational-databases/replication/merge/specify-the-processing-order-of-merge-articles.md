@@ -4,32 +4,26 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], processing order
 - merge replication [SQL Server replication], article processing order
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7499c7d5a0912fb8f06c6c044a25a3128b33ccc
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 3f472dfcac6e648387bec0ce2860ae0ba18bac15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653023"
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>マージ アーティクルの処理順序の指定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降では、マージ パブリケーションのアーティクルの既定の処理順序をオーバーライドすることができます。 これは、たとえば、トリガーを使用して参照整合性を定義し、これらのトリガーを特定の順序で起動する必要がある場合に便利です。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降では、マージ パブリケーションのアーティクルの既定の処理順序をオーバーライドすることができます。 これは、たとえば、トリガーを使用して参照整合性を定義し、これらのトリガーを特定の順序で起動する必要がある場合に便利です。  
   
  **アーティクルの処理順序を指定するには**  
   

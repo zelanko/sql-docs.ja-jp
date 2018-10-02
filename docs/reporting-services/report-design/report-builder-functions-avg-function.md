@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 857c0a7a5b7113adef4e43adcacc28b11f7e06f8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b02b21a0011fb838a697792955c56ac04d52ce32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602740"
 ---
 # <a name="report-builder-functions---avg-function"></a>レポート ビルダー関数 - Avg 関数
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、式で指定された NULL 以外のすべての数値の平均を、指定されたスコープで評価して返します。  

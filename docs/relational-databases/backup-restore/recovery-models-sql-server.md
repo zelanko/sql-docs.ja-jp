@@ -5,9 +5,7 @@ ms.date: 07/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f86cc963e5328247b1ee883abb658dcc57e81efc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c8c2efee10a38120717487fc6e04429de7f1bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653446"
 ---
 # <a name="recovery-models-sql-server"></a>復旧モデル (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "32921777"
 ##  <a name="RMov"></a> 復旧モデルの概要  
  次の表に、3 つの復旧モデルの概要を示します。  
   
-|復旧モデル|Description|作業の損失の可能性|指定日時への復旧|  
+|復旧モデル|[説明]|作業の損失の可能性|指定日時への復旧|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**Simple**|ログ バックアップはありません。<br /><br /> 必要な領域が少なくなるように、ログ領域が自動的に再利用されます。このため、トランザクション ログ領域の管理は基本的に必要ありません。 単純復旧モデルでのデータベース バックアップの詳細については、「[データベースの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)」を参照してください。<br /><br /> トランザクション ログ バックアップを必要とする操作は、単純復旧モデルではサポートされていません。 単純復旧モデルで使用できない機能を次に示します。<br /><br /> - ログ配布<br /><br /> - Always On またはデータベース ミラーリング<br /><br /> - データ損失のないメディアの復旧<br /><br /> - 特定の時点への復元|最新のバックアップ以降の変更は保護されません。 障害が発生した場合、それらの変更は再実行する必要があります。|バックアップの終了時点にのみ復旧できます。 詳細については、「[データベースの全体復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)」を参照してください。 <br><br> 単純復旧モデルについての詳細な説明は、 [SQL Server Simple Recovery Model](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) の提供する「 [SQL Server Simple Recovery Model](https://www.mssqltips.com)」(SQL Server 単純復旧モデル) を参照してください。|  
 |**Full**|ログ バックアップが必要です。<br /><br /> データ ファイルの消失や損傷によって作業が失われることはありません。<br /><br /> アプリケーション エラーやユーザー エラーの発生前など、任意の時点に復旧できます。 完全復旧モデルでのデータベース バックアップの詳細については、「[データベースの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)」および「[データベースの全体復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)」を参照してください。|通常はありません。<br /><br /> ログの末尾が損傷している場合は、最新のログ バックアップ以降の変更を再実行する必要があります。|特定の時点に復旧できます (その時点までのバックアップが完全である場合)。 ログ バックアップを使用した障害発生時までの復元の詳細については、「[SQL Server データベースを特定の時点に復元する方法  &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。<br /><br /> 注: 完全復旧モデルのデータベースが複数あり、これらの論理的な一貫性が必要である場合、これらのデータベースを確実に復旧するための特別な手順の実装が必要になる場合があります。 詳細については、「 [マークされたトランザクションを含む関連データベースの復旧](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)」を参照してください。|  

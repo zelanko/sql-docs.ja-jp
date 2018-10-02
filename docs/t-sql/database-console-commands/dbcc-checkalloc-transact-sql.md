@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 76
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 5532f6870e19e830a4d8925fbfca68862493fa6a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e772a5afba4129d90ae7ab26fb051db7fd8113bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262642"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597781"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,10 +114,10 @@ DBCC CHECKALLOC では、内部データベースのスナップショットを�
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて  
 DBCC CHECKALLOC コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
   
-|状態|Description|  
+|状態|[説明]|  
 |---|---|  
 |0|エラー番号 8930 が発生しました。 メタデータの破損が原因で DBCC コマンドが終了しました。|  
-|@shouldalert|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
+|1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
 |2|緊急モードのデータベース修復中にエラーが発生しました。|  
 |3|メタデータの破損が原因で DBCC コマンドが終了しました。|  
 |4|アサートまたはアクセス違反が検出されました。|  
@@ -137,7 +134,7 @@ DBCC CHECKALLOC でエラーがレポートされた場合は、修復を実行�
 ## <a name="result-sets"></a>結果セット  
 次の表は、DBCC CHECKALLOC によって返される情報です。
   
-|アイテム|Description|  
+|アイテム|[説明]|  
 |---|---|  
 |FirstIAM|内部使用のみです。|  
 |Root|内部使用のみです。|  
@@ -147,7 +144,7 @@ DBCC CHECKALLOC でエラーがレポートされた場合は、修復を実行�
   
 DBCC CHECKALLOC では、各ファイルのインデックスとパーティションの割り当ての概要もレポートされます。 この概要では、データの分布が示されます。
   
-|アイテム|Description|  
+|アイテム|[説明]|  
 |---|---|  
 |Reserved pages|インデックスに割り当てられているページ、および割り当てられているエクステント内の未使用ページ。|  
 |Used pages|インデックスによって割り当てられ、使用中のページ。|  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2328032345bfac2575afacc8764ba1265cb94ac
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 11ba7ca730a99631270911f6b6f3e66a4ab5b14e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331196"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607340"
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -141,7 +138,7 @@ ms.locfileid: "35331196"
 >   
 >  集計変換では、 **[キー]** および **[キー スケール]** は、 **グループ化** 操作の結果として予想されるグループの数を示します。 **[個別カウント キー数]** および **[個別カウント スケール]** は、 **個別のカウント** 操作の結果として予想される個別の値の数を示します。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[詳細設定]/[基本]**  
  複数の出力用に複数の集計を構成するオプションを表示したり非表示にしたりします。 既定では、[詳細設定] オプションは非表示です。  
   
@@ -210,7 +207,7 @@ ms.locfileid: "35331196"
 >   
 >  集計変換では、 **[キー]** および **[キー スケール]** は、 **グループ化** 操作の結果として予想されるグループの数を示します。 **[個別カウント キー数]** および **[個別カウント スケール]** は、 **個別のカウント** 操作の結果として予想される個別の値の数を示します。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[キー スケール]**  
  集計で予想される、概算のキー数をオプションで指定します。 変換ではこの情報を使用して最初のキャッシュ サイズを最適化します。 既定では、このオプションの値は **[未指定]** です。 **[キー スケール]** と **[キーの数]** の両方が指定されている場合、 **[キーの数]** の方が優先されます。  
   

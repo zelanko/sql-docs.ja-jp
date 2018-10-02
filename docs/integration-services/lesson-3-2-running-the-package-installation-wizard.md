@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0674745116b0d861961aa5f41179ba355df46292
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a884d0faf7f3f688e00ed83e2c7eeab770791f7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646800"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>レッスン 3-2 - パッケージ インストール ウィザードの実行
 この実習では、パッケージ インストール ウィザードを実行して、Deployment Tutorial プロジェクトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにパッケージを配置します。 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルにインストールできるのはパッケージだけです。配置バンドルに含まれるサポート ファイルは、ファイル システムに配置されます。  
@@ -104,7 +100,7 @@ ms.locfileid: "35411354"
     > パッケージの検証に使用する一時ログ ファイルが作成されます。 このファイルは、パッケージの実行時には使用されません。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 3 : 配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[手順 3: 配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>参照  
 [Integration Services サービス (SSIS サービス)](../integration-services/service/integration-services-service-ssis-service.md)  

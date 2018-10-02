@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.patheditor.general.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: efe52410b491848001fc7e0861e27732d36bc173
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a5fcda8f88d1e16dc39bd4de431239a30cfd218d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658626"
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
   パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内の 2 つのコンポーネントを連結します。 パスには連結元と連結先があります。 たとえば、パスが OLE DB ソースと並べ替え変換を連結する場合、OLE DB ソースはパスの連結元であり、並べ替え変換はパスの連結先になります。 連結元とはパスが開始するコンポーネントで、連結先とはパスが終了するコンポーネントのことです。  
@@ -65,7 +62,7 @@ ms.locfileid: "35410634"
   
  **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **名前**  
  パスの一意な名前を指定します。  
   
@@ -90,7 +87,7 @@ ms.locfileid: "35410634"
 ## <a name="metadata-page---data-flow-path-editor"></a>[メタデータ] ページ - [データ フロー パス エディター]
 **[データ フロー パス エディター]** ダイアログ ボックスの **[メタデータ]** ページを使用すると、パス列のメタデータを表示できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[パスのメタデータ]**  
  列のメタデータが一覧表示されます。 列のデータを並べ替えるには、列ヘッダーをクリックします。  
   
@@ -130,7 +127,7 @@ ms.locfileid: "35410634"
 ## <a name="data-viewers-page---data-flow-path-editor"></a>[データ ビューアー] ページ - [データ フロー パス エディター]
 **[データ フロー パス エディター]** ダイアログ ボックスの **[データ ビューアー]** ページを使用すると、パスにアタッチされているデータ ビューアーを管理できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **名前**  
  データ ビューアーが一覧表示されます。  
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
-caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d6683b8bfd18385579307b173cc0af5a9fe9c3e1
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312381"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612890"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッション中の役割の交代 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +69,9 @@ ms.locfileid: "35312381"
   
 ||高パフォーマンス|ミラーリング監視サーバーを伴わない高い安全性モード|ミラーリング監視サーバーを伴う高い安全性モード|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|自動フェールオーバー (automatic failover)|いいえ|いいえ|はい|  
-|手動フェールオーバー (manual failover)|いいえ|はい|はい|  
-|サービスの強制|はい|はい|いいえ|  
+|自動フェールオーバー (automatic failover)|いいえ|いいえ|[ユーザー アカウント制御]|  
+|手動フェールオーバー (manual failover)|いいえ|はい|[ユーザー アカウント制御]|  
+|サービスの強制|[ユーザー アカウント制御]|はい|いいえ|  
   
  役割の交代後、すべてのデータベース ユーザーが新しいプリンシパル データベースにアクセスできるようにするには、特定のメタデータが両方のパートナーに存在する必要があります。 また、データベースが定期的にバックアップされ続けるようにするには、新しいプリンシパル サーバーでバックアップ ジョブを作成する必要があります。 詳細については、「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」を参照してください。  
   

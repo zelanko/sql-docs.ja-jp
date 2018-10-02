@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECLARE_CURSOR_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82a1ce7e2b416ed0b31b6612d580e95ac7d7500e
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 3119038bac239e20ed903ef198674a74f9818eac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242114"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609190"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -139,7 +136,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  *select_statement* 内の句が、要求されたカーソルの種類の機能と矛盾する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってカーソルが別の種類に暗黙的に変換されます。 詳細については、「暗黙的なカーソル変換」を参照してください。  
   
  FOR UPDATE [OF *column_name* [**,**...*n*]]  
- カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 列リストを伴わずに UPDATE を指定した場合は、すべての列を更新できます。ただし、READ_ONLY 同時実行オプションを指定した場合は除きます。  
+ カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 列リストを伴わずに UPDATE を指定した場合は、すべての列を更新できます。ただし、READ_ONLY コンカレンシー オプションを指定した場合は除きます。  
   
 ## <a name="remarks"></a>Remarks  
  DECLARE CURSOR は、[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルの属性を定義します。これには、スクロール動作や、カーソルが操作する結果セットを作成するクエリなどが含まれます。 OPEN ステートメントは結果セットを設定し、FETCH ステートメントは結果セットから行を返します。 CLOSE ステートメントは、カーソルに関係付けられた現在の結果セットを解放します。 DEALLOCATE ステートメントは、カーソルが使用するリソースを解放します。  

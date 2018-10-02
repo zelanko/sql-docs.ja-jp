@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 135f1778e8b2fd29b1e026d662d57795a763a269
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404114"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634770"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>レッスン 5-2 - パッケージ構成の有効化と構成
 ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの **Directory** プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
@@ -110,5 +106,5 @@ ms.locfileid: "35404114"
 3.  コピーしたファイルを **New Sample Data** フォルダーに貼り付けます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 3 : Directory プロパティの構成値の変更](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+[手順 3: Directory プロパティの構成値の変更](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   

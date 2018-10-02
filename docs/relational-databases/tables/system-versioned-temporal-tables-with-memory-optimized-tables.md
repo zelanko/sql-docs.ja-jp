@@ -5,34 +5,31 @@ ms.date: 07/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5be615c1f0e672bcd706380ae9adafa9bcbccded
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563824"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614440"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) のシステム バージョン管理されたテンポラル テーブルは、インメモリ OLTP ワークロードで収集されたデータに対して [データ監査および特定時点分析](http://msdn.microsoft.com/library/mt631669.aspx) が必要な場合にコスト効果の高いソリューションを提供するように設計されています。 高いトランザクション スループット、ロックを必要としない同時実行、簡単にクエリできる大量の履歴データを格納する機能を提供します。  
+  [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) のシステム バージョン管理されたテンポラル テーブルは、インメモリ OLTP ワークロードで収集されたデータに対して [データ監査および特定時点分析](http://msdn.microsoft.com/library/mt631669.aspx) が必要な場合にコスト効果の高いソリューションを提供するように設計されています。 高いトランザクション スループット、ロックを必要としないコンカレンシー、簡単にクエリできる大量の履歴データを格納する機能を提供します。  
   
 ## <a name="overview"></a>概要  
  システム バージョン管理されたテンポラル テーブルは、完全なデータ変更履歴を自動的に保持し、特定時点分析用に便利な Transact-SQL 拡張機能を公開します。 一般的なシナリオでは、データの履歴は、定期的に照会されなくても、非常に長い期間 (複数月、場合によっては複数年) 保持されます。  
   
  データ監査と時間ベースの分析は、さまざまな環境で要求されることがあります。非常に大量の要求を処理し、インメモリ OLTP テクノロジが使用されている OLTP システムでは特にそうです。 ただし、テンポラル シナリオでメモリ最適化テーブルを使用するのは、生成される大量の履歴データが一般に使用可能な RAM メモリの制限を超えるため、困難です。 また、古くなるほどサクセスされなくなる読み取り専用の履歴データを格納するために RAM を使用するのは、最適なソリューションではありません。  
   
- メモリ最適化テーブルに対するシステム バージョン管理されたテンポラル テーブルは、現在のデータ (テンポラル テーブル) の格納にはメモリ内テーブルを使用し、履歴データにはディスク ベースのテーブルを使用することにより、高いトランザクション スループット、ロックを必要としない同時実行、大量の履歴データを格納する機能を提供します。 内部的に自動生成されるメモリ最適化ステージング テーブルを使用して、最近の履歴を格納し、ネイティブにコンパイルされたコードから DML を実行できるようにすることで、DML 操作への影響は最小になります。  
+ メモリ最適化テーブルに対するシステム バージョン管理されたテンポラル テーブルは、現在のデータ (テンポラル テーブル) の格納にはメモリ内テーブルを使用し、履歴データにはディスク ベースのテーブルを使用することにより、高いトランザクション スループット、ロックを必要としないコンカレンシー、大量の履歴データを格納する機能を提供します。 内部的に自動生成されるメモリ最適化ステージング テーブルを使用して、最近の履歴を格納し、ネイティブにコンパイルされたコードから DML を実行できるようにすることで、DML 操作への影響は最小になります。  
   
  次の図に、このアーキテクチャを示します。![一時的なインメモリ アーキテクチャ](../../relational-databases/tables/media/temporal-in-memory-architecture.png "一時的なインメモリ アーキテクチャ")  
   

@@ -5,12 +5,8 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -20,16 +16,15 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1a2d92513e2aea9b421693179cd1a54ca0386e9
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9a5a31cd9402fd448db6084b71b7c243de4b97f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608170"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>カスタム データ フロー コンポーネントの開発
   データ フロー タスクは、さまざまなデータ ソースに接続し、そのデータを高速で変換およびルーティングするコンポーネントで構成されています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、拡張可能なオブジェクト モデルが用意されており、開発者はそのオブジェクト モデルを使用して、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] や配置されたパッケージで使用できるカスタム変換元、カスタム変換、およびカスタム変換先を作成できます。 ここでは、カスタム データ フロー コンポーネントの開発に役立つトピックを紹介します。  
@@ -48,7 +43,7 @@ ms.locfileid: "35334246"
  データ フローの実行プラン、およびデータ バッファーの割り当てについて説明します。  
   
  [データ フロー内のデータ型の処理](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
- データ フローが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型をどのように .NET Framework マネージ データ型にマップするかについて説明します。  
+ データ フローが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型をどのように .NET Framework マネージド データ型にマップするかについて説明します。  
   
  [データ フロー コンポーネントの検証](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
  コンポーネントの構成の検証、およびコンポーネントのメタデータの再構成に使用するメソッドについて説明します。  

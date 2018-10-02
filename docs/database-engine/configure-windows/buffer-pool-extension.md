@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5aa357b9e5afaf48a99b30fd7215cf4b1dbb7b03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658200"
 ---
 # <a name="buffer-pool-extension"></a>バッファー プール拡張
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +89,7 @@ ms.locfileid: "32869437"
   
  次の XEvent を使用できます。  
   
-|XEvent|Description|パラメーター|  
+|XEvent|[説明]|パラメーター|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|ページまたはページのグループがバッファー プールから削除され、バッファー プール拡張ファイルに書き込まれると発生します。|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|ページがバッファー プール拡張ファイルからバッファー プールに読み取られると発生します。|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  

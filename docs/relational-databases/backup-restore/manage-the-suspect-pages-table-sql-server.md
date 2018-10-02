@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 824 (Database Engine error)
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b09fd93843050d71c59f1b7bef9a026bb773f32a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621550"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.locfileid: "32921817"
   
     |エラーの説明|**event_type** 値|  
     |-----------------------|---------------------------|  
-    |オペレーティング システムの CRC エラーによって発生した 823 エラー、または、不適切なチェックサムまたは破損ページ (不適切なページ ID) 以外の 824 エラー|@shouldalert|  
+    |オペレーティング システムの CRC エラーによって発生した 823 エラー、または、不適切なチェックサムまたは破損ページ (不適切なページ ID) 以外の 824 エラー|1|  
     |不適切なチェックサム|2|  
     |正しくないページ|3|  
     |復元済み (ページは不適切と見なされた後で復元されました)|4|  

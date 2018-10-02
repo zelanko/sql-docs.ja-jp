@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.asprocessingtask.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ee22fa57e381b8f7daa681427c31842745ead1b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5a4a205f1e1cd89b86bcfc0929d95a638cd24d78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609537"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクは、テーブル モデル、キューブ、ディメンション、マイニング モデルなどの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを処理します。  
@@ -86,7 +83,7 @@ ms.locfileid: "35333476"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>[Analysis Services 処理タスク エディター] ([全般] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Analysis Services 処理タスクの名前と説明を指定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **名前**  
  Analysis Services 処理タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -109,7 +106,7 @@ ms.locfileid: "35333476"
   
 4.  テーブル モデルでは、バッチ設定が無視されます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **Analysis Services 接続マネージャー**  
  既存の Analysis Services 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   

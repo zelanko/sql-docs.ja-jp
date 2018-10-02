@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b6152a89af59acd56478b6dabee5d29f8d009f9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b010e4b913d6e7259306cceb73d61cebcdb13b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32862557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629530"
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Always On 可用性グループの拡張イベント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ alwayson_health でカバーされているイベントの一部については�
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_replica_state_change|  
 |カテゴリ|alwayson|  
@@ -98,7 +95,7 @@ alwayson_health でカバーされているイベントの一部については�
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|Description|  
+|[オブジェクト名]|Type_name|[説明]|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -121,7 +118,7 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_group_lease_expired|  
 |カテゴリ|alwayson|  
@@ -129,7 +126,7 @@ GO
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|Description|  
+|[オブジェクト名]|Type_name|[説明]|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -149,7 +146,7 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[オブジェクト名]|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |availability_replica_automatic_failover_validation||  
 |カテゴリ|alwayson|  
@@ -157,7 +154,7 @@ GO
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|Description|  
+|[オブジェクト名]|Type_name|[説明]|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -186,7 +183,7 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (複数のエラー番号): 転送または接続に問題がある場合  
  フィルター処理した各イベントは、可用性グループが依存しているトランスポートまたはデータベース ミラーリング エンドポイントで接続の問題が発生したことを示します。  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|error_reported<br /><br /> フィルター処理する番号: 35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
 |カテゴリ|エラー|  
@@ -194,7 +191,7 @@ GO
   
 #### <a name="error-numbers-to-filter"></a>フィルター処理するエラー番号  
   
-|エラー番号|Description|  
+|エラー番号|[説明]|  
 |------------------|-----------------|  
 |35201|可用性レプリカ '%ls' への接続を確立しようとしているときに接続タイムアウトが発生しました。|  
 |35202|可用性グループ '%ls' での、ID [%ls] を持つ可用性レプリカ '%ls' から ID [%ls] を持つ可用性レプリカ '%ls' への接続が正常に確立されました。  このメッセージは情報提供だけを目的としています。 ユーザーによる操作は不要です。|  
@@ -249,7 +246,7 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|data_movement_suspend_resume|  
 |カテゴリ|Alwayson|  
@@ -259,7 +256,7 @@ GO
   
 ||||  
 |-|-|-|  
-|[オブジェクト名]|Type_name|Description|  
+|[オブジェクト名]|Type_name|[説明]|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前 (使用可能な場合)。|  
 |availability_replica_id|guid|可用性レプリカの ID。|  
@@ -292,7 +289,7 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|alwayson_ddl_execution|  
 |カテゴリ|alwayson|  
@@ -300,7 +297,7 @@ GO
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|Description|  
+|[オブジェクト名]|Type_name|[説明]|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -325,7 +322,7 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_replica_manager_state_change|  
 |カテゴリ|alwayson|  
@@ -333,7 +330,7 @@ GO
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|Description|  
+|[オブジェクト名]|Type_name|[説明]|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|可用性レプリカ マネージャーの現在の状態。<br /><br /> オンライン<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
   
@@ -356,7 +353,7 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|error_reported<br /><br /> エラー番号 1480: REPLICATION_TYPE_MSG データベース "DATABASE_NAME" は、REASON_MSG が原因で、“OLD_ROLE” から “NEW_ROLE” にロールを変更中です|  
 |カテゴリ|エラー|  

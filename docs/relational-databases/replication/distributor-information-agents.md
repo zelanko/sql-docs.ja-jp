@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7977a01e8c686f1418d5ba4690b1b0adbf6a6bc
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 67b2dff892cd84cfbc2041088bd9c5549b6ee1dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595890"
 ---
 # <a name="distributor-information-agents"></a>ディストリビューター情報、エージェント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "37356254"
   
  スナップショット エージェント、ログ リーダー エージェント、キュー リーダー エージェント、およびメンテナンス ジョブの詳細については、「 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)」を参照してください。 ディストリビューターの **[エージェント]** タブでエージェント情報を表示する場合は、スナップショット エージェントおよびログ リーダー エージェントのパブリッシャー情報があることに注意してください ただし、ディストリビューター ビューのディストリビューターの **[エージェント]** タブでは、 **[ディストリビューター エージェント]** および **[マージ エージェント]** も選択できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  この後のセクションでは、このタブで表示されるディストリビューター エージェントおよびマージ エージェントのデータについて説明します。  
   
 ### <a name="distributor-agent"></a>[ディストリビューター エージェント]  

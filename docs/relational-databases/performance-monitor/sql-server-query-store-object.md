@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store object
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 527ad5bc399654bd69a05bbca4f801e7c6d643ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c849a405c3cfd343e1c63027ca314008abad37b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608058"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, クエリ ストア オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、 **SQLServer:Query Store**カウンターについて説明します。  
   
-|SQL Server のクエリ ストア カウンター|Description|  
+|SQL Server のクエリ ストア カウンター|[説明]|  
 |-------------------------------------|-----------------|  
 |**Query Store CPU usage (クエリ ストアの CPU 使用率)**|クエリ ストアの CPU の使用率を示します。|  
 |**Query Store logical reads (クエリ ストアの論理読み取り数)**|クエリ ストアによって行われた論理読み取りの数を示します。|  
@@ -41,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|クエリ ストアのインスタンス|Description|  
+|クエリ ストアのインスタンス|[説明]|  
 |--------------------------|-----------------|  
 |**_Total**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスのクエリ ストアの情報です。|  
 |\<データベース名>|このデータベースのクエリ ストアの情報です。|  

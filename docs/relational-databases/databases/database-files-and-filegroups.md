@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3d3c7a580a347a487c31cd6667a76da9c984b90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a80a90c998e02e91546dfe306da558a0a7235df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642720"
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ ms.locfileid: "32932607"
 ## <a name="database-files"></a>データベース ファイル  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースには、次の表で示すように 3 種類のファイルがあります。  
   
-|ファイル|Description|  
+|ファイル|[説明]|  
 |----------|-----------------|  
 |プライマリ|プライマリ データ ファイルにはデータベースの起動情報が含まれており、データベース内の他のファイルを指し示します。 ユーザー データおよびオブジェクトは、このファイルまたはセカンダリ データ ファイルに格納できます。 各データベースには 1 つのプライマリ データ ファイルがあります。 プライマリ データ ファイルに推奨されるファイル名拡張子は .mdf です。|  
 |セカンダリ|セカンダリ データ ファイルは省略可能です。また、ユーザー定義であり、ユーザー データが格納されます。 セカンダリ ファイルを使用すると、各ファイルを異なるディスク ドライブに配置することにより、複数のディスクにデータを分散できます。 また、データベースが 1 つの Windows ファイルの最大サイズを超えた場合には、セカンダリ データ ファイルを使用してデータベースを拡張できます。<br /><br /> セカンダリ データ ファイルに推奨されるファイル名拡張子は .ndf です。|  
@@ -107,7 +103,7 @@ ms.locfileid: "32932607"
   
  すべてのデータ ファイルは、次の表に一覧表示されているファイル グループに格納されます。  
   
-|[ファイル グループ]|Description|  
+|[ファイル グループ]|[説明]|  
 |---------------|-----------------|  
 |プライマリ|プライマリ ファイルが含まれているファイル グループ。 すべてのシステム テーブルがプライマリ ファイル グループに割り当てられます。|  
 |メモリ最適化データ|メモリ最適化ファイル グループは filestream ファイル グループに基づきます。|  

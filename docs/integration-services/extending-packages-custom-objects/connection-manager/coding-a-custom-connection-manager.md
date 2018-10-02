@@ -5,25 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7185db4d3076e7cb243a7f2ac82ef021e1dc5648
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 21212d035c8f2c047d6d3bef48900d2b3c66a58d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411604"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597261"
 ---
 # <a name="coding-a-custom-connection-manager"></a>カスタム接続マネージャーのコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
@@ -198,7 +193,7 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
  外部データ ソースへの接続をサポートするメソッドは、カスタム接続マネージャーにとって非常に重要なメソッドです。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> メソッドは、デザイン時と実行時のさまざまな時点で呼び出されます。  
   
 ### <a name="acquiring-the-connection"></a>接続の取得  
- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> メソッドの使用時にカスタム接続マネージャーが返すオブジェクトについて、適切な種類を決定する必要があります。 たとえば、ファイル接続マネージャーは、パスとファイル名が含まれた文字列のみを返し、ADO.NET 接続マネージャーは、既に開いているマネージ接続オブジェクトを返します。 OLE DB 接続マネージャーは、マネージ コードから使用できないネイティブの OLE DB 接続オブジェクトを返します。 このトピック内のコード スニペットの基になっているカスタム SQL Server 接続マネージャーは、開いている **SqlConnection** オブジェクトを返します。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> メソッドの使用時にカスタム接続マネージャーが返すオブジェクトについて、適切な種類を決定する必要があります。 たとえば、ファイル接続マネージャーは、パスとファイル名が含まれた文字列のみを返し、ADO.NET 接続マネージャーは、既に開いているマネージド接続オブジェクトを返します。 OLE DB 接続マネージャーは、マネージド コードから使用できないネイティブの OLE DB 接続オブジェクトを返します。 このトピック内のコード スニペットの基になっているカスタム SQL Server 接続マネージャーは、開いている **SqlConnection** オブジェクトを返します。  
   
  接続マネージャーのユーザーは、返されるオブジェクトを適切な種類にキャストし、そのメソッドとプロパティにアクセスできるよう、オブジェクトの種類をあらかじめ知っておく必要があります。  
   

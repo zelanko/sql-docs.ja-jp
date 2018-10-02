@@ -5,9 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default packet size
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - packets [SQL Server], size
 - network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 831bfa31d5ca82afed2e2e4bbc131ac91911cecb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46de327bcc6a08d27291622fd190812919444873
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613580"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ ms.locfileid: "32866377"
   
 -   アプリケーションで一括コピー操作を行ったり、大量の text 型または image 型のデータを送受信する場合は、パケット サイズを既定値より大きくすると、ネットワークの読み取りと書き込みの操作が少なくなるので効率が向上することがあります。 アプリケーションで送受信する情報量が少ない場合は、パケット サイズを 512 バイトに設定できます。これは、ほとんどのデータ転送に十分なサイズです。  
   
--   異なるネットワーク プロトコルを使用しているシステムでは、最も一般的に使用されるプロトコル向けのサイズに network packet size を設定します。 ネットワーク プロトコルで大きなパケットがサポートされるときは、network packet size オプションを設定することでネットワーク パフォーマンスを向上できます。 クライアント アプリケーションはこの値を上書きできます。  
+-   異なるネットワーク プロトコルを使用しているシステムでは、最も一般的に使用されるプロトコル向けのサイズに network packet size を設定します。 ネットワーク プロトコルで大きなパケットがサポートされるときは、network packet size オプションを設定することでネットワーク パフォーマンスを向上できます。 クライアント アプリケーションはこの値をオーバーライドできます。  
   
 -   OLE DB 関数、ODBC (Open Database Connectivity) 関数、および DB-Library 関数を呼び出して、パケット サイズの変更を要求することもできます。 要求されたパケット サイズにサーバーが対応できない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] からクライアントに警告メッセージが送信されます。 環境によっては、パケット サイズを変更すると、次のような通信リンク エラーが発生することがあります。  
   

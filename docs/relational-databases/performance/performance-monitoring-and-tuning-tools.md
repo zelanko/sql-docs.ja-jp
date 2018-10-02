@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29c01064646de4f80bd11f6a7536d895368b6e52
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+ms.openlocfilehash: c5411043ae54d4082cd4d1b2c194b48ae9d78b65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34811966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626840"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,12 +54,12 @@ ms.locfileid: "34811966"
   
 |イベントまたは利用状況|拡張イベント|SQL Server Profiler|Distributed Replay|システム モニター|利用状況モニター|Transact-SQL|エラー ログ|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|傾向分析|はい|はい||はい||||  
+|傾向分析|[ユーザー アカウント制御]|はい||[ユーザー アカウント制御]||||  
 |キャプチャしたイベントの再生||可 (1 台のコンピューターから)|可 (複数のコンピューターから)|||||  
-|アドホック監視||はい|||はい|はい|はい|  
-|警告の生成||||はい||||  
-|グラフィック インターフェイス|はい|はい||はい|はい||はい|  
-|カスタム アプリケーション内での使用|はい|可*||||はい||  
+|アドホック監視||[ユーザー アカウント制御]|||はい|はい|[ユーザー アカウント制御]|  
+|警告の生成||||[ユーザー アカウント制御]||||  
+|グラフィック インターフェイス|[ユーザー アカウント制御]|はい||はい|はい||[ユーザー アカウント制御]|  
+|カスタム アプリケーション内での使用|[ユーザー アカウント制御]|可*||||[ユーザー アカウント制御]||  
   
  * [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] システム ストアド プロシージャを使用する。  
   

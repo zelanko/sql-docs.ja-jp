@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cdf3056f71609a33910a6c4812127fc78861be5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad6102a7d6ddef80770d028c5832d1af6fb06f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921937"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598094"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>システム データベースのバックアップと復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,14 +31,14 @@ ms.locfileid: "32921937"
   
  次の表に、すべてのシステム データベースの概要を示します。  
   
-|システム データベース|Description|バックアップの必要性|復旧モデル|コメント|  
+|システム データベース|[説明]|バックアップの必要性|復旧モデル|コメント|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
-|[master](../../relational-databases/databases/master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに関するシステム レベルのすべての情報を記録するデータベース。|はい|Simple|**master** は、ビジネス ニーズを満たすのに十分なデータ保護を行うために必要な頻度でバックアップします。 定期的なバックアップ スケジュールの設定をお勧めします。大量の更新の後で追加のバックアップを行ってこれを補完することもできます。|  
-|[model](../../relational-databases/databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上に作成されるすべてのデータベースのテンプレート。|はい|ユーザーが構成可能*|**model** は、データベース オプションをカスタマイズした直後など、ビジネス ニーズに応じて必要な場合のみバックアップします。<br /><br /> **ベスト プラクティス:** **model**については、必要なときにデータベースの完全バックアップのみを作成することをお勧めします。 **model** はサイズが小さく、変更頻度が低いため、ログのバックアップは必要ありません。|  
-|[msdb](../../relational-databases/databases/msdb-database.md)|警告やジョブのスケジュール設定とオペレーターの記録のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるデータベース。 **msdb** には、バックアップと復元の履歴テーブルなどの履歴テーブルも含まれます。|はい|単純 (既定)|**msdb** は更新するたびにバックアップします。|  
+|[master](../../relational-databases/databases/master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに関するシステム レベルのすべての情報を記録するデータベース。|[ユーザー アカウント制御]|Simple|**master** は、ビジネス ニーズを満たすのに十分なデータ保護を行うために必要な頻度でバックアップします。 定期的なバックアップ スケジュールの設定をお勧めします。大量の更新の後で追加のバックアップを行ってこれを補完することもできます。|  
+|[model](../../relational-databases/databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上に作成されるすべてのデータベースのテンプレート。|[ユーザー アカウント制御]|ユーザーが構成可能*|**model** は、データベース オプションをカスタマイズした直後など、ビジネス ニーズに応じて必要な場合のみバックアップします。<br /><br /> **ベスト プラクティス:** **model**については、必要なときにデータベースの完全バックアップのみを作成することをお勧めします。 **model** はサイズが小さく、変更頻度が低いため、ログのバックアップは必要ありません。|  
+|[msdb](../../relational-databases/databases/msdb-database.md)|警告やジョブのスケジュール設定とオペレーターの記録のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるデータベース。 **msdb** には、バックアップと復元の履歴テーブルなどの履歴テーブルも含まれます。|[ユーザー アカウント制御]|単純 (既定)|**msdb** は更新するたびにバックアップします。|  
 |[Resource](../../relational-databases/databases/resource-database.md) (RDB)|に付属するすべてのシステム オブジェクトのコピーを含んだ読み取り専用のデータベース。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|いいえ|—|**Resource** データベースにはコードのみが含まれ、mssqlsystemresource.mdf ファイル内に存在します。 そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **Resource** データベースをバックアップできません。<br /><br /> 注: mssqlsystemresource.mdf ファイルに対してファイル ベースまたはディスク ベースのバックアップを実行するには、このファイルをデータベース ファイルではなくバイナリ (.exe) ファイルとして扱います。 ただし、これらのバックアップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の復元を使用できません。 mssqlsystemresource.mdf のバックアップ コピーの復元は手動でのみ実行できます。また、現在の **Resource** データベースを古いバージョンや安全でない可能性のあるバージョンで上書きしないように注意する必要があります。|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|一時的な結果セットや生成途中の結果セットを保存するためのワークスペース。 このデータベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを起動するたびに作成し直されます。 サーバー インスタンスをシャットダウンするとき、 **tempdb** 内のすべてのデータは完全に削除されます。|いいえ|Simple|**tempdb** システム データベースはバックアップできません。|  
-|[[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)|サーバーをレプリケーション ディストリビューターとして構成している場合に限り存在するデータベース。 あらゆる種類のレプリケーションのメタデータや履歴、およびトランザクション レプリケーションのトランザクションが保存されます。|はい|Simple|**distribution** データベースをバックアップするタイミングの詳細については、「[レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。|  
+|[[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)|サーバーをレプリケーション ディストリビューターとして構成している場合に限り存在するデータベース。 あらゆる種類のレプリケーションのメタデータや履歴、およびトランザクション レプリケーションのトランザクションが保存されます。|[ユーザー アカウント制御]|Simple|**distribution** データベースをバックアップするタイミングの詳細については、「[レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。|  
   
  *model の現在の復旧モデルを確認する方法については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)」または「[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。  
   

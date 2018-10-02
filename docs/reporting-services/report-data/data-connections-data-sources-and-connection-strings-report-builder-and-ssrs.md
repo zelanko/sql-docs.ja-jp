@@ -4,16 +4,15 @@ ms.date: 08/21/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f97f05c9c12e91cbab6be3b65120530a7946d8a3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6b6b443d1cdba9a72d6117465fd5c350d79abd63
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276343"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611880"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
 
@@ -55,7 +54,7 @@ ms.locfileid: "43276343"
   
  次の表は、埋め込みデータ ソースと共有データ ソースの違いをまとめたものです。  
   
-|[説明]|埋め込み<br /><br /> [データ ソース]|Shared<br /><br /> [データ ソース]|  
+|[説明]|埋め込み<br /><br /> [データ ソース]|共有<br /><br /> [データ ソース]|  
 |-----------------|------------------------------|----------------------------|  
 |データ接続がレポート定義に埋め込まれる|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
 |レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  

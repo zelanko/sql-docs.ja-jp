@@ -4,29 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - replication [SQL Server], planning
 - programming [SQL Server replication], planning
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03bedc038bd35a85cd12d08c695491d9bba8d9c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd202a4e3b42280f309912cb94a0e6a5ff0379d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653454"
 ---
 # <a name="replication-programming-concepts"></a>レプリケーションのプログラミング概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,9 +91,9 @@ ms.locfileid: "32956657"
 ## <a name="choosing-a-development-environment"></a>開発環境の選択  
  レプリケーション アプリケーションの開発時に検討する基本開発環境は、3 種類あります。 どの開発環境からもほぼ同じレプリケーション機能を利用できますが、いくつか例外があります。 レプリケーション アプリケーションは、次の環境で開発できます。  
   
--   **マネージ コード**  
+-   **マネージド コード**  
   
-     [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] プログラミングと .NET 共通言語ランタイム (CLR) を利用できる、オブジェクト指向開発環境です。 マネージ コードは、.NET 開発と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アプリケーションのどちらにも推奨されるプログラミング環境です。 マネージ レプリケーション インターフェイスを利用することで、[!INCLUDE[tsql](../../../includes/tsql-md.md)] がわからなくてもオブジェクト指向の方法でレプリケーション管理をプログラミングできます。さらに、スクリプトから使用できないレプリケーション エージェントを実行する場合に、コールバック機能も提供できます。 マネージ コードは、再利用可能なコンポーネントおよびユーザー インターフェイス アプリケーションの開発に最適な環境です。  
+     [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] プログラミングと .NET 共通言語ランタイム (CLR) を利用できる、オブジェクト指向開発環境です。 マネージド コードは、.NET 開発と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アプリケーションのどちらにも推奨されるプログラミング環境です。 マネージド レプリケーション インターフェイスを利用することで、[!INCLUDE[tsql](../../../includes/tsql-md.md)] がわからなくてもオブジェクト指向の方法でレプリケーション管理をプログラミングできます。さらに、スクリプトから使用できないレプリケーション エージェントを実行する場合に、コールバック機能も提供できます。 マネージド コードは、再利用可能なコンポーネントおよびユーザー インターフェイス アプリケーションの開発に最適な環境です。  
   
 -   **スクリプトの作成**  
   
@@ -114,9 +108,9 @@ ms.locfileid: "32956657"
   
 |インターフェイス|環境|使用法|  
 |---------------|-----------------|----------|  
-|[レプリケーション管理オブジェクトの概念](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|マネージ コード|管理、監視、同期|  
-|<xref:Microsoft.SqlServer.Replication>|マネージ コード|同期|  
-|<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|マネージ コード|カスタム ロジックとマージ同期プロセスを統合するためのビジネス ロジック ハンドラーの作成|  
+|[レプリケーション管理オブジェクトの概念](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|マネージド コード|管理、監視、同期|  
+|<xref:Microsoft.SqlServer.Replication>|マネージド コード|同期|  
+|<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|マネージド コード|カスタム ロジックとマージ同期プロセスを統合するためのビジネス ロジック ハンドラーの作成|  
 |[レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|スクリプトの作成|管理と監視。|  
 |[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|スクリプトの作成|同期|  
   
@@ -131,7 +125,7 @@ ms.locfileid: "32956657"
   
 3.  パブリッシャーに接続するときには、Windows 認証と仮想プライベート ネットワークの使用を含む、レプリケーションのセキュリティ ガイドラインすべてに従います。 Web 同期を実行する場合は、SSL (Secure Sockets Layer) 接続を使用します。 詳細については、「[Web 同期の構成](../../../relational-databases/replication/configure-web-synchronization.md)」を参照してください。  
   
-4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能を利用するには、マネージ コード言語を使用してアプリケーションを開発します。  
+4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能を利用するには、マネージド コード言語を使用してアプリケーションを開発します。  
   
 5.  このような要件に基づき、このアプリケーションに必要なレプリケーション機能はレプリケーション管理オブジェクト (RMO) 管理インターフェイスによってすべて提供できます。  
   
