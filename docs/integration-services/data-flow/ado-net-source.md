@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f63cd49b5a78a42bdff0ef25f69ca9f55217c48
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8ca0a56e3168e5493104cd54472516800d444078
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665586"
 ---
 # <a name="ado-net-source"></a>ADO NET ソース
   ADO NET ソースは .NET プロバイダーのデータを呼び出し、そのデータをデータ フローで使用できるようにします。  
@@ -62,7 +59,7 @@ ms.locfileid: "35328336"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型、サポートされるデータ型変換、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を含む特定のデータベース間でのデータ型マッピングの詳細については、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型をマネージ データ型にマッピングする方法については、「 [データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型をマネージド データ型にマッピングする方法については、「[データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
 ## <a name="ado-net-source-troubleshooting"></a>ADO NET ソースのトラブルシューティング  
  ADO NET ソースによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ADO NET ソースによる外部データ ソースからのデータ読み込みに関するトラブルシューティングを行うことができます。 ADO NET ソースによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
@@ -155,7 +152,7 @@ ms.locfileid: "35328336"
   
 3.  **[ADO NET 変換元エディター]** で、 **[列]** をクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -178,7 +175,7 @@ ms.locfileid: "35328336"
   
 3.  **[ADO NET 変換元エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   

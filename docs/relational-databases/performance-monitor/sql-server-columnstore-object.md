@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9e2cb03070450920cae365f435ae871367ec704
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 812cb7c121735ea6246f3dbf993068dea5970b41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659180"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server の Columnstore オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "33696605"
   
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** カウンターについて説明します。  
   
-|Columnstore カウンター|Description|  
+|Columnstore カウンター|[説明]|  
 |--------------------------|-----------------|  
 |**閉じられたデルタ行グループ数**|閉じられたデルタ行グループの数。|  
 |**圧縮されたデルタ行グループ数**|圧縮されたデルタ行グループの数。|  
