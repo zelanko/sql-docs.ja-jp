@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c210840b717f5cc13fac3fe0ca2e9c9e7f763952
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8b3c694c67ae75e3e6d19a96e78feb2810335f87
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747734"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>マスター データ サービスのアンインストールと削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ ms.locfileid: "37970694"
 |----------|-----------------|  
 |フォルダーとファイル|アンインストール プロセスによって、ほとんどのフォルダーとファイルがインストール パスから削除されます。<br /><br /> アンインストール プロセスでは、Master Data Services フォルダーおよび MDSTempDir フォルダーはインストール場所から削除されません。 これらのフォルダーのファイル システムからの削除は、アンインストール プロセスの完了後に手動で実行できます。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリ|アンインストール プロセスによって、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリがグローバル アセンブリ キャッシュ (GAC) から削除されます。|  
-|[データベース]|アンインストール プロセスは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースには影響を及ぼしません。 データベースは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内にそのまま残ります。つまり、マスター データ、モデル オブジェクト、ユーザーおよびグループの権限、ビジネス ルールなどを含めて、データは損失しません。<br /><br /> データベースを必要とせず、別の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サイトまたはアプリケーションに将来接続する予定がない場合、データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスからデータベースを削除することもできます。 詳細については、「 [データベースの削除](../../relational-databases/databases/delete-a-database.md)」を参照してください。|  
+|データベース|アンインストール プロセスは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースには影響を及ぼしません。 データベースは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内にそのまま残ります。つまり、マスター データ、モデル オブジェクト、ユーザーおよびグループの権限、ビジネス ルールなどを含めて、データは損失しません。<br /><br /> データベースを必要とせず、別の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サイトまたはアプリケーションに将来接続する予定がない場合、データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスからデータベースを削除することもできます。 詳細については、「 [データベースの削除](../../relational-databases/databases/delete-a-database.md)」を参照してください。|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] と Web.config|WebApplication フォルダーは、アンインストール プロセスによってファイル システムから削除されます。 WebApplication フォルダーには、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]の Web アプリケーション ファイルと Web.config ファイルがあります。<br /><br /> **\*\* 重要 \*\*** アンインストールを実行する前に、ファイル内に保存されているカスタム設定やその他の情報を維持するために Web.config ファイルを別の場所にコピーする必要がある場合があります。 アンインストール プロセスが完了すると、Web.config ファイルは回復できません。|  
 |インターネット インフォメーション サービス (IIS) の項目|アンインストール プロセスは、ローカル コンピューター上の IIS にあるアプリケーション プール、Web サイト、Web アプリケーションには影響を及ぼしません。 アンインストール プロセスによって、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]の WebApplication フォルダーと Web.config ファイルが削除されるため、これらのファイルを使用する [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションでは、コンテンツが表示されなくなります。 ユーザーがこうした Web アプリケーションへのアクセスを試みると、「HTTP エラー 500.19 - 内部サーバー エラー: ページに関連する構成データが無効であるため、要求されたページにアクセスできません。」というメッセージが表示されます。<br /><br /> Web サイトまたはアプリケーション、および Web サイトまたはアプリケーションで使用されているアプリケーション プールを今後必要としない場合は、IIS ツールを使用してそれらを削除できます。 詳細については、 [TechNet の『](http://go.microsoft.com/fwlink/?LinkId=184885) IIS 7 Operations Guide [!INCLUDE[msCoName](../../includes/msconame-md.md)] 』を参照してください。|  
 |**MDS_ServiceAccounts** グループ|アンインストール プロセスが完了しても、 **MDS_ServiceAccounts** Windows グループおよびそのグループに追加されたサービス アカウントはそのまま残ります。 グループおよびアカウントを今後必要としない場合、削除できます。|  

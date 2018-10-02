@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 92fdfd91cc3087e91169cd65f6c10f8b40e82848
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: de84aa458952ad06d330b7a32b6c68bc3e29bdaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564096"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751070"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>チュートリアル: SQL Server のカスタムの静的コード分析ルール アセンブリを作成する
 このチュートリアルでは、SQL Server のコード分析ルールを作成する手順について説明します。 このチュートリアルで作成するルールは、ストアド プロシージャ、トリガー、および関数で WAITFOR DELAY ステートメントを回避する場合に使用します。  
