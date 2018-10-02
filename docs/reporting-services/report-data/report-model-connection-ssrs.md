@@ -4,17 +4,16 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f82c17407e6b7861e597a34d92ee16751e8ad980
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6fb1b5f810af0385195ad1f2f6bec048152887e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856810"
 ---
 # <a name="report-model-connection-ssrs"></a>レポート モデルの接続 (SSRS)
   レポート モデルのデータを含めるには、レポート モデルに基づいたデータセットがデータ ソースとして必要です。 他のレポート データ ソースとは異なり、レポート モデルにはデータ拡張機能がありません。 レポート ビルダーでは、レポート サーバーを参照して、モデルを直接選択します。 レポート デザイナーでは、レポート モデルへの URL を指定します。  

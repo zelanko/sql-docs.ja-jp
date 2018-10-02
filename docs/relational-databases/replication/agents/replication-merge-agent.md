@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2be02312e00441df86c3f9811c3d625fc98d18cf
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: fafb8f803aedf5c200f2e1e09c2400478a5da374
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846550"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -271,7 +267,7 @@ replmerg [-?]
  **-MakeGenerationInterval** *make_generation_interval_seconds*  
  クライアントにダウンロードする生成結果 (変更のバッチ) を作成する間隔 (秒) です。 既定値は **1** 秒です。  
   
- Makegeneration は、パブリッシャーの変更をサブスクライバーにダウンロードするように準備するプロセスです。また、ダウンロード中にパフォーマンスのボトルネックになる場合があります。 makegeneration プロセスが **-MakeGenerationInterval**で指定された間隔で既に実行された場合、現在の同期セッションでは、このプロセスはスキップされます。 これは、同期の同時実行に役立つ場合があります。特に、サブスクライバーが変更をダウンロードしない場合に役立ちます。  
+ Makegeneration は、パブリッシャーの変更をサブスクライバーにダウンロードするように準備するプロセスです。また、ダウンロード中にパフォーマンスのボトルネックになる場合があります。 makegeneration プロセスが **-MakeGenerationInterval**で指定された間隔で既に実行された場合、現在の同期セッションでは、このプロセスはスキップされます。 これは、同期のコンカレンシーに役立つ場合があります。特に、サブスクライバーが変更をダウンロードしない場合に役立ちます。  
   
  **-MaxBcpThreads** *number_of_threads*  
  並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドおよび ODBC 接続の最大数は、 **MaxBcpThreads** 、またはパブリケーション データベース内のシステム テーブル **sysmergeschemachange** に表示される一括コピー要求数のいずれか少ない方の値になります。 **MaxBcpThreads** の値は、0 よりも大きくする必要がありますが、ハードコーディングされた上限はありません。 既定値は **1**です。  

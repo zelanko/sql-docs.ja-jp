@@ -4,7 +4,6 @@ ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.previewview.f1
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0ca0aa6329a06fbcf3a079c61c7d61da6b8d316c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4386fef770eb741b55df5740651cec1bd64ef048
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854280"
 ---
 # <a name="preview-view"></a>[プレビュー] ビュー
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポート デザイナーで **[プレビュー]** ビューを使用すると、表示レポートを表示できます。 レポートをプレビューすると、レポート デザイナーでは、レポートがローカルで実行され、[プレビュー] ビューに表示されます。 プレビュー モードでは、レポート全体が処理されます。 レポートに複雑なクエリや大量のデータが含まれている場合、初回のプレビューは、完了するまでに数分かかることがあります。 その後の変更内容が、レポートの形式に関するのみである場合、プレビュー時にはキャッシュされたデータが使用されます。

@@ -5,26 +5,23 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7f4ed8039cbce77ae6f1350631cc0329c358af7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7c5096ef0690e915b1063c684ed60e00bcba8f33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854540"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -273,8 +270,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- 
-  [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](http://msdn.microsoft.com/library/dn673537.aspx)  
  [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
