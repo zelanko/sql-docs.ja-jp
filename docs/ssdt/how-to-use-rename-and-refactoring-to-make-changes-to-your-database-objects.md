@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,16 +14,15 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ba39da9c13a1a2051f249942de86b18963eade8
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737670"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する方法
 Transact\-SQL エディターの [リファクター] コンテキスト メニューを使用すると、オブジェクトの名前を変更することも別のスキーマに移動することもできます。また、変更をコミットする前に、影響を受ける領域をすべてプレビューすることもできます。 [リファクター] メニューでは、データベース オブジェクトへのすべての参照を完全修飾することも、データベース プロジェクト内の `SELECT` ステートメントに含まれるワイルドカード文字を展開することもできます。  
