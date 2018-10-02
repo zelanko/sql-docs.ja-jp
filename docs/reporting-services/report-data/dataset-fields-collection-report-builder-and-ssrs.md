@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0986f432f2d94bcc81bdf2112ebe19c589767ae
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273604"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853389"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>データセット フィールド コレクション (レポート ビルダーおよび SSRS)
   データセット フィールドは、データ接続のデータを表します。 フィールドは数値データまたは非数値データを表すことができます。 売上高、売上合計、顧客名、データベース識別子、URL、画像、空間データ、電子メール アドレスなどがその例です。 デザイン画面では、フィールドがテキスト ボックス、テーブル、グラフなどのレポート アイテムの式として表示されます。  

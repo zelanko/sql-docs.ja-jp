@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf0d35cd3838e2d57b8c862369f73e97d09ced32
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 936f4d6ecf91169f68542042f060dd6ec379372f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807461"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>SharePoint サイト上のレポート サーバー アイテムに対する権限の設定
   既定のセキュリティ設定では必要なレベルのアクセスが提供されない場合は、新しい権限レベルを作成して、特定のレポート サーバー アイテムまたは処理に対するアクセスを提供できます。 カスタム セキュリティ設定は、アクセスを特定のレポートに制限する場合に便利です。  

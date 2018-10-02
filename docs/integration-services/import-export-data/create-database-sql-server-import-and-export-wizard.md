@@ -5,23 +5,20 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef0a0e2e2abf0f871e8d7a4e61e7f5c5457dda36
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3456afaeff6d8eda0ee54bac846fab00c7e35488
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807290"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
 **[変換先の選択]** ページで **[新規]** を選択して新しい SQL Server 変換先データベースを作成する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[データベースの作成]** ダイアログ ボックスが表示されます。 このページでは、新しいデータベースの名前を指定します。 必要に応じて、新しいデータベースとそのログ ファイルの初期サイズと自動拡張の設定を変更することもできます。 

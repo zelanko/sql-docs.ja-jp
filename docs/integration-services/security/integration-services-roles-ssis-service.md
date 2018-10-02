@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.dtsserver.packageroles.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d6570b3514a0accefb46648d0e1af0b21621abe7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8fbc95fb105a5bfcb3eebc09a728d6487ffbf4bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793733"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services のロール (SSIS サービス)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されたパッケージに安全にアクセスするための固定データベース レベルの特定のロールを提供します。 利用可能なロールは、パッケージを SSIS カタログ データベース (SSISDB) に保存するか、msdb データベースに保存するかどうかによって異なります。  
@@ -141,7 +138,7 @@ ms.locfileid: "35409044"
   
  **sysssispackages** テーブルの **ownersid** 列には、パッケージを作成したユーザーの一意なセキュリティ識別子が表示されます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[パッケージ名]**  
  パッケージの名前を指定します。  
   

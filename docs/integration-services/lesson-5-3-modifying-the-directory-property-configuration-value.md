@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63233be39af3f6edfa46102d56446bd42cc185b1
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a144bbde1537e167c82b63389be83c72f55a6346
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742410"
 ---
 # <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>レッスン 5-3 - Directory プロパティの構成値の変更
 ここでは、SSISTutorial.dtsConfig ファイルに保存されている構成設定のうち、パッケージ レベル変数 `User::varFolderName`の Value プロパティを変更します。 この変数は、ForEach ループ コンテナーの Directory プロパティを更新します。 変更後の値は、前の実習で作成した **New Sample Data** フォルダーを参照するようにします。 構成設定を変更し、パッケージを実行すると、パッケージ レベル変数によって Directory プロパティが更新されます。この更新では、パッケージにもともと構成されていた Directory 値は使用されず、構成ファイルから生成された値が使用されます。  
@@ -38,7 +34,7 @@ ms.locfileid: "35328516"
 3.  変更を保存し、テキスト エディターを閉じます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 4:レッスン 5 のチュートリアル パッケージのテスト](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+[手順 4: レッスン 5 のチュートリアル パッケージのテスト](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7584d87a0080b10cf5e0ab4d20172a20ea778fa0
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782230"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
@@ -111,7 +108,7 @@ ms.locfileid: "35406064"
  SQL の TRUNCATE TABLE コマンドでは、DELETE トリガーは起動されません。 TRUNCATE TABLE コマンドが参照テーブルに対して使用されると、参照テーブルと一致インデックスが同期されなくなり、あいまい参照変換が失敗します。 一致インデックス テーブルを維持するトリガーが参照テーブルに組み込まれている場合は、TRUNCATE TABLE コマンドではなく、SQL の DELETE コマンドを使用してください。  
   
 > [!NOTE]  
->  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージ ストアド プロシージャを使用してインデックスを維持します。 これらのマネージ ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+>  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージド ストアド プロシージャを使用してインデックスを維持します。 これらのマネージド ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
 >   
 >  **[保存されたインデックスを維持する]** オプションは CLR 統合を必要とするため、この機能を使用できるのは、CLR 統合が有効になっている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの参照テーブルを選択した場合だけです。  
   
@@ -149,7 +146,7 @@ ms.locfileid: "35406064"
 > [!NOTE]  
 >  あいまい参照変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまい参照変換エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 さらに、 **MaxOutputMatchesPerInput** の 100 より大きい値は、 **[詳細エディター]** でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[キャッシュなし]**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -172,7 +169,7 @@ ms.locfileid: "35406064"
  新しい参照インデックスを保存するように指定した場合、そのインデックスを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でも維持するかどうかを指定します。  
   
 > [!NOTE]  
->  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージ ストアド プロシージャを使用してインデックスを維持します。 これらのマネージ ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+>  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージド ストアド プロシージャを使用してインデックスを維持します。 これらのマネージド ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
 >   
 >  **[保存されたインデックスを維持する]** オプションは CLR 統合を必要とするため、この機能を使用できるのは、CLR 統合が有効になっている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの参照テーブルを選択した場合だけです。  
   
@@ -185,7 +182,7 @@ ms.locfileid: "35406064"
 ## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>[あいまい参照変換エディター] ([列] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列および出力列のプロパティを設定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **使用できる入力列**  
  入力列をドラッグして、使用できる参照列に接続します。 これらの列は、サポートされているデータ型と一致する必要があります。 マッピングする行を選択して右クリックし、 [[リレーションシップの作成]](../../../integration-services/data-flow/transformations/create-relationships.md) ダイアログ ボックスでマッピングを編集します。  
   
@@ -207,7 +204,7 @@ ms.locfileid: "35406064"
 ## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>[あいまい参照変換エディター] ([詳細設定] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、あいまい参照のパラメーターを設定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[参照ごとの出力に対する最大一致数]**  
  変換で返される、各入力行の一致の最大数を指定します。 既定値は **1**です。  
   

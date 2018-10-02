@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - results [SQL Server], cursors
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - requesting cursors
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54dcf1f28e755cf2ee75ba980df8b1d96aa80c17
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 09bd58ecf954392b1db9a89e1d42c802ace4ac73
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821830"
 ---
 # <a name="cursors"></a>カーソル
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,8 +49,7 @@ ms.locfileid: "43089227"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、3 つのカーソルの実装がサポートされています。  
   
  Transact-SQL カーソル  
- DECLARE CURSOR 構文に基づいていて、主に [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、およびトリガーで使用されます。 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルはサーバー上で実装され、クライアントからサーバーに送信される [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントによって管理されます。 また、バッチ、ストアド プロシージャ、またはトリガーにも含まれている場合があります。  
+ DECLARE CURSOR 構文に基づいていて、主に [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、およびトリガーで使用されます。 [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルはサーバー上で実装され、クライアントからサーバーに送信される [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントによって管理されます。 また、バッチ、ストアド プロシージャ、またはトリガーにも含まれている場合があります。  
   
  アプリケーション プログラミング インターフェイス (API) サーバー カーソル  
  OLE DB および ODBC の API カーソル関数をサポートします。 API サーバー カーソルはサーバー上に実装されます。 クライアント アプリケーションから API カーソル関数が呼び出されるたびに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の OLE DB プロバイダーまたは ODBC ドライバーによって、API サーバー カーソルに対するアクションの要求がサーバーに送信されます。  

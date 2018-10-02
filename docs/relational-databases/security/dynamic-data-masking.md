@@ -4,21 +4,19 @@ ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2af994f717072803902289473d102f1e2535c8cf
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 030fc4262f41112eeca34c590eac00701e8ee876
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781230"
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,8 +89,7 @@ WHERE is_masked = 1;
   
 -   データ マスクを持つ列を FULLTEXT インデックスのキーにすることはできません。  
   
- 
-  **UNMASK** アクセス許可のないユーザーの場合、非推奨とされている **READTEXT**、 **UPDATETEXT**、および **WRITETEXT** ステートメントは、動的データ マスク用に構成された列で適切に動作しません。 
+ **UNMASK** アクセス許可のないユーザーの場合、非推奨とされている **READTEXT**、 **UPDATETEXT**、および **WRITETEXT** ステートメントは、動的データ マスク用に構成された列で適切に動作しません。 
  
  動的データ マスクの追加は基になっているテーブルでのスキーマ変更として実装されるため、依存関係を持つ列では実行できません。 この制限を回避するには、最初に依存関係を削除してから、動的データ マスクを追加した後、依存関係を再作成します。 たとえば、依存関係がその列に依存するインデックスによるものである場合は、インデックスを削除し、マスクを追加してから、依存するインデックスを再作成します。
  

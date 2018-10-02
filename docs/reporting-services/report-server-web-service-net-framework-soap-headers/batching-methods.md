@@ -4,10 +4,7 @@ ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-soap-headers
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - methods [Reporting Services], batches
 - BatchHeader SOAP header
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a938142e4602fb1f5b4242da982efc65394036e9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 60a96336e4570d586b0a5c04449602206b74fcdc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797260"
 ---
 # <a name="batching-methods"></a>メソッドのバッチ処理
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP ヘッダーを使用することによって、1 つの操作に複数の Web サービス メソッドを含めることができます。 メソッドは、1 つのデータベース トランザクションのスコープ内で、呼び出された順序で実行されます。  
@@ -34,7 +31,7 @@ ms.locfileid: "43279682"
   
  Web サービスは、複数メソッド バッチ操作に対するロック セマンティクスを提供しません。 メッセージがサーバーに送信され、Execute コマンドが呼び出されるまでは、レポート サーバー データベースの行の更新がロックされません。  
   
- データが最後に読み取られてからデータベースが変更されていないことを保証する同時実行制御もありません。 2 台のクライアントが同じアイテムを変更する場合は、アイテムの名前が変更されていないなど、パラメーターが有効なままであれば最後の更新が成功します。  
+ データが最後に読み取られてからデータベースが変更されていないことを保証するコンカレンシー制御もありません。 2 台のクライアントが同じアイテムを変更する場合は、アイテムの名前が変更されていないなど、パラメーターが有効なままであれば最後の更新が成功します。  
   
  次の例では、<xref:ReportService2005.ReportingService2005.CreateFolder%2A> メソッドを 3 回呼び出し、これらの呼び出しを 1 つのバッチとして実行します。 <xref:ReportService2005.ReportingService2005.CreateFolder%2A> への呼び出しのいずれかが失敗すると、バッチ全体が取り消されます。  
   

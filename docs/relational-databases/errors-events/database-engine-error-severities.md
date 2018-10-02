@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d5c5a6ddee7f8d5e9b734651fa7722df56349db
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 6dc31c1bdfc9dfb8c48630ae14958cfed64ab0f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739520"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 05/19/2018
 ## <a name="user-defined-error-message-severity"></a>ユーザー定義のエラー メッセージの重大度  
  **sp_addmessage** を使用して、重大度 1 ～ 25 のユーザー定義のエラー メッセージを **sys.messages** カタログ ビューに追加することができます。 これらのユーザー定義のエラー メッセージは、RAISERROR で使用することができます。 詳細については、「[sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)」を参照してください。  
   
- RAISERROR を使用して、重大度レベル 1 ～ 25 のユーザー定義のエラー メッセージを生成することができます。 RAISERROR は、 **sys.messages** カタログ ビューに格納されているユーザー定義のエラー メッセージを参照することも、メッセージを動的に作成することもできます。 エラーの発生中に、**sys.messages** にあるユーザー定義エラー メッセージを使用する場合、RAISERROR で指定された重大度は、**sys.messages** で指定された重大度より優先されます。 詳細については、「[RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)」を参照してください。  
+ RAISERROR を使用して、重大度レベル 1 ～ 25 のユーザー定義のエラー メッセージを生成することができます。 RAISERROR は、 **sys.messages** カタログ ビューに格納されているユーザー定義のエラー メッセージを参照することも、メッセージを動的に作成することもできます。 エラーの発生中に、**sys.messages** にあるユーザー定義エラー メッセージを使用する場合、RAISERROR で指定された重大度は、**sys.messages** で指定された重大度をオーバーライドします。 詳細については、「[RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)」を参照してください。  
   
 ## <a name="error-severity-and-trycatch"></a>エラーの重大度と TRY...CATCH  
  TRY...CATCH 構造は、データベース接続を終了しない、重大度が 10 を超えるすべての実行エラーを検出します。  

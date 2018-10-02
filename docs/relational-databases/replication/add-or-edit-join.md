@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc90397111e2a124744a677920c02c2ec64cbf0b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356104"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794580"
 ---
 # <a name="add-or-edit-join"></a>結合の追加と編集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "37356104"
 > [!IMPORTANT]  
 >  結合フィルターに使用できるテーブルの数に制限はありませんが、多数のテーブルをフィルターに使用すると、マージ処理中のパフォーマンスに影響する場合があります。 テーブルが 5 つ以上の結合フィルターを生成する場合は、小さなテーブル、変更されないテーブル、プライマリ参照テーブルはフィルター選択しないという別の解決策を検討してください。 サブスクライバーの間で分割する必要があるテーブル間にのみ、結合フィルターを使用してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  このダイアログ ボックスでは、3 つの手順で 2 つのテーブル間の結合フィルターを作成します。 結合フィルターを複数作成するには、このダイアログ ボックスの手順を複数回繰り返す必要があります。  
   
 1.  **[フィルター選択されたテーブルを確認し、結合テーブルを選択します]**  

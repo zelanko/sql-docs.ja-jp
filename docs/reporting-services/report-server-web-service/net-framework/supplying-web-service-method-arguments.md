@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, methods
 - Web service [Reporting Services], methods
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9177fa55532cb7c464679f43bab5ae63d5254c96
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 47c2312ab472714263509e2d5201bce07d1c1df3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765030"
 ---
 # <a name="supplying-web-service-method-arguments"></a>Web サービス メソッドの引数の指定
   レポート サーバー Web サービスのメソッドは、SOAP を使用し、HTTP 経由で特定の URL のサービスに対して要求を送信します。 サービスでは、要求を受信し、処理した後、応答を返します。 これらの要求と応答は XML ドキュメント形式です。  

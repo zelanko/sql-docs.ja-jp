@@ -1,15 +1,12 @@
-﻿---
+---
 title: SQL Server:Deprecated Features オブジェクト | Microsoft Docs
 ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92353cf4dde604e191d26dc971edf83f16ae4b51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9302e518ab06f4e7ac01d51e27bcdf7e6e6b5970
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957147"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748406"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +38,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 次の表に、SQL Server **Deprecated Features** パフォーマンス オブジェクトの説明を示します。
 
-|
-  **SQL Server:Deprecated Features カウンター**|Description|  
+|**SQL Server:Deprecated Features カウンター**|Description|  
 |-------------|-----------------|  
 |**使用方法**|SQL Server の前回起動以降の機能の使用状況。|
   
@@ -286,10 +281,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |xp_revokelogin|xp_revokelogin プロシージャが見つかりました。 代わりに ALTER LOGIN DISABLE または DROP LOGIN を使用してください。 コンパイルごとに 1 回発生します。|  
   
 ## <a name="see-also"></a>参照  
- 
-  [SQL Server 2016 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- 
-  [SQL Server 2016 の非推奨のフルテキスト検索機能](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+ [SQL Server 2016 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2016 の非推奨のフルテキスト検索機能](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement イベント クラス](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support イベント クラス](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [SQL Server 2016 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   

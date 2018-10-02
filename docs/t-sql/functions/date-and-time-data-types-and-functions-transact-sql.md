@@ -5,9 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a0796d43bd0f17a65a0144591c7e2f27c0b22e8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: e8e1f69d90c73aa7b8b6a6dbfba9f8f7092d2215
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806190"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日付と時刻のデータ型および関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +48,12 @@ ms.locfileid: "37784176"
   
 |データ型|[形式]|範囲|精度|ストレージ サイズ (バイト)|ユーザー定義の 1 秒未満の秒の有効桁数|タイム ゾーン オフセット|  
 |---|---|---|---|---|---|---|
-|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 ～ 23:59:59.9999999|100 ナノ秒|3 ～ 5|はい|いいえ|  
+|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 ～ 23:59:59.9999999|100 ナノ秒|3 ～ 5|[ユーザー アカウント制御]|いいえ|  
 |[date](../../t-sql/data-types/date-transact-sql.md)|-YYYY-MM-DD|0001-01-01 ～ 31.12.99|1 日|3|いいえ|いいえ|  
 |[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 ～ 2079-06-06|1 分|4|いいえ|いいえ|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 ～ 9999-12-31|0.00333 秒|8|いいえ|いいえ|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 ～ 9999-12-31 23:59:59.9999999|100 ナノ秒|6 ～ 8|はい|いいえ|  
-|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 ～ 9999-12-31 23:59:59.9999999 (UTC)|100 ナノ秒|8 ～ 10|はい|はい|  
+|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 ～ 9999-12-31 23:59:59.9999999|100 ナノ秒|6 ～ 8|[ユーザー アカウント制御]|いいえ|  
+|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 ～ 9999-12-31 23:59:59.9999999 (UTC)|100 ナノ秒|8 ～ 10|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) データ型は、日付または時刻のデータ型ではありません。 **timestamp** は、**rowversion** の非推奨のシノニムです。  

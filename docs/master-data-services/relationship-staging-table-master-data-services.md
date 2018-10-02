@@ -5,25 +5,22 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eb81e8c1ac664474cf9482bb76b27e7f3f2fdc54
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d0684a38c51c95b0793667630a73f3da54c7468d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809380"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>リレーションシップ ステージング テーブル (マスター データ サービス)
 
@@ -44,7 +41,7 @@ ms.locfileid: "35335316"
 |**HierarchyName**|Required<br /><br /> 明示的階層の名前。 各統合メンバーは、1 つの階層にのみ所属することができます。||  
 |**ParentCode**|Required<br /><br /> 親子リレーションシップの場合、子リーフまたは統合メンバーの親になる統合メンバーのコード。<br /><br /> 兄弟リレーションシップの場合、兄弟のいずれかのコード。||  
 |**ChildCode**|Required<br /><br /> 親子リレーションシップの場合、子になる統合メンバーまたはリーフ メンバーのコード。<br /><br /> 兄弟リレーションシップの場合、兄弟のいずれかのコード。||  
-|**並べ替え順序**|省略可<br /><br /> 親の下にある他のメンバーに対するメンバーの順序を示す整数。 各子メンバーは一意識別子を保持します。||  
+|**[並べ替え順序]**|省略可<br /><br /> 親の下にある他のメンバーに対するメンバーの順序を示す整数。 各子メンバーは一意識別子を保持します。||  
 |**ErrorCode**|エラー コードを表示します。 **ImportStatus_ID** が **2** のすべてのレコードについては、「[ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)」を参照してください。||  
   
 ## <a name="see-also"></a>参照  

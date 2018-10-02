@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -20,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04ed90b51adb15f64dcfe5cda3a1352d68d04967
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: da0c23b3fcc746fa2ad8614f88ce539386e71b6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266293"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775320"
 ---
 # <a name="report-design-view-report-builder"></a>レポート デザイン ビュー (レポート ビルダー)
   レポート ビルダーのウィンドウは、レポート リソースを整理しやすく、改ページ調整されたレポートをすばやく作成できるように設計されています。 デザイン画面はウィンドウの中央に位置し、その周辺にリボンとペインが配置されています。 デザイン画面は、レポート アイテムの追加や整理を行うための領域です。 この記事では、レポート リソースの追加、選択、整理や、レポート アイテムのプロパティの変更に使用するペインについて説明します。  

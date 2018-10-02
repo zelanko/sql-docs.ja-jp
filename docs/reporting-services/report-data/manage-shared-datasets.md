@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9148b723d2ac5ccb566c28524f54bad48de2a75
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a2282d6475d8f76fe1a479f16ad0b24f67d2189f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817510"
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、共有データセットによって、外部データ ソースに接続された共有データ ソースからデータを取得します。 共有データセットを使用するとクエリを共有できるので、複数のレポートに同じデータ セットを取り込むことができます。 データセット クエリにはデータセット パラメーターが含まれる場合があります。 初回使用時または指定したスケジュールに従い、特定のパラメーターの組み合わせによるクエリ結果をキャッシュするよう共有データセットを構成できます。 レポート キャッシュおよびレポート データ フィードと共に共有データセットのキャッシュを使用すると、データ ソースへのアクセスの管理に役立ちます。  

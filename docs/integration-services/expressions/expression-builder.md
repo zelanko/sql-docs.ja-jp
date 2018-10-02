@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.expressionbuilder.f1
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fa0570be84df74f8e4cd0a602134f5da6f7b942
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9898ec238e8548f55f07b27bdca1fc512c55a413
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804320"
 ---
 # <a name="expression-builder"></a>[式ビルダー]
   **[式ビルダー]** ダイアログ ボックスには、変数を一覧表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の言語に含まれる関数、型キャスト、および演算子への組み込み参照を提供するグラフィカル ユーザー インターフェイスが用意されています。このグラフィカル ユーザー インターフェイスを使用して、プロパティ式の作成および編集や、変数の値を設定する式の作成を行えます。  
@@ -40,7 +37,7 @@ ms.locfileid: "35334346"
   
  プロパティ式と式の作成の詳細については、「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」と「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
   
 |項目|定義|  
 |----------|----------------|  

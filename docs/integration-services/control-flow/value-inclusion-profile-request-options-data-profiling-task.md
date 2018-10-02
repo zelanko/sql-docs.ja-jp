@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce52ec0c887d20e195d5cdc5e9d0995a33f4be5a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: da5839c81489a278c3e013886ae7b1eeba6834f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793531"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>[値包含プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[値包含プロファイル要求]** のオプションを設定できます。 値包含プロファイルは、2 つの列間または列のセット間の値の重複を計算します。 したがって、このプロファイルでは、列または列のセットが、選択したテーブル間の外部キーとして適しているかどうかを判断できます。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、値包含プロファイルで Sales テーブルの ProductID 列をプロファイルするとします。 プロファイルでは、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。  
@@ -125,7 +122,7 @@ ms.locfileid: "35333186"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[None]**  
  プロファイルの出力を絞り込むためのしきい値設定を選択します。 このプロパティの既定値は **[Specified]** です。 詳細については、このトピックの「しきい値設定について」を参照してください。  
   

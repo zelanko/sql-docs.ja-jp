@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b8dc94bbea97be9740ae5d455d7103b0da70f3c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744570"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートの作成
 SQL Server Mobile Report Publisher を使用すると、調整可能なグリッド行とグリッド列、および柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応する SQL Server 2016 Reporting Services モバイル レポートをすばやく作成できます。  

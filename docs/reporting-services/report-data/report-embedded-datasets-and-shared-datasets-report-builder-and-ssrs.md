@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adacff369cf262ebfbbc19f79f1013395f9d6662
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b818182169bc3b8ad0a9256621107552a3def04a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793680"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  
@@ -123,7 +122,7 @@ ms.locfileid: "43269623"
   
  埋め込みデータ ソースと共有データ ソースとでは、作成、格納、および管理の方法が異なります。 次の表は、埋め込みデータ ソースと共有データ ソースの違いをまとめたものです。  
   
-|[説明]|埋め込み<br /><br /> [データ ソース]|Shared<br /><br /> [データ ソース]|  
+|[説明]|埋め込み<br /><br /> [データ ソース]|共有<br /><br /> [データ ソース]|  
 |-----------------|------------------------------|----------------------------|  
 |データ接続がレポート定義に埋め込まれる|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
 |レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  

@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aff91dbc7d6d67d8a93a88a758276394b8b9b34c
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 5b27249601e1dad8c3c855fc80f14e81d0694723
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36772187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770261"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Blob (SQL Server) を保存するオプションの比較
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +49,12 @@ ms.locfileid: "36772187"
   
 |機能|ファイル サーバーとデータベース ソリューション|FILESTREAM ソリューション|FileTable ソリューション|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**管理タスクのシングル ストーリー**|いいえ|はい|**はい**|  
-|**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|はい|**はい**|  
-|**統合セキュリティ モデル**|いいえ|はい|**可**|  
-|**FILESTREAM データのインプレース更新**|はい|いいえ|**はい**|  
+|**管理タスクのシングル ストーリー**|いいえ|[ユーザー アカウント制御]|**はい**|  
+|**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|[ユーザー アカウント制御]|**はい**|  
+|**統合セキュリティ モデル**|いいえ|[ユーザー アカウント制御]|**可**|  
+|**FILESTREAM データのインプレース更新**|[ユーザー アカウント制御]|いいえ|**はい**|  
 |**データベースで管理されるファイルおよびディレクトリの階層**|いいえ|いいえ|**はい**|  
-|**Windows アプリケーションの互換性**|はい|いいえ|**可**|  
+|**Windows アプリケーションの互換性**|[ユーザー アカウント制御]|いいえ|**可**|  
 |**ファイルの属性へのリレーショナル アクセス**|いいえ|いいえ|**はい**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM とリモート BLOB ストア (RBS) の比較  

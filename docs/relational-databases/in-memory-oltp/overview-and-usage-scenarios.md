@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eea70d193fb5f75249c59d6e1af8d9db904a085f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830740"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "43097053"
 
 インメモリ OLTP は、適切なワークロードの場合にパフォーマンスが大きく向上します。 お客様の bwin は、インメモリ OLTP を利用して、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を実行する 1 台のコンピューターで[毎秒 120 万要求を達成](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)しました。 また、Quorum は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でインメモリ OLTP を利用して、[リソース使用率を 70% 下げ](https://customers.microsoft.com/en-US/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)、ワークロードを 2 倍にしました。 一部の事例では、最大 30 倍のパフォーマンス向上が見られていますが、向上率はワークロードによって変わります。
 
-それでは、このパフォーマンス向上は何に由来するのでしょうか。 基本的に、インメモリ OLTP は、データ アクセスとトランザクションの実行を効率化し、同時に実行されるトランザクション間のロックとラッチの競合を取り除くことで、トランザクション プロセスのパフォーマンスを改善します。高速化の理由はデータがメモリ内にあるからではなく、メモリ内のデータを中心にして最適化しているためです。 メモリ内の同時処理が多い計算に関する最新の機能強化を利用するように、データ ストレージ、アクセス、処理アルゴリズムはゼロから再設計されました。
+それでは、このパフォーマンス向上は何に由来するのでしょうか。 基本的に、インメモリ OLTP は、データ アクセスとトランザクションの実行を効率化し、同時に実行されるトランザクション間のロックとラッチの競合を取り除くことで、トランザクション プロセスのパフォーマンスを改善します。高速化の理由はデータがメモリ内にあるからではなく、メモリ内のデータを中心にして最適化しているためです。 メモリ内のコンカレンシー処理が多い計算に関する最新の機能強化を利用するように、データ ストレージ、アクセス、処理アルゴリズムはゼロから再設計されました。
 
 現在では、データがメモリ内にあるからというだけで、障害が発生したときにデータが失われることを意味しなくなりました。 既定で、すべてのトランザクションは完全に持続可能になりました。つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のテーブルと同じ持続可能性の保証があります。トランザクション コミットの一部として、すべての変更はディスク上のトランザクション ログに書き込まれます。 トランザクション コミット後のどこかの時点で障害が発生すると、データベースがオンラインに戻ったときに、コミットされたデータを利用できます。 さらに、インメモリ OLTP は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の高可用性とディザスター リカバリー機能 (AlwaysOn、バックアップ/復元など) と連携します。
 
@@ -88,8 +84,7 @@ ms.locfileid: "43097053"
 データの取り込みにメモリ最適化テーブルを使用します。 取り込みの大部分が (更新ではなく) 挿入で構成され、データのインメモリ OLTP ストレージの占有領域が重要な場合、次のいずれかを行います。
 
 - [を実行するジョブを使用して、](../indexes/columnstore-indexes-overview.md)クラスター化列ストア インデックス `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`が指定されたディスクベースのテーブルに定期的にデータを一括オフロードします。または、
-- 
-  [一時メモリ最適化テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) を使用して、履歴データを管理します。このモードでは、履歴データはディスクに保存され、データの移動はシステムによって管理されます。
+- [一時メモリ最適化テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) を使用して、履歴データを管理します。このモードでは、履歴データはディスクに保存され、データの移動はシステムによって管理されます。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サンプル リポジトリに一時メモリ最適化テーブル、メモリ最適化テーブル型、およびネイティブ コンパイル ストアド プロシージャを使用するスマート グリッド アプリケーション含めることでデータの取り込みを高速化し、センサー データのインメモリ OLTP ストレージの占有領域を管理しています。 
 
