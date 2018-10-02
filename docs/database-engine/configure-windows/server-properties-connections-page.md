@@ -5,30 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6573c0a6b939104a5b0844bde1da07effc6d8f9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: faed832ea0ed4fa1dcc52232a36a22a6f848f5f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789370"
 ---
 # <a name="server-properties---connections-page"></a>サーバーのプロパティ - [接続] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、接続オプションを表示したり変更したりできます。  
   
 ## <a name="connections"></a>接続  
- **[同時接続の最大数 (0 = 無制限)]**  
+ **[コンカレント接続の最大数 (0 = 無制限)]**  
  0 以外の値に設定した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で許可される接続の数を制限します。  
   
 > [!CAUTION]  
@@ -38,7 +35,7 @@ ms.locfileid: "32867067"
  **Default connection options**  
  次の表に示すような既定の接続オプションを指定します。  
   
-|構成オプション|Description|  
+|構成オプション|[説明]|  
 |--------------------------|-----------------|  
 |**[disable deferred constraint checking]**|中間制約チェックまたは遅延制約チェックを制御します。|  
 |**暗黙のトランザクション**|ステートメント実行時にトランザクションを暗黙的に開始するかどうかを制御します。|  
