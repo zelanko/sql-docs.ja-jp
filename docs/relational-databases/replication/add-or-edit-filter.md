@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c29de77be7dc0a36ce7311055fa081a3ca9a36d6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7e91f5bd925ec0a9aba9998f0c4dbdae4afa599e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358124"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719950"
 ---
 # <a name="add-or-edit-filter"></a>フィルターの追加または編集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "37358124"
   
  行フィルターを使用すれば、テーブルからパブリッシュの対象となる行のサブセットを指定できます。 行フィルターを使用して、ユーザーにとって必要のない行 (機密性の高い情報など) を削除したり、さまざまなサブスクライバーに送られるさまざまなデータのパーティションを作成したりできます。 さまざまなデータのパーティションをさまざまなサブスクライバーにパブリッシュすると、複数のサブスクライバーが同じデータを更新することによって発生する可能性のある競合を回避するためにも役立ちます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  このダイアログ ボックスには、トランザクション パブリケーションとスナップショット アプリケーション用の 2 段階のプロセスと、マージ パブリケーション用の 3 段階のプロセスがあります。 すべての種類のパブリケーションで、フィルター対象のテーブルと、フィルターに含む 1 つまたは複数の列を選択する必要があります。フィルターは、標準の WHERE 句として定義されます。  
   
 1.  **[フィルターを適用するテーブルを選択します。]**  

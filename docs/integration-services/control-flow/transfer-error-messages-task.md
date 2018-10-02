@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed9a3c36ddaf1dc6e93149a0fa090f9865614f76
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d2a1c3f5b010d0d1fbe0e1aae8ed19e1436ee05f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400654"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722740"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
   エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。 ユーザー定義メッセージとは、ID の値が 50000 以上のメッセージのことです。 ID の値が 50000 未満のメッセージはシステム エラー メッセージなので、エラー メッセージ転送タスクを使用して転送することはできません。  
@@ -85,7 +82,7 @@ ms.locfileid: "35400654"
 ## <a name="transfer-error-messages-task-editor-general-page"></a>[エラー メッセージ転送タスク エディター] ([全般] ページ)
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、エラー メッセージ転送タスクに名前を付けて説明を記述することができます。 エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。   
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **名前**  
  エラー メッセージ転送タスクの一意の名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -98,7 +95,7 @@ ms.locfileid: "35400654"
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>[エラー メッセージ転送タスク エディター] ([メッセージ] ページ)
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[メッセージ]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからインスタンスへ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー定義エラー メッセージをコピーする際のプロパティを指定できます。 
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **SourceConnection**  
  SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
   

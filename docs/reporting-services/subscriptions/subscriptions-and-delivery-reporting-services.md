@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -20,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91e4972f3ae67422801ce360ee6e007bb72bcb99
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 27a2878ecd858d4cf9d749273ea40c1a8aceb95b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273426"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703170"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>サブスクリプションと配信 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションは、特定の時刻で、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。  

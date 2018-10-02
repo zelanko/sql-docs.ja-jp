@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11df6b02f0c90516727c86d687897ff1a04c0118
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726271"
 ---
 # <a name="system-variables"></a>システム変数
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、実行中のパッケージとそのオブジェクトに関する情報を格納する、システム変数のセットが用意されています。 これらの変数は、式およびプロパティ式の内部で使用でき、パッケージ、コンテナー、タスク、およびイベント ハンドラーをカスタマイズできます。  

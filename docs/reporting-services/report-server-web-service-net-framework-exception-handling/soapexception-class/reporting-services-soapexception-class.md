@@ -4,22 +4,19 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-exception-handling
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - exceptions [Reporting Services], SoapException class
 - SoapException class
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d2039bed34ded12a15db1b6b8192c915a99fb3d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 90556b26e73f6576e0b924e22f0cc02847dcf5fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703750"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException クラス
   発生が予想される [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のエラーには、対処が必要です。 たとえば、ユーザーにフォルダーの作成を要求するアプリケーションでは、ユーザーが既に存在するフォルダーを作成する可能性があります。 開発者としては、アプリケーションのフォルダー名フィールドとパス フィールドにユーザーが入力する内容を制限することはできません。ただし、既に存在するアイテムをユーザーが誤って作成しようとしたとき、どのように対処するかを指定することは可能です。  

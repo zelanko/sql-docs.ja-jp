@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f1a39e4f89c3542897cf13be5b1ec999e15a0a7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280646"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681420"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   レポート ビルダーでパラメーターを使用して改ページ調整されたレポートを作成するときに、パラメーター ペインをカスタマイズできます。 レポート デザイン ビューで、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。  

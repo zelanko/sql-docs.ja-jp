@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f2b0db93d96c88fede36acba3b04999a08ca737
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b628a2d2ee2ca21cfb75abadce01293f536b8cbd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726890"
 ---
 # <a name="initializing-custom-assembly-objects"></a>カスタム アセンブリ オブジェクトの初期化
   状況によっては、カスタム アセンブリ クラスのプロパティ値とフィールド値をインスタンス化する際、これらを初期化する必要があります。 初期化が必要になる可能性が最も高いのは、レポートのグローバル オブジェクト コレクションからカスタム クラスと値を使用する場合です。 そのためには、レポートの **Code** オブジェクトの **OnInit** メソッドをオーバーライドします。 **OnInit** にアクセスするには、レポート定義の **Code** 要素を使用します。 レポートで使用する予定のカスタム アセンブリのクラスのプロパティ値またはフィールド値を初期化する方法は 2 つあります。1 つは、**OnInit** を使用してクラスの新しいインスタンスを宣言し、作成する方法、もう 1 つは、**OnInit** を使用してパブリックに使用できるメソッドを呼び出す方法です。  

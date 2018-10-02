@@ -4,7 +4,6 @@ ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - pbi
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffcd2000c54c25abc7ab417a6c8cb9846ccaabee
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281856"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710555"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI ダッシュボードへの Reporting Services のアイテムのピン留め
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] では、レポート ビューアー ツール バーから [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードに新しいタイルとしてピン留めできます。   ピン留めするには、管理者がレポート サーバーを Azure Active Directory および [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合しておく必要があります。  

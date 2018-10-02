@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6ef08992dcab31e2631bdc180ddec0d40fae398
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fcb1945bdf5a6cc274a947b407f33f70d5905f9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277095"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722250"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル] (Management Studio)
   実行中のレポートの表示や実行のキャンセルを行うには、 **[レポート サーバー ジョブのキャンセル]** ダイアログ ボックスを使用します。 このダイアログ ボックスには、レポート サーバーで現在実行中のすべてのジョブが表示されます。 現在処理中のジョブを一時停止または再開することはできませんが、すべてのジョブ、または時間がかかりすぎて完了できない場合は個々のジョブをキャンセルできます。  

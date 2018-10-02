@@ -5,12 +5,8 @@ ms.custom: P360
 ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: databases
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -23,12 +19,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2591c5c37bd0d37b7591eb6dee629d92fcd5fb3c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 93ccc48a8dc85bc788bb8ea35de6e6c57e031fa6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676380"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,34 +70,34 @@ ms.locfileid: "43083655"
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
-|ANSI_NULL_DEFAULT|OFF|はい|  
-|ANSI_NULLS|OFF|はい|  
-|ANSI_PADDING|OFF|はい|  
-|ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
+|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
+|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
+|ARITHABORT|OFF|[ユーザー アカウント制御]|  
 |AUTO_CLOSE|OFF|いいえ|  
-|AUTO_CREATE_STATISTICS|ON|はい|  
+|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
 |AUTO_SHRINK|OFF|いいえ|  
-|AUTO_UPDATE_STATISTICS|ON|はい|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
+|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
-|CURSOR_DEFAULT|GLOBAL|はい|  
+|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
+|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|OFF|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|はい|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|はい|  
-|PARAMETERIZATION|SIMPLE|はい|  
-|QUOTED_IDENTIFIER|OFF|はい|  
+|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|[ユーザー アカウント制御]|  
+|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
+|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
 |RECOVERY|SIMPLE|いいえ|  
-|RECURSIVE_TRIGGERS|OFF|はい|  
-|Service Broker のオプション|ENABLE_BROKER|はい|  
+|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
+|Service Broker のオプション|ENABLE_BROKER|[ユーザー アカウント制御]|  
 |TRUSTWORTHY|OFF|いいえ|  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  

@@ -4,17 +4,16 @@ ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b9c174a50a01eb7d91a7c30d08e75b81765eee42
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269704"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703340"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートへの視覚エフェクトの追加
 グラフは、データの視覚化における重要な部分です。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートで使用可能な、幅広いシナリオに対応した各種グラフについて説明します。 

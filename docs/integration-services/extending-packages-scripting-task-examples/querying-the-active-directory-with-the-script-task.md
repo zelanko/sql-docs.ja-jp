@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e45942b35aca955316e1fa243c69ec90a64ecf2e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 24815102b3839da21534373d2176259b3b42b73c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710680"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>スクリプト タスクによる Active Directory へのクエリの実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージなどの企業データ処理アプリケーションでは、Active Directory に格納されている従業員の階級、役職、またはその他の特性に基づいて、個別にデータを処理する必要性が頻繁に生じます。 Active Directory は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ディレクトリ サービスで、ユーザーに関するメタデータだけでなく、コンピューターやプリンターなどの他の組織資産に関するメタデータも集中して格納します。 Microsoft .NET Framework の **System.DirectoryServices** 名前空間では、Active Directory を使用して作業するためのクラスが用意されており、これを使用すると Active Directory が格納している情報に基づくデータ処理のワークフローを送信できます。  

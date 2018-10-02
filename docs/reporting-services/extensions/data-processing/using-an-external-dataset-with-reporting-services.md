@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8963d289b2d99e494fb53a9f42d23fc38fb2a038
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c8a2e36f2a897be3c9ea7f37077ae5e947ace9bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685310"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services での外部データセットの使用
   非接続の分散データ シナリオを [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] でサポートする場合、その中心となるのが **DataSet** オブジェクトです。 **DataSet** オブジェクトはメモリ上に保持されたデータを表し、データ ソースとは無関係に一貫したリレーショナル プログラミング モデルを提供します。 また、複数の異なるデータ ソースや XML データで使用でき、アプリケーションのデータをローカルに管理することも可能です。 **DataSet** オブジェクトは、関連テーブル、制約、およびテーブル間のリレーションシップを含む、完全なデータセットを表します。 **DataSet** オブジェクトには、データを格納し、表示するための柔軟な機能が備わっています。そのため、データに関するレポートを生成するときは、多くの場合、事前にそのデータが処理され、**DataSet** オブジェクトに変換されます。  

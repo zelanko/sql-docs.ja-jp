@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0836b89b66c6999f006da2b4f52bb3c029081987
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6cf9281eb9147a133736deed0ed05c3dbbb95702
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059932"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684942"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -173,7 +169,7 @@ SELECT * FRON t_hk
   
 ###  <a name="bkmk_MemoryForRowVersions"></a> 行のバージョン管理に対応するメモリ
 
-ロックを回避するために、インメモリ OLTP は行を更新または削除するときに、オプティミスティック同時実行制御を使用します。 これは、行を更新するときに、行の追加バージョンが作成されることを意味します。 さらに、削除は論理的であり、既存の行が削除済みとしてマークされますが、すぐには削除されません。 以前のバージョンを使用する可能性のあるすべてのトランザクションが実行を完了するまで、システムは (削除された行を含む) 古い行バージョンを使用可能な状態に保ちます。 
+ロックを回避するために、インメモリ OLTP は行を更新または削除するときに、オプティミスティック コンカレンシーを使用します。 これは、行を更新するときに、行の追加バージョンが作成されることを意味します。 さらに、削除は論理的であり、既存の行が削除済みとしてマークされますが、すぐには削除されません。 以前のバージョンを使用する可能性のあるすべてのトランザクションが実行を完了するまで、システムは (削除された行を含む) 古い行バージョンを使用可能な状態に保ちます。 
   
 メモリ内にはいつでも多数の追加行が存在している可能性があり、それらの行は自らのメモリを解放するガベージ コレクション サイクルを待機しているため、これらの追加の行を収容するために十分なメモリを用意する必要があります。  
   

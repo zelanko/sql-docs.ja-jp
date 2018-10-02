@@ -1,27 +1,24 @@
 ---
-title: SQL Server 2014 マネージ バックアップの設定を SQL Server 2016 に移行する | Microsoft Docs
+title: SQL Server 2014 マネージド バックアップの設定を SQL Server 2016 に移行する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 894fe1d91cd11ec111f9628206a543ab4f2cff40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c52205e56d6040cc4a240d32bbf33a0dc8994c16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718320"
 ---
-# <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>SQL Server 2014 マネージ バックアップの設定を SQL Server 2016 に移行する
+# <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>SQL Server 2014 マネージド バックアップの設定を SQL Server 2016 に移行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードする際の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の移行に関する考慮事項について説明します。  
   
@@ -46,7 +43,7 @@ ms.locfileid: "32918187"
   
 -   ストライピングにより、大規模データベースの復元時間も向上します。  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] での [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]のその他の機能強化については、「 [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」をご覧ください。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] での [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]のその他の機能強化については、「 [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」をご覧ください。  
   
 ## <a name="considerations"></a>考慮事項  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]からアップグレードした後、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] に関する次の考慮事項に注意してください。  
@@ -56,6 +53,6 @@ ms.locfileid: "32918187"
 -   **smart_admin** のプロシージャは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の新しい構成ではサポートされません。 新しい **managed_backup** のプロシージャと機能を使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

@@ -5,28 +5,25 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82bb01c13e4b011f74a0008e86dc1a05115d6abc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 830118141e849c2bde507686c1339f8cc73c1e8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727630"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle のテーブルおよび列の選択
   [Oracle のテーブルおよび列の選択] ページを使用すると、変更をキャプチャする Oracle ソース データベースからテーブルを選択できます。 このページには次の要素があります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **テーブルの一覧**  
  テーブルの一覧には、次の 3 列が含まれています。  
   

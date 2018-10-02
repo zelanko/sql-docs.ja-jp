@@ -5,10 +5,8 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - notifications [Master Data Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services]
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 75df838645e9fa708d8baa27f3f35b07229044e7
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 7b973d967645b51aafe7e4314b339c5966fa7141
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671590"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
 
@@ -39,7 +36,7 @@ ms.locfileid: "35331556"
 ## <a name="when-notifications-are-sent"></a>通知の送信タイミング  
  通知を構成すると、以降は次のインスタンスで自動の電子メール通知を送信できます。  
   
-|Instance|[説明]|  
+|インスタンス|[説明]|  
 |--------------|-----------------|  
 |データがビジネス ルール検証に失敗した場合|属性値がビジネス ルールの検証に失敗した場合に電子メールを送信するように、個々のビジネス ルールを構成する必要があります。 通知には次の情報が含まれます。<br /><br /> [モデル]<br /><br /> [バージョンのオプション]<br /><br /> Entity<br /><br /> メンバー コード<br /><br /> 失敗したビジネス ルール<br /><br /> その属性値によってビジネス ルールが失敗したメンバーへのリンク<br /><br /> 通知発行時間<br /><br /> 詳細については、「 [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)の通知を構成します。|  
 |モデル バージョンの状態が変わった場合|モデル バージョンの状態が変わるたびに、モデル管理者であるユーザーは自動的に通知を受け取ります。 通知には次の情報が含まれます。<br /><br /> [モデル]<br /><br /> [バージョンのオプション]<br /><br /> バージョンの前の状態と新しい状態<br /><br /> 通知発行時間<br /><br /> 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。|  

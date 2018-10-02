@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c357485b0e482dec6a0d81dfe9fca51676b03fb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932537"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706560"
 ---
-# <a name="database-properties-options-page"></a>[データベースのプロパティ] ([オプション] ページ)
+# <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで利用できるオプションの詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」と「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」をご覧ください。  
@@ -99,12 +95,10 @@ ms.locfileid: "32932537"
 ## <a name="database-scoped-configurations"></a>データベース スコープ構成  
  SQL Server 2016 と Azure SQL Database には、スコープをデータベース レベルに設定できるさまざまな構成プロパティがあります。 これらのすべての設定について詳しくは、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」をご覧ください。  
   
- 
-  **レガシカーディナリティ推定**  
+ **レガシカーディナリティ推定**  
  データベースの互換性レベルに依存しない、プライマリのクエリ オプティマイザーのカーディナリティ推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
   
- 
-  **セカンダリのレガシカーディナリティ推定**  
+ **セカンダリのレガシカーディナリティ推定**  
  データベースの互換性レベルに依存しない、セカンダリ (存在する場合) のクエリ オプティマイザーのカーディナリティ推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
   
  **最大 DOP**  

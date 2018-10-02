@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331226"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681900"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの管理に使用します。 このユーティリティを使用して、パッケージのコピー、移動、削除を行ったり、パッケージの存在を確認することができます。 これらの操作は [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ上で実行できます。このパッケージは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のいずれかに格納されます。 このユーティリティが **msdb**に格納されているパッケージにアクセスする場合、コマンド プロンプトでユーザー名とパスワードが必要となる場合があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、コマンド プロンプトではユーザー名とパスワードの両方が必要です。 ユーザー名を入力しない場合、 **dtutil** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にログオンしようとします。 パッケージのストレージ型は **SQL**、 **FILE**、および **DTS** オプションで指定します。  
@@ -123,7 +120,7 @@ dtutil /option [value] [/option [value]]...
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |0|ユーティリティが正常に実行されました。|  
-|@shouldalert|ユーティリティが失敗しました。|  
+|1|ユーティリティが失敗しました。|  
 |4|ユーティリティは要求されたパッケージを見つけることができません。|  
 |5|ユーティリティは要求されたパッケージを読み込むことができません。|  
 |6|コマンド ラインに構文エラーまたはセマンティック エラーのいずれかが含まれているため、ユーティリティはコマンド ラインを解決できません。|  

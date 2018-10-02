@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.calculatedseriesproperties.legend.f1
@@ -26,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c60c61b55cdedf09c783e31ff11edfba07d18078
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2cd1a8450f9ffa847f5feab752c957d20f5fd6e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654169"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>グラフの凡例 - 書式設定 (レポート ビルダー)
   グラフの凡例には、グラフ内の各カテゴリの説明が含まれています。 凡例には常に 1 つ以上の凡例アイテムが含まれています。次の図に示すように、それぞれの凡例アイテムは、系列を表現する色つきのボックス、および系列を説明するテキスト文字列で構成されています。  

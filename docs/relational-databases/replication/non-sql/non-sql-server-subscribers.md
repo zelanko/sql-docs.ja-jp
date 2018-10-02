@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/29/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
-caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab93ca40e53454d1574482b8ebeeaa625e671f9f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6f8d06d55c31698629fed1521f54eaca8521d9d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710380"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ ms.locfileid: "37969334"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
-|[データベース]|オペレーティング システム|プロバイダー|  
+|データベース|オペレーティング システム|プロバイダー|  
 |--------------|----------------------|--------------|  
 |Oracle|Oracle がサポートするすべてのプラットフォーム|Oracle OLE DB プロバイダー (Oracle によって提供されます)|  
 |IBM DB2|MVS、AS400、Unix、Linux、Windows (9.x を除く)|Microsoft Host Integration Server (HIS) OLE DB プロバイダー|  
@@ -108,11 +104,9 @@ Oracle および IBM DB2, にサブスクリプションを作成する方法の
   
 ### <a name="replication-feature-support"></a>レプリケーション機能のサポート  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プッシュおよびプルの 2 種類のサブスクリプションがオファーされています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーはプッシュ サブスクリプションを使用する必要があります。このサブスクリプションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでディストリビューション エージェントが実行されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プッシュおよびプルの 2 種類のサブスクリプションがオファーされています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーはプッシュ サブスクリプションを使用する必要があります。このサブスクリプションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでディストリビューション エージェントが実行されます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、キャラクター モードのスナップショットを使用する必要があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、キャラクター モードのスナップショットを使用する必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーは、即時更新サブスクリプションおよびキュー更新サブスクリプションを使用できません。また、ピア ツー ピア トポロジのノードになることもできません。  
   

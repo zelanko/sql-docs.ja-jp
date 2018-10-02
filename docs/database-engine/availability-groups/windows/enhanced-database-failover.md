@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], enhanced database failover
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
-caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: baa79f3caab1105b7cf6d7849bd5ef993d72d7f6
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706140"
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>可用性グループへの拡張データベース フェールオーバーの追加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ SQL Server 2016 には、ウィザードまたは TRANSACT-SQL を使用して�
 
 拡張データベース フェールオーバーは、SQL Server Management Studio または TRANSACT-SQL を使用して構成できます。 現在、PowerShell コマンドレットでは、この機能は実行できません。 既定では、拡張データベース フェールオーバーは無効です。
 
-### <a name="sql-server-management-studio"></a>[SQL Server Management Studio]
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 拡張データベース フェールオーバーは、SQL Server Management Studio を使用し、ユーザー補助機能グループの作成時に有効にできます。 可用性グループの作成後に有効または無効にするには、TRANSACT-SQL を使用する方法しかありません。
 
