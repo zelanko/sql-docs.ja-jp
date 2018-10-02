@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 061967b6c95d73f926be510fc1747c678b0abf66
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084604"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780350"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>クエリを使用して新しいデータベース オブジェクトを作成する方法
 スクリプトを使用して、ビュー、ストアド プロシージャ、関数、トリガー、ユーザー定義型などを作成または編集する場合は、Transact\-SQL エディターを使用します。 Transact\-SQL エディターは IntelliSense およびその他の言語サポートを提供します。 詳しくは、「[Transact-SQL エディターを使用したスクリプトの編集と実行](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)」をご覧ください。  

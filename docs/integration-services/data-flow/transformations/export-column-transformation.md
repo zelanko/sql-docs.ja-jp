@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cf82c10523a2d323e694ea56de205b3ecbb2ba8
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 36f2797d6dd3870f352aba2fc409ec1086a0bd3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403864"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771610"
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
   列エクスポート変換は、データ フローのデータを読み取り、そのデータをファイルに挿入します。 たとえば、データ フローに、各製品の写真などの製品情報が含まれる場合、列エクスポート変換を使用して、その画像をファイルに保存できます。  
@@ -44,10 +41,10 @@ ms.locfileid: "35403864"
 |True|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |False|True|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |True|True|いいえ|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
-|False|False|はい|実行時エラーが発生します。 ファイルは存在しますが、そのファイルに書き込めません。|  
-|False|True|はい|ファイルが削除されて再作成され、データが書き込まれます。|  
-|True|False|はい|ファイルが開かれ、そのファイルの終わりにデータが書き込まれます。|  
-|True|True|はい|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
+|False|False|[ユーザー アカウント制御]|実行時エラーが発生します。 ファイルは存在しますが、そのファイルに書き込めません。|  
+|False|True|[ユーザー アカウント制御]|ファイルが削除されて再作成され、データが書き込まれます。|  
+|True|False|[ユーザー アカウント制御]|ファイルが開かれ、そのファイルの終わりにデータが書き込まれます。|  
+|True|True|[ユーザー アカウント制御]|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>列エクスポート変換の構成  
  列エクスポート変換は、次の方法で構成できます。  
@@ -78,7 +75,7 @@ ms.locfileid: "35403864"
 ## <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター] ([列] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、ファイルに抽出するデータ フロー内の列を指定できます。 列エクスポート変換でファイルにデータを追加するか、既存のファイルを上書きするかどうかを指定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[列の抽出]**  
  テキストまたは画像データを持つ入力列の一覧から選択します。 すべての行には、 **[列の抽出]** と **[ファイル パス列]** の定義が含まれます。  
   
@@ -97,7 +94,7 @@ ms.locfileid: "35403864"
 ## <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター] ([エラー出力] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラーをどのように処理するかを指定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[入力または出力]**  
  出力の名前を表示します。 名前をクリックすると、ビューを展開して列を含めることができます。  
   
