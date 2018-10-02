@@ -4,25 +4,19 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: develop
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 16fa4c7e7ca6e694318fc387f3fef386ae40c41e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27bcc991088135b95305842639f55b0dc389c4ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32890727"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685700"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>カスタム ワークフローの作成 - XML の説明
 
@@ -72,7 +66,7 @@ ms.locfileid: "32890727"
   
  次の表に、この XML に含まれるタグの一部を示します。  
   
-|タグ|Description|  
+|タグ|[説明]|  
 |---------|-----------------|  
 |\<Type>|どのカスタム ワークフロー アセンブリを読み込むかを識別するために、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[ワークフローの種類]** ボックスに入力したテキスト。|  
 |\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[メッセージにメンバーのデータを含める]** チェック ボックスによって制御されるブール値。 値 1 は、\<MemberData> セクションが送信されることを示します。それ以外の場合、\<MemberData> セクションは送信されません。|  

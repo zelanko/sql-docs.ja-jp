@@ -5,24 +5,21 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], backup compression default option
 - backup compression [SQL Server], backup compression default Option
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae83b4a7df944cc0e2b7576a2297e120bd2305a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 628ff56d53641c95e3085f3e9cb38bf2296e5bb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687930"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>backup compression default サーバー構成オプションの表示または構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +50,11 @@ ms.locfileid: "32868397"
   
 -   バックアップ圧縮は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
--   既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、 [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。 詳細については、[「リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;」](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)を参照してください。  
+-   既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、 [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。 詳細については、「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)」を参照してください。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   個別のバックアップを作成する場合、ログ配布構成を構成する場合、またはメンテナンス プランを作成する場合は、サーバー レベルの既定値を上書きできます。  
+-   個別のバックアップを作成する場合、ログ配布構成を構成する場合、またはメンテナンス プランを作成する場合は、サーバー レベルの既定値をオーバーライドできます。  
   
 -   バックアップの圧縮は、ディスク バックアップ デバイスとテープ バックアップ デバイスの両方でサポートされています。  
   
