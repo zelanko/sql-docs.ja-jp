@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server], memory
@@ -25,16 +22,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], memory usage
 - server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 68a666160028fdc5f0a6069ef2e7b044e5e25963
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1978cd0ab26cfbd40ae943917c852b45578d071
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637670"
 ---
 # <a name="monitor-memory-usage"></a>メモリ使用率の監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ ms.locfileid: "32951137"
  過剰なページングの解決方法の詳細については、Windows オペレーティング システムのマニュアルを参照してください。  
   
 ## <a name="isolating-memory-used-by-sql-server"></a>SQL Server が使用するメモリの分離  
- 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により多くのメモリが必要な場合は、空き物理メモリが使用可能かどうかを調べるためにオペレーティング システムに問い合わせ、使用可能なメモリを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、現在割り当てられているメモリが必要ない場合は、そのメモリをオペレーティング システムに対して解放します。 ただし、 **minservermemory**および **maxservermemory** サーバー構成オプションを使用して、オプションを上書きしてメモリを動的に使用できます。 詳細については、「 [サーバー メモリ オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
+ 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により多くのメモリが必要な場合は、空き物理メモリが使用可能かどうかを調べるためにオペレーティング システムに問い合わせ、使用可能なメモリを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、現在割り当てられているメモリが必要ない場合は、そのメモリをオペレーティング システムに対して解放します。 ただし、**minservermemory** および **maxservermemory** サーバー構成オプションを使用して、オプションをオーバーライドしてメモリを動的に使用できます。 詳細については、「 [サーバー メモリ オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるメモリの量を監視するには、次のパフォーマンス カウンターを調べます。  
   

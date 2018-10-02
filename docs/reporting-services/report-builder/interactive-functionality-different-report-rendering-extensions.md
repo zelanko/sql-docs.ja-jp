@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 837086489e52f4f34513aecd68403ce1c78047f1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272454"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789080"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>さまざまなレポート表示拡張機能の対話機能
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、実行時にページ分割されたレポートと対話するための機能を備えています。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  

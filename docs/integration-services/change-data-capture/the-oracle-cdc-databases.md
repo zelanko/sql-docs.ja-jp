@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7095024d2b7636b600fe1e905b335b866b1f30ba
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 28b06c57666f07430a87d8577b7534cf47cf35de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630350"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -114,24 +111,24 @@ ms.locfileid: "35411544"
 |[オブジェクト名]|既定|Min|Max|静的|[説明]|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |trace|False|-|-|False|指定できる値は以下のとおりです。<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
-|cdc_update_state_interval|10|@shouldalert|120|False|トランザクションに割り当てられるメモリのチャンクのサイズ (KB) です (トランザクションは複数のチャンクを割り当てることができます)。 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) テーブルの memory_limit 列を参照してください。|  
-|target_max_batched_transactions|100|@shouldalert|1000|True|SQL Server の CT テーブルの更新で 1 つのトランザクションとして処理できる Oracle トランザクションの最大数です。|  
-|target_idle_lsn_update_interval|10|0|@shouldalert|False|キャプチャ対象テーブルで操作が行われていない場合に **lsn_time_mapping** テーブルを更新する間隔 (秒) です。|  
-|trace_retention_period|24|@shouldalert|24*31|False|メッセージをトレース テーブルに保持する時間 (時間) です。|  
+|cdc_update_state_interval|10|1|120|False|トランザクションに割り当てられるメモリのチャンクのサイズ (KB) です (トランザクションは複数のチャンクを割り当てることができます)。 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) テーブルの memory_limit 列を参照してください。|  
+|target_max_batched_transactions|100|1|1000|True|SQL Server の CT テーブルの更新で 1 つのトランザクションとして処理できる Oracle トランザクションの最大数です。|  
+|target_idle_lsn_update_interval|10|0|1|False|キャプチャ対象テーブルで操作が行われていない場合に **lsn_time_mapping** テーブルを更新する間隔 (秒) です。|  
+|trace_retention_period|24|1|24*31|False|メッセージをトレース テーブルに保持する時間 (時間) です。|  
 |sql_reconnect_interval|2|2|3600|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への再接続が行われるまでの時間 (秒) です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントの接続のタイムアウトに加えて使用されます。|  
 |sql_reconnect_limit|-1|-1|-1|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への再接続の最大回数です。 既定値 -1 は、プロセスが停止するまで再接続しようとすることを意味します。|  
 |cdc_restart_limit|6|-1|3600|False|ほとんどの場合、CDC サービスは、異常終了した CDC インスタンスを自動的に再起動します。 このプロパティは、1 時間に何回失敗したらインスタンスの再起動を中止するかを定義します。 値 -1 は、インスタンスが常に再起動されることを意味します。<br /><br /> 構成テーブルが更新された場合は、インスタンスの再起動が再開されます。|  
 |cdc_memory_report|0|0|1000|False|パラメーターの値が変更された場合、CDC インスタンスは、トレース テーブルにそのメモリのレポートを出力します。|  
-|target_command_timeout|600|@shouldalert|3600|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を操作するコマンドのタイムアウトです。|  
+|target_command_timeout|600|1|3600|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を操作するコマンドのタイムアウトです。|  
 |source_character_set|-|-|-|True|Oracle データベースのコード ページの代わりに使用する特定の Oracle エンコードを設定できます。 文字データで使用されている実際のエンコードが Oracle データベースのコード ページのエンコードと異なる場合に便利です。|  
-|source_error_retry_interval|30|@shouldalert|3600|False|接続エラー、システム テーブル間の同期の一時的な喪失など、いくつかのエラーで再試行の前に使用されます。|  
-|source_prefetch_size|100|@shouldalert|10000|True|プリフェッチ バッチのサイズです。|  
-|source_max_tables_in_query|100|@shouldalert|10000|True|WHERE 句のテーブルの最大数です。この数を超えると、テーブルをフィルター処理せずに Oracle ログが読み取られます。|  
-|source_read_retry_interval|2|@shouldalert|3600|False|ソースが Oracle トランザクション ログの読み取りを EOF で再試行するまでの時間です。|  
-|source_reconnect_interval|30|@shouldalert|3600|False|ソース データベースへの再接続が試行されるまでの時間 (秒) です。|  
+|source_error_retry_interval|30|1|3600|False|接続エラー、システム テーブル間の同期の一時的な喪失など、いくつかのエラーで再試行の前に使用されます。|  
+|source_prefetch_size|100|1|10000|True|プリフェッチ バッチのサイズです。|  
+|source_max_tables_in_query|100|1|10000|True|WHERE 句のテーブルの最大数です。この数を超えると、テーブルをフィルター処理せずに Oracle ログが読み取られます。|  
+|source_read_retry_interval|2|1|3600|False|ソースが Oracle トランザクション ログの読み取りを EOF で再試行するまでの時間です。|  
+|source_reconnect_interval|30|1|3600|False|ソース データベースへの再接続が試行されるまでの時間 (秒) です。|  
 |source_reconnect_limit|-1|-1||False|ソース データベースへの再接続の最大回数です。 既定値 -1 は、プロセスが停止するまで再接続しようとすることを意味します。|  
-|source_command_timeout|30|@shouldalert|3600|False|Oracle を操作する接続のタイムアウトです。|  
-|source_connection_timeout|30|@shouldalert|3600|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を操作する接続のタイムアウトです。|  
+|source_command_timeout|30|1|3600|False|Oracle を操作する接続のタイムアウトです。|  
+|source_connection_timeout|30|1|3600|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を操作する接続のタイムアウトです。|  
 |trace_data_errors|True|-|-|False|Boolean です。 **True** は、データの変換と切り捨てのエラーをログに記録することを示します。|  
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Boolean です。 **True** は、重大なスキーマ変更が検出されたときに停止することを示します。<br /><br /> **False** は、ミラー テーブルとキャプチャ インスタンスを削除することを示します。|  
 |source_oracle_home||-|-|False|特定の Oracle ホーム パスか、CDC インスタンスが Oracle への接続に使用する Oracle ホーム名に設定できます。|  

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -41,16 +38,15 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1df9d91458211d66722ac1b844e5d938690acc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da0246a1a953dcfa4d3af6af6d1bb28116c9005e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32933237"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625780"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +156,7 @@ ms.locfileid: "32933237"
  このアカウントから送信された電子メール メッセージへの返信に使用される電子メール アドレスを入力します。 電子メールの返信はオプションです。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアカウントへの返信は、データベース管理者 danw@Adventure-Works.com をクリックします。  
   
  **サーバー名**  
- アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 通常、これは **smtp.<***会社名***>.com** のような形式になります。詳細については、電子メールの管理者に問い合わせてください。  
+ アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 通常、これは **smtp.<***会社名***>.com** のような形式になります。 詳細については、電子メールの管理者に問い合わせてください。  
   
  **[ポート番号]**  
  このアカウントで使用する SMTP サーバーのポート番号を入力します。 ほとんどの SMTP サーバーでは、ポート 25 が使用されます。  
@@ -210,7 +206,7 @@ ms.locfileid: "32933237"
  このアカウントから送信された電子メール メッセージへの返信に使用される電子メール アドレスを表示または更新します。 電子メールの返信はオプションです。 たとえば、SQL Server エージェントのアカウントへの返信は、データベース管理者 **danw@Adventure-Works.com**をクリックします。  
   
  **サーバー名**  
- アカウントが電子メールの送信に使用する SMTP サーバーの名前を表示または更新します。 通常、これは **smtp.<your_company>.com** のような形式になります。詳細については、電子メールの管理者に問い合わせてください。  
+ アカウントが電子メールの送信に使用する SMTP サーバーの名前を表示または更新します。 通常、これは **smtp.<your_company>.com** のような形式になります。 詳細については、電子メールの管理者に問い合わせてください。  
   
  **[ポート番号]**  
  このアカウントの SMTP サーバーのポート番号を表示または更新します。 ほとんどの SMTP サーバーでは、ポート 25 が使用されます。  

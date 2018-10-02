@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c3018886db19bb51d5dbbfe4f0c3f5a871e88f4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402794"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605838"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -51,7 +48,7 @@ ms.locfileid: "35402794"
   
 -   タスクが使用するバッファーの既定のサイズを定義するには、DefaultBufferSize プロパティを設定します。各バッファーの最大行数を定義するには、DefaultBufferMaxRows プロパティを設定します。 AutoAdjustBufferSize プロパティを、バッファの既定のサイズが DefaultBufferMaxRows プロパティの値から自動的に計算されるかどうかを示すように設定します。 既定のバッファー サイズは 10 MB、最大のバッファー サイズは 2^31-1 バイトです。 既定の最大行数は 10,000 行です。  
   
--   EngineThreads プロパティを設定することによって、実行中にタスクが使用できるスレッド数を設定します。 このプロパティは、使用するスレッドの数に関する提案をデータ フロー エンジンに提供します。 既定値は 10 ですが、最小値は 3 です。 ただし、エンジンはこのプロパティの値に関係なく、必要以上のスレッドは使用しません。 また、エンジンは、同時実行の問題が発生しないように、このプロパティで指定されている数を超えるスレッドを使用する場合もあります。  
+-   EngineThreads プロパティを設定することによって、実行中にタスクが使用できるスレッド数を設定します。 このプロパティは、使用するスレッドの数に関する提案をデータ フロー エンジンに提供します。 既定値は 10 ですが、最小値は 3 です。 ただし、エンジンはこのプロパティの値に関係なく、必要以上のスレッドは使用しません。 また、エンジンは、コンカレンシーの問題が発生しないように、このプロパティで指定されている数を超えるスレッドを使用する場合もあります。  
   
 -   データ フロー タスクを最適化モードで実行するかどうかを示します (RunInOptimizedMode プロパティ)。 最適化モードでは、未使用の列、出力、およびコンポーネントをデータ フローから削除することによって、パフォーマンスが向上します。  
   

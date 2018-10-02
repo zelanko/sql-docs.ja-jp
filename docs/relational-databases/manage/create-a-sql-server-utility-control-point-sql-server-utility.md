@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.create.ucp.validation.F1
@@ -22,27 +19,26 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 216599247aed33659c65f0b04293eff88a3d3692
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bec83e5fc33fe49541d234eafaae4c474e47b452
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638896"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  企業では、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを所有することができ、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスおよびデータ層アプリケーションを管理できます。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティには、ユーティリティ コントロール ポイント (UCP) を 1 つだけ含めることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに新しい UCP を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージ インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。  
+  企業では、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを所有することができ、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスおよびデータ層アプリケーションを管理できます。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティには、ユーティリティ コントロール ポイント (UCP) を 1 つだけ含めることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに新しい UCP を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージド インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。  
   
- UCP では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
+ UCP では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
   
 ## <a name="before-you-begin"></a>はじめに  
  UCP を作成する前に、次の要件と推奨事項を確認してください。  
   
- このリリースでは、UCP および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージ インスタンスが次の要件を満たしている必要があります。  
+ このリリースでは、UCP および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージド インスタンスが次の要件を満たしている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Version 10.50 以上である必要があります。  
   
@@ -50,7 +46,7 @@ ms.locfileid: "32947547"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティは、単一の Windows ドメイン、または双方向の信頼関係を持つドメイン間で操作する必要があります。  
   
--   SQL Server の UCP およびすべてのマネージ インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントには、Active Directory 内のユーザーに対する読み取り権限が必要です。  
+-   SQL Server の UCP およびすべてのマネージド インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントには、Active Directory 内のユーザーに対する読み取り権限が必要です。  
   
  このリリースでは、UCP が次の要件を満たしている必要があります。  
   
@@ -60,22 +56,22 @@ ms.locfileid: "32947547"
   
  UCP コンピューター上のキャパシティ プランニングについては、次の推奨事項を考慮してください。  
   
--   一般的なシナリオでは、UCP の UMDW データベース (sysutility_mdw) で使用されるディスク領域は、SQL Server のマネージ インスタンス 1 つにつき年間約 2 GB です。 この推定値は、マネージ インスタンスによって収集されるデータベース オブジェクトおよびシステム オブジェクトの数に応じて変化します。 UMDW (sysutility_mdw) のディスク領域の増加率は、最初の 2 日間で最大になります。  
+-   一般的なシナリオでは、UCP の UMDW データベース (sysutility_mdw) で使用されるディスク領域は、SQL Server のマネージド インスタンス 1 つにつき年間約 2 GB です。 この推定値は、マネージド インスタンスによって収集されるデータベース オブジェクトおよびシステム オブジェクトの数に応じて変化します。 UMDW (sysutility_mdw) のディスク領域の増加率は、最初の 2 日間で最大になります。  
   
--   一般的なシナリオでは、UCP の msdb に使用されるディスク領域は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージ インスタンス 1 つにつき約 20 MB です。 この推定値は、リソース使用率のポリシーと、マネージ インスタンスによって収集されるデータベース オブジェクトおよびシステム オブジェクトの数に応じて変化します。 一般に、ポリシー違反の数が増加したり、変化しやすいリソースの移動期間が長くなるにつれて、使用されるディスク領域が増加します。  
+-   一般的なシナリオでは、UCP の msdb に使用されるディスク領域は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンス 1 つにつき約 20 MB です。 この推定値は、リソース使用率のポリシーと、マネージド インスタンスによって収集されるデータベース オブジェクトおよびシステム オブジェクトの数に応じて変化します。 一般に、ポリシー違反の数が増加したり、変化しやすいリソースの移動期間が長くなるにつれて、使用されるディスク領域が増加します。  
   
--   UCP からマネージ インスタンスを削除しても、マネージ インスタンスのデータ保持期間の有効期限が切れるまでは、UCP のデータベースで使用されているディスク領域は縮小されません。  
+-   UCP からマネージド インスタンスを削除しても、マネージド インスタンスのデータ保持期間の有効期限が切れるまでは、UCP のデータベースで使用されているディスク領域は縮小されません。  
   
- このリリースでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージ インスタンスが次の要件を満たしている必要があります。  
+ このリリースでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージド インスタンスが次の要件を満たしている必要があります。  
   
--   UCP をホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが大文字と小文字を区別しない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスでも大文字と小文字を区別しないことをお勧めします。  
+-   UCP をホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが大文字と小文字を区別しない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスでも大文字と小文字を区別しないことをお勧めします。  
   
 -   FILESTREAM データは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの監視機能ではサポートされていません。  
   
  詳細については、「 [SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md) 」および「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 ### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>新しいユーティリティ コントロール ポイントをインストールする前に、以前のものを削除する  
- ユーティリティ コントロール ポイント (UCP) として構成されたことのある SQL Server インスタンスに UCP をインストールする場合、事前に SQL Server のすべてのマネージ インスタンスと UCP を削除しておく必要があります。 これには、 **sp_sysutility_ucp_remove** ストアド プロシージャを実行します。  
+ ユーティリティ コントロール ポイント (UCP) として構成されたことのある SQL Server インスタンスに UCP をインストールする場合、事前に SQL Server のすべてのマネージド インスタンスと UCP を削除しておく必要があります。 これには、 **sp_sysutility_ucp_remove** ストアド プロシージャを実行します。  
   
  このプロシージャは、次の要件を理解したうえで実行してください。  
   
@@ -83,7 +79,7 @@ ms.locfileid: "32947547"
   
 -   このプロシージャは、sysadmin 権限を持つユーザーが実行する必要があります。この権限は、UCP の作成に必要な権限と同じです。  
   
--   SQL Server のマネージ インスタンスをすべて UCP から削除する必要があります。 UCP は、SQL Server のマネージ インスタンスの 1 つです。 詳細については、「 [SQL Server ユーティリティからの SQL Server のインスタンスの削除](http://go.microsoft.com/fwlink/?LinkId=169392)」を参照してください。  
+-   SQL Server のマネージド インスタンスをすべて UCP から削除する必要があります。 UCP は、SQL Server のマネージド インスタンスの 1 つです。 詳細については、「 [SQL Server ユーティリティからの SQL Server のインスタンスの削除](http://go.microsoft.com/fwlink/?LinkId=169392)」を参照してください。  
   
  このプロシージャを使用して、SQL Server UCP を SQL Server ユーティリティから削除します。 操作の完了後は、この SQL Server インスタンスに再度 UCP を作成することができます。  
   
@@ -96,14 +92,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  UCP を削除した SQL Server インスタンスにユーティリティ以外のデータ コレクション セットがある場合、このプロシージャでは sysutility_mdw データベースが削除されません。 この場合、再度 UCP を作成するには、あらかじめ手動で sysutility_mdw データベースを削除しておく必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージ インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージド インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
   
- UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの中心的な裏付けとなるポイントです。 UCP を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ層アプリケーションから収集された構成情報およびパフォーマンス情報を表示して、一般的なキャパシティ プランニングのアクティビティを実行できます。 UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録および削除するための開始ポイントです。  
+ UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの中心的な裏付けとなるポイントです。 UCP を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ層アプリケーションから収集された構成情報およびパフォーマンス情報を表示して、一般的なキャパシティ プランニングのアクティビティを実行できます。 UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録および削除するための開始ポイントです。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスとデータ層アプリケーションのリソースの正常性を監視して、統合の可能性を特定し、リソースのボトルネックを分離できます。 詳細については、「 [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスとデータ層アプリケーションのリソースの正常性を監視して、統合の可能性を特定し、リソースのボトルネックを分離できます。 詳細については、「 [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ以外のコレクション セットとサイド バイ サイドで実行できます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのメンバーであれば、他のコレクション セットによって監視できます。 ただし、マネージ インスタンス上のすべてのコレクション セットは、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ管理データ ウェアハウスにアップロードすることに注意してください。 詳細については、「[SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)」、および「[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ以外のコレクション セットとサイド バイ サイドで実行できます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのメンバーであれば、他のコレクション セットによって監視できます。 ただし、マネージド インスタンス上のすべてのコレクション セットは、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ管理データ ウェアハウスにアップロードすることに注意してください。 詳細については、「[SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)」、および「[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)」を参照してください。  
   
 ## <a name="wizard-steps"></a>ウィザードの手順  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
@@ -169,7 +165,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |ユーティリティ コントロール ポイントが作成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する管理者特権が必要です。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対する管理者特権を持つアカウントでログオンします。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンは 10.50 以上である必要があります。|UCP をホストする別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。|UCP をホストする別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP に登録されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは指定できません。|異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定して UCP をホストするか、現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスである UCP から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの登録を解除します。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP に登録されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは指定できません。|異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定して UCP をホストするか、現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスである UCP から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの登録を解除します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは既にユーティリティ コントロール ポイントをホストしていてはいけません。|UCP をホストする別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
 |指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで TCP/IP を有効にする必要があります。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの TCP/IP を有効にします。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは、データベースに "sysutility_mdw" という名前を付けることはできません。|UCP を作成する操作により、"sysutility_mdw" という名前のユーティリティ管理データ ウェアハウス (UMDW) が作成されます。 この操作では、検証規則の実行時にこの名前がコンピューター上に存在しないようにする必要があります。 続行するには、"sysutility_mdw" という名前のデータベースを削除するか、その名前を変更する必要があります。 名前変更操作の詳細については、「[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
@@ -215,13 +211,13 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  ウィザードを完了するには、 **[完了]** をクリックします。  
   
- UCP の作成ウィザードを完了すると、SSMS のユーティリティ エクスプローラーのナビゲーション ウィンドウでは、UCP のノードが表示され、その下に、配置済みのデータ層アプリケーション、マネージ インスタンス、およびユーティリティ管理のノードが表示されます。 UCP は自動的にマネージ インスタンスになります。  
+ UCP の作成ウィザードを完了すると、SSMS のユーティリティ エクスプローラーのナビゲーション ウィンドウでは、UCP のノードが表示され、その下に、配置済みのデータ層アプリケーション、マネージド インスタンス、およびユーティリティ管理のノードが表示されます。 UCP は自動的にマネージド インスタンスになります。  
   
- データ収集プロセスはすぐに開始されますが、ユーティリティ エクスプローラーのコンテンツ ウィンドウ内のダッシュボードとビューポイントに最初に表示されるまで最大 30 分かかる場合があります。 データの収集は 15 分間隔で続行されます。 初期データは UCP 自体から取得されます。 つまり、UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにおいて、最初の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージ インスタンスです。  
+ データ収集プロセスはすぐに開始されますが、ユーティリティ エクスプローラーのコンテンツ ウィンドウ内のダッシュボードとビューポイントに最初に表示されるまで最大 30 分かかる場合があります。 データの収集は 15 分間隔で続行されます。 初期データは UCP 自体から取得されます。 つまり、UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにおいて、最初の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスです。  
   
  ダッシュボードを表示するには、SSMS のメニューで **[表示]** をクリックし、 **[ユーティリティ エクスプローラーのコンテンツ]** をクリックします。 データを更新するには、ユーティリティ エクスプローラーのウィンドウでユーティリティ名を右クリックし、**[更新]** をクリックします。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の追加のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録する方法については、「[SQL Server のインスタンスの登録 (SQL Server ユーティリティ)](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから **マネージ インスタンス** である UCP を削除するには、 **ユーティリティ エクスプローラー** のウィンドウで [マネージ インスタンス] を選択してマネージ インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ **ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージ インスタンスを削除]** を選択します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の追加のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録する方法については、「[SQL Server のインスタンスの登録 (SQL Server ユーティリティ)](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージド インスタンスである UCP を削除するには、 **ユーティリティ エクスプローラー** のウィンドウで **[マネージド インスタンス]** を選択してマネージド インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラー **のコンテンツ ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージド インスタンスを削除]** を選択します。  
   
 ##  <a name="PowerShell_create_UCP"></a> PowerShell を使用したユーティリティ コントロール ポイントの新規作成  
  次の例を使用すると、新しいユーティリティ コントロール ポイントを作成できます。  

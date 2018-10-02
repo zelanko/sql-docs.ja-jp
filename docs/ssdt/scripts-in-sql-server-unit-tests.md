@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f829c583b0591263eeb5db612983efc18e96fa97
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751630"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server の単体テストのスクリプト
 各 SQL Server 単体テストには、1 つの事前テスト アクション、テスト アクション、および事後テスト アクションが含まれています。 これらの各アクションには、次のものが含まれています。  

@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75b17cc357f3affc8fac293c771fbc63940d4fb4
-ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
+ms.openlocfilehash: f9da27595423d85ddb2769ea66b6ac4b4e26cb05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40405861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802290"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ ms.locfileid: "40405861"
 |-|-|-|-|  
 |**Level**|**ゲート数**|**メッセージ数**|**有用なメトリック**|  
 |[Transport]|可用性レプリカごとに 1 つ|8192|拡張イベント **database_transport_flow_control_action**|  
-|[データベース]|可用性データベースごとに 1 つ|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 拡張イベント **hadron_database_flow_control_action**|  
+|データベース|可用性データベースごとに 1 つ|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 拡張イベント **hadron_database_flow_control_action**|  
   
  いずれかのゲートのメッセージしきい値に達すると、ログ メッセージは特定のレプリカ、または特定のデータベースに送信されなくなります。 送信するメッセージに対して確認応答メッセージが受信され、結果として送信メッセージの数がしきい値を下回ると、メッセージを送信できるようになります。  
   

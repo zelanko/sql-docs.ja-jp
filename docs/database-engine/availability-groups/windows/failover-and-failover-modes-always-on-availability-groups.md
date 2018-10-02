@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f36ed49c90f9d5e4a3753a7cc72b144e510bac3b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a51069c347ac22d2dbb45f854e182995507bbf7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783570"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +81,9 @@ ms.locfileid: "34769658"
   
 ||非同期コミット モード|手動フェールオーバー モードを指定した同期コミット モード|自動フェールオーバーを指定した同期コミット モード|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|自動フェールオーバー (automatic failover)|いいえ|いいえ|はい|  
-|計画的な手動フェールオーバー|いいえ|はい|はい|  
-|強制フェールオーバー|はい|はい|可**\***|  
+|自動フェールオーバー (automatic failover)|いいえ|いいえ|[ユーザー アカウント制御]|  
+|計画的な手動フェールオーバー|いいえ|はい|[ユーザー アカウント制御]|  
+|強制フェールオーバー|[ユーザー アカウント制御]|[ユーザー アカウント制御]|可**\***|  
   
  **\*** 同期されたセカンダリ レプリカ上で強制フェールオーバー コマンドを実行した場合、セカンダリ レプリカは手動フェールオーバーの場合と同様に動作します。  
   
@@ -261,9 +258,9 @@ ms.locfileid: "34769658"
   
 |セカンダリ レプリカの可用性モード|データベースが同期しているか|データが失われる可能性があるか|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|同期コミット|はい|いいえ|  
-|同期コミット|いいえ|はい|  
-|非同期コミット|いいえ|はい|  
+|同期コミット|[ユーザー アカウント制御]|いいえ|  
+|同期コミット|いいえ|[ユーザー アカウント制御]|  
+|非同期コミット|いいえ|[ユーザー アカウント制御]|  
   
  セカンダリ データベースは 2 つの復旧分岐のみを追跡するため、複数の強制フェールオーバーを実行した場合、前の強制フェールオーバーでデータの同期を開始しなかったセカンダリ データベースは再開できない場合があります。 この場合は、再開できないセカンダリ データベースを可用性グループから削除して、適切な時点まで復元した後で再度可用性グループに参加させる必要があります。 復元は複数の復旧分岐に対しては機能しないため、複数の強制フェールオーバーを実行した後に必ずログ バックアップを実行してください。  
   

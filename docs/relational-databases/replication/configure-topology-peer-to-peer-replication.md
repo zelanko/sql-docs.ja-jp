@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0d0d154c844bd1afbcb4662b7e45f8a120de618
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351284"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793260"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] \(ピア ツー ピア レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +27,7 @@ ms.locfileid: "37351284"
 > [!NOTE]  
 >  ピア ツー ピア トポロジ構成ウィザードでは、ウィザードの終了時にトポロジ情報が要求されます。 すべてのノードが情報の要求に応答する前にウィザードを閉じて再度開くと、ウィザードに不完全なネットワークが表示される場合があります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[トポロジの構成]** ページには、要素を右クリックすると表示されるインターフェイス要素およびオプションがあります。 次の表では、各インターフェイス要素を説明します。  
   
 |インターフェイス要素|[説明]|  

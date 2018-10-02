@@ -5,23 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860f0f1d6dc774c7a009db193c2c84e940c6cc47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332496"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596200"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
@@ -93,7 +90,7 @@ ms.locfileid: "35332496"
 |戻り値|意味|応答|  
 |------------------|-------------|--------------|  
 |0|変更データが準備できていないことを示します。<br /><br /> 選択した間隔の終了時点より後に変更データ キャプチャ レコードがありません。|遅延を実装するコンポーネントから実行が継続されます。 その後、制御が For ループ コンテナーに戻り、返される値が 0 である限り引き続きコンテナーによって SQL 実行タスクがチェックされます。|  
-|@shouldalert|間隔全体にわたって変更データがキャプチャされていないか、変更データが削除されていることを示します。 これは、エラー状態として扱われます。<br /><br /> 選択した間隔の開始時点より前に変更データ キャプチャ レコードがありません。|エラーをログに記録するオプションのコンポーネントから実行が継続されます。|  
+|1|間隔全体にわたって変更データがキャプチャされていないか、変更データが削除されていることを示します。 これは、エラー状態として扱われます。<br /><br /> 選択した間隔の開始時点より前に変更データ キャプチャ レコードがありません。|エラーをログに記録するオプションのコンポーネントから実行が継続されます。|  
 |2|データが準備できていることを示します。<br /><br /> 選択した間隔の開始時点より前にも終了時点より後にも変更データ キャプチャ レコードがあります。|実行が For ループ コンテナーの外に移り、増分読み込みが開始されます。|  
 |3|使用可能なすべての変更データの最初の読み込みを示します。<br /><br /> この値は、このためだけに使用される特殊なパッケージ変数から条件ロジックによって取得されます。|実行が For ループ コンテナーの外に移り、増分読み込みが開始されます。|  
 |5|TimeoutCeiling に達したことを示します。<br /><br /> 指定された回数だけループでデータがテストされましたが、データはまだ使用できません。 このテストまたは同様のテストを実行しないと、パッケージが無期限に実行される可能性があります。|タイムアウトをログに記録するオプションのコンポーネントから実行が継続されます。|  

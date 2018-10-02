@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dta.sessionmonitor.f1
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: de3d07abb1b4e422662c2283873de739c59c6f9b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794610"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "34334983"
  また、GUI を使用して、 **dta** コマンド ライン ユーティリティによって生成したチューニング出力を表示できます。  
   
 > [!NOTE]  
->  **dta** コマンド ライン ユーティリティを使用し、 **-ox** 引数を使用して出力を XML ファイルに書き込むように指定した場合は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]** メニューから **[ファイルを開く]** をクリックすると、XML 出力ファイルを開いて表示できます。 詳細については、「 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)」を参照してください。 **dta** コマンド ライン ユーティリティの詳細については、「 [dta ユーティリティ](../../tools/dta/dta-utility.md)」を参照してください。 
+>  **dta** コマンド ライン ユーティリティを使用し、 **-ox** 引数を使用して出力を XML ファイルに書き込むように指定した場合は、 **の** [ファイル] **メニューの** [ファイルを開く] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をクリックすると、XML 出力ファイルを開いて表示できます。 詳細については、「 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)」を参照してください。 **dta** コマンド ライン ユーティリティの詳細については、「 [dta ユーティリティ](../../tools/dta/dta-utility.md)」を参照してください。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザーの GUI を使用してチューニングに関する推奨設定を表示するには  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_SHOWCONTIG_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 78
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b3cf8c650a3e34181cbd462fd99404a0ca7e7d0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595910"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +144,7 @@ WITH TABLERESULTS および FAST を指定した場合の結果セットは WITH
 |**ForwardedRecords**||  
   
 ## <a name="remarks"></a>Remarks  
-*index_id* を指定すると、DBCC SHOWCONTIG ステートメントは、指定されたインデックスのリーフ レベルでページ チェーンを移動します。 *table_id* のみを指定するか、*index_id* を 0 に指定すると、指定されたテーブルのデータ ページがスキャンされます。 この操作には、インテント共有 (IS) テーブル ロックのみが必要です。 この方法では、排他 (X) テーブル ロックが必要な場合を除き、すべての更新と挿入が実行できます。 これにより、実行の速度は速くなりますが、返される統計数に対する同時実行の数は削減されません。 ただし、このコマンドを断片化の測定のみに使用する場合は、最適なパフォーマンスを得るために WITH FAST オプションを指定することをお勧めします。 高速スキャンでは、インデックスのリーフ レベルまたはデータ レベルのページは読み込まれません。 WITH FAST オプションは、ヒープには適用されません。
+*index_id* を指定すると、DBCC SHOWCONTIG ステートメントは、指定されたインデックスのリーフ レベルでページ チェーンを移動します。 *table_id* のみを指定するか、*index_id* を 0 に指定すると、指定されたテーブルのデータ ページがスキャンされます。 この操作には、インテント共有 (IS) テーブル ロックのみが必要です。 この方法では、排他 (X) テーブル ロックが必要な場合を除き、すべての更新と挿入が実行できます。 これにより、実行の速度は速くなりますが、返される統計数に対するコンカレンシーの数は削減されません。 ただし、このコマンドを断片化の測定のみに使用する場合は、最適なパフォーマンスを得るために WITH FAST オプションを指定することをお勧めします。 高速スキャンでは、インデックスのリーフ レベルまたはデータ レベルのページは読み込まれません。 WITH FAST オプションは、ヒープには適用されません。
   
 ## <a name="restrictions"></a>制限  
 DBCC SHOWCONTIG では、**ntext**、**text**、**image** データ型のデータは表示されません。 これは、テキストとイメージのデータが格納されているテキスト インデックスが存在しなくなったためです。

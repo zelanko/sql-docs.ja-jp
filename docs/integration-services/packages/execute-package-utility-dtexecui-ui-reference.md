@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.dtexecui.setvalues.f1
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 825edb0d4002dec483756551e1c2b175acef7efe
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9ae6db2bfa011defe472054b98243062b5bc93d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401454"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669430"
 ---
 # <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
@@ -127,7 +124,7 @@ ms.locfileid: "35401454"
 ## <a name="configurations-page"></a>[構成] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[構成]** ページを使用すると、実行時に読み込む構成ファイルの選択と、読み込む順序の指定ができます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[構成ファイル]**  
  パッケージが使用する構成を一覧表示します。 構成ファイルごとに、 **/CONFIGFILE filename** オプションがコマンド プロンプトに追加されます。  
   
@@ -152,7 +149,7 @@ ms.locfileid: "35401454"
 ## <a name="command-files-page"></a>[コマンド ファイル] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[コマンド ファイル]** ページを使用すると、実行時に読み込むコマンド ファイルを選択できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **Command files**  
  パッケージが使用するコマンド ファイルを一覧表示します。 パッケージは、複数のファイルを使用してコマンド ライン オプションを設定できます。  
   
@@ -174,7 +171,7 @@ ms.locfileid: "35401454"
 ## <a name="connection-managers-page"></a>[接続マネージャー] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、パッケージで使用する接続マネージャーの接続文字列を編集できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **接続マネージャー**  
  チェック ボックスをオンにすると、 **[接続文字列]** 列が編集可能になります。  
   
@@ -193,7 +190,7 @@ ms.locfileid: "35401454"
 ## <a name="execution-options-page"></a>[実行オプション] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[実行オプション]** ページを使用すると、パッケージの実行時オプションを指定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[検証時に警告が発生したらパッケージを失敗とする]**  
  検証時に警告が発生した場合に、パッケージを失敗させるかどうかを示します。  
   
@@ -212,8 +209,7 @@ ms.locfileid: "35401454"
  **[参照]**  
  パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、 **[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
   
- 
-  **[再開オプションをオーバーライドする]**  
+ **[再開オプションをオーバーライドする]**  
  パッケージのチェックポイントが有効な場合、再開オプションをオーバーライドするかどうかを示します。  
   
  **[再開オプション]**  
@@ -228,7 +224,7 @@ ms.locfileid: "35401454"
 ## <a name="reporting-page"></a>[レポート] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[レポート]** ページを使用すると、パッケージを実行したときにコンソールのログに記録する、イベントとパッケージに関する情報を指定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[コンソールのイベント]**  
  レポートに記録するイベントとメッセージの種類を指定します。  
   
@@ -289,7 +285,7 @@ ms.locfileid: "35401454"
 ## <a name="logging-page"></a>[ログ記録] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[ログ記録]** ページを使用すると、ログ プロバイダーの実行時にパッケージを利用できます。 パッケージのログ プロバイダーの種類とログに接続するための接続文字列を指定します。 ログ プロバイダーのエントリごとに、**/LOGGER***classid* オプションがコマンド プロンプトに追加されます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[ログ プロバイダー]**  
  一覧からログ プロバイダーを選択します。  
   
@@ -308,7 +304,7 @@ ms.locfileid: "35401454"
 ## <a name="set-values-page"></a>[値の設定] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[値の設定]** ページを使用すると、プロパティのパスと値を入力することにより、パッケージ、実行可能ファイル、接続、変数、およびログ プロバイダーのプロパティ値を設定できます。 パスのエントリごとに、コマンド プロンプトに **/SET***propertypath;value* オプションが追加されます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[プロパティのパス]**  
  プロパティのパスを入力します。 パスの構文では、円記号 (\\) を使用して続くアイテムがコンテナーであることを示し、ピリオド (.) を使用して続くアイテムがプロパティであることを示します。また、角かっこはコレクションのメンバーを示します。 メンバーは、インデックスまたは名前で識別できます。 たとえば、パッケージ変数のプロパティのパスは、「\Package.Variables[MyVariable].Value」です。  
   
@@ -327,7 +323,7 @@ ms.locfileid: "35401454"
 ## <a name="verification-page"></a>[検証] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[検証]** ページを使用すると、パッケージを検証するための条件を設定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[署名付きパッケージのみ実行する]**  
  署名されたパッケージのみ実行します。  
   
@@ -358,7 +354,7 @@ ms.locfileid: "35401454"
 ## <a name="command-line-page"></a>[コマンド ライン] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[コマンド ライン]** ノードを使用すると、さまざまなダイアログ ボックスで作成されたオプションを使用して生成されたコマンド ラインを編集できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[元のオプションを復元する]**  
  コマンド ラインを元の状態に復元します。 **[コマンド ラインを手動で編集する]** オプションを使用して変更してから、元のコマンド ライン オプションを復元する場合は、このオプションを使用します。  
   

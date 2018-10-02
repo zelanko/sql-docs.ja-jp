@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc709ccddddbd80955cc1f5a27899495517db169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98f0146139670b83970ca073391f23c688cc2b44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953517"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654792"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server: Buffer Manager オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.locfileid: "32953517"
 ## <a name="buffer-manager-performance-objects"></a>Buffer Manager パフォーマンス オブジェクト  
  次の表で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** パフォーマンス オブジェクトについて説明します。  
   
-|SQL Server Buffer Manager カウンター|Description|  
+|SQL Server Buffer Manager カウンター|[説明]|  
 |----------------------------------------|-----------------|  
 |**1 秒あたりのバックグラウンド ライター ページ**|復旧間隔の設定を適用するためにフラッシュされたページ数。| 
 |**Buffer cache hit ratio**|バッファー キャッシュ内に存在し、ディスクから読み取る必要がないページの比率を示します。 この比率は、最近の数千のページ アクセスでのキャッシュ ヒットの総数を、キャッシュ参照の総数で割って算出します。 長い時間が経過すると、この比率はほとんど変化しなくなります。 キャッシュから読み取る方が、ディスクから読み取るよりもコストが低いので、この比率が高くなるようにします。 一般に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるメモリの量を増やすか、バッファー プール拡張機能を使用することで、バッファー キャッシュ ヒット率を増加させることができます。|  

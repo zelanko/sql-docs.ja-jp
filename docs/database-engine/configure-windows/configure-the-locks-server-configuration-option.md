@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dbe738bb44203f45b6d780b9beed9ec5dbb1dc29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8681bfa94a859e5ce63a74e26960c64db3b7528
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755350"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>locks サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "32867317"
   
      通常、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のメモリ プールから取得できるメモリよりも多くのメモリがロック プールに必要であり、より多くのコンピューター メモリが使用できる ( **max server memory** のしきい値に達していない) 場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はメモリを動的に割り当ててロック要求に応じます。 ただし、そのメモリを割り当てることによって、オペレーティング システム レベルでページングが発生する場合、たとえば、別のアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと同じコンピューター上で実行されていて、そのメモリを使用している場合は、ロック用に割り当てを増やすことはできません。 動的なロック プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に割り当てられたメモリのうち最大 60% まで取得できます。 ロック プールが [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスによって取得されたメモリの 60% に達した場合、またはコンピューターで使用できるメモリがなくなった場合、さらにロック要求があるとエラーが発生します。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が動的にロックを割り当てるように構成することをお勧めします。 ただし、 **locks** を設定し、ロック リソースを動的に割り当てる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を無効にすることができます。 **locks** が 0 以外の値に設定されている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は **locks**に指定された値よりも多くのロックを割り当てることができません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に使用可能なロック数を超えたことを示すメッセージが表示された場合は、この値を大きくします。 各ロックはそれぞれ 96 バイトのメモリを消費するため、この値を大きくした場合、状況によってはサーバー専用のメモリも増やす必要があります。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が動的にロックを割り当てるように構成することをお勧めします。 ただし、**locks** を設定し、ロック リソースを動的に割り当てる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能をオーバーライドすることができます。 **locks** が 0 以外の値に設定されている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は **locks**に指定された値よりも多くのロックを割り当てることができません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に使用可能なロック数を超えたことを示すメッセージが表示された場合は、この値を大きくします。 各ロックはそれぞれ 96 バイトのメモリを消費するため、この値を大きくした場合、状況によってはサーバー専用のメモリも増やす必要があります。  
   
 -   **locks** オプションも、ロックのエスカレートがいつ行われるかに影響を与えます。 **locks** を 0 に設定すると、現在のロック構造で使用されるメモリが [!INCLUDE[ssDE](../../includes/ssde-md.md)] のメモリ プールの 40% に達したときに、ロックのエスカレートが行われます。 **locks** が 0 に設定されていない場合は、ロック数が **locks**に指定された値の 40% に達したときに、ロックのエスカレートが行われます。  
   

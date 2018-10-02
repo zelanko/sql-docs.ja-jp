@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 22be2baf6980f8df813635f3b9d4e4dfd213b818
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 2569ae3b006f9ab32c681db53fef11cfe395b348
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355894"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717700"
 ---
 # <a name="generate-filters"></a>[フィルターの生成]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[フィルターの生成]** ダイアログ ボックスでは、マージ パブリケーション内の 1 つのテーブルに対して行フィルターを定義できます。これを行うと、レプリケーションによって、外部キー リレーションシップを介して関連付けられる他のテーブルにそのフィルターが自動的に拡張されます。 たとえば、フランスの顧客データのみを含むように、フィルターを顧客テーブルに定義した場合、レプリケーションによってこのフィルターが拡張され、関連する受注テーブルや受注詳細テーブルには、フランスの顧客に関連する情報のみが含まれることになります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  このダイアログ ボックスには、テーブルに行フィルターを作成するための 3 段階のプロセスがあります。 主キーと外部キーのリレーションシップを通じて、フィルターされたテーブルと関連するテーブルにフィルターが拡張されます。 たとえば、3 つのテーブル、 **Customer**、 **SalesOrderHeader**、および **SalesOrderDetail**に、 **Customer** と **SalesOrderHeader**のリレーションシップおよび **SalesOrderHeader** と **SalesOrderDetail**のリレーションシップが与えられている場合、 **Customer**に行フィルターを適用すると、レプリケーションによってこのフィルターが **SalesOrderHeader** と **SalesOrderDetail**に拡張されます。  
   
 1.  **[フィルターを適用するテーブルを選択します。]**  
