@@ -5,9 +5,7 @@ ms.date: 07/07/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.pro.traceproperties.general.f1;
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bd72cc0de57f33c69101ba2d5f387ed45bae4c6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999874"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767160"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -186,7 +183,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、�
 ### <a name="replay-options"></a>再生オプション  
 |アイテム|[説明]
 |---|---
-|**[再生スレッドの既定の数]**|同時に使用する再生スレッドの数を指定します。 使用する数を多くすると再生中のリソースも多くなりますが、再生の同時実行数が増えます。  
+|**[再生スレッドの既定の数]**|同時に使用する再生スレッドの数を指定します。 使用する数を多くすると再生中のリソースも多くなりますが、再生のコンカレンシー数が増えます。  
 |**[ヘルス モニターの既定の待機間隔 (秒)]**|再生の待機間隔を秒単位で指定します。 既定値は 3,600 秒 (1 時間) です。 この設定は、ヘルス モニターでスレッドが終了するまでに、このスレッドを実行できる時間の長さに影響を与えます。  
 |**[ヘルス モニターの既定のポーリング間隔 (秒)]**|再生中のヘルス モニターのポーリング間隔を秒単位で指定します。 既定値は 60 秒です。 ユーザーはこの値を指定することで、終了するプロセスを決定するためにヘルス モニターがポーリングする頻度を設定できます。
 ## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>基になるテーブル (データベース エンジン チューニング アドバイザーの [ワークロード テーブルの選択])

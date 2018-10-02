@@ -1,13 +1,11 @@
 ---
-title: getTableName メソッド (SQLServerResultSetMetaData) |Microsoft ドキュメント
+title: getTableName メソッド (SQLServerResultSetMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSetMetaData.getTableName
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 941b9cbf8b8d3dff56713b570e838bcf8bd499c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a04265a1ae074de815df25a7610c8b943773c7bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621510"
 ---
 # <a name="gettablename-method-sqlserverresultsetmetadata"></a>getTableName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,17 +41,17 @@ public java.lang.String getTableName(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**テーブル名を格納しています。  
+ テーブル名を含む**文字列**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getTableName メソッドは、java.sql.ResultSetMetaData インターフェイスの getTableName メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getTableName メソッドは、java.sql.ResultSetMetaData インターフェイスで getTableName メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [SQLServerResultSetMetaData のメソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
- [SQLServerResultSetMetaData のメンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+ [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
+ [SQLServerResultSetMetaData メンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData クラス](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

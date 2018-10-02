@@ -1,13 +1,11 @@
 ---
-title: supportsCoreSQLGrammar メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: supportsCoreSQLGrammar メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsCoreSQLGrammar
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d11092811dd72812d84c4551aabb2e69da9efb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4606e2574e0c1fd058c9ae075c75f1670ef2fc80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804880"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>supportsCoreSQLGrammar メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,8 +41,8 @@ public boolean supportsCoreSQLGrammar()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この supportsCoreSQLGrammer メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsCoreSQLGrammer メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この supportsCoreSQLGrammer メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsCoreSQLGrammer メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

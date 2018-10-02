@@ -1,13 +1,11 @@
 ---
-title: supportsLimitedOuterJoins メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: supportsLimitedOuterJoins メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsLimitedOuterJoins
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 06225a1a-a58d-4bff-b2ef-be303f051644
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2707cca6770968775d42a5bf426d38318073bff5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: da044b8a5b9383cac3b0e2e485bf59f3c3223523
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847277"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743680"
 ---
 # <a name="supportslimitedouterjoins-method-sqlserverdatabasemetadata"></a>supportsLimitedOuterJoins メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,8 +41,8 @@ public boolean supportsLimitedOuterJoins()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この supportsLimitedOuterJoins メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsLimitedOuterJoins メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この supportsLimitedOuterJoins メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsLimitedOuterJoins メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
