@@ -5,12 +5,8 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74ab3804f6f62d6aadb9e45a57bd7169aa1d1e96
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7f191ce84bc89b2958b4d72d6ec3d491e4f34eeb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689440"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>カスタム タスク用ユーザー インターフェイスの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルを使用すると、カスタム タスクの開発者は、タスク用のユーザー インターフェイスを容易に作成できます。作成後、このユーザー インターフェイスは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に統合して表示することができます。 このユーザー インターフェイスでは、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザーに役に立つ情報を提供でき、カスタム タスクのプロパティや設定を正しく構成するための指針とすることができます。  
@@ -41,7 +36,7 @@ ms.locfileid: "35409214"
   
 |クラス|[説明]|  
 |-----------|-----------------|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|マネージ タスクを識別する属性。この属性のプロパティによってデザイン時の情報を提供し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでのオブジェクトの表示方法と操作方法を制御します。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|マネージド タスクを識別する属性。この属性のプロパティによってデザイン時の情報を提供し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでのオブジェクトの表示方法と操作方法を制御します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|タスクとカスタム ユーザー インターフェイスを関連付けるためにタスクが使用するインターフェイス。|  
   
  このセクションでは、ユーザー インターフェイスを開発する際の <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性および <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> インターフェイスの役割について説明し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでタスクを作成、統合、配置、デバッグする方法について詳細に説明します。  

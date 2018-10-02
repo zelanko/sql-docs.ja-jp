@@ -5,21 +5,18 @@ ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b07dc7322a8bc09ecd344aef76163b911c06c866
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 52c45cbc39a4f6acb7590698c31bdca2d7f175d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411295"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692110"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **MySQL** データ ソースに接続する方法を説明します。 MySQL への接続に使用できるいくつかのデータ プロバイダーがあります。

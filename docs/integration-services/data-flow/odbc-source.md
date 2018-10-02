@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.odbcsource.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 796c0f5e2d0cb2d689921d75b9e2005a49a35106
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694511"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
@@ -67,7 +64,7 @@ ms.locfileid: "35332576"
 ## <a name="parallelism"></a>Parallelism  
  並列実行できる ODBC 入力元コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
   
- ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介する同時接続数が制限される場合があります。 これらの制限によって、ODBC 入力元で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
+ ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介するコンカレント接続数が制限される場合があります。 これらの制限によって、ODBC 入力元で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
   
 ## <a name="troubleshooting-the-odbc-source"></a>ODBC 入力元のトラブルシューティング  
  ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ODBC 入力元による外部データ ソースからのデータ読み込みに関するトラブルシューティングを行うことができます。 ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録するには、ODBC ドライバー マネージャーによるトレースを有効にします。 詳細については、「 *ODBC で ODBC トレースを生成する方法 (データ ソース管理者向け)*」の Microsoft のドキュメントを参照してください。  
@@ -99,7 +96,7 @@ ms.locfileid: "35332576"
   
 -   **[データ フロー]** タブで、ODBC 入力元をダブルクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
   
 #### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
@@ -135,7 +132,7 @@ ms.locfileid: "35332576"
   
 3.  **[ODBC 入力元エディター]** で、 **[列]** をクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
   
 #### <a name="available-external-columns"></a>使用できる外部列  
  データ ソース内の使用できる外部列の一覧です。 このテーブルを使用して列を追加または削除することはできません。 入力元から使用する列を選択します。 選択した列は、選択した順序で **[外部列]** の一覧に追加されます。  
@@ -160,7 +157,7 @@ ms.locfileid: "35332576"
   
 -   **[ODBC 入力元エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
   
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  
