@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f9255f356347e0bcfb7a35bbe17b9c8ec6468b4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808290"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -54,7 +51,7 @@ ms.locfileid: "35409984"
 ## <a name="parallelism"></a>並列処理  
  並列実行できる ODBC 入力先コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
   
- ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介する同時接続数が制限される場合があります。 これらの制限によって、ODBC 入力先で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
+ ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介するコンカレント接続数が制限される場合があります。 これらの制限によって、ODBC 入力先で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
   
  また、同一テーブルへの同時読み込みの場合、標準のレコード ロックのためにパフォーマンスが低下することがある点についても理解しておく必要があります。 これは、読み込まれているデータとテーブルの編成によって異なります。  
   
@@ -99,7 +96,7 @@ ms.locfileid: "35409984"
   
 -   **[ODBC 入力先エディター]** で、 **[接続マネージャー]** をクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
   
 #### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、[新規作成] をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
@@ -123,7 +120,7 @@ ms.locfileid: "35409984"
 ## <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\([マッピング] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
   
 #### <a name="available-input-columns"></a>[使用できる入力列]  
  使用できる入力列の一覧です。 使用できる変換先列に入力列をドラッグ アンド ドロップして、列をマップできます。  
@@ -150,7 +147,7 @@ ms.locfileid: "35409984"
   
 -   **[ODBC 入力先エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
   
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  

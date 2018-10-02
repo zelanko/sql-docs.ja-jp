@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - studio environments [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3ce449f815f4137180eb69f4aac4bfccc75f2ab
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 58e52dcfd08a16b405a9564336d4c23404230021
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404994"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811420"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) の開発と管理ツール
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージと組み合わせて活用できる 2 つの Studio が含まれています。  
@@ -53,7 +50,7 @@ ms.locfileid: "35404994"
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の詳細については、「 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx)」を参照してください。  
   
-## <a name="sql-server-management-studio"></a>[SQL Server Management Studio]  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを利用して、パッケージの管理、実行中のパッケージの監視、および [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの影響とデータ系列の決定を行います。  
   
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用すると、次のタスクを実行できます。  

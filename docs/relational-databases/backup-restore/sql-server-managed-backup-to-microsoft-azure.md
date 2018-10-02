@@ -5,21 +5,18 @@ ms.date: 10/18/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac4d76ceb3bcbd3042e4fb4d7f1fa42ceda44860
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 85df2401dc5827a2e476fa62178586ee834d188d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751650"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,16 +126,12 @@ ms.locfileid: "38983384"
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ではブロック BLOB へのバックアップ機能を使用します。 ブロック BLOB の最大サイズは 200 GB です。 ストライピングを利用することにより、個々のバックアップの最大サイズを 12 TB まで指定できます。 バックアップ要件がこれを超える場合は、圧縮の使用を検討し、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]をセットアップする前にバックアップ ファイルのサイズをテストします。 テストは、ローカル ディスクにバックアップするか、Transact-SQL の **BACKUP TO URL** ステートメントを使用して手動で Microsoft Azure ストレージにバックアップして行うことができます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   
--   
-            [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。  
   
 ## <a name="see-also"></a>参照  
-- 
-  [Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
-- 
-  [Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
-- 
-  [Microsoft Azure への SQL Server マネージド バックアップを無効にする](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
+- [Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Microsoft Azure への SQL Server マネージド バックアップを無効にする](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [システム データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   

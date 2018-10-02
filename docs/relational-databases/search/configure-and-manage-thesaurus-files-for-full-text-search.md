@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe04fa2462eed41ace5a8c70b0b3afd13848286c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 290008818b5cd486535e9b14f437729e4cab07e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731400"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +174,7 @@ ms.locfileid: "33182418"
 |分音文字の設定|ReplTest1|XML|  
 |------------------------|-----------|---------|  
 |アクセントを区別しない|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-|アクセントを区別する|@shouldalert|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+|アクセントを区別する|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
 > [!NOTE]  
 >  この設定はファイルで 1 回のみ適用でき、ファイル内のすべての検索パターンに適用されます。 この設定は個別のパターンには指定できません。  

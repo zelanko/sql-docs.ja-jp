@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53abce8b3b80d9219311cf95d4bb4ef391ae22b9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab5c01a12200ed62cfc462fa25d3d75a95fd8589
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716630"
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
   レポート ビルダーでは、さまざまな種類のページ分割されたレポートを作成できます。 たとえば、売上データの概要または詳細、マーケティングと売上の傾向、経営報告、またはダッシュボードを示すレポートを作成できます。 また、販売注文、製品カタログ、定型書簡などの高度な書式付きテキストを利用したレポートも作成できます。 これらのレポートはすべて、レポート ビルダーの同じ基本的な構成要素をさまざまに組み合わせて作成されます。 便利でわかりやすいレポートを作成するには、まず計画を立てることが役立ちます。 開始する前に検討すると役立ついくつかの事項を次に示します。  

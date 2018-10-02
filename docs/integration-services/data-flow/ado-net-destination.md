@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.adonetdest.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c79ed326ac9553dfa756ab639b8689c2067c548c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 493e6c7a6cb2f3de0d6e637ece3add31085a8bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332396"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742360"
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
   ADO NET 変換先では、データベースのテーブルやビューを使用する、さまざまな [!INCLUDE[vstecado](../../includes/vstecado-md.md)]互換データベースにデータを読み込みます。 このデータを既存のテーブルやビューに読み込むことができますが、新しいテーブルを作成して、そこにデータを読み込むこともできます。  
@@ -123,7 +120,7 @@ ms.locfileid: "35332396"
   
 3.  **[ADO NET 変換先エディター]** で、 **[マッピング]** をクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
@@ -147,7 +144,7 @@ ms.locfileid: "35332396"
   
 3.  **[ADO NET 変換先エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **入力または出力**  
  入力の名前を表示します。  
   

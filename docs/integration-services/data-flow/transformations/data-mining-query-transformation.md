@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53e2d0f60ae951133ab4ef0a7f05a6a134322b0f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: de863a5aeba65dded46990d94e204bb29ef6bd1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407024"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813070"
 ---
 # <a name="data-mining-query-transformation"></a>データ マイニング クエリ変換
   データ マイニング クエリ変換は、データ マイニング モデルに対して予測クエリを実行します。 この変換には、データ マイニング拡張機能 (DMX) クエリを作成するためのクエリ ビルダーが含まれています。 このクエリ ビルダーを使用すると、DMX 言語を使用して、既存のマイニング モデルに対して変換入力データを評価する、カスタム ステートメントを作成できます。 詳細については、「[データ マイニング拡張機能 (DMX) リファレンス](../../../dmx/data-mining-extensions-dmx-reference.md)」を参照してください。  
@@ -51,7 +48,7 @@ ms.locfileid: "35407024"
 ## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>[データ マイニング クエリ変換エディター] ([マイニング モデル] タブ)
   **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、データ マイニング構造とそのマイニング モデルを選択できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **接続**  
  リスト ボックスを使用して既存の Analysis Services 接続を選択するか、以下に説明する **[新規作成]** ボタンを使用して新しい接続を作成します。  
   
@@ -67,7 +64,7 @@ ms.locfileid: "35407024"
 ## <a name="data-mining-query-transformation-editor-query-tab"></a>[データ マイニング クエリ変換エディター] ([クエリ] タブ)
   **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[クエリ]** タブを使用すると、予測クエリを作成できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[データ マイニング クエリ]**  
  データ マイニング拡張機能 (DMX) クエリを、テキスト ボックスに直接入力します。  
   

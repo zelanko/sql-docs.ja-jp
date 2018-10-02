@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b622347baa5f3094bc78221294ff842930e642b8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9ed4c6eb7a61f28b22a349f2ef2511cba382a3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730860"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS)
   ストリップ ライン (ストリップ) は、一定の間隔またはカスタムの間隔でグラフの背景を網掛け表示にする、横方向または縦方向の帯です。 ストリップ ラインを使用すると、次のことが可能になります。  

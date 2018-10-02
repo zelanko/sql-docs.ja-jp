@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b02df9c27dfc406bec621d68936ac85b6b949406
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 680232b1a65bf811c5281da715e4fb93fd2f416f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735690"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +174,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  ユーザー定義関数を使用して、プロパティ テーブルのメンテナンスに使用する挿入トリガー、更新トリガー、および削除トリガーを定義します。  
   
- まず、ストリーミング CLR 関数を作成します。 **xml** データ型は ADO.NET のマネージ クラス SqlXml として公開します。このデータ型は XmlReader を返す **CreateReader()** メソッドをサポートします。  
+ まず、ストリーミング CLR 関数を作成します。 **xml** データ型は ADO.NET のマネージド クラス SqlXml として公開します。このデータ型は XmlReader を返す **CreateReader()** メソッドをサポートします。  
   
 > [!NOTE]  
 >  このセクションの例のコードでは、XPathDocument および XPathNavigator を使用しています。 この 2 つはすべての XML ドキュメントをメモリに読み込みます。 大きな XML ドキュメントを処理するためにこのサンプルと同様のコードを使用する場合、このコードにはスケーラビリティはありません。 代わりに、メモリの割り当てを少なく抑え、可能な限りストリーミング インターフェイスを使用してください。 パフォーマンスの詳細については、「 [CLR 統合のアーキテクチャ](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)」を参照してください。  

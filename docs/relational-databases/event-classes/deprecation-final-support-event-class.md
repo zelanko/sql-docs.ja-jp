@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Deprecation Final Support event class
 - deprecation [SQL Server], events final support
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9fc77364fe481f8d6a9f60da78c8c3ddd2c2bea
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b4165f92457abc8764095de73f53e6d0ed3d2348
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062765"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720610"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,6 @@ ms.locfileid: "43062765"
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Deprecation Announcement イベント クラス](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
- 
-  [SQL Server 2016 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [SQL Server 2016 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d7c90b45352ff3afe78891c6849b04d69ab58175
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 054c6d8ea517bf3a2edd64622fc7385d8f9e24f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705950"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
 
@@ -66,7 +63,7 @@ ms.locfileid: "38984694"
   
     |要素|[説明]|  
     |-------------|-----------------|  
-    |[時刻]|トレースのエントリが発生した時刻。|  
+    |Time|トレースのエントリが発生した時刻。|  
     |CorrelationID|要求ごとに 1 つの関連付け ID が割り当てられます。 この要求によってトリガーされるすべてのトレースは、同じ関連付け ID を共有します。<br /><br /> UI でエラーが発生すると、エラー メッセージに関連付け ID が表示されます。|  
     |演算|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
     |レベル|このトレース エントリのレベル。|  

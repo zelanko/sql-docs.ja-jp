@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d84c243d448376490b50835278b936c18fe0a47e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682504"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
   メール送信タスクは、電子メール メッセージを送信します。 メール送信タスクを使用すると、パッケージ ワークフロー内のタスクが成功または失敗した場合にパッケージからメッセージを送信したり、実行時にパッケージで発生するイベントに応答してメッセージを送信したりできます。 たとえば、データベースのバックアップ タスクが成功または失敗したことを、メール送信タスクからデータベース管理者に通知できます。  
@@ -91,7 +88,7 @@ ms.locfileid: "35331896"
 ## <a name="send-mail-task-editor-general-page"></a>[メール送信タスク エディター] ([全般] ページ)
   **[メール送信タスク エディター]** の **[全般]** ページを使用すると、メール送信タスクに名前を付けて説明を記述できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **名前**  
  メール送信タスクに一意の名前を提供します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -103,7 +100,7 @@ ms.locfileid: "35331896"
 ## <a name="send-mail-task-editor-mail-page"></a>[メール送信タスク エディター] ([メール] ページ)
   **[メール送信タスク エディター]** ダイアログ ボックスの **[メール]** ページを使用すると、受信者、メッセージの種類、メッセージの重要度を指定できます。 メッセージにファイルを添付することもできます。 メッセージ テキストは、入力した文字列、テキストが含まれるファイルへのファイル接続、またはテキストが含まれる変数の名前になります。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[SMTPConnection]**  
  一覧で SMTP 接続マネージャーを選択するか、[**\<新しい接続…>**] をクリックして新しい接続マネージャーを作成します。  
   

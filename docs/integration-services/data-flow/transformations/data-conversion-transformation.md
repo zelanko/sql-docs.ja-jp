@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataconversiontrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f76181a1bfaaf249fda54916fc1e7f0f17b315a4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 136cc16c9a28fbaddeb0ebe655db016697ef3c1a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404814"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821160"
 ---
 # <a name="data-conversion-transformation"></a>データ変換の変換
   データ変換の変換は、入力列のデータを別のデータ型に変換し、新しい出力列にコピーします。 たとえば、パッケージで複数の変換元のデータを抽出し、この変換を使用して、列を変換先のデータ ストアで要求されるデータ型に変換できます。 1 つの入力列に複数の変換を適用できます。  
@@ -61,7 +58,7 @@ ms.locfileid: "35404814"
 > [!NOTE]  
 >  データ変換の変換の出力列の **FastParse** プロパティは、 **[データ変換変換エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「データ変換の変換」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **使用できる入力列**  
  変換対象の列のチェック ボックスを使用して選択します。 選択した列が入力列として下のテーブルに追加されます。  
   

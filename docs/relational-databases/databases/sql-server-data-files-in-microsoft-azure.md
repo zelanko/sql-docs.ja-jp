@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 10/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f0fb9a3b956a6ae1be07c3fc8337d83ebb4ad34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03d9dd525c06574360782a288faf2dae917f49cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32933123"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822200"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +39,7 @@ ms.locfileid: "32933123"
   
 -   **コストと無制限のストレージの利点:** この機能を使用すると、オンプレミスの環境のコンピューティング リソースを活用しつつ、Microsoft Azure 内に無制限のオフサイト ストレージを確保することができます。 格納場所として Microsoft Azure を使用すると、ハードウェア管理のオーバーヘッドがなく、アプリケーション ロジックに専念することが容易になります。 内部設置型のコンピューティング ノードが失われた場合は、データを移動することなく新しいノードをセットアップできます。  
   
--   
-            **高可用性とディザスター リカバリーの利点:** Microsoft Azure 機能で SQL Server データ ファイルを使用すると、高可用性とディザスター リカバリーのソリューションが簡略化される可能性があります。 たとえば、Microsoft Azure の仮想マシンまたは SQL Server のインスタンスがクラッシュした場合、Microsoft Azure BLOB へのリンクを再設定するだけで、新しい SQL Server インスタンスにデータベースを再作成できます。  
+-   **高可用性とディザスター リカバリーの利点:** Microsoft Azure 機能で SQL Server データ ファイルを使用すると、高可用性とディザスター リカバリーのソリューションが簡略化される可能性があります。 たとえば、Microsoft Azure の仮想マシンまたは SQL Server のインスタンスがクラッシュした場合、Microsoft Azure BLOB へのリンクを再設定するだけで、新しい SQL Server インスタンスにデータベースを再作成できます。  
   
 -   **セキュリティの利点:** この新しい機能強化では、コンピューティング インスタンスをストレージ インスタンスから分離することができます。 データベースをフルに暗号化し、暗号化解除をストレージ インスタンスではなくコンピューティング インスタンスのみで行うことができます。 つまり、この新しい機能強化では、データとは物理的に分離された TDE (Transparent Data Encryption: 透過的なデータ暗号化) 証明書を使用して、パブリック クラウドに置くすべてのデータを暗号化できます。 TDE キーは、物理的に安全なオンプレミスのコンピューターに格納され、ローカルでバックアップされている master データベースに保存できます。 これらのローカル キーを使用して、Microsoft Azure ストレージ上に存在するデータを暗号化することができます。 クラウド内のストレージ アカウントの資格情報が盗用されても、TDE 証明書は常に内部設置型の環境にあるため、データの安全性が維持されます。  
   
@@ -134,7 +129,7 @@ ON
  SQL Server 2014 以降では、Azure Storage 機能内の SQL Server データ ファイルと組み合わせて使用する目的で、1 つの新しい SQL Server オブジェクトが追加されました。 新しい SQL Server オブジェクトは [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) と呼ばれます。これをシステム モニターで使用すると、SQL Server を Microsoft Azure Storage と共に使用する場合のアクティビティを監視できます。  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio のサポート  
- SQL Server Management Studio では、複数のダイアログ ウィンドウでこの機能を使用することができます。 たとえば、ストレージ コンテナーの URL パスを入力します (たとえば、https://teststorageaccnt.blob.core.windows.net/testcontainer/)。
+ SQL Server Management Studio では、複数のダイアログ ウィンドウでこの機能を使用することができます。 たとえば、ストレージ コンテナーの URL パスを入力します (たとえば、 https://teststorageaccnt.blob.core.windows.net/testcontainer/)。
  
  **[新しいデータベース]** 、 **[データベースのアタッチ]**、 **[データベースの復元]** などの複数のダイアログ ウィンドウの **[パス]** として入力できます。 詳細については、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   

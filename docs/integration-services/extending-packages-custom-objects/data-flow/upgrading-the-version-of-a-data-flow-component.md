@@ -5,28 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - PerformUpgrade method
 - custom data flow components [Integration Services], upgrading version
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa8d152986c120593f23e1bc59fecff5f2095021
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1a30138401f1a5e81b710278de46dad1be383889
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329456"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750830"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>データ フロー コンポーネントのバージョンのアップグレード
   古いバージョンのコンポーネントで作成されたパッケージには、新しいバージョンのコンポーネントでは使い方が変更されているカスタム プロパティなど、既に有効でないメタデータが含まれている可能性があります。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 基本クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> メソッドをオーバーライドすると、以前に古いパッケージに保存したメタデータを、コンポーネントの現在のプロパティを反映して更新することができます。  

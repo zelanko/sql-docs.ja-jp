@@ -1,13 +1,11 @@
 ---
-title: 再生の要件 |Microsoft ドキュメント
+title: 再生の要件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], replaying traces
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - replaying traces
 - TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac0df42a9598c8b246c90a17407558888db71734
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0190da311010fc91bcb852af12441bc4c0126848
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076779"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848370"
 ---
 # <a name="replay-requirements"></a>再生を実行するための必要条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または Distributed Replay Utility を使用してトレース データを再生するには、特定のイベント クラスと列のセットがトレースにキャプチャされている必要があります。 **TSQL_Replay** トレース テンプレートを使用して、後で再生に使用するトレースを構成した場合、これらの設定は既定で有効になります。 このトピックでは、これらの設定と、再生を実行するためのその他の必要条件について説明します。  
   
 > [!NOTE]  
->  (アクティブな同時接続が多数ある、またはスループットが高い) 集中型の OLTP アプリケーションを再生する場合は、Distributed Replay Utility を使用することをお勧めします。 Distributed Replay Utility では、複数のコンピューターからのトレース データを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。 詳細については、「 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
+>  (アクティブなコンカレント接続が多数ある、またはスループットが高い) 集中型の OLTP アプリケーションを再生する場合は、Distributed Replay Utility を使用することをお勧めします。 Distributed Replay Utility では、複数のコンピューターからのトレース データを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。 詳細については、「 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
   
 ## <a name="event-classes-required-for-replay"></a>再生に必要なイベント クラス  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で再生するには、監視するイベント クラスのほかに、以下の一連のイベント クラスをトレースにキャプチャする必要があります。  
@@ -103,7 +100,7 @@ ms.locfileid: "33076779"
   
 -   **NTUserName**  
   
--   **[エラー]**  
+-   **Error**  
   
 > [!NOTE]  
 >  再生するデータをトレースにキャプチャする場合は、トレース テンプレート **TSQL_Replay** を使用します。  

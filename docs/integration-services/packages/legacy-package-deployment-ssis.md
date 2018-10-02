@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.packageconfigurationorganizer.f1
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718270"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  
@@ -101,8 +98,7 @@ ms.locfileid: "35408504"
   
  ただし、これらのコマンド ライン オプションには制限事項がいくつかあります。  
   
--   
-  **/Set** または **/Connection** オプションを使用して、構成で設定されている単一の値をオーバーライドすることはできません。  
+-   **/Set** または **/Connection** オプションを使用して、構成で設定されている単一の値をオーバーライドすることはできません。  
   
 -   **/ConfigFile** オプションを使用して、デザイン時に指定した構成を置き換える構成を読み込むことはできません。  
   
@@ -265,7 +261,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  パッケージ オブジェクトのプロパティの値は、パッケージ構成によって実行時に更新されます。 パッケージが読み込まれると、パッケージの開発時に設定された値は、構成の値に置き換えられます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、さまざまな種類の構成がサポートされます。 たとえば、複数の構成を含むことができる XML ファイルや、単一の構成を含む環境変数を使用できます。 詳細については、「 [パッケージ構成](../../integration-services/packages/package-configurations.md)」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[パッケージの構成を有効にする]**  
  パッケージで使用する構成を選択します。  
   
@@ -306,7 +302,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>[パッケージ構成ウィザードへようこそ] ページ  
  **SSIS 構成ウィザード** を使用すると、パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、ようこそページをスキップします。  
   
@@ -405,7 +401,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-objects-to-export-page"></a>[エクスポートするオブジェクトの選択] ページ  
  **[対象になるプロパティの選択]** ページまたは [エクスポートするプロパティの選択] ページを使用すると、構成に含まれるオブジェクト プロパティを指定できます。 XML 構成の種類を選択した場合のみ、複数のプロパティを選択する機能を使用できます。  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  **オブジェクト**  
  パッケージ階層を展開して、エクスポートするプロパティを選択します。  
   
@@ -418,7 +414,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>[ウィザードの完了] ページ  
  **[ウィザードの完了]** ページを使用すると、構成の名前を指定し、構成を作成するためにウィザードが使用する設定を表示できます。 ウィザードが完了すると、パッケージのすべての構成が一覧表示される **[パッケージ構成オーガナイザー]** が表示されます。  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  **[構成名]**  
  構成の名前を入力します。  
   
@@ -587,7 +583,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>[パッケージの構成] ページ  
  **[パッケージの構成]** ページを使用すると、パッケージ構成を編集できます。  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  **[構成ファイル]**  
  一覧からファイルを選択して、構成ファイルの内容を編集します。  
   
@@ -623,7 +619,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>[SSIS パッケージの配置] ページ  
  **[SSIS パッケージの配置]** ページを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとその従属ファイルをインストールする場所を指定します。  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  **[ファイル システムに配置]**  
  パッケージとその従属ファイルをファイル システム上の指定したフォルダーに配置します。  
   
@@ -648,7 +644,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>[インストール フォルダーの選択] ページ  
  **[インストール フォルダーの選択]** ページを使用して、パッケージとその従属ファイルをインストールするファイル システム フォルダーを指定します。  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  **フォルダー**  
  パッケージとその従属ファイルをコピーするパスとフォルダーを指定します。  
   
@@ -664,7 +660,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>[インストール先の SQL Server の指定] ページ  
  **[インストール先の SQL Server の指定]** ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへのパッケージ配置に関するオプションを指定します。  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  **サーバー名**  
  パッケージの配置先となるサーバーの名前を指定します。  
   

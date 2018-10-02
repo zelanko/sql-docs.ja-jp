@@ -5,43 +5,38 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8fe4f943a8477da6274bb52f00372e2908985e8
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9d08336c4577da996c624cb2368e70502a4136b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408454"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782130"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>プログラムによる接続マネージャーの操作
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、関連付けられた接続マネージャー クラスの AcquireConnection メソッドは、マネージ コードで接続マネージャーを操作する場合に呼び出すことの多いメソッドです。 マネージ コードを記述する場合、接続マネージャーの機能を使用するには AcquireConnection メソッドを呼び出す必要があります。 このメソッドは、マネージ コードを記述する場所がスクリプト タスク、スクリプト コンポーネント、カスタム オブジェクト、またはカスタム アプリケーションのいずれであっても、呼び出す必要があります。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、関連付けられた接続マネージャー クラスの AcquireConnection メソッドは、マネージド コードで接続マネージャーを操作する場合に呼び出すことの多いメソッドです。 マネージド コードを記述する場合、接続マネージャーの機能を使用するには AcquireConnection メソッドを呼び出す必要があります。 このメソッドは、マネージド コードを記述する場所がスクリプト タスク、スクリプト コンポーネント、カスタム オブジェクト、またはカスタム アプリケーションのいずれであっても、呼び出す必要があります。  
   
  AcquireConnection メソッドを正常に呼び出すには、次の点を理解しておく必要があります。  
   
--   **AcquireConnection メソッドからマネージ オブジェクトを返す接続マネージャーはどれか**  
+-   **AcquireConnection メソッドからマネージド オブジェクトを返す接続マネージャーはどれか**  
   
-     多くの接続マネージャーはアンマネージ COM オブジェクト (System.__ComObject) を返します。このオブジェクトをマネージ コードから使用するのは簡単ではありません。 このような接続マネージャーには、使用頻度の高い OLE DB 接続マネージャーも含まれます。  
+     多くの接続マネージャーはアンマネージド COM オブジェクト (System.__ComObject) を返します。このオブジェクトをマネージド コードから使用するのは簡単ではありません。 このような接続マネージャーには、使用頻度の高い OLE DB 接続マネージャーも含まれます。  
   
--   **マネージ オブジェクトを返す接続マネージャーの AcquireConnection メソッドによって返されるオブジェクトは何か**  
+-   **マネージド オブジェクトを返す接続マネージャーの AcquireConnection メソッドによって返されるオブジェクトは何か**  
   
      戻り値を適切な型にキャストするには、AcquireConnection メソッドによって返されるオブジェクトの型を把握しておく必要があります。 たとえば、SqlClient プロバイダーを使用する場合、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーの AcquireConnection メソッドは、開かれている SqlConnection オブジェクトを返します。 これに対し、ファイル接続マネージャーの AcquireConnection メソッドは、文字列のみを返します。  
   
  このトピックでは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に付属の接続マネージャーについて、上記の点を説明します。  
   
-## <a name="connection-managers-that-do-not-return-a-managed-object"></a>マネージ オブジェクトを返さない接続マネージャー  
- 次の表に、AcquireConnection メソッドからネイティブ COM オブジェクト (System.__ComObject) を返す接続マネージャーを示します。 これらのアンマネージ オブジェクトは、マネージ コードから簡単には使用できません。  
+## <a name="connection-managers-that-do-not-return-a-managed-object"></a>マネージド オブジェクトを返さない接続マネージャー  
+ 次の表に、AcquireConnection メソッドからネイティブ COM オブジェクト (System.__ComObject) を返す接続マネージャーを示します。 これらのアンマネージド オブジェクトは、マネージド コードから簡単には使用できません。  
   
 |接続マネージャーの種類|接続マネージャー名|  
 |-----------------------------|-----------------------------|  
@@ -53,10 +48,10 @@ ms.locfileid: "35408454"
 |ODBC|ODBC 接続マネージャー|  
 |OLEDB|OLE DB 接続マネージャー|  
   
- 通常は、マネージ コードから [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーを使用すると、ADO、Excel、ODBC、または OLE DB の各データ ソースに接続できます。  
+ 通常は、マネージド コードから [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーを使用すると、ADO、Excel、ODBC、または OLE DB の各データ ソースに接続できます。  
   
 ## <a name="return-values-from-the-acquireconnection-method"></a>AcquireConnection メソッドからの戻り値  
- 次の表に、AcquireConnection メソッドからマネージ オブジェクトを返す接続マネージャーを示します。 これらのマネージ オブジェクトは、マネージ コードから簡単に使用できます。  
+ 次の表に、AcquireConnection メソッドからマネージド オブジェクトを返す接続マネージャーを示します。 これらのマネージド オブジェクトは、マネージド コードから簡単に使用できます。  
   
 |接続マネージャーの種類|接続マネージャー名|戻り値の型|追加情報|  
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  

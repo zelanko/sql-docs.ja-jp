@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - DatabaseQueryTimeout Property
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84906fc478577662885393d58be1320037326da2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: eb1d0b0ee7257b6526b93c672e0891b8dd349b19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278724"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773000"
 ---
 # <a name="configurationsetting-property---databasequerytimeout"></a>ConfigurationSetting プロパティ - DatabaseQueryTimeout
   レポート サーバーで、コマンドが失敗した、または処理時間が長すぎると見なされるまでの、経過秒数を指定します。 レポート サーバーは、レポートのデータ ソースではなく、SQL カタログに対するクエリの時間を計測しています。 読み取りと書き込みが可能です。  

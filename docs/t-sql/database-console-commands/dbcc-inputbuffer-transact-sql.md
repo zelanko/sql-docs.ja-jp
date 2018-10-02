@@ -5,9 +5,7 @@ ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 51
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: da4393aecd4371afc5a9a3cba0725b7bfa55b34c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd0df0cb932778164dfe4c97027c19e591439fd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262154"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805430"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>結果セット  
 DBCC INPUTBUFFER では、次の列を含む結果セットが返されます。
   
-|列名|データ型|Description|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|イベントの種類。 **RPC Event** または **Language Event** になります。 前回のイベントが検出されなかった場合、出力は **No Event** になります。|  
 |**パラメーター**|**smallint**|0 = テキスト<br /><br /> 1- *n* = パラメーター|  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720210"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
@@ -106,7 +103,7 @@ ms.locfileid: "35332486"
 ## <a name="message-queue-task-editor-general-page"></a>[メッセージ キュー タスク エディター] ([全般] ページ)
   **[メッセージ キュー タスク エディター]** の **[全般]** ページを使用すると、メッセージ キュー タスクの名前と説明を設定したり、メッセージの形式を指定したり、タスクでメッセージを送受信できるかどうかを指定したりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **名前**  
  メッセージ キュー タスクの固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -130,7 +127,7 @@ ms.locfileid: "35332486"
 ## <a name="message-queue-task-editor-send-page"></a>[メッセージ キュー タスク エディター] ([送信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[UseEncryption]**  
  メッセージを暗号化するかどうかを示します。 既定値は **False**です。  
   
@@ -171,7 +168,7 @@ ms.locfileid: "35332486"
 ## <a name="message-queue-task-editor-receive-page"></a>[メッセージ キュー タスク エディター] ([受信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[受信]** ページを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) メッセージを受信するためのメッセージ キュー タスクを構成します。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[RemoveFromMessageQueue]**  
  メッセージが受信された後にキューからメッセージを削除するかどうかを示します。 既定では、この値は **False**に設定されます。  
   
@@ -282,7 +279,7 @@ ms.locfileid: "35332486"
 ## <a name="select-variables"></a>[変数の選択]
   **[変数の選択]** ダイアログ ボックスを使用すると、メッセージ キュー タスクの 2 番目のメッセージ操作で使用する変数を指定できます。 **[利用可能な変数]** の一覧には、メッセージ キュー タスクまたは親コンテナーのスコープのシステム変数とユーザー定義変数が含まれます。 タスクは、 **[選択された変数]** の一覧の変数を使用します。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[利用可能な変数]**  
  1 つ以上の変数を選択します。  
   

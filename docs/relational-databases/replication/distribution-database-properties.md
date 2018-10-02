@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.configdistwizard.distdbproperties.f1
 helpviewer_keywords:
 - Distribution Database Properties dialog box
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1359f26f87bced72442b32662f2fe5a3cc1e4de8
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 97e6fea955e2ee82250f094fcf9f2bf76b15f452
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37348834"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701160"
 ---
 # <a name="distribution-database-properties"></a>[ディストリビューション データベースのプロパティ]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[ディストリビューション データベースのプロパティ]** ダイアログ ボックスを使用すると、多数のプロパティを表示でき、データベースにおけるトランザクションの保有期間と履歴の保有期間を設定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **名前**  
  ディストリビューション データベースの名前です。既定の名前は "distribution" です (読み取り専用)。  
   

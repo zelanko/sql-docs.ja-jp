@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -18,17 +16,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99d72a5466996d39cf69da8b153dba0ef050b499
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846375"
 ---
 # <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "43084422"
 ##  <a name="General"></a> [インデックスのプロパティ] の [全般] ページ  
  [全般] ページを使用すると、選択されているテーブルまたはビューのインデックスのプロパティを表示または変更できます。 各ページのオプションは、選択されたインデックスの種類に応じて異なる場合があります。  
   
- **[テーブル名]**  
+ **テーブル名**  
  インデックスが作成されているテーブルまたはビューの名前を表示します。 このフィールドは読み取り専用です。 別のテーブルを選択するには、[インデックスのプロパティ] ページを閉じてから適切なテーブルを選択し、再び [インデックスのプロパティ] ページを開きます。  
   
  インデックス付きビューに対して空間インデックスを指定することはできません。 空間インデックスは、主キーがあるテーブルでしか定義できません。 テーブルの主キー列の最大数は 15 です。 主キー列の組み合わされた行あたりのサイズは、最大 895 バイトに制限されます。  
@@ -75,10 +72,10 @@ ms.locfileid: "43084422"
   
  空間インデックスを定義できるのは、空間データ型を含む単一の列 ( *空間列*) だけです。  
   
- **[名前]**  
+ **名前**  
  インデックス キーを構成する列の名前を表示します。  
   
- **[並べ替え順序]**  
+ **並べ替え順序**  
  選択されているインデックス列の並べ替え方向として、 **[昇順]** または **[降順]** を指定します。  
   
 > [!NOTE]  
@@ -123,19 +120,19 @@ ms.locfileid: "43084422"
  **チェック ボックス**  
  列を選択する場合にオンにします。  
   
- **[名前]**  
+ **名前**  
  列の名前です。  
   
  **[データ型]**  
  列のデータ型。  
   
- **[サイズ]**  
+ **バイト**  
  列のサイズ (バイト単位)。  
   
- **[ID]**  
+ **Identity**  
  列が ID 列の場合は **[はい]** が表示され、列が ID 列でない場合は **[いいえ]** が表示されます。  
   
- **[NULL を許容]**  
+ **Allow Nulls**  
  テーブル定義において列の NULL 値が許容される場合は **[はい]** が表示されます。 テーブル定義において列の NULL 値が許容されない場合は **[いいえ]** が表示されます。  
   
 ##  <a name="Storage"></a> [ストレージ] ページのオプション  
@@ -187,7 +184,7 @@ ms.locfileid: "43084422"
 ### <a name="bounding-box"></a>[境界ボックス]  
  *境界ボックス* は、幾何平面の最上位レベルのグリッドの境界です。 境界ボックスのパラメーターは、ジオメトリ グリッド テセレーションにのみ存在します。 **[テセレーション スキーム]** が **[地理グリッド]** である場合、これらのパラメーターは使用できません。  
   
- パネルには、境界ボックスの座標 **(***X-min***,***Y-min***)** と **(***X-max***,***Y-max***)** が表示されます。 座標の既定値はありません。 そのため、 **geometry** 型の列に新しい空間インデックスを作成する場合は、座標の値を指定する必要があります。  
+ パネルには、境界ボックスの座標 **(**_X-min_**,**_Y-min_**)** と **(**_X-max_**,**_Y-max_**)** が表示されます。 座標の既定値はありません。 そのため、 **geometry** 型の列に新しい空間インデックスを作成する場合は、座標の値を指定する必要があります。  
   
  **X-min**  
  境界ボックスの左下隅の X 座標。  

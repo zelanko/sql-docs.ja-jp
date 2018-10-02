@@ -1,30 +1,27 @@
 ---
-title: インデックスの要素 (DTA) |Microsoft ドキュメント
+title: インデックスの要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bb4901d63454c3c7eb6af4ad06c9f626ada5524
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: fdbe54ce16b8ee0ed441bfcf7098d28004d482d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620250"
 ---
 # <a name="index-element-dta"></a>Index 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Index の属性|データ型|Description|  
+|Index の属性|データ型|[説明]|  
 |---------------------|---------------|-----------------|  
 |**クラスター化インデックス**|**boolean**|省略可。 クラスター化インデックスを指定します。 「true」か「false」のいずれかに設定します。以下はその例です。<br /><br /> `<Index Clustered="true">`<br /><br /> 既定では、この属性は「false」に設定されます。|  
 |**[一意]**|**boolean**|省略可。 一意のインデックスを指定します。 「true」か「false」のいずれかに設定します。以下はその例です。<br /><br /> `<Index Unique="true">`<br /><br /> 既定では、この属性は「false」に設定されます。|  
@@ -61,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  

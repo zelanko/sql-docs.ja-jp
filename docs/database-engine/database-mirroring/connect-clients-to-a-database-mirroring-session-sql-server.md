@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 95
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4002e4c074e492d2f1f6d82569316be241eda0a4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ac89758902c3df3f69eb7e82b4c2ba1fc320ef14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647978"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "35311591"
   
  また、接続文字列にはデータベース名も指定する必要があります。 データベース名は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。  
   
- データ アクセス プロバイダーは接続文字列を受け取ると、イニシャル パートナー名とフェールオーバー パートナー名 (指定された場合) をクライアントの揮発性メモリのキャッシュに格納します (マネージ コードの場合、キャッシュはアプリケーション ドメインにスコープが設定されます)。 キャッシュに保存されたイニシャル パートナー名は、データ アクセス プロバイダーによって更新されません。 クライアントがフェールオーバー パートナー名を指定した場合、データ アクセス プロバイダーでは、イニシャル パートナー名を使用して接続できなかった場合に備えて、このフェールオーバー パートナー名も一時的に保存します。  
+ データ アクセス プロバイダーは接続文字列を受け取ると、イニシャル パートナー名とフェールオーバー パートナー名 (指定された場合) をクライアントの揮発性メモリのキャッシュに格納します (マネージド コードの場合、キャッシュはアプリケーション ドメインにスコープが設定されます)。 キャッシュに保存されたイニシャル パートナー名は、データ アクセス プロバイダーによって更新されません。 クライアントがフェールオーバー パートナー名を指定した場合、データ アクセス プロバイダーでは、イニシャル パートナー名を使用して接続できなかった場合に備えて、このフェールオーバー パートナー名も一時的に保存します。  
   
  データベース ミラーリング セッションによる保護は、クライアント コンピューターでネットワーク通信に関する問題が発生した場合など、サーバーへのアクセスに関するクライアント固有の問題には対処できません。 ミラー化されたデータベースへの接続は、データ アクセス プロバイダーに関連しない原因で失敗することもあります。たとえば、データベースがフェールオーバー中である場合や、ネットワーク エラーが発生した場合に、プリンシパル サーバー インスタンスがアクティブでないことが原因で接続試行が失敗することがあります。  
   
@@ -143,7 +140,7 @@ Server=123.34.45.56,4724;
 >  イニシャル パートナー名のみを指定すると、アプリケーション開発者が操作を実行したり、再接続方法以外のコードを記述したりする必要はありません。  
   
 > [!NOTE]  
->  マネージ コード アプリケーションの開発者は **ConnectionString** オブジェクトの **SqlConnection** でフェールオーバー パートナー名を指定します。 この接続文字列の使用方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK に含まれている ADO.NET マニュアルの「Database Mirroring Support in the .NET Framework Data Provider for SQL Server」を参照してください。  
+>  マネージド コード アプリケーションの開発者は **ConnectionString** オブジェクトの **SqlConnection** でフェールオーバー パートナー名を指定します。 この接続文字列の使用方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK に含まれている ADO.NET マニュアルの「Database Mirroring Support in the .NET Framework Data Provider for SQL Server」を参照してください。  
   
 #### <a name="example-connection-string"></a>接続文字列の例  
  たとえば、TCP/IP を使用して Partner_A または Partner_B の **AdventureWorks** データベースに明示的に接続するには、ODBC ドライバーを使用するクライアント アプリケーションで次の接続文字列を指定します。  
@@ -180,7 +177,7 @@ Server=123.34.45.56,4724;
   
 |四捨五入|*RetryTime* の計算|接続試行ごとの再試行時間|  
 |-----------|-----------------------------|----------------------------|  
-|@shouldalert|0 **+(** 0.08 **\*** 15 **)**|1.2 秒|  
+|1|0 **+(** 0.08 **\*** 15 **)**|1.2 秒|  
 |2|1.2 **+(** 0.08 **\*** 15 **)**|2.4 秒|  
 |3|2.4 **+(** 0.08 **\*** 15 **)**|3.6 秒|  
 |4|3.6 **+(** 0.08 **\*** 15 **)**|4.8 秒|  

@@ -5,9 +5,7 @@ ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 84
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df7fcb4c6900e02aac83669de362c8259106f2fc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d31b8d30686e55d97423648e34ea63be653be031
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083425"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832921"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +57,7 @@ DATABASEPROPERTYEX ( database , property )
 |---|---|---|
 |[照合順序]|データベースの既定の照合順序名です。|照合順序名<br /><br /> NULL: データベースが開始していません。<br /><br /> 基本データ型: **nvarchar(128)**|  
 |ComparisonStyle|照合順序の Windows 比較形式です。 次のスタイルの値を使用し、完全な ComparisonStyle 値のビットマップを構築します。<br /><br /> 大文字と小文字を区別しない<br /><br /> アクセントを無視する: 2<br /><br /> ひらがなとカタカナを区別しない: 65536<br /><br /> 全角と半角を区別しない: 131072<br /><br /> <br /><br /> たとえば、既定値 196609 は、大文字と小文字を区別しない、ひらがなとカタカナを区別しない、全角と半角を区別しないという 3 つのオプションを足した値を表しています。|比較スタイルを返します。<br /><br /> バイナリ照合順序ではすべて 0 が返されます。<br /><br /> 基本データ型: * * **int** * *|  
-|のエディション|データベースのエディションまたはサービス層です。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> General Purpose<br /><br /> Business Critical<br /><br /> [標準]<br /><br /> Standard<br /><br /> Premium<br /><br /> システム (マスター データベース)<br /><br /> NULL: データベースが開始していません。<br /><br /> 基本データ型: **nvarchar**(64)|  
+|のエディション|データベースのエディションまたはサービス層です。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> General Purpose<br /><br /> Business Critical<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> システム (マスター データベース)<br /><br /> NULL: データベースが開始していません。<br /><br /> 基本データ型: **nvarchar**(64)|  
 |IsAnsiNullDefault|データベースは、ISO のルールに従い NULL 値を許可します。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsAnsiNullsEnabled|NULL 値との比較はすべて、不明として評価されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsAnsiPaddingEnabled|比較または挿入を行う前に、対象の文字列が同じ長さになるようにパディングを行います。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
@@ -93,7 +90,7 @@ DATABASEPROPERTYEX ( database , property )
 |LCID (LCID)|照合順序の Windows ロケール識別子 (LCID)。|LCID 値 (10 進数形式)。<br /><br /> 基本データ型: * * **int** * *|  
 |MaxSizeInBytes|最大データベース サイズ (バイト単位)。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: データベースは開始していません<br /><br /> 基本データ型: * * * * **bigint** 型|  
 |復旧|データベース復旧モデル|FULL: 完全復旧モデル<br /><br /> BULK_LOGGED: 一括ログ復旧モデル<br /><br /> SIMPLE: 単純復旧モデル<br /><br /> 基本データ型: **nvarchar(128)**|  
-|ServiceObjective|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] または [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のデータベースのパフォーマンス レベルについて説明します。|次のいずれかです。<br /><br /> Null: データベースが開始されていません。<br /><br /> Shared (Web/Business エディション向け)<br /><br /> [標準]<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (マスター DB 向け)<br /><br /> 基本データ型: **nvarchar(32)**|  
+|ServiceObjective|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] または [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のデータベースのパフォーマンス レベルについて説明します。|次のいずれかです。<br /><br /> Null: データベースが開始されていません。<br /><br /> Shared (Web/Business エディション向け)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (マスター DB 向け)<br /><br /> 基本データ型: **nvarchar(32)**|  
 |ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] のサービス目標の ID です。|* * **uniqueidentifier** * * をサービス目標を識別します。|  
 |SQLSortOrder|以前のバージョンの SQL Server でサポートされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並べ替え順 ID です。|0: データベースが Windows 照合順序を使用します<br /><br /> >0: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並べ替え順 ID<br /><br /> NULL: 無効な入力、またはデータベースが開始していません<br /><br /> 基本データ型: * * * * **tinyint**|  
 |状態|データベースの状態です。|ONLINE: データベースをクエリに使用できます。<br /><br /> **注意:** データベースが開いていてまだ復旧されていないとき、ONLINE ステータスが返されることがあります。 照合順序プロパティをクエリに、データベースが接続を受け入れるときを特定するには、* * * * **DATABASEPROPERTYEX** です。 データベースは、データベースの照合順序から NULL 以外の値が返されたときに接続を受け入れることができます。 AlwaysOn データベースの場合、`sys.dm_hadr_database_replica_states` の database_state または database_state_desc 列にクエリを実行します。<br /><br /> OFFLINE: データベースが明示的にオフラインになりました。<br /><br /> RESTORING: データベース復旧が開始しています。<br /><br /> RECOVERING: データベース復旧が開始したところで、データベースはまだクエリに対応していません。<br /><br /> SUSPECT: データベースは復旧されませんでした。<br /><br /> EMERGENCY: データベースは読み取り専用の緊急モードです。 sysadmin メンバーのみにアクセスが制限されます。<br /><br /> 基本データ型: **nvarchar(128)**|  

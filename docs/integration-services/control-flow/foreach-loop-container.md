@@ -5,9 +5,7 @@ ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aebf427b093a860122ace5c21f1a887dac331525
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 71f8cb6faeb5010cc39a05e2611753a04de812e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331456"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822430"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
   Foreach ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **Foreach** ループ構造と同様です。 パッケージでは、ループは Foreach 列挙子を使用することで有効になります。  Foreach ループ コンテナーは、指定した列挙子のメンバーが処理されるたびに制御フローを繰り返します。  
@@ -183,7 +180,7 @@ ms.locfileid: "35331456"
   
  Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **名前**  
  Foreach ループ コンテナーの一意な名前を指定します。 この名前は、タスク アイコンとログでラベルとして使用されます。  
   
@@ -497,7 +494,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] チュートリアルの「簡単な ETL パッケージの作成」には、Foreach ループの追加および構成について説明するレッスンが含まれています。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **変数**  
  既存の変数を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
   
@@ -518,7 +515,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
 ## <a name="schema-restrictions-dialog-box-adonet"></a>[スキーマの制限] ダイアログ ボックス (ADO.NET)
 **[スキーマの制限]** ダイアログ ボックスを使用すると、Foreach ADO.NET Schema Rowset 列挙子に適用するスキーマの制限を設定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **制限**  
  スキーマに適用する制約を設定します。  
   
@@ -533,7 +530,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
 ## <a name="for-each-item-columns-dialog-box"></a>[For Each Item 列] ダイアログ ボックス
 **[For Each Item 列]** ダイアログ ボックスを使用すると、Foreach Item 列挙子が列挙するアイテムの列を定義できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **列**  
  列を一覧表示します。  
   
@@ -549,7 +546,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
  ## <a name="select-smo-enumeration-dialog-box"></a>[SMO 列挙の選択] ダイアログ ボックス
 **[SMO 列挙の選択]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスの列挙対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを指定し、列挙型を選択できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[列挙]**  
  サーバーを展開して SMO オブジェクトを選択します。  
   

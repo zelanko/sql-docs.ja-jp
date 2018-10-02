@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 769ce099fc299900c93e11222f58389b2c43249b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 82e08d0cdffd4d9f339b4dc1c35322d8e2dd687d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607862"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service の使用
   ここでは、Oracle CDC Service のいくつかの重要な概念について説明します。 このセクションで説明する概念は次のとおりです。  

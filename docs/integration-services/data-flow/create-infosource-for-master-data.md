@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f13813381b70d820151ba422912980a2d78e7789
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5d481544611f1246922fc16b1c89f16dcf745802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750352"
 ---
 # <a name="create-infosource-for-master-data"></a>[マスター データのインフォソースの作成]
   SAP Netweaver BW システムでマスター データ用の新しいインフォソースを作成するには、 **[マスター データのインフォソースの作成]** ダイアログ ボックスを使用します。  
@@ -41,7 +38,7 @@ ms.locfileid: "35329556"
   
 5.  **[インフォソースの作成]** ダイアログ ボックスで、 **[マスター データ]** を選択して **[OK]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **インフォオブジェクトの名前**  
  新しいインフォソースの基にするインフォオブジェクトの名前を入力します。  
   
