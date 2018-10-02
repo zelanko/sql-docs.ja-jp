@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Wait Statistics object
 - SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6366376f25df6f8407f3ff5a81f585b785fbe759
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c394d7eb40f3b5d9904941b6938b84821dcea7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951077"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761920"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server: Wait Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951077"
   
  Wait Statistics オブジェクトに含まれるカウンターを次の表に示します。  
   
-|SQL Server Wait Statistics カウンター|Description|  
+|SQL Server Wait Statistics カウンター|[説明]|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|ロックを待機しているプロセスの統計。|  
 |**Log buffer waits**|ログ バッファーが使用可能になるのを待機しているプロセスの統計。|  
@@ -49,7 +45,7 @@ ms.locfileid: "32951077"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|アイテム|Description|  
+|アイテム|[説明]|  
 |----------|-----------------|  
 |**平均待機時間 (ミリ秒)**|選択した待機の種類の平均時間。|  
 |**1 秒あたりの累積待機時間 (ミリ秒)**|選択した待機の種類の 1 秒あたりに集計された待機時間。|  

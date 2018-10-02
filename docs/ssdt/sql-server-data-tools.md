@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51d357bb7fdb953f279a196723dd72ad713b127f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b7e305cc2ceb178b0adb812d8215022f981d2c95
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763910"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 SQL Server Data Tools (SSDT) は、Visual Studio で行うデータベース開発のあらゆるフェーズにわたるユビキタスな宣言モデルを導入することにより、データベース開発の形態を一変させました。 SSDT の Transact\-SQL デザイン機能を使用して、データベースのビルド、デバッグ、メンテナンス、およびリファクタリングを実行できます。 この作業は、データベース プロジェクトに対して、あるいはオンプレミスまたはオフプレミスで接続されているデータベース インスタンスに対して直接、行うことができます。  

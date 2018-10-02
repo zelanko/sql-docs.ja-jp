@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC CHECKCONSTRAINTS
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: 45
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a274fea3b1171774def99daea9248ca96cd4c365
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 763acaea371103ac9d87bf25aa2de787cef78854
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759647"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +106,7 @@ DBCC CHECKCONSTRAINTS では、FOREIGN KEY 制約と CHECK 制約の整合性は
 ## <a name="result-sets"></a>結果セット  
 DBCC CHECKCONSTRAINTS では、次の列を含む行セットが返されます。
   
-|列名|データ型|Description|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |テーブル名|**varchar**|テーブルの名前。|  
 |Constraint Name|**varchar**|違反している制約の名前。|  
