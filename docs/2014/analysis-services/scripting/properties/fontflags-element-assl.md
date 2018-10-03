@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FontFlags Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FontFlags element
 ms.assetid: ea608da9-ab05-42ab-8872-c52cd9f3f546
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1896d01c47f7c2e2fa4289f09c10ef859eff1d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a20af0ea53619457b6beab83acf6325723b85376
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113252"
 ---
 # <a name="fontflags-element-assl"></a>FontFlags 要素 (ASSL)
   フォント関連の表示特性について説明します、 [CalculationProperty](../objects/calculationproperty-element-assl.md)または[メジャー](../objects/measure-element-assl.md)親要素。  

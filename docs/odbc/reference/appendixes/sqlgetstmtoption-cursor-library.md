@@ -1,35 +1,32 @@
 ---
-title: SQLGetStmtOption (カーソル ライブラリ) |Microsoft ドキュメント
+title: SQLGetStmtOption (カーソル ライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], Cursor Library
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d360146c264f68b5662157f2ce5f7385b2cfb237
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4c7429bd4a3780caaf5bc7e0624d0e92ef4dd3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828911"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないように、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLGetStmtOption**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLGetStmtOption**を参照してください[SQLGetStmtOption 関数](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)です。  
+ このトピックの使用、 **SQLGetStmtOption**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLGetStmtOption**を参照してください[SQLGetStmtOption 関数](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)します。  
   
- カーソル ライブラリで次のステートメントのオプションをサポートしている**SQLGetStmtOption**:  
+ カーソル ライブラリでは、次のステートメント オプションをサポートしている**SQLGetStmtOption**:  
   
 |||  
 |-|-|  

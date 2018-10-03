@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
 - programming [SQL Server replication], planning
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 970d02311f7909ee23686d345726c140497baa7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11ea6b99818a1f1ffaf4b38019a234aa54294d2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186932"
 ---
 # <a name="replication-programming-concepts"></a>レプリケーションのプログラミング概念
   レプリケーション機能を利用するアプリケーションを開発する前に、次に示す一般的な計画手順を実行してください。  
@@ -93,8 +90,7 @@ ms.locfileid: "37315992"
 ## <a name="choosing-a-development-environment"></a>開発環境の選択  
  レプリケーション アプリケーションの開発時に検討する基本開発環境は、3 種類あります。 どの開発環境からもほぼ同じレプリケーション機能を利用できますが、いくつか例外があります。 レプリケーション アプリケーションは、次の環境で開発できます。  
   
--   
-  **マネージド コード**  
+-   **マネージド コード**  
   
      [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] プログラミングと .NET 共通言語ランタイム (CLR) を利用できる、オブジェクト指向開発環境です。 マネージド コードは、.NET 開発と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アプリケーションのどちらにも推奨されるプログラミング環境です。 マネージド レプリケーション インターフェイスを利用することで、[!INCLUDE[tsql](../../../includes/tsql-md.md)] がわからなくてもオブジェクト指向の方法でレプリケーション管理をプログラミングできます。さらに、スクリプトから使用できないレプリケーション エージェントを実行する場合に、コールバック機能も提供できます。 マネージド コードは、再利用可能なコンポーネントおよびユーザー インターフェイス アプリケーションの開発に最適な環境です。  
   
@@ -128,7 +124,7 @@ ms.locfileid: "37315992"
   
 3.  パブリッシャーに接続するときには、Windows 認証と仮想プライベート ネットワークの使用を含む、レプリケーションのセキュリティ ガイドラインすべてに従います。 Web 同期を実行する場合は、SSL (Secure Sockets Layer) 接続を使用します。 詳細については、「[Web 同期の構成](../configure-web-synchronization.md)」を参照してください。  
   
-4.  ph x="1" /&gt; の機能を利用するには、マネージド コード言語を使用してアプリケーションを開発します。  
+4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能を利用するには、マネージド コード言語を使用してアプリケーションを開発します。  
   
 5.  このような要件に基づき、このアプリケーションに必要なレプリケーション機能はレプリケーション管理オブジェクト (RMO) 管理インターフェイスによってすべて提供できます。  
   

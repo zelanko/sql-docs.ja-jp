@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - trace flags [SQL Server], behavior changes
 ms.assetid: d739df96-2659-4383-8e10-194657632526
-caps.latest.revision: 25
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3eacd213cd113cb6f96e4a23d1208b6e7b21b760
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe5d7e5580fb59616dbde50244bf1b45e94d2dfb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104532"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>トレース フラグの動作が変更された
   あるセッションによって設定されたグローバル トレース フラグは他のセッションですぐに有効になります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] には、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の一部のトレース フラグが存在しません。  

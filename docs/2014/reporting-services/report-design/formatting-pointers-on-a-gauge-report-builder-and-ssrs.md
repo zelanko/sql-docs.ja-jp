@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cc0d66393fc649df0720406c40bd07faee93c6c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183192"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)
   ゲージ ポインターは、ゲージの現在の値を示します。 既定では、フィールドが追加されると、フィールドに格納されている各値が 1 つの値に集計され、この値がゲージのポインターで示されます。 複数のポインターをゲージに追加して同じスケール上の複数の値を示したり、複数のスケールを追加し、追加したスケールごとにポインターを追加したりすることもできます。 フィールドをゲージに追加した後は、ポインターの値にコンテキストを指定するため、対応するスケール上で最大値と最小値を設定する必要があります。 また、スケールの重要な領域を示すため、範囲の最小値と最大値を設定するオプションもあります。  

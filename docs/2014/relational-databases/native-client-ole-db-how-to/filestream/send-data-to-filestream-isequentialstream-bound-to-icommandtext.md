@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95d1f78a78574064a2657d1de98b22ab526b81d7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407691"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109342"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>ICommandText パラメーターにバインドされた ISequentialStream を使用したデータの FILESTREAM 列への送信 (OLE DB)
   このサンプルでは、ICommandText パラメーターにバインドされた ISequentialStream インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
@@ -40,7 +37,7 @@ ms.locfileid: "37407691"
   
  Compile ICommandUpload.cpp、ISSHelper.cpp、ole32.lib、および oleaut32.lib をコンパイルします。  
   
- このサンプルを実行すると、する必要がありますに合格すると、サーバー、またはの server \instance_name 値の名前を 4 MB (0x400001) 間と 4 GB (0 xffffffff) データの量を示す記述にします。  
+ このサンプルを実行するには、サーバーの名前 (server\instance_name) に加えて、書き込むデータのサイズを指定する 4 MB (0x400001) から 4 GB (0xFFFFFFFF) の値を渡す必要があります。  
   
  4 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストは、このサンプルで作成したデータベースを削除します。  
   

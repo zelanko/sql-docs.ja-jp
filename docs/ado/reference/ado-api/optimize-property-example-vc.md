@@ -1,32 +1,29 @@
 ---
-title: プロパティの例 (vc++) を最適化 |Microsoft ドキュメント
+title: Optimize プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90d3234b54c4dd0c0c8e51cbade0199b4d67ade1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601800"
 ---
-# <a name="optimize-property-example-vc"></a>プロパティの例 (vc++) を最適化します。
-この例で、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト ダイナミック**最適化**プロパティです。 **Zip**のフィールド、**作成者**テーブルに、 **Pubs**データベースのインデックスが付いていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 **zip**フィールド承認のパフォーマンスを向上させるインデックスを作成する ADO、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッドです。  
+# <a name="optimize-property-example-vc"></a>Optimize プロパティの例 (VC++)
+この例では、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト動的**最適化**プロパティ。 **Zip**のフィールド、**作成者**テーブルに、 **Pubs**データベースのインデックス付けされていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 **zip**フィールドのパフォーマンスを向上させるインデックスの構築に ADO の承認、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッド。  
   
 ## <a name="example"></a>例  
   
@@ -136,7 +133,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 Silver-2-xクルミ クリーク CA**   
+ **Akiko Yokomoto 3 Silver-2-xクランベリー クリーク CA**   
 ## <a name="see-also"></a>参照  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Optimize プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

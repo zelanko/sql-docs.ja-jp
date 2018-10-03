@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining models, creating
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - estimation
 - classification [data mining]
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bb6c2b6ada95816cc45288c68bc784eb0ef2a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239922"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134794"
 ---
 # <a name="creating-a-data-mining-model"></a>データ マイニング モデルの作成
   データ モデリングは、適用することでパターンや傾向を作成する場所のデータ マイニング手順*アルゴリズム*データにします。 その後、それらのデータを使って追加の分析を行ったり、予測を立てたりすることができます。  
@@ -40,7 +37,7 @@ ms.locfileid: "37239922"
 ## <a name="advanced-data-mining"></a>詳細設定 (データ マイニング)  
  高度なウィザードでは、データ マイニング アルゴリズムのいずれかを使用して Excel では、格納されたデータに基づいて、新しいデータ マイニング モデルを作成できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。  
   
-### <a name="create-mining-structure"></a>マイニング構造を作成します。  
+### <a name="create-mining-structure"></a>マイニング構造の作成  
  マイニング構造の作成ウィザードを使用すると、新しいデータ マイニング構造を構築し、複数のマイニング モデルの基礎として使用できます。 このウィザードには、テスト セットとして使用するデータの一部を確保するオプションが用意されているので、一貫したテスト標準に従って同じデータを使用するすべてのモデルを評価できます。  
   
  [マイニング構造の作成&#40;SQL Server データ マイニング アドイン&#41;](create-mining-structure-sql-server-data-mining-add-ins.md)  

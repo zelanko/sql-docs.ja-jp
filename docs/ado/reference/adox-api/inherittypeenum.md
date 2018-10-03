@@ -1,13 +1,11 @@
 ---
-title: InheritTypeEnum |Microsoft ドキュメント
+title: InheritTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - InheritTypeEnum enumeration [ADOX]
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3a167913b23005cf2b78e4acc682ec2af75157c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 249616f2f08b8b8f6138ce13621d26c5f7af9e1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286651"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647810"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
-オブジェクトがアクセス許可の設定を継承する方法を示す[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)です。  
+オブジェクトに設定されたアクセス許可を継承する方法を指定します。 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adInheritBoth**|3|オブジェクトとは、プライマリ オブジェクトに含まれるその他のコンテナーの両方のエントリを継承します。|  
-|**adInheritContainers**|2|プライマリ オブジェクトに含まれるその他のコンテナーでは、エントリを継承します。|  
+|**adInheritBoth**|3|オブジェクトと、プライマリ オブジェクトに含まれるその他のコンテナーの両方のエントリを継承します。|  
+|**adInheritContainers**|2|プライマリ オブジェクトに含まれる他のコンテナーでは、エントリを継承します。|  
 |**adInheritNone**|0|既定値です。 継承は行われません。|  
-|**adInheritNoPropagate**|4|**AdInheritObjects**と**adInheritContainers**フラグは、継承されたエントリには反映されません。|  
-|**adInheritObjects**|1|コンテナー内の非コンテナー オブジェクトでは、アクセス許可を継承します。|  
+|**adInheritNoPropagate**|4|**AdInheritObjects**と**adInheritContainers**フラグは継承されたエントリには反映されません。|  
+|**adInheritObjects**|1|コンテナー内の非コンテナー オブジェクトは、アクセス許可を継承します。|  
   
 ## <a name="applies-to"></a>適用対象  
  [SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

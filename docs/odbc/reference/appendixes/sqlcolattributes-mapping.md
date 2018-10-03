@@ -1,39 +1,36 @@
 ---
-title: SQLColAttributes マッピング |Microsoft ドキュメント
+title: SQLColAttributes のマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLColAttributes
 - SQLColAttribute function [ODBC], mapping
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b87311d3b913395fb0529392c7bc4ed9cc93024e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0332e38a96d17589d9aa75bfe2a3c918dcc78d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639650"
 ---
-# <a name="sqlcolattributes-mapping"></a>SQLColAttributes マッピング
-アプリケーションを呼び出すと**SQLColAttributes**から ODBC 3 *.x*ドライバーへの呼び出し**SQLColAttributes**にマップされて**SQLColAttribute**次のようにします。  
+# <a name="sqlcolattributes-mapping"></a>SQLColAttributes のマッピング
+アプリケーションを呼び出すと**SQLColAttributes**を通じて、ODBC 3 *.x*ドライバーでは、呼び出し**SQLColAttributes**にマップされて**SQLColAttribute**次のようにします。  
   
 > [!NOTE]  
->  使用されるプレフィックス*FieldIdentifier* ODBC 3 値 *.x*で使用される ODBC 2 から変更されました *。x*です。 新しいプレフィックスは"SQL_DESC"です。古いプレフィックスは、"SQL_COLUMN"でした。  
+>  使用されるプレフィックス*FieldIdentifier* ODBC 3 値 *.x*で使用される ODBC 2 から変更されました *。x*します。 新しいプレフィックスが"SQL_DESC";古いプレフィックス"SQL_COLUMN"が発生しました。  
   
-1.  アプリケーションが ODBC 2 の場合は。*x*アプリケーション、 *fDescType* SQL_COLUMN_TYPE は、返された型は、簡潔な DATETIME 型では、戻り値は、日付、時刻、およびタイムスタンプのコードについては、ドライバー マネージャーのマップ。  
+1.  アプリケーションが ODBC 2 の場合は。*x*アプリケーション、 *fDescType* SQL_COLUMN_TYPE は、返された型は、簡潔な DATETIME 型、戻り値は、日付、時刻、およびタイムスタンプのコードのドライバー マネージャー マップします。  
   
-2.  場合*fDescType* SQL_COLUMN_NAME、SQL_COLUMN_NULLABLE、または SQL_COLUMN_COUNT、ドライバー マネージャーの呼び出しは、 **SQLColAttribute**ドライバーで、 *FieldIdentifier*SQL_DESC_NAME、またはにマップ SQL_DESC_NULLABLE、SQL_DESC_COUNT、必要に応じて引数*です。* 他のすべての値*fDescType*ドライバーに渡されます。  
+2.  場合*fDescType* SQL_COLUMN_NAME、SQL_COLUMN_NULLABLE、または SQL_COLUMN_COUNT、ドライバー マネージャー呼び出し**SQLColAttribute**ドライバーで、 *FieldIdentifier*引数として適切な SQL_DESC_NAME、SQL_DESC_NULLABLE、SQL_DESC_COUNT にマップ*します。* その他のすべての値の*fDescType*ドライバーに渡されます。  
   
- ODBC 3 *.x*ドライバーは、すべての ODBC 3 をサポートする必要があります *.x* *FieldIdentifiers*に登録されている**SQLColAttribute**です。  
+ ODBC 3 *.x*ドライバーは ODBC の 3 つすべてをサポートする必要があります *.x* *FieldIdentifiers*の**SQLColAttribute**します。  
   
- ODBC 3 *.x*ドライバー必要があります SQL_COLUMN_PRECISION と SQL_DESC_PRECISION、SQL_COLUMN_SCALE と SQL_DESC_SCALE、および SQL_COLUMN_LENGTH およびサポート SQL_DESC_LENGTH です。 ODBC 3 に有効桁数、小数点以下桁数、および長さが異なる方法でに定義されるため、これらの値が異なる *.x* ODBC 2 よりも *。x*です。 詳細については、次を参照してください。[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型にします。
+ ODBC 3 *.x* SQL_COLUMN_PRECISION と SQL_DESC_PRECISION、SQL_COLUMN_SCALE と SQL_DESC_SCALE、および SQL_COLUMN_LENGTH および SQL_DESC_LENGTH ドライバーをサポートする必要があります。 有効桁数、小数点、および長さは、ODBC 3 で異なる方法で定義されるため、これらの値が異なる *.x*よりも ODBC 2 *。x*します。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型。

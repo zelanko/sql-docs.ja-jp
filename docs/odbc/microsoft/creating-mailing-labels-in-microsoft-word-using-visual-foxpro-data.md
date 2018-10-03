@@ -1,13 +1,11 @@
 ---
-title: 宛名ラベル Visual FoxPro データを使用して Microsoft Word で作成する |Microsoft ドキュメント
+title: Visual FoxPro データを使用して Microsoft Word での宛名ラベルを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data [ODBC], mailing labels
@@ -16,31 +14,30 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Word
 - FoxPro ODBC driver [ODBC], word
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 858379b3aa670a4e6bb8776303e2d16c85c9d30b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c759e530baf792de7e015eac87337f35cf9f5a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778584"
 ---
-# <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>宛名ラベル Visual FoxPro データを使用して Microsoft Word で作成します。
-Visual FoxPro データは、Windows 95 または Windows 98 のドキュメントの Microsoft Word で使用できます。 たとえば、Visual FoxPro テーブルに格納されている顧客の情報から宛名ラベルを作成することができます。  
+# <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Visual FoxPro データを使用した Microsoft Word での宛名ラベルの作成
+Visual FoxPro データは、Windows 95 または Windows 98 のドキュメントの Microsoft Word で使用できます。 たとえば、Visual FoxPro テーブルに格納されている、顧客情報の宛名ラベルを作成する可能性があります。  
   
 ### <a name="to-create-mailing-labels"></a>絞り込みメール配信のラベルを作成するには  
   
-1.  Microsoft Word では、新しい空白の図面を作成します。  
+1.  Microsoft Word では、新しい空白の文書を作成します。  
   
-2.  [ツール] メニューには、文書の差し込みを選択します。  
+2.  [ツール] メニューで、メール マージを選択します。  
   
-3.  文書の差し込みヘルパーでは、Create を選択し、宛名ラベルを選択します。  
+3.  文書の差し込みヘルパーの作成 をクリックし、宛名ラベルします。  
   
-4.  メイン ドキュメントでは、アクティブなウィンドウを選択します。  
+4.  メインのドキュメントでは、アクティブなウィンドウを選択します。  
   
-5.  データ ソース、データの取得を選択してからデータ ソースを開く。  
+5.  データ ソース、データの取得を選択し、データ ソースを開くします。  
   
 6.  データ ソースを開く ダイアログ ボックスで、MS クエリを選択します。  
   
@@ -48,16 +45,16 @@ Visual FoxPro データは、Windows 95 または Windows 98 のドキュメン�
   
 8.  データ ソースからアクセスされるデータベースには、テーブルが含まれている場合は、テーブルの追加 ダイアログ ボックスからテーブルを選択します。 Microsoft のクエリでは、クエリ デザイナーの上部に追加されたテーブルが表示されます。  
   
-9. ドラッグして、テーブルの下半分デザイナーのクエリのフィールドを選択します。  
+9. ドラッグして、テーブルから、下半分のデザイナー、クエリのフィールドを選択します。  
   
-10. [ファイル] メニューから Microsoft Word へ返されるデータを選択します。 Microsoft クエリが終了し、選択したデータは、文書の差し込みドキュメントで使用可能です。  
+10. [ファイル] メニューから Microsoft Word へのデータを返すを選択します。 Microsoft クエリが終了し、選択したデータが、差し込み印刷ドキュメントで使用できます。  
   
-11. メイン ドキュメントでは、セットアップを選択します。  
+11. メインのドキュメントでは、セットアップを選択します。  
   
 12. ラベルのオプション ダイアログ ボックスで、ok をクリックしてプリンターとラベル情報を選択します。  
   
-13. ラベルの作成 ダイアログ ボックスで、宛名ラベルに印刷し、ok をクリックするフィールドを選択します。  
+13. ラベルの作成 ダイアログ ボックスで、絞り込みメール配信のラベルを印刷し、ok をクリックするフィールドを選択します。  
   
 14. 文書の差し込みヘルパーのドキュメントをデータのマージ マージをクリックします。  
   
-15. マージ ダイアログ ボックスでは、マージ をクリックしてオプションを選択します。
+15. マージ ダイアログ ボックスで、結合をクリックして、オプションを選択します。

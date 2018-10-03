@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.percentagesamplingtransformation.f1
 helpviewer_keywords:
 - Percentage Sampling Transformation Editor
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca7b3d4dcbb4643076aa62e05299e3b42332d528
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14776d4f26d324b60619aef2bfa3fad9c0deadaf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183622"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>比率サンプリング変換エディター
   **[比率サンプリング変換エディター]** ダイアログ ボックスを使用すると、指定された行の割合を使用して、入力の一部をサンプルに分割できます。 この変換は、入力を 2 つの別個の出力に分割します。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllowedSet Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllowedSet element
 ms.assetid: 4aff2e03-6e1f-4f1a-b99d-d86bba25ab9b
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57282fc21a17c8b83c91712598781399617d3979
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f011b6a3f07d71c653bd8fcb358bffb995f4bc14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323062"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169632"
 ---
 # <a name="allowedset-element-assl"></a>AllowedSet 要素 (ASSL)
   許可された権限のセットを定義するセット式が含まれています、[ロール](../objects/role-element-assl.md)属性上の要素。  

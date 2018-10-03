@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationspane.f1
 ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a11a6498320db3a3b9b4733771e2b07b503f000
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 991f5df41294b6d44f083f3da73236eabd125cba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186292"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>[翻訳] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[翻訳]** タブを使用すると、ディメンションの階層や属性と同様に、ディメンションの翻訳について定義したり管理したりできます。  

@@ -1,41 +1,38 @@
 ---
-title: 階層のレコード セット内の行にアクセスする |Microsoft ドキュメント
+title: 階層レコード セット内の行へのアクセス |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f45ec72f864c719091adc04a88e181a41124b76
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 83b8334b4891d0b12cac59030ebf7fced871c5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773380"
 ---
-# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>階層のレコード セット (例) 内の行にアクセスします。
-次の例では手順アクセス許可の行に必要な階層[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
+# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>階層レコード セット (例) 内の行へのアクセス
+次の例を示しています手順では、アクセス許可の行に必要な階層構造で[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
 
-1.  **レコード セット**オブジェクトから、**作成者**と**titleauthor**作成者 ID で関連するテーブル
+1.  **レコード セット**オブジェクトから、**作成者**と**titleauthor**作成者 ID によって関連テーブル
 
-2.  外側のループには、各著者の姓と名、状態、および識別情報が表示されます。
+2.  外側のループでは、各著者の姓と名、状態、および識別情報が表示されます。
 
-3.  追加された**レコード セット**から各の行が取得されたため、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに割り当てられていると*最初*です。
+3.  追加された**レコード セット**の各行がから取得した、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに割り当てられていると*最初*します。
 
-4.  内側のループに追加されたそれぞれの行から 4 つのフィールドが表示されます**Recordset**です。
+4.  内側のループで、追加された各列から 4 つのフィールドを表示します**Recordset**します。
 
- [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティに設定されている**false**わかりやすくするため、認識できるように、チャプター変更明示的に、外側のループの各反復でします。 割り当てが 1 回だけ実行されるように、コード例をより効率的に行うには、割り当て、手順 2. の最初の行の前に、手順 3. でに移動できます。 設定して、 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティを**true**できるように、*最初*対応のチャプターには暗黙的にあり、自動的に変更されるたびに*rst*新しい行に移動します。
+ [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティに設定されて**false**わかりやすくするための表示できるように章では、明示的にで変更、外側のループの各反復処理します。 コード例をより効率的にするために、割り当てが 1 回だけ実行されるように、手順 2. で最初の行の前に、手順 3. で割り当てを移動できます。 設定し、 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティを**true**ように*最初*に対応する章が暗黙的に、自動的に変更されるたびに*rst*を新しい行に移動します。
 
 ## <a name="example"></a>例
 
@@ -72,4 +69,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>参照
- [データの概要をシェイプ](../../../ado/guide/data/data-shaping-overview.md)[オブジェクトのフィールド](../../../ado/reference/ado-api/field-object.md)[フィールドのコレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft データ シェイプ for OLE DB サービス(ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md) [図形の APPEND 句](../../../ado/guide/data/shape-append-clause.md)[図形内のコマンド一般的な](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic アプリケーション関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [データ シェイプの概要](../../../ado/guide/data/data-shaping-overview.md)[オブジェクトをフィールド](../../../ado/reference/ado-api/field-object.md) [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft のデータ シェイプの OLE DB のサービス(サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [プロバイダーに必要なデータの整形](../../../ado/guide/data/required-providers-for-data-shaping.md)[図形の APPEND 句](../../../ado/guide/data/shape-append-clause.md)[図形内のコマンド一般的な](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications の関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

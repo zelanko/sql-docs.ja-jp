@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 2016-10-18
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0af66da35bdc42bf78601e3040d91095646a9b75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183358"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
   このページを使用して、レポート サーバーのシステム プロパティを設定します。 システム プロパティを設定する方法はいくつかあります。 このツールにはグラフィカル ユーザー インターフェイスが用意されているので、コードを記述しなくてもプロパティを設定できます。  
@@ -95,7 +92,7 @@ ms.locfileid: "37258128"
  この機能を無効にすることで、悪意のあるユーザーが LoadReportDefinition 要求でレポート サーバーを過負荷にするサービス拒否攻撃の脅威を軽減することができます。  
   
  **EnableRemoteErrors**  
- リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効な値は`true`と`false`します。 既定値は `false` です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../report-server/enable-remote-errors-reporting-services.md)」を参照してください。  
+ リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効値は `true` または `false` です。 既定値は `false` です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../report-server/enable-remote-errors-reporting-services.md)」を参照してください。  
   
  **EnableReportDesignClientDownload**  
  レポート ビルダーのインストール パッケージをレポート サーバーからダウンロードできるかどうかを指定します。 この設定をオフにすると、レポート ビルダーの URL が機能しません。 詳細については、「 [レポート ビルダーへのアクセスの構成](../report-server/configure-report-builder-access.md)」を参照してください。  

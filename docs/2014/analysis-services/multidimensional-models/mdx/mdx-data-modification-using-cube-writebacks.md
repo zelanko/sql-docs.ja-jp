@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - writeback [Analysis Services], cubes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - UPDATE CUBE statement
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e74303a0796f1b1ffbee4771b0e7ecbf40085b7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062949"
 ---
 # <a name="using-cube-writebacks-mdx"></a>キューブの書き戻しの使用 (MDX)
   キューブを更新するには、[UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) ステートメントを使用します。 このステートメントを使用すると、特定の値で組を更新できます。 UPDATE CUBE ステートメントを使って効果的にキューブを更新するには、ステートメントの構文、発生し得るエラー条件、および更新操作がキューブに与える影響を理解しておく必要があります。  
@@ -45,7 +42,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  UPDATE CUBE ステートメントは、アトミック セルに対する個々のセルの一連の書き戻し操作を生成するサブルーチンのようなものと考えることができます。 その後、これらすべての個々の書き戻し操作は、指定された合計にロール アップします。  
   
 > [!NOTE]  
->  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、「<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>」を参照してください。  
+>  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、「 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 」を参照してください。  
   
 ## <a name="example"></a>例  
  Adventure Works キューブの Sales Targets メジャー グループを使って UPDATE CUBE をテストできます。 このメジャー グループは、UPDATE CUBE の要件である SUM によって集計されたメジャーで構成されます。  

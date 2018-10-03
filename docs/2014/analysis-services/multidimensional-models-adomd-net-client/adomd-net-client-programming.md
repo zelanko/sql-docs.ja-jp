@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7e514ff56aa305a6ddae9e5a88bc85c253649d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154072"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET クライアント プログラミング
   ADOMD.NET クライアント コンポーネントは、`Microsoft.AnalysisServices.AdomdClient` 名前空間 (microsoft.analysisservices.adomdclient.dll) にあります。 これらのクライアント コンポーネント、クライアントの機能と分析データ ストアからデータを簡単にクエリおよびメタデータへの中間層アプリケーションの提供をなど[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83b7c0c4b3861ff18008580e60d0b508c1526fd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129302"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>データのコピーと貼り付け (SSAS テーブル)
   テーブルのデータを外部アプリケーションからコピーし、モデル デザイナーの新規または既存のテーブルに貼り付けることができます。 Excel や Word からコピーされたデータなど、クリップボードから貼り付けるデータは HTML 形式である必要があります。 モデル デザイナーは自動的にデータ型を検出し、貼り付けられたデータにその型を適用します。 手動でデータ型を変更することも、列の書式を表示することもできます。  
@@ -69,7 +66,7 @@ ms.locfileid: "37224662"
  このダイアログ ボックスのオプションは、まったく新しいテーブルにデータを貼り付けるか、既存のテーブルにデータを貼り付けて既存のデータを新しいデータで置き換えるか、既存のテーブルにデータを追加するかによって異なります。  
   
 ### <a name="paste-to-new-table"></a>[新規テーブル]  
- **テーブル名**  
+ **[テーブル名]**  
  デザイナーで作成するテーブルの名前を指定します。  
   
  **[貼り付けるデータ]**  

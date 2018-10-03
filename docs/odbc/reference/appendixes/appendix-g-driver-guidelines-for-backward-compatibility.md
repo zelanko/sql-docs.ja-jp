@@ -1,37 +1,34 @@
 ---
-title: '付録 g: 旧バージョンとの互換性のためドライバー ガイドライン |Microsoft ドキュメント'
+title: '付録 g: 旧バージョンとの互換性のためのドライバーのガイドライン |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 810aa157ef88ba264ff24e3242fea794b3e2e475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63f999fa01623898be6561c9f5a450c6ec81487d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906033"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654230"
 ---
-# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>旧バージョンとの互換性のための付録 g: ドライバーのガイドライン
-この付録では、ドライバーの作成者が ODBC 3 での作業の情報を提供します。*x* ODBC 2 をサポートするために必要なドライバー *。x*アプリケーションです。 旧バージョンと互換性の詳細については、次を参照してください。[旧バージョンとの互換性と標準の順守](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)です。  
+# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>付録 G: ドライバーの下位互換性のガイドライン
+この付録の内容は、ODBC 3 取り組んでドライバー作成者の情報を提供します。*x* ODBC 2 をサポートするために必要なドライバー *。x*アプリケーション。 旧バージョンと互換性の詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   
--   [ブロック カーソル、スクロール可能なカーソル、および ODBC 3.x ドライバーとの下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)— 新機能は、ODBC 3 に存在する機能 *。x* ODBC 2 ではなく *。x*です。 ODBC 3 です。*x*ドライバー通常必要はありませんので、新機能との下位互換性について心配する ODBC 2 *。x*しないアプリケーションで使用します。 唯一の例外に関連する機能は、 **SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、および**SQLExtendedFetch**詳細です。については、この付録の「を参照してください。  
+-   [ブロック カーソル、スクロール可能なカーソル、および ODBC 3.x ドライバーとの下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)— 新機能は ODBC 3 内に存在する機能 *。x* ODBC 2 ではなく *。x*します。 ODBC 3。*x*ドライバー通常必要はありませんので、新機能との下位互換性について心配する ODBC 2 *。x*アプリケーションに使用しないでください。 唯一の例外に関連する機能を**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、および**SQLExtendedFetch**; 詳細についてはについては、この付録の「を参照してください。  
   
--   [非推奨の関数のマップ](../../../odbc/reference/appendixes/mapping-deprecated-functions.md): 重複する機能は、ODBC 3 に異なる方法で実装されている機能です *。x*および ODBC 2 *。x*です。 ODBC 3 です。*x*ドライバーは、ドライバー マネージャーは、ODBC 2 を常にマップされるので、重複する機能との下位互換性について心配する必要はありません *。x* ODBC 3 に機能します *。x* ODBC 3 を呼び出すときに機能します *。x*ドライバー。 したがって、ODBC 3 です。*x*ドライバーは ODBC 3 のみを表示します *。x*機能します。 詳細については、これらのマッピング後の「を参照してください。  
+-   [非推奨の関数のマップ](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)-重複機能は、ODBC 3 で異なる方法で実装されている機能 *。x*および ODBC 2 *。x*します。 ODBC 3。*x*ドライバーをドライバー マネージャーは、ODBC 2 を常にマップされるため、重複する機能との下位互換性について心配する必要はありません *。x* ODBC 3 に機能します *。x* 、ODBC 3 を呼び出すときに機能します *。x*ドライバー。 したがって、ODBC 3。*x*ドライバーが ODBC 3 のみが表示されます *。x*機能します。 詳細については、これらのマッピング後の「を参照してください。  
   
--   [動作の変更と ODBC 3.x ドライバー](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md) — 動作の変更は、ODBC 3 が異なる方法で処理する機能 *。x*および ODBC 2 *。x*です。 ODBC 3 です。*x*ドライバーは、動作の変更について心配し、アプリケーションによって設定される、また環境属性への応答で操作する必要があります。
+-   [動作変更および ODBC 3.x ドライバー](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md) — 動作の変更が ODBC 3 に異なる方法で処理する機能 *。x*および ODBC 2 *。x*します。 ODBC 3。*x*ドライバーの動作の変更について心配し、応答 SQL_ATTR_ODBC_VERSION 環境属性をアプリケーションで設定する必要があります。

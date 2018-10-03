@@ -1,40 +1,37 @@
 ---
-title: コマンド ストリーム |Microsoft ドキュメント
+title: コマンド ストリーム |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f37202ccd4586d3a485f18d070c0af0434a303
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35269971"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798582"
 ---
 # <a name="command-streams"></a>コマンド ストリーム
-ADO で指定された文字列の形式でコマンドの入力を常にサポートされている、 **CommandText**プロパティです。 代わりに、ADO 2.7 以降を使用することも、情報のストリーム コマンドの入力のストリームを割り当てることによって、 **CommandStream**プロパティです。 ADO を割り当てることができます**ストリーム**オブジェクト、または COM をサポートする任意のオブジェクト**IStream**インターフェイスです。  
+ADO で指定された文字列の形式でコマンドの入力を常にサポートされている、 **CommandText**プロパティ。 代わりに、ADO 2.7 以降で使用することできますも情報のストリーム コマンドの入力のストリームを割り当てることで、 **CommandStream**プロパティ。 ADO を割り当てることができます**Stream**オブジェクト、または、COM をサポートする任意のオブジェクト**IStream**インターフェイス。  
   
- コマンド ストリームのコンテンツ渡されるだけです ADO から、プロバイダーに、プロバイダーがこの機能を使用するためのストリームによって入力されたコマンドをサポートするようにします。 たとえば、SQL Server では、XML テンプレートや OpenXML Transact SQL 拡張機能の形式でクエリをサポートしています。  
+ コマンド ストリームのコンテンツは、プロバイダーは、この機能を使用するためのストリームによって入力されたコマンドをサポートする必要がありますのでをプロバイダーに渡されます ADO からだけです。 たとえば、SQL Server では、XML テンプレートや TRANSACT-SQL に OpenXML の拡張機能の形式でクエリをサポートしています。  
   
- ストリームの詳細については、プロバイダーで解釈する必要があります、ために設定でコマンド言語を指定する必要があります、 **Dialect**プロパティです。 値**Dialect**プロバイダーによって定義されている GUID を含む文字列です。 有効な値について**Dialect**プロバイダーによってサポートされている、プロバイダーのドキュメントを参照してください。  
+ ストリームの詳細については、プロバイダーで解釈する必要があります、ため、設定して、コマンド言語を指定する必要があります、**言語**プロパティ。 値**言語**は、プロバイダーによって定義されている GUID を含む文字列です。 有効な値については**言語**プロバイダーによってサポートされている、プロバイダーのマニュアルを参照してください。  
   
 ## <a name="xml-template-query-example"></a>XML テンプレートのクエリ例  
  次の例は、VBScript で Northwind データベースに書き込まれます。  
   
- 最初に、初期化して開く、**ストリーム**クエリ ストリームを格納するために使用するオブジェクト。  
+ まず、初期化して開く、 **Stream**クエリ ストリームを格納するために使用するオブジェクト。  
   
 ```  
 Dim adoStreamQuery  
@@ -42,9 +39,9 @@ Set adoStreamQuery = Server.CreateObject("ADODB.Stream")
 adoStreamQuery.Open  
 ```  
   
- クエリのストリームの内容を XML テンプレート クエリとなります。  
+ クエリのストリームの内容を XML テンプレートのクエリとなります。  
   
- テンプレートのクエリには、sql によって識別される XML 名前空間への参照が必要です。 プレフィックス、 \<sql:query > タグです。 SQL SELECT ステートメントは、XML テンプレートのコンテンツとして含まれており、次のように文字列変数に割り当てられています。  
+ テンプレートのクエリが sql で識別される XML 名前空間への参照が必要です: のプレフィックス、 \<sql:query > タグです。 SQL SELECT ステートメントは XML テンプレートのコンテンツとして含まれているし、次のように文字列変数に割り当てられています。  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -59,7 +56,7 @@ adoStreamQuery.WriteText sQuery, adWriteChar
 adoStreamQuery.Position = 0  
 ```  
   
- AdoStreamQuery を割り当てる、 **CommandStream** ADO の**コマンド**オブジェクト。  
+ AdoStreamQuery を割り当てる、 **CommandStream** ADO のプロパティ**コマンド**オブジェクト。  
   
 ```  
 Dim adoCmd  
@@ -67,7 +64,7 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- コマンド言語を指定する**Dialect**、SQL Server OLE DB プロバイダーがコマンド ストリームを解釈する方法を示します。 プロバイダー固有の GUID で指定された言語:  
+ コマンド言語を指定する**言語**、SQL Server OLE DB プロバイダーがコマンド ストリームを解釈する方法を示します。 プロバイダー固有の GUID で指定された言語:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  

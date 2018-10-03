@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29190b58267181a028b2a4f13343f0e8400effb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25f4faa1aec81d940677c85c11be6f45f1e94de5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099392"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>このブックには外部データを更新する 1 つ以上のクエリが含まれています。
   PowerPivot データが含まれる Excel ブックの場合、Excel Services は接続情報が検出されるとこの警告を表示し、このブックのクエリを有効にするか無効にするかを確認するプロンプトを表示します。  
@@ -53,7 +50,7 @@ ms.locfileid: "37295662"
   
 5.  [外部データ] で、 **[データ更新に関する警告を表示する]** チェック ボックスをオフにします。  
   
-6.  [**OK**] をクリックします。  
+6.  **[OK]** をクリックします。  
   
  または、PowerPivot ブックが含まれるサイト用に新しく信頼できる場所を作成し、そのサイトの構成設定だけを変更することもできます。 詳細については、「 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   

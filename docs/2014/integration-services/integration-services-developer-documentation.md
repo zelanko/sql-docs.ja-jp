@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7989f708adf6025fddb223e6052dca8810035230
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acc639a9e6df068d4f3ed446a66dc05b7d5e0b59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108552"
 ---
 # <a name="developer39s-guide-integration-services"></a>開発者&#39;ガイド (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
@@ -43,7 +40,7 @@ ms.locfileid: "37206052"
   
 -   単一のパッケージで臨時に使用する場合は、スクリプト タスクでコードを記述してカスタム タスクを作成するか、またはスクリプト コンポーネントでコードを記述してカスタム データ フロー コンポーネントを作成し、変換元、変換、あるいは変換先として設定することができます。 これらの強力なラッパーによってインフラストラクチャ コードが自動的に記述されるため、開発者はカスタム機能の開発に集中できます。ただし、他の場所で簡単に再利用することはできません。  
   
--   複数のパッケージで使用する場合は、接続マネージャー、タスク、列挙子、ログ プロバイダー、およびデータ フロー コンポーネントなどの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のカスタム拡張機能を作成できます。 ph x="1" /&gt; のマネージド オブジェクト モデルには、基になる基本クラスが含まれており、従来よりもカスタム拡張機能の開発が簡単になっています。  
+-   複数のパッケージで使用する場合は、接続マネージャー、タスク、列挙子、ログ プロバイダー、およびデータ フロー コンポーネントなどの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のカスタム拡張機能を作成できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のマネージド オブジェクト モデルには、基になる基本クラスが含まれており、従来よりもカスタム拡張機能の開発が簡単になっています。  
   
  パッケージを動的に作成する場合、または開発環境以外で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理および実行する場合は、プログラムでパッケージを操作できます。 既存のパッケージを読み込み、変更し、実行できます。または、まったく新しいパッケージをプログラムで作成および実行することもできます。 この場合、次に示すような一連の方法があります。  
   

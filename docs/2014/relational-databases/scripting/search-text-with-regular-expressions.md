@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000efcad2db89e05bbfac8e1471ccf4551bc1956
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077632"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
   正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  

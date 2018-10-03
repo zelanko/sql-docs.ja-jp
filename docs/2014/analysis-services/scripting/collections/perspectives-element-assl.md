@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Perspectives Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Perspectives element
 ms.assetid: d071acc3-469b-44f3-b724-423a48da2d41
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35a1667a7df5f33bd4d6b3aa4f0621882b8819f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c7e1de8744e0e6a1379aeab6ca8953169de2972
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171482"
 ---
 # <a name="perspectives-element-assl"></a>Perspectives 要素 (ASSL)
   コレクションを格納[パースペクティブ](../objects/perspective-element-assl.md)要素に関連付けられた、[キューブ](../objects/cube-element-assl.md)要素。  

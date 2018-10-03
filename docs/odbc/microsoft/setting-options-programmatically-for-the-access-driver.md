@@ -1,13 +1,11 @@
 ---
-title: プログラムでアクセス ドライバーのオプションの設定 |Microsoft ドキュメント
+title: プログラムで Access ドライバーのオプションの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], setting options programmatically
@@ -15,28 +13,27 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cbb2f88f143e7bffff0b5172b739247855a4f62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5227985c56d5e2fd4730c86fe9182c8b16b2cb02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804460"
 ---
-# <a name="setting-options-programmatically-for-the-access-driver"></a>プログラムでアクセス ドライバーのオプションの設定
-|オプション|Description|方法|  
+# <a name="setting-options-programmatically-for-the-access-driver"></a>プログラムで Access ドライバーのオプションの設定
+|オプション|説明|方法|  
 |------------|-----------------|------------|  
-|バッファー サイズ|内部バッファーのサイズをキロバイト単位でディスク間でデータを転送する Microsoft Access で使用されます。 既定のバッファー サイズは、(2048 として表示) 2048 KB です。 256 で割り切れる任意の整数値を入力することができます。|このオプションを動的に設定するへの呼び出しで MAXBUFFERSIZE キーワードを使用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|Data Source Name|給与担当者など、データ ソースを識別する名前。|このオプションを動的に設定するには、使用、 **DSN**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|データベース|Microsoft Access データ ソースは、選択するか、データベースを作成することがなくを設定できます。 セットアップ時にデータベースが指定されていない場合は、データベース ファイルを選択して、データ ソースに接続するときに、ユーザーが求められます。|このオプションを動的に設定するには、使用、 **DBQ**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|Description|データ ソース内のデータの説明 (オプション)たとえば、「雇用日、給与履歴、およびすべての従業員の現在のレビューします。」|このオプションを動的に設定するには、使用、**説明**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|[Exclusive]|場合、**排他**ボックスが選択されている場合、データベースが排他モードで開き、一度に 1 つだけのユーザーがアクセスできます。 排他モードで実行されている場合、パフォーマンスが向上します。|このオプションを動的に設定するには、使用、**排他**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|ImplicitCommitSync|トランザクションの外部で行われた変更がデータベースに書き込まれる方法を決定します。 この値は"Yes"は、Microsoft Access ドライバーが完了する内部/暗黙のトランザクションでコミットを待機することを意味する初期設定されます。|このオプションが含まれる、**高度なオプションの設定**Microsoft Access ドライバーのダイアログ ボックス。|  
-|ページのタイムアウト|(ミリ秒単位) (使用しない場合)、ページが削除される前にバッファーに残っている時間の期間を指定します。 Microsoft Access ドライバー、既定値は 500 ミリ秒 (0.5 秒) です。 このオプションは、ODBC ドライバーを使用するすべてのデータ ソースに適用されます。<br /><br /> ページのタイムアウトは、本質的な遅延のため、0 をすることはできません。 ページのタイムアウトは、その値を下回るページ タイムアウト オプションが設定されている場合でも、本質的な遅延よりも小さくできません。|このオプションを動的に設定するには、使用、 **PAGETIMEOUT**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|[読み取り専用]|読み取り専用で、データベースを指定します。|このオプションを動的に設定するには、使用、 **READONLY**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|システム データベース|Microsoft Access データベースで使用する Microsoft Access のシステム データベースの完全なパスにアクセスします。<br /><br /> クリックして、**システム データベース**ボタンを使用するシステム データベースを選択します。 ODBC Microsoft Access ドライバーには、ユーザー名とパスワードが求められます。 既定の名前は管理者と管理者のユーザーの Microsoft Access での既定のパスワードが空の文字列。<br /><br /> Microsoft Access データベースのセキュリティを強化するには、管理者ユーザーを置き換えるし、管理ユーザーを削除する新しいユーザーを作成または管理ユーザーがアクセスしているオブジェクトを変更します。|このオプションを動的に設定するには、使用、 **SYSTEMDB**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|スレッド|使用する、エンジンのバック グラウンド スレッドの数。 Microsoft Access ドライバーは、この値は、既定値は 3 が、変更することができます。 ユーザーは、大量のデータベース内のアクティビティがある場合は、スレッドの数を増やす可能性があります。<br /><br /> このオプションが含まれる、**高度なオプションの設定**Microsoft Access ドライバーのダイアログ ボックス。|このオプションを動的に設定するには、使用、**スレッド**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
-|UserCommitSync|Microsoft Access ドライバーが明示的なユーザー定義のトランザクションを非同期的に実行されるかどうかを判断します。 この値は"Yes"は、Microsoft Access ドライバーが完了するユーザー定義のトランザクションのコミットを待機することを意味する初期設定されます。<br /><br /> False には、このオプションを設定すると、マルチ ユーザー環境で予期しない結果があります。|このオプションを動的に設定するには、使用、 **USERCOMMITSYNC**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|
+|バッファー サイズ|内部バッファーのキロバイト単位でディスクとデータの転送を Microsoft Access で使用されるサイズ。 既定のバッファー サイズは、2048 の KB (2048 として表示されますです)。 256 で割り切れる任意の整数値を入力することができます。|このオプションを動的に設定する呼び出しで MAXBUFFERSIZE キーワードを使用して、 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|Data Source Name|給与または担当者など、データ ソースを識別する名前。|このオプションを動的に設定するには、使用、 **DSN**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|[データベース]|Microsoft Access データ ソースは、選択するか、データベースを作成することがなく設定できます。 セットアップ時にデータベースが指定されていない場合、ユーザーは、データ ソースに接続するときに、データベース ファイルを選択を求めます。|このオプションを動的に設定するには、使用、 **DBQ**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|説明|データ ソース内のデータの説明 (オプション)たとえば、"日付、給与履歴、およびすべての従業員の現在のレビュー。 hire"という|このオプションを動的に設定するには、使用、**説明**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|[Exclusive]|場合、**排他**ボックスがオンの場合、データベースの排他モードで開くし、一度に 1 つだけのユーザーによってアクセスできます。 排他モードで実行する場合、パフォーマンスが向上します。|このオプションを動的に設定するには、使用、**排他**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|ImplicitCommitSync|トランザクションの外部で行われた変更がデータベースに書き込まれる方法を決定します。 この値は"Yes"は、Microsoft Access ドライバーが完了する内部/暗黙のトランザクションでコミットを待つことを意味する最初に設定されます。|このオプションが記載されて、**高度なオプションの設定**Microsoft Access ドライバーのダイアログ ボックス。|  
+|ページのタイムアウト|削除される前に、(使用しない) 場合、ページがバッファーに残っている、ミリ秒単位で時間の期間を指定します。 Microsoft Access ドライバーを既定値は 500 ミリ秒 (0.5 秒) です。 このオプションは、ODBC ドライバーを使用するすべてのデータ ソースに適用されます。<br /><br /> ページのタイムアウトは、固有の遅延のため、0 をすることはできません。 ページのタイムアウトは、その値を下回るページのタイムアウト オプションが設定されている場合でも、本質的な遅延よりも小さくできません。|このオプションを動的に設定するには、使用、 **PAGETIMEOUT**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|[読み取り専用]|読み取り専用データベースを指定します。|このオプションを動的に設定するには、使用、 **READONLY**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|システム データベース|アクセスする Microsoft Access データベースで使用する Microsoft Access のシステム データベースの完全パス。<br /><br /> をクリックして、**システム データベース** ボタンを使用するシステム データベースを選択します。 Microsoft Access の ODBC ドライバーでは、ユーザー名とパスワードが求められます。 既定の名前は管理者と管理者ユーザーの Microsoft Access での既定のパスワードが空の文字列。<br /><br /> Microsoft Access データベースのセキュリティを向上させるのに管理者ユーザーを置き換えるし、管理者ユーザーを削除する新しいユーザーを作成または管理者のユーザーがアクセスを持っているオブジェクトを変更します。|このオプションを動的に設定するには、使用、 **SYSTEMDB**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|スレッド|使用するエンジンのバック グラウンド スレッドの数。 Microsoft Access ドライバーの場合は、この値は、既定値は、3 が、変更することができます。 ユーザーは、大量のデータベース内のアクティビティがある場合は、スレッドの数を増やす可能性があります。<br /><br /> このオプションが記載されて、**高度なオプションの設定**Microsoft Access ドライバーのダイアログ ボックス。|このオプションを動的に設定するには、使用、**スレッド**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|UserCommitSync|Microsoft Access ドライバーが明示的なユーザー定義のトランザクションを非同期的に実行されるかどうかを判断します。 この値は"Yes"は、Microsoft Access ドライバーが完了するユーザー定義のトランザクションでコミットを待つことを意味する最初に設定されます。<br /><br /> このオプションを False に設定すると、マルチ ユーザー環境で予期しない結果をことができます。|このオプションを動的に設定するには、使用、 **USERCOMMITSYNC**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|

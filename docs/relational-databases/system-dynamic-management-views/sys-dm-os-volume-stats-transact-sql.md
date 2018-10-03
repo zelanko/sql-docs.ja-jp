@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_volume_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_volume_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
@@ -18,21 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5fcc94554408ed68988ddbdf34422078ca31dd4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670490"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたデータベースとファイルが格納されているでオペレーティング システムのボリューム (ディレクトリ) に関する情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この動的管理関数は、物理ディスク ドライブの属性を確認する場合や、ディレクトリの使用可能な空き容量に関する情報を取得する場合に使用します。  
+  これで指定されたデータベースとファイルを格納します。 オペレーティング システム ボリューム (ディレクトリ) に関する情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 この動的管理関数は、物理ディスク ドライブの属性を確認する場合や、ディレクトリの使用可能な空き容量に関する情報を取得する場合に使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +50,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**列**|**データ型**|**Description**|  
+|**列**|**データ型**|**[説明]**|  
 |**database_id**|**int**|データベースの ID です。 null にすることはできません。|  
 |**file_id**|**int**|ファイルの ID です。 null にすることはできません。|  
 |**volume_mount_point**|**nvarchar(512)**|ボリュームがルートとするマウント ポイント。 空の文字列を返すことができます。|  
@@ -70,7 +67,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

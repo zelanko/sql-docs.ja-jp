@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061162"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>データベースのバックアップ、復元、および同期 (XMLA)
   XML for Analysis には、データベースのバックアップ、復元、および同期を行う 3 つのコマンドがあります。  
@@ -66,7 +63,7 @@ ms.locfileid: "37159603"
   
 |値|説明|  
 |-----------|-----------------|  
-|*SkipMembership*|バックアップ ファイルにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
+|*skipMembership*|バックアップ ファイルにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|バックアップ ファイルにセキュリティ定義とメンバーシップ情報を含めます。|  
 |*IgnoreSecurity*|バックアップ ファイルからセキュリティ定義を除外します。|  
   
@@ -96,7 +93,7 @@ ms.locfileid: "37159603"
   
 |値|説明|  
 |-----------|-----------------|  
-|*SkipMembership*|データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
+|*skipMembership*|データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|データベースにセキュリティ定義とメンバーシップ情報を含めます。|  
 |*IgnoreSecurity*|データベースからセキュリティ定義を除外します。|  
   
@@ -105,7 +102,7 @@ ms.locfileid: "37159603"
   
  指定された各 `Location` 要素に関して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスは、`DataSourceID` プロパティで指定されたリモート データ ソースにアクセスし、`File` プロパティで指定されたリモート バックアップ ファイルで定義されているパーティションを復元します。 `DataSourceID` および `File` プロパティに加えて、リモート パーティションを復元するために使用される各 `Location` 要素では、以下のプロパティを使用できます。  
   
--   ph x="1" /&gt; 要素の `ConnectionString` プロパティを別の接続文字列に設定すると、`Location` で指定されたリモート データ ソースへの接続文字列をオーバーライドできます。 その場合、`Restore` コマンドは、`ConnectionString` プロパティに含まれる接続文字列を使用します。 `ConnectionString` が指定されていない場合、`Restore` コマンドは、指定されたリモート データ ソースのバックアップ ファイルに格納されている接続文字列を使用します。 `ConnectionString` 設定を使用すると、リモート パーティションを別のリモート インスタンスに移動することができます。 ただし、`ConnectionString` 設定を使用して、復元されるデータベースを含む同じインスタンスにリモート パーティションを復元することはできません。 つまり、`ConnectionString` プロパティを使用してリモート パーティションをローカル パーティションにすることはできません。  
+-   `DataSourceID` 要素の `ConnectionString` プロパティを別の接続文字列に設定すると、`Location` で指定されたリモート データ ソースへの接続文字列をオーバーライドできます。 その場合、`Restore` コマンドは、`ConnectionString` プロパティに含まれる接続文字列を使用します。 `ConnectionString` が指定されていない場合、`Restore` コマンドは、指定されたリモート データ ソースのバックアップ ファイルに格納されている接続文字列を使用します。 `ConnectionString` 設定を使用すると、リモート パーティションを別のリモート インスタンスに移動することができます。 ただし、`ConnectionString` 設定を使用して、復元されるデータベースを含む同じインスタンスにリモート パーティションを復元することはできません。 つまり、`ConnectionString` プロパティを使用してリモート パーティションをローカル パーティションにすることはできません。  
   
 -   リモート データ ソースにリモート パーティションを格納するために使用元フォルダーごとに指定することができます、[フォルダー](../xmla/xml-elements-properties/folder-element-xmla.md)元のフォルダーに格納されているすべてのリモート パーティションを復元するための新しいフォルダーを示す要素。 `Folder` 要素が指定されていない場合、`Restore` コマンドは、リモート バックアップ ファイルに含まれるリモート パーティションに対して指定されている元のフォルダーを使用します。  
   
@@ -134,7 +131,7 @@ ms.locfileid: "37159603"
   
 |値|説明|  
 |-----------|-----------------|  
-|*SkipMembership*|同期先データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
+|*skipMembership*|同期先データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|同期先データベースにセキュリティ定義とメンバーシップ情報を含めます。|  
 |*IgnoreSecurity*|同期先データベースからセキュリティ定義を除外します。|  
   

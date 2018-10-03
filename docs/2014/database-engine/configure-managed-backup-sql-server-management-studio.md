@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managedbackup.configure.f1
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d09c001bc7c267b2235377a1312609ee8b7b3fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0403d34b48b74d0517aaf3cb31ea520dbc436f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165602"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>マネージド バックアップの構成 (SQL Server Management Studio)
   **マネージ バックアップ**ダイアログ ボックスでは、構成できます。[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]インスタンスの既定値。 このトピックでは、このダイアログ ボックスを使用して構成する方法を説明します。[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]インスタンスとその際に考慮する必要がありますオプションの既定の設定。 ときに[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が構成されているインスタンスの場合は、設定はその後作成された新しいデータベースに適用されます。  
@@ -61,8 +58,7 @@ ms.locfileid: "37209832"
  `EXECUTE` アクセス許可`smart_admin.sp_set_instance_backup`、および`smart_admin.sp_backup_master_switch`します。  
   
 ## <a name="configure-includesssmartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>構成[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]SQL Server Management Studio を使用します。  
- **オブジェクト エクスプ ローラー**、展開、**管理**ノード、および右クリック**マネージ バックアップ**します。 **[構成]** を選択します。 
-  **[マネージド バックアップ]** ダイアログ ボックスが開きます。  
+ **オブジェクト エクスプ ローラー**、展開、**管理**ノード、および右クリック**マネージ バックアップ**します。 **[構成]** を選択します。 **[マネージド バックアップ]** ダイアログ ボックスが開きます。  
   
  確認**マネージ バックアップを有効にする**オプションし、構成値を指定します。  
   

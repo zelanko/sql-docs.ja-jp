@@ -1,13 +1,11 @@
 ---
-title: Delete メソッド (ADOX コレクション) |Microsoft ドキュメント
+title: Delete メソッド (ADOX Collections) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -30,18 +28,17 @@ f1_keywords:
 helpviewer_keywords:
 - delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8704e69c777c9426af158b9866ca89e70de054b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 90f9aa6a788296ff5fef05e96b7f46b56729ded9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811086"
 ---
-# <a name="delete-method-adox-collections"></a>Delete メソッド (ADOX コレクション)
+# <a name="delete-method-adox-collections"></a>Delete メソッド (ADOX Collections)
 コレクションからオブジェクトを削除します。  
   
 ## <a name="syntax"></a>構文  
@@ -52,8 +49,8 @@ Collection.Delete Name
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Name*  
- A**バリアント**名前または削除するオブジェクトの位置 (インデックス) を表す序数を指定します。  
+ *名前*  
+ A**バリアント**名前または削除するオブジェクトの位置 (インデックス) を指定します。  
   
 ## <a name="remarks"></a>コメント  
  場合、エラーが発生、*名前*コレクションに存在しません。  
@@ -69,5 +66,5 @@ Collection.Delete Name
 |[Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
 ## <a name="see-also"></a>参照  
- [プロシージャの削除の方法の例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Procedures Delete メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views Delete メソッドの例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

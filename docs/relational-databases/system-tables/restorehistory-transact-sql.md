@@ -1,14 +1,11 @@
 ---
-title: restorehistory (TRANSACT-SQL) |Microsoft ドキュメント
+title: restorehistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - restorehistory
@@ -18,40 +15,39 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f788cf3248ba87bfa4ded7efed219ef3043cf5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b5b6861d1dcd4a9e516fbbf9d1ef22af7ea881d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698110"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  復元操作ごとに 1 行のデータを格納します。 次の表は、 **msdb**データベース。  
+  復元操作ごとに 1 行のデータを格納します。 このテーブルに格納されます、 **msdb**データベース。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|各復元操作を識別する一意な識別番号。 ID、主キー。|  
-|**restore_date**|**datetime**|復元操作の完了日時。 NULL を指定できます。|  
-|**destination_database_name**|**nvarchar(128)**|復元操作の対象となるデータベース名。 NULL を指定できます。|  
-|**user_name**|**nvarchar(128)**|復元操作を実行したユーザー名。 NULL を指定できます。|  
-|**backup_set_id**|**int**|復元されるバックアップ セットを識別する一意な識別番号。 参照**backupset (backup_set_id)** です。|  
-|**restore_type**|**char(1)**|復元操作の種類。<br /><br /> D = データベース<br /><br /> F = ファイル<br /><br /> G = ファイル グループ<br /><br /> I = 差分<br /><br /> L = ログ<br /><br /> V = 検証のみ<br /><br /> NULL を指定できます。|  
-|**replace**|**bit**|復元操作に REPLACE オプションが指定されたかどうか。<br /><br /> 1 = 指定あり<br /><br /> 0 = 指定なし<br /><br /> NULL を指定できます。<br /><br /> データベースをデータベース スナップショットに戻す場合は、0 だけを選択できます。|  
-|**復旧 (recovery)**|**bit**|復元操作に RECOVERY または NORECOVERY オプションが指定されたかどうか。<br /><br /> 1 = RECOVERY<br /><br /> NULL を指定できます。<br /><br /> データベースは、データベース スナップショットに戻す、ときに、唯一のオプションは 1 です。<br /><br /> 0 = NORECOVERY|  
-|**restart**|**bit**|復元操作に RESTART オプションが指定されたかどうか。<br /><br /> 1 = 指定あり<br /><br /> 0 = 指定なし<br /><br /> NULL を指定できます。<br /><br /> データベースをデータベース スナップショットに戻す場合は、0 だけを選択できます。|  
-|**stop_at**|**datetime**|データベースが復元された時刻。 NULL を指定できます。|  
-|**device_count**|**tinyint**|復元操作に関係したデバイスの数。 この数は、バックアップのメディア ファミリの数よりも小さい値になります。 NULL を指定できます。<br /><br /> データベースをデータベース スナップショットに戻す場合、この値は常に 1 になります。|  
-|**stop_at_mark_name**|**nvarchar(128)**|名前付きマークを含むトランザクションへの復旧。 NULL を指定できます。<br /><br /> データベースをデータベース スナップショットに戻す場合、この値は NULL になります。|  
-|**stop_before**|**bit**|名前付きマークを含むトランザクションが復旧に含まれたかどうか。<br /><br /> 0 = マーク付きのトランザクションの前で復旧中止。<br /><br /> 1 = マーク付きのトランザクションも復旧された。<br /><br /> NULL を指定できます。<br /><br /> データベースをデータベース スナップショットに戻す場合、この値は NULL になります。|  
+|**restore_date**|**datetime**|復元操作の完了日時。 NULL にすることができます。|  
+|**destination_database_name**|**nvarchar(128)**|復元操作の対象となるデータベース名。 NULL にすることができます。|  
+|**user_name**|**nvarchar(128)**|復元操作を実行したユーザー名。 NULL にすることができます。|  
+|**backup_set_id**|**int**|復元されるバックアップ セットを識別する一意な識別番号。 参照**backupset (backup_set_id)** します。|  
+|**restore_type**|**char(1)**|復元操作の種類。<br /><br /> D = データベース<br /><br /> F = ファイル<br /><br /> G = ファイル グループ<br /><br /> I = 差分<br /><br /> L = ログ<br /><br /> V = 検証のみ<br /><br /> NULL にすることができます。|  
+|**replace**|**bit**|復元操作に REPLACE オプションが指定されたかどうか。<br /><br /> 1 = 指定あり<br /><br /> 0 = 指定なし<br /><br /> NULL にすることができます。<br /><br /> データベースをデータベース スナップショットに戻す場合は、0 だけを選択できます。|  
+|**復旧 (recovery)**|**bit**|復元操作に RECOVERY または NORECOVERY オプションが指定されたかどうか。<br /><br /> 1 = RECOVERY<br /><br /> NULL にすることができます。<br /><br /> データベースは、データベース スナップショットに戻す、ときに、唯一のオプションは 1 です。<br /><br /> 0 = NORECOVERY|  
+|**restart**|**bit**|復元操作に RESTART オプションが指定されたかどうか。<br /><br /> 1 = 指定あり<br /><br /> 0 = 指定なし<br /><br /> NULL にすることができます。<br /><br /> データベースをデータベース スナップショットに戻す場合は、0 だけを選択できます。|  
+|**stop_at**|**datetime**|データベースが復元された時刻。 NULL にすることができます。|  
+|**device_count**|**tinyint**|復元操作に関係したデバイスの数。 この数は、バックアップのメディア ファミリの数よりも小さい値になります。 NULL にすることができます。<br /><br /> データベースをデータベース スナップショットに戻す場合、この値は常に 1 になります。|  
+|**stop_at_mark_name**|**nvarchar(128)**|名前付きマークを含むトランザクションへの復旧。 NULL にすることができます。<br /><br /> データベースをデータベース スナップショットに戻す場合、この値は NULL になります。|  
+|**stop_before**|**bit**|名前付きマークを含むトランザクションが復旧に含まれたかどうか。<br /><br /> 0 = マーク付きのトランザクションの前で復旧中止。<br /><br /> 1 = マーク付きのトランザクションも復旧された。<br /><br /> NULL にすることができます。<br /><br /> データベースをデータベース スナップショットに戻す場合、この値は NULL になります。|  
   
-## <a name="remarks"></a>解説  
- 次の表では他のバックアップと履歴テーブルの行の数を減らすためには、実行、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアド プロシージャです。  
+## <a name="remarks"></a>コメント  
+ このテーブルおよびその他のバックアップと履歴テーブルの行の数を減らすためには、実行、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアド プロシージャ。  
   
 ## <a name="see-also"></a>参照  
  [バックアップし、復元テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   

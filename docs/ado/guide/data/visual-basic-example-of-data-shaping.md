@@ -1,31 +1,28 @@
 ---
-title: Visual Basic の例のデータの整形 |Microsoft ドキュメント
+title: Visual Basic の例のデータの整形 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e6f7fd8431a189a031b44206b13c711ea74e7b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 772fb84482346402133874ff5e177f4d3c8b30c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645640"
 ---
-# <a name="visual-basic-example-of-data-shaping"></a>Visual Basic の例のデータの整形
+# <a name="visual-basic-example-of-data-shaping"></a>Visual Basic のデータ シェイプの例
 ```  
 ' This application makes use of Microsoft Hierarchical FlexGrid  
 ' Control, which is named as MSHFLexGrid.  
@@ -94,16 +91,16 @@ End Function
   
 ```  
   
-#### <a name="try-it"></a>試してみる  
+#### <a name="try-it"></a>これをお試しください。  
   
-1.  Visual Basic 標準 EXE アプリケーション プロジェクトを作成します。  
+1.  標準 EXE の Visual Basic アプリケーション プロジェクトを作成します。  
   
 2.  選択**コンポーネント**から、**プロジェクト**Visual Studio のメニュー  
   
-3.  "Microsoft 階層フレキシブル グリッド コントロール 6.0 (OLEDB)"を選択してから、**コンポーネント**ポップアップ ウィンドウをクリックして**保存**です。  
+3.  "Microsoft 階層フレキシブル グリッド コントロール 6.0 (OLEDB)"を選択してから、**コンポーネント**ポップアップ ウィンドウをクリック**保存**します。  
   
-4.  Visual Basic ワークスペースで、ツールボックス ウィンドウからフレキシブル グリッド コントロールをダブルクリックします。 フレキシブルをこのインスタンスの名前を変更します。  
+4.  Visual Basic ワークスペースの [ツールボックス] ウィンドウからフレキシブル グリッド コントロールをダブルクリックします。 フレキシブルをこのインスタンスの名前を変更します。  
   
-5.  上記のコードをコピーして貼り付けます、**コード**ページを既存のコードを置き換えます。  
+5.  上記のコードをコピーして貼り付けます、**コード**ページを既存のコードに置き換えます。  
   
 6.  選択**開始**から、**実行** メニューのアプリケーションを実行します。

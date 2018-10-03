@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184952"
 ---
 # <a name="configure-report-manager-native-mode"></a>レポート マネージャーの構成 (ネイティブ モード)
   レポート マネージャーは、Web フロント エンド アプリケーションであり、レポートの表示、レポート サーバー コンテンツの管理、およびネイティブ モードのレポート サーバーへのアクセス権の付与に使用されます。 レポート マネージャーは、レポート サーバー Web サービスと共に、同じレポート サーバー インスタンス内にインストールされます。また、セットアップ時に **[ネイティブ モードの既存の構成をインストールする]** を選択した場合は、必要に応じて構成できます。 レポート マネージャーはインストール後のタスクとしても構成できます。 このトピックでは、次のレポート マネージャーの構成シナリオについて説明します。  
@@ -151,7 +148,7 @@ ms.locfileid: "37299762"
   
 2.  Internet Explorer を開きます。  
   
-3.  レポート マネージャーの URL を入力します。 既定では、http://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は http://\<**your-server-name**>/reports\<**_instancename**> になります。  
+3.  レポート マネージャーの URL を入力します。 既定では、 http://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は http://\<**your-server-name**>/reports\<**_instancename**> になります。  
   
 4.  **[サイトの設定]** をクリックします。  
   

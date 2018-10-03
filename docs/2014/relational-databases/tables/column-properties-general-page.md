@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57a605bcf1759145c6ec9eafff910b2ea490146b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f73bbec32dc8f5d8d20e443428589a3aa45980ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109912"
 ---
 # <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
   このページを使用すると、選択されている列のプロパティを表示できます。  
@@ -50,7 +47,7 @@ ms.locfileid: "37255984"
  **[計算されたテキスト]**  
  列テキストの計算に使用されたステートメントを示します。 詳細については、「 [テーブルの計算列の指定](specify-computed-columns-in-a-table.md)」を参照してください。  
   
- **Identity**  
+ **[ID]**  
  列がテーブルの ID 列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
  **[IDENTITY シード]**  

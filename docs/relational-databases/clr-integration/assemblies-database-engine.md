@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -12,16 +11,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02b9011a567eb3a91bf36dfc7d2450dfa9498a60
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 76b861e0cfc6b9c2e747395e1b75a13f33b73f23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359394"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722550"
 ---
 # <a name="assemblies-database-engine"></a>アセンブリ (データベース エンジン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +27,7 @@ ms.locfileid: "37359394"
   
  アセンブリのインスタンスで使用される DLL ファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関数、ストアド プロシージャ、トリガー、ユーザー定義集計、およびによってホストされているマネージ コード言語のいずれかで記述されているユーザー定義型を展開する、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) ではなく[!INCLUDE[tsql](../../includes/tsql-md.md)]します。  
   
- ph x="1" /&gt; のアセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイムで作成されたマネージド アプリケーション モジュール (.dll ファイル) を参照するオブジェクトです。 アセンブリには、クラス メタデータとマネージド コードが含まれています。 SQL Server のインスタンスにアセンブリをアップロードすることが、次のいずれかのデータベース オブジェクトを作成するための最初の手順になります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイムで作成されたマネージド アプリケーション モジュール (.dll ファイル) を参照するオブジェクトです。 アセンブリには、クラス メタデータとマネージド コードが含まれています。 SQL Server のインスタンスにアセンブリをアップロードすることが、次のいずれかのデータベース オブジェクトを作成するための最初の手順になります。  
   
 -   CLR 関数。 詳細については、次を参照してください。 [CLR 関数の作成](../../relational-databases/user-defined-functions/create-clr-functions.md)です。  
   
@@ -39,7 +37,7 @@ ms.locfileid: "37359394"
   
 -   ユーザー定義集計関数。 詳細については、次を参照してください。[作成ユーザー定義集計](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)します。  
   
--   ユーザー定義型。 詳細については、次を参照してください。[ユーザー種類](../../relational-databases/native-client/features/using-user-defined-types.md)します。  
+-   ユーザー定義型。 詳細については、「[ユーザー定義型の使用](../../relational-databases/native-client/features/using-user-defined-types.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アセンブリによって次の関数が実行されます。  
   

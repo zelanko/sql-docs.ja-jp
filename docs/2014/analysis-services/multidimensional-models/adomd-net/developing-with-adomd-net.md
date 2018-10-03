@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ADOMD.NET
 ms.assetid: abaf33aa-db55-43bf-8f30-15547559be1d
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ff460d496b1ef148b5da7e0dbada2835fb1328c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 659acdede9841d36d3a1acc9b2519b97ee06ca86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055062"
 ---
 # <a name="developing-with-adomdnet"></a>ADOMD.NET での開発
   ADOMD.NET は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework データ プロバイダーと通信するように設計された[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。 ADOMD.NET は、XML for Analysis プロトコルを使用して分析データ ソースとやり取りします。その際、TCP/IP 接続または HTTP 接続を使用して、XML for Analysis 仕様準拠の SOAP 要求と応答を送受信します。 コマンドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、Analysis Services スクリプト言語 (ASSL)、または SQL の一部の構文で送ることができ、結果を返さない場合があります。 分析データ、主要業績評価指標 (KPI)、マイニング モデルは、ADOMD.NET オブジェクト モデルを使用することによって、取得と操作を行うことができます。 ADOMD.NET を使用すると、OLE DB 準拠のスキーマ行セットを取得するか、ADOMD.NET オブジェクト モデルを使用することによって、メタデータを表示および操作することもできます。  
