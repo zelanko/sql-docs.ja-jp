@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d1b0767564d0e664d14af285617f8ae0947382d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3417579b121d4680b18cfd896bb3ddd676eca920
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600450"
 ---
 # <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>レッスン 1-5 - フラット ファイル ソースの追加と構成
 ここでは、フラット ファイル ソースをパッケージに追加し、構成します。 フラット ファイル ソースとは、フラット ファイル接続マネージャーにより定義されるメタデータを使用するデータ フロー コンポーネントです。フラット ファイル接続マネージャーは、変換処理によってフラット ファイルから取得されるデータの形式や構造を指定します。 フラット ファイル接続マネージャーに定義されているファイル形式を使用し、1 つのフラット ファイルからデータを取得するよう、フラット ファイル ソースを定義できます。  
@@ -48,7 +44,7 @@ ms.locfileid: "35329316"
 9. [プロパティ] ウィンドウで、 **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 6 : 参照変換の追加と構成](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+[手順 6: 参照変換の追加と構成](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>参照  
 [[フラット ファイル ソース]](../integration-services/data-flow/flat-file-source.md)  
