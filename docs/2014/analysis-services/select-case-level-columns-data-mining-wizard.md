@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcaselevelcolumn.f1
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b57cf4ff913210c8a0fc7fd48593914c76a315dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74bb2b88a152d812a29dc399c887d78ed264532f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129762"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>[ケース レベル列の選択] (データ マイニング ウィザード)
   **[ケース レベル列の選択]** ページを使用すると、マイニング構造のケース レベル列として使用する属性およびメジャーを、基になるソース キューブ ディメンションから選択できます。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.replaceinfiles
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df2f8ca6111aea1195d42539edbe859324594b42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c01a074c2b5380590fc18096578f29c3d5dcc2d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188009"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128902"
 ---
 # <a name="replace-in-files"></a>[フォルダーを指定して置換]
   **[検索と置換]** ウィンドウの [フォルダーを指定して置換] タブを使用すると、指定したファイル セットのコード内で文字列や正規表現を検索したり、検出された項目の一部またはすべてを置き換えたりできます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  
