@@ -1,46 +1,43 @@
 ---
-title: SQLDriverConnect (Paradox ドライバー) |Microsoft ドキュメント
+title: SQLDriverConnect (Paradox ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLDriverConnect
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5437dca7911b2931378a51b8ba16538286858b65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904447"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654760"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (Paradox ドライバー)
 > [!NOTE]  
->  このトピックでは、Paradox ドライバー固有の情報を提供します。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
+>  このトピックでは、Paradox ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- **SQLDriverConnect**データ ソース (DSN) を作成せずに、ドライバーに接続することができます。  
+ **SQLDriverConnect**データ ソース (DSN) を作成することがなく、ドライバーに接続することができます。  
   
- すべてのドライバーの接続文字列で、次のキーワードはサポートされて: **DSN**、 **DBQ**、および**FIL**です。  
+ すべてのドライバーの接続文字列では、次のキーワードがサポートされて: **DSN**、 **DBQ**、および**FIL**します。  
   
- **PWD**キーワードもサポートします。 PWD キーワードを含めないでくださいの特殊文字 (で SQL_SPECIAL_CHARACTERS を参照してください**SQLGetInfo**返された値)。  
+ **PWD**キーワードもサポートされます。 PWD キーワードの特殊文字含める必要がありますいない (SQL_SPECIAL_CHARACTERS でを参照してください。 **SQLGetInfo**に返される値)。  
   
- パスワードで保護されたファイルを開いた後に、ユーザーが、他のユーザーは、同じファイルを開くには使用できません。  
+ パスワードで保護されたファイルを開いた後にユーザーが、他のユーザーは同じファイルを開くには使用できません。  
   
- 次の表は、各ドライバーへの接続に必要な最小のキーワードを示しています、併用キーワード/値ペアの例を示します**SQLDriverConnect**です。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)です。  
+ 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)します。  
   
 > [!NOTE]  
 >  Paradox ドライバー、DBQ または DefaultDir が指定されていない場合、ドライバーは、現在のディレクトリに接続します。  
   
 |Driver|必要なキーワード|例|  
 |------------|-----------------------|-------------|  
-|Paradox|ドライバー、DriverID|ドライバー {Microsoft Paradox ドライバー (*.db)} を = です。DBQ = c:\temp; DriverID 26 を =|
+|Paradox|ドライバー、DriverID|ドライバー {0} Microsoft Paradox ドライバー (*.db)} を = です。DBQ = c:\temp; DriverID = 26|

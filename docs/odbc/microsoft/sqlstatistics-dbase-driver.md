@@ -1,38 +1,35 @@
 ---
-title: SQLStatistics (dBASE ドライバー) |Microsoft ドキュメント
+title: SQLStatistics (dBASE ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLStatistics function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLStatistics
 ms.assetid: 631cec1b-66b7-4103-b9a7-ffd81da3c442
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdf146a28104cf74b0f28881b54dec228c7ae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bac3e235197838442a2cdde24926b37ac90524c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656131"
 ---
 # <a name="sqlstatistics-dbase-driver"></a>SQLStatistics (dBASE ドライバー)
 > [!NOTE]  
->  このトピックでは、dBASE ドライバー固有の情報を提供します。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
+>  このトピックでは、dBASE ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
-|列|コメント|  
+|[列]|コメント|  
 |------------|--------------|  
-|TABLE_QUALIFIER|ディレクトリへのパス。<br /><br /> パターン マッチはではサポートされていません、 *szTableQualifier*引数。|  
-|TABLE_OWNER|所有者名がサポートされていないために、この列に NULL が返されます。|  
-|TABLE_NAME|区切られていないテーブルの名前。<br /><br /> パターン マッチはではサポートされていません、 *szTableName*引数。|  
+|TABLE_QUALIFIER|ディレクトリへのパス。<br /><br /> パターン マッチングはではサポートされていません、 *szTableQualifier*引数。|  
+|TABLE_OWNER|所有者名がサポートされていないために、この列で NULL が返されます。|  
+|TABLE_NAME|区切りのないテーブルの名前。<br /><br /> パターン マッチングはではサポートされていません、 *szTableName*引数。|  
 |INDEX_QUALIFIER|NULL は常に返されます。|  
 |INDEX_NAME|インデックスに依存します。|  
 |TYPE|型の SQL_TABLE_STAT または SQL_INDEX_OTHER のみが返されます。|  

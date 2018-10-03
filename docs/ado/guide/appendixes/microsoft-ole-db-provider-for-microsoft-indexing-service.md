@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft OLE DB Provider for Microsoft インデックス サービス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Indexing Service provider [ADO]
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613280"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft インデックス作成サービスの概要
+# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft サービスの概要をインデックス作成
 Microsoft OLE DB Provider for Microsoft インデックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。
 
- プロバイダーは、フリー スレッドは、UNICODE に対応します。
+ プロバイダーは、フリー スレッドし、UNICODE に対応します。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
  このプロバイダーに接続するには、設定、**Provider =** への引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
@@ -40,7 +37,7 @@ MSIDXS
  読み取り、[Provider](../../../ado/reference/ado-api/provider-property-ado.md)プロパティは同様に、この文字列を返します。
 
 ## <a name="typical-connection-string"></a>一般的な接続文字列
- このプロバイダーの一般的な接続文字列とは。
+ このプロバイダーの一般的な接続文字列は次のとおりです。
 
 ```
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
@@ -50,14 +47,14 @@ MSIDXS
 
 |Keyword|説明|
 |-------------|-----------------|
-|**Provider**|Microsoft インデックス サービス用の OLE DB プロバイダーを指定します。 通常これは、接続文字列で指定された唯一のキーワードです。|
-|**Data Source**|インデックス サービス カタログ名を指定します。 このキーワードが指定されていない場合は、既定のシステム カタログが使用されます。|
-|**Locale Identifier**|32 ビットの一意の番号 (1033 など)、ユーザーの言語に関連する設定を指定するを指定します。 このキーワードが指定されていない、既定のシステムのロケール識別子が使用されます。|
+|**Provider**|Microsoft インテックス サービス用の OLE DB プロバイダーを指定します。 通常これは、接続文字列で指定された唯一のキーワードです。|
+|**Data Source**|インデックス サービスのカタログ名を指定します。 このキーワードが指定されていない場合は、既定のシステム カタログが使用されます。|
+|**Locale Identifier**|32 ビットに固有の番号 (1033 など) に関連するユーザーの言語の基本設定を指定するを指定します。 このキーワードが指定されていない場合は、既定のシステム ロケールの識別子が使用されます。|
 
 ## <a name="command-text"></a>コマンド テキスト
  インデックス作成サービスの SQL クエリ構文では、SQL 92 に拡張機能の **SELECT** ステートメントとその **FROM** と **WHERE** 句。 ADO で使用およびとして操作可能な OLE DB 行セットを使用して、クエリの結果が返されます [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクト。
 
- 正確な単語や語句を検索したり、ワイルドカード パターンや単語の語幹検索を使用できます。 検索ロジックは、ブール型の決定、重み付け語句は、またはその他の語に近接に基づいて作成できます。 また、「フリー テキスト」一致する語句ではなく、意味のものによって検索することができます。
+ 正確な単語や語句を検索したり、ワイルドカードのパターンや単語の語幹検索を使用できます。 検索ロジックは、ブール型の意思決定、重み付け語句は、またはその他の語の近接度に基づいて作成できます。 「フリー テキストを」一致する正確な単語ではなく、意味のものを検索することもできます。
 
  特定のコマンド構文は、インデックス サービスに関するドキュメントのクエリ言語で完全に記載されています。
 
@@ -76,7 +73,7 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|読み取り/書き込み|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|読み取り専用|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)\*|読み取り/書き込み|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|読み取り/書き込み|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|読み取り/書き込み|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
@@ -84,7 +81,7 @@ MSIDXS
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|
 |[Assert](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用不可|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用できません。|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|読み取り専用|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|
@@ -93,11 +90,11 @@ MSIDXS
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|読み取り専用|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|読み取り専用|
 
- \*この機能の順序で上に存在するプロバイダーのブックマークを有効にする必要があります、 **Recordset**です。
+ \*この機能の順序で上に存在するプロバイダーのブックマークを有効にする必要があります、 **Recordset**します。
 
  **標準の ADO レコード セット メソッドの可用性:**
 
-|方法|使用できるか。|
+|方法|使用できるでしょうか。|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|いいえ|
 |[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|

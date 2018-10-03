@@ -1,13 +1,11 @@
 ---
-title: 実行、クエリを再実行、およびメソッドの例 (vc++) をオフ |Microsoft ドキュメント
+title: Execute、Requery、および Clear のメソッドの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef62e7ad551b0e94642348c09b743eeb0bec8925
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 013df1f64ab3d19869f5ca18121610fc0e960e89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278091"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655416"
 ---
-# <a name="execute-requery-and-clear-methods-example-vc"></a>実行、クエリを再実行、およびメソッドの例 (vc++) をオフに
-この例で、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトおよび[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 でも使用、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得する方法を[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[オフ](../../../ado/reference/ado-api/clear-method-ado.md)の内容を消去するメソッドを[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 ExecuteCommand と PrintOutput 関数は、この例を実行する必要があります。  
+# <a name="execute-requery-and-clear-methods-example-vc"></a>Execute、Requery、および Clear のメソッドの例 (vc++)
+この例では、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得するメソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と[オフ](../../../ado/reference/ado-api/clear-method-ado.md)メソッドの内容を消去する、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 ExecuteCommand と PrintOutput 関数は、この例を実行する必要があります。  
   
 ```  
 // Execute_Requery_Clear_Method_Sample.cpp  
@@ -195,7 +192,7 @@ void PrintComError(_com_error &e) {
  [Clear メソッド (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Execute メソッド (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute メソッド (ADO 接続)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)

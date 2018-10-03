@@ -1,13 +1,11 @@
 ---
-title: IsolationLevel とモードのプロパティの例 (VB) |Microsoft ドキュメント
+title: IsolationLevel および Mode プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8d199301be727faa3013100ba17bd340ed4661
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0b17fc32998a00d011bfcf305c3ebcdf4d79a76b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279201"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631320"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel とモードのプロパティの例 (VB)
-この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)を開くには、排他的な接続プロパティと[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離で実行されるトランザクションを開きます。  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel および Mode プロパティの例 (VB)
+この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)、排他的な接続を開き、プロパティ、および[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離を実行したトランザクションを開きます。  
   
 ```  
 'BeginIsolationLevelVB  

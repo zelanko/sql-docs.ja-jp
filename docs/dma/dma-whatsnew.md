@@ -5,24 +5,21 @@ ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 188c19f173e8c53995d84a74ecc04d1cac9eae92
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655660"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 この記事では、各リリースで追加の Data Migration Assistant (DMA) を示します。
@@ -109,7 +106,7 @@ DMA の v1.0 リリースは初期のリリースとを提供します。
     - 非推奨の機能
 - データベースのアップグレードから恩恵を受けるターゲット SQL Server プラットフォームの新機能の検出。 機能の推奨事項として、結果が記載されているし、これらは、次の領域に分類しています。
     - [パフォーマンス]
-    - Security
+    - セキュリティ
     - ストレージ
 -   評価を実行する最新のユーザー エクスペリエンス。
 

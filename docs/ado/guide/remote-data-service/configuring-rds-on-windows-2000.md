@@ -1,47 +1,44 @@
 ---
-title: Windows 2000 で RDS の構成 |Microsoft ドキュメント
+title: Windows 2000 での RDS の構成 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO], Windows 2000
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 774309f4b120f3c475645574429d1b08af627f8b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5fcff12760076a47e31fc6b140e0f3cdb7fc590e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657750"
 ---
-# <a name="configuring-rds-on-windows-2000"></a>Windows 2000 で RDS を構成します。
-を Windows 2000 にアップグレードした後に正常に機能する rds 問題が発生した場合は、問題のトラブルシューティングをこれらの手順に従います。  
+# <a name="configuring-rds-on-windows-2000"></a>Windows 2000 での RDS の構成
+Windows 2000 にアップグレードした後に正常に機能する rds 問題が発生した場合、問題をトラブルシューティングする手順に従います。  
   
-1.  World Wide Web 発行サービスが実行されていること最初 Internet Explorer を使用して http:// サーバーに移動することを確認してください。 この方法で Web サーバーにアクセスすることはできません場合は、コマンド プロンプトを開き、"NET 開始 W3SVC"次のコマンドを入力します。  
+1.  World Wide Web 発行サービスの最初を Internet Explorer を使用して http:// サーバーに移動して実行することを確認します。 この方法で Web サーバーにアクセスできない場合は、コマンド プロンプトを開き、"NET 開始 W3SVC"次のコマンドを入力します。  
   
-2.  [スタート] メニューで、[実行] を選択します。 Msdfmap.ini を入力し、メモ帳で msdfmap.ini ファイルを開くには、[ok] をクリックします。 [既定の接続] セクションを確認し、アクセス パラメーターは、NOACCESS に設定されている場合は読み取り専用に変更します。  
+2.  [スタート] メニューには、実行を選択します。 Msdfmap.ini を入力し、メモ帳で msdfmap.ini ファイルを開くには、[ok] をクリックします。 [既定の接続] のセクションを確認し、アクセス パラメーターは、NOACCESS に設定されている場合は読み取り専用に変更します。  
   
-3.  RegEdit ユーティリティを使用して、"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo"に移動し、確認**HandlerRequired** 0 に設定されていると**DefaultHandler**は""(Null の文字列)。  
+3.  RegEdit ユーティリティを使用して、"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo"に移動し、確認**HandlerRequired** 0 に設定されていると**DefaultHandler**は""(Null 文字列)。  
   
-     **注**レジストリのこのセクションを変更する場合は、停止して、コマンド プロンプトで次のコマンドを入力し、World Wide Web 発行サービスを再起動する必要があります:"NET 停止 W3SVC"および"NET 開始 W3SVC"です。  
+     **注**を停止し、コマンド プロンプトで次のコマンドを入力して、World Wide Web 発行サービスを再起動する必要があります、レジストリのこのセクションを変更する場合:"NET W3SVC を停止"、"NET 開始 W3SVC"。  
   
-4.  RegEdit ユーティリティを使用して、レジストリ"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch"に移動し、という名前のキーがあることを確認**RDSServer.Datafactory**です。 それ以外の場合は、作成します。  
+4.  RegEdit ユーティリティを使用してレジストリ"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch"に移動し、という名前のキーがあることを確認**RDSServer.Datafactory**します。 それ以外の場合は、作成します。  
   
 5.  インターネット サービス マネージャーを使用して、既定の Web サイトを見つけて MSADC 仮想ルートのプロパティを表示します。 ディレクトリのセキュリティ/IP アドレスおよびドメイン名の制限を検査します。 「アクセスが拒否されました」がオンの場合は、"Granted"を選択します。  
   
- 場合は、サーバーを再起動することを確認して変更を最初に、問題を解決するためには表示されません。  
+ 場合、サーバーの再起動を行ってください。 変更は、最初の問題を解決するためには表示されません。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。Windows 8 および Windows Server 2012 以降、Windows オペレーティング システムに RDS サーバー コンポーネントは含まれなくです。 RDS を使用するアプリケーションを移行[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。Windows 8 および Windows Server 2012 以降、Windows オペレーティング システムで RDS サーバー コンポーネントは含まれなくします。 RDS を使用するアプリケーションを移行[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="see-also"></a>参照  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
