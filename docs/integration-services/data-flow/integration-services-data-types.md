@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abf3340badf3e1914bce13951625308ac10a3c65
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8fc0c1658ce051aa3e0fa494ef5c1b40d2db8881
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832526"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
   
- 一部のデータ フロー コンポーネントでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のマネージ データ型の間でデータ型を変換します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型とマネージ データ型とのマッピングの詳細については、「 [データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
+ 一部のデータ フロー コンポーネントでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のマネージド データ型の間でデータ型を変換します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型とマネージド データ型とのマッピングの詳細については、「[データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
  次の表に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型を一覧で示します。 表内の一部のデータ型には、これらのデータ型に適用される有効桁数と小数点以下桁数の情報が含まれています。 有効桁数と小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
   

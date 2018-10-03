@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32861697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841010"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性グループのトラブルシューティングと監視のガイド
  このガイドは、Always On 可用性グループの監視と可用性グループのいくつかの一般的な問題のトラブルシューティング作業を開始するために役立ちます。 オリジナルのコンテンツに加えて、他の場所で公開されている役に立つ情報のランディング ページを提供します。 このガイドでは、可用性グループの大きな領域で発生する可能性があるすべての問題を完全に説明することはできませんが、根本原因の分析と問題の解決に関して正しい方向を示すことができます。 
@@ -30,7 +27,7 @@ ms.locfileid: "32861697"
 ##  <a name="BKMK_SCENARIOS"></a> トラブルシューティングのシナリオ  
  次の表には、可用性グループの一般的なトラブルシューティング シナリオへのリンクが含まれています。 これらは、構成、クライアント接続、フェールオーバー、パフォーマンスなどのシナリオの種類によって分類されています。  
   
-|シナリオ|シナリオの種類|Description|  
+|シナリオ|シナリオの種類|[説明]|  
 |--------------|-------------------|-----------------|  
 |[AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|構成|可用性グループのサーバー インスタンスの構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。 構成に関する一般的な問題には、可用性グループが無効になっている、アカウントが適切に構成されていない、データベース ミラーリング エンドポイントが存在しない、エンドポイントにアクセスできない (SQL Server エラー 1418)、ネットワーク アクセスが存在しない、データベース参加コマンドが失敗する (SQL Server エラー 35250) などがあります。|  
 |[失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|構成|ファイルの追加操作によってセカンダリ データベースが中断され、NOT SYNCHRONIZING 状態になっています。|  
@@ -44,9 +41,9 @@ ms.locfileid: "32861697"
 ##  <a name="BKMK_TOOLS"></a> トラブルシューティングに役立つツール  
  可用性グループを構成または実行するときには、さまざまなツールでさまざまな種類の問題を診断できます。 次の表では、ツールに関する役立つ情報のリンクを提供します。  
   
-|ツール|Description|  
+|ツール|[説明]|  
 |----------|-----------------|  
-|[Always On ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|使いやすいインターフェイスで可用性グループの正常性の概要を報告します。|  
+|[AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|使いやすいインターフェイスで可用性グループの正常性の概要を報告します。|  
 |[Always On ポリシー](always-on-policies.md)|AlwaysOn ダッシュボードの使用|  
 |[SQL Server エラー ログ&#40;Always On 可用性グループ&#41;](sql-server-error-log-always-on-availability-groups.md)|可用性グループ、レプリカ、データベースのログ状態遷移イベント、他の Always On コンポーネントのステータス、Always On エラー|  
 |[CLUSTER.LOG &#40;Always On 可用性グループ&#41;](cluster-log-always-on-availability-groups.md)|可用性グループ リソースの状態遷移を含むログ クラスター イベント、および SQL Server リソース DLL からのイベントとエラー。|  
@@ -64,7 +61,7 @@ ms.locfileid: "32861697"
   
  次の表には、可用性グループのソリューションの正常性を監視するのに役立つトピックへのリンクがあります。  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)|可用性グループのデータ同期プロセス、フロー制御ゲート、可用性グループを監視するときに役立つメトリックについて説明し、RTO および RPO のメトリックを収集する方法についても説明します。|  
 |[可用性グループの監視 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|可用性グループを監視するためのツールについて説明します。|  

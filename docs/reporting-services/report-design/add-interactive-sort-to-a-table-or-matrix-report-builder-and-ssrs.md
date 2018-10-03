@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10121"
@@ -12,12 +11,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a92f326fd1933fdc6df2adb1add9db11e92b6a19
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1c7c9ddd615ef5dda1bccd9a1e3d90cf54fdc993
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269034"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851430"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)
   ユーザーがテーブルやマトリックス内で行と列の並べ替え順序を変更できるようにするには、対話的な並べ替えボタンを追加します。 この機能は、ユーザーとの対話が可能な、HTML などの表示形式でのみサポートされています。  

@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 381d7b5d80281832081a7a08defbd0b3cb76dda5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 115a6ebf263555e98a321cbe582a663d4fcf7019
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408864"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843119"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>レッスン 4: SSIS でエラー フロー リダイレクションを追加する
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、変換できないデータの処理方法を、コンポーネントごと、および列ごとに指定できる機能があります。これにより、変換プロセスで発生するエラーを処理することができます。 特定の列で発生したエラーは無視し、変換に失敗した行全体をリダイレクトできます。または、この操作をコンポーネント単位で行うこともできます。 既定の構成では、エラーの発生時に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のすべてのコンポーネントが変換に失敗したものと見なされます。 つまり、1 つのコンポーネントの変換が失敗すると、パッケージの変換が失敗されたものと見なされ、以降の処理が中断されます。  
@@ -43,9 +39,9 @@ ms.locfileid: "35408864"
   
 -   [手順 2: 破損ファイルの作成](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [手順 3 : エラー フロー リダイレクトの追加](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [手順 3: エラー フロー リダイレクトの追加](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [手順 4 : フラット ファイル変換先の追加](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [手順 4: フラット ファイル変換先の追加](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
 -   [手順 5: レッスン 4 のチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   

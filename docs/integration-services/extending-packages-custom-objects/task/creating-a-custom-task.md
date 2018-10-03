@@ -5,25 +5,20 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom tasks [Integration Services], creating
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 612826aec3773ec7bf21bbacd402cbb50e739b93
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a967b8dc0fd0367ecd608287642ba7d5e662ed8e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854220"
 ---
 # <a name="creating-a-custom-task"></a>カスタム タスクの作成
   カスタム タスクの作成手順は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の他のカスタム オブジェクトの作成手順と同様です。  
@@ -39,7 +34,7 @@ ms.locfileid: "35403144"
 ## <a name="getting-started-with-a-custom-task"></a>カスタム タスクの概要  
   
 ### <a name="creating-projects-and-classes"></a>プロジェクトおよびクラスの作成  
- すべてのマネージ タスクは <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスから派生するため、カスタム タスクを作成するには、最初に任意のマネージ プログラミング言語でクラス ライブラリ プロジェクトを作成し、基本クラスを継承するクラスを作成します。 この派生クラスで、基本クラスのメソッドとプロパティをオーバーライドして、カスタム機能を実装します。  
+ すべてのマネージド タスクは <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスから派生するため、カスタム タスクを作成するには、最初に任意のマネージド プログラミング言語でクラス ライブラリ プロジェクトを作成し、基本クラスを継承するクラスを作成します。 この派生クラスで、基本クラスのメソッドとプロパティをオーバーライドして、カスタム機能を実装します。  
   
  同じソリューション内に、もう 1 つのクラス ライブラリ プロジェクトをカスタム ユーザー インターフェイス用に作成します。 配置を容易にするため、ユーザー インターフェイス用に別個のアセンブリを使用することをお勧めします。そうすれば、接続マネージャーやそのユーザー インターフェイスの更新や再配置を個別に行うことができます。  
   

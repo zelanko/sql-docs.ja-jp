@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 01b2a6dc4b0d396fe6985ab0c4cefd689171fb2a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b3cb25aee9e71724173c913fd75ad01c9227ea5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857190"
 ---
 # <a name="report-builder-functions---previous-function"></a>レポート ビルダー関数 - Previous 関数
   アイテムの、指定されたスコープ内の直前のインスタンスに対応する値または指定された集計値を返します。  

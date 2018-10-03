@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1
 helpviewer_keywords:
 - DataItem Collection dialog box
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fbd5ef14875e11cef4144286d82c2b733f4fa2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220572"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049058"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>[キー列] ダイアログ ボックス (Analysis Services - 多次元データ)
   属性の **KeyColumns** プロパティを変更するには、**[キー列]** ダイアログ ボックスを使用します。 詳細については、「 [属性の KeyColumn プロパティの変更](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)」を参照してください。  
