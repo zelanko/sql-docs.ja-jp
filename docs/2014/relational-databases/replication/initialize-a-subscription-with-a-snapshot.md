@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27614b3c2e0ac6669b9f0ad020d1c74b764a951d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e6f04f1c0b66fe2ec3264c72c5b10b9f77ad941
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061522"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>スナップショットを使用したサブスクリプションの初期化
   パブリケーションを作成すると、通常は初期スナップショットが作成され、スナップショット フォルダーにコピーされます (この動作は、パブリケーションの新規作成ウィザードを使用して作成されたマージ パブリケーションに対して既定で実行されます)。 その後スナップショットは、サブスクリプションの最初の同期時に、ディストリビューション エージェント (トランザクション パブリケーションおよびスナップショット パブリケーションの場合) またはマージ エージェント (マージ パブリケーションの場合) によってサブスクライバーに適用されます。 スナップショット処理は、パブリケーションの種類によって変わります。  

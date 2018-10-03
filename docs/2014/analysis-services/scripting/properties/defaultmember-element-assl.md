@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DefaultMember Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c90abe48fc1d3bfa099e39234d22df822a03782
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229682"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055301"
 ---
 # <a name="defaultmember-element-assl"></a>DefaultMember 要素 (ASSL)
   親要素の既定のメンバーを識別する多次元式 (MDX) を格納します。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Trace Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Trace element
 ms.assetid: dda9136a-a9c1-44a1-b8d3-b0ec4dc65c87
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b1aa2ff2c3f00d5c6cb96c5cef4f2ff73e80636
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8951414231fa8730f1babd3638d9e468624b94a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056352"
 ---
 # <a name="trace-element-assl"></a>Trace 要素 (ASSL)
   クエリできるトレースを定義します。  

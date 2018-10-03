@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055452"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>オプション ([テキスト エディター]: [エディターのタブとステータス バー] ページ)
   **[エディターのタブとステータス バー]** ページでは、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] クエリ エディターによって表示される情報をカスタマイズできます。 クエリ エディター ウィンドウのタブおよびステータス バーに表示される情報のレベル、およびステータス バーをエディター ウィンドウの上部と下部のどちらに表示するかを指定することができます。  

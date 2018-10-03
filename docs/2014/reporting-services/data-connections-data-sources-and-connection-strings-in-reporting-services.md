@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], data sources
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-caps.latest.revision: 112
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 021028f9c5039c04de522fe98b23f93a3b529eba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c162693777c7231b5c91a43f536b97c0b221f508
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060592"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Reporting Services でのデータ接続、データ ソース、および接続文字列
   データを含める、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートを作成する必要がありますまず*データ ソース*と*データセット*。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)」および「[埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  

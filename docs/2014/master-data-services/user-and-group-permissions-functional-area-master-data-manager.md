@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76002bcb850104bfaaafa86f4264fed91231a711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f333b030158072fa268da73d0ff33f6e67ddf8aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061022"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>[ユーザー/グループの権限] 機能領域 (マスター データ マネージャー)
   [ユーザー/グループの権限] 機能領域では、管理者は機能領域、属性 ([モデル] タブ)、およびメンバー ([階層メンバー] タブ) に権限を付与できます。 権限の重複を解決し、個々の属性値に対するユーザーの権限を決定します。  

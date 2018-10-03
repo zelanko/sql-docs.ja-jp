@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb82a321cc6110211a0c4e5f84fd049323b3aa7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b6b360af5bd4e10bff706377caa91927bdd8d00
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224872"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055512"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>SharePoint 用 Reporting Services アドインのインストールまたはアンインストール (SharePoint 2010 および SharePoint 2013)
   SharePoint サーバー上で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers to enable [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features within a SharePoint deployment. 提供される機能には、Power View、レポート ビューアー Web パーツ、URL プロキシ エンドポイント、コンテンツの種類、アプリケーション ページなどがあります。これにより、レポート、レポート モデル、データ ソース、およびその他のレポート サーバー コンテンツを SharePoint サイト上で作成、表示、管理できます。 SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、SharePoint モードで実行されるレポート サーバーに必要なコンポーネントです。 アドインは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードからインストールするか、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能パックから rsSharePoint.msi をダウンロードしてインストールすることができます。 アドインのバージョンの一覧およびダウンロード ページについては、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
@@ -84,7 +81,7 @@ ms.locfileid: "37224872"
   
 -   インストールする場合[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のバージョン、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン準備ツールでは、新しいとして、アドインの古いバージョンをインストールしなかったことを示す次のダイアログが表示されます、SharePoint 製品準備ツールを実行するときに、最初に、バージョンが検出されました。 これは想定されている動作です。  
   
-     ![SSRS アドインが既にインストールされています。] (../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "SSRS アドインが既にインストールされています。")  
+     ![SSRS アドインが既にインストールされています。](../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "SSRS アドインが既にインストールされています。")  
   
  **SharePoint 2013**  
   

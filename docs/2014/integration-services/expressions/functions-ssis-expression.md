@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4e721c7dfddb953dd82952aa51c20550e5e60eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061252"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  

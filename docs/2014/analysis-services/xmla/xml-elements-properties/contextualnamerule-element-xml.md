@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: eb567ef8-f412-4d34-837a-75e53b88b3ce
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c93e14e122dbe3e0905e25e56570c67c3fa769a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8843e2eafd32ac9e4bdb4cc7e4cbf97a04ea3f51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193902"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054212"
 ---
 # <a name="contextualnamerule-element-xml"></a>ContextualNameRule 要素 (XML)
   属性の複合名を作成する最良の方法についてのヒントを提供します。  
