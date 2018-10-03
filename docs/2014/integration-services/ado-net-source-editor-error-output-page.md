@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-caps.latest.revision: 13
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d593b46462f8ca4e4c02431d234ae2aa4f29c197
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191262"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>[ADO NET 変換元エディター] ([エラー出力] ページ)
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  

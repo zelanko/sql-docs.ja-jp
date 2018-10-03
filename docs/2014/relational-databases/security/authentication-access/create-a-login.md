@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
@@ -24,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bc696a697c251bb8b800f22d948f1141a92ecae6
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190492"
 ---
 # <a name="create-a-login"></a>ログインの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインを作成する方法について説明します。 ログインとは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに接続しようとしている人またはプロセスの ID を指します。  
@@ -112,8 +110,7 @@ ms.locfileid: "43020514"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- 
-  **[ログイン - 新規作成]** ダイアログ ボックスでは、 **[サーバー ロール]**、 **[ユーザー マッピング]**、 **[セキュリティ保護可能なリソース]**、 **[状態]** の 4 つの追加ページにもオプションがあります。  
+ **[ログイン - 新規作成]** ダイアログ ボックスでは、 **[サーバー ロール]**、 **[ユーザー マッピング]**、 **[セキュリティ保護可能なリソース]**、 **[状態]** の 4 つの追加ページにもオプションがあります。  
   
 ### <a name="server-roles"></a>[サーバー ロール]  
  **[サーバー ロール]** ページには、新しいログインに割り当てることができるすべての可能なロールが一覧表示されます。 使用できるオプションは以下のとおりです。  

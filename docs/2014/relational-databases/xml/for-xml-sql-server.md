@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, about FOR XML clause
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1985fdf525157864276b8f00b800507f771fc0c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d058a399d25d7049dc376b0590c65f27c9d8dc2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205882"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   SELECT クエリは、結果を行セットとして返します。 必要に応じて、SQL クエリに FOR XML 句を指定することで、SQL クエリの結果を XML 形式で取得することができます。 FOR XML 句は、最上位レベルのクエリとサブクエリのいずれでも使用できます。 最上位レベルの FOR XML 句は、SELECT ステートメント内でのみ使用できます。 サブ クエリでは、FOR XML 句を INSERT、UPDATE、DELETE ステートメント内で使用できます。 また、代入ステートメントでも使用できます。  

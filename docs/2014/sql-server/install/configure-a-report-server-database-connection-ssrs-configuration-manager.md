@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208552"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202654"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
   レポート サーバーの各インスタンスには、レポート サーバーの管理対象であるレポート、レポート モデル、共有データ ソース、リソース、およびメタデータが保存された、レポート サーバー データベースへの接続が必要です。 既定の構成をインストールする場合、最初の接続はレポート サーバーのインストール中に作成することができます。 ほとんどの場合は、セットアップの完了後に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して接続を構成します。 この接続は、いつでも変更して、アカウントの種類を変更したり資格情報をリセットしたりできます。 データベースを作成し、接続を構成する方法の詳しい手順については、「[ネイティブ モード レポート サーバー データベース &#40; を作成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Error Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b9b961a0d8d5a33cb0869b72e0250dee5456ca7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210152"
 ---
 # <a name="error-element-xmla"></a>Error 要素 (XMLA)
   インスタンスによって返されるエラーについての情報を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  

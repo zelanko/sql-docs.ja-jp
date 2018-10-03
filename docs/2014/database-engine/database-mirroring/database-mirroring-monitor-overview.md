@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e0a6c5fe31a244e60e57a14453a29f1392fdcb73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e5a129fbd9a6dc9fbafd6b06fe5088d162ac9ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210852"
 ---
 # <a name="database-mirroring-monitor-overview"></a>データベース ミラーリング モニターの概要
   適切な権限を持つユーザーであれば、データベース ミラーリング モニターを使用することにより、サーバー インスタンス上のミラー化されたデータベースのサブセットを監視できます。 監視を行うことにより、データベース ミラーリング セッションで適切なデータ フローが保たれているかどうかを詳細に検証できます。 データベース ミラーリング モニターは、データ フローの停滞の原因をトラブルシューティングするときにも有効に使用できます。  

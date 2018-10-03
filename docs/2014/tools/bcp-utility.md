@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205862"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
   **Bcp**のインスタンス間でデータをユーティリティの一括コピー [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]とユーザー指定の形式でデータ ファイル。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは **の知識は必要ありません。ただし、** queryout [!INCLUDE[tsql](../includes/tsql-md.md)]オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
@@ -147,7 +144,7 @@ ms.locfileid: "39310299"
 |RAW|コード ページの変換は行われません。 したがって、これは最も速いオプションです。|  
 |*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> **\*\* 重要な\* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]はコード ページ 65001 (utf-8 エンコード) をサポートしていません。|  
   
- `-d` *Database_name*  
+ `-d` *database_name*  
  接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 場合`-d` *database_name*と 3 つの部分名 (*database_name.schema.table*bcp.exe の最初のパラメーターとして渡される) を指定すると、指定することはできませんので、エラーが発生しますデータベース名で 2 回使用します。場合*database_name*開始ハイフン (-) またはスラッシュ (/) で追加しないの間にスペース`-d`とデータベース名。  
   
  **-e** *err_file*  

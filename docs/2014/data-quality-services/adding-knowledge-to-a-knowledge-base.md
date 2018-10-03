@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d58af6ce4b1050b4a971a0b9d4ed5620bd8bd6fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f369ac83237e2e903515a168506e9b08ef396f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239432"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205548"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>ナレッジ ベースへのナレッジの追加
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ ベースにナレッジを追加する方法について説明します。 データ品質操作を実行するには、データに関するナレッジを事前に用意しておく必要があります。 このナレッジを取得するには、データ品質ナレッジ ベースを構築および管理し、特定の種類のデータ ソースに関連するナレッジをそのナレッジベースに追加します。 ナレッジ ベースはデータに関するナレッジのリポジトリです。ナレッジ ベースを使用して、データを理解し、その整合性を維持できます。  

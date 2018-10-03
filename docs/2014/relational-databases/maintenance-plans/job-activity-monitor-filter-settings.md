@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d8cdb39e6070e1a7876859d3a620cb852345dbb0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207563"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] \([フィルターの設定])
   このページを使用すると、ジョブの利用状況モニターに表示される行数を削減できます。 1 つまたは複数の利用可能なボックスに基準を入力すると、指定した値に一致する行のみが表示されます。 一部のボックス ( **[状態]** や **[ブロッキングの種類]** ) は指定できる有効な値が決まっており、ドロップダウン リストによって提供されます。 他のボックス ( **[アプリケーション]** など) は、任意の値をコンマ区切りのリストにして必要な数だけ入力できます。 ツール バーのアイコンを使用すると、利用可能なボックスをカテゴリ別またはアルファベット順に並べ替えることができます。 基準をクリックすると、それぞれの簡単な説明が表示されます。  

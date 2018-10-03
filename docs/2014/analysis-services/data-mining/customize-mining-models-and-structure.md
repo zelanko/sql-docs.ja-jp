@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], modifying
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77be91eddebedcdad79f18dfd499cc26778560db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198838"
 ---
 # <a name="customize-mining-models-and-structure"></a>マイニング モデルとマイニング構造のカスタマイズ
   現在のビジネス ニーズに合ったアルゴリズムを選択した後、マイニング モデルを次の方法でカスタマイズできます。モデルをカスタマイズすると、より良い結果を得られる場合があります。  
@@ -69,7 +66,7 @@ ms.locfileid: "37286358"
   
  ![エイリアスのマイニング モデル列](../media/modelcolumnalias-income.gif "エイリアスでは、マイニング モデル列")  
   
- この図には、すべて収入に関連したマイニング構造列の複数のコピーを持つ関連モデルを示しています。 構造列のコピーは、それぞれ異なる方法で分離されています。 図のモデルでは、それぞれ異なる列をマイニング構造から使用していますが、モデル間で列を比較しやすくするため、各モデルの列名を [**収入**] に変更しました。  
+ この図には、すべて収入に関連したマイニング構造列の複数のコピーを持つ関連モデルを示しています。 構造列のコピーは、それぞれ異なる方法で分離されています。 図のモデルでは、それぞれ異なる列をマイニング構造から使用していますが、モデル間で列を比較しやすくするため、各モデルの列名を **[収入]** に変更しました。  
   
 ### <a name="adding-filters"></a>フィルターの追加  
  マイニング モデルにはフィルターを追加できます。 フィルターは、モデル ケース内のデータをあるサブセットに制限する一連の WHERE 条件です。 フィルターは、モデルのトレーニング時に使用します。必要に応じて、モデルのテスト時や、精度チャートの作成時にも使用できます。  

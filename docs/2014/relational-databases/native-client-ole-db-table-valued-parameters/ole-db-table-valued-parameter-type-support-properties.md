@@ -1,32 +1,29 @@
 ---
-title: OLE DB テーブル値パラメーター型のサポート (プロパティ) |Microsoft Docs
+title: OLE DB テーブル値パラメーターの型のサポート (プロパティ) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bc75c4ebdbbbe4d38f18692ae8c9588957e32e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 024e6fb62da2038c19faad0919413e9f2c52fe0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408421"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189102"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
   このトピックでは、テーブル値パラメーターの行セット オブジェクトに関連付けられている OLE DB プロパティおよびプロパティ セットについて説明します。  
   
 ## <a name="properties"></a>[プロパティ]  
- 次は IRowsetInfo::GetPropeties メソッドは、テーブル値パラメーター行セット オブジェクトを通じて公開されるプロパティの一覧です。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 そのため、いずれかを設定しようと iopenrowset::openrowset または ITableDefinitionWithConstraints::CreateTableWithConstraints プロパティのメソッドが既定以外の値にエラーが発生する、オブジェクトは作成されません。  
+ 次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetPropeties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 そのため、いずれかを設定しようと iopenrowset::openrowset または ITableDefinitionWithConstraints::CreateTableWithConstraints プロパティのメソッドが既定以外の値にエラーが発生する、オブジェクトは作成されません。  
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  
   
@@ -35,7 +32,7 @@ ms.locfileid: "37408421"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : ブックマークはテーブル値パラメーターの行セット オブジェクトで利用できません。|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : ブックマークはテーブル値パラメーターの行セット オブジェクトで利用できません。|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -47,7 +44,7 @@ ms.locfileid: "37408421"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注: テーブル値パラメーター行セット オブジェクトでは、IRowsetChange インターフェイスをサポートしています。<br /><br /> DBPROP_IRowsetChange を VARIANT_TRUE に設定して作成された行セットの動作は、即時更新モードの動作になります。<br /><br /> ただし、ISequentialStream オブジェクトとしては、BLOB 列がバインドされている場合、コンシューマーは、テーブル値パラメーター行セット オブジェクトの有効期間に保存することが必要です。|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注 : テーブル値パラメーターの行セット オブジェクトでは、IRowsetChange インターフェイスがサポートされます。<br /><br /> DBPROP_IRowsetChange を VARIANT_TRUE に設定して作成された行セットの動作は、即時更新モードの動作になります。<br /><br /> ただし、BLOB 列が ISequentialStream オブジェクトとしてバインドされる場合、コンシューマーでは、テーブル値パラメーターの行セット オブジェクトの有効期間中その列を保持する必要があります。|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -98,6 +95,6 @@ ms.locfileid: "37408421"
   
 ## <a name="see-also"></a>参照  
  [OLE DB テーブル値パラメーターの型のサポート](ole-db-table-valued-parameter-type-support.md)   
- [テーブル値パラメーターを使用して、 &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  
+ [テーブル値パラメーターの使用 &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  
   
   

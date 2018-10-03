@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25560f82b1a697618dd606f7df8393abb74727c6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199732"
 ---
 # <a name="coding-user-defined-types"></a>ユーザー定義型のコーディング
   ユーザー定義型 (UDT) の定義をコーディングする際は、形式やシリアル化のオプションを選択するだけでなく、UDT をクラスと構造体のどちらで実装するかによって、さまざまな機能を実装する必要があります。  
@@ -71,8 +68,7 @@ using Microsoft.SqlServer.Server;
  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`が必要です。 `Serializable` 属性は省略できます。 また、`Microsoft.SqlServer.Server.SqlFacetAttribute` を指定して、UDT の戻り値の型に関する情報を提供することもできます。 詳細については、「[CLR ルーチンのカスタム属性](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)」を参照してください。  
   
 ### <a name="point-udt-attributes"></a>Point UDT の属性  
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` の `Point` UDT のストレージ形式は `Native` に設定します。 
-  `IsByteOrdered` は `true` に設定します。これにより、SQL Server の比較結果がマネージド コードの比較結果と等しくなります。 さらに、この UDT に `System.Data.SqlTypes.INullable` インターフェイスを実装し、NULL に対応できるようにします。  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` の `Point` UDT のストレージ形式は `Native` に設定します。 `IsByteOrdered` は `true` に設定します。これにより、SQL Server の比較結果がマネージド コードの比較結果と等しくなります。 さらに、この UDT に `System.Data.SqlTypes.INullable` インターフェイスを実装し、NULL に対応できるようにします。  
   
  次のコードに `Point` UDT の属性を示します。  
   

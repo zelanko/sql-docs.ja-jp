@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207322"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
     
@@ -85,7 +82,7 @@ ms.locfileid: "37218592"
  式内のスペルを確認します。 組み込みのグローバル、パラメーター、およびフィールド名では、大文字と小文字が区別されます。 エラーが発生した式で、レポートに名前が実際に存在し、そのスペルが正しいことを確認します。 詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
 ### <a name="parameter-properties-and-null"></a>パラメーターのプロパティと NULL  
- 複数値パラメーターには NULL を設定できません。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ 複数値パラメーターには NULL を設定できません。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>サブレポートを含むメイン レポートを処理できなかった  
  サブレポートを含むレポートは、同一バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理する必要があります。 レポートを最新バージョンのレポート定義スキーマにアップグレードする場合、メイン レポートとサブレポートは同時に更新されることもされないこともあります。 レポートとそのサブレポートの間でバージョンが一致しないと、"サブレポートを処理できませんでした。" というメッセージが表示されます。  

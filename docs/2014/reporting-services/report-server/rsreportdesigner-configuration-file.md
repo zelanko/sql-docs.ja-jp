@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9a19c05387c61e96573ec9525d8e0cab2eb7c8ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad5a5660e642c13a604b9fdb1a7e5aac516686ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211709"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 構成ファイル
   RSReportDesigner.config ファイルには、レポート デザイナーに利用できる表示拡張機能およびデータ処理拡張機能に関する設定が保存されています。 データ処理拡張機能の情報が格納されている、`Data`要素。 表示拡張機能の情報は、`Render` 要素に保存されます。 `Designer` 要素には、レポート デザイナーで使用されるクエリ ビルダーが列挙されます。  

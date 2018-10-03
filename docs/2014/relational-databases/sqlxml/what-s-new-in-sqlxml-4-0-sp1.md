@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client, SQLXML
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab3336a913a5b2a34c45800858af1b0b371f0746
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 52ac84652bf5f1141ab40b2bcf1b3091a3dcf7de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204122"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>どのような&#39;SQLXML 4.0 の新 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 では、多くの更新と拡張が行われています。 ここでは、更新内容についてまとめ、詳細情報がある場合はそのリンクを提供します。 SQLXML 4.0 SP1 では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で導入された新しいデータ型をサポートするための追加の拡張が行われています。 このトピックの項目は次のとおりです。  
@@ -91,7 +88,7 @@ ms.locfileid: "37258228"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたデータ アクセス テクノロジです。 これは SQLOLEDB プロバイダーと SQLODBC ドライバーを組み合わせて 1 つのネイティブ ダイナミック リンク ライブラリ (DLL) にしたものです。Microsoft Data Access Components (MDAC) とは独立した新しい機能も提供されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で導入された機能のうち、MDAC および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows において SQLOLEDB と SQLODBC でサポートされていない機能を利用する必要がある場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Native Client を使用して、新しいアプリケーションを作成したり既存のアプリケーションを拡張したりすることができます。 たとえば、FOR XML などのクライアント側の SQLXML 機能で `xml` データ型を使用するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が必要です。 詳細については、次を参照してください[クライアント側の XML 書式設定&#40;SQLXML 4.0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md)、 [SQLXML 4.0 クエリの実行に ADO を使用する](using-ado-to-execute-sqlxml-4-0-queries.md)、および[SQL Server Native Client プログラミング。](../native-client/sql-server-native-client-programming.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で導入された機能のうち、MDAC および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows において SQLOLEDB と SQLODBC でサポートされていない機能を利用する必要がある場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Native Client を使用して、新しいアプリケーションを作成したり既存のアプリケーションを拡張したりすることができます。 たとえば、FOR XML などのクライアント側の SQLXML 機能で `xml` データ型を使用するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が必要です。 詳細については、次を参照してください[クライアント側の XML 書式設定&#40;SQLXML 4.0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md)、 [SQLXML 4.0 クエリの実行に ADO を使用する](using-ado-to-execute-sqlxml-4-0-queries.md)、および[SQL Server Native Client プログラミング](../native-client/sql-server-native-client-programming.md)。  
   
 > [!NOTE]  
 >  SQLXML 4.0 には、下位の SQLXML 3.0 との完全な互換性はありません。 SQLXML 4.0 では不具合の修正とその他の機能変更が行われており、特に SQLXML ISAPI のサポートが削除されているため、IIS 仮想ディレクトリは使用できなくなりました。 大半のアプリケーションは少し変更すれば使用できますが、SQLXML 4.0 で運用する前には必ずテストを行ってください。  

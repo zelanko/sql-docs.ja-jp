@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: deeb55b64b8053aefd130891fb114ea174e2b7cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4afe3881d8e5eafaeffbd45aa7f64a514d8c70a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208208"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>コール センター構造へのロジスティック回帰モデルの追加 (中級者向けデータ マイニング チュートリアル)
   コール センターの業務に影響する可能性のある要因を分析すると共に、スタッフのサービス品質を向上させるための具体的な改善案を提出するように求められました。 ここでは、調査モデルの構築に使用したものと同じマイニング構造を使用し、予測作成用のマイニング モデルを追加します。  

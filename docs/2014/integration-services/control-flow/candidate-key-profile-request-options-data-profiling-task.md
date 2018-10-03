@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d3685d6827f8ed57394f6440b018935662fb9e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78fb82daf907173befd246799686433a6eab3b43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190822"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>[候補キー プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[候補キー プロファイル要求]** のオプションを設定できます。 候補キー プロファイルは、列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうかを報告します。 また、このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。  

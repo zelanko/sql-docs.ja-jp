@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1fc4229cdddc1d2b7411020ac11b0748b7935afb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb2a9c0ebdc6616940f09c2b8770dbefa6ca15e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201272"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (ビット演算排他的 OR) (SSIS 式)
   2 つの整数値の排他的 OR 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 一方のビットが 0 でもう一方のビットが 1 の場合、対応する結果ビットは 1 に設定されます。 両方のビットが 0、また両方のビットが 1 の場合、対応する結果ビットは 0 に設定されます。  

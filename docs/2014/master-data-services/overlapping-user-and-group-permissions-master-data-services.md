@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 06b8f48e1f2b7c246c1f5e4559bbbba851ccf128
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d35c40dd15db4ed9b7cdc7802f3ef306755569d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205422"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>ユーザー権限とグループ権限の重複 (Master Data Services)
   ユーザーの権限は、次の権限に基づきます。  
@@ -34,8 +31,7 @@ ms.locfileid: "37264938"
   
  ユーザーが複数のグループのメンバーであり、それらのグループがマスター データ マネージャーへのアクセス権を持っている場合、次の規則が適用されます。  
   
--   
-  **拒否** が他のどの権限をオーバーライドします。  
+-   **拒否** が他のどの権限をオーバーライドします。  
   
 -   **Update**オーバーライド**読み取り専用**します。  
   

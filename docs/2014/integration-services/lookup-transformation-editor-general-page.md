@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ced1e5551753ba61f81789eb8dee7d4e77dd6883
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6814b581058db6da3848f62ede8ef765d4db66b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314072"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189282"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター] ([全般] ページ)
   [参照変換エディター] ダイアログ ボックスの **[全般]** ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  

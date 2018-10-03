@@ -4,38 +4,33 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc119c1339283353da8ab632785bb30cd65c057a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d532bf8e3cd47f430ccb60470cda996a8c8e6d77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240932"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206752"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>プログラムによる接続マネージャーの操作
-  ph x="1" /&gt; では、関連付けられた接続マネージャー クラスの AcquireConnection メソッドは、マネージド コードで接続マネージャーを操作する場合に呼び出すことの多いメソッドです。 マネージド コードを記述する場合、接続マネージャーの機能を使用するには AcquireConnection メソッドを呼び出す必要があります。 このメソッドは、マネージド コードを記述する場所がスクリプト タスク、スクリプト コンポーネント、カスタム オブジェクト、またはカスタム アプリケーションのいずれであっても、呼び出す必要があります。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、関連付けられた接続マネージャー クラスの AcquireConnection メソッドは、マネージド コードで接続マネージャーを操作する場合に呼び出すことの多いメソッドです。 マネージド コードを記述する場合、接続マネージャーの機能を使用するには AcquireConnection メソッドを呼び出す必要があります。 このメソッドは、マネージド コードを記述する場所がスクリプト タスク、スクリプト コンポーネント、カスタム オブジェクト、またはカスタム アプリケーションのいずれであっても、呼び出す必要があります。  
   
  AcquireConnection メソッドを正常に呼び出すには、次の点を理解しておく必要があります。  
   
--   
-  **AcquireConnection メソッドからマネージド オブジェクトを返す接続マネージャーはどれか**  
+-   **AcquireConnection メソッドからマネージド オブジェクトを返す接続マネージャーはどれか**  
   
      多くの接続マネージャーはアンマネージド COM オブジェクト (System.__ComObject) を返します。このオブジェクトをマネージド コードから使用するのは簡単ではありません。 このような接続マネージャーには、使用頻度の高い OLE DB 接続マネージャーも含まれます。  
   
--   
-  **マネージド オブジェクトを返す接続マネージャーの AcquireConnection メソッドによって返されるオブジェクトは何か**  
+-   **マネージド オブジェクトを返す接続マネージャーの AcquireConnection メソッドによって返されるオブジェクトは何か**  
   
      戻り値を適切な型にキャストするには、AcquireConnection メソッドによって返されるオブジェクトの型を把握しておく必要があります。 たとえば、SqlClient プロバイダーを使用する場合、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーの AcquireConnection メソッドは、開かれている SqlConnection オブジェクトを返します。 これに対し、ファイル接続マネージャーの AcquireConnection メソッドは、文字列のみを返します。  
   

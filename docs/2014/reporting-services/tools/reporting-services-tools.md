@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -21,21 +19,18 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 73
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2942373c9732ea1233788ef23061c42433d2baa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 859959ec966c9a3c3141f3fb962668e141d14175
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200548"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services ツール
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、管理環境での機能豊富なレポートの開発と使用をサポートするグラフィカル ツールとスクリプト ツールのセットが用意されています。 このツール セットには、開発ツール、構成と管理ツール、およびレポート表示ツールが含まれています。 ここでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の各ツール、およびツールへのアクセス方法について簡単に説明します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、管理環境での機能豊富なレポートの開発と使用をサポートするグラフィカル ツールとスクリプト ツールのセットが用意されています。 このツール セットには、開発ツール、構成と管理ツール、およびレポート表示ツールが含まれています。 ここでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の各ツール、およびツールへのアクセス方法について簡単に説明します。  
   
  ツールを簡単に見つける方法については、「[チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)](tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)」を参照してください。  
   
@@ -57,7 +52,7 @@ ms.locfileid: "37212582"
 |ツール|説明|アクセス方法|  
 |----------|-----------------|-------------------|  
 |Reporting Services 構成マネージャー|Reporting Services のインストールを構成するには、このツールを使用します。 Reporting Services 構成マネージャーには役立ちませんレポート サーバー コンテンツの管理、追加の機能を有効化またはサーバーへのアクセスを付与する注意してください。 実行できるタスクは次のとおりです。<br /><br /> ローカルとリモートの両方のレポート サーバー インスタンスの構成<br /><br /> レポート サーバー サービス アカウントの構成<br /><br /> 1 つ以上の Web サービス URL の作成および構成<br /><br /> レポート マネージャー URL の構成<br /><br /> レポート サーバー データベースの作成および構成<br /><br /> スケールアウト配置の構成<br /><br /> 保存されている接続文字列や資格情報を暗号化する対称キーのバックアップ、復元、または置き換え<br /><br /> 自動実行アカウントの構成<br /><br /> 電子メール配信用の SMTP サーバーの構成<br /><br /> <br /><br /> 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。|[スタート] メニュー|  
-|[SQL Server Management Studio]|次のように、単一の環境で 1 つ以上のレポート サーバー インスタンスを管理するには、このツールを使用します。<br /><br /> ローカルとリモートの両方のレポート サーバー インスタンスの管理<br /><br /> レポート サーバーのプロパティの設定<br /><br /> ロールの定義の変更<br /><br /> 使用していないレポート サーバー機能の無効化<br /><br /> ジョブの管理<br /><br /> 共有スケジュールの管理|[スタート] メニュー|  
+|SQL Server Management Studio|次のように、単一の環境で 1 つ以上のレポート サーバー インスタンスを管理するには、このツールを使用します。<br /><br /> ローカルとリモートの両方のレポート サーバー インスタンスの管理<br /><br /> レポート サーバーのプロパティの設定<br /><br /> ロールの定義の変更<br /><br /> 使用していないレポート サーバー機能の無効化<br /><br /> ジョブの管理<br /><br /> 共有スケジュールの管理|[スタート] メニュー|  
 |SQL Server 構成マネージャー|このツールは次の場合に使用します。<br /><br /> Reporting Services の Windows サービスの開始と停止<br /><br /> カスタマー フィードバック レポート、ダンプ ディレクトリの場所、およびエラー報告の構成<br /><br /> <br /><br /> **\*\* 警告\* \*** サービス アカウントを構成するのにはこのツールを使用できません。 代わりに Reporting Services 構成ツールを使用します。<br /><br /> 詳細については、「 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)」を参照してください。|[スタート] メニュー|  
 |Rsconfig ユーティリティ|レポート サーバー データベースへのレポート サーバー接続を構成および管理するには、このツールを使用します。 これを使用して、自動レポート処理に使用するユーザー アカウントを指定することもできます。<br /><br /> 詳細については、「[レポート サーバーのコマンド プロンプト ユーティリティ (SSRS)](report-server-command-prompt-utilities-ssrs.md)」を参照してください。|コマンド プロンプト|  
 |Rskeymgmt ユーティリティ|このツールは次の場合に使用します。<br /><br /> レポート サーバー データの暗号化に使用する対称キーの抽出、復元、作成、および削除<br /><br /> スケールアウト配置へのレポート サーバー インスタンスの追加<br /><br /> <br /><br /> 詳細については、「[レポート サーバーのコマンド プロンプト ユーティリティ (SSRS)](report-server-command-prompt-utilities-ssrs.md)」を参照してください。|コマンド プロンプト|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10040"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-caps.latest.revision: 63
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 747943591907b1025250e3554270e9dda14d3e51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2ec18b03081d3469e9187db6043ba27406389b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325642"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207682"
 ---
 # <a name="expression-dialog-box"></a>[式] ダイアログ ボックス
   使用して、**式**書き込む ダイアログ ボックス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]の式のレポート アイテムのプロパティ。 式を使用して、色、フォント、罫線など多数のプロパティを設定できます。 実行時に、レポート プロセッサによって式が評価され、その結果がプロパティの値に置き換えられます。  

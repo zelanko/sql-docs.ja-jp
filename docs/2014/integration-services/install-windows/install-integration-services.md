@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-caps.latest.revision: 100
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd10fc638ed7a1d9c42b926190eebc0df5dd37b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156537"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204802"
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 セットアップによって、他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントと共にまたは単独で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を 1 台のコンピューターにインストールできます。  
@@ -76,8 +73,7 @@ ms.locfileid: "37156537"
   
     -   **[管理ツール - 完全]** : パッケージを管理するための [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] をインストールします。  
   
-    -   
-  **[クライアント ツール SDK]** : [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プログラミング用にマネージド アセンブリをインストールします。  
+    -   **[クライアント ツール SDK]** : [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プログラミング用にマネージド アセンブリをインストールします。  
   
      多くのデータ ウェアハウジング ソリューションでは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  など、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントもインストールする必要があります。  
   

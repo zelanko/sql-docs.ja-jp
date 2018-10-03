@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 317ada15f03de74dc25767a17036623d7479220a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09b5228ff383db7700d5b8f027314e6e45feb40c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207412"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>空のポイントのグラフへの追加 (レポート ビルダーおよび SSRS)
   NULL 値は、系列内のデータ ポイント間の空白 (すきま) としてグラフに表示されます。 空のポイントとは、NULL 値によって作成された空白に挿入できるデータ ポイントのことです。  

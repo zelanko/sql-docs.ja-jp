@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1f0fe6899be3f9828a8ba9d91f2c9abf7ba48b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c99945ad1e1d8c5027f7dfc63dcb725b0f0dac7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204382"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>マーケット バスケット モデルの変更と処理 (中級者向けデータ マイニング チュートリアル)
   作成したアソシエーション マイニング モデルを処理する前に、2 つのパラメーターの既定値を変更する必要があります:*サポート*と*確率*します。  

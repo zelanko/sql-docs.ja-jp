@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206168"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>[全般] プロパティ ページ、レポート (レポート マネージャー)
   レポートの [全般] プロパティ ページでは、レポート定義の名前変更、削除、移動、または置換を行うことができます。 また、このページを使用して、リンク レポートを作成することもできます。 レポートの作成者または変更者、および変更日時の詳細がページの上部に表示されます。  

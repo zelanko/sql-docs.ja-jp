@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210182"
 ---
 # <a name="udt-utilities"></a>UDT ユーティリティ
   UDT Utilities サンプルには、さまざまなユーティリティ関数が含まれています。 Transact-SQL へアセンブリ メタデータを公開するための関数、アセンブリ内の型をテーブルとして返すサンプル ストリーミング テーブル値関数、およびユーザー定義データ型のフィールド、メソッド、プロパティを返す関数などがあります。 例示されているテクノロジは、ストリーミング テーブル値関数、.NET Framework リフレクション API、Transact-SQL からのテーブル値関数の呼び出しなどです。  

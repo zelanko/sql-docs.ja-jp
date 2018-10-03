@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 42d4a6aa9601c7b49cc69a2406550c76134ed6dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d096f978b138de32c9aae7cdadd1480484dd095f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206122"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>対話的な並べ替え (レポート ビルダーおよび SSRS)
   対話的な並べ替えボタンを追加すると、ユーザーがテーブルの行またはマトリックスの行と列を昇順および降順で並べ替えることができるようになります。 対話的な並べ替えの最も一般的な使用方法は、各列ヘッダーに並べ替えボタンを追加することです。 これにより、ユーザーは並べ替えの基準となる列を選択できます。  
@@ -62,7 +59,7 @@ ms.locfileid: "37162033"
   
 ## <a name="see-also"></a>参照  
  [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [テーブルまたはマトリックスに対話的な並べ替えを追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

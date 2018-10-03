@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RowBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RowBinding data type
 ms.assetid: 5a49a6e3-25f3-43c8-8529-bcf245b02415
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 599632bd6dd93b05a12a5c7b95facea85ea8c6c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fb15b72b3031b62136f65b175cb0ded8c3297a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297422"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203222"
 ---
 # <a name="rowbinding-data-type-assl"></a>RowBinding データ型 (ASSL)
   内のテーブルの行にバインドを表す派生データ型を定義、 [DataSourceView](../objects/datasourceview-element-assl.md)要素。  

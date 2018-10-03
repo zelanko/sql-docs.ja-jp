@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
-caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0dbf7ee01520d139ce6b56912f6b35500ee35352
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9bac1f166472fa6f4285779f2054d7121133693f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396385"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194572"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2: SQL Server 資格情報の作成
   **資格情報:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]バックアップおよび復元プロセスでは、資格情報を使用して、Windows Azure Blob ストレージ サービスを認証します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 詳細については、表示、コピー、またはストレージ アカウントを再生成する方法についての**アクセス キー**を参照してください[ストレージ アカウント アクセス キー](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)します。  

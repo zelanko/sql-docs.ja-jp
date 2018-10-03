@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - EQUAL_AREAS method
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206252"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187054"
 ---
 # <a name="discretization-methods-data-mining"></a>分離メソッド (データ マイニング)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ マイニング モデルを作成するための一部のアルゴリズムでは、正常に機能するために特定の種類のコンテンツが必要です。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、連続列を入力として使用したり、連続する値を予測したりすることはできません。 また、一部の列に含まれている値が多すぎるため、データ マイニング モデルの作成元となるデータ内の対象パターンをアルゴリズムで容易に識別できない場合があります。  

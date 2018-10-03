@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.configsecondarydbs.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47afad65db4f1de79bb1da395ce9954772929179
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2647d65f91fff3c21a63a7b2e21dcd0d144e00c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189685"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>可用性グループに対するセカンダリ データベースの手動準備 (SQL Server)
   このトピックでは、AlwaysOn 可用性グループのセカンダリ データベースを準備する方法を説明します[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell。 セカンダリ データベースを準備するには、2 つの手順を実行する必要があります。まず、RESTORE WITH NORECOVERY を使用して、プライマリ データベースの最新のバックアップとそれ以降のログ バックアップを、セカンダリ レプリカをホストする各サーバー インスタンスに復元します。次に、復元したデータベースを可用性グループに参加させます。  

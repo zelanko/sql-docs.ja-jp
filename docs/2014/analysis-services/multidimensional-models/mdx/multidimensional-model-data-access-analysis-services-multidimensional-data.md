@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, data access interfaces
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9d979cbe0a870060d8435a4867afbed1667597e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9cf03599736be8dbec6666c6977543279607bbdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203722"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
   このトピックには、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の多次元データにアクセスするために役立つ情報が記載されています。ネットワーク上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続するための機能が組み込まれたクライアント アプリケーションのほか、プログラミングによる手法やスクリプトを使用した方法を取り上げます。  
@@ -61,7 +58,7 @@ ms.locfileid: "37291728"
   
  SQL Server データ ツールは Visual Studio のシェルをベースに構築されており、モデルの編成と格納にはプロジェクトが使用されます。 詳細については、「[SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](../creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)」を参照してください。  
   
-### <a name="sql-server-management-studio"></a>[SQL Server Management Studio]  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  データベース管理者にとって SQL Server Management Studio は、多次元データベースや Analysis Services のインスタンスを含む、SQL Server のインスタンスを管理するための統合環境です。 詳細については、「 [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 」と「 [Analysis Services への接続](../../instances/connect-to-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_querylang"></a> クエリ言語  

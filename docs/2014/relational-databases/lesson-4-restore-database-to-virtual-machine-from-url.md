@@ -1,27 +1,24 @@
 ---
-title: レッスン 5。 (省略可能)TDE を使用して、データベースの暗号化 |Microsoft Docs
+title: 'レッスン 5:  (省略可能)TDE を使用して、データベースの暗号化 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c73078a44d45d10fae144eb0d15db8995b556ed8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193282"
 ---
-# <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>レッスン 5。 (省略可) TDE を使用してデータベースを暗号化する
+# <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>レッスン 5:  (省略可) TDE を使用してデータベースを暗号化する
   省略可能な手順として、新しく作成したデータベースを暗号化できます。 透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 この種の暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 詳細については、次を参照してください。 [Transparent Data Encryption &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md)と[TDE で保護されたデータベースを別の SQL Server に移動](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)します。  
   
  このレッスンは、次の手順を完了済みであることを前提としています。  

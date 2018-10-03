@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3139aa4fab106e048e21847acadafc6bc90b8bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204732"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントを監視したり、物理データベース デザインをチューニングしたりするための広範なツール セットが用意されています。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。  
@@ -59,7 +56,7 @@ ms.locfileid: "37262468"
 |アドホック監視|はい|||はい|はい|はい|  
 |警告の生成|||はい||||  
 |グラフィック インターフェイス|はい||はい|はい||はい|  
-|カスタム アプリケーション内での使用|可 <sup>1</sup>||||はい||  
+|カスタム アプリケーション内での使用|はい <sup>1</sup>||||はい||  
   
  <sup>1</sup> Using[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]システム ストアド プロシージャ。  
   

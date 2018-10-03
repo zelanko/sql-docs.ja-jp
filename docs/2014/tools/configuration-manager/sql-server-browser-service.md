@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 59
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2d51f7278957cd4246700cbcb872c9ec6ff51d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f20880fada5c6e6c12c3df42e051baf5afb3eab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204812"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser プログラムは Windows サービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は次の操作に役立ちます。  
@@ -99,7 +96,7 @@ ms.locfileid: "37255814"
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="account-privileges"></a>アカウントの権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は UDP ポートで受信待ちし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) を使用して、認証されていない要求を受け入れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser を権限が制限されているユーザーのセキュリティ コンテキストで実行することにより、悪意のある攻撃にさらされる危険性を最小限に抑える必要があります。 ログオン アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser の最小限のユーザー権限は次のとおりです。  

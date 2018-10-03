@@ -1,12 +1,10 @@
 ---
-title: Irow::open と ISequentialStream を使用して BLOB データのフェッチ |Microsoft Docs
+title: IRow::Open と ISequentialStream を使用した BLOB データのフェッチ | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -14,21 +12,20 @@ helpviewer_keywords:
 - ISequentialStream interface
 - BLOBs, fetching
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7604022093a63dd536648fd43a3370ac21c05fcb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c67e606b0f74d3886f0b5890d5061406d0d7f3fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418591"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211362"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open と ISequentialStream を使用した BLOB データのフェッチ
-  **Irow::open**のみ DBGUID_STREAM 型と DBGUID_ 型のオブジェクトを開くをサポートしています。  
+  **IRow::Open** は、DBGUID_STREAM 型と DBGUID_NULL 型のオブジェクトを開くことだけをサポートします。  
   
- 次の関数は**irow::open**と**ISequentialStream**大きなデータをフェッチします。  
+ 次の関数では、**IRow::Open** と **ISequentialStream** を使用して大きなデータをフェッチします。  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -79,7 +76,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 大規模なデータをバインドまたはを使用して取得できる、 **ISequentialStream**インターフェイス。 バインドされた列の場合、DBSTATUS_S_TRUNCATED を設定してデータが切り捨てられるかどうかが状態フラグで示されます。  
+ 大きなデータは、**ISequentialStream** インターフェイスを使用してバインドまたは取得できます。 バインドされた列の場合、DBSTATUS_S_TRUNCATED を設定してデータが切り捨てられるかどうかが状態フラグで示されます。  
   
 ## <a name="see-also"></a>参照  
  [IRow を使用した BLOB データのフェッチ](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  

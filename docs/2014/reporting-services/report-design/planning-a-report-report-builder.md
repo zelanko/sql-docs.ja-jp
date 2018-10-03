@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 030f950d9b18452e415fa23b1a1d43bf13eabdce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202032"
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
   レポート ビルダーでは、さまざまな種類のレポートを作成できます。 たとえば、売上データの概要または詳細、マーケティングと売上の傾向、経営報告、またはダッシュボードを示すレポートを作成できます。 また、販売注文、製品カタログ、定型書簡などの高度な書式付きテキストを利用したレポートも作成できます。 これらのレポートはすべて、レポート ビルダーの同じ基本的な構成要素をさまざまに組み合わせて作成されます。 便利でわかりやすいレポートを作成するには、まず計画を立てることが役立ちます。 開始する前に検討すると役立ついくつかの事項を次に示します。  
@@ -41,7 +38,7 @@ ms.locfileid: "37196822"
   
 -   **どのデータを表示するか、データまたは形式をさまざまな対象ユーザーに合わせてフィルター選択する必要があるかどうか**  
   
-     レポートの範囲を特定のユーザーまたは場所、あるいは特定の期間などに絞り込むことができます。 レポート データをフィルター処理するには、パラメーターを使用して、必要なデータのみを取得して表示します。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+     レポートの範囲を特定のユーザーまたは場所、あるいは特定の期間などに絞り込むことができます。 レポート データをフィルター処理するには、パラメーターを使用して、必要なデータのみを取得して表示します。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 -   **独自の計算を作成する必要があるかどうか**  
   

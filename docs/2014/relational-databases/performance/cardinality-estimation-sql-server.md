@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81f9d8c849622a622631bc8153dc7d4cffc7d258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251884"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200612"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
   カーディナリティ推定機能と呼ばれる、カーディナリティ推定ロジックがで再設計された[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]クエリ プランの品質を向上させるためクエリのパフォーマンスを向上させるためにします。 新しいカーディナリティ推定機能には、現在の OLTP ワークロードとデータ ウェアハウス ワークロードで適切に機能する想定とアルゴリズムが組み込まれています。 この機能は、現在のワークロードを対象とするカーディナリティ推定に関する詳細な調査、および SQL Server のカーディナリティ推定機能を向上させるための過去 15 年にわたる研究を土台としています。 お客様からのフィードバックによると、大半のクエリは今回の変更によって性能が向上するか、何も変化しないこと、一方で、少数のクエリは以前のカーディナリティ推定機能と比較すると性能が低下する可能性があることが示されています。  
@@ -49,11 +46,9 @@ ms.locfileid: "37251884"
 ## <a name="new-xevents"></a>新しい XEvent  
  新しいクエリ プランをサポートする、2 つの新しい query_optimizer_estimate_cardinality XEvent が存在します。  
   
--   
-  *query_optimizer_estimate_cardinality* は、クエリ オプティマイザーが関係式のカーディナリティを推定するときに発生します。  
+-   *query_optimizer_estimate_cardinality* は、クエリ オプティマイザーが関係式のカーディナリティを推定するときに発生します。  
   
--   
-  *query_optimizer_force_both_cardinality_estimation*の動作が発生するのは、トレース フラグ 2312 と 9481 の両方が有効になっていて、古いカーディナリティ推定動作と新しいカーディナリティ推定動作の両方を同時に適用しようとする場合です。  
+-   *query_optimizer_force_both_cardinality_estimation*の動作が発生するのは、トレース フラグ 2312 と 9481 の両方が有効になっていて、古いカーディナリティ推定動作と新しいカーディナリティ推定動作の両方を同時に適用しようとする場合です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、新しいカーディナリティ推定で加えられた変更の一部を示します。 カーディナリティを推定するコードを書き直しました。 ロジックは複雑であり、すべての変更を網羅した完全な一覧をここに示すことはできません。  

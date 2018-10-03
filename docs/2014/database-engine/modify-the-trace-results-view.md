@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67a6dbe4b9133f5ce31d12b1f361cea859026b53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195922"
 ---
 # <a name="modify-the-trace-results-view"></a>トレース結果の表示の変更
   このトピックでは、次のタスクを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の拡張イベント セッションのトレース結果ビューを変更する方法について説明します。  
@@ -58,7 +55,7 @@ ms.locfileid: "37302762"
   
 4.  列の表示順序を変更するには、 **[選択した列]** セクションで **[上へ移動]** または **[下へ移動]** をクリックします。 複数行を移動することはできません。  
   
-5.  [**OK**] をクリックします。  
+5.  **[OK]** をクリックします。  
   
 ##  <a name="ChangeColumns"></a> 作成、編集、またはマージされた列の削除  
   
@@ -80,7 +77,7 @@ ms.locfileid: "37302762"
     > [!NOTE]  
     >  拡張イベントは最大 5 列までの結合をサポートします。  
   
-6.  [**OK**] をクリックします。  
+6.  **[OK]** をクリックします。  
   
 #### <a name="to-edit-merged-columns"></a>結合列を編集するには  
   
@@ -147,7 +144,7 @@ ms.locfileid: "37302762"
   
      グループ化から列を削除するには、 **[次の条件でグループ化される列]** ボックスで、削除する列を選択し、左矢印をクリックします。  
   
-4.  [**OK**] をクリックします。  
+4.  **[OK]** をクリックします。  
   
 ##  <a name="AggregateResults"></a> 集計結果  
  拡張イベントは次の 5 つの集計関数をサポートします。  
@@ -186,7 +183,7 @@ ms.locfileid: "37302762"
   
 6.  集計結果を降順に並べ替えるには、 **[降順]** をクリックします。  
   
-7.  [**OK**] をクリックします。  
+7.  **[OK]** をクリックします。  
   
 ##  <a name="Filter"></a> 結果をフィルター処理します。  
  フィルターを適用することで、トレース ウィンドウに表示されるトレース結果を絞り込むことができます。 表示フィルターには、時間フィルターと高度なフィルターが含まれています。 時間フィルターではトレース結果をイベントのタイムスタンプでフィルター処理し、高度なフィルターではイベントのフィールドとアクションを使用してフィルター条件を作成します。 時間フィルターと高度なフィルターとの間には論理 AND 関係があります。  

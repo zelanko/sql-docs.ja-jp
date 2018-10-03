@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 87116018f43f90fa78a8f7a6d4788b9fb0e660f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207584"
 ---
-# <a name="create-modify-and-delete-a-data-driven-subscription"></a>作成、変更、およびデータ ドリブン サブスクリプションの削除
+# <a name="create-modify-and-delete-a-data-driven-subscription"></a>データ ドリブン サブスクリプションを作成、変更、および削除する
   データ ドリブン サブスクリプションは、サブスクリプションの処理に使用するデータ値を実行時に取得するためのクエリ ベースのサブスクリプションです。 データ ドリブン サブスクリプションが開始されると、クエリが実行され、受信者、レポート配信オプション、表示形式、およびパラメーター設定に関する最新情報が取得されます。 このクエリ結果がサブスクリプション定義に組み込まれ、既存のデータを使用する動的サブスクリプションが作成されます。この動的サブスクリプションは、従業員データベース、顧客データベースなど、サブスクライバーのデータ ソースとして利用可能なすべてのデータベースのデータを使用します。  
   
 ||  

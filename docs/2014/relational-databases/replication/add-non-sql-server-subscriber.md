@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.addnonsqlsubscriber.f1
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53575d47aa541ec59a3c9e3003795c5321f6f0d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4da01da52e78d1ad8923633439ebe1272a519a87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193972"
 ---
 # <a name="add-non-sql-server-subscriber"></a>[SQL Server 以外のサブスクライバーの追加]
   レプリケーションでは、Oracle サブスクライバーと IBM DB2 のサブスクライバーのスナップショット パブリケーションおよびトランザクション パブリケーションに対するプッシュ サブスクリプションの作成をサポートします。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be5171c376b9f454e0474400e8bab2c55692f3bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190782"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>「Microsoft シーケンス クラスター アルゴリズム」
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]シーケンス クラスター アルゴリズムは、によって提供されるシーケンス分析アルゴリズム[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 このアルゴリズムを使用するには、次のパスによってリンクできるイベントを含んでいるデータを探索または*シーケンス*します。 このアルゴリズムは、同一の複数のシーケンスをグループ化またはクラスター化することによって、最も一般的なシーケンスを見つけます。 次に、シーケンスを含むデータの例をいくつか示します。このようなシーケンスはデータ マイニングで使用して、一般的な問題やビジネス シナリオの理解を深めることができます。  

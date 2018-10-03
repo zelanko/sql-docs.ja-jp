@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Diagram Designer
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d0c905f1f900fe0ff6ba2567445a161295e48d6
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e7987cb3c2063e823d6b3ae946a7e7e8c17729c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194312"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナー内でのナビゲーション (Visual Database Tools)
   データベース ダイアグラム デザイナーでの作業には、キーボードとマウスが使用できます。 データベース ダイアグラム デザイナーで使用する特定の方法については、次の表を参照してください。  

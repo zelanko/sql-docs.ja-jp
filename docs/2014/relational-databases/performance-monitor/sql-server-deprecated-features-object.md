@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 257d8c38f4fd87751eaa448504ed16a80ed17d31
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817078"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211852"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨の機能が検出された回数を示す使用カウントを表示します。  

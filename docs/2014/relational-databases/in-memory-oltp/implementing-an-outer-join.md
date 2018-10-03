@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffbf7857c83f9be53c8747c210736f242f04dd48
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394345"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192682"
 ---
 # <a name="implementing-an-outer-join"></a>外部結合の実装
   外部結合は、ネイティブ コンパイル ストアド プロシージャではサポートされていません。 次のサンプルは、ネイティブ コンパイル ストアド プロシージャに左外部結合の機能を実装する方法を示しています。  

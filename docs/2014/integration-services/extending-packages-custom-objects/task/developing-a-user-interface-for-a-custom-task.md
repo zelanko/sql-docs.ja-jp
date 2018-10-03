@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d86350195a980f87e5e67ea4634ebadd0116355
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3665e22ca7e9fb4a04f3cfd46cb5f5af5025ab41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197572"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>カスタム タスク用ユーザー インターフェイスの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルを使用すると、カスタム タスクの開発者は、タスク用のユーザー インターフェイスを容易に作成できます。作成後、このユーザー インターフェイスは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に統合して表示することができます。 このユーザー インターフェイスでは、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザーに役に立つ情報を提供でき、カスタム タスクのプロパティや設定を正しく構成するための指針とすることができます。  
@@ -59,7 +56,7 @@ ms.locfileid: "37217632"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|制御フロー ツールボックスに表示するタスク名。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|タスクの説明 (<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute> から継承)。 ツールヒントに表示されるプロパティです。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーに表示するアイコン。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|使用する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列挙のいずれかの値に設定します。 たとえば、 `RequiredProductLevel = DTSProductLevel.None`のようにします。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|使用する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列挙のいずれかの値に設定します。 たとえば、`RequiredProductLevel = DTSProductLevel.None` のようにします。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|タスクでテクニカル サポートが必要な場合の連絡先に関する情報。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|タスクに割り当てる型。|  
 |Attribute.TypeId|派生クラスに実装した場合、この属性の一意の識別子を取得します。 詳細については、.NET Framework クラス ライブラリの「`Attribute.TypeID` プロパティ」を参照してください。|  

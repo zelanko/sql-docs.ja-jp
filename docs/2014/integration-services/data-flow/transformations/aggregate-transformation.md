@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6770168bf37031a8236756f88a737bb4e1ba32da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205532"
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -34,7 +31,7 @@ ms.locfileid: "37241228"
 ## <a name="operations"></a>操作  
  集計変換では、次の操作がサポートされています。  
   
-|演算|説明|  
+|操作|説明|  
 |---------------|-----------------|  
 |グループ化|データセットをグループに分割します。 グループ化には、任意のデータ型の列を使用できます。 詳細については、「[GROUP BY (Transact-SQL)](/sql/t-sql/queries/select-group-by-transact-sql)」を参照してください。|  
 |SUM|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「[SUM (Transact-SQL)](/sql/t-sql/functions/sum-transact-sql)」を参照してください。|  

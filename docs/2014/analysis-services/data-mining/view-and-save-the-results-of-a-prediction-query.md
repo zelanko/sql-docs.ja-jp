@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - displaying prediction query results
 - Mining Model Prediction [Analysis Services], viewing results
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ff501825009b9ebdfeb8708419b8dbfb4690be62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0273919410b5b182b535b805922ec39cdd82d6e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195932"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>予測クエリの結果の表示および保存
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の予測クエリ ビルダーを使用してクエリを定義した後は、クエリ結果ビューに切り替えてクエリを実行し、結果を表示できます。  

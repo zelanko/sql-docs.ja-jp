@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], modifying
 - articles [SQL Server replication], properties
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76590a7a3837a710be5442710e0c0cf3124d97f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf244ce793bfcf3e5e5a01d2a79166b49c18c4fb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198222"
 ---
 # <a name="view-and-modify-article-properties"></a>アーティクルのプロパティの表示および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、アーティクルのプロパティを表示および変更する方法について説明します。  
@@ -95,8 +92,7 @@ ms.locfileid: "37167034"
     -   **[すべての\<ObjectType> アーティクルのプロパティを設定]** をクリックし、**[すべての \<ObjectType> アーティクルのプロパティ]** ダイアログ ボックスを表示します。このダイアログ ボックスで行われたプロパティの変更は、パブリケーションが選択されていないオブジェクトも含めた、**[アーティクル]** ページのオブジェクト ペインにあるこの種類のすべてのオブジェクトに適用されます。  
   
         > [!NOTE]  
-        >  
-  **[すべての \<ObjectType&gt; アーティクルのプロパティ]** ダイアログ ボックスで行われたプロパティの変更は、**[アーティクルのプロパティ - \<ObjectName&gt;]** ダイアログ ボックスで以前行われたすべての変更をオーバーライドします。 たとえば、あるオブジェクトの種類のすべてのアーティクルに対して複数の既定を設定し、かつそれぞれのオブジェクトに対してプロパティを設定する場合には、最初にすべてのアーティクルに対する既定を設定します。 次に、それぞれのオブジェクトに対してプロパティを設定します。  
+        >  **[すべての \<ObjectType&amp;gt; アーティクルのプロパティ]** ダイアログ ボックスで行われたプロパティの変更は、**[アーティクルのプロパティ - \<ObjectName&amp;gt;]** ダイアログ ボックスで以前行われたすべての変更をオーバーライドします。 たとえば、あるオブジェクトの種類のすべてのアーティクルに対して複数の既定を設定し、かつそれぞれのオブジェクトに対してプロパティを設定する場合には、最初にすべてのアーティクルに対する既定を設定します。 次に、それぞれのオブジェクトに対してプロパティを設定します。  
   
 3.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   

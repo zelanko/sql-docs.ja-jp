@@ -1,24 +1,21 @@
 ---
-title: IRowsetFastUpload (OLE DB) を使用して FILESTREAM 列にデータを送信 |Microsoft Docs
+title: IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e4ce42fac1366dccc4f46285d783666c4b469036
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192882"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)
   このサンプルでは、IRowsetFastUpload インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
@@ -40,7 +37,7 @@ ms.locfileid: "37408933"
   
  IRowsetFastLoadUpload.cpp、ISSHelper.cpp、ole32.lib、および oleaut32.lib をコンパイルします。  
   
- このサンプルを実行すると、する必要がありますに合格すると、サーバー、またはの server \instance_name 値の名前を 4 MB (0x400001) 間と 4 GB (0 xffffffff) データの量を示す記述にします。  
+ このサンプルを実行するには、サーバーの名前 (server\instance_name) に加えて、書き込むデータのサイズを指定する 4 MB (0x400001) から 4 GB (0xFFFFFFFF) の値を渡す必要があります。  
   
  4 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストは、このサンプルで作成したデータベースを削除します。  
   

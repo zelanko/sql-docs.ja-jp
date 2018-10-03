@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server], backups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - backups [SQL Server], errors
 - database backups [SQL Server], errors
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f4220a4f0d978083411f3d1c3389b53b0daa86a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5586e7f4ff8ebdfbb7f2db44dc79155eca60b8fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203682"
 ---
 # <a name="specify-whether-a-backup-or-restore-operation-continues-or-stops-after-encountering-an-error-sql-server"></a>バックアップまたは復元の操作をエラー発生後に続行するか停止するかを指定する (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、エラーが発生したときにバックアップ操作または復元操作を中止するか続行するかを指定する方法を説明します。  

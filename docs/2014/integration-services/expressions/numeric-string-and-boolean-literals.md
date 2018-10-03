@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 812e0d2db0e0cc202e78e0bd920901509b9ae082
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198842"
 ---
 # <a name="literals-ssis"></a>リテラル (SSIS)
   式には、数値、文字列、およびブール値のリテラルを含めることができます。 式エバリュエーターでは、整数、10 進数、浮動小数点定数など、さまざまな数値リテラルがサポートされます。 さらに、式エバリュエーターが値を処理する方法を指定する long 型および float 型サフィックスと、数値リテラルの科学的表記法がサポートされます。  

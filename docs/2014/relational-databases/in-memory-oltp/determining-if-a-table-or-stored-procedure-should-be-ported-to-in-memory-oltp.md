@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348432"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194142"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス コレクターは、インメモリ OLTP によってデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、トランザクション パフォーマンス分析レポートによって、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。  

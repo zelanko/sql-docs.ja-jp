@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 337a90ea5068e405a97e44856be467ea478e5759
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189188"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>既定のデータ モデルと配置プロパティの構成 (SSAS テーブル)
   このトピックでは、既定の互換性レベル、配置、およびワークスペース データベース プロパティの設定について説明します。これらは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で作成する新しい各テーブル モデル プロジェクトに対して事前に定義できます。 新しいプロジェクトの作成後も、これらのプロパティを特定の要件に応じて変更できます。  

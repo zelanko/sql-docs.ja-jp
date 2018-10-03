@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - OverrideBehavior Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - OverrideBehavior element
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aecabbb04cefa1abf706c5f725c3a7f8e41aad07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88cf3dd287e1b55fee5377e2238d4d7c738cfe16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241372"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203622"
 ---
 # <a name="overridebehavior-element-assl"></a>OverrideBehavior 要素 (ASSL)
   記述されるリレーションシップのオーバーライド動作を示します、 [AttributeRelationship](../objects/attributerelationship-element-assl.md)要素。  

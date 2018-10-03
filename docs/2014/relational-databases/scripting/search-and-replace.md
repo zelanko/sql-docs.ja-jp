@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - match case [SQL Server]
@@ -28,20 +26,18 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b74cd41b24a7241d9abd3ecf48e1c3b11deb9e2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 299cb79646ff7d0955ca25343fbe2a7d9c0b1140
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191504"
 ---
 # <a name="search-and-replace"></a>検索と置換
-  テキストの検索と置換にはいくつかの方法があります。 
-  **[編集]** メニューの **[検索と置換]** には、 **[クイック検索]**、 **[クイック置換]**、 **[フォルダーを指定して検索]**、 **[フォルダーを指定して置換]** という 4 つのオプションが用意されています。 各オプションを選択すると、各バージョンの **[検索と置換]** ダイアログ ボックスが表示されます。 ダイアログ ボックスを使用しないで、インクリメンタル検索キーボード ショートカット キーによって検索することも可能です。 これらの方法によって、検索と置換の範囲を設定することや、検索一致項目や置換項目を確認する方法を選択することができます。  
+  テキストの検索と置換にはいくつかの方法があります。 **[編集]** メニューの **[検索と置換]** には、 **[クイック検索]**、 **[クイック置換]**、 **[フォルダーを指定して検索]**、 **[フォルダーを指定して置換]** という 4 つのオプションが用意されています。 各オプションを選択すると、各バージョンの **[検索と置換]** ダイアログ ボックスが表示されます。 ダイアログ ボックスを使用しないで、インクリメンタル検索キーボード ショートカット キーによって検索することも可能です。 これらの方法によって、検索と置換の範囲を設定することや、検索一致項目や置換項目を確認する方法を選択することができます。  
   
  テキストの検索と置換に関する注意点は次のとおりです。  
   

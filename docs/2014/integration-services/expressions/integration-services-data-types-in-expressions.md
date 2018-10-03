@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194886"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  
