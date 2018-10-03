@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data sources [Analysis Services]
 - storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 962e4cf17f53db60f3f766e1bd4432b1bd07df69
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 930137c05cdf7465ba6f68aa3396d092fa6a926f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113304"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多次元モデルのデータ ソース
   多次元モデルにインポートするデータまたは読み込むデータは、すべて外部データ ソースから取得されます。 通常、ソース データはレポート生成用に設計されたデータ ウェアハウスから取得されますが、直接的または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージなどを介して間接的にアクセスされるリレーショナル データベースから取得される場合もあります。  
@@ -64,7 +61,7 @@ ms.locfileid: "37267638"
 |[データ ソースのプロパティを設定&#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)|各プロパティとその設定方法について説明します。|  
 |[権限借用オプションを設定&#40;SSAS - 多次元&#41;](set-impersonation-options-ssas-multidimensional.md)|[権限借用情報] ダイアログ ボックスのオプションを構成する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース オブジェクト&#40;Analysis Services - 多次元データ&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   

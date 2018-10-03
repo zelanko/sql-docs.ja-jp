@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replaying cursors
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41ea37154bc03428b0e16a2101ca8f71e3852251
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e076ffe977423e8068759aca0a3624c03eb6e44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211902"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>カーソルまでの再生 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、カーソルに到達したときに一時停止するトレース ファイルまたはトレース テーブルの再生方法について説明します。 カーソル到達時点でトレースを一時停止することでデバッグがサポートされることになります。これは、長いトレース スクリプトの再生を、順番に分析できる短いセグメントに分割できるためです。  
@@ -46,7 +43,7 @@ ms.locfileid: "37196692"
   
 6.  手順 5. をトレースの最後まで繰り返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ブレークポイントまで再生&#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
  [トレースを再生します。](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -34,16 +32,15 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbea790b9376f254be6c1de3179cc1057d5f8b7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207212"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198502"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)
   このトピックは、次の状況に関連しています。  
@@ -106,7 +103,7 @@ ms.locfileid: "37207212"
   
  [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-##  <a name="credentials"></a> [資格情報]  
+##  <a name="credentials"></a> 資格情報  
  資格情報は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部のリソースへの接続に必要な認証情報を含むレコードです。 多くの資格情報は、Windows ログインとパスワードで構成されています。  
   
  この機能の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../security/authentication-access/credentials-database-engine.md)」を参照してください。  
@@ -356,7 +353,7 @@ ms.locfileid: "37207212"
   
  [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [包含データベース](contained-databases.md)   
  [他のサーバーへのデータベースのコピー](copy-databases-to-other-servers.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   

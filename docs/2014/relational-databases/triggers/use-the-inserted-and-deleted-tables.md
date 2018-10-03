@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserted tables
@@ -20,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f5a195b0cd15716b87f050db5dd835c602303a2f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427641"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220945"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted テーブルと deleted テーブルの使用
   DML トリガー ステートメントでは、deleted テーブルおよび inserted テーブルという 2 つの特殊なテーブルが使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのテーブルを自動的に作成および管理します。 これらの一時的なメモリ常駐型のテーブルを使用して、特定のデータ変更の影響をテストしたり、DML トリガー操作に条件を設定したりできます。 これらのテーブル内のデータを直接変更したり、これらのテーブルに対して CREATE INDEX などのデータ定義言語 (DDL) 操作を実行することはできません。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 556ce1a91985c0e153161a90413695edd2bc4cca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178122"
 ---
 # <a name="modifying-the-customer-dimension"></a>Customer ディメンションの変更
   キューブのディメンションの使いやすさと機能性を向上させる方法は数多くあります。 このトピックの実習では、Customer ディメンションを変更します。  
@@ -268,7 +265,7 @@ ms.locfileid: "37310802"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [Product ディメンションの変更](lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション属性のプロパティの参照](multidimensional-models/dimension-attribute-properties-reference.md)   
  [ディメンションから属性を削除します。](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [属性名の変更します。](multidimensional-models/attribute-properties-rename-an-attribute.md)   

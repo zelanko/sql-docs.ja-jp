@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Context Property (SecurityCertificate Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Context property
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40e7d2e3b604ebb4a7b78aaf040396c61ae0fceb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e32c9708184c22d44df332336e72d927f486d34c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229602"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context プロパティ (SecurityCertificate クラス)
   セキュリティ証明書のコンテキストを取得します。  
@@ -48,9 +45,9 @@ object
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書のコンテキストを指定する `sint32` 配列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

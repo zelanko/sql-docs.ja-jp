@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-caps.latest.revision: 35
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 364328b3ce519b849b4e7a0c6c7a725f1c24a14b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ffea1dbde4e4d124fb71438d4f3a7ca8b81248d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225152"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページでは、Integration Services で、フラット ファイルからデータをどのように読み取るか、フラット ファイルにデータをどのように書き込むかを指定するプロパティを設定できます。 フラット ファイル内の列名を変更し、ファイル内の各列にデータ型および区切り記号を指定するプロパティを設定できます。  
@@ -36,7 +33,7 @@ ms.locfileid: "37219662"
  **[接続マネージャー名]**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **[説明]**  
+ **Description**  
  接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
   
  **[各列のプロパティを構成します。]**  
@@ -63,13 +60,13 @@ ms.locfileid: "37219662"
 |**[前に挿入]**|選択した列の前に新しい列を追加します。|  
 |**[後に挿入]**|選択した列の後に新しい列を追加します。|  
   
- **削除**  
+ **Del**  
  列を選択して **[削除]** をクリックすると、列が削除されます。  
   
  **[型の推測]**  
  **[列の型の推測]** ダイアログ ボックスを使用して、ファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「 [[列の型の推測] ダイアログ ボックスの UI リファレンス](connection-manager/suggest-column-types-dialog-box-ui-reference.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [フラット ファイル接続マネージャー エディター&#40;列 ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   

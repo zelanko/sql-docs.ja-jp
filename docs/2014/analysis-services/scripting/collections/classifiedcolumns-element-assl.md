@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClassifiedColumns Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ClassifiedColumns element
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 38436c97f74adef2af6d5645aea6547682740894
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e2624c2d944af873fe6a34cbd9ca3684050bf92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286048"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209832"
 ---
 # <a name="classifiedcolumns-element-assl"></a>ClassifiedColumns 要素 (ASSL)
   により分類される関連列のコレクションを格納、 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)要素。  
@@ -63,10 +60,10 @@ ms.locfileid: "37286048"
 |親要素|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)型の[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |子要素|[ClassifiedColumnID](../properties/id-element-assl.md)|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  親に対応する要素`ClassifiedColumns`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MiningStructureColumn データ型&#40;ASSL&#41;](../data-type/miningstructurecolumn-data-type-assl.md)   
  [MiningStructure 要素&#40;ASSL&#41;](../objects/miningstructure-element-assl.md)   
  [コレクション&#40;ASSL&#41;](collections-assl.md)  

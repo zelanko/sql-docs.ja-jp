@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5c43b08b444813f64eb94a751a633a7a90d20de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2616e1ad8aa794f5aff14857b68b146e35dc04f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174642"
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
   コマンド プロンプトから **sqlservr** アプリケーションを使用して、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを起動、停止、一時停止、または続行します。  
@@ -103,13 +100,13 @@ ms.locfileid: "37214292"
   
  既定値より小さい値を使用すると、バッファー プールおよびスレッド スタックが利用できる容量が増えます。その結果、拡張ストアド プロシージャ、分散クエリまたはオートメーション オブジェクトを多用しないシステムの、メモリ負荷の高い作業のパフォーマンスが向上することがあります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ほとんどの場合、sqlserver.exe プログラムはトラブルシューティングや主なメンテナンスのみに使用されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がコマンド プロンプトから sqlservr.exe で起動された場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はサービスとしては起動しないため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **コマンドを使用して** を停止することはできません。 ユーザーは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に接続することができますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ツールによってサービスのステータスが表示されるため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーはサービスが停止されたことを適切に示すことができます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] もサーバーに接続することができますが、同じようにサービスが停止されたことを示すことができます。  
   
 ## <a name="compatibility-support"></a>互換性サポート  
  **-h**  パラメーターは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]ではサポートされていません。 このパラメーターは、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 32 ビットのインスタンスで AWE が有効になっている場合に、ホット アド メモリ メタデータ用の仮想メモリ アドレス空間を確保するために使用されていました。 詳細については、「[SQL Server 2014 で提供が中止された機能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン サービスのスタートアップ オプション](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   

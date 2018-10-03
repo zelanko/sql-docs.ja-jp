@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69650
 - vdt.dlgbox.maketable
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7af982e36fd2385e577a68722d176787456637dd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 247a248339da19f0f2934d3f97a461ae5bbb1c14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196552"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>[テーブルの作成] ダイアログ ボックス (Visual Database Tools)
   行のコピー先として作成したテーブルに名前を付けることができます。 このダイアログ ボックスは、クエリの種類を MAKE TABLE クエリに変更したときに表示されます。 クエリの種類を変更するには、 **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[テーブルの作成]** をクリックします。  
@@ -35,7 +32,7 @@ ms.locfileid: "43811118"
 > [!NOTE]  
 >  クエリを実行する前に、作成するテーブルのプロパティを **[プロパティ]** ウィンドウで変更できます。 詳細については、「[クエリのプロパティ (Visual Database Tools)](visual-database-tools.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルの作成クエリを作成する&#40;Visual Database Tools&#41;](create-make-table-queries-visual-database-tools.md)   
  [クエリの種類 (Visual Database Tools)](types-of-queries-visual-database-tools.md)  
   

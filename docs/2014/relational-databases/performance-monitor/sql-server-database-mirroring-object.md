@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Database Mirroring
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - performance counters [SQL Server], database mirroring
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d2ae6130ff9f56bebddb4c8e9f52423115b7e86
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8a24e7ad7a6acb6f9c639a89d8cdc30b8301db49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084362"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server:Database Mirroring オブジェクト
   **SQLServer:Database Mirroring** パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングに関する情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
@@ -55,10 +52,10 @@ ms.locfileid: "43817438"
 > [!NOTE]  
 >  各パートナーでは、一部のカウンターの値が 0 を示します。値が 0 になるカウンターは、パートナーが現在担っている役割によって異なります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  パフォーマンス カウンターを使用して、データベース ミラーリングのパフォーマンスを監視できます。 たとえば、データベース ミラーリングがプリンシパル サーバーのパフォーマンスに影響を及ぼしているかどうかを確認するには、 **Transaction Delay** カウンターを調べることができます。また、ミラー データベースとプリンシパル データベース間の遅延時間がいかに少ないかを確認するには、 **Redo Queue** カウンターと **Log Send Queue** カウンターを調べることができます。 1 秒間に送信されたログの量を監視する場合は、 **Log Bytes Sent/sec** カウンターを調べることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

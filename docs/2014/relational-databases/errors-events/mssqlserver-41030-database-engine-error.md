@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 41030 (Database Engine error)
 ms.assetid: c85341ae-0fbf-42ae-9275-4cfe678238f0
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f3514eea0d71d55332b4bfbdd4d3ee5fa08c702
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 015a01f849bb00dd0db4c2f060447d63a2f96bc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118590"
 ---
 # <a name="mssqlserver41030"></a>MSSQLSERVER_41030
     
@@ -41,7 +38,7 @@ ms.locfileid: "37408862"
 ## <a name="user-action"></a>ユーザーの操作  
  WSFC クラスターを再作成した後、AlwaysOn が有効になっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの各クラスター ノードで AlwaysOn を無効にし、再度有効にします。 この作業には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [有効にして、AlwaysOn 可用性グループを無効にする&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   

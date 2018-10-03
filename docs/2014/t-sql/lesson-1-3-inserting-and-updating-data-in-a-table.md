@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting and updating data
@@ -14,12 +12,12 @@ ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 051301fc440de5336701438e35fbbaebc68b0b17
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217637"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>テーブルのデータの挿入と更新 (チュートリアル)
   **Products** テーブルを作成したので、INSERT ステートメントを使用してデータをテーブルに挿入する準備ができました。 データを挿入した後は、UPDATE ステートメントを使用して行の内容を変更します。 更新を 1 つの行に制限するには、UPDATE ステートメントの WHERE 句を使用します。 4 つのステートメントによって、次のデータが入力されます。  
@@ -88,7 +86,7 @@ ms.locfileid: "43035506"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [テーブル内のデータの読み取り&#40;チュートリアル&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef095dd196b4deacf7fcd6ade6d2d50d3756d6f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ee84e7cd1e8d652283eb758af7396257fecf7b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228582"
 ---
 # <a name="security-overview-integration-services"></a>セキュリティの概要 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、豊富かつ柔軟なセキュリティ環境を提供できるように、複数の階層でセキュリティが構成されています。 このようなセキュリティの階層では、デジタル署名、パッケージのプロパティ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、およびオペレーティング システム権限が使用されます。 こうしたセキュリティ機能のほとんどは、ID およびアクセス制御のカテゴリに分類されます。  
@@ -108,7 +105,7 @@ ms.locfileid: "37167133"
   
 -   [パッケージの保護レベルを設定または変更する](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

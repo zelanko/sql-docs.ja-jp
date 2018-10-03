@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycolumnusage.f1
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfe0b051e2fe3a961065a9c89d1b1b202d3b063d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175632"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>[マイニング モデル列の使用法の指定] (データ マイニング ウィザード)
   **[マイニング モデル列の使用法の指定]** ページを使用すると、マイニング モデル列の使用方法を指定したり、入れ子になったテーブルを追加したりできます。  
@@ -47,7 +44,7 @@ ms.locfileid: "37254964"
  **入れ子になったテーブルを削除します。**  
  選択した入れ子になっているテーブルを削除します。 このボタンは、入れ子になったテーブルが選択されている場合にのみ使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [選択のケース レベル列&#40;データ マイニング ウィザード&#41;](select-case-level-columns-data-mining-wizard.md)   
  [列のコンテンツおよびデータ型の指定&#40;データ マイニング ウィザード&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  

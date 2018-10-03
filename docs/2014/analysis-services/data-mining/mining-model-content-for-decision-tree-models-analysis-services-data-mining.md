@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217572"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)します。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
@@ -161,7 +158,7 @@ ms.locfileid: "37161663"
  MSOLAP_NODE_SHORT_CAPTION  
  表示目的で使用されるラベル。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  デシジョン ツリー モデルには、Naive Bayes またはニュートラル ネットワーク モデルに含まれるマージナル統計ノードのような、モデル全体の統計を格納する独立したノードはありません。 代わりに、予測可能な属性ごとに、最上位ノードを [(すべて)] ノードとする個別のツリーが作成されます。 各ツリーは互いに独立しています。 モデルに含まれる予測可能な属性が 1 つしかない場合、ツリーは 1 つだけ、つまり [(すべて)] ノードだけになります。  
   
  出力属性を表す各ツリーは、分割を表す内部分岐 (NODE_TYPE = 3) にさらに分割されます。 それらのツリーのそれぞれに、対象の属性の分布に関する統計が含まれます。 さらに、各リーフ ノード (NODE_TYPE = 4) に、属性と値の各ペアをサポートするケース数と共に、入力属性とその値を表す統計が含まれます。 したがって、デシジョン ツリーの分岐では、ソース データに対してクエリを実行しなくても、確率やデータの分布を簡単に確認できます。 ツリーの各レベルは、必ずその直接の子ノードの合計を表します。  
@@ -285,7 +282,7 @@ ms.locfileid: "37161663"
   
  回帰ノードの詳細については、「[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング モデル ビューアー](data-mining-model-viewers.md)   
  [データ マイニング クエリ](data-mining-queries.md)   

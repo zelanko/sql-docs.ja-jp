@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login event class
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 903325359173b8d3da0a17754d871c75d58997a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11ddf57e8ed1c1a57b1eb610d5a722677112da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205392"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228402"
 ---
 # <a name="audit-login-event-class"></a>Audit Login イベント クラス
   **Audit Login** イベント クラスは、ユーザーが正常に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にログインしたことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
@@ -56,7 +53,7 @@ ms.locfileid: "37205392"
 |**TextData**|**ntext**|設定されるすべてのオプションをセミコロンで区切ったリスト。|1|はい|  
 |**GroupID**|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

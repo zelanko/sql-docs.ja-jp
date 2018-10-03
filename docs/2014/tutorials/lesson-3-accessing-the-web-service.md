@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-caps.latest.revision: 43
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9e5decf2f1d6c702b3bc3483ffb89bff9a2cd9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108302"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>レッスン 3 : Web サービスへのアクセス
   レポート サーバー Web サービスへの参照をプロジェクトに追加したら、次は、Web サービスのプロキシ クラスのインスタンスを作成します。 その後、このプロキシ クラスのメソッドを呼び出すことによって、Web サービスのメソッドにアクセスできます。 プロキシ クラスによって生成されたコードのアプリケーションがこれらのメソッドを呼び出すときに[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]アプリケーションと Web サービスの間の通信を処理します。  
@@ -126,7 +123,7 @@ ms.locfileid: "37230132"
   
  作成して、レポート サーバー Web サービスのプロキシ クラスの使用の詳細については、次を参照してください。 [Web サービス プロキシの作成](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レッスン 4: アプリケーションを実行する&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
  [Visual Basic または Visual C を使用してレポート サーバー Web サービスにアクセスする&#35; &#40;SSRS チュートリアル&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   

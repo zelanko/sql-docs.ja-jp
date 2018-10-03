@@ -1,14 +1,11 @@
 ---
-title: sys.database_filestream_options (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.database_filestream_options (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_filestream_options
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_filestream_options catalog view
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aec483bb817934a935c0c7ff2480f30539b83f17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5fa771b34d4f5ec6711bd895e7a8109def332a3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662780"
 ---
 # <a name="sysdatabasefilestreamoptions-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +35,14 @@ ms.locfileid: "33181368"
  FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
   
   
-|列|型|Description|  
+|[列]|型|説明|  
 |------------|----------|-----------------|  
-|**database_id**|**int**|データベースの ID。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意になっています。|  
+|**database_id**|**int**|データベースの ID です。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意になっています。|  
 |**directory_name**|**nvarchar (255)**|すべての FileTable 名前空間のデータベース レベルのディレクトリです。|  
-|**non_transacted_access**|**tinyint**|有効化されている FILESTREAM データへの非トランザクション アクセスのレベルです。 アクセスのレベルがの NON_TRANSACTED_ACCESS オプションで設定されている、 **CREATE DATABASE**または**ALTER DATABASE**ステートメントです。<br /><br /> この設定は、次のいずれかの値になります。<br /><br /> 0 – 無効。 これが既定値です。 このレベルは、値を提供することにより設定**OFF**の**NON_TRANSACTED_ACCESS**オプション。<br /><br /> 1 – 読み取り専用アクセス。 このレベルは、値を提供することにより設定**READ_ONLY**の**NON_TRANSACTED_ACCESS**オプション。<br /><br /> 3 – 完全アクセス。 このレベルは、値を提供することにより設定**完全**の**NON_TRANSACTED_ACCESS**オプション。<br /><br /> 5 - READONLY に移行中。<br /><br /> 6 – OFF に移行中。|  
+|**non_transacted_access**|**tinyint**|有効化されている FILESTREAM データへの非トランザクション アクセスのレベルです。 アクセスのレベルの NON_TRANSACTED_ACCESS オプションで設定されます、 **CREATE DATABASE**または**ALTER DATABASE**ステートメント。<br /><br /> この設定は、次のいずれかの値になります。<br /><br /> 0 – 無効。 これが既定値です。 このレベルは、値を提供することによって設定**OFF**の**NON_TRANSACTED_ACCESS**オプション。<br /><br /> 1 – 読み取り専用アクセス。 このレベルは、値を提供することによって設定**READ_ONLY**の**NON_TRANSACTED_ACCESS**オプション。<br /><br /> 3 – 完全アクセス。 このレベルは、値を提供することによって設定**完全**の**NON_TRANSACTED_ACCESS**オプション。<br /><br /> 5 - READONLY に移行中。<br /><br /> 6 – OFF に移行中。|  
 |**non_transacted_access_desc**|**nvarchar(60)**|Non_transacted_access で識別される非トランザクション アクセスのレベルの説明です。<br /><br /> この設定は、次のいずれかの値になります。<br /><br /> NONE – これは既定値です。<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable の前提条件の有効化](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
   

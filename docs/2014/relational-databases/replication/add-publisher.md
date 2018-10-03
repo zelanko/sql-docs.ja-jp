@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.addpublisher.f1
 helpviewer_keywords:
 - Add Publisher dialog box
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25ae8b6ad22f2c12d6292237b196792216d2210c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df8cd5e81352bbf0389e56de741f383a4f40d477
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215382"
 ---
 # <a name="add-publisher"></a>[パブリッシャーの追加]
   **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  
@@ -38,7 +35,7 @@ ms.locfileid: "37298132"
   
 -   **[Oracle パブリッシャーの追加]**  
   
-      [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ダイアログ ボックスを使用して、Oracle パブリッシャーに関連付けられている **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ダイアログ ボックスを使用して、Oracle パブリッシャーに関連付けられている **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
   
 -   **[ディストリビューターを指定し、そのパブリッシャーを追加する]**  
   
@@ -70,7 +67,7 @@ ms.locfileid: "37298132"
  **[新しいグループ]**  
  クリックすると、新しいパブリッシャー グループを作成できます。 パブリッシャー グループを利用すると、レプリケーション モニター内でパブリッシャーを容易に整理できます。 グループは、データのレプリケーションや、レプリケーション トポロジ内のサーバー間のリレーションシップには影響を与えません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)  
   

@@ -1,28 +1,25 @@
 ---
-title: 作成、変更、およびトリガーの削除 |Microsoft Docs
+title: 作成、変更、およびトリガーの削除 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - triggers [SMO]
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db6140fe0c717bd99f6b812ab6788ea711286cf8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ae7ab9d88a407f298156ebeafdb6ec5d70198b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194901"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220642"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>トリガーの作成、変更、および削除
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Trigger> オブジェクトを使用してトリガーが表現されます。 [!INCLUDE[tsql](../../../includes/tsql-md.md)]起動されたトリガーが設定されている場合に実行されるコード、<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>トリガー オブジェクトのプロパティ。 トリガーの型は、<xref:Microsoft.SqlServer.Management.Smo.Trigger> プロパティなど、<xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> オブジェクトのその他のプロパティを使用することで設定します。 これは、親テーブル上のレコードの `UPDATE` によってトリガーが起動されるかどうかを指定する、ブール型のプロパティです。  

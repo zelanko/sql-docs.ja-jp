@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bd78c18acc34c9549c574d3f82cfce6c0e5612a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ef8b1997685aa776eb93c17d144b6f640ea9d3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209742"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>マトリックスとグラフでの同じデータの表示 (レポート ビルダー)
   マトリックスとグラフで同じデータを表示するには、フィルター、グループ、並べ替え、およびデータに対して同じデータセットを指定するだけでなく、同じ式も指定するプロパティを両方のデータ領域に対して設定する必要があります。  
@@ -99,7 +96,7 @@ ms.locfileid: "37325622"
   
 25. 結果をプレビューします。 マトリックスの行グループと列グループに、グラフの系列グループとカテゴリ グループと同じデータが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   

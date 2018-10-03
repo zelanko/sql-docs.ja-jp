@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.datapartitions.f1
 ms.assetid: 5869edb7-d05f-495b-b828-b7fd5e828d20
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba8e9cb13187b493797ea63a7d1f21197c8411bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df90abfc372d583269152a7cbfe8ab0d5bebf34d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211263"
 ---
 # <a name="publication-properties-data-partitions"></a>[パブリケーションのプロパティ], [データ パーティション]
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[データ パーティション]** ページを使用すると、パラメーター化されたフィルタリングを使用するマージ パブリケーションのデータ パーティションを定義できます。 これらのパーティションを定義した後で、パーティションのスナップショットを生成して、サブスクライバーの接続プロパティ (ログイン名やコンピューター名) に基づいて複数のサブスクライバーの初期データセットを提供することができます。 また、サブスクライバーが最初に同期するときにパーティション用のスナップショットがない場合に、スナップショットの配布および生成をサブスクライバーが要求できるように設定することもできます。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
@@ -33,7 +30,7 @@ ms.locfileid: "37284888"
  **[編集]**  
  パーティションを編集するには、グリッド内の既存のパーティションを選択して **[編集]** をクリックします。  
   
- **削除**  
+ **Del**  
  パーティションを削除するには、グリッド内の既存のパーティションを選択して **[削除]** をクリックします。  
   
  **[今すぐ選択したスナップショットを生成する]**  
@@ -45,7 +42,7 @@ ms.locfileid: "37284888"
  **[新規サブスクライバーで同期を行うとき、パーティションを自動的に定義し、必要に応じてスナップショットを生成する]**  
  スナップショットの生成および適用をサブスクライバーで要求できるようにする場合は、このオプションを選択します。 サブスクライバーが最初に同期するときに、パーティションに使用できるスナップショットを持っていない場合は、このオプションの選択が必要になることがあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Publication](publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   

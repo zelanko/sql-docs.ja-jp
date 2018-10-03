@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a60cfaaf58e3ea3815955caefd33475803abf637
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8f7e9df6417334b814e71664b2a164dd76a9642
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060368"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>多次元モデル内のメジャーおよびメジャー グループの作成
   *メジャー* は、合計値、度数、最小値、最大値、平均値、または自ら作成したカスタム MDX 式のように、数値のデータ値を集計したものです。 *メジャー グループ* は、1 つ以上のメジャーに対応するコンテナーです。 すべてのメジャーは、メジャーが 1 つしかない場合を含め、1 つのメジャー グループ内に存在します。 キューブには、少なくとも 1 つのメジャーとメジャー グループが必要です。  
@@ -72,8 +69,7 @@ ms.locfileid: "37153493"
   
 -   メジャー列によって、メジャー グループに含まれるメジャーが定義されます。  
   
- キューブ ウィザードを実行すると、外部キーはフィルターで除外されます。選択する残りの列の一覧に、メジャー列と、外部キーとして識別されないメジャー列および属性列が表示されます。 
-  **FactSalesQuote** の例では、 **CalendarYear** 、 **CalendarQuarter** 、および **SalesAmountQuota**がウィザードにより表示されます。 多次元モデルの場合、実行可能なメジャーは **SalesAmountQuota** メジャー列だけとなります。 日付に基づくその他の列は、各クォータの金額を修飾するために存在します。 キューブ ウィザードのメジャーの一覧から他の列、つまり **CalendarYear** と **CalendarQuarter**を除外する (または後ほど、デザイナーでメジャー グループから削除する) 必要があります。  
+ キューブ ウィザードを実行すると、外部キーはフィルターで除外されます。選択する残りの列の一覧に、メジャー列と、外部キーとして識別されないメジャー列および属性列が表示されます。 **FactSalesQuote** の例では、 **CalendarYear** 、 **CalendarQuarter** 、および **SalesAmountQuota**がウィザードにより表示されます。 多次元モデルの場合、実行可能なメジャーは **SalesAmountQuota** メジャー列だけとなります。 日付に基づくその他の列は、各クォータの金額を修飾するために存在します。 キューブ ウィザードのメジャーの一覧から他の列、つまり **CalendarYear** と **CalendarQuarter**を除外する (または後ほど、デザイナーでメジャー グループから削除する) 必要があります。  
   
  この説明から除外すべき点は、ウィザードによって提供されるすべての列がメジャーとして役立つわけではないということです。 どの列をメジャーとして使用するかを決定する際は、データの理解とデータの使用方法を信頼して決定してください。 データを調べるには、データ ソース ビュー内のテーブルを右クリックしてください。メジャーとして使用する列を特定するのに役立ちます。 詳細については、「[Explore Data in a Data Source View (Analysis Services)](explore-data-in-a-data-source-view-analysis-services.md)」 (データ ソース ビューでのデータの検索 (Analysis Services)) を参照してください。  
   
@@ -89,7 +85,7 @@ ms.locfileid: "37153493"
   
  キューブ デザイナーの **[ディメンションの使用法]** タブを使用すると、特定のディメンションに関してメジャー グループの粒度を指定できます。 ディメンションのリレーションシップの詳細については、「 [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのキューブ](cubes-in-multidimensional-models.md)   
  [メジャーおよびメジャー グループ](measures-and-measure-groups.md)  
   

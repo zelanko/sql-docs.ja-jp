@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing stored procedures
@@ -16,12 +14,12 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0bdd6546de97a2aa3f698ffac9261288842e14f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16b9c9fde041339e10c554541dc03e2ddc315bcc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211168"
 ---
 # <a name="delete-a-stored-procedure"></a>ストアド プロシージャの削除
     
@@ -92,7 +90,7 @@ ms.locfileid: "37214962"
   
 6.  任意の依存オブジェクトおよびスクリプトからプロシージャへの参照を削除します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャの作成](create-a-stored-procedure.md)   
  [ストアド プロシージャの変更](modify-a-stored-procedure.md)   
  [ストアド プロシージャの名前の変更](rename-a-stored-procedure.md)   

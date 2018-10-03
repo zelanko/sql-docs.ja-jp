@@ -1,13 +1,11 @@
 ---
-title: ObjectTypeEnum |Microsoft ドキュメント
+title: ObjectTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c9cb6239cee3bd6416e587dc77d55e287da68e4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed7273b2fd24690956fa5c5ffe317ad9c00c40ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286761"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751790"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
-Ownership のいずれかのアクセス許可を設定する対象のデータベース オブジェクトの種類を指定します。  
+アクセス許可または所有権を設定する対象のデータベース オブジェクトの種類を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|オブジェクトは、列です。|  
 |**adPermObjDatabase**|3|オブジェクトは、データベースです。|  
-|**adPermObjProcedure**|4|オブジェクトは、プロシージャです。|  
-|**adPermObjProviderSpecific**|-1|オブジェクトは、プロバイダーによって定義された型です。 場合、エラーが発生、 *ObjectType*パラメーターは**adPermObjProviderSpecific**と*ObjectTypeId*が指定されていません。|  
+|**adPermObjProcedure**|4|オブジェクトは、手順です。|  
+|**adPermObjProviderSpecific**|-1|オブジェクトは、プロバイダーによって定義された型です。 場合、エラーが発生、 *ObjectType*パラメーターが**adPermObjProviderSpecific**と*ObjectTypeId*が指定されていません。|  
 |**adPermObjTable**|1|オブジェクトは、テーブルです。|  
 |**adPermObjView**|5|オブジェクトは、ビューです。|  
   

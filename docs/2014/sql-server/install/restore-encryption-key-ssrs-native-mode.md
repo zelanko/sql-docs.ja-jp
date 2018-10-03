@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9a048a70beb3fa22ab250316b6e630b845e7ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220088"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>暗号化キーを復元する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー データベースに格納されている機密データをセキュリティで保護するのに暗号化キーを使用します。 暗号化されたデータに継続してアクセスできるようにするには、サービス アカウントの変更のために後で暗号化キーを復元する必要がある場合に備えて、または計画的な移行の一環として、暗号化キーのバックアップを作成することが重要です。 このトピックは、使用する方法の概要、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager のキーを復元します。  
@@ -46,7 +43,7 @@ ms.locfileid: "37303632"
  **Password**  
  ファイルのロックを解除するパスワードを入力します。 パスワードを知っているユーザーのみがキーを復元できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 強力なパスワード ポリシーを適用します。 パスワードは 8 文字以上で、大文字と小文字、英数字、および 1 つ以上の記号文字の組み合わせにする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [暗号化キーの削除と再作成  &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_child_instances
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66f4d8c770cc10c2ba47769576d8f9625edac0cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 71fc55f996a58fc8ed353405fa9e5fdc9ad845f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38056170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751090"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +56,10 @@ ms.locfileid: "38056170"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  動的管理ビューの詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [管理者以外のユーザー インスタンス](http://msdn.microsoft.com/en-us/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
   
   

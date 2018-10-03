@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96179ecc9f49bde6b27e2d2bf8dab86835054f0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61e58bef0e4face7aac45563350e4f1047de359d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204972"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>SQL Server 2014 へのログ配布のアップグレード (Transact-SQL)
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする際には、ログ配布構成を保持することができます。 このトピックでは、ログ配布構成のアップグレードの複数のシナリオとベスト プラクティスについて説明します。  
@@ -224,7 +221,7 @@ ms.locfileid: "37310402"
   
  ログ配布を有効にする方法については、次を参照してください。[ログ配布の構成&#40;SQL Server&#41;](configure-log-shipping-sql-server.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [ログ配布テーブルとストアド プロシージャ](log-shipping-tables-and-stored-procedures.md)  

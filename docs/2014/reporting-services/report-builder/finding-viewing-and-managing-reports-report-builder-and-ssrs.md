@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d23f3e344bdc6ea66e134e5444d29129bd5f0dab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf6098bdb439e1b8bb78f7d875e3d2b5517f4945
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218282"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  
@@ -84,7 +81,7 @@ ms.locfileid: "37181719"
  ![レポート ツールバー](../media/htmlviewer-toolbar.gif "レポート ツールバー")  
 レポート ツール バー  
   
- レポートを実行した後にエクスポートできます別の形式になど[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Excel や PDF です。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、次を参照してください[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](export-reports-report-builder-and-ssrs.md)と[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)。.  
+ レポートを実行した後にエクスポートできます別の形式になど[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Excel や PDF です。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、次を参照してください[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](export-reports-report-builder-and-ssrs.md)と[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  レポートを選択して実行するには、レポート マネージャーを起動して、表示するレポートを検索または参照する方法が最も簡単です。 レポートを開く方法の手順を追った説明については、「[レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)」をご覧ください。  
   

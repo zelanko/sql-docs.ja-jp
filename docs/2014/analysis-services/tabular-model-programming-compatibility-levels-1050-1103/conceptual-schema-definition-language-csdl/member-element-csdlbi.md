@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1ba225f5-3867-4aae-a519-e3c277688d1e
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4508dcf3e0dd590aaa92041d3a2136589b98e07d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f193cb746b8df43c33aa65ea3d69d87ab7c36655
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207942"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218832"
 ---
 # <a name="member-element-csdlbi"></a>Member 要素 (CSDLBI)
   Member 要素は、その他の要素のベースとなる複合型です。  
@@ -47,7 +44,7 @@ ms.locfileid: "37207942"
 |コンテキスト|入力リレーションシップの名前を使用します。|  
 |Merge|入力リレーションシップの名前とプロパティ名を連結します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル オブジェクト モデルについて](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

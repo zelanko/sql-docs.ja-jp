@@ -1,20 +1,21 @@
 ---
 title: 作成、トレーニング、および R (SQL Server Machine Learning Services) でのパーティションに基づくモデルのスコア付けのチュートリアル |Microsoft Docs
+description: モデル化、トレーニング、および SQL Server machine learning のパーティション ベースのモデリング機能を使用するときに動的に作成されるパーティション分割されたデータを使用する方法について説明します。
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232566"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル: SQL Server での R でのパーティションに基づくモデルを作成します。
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ SQL Server の 2019 でパーティション ベースのモデルを作成し�
 このチュートリアルでは、従来の NYC タクシーのサンプル データと R スクリプトを使用してパーティション ベースのモデリングをについて説明します。 パーティション列は、支払い方法です。
 
 > [!div class="checklist"]
-> * Payment_type 列に基づいてパーティション。 この列セグメント データ、支払いの種類ごとに 1 つのパーティション内の値。
+> * パーティションは、支払いの種類 (5) に基づいています。
 > * 作成し、各パーティションのモデルのトレーニングしデータベース オブジェクトに格納します。
 > * 目的のために予約されているサンプル データを使用して、各パーティション モデル経由でのヒントの結果の確率を予測します。
 
@@ -37,21 +38,17 @@ SQL Server の 2019 でパーティション ベースのモデルを作成し�
  
 このチュートリアルを完了するには、次の操作が必要です。
 
-+ Machine Learning サービスと R の機能で、SQL Server 2019 データベース エンジンのインスタンス
-+ サンプル データ
-+ SQL Server Management Studio などの T-SQL クエリ実行するためのツール
++ 十分なシステム リソース。 データ セットが大きいと、トレーニング操作は、リソースを消費します。 可能であれば、少なくとも 8 GB の RAM を持つシステムを使用します。 または、小さいデータ セットを使用して、リソースの制約を回避することができます。 データ セットを縮小する手順については、インラインです。 
 
-### <a name="system-resources"></a>システム リソース
++ T-SQL のツールなど、実行のクエリ[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。
 
-データ セットが大きいと、トレーニング操作は、リソースを消費します。 可能であれば、少なくとも 8 GB の RAM を持つシステムを使用します。 または、小さいデータ セットを使用して、リソースの制約を回避することができます。 データ セットを縮小する手順については、インラインです。 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)、可能な[をダウンロードして復元](sqldev-download-the-sample-data.md)ローカル データベース エンジンのインスタンスにします。 ファイル サイズは約 90 MB です。
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>Machine Learning サービスでの SQL Server データベース エンジン
++ SQL Server 2019 プレビュー データベース エンジン インスタンス、Machine Learning サービスと R を統合します。
 
-SQL Server 2019 CTP 2.0 以降をインストールおよび構成の Machine Learning サービスが必要です。 Management Studio でサーバーのバージョンを確認するにを実行して`SELECT @@Version`として T-SQL クエリ。 出力になります。"Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x"。
+実行してバージョンを確認して**`SELECT @@Version`** としてクエリ ツールでの T-SQL クエリ。 出力になります。"Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x"。
 
-### <a name="r-packages"></a>R パッケージ
-
-このチュートリアルでは、Machine Learning サービスでインストールされている R を使用します。 データベース エンジンのインスタンスに現在インストールされているすべての R パッケージの適切な形式の一覧を返すことによって、R のインストールを確認できます。
+データベース エンジンのインスタンスに現在インストールされているすべての R パッケージの適切な形式の一覧を返すことによって、R パッケージの可用性をチェック:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>クエリを実行するためのツール
-
-できます[ダウンロードし、SQL Server Management Studio をインストール](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)、またはリレーショナル データベースに接続し、T-SQL スクリプトを実行する任意のツールを使用します。 Machine Learning サービスのあるデータベース エンジンのインスタンスに接続できることを確認します。
-
-### <a name="sample-data"></a>サンプル データ
-
-データの発生元、 [NYC タクシーのデータセットとリムジン委員会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)パブリック データ セット。 
-
-+ ダウンロード、 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak )データベース バックアップ ファイルとデータベース エンジンのインスタンスに復元します。
-
-データベース ファイル名にする必要があります**NYCTaxi_sample**まま変更せずに、次のスクリプトを実行する場合。
 
 ## <a name="connect-to-the-database"></a>データベースへの接続します。
 

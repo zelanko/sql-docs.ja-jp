@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_register_custom_scripting
 - sp_register_custom_scripting_TSQL
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 738139cae553dff72dc04b8761b578da692482a4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 57a58ec761dfbc8a3db0a9bec01ffeb04dc9e0e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036885"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700550"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +69,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_register_custom_scripting**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
  このストアド プロシージャは、レプリケートされるテーブルにスキーマ変更を行う前に実行する必要があります。 このストアド プロシージャの使用に関する詳細については、次を参照してください。[再生成カスタム トランザクション プロシージャのスキーマ変更の反映を](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)します。  
@@ -83,7 +77,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロールが実行できる**sp _register_custom_scripting**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_unregister_custom_scripting &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

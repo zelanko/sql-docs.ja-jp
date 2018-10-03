@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columns.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 166393522090c1d5c0455104c0d046319741f2b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7aed741e639fe76fe1565c10e203e0871929863
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123884"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>[フラット ファイル接続マネージャー エディター] ([列] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[列]** ページを使用すると、行および列情報を指定したり、ファイルをプレビューしたりできます。  
@@ -34,7 +31,7 @@ ms.locfileid: "37240956"
  **接続マネージャー名**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **[説明]**  
+ **Description**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
 ## <a name="flat-file-format-dynamic-options"></a>フラット ファイル形式の動的オプション  
@@ -118,7 +115,7 @@ ms.locfileid: "37240956"
  **[列のリセット]**  
  元の列以外のすべての列を削除するには、 **[列のリセット]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   

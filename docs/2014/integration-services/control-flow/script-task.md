@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26b6d45a190a188f9091360583cf3f73c3097455
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38586615ce582ed4534bf23612bfca64b53af461
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224412"
 ---
 # <a name="script-task"></a>スクリプト タスク
   スクリプト タスクでは、組み込みのタスクで利用できない関数を実行するコード、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されている変換を実行するコードが用意されています。 また、スクリプト タスクを使用すると、複数のタスクおよび変換を使用しなくても、関数を 1 つのスクリプトに結合できます。 スクリプト タスクは、データ行ごとに 1 回ではなく、1 つのパッケージ内で 1 回 (または列挙されたオブジェクトごとに 1 回) 行う作業に使用します。  

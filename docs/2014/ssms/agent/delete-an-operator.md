@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - operators (users) [Database Engine], deleting with Management Studio
 ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c058a71effc1837f2f949af53009d247dba5528d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: aebc7d167d03868a05d3b39d57b0af948237459a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052002"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告通知を受信しないように、オペレーターを削除する方法について説明します。  

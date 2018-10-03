@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - invalid requests [Reporting Services]
 - exceptions [Reporting Services], invalid requests
 - valid requests [Reporting Services]
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bc951abcc72ee191aad32b0af62c9c76395d1c66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d165b4137c8deb0afb232d58f0e19bb183ddf860
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098752"
 ---
 # <a name="preventing-invalid-requests"></a>無効な要求の回避
   アプリケーション フローを分析し、レポート サーバーに送信される要求が有効であることを確認することによって、ある種類の例外がスローされないようにすることができます。 たとえば、ユーザーがレポートの名前、データ ソース、その他のレポート サーバー アイテムを追加または更新できるアプリケーションで、ユーザーが入力するテキストを検証する必要があります。 また、要求をレポート サーバーに送信する前に予約文字を常に確認する必要があります。 コードで条件付きの **if** ステートメントまたは他の論理構造を使って、要求をレポート サーバーに送信するために必要な条件を満たしていないことをユーザーに警告します。  
@@ -74,7 +71,7 @@ private void PublishReport()
   
  要求がレポート サーバーに送信される前に回避できるエラーの種類については、「[SoapException エラー テーブル](../soapexception-class/soapexception-errors-table.md)」を参照してください。 try ブロックまたは catch ブロックを使用して上記の例をさらに強化した内容については、「[Try ブロックと Catch ブロックの使用](using-try-and-catch-blocks.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services における例外処理の概要](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException クラス](../soapexception-class/reporting-services-soapexception-class.md)  
   
