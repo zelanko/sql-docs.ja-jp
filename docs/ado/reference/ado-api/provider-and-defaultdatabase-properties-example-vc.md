@@ -1,13 +1,11 @@
 ---
-title: プロバイダーと DefaultDatabase プロパティの使用例 (vc++) |Microsoft ドキュメント
+title: Provider および DefaultDatabase プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6efcd2a571902cedaf065982490e2d593bd22ab6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1cae1cc5e15bd945a28e5c36008faeade43b54b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709230"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vc"></a>プロバイダーと DefaultDatabase プロパティの使用例 (vc++)
-この例で、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)を開き、3 つのプロパティ[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを別のプロバイダーを使用します。 また、使用、 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC プロバイダーの既定のデータベースを設定するプロパティです。  
+# <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider および DefaultDatabase プロパティの例 (VC++)
+この例では、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを開き、3 つ[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを別のプロバイダーを使用します。 また、使用、 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC プロバイダーの既定のデータベースを設定するプロパティ。  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  

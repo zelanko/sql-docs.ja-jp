@@ -1,28 +1,25 @@
 ---
-title: ODBC のステートメントを実行 |Microsoft ドキュメント
+title: ステートメントの実行 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a08d06c4d0f288a7209ef639deda487c37dc08fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96e28a50e58693bbb297bd1e80335482cdd9e82b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675580"
 ---
-# <a name="executing-statements-odbc"></a>ODBC ステートメントの実行
-ODBC アプリケーションでは、SQL ステートメントを実行することによってほとんどすべてのデータベースへのアクセスを実行します。 イベントの全般的な順序では、ステートメント ハンドルを割り当て、ステートメント属性を設定、ステートメントを実行して、すべての結果を取得およびステートメント ハンドルを解放します。  
+# <a name="executing-statements-odbc"></a>ステートメントの実行 (ODBC)
+ODBC アプリケーションでは、SQL ステートメントを実行することによってほとんどすべてのデータベースへのアクセスを実行します。 イベントの一般的な手順では、ステートメント ハンドルを割り当て、ステートメント属性を設定、ステートメントを実行して、すべての結果を取得およびステートメント ハンドルを解放します。  
   
  このセクションでは、次のトピックを扱います。  
   

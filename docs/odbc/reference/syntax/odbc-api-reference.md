@@ -1,35 +1,32 @@
 ---
-title: ODBC API リファレンス |Microsoft ドキュメント
+title: ODBC API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3920299ded492ef40bee8bd181e5ea60aaa9960
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680830"
 ---
 # <a name="odbc-api-reference"></a>ODBC API リファレンス
-このセクションのトピックでは、アルファベット順に各 ODBC 関数について説明します。 各関数は、C のプログラミング言語の関数として定義されます。 説明を以下に示します。  
+このセクションのトピックでは、アルファベット順では、各 ODBC 関数について説明します。 各関数は、C のプログラミング言語の関数として定義されます。 説明を以下に示します。  
   
 -   用途  
   
 -   ODBC のバージョン  
   
--   標準の CLI 準拠レベル  
+-   標準の CLI への準拠レベル  
   
 -   構文  
   
@@ -41,18 +38,18 @@ ms.locfileid: "32921947"
   
 -   使用状況と実装に関するコメント  
   
--   コード例  
+-   コードの例  
   
 -   関連する関数への参照  
   
- 標準の CLI 準拠レベルは、次のいずれかを指定できます。 ISO 92、Open Group、ODBC、または推奨されなくなった。 タグが付け ISO 92 – 準拠は、Open Group バージョン 1 の場合にも表示されます Open Group が ISO 92 の純粋なスーパー セットであるため関数。 開いているグループに準拠したとしてタグ付け関数は、ODBC 3 にも表示されます。*x*ので、ODBC 3 *。x* Open Group バージョン 1 の純粋なスーパー セットです。 ODBC 準拠としてタグ付け関数は、標準のどちらで表示されます。 非推奨としてタグ付け関数は、ODBC 3 で廃止されました。*x*です。  
+ 標準の CLI への準拠レベルは、次のいずれかを指定できます: ISO 92、Open Group、ODBC、または非推奨です。 Open Group が ISO 92 の純粋なスーパー セットであるのため、ISO 92 – 準拠は、Open Group 1、バージョンにも表示されますようにタグ付け関数。 開いているグループ準拠としてタグ付けされた関数は、ODBC 3 も表示されます。*x*ので、ODBC 3 *。x* Open Group バージョン 1 の純粋なスーパー セットです。 ODBC 準拠としてタグ付け関数は、どちらも標準で表示されます。 ODBC 3 で非推奨としてタグ付けされた関数が廃止されました。*x*します。  
   
- 診断情報の処理については、「、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。 SQLSTATE 値に関連付けられたテキストは、条件の説明に含まれますに特定のテキストを規定するものではありません。  
+ 診断情報の処理については、「、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。 SQLSTATE 値に関連付けられているテキストは、条件の説明を提供するものですが、特定のテキストを規定するものではありません。  
   
 > [!NOTE]  
 >  ドライバー固有の ODBC 関数については、ドライバーのセクションを参照してください。  
   
- このセクションには、次の関数についてのトピックが含まれています。  
+ このセクションには、次の関数のトピックが含まれています。  
   
 -   [SQLAllocConnect 関数](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

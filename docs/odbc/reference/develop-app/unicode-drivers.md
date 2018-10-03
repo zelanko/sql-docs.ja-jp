@@ -1,38 +1,35 @@
 ---
-title: Unicode ドライバー |Microsoft ドキュメント
+title: Unicode ドライバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], drivers
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 310ae2855099544181cfeec75352bfa0742f397e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745860"
 ---
-# <a name="unicode-drivers"></a>Unicode のドライバー
-ドライバーが、ANSI、Unicode ドライバーにするかどうかは、データ ソースの種類に完全に依存します。 データ ソースは、Unicode データをサポートする場合、ドライバーは、Unicode ドライバーをする必要があります。 データ ソースは、ANSI データのみをサポートする場合、ドライバーに ANSI ドライバーしておきます。  
+# <a name="unicode-drivers"></a>Unicode ドライバー
+ドライバーが、ANSI、Unicode ドライバーにするかどうかは、データ ソースの性質に完全に依存します。 データ ソースは、Unicode データをサポートする場合、ドライバーが Unicode ドライバーにあります。 データ ソースは、ANSI データのみをサポートする場合ドライバーは、ANSI ドライバーを維持する必要があります。  
   
- Unicode のドライバーをエクスポートする必要があります**SQLConnectW**ドライバー マネージャーによって、Unicode のドライバーとして認識されるようにします。  
+ Unicode ドライバーをエクスポートする必要があります**SQLConnectW**ドライバー マネージャーによって Unicode ドライバーとして認識されるようにします。  
   
- Unicode ドライバーには、Unicode 関数がそのまま使用する必要があります (のサフィックスを持つ*W*) し、Unicode データを格納します。 ANSI 関数も使用できますが、必須ではありません。 (ドライバー マネージャーが、ANSI 関数呼び出しを渡しません、 *A*ドライバーをドライバーが関数呼び出し、サフィックスと、パスなしの ANSI に変換するサフィックスです)。  
+ Unicode ドライバーには、Unicode 関数がそのまま使用する必要があります (のサフィックスを持つ*W*) し、Unicode データを格納します。 ANSI 関数では、受け入れることもできますが、する必要はありません。 (ドライバー マネージャーは、ANSI 関数呼び出しを渡さない、 *A*ドライバーをドライバーが ANSI に関数を呼び出すことがなく、サフィックスと、パスに変換するサフィックスです)。  
   
- Unicode ドライバーは、Unicode または ANSI のいずれかで、アプリケーションのバインドによって結果セットを返すできる必要があります。 アプリケーションは、SQL_C_CHAR にバインドした場合、Unicode ドライバーは SQL_WCHAR データを SQL_CHAR に変換する必要があります。 ドライバー マネージャーは、ANSI ドライバーの SQL_C_CHAR に SQL_C_WCHAR がマップされますが、Unicode のドライバーのマッピングは行われません。  
+ Unicode ドライバーは、Unicode または ANSI のいずれかで、アプリケーションのバインドによって結果セットを返すできる必要があります。 アプリケーションは、SQL_C_CHAR にバインドした場合、Unicode ドライバーは SQL_WCHAR データを SQL_CHAR に変換する必要があります。 ドライバー マネージャーは、ANSI ドライバーは、SQL_C_CHAR の SQL_C_WCHAR マップされますが、Unicode ドライバーのマッピングは行われません。  
   
 > [!NOTE]  
->  ドライバーの種類を決定するとき、ドライバー マネージャーが呼び出す**SQLSetConnectAttr**し、接続時に SQL_ATTR_ANSI_APP 属性を設定します。 SQL_ATTR_ANSI_APP は SQL_AA_TRUE に設定する場合は、アプリケーションは、ANSI Api を使用して、および Unicode を使用している場合 SQL_AA_FALSE の値に設定されます。 ドライバーも、アプリケーションの種類に基づく動作の違いに優れているため、この属性を使用します。 属性をアプリケーションで、直接設定することはできずではサポートされていません**SQLGetConnectAttr**です。 場合は、ドライバーは、ANSI と Unicode の両方のアプリケーションの同じ動作を示します、この属性の SQL_ERROR を返します。 ドライバーは SQL_SUCCESS を返します、ドライバー マネージャーは、接続プールが使用するときに、ANSI と Unicode の接続を分割します。
+>  ドライバー マネージャーを呼び出すが、ドライバーの種類を決定するときに**SQLSetConnectAttr**し、接続時に SQL_ATTR_ANSI_APP 属性を設定します。 SQL_ATTR_ANSI_APP SQL_AA_TRUE に設定されます、アプリケーションでの ANSI Api を使用している場合と SQL_AA_FALSE の値に設定することにより、Unicode が使用されている場合。 この属性を使用できるように、ドライバー、アプリケーションの種類に基づいて異なる動作が発生することができます。 属性をアプリケーションによって、直接設定することはできずではサポートされていません**SQLGetConnectAttr**します。 ドライバーは、ANSI と Unicode の両方のアプリケーションと同じ動作を示す場合、は、SQL_ERROR をこの属性を返します。 ドライバーは SQL_SUCCESS を返します、ドライバー マネージャーは、接続プールを使用する場合に、ANSI と Unicode の接続を区切ります。

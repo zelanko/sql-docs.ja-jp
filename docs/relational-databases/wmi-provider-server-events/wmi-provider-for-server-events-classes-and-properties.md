@@ -1,30 +1,26 @@
 ---
-title: WMI Provider for Server Events のクラスとプロパティ |Microsoft ドキュメント
+title: WMI Provider for Server Events のクラスとプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - event classes [WMI]
 - WMI Provider for Server Events, events listed
 - classes [WMI]
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3514bd676b6b84436141cdcf669cc6c8f33598e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b4c980a70772ed8e63065cc741326b8d497a29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762060"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>WMI Provider for Server Events のクラスとプロパティ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +28,16 @@ ms.locfileid: "33011319"
   
  イベントまたはイベント グループから照会できるプロパティについては、イベント スキーマを参照してください。 既定では、イベント スキーマは、[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd ディレクトリにインストールされます。  
   
- 公開されているイベントのスキーマを参照する代わりに、 [ http://schemas.microsoft.com/sqlserver](http://go.microsoft.com/fwlink/?linkid=43100)です。  
+ 発行されたイベント スキーマを参照する代わりに、 [ http://schemas.microsoft.com/sqlserver](http://go.microsoft.com/fwlink/?linkid=43100)します。  
   
- たとえば、ALTER_DATABASE イベントを示しながら、学びますそのプロパティはそのその親イベントが DDL_SERVER_LEVEL_EVENTS **TSQLCommand**と**DatabaseName**です。 イベントは、プロパティも継承**SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**、および**LoginName**. イベントには、子イベントはありません。  
+ たとえば、ALTER_DATABASE イベントを示しながら、学習をその親イベントが DDL_SERVER_LEVEL_EVENTS、そのプロパティが**TSQLCommand**と**DatabaseName**します。 イベントは、プロパティも継承**SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**、および**LoginName**. イベントには、子イベントはありません。  
   
 > [!NOTE]  
->  DDL と同様の操作を実行するシステム ストアド プロシージャもイベント通知を起動できます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**ストアド プロシージャはどちらも起動 CREATE_TYPE イベントで作成されるイベント通知を取得します。 詳細については、次を参照してください。[DDL イベント](../../relational-databases/triggers/ddl-events.md)です。  
+>  DDL と同様の操作を実行するシステム ストアド プロシージャもイベント通知を起動できます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**両方のストアド プロシージャが、CREATE_TYPE イベントで作成されるイベント通知が起動されます。 詳細については、次を参照してください。[DDL イベント](../../relational-databases/triggers/ddl-events.md)します。  
   
  **データ定義言語イベントおよびイベント グループ**  
   
- ![WMI Provider for Server イベントのイベント ツリー](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "サーバー イベントのイベント ツリーの WMI プロバイダー")  
+ ![WMI Provider for Server イベントのイベント ツリー](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "WMI Provider for Server イベントのイベント ツリー")  
   
  **トレース イベントとイベント グループ**  
   

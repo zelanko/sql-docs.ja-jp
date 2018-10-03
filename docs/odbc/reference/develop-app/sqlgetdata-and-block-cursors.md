@@ -1,13 +1,11 @@
 ---
-title: SQLGetData とブロック カーソル |Microsoft ドキュメント
+title: SQLGetData およびブロック カーソル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], block
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79a94b1a88c5b830c860e2e39cc779d62e60443b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a14c98f045fd974b404209cc998496dc5fa7193e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755528"
 ---
-# <a name="sqlgetdata-and-block-cursors"></a>SQLGetData とブロック カーソル
-**SQLGetData**単一行の 1 つの列に対して演算を行い、複数の行からデータを格納する配列をフェッチできません。 これは、プライマリの使用のため**SQLGetData**パーツ で、長い形式のデータをフェッチするにはこれを行う複数の行を一度にほとんどまたはまったくない理由があるとします。  
+# <a name="sqlgetdata-and-block-cursors"></a>SQLGetData およびブロック カーソル
+**SQLGetData**は 1 つの行の 1 つの列を操作し、複数の行からデータを格納する配列をフェッチできません。 これは、プライマリの使用のため**SQLGetData**パートでは、長い形式のデータをフェッチするには、一度に 1 つ以上の行に対して行うほとんどまたはまったくない理由があるとします。  
   
- 使用する**SQLGetData**アプリケーションの最初の呼び出し、ブロック カーソルと**SQLSetPos**に 1 つの行にカーソルを移動します。 呼び出して**SQLGetData**内の該当する行の列にします。 ただし、この動作はオプションです。 ドライバーがの使用をサポートしているかを判断する**SQLGetData**ブロック カーソルとアプリケーションが呼び出す**SQLGetInfo** SQL_GETDATA_EXTENSIONS オプションを使用します。
+ 使用する**SQLGetData**アプリケーションの最初の呼び出しをブロック カーソル、 **SQLSetPos**に単一の行にカーソルを移動します。 呼び出して**SQLGetData**内の該当する行の列にします。 ただし、この動作は省略可能です。 ドライバーの使用をサポートしているかどうか**SQLGetData**アプリケーションを呼び出すと、ブロック カーソルと**SQLGetInfo** SQL_GETDATA_EXTENSIONS オプションを使用します。

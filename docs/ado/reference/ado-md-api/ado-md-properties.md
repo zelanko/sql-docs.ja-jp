@@ -1,63 +1,60 @@
 ---
-title: ADO MD プロパティ |Microsoft ドキュメント
+title: ADO MD のプロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40916a54d3279b2a4afaee83fe56b4ef9c4d4199
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696931"
 ---
-# <a name="ado-md-properties"></a>ADO MD プロパティ
+# <a name="ado-md-properties"></a>ADO MD のプロパティ
 |||  
 |-|-|  
-|[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|どの ADO に示す**接続**オブジェクトの現在のセル セットまたはカタログが現在属しています。|  
+|[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|どの ADO に**接続**オブジェクトの現在のセル セットまたは現在が属するカタログ。|  
 |[キャプション](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|表示するときに使用するテキスト キャプションを示す、**レベル**または**メンバー**オブジェクト。|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|対象のメンバーの数を示す現在**メンバー**オブジェクト階層の親であります。|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|コレクションを返します**メンバー**を現在**メンバー**階層の親であります。|  
 |[カウント](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
-|[[奥行]](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|間のレベルの数を示す、**レベル**と階層のレベルのルートです。|  
-|[description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|現在のオブジェクトを説明するテキストを返します。|  
+|[[奥行]](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|間のレベルの数を示す、**レベル**と階層のレベルのルート。|  
+|[[説明]](../../../ado/reference/ado-md-api/description-property-ado-md.md)|現在のオブジェクトを説明するテキストを返します。|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|軸上のディメンションの数を示します。|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|軸にメンバーのすぐ後に続く子がないかどうかを示します。|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|現在のセル セットのフィルター情報を示します。|  
-|[アイテム](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|座標を使用して、セルセットからセルを取得します。|  
-|[アイテム](../../../ado/reference/ado-api/item-property-ado.md)|名前またはインデックスによってコレクションの特定のメンバーを返します。|  
-|[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|セル値の表示の書式設定を示します。|  
+|[アイテム](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|セルの座標を使用してセットからのセルを取得します。|  
+|[アイテム](../../../ado/reference/ado-api/item-property-ado.md)|名前または序数でコレクションの特定のメンバーを返します。|  
+|[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|セル値の書式設定された表示を示します。|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|階層のルートとメンバー間のレベル数を示します。|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|メンバーのレベルの名前を示します。|  
-|[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)|オブジェクトの名前を示します。|  
-|[序数 (セル)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|セル セット内の位置を指定してセルを一意に識別します。|  
+|[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)|オブジェクトの名前を示します。|  
+|[序数 (セル)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|セル セット内の位置でのセルを一意に識別します。|  
 |[序数 (位置)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|軸に沿った位置を一意に識別します。|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|階層内の現在のメンバーの親であるメンバーを示します。|  
-|[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|この位置メンバーの親が直前のメンバーの親と同じであるかどうかを示します。|  
-|[ソース](../../../ado/reference/ado-md-api/source-property-ado-md.md)|セルセットのデータのソースを示します。|  
-|[状態](../../../ado/reference/ado-md-api/state-property-ado-md.md)|セルセットの現在の状態を示します。|  
-|[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)|現在のメンバーの種類を示します。|  
+|[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|この位置メンバーの親がすぐ前のメンバーの親と同じかどうかを示します。|  
+|[Source](../../../ado/reference/ado-md-api/source-property-ado-md.md)|セルセットのデータ ソースを示します。|  
+|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|セル セットの現在の状態を示します。|  
+|[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)|現在のメンバーの種類を示します。|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|現在のオブジェクトの一意の名前を示します。|  
-|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|現在のセルの値を示します。|  
+|[[値]](../../../ado/reference/ado-md-api/value-property-ado-md.md)|現在のセルの値を示します。|  
   
 ## <a name="see-also"></a>参照  
- [ADO MD API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD コードの例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [ADO MD コレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD 列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [ADO MD メソッド](../../../ado/reference/ado-md-api/ado-md-methods.md)   
+ [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [ADO MD のコード例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
+ [ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   
+ [ADO MD の列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
+ [ADO MD のメソッド](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD オブジェクト](../../../ado/reference/ado-md-api/ado-md-objects.md)

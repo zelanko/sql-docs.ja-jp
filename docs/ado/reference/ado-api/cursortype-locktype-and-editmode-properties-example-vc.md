@@ -1,13 +1,11 @@
 ---
-title: カーソル、LockType、および EditMode のプロパティの例 (vc++) |。Microsoft ドキュメント
+title: CursorType、LockType、EditMode プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726a7b346052cd847c599f4389480007b6698999
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 43e615d29c10553ef52f536320266abb3d28f542
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277371"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696360"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>カーソル。、LockType、および EditMode のプロパティの例 (vc++)
-この例の設定、[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)開く前にプロパティ、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。 値も示しています、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でプロパティです。 EditModeOutput 関数は、この手順を実行する必要があります。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType、EditMode プロパティの例 (vc++)
+この例の設定、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを開く前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 値も表示されます、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でのプロパティ。 EditModeOutput 関数は、この手順を実行する必要があります。  
   
 ## <a name="example"></a>例  
   
@@ -163,10 +160,10 @@ void PrintComError(_com_error &e) {
  **EditMode adEditAdd を =**  
 **後の更新。**   
  **EditMode adEditNone を =**  
-**編集: の後に**   
+**[編集]: の後**   
  **EditMode adEditInProgress を =**   
 ## <a name="see-also"></a>参照  
- [カーソル。 プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
  [LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

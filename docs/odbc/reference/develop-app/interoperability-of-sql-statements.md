@@ -1,32 +1,29 @@
 ---
-title: SQL ステートメントの相互運用性 |Microsoft ドキュメント
+title: SQL ステートメントの相互運用性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC]
 - interoperability of SQL statements [ODBC], about interoperability
 ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 205fd667e8891ba0bab0283c1d112af9d608423b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4ead7cf96ada6d6055bc676ecf4610f2cf4c8f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622480"
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL ステートメントの相互運用性
-SQL ステートメントには、アプリケーションの残りの部分と同様に、相互運用可能なまたは DBMS 固有を指定できます。 アプリケーションの残りの部分と同様にどのように相互運用可能な SQL ステートメントを選択する必要があるアプリケーションの種類によって異なります。 カスタム アプリケーションは、1 つまたは可能性のある 2 つの Dbms の機能を利用する通常設計されているために、相互運用可能な SQL ステートメントを使用する可能性は低くします。 汎用アプリケーションは、さまざまな Dbms を使用するよう設計されていますので、相互運用可能な SQL ステートメントを使用します。 垂直アプリケーション通常代替の場所間に、特定のレベルの機能を確認要求が、それ以外の場合 相互運用可能な SQL ステートメントを使用しています。  
+アプリケーションの残りの部分のようには、SQL ステートメントは相互運用可能なまたは特定の DBMS を指定できます。 どのように相互運用可能な SQL ステートメントの選択は、アプリケーションの残りの部分のようにする必要があるとアプリケーションの種類によって異なります。 カスタム アプリケーションは、1 つまたは場合によって 2 つの Dbms の機能を利用する、通常は設計されているために、相互運用可能な SQL ステートメントを使用する可能性が低下します。 汎用アプリケーションは、さまざまな Dbms を使用するよう設計されていますので、相互運用可能な SQL ステートメントを使用します。 垂直方向のアプリケーションは、通常どこかに間には、特定のレベルの機能の要求が、それ以外の場合 相互運用可能な SQL ステートメントを使用しています。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -1,41 +1,38 @@
 ---
-title: Visual FoxPro ODBC ドライバーのセットアップ |Microsoft ドキュメント
+title: Visual FoxPro ODBC ドライバーの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Visual FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9897ae65c2520d9000dbff2dd287c424b671ed75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f358d1944de362dc65aba8c470bbb7911ce2103
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818390"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの設定
-ダウンロードして、Visual FoxPro ODBC ドライバーのインストールについては、次を参照してください。 [Visual FoxPro ODBC ドライバー](http://go.microsoft.com/fwlink/?LinkId=121318) MSDN のダウンロードをします。  
+ダウンロードして Visual FoxPro ODBC ドライバーをインストールする方法については、次を参照してください。 [Visual FoxPro ODBC ドライバー](http://go.microsoft.com/fwlink/?LinkId=121318) MSDN ダウンロードします。  
   
- Microsoft Visual FoxPro ODBC ドライバー セットアップ プログラムを使用して、次の操作を行います。  
+ Microsoft Visual FoxPro ODBC ドライバー セットアップ プログラムを使用するには、以下を行います。  
   
 -   新しいコンポーネントを追加します。  
   
 -   インストールされているコンポーネントを削除します。  
   
--   不足しているファイルや設定を再インストールします。  
+-   不足しているファイルと設定の復元を再インストールします。  
   
 -   以前にインストールされたすべてのコンポーネントを削除します。  
   
- システムでドライバーをインストールした後、セットアップ プログラムがインストールされているドライバー コンポーネントを認識し、ドライバーの構成を変更することを有効にする追加のダイアログ ボックスを表示します。
+ システムにドライバーをインストールした後、セットアップ プログラムがインストールされているドライバー コンポーネントを認識し、ドライバーの構成を変更するための追加 ダイアログ ボックスを表示します。

@@ -1,32 +1,29 @@
 ---
-title: 割り当てと解放バッファー |Microsoft ドキュメント
+title: 割り当てと解放バッファー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - buffers [ODBC], allocating and freeing
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85c2ab4ad25501637ccba2206f85c7895440ade
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682830"
 ---
-# <a name="allocating-and-freeing-buffers"></a>割り当てと解放バッファー
-すべてのバッファーでは、割り当てられ、アプリケーションによって解放することができます。 バッファーを遅延しませんが場合は、必要がある関数への呼び出しの間のみ存在します。 たとえば、 **SQLGetInfo**が指すバッファー内の特定のオプションに関連付けられている値を返します、 *InfoValuePtr*引数。 このバッファーへの呼び出し後すぐに解放できる**SQLGetInfo**次のコード例のように。  
+# <a name="allocating-and-freeing-buffers"></a>バッファーの割り当てと解放
+すべてのバッファーに割り当てられ、アプリケーションによって解放されます。 バッファーが遅延しない場合は必要があります関数の呼び出しの期間中のみ存在します。 たとえば、 **SQLGetInfo**によって指し示されるバッファー内の特定のオプションに関連付けられている値を返します、 *InfoValuePtr*引数。 呼び出し後すぐにこのバッファーを解放できる**SQLGetInfo**次のコード例のように。  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -38,7 +35,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- 遅延のバッファーでは、1 つの関数で指定され、別の使用、ために、ドライバーもが必要ですが存在するときに、遅延のバッファーを解放すると、アプリケーション プログラミング エラーを勧めします。 アドレスなど、 \* *ValuePtr*にバッファーが渡される**SQLBindCol**によって後で使用できる**SQLFetch**です。 列がバインドされているなどへの呼び出しになるまで、このバッファーを解放できません**SQLBindCol**または**SQLFreeStmt**の次のコード例に示すようにします。  
+ 遅延バッファーは 1 つの関数で指定された、他で使用されるため、ドライバーがまだ期待したに存在するときに、遅延バッファーを解放するために、アプリケーション プログラミング エラーになります。 アドレスなど、 \* *ValuePtr*に渡されるバッファー **SQLBindCol**によって後で使用できる**SQLFetch**します。 列がへの呼び出しのようにバインドされた、まで、このバッファーを解放できません**SQLBindCol**または**SQLFreeStmt**次のコード例に示すようにします。  
   
 ```  
 SQLRETURN    rc;  
@@ -63,7 +60,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- このようなエラーが; 関数でローカルにバッファーを宣言することによって行われた簡単にアプリケーションが、関数を離れると、バッファーが解放されます。 たとえば、次のコードでは、ドライバーで未定義とおそらく致命的な動作がなります。  
+ このようなエラーが; 関数でローカルにバッファーを宣言することで簡単に行われました。バッファーは、アプリケーションが、関数を離れるときに解放されます。 たとえば、次のコードでは、ドライバーで未定義とおそらく致命的な動作がなります。  
   
 ```  
 SQLRETURN   rc;  

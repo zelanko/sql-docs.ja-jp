@@ -1,36 +1,33 @@
 ---
-title: メソッドの例 (VBScript) の複製 |Microsoft ドキュメント
+title: Clone メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783670"
 ---
-# <a name="clone-method-example-vbscript"></a>メソッドの例 (VBScript) の複製します。
-この例では、[クローン](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  
+# <a name="clone-method-example-vbscript"></a>Clone メソッドの例 (VBScript)
+この例では、[複製](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  
   
- アクティブ サーバー ページ (ASP) で次の例を使用します。 この例では、 **Northwind** Microsoft アクセス権を持つ分散データベースです。 切り取りし、メモ帳などのテキスト エディターに次のコードを貼り付けます CloneVBS.asp として保存します。 結果は、任意のクライアント ブラウザーで表示できます。  
+ 次の例を Active Server Page (ASP) で使用します。 この例では、 **Northwind** Microsoft アクセス権を持つ分散データベースです。 切り取りとメモ帳または別のテキスト エディターに次のコードを貼り付けるし、CloneVBS.asp として保存します。 結果は、任意のクライアント ブラウザーで表示できます。  
   
- 例を実行するには、行を変更します`RsCustomerList.Source = "Customers"`に`RsCustomerList.Source = "Products"`に大きなテーブルをカウントします。  
+ 行を変更する例を実行するには、`RsCustomerList.Source = "Customers"`に`RsCustomerList.Source = "Products"`に大きなテーブルをカウントします。  
   
 ```  
 <!-- BeginCloneVBS -->  

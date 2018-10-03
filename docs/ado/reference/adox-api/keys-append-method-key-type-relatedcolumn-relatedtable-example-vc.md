@@ -1,13 +1,11 @@
 ---
-title: 例を作成する新しい外部キー (vc++) |Microsoft ドキュメント
+title: 新しい外部キー例 (vc++) の作成 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - Keys Append method [ADOX], VC++ example
 - RelatedColumn property [ADOX], VC++ example
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30b5590d1abecfb36869179aa1212dafa4d59527
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5e90a0bfa98a17a4b9330997cb3f59ef57778403
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726370"
 ---
-# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>キーは追加メソッド、キーの種類、RelatedColumn、RelatedTable および UpdateRule プロパティの使用例 (vc++)
-次のコードでは、新しい外部キーを作成する方法を示します。 2 つのテーブル (Customers と Orders) の存在と見なします。  
+# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VC++)
+次のコードでは、新しい外部キーを作成する方法を示します。 これは、(顧客と注文) の 2 つのテーブルが存在しないと仮定します。  
   
 ```  
 // BeginCreateKeyCpp.cpp  

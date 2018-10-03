@@ -1,32 +1,29 @@
 ---
-title: メソッドの例 (VB) の複製 |Microsoft ドキュメント
+title: Clone メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], Visual Basic example
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e90aa7a727e35a29b553f6efe2a93b0a01a3d2bf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 98b6b3e454aa37e220bbcb62fa932c4b127ecd79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783930"
 ---
-# <a name="clone-method-example-vb"></a>メソッドの例 (VB) の複製します。
-この例では、[クローン](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  
+# <a name="clone-method-example-vb"></a>Clone メソッドの例 (VB)
+この例では、[複製](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  
   
 ```  
 'BeginCloneVB  

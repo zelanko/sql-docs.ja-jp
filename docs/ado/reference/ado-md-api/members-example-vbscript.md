@@ -1,32 +1,29 @@
 ---
-title: メンバーの例 (VBScript) |Microsoft ドキュメント
+title: メンバーの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Members collection [ADO MD], VBScript example
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6b4a539ec7a7edeb7085fbad9828cc7229de75c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4a9febce34248bdab86fc2c7f8ae43f3cd41e2d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284791"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751730"
 ---
-# <a name="members-example-vbscript"></a>メンバーの例 (VBScript)
-このサンプルでは、MDX クエリ文字列を使用して OLAP データを取得し、結果のセル セットを複数の次元のセル セットの列の結合機能を使用して HTML テーブル構造に書き込みます。  
+# <a name="members-example-vbscript"></a>Members の例 (VBScript)
+このサンプルでは、MDX クエリ文字列を使用して OLAP データを取得し、結果のセル セットを複数の次元のセル セットの列にまたがる機能を使用して、HTML テーブル構造に書き込みます。  
   
 ```  
 <%@ Language=VBScript %>  

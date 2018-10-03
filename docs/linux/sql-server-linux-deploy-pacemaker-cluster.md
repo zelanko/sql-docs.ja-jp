@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: afb076c2883751728c6528dc1a2266b8ec214895
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 25fb50dbd858007a29d2a10a94053884620ed68b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750590"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux の Pacemaker クラスターをデプロイします。
 
@@ -226,7 +224,7 @@ sudo zypper install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、SQL Server on Linux の Pacemaker クラスターをデプロイする方法について説明しました。 学習したします。
 > [!div class="checklist"]

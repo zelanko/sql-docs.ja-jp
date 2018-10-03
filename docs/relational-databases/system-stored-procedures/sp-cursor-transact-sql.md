@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f4aa2ae97b594372e92283520a9346d1524b88a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c2dae72cf4246b2d78b246e52ca96d5f52f7183a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725270"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X0001|UPDATE|フェッチ バッファー内の 1 つ以上の行を更新する場合に使用します。  指定されている行*rownum*は、再アクセス、更新します。|  
 |0x0002|Del|フェッチ バッファー内の 1 つ以上の行を削除する場合に使用します。 指定されている行*rownum*再アクセス、削除されます。|  
 |0X0004|INSERT|SQL をビルドせずにデータを挿入**挿入**ステートメント。|  
-|0X0008|REFRESH|基になるテーブルのデータをバッファーに再読み込みする場合に使用します。オプティミスティック同時実行制御のために更新や削除が失敗した場合や UPDATE の後に、行を更新するために使用できます。|  
+|0X0008|REFRESH|基になるテーブルのデータをバッファーに再読み込みする場合に使用します。オプティミスティック コンカレンシーのために更新や削除が失敗した場合や UPDATE の後に、行を更新するために使用できます。|  
 |0X10|LOCK|SQL Server U ロックを指定された行が含まれるページに獲得されるが発生します。 このロックは、S ロックとは互換性がありますが、X ロックや他の U ロックとは互換性がありません。 短期間のロックを実装する場合に使用できます。|  
 |0X20|SETPOSITION|DELETE または UPDATE ステートメントを配置してプログラムを後続の SQL server を実行するときにのみ使用されます。|  
 |0X40|ABSOLUTE|UPDATE または DELETE との組み合わせでのみ使用できます。  ABSOLUTE は KEYSET カーソルでのみ使用されます (DYNAMIC カーソルでは無視されます。STATIC カーソルは更新できません)。<br /><br /> 注: 絶対フェッチされていないキーセット内の行を指定すると場合、操作の同時実行制御チェックが失敗し、返される結果は保証できません。|  
@@ -119,7 +115,7 @@ sp_cursor  cursor, optype, rownum, table
  SETPOSITION と REFRESH、UPDATE、DELETE、または LOCK を OR 句で結合すると、カーソル位置を最後に変更された行に設定することができます。  
   
 ## <a name="rownum-parameter"></a>rownum パラメーター  
- 指定した場合、 *rownum*パラメーターは、フェッチ バッファー内の行番号ではなくキーセット内の行番号として解釈できます。 同時実行制御はユーザーが管理する必要があります。 したがって、SCROLL_LOCKS カーソルの場合はその行のロックを独自に保持し (トランザクションを使用できます)、 OPTIMISTIC カーソルの場合は、この操作を実行する前にその行をフェッチしておく必要があります。  
+ 指定した場合、 *rownum*パラメーターは、フェッチ バッファー内の行番号ではなくキーセット内の行番号として解釈できます。 コンカレンシー制御はユーザーが管理する必要があります。 したがって、SCROLL_LOCKS カーソルの場合はその行のロックを独自に保持し (トランザクションを使用できます)、 OPTIMISTIC カーソルの場合は、この操作を実行する前にその行をフェッチしておく必要があります。  
   
 ## <a name="table-parameter"></a>table パラメーター  
  場合、 *optype*値が UPDATE または INSERT、および完全更新または挿入ステートメントとして送信された、*値*パラメーターで指定された値*テーブル*は無視されます。  

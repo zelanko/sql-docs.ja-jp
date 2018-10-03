@@ -1,13 +1,11 @@
 ---
-title: UPDATE ステートメントの選択の処理 |Microsoft ドキュメント
+title: UPDATE ステートメントの SELECT 処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], statement processing
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], select for update statements
 - cursor library [ODBC], statement processing
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ede999422f6b52112356aa7c9c4b7715eafb96c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f54d31426773f294a4a23f059c9f906d430056f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721760"
 ---
-# <a name="processing-select-for-update-statements"></a>UPDATE ステートメントの選択の処理
+# <a name="processing-select-for-update-statements"></a>SELECT FOR UPDATE ステートメントの処理
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないように、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
- 相互運用性を最大にするため、アプリケーションが位置指定更新ステートメントを使用して実行することによって更新される結果セットを生成する必要があります、**更新用に選択**ステートメントです。 カーソル ライブラリでは、この必要はありません、位置指定の update ステートメントをサポートするほとんどのデータ ソースが必要です。  
+ アプリケーションの相互運用性を最大に、位置指定の update ステートメントで実行することによって更新される結果セットを生成する必要があります、**選択更新**ステートメント。 カーソル ライブラリではこの必要はありません、位置指定の update ステートメントをサポートするほとんどのデータ ソースで必要です。  
   
- カーソル ライブラリ内の列を無視する、 **FOR UPDATE**の句、 **SELECT FOR UPDATE**ステートメントです。 ステートメントをドライバーに渡す前にこの句を削除します。 カーソル ライブラリで、前のセクションで説明した制限と共に、SQL_ATTR_CONCURRENCY ステートメント属性コントロール結果内の列を設定するかどうかを更新できます。
+ カーソル ライブラリ内の列を無視する、 **FOR UPDATE**の句、 **SELECT FOR UPDATE**ステートメントは、ドライバー、ステートメントに渡す前にこの句を削除します。 SQL_ATTR_CONCURRENCY ステートメント属性の前のセクションで説明されている制限事項と、カーソル ライブラリのコントロール セットに結果の列かどうかを更新できます。
