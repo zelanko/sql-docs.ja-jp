@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d030ca48bee67e322d27365a80c97d9b02071e7d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 199a9fb8587cb1c024ac5dd5c09c1264a1226191
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393034"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769720"
 ---
 # <a name="data-migration-report-accesstosql"></a>データ移行レポート (AccessToSQL)
 **データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  

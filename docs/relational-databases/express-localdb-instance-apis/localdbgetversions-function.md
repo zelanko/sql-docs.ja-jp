@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetVersions 関数 |Microsoft ドキュメント
+title: LocalDBGetVersions 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetVersions
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 365e6be64d45bbe5140ba063e045c0a53ea55ee0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b78298326fdac24ec64155ab86b4e0eddc854d7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831790"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ ms.locfileid: "32935540"
  [入力/出力]入力内のバージョンのスロットの数を保持する、 *pVersionNames*バッファー。   
 出力では、既存の LocalDB バージョンの数を保持します。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  S_OK  
  関数が正常に実行されました。  
   
@@ -64,8 +60,8 @@ ms.locfileid: "32935540"
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>解説  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)です。  
+## <a name="remarks"></a>コメント  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

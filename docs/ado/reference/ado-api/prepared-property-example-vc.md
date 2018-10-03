@@ -1,32 +1,29 @@
 ---
-title: 準備ができているプロパティの例 (vc++) |Microsoft ドキュメント
+title: プロパティの例 (vc++) の準備 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4aeb945af1a75c28e4849f4736064fdb50d63d8f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846490"
 ---
-# <a name="prepared-property-example-vc"></a>準備済みのプロパティの例 (vc++)
-この例を示します、 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)を開いて、2 つのプロパティ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト: 準備された 1 つ、準備されていません。  
+# <a name="prepared-property-example-vc"></a>Prepared プロパティの例 (VC++)
+この例では、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを開き、2 つ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト-準備および準備されていません。  
   
 ## <a name="example"></a>例  
   
@@ -145,8 +142,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **パフォーマンスの結果:**  
-**0.016 秒の準備されていません。**  
-**0.016 秒の準備:**   
+**0.016 秒の準備ができていません。**  
+**0.016 秒を準備します。**   
 ## <a name="see-also"></a>参照  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared プロパティ (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

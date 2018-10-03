@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationType Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AggregationType element
 ms.assetid: c1393bc6-d715-4397-8bc5-82abdb275330
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7c95f9566f483ec7a047ceedd074237f9ff5f7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dad62254c9da3809ae33dcfb035de34fa52a89fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059622"
 ---
 # <a name="aggregationtype-element-assl"></a>AggregationType 要素 (ASSL)
   によって格納される集計の種類を定義、[パーティション](../objects/partition-element-assl.md)要素。  

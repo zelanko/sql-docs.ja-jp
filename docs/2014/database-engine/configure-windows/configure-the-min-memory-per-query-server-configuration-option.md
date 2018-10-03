@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [SQL Server], queries
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - queries [SQL Server], memory
 - min memory per query option
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 766a4e704695de1af842fe3a978cbc05424f575f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d215a40cce00c3cb5d1ea8293506961520fa1f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072442"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query サーバー構成オプションの構成
   このトピックでは、構成する方法を説明します、`min memory per query`サーバー構成オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 `min memory per query`オプション (単位: キロバイト) クエリを実行するために割り当てられるメモリの最小量を指定します。 たとえば場合、`min memory per query`設定されているを 2,048 KB は、少なくともそのメモリを取得するクエリは保証します。 既定値は 1,024 KB です。 最小値は 512 KB、最大値は 2,147,483,647 KB (2 GB) です。  

@@ -1,13 +1,11 @@
 ---
-title: 複数の結果 |Microsoft ドキュメント
+title: 複数の結果 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLMoreResults function [ODBC], multiple results
@@ -16,44 +14,43 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be6cb4a2f7f03e63e3da9345b833b0382edd8e9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7827a42a58e11847cdf9c3a63f4a7424eb5cfc5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654973"
 ---
 # <a name="multiple-results"></a>複数の結果
-A*結果*ものによって返されるデータ ソース、ステートメントが実行された後にします。 ODBC には 2 つの種類の結果: 結果セットと行の数。 *行のカウント*更新によって影響を受ける行の数は、削除、または insert ステートメントは、します。 説明されているバッチ、 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)、複数の結果を生成できます。  
+A*結果*何かによって返されるデータ ソース、ステートメントが実行された後にします。 ODBC には 2 つの種類の結果: 結果セットと、行の数。 *行数*は、更新によって影響を受ける行の数は、削除、またはステートメントを挿入します。 説明されているバッチ、 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)、複数の結果を生成することができます。  
   
- 次の表、 **SQLGetInfo**アプリケーションに使用するデータ ソースがバッチの種類ごとの複数の結果を返すかどうかを決定するオプションです。 具体的には、データ ソースは、ステートメントのバッチ全体の 1 つの行の数を返すことができますか、バッチ内の各ステートメントの個別の行をカウントします。 結果 – セットを生成するパラメーターの配列で実行された、ステートメントの場合、データ ソースが単一の結果セットのすべてのパラメーターのセットを返すことができます。 またはパラメーターのセットごとの個々 の結果を設定します。  
+ 次の表、 **SQLGetInfo**オプションのアプリケーションを使用してデータ ソースがバッチの種類ごとの複数の結果を返すかどうかを判断します。 具体的には、データ ソースは、ステートメントのバッチ全体の 1 つの行の数を返すことができます。 またはバッチ内の各ステートメントの個々 の行をカウントします。 結果 – セットを生成するステートメントをパラメーターの配列で実行された場合、データ ソースが単一の結果セットのすべてのパラメーターのセットを返すことができます。 または個々 の結果がパラメーターのセットごとに設定します。  
   
-|バッチの種類|行をカウントします。|結果セット|  
+|バッチの種類|行の数|結果セット|  
 |----------------|----------------|-----------------|  
-|明示的なバッチ|SQL_BATCH_ROW_COUNT [a]|-[b]。|  
-|手順|SQL_BATCH_ROW_COUNT [a]|-[b]。|  
-|パラメーター配列|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
+|明示的なバッチ|[A] SQL_BATCH_ROW_COUNT|-[b]。|  
+|手順|[A] SQL_BATCH_ROW_COUNT|-[b]。|  
+|パラメーターの配列|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
- [a] 行のバッチ内のステートメントのカウント – 生成はサポートされている可能性があります、まだ行カウントの戻り値はサポートされません。 SQL_BATCH_SUPPORT オプション**SQLGetInfo**示すかどうか行のカウント – を生成するステートメントがバッチで許可されている; SQL_BATCH_ROW_COUNTS オプションでは、これらの行カウントが、アプリケーションに返されるかどうかを示します。  
+ [a] 行のバッチ内のステートメントの数 – 生成はサポートされている可能性があります、まだ行カウントの戻り値はサポートされません。 SQL_BATCH_SUPPORT オプション**SQLGetInfo**を示すかどうか行の数 – を生成するステートメントがバッチで許可されている; SQL_BATCH_ROW_COUNTS オプションでは、これらの行カウントがアプリケーションに返されるかどうかを示します。  
   
- [b] 明示的なバッチおよびプロシージャ、複数の結果セット: 生成するステートメントが含まれている、複数の結果セットを常に返します。  
+ [b] 明示的なバッチおよびプロシージャ、複数の結果 – セットを生成するステートメントが含まれている、複数の結果セットを常に返します。  
   
 > [!NOTE]  
->  ODBC 1.0 で導入された SQL_MULT_RESULT_SETS オプションは、複数の結果セットを返すことのできるかどうかに関する一般的なだけ情報を提供します。 具体的には、SQL_BS_SELECT_EXPLICIT、SQL_BS_SELECT_PROC または bits が SQL_BATCH_SUPPORT に対して返される場合、または SQL_PARAM_ARRAYS_SELECT の SQL_PAS_BATCH が返される場合は"Y"に設定されます。  
+>  ODBC 1.0 で導入された SQL_MULT_RESULT_SETS オプションでは、複数の結果セットが返されるかどうかの一般的なのみについて説明します。 具体的には、SQL_BS_SELECT_EXPLICIT、SQL_BS_SELECT_PROC または bits が SQL_BATCH_SUPPORT に対して返される場合、または SQL_PARAM_ARRAYS_SELECT SQL_PAS_BATCH が返されます場合"Y"に設定されます。  
   
- 複数の結果を処理するアプリケーションを呼び出す**SQLMoreResults**です。 この関数は、現在の結果を破棄し、次の結果を使用できるようにします。 複数結果がない場合に、SQL_NO_DATA を返します。 たとえば、次のステートメントがバッチとして実行します。  
+ 複数の結果を処理するアプリケーションを呼び出す**SQLMoreResults**します。 この関数は、現在の結果を破棄し、次の結果を使用できるようにします。 これ以外の結果が使用できる場合は、sql_no_data が返さを返します。 たとえば、次のステートメントがバッチとして実行されます。  
   
 ```  
 SELECT * FROM Parts WHERE Price > 100.00;  
 UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00  
 ```  
   
- アプリケーションがによって作成された結果セットから行をフェッチするこれらのステートメントが実行された後、**選択**ステートメントです。 呼び出すことにより、行のフェッチが完了したら、 **SQLMoreResults** repriced された部分の数を使用できるようにします。 必要に応じて、 **SQLMoreResults**取り出されていない行を破棄し、カーソルを閉じます。 その後、アプリケーションを呼び出す**SQLRowCount**方法多くの部分がによって repriced を決定する、**更新**ステートメントです。  
+ アプリケーションによって作成された結果セットから行をフェッチするこれらのステートメントが実行された後、**選択**ステートメント。 呼び出すことにより、行のフェッチが完了したら、 **SQLMoreResults** repriced された部分の数を使用できるようにします。 必要に応じて、 **SQLMoreResults**取り出されていない行を破棄し、カーソルを閉じます。 その後、アプリケーションを呼び出す**SQLRowCount**を判断する方法の多くの部分は、によって repriced された、 **UPDATE**ステートメント。  
   
- これは、すべての結果を利用する前に、バッチ全体ステートメントが実行するかどうかドライバーに固有です。 一部の実装では、ケースでは、呼び出す他のユーザーに**SQLMoreResults**バッチ内の次のステートメントの実行を開始します。  
+ これは、すべての結果ができるようになりますにバッチ全体のステートメントを実行するかどうかドライバー固有です。 このケースでは、これは一部の実装呼び出す他のユーザーで**SQLMoreResults**バッチの次のステートメントの実行をトリガーします。  
   
- バッチ内のステートメントのいずれかが失敗した場合、 **SQLMoreResults** SQL_ERROR または SQL_SUCCESS_WITH_INFO が返されます。 ステートメントが失敗したか失敗したステートメントがバッチ内の最後のステートメントとバッチが中止された場合**SQLMoreResults** SQL_ERROR が返されます。 ステートメントが失敗しました、障害が発生したステートメントなしで、バッチの最後のステートメントとバッチが中断されていない場合**SQLMoreResults** sql_success_with_info が返されます。 SQL_SUCCESS_WITH_INFO は、少なくとも 1 つの結果セットまたはカウントが生成されたことと、バッチが中断されていないことを示します。
+ バッチ内のステートメントのいずれかが失敗した場合、 **SQLMoreResults** SQL_ERROR または SQL_SUCCESS_WITH_INFO が返されます。 ステートメントが失敗しました、失敗したステートメントがバッチ内の最後のステートメントまたはバッチが中止された場合**SQLMoreResults** SQL_ERROR が返されます。 ステートメントが失敗しました、失敗したステートメントは、バッチの最後のステートメントでした。 ときに、バッチが中断されていない場合**SQLMoreResults** sql_success_with_info が返されます。 SQL_SUCCESS_WITH_INFO は、少なくとも 1 つの結果セットまたは数が生成されたことと、バッチが中断されていないことを示します。

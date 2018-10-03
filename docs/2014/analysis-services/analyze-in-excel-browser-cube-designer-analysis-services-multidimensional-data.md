@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196702"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075092"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>[Excel で分析] (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ開発者は、プロジェクトがエンド ユーザーにどのように表示されるかを **"Excel で分析"** で簡単に確認できます。 **"Excel で分析"** 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 この機能は、以前のリリースで [ブラウザー] タブに組み込みのピボットテーブルを提供していた Office Web コントロールに替わるものです。  

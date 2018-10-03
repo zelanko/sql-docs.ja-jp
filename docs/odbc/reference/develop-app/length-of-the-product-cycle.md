@@ -1,32 +1,29 @@
 ---
-title: 製品サイクルの長さ |Microsoft ドキュメント
+title: 製品サイクルの長さ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], product cycle
 - length of the product cycle [ODBC]
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7865238b62dd8228f2902d86d8f6fbaf9efc0b7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656150"
 ---
 # <a name="length-of-the-product-cycle"></a>製品サイクルの長さ
-相互運用性に関する最終的な質問は、時間です。 Noninteroperable の 1 つの開発よりも時間がかかります通常相互運用可能なアプリケーションを開発します。 理由は、アプリケーションする必要があります DBMS の機能を確認、さまざまな Dbms の異なる方法で、同じ操作を実行、Dbms によってのみでサポートされる機能を回避するなどです。  
+相互運用性に関する最後の質問には時間です。 通常、相互運用可能なアプリケーションの開発 noninteroperable の 1 つの開発よりも時間がかかります。 理由は、アプリケーションする必要があります DBMS 機能を確認、さまざまな Dbms の異なる方法で同じタスクを実行、一部の Dbms でサポートされる機能を回避するようのです。  
   
- 開発時だけでなく、製品の有効期間を考慮する必要があります。 間、1 つの DBMS から移行する場合は、データを転送するアプリケーションなど、1 回使用するアプリケーションが設計されている場合、相互運用可能なことでポイントはありません。 アプリケーションは 1 回使用され、破棄されます。  
+ だけでなく、開発時間製品の有効期間と見なす必要があります。 アプリケーションの目的は、別の 1 つの DBMS から移行する場合は、データを転送するアプリケーションなど、1 回使用する場合の相互運用可能なポイントはありません。 アプリケーションは 1 回使用され、破棄されます。  
   
- アプリケーション時間が長く存在する場合、相互運用可能なアプリケーションとして管理しやすく場合があります。 これはターゲットとして 1 つの DBMS を持つカスタム アプリケーションにも当てはまります。 その理由は、相互運用可能なコードがデータベース機能の限定されたサブセットを使用します。 基になる DBMS の変更が発生した場合でも、使用できる機能を保持するには、ドライバーが必要です。 したがって、相互運用可能なコードの変更に対処する負担を移動、DBMS アプリケーション開発者はドライバーの開発者からです。
+ 長期間存在する場合、アプリケーション、容易に相互運用可能なアプリケーションとして管理する場合があります。 これは、ターゲットとして 1 つの DBMS を持つカスタム アプリケーションにも当てはまります。 理由は、相互運用可能なコードがデータベース機能の限定されたサブセットを使用することです。 基になる DBMS の変更が発生しても、使用できる機能を保持するには、ドライバーが必要です。 そのため、相互運用可能なコードはアプリケーション開発者は、ドライバー開発者から、dbms の変更に対処する負担を切り替えることができます。

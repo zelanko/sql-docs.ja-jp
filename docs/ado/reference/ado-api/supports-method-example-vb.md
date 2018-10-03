@@ -1,32 +1,29 @@
 ---
-title: メソッドの例 (VB) をサポートしています |Microsoft ドキュメント
+title: Supports メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0424b37399e3abb2c2333e8bc6928d2cfde9156
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb2938a37f3cb32b4abc61e36029390179b93fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282511"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830610"
 ---
-# <a name="supports-method-example-vb"></a>メソッドの例 (VB) をサポートしています
-この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)別のカーソルの種類を使用して開いたレコード セットでサポートされるオプションを表示するメソッド。 DisplaySupport プロシージャは、この手順を実行する必要があります。  
+# <a name="supports-method-example-vb"></a>Supports メソッドの例 (VB)
+この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)レコード セットでサポートされるオプションを表示するメソッドが別のカーソルの種類で開かれています。 DisplaySupport プロシージャは、この手順を実行する必要があります。  
   
 ```  
 'BeginSupportsVB  
@@ -166,5 +163,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

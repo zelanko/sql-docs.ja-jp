@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetStrValue Method (ClientNetworkProtocolProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 80aebeac00e27d9e07321013956a13c61b285160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d18fd2b716e46e08d84a966677b4e76b28fc9a88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055952"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>SetStrValue メソッド (ClientNetworkProtocolProperty クラス)
   によって参照される現在のプロパティの文字列値を設定、 [PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス)](clientnetworkprotocolproperty-class.md)値。  
@@ -52,7 +49,7 @@ StrValue
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*StrValue*|現在のプロパティの新しい値を指定する文字列値|  
+|*strValue*|現在のプロパティの新しい値を指定する文字列値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  uint32 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  

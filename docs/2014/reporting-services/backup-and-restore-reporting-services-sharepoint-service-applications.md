@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f6d38ab1f6320faaf31eed394315043d67bb33b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212572"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053582"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
   このトピックでは、SharePoint サーバーの全体管理または PowerShell を使用して、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションをバックアップおよび復元する方法について説明します。 このトピックの内容は次のとおりです。  

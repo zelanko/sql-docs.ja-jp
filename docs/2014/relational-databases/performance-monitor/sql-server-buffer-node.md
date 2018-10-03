@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Buffer Node
 - Buffer Node object
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89575a9d98d44c459d262f7ee23152a3efa0e2b7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1191715e4fbd6c055ef408b4e32e75d985c0a510
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053023"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server: Buffer Node
   **Buffer Node** オブジェクトは、 **Buffer Manager** オブジェクトで提供されるカウンターを補完するカウンターを提供します。 このオブジェクトを使用すると、各 NUMA (non-uniform memory access) ノードに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プール ページの配分を監視することができます。 使用中の NUMA ノードごとに **Buffer Node** オブジェクトのインスタンスがあります。 非 NUMA アーキテクチャでは、 **Buffer Node** オブジェクトのインスタンスが 1 つあります。  

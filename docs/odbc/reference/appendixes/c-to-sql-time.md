@@ -1,48 +1,45 @@
 ---
-title: 'C から SQL へ: 時間 |Microsoft ドキュメント'
+title: 'C から SQL へ: 時間 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], time
 - time data type [ODBC]
 - converting data from c to SQL types [ODBC], time
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 381a0ee578b17c37c5646e495025a17538956085
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ea11803847505698ea42d13727b6177f3a24bda
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906117"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606180"
 ---
 # <a name="c-to-sql-time"></a>C から SQL へ: 時刻
-時刻の ODBC C データ型の識別子です。  
+時間の ODBC C データ型の識別子を示します。  
   
  SQL_C_TYPE_TIME  
   
- 次の表は、ODBC SQL データ型が time C データを変換することがありますを示します。 列とテーブルの用語の詳細については、次を参照してください。[に変換するデータを C から SQL データ型を](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)です。  
+ 次の表は、ODBC SQL データ型が time C のデータを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
   
-|SQL 型の識別子|テスト|SQLSTATE|  
+|SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|列のバイト長 > = 8<br /><br /> 列のバイトの長さ < 8<br /><br /> データの値が有効な時刻|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|列の文字の長さ > = 8<br /><br /> 列の長さ < 8 を文字します。<br /><br /> データの値が有効な時刻|n/a<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|列の文字の長さ > = 8<br /><br /> 列の文字の長さ < 8<br /><br /> データの値が有効な時刻|n/a<br /><br /> 22001<br /><br /> 22008|  
 |SQL_TYPE_TIME|データの値が有効な時刻<br /><br /> データの値が有効な時刻|n/a<br /><br /> 22007|  
 |SQL_TYPE_TIMESTAMP|データの値が有効な時刻 [a]<br /><br /> データの値が有効な時刻|n/a<br /><br /> 22007|  
   
- [a] のタイムスタンプの部分が、現在の日付およびタイムスタンプの部分が 0 に設定されている秒の小数部に設定されている日付です。  
+ [a] 日付、タイムスタンプの部分が現在の日付とタイムスタンプの部分が 0 に設定されている秒の小数部を設定します。  
   
- SQL_C_TYPE_TIME 構造で有効な値については、次を参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)、前述の「します。  
+ SQL_C_TYPE_TIME 構造で有効な値については、次を参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)、この付録で以前のバージョン。  
   
- C 時のデータが文字 SQL データに変換されると、結果の文字データは、"*hh*:*mm*:*ss*"の形式です。  
+ C の時刻のデータは SQL データの文字に変換するときに、結果の文字データは、"*hh*:*mm*:*ss*"形式です。  
   
- ドライバーは、C データ型であり、データ バッファーのサイズが時間 C データ型のサイズであると見なされますの時刻からデータを変換するときに、長さ/インジケーターの値を無視します。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+ ドライバーは、C データ型で、データ バッファーのサイズが時間の C データ型のサイズであると仮定の時刻からデータを変換するときに長さ/インジケーター値を無視します。 長さまたはインジケーターの値が渡さ、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー、 *StrLen_or_IndPtr* 引数**SQLBindParameter**します。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.

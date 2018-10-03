@@ -1,32 +1,26 @@
 ---
-title: Azure SQL DB (MySQLToSQL) への接続 |Microsoft ドキュメント
+title: Azure SQL DB (MySQLToSQL) への接続 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d28b5df73e5c22bfd3651aa36190e0ce9179777d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705140"
 ---
-# <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB (MySQLToSQL) への接続します。
-SQL Azure ダイアログ ボックスに接続を使用すると、移行する SQL Azure データベースへの接続します。  
+# <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB への接続 (MySQLToSQL)
+SQL Azure ダイアログ ボックスに、Connect を使用して、移行する SQL Azure データベースに接続します。  
   
-このダイアログ ボックスにアクセスする、**ファイル**メニューの  **SQL Azure への接続**です。 以前接続した場合、コマンドは**SQL Azure に再接続します。**  
+このダイアログ ボックスにアクセスする、**ファイル**メニューの  **SQL Azure への接続**します。 以前接続した場合、コマンドは**SQL Azure に再接続します。**  
   
 ## <a name="options"></a>および  
 **[サーバー名]**  
@@ -35,14 +29,14 @@ SQL Azure ダイアログ ボックスに接続を使用すると、移行する
   
 **[データベース]**  
   
-選択し、入力または**参照**データベース名。  
+選択、入力または**参照**データベース名。  
   
 > [!IMPORTANT]  
-> SSMA for MySQL は SQL Azure での master データベースへの接続をサポートしていません。  
+> SSMA for MySQL は、SQL Azure で master データベースへの接続をサポートしていません。  
   
 **ユーザー名**  
   
-SSMA は、SQL Azure データベースへの接続を使用してユーザー名を入力します。  
+SSMA が SQL Azure データベースへの接続に使用するユーザー名を入力します。  
   
 **Password**  
   
@@ -50,24 +44,24 @@ SSMA は、SQL Azure データベースへの接続を使用してユーザー�
   
 **Encrypt**  
   
-SSMA は、SQL Azure に暗号化された接続をお勧めします。  
+SSMA では、SQL Azure に暗号化された接続をお勧めします。  
   
 ## <a name="create-azure-database"></a>Azure のデータベースを作成します。  
-SQL Azure アカウントでにデータベースがない場合は、最初のデータベースを作成できます。  
+SQL Azure アカウントには、データベースがない場合、は、最初のデータベースを作成できます。  
   
-非常に最初に、新しいデータベースを作成するには次の手順に従います  
+非常に最初に新しいデータベースを作成するには、次の手順に従います  
   
-1.  SQL Azure ダイアログ ボックスに、接続に存在する 参照 ボタンをクリックします。  
+1.  SQL Azure ダイアログ ボックスに、Connect に表示される参照ボタンをクリックします  
   
-2.  データベースが存在しない場合は、次の 2 つのメニュー項目が表示されます。  
+2.  データベースがない場合は、次の 2 つのメニュー項目が表示されます。  
   
-    1.  **(データベースが見つかりません)** は無効になっているし、すべての時間がグレーで表示されます。  
+    1.  **(データベースが見つかりません)** は無効であるすべての時間が淡色表示になりますが  
   
-    2.  **新しいデータベースを作成**SQL Azure アカウントにデータベースがない場合にのみこれを有効にします。 このメニュー項目をクリックすると、Azure データベースの作成 ダイアログ ボックスがあるデータベースの名前とサイズを使用します。  
+    2.  **新しいデータベースの作成**SQL Azure アカウントにデータベースがない場合にのみ有効になっています。 このメニュー項目をクリックするとは、Azure データベースの作成 ダイアログ ボックスはデータベース名とサイズで存在します。  
   
 3.  データベースの作成時に、次の 2 つのパラメーターは入力として指定します。  
   
     1.  **データベース名:** データベース名を入力します。  
   
-    2.  **データベース サイズ:** SQL Azure アカウントで作成する必要のあるデータベースのサイズを選択します。  
+    2.  **データベースのサイズ:** SQL Azure アカウントに作成する必要があるデータベースのサイズを選択します。  
   

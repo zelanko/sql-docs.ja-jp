@@ -1,13 +1,11 @@
 ---
-title: GetObjectOwner メソッド (ADOX) |Microsoft ドキュメント
+title: GetObjectOwner メソッド (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetObjectOwner method [ADOX]
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06f3cb14603c7799e7084af407df437b12be4769
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9b2c967ac293ed59fde6494e12c2afc2c5b6de90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285921"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687210"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner メソッド (ADOX)
-内のオブジェクトの所有者を返します、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)です。  
+内のオブジェクトの所有者を返します、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,20 +39,20 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
   
 #### <a name="parameters"></a>パラメーター  
  *ObjectName*  
- A**文字列**所有者を返す対象となるオブジェクトの名前を指定する値。  
+ A**文字列**所有者を取得する対象のオブジェクトの名前を指定する値。  
   
  *ObjectType*  
- A**長い**いずれかの値の[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)所有者を取得する対象のオブジェクトの種類を指定する定数。  
+ A**長い**いずれかの値の[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)定数は、所有者を取得する対象のオブジェクトの型を指定します。  
   
  *ObjectTypeId*  
- 任意。 A**バリアント**OLE DB 仕様で定義されていないプロバイダーのオブジェクト型の GUID を指定する値。 このパラメーターは必要な場合*ObjectType*に設定されている**adPermObjProviderSpecific**です。 それ以外の場合は使用されません。  
+ 任意。 A**バリアント**OLE DB 仕様で定義されていないプロバイダー オブジェクトの種類の GUID を指定する値。 このパラメーターは必要な場合*ObjectType*に設定されている**adPermObjProviderSpecific**。 それ以外は使用されません。  
   
 ## <a name="remarks"></a>コメント  
- プロバイダーが返すオブジェクトの所有者をサポートしていない場合は、エラーが発生します。  
+ プロバイダーが返すオブジェクトの所有者をサポートしていない場合、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [GetObjectOwner と SetObjectOwner メソッドの例 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
+ [GetObjectOwner および SetObjectOwner メソッドの例 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [SetObjectOwner メソッド](../../../ado/reference/adox-api/setobjectowner-method.md)

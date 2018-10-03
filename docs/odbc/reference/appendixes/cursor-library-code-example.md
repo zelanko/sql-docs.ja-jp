@@ -1,34 +1,31 @@
 ---
-title: カーソル ライブラリのコード例 |Microsoft ドキュメント
+title: カーソル ライブラリのコード例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054cd6d20ff72e69e01defbba3834602fdf2bf47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5dd87cbf93ff2acd7c2c3753e85b1d6f7d110cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691702"
 ---
 # <a name="cursor-library-code-example"></a>カーソル ライブラリのコード例
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないように、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
- 次の例では、カーソル ライブラリを使用して、ORDERS テーブルから各注文の ID、開いている日付は、および状態を取得します。 20 行のデータが表示されます。 ユーザーは、このデータを更新する場合、コードは、行セットのバッファーを更新し、位置指定更新ステートメントを実行します。 最後に、スクロールする方向のユーザーに確認し、プロセスを繰り返します。  
+ 次の例では、カーソル ライブラリを使用して、ORDERS テーブルから各注文の ID、開始日、および状態を取得します。 20 行のデータが表示されます。 ユーザーは、このデータを更新する場合、コードは、行セットのバッファーを更新し、位置指定の update ステートメントを実行します。 最後に、スクロールする方向のユーザーに確認し、プロセスを繰り返します。  
   
 ```  
 #define ROWS 20  

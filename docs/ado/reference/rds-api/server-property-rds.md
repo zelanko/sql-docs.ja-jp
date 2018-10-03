@@ -1,13 +1,11 @@
 ---
-title: サーバー プロパティ (RDS) |Microsoft ドキュメント
+title: サーバー プロパティ (RDS) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,24 +13,23 @@ f1_keywords:
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efe8323ac57dda7d1405777e3be0dc997f955556
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: add581048739a6ba12dc046d2f9362816b661687
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288461"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680622"
 ---
-# <a name="server-property-rds"></a>サーバー プロパティ (RDS)
+# <a name="server-property-rds"></a>Server プロパティ (RDS)
 インターネット インフォメーション サービス (IIS) の名前との通信プロトコルを示します。  
   
- 設定することができます、**サーバー**の OBJECT タグには、デザイン時プロパティ、[.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト、または実行時にコードをスクリプトでします。  
+ 設定することができます、 **Server**のオブジェクト タグでは、デザイン時プロパティ、[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト、またはスクリプト コードの実行時にします。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="syntax"></a>構文  
  **HTTP**  
@@ -93,7 +90,7 @@ computername
 DataControl.Server="computername"  
 ```  
   
- **処理中**  
+ **インプロセス**  
   
  デザイン時の構文  
   
@@ -112,23 +109,23 @@ DataControl.Server=""
   
 ## <a name="parameters"></a>パラメーター  
  *awebsrvr*または*computername*  
- A**文字列**サーバーが、ローカル コンピューター上にある場合に、サーバーがリモート コンピューターです。 または、空の文字列がある場合は、インターネットまたはイントラネット パス、またはコンピューター名を含む値です。  
+ A**文字列**サーバーは、サーバーがローカル コンピューターの場合、リモート コンピューター、または空の文字列がある場合、インターネットまたはイントラネットのパス、またはコンピューターの名前を表す値です。  
   
  *port*  
- 任意。 IIS を実行しているサーバーに接続するために使用するポートです。 Internet Explorer で、ポート番号を設定 (上、**ビュー**  メニューのをクリックして**オプション**、し、選択、**接続** タブ) または IIS でします。  
+ 任意。 IIS を実行しているサーバーに接続するために使用するポート。 Internet Explorer で、ポート番号を設定 (上、**ビュー**  メニューのをクリックして**オプション**を選び、**接続** タブ) または IIS でします。  
   
  *DataControl*  
- オブジェクト変数を表す、 **.rds ですDataControl**オブジェクト。  
+ オブジェクト変数を表す、 **rds.DataControl**オブジェクト。  
   
 ## <a name="remarks"></a>コメント  
- サーバーの場所は、ここで、 **.rds ですDataControl** (つまり、クエリまたは更新) の要求を処理します。 によって既定では、すべての要求の処理、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト、 [MSDFMAP です。ハンドラー](../../../ado/guide/remote-data-service/datafactory-customization.md)コンポーネント、および[MSDFMAP です。INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)指定されたサーバー上のファイルです。 古いマスター_キーと新しい設定を調整するためにサーバーを変更する場合の点に注意**MSDFMAP です。INI**ファイル。 非互換性が別の失敗の 1 つのサーバーで成功した要求があります。 サーバー プロパティが空の文字列に設定されている場合""、これらのオブジェクトがローカル コンピューターに適用されます。  
+ サーバーの場所は、場所、 **rds.DataControl** (つまり、クエリまたは更新) 要求を処理します。 によって既定では、すべての要求の処理、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト、 [MSDFMAP します。ハンドラー](../../../ado/guide/remote-data-service/datafactory-customization.md)コンポーネント、および[MSDFMAP します。INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)指定したサーバー上のファイル。 古いと新しい設定を調整するサーバーを変更するときに注意する**MSDFMAP します。INI**ファイル。 非互換性は、別の失敗を 1 つのサーバーで成功した要求を引き起こす可能性が。 サーバー プロパティが空の文字列に設定されている場合""、これらのオブジェクトは、ローカル コンピューターで使用されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
  [サーバー プロパティの例 (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
- [プロパティ (RDS) 接続します。](../../../ado/reference/rds-api/connect-property-rds.md)   
+ [接続プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [SQL プロパティ](../../../ado/reference/rds-api/sql-property.md)   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 04a293e7377a92e36b96678859a132869b04fb4f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392608"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061272"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
   新しいメモリ最適化テーブルを作成するか、既存のディスク ベース テーブルを [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブルに移行するかに関係なく、各テーブルのメモリ必要量に関する適切な推定を実施することは重要であり、その結果、サーバーで十分なメモリを準備することができます。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
@@ -154,7 +151,7 @@ SELECT * FROM t_hk
 ```  
   
 ##  <a name="bkmk_MemoryForRowVersions"></a> 行のバージョン管理に対応するメモリ  
- ロックを回避するために、インメモリ OLTP は行を更新または削除するときに、オプティミスティック同時実行制御を使用します。 これは、行を更新するときに、行の追加バージョンが作成されることを意味します。 以前のバージョンを使用する可能性のあるすべてのトランザクションが実行を完了するまでは、システムは以前のバージョンを使用可能な状態に保ちます。 行を削除する場合も、システムは更新の場合に似た方法で動作し、以前のバージョンが不要になるまでは、以前のバージョンを使用可能な状態に保ちます。 読み取りと挿入を実行する場合は、行の追加バージョンは作成されません。  
+ ロックを回避するために、インメモリ OLTP は行を更新または削除するときに、オプティミスティック コンカレンシーを使用します。 これは、行を更新するときに、行の追加バージョンが作成されることを意味します。 以前のバージョンを使用する可能性のあるすべてのトランザクションが実行を完了するまでは、システムは以前のバージョンを使用可能な状態に保ちます。 行を削除する場合も、システムは更新の場合に似た方法で動作し、以前のバージョンが不要になるまでは、以前のバージョンを使用可能な状態に保ちます。 読み取りと挿入を実行する場合は、行の追加バージョンは作成されません。  
   
  メモリ内にはいつでも多数の追加行が存在している可能性があり、それらの行は自らのメモリを解放するガベージ コレクション サイクルを待機しているため、これらの追加の行を収容するために十分なメモリを用意する必要があります。  
   

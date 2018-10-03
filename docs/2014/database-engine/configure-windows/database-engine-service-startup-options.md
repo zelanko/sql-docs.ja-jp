@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - startup options [SQL Server]
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b76df2fc563c8170e176bb69d8d6a1e9e3209c98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062002"
 ---
 # <a name="database-engine-service-startup-options"></a>データベース エンジン サービスのスタートアップ オプション
   スタートアップ オプションは、起動時に必要な特定のファイルの場所およびサーバー全体の状態を指定します。 通常は、スタートアップ オプションを指定する必要はありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のトラブルシューティングを行う場合や、特殊な問題が発生し、スタートアップ オプションの使用を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カスタマー サポートから指示された場合のみ指定します。  

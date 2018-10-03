@@ -1,13 +1,11 @@
 ---
-title: SQL への準拠レベル |Microsoft ドキュメント
+title: SQL の適合性レベル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], SQL
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcdb0f98d7260985e418a6eaeb670c40409c518d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2e8ce5aeeb94a4f7a33b22054adc8067e0654ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605950"
 ---
-# <a name="sql-conformance-levels"></a>SQL への準拠レベル
-ドライバーでサポートされている SQL 92 文法のレベルがへの呼び出しによって返される値で示される**SQLGetInfo** SQL_SQL_CONFORMANCE 情報の種類とします。 これは、ドライバーは、sql-92 で定義されているエントリ、FIPS 移行中、中間、またはフル レベルに準拠しているかどうかを示します。  
+# <a name="sql-conformance-levels"></a>SQL の適合性レベル
+ドライバーによってサポートされている SQL 92 文法のレベルがへの呼び出しによって返される値によって示される**SQLGetInfo** SQL_SQL_CONFORMANCE 情報の種類にします。 これは、ドライバーが、sql-92 で定義されたエントリ、FIPS Transitional、中間、または完全なレベルに準拠しているかどうかを示します。  
   
- すべての ODBC ドライバーは、SQL の文法で説明をサポートする必要があります[SQL 文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)付録 c: SQL の文法でします。 この文法では、SQL 92 エントリ レベルのサブセットです。 ドライバーは、その他の SQL をサポートし、127-2 過渡期レベル、sql-92 エントリ、中間、または完全レベルまたは FIPS に準拠することに可能性があります。 指定されたレベルの SQL 92 または FIPS 127-2 に準拠しているドライバーは、追加機能をサポートしてより高いレベルのいずれかでまだ完全に準拠するレベルにはできません。 機能がサポートされているかどうかを決定するには、アプリケーションを呼び出す必要があります**SQLGetInfo**で適切な情報の種類。 SQL 機能の準拠レベルは、対応する情報の種類の説明です。 (を参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明です)。
+ すべての ODBC ドライバーで説明されている最小 SQL 文法をサポートする必要があります[SQL の文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)付録 c: SQL の文法でします。 この文法には、SQL 92 のエントリ レベルのサブセットです。 ドライバーは、その他の SQL をサポートし、SQL 92 エントリ、中間、または完全レベル、または、FIPS に準拠する 127-2 の移行レベルである可能性があります。 特定のレベルの SQL 92 または FIPS 127-2 に準拠しているドライバーより高いレベルのいずれかの追加機能をサポートまだ完全に準拠するレベルにはできません。 機能がサポートされているかどうかを判断するアプリケーションを呼び出す必要があります**SQLGetInfo**で適切な情報の種類。 SQL の機能の準拠レベルは、対応する情報の種類の説明です。 (を参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明です)。

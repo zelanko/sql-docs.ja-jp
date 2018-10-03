@@ -1,38 +1,35 @@
 ---
-title: メソッドの例 (VBScript) の移動 |Microsoft ドキュメント
+title: Move メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279461"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602520"
 ---
-# <a name="move-method-example-vbscript"></a>メソッドの例 (VBScript) を移動します。
-この例では、[移動](../../../ado/reference/ado-api/move-method-ado.md)ユーザー入力に基づいてレコード ポインターを配置する方法です。  
+# <a name="move-method-example-vbscript"></a>Move メソッドの例 (VBScript)
+この例では、[移動](../../../ado/reference/ado-api/move-method-ado.md)ユーザー入力に基づいて、レコードのポインターを配置するメソッド。  
   
- アクティブ サーバー ページ (ASP) で次の例を使用します。 この完全に機能の例を表示するには、データ ソースの C:\Program files \microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にある AdvWorks.mdb (SDK と共にインストールされた) またはパスを反映するようにコード例では編集するかが必要このファイルの実際の位置。 これは、Microsoft Access データベース ファイルです。  
+ 次の例を Active Server Page (ASP) で使用します。 この完全に機能の例を表示するには、C:\Program files \microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にある (SDK がインストールされた) AdvWorks.mdb をソースまたは反映するようにコード例ではパスを編集するデータかが必要このファイルの実際の場所。 これは、Microsoft Access データベース ファイルです。  
   
- 使用して**検索**Adovbs.inc ファイルを見つけて、使用する予定のディレクトリに配置します。 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**MoveVBS.asp**です。 結果は、任意のブラウザーで表示できます。  
+ 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**MoveVBS.asp**します。 任意のブラウザーで結果を表示できます。  
   
- エラー処理の動作を表示する値は整数、文字を入力してください。  
+ 文字またはエラー処理の動作を確認する値を入力してください。  
   
 ```  
 <!-- BeginMoveVBS -->  

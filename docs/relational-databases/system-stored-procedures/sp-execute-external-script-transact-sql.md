@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864400"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 
@@ -102,8 +98,8 @@ sp_execute_external_script
  返されるデータを含む外部スクリプトで変数の名前を指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームである必要があります。 Python、出力は、pandas データ フレームである必要があります。 *output_data_1_name*は**sysname**します。  既定値は*OutputDataSet*します。  
 
  [ **@parallel** = 0 | 1]  
- R スクリプトの並列実行を有効に設定して、`@parallel`パラメーターを 1 にします。 このパラメーターに既定では 0 (並列処理です)。 場合`@parallel = 1`出力が、クライアント コンピューターに直接ストリーミングされていると、`WITH RESULTS SETS`句は必須であり、出力スキーマを指定する必要があります。  
-  
+ R スクリプトの並列実行を有効に設定して、`@parallel`パラメーターを 1 にします。 このパラメーターに既定では 0 (並列処理です)。 場合`@parallel = 1`出力が、クライアント コンピューターに直接ストリーミングされていると、`WITH RESULT SETS`句は必須であり、出力スキーマを指定する必要があります。  
+
  + R スクリプトを使用して、RevoScaleR 関数を使用して、`@parallel`パラメーターをスクリプトが普通に並列化と仮定すると、大規模なデータセットを処理するために役立つことができます。 たとえば、R を使用して`predict`に新しい予測を生成して設定するには、モデルで関数を`@parallel = 1`クエリ エンジンへのヒントとして。 に従って行が分散クエリを並列に処理できる場合、 **MAXDOP**設定します。  
   
  + RevoScaleR 関数を使用する R スクリプトでは、並列処理は自動的に処理され、指定しないでください`@parallel = 1`を**sp_execute_external_script**呼び出します。  
@@ -121,7 +117,7 @@ sp_execute_external_script
 
 使用**sp_execute_external_script**サポートされている言語で記述されたスクリプトを実行します。 現時点では、サポートされている言語は、SQL Server 2016 R Services、および Python および R 用 SQL Server 2017 Machine Learning Services の R です。 
 
-既定では、このストアド プロシージャによって返される結果セットは、名前のない列と出力が。 スクリプト内で使用する列名は、スクリプト環境をローカルであり、出力される結果セットには反映されません。 結果セット列名を使用して、`WITH RESULTS SET`の句[ `EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md)します。
+既定では、このストアド プロシージャによって返される結果セットは、名前のない列と出力が。 スクリプト内で使用する列名は、スクリプト環境をローカルであり、出力される結果セットには反映されません。 結果セット列名を使用して、`WITH RESULT SET`の句[ `EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md)します。
   
  結果セットを返すことに加えてをスカラー値を返すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]出力パラメーターを使用しています。 次の例は、スクリプトへの入力として使用されたシリアル化された R モデルを返す出力パラメーターの使用を示しています。  
   
@@ -281,7 +277,7 @@ END;
 GO
 ```
 
-Python コードで使われている列見出しは、SQL Server への出力ではありません。そのため、WITH RESULTS ステートメントを使って、SQL で使う列名とデータ型を指定します。
+Python コードで使用される列見出しは、SQL Server には出力ではありません。そのため、結果を持つステートメントを使用して、使用する SQL のデータ型と列名を指定します。
 
 スコアリングには、ネイティブな [PREDICT](../../t-sql/queries/predict-transact-sql.md) 関数を使うこともできます。通常、これは Python や R のランタイムを呼び出さないので高速です。
 

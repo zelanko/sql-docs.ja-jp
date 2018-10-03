@@ -1,12 +1,10 @@
 ---
-title: sys.dm_cryptographic_provider_sessions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_cryptographic_provider_sessions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_sessions
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 739c1fe64814ab53bfcf166cacac2d21655df8d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9257b158546ee9a64f38e5143cf6030c4dc3060c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686826"
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +48,15 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|暗号化サービス プロバイダーの ID 番号。|  
 |**session_handle**|**varbytes(8)**|暗号セッション ハンドル。|  
 |**identity**|**nvarchar(128)**|暗号プロバイダーでの認証に使用する ID。|  
 |**spid**|**short**|接続のセッション ID SPID。 詳細については、「[@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)」を参照してください。|  
   
-## <a name="remarks"></a>解説  
- **Sys.dm_cryptographic_provider_sessions**ビューは、現在の接続をパブリックに表示します。 表示するにはすべての暗号接続する必要があります、**コントロール**server 権限が許可されます。  
+## <a name="remarks"></a>コメント  
+ **Sys.dm_cryptographic_provider_sessions**ビューは、現在の接続をパブリックに表示します。 すべての暗号接続を表示するが必要、**コントロール**サーバー アクセス許可。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

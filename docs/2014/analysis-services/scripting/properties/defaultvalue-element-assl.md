@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DefaultValue Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultValue element
 ms.assetid: 87e964a3-f317-46c3-98c7-b3621765c77b
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4137e73097630d62358ea874a38afda6d90eb87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bca461707deee287302dc23c3c8ac6b3a35b88c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055033"
 ---
 # <a name="defaultvalue-element-assl"></a>DefaultValue 要素 (ASSL)
   関連付けられている、読み取り専用の既定値が含まれる[ServerProperty](../objects/serverproperty-element-assl.md)要素。  

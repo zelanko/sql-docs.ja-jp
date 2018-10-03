@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - ISQLServerErrorInfo interface
 ms.assetid: a8323b5c-686a-4235-a8d2-bda43617b3a1
-caps.latest.revision: 30
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2459de2a21ebf14d2852518468f1748cb13b97c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a87adbe98b66c0330093e9bd0be077c4827a25cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050114"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo (OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを定義、 **ISQLServerErrorInfo**エラー インターフェイス。 このインターフェイスは詳細情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重大度や状態などのエラー。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーを定義します**ISQLServerErrorInfo**インタ フェースのエラーです。 このインターフェイスは、重大度や状態など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細情報を返します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

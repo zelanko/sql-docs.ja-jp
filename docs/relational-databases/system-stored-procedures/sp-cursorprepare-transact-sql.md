@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32e045fe8cc12a8419e94759176e2871db2d2422
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5c32bc8d9b8cca81c560e12b82f58169b257ca1a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036528"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857000"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +89,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  要求された値がによって定義されたカーソルに適していない可能性があるため*stmt*、このパラメーターは両方として機能入力し、出力します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な値が割り当てられます。  
   
  *ccopt*  
- 同時実行制御オプションです。 *ccopt* 、省略可能なパラメーターが、次のいずれかを必要な**int**値を入力します。  
+ コンカレンシー制御オプションです。 *ccopt* 、省略可能なパラメーターが、次のいずれかを必要な**int**値を入力します。  
   
 |値|説明|  
 |-----------|-----------------|  

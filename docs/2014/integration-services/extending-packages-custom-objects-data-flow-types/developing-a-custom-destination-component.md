@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 972c1816a62fc7a3759d7a67a96b162d6cadfde0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03d0116338f6366759ef6961c0c33d67c2fe718d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070175"
 ---
 # <a name="developing-a-custom-destination-component"></a>カスタム変換先コンポーネントの開発
   開発者は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用すると、任意のカスタム データ ソースに接続してデータを格納するためのカスタム変換先コンポーネントを記述することができます。 カスタム変換先コンポーネントは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれている、既存の変換先コンポーネントを使用してもアクセスできないデータ ソースに接続する必要がある場合に役立ちます。  

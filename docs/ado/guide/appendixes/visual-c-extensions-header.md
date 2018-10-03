@@ -1,13 +1,11 @@
 ---
-title: Visual C 拡張機能ヘッダー |Microsoft ドキュメント
+title: Visual C の拡張機能ヘッダー |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d4b5c823cb992d6b3895740d4c227ae82b30c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4dd004d781f267fdc9872dbab32fefe4352558cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270151"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741290"
 ---
-# <a name="visual-c-extensions-header"></a>Visual C 拡張機能ヘッダー
-次のヘッダー **icrsint.h**、クライアントからのフィールドを取得できるようにするインターフェイスの詳細、 **Recordset**から派生したクラスで定義された変数に**CADORecordBinding**. アクセスする各フィールドに、ADO バインディング マクロを指定する必要があります。  
+# <a name="visual-c-extensions-header"></a>Visual C++ Extensions のヘッダー
+次のヘッダー **icrsint.h**、クライアントからのフィールドを取得できるようにするインターフェイスの詳細、 **Recordset**から派生したクラスで定義された変数に**CADORecordBinding**. 各フィールドにアクセスするための ADO バインディング マクロを指定する必要があります。  
   
 ```  
 #ifndef _ICRSINT_H_  
@@ -212,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>参照  
- [Visual C 拡張機能の使用例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [Visual C 拡張機能の例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Visual C++ Extensions を使用する](../../../ado/guide/appendixes/using-visual-c-extensions.md)

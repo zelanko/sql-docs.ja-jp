@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - string-length function
 - fn:string-length function
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
-caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9871fb0f7f11a83506631ecb27d756bfaf8d036e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38059776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796270"
 ---
-# <a name="functions-on-string-values---string-length"></a>文字列長の文字列値に対して関数
+# <a name="functions-on-string-values---string-length"></a>文字列値に使用する関数 - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   文字列の長さを文字数として返します。  

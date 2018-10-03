@@ -6,18 +6,16 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d1d00b5d3e5650e628935c840f280b278869b62
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701460"
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,8 +46,8 @@ Bacpac をダウンロード サンプル WideWorldImporters データベース�
 SQL Server インスタンスにバックアップを復元するには、Management Studio を使用できます。
 
 1. SQL Server Management Studio を開き、対象の SQL Server インスタンスに接続します。
-2. 右クリックし、**データベース**ノード、および選択**Restore Database**します。
-3. 選択**デバイス** ボタンをクリックします **.。**
+2. **データベース**ノードを右クリックし、**Restore Database** を選択します。
+3. 選択**デバイス** ボタンをクリックします **。**
 4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**サーバーのファイル システム内のデータベースのバックアップに移動して、バックアップを選択します。 **[OK]** をクリックします。
 5. 必要に応じて、データのターゲットの場所を変更し、ログ ファイルで、**ファイル**ウィンドウ。 ベスト プラクティスとしてデータを配置し、ログ ファイルを別のドライブにあるに注意してください。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters 必要があります。

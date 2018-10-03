@@ -1,13 +1,11 @@
 ---
-title: Item プロパティ (ADO) |Microsoft ドキュメント
+title: Item プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -45,16 +43,15 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655656"
 ---
 # <a name="item-property-ado"></a>Item プロパティ (ADO)
 名前または序数で、コレクションの特定のメンバーを示します。  
@@ -73,9 +70,9 @@ Set object = collection.Item ( Index )
  A**バリアント**名前またはコレクション内のオブジェクトの序数のいずれかに評価される式。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**項目**プロパティをコレクションから特定のオブジェクトを取得します。 場合**項目**に対応するコレクションでオブジェクトを検索することはできません、*インデックス*引数、エラーが発生します。 また、一部のコレクションが名前付きオブジェクトをサポートしません。これらのコレクションの序数参照を使用する必要があります。  
+ 使用して、**項目**コレクションに特定のオブジェクトを返すプロパティ。 場合**項目**に対応するコレクションでオブジェクトを検索することはできません、*インデックス*引数、エラーが発生します。 また、一部のコレクションが名前付きのオブジェクトをサポートしません。これらのコレクションの序数参照を使用する必要があります。  
   
- **項目**プロパティは、すべてのコレクションの既定のプロパティです。 したがって、次の構文形式を相互交換。  
+ **項目**プロパティは、すべてのコレクションの既定のプロパティ。 そのため、次の構文形式を交換できます。  
   
 ```  
 collection.Item (Index)  

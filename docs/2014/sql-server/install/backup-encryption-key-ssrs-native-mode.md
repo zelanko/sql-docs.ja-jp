@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.backupencryptionkey.F1
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89d5ffa496220bc14b963ebbad08b89b919eec3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db573e1a070b110ff0f5224a6d079f3fe7c377ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191245"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061692"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>暗号化キーをバックアップする (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー データベースに格納されている機密データをセキュリティで保護するのに暗号化キーを使用します。 このキーのバックアップを取ることは、暗号化された接続文字列と資格情報に継続してアクセスできるようにするうえで不可欠です。 レポート サーバー データベースを別のコンピューターに移動する場合や、レポート サーバー サービス アカウントのユーザー名またはパスワードを変更する場合は、このキーのバックアップ コピーを取る必要があります。 どちらの操作でも、前もって作成したバックアップ コピーからキーを復元する必要があります。  

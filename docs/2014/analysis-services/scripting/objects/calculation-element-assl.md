@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Calculation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Calculation element
 ms.assetid: c96e37cf-b7ff-4296-a043-f9a5a5c444ce
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7900d511cb847a98d9b4f037a39864b0b89c93a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c33adc47ad29224753109d1666f0f579d146409
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049882"
 ---
 # <a name="calculation-element-assl"></a>Calculation 要素 (ASSL)
   計算を関連付けます Asssociates、[パースペクティブ](perspective-element-assl.md)要素。  

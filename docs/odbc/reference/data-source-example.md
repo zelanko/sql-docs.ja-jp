@@ -1,32 +1,29 @@
 ---
-title: データ ソースの使用例 |Microsoft ドキュメント
+title: データ ソースの例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], examples
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e5596107f5bae9ceeab8ae105203e89584e854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69cc3a0d32c12c71b3909bda23dea93417475f2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847631"
 ---
 # <a name="data-source-example"></a>データ ソースの例
-Microsoft® Windows NT® Server または Windows 2000 Server、Microsoft Windows NT ワークステーション/Windows 2000 Professional、または Microsoft Windows® 95/98、マシンのデータを実行するコンピューターでは、ソース情報がレジストリに格納されます。 によっては、レジストリ キーの情報に格納されている、データ ソースと呼ばれます、*ユーザー データ ソース*または*システム データ ソース*です。 ユーザー データ ソースは、HKEY_CURRENT_USER キーには保存され、現在のユーザーにのみ提供されます。 システム データ ソースは、HKEY_LOCAL_MACHINE キーに格納され、1 台のコンピューターの 1 つ以上のユーザーによって使用されることができます。 また、システム全体のサービスは、アクセスできるように、データ ソースに、マシンにログオンしているユーザーがいない場合でもによっても使用できます。 ユーザーおよびシステム データ ソースの詳細については、次を参照してください。 [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)です。  
+Microsoft® Windows NT® Server または Windows 2000 Server、Microsoft Windows NT のワークステーションと Windows 2000 Professional、または Microsoft Windows® 95/98、マシンのデータを実行するコンピューターでは、基になる情報がレジストリに格納されます。 によって、どのレジストリ キー情報が格納されている、データ ソースと呼ばれます、*ユーザー データ ソース*または*システム データ ソース*します。 ユーザー データ ソースは、HKEY_CURRENT_USER キーに格納され、現在のユーザーにのみ使用します。 システム データ ソースは、HKEY_LOCAL_MACHINE キーの下では保存され、1 台のコンピューターの 1 つ以上のユーザーが使用することができます。 また、システム全体のサービスは、コンピューターにユーザーがログインしていない場合でも、データ ソースへのアクセスを獲得しによっても使用できます。 ユーザーおよびシステム データ ソースの詳細については、次を参照してください。 [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)します。  
   
- ユーザーが次の 3 つのユーザー データ ソース: 担当者とインベントリを使用して Oracle データベース管理システムです。および給与支払いは、Microsoft SQL Server データベース管理システムを使用します。 データ ソースのレジストリ値があります。  
+ ユーザーが次の 3 つのユーザー データ ソースを持っているとします Oracle DBMS では; を使用して、担当者およびインベントリ。給与支払、Microsoft SQL Server DBMS を使用します。 データ ソースのレジストリ値は次のようになります。  
   
 ```  
 HKEY_CURRENT_USER  
@@ -39,7 +36,7 @@ SOFTWARE
                     Payroll : REG_SZ : SQL Server  
 ```  
   
- および給与データ ソースのレジストリ値があります。  
+ あり、給与データ ソースのレジストリ値があります。  
   
 ```  
 HKEY_CURRENT_USER  

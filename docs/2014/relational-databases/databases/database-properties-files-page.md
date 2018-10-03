@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f829419b11015209ee06f39b24ec0f773874d41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26b387537a2d3cb6a4e6ed8e6b9deda435626142
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057032"
 ---
 # <a name="database-properties-files-page"></a>「データベースのプロパティ」 ([ファイル] ページ)
   このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] ([ファイル] ページ)** 、および **[新しいデータベース] ([全般] ページ)** に該当します。  

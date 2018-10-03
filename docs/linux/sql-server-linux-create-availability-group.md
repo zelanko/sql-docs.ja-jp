@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 21ca1eea093121107b2e04cff40b6f749a6c6bda
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083494"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692140"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>作成し、SQL Server on Linux の可用性グループの構成
 
@@ -675,7 +673,7 @@ Pacemaker の高可用性クラスター基[!INCLUDE[ssnoversion-md](../includes
     
     場所*NameForIPResource* IP リソースに名前を指定します*NameForAGResource* sles、AG リソースの名前は、 *NameForConstraint*の名前を指定します、制約です。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルで作成し、可用性グループを構成する方法について説明しました[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 上。 学習したします。
 > [!div class="checklist"]

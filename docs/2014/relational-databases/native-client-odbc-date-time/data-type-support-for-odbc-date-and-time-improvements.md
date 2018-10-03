@@ -1,29 +1,26 @@
 ---
-title: ODBC の日付と時刻の強化機能のデータ型のサポート |Microsoft Docs
+title: ODBC の日付と時刻の強化機能のデータ型のサポート |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e0ee5b224f042cbf8f2b7a12fa96e9057b9a18d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1823e1416f546105205782d313f75e148e0aa848
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415111"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052702"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC の日付と時刻の強化に対するデータ型のサポート
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC の日付/時刻の強化に対するデータ型のサポート
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付と時刻のデータ型をサポートする ODBC 型について説明します。  
   
 ## <a name="data-type-mapping-in-parameters-and-resultsets"></a>パラメーターと結果セットでのデータ型マッピング  
@@ -40,7 +37,7 @@ ms.locfileid: "37415111"
 |DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
-|[時刻]|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
+|Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
   
@@ -63,7 +60,7 @@ ms.locfileid: "37415111"
 |DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> このデータ型の精度は 1 分です。 秒の部分は、出力時には 0 になり、入力時にはサーバーによって丸められます。|  
 |date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
-|[時刻]|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
+|Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' - yyyy-mm-dd hh:mm:ss [.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
   

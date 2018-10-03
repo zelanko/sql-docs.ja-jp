@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_memory_cache_entries (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_memory_cache_entries (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_memory_cache_entries
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_entries dynamic management view
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb6c3adbf021eb08b8e76892217cf04c9caeafe0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2d00a5e39057f6c1410cb170095bc9c0d5f322fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763180"
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +32,9 @@ ms.lasthandoff: 05/23/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、キャッシュ内のすべてのエントリに関する情報を返します。 このビューを使って、キャッシュ エントリとそれらに関連するオブジェクトをトレースできます。 また、キャッシュ エントリに関する統計を取得することもできます。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_memory_cache_entries**です。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_memory_cache_entries**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|キャッシュのアドレス。 NULL 値は許可されません。|  
 |**name**|**nvarchar (256)**|キャッシュの名前。 NULL 値は許可されません。|  
@@ -54,12 +52,12 @@ ms.lasthandoff: 05/23/2018
 |**pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> このキャッシュ エントリで使用されるメモリの量 (KB 単位)。  NULL 値は許可されません。|  
 |**entry_data**|**nvarchar(2048)**|キャッシュ エントリのシリアル化された表示。 この情報は、キャッシュの保存に依存します。 NULL 値が許可されます。|  
 |**pool_id**|**int**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> キャッシュ エントリに関連付けられているリソース プール ID。 NULL 値が許可されます。<br /><br /> katmai ではない|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限 
+## <a name="permissions"></a>アクセス許可 
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
 
 ## <a name="see-also"></a>参照  
  

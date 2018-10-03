@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4bff0c3d4ed7f1eb155b170f0ffdbcaac45c20ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b9d254bc40b8a4f36bd73913a33729d3235dd8dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061812"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint ライブラリへの共有データ ソースのパブリッシュ
   SharePoint 統合モードで実行されているレポート サーバーに共有データ ソースをパブリッシュするには、レポート デザイナーでレポート プロジェクトのプロパティを設定する必要があります。 プロジェクトのプロパティでは、サーバー、レポート、および共有データ ソースへの参照はすべて、完全修飾 URL で指定する必要があります。  
@@ -46,7 +43,7 @@ ms.locfileid: "37317912"
   
 6.  **[TargetReportFolder]** に、ライブラリまたはライブラリ フォルダーの URL を入力します。 たとえば、「http:*//TestServer/TestSite/Documents/Reports*」と入力します。  
   
-7.  **[TargetServerURL]** に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 たとえば、「http://*servername*」、「http://*servername*/*site*」、または「http://*servername*/*site*/*subsite*」のように指定します。  
+7.  **[TargetServerURL]** に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 たとえば、「 http://*servername*」、「 http://*servername*/*site*」、または「 http://*servername*/*site*/*subsite*」のように指定します。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

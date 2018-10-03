@@ -4,30 +4,24 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Getting started, MySQL metadata explorer
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a6ab8bdc69707374eaff1600db78abbca3ea41be
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679670"
 ---
-# <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Ssma for MySQL (MySQLToSQL) 作業の開始
+# <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入門 (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL では、迅速に MySQL データベースのスキーマを SQL Server または Azure SQL DB のスキーマに変換、SQL Server または Azure SQL DB に結果のスキーマをアップロードおよび MySQL から SQL Server または Azure SQL DB にデータを移行することができます。  
   
 このトピックでは、インストール プロセスを紹介し、SSMA ユーザー インターフェイスを理解し、支援します。  

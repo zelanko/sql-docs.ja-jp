@@ -1,14 +1,11 @@
 ---
-title: sysmail_add_profile_sp (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmail_add_profile_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16091d14ba4971ae8e07633dd111dd5f5a2facde
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e62a0452a5e7e31591d368cbbcb2050272df5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260225"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734730"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,17 +54,17 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- データベース メール プロファイルにはデータベース メール アカウントをいくつでも保持できます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 プロファイルにアカウントを追加する方法の詳細については、次を参照してください。 [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)です。  
+## <a name="remarks"></a>コメント  
+ データベース メール プロファイルにはデータベース メール アカウントをいくつでも保持できます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、次を参照してください。 [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)します。  
   
- ストアド プロシージャで、プロファイル名と説明を変更することができます**sysmail_update_profile_sp**プロファイル id は、プロファイルの有効期間中に、します。  
+ プロファイルの名前と説明は、ストアド プロシージャで変更できます**sysmail_update_profile_sp**プロファイル id は変わらず、プロファイルの有効期間中に、します。  
   
- プロファイル名は、Microsoft に対して一意である必要があります[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]か、ストアド プロシージャがエラーを返します。  
+ プロファイル名は、Microsoft に対して一意である必要があります[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]またはストアド プロシージャがエラーを返します。  
   
- ストアド プロシージャ**sysmail_add_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
+ ストアド プロシージャ**sysmail_add_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
  **A.新しいプロファイルを作成します。**  
@@ -81,9 +77,9 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B.プロファイルの id を変数に保存、新しいプロファイルを作成します。**  
+ **B.プロファイル id を変数に保存、新しいプロファイルを作成します。**  
   
- 次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。 例では、プロファイル id 番号、変数に格納`@profileId`し、新しいプロファイルのプロファイル id 番号を含む結果セットを返します。  
+ 次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。 例では、プロファイル id 番号を変数に格納する`@profileId`し、新しいプロファイルのプロファイル id 番号を含む結果セットを返します。  
   
 ```  
 DECLARE @profileId INT ;  

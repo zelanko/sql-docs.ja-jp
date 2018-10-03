@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data source properties
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c04c4da84040c97656c956698b4e66bd5a6a5862
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2757c13236b871eccc91066e064924c27cc19a93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056812"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
   共有データ ソースは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーで実行される複数のレポート、モデル、およびデータ ドリブン サブスクリプションから参照できる一連のデータ ソース接続プロパティの集まりです。 共有データ ソースを使用することで、時間の経過に伴って変更されることの多いデータ ソースのプロパティを容易に管理できます。 ユーザーのアカウントまたはパスワードが変更された場合や、データベースを別のサーバーに移動した場合は、接続情報を 1 か所で更新できます。  

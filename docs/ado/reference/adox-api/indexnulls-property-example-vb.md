@@ -1,32 +1,29 @@
 ---
-title: IndexNulls プロパティの例 (VB) |Microsoft ドキュメント
+title: IndexNulls プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - IndexNulls property [ADOX], Visual Basic example
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11141a152d680ff843387de3a5998aff007eef06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688130"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls プロパティの例 (VB)
-この例で、 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、新しいインデックスが作成されの値を設定**IndexNulls** (リスト ボックスから list1) のユーザー入力に基づいて。 次に、**インデックス**に追加されますが、**従業員**[テーブル](../../../ado/reference/adox-api/table-object-adox.md)で、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)です。 新しい**インデックス**に適用される、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブル、および**レコード セット**が開かれています。 新しいレコードを追加、**従業員**テーブルで、 **Null**インデックス付きフィールドの値。 この新しいレコードが表示されるかどうかの設定によって異なります、 **IndexNulls**プロパティです。  
+この例では、 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードは、新しいインデックスが作成されの値を設定**IndexNulls** (List1 という名前のリスト ボックス) からのユーザー入力に基づいて。 次に、**インデックス**に追加されますが、**従業員**[テーブル](../../../ado/reference/adox-api/table-object-adox.md)で、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)します。 新しい**インデックス**に適用される、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブル、および**レコード セット**が開かれます。 新しいレコードを追加、**従業員**テーブルで、 **Null**インデックス付きフィールドの値。 この新しいレコードを表示するかどうかの設定によって異なります、 **IndexNulls**プロパティ。  
   
 ```  
 ' BeginIndexNullsVB  

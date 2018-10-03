@@ -1,37 +1,34 @@
 ---
-title: SQLSetConnectOption (Paradox ドライバー) |Microsoft ドキュメント
+title: SQLSetConnectOption (Paradox ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLSetConnectOption
 ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a4edef9b5c4f48a3abba39962978a9e38a008ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fac808000fb2c1fba4993b8a9ee3639d702bb48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767280"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption (Paradox ドライバー)
 > [!NOTE]  
->  このトピックでは、Paradox ドライバー固有の情報を提供します。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
+>  このトピックでは、Paradox ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
 |fOption|解説|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption は、SQL_MODE_READ_ONLY または SQL_MODE_READ_WRITE のいずれかに設定することができます。 ただし、SQL_ACCESS_MODE が SQL_MODE_READ_ONLY に設定されている場合、ドライバーは更新を禁止できません。|  
-|SQL_AUTOCOMMIT|Paradox ドライバーでは、トランザクションをサポートしていないために (既定の状態) に設定されている SQL_AUTOCOMMIT のみサポートされます。|  
+|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption SQL_MODE_READ_ONLY または SQL_MODE_READ_WRITE のいずれかに設定できます。 ただし、SQL_ACCESS_MODE が SQL_MODE_READ_ONLY に設定されている場合、ドライバーは更新を禁止できません。|  
+|SQL_AUTOCOMMIT|Paradox ドライバーでは、トランザクションをサポートしていないため SQL_AUTOCOMMIT に設定されています (既定の状態) でのみサポートします。|  
 |SQL_CURRENT_QUALIFIER|サポートされています。|  
 |SQL_LOGIN_TIMEOUT|サポートされていません。|  
 |SQL_OPT_TRACE|サポートされています。|  

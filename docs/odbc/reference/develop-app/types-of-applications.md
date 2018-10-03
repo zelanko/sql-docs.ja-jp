@@ -1,13 +1,11 @@
 ---
-title: アプリケーションの種類 |Microsoft ドキュメント
+title: アプリケーションの種類 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading applications [ODBC], application types
@@ -16,71 +14,70 @@ helpviewer_keywords:
 - application upgrades [ODBC], application types
 - application compatibility issues [ODBC]
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c2283c81c1ad5389a8662c14ce79942a3cc4b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e46075e55aa14784e967b3620de5855a47c4bd6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676620"
 ---
 # <a name="types-of-applications"></a>アプリケーションの種類
 ODBC アプリケーションは、次のように分類できます。  
   
--   **純粋な ODBC 2 です。**  
+-   **純粋な ODBC 2。**  
      ***x*アプリケーション**32 ビット アプリケーションです。  
   
-    -   ODBC 2 だけを呼び出します。*x*関数 (ODBC 1.0 関数を含む**SQLSetParam**)。 これらには、ODBC 1 が含まれます。*x* 32 ビットへ移植されたアプリケーション。  
+    -   ODBC 2 だけを呼び出します。*x*関数 (ODBC 1.0 関数を含む**SQLSetParam**)。 ODBC 1 が含まれます。*x* 32 ビットへ移植されたアプリケーション。  
   
-    -   ODBC 2 が必要です。*x*の動作の変更があった機能の動作です。 (を参照してください[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)詳細についてはします)。  
+    -   ODBC 2 を想定しています。*x*の動作が変更されている機能の動作。 (を参照してください[動作が変更される](../../../odbc/reference/develop-app/behavioral-changes.md)詳細についてはします)。  
   
     -   再コンパイルされていない ODBC 3.5 ヘッダー。  
   
--   **純粋な ODBC 2 です。**  
-     ***x*アプリケーションの再コンパイル**純粋な ODBC 2 *。x*が再コンパイルされた ODBC 3.5 ヘッダー ファイルを使用してアプリケーション 0x0250 = ODBCVER を設定します。  
+-   **純粋な ODBC 2。**  
+     ***x*アプリケーションの再コンパイル**純粋な ODBC 2 *。x* ODBC 3.5 ヘッダー ファイルを使用して再コンパイルされているアプリケーション 0x0250 = ODBCVER を設定します。  
   
--   **純粋な ODBC 2 です。**  
-     ***x* Unicode アプリケーション**純粋な ODBC 2 *。x*は、Unicode 準拠、SQL_WCHAR データ型を使用してアプリケーションを再コンパイルします。  
+-   **純粋な ODBC 2。**  
+     ***x* Unicode アプリケーション**純粋な ODBC 2 *。x* Unicode 準拠し、SQL_WCHAR データ型を使用するアプリケーションを再コンパイルします。  
   
--   **純粋なグループと ISO**–**準拠 ODBC アプリケーション**32 ビット アプリケーションです。  
+-   **純粋なグループと ISO**–**ODBC に準拠したアプリケーション**32 ビット アプリケーションです。  
   
-    -   グループを開くまたは ISO CLI 標準で定義された関数を呼び出します。 (これらの関数は、使用されなくなった 3.0 関数を含めることがあります)  
+    -   グループを開くまたは ISO CLI 標準で定義された関数を呼び出します。 (これらの関数は、非推奨の 3.0 関数を含めることができます)  
   
     -   Unicode データ型を使用しません。  
   
-    -   動作の変更があった機能 ODBC 3.0 の動作を想定しています。  
+    -   動作が変更されている機能の動作を ODBC 3.0 が必要です。  
   
 -   **純粋な ODBC 3.0 アプリケーション**32 ビット アプリケーションです。  
   
-    -   3.0 ヘッダーでコンパイルされます。  
+    -   3.0 のヘッダーと共にコンパイルされます。  
   
-    -   場合によっては非推奨ものも含めて、任意の ODBC 3.0 関数を呼び出します。  
+    -   場合によっては非推奨のものも含めて、すべての ODBC 3.0 関数を呼び出します。  
   
-    -   動作の変更があった機能 ODBC 3.0 の動作を想定しています。  
+    -   動作が変更されている機能の動作を ODBC 3.0 が必要です。  
   
 -   **純粋な ODBC 3.5 アプリケーション**32 または 64 ビット アプリケーションです。  
   
     -   Unicode データ型を使用することがあります。  
   
-    -   場合によっては非推奨ものも含めて、任意の ODBC 3.5 関数を呼び出します。  
+    -   場合によっては非推奨のものも含めて、すべての ODBC 3.5 関数を呼び出します。  
   
-    -   動作の変更があった機能 ODBC 3.5 の動作を想定しています。  
+    -   動作が変更されている機能の動作を ODBC 3.5 が必要です。  
   
--   **純粋な ODBC 3.8 (またはそれ以降) アプリケーション**32 ビットまたは 64 ビット アプリケーションです。  
+-   **ODBC 3.8 (またはそれ以降) アプリケーションを純粋な**32 ビットまたは 64 ビット アプリケーションです。  
   
     -   Unicode データ型を使用することがあります。  
   
-    -   場合によっては非推奨ものも含めて、任意の ODBC 3.8 関数を呼び出します。  
+    -   場合によっては非推奨のものも含めて、すべての ODBC 3.8 関数を呼び出します。  
   
-    -   動作の変更があった機能の ODBC 3.8 動作を想定しています。  
+    -   動作が変更されている機能の ODBC 3.8 の動作を期待しています。  
   
 -   **アプリケーションの置き換え**32 または 64 ビット アプリケーションです。  
   
     -   重複している機能の新しい動作を実装します。  
   
-    -   条件付きコード内でのみ ODBC の以降のバージョンの新機能を使用します。  
+    -   条件付きコード内でのみ新しいバージョンの ODBC での新しい機能を使用します。  
   
-    -   動作の変更を処理する条件付きコードが制限されているまたは以前のバージョンの ODBC アプリケーションに登録されています。
+    -   動作の変更を処理する条件付きのコードが限られているまたは以前のバージョンの ODBC アプリケーションに登録されています。

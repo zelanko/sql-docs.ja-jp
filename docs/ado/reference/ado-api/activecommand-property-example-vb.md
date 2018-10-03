@@ -1,34 +1,31 @@
 ---
-title: ActiveCommand プロパティの例 (VB) |Microsoft ドキュメント
+title: ActiveCommand プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ActiveCommand property [ADO], Visual Basic example
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30e70c09826344db57ea9152447d2d197bb33ef7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275141"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617150"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand プロパティの例 (VB)
-この例で、 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティです。  
+この例では、 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティ。  
   
- サブルーチンが指定された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**ActiveCommand**プロパティの使用にコマンド テキストや作成パラメーターを表示、**レコード セット**です。  
+ サブルーチンを指定、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**ActiveCommand**コマンド テキストと作成パラメーターを表示するプロパティが使用される、**レコード セット**します。  
   
 ```  
 'BeginActiveCommandVB  
@@ -94,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint**ルーチンがのみに与え、**レコード セット**オブジェクト、まだコマンド テキストや作成パラメーターを印刷する必要があります、 **Recordset**です。 これを行うため、 **Recordset**オブジェクトの**ActiveCommand**プロパティにより、関連付けられている[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
+ **ActiveCommandXprint**ルーチンがのみ与え、**レコード セット**オブジェクト、まだコマンド テキストと作成パラメーターを印刷する必要があります、**レコード セット**します。 これ行うため、 **Recordset**オブジェクトの**ActiveCommand**プロパティと関連付けられている[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
   
- **コマンド**オブジェクトの[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティを作成したパラメーター化コマンドの生成、 **Recordset**です。 **コマンド**オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションを生成するコマンドのパラメーターのプレース ホルダーの代入された値 ("**?**") です。  
+ **コマンド**オブジェクトの[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティを作成したパラメーター化されたコマンドの生成、 **Recordset**します。 **コマンド**オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションには、コマンドのパラメーターのプレース ホルダーの代わりに使用された値が得られます ("**?**")。  
   
  最後に、エラー メッセージまたは作成者の名前と ID が出力されます。  
   

@@ -1,28 +1,24 @@
 ---
-title: SQL Server Express LocalDB インスタンス API リファレンス |Microsoft ドキュメント
+title: SQL Server Express LocalDB インスタンス API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 980b4c3de096cb9eaed8243a57c0f32a579206b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d79a4aa606d7e970ddbb9bbe0bb7a36a2948dc57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701910"
 ---
-# <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB リファレンス - インスタンスの Api
+# <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB リファレンス - インスタンス API
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   従来のサービスベースの SQL Server 環境で、単一のコンピューターにインストールされた個々の SQL Server インスタンスは、物理的に独立しています。つまり、各インスタンスは独立したバイナリ セットを持っており、独立したサービス プロセスの下で実行されます。インストールと削除も個別に行われる必要があります。 ユーザーが接続する先の SQL Server インスタンスは、SQL Server インスタンス名を使用して指定されます。  
   
@@ -30,7 +26,7 @@ ms.locfileid: "32939477"
   
  個々の LocalDB インスタンスは、常に単一のユーザーによって所有されます。インスタンス共有が有効化されていない限り、表示およびアクセスが可能になるのは、そのユーザーのコンテキストからのみです。  
   
- 厳密には、LocalDB インスタンスは従来の SQL Server インスタンスとは異なりますが、意図されている用途はほぼ同じです。 呼び出された*インスタンス*この類似性を強調しより直感的な SQL Server のユーザーにします。  
+ 厳密には、LocalDB インスタンスは従来の SQL Server インスタンスとは異なりますが、意図されている用途はほぼ同じです。 呼び出される*インスタンス*この類似性を強調して、SQL Server ユーザーがより直感的なようにします。  
   
  LocalDB では、自動インスタンス (AI) と名前付きインスタンス (NI) という 2 種類のインスタンスがサポートされています。 LocalDB インスタンスの識別子は、インスタンス名です。  
   
@@ -63,21 +59,21 @@ ms.locfileid: "32939477"
  名前付き LocalDB インスタンスは、"プライベート" です。インスタンスは、そのインスタンスの作成と管理を行う単一のアプリケーションによって所有されます。 名前付き LocalDB インスタンスを使用すると、そのインスタンスを分離することで、パフォーマンスの向上を図ることができます。  
   
 ### <a name="named-instance-creation"></a>名前付きインスタンスの作成  
- 名前付きインスタンスは、ユーザーが LocalDB 管理 API を通じて明示的に作成するか、マネージ アプリケーションの app.config ファイルを通じて暗黙的に作成する必要があります。 この API は、マネージ アプリケーションでも使用できます。  
+ 名前付きインスタンスは、ユーザーが LocalDB 管理 API を通じて明示的に作成するか、マネージド アプリケーションの app.config ファイルを通じて暗黙的に作成する必要があります。 この API は、マネージド アプリケーションでも使用できます。  
   
  各名前付きインスタンスには、特定の LocalDB バージョンが関連付けらています。つまり、各名前付きインスタンスは、LocalDB バイナリの特定のセットを指しています。 名前付きインスタンスのバージョンは、インスタンス作成時に設定されます。  
   
 ### <a name="named-instance-naming-rules"></a>名前付きインスタンスの名前付け規則  
- LocalDB インスタンス名は 128 文字までの合計持つことができます (によって制限されます、 **sysname**データ型)。 これは、従来の SQL Server インスタンス名と比較すると、大きく異なります。従来は、16 の ASCII 文字で構成される NetBIOS 名に制限されていました。 この相違が生じたのは、ユーザーが従来より自由にインスタンス名を選択できるように、LocalDB ではデータベースがファイルとして扱われ、ファイルベースのセマンティクスが使用されるようになったためです。  
+ 128 文字までの合計に LocalDB インスタンスの名前持つことができます (による制限、 **sysname**データ型)。 これは、従来の SQL Server インスタンス名と比較すると、大きく異なります。従来は、16 の ASCII 文字で構成される NetBIOS 名に制限されていました。 この相違が生じたのは、ユーザーが従来より自由にインスタンス名を選択できるように、LocalDB ではデータベースがファイルとして扱われ、ファイルベースのセマンティクスが使用されるようになったためです。  
   
- LocalDB のインスタンス名には、ファイル名コンポーネント内で有効な任意の Unicode 文字を使用できます。 ファイル名のコンポーネントに無効な文字が一般に、次の文字を含める: ASCII または Unicode 文字が 1 から 31、引用符 (") より小さい (\<)、大なり (>)、パイプ (|)、バック スペース (\b)、タブ (\t)、コロン (:)、アスタリスク (*)疑問符 (?)、円記号 (\\)、スラッシュ (/) を転送します。 null 文字 (\0) は、文字列の終端として許可されています。最初に検出された null 文字以降は、すべての文字が無視されます。  
+ LocalDB のインスタンス名には、ファイル名コンポーネント内で有効な任意の Unicode 文字を使用できます。 ファイル名のコンポーネントに無効な文字が一般に、次の文字を含める: ASCII または Unicode 文字を引用符 (") と同様に、1 から 31 より小さい (\<)、大なり (>)、パイプ (|)、バック スペース (\b)、タブ (\t)、コロン (:)、アスタリスク (*)疑問符 (?)、円記号 (\\)、スラッシュ (/) とします。 null 文字 (\0) は、文字列の終端として許可されています。最初に検出された null 文字以降は、すべての文字が無視されます。  
   
 > [!NOTE]  
 >  無効な文字はオペレーティング システムによって異なり、今後のリリースで変わることもあります。  
   
  インスタンス名の先頭と末尾の空白は無視され、トリミングされます。  
   
- 名前の LocalDB をという名前の競合を回避するには、インスタンスことはできません、自動インスタンスの名前付けパターンに続く名前「自動インスタンス名前付け規則」で既に説明したよう 効果的に自動インスタンスの名前付けパターンに続く名前を持つ名前付きインスタンスを作成する場合は、既定のインスタンスを作成します。  
+ 名前の LocalDB をという名前の競合を回避するためにインスタンス名は指定できません、自動インスタンスの名前付けパターンに従う「自動インスタンスの名前付け規則」で前述したよう 自動インスタンスの名前付けパターンを効果的に次の名前を持つ名前付きインスタンスを作成する場合は、既定のインスタンスを作成します。  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>SQL Server Express LocalDB リファレンス トピック  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

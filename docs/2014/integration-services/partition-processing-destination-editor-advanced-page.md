@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-caps.latest.revision: 32
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 996373337fe9c54218350cb23ca4f12f8d5869c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9b37af7069468bff1235c713f82f0b3444d0683
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062362"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>[パーティション処理変換先エディター] ([詳細設定] ページ)
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を設定できます。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: d584d8070bcad4a594145c9e22e353a851435fde
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85a131bb3090405df1c525a55b6863547e804d2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064892"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>レポートへの画像の埋め込み (レポート ビルダーおよび SSRS)
   レポートには、画像を埋め込むことができます。 画像の埋め込みには、レポートの画像を常に利用可能な状態にできるというメリットはありますが、レポート定義 (レポートを定義するファイル) のサイズは大きくなる可能性があります。 レポートに埋め込まれた画像は、レポート データ ペインに一覧表示されます。  

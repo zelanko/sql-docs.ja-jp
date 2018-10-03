@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc5b6d6738523d359c72b2e294fe1225004ca388
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059832"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services のデータ警告
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の "データ警告" は、関心のある、または重要なレポート データを適切なタイミングで把握できるよう補助する、データ駆動型の警告ソリューションです。 データ警告を使用することで、情報を探し出す必要がなくなり、情報が自動的に通知されるようになります。  
@@ -116,9 +113,9 @@ ms.locfileid: "37272338"
 ##  <a name="InstallAlerting"></a> データ警告のインストール  
  データ警告機能は、SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされている場合にのみ使用できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールすると、データ警告定義および警告メタデータを格納する警告データベースと、警告を管理するための 2 つの SharePoint ページとがセットアップによって自動的に作成され、SharePoint サイトにデータ警告デザイナーが追加されます。 警告機能に関して、インストール中に設定する特別な手順やオプションはありません。  
   
- インストールの詳細を知りたい場合[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、SharePoint モードを含む、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]共有サービスの新機能である[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]と[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーションを作成および使用する前に構成する必要があります[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]については、「 [Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) MSDN ライブラリ。  
+ SharePoint モードでの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で新たに導入された [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスや、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) について詳しくは、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」をご覧ください。  
   
- このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、次を参照してください。 [SQL Server エージェントの構成](../ssms/agent/configure-sql-server-agent.md)と[開始、停止、一時停止、再開、データベース エンジン、SQL Server エージェント、または SQL Server Browser サービスを再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)します。  
+ このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「[SQL Server エージェントの構成](../ssms/agent/configure-sql-server-agent.md)」および「[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
  SharePoint サーバーの全体管理の **[サブスクリプションと警告の準備]** ページでは、SQL Server エージェントが実行されているかどうかを確認し、SQL Server エージェントへのアクセス権を付与するために実行するカスタムの [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを作成およびダウンロードできます。 また、PowerShell を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを生成することもできます。 詳細については、「[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   

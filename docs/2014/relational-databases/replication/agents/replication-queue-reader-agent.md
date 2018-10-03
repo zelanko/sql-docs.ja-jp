@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], Queue Reader Agent
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Queue Reader Agent, parameter reference
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4d77806809ce3b7306d9f7560b126ff32980ca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8ba3f9ef9c76957872114fd05cf98520ce44bb4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309552"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078242"
 ---
 # <a name="replication-queue-reader-agent"></a>Replication Queue Reader Agent
   レプリケーション キュー リーダー エージェントは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のキューまたは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] のメッセージ キューに格納されたメッセージを読み取り、これらのメッセージをパブリッシャーに適用する実行可能ファイルです。 キュー リーダー エージェントは、スナップショット、およびキュー更新を許可するトランザクション パブリケーションで使用されます。  
@@ -124,8 +121,7 @@ ms.locfileid: "37309552"
  クエリがタイムアウトになるまでの秒数です。既定値は 1800 秒です。  
   
  **-ResolverState** [ **1**| **2**| **3**]  
- キュー更新における競合の解決方法を指定します。 **1** はパブリッシャーが優先されることを示します。この場合、現在キューの中で競合しているトランザクションはパブリッシャー側、およびキューを更新しようとしたサブスクライバー側でロールバックされます。キューに格納されている、それ以降のトランザクションについては、処理が継続されます。 
-  **2** はサブスクライバーがオーバーライドされることを示します。つまり、キューに格納されたトランザクションの方がパブリッシャー側の値をオーバーライドします。 **3** は、競合が発生した場合は常にサブスクライバーが再初期化されることを示します (つまり、パブリッシャーが優先されます)。この場合、キューに格納された後続のトランザクションは強制的に終了され、サブスクリプションが再初期化されます。 既定の設定は、トランザクション パブリケーションの場合は **1** に、スナップショット パブリケーションの場合は **3** になります。  
+ キュー更新における競合の解決方法を指定します。 **1** はパブリッシャーが優先されることを示します。この場合、現在キューの中で競合しているトランザクションはパブリッシャー側、およびキューを更新しようとしたサブスクライバー側でロールバックされます。キューに格納されている、それ以降のトランザクションについては、処理が継続されます。 **2** はサブスクライバーがオーバーライドされることを示します。つまり、キューに格納されたトランザクションの方がパブリッシャー側の値をオーバーライドします。 **3** は、競合が発生した場合は常にサブスクライバーが再初期化されることを示します (つまり、パブリッシャーが優先されます)。この場合、キューに格納された後続のトランザクションは強制的に終了され、サブスクリプションが再初期化されます。 既定の設定は、トランザクション パブリケーションの場合は **1** に、スナップショット パブリケーションの場合は **3** になります。  
   
 ## <a name="remarks"></a>コメント  
  キュー リーダー エージェントを起動するには、コマンド プロンプトから **qrdrsvc.exe** を実行します。 詳細については、「 [レプリケーション エージェント実行可能ファイルのプログラミング](../concepts/replication-agent-executables-concepts.md)」を参照してください。  

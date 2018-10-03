@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - columns table
 - databases table
@@ -42,12 +37,12 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b0344fcfa5a5b174ef080a5eac431cebf6372842
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653727"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access インベントリ スキーマ (AccessToSQL)
 次のセクションでは、SSMA によってへのアクセスのスキーマをエクスポートするときに作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -114,7 +109,7 @@ ms.locfileid: "40395966"
 |**DatabaseId**|**uniqueidentifier**|このインデックスを含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|このインデックスを含むテーブルを識別します。|  
 |**IndexId**|**int**|インデックスを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**IndexName**|**nvarchar (4000)**|インデックスの名前。|  
+|**IndexName**|**nvarchar (4000)**|インデックスの名前です。|  
 |**ColumnsIncluded**|**nvarchar (4000)**|インデックスに含まれる列を一覧表示します。 列名は、セミコロンで区切られます。|  
 |**IsUnique**|**bit**|かどうか、インデックス内の各項目が一意である必要がありますを指定します。 複数列のインデックスの値の組み合わせは一意である必要があります。 値が 1 の場合、インデックスは一意の値を適用します。|  
 |**IsPK**|**bit**|かどうか、インデックスが主キーの定義の一部として自動的に作成を指定します。|  
@@ -128,7 +123,7 @@ ms.locfileid: "40395966"
 |**DatabaseId**|**uniqueidentifier**|この外部キーを含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|この外部キーを含むテーブルを識別します。|  
 |**ForeignKeyId**|**int**|外部キーを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**ForeignKeyName**|**nvarchar (4000)**|インデックスの名前。|  
+|**ForeignKeyName**|**nvarchar (4000)**|インデックスの名前です。|  
 |**ReferencedTableId**|**uniqueidentifier**|ソース列を含むテーブルを識別します。|  
 |**SourceColumns**|**nvarchar (4000)**|外部キー列または列を一覧表示します。|  
 |**ReferencedColumns**|**nvarchar (4000)**|主キー列または外部キーによって参照されている列を一覧表示します。|  

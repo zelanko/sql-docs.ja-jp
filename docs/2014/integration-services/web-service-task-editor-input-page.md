@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.input.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6322a234ea1653f578f60b36a84b7e2c71af169
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264958"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056692"
 ---
 # <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  

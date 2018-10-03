@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d8266418969de6249f0e2313ad7368a8054576c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644699"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 潜在的な障害を検出するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関する診断データと正常性の情報をキャプチャします。 プロシージャは繰り返しモードで実行され、結果は定期的に送信されます。 このプロシージャは、通常の接続または DAC 接続から呼び出すことができます。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

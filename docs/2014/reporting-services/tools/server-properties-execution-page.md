@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.execution.f1
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d15a9184c61163d59fbe0d23ecf98d018e6fd7a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 239ca089feac4b814600234f2b80b2de398bb989
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074321"
 ---
 # <a name="server-properties-execution-page"></a>[サーバーのプロパティ] [実行] ページ)
   このページを使用すると、レポート実行のタイムアウト値を設定できます。 この値は、現在のレポート サーバー インスタンスによって処理されるすべてのレポートに適用されます。 この設定は、レポートごとにオーバーライドすることができます。 レポート サーバーで行われるすべてのレポート処理の時間に加え、レポート内で使用されるデータをレポート サーバーが取得するときにデータベース サーバーで実行されるクエリ処理に対応する時間も指定する必要があります。  

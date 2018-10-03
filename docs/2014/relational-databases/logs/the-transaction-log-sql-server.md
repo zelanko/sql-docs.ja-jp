@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072892"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。 トランザクション ログは、いっぱいにならないように、定期的に切り捨てる必要があります。 ただし、いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  

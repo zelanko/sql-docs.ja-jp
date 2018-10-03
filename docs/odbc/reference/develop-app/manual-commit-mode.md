@@ -1,13 +1,11 @@
 ---
-title: 手動コミット モード |Microsoft ドキュメント
+title: 手動コミット モード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fde932df4d3eaa8e9ae3cceb2f28b6511dfb32d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911687"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667920"
 ---
 # <a name="manual-commit-mode"></a>手動コミット モード
-*手動コミット モードで*アプリケーションが呼び出すことによってトランザクションを明示的に完了する必要があります**SQLEndTran**をコミットまたはロールバックにします。 これは、ほとんどのリレーショナル データベースの通常のトランザクション モードです。  
+*手動コミット モードで*アプリケーションを呼び出してトランザクションを完了する必要があります明示的に**SQLEndTran**にそれらをコミットまたはロールバックしています。 これは、ほとんどのリレーショナル データベースの通常のトランザクション モードです。  
   
- ODBC でのトランザクションを明示的に開始する必要はありません。 代わりに、トランザクションは、データベースで動作しているアプリケーションを起動するたびに、暗黙的に開始します。 データ ソースの明示的なトランザクションの開始に使用する場合は、アプリケーションがトランザクションを必要とするステートメントを実行し、現在のトランザクションが存在しないときに、ドライバーがそれを提供する必要があります。
+ ODBC でのトランザクションは、明示的に開始する必要はありません。 代わりに、トランザクションは、データベースで動作しているアプリケーションを起動するたびに、暗黙的に開始します。 データ ソースの明示的なトランザクションの開始に使用する場合は、ドライバーはアプリケーションがトランザクションを必要とするステートメントを実行し、現在のトランザクションが存在しないときにそれを提供する必要があります。

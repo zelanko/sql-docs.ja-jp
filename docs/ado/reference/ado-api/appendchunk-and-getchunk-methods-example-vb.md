@@ -1,13 +1,11 @@
 ---
-title: AppendChunk と GetChunk メソッドの例 (VB) |Microsoft ドキュメント
+title: AppendChunk および GetChunk メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - GetChunk method [ADO], Visual Basic example
 - AppendChunk method [ADO], Visual Basic example
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 020d4af5f0f029ae92e906e992156fe22c2a69b2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: be7e0a83f7624dc471eb8c47108fa4886b7e09ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666260"
 ---
-# <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk と GetChunk メソッドの例 (VB)
-この例では、 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)画像フィールドを別のレコードのデータを入力する方法です。  
+# <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk および GetChunk メソッドの例 (VB)
+この例では、 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッド別のレコードからのデータの画像フィールドを設定します。  
   
 ```  
 'BeginAppendChunkVB  

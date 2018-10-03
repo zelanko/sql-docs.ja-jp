@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e3974057f6b975a5c8abc7cc99f886360be15aa8
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785590"
 ---
 # <a name="setting-project-options-db2tosql"></a>プロジェクト オプションの設定 (DB2ToSQL)
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定できます。 これらのオプションは、オブジェクトへの変換、オブジェクトの読み込み、ユーザー インターフェイスとデータ移行の設定を指定します。 オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを移行または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、構成オプションが、プロジェクトの適切なことを確認します。  
@@ -49,7 +43,7 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 -   [完全]  
   
--   Custom  
+-   カスタム  
   
 ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティック モードでは、DB2 の現在の構文の詳細を保持しが読みやすくします。 ただし、現在の構文を維持することができない正確です。 DB2 の構文と同等に変換する必要がある場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文、完全なモードが、最も包括的な変換を実行しますが、結果のコードが読みにくくなる可能性があります。 カスタム モードでは、オプションを設定します。  
   

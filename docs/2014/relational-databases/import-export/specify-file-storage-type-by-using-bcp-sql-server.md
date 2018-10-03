@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fff9084513f21333125eaee8995eebfd3e22e1a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251994"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048442"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
   *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データとしてエクスポートできますデータ ファイルに、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または任意のデータ型を暗黙的な変換がサポートされています。たとえば、コピー、`smallint`として、`int`します。 ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  

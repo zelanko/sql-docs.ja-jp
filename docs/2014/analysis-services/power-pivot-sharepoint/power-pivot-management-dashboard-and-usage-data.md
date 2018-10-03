@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97bb7addcbbdf9a4e5a2b8b1151e081f48d0fea3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069718"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理ダッシュボードと使用状況データ
   PowerPivot 管理ダッシュボードとは、SQL Server PowerPivot for SharePoint の配置の管理に役立つ SharePoint サーバーの全体管理の定義済みのレポートおよび Web パーツのコレクションです。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  

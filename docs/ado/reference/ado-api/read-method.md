@@ -1,13 +1,11 @@
 ---
-title: Read メソッド |Microsoft ドキュメント
+title: Read メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Read method [ADO]
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 371574fdaa0f6f9f82a40f8caf5f622633f4fa19
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1b5bbc04c94d491c096db047d574cc3b5fd8ee38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783960"
 ---
 # <a name="read-method"></a>Read メソッド
-バイナリから指定したバイト数を読み取ります[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+バイナリから、指定したバイト数を読み取ります[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +36,16 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>パラメーター  
  *NumBytes*  
- 任意。 A**長い**ファイルから読み取るバイト数を指定する値または[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)値**adReadAll**、既定値です。  
+ 任意。 A**長い**ファイルから読み取るバイト数を指定する値または[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)値**adReadAll**、既定値します。  
   
 ## <a name="return-value"></a>戻り値  
- **読み取り**メソッドは、指定したバイト数またはからストリーム全体を読み取ります、**ストリーム**オブジェクトし、結果として得られるデータとして返します、**バリアント**です。  
+ **読み取り**メソッドは指定された数のバイトまたはからストリーム全体を読み取ります、 **Stream**オブジェクトし、結果として得られるデータとして返します、**バリアント**します。  
   
 ## <a name="remarks"></a>コメント  
- 場合*NumBytes*はバイト数よりも多いのままに、**ストリーム**、残っているバイト数のみが返されます。 指定された長さに合わせて読み取られるデータが埋め込まれていません*NumBytes*です。 読み取るデータがない場合は、値が null のバリアント型が返されます。 **読み取り**旧バージョンと読み取りに使用することはできません。  
+ 場合*NumBytes*内の残りのバイト数よりは、 **Stream**、残りのバイトのみが返されます。 指定された長さに一致するように読み取られたデータが埋め込まれていません*NumBytes*します。 読み取るデータがない場合は、null 値を持つバリアントが返されます。 **読み取り**旧バージョンと読み取りに使用することはできません。  
   
 > [!NOTE]
->  *NumBytes*常にバイトを測定します。 テキストの**ストリーム**オブジェクト ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)、使用して[ReadText](../../../ado/reference/ado-api/readtext-method.md)です。  
+>  *NumBytes*常にバイトを測定します。 テキストの**Stream**オブジェクト ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**) を使用して、 [ReadText](../../../ado/reference/ado-api/readtext-method.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

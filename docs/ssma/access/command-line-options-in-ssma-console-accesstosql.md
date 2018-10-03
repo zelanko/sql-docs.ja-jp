@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 21775252d57184914d9c1d595ce5f8b67e8e4cbf
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6c1e8480308f0ffb8b4966bf61b395072ae2390b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807440"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) コマンド ライン オプション
 Microsoft は、堅牢な実行および SSMA アクティビティを制御するコマンド ライン オプションのセットを提供します。 次のセクションでは、追加の詳細情報を提供します。  
@@ -172,7 +166,7 @@ SSMA コンソールのオプションの構文の概要が表示されます。
   
 SSMA コンソールのコマンド ライン オプションの表を参照してください[付録 - 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
-### <a name="next-steps"></a>次のステップ  
+### <a name="next-steps"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
 1.  パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)します。  

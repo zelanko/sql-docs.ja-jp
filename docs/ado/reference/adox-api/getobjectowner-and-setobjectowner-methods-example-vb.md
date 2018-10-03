@@ -1,13 +1,11 @@
 ---
-title: GetObjectOwner と SetObjectOwner メソッドの例 (VB) |Microsoft ドキュメント
+title: GetObjectOwner および SetObjectOwner メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], Visual Basic example
 - GetObjectOwner method [ADOX], Visual Basic example
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9599d5b1130b5e19a3c42614ae49df3183918e2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f2442124889e6217edc730d4cd47b2c98fa1d2d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828220"
 ---
-# <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner と SetObjectOwner メソッドの例 (VB)
-この例で、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)と[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッドです。 このコードを想定して、グループのアカウンティング (を参照してください、[グループとユーザーの追加、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)をシステムにこのグループを追加する方法を参照してください)。 Categories テーブルの所有者は、アカウンティングに設定されます。  
+# <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner および SetObjectOwner メソッドの例 (VB)
+この例では、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)と[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッド。 このコードを想定して、グループのアカウンティング (を参照してください、[グループとユーザーの Append、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)をシステムにこのグループを追加する方法を参照してください)。 Categories テーブルの所有者は、アカウンティングに設定されます。  
   
 ```  
 ' BeginOwnersVB  
@@ -66,6 +63,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetObjectOwner メソッド (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [SetObjectOwner メソッド](../../../ado/reference/adox-api/setobjectowner-method.md)

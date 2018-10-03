@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074770"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[タブ] ページ)
   特定の開発言語に関連付けられていないドキュメントを編集するときには、テキスト エディターが使用されます。このダイアログ ボックスを使用すると、テキスト エディターのタブの動作を変更できます。 この設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーを展開し、さらに **[テキスト形式]** を展開して、**[タブ]** をクリックします。  

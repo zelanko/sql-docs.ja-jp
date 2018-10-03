@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8f91a410e5c1c6e16a6fc3e1da26f89893ac261b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065122"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
   このトピックでは、バックアップ先として Windows Azure BLOB ストレージ サービスを使用するために必要な概念、要件、およびコンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 相違点、重要な例外、コード例についても、このトピックで説明しています。  

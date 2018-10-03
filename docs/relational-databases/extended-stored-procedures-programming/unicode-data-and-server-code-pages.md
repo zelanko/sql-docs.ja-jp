@@ -1,30 +1,26 @@
 ---
-title: Unicode データとサーバー コード ページ |Microsoft ドキュメント
+title: Unicode データおよびサーバー コード ページ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
 - Unicode [SQL Server], extended stored procedures
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d38bf13ae6f80de24e9595d79042b8e3e40ef310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32934907"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846140"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode データおよびサーバー コード ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,20 +30,20 @@ ms.locfileid: "32934907"
   
  拡張ストアド プロシージャ API は、Unicode データを扱うことはできますが、Unicode メタデータを扱うことはできません。 #define Unicode ディレクティブは、拡張ストアド プロシージャ API にまったく影響しません。  
   
- 拡張ストアド プロシージャ API が返したメタデータ、または拡張ストアド プロシージャ アプリケーションによって拡張ストアド プロシージャ API に渡されたメタデータは、すべてサーバーのマルチバイト コード ページにあることが想定されています。 拡張ストアド プロシージャ API サーバー アプリケーションの既定のコード ページは呼び出すことによって取得できるアプリケーションが実行されているコンピューターの ANSI コード ページ**srv_pfield**フィールド パラメーターが SRV_ に設定SPROC_CODEPAGE です。  
+ 拡張ストアド プロシージャ API が返したメタデータ、または拡張ストアド プロシージャ アプリケーションによって拡張ストアド プロシージャ API に渡されたメタデータは、すべてサーバーのマルチバイト コード ページにあることが想定されています。 拡張ストアド プロシージャ API サーバー アプリケーションの既定のコード ページは呼び出すことによって取得できるアプリケーションが実行されているコンピューターの ANSI コード ページ**srv_pfield** srv _ に設定するフィールド パラメーターを使用SPROC_CODEPAGE します。  
   
  Unicode 対応の拡張ストアド プロシージャ API アプリケーションの場合は、Unicode メタデータの列名やエラー メッセージなどを拡張ストアド プロシージャ API に渡す前に、マルチバイト データに変換する必要があります。  
   
 ## <a name="example"></a>例  
  次の拡張ストアド プロシージャは、上記で説明した Unicode 変換の例です。 次の点に注意してください。  
   
--   列のデータが Unicode データとして渡される**srv_describe**列が srvnvarchar 記述されているためです。  
+-   列のデータが Unicode データとして渡される**srv_describe**列が srvnvarchar 説明されているためです。  
   
--   列名のメタデータに渡される**srv_describe**マルチバイト データとして。  
+-   列名のメタデータが渡される**srv_describe**マルチバイト データとして。  
   
-     拡張ストアド プロシージャ呼び出し**srv_pfield** SRV_SPROC_CODEPAGE に設定のマルチバイト コード ページを取得するフィールドのパラメーターを持つ[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+     拡張ストアド プロシージャ呼び出し**srv_pfield**フィールド パラメーターを SRV_SPROC_CODEPAGE に設定すると取得のマルチバイト コード ページと[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
--   エラー メッセージに渡される**srv_sendmsg**マルチバイト データとして。  
+-   エラー メッセージが渡される**srv_sendmsg**マルチバイト データとして。  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

@@ -1,13 +1,11 @@
 ---
-title: ADO を使用して、インターネットへの発行の |Microsoft ドキュメント
+title: ADO を使用して for Internet Publishing |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, Internet publishing
@@ -15,36 +13,35 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3261fc8eb910fb0b7b627b11a3bc89bb682f01bb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d779204046b9bca2591fbdc9459d7c6b53061ff4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779000"
 ---
-# <a name="using-ado-for-internet-publishing"></a>インターネットへの発行の ADO を使用します。
-[OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO と異種データへのアクセスの具体的な例を示しています。 このセクションの例では、インターネット パブリッシング用プロバイダーを使用して特定できますは、メール ストア プロバイダーなどの異種データを他のプロバイダーと ADO を使用するときに示されている原則が生成されます。  
+# <a name="using-ado-for-internet-publishing"></a>インターネットへの発行に ADO を使用する
+[OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO を使用した異種データへのアクセスの具体的な例を示しています。 このセクションの例では、インターネット パブリッシング用プロバイダーを使用する特定できますは、電子メール ストアにプロバイダーなどの異種データを他のプロバイダーと ADO を使用するときに示されている原則が生成されます。  
   
 ## <a name="urls"></a>URL  
- Uniform Resource Locator (Url) は、データ ソースとファイルとディレクトリの場所を指定すると、接続文字列やコマンド テキストの代わりとして使用できます。 Url を使用するには、既存の[接続](../../../ado/reference/ado-api/connection-object-ado.md)と**Recordset**オブジェクトを使用して、**レコード**と**ストリーム**オブジェクト。  
+ Uniform Resource Locator (Url) は、データ ソースとファイルとディレクトリの場所を指定する接続文字列とコマンドのテキストの代替として使用できます。 Url を使用するには、既存の[接続](../../../ado/reference/ado-api/connection-object-ado.md)と**Recordset**オブジェクトを使用して、**レコード**と**Stream**オブジェクト。  
   
- Url を使用する方法の詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)です。  
+ Url を使用する方法の詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="record-fields"></a>レコードのフィールド  
- 異種のデータや同種のデータの主な違いは、以前の行のデータ、または**レコード**、列の異なるセットを持つことができますか**フィールド**です。 同種データの場合は、各行は、同じ列のセットを持ちます。 インターネット、パブリッシング用プロバイダーに固有のフィールドの詳細については、次を参照してください。[レコードとプロバイダー提供余分なフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)です。  
+ 異種データと同種のデータの主な違いは、前者は、データの各行または**レコード**、異なる一連の列を持つことができますまたは**フィールド**します。 同種のデータの各行は、同じ列のセットを持ちます。 インターネット公開プロバイダーに固有のフィールドの詳細については、次を参照してください。[レコードとプロバイダー提供の余分なフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)します。  
   
 ### <a name="appending-new-fields"></a>新しいフィールドを追加します。  
- と共に使用するいくつかの ADO オブジェクトが強化された**レコード**と**ストリーム**オブジェクト。  
+ 組み合わせて動作するいくつかの ADO のオブジェクトが強化されています**レコード**と**Stream**オブジェクト。  
   
--   [フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクション[Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドでは、作成し、追加、[フィールド](../../../ado/reference/ado-api/field-object.md)コレクションにオブジェクトの値を指定できますも、**フィールド**.  
+-   [フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクション[Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドでは、作成し、追加、[フィールド](../../../ado/reference/ado-api/field-object.md)コレクションにオブジェクトの値を指定できますも、 **フィールド**.  
   
--   [更新](../../../ado/reference/ado-api/update-method.md)メソッドが追加またはコレクションにフィールドの削除を終了します。  
+-   [Update](../../../ado/reference/ado-api/update-method.md)メソッドが追加またはコレクションにフィールドの削除を終了します。  
   
--   ショートカットと代替手段として、 **Append**メソッド、未定義または前に削除されたフィールドに値を割り当てることでフィールドを作成することができます。  
+-   代わりに、ショートカットとして、 **Append**メソッド、未定義または以前に削除されたフィールドに値を割り当てることでフィールドを作成することができます。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -58,5 +55,5 @@ ms.locfileid: "35273211"
   
 ## <a name="see-also"></a>参照  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [ストリーム オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO 履歴](../../../ado/guide/ado-history.md)

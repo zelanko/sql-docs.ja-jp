@@ -1,13 +1,11 @@
 ---
-title: 可能 |Microsoft ドキュメント
+title: 可能 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f61d0d948730cfb39cd2c0429eb53dcab311fe5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e91f82595c8e4f6fe07969960959a12464bf53a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281231"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708756"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-指定します、[ステータス](../../../ado/reference/ado-api/status-property-ado-recordset.md)バッチ更新およびその他の一括操作に関して、レコードのです。  
+指定します、[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)バッチ更新およびその他の一括操作に関して、レコードの。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|操作が取り消されたために、レコードが保存されなかったことを示します。|  
 |**adRecCantRelease**|0x400|既存のレコードがロックされていたために、新しいレコードが保存されなかったことを示します。|  
-|**adRecConcurrencyViolation**|0x800|オプティミスティック同時実行制御が使用中だったために、レコードが保存されなかったことを示します。|  
-|**adRecDBDeleted**|0x40000|レコードが、データ ソースから既に削除されたことを示します。|  
+|**adRecConcurrencyViolation**|0x800|オプティミスティック同時実行制御を使用していたために、レコードが保存されなかったことを示します。|  
+|**adRecDBDeleted**|0x40000|レコードがデータ ソースから既に削除されたことを示します。|  
 |**adRecDeleted**|0x4|レコードが削除されたことを示します。|  
 |**adRecIntegrityViolation**|0x1000|ユーザーが整合性制約に違反したため、レコードが保存されなかったことを示します。|  
 |**adRecInvalid**|0x10|ブックマークが無効であるために、レコードが保存されなかったことを示します。|  
@@ -42,7 +39,7 @@ ms.locfileid: "35281231"
 |**adRecModified**|0x2|レコードが変更されたことを示します。|  
 |**adRecMultipleChanges**|0x40|複数のレコードが影響している場合があるために、レコードが保存されなかったことを示します。|  
 |**adRecNew**|0x1|レコードが新しいことを示します。|  
-|**adRecObjectOpen**|0x4000|開いているストレージ オブジェクトと競合しているため、レコードが保存されなかったことを示します。|  
+|**adRecObjectOpen**|0x4000|開いているストレージ オブジェクトの競合があるため、レコードが保存されていないことを示します。|  
 |**adRecOK**|0|レコードが正常に更新されたことを示します。|  
 |**adRecOutOfMemory**|0x8000|コンピューターのメモリが不足しているために、レコードが保存されなかったことを示します。|  
 |**adRecPendingChanges**|0x80|保留中の挿入を参照しているために、レコードが保存されなかったことを示します。|  
@@ -50,8 +47,8 @@ ms.locfileid: "35281231"
 |**adRecSchemaViolation**|0x20000|基になるデータベースの構造に違反しているために、レコードが保存されなかったことを示します。|  
 |**adRecUnmodified**|0x8|レコードが変更されていないことを示します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
- AdoEnums.RecordStatus です。  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
+ AdoEnums.RecordStatus します。  
   
  パッケージ: **com.ms.wfc.data**  
   

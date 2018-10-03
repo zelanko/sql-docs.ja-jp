@@ -1,13 +1,11 @@
 ---
-title: ADOStreamConstruction インターフェイス |Microsoft ドキュメント
+title: ADOStreamConstruction インターフェイス |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 73c5e698ecebee93e6b78d884b0b2978750db63e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275691"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828750"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction インターフェイス
-**ADOStreamConstruction**インターフェイスは、ADO を構築するために使用**ストリーム**オブジェクトを OLE DB から**IStream** C/C++ アプリケーション内のオブジェクト。  
+**ADOStreamConstruction**インターフェイスは、ADO の構築に使用**Stream**から OLE DB オブジェクト**IStream** C/C++ アプリケーション内のオブジェクト。  
   
 ## <a name="properties"></a>[プロパティ]  
   
 |||  
 |-|-|  
-|[Stream プロパティ](../../../ado/reference/ado-api/stream-property.md)|読み取り/書き込みです。 OLE DB を取得/設定**ストリーム**オブジェクト。|  
+|[Stream プロパティ](../../../ado/reference/ado-api/stream-property.md)|読み取り/書き込みです。 OLE DB を取得/設定**Stream**オブジェクト。|  
   
 ## <a name="methods"></a>メソッド  
  [なし] :  
@@ -42,16 +39,16 @@ ms.locfileid: "35275691"
  [なし] :  
   
 ## <a name="remarks"></a>コメント  
- 指定された OLE DB **IStream**オブジェクト (`pStream`)、ADO の構築**ストリーム**オブジェクト (`adoStr`) 次の 3 つの基本的な操作を額。  
+ OLE DB を指定された**IStream**オブジェクト (`pStream`)、ADO の構築**Stream**オブジェクト (`adoStr`) に次の 3 つの基本的な操作。  
   
-1.  ADO を作成する**ストリーム**オブジェクト。  
+1.  ADO の作成**Stream**オブジェクト。  
   
     ```  
     Stream20Ptr adoStr;  
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  クエリ、 **IADOStreamConstruction**インターフェイスを**ストリーム**オブジェクト。  
+2.  クエリ、 **IADOStreamConstruction**インターフェイスを**Stream**オブジェクト。  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -59,7 +56,7 @@ ms.locfileid: "35275691"
                          (void**)&adoStrConstruct);  
     ```  
   
- 呼び出す、`IADOStreamConstruction::get_Stream`プロパティを設定するメソッド、OLE DB **IStream** 、ADO 上のオブジェクト**ストリーム**オブジェクト。  
+ 呼び出す、`IADOStreamConstruction::get_Stream`プロパティを設定するメソッド、OLE DB **IStream** ADO 上のオブジェクト**Stream**オブジェクト。  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -67,7 +64,7 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- 結果として得られる`adoStr`オブジェクトは、ADO を表します**ストリーム**、OLE DB から構築されたオブジェクト**IStream**オブジェクト。  
+ 結果として得られる`adoStr`オブジェクトが、ADO を表すようになりました**Stream** OLE DB から構築されたオブジェクト**IStream**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **バージョン:** ADO 2.0 またはそれ以降のバージョン  

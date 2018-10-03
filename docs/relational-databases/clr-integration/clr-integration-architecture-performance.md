@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -12,16 +11,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21480acac0ba1d54ede060c127114da46d0ba8a3
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 526c3ec119e2ccf397fee2217b696900a47ea621
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791630"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 統合のアーキテクチャ - パフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "37355064"
  生成されたスタブは、CLR の JIT (just-in-time) コンパイル サービスによって、ネイティブ コードへのコンパイル、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している特定のハードウェア アーキテクチャに合わせた最適化が行われます。 JIT サービスはメソッド レベルで呼び出され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR 両方を実行するための単一のコンパイル単位を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ホスティング環境で作成できます。 スタブをコンパイルすると、コンパイルされた関数のポインターが関数の実行時の実装になります。 このコード生成方式によって、実行時にリフレクションやメタデータのアクセスのために追加の呼び出しを行うコストを回避することができます。  
   
 ### <a name="fast-transitions-between-sql-server-and-clr"></a>SQL Server と CLR の高速切り替え  
- コンパイル処理の結果、実行時にネイティブ コードから呼び出すことのできる関数ポインターが生成されます。 ユーザー定義スカラー値関数の場合、関数が行ごとに呼び出されます。 ph x="1" /&gt; と CLR の切り替えコストを最小限にするために、マネージド呼び出しを行うステートメントには対象になるアプリケーション ドメインを識別する起動処理があります。 この識別処理により、行ごとの切り替えコストを抑えます。  
+ コンパイル処理の結果、実行時にネイティブ コードから呼び出すことのできる関数ポインターが生成されます。 ユーザー定義スカラー値関数の場合、関数が行ごとに呼び出されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR の切り替えコストを最小限にするために、マネージド呼び出しを行うステートメントには対象になるアプリケーション ドメインを識別する起動処理があります。 この識別処理により、行ごとの切り替えコストを抑えます。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
  次に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR 統合固有のパフォーマンスに関する考慮事項を要約します。 詳細な情報が記載されて"[SQL Server 2005 の CLR 統合を使用して](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN Web サイト。 マネージ コードのパフォーマンスに関する一般的な情報が見つかりません"[.NET アプリケーションのパフォーマンスとスケーラビリティ](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN Web サイト。  
@@ -60,7 +58,7 @@ ms.locfileid: "37355064"
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR と拡張ストアド プロシージャ  
  マネージド プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 さらに、System.Data.SqlServer Api のサポート データの種類など**xml**、 **varchar (max)**、 **nvarchar (max)**、および**varbinary(max)** で導入された、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、新しいデータ型をサポートするために、ODS Api が拡張されていません。  
   
- ph x="1" /&gt; ではマネージド コードによってメモリ、スレッド、同期などのリソースの使用状況が管理されます。 これらのリソースを公開するマネージド API が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース マネージャーの上位に実装されるためです。 逆に、拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってリソースの使用状況が監視または制御されることがありません。 たとえば、拡張ストアド プロシージャで大量の CPU リソースまたはメモリ リソースが消費されていても、それを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出したり制御することはできません。 一方、マネージド コードでは、特定のスレッドが長期間リソースを占有していることを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出して、タスクからリソースを解放し、他の作業のスケジュールを設定できるようになります。 つまり、マネージド コードを使用すると、スケーラビリティやシステム リソースの使用状況が改善されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではマネージド コードによってメモリ、スレッド、同期などのリソースの使用状況が管理されます。 これらのリソースを公開するマネージド API が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース マネージャーの上位に実装されるためです。 逆に、拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってリソースの使用状況が監視または制御されることがありません。 たとえば、拡張ストアド プロシージャで大量の CPU リソースまたはメモリ リソースが消費されていても、それを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出したり制御することはできません。 一方、マネージド コードでは、特定のスレッドが長期間リソースを占有していることを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出して、タスクからリソースを解放し、他の作業のスケジュールを設定できるようになります。 つまり、マネージド コードを使用すると、スケーラビリティやシステム リソースの使用状況が改善されます。  
   
  マネージド コードを使用すると、実行環境の保持およびセキュリティ チェックの実施に必要なオーバーヘッドが発生することがあります。 たとえば、([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はネイティブ コードと行き来する際にスレッド固有の設定を保つ必要があるので、) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内でコードを実行し、マネージド コードとネイティブ コードの切り替えを何度も行う必要がある場合などにオーバーヘッドが生じます。 つまり、マネージド コードとネイティブ コードの切り替えが頻発する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行されるマネージド コードに比べて、拡張ストアド プロシージャの方が高いパフォーマンスを発揮できます。  
   
@@ -78,7 +76,7 @@ ms.locfileid: "37355064"
  正規化には 2 つの利点があります。1 つは、型のインスタンスの作成やメソッド呼び出しのオーバヘッドが発生しないようにすることで比較操作のコストが大幅に抑えられることです。もう 1 つは、UDT のバイナリ領域が作成され、ヒストグラム、インデックス、およびその型の値のヒストグラムが作成できるようになることです。 つまり、メソッド呼び出しを伴わない操作では、正規化した UDT はネイティブの組み込み型と変わらないパフォーマンスを発揮します。  
   
 ### <a name="scalable-memory-usage"></a>スケーラビリティを確保するメモリの使用方法  
- ph x="1" /&gt; のマネージド ガベージ コレクションのパフォーマンスやスケーラビリティを高めるには、大量のメモリを 1 単位として割り当てないようにしてください。 88 KB を超える割り当てはラージ オブジェクト ヒープに配置されます。その結果、小規模の割り当てをいくつも行った場合に比べて、ガベージ コレクションのパフォーマンスやスケーラビリティが低下します。 たとえば、大きな多次元配列を割り当てる場合、ジャグ (散在した) 配列を割り当てることをお勧めします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド ガベージ コレクションのパフォーマンスやスケーラビリティを高めるには、大量のメモリを 1 単位として割り当てないようにしてください。 88 KB を超える割り当てはラージ オブジェクト ヒープに配置されます。その結果、小規模の割り当てをいくつも行った場合に比べて、ガベージ コレクションのパフォーマンスやスケーラビリティが低下します。 たとえば、大きな多次元配列を割り当てる場合、ジャグ (散在した) 配列を割り当てることをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  

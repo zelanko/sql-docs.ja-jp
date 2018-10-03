@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 667daf9415d808ec76ab43938da6373aca3a7380
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97016ac7279bfc00bd617e6318067561d82cddda
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073744"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>max text repl size サーバー構成オプションの構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **Max text repl サイズ**オプションの指定の最大サイズ (バイト単位) で`text`、 `ntext`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、 `xml`、および`image`に追加できるデータレプリケート対象列または単一の INSERT、UPDATE、WRITETEXT、または UPDATETEXT ステートメントでキャプチャ対象列。 既定値は 65536 バイトです。 値 -1 は、データ型で許容されるサイズの範囲内であれば、サイズ制限がないことを示します。  

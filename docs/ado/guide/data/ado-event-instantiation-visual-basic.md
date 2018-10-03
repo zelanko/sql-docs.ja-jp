@@ -1,30 +1,27 @@
 ---
-title: 'ADO イベントのインスタンス化: Visual Basic |Microsoft ドキュメント'
+title: 'ADO イベントのインスタンス化: Visual Basic |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 450d26f4624699b407432e6d7e3713494acf1619
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c0223d4d4346f26ff9339fce3cbc43be9bfcbe82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772480"
 ---
-# <a name="ado-event-instantiation-visual-basic"></a>Visual Basic の ADO イベントのインスタンス化します。
-Microsoft® Visual Basic® で ADO イベントを処理するために、モジュール レベル変数を使用してを宣言する必要があります、 **WithEvents**キーワード。 変数は、クラス モジュールの一部としてのみ宣言することができ、モジュール レベルで宣言する必要があります。 これはないよう、ただし、として制限の厳しいため Visual Basic**フォーム**オブジェクトはクラスでもします。 使用して変数を宣言する ADO イベントを処理する最も簡単な方法は、 **WithEvents**です。 次の例のハンドル、 **ConnectComplete**イベントを**接続**オブジェクト。  
+# <a name="ado-event-instantiation-visual-basic"></a>ADO イベントのインスタンス化: Visual Basic
+Microsoft® Visual Basic® での ADO のイベントを処理するために、モジュール レベル変数を使用してを宣言する必要があります、 **WithEvents**キーワード。 変数は、クラス モジュールの一部としてのみ宣言することができます、モジュール レベルで宣言する必要があります。 ようですが、制限はありません Visual Basic**フォーム**オブジェクトはクラスでも。 ADO イベントを処理する最も簡単な方法は、使用して変数を宣言する**WithEvents**します。 次の例のハンドル、 **ConnectComplete**イベントを**接続**オブジェクト。  
   
 ```  
 ' BeginEventExampleVB02  
@@ -69,4 +66,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- **接続**で宣言されているオブジェクト、**フォーム**レベルを使用して、 **WithEvents**イベント処理を有効にするキーワードです。 Form_Load イベント ハンドラーが新しいを割り当てることによって、オブジェクトを実際に作成**接続**オブジェクトを*connEvent*し、その接続を開きます。 もちろん、実際のアプリケーションでは、ここに表示されている Form_Load イベント ハンドラーでより多くの処理は実行します。
+ **接続**で宣言されているオブジェクト、**フォーム**レベルを使用して、 **WithEvents**イベント処理を有効にするキーワード。 実際には、Form_Load イベント ハンドラーは新しいを割り当てることでオブジェクトを作成**接続**オブジェクトを*connEvent*してから、接続を開きます。 もちろん、実際のアプリケーションは、次に示しますよりも Form_Load イベント ハンドラーでより多くの処理を行います。

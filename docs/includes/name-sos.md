@@ -1,1 +1,1 @@
-<Token>Microsoft SQL Operations Studio (プレビュー)</Token>
+Azure Data Studio

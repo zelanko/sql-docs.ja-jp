@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 14cf02ac294c25204460c2081c402e9afc855de7
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608947"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>変換 (DB2ToSQL) のための DB2 スキーマの評価
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、複雑な移行されるとどれ時間だけを決定する必要があります、移行にかかる時間します。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047843"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>制御フローに繰り返しを追加する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には For ループ コンテナーが含まれています。For ループ コンテナーとは制御フローの要素で、これを使用すると、条件に応じてパッケージ内の制御フローを繰り返すループを、簡単に含めることができます。 詳細については、「 [For ループ コンテナー](control-flow/for-loop-container.md)」を参照してください。  

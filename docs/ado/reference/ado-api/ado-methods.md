@@ -1,93 +1,90 @@
 ---
-title: ADO のメソッド |Microsoft ドキュメント
+title: ADO メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c07679210b359517815a245069db95eb6e15b84e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275562"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660590"
 ---
 # <a name="ado-methods"></a>ADO メソッド
 |||  
 |-|-|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|作成、更新可能なに対して新しいレコード**Recordset**オブジェクト。|  
-|[追加します。](../../../ado/reference/ado-api/append-method-ado.md)|オブジェクトをコレクションに追加します。 コレクションが場合**フィールド**、新しい**フィールド**をコレクションに追加する前に、オブジェクトを作成することがあります。|  
-|[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|大きなテキストまたはバイナリ データへのデータの追加**フィールド**、または、**パラメーター**オブジェクト。|  
-|[BeginTrans、CommitTrans、および RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|内のトランザクション処理の管理、**接続**オブジェクトの次のようにします。<br /><br /> **BeginTrans** -新しいトランザクションを開始します。<br /><br /> **CommitTrans** : 変更を保存し、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。<br /><br /> **RollbackTrans** — すべての変更をキャンセルし、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。|  
-|[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|実行をキャンセルする保留中、非同期メソッドの呼び出しです。|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|更新可能なに対して新しいレコードを作成します。 **Recordset**オブジェクト。|  
+|[追加](../../../ado/reference/ado-api/append-method-ado.md)|コレクションにオブジェクトを追加します。 コレクションが場合**フィールド**、新しい**フィールド**それをコレクションに追加する前に、オブジェクトを作成することがあります。|  
+|[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|大きなテキストまたはバイナリ データにデータを追加します。**フィールド**、または、**パラメーター**オブジェクト。|  
+|[BeginTrans、CommitTrans、および rollbacktrans の例](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|内のトランザクション処理の管理、**接続**オブジェクトの次のようにします。<br /><br /> **BeginTrans** -新しいトランザクションを開始します。<br /><br /> **CommitTrans** : 変更を保存し、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。<br /><br /> **RollbackTrans** -すべての変更をキャンセルし、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。|  
+|[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|実行をキャンセルする保留中、非同期メソッド呼び出し。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|保留中のバッチ更新をキャンセルします。|  
-|[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|現在のまたは新しい行に対して行われたすべての変更を取り消します、 **Recordset**オブジェクト、または**フィールド**のコレクション、**レコード**オブジェクトを呼び出す前に、 **更新**メソッドです。|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|現在のまたは新しい行に加えられた変更内容をキャンセル、**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**オブジェクトを呼び出す前に、 **Update**メソッド。|  
 |[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|すべてを削除、**エラー**オブジェクトから、**エラー**コレクション。|  
-|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|複製を作成**Recordset** 、既存のオブジェクト**Recordset**オブジェクト。 必要に応じて、複製が読み取り専用であることを指定します。|  
-|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|複製を作成します**Recordset**既存のオブジェクト**Recordset**オブジェクト。 必要に応じて、複製が読み取り専用であることを指定します。|  
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|2 つのブックマークを比較し、これらの相対値を示す値を返します。|  
-|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|ファイルまたはディレクトリとその内容を別の場所にコピーします。|  
-|[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|指定した数の文字またはバイトのコピー (に応じて**型**) で、**ストリーム**別**ストリーム**オブジェクト。|  
-|[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|新たに作成**パラメーター**を指定されたプロパティを持つオブジェクト。|  
-|[削除 (ADO パラメーターのコレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|オブジェクトを削除、**パラメーター**コレクション。|  
-|[削除 (ADO Fields コレクション)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|オブジェクトを削除、**フィールド**コレクション。|  
-|[削除 (ADO レコード セット)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|現在のレコードまたはレコードのグループを削除します。|  
+|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|ファイルまたはディレクトリと、その内容を別の場所にコピーします。|  
+|[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|指定した数の文字またはバイトのコピー (に応じて**型**) で、 **Stream**間**Stream**オブジェクト。|  
+|[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|新たに作成**パラメーター**を指定したプロパティを持つオブジェクト。|  
+|[削除 (ADO Parameters コレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|オブジェクトを削除、**パラメーター**コレクション。|  
+|[(ADO Fields コレクション) の削除します。](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|オブジェクトを削除、**フィールド**コレクション。|  
+|[削除 (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|現在のレコードまたはレコードのグループを削除します。|  
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|ファイルまたはディレクトリとそのすべてのサブディレクトリを削除します。|  
-|[(ADO コマンド) を実行します。](../../../ado/reference/ado-api/execute-method-ado-command.md)|クエリや、SQL ステートメントで指定されたストアド プロシージャの実行、 **CommandText**プロパティです。|  
-|[(ADO 接続) を実行します。](../../../ado/reference/ado-api/execute-method-ado-connection.md)|指定されたクエリ、SQL ステートメント、ストアド プロシージャ、またはプロバイダー固有のテキストを実行します。|  
-|[検索](../../../ado/reference/ado-api/find-method-ado.md)|検索、**レコード セット**を指定した条件を満たす行にします。|  
-|[フラッシュ](../../../ado/reference/ado-api/flush-method-ado.md)|内容を強制的、**ストリーム**を基になるオブジェクトに ADO バッファーに残っている、**ストリーム**が関連付けられています。|  
-|[get_OLEDBCommand メソッド](../../../ado/reference/ado-api/get-oledbcommand-method.md)|最初に、ADO コマンドの設定を ole DB コマンドにパラメーター情報を反映する、基になる ole DB コマンドを返します。|  
-|[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|返します、 **Recordset**ファイルとこれによって表されるディレクトリにサブディレクトリを表す行を持つ**レコード**です。|  
-|[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|大きなテキストまたはバイナリ データの内容の一部またはすべてが返されます**フィールド**オブジェクト。|  
+|[実行 (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)|クエリや、SQL ステートメントで指定されたストアド プロシージャの実行、 **CommandText**プロパティ。|  
+|[実行 (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|指定されたクエリ、SQL ステートメント、ストアド プロシージャ、またはプロバイダー固有のテキストを実行します。|  
+|[検索](../../../ado/reference/ado-api/find-method-ado.md)|検索、**レコード セット**を指定した条件を満たす行のできます。|  
+|[フラッシュ](../../../ado/reference/ado-api/flush-method-ado.md)|内容を強制的、 **Stream**を基になるオブジェクトへの ADO のバッファーに残っている、 **Stream**が関連付けられています。|  
+|[get_OLEDBCommand メソッド](../../../ado/reference/ado-api/get-oledbcommand-method.md)|まず ADO コマンドで設定する ole DB コマンドのパラメーター情報を伝達する、基になる ole DB コマンドを返します。|  
+|[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|返します、 **Recordset**ファイルとこれによって表されるディレクトリにサブディレクトリを表す行を持つ**レコード**します。|  
+|[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|大きなテキストまたはバイナリ データの内容の一部またはすべてを返します**フィールド**オブジェクト。|  
 |[GetDataProviderDSO メソッド](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Shape プロバイダーから基になる ole DB データ ソース オブジェクトを取得します。|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|複数のレコードを取得、 **Recordset**オブジェクトを配列にします。|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|返します、 **Recordset**を文字列として。|  
-|[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|既存のファイルの内容を読み込みます、**ストリーム**です。|  
-|[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|現在のレコードの位置を移動、 **Recordset**オブジェクト。|  
-|[MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|First、last に移動次、または前のレコードを指定した**Recordset**オブジェクトと現在のレコードを記録できるようにします。|  
-|[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|ファイルまたはディレクトリ、およびその内容を別の場所に移動します。|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|現在のクリア**レコード セット**オブジェクトを返します**レコード セット**一連のコマンドを進めることで。|  
-|[開く (ADO 接続)](../../../ado/reference/ado-api/open-method-ado-connection.md)|データ ソースへの接続を開きます。|  
-|[(ADO レコード) を開きます](../../../ado/reference/ado-api/open-method-ado-record.md)|既存を開く**レコード**オブジェクト、または新しいファイルまたはディレクトリを作成します。|  
-|[(ADO レコード セット) を開きます](../../../ado/reference/ado-api/open-method-ado-recordset.md)|カーソルを開きます。|  
-|[開く (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|開く、**ストリーム**バイナリまたはテキスト データのストリームを操作するオブジェクト。|  
+|[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|既存のファイルの内容を読み込み、 **Stream**します。|  
+|[Move](../../../ado/reference/ado-api/move-method-ado.md)|現在のレコードの位置を移動、 **Recordset**オブジェクト。|  
+|[MoveFirst、MoveLast、MoveNext、MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|First、last に移動します。 次に、または前のレコードを、指定した**レコード セット**オブジェクトと、そのレコードを現在のレコード。|  
+|[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|ファイルまたはディレクトリとその内容を別の場所に移動します。|  
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|現在のクリア**レコード セット**オブジェクトし、[次へ] を返します**レコード セット**一連のコマンドを進めることで。|  
+|[開く (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)|データ ソースへの接続を開きます。|  
+|[開く (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|既存を開く**レコード**オブジェクト、または新しいファイルまたはディレクトリを作成します。|  
+|[開く (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|カーソルを開きます。|  
+|[開く (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|開く、 **Stream**バイナリまたはテキスト データのストリームを操作するオブジェクト。|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|プロバイダーからデータベース スキーマ情報を取得します。|  
-|[put_OLEDBCommand メソッド](../../../ado/reference/ado-api/put-oledbcommand-method.md)|このメソッドは操作を行わない - 常に S_OK を返します。|  
-|[読み取り](../../../ado/reference/ado-api/read-method.md)|指定したからのバイト数を読み取り、**ストリーム**オブジェクト。|  
-|[ReadText](../../../ado/reference/ado-api/readtext-method.md)|テキストから指定数の文字を読み取ります**ストリーム**オブジェクト。|  
-|[[更新]](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、固有の仕様内のオブジェクトを更新します。|  
-|[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|データが更新、 **Recordset**オブジェクトの基になるクエリを再実行してオブジェクト。|  
-|[再同期](../../../ado/reference/ado-api/resync-method.md)|現在のデータを更新**Recordset**オブジェクト、または**フィールド**のコレクション、**レコード**基になるデータベースからのオブジェクト。|  
-|[および](../../../ado/reference/ado-api/save-method.md)|保存、 **Recordset**ファイルまたは**ストリーム**オブジェクト。|  
-|[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|バイナリの内容を保存、**ストリーム**をファイルにします。|  
-|[シーク](../../../ado/reference/ado-api/seek-method.md)|インデックスを検索、 **Recordset**に指定した値に一致する行に現在の行位置を変更した行をすばやく検索します。|  
+|[put_OLEDBCommand メソッド](../../../ado/reference/ado-api/put-oledbcommand-method.md)|このメソッドは演算を実行しない - 常に S_OK を返します。|  
+|[読み取り](../../../ado/reference/ado-api/read-method.md)|指定したからのバイト数を読み取り、 **Stream**オブジェクト。|  
+|[ReadText](../../../ado/reference/ado-api/readtext-method.md)|テキストから指定数の文字を読み取ります**Stream**オブジェクト。|  
+|[[更新]](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、特定のオブジェクトを更新します。|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|データを更新、**レコード セット**オブジェクトをオブジェクトの基になるクエリを再実行しています。|  
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|現在のデータを更新します**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**基になるデータベースからのオブジェクト。|  
+|[および](../../../ado/reference/ado-api/save-method.md)|保存、**レコード セット**ファイルまたは**Stream**オブジェクト。|  
+|[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|バイナリ コンテンツを保存、 **Stream**ファイル。|  
+|[シーク](../../../ado/reference/ado-api/seek-method.md)|インデックスを検索、 **Recordset**を指定した値と一致して、その行に現在の行位置を変更する行をすばやく検索します。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|ストリームの末尾の位置を設定します。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|テキスト ストリームを読み取るときに、1 つの行全体をスキップします。|  
-|[stat](../../../ado/reference/ado-api/stat-method.md)|開いているストリームに関する統計情報を取得します。|  
-|[サポートしています](../../../ado/reference/ado-api/supports-method.md)|指定したかどうかを決定**Recordset**オブジェクトは、特定の種類の機能をサポートしています。|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|現在の行に加えたあらゆる変更を保存、 **Recordset**オブジェクト、または**フィールド**のコレクション、**レコード**オブジェクト。|  
+|[Stat](../../../ado/reference/ado-api/stat-method.md)|開いているストリームに関する統計情報を取得します。|  
+|[Supports](../../../ado/reference/ado-api/supports-method.md)|指定したかどうかを判断します**Recordset**オブジェクトは、特定の種類の機能をサポートしています。|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|現在の行に加えた変更を保存、**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**オブジェクト。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|すべての保留中のバッチ更新プログラムをディスクに書き込みます。|  
-|[書き込み](../../../ado/reference/ado-api/write-method.md)|バイナリ データを書き込む、**ストリーム**オブジェクト。|  
-|[WriteText](../../../ado/reference/ado-api/writetext-method.md)|指定したテキストに文字列を**ストリーム**オブジェクト。|  
+|[書き込み](../../../ado/reference/ado-api/write-method.md)|バイナリ データを書き込みます、 **Stream**オブジェクト。|  
+|[WriteText](../../../ado/reference/ado-api/writetext-method.md)|指定したテキスト文字列を書き込みます、 **Stream**オブジェクト。|  
   
 ## <a name="see-also"></a>参照  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
- [ADO コレクション](../../../ado/reference/ado-api/ado-collections.md)   
+ [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [ADO 列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
+ [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
  [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   

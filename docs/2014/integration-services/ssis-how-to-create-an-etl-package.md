@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b2e8b7f78e7dc64bc3649270e279b740b041abb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b246e9d0badb30027d2971437ebdde5f0d1effde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263158"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066602"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS チュートリアル: 簡単な ETL パッケージの作成
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) は、高パフォーマンスの抽出、変換、およびデータ ウェアハウジング用パッケージの読み込み (ETL) を含む、データ統合ソリューションを構築するためのプラットフォームです。 SSIS には、パッケージを作成およびデバッグするためのグラフィカルなツールやウィザード、FTP 操作などのワークフロー機能の実行、SQL ステートメントの実行、および電子メール メッセージの送信を実行するためのタスク、データの抽出や読み込みに使用するデータの変換元と変換先、データのクリーニング、集計、マージ、コピーを行う変換、パッケージの実行と保存を管理するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービス、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラミングするための API (アプリケーション プログラミング インターフェイス) が用意されています。  

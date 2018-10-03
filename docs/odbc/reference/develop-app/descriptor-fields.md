@@ -1,32 +1,29 @@
 ---
-title: 記述子フィールド |Microsoft ドキュメント
+title: 記述子フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], fields
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cddf01c0ef40b582410773ba109c2d1c23ee1e7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696581"
 ---
 # <a name="descriptor-fields"></a>記述子フィールド
-記述子が含まれて*ヘッダー*と*レコード*列またはパラメーターを完全に記述されるフィールドです。  
+記述子が含まれて*ヘッダー*と*レコード*列またはパラメーターを完全に記述されるフィールド。  
   
  記述子には、次のヘッダー フィールドの 1 つのコピーが含まれています。 ヘッダー フィールドを変更するには、すべての列またはパラメーターに影響します。  
   
@@ -37,7 +34,7 @@ ms.locfileid: "32912577"
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- 記述子には、0 個以上の記述子レコードが含まれています。 各レコードは、列またはパラメーターの記述子の種類に応じて、について説明します。 新しい列またはパラメーターがバインドされると、新しいレコードには、記述子が追加されます。 列またはパラメーターには、バインドが解除されるときに、記述子からレコードが削除されます。 各レコードには、次のフィールドの 1 つのコピーが含まれています。  
+ 記述子には、0 個以上の記述子レコードが含まれています。 各レコードは、列またはパラメーターの記述子の種類に応じて、について説明します。 新しい列またはパラメーターがバインドされると、新しいレコードは、記述子に追加されます。 列またはパラメーターがバインドできない場合は、レコードは、記述子から削除されます。 各レコードには、次のフィールドの 1 つのコピーが含まれています。  
   
 |||  
 |-|-|  
@@ -58,7 +55,7 @@ ms.locfileid: "32912577"
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- 多くのステートメント属性は、記述子のヘッダー フィールドに対応します。 呼び出すことによってこれらの属性を設定**SQLSetStmtAttr**呼び出すことによって対応する記述子のヘッダー フィールドを設定および**SQLSetDescField**同じ効果があります。 場合も同様です**SQLGetStmtAttr**と**SQLGetDescField**、どちらも同じ情報を取得します。 記述子の関数の代わりにステートメントの関数を呼び出すと、持たない記述子ハンドルを取得する利点があります。  
+ 多くのステートメント属性は、記述子のヘッダー フィールドに対応します。 呼び出すことによってこれらの属性を設定**SQLSetStmtAttr**を呼び出して、対応する記述子のヘッダー フィールドを設定および**SQLSetDescField**同じ効果があります。 場合も同様**SQLGetStmtAttr**と**SQLGetDescField**、どちらも、同じ情報を取得します。 記述子の関数ではなくステートメントの関数を呼び出すと、記述子ハンドルを取得する必要はありませんが利点があります。  
   
  ステートメント属性を設定して、次のヘッダー フィールドを設定できます。  
   

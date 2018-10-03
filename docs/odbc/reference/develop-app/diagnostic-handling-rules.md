@@ -1,13 +1,11 @@
 ---
-title: 処理規則診断 |Microsoft ドキュメント
+title: 診断処理規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -15,29 +13,28 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dea78f0cc67c7eeeb4f18cbdee4fcb9e4ac757f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f59953dee77453bb8b453a40a36d17e865a1fe5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911637"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792260"
 ---
-# <a name="diagnostic-handling-rules"></a>診断の処理ルール
-次の規則は、処理、診断**SQLGetDiagRec**と**SQLGetDiagField**です。  
+# <a name="diagnostic-handling-rules"></a>診断の処理規則
+次の規則は、診断の処理で**SQLGetDiagRec**と**SQLGetDiagField**します。  
   
  すべての ODBC コンポーネント。  
   
--   必要がありますいないを交換して、変更、またはエラーまたは警告が別の ODBC コンポーネントから受信したをマスクします。  
+-   必要がありますいないを交換して、変更、またはエラーまたは警告のもう 1 つの ODBC コンポーネントから受信したマスク。  
   
--   別の ODBC コンポーネントから、診断メッセージを受信したときに、追加の状態レコードを追加できます。 追加されたレコードは、元のメッセージに対する実際の情報の値を追加する必要があります。  
+-   別の ODBC コンポーネントから、診断メッセージを受け取ったとき、追加の状態レコードを追加する可能性があります。 追加したレコードは、実際の情報値を元のメッセージに追加する必要があります。  
   
  ODBC のコンポーネントは、データ ソースを直接インターフェイスします。  
   
--   その仕入先識別子、そのコンポーネントの識別子およびデータ ソースから受信する診断メッセージをデータ ソースの識別子を付ける必要があります。  
+-   仕入先、識別子、そのコンポーネントの識別子、および診断メッセージをデータ ソースから受信するデータ ソースの識別子を付ける必要があります。  
   
 -   データ ソースのネイティブ エラー コードを保持する必要があります。  
   
@@ -49,16 +46,16 @@ ms.locfileid: "32911637"
   
 -   診断メッセージのテキストを生成する必要があります。  
   
--   その仕入先 id と診断メッセージをそのコンポーネントの識別子を付ける必要があります。  
+-   その仕入先識別子と、診断メッセージにそのコンポーネントの識別子を付ける必要があります。  
   
--   いずれかの利用可能で、意味のある場合は、ネイティブ エラー コードを返す必要があります。  
+-   いずれかが使用可能で意味のある場合は、ネイティブ エラー コードを返す必要があります。  
   
- ドライバー マネージャーとのインターフェイスと ODBC コンポーネント。  
+ ODBC コンポーネントのドライバー マネージャーと連携します。  
   
--   出力引数を初期化する必要があります**SQLGetDiagRec**と**SQLGetDiagField**です。  
+-   出力引数を初期化する必要があります**SQLGetDiagRec**と**SQLGetDiagField**します。  
   
--   書式設定し、診断情報の出力引数としてを返す必要があります**SQLGetDiagRec**と**SQLGetDiagField**その関数が呼び出されたとき。  
+-   書式設定し、の出力引数としての診断情報を返す必要があります**SQLGetDiagRec**と**SQLGetDiagField**その関数が呼び出された場合。  
   
- 1 つの ODBC コンポーネント、ドライバー マネージャー以外。  
+ 1 つ ODBC ドライバー マネージャー以外のコンポーネント。  
   
--   ネイティブのエラーに基づいて SQLSTATE を設定する必要があります。 ファイル ベースのドライバーとゲートウェイを使用しない DBMS に基づいたドライバーの場合は、ドライバーは SQLSTATE を設定する必要があります。 DBMS に基づいたドライバーのゲートウェイを使用する場合は、ドライバーまたは ODBC をサポートするゲートウェイのいずれかが、SQLSTATE を設定できます。
+-   ネイティブ エラーに基づいて SQLSTATE を設定する必要があります。 ファイル ベースのドライバーとゲートウェイを使用しない DBMS ベースのドライバーは、ドライバーは SQLSTATE を設定する必要があります。 ゲートウェイを使用して、DBMS ベースのドライバー、ドライバーまたは ODBC をサポートするゲートウェイのいずれかが、SQLSTATE を設定できます。

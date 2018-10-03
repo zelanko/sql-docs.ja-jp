@@ -1,13 +1,11 @@
 ---
-title: カーソル、LockType、および EditMode のプロパティの例 (VB) |。Microsoft ドキュメント
+title: CursorType、LockType、EditMode プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e624b9b45ae02524cba20d6a01915818b5589fa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c77629975b495d43e21f5d985264ed12f42dd56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277321"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838221"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>カーソル。、LockType、および EditMode のプロパティの例 (VB)
-この例の設定、[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)開く前にプロパティ、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。 値も示しています、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でプロパティです。 EditModeOutput 関数は、この手順を実行する必要があります。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、LockType、EditMode プロパティの例 (VB)
+この例の設定、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを開く前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 値も表示されます、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でのプロパティ。 EditModeOutput 関数は、この手順を実行する必要があります。  
   
 ```  
 'BeginEditModeVB  
@@ -127,7 +124,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>参照  
- [カーソル。 プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   

@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 268076a82d9c31c8a9def4593ada10ed33222994
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bbacb8630acf10b5c9d20c50ad40cfba3f036a7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677462"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux 上の読み取りスケールの SQL Server 可用性グループの構成します。
 
@@ -83,7 +81,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [分散型可用性グループを構成する](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
 * [可用性グループの詳細](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)

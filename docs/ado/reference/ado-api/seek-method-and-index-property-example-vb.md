@@ -1,13 +1,11 @@
 ---
-title: メソッドとインデックスのプロパティの例 (VB) をシーク |Microsoft ドキュメント
+title: Seek メソッドおよび Index プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f9b13fa707cd1b44621b3c3dd74b7649f25b5f7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281551"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661470"
 ---
-# <a name="seek-method-and-index-property-example-vb"></a>メソッドとインデックスのプロパティの例 (VB) にシークします。
-この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドおよび[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティと組み合わせて、指定された***従業員 ID***、検索するには従業員の名、***従業員***Nwind.mdb データベースのテーブルです。  
+# <a name="seek-method-and-index-property-example-vb"></a>Seek メソッドおよび Index プロパティの例 (VB)
+この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドと[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティと組み合わせて、指定された***従業員 ID***、検索するには従業員の名前、***従業員***Nwind.mdb データベースのテーブル。  
   
 ```  
 'BeginSeekVB  
@@ -120,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Index プロパティ](../../../ado/reference/ado-api/index-property.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [インデックスのプロパティ](../../../ado/reference/ado-api/index-property.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)

@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xtp_transaction_stats (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_xtp_transaction_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_transaction_stats_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82cd1561509dd25ebe7f7dcbcfe6914417dc527f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: de6169af7c10972307a154e9830bc8e206854ab5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725000"
 ---
 # <a name="sysdmxtptransactionstats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 05/23/2018
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |total_count|**bigint**|インメモリ OLTP データベース エンジンで実行されたトランザクションの総数。|  
 |read_only_count|**bigint**|読み取り専用トランザクションの数。|  
@@ -68,7 +66,7 @@ ms.lasthandoff: 05/23/2018
 |write_conflicts|**bigint**|内部使用のみです。|  
 |unique_constraint_violations|**bigint**|UNIQUE 制約の違反の総数。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

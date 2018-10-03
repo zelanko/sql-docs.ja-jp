@@ -1,18 +1,13 @@
 ---
-title: 式のコンテキストとクエリの評価 (XQuery) |Microsoft ドキュメント
+title: 式コンテキストとクエリの評価 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -22,30 +17,29 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4b9100ff14fc4cbd5e7d2a94830741fa6a1ceda2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31b5cbd8d446cbda034ee0e13e7e991607973ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755920"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>式コンテキストとクエリの評価 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   式のコンテキストは、式の分析と評価を行うために使用される情報です。 次に、XQuery を評価する際の 2 つのフェーズを示します。  
   
--   **静的コンテキスト**– これは、クエリのコンパイルの段階です。 クエリの静的分析中に、使用できる情報に基づいて、エラーが発生する場合があります。  
+-   **静的コンテキスト**– これは、クエリのコンパイル フェーズ。 クエリの静的分析中に、使用できる情報に基づいて、エラーが発生する場合があります。  
   
 -   **動的コンテキスト**– これは、クエリの実行フェーズ。 クエリをコンパイル中のエラーなどの静的エラーが含まれない場合でも、クエリの実行中にエラーが返ることがあります。  
   
 ## <a name="static-context"></a>静的コンテキスト  
  静的コンテキストの初期化とは、式の静的分析向けに、すべての情報をまとめるプロセスのことです。 静的コンテキストの初期化の一環として、次のことが行われます。  
   
--   **境界空白文字** 分離にポリシーを設定します。 そのため、境界の空白文字は失われます、**いずれかの要素**と**属性**クエリでコンス トラクターです。 以下に例を示します。  
+-   **境界空白文字**ポリシーが分離に設定します。 そのため、境界の空白で保持されません、**任意の要素**と**属性**クエリのコンス トラクター。 以下に例を示します。  
   
     ```  
     declare @x xml  
@@ -67,7 +61,7 @@ ms.locfileid: "33077579"
   
     -   WITH XMLNAMESPACES を使用して定義されたすべての名前空間。 詳細については、次を参照してください。 [with XMLNAMESPACES を使用したクエリへの名前空間の追加](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md))。  
   
-    -   クエリのプロローグで定義されたすべての名前空間。 プロローグ内の名前空間宣言は、WITH XMLNAMESPACES の名前空間宣言よりも優先されます。 たとえば、次のクエリでは、WITH XMLNAMESPACES 宣言、名前空間にバインドされるプレフィックス (pd) (`http://someURI`)。 ただし、WHERE 句では、バインドよりもクエリのプロローグが優先されます。  
+    -   クエリのプロローグで定義されたすべての名前空間。 プロローグ内の名前空間宣言は、WITH XMLNAMESPACES の名前空間宣言よりもオーバーライドされます。 たとえば、次のクエリでは、WITH XMLNAMESPACES 宣言、名前空間にバインドされるプレフィックス (pd) (`http://someURI`)。 ただし、WHERE 句では、バインドよりもクエリのプロローグがオーバーライドされます。  
   
         ```  
         WITH XMLNAMESPACES ('http://someURI' AS pd)  
@@ -85,9 +79,9 @@ ms.locfileid: "33077579"
   
      これらすべての名前空間のバインドは、静的コンテキストの初期化時に解決されます。  
   
--   型指定されたクエリを実行する場合**xml**列または変数に関連付けられている XML スキーマ コレクションのコンポーネントが静的コンテキストにインポートされていない列または変数です。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+-   型指定されたクエリを実行する場合**xml**列または変数、列または変数に関連付けられた XML スキーマ コレクションのコンポーネントは静的コンテキストにインポートされます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
--   インポートされたスキーマ内のすべてのアトミック型では、静的コンテキストでキャスト関数も使用できます。 この例を次に示します。 この例では、クエリが指定された、型指定されたに対して**xml**変数。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 キャスト関数は、この型に対応する**myType()** は、静的分析中に使用できます。 クエリ式 (`ns:myType(0)`) myType の値を返します。  
+-   インポートされたスキーマ内のすべてのアトミック型では、静的コンテキストでキャスト関数も使用できます。 この例を次に示します。 この例でクエリを指定する、型指定されたに対して**xml**変数。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 キャスト関数の場合、この型に対応する**myType()** は、静的分析中に使用できます。 クエリ式 (`ns:myType(0)`) myType の値を返します。  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -112,7 +106,7 @@ ms.locfileid: "33077579"
     SELECT @var.query('declare namespace ns="myNS"; ns:myType(0)')  
     ```  
   
-     次の例では、キャスト関数、 **int**式で組み込みの XML 型を指定します。  
+     次の例では、キャスト関数、 **int**組み込み XML 型が式で指定します。  
   
     ```  
     declare @x xml  
@@ -127,7 +121,7 @@ ms.locfileid: "33077579"
   
 2.  式で指定された関数名や型名の解決。  
   
-3.  クエリの静的な型指定。 これにより、クエリがタイプ セーフであることを確認できます。 たとえば、次のクエリは、静的なエラーを返しますのため、 **+** 演算子には、数値のプリミティブ型の引数が必要です。  
+3.  クエリの静的な型指定。 これにより、クエリがタイプ セーフであることを確認できます。 に、次のクエリが、静的なエラーを返しますなど、 **+** 演算子には、プリミティブ型の引数が必要です。  
   
     ```  
     declare @x xml  
@@ -135,7 +129,7 @@ ms.locfileid: "33077579"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     次の例で、 **value()** 演算子がシングルトンを必要とします。 指定されている XML スキーマがあります複数\<Elem > 要素。 式を静的に分析することでタイプ セーフではないと判断され、静的エラーが返されます。 エラーを解決するには、単一の結果になることを明示的に指定するように (`data(/x:Elem)[1]`)、式を書き直す必要があります。  
+     次の例では、 **value()** 演算子には、シングルトンが必要です。 XML スキーマの指定に従ってがあります複数\<Elem > 要素。 式を静的に分析することでタイプ セーフではないと判断され、静的エラーが返されます。 エラーを解決するには、単一の結果になることを明示的に指定するように (`data(/x:Elem)[1]`)、式を書き直す必要があります。  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  
@@ -153,14 +147,14 @@ ms.locfileid: "33077579"
     SELECT @x.value('declare namespace x="myNS"; data(/x:Elem)[1]','varchar(20)')  
     ```  
   
-     詳細については、次を参照してください。 [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)です。  
+     詳細については、次を参照してください。 [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。  
   
 ### <a name="implementation-restrictions"></a>実装の制限  
  次に、静的コンテキストに関する制限事項を示します。  
   
 -   XPath 互換性モードはサポートされません。  
   
--   XML の構築では、分離構築モードだけがサポートされます。 これが既定の設定です。 構築される要素ノードの型は、そのため、 **xdt: 型指定されていない**型で、属性は**xdt:untypedAtomic**型です。  
+-   XML の構築では、分離構築モードだけがサポートされます。 これが既定の設定です。 構築される要素ノードの型は、そのため、 **xdt: 型指定されていない**型で、属性は**xdt:untypedAtomic**型。  
   
 -   順序付けられた順序モードだけがサポートされます。  
   
@@ -179,9 +173,9 @@ ms.locfileid: "33077579"
 ## <a name="dynamic-context"></a>動的コンテキスト  
  動的コンテキストとは、式の実行時に使用できる必要のある情報のことです。 静的コンテキスト以外に、動的コンテキストの一環として、次の情報が初期化されます。  
   
--   次に示すように、コンテキスト アイテム、コンテキストの位置、コンテキスト サイズなどの式のフォーカスが初期化されます。 これらすべての値によってオーバーライドできるに注意してください、 [nodes() メソッド](../t-sql/xml/nodes-method-xml-data-type.md)です。  
+-   次に示すように、コンテキスト アイテム、コンテキストの位置、コンテキスト サイズなどの式のフォーカスが初期化されます。 これらすべての値で上書きできますが、 [nodes() メソッド](../t-sql/xml/nodes-method-xml-data-type.md)します。  
   
-    -   **Xml**データ型が、コンテキスト アイテム、ドキュメント ノードに、処理対象のノードを設定します。  
+    -   **Xml**データ型は、コンテキスト アイテム、ドキュメント ノードに、処理されているノードを設定します。  
   
     -   コンテキストの位置、つまり処理対象のノードからのコンテキスト アイテムの相対位置が、最初は 1 に設定されます。  
   
@@ -190,13 +184,13 @@ ms.locfileid: "33077579"
 ### <a name="implementation-restrictions"></a>実装の制限  
  次に、動的コンテキストに関する制限事項を示します。  
   
--   **現在の日付と時刻**コンテキスト関数では、 **fn:current--日付**、 **fn:current--時間**、および**fn:current--dateTime**、されません。サポートされています。  
+-   **現在の日付と時刻**コンテキスト関数では、 **fn:current--日付**、 **fn:current--時間**、および**fn:current--dateTime**、いません。サポートされています。  
   
--   **暗黙のタイム ゾーン**は utc+0 に固定され、変更できません。  
+-   **暗黙のタイム ゾーン**UTC + 0 に固定されており、変更できません。  
   
--   **Fn:doc()** 関数はサポートされていません。 すべてのクエリに対して実行されます**xml**列または変数を入力します。  
+-   **Fn:doc()** 関数がサポートされていません。 すべてのクエリに対して実行されます**xml**列または変数を入力します。  
   
--   **Fn:collection()** 関数はサポートされていません。  
+-   **Fn:collection()** 関数がサポートされていません。  
   
 ## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)   

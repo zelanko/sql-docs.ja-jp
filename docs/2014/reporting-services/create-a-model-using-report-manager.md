@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175091"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064852"
 ---
 # <a name="create-a-model-using-report-manager"></a>レポート マネージャーを使用してモデルを作成する
   レポート マネージャーを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のキューブ、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータベース、Oracle のデータベースからモデルを生成できます。 レポート モデルは、レポート サーバーにパブリッシュされている共有データ ソースから生成されます。 まだ共有データ ソースがない場合は、作成する必要があります。  

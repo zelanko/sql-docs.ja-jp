@@ -1,14 +1,11 @@
 ---
-title: sp_msx_get_account (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_msx_get_account (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_get_account_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_get_account
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a54d8e930d9a3365225c67d4f9f8479458e47295
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 297dbbf13da14916d12fc1ef457279a1268bc991
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792816"
 ---
 # <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +45,17 @@ sp_msx_get_account
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|マスター サーバーの接続番号。|  
 |msx_credential_id|**int**|マスター サーバー接続に使用する資格情報の ID。|  
 |msx_credential_name|**sysname**|マスター サーバー接続に使用する資格情報の名前。|  
 |msx_login_name|**nvarchar (4000)**|資格情報に関する Windows ユーザーのドメイン名とユーザー名。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  対象サーバーに対して指定された資格情報がない場合、空の結果セットを返します。 資格情報を設定するには、sp_msx_set_account を使用します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

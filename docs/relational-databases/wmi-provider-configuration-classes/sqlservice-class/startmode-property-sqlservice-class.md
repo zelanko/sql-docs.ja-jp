@@ -1,15 +1,12 @@
 ---
-title: StartMode プロパティ (SqlService クラス) |Microsoft ドキュメント
+title: StartMode プロパティ (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - StartMode Property (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d5f9ba82b7ef75fa9b2a6fff80dab8e0180d59f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e8e6fd01db9c390588bbd1d521411c1467a46ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011419"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809220"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.StartMode [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *オブジェクト*  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
@@ -54,20 +50,20 @@ object.StartMode [= value]
  値 = 0。 オペレーティング システム ローダーによって開始されるサービスです。 このオプションは、ドライバー サービスにのみ有効です。  
   
  システム  
- 値 = 1 サービスによって開始、 **IoInitSystem**メソッドです。 このオプションは、ドライバー サービスにのみ有効です。  
+ 値 = 1 サービスを開始して、 **IoInitSystem**メソッド。 このオプションは、ドライバー サービスにのみ有効です。  
   
- Automatic  
+ 自動  
  値 = 2。 システムの起動時にサービス コントロール マネージャーによって自動的に開始されるサービスです。  
   
  手動  
- 値 = 3 サービス プロセスを呼び出すときに、コンピューター マネージャーによってが開始されて、 **StartService**メソッドです。  
+ 値 = 3 プロセスを呼び出すとき、コンピューター マネージャーによって開始されるサービス、 **StartService**メソッド。  
   
  Disabled  
  値 = 4 サービスを開始できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

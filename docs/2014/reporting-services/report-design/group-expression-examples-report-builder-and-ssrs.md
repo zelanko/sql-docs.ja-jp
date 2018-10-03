@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data [Reporting Services], grouping
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - expressions [Reporting Services], adding
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e1f8a5b296c51a5123013e8f961cf518684f27e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6cefb3f87d983690c8203eba1860a1d2595e096c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076532"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>グループ式の例 (レポート ビルダーおよび SSRS)
   データ領域では、1 つのフィールドでデータをグループ化することも、グループ化の基準となるデータを識別する、より複雑な式を作成することもできます。 複合式には、複数のフィールドやパラメーター、条件ステートメント、またはカスタム コードなどへの参照が含まれます。 データ領域に対してグループを定義する場合、これらの式を **[グループ]** プロパティに追加します。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
@@ -47,7 +44,7 @@ ms.locfileid: "37323808"
 |多数の年齢範囲でグループ化します。 次の例は、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET で記述され、次の範囲に対して文字列を返すカスタム コードを示します。<br /><br /> 25 以下<br /><br /> 26 ～ 50<br /><br /> 51 ～ 75<br /><br /> 76 以上|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> カスタム コード :<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
 ## <a name="see-also"></a>参照  
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [レポート デザイナーのカスタム コードやアセンブリ参照の式で&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
   

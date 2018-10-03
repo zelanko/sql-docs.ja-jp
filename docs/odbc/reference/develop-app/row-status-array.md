@@ -1,13 +1,11 @@
 ---
-title: 行の状態配列 |Microsoft ドキュメント
+title: 行の状態配列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
@@ -17,26 +15,25 @@ helpviewer_keywords:
 - result sets [ODBC], block cursors
 - rowset status [ODBC]
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2c45b2dc5ea9326b5ae3b229a17c13207edcabc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912537"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706410"
 ---
-# <a name="row-status-array"></a>行の状態配列
-データに加え**SQLFetch**と**SQLFetchScroll**行セット内の行ごとの状態を配列を返すことができます。 この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって指定されます。 この配列は、アプリケーションによって割り当てられているし、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で指定された数の要素があります。 、配列内の値が設定**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、および**SQLSetPos です。** 値では、行と最後にフェッチした後にその状態が変更するかどうかの状態について説明します。  
+# <a name="row-status-array"></a>行の状態の配列
+データに加えて**SQLFetch**と**SQLFetchScroll**行セットの各行のステータスを提供している配列を返すことができます。 この配列を指定し、SQL_ATTR_ROW_STATUS_PTR のステートメント属性を使用します。 この配列は、アプリケーションが割り当てられる、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で指定された数の要素を必要とします。 によって、配列内の値が設定されます**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、および**SQLSetPos します。** 値には、行とその状態が最後にフェッチするために変更されたかどうかの状態について説明します。  
   
-|行の状態配列の値|Description|  
+|行の状態の配列の値|説明|  
 |----------------------------|-----------------|  
-|SQL_ROW_SUCCESS|この行は、フェッチに成功しましたれ、最後にフェッチした後は変更されていません。|  
-|SQL_ROW_SUCCESS_WITH_INFO|この行は、フェッチに成功しましたれ、最後にフェッチした後は変更されていません。 ただし、行に関する警告が返されました。|  
-|SQL_ROW_ERROR|行をフェッチ中にエラーが発生しました。|  
-|SQL_ROW_UPDATED|この行はフェッチに成功しましたれ、最後にフェッチした後が更新されました。 行が再度フェッチまたは更新**SQLSetPos**、新規の状態にその状態が変更されました。<br /><br /> ドライバーによっては、データへの変更を検出することはできず、そのため、この値を返すことはできません。 ドライバーが行の再フェッチの更新を検出できるかどうかを決定するには、アプリケーションが呼び出す**SQLGetInfo** SQL_ROW_UPDATES オプションを使用します。|  
-|SQL_ROW_DELETED|前回のフェッチ後、行が削除されました。|  
-|SQL_ROW_ADDED|によって、行が挿入された**SQLBulkOperations**です。 行が再度フェッチまたはによって更新されるかどうか**SQLSetPos**、その状態は SQL_ROW_SUCCESS します。<br /><br /> この値が設定されていない**SQLFetch**または**SQLFetchScroll**です。|  
-|SQL_ROW_NOROW|行セットには、結果セットの末尾がオーバー ラップされ、行の状態配列のこの要素に対応する行が返されません。|
+|SQL_ROW_SUCCESS|行が正常にフェッチされたれ、最後にフェッチした後は変更されていません。|  
+|SQL_ROW_SUCCESS_WITH_INFO|行が正常にフェッチされたれ、最後にフェッチした後は変更されていません。 ただし、行の詳細については、警告が返されました。|  
+|SQL_ROW_ERROR|行のフェッチ中にエラーが発生しました。|  
+|SQL_ROW_UPDATED|行は正常にフェッチされ、が最後にフェッチされた以降に更新されました。 場合は、行が、再びフェッチまたはによって更新**SQLSetPos**、その状態は、新しい状態に変更されます。<br /><br /> 一部のドライバーはデータへの変更を検出することはできませんし、そのため、この値を返すことはできません。 アプリケーションを呼び出すドライバーが行の再フェッチの更新を検出できるかどうかを判断する**SQLGetInfo** SQL_ROW_UPDATES オプションを使用します。|  
+|SQL_ROW_DELETED になります|最後にフェッチしたため、行が削除されました。|  
+|SQL_ROW_ADDED|行が挿入された**SQLBulkOperations**します。 行を再度フェッチによって更新されますか**SQLSetPos**、その状態が SQL_ROW_SUCCESS します。<br /><br /> この値が設定されていない**SQLFetch**または**SQLFetchScroll**します。|  
+|SQL_ROW_NOROW であって|行セットには、結果セットの末尾がオーバー ラップされ、この要素の行の状態配列に対応する行が返されません。|

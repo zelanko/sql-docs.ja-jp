@@ -1,32 +1,29 @@
 ---
-title: スレッドのプロパティの例 (VB) |Microsoft ドキュメント
+title: MarshalOptions プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - MarshalOptions property [ADO], Visual Basic example
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9c2109bedd19bceb90469d5880342dec2780afc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: aced271d33f28a565f3ebf9976a325d215e23acb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801210"
 ---
-# <a name="marshaloptions-property-example-vb"></a>スレッドのプロパティの例 (VB)
-この例では、[スレッド](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がサーバーに送信されますを指定する、すべての行または変更された行のみです。  
+# <a name="marshaloptions-property-example-vb"></a>MarshalOptions プロパティの例 (VB)
+この例では、 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がサーバーに送信されますを指定する: すべての行または行の変更のみです。  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -136,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [スレッドのプロパティ (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
+ [MarshalOptions プロパティ (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

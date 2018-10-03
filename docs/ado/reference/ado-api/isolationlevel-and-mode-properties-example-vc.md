@@ -1,13 +1,11 @@
 ---
-title: IsolationLevel とモードのプロパティの例 (vc++) |Microsoft ドキュメント
+title: IsolationLevel および Mode プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688560"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel とモードのプロパティの例 (vc++)
-この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)を開くには、排他的な接続プロパティと[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離で実行されるトランザクションを開きます。  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel および Mode プロパティの例 (vc++)
+この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)、排他的な接続を開き、プロパティ、および[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離を実行したトランザクションを開きます。  
   
 ## <a name="example"></a>例  
   
@@ -228,24 +225,24 @@ void PrintComError(_com_error &e) {
 ```  
   
  **接続モードは排他的**  
-**トランザクションが分離プロセス**  
-**データベースのビジー状態である Executive のガイド - ビジネス**  
-**コンピューターと料理: その貸借対照表 - ビジネス**  
+**トランザクション分離**  
+**データベースのビジー状態 Executive のガイド - ビジネス**  
+**コンピューターと料理: その貸借対照表のビジネス**  
 **コンピューターの負荷に対処することができます!-ビジネス**  
-**コンピューター - ビジネスについて直線の説明**  
+**コンピューター - ビジネスについての直接の説明**  
 **シリコン バレー Gastronomic 扱います - mod_cook**  
-**グルメ電子レンジ - mod_cook**  
-**コンピューターの料理 - 決心についていない心理学**  
-**ユーザー フレンドリですか。-popular_comp**  
+**Gourmet 電子レンジ - mod_cook**  
+**コンピューターの料理 - 決心についていないユーザーの心理状態**  
+**ですがユーザー フレンドリですか。-popular_comp**  
 **シリコン バレー - popular_comp のシークレット**  
 **Net エチケット - popular_comp**  
-**コンピューター Phobic および非 Phobic 個人: 動作バリエーション - self_help**  
-**Is しますか。-self_help**  
-**恐れ - self_help なしの有効期間**  
-**長時間にわたるデータ Deprivation: 次の 4 つのケース スタディ - ある self_help**  
-**感情的セキュリティ: 新しいアルゴリズム - self_help**  
-**タマネギ、Leeks とガーリック トースト: 地中海 - trad_cook の料理シークレット**  
-**バッキンガム宮殿台所 - trad_cook における 50 年**  
+**他者とのコンピューターおよび非他者と個人: 動作バリエーション - self_help**  
+**怒りの敵ですか。-self_help**  
+**-Self_help を与えることがなく有効期間**  
+**長時間にわたるデータ Deprivation: 4 つのケース スタディ - ある self_help**  
+**感情的なセキュリティ: 新しいアルゴリズムの self_help**  
+**タマネギ、ニンニク、Leeks、: 地中海 - trad_cook の料理のシークレット**  
+**バッキンガム Palace 台所 - trad_cook で 50 年**  
 **寿司、すべてのユーザーですか?-trad_cook**   
 ## <a name="see-also"></a>参照  
  [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)   

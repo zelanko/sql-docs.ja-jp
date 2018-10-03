@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_session_object_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_xe_session_object_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_session_object_columns_TSQL
@@ -19,32 +17,32 @@ helpviewer_keywords:
 - xe
 - sys.dm_xe_session_object_columns dynamic management view
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62d2e43572ae6501535eebda978c6592e565aa05
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 49ef6a48dba129311f70b1ba03c427258127b358
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810210"
 ---
 # <a name="sysdmxesessionobjectcolumns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   セッションにバインドされたオブジェクトの構成値を示します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|イベント セッションのメモリ アドレス。 sys.dm_xe_sessions.address との多対一のリレーションシップがあります。 NULL 値は許可されません。|  
 |column_name|**nvarchar(60)**|構成値の名前。 NULL 値は許可されません。|  
 |column_id|**int**|列の ID。 オブジェクト内で一意です。 NULL 値は許可されません。|  
 |column_value|**nvarchar(2048)**|列の構成値。 NULL 値が許可されます。|  
-|object_type|**nvarchar(60)**|オブジェクトの古い型。 NULL 値は許可されません。 object_type では、いずれかです。<br /><br /> イベント<br /><br /> ターゲット (target)|  
+|object_type|**nvarchar(60)**|オブジェクトの古い型。 NULL 値は許可されません。 object_type はの 1 つです。<br /><br /> イベント<br /><br /> ターゲット (target)|  
 |object_name|**nvarchar(60)**|この列が所属するオブジェクトの名前。 NULL 値は許可されません。|  
 |object_package_guid|**uniqueidentifier**|オブジェクトを含むパッケージの GUID。 NULL 値は許可されません。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  

@@ -1,46 +1,43 @@
 ---
-title: ADOX 列挙定数 |Microsoft ドキュメント
+title: ADOX の列挙定数 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a862168ffd8be5d7490a7151813bb6c1272f6d86
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284781"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729480"
 ---
-# <a name="adox-enumerated-constants"></a>ADOX 列挙定数
-デバッグを支援するには、ADOX 列挙定数には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADOX の 1 つのリリース別に変更があります。 コードは必要があります列挙定数の実際の値ではなく、名前にのみ依存します。  
+# <a name="adox-enumerated-constants"></a>ADOX の列挙定数
+デバッグを支援するには、ADOX の列挙定数には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADOX の 1 つのリリース別に変更があります。 コードは、列挙定数の実際の値ではなく、名前にのみ依存する必要があります。  
   
  次の列挙定数が定義されます。  
   
 |列挙型|説明|  
 |-----------------|-----------------|  
-|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|ときに実行されるアクションの種類を指定**SetPermissions**と呼びます。|  
-|[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 値を持つレコードのインデックスが作成するかどうかを指定します。|  
-|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|特性を指定します、**列**です。|  
-|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|データ型を指定します、**フィールド**、**パラメーター**、または**プロパティ**です。|  
-|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|オブジェクトがアクセス許可の設定を継承する方法を示す**SetPermissions**です。|  
+|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|ときに実行されるアクションの種類を指定します**SetPermissions**が呼び出されます。|  
+|[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 値を持つレコードのインデックスを作成するかどうかを指定します。|  
+|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|特性を指定します、**列**します。|  
+|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|データ型を指定します、**フィールド**、**パラメーター**、または**プロパティ**します。|  
+|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|オブジェクトに設定されたアクセス許可を継承する方法を指定します。 **SetPermissions**します。|  
 |[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|型を指定**キー**: プライマリ、外部キー、または一意です。|  
-|[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|Ownership のいずれかのアクセス許可を設定する対象のデータベース オブジェクトの種類を指定します。|  
-|[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|オブジェクトの権限またはグループまたはユーザーのアクセス許可を指定します。|  
-|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|ときに従うルールを指定します、**キー**を削除します。|  
+|[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|アクセス許可または所有権を設定する対象のデータベース オブジェクトの種類を指定します。|  
+|[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|オブジェクトの権利またはグループまたはユーザーのアクセス許可を指定します。|  
+|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|ときに従うルールを指定します、**キー**は削除されます。|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|インデックス付き列の並べ替え順序を指定します。|  
   
 ## <a name="see-also"></a>参照  
- [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
+ [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

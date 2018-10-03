@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 046d73e4317696c579bbcc6e2ad512227b12f37e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5afcf2441de59e233abb3f1d211e0f14e517a43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248872"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065702"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL)
   この例では、証明書ベースの認証を使用してデータベース ミラーリング セッションを作成するために必要なすべての段階について説明します。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  

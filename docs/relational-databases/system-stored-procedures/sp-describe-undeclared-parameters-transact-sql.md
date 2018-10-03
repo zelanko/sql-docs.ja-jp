@@ -1,14 +1,11 @@
 ---
 title: sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -18,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679639"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   宣言されていないパラメーターに関するメタデータを含む結果セットを返します、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 使用されている各パラメーターの検討、  **\@tsql**バッチで宣言されていないが、  **\@params**します。 これらの各パラメーターに対して 1 行のデータを含む結果セットが返されます。そのパラメーターについて推論される型の情報も含まれます。 空の結果セットを返し、  **\@tsql**入力バッチで宣言されている以外のパラメーターを持たない **\@params**します。  
   
@@ -47,11 +43,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
+ [  **\@tsql =** ] **'**_TRANSACT-SQL\_バッチ_**'**  
+ 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (**_n_**)** または**nvarchar (max)** します。  
   
- [  **\@params =** ] **N'***パラメーター***'**  
- \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
+ [  **\@params =** ] **N'**_パラメーター_**'**  
+ \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (**_n_**)** または**nvarchar (max)** します。  
   
  1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む*Transact SQL_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 TRANSACT-SQL ステートメントまたはステートメント内のバッチが、パラメーターが含まれない場合\@params は必要ありません。 このパラメーターの既定値は NULL です。  
   
@@ -106,7 +102,7 @@ sp_describe_undeclared_parameters
   
 -   場合、入力[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチで宣言されているパラメーターに同じ名前のローカル変数を宣言します\@params します。  
   
--   ステートメントは、一時テーブルを参照している場合。  
+- ステートメントは、一時テーブルを参照している場合。
   
  場合\@tsql がで宣言されている以外のパラメーターを持たない\@params、プロシージャは、空の結果セットを返します。  
   

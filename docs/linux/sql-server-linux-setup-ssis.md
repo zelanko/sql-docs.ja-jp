@@ -8,16 +8,14 @@ manager: craigg
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bac0933cc8b27159a95a9b99014a43e9fab966b5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c9d18e948a415a1d549c21a7c78e0117c6ab819c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602500"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
 
@@ -141,7 +139,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | **SSIS_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 使用可能な値を次に示します。<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>プロダクト キー<br/><br/>プロダクト キーが形式である必要があります、プロダクト キーを指定する場合`#####-#####-#####-#####-#####`ここで、`#`が文字または数字。  |
 | | |
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Linux 上の SSIS パッケージを実行するを参照してください。[抽出、変換、および SSIS を使用した Linux 上の SQL Server のデータの読み込み](sql-server-linux-migrate-ssis.md)します。
 

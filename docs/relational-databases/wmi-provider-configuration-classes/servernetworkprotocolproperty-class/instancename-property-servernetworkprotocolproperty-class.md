@@ -1,15 +1,12 @@
 ---
-title: InstanceName プロパティ (ServerNetworkProtocolProperty クラス) |Microsoft ドキュメント
+title: InstanceName プロパティ (ServerNetworkProtocolProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - InstanceName Property (ServerNetworkProtocolProperty Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c85fb9bc5957b8a4b02b09a925e2324436a41e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c496aec6f73a6017c1eb8a65bdc014a297b9d994
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008679"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665516"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>InstanceName プロパティ (ServerNetworkProtocolProperty クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +38,13 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *オブジェクト*  
+ *object*  
  [のインスタンス上のネットワーク プロトコルの属性を表す](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) ServerNetworkProtocolProperty クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー ネットワーク プロトコルがインストールされている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
  [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

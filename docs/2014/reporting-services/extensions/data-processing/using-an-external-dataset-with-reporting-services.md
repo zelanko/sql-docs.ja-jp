@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aaa06d612dc3ed28c442076c96ff4782003a333e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9169fbb442302461bb7b987e6f43919947bc109e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053132"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services での外部データセットの使用
   非接続の分散データ シナリオを [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] でサポートする場合、その中心となるのが **DataSet** オブジェクトです。 **DataSet** オブジェクトはメモリ上に保持されたデータを表し、データ ソースとは無関係に一貫したリレーショナル プログラミング モデルを提供します。 また、複数の異なるデータ ソースや XML データで使用でき、アプリケーションのデータをローカルに管理することも可能です。 **DataSet** オブジェクトは、関連テーブル、制約、およびテーブル間のリレーションシップを含む、完全なデータセットを表します。 **DataSet** オブジェクトには、データを格納し、表示するための柔軟な機能が備わっています。そのため、データに関するレポートを生成するときは、多くの場合、事前にそのデータが処理され、**DataSet** オブジェクトに変換されます。  

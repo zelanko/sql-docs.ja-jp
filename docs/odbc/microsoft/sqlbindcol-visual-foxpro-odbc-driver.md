@@ -1,36 +1,33 @@
 ---
-title: SQLBindCol (Visual FoxPro ODBC ドライバー) |Microsoft ドキュメント
+title: SQLBindCol (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindCol function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 139baf7eaac55aeb92c70fed7ec61645907d335d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8bf2f1b58a40118d64673a7464a242e6821e4c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685740"
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
+>  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全  
+ サポート: 完全な  
   
- ODBC API の準拠: コア レベル  
+ ODBC API 準拠: コア レベル  
   
- 結果列の記憶域スペースを割り当てられ、結果の種類を指定します。 ときに[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)または[SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md)が呼び出されると、ドライバーにより、データ バインドのすべての列に対して割り当て済みの場所にします。 参照してください[SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) ODBC と Visual FoxPro のデータ型間のマッピングにします。  
+ 結果列の記憶域スペースを割り当てるし、結果の型を指定します。 ときに[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)または[SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md)が呼び出されると、ドライバーを配置のデータ バインドされたすべての列を割り当てられている場所にします。 参照してください[SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md)の ODBC および Visual FoxPro データ型の間のマッピング。  
   
- 詳細については、次を参照してください。 [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md)で、 *ODBC プログラマ リファレンス*です。
+ 詳細については、次を参照してください。 [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md)で、 *ODBC プログラマ リファレンス*します。

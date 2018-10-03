@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], System Monitor
 - System Monitor [SQL Server], replication
 - performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 396b42a8666ec6c4d775cf06c5a873a012b887ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ebe259824ab5c5efb2d85cda72e32bc15df429d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072182"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>システム モニターによるレプリケーションの監視
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows のシステム モニターにより、グラフ、図およびレポートを使って、使用しているコンピューターの効率の評価、考えられる問題 (リソース使用の不均衡、ハードウェアの不足、プログラム設計の問題など) の識別とトラブルシューティング、およびハードウェアの追加計画の作成を行うことができます。 詳細については、「[リソースの利用状況の監視 &#40;システム モニター&#41;](../../performance-monitor/monitor-resource-usage-system-monitor.md)」を参照してください。  

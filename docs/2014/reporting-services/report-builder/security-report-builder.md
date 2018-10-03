@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b2f11120fcc98bde39800ad75f94499b0b5f5081
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19d471febe43640325ae4f218dc1d0e66c3e0c9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074658"
 ---
 # <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
   レポート ビルダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
@@ -28,19 +25,15 @@ ms.locfileid: "37309374"
   
  レポートとレポート関連アイテムを作成、パブリッシュ、および使用するには、セキュリティ機能と次の領域との間の関係を理解する必要があります。  
   
--   
-  **レポートをパブリッシュするレポート サーバーまたは SharePoint サイト** セキュリティ機能は、レポート サーバー管理者または SharePoint サイト管理者が管理します。  
+-   **レポートをパブリッシュするレポート サーバーまたは SharePoint サイト** セキュリティ機能は、レポート サーバー管理者または SharePoint サイト管理者が管理します。  
   
 -   **パブリッシュされたレポートとレポート関連アイテム** レポート関連アイテムには、埋め込みデータ ソースおよび共有データ ソースとそれらの資格情報、共有データセット、パラメーター、レポート パーツ、レポート モデルなどがあります。 これらのアイテムに適用されるセキュリティ機能は、レポート作成者が管理します。 レポート作成者は、アイテムをパブリッシュおよび共有するために必要な権限をレポート サーバー管理者または SharePoint サイト管理者から与えられている必要があります。  
   
--   
-  **レポートで使用される外部データ ソース** セキュリティ機能は、外部データ ソースの所有者が管理します。  
+-   **レポートで使用される外部データ ソース** セキュリティ機能は、外部データ ソースの所有者が管理します。  
   
--   
-  **外部データ ソースに基づくレポート モデル** セキュリティ機能は、モデル デザイナーが管理します。  
+-   **外部データ ソースに基づくレポート モデル** セキュリティ機能は、モデル デザイナーが管理します。  
   
--   
-  **パラメーターなどの対話型のレポート機能** セキュリティ機能は、レポート作成者が管理します。  
+-   **パラメーターなどの対話型のレポート機能** セキュリティ機能は、レポート作成者が管理します。  
   
  このトピックの情報を確認し、セキュリティ機能を使用してレポートとレポート関連アイテムを管理および保護する方法について理解を深めてください。  
   

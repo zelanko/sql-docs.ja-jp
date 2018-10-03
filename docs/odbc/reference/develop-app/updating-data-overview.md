@@ -1,13 +1,11 @@
 ---
-title: データの概要の更新 |Microsoft ドキュメント
+title: データの概要の更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - updating data [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f61563836b7deddc65b2dc61307ed686f030ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777831"
 ---
-# <a name="updating-data-overview"></a>データの更新の概要
-SQL ステートメントを実行することによって、または呼び出すことによって、アプリケーションでデータを更新できる**SQLSetPos**または**SQLBulkOperations**です。 **更新**、**削除**、および**挿入**ステートメントは、データ ソース上で直接実行し、は、通常、ドライバーでサポートします。 更新プログラムを検索し、delete ステートメントには変更する行の仕様が含まれています。 更新プログラムの配置、および delete ステートメントと**SQLSetPos**カーソルによる、データ ソースで動作し、小さい広くサポートされています。  
+# <a name="updating-data-overview"></a>データの概要の更新
+SQL ステートメントを実行するか、呼び出すことによって、アプリケーションでデータを更新できる**SQLSetPos**または**SQLBulkOperations**します。 **UPDATE**、**削除**、および**挿入**ステートメントは、データ ソース上で直接実行し、通常、ドライバーによってサポートされます。 更新プログラムを検索する delete ステートメントを変更する行の仕様を含めることができます。 更新プログラムの配置、および delete ステートメントと**SQLSetPos**カーソルを介して、データ ソースに対して動作し、はあまり広くサポートされています。  
   
- カーソルがこのセクションで説明する方法を使用して結果セットに加えられた変更を検出できるかどうかは、カーソルとそれを実装する方法の種類によって異なります。 順方向専用カーソルでは、行を再確認されませんし、そのため、変更は検出されません。 スクロール可能なカーソルが変更を検出するかどうかについては、次を参照してください。[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)です。  
+ カーソルが、このセクションで説明する方法を使用して結果セットに加えられた変更を検出できるかどうかは、カーソルの実装方法の種類によって異なります。 順方向専用カーソルでは、行を再確認いませんし、そのため、変更は検出されません。 スクロール可能なカーソルが変更を検出するかどうかについては、次を参照してください。[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

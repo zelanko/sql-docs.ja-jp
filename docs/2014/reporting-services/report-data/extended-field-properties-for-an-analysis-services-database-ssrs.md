@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268634"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076737"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ `Value` および `IsMissing` に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 組み込みの名を指定する式を記述することで、レポートの拡張フィールド プロパティの値を含めることができます`Fields`コレクション。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ `Value` および `IsMissing` に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 組み込みの名を指定する式を記述することで、レポートの拡張フィールド プロパティの値を含めることができます`Fields`コレクション。  
   
  拡張プロパティには、定義済みプロパティとカスタム プロパティがあります。 定義済みのプロパティは、特定のフィールド プロパティ名にマップされ、組み込みを介してアクセスできる複数のデータ ソースに共通するプロパティ`Fields`名前のコレクション。 カスタム プロパティは、各データ プロバイダーに固有であり、拡張プロパティ名を文字列として扱う構文のみを使用して、組み込み `Fields` コレクションを介してアクセスできます。  
   
@@ -130,7 +127,7 @@ CELL PROPERTIES
 |March|2,749|  
 |April|2,739|  
   
- プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
+ プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
   
 |プロパティ|値|  
 |--------------|-----------|  
@@ -155,6 +152,6 @@ CELL PROPERTIES
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [式内で組み込みコレクション&#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
- [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

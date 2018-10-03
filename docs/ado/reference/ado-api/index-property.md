@@ -1,13 +1,11 @@
 ---
-title: Index プロパティ |Microsoft ドキュメント
+title: Index プロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,48 +13,47 @@ f1_keywords:
 helpviewer_keywords:
 - Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe083fa971ad3ce6566d51326ce35163f446838a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716310"
 ---
 # <a name="index-property"></a>Index プロパティ
-有効にインデックスを現在の名前を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
+有効なインデックスを現在の名前を示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**文字列**値で、インデックスの名前を指定します。  
+ 設定または取得を**文字列**値で、インデックスの名前を指定します。  
   
 ## <a name="remarks"></a>コメント  
- 指定したインデックス、**インデックス**プロパティ必要がありますが事前に宣言して基になるベース テーブルで、 **Recordset**オブジェクト。 つまり、インデックス必要がありますが宣言されているプログラムで ADOX として[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトか、ベース テーブルが作成されました。  
+ 指定したインデックス、**インデックス**プロパティする必要がありますが事前に宣言して基になるベース テーブルで、 **Recordset**オブジェクト。 つまり、インデックスする必要があります宣言されているプログラムで ADOX として[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクト、またはベース テーブルの作成時にします。  
   
- インデックスを設定できない場合は、実行時エラーが発生します。 **インデックス**次の条件下でプロパティを設定することはできません。  
+ インデックスを設定できない場合、実行時エラーが発生します。 **インデックス**プロパティは、次の条件下で設定できません。  
   
 -   内で、 [WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)または**RecordsetChangeComplete**イベント ハンドラー。  
   
--   場合、 **Recordset**操作がまだ実行中 (によって判断できます、[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティ)。  
+-   場合、 **Recordset**操作がまだ実行中 (で決定できますが、[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティ)。  
   
--   フィルターが設定されている場合、 **Recordset**で、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティです。  
+-   フィルターが設定されている場合、 **Recordset**で、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティ。  
   
- **インデックス**プロパティが常に正常に設定できる場合、 **Recordset**が閉じている場合ですが、**レコード セット**正常に開くことはありませんか、インデックスが使用するには場合、基になるプロバイダーは、インデックスをサポートしていません。  
+ **インデックス**プロパティは常に正常に設定できる場合、**レコード セット**が閉じているが、**レコード セット**が正常には開かれませんまたはインデックスは、使用できない場合、基になるプロバイダーは、インデックスをサポートしていません。  
   
- インデックスを設定できますが、現在の行位置は変更できます。 これにより、更新プログラムを[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティとをまとめて、 **WillChangeRecordset**、 **RecordsetChangeComplete**、 [WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)、および[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)イベント。  
+ インデックスを設定できますが、現在の行位置は変更できます。 これにより、更新プログラム、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティが起動し、 **WillChangeRecordset**、 **RecordsetChangeComplete**、 [WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)、および[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)イベント。  
   
- インデックスを設定できる場合、 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティは**adLockPessimistic**または**adLockOptimistic**、し、暗黙的な[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)操作を実行します。 これにより、現在および影響を受けるグループが解放されます。 任意の既存のフィルターが解放され、並べ替えられたの最初の行を現在の行位置が変更された**Recordset**です。  
+ インデックスを設定する場合は、 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティは**adLockPessimistic**または**adLockOptimistic**、し、暗黙[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)操作が実行されます。 これにより、現在および影響を受けるグループが解放されます。 任意の既存のフィルターがリリースされ、並べ替えられたの最初の行に現在の行位置が変更された**Recordset**します。  
   
- **インデックス**と共にプロパティが使用される、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドです。 基になるプロバイダーがサポートしていない場合、**インデックス**プロパティ、およびこのインターフェイス、**シーク**メソッドの使用を検討、[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッド代わりにします。 決定するかどうか、**レコード セット**オブジェクトを含むインデックスをサポートしている、[をサポートしている](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** メソッドです。  
+ **インデックス**と共にプロパティが使用される、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッド。 基になるプロバイダーがサポートされていない場合、**インデックス**プロパティ、つまり、**シーク**メソッドの使用を検討、[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッド代わりにします。 決定かどうか、**レコード セット**オブジェクトのインデックスをサポートしている、[サポート](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** メソッド。  
   
- 組み込み**インデックス**プロパティが動的に関連しない[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティ、インデックスを扱うこれら両方ができます。  
+ 組み込み**インデックス**プロパティが動的に関連しない[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティ、インデックスを扱う、両方が。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [メソッドとインデックスのプロパティの例 (VB) にシークします。](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+ [Seek メソッドおよび Index プロパティの例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)

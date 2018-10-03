@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c72d35c92cabae9f9b1f73daa8c665c1b19771b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053892"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems コレクションの参照 (レポート ビルダーおよび SSRS)
   組み込みコレクション `ReportItems` は、データ領域の行などのレポート アイテムのテキスト ボックスや、レポート デザイン画面上のテキスト ボックスのセットです。 `ReportItems`ページ ヘッダー、ページ フッター、またはレポート本文の現在のスコープ内にあるテキスト ボックスがコレクションに含まれています。 このコレクションは、レポート プロセッサおよびレポート レンダラーによって実行時に決定されます。 ユーザーがレポートのページを表示する際には、レポート プロセッサによってレポート データとレポート アイテムのレイアウト要素が連続的に結合されますが、これに伴って現在のスコープが変化します。 使用することができます、`ReportItems`各ページの最初と最後の項目を表示する辞書形式のページのヘッダーを生成する組み込みのコレクション。  

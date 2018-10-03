@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_profileaccount_sp (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmail_delete_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f90e939bf47154850c2183261af4cb541b19538d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677160"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +59,17 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定したアカウントと指定したプロファイルが関連付けられていない場合は、エラーが返されます。  
   
  アカウントを指定し、プロファイルを指定しなかった場合、このストアド プロシージャでは指定したアカウントがすべてのプロファイルから削除されます。 たとえば、既存の SMTP サーバーをシャットダウンする前に、その SMTP サーバーを使用しているアカウントを各プロファイルから個別に削除するのではなく、すべてのプロファイルからまとめて削除できます。  
   
  プロファイルを指定し、アカウントを指定しなかった場合、このストアド プロシージャでは指定したプロファイルからすべてのアカウントが削除されます。 たとえば、プロファイルが使用している SMTP サーバーを変更する場合は、そのプロファイルからすべてのアカウントを削除してから必要に応じて新しいアカウントを追加するほうが便利な場合があります。  
   
- ストアド プロシージャ**sysmail_delete_profileaccount_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
+ ストアド プロシージャ**sysmail_delete_profileaccount_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、プロファイルの `Audit Account` からアカウントの `AdventureWorks Administrator` を削除します。  

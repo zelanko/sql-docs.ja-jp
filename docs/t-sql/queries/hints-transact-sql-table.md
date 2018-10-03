@@ -5,9 +5,7 @@ ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -36,16 +34,15 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713370"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -152,7 +149,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 NOEXPAND  
 クエリ オプティマイザーがクエリを処理する場合に、インデックス付きビューが展開されず、基になるテーブルがアクセスされないことを指定します。 クエリ オプティマイザーは、ビューをクラスター化インデックスを持つテーブルのように取り扱います。 NOEXPAND はインデックス付きビューにのみ適用できます。 詳細については、「解説」を参照してください。  
   
-INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 INDEX() 構文では、ステートメントを処理するときにクエリ オプティマイザーが使用する 1 つ以上のインデックスの名前または ID を指定します。 一方、INDEX = 構文では、単一のインデックス値を指定します。 各テーブルに対して指定できるのは 1 つのインデックス ヒントだけです。  
   
 クラスター化インデックスがある場合、INDEX(0) はクラスター化インデックスのスキャンを実行し、INDEX(1) はクラスター化インデックスのスキャンまたはシークを実行します。 クラスター化インデックスがない場合、INDEX(0) はテーブル スキャンを実行し、INDEX(1) はエラーと見なされます。  
@@ -183,7 +180,7 @@ INSERT ステートメントで、BULK オプションが [OPENROWSET](../../t-s
   
 このヒントを INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントに使用する例については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」を参照してください。  
   
-FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
 クエリ オプティマイザーに対し、テーブルやビューのデータへのアクセス パスとしてインデックスのシーク操作のみを使用することを指定します。 
 
 > [!NOTE]
@@ -294,7 +291,7 @@ READ_COMMITTED_SNAPSHOT データベース オプションが ON に設定され
 このような場合に READPAST ヒントを指定するには、READCOMMITTED テーブル ヒントがある場合は削除し、クエリに READCOMMITTEDLOCK テーブル ヒントを含めます。  
   
 READUNCOMMITTED  
-ダーティ リードを許可することを指定します。 現在のトランザクションによるデータ読み取りが他のトランザクションによって変更されないようにするため共有ロックを実行しません。また、他のトランザクションによって排他ロックが設定されていても、ロックされたデータの現在のトランザクションによる読み取りはブロックされません。 ダーティ リードを許可すると同時実行性が高まりますが、他のトランザクションによってロールバックされているデータ変更を読み取る可能性があります。 この結果、トランザクションでエラーが発生したり、コミットされていないデータがユーザーに提示されたり、レコードが重複表示されたりまったく表示されなかったりする場合があります。  
+ダーティ リードを許可することを指定します。 現在のトランザクションによるデータ読み取りが他のトランザクションによって変更されないようにするため共有ロックを実行しません。また、他のトランザクションによって排他ロックが設定されていても、ロックされたデータの現在のトランザクションによる読み取りはブロックされません。 ダーティ リードを許可するとコンカレンシーが高まりますが、他のトランザクションによってロールバックされているデータ変更を読み取る可能性があります。 この結果、トランザクションでエラーが発生したり、コミットされていないデータがユーザーに提示されたり、レコードが重複表示されたりまったく表示されなかったりする場合があります。  
   
 READUNCOMMITTED ヒントと NOLOCK ヒントはデータのロックにのみ適用されます。 READUNCOMMITTED ヒントおよび NOLOCK ヒントを含むクエリを含め、すべてのクエリは、コンパイル中と実行中にスキーマ安定度 (Sch-S) ロックを取得します。 このため、同時実行トランザクションがテーブルの Sch-M (スキーマ修正) ロックを保持している場合、クエリはブロックされます。 たとえば、データ定義言語 (DDL) 操作では、テーブルのスキーマ情報を変更する前にスキーマ修正 (Sch-M) ロックを取得します。 READUNCOMMITTED ヒントまたは NOLOCK ヒントを指定して実行しているクエリを含め、すべての同時実行クエリは、スキーマ安定度 (Sch-S) ロックを取得しようとするとブロックされます。 一方、スキーマ安定度 (Sch-S) ロックを保持するクエリによって、スキーマ修正 (Sch-M) ロックを取得しようとする同時実行トランザクションはブロックされます。  
   

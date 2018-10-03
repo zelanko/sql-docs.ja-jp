@@ -1,53 +1,47 @@
 ---
-title: プロジェクトの設定 (型のマッピング) (MySQLToSQL) |Microsoft ドキュメント
+title: プロジェクトの設定 (型のマッピング) (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9bf1d1c219b8673345d5f2074fe8885b5c58223f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776778"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713250"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
-プロジェクトの種類のマッピング設定では、SSMA プロジェクトの既定の型マッピングを設定できます。  
+プロジェクトの型マッピングの設定では、SSMA プロジェクトの既定の型マッピングを設定できます。  
 
-型のマッピングは、プロジェクトの設定と既定のプロジェクト設定のダイアログ ボックスで入手できます。  
+型のマッピングは、プロジェクトの設定とプロジェクトの既定の設定 ダイアログ ボックスで利用できます。  
   
--   プロジェクトの設定 ダイアログ ボックスを使用すると、現在のプロジェクトの構成オプションを設定できます。 ツール メニューの種類のマッピングの設定にアクセスするには、プロジェクトの設定 を選択し、左側のウィンドウで 型のマッピング をクリックします。  
+-   プロジェクトの設定 ダイアログ ボックスを使用すると、現在のプロジェクトの構成オプションを設定できます。 型のマッピング設定の ツール メニューにアクセスするには、プロジェクトの設定 を選択し、左側のウィンドウで型のマッピングをクリックします。  
   
--   プロジェクトの既定の設定 ダイアログ ボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 ツール メニューの設定が既定のプロジェクトの設定、移行プロジェクトの種類の設定は、表示/からの変更にする必要を選択型のマッピングにアクセスする**移行のターゲット バージョン**ドロップダウンを 左側のウィンドウで型のマッピング をクリックします。  
+-   プロジェクトの既定の設定 ダイアログ ボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 ツール メニューの設定を型のマッピングにアクセスするには、既定のプロジェクトの設定、移行プロジェクトの種類の設定は、表示/から変更する必要を選択します**移行ターゲット バージョン**ドロップダウンをクリックしての種類左側のウィンドウでマッピングします。  
   
 ## <a name="options"></a>および  
   
 ##### <a name="source-type"></a>[変換元の型]  
-これは、ターゲット データベースのデータ型にマップする必要がある MySQL のデータ型です。  
+ターゲット データベースのデータ型にマップする必要がある MySQL のデータ型になります。  
   
 ##### <a name="target-type"></a>ターゲットの種類  
-ターゲット データベースのデータは、指定された MySQL データ型の型します。  
+ターゲット データベースのデータは、指定の MySQL のデータ型の型します。  
   
 ##### <a name="add"></a>[追加]  
-マッピングのリストに、データ型を追加する をクリックします。  
+データ型をマッピングの一覧に追加する をクリックします。  
   
-##### <a name="edit"></a>[編集]  
+##### <a name="edit"></a>編集  
 マッピングの一覧で選択したデータ型を編集する をクリックします。  
   
 ##### <a name="remove"></a>[削除]  
-マッピングのリストから選択したデータ型のマッピングを削除する をクリックします。  
+マッピングの一覧から選択したデータ型のマッピングを削除する をクリックします。  
   
 ##### <a name="reset-to-default"></a>[既定値にリセット]  
 SSMA の既定値に型マッピングのリストをリセットする をクリックします。  
@@ -71,7 +65,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |ビット [41..48]|バイナリ [6]|  
 |ビット [49..56]|バイナリ [7]|  
 |ビット [57..64]|バイナリ [8]|  
-|ビット [9..16]|[2]|  
+|ビット [9..16]|バイナリ [2]|  
 |blob (blob)|varbinary(max)|  
 |blob [0..1]|varbinary [1]|  
 |blob[2..8000]|varbinary [*]|  
@@ -80,8 +74,8 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |boolean|bit|  
 |char|nchar [1]|  
 |char バイト|バイナリ [1]|  
-|char バイト [0..1]|バイナリ [1]|  
-|char バイト [2..255]|バイナリ [*]|  
+|バイト [0..1] char 型します。|バイナリ [1]|  
+|バイト [2..255] char 型します。|バイナリ [*]|  
 |char [0..1]|nchar [1]|  
 |char [2..255]|nchar [*]|  
 |character|nchar [1]|  
@@ -92,19 +86,19 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |日付|日付|  
 |DATETIME|datetime2 [0]|  
 |dec|Decimal|  
-|dec [*..65]|decimal [*] [0]|  
-|dec [*..65][\*..30]|decimal [*] [\*]|  
+|dec [*..65]|10 進数 [*] [0]|  
+|dec [*..65] [\*..30]|10 進数 [*] [\*]|  
 |Decimal|Decimal|  
-|decimal [*..65]|decimal [*] [0]|  
-|decimal [*..65][\*..30]|decimal [*] [\*]|  
+|decimal [*..65]|10 進数 [*] [0]|  
+|decimal [*..65] [\*..30]|10 進数 [*] [\*]|  
 |double|float [53]|  
 |倍精度|float [53]|  
-|倍精度 [*..255][\*..30]|数値 [*] [\*]|  
-|二重 [*..255][\*..30]|数値 [*] [\*]|  
-|固定|NUMERIC|  
-|固定 [*..65][\*..30]|数値 [*] [\*]|  
+|倍精度 [*..255] [\*..30]|数値 [*] [\*]|  
+|二重 [*..255] [\*..30]|数値 [*] [\*]|  
+|修正しました|NUMERIC|  
+|固定 [*..65] [\*..30]|数値 [*] [\*]|  
 |FLOAT|float [24]|  
-|float [*..255][\*..30]|数値 [*] [\*]|  
+|float [*..255] [\*..30]|数値 [*] [\*]|  
 |float [*..53]|float [53]|  
 |ssNoversion|ssNoversion|  
 |int [*..255]|ssNoversion|  
@@ -120,16 +114,16 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |national char [0..1]|nchar [1]|  
 |national char [2..255]|nchar [*]|  
 |各国語文字|nchar [1]|  
-|各国語文字 varying|nvarchar [1]|  
-|各国語文字がさまざまな [0..1]|nvarchar [1]|  
-|各国語文字がさまざまな [2..4000]|nvarchar [*]|  
-|各国語文字 varying [4001.. *]|nvarchar(max)|  
+|各国語文字がさまざまな|nvarchar [1]|  
+|各国語文字の可変 [0..1]|nvarchar [1]|  
+|各国語文字の可変 [2..4000]|nvarchar [*]|  
+|各国語文字がさまざまな [4001.. *]|nvarchar(max)|  
 |各国語文字 [0..1]|nchar [1]|  
 |各国語文字 [2..255]|nchar [*]|  
-|各国語 varchar|nvarchar [1]|  
-|各国語 varchar [0..1]|nvarchar [1]|  
-|各国語 varchar [2..4000]|nvarchar [*]|  
-|各国語 varchar [4001.. *]|nvarchar(max)|  
+|national varchar|nvarchar [1]|  
+|national varchar [0..1]|nvarchar [1]|  
+|national varchar [2..4000]|nvarchar [*]|  
+|national varchar [4001.. *]|nvarchar(max)|  
 |NCHAR|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
 |nchar varchar [0..1]|nvarchar [1]|  
@@ -139,13 +133,13 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |nchar [2..255]|nchar [*]|  
 |NUMERIC|NUMERIC|  
 |数値 [*..65]|数値 [*] [0]|  
-|数値 [*..65][\*..30]|数値 [*] [\*]|  
+|数値 [*..65] [\*..30]|数値 [*] [\*]|  
 |NVARCHAR|nvarchar [1]|  
 |nvarchar [0..1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |REAL|float [53]|  
-|real [*..255][\*..30]|数値 [*] [\*]|  
+|実際 [*..255] [\*..30]|数値 [*] [\*]|  
 |シリアル|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint [*..255]|SMALLINT|  
@@ -159,38 +153,38 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |TINYINT|SMALLINT|  
 |tinyint [*..255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
-|符号なしの bigint|BIGINT|  
-|符号なしの bigint [*..255]|BIGINT|  
-|符号なし年 12 月|Decimal|  
-|符号なし dec [*..65]|decimal [*] [0]|  
-|符号なし dec [*..65][\*..30]|decimal [*] [\*]|  
+|符号なし bigint|BIGINT|  
+|符号なし bigint [*..255]|BIGINT|  
+|符号なしの 12 月|Decimal|  
+|符号なしの dec [*..65]|10 進数 [*] [0]|  
+|符号なしの dec [*..65] [\*..30]|10 進数 [*] [\*]|  
 |符号なし 10 進数|Decimal|  
-|符号なし 10 進数 [*..65]|decimal [*] [0]|  
-|符号なし 10 進数 [*..65][\*..30]|decimal [*] [\*]|  
+|符号なし 10 進数 [*..65]|10 進数 [*] [0]|  
+|符号なし 10 進数 [*..65] [\*..30]|10 進数 [*] [\*]|  
 |倍精度浮動小数点符号なし|float [53]|  
 |符号なしの倍精度|float [53]|  
-|倍精度を署名されていない [*..255][\*..30]|数値 [*] [\*]|  
-|倍精度浮動小数点の符号なし [*..255][\*..30]|数値 [*] [\*]|  
-|符号なし固定|NUMERIC|  
-|符号なし固定 [*..65][\*..30]|数値 [*] [\*]|  
-|符号なし float|float [24]|  
-|符号なし float [*..255][\*..30]|数値 [*] [\*]|  
-|符号なし float [*..53]|float [53]|  
+|符号なしの倍精度 [*..255] [\*..30]|数値 [*] [\*]|  
+|符号なしの倍精度浮動小数点 [*..255] [\*..30]|数値 [*] [\*]|  
+|符号なしの固定|NUMERIC|  
+|符号なしの固定 [*..65] [\*..30]|数値 [*] [\*]|  
+|符号なしの float|float [24]|  
+|符号なしの float [*..255] [\*..30]|数値 [*] [\*]|  
+|符号なしの float [*..53]|float [53]|  
 |unsigned int|BIGINT|  
 |符号なし int [*..255]|BIGINT|  
 |符号なし整数|BIGINT|  
 |符号なし整数 [*..255]|BIGINT|  
-|符号なし mediumint|ssNoversion|  
-|符号なし mediumint [*..255]|ssNoversion|  
+|符号なしの mediumint|ssNoversion|  
+|符号なしの mediumint [*..255]|ssNoversion|  
 |符号なし数値|NUMERIC|  
 |符号なし数値 [*..65]|数値 [*] [0]|  
-|符号なし数値 [*..65][\*..30]|数値 [*] [\*]|  
-|実際の符号なし|float [53]|  
-|実際の符号なし [*..255[[\*..30]|数値 [*] [\*]|  
-|符号なし smallint|ssNoversion|  
-|符号なし smallint [*..255]|ssNoversion|  
-|符号なし tinyint|TINYINT|  
-|符号なし tinyint [*..255]|TINYINT|  
+|符号なし数値 [*..65] [\*..30]|数値 [*] [\*]|  
+|実際に符号なし|float [53]|  
+|実際に署名されていない [*..255 [\*..30]|数値 [*] [\*]|  
+|符号なしの smallint|ssNoversion|  
+|符号なしの smallint [*..255]|ssNoversion|  
+|符号なしの tinyint|TINYINT|  
+|符号なしの tinyint [*..255]|TINYINT|  
 |varbinary [0..1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
@@ -202,13 +196,13 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |year [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>[追加]  
-マッピングのリストに、データ型を追加する をクリックします。  
+データ型をマッピングの一覧に追加する をクリックします。  
   
-##### <a name="edit"></a>[編集]  
-マッピングのリスト内のデータ型を編集するのには、をクリックします。  
+##### <a name="edit"></a>編集  
+データ型マッピングのリストを編集する をクリックします。  
   
 ##### <a name="remove"></a>[削除]  
-マッピングのリストから選択したデータ型のマッピングを削除する をクリックします。  
+マッピングの一覧から選択したデータ型のマッピングを削除する をクリックします。  
   
 ##### <a name="reset-to-default"></a>[既定値にリセット]  
 すべてのデータ型マッピングを SSMA の既定値にリセットする をクリックします。  

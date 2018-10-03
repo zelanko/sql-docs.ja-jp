@@ -1,13 +1,11 @@
 ---
-title: Execute メソッド (ADO コマンド) |Microsoft ドキュメント
+title: Execute メソッド (ADO Command) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09ce33d4fa2f6ac63fc19ce711fe88fcf717d049
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278121"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772712"
 ---
-# <a name="execute-method-ado-command"></a>Execute メソッド (ADO コマンド)
-クエリや、SQL ステートメントで指定されたストアド プロシージャの実行、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)のプロパティ、[コマンド オブジェクト](../../../ado/reference/ado-api/command-object-ado.md)です。  
+# <a name="execute-method-ado-command"></a>Execute メソッド (ADO Command)
+クエリや、SQL ステートメントで指定されたストアド プロシージャの実行、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)のプロパティ、[コマンド オブジェクト](../../../ado/reference/ado-api/command-object-ado.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,49 +35,49 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 返します、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト参照、ストリーム、または**Nothing**です。  
+ 返します、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト参照をストリームまたは**Nothing**します。  
   
 #### <a name="parameters"></a>パラメーター  
  *RecordsAffected*  
- 任意。 A**長い**先変数プロバイダーが返されます、操作の影響を受けるレコードの数。 *RecordsAffected*パラメーターは、アクションのクエリまたはストアド プロシージャに対してのみ適用されます。 *RecordsAffected*結果を返すクエリまたはストアド プロシージャによって返されるレコードの数は返しません。 この情報を取得するには、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティです。 **Execute**メソッドでは、正しい情報で使用する場合は返されません**adAsyncExecute**、単にコマンドを実行すると非同期的に、ために影響を受けたレコードの数はまだわかりません時に、メソッドを返します。  
+ 任意。 A**長い**変数を操作の影響を受けるレコードの数はプロバイダーに返されます。 *RecordsAffected*パラメーターはアクションのクエリまたはストアド プロシージャに対してのみ適用されます。 *RecordsAffected*結果を返すクエリまたはストアド プロシージャによって返されるレコードの数は返されません。 この情報を入手するには使用、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティ。 **Execute**メソッドで使用する場合は、正しい情報が返されません**adAsyncExecute**、単にときにコマンドが非同期的に実行された、ため、影響を受けたレコードの数がまだが認識されていません。時にメソッドを返します。  
   
  *パラメーター*  
- 任意。 A**バリアント**入力文字列またはストリームに指定されたと組み合わせて使用するパラメーター値の配列**CommandText**または**CommandStream**です。 (出力パラメーターは返されませんこの引数で渡されるときに適切な値。)  
+ 任意。 A**バリアント**で指定されたストリーム、入力文字列と組み合わせて使用するパラメーター値の配列**CommandText**または**CommandStream**します。 (出力パラメーターは、この引数で渡されるときに正しい値を返しますがありません)。  
   
  *[オプション]*  
- 任意。 A**長い**プロバイダーを評価する方法を示す値、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)のプロパティ、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 指定できる値のビットマスクを使用して確立[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)や[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値。 たとえば、使用する**adCmdText**と**adExecuteNoRecords**組み合わせて ADO の値を評価する場合、 **CommandText**プロパティとして、テキストと示しますのコマンドは、必要がありますを破棄し、コマンド テキストの実行時に生成されるレコードが返されません。  
+ 任意。 A**長い**プロバイダーを評価する方法を示す値、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)のプロパティ、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 指定できる値のビットマスクを使用して確立[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)や[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値。 たとえば、使用する**adCmdText**と**adExecuteNoRecords** ado の値を評価する場合の組み合わせで、 **CommandText**プロパティとして、テキストと示しますのコマンドは、する必要がありますを破棄し、コマンド テキストの実行時に生成されるレコードは返されません。  
   
 > [!NOTE]
->  使用して、 **ExecuteOptionEnum**値**adExecuteNoRecords**内部処理を最小限に抑えることによってパフォーマンスを向上させるためにします。 場合**adExecuteStream**が指定されているオプション**adAsyncFetch**と**adAsynchFetchNonBlocking**は無視されます。 使用しないでください、 **CommandTypeEnum**値**adCmdFile**または**adCmdTableDirect**で**Execute**です。 これらの値は、オプションとしてのみ使用できます、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)と[Requery](../../../ado/reference/ado-api/requery-method.md)のメソッド、 **Recordset**です。  
+>  使用して、 **ExecuteOptionEnum**値**adExecuteNoRecords**内部処理を最小限に抑えることでパフォーマンスを向上させるためにします。 場合**adExecuteStream**が指定されているオプション**adAsyncFetch**と**adAsynchFetchNonBlocking**は無視されます。 使用しないでください、 **CommandTypeEnum**値**adCmdFile**または**adCmdTableDirect**で**Execute**します。 これらの値は、オプションとしてのみ使用できます、[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)と[Requery](../../../ado/reference/ado-api/requery-method.md)のメソッド、**レコード セット**します。  
   
 ## <a name="remarks"></a>コメント  
  使用して、 **Execute**メソッドを**コマンド**オブジェクトで指定されたクエリの実行、 **CommandText**プロパティまたは**CommandStream**オブジェクトのプロパティです。  
   
- 結果が返される、 **Recordset** (既定) またはバイナリ情報のストリームとして。 バイナリ ストリームを取得する指定**adExecuteStream**で*オプション*を設定してストリームを指定し、 **Command.Properties (「出力ストリーム」)** です。 ADO**ストリーム**結果を受信するオブジェクトを指定するか、IIS 応答オブジェクトなどの別のストリーム オブジェクトを指定することができます。 呼び出しの前にストリームが指定されなかった場合**Execute**で**adExecuteStream**エラーが発生します。 制御が戻るとき、ストリームの位置**Execute**がプロバイダーを特定します。  
+ 結果が返されます、 **Recordset** (既定) またはバイナリ情報のストリームとして。 バイナリ ストリームを取得するには、次のように指定します。 **adExecuteStream**で*オプション*、設定してストリームを指定し、 **Command.Properties ("出力 Stream")** します。 ADO **Stream**結果を受信するオブジェクトを指定するか、IIS の応答オブジェクトなどの別のストリーム オブジェクトを指定することができます。 呼び出しの前にストリームが指定されなかった場合**Execute**で**adExecuteStream**エラーが発生します。 返された場合、ストリームの位置**Execute**がプロバイダーを特定します。  
   
- プロバイダーが返すかどうか、コマンドはありません (たとえば、SQL UPDATE クエリ) の結果を返す**Nothing**オプションとして長さ**adExecuteNoRecords**が指定されているそれ以外の場合を返しますを実行、。閉じられた**Recordset**です。 いない場合は、この戻り値を無視することは一部のアプリケーション言語**Recordset**が必要です。  
+ プロバイダーが返すかどうか、コマンドを (たとえば、SQL UPDATE クエリ) の結果を返すことはありません**Nothing**オプション限り**adExecuteNoRecords**が指定されて; 実行それ以外の場合、閉じられた**Recordset**します。 ない場合は、この戻り値を無視することはいくつかのアプリケーション言語**レコード セット**が必要です。  
   
- **実行**ユーザーの値を指定する場合、エラーが発生**CommandStream**ときに、 **CommandType**は**adCmdStoredProc**、 **adCmdTable**、または**adCmdTableDirect**です。  
+ **実行**、ユーザーの値を指定する場合、エラーが発生**CommandStream**ときに、 **CommandType**は**adCmdStoredProc**、 **adCmdTable**、または**adCmdTableDirect**します。  
   
- 場合は、クエリでは、パラメーターを持ち、現在の値、**コマンド**これらに渡されたパラメーター値をオーバーライドする場合を除き、オブジェクトのパラメーターが使用されます、 **Execute**呼び出します。 呼び出すときに、一部のパラメーターの新しい値を省略することで、パラメーターのサブセットをオーバーライドすることができます、 **Execute**メソッドです。 パラメーターを指定する順序は、メソッドがそれらに渡す同じ順序です。 たとえば、次の 4 つ (以上) のパラメーターがあった場合と 1 番目と 4 番目のパラメーターだけの新しい値を渡すに渡す場合`Array(var1,,,var4)`として、*パラメーター*引数。  
+ 現在の値、クエリにパラメーターがある場合、**コマンド**オブジェクトのパラメーターには、これらに渡されたパラメーター値を上書きしない限り、使用、 **Execute**を呼び出します。 呼び出すときに、一部のパラメーターの新しい値を省略することで、パラメーターのサブセットをオーバーライドすることができます、 **Execute**メソッド。 パラメーターを指定する順序は、メソッドがそれらに渡すと同じ順序です。 たとえば、4 つ (以上) のパラメーターが、1 番目と 4 番目のパラメーターのみの新しい値を渡すに渡す場合`Array(var1,,,var4)`として、*パラメーター*引数。  
   
 > [!NOTE]
->  出力パラメーターに渡されるときに正しい値を返しません、*パラメーター*引数。  
+>  出力パラメーターで渡されるときに正しい値を返しません、*パラメーター*引数。  
   
  [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)この操作の終了時にイベントが発行されます。  
   
 > [!NOTE]
->  Url を含むコマンドを発行する際に、http スキームを使用しているユーザーが自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)です。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)です。  
+>  自動的に起動は、http スキームを使用する Url を含むコマンドを発行するときに、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [実行、クエリを再実行、およびメソッドの例 (VB) をオフに](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [実行、クエリを再実行、およびメソッドの例 (VBScript) をオフに](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [実行、クエリを再実行、およびメソッドの例 (vc++) をオフに](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+ [Execute、Requery、および Clear のメソッドの例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [Execute、Requery、および Clear のメソッドの例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [Execute、Requery、および Clear のメソッドの例 (vc++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [CommandStream プロパティ (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
  [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)   
- [Execute メソッド (ADO 接続)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [ExecuteComplete イベント (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)

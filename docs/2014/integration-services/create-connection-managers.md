@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-caps.latest.revision: 54
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074466"
 ---
 # <a name="create-connection-managers"></a>接続マネージャーを作成する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、さまざまな種類のサーバーやデータ ソースに接続するタスクのニーズに合わせるため、さまざまな接続マネージャーが用意されています。 接続マネージャーは、データを抽出してさまざまな種類のデータ ストアに読み込むデータ フロー コンポーネントや、ログをサーバー、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブル、またはファイルに書き込むログ プロバイダーによって使用されます。 たとえば、メール送信タスクが含まれるパッケージには、簡易メール転送プロトコル (SMTP) サーバーに接続するタイプの SMTP 接続マネージャーを使用します。 SQL 実行タスクが含まれるパッケージでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースに接続する OLE DB 接続マネージャーを使用できます。 詳細については、「[Integration Services (SSIS) の接続](connection-manager/integration-services-ssis-connections.md)」を参照してください。  

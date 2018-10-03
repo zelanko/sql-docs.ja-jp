@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d85fb5d22f88e363c3cc6fd07cf0b7c757911d83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3abb49fa9e2e73ae5c610b5e940a6deba5079d62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069862"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
   使用して、**ソース クエリを指定**ページをデータ ソースから宛先にコピーするデータを生成する SQL ステートメントを入力します。  

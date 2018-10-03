@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OR operator
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f69d71354db0c658a644c0cd4068e894b3fb94fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e63c829e1865213b29aca6e75d1de52021b4d5ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052322"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (論理 OR) (SSIS 式)
   論理 OR 演算を実行します。 一方または両方の条件が TRUE の場合、式は TRUE に評価されます。  

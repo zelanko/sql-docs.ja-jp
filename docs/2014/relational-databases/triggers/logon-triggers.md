@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - logon triggers
@@ -17,12 +15,12 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b42fdfa556a2e7a26a04dd85fd7740ca23d36967
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427201"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075993"
 ---
 # <a name="logon-triggers"></a>ログオン トリガー
   ログオン トリガーは、LOGON イベントに応答してストアド プロシージャを起動します。 このイベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでユーザー セッションが確立されるときに発生します。 ログオン トリガーは、ログインの認証段階が終了した後、ユーザー セッションが実際に確立されるまでの間に発生します。 したがって、通常、エラー メッセージや PRINT ステートメントからのメッセージはユーザーに通知されますが、このトリガー内で発生したすべてのメッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されます。 認証に失敗した場合は、ログオン トリガーが作動しません。  

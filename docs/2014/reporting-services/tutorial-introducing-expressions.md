@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075852"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
   式を使用すると、強力で柔軟なレポートを作成できます。 このチュートリアルでは、一般的な関数および演算子を使用した式を作成および実装する方法を説明します。 使用する、**式**名前値の連結、見て別のデータセット内の値式を作成する ダイアログ ボックスとフィールドの値に基づいた画像を表示します。  

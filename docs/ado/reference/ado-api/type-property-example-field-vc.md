@@ -1,32 +1,29 @@
 ---
-title: 入力プロパティの例 (フィールド) (vc++) |Microsoft ドキュメント
+title: 入力プロパティの例 (Field) (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb420e129d36c9172837a9d68e631c9bc26086e7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666239"
 ---
-# <a name="type-property-example-field-vc"></a>型のプロパティの例 (フィールド) (vc++)
-この例で、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、**型**すべてのプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、***従業員***テーブル。 FieldType 関数は、この手順を実行する必要があります。  
+# <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
+この例では、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、**型**すべてのプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、***従業員***テーブル。 FieldType 関数は、この手順を実行する必要があります。  
   
 ## <a name="example"></a>例  
   
@@ -161,11 +158,11 @@ void PrintComError(_com_error &e) {
  **Name: emp_id**  
  **型: ファミリ**  
  **名前: fname**  
- **型: 異なる**  
+ **型: advarchar:**  
  **名前: minit**  
  **型: ファミリ**  
  **名前: lname**  
- **型: 異なる**  
+ **型: advarchar:**  
  **名前: job_id**  
  **Type: adSmallInt**  
  **名前: job_lvl**  

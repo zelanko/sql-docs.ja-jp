@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd702443b8f1addf43217499b639044d359647bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057572"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>データ マイニングの準備のチェック リスト
   データ マイニング アドインを使うと、モデルの作成およびテストをかなり容易に楽しく行うことができますが、反復可能で実用的な結果を得る必要がある場合は、十分な時間をかけて基本的なビジネス要件を明確にし、データの取得と準備を実行する必要があります。 ここでは、調査を計画するために役立つチェックリストを提供し、一般的な問題について説明します。  

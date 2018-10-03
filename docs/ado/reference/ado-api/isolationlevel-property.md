@@ -1,13 +1,11 @@
 ---
-title: IsolationLevel プロパティ |Microsoft ドキュメント
+title: IsolationLevel プロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,34 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e6de8da487352fe0a26d3524317ced061370771
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c2557c5859f10c7651cfc97fc3c849c00c26e985
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786840"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel プロパティ
-分離のレベルを示す、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
+分離のレベルを示します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、 [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)値。 既定値は**adXactReadCommitted**です。  
+ 取得または設定、 [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)値。 既定値は**adXactReadCommitted**します。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、 **IsolationLevel**分離のレベルを設定するプロパティ、**接続**オブジェクト。 この設定は反映されません次回を呼び出すまで、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドです。 プロバイダーが更新することがなく、次に高い分離レベルを返す可能性がありますを要求する分離レベルが使用できない場合、 **IsolationLevel**プロパティです。  
+ 使用して、 **IsolationLevel** 、分離のレベルを設定するプロパティを**接続**オブジェクト。 設定は無効になります次に呼び出すまで、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッド。 更新することがなく、プロバイダーが次に高い分離レベルを返す可能性がありますを要求する分離レベルが使用できない場合、 **IsolationLevel**プロパティ。  
   
  **IsolationLevel**読み取り/書き込みプロパティです。  
   
 > [!NOTE]
->  **リモートのデータ サービスの使用法**クライアント側で使用すると**接続**オブジェクト、 **IsolationLevel**プロパティにのみ設定できます**adXactUnspecified**です。 ユーザーは切断されているで作業するため**Recordset**でオブジェクトをクライアント側のキャッシュ、マルチ ユーザーの問題がある可能性があります。 たとえば、2 人のユーザーが同じレコードを更新しようとすると、リモートのデータ サービスを使用すると"win"に最初のレコードを更新したユーザー 2 番目のユーザーの更新要求はエラーで失敗します。  
+>  **リモート データ サービスの使用状況**クライアント側で使用すると**接続**オブジェクト、 **IsolationLevel**にのみ設定できるプロパティ**adXactUnspecified**。 切断を操作するため、 **Recordset**オブジェクト クライアント サイド キャッシュ、マルチ ユーザーの問題がある可能性があります。 たとえば、2 人のユーザーが同じレコードを更新しようとすると、リモート データ サービスだけは、"win"を最初のレコードを更新したユーザー 2 番目のユーザーの更新要求はエラーで失敗します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [IsolationLevel とモードのプロパティの例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel とモードのプロパティの例 (vc++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+ [IsolationLevel および Mode プロパティの例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel および Mode プロパティの例 (vc++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
