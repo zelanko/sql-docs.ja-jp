@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6362294a62989f3674df37bc1fa61c347d05eeae
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b5f034eaea1faeb1547a3697bec4dab50090864d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103672"
 ---
 # <a name="implementing-a-case-statement"></a>CASE ステートメントの実装
   case ステートメントは、ネイティブ コンパイル ストアド プロシージャではサポートされていません。 次のサンプルは、ネイティブ コンパイル ストアド プロシージャに case ステートメントの機能を実装する方法を示しています。  

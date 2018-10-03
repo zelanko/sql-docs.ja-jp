@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - agents [SQL Server replication], executables
 - command prompt [SQL Server replication]
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b13a99e38dae51035a90385df3f5737969c9cc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a3f8fd68a103b66670051f18ceeb12e0e9f85f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107232"
 ---
 # <a name="replication-agent-executables-concepts"></a>レプリケーション エージェント実行可能ファイルの概念
   レプリケーション エージェントは、次のような方法でプログラムから制御できます。  
   
--   ph x="1" /&gt; 名前空間のマネージド エージェント プログラミング インターフェイスを使用する。  
+-   <xref:Microsoft.SqlServer.Replication> 名前空間のマネージド エージェント プログラミング インターフェイスを使用する。  
   
 -   エージェントの実行可能ファイルを一連のパラメーターを指定してコマンド プロンプトから呼び出す。  
   

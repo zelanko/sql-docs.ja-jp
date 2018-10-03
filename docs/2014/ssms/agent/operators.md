@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - operators (users) [Database Engine]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - alerts [SQL Server], operators
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59ca38030ffa52b8a110941f7881fff470cc3f77
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a8bbc084acec25b6a410aae1ffdb98940f53d90c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098772"
 ---
 # <a name="operators"></a>演算子
   オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  

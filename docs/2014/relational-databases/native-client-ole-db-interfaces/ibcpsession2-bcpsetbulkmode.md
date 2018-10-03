@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0c0ec3e7f76da7eb908cf2154cd33a2ee55b40
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427521"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103392"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   Ibcpsession 2::bcpsetbulkmode の代替を提供する[ibcpsession::bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md)列の形式を指定するためです。 個々 の列形式属性を設定するには、ibcpsession::bcpcolfmt とは異なり、ibcpsession 2::bcpsetbulkmode はすべての属性を設定します。  
@@ -60,17 +57,17 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_FAIL`|ISQLServerErrorInfo インターフェイスを使用して、詳細な情報のプロバイダー固有のエラーが発生しました。|  
+|`E_FAIL`|プロバイダー固有のエラーが発生しました。詳細を確認するには、ISQLServerErrorInfo インターフェイスを使用してください。|  
 |`E_UNEXPECTED`|メソッドの呼び出しが予期されませんでした。 たとえば、 `IBCPSession2::BCPInit` ibcpsession 2::bcpsetbulkmode を呼び出す前に、メソッドは呼び出されませんでした。|  
 |`E_INVALIDARG`|引数が無効です。|  
 |`E_OUTOFMEMORY`|メモリ不足エラー。|  
   
 ## <a name="remarks"></a>コメント  
- 一括コピー出力、クエリまたはテーブルには、ibcpsession 2::bcpsetbulkmode を使用できます。 Ibcpsession 2::bcpsetbulkmode は一括コピー出力クエリ ステートメントを使用する場合は、呼び出す前に呼び出す必要があります`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`クエリ ステートメントを指定します。  
+ 一括コピー出力、クエリまたはテーブルには、ibcpsession 2::bcpsetbulkmode を使用できます。 IBCPSession2::BCPSetBulkMode を使用してクエリ ステートメントを一括コピー出力する場合は、`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` を呼び出してクエリ ステートメントを指定する前に、これを呼び出す必要があります。  
   
  RPC 呼び出し構文とバッチ クエリ構文 (`{rpc func};SELECT * from Tbl` など) を 1 つのコマンド テキスト内で組み合わせて使用しないでください。  Icommandprepare::prepare にエラーが返され、メタデータの取得できなくなります。 ストアド プロシージャの実行とバッチ クエリを 1 つのコマンド テキストで組み合わせて使用する必要がある場合は、ODBC CALL 構文 (`{call func}; SELECT * from Tbl` など) を使用します。  
   
- 次の表に、定数を*プロパティ*パラメーター。  
+ *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -83,7 +80,7 @@ HRESULT BCPSetBulkMode (
   
  Ibcpsession::bcpcontrol でを呼び出すことはできません`BCP_OPTION_TEXTFILE`ibcpsession 2::bcpsetbulkmode とします。  
   
- Ibcpsession::bcpcolfmt、ibcpsession::bcpcontrol、および ibcpsession::bcpreadfmt を含む関数呼び出しのシーケンスで ibcpsession 2::bcpsetbulkmode を呼び出すしようとした場合、シーケンス エラーが関数呼び出しの 1 つ戻ります。 エラーを修正することを選択する場合は、設定をリセットし、最初からやり直すには、ibcpsession::bcpinit を呼び出します。  
+ Ibcpsession::bcpcolfmt、ibcpsession::bcpcontrol、および ibcpsession::bcpreadfmt を含む関数呼び出しのシーケンスで ibcpsession 2::bcpsetbulkmode を呼び出すしようとした場合、シーケンス エラーが関数呼び出しの 1 つ戻ります。 このエラーを解決するには、IBCPSession::BCPInit を呼び出して設定をリセットし、最初からやり直してください。  
   
  次の表に、関数のシーケンス エラーが発生する関数呼び出しの例をいくつか示します。  
   

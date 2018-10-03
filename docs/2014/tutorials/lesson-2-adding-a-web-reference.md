@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff0efdd840ee2f4efb0da802da64494640911b80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be009e76b1de70b405cf8b4e3faff2c1461f6dcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102512"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>レッスン 2 : Web 参照の追加
   Web サービスの探索とは、クライアントが Web サービスを検索し、そのサービス記述を取得する処理です。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の Web サービス探索処理では、事前に定義されたアルゴリズムに従って、Web サイトの問い合わせが行われます。 この処理の目的はサービス記述を見つけることです。サービス記述とは、WSDL (Web サービス記述言語) を使用する XML ドキュメントです。  

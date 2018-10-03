@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-caps.latest.revision: 31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd4a604c298f529296ed128f82f658ad3b329b13
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d98e80da1f311292daf3fa275c87e4db5f9cc2e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100632"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[処理]** ページを使用すると、プロセスを実行する際のオプションを構成できます。 オプションには、実行する実行可能ファイル、そのファイルの場所、コマンド プロンプト引数、入力するための変数、出力をキャプチャする変数などが含まれます。  

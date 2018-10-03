@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - row included in search [SQL Server]
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2447bc63e39ad9e5e29fbeb4373324f261f366ed
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: be914343621513cfaecbd7cac2fc6e67fca5c2d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106162"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>行を含めるまたは除外する (Visual Database Tools)
   選択クエリによって返される行の数を制限するには、検索条件またはフィルター条件を作成します。 SQL では、ステートメントの WHERE 句、または集計クエリの作成中に HAVING 句で検索条件が表示されます。  

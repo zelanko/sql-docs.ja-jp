@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationtoolspane.f1
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1263a4037f42b7546e6f248cfd0c4b75bbede8ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61aed2ac785c628d7a67df39af13aaf0a7c74914
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104907"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>計算ツール (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブの **[計算ツール]** ペインを使用すると、計算に使用するメタデータ、関数、およびテンプレートを検索できます。  
