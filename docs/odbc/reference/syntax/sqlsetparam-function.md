@@ -1,13 +1,11 @@
 ---
-title: SQLSetParam 関数 |Microsoft ドキュメント
+title: SQLSetParam 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLSetParam
@@ -19,29 +17,28 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetParam function [ODBC]
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e4d0603d8f9d140bcac779433194fde4d4a66d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f216d5406a649862ff35cd64508f93b97e31b310
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682800"
 ---
 # <a name="sqlsetparam-function"></a>SQLSetParam 関数
 **準拠**  
- バージョンで導入された: ODBC 1.0 標準準拠: 非推奨  
+ バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
   
  **概要**  
- ODBC 2.0 では、ODBC 1.0 関数で**SQLSetParam**代わりました**SQLBindParameter**です。 詳細については、次を参照してください。 [SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)です。  
+ ODBC 2.0 では、ODBC 1.0 関数で**SQLSetParam**置き換わりました**SQLBindParameter**します。 詳細については、次を参照してください。 [SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)します。  
   
 > [!NOTE]  
->  どのようなドライバー マネージャーの詳細と ODBC 2 には、この関数にマップします。*x* ODBC 3 を利用するアプリケーション *。x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)です。  
+>  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)します。  
   
-## <a name="remarks"></a>解説  
- 参照してください[ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)、64 ビット オペレーティング システム、アプリケーションが実行される場合。  
+## <a name="remarks"></a>コメント  
+ 参照してください[ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)場合、アプリケーションが 64 ビットのオペレーティング システムで実行します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

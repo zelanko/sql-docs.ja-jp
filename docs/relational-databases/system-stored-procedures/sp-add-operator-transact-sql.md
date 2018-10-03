@@ -1,14 +1,11 @@
 ---
-title: sp_add_operator (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_operator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3821ebe0886dd5a731e0459f3da686125c02a71c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 147269759746e143897757aab5518b784e705915
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751580"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,15 +54,15 @@ sp_add_operator [ @name = ] 'name'
   
 ## <a name="arguments"></a>引数  
  [ **@name=** ] **'***name***'**  
- オペレーター (通知受信者) の名前を指定します。 この名前は一意であり、割合を含めることはできません (**%**) 文字です。 *名前*は**sysname**、既定値はありません。  
+ オペレーター (通知受信者) の名前を指定します。 この名前は一意であり、% を含めることはできません (**%**) 文字。 *名前*は**sysname**、既定値はありません。  
   
  [ **@enabled=** ] *enabled*  
- オペレーターの現在の状態を示します。 *有効になっている*は**tinyint**、既定値は**1** (有効) です。 場合**0**オペレーターが有効でないと通知を受信しません。  
+ オペレーターの現在の状態を示します。 *有効になっている*は**tinyint**、既定値は**1** (有効)。 場合**0**オペレーターが有効でないと、通知を受信しません。  
   
  [ **@email_address=** ] **'***email_address***'**  
  オペレーターの電子メール アドレスを指定します。 この文字列はメール システムに直接渡されます。 *email_address*は**nvarchar (100)**、既定値は NULL です。  
   
- 実際の電子メール アドレスまたはの別名のいずれかを指定することができます*email_address*です。 以下に例を示します。  
+ 実際の電子メール アドレスまたはエイリアスのいずれかを指定する*email_address*します。 以下に例を示します。  
   
  '**jdoe**'または'**jdoe@xyz.com**'  
   
@@ -77,25 +73,25 @@ sp_add_operator [ @name = ] 'name'
  オペレーターのポケットベルのアドレスを指定します。 この文字列はメール システムに直接渡されます。 *pager_address*は**narchar (100)**、既定値は NULL です。  
   
  [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
- 時刻を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ポケットベルによる通知に指定したオペレーターに送信平日に、月曜日から金曜日までからです。 *weekday_pager_start_time*は**int**、既定値は**090000**午前 9時 00分を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+ 時刻を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ポケットベルの通知送信指定したオペレーター、平日、月曜日から金曜日までからです。 *weekday_pager_start_time*は**int**、既定値は**090000**9時 00分 am を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
  [ **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
- 時刻を**SQLServerAgent**サービス不要になったポケットベルによる通知に指定したオペレーターに送信平日に、月曜日から金曜日までからです。 *エージェント*は**int**、制で表した 180000、既定値を示す午後 6時 00分 を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+ 時刻を**SQLServerAgent**サービス不要になったポケットベルの通知送信指定したオペレーター平日に、月曜日から金曜日までからです。 *エージェント*は**int**で表した 180000、既定値を示す 6時 00分 PM を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
  [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
- 時刻を**SQLServerAgent**サービスは、毎週土曜日に、指定したオペレーターにポケットベルの通知を送信します。 *エージェント*は**int**090000、既定値はことを示します午前 9時 00分 を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+ 時刻を**SQLServerAgent**サービスは、毎週土曜日に、指定したオペレーターにポケットベルの通知を送信します。 *エージェント*は**int**で表した 090000、既定値を示す午前 9時 00分 を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
  [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
- 時刻を**SQLServerAgent**サービス不要になったポケットベルの通知送信指定したオペレーターに対して毎週土曜日です。 *@saturday_pager_end_time*は**int**、既定値は**180000**、午後 6 時 00 分を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+ 時刻を**SQLServerAgent**サービス不要になったポケットベルの通知送信指定したオペレーターに対して毎週土曜日。 *@saturday_pager_end_time*は**int**、既定値は**180000**午後 6 時を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
  [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
- 時刻を**SQLServerAgent**サービスが、指定したオペレーターに対して毎週日曜日ポケットベルの通知を送信します。 *エージェント*は**int**、既定値は**090000**午前 9時 00分を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+ 時刻を**SQLServerAgent**サービスが指定したオペレーターに対して毎週日曜日ポケットベルの通知を送信します。 *エージェント*は**int**、既定値は**090000**9時 00分 am を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
  [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
- 時刻を**SQLServerAgent**サービス不要になったポケットベルの通知送信指定したオペレーターに対して毎週日曜日です。 *エージェント*は**int**、既定値は**180000**、午後 6 時 00 分を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+ 時刻を**SQLServerAgent**サービス不要になったポケットベルの通知送信指定したオペレーターに対して毎週日曜日。 *エージェント*は**int**、既定値は**180000**午後 6 時を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
  [ **@pager_days=** ] *pager_days*  
- 指定された開始時刻から終了時刻までの間に、オペレーターがポケットベルの通知を受信できる曜日を表す数値を指定します。 *pager_days*は**tinyint**、既定値は**0**ページの受信に使用できることはありませんが、演算子をことを示します。 有効な値は**0**を通じて**127**です。 *pager_days*必要となる曜日の個々 の値を加算して計算されます。 たとえば、月曜日から金曜日までからは**2**+**4**+**8**+**16** + **32** = **62**です。 次の表は、各曜日に対する値の一覧です。  
+ 指定された開始時刻から終了時刻までの間に、オペレーターがポケットベルの通知を受信できる曜日を表す数値を指定します。 *pager_days*は**tinyint**、既定値は**0**ページの受信に使用可能なことはありませんが、演算子をことを示します。 有効な値は**0**を通じて**127**します。 *pager_days*必要となる曜日の個々 の値を加算して計算されます。 たとえば、月曜日から金曜日までからは**2**+**4**+**8**+**16** + **32** = **62**します。 次の表は、各曜日に対する値の一覧です。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -119,15 +115,15 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_add_operator**から実行する必要があります、 **msdb**データベース。  
   
  ポケットベルによる通知は電子メール システムによりサポートされます。ポケットベルによる通知を使用するには、電子メールからポケットベルへの通知機能を持つ電子メール システムを使用する必要があります。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_operator**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_operator**します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`danwi` に対してオペレーター情報を設定します。 オペレーターは有効になっています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、月曜日から金曜日の午前 8 時から午後 5 時まで、 ポケットベルによる通知を送信します。  

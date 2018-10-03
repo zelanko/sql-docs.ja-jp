@@ -1,40 +1,37 @@
 ---
-title: 明示的なデータ型変換関数 |Microsoft ドキュメント
+title: 明示的なデータ型変換関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c0326cb06ce772a66be464c176cba58c085d855
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908147"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668350"
 ---
-# <a name="explicit-data-type-conversion-function"></a>明示的なデータ型変換関数
-明示的なデータ型の変換は、SQL データ型の定義を使用して指定します。  
+# <a name="explicit-data-type-conversion-function"></a>データ型の明示的な変換用関数
+SQL データ型の定義では、明示的なデータ型の変換を指定します。  
   
- 明示的なデータ型変換関数の ODBC 構文では、変換は制限されません。 別のデータ型への 1 つのデータ型の特定の変換の有効性は、各ドライバー固有の実装によって決定されます。 ドライバーは、ネイティブの構文に ODBC 構文を変換として拒否される ODBC の構文では有効ですが、データ ソースでサポートされていない変換のします。 ODBC 関数**SQLGetInfo**オプション (SQL_CONVERT_BIGINT SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH、やなど) などが、データ ソースによってサポートされている変換に関する情報を取得する方法を提供する変換.  
+ 明示的なデータ型の変換関数の ODBC 構文では、変換は制限されません。 1 つのデータ型の別のデータ型への特定の変換の有効性は、各ドライバー固有の実装によって決定されます。 ドライバーは、ネイティブの構文に ODBC 構文を変換として拒否される ODBC 構文では有効ですが、データ ソースでサポートされていない変換のします。 ODBC 関数**SQLGetInfo**、変換 (SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH、具合) などのオプションは、データ ソースでサポートされている変換について照会する方法を提供します.  
   
  形式、**変換**関数は。  
   
  **変換 (** *value_exp*、 *data_type * * *)**  
   
- 指定された値が返されます*value_exp*を指定された変換*data_type*ここで、 *data_type*は次のキーワードのいずれか。  
+ 指定された値を返します*value_exp*を指定した変換*data_type*ここで、 *data_type*は、次のキーワードの 1 つです。  
   
 |||  
 |-|-|  
@@ -58,19 +55,19 @@ ms.locfileid: "32908147"
 |SQL_INTERVAL_DAY_TO_MINUTE||  
 |SQL_INTERVAL_DAY_TO_SECOND||  
   
- ODBC 構文明示的なデータ型変換関数は、変換形式の仕様をサポートしていません。 明示的な形式の仕様が、基になるデータ ソースによってサポートされている場合、ドライバーは既定値を指定や、形式の仕様を実装する必要があります。  
+ 明示的なデータ型の変換関数の ODBC 構文は、変換形式の仕様をサポートしていません。 明示的な形式の仕様は、基になるデータ ソースでサポートされていますが場合、ドライバーが既定値を指定または形式の仕様を実装する必要があります。  
   
- 引数*value_exp*列名、または指定できます、別のスカラー関数、または数値の結果の文字列リテラルです。 以下に例を示します。  
+ 引数*value_exp*列名、または指定できます、もう 1 つのスカラー関数、または数値の結果の文字列リテラル。 以下に例を示します。  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
 ```  
   
- CURDATE スカラー関数の出力を文字の文字列に変換します。  
+ CURDATE スカラー関数の出力を文字列に変換します。  
   
- ODBC がからの戻り値のデータ型を要求していないため、スカラー関数 (ため、関数は、データ ソース固有では多くの場合)、アプリケーションは、データ型の変換を強制的に可能な限り CONVERT のスカラー関数を使用する必要があります。  
+ ODBC からの戻り値のデータ型を必要としませんので、スカラー関数 (関数は、データ ソース固有では多くの場合) ため、アプリケーションは、データ型の変換を強制的に可能な限りの CONVERT スカラー関数を使用する必要があります。  
   
- 次の 2 つの例の例を示します、**変換**関数。 これらの例では、EMPNO 列 SQL_SMALLINT 型の列と SQL_CHAR 型の EMPNAME 列に、従業員をという名前のテーブルの存在があるとします。  
+ 次の 2 つの例の使用方法を示します、**変換**関数。 これらの例は、型 SQL_SMALLINT の EMPNO 列および SQL_CHAR 型の EMPNAME 列で、従業員をという名前のテーブルの存在を想定しています。  
   
  場合は、アプリケーションは、次の SQL ステートメントを指定します。  
   
@@ -78,7 +75,7 @@ ms.locfileid: "32908147"
 SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'  
 ```  
   
--   ORACLE 用のドライバーでは、SQL ステートメントに変換します。  
+-   ORACLE 用のドライバーでは、SQL ステートメントを変換します。  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE to_char(EMPNO) LIKE '1%'  
@@ -97,7 +94,7 @@ SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}
    FROM EMPLOYEES WHERE EMPNO <> 0  
 ```  
   
--   ORACLE 用のドライバーでは、SQL ステートメントに変換します。  
+-   ORACLE 用のドライバーでは、SQL ステートメントを変換します。  
   
     ```  
     SELECT abs(EMPNO), to_number(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  

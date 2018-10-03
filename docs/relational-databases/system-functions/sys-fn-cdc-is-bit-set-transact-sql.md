@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_is_bit_set (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_cdc_is_bit_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_is_bit_set
 - sys.fn_cdc_is_bit_set_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - sys.fn_cdc_is_bit_set
 - fn_cdc_is_bit_set
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74979c5c5f9a03b7a2d438a31b67caa65f63fa0e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0796f25396d4c5303fb0de1762f6f04a18035fa9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705630"
 ---
 # <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,20 +44,20 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
   
 ## <a name="arguments"></a>引数  
  *position*  
- 確認するマスク内の序数位置を指定します。 *位置*は**int**です。  
+ 確認するマスク内の序数位置を指定します。 *位置*は**int**します。  
   
  *update_mask*  
- 更新された列を識別するマスクを指定します。 *update_mask*は**varbinary (128)** です。  
+ 更新された列を識別するマスクを指定します。 *update_mask*は**varbinary (128)** します。  
   
 ## <a name="return-type"></a>戻り値の型  
  **bit**  
   
-## <a name="remarks"></a>解説  
- 通常、この関数は、列が変更されたかどうかを示すために変更データ クエリの一部として使用します。 このシナリオでは、関数で[sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)クエリの前に必要な列の序数を取得するために使用します。 **sys.fn_cdc_is_bit_set**は返された結果セットの一部として列に固有の情報を提供する、返される変更データの各行に適用されます。  
+## <a name="remarks"></a>コメント  
+ 通常、この関数は、列が変更されたかどうかを示すために変更データ クエリの一部として使用します。 このシナリオでは、関数で[sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)クエリの前に必要な列の序数を取得するために使用します。 **sys.fn_cdc_is_bit_set**は返された結果セットの一部として列固有の情報を提供する、返される変更データの各行に適用されます。  
   
- 関数の代わりにこの関数を使用することをお勧め[sys.fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)返された結果セットのすべての行の列が変更されたかどうかを判断する場合。  
+ 関数の代わりにこの関数を使用することをお勧めします。 [sys.fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)返された結果セットのすべての行の列が変更されたかどうかを決定するときにします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

@@ -1,13 +1,11 @@
 ---
-title: クエリを実行して、Microsoft Access から Visual FoxPro データの更新 |Microsoft ドキュメント
+title: クエリを実行して、Microsoft Access から Visual FoxPro データの更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - querying Visual FoxPro data [ODBC]
@@ -17,34 +15,33 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], querying and updating
 - updating Visual FoxPro data [ODBC]
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6704fb70b7c8764e0299c7334aa384410c45a0a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1097e03c414d919a606ffd21ae50ffddf51173b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732950"
 ---
-# <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>クエリを実行して、Microsoft Access から Visual FoxPro データの更新
-クエリを実行し、[リンク テーブル] オプションを使用して Microsoft Access データベースから Visual FoxPro データベースに格納されたデータを更新できます。  
+# <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Microsoft Access からクエリを実行して Visual FoxPro データを更新する
+クエリを実行し、リンク テーブル オプションを使用して Microsoft Access データベースから Visual FoxPro データベースに格納されたデータを更新できます。  
   
 ### <a name="to-link-a-visual-foxpro-database-to-a-microsoft-access-database"></a>Visual FoxPro データベースを Microsoft Access データベースにリンクするには  
   
 1.  Microsoft Access データベースを開きます。  
   
-2.  [テーブル] タブから [新規] をクリックします。  
+2.  [テーブル] タブから、新規をクリックします。  
   
-3.  新しいテーブル ダイアログ ボックスでは、リンク テーブルを選択し、ok をクリックします。  
+3.  新しいテーブル ダイアログ ボックスで、リンク テーブルを選択し、ok をクリックします。  
   
-4.  [リンク] ダイアログ ボックスには、ファイルの種類の一覧で ODBC データベースを選択します。  
+4.  リンク ダイアログ ボックスで、ファイルの種類の一覧で、ODBC データベースを選択します。  
   
-5.  SQL データ ソース ダイアログ ボックスで、クエリを実行し、ok をクリックする Visual FoxPro データに接続するデータ ソースを選択します。  
+5.  SQL データ ソース ダイアログ ボックスで、クエリを実行し、ok をクリックしたい Visual FoxPro データに接続するデータ ソースを選択します。  
   
-6.  リンク テーブル ダイアログ ボックスでは、クエリ、更新し、ok をクリックしテーブルを選択します。 Visual FoxPro テーブルは、Microsoft Access データベースの [テーブル] タブに表示されます。  
+6.  リンク テーブル ダイアログ ボックスで、クエリおよび更新 ok をクリックするテーブルを選択します。 Visual FoxPro テーブルは、Microsoft Access データベースのテーブル タブに表示されます。  
   
- クエリおよびリンク Visual FoxPro テーブルのデータを更新する Microsoft Access を使用できます。 リンクされているデータに加えた変更は、Visual FoxPro データ ソースに送信されます。  
+ クエリおよびリンク Visual FoxPro テーブル内のデータを更新する Microsoft Access を使えるようになりました。 リンクされているデータに加えた変更は、Visual FoxPro データ ソースに送信されます。  
   
- Visual FoxPro データ ソースのデータに影響を与えるを参照して Microsoft Access で変更しないようにする場合に行う[Microsoft access の Visual FoxPro データのインポート](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)です。
+ Visual FoxPro データ ソースのデータに影響を参照して Microsoft Access で行った変更したくない場合[Visual FoxPro データを Microsoft Access にインポートする](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)します。

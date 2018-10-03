@@ -1,13 +1,11 @@
 ---
-title: BOF、EOF、およびブックマークのプロパティの例 (vc++) |Microsoft ドキュメント
+title: BOF、EOF、および Bookmark プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659530"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF、およびブックマークのプロパティの例 (vc++)
-この例では、最初の関数を使用して、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ユーザーは、最初と最後のレコードのを越えて移動しようとした場合にメッセージを表示するプロパティ、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティをユーザーが内のレコードにフラグを設定できるように、 **Recordset**後でそれに戻る。  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF、および Bookmark プロパティの例 (vc++)
+この例では、最初の関数を使用して、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ユーザーでは、最初と最後のレコードのを越えて移動しようとすると、メッセージを表示するプロパティを[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)ユーザーが内のレコードにフラグを設定できるプロパティ、**レコード セット**し、後で戻ります。  
   
- 2 番目の関数では、ブックマーク プロパティを使用して、配置して、**ブックマーク**から他のすべてのレコードの**Recordset**配列とし、フィルター、配列を使用して、レコード セットにします。  
+ 2 番目の関数では、ブックマーク プロパティを使用して、配置、**ブックマーク**から他のすべてのレコードの**レコード セット**配列と、フィルター、配列を使用してレコード セットにします。  
   
 ## <a name="example"></a>例  
   

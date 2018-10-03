@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27e3a36850dcf0d314398e994485d5e7410f9a8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051397"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行セット
   CSDLBI 形式 (BI 注釈付き概念スキーマ定義言語) でモデル定義を提供しながら、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ モデル (テーブル モデルまたは多次元) に関する情報を返します。 CSDLBI は、Entity Data Framework によって使用される XML スキーマである CSDL に基づくもので、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーと [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] クライアントの間の通信に使用されます。 ビジネス インテリジェンス (BI) 注釈は、テーブル モデルとテーブル モデル内のオブジェクトに関する追加のメタデータを提供します。 テーブル データ モデルの詳細については、「[ビジネス インテリジェンス向け CSDL 注釈 &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)」を参照してください。  

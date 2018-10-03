@@ -1,25 +1,22 @@
 ---
-title: ODBC プログラムのサンプル |Microsoft ドキュメント
+title: ODBC プログラムのサンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ae6b7f-f53b-48a7-8fe5-4bbd6e0e414b
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6e879e49c89ac0f981fff2f04e4c53dc0b1c1fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e42efde20dfea3cfd1ee8e85bcef5a234b9430b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840682"
 ---
 # <a name="sample-odbc-program"></a>ODBC のサンプル プログラム
-[ODBC サンプル コード](http://go.microsoft.com/fwlink/?LinkId=244831)メッセージ ODBC データ ソース名を表示します。  クエリを入力するように求め、およびサンプル クエリの結果が表示されます。
+[ODBC サンプル コード](http://go.microsoft.com/fwlink/?LinkId=244831)ODBC データ ソース名をユーザーに求めます。  クエリを入力するように求められますし、サンプル クエリの結果が表示されます。

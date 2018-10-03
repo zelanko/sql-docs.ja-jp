@@ -1,13 +1,11 @@
 ---
-title: SQL ステートメントのバッチの処理 |Microsoft ドキュメント
+title: SQL ステートメントのバッチ処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], batches
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], processing batches of SQL statements
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04f90e8a2da0b19c57b4de7a665c6907356f788c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c77d60ea3ef1412e66c8bf40937b45647e776e98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769360"
 ---
-# <a name="processing-batches-of-sql-statements"></a>SQL ステートメントのバッチの処理
+# <a name="processing-batches-of-sql-statements"></a>SQL ステートメントのバッチ処理
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないように、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
- カーソル ライブラリは、SQL_ATTR_PARAMSET_SIZE ステートメント属性が 1 より大きい SQL ステートメントなど、SQL ステートメントのバッチをサポートしていません。 アプリケーションでは、カーソル ライブラリへの SQL ステートメントのバッチを送信する場合、結果は未定義です。
+ カーソル ライブラリは、SQL_ATTR_PARAMSET_SIZE ステートメント属性が 1 より大きい SQL ステートメントなど、SQL ステートメントのバッチをサポートしていません。 アプリケーションでは、カーソル ライブラリの SQL ステートメントのバッチを送信する場合、結果は未定義です。

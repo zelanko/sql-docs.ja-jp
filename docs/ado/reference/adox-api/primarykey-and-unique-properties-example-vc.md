@@ -1,13 +1,11 @@
 ---
-title: 主キーと一意のプロパティの例 (vc++) |Microsoft ドキュメント
+title: PrimaryKey および Unique プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Unique property [ADOX], VC++ example
 - PrimaryKey property [ADOX], VC++ example
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bacde66d71826f40eb86cb31c92c1f8663ccac74
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7d8943249f6780de448e4eb22dcd3088dbc55bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613320"
 ---
-# <a name="primarykey-and-unique-properties-example-vc"></a>主キーと一意のプロパティの例 (vc++)
-この例で、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、2 つの列を新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して、1 つの列に重複する値が許可されていません、主キーを作成します。  
+# <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey および Unique プロパティの例 (VC++)
+この例では、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードでは、2 つの列を含む新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して 1 つの列、主キーが重複する値が許可されていません。  
   
 ```  
 // BeginPrimaryKeyCpp.cpp  

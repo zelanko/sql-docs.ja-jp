@@ -1,31 +1,28 @@
 ---
-title: SQLError マッピング |Microsoft ドキュメント
+title: SQLError のマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLError
 - SQLError function [ODBC], mapping
 ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 577f07c6839ebd4b8fe2b9722fde3595bb7e70dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a278609ee53fe7898d32c1986da2650202b8a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719210"
 ---
-# <a name="sqlerror-mapping"></a>SQLError マッピング
-アプリケーションを呼び出すと**SQLError**から ODBC 3 *.x*ドライバーへの呼び出し  
+# <a name="sqlerror-mapping"></a>SQLError のマッピング
+アプリケーションを呼び出すと**SQLError**を通じて、ODBC 3 *.x*ドライバーへの呼び出し  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   
@@ -37,4 +34,4 @@ SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax
 SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)  
 ```  
   
- *HandleType*引数に応じて、値は SQL_HANDLE_ENV、sql_handle_dbc として、または、SQL_HANDLE_STMT を設定し、*処理*引数の値に設定されて*henv*、 *hdbc*、または*hstmt* をクリックします。 *RecNumber*引数には、ドライバー マネージャーによってを決定します。
+ *HandleType*引数を必要に応じて、値は sql_handle_env として、sql_handle_dbc として、または sql_handle_stmt として、設定、および*処理*引数の値に設定*henv*、 *hdbc*、または*hstmt*必要に応じて、します。 *RecNumber*引数は、ドライバー マネージャーによって決定されます。

@@ -1,32 +1,29 @@
 ---
-title: プロパティの例 (VB) の準備 |Microsoft ドキュメント
+title: プロパティの例 (VB) の準備 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Prepared property [ADO], Visual Basic example
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66efabdcbd3475a873dea67aa8540f9c36a560a7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2339cb94af5140bab96fe78add90b163e84ced60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813031"
 ---
-# <a name="prepared-property-example-vb"></a>準備済みのプロパティの例 (VB)
-この例を示します、 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)を開いて、2 つのプロパティ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト: 準備された 1 つ、準備されていません。  
+# <a name="prepared-property-example-vb"></a>Prepared プロパティの例 (VB)
+この例では、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを開き、2 つ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト-準備および準備されていません。  
   
 ```  
 'BeginPreparedVB  

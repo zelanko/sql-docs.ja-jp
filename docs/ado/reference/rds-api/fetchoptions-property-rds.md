@@ -1,49 +1,46 @@
 ---
-title: FetchOptions プロパティ (RDS) |Microsoft ドキュメント
+title: FetchOptions プロパティ (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b73931acd678871f05e5aa4022153ded86a830e4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 732cefe8bd94e9c588ff5117eb39258b327e4eb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288134"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601770"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions プロパティ (RDS)
-非同期フェッチの型を示します。  
+非同期のフェッチの種類を示します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="setting-and-return-values"></a>設定して、戻り値  
  設定または値は次のいずれかを返します。  
   
 |定数|説明|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|すべてのレコード、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)コントロールは、アプリケーションに返される前にフェッチされます。 完全な**Recordset**を前に、アプリケーションとは何も操作をフェッチします。|  
-|**adcFetchBackground**|コントロールは、レコードの最初のバッチがフェッチされるとすぐにアプリケーションに返すことができます。 それ以降の読み取り、 **Recordset**最初のバッチでフェッチされなかったレコードへのアクセスの試行は、要求されたレコードが実際にフェッチされるまで遅延されます、アプリケーションに制御が戻る時点であります。|  
-|**adcFetchAsync**|既定値です。 コントロールは、レコードがバック グラウンドでフェッチ中にアプリケーションにすぐに返します。 要求されたレコードに最も近いレコードが読み取られ、コントロールすぐに戻り、ことを示す場合は、アプリケーションがフェッチされていないレコードを読み取るしようとするの現在の末尾、**レコード セット**に達しています。 呼び出しなど、 [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)はより多くのレコードは引き続きを設定する場合でも、実際にフェッチされた最後のレコードに、現在のレコードの位置を移動、 **Recordset**です。|  
+|**adcFetchUpFront**|すべてのレコード、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)コントロールは、アプリケーションに返される前にフェッチされます。 完全な**Recordset**取得された後で、アプリケーションで、何も実行することはできます。|  
+|**adcFetchBackground**|コントロールは、レコードの最初のバッチがフェッチされるとすぐにアプリケーションに返すことができます。 それ以降の読み取り、 **Recordset**こと、要求されたレコードが実際にフェッチされるまで、最初のバッチでフェッチいないレコードにアクセスしようは遅延が、どの時点で、コントロールは、アプリケーションに返します。|  
+|**adcFetchAsync**|既定値です。 コントロールは、レコードが、バック グラウンドでフェッチ中に、アプリケーションにすぐに返します。 要求されたレコードに最も近いレコードの読み取りし、コントロールはすぐに復帰、ことを示す場合は、アプリケーションがフェッチされていないレコードを読み取るしようとすると、現在の末尾、**レコード セット**に達しています。 呼び出しなど[MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)場合でも、複数のレコードの設定は引き続き、実際にフェッチされた、最後のレコードを現在のレコードの位置を移動は、 **Recordset**します。|  
   
 > [!NOTE]
->  これらの定数を使用するクライアント側実行可能ファイルは、それらの宣言をする必要があります。 RDS ライブラリの既定のインストール フォルダーにあるファイル Adcvbs.inc から、使用する定数の宣言を貼り付けるを切り取ってことができます。  
+>  これらの定数を使用するクライアント側実行可能ファイルには、それらの宣言を提供する必要があります。 RDS ライブラリの既定のインストール フォルダーにあるファイル Adcvbs.inc から使用する定数の宣言を貼り付けるを切り取ってことができます。  
   
 ## <a name="remarks"></a>コメント  
- Web アプリケーションでは通常使用する**adcFetchAsync** (既定値) の場合は、パフォーマンス向上を提供するためです。 コンパイル済みのクライアント アプリケーションでは通常使用する**adcFetchBackground**です。  
+ Web アプリケーションでは、通常、使用する**adcFetchAsync** (既定値) の場合は、パフォーマンスを向上させるためです。 コンパイル済みのクライアント アプリケーションでは、通常、使用する**adcFetchBackground**します。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -1,33 +1,30 @@
 ---
-title: 名前付きコマンドにパラメーターを渡す |Microsoft ドキュメント
+title: 名前付きコマンドにパラメーターを渡す |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51243e0b57bf9cfe4619368e1abf49c048a19fd7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272361"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773390"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>名前付きコマンドにパラメーターを渡す
-コマンドの結果として渡される出力と同様、*アウト*名前付きのコマンドでは、パラメーターの変数パラメーター化コマンドへのされてとして渡された*で*変数名前付きのコマンドをします。  
+コマンドの結果がとして渡された場合と同様、*アウト*名前付きのコマンドでは、パラメーターの変数されているパラメーター化コマンドとして渡された*で*変数を名前付きコマンド。  
   
- 次のコード例のすべての注文の取得を行うとにより配置された顧客の**CustomerID** "ALKFI"は、Northwind データベースからです。 値**CustomerID**は名前付きのコマンドが呼び出されるときに指定します。  
+ 次のコード例を持つ顧客が配置のすべての注文の取得を試みます**CustomerID** "ALKFI"は、Northwind データベースからです。 値**CustomerID**は名前付きコマンドを呼び出すときに時間時に指定します。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -80,13 +77,13 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- すべての入力パラメーターは、任意の出力変数を付ける必要があります、パラメーターのデータ型と一致する必要がありますまたは対応するフィールドのものに変換できることを確認します。 次のステートメント-  
+ 任意の出力変数の前に指定する必要がありますすべての入力パラメーターやパラメーターのデータ型と一致する必要がありますでの対応するフィールドに変換できるいることに注意してください。 次のステートメント-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- — の必須の入力パラメーターであるため、一致しないデータ型のエラーが発生、**文字列**の種類のではありません、**整数**型です。  
+ — の必須の入力パラメーターであるため、一致しないデータ型のエラーが発生、**文字列**の種類のではありません、**整数**型。  
   
  次の呼び出し。  
   
@@ -94,7 +91,7 @@ objConn.GetOrdersOf 12345, objRs
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- — 有効ですが、データベースにこのようなレコードが存在しないために、設定、空の結果を得られます。  
+ — 有効ですが、データベースにこのようなレコードが存在しないため、設定、空の結果になります。  
   
 ## <a name="see-also"></a>参照  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -1,13 +1,11 @@
 ---
-title: 接続を閉じる方法、テーブル型のプロパティの例 (vc++) |Microsoft ドキュメント
+title: 接続の Close メソッド、Table Type プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cc1899b0d8772d27f3c505787469913a9e24150
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837870"
 ---
-# <a name="connection-close-method-table-type-property-example-vc"></a>Close メソッドの接続、テーブル型のプロパティの例 (vc++)
-設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**閉じる必要があります""カタログ。 関連付けられたコレクションは空になります。 カタログ内のスキーマ オブジェクトから作成されたすべてのオブジェクトは孤立します。 任意のプロパティがキャッシュされているこれらのオブジェクトで使用可能なは引き続きプロバイダーへの呼び出しを必要とするプロパティを読み取ることはできません。  
+# <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close メソッド、Table Type プロパティの例 (VC++)
+設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**閉じる必要があります""カタログ。 関連付けられたコレクションは空になります。 カタログ内のスキーマ オブジェクトから作成されたすべてのオブジェクトは孤立します。 キャッシュされているこれらのオブジェクトのプロパティはいずれも使用できなくなりますが、プロバイダーの呼び出しを必要とするプロパティの読み取りを試みたが失敗します。  
   
 ```  
 // BeginCloseConnectionCpp.cpp  

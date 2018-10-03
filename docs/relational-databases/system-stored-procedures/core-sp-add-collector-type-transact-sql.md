@@ -1,14 +1,11 @@
 ---
-title: core.sp_add_collector_type (TRANSACT-SQL) |Microsoft ドキュメント
+title: core.sp_add_collector_type (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_collector_type
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sp_add_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 486a51f5f521c0a3af647bc4d7242f3696727789
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b7bc16db334b6b8f6538a7ee221beb5fd3ccf2a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238369"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727600"
 ---
 # <a name="corespaddcollectortype-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +49,8 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **mdw_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **mdw_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、core.supported_collector_types ビューにジェネリック T-SQL Query コレクター型を追加します。 既定では、ジェネリック T-SQL Query コレクター型は既に存在します。 したがって、既定のインストールでこのコードを実行すると、コレクター型が既に存在していることを示すメッセージが表示されます。  

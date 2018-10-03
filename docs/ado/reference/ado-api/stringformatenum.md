@@ -1,13 +1,11 @@
 ---
-title: StringFormatEnum |Microsoft ドキュメント
+title: StringFormatEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - StringFormatEnum enumeration [ADO]
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac774393a914c13171dfa13150ee708b316fbd03
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d2740c7fb25b71e3588bebb924ea9d5f907e3560
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657720"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
-取得するときに、形式を指定、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として。  
+取得するときに、形式を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|行を取り出すため*RowDelimiter*、列、 *ColumnDelimiter*、および null 値によって*NullExpr*です。 3 つのパラメーター、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドがでのみ有効ですが、 *StringFormat*の**adClipString**です。|  
+|**adClipString**|2|行を区切ります*RowDelimiter*、列、 *ColumnDelimiter*、および null 値によって*NullExpr*します。 これら 3 つのパラメーターの[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドはでのみ有効ですが、 *StringFormat*の**adClipString**します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

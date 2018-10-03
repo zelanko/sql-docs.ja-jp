@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_batch_params
@@ -21,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac3b42956cacbd10718ca716e7b00b67e0afb949
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 00efe39e8ab60df83ddd267269461f6a6ff61ee0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033542"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594631"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +59,10 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**スケール**|**smallint**|小数点より右側の桁数です。 この値は NULL です。|  
 |**RADIX**|**smallint**|数値型の基数です。 この値は NULL です。|  
 |**NULLABLE**|**smallint**|NULL 値を許容するかどうかを指定します。<br /><br /> 1 = NULL 値を許容するパラメーターのデータ型が作成されます。<br /><br /> 0 = null 値は許可されません。<br /><br /> この値は NULL です。|  
-|**SQL_DATA_TYPE**|**smallint**|値、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型、記述子の TYPE フィールドに表示されます。 この列と同じ、 **DATA_TYPE**列を除き、 **datetime**と ISO**間隔**データ型。 この列は、常に値を返します。 この値は NULL です。|  
-|**SQL_DATETIME_SUB**|**smallint**|**Datetime**または ISO**間隔**サブコードの場合、値の**SQL_DATA_TYPE**が SQL_DATETIME または SQL_INTERVAL します。 型のデータ型以外**datetime**と ISO**間隔**、この列は NULL です。 この値は NULL です。|  
+|**SQL_DATA_TYPE**|**smallint**|値、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型、記述子の TYPE フィールドに表示されます。 この列は、**datetime** データ型と ISO **interval** データ型以外は、**DATA_TYPE** 列と同じです。 この列は常に値が返されます。 この値は NULL です。|  
+|**SQL_DATETIME_SUB**|**smallint**|**Datetime**または ISO**間隔**サブコードの場合、値の**SQL_DATA_TYPE**が SQL_DATETIME または SQL_INTERVAL します。 **datetime** および **ISO interval** 以外のデータ型の場合、この列は NULL です。 この値は NULL です。|  
 |**CHAR_OCTET_LENGTH**|**int**|最大長のバイト単位、**文字**または**バイナリ**データ型のパラメーター。 他のすべてのデータ型の場合、この列は NULL を返します。 この値は常に NULL です。|  
-|**ORDINAL_POSITION**|**int**|バッチ内でのパラメーターの序数です。 パラメーター名が複数回繰り返される場合は、この列には最初のオカレンスの序数が入ります。 最初のパラメーターには序数 1 が設定されます。 この列は、常に値を返します。|  
+|**ORDINAL_POSITION**|**int**|バッチ内でのパラメーターの序数です。 パラメーター名が複数回繰り返される場合は、この列には最初のオカレンスの序数が入ります。 最初のパラメーターには序数 1 が設定されます。 この列は常に値が返されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  実行する権限**sp_batch_params**に付与されます**パブリック**します。  

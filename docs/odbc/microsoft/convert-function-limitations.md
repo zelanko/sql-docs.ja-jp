@@ -1,30 +1,27 @@
 ---
-title: CONVERT 関数の制限事項 |Microsoft ドキュメント
+title: CONVERT 関数の制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, CONVERT function limitations
 - Convert function limitations [ODBC]
 ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d7e9af73c6af24155ebc0a1691c75d860af2ae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7759221f579161424fdc08cc42d1357376efc60b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806710"
 ---
-# <a name="convert-function-limitations"></a>変換関数の制限事項
-NULL に設定されている影響を受ける列に変換エラーの結果を入力します。  
+# <a name="convert-function-limitations"></a>CONVERT 関数の制限事項
+型変換エラーが発生、影響を受ける列が NULL に設定されています。  
   
- 日付でも、タイムスタンプのデータ型は、CONVERT 関数が別のデータ型 (または自体) に変換できます。
+ 日付でも、TIMESTAMP データ型は、CONVERT 関数によって、別のデータ型 (または自体) に変換できます。

@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_get_max_lsn (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_cdc_get_max_lsn (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_max_lsn
 - fn_cdc_get_max_lsn
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_get_max_lsn
 - sys.fn_cdc_get_max_lsn
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ef48731e0e333d39b24235e848ac497cd59c19f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fae4f476005cb227b198b193712e4a564a1418fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231403"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789960"
 ---
 # <a name="sysfncdcgetmaxlsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +45,12 @@ sys.fn_cdc_get_max_lsn ()
 ## <a name="return-types"></a>戻り値の型  
  **binary(10)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数では、最大の LSN を返しますの start_lsn 列で、 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル。 変更がデータベース変更テーブルに反映されたときに、キャプチャ プロセスで最後に処理された LSN になります。 これは、データベースに対して定義されているキャプチャ インスタンスに関連付けられたすべてのタイムラインの上端として使用されます。  
   
  通常は、関数を使用してクエリ範囲に対する適切な上端を取得します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  public データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

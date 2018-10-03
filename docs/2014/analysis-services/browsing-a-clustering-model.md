@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - clustering [data mining]
 - mining model, clustering
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 006decb2e339c07252cc0dbfeaee60962db36e0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c994b43bda37981d7073d0ee16f32369677e244e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212172"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060412"
 ---
 # <a name="browsing-a-clustering-model"></a>クラスター モデルの参照
   使用してクラスタ リング モデルを開くときに**参照**、クラスタ リングのビューアーに似た、対話型ビューアーでモデルが表示されます[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 ビューアーは、作成されたクラスターを調査して、クラスターの特性を把握するのに役立ちます。 また、個々のセグメントを他のセグメントや母集団と比較対照することもできます。  

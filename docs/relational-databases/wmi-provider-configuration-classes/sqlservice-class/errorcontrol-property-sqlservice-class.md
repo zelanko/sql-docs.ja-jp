@@ -1,15 +1,12 @@
 ---
-title: ErrorControl プロパティ (SqlService クラス) |Microsoft ドキュメント
+title: ErrorControl プロパティ (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ErrorControl Property (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - ErrorControl property
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e787de01cbcde080706d4a3bd569fb365cc17394
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc70c05346bd246dc5a8b46ae1477eb65305f0b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010719"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751700"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +38,11 @@ object.ErrorControl [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *オブジェクト*  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表は、使用可能な値を示します。  
+ 起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表では、使用可能な値を示します。  
   
  Ignore  
  ユーザーへの通知が行われません。  
@@ -63,10 +59,10 @@ object.ErrorControl [= value]
  Unknown  
  重大度が不明です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  値は、失敗が発生した場合に、起動プログラムによって行われるアクションを示しています。 すべてのエラーは、コンピューター システムによって記録されます。  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

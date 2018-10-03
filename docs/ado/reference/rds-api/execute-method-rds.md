@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9da5eafd3533e4384a5c7e40e6e81691ede173e9
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 6ab8b6d5576b36329d89b29b4f6f5d59bcbdc4a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40393404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822610"
 ---
 # <a name="execute-method-rds"></a>Execute メソッド (RDS)
 要求を実行し、2.5 以降は、ADO で使用する ADO レコード セットを作成します。  

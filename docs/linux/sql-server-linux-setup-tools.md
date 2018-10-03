@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 4dc9dd24bc3bdfa918ffdc7d02688303d8dcde5e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: da3730d162ecacc0f6559db578ebb124b2fdfa4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698250"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd および bcp、SQL Server コマンド ライン ツールを Linux にインストールします。
 
@@ -260,7 +258,7 @@ SQL Server 2017 CTP 2.0 以降、SQL Server コマンド ライン ツールは�
     dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
     ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 使用する方法の例については**sqlcmd**を SQL Server に接続し、データベースの作成には、次のクイック スタートのいずれかを表示します。
 

@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_start_collection_set (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syscollector_start_collection_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59fba98f9dcca30cc23828439deeb1e42822fdd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de6aff356e5de49802f0bc2813ff481bd45244c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803800"
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +45,24 @@ sp_syscollector_start_collection_set
   
 ## <a name="arguments"></a>引数  
  [ **@collection_set_id =** ] *collection_set_id*  
- コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**で、既定値は NULL です。 *collection_set_id*場合、値が必要*名前*は NULL です。  
+ コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**既定値は NULL です。 *collection_set_id*場合、値が必要*名前*は NULL です。  
   
  [  **@name =** ] '*名前*'  
- コレクション セットの名前を指定します。 *名前*は**sysname**で、既定値は NULL です。 *名前*場合、値が必要*collection_set_id*は NULL です。  
+ コレクション セットの名前を指定します。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_set_id*は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_create_collection_set を msdb システム データベースのコンテキストで実行し、SQL Server エージェントを有効にする必要があります。  
   
- このプロシージャをスケジュールがないコレクション セットに対して実行すると、失敗します。 場合、コレクション セットが、スケジュール (コレクション モード設定されているために非キャッシュなど) を使用して、 [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)ストアド プロシージャをコレクション セットを開始します。  
+ このプロシージャをスケジュールがないコレクション セットに対して実行すると、失敗します。 場合、コレクション セットに (コレクション モード設定されているために非キャッシュなど)、スケジュールがないを使用して、 [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)ストアド プロシージャをコレクション セットを開始します。  
   
- このプロシージャは、コレクションを有効にし、指定されたコレクション セットのジョブをアップロードして、コレクション セットのコレクション モードがキャッシュ (0) に設定されている場合は、直ちにコレクション エージェント ジョブを開始します。 詳細については、次を参照してください。 [sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)です。  
+ このプロシージャは、コレクションを有効にし、指定されたコレクション セットのジョブをアップロードして、コレクション セットのコレクション モードがキャッシュ (0) に設定されている場合は、直ちにコレクション エージェント ジョブを開始します。 詳細については、次を参照してください。 [sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)します。  
   
  コレクション セットにコレクション アイテムが含まれていない場合、この操作には何も効果がありません。 警告としてエラー 14685 が返されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_operator 固定データベース ロールのメンバーシップが必要です。 コレクション セットにプロキシ アカウントがない場合は、sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -80,7 +76,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 ## <a name="see-also"></a>参照  
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

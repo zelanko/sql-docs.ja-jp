@@ -1,40 +1,37 @@
 ---
-title: ADO MD オブジェクト |Microsoft ドキュメント
+title: ADO MD オブジェクト |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6e5358d5300c23c95ad2bea03d54f97b48b2578
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e7f6cb865ec06e1031cd627316821ef4f666a64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283271"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828712"
 ---
 # <a name="ado-md-objects"></a>ADO MD オブジェクト
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|1 つまたは複数のディメンションの選択したメンバーを含むセル セットのフィルター軸または位置指定を表します。|  
-|[Catalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|多次元データ プロバイダー (MDP) に固有のマルチ ディメンション スキーマ情報 (つまり、キューブと基になるディメンション、階層、レベル、およびメンバー) が含まれています。|  
+|[Catalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|多次元データ プロバイダー (MDP) に固有の多次元スキーマ情報 (つまり、キューブと基になるディメンション、階層、レベル、およびメンバー) が含まれています。|  
 |[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|セル セットに含まれる軸座標の交差部分にデータを表します。|  
 |[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|多次元クエリの結果を表します。 これは、キューブまたはその他のセルセットから選択したセルのコレクションです。|  
-|[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|関連するディメンションのセットを含んでいる、マルチ ディメンション スキーマからキューブを表します。|  
-|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|1 つまたは複数のメンバーの階層を含む、多次元キューブのディメンションの 1 つを表します。|  
-|[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|ディメンションのメンバーを集計または「ロール アップされます」の 1 つの方法を表します ディメンションは、1 つまたは複数の階層に従って集計できます。|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|それぞれが、階層内で同じランクを持つメンバーのセットが含まれています。|  
+|[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|関連するディメンションのセットを含む多次元スキーマからキューブを表します。|  
+|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|1 つまたは複数のメンバーの階層を含む多次元キューブのディメンションの 1 つを表します。|  
+|[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|ディメンションのメンバーを集計または「ロール アップ」の 1 つの方法を示します ディメンションは、1 つまたは複数の階層に従って集計できます。|  
+|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|それぞれが階層内で同じランクを持つメンバーのセットが含まれています。|  
 |[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|キューブでは、レベルのメンバー、レベルのメンバーまたはセル セットの軸に沿った位置のメンバーの子を表します。|  
 |[[Position]](../../../ado/reference/ado-md-api/position-object-ado-md.md)|軸に沿ったポイントを定義するさまざまなディメンションの 1 つまたは複数のメンバーのセットを表します。|  
   
@@ -44,15 +41,15 @@ ms.locfileid: "35283271"
 |------------|-----------------|  
 |[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|データ ソースへの接続を開くを表します。|  
   
- これらのオブジェクト間のリレーションシップの図解は、 [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)です。  
+ これらのオブジェクト間のリレーションシップは、「、 [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)します。  
   
- ADO MD オブジェクトの多くは、対応するコレクションに格納することができます。 たとえば、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) オブジェクトは **Catalog** の [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) コレクションに格納できます。 詳細については、次を参照してください。 [ADO MD コレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)です。  
+ ADO MD オブジェクトの多くは、対応するコレクションに格納することができます。 たとえば、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) オブジェクトは **Catalog** の [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) コレクションに格納できます。 詳細については、次を参照してください。 [ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)します。  
   
 ## <a name="see-also"></a>参照  
- [ADO MD API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD コードの例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [ADO MD コレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD 列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [ADO MD メソッド](../../../ado/reference/ado-md-api/ado-md-methods.md)   
+ [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [ADO MD のコード例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
+ [ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   
+ [ADO MD の列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
+ [ADO MD のメソッド](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD のプロパティ](../../../ado/reference/ado-md-api/ado-md-properties.md)

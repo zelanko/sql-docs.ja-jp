@@ -1,32 +1,29 @@
 ---
-title: リテラルの構文の間隔 |Microsoft ドキュメント
+title: Interval のリテラル構文 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - literals [ODBC], interval
 - interval literals [ODBC]
 - ODBC literals [ODBC], interval
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 016a4fa307e9bda697dde5eec81ce606ad07a19b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907347"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694056"
 ---
-# <a name="interval-literal-syntax"></a>間隔のリテラルの構文
-次の構文は、ODBC の間隔のリテラルに使用されます。  
+# <a name="interval-literal-syntax"></a>Interval のリテラルの構文
+次の構文は、ODBC で interval のリテラルに使用されます。  
   
  *間隔リテラル:: = 間隔*[+*&#124;*-]*間隔文字列間隔修飾子*  
   
@@ -54,7 +51,7 @@ ms.locfileid: "32907347"
   
  *分値*:: = *datetime 値*  
   
- *秒の値*:: =*秒整数*[です [。*秒の端数*]  
+ *秒の値*:: =*秒整数*[. [*秒の端数*]  
   
  *整数値の秒*:: =*符号なし整数*  
   
@@ -64,7 +61,7 @@ ms.locfileid: "32907347"
   
  *間隔修飾子*:: =*開始フィールド*TO*終了フィールド*&#124;*単一 datetime フィールド*  
   
- *開始日フィールド*:: =*非秒 datetime のフィールドの*[(*間隔先頭フィールド精度*)]  
+ *開始フィールド*:: =*秒-datetime-フィールド以外*[(*間隔リード フィールド精度*)]  
   
  *終了フィールド*:: =*非秒 datetime のフィールドの*&#124;です。2 番目 [(*間隔--秒の有効桁数*)]  
   
@@ -76,8 +73,8 @@ ms.locfileid: "32907347"
   
  *間隔--秒の有効桁数*:: =*符号なし整数*  
   
- *間隔が先頭フィールド精度*:: =*符号なし整数*  
+ *間隔をリード フィールド精度*:: =*符号なし整数*  
   
  *見積もり*:: = '  
   
- *符号なし整数*:: =*桁しています.*
+ *符号なし整数*:: =*桁.*

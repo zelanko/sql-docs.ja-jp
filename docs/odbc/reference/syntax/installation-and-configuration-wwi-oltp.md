@@ -1,34 +1,31 @@
 ---
-title: SQLSetDriverConnectInfo 関数 |Microsoft ドキュメント
+title: SQLSetDriverConnectInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDriverConnectInfo function [ODBC]
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63dee07cc01051f42fa6552a38d99dd7678f7ab8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b886bdf5ce769201addacfdfe9e2f22c6e8a15d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706010"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 関数
 **準拠**  
- のバージョンで導入されました ODBC 3.81 規格に準拠: ODBC。  
+ バージョンで導入されました ODBC 3.81 標準準拠: ODBC。  
   
  **概要**  
- **SQLSetDriverConnectInfo**アプリケーションのためのトークンの接続情報に、接続文字列を設定に使用される**SQLDriverConnect**呼び出します。  
+ **SQLSetDriverConnectInfo**接続文字列をアプリケーションの接続情報のトークンに設定に使用される**SQLDriverConnect**呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,18 +44,18 @@ SQLRETURN SQLSetDriverConnectInfo(
  [入力]完全な接続文字列 (「コメント」内の構文を参照してください[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))、部分的な接続文字列、または空の文字列。  
   
  *StringLength1*  
- [入力]長さ **InConnectionString*、文字の文字列の場合、Unicode、またはバイトの文字列は ANSI または DBCS 場合。  
+ [入力]長さ **InConnectionString*、文字の場合、文字列は ANSI または DBCS 文字列が Unicode、またはバイトの場合。  
   
-## <a name="returns"></a>返します。  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
+## <a name="returns"></a>戻り値  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
   
 ## <a name="diagnostics"></a>診断  
- 同じ[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)ドライバー マネージャーを使用する点を除いて、任意の入力の検証エラーに関連する、 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN のおよび**処理**の*hDbcInfoToken*です。  
+ 同じ[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)ドライバー マネージャーを使用する点を除いて、任意の入力の検証エラーに関連する、 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN の**処理**の*hDbcInfoToken*します。  
   
-## <a name="remarks"></a>解説  
- ドライバーには、SQL_ERROR または SQL_INVALID_HANDLE が返されます、されるたびに、ドライバー マネージャーはアプリケーションに、エラーを返します (で[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
+## <a name="remarks"></a>コメント  
+ ドライバー マネージャーが、アプリケーションにエラーを返します、ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに (で[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
   
- ドライバーでは、sql_success_with_info が返されます、されるたびに、ドライバー マネージャーは、診断情報を取得から*hDbcInfoToken*でのアプリケーションに SQL_SUCCESS_WITH_INFO を返すと[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)です。  
+ ドライバー マネージャーがから診断情報を取得するたびに、ドライバーは SQL_SUCCESS_WITH_INFO を返します、 *hDbcInfoToken*でアプリケーションに SQL_SUCCESS_WITH_INFO を返すと[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)します。  
   
  アプリケーションでは、この関数を直接呼び出さないでください。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
   

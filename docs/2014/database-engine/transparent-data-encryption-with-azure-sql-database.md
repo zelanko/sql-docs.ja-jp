@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TDE, SQL Database
@@ -16,12 +14,12 @@ ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0f5a78b0045e004b17c09bc9e87863179e38eee5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295192"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049782"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database での Transparent Data Encryption
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透過的なデータ暗号化 (プレビュー) では、アプリケーションに変更することがなく、データベース、関連付けられたバックアップ、および静止したトランザクション ログ ファイルのリアルタイムの暗号化と解読を実行することによって、悪意のあるアクティビティの脅威から保護を支援します。  

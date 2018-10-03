@@ -1,40 +1,37 @@
 ---
-title: SQL ステートメントがハードコード |Microsoft ドキュメント
+title: SQL ステートメントをハードコード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], hard-coded
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab17362cdece97582e26e6bc99ed38e678db6a4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746240"
 ---
-# <a name="hard-coded-sql-statements"></a>ハード コーディングされた SQL ステートメント
-通常、固定のタスクを実行するアプリケーションでは、ハード コーディングされた SQL ステートメントを含んでいます。 たとえば、注文入力システムがオープンの販売注文の一覧を次の呼び出しを使用する可能性があります。  
+# <a name="hard-coded-sql-statements"></a>ハードコーディングされた SQL ステートメント
+通常、固定のタスクを実行するアプリケーションには、ハード コーディングされた SQL ステートメントが含まれます。 たとえば、受注システムは、オープンの販売注文の一覧を次の呼び出しを使用する可能性があります。  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- SQL ステートメントのハードコーディングにいくつかの利点がありますアプリケーションが書き込まれます。 ときにテストする。ステートメントの実行時に構築するよりも実装する方が簡単にはアプリケーションが簡素化します。  
+ ハード コーディングされた SQL ステートメントをいくつかの利点がありますアプリケーションが記述されています。 ときにテストする。ステートメントの実行時に構築されたよりも実装する方が簡単アプリケーションが簡略化します。  
   
- ステートメント パラメーターを使用して、ステートメントの準備は、ハード コーディングされた SQL ステートメントを使用してさらに優れた方法を提供します。 たとえば、部品テーブルには、PartID、説明、および価格の列が含まれています。 このテーブルに新しい行を挿入する方法の 1 つ作成および実行すること、**挿入**ステートメント。  
+ ステートメント パラメーターの使用とステートメントの準備は、ハード コーディングされた SQL ステートメントを使用してさらに優れた方法を提供します。 たとえば、部品テーブルには、PartID、説明、および価格の列が含まれています。 このテーブルに新しい行を挿入する方法の 1 つは構築および実行すること、**挿入**ステートメント。  
   
 ```  
 #define DESC_LEN 51  
@@ -55,7 +52,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- さらに優れた方法では、ハード コーディングされた、パラメーター化されたステートメントを使用します。 これは、ハード コードされたデータ値を持つステートメントの上の 2 つの利点です。 最初に、整数および浮動小数点数ではなく文字列への変換など、ネイティブ型のデータ値を送信できるため、パラメーター化されたステートメントを構築するために簡単です。 パラメーター値を変更し、それをしてだけで、このようなステートメントを複数回使用する 2 番目に、再構築する必要はありません。  
+ 優れた方法も、ハード コーディングされた、パラメーター化されたステートメントを使用することです。 これは、データをハード コーディングされた値を持つステートメントを 2 つの利点があります。 最初に、整数と浮動小数点数ではなく文字列への変換など、ネイティブ型には、データ値を送信できるため、パラメーター化されたステートメントを構築しやすくなります。 パラメーターの値を変更し、し、それだけで、このようなステートメントを複数回使用する 2 番目に、再構築する必要はありません。  
   
 ```  
 #define DESC_LEN 51  
@@ -82,7 +79,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- このステートメントが複数回実行されると仮定した場合、それを準備できますより効率を上げるのため。  
+ このステートメントが複数回実行すると仮定した場合、それ用に準備できますも効率。  
   
 ```  
 #define DESC_LEN 51  
@@ -110,7 +107,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- おそらく、ステートメントを使用して最も効率的な方法は、次のコード例に示すように、ステートメントを含むプロシージャを構築するためにです。 プロシージャを開発時に構築されたデータ ソースに格納されているため、実行時に準備する必要はありません。 この方法の欠点は、プロシージャを作成する構文は DBMS によって異なり、アプリケーションが実行される各 DBMS 用に、プロシージャを個別に構築する必要があります。  
+ おそらく、ステートメントを使用する最も効率的な方法は、次のコード例に示すように、ステートメントを含むプロシージャを構築します。 プロシージャを開発時に構築されたデータ ソースに格納されているため、その実行時に準備する必要はありません。 この方法の欠点をアプリケーションが実行する各 DBMS 用の手順を個別に構築する必要があります、プロシージャを作成する構文については、DBMS に固有です。  
   
 ```  
 #define DESC_LEN 51  
@@ -133,4 +130,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- パラメーター、準備されたステートメント、およびプロシージャの詳細については、次を参照してください。[ステートメントを実行する](../../../odbc/reference/develop-app/executing-a-statement.md)です。
+ 詳細については、パラメーター、準備されたステートメント、およびプロシージャは、次を参照してください。[ステートメントを実行して](../../../odbc/reference/develop-app/executing-a-statement.md)します。

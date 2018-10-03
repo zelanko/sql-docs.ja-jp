@@ -1,30 +1,24 @@
 ---
-title: サーバー接続ファイル (AccessToSQL) |Microsoft ドキュメント
+title: サーバー接続ファイル (AccessToSQL) の作成 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773628"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672660"
 ---
-# <a name="creating-the-server-connection-files-accesstosql"></a>接続ファイル (AccessToSQL) サーバーを作成します。
-サーバーの情報は、スクリプト ファイルの [サーバー] セクションのいずれかを指定します。 サーバーの情報は、別のサーバー接続ファイルにも指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターが`-c <serverconnectionfile>`です。 サーバーと同じ id がスクリプトとサーバーの両方の接続ファイルに存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
+# <a name="creating-the-server-connection-files-accesstosql"></a>サーバー接続ファイル (AccessToSQL) の作成
+サーバーの情報は、スクリプト ファイルの [サーバー] セクションでいずれかを指定します。 サーバーの情報は、別のサーバー接続ファイルにも指定できます。 サーバー接続ファイルのコマンド ライン パラメーターが`-c <serverconnectionfile>`します。 同じサーバー id がスクリプトとサーバーの両方の接続ファイルに存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -68,11 +62,11 @@ ms.locfileid: "34773628"
 ```  
   
 ## <a name="server-connection-file-validation"></a>サーバー接続ファイルの検証  
-ユーザーが、スキーマ定義ファイルに対する自分のサーバー接続ファイルを簡単に検証 **'A2SSConsoleScriptServersSchema.xsd'** 'スキーマ' フォルダー内にあります。  
+ユーザーがスキーマ定義ファイルに対して自分のサーバー接続ファイルを簡単に検証できます **'A2SSConsoleScriptServersSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソールを実行する&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>参照  
-[SSMA コンソール (アクセス) を実行します。](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+## <a name="see-also"></a>関連項目  
+[SSMA コンソール (アクセス) の実行](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

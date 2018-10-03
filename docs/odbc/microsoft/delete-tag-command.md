@@ -1,30 +1,27 @@
 ---
-title: DELETE タグ コマンド |Microsoft ドキュメント
+title: DELETE TAG コマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DELETE TAG command [ODBC]
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28ee28e069ac0e1ef8e22ca2b118e273236e269c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8bdef06ead8e4f9d9a8d012b2560c305ffcea009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689720"
 ---
-# <a name="delete-tag-command"></a>タグ コマンドを削除します。
-複合インデックス (.cdx) ファイルからタグまたはタグを削除します。  
+# <a name="delete-tag-command"></a>DELETE TAG コマンド
+複合インデックス (.cdx) ファイルからのタグまたはタグを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,15 +35,15 @@ DELETE TAG ALL [OF CDXFileName]
   
 ## <a name="arguments"></a>引数  
  *TagName1*の*CDXFileName1*[、 *TagName2*[OF *CDXFileName2*].  
- 複合インデックス ファイルから削除するタグを指定します。 削除の 1 つのタグを持つ複数のタグを削除するには、コンマで区切られたタグ名の一覧を含みます。 同じ名前の 2 つ以上のタグは、開いているインデックス ファイルに存在する場合することができますタグを削除する特定のインデックス ファイルから OF を含めることによって*CDXFileName*です。  
+ 複合インデックスのファイルから削除するタグを指定します。 削除の 1 つのタグを持つ複数のタグを削除するには、タグ名のコンマ区切りの一覧を含みます。 インデックスを開くファイルには、同じ名前の 2 つ以上のタグが存在する場合の特定のインデックス ファイルからのタグを削除 OF を含めることによって*CDXFileName*します。  
   
  すべて [OF *CDXFileName*]  
- 複合インデックス ファイルからすべてのタグを削除します。 現在のテーブルに、構造上の複合インデックス ファイルがある場合は、インデックス ファイルからすべてのタグが削除し、インデックス ファイルがディスクから削除フラグを関連付けられている構造の複合インデックス ファイルの存在を示す表のヘッダー内が削除されます。 すべてで使用する*CDXFileName*構造上の複合インデックスのファイル以外の複合インデックスを開いているファイルからすべてのタグを削除します。  
+ 複合インデックスのファイルからすべてのタグを削除します。 現在のテーブルに複合インデックスの構造上のファイルがある場合は、インデックス ファイルからすべてのタグが削除、インデックス ファイル、ディスクから削除されますおよび構造型の複合インデックスを関連付けられているファイルの存在を示す表のヘッダーでフラグを削除します。 すべてで使用*CDXFileName*複合インデックスの構造上のファイル以外の複合インデックスを開いているファイルからすべてのタグを削除します。  
   
-## <a name="remarks"></a>解説  
- インデックスを作成、複合インデックスのファイルには、インデックス エントリに対応するタグが含まれます。 タグの削除を使用して、複合インデックスを開いているファイルからタグまたはタグを削除します。 複合インデックスでのファイルを開く現在の作業領域タグのみを削除することができます。 複合インデックス ファイルからのすべてのタグを削除する場合は、ファイルがディスクから削除されます。  
+## <a name="remarks"></a>コメント  
+ インデックスを作成、複合インデックスのファイルには、インデックス エントリに対応するタグが含まれます。 タグの削除は、複合インデックスを開いているファイルからのタグまたはタグの削除に使用されます。 現在の作業領域で開いている複合インデックスのファイルからのタグのみを削除できます。 複合インデックスのファイルからすべてのタグを削除する場合は、ファイルがディスクから削除されます。  
   
- Visual FoxPro は構造の複合インデックス ファイル内のタグの最初の検索 (1 つは、開いている) 場合します。 タグがない場合、構造上の複合インデックス ファイルで、Visual FoxPro はし、他の複合インデックスを開いているファイルにタグを検索します。  
+ Visual FoxPro は、(1 つは、開いている) 場合に最初に、構造型の複合インデックス ファイル内のタグを検索します。 複合インデックスの構造上のファイルにないタグは、Visual FoxPro は、他の複合インデックスを開いているファイルにタグを検索します。  
   
 ## <a name="see-also"></a>参照  
  [INDEX コマンド](../../odbc/microsoft/index-command.md)

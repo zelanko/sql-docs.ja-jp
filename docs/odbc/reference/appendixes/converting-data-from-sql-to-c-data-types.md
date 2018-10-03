@@ -1,13 +1,11 @@
 ---
-title: SQL から C データ型にデータを変換する |Microsoft ドキュメント
+title: SQL から C データ型にデータを変換する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
@@ -20,39 +18,38 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 370286bb4e955247e53d3c010b0bbb2088957bbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680840"
 ---
-# <a name="converting-data-from-sql-to-c-data-types"></a>SQL から C データ型にデータを変換します。
-アプリケーションを呼び出すと**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**ドライバーは、データ ソースからデータを取得します。 かどうか、必要に応じて、データ変換から変換ドライバー取得することによって指定されたデータ型にデータ型、 *TargetType*引数**SQLBindCol**または**SQLGetData です。** 最後に、によって示される場所にデータを格納、 *TargetValuePtr*引数**SQLBindCol**または**SQLGetData** (および、ARD の SQL_DESC_DATA_PTR フィールド)。  
+# <a name="converting-data-from-sql-to-c-data-types"></a>SQL から C データ型へのデータ変換
+アプリケーションを呼び出すと**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**ドライバーは、データ ソースからデータを取得します。 かどうか、必要に応じて、データ変換から変換で指定されたデータ型には、ドライバーによってを取得するデータ型、 *TargetType*引数**SQLBindCol**または**SQLGetData します。** 最後に、によって示される場所にデータを格納、 *TargetValuePtr*引数**SQLBindCol**または**SQLGetData** (および、ARD の SQL_DESC_DATA_PTR フィールド)。  
   
- 次の表は、ODBC SQL からサポートされている変換にデータ型を ODBC C データ型を示します。 塗りつぶされた円は、SQL データ型の既定の変換を示します (する、データは変換されるときに C データ型の値*TargetType*は SQL_C_DEFAULT)。 中空の円では、サポートされている変換を示します。  
+ 次の表は、ODBC SQL からサポートされている変換にデータ型を ODBC C データ型を示します。 塗りつぶされた円は、SQL データ型の既定の変換を示します (をデータが変換されるときに、C データ型の値*TargetType* SQL_C_DEFAULT が)。 白抜きの円では、サポートされている変換を示します。  
   
- ODBC 3 *.x* ODBC 2 を使用するアプリケーション *。x*ドライバー、ドライバー固有のデータ型がサポートされていない可能性がありますから変換します。  
+ ODBC 3 の場合、*.x* ODBC 2 を使用するアプリケーション *。x*ドライバー、ドライバー固有のデータ型がサポートされていない可能性がありますから変換します。  
   
- 変換後のデータの形式は Windows® 国設定の影響を受けません。  
+ 変換後のデータの形式は、Windows® 国設定の影響を受けません。  
   
- 次のセクションでは、内のテーブルでは、ドライバーまたはデータ ソースがデータ ソースから取得されたデータに変換する方法について説明します。ドライバーは、サポートする ODBC SQL データ型からすべての ODBC C データ型への変換をサポートするために必要です。 テーブルの最初の列の特定の ODBC SQL データ型の有効な入力値を一覧表示、 *TargetType*引数**SQLBindCol**と**SQLGetData**です。 2 番目の列は、多くの場合を使用して、テストの結果を一覧表示、 *BufferLength*引数で指定された**SQLBindCol**または**SQLGetData**へのドライバーを実行します。データを変換できるかどうかを決定します。 3 番目と 4 番目の列の各結果で指定されたバッファーに配置された値を一覧表示、 *TargetValuePtr*と*StrLen_or_IndPtr*で指定された引数**SQLBindCol**または**SQLGetData**後、ドライバーは、データを変換しようとしています。 (、 *StrLen_or_IndPtr*引数は、ARD の SQL_DESC_OCTET_LENGTH_PTR フィールドに対応します)。最後の列の一覧の各結果によって返される SQLSTATE **SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**です。  
+ 次のセクションでの表では、ドライバーまたはデータ ソースがデータ ソースから取得されたデータに変換する方法について説明しますドライバーがサポートする ODBC SQL データ型からすべての ODBC C データ型への変換をサポートするために必要です。 テーブルの最初の列の特定の ODBC SQL データ型の有効な入力値を一覧表示、 *TargetType*引数**SQLBindCol**と**SQLGetData**します。 2 番目の列を使用して多くの場合、テストの結果を一覧表示、 *BufferLength*引数で指定された**SQLBindCol**または**SQLGetData**へのドライバーを実行します。データを変換できるかどうかを決定します。 3 番目と 4 番目の列で指定されたバッファーに配置された値の一覧、各結果に対して、 *TargetValuePtr*と*StrLen_or_IndPtr*で指定された引数**SQLBindCol**または**SQLGetData**後、ドライバーが、データを変換しようとしています。 (、 *StrLen_or_IndPtr*引数、ARD の SQL_DESC_OCTET_LENGTH_PTR フィールドに対応します)。最後の列の一覧の各結果によって返される SQLSTATE **SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**します。  
   
- 場合、 *TargetType*引数**SQLBindCol**または**SQLGetData**いない特定の ODBC SQL データ型の表に示す ODBC C データ型の識別子を含む**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData** SQLSTATE 07006 が返されます (制限付きのデータ型の属性に違反)。 場合、 *TargetType*引数には、ドライバー固有の SQL データ型から ODBC C データ型への変換を指定する識別子が含まれ、ドライバーでは、この変換はサポートされていない**SQLFetch**、**SQLFetchScroll**、または**SQLGetData** SQLSTATE HYC00 を返します (省略可能な機能が実装されていません)。  
+ 場合、 *TargetType*引数**SQLBindCol**または**SQLGetData**しない指定の ODBC SQL データ型の表に示した ODBC C データ型の識別子を含む**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData** SQLSTATE 07006 が返されます (制限付きのデータ型は属性の違反)。 場合、 *TargetType*引数には、ドライバー固有の SQL データ型から ODBC C データ型への変換を指定する識別子が含まれ、ドライバーでは、この変換はサポートされていない**SQLFetch**、**SQLFetchScroll**、または**SQLGetData** SQLSTATE HYC00 を返します (省略可能な機能が実装されていません)。  
   
- テーブルに示されていませんが、ドライバーがで指定したバッファー内 SQL_NULL_DATA を返します、 *StrLen_or_IndPtr* SQL データ値は NULL にする場合に引数。 使用の詳細について*StrLen_or_IndPtr*の複数の呼び出しが行われるとデータを取得するを参照してください、 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)関数の説明。 SQL データが文字データに変換されると、文字数が返される\* *StrLen_or_IndPtr* null 終了バイトには含まれません。 場合*TargetValuePtr* null ポインターでは、 **SQLGetData** SQLSTATE HY009 を返します (null ポインターの使い方が正しくありません); で**SQLBindCol**、これは、列をバインド解除します。  
+ テーブルには表示されません、ドライバーで指定したバッファーの SQL_NULL_DATA を返します、 *StrLen_or_IndPtr*引数 SQL のデータ値が NULL の場合。 使用の詳細については*StrLen_or_IndPtr*データを取得するは、複数の呼び出しが行われるを参照してください、 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)関数の説明。 文字数が返される SQL のデータが文字データに変換されると、 \* *StrLen_or_IndPtr* null 終了バイトには含まれません。 場合*TargetValuePtr* null ポインターの場合は、 **SQLGetData** SQLSTATE HY009 を返します (null ポインターの無効な使用)、 **SQLBindCol**、バインドは解除され、列。  
   
  次の用語と規則は、テーブルで使用されます。  
   
--   **データのバイト長**で返される使用可能な C データのバイト数は、**TargetValuePtr*アプリケーションに返される前に、データが切り捨てられますかどうかにかかわらず、します。 文字列データの場合は、これに null 終端文字のための領域は含まれません。  
+-   **データのバイト長**で返される使用可能な C データのバイト数は、**TargetValuePtr*アプリケーションに返される前に、データは切り捨てられますかどうか。 文字列データは、これに null 終端文字のための領域は含まれません。  
   
--   **バイトの長さを文字**文字形式でデータを表示するために必要なバイト数の合計数です。 これは、セクションの C データ型ごとに定義されている[表示サイズ](../../../odbc/reference/appendixes/display-size.md)文字バイトの長さはバイト単位で表示サイズは文字にする点を除いて、します。  
+-   **バイトの長さを文字**文字形式でデータを表示するために必要なバイト数の合計です。 これは、セクションでは C データ型ごとに定義されている[表示サイズ](../../../odbc/reference/appendixes/display-size.md)バイト長の文字が文字では、表示サイズ、(バイト単位) がある点が、します。  
   
--   単語*斜体*関数の引数または SQL の文法の要素を表します。 文法要素の構文を参照してください。[付録 c: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)です。  
+-   単語*斜体*関数の引数または SQL 文法の要素を表します。 文法要素の構文を参照してください。[付録 c: SQL の文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -1,47 +1,44 @@
 ---
-title: 32 ビット ドライバーが 32 ビット アプリケーションを使用して |Microsoft ドキュメント
+title: 32 ビット ドライバーで 32 ビット アプリケーションを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a07dae46125ce9ea04bfc36156d8855192396f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696340"
 ---
-# <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 ビット ドライバーが 32 ビット アプリケーションを使用します。
+# <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 ビット ドライバーで 32 ビット アプリケーションを使用
 32 ビット ドライバーでは、32 ビット アプリケーションを実行できます。 32 ビット アプリケーションと 32 ビット ドライバーは、Win32® API を使用します。  
   
 ## <a name="architecture"></a>Architecture  
- 次の図に、方法は、32 ビット アプリケーションと 32 ビット ドライバーの通信します。 アプリケーションでは、32 ビット ドライバーを呼び出し、32 ビット ドライバー マネージャーを呼び出します。  
+ 次の図は、方法は、32 ビット アプリケーションと 32 ビット ドライバーの通信。 アプリケーションでは、32 ビット ドライバーを呼び出し、32 ビット ドライバー マネージャーを呼び出します。  
   
- ![どの 32&#45;で 32 ビット アプリケーションの通信&#45;ビット ドライバー](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![どの 32&#45;32 ビット アプリと通信&#45;ビット ドライバー](../../odbc/microsoft/media/sdka6.gif "sdka6")  
   
 > [!IMPORTANT]  
->  Windows Nt または windows 2000 では、32 ビット サンク インストーラー DLL を使わないでください。 32 ビット インストーラー DLL と同じファイル名がある、他の DLL です。  
+>  Windows Nt または windows 2000 の 32 ビットのサンク インストーラー DLL を使わないでください。 32 ビット インストーラー DLL と同じファイル名がありますが、別の DLL になります。  
   
 ## <a name="administration"></a>管理  
- 32 ビット ドライバーのデータ ソースを管理するには、ODBC データ ソース アドミニストレーターを使用します。 Windows 2000 を実行するコンピューター上の ODBC アドミニストレーターを開くには、Windows コントロール パネルを開きをダブルクリックして**管理ツール**、順にダブルクリック**データ ソース (ODBC)** です。 Microsoft Windows の以前のバージョンを実行するコンピューターで、アイコンの名前は**32 ビット ODBC**または単に**ODBC**です。  
+ ODBC データ ソース アドミニストレーターを使用して、32 ビット ドライバーのデータ ソースを管理できます。 Windows 2000 を実行しているコンピューター上の ODBC アドミニストレーターを開くには、Windows コントロール パネルを開き、ダブルクリック**管理ツール**、し、ダブルクリック**データ ソース (ODBC)** します。 Microsoft Windows の以前のバージョンを実行するコンピューターで、アイコンの名前は**32 ビット ODBC**または単に**ODBC**します。  
   
 ## <a name="components"></a>Components  
- ODBC コンポーネントには、32 ビット ドライバーが 32 ビット アプリケーションを実行するため、次のファイルが含まれています。 これらのコンポーネントが \Redist ディレクトリです。  
+ ODBC コンポーネントには、32 ビット ドライバーで 32 ビット アプリケーションを実行するために、次のファイルが含まれています。 これらのコンポーネントがディレクトリに \Redist します。  
   
-|ファイル名|Description|  
+|[ファイル名]|説明|  
 |---------------|-----------------|  
 |Odbc32.dll|32 ビット ドライバー マネージャー|  
 |Odbccp32.dll|32 ビット インストーラー DLL|  

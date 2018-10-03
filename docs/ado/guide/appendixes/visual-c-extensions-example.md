@@ -1,13 +1,11 @@
 ---
-title: 拡張機能の使用例を visual C |Microsoft ドキュメント
+title: Visual C 拡張機能の例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6543dbf03ab2d81e721c304b1c135509afd081b1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a54c32287a977899838a091543fc776577d54e02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270291"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845200"
 ---
-# <a name="visual-c-extensions-example"></a>Visual C 拡張機能の使用例
-このプログラムは、値をフィールドから取得、C と C++ の変数に変換する方法を示します。  
+# <a name="visual-c-extensions-example"></a>Visual C++ 拡張機能の例
+このプログラムは、値のフィールドから取得および C と C++ の変数に変換する方法を示します。  
   
- この例も活用「スマート ポインター、」呼び出し元の COM 固有の詳細情報を自動的に処理する`QueryInterface`とに対する参照カウント、 **IADORecordBinding**インターフェイスです。  
+ この例では「スマート ポインター、」呼び出し元の COM 固有の詳細情報を自動的に処理する`QueryInterface`と参照のカウント、 **IADORecordBinding**インターフェイス。  
   
- スマート ポインターは、なしは、次のコードは。  
+ なし、スマート ポインターは、次のコードは。  
   
 ```  
 IADORecordBinding   *picRs = NULL;  
@@ -48,13 +45,13 @@ if (picRs) picRs->Release();
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
- 次のようにポインターをインスタンス化します。  
+ このようなポインターをインスタンス化します。  
   
 ```  
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Visual C 拡張はによって実装されるため、**レコード セット**オブジェクト、スマート ポインター コンス トラクター `picRs`、_ を受け取る`RecordsetPtr`ポインター、`pRs`です。 コンス トラクター呼び出し`QueryInterface`を使用して`pRs`を検索する、`IADORecordBinding`インターフェイスです。  
+ Visual C 拡張によって実装されるため、**レコード セット**オブジェクト、スマート ポインター コンス トラクター`picRs`は、_`RecordsetPtr`ポインター、`pRs`します。 コンス トラクター呼び出し`QueryInterface`を使用して`pRs`を検索する、`IADORecordBinding`インターフェイス。  
   
 ```  
 // Visual_Cpp_Extensions_Example.cpp  

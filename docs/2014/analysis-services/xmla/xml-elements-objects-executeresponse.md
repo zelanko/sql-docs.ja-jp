@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ExecuteResponse Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteResponse element
 ms.assetid: 6edb1b82-da4c-4cd9-9385-bea04032f0eb
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e15030281f9d52bcd3a5d33e5fdc03b025ee2617
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 002da257a4d1137b0e52743eec99f1b0aced56c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047583"
 ---
 # <a name="executeresponse-element-xmla"></a>ExecuteResponse 要素 (XMLA)
   インスタンスによって返される情報を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]への応答、 [Execute](xml-elements-methods-execute.md)メソッドの呼び出し。  
