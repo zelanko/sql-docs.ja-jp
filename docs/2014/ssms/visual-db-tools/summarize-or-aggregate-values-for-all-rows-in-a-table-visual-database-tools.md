@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8f06b51dd7c6431a7ccddbdb9e7427cbc40cab
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6a19834bc54a75e685782b0d73aadf0070bdff62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227712"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>テーブルにあるすべての行の値の要約または集計 (Visual Database Tools)
   集計関数を使用すると、テーブルのすべての値の要約を作成できます。 たとえば、`titles` テーブルの本の総額を表示するには、次のようなクエリを作成できます。  

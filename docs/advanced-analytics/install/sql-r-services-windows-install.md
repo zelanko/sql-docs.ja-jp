@@ -3,17 +3,17 @@ title: SQL Server 2016 R Services (In-database) のインストール |Microsoft
 description: SQL Server で R は、Windows 上の SQL Server 2016 R Services をインストールするときに使用できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92d477434460c9395342e1a522173a301b5a0ad8
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 5c1da774f52f78b67e6adb34f33513930c316991
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713304"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229932"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,9 @@ ms.locfileid: "46713304"
 
 SQL Server 2017 での R 統合が提供されています[Machine Learning サービス](../r/r-server-standalone.md)Python の加算を反映します。 R 統合し SQL Server 2017 インストール メディアがある場合は、次を参照してください。 [SQL Server 2017 Machine Learning Services のインストール](sql-machine-learning-services-windows-install.md)機能を追加します。 
 
-## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
+<a name="bkmk_prereqs"> </a> 
+
+## <a name="pre-install-checklist"></a>インストール前のチェックリスト
 
 + データベース エンジンのインスタンスが必要です。 既存のインスタンスに増分追加できますが、だけの R をインストールすることはできません。
 
@@ -46,11 +48,15 @@ SQL Server 2017 での R 統合が提供されています[Machine Learning サ�
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
- ###  <a name="bkmk_ga_instalpatch"></a> インストールのパッチ要件 
+<a name="bkmk_ga_instalpatch"></a>
+
+ ### <a name="install-patch-requirement"></a>インストールのパッチ要件 
 
 SQL Server の前提条件としてインストールされる特定のバージョンの Microsoft VC++ 2013 ランタイム バイナリに問題が見つかりました。 VC ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server で安定性の問題が発生する可能性があります。 SQL Server をインストールする前に、「[SQL Server リリース ノート](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)」にある手順に従って、ご使用のコンピューターに VC ランタイム バイナリのパッチが必要かどうかを確認してください。  
 
-## <a name="bkmk2016top"></a>セットアップを実行
+<a name="bkmk2016top"></a>
+
+## <a name="run-setup"></a>セットアップの実行
 
 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。
 
@@ -85,8 +91,9 @@ SQL Server の前提条件としてインストールされる特定のバージ
 
 7. セットアップが完了したら、コンピューターを再起動するように指示される場合ようになりました。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
 
+<a name="bkmk_enableFeature"></a>
 
-##  <a name="bkmk_enableFeature"></a>スクリプトの実行を有効にします。
+##  <a name="enable-script-execution"></a>スクリプトの実行を有効にします。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 
 
@@ -118,6 +125,8 @@ SQL Server の前提条件としてインストールされる特定のバージ
 右クリックを使用してサービスを再起動する**再起動**コマンドを使用してまたは SSMS では、インスタンスを**サービス**パネル コントロール パネルで、またはを使用して[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>インストールの確認
+
+使用して、インスタンスのインストール状態を確認[カスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
 
 次の手順を使用すると、外部スクリプトを起動するのにために使用するすべてのコンポーネントが実行されていることを確認できます。
 
@@ -151,7 +160,29 @@ SQL Server の前提条件としてインストールされる特定のバージ
     |----|
     | 1|
 
-## <a name="bkmk_FollowUp"></a> その他の構成
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>更新プログラムを適用します。
+
+データベース エンジンと machine learning のコンポーネントの両方に、最新の累積的な更新プログラムを適用することをお勧めします。
+
+インターネットに接続されたデバイスは、累積的更新プログラムは、Windows update では、一般的に適用されますが、制御された更新プログラムの次の手順を使用することもできます。 データベース エンジンの更新プログラムを適用するときは、同じインスタンスにインストールされている R ライブラリの累積的更新プログラムのセットアップが引き出されます。 
+
+切断されたサーバーは、追加の手順が必要です。 詳細については、次を参照してください。[インターネット アクセスなしでコンピューターにインストール > の累積更新プログラムを適用](sql-ml-component-install-without-internet-access.md#apply-cu)します。
+
+1. 既にインストールされているベースライン インスタンスを開始: SQL Server 2016 の初期リリース、SQL Server 2016 SP 1、または SQL Server 2016 SP 2。
+
+2. 累積更新プログラムの一覧に: [SQL Server 2016 の更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 最新の累積的な更新プログラムを選択します。 実行可能ファイルがダウンロードされ、自動的に抽出します。
+
+4. セットアップを実行します。 ライセンス条項に同意し、[機能の選択] ページで、累積的更新プログラムの適用対象の機能を確認します。 R Services を含む、現在のインスタンスにインストールされているすべての機能が表示されます。 セットアップでは、すべての機能を更新するために必要な CAB ファイルをダウンロードします。
+
+5. R のディストリビューションのライセンス条項を使用して、ウィザードの手順を続行します。 
+
+<a name="bkmk_FollowUp"></a> 
+
+## <a name="additional-configuration"></a>その他の構成
 
 外部スクリプトの検証手順が成功した場合は、SQL Server Management Studio、Visual Studio Code、または T-SQL ステートメントをサーバーに送信できるその他のクライアントから Python のコマンドを実行できます。
 
@@ -169,7 +200,9 @@ SQL Server の前提条件としてインストールされる特定のバージ
 > [!NOTE]
 > 表示されているすべての変更が必要ですと必要なしに可能性があります。 要件は、SQL Server、およびユーザーがデータベースに接続し、外部スクリプトの実行が予想される方法をインストールした、セキュリティ スキーマによって異なります。 追加のトラブルシューティングのヒントについてはこちら:[アップグレードとインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-### <a name="bkmk_configureAccounts"></a>スタート パッド アカウントのグループの暗黙の認証を有効にします。
+<a name="bkmk_configureAccounts"></a>
+
+### <a name="enable-implied-authentication-for-the-launchpad-account-group"></a>スタート パッド アカウントのグループの暗黙の認証を有効にします。
 
 セットアップ中に、いくつかの新しい Windows ユーザー アカウントを作成して、セキュリティ トークンの下でタスクを実行するため、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]サービス。 ユーザーは、外部のクライアントから R スクリプトを送信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可能なワーカー アカウントをアクティブに、呼び出し元のユーザーの id にマップし、ユーザーの代理として、R スクリプトを実行します。 データベース エンジンのこの新しいサービスが呼び出される外部のスクリプトを安全に実行をサポートしている*暗黙の認証*します。
 
@@ -189,7 +222,9 @@ SQL Server の前提条件としてインストールされる特定のバージ
 6. をクリックして**OK**を閉じるにはもう一度、 **[ユーザーまたはグループ**] ダイアログ ボックス。
 7. **ログイン - 新規**ダイアログ ボックスで、をクリックして**OK**。 既定では、ログインは **Public** ロールに割り当てられ、データベース エンジンに接続するためのアクセス許可を与えられます。
 
-### <a name="bkmk_AllowLogon"></a>外部スクリプトを実行するアクセス許可をユーザーに与える
+<a name="bkmk_AllowLogon"></a>
+
+### <a name="give-users-permission-to-run-external-scripts"></a>外部スクリプトを実行するアクセス許可をユーザーに与える
 
 > [!NOTE]
 > SQL Server のコンピューティング コンテキストで R スクリプトを実行するために SQL ログインを使用する場合はこの手順は必要ありません。
@@ -209,7 +244,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > 
 > [カスタム レポートを使用して Machine Learning サービスの監視](../r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
 
-### <a name="permissions-db"></a> ユーザーの読み取り、書き込み、またはデータベースに DDL のアクセス許可を付与します。
+<a name="permissions-db"></a>
+
+###  <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>ユーザーの読み取り、書き込み、またはデータベースに DDL のアクセス許可を付与します。
 
 R を実行するために使用するユーザー アカウント可能性があります必要があります、他のデータベースからデータを読み取る結果を格納する新しいテーブルを作成し、テーブルにデータを書き込みます。 そのため、ユーザーごとに実行されるように R スクリプト、ユーザーがデータベースで適切な権限を持っていることを確認します*db_datareader*、 *db_datawriter*、または*db_ddladmin*。
 
@@ -240,7 +277,9 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 頻度の高い、R を使用すると思われる場合、または実行中のスクリプトを同時に多くのユーザーが予想される場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server Machine Learning Services のユーザー アカウント プールを変更](../r/modify-the-user-account-pool-for-sql-server-r-services.md)します。
 
-### <a name="bkmk_optimize"></a>外部スクリプト実行のサーバーを最適化します。
+<a name="bkmk_optimize"></a>
+
+### <a name="optimize-the-server-for-external-script-execution"></a>外部スクリプト実行のサーバーを最適化します。
 
 既定の設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップは、データベース エンジンは、抽出、変換、および読み込み (ETL) プロセス、レポート、監査を含めることがでサポートされているサービスのさまざまなサーバーのバランスを最適化するためのものと使用するアプリケーション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ。 そのため、既定の設定で、機械学習用リソースの場合もありますが制限または抑制され、メモリを消費する操作で特にを見つける可能性があります。
 
@@ -262,17 +301,6 @@ SQL Server で使用するパッケージは、インスタンスによって使
 
 インストールして、R パッケージを管理するためのプロセスでは、SQL Server 2016 および SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要な R パッケージをインストールする必要があります。 SQL Server 2017 では、データベースごとのレベルでパッケージを共有するユーザー グループを設定するか、または独自のパッケージをインストールするユーザーを有効にするデータベース ロールを構成します。 詳細については、次を参照してください。[新しい R パッケージをインストール](../r/install-additional-r-packages-on-sql-server.md)します。
 
-
-## <a name="get-help"></a>ヘルプの参照
-
-インストールまたはアップグレードに関するヘルプ よく寄せられる質問と既知の問題への回答は、次の記事を参照してください。
-
-* [アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-インスタンスのインストール状態を確認し、一般的な問題を修正には、これらのカスタム レポートをお試しください。
-
-* [SQL Server R Services 用のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
-
 ## <a name="next-steps"></a>次の手順
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
@@ -281,5 +309,3 @@ R 開発者は、簡単な例で作業を開始し、SQL Server での R の動�
 + [R の開発者向けチュートリアル: データベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 実際のシナリオに基づく機械学習の例を表示するを参照してください。 [Machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)します。
-
-

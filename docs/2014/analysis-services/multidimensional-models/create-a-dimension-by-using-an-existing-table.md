@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - dimensions [Analysis Services], standard
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319252"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226622"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>既存のテーブルを使用したディメンションの作成
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でディメンション ウィザードを使用して、既存のテーブルからディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[既存のテーブルの使用]** を選択します。 このオプションを選択すると、ディメンション構造は、ディメンション テーブル、その列、および既存のデータ ソース ビュー内の列間のリレーションシップに基づいて作成されます。 ウィザードでは、ソース テーブルと関連テーブル内のデータが抽出されます。 その後、このデータを使用して、ディメンション テーブル内の列に基づいて属性列を定義したり、属性階層 ( *ユーザー定義* 階層) を定義したりします。 ディメンション ウィザードを使用してディメンションを作成した後、ディメンション デザイナーを使用して、ディメンションの属性と階層を追加、削除、および構成できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でディメンション ウィザードを使用して、既存のテーブルからディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[既存のテーブルの使用]** を選択します。 このオプションを選択すると、ディメンション構造は、ディメンション テーブル、その列、および既存のデータ ソース ビュー内の列間のリレーションシップに基づいて作成されます。 ウィザードでは、ソース テーブルと関連テーブル内のデータが抽出されます。 その後、このデータを使用して、ディメンション テーブル内の列に基づいて属性列を定義したり、属性階層 ( *ユーザー定義* 階層) を定義したりします。 ディメンション ウィザードを使用してディメンションを作成した後、ディメンション デザイナーを使用して、ディメンションの属性と階層を追加、削除、および構成できます。  
   
  既存のテーブルを使用してディメンションを作成する場合、ディメンション ウィザードでは次の手順が示されます。  
   

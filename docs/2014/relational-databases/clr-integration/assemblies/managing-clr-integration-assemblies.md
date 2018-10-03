@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], assemblies
 - assemblies [CLR integration], managing
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
-caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab48a77c21b3ae288f18b166241b1021a7ee6766
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352520"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229302"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 統合アセンブリの管理
   マネージド コードは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 アセンブリは DLL ファイルまたは実行可能 (.exe) ファイルとしてパッケージ化されます。 実行可能ファイルが単独で実行できるのに対し、DLL は既存のアプリケーションでホストする必要があります。 マネージ DLL アセンブリに読み込まれ、によってホストされていることができます[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースは、CREATE ASSEMBLY ステートメントを使用する前に、プロセスで読み込んで使用したりできます。 アセンブリは、ALTER ASSEMBLY ステートメントを使用してより最近のバージョンから更新することも、DROP ASSEMBLY ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から削除することも可能です。  

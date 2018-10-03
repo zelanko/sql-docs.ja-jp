@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC Data Source Administrator
 - opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3543b2ad38b0417d94ff10480b1b1a752ddb15d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c8f59861098f5c782340084ce98caa0c97e18d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310392"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226712"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>ODBC データ ソース アドミニストレーターの起動
   このトピックでは、ODBC データ ソース アドミニストレーターを起動する方法について説明します。 ODBC データ ソース アドミニストレーターは Windows コンポーネントです。 ODBC データ ソース アドミニストレーターは、ODBC データ ソースの作成および管理に使用します。  

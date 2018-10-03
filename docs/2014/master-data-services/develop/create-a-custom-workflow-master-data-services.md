@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7cac4dcd3973b3364862c74f38c3e3226301f6d9
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: eaa5a06916b0956a93fb1c473667bbb80b55bd15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229902"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>カスタム ワークフローの作成 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します (たとえば、指定した条件に基づいてデータを自動的に更新および検証し、電子メール通知を送信するなど)。 組み込みのワークフロー アクションよりも複雑な処理が必要な場合は、カスタム ワークフローを使用します。 カスタム ワークフローは、ユーザーが作成する .NET アセンブリです。 作成したワークフロー アセンブリが呼び出された際には、記述したコードを通じて、状況に応じた任意のアクションを実行できます。 たとえば、複数階層の承認や複雑な意思決定ツリーなど、複雑なイベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、データを分析し、データの承認のための送信先を決定するカスタム ワークフローを開始できます。  

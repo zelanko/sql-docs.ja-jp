@@ -5,8 +5,6 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], setting up on a failover cluster
@@ -14,12 +12,12 @@ ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da6cea56d0fe80797a525c546f80ac9705d360ba
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ca95e56a965cb2dd967a673fb33688fd09981960
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228038"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>フェールオーバー クラスターでの FILESTREAM の設定
   このトピックでは、フェールオーバー クラスターで FILESTREAM を有効にする方法について説明します。 この手順を実行する前に、 [フェールオーバー クラスタリング](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) について理解し、FILESTREAM を有効にしておく必要があります。 FILESTREAM を有効にする方法の詳細については、「 [FILESTREAM の有効化と構成](enable-and-configure-filestream.md)」をご覧ください。  

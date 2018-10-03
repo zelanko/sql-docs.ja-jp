@@ -1,12 +1,10 @@
 ---
-title: コマンドの構文 |Microsoft Docs
+title: コマンドの構文 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 - stored procedures [OLE DB], command syntax
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c8b0f5c1798d0547bf7a1acc6ef97c93660cd89
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 00ab769ee2051edc499d586ab7d5ee1fa47dd854
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423491"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226742"
 ---
 # <a name="command-syntax"></a>コマンドの構文
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBGUID_SQL マクロで指定されたコマンド構文を認識します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを指定子が示す ODBC SQL、ISO などのステートメントの混在と[!INCLUDE[tsql](../../includes/tsql-md.md)]は有効な構文です。 たとえば、次の SQL ステートメントでは、ODBC SQL のエスケープ シーケンスを使用して、LCASE 文字列関数を指定しています。  

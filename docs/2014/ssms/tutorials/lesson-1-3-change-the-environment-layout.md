@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e7d0afa92e8e4e775357233c9e067f670f73c74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226798"
 ---
 # <a name="change-the-environment-layout"></a>環境レイアウトの変更
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の各コンポーネントは画面スペースを共有しています。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] コンポーネントを閉じる、非表示にする、または移動することにより、画面スペースをさらに確保できます。 このページの実習では、コンポーネントを別の場所に移動します。  

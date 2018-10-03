@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd8e464967dbe4b2546f51889f2a2da49d81e4df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229282"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)
   **[テーブルのプロパティの編集]** ダイアログ ボックスを使用すると、テーブルのインポート ウィザードを使用してモデル デザイナーにインポートされたテーブルのプロパティを表示して変更を加えることができます。 このダイアログ ボックスにアクセスするには、モデル デザイナーでテーブルを選択し、 **[テーブル]** メニュー、 **[テーブルのプロパティ]** の順にクリックします。  
@@ -30,7 +27,7 @@ ms.locfileid: "37249592"
  このダイアログ ボックスのオプションは、最初にデータをインポートしたときに一覧からテーブルを選択したか SQL クエリを使用したかによって異なります。  
   
 ## <a name="table-preview-mode"></a>テーブルのプレビュー モード  
- **テーブル名**  
+ **[テーブル名]**  
  モデル内のデータ テーブルの名前が表示されます。  
   
 > [!NOTE]  
@@ -75,7 +72,7 @@ ms.locfileid: "37249592"
  クリックすると、列の置換も含めて、加えたすべての変更が適用されます。  
   
 ## <a name="query-design-mode"></a>クエリ デザイン モード  
- **テーブル名**  
+ **[テーブル名]**  
  モデル内のデータ テーブルの名前が表示されます。  
   
 > [!NOTE]  

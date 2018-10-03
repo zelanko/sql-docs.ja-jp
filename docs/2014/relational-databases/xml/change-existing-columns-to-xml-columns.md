@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef71809c5d54fff77bed4ff3a1fd7c9b471337b7
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: ff63ea72b88658d9504030612f77bb948e7462ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226522"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>既存の列を XML 列に変更する方法
   ALTER TABLE ステートメントでサポートされて、`xml`データ型。 文字列型の列を変更するなど、`xml`データ型。 このような場合、列に格納されるドキュメントは正しい形式でなければなりません。 また、列の型を文字列から型指定された xml に変更する場合、列内のドキュメントは指定した XSD スキーマに対して検証されます。  

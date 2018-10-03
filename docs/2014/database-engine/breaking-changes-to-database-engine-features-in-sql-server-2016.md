@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 - breaking changes [SQL Server]
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392850"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227092"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 におけるデータベース エンジン機能の重大な変更
   このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]における重大な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
@@ -41,7 +38,7 @@ ms.locfileid: "40392850"
 |sp_setapprole と sp_unsetapprole|Cookie`OUTPUT`パラメーター`sp_setapprole`が現在として記載されている`varbinary(8000)`な正しいの最大長。 ただし、現在の実装を返します`varbinary(50)`します。 アプリケーションが引き続き予約`varbinary(8000)`サイズの増加、将来のリリースでクッキーの戻り値が正しく動作するアプリケーションが引き続き行われるようにします。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)」を参照してください。|  
 |EXECUTE AS|EXECUTE AS のクッキーの OUTPUT パラメーターは現在、適切な最大長である `varbinary(8000)` としてドキュメントに記載されています。 ただし、現在の実装を返します`varbinary(100)`します。 アプリケーションが引き続き予約`varbinary(8000)`サイズの増加、将来のリリースでクッキーの戻り値が正しく動作するアプリケーションが引き続き行われるようにします。 詳細については、「[EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql)」を参照してください。|  
 |sys.fn_get_audit_file 関数|2 つの列 (**user_defined_event_id**と**user_defined_information**) がユーザー定義の監査イベントをサポートするために追加されました。 名前で列を選択しないアプリケーションは、予想よりも多くの列を返す場合があります。 名前で列を選択するか、これらの追加列を受け入れるようにアプリケーションを調整してください。|  
-|WITHIN 予約キーワード|WITHIN は予約キーワードになりました。 "within" という名前のオブジェクトまたは列への参照は失敗します。 オブジェクトまたは列の名前を変更するか、または角かっこや引用符を使用して名前を区切ってください。  たとえば、 `SELECT * FROM [within]` のようにします。|  
+|WITHIN 予約キーワード|WITHIN は予約キーワードになりました。 "within" という名前のオブジェクトまたは列への参照は失敗します。 オブジェクトまたは列の名前を変更するか、または角かっこや引用符を使用して名前を区切ってください。  たとえば、`SELECT * FROM [within]` のようにします。|  
 |`time` または `datetime2` 型の計算列に対する CAST および CONVERT 操作|以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、`time` および `datetime2` データ型に対する CAST および CONVERT 操作の既定のスタイルは、いずれかの型が計算列の式で使用されている場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。<br /><br /> 互換性レベル 110 では、`time` および `datetime2` データ型に対する CAST および CONVERT 操作の既定のスタイルは常に 121 です。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。<br /><br /> データベースを互換性レベル 110 にアップグレードしても、ディスクに格納されているユーザー データは変更されません。 このようなデータは手動で適切に修正する必要があります。 たとえば、SELECT INTO を使用して、前に説明した計算列の式を含むソースからテーブルを作成した場合は、計算列の定義自体ではなく、(スタイル 0 を使用する) データが格納されます。 このようなデータは、手動で更新してスタイル 121 に一致させる必要があります。|  
 |ALTER TABLE|ALTER TABLE ステートメントでは、2 部構成 (schema.object) のテーブル名だけを使用できます。 これで、次の形式を使用してテーブル名を指定することは、コンパイル時にエラー 117 で失敗します。<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 以前のバージョンでは、server.database.schema.table という形式を指定すると、エラー 4902 が返されました。 .database.schema.table または ..schema.table という形式を指定すると、成功しました。 問題を解決するには、4 部構成のプレフィックスの使用を削除してください。|  
 |メタデータの参照|FOR BROWSE または SET NO_BROWSETABLE ON を使用してビューをクエリすると、基になるオブジェクトのメタデータではなく、ビューのメタデータが返されるようになりました。 この動作は現在、他のメタデータ参照方法と一致します。|  
@@ -161,7 +158,7 @@ ms.locfileid: "40392850"
 -   比較演算子と**並べ替える**句。 比較演算子は、+、 \<、>、 \<=、> =、 `eq`、 `lt`、 `gt`、 `le`、および`ge`します。  
   
 #### <a name="distributed-query-calls-to-a-system-procedure"></a>分散システム プロシージャにクエリ呼び出し  
- `OPENQUERY` を通じた一部のシステム プロシージャへの分散クエリ呼び出しは、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] から別のサーバーへの呼び出しである場合に失敗します。 これは、[!INCLUDE[ssDE](../includes/ssde-md.md)]がプロシージャのメタデータを検出できない場合に発生します。 たとえば、 `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')` のようにします。  
+ `OPENQUERY` を通じた一部のシステム プロシージャへの分散クエリ呼び出しは、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] から別のサーバーへの呼び出しである場合に失敗します。 これは、[!INCLUDE[ssDE](../includes/ssde-md.md)]がプロシージャのメタデータを検出できない場合に発生します。 たとえば、`SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')` のようにします。  
   
 #### <a name="isolation-level-and-spresetconnection"></a>分離レベルと sp_reset_connection  
  接続の分離レベルは、クライアント ドライバーによって次のように処理されます。  
