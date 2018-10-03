@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7697fba2cadf0f7199b047ce7e84656b838cedb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129052"
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーに対してアクションが行われるたびに、トランザクションが記録されます。 すべてのユーザーがトランザクションを表示でき、管理者はトランザクションを破棄できます。 日付、時刻、アクションを行ったユーザーが、その他の詳細と共にトランザクションによって表示されます。 ユーザーは、トランザクションが行われた理由を示す注釈をトランザクションに追加できます。  
@@ -51,7 +48,7 @@ ms.locfileid: "37283358"
   
  このバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]にデータをインポートする場合に、ストアド プロシージャを開始するときにトランザクションをログに記録するかどうかを指定できます。 詳細については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)」を参照してください。  
   
-## <a name="concurrency"></a>同時実行  
+## <a name="concurrency"></a>コンカレンシー  
  複数のエクスプローラー セッションで特定のエンティティの値が同時に表示される場合、同じ値を同時に編集している可能性があります。 同時編集は、MDS によって自動的に検出されません。 これは、複数のユーザーが複数のセッション (たとえば、複数のコンピューター、複数のブラウザーのタブやウィンドウ、複数のユーザー アカウントなど) から Web ブラウザー内で MDS エクスプローラーを使用している場合に発生します。  
   
  トランザクションが有効になっているにもかかわらず、複数のユーザーがエラーなく、同じエンティティの値を更新できます。 通常、時間順で最後に編集した値が優先されます。 トランザクションの履歴で、重複する編集の競合を手動で観察することができ、管理者によって手動で取り消すことができます。 トランザクションの履歴は、各セッションの問題の属性に対する **[以前の値]** と **[新しい値]** の個々のトランザクションを表示しますが、複数の **[新しい値]** が同一の古い値に対して存在しても、競合を自動的には解決しません。  

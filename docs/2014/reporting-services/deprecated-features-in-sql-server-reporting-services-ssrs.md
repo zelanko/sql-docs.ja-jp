@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6817f31ff83e1a502506893f66b5080399200fd8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93d31c4f9f8f712834131136034541bf469e0014
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119882"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 における SQL Server Reporting Services の非推奨機能
   このトピックでは、非推奨とされた [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能について説明します。 非推奨とされたリリースで機能を引き続き使用できますが、これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -63,7 +60,7 @@ ms.locfileid: "37305142"
   
 -   UsePx  
   
--   [ズーム]  
+-   ズーム  
   
  HTML 表示拡張機能の詳細については、次を参照してください[HTML デバイス情報設定。](html-device-information-settings.md)  
   
@@ -133,7 +130,7 @@ ms.locfileid: "37305142"
   
 -   UsePx  
   
--   [ズーム]  
+-   ズーム  
   
  HTML 表示拡張機能の詳細については、次を参照してください[HTML デバイス情報設定。](html-device-information-settings.md)  
   

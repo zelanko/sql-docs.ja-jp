@@ -4,38 +4,35 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [OLE DB], executing
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d1b2470c5d75a6a161459c615a093e0cfd83fc9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110882"
 ---
 # <a name="running-stored-procedures-ole-db"></a>ストアド プロシージャの実行 (OLE DB)
-  ステートメントを実行するときに (実行または直接クライアント アプリケーションでステートメントの準備) せずに、データ ソースのストアド プロシージャの呼び出しを指定できます。  
+  ステートメントの実行時、データ ソースに対して (クライアント アプリケーション内で直接ステートメントを実行または準備せずに) ストアド プロシージャを呼び出すと、次のような利点があります。  
   
 -   高いパフォーマンス。  
   
--   ネットワーク オーバーヘッドの軽減します。  
+-   ネットワーク オーバーヘッドの軽減。  
   
 -   一貫性の向上  
   
 -   正確性の向上  
   
--   機能を追加します。  
+-   機能の追加。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは 3 つのメカニズムをサポートしているを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すストアド プロシージャを使用します。  
   
@@ -45,7 +42,7 @@ ms.locfileid: "37425052"
   
 -   プロシージャに整数のリターン コードを含めることができる。  
   
- アプリケーションは、すべてのストアド プロシージャからこれらの出力を処理できる必要があります。  
+ アプリケーションでは、ストアド プロシージャからのこれらすべての出力を処理できる必要があります。  
   
  結果の処理中には、さまざまな OLE DB プロバイダーからさまざまなタイミングで出力パラメーターと戻り値が返されます。 場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、出力パラメーターおよびリターン コードが指定されていないまで、コンシューマーが取得またはストアド プロシージャによって返される結果セットが取り消されました。 これらのリターン コードと出力パラメーターは、サーバーからの最後の TDS パケットで返されます。  
   
