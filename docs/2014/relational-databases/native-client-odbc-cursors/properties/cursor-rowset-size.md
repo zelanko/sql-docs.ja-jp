@@ -1,31 +1,28 @@
 ---
-title: カーソルの行セットのサイズ |Microsoft Docs
+title: カーソルの行セットのサイズ。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], rowset size
 - ODBC cursors, rowset size
 - rowsets [ODBC]
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c683ec4cf8b7fd430e9bddd0d126cc132880975f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412306"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143042"
 ---
 # <a name="cursor-rowset-size"></a>カーソルの行セット サイズ
-  ODBC カーソルでは、一度にフェッチできる行数は制限されません。 呼び出すたびに複数の行を取得する**SQLFetch**または[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)します。 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のようなクライアント/サーバー型のデータベースで作業しているときは、1 回に複数行を取得する方が効率的です。 フェッチで返される行の数が行セットのサイズという名前の SQL_ATTR_ROW_ARRAY_SIZE を使用して指定されて[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)します。  
+  ODBC カーソルでは、一度にフェッチできる行数は制限されません。 呼び出すたびに複数の行を取得することができます**SQLFetch**または[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)。 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のようなクライアント/サーバー型のデータベースで作業しているときは、1 回に複数行を取得する方が効率的です。 フェッチで返される行の数が行セットのサイズという名前の SQL_ATTR_ROW_ARRAY_SIZE を使用して指定されて[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)します。  
   
 ```  
 SQLUINTEGER uwRowsize;  
@@ -44,11 +41,11 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
      1 行のすべての列のデータとインジケーターが含まれる構造体を使用して配列が構築されます。 この配列には行セット サイズと同じ数の構造体が含まれます。  
   
- 列方向または行方向のバインドを使用する場合、呼び出しごとに**SQLFetch**または**SQLFetchScroll**取得した行セットからデータをバインドされた配列に設定します。  
+ 列方向または行方向のバインドを使用する場合、各呼び出し**SQLFetch**または**SQLFetchScroll**バインド配列を取得した行セットからのデータを入力します。  
   
- [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)ブロック カーソルから列データを取得できます。 **SQLGetData** 、一度に 1 つの行を動作**SQLSetPos**行セット内の特定の行を呼び出す前に、現在の行として設定を呼び出す必要がある**SQLGetData**します。  
+ [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)ブロック カーソルの列のデータを取得する場合にも使用することができます。 **SQLGetData** 、一度に 1 つの行の動作**SQLSetPos**呼び出しの前に現在の行として行セット内の特定の行を設定するのには呼び出す必要があります**SQLGetData**。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、行セットを使用して全体の結果がすばやく設定を取得する最適化を提供しています。 この最適化を使用する、カーソルの属性を既定値に設定 (順方向専用、読み取り専用、行セット サイズ = 1) 時に**SQLExecDirect**または**SQLExecute**が呼び出されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、既定の結果セットを設定します。 スクロールを使用しないでクライアントに結果を送信する場合は、既定の結果セットの方がサーバー カーソルよりも効率的です。 ステートメントを実行後、行セット サイズを増やし、列方向のバインドか行方向のバインドを使用します。 これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]結果の行を効率的に、クライアントに送信する既定の結果のセットを使用中に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは継続的に、クライアントのネットワーク バッファーから行を取得します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは、設定を簡単に全体の結果を取得する行セットを使用して最適化を提供しています。 このような最適化を使用するには、カーソルの属性を既定値に設定 (順方向専用、読み取り専用、行セット サイズ = 1) に**される**または**SQLExecute**と呼ばれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは、既定の結果セットを設定します。 スクロールを使用しないでクライアントに結果を送信する場合は、既定の結果セットの方がサーバー カーソルよりも効率的です。 ステートメントを実行後、行セット サイズを増やし、列方向のバインドか行方向のバインドを使用します。 これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の結果行を効率的にクライアントに送信するのには既定の結果セットのセットを使用中に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは、クライアントのネットワーク バッファーから行を取得する継続的にします。  
   
 ## <a name="see-also"></a>参照  
  [カーソルのプロパティ](cursor-properties.md)  
