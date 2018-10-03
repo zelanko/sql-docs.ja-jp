@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 03d3bc951a76b6ff3fdf088999777d80f699f690
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18b5d73d3ec4a6bc77a249d66af9b6d22c4e6be1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107102"
 ---
 # <a name="role-definitions"></a>ロールの定義
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、*ロール**の定義*は、ユーザーがレポート サーバー上で実行できる操作を定義する、一連の名前付きタスクです。 ロールの定義によって、レポート サーバーがセキュリティを強制的に適用する際に使用するルールが提供されます。 ユーザーがレポートのパブリッシュなどのタスクを試行すると、レポート サーバーでは、ユーザーのロールの割り当てを確認し、そのタスクがロールの定義に含まれているかどうかを判別します。 該当するタスクがロールの定義に含まれている場合、要求が送信されます。  
@@ -33,8 +30,7 @@ ms.locfileid: "37282668"
  ロールは、ロールの割り当てで使用されている場合のみ有効になります。 ロールがセキュリティを提供する方法の詳細については、次を参照してください。[ロールの割り当て](role-assignments.md)します。  
   
 ## <a name="types-of-role-definitions"></a>ロールの定義の種類  
- ロールの定義は、アイテムレベルの定義またはシステムレベルの定義です。 
-  *アイテムレベルのロールの定義* には、レポート サーバーで格納および管理されているアイテムに関連するタスクが含まれています。 アイテムレベルのロールの定義に含めることのできるタスクには、"レポートの管理"、"フォルダーの表示"、および "個別のサブスクリプションを管理" などがあります。 *システム ロールの定義* には、サイト全体に適用するタスクが含まれています。 システム ロールに含めるタスクには、"レポート サーバーのプロパティを表示" などがあります。  
+ ロールの定義は、アイテムレベルの定義またはシステムレベルの定義です。 *アイテムレベルのロールの定義* には、レポート サーバーで格納および管理されているアイテムに関連するタスクが含まれています。 アイテムレベルのロールの定義に含めることのできるタスクには、"レポートの管理"、"フォルダーの表示"、および "個別のサブスクリプションを管理" などがあります。 *システム ロールの定義* には、サイト全体に適用するタスクが含まれています。 システム ロールに含めるタスクには、"レポート サーバーのプロパティを表示" などがあります。  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ユーザーが実行するさまざまなレベルの操作に対応した定義済みロールが用意されています。 使用できる定義済みロールを次に示します。  

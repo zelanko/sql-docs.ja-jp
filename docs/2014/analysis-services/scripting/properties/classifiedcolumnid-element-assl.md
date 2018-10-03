@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClassifiedColumnID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ClassifiedColumnID element
 ms.assetid: c294b9c5-3ac2-4554-8ba8-d9f15d7e85c0
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc9938b44568e0641f97697216780ec4f31ad424
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb48844934cc5783d2e25210bc406e348e2a6b85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129382"
 ---
 # <a name="classifiedcolumnid-element-assl"></a>ClassifiedColumnID 要素 (ASSL)
   によって分類される関連列の識別子 (ID) を含む、 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)要素。  

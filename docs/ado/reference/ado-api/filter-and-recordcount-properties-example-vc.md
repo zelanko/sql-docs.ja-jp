@@ -1,13 +1,11 @@
 ---
-title: フィルターおよび RecordCount のプロパティの例 (vc++) |Microsoft ドキュメント
+title: Filter および RecordCount プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72b9edbc322403e49a4938bf541220bde43ce4b9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772830"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>フィルターおよび RecordCount のプロパティの例 (vc++)
-この例では、[フィルター](../../../ado/reference/ado-api/filter-property.md)を開くには、新しいプロパティ[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)既存に適用される、指定した条件に基づいて**Recordset**です。 使用して、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)を 2 つのレコードの数を表示するプロパティ**レコード セット**です。 FilterField 関数は、この手順を実行する必要があります。  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Filter および RecordCount プロパティの例 (vc++)
+この例では、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを開き、新しい[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)既存に適用される指定した条件に基づいて**レコード セット**します。 使用して、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティを 2 つのレコードの数を表示する**レコード セット**します。 FilterField 関数は、この手順を実行する必要があります。  
   
 ## <a name="example"></a>例  
   

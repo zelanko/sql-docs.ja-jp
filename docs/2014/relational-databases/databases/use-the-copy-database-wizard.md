@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199552"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108692"
 ---
 # <a name="use-the-copy-database-wizard"></a>データベース コピー ウィザードの使用
   データベース コピー ウィザードを使用すると、サーバーを停止することなく、データベースとそのオブジェクトをサーバー間で簡単にコピーできます。 以前からデータベースをアップグレードすることもできます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 このウィザードを使用すると、次の操作を実行できます。  

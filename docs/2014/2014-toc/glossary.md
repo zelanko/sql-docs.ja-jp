@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -16,28 +15,26 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
-caps.latest.revision: 1952
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085532"
 ---
-# 用語集
+# <a name="glossary"></a>用語集
   
   
-## 用語  
+## <a name="terms"></a>用語  
   
 |項目|定義|  
 |----------|----------------|  
@@ -290,9 +287,9 @@ ms.locfileid: "37164333"
 |算定フィールド (computed field)|Transact-SQL 式を使用して計算された、書式設定済みの通知内の値。|  
 |COM 構造化ストレージ ファイル (COM-structured storage file)|Data Transformation Services (DTS) によって保存済みの DTS パッケージのバージョン履歴が格納されるコンポーネント オブジェクト モデル (COM) 複合ファイル。|  
 |連結 (concatenation)|2 つ以上の文字列や式を結合して、1 つの文字列や式にする処理。または、2 つ以上のバイナリ文字列やバイナリ式を結合して、1 つのバイナリ文字列やバイナリ式にする処理。|  
-|同時実行 (concurrency)|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 Entity Framework では、オプティミスティック同時実行制御モデルが実装されます。|  
-|同時実行制御 (concurrency conflict)|後で同期される異なる 2 つのレプリカで同じ項目または変更単位が変更された場合に発生する競合。|  
-|同時実行モデル (concurrency model)|同じキャッシュ データを使用する同時操作を反映するようにアプリケーションを設計する方法。 Windows Server AppFabric では、オプティミスティック同時実行モデルとペシミスティック同時実行モデルの両方のモデルをサポートしています。|  
+|コンカレンシー|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 Entity Framework では、オプティミスティック コンカレンシー モデルを実装しています。|  
+|コンカレンシーの競合|後で同期される異なる 2 つのレプリカで同じ項目または変更単位が変更された場合に発生する競合。|  
+|コンカレンシー モデル|同じキャッシュ データを使用する同時操作を反映するようにアプリケーションを設計する方法。 Windows Server AppFabric では、オプティミスティック コンカレンシー モデルとペシミスティックコンカレンシー モデルの両方のモデルをサポートしています。|  
 |同時操作 (concurrent operation)|2 つ以上のプロセス (プログラム) がマイクロプロセッサの同一時間にアクセスし、ほぼ同時に実行されるコンピューター操作。 マイクロプロセッサは、人間が認識できるよりもはるかに小さな時間単位で動作するため、同時実行プロセスが同時に実行されているように感じますが、実際はそうではありません。|  
 |条件式 (conditional expression)|ブール型 (true または false) を生成する式。 このような式は比較を伴うことができます (値が等しいかどうかして、または非ブール値では、テスト、 \< [未満] または > [より大きい] 関係) とブール式の論理の組み合わせ (AND、OR、XOR などのブール演算子を使用)。|  
 |条件分割 (conditional split)|データベースの完全バックアップ後に実行された、データベースの完全バックアップ、データベースの最新差分バックアップ (存在する場合)、ログ バックアップ (存在する場合) の復元。|  
@@ -1068,7 +1065,7 @@ ms.locfileid: "37164333"
 |オペレーション コード (operation code)|命令の種類および操作対象のデータの構造を指定するマシン語またはアセンブリ言語の命令|  
 |演算子 (operator)|クエリが適用されているイベントを処理するように StreamInsight サーバーでスケジュールされている、クエリのアトミック単位。 たとえば、SELECT、PROJECT、AGGREGATE、UNION、TOP K、および JOIN があります。 演算子は完全にコンポーザブルであり、演算子には特定の数の入力と出力が指定されます。 「クエリ (query)」「クエリ テンプレート (query template)」、「コンポーザブル (composable)」を参照。|  
 |演算子 (operator)|式の中で実行する計算の種類を指定する記号。 算術演算子、比較演算子、論理演算子、参照演算子などがあります。|  
-|オプティミスティック同時実行制御 (optimistic concurrency)|キャッシュされたオブジェクトのバージョン情報を使用して同時実行を管理する方法。 オブジェクトは変更されるたびにバージョン番号が変わるので、バージョン情報を使用することにより、他のユーザーの変更によって更新内容が上書きされるのを防止できます。|  
+|オプティミスティック コンカレンシー|キャッシュされたオブジェクトのバージョン情報を使用してコンカレンシーを管理する方法。 オブジェクトは変更されるたびにバージョン番号が変わるので、バージョン情報を使用することにより、他のユーザーの変更によって更新内容が上書きされるのを防止できます。|  
 |同期の最適化 (optimize synchronization)|最新の変更によって、Subscriber にパブリッシュされたパーティションとの間で行が移動するかどうかを判定するときに、ネットワーク トラフィックを最小化にできるマージ レプリケーションのオプション。|  
 |順序付けされたセット (ordered set)|特定の順序で返されるメンバーのセット。|  
 |基になるオブジェクト (origin object)|方向付けされたリレーションシップの基になるリポジトリ内のオブジェクト。|  
@@ -1122,7 +1119,7 @@ ms.locfileid: "37164333"
 |保存される計算列 (persisted computed column)|物理的に格納されるテーブルの計算列。保存される計算列の値は、計算を構成する列が変更されると更新されます。 計算列に永続化プロパティを適用することで、計算列が完全ではないものの決定性のある場合、その計算列に対してインデックスを作成することができます。|  
 |永続性データベース (persistence database)|ワークフロー インスタンスの状態とワークフロー インスタンスのメタデータを SQL Server データベースに格納する永続化ストアの一種。|  
 |パースペクティブ (perspective)|キューブのユーザー定義のサブセット。これに対し、ビューはリレーショナル データベースのテーブルと列のユーザー定義のサブセットです。|  
-|ペシミスティック同時実行制御 (pessimistic concurrency)|同時実行を管理する方法の 1 つ。ロックの手法を使用して他のクライアントが同時に同じオブジェクトを更新しないようにします。|  
+|ペシミスティック コンカレンシー|コンカレンシーを管理する方法の 1 つ。ロックの手法を使用して他のクライアントが同時に同じオブジェクトを更新しないようにします。|  
 |ファントム (phantom)|トランザクションがまだコミットされていない他のタスクによって以前に読み取られた行範囲での、新しい行の挿入または既存の行の削除。|  
 |PHP (PHP)|HTML ドキュメントに組み込んで、Web サーバー上で対話的機能を実行できるオープン ソース スクリプト言語。 通常は、Web 開発に使用されます。|  
 |PHP: Hypertext Preprocessor (PHP: Hypertext Preprocessor)|HTML ドキュメントに組み込んで、Web サーバー上で対話的機能を実行できるオープン ソース スクリプト言語。 通常は、Web 開発に使用されます。|  
@@ -1536,7 +1533,7 @@ ms.locfileid: "37164333"
 |SQL Server インスタンス自動保護 (SQL Server instance auto-protection)|自動保護が設定されている SQL Server のインスタンスに追加されたデータベースを DPM が自動的に認識して保護できるタイプの保護。|  
 |SQL Server ログイン (SQL Server login)|SQL Server に保存されるアカウント。ユーザーは、このアカウントを使用して SQL Server に接続できます。|  
 |SQL Server 管理オブジェクト|任意の COM または OLE オートメーション アプリケーションへの SQL Server 管理の組み込みをサポートする、アプリケーション プログラミング インターフェイス。|  
-|[SQL Server Management Studio]|Microsoft SQL Server に含まれる管理ツールのセット。Microsoft SQL Server のすべてのコンポーネントの構成と管理を実行できます。|  
+|SQL Server Management Studio|Microsoft SQL Server に含まれる管理ツールのセット。Microsoft SQL Server のすべてのコンポーネントの構成と管理を実行できます。|  
 |SQL Server マスター データ サービス|組織の重要なデータ エンティティの一貫した定義と管理を行うためのマスター データ管理アプリケーション。|  
 |SQL Server PowerPivot for Excel (SQL Server PowerPivot for Excel)|SQL Server の Excel 用アドイン。|  
 |SQL Server Profiler|SQL Server データベース エンジンのインスタンスまたは Analysis Services のインスタンスを監視するためのグラフィカル ユーザー インターフェイス。|  
@@ -1745,7 +1742,7 @@ ms.locfileid: "37164333"
 |データ削除 (vacuumer)|データ削除用のツール。|  
 |有効期間 (validity period)|定義した資格情報が信頼できると見なされる期間。|  
 |値式 (value expression)|値を返す MDX (多次元式) の式。 値式は、集合、組、メンバー、レベル、数値、または文字列に対して実行されます。|  
-|version|同じキーを使用してキャッシュに保存されたオブジェクトを区別するために使用されるプロパティ。 Windows Server AppFabric は DataCacheItemVersion クラスを使用してバージョン情報を保存します。 キャッシュ内でオブジェクトが追加または更新されるたびに、バージョンの値が変わります。 バージョン管理はデータの一貫性を維持するために使用されます。 オプティミスティック同時実行は、ロックではなく、バージョン管理を使用して達成されます。|  
+|version|同じキーを使用してキャッシュに保存されたオブジェクトを区別するために使用されるプロパティ。 Windows Server AppFabric は DataCacheItemVersion クラスを使用してバージョン情報を保存します。 キャッシュ内でオブジェクトが追加または更新されるたびに、バージョンの値が変わります。 バージョン管理はデータの一貫性を維持するために使用されます。 オプティミスティック コンカレンシーは、ロックではなく、バージョン管理を使用して達成されます。|  
 |version|レプリカの項目に加えられた変更を識別するメタデータ。 項目のレプリカ キーとレプリカ ティック数で構成されます。|  
 |列フィルター選択 (vertical filtering)|テーブルから列をフィルター選択すること。 レプリケーションの一部として使用すると、作成されるテーブル アーティクルにはパブリッシュ テーブルから選択した列のみが含まれます。|  
 |列方向のパーティション分割 (vertical partitioning)|選択した列を基準に、1 つのテーブルを複数のテーブルに分割するプロセス。 分割後の各テーブルの行数は同じですが、列数は少なくなります。|  

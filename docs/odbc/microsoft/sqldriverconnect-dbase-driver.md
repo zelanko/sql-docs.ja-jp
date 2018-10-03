@@ -1,44 +1,41 @@
 ---
-title: SQLDriverConnect (dBASE ドライバー) |Microsoft ドキュメント
+title: SQLDriverConnect (dBASE ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBase driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], dBASE Driver
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f26a0e81c27bf773145410b9f0ab8bbbb2c5a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e4eeaa7ba710814bfeb8c5b4f5aa0dbd2d30ef7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690882"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (dBASE ドライバー)
 > [!NOTE]  
->  このトピックでは、dBASE ドライバー固有の情報を提供します。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
+>  このトピックでは、dBASE ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- **SQLDriverConnect**データ ソース (DSN) を作成せずに、ドライバーに接続することができます。  
+ **SQLDriverConnect**データ ソース (DSN) を作成することがなく、ドライバーに接続することができます。  
   
- すべてのドライバーの接続文字列で、次のキーワードはサポートされて: **DSN**、 **DBQ**、および**FIL**です。  
+ すべてのドライバーの接続文字列では、次のキーワードがサポートされて: **DSN**、 **DBQ**、および**FIL**します。  
   
- Paradox ドライバーを使用すると、ユーザーがパスワードで保護されたファイルが開かれた後、他のユーザーは、同じファイルを開くには使用できません。  
+ Paradox ドライバーを使用すると、ユーザーがパスワードで保護されたファイルを開いた後、他のユーザーは同じファイルを開くには許可されません。  
   
- 次の表は、各ドライバーへの接続に必要な最小のキーワードを示しています、併用キーワード/値ペアの例を示します**SQLDriverConnect**です。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)です。  
+ 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)します。  
   
 > [!NOTE]  
 >  DBASEdriver、DBQ または DefaultDir が指定されていない場合、ドライバーは、現在のディレクトリに接続します。  
   
 |Driver|必要なキーワード|使用例|  
 |------------|-----------------------|--------------|  
-|DBASE|ドライバー、DriverID|ドライバー {Microsoft トランスレーター)} を = です。DBQ = c:\temp です。DriverID 277 を =|
+|dBASE|ドライバー、DriverID|ドライバー {0} Microsoft トランスレーター)} を = です。DBQ c:\temp; を =DriverID 277 を =|

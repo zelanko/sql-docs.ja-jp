@@ -1,30 +1,27 @@
 ---
-title: パスの SET コマンド |Microsoft ドキュメント
+title: SET PATH コマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 058f9f36aa3e762b27e2548fb1a1ddd4767399e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3d810e66249779b2d3706e92ea39f89a0f87cff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903237"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727550"
 ---
 # <a name="set-path-command"></a>SET PATH コマンド
-ファイル検索用のパスを指定します。 ドライバー固有の情報は、「解説」を参照してください。  
+ファイルの検索のパスを指定します。 ドライバー固有の情報は、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,21 +34,21 @@ SET PATH TO [Path]
  [*パス*]  
  Visual FoxPro を検索するディレクトリを指定します。 コンマまたはセミコロンを使用して、ディレクトリを区切ります。  
   
-## <a name="remarks"></a>解説  
- パスの設定では、ストアド プロシージャ内で呼び出すことができるその他の Visual FoxPro プログラムの検索パスを指定することができます。 パスの設定では、接続の指定したデータ ソースのパスは変更されません。  
+## <a name="remarks"></a>コメント  
+ パスの設定では、ストアド プロシージャ内で呼び出すことができるその他の Visual FoxPro プログラムの検索パスを指定できます。 パスの設定では、接続の指定したデータ ソースのパスは変更されません。  
   
- 発行設定パスなし*パス*を既定のディレクトリまたはフォルダーへのパスを復元します。  
+ せずパスに設定を発行*パス*既定のディレクトリまたはフォルダーへのパスを復元します。  
   
 ## <a name="driver-remarks"></a>ドライバーの解説  
  ストアド プロシージャにパスの設定を発行した場合は、次の関数やコマンドによって無視されます。  
   
--   カタログ関数をなど[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)と[SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)は、新しいパスを無視し、内のデータ ソースによって指定されたパスの参照は引き続き[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)または[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)です。  
+-   カタログ関数をなど[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)と[SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)は、新しいパスを無視し、内のデータ ソースで指定されたパスを参照する続行[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)または[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)します。  
   
--   SELECT、INSERT、UPDATE、DELETE、および CREATE TABLE などのコマンドは、新しいパスを無視して引き続き内のデータ ソースによって指定されたパスを参照**SQLPrepare**または**SQLExecDirect**です。  
+-   SELECT、INSERT、UPDATE、DELETE、および CREATE TABLE などのコマンドは、新しいパスを無視して続行内のデータ ソースで指定されたパスを参照する**SQLPrepare**または**SQLExecDirect**します。  
   
- ストアド プロシージャにパスの設定を発行して、元の状態にパスを設定しないで、その後、その他のデータベースへの接続は (パスの設定はデータのセッションのスコープではない) ため、新しいパスを使用します。  
+ ストアド プロシージャにパスの設定を発行してその元の状態に、その後、パスを設定しないでください (パスの設定のスコープはデータのセッションにしない) ため、データベースへの接続は、新しいパスを使用します。  
   
- 作成、選択、またはデータ ソースで指定されている以外のディレクトリ内のテーブルを更新する場合は、コマンドにファイルの完全なパスを指定します。  
+ 作成、選択、またはデータ ソースで指定されている以外のディレクトリ内のテーブルを更新する場合、コマンドを使用して、ファイルの完全なパスを指定します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   

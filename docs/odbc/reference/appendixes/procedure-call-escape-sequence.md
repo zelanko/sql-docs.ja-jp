@@ -1,38 +1,35 @@
 ---
-title: プロシージャ呼び出しのエスケープ シーケンス |Microsoft ドキュメント
+title: プロシージャ呼び出しのエスケープ シーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], procedure call
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5279794a7f18df2ce2d56210e3ab1373af5cde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806561"
 ---
 # <a name="procedure-call-escape-sequence"></a>プロシージャ呼び出しのエスケープ シーケンス
 ODBC では、プロシージャ呼び出しのエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
   
  **{**[? =]**呼び出す***プロシージャ名*[**(**[*パラメーター*] [、[*パラメーター*].**)**]**}**  
   
- BNF 表記で、構文のとおりです。  
+ BNF 表記では、構文がとおりです。  
   
- *ODBC プロシージャ エスケープ*:: =  
+ *ODBC のエスケープ プロシージャ*:: =  
   
  &#124; です。*ODBC esc イニシエーター* [? =] 呼び出す*プロシージャ esc 終端の ODBC*  
   
@@ -58,7 +55,7 @@ ODBC では、プロシージャ呼び出しのエスケープ シーケンス�
   
  (カタログの区切り記号がによって返される**SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR 情報オプションを使用します)。  
   
- *プロシージャ パラメーターのリストを*:: =*プロシージャ パラメーター*  
+ *プロシージャ パラメーター リスト*:: =*プロシージャ パラメーター*  
   
  &#124; です。*プロシージャ パラメーター*、*プロシージャ パラメーター リスト*  
   
@@ -66,10 +63,10 @@ ODBC では、プロシージャ呼び出しのエスケープ シーケンス�
   
  *空の文字列*:: =  
   
- *ODBC esc イニシエーター* :: = {  
+ *ODBC のイニシエーター esc* :: = {  
   
  *Esc 終端の ODBC* :: =}  
   
- (プロシージャのパラメーターが空の文字列の場合は、プロシージャ、既定値、パラメーターに対して使用します。)  
+ (プロシージャ パラメーターが空の文字列の場合は、プロシージャ既定値、パラメーターに対して使用します。)  
   
- アプリケーションが呼び出すことができます、データ ソースには、プロシージャがサポートしていて、ドライバーは ODBC のプロシージャの呼び出し構文をサポートするかどうかを調べるに**SQLGetInfo** SQL_PROCEDURES 情報の種類とします。
+ データ ソースには、プロシージャがサポートされ、ドライバーは ODBC プロシージャの呼び出し構文をサポートしているかどうかを調べるにアプリケーションを呼び出すことができます**SQLGetInfo** SQL_PROCEDURES 情報の種類にします。

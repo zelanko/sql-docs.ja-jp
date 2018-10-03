@@ -1,13 +1,11 @@
 ---
-title: SchemaObjectTypeEnum |Microsoft ドキュメント
+title: SchemaObjectTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaObjectTypeEnum enumeration [ADO MD]
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eebccac5754530ba20949f51ee0fe3179a77d890
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 44559731867f2c2c1cd4ba397e5558c540e65f48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284613"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683650"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
-取得するオブジェクトの種類を指定します、 [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)メソッドです。  
+取得するオブジェクトの種類を指定します、 [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)メソッド。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  

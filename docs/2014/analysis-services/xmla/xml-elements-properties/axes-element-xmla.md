@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Axes Element
@@ -24,16 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdb5aa48dd3a65f99b424274fdb89b3aee8c9591
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094912"
 ---
 # <a name="axes-element-xmla"></a>Axes 要素 (XMLA)
   コレクションを格納 [Axis](axis-element-xmla.md) 要素に含まれる軸データを表す、[root](root-element-xmla.md) を使用する要素、[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) データ型。  
@@ -91,7 +88,7 @@ ms.locfileid: "37237402"
   
  次の表は、軸の構造とメンバーを定義して特徴付けるために使用できる操作の一覧です。  
   
-|演算|説明|  
+|操作|説明|  
 |---------------|-----------------|  
 |Member|ディメンション階層のメンバーを表す軸の最小単位です。|  
 |Members|同じディメンション階層に属する `Member` オブジェクトのコレクションです。|  

@@ -1,29 +1,26 @@
 ---
-title: 序数で読み込み |Microsoft ドキュメント
+title: 序数での読み込み |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], loading by ordinal
 - compatibility [ODBC], loading by ordinal
 - loading by ordinal [ODBC]
 ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e37cd9754b402960ca12b0dbdbeaf43a5f2aee61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 702e1fe58080cc370ab9a858c985a7744df85050
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845860"
 ---
-# <a name="loading-by-ordinal"></a>序数で読み込む
-ODBC 2 です。*x*、接続処理のパフォーマンスを向上させるために序数で読み込みを実行する可能性があります。 ODBC 2 です。*x*ドライバーは、序数に基づく 199 でダミー関数をエクスポート以外の場合は、名前ではなく序数で ODBC 関数のアドレスを解決が、ドライバー マネージャーがそれを検出します。 ODBC 2 では、この機能はサポートされても。*x*ドライバーは ODBC 3 のサポートされていませんが、*.x*ドライバー。
+# <a name="loading-by-ordinal"></a>序数での読み込み
+ODBC 2。*x*序数で読み込みを実行すると、接続処理のパフォーマンスを向上させる可能性があります。 ODBC 2。*x*ドライバー序数 199 でダミー関数をエクスポートする; 序数で、名前ではなく、ODBC 関数のアドレスは、ドライバー マネージャーが検出された場合、解決します。 この機能は、ODBC 2 for 引き続きサポートされます。*x*ドライバーは ODBC 3 のサポートされていませんが、*.x*ドライバー。

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.generaloptions.f1
 helpviewer_keywords:
 - General Options dialog box
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
-caps.latest.revision: 26
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 695c1fc16604c4ce0e0a49da67016acbaa663d50
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243072"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113062"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - ツール オプション (全般オプション ページ)
   **[全般オプション]** ダイアログ ボックスを使用すると、以下のオプションを確認または指定できます。  
@@ -68,7 +65,7 @@ ms.locfileid: "37243072"
   
 ### <a name="replay-options"></a>[再生オプション]  
  **[再生スレッドの既定の数]**  
- 同時に使用する再生スレッドの数を指定します。 使用する数を多くすると再生中のリソースも多くなりますが、再生の同時実行数が増えます。  
+ 同時に使用する再生スレッドの数を指定します。 使用する数を多くすると再生中のリソースも多くなりますが、再生のコンカレンシー数が増えます。  
   
  **[ヘルス モニターの既定の待機間隔 (秒)]**  
  再生の待機間隔を秒単位で指定します。 既定値は 3,600 秒 (1 時間) です。 この設定は、ヘルス モニターでスレッドが終了するまでに、このスレッドを実行できる時間の長さに影響を与えます。  

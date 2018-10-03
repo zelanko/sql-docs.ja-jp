@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isenvprop.variables.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.ssis.ssms.isenvprop.permissions.f1
 - sql12.ssis.ssms.isenvprop.general.f1
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
-caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5650c579c1fab390b98b3bb7777e9c8f8f07595
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d77393b3289c00ad88925711287b2ef789bc093d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090332"
 ---
 # <a name="create-and-map-a-server-environment"></a>サーバー環境の作成とマップ
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージに合わせたランタイム値を指定するためのサーバー環境を作成します。 特定のパッケージ、エントリ ポイント パッケージ、または特定のプロジェクト内のすべてのパッケージに対して、環境変数をパラメーターにマップできるようになります。 エントリ ポイント パッケージは、通常、子パッケージを実行する親パッケージです。  

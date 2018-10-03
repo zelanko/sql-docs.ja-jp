@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobsteps (TRANSACT-SQL) |Microsoft ドキュメント
+title: dbo.sysjobsteps (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobsteps
@@ -20,29 +17,28 @@ dev_langs:
 helpviewer_keywords:
 - sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fff8cb852214733a96d1641cd767d578420cb9a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259392"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842680"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実行されるジョブ内の各ステップに関する情報を格納します。 次の表は、 **msdb**データベース。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実行されるジョブ内の各ステップに関する情報を格納します。 このテーブルに格納されます、 **msdb**データベース。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|ジョブの ID です。|  
+|**job_id**|**uniqueidentifier**|ジョブの ID。|  
 |**step_id**|**int**|ジョブ ステップの ID。|  
 |**step_name**|**sysname**|ジョブ ステップの名前です。|  
 |**subsystem**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがジョブ ステップを実行するために使用するサブシステムの名前。|  
-|**command**|**nvarchar(max)**|によって実行されるコマンド**サブシステム**です。|  
+|**command**|**nvarchar(max)**|によって実行されるコマンド**サブシステム**します。|  
 |**flags**|**int**|予約されています。|  
 |**additional_parameters**|**ntext**|予約されています。|  
 |**cmdexec_success_code**|**int**|によって返されるエラー レベル値**CmdExec**サブシステム ステップが成功を示します。|  
@@ -51,7 +47,7 @@ ms.locfileid: "33259392"
 |**on_fail_action**|**tinyint**|ステップが正常に実行されないときに行う操作。|  
 |**on_fail_step_id**|**int**|ステップが正常に実行されないときに実行する次のステップの ID。|  
 |**server**|**sysname**|予約されています。|  
-|**database_name**|**sysname**|対象となるデータベースの名前**コマンド**場合に実行される**サブシステム**TSQL がします。|  
+|**database_name**|**sysname**|データベースの名前**コマンド**場合に実行されます**サブシステム**TSQL です。|  
 |**database_user_name**|**sysname**|ステップを実行するときにアカウントが使用されるデータベース ユーザー名。|  
 |**retry_attempts**|**int**|ステップが失敗するときに行う再試行の回数。|  
 |**retry_interval**|**int**|再試行の間隔。|  

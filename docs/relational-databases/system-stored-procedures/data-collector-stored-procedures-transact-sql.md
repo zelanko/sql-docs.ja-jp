@@ -1,14 +1,11 @@
 ---
-title: データ コレクター ストアド プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント
+title: データ コレクター ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,21 +14,20 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e004af91b72dfe3ffe1fb1731797036d42f82512
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dfd5f07cafacf5817f6fbef90b140b01c00e622f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741890"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>データ コレクター ストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server では、データ コレクターと、次のコンポーネントを操作するために使用する次のシステム ストアド プロシージャ: コレクション セット、コレクションのアイテム、およびコレクション型。  
+  SQL Server データ コレクターと、次のコンポーネントを操作するために使用する次のシステム ストアド プロシージャをサポートしています。 コレクション セット、コレクション アイテム、およびコレクション型。  
   
 > [!IMPORTANT]  
 >  通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4ee726afd23b410d5d145a548a1f810fe758711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118982"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>列を指定する&#39;s コンテンツおよびデータ型 (データ マイニング ウィザード)
   **[列のコンテンツおよびデータ型の指定]** ページを使用すると、ウィザードで既に設定されている列型およびコンテンツの種類を変更できます。 ウィザードは、ソース列のデータ型および選択されているアルゴリズムの機能を使用して、各列の既定のデータ型およびコンテンツの種類を決定します。  

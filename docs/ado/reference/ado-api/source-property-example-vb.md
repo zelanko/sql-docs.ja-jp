@@ -1,32 +1,29 @@
 ---
-title: ソースのプロパティの例 (VB) |Microsoft ドキュメント
+title: ソースのプロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc97f27fd4ac2ce65368946fdb8d386b959ffc27
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7b86baa47a755b52e99025a4a2fecc0922c80a08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674190"
 ---
-# <a name="source-property-example-vb"></a>ソース プロパティの例 (VB)
-この例で、[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)を 3 つを開いてプロパティ[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが別のデータ ソースに基づきます。  
+# <a name="source-property-example-vb"></a>Source プロパティの例 (VB)
+この例では、[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティを 3 つを開いて[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、さまざまなデータ ソースに基づきます。  
   
 ```  
 'BeginSourceVB  
@@ -131,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source プロパティ (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

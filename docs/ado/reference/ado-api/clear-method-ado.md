@@ -1,13 +1,11 @@
 ---
-title: Clear メソッド (ADO) |Microsoft ドキュメント
+title: Clear メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Clear method [ADO]
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4f02311140a82d869f38d3b64f025a69357c5d2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0e69e7d2d2a66ccb9df0e03f6f77849c502f3bf2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276341"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753220"
 ---
 # <a name="clear-method-ado"></a>Clear メソッド (ADO)
 すべてを削除、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトから、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。  
@@ -38,21 +35,21 @@ Errors.Clear
 ```  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**クリア**メソッドを[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)既存のすべてを削除するコレクション[エラー](../../../ado/reference/ado-api/error-object.md)コレクションからオブジェクト。 エラーが発生すると、ADO は自動的にオフ、**エラー**コレクションを格納および**エラー**オブジェクトは新しいエラーをベースにします。  
+ 使用して、**クリア**メソッドを[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)既存のすべてを削除するコレクション[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトをコレクションから。 エラーが発生すると、ADO は自動的にオフ、**エラー**コレクションを格納および**エラー**新しいエラーに基づいてオブジェクト。  
   
- プロパティとメソッドの一部として表示される警告を返します**エラー**内のオブジェクト、**エラー**コレクションが、プログラムの実行を停止しないでください。 呼び出す前に、[再同期](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、または[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドを[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト;、 [を開く](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを[接続](../../../ado/reference/ado-api/connection-object-ado.md); オブジェクトまたは設定、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを**Recordset**オブジェクトを呼び出す、 **をオフに**メソッドを**エラー**コレクション。 読み取ることができるように、[カウント](../../../ado/reference/ado-api/count-property-ado.md)のプロパティ、**エラー**コレクションをテストするには、警告が返されました。  
+ プロパティとメソッドの一部として表示される警告を返す**エラー**内のオブジェクト、**エラー**コレクションが、プログラムの実行は停止しないでください。 呼び出す前に、[再同期](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、または[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、 [を開く](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは設定、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを**レコード セット**オブジェクトを呼び出し、 **をオフに**メソッドを**エラー**コレクション。 そうすることが読み取ることができます、[カウント](../../../ado/reference/ado-api/count-property-ado.md)のプロパティ、**エラー**コレクションをテストするには、警告が返されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [実行、クエリを再実行、およびメソッドの例 (VB) をオフに](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [実行、クエリを再実行、およびメソッドの例 (VBScript) をオフに](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [実行、クエリを再実行、およびメソッドの例 (vc++) をオフに](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+ [Execute、Requery、および Clear のメソッドの例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [Execute、Requery、および Clear のメソッドの例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [Execute、Requery、および Clear のメソッドの例 (vc++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [CancelBatch メソッド (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Delete メソッド (ADO フィールドのコレクション)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete メソッド (ADO パラメーターのコレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [Delete メソッド (ADO レコード セット)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete メソッド (ADO Fields コレクション)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete メソッド (ADO Parameters コレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Delete メソッド (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
- [メソッドを再同期します。](../../../ado/reference/ado-api/resync-method.md)   
+ [Resync メソッド](../../../ado/reference/ado-api/resync-method.md)   
  [UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)

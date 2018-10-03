@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorhelpalert (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dbmmonitorhelpalert (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b05d7449322bd35bf924a5fb12b0cf72ff383d28
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851610"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +58,7 @@ sp_dbmmonitorhelpalert database_name
 |4|ミラー コミットのオーバーヘッド|許容可能な、トランザクションあたりの平均遅延時間 (ミリ秒単位) を指定します。この時間を経過すると、プリンシパル サーバーで警告が生成されます。 この遅延時間は、ミラー サーバー インスタンスによってトランザクションのログ レコードが再実行キューに書き込まれるのをプリンシパル サーバー インスタンスが待機している間、発生したオーバーヘッドの量になります。 この値は高安全モードにのみ関係します。|  
 |5|保有期間|データベース ミラーリングの状態テーブルにある行の保有期間を制御するメタデータです。|  
   
- 警告に対応するイベント Id については、次を参照してください。[使用警告しきい値および警告ミラーリング パフォーマンス基準の&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)です。  
+ 警告に対応するイベント Id については、次を参照してください。[使用量の警告しきい値とアラートをミラーリング パフォーマンス基準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -70,10 +66,10 @@ sp_dbmmonitorhelpalert database_name
 ## <a name="result-sets"></a>結果セット  
  警告ごとに、次の列を含む行を返します。  
   
-|列|データ型|Description|  
+|[列]|データ型|説明|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|次の表、 **alert_id**各パフォーマンス基準とに表示されるメトリックの測定単位の値、 **sp_dbmmonitorresults**結果セット。|  
-|**threshold**|**int**|警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 現在しきい値が設定されていない場合、値は NULL です。<br /><br /> **注:** を現在の値を表示するには、実行、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアド プロシージャです。|  
+|**threshold**|**int**|警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 現在しきい値が設定されていない場合、値は NULL です。<br /><br /> **注:** を現在の値を表示するには、実行、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアド プロシージャ。|  
 |**enabled**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:** 保有期間は常に有効にします。|  
   
 |値|パフォーマンス基準|ユニット|  
@@ -84,7 +80,7 @@ sp_dbmmonitorhelpalert database_name
 |4|ミラー コミットのオーバーヘッド|ミリ秒|  
 |5|保有期間|Hours|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -101,7 +97,7 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングと &#40; の監視SQL Server と &#41; です。](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [sp_dbmmonitorchangemonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   

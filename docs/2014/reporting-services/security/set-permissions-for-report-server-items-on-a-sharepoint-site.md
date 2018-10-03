@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 30a0f1e98fc1837acbf995a2a68376cd4dd8bd02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad14d7005dc01c700b99c4a41cc8f95cac30da02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282608"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078644"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)
   既定のセキュリティ設定では必要なレベルのアクセスが提供されない場合は、新しい権限レベルを作成して、特定のレポート サーバー アイテムまたは処理に対するアクセスを提供できます。 カスタム セキュリティ設定は、アクセスを特定のレポートに制限する場合に便利です。  
@@ -61,7 +58,7 @@ ms.locfileid: "37282608"
   
 5.  **[アクション]** をクリックします。  
   
-6.  **[権限を編集]** をクリックします。 [**OK**] をクリックします。  
+6.  **[権限を編集]** をクリックします。 **[OK]** をクリックします。  
   
 7.  **[新規]** をクリックします。  
   
@@ -73,7 +70,7 @@ ms.locfileid: "37282608"
   
 11. **[フル コントロール]** をクリックします。  
   
-12. [**OK**] をクリックします。 特定のモデルの権限の管理権限が与えられたユーザーは、モデルを開いて、モデル内の権限を編集できます。  
+12. **[OK]** をクリックします。 特定のモデルの権限の管理権限が与えられたユーザーは、モデルを開いて、モデル内の権限を編集できます。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用します。](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   

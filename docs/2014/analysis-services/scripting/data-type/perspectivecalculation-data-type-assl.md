@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PerspectiveCalculation Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b4f56077a784a26617946dd1179738f838b2db3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126090"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>PerspectiveCalculation データ型 (ASSL)
   計算の間のリレーションシップを表すプリミティブ データ型を定義し、[パースペクティブ](../objects/perspective-element-assl.md)要素。  

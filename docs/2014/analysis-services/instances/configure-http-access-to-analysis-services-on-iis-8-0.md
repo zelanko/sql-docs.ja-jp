@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2494008022e095cebe40c0436d47a5e933bbde62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108192"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成
   この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
@@ -265,7 +262,7 @@ ms.locfileid: "37204472"
 ##  <a name="bkmk_test"></a> 手順 6: 構成をテストする  
  MSMDPUMP の接続文字列構文は、MSMDPUMP.dll ファイルへの URL です。  
   
- Web アプリケーションは、固定ポートでリッスンしているが場合に、サーバー名または IP アドレスにポート番号を追加 (たとえば、http://my-web-srv01:8080/OLAP/msmdpump.dllまたはhttp://123.456.789.012:8080/OLAP/msmdpump.dllします。  
+ Web アプリケーションは、固定ポートでリッスンしているが場合に、サーバー名または IP アドレスにポート番号を追加 (たとえば、 http://my-web-srv01:8080/OLAP/msmdpump.dllまたは http://123.456.789.012:8080/OLAP/msmdpump.dllします。  
   
  接続をすばやくテストするために、Microsoft Excel または SQL Server Management Studio を使用して接続を開くことができます。  
   

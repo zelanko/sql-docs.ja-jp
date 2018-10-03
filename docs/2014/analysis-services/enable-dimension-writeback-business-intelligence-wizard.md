@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.setdimensionwritebackcapability.f1
 ms.assetid: b01aa630-0b70-42a5-a743-f45a030cf26b
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1923378acf208274662638ceb50b4088ea641537
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ea5615fcc88e81be11fb833761bb67537b0acd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079292"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>[ディメンションの書き戻しの有効化] (ビジネス インテリジェンス ウィザード)
   **[ディメンションの書き戻しの有効化]** ページを使用すると、選択したディメンションの書き戻し機能を有効または無効にできます。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8cccef2b-bdd0-415a-bb53-bda14165d1e4
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6a55c84438516e99d9eac86db498fa4a5102d9d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86be2c1a79d99fe315ef4baf7157b91107689015
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082972"
 ---
 # <a name="folderposition-element-xml"></a>FolderPosition 要素 (XML)
   要素のコレクション内での要素の位置についての情報が含まれます。  

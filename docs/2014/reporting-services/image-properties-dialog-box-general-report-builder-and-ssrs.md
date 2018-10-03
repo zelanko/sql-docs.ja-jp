@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10051"
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
-caps.latest.revision: 12
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7137b65223a092cc136db7fda21cd2cd0e5c2ce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292212"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108432"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([画像のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[画像のプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、画像の追加、画像の既定の名前の変更、およびツールヒントのテキストの追加を実行できます。  
@@ -48,7 +45,7 @@ ms.locfileid: "37292212"
   
  画像を埋め込む場合は、レポートに追加する画像をドロップダウン リストから選択します。 ドロップダウン リストに画像を追加するには、 **[インポート]** ボタンをクリックします。  
   
- **[外部]** オプションを選択した場合は、画像の URL を入力します。 ネイティブ モード用に構成されているレポート サーバーにレポートをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、http://\<servername >/images/image1.jpg します。 SharePoint 統合モードで構成されているレポート サーバーにレポートをパブリッシュする場合は、完全修飾 URL を指定します。 たとえば、http://\<*SharePointservername*>/\<*サイト*>/Documents/images/image1.jpg します。  
+ **[外部]** オプションを選択した場合は、画像の URL を入力します。 ネイティブ モード用に構成されているレポート サーバーにレポートをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、 http://\<servername >/images/image1.jpg します。 SharePoint 統合モードで構成されているレポート サーバーにレポートをパブリッシュする場合は、完全修飾 URL を指定します。 たとえば、 http://\<*SharePointservername*>/\<*サイト*>/Documents/images/image1.jpg します。  
   
  **[インポート]**  
  **[次の画像を使用]** ボックスの一覧に画像を追加する場合にクリックします。  

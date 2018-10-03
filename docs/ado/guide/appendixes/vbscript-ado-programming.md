@@ -1,13 +1,11 @@
 ---
-title: VBScript ADO プログラミング |Microsoft ドキュメント
+title: VBScript での ADO プログラミング |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,28 +13,27 @@ helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3f565f610e5f98adae7160d61acf01ab7e41c46
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8fe2eb1d6d5c83a85fed628b02869cbf7b29eee4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680000"
 ---
-# <a name="vbscript-ado-programming"></a>VBScript ADO プログラミング
-## <a name="creating-an-ado-project"></a>ADO プロジェクトを作成します。  
- Microsoft Visual Basic、Scripting Edition はサポートしないタイプ ライブラリのため、プロジェクト内で ADO を参照する必要はありません。 そのため、コマンドラインの入力候補などの関連する機能はサポートされません。 また、既定では、ADO 列挙定数で定義されていない VBScript です。  
+# <a name="vbscript-ado-programming"></a>VBScript での ADO プログラミング
+## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  
+ Microsoft Visual Basic, Scripting Edition は、ADO をプロジェクトで参照する必要はありませんので、タイプ ライブラリをサポートしません。 そのため、コマンドラインの入力候補などの関連する機能はサポートされません。 また、既定では、ADO 列挙定数で定義されていない VBScript です。  
   
- ただし、ADO は VBScript で使用する次の定義を含むファイルをインクルードする、2 つを用意しています。  
+ ただし、ADO は、VBScript で使用する次の定義を含むファイルをインクルードする 2 つを提供します。  
   
--   サーバー側スクリプトの用途に Adovbs.inc がインストールされている、c:\Program files \common files Files\System\ado\ フォルダーに既定でします。  
+-   サーバー側スクリプト使用 Adovbs.inc、既定で c:\Program files \common files Files\System\ado\ フォルダーにインストールされるは。  
   
--   クライアント側スクリプトの用途に Adcvbs.inc がインストールされている、c:\Program files \common files Files\System\msdac\ フォルダーに既定でします。  
+-   クライアント側スクリプト使用 Adcvbs.inc、既定で c:\Program files \common files Files\System\msdac\ フォルダーにインストールされるは。  
   
- コピーし、ASP ページにこれらのファイルからの定数の定義を貼り付けるか、サーバー側スクリプトを実行する場合、Web サイト上のフォルダーに Adovbs.inc ファイルをコピーし、次のように、ASP ページから参照します。  
+ コピーし、ASP ページにこれらのファイルからの定数の定義を貼り付けるか、Adovbs.inc ファイル、Web サイト上のフォルダーをコピーし、次のように、ASP ページから参照する、サーバー側のスクリプトを実行している場合。  
   
 ```  
 <!--#include File="adovbs.inc"-->  
@@ -51,7 +48,7 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ```  
   
 ## <a name="vbscript-examples"></a>VBScript の例  
- 次のコードでは、Active Server Page (ASP) ファイルで VBScript サーバー側のプログラミングの汎用例を示します。  
+ 次のコードでは、Active Server Page (ASP) ファイルで VBScript サーバー側プログラミングの汎用例を示します。  
   
 ```  
 <%  @LANGUAGE="VBSCRIPT" %>  
@@ -78,13 +75,13 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- 特定の VBScript の例では、ADO のドキュメントに含まれて。 詳細については、次を参照してください。 [ADO のコード例では、Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)です。  
+ 具体的な VBScript 例については、ADO のドキュメントに含まれています。 詳細については、次を参照してください。 [ADO のコード例では、Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)します。  
   
-## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript および Visual Basic の違い  
- VBScript で ADO を使用することは、Visual basic 構文の使用方法など、さまざまな方法で ADO を使用してに似ています。 ただし、いくつかの重要な違いがあります。  
+## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript と Visual Basic の違い  
+ ADO を使用して VBScript では、Visual Basic での構文を使用する方法など、さまざまな方法で ADO を使用してに似ています。 ただし、いくつかの重要な違いがあります。  
   
--   VBScript では、のみ、Variant データ型の異なる種類のデータを保持できるをサポートします。 Variant データ型に必要なデータを格納でき、キャスト VBScript によって実行されるため、データは適切に機能します。 ADO で必要な型を認識し、それに応じて、バリアント型の値に変換します。  
+-   VBScript では、のみ、Variant データ型のさまざまな種類のデータを格納できるをサポートします。 バリアント データ型では、必要なデータを格納して、キャスト VBScript によって実行されるため、データは適切に機能します。 ADO では、必要な型を認識し、それに応じて、バリアントの値を変換します。  
   
--   使用することはできません**エラー goto で\<ラベル >** VBScript 内です。  
+-   使用することはできません**エラー goto で\<ラベル >** VBScript 内。  
   
--   VBScript をサポートしているいくつかの組み込みの Visual Basic 関数など**Msgbox**、**日付**、および**IsNumeric**です。 ただし、VBScript は、Visual Basic のサブセットであるために、すべての組み込み関数はサポートされます。 たとえば、VBScript はサポートされません、**形式**関数およびファイル I/O 関数。
+-   VBScript のよういくつかの組み込みの Visual Basic の関数サポート**Msgbox**、**日付**、および**IsNumeric**します。 ただし、VBScript は、Visual Basic のサブセットであるために、すべての組み込み関数はサポートされます。 たとえば、VBScript はサポートされません、**形式**関数およびファイル I/O 関数。

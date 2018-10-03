@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_packages (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_xe_packages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_packages_TSQL
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9901245681412017736e26c79b000e7f5c845365
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738862"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +33,9 @@ ms.lasthandoff: 05/23/2018
   拡張イベント エンジンに登録されているすべてのパッケージを一覧表示します。  
   
  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|パッケージの名前。 説明は、パッケージ自体から公開されます。 NULL 値は許可されません。|  
+|NAME|**nvarchar(60)**|パッケージの名前。 説明は、パッケージ自体から公開されます。 NULL 値は許可されません。|  
 |guid|**uniqueidentifier**|パッケージを識別する GUID。 NULL 値は許可されません。|  
 |description|**nvarchar (256)**|パッケージの説明。 descriptionis では、パッケージの作成者によって設定され、null 値を許容することはできません。|  
 |capabilities|**int**|このパッケージの機能を説明するビットマップ。 NULL 値が許可されます。|  
@@ -45,10 +43,10 @@ ms.lasthandoff: 05/23/2018
 |module_guid|**uniqueidentifier**|このパッケージを公開するモジュールの GUID。 NULL 値は許可されません。|  
 |module_address|**varbinary(8)**|パッケージを含むモジュールが読み込まれるベース アドレス。 1 つのモジュールで複数のパッケージが公開される場合があります。 NULL 値は許可されません。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  拡張イベント エンジンに登録されているパッケージでは、イベント、イベントの発生時に実行できるアクション、およびイベント データの同期処理および非同期処理の対象が公開されます。  
   
  これらのパッケージは、プロセスのアドレス空間に動的に読み込むことができます。 パッケージの読み込み時、パッケージが公開するすべてのオブジェクトが拡張イベント エンジンに登録されます。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 05/23/2018
 |From|変換先|リレーションシップ|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多対一|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091262"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
@@ -208,10 +205,10 @@ ms.locfileid: "37204032"
 |||||  
 |-|-|-|-|  
 ||**パブリッシャー**|**ディストリビューター** <sup>3</sup>|**サブスクライバー (Subscriber)**|  
-|**トランザクション**|[はい]<sup>1</sup>|いいえ|可<sup>2</sup>|  
+|**トランザクション**|[はい]<sup>1</sup>|いいえ|はい<sup>2</sup>|  
 |**P2P**|いいえ|いいえ|いいえ|  
-|**Merge**|はい|いいえ|可<sup>2</sup>|  
-|**スナップショット**|はい|いいえ|可<sup>2</sup>|  
+|**Merge**|はい|いいえ|はい<sup>2</sup>|  
+|**スナップショット**|はい|いいえ|はい<sup>2</sup>|  
   
  <sup>1</sup>双方向相互トランザクション レプリケーションのサポートは含まれません。  
   

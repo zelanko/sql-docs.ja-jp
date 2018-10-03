@@ -7,18 +7,16 @@ manager: craigg
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0c426f90f53c07577fc55311f4110e3f2a4a341
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 8ab0b1bc65009a7439c9de8b8728a483413d09a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083934"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676570"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム)
 
@@ -248,7 +246,7 @@ ms.locfileid: "39083934"
 
 この記事では、移行または読み取りスケールのワークロードをサポートするプラットフォーム間の可用性グループを作成する手順を確認しました。 手動による災害復旧のために使用できます。 可用性グループをフェールオーバーする方法についても説明しました。 クロス プラットフォームのクラスター ツールが無いため、クロス プラットフォームの可用性グループはクラスターの種類 `NONE` を使用し、高可用性をサポートしません。 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [Always On 可用性グループの概要](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 

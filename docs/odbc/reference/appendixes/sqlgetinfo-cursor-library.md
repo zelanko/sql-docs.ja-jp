@@ -1,33 +1,30 @@
 ---
-title: SQLGetInfo (カーソル ライブラリ) |Microsoft ドキュメント
+title: SQLGetInfo (カーソル ライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Cursor Library
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8a3cfcc70ddb26403b73895d71cafc923b8a655
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 443f8e36e4b9f537f33774a97b6d2fa0659e620d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715900"
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないように、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLGetInfo**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLGetInfo**を参照してください[SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)です。  
+ このトピックの使用、 **SQLGetInfo**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLGetInfo**を参照してください[SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)します。  
   
  カーソル ライブラリは、次の値の値を返します*情報の種類*(&#124; OR 演算を表す) の他のすべての値です*情報の種類*、呼び出します**SQLGetInfo** 。ドライバー。  
   
@@ -52,7 +49,7 @@ ms.locfileid: "32910387"
 |SQL_SCROLL_OPTIONS|SQL_SO_FORWARD_ONLY &#124; です。SQL_SO_STATIC|  
 |SQL_STATIC_SENSITIVITY [1]|SQL_SS_UPDATES|  
   
- [1]、ODBC 2.x ドライバー、カーソル ライブラリを使用する場合にのみ使用されます。  
+ [1]、ODBC 2.x のドライバーを使用したカーソル ライブラリが使用される場合にのみを使用します。  
   
 > [!IMPORTANT]  
->  カーソル ライブラリは、トランザクションがコミットまたはデータ ソースとしてロールバック時に、同じカーソル動作を実装します。 つまり、コミットまたはいずれかを呼び出して、トランザクションのロールバック**SQLEndTran** SQL_ATTR_AUTOCOMMIT 接続属性を使用することができますを発生させる、データ ソースをアクセス プランを削除し、すべてのステートメントのカーソルを閉じる接続します。 詳細についてで SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR 情報の種類を参照してください。 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)です。
+>  カーソル ライブラリは、トランザクションがコミットまたはデータ ソースとしてロールバック時に、同じカーソルの動作を実装します。 つまり、コミットまたはいずれかを呼び出して、トランザクションのロールバック**SQLEndTran** SQL_ATTR_AUTOCOMMIT の接続属性を使用する可能性がありますをアクセス プランを削除し、すべてのステートメントのカーソルを閉じてデータ ソースまたは接続します。 詳細についてで SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR 情報の種類を参照してください。 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)します。

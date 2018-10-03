@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hash indexes
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51c68f8d566948dd1fc1583ff36650366f50169b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094367"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルでのインデックス使用のガイドライン
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルのデータに効率的にアクセスするためにインデックスを使用します。 適切なインデックスを指定することにより、クエリのパフォーマンスが大幅に向上します。 たとえば、クエリを考えてみます。  
@@ -73,8 +70,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |操作|メモリ最適化された非クラスター化ハッシュ インデックス|メモリ最適化された非クラスター化インデックス|ディスク ベース インデックス|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |インデックス スキャン、すべてのテーブルの行を取得する。|はい|はい|はい|  
-|等値述語 (=) に対するインデックス シーク。|はい<br /><br /> (フル キーが必要)|可 <sup>1</sup>|はい|  
-|非等値述語に対するインデックス シーク (>、<、 \<=、> =, BETWEEN)。|不可 (インデックス スキャンの結果)|可 <sup>1</sup>|はい|  
+|等値述語 (=) に対するインデックス シーク。|はい<br /><br /> (フル キーが必要)|はい <sup>1</sup>|はい|  
+|非等値述語に対するインデックス シーク (>、<、 \<=、> =, BETWEEN)。|不可 (インデックス スキャンの結果)|はい <sup>1</sup>|はい|  
 |インデックス定義に一致する並べ替え順序で行を取得する。|いいえ|はい|はい|  
 |インデックス定義の逆の並べ替え順序で行を取得する。|いいえ|いいえ|はい|  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.beta2.f1
 helpviewer_keywords:
 - Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 821011e46c396eeca618a0ba4ae01b47489b63bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9dc5221dc30c5b5d8c0bdcd808ad719a8508816b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175889"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115702"
 ---
 # <a name="replication-monitor"></a>レプリケーション モニター
   ここでは、レプリケーション モニターに関する情報を紹介します。 モニターに表示されるページとダイアログ ボックスは、レプリケーションの種類と、監視の対象となる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて変わります。  

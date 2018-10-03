@@ -1,13 +1,11 @@
 ---
-title: Count プロパティ (ADO) |Microsoft ドキュメント
+title: Count プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 988ee3dc6cb4b394ee1da170cb902b88fcb0f1ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277231"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759330"
 ---
 # <a name="count-property-ado"></a>Count プロパティ (ADO)
 コレクション内のオブジェクトの数を示します。  
@@ -33,11 +30,11 @@ ms.locfileid: "35277231"
  返します、**長い**値。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**カウント**プロパティを指定したコレクション内のオブジェクトの数を調べる。  
+ 使用して、**カウント**プロパティを指定したコレクション内のオブジェクトの数を確認します。  
   
- コレクションのメンバーの番号付けは 0 から始まるため、する必要がありますループ常に 0 から始まるの値で終わる、**カウント**から 1 を引いたプロパティです。 Microsoft Visual Basic を使用しているし、確認せずにコレクションのメンバーをループ処理する場合、**カウント**プロパティを使用して、**ごとにしています.[次へ]** コマンド。  
+ ループの値で始まり、0 個のメンバーとをコーディングするため、ゼロから始まる番号のコレクションのメンバーは、常にする必要があります、**カウント**から 1 を引いたプロパティ。 Microsoft Visual Basic を使用しているをチェックせずにコレクションのメンバーをループ処理する場合、**カウント**プロパティを使用して、**ごとにしています.[次へ]** コマンド。  
   
- 場合、**カウント**プロパティが 0 で、コレクションにオブジェクトがありません。  
+ 場合、**カウント**プロパティが 0 で、コレクション内のオブジェクトはありません。  
   
 ## <a name="applies-to"></a>適用対象  
   

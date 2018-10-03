@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
 - replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6792475636bc5e265b429f1d3243ba34cfd18db2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079282"
 ---
 # <a name="best-practices-for-replication-administration"></a>レプリケーション管理の推奨事項
   レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで説明する推奨事項に従うだけでなく、よく寄せられる質問のトピック「[レプリケーションの管理者に関してよく寄せられる質問](frequently-asked-questions-for-replication-administrators.md)」に目を通し、一般的な疑問と問題点について理解することをお勧めします。  
@@ -98,13 +95,13 @@ ms.locfileid: "37254364"
   
 -   スループット : 長期間にわたってシステムが維持できるレプリケーションの総利用状況 (一定期間内に配信されたコマンドで測定されます)。  
   
--   同時実行数 : システムにおいて同時に実行可能なレプリケーションのプロセス数。  
+-   コンカレンシー数 : システムにおいて同時に実行可能なレプリケーションのプロセス数。  
   
 -   同期の実行時間 : 同期処理が完了するまでに必要な時間。  
   
 -   リソース消費量 : レプリケーション プロセスの結果として使用されるハードウェアおよびネットワークのリソース。  
   
- トランザクション レプリケーションに最も関連するのは待機時間およびスループットです。トランザクション レプリケーションを使用するシステムでは、一般的に短い待機時間と高いスループットが要求されるためです。 マージ レプリケーションに最も関連するのは同時実行数と同期の実行時間です。マージ レプリケーションを使用するシステムでは多数のサブスクライバーが存在することが多く、これらのサブスクライバーに対してパブリッシャーが同時に多数の同期を行うことがあるためです。  
+ トランザクション レプリケーションに最も関連するのは待機時間およびスループットです。トランザクション レプリケーションを使用するシステムでは、一般的に短い待機時間と高いスループットが要求されるためです。 マージ レプリケーションに最も関連するのはコンカレンシー数と同期の実行時間です。マージ レプリケーションを使用するシステムでは多数のサブスクライバーが存在することが多く、これらのサブスクライバーに対してパブリッシャーが同時に多数の同期を行うことがあるためです。  
   
  基準となる数値を設定したら、レプリケーション モニターでしきい値を設定します。 詳細については、「[Set Thresholds and Warnings in Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)」 (レプリケーション モニターのしきい値と警告の設定) と「[Use Alerts for Replication Agent Events](../agents/use-alerts-for-replication-agent-events.md)」 (レプリケーション エージェント イベントに対する警告の使用) を参照してください。 パフォーマンスに関する問題が発生した場合は、上記のパフォーマンスの向上に関するトピックに目を通し、問題の解決に役立つ変更を適用することをお勧めします。  
   

@@ -1,14 +1,11 @@
 ---
-title: FileTableRootPath (TRANSACT-SQL) |Microsoft ドキュメント
+title: FileTableRootPath (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 637653dc75154f00c14cb248703aec3645f313bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732930"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +39,10 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
   
 ## <a name="arguments"></a>引数  
  *FileTable_name*  
- FileTable の名前。 *FileTable_name*の種類は**nvarchar**です。 これは省略可能なパラメーターです。 既定値は、現在のデータベースです。 指定する*schema_name*も省略可能です。 NULL を渡すことが*FileTable_name*既定パラメーター値を使用するには  
+ FileTable の名前。 *FileTable_name*の種類は**nvarchar**します。 これは省略可能なパラメーターです。 既定値は、現在のデータベースです。 指定する*schema_name*も省略可能です。 NULL を渡すことが*FileTable_name*パラメーターの既定値を使用するには  
   
  *@option*  
- パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option* 次の値のいずれかを持つことができます。  
+ パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option* 次の値のいずれかを設定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -65,7 +62,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
   
 -   呼び出し元に、指定されたテーブルまたは現在のデータベースを参照するための十分な権限がない。  
   
--   FILESTREAM オプション*database_directory*現在のデータベースに対して設定されていません。  
+-   FILESTREAM オプション*database_directory*現在のデータベースに設定されていません。  
   
  詳しくは、「 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)」をご覧ください。  
   
@@ -86,7 +83,7 @@ WHERE Name = N’document.docx’;
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  **FileTableRootPath**関数が必要です。  
   
 -   特定の FileTable のルート パスを取得するために、FileTable に対する SELECT 権限が必要です。  

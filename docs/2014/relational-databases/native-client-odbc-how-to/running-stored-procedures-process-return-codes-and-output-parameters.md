@@ -1,27 +1,24 @@
 ---
-title: リターン コードと出力パラメーター (ODBC) の処理 |Microsoft Docs
+title: リターン コードと出力パラメーター (ODBC) の処理 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 19a151435ec23ae2e445d80e510c5bca7b066e04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118718"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>リターン コードと出力パラメーターの処理 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーター、サーバーから最後のパケットで送信され、までアプリケーションをご利用いただけません[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) sql_no_data が返されます。 ストアド プロシージャからエラーが返された場合は、SQL_NO_DATA が返されるまでは、次の結果に進めておく SQLMoreResults を呼び出します。  
@@ -31,7 +28,7 @@ ms.locfileid: "37422531"
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>リターン コードと出力パラメーターを処理するには  
   
-1.  ODBC CALL エスケープ シーケンスを使用する SQL ステートメントを構築します。 このステートメントでは、各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対してパラメーター マーカーを使用する必要があります。  
+1.  ODBC CALL エスケープ シーケンスを使用する SQL ステートメントを作成します。 このステートメントでは、各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対してパラメーター マーカーを使用する必要があります。  
   
 2.  呼び出す[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 、それぞれの入力入出力、出力パラメーター、およびプロシージャの戻り値 (ある場合)。  
   

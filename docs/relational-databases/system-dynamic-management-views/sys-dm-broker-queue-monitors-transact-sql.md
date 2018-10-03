@@ -1,12 +1,10 @@
 ---
-title: sys.dm_broker_queue_monitors (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_broker_queue_monitors (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_broker_queue_monitors
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cef9da48e964164ca13b80de6f69c00d889bd08
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779860"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,16 +32,16 @@ ms.lasthandoff: 05/23/2018
   インスタンス内のキュー モニターごとに 1 行のデータを返します。 キュー モニターは、キューのアクティブ化を管理します。  
   
 
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|モニターで監視するキューが含まれるデータベースのオブジェクト識別子。 NULL 値は許可されます。|  
 |**queue_id**|**int**|モニターで監視するキューのオブジェクト識別子。 NULL 値は許可されます。|  
-|**状態**|**nvarchar(32)**|モニターの状態です。 NULL 値は許可されます。 これは、次のいずれかです。<br /><br /> **非アクティブ**<br /><br /> **通知**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|モニターの状態。 NULL 値は許可されます。 これは、次のいずれかです。<br /><br /> **非アクティブ**<br /><br /> **通知を受け取る**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|キューからの RECEIVE で、空の結果が返された前回の時刻。 NULL 値は許可されます。|  
 |**last_activated_time**|**datetime**|キュー モニターによってストアド プロシージャがアクティブ化された前回の時刻。 NULL 値は許可されます。|  
 |**tasks_waiting**|**int**|キューの RECEIVE ステートメント内で現在待機中のセッション数。 NULL 値は許可されます。<br /><br /> 注: この数には、キュー モニターが、セッションを開始するかどうかに関係なく、receive ステートメントを実行するセッションが含まれます。 これは、RECEIVE と共に WAITFOR を使用する場合に該当します。 基本的に、これらのタスクはキューでメッセージが受信されるのを待機しています。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -79,7 +77,7 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 関連の動的管理ビュー & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

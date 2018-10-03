@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093822"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
   このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、レポートを作成します。  
@@ -344,10 +341,10 @@ ms.locfileid: "39084044"
   
 1.  レポート データ ペインで **[パラメーター]** を展開します。  
   
-2.  右クリックして\@ProductProductCategoryName、 をクリックし、**パラメーターのプロパティ**します。  
+2.  \@ProductProductCategoryName を右クリックし、**[パラメーターのプロパティ]** をクリックします。  
   
     > [!NOTE]  
-    >  \@名前の横にある文字の場合、これがパラメーターであることを示します。  
+    >  名前の横の \@ 文字は、これがパラメーターであることを示しています。  
   
 3.  **[全般]** タブで **[非表示]** をクリックします。  
   

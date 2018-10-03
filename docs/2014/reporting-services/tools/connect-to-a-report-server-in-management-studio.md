@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - registering report servers
 - report servers [Reporting Services], registering
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 49c367adde71d1d42a0052e6029ab2fa6d015d9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70c4c6cb0a72a4feffad2323dc1dd22534560f3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099044"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio でレポート サーバーに接続する
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファミリのあらゆるサーバーに接続して、その内容をグラフィカルに表示できます。 Reporting Services については、オブジェクト エクスプローラーを使用して、次のことを実行できます。  
@@ -83,7 +80,7 @@ ms.locfileid: "37172159"
   
     -   ネイティブ モードのレポート サーバーでは、レポート サーバー インスタンスの名前を入力します。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 既定では、ローカル レポート サーバー インスタンスのインスタンス名はコンピューター名です。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、*\<サーバー名>[\\<インスタンス名\>]* の形式でサーバーを指定します。  
   
-    -   SharePoint 統合モードで動作するレポート サーバーの場合、接続先のサーバーは、レポート サーバーが接続されている SharePoint サイトです。 SharePoint サイトに接続して初めて、レポート サーバーのコンテンツおよび操作へのアクセスを制御する権限レベルを閲覧できるようになります。 サイト コレクション内の任意のサイトを指定できます。 構文例を次に示します。http://mysharepointsite  
+    -   SharePoint 統合モードで動作するレポート サーバーの場合、接続先のサーバーは、レポート サーバーが接続されている SharePoint サイトです。 SharePoint サイトに接続して初めて、レポート サーバーのコンテンツおよび操作へのアクセスを制御する権限レベルを閲覧できるようになります。 サイト コレクション内の任意のサイトを指定できます。 構文例を次に示します。 http://mysharepointsite  
   
 5.  **[認証]** では、Web サーバーへのアクセスに使用する認証モードを選択します。 レポート サーバーで既に使用している認証モードを選択する必要があります。  
   

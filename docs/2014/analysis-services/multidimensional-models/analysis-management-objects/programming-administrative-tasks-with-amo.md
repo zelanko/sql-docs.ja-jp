@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b1563187c936c76c41759d94a6af2949094e83cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 535d02c61df55ffd51c44c02ae59c3d71c913978
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197842"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066213"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>AMO による管理タスクのプログラミング
   分析管理オブジェクト (AMO) は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] を管理するためにクライアント アプリケーションから使用されるプログラミング ライブラリです。 ここでは、AMO オブジェクトを使用したプログラミング方法について説明します。  

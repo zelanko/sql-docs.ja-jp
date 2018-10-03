@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236172"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093174"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>[ブラウザー] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ内のディメンション、メジャー、および KPI を探索するには、キューブ デザイナーの **[ブラウザー]** タブを使用します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ ブラウザーが MDX クエリ デザイナーに統合され、MDX クエリの作成、キューブのフィルター処理とスライス、階層のドリル ダウンをグラフィカル ユーザー インターフェイスによって行うことができます。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ForceRebuildInterval Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ForceRebuildInterval element
 ms.assetid: d068f92e-4213-471c-a3a4-aec5af4b8ebf
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa11e0fda75e55f5f8d9af5414203c7822cb5eb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7e888f045ae2305133c20375915936d4bce6695
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133630"
 ---
 # <a name="forcerebuildinterval-element-assl"></a>ForceRebuildInterval 要素 (ASSL)
   新しい多次元 OLAP (MOLAP) 画像が使用できるようになり、MOLAP 画像処理が無条件で開始されるまでの時間を指定します。  

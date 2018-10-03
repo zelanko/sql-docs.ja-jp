@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad77c531a5ea83cc5d65b5be17e9cc231f00abe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079675"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  CTP2 へのアップグレード シナリオは 4 つあります。 状況に適したシナリオを選択してください。  
@@ -121,7 +118,7 @@ ms.locfileid: "37235792"
   
     4.  ウィザードを完了します。  
   
-3.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみ**: アップグレードが完了したら、追加、 ** [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] **機能します。  
+3.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみ**: アップグレードが完了したら、追加、 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 機能します。  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを開きます。  
   
@@ -131,7 +128,7 @@ ms.locfileid: "37235792"
   
     4.  **インストールの種類**、ウィザードのページ、**既存のインスタンスに機能を追加**オプション、および MDS データベースがインストールされているインスタンスを選択します。  
   
-    5.  **機能の選択**] ページ [**共有機能**を選択します** [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** します。  
+    5.  **機能の選択**] ページ [**共有機能**を選択します **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** します。  
   
     6.  ウィザードを完了します。  
   

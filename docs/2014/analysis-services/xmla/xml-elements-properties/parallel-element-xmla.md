@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 2015-12-07
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Parallel Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Parallel element
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b514732345cc8c4c7c0bc2c2f4f3fa0ad2d75993
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90c722d8bb1b32e17ef5dc27e8ea0c84b00ff80e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091562"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
   親コマンド [Batch](../xml-elements-commands/batch-element-xmla.md) によって並列的に実行されるコマンドを識別します。  

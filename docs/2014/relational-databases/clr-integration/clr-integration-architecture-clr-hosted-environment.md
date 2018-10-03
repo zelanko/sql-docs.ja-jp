@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129161"
 ---
 # <a name="clr-hosted-environment"></a>CLR ホスト環境
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework CLR (共通言語ランタイム) は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++ など、多くの最新のプログラミング言語を実行する環境です。 CLR の特色には、ガベージ コレクションが行われるメモリ、プリエンプティブなスレッド処理、メタデータ サービス (型リフレクション)、コードの検証可能性、コード アクセス セキュリティなどがあります。 CLR では、クラスの検索と読み込み、メモリ内でのインスタンスのレイアウト、メソッド呼び出しの解決、ネイティブ コードの生成、セキュリティの設定、およびランタイム コンテキスト境界の設定にメタデータが使用されます。  
@@ -65,12 +62,11 @@ ms.locfileid: "37354694"
   
  このようにスレッド処理、スケジュール設定、およびメモリ管理のモデルが異なるため、数千の同時実行ユーザー セッションをサポートするまで規模が拡大された RDBMS (リレーショナル データベース管理システム) では統合が課題になります。 アーキテクチャでは、スレッド処理、メモリ、および同期プリミティブの API (アプリケーション プログラミング インターフェイス) を直接呼び出すユーザー コードによってシステムのスケーラビリティが損なわれないことを保証する必要があります。  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>セキュリティ  
  データベースで実行されるユーザー コードがテーブルや列などのデータベース オブジェクトにアクセスする際には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の認証規則と承認規則に従う必要があります。 また、データベース管理者は、データベースで実行しているユーザー コードからファイルやネットワーク アクセスなどのオペレーティング システム リソースへのアクセスを制御できる必要があります。 (Transact-SQL などの非マネージド言語とは異なり) このようなリソースにアクセスする API が用意されているマネージド プログラミング言語ではこのことが重要になります。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] プロセス外のコンピューター リソースにアクセスするユーザー コードには、システムによりセキュリティで保護された方法が提供される必要があります。 詳細については、「 [CLR 統合のセキュリティ](security/clr-integration-security.md)」を参照してください。  
   
 ###### <a name="performance"></a>[パフォーマンス]  
- 
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で実行されるマネージド ユーザー コードと、サーバーの外部で実行されるマネージド ユーザー コードのコンピューター処理パフォーマンスは同程度になる必要があります。 マネージド ユーザー コードからのデータ アクセスは、ネイティブ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ほど高速ではありません。 詳細については、次を参照してください。 [CLR 統合のパフォーマンス](clr-integration-architecture-performance.md)します。  
+ [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で実行されるマネージド ユーザー コードと、サーバーの外部で実行されるマネージド ユーザー コードのコンピューター処理パフォーマンスは同程度になる必要があります。 マネージド ユーザー コードからのデータ アクセスは、ネイティブ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ほど高速ではありません。 詳細については、次を参照してください。 [CLR 統合のパフォーマンス](clr-integration-architecture-performance.md)します。  
   
 ## <a name="clr-services"></a>CLR サービス  
  CLR により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との CLR 統合のデザイン目標を達成するのに役立つ多数のサービスが提供されます。  
@@ -140,7 +136,7 @@ ms.locfileid: "37354694"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ホストレベルの CAS ポリシー層を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カタログに格納されている権限セットに基づいて上記の 3 つの権限セットのうちのいずれかを許可するホスト ポリシーを構成します。 データベース内部で実行するマネージド コードには、これらのコード アクセス権限セットのうちのいずれかが必ず許可されます。  
   
 ### <a name="programming-model-restrictions"></a>プログラミング モデルの制限  
- ph x="1" /&gt; のマネージド コードのプログラミング モデルでは、通常、複数の呼び出し間で保持される状態の使用や複数のユーザー セッション間での状態の共有を必要としない関数、プロシージャ、および型の記述が必要になります。 さらに、既に説明したように、共有状態が存在すると、アプリケーションのスケーラビリティや信頼性に影響を与える重大な例外が発生する可能性があります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のマネージド コードのプログラミング モデルでは、通常、複数の呼び出し間で保持される状態の使用や複数のユーザー セッション間での状態の共有を必要としない関数、プロシージャ、および型の記述が必要になります。 さらに、既に説明したように、共有状態が存在すると、アプリケーションのスケーラビリティや信頼性に影響を与える重大な例外が発生する可能性があります。  
   
  このような考慮事項を考えると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用するクラスの静的変数や静的なデータ メンバーを使用することはお勧めしません。 SAFE アセンブリと EXTERNAL_ACCESS アセンブリの場合、CREATE ASSEMBLY を使用するときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でアセンブリのメタデータが調べられ、静的なデータ メンバーや変数の使用が検出された場合はこのようなアセンブリを作成できません。  
   

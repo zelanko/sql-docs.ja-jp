@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MembersWithDataCaption Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MembersWithDataCaption element
 ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd8884d67717267e44751841203ce2f73d07ecfb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 847a355f2517a5a630096e2617a27bdae396e565
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103902"
 ---
 # <a name="memberswithdatacaption-element-assl"></a>MembersWithDataCaption 要素 (ASSL)
   システムによって生成されるデータ メンバーのキャプションを作成するためのテンプレート文字列を提供します。  

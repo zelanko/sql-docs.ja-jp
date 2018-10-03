@@ -1,26 +1,23 @@
 ---
-title: C から SQL への変換 |Microsoft Docs
+title: C から SQL への変換 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f1f44e37b212c973a59fbead2618bfbb477370e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410080"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109502"
 ---
 # <a name="conversions-from-c-to-sql"></a>C から SQL への変換
   このトピックでは、C 型から変換する際に考慮する問題を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付/時刻型です。  
@@ -62,7 +59,7 @@ ms.locfileid: "37410080"
 |10|データの損失を伴う切り捨てが行われると、"時間の形式が正しくありません" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。 サーバーが使用する UTC の範囲で表すことができる範囲の外に値がある場合にも、このエラーが発生します。|  
 |11|データのバイト長が、SQL 型が要求する構造体のサイズと等しくない場合、"数値が範囲を超えています" というメッセージで SQLSTATE 22003 の診断レコードが生成されます。|  
 |12|データのバイト長が 4 バイトまたは 8 バイトの場合、データは、生の TDS smalldatetime 形式または datetime 形式でサーバーに送信されます。 データのバイト長が SQL_TIMESTAMP_STRUCT のサイズと完全に一致する場合、データは、datetime2 用の TDS 形式に変換されます。|  
-|13|データの損失を伴う切り捨てが行われると、"文字列データの右側が切り捨てられました" というメッセージで SQLSTATE 22001 の診断レコードが生成されます。<br /><br /> 秒の小数部桁数 (スケール) は、以下に従って変換先列のサイズから決定されます。<br /><br /> **型:** SQL_C_TYPE_TIMESTAMP<br /><br /> 暗黙の小数点以下桁数<br /><br /> 0<br /><br /> 19<br /><br /> 暗黙の小数点以下桁数<br /><br /> 1..9<br /><br /> 21..29<br /><br /> ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。<br /><br /> 列のサイズは、テーブルの範囲を超えるの桁数は 9 が暗黙的に指定します。 この変換では、秒の小数点以下桁数が 9 桁まで許容されます。これは、ODBC で許容される最大桁数です。<br /><br /> 列サイズ 0 は、ODBC では可変長文字型のサイズが無制限であることを意味します (SQL_C_TYPE_TIMESTAMP の 3 桁ルールが適用されなければ 9 桁)。 固定長文字型の列サイズ 0 を指定すると、エラーになります。|  
+|13|データの損失を伴う切り捨てが行われると、"文字列データの右側が切り捨てられました" というメッセージで SQLSTATE 22001 の診断レコードが生成されます。<br /><br /> 秒の小数部桁数 (スケール) は、以下に従って変換先列のサイズから決定されます。<br /><br /> **型:** SQL_C_TYPE_TIMESTAMP<br /><br /> 暗黙の小数点以下桁数<br /><br /> 0<br /><br /> 19<br /><br /> 暗黙の小数点以下桁数<br /><br /> 1..9<br /><br /> 21..29<br /><br /> ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。<br /><br /> テーブルの範囲よりサイズが大きい列の場合は、9 桁と見なされます。 この変換では、秒の小数点以下桁数が 9 桁まで許容されます。これは、ODBC で許容される最大桁数です。<br /><br /> 列サイズ 0 は、ODBC では可変長文字型のサイズが無制限であることを意味します (SQL_C_TYPE_TIMESTAMP の 3 桁ルールが適用されなければ 9 桁)。 固定長文字型の列サイズ 0 を指定すると、エラーになります。|  
 |なし|既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。|  
   
 ## <a name="see-also"></a>参照  

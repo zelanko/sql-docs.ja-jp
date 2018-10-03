@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - report server log files
 - files [Reporting Services], logs
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 077b79d820a30902b2c705a1e2ec55bda31c8d6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45991def5af8ea0efbb1b9ea9a7bc6246770b3d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116899"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services のログ ファイルとソース
   A[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバーとレポート サーバー環境は、さまざまなサーバー操作および状態に関する情報を記録するログの保存先をサポートします。 ログ記録には、実行のログ記録とトレースのログ記録という 2 つの基本的なカテゴリがあります。 実行のログ記録には、レポート実行統計、監査、パフォーマンスの診断、および最適化に関する情報が含まれます。 トレースのログ記録は、エラー メッセージおよび一般的な診断に関する情報です。  
@@ -38,7 +35,7 @@ ms.locfileid: "37210722"
 |Log|説明|  
 |---------|-----------------|  
 |[レポート サーバー実行ログと ExecutionLog3 ビュー](report-server-executionlog-and-the-executionlog3-view.md)|実行ログは、レポート サーバー データベースに格納されている SQL Server のビューです。<br /><br /> レポート サーバー実行ログには、レポートが実行された日時、実行したユーザー、レポートの配信先、使用された表示形式など、特定のレポートに関するデータが含まれます。|  
-|SharePoint トレース ログ|SharePoint で実行されているレポート サーバーの SharePoint トレース ログには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の情報が含まれています。 構成することも[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint 統合ログ サービスに固有の情報。 詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。|  
+|SharePoint トレース ログ|SharePoint で実行されているレポート サーバーの SharePoint トレース ログには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の情報が含まれています。 SharePoint 統合ログ サービスに対して [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 固有の情報を構成することもできます。 詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。|  
 |[レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)|サービスのトレース ログには、アプリケーションのデバッグまたは問題やイベントの調査を行う場合に役立つ詳細情報が含まれます。<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles`|  
 |[レポート サーバーの HTTP ログ](report-server-http-log.md)|HTTP ログ ファイルには、レポート サーバー Web サービスおよびレポート マネージャーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。|  
 |[Windows アプリケーション ログ](windows-application-log.md)|Microsoft Windows アプリケーション ログには、レポート サーバーのイベントに関する情報が含まれます。|  

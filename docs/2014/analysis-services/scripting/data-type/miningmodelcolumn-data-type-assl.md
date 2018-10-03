@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningModelColumn Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningModelColumn data type
 ms.assetid: de8bf815-43b4-4983-bdb9-b67e8563be0e
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 983c164d32408182d943e9509ce5a125efb25f9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b35f260ca14ff416ce5d931457ec741c0736d692
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079462"
 ---
 # <a name="miningmodelcolumn-data-type-assl"></a>MiningModelColumn データ型 (ASSL)
   内の列に関する情報を表すプリミティブ データ型を定義、 [MiningModel](../objects/miningmodel-element-assl.md)要素。  

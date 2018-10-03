@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 81
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049402"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ コンポーネントについて説明します。 データを保護するためには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップすることが不可欠です。 ここでは、バックアップの種類およびバックアップの制限事項について説明します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ デバイスとバックアップ メディアについても取り上げます。  
@@ -125,7 +122,7 @@ ms.locfileid: "37163033"
   
  通常、1 つ以上のデータ ファイルを使用できない状態でも、ログ バックアップは続行できます。 ただし、一括ログ復旧モデルで行われた一括ログ変更がいずれかのファイルに含まれている場合、バックアップを続行するにはすべてのファイルをオンラインにする必要があります。  
   
-### <a name="concurrency-restrictions-during-backup"></a>バックアップ中の同時実行の制限事項  
+### <a name="concurrency-restrictions-during-backup"></a>バックアップ中のコンカレンシーの制限事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オンライン バックアップを使って、使用中のデータベースをバックアップできます。 バックアップ中はほとんどの操作が可能です。たとえば、INSERT、UPDATE、または DELETE ステートメントはバックアップ操作中でも使用できます。 ただし、データベースの作成中または削除中にバックアップ操作を開始しようとすると、データベースの作成または削除操作が完了するまで、またはバックアップがタイムアウトするまで、バックアップ操作が待機します。  
   
  データベース バックアップやトランザクション ログ バックアップ中に、次の操作を実行することはできません。  

@@ -1,13 +1,11 @@
 ---
-title: フィルターおよび RecordCount のプロパティの例 (VB) |Microsoft ドキュメント
+title: Filter および RecordCount プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278679"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675420"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>フィルターおよび RecordCount のプロパティの例 (VB)
-この例が開いている、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)発行元のテーブルで、 ***Pubs***データベース。 次を使用して、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを特定の国/地域のパブリッシャーに対して表示されるレコードの数を制限します。 **RecordCount**およびフィルター処理がフィルター選択されたレコード セットの違いを表示するプロパティを使用します。  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Filter および RecordCount プロパティの例 (VB)
+この例のオープン、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で発行元のテーブルで、 ***Pubs***データベース。 次を使用して、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを特定の国/地域のパブリッシャーに対して表示されるレコードの数を制限します。 **RecordCount**プロパティを使用してフィルター処理されたとフィルター処理されていないレコード セットの間の差分を表示します。  
   
 ```  
 'BeginFilterVB  
@@ -112,7 +109,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  開くには通常より効率的ですを選択するデータがわかっている場合に、 **Recordset** SQL ステートメントを使用します。 この例は、1 つだけを作成する方法を示しています。 **Recordset**し、特定の国からレコードを取得します。  
+>  選択するデータがわかっている場合に、開く方が効率的な**レコード セット**SQL ステートメントを使用します。 この例は、1 つだけを作成する方法を示しています。 **Recordset**し、特定の国からのレコードを取得します。  
   
 ```  
 Attribute VB_Name = "Filter"  

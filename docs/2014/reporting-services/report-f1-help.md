@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-caps.latest.revision: 5
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6feda48cdac4f7a6c43f94abb0fd74d688e7a963
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9170ab9d3765d1310fdaf5c91039713db6d6ab20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081842"
 ---
 # <a name="report-f1-help"></a>レポートの F1 ヘルプ
   このセクションの各トピックでは、 **[レポートのプロパティ]** ダイアログ ボックスでレポートに対して設定できるオプションについて説明します。 **[レポートのプロパティ]** ダイアログ ボックスを表示するには、レポート デザイナーの背景を右クリックし、 **[レポートのプロパティ]** をクリックします。  

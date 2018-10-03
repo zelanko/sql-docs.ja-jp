@@ -1,29 +1,26 @@
 ---
-title: セルセット オブジェクトのプロパティ、メソッド、およびイベント |Microsoft ドキュメント
+title: Cellset オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cellset object [ADO MD], members
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dbe45239a811c10bd20def4d2c34f6251c658f2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f58c6d22ff5a76836c9e348cc387eadd1dc8cf15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714550"
 ---
-# <a name="cellset-object-properties-methods-and-events"></a>セルセット オブジェクトのプロパティ、メソッド、およびイベント
+# <a name="cellset-object-properties-methods-and-events"></a>Cellset オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
  [ActiveConnection プロパティ](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
   
@@ -35,7 +32,7 @@ ms.locfileid: "35283591"
   
  [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Source プロパティ](../../../ado/reference/ado-md-api/source-property-ado-md.md)  
+ [ソースのプロパティ](../../../ado/reference/ado-md-api/source-property-ado-md.md)  
   
  [State プロパティ](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
   

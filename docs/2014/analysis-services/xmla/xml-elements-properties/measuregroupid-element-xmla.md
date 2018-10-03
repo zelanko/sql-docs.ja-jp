@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupID Element
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: ff55777e-54ea-42b9-a084-2e12e0a10988
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0aebf67d4c61e6249ac38969b33db60f26237e31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 35f69c163fa2bf872ea777f5b79d8b7cce10ac76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056452"
 ---
 # <a name="measuregroupid-element-xmla"></a>MeasureGroupID 要素 (XMLA)
   オブジェクト参照を含む親要素内で、メジャー グループを識別します。  
