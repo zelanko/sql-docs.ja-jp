@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], custom member formulas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 - CustomRollupColumn property
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 584fa3b944671aa80e01c8f5ae0080e0c1860366
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e8850ce0f77b69be681bf99bcdcaeddc5234656c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050918"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>ディメンションの属性に対するカスタム メンバー式の設定
   キューブまたはディメンションにカスタム メンバー式の拡張機能を追加して、多次元式 (MDX) の式の結果を持つディメンション メンバーに関連付けられている既定の集計を置換します  (この拡張機能により、ディメンションの指定した属性で `CustomRollupColumn` プロパティが設定されます)。  

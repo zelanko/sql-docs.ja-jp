@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 7beb9b14c215f04fc65b3cff4cb510cd032e1331
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4c7f94672642e0a5d8fa8979dd3972f608519ce5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393760"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799360"
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプト ファイル (AccessToSQL) の作成
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
@@ -399,6 +393,6 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
 ## <a name="next-step"></a>次の手順
 コンソールの運用には、次の手順は[変数値ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [変数値ファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

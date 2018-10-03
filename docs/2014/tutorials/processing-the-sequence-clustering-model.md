@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09981cbe61e0f8b15bdbc95344e9df3e5005e9a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9d5dc03fefedbf95d9e84069c2875db9e8a4be7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066172"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>シーケンス クラスター モデルの処理
   新しいマイニング構造を作成したら、データ マイニング ソリューションに加えた変更を配置し、構造を処理する必要があります。 新しい構造およびマイニング モデルの両方の処理が完了すると、マイニング モデルを参照できるようになります。  

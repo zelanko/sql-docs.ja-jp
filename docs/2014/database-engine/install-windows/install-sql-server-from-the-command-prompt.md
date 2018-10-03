@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, command prompt
@@ -84,16 +82,15 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: 223
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f2128b603957f3f0ecbf661bae194dff3bb0ac2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 842f8f467c3227818b61abb9a03611f497effd3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072782"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server 2014 のインストール
   実行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ、レビュー [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)します。  
@@ -360,7 +357,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。 サポートされる値:<br /><br /> UPGRADE<br /><br /> EditionUpgrade<br /><br /> 値 EditionUpgrade はの既存のエディションのアップグレードに使用されます[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に別のエディション。 サポートされるバージョンとエディションのアップグレードについては、「 [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)」を参照してください。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。 サポートされる値:<br /><br /> アップグレード<br /><br /> EditionUpgrade<br /><br /> 値 EditionUpgrade はの既存のエディションのアップグレードに使用されます[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に別のエディション。 サポートされるバージョンとエディションのアップグレードについては、「 [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)」を参照してください。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可**|ローカライズされたオペレーティング システムに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/*UpdateEnabled*<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには検出された更新プログラムが含まれます。|  
@@ -667,7 +664,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。 サポートされる値:<br /><br /> UPGRADE|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。 サポートされる値:<br /><br /> アップグレード|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可**|ローカライズされたオペレーティング システムに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/*UpdateEnabled*<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには検出された更新プログラムが含まれます。|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6cea127909617ef7230dfd59e995f878274291a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8199d7fc40da29c9fc0657ddcc242252eeace9c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057504"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>詳細レポート (レポート ビルダーおよび SSRS)
   詳細レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 たとえば、次の図では、売り上げ要約レポートに販売注文と合計の一覧が含まれています。 この要約一覧で任意の注文番号をクリックすると、この注文に関する詳細が含まれた別のレポートが開きます。  

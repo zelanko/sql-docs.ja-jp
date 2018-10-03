@@ -5,24 +5,21 @@ ms.date: 02/13/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - マスター データ サービス
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5db1d056725fee435c3e56c7715e7f1ac02695c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32894497"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851075"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
 
@@ -77,7 +74,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>アカウントと権限  
   
-|型|Description|  
+|型|[説明]|  
 |----------|-----------------|  
 |Windows アカウント|Windows のロール、ロール サービス、および機能を構成し、ローカル コンピューター上の IIS にあるアプリケーション プール、Web サイト、および Web アプリケーションを作成して管理する権限がある Windows アカウントを使用して Web サーバー コンピューターにログオンする必要があります。|  
 |サービス アカウント|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web アプリケーションを作成するときは、アプリケーションが実行されるアプリケーション プールの ID を指定する必要があります。 このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの作成時に指定したサービス アカウントと異なっていてもかまいません。<br /><br /> この ID はドメイン ユーザー アカウントである必要があり、データベースにアクセスするために [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの mds_exec データベース ロールに追加されます。 詳細については、「[データベース ログイン、ユーザー、およびロール](../../master-data-services/database-logins-users-and-roles-master-data-services.md)」を参照してください。 また、このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows グループ **MDS_ServiceAccounts**にも追加されます。このグループには、ファイル システムの一時コンパイル ディレクトリ **MDSTempDir**に対する権限が与えられています。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  

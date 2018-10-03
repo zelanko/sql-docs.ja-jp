@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.storage.f1
@@ -17,16 +15,15 @@ f1_keywords:
 - sql12.swb.indexproperties.options.f1
 - sql12.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 240c72d9facde541e2eefa25fd8ba6d456cb7133
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290948"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084704"
 ---
 # <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
   このトピックのセクションでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のダイアログを使用して取得できる各種のインデックス プロパティを参照しています。  
@@ -35,7 +32,7 @@ ms.locfileid: "37290948"
   
  [[インデックスのプロパティ] の [全般] ページ](#General)  
   
- [[<table name> から (インデックス) 列を選択] ダイアログ ボックス](#Columns)  
+ [から (インデックス) 列を選択 ダイアログ ボックス](#Columns)  
   
  [[インデックスのプロパティ] の [ストレージ] ページ](#Storage)  
   
@@ -54,7 +51,7 @@ ms.locfileid: "37290948"
  **[インデックス名]**  
  インデックスの名前を表示します。 このフィールドは、既存のインデックスに関しては読み取り専用です。 新しいインデックスを作成する場合は、インデックスの名前を入力します。  
   
- **インデックスの種類**  
+ **[インデックスの種類]**  
  インデックスの種類を示します。 新しいインデックスの場合は、ダイアログ ボックスを開いたときに選択されたインデックスの種類を示します。 インデックスの種類は、 **[クラスター化]**、 **[非クラスター化]**、 **[プライマリ XML]**、 **[セカンダリ XML]**、 **[空間]**、 **[クラスター化列ストア]**、または **[非クラスター化列ストア]** です。  
   
  **メモ** クラスター化インデックスは、各テーブルに 1 つだけ許可されます。 xVelocity メモリ最適化列ストア インデックスは、各テーブルに 1 つだけ許可されます。  
@@ -89,7 +86,7 @@ ms.locfileid: "37290948"
  **Size**  
  列データ型を格納するために必要な最大バイト数を表示します。 空間列または XML 列の場合は、ゼロ (0) が表示されます。  
   
- **Identity**  
+ **[ID]**  
  インデックス キーを構成する列が ID 列であるかどうかを表示します。  
   
  **[NULL を許容]**  
@@ -143,7 +140,7 @@ ms.locfileid: "37290948"
  **[Filestream ファイル グループ]**  
  FILESTREAM データのファイル グループを指定します。 この一覧には FILESTREAM ファイル グループのみが表示されます。 既定で選択されているのは、PRIMARY FILESTREAM ファイル グループです。 詳細については、「[FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md)」をご覧ください。  
   
- **パーティション構成**  
+ **[パーティション構成]**  
  パーティション構成のインデックスを格納します。 **[パーティション構成]** をクリックすると、下のグリッドが有効になります。 既定で選択されているのは、テーブルのデータを格納するために使用されるパーティション構成です。 一覧にある他のパーティション構成を選択すると、グリッドに表示される情報が更新されます。 詳しくは、「 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)」をご覧ください。  
   
  この [パーティション構成] オプションは、データベースにパーティション構成がなければ使用できません。  

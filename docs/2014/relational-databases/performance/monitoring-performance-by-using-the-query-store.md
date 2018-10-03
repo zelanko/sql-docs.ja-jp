@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a57623bc05b443de086835374b5f409f630b9de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a857b51bf884a1bec30e28935591946da43ef390
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072944"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
   クエリのストアの機能により、クエリ プランの選択やパフォーマンスに関する洞察が DBA に提供されます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 この機能により、クエリ、プラン、ランタイム統計情報の履歴が自動的にキャプチャされ、レビュー用に保持されます。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 クエリ ストアを使用して構成することができます、 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options)オプション。  
@@ -110,7 +107,7 @@ JOIN sys.query_store_query_text AS Txt
  STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。  
   
  DATA_FLUSH_INTERVAL_SECONDS  
- クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を介して構成されます。  
+ クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を介して構成されます。  
   
  MAX_SIZE_MB  
  クエリのストアの最大サイズを構成します。 クエリのストア内のデータが MAX_SIZE_MB の上限に達すると、クエリのストアは自動的に状態を読み取り/書き込みから読み取り専用に変更し、新しいデータの収集を停止します。  

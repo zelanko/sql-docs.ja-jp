@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Edition Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Edition element
 ms.assetid: 521e1286-097e-494f-b036-61047096e87e
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a94ed085a345100579b3305fa43e7e360fe8258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce3d1037aad06a0ec81e32150eed05a47363d835
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094782"
 ---
 # <a name="edition-element-assl"></a>Edition 要素 (ASSL)
   インスタンスの読み取り専用エディションを含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって表される、 [Server](../objects/server-element-assl.md)要素。  

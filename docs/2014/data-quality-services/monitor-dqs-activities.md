@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.administration.activitymonitoring.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a7458eb1aa76eebeb987ef49f7079634b26e577
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e8ba4bae008eb5328d28bd4e48ac383a570b330
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072752"
 ---
 # <a name="monitor-dqs-activities"></a>DQS アクティビティの監視
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ検出、ドメイン管理、照合ポリシー、データ クレンジング、データ照合、および SSIS クレンジングの各アクティビティを一元的に監視する方法について説明します。  
@@ -54,7 +51,7 @@ ms.locfileid: "37267668"
   
     |[情報]|説明|  
     |-----------------|-----------------|  
-    |**ID**|整数値です。 アクティビティ監視のためにシステムによって生成された一意のアクティビティ番号です。|  
+    |**ID**|整数値。 アクティビティ監視のためにシステムによって生成された一意のアクティビティ番号です。|  
     |**名前**|このアクティビティで使用されるナレッジ ベースまたはデータ品質プロジェクトの名前です。|  
     |**アクティブ**|アクティビティが現在アクティブかどうかを示します。 次のいずれかの値になります。<br /><br /> **[アクティブ]**: アクティビティは現在実行中です。<br /><br /> **[終了]**: アクティビティは終了しました。<br /><br /> **[中止]**: DQS 管理者がアクティビティ監視画面を使用してアクティビティを中止したか、ユーザーが [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]の該当する機能領域で実行中にアクティビティを取り消しました。|  
     |**型**|アクティビティの種類を示します。 アクティビティの種類は、 **[ナレッジ マネージメント]**、 **[DQ プロジェクト]**、 **[SSIS クレンジング]** のいずれかの値になります。|  

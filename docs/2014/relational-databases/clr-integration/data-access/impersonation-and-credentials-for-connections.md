@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - credentials [CLR integration]
 - database objects [CLR integration], security
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9af64be53b702dfded163a06562e4f6bdf7e5a61
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 05f3255dac93940439174c20b11769a022bcb7bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072702"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>接続の権限借用と資格情報
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) 統合では、複雑な Windows 認証を使用する方が、SQL Server 認証を使用するよりもセキュリティが向上します。 Windows 認証を使用する場合には、次の点を考慮してください。  

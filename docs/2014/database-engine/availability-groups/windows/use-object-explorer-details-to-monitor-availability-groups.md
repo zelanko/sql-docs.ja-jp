@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.OEdetails.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffadee68a6990a193d794a9af714fd7cd7f5ea08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282205"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075132"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 (SQL Server Management Studio)
   このトピックでは、 **の** [オブジェクト エクスプローラーの詳細] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  

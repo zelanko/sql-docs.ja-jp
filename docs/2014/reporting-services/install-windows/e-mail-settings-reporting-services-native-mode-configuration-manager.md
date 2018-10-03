@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rsconfigtool.emailsettings.f1
 helpviewer_keywords:
 - SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 29168c251d6f468e2d101fab4eb65ebe139f84da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9abd39577d521d8d14d0ecc20ebc75a0f91404d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050424"
 ---
 # <a name="e-mail-settings---configuration-manager-ssrs-native-mode"></a>電子メールの設定 - 構成マネージャー (SSRS ネイティブ モード)
   このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。  

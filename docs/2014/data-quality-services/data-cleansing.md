@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0d882d85e2dcb8c0b8b03d1981912d669afb9a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e04e10b21e0210329a3ce6c09bc10bad53245f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068812"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   データ クレンジングは、データ ソース内のデータの品質を分析し、システムによる推奨事項を手動で承認または拒否し、それによってデータを変更するプロセスです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのデータ クレンジングには、ナレッジ ベースのナレッジにデータがどの程度準拠しているのかを分析するコンピューター支援型のプロセスと、データ スチュワードがコンピューター支援型プロセスの結果を検討および変更してデータ クレンジングが意図したとおりに行われるようにするための対話型プロセスが含まれます。  

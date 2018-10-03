@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery models
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d81eee206ee511c3004d4306a373e527a572901e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5ef0cb341c0f37f6961eebb759f2a236510044f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097493"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースの復旧モデルを表示または変更する方法について説明します。 *復旧モデル*は、トランザクションをログに記録する方法、トランザクション ログのバックアップを必須 (および可能) にするかどうか、利用できる復元操作の種類などを制御するデータベース プロパティです。 復旧モデルの種類は、単純、完全、および一括ログの 3 種類です。 通常、データベースには完全復旧モデルまたは単純復旧モデルが使用されます。 データベースは、任意の時点で別の復旧モデルに切り替えることができます。 **model** データベースは、新しいデータベースの既定の復旧モデルを設定します。  

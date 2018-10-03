@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68b99702f3b3832db9c3912626deb9442862f74d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b346d265c0aafc2eae9e379d813ef2f46dcd4112
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059412"
 ---
 # <a name="application-domains-for-report-server-applications"></a>レポート サーバー アプリケーションのアプリケーション ドメイン
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションを含んだ単一のサービスとしてレポート サーバーが実装されます。 それぞれのアプリケーションは、単一のレポート サーバー プロセス内の独自のアプリケーション ドメインで実行されます。 ほとんどの場合、アプリケーション ドメインは内部的に作成、構成、および管理されます。 ただし、レポート サーバーのアプリケーション ドメインがどのようにリサイクルされるのかを理解しておくと、パフォーマンスまたはメモリの問題を調査したり、中断したサービスをトラブルシューティングしたりする際に、その知識を役立てることができます。  

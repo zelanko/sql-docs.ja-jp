@@ -1,34 +1,31 @@
 ---
-title: StayInSync プロパティの例 (VB) |Microsoft ドキュメント
+title: StayInSync プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3c5ec82ff3481ab8e6adf11a41f61aa149fe604
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4ff9e4c7f1903a187869f15573893d9f7d0c2fe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281901"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851692"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync プロパティの例 (VB)
-この例は、方法、 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティ、階層構造へのアクセスの行を容易に[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
+この例では、どのように[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティには、階層構造にアクセスする行が容易になります。[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
   
- 外側のループには、各著者の姓と名、状態、および識別情報が表示されます。 追加された**レコード セット**から各の行が取得されたため、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに自動的に割り当てられると**最初**によって、 **StayInSync**プロパティされるたびに、親**Recordset**新しい行に移動します。 内側のループには、追加されたレコード セット内の各行から 4 つのフィールドが表示されます。  
+ 外側のループでは、各著者の姓と名、状態、および識別情報が表示されます。 追加された**レコード セット**の各行がから取得した、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに自動的に割り当てられると**最初**によって、 **StayInSync**プロパティたびに、親**Recordset**を新しい行に移動します。 内側のループでは、追加されたレコード セットの各行から 4 つのフィールドが表示されます。  
   
 ```  
 'BeginStayInSyncVB  
@@ -94,6 +91,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync プロパティ](../../../ado/reference/ado-api/stayinsync-property.md)

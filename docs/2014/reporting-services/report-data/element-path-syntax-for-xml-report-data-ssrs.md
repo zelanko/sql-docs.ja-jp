@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcb0036fbf6d0c3f5af18d044d389bc8673cd5ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e43bf28f3908c50bb22fb1d426c84c943321c376
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058892"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
   レポート デザイナーでは、大文字と小文字が区別される要素パスを定義して、レポートに使用するデータを XML データ ソースから指定します。 要素パスとは、XML データ ソースにおける XML 階層のノードとその属性の走査方法を指定するものです。 データセット クエリを空にするか、XML `ElementPath` の XML `Query` を空にした場合、既定の要素パスが使用されます。 XML データ ソースからデータが取得されると、テキスト値を持つ要素ノードおよび要素ノードの属性が、結果セットにおける列になります。 クエリを実行すると、これらのノードと属性の値が、行データになります。 [レポート データ] ペインでは、列がデータセット フィールド コレクションとして表示されます。 このトピックでは、要素パス構文について説明します。  

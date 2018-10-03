@@ -1,27 +1,24 @@
 ---
-title: 製品サポート |Microsoft ドキュメント
+title: 製品のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - product support [ODBC]
 ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c16e8fc60a08db076f41334e1c034ec185d07a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a52573ce455fc19b776143ce009c5fc89ef9523
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802380"
 ---
 # <a name="product-support"></a>製品のサポート
-ODBC の製品サポートは、マイクロソフト製品サポート サービスによって提供されます。 多くの Microsoft 製品では、主要なコンポーネントとして ODBC を使用し、ODBC ドライバーを再配布もため、マイクロソフト製品サポート サービスは ODBC コンポーネントとして ODBC が組み込まれている各製品の一部であると見なします。 サポート ODBC がその製品のサポート契約に従って提供します。 詳細については、個々 の製品ドキュメントを参照してください。
+ODBC の製品サポートは、マイクロソフト製品サポート サービスによって提供されます。 多くの Microsoft 製品が主要なコンポーネントとして ODBC を使用して、ODBC ドライバーを再配布もため、マイクロソフト製品サポート サービスは、コンポーネントとして ODBC が組み込まれている各製品の一部として ODBC を考慮します。 サポートする製品のサポート契約に従って ODBC が提供されます。 詳細については、個々 の製品ドキュメントを参照してください。

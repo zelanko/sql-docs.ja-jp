@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - adding assembly references
 - assemblies [Reporting Services], references
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
-caps.latest.revision: 42
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 93f77d928916628ecb3ed5d11d4da49a3c8e61d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78e888c74c1bac7c3f4d26ae49e92dfdb3451874
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052268"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>レポートにアセンブリへの参照を追加する (SSRS)
   <xref:System.Math> または <xref:System.Convert> にない [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスへの参照を含むカスタム コードを埋め込む場合は、レポート プロセッサで名前を解決できるように、レポートへのアセンブリ参照を指定する必要があります。 詳細については、「[レポートにコードを追加する (SSRS)](add-code-to-a-report-ssrs.md)」を参照してください。  

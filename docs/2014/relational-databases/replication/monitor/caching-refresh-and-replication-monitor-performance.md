@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - refreshing data
 - Replication Monitor, refreshing
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0816ea29b873777c54d77e34d691c909c8e6208
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e3c468524f470a11ec73ace3c5feffaa2f52ead
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049672"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>キャッシュ、更新、およびレプリケーション モニターのパフォーマンス
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターは、運用システム内の多数のコンピューターを効率的に監視することを目的に設計されています。 計算の実行、およびデータの収集のためにレプリケーション モニターによって使用されるクエリは、定期的にキャッシュおよび更新されます。 キャッシュによってレプリケーション モニターでさまざまなページを表示する際に必要なクエリと計算の数が削減され、監視のスケーラビリティが向上し、複数のユーザーに対応できるようになります。  

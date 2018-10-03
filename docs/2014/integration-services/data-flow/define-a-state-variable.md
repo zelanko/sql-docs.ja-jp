@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: efe8941ee77c9dbfd8ee335e9e1a2ed2931d1503
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322682"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072569"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  

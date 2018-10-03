@@ -1,13 +1,11 @@
 ---
-title: レコードを追加する |Microsoft ドキュメント
+title: レコードの追加 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a1d367e572a7839b6a5d54b1c6460716aa09160
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850410"
 ---
 # <a name="adding-records-to-a-recordset"></a>レコードをレコード セットに追加します。
-使用して、 **AddNew**メソッドを作成し、既存の新しいレコードの初期化を**Recordset**です。 使用することができます、**サポート**メソッドを**CursorOptionEnum**の値**adAddNew**現在のレコードを追加できるかどうかを確認する**レコードセット**オブジェクト。
+使用して、 **AddNew**メソッドを作成し、既存の新しいレコードの初期化を**Recordset**します。 使用することができます、**サポート**メソッドを**CursorOptionEnum**の値**adAddNew**を現在のレコードを追加できるかどうかを確認する**レコードセット**オブジェクト。
 
- 呼び出した後、 **AddNew**メソッド、新しいレコードを現在のレコードになりを呼び出した後は、**更新**メソッドです。 場合、 **Recordset**オブジェクトはブックマークをサポートしていない、別のレコードに移動すると、新しいレコードにアクセスできません。 そのため、カーソルの種類に応じてする必要がありますを呼び出して、 **Requery**メソッドを新しいレコードにアクセスできるようにします。
+ 呼び出した後、 **AddNew**メソッドでは、新しいレコードが現在のレコードになり、を呼び出した後は、最新の状態、 **Update**メソッド。 場合、 **Recordset**オブジェクトは、ブックマークをサポートしていない、別のレコードに移動すると、新しいレコードにアクセスすることができません。 そのため、カーソルの種類に応じてする必要がありますを呼び出す、 **Requery**メソッドを新しいレコードにアクセスできるようにします。
 
- 呼び出す場合**AddNew** ADO が呼び出し、現在のレコードを編集するときに、新しいレコードを追加するときに、**更新**を保存する方法を変更し、レコードを作成して、新しいです。
+ 呼び出す場合**AddNew** ADO を呼び出し、現在のレコードを編集している間、または新しいレコードを追加するときに、 **Update**を保存する方法の変更し、新しいレコードを作成します。
 
  このセクションでは、次のトピックを扱います。
 

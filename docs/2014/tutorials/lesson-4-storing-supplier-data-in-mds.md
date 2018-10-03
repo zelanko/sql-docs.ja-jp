@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778e28463c8fcb6b46a59e5929801dd56c819186
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 363b92c975bd80f4d3298a2082b6cedfee9b1263
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393314"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048823"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>レッスン 4: MDS に仕入先データを格納する
   マスター データ サービス (MDS) は、マスター データ管理用の SQL Server ソリューションです。 マスター データ管理 (MDM) とは、データの非トランザクション リストを探索および定義するために組織が必要とする作業を表します。  

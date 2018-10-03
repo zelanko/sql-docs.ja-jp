@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], named sets
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - queries [MDX], named sets
 - set expressions [MDX]
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f990def60c377ca84b5dde593470634f3927b496
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b390fd7b731f37be46aae06f0b79473bda4f2e81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297462"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083062"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>MDX での名前付きセットの作成 (MDX)
   セット式は、長く複雑な宣言になることがあり、そのような場合は読みにくく、理解するのが難しい式になります。 また、同じセット式を頻繁に使用する場合に、その同じセットを繰り返し定義しなければならないのは面倒です。 長く複雑な式や頻繁に使用する式の取り扱いを簡略化するために、多次元式 (MDX) では、そのような式を *名前付きセット*として定義できるようになっています。  

@@ -1,47 +1,44 @@
 ---
-title: 結果 (基本) を取得する |Microsoft ドキュメント
+title: 検索 (Basic) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], about result sets
 - data sources [ODBC], result sets
 - empty result sets [ODBC]
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b09820c0716d6d7a8261ede3b5a4173dc73f384d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913007"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772210"
 ---
-# <a name="retrieving-results-basic"></a>結果 (基本) を取得します。
-A*結果セット*特定の条件に一致するデータ ソース上の行のセットです。 これは、クエリの実行結果し、するアプリケーションが使用できる、表形式で概念テーブルです。 **選択**ステートメント、カタログ関数、およびいくつかの手順は、結果セットを作成します。 次の例では、最初の SQL ステートメントは、すべての行と Orders テーブル内のすべての列を含む結果セットを作成し、2 番目の SQL ステートメントの Orders テーブル内の行の OrderID、販売員、およびステータスの列を含む結果セットを作成します。状態の開く。  
+# <a name="retrieving-results-basic"></a>結果の取得 (基本)
+A*結果セット*は特定の条件に一致するデータ ソースで行のセットです。 これは、クエリの実行結果し、するが表形式で、アプリケーションで使用できる概念テーブルです。 **選択**ステートメント、カタログ関数、およびいくつかの手順は、結果セットを作成します。 次の例では、最初の SQL ステートメントのすべての行と、Orders テーブルのすべての列を含む結果セットを作成して 2 番目の SQL ステートメントは、Orders テーブル内の行の OrderID、営業担当者、および状態の列を含む結果セットを作成します。状態の開く。  
   
 ```  
 SELECT * FROM Orders  
 SELECT OrderID, SalesPerson, Status FROM Orders WHERE Status = 'OPEN'  
 ```  
   
- 結果セットとは何の結果もすべての設定に異なる、空で指定できます。 たとえば、次の SQL ステートメントには、空の結果セットを作成します。  
+ 結果セットを空にすることとは異なる結果がすべての設定はありません。 たとえば、次の SQL ステートメントは、空の結果セットを作成します。  
   
 ```  
 SELECT * FROM Orders WHERE 1 = 2  
 ```  
   
- 空の結果セットは、その他の結果セットから行を持たないする点を除いて同じです。 たとえば、アプリケーション結果セットのメタデータを取得することができます、行をフェッチしようとしてでき、結果セットに対して、カーソルを閉じる必要があります。  
+ 空の結果セットは、設定する点を除いて、行を持たないその他の結果と変わりません。 たとえば、アプリケーション、結果セットのメタデータを取得できます、行をフェッチしようとしてでき、結果セットに対して、カーソルを閉じる必要があります。  
   
- データ ソースから行を取得して、それらをアプリケーションに返すのプロセスが呼び出されると*フェッチ*です。 このセクションでは、そのプロセスの基本的な構成要素について説明します。 スクロール可能なカーソルは、ブロックなどのより高度なトピックについての情報を参照してください。[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)と[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)です。 更新については、削除、および行の挿入を参照してください[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)です。  
+ データ ソースから行を取得して、アプリケーションに戻すプロセスと呼ばれます*フェッチ*します。 このセクションでは、そのプロセスの基本的なパーツについて説明します。 スクロール可能なカーソルは、ブロックなどのより高度なトピックについては、次を参照してください。[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)と[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)します。 更新方法の詳細については、削除、および行の挿入を参照してください[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

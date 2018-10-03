@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.proxy.f1
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 65eb54a5db89a535497c4aed32214b9cef006d23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1af35445cdbc6d4b5d24e8109af96e60f81af92f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052862"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>[HTTP 接続マネージャー エディター] ([プロキシ] ページ)
   **[HTTP 接続マネージャー エディター]** の **[プロキシ]** タブを使用すると、HTTP 接続マネージャーがプロキシ サーバーを使用するように設定できます。 HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d5ae9e2ca42a4066aacf7793aade11808da386a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fc6556929b26cb7de683794a670ea592ff35461
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073032"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>PowerPivot for SharePoint 2013 の構成または修復 (PowerPivot 構成ツール)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 構成ツールを使用して、SharePoint 2013 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のインストールを構成または修復します。 構成ツールはまずシステムをスキャンし、インストールを完了または修復するために必要なアクションの一覧を返します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードでは、SharePoint 2010 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールと SharePoint 2013 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールがインストールされます。 このトピックでは、SharePoint 2013 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールについて説明します。 SharePoint 2010 の詳細については、次を参照してください。[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../configure-repair-powerpivot-sharepoint-2010.md)します。  
@@ -191,7 +188,7 @@ ms.locfileid: "37169693"
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールでは、ファーム機能、アプリケーション、およびサービスが 1 つのアカウントを使用して実行されるように準備されます。 これによりインストールは簡略化されますが、SharePoint ファームのセキュリティ要件を満たす配置にはなりません。 配置の堅牢性を高めるには、セットアップの完了後に、異なるアカウントで実行するためにアプリケーション プールおよびサービス ID を変更します。 詳細については、次を参照してください。 [PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)します。  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Excel Services に追加の信頼できるサイトの作成  
- Excel Services に信頼できるサイトを追加して、Excel ブックおよび [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデータを提供するサイトの権限および構成設定を変更できます。 詳細については、「 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
+ Excel Services に信頼できるサイトを追加して、Excel ブックおよび [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデータを提供するサイトの権限および構成設定を変更できます。 詳細については、「 [サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの作成  
  ファームにサーバー コンポーネントをインストールしたら、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが埋め込まれた最初の Excel 2013 ブックを作成して、SharePoint ライブラリにパブリッシュすることができます。 または、サンプルの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをアップロードまたはパブリッシュすると、SharePoint での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスを確認できます。 詳細については、以下を参照してください。  

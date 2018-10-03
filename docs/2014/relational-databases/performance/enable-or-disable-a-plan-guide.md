@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - plan guides [SQL Server], disabling
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - plan guides [SQL Server], enabling
 - disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-caps.latest.revision: 5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e785bf00e5eb67530b9c51e96b70aeab55488510
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7c64bf641a6519c42ad0d3a8cdfd578458f84439
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415701"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061505"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>プラン ガイドの有効化または無効化
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、プラン ガイドを無効化および有効化できます。 データベース内の 1 つのプラン ガイドまたはすべてのプラン ガイドを有効化または無効化できます。  

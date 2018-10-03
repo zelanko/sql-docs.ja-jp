@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
-caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5a218bab115beece45e970d400689daf5882ff16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ace792a76e1bcdbcc7aa6b372d96de1f92c570f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072252"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>レッスン 2 : トランザクション パブリケーションへのサブスクリプションの作成
   このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してサブスクリプションを作成します。 このレッスンを薦めるには、前のレッスンである「 [レッスン 1: トランザクション レプリケーションを使用したデータのパブリッシュ](lesson-1-publishing-data-using-transactional-replication.md)」を完了している必要があります。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ALTER LOGIN statement
@@ -34,12 +32,12 @@ ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c72482740aed5f90bba4c5e8e212950943cda699
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049994"
 ---
 # <a name="password-policy"></a>パスワード ポリシー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows のパスワード ポリシー メカニズムに対応しています。 パスワード ポリシーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインに適用され、パスワードを持つ包含データベース ユーザーに適用されます。  
