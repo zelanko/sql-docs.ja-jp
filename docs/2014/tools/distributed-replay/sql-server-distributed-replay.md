@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d1eebcd00cba9698fc92fd5f4fc2f23f1268d9a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: bc991efeaf05658c78a5b4b0eaf7ca5b528cd9d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093603"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用すると、将来の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアップグレードによる影響を評価できます。 また、ハードウェアとオペレーティング システムのアップグレード、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のチューニングの影響を評価する場合にも使用できます。  
@@ -45,7 +42,7 @@ ms.locfileid: "43818868"
 |ツール|いつ使用するか|  
 |----------|---------------|  
 |[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]|1 台のコンピューター上で、従来の再生のメカニズムを使用する場合。 特に、 **[ステップ]**、 **[カーソルまで実行]**、 **[ブレークポイントの設定/解除]** など、1 行ずつのデバッグ機能が必要な場合。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] トレースを再生する場合。|  
-|Distributed Replay|アプリケーションの互換性を評価する場合。 たとえば、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] とオペレーティング システムのアップグレード シナリオ、ハードウェアのアップグレード、インデックス チューニングをテストする場合などがあります。<br /><br /> キャプチャしたトレースの同時実行性が非常に高いため、1 つの再生クライアントで十分にシミュレートできない場合。|  
+|Distributed Replay|アプリケーションの互換性を評価する場合。 たとえば、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] とオペレーティング システムのアップグレード シナリオ、ハードウェアのアップグレード、インデックス チューニングをテストする場合などがあります。<br /><br /> キャプチャしたトレースのコンカレンシーが非常に高いため、1 つの再生クライアントで十分にシミュレートできない場合。|  
   
 ## <a name="distributed-replay-concepts"></a>Distributed Replay の概念  
  Distributed Replay 環境は次のコンポーネントで構成されます。  

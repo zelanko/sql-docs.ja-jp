@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MaxActiveConnections Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MaxActiveConnections element
 ms.assetid: 0dc5b64d-061d-409f-95c0-4c63f87f5ee4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71cc72a5b5b405a1548b08a331edbef10d0d3c60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32947054d4bdeaec091584f5c5921e2311a66f33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090572"
 ---
 # <a name="maxactiveconnections-element-assl"></a>MaxActiveConnections 要素 (ASSL)
   派生した要素によって許可される同時接続の最大数が含まれています、 [DataSource](../data-type/datasource-data-type-assl.md)データ型。  
@@ -60,7 +57,7 @@ ms.locfileid: "37259348"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- この要素の値が 0 に設定されている場合、同時接続の最大数は、データ ソースへのアクセスに使用されるデータ カートリッジによって決まります。 この要素の値が負の値に設定されている場合、同時接続の最大数は無制限です。  
+ この要素の値が 0 に設定されている場合、コンカレント接続の最大数は、データ ソースへのアクセスに使用されるデータ カートリッジによって決まります。 この要素の値が負の値に設定されている場合、コンカレント接続の最大数は無制限です。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

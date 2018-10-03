@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7bc3b226a22dd5bd2c62b124266b868125e38a77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 135d7998939c7b92de541221f89355d625a54c0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094632"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC デザイナー コンソールから CDC サービスを管理する方法
   この手順では、CDC デザイナー コンソールを使用して CDC サービスを管理する方法について説明します。  
@@ -36,7 +33,7 @@ ms.locfileid: "37298822"
   
 4.  CDC サービスでは、以下のタスクを実行できます。  
   
-    -    **新しい CDC インスタンス**の作成  
+    -   **新しい CDC インスタンス**の作成  
   
     -   **すべてのインスタンスの開始** (選択した CDC サービスに含まれるすべてのインスタンス)  
   

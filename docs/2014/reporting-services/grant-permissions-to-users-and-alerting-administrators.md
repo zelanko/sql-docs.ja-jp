@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f46c3f16f0adc630e246b1ee6634a523a295ae2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 53349b7a4536c6f757b65a60bbd5a82691f9969e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220756"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082302"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>ユーザーおよび警告管理者に権限を付与する
   ユーザーおよび警告管理者がデータ警告を作成、編集、削除、および表示できるようにするには、SharePoint 権限を付与する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告機能と共に使用する特別な権限はありません。組み込みの SharePoint 権限を使用します。  

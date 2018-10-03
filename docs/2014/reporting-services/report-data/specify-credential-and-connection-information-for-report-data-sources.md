@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082248"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
   レポート サーバーは、資格情報を使用して、レポートにコンテンツを提供したり、データ ドリブン サブスクリプションに受信者の情報を提供する外部データ ソースに接続します。 Windows 認証、データベース認証、認証なし、またはカスタム認証を使用する資格情報を指定できます。 ネットワーク経由で接続要求を送信するときに、レポート サーバーはユーザー アカウントまたは自動実行アカウントのいずれかの権限を借用します。 接続要求の実行時に使用されるセキュリティ コンテキストの詳細については、このトピックの「 [データ ソースの構成とネットワーク接続](#DataSourceConfigurationConnections) 」をご覧ください。  

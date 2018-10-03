@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Web service [Reporting Services], delivery extension settings
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8004d3a0342098004286d27e4fe23d4333acb717
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce835764cc8964fdd5b6dfb5a6cb19a383ea79b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088862"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 配信拡張機能の設定
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には、電子メールの配信拡張機能とファイル共有の配信拡張機能があります。 電子メールの配信拡張機能では、電子メールを使用して、個々のユーザーやグループにレポートを送信できます。 ファイル共有の配信機能では、生成したレポートをネットワーク上の共有者に自動的に送信できます。 サポートされているいずれかの配信拡張機能を、標準的なサブスクリプションまたはデータ ドリブン サブスクリプションと一緒に使用できます。 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A> メソッド、<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A> メソッド、<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> メソッド、および <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> メソッドを呼び出すときは常に、配信拡張機能の種類に固有の配信設定を渡す必要があります。 配信設定の一覧をプログラムによって取得するには、<xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> メソッドを使用します。  

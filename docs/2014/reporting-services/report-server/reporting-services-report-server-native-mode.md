@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3e2710dae03006cf5f2b762c09aab55bf6663261
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086912"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  
@@ -90,7 +87,7 @@ ms.locfileid: "37157783"
   
  レポート サーバーにリソースを追加するには、ファイルをアップロードまたはパブリッシュします。  
   
-|演算|ファイルの種類|  
+|操作|ファイルの種類|  
 |---------------|---------------|  
 |アップロード|レポート定義 (.rdl) ファイルとレポート モデル (.smdl) ファイルを除くすべてのファイルがアップロードされます。<br /><br /> リソースをアップロードするには、レポート サーバーがネイティブ モードで動作している場合はレポート マネージャーを使用し、レポート サーバーが SharePoint 統合モードで動作している場合は SharePoint サイト上のアプリケーション ページを使用する必要があります。 詳細については、「[ファイルまたはレポートをアップロードする &#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)」または「[SharePoint ライブラリへのドキュメントのアップロード &#40;Reporting Services の SharePoint モード&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)」を参照してください。|  
 |パブリッシュ|.rdl、.smdl、.rds データ ソース ファイルを除くすべてのファイルが、リソースとしてアップロードされます。 リソースをパブリッシュするには、既存のアイテムをレポート デザイナーのプロジェクトに追加した後で、そのプロジェクトをレポート サーバーにパブリッシュします。|  

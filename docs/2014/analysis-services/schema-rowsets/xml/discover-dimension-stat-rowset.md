@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d70382117367762dc35a6d02663f54436ea63bb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39ae0bed8c0e0ff7eb272062b79b870dfb31157e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094982"
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 行セット
   ディメンションに関する情報を提供します。これには、ディメンションを含むデータベースの名前、ディメンション名、その属性、および各属性のメンバーの数が含まれます。 テーブル モデルでは、これはテーブルの列および各列の値の数に相当します。  

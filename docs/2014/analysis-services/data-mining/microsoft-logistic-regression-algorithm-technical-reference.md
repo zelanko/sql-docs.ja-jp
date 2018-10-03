@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f211c048acff10e3e9509beebc909ee141ba56a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 856da25d126c93a370c7d028106df75124f5ec72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094282"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、 *HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50ee6db4cd7e8d16da89f234a67c437390260364
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb8ac0237fc9175f29471a66b7e3916122b55707
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232462"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082292"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>[パラメーター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   選択**パラメーター**で、**データセットのプロパティ**ダイアログ ボックスを追加、変更、およびクエリ パラメーターを削除します。  
@@ -84,7 +81,7 @@ ms.locfileid: "37232462"
  [データセットのプロパティ] ダイアログ ボックスの [クエリ&#40;レポート ビルダー&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [クエリ デザイナー &#40;レポート ビルダー&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   

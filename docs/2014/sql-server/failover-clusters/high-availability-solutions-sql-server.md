@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], solutions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a6e16e57cf7d196f4210ea7a1624e5501f84523
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b48d22e463b8596065c1df68d1affc0de5ef92a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091532"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性ソリューション (SQL Server)
   このトピックでは、サーバーやデータベースの可用性を向上する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の高可用性ソリューションをいくつか紹介します。 高可用性ソリューションは、ハードウェアやソフトウェアで問題が発生した場合でもその影響が現れないようにし、アプリケーションの可用性を維持しながら、ユーザーに影響するダウンタイムを最小限に抑えます。  
@@ -37,13 +34,12 @@ ms.locfileid: "37260022"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サーバーやデータベースの高可用性を実現するために複数の方法が用意されています。 高可用性を実現するには以下の方法があります。  
   
  AlwaysOn フェールオーバー クラスター インスタンス  
- ph x="1" /&gt; AlwaysOn 製品の一部として、AlwaysOn フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル ( *フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 製品の一部として、AlwaysOn フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル ( *フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
   
  詳細については、次を参照してください。 [ AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)します。  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- 
-            [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、次を参照してください。 [ AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)します。  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、次を参照してください。 [ AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)します。  
   
 > [!NOTE]  
 >  FCI は、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  

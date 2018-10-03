@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.DA.f1
 helpviewer_keywords:
 - Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf27eb864e2d0caca4d6cdf27f073a949479bdf9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25de27327b79c0bff1a08ba36c93d68f236a868a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089462"
 ---
 # <a name="distribution-agent-security"></a>[ディストリビューション エージェント セキュリティ]
   **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスを使用すると、ディストリビューション エージェントを実行する Windows アカウントを指定できます。 ディストリビューション エージェントは、プッシュ サブスクリプションのディストリビューターと、プル サブスクリプションのサブスクライバーで動作します。 エージェント プロセスはこのアカウントで実行されるため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントは、 *プロセス アカウント*としても参照されます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  

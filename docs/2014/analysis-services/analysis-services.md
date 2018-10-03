@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4c20d17212de682466947bf86ddd415420b0576
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2bcf7cb620a97578b921ca09d565ff2ef2fe77a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185449"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080971"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、意思決定支援とビジネス インテリジェンス (BI) ソリューションに使用されるオンライン分析データ エンジンであり、ビジネス レポートおよび、Excel、Reporting Services レポート、他のサード パーティの BI ツールのようなクライアント アプリケーションによって使用される分析データを提供します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の一般的なワークフローには、OLAP または表形式のデータ モデルを作成し、そのモデルをデータベースとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに配置し、データが読み込まれるようにデータベースを処理し、データへのアクセスを許可する権限を割り当てることが含まれます。 準備が完了すると、複数の用途を持つこのデータ モデルに、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] をデータ ソースとしてサポートしている任意のクライアント アプリケーションがアクセスできるようになります。  

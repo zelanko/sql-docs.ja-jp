@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access reports [Reporting Services]
 - importing reports
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-caps.latest.revision: 39
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afe85933463aed7e1af3c598f7e8565a9b074677
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc63daf4095238f948be6bde22bf190aa4d1977a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086510"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Microsoft Access からレポートをインポートする (Reporting Services)
   レポート デザイナーからのレポートをインポートすることができます、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access データベースまたはプロジェクト。 レポート デザイナーがインストールされているコンピューターに、Access 2002 以降のバージョンがインストールされている必要があります。  

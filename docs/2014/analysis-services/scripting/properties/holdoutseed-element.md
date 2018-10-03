@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutSeed element
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b5ba2d0d5d3cb355a4d0d6a372b41207ddce1d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97d88ee83d92d22f72db13d20ce37bb6ea9da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185229"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097604"
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 要素
   テスト セットを含む反復可能な提示されたパーティションのシードを指定します、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。 このシードを指定すると、再処理中にモデルのコンテンツが変更されることはありません。 指定されていないか 0 に設定する[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]マイニング構造の名前をハッシュ アルゴリズムを使用して、シードを作成します。  

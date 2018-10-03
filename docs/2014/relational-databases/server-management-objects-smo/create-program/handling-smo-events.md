@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - events [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SMO [SQL Server], events
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e74a05e025f474737130f1faeb61f2647d8e69bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c361fdec050240ae004b553f1b31a5abef094957
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098232"
 ---
 # <a name="handling-smo-events"></a>SMO イベントの処理
   サーバー イベントの型には、イベント ハンドラーおよび <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを使用してサブスクライブできるものがあります。  

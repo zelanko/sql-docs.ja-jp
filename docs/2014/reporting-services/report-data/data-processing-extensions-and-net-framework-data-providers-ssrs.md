@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80d27aca81ccac9b176cbc4fbab21b8cfae544b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f127b201d3141fc3480aa4f1c07ae0e69a03f38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093069"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>データ処理拡張機能と .NET Framework データ プロバイダー (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、特定の種類のデータ ソースからのデータ取得や、レポート デザインやレポート処理をサポートする追加機能を提供することを目的として、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と共にインストールされるコンポーネントです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定の種類のデータ ソースからのデータの取得や変更を可能にする <xref:System.Data> インターフェイスをサポートするコンポーネントで、[!INCLUDE[msCoName](../../includes/msconame-md.md)] またはサード パーティ ソースから入手できます。  
@@ -52,6 +49,6 @@ ms.locfileid: "37150083"
   
 ## <a name="see-also"></a>参照  
  [データ処理拡張機能の概要](../extensions/data-processing/data-processing-extensions-overview.md)   
- [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - endpoints [SQL Server], AlwaysOn Availability Groups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 571ffb7537474343cd595445af77a4ecae48d3e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94cf3cff73e98718db6e097f13dcab47cd676ed4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097184"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>可用性レプリカを追加または変更する場合のエンドポイント URL の指定 (SQL Server)
   可用性グループの可用性レプリカをホストするには、サーバー インスタンスにデータベース ミラーリング エンドポイントが存在する必要があります。 サーバー インスタンスでは、このエンドポイントを使用して、他のサーバー インスタンスによってホストされる可用性レプリカから [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のメッセージをリッスンします。 可用性グループの可用性レプリカを定義するには、そのレプリカをホストするサーバー インスタンスのエンドポイント URL を指定する必要があります。 *エンドポイント URL* は、データベース ミラーリング エンドポイントのトランスポート プロトコル (TCP)、サーバー インスタンスのシステム アドレス、およびエンドポイントに関連付けられているポート番号を識別します。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10026"
 ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
-caps.latest.revision: 9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2c0a3eb8add1540ff086b98128433f0df7a99ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a532ea7dfc3b5b9e551a3ee09ac461b61c46ece5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097842"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>[クエリ パラメーターの定義] ダイアログ ボックス (レポート ビルダー)
   **[クエリ パラメーターの定義]** ダイアログ ボックスを使用すると、デザイン時にクエリ デザイナーでクエリを実行する際のパラメーター値を指定できます。この設定によって、サンプル データを表示させることができます。 クエリ パラメーターを使用すると、データ ソースのデータをフィルター処理し、レポートが処理するデータの量を制限できます。 これらの値は、レポート定義に保存されません。  
