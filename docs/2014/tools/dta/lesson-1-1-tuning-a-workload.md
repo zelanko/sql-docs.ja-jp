@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82d3b33b8c41885d3fa92d1363af6c98443c9deb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073782"
 ---
 # <a name="tuning-a-workload"></a>ワークロードのチューニング
   データベース エンジン チューニング アドバイザーでは、チューニング用に選択したデータベースおよびテーブルについて、最適なクエリ パフォーマンスが得られる物理データベース設計を見つけることができます。  
@@ -30,7 +27,7 @@ ms.locfileid: "37172093"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>ワークロード Transact-SQL スクリプト ファイルのチューニング  
   
-1.  「 」の 「[SELECT の例 (Transact-SQL)](/sql/t-sql/queries/select-examples-transact-sql)」の「A. SELECT を使用して行および列を取得する」からサンプルの SELECT ステートメントをコピーし、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターに貼り付けます。 ファイルに保存します**MyScript.sql**簡単に見つけることはできる場所のディレクトリにします。  
+1.  「 」の 「[SELECT の例 (Transact-SQL)](/sql/t-sql/queries/select-examples-transact-sql)」の「A. SELECT を使用して行および列を取得する」からサンプルの SELECT ステートメントをコピーし、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターに貼り付けます。 このファイルを、探しやすいディレクトリに **MyScript.sql** という名前で保存します。  
   
 2.  データベース エンジン チューニング アドバイザーを起動します。 「[データベース エンジン チューニング アドバイザーの起動](../../relational-databases/performance/database-engine-tuning-advisor.md)」を参照してください。  
   

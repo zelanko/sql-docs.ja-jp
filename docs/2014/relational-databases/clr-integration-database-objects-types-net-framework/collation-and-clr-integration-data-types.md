@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data types [CLR integration]
 - parameter collation [CLR integration]
 - collations [CLR integration]
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56206f6273b413a66a72b2a2c72ed3593b2f9a66
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 40c4abad803424ac9b274045f699785b85689644
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354684"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069902"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>照合順序と CLR 統合データ型
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] では、`CompareInfo` オブジェクトで照合順序が処理されます。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の文字列 API (アプリケーション プログラミング インターフェイス) では、文字列比較を実行するために、現在のスレッドの `CompareInfo` オブジェクトに関連付けられた `CultureInfo` プロパティを使用します。 既定の設定、`CultureInfo`オブジェクトがに基づいて、[!INCLUDE[msCoName](../../includes/msconame-md.md)]となるコンピューターの Windows ロケール設定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。 `CultureInfo` 値の比較の既定の比較セマンティクスは、`System.String` が明示的に指定されていなければ、この設定で決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`CompareInfo` プロパティをデータベースまたはサーバーの照合順序に明示的に変更できせん。 必要であれば、適切な `CompareInfo` プロパティをユーザーがルーチン内で設定します。  

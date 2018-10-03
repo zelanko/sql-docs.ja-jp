@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
-caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0287d3ecf1b3bcbb68acab13eb9a576ea4106477
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19516e1b90a04c29efdfc8175d003a30ddf7957c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071062"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   以下の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、プッシュ サブスクリプションを使用することで、スナップショット パブリケーションおよびトランザクション パブリケーションにサブスクライブできます。 以下に示す 2 つのデータベースの最新バージョンでは、OLE DB プロバイダーを使用したサブスクリプションがサポートされています。  
@@ -91,11 +88,9 @@ ms.locfileid: "37230802"
   
 ### <a name="replication-feature-support"></a>レプリケーション機能のサポート  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プッシュおよびプルの 2 種類のサブスクリプションがオファーされています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーはプッシュ サブスクリプションを使用する必要があります。このサブスクリプションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでディストリビューション エージェントが実行されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プッシュおよびプルの 2 種類のサブスクリプションがオファーされています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーはプッシュ サブスクリプションを使用する必要があります。このサブスクリプションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでディストリビューション エージェントが実行されます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、キャラクター モードのスナップショットを使用する必要があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、キャラクター モードのスナップショットを使用する必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーは、即時更新サブスクリプションおよびキュー更新サブスクリプションを使用できません。また、ピア ツー ピア トポロジのノードになることもできません。  
   
