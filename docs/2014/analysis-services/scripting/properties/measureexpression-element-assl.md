@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureExpression Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureExpression element
 ms.assetid: a0b6490d-a793-41be-8c97-41b08e1580a1
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2eee18ad981c45c009350be926432a5a7a23c4a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edcf32c71f681bf6d8892b8848dfaa67ca8674b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113392"
 ---
 # <a name="measureexpression-element-assl"></a>MeasureExpression 要素 (ASSL)
   親メジャーの値を取得する方法を定義する多次元式 (MDX) を格納します。  
