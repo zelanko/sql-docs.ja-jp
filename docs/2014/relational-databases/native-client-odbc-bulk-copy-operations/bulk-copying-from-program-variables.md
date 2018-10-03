@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d2e24f18efd321f5f56211be4dd0230be7cc39e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 55b1df99038e95f1e3a9a1c609caf1fe8ce982e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080602"
 ---
 # <a name="bulk-copying-from-program-variables"></a>プログラム変数からの一括コピー
   プログラム変数から直接一括コピーできます。 行のデータを保持する変数を割り当てた後[bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)一括コピーを開始するには、呼び出す[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の各列に関連付けられているプログラム変数の形式と場所を指定するには列。 各変数のデータを呼び出すし[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)サーバーに 1 行のデータを送信します。 変数を入力し、呼び出す手順を繰り返す**bcp_sendrow**のすべての行は、サーバーに送信された、まで呼び出して[bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)操作が完了したかを指定します。  

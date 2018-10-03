@@ -1,13 +1,11 @@
 ---
-title: 前のメソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: 前のメソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.previous
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57893930a8bc75b9098ea2e8540115995da94512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 587398c10e693081a9dc6a6c4abb61ff970b2f03
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692321"
 ---
-# <a name="previous-method-sqlserverresultset"></a>前のメソッド (SQLServerResultSet)
+# <a name="previous-method-sqlserverresultset"></a>previous メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この前の行にカーソルを移動[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの前の行にカーソルを移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,12 +36,12 @@ public boolean previous()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**新しい現在の行が有効な場合です。 **false**がこれ以上行を処理する場合。  
+ **true**新しい現在の行が有効な場合。 **false**を処理する行がない場合。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この前のメソッドは、java.sql.ResultSet インターフェイスの前のメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

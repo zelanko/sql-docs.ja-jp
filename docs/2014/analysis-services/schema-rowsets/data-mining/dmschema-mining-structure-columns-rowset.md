@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c012515df76b1f19712c5bf1ba828dafdc787ef7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088372"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS 行セット
   実行しているサーバーに展開されているすべてのマイニング構造の個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
@@ -44,7 +41,7 @@ ms.locfileid: "37171583"
 |`COLUMN_PROPID`|`DBTYPE_UI4`||列のプロパティ ID。 プロパティ ID を列に関連付けないプロバイダーは、この列に `NULL` を返します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 返します`NULL`この列にします。|  
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||列の序数です。 列には 1 から始まる連番が付けられます。 `NULL` 列の序数値がない場合。|  
 |`COLUMN_HASDEFAULT`|`DBTYPE_BOOL`||この列に既定値があるかどうかを示すブール値。<br /><br /> 列に既定値がある場合は、`TRUE` になります。<br /><br /> 列に既定値がないか、列に既定値があるかどうかが不明の場合は、`FALSE` になります。|  
-|`COLUMN_DEFAULT`|`DBTYPE_WSTR`||列の既定値。 プロバイダーは `DBCOLUMN_DEFAULTVALUE` を公開できますが、`DBCOLUMN_HASDEFAULT` によって返される行セットの `IColumnsRowset::GetColumnsRowset` (ISO テーブル用) は公開できません。<br /><br /> 既定値が `NULL` の場合は、`COLUMN_HASDEFAULT` が `TRUE` で、`COLUMN_DEFAULT` 列が `NULL` の値になります。|  
+|`COLUMN_DEFAULT`|`DBTYPE_WSTR`||列の既定値です。 プロバイダーは `DBCOLUMN_DEFAULTVALUE` を公開できますが、`DBCOLUMN_HASDEFAULT` によって返される行セットの `IColumnsRowset::GetColumnsRowset` (ISO テーブル用) は公開できません。<br /><br /> 既定値が `NULL` の場合は、`COLUMN_HASDEFAULT` が `TRUE` で、`COLUMN_DEFAULT` 列が `NULL` の値になります。|  
 |`COLUMN_FLAGS`|`DBTYPE_UI4`||-列の特性を記述するビットマスク。 `DBCOLUMNFLAGS` の列挙型は、ビットマスク内のビットを指定します。 この列に `NULL` 値を含めることはできません。 有効な値は次のとおりです。<br />-   **DBCOLUMNFLAGS_ISNULLABLE** (`0x20`)<br />-   **DBCOLUMNFLAGS_MAYBENULL** (`0x40`)<br />-   **DBCOLUMNFLAGS_ISLONG** (`0x80`)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||この列に既定値があるかどうかを示すブール値。<br /><br /> 列に `TRUE` を含めることができる場合は `NULL`、それ以外の場合は `FALSE` になります。|  
 |`DATA_TYPE`|`DBTYPE_UI2`||列のデータ型のインジケーターです。 以下に例を示します。<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  

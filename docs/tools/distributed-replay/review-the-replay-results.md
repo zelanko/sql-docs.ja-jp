@@ -1,26 +1,23 @@
 ---
-title: 再生結果の確認 |Microsoft ドキュメント
+title: 再生結果の確認 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bf4c08dee623e659e04e3be97f8e015daa57aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: c0f1eaad7a68501abac2d6b8a890b8b56b1f2dcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822210"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +59,9 @@ ms.lasthandoff: 05/03/2018
 ## <a name="column-descriptions-for-result-trace"></a>結果トレースの列の説明  
  次の表では、結果トレース データの列について説明します。  
   
-|データ列名|データ型|Description|列 ID|  
+|データ列名|データ型|[説明]|列 ID|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|イベント クラスの名前。|@shouldalert|  
+|EventClass|**nvarchar**|イベント クラスの名前。|1|  
 |EventSequence|**bigint**|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応するキャプチャ イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは元のトレース データ内のイベント シーケンスです。|2|  
 |ReplaySequence|**bigint**|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応する再生イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは再生中に割り当てられるイベント シーケンスです。|3|  
 |TextData|**ntext**|TextData の内容は、EventClass に依存します。<br /><br /> Audit Login および ExistingConnection では、これは接続の設定オプションです。<br /><br /> SQL:BatchStarting では、これはバッチ要求の本文です。<br /><br /> RPC:Starting では、これは呼び出されたストアド プロシージャです。<br /><br /> Replay Settings Event では、この列には再生構成ファイルで定義された設定が含まれます。<br /><br /> Replay Statistics Event では、これは次の情報を含みます。<br /><br /> - 再生対象 SQL サーバー<br /><br /> - 再生可能なイベントの総数<br /><br /> - プロバイダー エラーの数<br /><br /> - 内部エラーの数<br /><br /> - 内部の警告<br /><br /> - エラーの総数<br /><br /> - 全体のパス レート<br /><br /> - 再生時間 (HH:MM:SS: MMM)<br /><br /> Replay Result Set Event では、これは返される結果の列ヘッダーのリストを示します。<br /><br /> Replay Result Row Event では、その行のすべての列の戻り値を示します。<br /><br /> Replay Internal Warning および Replay Provider Error では、この列はプロバイダー警告またはエラーを含みます。|4|  

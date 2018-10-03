@@ -1,13 +1,11 @@
 ---
-title: インストールして、ODBC のソフトウェアの構成 |Microsoft ドキュメント
+title: インストールして、ODBC のソフトウェアの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - configuring ODBC [ODBC]
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - ODBC [ODBC], configuring
 - installing ODBC [ODBC]
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 587216d637b0112998db2a93b056a5d7b51017b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50e1d85076c2d056d8abdec9668457ca2a29d2fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720180"
 ---
-# <a name="installing-and-configuring-the-odbc-software"></a>インストールして、ODBC のソフトウェアの構成
+# <a name="installing-and-configuring-the-odbc-software"></a>ODBC ソフトウェアをインストールおよび構成する
 > [!NOTE]  
->  Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに ODBC が含まれます。 以前のバージョンの Windows で ODBC を明示的にのみインストールしてください。  
+>  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
   
  このセクションでは、次のトピックを扱います。  
   

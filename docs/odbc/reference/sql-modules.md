@@ -1,13 +1,11 @@
 ---
-title: SQL モジュール |Microsoft ドキュメント
+title: SQL モジュール |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL modules [ODBC]
@@ -16,20 +14,19 @@ helpviewer_keywords:
 - modules [ODBC]
 - SQL statements [ODBC], modules
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10957c8e4a847f13d2dbf4b427382e65ea404c1f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30c116878049c4f6a8f36e988731ab641e03c6d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834750"
 ---
 # <a name="sql-modules"></a>SQL モジュール
-DBMS に SQL ステートメントを送信するための 2 番目の手法では、モジュールを使用します。 簡単に、モジュールは、ホストのプログラミング言語から呼び出されるプロシージャのグループで構成されます。 各プロシージャには、1 つの SQL ステートメントが含まれています。 し、データとが渡されるプロシージャからパラメーターを使用します。  
+DBMS に SQL ステートメントを送信するための 2 番目の手法では、モジュールを使用します。 簡単に、モジュールは、ホストのプログラミング言語から呼び出されるプロシージャのグループで構成されます。 各プロシージャには、1 つの SQL ステートメントが含まれています。 され、データがパラメーターを使用して、プロシージャからを渡されます。  
   
- モジュールは、アプリケーション コードにリンクされているオブジェクト ライブラリと考えることができます。 ただし、正確に手順と、アプリケーションの残りの部分はリンク方法は、実装によって異なります。 など、プロシージャをオブジェクト コードにコンパイルされ、アプリケーション コードに直接リンクされている可能性があります、コンパイルされ、DBMS と、アプリケーション コード内にプランの識別子にアクセスする呼び出しに格納されている可能性があります。 または実行時に、解釈される可能性があります。  
+ モジュールは、アプリケーション コードにリンクされているオブジェクト ライブラリとして考えることができます。 ただし、正確に手順と、アプリケーションの残りの部分はリンク方法とは実装によって異なります。 たとえば、プロシージャのオブジェクトのコードにコンパイルし、アプリケーション コードに直接リンクされている可能性があります、コンパイルされ、アプリケーション コード内に配置プラン識別子へのアクセスを呼び出すと DBMS に格納されている可能性があります。 またはが実行時に解釈できます。  
   
- モジュールの主な利点は、プログラミング言語からの SQL ステートメントを明確に分離することです。 理論上は、もう一方を変更することがなく 1 つを変更し、単に再リンクして可能な場合があります。
+ モジュールの主な利点は、プログラミング言語から SQL ステートメントを明確に分離することです。 理論上を単純に再リンクして、もう一方を変更することがなく 1 つを変更可能な場合があります。
