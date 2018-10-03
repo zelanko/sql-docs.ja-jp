@@ -4,26 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Installing SSMA 2008, Upgrading
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
-caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 42555d5f10fc9b7b6a1b4f35164cd64f91939981
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 6191898b0dbd4c7269a3c741f2e6ace7927b665c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776350"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL のインストール (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL から MySQL への移行を実行するために使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 移行されたデータベースでデータの移行と MySQL システム関数の使用をサポートする拡張機能パックも含まれています。  

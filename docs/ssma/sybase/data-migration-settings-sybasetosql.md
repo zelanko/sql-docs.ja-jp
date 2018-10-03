@@ -4,28 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c331f396f43534387803e71a22bd636c0d3d767c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c32d2f1bce255f9490bdb74d8f07a9ddbe7cc161
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681400"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>データ移行の設定 (SybaseToSQL)
   
-## <a name="data-migration-settings"></a>データ移行の設定  
+## <a name="data-migration-settings"></a>データの移行設定  
 **データ移行の設定**データ移行のためのカスタム クエリを記述できます。  
   
 -   このタブは、使用可能な場合に**データ移行のオプションの拡張**に設定されている**表示**と非表示設定した場合に**を非表示に**プロジェクト設定。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)します。  

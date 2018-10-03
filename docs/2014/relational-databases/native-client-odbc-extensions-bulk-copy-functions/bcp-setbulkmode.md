@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3388269c7dd2a48f63148f22bd332a0c4c291794
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7c97466b6c216c83b133c666fa8c4134ca35005b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423061"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115113"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode では、1 つの関数の呼び出しですべての列属性を設定、一括コピー操作で列の形式を指定できます。  
@@ -62,7 +59,7 @@ cbRow
  フィールド ターミネータ値を指すポインターです。  
   
  *cbField*  
- フィールド ターミネータ値の長さをバイト単位で。  
+ フィールド終端文字の値のバイト単位の長さ。  
   
  *pRow*  
  行ターミネータ値を指すポインターです。  
@@ -78,7 +75,7 @@ cbRow
   
  bcp_setbulkmode が使用する代わりに[bcp_setcolfmt](bcp-setcolfmt.md)と[bcp_columns](bcp-columns.md)、のみ関数呼び出しごとに 1 つの列の形式を指定できます。  
   
- 次の表に、定数を*プロパティ*パラメーター。  
+ *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  

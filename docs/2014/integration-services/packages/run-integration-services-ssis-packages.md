@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc9e292b67bd282351bdea60068a58a39ecb0aad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7138207d6f612fa8ee9075b9994e9d8f4f63e552
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287608"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158862"
 ---
 # <a name="execution-of-projects-and-packages"></a>プロジェクトとパッケージの実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行するには、それらのパッケージの格納場所に応じていくつかのツールのうちの 1 つを使用できます。 次の表にツールを示します。  
@@ -45,10 +42,8 @@ ms.locfileid: "37287608"
 |**dtexecui**<br /><br /> 詳細については、「[パッケージ実行ユーティリティ &#40;DtExecUI&#41; の UI リファレンス](execute-package-utility-dtexecui-ui-reference.md)」を参照してください。|いいえ|はい|はい|  
 |**SQL Server エージェント**<br /><br /> パッケージのスケジュールを設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用します。<br /><br /> 詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](sql-server-agent-jobs-for-packages.md)」を参照してください。|はい|はい|はい|  
 |**組み込みのストアド プロシージャ**<br /><br /> 詳細については、「[catalog.start_execution &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)」を参照してください。|はい|いいえ|いいえ|  
-|
-  **API (**<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の型およびメンバーを使用)|はい|いいえ|いいえ|  
-|
-  **API (**<xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の型およびメンバーを使用)|現時点ではいいえ|はい|はい|  
+|**API (**<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の型およびメンバーを使用)|はい|いいえ|いいえ|  
+|**API (**<xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の型およびメンバーを使用)|現時点ではいいえ|はい|はい|  
   
 ## <a name="execution-and-logging"></a>実行とログ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージではログ記録を有効にできるので、実行時情報をログ ファイルに保存できます。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」をご覧ください。  

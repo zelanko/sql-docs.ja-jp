@@ -1,26 +1,23 @@
 ---
-title: 実行時間の長いクエリ (ODBC) のログイン |Microsoft Docs
+title: 実行時間の長いクエリ (ODBC) のログイン |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89e4e854233e0d5b34ea1e4547ae4ade24394619
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 81b10966cd87a57de50e89f5a8327b2e19424ba0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431141"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095432"
 ---
 # <a name="log-long-running-queries-odbc"></a>実行時間の長いクエリの記録 (ODBC)
   このサンプルでは、実行時間の長いクエリをログに記録するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有のオプションを示します。 このサンプルを実行すると Odbcqry.log が作成されます。このファイルには、アプリケーションの設定間隔よりも実行時間が長いクエリの一覧が格納されます。 このサンプルは IA64 ではサポートされていません。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
@@ -36,7 +33,7 @@ ms.locfileid: "37431141"
   
 3.  実行時間の長いクエリのログを記録するデータ ソースをクリックします。  
   
-4.  クリックして**構成**します。  
+4.  をクリックして**構成**です。  
   
 5.  Microsoft SQL Server を構成する DSN ウィザードで、ページに移動します。**実行時間の長いクエリをログ ファイルに保存**します。  
   

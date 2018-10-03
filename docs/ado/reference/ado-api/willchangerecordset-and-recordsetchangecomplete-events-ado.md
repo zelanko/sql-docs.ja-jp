@@ -1,13 +1,11 @@
 ---
-title: WillChangeRecordset および RecordsetChangeComplete イベント (ADO) |Microsoft ドキュメント
+title: WillChangeRecordset および RecordsetChangeComplete イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - RecordsetChangeComplete event [ADO]
 - WillChangeRecordset event [ADO]
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63962d0ce3c8c4a5bf5aa0274a4084a9f8d84a5f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9ed1c7a9f1ed86359eef75fdaf13c9e40d838f3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718870"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset および RecordsetChangeComplete イベント (ADO)
-**WillChangeRecordset**イベントが保留中の操作を変更する前に呼び出されます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 **RecordsetChangeComplete**イベントが呼び出された後、**レコード セット**が変更されました。  
+**WillChangeRecordset**保留中の操作を変更する前に、イベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 **RecordsetChangeComplete**イベントが呼び出された後、 **Recordset**が変更されました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,31 +40,31 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>パラメーター  
  *adReason*  
- [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)このイベントの理由を指定する値。 その値を指定できます**adRsnRequery**、 **adRsnResynch**、 **adRsnClose**、 **adRsnOpen**です。  
+ [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)このイベントの理由を指定する値。 その値を指定できます**adRsnRequery**、 **adRsnResynch**、 **adRsnClose**、 **adRsnOpen**します。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。  
   
- ときに**WillChangeRecordset**が呼び出されると、このパラメーターに設定されている**adStatusOK**イベントの原因となった操作が成功した場合。 設定されている**adStatusCantDeny**場合、このイベントは、保留中の操作の取り消しを要求できません。  
+ ときに**WillChangeRecordset**が呼び出されると、このパラメーターを設定**adStatusOK**イベントの原因となった操作が成功した場合。 設定されている**adStatusCantDeny**場合、このイベントは、保留中の操作のキャンセルを要求できません。  
   
- ときに**RecordsetChangeComplete**が呼び出されると、このパラメーターに設定されている**adStatusOK**イベントの原因となった操作が成功した場合**adStatusErrorsOccurred**場合操作は失敗、または**adStatusCancel**操作は、承認済みに関連付けられている場合**WillChangeRecordset**イベントが取り消されました。  
+ ときに**RecordsetChangeComplete**が呼び出されると、このパラメーターを設定**adStatusOK**場合は、イベントの原因となった操作が成功すると、 **adStatusErrorsOccurred**場合操作に失敗しました、または**adStatusCancel**場合は、操作は、以前に受け入れられたに関連付けられている**WillChangeRecordset**イベントが取り消されました。  
   
- 前に**WillChangeRecordset**戻り値は、このパラメーターに設定する**adStatusCancel**保留中の操作のキャンセルを要求またはそれ以降を防ぐために adStatusUnwantedEvent にこのパラメーターを設定通知です。  
+ 前に**WillChangeRecordset**戻り値は、このパラメーターに設定する**adStatusCancel**保留中の操作のキャンセルを要求または後続を防ぐために adStatusUnwantedEvent にこのパラメーターを設定通知します。  
   
- 前に**WillChangeRecordset**または**RecordsetChangeComplete**戻り値は、このパラメーターに設定する**adStatusUnwantedEvent**を後続の通知を防ぐためにします。  
+ 前に**WillChangeRecordset**または**RecordsetChangeComplete**戻り値は、このパラメーターに設定する**adStatusUnwantedEvent**後続通知しないように設定します。  
   
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 場合に発生したエラーを説明の値*adStatus*は**adStatusErrorsOccurred**です。 それ以外の場合、設定されていません。  
+ [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 場合に発生したエラーを説明の値*adStatus*は**adStatusErrorsOccurred**; 未設定がそれ以外の場合。  
   
  *pRecordset*  
  A **Recordset**オブジェクト。 **Recordset**のこのイベントが発生しました。  
   
 ## <a name="remarks"></a>コメント  
- A **WillChangeRecordset**または**RecordsetChangeComplete**ので、イベントが発生する、 **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md)または[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドです。  
+ A **WillChangeRecordset**または**RecordsetChangeComplete**ためのイベントが発生する、 **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md)または[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド。  
   
- プロバイダーは、ブックマークをサポートしていない場合、 **RecordsetChange**イベント通知がプロバイダーから新しい行が取得されるたびに発生します。 このイベントの頻度によって異なります、 **RecordsetCacheSize**プロパティです。  
+ プロバイダーは、ブックマークをサポートしていない場合、 **RecordsetChange**イベント通知が新しい行は、プロバイダーから取得されるたびに発生します。 このイベントの頻度によって異なります、 **RecordsetCacheSize**プロパティ。  
   
- 設定する必要があります、 **adStatus**パラメーターを**adStatusUnwantedEvent**可能性のある各の**adReason**値を含む任意のイベントのイベント通知を完全に停止するには**adReason**パラメーター。  
+ 設定する必要があります、 **adStatus**パラメーターを**adStatusUnwantedEvent**の可能性のある各**adReason**値が含まれるすべてのイベントのイベント通知を完全に停止するには**adReason**パラメーター。  
   
 ## <a name="see-also"></a>参照  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

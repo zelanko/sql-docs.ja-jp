@@ -1,29 +1,26 @@
 ---
-title: カタログ オブジェクトのプロパティ、メソッド、およびイベント (ADO MD) |Microsoft ドキュメント
+title: Catalog オブジェクトのプロパティ、メソッド、およびイベント (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Catalog object [ADO MD], members
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87ee216227711dbf9dd7f90b0c586a75d3ab9f94
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 41eb6c43a0ddd7e9babf948bbb6135694deadc40
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723268"
 ---
-# <a name="catalog-object-properties-methods-and-events-ado-md"></a>カタログ オブジェクトのプロパティ、メソッド、およびイベント (ADO MD)
+# <a name="catalog-object-properties-methods-and-events-ado-md"></a>Catalog オブジェクトのプロパティ、メソッド、およびイベント (ADO MD)
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
  [ActiveConnection プロパティ](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
   

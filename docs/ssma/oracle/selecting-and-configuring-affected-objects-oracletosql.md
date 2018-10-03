@@ -1,38 +1,35 @@
 ---
-title: 影響を受けたオブジェクト (OracleToSQL) の選択と構成 |Microsoft ドキュメント
+title: 影響を受けるオブジェクト (OracleToSQL) の選択と構成 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0db1a6e426c7ca889b9805850ec81f5de120b0a5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688300"
 ---
-# <a name="selecting-and-configuring-affected-objects-oracletosql"></a>影響を受けたオブジェクト (OracleToSQL) の選択と構成
-このページでは、テーブルを選択して、SSMA、前の手順で選択されたオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズすることができます。  
+# <a name="selecting-and-configuring-affected-objects-oracletosql"></a>影響を受けるオブジェクトの選択と構成 (OracleToSQL)
+このページでは、テーブルを選択することができ、SSMA 前の手順で選択したオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズできます。  
   
 ## <a name="selection-of-affected-objects"></a>影響を受けるオブジェクトの選択  
-Oracle オブジェクト ツリーで、ウィンドウの左側にある、テーブルと外部キーを確認する変更が同一になるに比較する必要があります。  
+ウィンドウの左側にある Oracle オブジェクト ツリーでテーブルと外部キーをチェックで変更が同一になるのと比較する必要があります。  
   
-SSMA テスターは、これらのオブジェクトのいずれかを確認できない場合、は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトを比較することはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
+SSMA のテスト担当者は、これらのオブジェクトのいずれかを確認できない場合、というラベルの付いたリンクが表示されます**いくつかの選択したオブジェクトがエラーを含む**オブジェクト ツリーの下。 なぜこれらのオブジェクトを比較できない理由を表示して、不適切なオブジェクトの選択を解除する、このリンクをクリックします。  
   
 ## <a name="table"></a>テーブル  
-あるテーブル タブには、選択されたテーブルのグリッド ビューが含まれています。 グリッドには、選択したテーブルについては、次の情報が含まれています。  
+[テーブル] タブには、選択したテーブルのグリッド ビューが含まれています。 グリッドには、選択したテーブルの詳細については、次の情報が含まれています。  
   
 -   列名  
   
@@ -51,69 +48,69 @@ SSMA テスターは、これらのオブジェクトのいずれかを確認で
 -   [可]  
   
 ## <a name="sql"></a>Sql  
-[SQL] タブには、"Create table"が含まれています。 選択されたテーブルの SQL です。  
+SQL タブには、「テーブル作成」にはが含まれています。 SQL のテーブルを選択します。  
   
 ## <a name="data"></a>data  
-[データ] タブでは、選択されたテーブル内のデータが表示されます。  
+[データ] タブには、選択したテーブル内のデータが表示されます。  
   
 ## <a name="properties"></a>[プロパティ]  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
--   作成または最後に変更されました。  
+-   作成または最後に変更  
   
 -   [オブジェクト名]  
   
 ## <a name="columns-comparison-settings"></a>列の比較の設定  
-テーブルの列に対して比較の規則を確立**列比較**ページ。 次の設定を行うことができます。  
+テーブルの列に対して比較の規則の確立**列比較**ページ。 次の設定を行うことができます。  
   
-### <a name="use-during-test-comparisons"></a>テストの比較の際に使用します。  
+### <a name="use-during-test-comparisons"></a>テストの比較の際に使用  
 この列は、テスト結果の検証に参加するかどうかを決定します。  
   
--   選択した場合**True**SSMA は Oracle の SQL Server 内の列の内容と、テストの実行後にこの列の内容を比較します。 
+-   選択した場合**True**SSMA は Oracle の SQL Server 内の列の内容を含むテストの実行後にこの列の内容を比較します。 
   
 -   選択した場合**False**列は、結果の検証から除外されます。  
   
 ### <a name="use-custom-scale"></a>カスタムのスケールを使用します。  
-数値データ型の列の場合は、比較のためのカスタムのスケールを設定できます。  
+数値データ型の列の場合は、比較のためのカスタム スケールを設定できます。  
   
--   選択した場合**True**によると、数値は丸められます、**を比較するスケール**値の比較がします。  
+-   選択した場合**True**、に従って数値は丸められます、**を比較するスケール**値の前に、比較されます。  
   
 -   選択した場合**False**、数値比較を正確になります。  
   
-### <a name="comparing-scale"></a>スケールの比較  
+### <a name="comparing-scale"></a>スケールを比較します。  
   
--   使用可能な場合にのみ、**使用縮尺**オプションに設定されて**True**です。 これは、数値比較の有効桁数です。  
+-   使用可能な場合にのみ、**使用のカスタム スケール**にオプションが設定されている**True**します。 これは、数値比較の有効桁数です。  
   
 ### <a name="date-time-comparing"></a>日付時刻を比較します。  
-定義方法、日付/時刻値が比較されます。  
+定義する方法、日付/時刻値が比較されます。  
   
--   選択した場合**全体の日付を比較**、両方のプラットフォームからの値の詳しい比較が行われます。  
+-   選択した場合**全体の日付の比較**、両方のプラットフォームからの値の完全な比較を実行します。  
   
 -   選択した場合**日付のみを比較**、時刻部分は無視されます。  
   
 -   選択した場合**時刻のみを比較**日付の部分は無視されます。  
   
--   選択した場合 **(ミリ秒) を無視する**結果は、秒までと比較されます。  
+-   選択した場合**無視ミリ秒**結果は秒単位までと比較されます。  
   
--   選択した場合**無視日時 (ミリ秒)**、1 秒あたりの時間部分でのみ比較し、無視の小数部になります。  
+-   選択した場合**を無視する日付とミリ秒**秒の時間部分でのみ比較し、無視の小数部になります。  
   
 ### <a name="ignore-strings-case"></a>文字列の大文字小文字を区別します。  
 比較の大文字小文字の区別を制御します。  
   
--   選択した場合**True**比較は大文字小文字を区別されます。  
+-   選択した場合**True**、大文字と小文字を区別しない比較になります。  
   
 -   選択した場合**False**大文字と小文字のアカウントは、比較します。  
   
 ## <a name="comparing-sql"></a>SQL の比較  
-SSMA テスターによって生成された SELECT ステートメントを表示することができます、**を比較する SQL**ページ。 テスト担当者は、行ごとにこれらのステートメントの結果セットを比較します。 [次へ]、Oracle の結果セットの各行を SQL Server で生成された結果セットの次の行と同じにする必要があります。
+SSMA テスターによって生成された SELECT ステートメントを表示することができます、**を比較する SQL**ページ。 テスト担当者 - 行ごとにこれらのステートメントの結果セットが比較されます。 [次へ]、Oracle の結果セットの各行を SQL Server で生成された結果セットの次の行と等しいことがあります。
   
-カスタム検証を提供するような SELECT ステートメントを編集することができます。 Oracle および SQL Server ステートメントで変更を保存するには、**適用**これに対応して、ソースとターゲット SQL では、下にあるボタンをクリックします。  
+カスタム検証を提供するこれらの SELECT ステートメントを編集することができます。 Oracle では、SQL Server のステートメントで、変更を保存するには、使用、**適用**これに応じて拡大縮小、ソースとターゲット SQL では、下ボタンします。  
   
 ## <a name="next-step"></a>次の手順  
 [呼び出し順序のカスタマイズ&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[テスト_ケース準備を完了&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[テスト_ケースを実行する&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[データベース オブジェクトを移行テスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[テスト_ケースの準備の終了&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[テスト_ケースを実行している&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

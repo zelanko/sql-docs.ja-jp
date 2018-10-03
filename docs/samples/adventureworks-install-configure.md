@@ -6,18 +6,16 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 06/19/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b098d59bfbc30d5273e46ccef24b62fcb82dbf8
-ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
+ms.openlocfilehash: c39ecc5693297070d47afc9b989de795eb9af2c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40395257"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676550"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks のインストールと構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +66,7 @@ AdventureWorks のダウンロード リンクとインストール手順につ�
 に従って、以下の手順は、SQL Server Management Studio を使用して、データベースのバックアップを復元します。 
 
 1. SQL Server Management Studio を開き、対象の SQL Server インスタンスに接続します。
-2. 右クリックし、**データベース**ノード、および選択**Restore Database**します。
+2. **データベース**ノードを右クリックし、**Restore Database** を選択します。
 3. 選択**デバイス**、省略記号ボタンをクリックします (**.**)
 4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**サーバーのファイル システム内のデータベースのバックアップに移動して、バックアップを選択します。 **[OK]** をクリックします。
 5. 必要に応じて、データのターゲットの場所を変更し、ログ ファイルで、**ファイル**ウィンドウ。 ベスト プラクティスとしてデータを配置し、ログ ファイルを別のドライブにあるに注意してください。
@@ -103,6 +101,6 @@ Azure で SQL Server をまだ必要はない場合に移動、 [Azure portal](h
 1. 選択**作成**AdventureWorksLT データベースの復元されたコピーである、新しい SQL データベースを作成します。 
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [SQL Server Management Studio のチュートリアル](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 [SQL Server データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)

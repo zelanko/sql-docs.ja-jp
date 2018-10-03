@@ -1,12 +1,10 @@
 ---
-title: sys.dm_broker_forwarded_messages (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_broker_forwarded_messages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_broker_forwarded_messages
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_forwarded_messages dynamic management view
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4a772419ba49436cefd1a135bed3859c5905ae2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 4ce05635464cc9b02e419c4f0a5b162a14042d51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633300"
 ---
 # <a name="sysdmbrokerforwardedmessages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/23/2018
   各 Service Broker のメッセージを 1 行を返しますのインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]転送中です。  
   
 
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**conversation_id**|**uniqueidentifier**|メッセージが属するメッセージ交換の ID。 NULL 値は許可されます。|  
 |**is_initiator**|**bit**|メッセージがメッセージ交換の発信側から送信されたものかどうかを示します。  NULL 値は許可されます。<br /><br /> 0 = 発信側からでないメッセージ<br /><br /> 1 = 発信側からのメッセージ|  
@@ -50,12 +48,12 @@ ms.lasthandoff: 05/23/2018
 |**time_consumed**|**int**|メッセージがアクティブなまま保持されている時間。 メッセージが転送されるたび、メッセージの転送にかかった時間がこの数に加えられます。 Null を許容しません。|  
 |**message_id**|**uniqueidentifier**|メッセージの ID です。 NULL 値は許可されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 関連の動的管理ビュー & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

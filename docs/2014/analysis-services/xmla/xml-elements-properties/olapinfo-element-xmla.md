@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - OlapInfo Element
@@ -24,16 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - OlapInfo element
 ms.assetid: 8828fdd7-c0f7-48ce-a0d0-ab4bc1a995cf
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d1665a174cdff0d4afcd8bea69b9bdca9212d9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39cabfd1ce5e0dcbc815d1cc659fd4a4594be47b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050692"
 ---
 # <a name="olapinfo-element-xmla"></a>OlapInfo 要素 (XMLA)
   含まれる軸およびセル メタデータを含む、[ルート](root-element-xmla.md)を使用する要素、 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)データ型。  

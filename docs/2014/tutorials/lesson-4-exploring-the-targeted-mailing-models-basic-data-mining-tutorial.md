@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1afd478583520bddb2f0990b282e3f96c851feb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147319"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>レッスン 4: 絞り込みメール配信モデルの検証 (基本的なデータ マイニング チュートリアル)
   プロジェクト内のモデルを処理した後、そのモデルを検証して、興味深い傾向を探すことができます。 パターンは複雑で、単純に数値を観察するだけでは見つけにくいことがあるため、SQL Server データ マイニング機能は、データを調査する目的、およびアルゴリズムがデータ内で見つけたルールとリレーションシップを理解する目的で役立つビジュアル ツールを用意しています。 また、さまざまな精度テストを使用してデータセットを検証し、モデルを配置する前にどのモデルが最も適切に機能するかを判断することができます。  

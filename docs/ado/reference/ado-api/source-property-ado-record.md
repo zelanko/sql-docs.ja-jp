@@ -1,13 +1,11 @@
 ---
-title: Source プロパティ (ADO レコード) |Microsoft ドキュメント
+title: Source プロパティ (ADO Record) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -20,40 +18,39 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4b053fdeae5016d7a1b489133b3a26067da7eab2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281981"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803050"
 ---
-# <a name="source-property-ado-record"></a>Source プロパティ (ADO レコード)
-データ ソースまたはによって表されるオブジェクトを示す、[レコード](../../../ado/reference/ado-api/record-object-ado.md)です。  
+# <a name="source-property-ado-record"></a>Source プロパティ (ADO Record)
+データ ソースまたはによって表されるオブジェクトを示す、[レコード](../../../ado/reference/ado-api/record-object-ado.md)します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**バリアント**で表されるエンティティを示す値、**レコード**です。  
+ 設定または取得を**バリアント**によって表されるエンティティを示す値、**レコード**します。  
   
 ## <a name="remarks"></a>コメント  
- **ソース**プロパティから返される、*ソース*の引数、**レコード**オブジェクト[開く](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドです。 絶対または相対 URL 文字列である含めることができます。 絶対 URL を設定しないで使用できる、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを開くには直接、**レコード**オブジェクト。 暗黙的な**接続**オブジェクトはここで作成します。  
+ **ソース**プロパティが返す、*ソース*の引数、**レコード**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。 絶対または相対 URL 文字列であるを含めることができます。 絶対 URL を設定せずに使用できます、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを直接開くことを**レコード**オブジェクト。 暗黙的な**接続**オブジェクトがここで作成されます。  
   
- **ソース**プロパティが既に開かれているへの参照を含めることができますも**Recordset**を開きます、**レコード**の現在の行を表すオブジェクトを**レコード セット**です。  
+ **ソース**プロパティは、既に開いているへの参照を含めることもできます**レコード セット**を開いて、**レコード**の現在の行を表すオブジェクト、 **レコード セット**します。  
   
- **ソース**プロパティへの参照を含めることもできます、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト プロバイダーから 1 行のデータが返されます。  
+ **ソース**プロパティでしたへの参照を含めることも、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト プロバイダーから 1 行のデータが返されます。  
   
- 場合、 **ActiveConnection**プロパティが設定されても、**ソース**プロパティは、その接続のスコープ内に存在する一部のオブジェクトを指す必要があります。 たとえば、名前空間のツリー構造で場合、**ソース**プロパティが絶対 URL を含む、接続文字列内の URL で識別されるノードのスコープ内に存在するノードを指す必要があります。 場合、**ソース**プロパティが相対 URL を含むそので設定されたコンテキスト内では、検証、 **ActiveConnection**プロパティです。  
+ 場合、 **ActiveConnection**プロパティが設定されても、**ソース**プロパティは、その接続のスコープ内に存在するいくつかのオブジェクトを指す必要があります。 ツリー構造の名前空間では、たとえばの場合、**ソース**プロパティが絶対 URL を含む、接続文字列内の URL で識別されるノードのスコープ内に存在するノードを指す必要があります。 場合、**ソース**プロパティには、相対 URL が含まれていますで設定されたコンテキスト内では、検証、 **ActiveConnection**プロパティ。  
   
- **ソース**プロパティが読み取り/書き込み中に、**レコード**オブジェクトが閉じられ、中に読み取り専用、**レコード**オブジェクトが開かれています。  
+ **ソース**プロパティが読み取り/書き込み中に、**レコード**オブジェクトが閉じられるし、は読み取り専用中に、**レコード**オブジェクトが開いています。  
   
 > [!NOTE]
->  Http スキームを使用する Url が自動的に起動、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)です。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)です。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Source プロパティ (ADO エラー)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [ソースのプロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source プロパティ (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

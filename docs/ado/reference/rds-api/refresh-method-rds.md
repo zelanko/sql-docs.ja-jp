@@ -1,13 +1,11 @@
 ---
-title: Refresh メソッド (RDS) |Microsoft ドキュメント
+title: Refresh メソッド (RDS) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,22 +15,21 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee9fd5b4748d2343b78e2dc696e7826341223d53
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8ba03aa3be2b644dfbd554528824162a75bc30a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691050"
 ---
 # <a name="refresh-method-rds"></a>Refresh メソッド (RDS)
-指定されたデータ ソースを再クエリ、[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティと、クエリの結果を更新します。  
+指定されたデータ ソースを再クエリ、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティと、クエリの結果を更新します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,21 +40,21 @@ DataControl.Refresh
   
 #### <a name="parameters"></a>パラメーター  
  *DataControl*  
- オブジェクト変数を表す、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ オブジェクト変数を表す、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
 ## <a name="remarks"></a>コメント  
- 設定する必要があります、[接続](../../../ado/reference/rds-api/connect-property-rds.md)、[サーバー](../../../ado/reference/rds-api/server-property-rds.md)、および[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティを使用する前に、**更新**メソッドです。 関連付けられているフォーム上のすべてのデータ バインド コントロール、 **.rds ですDataControl**オブジェクトが新しいレコードのセットに反映されます。 既存の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが解放され、未保存の変更は破棄されます。 **更新**メソッドに自動的には、最初のレコード、現在のレコードです。  
+ 設定する必要があります、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)、 [Server](../../../ado/reference/rds-api/server-property-rds.md)、および[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティを使用する前に、**更新**メソッド。 関連付けられているフォーム上のすべてのデータ バインド コントロールを**rds.DataControl**オブジェクトが新しいレコード セットに反映されます。 既存の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトがリリースされ、未保存の変更は破棄されます。 **更新**メソッドが現在のレコードに自動最初のレコードにで行います。  
   
- 呼び出すことをお勧め、**更新**メソッド定期的に操作する際にデータを使用します。 データを取得し、しばらくの間、クライアント コンピューターに残す、古くなっている可能性があります。 加えた変更が失敗する、他のユーザー レコードに変更された可能性し、する前に変更を送信してためことができます。  
+ 呼び出すことをお勧め、**更新**メソッド定期的に使用する場合のデータ。 データを取得してしばらくの間、クライアント コンピューターのままに古くなる可能性があります。 行った変更が失敗する、他のユーザーがレコードを変更したし、する前に変更を送信するために可能性があります。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [メソッドの例 (VB) の更新します。](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [メソッドの例 (VBScript) の更新します。](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
- [アドレス帳コマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [ただしメソッド (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [Refresh メソッドの例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
+ [Refresh メソッドの例 (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
+ [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
+ [CancelUpdate メソッド (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

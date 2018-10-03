@@ -1,13 +1,11 @@
 ---
-title: Hardware and Software Requirements (ODBC) |Microsoft ドキュメント
+title: ハードウェアとソフトウェア要件 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hardware requirements [ODBC], desktop database drivers
@@ -15,46 +13,45 @@ helpviewer_keywords:
 - system requirements [ODBC], desktop database drivers
 - requirements [ODBC], desktop database drivers
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 389492c377105614c60c127041354786cabbd5ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3f40621645aad2d1e52cb0a89baa8ff29b01446
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680660"
 ---
-# <a name="hardware-and-software-requirements-odbc"></a>Hardware and Software Requirements (ODBC)
-このトピックでは、デスクトップの ODBC データベース ドライバーを使用するための要件を示します。  
+# <a name="hardware-and-software-requirements-odbc"></a>ハードウェアとソフトウェアの要件 (ODBC)
+このトピックでは、ODBC のデスクトップ データベース ドライバーを使用するための要件を一覧表示します。  
   
 ## <a name="hardware-requirements"></a>ハードウェア要件  
- 使用するには、ODBC のデスクトップ データベース ドライバーが必要です。  
+ ODBC のデスクトップ データベース ドライバーを使用するには、が必要です。  
   
 -   IBM と互換性のあるパーソナル コンピューターの場合は。  
   
--   6 MB の空きディスク領域のハード_ディスク。  
+-   6 MB の空きディスク領域とハード ディスク。  
   
--   16 MB 以上のランダム アクセス メモリ (RAM)。  
+-   少なくとも 16 MB のランダム アクセス メモリ (RAM) です。  
   
 ## <a name="software-requirements"></a>ソフトウェア要件  
  ODBC ドライバーを使用してデータにアクセスするには、次が必要です。  
   
 -   ODBC ドライバー。  
   
--   32 ビット ODBC ドライバー マネージャー、3.51 または後 (Odbc32.dll) です。  
+-   32 ビット ODBC ドライバー マネージャー、3.51 のバージョンまたはそれ以降 (Odbc32.dll) です。  
   
--   Microsoft Windows 95 以降または Windows NT 4.0 および Windows 2000 です。  
+-   Microsoft Windows 95 以降または Windows NT 4.0 または Windows 2000 の場合は。  
   
--   Microsoft ODBC driver を使用してアプリケーションを少なくとも 20 KB のスタック サイズ。  
+-   Microsoft ODBC ドライバーを使用してアプリケーションの少なくとも 20 KB のスタック サイズ。  
   
- Microsoft Windows NT 4.0 または Windows 2000 を使用する場合、32 ビット ドライバーはスレッド セーフ ドライバーへのアクセスを制御するグローバル セマフォを使用してのみです。 ドライバーの同時使用は非常に限定 Windows NT でします。 Jet ISAM レイヤーに対するすべてのアクセスは、Microsoft Jet エンジンを使用するすべてのアプリケーションにシングル スレッドになります。  
+ Microsoft Windows NT 4.0 または Windows 2000 を使用する場合、32 ビット ドライバーはスレッド セーフ ドライバーへのアクセスを制御するグローバル セマフォを使用してのみです。 ドライバーの同時使用が非常に限定された Windows NT でします。 Jet ISAM レイヤーに対するすべてのアクセスは、Microsoft Jet エンジンを使用するすべてのアプリケーションにシングル スレッドになります。  
   
- を Windows on Windows (WOW) Microsoft Windows NT 4.0 上で複数の 16 ビット アプリケーションを実行する場合は、別のメモリ領域で、アプリケーションを実行する必要があります。 (同じメモリ領域は使えません ODBC では、同じプロセス内の複数の環境がサポートされていません。)で別のメモリ領域を、アプリケーションを実行するアイコンを選択、アプリケーションのプログラム マネージャーで、開く、**ファイル**メニューをクリック**プロパティ**、クリックして**個別のメモリを実行領域**です。  
+ Windows on Windows (WOW) Microsoft Windows NT 4.0 上で複数の 16 ビット アプリケーションを実行するときに、別のメモリ領域で、アプリケーションを実行する必要があります。 (同じメモリ空間使えません ODBC では、同じプロセスで複数の環境がサポートされていません。)別のメモリ領域で、アプリケーションを実行するアイコンを選択、アプリケーションのプログラム マネージャーで、開く、**ファイル**メニューをクリックします**プロパティ**、 をクリックし、**個別のメモリで実行領域**します。  
   
- Windows 95 で 16 ビット アプリケーションでこれらのドライバーの使用はサポートされていません。  
+ Windows 95 で 16 ビット アプリケーションでこれらのドライバーの使用がサポートされていません。  
   
 ## <a name="driver-specific-hardware-and-software-requirements"></a>ドライバー固有のハードウェアとソフトウェアの要件  
   
--   Access および dBASEdrivers autoexec.bat ファイルや Config.sys ファイルの変更があります。
+-   Access および dBASEdrivers Autoexec.bat や Config.sys ファイルの変更を必要があります。

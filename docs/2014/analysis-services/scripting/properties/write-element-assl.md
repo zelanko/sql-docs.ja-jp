@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Write Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Write element
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0f275ecb6ca20d22cedb1aed214fb2d0f78479b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd39e3354ee68a2e716e4cfbf50e41e371bf5303
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104252"
 ---
 # <a name="write-element-assl"></a>Write 要素 (ASSL)
   データまたはメタデータを書き込みが可能かどうかを判断します、指定された[CubeDimensionPermission](../data-type/permission-data-type-assl.md)または[権限](../data-type/permission-data-type-assl.md)要素。  

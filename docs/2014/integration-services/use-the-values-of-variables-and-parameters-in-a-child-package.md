@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1c522a87bfd20608d1e42080ad9ff3d3ae10973
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055638"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>子パッケージでの変数およびパラメーターの値の使用
   この手順では、構成の種類として親変数を使用するパッケージ構成を作成する方法について説明します。 この構成の種類を使用すると、親パッケージから実行される子パッケージが親内の変数にアクセスできるようになります。  
@@ -93,11 +90,11 @@ ms.locfileid: "37287518"
   
     -   **[構成の場所を環境変数に格納する]** を選択し、 **[環境変数]** ボックスの一覧で、変数の名前を含む環境変数を選択します。  
   
-7.  [**次へ**] をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  [対象になるプロパティの選択] ページで、 **[変数]** ノードを展開し、構成する変数の **[プロパティ]** ノードを展開した後、構成によって設定されるプロパティをクリックします。  
   
-9. [**次へ**] をクリックします。  
+9. **[次へ]** をクリックします。  
   
 10. [ウィザードの完了] ページで、必要に応じて、構成の既定の名前を変更し、構成情報を確認します。  
   

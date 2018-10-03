@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobactivity (TRANSACT-SQL) |Microsoft ドキュメント
+title: dbo.sysjobactivity (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobactivity_TSQL
@@ -20,26 +17,25 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1d9e79856ac767d231993165b0c6d565d791464
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 77b434a20f408aa79e8d75b03ea9bce0a9f2e6b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690770"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの利用状況と状態を記録します。  次の表は、 **msdb**データベース。
+  現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの利用状況と状態を記録します。  このテーブルに格納されます、 **msdb**データベース。
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|格納されているセッションの ID、 **syssessions**テーブルに、 **msdb**データベース。|  
-|**job_id**|**uniqueidentifier**|ジョブの ID です。|  
+|**job_id**|**uniqueidentifier**|ジョブの ID。|  
 |**run_requested_date**|**datetime**|ジョブの実行が要求された日時。|  
 |**run_requested_source**|**sysname(nvarchar(128))**|ジョブの実行要求の発生元。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|ジョブがキューに格納された日時。 ジョブが直接実行される場合、この列は NULL になります。|  
@@ -47,7 +43,7 @@ ms.locfileid: "33258474"
 |**last_executed_step_id**|**int**|実行された最後のジョブ ステップの ID。|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|最後のジョブ ステップの実行が開始された日時。|  
 |**stop_execution_date**|**datetime**|ジョブの実行が終了した日時。|  
-|**job_history_id**|**int**|内の行を識別するため、 **sysjobhistory**テーブル。|  
+|**job_history_id**|**int**|内の行を識別するために使用される、 **sysjobhistory**テーブル。|  
 |**next_scheduled_run_date**|**datetime**|ジョブの次回実行予定日時。|  
 
 ## <a name="example"></a>例

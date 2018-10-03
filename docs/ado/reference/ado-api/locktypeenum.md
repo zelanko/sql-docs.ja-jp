@@ -1,13 +1,11 @@
 ---
-title: LockTypeEnum |Microsoft ドキュメント
+title: LockTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4137ced62a083bb355a685222a044fdd9efacdf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bcd2e4d2a3b84ef913954c1a1a2d7fa76393040c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625940"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
-編集中のレコードに適用されるロックの種類を指定します。  
+編集中に、レコードに適用されるロックの種類を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adLockBatchOptimistic**|4|オプティミスティック バッチ更新を示します。 バッチ更新モードに必要です。|  
-|**adLockOptimistic**|3|オプティミスティック ロック、レコード単位を示します。 ロックの使用、オプティミスティック ロックのレコードを呼び出すときにのみ、[更新](../../../ado/reference/ado-api/update-method.md)メソッドです。|  
-|**adLockPessimistic**|2|レコードごとの排他的ロックを指定します。 プロバイダーはどのような成功レコードの編集、通常で編集した後すぐに、データ ソースのレコードのロックを保つために必要です。|  
-|**adLockReadOnly**|1|読み取り専用のレコードを示します。 データを変更することはできません。|  
-|**adLockUnspecified**|-1|ロックの種類は指定しません。 クローンが、元と同じロックの種類と、複製が作成されます。|  
+|**adLockBatchOptimistic**|4|オプティミスティックな一括更新を示します。 バッチ更新モードで必要です。|  
+|**adLockOptimistic**|3|レコードごとのオプティミスティック ロックを示します。 プロバイダーを使用してオプティミスティック ロックを呼び出した場合にのみ、レコードのロック、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド。|  
+|**adLockPessimistic**|2|レコードごとの排他的ロックを示します。 プロバイダーでは何が成功したレコードの編集、通常は編集後すぐに、データ ソースのレコードをロックすることを確認するために必要です。|  
+|**adLockReadOnly**|1|読み取り専用レコードを示します。 データを変更することはできません。|  
+|**adLockUnspecified**|-1|ロックの種類を指定しません。 クローンが元と同じ種類のロックで、複製が作成されます。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

@@ -1,13 +1,11 @@
 ---
-title: 属性のプロパティ (ADOX) |Microsoft ドキュメント
+title: 属性のプロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cff8bb0f88581fae43ceb3d8af9ef57eb3a1e479
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ecced3970d5f0bebff4ad0b7a6ae6f7798cdc3e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759270"
 ---
-# <a name="attributes-property-adox"></a>属性プロパティ (ADOX)
+# <a name="attributes-property-adox"></a>Attributes プロパティ (ADOX)
 列の特性について説明します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**長い**値。 値で表されるテーブルの特性を指定する、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクト。 値の組み合わせが可能です[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)定数。 既定値は 0 (**0**)、これはどちらも**adColFixed**も**adColNullable**です。  
+ 設定または取得を**長い**値。 値で表されるテーブルの特性を指定します、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクト。 値の組み合わせをできる[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)定数。 既定値はゼロ (**0**)、これは、どちらも**adColFixed**も**adColNullable**します。  
   
 ## <a name="applies-to"></a>適用対象  
   

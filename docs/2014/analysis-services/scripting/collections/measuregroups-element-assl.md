@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroups Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroups element
 ms.assetid: 80e970e9-6ea6-47a9-9e5c-d0f9b01c09c0
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c152701fb8dc59b8d85d0976c4c4f9243a96072d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee40e848ade9bd151836395be8f34029adef9e85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153742"
 ---
 # <a name="measuregroups-element-assl"></a>MeasureGroups 要素 (ASSL)
   コレクションを格納[MeasureGroup](../objects/group-element-assl.md)親要素に関連付けられた要素。  

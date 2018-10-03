@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154102"
 ---
 # <a name="specify-credentials-in-report-builder"></a>レポート ビルダーでの資格情報の指定
   資格情報は、データ ソースからデータの取得を試みるユーザーの認証に使用されます。 データ ソースの所有者が、使用する資格情報の種類を決定します。 たとえば、データベース管理者は、Windows のユーザー名とパスワードの入力をユーザーに求めることができます。  

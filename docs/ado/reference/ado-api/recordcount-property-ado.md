@@ -1,13 +1,11 @@
 ---
-title: RecordCount プロパティ (ADO) |Microsoft ドキュメント
+title: RecordCount プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0320cf9128c5b9f4b6bbe86f800c83e8eb779df4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fa6f29c480244919de71d06cf3d56e672f00c47f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623100"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount プロパティ (ADO)
 
@@ -34,25 +31,25 @@ ms.locfileid: "35280891"
   
 ## <a name="return-value"></a>戻り値
 
-返します、**長い**内のレコードの数を示す値、 **Recordset**です。
+返します、**長い**内のレコードの数を示す値、 **Recordset**します。
   
 ## <a name="remarks"></a>コメント
 
-使用して、 **RecordCount**でどれくらいのレコードを検索するプロパティには、 **Recordset**オブジェクト。 プロパティは、ADO レコードの数を判断できない場合や、プロバイダーまたはカーソルの種類がサポートされていない場合に-1 を返します**RecordCount**です。 読み取り、 **RecordCount**プロパティに、閉じられた**Recordset**エラーが発生します。
+使用して、 **RecordCount**でレコードの数を確認するプロパティには、**レコード セット**オブジェクト。 プロパティは、ADO レコードの数を判断できない場合、または、プロバイダーまたはカーソルの種類がサポートされていない場合に-1 を返します**RecordCount**します。 読み取り、 **RecordCount**プロパティを閉じている**Recordset**エラーが発生します。
 
 #### <a name="bookmarks-or-approximate-positioning"></a>ブックマークまたは概数の配置
 
-場合、レコード セット オブジェクト*は*いずれかのブックマークをサポートまたは概数配置、このプロパティを返しますレコードの正確な数のレコード セット。 このプロパティは、かどうか、レコード セットが完全に読み込まれたに関係なく正確な数を返します。
+場合、レコード セット オブジェクト*は*いずれかのブックマークをサポートまたは概数配置、このプロパティを返しますレコード数の正確なレコード セット。 このプロパティは、レコード セットに完全設定がされるかどうかに関係なく正確な数を返します。
 
-これに対して、レコード セット オブジェクトは*いない*ブックマークまたはおおよその位置のいずれかをサポートして、このプロパティにアクセスすると、リソースの大量消費する可能性があります。 すべてのレコードが取得する必要があります、カウントを正確な RecordCount 値を返すために、ドレインが発生します。
+これに対して、レコード セット オブジェクトは*いない*ブックマークまたはおおよその位置のいずれかをサポートして、このプロパティにアクセスがリソースを大量消費する可能性があります。 ドレインでは、すべてのレコードが取得する必要があり、正確な RecordCount の値を返すをカウントするために発生します。
 
-- **adBookmark**ブックマークに関連します。
-- **adApproxPosition**おおよその位置に関連します。
+- **adBookmark**に関連するブックマーク。
+- **adApproxPosition**おおよその位置に関連しています。
 
 > [!NOTE]
-> SQLOLEDB プロバイダーがサーバー側カーソルが使用される場合でも、返されるすべてのレコードをフェッチ ADO 2.8 およびそれ以前のバージョン、 **True**両方の**サポート (adApproxPosition)** と**サポート (adBookmark)** です。
+> 返されるという事実に関係なく、サーバー側カーソルを使用すると ADO version 2.8 およびそれ以前では、SQLOLEDB プロバイダーがすべてのレコードをフェッチ**True**両方の**サポート (adApproxPosition)** と**サポート (adBookmark)** します。
   
-カーソルの種類、 **Recordset**オブジェクトは、レコードの数を決定できるかどうかに影響します。 **RecordCount**プロパティは、順方向専用カーソル以外の場合は、静的な実際の数またはキーセット カーソル; し、-1 の場合は-1 または動的カーソルの場合は、データ ソースによって実際の数を返します。
+カーソルの種類、 **Recordset**オブジェクトは、レコードの数を決定できるかどうかに影響します。 **RecordCount**プロパティは順方向専用カーソルは実際の数、静的なキーセット カーソルといずれか-1 の場合は-1 または動的カーソルのデータ ソースによっては、実際の数を返します。
   
 ## <a name="applies-to"></a>適用対象
 
@@ -60,7 +57,7 @@ ms.locfileid: "35280891"
   
 ## <a name="see-also"></a>参照
 
-[フィルターおよび RecordCount のプロパティの例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[フィルターおよび RecordCount のプロパティの例 (vc++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
+[Filter および RecordCount プロパティの例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
+[Filter および RecordCount プロパティの例 (vc++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
 [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
 [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

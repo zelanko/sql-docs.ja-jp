@@ -1,40 +1,37 @@
 ---
-title: ドライバーのタスク |Microsoft ドキュメント
+title: ドライバーでの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], tasks
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b8ea61df89eb6f4e21a57e71a4277d56b16add5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee695c62fc60b2ebb0ae9bb33ef9008ba617b49a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772636"
 ---
-# <a name="driver-tasks"></a>ドライバーのタスク
-ドライバーで実行される特定のタスクは次のとおりです。  
+# <a name="driver-tasks"></a>ドライバーでの処理
+ドライバーによって実行される特定のタスクは次のとおりです。  
   
--   接続して、データ ソースからの接続を切断します。  
+-   接続して、データ ソースから切断しています。  
   
--   未チェック ドライバー マネージャーによって関数のエラーを確認しています。  
+-   ドライバー マネージャーによってオフ関数のエラーを確認しています。  
   
--   トランザクションを開始していますこれは、アプリケーションに対して透過的です。  
+-   トランザクションを開始します。これは、アプリケーションに対して透過的です。  
   
--   実行のためのデータ ソースへの SQL ステートメントを送信しています。 ドライバーは、DBMS に固有の sql; ODBC SQL を変更する必要があります。多くの場合、これは、DBMS に固有の SQL を使用した ODBC で定義されたエスケープ句を置き換えるに制限されます。  
+-   実行のデータ ソースを SQL ステートメントを送信しています。 ドライバーは DBMS 固有の sql; ODBC SQL を変更する必要があります。多くの場合、これは、DBMS に固有の SQL を使用した ODBC で定義されたエスケープ句を置き換えるに制限されています。  
   
--   データを送信し、アプリケーションで指定されたデータ型を変換する場合など、データ ソースからのデータの取得。  
+-   データを送信し、アプリケーションによって指定されたデータ型を変換する場合など、データ ソースからデータを取得します。  
   
 -   ODBC SQLSTATEs DBMS 固有のエラーにマップします。

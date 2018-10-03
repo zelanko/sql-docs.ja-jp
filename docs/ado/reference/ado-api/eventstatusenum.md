@@ -1,13 +1,11 @@
 ---
-title: EventStatusEnum |Microsoft ドキュメント
+title: EventStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20a5582eb8c8744e5d8a065c5fa8ce29c0d4b793
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 623468be9022a722109f99022df8d8a583888c09
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678540"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adStatusCancel**|4|イベントが発生する原因となった操作の取り消しを要求します。|  
-|**adStatusCantDeny**|3|操作が保留中の操作の取り消しを要求できないことを示します。|  
-|**adStatusErrorsOccurred**|2|エラーまたはエラーのため、イベントの原因となった操作が失敗したことを示します。|  
+|**adStatusCancel**|4|イベントの発生の原因となった操作のキャンセルを要求します。|  
+|**adStatusCantDeny**|3|操作が保留中の操作のキャンセルを要求できないことを示します。|  
+|**adStatusErrorsOccurred**|2|エラーまたはエラーのために、イベントの原因となった操作が失敗したことを示します。|  
 |**adStatusOK**|1|イベントの原因となった操作が成功したことを示します。|  
 |**adStatusUnwantedEvent**|5|イベント メソッドの実行が完了する前に、後続の通知をできないようにします。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

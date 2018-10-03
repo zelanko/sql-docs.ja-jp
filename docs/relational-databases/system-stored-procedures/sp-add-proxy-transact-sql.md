@@ -1,14 +1,11 @@
 ---
-title: sp_add_proxy (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_add_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_proxy
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6b46ca35bc88c0e8d1677ca83bcb1da9af1e640
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e9353e797f5ff84101726b0cfe7d12020f14fca3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811450"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +51,10 @@ sp_add_proxy
  作成するプロキシの名前を指定します。 *Proxy_name*は**sysname**、既定値は NULL です。 ときに、 *proxy_name*が NULL または空の文字列、プロキシは既定の名前、 *user_name*指定します。  
   
  [ **@enabled** =] *is_enabled*  
- プロキシが有効かどうかを指定します。 *Is_enabled*フラグは**tinyint**、既定値は 1 です。 ときに*is_enabled*は**0**プロキシが有効でないと、ジョブ ステップで使用することはできません。  
+ プロキシが有効かどうかを指定します。 *Is_enabled*フラグが**tinyint**、既定値は 1 です。 ときに*is_enabled*は**0**プロキシが有効でないと、ジョブ ステップでは使用できません。  
   
  [ **@description**=] **'***説明***'**  
- プロキシの説明を指定します。 説明は**nvarchar (512)**、既定値は NULL です。 この説明はプロキシを記述する場合の参照情報として利用できますが、それ以外の目的では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってこの説明が使用されることはありません。 したがって、この引数は省略可能です。  
+ プロキシの説明を指定します。 この説明は、 **nvarchar (512)**、既定値は NULL です。 この説明はプロキシを記述する場合の参照情報として利用できますが、それ以外の目的では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってこの説明が使用されることはありません。 したがって、この引数は省略可能です。  
   
  [ **@credential_name** =] **'***credential_name***'**  
  プロキシの資格情報の名前を指定します。 *Credential_name*は**sysname**、既定値は NULL です。 いずれか*credential_name*または*credential_id*指定する必要があります。  
@@ -74,18 +71,18 @@ sp_add_proxy
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このストアド プロシージャを実行する必要があります、 **msdb**データベース。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシは、[!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステム以外のサブシステムが含まれるジョブ ステップのセキュリティを管理します。 各プロキシには対応するセキュリティ資格情報が 1 つあります。 プロキシは、任意の数のサブシステムにアクセスする可能性があります。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定セキュリティ ロールは、この手順を実行できます。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定セキュリティ ロールは、このプロシージャを実行できます。  
   
- メンバー、 **sysadmin**固定セキュリティ ロールは、任意のプロキシを使用するジョブ ステップを作成できます。 ストアド プロシージャを使用して[sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)をプロキシに他のログイン アクセスを付与します。  
+ メンバー、 **sysadmin**固定セキュリティ ロールは、任意のプロキシを使用するジョブ ステップを作成できます。 ストアド プロシージャを使用して、 [sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)プロキシに他のログイン アクセスを許可します。  
   
 ## <a name="examples"></a>使用例  
- この例は、資格情報のプロキシを作成`CatalogApplicationCredential`です。 このコードは、資格情報が既に存在していることを前提としています。 資格情報の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)です。  
+ この例は、資格情報のプロキシを作成します`CatalogApplicationCredential`します。 このコードは、資格情報が既に存在していることを前提としています。 資格情報の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)します。  
   
 ```  
 USE msdb ;  

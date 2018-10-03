@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8609654bbfe3448b30f90975e9c628756d05f278
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163502"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>タスク 4: 結果を管理および表示する
   ここでは、コンピューター支援型のクレンジングの結果を確認し、仕入先データに対してインタラクティブなクレンジングを実行します。 参照してください[インタラクティブなクレンジング ステージ](http://msdn.microsoft.com/library/hh213061.aspx#Interactive)の詳細。  

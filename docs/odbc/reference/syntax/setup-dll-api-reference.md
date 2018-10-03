@@ -1,33 +1,30 @@
 ---
-title: セットアップの DLL の API リファレンス |Microsoft ドキュメント
+title: セットアップ DLL API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa09dad7423a56db064ade504f3b6598f3daf4ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622210"
 ---
-# <a name="setup-dll-api-reference"></a>セットアップ DLL の API リファレンス
-このセクションでは、ドライバーのセットアップ DLL の API は、2 つの関数で構成の構文を説明 (**ConfigDriver**と**ConfigDSN**)。 **ConfigDriver**と**ConfigDSN**ドライバ DLL のいずれかまたは別個の DLL をセットアップできます。  
+# <a name="setup-dll-api-reference"></a>セットアップ DLL API リファレンス
+このセクションは、ドライバーのセットアップ DLL API は、2 つの関数で構成の構文を説明します (**ConfigDriver**と**ConfigDSN**)。 **ConfigDriver**と**ConfigDSN**ドライバ DLL のいずれかを指定したり、別の DLL のセットアップします。  
   
- このセクションの内容が、変換プログラムのセットアップ DLL の API は、1 つの関数から成るの構文を説明するさらに、(**ConfigTranslator**)。 **ConfigTranslator**トランスレーター DLL のいずれかまたは別個の DLL をセットアップできます。  
+ さらに、このセクションがトランスレーター セットアップ DLL API は、1 つの関数から成るの構文について説明します (**ConfigTranslator**)。 **ConfigTranslator**トランスレーター DLL のいずれかを指定したり、別の DLL のセットアップします。  
   
  各関数には、導入された ODBC のバージョンが付いています。  
   

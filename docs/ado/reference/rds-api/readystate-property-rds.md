@@ -1,51 +1,48 @@
 ---
-title: ReadyState プロパティ (RDS) |Microsoft ドキュメント
+title: ReadyState プロパティ (RDS) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37ac91100876f9519e7f7ec2de1c9a375567d392
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 54f122c178a663c1080093d1f6d391a4869c3ac6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632570"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
-進行状況を示す、 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトへのデータが取得されてその[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
+進行状況を示す、 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトにデータを取得、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定または値は次のいずれかを返します。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**adcReadyStateLoaded**|現在のクエリが実行中で、行が取得されていません。 **DataControl**オブジェクトの**Recordset**は使用されません。|  
-|**adcReadyStateInteractive**|現在のクエリによって取得される行の初期セットが格納されている、 **DataControl**オブジェクトの**Recordset**し、使用可能な。 残りの行がまだフェッチされています。|  
-|**adcReadyStateComplete**|現在のクエリによって取得されるすべての行が格納されている、 **DataControl**オブジェクトの**Recordset**し、使用可能な。<br /><br /> この状態が、エラーのため、操作が中止された場合、または場合にも存在、 **Recordset**オブジェクトが初期化されていません。|  
+|**adcReadyStateLoaded**|現在のクエリが実行中で、行が取得されていません。 **DataControl**オブジェクトの**Recordset**を使用するためにご利用いただけません。|  
+|**adcReadyStateInteractive**|現在のクエリによって取得される行の初期セットが格納されている、 **DataControl**オブジェクトの**レコード セット**使用できるとします。 残りの行がまだフェッチされています。|  
+|**adcReadyStateComplete**|現在のクエリによって取得されるすべての行が格納されている、 **DataControl**オブジェクトの**レコード セット**使用できるとします。<br /><br /> この状態は、エラーのため、操作が中止された場合、または場合にも存在、 **Recordset**オブジェクトが初期化されていません。|  
   
 > [!NOTE]
->  これらの定数を使用するクライアント側実行可能ファイルは、それらの宣言をする必要があります。 RDS ライブラリの既定のインストール フォルダーにあるファイル Adcvbs.inc から、使用する定数の宣言を貼り付けるを切り取ってことができます。  
+>  これらの定数を使用するクライアント側実行可能ファイルには、それらの宣言を提供する必要があります。 RDS ライブラリの既定のインストール フォルダーにあるファイル Adcvbs.inc から使用する定数の宣言を貼り付けるを切り取ってことができます。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、 [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)変更を監視するイベント、 **ReadyState**非同期クエリ操作中にプロパティです。 これは、プロパティの値を定期的に確認するよりも効率的です。  
+ 使用して、 [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)変更を監視するイベント、 **ReadyState**非同期クエリ操作中にプロパティ。 これは、プロパティの値を定期的に確認するよりも効率的です。  
   
- 非同期の操作中にエラーが発生した場合、 **ReadyState**プロパティに対する変更を**adcReadyStateComplete**、[状態](../../../ado/reference/ado-api/state-property-ado.md)からプロパティが変更された**adStateExecuting**に**取得のみ**、および**レコード セット**オブジェクト[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティまま*何も行われません*.  
+ 非同期の操作中にエラーが発生した場合、 **ReadyState**プロパティに対する変更を**adcReadyStateComplete**、[状態](../../../ado/reference/ado-api/state-property-ado.md)からプロパティが変更された**adStateExecuting**に**取得のみ**、および**レコード セット**オブジェクト[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティは*Nothing*.  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

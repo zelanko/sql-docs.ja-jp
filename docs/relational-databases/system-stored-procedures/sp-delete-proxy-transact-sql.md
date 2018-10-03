@@ -1,14 +1,11 @@
 ---
-title: sp_delete_proxy (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_proxy
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_delete_proxy
 - DROP PROXY statement
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e6f13ead19c72b65623dad1e6f2390162d2f900
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1db08d96a36112d686ab34db0b7989e910a01960
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844060"
 ---
 # <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,16 +53,16 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  いずれか**@proxy_name**または**@proxy_id**指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
   
  指定したプロキシがジョブ ステップによって参照されている場合は、プロキシを削除できないため、ストアド プロシージャは失敗します。  
   
-## <a name="permissions"></a>権限  
- 既定では、メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_delete_proxy**です。  
+## <a name="permissions"></a>アクセス許可  
+ 既定のメンバーだけで、 **sysadmin**固定サーバー ロールが実行できる**sp_delete_proxy**します。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、プロキシを削除`Catalog application proxy`です。  
+ 次の例は、プロキシを削除します。`Catalog application proxy`します。  
   
 ```  
 USE msdb ;  

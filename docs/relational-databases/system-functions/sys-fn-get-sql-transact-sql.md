@@ -1,14 +1,11 @@
 ---
-title: sys.fn_get_sql (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_get_sql (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5051b76490bc27a5e16aedf16be2bdff2dab8c95
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: db1c1d36bb3cb831a2f744a77529939894fff27a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842060"
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "33236164"
   指定した SQL ハンドルに対して、SQL ステートメントのテキストを返します。  
   
 > [!IMPORTANT]  
->  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、次を参照してください。 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)です。  
+>  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、次を参照してください。 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)します。  
   
  
   
@@ -58,9 +54,9 @@ sys.fn_get_sql ( SqlHandle )
  *SqlHandle*  
  ハンドル値を指定します。 *SqlHandle*は**varbinary (64)** 既定値はありません。  
   
-## <a name="tables-returned"></a>返されたテーブル  
+## <a name="tables-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|データベース ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。|  
 |objectid|**int**|データベース オブジェクトの ID。 アドホック SQL ステートメントの場合は NULL になります。|  
@@ -68,14 +64,14 @@ sys.fn_get_sql ( SqlHandle )
 |encrypted|**bit**|オブジェクトが暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
 |text|**text**|SQL ステートメントのテキスト。 暗号化されているオブジェクトの場合は NULL になります。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  有効な SQL ハンドルは、の sql_handle 列から取得できます、 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動的管理ビュー。  
   
- ハンドルを渡すを不要になった場合と、キャッシュ内に存在**l**は空の結果セットを返します。 無効なハンドルを渡すと、バッチは停止し、エラー メッセージが返されます。  
+ ハンドルを渡すを不要になった場合は、キャッシュ、しなくに存在する**l**空の結果セットを返します。 無効なハンドルを渡すと、バッチは停止し、エラー メッセージが返されます。  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]一部をキャッシュできません[!INCLUDE[tsql](../../includes/tsql-md.md)]一括コピー ステートメントや文字列リテラルは 8 KB を超えるを含むステートメントなどのステートメント。 このようなステートメントに対するハンドルは、fn_get_sql では取得できません。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]一部をキャッシュできません[!INCLUDE[tsql](../../includes/tsql-md.md)]一括コピー ステートメントや文字列リテラルは、8 KB を超えるステートメントなどのステートメント。 このようなステートメントに対するハンドルは、fn_get_sql では取得できません。  
   
- **テキスト**パスワードを含む可能性のあるテキストに対して結果セットの列はフィルター処理します。 詳細については、セキュリティに関連するストアド プロシージャについては監視されませんを次を参照してください。[トレースをフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)です。  
+ **テキスト**パスワードを含む可能性のあるテキストに対して結果セットの列がフィルター処理します。 詳細については、セキュリティ関連ストアド プロシージャについて監視されませんが、次を参照してください。[トレースをフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)します。  
   
  Fn_get_sql 関数は、次のような情報を返します、 [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)コマンド。 次は、DBCC INPUTBUFFER を使用できず、fn_get_sql 関数を使用できる場合の例です。  
   
@@ -83,7 +79,7 @@ sys.fn_get_sql ( SqlHandle )
   
 -   ストアド プロシージャに関する、現在の入れ子における最上位レベルの情報を返す必要がある場合。 たとえば、sp_1 と sp_2 という名前の 2 つのストアド プロシージャがある場合に、 sp_1 で sp_2 を呼び出し、sp_2 の実行中に sys.dm_exec_requests 動的管理ビューからハンドルを取得すると、fn_get_sql 関数では sp_2 に関する情報が返されます。 さらに fn_get_sql 関数では、現在の入れ子の最上位レベルにあるストアド プロシージャの完全なテキストが返されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ユーザーには、サーバーに対する VIEW SERVER STATE 権限が必要があります。  
   
 ## <a name="examples"></a>使用例  

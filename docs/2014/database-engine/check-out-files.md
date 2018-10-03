@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Visual Studio.SourceControl.CheckOutDialog
 helpviewer_keywords:
 - checking out files
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 313d5d85bd7ad8343fe90f0eeda16bf15e53ef44
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051222"
 ---
 # <a name="check-out-files"></a>ファイルのチェックアウト
   チェックインしたファイルの編集が許可されるように [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境を設定していない場合、チェックインしたファイルを変更するには、まずファイルをチェックアウトする必要があります。 ファイルをチェックアウトすると、ファイルのバージョンのコピーがローカル ディスクにコピーされ、ファイルの読み取り専用の属性が解除されます。  

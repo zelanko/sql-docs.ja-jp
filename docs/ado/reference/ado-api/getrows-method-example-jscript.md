@@ -1,32 +1,29 @@
 ---
-title: GetRows メソッドの例 (JScript) |Microsoft ドキュメント
+title: GetRows メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95799c397b5822b0169c9fcdca74c489880dbb0e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278831"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645620"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows メソッドの例 (JScript)
-この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)のすべての行を取得する方法を*Custiomers*からテーブル、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)および結果として得られるデータの配列を設定します。 **GetRows**メソッドが返す行の必要な数より少ない: 場合[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達している場合、または**GetRows**したレコードを取得しようとしています。別のユーザーによって削除されます。 この関数を返します**False** 2 番目のケースが発生した場合にのみです。 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**GetRowsJS.asp**です。  
+この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)のすべての行を取得するメソッドを*Custiomers*からテーブルを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と結果のデータの配列を設定します。 **GetRows**メソッドが返す行の必要な数よりも少ない: 場合[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達している場合、または**GetRows**がレコードを取得しようとしています。別のユーザーによって削除されます。 関数を返します**False** 2 番目のケースが発生した場合にのみです。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**GetRowsJS.asp**します。  
   
 ```  
 <!-- BeginGetRowsJS -->  

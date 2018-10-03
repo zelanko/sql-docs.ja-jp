@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Add Login to Server Role event class
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab322f2b6291efbfb3e8916db33fad3c16d69e0c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7110f9b234644096a200b4962e80130a01424b1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152433"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role イベント クラス
   **Audit Add Login to Server Role** イベント クラスは、固定サーバー ロールにログインが追加されるたび、または固定サーバー ロールからログインが削除されるたびに発生します。 このイベント クラスは **sp_addsrvrolemember** ストアド プロシージャと **sp_dropsrvrolemember** ストアド プロシージャで使用します。  

@@ -3,17 +3,17 @@ title: SQL Server の学習のインターネット アクセスなしでコン�
 description: オフラインまたは未接続 Machine Learning R と Python でセットアップ分離の SQL Server インスタンス。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150551"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server マシンがインターネットにアクセスできないコンピューターでの R と Python の学習のインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,6 +97,34 @@ SQL Server 2016 RTM、SP 1、または SP 2 は、ターゲット コンピュ�
 
 5. 引き続き次の画面に表示されるインストールを完了するように求められます。
 
+<a name="apply-cu"></a>
+
+## <a name="apply-cumulative-updates"></a>累積的更新プログラムを適用します。
+
+データベース エンジンと machine learning のコンポーネントの両方に、最新の累積的な更新プログラムを適用することをお勧めします。 累積的更新プログラムは、セットアップ プログラムを通じてインストールされます。 
+
+1. ベースラインのインスタンスを起動します。 累積的更新プログラムは、SQL Server の既存のインストールにのみ適用できます。
+
+  + SQL Server 2017 の最初のリリース
+  + 最初のリリースの SQL Server 2016、SQL Server 2016 SP 1、または SQL Server 2016 SP 2
+
+2. インターネット接続されているデバイスでは、SQL Server のバージョンの累積更新プログラムの一覧に移動します。
+
+  + [SQL Server 2017 更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 更新プログラム](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 実行可能ファイルをダウンロードする累積的な最新の更新プログラムを選択します。
+
+4. R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、次を参照してください。[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)します。
+
+5. すべてのファイル、実行可能ファイルと、オフラインのコンピューター上の同じフォルダーに、CAB ファイルを転送します。
+
+6. セットアップを実行します。 ライセンス条項に同意し、[機能の選択] ページで、累積的更新プログラムの適用対象の機能を確認します。 Machine learning の機能を含む、現在のインスタンスのインストールされているすべての機能が表示されます。
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. R と Python のディストリビューションのライセンス条項を使用して、ウィザードの手順を続行します。 インストール中に、更新済みの CAB ファイルを含むフォルダーの場所の選択を求められます。
+
 ## <a name="post-install-configuration"></a>インストール後の構成
 
 インストールが完了すると、サービスを再起動し、スクリプトの実行を有効にするサーバーを構成します。
@@ -109,31 +137,7 @@ SQL Server 2017 Machine Learning Services または SQL Server 2016 R Services �
 + [インストールの確認](sql-machine-learning-services-windows-install.md#verify-installation)(SQL Server 2016 では、次のようにクリックします。[ここ](sql-r-services-windows-install.md#verify-installation))。
 + [必要に応じて追加の構成](sql-machine-learning-services-windows-install.md#additional-configuration)(SQL Server 2016 では、次のようにクリックします。[ここ](sql-r-services-windows-install.md#bkmk_FollowUp))。
 
-<a name="slipstream-upgrades"></a>
-
-## <a name="slipstream-upgrades"></a>スリップ ストリーム アップグレード
-
-スリップストリーム セットアップとは、問題のあるインスタンスのインストールに修正プログラムまたは更新プログラムを適用して、既存の問題を修復する機能を指します。 この方法の利点は、SQL Server がセットアップの実行と同時に更新されるため、後で別途再起動する必要がないことです。
-
-更新済みの SQL Server をダウンロードして、サービスの更新プログラムが適用されるサーバーがインターネットへのアクセスがあるない場合にインストーラーと対応するバージョンの言語に固有の CAB ファイル。 
-
-1. ベースラインのインスタンスを起動します。 SQL Server のこれらのリリースでは、スリップ ストリーム アップグレードがサポートされています。
-
-  + SQL Server 2017 の最初のリリース
-  + SQL Server 2016 の初期リリース
-  + SQL Server 2016 SP 1
-  + SQL Server 2016 SP 2
-
-2. 指定された累積的な更新プログラムの SQL Server インストーラーの更新バージョンを取得します。 Machine learning (R および Python) 機能への更新では、基になるデータベース エンジン インスタンスの累積更新プログラムと連携しています。
-
-  + [SQL Server 2016 更新プログラム](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [SQL Server 2017 更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、次を参照してください。[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)します。
-
-4. セットアップを実行、同じフォルダー内のすべてのファイルを配置します。 インストール中に、更新済みの CAB ファイルのフォルダーの場所の選択を求められます。
-
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 インスタンスのインストール状態を確認し、一般的な問題を修正を参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
 

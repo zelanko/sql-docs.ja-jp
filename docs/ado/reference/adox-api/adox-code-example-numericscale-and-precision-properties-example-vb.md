@@ -1,13 +1,11 @@
 ---
-title: NumericScale と有効桁数のプロパティの例 (VB) |Microsoft ドキュメント
+title: NumericScale および Precision プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Precision property [ADOX], Visual Basic example
 - NumericScale property [ADOX], Visual Basic example
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0776d768a8cbfa8d1ac252cdc90a07bc9fae8f07
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8d4fece6307ff005031e7ab770b14bd5fbca541d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828492"
 ---
-# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX コードの例: NumericScale し (VB) の有効桁数のプロパティの例
-この例で、 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)と[精度](../../../ado/reference/adox-api/precision-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクト。 このコードは、それらの値を表示、 **Order Details**のテーブル、 *Northwind*データベース。  
+# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX のコード例: NumericScale プロパティと Precision プロパティの例 (VB)
+この例では、 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)と[精度](../../../ado/reference/adox-api/precision-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクト。 このコードは、その値を表示、 **Order Details**のテーブル、 *Northwind*データベース。  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -80,6 +77,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [NumericScale プロパティ (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision プロパティ (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)

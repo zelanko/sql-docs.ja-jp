@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.newdatabase.f1
 ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df7d3eb279fdde62e97204b17e81420382ca62fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bef5adba44a5202e3cc0fc7f2eb48fae08a0e3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165712"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>[新しいデータベース] ダイアログ ボックス (Analysis Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[新しいデータベース]** ダイアログ ボックスを使用すると、新しい空の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを作成できます。 **[新しいデータベース]** ダイアログ ボックスを表示するには、**オブジェクト エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの **[データベース]** フォルダーを右クリックし、**[新しいデータベース]** をクリックします。  

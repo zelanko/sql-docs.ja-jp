@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f244dc7d62f19967aae7ee3bc32a634008fcc94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c5074a670fa1ab1c6a837f06b5cd27b21707400
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139597"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>レッスン 3: データを照合して仕入先の一覧から重複を削除する
   照合アクティビティを実行するためにナレッジ ベースを準備するには、ナレッジ ベースで照合ポリシーを作成します。 ナレッジ ベースで作成できる照合ポリシーは 1 つだけですが、 そのポリシーは 1 つ以上の照合ルールで構成されます。 ルールは、照合プロセスに関連するドメインを特定し、一致率を割り当てるときの各ドメイン値の重みを指定します。 このルールでは、完全に一致するドメイン値だけを一致と見なすか、類似性のレベルが指定した値を超えるドメイン値も一致と見なすかを指定します。 また、ドメインが照合プロセスで一致する必要があるかどうかも指定します。 各ルールを個別にテストし、サンプル データに対してポリシー全体をテストできます。 テストのプロセスには、照合スコアがより大きいレコードが表示されます、**最小レコード スコア**クラスター (グループ) の DQS 構成で指定されたしきい値。 プレビュー後も、満足できるまでポリシーのルールを調整できます。  

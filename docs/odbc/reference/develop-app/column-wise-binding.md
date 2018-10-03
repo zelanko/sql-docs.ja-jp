@@ -1,38 +1,35 @@
 ---
-title: 列方向のバインド |Microsoft ドキュメント
+title: 列方向のバインド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b82a8ab37f4da51801f860638b5c03e6c499aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618980"
 ---
 # <a name="column-wise-binding"></a>列方向のバインド
-列方向のバインドを使用する場合、アプリケーションは、データが返される対象の各列に 1 つまたは 2 つ、または場合によっては、次の 3 つの配列をバインドします。 最初の配列が、データ値を保持し、2 番目の配列が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は、SQL_DESC_INDICATOR_PTR および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての個別のバッファーに格納できます。これは、3 番目の配列はバインドされています。 各配列には、行セットの行数が同じ数の要素が含まれています。  
+列方向のバインドを使用する場合、アプリケーションは、データが返される対象の各列に 1 つまたは 2 つ、または場合によっては、次の 3 つの配列をバインドします。 最初の配列は、データの値を保持し、2 番目の配列は、長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての別のバッファーに格納できます。これは、3 番目の配列はバインドされています。 各配列には、行セットの行がある多くの要素が含まれています。  
   
- SQL_ATTR_ROW_BIND_TYPE ステートメント属性を持つ列方向のバインドが使用しているアプリケーションを宣言してバッファーを設定、バインド パラメーターではなく行セットのバッファーの種類を決定します。 ドライバーは、各配列の連続する要素の行ごとにデータを返します。 次の図は、列方向のバインドの動作を示します。  
+ SQL_ATTR_ROW_BIND_TYPE ステートメント属性を持つ列方向のバインドが使用されているアプリケーションの宣言のパラメーターではなくバッファーを行セットのバインドの種類を決定するバッファーを設定します。 ドライバーは、各配列の連続する要素の各行のデータを返します。 次の図は、列方向のバインドの動作を示します。  
   
- ![列&#45;3 つの列の観点からバインド](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![列&#45;3 つの列のバインドを賢明](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- たとえば、次のコードは、OrderID、販売員、およびステータスの列に 10 要素の配列をバインドします。  
+ たとえば、次のコードでは、OrderID、営業担当者、および状態列に 10 要素の配列をバインドします。  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

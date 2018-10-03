@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3577feacc65bc1d7259d95af9b5bc6179e72b3b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa1febe828bf8711ff87f50cfd5a8ce7cbd6eed8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166652"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 要素
   `ReadWriteMode` データベース プロパティは、データベースが `ReadWrite` モードと `ReadOnly` モードのどちらであるかを指定します。 このプロパティの使用可能な値は 2 つだけです。  

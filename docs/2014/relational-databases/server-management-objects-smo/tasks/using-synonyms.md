@@ -1,30 +1,27 @@
 ---
-title: シノニムの使用 |Microsoft Docs
+title: シノニムの使用 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - synonyms [SMO]
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3776dfb8c6bf59e83543089359d9a80a8ea5ebc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee308c9cb55fc851809a713f1cf052b69206c8d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160292"
 ---
 # <a name="using-synonyms"></a>シノニムの使用
   シノニムは、スキーマ スコープ オブジェクトの別名です。 SMO では、シノニムがによって表される、<xref:Microsoft.SqlServer.Management.Smo.Synonym>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの子です。 これは、シノニムは、そのシノニムが定義されているデータベースのスコープ内でのみ有効であることを意味しています。 ただし、シノニムは、または別のデータベースでのリモート インスタンスでオブジェクトを参照できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  

@@ -1,37 +1,34 @@
 ---
-title: ハンドラーのプロパティの例 (vc++) |Microsoft ドキュメント
+title: Handler プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Handler property [ADO], VC++ example
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75d23be448bc8e56e701756f159dba34382784b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288371"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696531"
 ---
-# <a name="handler-property-example-vc"></a>ハンドラーのプロパティの例 (vc++)
+# <a name="handler-property-example-vc"></a>Handler プロパティの例 (VC++)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- この例で、 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト[ハンドラー](../../../ado/reference/rds-api/handler-property-rds.md)プロパティです。 (を参照してください[DataFactory カスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)詳細についてはします)。  
+ この例では、 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト[ハンドラー](../../../ado/reference/rds-api/handler-property-rds.md)プロパティ。 (を参照してください[DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)の詳細)。  
   
- サーバー上にあるパラメーター ファイル Msdfmap.ini の次のセクションを想定しています。  
+ 次のセクションで、サーバー上にある Msdfmap.ini、パラメーター ファイルであるとします。  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- コードは、次のようになります。 割り当てられているコマンド、 [SQL](../../../ado/reference/rds-api/sql-property.md)プロパティが一致、 ***AuthorById***識別子および作成者 Michael o ' leary の行を取得します。 [接続](../../../ado/reference/rds-api/connect-property-rds.md)、コード内のプロパティは、Northwind データ ソースを指定、Msdfmap.ini によってそのデータ ソースは上書きされます*接続*セクションです。 **DataControl**オブジェクト[レコード セット](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)プロパティが割り当てられている、切断する[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)コーディング便宜を図って純粋オブジェクト。  
+ コードは、次のようになります。 割り当てられているコマンド、 [SQL](../../../ado/reference/rds-api/sql-property.md)プロパティが一致、 ***AuthorById***識別子作成者 Michael O'Leary の行を取得します。 ですが、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 、コードでプロパティを Northwind データ ソースを指定します、Msdfmap.ini によってそのデータ ソースが上書きされます*接続*セクション。 **DataControl**オブジェクト[レコード セット](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)プロパティが割り当てられている接続が切断されたに[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)コーディングの利便性と純粋なオブジェクト。  
   
 ```  
 // BeginHandlerCpp.cpp  

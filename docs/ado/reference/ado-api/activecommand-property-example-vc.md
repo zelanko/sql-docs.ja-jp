@@ -1,34 +1,31 @@
 ---
-title: ActiveCommand プロパティの例 (vc++) |Microsoft ドキュメント
+title: ActiveCommand プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveCommand property [ADO], VC++ example
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 906bf36756aea9f76a800ab586f3d356d0887723
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00eaea347c379a64863b095a17f9518e5d1897a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632220"
 ---
-# <a name="activecommand-property-example-vc"></a>ActiveCommand プロパティの例 (vc++)
-この例で、 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティです。  
+# <a name="activecommand-property-example-vc"></a>ActiveCommand プロパティの例 (VC++)
+この例では、 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティ。  
   
- サブルーチンが指定された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**ActiveCommand**プロパティの使用にコマンド テキストや作成パラメーターを表示、**レコード セット**です。  
+ サブルーチンを指定、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**ActiveCommand**コマンド テキストと作成パラメーターを表示するプロパティが使用される、**レコード セット**します。  
   
 ## <a name="example"></a>例  
   

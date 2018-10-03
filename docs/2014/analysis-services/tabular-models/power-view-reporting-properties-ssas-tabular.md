@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d9b290b55eceb8734719c61229967d0c93c160a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6c4601553392a2e11bf6ab77063552c2a58e939
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152792"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Power View レポート プロパティ (SSAS テーブル)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、データ アナリスト、意思決定者、インフォメーション ワーカーなどのビジネス ユーザーのための、直感的なアドホック レポートを提供します。 これを使用すると、PowerPivot ギャラリーで発行される PowerPivot ブックに基づくテーブル モデル、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して作成されて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services インスタンスに配置されるテーブル モデルから、データのビューを簡単に作成して対話できます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] はブラウザー ベースの Silverlight アプリケーションであり、SharePoint Server 2010 以降から起動されます。  

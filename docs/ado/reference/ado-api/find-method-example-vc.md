@@ -1,32 +1,29 @@
 ---
-title: メソッドの例 (vc++) の検索 |Microsoft ドキュメント
+title: Find メソッドの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3280728d8e2e7a7f822be568052a5cbac84767a3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 448768620100ac444fefe030e2ef42812e2eb03c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682120"
 ---
-# <a name="find-method-example-vc"></a>メソッドの例 (vc++) を検索します。
-この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[検索](../../../ado/reference/ado-api/find-method-ado.md)見つけてビジネスのタイトルの数をカウントするメソッド、 **Pubs**データベース。 例では、基になるプロバイダーが同様の機能をサポートしていません。  
+# <a name="find-method-example-vc"></a>Find メソッドの例 (VC++)
+この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[検索](../../../ado/reference/ado-api/find-method-ado.md)見つけてビジネス タイトルの数をカウントするメソッド、 **Pubs**データベース。 例では、基になるプロバイダーが同様の機能をサポートしていませんを前提としています。  
   
 ```  
 // BeginFindCpp.cpp  

@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 892b13610d1a6acd9576ba79499fc4b89cca0cd0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723190"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux で可用性グループ
 
@@ -158,7 +156,7 @@ AG が NONE のクラスターの種類では、そのレプリカのため、�
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
  
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 [SQL Server on Linux の可用性グループを構成します。](sql-server-linux-availability-group-configure-ha.md)
 
 [SQL Server on Linux の読み取りスケール可用性グループを構成します。](sql-server-linux-availability-group-configure-rs.md)

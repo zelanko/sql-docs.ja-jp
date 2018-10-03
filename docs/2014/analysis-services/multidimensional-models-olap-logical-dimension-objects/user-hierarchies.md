@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a680e531c91d56db0271f373066fb768049f7f8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c9e5b2be2d3c6c83e91fd735f3e32c826e2f50c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286158"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152782"
 ---
 # <a name="user-hierarchies"></a>ユーザー階層
   ユーザー定義の階層は、ユーザー定義階層で使用される属性の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションのメンバーを階層構造に整理し、キューブ内のナビゲーション パスを提供します。 たとえば、次のテーブルでは、時間ディメンションにディメンション テーブルを定義します。 ディメンション テーブルは、年、四半期、月という 3 つの属性をサポートしています。  
@@ -82,7 +79,7 @@ ms.locfileid: "37286158"
   
 -   Province というレベルが CountryRegion レベルと City レベルの間に追加されます。  
   
- Province レベルに、CountryRegion レベルの他のメンバーに関連付けられているメンバーが生成され、City レベルのメンバーが Province レベルの対応するメンバーに関連付けられます。 ただし、CountryRegion レベルの Vatican City メンバーは Province レベルのメンバーに関連付けられていないため、メンバーは City レベルから CountryRegion レベルの Vatican City メンバーに直接関連付ける必要があります。 この変更により、このディメンションの階層は不規則になります。 市 Vatican City の親は国/地域である Vatican City で、これは City レベルの Vatican City メンバーの真上にはありません。 詳細については、「 [不規則階層](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)」を参照してください。  
+ Province レベルに、CountryRegion レベルの他のメンバーに関連付けられているメンバーが生成され、City レベルのメンバーが Province レベルの対応するメンバーに関連付けられます。 ただし、CountryRegion レベルの Vatican City メンバーは Province レベルのメンバーに関連付けられていないため、メンバーは City レベルから CountryRegion レベルの Vatican City メンバーに直接関連付ける必要があります。 この変更により、このディメンションの階層は不規則になります。 市 Vatican City の親は国/地域である Vatican City で、これは City レベルの Vatican City メンバーの真上にはありません。 詳細については、[不規則階層](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)に関する記事を参照してください。  
   
 ### <a name="parent-child-hierarchies"></a>親子階層  
  ディメンションの親子階層は、親子属性という特殊な属性を使用して定義され、これによってメンバー間の相互関係が決まります。 親属性は、ディメンション メイン テーブル内の *自己参照型リレーションシップ*または *自己結合*を記述します。 親子階層は 1 つの親属性から構築されます。 親子階層に存在するレベルは、親属性に関連付けられているメンバー間の親子リレーションシップに基づいているので、1 つの親子階層に割り当てられるレベルは 1 つのみです。 親子階層のディメンション スキーマは、ディメンション メイン テーブルに存在する自己参照型リレーションシップに依存します。 たとえば、次の図を示しています、 **DimOrganization**ディメンション メイン テーブルを[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サンプル データベース。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5991bbfb135ccd0ab65f342bf59648e4c82de36e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b3268898498ff33273eba4aca0c67315001bce6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161452"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server のライセンス条項について (SSCM)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェア ライセンス条項は、ローカル コンピューターにコピー時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます: %ProgramFiles%\Microsoft SQL server \110\license terms \ または %programfiles (x86) %\Microsoft SQL server \110\license 条項\\します。  

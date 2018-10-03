@@ -1,13 +1,11 @@
 ---
-title: EOS と LineSeparator プロパティ SkipLine メソッドの例 (VB) |Microsoft ドキュメント
+title: EOS および LineSeparator プロパティの SkipLine メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60a68227156d7138f6dbaacd3670fbd142543a9a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278041"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603190"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS と LineSeparator プロパティ SkipLine メソッドの例 (VB)
-この例では、一度に 1 つのテキスト ストリームの行を操作する方法を示します。 既定キャリッジ リターン/ライン フィードからの行区切り記号を変更した場合の効果 (**adCRLF**) 単に改行を (**adLF**) またはキャリッジ リターン (**adCR**) が表示されます。  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS および LineSeparator プロパティの SkipLine メソッドの例 (VB)
+この例では、一度に 1 つのテキスト ストリームの行を操作する方法を示します。 既定キャリッジ リターンとライン フィードから、行区切り記号を変更した効果 (**adCRLF**) を単にライン フィード (**adLF**) またはキャリッジ リターン (**adCR**) が表示されます。  
   
 ```  
 'BeginSkipLineVB  

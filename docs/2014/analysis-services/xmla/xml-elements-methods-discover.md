@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Discover Method
@@ -25,16 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cec0774478c0eb34e9094bd9b6b1663e55339c1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91ea30a495eb76c22075007f48e3ae721504ef49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116322"
 ---
 # <a name="discover-method-xmla"></a>Discover メソッド (XMLA)
   インスタンスから利用可能なデータベースまたは特定のオブジェクトに関する詳細情報の一覧などの情報を取得[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 `Discover` メソッドを使用して取得されるデータは、メソッドに渡されるパラメーターの値によって異なります。  

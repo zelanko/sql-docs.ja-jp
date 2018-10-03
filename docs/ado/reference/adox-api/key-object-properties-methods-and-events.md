@@ -1,31 +1,28 @@
 ---
-title: 主要オブジェクトのプロパティ、メソッド、およびイベント |Microsoft ドキュメント
+title: 主要オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 248302463ab934fbe8b4df189d3f3f286b05a913
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8627f933ea2d9de89c5c93252589fb3d7162abc3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828491"
 ---
-# <a name="key-object-properties-methods-and-events"></a>主要オブジェクトのプロパティ、メソッド、およびイベント
+# <a name="key-object-properties-methods-and-events"></a>Key オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [Columns コレクション](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [列のコレクション](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
  [DeleteRule プロパティ](../../../ado/reference/adox-api/deleterule-property-adox.md)  
   

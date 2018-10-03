@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4d128ae77c4a8a80817bc3e19a715f4c31992d55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101692"
 ---
 # <a name="device-contents-sql-server"></a>デバイス コンテンツ (SQL Server)
   このダイアログ ボックスは、バックアップ情報の表示に使用します。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
@@ -56,7 +53,7 @@ ms.locfileid: "37186589"
  **[バックアップ セット]**  
  メディアに収められているバックアップ セットに関する情報を表示します。 バックアップ セットとは、正常に完了したバックアップ操作の結果です。バックアップ セットの内容は、一連のバックアップ デバイスのメディアに分散されます。  
   
-|[ヘッダー]|値|  
+|Header|値|  
 |------------|------------|  
 |**名前**|バックアップ セットの名前です。|  
 |**型**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  

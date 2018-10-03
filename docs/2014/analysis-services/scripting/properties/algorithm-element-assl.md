@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Algorithm Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 38ca7406538a81768e8cab8d0c24142c8105c963
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fb2ab30f6abd753f0c954ef41ad26d0af9dcda8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149782"
 ---
 # <a name="algorithm-element-assl"></a>Algorithm 要素 (ASSL)
   使用されるアルゴリズムを定義、 [MiningModel](../objects/miningmodel-element-assl.md)要素。  

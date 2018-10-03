@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPInit (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPInit method
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11ddae5bacdd5428a4381ec034d9dc9f0f22b6b7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052162"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
   一括コピー構造を初期化し、エラー チェックを実行して、データ ファイルとフォーマット ファイルの名前が正しいことを確認します。その後、それらのファイルを開きます。  
@@ -41,24 +38,24 @@ inteDirection);
 ```  
   
 ## <a name="remarks"></a>コメント  
- **BCPInit**メソッドは、他の一括コピー メソッドの前に呼び出す必要があります。 **BCPInit**メソッドは、ワークステーションの間でデータの一括コピーの必要な初期化を実行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+ **BCPInit** メソッドは、他のすべての一括コピー メソッドの前に呼び出す必要があります。 **BCPInit** メソッドにより、ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との間のデータの一括コピーに必要な初期化が実行されます。  
   
- **BCPInit**メソッドは、データベース ソースまたはターゲット テーブルのデータ ファイルではなく構造を検査します。 また、データベース テーブル、ビュー、または SELECT 結果セット内の各列に基づいてデータ ファイルのデータ形式値を指定します。 このデータ形式値には、各列のデータ型、長さや NULL のインジケーターとターミネータのバイト文字列がデータ内に存在するかどうか、および固定長データ型の幅の指定などが含まれます。 **BCPInit**メソッドは、これらの値を次のように設定します。  
+ **BCPInit** メソッドは、データ ファイルではなく、データベースのコピー元テーブルまたはコピー先テーブルの構造を調べます。 また、データベース テーブル、ビュー、または SELECT 結果セット内の各列に基づいてデータ ファイルのデータ形式値を指定します。 このデータ形式値には、各列のデータ型、長さや NULL のインジケーターとターミネータのバイト文字列がデータ内に存在するかどうか、および固定長データ型の幅の指定などが含まれます。 **BCPInit** メソッドでは、これらの値を次のように設定します。  
   
 -   指定するデータ型は、データベース テーブル、ビュー、または SELECT 結果セット内の列のデータ型です。 データ型によって列挙[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で指定されたネイティブ データ型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイル (sqlncli.h)。 列挙される値の形式は、BCP_TYPE_XXX です。 データはそのコンピューターの形式で表されます。 つまり、integer データ型の列のデータは、データ ファイルを作成したコンピューターに基づいて、ビッグ エンディアンまたはリトル エンディアンの 4 バイト シーケンスで表されます。  
   
--   データベースのデータ型が固定長の場合は、データ ファイルのデータも固定長になります。 データを処理する一括コピー メソッド (たとえば、 [:bcpexec](ibcpsession-bcpexec-ole-db.md)) と同じデータベース テーブル、ビュー、または SELECT 列で指定されたデータの長さにするデータ ファイル内のデータの長さのデータ行が解析リスト。 たとえば、`char(13)` で定義されているデータベース列のデータは、ファイル内の各データ行に 13 文字で表す必要があります。 データベース列で NULL 値を許容する場合は、固定長データにプレフィックスとして NULL インジケーターを付けることができます。  
+-   データベースのデータ型が固定長の場合は、データ ファイルのデータも固定長になります。 データを処理する一括コピー メソッド ([IBCPSession::BCPExec](ibcpsession-bcpexec-ole-db.md) など) では、データ行が解析されます。データ ファイル内のデータの長さは、データベース テーブル、ビュー、または SELECT 列リスト内で指定されるデータの長さと同じでなければなりません。 たとえば、`char(13)` で定義されているデータベース列のデータは、ファイル内の各データ行に 13 文字で表す必要があります。 データベース列で NULL 値を許容する場合は、固定長データにプレフィックスとして NULL インジケーターを付けることができます。  
   
--   データをコピーするときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データ ファイルでは、データベース テーブルの各列のデータがあります。 データをコピーするときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベース テーブル、ビュー、または SELECT 結果セットのすべての列からデータがデータ ファイルにコピーされます。  
+-   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイルにデータベース テーブル内の各列に格納するデータが含まれている必要があります。 データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーするときは、データベース テーブル、ビュー、または SELECT 結果セット内のすべての列のデータがデータ ファイルにコピーされます。  
   
--   データをコピーするときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データ ファイル内の列の序数位置は、データベース テーブルの列の序数位置と同じである必要があります。 データをコピーするときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **BCPExec**メソッドは、データベース テーブルの列の序数位置に基づいてデータを配置します。  
+-   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイル内の列の序数位置がデータベース テーブル内の列の序数位置と同じであることが必要です。 データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーするときは、**BCPExec** メソッドによりデータベース テーブル内の列の序数位置に基づいてデータが配置されます。  
   
--   データベースのデータ型が可変長 (`varbinary(22)` など) の場合、またはデータベース列に NULL 値を格納できる場合は、データ ファイル内のデータにプレフィックスとして長さのインジケーターや NULL インジケーターを付けることができます。 インジケーターの幅は、データ型と一括コピーのバージョンによって異なります。 [Ibcpsession::bcpcontrol](ibcpsession-bcpcontrol-ole-db.md)メソッド オプション BCP_OPTION_FILEFMT 以前の一括コピー データ ファイルと以降のバージョンを実行しているサーバーの間の互換性を備えている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]かを示す、内のインジケーターの幅、データは、予想よりも幅の狭いです。  
+-   データベースのデータ型が可変長 (`varbinary(22)` など) の場合、またはデータベース列に NULL 値を格納できる場合は、データ ファイル内のデータにプレフィックスとして長さのインジケーターや NULL インジケーターを付けることができます。 インジケーターの幅は、データ型と一括コピーのバージョンによって異なります。 [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) メソッドのオプションである BCP_OPTION_FILEFMT では、データ内のインジケーターの幅が必要な幅より狭くなる時点を示すことで、以前の一括コピー データ ファイルと最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサーバーとの間の互換性を確保しています。  
   
 > [!NOTE]  
->  データ ファイルに指定されたデータ形式値を変更するには、使用、 [ibcpsession::bcpcolumns](ibcpsession-bcpcolumns-ole-db.md)と[ibcpsession::bcpcolfmt](ibcpsession-bcpcolfmt-ole-db.md)メソッド。  
+>  データ ファイルに指定したデータ形式値を変更するには、[IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) メソッドを使用します。  
   
- 一括コピー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース オプションを設定してインデックスを含んでいないテーブル用に最適化できます**select/bulkcopy**します。  
+ テーブルにインデックスが含まれていない場合は、データベース オプション **select into/bulkcopy** を設定することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。  
   
 ## <a name="arguments"></a>引数  
  *pwszTable*[in]  
@@ -66,7 +63,7 @@ inteDirection);
   
  eDirection 引数を BCP_DIRECTION_OUT に設定すると、pwszTable 引数をデータベース ビューの名前にすることができます。  
   
- EDirection 引数を BCP_DIRECTION_OUT に設定しを使用して SELECT ステートメントを指定する場合、 **BCPControl**メソッドの前に、 **BCPExec**メソッドを呼び出すと、 *pwszTable*引数を NULL に設定する必要があります。  
+ eDirection 引数を BCP_DIRECTION_OUT に設定し、**BCPExec** メソッドを呼び出す前に **BCPControl** メソッドを使用して SELECT ステートメントを指定する場合は、*pwszTable* 引数に NULL を設定する必要があります。  
   
  *pwszDataFile*[in]  
  コピー操作の対象になるユーザー ファイルの名前を指定します。  
@@ -82,7 +79,7 @@ inteDirection);
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました ' 詳細については、使用、 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)インターフェイス。  
+ プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) インターフェイスを使用してください。  
   
  E_OUTOFMEMORY  
  メモリ不足エラーです。  
