@@ -1,14 +1,11 @@
 ---
-title: sp_fulltext_semantic_unregister_language_statistics_db (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_fulltext_semantic_unregister_language_statistics_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec9142a0d39405db9fd6473a8db6c2d0283027e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: aefc83920cfe20f150c34ff7f35ad639f78739ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756070"
 ---
 # <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  既存のセマンティック言語統計データベースの現在のインスタンスからの登録を解除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、関連付けられているメタデータを削除します。  
+  既存のセマンティック言語統計データベースの現在のインスタンスからの登録を解除します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、関連付けられているメタデータを削除します。  
   
  このステートメントが、データベースをデタッチしたり、ファイル システムから物理的なデータベース ファイルを削除することはありません。 データベースの登録の解除後は、それをデタッチし、物理的なデータベース ファイルを削除することができます。  
   
@@ -46,7 +42,7 @@ GO
 ```  
   
 ##  <a name="Arguments"></a> 引数  
- このプロシージャは、引数を必要としません。 インスタンスから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は 1 つだけセマンティック言語統計データベースは、データベースを特定するために必要です。  
+ このプロシージャは、引数を必要としません。 インスタンスから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]1 つしかセマンティック言語統計データベースを必要はありません、データベースを識別するためにします。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  **0** (成功) または**1** (失敗)  
@@ -59,22 +55,22 @@ GO
   
  **sp_fulltext_semantic_unregister_language_statistics_db**は、次の手順を実行します。  
   
-1.  現在のインスタンスに対して進行中のセマンティックな作成処理がないことを確認[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+1.  現在のインスタンスに対して進行中のセマンティックな作成処理がないことを確認します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 2.  指定されたセマンティック言語統計データベースに関連付けられているすべてのメタデータを削除します。  
   
  詳細については、「 [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)」を参照してください。  
   
 ## <a name="metadata"></a>メタデータ  
- インスタンスにインストールされているセマンティック言語統計データベースに関する情報の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、カタログ ビューに対してクエリを[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)です。  
+ インスタンスにインストールされているセマンティック言語統計データベースに関する情報の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、カタログ ビューに対してクエリ[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)します。  
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、呼び出すことによって、セマンティック言語統計データベースを登録解除する方法を示しています。 **sp_fulltext_semantic_unregister_language_statistics_db**です。  
+ 次の例は、呼び出すことによって、セマンティック言語統計データベースを登録解除する方法を示しています。 **sp_fulltext_semantic_unregister_language_statistics_db**します。  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  

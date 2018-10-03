@@ -1,32 +1,29 @@
 ---
-title: プロシージャの更新メソッドの例 (VB) |Microsoft ドキュメント
+title: Procedures Refresh メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADOX], Visual Basic example
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb1e831fafeeadd47e87928fe7d829ea83d93e58
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6f46bc9aceeec0e03329572814653a94ea64aa50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286781"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632310"
 ---
-# <a name="procedures-refresh-method-example-vb"></a>プロシージャは、メソッドの例 (VB) の更新します。
-次のコードを更新する方法を示しています、[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)のコレクション、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)です。 これは、前に必要[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトから、**カタログ**アクセスできます。  
+# <a name="procedures-refresh-method-example-vb"></a>Procedures Refresh メソッドの例 (VB)
+次のコードを更新する方法を示しています、[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)のコレクションを[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)します。 これは、前に必要[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトから、**カタログ**アクセスできます。  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -59,6 +56,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [プロシージャのコレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

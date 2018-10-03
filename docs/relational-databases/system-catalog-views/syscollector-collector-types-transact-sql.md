@@ -1,14 +1,11 @@
 ---
-title: syscollector_collector_types (TRANSACT-SQL) |Microsoft ドキュメント
+title: syscollector_collector_types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collector_types
@@ -19,23 +16,22 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7951259911347457e4927cb9c3c0133d87cc9cf6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650580"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   コレクション アイテムのコレクターの種類に関する情報を提供します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|コレクション型の GUID。 NULL 値は許可されません。|  
 |**name**|**sysname**|コレクション型の名前。 NULL 値は許可されません。|  
@@ -47,18 +43,18 @@ ms.locfileid: "33221903"
 |**upload_package_id**|**uniqueidentifer**|アップロード パッケージの GUID。 NULL 値は許可されません。|  
 |**upload_package_path**|**nvarchar (4000)**|アップロード パッケージのパス。 NULL 値が許可されます。|  
 |**upload_package_name**|**sysname**|アップロード パッケージの名前。 NULL 値は許可されません。|  
-|**is_system**|**bit**|オン (1) またはオフ (0) を示す、コレクター型は、データ コレクターで出荷された場合、または後で追加された場合、 **dc_admin**です。 たとえば、社内またはサード パーティによって開発されたカスタム型が考えられます。 NULL 値は許可されません。|  
+|**is_system**|**bit**|(1) をオンまたはオフ (0) をコレクター型は、データ コレクターで出荷された場合、または後で追加された場合を示すために、 **dc_admin**します。 たとえば、社内またはサード パーティによって開発されたカスタム型が考えられます。 NULL 値は許可されません。|  
   
-## <a name="permissions"></a>権限  
- SELECT 権限が必要**dc_operator**、 **dc_proxy**です。  
+## <a name="permissions"></a>アクセス許可  
+ SELECT 権限が必要**dc_operator**、 **dc_proxy**します。  
   
 ## <a name="change-history"></a>変更履歴  
   
 |変更内容|  
 |---------------------|  
-|更新**collection_type_uid**列名を**collector_type_uid**です。|  
+|更新**collection_type_uid**列名を**collector_type_uid**します。|  
 |説明を修正、 **parameter_schema**列値が null 許容であることを示します。|  
-|追加、 **parameter_formatter**列です。|  
+|追加、 **parameter_formatter**列。|  
 |データ型を修正、 **collection_package_path**列、値が null 許容であることを示す説明を更新します。|  
 |データ型を修正、 **upload_package_path**列、値が null 許容であることを示す説明を更新します。|  
   

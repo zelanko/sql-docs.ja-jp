@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_log_sp (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmail_delete_log_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f565100bff8373839e70231b0a99a716efc76ec7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649210"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +43,21 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
   
 ## <a name="arguments"></a>引数  
  [ **@logged_before** =] **'***logged_before***'**  
- 日付と時刻で指定されたエントリを削除、 *logged_before*引数。 *logged_before*は**datetime**で、既定値としては NULL です。 NULL はすべての日付を表します。  
+ 日付と時刻で指定されたエントリを削除、 *logged_before*引数。 *logged_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
   
  [ **@event_type** =] **'***event_type***'**  
- ログとして指定された型のエントリを削除、 *event_type*です。 *event_type*は**varchar (15)** 既定値はありません。 有効なエントリは**成功**、**警告**、**エラー**、および**情報**です。 NULL はすべてのイベントの種類を表します。  
+ ログとして指定された型のエントリを削除、 *event_type*します。 *event_type*は**varchar (15)** 既定値はありません。 有効なエントリは**成功**、**警告**、**エラー**、および**情報**します。 NULL はすべてのイベントの種類を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- 使用して、 **sysmail_delete_log_sp**ストアド プロシージャをデータベース メール ログからエントリを完全に削除します。 日時を指定する引数を使用すると、古い記録だけを削除できます。 この場合、引数で指定した日時より前のイベントが削除されます。 省略可能な引数では、特定の型のとして指定されたイベントのみを削除することができます、 **event_type**引数。  
+## <a name="remarks"></a>コメント  
+ 使用して、 **sysmail_delete_log_sp**ストアド プロシージャをデータベース メール ログからエントリを完全に削除します。 日時を指定する引数を使用すると、古い記録だけを削除できます。 この場合、引数で指定した日時より前のイベントが削除されます。 として指定された、特定種類のイベントのみを削除することができます、省略可能な引数、 **event_type**引数。  
   
- データベース メール ログのエントリを削除しても、データベース メールのテーブルから電子メールのエントリは削除されません。 使用して[sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)をデータベース メールのテーブルから電子メールを削除します。  
+ データベース メール ログのエントリを削除しても、データベース メールのテーブルから電子メールのエントリは削除されません。 使用[sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)をデータベース メールのテーブルから電子メールを削除します。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールは、このプロシージャを使用できます。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールは、このプロシージャを使用できます。  
   
 ## <a name="examples"></a>使用例  
   

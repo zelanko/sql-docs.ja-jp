@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
@@ -16,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a6c4120f02bf164eedb92c16e9bb50a33806df6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6bf8a5002c67ee236075efc0a06d5422f03cf398
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071802"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638480"
 ---
 # <a name="set-cursor-options-odbc"></a>カーソル オプションの設定 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +30,7 @@ ms.locfileid: "43071802"
 |*属性*|指定対象|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|カーソルの種類。順方向専用、静的、動的、キーセット ドリブンのいずれか|  
-|SQL_ATTR_CONCURRENCY|同時実行制御オプション。読み取り専用、ロック、タイムスタンプを使用するオプティミスティック、値を使用するオプティミスティックのいずれか|  
+|SQL_ATTR_CONCURRENCY|コンカレンシー制御オプション。読み取り専用、ロック、タイムスタンプを使用するオプティミスティック、値を使用するオプティミスティックのいずれか|  
 |SQL_ATTR_ROW_ARRAY_SIZE|フェッチごとに取得される行数|  
 |SQL_ATTR_CURSOR_SENSITIVITY|他の接続によるカーソル行の更新を、カーソルで表示するかしないか|  
 |SQL_ATTR_CURSOR_SCROLLABLE|カーソルを前後にスクロール可能|  
@@ -42,7 +40,7 @@ ms.locfileid: "43071802"
  SQL_ATTR_CURSOR_TYPE および SQL_ATTR_CONCURRENCY を設定するか、SQL_ATTR_CURSOR_SENSITIVITY と SQL_ATTR_CURSOR_SCROLLABLE を設定して使用するカーソルの種類を制御できます。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
   
 ## <a name="example"></a>例  
- 次のサンプルでは、ステートメント ハンドルを割り当て、行のバージョンに基づくオプティミスティック同時実行を使用する動的カーソルを種類として設定してから、SELECT を実行します。  
+ 次のサンプルでは、ステートメント ハンドルを割り当て、行のバージョンに基づくオプティミスティック コンカレンシーを使用する動的カーソルを種類として設定してから、SELECT を実行します。  
   
 ```  
 retcode = SQLAllocHandle(SQL_HANDLE_STMT, hdbc1, &hstmt1);  

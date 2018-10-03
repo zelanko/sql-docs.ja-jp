@@ -1,32 +1,29 @@
 ---
-title: SortOrder プロパティの例 (VB) |Microsoft ドキュメント
+title: SortOrder プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770930"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder プロパティの例 (VB)
-この例で、 [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)に追加された、[列](../../../ado/reference/adox-api/columns-collection-adox.md)のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、国の列に昇順のインデックスを追加、**従業員**テーブルし、レコードが表示されます。 コードでは、国の列に降順のインデックスを付加してから、**従業員**テーブルが表示され、レコードが再び表示されます。 昇順と降順のインデックスの違いが表示されます。  
+この例では、 [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)に追加された、[列](../../../ado/reference/adox-api/columns-collection-adox.md)のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードでは、国の列に昇順のインデックスを付加、**従業員**テーブルし、レコードが表示されます。 コードでは、国の列に降順のインデックスを付加し、**従業員**テーブルし、レコードをもう一度表示されます。 昇順と降順のインデックスの違いが表示されます。  
   
 ```  
 ' BeginSortOrderVB  
@@ -141,7 +138,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列のコレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [SortOrder プロパティ (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

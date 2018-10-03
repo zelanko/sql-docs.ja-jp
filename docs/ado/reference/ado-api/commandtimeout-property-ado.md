@@ -1,13 +1,11 @@
 ---
-title: CommandTimeout プロパティ (ADO) |Microsoft ドキュメント
+title: CommandTimeout プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTimeout property [ADO]
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1addc5de70e53087cdcbaa77fea87211958cbcdc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5bb74384e043130ccfe4c3399b363b25d40737c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276871"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632160"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout プロパティ (ADO)
-試行を終了し、エラーが発生する前に、コマンドを実行中に待機する時間を示します。  
+試行を終了し、エラーが発生する前に、コマンドの実行中に待機する時間を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**長い**を示す値を秒単位でどのくらいの期間コマンドの実行を待機します。 既定値は 30 です。  
+ 設定または取得を**長い**を示す値を秒単位で期間コマンドの実行を待機します。 既定値は 30 です。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、 **CommandTimeout**プロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは[コマンド](../../../ado/reference/ado-api/command-object-ado.md)の取り消しを許可するオブジェクト、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッド呼び出すと、ネットワーク トラフィックやサーバーの使用による遅延が原因です。 間隔設定されている場合、 **CommandTimeout**プロパティまでのコマンドは、実行が完了した、エラーが発生して、コマンドが取り消されます。 プロパティを 0 に設定すると、ADO は、実行が完了するまで無期限に待機します。 コードのサポートを記述するプロバイダーとデータ ソースを確認してください、 **CommandTimeout**機能します。  
+ 使用して、 **CommandTimeout**プロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは[コマンド](../../../ado/reference/ado-api/command-object-ado.md)の取り消しを許可するオブジェクト、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドネットワーク トラフィックや負荷の高いサーバーの使用から遅延によって、呼び出しをします。 この間隔で設定する場合、 **CommandTimeout**プロパティでは、コマンドが実行を完了、エラーが発生し、ADO コマンドをキャンセルする前に経過するとします。 プロパティを 0 に設定すると、ADO は、実行が完了するまで無期限に待機します。 コードのサポートを記述する、プロバイダーとデータ ソースの確認、 **CommandTimeout**機能します。  
   
- **CommandTimeout**の設定、**接続**オブジェクトも何も起こりません、 **CommandTimeout**の設定、**コマンド**オブジェクト上、同じ**接続**ですつまり、**コマンド**オブジェクトの**CommandTimeout**プロパティがの値を継承していない、**接続。** オブジェクトの**CommandTimeout**値。  
+ **CommandTimeout**の設定、**接続**オブジェクトも何も起こりません、 **CommandTimeout**の設定、**コマンド**上のオブジェクト、同じ**接続**つまり、**コマンド**オブジェクトの**CommandTimeout**プロパティの値を継承しません、 **の接続。** オブジェクトの**CommandTimeout**値。  
   
- **接続**オブジェクト、 **CommandTimeout**プロパティは読み取り/書き込みの後に、**接続**が開かれています。  
+ **接続**オブジェクト、 **CommandTimeout**プロパティは読み取り/書き込み後に、**接続**が開かれます。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -47,6 +44,6 @@ ms.locfileid: "35276871"
   
 ## <a name="see-also"></a>参照  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの使用例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [ConnectionTimeout プロパティ (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)

@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 2a4d4eed76e57d8ae8ebe7886ca8796a6e5e8ea7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720870"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイの SQL Server 可用性の基礎
 
@@ -247,5 +245,5 @@ STONITH は、Pacemaker クラスターのサポートされている必要が�
 #### <a name="other-linux-distributions"></a>他の Linux ディストリビューション
 Linux では、Pacemaker クラスターのすべてのノードは、同一のディストリビューションにある必要があります。 たとえば、RHEL ノードは SLES ノードを持つ Pacemaker クラスターの一部であることは。 この主な理由が前に示した: ディストリビューションが可能性がさまざまなバージョンと機能、処理が正しく動作しない可能性があります。 Wsfc と Linux の混在と同じストーリーがディストリビューションを混在させる: なし を使用するか、Ag を分散します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 [SQL Server on Linux のペース クラスターを展開します。](sql-server-linux-deploy-pacemaker-cluster.md)

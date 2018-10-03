@@ -1,35 +1,32 @@
 ---
-title: SQL プロパティの例 (VBScript) |Microsoft ドキュメント
+title: SQL プロパティの例 (VBScript) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SQL property [ADO], VBScript example
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be02b86efe2aa2c741507d1cfdb93aa9187062f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b76b4bfc372c688101882a7250c54a4d4c0c536c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288871"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673550"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- 次のコードを設定する方法を示しています、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザイン時およびというデータベースを使用してデータに対応するコントロールにバインド SQL パラメーター *Pubs*、Microsoft SQL Server に付属しています。 という名前の例をテストする、標準の ASP 文書に次のコードをコピーする**SQLDesignVBS.asp** Web サーバーにします。  
+ 次のコードを設定する方法を示しています、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザイン時およびバインドと呼ばれるデータベースを使用してコントロールをデータに対応する SQL パラメーター *Pubs*、Microsoft SQL Server が付属しています。 という名前の例では、テスト、標準の ASP 文書に次のコードをコピーする**SQLDesignVBS.asp** Web サーバーにします。  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -92,7 +89,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- 次の例は、のために必要なパラメーターを設定する方法を示します **.rds ですDataControl**実行時にします。 この例をテストして、次のコードを通常 ASP ドキュメントに貼り付けてを切り取ってという名前を付けます**SQLRuntimeVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
+ 次の例は、の必要なパラメーターを設定する方法を示します**rds.DataControl**実行時にします。 この例をテストする切り取りと標準の ASP 文書に次のコードを貼り付けるし、名前を付けます**SQLRuntimeVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  

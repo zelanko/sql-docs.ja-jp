@@ -1,13 +1,11 @@
 ---
-title: カタログのオブジェクト (ADOX) |Microsoft ドキュメント
+title: Catalog オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae03190406dd6a37a7670fe749d76762e6e6674d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5547090443e2f22a135234853b76480fb8295e14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634420"
 ---
-# <a name="catalog-object-adox"></a>カタログ オブジェクト (ADOX)
-コレクションが含まれます ([テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)、[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、および[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)) します。データ ソースのスキーマ カタログをについて説明します。  
+# <a name="catalog-object-adox"></a>Catalog オブジェクト (ADOX)
+コレクションが含まれています ([テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)、[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、および[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)) します。データ ソースのスキーマ カタログをについて説明します。  
   
 ## <a name="remarks"></a>コメント  
- 変更することができます、**カタログ**オブジェクトを追加またはオブジェクトを削除するか既存のオブジェクトを変更します。 一部のプロバイダー サポートするものの**カタログ**オブジェクトまたはスキーマ情報の閲覧のみをサポートします。  
+ 変更することができます、**カタログ**オブジェクトを追加またはオブジェクトを削除する既存のオブジェクトを変更することによって、します。 一部のプロバイダーは対応していないすべての**カタログ**オブジェクトまたはスキーマ情報の閲覧のみをサポートします。  
   
- プロパティとメソッドの使用、**カタログ**オブジェクトをすることができます。  
+ プロパティとメソッドの使用、**カタログ**オブジェクトのことができます。  
   
 -   設定して、カタログを開き、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは有効な接続文字列。  
   
--   新しいカタログを作成、[作成](../../../ado/reference/adox-api/create-method-adox.md)メソッドです。  
+-   新しいカタログを作成、[作成](../../../ado/reference/adox-api/create-method-adox.md)メソッド。  
   
--   内のオブジェクトの所有者の決定、**カタログ**で、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)と[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッドです。  
+-   内のオブジェクトの所有者を決定する**カタログ**で、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)と[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッド。  
   
  このセクションには、次のトピックが含まれています。  
   
@@ -46,22 +43,22 @@ ms.locfileid: "35285241"
   
 ## <a name="see-also"></a>参照  
  [カタログ ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [コマンドと CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [テーブル型のプロパティの例 (VB) である接続 Close メソッド](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [メソッドの例 (VB) を作成します。](../../../ado/reference/adox-api/create-method-example-vb.md)   
- [キーは、メソッド、キーの種類、RelatedColumn、RelatedTable および UpdateRule プロパティの例 (VB を) 追加します。](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [パラメーターのコレクション、コマンドのプロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Connection Close メソッド、Table Type プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Create メソッドの例 (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
+ [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Parameters コレクションおよび Command プロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [プロシージャは、メソッドの例 (VB) を追加します。](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [プロシージャの削除の方法の例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [プロシージャは、メソッドの例 (VB) の更新します。](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
+ [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Procedures Delete メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Procedures Refresh メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
  [ビューとフィールド コレクションの例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [ビューの追加メソッドの例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [ビューのコレクション、CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [ビューの削除の方法の例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [ビューの更新メソッドの例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [グループのコレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [プロシージャのコレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [テーブル コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Views Append メソッドの例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Views コレクションおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Views Delete メソッドの例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [Views Refresh メソッドの例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
+ [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
+ [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [ユーザー コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)   
  [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

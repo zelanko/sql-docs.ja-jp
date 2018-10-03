@@ -1,28 +1,25 @@
 ---
-title: キーセット ドリブン カーソルの使用の制限事項 |Microsoft ドキュメント
+title: キーセット ドリブン カーソルの使用の制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], cursors
 - keyset-driven cursors [ODBC]
 ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8ae5c5fbc73ff0128eb44944d5a0e5573c5b0d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668110"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>キーセット ドリブン カーソルの使用に関する制限
 > [!IMPORTANT]  
@@ -30,7 +27,7 @@ ms.locfileid: "32900137"
   
  クエリ テーブルの 1 つの ROWID 列を取得できる必要があります。 結合、クエリ、または DISTINCT、GROUP BY、UNION、INTERSECT を含むステートメントまたは句マイナス、キーセット ドリブン カーソルは使用できません。  
   
- また、アプリケーションでは、テーブルの別名を使用する場合は、キーセット ドリブン カーソルも動作しません。順方向専用、または静的カーソルの種類が必要です。 キーセットを使用して、カーソルの種類にテーブルの別名で、次のエラーが発生:"[Microsoft] [ODBC driver for Oracle] は、キーセット ドリブン カーソルを使用できません、結合に union、intersect または負符号、または読み取り専用の結果セットです"。  
+ また、アプリケーションでは、テーブルの別名を使用する場合に、このキーセット ドリブン カーソルでは動作しません。順方向専用、または静的カーソルの種類が必要です。 キーセットを使用して、テーブルの別名とカーソルの種類で、次のエラーが発生します"[Microsoft] [Oracle 用 ODBC driver] は、キーセット ドリブン カーソルを使用できません参加で、和集合、交差するか、または読み取り専用にマイナスの結果セットです。"。  
   
 > [!NOTE]  
->  ドライバーは、Oracle サーバーに送信する SQL ステートメントを処理するため、Oracle 内部的に返されます次のエラー メッセージ:"か 00964: テーブルの一覧からではなく名前です"。
+>  ドライバーは、Oracle サーバーに送信される SQL ステートメントを処理する方法、により Oracle 内部的に返します、次のエラー メッセージ:"ORA 00964: テーブルの一覧から名前ではなく"。

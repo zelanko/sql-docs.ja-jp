@@ -1,13 +1,11 @@
 ---
-title: SQLCopyDesc 関数 |Microsoft ドキュメント
+title: SQLCopyDesc 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLCopyDesc
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCopyDesc function [ODBC]
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b87ee611e74cc9adc0015ce0f9b6b0c15c3bc7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e165ca48af3b634f1dcbe80c05c83f2c872d1b01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642780"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 Standards 準拠: ISO 92。  
+ バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
   
  **概要**  
- **SQLCopyDesc**記述子が 1 つのハンドルから記述子情報をコピーします。  
+ **SQLCopyDesc**記述子の情報の 1 つの記述子ハンドルのコピーします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,66 +45,66 @@ SQLRETURN SQLCopyDesc(
   
 ## <a name="arguments"></a>引数  
  *SourceDescHandle*  
- [入力]ソース記述子ハンドルです。  
+ [入力]ソース記述子ハンドル。  
   
  *TargetDescHandle*  
- [入力]ターゲット記述子ハンドルです。 *TargetDescHandle*引数は、IPD アプリケーション記述子へのハンドルを指定できます。 *TargetDescHandle* 、IRD へのハンドルに設定することはできませんまたは**SQLCopyDesc** SQLSTATE HY016 (実装行記述子は修正できません) が返されます。  
+ [入力]ターゲットの記述子ハンドル。 *TargetDescHandle*引数は、アプリケーション記述子を IPD へのハンドルを指定できます。 *TargetDescHandle* 、IRD へのハンドルに設定することはできませんまたは**SQLCopyDesc** SQLSTATE HY016 が (実装行記述子は変更できません) が返されます。  
   
-## <a name="returns"></a>返します。  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
+## <a name="returns"></a>戻り値  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLCopyDesc** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられた SQLSTATE 値を返しますを呼び出すことによって取得できます**SQLGetDiagRec**で、 *HandleType* sql _ のHANDLE_DESC と*処理*の*TargetDescHandle*です。 場合、無効な*SourceDescHandle*渡されたの呼び出しで SQL_INVALID_HANDLE が返されますが、SQLSTATE は返されません。 次の表に、一般的にによって返される SQLSTATE 値**SQLCopyDesc**とコンテキストでこの関数のいずれかを説明します。 表記"(DM)"の前に、ドライバー マネージャーによって返される SQLSTATEs の説明。 SQLSTATE 値ごとに関連付けられている戻り値のコードは、特に明記しない限り、SQL_ERROR です。  
+ ときに**SQLCopyDesc** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられている SQLSTATE 値を返しますを呼び出すことによって取得できる**SQLGetDiagRec**で、 *HandleType* sql _ のHANDLE_DESC と*処理*の*TargetDescHandle*します。 場合、無効な*SourceDescHandle*渡された呼び出しで SQL_INVALID_HANDLE が返されますが、SQLSTATE は返されません。 次の表に、一般的にによって返される SQLSTATE 値**SQLCopyDesc** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
   
- エラーが返される場合、呼び出し**SQLCopyDesc**すぐに中止されると、および内のフィールドの内容、 *TargetDescHandle*記述子が定義されていません。  
+ エラーが返される場合、呼び出し**SQLCopyDesc**がすぐに中止されたと内のフィールドの内容、 *TargetDescHandle*記述子が定義されていません。  
   
- **SQLCopyDesc**呼び出すことによって実装される場合があります**SQLGetDescField**と**SQLSetDescField**、 **SQLCopyDesc**返す可能性がありますによって返される SQLSTATEs **SQLGetDescField**または**SQLSetDescField**です。  
+ **SQLCopyDesc**呼び出すことによって実装される場合があります**SQLGetDescField**と**SQLSetDescField**、 **SQLCopyDesc**返す可能性がありますによって返される SQLSTATEs **SQLGetDescField**または**SQLSetDescField**します。  
   
-|SQLSTATE|[エラー]|Description|  
+|SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY007|関連付けられたステートメントが準備されていません|*SourceDescHandle* IRD では、関連付けられていたし、関連付けられているステートメント ハンドルは、準備または実行された状態ではありませんでした。|  
-|HY010|関数のシーケンス エラー|(DM) では、記述子の処理*SourceDescHandle*または*TargetDescHandle*が関連付けられて、 *StatementHandle*を非同期的に実行中の関数 (notこの 1 つ) が呼び出され、この関数が呼び出されたときに実行されています。<br /><br /> (DM) では、記述子の処理*SourceDescHandle*または*TargetDescHandle*が関連付けられて、 *StatementHandle*を**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**が呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *SourceDescHandle*または*TargetDescHandle*です。 この非同期関数がまだ実行したときに、 **SQLCopyDesc**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかで呼び出され、 *SourceDescHandle*または*TargetDescHandle* SQL_PARAM_DATA_AVAILABLE を返されるとします。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY016|実装行記述子は変更できません。|*TargetDescHandle* IRD に関連付けました。|  
-|HY021|不整合な記述子情報|整合性チェック中にチェック記述子の情報が一致していません。 詳細についてを参照してください「整合性チェック」 **SQLSetDescField**です。|  
-|HY092|無効な属性またはオプション識別子|呼び出し**SQLCopyDesc**への呼び出しの入力を求め**SQLSetDescField**が *\*ValuePtr*が、無効、 *FieldIdentifier*の引数で*TargetDescHandle*です。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  
+|08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
+|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY007|関連付けられているステートメントが準備されていません|*SourceDescHandle*は、IRD の関連付けと関連付けられているステートメント ハンドルは、準備または実行された状態ではありませんでした。|  
+|HY010|関数のシーケンス エラー|記述子ハンドルが (DM) *SourceDescHandle*または*TargetDescHandle*に関連付けられているが、 *StatementHandle*を非同期的に実行中の関数 (notこの 1 つ) が呼び出された、この関数が呼び出されたときに実行されています。<br /><br /> 記述子ハンドルが (DM) *SourceDescHandle*または*TargetDescHandle*に関連付けられているが、 *StatementHandle*を**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**が呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *SourceDescHandle*または*TargetDescHandle*します。 この非同期関数ではときに実行されている、 **SQLCopyDesc**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかが呼び出された、 *SourceDescHandle*または*TargetDescHandle* SQL_PARAM_DATA_AVAILABLE が返されます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
+|HY016|実装行記述子は変更できません。|*TargetDescHandle* IRD に関連付けられていた。|  
+|HY021|不整合な記述子情報|整合性チェック中にチェックする記述子の情報は、一貫性のあるでした。 詳細についてを参照してください「整合性チェック」 **SQLSetDescField**します。|  
+|HY092|無効な属性またはオプション識別子|呼び出し**SQLCopyDesc**への呼び出しの入力を求め**SQLSetDescField**が *\*ValuePtr*は無効です、 *FieldIdentifier*引数*TargetDescHandle*します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *SourceDescHandle*または*TargetDescHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- 呼び出し**SQLCopyDesc**ソース記述子のフィールドを処理対象の記述子ハンドルをコピーします。 フィールドは、IRD ではなく、アプリケーション記述子または、IPD にのみコピーできます。 フィールドは、アプリケーションまたは実装記述子からコピーすることができます。  
+ 呼び出し**SQLCopyDesc**ソース記述子のフィールドを処理対象の記述子ハンドルをコピーします。 フィールドは、IRD ではなく、アプリケーション記述子をまたは、IPD にのみコピーできます。 フィールドは、アプリケーションまたは実装記述子からコピーできます。  
   
- フィールドは、ステートメント ハンドルが準備または実行された状態である場合にのみ、IRD からコピーできます。SQLSTATE HY007 を返しますそれ以外の場合 (関連付けられたステートメントが準備されていません)。  
+ フィールドは、ステートメント ハンドルが、準備または実行された状態である場合にのみ、IRD からコピーできます。SQLSTATE HY007 を返しますそれ以外の場合、(関連付けられているステートメントが準備されていません)。  
   
- フィールドは、ステートメントが準備されているかどうか、IPD からコピーすることができます。 動的パラメーターを含む SQL ステートメントが準備され、IPD の自動作成がサポートされていて有効になっているの場合は、ドライバーによって、IPD が設定されます。 ときに**SQLCopyDesc**として IPD してを呼び出すと、 *SourceDescHandle*、設定されたフィールドをコピーします。 ドライバーによって、IPD が設定されていない場合、IPD で最初のフィールドの内容がコピーされます。  
+ ステートメントは準備ができているかどうかを示す、フィールドは、IPD からコピーできます。 動的パラメーターを含む SQL ステートメントが準備されて、IPD の自動作成がサポートされ、有効な場合は、ドライバーによって、IPD が設定されます。 ときに**SQLCopyDesc**として IPD を呼び出すと、 *SourceDescHandle*、設定されたフィールドがコピーされます。 ドライバーによって、IPD が設定されていない場合は、IPD で最初のフィールドの内容がコピーされます。  
   
- (を指定するかどうか記述子ハンドルが自動的にまたは明示的に割り当てられた) SQL_DESC_ALLOC_TYPE を除く、記述子のすべてのフィールドは、宛先記述子フィールドが定義されているかどうかにコピーされます。 コピーしたフィールドは、既存のフィールドを上書きします。  
+ (元の記述子ハンドルが自動的にまたは明示的に割り当てられたアドレスを指定) SQL_DESC_ALLOC_TYPE を除く、記述子のすべてのフィールドは、変換先の記述子フィールドが定義されているかどうかにコピーされます。 コピーしたフィールドは、既存のフィールドを上書きします。  
   
- 場合、ドライバーがすべての記述子フィールドをコピー、 *SourceDescHandle*と*TargetDescHandle*引数に割り当てられた同じドライバーをドライバーが 2 つの接続上にある場合でも、または環境。 場合、 *SourceDescHandle*と*TargetDescHandle*引数が別のドライバーに関連付けられた、ドライバー マネージャー、ODBC で定義されたフィールドのコピーは、ドライバー定義のフィールドをコピーしませんまたはフィールド型記述子の ODBC で定義されているはありません。  
+ 場合、ドライバーがすべての記述子フィールドをコピー、 *SourceDescHandle*と*TargetDescHandle*引数は、2 つの異なる接続でのドライバーがある場合でも同じのドライバーに関連付けられたまたは環境。 場合、 *SourceDescHandle*と*TargetDescHandle*引数は、さまざまなドライバーに関連付けられた、ドライバー マネージャー、ODBC で定義されたフィールドをコピーしますがドライバーで定義されたフィールドをコピーしませんまたはフィールド型記述子の odbc は定義されません。  
   
- 呼び出し**SQLCopyDesc**エラーが発生した場合はすぐに中止されます。  
+ 呼び出し**SQLCopyDesc**エラーが発生した場合はすぐに中止します。  
   
- SQL_DESC_DATA_PTR フィールドをコピーすると、ターゲット記述子の一貫性チェックが実行されます。 整合性チェックが失敗した場合は、SQLSTATE HY021 (不整合な記述子情報) が返されますを呼び出すと**SQLCopyDesc**はすぐに中止します。 整合性チェックの詳細についてを参照してください「整合性チェック」 [SQLSetDescRec 関数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)です。  
+ SQL_DESC_DATA_PTR フィールドがコピーされるターゲット記述子の整合性チェックが実行されます。 整合性チェックが失敗した場合は、SQLSTATE HY021 (不整合な記述子情報) が返されるとへの呼び出し**SQLCopyDesc**はすぐに中止されます。 整合性チェックの詳細についてを参照してください「整合性チェック」 [SQLSetDescRec 関数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)します。  
   
- 記述子ハンドルは、接続がさまざまな環境下にある場合でも接続間でコピーできます。 ドライバー マネージャーは、ソースと、移行先記述子ハンドルは、同じ接続と 2 つの接続には属していないドライバーを個別に属している、実装することが検出された場合**SQLCopyDesc**フィールドごとのフィールドを実行することによって使用してコピー **SQLGetDescField**と**SQLSetDescField**です。  
+ 記述子ハンドルは、さまざまな環境での接続がある場合でも、接続間でコピーできます。 ドライバー マネージャーは、ソースと宛先記述子ハンドルは、同じ接続と 2 つの接続には属していないドライバーの分離に属している、実装することが検出された場合**SQLCopyDesc**フィールドごとのフィールドを実行することによって使用してコピー **SQLGetDescField**と**SQLSetDescField**します。  
   
- ときに**SQLCopyDesc**してを呼び出すと、 *SourceDescHandle*で 1 つのドライバーと*TargetDescHandle*別のドライバーのエラーのキューに、 *SourceDescHandle*がオフになっています。 これは、ために発生**SQLCopyDesc**への呼び出しによってここでは実装されて**SQLGetDescField**と**SQLSetDescField**です。  
+ ときに**SQLCopyDesc**を呼び出すと、 *SourceDescHandle*で 1 つのドライバーと*TargetDescHandle*別のドライバーのエラー キューで、 *SourceDescHandle*がオフになっています。 これは、 **SQLCopyDesc**への呼び出しによってこのケースでは実装されて**SQLGetDescField**と**SQLSetDescField**します。  
   
 > [!NOTE]  
->  アプリケーションは、使用して、明示的に割り当てられた記述子ハンドルを関連付けることができる可能性があります、 *StatementHandle*、呼び出し元ではなく**SQLCopyDesc**フィールドを別の記述子が 1 つにコピーします。 明示的に割り当てられた記述子は別に関連付けられる*StatementHandle*同じ*ConnectionHandle* SQL_ATTR_APP_ROW_DESC または SQL_ATTR_APP_PARAM_DESC ステートメントを設定して属性の明示的に割り当てられた記述子ハンドルにします。 これが完了したら、 **SQLCopyDesc**記述子が 1 つの記述子フィールドの値をコピーするに呼び出せる必要はありません。 記述子ハンドルが関連付けられることはできません、 *StatementHandle*別の*ConnectionHandle*、ただし; で同じ記述子フィールドの値を使用する*StatementHandles*別に*ConnectionHandles*、 **SQLCopyDesc**が呼び出されます。  
+>  アプリケーションは、明示的に割り当てられた記述子ハンドルとを関連付けることができる可能性があります、 *StatementHandle*、呼び出し元ではなく**SQLCopyDesc**記述子が 1 つからフィールドをコピーします。 明示的に割り当てられた記述子を別に関連付けることができます*StatementHandle*同じ*ConnectionHandle* SQL_ATTR_APP_ROW_DESC または SQL_ATTR_APP_PARAM_DESC ステートメントの設定属性の明示的に割り当てられた記述子ハンドルをします。 これが完了したら、 **SQLCopyDesc**間の記述子が 1 つの記述子フィールドの値をコピーするために呼び出すことはありません。 記述子ハンドルが関連付けられることはできません、 *StatementHandle*別*ConnectionHandle*、ただし; で同じの記述子フィールドの値を使用する*StatementHandles*で異なる*ConnectionHandles*、 **SQLCopyDesc**呼び出す必要があります。  
   
- 記述子のヘッダーまたはレコードのフィールドの説明は、次を参照してください。 [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)です。 記述子の詳細については、次を参照してください。[記述子](../../../odbc/reference/develop-app/descriptors.md)です。  
+ 記述子のヘッダーまたはレコードのフィールドの説明は、次を参照してください。 [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。 記述子の詳細については、次を参照してください。[記述子](../../../odbc/reference/develop-app/descriptors.md)します。  
   
 ## <a name="copying-rows-between-tables"></a>テーブル間の行のコピー  
- アプリケーションは、可能性がありますデータ 1 つのテーブルからにコピー別、アプリケーション レベルでデータをコピーせずします。 これを行うには、アプリケーションは、データをフェッチするステートメントとコピーにデータを挿入するステートメントを同じデータ バッファーと記述子の情報をバインドします。 これには、(1 つのステートメントに ARD と別の APD の両方として明示的に割り当てられた記述子のバインド) アプリケーション記述子を共有することで、またはを使用して**SQLCopyDesc** ARD 間のバインディングをコピーし、2 つのステートメントの APD です。 ステートメントが別の接続にある場合**SQLCopyDesc**使用する必要があります。 さらに、 **SQLCopyDesc**は、IRD と IPD 2 つのステートメントの間のバインディングをコピーするに呼び出せるようにします。 同じ接続でステートメントの間でコピーへの呼び出しのドライバーで SQL_ACTIVE_STATEMENTS 情報の種類が返されます。 **SQLGetInfo**を成功させるには、この操作を 1 より大きい必要があります。 (これはない場合の接続間でコピーするときにします。)  
+ アプリケーションがからデータをコピー 1 つのテーブル間アプリケーション レベルでデータをコピーせず。 これを行うには、アプリケーションは、データをフェッチするステートメントとコピーにデータを挿入するステートメントに、同じデータ バッファーと記述子の情報をバインドします。 (を明示的に割り当てられた記述子を 1 つのステートメントに ARD と別の APD の両方としてバインディング) アプリケーション記述子を共有することで、またはを使用してこれを実現することができます**SQLCopyDesc** ARD 間のバインディングをコピーして2 つのステートメントの APD します。 場合、ステートメントは、異なる接続で**SQLCopyDesc**使用する必要があります。 さらに、 **SQLCopyDesc** IRD と IPD 2 つのステートメントの間のバインドのコピーを呼び出す必要があります。 SQL_ACTIVE_STATEMENTS 情報の種類がへの呼び出し用のドライバーによって返される、同じ接続でステートメントの間でデータをコピーするとき**SQLGetInfo**を成功させるのには、この操作を 1 より大きい必要があります。 (このそうでない接続間でコピーするときにします。)  
   
 ### <a name="code-example"></a>コード例  
- 次の例では、記述子の操作は PartsCopy テーブル PartsSource テーブルのフィールドにコピーに使用されます。 PartsSource テーブルの内容が内の行セットのバッファーにフェッチされて*hstmt0*です。 これらの値は、INSERT ステートメントのパラメーターとして使用される*hstmt1* PartsCopy テーブルの列の設定にします。 表示するには、IRD のフィールド*hstmt0*の IPD のフィールドにコピーされます*hstmt1*のフィールドと、フィールドの ARD *hstmt0* のAPDのフィールドにコピーされます*hstmt1*です。 使用して**SQLSetDescField** IRD フィールドを出力パラメーターを持つステートメントからの入力パラメーターを指定する必要がある IPD フィールドにコピーするときに SQL_PARAM_INPUT を IPD の SQL_DESC_PARAMETER_TYPE 属性を設定します。  
+ 次の例では、記述子の操作は PartsSource テーブルのフィールドを PartsCopy テーブルにコピーに使用されます。 PartsSource テーブルの内容は、行セットのバッファーにフェッチされて*hstmt0*します。 これらの値がで INSERT ステートメントのパラメーターとして使用される*hstmt1* PartsCopy テーブルの列の設定にします。 そのための ird フィールドに*hstmt0*の IPD フィールドにコピーされます*hstmt1*の ARD のフィールドと*hstmt0* のAPDのフィールドにコピーされます*hstmt1*します。 使用**SQLSetDescField** IRD フィールドを出力パラメーターを持つステートメントからは入力パラメーターとして指定する必要がある IPD フィールドにコピーする場合に SQL_PARAM_INPUT IPD の SQL_DESC_PARAMETER_TYPE 属性を設定します。  
   
 ```  
 #define ROWS 100  

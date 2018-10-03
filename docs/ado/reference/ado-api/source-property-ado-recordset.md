@@ -1,13 +1,11 @@
 ---
-title: Source プロパティ (ADO レコード セット) |Microsoft ドキュメント
+title: Source プロパティ (ADO Recordset) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -21,36 +19,35 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ee46e4f0af37fd28a6e45f48e31bab7e868821f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 718124fce3c2ce7a1adf9e6dbdb1d54e8a834fca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655610"
 ---
-# <a name="source-property-ado-recordset"></a>Source プロパティ (ADO レコード セット)
+# <a name="source-property-ado-recordset"></a>Source プロパティ (ADO Recordset)
 データ ソースを示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- セット、**文字列**値または[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト参照; だけを返す、**文字列**のソースを示す値、**レコード セット**です。  
+ セットを**文字列**値または[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト参照; のみを返します、**文字列**のソースを示す値、**レコード セット**します。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**ソース**のデータ ソースを指定するプロパティ、 **Recordset**オブジェクトを使用して、次のいずれかの:**コマンド**オブジェクト変数、SQL ステートメント、ストアド プロシージャでは、または、テーブル名。  
+ 使用して、**ソース**のデータ ソースを指定するプロパティを**レコード セット**オブジェクトを使用して、次のいずれか:**コマンド**オブジェクト変数、SQL ステートメント、ストアド プロシージャでは、または、テーブル名。  
   
- 設定した場合、**ソース**プロパティを**コマンド**オブジェクト、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)のプロパティ、**レコード セット**オブジェクトが継承、値、 **ActiveConnection**プロパティに指定された**コマンド**オブジェクト。 ただし、読み取り、**ソース**プロパティは返されません、**コマンド**オブジェクトです代わりに、を返します、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)のプロパティ、**コマンド。** オブジェクトを設定する、**ソース**プロパティです。  
+ 設定した場合、**ソース**プロパティを**コマンド**オブジェクト、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)のプロパティ、**レコード セット**オブジェクトは継承、値、 **ActiveConnection** 、指定されたプロパティ**コマンド**オブジェクト。 ただし、読み取り、**ソース**プロパティは返されません、**コマンド**オブジェクトは、代わりを返します、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)のプロパティ、 **コマンド**オブジェクトを設定する、**ソース**プロパティ。  
   
- 場合、**ソース**プロパティは、SQL ステートメント、ストアド プロシージャ、またはテーブル名、パフォーマンスを最適化するには、適切なを渡すことによって*オプション*引数と、 [を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの呼び出しです。  
+ 場合、**ソース**プロパティは、SQL ステートメント、ストアド プロシージャ、またはテーブル名、パフォーマンスを最適化するには、適切なを渡すことによって*オプション*引数と、 [を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの呼び出し。  
   
- **ソース**閉じられたために、プロパティは読み取り/書き込み**Recordset**オブジェクトおよび読み取り専用開く**レコード セット**オブジェクト。  
+ **ソース**プロパティは読み取り/書き込み終了**レコード セット**オブジェクトおよび読み取り専用のオープン**レコード セット**オブジェクト。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [ソース プロパティの例 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
- [Source プロパティ (ADO エラー)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Source プロパティの例 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
+ [ソースのプロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source プロパティ (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)

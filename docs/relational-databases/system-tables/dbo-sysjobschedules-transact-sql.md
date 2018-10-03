@@ -1,14 +1,11 @@
 ---
-title: では (TRANSACT-SQL) |Microsoft ドキュメント
+title: では (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysjobschedules
@@ -20,30 +17,29 @@ dev_langs:
 helpviewer_keywords:
 - sysjobschedules system table
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2818512730a99bf7352c87f7d651d3084870767f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33252707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644710"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  によって実行されるジョブのスケジュール情報を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントです。 次の表は、 **msdb**データベース。  
+  によって実行されるジョブのスケジュール情報を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。 このテーブルに格納されます、 **msdb**データベース。  
   
-> **注:** 、 **sysjobschedules**テーブル更新 20 分ごと、によって返される値に影響する可能性があります、 **sp_help_jobschedule**ストアド プロシージャです。  
+> **注:** 、 **sysjobschedules**テーブル更新 20 分ごと、によって返される値に影響する可能性があります、 **sp_help_jobschedule**ストアド プロシージャ。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|スケジュールの ID。|  
-|**job_id**|**uniqueidentifier**|ジョブの ID です。|  
+|**job_id**|**uniqueidentifier**|ジョブの ID。|  
 |**next_run_date**|**int**|ジョブの次回実行予定日。 日付の形式は YYYYMMDD です。|  
-|**next_run_time**|**int**|ジョブの実行予定時刻。 時間は、書式設定 hhmmss で、24 時間制を使用しています。|  
+|**next_run_time**|**int**|ジョブの実行予定時刻。 時間は、HHMMSS の形式し、24 時間制を使用します。|  
   
 ## <a name="see-also"></a>参照  
  [dbo.sysschedules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  

@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobhistory (TRANSACT-SQL) |Microsoft ドキュメント
+title: dbo.sysjobhistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobhistory_TSQL
@@ -20,36 +17,36 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab9fbfb6a574f8f6c91ee15789c67cac204d5f3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658810"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  スケジュールされたジョブの実行に関する情報を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントです。 次の表は、 **msdb**データベース。  
+  スケジュールされたジョブの実行に関する情報を格納[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。 このテーブルに格納されます、 **msdb**データベース。  
   
 > **注:** ジョブ ステップの完了後にのみデータを更新します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|行の一意識別子。|  
 |**job_id**|**uniqueidentifier**|ジョブ ID。|  
 |**step_id**|**int**|ジョブ ステップの ID。|  
 |**step_name**|**sysname**|ステップの名前。|  
-|**sql_message_id**|**int**|いずれかの ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ジョブが失敗したかどうかにエラー メッセージが返されます。|  
-|**sql_severity**|**int**|いずれかの重要度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーです。|  
+|**sql_message_id**|**int**|任意の ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ジョブが失敗したかどうかにエラー メッセージが返されます。|  
+|**sql_severity**|**int**|いずれかの重要度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー。|  
 |**message**|**nvarchar (4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーのテキスト (存在する場合)。|  
 |**run_status**|**int**|ジョブ実行のステータス。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br /> **4** = 実行中|  
 |**run_date**|**int**|ジョブまたはステップが実行を開始した日付。 実行中の場合は、履歴が作成された日付/時刻です。|  
 |**run_time**|**int**|ジョブまたはステップが実行を開始した時刻。|  
-|**run_duration**|**int**|ジョブまたはステップの実行の経過時間**HHMMSS**形式です。|  
+|**run_duration**|**int**|ジョブまたはステップの実行の経過時間**HHMMSS**形式。|  
 |**operator_id_emailed**|**int**|ジョブの終了時に電子メールの通知を受けるオペレーターの ID。|  
 |**operator_id_netsent**|**int**|ジョブの終了時に Net Send メッセージの通知を受けるオペレーターの ID。|  
 |**operator_id_paged**|**int**|ジョブの終了時にポケットベルの通知を受けるオペレーターの ID。|  
@@ -57,7 +54,7 @@ ms.lasthandoff: 05/19/2018
 |**server**|**sysname**|ジョブが実行されたサーバー名。|  
   
   ## <a name="example"></a>例
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリに変換されます、 **run_time**と**run_duration**列を複数のユーザー フレンドリな形式にします。  スクリプトを実行[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリに変換されます、 **run_time の期限**と**run_duration**列以上のユーザー フレンドリな形式にします。  スクリプトを実行[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。
  
  ```sql
  SET NOCOUNT ON;

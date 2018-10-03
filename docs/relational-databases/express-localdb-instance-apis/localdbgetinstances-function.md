@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetInstances 関数 |Microsoft ドキュメント
+title: LocalDBGetInstances 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetInstances
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3121049938af0707ce30c68a4da6d9ca96ec7763
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2762ae7ccdde7216a28c4042c976ef622595c60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935157"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687333"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +45,9 @@ HRESULT LocalDBGetInstances(
  [出力] この関数が返す場合、ユーザーのワークステーション上の名前付きおよび既定の LocalDB インスタンスの両方の名前を格納します。  
   
  *lpdwNumberOfInstances*  
- [入力/出力]入力のインスタンス名のスロットの数を格納、 *pInstanceNames*バッファー。 出力側では、ユーザーのワークステーション上で見つかった LocalDB インスタンスの数を格納します。  
+ [入力/出力]入力時にインスタンス名にスロットの数が含まれています。、 *pInstanceNames*バッファー。 出力側では、ユーザーのワークステーション上で見つかった LocalDB インスタンスの数を格納します。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  S_OK  
  関数が正常に実行されました。  
   
@@ -76,8 +72,8 @@ HRESULT LocalDBGetInstances(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>解説  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)です。  
+## <a name="remarks"></a>コメント  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

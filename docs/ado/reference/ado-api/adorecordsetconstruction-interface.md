@@ -1,13 +1,11 @@
 ---
-title: ADORecordsetConstruction インターフェイス |Microsoft ドキュメント
+title: ADORecordsetConstruction インターフェイス |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c781a5b1db2d501488d609454ee67e240ee35a55
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634390"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction インターフェイス
-**ADORecordsetConstruction**インターフェイスは、ADO を構築するために使用**Recordset**オブジェクトを OLE DB から**行セット**C/C++ アプリケーション内のオブジェクト。  
+**ADORecordsetConstruction**インターフェイスは、ADO の構築に使用**レコード セット**から OLE DB オブジェクト**行セット**C/C++ アプリケーション内のオブジェクト。  
   
- このインターフェイスは、次のプロパティをサポートします。  
+ このインターフェイスには、次のプロパティがサポートされています。  
   
 ## <a name="properties"></a>[プロパティ]  
   
 |||  
 |-|-|  
-|[章](../../../ado/reference/ado-api/chapter-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**章**オブジェクトから/この ADO に**Recordset**オブジェクト。|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**RowPosition**オブジェクトから/この ADO に**Recordset**オブジェクト。|  
-|[行セット](../../../ado/reference/ado-api/rowset-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**行セット**オブジェクトから/この ADO に**Recordset**オブジェクト。|  
+|[」の章](../../../ado/reference/ado-api/chapter-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**章**オブジェクトとの間にこの ADO **Recordset**オブジェクト。|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**RowPosition**オブジェクトとの間にこの ADO **Recordset**オブジェクト。|  
+|[行セット](../../../ado/reference/ado-api/rowset-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**行セット**オブジェクトとの間にこの ADO **Recordset**オブジェクト。|  
   
 ## <a name="methods"></a>メソッド  
  [なし] :  
@@ -46,9 +43,9 @@ ms.locfileid: "35275621"
  [なし] :  
   
 ## <a name="remarks"></a>コメント  
- 指定された OLE DB**行セット**オブジェクト (`pRowset`)、ADO の構築**レコード セット**オブジェクト (`adoRs`) 次の 3 つの基本的な操作を額。  
+ OLE DB を指定された**行セット**オブジェクト (`pRowset`)、ADO の構築**Recordset**オブジェクト (`adoRs`) に次の 3 つの基本的な操作。  
   
-1.  ADO を作成する**Recordset**オブジェクト。  
+1.  ADO の作成**Recordset**オブジェクト。  
   
     ```  
     Recordset20Ptr adoRs;  
@@ -63,7 +60,7 @@ ms.locfileid: "35275621"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  呼び出す、`IADORecordsetConstruction::put_Rowset`プロパティを設定するメソッド、OLE DB `Rowset` 、ADO 上のオブジェクト`Recordset`オブジェクト。  
+3.  呼び出す、`IADORecordsetConstruction::put_Rowset`プロパティを設定するメソッド、OLE DB `Rowset` ADO 上のオブジェクト`Recordset`オブジェクト。  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -71,9 +68,9 @@ ms.locfileid: "35275621"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- 結果`adoRs`オブジェクトは、ADO を表します**Recordset** 、OLE DB から構築されたオブジェクト**行セット**オブジェクト。  
+ 結果として得られる`adoRs`オブジェクトが、ADO を表すようになりました**レコード セット**OLE DB から構築されたオブジェクト**行セット**オブジェクト。  
   
- ADO を構築することもできます。 **Recordset**オブジェクトを OLE DB から**章**または**RowPosition**オブジェクト。  
+ ADO を構築することもできます。 **Recordset**から OLE DB オブジェクト**章**または**RowPosition**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **バージョン:** ADO 2.0 以降  
@@ -83,5 +80,5 @@ ms.locfileid: "35275621"
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>参照  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset プロパティ (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

@@ -1,13 +1,11 @@
 ---
-title: Type プロパティ (列) (ADOX) |Microsoft ドキュメント
+title: Type プロパティ (列) (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d826a41564313816fe0c23b00d10eaa2e83efddb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8a7fc9e5982280cc1c26a0179e9de8adc30e06d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757390"
 ---
 # <a name="type-property-column-adox"></a>Type プロパティ (列) (ADOX)
 列のデータ型を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**長い**のいずれかの値、[格納](../../../ado/reference/ado-api/datatypeenum.md)定数。 既定値は**adVarWChar**です。  
+ 設定または取得を**長い**のいずれかの値、[格納](../../../ado/reference/ado-api/datatypeenum.md)定数。 既定値は**adVarWChar**します。  
   
 ## <a name="remarks"></a>コメント  
- このプロパティは読み取り/書き込みするまで、[列](../../../ado/reference/adox-api/column-object-adox.md)コレクションまたは別のオブジェクトは読み取り専用にオブジェクトが追加されます。  
+ このプロパティは読み取り/書き込みまで、[列](../../../ado/reference/adox-api/column-object-adox.md)コレクションまたは別のオブジェクトは読み取り専用にオブジェクトが追加されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  

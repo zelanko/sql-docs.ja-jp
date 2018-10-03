@@ -1,34 +1,31 @@
 ---
-title: ODBC 内のエスケープ シーケンス |Microsoft ドキュメント
+title: ODBC でのエスケープ シーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC]
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a62b9712801d2412385cc191b0649bae69be74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33259a56faa19dda2403996b6d6d8930ec2a87be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706000"
 ---
-# <a name="escape-sequences-in-odbc"></a>Odbc エスケープ シーケンス
-外部結合およびスカラー関数の呼び出しなどの言語機能の数は、一般的な Dbms によって実装されます。 ただし、これらの機能の構文は、さまざまな標準機関で標準的な構文が定義されている場合でも DBMS に固有である傾向があります。 このため、ODBC では、標準の構文では、次の言語機能を含むエスケープ シーケンスが定義されています。  
+# <a name="escape-sequences-in-odbc"></a>ODBC でのエスケープ シーケンス
+さまざまな外部結合およびスカラー関数の呼び出しなどの言語機能は通常の Dbms によって実装されます。 ただし、これらの機能の構文は、さまざまな標準化団体によって標準の構文が定義されている場合でも、DBMS 固有にする傾向があります。 このため、ODBC では、標準の構文を次の言語機能を含むエスケープ シーケンスが定義されています。  
   
--   日付、時刻、タイムスタンプ、および日時の間隔のリテラル  
+-   日付、時刻、タイムスタンプ、および datetime interval のリテラル  
   
 -   数値などのスカラー関数、文字列、およびデータ型変換関数  
   
@@ -46,19 +43,19 @@ ms.locfileid: "32911357"
   
 ```  
   
-## <a name="remarks"></a>解説  
- エスケープ シーケンスが認識し、ドライバー、DBMS 固有の文法でエスケープ シーケンスを置換して解析します。 エスケープ シーケンス構文の詳細については、次を参照してください。 [ODBC エスケープ シーケンス](../../../odbc/reference/appendixes/odbc-escape-sequences.md)付録 c: SQL の文法でします。  
+## <a name="remarks"></a>コメント  
+ エスケープ シーケンスが認識され、ドライバーで、エスケープ シーケンスを置き換えます DBMS 固有の文法で解析します。 エスケープ シーケンスの構文の詳細については、次を参照してください。 [ODBC エスケープ シーケンス](../../../odbc/reference/appendixes/odbc-escape-sequences.md)付録 c: SQL の文法でします。  
   
 > [!NOTE]  
->  ODBC 2 です。*x*、これが標準のエスケープ シーケンスの構文: **--(\*仕入先 (***仕入先名***)、製品 (***製品名***) * * * 拡張機能* **\*)--**  
+>  ODBC 2。*x*、これは、エスケープ シーケンスの標準の構文: **--(\*仕入先 (***仕入先名***)、製品 (***製品名***) * * * 拡張機能* **\*)--**  
 >   
->  この構文だけでなく略式の構文が定義されているフォームの: **{***拡張子***}**  
+>  フォームのに加えて、この構文は、略式の構文が定義された: **{***拡張子***}**  
 >   
->  ODBC 3 です。*x*、エスケープ シーケンスの長い形式は推奨されていません、および短い形式を排他的に使用します。  
+>  ODBC 3。*x*、長い形式のエスケープ シーケンスは非推奨とされました、および短い形式を排他的に使用されます。  
   
- エスケープ シーケンスが DBMS に固有の構文では、ドライバーによってマップされているため、アプリケーションは、エスケープ シーケンスまたは DBMS 固有の構文を使用できます。 ただし、DBMS 固有の構文を使用するアプリケーションは相互運用できません。 エスケープ シーケンスを使用する場合は、アプリケーションが SQL_ATTR_NOSCAN ステートメント属性を無効にする、既定ではこれを確認してください。 それ以外の場合、エスケープ シーケンスは、場所、一般に、構文エラーが発生、データ ソースに直接送信されます。  
+ エスケープ シーケンスが、DBMS に固有の構文では、ドライバーによってマップされるため、アプリケーションは、エスケープ シーケンスまたは DBMS 固有の構文を使用できます。 ただし、DBMS 固有の構文を使用するアプリケーションは相互運用できません。 エスケープ シーケンスを使用する場合、アプリケーションは、SQL_ATTR_NOSCAN ステートメント属性を無効にする、既定ではこれを確認してください。 それ以外の場合、エスケープ シーケンスは、構文エラーを一般に発生、場所、データ ソースへの直接送信されます。  
   
- ドライバーは、基になる言語機能にマップするエスケープ シーケンスのみをサポートします。 データ ソースが外部結合をサポートしていない場合などは、どちらも、ドライバーには。 アプリケーションが呼び出す調べるにはどのエスケープ シーケンスはサポートされて、 **SQLGetTypeInfo**と**SQLGetInfo**です。 詳細については、次のセクションを参照してください。[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)です。  
+ ドライバーは、基になる言語機能にマップできる、エスケープ シーケンスのみをサポートします。 たとえば、データ ソースが外部結合をサポートしていない場合は、ドライバーがも。 アプリケーションが呼び出すエスケープ シーケンスがサポートされているかを判断する**SQLGetTypeInfo**と**SQLGetInfo**します。 詳細については、次のセクションを参照してください。[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

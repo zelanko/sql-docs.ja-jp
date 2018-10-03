@@ -1,13 +1,11 @@
 ---
-title: パラメーター オブジェクト |Microsoft ドキュメント
+title: パラメーター オブジェクト |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,40 +13,39 @@ f1_keywords:
 helpviewer_keywords:
 - Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e4a39f93e6b98595270e46d5a6f9b54b35098cb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751800"
 ---
 # <a name="parameter-object"></a>Parameter オブジェクト
-パラメーターまたはに関連付けられている引数を表します、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトがパラメーター化されたクエリまたはストアド プロシージャに基づいています。  
+パラメーターまたはに関連付けられている引数を表します、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトがパラメーター化クエリまたはストアド プロシージャに基づいています。  
   
 ## <a name="remarks"></a>コメント  
- プロバイダーの多くは、パラメーター化コマンドをサポートします。 これらは、目的のアクションが定義されている、1 回のコマンドが、変数 (またはパラメーター) は、コマンドのいくつかの詳細を変更するために使用します。 たとえば、SQL SELECT ステートメントでは、WHERE 句、および並べ替え句の列名を定義するのに別の一致条件を定義するのにパラメーターを使用する可能性があります。  
+ プロバイダーの多くは、パラメーター化コマンドをサポートします。 これらは、目的のアクションが 1 回に定義されているコマンドが、変数 (またはパラメーター) は、コマンドのいくつかの詳細を変更するために使用します。 たとえば、SQL SELECT ステートメントは WHERE 句、および並べ替え句の列名を定義するのに別の一致条件を定義するのにパラメーターを使用できます。  
   
- **パラメーター**オブジェクトは、パラメーター化クエリに関連付けられているパラメーターを表すか、ストアド プロシージャの入力/出力引数および戻り値。 プロバイダー、いくつかのコレクション、メソッド、またはのプロパティの機能によって、**パラメーター**オブジェクトを使用できない可能性があります。  
+ **パラメーター**オブジェクトに関連付けられたパラメーター化クエリは、パラメーターを表しますまたは入力/出力引数と戻り値のストアド プロシージャ。 プロバイダー、いくつかのコレクション、メソッド、またはのプロパティの機能に応じて、**パラメーター**オブジェクトを使用できない可能性があります。  
   
  コレクション、メソッド、およびプロパティの使用、**パラメーター**オブジェクトを次を行うことができます。  
   
--   設定または使用して、パラメーターの名前を返す、[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティです。  
+-   設定または使用して、パラメーターの名前を取得、[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティ。  
   
--   設定または使用して、パラメーターの値を返す、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティです。 **値**の既定のプロパティは、**パラメーター**オブジェクト。  
+-   設定または使用して、パラメーターの値を返す、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティ。 **値**の既定のプロパティ、**パラメーター**オブジェクト。  
   
--   設定またはパラメーターの特性を返す、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)、[方向](../../../ado/reference/ado-api/direction-property.md)、[精度](../../../ado/reference/ado-api/precision-property-ado.md)、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)、 [サイズ](../../../ado/reference/ado-api/size-property-ado-parameter.md)、および[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティです。  
+-   設定またはパラメーターの特性を取得、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)、[方向](../../../ado/reference/ado-api/direction-property.md)、[精度](../../../ado/reference/ado-api/precision-property-ado.md)、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)、 [サイズ](../../../ado/reference/ado-api/size-property-ado-parameter.md)、および[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティ。  
   
--   Long バイナリまたは文字データを持つパラメーターを渡す、 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)メソッドです。  
+-   時間の長いバイナリまたは文字データを持つパラメーターを渡す、 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)メソッド。  
   
--   プロバイダー固有の属性を使用して、アクセス、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
+-   使用してプロバイダーに固有の属性へのアクセス、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
   
- 名前がわかっていて、パラメーターのプロパティに関連付けられているが、呼び出すストアド プロシージャまたはパラメーター化クエリを使用することができます、 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを作成**パラメーター**オブジェクト適切なプロパティの設定および使用すると、 [Append](../../../ado/reference/ado-api/append-method-ado.md)に追加する方法、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。 これにより設定を呼び出さずにパラメーター値を返す、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを**パラメーター**プロバイダーからパラメーター情報を取得するコレクション、可能性がありますリソースを消費する操作です。  
+ 名前がわかっており、パラメーターのプロパティに関連付けられている場合は、呼び出したいストアド プロシージャまたはパラメーター化クエリを使用できます、 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを作成する**パラメーター**オブジェクト使用して適切なプロパティの設定、 [Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドに追加する、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。 これにより、設定およびに電話しなくてもパラメーターの値を取得できます、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを**パラメーター**プロバイダーからパラメーター情報を取得するコレクション、可能性がありますリソースを消費する操作です。  
   
- **パラメーター**オブジェクトはスクリプトを実行しても安全ではありません。  
+ **パラメーター**オブジェクトは、スクリプトを実行することはありません。  
   
  このセクションには、次のトピックが含まれています。  
   

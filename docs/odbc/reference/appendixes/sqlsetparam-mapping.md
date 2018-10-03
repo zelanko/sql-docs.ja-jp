@@ -1,31 +1,28 @@
 ---
-title: SQLSetParam マッピング |Microsoft ドキュメント
+title: SQLSetParam のマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetParam
 - SQLSetParam function [ODBC], mapping
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d81b92e83f92bb617e004c85fdbc0766de463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5d420bc68c4704705018a37c6459181481b1d7d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767810"
 ---
-# <a name="sqlsetparam-mapping"></a>SQLSetParam マッピング
-**SQLSetParam**の上にマップする引き続き**SQLBindParameter** ODBC 2. と同様 *。x*です。 概念的に似ていますなっても**SQLBindParam**、ドライバー マネージャーがマップされていない**SQLSetParam**に**SQLBindParam**です。 これは、ため特定既存の ODBC 2 です。*x*ドライバーの特殊な値を使用して*BufferLength* (SQL_SETPARAM_VALUE_MAX) に割り当てるときに、ドライバー マネージャーが生成する**SQLSetParam**の上に**SQLBindParameter**を 1 で呼び出されたときを判断します *。x* ODBC アプリケーションです。  
+# <a name="sqlsetparam-mapping"></a>SQLSetParam のマッピング
+**SQLSetParam**の上にマップするのには引き続き**SQLBindParameter** ODBC 2 のようにします *。x*します。 概念的に似ていますが、にもかかわらず**SQLBindParam**、ドライバー マネージャーがマップされていない**SQLSetParam**に**SQLBindParam**します。 これは、ため特定既存の ODBC 2。*x*ドライバーの特殊な値を使用して、 *BufferLength* (SQL_SETPARAM_VALUE_MAX) に割り当てるときに、ドライバー マネージャーが生成する**SQLSetParam**の上に**SQLBindParameter** 1 で呼び出されたときを判断する *。x* ODBC アプリケーション。  
   
  呼び出し  
   
@@ -33,7 +30,7 @@ ms.locfileid: "32907227"
 SQLSetParam(hstmt, ipar, fCType, fSqlType, cbColDef, ibScale, rgbValue, pcbValue)  
 ```  
   
- 次になります。  
+ 次のようになります。  
   
 ```  
 SQLBindParameter(StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, ColumnSize, DecimalDigits, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr)  

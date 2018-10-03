@@ -1,13 +1,11 @@
 ---
-title: SQLConnect による接続 |Microsoft ドキュメント
+title: SQLConnect による接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,19 +18,18 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6a0f793ef6e646d0b2be823be86a34ac75e591d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712450"
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect による接続
-**SQLConnect**最も簡単な接続関数です。 データ ソース名が必要ですし、省略可能なユーザー ID とパスワードを受け取ります。 ハード コード、データ ソース名、ユーザー ID またはパスワードが不要のアプリケーションに対して適切に機能します。 でも使用アプリケーション制御独自「ルック アンド フィール」またはそのユーザー インターフェイスのないにもできます。 このようなアプリケーションを使用してデータ ソースの一覧を作成できる**SQLDataSources**、ユーザーにデータ ソース、ユーザー ID とパスワードを要求し、呼び出す**SQLConnect**です。  
+**SQLConnect**は最も簡単な接続関数です。 データ ソース名が必要ですし、省略可能なユーザー ID とパスワードを受け付けます。 ハードコードされたデータ ソース名、ユーザー ID またはパスワードが必要としないアプリケーションに対して適切に機能します。 また、独自「ルック アンド フィール」を制御する必要があるアプリケーションまたはそのユーザー インターフェイスのないにもでも機能します。 このようなアプリケーションを使用してデータ ソースの一覧を構築できます**SQLDataSources**、データ ソース、ユーザー ID、およびパスワードをユーザーに確認し、呼び出す**SQLConnect**します。  
   
  次の例では、Northwind という名前の DSN を使用して、Northwind データベースに接続し、すべての従業員テーブル内のレコードからすべての姓と名フィールドを取得します。  
   

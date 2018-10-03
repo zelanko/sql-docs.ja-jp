@@ -1,28 +1,25 @@
 ---
-title: データに接続するソースまたはドライバー |Microsoft ドキュメント
+title: データ ソースまたはドライバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03fbd4e94f47e300e309377ad28d933fc480c2a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908567"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754610"
 ---
-# <a name="connecting-to-a-data-source-or-driver"></a>データに接続するソースまたはドライバー
-アプリケーションは、任意の数のドライバーとデータ ソースに接続できます。 さまざまなドライバーとデータ ソース、同じドライバーと、さまざまなデータ ソース、または同じドライバーやデータ ソースへの複数の接続でもかまいません。  
+# <a name="connecting-to-a-data-source-or-driver"></a>データ ソースまたはドライバーへの接続
+アプリケーションは、任意の数のドライバーとデータ ソースに接続できます。 さまざまなドライバーとデータ ソース、同じドライバーとのさまざまなデータ ソース、または同じドライバーとデータ ソースに複数の接続もできます。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -42,4 +39,4 @@ ms.locfileid: "32908567"
   
 -   [データ ソースまたはドライバーからの切断](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
--   [接続プロセスで、ドライバー マネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+-   [接続プロセスにおける、ドライバー マネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)

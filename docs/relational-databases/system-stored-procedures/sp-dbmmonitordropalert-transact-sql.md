@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitordropalert (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dbmmonitordropalert (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitordropalert_TSQL
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06db1e7cfdd158bb6097d13cc51ccd75d0413d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d21b966df55cc796fb97c3994e37b87ba62501d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708050"
 ---
 # <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +57,9 @@ sp_dbmmonitordropalert database_name
 |5|保有期間|データベース ミラーリングの状態テーブルにある行の保有期間を制御するメタデータです。|  
   
 > [!NOTE]  
->  このプロシージャを削除するかどうかが、指定された使用に関係なく、警告しきい値**sp_dbmmonitorchangealert**またはデータベース ミラーリング モニターします。  
+>  このプロシージャを使用して指定されているされたかどうかにかかわらず、警告のしきい値を削除する**sp_dbmmonitorchangealert**またはデータベース ミラーリング モニター。  
   
- 警告に対応するイベント Id については、次を参照してください。[使用警告しきい値および警告ミラーリング パフォーマンス基準の&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)です。  
+ 警告に対応するイベント Id については、次を参照してください。[使用量の警告しきい値とアラートをミラーリング パフォーマンス基準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -70,11 +67,11 @@ sp_dbmmonitordropalert database_name
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、保有期間の設定を削除、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
+ 次の例では、保有期間の設定の削除、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
   
 ```  
 EXEC sp_dbmmonitordropalert AdventureWorks2012, 5;  
@@ -87,7 +84,7 @@ EXEC sp_dbmmonitordropalert AdventureWorks2012 ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングと &#40; の監視SQL Server と &#41; です。](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: LoadFromFile メソッド (ADO) |Microsoft ドキュメント
+title: LoadFromFile メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 859c4cd31c3a2da8ff42fed470e5651ac568619b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed02b621b79ebf46dbb0dc6e66a2e5366610a19d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761240"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile メソッド (ADO)
-既存のファイルの内容を読み込みます、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)です。  
+既存のファイルの内容を読み込み、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +35,18 @@ Stream.LoadFromFileFileName
   
 #### <a name="parameters"></a>パラメーター  
  *FileName*  
- A**文字列**に読み込まれるファイルの名前を表す値、**ストリーム**です。 *FileName*任意の有効なパスと UNC 形式で名前を含めることができます。 指定したファイルが存在しない場合は、実行時エラーが発生します。  
+ A**文字列**に読み込まれるファイルの名前を含む値、 **Stream**します。 *ファイル名*任意の有効なパスと UNC 形式で名前に含めることができます。 指定したファイルが存在しない場合は、実行時エラーが発生します。  
   
 ## <a name="remarks"></a>コメント  
- このメソッドにローカル ファイルの内容を読み込みに使用できます、**ストリーム**オブジェクト。 ローカル ファイルの内容をサーバーにアップロードするために使用できます。  
+ このメソッドは、ローカル ファイルの内容を読み込むに使用できます、 **Stream**オブジェクト。 ローカル ファイルの内容をサーバーにアップロードするために使用できます。  
   
- **ストリーム**オブジェクトの呼び出しの前に開いているが既にあります**LoadFromFile**です。 このメソッドのバインドを変更していない、**ストリーム**オブジェクトはまだ URL で指定されたオブジェクトにバインドされますまたは**レコード**を**ストリーム**もともと開かれます。  
+ **Stream**オブジェクトを呼び出す前に開いて既にある必要があります**LoadFromFile**します。 このメソッドのバインドを変更していない、 **Stream**オブジェクトは引き続き、URL で指定されたオブジェクトにバインドされますまたは**レコード**られて、 **Stream**もともと開かれます。  
   
- **LoadFromFile**の現在の内容を上書き、**ストリーム**ファイルから読み取られるデータを持つオブジェクト。 既存のバイト、**ストリーム**ファイルの内容で上書きされます。 次の既存の前と残りのバイト、 [EOS](../../../ado/reference/ado-api/eos-property.md)によって作成された**LoadFromFile**、切り捨てられます。  
+ **LoadFromFile**の現在の内容を上書き、 **Stream**ファイルから読み取られるデータを持つオブジェクト。 既存のバイト、 **Stream**ファイルの内容で上書きされます。 次の既存の以前と残りのバイト、 [EOS](../../../ado/reference/ado-api/eos-property.md)によって作成された**LoadFromFile**、切り捨てられます。  
   
- 呼び出しの後に**LoadFromFile**の先頭に、現在の位置が設定されている、**ストリーム**([位置](../../../ado/reference/ado-api/position-property-ado.md)は 0) です。  
+ 呼び出しの後に**LoadFromFile**の先頭に、現在の位置が設定されている、 **Stream** ([位置](../../../ado/reference/ado-api/position-property-ado.md)は 0 です)。  
   
- エンコードするためのストリームの先頭には、2 バイトを追加することがあります、ため、ストリームのサイズが完全に一致しないの読み込み元のファイルのサイズ。  
+ 2 バイトは、エンコード、ストリームの先頭に追加する場合があります、ため、ストリームのサイズが読み込み元のファイルのサイズが一致も一致しないです。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

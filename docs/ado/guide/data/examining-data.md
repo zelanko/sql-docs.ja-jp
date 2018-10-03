@@ -1,13 +1,11 @@
 ---
-title: データを調べる |Microsoft ドキュメント
+title: データを調べる |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14753bac9e8004c77984b00ff490047c62e2c489
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645489"
 ---
-# <a name="examining-data"></a>データを確認します。
-[データの取得](../../../ado/guide/data/getting-data.md)セクションでは、1 つまたは複数としてデータ ソースからデータを取得する方法を説明しました。 **Recordset**オブジェクト。 このセクションの内容について説明します**レコード セット**さらに詳しく内を移動する方法を含む、**レコード セット**およびそのデータを表示します。  
+# <a name="examining-data"></a>データの調査
+[データの取得](../../../ado/guide/data/getting-data.md)セクションでは、1 つまたは複数としてデータ ソースからデータを取得する方法を説明しました。 **Recordset**オブジェクト。 このセクションで取り上げる**レコード セット**内を移動する方法を含む詳細についてで、**レコード セット**し、そのデータを表示します。  
   
- **レコード セット**さまざまなサポート[プロパティとメソッド](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)用に移動しに含まれるデータを確認できます。 これらの機能は、プロバイダーによって異なります。 一部のプロバイダーには、いくつかのプロパティまたはメソッドできない場合があります。  
+ **レコード セット**さまざまなサポート[プロパティとメソッド](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)用に移動しに含まれるデータを確認できます。 これらの機能は、プロバイダーに依存します。 一部のプロバイダーには、いくつかのプロパティまたはメソッドできない場合があります。  
   
  このセクションでは、次のトピックを扱います。  
   

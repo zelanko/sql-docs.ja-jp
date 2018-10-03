@@ -1,13 +1,11 @@
 ---
-title: 'コレクション (Visual C++ 構文のインデックス #import) |Microsoft ドキュメント'
+title: 'コレクション (Visual C 構文のインデックスで #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662660"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C++ 構文のインデックス #import)
-コレクションが、一般的なメソッドとプロパティを継承ことを確認すると便利です。  
+# <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C 構文のインデックスで #import)
+コレクションが特定の一般的なメソッドとプロパティを継承するかを把握すると便利です。  
   
- すべてのコレクションの継承、**カウント**プロパティおよび**更新**メソッド、およびすべてのコレクションを追加、**項目**プロパティです。 **エラー**コレクションを追加、**クリア**メソッドです。 **パラメーター**コレクションの継承、 **Append**と**削除**メソッド、中に、**フィールド**コレクションに追加、 **Append**、**削除**、および**更新**メソッドです。  
+ すべてのコレクションの継承、**カウント**プロパティと**更新**メソッド、およびすべてのコレクションを追加、**項目**プロパティ。 **エラー**コレクションを追加、**クリア**メソッド。 **パラメーター**コレクションの継承、 **Append**と**削除**メソッド、中に、**フィールド**コレクションに追加、 **Append**、**削除**、および**Update**メソッド。  
   
 ## <a name="properties-collection"></a>プロパティのコレクション  
   
@@ -49,7 +46,7 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="errors-collection"></a>Errors コレクション  
+## <a name="errors-collection"></a>エラーのコレクション  
   
 ### <a name="methods"></a>メソッド  
   
@@ -101,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>参照  
- [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

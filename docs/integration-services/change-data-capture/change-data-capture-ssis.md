@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 235e7bf226544e415ecc32264c0c627d33f95aa5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405484"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804660"
 ---
 # <a name="change-data-capture-ssis"></a>変更データ キャプチャ (SSIS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。  
   
 ## <a name="what-is-change-data-capture"></a>変更データ キャプチャとは  
  ソース テーブルは、時間の経過と共に変化します。 このようなテーブルに基づくデータ マートまたはデータ ウェアハウスは、その変化を反映する必要があります。 ただし、ソース全体のスナップショットを定期的にコピーする処理には、膨大な時間とリソースが必要です。 timestamp 列、トリガー、複雑なクエリなどの別の方法を使用すると、多くの場合、パフォーマンスが低下して処理が複雑になります。 ここで必要となるのは、対象となるデータ表現に対して簡単に適用できるように構成された変更データの確実なストリームです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変更データ キャプチャはこのソリューションを提供します。  

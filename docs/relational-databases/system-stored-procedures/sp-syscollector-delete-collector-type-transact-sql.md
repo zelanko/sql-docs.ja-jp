@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_delete_collector_type (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syscollector_delete_collector_type (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6161667473e001fe596d073f8f16aa1022bd969
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738320"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +51,13 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- いずれか*collector_type_uid*または*名前*必要があります値を持つ、どちらも NULL をすることはできません。  
+## <a name="remarks"></a>コメント  
+ いずれか*collector_type_uid*または*名前*する必要があります値を持つ、どちらも NULL をすることはできません。  
   
  このコレクション型のコレクション アイテムが存在する場合は、エラーがスローされます。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **dc_admin** (EXECUTE 権限) を持つ固定データベース ロールにこのプロシージャを実行します。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **dc_admin** (EXECUTE 権限) を持つ固定データベース ロールにこのプロシージャを実行します。  
   
 ## <a name="example"></a>例  
  次の例では、ジェネリック T-SQL Query コレクター型を削除します。  
@@ -74,6 +70,6 @@ EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

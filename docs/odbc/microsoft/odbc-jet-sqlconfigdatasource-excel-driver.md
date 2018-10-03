@@ -1,44 +1,41 @@
 ---
-title: ODBC Jet SQLConfigDataSource (Excel ドライバー) |Microsoft ドキュメント
+title: ODBC Jet SQLConfigDataSource (Excel ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Excel Driver
 - Excel driver [ODBC], SqlConfigDataSource
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00b2295ead09d0196a14248b03ee5f6a96936df6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbad3b1e6dda82a9f9fc584683e53f8e2a109cca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715390"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource (Excel ドライバー)
 > [!NOTE]  
->  このトピックでは、Excel ドライバーに固有の情報を提供します。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
+>  このトピックでは、Excel ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- **SQLConfigDataSource**を追加するに使用される関数は、次の変更、または削除、データ ソースが動的に次のキーワードを使用します。  
+ **SQLConfigDataSource**関数を追加するには、次の変更、またはデータ ソースの削除が動的に、次のキーワードを使用します。  
   
-|Keyword|Description|  
+|Keyword|説明|  
 |-------------|-----------------|  
-|DBQ|Excel ドライバーの Microsoft Excel 5.0 またはそれ以降のファイルにアクセスするときにブック ファイルの名前。<br /><br /> これと同じオプションを設定**データベース**設定 ダイアログ ボックスをオンにします。|  
-|DEFAULTDIR|ディレクトリ パスの指定。<br /><br /> として同じオプションを設定**ディレクトリの選択**または**ブックの選択**設定 ダイアログ ボックスをオンにします。|  
-|DESCRIPTION|データ ソース内のデータの説明です。<br /><br /> 同じオプションを設定**説明**設定 ダイアログ ボックスをオンにします。|  
-|DRIVER|ドライバー DLL にパス指定します。|  
-|DRIVERID|ドライバーの整数 ID です。<br /><br /> 534 (Microsoft Excel 3.0)<br /><br /> 278 (Microsoft Excel 4.0)<br /><br /> 22 (Microsoft Excel 5.0 または 7.0)<br /><br /> 790 (Microsoft Excel 97-2003)|  
+|DBQ|Microsoft Excel ドライバーの Microsoft Excel 5.0 またはそれ以降のファイルにアクセスするときにブック ファイルの名前。<br /><br /> これは、と同じオプション設定**データベース**設定 ダイアログ ボックスをオンにします。|  
+|DEFAULTDIR|ディレクトリ パスの指定。<br /><br /> これは、と同じオプション設定**ディレクトリの選択**または**ブックの選択**設定 ダイアログ ボックスをオンにします。|  
+|DESCRIPTION|データ ソース内のデータの説明。<br /><br /> これは、と同じオプション設定**説明**設定 ダイアログ ボックスをオンにします。|  
+|DRIVER|ドライバー DLL パスの指定。|  
+|DRIVERID|ドライバーの整数の ID。<br /><br /> 534 (Microsoft Excel 3.0)<br /><br /> 278 (Microsoft Excel 4.0)<br /><br /> 22 (Microsoft Excel 5.0 または 7.0)<br /><br /> 790 (Microsoft Excel 97-2003)|  
 |FIL|ファイルの種類、たとえば、Excel 3.0、Excel 4.0、Excel 5.0、Excel 7.0、Excel 97、Excel 2000、または Excel 2003。|  
-|消えて|か、範囲の最初の行のセルが、テーブルの列名、(1) を含めるかどうかを示します (0) です。|  
-|MAXSCANROWS|既存のデータに基づいて、列のデータ型を設定する場合にスキャンする行の数。<br /><br /> 16 ~ 1 の数値は、スキャンする行数を入力できます。 値の既定値は 8 です。0 に設定されている場合は、すべての行がスキャンされます。 (制限外の数値はエラーを返します。)<br /><br /> として同じオプションを設定**スキャンする行数**設定 ダイアログ ボックスをオンにします。|  
-|READONLY|読み取り専用ファイルを作成する場合は TRUE読み取り専用ファイルを作成する場合は FALSE。<br /><br /> 同じオプションを設定**読み取り専用**設定 ダイアログ ボックスをオンにします。|  
-|スレッド|使用する、エンジンのバック グラウンド スレッドの数。 Microsoft Access ドライバーは、この値は、既定値は 3 が、変更することができます。 DBASE、MicrosoftExceldriver この値は、3 は変更できません。<br /><br /> 同じオプションを設定**スレッド**設定 ダイアログ ボックスをオンにします。|
+|消えて|かどうか、範囲の最初の行のセルがテーブル (1) の列名を含めるかどうかを示します (0)。|  
+|MAXSCANROWS|既存のデータに基づく列のデータ型を設定するときにスキャンする行の数。<br /><br /> スキャンする行の 1 から 16 の数値を入力できます。 値の既定値は 8 です。0 に設定されている場合は、すべての行がスキャンされます。 (上限外の数値はエラーを返します。)<br /><br /> これは、と同じオプション設定**スキャンする行**設定 ダイアログ ボックスをオンにします。|  
+|READONLY|読み取り専用ファイルを作成する場合は TRUE読み取り専用ファイルを作成する場合は FALSE。<br /><br /> これは、と同じオプション設定**読み取り専用**セットアップ ダイアログ ボックス。|  
+|スレッド|使用するエンジンのバック グラウンド スレッドの数。 Microsoft Access ドライバーの場合は、この値は、既定値は、3 が、変更することができます。 Dbase MicrosoftExceldriver この値は 3 であり、変更することはできません。<br /><br /> これは、と同じオプション設定**スレッド**設定 ダイアログ ボックスをオンにします。|

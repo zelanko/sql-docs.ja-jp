@@ -1,14 +1,11 @@
 ---
-title: sysssispackagefolders (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysssispackagefolders (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackagefolders90
@@ -18,30 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackagefolders system table
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-caps.latest.revision: 22
 author: douglasl
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb24e752bf92704b1560aa84906f28173a0d9dc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5166d82d0212c3974cbc7f95b071765ef25afdb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740590"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  フォルダー階層内の論理フォルダーごとに 1 行が含まれていますを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用します。 オブジェクト エクスプ ローラーでのこれらのフォルダーが表示されている[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続時[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]です。 フォルダーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはファイル システムに保存されているパッケージが一覧表示されます。  
+  フォルダー階層内の論理フォルダーごとに 1 つの行データを格納する[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用します。 オブジェクト エクスプ ローラーでこれらのフォルダーが表示されている[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続時[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 フォルダーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはファイル システムに保存されているパッケージが一覧表示されます。  
   
- **Parentfolderid**列には、フォルダー階層がについて説明します。 フォルダー階層の最上位にあるフォルダーには内で null 値が含まれています**parentfolderid**です。  
+ **Parentfolderid**列には、フォルダー階層がについて説明します。 フォルダー階層の上部にあるフォルダーに null 値が含まれています**parentfolderid**します。  
   
  **Foldername**列には、オブジェクト エクスプ ローラーで表示されるフォルダーの名前が含まれています。  
   
- 次の表は、 **msdb**データベース。  
+ このテーブルに格納されます、 **msdb**データベース。  
 
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**folderid**|**uniqueidentifier**|フォルダーの GUID。|  
 |**parentfolderid**|**uniqueidentifier**|親フォルダーの GUID。|  

@@ -1,13 +1,11 @@
 ---
-title: 値の |Microsoft ドキュメント
+title: 値の |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f66aebdd140d1ce3fe505dfd40fd5f412de7cd9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726880"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-指定するかどうか、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)入力パラメーター、出力パラメーター両方の入力を表しますと出力パラメーター、またはストアド プロシージャからの戻り値。  
+指定するかどうか、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)表します入力パラメーター、出力パラメーター、両方の入力と出力パラメーター、またはストアド プロシージャからの戻り値。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -37,7 +34,7 @@ ms.locfileid: "35280577"
 |**adParamReturnValue**|4|パラメーターが戻り値を表すことを示します。|  
 |**adParamUnknown**|0|パラメーターの方向が既知であることを示します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

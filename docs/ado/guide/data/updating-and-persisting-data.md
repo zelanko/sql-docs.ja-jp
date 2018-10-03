@@ -1,40 +1,37 @@
 ---
-title: データを更新し、永続化 |Microsoft ドキュメント
+title: データを更新し、永続化する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ADO]
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2c4d7fd046631814e263c8bd6a413fb9ef2f00c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d53891b4e82b3ae391d095e8cbca2189fb201d29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758830"
 ---
-# <a name="updating-and-persisting-data"></a>更新およびデータを保持します。
-前のチャプターは、ADO を使用して、データ ソース内のデータを取得する方法、データ内を移動する方法、およびデータを編集する方法も説明してきました。 もちろん場合は、アプリケーションの目的は、データを変更するユーザーを許可するのには、これらの変更を保存する方法を理解する必要があります。 永続化することができますか、 **Recordset**を使用してファイルを変更、**保存**メソッド、または、その変更を使用してストレージのデータ ソースに戻すを送信できます、**更新**または**UpdateBatch**メソッドです。  
+# <a name="updating-and-persisting-data"></a>データの更新と保持
+前の章は、ADO を使用して、データ ソース内のデータを取得する方法、データ内を移動する方法、およびデータを編集する方法も説明してきました。 もちろん、アプリケーションの目的がデータを変更するユーザーを許可する場合は、これらの変更を保存する方法を理解する必要があります。 永続化することができますか、**レコード セット**を使用してファイルへの変更、**保存**メソッド、またはを使用してストレージのデータ ソースをバックアップを作成、変更を送信できます、 **Update**または**UpdateBatch**メソッド。  
   
- 複数の行のデータを変更する前の章で、 **Recordset**です。 ADO では、追加、削除、および行のデータの変更に関連する 2 つの基本的な概念をサポートします。  
+ 複数の行のデータの変更前の章で、 **Recordset**します。 ADO では、追加、削除、および行のデータの変更に関連する 2 つの基本的な概念をサポートします。  
   
- 最初の概念はすぐに変更する、**レコード セット**。 代わりに、内部に行われる*コピー バッファー*です。 変更を保持する場合は、コピー バッファー内の変更は破棄されます。 コピー バッファー内の変更を適用、変更を保持する場合、 **Recordset**です。  
+ 最初の概念に変更が行われませんすぐに、**レコード セット**。 代わりに、内部に行われる*コピー バッファー*します。 変更をしたくない場合は、コピー バッファー内の変更は破棄されます。 コピー バッファー内の変更を適用、変更を保持する場合、 **Recordset**します。  
   
- 2 番目の概念は、操作を宣言する行を完了するとすぐに変更がデータ ソースに反映するか (つまり、*即時*モード)、または一連の行に対するすべての変更が、セットの操作を宣言するまでに収集されます完全な (つまり、*バッチ*モード)。 **LockType**プロパティは、基になるデータ ソースに変更を適用する場合を決定します。 **adLockOptimistic**または**adLockPessimistic**イミディ エイト モードを指定します、 **adLockBatchOptimistic**バッチ モードを指定します。 **CursorLocation**プロパティに関係が**LockType**の設定を使用します。 インスタンス、 **adLockPessimistic**場合の設定はサポートされていません、 **CursorLocation**プロパティに設定されている**adUseClient**です。  
+ 2 つ目の概念は、操作を宣言する行を完了するとすぐに変更がデータ ソースに反映するか (つまり、*即時*モード)、または一連の行に対するすべての変更が、セットの操作を宣言するまでに収集されます完全な (つまり、*バッチ*モード)。 **LockType**プロパティを基になるデータ ソースに変更が行われたときに決定します。 **adLockOptimistic**または**adLockPessimistic**イミディ エイト モードを指定します、 **adLockBatchOptimistic**バッチ モードを指定します。 **CursorLocation**プロパティが影響する**LockType**設定を使用できます。 たとえば、 **adLockPessimistic**場合、設定がサポートされていません、 **CursorLocation**プロパティに設定されて**adUseClient**します。  
   
- イミディ エイト モードの各呼び出しで、**更新**メソッドは、データ ソースへの変更を伝達します。 バッチ モードの各呼び出しで**更新**現在の行位置の移動、コピー バッファーにのみ、変更を保存するか、 **UpdateBatch**メソッドは、データ ソースへの変更を伝達します。  
+ イミディ エイト モードの各呼び出しで、 **Update**メソッドには、データ ソースに変更が反映されます。 バッチ モードでは、各呼び出しで**Update**現在の行位置の移動、コピー バッファーにのみ、変更を保存しますか、 **UpdateBatch**メソッドには、データ ソースに変更が反映されます。  
   
  このセクションでは、次のトピックを扱います。  
   

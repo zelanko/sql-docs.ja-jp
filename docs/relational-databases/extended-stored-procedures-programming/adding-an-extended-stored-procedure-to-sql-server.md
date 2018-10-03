@@ -1,30 +1,26 @@
 ---
-title: 追加する拡張ストアド プロシージャを SQL Server |Microsoft ドキュメント
+title: ストアド プロシージャを SQL Server の拡張を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], adding
 - adding extended stored procedures
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 367ee61ee76481d6771da08436c676f821291ee8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdfd4effc0d41dc31c4aefb95e8574525fb03544
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648250"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>SQL Server への拡張ストアド プロシージャの追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "32938377"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- `sp_addextendedproc` に指定した関数の名前が、DLL 内の関数名と正確に一致しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に新しい名前が登録されますが、その名前は役に立ちません。 たとえばが`xp_Hello`として登録されて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にあるストアド プロシージャ`xp_hello.dll`、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用する場合、DLL の関数を検索することはできません`xp_Hello`を後で、関数を呼び出します。  
+ `sp_addextendedproc` に指定した関数の名前が、DLL 内の関数名と正確に一致しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に新しい名前が登録されますが、その名前は役に立ちません。 たとえばが`xp_Hello`として登録されて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張であるストアド プロシージャ`xp_hello.dll`、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用する場合は、DLL で関数を検索することはできません`xp_Hello`を後で、関数を呼び出します。  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
