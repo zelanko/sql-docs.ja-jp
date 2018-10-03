@@ -4,9 +4,7 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command Line Options, Help Option
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 2323c7c53571285d0e34365783b8b8d501de10c5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d158acf02d4f7cfe7a16d9b84b199b0922bb4339
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614610"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA コンソールのコマンド ライン オプション (OracleToSQL)
 Microsoft を実行し、SSMA アクティビティを制御する信頼性の高い一連のコマンド ライン オプションを提供します。 次のセクションでは、同じについて説明します。  

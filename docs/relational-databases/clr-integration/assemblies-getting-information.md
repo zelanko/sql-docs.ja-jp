@@ -3,27 +3,23 @@ title: アセンブリに関する情報の取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.component: clr
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], metadata
 - status information [SQL Server], assemblies
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7b01592ad65a6db4acc8dee1c7f417096c6a6265
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 723b35023a4404b6e5afff6efbfed86fc230af35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600581"
 ---
 # <a name="assemblies---getting-information"></a>アセンブリ - 情報の取得
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ ms.locfileid: "37352624"
   
 -   [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アセンブリ&#40;データベース エンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)   
  [アセンブリの実装](../../relational-databases/clr-integration/assemblies-implementing.md)  

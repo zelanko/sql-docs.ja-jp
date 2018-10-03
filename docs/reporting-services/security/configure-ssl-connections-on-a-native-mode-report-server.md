@@ -4,19 +4,18 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f41a2065023f85407b8728038b1992d1316908c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1ef9ae610a977c372503918b128141485e05dc17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613760"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの SSL 接続の構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  

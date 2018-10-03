@@ -1,34 +1,31 @@
 ---
-title: バッチ モード |Microsoft ドキュメント
+title: バッチ モード |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], batch mode
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78fd9c4c7a27bad0daddb02f3275ecebfc171cbd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270581"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602400"
 ---
 # <a name="batch-mode"></a>バッチ モード
-バッチ モードが有効になってときに、 **LockType**プロパティに設定されている**adLockBatchOptimistic**バッチ更新は、プロバイダーでサポートされています。 特定のロックの種類の設定は、カーソル位置に応じてご利用いただけません。 たとえば、排他ロックの種類場合は使用できません、 **CursorLocation**に設定されている**adUseClient**です。 逆に、プロバイダーは、カーソルの場所は、サーバーの場合、バッチ オプティミスティック ロックをサポートできません。 バッチ更新を keyset または static カーソルのみを使用する必要があります。  
+バッチ モードが有効なときに、 **LockType**プロパティに設定されて**adLockBatchOptimistic**バッチ更新プロバイダーによってサポートされています。 カーソル位置に応じて特定のロックの種類の設定が利用できません。 たとえば、ペシミスティック ロックの種類場合は使用できません、 **CursorLocation**に設定されている**adUseClient**します。 逆に、プロバイダーは、サーバー カーソルの場所がある場合、バッチ オプティミスティック ロックをサポートできません。 バッチ更新を keyset または static カーソルのみを使用する必要があります。  
   
- **UpdateBatch**メソッドを使用して、送信**Recordset**コピー バッファーでデータ ソースを更新するためにサーバーの変更を保持します。 開くことは、次のセクションで、 **Recordset**バッチ モードでは、コピー バッファーを変更してへの呼び出しを使用してデータ ソースに変更を送信**UpdateBatch**です。  
+ **UpdateBatch**メソッドを使用して、送信**Recordset**変更は、データ ソースを更新するサーバーに、コピー バッファーに保持します。 次のセクションで開くが、**レコード セット**バッチ モードで、コピー バッファーに変更を加えるし、呼び出しに使用してデータ ソースに変更を送信**UpdateBatch**します。  
   
  このセクションのトピックは次のとおりです。  
   

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.integrity.f1
@@ -17,23 +14,22 @@ f1_keywords:
 helpviewer_keywords:
 - Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bed0e36e8e6ac82e642942ea208e9378de365136
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99b0565c0a987c50aaafbca8ef62b18f3b2e330e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613710"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>[データベースの整合性確認タスク]\(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   **[データベースの整合性確認タスク]** ダイアログを使用すると、 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することにより、ユーザーおよびシステム テーブルの割り当ておよび構造の整合性、データベース内のインデックスを確認できます。 `DBCC` を実行することにより、データベース整合性に問題があった場合にレポートし、システム管理者またはデータベースの所有者によって対処できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -69,7 +65,7 @@ ms.locfileid: "32943957"
  ページの物理構造の整合性、レコード ヘッダー、およびデータベースの割り当ての一貫性にチェックを限定します。 このオプションは、大規模なデータベースの DBCC CHECKDB の実行時間を大幅に短縮することがあるため、実稼働システムで頻繁に使用する場合にお勧めします。  
   
  **[Tablock] (Tablock)**  
- DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでの同時実行性が低下します。  
+ DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでのコンカレンシーが低下します。  
   
  **[T-SQL の表示]**  
  選択したオプションに基づき、このタスクでサーバーに対して実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを表示します。  

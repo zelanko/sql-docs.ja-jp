@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aaddf1fab037c2bccec6f3bfc5411ba6156ee75b
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: e2ee8252b123456b1c07f6373c8e9be2c7bcd1ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619121"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列パターン プロファイル要求]** のオプションを設定できます。 列パターン プロファイルは、文字列型の列に含まれる指定された比率の値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、および \d{9} という正規表現が生成されます。 その他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれている可能性があります。  
@@ -116,7 +113,7 @@ ms.locfileid: "35619479"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[MaxNumberOfPatterns]**  
  プロファイルで計算するパターンの最大数を指定します。 このオプションの既定値は 10 です。 最大値は 100 です。  
   

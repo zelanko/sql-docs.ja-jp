@@ -1,13 +1,11 @@
-﻿---
+---
 title: トランザクション ログ バックアップの適用 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/13/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1b8fff95c58785e48199bd3ce4bc65d3c87f293
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea3ebc57689e6dd0a3da1b0cde158354d7309f2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618080"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ ms.locfileid: "32921047"
 ##  <a name="PITrestore"></a> ログ バックアップを使用し、障害発生時まで復元する  
  次のような一連のイベントが発生したとします。  
   
-|[時刻]|イベント|  
+|Time|イベント|  
 |----------|-----------|  
 |午前 8 時|データベースの完全バックアップを作成するために、データベースをバックアップします。|  
 |正午|トランザクション ログのバックアップ。|  

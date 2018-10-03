@@ -4,22 +4,20 @@ description: さまざまなデータ ソースから Azure SQL Data Warehouse �
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3d3b048b5aa0c2a2cfd0eaf89e03d49f37152497
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610940"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む
 

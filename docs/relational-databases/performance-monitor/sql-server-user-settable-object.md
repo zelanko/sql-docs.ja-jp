@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64c32d1497a0bc54f6d3d72779ca65f1b5fa05d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c908154b21c1adca88b959d0a1d1243a0465ea02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609960"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +33,13 @@ ms.locfileid: "32951957"
   
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
   
-|SQL Server User Settable カウンター|Description|  
+|SQL Server User Settable カウンター|[説明]|  
 |---------------------------------------|-----------------|  
 |**クエリ**|**User Settable** オブジェクトには、Query カウンターが含まれています。 ユーザーは、クエリ オブジェクト内の **ユーザー カウンター** を構成します。|  
   
  次の表では、 **Query** カウンターの **インスタンス** について説明します。  
   
-|Query カウンターのインスタンス|Description|  
+|Query カウンターのインスタンス|[説明]|  
 |-----------------------------|-----------------|  
 |**ユーザー カウンター 1**|**sp_user_counter1**を使用して定義します。|  
 |**ユーザー カウンター 2**|**sp_user_counter2**を使用して定義します。|  

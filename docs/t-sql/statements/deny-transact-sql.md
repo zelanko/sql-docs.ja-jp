@@ -5,9 +5,7 @@ ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DENY
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - denying permissions [SQL Server]
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
-caps.latest.revision: 48
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8638fbdd0b7da6471cc968618fa873ba7d463cc8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b93f755247caccf945129fa6c0bc55990ba625df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089121"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621250"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -167,7 +164,7 @@ DENY
 |可用性グループ|[DENY (可用性グループの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
 |Certificate|[DENY (証明書の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
 |コントラクト|[DENY (Service Broker の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|[データベース]|[DENY (データベースの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
+|データベース|[DENY (データベースの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
 |データベース スコープ資格情報|[DENY (データベース スコープの資格情報の拒否) (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
 |エンドポイント|[DENY (エンドポイントの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
 |フルテキスト カタログ|[DENY (フルテキストの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  

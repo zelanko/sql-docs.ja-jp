@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 09/05/2017"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed5bcf08a4be00896e3d59b79494fcaffca5c63
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43111727"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596130"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -368,7 +364,7 @@ EXECUTE によるネイティブ コンパイル ストアド プロシージャ
 **デュアル構成:** メモリ最適化テーブルはデュアル構成になっており、アクティブ メモリ内とハード ディスク上に 1 つずつ存在します。 各トランザクションは両方のテーブルに対してコミットされます。 トランザクションは、より高速なアクティブ メモリ内のテーブルに対して操作を行います。 そのためメモリ最適化テーブルは、ディスクよりも高速なアクティブ メモリの恩恵を受けることになります。 さらに、アクティブ メモリは非常に敏捷なので、速度に関して最適化されたより高度なテーブル構造も使用できます。 高度なテーブル構造はページレスでもあるため、ラッチやスピンロックのオーバーヘッドや競合を回避できます。  
   
   
-**ロックなし:** メモリ最適化テーブルは *オプティミスティック* なアプローチにより、データの整合性と、同時実行性および高スループットとのバランスを取っています。 トランザクションの間、更新されたデータ行のどのバージョンもロックすることはありません。 これにより、特に大規模システムでは大幅に競合を減らすことができます。  
+**ロックなし:** メモリ最適化テーブルは*オプティミスティック*なアプローチにより、データの整合性と、コンカレンシーおよび高スループットとのバランスを取っています。 トランザクションの間、更新されたデータ行のどのバージョンもロックすることはありません。 これにより、特に大規模システムでは大幅に競合を減らすことができます。  
   
   
 **行のバージョン:** メモリ最適化テーブルは、更新された行をロックする代わりに、更新された行の新しいバージョンを (tempdb ではなく) テーブルに追加します。 元の行は、トランザクションがコミットされるまで保持されます。 トランザクションの間も、他のプロセスが行の元のバージョンを読み取ることができます。  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helplogins_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d497fdd54fd0a8fce44282a2caa819fef60a76fb
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b043b71ca3f0349ce8ed7ac7accf136f4b7eff60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028791"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595230"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**UserName**|**sysname**|ユーザー アカウントは、 **LoginName**でマップが**DBName**、およびロールを**LoginName**でのメンバーである**DBName**します。|  
 |**UserOrAlias**|**char (8)**|MemberOf = **UserName**は、ロールです。<br /><br /> ユーザー = **UserName**はユーザー アカウントです。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ログインを削除する前に、使用して**sp_helplogins**ログインにマップされているユーザー アカウントを特定します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -105,7 +101,7 @@ John        pubs     John       User
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   

@@ -4,10 +4,7 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-exception-handling
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - exceptions [Reporting Services], Detail property
 - Detail property
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffab4097077a95dada228f816a9b0daf79c20fdf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4aebb8febbf181a54ed32f31096c408c04c1dae3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280448"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621990"
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>Detail プロパティを使用したエラー処理
   例外を細かく分類するために、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によって、SOAP 例外の **Detail** プロパティの子要素の **InnerText** プロパティにある追加のエラー情報が返されます。 **Detail** プロパティは **XmlNode** オブジェクトであるため、次のコードを使って **Message** 子要素の内部テキストにアクセスできます。  

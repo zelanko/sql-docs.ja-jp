@@ -5,24 +5,21 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be991897702d63aa505c3c18b4a86fed5f9840c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40411835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623680"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
   次の 1 つ以上のツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行、プロジェクトの検証、およびその他の操作を監視できます。 データ タップなどの特定のツールは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトに対してのみ使用できます。  
@@ -92,8 +89,7 @@ ms.locfileid: "40411835"
 ## <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services サーバーで実行中のパッケージの表示と停止
   **SSISDB** データベースでは、ユーザーに表示されない内部テーブルに実行履歴を格納します。 ただし、必要な情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、パッケージに関連した一般的なタスクを実行するために呼び出すことができるストアド プロシージャも用意されています。  
   
- 通常、サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクトは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で管理します。 また、データベース ビューに対してクエリを実行し、ストアド プロシージャを直接呼び出すことや、マネージド API を呼び出すカスタム コードを記述することもできます。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] およびマネージド API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャを呼び出します。 たとえば、サーバーで現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの一覧を表示し、必要に応じてパッケージの停止を要求できます。  
+ 通常、サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクトは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で管理します。 また、データベース ビューに対してクエリを実行し、ストアド プロシージャを直接呼び出すことや、マネージド API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] およびマネージド API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャを呼び出します。 たとえば、サーバーで現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの一覧を表示し、必要に応じてパッケージの停止を要求できます。  
   
 ### <a name="viewing-the-list-of-running-packages"></a>実行中のパッケージの一覧の表示  
  **[アクティブな操作]** ダイアログ ボックスでは、サーバーで現在実行中のパッケージの一覧を表示できます。 詳しくは、「 [Active Operations Dialog Box](#active_ops)」をご覧ください。  

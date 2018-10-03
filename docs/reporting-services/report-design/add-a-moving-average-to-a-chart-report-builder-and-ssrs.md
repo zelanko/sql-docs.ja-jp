@@ -4,17 +4,16 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbd3846a761ebe764d4df7c644f20be83a08b353
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c2c2da7e3ff889d56c96d5dcd68b1f11e150cc92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276517"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594594"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>グラフへの移動平均の追加 (レポート ビルダーおよび SSRS)
 移動平均は、定義された期間にわたって計算される、系列内のデータの平均です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページされたレポートでは、移動平均をグラフに表示すると、重要な傾向を特定することができます。  

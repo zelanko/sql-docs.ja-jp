@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - forms-based authentication [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afa2e2bb565331793442603eec6162d1b317a104
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1a117dd047281c3c67156f31ae5d4ec53e6bb48e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620730"
 ---
 # <a name="implementing-a-security-extension"></a>セキュリティ拡張機能の実装
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認証は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] でレポートのセキュリティを確保するための主要なシステムです。 ただし、企業のカスタム セキュリティに対処するために、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ システムを拡張する必要が生じることもあります。 このような場合には、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API に備えられた開発プラットフォームを使用します。 ここでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ拡張機能の概要について説明します。  

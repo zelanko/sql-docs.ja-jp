@@ -1,15 +1,12 @@
-﻿---
+---
 title: データベースのデタッチとアタッチ (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -29,16 +26,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: c0805507b3ac29e55b6a43f98e1ee2d8987bc417
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33990488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619801"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ ms.locfileid: "33990488"
   
 -   データベースに、データベース スナップショットが存在する。  
   
-     データベースをデタッチするには、すべてのデータベース スナップショットを削除する必要があります。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)」を参照してください。  
+     データベースをデタッチするには、すべてのデータベース スナップショットを削除する必要があります。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)の同一または別のインスタンスに再度アタッチすることができます。  
   
     > [!NOTE]  
     >  データベース スナップショットのデタッチおよびアタッチは行うことができません。  

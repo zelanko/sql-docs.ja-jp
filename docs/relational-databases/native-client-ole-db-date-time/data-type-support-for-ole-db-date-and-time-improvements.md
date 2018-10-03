@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6c14be858d6ba9d2b9ac40b462967c8d600f1b6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5cce6109766d6eddff563287fa6a36adf187146d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058664"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595900"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付/時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,7 +184,7 @@ enum SQLVARENUM {
   
  アプリケーションに DBTYPE_DBTIMESTAMP を指定するときに*wType*へのマッピングをオーバーライドできます**datetime2**で型名を指定することによって*pwszTypeName*します。 場合**datetime**が指定されている*bScale* 3 である必要があります。 場合**smalldatetime**が指定されている*bScale* 0 にする必要があります。 場合*bScale*と整合性がありません*wType*と*pwszTypeName*DB_E_BADSCALE が返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

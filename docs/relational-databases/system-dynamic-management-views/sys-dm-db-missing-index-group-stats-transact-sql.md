@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_missing_index_group_stats_TSQL
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7234b9e3fe564ce777d3287b30efe2a64e1f889a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b7052eec4984d89bd9dfa4c0e94a6e35ed4f4222
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103359"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605481"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ ms.locfileid: "43103359"
 |**avg_total_system_cost**|**float**|グループ内のインデックスによって削減できたシステム クエリの平均コスト。|  
 |**avg_system_impact**|**float**|この欠落インデックス グループが実装されていた場合のシステム クエリへの効果の平均パーセンテージ (%)。 この値は、この欠落インデックス グループが実装されていた場合に減少したクエリ コストの平均パーセンテージを示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  によって返される情報**sys.dm_db_missing_index_group_stats**すべてのクエリのコンパイルまたは再コンパイルではなく、クエリを実行するたびに更新されます。 使用状況の統計は保持されず、されるまでのみ保持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 使用状況の統計をサーバーの再利用後も保持する場合は、データベース管理者が欠落インデックスの情報のバックアップ コピーを定期的に作成する必要があります。  
 
   >[!NOTE]
@@ -92,7 +89,7 @@ WHERE migs.group_handle = 24;
   
  このクエリを実行すると、インデックスが欠落しているデータベース、スキーマ、テーブルの名前が返されます。 また、インデックス キーに使用される列の名前も返されます。 欠落したインデックスを実装するには、リストの先頭に等号列、CREATE INDEX DDL ステートメントとし、非等値列を ON に書き込むときに\< *table_name*> CREATE INDEX ステートメントの句。 付加列は、CREATE INDEX ステートメントの INCLUDE 句で指定します。 等値列の有効な順序を決定するには、最初に最も高い列を一覧表示、選択度に基づいてそれらを注文 (左端の列リストで)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_db_missing_index_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
