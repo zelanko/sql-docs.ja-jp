@@ -1,13 +1,11 @@
 ---
-title: Name プロパティ (ADO) |Microsoft ドキュメント
+title: Name プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,33 +14,32 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 834a04e01587be21938d461ac1645802bad624d0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3717aa3ec95c92500d66c968446f7711a6cd4e74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279581"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828650"
 ---
 # <a name="name-property-ado"></a>Name プロパティ (ADO)
 オブジェクトの名前を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**文字列**オブジェクトの名前を示す値。  
+ 設定または取得を**文字列**オブジェクトの名前を示す値。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**名前**に名前を割り当てるまたはの名前を取得するプロパティ、**コマンド**、**プロパティ**、**フィールド**、または**パラメーター**オブジェクト。  
+ 使用して、**名前**に名前を割り当てるまたはの名前を取得するプロパティを**コマンド**、**プロパティ**、**フィールド**、または**パラメーター**オブジェクト。  
   
  読み取り/書き込みするには、値、**コマンド**オブジェクトおよび読み取り専用で、**プロパティ**オブジェクト。  
   
- **フィールド**オブジェクト、**名前**は通常読み取り専用です。 ただし、新規の**フィールド**に追加されたオブジェクト、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクション、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、**名前**は読み取り/書き込みにした場合のみ[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティを**フィールド**が指定されているデータ プロバイダーが追加、新しいおよび**フィールド**を呼び出して、 [更新](../../../ado/reference/ado-api/update-method.md)のメソッド、**フィールド**コレクション。  
+ **フィールド**オブジェクト、**名前**は通常読み取り専用です。 ただし、新規の**フィールド**に追加されたオブジェクト、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクションを[レコード](../../../ado/reference/ado-api/record-object-ado.md)、**名前**は読み取り/書き込みにした場合のみ[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティを**フィールド**が指定されているデータ プロバイダーからその新しいが正常に追加し、**フィールド**呼び出すことによって、 [Update](../../../ado/reference/ado-api/update-method.md)のメソッド、**フィールド**コレクション。  
   
- **パラメーター**にオブジェクトが追加されていない、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md) 、コレクション、**名前**読み取り/書き込みプロパティです。 追加する**パラメーター**オブジェクトと他のすべてのオブジェクト、**名前**プロパティは読み取り専用です。 名前をコレクション内で一意である必要はありません。  
+ **パラメーター**にオブジェクトが追加されていない、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md) 、コレクション、**名前**読み取り/書き込みプロパティです。 追加の**パラメーター**オブジェクトとその他のすべてのオブジェクト、**名前**プロパティは読み取り専用です。 名は、コレクション内で一意である必要はありません。  
   
- 取得することができます、**名前**名で直接するまで、オブジェクトを参照できます、序数参照オブジェクトのプロパティです。 たとえば場合、`rstMain.Properties(20).Name`が生成されます`Updatability`、としては、このプロパティを参照して、後で`rstMain.Properties("Updatability")`です。  
+ 取得することができます、**名前**名前で直接その後、オブジェクトを参照できます、序数参照によってオブジェクトのプロパティ。 たとえば場合、`rstMain.Properties(20).Name`生成`Updatability`、としてこのプロパティを後で参照できます`rstMain.Properties("Updatability")`します。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -52,5 +49,5 @@ ms.locfileid: "35279581"
 |[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>参照  
- [属性と名前のプロパティの例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [属性と名前のプロパティの例 (vc++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [属性と Name プロパティの例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [属性と Name プロパティの例 (vc++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

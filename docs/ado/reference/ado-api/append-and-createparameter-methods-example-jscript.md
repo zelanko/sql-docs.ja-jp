@@ -1,13 +1,11 @@
 ---
-title: 追加と CreateParameter メソッドの例 (JScript) |Microsoft ドキュメント
+title: Append および CreateParameter メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d93d5b956576a9e2b66359ae4aef0b4d8b1e5223
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9bd0c28d481ef107dc31e36e13582fba459b502
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827620"
 ---
-# <a name="append-and-createparameter-methods-example-jscript"></a>追加と CreateParameter メソッドの例 (JScript)
-この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)と[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドが入力パラメーターを持つストアド プロシージャを実行します。 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**AppendJS.asp**です。  
+# <a name="append-and-createparameter-methods-example-jscript"></a>Append および CreateParameter メソッドの例 (JScript)
+この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)と[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドが入力パラメーターを持つストアド プロシージャを実行します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AppendJS.asp**します。  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -149,5 +146,5 @@ body {
  [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

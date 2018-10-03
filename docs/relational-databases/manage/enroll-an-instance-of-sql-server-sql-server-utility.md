@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.makemanaged.agentaccount.F1
@@ -22,22 +19,21 @@ f1_keywords:
 helpviewer_keywords:
 - Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ebe062a78caf3a0589afaef68b7cde988b8bcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8915f2135e8d5b1d05a841b4cf004979437acea2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831150"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージ インスタンスとしてそのパフォーマンスおよび構成を監視します。 ユーティリティ コントロール ポイント (UCP) では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスとしてそのパフォーマンスおよび構成を監視します。 ユーティリティ コントロール ポイント (UCP) では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
   
- このリリースでは、UCP および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージ インスタンスが次の要件を満たしている必要があります。  
+ このリリースでは、UCP および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージド インスタンスが次の要件を満たしている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Version 10.50 以上である必要があります。  
   
@@ -45,7 +41,7 @@ ms.locfileid: "32948217"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティは、単一の Windows ドメイン、または双方向の信頼関係を持つドメイン内で操作する必要があります。  
   
--   SQL Server の UCP およびすべてのマネージ インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントには、Active Directory 内のユーザーに対する読み取り権限が必要です。  
+-   SQL Server の UCP およびすべてのマネージド インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントには、Active Directory 内のユーザーに対する読み取り権限が必要です。  
   
 -   SQL Azure を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとして登録することはできません。  
   
@@ -57,15 +53,15 @@ ms.locfileid: "32948217"
   
 -   UCP コンピューター上のキャパシティ プランニングについては、次の推奨事項を考慮してください。  
   
-    -   一般的なシナリオでは、UCP の UMDW データベース (sysutility_mdw) で使用されるディスク領域は、SQL Server のマネージ インスタンス 1 つにつき年間約 2 GB です。 この推定値は、マネージ インスタンスによって収集されるデータベース オブジェクトおよびシステム オブジェクトの数に応じて変化します。 UMDW (sysutility_mdw) のディスク領域の増加率は、最初の 2 日間で最大になります。  
+    -   一般的なシナリオでは、UCP の UMDW データベース (sysutility_mdw) で使用されるディスク領域は、SQL Server のマネージド インスタンス 1 つにつき年間約 2 GB です。 この推定値は、マネージド インスタンスによって収集されるデータベース オブジェクトおよびシステム オブジェクトの数に応じて変化します。 UMDW (sysutility_mdw) のディスク領域の増加率は、最初の 2 日間で最大になります。  
   
-    -   一般的なシナリオでは、UCP の msdb に使用されるディスク領域は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージ インスタンス 1 つにつき約 20 MB です。 この推定値は、リソース使用率のポリシーと、マネージ インスタンスによって収集されるデータベース オブジェクトおよびシステム オブジェクトの数に応じて変化します。 一般に、ポリシー違反の数が増加したり、変化しやすいリソースの移動期間が長くなるにつれて、使用されるディスク領域が増加します。  
+    -   一般的なシナリオでは、UCP の msdb に使用されるディスク領域は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンス 1 つにつき約 20 MB です。 この推定値は、リソース使用率のポリシーと、マネージド インスタンスによって収集されるデータベース オブジェクトおよびシステム オブジェクトの数に応じて変化します。 一般に、ポリシー違反の数が増加したり、変化しやすいリソースの移動期間が長くなるにつれて、使用されるディスク領域が増加します。  
   
-    -   UCP からマネージ インスタンスを削除しても、マネージ インスタンスのデータ保持期間の有効期限が切れるまでは、UCP のデータベースで使用されているディスク領域は縮小されません。  
+    -   UCP からマネージド インスタンスを削除しても、マネージド インスタンスのデータ保持期間の有効期限が切れるまでは、UCP のデータベースで使用されているディスク領域は縮小されません。  
   
- このリリースでは、SQL Server のすべてのマネージ インスタンスが次の要件を満たしている必要があります。  
+ このリリースでは、SQL Server のすべてのマネージド インスタンスが次の要件を満たしている必要があります。  
   
--   UCP をホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが大文字と小文字を区別しない場合は、SQL Server のマネージ インスタンスでも大文字と小文字を区別しないことをお勧めします。  
+-   UCP をホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが大文字と小文字を区別しない場合は、SQL Server のマネージド インスタンスでも大文字と小文字を区別しないことをお勧めします。  
   
 -   FILESTREAM データは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの監視機能ではサポートされていません。  
   
@@ -74,7 +70,7 @@ ms.locfileid: "32948217"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ以外のコレクション セットとサイド バイ サイドで実行できます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのメンバーであれば、他のコレクション セットによって監視できます。 ただし、マネージ インスタンスのすべてのコレクション セットは、そのデータをユーティリティ管理データ ウェアハウスにアップロードすることに注意してください。 詳細については、「[SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)」、および「[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ以外のコレクション セットとサイド バイ サイドで実行できます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのメンバーであれば、他のコレクション セットによって監視できます。 ただし、マネージド インスタンスのすべてのコレクション セットは、そのデータをユーティリティ管理データ ウェアハウスにアップロードすることに注意してください。 詳細については、「[SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)」、および「[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)」を参照してください。  
   
 ## <a name="wizard-steps"></a>ウィザードの手順  
  次のセクションでは、ウィザードのワークフローの各ページについて詳しく説明します。 リンクをクリックすると、ウィザードのページの詳細に移動できます。 この操作を実行する PowerShell スクリプトの詳細については、PowerShell の [例](#PowerShell_enroll)を参照してください。  
@@ -94,7 +90,7 @@ ms.locfileid: "32948217"
 -   [SQL Server インスタンスの登録](#Enrolling)  
   
 ##  <a name="Welcome"></a> インスタンスの登録ウィザードの概要  
- このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、 **[マネージ インスタンス]** ノードを右クリックして、 **[マネージ インスタンスの追加]** をクリックします。  
+ このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、 **[マネージド インスタンス]** ノードを右クリックして、 **[マネージド インスタンスの追加]** をクリックします。  
   
  続行するには、 **[次へ]** をクリックします。  
   
@@ -150,7 +146,7 @@ ms.locfileid: "32948217"
 ##  <a name="Summary"></a> インスタンス登録の概要  
  概要ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに追加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの情報が表示されます。  
   
- マネージ インスタンスの設定は次のとおりです。  
+ マネージド インスタンスの設定は次のとおりです。  
   
 -   SQL Server インスタンス名: ComputerName\InstanceName  
   
@@ -181,13 +177,13 @@ ms.locfileid: "32948217"
 >  このエラーのトラブルシューティングの詳細については、「 [SQL Server ユーティリティのトラブルシューティング](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)」を参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージ インスタンス上の "ユーティリティ情報" コレクション セットのプロパティは一切変更しないでください。また、データ コレクションはユーティリティ エージェント ジョブによって制御されるため、データ コレクションのオン/オフを手動で切り替えることも避けてください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンス上の "ユーティリティ情報" コレクション セットのプロパティは一切変更しないでください。また、データ コレクションはユーティリティ エージェント ジョブによって制御されるため、データ コレクションのオン/オフを手動で切り替えることも避けてください。  
   
- インスタンスの登録ウィザードが完了したら、SSMS の **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで、 **[マネージ インスタンス]** ノードをクリックします。 登録済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、 **ユーティリティ エクスプローラー** のコンテンツ ウィンドウのリスト ビューに表示されます。  
+ インスタンスの登録ウィザードが完了したら、SSMS の **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで、 **[マネージド インスタンス]** ノードをクリックします。 登録済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、 **ユーティリティ エクスプローラー** のコンテンツ ウィンドウのリスト ビューに表示されます。  
   
- データ収集プロセスはすぐに開始されますが、ユーティリティ エクスプローラーのコンテンツ ウィンドウ内のダッシュボードとビューポイントに最初に表示されるまで最大 30 分かかる場合があります。 データの収集は 15 分間隔で続行されます。 データを更新するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージ インスタンス]** ノードを右クリックして **[更新]** をクリックするか、リスト ビューで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を右クリックして **[更新]** をクリックします。  
+ データ収集プロセスはすぐに開始されますが、ユーティリティ エクスプローラーのコンテンツ ウィンドウ内のダッシュボードとビューポイントに最初に表示されるまで最大 30 分かかる場合があります。 データの収集は 15 分間隔で続行されます。 データを更新するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージド インスタンス]** ノードを右クリックして **[更新]** をクリックするか、リスト ビューで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を右クリックして **[更新]** をクリックします。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージ インスタンスを削除するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージ インスタンス]** を選択してマネージ インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ **ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージ インスタンスを削除]** を選択します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージド インスタンスを削除するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージド インスタンス]** を選択してマネージド インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ **ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージド インスタンスを削除]** を選択します。  
   
 ##  <a name="PowerShell_enroll"></a> PowerShell を使用した SQL Server インスタンスの登録  
  次の例を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録します:  
