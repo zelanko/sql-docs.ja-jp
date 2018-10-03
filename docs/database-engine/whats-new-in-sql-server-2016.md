@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a25bfbe07720f190d5da0cc0b30e2104d77dc576
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703660"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +66,7 @@ ms.locfileid: "38980601"
 -   [テンポラル テーブル](#TT)
 -   [Microsoft Azure BLOB Storage へのストライプ バックアップ](#StripedBackupToAzure)
 -   [Microsoft Azure BLOB Storage へのファイル スナップショット バックアップ](#FileSnapshotBackup)
--   
-  [管理対象のバックアップ](#ManagedBackup)
+-   [管理対象のバックアップ](#ManagedBackup)
 -   [TempDB データベース](#multipleTempDB)
 -   [組み込みの JSON サポート](#ForJson)
 -   [PolyBase](#bkPolyBase)
@@ -175,7 +170,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
   - ADD インデックスと DROP インデックス。 ハッシュ インデックスの bucket_count を変更します。
   - スキーマ変更: 列の追加/削除/変更、制約の追加/削除。
 
-- 組み合わせた長さが 8,060 バイト ページの長さを超える複数の列をメモリ最適化テーブルに含めることができるようになりました。 例として、 `nvarchar(4000)`型の列が 3 列が含まれているテーブルがあります。 そうした例では、行外に格納される列もあります。 列が行内と行外のどちらにあるかをクエリは意識しないで済みます。
+- 組み合わせた長さが 8,060 バイト ページの長さを超える複数の列をメモリ最適化テーブルに含めることができるようになりました。 例として、 `nvarchar(4000)`型の列が&3; 列が含まれているテーブルがあります。 そうした例では、行外に格納される列もあります。 列が行内と行外のどちらにあるかをクエリは意識しないで済みます。
 
 - [LOB (ラージ オブジェクト) タイプ](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`、`nvarchar(max)`、`varchar(max)` がメモリ最適化テーブルでサポートされるようになりました。
 
@@ -241,7 +236,7 @@ Insert select ステートメントで挿入では、マルチ スレッドは�
 
 
 ## <a name="temporal-tables"></a>テンポラル テーブル
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、システム バージョン管理されたテンポラル テーブルがサポートされるようになりました。 テンポラル テーブルは新しい種類のテーブルです。このテーブルで、任意の時点でストアド ファクトに関する正しい情報が提供されます。 各テンポラル テーブルは実際には 2 つのテーブルで構成されており、1 つは現在のデータ用で、もう 1 つは履歴データ用です。 現在のデータを含むテーブルのデータが変更された場合、システムによって以前の値が履歴テーブルに格納されます。 クエリの構造は、この複雑さがユーザーにわからないようになっています。 詳細については、「 [Temporal Tables](../relational-databases/tables/temporal-tables.md)」を参照してください。
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、システム バージョン管理されたテンポラル テーブルがサポートされるようになりました。 テンポラル テーブルは新しい種類のテーブルです。このテーブルで、任意の時点でストアド ファクトに関する正しい情報が提供されます。 各テンポラル テーブルは実際には&2; つのテーブルで構成されており、1 つは現在のデータ用で、もう&1; つは履歴データ用です。 現在のデータを含むテーブルのデータが変更された場合、システムによって以前の値が履歴テーブルに格納されます。 クエリの構造は、この複雑さがユーザーにわからないようになっています。 詳細については、「 [Temporal Tables](../relational-databases/tables/temporal-tables.md)」を参照してください。
 
 ## <a name="backups"></a>バックアップ
 
@@ -351,7 +346,7 @@ model データベースの新しい値および新しいデータベースの�
   - ネイティブ プロシージャにおいて文字列関数 (LTrim または Substring など) に渡されるパラメーター。
 
 
-- インライン (つまり 1 ステートメントの) テーブル値関数 (TVF) をネイティブ コンパイルできるようになりました。
+- インライン (つまり&1; ステートメントの) テーブル値関数 (TVF) をネイティブ コンパイルできるようになりました。
 
 - スカラーのユーザー定義関数 (UDF) をネイティブ コンパイルできるようになりました。
 
