@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077582"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
   次の各表に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントで定義される各種オブジェクトの最大サイズと最大数を示します。 各 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テクノロジの表に移動するには、それぞれのリンクをクリックしてください。  
@@ -97,7 +94,7 @@ ms.locfileid: "37296042"
 |テーブルごとの参照数|253|253|  
 |テーブルごとの行数|使用可能な記憶領域によって制限されます。|使用可能な記憶領域によって制限されます。|  
 |データベースごとのテーブル数<br /><br /> 注: データベース オブジェクトには、テーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、トリガー、ルール、既定値、および制約などのオブジェクトが含まれます。 1 つのデータベース内のオブジェクトの合計数は 2,147,483,647 以下にする必要があります。|データベース内のオブジェクト数によって制限されます。|データベース内のオブジェクト数によって制限されます。|  
-|パーティション テーブルまたはインデックスごとのパーティション数|1,000<br /><br /> **\*\* 重要な\* \* ** 1,000 を超えるパーティションを持つテーブルまたはインデックスの作成は 32 ビット システムではサポートされていません。|15,000|  
+|パーティション テーブルまたはインデックスごとのパーティション数|1,000<br /><br /> **\*\* 重要な\* \***  1,000 を超えるパーティションを持つテーブルまたはインデックスの作成は 32 ビット システムではサポートされていません。|15,000|  
 |インデックス付けされていない列の統計|30,000|30,000|  
 |SELECT ステートメントごとのテーブル数|使用可能なリソースのみによって制限されます。|使用可能なリソースのみによって制限されます。|  
 |テーブルごとのトリガー数<br /><br /> 注: データベース オブジェクトには、テーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、トリガー、ルール、既定値、および制約などのオブジェクトが含まれます。 1 つのデータベース内のオブジェクトの合計数は 2,147,483,647 以下にする必要があります。|データベース内のオブジェクト数によって制限されます。|データベース内のオブジェクト数によって制限されます。|  

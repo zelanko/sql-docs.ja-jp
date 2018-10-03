@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - XQuery Static Type event class
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2497810ab4c07358ad178cef4c603d3188fa89dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 167cf525dc0735601abd126ef94300fd593209e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078152"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type イベント クラス
   XQuery Static Type イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で XQuery 式を実行する場合に発生します。 このイベント クラスでは静的な XQuery 式が提供されます。  
