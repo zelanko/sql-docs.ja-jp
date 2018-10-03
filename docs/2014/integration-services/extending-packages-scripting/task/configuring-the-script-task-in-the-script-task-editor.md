@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Script Task Editor
 - SSIS Script task, configuring
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 827721e691e197faf0b786db5999b0061e42c516
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bdb8d4cecc2058b35db2cfaa328bbf1978899f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070018"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>スクリプト タスク エディターでのスクリプト タスクの構成
   スクリプト タスクにカスタム コードを記述する前に、**[スクリプト タスク エディター]** の 3 つのページで、主要なプロパティを設定します。 スクリプト タスクに対して一意でない追加のタスク プロパティは、[プロパティ] ウィンドウを使用して設定できます。  
@@ -64,7 +61,7 @@ ms.locfileid: "37263198"
 ## <a name="expressions-page-of-the-script-task-editor"></a>[スクリプト タスク エディター] の [式] ページ  
  **[スクリプト タスク エディター]** の **[式]** ページでは、式を使用して、上に挙げたスクリプト タスクのプロパティ、およびそれ以外の多くのプロパティに値を指定できます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> 最新のダウンロード、アーティクル、サンプル、およびビデオの[!INCLUDE[msCoName](../../../includes/msconame-md.md)]、およびコミュニティで選択されたソリューションを参照してください、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] msdn ページ。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> 最新のダウンロード、アーティクル、サンプル、およびビデオの[!INCLUDE[msCoName](../../../includes/msconame-md.md)]、およびコミュニティで選択されたソリューションを参照してください、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] msdn ページ。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト タスクのコーディングおよびデバッグ](coding-and-debugging-the-script-task.md)  

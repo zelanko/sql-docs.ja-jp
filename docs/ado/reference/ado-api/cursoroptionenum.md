@@ -1,13 +1,11 @@
 ---
-title: CursorOptionEnum |Microsoft ドキュメント
+title: CursorOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,37 +13,36 @@ f1_keywords:
 helpviewer_keywords:
 - CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf036719cdfc8c03f94c613fae9cc411c1d619b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ba39c4bdc2bffc3198d780aa155e9ee60000d88a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673220"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
-どのような機能を指定、[サポート](../../../ado/reference/ado-api/supports-method.md)のメソッドをテストする必要があります。  
+どのような機能を指定します、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドをテストする必要があります。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adAddNew**|0x1000400|では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)を新しいレコードを追加するメソッド。|  
-|**adApproxPosition**|0x4000|では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)と[と、AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティです。|  
-|**adBookmark**|0x2000|では、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)特定のレコードにアクセスするプロパティです。|  
+|**adAddNew**|0x1000400|では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)新しいレコードを追加するメソッド。|  
+|**adApproxPosition**|0x4000|では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)と[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティ。|  
+|**adBookmark**|0x2000|では、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)特定のレコードにアクセスするプロパティ。|  
 |**adDelete**|0x1000800|では、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)レコードを削除するメソッド。|  
-|**adFind**|0x80000|サポート、[検索](../../../ado/reference/ado-api/find-method-ado.md)を内の行を探す方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。|  
-|**adHoldRecords**|0x100|複数のレコードを取得または保留中のすべての変更をコミットすることがなく、次の位置を変更します。|  
-|**adIndex**|0x100000|では、[インデックス](../../../ado/reference/ado-api/index-property.md)インデックスの名前を付けるプロパティです。|  
-|**adMovePrevious**|0x200|サポート、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)と[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッド、および[移動](../../../ado/reference/ado-api/move-method-ado.md)または[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)位置の前に、現在のレコードを移動するメソッドブックマークをせずにします。|  
+|**adFind**|0x80000|サポート、[検索](../../../ado/reference/ado-api/find-method-ado.md)内の行を検索するメソッド、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。|  
+|**adHoldRecords**|0x100|複数のレコードを取得または保留中のすべての変更をコミットしなくても、次の位置を変更します。|  
+|**adIndex**|0x100000|サポート、[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティにインデックスの名前します。|  
+|**adMovePrevious**|0x200|サポート、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)と[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッド、および[移動](../../../ado/reference/ado-api/move-method-ado.md)または[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)に現在のレコードを移動する方法が後方移動ブックマークをせずにします。|  
 |**adNotify**|0x40000|基になるデータ プロバイダーが通知をサポートしていることを示します (を決定するかどうか**Recordset**イベントがサポートされます)。|  
-|**adResync**|0x20000|サポート、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドを基になるデータベースに表示されているデータでカーソルを更新します。|  
-|**adSeek**|0x200000|サポート、[シーク](../../../ado/reference/ado-api/seek-method.md)を内の行を探す方法、 **Recordset**です。|  
-|**adUpdate**|0x1008000|では、[更新](../../../ado/reference/ado-api/update-method.md)既存のデータを変更する方法です。|  
-|**adUpdateBatch**|0x10000|バッチ更新をサポートしています ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)と[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド)、プロバイダーへの変更のグループを送信します。|  
+|**adResync**|0x20000|サポート、[再同期](../../../ado/reference/ado-api/resync-method.md)基になるデータベースに表示されているデータでカーソルを更新するメソッド。|  
+|**adSeek**|0x200000|サポート、[シーク](../../../ado/reference/ado-api/seek-method.md)内の行を検索するメソッド、**レコード セット**します。|  
+|**adUpdate**|0x1008000|サポート、[更新](../../../ado/reference/ado-api/update-method.md)メソッドを既存のデータを変更します。|  
+|**adUpdateBatch**|0x10000|バッチ更新をサポートしています ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)と[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド)、プロバイダーの変更のグループを送信します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

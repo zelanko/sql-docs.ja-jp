@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_get_min_lsn (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_cdc_get_min_lsn (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c4c6a9bf83e83628891104f0c95a6baefa08234
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230443"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825238"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +44,17 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="arguments"></a>引数  
  **'** *capture_instance_name* **'**  
- キャプチャ インスタンスの名前を指定します。 *capture_instance_name*は**sysname**です。  
+ キャプチャ インスタンスの名前を指定します。 *capture_instance_name*は**sysname**します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **binary(10)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  キャプチャ インスタンスが存在しない場合、または、キャプチャ インスタンスに関連付けられた変更データにアクセスするための権限が呼び出し元にない場合は、0x00000000000000000000 が返されます。  
   
  この関数の主な用途は、キャプチャ インスタンスに関連付けられた変更データ キャプチャ タイムラインの下端を識別することです。 変更データを要求する前に、クエリ範囲の両端がキャプチャ インスタンスのタイムライン内にあるかどうかを検証する場合にも、この関数を使用できます。 変更テーブルでクリーンアップが実行されると、キャプチャ インスタンスの下端が変わるため、こうしたチェックを実行することは重要です。 変更データを要求する間隔が開きすぎると、下端を前回の変更データ要求の上端に設定していたとしても、下端が現在のタイムラインから外れている可能性があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーシップが必要です。 それ以外のすべてのユーザーについては、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。さらに、キャプチャ インスタンスのゲーティング ロールが定義されている場合は、そのデータベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -76,7 +70,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
 ```  
   
 ### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>B. クエリ範囲の下端を検証する  
- 次の例では、変更データ クエリの下端候補が、キャプチャ インスタンス `sys.fn_cdc_get_min_lsn` の現在のタイムラインに対して有効かどうかを、`HumanResources_Employee` によって返された最小 LSN 値を使って検証します。 この例では、前回の上端 LSN、キャプチャ インスタンスが保存されたおよび設定を利用できること、`@save_to_lsn`変数。 この例の目的で`@save_to_lsn`を実行するエラー処理セクションを強制的に 0x000000000000000000 に設定されています。  
+ 次の例では、変更データ クエリの下端候補が、キャプチャ インスタンス `sys.fn_cdc_get_min_lsn` の現在のタイムラインに対して有効かどうかを、`HumanResources_Employee` によって返された最小 LSN 値を使って検証します。 この例では、前回の上端 LSN、キャプチャ インスタンスに対しては保存され、設定に利用できるは、`@save_to_lsn`変数。 この例の目的で`@save_to_lsn`を実行するエラー処理セクションを強制的に 0x000000000000000000 に設定されます。  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,35 +1,31 @@
 ---
-title: sys.periods (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.periods (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca6eea06d877ec9a6a92c35d0bd01401300f3974
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 58ee2ac11e86481c57da79d84bc75507c273b829
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702522"
 ---
 # <a name="sysperiods-transact-sql"></a>sys.periods (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   期間が定義されている各テーブルの行を返します。  
   
-|列ヘッダー|データ型|Description|  
+|列ヘッダー|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |period_type|**sysname**|期間の名前|  
 |period_type_desc|**tinyint**|期間の型を表す数値。<br /><br /> 1 = システム期間|  
@@ -38,8 +34,8 @@ ms.locfileid: "33180108"
 |start_column_id|**int**|期間下限の境界を定義する列の id|  
 |end_column_id|**int**|期間の上限を定義する列の id|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

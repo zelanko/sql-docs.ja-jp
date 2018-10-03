@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 398ec0597f0240548d6aba15ac2f29b218f4089a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b0acde35830734d5b5cf344b36357dc766958dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112252"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>[集計変換エディター] ([詳細設定] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、コンポーネントのプロパティの設定、集計の指定、入力列と出力列のプロパティの設定を行うことができます。  

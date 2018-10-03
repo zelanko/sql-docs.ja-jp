@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default lightweight pooling
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - reducing overhead
 - overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a84bbd0b380884d9991bf7b2be429c8768817263
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 319d7057d9d25f952abd90a83d742daa8fdb3996
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079932"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>lightweight pooling サーバー構成オプション
   **lightweight pooling** オプションは、SMP (symmetric multiprocessing) 環境で発生するコンテキストの過度の切り替えによるシステムのオーバーヘッドを削減する手段を提供する場合に使用します。 コンテキストの過度の切り替えが発生した場合、簡易プーリングを使用してコンテキストの切り替えをインラインで行い、ユーザーまたはカーネルのリング遷移を削減することによって、スループットを向上できます。  

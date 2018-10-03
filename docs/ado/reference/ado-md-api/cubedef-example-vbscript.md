@@ -1,31 +1,28 @@
 ---
-title: CubeDef 例 (VBScript) |Microsoft ドキュメント
+title: CubeDef の例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADO MD code examples [ADO MD], VBScript
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3137358ce25a42f55f918247463e3b33423dca73
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 34de230b7e52816d028972d4c29c6ba61308231c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283561"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735950"
 ---
-# <a name="cubedef-example-vbscript"></a>CubeDef 例 (VBScript)
+# <a name="cubedef-example-vbscript"></a>CubeDef の例 (VBScript)
 この例は、web ページ上のキューブのメタデータを表示します。  
   
 ```  

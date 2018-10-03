@@ -1,13 +1,11 @@
 ---
-title: GetChildren メソッド (ADO) |Microsoft ドキュメント
+title: GetChildren メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetChildren method [ADO]
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a920d0e7b45394f5714cd8f9df83751a322b9401
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 910977912a23ee48f740afccdb58c6f82801f2a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784183"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren メソッド (ADO)
-返します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)コレクションの子を表す行を持つ[レコード](../../../ado/reference/ado-api/record-object-ado.md)です。  
+返します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)コレクションの子を表す行を持つ[レコード](../../../ado/reference/ado-api/record-object-ado.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +35,10 @@ Set recordset = record.GetChildren
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A **Recordset**オブジェクトの各行が、現在の子を表します**レコード**オブジェクト。 たとえばの子、**レコード**表しますディレクトリことが、ファイルとサブディレクトリの親ディレクトリ内に含まれます。  
+ A **Recordset**オブジェクトを各行では、現在の子を表します。**レコード**オブジェクト。 子など、**レコード**表しますディレクトリがあるファイルとサブディレクトリの親ディレクトリ内に含まれます。  
   
 ## <a name="remarks"></a>コメント  
- プロバイダーは、どのような列に返された存在によって決定**Recordset**です。 たとえば、ドキュメントのソース プロバイダー常にリソースを返す**Recordset**です。  
+ プロバイダーの決定、返される列が存在**Recordset**します。 ドキュメントのソース プロバイダーが常にリソースを返すなど**Recordset**します。  
   
 ## <a name="applies-to"></a>適用対象  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calculations [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ef953f375269917a7cab7d00a15def6acfb375e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 587aad74e5a29810d645aad401243cceb9ca6193
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222192"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051322"
 ---
 # <a name="calculations"></a>[新しい名前付きセット]
   計算は、多次元式 (MDX) 式またはキューブ内で計算されるメンバー、名前付きセット、またはスコープ割り当てを定義するために使用するスクリプト[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 計算により、キューブのデータによって定義されるオブジェクトではなく、キューブの他の部分、他のキューブ、さらには [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの外部にある情報を参照できる式によって定義されるオブジェクトを追加できます。 計算により、キューブの機能を拡張し、ビジネス インテリジェンス アプリケーションの柔軟性と能力を向上させることができます。 計算スクリプトの作成の詳細については、次を参照してください。 [Microsoft SQL Server 2005 における MDX スクリプトの概要](http://go.microsoft.com/fwlink/?LinkId=81892)します。 MDX クエリおよび計算に関連するパフォーマンスの問題の詳細については、次を参照してください。、 [SQL Server 2005 Analysis Services パフォーマンス ガイド](http://go.microsoft.com/fwlink/?LinkId=81621)します。  

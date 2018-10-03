@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - full-text catalogs [SQL Server], database mirroring
 - catalogs [SQL Server], database mirroring
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
-caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 183bd285e570a1fc41e2714770697cae013b21f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063912"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>データベース ミラーリングとフルテキスト カタログ (SQL Server)
   フルテキスト カタログが格納されたデータベースをミラー化するには、通常どおりにバックアップを使用してプリンシパル データベースの完全バックアップを作成した後、そのバックアップを復元してデータベースをミラー サーバーにコピーします。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  

@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_profile_sp (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmail_help_profile_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa2e8bb227da4fdb3305c96de0be04cd4a877ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836460"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,21 +54,21 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
   
 ||||  
 |-|-|-|  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |**profile_id**|**int**|プロファイルのプロファイル ID|  
 |**name**|**sysname**|プロファイルのプロファイル名|  
-|**説明**|**nvarchar (256)**|プロファイルの説明|  
+|**description**|**nvarchar (256)**|プロファイルの説明|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  プロファイル名またはプロファイル id を指定すると、 **sysmail_help_profile_sp**そのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp**のすべてのプロファイルに関する情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
   
- ストアド プロシージャ**sysmail_help_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
+ ストアド プロシージャ**sysmail_help_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- **A.すべてのプロファイルを一覧表示します。**  
+ **A.すべてのプロファイルを一覧表示**  
   
  次の例では、インスタンス内のすべてのプロファイルを一覧表示します。  
   
@@ -80,7 +76,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 EXECUTE msdb.dbo.sysmail_help_profile_sp;  
 ```  
   
- 次に、サンプルの結果セットの行の長さを再フォーマットを示します。  
+ 行の長さを再フォーマット、サンプルの結果セットを次に示します。  
   
 ```  
 profile_id  name                          description  
@@ -98,7 +94,7 @@ EXECUTE msdb.dbo.sysmail_help_profile_sp
     @profile_name = 'AdventureWorks Administrator' ;  
 ```  
   
- 次に、サンプルの結果セットの行の長さを再フォーマットを示します。  
+ 行の長さを再フォーマット、サンプルの結果セットを次に示します。  
   
 ```  
 profile_id  name                          description  

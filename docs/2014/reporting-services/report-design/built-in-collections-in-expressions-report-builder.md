@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c478ee22ae7a92feeeba059780705df2255a363d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6065291efcf59f5ac5341b47bfdae95afb35a119
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095662"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)
   レポート内の式には、ReportItems、Parameters、Fields、DataSets、DataSources、Variables などの組み込みコレクションへの参照とレポート名などのグローバル情報の組み込みフィールドへの参照を含めることができます。 **[式]** ダイアログ ボックスにすべてのコレクションが表示されるとは限りません。 DataSets コレクションと DataSources コレクションを使用できるのは、レポート サーバー上でパブリッシュされたレポートの実行時のみです。 ReportItems コレクションは、ページまたはページ ヘッダーのテキスト ボックスなど、レポート領域内のテキスト ボックスのコレクションです。  

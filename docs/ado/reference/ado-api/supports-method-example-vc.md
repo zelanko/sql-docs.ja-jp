@@ -1,32 +1,29 @@
 ---
-title: メソッドの例 (vc++) をサポートしています |Microsoft ドキュメント
+title: Supports メソッドの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f92a96be897f8cf89a8355d6aaab22b65e1398f4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282651"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828370"
 ---
-# <a name="supports-method-example-vc"></a>メソッドの例 (vc++) をサポートしています
-この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)別のカーソルの種類を使用して開いたレコード セットでサポートされるオプションを表示するメソッド。 DisplaySupport 関数は、この例を実行する必要があります。  
+# <a name="supports-method-example-vc"></a>Supports メソッドの例 (VC++)
+この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)レコード セットでサポートされるオプションを表示するメソッドが別のカーソルの種類で開かれています。 DisplaySupport 関数は、この例を実行する必要があります。  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -230,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

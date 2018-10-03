@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPDone (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420711"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137582"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信される残りの行をコミットします。  
@@ -37,17 +34,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>コメント  
- その他の操作を呼び出すことはできません、 [IBCPSession](ibcpsession-ole-db.md)インターフェイスを呼び出した後、 **BCPDone**メソッド。 唯一の可能性を呼び出すことです、 [ibcpsession::bcpinit](ibcpsession-bcpinit-ole-db.md)新しい一括コピー操作を開始する方法。 これは、呼び出しに似ています、 [irowsetfastload::commit](irowsetfastload-commit-ole-db.md)メソッド。  
+ **BCPDone** メソッドを呼び出すと、それ以後は [IBCPSession](ibcpsession-ole-db.md) インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
  メソッドが成功しました。  
   
  E_UNEXPECTED  
- メソッドの呼び出しが予期されませんでした。 たとえば、 **BCPInit**メソッドは、このメソッドを呼び出す前に呼び出されませんでした。  
+ メソッドの呼び出しが予期されませんでした。 たとえば、このメソッドを呼び出す前に、**BCPInit** メソッドが呼び出されなかった場合などです。  
   
 ## <a name="example"></a>例  
- このサンプルは、使用する方法を示します、 **IBCPSession**インターフェイス。  
+ このサンプルでは、**IBCPSession** インターフェイスの使用方法を示します。  
   
  このサンプルを実行する前に、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] を実行する必要があります。  
   
@@ -65,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP を使用する次のコマンドで、このデータをテーブルに追加し直すことができます。  
   
- **bcp マスター.outfile.dat-n-t-s で fltest** *サーバー*  
+ **bcp master..fltest in outfile.dat -n -T -S** *サーバー*  
   
  このサンプルをコンパイルする際には、sqlncli11.lib を指定する必要があります。  
   

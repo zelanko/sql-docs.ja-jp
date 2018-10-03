@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.continuerestore.f1
 ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58a890012102b263a0db9dc2df177c41a27d4625
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139982"
 ---
 # <a name="continue-with-restore"></a>[復元の続行]
   **[復元の続行]** ダイアログ ボックスを使用すると、次のバックアップ セットを復元するかどうかを指定できます。 テープを交換する場合など、復元操作を遅らせるには、続行する準備ができてから **[OK]** をクリックします。  

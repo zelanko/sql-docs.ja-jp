@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087492"
 ---
 # <a name="clustering-model-query-examples"></a>クラスタリング モデルのクエリ例
   データ マイニング モデルに対するクエリを作成すると、モデルに関するメタデータを取得できます。また、分析で検出されたパターンに関する詳細を取得するためのコンテンツ クエリも作成できます。 モデル内のパターンを使用して新しいデータの予測を行う予測クエリを作成することもできます。 取得できる情報は、クエリの種類によって異なります。 たとえばコンテンツ クエリを使用すると、検出されたクラスターに関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントが所属する可能性が高いクラスターを調べることができます。  
@@ -287,7 +284,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- この例ではモデルに大きな違いはありませんが、 値の実際の分布とモデルの予測との違いを検出することが重要になる場合もあります。  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用できます。この関数は、特定のモデルについてケースの確率を返します。  
+ この例ではモデルに大きな違いはありませんが、 値の実際の分布とモデルの予測との違いを検出することが重要になる場合もあります。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用できます。この関数は、特定のモデルについてケースの確率を返します。  
   
  PredictCaseLikelihood 関数によって返される数値は確率であるため、常に 0 と 1 の間になります。値 .5 はランダムな結果を表します。 したがって、スコアが .5 より小さい場合は、予測されたケースがそのモデルではあり得そうにないことを示し、.5 より大きい場合は、おそらくモデルに収まることを示します。  
   
@@ -364,7 +361,7 @@ NATURAL PREDICTION JOIN
   
  既定では、結果は確率で順位付けされます。 この結果から、Cluster 2 は、確率はかなり低いとはいえ、新しいデータ ポイントに最適なクラスターであることがわかります。  
   
- **注:** 追加の列の `$DISTANCE`は、データ ポイントからクラスターまでの距離を表します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、既定でスケーラブル EM クラスタリングが使用されます。スケーラブル EM クラスタリングでは、各データ ポイントに複数のクラスターが割り当てられて、可能なクラスターが順位付けされます。  一方、K-Means アルゴリズムを使用してクラスター モデルを作成した場合は、各データ ポイントに 1 つしかクラスターを割り当てることができないため、このクエリで返される行は 1 行だけになります。  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用して、基になる構造の列を含めることもできます。 EM クラスタリングと K-Means クラスタリングの相違点の詳細については、「 [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)」を参照してください。  
+ **注:** 追加の列の `$DISTANCE`は、データ ポイントからクラスターまでの距離を表します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、既定でスケーラブル EM クラスタリングが使用されます。スケーラブル EM クラスタリングでは、各データ ポイントに複数のクラスターが割り当てられて、可能なクラスターが順位付けされます。  一方、K-Means アルゴリズムを使用してクラスター モデルを作成した場合は、各データ ポイントに 1 つしかクラスターを割り当てることができないため、このクエリで返される行は 1 行だけになります。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用して、基になる構造の列を含めることもできます。 EM クラスタリングと K-Means クラスタリングの相違点の詳細については、「 [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)」を参照してください。  
   
  [トップに戻る](#bkmk_top2)  
   

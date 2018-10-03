@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: 6df990176c63efb6c42181d013a4e77c81f3c4b2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786970"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のセキュリティ機能のチュートリアル
 
@@ -287,6 +285,6 @@ GO
 詳細については、次を参照してください。[バックアップの暗号化](../relational-databases/backup-restore/backup-encryption.md)します。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 SQL Server のセキュリティ機能の詳細については、次を参照してください。 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)します。

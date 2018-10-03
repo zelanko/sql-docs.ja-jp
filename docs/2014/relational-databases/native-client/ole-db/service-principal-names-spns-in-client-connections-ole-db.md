@@ -1,30 +1,27 @@
 ---
-title: クライアント接続 (OLE DB) でサービス プリンシパル名 (Spn) |Microsoft Docs
+title: クライアント接続 (OLE DB) でのサービス プリンシパル名 (SPN) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28a18050d90f04195396bf4f121719823b18282f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1ae38f4258c965a3b4aedf18ed6261134bd00ac6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421761"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108682"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>クライアント接続 (OLE DB) でのサービス プリンシパル名 (SPN)
   このトピックでは、クライアント アプリケーションでサービス プリンシパル名 (SPN) をサポートする OLE DB のプロパティとメンバー関数について説明します。 クライアント アプリケーションでの Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../features/service-principal-name-spn-support-in-client-connections.md)します。 サンプルについては、次を参照してください。[統合 Kerberos 認証&#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)します。  
   
 ## <a name="provider-initialization-string-keywords"></a>プロバイダー初期化文字列のキーワード  
- 次に示すプロバイダー初期化文字列のキーワードは、OLE DB アプリケーションで SPN をサポートします。 次の表では、キーワードの列の値が idbinitialize::initialize のプロバイダー文字列に使用されます。 [説明] 列の値は、ADO または idatainitialize::getdatasource を使用して接続するときに、初期化文字列で使用されます。  
+ 次に示すプロバイダー初期化文字列のキーワードは、OLE DB アプリケーションで SPN をサポートします。 次の表の "キーワード" 列の値は、IDBInitialize::Initialize のプロバイダー文字列に使用されます。 "説明" 列の値は、ADO または IDataInitialize::GetDataSource を使用して接続するときに初期化文字列で使用されます。  
   
 |Keyword|説明|値|  
 |-------------|-----------------|-----------|  
@@ -44,8 +41,8 @@ ms.locfileid: "37421761"
   
 |名前|型|使用方法|  
 |----------|----------|-----------|  
-|SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR、読み取り専用|接続に使用された認証方法を返します。 アプリケーションに返される値は、Windows が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client に返す値です。 返される値は次のとおりです。<br /><br /> -"NTLM"は、NTLM 認証を使用して、接続が開かれたときに返されます。<br />-"Kerberos"は、Kerberos 認証を使用して、接続が開かれたときに返されます。<br /><br /> 接続が開いていて認証方法を特定できない場合は、VT_EMPTY が返されます。<br /><br /> このプロパティは、データ ソースが初期化されている場合にのみ読み取ることができます。 データ ソースが初期化されている前に、プロパティの読み取りを試みると、IDBProperties::GetProperies は DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED、必要に応じて、返し DBPROPSET_PROPERTIESINERROR に DBPROPSTATUS_NOTSUPPORTED が設定されます。このプロパティ。 この動作は、OLE DB のコア仕様に従っています。|  
-|SSPROP_MUTUALLYAUTHENICATED|VT_BOOL、読み取り専用|接続されているサーバーが相互に認証されている場合は VARIANT_TRUE を返し、それ以外の場合は VARIANT_FALSE を返します。<br /><br /> このプロパティは、データ ソースが初期化されている場合にのみ読み取ることができます。 データ ソースが初期化されている前に、プロパティを読み取ろうとする場合は、IDBProperties::GetProperies は DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED、必要に応じて、返し DBPROPSET_ に DBPROPSTATUS_NOTSUPPORTED が設定されます。このプロパティの PROPERTIESINERROR します。 この動作は、OLE DB のコア仕様に従って、します。<br /><br /> Windows 認証を使用していない接続に対してこの属性が照会されると、VARIANT_FALSE が返されます。|  
+|SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR、読み取り専用|接続に使用された認証方法を返します。 アプリケーションに返される値は、Windows が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client に返す値です。 返される値は次のとおりです。<br /><br /> -"NTLM"は、NTLM 認証を使用して、接続が開かれたときに返されます。<br />-"Kerberos"は、Kerberos 認証を使用して、接続が開かれたときに返されます。<br /><br /> 接続が開いていて認証方法を特定できない場合は、VT_EMPTY が返されます。<br /><br /> このプロパティは、データ ソースが初期化されている場合にのみ読み取ることができます。 データ ソースが初期化される前にこのプロパティを読み取ろうとすると、IDBProperties::GetProperies から DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED が返され、必要に応じて、このプロパティの DBPROPSET_PROPERTIESINERROR に DBPROPSTATUS_NOTSUPPORTED が設定されます。 この動作は、OLE DB のコア仕様に従っています。|  
+|SSPROP_MUTUALLYAUTHENICATED|VT_BOOL、読み取り専用|接続されているサーバーが相互に認証されている場合は VARIANT_TRUE を返し、それ以外の場合は VARIANT_FALSE を返します。<br /><br /> このプロパティは、データ ソースが初期化されている場合にのみ読み取ることができます。 データ ソースが初期化される前にこのプロパティを読み取ろうとすると、IDBProperties::GetProperies から DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED が返され、必要に応じて、このプロパティの DBPROPSET_PROPERTIESINERROR に DBPROPSTATUS_NOTSUPPORTED が設定されます。 この動作は、OLE DB のコア仕様に従っています。<br /><br /> Windows 認証を使用していない接続に対してこの属性が照会されると、VARIANT_FALSE が返されます。|  
   
 ## <a name="ole-db-api-support-for-spns"></a>OLE DB API による SPN のサポート  
  次の表では、クライアント接続で SPN をサポートする OLE DB メンバー関数について説明します。  
@@ -55,9 +52,9 @@ ms.locfileid: "37421761"
 |IDataInitialize::GetDataSource|*pwszInitializationString* new キーワードを含めることができます`ServerSPN`と`FailoverPartnerSPN`します。|  
 |IDataInitialize::GetInitializationString|SSPROP_INIT_SERVERSPN と ssprop_init_failoverpartnerspn の値には既定以外の値がある場合、対象になりますを通じて、初期化文字列*ppwszInitString*キーワード値として`ServerSPN`と`FailoverPartnerSPN`します。 それ以外の場合、これらのキーワードは初期化文字列に取り込まれません。|  
 |IDBInitialize::Initialize|データ ソース初期化プロパティに DBPROP_INIT_PROMPT を設定して入力要求を有効にすると、OLE DB の [ログイン] ダイアログ ボックスが表示されます。 これにより、プリンシパル サーバーとそのフェールオーバー パートナーの両方に対して SPN を入力できます。<br /><br /> DPPROP_INIT_PROVIDERSTRING、文字列をする場合に、プロバイダー設定、新しいキーワードを認識し、`ServerSPN`と`FailoverPartnerSPN`して SSPROP_INIT_SERVER_SPN および SSPROP_INIT_FAILOVER_PARTNER_SPN を初期化するために、存在する場合、その値を使用します。<br /><br /> Idbinitialize::initialize が呼び出される前に、プロパティ SSPROP_INIT_SERVER_SPN および SSPROP_INIT_FAILOVER_PARTNER_SPN を設定するのには、idbproperties::setproperties を呼び出すことができます。 この方法は、プロバイダー文字列を使用する代わりに使用できます。<br /><br /> プロパティが複数の場所で設定されている場合は、プログラムによって設定された値が、プロバイダー文字列に設定された値より優先されます。 初期化文字列に設定された値は、ログイン ダイアログ ボックスで設定された値より優先されます。<br /><br /> プロバイダー文字列に同じキーワードが複数回使用されている場合は、最初に使用された値が優先されます。|  
-|IDBProperties::GetProperties|Idbproperties::getproperties を呼び出すと、新しいデータ ソース プロパティ SSPROP_AUTHENTICATIONMETHOD と SSPROP_、新しいデータ ソース初期化プロパティ SSPROP_INIT_SERVERSPN と SSPROP_INIT_FAILOVERPARTNERSPN の値を取得することができます。MUTUALLYAUTHENTICATED します。|  
-|IDBProperties::GetPropertyInfo|Idbproperties::getpropertyinfo には、新しいデータ ソース初期化プロパティ SSPROP_INIT_SERVERSPN と SSPROP_INIT_FAILOVERPARTNERSPN、または新しいデータ ソース プロパティ SSPROP_AUTHENTICATION_METHOD と SSPROP_MUTUALLYAUTHENTICATED が含まれます。|  
-|IDBProperties::SetProperties|新しいデータ ソースの値に初期化プロパティ SSPROP_INITSERVERSPN と ssprop_init_failoverpartnerspn の値を設定するのには、idbproperties::setproperties を呼び出すことができます。<br /><br /> これらのプロパティはいつでも設定できますが、データ ソースが既に開いている場合は、次のエラーが返されます。DB_E_ERRORSOCCURRED、"複数ステップの OLE DB の操作でエラーが発生しました。 各 OLE DB の状態の値を確認してください。 作業は終了しませんでした。"|  
+|IDBProperties::GetProperties|IDBProperties::GetProperties を呼び出すことで、新しいデータ ソース初期化プロパティ SSPROP_INIT_SERVERSPN と SSPROP_INIT_FAILOVERPARTNERSPN の値、および新しいデータ ソース プロパティ SSPROP_AUTHENTICATIONMETHOD と SSPROP_MUTUALLYAUTHENTICATED の値を取得できます。|  
+|IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo には、新しいデータ ソース初期化プロパティ SSPROP_INIT_SERVERSPN と SSPROP_INIT_FAILOVERPARTNERSPN、または新しいデータ ソース プロパティ SSPROP_AUTHENTICATION_METHOD と SSPROP_MUTUALLYAUTHENTICATED が含められます。|  
+|IDBProperties::SetProperties|IDBProperties::SetProperties を呼び出すことで、新しいデータ ソース初期化プロパティ SSPROP_INITSERVERSPN と SSPROP_INIT_FAILOVERPARTNERSPN の値を設定できます。<br /><br /> これらのプロパティはいつでも設定できますが、データ ソースが既に開いている場合は、次のエラーが返されます。DB_E_ERRORSOCCURRED、"複数ステップの OLE DB の操作でエラーが発生しました。 各 OLE DB の状態の値を確認してください。 作業は終了しませんでした。"|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  

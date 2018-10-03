@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e74fe0d569c627df15b4a75200b6821a236404ef
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833240"
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト ケースの実行 (SybaseToSQL)
 SSMA のテスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Sybase の間でオブジェクトの対応と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  

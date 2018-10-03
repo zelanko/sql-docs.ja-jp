@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125948"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>[関数の挿入] ダイアログ ボックス (SSAS)
   **[関数の挿入]** ダイアログ ボックスを使用すると、数式の作成時に使用できる関数の一覧から関数を選択できます。 モデル デザイナーからこのダイアログ ボックスにアクセスするには、各テーブルの上にある数式バーで、関数 (**[fx]**) ボタンをクリックします。 数式で使用する関数の選択の詳細については、「DAX の概要」と「数式の作成」を参照してください。  
@@ -48,7 +45,7 @@ ms.locfileid: "37159673"
   
  統計  
   
- Text  
+ テキスト  
   
 ## <a name="measures-and-formulas"></a>メジャーと数式  
  **[関数の挿入]** ダイアログ ボックスを使用できるのは、数式を作成するときだけです。 計算は、計算列、ピボットテーブル、またはピボットグラフで作成することができます。 ピボットテーブルで明示的に使用する数式は、 *メジャー*とも呼ばれます。 詳細については、「[ &#40;SSAS テーブル&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md)」と「[メジャーを作成および管理する &#40;SSAS テーブル&#41;](tabular-models/measures-ssas-tabular.md)」を参照してください。  

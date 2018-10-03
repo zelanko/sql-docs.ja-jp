@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - validating data mining models
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b0058e22e313d26ac5b2f806848e09dacfccb67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ca341e5de77a1677e197b4263b554e99956fee9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332872"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133492"
 ---
 # <a name="create-a-cross-validation-report"></a>クロス検証レポートの作成
   このトピックでは、データ マイニング デザイナーの [精度チャート] タブを使用してクロス検証レポートを作成する方法を順を追って説明します。 クロス検証レポートの外観およびレポートに含まれる統計メジャーに関する一般的な情報については、「[相互検証 (Analysis Services - データ マイニング)](cross-validation-analysis-services-data-mining.md)」を参照してください。  

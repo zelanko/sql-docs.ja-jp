@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0c3182f3d753217660530eb1e63352285370cc25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5981a6f029391369d47d9eb1d70e7372ed5b9ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078207"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)
   グラフの系列上の各データ ポイントにツールヒントを追加すると、表示されたレポートのデータ ポイントにユーザーがマウス カーソルを合わせたときにデータ ポイントに関連する情報 (グループ名、データ ポイントの値、系列の合計に対するデータ ポイントの比率など) が表示されます。  

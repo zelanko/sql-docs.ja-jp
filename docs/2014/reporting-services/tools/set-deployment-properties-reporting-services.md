@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06703a6f1a95b66a0c90fa022c186dca90d21b8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080852"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>配置プロパティを設定する (Reporting Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、レポート サーバー プロジェクトのアイテムをレポート サーバーにパブリッシュするには、レポート サーバーのほかに、必要に応じてレポートのフォルダー、および共有データ ソースを指定する必要があります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がレポートをビルド、プレビュー、および配置するために必要なプロパティと値は、レポート サーバー プロジェクトのプロジェクト構成に保存されています。 これらのプロジェクトのプロパティから成る複数の名前付きセットを作成すると、プロパティ セット間で切り替えることができるので便利です。 それぞれのプロパティのセットは、構成です。 たとえば、レポートをテスト サーバーにパブリッシュする構成や、実稼働サーバーにパブリッシュする別の構成などがあります。  
@@ -69,7 +66,7 @@ ms.locfileid: "37276378"
   
 10. **[TargetServerURL]** ボックスに、対象レポート サーバーの URL を入力します。 レポートをパブリッシュする前に、このプロパティを有効なレポート サーバーの URL に設定する必要があります。 ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します (たとえば、http:*//server/reportserver* 、または https:*//server/reportserver*)。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。  
   
-     SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイト (http://*servername*、http://*servername*/*site* 、http://*servername*/*site*/*subsite*など) が使用されます。  
+     SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイト (http://*servername*、 http://*servername*/*site* 、 http://*servername*/*site*/*subsite*など) が使用されます。  
   
 ### <a name="to-set-configuration-manager-properties"></a>構成マネージャーのプロパティを設定するには  
   

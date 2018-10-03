@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b06c909f8661bf1bec2d715a449e565295eb179b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079128"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>ビジネス インテリジェンス ウィザードの F1 ヘルプ
   ビジネス インテリジェンス ウィザードを使用すると、ビジネス インテリジェンス機能を定義し、キューブとディメンションの詳細なオプションを設定できます。 このウィザードでは、既存のオブジェクトのプロパティの設定、新しいオブジェクトの作成、さらにディメンション インテリジェンスや通貨換算などの機能を実現する多次元式 (MDX) スクリプトの生成を行えます。  

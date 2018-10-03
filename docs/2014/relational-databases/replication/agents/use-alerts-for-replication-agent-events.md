@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 798cad5ea58d94d8194b823c8b3940d3f79ccaae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60976006bb9c26a6b3bae613ddfa96f52113dced
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129439"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>レプリケーション エージェント イベントに対する警告の使用
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、レプリケーション エージェント イベントなどのイベントを、警告を使用して監視する方法が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、警告に関連するイベントに対し、Windows アプリケーション ログを監視します。 このようなイベントが発生すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、定義されたタスクを実行したり、電子メールまたはポケットベルのメッセージを指定したオペレーターに送信することにより、自動的に応答します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、タスクを実行したりオペレーターに通知するように設定できる、レプリケーション エージェントに対する一連の定義済みの警告が含まれます。 実行するタスクの定義の詳細については、このトピックの「警告への応答の自動化」を参照してください。  

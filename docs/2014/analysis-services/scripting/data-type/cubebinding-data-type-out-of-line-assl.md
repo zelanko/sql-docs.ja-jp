@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeBinding Data Type (out-of-line)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeBinding data type
 ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c13cd736887569cfa5fd12bde73e1129e1fd046
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee354905f21670a143d8ec711bb45495086dbf05
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136654"
 ---
 # <a name="cubebinding-data-type-out-of-line-assl"></a>CubeBinding データ型 (不一致) (ASSL)
   間のリレーションシップを表すプリミティブ データ型を定義、[キューブ](../objects/cube-element-assl.md)要素と[DataSource](../objects/datasource-element-assl.md)要素。  

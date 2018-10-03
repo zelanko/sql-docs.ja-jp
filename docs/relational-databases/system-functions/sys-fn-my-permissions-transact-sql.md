@@ -1,14 +1,11 @@
 ---
-title: sys.fn_my_permissions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_my_permissions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
@@ -21,20 +18,20 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b837943f16a7c8882b4e35aef3f769a3d731cd38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659250"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  セキュリティ保護可能なリソースについて、プリンシパルに許可されている有効な権限の一覧を返します。 関連する関数は[HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)です。  
+  セキュリティ保護可能なリソースについて、プリンシパルに許可されている有効な権限の一覧を返します。 関連する関数は[HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,18 +47,18 @@ fn_my_permissions ( securable , 'securable_class' )
  セキュリティ保護可能なリソースの名前を指定します。 セキュリティ保護可能なリソースがサーバーまたはデータベースの場合、この値は NULL に設定する必要があります。 *securable* には **sysname** 型のスカラー式を指定します。 *セキュリティ保護可能な*マルチパート名を指定できます。  
   
  '*securable_class*'  
- 権限を一覧表示する、セキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class*は、 **sysname**です。 *securable_class*次のいずれかを指定する必要がありますアプリケーション ロール、アセンブリ、非対称キー、証明書、コントラクト、データベース、ENDPOINT、FULLTEXT CATALOG、ログイン、メッセージの種類、オブジェクト、REMOTE SERVICE BINDING、ロール、ルート、スキーマ、サーバー、サービス。、対称キー、型、ユーザー、XML スキーマ コレクションです。  
+ 権限を一覧表示する、セキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class*は、 **sysname**します。 *securable_class*次のいずれかを指定する必要がありますアプリケーション ロール、アセンブリ、非対称キー、証明書、コントラクト、データベース、ENDPOINT、FULLTEXT CATALOG、ログイン、メッセージの種類、オブジェクト、REMOTE SERVICE BINDING、ロール、ルート、スキーマ、サーバー、サービス。、対称キー、型、ユーザー、XML スキーマ コレクションです。  
   
 ## <a name="columns-returned"></a>返される列  
  次の表に、列を**fn_my_permissions**を返します。 返される各行によって、セキュリティ保護可能なリソースについて、現在のセキュリティ コンテキストで保持されている権限の詳細が示されます。 クエリが失敗した場合は、NULL を返します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |entity_name へのアイテムの追加|**sysname**|表示される有効な権限の対象となる、セキュリティ保護可能なリソースの名前。|  
 |subentity_name|**sysname**|セキュリティ保護可能なリソースに列がある場合は列名、それ以外の場合は NULL。|  
-|permission_name|**nvarchar**|アクセス許可の名前です。|  
+|permission_name|**nvarchar**|アクセス許可の名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このテーブル値関数では、指定したセキュリティ保護可能なリソースについて、呼び出し元のプリンシパルが保持している有効な権限の一覧が返されます。 有効な権限とは、次のような権限です。  
   
 -   プリンシパルに直接許可されており、拒否されていない権限。  
@@ -74,7 +71,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  権限の評価は、常に呼び出し元のセキュリティ コンテキストで実行されます。 プリンシパルに有効な権限があるかどうかを評価するには、呼び出し元に、そのプリンシパルに対する IMPERSONATE 権限が必要です。  
   
- スキーマ レベルのエンティティの場合、1 部、2 部、または 3 部構成の、NULL でない名前を使用できます。 データベース レベルのエンティティの 1 部構成の名前が受け入れられたら、null 値の意味を持つ"*現在のデータベース*"です。 リソースがサーバー自体の場合は、"現在のサーバー" を表す NULL 値を使用する必要があります。 **fn_my_permissions**リンク サーバー上のアクセス許可を確認することはできません。  
+ スキーマ レベルのエンティティの場合、1 部、2 部、または 3 部構成の、NULL でない名前を使用できます。 データベース レベルのエンティティの 1 つの要素の名前を受け入れますが、null 値の意味を持つ"*現在のデータベース*"。 リソースがサーバー自体の場合は、"現在のサーバー" を表す NULL 値を使用する必要があります。 **fn_my_permissions**リンク サーバー上のアクセス許可を確認することはできません。  
   
  次のクエリでは、セキュリティ保護可能な組み込みクラスの一覧が返されます。  
   
@@ -84,7 +81,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- 既定値は、の値として提供されている場合*セキュリティ保護可能な*または*securable_class*値は NULL として解釈されます。  
+ 値として既定値が指定されている場合*セキュリティ保護可能な*または*securable_class*値は NULL として解釈されます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -116,7 +113,7 @@ GO
 ```  
   
 ### <a name="d-listing-effective-permissions-of-another-user"></a>D. 別のユーザーの有効な権限を一覧表示する  
- 次の例は、データベース ユーザーの有効なアクセス許可の一覧を返します`Wanida`上、`Employee`テーブルに、`HumanResources`のスキーマ、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 呼び出し元には、ユーザーに対する IMPERSONATE 権限が必要です`Wanida`です。  
+ 次の例は、データベース ユーザーの有効なアクセス許可の一覧を返します`Wanida`上、`Employee`テーブルに、`HumanResources`のスキーマ、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 呼び出し元には、ユーザーに対する IMPERSONATE 権限が必要があります`Wanida`します。  
   
 ```  
 EXECUTE AS USER = 'Wanida';  
@@ -135,7 +132,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. XML スキーマ コレクションの有効な権限を一覧表示する  
- 次の例では、呼び出し元の有効なアクセス許可の一覧を返しますという名前の XML スキーマ コレクションに対して`ProductDescriptionSchemaCollection`で、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
+ 次の例では、呼び出し元の有効なアクセス許可の一覧を返しますという名前の XML スキーマ コレクションに対する`ProductDescriptionSchemaCollection`で、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
   
 ```  
 USE AdventureWorks2012;  
@@ -153,7 +150,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. 別のログインの有効な権限を一覧表示する  
- 次の例は、有効な権限の一覧を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`WanidaBenshoof`上、`Employee`テーブルに、`HumanResources`のスキーマ、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 呼び出し元の IMPERSONATE 権限を必要と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`WanidaBenshoof`です。  
+ 次の例は、有効な権限の一覧を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`WanidaBenshoof`上、`Employee`テーブルに、`HumanResources`のスキーマ、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 呼び出し元の IMPERSONATE 権限を必要と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`WanidaBenshoof`します。  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  

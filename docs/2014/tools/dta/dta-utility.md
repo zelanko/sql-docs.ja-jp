@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091738"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
   **dta** ユーティリティは、データベース エンジン チューニング アドバイザーのコマンド プロンプト バージョンです。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDDataSet Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - MDDataSet data type
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c1580365cc6c7949c552333728b5083b96f7ef9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d9208c800800032a2e79d58239132c5152b51b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124202"
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet データ型 (XMLA)
   によって返される多次元データを表す派生データ型を定義、 [Execute](../xml-elements-methods-execute.md)メソッド。  

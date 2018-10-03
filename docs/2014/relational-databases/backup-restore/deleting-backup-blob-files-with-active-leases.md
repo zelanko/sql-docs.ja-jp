@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 491cde35ec200cdacc9c12794d5692d657ad22f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e07b58138f76d44f92cd356fdfc40da801c8637e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093922"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルの削除
   Windows Azure ストレージへのバックアップまたは Windows Azure ストレージからの復元を実行するときに、SQL Server は BLOB への排他アクセスをロックするために無限リースを取得します。 バックアップまたは復元プロセスが正常に完了すると、リースは解放されます。 バックアップまたは復元に失敗すると、バックアップ プロセスは無効な BLOB のクリーンアップを試みます。 ただし、バックアップの失敗の原因が長期的または持続的なネットワーク接続エラーの場合は、バックアップ プロセスは BLOB にアクセスできず、BLOB は孤立したままになる可能性があります。 つまり、リースが解放されるまで、BLOB を書き込むことも削除することもできません。 このトピックでは、リースを解放する方法と BLOB の削除について説明します。  

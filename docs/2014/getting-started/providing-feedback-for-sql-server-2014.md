@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sending feedback to Microsoft
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e878c3d09e2dde7d32e9fa5b37fd02081a6979c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109902"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>SQL Server 2014 に関するフィードバックの送信
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 製品やドキュメントの改善にご協力いただき、ありがとうございます。 製品の機能やユーザー インターフェイスに関するご意見や不具合の報告を送信したり、ドキュメントに関するフィードバックを送信できます。また、エラー レポートや機能の使用状況のデータを分析できるように、[!INCLUDE[msCoName](../includes/msconame-md.md)] に自動的に送信することもできます。 このトピックでは、次の 3 つのフィードバック オプションについて説明します。  

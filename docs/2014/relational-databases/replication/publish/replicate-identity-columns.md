@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - transactional replication, identity range management
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
-caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089854"
 ---
 # <a name="replicate-identity-columns"></a>ID 列のレプリケート
   IDENTITY プロパティを列に割り当てると、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、その ID 列を含むテーブルに挿入された新しい行に対して連続する番号が自動的に生成されます。 詳細については、「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)」を参照してください。 ID 列は主キーの一部に含まれる場合があるため、ID 列の値が重複しないようにすることが重要です。 複数のノードで更新されるレプリケーション トポロジで ID 列を使用するには、レプリケーション トポロジ内の各ノードで異なる範囲の ID 値を使用して、重複が生じないようにする必要があります。  

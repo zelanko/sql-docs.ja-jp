@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28e4b5a405279b1aaede6fc9db96cf9024a59b96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221842"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148052"
 ---
 # <a name="custom-messages-for-logging"></a>ログ記録用のカスタム メッセージ
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージおよび多くのタスクのログ エントリを書き込むためには、カスタム イベントの豊富なセットを提供します。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  

@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396282"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642264"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>プロジェクトの設定 (型のマッピング) (DB2ToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に DB2 データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  

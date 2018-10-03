@@ -1,13 +1,11 @@
 ---
-title: BeginTrans、CommitTrans RollbackTrans イベント (ADO) |Microsoft ドキュメント
+title: BeginTrans、CommitTrans、RollbackTrans イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,25 +20,24 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c440f6bd1a978a820797414ff81e6b9b15da467
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: afd8b9d4a45bdc98388f1133b3478a1cfbe51e4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773450"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント (ADO)
 これらのイベントが関連付けられている操作の後に呼び出される、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの実行が終了します。  
   
--   **BeginTransComplete**後に呼び出されます、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作します。  
+-   **BeginTransComplete**が呼び出された後、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
   
--   **CommitTransComplete**後に呼び出されます、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作します。  
+-   **CommitTransComplete**が呼び出された後、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
   
--   **RollbackTransComplete**後に呼び出されます、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作します。  
+-   **RollbackTransComplete**が呼び出された後、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,23 +50,23 @@ RollbackTransComplete pError, adStatus, pConnection
   
 #### <a name="parameters"></a>パラメーター  
  *TransactionLevel*  
- A**長い**新しいトランザクションのレベルを表す値、 **BeginTrans**このイベントの原因となった。  
+ A**長い**新しいトランザクションのレベルを含む値、 **BeginTrans**このイベントの原因となった。  
   
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 EventStatusEnum の値がある場合に発生したエラーを説明**adStatusErrorsOccurred**です。 それ以外の場合、設定されていません。  
+ [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 EventStatusEnum の値がある場合に発生したエラーについて説明します**adStatusErrorsOccurred**。 それ以外の場合に設定されていません。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。 このパラメーターに設定されているこれらのイベントのいずれかが呼び出されると**adStatusOK**イベントの原因となった操作が成功した場合または**adStatusErrorsOccurred**操作が失敗した場合。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。 このパラメーターに設定されているこれらのイベントのいずれかが呼び出されると**adStatusOK**イベントの原因となった操作が成功した場合または**adStatusErrorsOccurred**操作に失敗した場合。  
   
- これらのイベントは、後続の通知を防ぐためこのパラメーターを設定して**adStatusUnwantedEvent**イベントが返される前にします。  
+ これらのイベントは、後続の通知を防ぐためこのパラメーターを設定して**adStatusUnwantedEvent**前に、イベントを返します。  
   
  *pConnection*  
- **接続**オブジェクトに対してこのイベントが発生しました。  
+ **接続**オブジェクトをこのイベントが発生しました。  
   
 ## <a name="remarks"></a>コメント  
- Visual c で複数**接続**同じイベント処理メソッドを共有できます。 メソッドを使用して、返された**接続**を決定するオブジェクトがイベントを発生させたオブジェクト。  
+ Visual C で複数**接続**同じイベント処理メソッドを共有することができます。 メソッドを使用して、返された**接続**オブジェクト イベントの原因を判断するオブジェクト。  
   
- 場合、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティに設定されている**adXactCommitRetaining**または**adXactAbortRetaining**、新しいトランザクションがコミットまたはロールバック、トランザクション後に開始します。 使用して、 **BeginTransComplete**を無視するすべてのイベントが最初のトランザクションの開始イベント。  
+ 場合、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティに設定されて**adXactCommitRetaining**または**adXactAbortRetaining**、コミットやトランザクションをロールバックした後、新しいトランザクションを開始します。 使用して、 **BeginTransComplete**すべて無視するイベントが最初のトランザクションの開始イベント。  
   
 ## <a name="see-also"></a>参照  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

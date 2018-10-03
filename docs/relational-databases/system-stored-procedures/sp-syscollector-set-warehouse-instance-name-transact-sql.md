@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_warehouse_instance_name (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syscollector_set_warehouse_instance_name (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a41db8df8316720f1a88b090de51e39a5d4d5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258786"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827500"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +44,17 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  インスタンス名を指定します。 *instance_name*は**sysname**既定値は NULL の場合は、ローカルのインスタンス。  
   
-> **注:***instance_name* 、完全修飾名、コンピューター名と形式でインスタンス名で構成される必要があります*computerName* \\ *instanceName*です。  
+> **注:***instance_name*インスタンスの完全修飾名は、コンピューター名と形式でインスタンス名で構成される必要があります*computerName* \\ *instanceName*します。    
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このデータ コレクター全体の構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このプロシージャは失敗します。  
   
- 現在のインスタンス名を表示するには、クエリ、 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)システム ビューです。  
+ 現在のインスタンス名を表示するにはクエリ、 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)システム ビュー。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

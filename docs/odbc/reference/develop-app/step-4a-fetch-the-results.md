@@ -1,40 +1,37 @@
 ---
-title: '手順 4 a: 結果をフェッチ |Microsoft ドキュメント'
+title: '手順 4 a: 結果が得られない |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d8d2e5bd80e47db5a5e3484aebfe2bf1d6fff9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cad33f1ccf798a08ef1f11667e59b4d5fb4888d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915747"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730650"
 ---
-# <a name="step-4a-fetch-the-results"></a>手順 4 a: 結果のフェッチ
-次の手順は、次の図に示すように、結果を取得するは。  
+# <a name="step-4a-fetch-the-results"></a>ステップ 4a: 結果のフェッチ
+次の手順は、次の図に示すように、結果を取得します。  
   
  ![ODBC アプリケーションで結果のフェッチ](../../../odbc/reference/develop-app/media/pr14.gif "pr14")  
   
- 「ステップ 3:: ビルドと、SQL ステートメントの実行」で実行されるステートメントの場合、**選択**ステートメントまたはカタログ関数では、まずを呼び出して**SQLNumResultCols**列の数を決定するには結果セットです。 この手順は、アプリケーションが既にセットの列の SQL ステートメントを垂直方向またはカスタム アプリケーションにハードコーディングする場合など、結果の数を把握している場合に必要ではありません。  
+ 「手順 3:: 構築と、SQL ステートメントの実行」で実行されるステートメントの場合、**選択**ステートメントまたはカタログ関数の場合は、アプリケーションを呼び出す最初**SQLNumResultCols**列の数を決定するには結果セット。 この手順は、アプリケーションが既に SQL ステートメントを垂直方向またはカスタム アプリケーションにハードコーディングする場合など、列の設定の結果の数を把握している場合は、必要ではありません。  
   
- 次に、アプリケーション名、データ型、有効桁数、および取得に各結果セット列の小数点以下桁数**SQLDescribeCol**です。 ここでも、この垂直方向およびカスタム アプリケーションをこの情報が既にわかっているなどのアプリケーションの必要はありません。 アプリケーションは、この情報を渡す**SQLBindCol**、アプリケーション変数、結果セット内の列にバインドします。  
+ 次に、アプリケーションは、名前、データ型、有効桁数、および各結果セット列の小数点以下桁数を取得**SQLDescribeCol**します。 ここでも、この情報を知っている垂直方向およびカスタムのアプリケーションなどのアプリケーションの必要はありません。 アプリケーションは、この情報を渡す**SQLBindCol**、アプリケーション変数、結果セット内の列にバインドします。  
   
- アプリケーションの現在の呼び出し**SQLFetch**データの最初の行を取得し、その行のデータにバインドされた変数内に配置する**SQLBindCol**です。 呼び出して、行に長いデータがある場合**SQLGetData**データを取得します。 アプリケーションの呼び出しを継続**SQLFetch**と**SQLGetData**追加データを取得します。 これには、データのフェッチが終了したらを呼び出す**SQLCloseCursor**カーソルを閉じます。  
+ アプリケーションの現在の呼び出し**SQLFetch**データの最初の行を取得し、その行からデータにバインドされた変数内に配置する**SQLBindCol**します。 行に、長い形式のデータがある場合を呼び出して**SQLGetData**データを取得します。 アプリケーションの継続を呼び出す**SQLFetch**と**SQLGetData**追加データを取得します。 これには、データのフェッチが完了したら、後に呼び出す**SQLCloseCursor**カーソルを閉じます。  
   
- 結果の取得の詳細については、次を参照してください。[を取得する結果 (基本)](../../../odbc/reference/develop-app/retrieving-results-basic.md)と[(詳細) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-advanced.md)です。  
+ 結果の取得の詳細については、次を参照してください。 [(Basic) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-basic.md)と[(詳細) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-advanced.md)します。  
   
- 今すぐアプリケーションを返します"手順 3:: ビルドと実行、SQL ステートメントに"を同じトランザクションで別のステートメントを実行するにはまたは、"手順 5:: Commit Transaction"をコミットまたはトランザクションをロールバックしてに進みます。
+ "手順 3:: ビルドと実行する SQL ステートメントに"同じトランザクションで別のステートメントを実行するアプリケーションを今すぐを返しますまたは、「手順 5::、トランザクションをコミット」にコミットまたはトランザクションをロールバックに進みます。

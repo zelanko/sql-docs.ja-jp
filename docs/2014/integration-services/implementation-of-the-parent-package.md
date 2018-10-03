@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parent packages [Integration Services]
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 037c803cd11135c0f04e0e716b5a04b75344a177
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba613cfb0d46c67af84d8f84c3bbb0a15361ce5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130531"
 ---
 # <a name="implementation-of-the-parent-package"></a>親パッケージの実装
   さまざまなサーバー間で SSIS パッケージの負荷を分散する場合、子パッケージの作成と配置を行い、その子パッケージを実行するためのリモート SQL Server エージェント ジョブを作成したら、次のステップは親パッケージを作成することです。 親パッケージには、SQL Server エージェント ジョブの実行タスクが多数含まれます。各タスクは、子パッケージの 1 つを実行する個別の SQL Server エージェント ジョブを呼び出します。 親パッケージ内にある SQL Server エージェント ジョブの実行タスクは、各種の SQL Server エージェント ジョブを次々に実行します。 親パッケージ内の各タスクには、リモート サーバーへの接続方法やそのサーバーで実行するジョブなどの情報が含まれています。 詳しくは、「 [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md)」をご覧ください。  

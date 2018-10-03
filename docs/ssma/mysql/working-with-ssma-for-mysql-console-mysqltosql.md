@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3a3802661ea919083c1e058a186810719d80a38a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0cb332040b7d5e145639bc55feb41ecf62084478
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749170"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL コンソールの使用 (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for MySQL は、コマンドラインでコンソール アプリケーションからアクセスできるようになりました。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとしては、SSMA はにより、スクリプト レベルのインターフェイス、移行サイクルが削減され、移行作業を拡大または縮小します。  

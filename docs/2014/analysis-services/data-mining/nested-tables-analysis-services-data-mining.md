@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b072c134c047f9833f3b5297688bf30d68a6050
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121092"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>入れ子になったテーブル (Analysis Services - データ マイニング)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データを、ケース テーブル内の一連のケースとしてデータ マイニング アルゴリズムに入力する必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *入れ子になったテーブル*を使用して、このようなケースを扱うための独自の方法が用意されています。 次の図は、入れ子になったテーブルの概念を示しています。  

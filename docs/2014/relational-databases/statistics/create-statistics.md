@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.statistics.propertis.f1
@@ -20,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2798479058b3fd12cc34ddedd9352027b6c1821
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408401"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066842"
 ---
 # <a name="create-statistics"></a>統計の作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のテーブルまたはインデックス付きビューの 1 つまたは複数の列で、クエリの最適化に関する統計 (フィルター選択された統計情報を含む) を作成できます。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成する必要がある場合もあります。  
@@ -91,7 +89,7 @@ ms.locfileid: "37408401"
      **Size**  
      各列のデータ型のサイズが表示されます。  
   
-     **Identity**  
+     **[ID]**  
      オンの場合、ID 列を示します。  
   
      **[NULL を許容]**  
@@ -133,7 +131,7 @@ ms.locfileid: "37408401"
      **Size**  
      各列のデータ型のサイズが表示されます。  
   
-     **Identity**  
+     **[ID]**  
      オンの場合、ID 列を示します。  
   
      **Allow NULLs**  

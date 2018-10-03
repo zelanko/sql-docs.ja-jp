@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases, loading converted objects into SQL Azure
 - Access databases, loading converted objects into SQL Server
@@ -32,16 +27,15 @@ helpviewer_keywords:
 - uploading objects into SQL Azure
 - uploading objects into SQL Server
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
-caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 56c600b88c9c1b3237a92887d68cb338ae17058d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64473c9163e63c6add18897edb87d48cef3922c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395795"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816310"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>SQL Server (AccessToSQL) へのデータベース オブジェクトの変換後の読み込み
 Access データベースのオブジェクトに変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure には、結果のデータベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 710d30f8a59abedd98dc3e82cf4233f0ef2c7a66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39fa21f9bb7af15885abdf1d8c78d2651e2fbdab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202512"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079162"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>レンダリングの動作 (レポート ビルダーおよび SSRS)
   選択したレンダラーによっては、レポートをレンダリングする際に、レポート本文とそのコンテンツに特定の規則が適用されます。 レポート アイテムが 1 ページにまとめられる際の方法は、次に示す要因の組み合わせによって決まります。  

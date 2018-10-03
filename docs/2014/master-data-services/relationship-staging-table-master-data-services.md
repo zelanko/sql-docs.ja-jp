@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 38b92d05a119af10a3c6c2e464b745b8fb26b197
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9c1622a95adbe667db27ea975783483fe053051
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107593"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>リレーションシップ ステージング テーブル (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのリレーションシップ ステージング テーブル (stg.name_Relationship) を使用して、メンバーが相互に保持するリレーションシップに基づいて、明示的階層におけるメンバーの位置を変更します。  
@@ -40,7 +37,7 @@ ms.locfileid: "37229332"
 |**HierarchyName**<br /><br /> 必須|明示的階層の名前。 各統合メンバーは、1 つの階層にのみ所属することができます。|  
 |**ParentCode**<br /><br /> 必須|親子リレーションシップの場合、子リーフまたは統合メンバーの親になる統合メンバーのコード。<br /><br /> 兄弟リレーションシップの場合、兄弟のいずれかのコード。|  
 |**ChildCode**<br /><br /> 必須|親子リレーションシップの場合、子になる統合メンバーまたはリーフ メンバーのコード。<br /><br /> 兄弟リレーションシップの場合、兄弟のいずれかのコード。|  
-|**並べ替え順序**<br /><br /> 省略可|親の下にある他のメンバーに対するメンバーの順序を示す整数。 各子メンバーは一意識別子を保持します。|  
+|**[並べ替え順序]**<br /><br /> 省略可|親の下にある他のメンバーに対するメンバーの順序を示す整数。 各子メンバーは一意識別子を保持します。|  
 |**ErrorCode**|エラー コードを表示します。 **ImportStatus_ID** が **2** のすべてのレコードについては、「[ステージング処理のエラー (マスター データ サービス)](staging-process-errors-master-data-services.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  

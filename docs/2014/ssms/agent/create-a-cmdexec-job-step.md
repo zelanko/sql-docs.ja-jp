@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CmdExec jobs
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9787213ea1914f613d71b3c548dffd4729bb40c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f69152a87f739ee83461c5698722cb7d221cbae4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082632"
 ---
 # <a name="create-a-cmdexec-job-step"></a>CmdExec ジョブ ステップの作成
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、実行可能なプログラムまたはオペレーティング システム コマンドを使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップを作成および定義する方法について説明します。  

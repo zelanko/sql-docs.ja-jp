@@ -1,14 +1,11 @@
 ---
-title: sp_update_operator (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_update_operator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f0cdd4e69655ac469e875b37f3e299b89b1be2f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690320"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ sp_update_operator
  オペレーターの新しい名前を指定します。 この名前は一意であることが必要です。 *新しい名前*は**sysname**、既定値は NULL です。  
   
  [ @enabled=] *enabled*  
- オペレーターの現在の状態を示す数値 (**1**現在有効な場合、 **0**しない場合)。 *有効になっている*は**tinyint**、既定値は NULL です。 有効でない場合、オペレーターは警告通知を受信しません。  
+ オペレーターの現在の状態を示す数値 (**1**現在有効になっている場合**0**いない場合)。 *有効になっている*は**tinyint**、既定値は NULL です。 有効でない場合、オペレーターは警告通知を受信しません。  
   
  [ @email_address=] '*email_address*'  
  オペレーターの電子メール アドレスを指定します。 この文字列はメール システムに直接渡されます。 *email_address*は**nvarchar (100)**、既定値は NULL です。  
@@ -74,25 +70,25 @@ sp_update_operator
  オペレーターのポケットベルのアドレスを指定します。 この文字列はメール システムに直接渡されます。 *pager_number*は**nvarchar (100)**、既定値は NULL です。  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
- 月曜日から金曜日までの間で、このオペレーターに対してポケットベル通知を開始する時間を指定します。 *weekday_pager_start_time*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
+ 月曜日から金曜日までの間で、このオペレーターに対してポケットベル通知を開始する時間を指定します。 *weekday_pager_start_time*は**int**、既定値は null の場合、24 時間制の hhmmss で入力する必要があります。  
   
  [ @weekday_pager_end_time=] *weekday_pager_end_time*  
- 月曜日から金曜日までの間で、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *エージェント*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
+ 月曜日から金曜日までの間で、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *エージェント*は**int**、既定値は null の場合、24 時間制の hhmmss で入力する必要があります。  
   
  [ @saturday_pager_start_time=] *saturday_pager_start_time*  
- 毎週土曜日に、指定したオペレーターに対してポケットベル通知を開始する時間を指定します。 *エージェント*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
+ 毎週土曜日に、指定したオペレーターに対してポケットベル通知を開始する時間を指定します。 *エージェント*は**int**、既定値は null の場合、24 時間制の hhmmss で入力する必要があります。  
   
  [ @saturday_pager_end_time=] *saturday_pager_end_time*  
- 毎週土曜日に、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *@saturday_pager_end_time*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
+ 毎週土曜日に、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *@saturday_pager_end_time*は**int**、既定値は null の場合、24 時間制の hhmmss で入力する必要があります。  
   
  [ @sunday_pager_start_time=] *sunday_pager_start_time*  
- 毎週日曜日に、指定したオペレーターに対してポケットベル通知を開始する時間を指定します。 *エージェント*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
+ 毎週日曜日に、指定したオペレーターに対してポケットベル通知を開始する時間を指定します。 *エージェント*は**int**、既定値は null の場合、24 時間制の hhmmss で入力する必要があります。  
   
  [ @sunday_pager_end_time=] *sunday_pager_end_time*  
- 毎週日曜日に、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *エージェント*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
+ 毎週日曜日に、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *エージェント*は**int**、既定値は null の場合、24 時間制の hhmmss で入力する必要があります。  
   
  [ @pager_days=] *pager_days*  
- オペレーターがポケットベルのメッセージを受信できる曜日を指定します (指定した開始/終了時刻を前提とします)。 *pager_days*は**tinyint**、NULL の場合、既定値から値を指定する必要があります**0**を通じて**127**です。 *pager_days*必要となる曜日の個々 の値を加算して計算されます。 たとえば、月曜日から金曜日までからは**2**+**4**+**8**+**16** + **32** = **64**です。  
+ オペレーターがポケットベルのメッセージを受信できる曜日を指定します (指定した開始/終了時刻を前提とします)。 *pager_days*は**tinyint**、既定値は null の場合、値を指定する必要がありますと**0**を通じて**127**。 *pager_days*必要となる曜日の個々 の値を加算して計算されます。 たとえば、月曜日から金曜日までからは**2**+**4**+**8**+**16** + **32** = **64**します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -113,11 +109,11 @@ sp_update_operator
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_update_operator は、msdb データベースから実行する必要があります。  
   
-## <a name="permissions"></a>権限  
- Sysadmin 固定サーバー ロールのメンバーにこのプロシージャの既定値を実行する権限です。  
+## <a name="permissions"></a>アクセス許可  
+ Sysadmin 固定サーバー ロールのメンバーにこのプロシージャの既定値を実行する権限。  
   
 ## <a name="examples"></a>使用例  
  次の例では、無効であったオペレーターの状態を有効に更新し、ポケットベルを受信できる曜日 (月曜～金曜日、 午前 8 時～午後 5 時) を設定します。  

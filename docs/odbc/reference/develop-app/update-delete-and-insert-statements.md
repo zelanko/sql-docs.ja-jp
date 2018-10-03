@@ -1,13 +1,11 @@
 ---
-title: UPDATE、DELETE、および INSERT ステートメント |Microsoft ドキュメント
+title: UPDATE、DELETE、および INSERT ステートメント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3c3c8bca44a5cce4a81ecef91c631f3ee1d769c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721910"
 ---
-# <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、および INSERT ステートメント
-SQL ベースのアプリケーションを実行してテーブルに変更を加える、**更新**、**削除**、および**挿入**ステートメントです。 これらのステートメントでは、Minimum SQL 文法の準拠レベルの一部であるし、すべてのドライバーとデータ ソースでサポートする必要があります。  
+# <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、INSERT ステートメント
+SQL ベースのアプリケーションでは、テーブルに変更を加えるを実行して、 **UPDATE**、**削除**、および**挿入**ステートメント。 これらのステートメントでは、Minimum SQL 文法の準拠レベルの一部であるし、すべてのドライバーとデータ ソースでサポートする必要があります。  
   
  これらのステートメントの構文です。  
   
@@ -46,12 +43,12 @@ SQL ベースのアプリケーションを実行してテーブルに変更を�
   
  {*クエリ仕様* &#124; **値 (* * * 挿入値*[* *、** *挿入値*].**)**}  
   
- なお、*クエリ仕様*要素は、コアと拡張 SQL 文法とするでのみ有効、*式*と*検索条件*要素の詳細になりますコアと拡張 SQL 文法で複雑です。  
+ なお、*クエリ仕様*要素は、コアと拡張 SQL 文法とでのみ有効ですが、*式*と*検索条件*要素の詳細になりますコアと拡張 SQL 文法で複雑です。  
   
- などの他の SQL ステートメント**更新**、**削除**、および**挿入**ステートメントはよりは多くの場合、パラメーターが使用すると、効率的です。 たとえば、次のステートメントを準備および繰り返し実行して、Orders テーブルの複数の行を挿入します。  
+ などの他の SQL ステートメント**更新**、**削除**と**挿入**ステートメントは、多くの場合は詳細はパラメーターを使用するときに効率的です。 たとえば、次のステートメントを準備および Orders テーブルに複数の行を挿入するために繰り返し実行します。  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- パラメーター値の配列を渡すことによって、この効率性を強化できます。 ステートメントのパラメーターおよびパラメーター値の配列の詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)です。
+ この効率性のパラメーター値の配列を渡すことによって増やすことができます。 ステートメントのパラメーターとパラメーター値の配列の詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。

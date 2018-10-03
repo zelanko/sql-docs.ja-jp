@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - RenderedOutputFile class
 - data streams [Reporting Services]
 - delivery extensions [Reporting Services], data streams
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09540b39357f41fcbe9bd9d02e7ea1a6b71d11a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37b6c2201326ede7c4dc42dffc4fa831136c50a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078522"
 ---
 # <a name="using-the-renderedoutputfile-class-for-a-delivery-extension"></a>配信拡張機能での RenderedOutputFile クラスの使用
   <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> クラスは、データ ストリームおよびデータ ストリームの関連付けられたプロパティに関する情報を表します。 <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> クラスの **Data** プロパティは、表示レポートまたはレポート リソースを **Stream** オブジェクトとして表すために使用します。  

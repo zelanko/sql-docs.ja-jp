@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetVersionInfo 関数 |Microsoft ドキュメント
+title: LocalDBGetVersionInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetVersionInfo
@@ -17,22 +14,21 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8be469a7f4a9f1b316b881ea884f7fbabc955dfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3b4d8e565aa1494e4e68a0243eb470bd7efe90b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935087"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661800"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   指定した SQL Server Express LocalDB バージョンの情報を返します。たとえば、存在するかどうか、LocalDB 完全バージョン番号 (ビルド番号やリリース番号を含む) などです。  
   
- 形式で返される情報、**構造体**という**LocalDBVersionInfo**、次の定義を持ちます。  
+ 形式で、情報が返されます、**構造体**という**LocalDBVersionInfo**、次の定義を持ちます。  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -74,7 +70,7 @@ HRESULT LocalDBGetVersionInfo(
  *dwVersionInfoSize*  
  [入力]サイズを保持する、 *VersionInfo*バッファー。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  S_OK  
  関数が正常に実行されました。  
   
@@ -91,11 +87,11 @@ HRESULT LocalDBGetVersionInfo(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="details"></a>詳細  
- 導入根拠、**構造体**サイズ引数 (*lpVersionInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBVersionInfostruct**、効果的に上位および下位互換性を有効にします。  
+ 概要の背後にある"the rationale"、**構造体**サイズ引数 (*lpVersionInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBVersionInfostruct**実質的に、上位および下位互換性を有効にします。  
   
- 場合、**構造体**サイズ引数 (*lpVersionInfoSize*) の既知のバージョンのサイズと一致する、 **LocalDBVersionInfostruct**、そのバージョンの**構造体**が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
+ 場合、**構造体**サイズ引数 (*lpVersionInfoSize*) の既知のバージョンのサイズに合った、 **LocalDBVersionInfostruct**、そのバージョンの**構造体**が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
   
- 典型的な例**LocalDBGetVersionInfo** API の使用率が次のように検索します。  
+ 典型的な例**LocalDBGetVersionInfo**次のような API の使用量。  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -103,8 +99,8 @@ LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>解説  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)です。  
+## <a name="remarks"></a>コメント  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

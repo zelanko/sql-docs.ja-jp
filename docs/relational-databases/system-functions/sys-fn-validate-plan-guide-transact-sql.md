@@ -1,14 +1,11 @@
 ---
-title: sys.fn_validate_plan_guide (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_validate_plan_guide (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_validate_plan_guide
@@ -21,15 +18,15 @@ helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b941fabfd4ebbd3ca41375622bf682f12b0fc26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798310"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +49,14 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|エラー メッセージの ID です。|  
 |severity|**tinyint**|メッセージの重大度レベルです。有効値は 1 ～ 25 です。|  
 |state|**smallint**|エラーが発生したコード内の場所を示すエラーの状態番号です。|  
 |message|**nvarchar(2048)**|エラー メッセージのテキストです。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  スコープが OBJECT のプラン ガイドでは、参照先オブジェクトに対する VIEW DEFINITION 権限または ALTER 権限と、プラン ガイドに含まれるクエリやバッチをコンパイルするための権限が必要です。 たとえば、バッチに SELECT ステートメントが含まれている場合は、参照先オブジェクトに対する SELECT 権限が必要です。  
   
  スコープが SQL または TEMPLATE のプラン ガイドでは、データベースに対する ALTER 権限と、プラン ガイドに含まれるクエリやバッチをコンパイルするための権限が必要です。 たとえば、バッチに SELECT ステートメントが含まれている場合は、参照先オブジェクトに対する SELECT 権限が必要です。  
@@ -79,7 +76,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. データベースに変更を実装する前にプラン ガイドを検証する  
- 次の例では、明示的なトランザクションを使用してインデックスを削除します。 `sys.fn_validate_plan_guide`この操作で、データベース内のすべてのプラン ガイドを無効にするかどうかを決定する関数を実行します。 この関数の結果に基づいて、`DROP INDEX` ステートメントがコミットされるか、トランザクションがロールバックされます。トランザクションがロールバックされた場合は、インデックスは削除されません。  
+ 次の例では、明示的なトランザクションを使用してインデックスを削除します。 `sys.fn_validate_plan_guide`このアクションで、データベース内のすべてのプラン ガイドを無効にするかどうかを判断する関数を実行します。 この関数の結果に基づいて、`DROP INDEX` ステートメントがコミットされるか、トランザクションがロールバックされます。トランザクションがロールバックされた場合は、インデックスは削除されません。  
   
 ```sql  
 USE AdventureWorks2012;  

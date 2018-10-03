@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - member properties [Analysis Services], attribute relationships
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], attribute relationships
 - relationships [Analysis Services], attributes
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b3d4667703aa76870ccc9ff5684597ee52a34f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081605"
 ---
 # <a name="attribute-relationships"></a>のディメンション デザイナーでは、[ディメンション構造] ビューの
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンション内の属性は常に関連する直接的または間接的にキー属性にします。 同一のリレーショナル テーブルからすべてのディメンション属性が派生するスター スキーマに基づいてディメンションを定義すると、ディメンションのキー属性と各非キー属性の間に自動的に属性リレーションシップが定義されます。 関連を持った複数のテーブルからディメンション属性が派生するスノーフレーク スキーマを基にディメンションを定義すると、属性リレーションシップが自動的に次のように定義されます。  

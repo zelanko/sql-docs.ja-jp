@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - fixed port
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdd79cc6179731f33d8e6a7653a58b7fd9319062
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d408c25216139a173dced0ae19f9ddea7d1ba4d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088072"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>特定の TCP ポートで受信待ちするようにサーバーを構成する方法 (SQL Server 構成マネージャー)
   このトピックでは、SQL Server 構成マネージャーを使用して、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスが特定の固定ポートで受信待ちするように構成する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスは、有効であれば TCP ポート 1433 で受信待ちします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と [!INCLUDE[ssEW](../../includes/ssew-md.md)] の名前付きインスタンスは、動的ポートを使用するように構成されています。 つまり、これらのインスタンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始時に、使用可能なポートが選択されます。 名前付きインスタンスにファイアウォール経由で接続する場合は、特定のポートで受信待ちするように [!INCLUDE[ssDE](../../includes/ssde-md.md)] を構成します。これにより、ファイアウォールで適切なポートを開くことができます。  

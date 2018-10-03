@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - user impersonation [CLR integration]
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2695445caee79ee2248a6855bb36349b6ff5f644
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088062"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>権限借用と CLR 統合のセキュリティ
   マネージド コードが外部リソースにアクセスする際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのルーチンを実行している現在の実行コンテキストの権限を自動的には借用しません。 `EXTERNAL_ACCESS` および `UNSAFE` アセンブリのコードは、現在の実行コンテキストの権限を明示的に借用することができます。  
@@ -34,7 +31,7 @@ ms.locfileid: "37243202"
 > [!NOTE]  
 >  権限借用の動作の変更については、次を参照してください。 [SQL Server 2014 におけるデータベース エンジン機能の重大な変更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。  
   
- インプロセス データ アクセス プロバイダーには、`SqlContext.WindowsIdentity` というアプリケーション プログラミング インターフェイスが用意されています。これを使用して、現在のセキュリティ コンテキストに関連付けられたトークンを取得できます。 ph x="1" /&gt; アセンブリと `UNSAFE` アセンブリのマネージド コードでは、このメソッドを使用してコンテキストを取得し、.NET Framework `WindowsIdentity.Impersonate` メソッドを使用してそのコンテキストの権限を借用できます。 ユーザー コードから明示的に権限を借用するときは、次の制限事項が適用されます。  
+ インプロセス データ アクセス プロバイダーには、`SqlContext.WindowsIdentity` というアプリケーション プログラミング インターフェイスが用意されています。これを使用して、現在のセキュリティ コンテキストに関連付けられたトークンを取得できます。 `EXTERNAL_ACCESS` アセンブリと `UNSAFE` アセンブリのマネージド コードでは、このメソッドを使用してコンテキストを取得し、.NET Framework `WindowsIdentity.Impersonate` メソッドを使用してそのコンテキストの権限を借用できます。 ユーザー コードから明示的に権限を借用するときは、次の制限事項が適用されます。  
   
 -   マネージド コードが権限を借用している状態のときは、インプロセス データ アクセスは許可されません。 コードで、権限借用を元に戻してから、インプロセス データ アクセスを呼び出すことができます。 このためには、元の `WindowsImpersonationContext` メソッドの戻り値 (`Impersonate` オブジェクト) を格納し、この `Undo` の `WindowsImpersonationContext` メソッドを呼び出す必要があります。  
   

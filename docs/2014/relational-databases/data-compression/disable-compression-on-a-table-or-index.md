@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,12 @@ ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9178ec5c24f1077c5e4a76a4429a2d34684b8162
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5cec8fb34b8605b7b31924f082a5178c6a78eeb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254304"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147912"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルまたはインデックスで圧縮を無効にする方法について説明します。  
@@ -149,7 +148,7 @@ ms.locfileid: "37254304"
   
     6.  **[概要]** の **[説明]** で、すべてのジョブ スケジュール設定が適切であることを確認します。  
   
-    7.  [**OK**] をクリックします。  
+    7.  **[OK]** をクリックします。  
   
      このページを完了したら、 **[次へ]** をクリックします。  
   

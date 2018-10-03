@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - connections [Integration Services], external data sources
 - SSIS custom tasks, external data sources
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 091dc8ad646f1893dfdf5eb57b5f8b63f34caf7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ff4f311a69022be575253622bbb35d0ff3a76cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239192"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080572"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>カスタム タスクでのデータ ソースへの接続
   タスクは、接続マネージャーを使用して外部データ ソースに接続し、データを取得または保存します。 デザイン時には、接続マネージャーは論理接続を表し、サーバー名や認証プロパティなどの重要な情報を示します。 実行時に、タスクは接続マネージャーの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> メソッドを呼び出して、データ ソースへの物理接続を確立します。  

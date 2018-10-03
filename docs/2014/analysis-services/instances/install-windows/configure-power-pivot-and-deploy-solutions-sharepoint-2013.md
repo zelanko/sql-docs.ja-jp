@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f06745f47bd78df8d9464c090afb46116594e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312672"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104802"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>PowerPivot の構成とソリューションの配置 (SharePoint 2013)
   このトピックは、展開と PowerPivot の機能の中間層機能強化の構成について説明します。 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] PowerPivot ギャラリーを含む、データ更新、管理ダッシュ ボード、およびデータ プロバイダーをスケジュールします。 **PowerPivot for SharePoint 2013 の構成** ツールを実行して、以下を完了します。  
@@ -70,7 +67,7 @@ ms.locfileid: "37312672"
   
     4.  **Excel Services 用 PowerPivot サーバー**: の名前を入力、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint モードのサーバー。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
   
-    5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]`になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]** ページを確認します。  
+    5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]` になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]** ページを確認します。  
   
 5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 それぞれの詳細については、セクションをご覧ください。"サーバーの構成に使用する入力値[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) in this トピック。  
   

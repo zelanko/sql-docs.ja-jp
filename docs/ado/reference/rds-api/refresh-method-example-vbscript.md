@@ -1,35 +1,32 @@
 ---
-title: 更新メソッドの例 (VBScript) |Microsoft ドキュメント
+title: Refresh メソッドの例 (VBScript) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADO], VBScript example
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17bb8489dd1671806a512ed635c0143d7ba9f4b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fcb4ccd685a5f28377972db03d32496017bda8cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731222"
 ---
-# <a name="refresh-method-example-vbscript"></a>メソッドの例 (VBScript) の更新します。
+# <a name="refresh-method-example-vbscript"></a>Refresh メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- 次の例は、のために必要なパラメーターを設定する方法を示します[.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)実行時にします。 方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を使用して取得されて、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドの設定によって決まります、 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)と[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)プロパティです。 この例をテストして、次のコードを通常 ASP ドキュメントに貼り付けてを切り取ってという名前を付けます**RefreshVBS.asp**です。 使用して**検索**Adovbs.inc ファイルを見つけて、使用する予定のディレクトリに配置します。 ASP スクリプトは、サーバーで識別されます。  
+ 次の例は、の必要なパラメーターを設定する方法を示します[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)実行時にします。 方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を使用して取得されて、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドは、の設定によって決まりますが、 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)と[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)プロパティ。 この例をテストする切り取りと標準の ASP 文書に次のコードを貼り付けるし、名前を付けます**RefreshVBS.asp**します。 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 ASP スクリプトは、サーバーで識別されます。  
   
 ```  
 <!-- BeginRefreshVBS -->  
@@ -182,7 +179,7 @@ End Sub
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ExecuteOptions プロパティ (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions プロパティ (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 
 

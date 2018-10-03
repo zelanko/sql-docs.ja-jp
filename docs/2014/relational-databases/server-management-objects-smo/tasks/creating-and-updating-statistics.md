@@ -1,30 +1,27 @@
 ---
-title: 作成して、統計の更新 |Microsoft Docs
+title: 作成して、統計の更新 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b39e736f3d1bb13f3b04aae7ee5ece81386ec5c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bb4fe2a6670cd2cb5eb9db95367607647681434
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121622"
 ---
 # <a name="creating-and-updating-statistics"></a>統計の作成と更新
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Statistic> オブジェクトを使用して、データベース内のクエリの処理に関する統計情報を収集することができます。  

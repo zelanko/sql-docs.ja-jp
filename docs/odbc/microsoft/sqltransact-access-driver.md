@@ -1,33 +1,30 @@
 ---
-title: SQLTransact (Access ドライバー) |Microsoft ドキュメント
+title: SQLTransact (Access ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], SQLTransact
 - SQLTransact function [ODBC], Access Driver
 ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96085748caf432aeba1d7876edf99ae3a2de4035
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0cb17ed043a6b533b007769b9cbb28652d06e6f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719616"
 ---
 # <a name="sqltransact-access-driver"></a>SQLTransact (Access ドライバー)
 > [!NOTE]  
->  このトピックでは、アクセス ドライバー固有の情報を提供します。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
+>  このトピックでは、Access ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- Microsoft Access ドライバーを使用すると指定してと SQL_ROLLBACK はサポートされて、 *fType*への呼び出しで引数**SQLTransact**です。  
+ Microsoft Access ドライバーを使用すると、ときに指定してと SQL_ROLLBACK はサポートされて、 *fType*への呼び出しで引数**SQLTransact**します。  
   
- Microsoft Access ドライバーのセットアップまたは REPAIR_DB キーワードを使用して、[修復] オプションを使用して、影響を受けたデータベースを修復できるコミット処理でエラーが発生した場合、 **SQLConfigDataSource**関数。
+ や REPAIR_DB キーワードを使用して Microsoft Access ドライバーのセットアップには、データベースの修復オプションを使用して、影響を受けたデータベースを修復できるコミット処理中にエラーが発生した場合、 **SQLConfigDataSource**関数。

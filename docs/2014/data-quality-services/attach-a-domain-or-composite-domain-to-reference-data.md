@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d22efa3a5f3c62915527fd4acc756217fe6556f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51f76ea70542dd354c414f660259fbe4afcf90f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202482"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150002"
 ---
-# <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>参照データへのドメインまたは複合ドメインをアタッチします。
+# <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>参照データにドメインまたは複合ドメインをアタッチする
   このトピックでは、データ品質ナレッジ ベースのドメインと複合ドメインを Windows Azure Marketplace の参照データ サービスにアタッチして、高品質参照データに対するナレッジを構築する方法について説明します。 各参照データ サービスには、スキーマ (データ列) が含まれています。 ドメインまたは複合ドメインを参照データ サービスにアタッチしたら、アタッチしたドメインまたはアタッチした複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップする必要があります。 複合ドメインを参照データ サービスにアタッチすると、参照データ サービスに 1 つだけドメインをアタッチして、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップできます。  
   
 > [!WARNING]  

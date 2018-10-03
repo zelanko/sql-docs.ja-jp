@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37fa2a790e5eeeabd621cd6581848d913f178138
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19d3d28ac65625fd3141089f5c99a59b72225f2e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135669"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>[列の NULL 比プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列の NULL 比要求]** のオプションを設定できます。 列の NULL 比プロファイルは、選択した列の NULL 値の比率を報告します。 このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 たとえば、列の NULL 比プロファイルを使用して郵便番号列をプロファイルすると、許容範囲を超える欠落した郵便番号の比率を検出できます。  

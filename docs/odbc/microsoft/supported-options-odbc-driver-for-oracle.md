@@ -1,35 +1,32 @@
 ---
-title: サポートされているオプション (ODBC Driver for Oracle) |Microsoft ドキュメント
+title: サポートされているオプション (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], supported options
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b3af252f4b0e80c4220cd93aa3e7c4e9e65b6e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7444b02140bb102753cbc25026b990fb92f19d65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610381"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>サポートされているオプション (ODBC Driver for Oracle)
 > [!IMPORTANT]  
 >  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
   
- ODBC Driver for Oracle には、SQLGetConnectOption () と SQLSetConnectOption に関するページ () の第 1 レベルの関数の次のオプションがサポートされています。  
+ ODBC Driver for Oracle では、SQLGetConnectOption () と SQLSetConnectOption () レベル 1 関数を次のオプションをサポートします。  
   
--   SQL_ACCESS_MODE ([SQLGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)のみに関するページ ())  
+-   SQL_ACCESS_MODE ([SQLGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)のみ ())  
   
 -   [SQL_AUTOCOMMIT](../../odbc/microsoft/connect-options.md)  
   
@@ -45,7 +42,7 @@ ms.locfileid: "32914437"
   
 -   [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)  
   
- ODBC Driver for Oracle には、SQLGetStmtOption () と SQLSetStmtOption に関するページ () の第 1 レベルの関数の次のオプションがサポートされています。  
+ ODBC Driver for Oracle では、SQLGetStmtOption () と SQLSetStmtOption () レベル 1 関数を次のオプションをサポートします。  
   
 -   [SQL_BIND_TYPE](../../odbc/microsoft/statement-options.md)  
   

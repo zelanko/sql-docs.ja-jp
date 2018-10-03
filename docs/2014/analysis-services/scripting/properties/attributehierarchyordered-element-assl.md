@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeHierarchyOrdered Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeHierarchyOrdered element
 ms.assetid: 7e2fa8b3-04a7-4748-bdc1-8a0ab2f984e1
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6731ab4d711e042bdefbed0cf713681d05f8812b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af6af6497a1199be2c905ad139f4b1c5d08cfe71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094402"
 ---
 # <a name="attributehierarchyordered-element-assl"></a>AttributeHierarchyOrdered 要素 (ASSL)
   関連付けられた属性階層に順序付けを行うかどうかを指定します。  

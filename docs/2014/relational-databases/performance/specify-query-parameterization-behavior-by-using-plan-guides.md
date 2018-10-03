@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - plan guides [SQL Server], parameterization
 - parameterized queries [SQL Server]
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 14b6f6ef004ed7ebf377b38bee7b17fa0423e257
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421671"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148202"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>プラン ガイドを使用したクエリのパラメーター化動作の指定
   PARAMETERIZATION データベース オプションが SIMPLE に設定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーはクエリのパラメーター化を選択することがあります。 これは、クエリに含まれるリテラル値がすべてパラメーターに置き換えられることを意味します。 この処理を簡易パラメーター化と呼びます。 簡易パラメーター化が有効であれば、クエリのパラメーター化を行う場合と行わない場合を制御することはできません。 ただし、PARAMETERIZATION データベース オプションを FORCED に設定することにより、データベース内のすべてのクエリをパラメーター化するように指定できます。 この処理を強制パラメーター化と呼びます。  

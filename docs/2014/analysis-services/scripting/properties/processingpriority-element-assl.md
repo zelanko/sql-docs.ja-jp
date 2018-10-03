@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProcessingPriority Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProcessingPriority element
 ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5dcbf28ff2dd0fbcbbc64aba7785e41caab3905c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68a37c316cee72697cc24d23152b2b7035ea2386
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121552"
 ---
 # <a name="processingpriority-element-assl"></a>ProcessingPriority 要素 (ASSL)
   レイジー集計、インデックス作成、クラスター化など、バックグラウンド操作中の親オブジェクトの処理の優先順序を決定します。  

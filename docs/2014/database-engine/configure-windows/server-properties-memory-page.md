@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86b1356a28f817f96cdd597d748909799c6cce2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e9d0a6b6322c0a8a02c02ba53748e769bf9f656
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069842"
 ---
 # <a name="server-properties-memory-page"></a>[サーバーのプロパティ] ([メモリ] ページ)
   このページを使用すると、サーバーのメモリ オプションを表示または変更できます。 **[最小サーバー メモリ]** を 0 に、 **[最大サーバー メモリ]** を 2,147,483,647 MB に設定しておくと、オペレーティング システムおよび他のアプリケーションによって現在どれだけの量のメモリが使用されているかに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に最適な量のメモリを利用できます。 コンピューターと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の負荷が変化すると、割り当てメモリも変化します。 この動的メモリ割り当ては、次に示す最小値および最大値に制限できます。  

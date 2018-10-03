@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sproc_columns
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8923e4f38ec6ef69de9817ebc3940da07a1518db
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1b1e2b14830e6b2be7d1e00ac1419070ee26eb5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833141"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,9 +75,9 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|プロシージャ修飾子の名前。 この列は、NULL の場合もあります。|  
-|**PROCEDURE_OWNER**|**sysname**|プロシージャ所有者の名前。 この列は、常に値を返します。|  
-|**PROCEDURE_NAME**|**nvarchar (** 134 **)**|プロシージャの名前。 この列は、常に値を返します。|  
-|**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 この列は、常に値を返します。|  
+|**PROCEDURE_OWNER**|**sysname**|プロシージャ所有者の名前。 この列は常に値が返されます。|  
+|**PROCEDURE_NAME**|**nvarchar (** 134 **)**|プロシージャの名前。 この列は常に値が返されます。|  
+|**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 この列は常に値が返されます。|  
 |**COLUMN_TYPE**|**smallint**|このフィールドは、常に値を返します。<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|ODBC データ型用の整数コードです。 このデータ型が ISO 型にマップできない場合、値は NULL になります。 ネイティブ データ型の名前が返されます、 **TYPE_NAME**列。|  
 |**TYPE_NAME**|**sysname**|データ型を表す文字列です。 これは、基になる DBMS によって表されるデータ型の名前です。|  
@@ -92,10 +88,10 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**NULLABLE**|**smallint**|NULL 値を許容するかどうかを指定します。<br /><br /> 1 = NULL 値を許容するデータ型が作成されます。<br /><br /> 0 = null 値は許可されません。|  
 |**「解説」**|**varchar (** 254 **)**|プロシージャの列の説明です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|列の既定値です。|  
-|**SQL_DATA_TYPE**|**smallint**|表示されるように SQL データ型の値、**型**の記述子フィールド。 この列と同じ、 **DATA_TYPE**列を除き、 **datetime**と ISO**間隔**データ型。 この列は、常に値を返します。|  
-|**SQL_DATETIME_SUB**|**smallint**|**Datetime** ISO**間隔**サブコードの場合、値の**SQL_DATA_TYPE**は**SQL_DATETIME**または**SQL_INTERVAL**. 型のデータ型以外**datetime**と ISO**間隔**、このフィールドは NULL です。|  
+|**SQL_DATA_TYPE**|**smallint**|表示されるように SQL データ型の値、**型**の記述子フィールド。 この列は、**datetime** データ型と ISO **interval** データ型以外は、**DATA_TYPE** 列と同じです。 この列は常に値が返されます。|  
+|**SQL_DATETIME_SUB**|**smallint**|**SQL_DATA_TYPE** の値が **SQL_DATETIME** または **SQL_INTERVAL** の場合は、**datetime** ISO **interval** サブコードになります。 型のデータ型以外**datetime**と ISO**間隔**、このフィールドは NULL です。|  
 |**CHAR_OCTET_LENGTH**|**int**|最大長のバイト単位、**文字**または**バイナリ**データ型の列。 他のすべてのデータ型の場合、この列は NULL を返します。|  
-|**ORDINAL_POSITION**|**int**|テーブル内での列の序数。 テーブルの最初の列は 1 です。 この列は、常に値を返します。|  
+|**ORDINAL_POSITION**|**int**|テーブル内での列の序数。 テーブルの最初の列は 1 です。 この列は常に値が返されます。|  
 |**IS_NULLABLE**|**varchar(254)**|テーブル内にある列の NULL 値の許容属性。 NULL 値の許容属性の検査は ISO の規則に従います。 ISO に準拠している DBMS では、空文字列を返すことはできません。<br /><br /> 列が NULL を含むことができる場合は YES、含むことができない場合は NO を表示します。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> この列に返される値は、NULLABLE 列に返される値とは異なります。|  
 |**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用されるデータ型は拡張ストアド プロシージャです。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
   

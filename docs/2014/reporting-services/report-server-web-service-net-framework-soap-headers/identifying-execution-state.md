@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - session states [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 252ec37bb94881a04cfe1137c829274cac6ad893
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc6189daffb2e099023ff6adb0d247c28c922545
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114362"
 ---
 # <a name="identifying-execution-state"></a>実行状態の識別
   Hypertext Transfer Protocol (HTTP) はコネクションレスおよびステートレス プロトコルです。つまり、同じクライアントから異なる要求が来ているかどうかは自動的に検出されません。さらに、ページまたはサイトを表示している 1 つのブラウザーが現在アクティブであるかどうかも、自動的には示されません。 セッションが論理接続を作成し、HTTP を介したサーバーとクライアント間の状態を保持します。 特定のセッションに関連するユーザー固有情報は、セッション状態と呼ばれます。  

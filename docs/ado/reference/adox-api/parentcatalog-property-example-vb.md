@@ -1,32 +1,29 @@
 ---
-title: ParentCatalog プロパティの例 (VB) |Microsoft ドキュメント
+title: ParentCatalog プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ParentCatalog property [ADOX], Visual Basic example
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcf2ade63bf882a3b3fe8681d2126fd6a47e5d2b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a98d750a42692c10a083a1a953e81f274fca7dd1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762699"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog プロパティの例 (VB)
-次のコードを使用する方法を示しています、 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)カタログにテーブルを追加する前に、プロバイダー固有のプロパティにアクセスするプロパティです。 このプロパティは**AutoIncrement**、Microsoft Jet データベースで自動増分 フィールドを作成します。  
+次のコードを使用する方法を示します、 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)カタログにテーブルを追加する前に、プロバイダー固有のプロパティにアクセスするプロパティ。 プロパティが**AutoIncrement**、Microsoft Jet データベースを [自動増分] フィールドを作成します。  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -88,11 +85,11 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADOX 列)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append メソッド (ADOX テーブル)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列のコレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [ParentCatalog プロパティ (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
  [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   

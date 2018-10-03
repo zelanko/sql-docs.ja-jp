@@ -1,13 +1,11 @@
 ---
-title: ODBC 関数や Visual FoxPro ODBC ドライバー |Microsoft ドキュメント
+title: ODBC 関数と、Visual FoxPro ODBC ドライバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
@@ -20,30 +18,29 @@ helpviewer_keywords:
 - level 2 API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbd0f2c54fb84f21d0a2448dcab07f22a47ae32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905077"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782680"
 ---
-# <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの ODBC 関数
+# <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 関数と Visual FoxPro ODBC ドライバー
 このセクションのトピックでは、ODBC API 関数の簡単な概要と、Visual FoxPro 固有の詳細情報を提供します。  
   
 > [!NOTE]  
->  ODBC 関数に関する概要については、次を参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC プログラマ ガイド」にします。  
+>  ODBC 関数については、次を参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC プログラマ ガイド 』 を参照します。  
   
- ODBC API 関数は、ここで次の 3 つの主なカテゴリに分類されています。 レベルの主要な API 関数、レベル 1 の API 関数、およびレベル 2 の API 関数。  
+ ODBC API 関数は、ここで次の 3 つの主なカテゴリに分けられています: コア レベル API 関数、レベル 1 API 関数、およびレベル 2 API 関数。  
   
 > [!NOTE]  
->  ディレクトリへの接続として、データ ソースを定義するかどうかに応じていくつかの関数の動作が異なる[テーブルの空き](../../odbc/microsoft/visual-foxpro-terminology.md)(.dbf ファイル) や Visual foxpro[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)(.dbc ファイル)。 特定の操作は、データベース接続に対してのみサポートされます。  
+>  いくつかの関数の動作は、データ ソースがのディレクトリへの接続として定義されているかどうかによって異なります[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)(.dbf ファイル) または Visual foxpro[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)(.dbc ファイル)。 特定の操作は、データベース接続に対してのみサポートされます。  
   
-## <a name="core-level-api-support"></a>コア レベルの API サポート  
- ODBC Core レベル API 関数は、次の表に一覧表示されます。 これらの関数のすべては、Visual FoxPro ODBC ドライバーでサポートされます。  
+## <a name="core-level-api-support"></a>コア レベル API のサポート  
+ ODBC Core レベル API 関数は、次の表に表示されます。 これらすべての関数は、Visual FoxPro ODBC ドライバーでサポートされます。  
   
 |||  
 |-|-|  
@@ -56,11 +53,11 @@ ms.locfileid: "32905077"
 |[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)|[SQLNumResultCols](../../odbc/microsoft/sqlnumresultcols-visual-foxpro-odbc-driver.md)|  
 |[SQLDescribeCol](../../odbc/microsoft/sqldescribecol-visual-foxpro-odbc-driver.md)|[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)|  
 |[SQLDisconnect](../../odbc/microsoft/sqldisconnect-visual-foxpro-odbc-driver.md)|[SQLRowCount](../../odbc/microsoft/sql-row-count-visual-foxpro-odbc-driver.md)|  
-|[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)|[SQLSetCursorName](../../odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md)|  
+|[Sqlerror 関数](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)|[SQLSetCursorName](../../odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md)|  
 |[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-1-api-support"></a>レベル 1 の API サポート  
- ODBC レベル 1 の API 関数は、次の表に一覧表示されます。 これらすべての関数は完全または部分的にサポートされている Visual FoxPro ODBC ドライバーでします。  
+## <a name="level-1-api-support"></a>レベル 1 API のサポート  
+ ODBC レベル 1 API 関数は、次の表に表示されます。 これらすべての関数は完全または部分的にサポートされている Visual FoxPro ODBC ドライバーでします。  
   
 |||  
 |-|-|  
@@ -73,8 +70,8 @@ ms.locfileid: "32905077"
 |[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md)|[SQLStatistics](../../odbc/microsoft/sqlstatistics-visual-foxpro-odbc-driver.md)|  
 |[SQLGetStmtOption](../../odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md)|[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-2-api-support"></a>レベル 2 の API サポート  
- 次の ODBC レベル 2 の API 関数は、完全または部分的にサポートされています。  
+## <a name="level-2-api-support"></a>レベル 2 API のサポート  
+ 次のレベル 2 API の ODBC 関数が完全または部分的にサポートされます。  
   
 -   [SQLDataSources](../../odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md)  
   
@@ -94,7 +91,7 @@ ms.locfileid: "32905077"
   
 -   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) (部分的なサポート)  
   
- 次のレベル 2 の API 関数はサポートされていません。  
+ 次のレベル 2 API 関数がサポートされていません。  
   
 -   SQLBrowseConnect  
   

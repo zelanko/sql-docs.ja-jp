@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9048eb69fd10cafc97daa91b5cac8571a4240cd0
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 08b1084f2f54a204f82bc0d1a0ee4096d207d835
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773980"
 ---
 # <a name="setting-project-options-sybasetosql"></a>プロジェクト オプションの設定 (SybaseToSQL)
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定することができます。 これらのオプションは、オブジェクトへの変換、オブジェクトの読み込み、SQL azure、ユーザー インターフェイス、およびデータ移行の設定を指定します。 オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure にデータを移行または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、構成オプションが、プロジェクトの適切なことを確認します。  
@@ -51,7 +45,7 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 3.  [完全]  
   
-4.  Custom  
+4.  カスタム  
   
 ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティック モードでは、Sybase Adaptive Server Enterprise (ASE) の現在の構文の詳細を保持し、読みやすきます。 ただし、現在の構文を維持することができない正確です。 ASE の構文と同等に変換する必要がある場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の構文、完全なモード、完全な変換を実行しますが、結果のコードが読みにくくなる可能性があります。 カスタム モードでは、オプションを設定します。  
   

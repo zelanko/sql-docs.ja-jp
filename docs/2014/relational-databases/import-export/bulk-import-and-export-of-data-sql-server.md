@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server]
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfbd00c0079aec3e9bcfa67560962356be1cad4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36065984f03980f54cbc6a75162bb007f8b5f772
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124442"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>データの一括インポートと一括エクスポート (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*テーブルからのデータの一括エクスポート (* 一括データのエクスポート [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはパーティション分割されていないビューへの一括データのインポートがサポートされています。 一括インポートと一括エクスポートは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と異種データ ソースとの間で効率的にデータを転送するための重要な機能です。 *一括エクスポート* とは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルから特定のデータ ファイルにデータをコピーすることです。 *一括インポート* は、データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを読み込むことを指します。 たとえば、データを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel アプリケーションから特定のデータ ファイルにエクスポートした後、そのデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに一括インポートできます。  

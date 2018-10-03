@@ -1,13 +1,11 @@
 ---
-title: 接続のプロパティの例 (VB) |Microsoft ドキュメント
+title: 接続プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], Visual Basic example
 - State property [ADO], Visual Basic example
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f32ca41bca8a2583102360c99483a14b72d2a2cc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e4490edc175b14beb51b26edb205a0ace57f4ff0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695170"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、および (VB) の状態プロパティの例
-この例を使用する別の方法を示します、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを開くには、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 でも使用、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)接続タイムアウトを設定するプロパティと[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティを接続の状態を確認します。 GetState 関数は、この手順を実行する必要があります。  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、および状態のプロパティの例 (VB)
+この例を使用してさまざまな方法を示しています、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを開き、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)接続タイムアウトを設定するプロパティと[状態](../../../ado/reference/ado-api/state-property-ado.md)接続の状態を確認するプロパティ。 GetState 関数は、この手順を実行する必要があります。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
   
 ```  
 'BeginConnectionStringVB  

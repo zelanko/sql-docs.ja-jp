@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc765cfceb8e52d3fbb578e3c3b6f212f28a3291
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cd620197e78c70f4d351d3dcb69dc5cf4459296
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116982"
 ---
 # <a name="query-builder"></a>クエリ ビルダー
   **[クエリ ビルダー]** ダイアログ ボックスを使用すると、SQL 実行タスク、OLE DB 変換元と OLE DB 変換先、および参照変換で使用するクエリを作成できます。  

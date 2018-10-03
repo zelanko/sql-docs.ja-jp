@@ -1,38 +1,35 @@
 ---
-title: プロパティのオブジェクト (ADOX) |Microsoft ドキュメント
+title: オブジェクトのプロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Property object [ADOX]
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db31ab407ee6268d14797ea3f50a9056c287f314
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2502dcdab170102f526aa1ea0fe67235e6bf3048
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815600"
 ---
-# <a name="property-object-adox"></a>プロパティのオブジェクト (ADOX)
+# <a name="property-object-adox"></a>Property オブジェクト (ADOX)
 ADOX オブジェクトの特性を表します。  
   
 ## <a name="remarks"></a>コメント  
- ADOX オブジェクトが 2 種類のプロパティを設定します。 組み込みと動的です。  
+ ADOX オブジェクトは、2 種類のプロパティを設定します。 組み込みおよび動的な。  
   
- 組み込みのプロパティは、MyObject.Property 構文を使用して、すべての新しいオブジェクトにすぐに利用可能なこれらのプロパティです。 オブジェクトのプロパティ オブジェクトとしては表示されません[Properties コレクション](../../../ado/reference/ado-api/properties-collection-ado.md)ので、その値を変更できますが、その特性を変更することはできません。  
+ 組み込みのプロパティは、MyObject.Property 構文を使用して、すべての新しいオブジェクトにすぐに利用できるこれらのプロパティです。 オブジェクトのプロパティ オブジェクトとして表示されない[プロパティ コレクション](../../../ado/reference/ado-api/properties-collection-ado.md)ので、その値を変更できますが、その特性を変更することはできません。  
   
- 動的プロパティは、基になるデータ プロバイダーによって定義され、適切な ADOX オブジェクトのプロパティのコレクションに表示されます。  動的なプロパティは、MyObject.Properties(0) または MyObject.Properties("Name") 構文を使用して、コレクションからのみ参照できます。  
+ 動的プロパティは基になるデータ プロバイダーによって定義され ADOX の適切なオブジェクトのプロパティのコレクション。  動的プロパティは、MyObject.Properties(0) または MyObject.Properties("Name") 構文を使用して、コレクションのみを参照できます。  
   
  プロパティのいずれかの種類を削除することはできません。  
   
@@ -44,7 +41,7 @@ ADOX オブジェクトの特性を表します。
   
  [値](../../../ado/reference/ado-api/value-property-ado.md)プロパティは、プロパティの設定を含んでいるバリアント。 値は、プロパティ オブジェクトの既定のプロパティです。  
   
- [属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティは、プロバイダーに固有のプロパティの特性を示す long 値です。  
+ [属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティは、プロバイダーに固有のプロパティの特性を示す long 値。  
   
  このセクションには、次のトピックが含まれています。  
   

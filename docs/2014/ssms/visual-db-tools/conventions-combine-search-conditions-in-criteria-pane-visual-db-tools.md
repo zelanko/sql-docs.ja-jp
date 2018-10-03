@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 - multiple AND clauses
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e007ca5b58c557b73910f07a1eef698d00ba505
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 80c7cff0831ef49610c05b28fda94b82e51225e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052592"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>抽出条件ペインで検索条件を組み合わせる場合の規則 (Visual Database Tools)
   クエリを作成する際には、任意の数の AND および OR 演算子で結合して任意の数の検索条件を含めることができます。 AND 句と OR 句を組み合わせたクエリは複雑になる場合があるため、そのようなクエリを実行したときにどのように解釈されるのか、およびそのようなクエリが[抽出条件ペイン](visual-database-tools.md)と [SQL ペイン](sql-pane-visual-database-tools.md)でどのように表現されるのかについて理解しておくと役に立ちます。  

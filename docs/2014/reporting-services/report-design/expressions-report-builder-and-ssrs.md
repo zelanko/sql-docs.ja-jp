@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 272aba58ecd342bd1bf0040a9b14beca15e4d160
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110858"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>式 (レポート ビルダーおよび SSRS)
   式はレポート全体にわたって、データの取得、計算、表示、グループ化、並べ替え、フィルター処理、パラメーター化、書式設定などのために広く使用されます。 レポート アイテムのプロパティの多くには、式を設定できます。 式を使用すると、レポートの内容、デザイン、対話性を制御できます。 式が記述されて[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]され、レポート定義に保存され、レポートを実行するときに、レポート プロセッサによって評価されます。  

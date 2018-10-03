@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
 - SQL Server Database Engine
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
-caps.latest.revision: 44
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72b82411378ab2d47b9a9d94c0aad0fe0b8e3f72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4bd5e87f611d88c0ad2c6ce3e3e95aeb2f0fffa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056492"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
   [!INCLUDE[ssDE](../includes/ssde-md.md)]は、データの格納、処理、セキュリティ確保のための中心的なサービスです。 [!INCLUDE[ssDE](../includes/ssde-md.md)]は、アクセス制御と高速トランザクション処理を提供しており、これらを活用すれば、企業内で最も大規模なデータ処理アプリケーションの要件にも対応できます。  

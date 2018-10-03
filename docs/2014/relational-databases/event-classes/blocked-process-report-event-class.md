@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42f2ddfeb6df940b03301a731ac2e868423ba112
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2aecd264eac2a6beada1009ae070f1858dd6822c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141032"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report イベント クラス
   **Blocked Process Report** イベント クラスは、指定された時間より長い間タスクがブロックされていることを示します。 このイベント クラスには、システム タスクやデッドロックを検出できないリソースを待機しているタスクは含まれません。  

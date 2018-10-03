@@ -1,13 +1,11 @@
 ---
-title: ODBC エラー コード (Visual FoxPro ODBC ドライバー) |Microsoft ドキュメント
+title: ODBC エラー コード (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error codes
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9ba3a447912b61b38fc8742cf9ac876c01f4197
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605110"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC エラー コード (Visual FoxPro ODBC ドライバー)
-次の表は、ODBC エラー コードの SQLSTATE 値にマップされている Visual FoxPro エラー コードを示します。 マップの SQLSTATE 値に由来[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)と[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)です。 その他の ODBC API から他の SQLSTATE 値がマップされていないため**SQLExecDirect**と**SQLPrepare** Visual FoxPro エンジンにアクセスする唯一の関数は、します。  
+次の表では、ODBC エラー コードの SQLSTATE 値にマップされている Visual FoxPro のエラー コードを示します。 マップの SQLSTATE 値に由来[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)と[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)します。 その他の ODBC API の他の SQLSTATE 値がマップされていないため、 **SQLExecDirect**と**SQLPrepare** Visual FoxPro エンジンにアクセスする唯一の関数。  
   
- ODBC エラー コードの詳細については、次を参照してください。[付録 a: ODBC エラー コード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)で、 *ODBC プログラマ リファレンス*です。  
+ ODBC エラー コードの詳細については、次を参照してください。[付録 a: ODBC エラー コード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)の、 *ODBC プログラマ リファレンス*します。  
   
-|SQLSTATE|Visual FoxPro エラー コード|  
+|SQLSTATE|Visual FoxPro のエラー コード|  
 |--------------|------------------------------|  
 |S1001|149<br /><br /> 150<br /><br /> 182<br /><br /> 202<br /><br /> 308|  
 |1004|159|  

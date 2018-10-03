@@ -1,13 +1,11 @@
 ---
-title: AbsolutePosition と CursorLocation プロパティの例 (JScript) |Microsoft ドキュメント
+title: AbsolutePosition および CursorLocation プロパティの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], JScript example
 - CursorLocation property [ADO], JScript example
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42804caabae25b5c3617b6a17bcb74a77531bbe1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f252bf8a7c4fb7ecac2b226f669f5bd114b90574
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647970"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition と CursorLocation プロパティの例 (JScript)
-次の例でどのように[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティは、のすべてのレコードを列挙するループの進行状況を追跡できます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。 使用して、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)を有効にするプロパティ、 **AbsolutePosition**プロパティをクライアント カーソルにカーソルを設定します。 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**AbsolutePositionJS.asp**です。  
+# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition および CursorLocation プロパティの例 (JScript)
+この例では、どのように[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティのすべてのレコードを列挙するループの進行状況を追跡できます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを有効にする、 **AbsolutePosition**クライアント カーソルをカーソルを設定するプロパティ。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AbsolutePositionJS.asp**します。  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  

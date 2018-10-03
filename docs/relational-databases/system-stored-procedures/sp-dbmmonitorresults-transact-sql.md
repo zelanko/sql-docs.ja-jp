@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorresults (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dbmmonitorresults (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16061dc41994cd032a9e6124d38abf3acb2e6be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256674"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702750"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +74,7 @@ sp_dbmmonitorresults database_name
   
  0 = データベースの状態を更新しない。 結果は最新 2 行のみから計算されます。行の古さは状態テーブルが更新された日時を基に判断されます。  
   
- 1 = 呼び出すことによって、データベースの状態を更新**sp_dbmmonitorupdate**結果を計算する前にします。 ただし、状態テーブルが直前の 15 秒またはユーザー内で更新されている場合は、メンバー以外、 **sysadmin**固定サーバー ロール、 **sp_dbmmonitorresults**状態を更新せずに実行します。  
+ 1 = データベースの状態を呼び出して更新**sp_dbmmonitorupdate**結果を計算する前にします。 ただし、状態テーブルが直前の 15 秒、またはユーザー内で更新されている場合はのメンバー、 **sysadmin**固定サーバー ロール、 **sp_dbmmonitorresults**状態を更新することがなく実行されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -86,12 +82,12 @@ sp_dbmmonitorresults database_name
 ## <a name="result-sets"></a>結果セット  
  指定されたデータベースの履歴の状態に関する情報を、要求された行数分返します。 各行には次の情報が含まれます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|ミラー化されたデータベースの名前。|  
 |**role**|**int**|サーバー インスタンスの現在のミラーリング ロール。<br /><br /> 1 = プリンシパル<br /><br /> 2 = ミラー|  
 |**mirroring_state**|**int**|データベースの状態。<br /><br /> 0 = 中断状態<br /><br /> 1 = 切断<br /><br /> 2 = 同期中<br /><br /> 3 = フェールオーバーを保留しています<br /><br /> 4 = 同期済み|  
-|**witness_status**|**int**|データベースのデータベース ミラーリング セッションにおけるミラーリング監視の接続状態。次のいずれかです。<br /><br /> 0 = 不明<br /><br /> 1 = 接続<br /><br /> 2 = 切断|  
+|**witness_status**|**int**|データベースのデータベース ミラーリング セッションにおけるミラーリング監視の接続状態。次のいずれかです。<br /><br /> 0 = 不明<br /><br /> 1 = 接続済み<br /><br /> 2 = 切断|  
 |**log_generation_rate**|**int**|このデータベースのミラーリングの状態が前回更新されてからのログ生成率 (KB/秒単位)。|  
 |**unsent_log**|**int**|プリンシパルの送信キューにある未送信のログのサイズ (KB 単位)。|  
 |**send_rate**|**int**|プリンシパルからミラーへのログの送信率 (KB/秒単位)。|  
@@ -104,14 +100,14 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|ミラー データベースで現在認識されている、プリンシパルのシステム クロックのおおよその時間。 この値はプリンシパル サーバー インスタンスでのみ意味を持ちます。|  
 |**local_time**|**datetime**|この行が更新されたときのローカル サーバー インスタンスのシステム クロック時間。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dbmmonitorresults**のコンテキストでのみ実行できる、 **msdb**データベース。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **sysadmin**固定サーバー ロールまたは、 **dbm_monitor**の固定データベース ロール、 **msdb**データベース。 **Dbm_monitor**ロールのメンバーはデータベース ミラーリングの状態を表示が、更新しますが、ないを表示または構成していないデータベース ミラーリング イベントを有効にします。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたは、 **dbm_monitor**固定データベース ロール、 **msdb**データベース。 **Dbm_monitor**役割は、データベース ミラーリングの状態を表示がない更新しますが、ない表示または構成するデータベース ミラーリング イベントは、そのメンバーを使用できます。  
   
 > [!NOTE]  
->  初めて発生したとき**sp_dbmmonitorupdate**が実行される作成、 **dbm_monitor**の固定データベース ロール、 **msdb**データベース。 メンバー、 **sysadmin**任意のユーザーを追加できるは、固定サーバー ロール、 **dbm_monitor**固定データベース ロール。  
+>  初めて**sp_dbmmonitorupdate**の実行が作成されます、 **dbm_monitor**固定データベース ロール、 **msdb**データベース。 メンバー、 **sysadmin**すべてのユーザーを追加できるは、固定サーバー ロール、 **dbm_monitor**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、データベースの状態を更新せずに、過去 2 時間に記録された行を返します。  
@@ -122,7 +118,7 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングと &#40; の監視SQL Server と &#41; です。](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   

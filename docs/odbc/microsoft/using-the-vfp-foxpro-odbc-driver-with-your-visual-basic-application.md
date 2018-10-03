@@ -1,13 +1,11 @@
 ---
-title: VFP FoxPro ODBC ドライバーを使用してアプリケーションを使用して Visual Basic |Microsoft ドキュメント
+title: Visual Basic アプリケーションでの VFP FoxPro ODBC ドライバーの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], visual basic applications
@@ -15,49 +13,48 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], visual basic applications
 - Visual FoxPro data [ODBC], visual basic applications
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96107d42ae4923cd1b9f7ad1c16bd492d0203c99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b77fdee70ff73772710c9758eeb2bf2594f365d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697882"
 ---
-# <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Visual Basic アプリケーションで VFP FoxPro ODBC ドライバーを使用
-Microsoft® Visual Basic® アプリケーションは、Visual FoxPro データ ソースに接続するデータ コントロールを作成することで、Visual FoxPro データと通信できます。  
+# <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Visual Basic アプリケーションでの VFP FoxPro ODBC ドライバーの使用
+Microsoft® Visual Basic® アプリケーションは、Visual FoxPro データ ソースに接続するデータ コントロールを作成して、Visual FoxPro データと通信できます。  
   
-#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Visual FoxPro を Visual Basic では、データ コントロールを使用してデータに接続するには  
+#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Visual basic データ コントロールを使用して Visual FoxPro データに接続するには  
   
-1.  Visual FoxPro に含まれる TasTrade サンプル データベースに接続するデータ ソースが"test"という名前を作成します。 Visual FoxPro の既定のインストール場所に TasTrade サンプル データベースに配置します。  
+1.  Visual FoxPro に含まれる TasTrade サンプル データベースに接続するデータ ソースが"test"という名前を作成します。 Visual FoxPro の既定のインストールは、場所、TasTrade サンプル データベースを配置します。  
   
     ```  
     c:\vfp\samples\mainsamp\data\tastrade.dbc  
     ```  
   
-2.  Visual Basic では、新しいフォームを作成し、テキスト ボックスと、上のデータ コントロールを配置します。  
+2.  Visual basic では、新しいフォームを作成し、テキスト ボックスと、上のデータ コントロールを配置します。  
   
-3.  次のように、データ コントロールの接続プロパティを変更します。  
+3.  データ コントロールの接続プロパティを次の手順に変更します。  
   
     ```  
     ODBC;DATABASE=tastrade;DSN=test  
     ```  
   
-4.  レコード セットを次のように変更します。  
+4.  レコード セットのプロパティを次のように変更します。  
   
     ```  
     2 - Snapshot  
     ```  
   
-5.  レコード ソース プロパティを次のように変更します。  
+5.  レコードのプロパティを次のように変更します。  
   
     ```  
     customer  
     ```  
   
-6.  テキスト ボックスの DataSource プロパティを次に、データ コントロールの既定の名前に変更します。  
+6.  テキスト ボックスの DataSource プロパティを次のデータ コントロールの既定の名前に変更します。  
   
     ```  
     data1  

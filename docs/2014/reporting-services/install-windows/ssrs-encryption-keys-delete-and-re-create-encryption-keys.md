@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 710ccc6a332e040989142eb9e9252b660982b044
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111025"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>暗号化キーの削除と再作成 (SSRS 構成マネージャー)
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  

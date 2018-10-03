@@ -1,13 +1,11 @@
 ---
-title: トラブルシューティング (Visual FoxPro ODBC ドライバー) |Microsoft ドキュメント
+title: トラブルシューティング (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - set ANSI [ODBC]
@@ -19,52 +17,51 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23bab07c1f00abc9fb0d2c353603a21b58975933
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f0576d017068b8ab0694da798c5be458f115e56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667970"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>トラブルシューティング (Visual FoxPro ODBC ドライバー)
 次のセクションでは、パフォーマンスが向上し、Visual FoxPro ODBC ドライバーを使用しているときに発生する可能性の問題を解決する方法について説明します。  
   
 ## <a name="accessing-parameterized-views"></a>パラメーター化されたビューへのアクセス  
- パラメーター化されたデータベースのビューの Visual FoxPro、ドライバーを使用してアクセスすることはできません。 パラメーター化されたビュー、ビューの SQL の WHERE 句を作成する**選択**レコードを制限するステートメントがパラメーターに指定された値を使用して構築された WHERE 句の条件に一致するレコードにダウンロードします。 ドライバーがビューにパラメーターの引き渡しをサポートしていないため、ドライバーを使用してパラメーター化されたビューにアクセスする試行は失敗します。  
+ ドライバーを使用して Visual FoxPro データベースでパラメーター化されたビューにアクセスすることはできません。 パラメーター化されたビュー、ビューの SQL の WHERE 句を作成する**選択**レコードを制限するステートメントがパラメーターに指定された値を使用して構築された WHERE 句の条件を満たすレコードにダウンロードします。 ドライバーがビューに渡すパラメーターをサポートしていないため、ドライバーを使用してパラメーター化されたビューのアクセスの試みは失敗します。  
   
- パラメーターの値は、実行時に提供またはビューにプログラムで渡されることがことができます。  
+ パラメーターの値は、実行時に指定またはビューに渡すプログラムでできます。  
   
 ## <a name="accessing-remote-views"></a>リモート ビューへのアクセス  
- リモート データベースのビューの Visual FoxPro、ドライバーを使用してアクセスすることはできません。 リモートのビューは、非 FoxPro データまたは FoxPro と FoxPro 以外のデータの組み合わせのいずれかにアクセスするビューです。 リモートのビューにアクセスするには、Visual FoxPro を使用します。  
+ ドライバーを使用して Visual FoxPro データベース内のリモートのビューにアクセスできません。 リモートのビューは、非 FoxPro データまたは FoxPro と非 FoxPro データの組み合わせのいずれかにアクセスするビューです。 リモートのビューにアクセスするには、Visual FoxPro を使用します。  
   
 ## <a name="deleting-records"></a>レコードを削除します。  
- ドライバーを使用して削除対象のレコードをマークすることができますが、データベースからレコードを完全に削除することはできません。 テーブルからレコードを完全に削除するには、Visual FoxPro を使用します。  
+ 削除、ドライバーを使用してレコードをマークすることができますが、データベースからレコードを完全に削除することはできません。 テーブルからレコードを完全に削除するには、Visual FoxPro を使用します。  
   
-## <a name="increasing-performance-using-background-fetching"></a>バック グラウンドでフェッチを使用してパフォーマンスの向上  
- ドライバーの機能をフェッチするバック グラウンドを使用して大規模なフェッチでパフォーマンスが向上します。 バック グラウンドのフェッチでは、別のスレッドを使用して特定のデータ ソースから要求されたデータを取り出します。  
+## <a name="increasing-performance-using-background-fetching"></a>バック グラウンド フェッチを使用してパフォーマンスの向上  
+ ドライバーの機能をフェッチしています。 バック グラウンドを使用して大規模なフェッチでパフォーマンスを向上できます。 特定のデータ ソースから要求されたデータをフェッチするのに別のスレッドを使用するバック グラウンドでフェッチしています。  
   
- バック グラウンドで、次の方法のいずれかのデータ ソースのフェッチを採用することができます。  
+ バック グラウンドで、次の方法のいずれかのデータ ソースのフェッチを使用することができます。  
   
--   チェック、**バック グラウンドでデータをフェッチ**チェック ボックス、 [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)です。  
+-   チェック、**バック グラウンドでデータをフェッチ**のチェック ボックス、 [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)します。  
   
--   接続文字列で BackgroundFetch 属性キーワードを使用します。  
+-   接続文字列で BackgroundFetch 属性のキーワードを使用します。  
   
- 接続文字列キーワードの属性については、次を参照してください。[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)です。  
+ 接続文字列キーワードの属性については、次を参照してください。[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)します。  
   
-## <a name="updating-multitiered-views"></a>多階層ビューの更新  
- 多層ビューは、ベース テーブルではなく 1 つまたは複数のビューに基づいてビューです。 最上位のビューの基になる; ビューに、更新プログラムが下のレベルを 1 つだけにするには、移動多層ビューでデータを更新するときにベース テーブルは更新されません。  
+## <a name="updating-multitiered-views"></a>多階層ビューを更新しています  
+ 多階層ビューは、ベース テーブルではなく、1 つまたは複数のビューに基づいてビューです。 更新プログラムが最上位のビューの基になる; ビューに移動下のレベルを 1 つだけにするには、多層ビュー内のデータを更新するときにベース テーブルは更新されません。  
   
 ## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>ストアド プロシージャでのデータ定義言語 (DDL) の使用  
- Visual FoxPro がストアド プロシージャで CREATE TABLE または ALTER TABLE などの DDL を使用することはできません。  
+ Visual FoxPro のストアド プロシージャで CREATE TABLE または ALTER TABLE などの DDL を使用することはできません。  
   
- ストアド プロシージャで使用できる言語については、次を参照してください。[規則、トリガー、既定値、およびストアド プロシージャのサポート](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)です。  
+ ストアド プロシージャで使用できる言語については、次を参照してください。[ルール、トリガー、既定値、およびストアド プロシージャのサポート](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)します。  
   
 ## <a name="using-positioned-updates"></a>位置指定更新を使用します。  
- ドライバーは、位置指定更新をサポートしていません。 SQL の WHERE 句を使用して、更新する行を識別します。  
+ ドライバーは、位置指定更新をサポートしていません。 SQL の WHERE 句を使用すると、更新する行を識別できます。  
   
 ## <a name="using-the-set-ansi-command"></a>SET ANSI コマンドの使用  
- Visual FoxPro 開発者でない場合に、ANSI の設定の既定の設定では、Visual FoxPro の OFF の既定の設定とは異なり、ドライバーの ON が、注意してください。 既定の設定の ANSI の設定には、通常正確な比較を実行する他の ODBC データ ソースと一貫して動作する Visual FoxPro データ ソースができるようにします。 既定の設定を変更することができます。 詳細については、次を参照してください。[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)です。
+ Visual FoxPro 開発者がいる場合は、設定の ANSI の既定の設定にある、ドライバーは、Visual FoxPro の OFF の既定の設定とは対照的に注意する必要があります。 設定の ANSI の設定に既定では、通常、正確な比較を実行する他の ODBC データ ソースで一貫して動作する Visual FoxPro データ ソースをできます。 既定の設定を変更することができます。 詳細については、次を参照してください。[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)します。

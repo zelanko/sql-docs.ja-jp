@@ -1,31 +1,28 @@
 ---
-title: SQLSetScrollOptions マッピング |Microsoft ドキュメント
+title: SQLSetScrollOptions のマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4339f395ae4c554a7ad8ca2e554769d8b27cdd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5520554b509b0c25d62e4a191e16ad3524a02652
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651446"
 ---
-# <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions マッピング
-アプリケーションを呼び出すと**SQLSetScrollOptions**から ODBC 3 *.x*ドライバーとドライバーはサポートしていません**SQLSetScrollOptions**への呼び出し  
+# <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions のマッピング
+アプリケーションを呼び出すと**SQLSetScrollOptions**を通じて、ODBC 3 *.x*ドライバーとドライバーがサポートしない**SQLSetScrollOptions**への呼び出し  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -39,7 +36,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLGetInfo(ConnectionHandle, InfoType, InfoValuePtr, BufferLength, StringLengthPtr)  
     ```  
   
-     *情報の種類*引数の値に応じて、次の表に、値のいずれかに設定されて、*キーセット*引数**SQLSetScrollOptions**です。  
+     *情報の種類*引数の値に応じて、次の表に、値のいずれかに設定、*キーセット*引数**SQLSetScrollOptions**します。  
   
     |*キーセット引数*|*情報の種類の引数*|  
     |---------------------------|-------------------------|  
@@ -49,9 +46,9 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     |SQL_SCROLL_DYNAMIC|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|  
     |大きい値、*複合カーソル*引数|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
   
-     場合の値、*キーセット*上記の表への呼び出しに引数一覧にない**SQLSetScrollOptions** SQLSTATE S1107 が返されます (行の範囲外の値) されていて、次の手順のいずれも実行されます。  
+     場合の値、*キーセット*上記の表への呼び出しに引数一覧にない**SQLSetScrollOptions** SQLSTATE S1107 を返します (値が範囲外の行) されていて、次の手順のいずれも実行されます。  
   
-     ドライバー マネージャーがで適切なビットを設定するかどうかを確認し、**InfoValuePtr*への呼び出しによって返される値**SQLGetInfo**の値に基づいて、 *同時実行*引数**SQLSetScrollOptions**です。  
+     ドライバー マネージャーがで適切なビットを設定するかどうかを確認し、**InfoValuePtr*への呼び出しによって返される値**SQLGetInfo**の値に基づいて、 *同時実行*引数**SQLSetScrollOptions**します。  
   
     |*同時実行*引数|*情報の種類*設定|  
     |----------------------------|------------------------|  
@@ -60,7 +57,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     |SQL_CONCUR_ROWVER|SQL_CA2_ROWVER_CONCURRENCY|  
     |SQL_CONCUR_VALUES|SQL_CA2_VALUES_CONCURRENCY|  
   
-     場合、 *Concurrency*引数は、前の表への呼び出しで値のいずれかではありません**SQLSetScrollOptions** SQLSTATE S1108 を返します (同時実行オプションは範囲) されていて、次の手順のいずれも実行されます。 (前の表に示された) として適切なビット設定されていない場合 **InfoValuePtr*に対応する値のいずれかに、 *Concurrency*引数への呼び出し**SQLSetScrollOptions** SQLSTATE S1C00 を返します (ドライバーは対応していない) され、次の手順のいずれも実行されます。  
+     場合、*同時実行*引数は、前の表への呼び出しで値のいずれかではない**SQLSetScrollOptions** SQLSTATE S1108 を返します (同時実行オプションは範囲) は、次の手順のいずれも、実行されます。 (上記の表に示されます) として適切なビット設定されていない場合 **InfoValuePtr*に対応する値の 1 つ、*同時実行*引数への呼び出し**SQLSetScrollOptions** SQLSTATE S1C00 を返します (ドライバーに対応していない)、none、次の手順が実行されます。  
   
 -   呼び出し  
   
@@ -68,7 +65,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     *\*ValuePtr*の値に基づいて、次の表に、値のいずれかに設定、*キーセット*引数**SQLSetScrollOptions**です。  
+     *\*ValuePtr*の値に基づいて、次の表の値のいずれかに設定、*キーセット*引数**SQLSetScrollOptions**します。  
   
     |*キーセット*引数|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -84,7 +81,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     *\*ValuePtr*に設定、*同時実行*引数**SQLSetScrollOptions**です。  
+     *\*ValuePtr*に設定、*同時実行*引数**SQLSetScrollOptions**します。  
   
 -   場合、*キーセット*への呼び出しで引数**SQLSetScrollOptions**が正の値への呼び出し  
   
@@ -92,7 +89,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     *\*ValuePtr*に設定、*キーセット*引数**SQLSetScrollOptions**です。  
+     *\*ValuePtr*に設定、*キーセット*引数**SQLSetScrollOptions**します。  
   
 -   呼び出し  
   
@@ -100,7 +97,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     *\*ValuePtr*に設定、*複合カーソル*引数**SQLSetScrollOptions**です。  
+     *\*ValuePtr*に設定、*複合カーソル*引数**SQLSetScrollOptions**します。  
   
     > [!NOTE]  
-    >  ドライバー マネージャーのマップと**SQLSetScrollOptions** ODBC 3 を使用するアプリケーションの *.x*ドライバーをサポートしない**SQLSetScrollOptions**、ドライバーマネージャーに SQL_ROWSET_SIZE ステートメントのオプション、not、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定、*複合カーソル*引数**SQLSetScrollOption**です。 その結果、 **SQLSetScrollOptions**への呼び出しによって複数の行をフェッチするときに、アプリケーションでは使用できません**SQLFetch**または**SQLFetchScroll**です。 フェッチの複数の行への呼び出しによって場合にのみ使用できます**SQLExtendedFetch**です。
+    >  ドライバー マネージャーがマップされます**SQLSetScrollOptions** 、ODBC 3 の操作、アプリケーションの *.x*がサポートされていないドライバー **SQLSetScrollOptions**、ドライバーマネージャーに SQL_ROWSET_SIZE ステートメントのオプション、not、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定、*複合カーソル*引数**SQLSetScrollOption**します。 その結果、 **SQLSetScrollOptions**への呼び出しで複数の行をフェッチするときに、アプリケーションでは使用できません**SQLFetch**または**SQLFetchScroll**します。 フェッチの複数の行への呼び出しで場合にのみ使用できます**SQLExtendedFetch**します。

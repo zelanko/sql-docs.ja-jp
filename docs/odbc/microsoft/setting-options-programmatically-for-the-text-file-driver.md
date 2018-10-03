@@ -1,13 +1,11 @@
 ---
-title: プログラムによってテキスト ファイルのドライバーのオプションの設定 |Microsoft ドキュメント
+title: テキスト ファイル ドライバーのプログラムでオプションの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], setting options programmatically
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2107bdb1d8197db202db2d9669853ea2ddcfe80a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cd6188de21c40b1edb5a365724451b44189e462
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904597"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821310"
 ---
-# <a name="setting-options-programmatically-for-the-text-file-driver"></a>プログラムによってテキスト ファイルのドライバーのオプションの設定
-|オプション|Description|方法|  
+# <a name="setting-options-programmatically-for-the-text-file-driver"></a>テキスト ファイル ドライバーのプログラムでオプションの設定
+|オプション|説明|方法|  
 |------------|-----------------|------------|  
-|Data Source Name|給与担当者など、データ ソースを識別する名前。|このオプションを動的に設定するには、使用、 **DSN**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)です。|  
-|書式を定義します。|表示、**テキスト形式の定義** ダイアログ ボックス データ ソース ディレクトリ内の個々 のテーブルのスキーマを指定することができます。|このオプションへの呼び出しによって動的に設定することはできません[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)です。|  
-|Description|データ ソース内のデータの説明 (オプション)たとえば、「雇用日、給与履歴、およびすべての従業員の現在のレビューします。」|このオプションを動的に設定するには、使用、**説明**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)です。|  
-|ディレクトリ|対象となるディレクトリを選択します。|このオプションを動的に設定するには、使用、 **DEFAULTDIR**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)です。|  
-|拡張機能の一覧|データ ソース上のテキスト ファイルのファイル名拡張子の一覧を表示します。 テキストのドライバーを使用する場合、CREATE TABLE ステートメントを実行する名前に拡張子を持たない拡張子のないファイルが作成されます。 その他のドライバーは、拡張子が指定されていない場合、既定の拡張子を持つファイルを作成します。 .Txt 拡張子を持つファイルを作成するには、名前で、拡張機能を含める必要があります。 拡張子のないファイルを表示する、**テキスト形式の定義**ダイアログ ボックスで、"* です"。 拡張機能の一覧に追加する必要があります。|このオプションを動的に設定するには、使用、**拡張**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)です。|  
-|[読み取り専用]|読み取り専用で、データベースを指定します。|このオプションを動的に設定するには、使用、 **READONLY**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)です。|  
-|スキャンする行数|各列のデータ型を決定するをスキャンする行の数。 検出データの種類の最大数を指定されたデータ型が決定されます。 データは、検出した場合、列のデータ型に一致しないデータ型は、NULL 値として返されます。<br /><br /> テキスト ドライバーの可能性があります番号を入力する、1 から 32767 まで; をスキャンする行の数ただし、この値は常に既定値 25。 (制限外の数値はエラーを返します。)|このオプションを動的に設定するには、使用、 **MAXSCANROWS**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)です。|  
-|ディレクトリを選択します。|アクセスするファイルを含むディレクトリを選択 ダイアログ ボックスが表示されます。<br /><br /> データ ソース ディレクトリを定義すると、最もよく使用されているファイル ディレクトリをどのように指定する場合は、配置されます。 ODBC ドライバーは、このディレクトリを既定のディレクトリとして使用します。 頻繁に使用される場合は、その他のファイルをこのディレクトリにコピーします。 または、ディレクトリの名前で、SELECT ステートメント内のファイル名を修飾することができます。 `SELECT * FROM C:\MYDIR\EMP`<br /><br /> またはを使用して新しい既定のディレクトリを指定することができます、 **SQLSetConnectOption**関数 SQL_CURRENT_QUALIFIER オプションを使用します。|このオプションを動的に設定するには、使用、 **DEFAULTDIR**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)です。|
+|Data Source Name|給与または担当者など、データ ソースを識別する名前。|このオプションを動的に設定するには、使用、 **DSN**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|  
+|形式を定義します。|表示、**テキスト形式の定義** ダイアログ ボックス データ ソース ディレクトリ内の個々 のテーブルのスキーマを指定することができます。|このオプションへの呼び出しによって動的に設定することはできません[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|  
+|説明|データ ソース内のデータの説明 (オプション)たとえば、"日付、給与履歴、およびすべての従業員の現在のレビュー。 hire"という|このオプションを動的に設定するには、使用、**説明**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|  
+|ディレクトリ|対象となるディレクトリを選択します。|このオプションを動的に設定するには、使用、 **DEFAULTDIR**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|  
+|拡張機能の一覧|データ ソース上のテキスト ファイルのファイル名拡張子の一覧を表示します。 テキストのドライバーを使用すると、拡張機能を持たない名前で、CREATE TABLE ステートメントが実行されると、拡張子なしのファイルが作成されます。 その他のドライバーは、拡張機能が指定されていない場合、既定の拡張子を持つファイルを作成します。 拡張子が .txt ファイルを作成するには、名前で、拡張機能を含める必要があります。 拡張子のないファイルを表示する、**テキスト形式の定義**ダイアログ ボックスで、"* です"。 拡張機能の一覧に追加する必要があります。|このオプションを動的に設定するには、使用、**拡張**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
+|[読み取り専用]|読み取り専用データベースを指定します。|このオプションを動的に設定するには、使用、 **READONLY**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|  
+|スキャンする行|各列のデータ型を決定するをスキャンする行の数。 検出されたデータの種類の最大数を指定されたデータ型が決定されます。 列のデータ型に一致しないデータが発生した場合、データ型が NULL 値として返されます。<br /><br /> テキスト ドライバーでは、する可能性がありますの番号を入力 1 から 32767 まで; をスキャンする行の数ただし、この値は、25 は既定は常にします。 (上限外の数値はエラーを返します。)|このオプションを動的に設定するには、使用、 **MAXSCANROWS**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|  
+|ディレクトリを選択します|アクセスするファイルを含むディレクトリを選択するダイアログ ボックスが表示されます。<br /><br /> ときに、最もよく使用されているファイル ディレクトリを指定してデータのソース ディレクトリを定義するが配置されています。 ODBC ドライバーは、このディレクトリを既定のディレクトリとして使用します。 頻繁に使用される場合は、その他のファイルをこのディレクトリにコピーします。 または、ディレクトリの名前を持つ SELECT ステートメント内のファイル名を修飾することができます。 `SELECT * FROM C:\MYDIR\EMP`<br /><br /> 使用して、新しい既定のディレクトリを指定することも、 **SQLSetConnectOption**関数 SQL_CURRENT_QUALIFIER オプションを使用します。|このオプションを動的に設定するには、使用、 **DEFAULTDIR**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)します。|

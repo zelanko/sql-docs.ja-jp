@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - event classes [SQL Server], Transactions event category
 - Transactions event category [SQL Server]
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0322fd84cf708b8310b7ec6e1483ae24d998617e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7ab7460d6e94c5bcaffbceb9fe4427e4616d8f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050362"
 ---
 # <a name="transactions-event-category"></a>Transactions イベント カテゴリ
   **Transactions** イベント カテゴリのイベント クラスを使用すると、トランザクションの状態を監視できます。 **TM:** というプレフィックスが付いたイベント クラス名は、トランザクション管理のインターフェイス経由で送信されたトランザクション関連の操作を追跡する場合に使用します。  

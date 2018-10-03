@@ -1,13 +1,11 @@
 ---
-title: ConnectPromptEnum |Microsoft ドキュメント
+title: ConnectPromptEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696901"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-データ ソースへの接続を開くときに、不足しているパラメーターを要求するダイアログ ボックスを表示するかどうかを指定します。  
+データ ソースへの接続を開くときに、不足しているパラメーターを要求する ダイアログ ボックスを表示するかどうかを指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|常にメッセージが表示されます。|  
 |**adPromptComplete**|2|詳細については、必要な場合は、メッセージが表示されます。|  
-|**adPromptCompleteRequired**|3|詳細については、必要なが省略可能なパラメーターは使用できない場合のプロンプトを表示します。|  
+|**adPromptCompleteRequired**|3|詳細についての情報が必要ですが、省略可能なパラメーターは使用できない場合のプロンプトを表示します。|  
 |**adPromptNever**|4|要求しません。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

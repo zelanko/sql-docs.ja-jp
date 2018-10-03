@@ -1,40 +1,37 @@
 ---
-title: SQLSTATE マッピング |Microsoft ドキュメント
+title: SQLSTATE マッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
 - SQLSTATE [ODBC]
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8226e7fa29cf94b4eff222022d4a94895dcd0e82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855020"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE マッピング
-このトピックでは、ODBC 2 の SQLSTATE 値について説明します。*x*および ODBC 3 *。x*です。 ODBC 3 の詳細についてはします。*x* SQLSTATE 値を参照してください[付録 a: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)です。  
+このトピックでは、ODBC 2 の SQLSTATE 値について説明します。*x*および ODBC 3 *。x*します。 ODBC 3 の詳細についてはします。*x* SQLSTATE の値を参照してください[付録 a: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)します。  
   
- ODBC 3 です。*x*S1xxx ではなく HYxxx SQLSTATEs が返されます、および S00XX ではなく 42Sxx SQLSTATEs が返されます。 これは、Open Group および ISO 標準に合うように行われました。 多くの場合、標準がいくつかの SQLSTATEs の解釈を再定義があるため、マッピングは一対一ありません。  
+ ODBC 3。*x*HYxxx SQLSTATEs が S1xxx、代わりに返される、S00XX ではなく 42Sxx SQLSTATEs が返されます。 これは、Open Group および ISO 標準に合わせて行われました。 多くの場合、標準がいくつかについての解釈を再定義があるため、マッピングは 1 対 1 ありません。  
   
- ODBC 2 時にします。*x*アプリケーションは、ODBC 3 にアップグレードします *。x* ODBC 3 の期待に変更するアプリケーションでは、アプリケーションが *。x* ODBC 2 ではなく SQLSTATEs *。x* SQLSTATEs です。 次の表には、ODBC 3 が一覧表示します。*x* SQLSTATEs される各 ODBC 2 *。x* SQLSTATE にマップします。  
+ ODBC 2 時にします。*x*アプリケーションは、ODBC 3 にアップグレードします *。x* ODBC 3 の期待に変更するアプリケーション、アプリケーションが *。x* ODBC 2 ではなく SQLSTATEs *。x* SQLSTATEs します。 次の表には、ODBC 3 が一覧表示します。*x* SQLSTATEs を各 ODBC 2 *。x* SQLSTATE にマップされます。  
   
- また環境属性が SQL_OV_ODBC2 に設定されている場合、ドライバーは ODBC 2 をポストします。*x* ODBC 3 ではなく SQLSTATEs *。x* SQLSTATEs とき**SQLGetDiagField**または**SQLGetDiagRec**と呼びます。 特定のマッピングは、ODBC 2 注目することで決定できます *.x* ODBC 3 に対応する次の表の 1 列目の SQLSTATE *。x*列 2 の SQLSTATE。  
+ SQL_OV_ODBC2 を SQL_ATTR_ODBC_VERSION 環境属性を設定すると、ドライバーは ODBC 2 を送信します。*x* ODBC 3 ではなく SQLSTATEs *。x* SQLSTATEs とき**SQLGetDiagField**または**SQLGetDiagRec**が呼び出されます。 特定のマッピングは、ODBC 2 に注意して決定できます *.x* ODBC 3 に対応する次の表の 1 列目の SQLSTATE *。x*列 2 の SQLSTATE。  
   
-|ODBC 2 です。*x* SQLSTATE|ODBC 3 です。*x* SQLSTATE|コメント|  
+|ODBC 2。*x* SQLSTATE|ODBC 3。*x* SQLSTATE|コメント|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -53,20 +50,20 @@ ms.locfileid: "32914387"
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC 2 です。*x* SQLSTATE S1002 は ODBC 3 にマップします *。x* SQLSTATE 07009 場合は、基になる関数**SQLBindCol**、 **SQLColAttribute**、 **SQLExtendedFetch**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**です。|  
+|S1002|07009|ODBC 2。*x* S1002 の SQLSTATE は ODBC 3 にマップされます *。x* SQLSTATE 07009 場合は、基になる関数**SQLBindCol**、 **SQLColAttribute**、 **SQLExtendedFetch**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**します。|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
-|S1009|HY009|Null ポインターの無効な使用に返されます。|  
+|S1009|HY009|Null ポインターで使用するが返されます。|  
 |S1009|HY024|無効な属性値に対して返されます。|  
-|S1009|HY092|更新データの削除の呼び出しによって返される**SQLSetPos**、または追加、更新、またはへの呼び出しによってデータを削除する**SQLBulkOperations**同時実行性が読み取り専用の場合、します。|  
-|S1010|HY007 HY010|SQLSTATE S1010 が SQLSTATE HY007 にマップされているときに**SQLDescribeCol**呼び出しの前に呼び出されます**SQLPrepare**、 **SQLExecDirect**、または、のカタログ関数*StatementHandle*です。 それ以外の場合、SQLSTATE S1010 SQLSTATE HY010 がマップされます。|  
+|S1009|HY092|更新、またはデータの削除の呼び出しによって返される**SQLSetPos**、または追加、更新、またはへの呼び出しでデータを削除する**SQLBulkOperations**、同時実行性が読み取り専用です。|  
+|S1010|HY007 HY010|SQLSTATE S1010 が SQLSTATE HY007 にマップされているときに**SQLDescribeCol**呼び出す前に呼び出されますが**SQLPrepare**、 **SQLExecDirect**、または、のカタログ関数*StatementHandle*します。 それ以外の場合、SQLSTATE S1010 は SQLSTATE HY010 にマップされます。|  
 |S1011|HY011||  
 |S1012|HY012||  
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC 3 です。*x* 07009 SQLSTATE は ODBC 2 にマップします *。x*基になる終了した場合は、SQLSTATE S1093 **SQLBindParameter**または**SQLDescribeParam**です。|  
+|S1093|07009|ODBC 3。*x* 07009 SQLSTATE は ODBC 2 にマップされます *。x*関数を基になる場合は、SQLSTATE S1093 **SQLBindParameter**または**SQLDescribeParam**します。|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -86,4 +83,4 @@ ms.locfileid: "32914387"
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC 3 です。*x* 07008 SQLSTATE は ODBC 2 にマップします *。x* SQLSTATE S1000 です。
+>  ODBC 3。*x* 07008 SQLSTATE は ODBC 2 にマップされます *。x* SQLSTATE S1000 します。

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Migration Wizard dialog box
 - Migration Wizard, adding Access databases
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 297526a299cc1b24c0426254a2cc5759e0b5dfa9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0c77ff9dae7d6d700289cdff4daff56ba4457651
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636200"
 ---
 # <a name="migration-wizard-accesstosql"></a>移行ウィザード (AccessToSQL)
 移行ウィザードを 1 つまたは複数のデータベースの移行へのアクセスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 ウィザードを使用すると、するはプロジェクトを作成、データベース プロジェクトを追加、移行、およびに接続するオブジェクトの選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 変換、読み込み、および Access スキーマとデータを移行もされます。 アクセス テーブルをリンクする必要に応じて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のテーブル。  

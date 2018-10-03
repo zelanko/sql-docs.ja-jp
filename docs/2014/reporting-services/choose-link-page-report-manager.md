@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6ae425405db24ca56f00dff7952ee0e7b4d1623
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bf61e09dbb1e1a98b1af609cb092cf072821a14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106048"
 ---
 # <a name="choose-link-page-report-manager"></a>[リンクの選択] ページ (レポート マネージャー)
   [リンクの選択] ページでは、現在選択しているリンク レポートに基づいて別のレポートを選択できます。 リンク レポートは、レポート サーバーに既にパブリッシュされている他のレポートに基づいています。 リンク レポートでは基本レポートのレイアウトとデータを使用しますが、個々のプロパティ ページを使用してパラメーターのプロパティ、セキュリティ設定、名前、説明、および場所をカスタマイズできます。  

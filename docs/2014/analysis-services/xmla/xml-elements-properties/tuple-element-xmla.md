@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Tuple Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32dc7b75f47acf69a8d16e33bc25ac505b1c9333
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061342"
 ---
 # <a name="tuple-element-xmla"></a>Tuple 要素 (XMLA)
   親要素 [Tuples](tuples-element-xmla.md) に含まれる、[Member](member-element-xmla.md) 要素のコレクションを含みます。  

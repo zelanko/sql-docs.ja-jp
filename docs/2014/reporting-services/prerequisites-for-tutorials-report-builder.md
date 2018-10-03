@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 704f250c7cf3056cd2950cfb53224cb8b5c2b21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056212"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>チュートリアルの前提条件 (レポート ビルダー)
   レポート ビルダー チュートリアルでは、レポート サーバー上またはレポート サーバーと統合されている SharePoint サイト上でレポートを表示および保存できることを前提としています。 すべてのチュートリアルでは、データを取得するために、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のインスタンスで処理される必要があるリテラル クエリを使用します。  
@@ -29,11 +26,11 @@ ms.locfileid: "37296382"
 ## <a name="requirements"></a>要件  
  レポート ビルダーのチュートリアルを完了するには、次の条件を満たしている必要があります。  
   
--    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダーへのアクセス。 レポート ビルダーを実行するには、スタンドアロン バージョンまたは ClickOnce バージョンのレポート ビルダーを使用します。ClickOnce バージョンは、レポート マネージャーまたは SharePoint サイトから利用できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョンの異なる。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダーへのアクセス。 レポート ビルダーを実行するには、スタンドアロン バージョンまたは ClickOnce バージョンのレポート ビルダーを使用します。ClickOnce バージョンは、レポート マネージャーまたは SharePoint サイトから利用できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョンの異なる。  
   
      レポート マネージャーを使用するレポート マネージャーを開き、クリックして**レポート ビルダー**します。 既定では、レポート マネージャーの URL には http://\<*servername*>/reports です。  
   
-     SharePoint サイトを使用する場合は、サイトに移動し、[ドキュメント] タブ、[新しいドキュメント] の順にクリックして、ドロップダウン リストの [レポート ビルダー レポート] をクリックします。 たとえば、http://\<servername >/サイト/mySite/レポートします。 SharePoint 管理者は、各ドキュメント ライブラリのレポート ビルダー レポート機能を有効にする必要があります。  
+     SharePoint サイトを使用する場合は、サイトに移動し、[ドキュメント] タブ、[新しいドキュメント] の順にクリックして、ドロップダウン リストの [レポート ビルダー レポート] をクリックします。 たとえば、 http://\<servername >/サイト/mySite/レポートします。 SharePoint 管理者は、各ドキュメント ライブラリのレポート ビルダー レポート機能を有効にする必要があります。  
   
 -   URL を[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポート サーバーまたは SharePoint サイトに統合されて、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポート サーバー。 レポート、共有データ ソース、共有データセット、レポート パーツ、およびモデルを保存および表示する権限が必要です。 既定では、レポート サーバーの URL は http://\<servername >/reportserver です。 既定では、SharePoint サイトの URL は http://\<sitename > または http://\<サーバー >]、[サイトします。  
   

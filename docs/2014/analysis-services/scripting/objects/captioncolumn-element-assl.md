@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CaptionColumn Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CaptionColumn element
 ms.assetid: bdb1b9b8-b5d5-4d91-81c7-8de8635bbb83
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c60ac92841ce35e7b4c00c80da4be4eeed6bd96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc8f782456b47f03ca8a7eab1bf9407020fda3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108992"
 ---
 # <a name="captioncolumn-element-assl"></a>CaptionColumn 要素 (ASSL)
   属性のキャプションを指定する列を定義します。  

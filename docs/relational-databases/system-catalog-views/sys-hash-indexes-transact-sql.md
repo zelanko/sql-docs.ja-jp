@@ -1,14 +1,11 @@
 ---
-title: sys.hash_indexes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.hash_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.hash_indexes_TSQL
@@ -20,31 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.hash_indexes catalog view
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1bc362fd85dd2aa60ee4924200744dd9f492590
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59d98fe6c7def4073bf0f2cd7cb631c143a766b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179928"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729620"
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のハッシュ インデックスとハッシュ インデックス プロパティを表示します。 ハッシュ インデックスでのみサポートされます[、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)です。  
+  現在のハッシュ インデックスとハッシュ インデックス プロパティを表示します。 ハッシュ インデックスがでのみサポートされている[、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)します。  
   
- Sys.hash_indexes ビューには、sys.indexes ビューと同じ列およびという列を追加が含まれています。 **bucket_count**です。 Sys.hash_indexes ビュー内の他の列に関する詳細については、次を参照してください。 [sys.indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)です。  
+ Sys.hash_indexes ビューには、sys.indexes ビューと同じ列およびという列を追加が含まれています。 **bucket_count**します。 Sys.hash_indexes ビュー内の他の列に関する詳細については、次を参照してください。 [sys.indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<継承された列 >**||列を継承[sys.indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)です。|  
-|**bucket_count**|**int**|ハッシュ インデックスのハッシュ バケットの数。<br /><br /> 値を設定するためのガイドラインなど、bucket_count の値の詳細については、次を参照してください。 [CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)です。|  
+|**\<列を継承 >**||列を継承[sys.indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。|  
+|**bucket_count**|**int**|ハッシュ インデックスのハッシュ バケットの数。<br /><br /> 詳細については、値を設定するためのガイドラインなど、bucket_count の値を参照してください。 [CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)します。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]」を参照してください。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   

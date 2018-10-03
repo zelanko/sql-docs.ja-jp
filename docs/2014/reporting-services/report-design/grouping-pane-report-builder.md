@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 922ffe08cfff03a1f3347136d2b809ae5b9926c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acb003df07b23f47e3cb5bb78e04f92b35029ea9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127582"
 ---
 # <a name="grouping-pane-report-builder"></a>グループ化ペイン (レポート ビルダー)
   グループ化ペインには、現在選択されている Tablix データ領域の行グループと列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインには、行グループ ペインと列グループ ペインが含まれています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -84,7 +81,7 @@ ms.locfileid: "37153823"
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

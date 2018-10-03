@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UDTs [CLR integration], requirements
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9d652bb9f722b33eb6a0bfa0f2aed324b5ecbfc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057552"
 ---
 # <a name="user-defined-type-requirements"></a>ユーザー定義型の要件
   ユーザー定義型 (UDT) をインストールを作成するときに、いくつかの重要な設計上の決定を行う必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
@@ -121,7 +118,7 @@ ms.locfileid: "37350074"
  UDT のインスタンスの検証に使用するメソッドの名前。  
   
 ### <a name="setting-isbyteordered"></a>IsByteOrdered の設定  
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered` プロパティを `true` に設定すると、シリアル化されるバイナリ データを使用して、情報の意味的な順序を保証できます。 したがって、バイト順の UDT オブジェクトの各インスタンスは、シリアル化された表現を 1 つだけ持つことができます。 ph x="1" /&gt; でシリアル化されたバイト列の比較操作を行うときは、その比較結果がマネージド コードで同じ比較操作を実行した場合と同じになる必要があります。 `IsByteOrdered` を `true` に設定すると、次の機能もサポートされます。  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered` プロパティを `true` に設定すると、シリアル化されるバイナリ データを使用して、情報の意味的な順序を保証できます。 したがって、バイト順の UDT オブジェクトの各インスタンスは、シリアル化された表現を 1 つだけ持つことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でシリアル化されたバイト列の比較操作を行うときは、その比較結果がマネージド コードで同じ比較操作を実行した場合と同じになる必要があります。 `IsByteOrdered` を `true` に設定すると、次の機能もサポートされます。  
   
 -   この型の列にインデックスを作成する機能。  
   

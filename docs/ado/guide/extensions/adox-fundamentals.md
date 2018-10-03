@@ -1,38 +1,35 @@
 ---
-title: ADOX 基礎 |Microsoft ドキュメント
+title: ADOX の基礎 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8807daf163515780aa7f514a6145c4035ed3afc6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5350fd4c4fd8fc447f3987ad502c49a2704e6762
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836440"
 ---
 # <a name="adox-fundamentals"></a>ADOX の基礎
-Microsoft® ActiveX® データ オブジェクトの拡張機能のデータ定義言語およびセキュリティ (ADOX) は、ADO オブジェクトおよびプログラミング モデルの拡張機能です。 ADOX には、スキーマの作成と変更、およびセキュリティに対してオブジェクトが含まれています。 スキーマ操作オブジェクト ベースのアプローチであるために、さまざまなデータに対してネイティブの構文ではその違いに関係なくソースは機能するコードを記述できます。  
+Microsoft® ActiveX® Data オブジェクトの拡張機能データ定義言語およびセキュリティ (ADOX) では、ADO オブジェクトとプログラミング モデルの拡張機能です。 ADOX には、スキーマの作成と変更、セキュリティのオブジェクトが含まれます。 操作のスキーマにオブジェクト ベースのアプローチであるために、さまざまなデータ ソースのネイティブの構文を使って違いに関係なく動作するコードを記述できます。  
   
- ADOX は、コア ADO オブジェクト コンパニオン ライブラリです。 これは、作成、変更、およびテーブルおよびプロシージャなどのスキーマ オブジェクトを削除するオブジェクトを公開します。 ユーザーとグループの管理とを与えるオブジェクトに対する権限を取り消すセキュリティ オブジェクトも含まれています。  
+ ADOX は、コア ADO オブジェクト コンパニオン ライブラリです。 作成、変更、およびテーブルやプロシージャなどのスキーマ オブジェクトを削除するその他のオブジェクトを公開します。 ユーザーとグループの管理と付与して、オブジェクトに対する権限の取り消しをセキュリティ オブジェクトも含まれています。  
   
- ADOX を開発ツールを使用するのには、ADOX タイプ ライブラリへの参照を確立する必要があります。 ADOX ライブラリの説明は"Microsoft ADO DDL およびセキュリティの内線" ADOX ライブラリのファイル名は Msadox.dll で、プログラム ID (ProgID) は"ADOX"です。 ライブラリへの参照を確立する方法の詳細については、開発ツールのドキュメントを参照してください。  
+ ADOX を使用して、開発ツールで、ADOX のタイプ ライブラリへの参照を確立する必要があります。 ADOX のライブラリの説明は"Microsoft ADO DDL とセキュリティの .ext です" ADOX ライブラリのファイル名は Msadox.dll で、プログラム ID (ProgID) は"ADOX"です。 ライブラリへの参照を設定する方法についての詳細については、開発ツールのドキュメントを参照してください。  
   
  Microsoft OLE DB Provider for Microsoft Jet データベース エンジンは、ADOX を完全にサポートします。 データ プロバイダーによっては、ADOX の特定の機能がサポートされていない可能性があります。  
   
- このドキュメントは、Microsoft® Visual Basic® プログラミング言語および ADO の一般的な知識の実用的な知識を前提とします。 ADO の詳細については、次を参照してください。、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)です。 ADOX に関する概要については、次のトピックを参照してください。  
+ このドキュメントには、Microsoft® Visual Basic® プログラミング言語と ADO の一般的な知識の実務知識を前提としています。 ADO の詳細については、次を参照してください。、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)します。 ADOX に関する概要については、次のトピックを参照してください。  
   
 -   [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)  
   
@@ -44,16 +41,16 @@ Microsoft® ActiveX® データ オブジェクトの拡張機能のデータ定
   
 -   [ADOX のメソッド](../../../ado/reference/adox-api/adox-methods.md)  
   
--   [ADOX 例](../../../ado/reference/adox-api/adox-code-examples.md)  
+-   [ADOX の例](../../../ado/reference/adox-api/adox-code-examples.md)  
   
 ## <a name="see-also"></a>参照  
- [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
+ [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX のコード例](../../../ado/reference/adox-api/adox-code-examples.md)   
- [ADOX コレクション](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX 列挙定数](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
- [ADOX メソッド](../../../ado/reference/adox-api/adox-methods.md)   
+ [ADOX のコレクション](../../../ado/reference/adox-api/adox-collections.md)   
+ [ADOX の列挙定数](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
+ [ADOX のメソッド](../../../ado/reference/adox-api/adox-methods.md)   
  [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)   
- [ADOX プロパティ](../../../ado/reference/adox-api/adox-properties.md)   
+ [ADOX のプロパティ](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)

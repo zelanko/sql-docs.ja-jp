@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeHierarchyEnabled Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeHierarchyEnabled element
 ms.assetid: 1e95307f-530e-4e98-a0e1-2b0462d330a3
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab14a4adf69281ec919811270c3d2220a76682e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adcb11beda15b6ab4fc27357cb52134cb53b501b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250872"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079332"
 ---
 # <a name="attributehierarchyenabled-element-assl"></a>AttributeHierarchyEnabled 要素 (ASSL)
   属性階層がその属性で有効かどうかを指定します。  

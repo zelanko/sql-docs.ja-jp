@@ -1,28 +1,25 @@
 ---
-title: バインドと変換 (OLE DB) |Microsoft Docs
+title: バインドと変換 (OLE DB) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB]
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709fb4abec2e8de8aa845aaddb1418f5c9d957e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 16ea4eb3954af5f1095331d05912c1faa0ff9525
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144902"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>バインドと変換 (OLE DB)
   ここでは、`datetime` 値と `datetimeoffset` 値との間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
@@ -72,6 +69,6 @@ ms.locfileid: "37407992"
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB を使用して作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化機能 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

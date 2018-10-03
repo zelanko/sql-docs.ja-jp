@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], Analysis Services
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7755e5026dc99e13f27de9619bb619e5f9e22db7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a55d34c86622ef837d9c7264a614ba59552c978
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089192"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>データ マイニング モデル (DMX) からデータを取得する (SSRS)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ マイニング モデルのデータをレポートで使用するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ ソースと 1 つ以上のレポート データセットを定義する必要があります。 データ ソース定義を作成する場合、クライアント コンピューターからデータ ソースにアクセスできるように接続文字列と資格情報を指定する必要があります。  
@@ -35,7 +32,7 @@ ms.locfileid: "37152243"
   
  データセットを作成すると、そのデータセットの名前がデータ ソースの下のノードとしてレポート データ ペインに表示されます。  
   
- レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。  
+ レポートをパブリッシュした後、そのデータ ソースに対する資格情報を変更する必要が生じる場合があります。そのレポートをレポート サーバーで実行するときに、データを取得するためのアクセス許可が有効な状態になるようにするためです。  
   
 ### <a name="to-create-an-embedded-microsoft-sql-server-analysis-services-data-source"></a>埋め込み Microsoft SQL Server Analysis Services データ ソースを作成するには  
   
@@ -88,6 +85,6 @@ ms.locfileid: "37152243"
  [Analysis Services 接続の種類の DMX のため&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

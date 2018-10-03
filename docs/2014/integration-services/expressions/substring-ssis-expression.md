@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc77781f2ee4a8a12a5c150ea29ebae3ca4d4cdf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a903d6d517b0840b4539a6398ddaf42360f5152
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088832"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 式)
   指定された位置で始まり、かつ指定された長さを持つ文字式の一部を返します。 *position* パラメーターと *length* パラメーターは整数に評価される必要があります。  

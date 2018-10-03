@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fcad38283e902b305afc5db3e47671b12e91b41f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676af20a08829dcc1bd4fda019c4f42b5d51eb51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083532"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、モデル管理者と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者の 2 種類の管理者があります。  
@@ -48,7 +45,7 @@ ms.locfileid: "37304122"
   
 -   追加、削除、およびすべてのモデルのすべてのマスター データを更新、**エクスプ ローラー**機能領域。  
   
-  システム管理者として割り当てられているユーザーを変更できます。 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
+ システム管理者として割り当てられているユーザーを変更できます。 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   

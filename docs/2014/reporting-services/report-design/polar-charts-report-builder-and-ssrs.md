@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: d59ad6ad8059e7261054470c310d8fd82dbd88d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86308d04c45dfdb2bb135d1dc4d8a1da8bb957ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056342"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標グラフ (レポート ビルダーおよび SSRS)
   極座標グラフでは、カテゴリ別にグループ化されたポイントのセットとして、360°の円上に系列が表示されます。 値は、円の中心からポイントまでの距離で表されます。 ポイントが中心から遠いほど、その値は大きくなります。 カテゴリのラベルは、グラフの周囲に表示されます。 極座標グラフにデータを追加する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  

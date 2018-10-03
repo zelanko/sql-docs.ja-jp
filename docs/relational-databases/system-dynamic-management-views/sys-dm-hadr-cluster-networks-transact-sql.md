@@ -1,12 +1,10 @@
 ---
-title: sys.dm_hadr_cluster_networks (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_hadr_cluster_networks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_hadr_cluster_networks
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_networks dynamic management view
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b02faa8108154ae4efba474a01dac8edf5610ea6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7b48507e59fa77cc0e6e47b4874cd1c010cd36cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746210"
 ---
 # <a name="sysdmhadrclusternetworks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +38,11 @@ ms.locfileid: "34466149"
  > [!TIP]
  > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、この動的管理ビューは、Always On フェールオーバー クラスター インスタンスだけでなく Always On 可用性グループをサポートしています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|WSFC クラスター内のノードのコンピューター名。|  
 |**network_subnet_ip**|**nvarchar(48)**|コンピューターが属するサブネットのネットワーク IP アドレス。 IPv4 または IPv6 のアドレスになります。|  
-|**network_subnet_ipv4_mask**|**nvarchar(45)**|IP アドレスが属するサブネットを指定するネットワーク サブネット マスク。 **network_subnet_ipv4_mask**の WITH DHCP 句で DHCP < network_subnet_option > オプションを指定する、 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)または[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。<br /><br /> NULL = IPv6 サブネットです。|  
+|**network_subnet_ipv4_mask**|**nvarchar(45)**|IP アドレスが属するサブネットを指定するネットワーク サブネット マスク。 **network_subnet_ipv4_mask**の WITH DHCP 句で DHCP < network_subnet_option > オプションを指定する、 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)または[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。<br /><br /> NULL = IPv6 サブネット。|  
 ||||  
 |**network_subnet_prefix_length**|**int**|コンピューターが属するサブネットを指定するネットワーク IP プレフィックス長。|  
 |**is_public**|**bit**|WSFC クラスターでネットワークがプライベートかパブリックか。次のいずれかになります。<br /><br /> 0 = プライベート<br /><br /> 1 = パブリック|  
@@ -53,12 +50,12 @@ ms.locfileid: "34466149"
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [可用性グループの監視と &#40; です。Transact SQL と &#41; です。](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

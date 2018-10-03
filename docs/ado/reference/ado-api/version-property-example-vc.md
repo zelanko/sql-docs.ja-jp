@@ -1,45 +1,42 @@
 ---
-title: バージョン プロパティの例 (vc++) |Microsoft ドキュメント
+title: Version プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83abd1361cad72644f948316bc24c704e0437c35
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a89f017bba11b5c0ae42df49e54be3ea6b2f14ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613250"
 ---
-# <a name="version-property-example-vc"></a>バージョン プロパティの例 (vc++)
-この例では、[バージョン](../../../ado/reference/ado-api/version-property-ado.md)のプロパティ、[接続](../../../ado/reference/ado-api/connection-object-ado.md)ADO の現在のバージョンを表示するオブジェクト。 表示するいくつかの動的なプロパティを使用します。  
+# <a name="version-property-example-vc"></a>Version プロパティの例 (VC++)
+この例では、[バージョン](../../../ado/reference/ado-api/version-property-ado.md)のプロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)ADO の現在のバージョンを表示するオブジェクト。 表示するいくつかの動的プロパティを使用します。  
   
--   現在の DBMS 名とバージョンです。  
+-   現在の DBMS 名とバージョン。  
   
 -   OLE DB バージョンです。  
   
--   プロバイダー名とバージョン。  
+-   プロバイダーの名前およびバージョン。  
   
 -   ODBC のバージョンです。  
   
--   ODBC ドライバー名およびバージョンです。  
+-   ODBC ドライバーの名前およびバージョン。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
   
 ```  
 // BeginVersionCpp.cpp  

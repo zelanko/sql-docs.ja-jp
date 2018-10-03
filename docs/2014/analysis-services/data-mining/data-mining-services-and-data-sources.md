@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090972"
 ---
 # <a name="data-mining-services-and-data-sources"></a>データ マイニング サービスおよびデータ ソース
   データ マイニングでは、SQL Server Analysis Services のインスタンスへの接続が必要になります。 キューブからのデータは、データ マイニングには必須ではなく、リレーショナル ソースの使用をお勧めします。ただし、データ マイニングでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エンジンによって提供されるコンポーネントが使用されます。  
@@ -27,7 +24,7 @@ ms.locfileid: "37297472"
  このトピックには、データ マイニング モデルの作成、処理、配置、またはクエリのために SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続する際に知っておく必要がある情報が含まれています。  
   
 ## <a name="data-mining-services"></a>データ マイニング サービス  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のサーバー コンポーネントは、msmdsrv.exe アプリケーションです。このアプリケーションは、通常、Windows サービスとして実行されます。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のサーバー コンポーネントは、msmdsrv.exe アプリケーションです。このアプリケーションは、通常、Windows サービスとして実行されます。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
   
 -   クライアントから受信したステートメントの解析  
   
@@ -52,9 +49,9 @@ ms.locfileid: "37297472"
   
 |Port|説明|  
 |----------|-----------------|  
-|2383| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の既定のインスタンスです。|  
-|2382| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
-|サーバーの起動時に動的に割り当てられます。| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
+|2383|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の既定のインスタンスです。|  
+|2382|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
+|サーバーの起動時に動的に割り当てられます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
   
  このサービスが使用するポートを制御する方法の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
@@ -101,8 +98,7 @@ ms.locfileid: "37297472"
   
  **ADO.NET** 特に SQL Server プロバイダーとのやり取りに適しています。 データ アダプターを使用して動的な行セットを格納したり、 データセット オブジェクトを使用したりできます。データセット オブジェクトは、XML として更新したり保存したりできるデータ テーブルとして格納されるサーバー データのキャッシュです。  
   
- 
-  **ADOMD.NET** データ マイニングと OLAP の操作に最適化されたマネージド データ プロバイダーです。 ADOMD.NET は ADO.NET より高速で、メモリ効率も ADO.NET より優れています。 サーバー オブジェクトに関するメタデータを取得することもできます。 クライアント アプリケーションでは、.NET が使用できない場合以外は ADOMD.NET を使用することをお勧めします。  
+ **ADOMD.NET** データ マイニングと OLAP の操作に最適化されたマネージド データ プロバイダーです。 ADOMD.NET は ADO.NET より高速で、メモリ効率も ADO.NET より優れています。 サーバー オブジェクトに関するメタデータを取得することもできます。 クライアント アプリケーションでは、.NET が使用できない場合以外は ADOMD.NET を使用することをお勧めします。  
   
  **Server ADOMD** サーバー上で直接 Analysis Services オブジェクトにアクセスするためのオブジェクト モデルです。 Analysis Services ストアド プロシージャで使用されます。クライアントでは使用しません。  
   

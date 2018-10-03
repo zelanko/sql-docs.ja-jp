@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff924966a2dccf448d6d55f8633f8dc49046f2d8
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 2a52ca419f3f06e4156c278cb0ba8999c24e09ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40394921"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680030"
 ---
 # <a name="execute-method-ado-connection"></a>Execute メソッド (ADO Connection)
 指定されたクエリ、SQL ステートメント、ストアド プロシージャ、またはプロバイダー固有のテキストを実行します。  

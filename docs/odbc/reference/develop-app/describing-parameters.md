@@ -1,32 +1,29 @@
 ---
-title: パラメーターを記述する |Microsoft ドキュメント
+title: パラメーターの記述 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindParameter function [ODBC], describing parameters
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c9892111808a975dbf2cb0bc167a1d653f2297a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808970"
 ---
-# <a name="describing-parameters"></a>パラメーターを記述します。
-**SQLBindParameter**パラメーターを記述する引数を持つ: その SQL 型、有効桁数、および小数点以下桁数です。 ドライバーは、この情報を使用または*メタデータ、* パラメーター値をデータ ソースで必要な型に変換します。 一見すると、思えますが、ドライバーが、パラメーターのメタデータをアプリケーション、つまりより認識する最適な位置にあります。結局のところ、結果セットの列、ドライバーは、メタデータを検出簡単にできます。 結局のところ、大文字と小文字ではありません。 最初に、ほとんどのデータ ソースは用意されていない、ドライバーがパラメーターのメタデータを検出するためです。 2 つ目は、ほとんどのアプリケーションが既にわかっているメタデータ。  
+# <a name="describing-parameters"></a>パラメーターの記述
+**SQLBindParameter**にパラメーターを記述する引数があります。 その SQL 型、有効桁数、およびスケール。 ドライバーは、この情報を使用または*メタデータ、* パラメーター値をデータ ソースで必要な型に変換します。 一見、かもしれませんが、ドライバーが、アプリケーションよりもパラメーター メタデータを認識する最適な位置にあります。結局のところ、結果セット列のドライバーは、メタデータを検出簡単にできます。 結局のところ、これは、当てはまりません。 最初に、ほとんどのデータ ソースには、パラメーターのメタデータを検出するドライバー向けの方法は使えません。 2 つ目は、ほとんどのアプリケーションが既にメタデータを認識します。  
   
- SQL ステートメントが、アプリケーションでハード コードされた場合は、アプリケーションの作成者は既に各パラメーターの型を認識します。 SQL ステートメントが実行時にアプリケーションによって構築される場合、アプリケーションは、ステートメントを作成するメタデータを特定できます。 たとえば、アプリケーションが、句を構築とき  
+ アプリケーションでハード コード化された SQL ステートメントの場合、アプリケーションの作成者は各パラメーターの型を既に知っています。 SQL ステートメントが実行時にアプリケーションによって構築された場合、アプリケーションは、ステートメントを作成する方法と、メタデータを判断できます。 句を構築ときなど、アプリケーション  
   
 ```  
 WHERE OrderID = ?  
@@ -34,4 +31,4 @@ WHERE OrderID = ?
   
  呼び出すことができます**SQLColumns** OrderID 列にします。  
   
- アプリケーション容易に判別できなくパラメーターのメタデータのみの状況、ユーザーがパラメーター化されたステートメントを入力したときです。 この場合、アプリケーションが呼び出す**SQLPrepare** 、ステートメントを準備**SQLNumParams** 、パラメーターの数を決定するおよび**SQLDescribeParam**を記述するには各パラメーター。 ただし、前述したよう、ほとんどのデータ ソースは用意されていない、したがってパラメーターのメタデータを検出するドライバーを**SQLDescribeParam**広くサポートされていません。
+ アプリケーションに特定できませんのパラメーター メタデータ簡単にのみ状況、ユーザーがパラメーター化されたステートメントを入力したときです。 この場合、アプリケーションが呼び出す**SQLPrepare** 、ステートメントを準備する**SQLNumParams** 、パラメーターの数を決定して**SQLDescribeParam**を記述するには各パラメーター。 ただし、前に説明したようにほとんどのデータ ソースは用意されていない、そのため、パラメーターのメタデータを検出するドライバーの**SQLDescribeParam**広くサポートされていません。

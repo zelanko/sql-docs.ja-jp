@@ -1,34 +1,31 @@
 ---
-title: CompareBookmarks メソッドの例 (vc++) |Microsoft ドキュメント
+title: CompareBookmarks メソッドの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ff4ae1e6314f1ed72dd73ec25eef0b3261906f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02ae773493258afa7c1e3b8e3074347ce08ff4cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276911"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639280"
 ---
-# <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks メソッドの例 (vc++)
-この例で、 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッドです。 特定のブックマークは特別な何らかの理由でない限りは、ブックマークの相対値は必要ありません。  
+# <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks メソッドの例 (VC++)
+この例では、 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッド。 ブックマークの相対値が必要なは、特定のブックマークで特別な何らかの形でない限り、めったにありません。  
   
- ランダムな行を指定する、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)から派生した、***作成者***検索の対象としてテーブル。 各行をターゲットとする相対の位置に表示されます。  
+ ランダムな行を指定する[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)から派生した、***作成者***検索の対象としてテーブル。 各の行を対象とする相対の位置に表示されます。  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  

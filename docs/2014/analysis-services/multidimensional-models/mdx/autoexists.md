@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5587d26a8c5df5f343f43b64b692d477ea07a015
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 090a7cdb4958dacdaebcdcc0db176991d6bebaa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194372"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142702"
 ---
 # <a name="autoexists"></a>Autoexists
   *autoexists* の概念を導入すると、このキューブ空間を、同じ階層から属性階層メンバーの可能なすべての組み合わせを作成した結果として存在するセルでなく、実際に存在するセルのみに限定できます。 これは、1 つの属性階層のメンバーは、同じディメンション内の別の属性階層のメンバーと共存できないためです。 SELECT ステートメントに同じディメンションの属性階層を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。  

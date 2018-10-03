@@ -1,14 +1,11 @@
 ---
-title: sysopentapes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysopentapes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysopentapes
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - backup media [SQL Server], sysopentapes system table
 - sysopentapes system table
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6f368356df76c68594443ac5a981ebf8f20bec2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7ebbaef020fe1bc45b625d255523769bb1c54a4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677840"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +38,11 @@ ms.locfileid: "33260385"
 >  削除することはできません、 **sysopentapes**ビュー。  
 
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**openTape**|**nvarchar(64)**|開いているテープ デバイスの物理ファイル名。 詳細については、開くおよびテープ デバイスを解放する、次を参照してください。[バックアップ&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md)と[復元&#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)です。|  
+|**openTape**|**nvarchar(64)**|開いているテープ デバイスの物理ファイル名。 開くおよびテープ デバイスを解放の詳細については、次を参照してください。[バックアップ&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md)と[復元&#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)します。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ユーザーには、サーバーに対する VIEW SERVER STATE 権限が必要があります。  
   
   

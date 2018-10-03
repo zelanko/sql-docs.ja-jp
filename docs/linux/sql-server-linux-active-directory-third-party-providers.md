@@ -7,18 +7,16 @@ ms.author: dygray
 manager: mikehab
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: 288f46a2084166a1b7164ff8f0c0ef82b81fb16b
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: beb342156098ebb5516466ad7fd4a771cc5a0616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381515"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787300"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>SQL Server on Linux でサード パーティの Active Directory プロバイダーを使用します。
 
@@ -26,7 +24,7 @@ ms.locfileid: "43381515"
 
 この記事は、構成する方法を説明します、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]など、サード パーティ製 AD プロバイダーを使用する場合の AD 認証を使用した Linux ホスト マシンで[PowerBroker Identity サービス (PBI)](https://www.beyondtrust.com/)、[いる Vintela 認証サービス (VAS)](https://www.oneidentity.com/products/authentication-services/)、および[Centrify](https://www.centrify.com/)します。 このガイドの AD 構成を確認する手順について説明し、マシンをドメインに参加させる方法について説明するものではありません。 詳細な手順への参加について、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]領域と SSSD を使用してドメインにホストを参照してください[SQL Server on Linux での Active Directory を使用して認証](sql-server-linux-active-directory-authentication.md)します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 ネットワークと結合の AD ドメイン コント ローラー (Windows) を設定する必要が AD 認証を構成する前に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD ドメインに Linux ホストにします。 使用することができます[PBI](https://www.beyondtrust.com/)、 [VAS](https://www.oneidentity.com/products/authentication-services/)、または[Centrify](https://www.centrify.com/)します。
 

@@ -1,45 +1,42 @@
 ---
-title: SQL ステートメントで使用される要素 |Microsoft ドキュメント
+title: SQL ステートメントで使用される要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], elements supported
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b7fdcfbc91e63451615b20c7eedf2748f687c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23eef4c33afbbfd287bb9be083cfe0990a6dd6a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729032"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL ステートメントで使用される要素
 次の要素は、前の表に、SQL ステートメントで使用されます。  
   
 ## <a name="element"></a>要素  
- *ベース テーブル識別子*:: =*ユーザー定義名*  
+ *ベース テーブルの識別子*:: =*ユーザー定義名*  
   
  *ベース テーブル名*:: =*ベース テーブルの識別子*  
   
- *ブール値を要素*:: = [NOT]*ブール値をプライマリ*  
+ *ブール値を要素*:: [NOT] =*ブール値をプライマリ*  
   
  *ブール値をプライマリ*:: = 比較 *-述語*&#124; です。(*検索条件*)  
   
- *ブール値を長期的な*:: =*ブール値を要素*[AND*ブール値を長期的な*]  
+ *ブール値用語*:: =*ブール値を要素*[AND*ブール用語*]  
   
- *文字の文字列リテラル*:: = ' {*文字*} ' (*文字*ドライバー/データ ソースの文字セットの任意の文字がします。 文字の文字列リテラルにリテラルの一重引用符文字 (") を含める、2 つのリテラルの引用符文字を使用して [' '].)  
+ *文字の文字列リテラル*:: = ' {*文字*} ' (*文字*  /ドライバーのデータ ソースの文字セットで任意の文字は、します。 文字の文字列リテラルにリテラルの一重引用符文字 (") は、リテラルの引用符を 2 文字を使用して、[' '].)  
   
  *列識別子*:: =*ユーザー定義名*  
   
@@ -47,13 +44,13 @@ ms.locfileid: "32909707"
   
  *比較演算子*:: = < &#124; > &#124; です。\<= &#124;> = &#124; = &#124; <>  
   
- *比較述語*:: =*式*比較演算式  
+ *比較述語*:: =*式*比較演算子式  
   
- *データ型*:: =*文字の文字列型*(*文字の文字列型*SQLGetTypeInfo から返される結果セット内の""DATA_TYPE""列のいずれかの SQL_CHAR データ型であるかSQL_VARCHAR。)  
+ *データ型*:: =*文字の文字列型*(*文字の文字列型*SQLGetTypeInfo から返される結果セット内の""DATA_TYPE""列は、SQL_CHAR 任意のデータ型は、またはSQL_VARCHAR。)  
   
  *桁*:: 0 &#124; 1 &#124; = 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *動的パラメーター* :: = しますか?  
+ *動的パラメーター* :: = でしょうか。  
   
  *式*:: = 用語 &#124; 式 {+ &#124; –} 用語  
   
@@ -85,7 +82,7 @@ ms.locfileid: "32909707"
   
  &#124; です。(*式*)  
   
- *検索条件*:: =*ブール値を長期的な*[または*検索条件*]  
+ *検索条件*:: =*ブール用語*[または*検索条件*]  
   
  *選択リスト*:: = \* &#124;です。*選択サブリスト*[、*選択サブリスト*]. (*選択リスト*パラメーターを含めることはできません)。  
   

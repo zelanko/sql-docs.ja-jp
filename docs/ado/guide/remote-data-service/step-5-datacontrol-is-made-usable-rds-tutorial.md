@@ -1,37 +1,34 @@
 ---
-title: '手順 5: DataControl が行われた使用可能な (RDS チュートリアル) |Microsoft ドキュメント'
+title: '手順 5: DataControl が使用可能に (RDS チュートリアル) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd2d73a97e8ba4b3e2c052bb5fa0e08fa7c2d941
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3f25c8276c6985e38f0beef46c8db7d60f6e16a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734510"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>手順 5: DataControl が行われた使用可能な (RDS チュートリアル)
-返された**Recordset**オブジェクトは、使用するために使用します。 確認、移動、またはと、他のように編集**Recordset**です。 行うことができます、 **Recordset**環境によって異なります。 Visual Basic および Visual C を使用できるビジュアル コントロールがある、 **Recordset**直接的または間接的に有効にすると、データ コントロールを使用しています。  
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>手順 5: DataControl が使用可能になる (RDS チュートリアル)
+返された**レコード セット**オブジェクトは、使用するために使用します。 確認、移動、またはその他のように編集**Recordset**します。 行うことができます、 **Recordset**環境によって異なります。 Visual Basic および Visual C を使用できるビジュアル コントロールがある、**レコード セット**直接的または間接的に有効にすると、データ コントロールの aid を使用します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- たとえば、Microsoft Internet Explorer で Web ページを表示する場合があります表示する、 **Recordset** visual コントロール内のデータをオブジェクトします。 Web ページ上のビジュアル コントロールがアクセスできない、**レコード セット**オブジェクトに直接できます。 ただしにアクセスする、 **Recordset**オブジェクトを介して、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)です。 **.Rds ですDataControl**ビジュアルで使用可能になりますタイミングを制御、 [SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)プロパティに設定されている、 **Recordset**オブジェクト。  
+ たとえば、Microsoft Internet Explorer で Web ページを表示する場合があります表示する、 **Recordset** visual コントロール内のデータをオブジェクトします。 Web ページ上のビジュアルのコントロールにアクセスできません、 **Recordset**オブジェクトに直接します。 ただし、アクセスできる、 **Recordset**オブジェクト、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)します。 **Rds.DataControl**ビジュアルで使用可能になりますが制御その[SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)プロパティに設定されて、 **Recordset**オブジェクト。  
   
- ビジュアル コントロール オブジェクトにはその**DATASRC**パラメーターを設定、 **.rds ですDataControl**、およびその**DATAFLD**プロパティに設定、 **Recordset**オブジェクト フィールド (列)。  
+ コントロールのビジュアル オブジェクトにはその**DATASRC**パラメーターに設定、 **rds.DataControl**、およびその**DATAFLD**プロパティに設定、**レコード セット**オブジェクト フィールド (列)。  
   
  このチュートリアルでは、設定、 **SourceRecordset**プロパティ。  
   

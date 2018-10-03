@@ -1,44 +1,41 @@
 ---
-title: 行方向のバインド |Microsoft ドキュメント
+title: 行方向のバインド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d5f36f33773a10212c37eac5087327935981a9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855860"
 ---
 # <a name="row-wise-binding"></a>行方向のバインド
-行方向のバインドを使用して、またはアプリケーションを含む 1 つまたは 2 つ、構造体を定義、いくつかの場合、3 つ、データが返される対象の各列の要素。 最初の要素をデータ値を保持し、2 番目の要素が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は、SQL_DESC_INDICATOR_PTR および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての個別のバッファーに格納できます。これを行う場合、構造体には、3 番目の要素が含まれています。 その後、アプリケーションでは、行セットの行数が同じ数の要素を格納しているこれらの構造体の配列を割り当てます。  
+行方向のバインドを使用する場合、アプリケーション 1 つまたは 2 を含む構造体を定義または場合によって 3 では、データが返される対象の各列の要素。 最初の要素は、データ値を保持し、2 番目の要素が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての別のバッファーに格納できます。これが完了している場合、構造体には、3 番目の要素が含まれています。 その後、アプリケーションでは、行セットの行がある多くの要素を含むこれらの構造体の配列を割り当てます。  
   
- アプリケーションでは、SQL_ATTR_ROW_BIND_TYPE ステートメント属性を持つドライバーに構造体のサイズを宣言し、配列の最初の要素内の各メンバーのアドレスにバインドします。 したがって、ドライバーは、特定の行と列のデータのアドレスを計算できます。  
+ アプリケーションでは、SQL_ATTR_ROW_BIND_TYPE ステートメント属性を持つドライバーに構造体のサイズを宣言し、配列の最初の要素内の各メンバーのアドレスにバインドします。 そのため、ドライバーが特定の行と列のデータのアドレスを計算できます。  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- ここで行番号が付けられます 1、行セットのサイズにします。 (いずれかから差し引かれます行番号が C でのインデックスの配列は 0 から始まるためです。)次の図は、行方向のバインドの動作を示します。 一般に、構造にバインドされている列のみが含まれています。 構造体には、結果セット列に関連しないフィールドを含めることができます。 列は、任意の順序で、構造に配置することができますが、わかりやすくするためのシーケンシャルな順序で表示されます。  
+ 場所の行は 1 から行セットのサイズを数えます。 (いずれかから差し引かれます行番号配列を C でのインデックスは 0 から始まるためです。)次の図は、行方向のバインドの動作を示します。 一般に、構造にバインドされる列のみが含まれます。 構造体は、結果セット列に関連しないフィールドを含めることができます。 列は、任意の順序で構造内に配置することができますが、わかりやすくするための順番に表示されます。  
   
- ![表示行&#45;賢明バインディング](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![表示行&#45;賢明バインド](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- たとえば、次のコードは、OrderID、販売員、およびステータスの列のデータ、および長さ/インジケーターの販売員と状態列に返される要素を持つ構造体を作成します。 これらの構造体の 10 を割り当てるし、OrderID、販売員、およびステータスの列にバインドします。  
+ たとえば、次のコードでは、OrderID、営業担当者、および状態の列のデータと長さ/インジケーターの販売員と状態列に返される要素を持つ構造体を作成します。 これらの構造体の 10 を割り当てるし、OrderID、営業担当者、および状態列にバインドします。  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

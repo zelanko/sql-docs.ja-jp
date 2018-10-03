@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -22,23 +20,21 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: de381c37c5ee461c3e7a813c524e317b3d93e348
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8871e43e88d042d4afc89a83dfd035a3709687e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061962"
 ---
 # <a name="understanding-security-policies"></a>セキュリティ ポリシーの概要
   レポート サーバーが実行するすべてのコードは、特定のコード アクセス セキュリティ ポリシーの一部である必要があります。 これらのセキュリティ ポリシーは、証拠と名前付き権限セットとを対応付けるコード グループで構成されます。 多くの場合、コード グループは、そのグループ内のコードに対して与えることのできる権限が指定された名前付き権限セットに関連付けられます。 ランタイムは、信頼されるホストまたはローダーが提供した証拠を使用して、コードが属するコード グループ、およびコードに付与された権限を確認します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の共通言語ランタイム (CLR) によって定義された、このセキュリティ ポリシー アーキテクチャに準拠します。 ここでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の各種コードおよび関連付けられたポリシー ルールについて説明します。  
   
 ## <a name="report-server-assemblies"></a>レポート サーバーのアセンブリ  
- レポート サーバーのアセンブリには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 製品の一部であるコードが含まれています。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] はマネージド コード アセンブリを使用して記述されています。これらのアセンブリにはすべて厳密な名前が付けられています。つまり、デジタル署名されています。 これらのアセンブリのコード グループは、アセンブリの厳密な名前の公開キー情報に基づいて証拠を提供する **StrongNameMembershipCondition** を使用して定義されます。 コード グループには、**FullTrust** アクセス許可セットが付与されます。  
+ レポート サーバーのアセンブリには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 製品の一部であるコードが含まれています。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] はマネージド コード アセンブリを使用して記述されています。これらのアセンブリにはすべて厳密な名前が付けられています。つまり、デジタル署名されています。 これらのアセンブリのコード グループは、アセンブリの厳密な名前の公開キー情報に基づいて証拠を提供する **StrongNameMembershipCondition** を使用して定義されます。 コード グループには、**FullTrust** アクセス許可セットが付与されます。  
   
 ## <a name="report-server-extensions-rendering-data-delivery-and-security"></a>レポート サーバーの拡張機能 (表示、データ、配信、およびセキュリティ)  
  レポート サーバーの拡張機能はカスタムのデータ、配信、表示、およびセキュリティ拡張機能であり、ユーザーまたは他のサード パーティが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の機能を強化するために作成します。 このような拡張機能や機能強化する [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] コンポーネントに関連付けられたポリシー構成ファイルのアセンブリ コードには、**FullTrust** を付与する必要があります。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の一部として出荷される拡張機能は、レポート サーバーの公開キーで署名され、**FullTrust** アクセス許可セットが付与されます。  

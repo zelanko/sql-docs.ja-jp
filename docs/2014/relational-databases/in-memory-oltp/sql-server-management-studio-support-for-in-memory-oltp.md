@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bb02e083cc056bd4e732b6c432c5d182bf5032a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050123"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio によるインメモリ OLTP のサポート
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのツールが備わっています。 詳細については、「 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)」を参照してください。  

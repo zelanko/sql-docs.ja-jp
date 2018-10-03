@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clickthrough reports
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c96a114557bcef8252f2c21b70c9a50dbfb94
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d044b8f245d3c3ce2c092b7b5f2b094122f75f1e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101202"
 ---
 # <a name="clickthrough-reports-ssrs"></a>クリックスルー レポート (SSRS)
   クリックスルー レポートとは、メイン レポートに含まれるデータの詳細情報を提供するレポートです。 クリックスルー レポートは、メイン レポートに表示される対話型データをユーザーがクリックすると表示されます。 これらのレポートは、レポート サーバーによって自動的に生成されます。 モデル デザイナーでは、判断を設定してクリックスルー レポートに表示される内容、`DefaultDetailAttribute`と`DefaultAggregateAttribute`レポート モデルのエンティティに割り当てられたプロパティ。  

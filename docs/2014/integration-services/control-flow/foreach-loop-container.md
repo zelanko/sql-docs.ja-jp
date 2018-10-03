@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103456"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
   Foreach ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **Foreach** ループ構造と同様です。 パッケージでは、ループは Foreach 列挙子を使用することで有効になります。  Foreach ループ コンテナーは、指定した列挙子のメンバーが処理されるたびに制御フローを繰り返します。  
@@ -92,8 +89,7 @@ ms.locfileid: "37280428"
 ## <a name="related-tasks"></a>Related Tasks  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-              [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
   
 -   [Foreach ループ コンテナーを構成する](foreach-loop-container.md)  
   

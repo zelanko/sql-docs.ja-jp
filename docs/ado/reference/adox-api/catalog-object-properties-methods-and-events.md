@@ -1,44 +1,41 @@
 ---
-title: オブジェクトのプロパティ、メソッド、およびイベントをカタログ |Microsoft ドキュメント
+title: Catalog オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Catalog object [ADOX], members
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 920393e27746d3d2c46406056a5969f84cf77faa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02f018052567a82a87d4a541c23ae1ee5ed9e1b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630790"
 ---
-# <a name="catalog-object-properties-methods-and-events"></a>カタログ オブジェクトのプロパティ、メソッド、およびイベント
+# <a name="catalog-object-properties-methods-and-events"></a>Catalog オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
  [ActiveConnection プロパティ](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
   
  [グループのコレクション](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
- [プロシージャのコレクション](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Procedures コレクション](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
- [テーブル コレクション](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables コレクション](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
- [ユーザーのコレクション](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [ユーザー コレクション](../../../ado/reference/adox-api/users-collection-adox.md)  
   
- [ビューのコレクション](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Views コレクション](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="methods"></a>メソッド  
- [Create メソッド](../../../ado/reference/adox-api/create-method-adox.md)  
+ [メソッドを作成します。](../../../ado/reference/adox-api/create-method-adox.md)  
   
  [GetObjectOwner メソッド](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
   

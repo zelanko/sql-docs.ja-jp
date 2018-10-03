@@ -1,12 +1,10 @@
 ---
-title: sys.dm_broker_activated_tasks (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_broker_activated_tasks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_broker_activated_tasks
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_activated_tasks dynamic management view
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c24c9394aa6f05811e93d18e5c67b43278660dfc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: bf3910b432d803ce74e0bf24d83a974072028f33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704888"
 ---
 # <a name="sysdmbrokeractivatedtasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/23/2018
   Service Broker によってアクティブにされたストアド プロシージャごとに 1 行のデータを返します。  
  
 
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**spid**|**int**|アクティブにされたストアド プロシージャのセッションの ID。 NULL 値は許可されます。|  
 |**database_id**|**smallint**|キューが定義されているデータベースの ID。 NULL 値は許可されます。|  
@@ -42,7 +40,7 @@ ms.lasthandoff: 05/23/2018
 |**procedure_name**|**nvarchar(650)**|アクティブにされたストアド プロシージャの名前。 NULL 値は許可されます。|  
 |**execute_as**|**int**|ストアド プロシージャを実行するユーザーの ID。 NULL 値は許可されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="physical-joins"></a>物理結合  
@@ -56,7 +54,7 @@ ms.lasthandoff: 05/23/2018
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 関連の動的管理ビュー & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

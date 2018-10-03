@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b2878a1f12978bfab6f9cd7d0c0d04787ceccfd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5697fea6bea90407686f909e6c5cbafa2e2877b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120792"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]では、コンテンツ管理とはレポート サーバー アイテムの管理を指します。 すべてのアイテムは、プロパティおよびセキュリティの設定を通して、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。  
@@ -127,7 +124,7 @@ ms.locfileid: "37212362"
 ### <a name="adding-and-viewing-a-resource"></a>リソース ファイルの追加と表示  
  レポート サーバーにリソースを追加するには、ファイルをアップロードまたはパブリッシュします。  
   
-|演算|ファイルの種類|  
+|操作|ファイルの種類|  
 |---------------|---------------|  
 |アップロード|リソースをアップロードするには、レポート サーバーがネイティブ モードで動作している場合はレポート マネージャーを使用し、レポート サーバーが SharePoint 統合モードで動作している場合は SharePoint サイト上のアプリケーション ページを使用する必要があります。 詳細については、次を参照してください[ファイルまたはレポートをアップロード&#40;レポート マネージャー&#41; ](../reports/upload-a-file-or-report-report-manager.md)または [SharePoint ライブラリへのドキュメントのアップロード&#40;Reporting Services SharePoint モードの&#41;].。/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
 |パブリッシュ|プロジェクト内にある、レポート、レポート パーツ、データ ソース、またはデータセット以外のすべてのファイルは、リソースとしてアップロードされます。 リソースをパブリッシュするには、既存のアイテムをレポート デザイナーのプロジェクトに追加した後で、そのプロジェクトをレポート サーバーにパブリッシュします。|  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bc51edfd6e7ba2aeff58a230ad29ce800fffd79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071292"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>レポート サーバーで基本認証を構成する
   Reporting Services は、既定では、ネゴシエート認証および NTLM 認証を指定する要求を受け入れます。 基本認証を使用するクライアント アプリケーションやブラウザーが配置に含まれる場合は、サポートされる種類の一覧に基本認証を追加する必要があります。 また、レポート ビルダーを使用する場合は、レポート ビルダーのファイルへの匿名アクセスを有効にする必要もあります。  

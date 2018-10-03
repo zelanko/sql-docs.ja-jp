@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
@@ -16,16 +14,15 @@ f1_keywords:
 - MISCELLANEOUSFILESPROJECT
 - DevLang-TSQL
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
-caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 56a2a5cd321ad6914efeda674d2bc6bf0e89f7d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282078"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068982"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>オプション (クエリ結果-SQL Server-[全般] ページ)
   このページを使用すると、クエリ結果ペインの既定の動作を設定できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[クエリ結果]** フォルダーを展開して、**[SQL Server]** を選択してから、**[全般]** をクリックします。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ ウィンドウで右クリックし、**[クエリ オプション]** をクリックします。  

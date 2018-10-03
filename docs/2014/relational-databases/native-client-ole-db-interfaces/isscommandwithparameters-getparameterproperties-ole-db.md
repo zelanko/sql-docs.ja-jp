@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetParameterProperties method
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66377f57af64b4db43e20714c53a3e78a5daafab
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428321"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140294"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
   SSPARAMPROPS プロパティ セット構造体の配列を返します。各 UDT または XML パラメーターごとに 1 つの SSPARAMPROPS プロパティ セットが返されます。  
@@ -39,8 +36,8 @@ SSPARAMPROPS **prgParamProperties);
 ```  
   
 ## <a name="arguments"></a>引数  
- *pcParams*[in] には、[出力].  
- 返された SSPARAMPROPS 構造体の番号が含まれるメモリへのポインター *prgParamProperties*します。  
+ *pcParams*[out][in]  
+ *prgParamProperties* に返された SSPARAMPROPS 構造体の数を保持するメモリへのポインター。  
   
  *prgParamProperties*[out]  
  SSPARAMPROPS 構造体の配列が返されるメモリへのポインター。 プロバイダーは、構造体のメモリを割り当てます、このメモリをアドレスを返しますコンシューマーでこのメモリを解放する**imalloc::free**場合必要はありません、構造体。 呼び出しの前に**imalloc::free**の*prgParamProperties*、コンシューマーは呼び出す必要がありますも**VariantClear**の*vValue*プロパティバリアントがの参照が含まれている場合、メモリ リークを防ぐために各 DBPROP 構造体のタイプ (たとえば、BSTR です。)場合*pcParams*の出力が 0 個または DB_E_ERRORSOCCURRED 以外のエラーが発生する、プロバイダーのメモリを割り当てられません、確実に*prgParamProperties*出力に null ポインターです。  
@@ -66,7 +63,7 @@ SSPARAMPROPS **prgParamProperties);
 |Member|説明|  
 |------------|-----------------|  
 |*iOrdinal*|渡されるパラメーターの序数|  
-|*cPropertySets*|DBPROPSET の数が含まれる構造*rgPropertySets*します。|  
+|*cPropertySets*|*rgPropertySets* 内の DBPROPSET 構造体の数|  
 |*rgPropertySets*|DBPROPSET 構造体の配列を返すメモリへのポインター|  
   
 ## <a name="see-also"></a>参照  

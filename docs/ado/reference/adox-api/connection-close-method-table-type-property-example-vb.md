@@ -1,13 +1,11 @@
 ---
-title: 接続を閉じる方法、テーブル型のプロパティの例 (VB) |Microsoft ドキュメント
+title: 接続の Close メソッド、Table Type プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749350"
 ---
-# <a name="connection-close-method-table-type-property-example-vb"></a>テーブル型のプロパティの例 (VB) である接続 Close メソッド
-設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**カタログへの接続を閉じる必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマ オブジェクトから作成されたすべてのオブジェクトは孤立します。 任意のプロパティがキャッシュされているこれらのオブジェクトで使用可能なは引き続きプロバイダーへの呼び出しを必要とするプロパティの読み取り試行は失敗します。  
+# <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close メソッド、Table Type プロパティの例 (VB)
+設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**カタログへの接続を閉じる必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマ オブジェクトから作成されたすべてのオブジェクトは孤立します。 キャッシュされているこれらのオブジェクトのプロパティはいずれも使用できなくなりますが、プロバイダーの呼び出しを必要とするプロパティの読み取りを試行は失敗します。  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -70,7 +67,7 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- 閉じる、[接続](../../../ado/reference/ado-api/connection-object-ado.md)カタログを開くために使用できるオブジェクトは、設定と同じ効果を持つ必要があります、 **ActiveConnection**プロパティを**Nothing**です。  
+ 閉じる、[接続](../../../ado/reference/ado-api/connection-object-ado.md)カタログを開くために使用するオブジェクトの設定と同じ効果があります、 **ActiveConnection**プロパティを**Nothing**します。  
   
 ```  
 Attribute VB_Name = "Connection"  
@@ -78,9 +75,9 @@ Attribute VB_Name = "Connection"
   
 ## <a name="see-also"></a>参照  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列のコレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [テーブル コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type プロパティ (テーブル) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

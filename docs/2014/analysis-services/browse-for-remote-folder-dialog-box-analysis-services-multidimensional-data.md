@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212072"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060055"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>[リモート フォルダーの参照] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[リモート フォルダーの参照]** ダイアログ ボックスには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに定義されている使用可能なログとデータ フォルダーが一覧表示されます。 一覧からフォルダーを選択するか、必要であれば別のフォルダーを指定します。 **[リモート フォルダーの参照]** ダイアログ ボックスを表示するには、次のいずれかの手順を行います。  

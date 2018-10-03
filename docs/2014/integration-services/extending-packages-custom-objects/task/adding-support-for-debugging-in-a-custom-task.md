@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b70e10daa74878ad1d32a09fdfa37c2c6a583691
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39c56fa962f1a39019d63918c52a1e7e21da94ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138532"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンでは、ブレークポイントを使用することにより、パッケージ、タスク、およびその他の種類のコンテナーを実行中に中断できます。 ブレークポイントを使用すると、アプリケーションまたはタスクの正しい動作を妨げるエラーを確認し、修正できます。 ブレークポイントのアーキテクチャにより、クライアントは、タスクの処理を中断している間にパッケージ内のオブジェクトのランタイム値を定義された実行地点で評価できます。  

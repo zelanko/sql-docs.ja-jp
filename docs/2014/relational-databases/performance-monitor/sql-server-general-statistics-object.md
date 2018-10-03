@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:General Statistics
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 48b8df37c64ea017445f1e44cd6e03603708fa86
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: db96a90e9621949c528ea707be08beb5002177fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067862"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server: General Statistics オブジェクト
   **の** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、現在の接続数や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターとの間で接続または切断を行っている 1 秒あたりのユーザー数など、一般的なサーバー全体の利用状況を監視するためのカウンターがあります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの間で接続と切断を行うクライアントの数が多い、大規模オンライン トランザクション処理 (OLTP) で作業している場合に便利です。  

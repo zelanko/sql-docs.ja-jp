@@ -1,28 +1,25 @@
 ---
-title: Irow::getcolumns (または irow::open) を使用して列のフェッチと ISequentialStream |Microsoft Docs
+title: IRow::GetColumns (または IRow::Open) と ISequentialStream を使用した列のフェッチ | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Open method
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4fef8e98871fe65e8f885e878d124468321ba9a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6e48a13801c8332a27d821eb4f39b76c756f8031
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109901"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns (または IRow::Open) と ISequentialStream を使用した列のフェッチ
   大きなデータは、`ISequentialStream` インターフェイスを使用してバインドまたは取得できます。 バインドされた列の場合、状態フラグ DBSTATUS_S_TRUNCATED は、データが切り捨てられたことを示します。  
@@ -47,11 +44,11 @@ ms.locfileid: "37420751"
 ## <a name="example"></a>例  
  この例では、IRow を使用して単一の行をフェッチする方法を示します。 また、行から一度に 1 つの列を取得します。 この例では、IRow::GetColumns() および IRow::Open() の使用方法も示します。 列のデータの読み取りには ISequentialStream::Read を使用しています。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
+ このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するテーブルを作成します。  
   
- Ole32.lib oleaut32.lib をコンパイルし、2 つ目の (C++) コード リストを実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用したテーブルを削除します。  
   

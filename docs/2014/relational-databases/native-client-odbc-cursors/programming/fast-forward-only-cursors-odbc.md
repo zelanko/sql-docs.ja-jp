@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - cursors [ODBC], fast forward-only
 - ODBC cursors, fast forward-only
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31d034b7d2f7c201224c296d5ce515b61000efaa
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: df3cea50a8800cdca7fe0a5c846bc32556299e0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429931"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080162"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>高速順方向専用カーソル (ODBC)
   インスタンスに接続されているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、順方向専用かつ読み取り専用のカーソルのパフォーマンスの最適化をサポートしています。 高速順方向専用カーソルは、既定の結果セットに類似した方法で、ドライバーとサーバーによって内部的に実装されます。 高速順方向専用カーソルには、パフォーマンスが高いこと以外にも、次のような特性があります。  

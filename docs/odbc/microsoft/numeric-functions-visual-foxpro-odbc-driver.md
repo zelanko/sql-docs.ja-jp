@@ -1,13 +1,11 @@
 ---
-title: 数値関数 (Visual FoxPro ODBC ドライバー) |Microsoft ドキュメント
+title: 数値関数 (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC numeric functions [ODBC]
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - numeric functions [ODBC]
 - FoxPro ODBC driver [ODBC], numeric functions
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f577938577be95c7e2c506dbb542a2224f5929e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654412"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>数値関数 (Visual FoxPro ODBC ドライバー)
-次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC 数値関数同じ関数の場合、Visual FoxPro 文法は、ODBC 構文によって異なります、同等の Visual FoxPro が一覧表示されます。  
+次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC 数値関数ODBC 構文から同じ関数の場合、Visual FoxPro の文法が異なる場合は、Visual FoxPro のと同じですが一覧表示されます。  
   
-|ODBC の文法|Visual FoxPro 文法|  
+|ODBC の文法|Visual FoxPro の文法|  
 |------------------|---------------------------|  
 |ABS *(numeric_exp)*||  
 |ACOS *(float_exp)*||  
 |ASIN *(float_exp)*||  
 |ATAN *(float_exp)*||  
-|ATAN2 *(float_exp1、float_exp2)*|ATN2 (*float_exp1、float_exp2*)|  
+|ATAN2 *(float_exp1 float_exp2)*|ATN2 (*float_exp1、float_exp2*)|  
 |CEILING *(numeric_exp)*||  
 |COS *(float_exp)*||  
 |COT *(float_exp)*||  
@@ -44,18 +41,18 @@ ms.locfileid: "32902097"
 |FLOOR *(numeric_exp)*||  
 |ログ *(float_exp)*||  
 |LOG10 *(float_exp)*||  
-|MOD *(integer_exp1、integer_exp2)*||  
+|MOD *(integer_exp1 integer_exp2)*||  
 |PI *)*||  
 |ラジアン *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
-|ROUND *(numeric_exp、integer_exp)*||  
+|ROUND *(numeric_exp integer_exp)*||  
 |サインオン *(numeric_exp)*||  
 |SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  
 |TAN *(float_exp)*||  
   
- 次のような数値関数はサポートされていません。  
+ 次の数値関数はサポートされていません。  
   
- 電源 *(numeric_exp、integer_exp)*  
+ POWER *(numeric_exp integer_exp)*  
   
- TRUNCATE *(numeric_exp、integer_exp)*
+ TRUNCATE *(numeric_exp integer_exp)*

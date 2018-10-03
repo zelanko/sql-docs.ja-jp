@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - expanded-QName function
 - fn:expanded-QName function
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b76f85fae2f01322838c40b79227da896fabd01c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cbf18272b3cb8cfebd24f09c8ae33f50a18da4e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739840"
 ---
-# <a name="functions-related-to-qnames---expanded-qname"></a>Expanded-qname QNames に関係する関数
+# <a name="functions-related-to-qnames---expanded-qname"></a>QNames に関係する関数 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   指定された URI 名前空間を使用して xs:QName 型の値を返します、 *$paramURI*とで指定されたローカル名、 *$paramLocal*します。 場合 *$paramURI*空の文字列または空のシーケンスでは、名前空間を表すありません。  

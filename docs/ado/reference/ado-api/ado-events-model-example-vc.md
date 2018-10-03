@@ -1,56 +1,53 @@
 ---
-title: ADO イベント モデルの例 (vc++) |Microsoft ドキュメント
+title: ADO イベント モデルの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614450"
 ---
-# <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (vc++)
-Visual C のセクションの[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)ADO イベント モデルのインスタンスを作成する方法の一般的な説明。 によって作成された環境でのイベント モデルのインスタンス化の具体的な例を次に示します、 **#import**ディレクティブです。  
+# <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (VC++)
+Visual C のセクションの[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)ADO イベント モデルをインスタンス化する方法の一般的な説明を提供します。 によって作成された環境でのイベント モデルをインスタンス化した特定の例を次に、 **#import**ディレクティブ。  
   
- 一般的な説明を使用して**adoint.h**メソッド シグネチャの参照として。 ただし、一般的な説明でいくつかの細かい若干した結果、変更を使用して、 **#import**ディレクティブ。  
+ 一般的な説明を使用して**adoint.h**メソッド シグネチャの参照として。 ただし、一般的な説明で、いくつかの詳細を変更する少しを使用した結果、 **#import**ディレクティブ。  
   
--   **#Import**ディレクティブ解決**typedef**のメソッド シグネチャのデータ型、および基本的なフォームに修飾子です。  
+-   **#Import**ディレクティブ解決**typedef**のメソッド シグネチャのデータ型、および基本的なフォームに修飾子。  
   
--   純粋仮想メソッドを上書きすることはすべて先頭"**raw _**"です。  
+-   上書きする必要がありますが、純粋仮想メソッドはすべて先頭"**raw _**"。  
   
  コードの一部には、コーディング スタイルだけが反映されます。  
   
--   ポインター **IUnknown**によって使用される、**アドバイズ**への呼び出しでメソッドを明示的に取得した**QueryInterface**です。  
+-   ポインター **IUnknown**で使用される、 **Advise**への呼び出しでメソッドを明示的に取得した**QueryInterface**します。  
   
 -   クラス定義のデストラクターを明示的にコーディングする必要はありません。  
   
--   QueryInterface、AddRef、およびリリースのより堅牢な実装をコーディングすることができます。  
+-   QueryInterface、AddRef、およびリリースのより堅牢な実装をコードしたい場合があります。  
   
--   **_Uuidof()** インターフェイス Id を取得するディレクティブを広範囲に使用します。  
+-   **_Uuidof()** インターフェイス Id を取得するディレクティブを広範に使用します。  
   
- 最後に、この例には、動作可能なコードが含まれています。  
+ 最後に、例には、いくつか作業中のコードが含まれています。  
   
--   この例は、コンソール アプリケーションとして書き込まれます。  
+-   例は、コンソール アプリケーションとして書き込まれます。  
   
--   コメント、対象のコードを挿入する必要があります"`// Do some work`"です。  
+-   コメント、対象のコードを挿入する必要があります"`// Do some work`"。  
   
--   すべてのイベント ハンドラーは、何も行われないと、さらに通知をキャンセルするされます。 アプリケーションの適切なコードを挿入し、必要な場合に通知を許可する必要があります。  
+-   すべてイベント ハンドラー既定値を何も、さらに通知をキャンセルします。 アプリケーションの適切なコードを挿入し、必要な場合に通知を許可する必要があります。  
   
 ```  
 // ADO_Events_Model_Example.cpp  

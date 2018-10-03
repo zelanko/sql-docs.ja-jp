@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Rollback Tran Starting event class'
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 252686d868a9baa95c5be2f3b8da6a2cfd1a64e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 565f1d58b8043b2d7d4007fba29e699cbf36be11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145932"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting イベント クラス
   TM: Rollback Tran Starting イベント クラスは、ROLLBACK TRANSACTION 要求が開始されていることを示します。 クライアントはトランザクション管理インターフェイスから要求を送信します。 EventSubClass 列は、現在のトランザクションがロールバックされた後に新しいトランザクションが開始されるかどうかを示します。  
