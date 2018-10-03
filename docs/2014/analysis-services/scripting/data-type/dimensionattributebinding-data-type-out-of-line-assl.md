@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionAttributeBinding Data Type (out-of-line)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DimensionAttributeBinding data type
 ms.assetid: d8ec77a9-749f-4b08-8d56-8b6514a70248
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34e2f45189a92397bd0afcbde2e504fa82d83604
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d649dcfc5070d0c60a2ab3cea421e5c8b0c328b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187089"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197764"
 ---
 # <a name="dimensionattributebinding-data-type-out-of-line-assl"></a>DimensionAttributeBinding データ型 (不一致) (ASSL)
   ディメンション内の属性の不一致バインドを表す派生データ型を定義します。  

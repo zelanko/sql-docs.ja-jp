@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 733c082ead217c7d3052faaef0342819e9c8fa20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a13f04338eb780a8d5efa839a5570ea0c5737752
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155972"
 ---
 # <a name="query-designers-report-builder"></a>クエリ デザイナー (レポート ビルダー)
   レポート ビルダーにはグラフィカルおよびテキスト ベースのクエリ デザイナーが用意されており、レポートのクエリの作成に使用できます。 データ ソースの種類ごとにクエリ デザイナーが関連付けられています。 一部のデータ ソースでは、クエリを対話形式で作成できるグラフィカル デザイナーがサポートされています。 その他のデータ ソースでは、テキスト ベースのクエリ デザイナーを使用します。 SQL Server データ ソースでは、グラフィカルとテキスト ベースの両方のクエリ デザイナーがサポートされます。  

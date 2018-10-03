@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c81bba0a055f812afddb56eac604111796f464d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211942"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>マーケット バスケット モデルの検証 (中級者向けデータ マイニング チュートリアル)
   これでビルドした、`Association`モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション ビューアーで、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 このチュートリアルでは、ビューアーを使用してアイテム間の関係を検証する方法を、順を追って学習します。 ビューアーを使用すると、どの製品とどの製品がよく一緒に表示されるかが一目でわかるほか、新たなパターンの概観も可能です。  

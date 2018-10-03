@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SqlTriggerContext class
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
-caps.latest.revision: 67
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226702"
 ---
 # <a name="clr-triggers"></a>CLR トリガー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) との統合により、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語を使用して CLR トリガーを作成できるようになりました。 ここでは、CLR 統合によって実装されたトリガー固有の情報について説明します。 トリガーの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。  
@@ -517,7 +514,7 @@ The statement has been terminated.
  この例外が予期されても、および前後の try/catch ブロック、[!INCLUDE[tsql](../../includes/tsql-md.md)]実行を続行するために、トリガーを起動するアクションを実行するステートメントは必要です。 この 2 つの例外がスローされても、トランザクションはロールバックされ、変更はテーブルにコミットされません。 CLR トリガーと [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーの主な違いは、トランザクションがロールバックされた後、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーは、動作を継続してさらに実行を行えるということです。  
   
 ### <a name="example"></a>例  
- 次のトリガーでは、テーブルで INSERT ステートメントの簡単な検証を実行します。 挿入された整数値が 1 に等しい場合、トランザクションはロールバックされ、値はテーブルに挿入されません。 その他のすべての整数値はテーブルに挿入されます。 `Transaction.Rollback` メソッドの前後の try/catch ブロックに注意してください。 ph x="1" /&gt; スクリプトは、テスト テーブル、アセンブリ、およびマネージド ストアド プロシージャを作成します。 トリガーにより実行が終了されたときにスローされる例外をキャッチするため、2 つの INSERT ステートメントが try/catch ブロックにラップされることに注意してください。  
+ 次のトリガーでは、テーブルで INSERT ステートメントの簡単な検証を実行します。 挿入された整数値が 1 に等しい場合、トランザクションはロールバックされ、値はテーブルに挿入されません。 その他のすべての整数値はテーブルに挿入されます。 `Transaction.Rollback` メソッドの前後の try/catch ブロックに注意してください。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトは、テスト テーブル、アセンブリ、およびマネージド ストアド プロシージャを作成します。 トリガーにより実行が終了されたときにスローされる例外をキャッチするため、2 つの INSERT ステートメントが try/catch ブロックにラップされることに注意してください。  
   
  C#  
   

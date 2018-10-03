@@ -1,28 +1,25 @@
 ---
-title: 新しい日付と時刻の機能で以前の SQL Server バージョン (OLE DB) |Microsoft Docs
+title: 新しい日付と時刻の機能で以前の SQL Server バージョン (OLE DB) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd1f9f48b1703719ce08ca2d1da4a5c9addaffc0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125504"
 ---
-# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>新しい日付と時刻の機能で以前の SQL Server バージョン (OLE DB)
+# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>以前のバージョンの SQL Server における、新しい日付または時刻の機能の動作 (OLE DB)
   このトピックでは、強化された日付と時刻の機能を使用するクライアント アプリケーションのバージョンと通信する場合に想定される動作を説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、クライアントのバージョンでコンパイルされたときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]強化された日付と時刻の機能をサポートするサーバーへのコマンドを送信します。  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
@@ -38,10 +35,10 @@ ms.locfileid: "37420187"
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
 |DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部が 0 以外の場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
-|DBTYPE_DBTIME||Time (7)|失敗します (時刻リテラルが無効です)。|[OK]|  
+|DBTYPE_DBTIME||Time(7)|失敗します (時刻リテラルが無効です)。|[OK]|  
 |DBTYPE_DBTIMESTAMP|||失敗します (時刻リテラルが無効です)。|[OK]|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|[OK]|[OK]|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7)|[OK]|[OK]|  
+|DBTYPE_DBTIMESTAMP||datetime2 (7)|[OK]|[OK]|  
 |DBTYPE_DBDATE|Smalldatetime|date|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
 |DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
@@ -169,6 +166,6 @@ ms.locfileid: "37420187"
  新しい日付型または時刻型に対しては、すべての比較演算子を使用できます。これは、日付型または時刻型ではなく文字列型と見なされるためです。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化機能 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

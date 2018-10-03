@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: de1213901f7cc9c743d76727ac65320507b0fab5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ea204b4e7b9d066a2b4f7de6063c095d02967d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096462"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   データ テーブルのデータ フィルターを作成した後は、Web サイト アプリケーションをビルドして実行します。  
@@ -32,14 +29,11 @@ ms.locfileid: "37214822"
   
      Web ページがブラウザーに表示されます。 ReportViewer コントロールにレポートが表示されます。 ツール バーを使用して、レポート内の移動、ズーム、およびレポートの Excel へのエクスポートを行うことができます。  
   
-2.  
-              **[名前]** 列の任意の行にマウス カーソルを合わせます。 手の形のマウス カーソルが表示されます。  
+2.  **[名前]** 列の任意の行にマウス カーソルを合わせます。 手の形のマウス カーソルが表示されます。  
   
-3.  
-              **[名前]** 列の値をクリックします。 対応するフィルター選択されたデータを含む子レポートが表示されます。  
+3.  **[名前]** 列の値をクリックします。 対応するフィルター選択されたデータを含む子レポートが表示されます。  
   
-4.  
-              **ReportViewer**ツール バーの **[親レポートに戻る]** アイコンをクリックして、 **親** レポートに戻ります。  
+4.  **ReportViewer**ツール バーの **[親レポートに戻る]** アイコンをクリックして、 **親** レポートに戻ります。  
   
      ![ssrs で ReportViewer を使用してドリルスルー](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs で ReportViewer を使用してドリルスルー")  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB error handling, return codes
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - FAILED macro
 - errors [OLE DB], return codes
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00082a5c6053d8b9f0319c26ae8d72302c14d218
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7a84ad46068260524a2e6232ca668da445447529
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407631"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207422"
 ---
 # <a name="return-codes"></a>リターン コード
   最も基本的なレベルでは、メンバー関数は成功するか失敗するかのどちらかです。 それよりもやや詳細なレベルでは、関数は成功しても、その成功はアプリケーション開発者が意図した状態ではない場合があります。  
   
- OLE DB のリターン コードの詳細については、次を参照してください。[リターン コード (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)します。  
+ OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)」を参照してください。  
   
  ときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのメンバー関数が S_OK では、その関数は成功を返します。  
   

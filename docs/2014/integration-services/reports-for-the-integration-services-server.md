@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096172"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services サーバーのレポート
   現在のリリースで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、標準のレポートが表示されます。[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]監視に役立つ[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に配置されたプロジェクト、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サーバー。 これらのレポートは、パッケージの状態と履歴を確認したり、必要に応じてパッケージ実行の失敗の原因を特定したりするのに役立ちます。  

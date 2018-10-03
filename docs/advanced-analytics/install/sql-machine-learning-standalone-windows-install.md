@@ -9,26 +9,32 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7cf5cf2d78900c5bbd7607666afecc64aa98267f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 70fa652e876f1011bc2d74df56104671b33775b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187492"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Machine Learning Server (スタンドアロン) または SQL Server セットアップを使用して R Server (スタンドアロンを) インストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server セットアップが含まれています、**共有機能**インスタンスに対応していない、インストールするためのオプション SQL Server 外で実行されるスタンドアロン machine learning server。 SQL Server 2016 では、この機能は呼**R Server (スタンドアロン)** します。 SQL Server 2017 で呼び出されます**Machine Learning Server (スタンドアロン)** R と Python が含まれています。 
 
-SQL Server セットアップによってインストールは、スタンドアロン サーバーは機能的には、SQL のブランド化されていないバージョンの[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)ケースやシナリオでは、リモートの実行などを使用して、同じサポートサービスの運用化と web サービス、および RevoScaleR と revoscalepy 関数の完全なコレクション。
+SQL Server セットアップによってインストールは、スタンドアロン サーバーは機能的には、SQL のブランド化されていないバージョンの[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)ケースやシナリオなどを使用して、同じサポートします。
+
++ リモート実行、同じコンソールで、ローカルおよびリモート セッション間の切り替え
++ Web ノードとコンピューティング ノードの運用化
++ Web サービスの配置: R と Python スクリプトを web サービスにパッケージ化する機能
++ R と Python の関数ライブラリの完全なコレクション
 
 SQL Server から切り離されて独立したサーバーと、R と Python 環境が構成された、セキュリティ保護、および基になるオペレーティング システムと SQL サーバーではなく、スタンドアロン サーバーで提供されるツールを使用してアクセスします。
 
-補完のため SQL Server、スタンドアロン サーバーがリモートで使用できるソリューションの計算コンテキストを学習、同じ意味で、ローカル サーバーと、Spark 上のリモート マシン ラーニング サーバー間の切り替えの高性能なマシンを開発する必要がある場合に役立ちます。クラスター化または別の SQL Server のインスタンスします。
-  
+SQL Server の補助としてスタンドアロン サーバーが高パフォーマンスの機械学習のサポートされているデータ プラットフォームの完全な範囲に、リモート計算コンテキストを使用できるソリューションを開発する必要がある場合に便利です。 Spark クラスターで、または別の SQL Server インスタンスで、リモートの Machine Learning Server にローカル サーバーから実行を切り替えることができます。
 
-## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
+<a name="bkmk_prereqs"> </a>
+
+## <a name="pre-install-checklist"></a>インストール前のチェックリスト
 
 SQL Server 2016 R Server (スタンドアロン) または Microsoft R Server などの以前のバージョンをインストールする場合は、続行する前に、既存のインストールをアンインストールします。
 
@@ -37,7 +43,9 @@ SQL Server 2016 R Server (スタンドアロン) または Microsoft R Server �
 コンピューターのスタンドアロン サーバーがあることができますのみ: SQL Server 2017 Machine Learning Server または SQL Server 2016 R Server (スタンドアロン) のいずれか。 別のバージョンをインストールする前に、1 つのバージョンを手動でアンインストールする必要があります。
 
 ::: moniker range="=sql-server-2016"
- ###  <a name="bkmk_ga_instalpatch"></a> インストールのパッチ要件 
+<a name="bkmk_ga_instalpatch"></a> 
+
+ ###  <a name="install-patch-requirement"></a>インストールのパッチ要件 
 
 SQL Server 2016 のみ: Microsoft が特定のバージョンの SQL Server の前提条件としてインストールされる Microsoft vc 2013 ランタイム バイナリに問題を識別します。 VC ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server で安定性の問題が発生する可能性があります。 SQL Server をインストールする前に、「[SQL Server リリース ノート](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)」にある手順に従って、ご使用のコンピューターに VC ランタイム バイナリのパッチが必要かどうかを確認してください。  
 ::: moniker-end
@@ -133,6 +141,49 @@ R と Python の開発では、同じコンピューター上の複数のバー�
 |SQL Server 2017 Machine Learning サービス (データベース) |R 言語のオプションを使用して、SQL Server 2017 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server 2016 R Server (スタンドアロン) |  SQL Server 2016 セットアップ ウィザード |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (In-database) |SQL Server 2016 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>更新プログラムを適用します。
+
+データベース エンジンと machine learning のコンポーネントの両方に、最新の累積的な更新プログラムを適用することをお勧めします。 累積的更新プログラムは、セットアップ プログラムを通じてインストールされます。 
+
+インターネットに接続されたデバイスは、累積的更新プログラムは、Windows update では、一般的に適用されますが、制御された更新プログラムの次の手順を使用することもできます。 データベース エンジンの更新プログラムを適用すると、セットアップは、スタンドアロン サーバーにインストールする R または Python の機能の累積的更新プログラムを取得します。 
+
+切断されたサーバーは、追加の手順が必要です。 データベース エンジンの累積更新プログラムおよび machine learning 機能用の CAB ファイルを取得する必要があります。 すべてのファイルは、分離されたサーバーに転送し、手動で適用する必要があります。
+
+1. ベースラインのインスタンスを起動します。 累積的更新プログラムは、既存のインストールにのみ適用できます。
+
+  + SQL Server 2017 の最初のリリースからの machine Learning Server (スタンドアロン)
+  + 最初のリリースの SQL Server 2016、SQL Server 2016 SP 1、または SQL Server 2016 SP 2 からの R Server (スタンドアロン)
+
+2. インターネット接続されているデバイスでは、SQL Server のバージョンの累積更新プログラムの一覧に移動します。
+
+  + [SQL Server 2017 更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 更新プログラム](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 最新の累積的な更新プログラムをダウンロードします。 実行可能ファイルになります。
+
+4. インターネットに接続されたデバイスで、ライセンス条項に同意し、影響を受ける機能を確認し、完了するまでの進行状況の監視ウィザードでセットアップを実行する .exe をダブルクリックします。
+
+5. インターネット接続のないサーバー。
+
+   + R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、次を参照してください。[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)します。
+
+   + すべてのファイル、メイン実行可能ファイルと、オフラインのコンピューター上のフォルダーに、CAB ファイルを転送します。
+
+   + セットアップを実行する .exe をダブルクリックします。 インターネット接続のないをサーバーに累積更新プログラムをインストールする場合は、R と Python の .cab ファイルの場所を選択するように求められます。
+
+6. Web ノードとコンピューティング ノードの運用化が有効にするサーバー上のインストール後の編集**appsettings.json**、"MMLNativePath"のすぐ下の"MMLResourcePath"エントリを追加します。
+
+    ```json
+    "ScorerParameters": {
+        "MMLNativePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\",
+        "MMLResourcePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\"
+    }
+    ```
+
+7. [管理者の CLI ユーティリティを実行して](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)web を再起動し、コンピューティング ノード。 手順と構文は、次を参照してください。[モニター、開始、および web およびコンピューティング ノードを停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)します。
 
 ## <a name="development-tools"></a>開発ツール
 

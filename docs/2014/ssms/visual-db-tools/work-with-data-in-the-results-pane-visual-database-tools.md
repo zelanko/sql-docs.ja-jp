@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4e398b03b6b3ec2476e135b5afdab738318b8dc
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8a2f61a0d71c1fe54c7b66fab375681a97ae7f64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103484"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>結果ペインのデータの操作 (Visual Database Tools)
   クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  
@@ -53,7 +50,7 @@ ms.locfileid: "43811708"
  クエリおよびビュー デザイナーでキーボード ショートカットを使用する方法については、「[クエリおよびビュー デザイナーでの操作 (Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)」を参照してください。  
   
 ## <a name="committing-changes-to-the-database"></a>データベースに変更内容をコミットする  
- 結果ペインは、オプティミスティック同時実行制御を使用しているため、グリッドには、完全にライブのビューではなく、データベース内のデータのコピーが表示されます。 この方法では、行から移動したときに初めて変更内容がデータベースにコミットされます。 これにより、複数のユーザーがデータベースに対して同時に操作を行うことが可能になります。 競合が発生した場合 (たとえば他のユーザーが同じ行を変更して先にデータベースにコミットした場合) は、競合が発生したことを通知すると共に解決策を提供するメッセージが表示されます。  
+ 結果ペインは、オプティミスティック コンカレンシーを使用しているため、グリッドには、完全にライブのビューではなく、データベース内のデータのコピーが表示されます。 この方法では、行から移動したときに初めて変更内容がデータベースにコミットされます。 これにより、複数のユーザーがデータベースに対して同時に操作を行うことが可能になります。 競合が発生した場合 (たとえば他のユーザーが同じ行を変更して先にデータベースにコミットした場合) は、競合が発生したことを通知すると共に解決策を提供するメッセージが表示されます。  
   
 ## <a name="undo-changes-using-esc"></a>Esc キーを使用して変更を元に戻す  
  変更は、データベースにコミットされる前であれば、元に戻すことができます。 レコードから移動していない場合、またはレコードから移動していても、変更がコミットされないことを示すエラー メッセージが表示された場合は、そのデータはコミットされていません。 変更がコミットされていない場合は、Esc キーを使用して変更を元に戻すことができます。  
