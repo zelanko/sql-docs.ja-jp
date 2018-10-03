@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], mining models
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - removing mining models
 - mining models [Analysis Services], deleting
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5d2a4500de682ecf9d0745c472d793ac4848235
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b09560d26d201ced8160bf171a92dbb618a1c94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180372"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>マイニング構造からのマイニング モデルの削除
   データ マイニング デザイナー、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または DMX ステートメントを使用すると、マイニング モデルを削除することができます。  
@@ -37,7 +34,7 @@ ms.locfileid: "37319442"
   
      **[オブジェクトの削除]** ダイアログ ボックスが開きます。  
   
-3.  [**OK**] をクリックします。  
+3.  **[OK]** をクリックします。  
   
 ### <a name="delete-a-mining-model-using-sql-server-management-studio"></a>SQL Server Management Studio を使用したマイニング モデルの削除  
   

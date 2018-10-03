@@ -1,13 +1,11 @@
 ---
-title: カタログのオブジェクト (ADO MD) |Microsoft ドキュメント
+title: Catalog オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3cda7947458e9183323de5c3879dd27bf2d1f131
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283381"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827660"
 ---
-# <a name="catalog-object-ado-md"></a>カタログ オブジェクト (ADO MD)
-多次元データ プロバイダー (MDP) に固有のマルチ ディメンション スキーマ情報 (つまり、キューブと基になるディメンション、階層、レベル、およびメンバー) が含まれています。  
+# <a name="catalog-object-ado-md"></a>Catalog オブジェクト (ADO MD)
+多次元データ プロバイダー (MDP) に固有の多次元スキーマ情報 (つまり、キューブと基になるディメンション、階層、レベル、およびメンバー) が含まれています。  
   
 ## <a name="remarks"></a>コメント  
  コレクションのプロパティと、**カタログ**オブジェクトを次を行うことができます。  
   
--   設定して、カタログを開く、 [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)プロパティを標準 ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは有効な接続文字列にします。  
+-   設定して、カタログを開き、 [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)プロパティを標準の ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは有効な接続文字列にします。  
   
--   識別、**カタログ**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティです。  
+-   識別、**カタログ**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティ。  
   
--   使用して、カタログ内のキューブを反復処理する、 [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)コレクション。  
+-   使用して、カタログ内のキューブを反復処理、 [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)コレクション。  
   
  このセクションには、次のトピックが含まれています。  
   

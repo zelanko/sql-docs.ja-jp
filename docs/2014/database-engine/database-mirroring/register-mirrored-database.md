@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e84e0d6598c8657e48dbfbd3fb6570f0f8ad7c72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159472"
 ---
 # <a name="register-mirrored-database"></a>[ミラー化されたデータベースの登録]
   このダイアログ ボックスを使用すると、特定のサーバー インスタンスに対し、ミラー化されたデータベース (複数可) を登録できます。登録は、データベースをデータベース ミラーリング モニターに追加することによって行います。 データベースを追加すると、データベースとそのパートナーに関する情報、およびパートナーへの接続方法に関する情報が、データベース ミラーリング モニターによってローカルにキャッシュされます。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], about rowsets
@@ -15,37 +13,36 @@ helpviewer_keywords:
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 73f16529f84fd9a7eb0158061ab4f875050a8496
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411711"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049762"
 ---
 # <a name="rowsets"></a>行セット
   行セットとは、データの列を含む行の集まりです。 行セットは、すべての OLE DB データ プロバイダーが表形式で結果セット データを公開できるようにするための重要な機能を持つオブジェクトです。  
   
- コンシューマーを使用して、セッションを作成した後、 **idbcreatesession::createsession**メソッド、コンシューマーが使用するか、 **IOpenRowset**または**IDBCreateCommand**行セットを作成するセッションのインターフェイスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、これらのインターフェイスの両方がサポートされます。 ここでは、これら両方のメソッドについて説明します。  
+ コンシューマーでは **IDBCreateSession::CreateSession** メソッドを使用してセッションを作成した後、そのセッションで **IOpenRowset** インターフェイスまたは **IDBCreateCommand** インターフェイスのいずれかを使用して行セットを作成できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、これらのインターフェイスの両方がサポートされます。 ここでは、これら両方のメソッドについて説明します。  
   
--   呼び出して行セットを作成、 **iopenrowset::openrowset**メソッド。  
+-   **IOpenRowset::OpenRowset** メソッドを呼び出して行セットを作成します。  
   
-     この操作は、1 つのテーブル全体について行セットを作成することと同じです。 このメソッドは、1 つのベース テーブルのすべての行を含む行セットを開き、その行セットを返します。 引数の 1 つ**OpenRowset**は、行セットを作成するためのテーブルを識別するテーブルの ID です。  
+     この操作は、1 つのテーブル全体について行セットを作成することと同じです。 このメソッドは、1 つのベース テーブルのすべての行を含む行セットを開き、その行セットを返します。 **OpenRowset** の引数の 1 つは、行セットの作成元となるテーブルを識別するテーブル ID です。  
   
--   呼び出してコマンド オブジェクトを作成、 **idbcreatecommand::createcommand**メソッド。  
+-   **IDBCreateCommand::CreateCommand** メソッドを呼び出して、コマンド オブジェクトを作成します。  
   
      コマンド オブジェクトでは、プロバイダーがサポートするコマンドが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、SELECT ステートメントなどの任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやストアド プロシージャへの呼び出しをコンシューマーで指定できます。 コマンド オブジェクトを使用して行セットを作成する手順は次のとおりです。  
   
-    1.  コンシューマーは、 **idbcreatecommand::createcommand**メソッドを要求するコマンド オブジェクトを取得する、セッション、 **ICommandText**コマンド オブジェクトのインターフェイス。 これは、 **ICommandText**インターフェイスを設定し、実際のコマンド テキストを取得します。 テキスト コマンドを呼び出すことによって、コンシューマー設定、 **icommandtext::setcommandtext**メソッド。  
+    1.  コンシューマーは、セッションの **IDBCreateCommand::CreateCommand** メソッドを呼び出してコマンド オブジェクトを取得し、そのコマンド オブジェクトの **ICommandText** インターフェイスを要求します。 この **ICommandText** インターフェイスで、実際のコマンド テキストが設定および取得されます。 コンシューマーは、**ICommandText::SetCommandText** メソッドを呼び出して、テキスト コマンドにコマンドを設定します。  
   
-    2.  ユーザーの呼び出し、 **icommand::execute**コマンドのメソッド。 コマンドの実行時に構築される行セット オブジェクトには、コマンドから返される結果セットが含まれます。  
+    2.  ユーザーがコマンドの **ICommand::Execute** メソッドを呼び出します。 コマンドの実行時に構築される行セット オブジェクトには、コマンドから返される結果セットが含まれます。  
   
- コンシューマーが使用できる、 **ICommandProperties**インターフェイスを取得またはで実行されるコマンドによって返される行セットのプロパティを設定する、 **icommand::execute**インターフェイス。 最も一般的に要求されるプロパティは、行セットでサポートする必要のあるインターフェイスです。 コンシューマーはインターフェイスだけでなく、行セットやインターフェイスの動作を変更するプロパティも要求できます。  
+ コンシューマーは、**ICommandProperties** インターフェイスを使用して、**ICommand::Execute** インターフェイスで実行されるコマンドから返される行セットのプロパティを取得または設定できます。 最も一般的に要求されるプロパティは、行セットでサポートする必要のあるインターフェイスです。 コンシューマーはインターフェイスだけでなく、行セットやインターフェイスの動作を変更するプロパティも要求できます。  
   
- コンシューマーで行セットの解放、 **irowset::release**メソッド。 行セットを解放すると、コンシューマーがその行セットに保持しているすべての行ハンドルも解放されます。 ただし、行セットを解放してもアクセサーは解放されません。 ある場合、 **IAccessor**インターフェイスがまだ解放します。  
+ コンシューマーは **IRowset::Release** メソッドを使用して行セットを解放します。 行セットを解放すると、コンシューマーがその行セットに保持しているすべての行ハンドルも解放されます。 ただし、行セットを解放してもアクセサーは解放されません。 **IAccessor** インターフェイスがある場合は、それを解放する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

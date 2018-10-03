@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c51246efc1e93c596ad18aec7ba4e72e1399e2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172522"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>マイニング構造 (Analysis Services - データ マイニング)
   マイニング構造には、マイニング モデルの作成元となる、データ ソース ビュー、列の数と型、トレーニング セットとテスト セットに分ける省略可能なパーティションなどのデータを定義します。 1 つのマイニング構造は、同じドメインを共有する複数のマイニング モデルをサポートできます。 次の図は、データ マイニング構造とデータ ソースの関係、およびデータ マイニング構造とそれを構成するデータ マイニング モデルの関係を示しています。  

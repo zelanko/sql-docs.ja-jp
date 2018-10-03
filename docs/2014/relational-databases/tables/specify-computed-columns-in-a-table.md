@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e70c9c5e8060e4cd2daace9c4997ea324533106
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30bb3496a2bd68ac94a702b6d7713b53cbc40bfb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234902"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057692"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
   計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して計算列に式を指定できます。  
@@ -76,7 +73,7 @@ ms.locfileid: "37234902"
   
 1.  **オブジェクト エクスプローラー**で、変更する列が含まれているテーブルを右クリックし、 **[列]** フォルダーを展開します。  
   
-2.  計算列の数式を指定する列を右クリックし、 **[削除]** をクリックします。 [**OK**] をクリックします。  
+2.  計算列の数式を指定する列を右クリックし、 **[削除]** をクリックします。 **[OK]** をクリックします。  
   
 3.  前の手順に従って、新しい列を追加し、計算列の数式を指定して、新しい計算列を追加します。  
   

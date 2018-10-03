@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b61d01e59aa99e6ed97a328d14cee8ab82c3427a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8b451134d621c8f151fa43ec4214317ab087918
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072735"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>テーブル モデルの文字列ストレージと照合順序
   文字列 (テキスト値) は高度に圧縮された形式でテーブル モデルに格納されます。この圧縮により、文字列の全体または一部を取得するときに予期しない結果を取得することがあります。 文字列のロケールと照合順序は最も近い親プロジェクトから階層的に継承されるため、文字列の言語が明示的に定義されていない場合、親のロケールと照合順序は、文字列の格納方法、および文字列が一意であるか親の照合順序の定義に従って同様の文字列と結合されるかに影響することがあります。  

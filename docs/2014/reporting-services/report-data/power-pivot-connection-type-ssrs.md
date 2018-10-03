@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166102"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の PowerPivot ギャラリーにパブリッシュされた PowerPivot ブックからデータを取得することができます。  
@@ -35,10 +32,10 @@ ms.locfileid: "37234752"
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
   
 ## <a name="connection-string"></a>[接続文字列]  
- 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URLhttp://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxします。  
+ 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxします。  
   
 ## <a name="credentials"></a>[資格情報]  
- PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)します。  
+ PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳しくは、「[データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)に関する記事を参照してください。  
   
 ## <a name="queries"></a>クエリ  
  PowerPivot データ ソースに接続した後、MDX グラフィカル クエリを使用して、基となるデータ構造を参照および選択してクエリを作成します。 クエリを作成したら、それを実行して結果ペインにサンプル データを表示します。  

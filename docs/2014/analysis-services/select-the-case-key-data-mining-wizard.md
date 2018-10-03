@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcasekey.f1
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de7c1972cdf7a39fe39b045f8a7d555cd9a328c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c2b5fbc89b6852d178ae4afc5c8cab67259ee89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090492"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>[ケース キーの選択] (データ マイニング ウィザード)
   **[ケース キーの選択]** ページを使用すると、マイニング構造のキーとなるソース キューブ ディメンションの属性を選択できます。 この属性は、階層内にあるか、属性階層が有効になっている必要があります。  

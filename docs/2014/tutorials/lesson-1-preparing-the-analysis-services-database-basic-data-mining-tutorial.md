@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb226ca3445559047172aa8a8167876e1824b7d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f7e417f786da7344ad43ebaab826a8d0e28f8e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328952"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173434"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>レッスン 1: Analysis Services データベースの準備 (基本的なデータ マイニング チュートリアル)
   新しい従業員の[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]命じられたを設計する際にビジネス インテリジェンス アプリケーション[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] を活かして、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データ マイニングの経験が自転車を購入した人に関する有用かつ実用的な情報を検出します。 また、将来自転車を購入する可能性が最も高い顧客を予測することも求められています。  

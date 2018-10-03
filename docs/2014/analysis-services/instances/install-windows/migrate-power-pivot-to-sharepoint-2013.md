@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c975ffc274853aee6bd74ce15079626c6cb17a7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5facae11f6fc529502e02f1b8d010fa7d0ed2d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094725"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>SharePoint 2013 への PowerPivot の移行
   
@@ -56,7 +53,7 @@ ms.locfileid: "37280008"
   
 2.  新しい SharePoint Server 2013 ファームをインストールします。  
   
-3.   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのインスタンスを SharePoint モードでインストールします。 詳細については、次を参照してください。 [PowerPivot for SharePoint 2013 インストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)します。  
+3.  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのインスタンスを SharePoint モードでインストールします。 詳細については、次を参照してください。 [PowerPivot for SharePoint 2013 インストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)します。  
   
 4.  SharePoint ファーム内の各サーバーで [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 のインストール パッケージ **spPowerPivot.msi** を実行します。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
   

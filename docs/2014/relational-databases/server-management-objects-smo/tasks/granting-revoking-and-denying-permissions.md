@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - granting permissions [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - permissions [SMO]
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d088fbddb4c3e293a0ba98de0eb2a7c6eba17dbb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0405d1695681d7a4fc56f526392ebf7422d89553
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164962"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>権限の許可、取り消し、および拒否
   <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> オブジェクトに対して権限のセットや個別のサーバー権限を割り当てるには、<xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> オブジェクトを使用します。 サーバー レベルの権限については、ログオンが参照されます。 Windows によって認証されたログオンは、Windows ユーザー名としてリストされます。 このコード例を実行すると、権限付与対象ユーザーから権限が取り消され、<xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> メソッドを使用してこの権限が削除されたことが確認されます。  

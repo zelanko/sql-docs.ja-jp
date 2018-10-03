@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.miningstructureproperties.f1
 helpviewer_keywords:
 - Mining Structure Properties dialog box
 ms.assetid: 6c7b5f3b-8808-433f-ad58-25e75b140604
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d9ca9e7bf73ab18a7f7d03310134f8078751213a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d6a908fb7d309b9e41b7392f35efb25dadef04c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177542"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>[マイニング構造のプロパティ] ダイアログ (Analysis Services - データ マイニング)
   **SQL Server Management Studio** の **[マイニング構造のプロパティ]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのマイニング構造のプロパティを設定できます。 **[マイニング構造のプロパティ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** でマイニング構造を右クリックし、コンテキスト メニューの **[プロパティ]** を選択します。  

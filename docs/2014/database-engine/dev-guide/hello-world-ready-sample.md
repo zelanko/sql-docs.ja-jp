@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc2ba0e196fa2440152fe1bd7415feeeb6f4e079
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079642"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready サンプル
   Hello World Ready サンプルでは、国際化対応の、CLR (共通言語ランタイム) 統合ベースの単純なストアド プロシージャの作成、配置、およびテストにかかわる基本的な操作を示しています。 国際化対応コンポーネントは、コンポーネントのソース コードを変更することなく、世界中の市場に向けて、異なる言語へのローカライズを簡単に行うことができます。 また、このサンプルでは、ストアド プロシージャによって動的に構築されてクライアントに返されるレコードおよび出力パラメーターを使用してデータを返す方法についても示します。このサンプルは、Hello World サンプルとほぼ同じですが、このアプリケーションのローカライズをより簡単かつ安全に行うことができます。 ローカライズ済みテキストを変更するには、次の作業を実行する必要があります。  

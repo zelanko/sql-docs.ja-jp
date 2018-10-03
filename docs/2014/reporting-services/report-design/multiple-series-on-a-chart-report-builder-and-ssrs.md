@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: dea720120f13f1546af8a1ab9bdd572badabb350
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fe0efd10d2c9c9e972aaf32214d3e799de12d92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160740"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>グラフ上の複数の系列 (レポート ビルダーおよび SSRS)
   グラフ上に複数の系列がある場合は、系列を比較する最適な方法を決定する必要があります。 積み上げグラフを使用すると、各系列の相対的な割合を表示できます。 共通のカテゴリの X 軸を共有する 2 つの系列のみを比較する場合は、セカンダリ軸を使用します。 これは、価格と売買高や収入と税金など、データの関連する 2 つの系列を表示するときに役立ちます。 グラフが読み取れなくなった場合は、複数のグラフ領域を使用して、各系列間の間隔を広げることを検討してください。  

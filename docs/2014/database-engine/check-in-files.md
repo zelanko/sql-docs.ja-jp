@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckInDialog
 helpviewer_keywords:
 - checking in files
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f050f50dd7e749ab10be637390b4e28af3334683
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096772"
 ---
 # <a name="check-in-files"></a>ファイルのチェックイン
   ファイルのソース管理を行っている場合、修正後のファイルを他のユーザーも利用できるようにするには、そのファイルをソース管理にチェックインする必要があります。 ファイルをチェックインすると、チェックインしたバージョンがソース管理プロバイダーに書き込まれ、そのファイルの最新バージョンになります。  

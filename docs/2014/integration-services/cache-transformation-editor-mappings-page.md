@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec474543bad0eb83d313fd4bf16b2b3163176b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af8dd4e4671f808f762d5044fd261047386fe2d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243062"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157422"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>[キャッシュ変換エディター] ([マッピング] ページ)
   **[キャッシュ変換エディター]** の **[マッピング]** ページを使用して、キャッシュ変換の入力列をキャッシュ変換マネージャーの変換先列にマップします。  

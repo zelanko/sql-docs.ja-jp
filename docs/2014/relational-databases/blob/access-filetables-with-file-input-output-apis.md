@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3083e3365c8303c12adfc631881d887a970e471f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082209"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>ファイル I/O API を使用した FileTable へのアクセス
   FileTable でファイル システム I/O が動作するしくみについて説明します。  
@@ -43,7 +40,7 @@ ms.locfileid: "37191742"
   
 -   ファイルの場合、 **is_directory** 列に **false**が格納されます。 ディレクトリの場合、この列に **true**が格納されます。  
   
--   複数のファイル I/O 操作または [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が同時に行われ、その影響が階層内の同じファイルまたはディレクトリに及ぶ場合、アクセスの共有と同時実行制御が適用されます。  
+-   複数のファイル I/O 操作または [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が同時に行われ、その影響が階層内の同じファイルまたはディレクトリに及ぶ場合、アクセスの共有とコンカレンシーが適用されます。  
   
 ##  <a name="read"></a> FileTable 内のファイルおよびディレクトリの読み取り  
  ストリームおよび属性データに対するすべてのファイル I/O アクセス操作に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Read Committed 分離セマンティクスが適用されます。  
@@ -89,7 +86,7 @@ ms.locfileid: "37191742"
 ###  <a name="trans"></a> トランザクション セマンティクス  
  ファイル I/O API を使用して FileTable 内のファイルにアクセスする場合、このような操作はユーザー トランザクションと関連付けされず、次のような特徴を持ちます。  
   
--   FileTable 内の FILESTREAM データの非トランザクション アクセスは、いずれのトランザクションにも関連付けられていないため、特定の分離セマンティクスがありません。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では内部トランザクションを使用して、FileTable データに対してロックまたは同時実行のセマンティクスを適用することができます。 このタイプの内部トランザクションは、すべて READ COMMITTED 分離によって実行されます。  
+-   FileTable 内の FILESTREAM データの非トランザクション アクセスは、いずれのトランザクションにも関連付けられていないため、特定の分離セマンティクスがありません。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では内部トランザクションを使用して、FileTable データに対してロックまたはコンカレンシーのセマンティクスを適用することができます。 このタイプの内部トランザクションは、すべて READ COMMITTED 分離によって実行されます。  
   
 -   FILESTREAM データの非トランザクション操作に対する ACID 保証はありません。 一貫性の保証は、ファイル システム内のアプリケーションで行われるファイル更新の場合と類似します。  
   
@@ -97,8 +94,8 @@ ms.locfileid: "37191742"
   
  ただし、FileTable 内の FILESTREAM 列は、 **OpenSqlFileStream()** の呼び出しによるトランザクション FILESTREAM アクセスによって、アクセスすることもできます。 この種のアクセスは完全にトランザクション アクセスであり、現在サポートされている全レベルのトランザクション一貫性を保持します。  
   
-###  <a name="concurrency"></a> 同時実行制御  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファイル システム アプリケーション間の FileTable アクセス、およびファイル システム アプリケーションと [!INCLUDE[tsql](../../includes/tsql-md.md)] アプリケーション間の FileTable アクセスに対して、同時実行制御が適用されます。 この同時実行制御は、FileTable の行に適切なロックを設定することによって実現されます。  
+###  <a name="concurrency"></a> コンカレンシー制御  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファイル システム アプリケーション間の FileTable アクセス、およびファイル システム アプリケーションと [!INCLUDE[tsql](../../includes/tsql-md.md)] アプリケーション間の FileTable アクセスに対して、コンカレンシー制御が適用されます。 このコンカレンシー制御は、FileTable の行に適切なロックを設定することによって実現されます。  
   
 ###  <a name="triggers"></a> トリガー  
  ファイル システムを利用して、ファイルまたはディレクトリ、あるいはその属性の作成、変更、または削除を行うと、FileTable 内で対応する挿入操作、更新操作、または削除操作が実行されます。 そのような操作の中で、関連する [!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガーが起動されます。  

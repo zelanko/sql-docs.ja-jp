@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring recovery interval [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - maximum number of minutes per database recovery
 - recovery [SQL Server], recovery interval option
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1654938c5a7fa344361af04549917b82dde2d02f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18da33b5827fa6f06b9cf84659259e40d08a29ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175792"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval サーバー構成オプションの構成
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **recovery interval** オプションは、データベースの復旧に必要な時間の上限を定義します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、 [自動チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md) が特定のデータベースに対して発行されるおおよその頻度を、このオプションに指定された値を使用して決定します。  
@@ -65,8 +62,7 @@ ms.locfileid: "37221962"
   
 -   通常は、パフォーマンス上の問題が発生する場合を除いて、recovery interval は 0 のままにすることをお勧めします。 recovery interval 設定を長くする場合には、少しずつ値を増やして、そのたびに復旧のパフォーマンスへの影響を評価することをお勧めします。  
   
--   
-  **sp_configure** を使用し、**recovery interval** オプションの値を 60 (分) よりも大きくするには、RECONFIGURE WITH OVERRIDE を指定する必要があります。 WITH OVERRIDE は、構成値のチェック (無効な値や非推奨値のチェック) を無効にします。  
+-   **sp_configure** を使用し、**recovery interval** オプションの値を 60 (分) よりも大きくするには、RECONFIGURE WITH OVERRIDE を指定する必要があります。 WITH OVERRIDE は、構成値のチェック (無効な値や非推奨値のチェック) を無効にします。  
   
 ###  <a name="Security"></a> セキュリティ  
   

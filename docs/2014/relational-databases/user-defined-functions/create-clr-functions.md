@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CLR functions [SQL Server]
@@ -15,12 +13,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b3411a8cd0e45d5a82d8c5d7d0bfcecbdef6052
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 33aaebe7172ac637354527bb9777afe5eb9a0a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425251"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173422"
 ---
 # <a name="create-clr-functions"></a>CLR 関数の作成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内部には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) で作成されたアセンブリの形式でプログラミングされたデータベース オブジェクトを作成できます。 共通言語ランタイムが提供する豊富なプログラミング モデルを利用できるデータベース オブジェクトには、集計関数、関数、ストアド プロシージャ、トリガー、型などがあります。  
@@ -40,8 +38,7 @@ ms.locfileid: "37425251"
 >  CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、既定では無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [を使用して](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled オプション [を有効にしないと、これらの参照は](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)で実行されません。  
   
 ## <a name="accessing-external-resources"></a>外部リソースへのアクセス  
- CLR 関数は、ファイル、ネットワーク リソース、Web サービス、他のデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスを含む) などの外部リソースへのアクセスに使用できます。 これは、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 `System.IO`、 `System.WebServices`など、 `System.Sql`のさまざまなクラスを使用して実現できます。 このためには、このような関数を含むアセンブリに、少なくとも EXTERNAL_ACCESS 権限セットを構成します。 詳細については、「 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)がサポートする言語のクラスの静的メソッドとして、関数を定義します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスへのアクセスには、SQL クライアント マネージド プロバイダーを使用できます。 ただし、接続を開始したサーバーへのループバック接続は、CLR 関数ではサポートされていません。  
+ CLR 関数は、ファイル、ネットワーク リソース、Web サービス、他のデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスを含む) などの外部リソースへのアクセスに使用できます。 これは、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 `System.IO`、 `System.WebServices`など、 `System.Sql`のさまざまなクラスを使用して実現できます。 このためには、このような関数を含むアセンブリに、少なくとも EXTERNAL_ACCESS 権限セットを構成します。 詳細については、「 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)がサポートする言語のクラスの静的メソッドとして、関数を定義します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスへのアクセスには、SQL クライアント マネージド プロバイダーを使用できます。 ただし、接続を開始したサーバーへのループバック接続は、CLR 関数ではサポートされていません。  
   
  **SQL Server のアセンブリを作成、変更、削除するには**  
   

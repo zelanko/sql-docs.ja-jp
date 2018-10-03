@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22bfe87f9d0cd09d2d7c7f650d500398b936cde0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad99c202d858bbdf5de47a21fe26070328e2de2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119632"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>ソリューションとデータ ソースの作成 (中級者向けデータ マイニング チュートリアル)
   データ マイニングを使用するプロジェクトを最初に作成する必要があります[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、テンプレートを使用して**Analysis Services 多次元およびデータ マイニング プロジェクト**します。 テンプレートを開くと、データ ソース、マイニング構造、マイニング モデル、さらにマイニング構造で多次元データが使用される場合はキューブまで、データ マイニングに必要なすべてのスキーマがデザイナーに読み込まれます。  

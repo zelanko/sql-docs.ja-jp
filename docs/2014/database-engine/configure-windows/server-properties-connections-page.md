@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9dcefb5daa67613fd64f277271f4ffa4d35d9738
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b20ec9f33d9b2d117ad3c29d464af2392703a771
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314512"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079178"
 ---
 # <a name="server-properties-connections-page"></a>[サーバーのプロパティ] ([接続] ページ)
   このページを使用すると、接続オプションを表示したり変更したりできます。  
   
 ## <a name="connections"></a>接続  
- **[同時接続の最大数 (0 = 無制限)]**  
+ **[コンカレント接続の最大数 (0 = 無制限)]**  
  0 以外の値に設定した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で許可される接続の数を制限します。  
   
 > [!CAUTION]  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f13a9693615fd55d1cd9fed60398ab78374963e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 546cf8172cbfc2e13b0953207078f3b2cc9dc146
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082523"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート サーバー Web サービス、レポート マネージャー、およびスケジュールされたレポート処理とサブスクリプションの配信に使用されるバックグラウンド処理アプリケーションを含んだ単一のサービスとして実装されます。 このトピックでは、サービス アカウントを最初に構成する方法と、Reporting Services 構成ツールを使用してアカウントやパスワードを変更する方法について説明します。  

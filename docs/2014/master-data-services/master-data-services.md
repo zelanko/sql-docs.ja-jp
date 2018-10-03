@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 12
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce167bf5e95e67282aa37b002c32ccaa816c3be1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cc6765ae4fe00fd2f17317c62a5569825f8b973
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174632"
 ---
 # <a name="master-data-services"></a>マスター データ サービス
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) は、マスター データ管理のための [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ソリューションです。 マスター データ管理 (MDM) とは、メンテナンス可能な形でマスターのリストをまとめることを目標に、データの非トランザクション リストを探索および定義するために組織が必要とする作業を表します。 MDM プロジェクトには、一般に、MDM テクノロジの実装と共に内部ビジネス プロセスの評価および再構築が含まれます。 優れた MDM ソリューションをビジネスの現場に導入することで、信頼性が高く分析可能なデータを一元的に管理できるようになるため、結果として、より的確な意思決定を行うことが可能になります。  

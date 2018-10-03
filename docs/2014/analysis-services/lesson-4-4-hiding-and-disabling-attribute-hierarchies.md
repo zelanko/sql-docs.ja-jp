@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d980e87255d24d754e19d8358b423ba38440d05d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c3dbf70fe7a50caaaa1a3e80cd5fe7699c7287a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271958"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049232"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>属性階層の非表示化と無効化
   既定では、ディメンションの属性ごとに属性階層が 1 つ作成されます。また、それぞれの階層はディメンションのファクト データで使用できます。 属性階層は、"All" レベルと、その階層のすべてのメンバーを含む詳細レベルで構成されます。 既に学習したように、これらの属性をユーザー定義階層として整理し、キューブ内にナビゲーション パスを設けることができます。 状況によっては、一部の属性とその階層を無効にしたり、非表示にしたりする必要が生じます。 たとえば、社会保障番号 (身分登録番号)、給与、誕生日、ログイン情報などは、キューブ情報の生成には必要のない属性です。 一般に、これらの情報は、特定の属性メンバーの詳細情報としてのみ表示されます。 したがって、これらの属性階層を非表示にして、各属性のメンバー プロパティとしてのみ表示されるようにする必要があります。 また、顧客名、郵便番号など他の属性メンバーは、属性階層に個別に表示するのではなく、ユーザー階層からのみ表示されるようにする必要があります。 このような処理をするのは、属性階層内の独立したメンバーが非常に多いためです。 処理パフォーマンスを向上させるため、ユーザーが参照しない属性階層を無効にしてください。  

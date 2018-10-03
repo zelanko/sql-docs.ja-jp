@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174602"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI ブラウザー (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブの **[KPI ブラウザー]** ペインを使用すると、主要業績評価指標 (KPI) の結果を表示およびテストできます。 KPI を表示するには、最初に [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに配置する必要があります。  

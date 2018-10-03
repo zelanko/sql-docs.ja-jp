@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Object Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 678838cd084fb8d3c7905f3e7363059fea28f541
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4fb7e25b9e813487b612bbd6269c2f080d85f5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178752"
 ---
 # <a name="object-element-xmla"></a>Object 要素 (XMLA)
   親要素によって使用されるオブジェクト参照を含みます。  

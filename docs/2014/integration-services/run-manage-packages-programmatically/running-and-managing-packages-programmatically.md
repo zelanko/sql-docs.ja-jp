@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 659952d44fa2c530a313a4f6bd29cfbfddf9d236
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5322a21037fdbef79c3e1d6554128fcc10bff97f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051542"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>プログラムによるパッケージの実行と管理
   開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 その場合、次に示すいくつかの方法があります。  
@@ -56,7 +53,7 @@ ms.locfileid: "37239152"
  ローカル コンピューターでパッケージを実行し、DataReader 変換先および DtsClient 名前空間を使用して、データ フローの出力をクライアント アプリケーションに読み込む方法について説明します。  
   
  [プログラムによる使用可能なパッケージの列挙](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
- ph x="1" /&gt; サービスによって管理されている使用可能なパッケージを検出する方法について説明します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスによって管理されている使用可能なパッケージを検出する方法について説明します。  
   
  [プログラムによるパッケージとフォルダーの管理](../run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md)  
  パッケージとフォルダーを作成、名前変更、および削除する方法について説明します。  

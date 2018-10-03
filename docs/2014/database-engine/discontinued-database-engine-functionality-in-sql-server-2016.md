@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - FASTFIRSTROW hint
 - SET DISABLE_DEF_CNST_CHK
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
-caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 648ff85c3061bc7d20408eaae7a14748650e5886
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d5d292421616d9c3d6043cf792345a8de0d8840
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135292"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 で廃止されたデータベース エンジンの機能
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
@@ -72,8 +69,8 @@ ms.locfileid: "37218042"
 |プログラミング|SQL Server 分散管理オブジェクト (SQL-DMO)。|SQL Server 管理オブジェクト (SMO)|  
 |クエリ ヒント|`FASTFIRSTROW` ヒント|`OPTION (FAST` *n* `)`します。|  
 |リモート サーバー|`sp_addserver` を使用して新しいリモート サーバーを作成する機能は廃止されました。 'local' オプションを設定した `sp_addserver` は引き続き使用できます。 アップグレード中に保持されたリモート サーバーまたはレプリケーションによって作成されたリモート サーバーは使用可能です。|リンク サーバーを使用してリモート サーバーを置き換えてください。|  
-|Security|`sp_dropalias`|別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 使用`sp_dropalias`にアップグレードされたデータベースで別名を削除します。|  
-|Security|Version パラメーター **PWDCOMPARE**ログインの値を表すよりも前[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2000 は廃止されました。|なし|  
+|セキュリティ|`sp_dropalias`|別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 使用`sp_dropalias`にアップグレードされたデータベースで別名を削除します。|  
+|セキュリティ|Version パラメーター **PWDCOMPARE**ログインの値を表すよりも前[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2000 は廃止されました。|なし|  
 |SMO での Service Broker のプログラミング|**Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority**クラスが実装されなく、 **Microsoft.SqlServer.Management.Smo.IObjectPermission**インターフェイス。||  
 |SET オプション|`SET DISABLE_DEF_CNST_CHK`|[なし] :|  
 |システム テーブル|sys.database_principal_aliases|別名の代わりにロールを使用してください。|  

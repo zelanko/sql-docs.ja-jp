@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
@@ -25,12 +23,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2fba39e592835f3c5e6dbffc6c8b6d384c5c837a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057313"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
   このトピックでは、ログインにマップされるデータベース ユーザーを作成する方法を説明します[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../../includes/tsql-md.md)]します。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在することを前提としています。 ログインを作成する方法については、次を参照してください。[ログインを作成する](create-a-login.md)します。  
@@ -89,8 +87,7 @@ ms.locfileid: "43030654"
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- 
-  **[データベース ユーザー - 新規]** ダイアログ ボックスでは、 **[所有されているスキーマ]**、 **[メンバーシップ]**、 **[セキュリティ保護可能なリソース]**、 **[拡張プロパティ]** という 4 つの追加ページにもオプションが提供されます。  
+ **[データベース ユーザー - 新規]** ダイアログ ボックスでは、 **[所有されているスキーマ]**、 **[メンバーシップ]**、 **[セキュリティ保護可能なリソース]**、 **[拡張プロパティ]** という 4 つの追加ページにもオプションが提供されます。  
   
 -   **[所有されているスキーマ]** ページには、新しいデータベース ユーザーが所有できるすべてのスキーマが一覧表示されます。 データベース ユーザーのスキーマを追加または削除するには、 **[このユーザーが所有するスキーマ]** で、スキーマの横のチェック ボックスをオンまたはオフにします。  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76e76290206dd1618b37865f95ca17709faf2a6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180912"
 ---
 # <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>タスク 9: 全体結合変換を追加して適切なレコードと修正済みレコードを結合する
   ここでは、全体結合変換をデータ フローに追加します。 全体結合変換は、複数の入力を 1 つの出力に結合します。 このシナリオでは、1 つのストリームに適切なレコードと修正済みレコードを結合します。  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-caps.latest.revision: 5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 48cbee157bf1088ddabbf33a7a6501decd8bdefa
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 574188dc87c9d89e370cb0187c44d30cd5dc3158
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076812"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
   記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  

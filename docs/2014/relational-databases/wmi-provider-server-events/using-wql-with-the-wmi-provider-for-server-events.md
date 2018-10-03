@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5e71a51917f770ba91f0708f7bad4e2e4ecf9b40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16bf7df8d4c20db8f2598259af296824df3eeade
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182082"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events と WQL の使用
   管理アプリケーションは WQL (WMI Query Language) ステートメントを実行することにより、WMI Provider for Server Events を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントにアクセスすることができます。 WQL は、WMI 特有の拡張機能を複数持つ、構造化照会言語 (SQL) の単純化されたサブセットです。 WQL を使用した場合、アプリケーションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンス、データベース、またはデータベース オブジェクト (現在サポートされているオブジェクトはキューのみ) に対してイベントの種類を取得します。 WMI Provider for Server Events は、クエリをデータベース スコープまたはオブジェクト スコープのイベント通知、または対象データベースで作成されるイベント通知に変換、**マスター**サーバー スコープのイベント用のデータベース通知します。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef48666d6e7c73d530895e315cbc3a42b57599eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96171211f08ae5348dfb183dc20abaaa66b3fb6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182492"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>補助文字対応文字列操作サンプル
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のこのサンプルは、補助文字に対応した文字列処理を示します。 このサンプルでは、組み込み関数と同じ文字列操作機能を提供する、Transact-SQL の 5 つの文字列関数の実装を示します。ただしこのサンプルの文字列操作関数では、Unicode 文字列および補助文字文字列の両方を処理することができます。 5 つの関数 lens()`lefts(), rights(), subs()`と`replace_s()`組み込み関数と等価である`LEN(), LEFT(), RIGHT(), SUBSTRING()`と`REPLACE()`文字列関数。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: 58
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0260982df5dff6640a4a273916c8e4455bd18621
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02cdf6e739ff0feb8c60bec5b9bf3bc4a87ffb7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065692"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーのインストール
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード レポート サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド ラインからインストールできます。 セットアップ ウィザードで、1) ファイルをインストールして既定の設定でサーバーを構成する、または 1) ファイルのインストールのみを行いインストール ウィザードではサーバーを構成しない、のいずれかを選択できます。 このトピックでは *ネイティブ モードの既定の構成* について確認します。このインストールでは、セットアップでレポート サーバー インスタンスのインストールと構成の両方が行われます。 セットアップが完了すると、レポート サーバーが実行され、使用できる状態になります。 ネイティブ モードのレポート サーバーは、スタンドアロンのアプリケーション サーバーとして実行されます。 ネイティブ モードは既定のサーバー モードです。  
@@ -101,7 +98,7 @@ ms.locfileid: "37329442"
 |要素|説明|  
 |----------|-----------------|  
 |Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|  
-|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 レポート サーバーが、http:// を含め、コンピューターに解決されるあらゆるホスト名の指定のポートですべての HTTP 要求を受け入れることを指定します\<computername >/reportserver、 http://localhost/reportserver、または http://\<IPAddress >/reportserver です。|  
+|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 レポート サーバーが、 http:// を含め、コンピューターに解決されるあらゆるホスト名の指定のポートですべての HTTP 要求を受け入れることを指定します\<computername >/reportserver、 http://localhost/reportserver、または http://\<IPAddress >/reportserver です。|  
 |Port|既定のポートは 80 です。 80 以外のポートを使用する場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web アプリケーションをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があるので注意してください。|  
 |仮想ディレクトリ|既定では、reportserver _ の形式で仮想ディレクトリが作成\<*instance_name*> レポート サーバー Web サービスの場合は reports _\<*instance_name*>レポート マネージャー。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 レポート マネージャーの既定の仮想ディレクトリは、 **reports**です。|  
   

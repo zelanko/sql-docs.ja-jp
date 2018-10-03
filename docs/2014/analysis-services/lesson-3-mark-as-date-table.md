@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a2a6ce44a66fbb1e9045116580acc726f648df9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26eb4f82b97d745f6269d57a76c479d677d6cc2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265748"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177532"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>レッスン 4 : 日付テーブルとしてマーク
   「レッスン 2: データの追加」では、DimDate という名前のディメンション テーブルをインポートしました。 次に、「レッスン 3: 列名の変更」では DimDate テーブルの名前を単純な Date に変更しました。 このモデルでは、このテーブルは Date という名前になりましたが、実際は日付と時刻のデータが含まれた*日付テーブル*になります。  

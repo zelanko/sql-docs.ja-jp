@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_cluster_nodes (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_cluster_nodes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_cluster_nodes_TSQL
@@ -18,37 +16,37 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fb5b957cfdaa340ec90a9bb30a5e9db6a54ca31
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 97aa72e4b4012878125ec6635cc181d0f012ecb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847520"
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  フェールオーバー クラスター インスタンスの構成には、ノードごとに 1 行を返します。 現在のインスタンスがフェールオーバー クラスター インスタンスの場合は、このフェールオーバー クラスター インスタンス (「仮想サーバー」以前) が定義されているノードの一覧を返します。 現在のサーバー インスタンスがフェールオーバー クラスター インスタンスではない場合は、空の行セットを返します。  
+  フェールオーバー クラスター インスタンスの構成にノードごとに 1 つの行を返します。 現在のインスタンスがフェールオーバー クラスター インスタンスの場合は、このフェールオーバー クラスター インスタンス (「仮想サーバー」以前) が定義されているノードの一覧を返します。 現在のサーバー インスタンスがフェールオーバー クラスター インスタンスではない場合は、空の行セットを返します。  
   
-> **注:** これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_cluster_nodes**です。  
+> **注:** これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_cluster_nodes**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|内のノードの名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス (仮想サーバー) 構成します。|  
-|ステータス|**int**|内のノードの状態、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス: 0、1、2、3、-1。 詳細については、次を参照してください。 [GetClusterNodeState 関数](http://go.microsoft.com/fwlink/?LinkId=204794)です。|  
+|status|**int**|内のノードの状態、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス: 0、1、2、3、-1。 詳細については、次を参照してください。 [GetClusterNodeState 関数](http://go.microsoft.com/fwlink/?LinkId=204794)します。|  
 |status_description|**nvarchar(20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター ノードの状態の説明。<br /><br /> 0 = up<br /><br /> 1 = down<br /><br /> 2 = 一時停止<br /><br /> 3 = joining<br /><br /> -1 = unknown|  
-|is_current_owner|bit|1 は、このノードの現在の所有者、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスターのリソース。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|is_current_owner|bit|1 は、このノードの現在の所有者であることを意味、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスターのリソース。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  フェールオーバー クラスタリングが有効な場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (仮想サーバー) 構成の一部として指定されているフェールオーバー クラスター内のどのノードでも実行できます。  
   
-> **注:** このビューには、将来のリリースで廃止予定 fn_virtualservernodes 関数が置き換えられます。  
+> **注:** 、将来のリリースで非推奨の予定 fn_virtualservernodes 関数がこのビューに置き換えられます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -61,7 +59,7 @@ FROM sys.dm_os_cluster_nodes;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|NodeName|ステータス|status_description|is_current_owner|  
+|NodeName|status|status_description|is_current_owner|  
 |--------------|------------|-------------------------|------------------------|  
 |node1|0|up|1|  
 |node2|0|up|0|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172112"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多次元モデルのアセンブリの管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、標準偏差計算から階層内でのメンバーのスキャンまで、あらゆる動作を実現するためにデザインされた、多次元式 (MDX) 言語およびデータ マイニング拡張機能 (DMX) 言語で使用するための多数の組み込み関数が提供されています。 ただし、他のすべての複雑で強力な製品がそうであるように、この製品も常に機能の拡張を求められています。  
@@ -83,7 +80,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  アセンブリのセキュリティは、コード アクセス セキュリティ モデルである、.NET Framework セキュリティ モデルに基づいています。 .NET Framework は、ランタイムが完全に信頼されるコードと部分的に信頼されるコードの両方をホストできると仮定する、コード アクセス セキュリティ メカニズムをサポートしています。 .NET Framework コード アクセス セキュリティによって保護されるリソースは、通常、リソースへのアクセスを許可する前に対応する権限を要求する、マネージド コードによってラップされます。 権限の要求は、(アセンブリ レベルで) 呼び出し履歴内のすべての呼び出し側が、対応するリソース権限を持つ場合にのみ満たされます。  
   
  アセンブリでは、実行権限は `PermissionSet` オブジェクトの `Assembly` プロパティを使用して渡されます。 マネージド コードが取得する権限は、有効なセキュリティ ポリシーによって決定されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以外によるホスト環境では、エンタープライズ、コンピューター、およびユーザーの 3 つの有効なポリシー レベルがあります。 コードが取得する権限の有効なリストは、これら 3 つのレベルによって取得される権限の共通部分によって決定されます。  
@@ -98,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |`ExternalAccess`|同じアクセスを提供します、`Safe`外部システム リソースにアクセスする追加機能と共に、設定します。 この権限バケットはセキュリティの保証を提供するものではありませんが、信頼性の保証は提供されます (このシナリオを保証するのは可能です)。|  
 |`Unsafe`|制限はありません。 この権限セットで実行されるマネージド コードに対する、セキュリティあるいは信頼性の保証はありません。 管理者によって指定されたカスタム権限であっても、すべての権限が、この信頼性のレベルで実行されるコードに与えられます。|  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって CLR がホストされるとき、スタックウォーク ベースの権限チェックはネイティブの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コードとの境界で停止されます。 ph x="1" /&gt; アセンブリ内のすべてのマネージド コードは常に、上記の 3 つの権限カテゴリのいずれかに分類されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって CLR がホストされるとき、スタックウォーク ベースの権限チェックはネイティブの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コードとの境界で停止されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アセンブリ内のすべてのマネージド コードは常に、上記の 3 つの権限カテゴリのいずれかに分類されます。  
   
  COM (またはアンマネージ) アセンブリ ルーチンは、CLR セキュリティ モデルをサポートしません。  
   

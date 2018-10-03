@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - BeginSession Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf272ae8221b66f7ac8390fab900d22d6b8aaf87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9194333e376dc8ab685057847c3f4156330d5dfa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180062"
 ---
 # <a name="beginsession-element-xmla"></a>BeginSession 要素 (XMLA)
   インスタンスで新しいセッションを開始する、SOAP 要求メッセージの SOAP ヘッダーを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  

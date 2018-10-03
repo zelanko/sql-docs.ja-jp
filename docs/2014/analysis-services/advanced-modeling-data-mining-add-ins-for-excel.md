@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8fb21806baca20f1705f08065f0ec8e0b7a92fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134102"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>高度なモデリング (Excel 用データ マイニング アドイン)
   使用することができます、**詳細**データ モデリング オプションをカスタム データ マイニング構造とモデル パラメーターを作成するウィザードで作成したものと異なる。 このセクションで説明する 2 つのウィザードでは、まったく新しいデータ マイニング構造を作成したり、既存のデータ マイニング構造に適用する新しいマイニング モデルを作成したりできます。  
   
-## <a name="create-mining-structure"></a>マイニング構造を作成します。  
+## <a name="create-mining-structure"></a>マイニング構造の作成  
  ![マイニング構造の作成 ボタン、データ マイニング リボン](media/dmc-createstruct.gif "Create Mining Structure ボタン、データ マイニング リボン")  
   
  **マイニング構造の作成ウィザード**新しいデータ マイニング構造を構築するのに役立ちます。 構造とは、指定したデータ ソースから抽出したデータのコレクションです。  マイニング構造は、基になる新しいデータで更新できますが、マイニング構造を作成するときは、分析時のデータの使用方法を定義するデータ型と名前を定義します。  
