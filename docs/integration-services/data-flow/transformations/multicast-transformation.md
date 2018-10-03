@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.multicasttrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30ae02d749f4a1d0587f8ab1692467bf24e21786
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 795eacbaacc5fca1cc3d51908a365986019543c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664970"
 ---
 # <a name="multicast-transformation"></a>マルチキャスト変換
   マルチキャスト変換は、入力を 1 つ以上の出力に配信します。 この変換は条件分割変換と似ています。 いずれの変換も、1 つの入力を複数の出力に送信します。 この 2 つの変換の違いは、マルチキャスト変換は各行を各出力に送信するのに対し、条件分割変換は 1 行を単一の出力に送信する点です。 詳細については、「 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)」を参照してください。  
@@ -49,7 +46,7 @@ ms.locfileid: "35331306"
 ## <a name="multicast-transformation-editor"></a>マルチキャスト変換エディター
   **[マルチキャスト変換エディター]** ダイアログ ボックスを使用すると、各変換出力のプロパティを表示したり設定したりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **出力**  
  左側で出力を選択すると、右側の表にプロパティが表示されます。  
   

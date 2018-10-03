@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - reindex
@@ -17,24 +14,23 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27392a1b2ad04033e8b5a6dab14f55246279ae57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecc399ab75360b918b87ddf3856fefb4fc62d618
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946043"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665650"
 ---
-# <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク] (メンテナンス プラン)
+# <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク]\(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[インデックスの再構築タスク]** ダイアログ ボックスを使用すると、データベースのテーブルに新しい FILL FACTOR でインデックスを再作成できます。 FILL FACTOR は、後で拡張できるように、インデックスの各ページの空き領域の量を決定します。 FILL FACTOR が適用されるのはインデックスの作成時だけであるため、テーブルにデータが追加されるにつれて、各ページの空き容量は徐々に減少します。 データ ページおよびインデックス ページを再編成すると、再び空き領域を確保できます。  
   
  **[インデックスの再構築タスク]** では、ALTER INDEX ステートメントが使用されます。 このページで説明するオプションの詳細については、「 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
