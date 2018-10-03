@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
-caps.latest.revision: 4
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2890cea5f4c39d27ce89d4d9c5bcc3efe7384039
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90649f491fac7d867ebad0516d1ccea5fc41d4a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134172"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>サブジェクト代替名を使用するように Reporting Services を構成する
   このトピックでは、rsreportserver.config ファイルを変更し、Netsh.exe ツールを使用することによって、サブジェクト代替名 (SAN) を使用するように [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) を構成する方法について説明します。  
@@ -127,7 +124,7 @@ ms.locfileid: "37284788"
   
 10. Reporting Services 構成マネージャーの **[レポート サーバーの状態]** ページで、 **[停止]** をクリックしてから **[開始]** をクリックし、レポート サーバーを再起動します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RSReportServer 構成ファイル](report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   

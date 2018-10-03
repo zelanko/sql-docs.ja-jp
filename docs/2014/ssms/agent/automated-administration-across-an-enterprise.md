@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - multiple instances of SQL Server
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3b9d1885aefc738355f9f891680ebcfaf9d19a2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5f4e14eabe3d94f4497d6c4e622ff62e0ef8258b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181906"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>エンタープライズ全体の管理の自動化
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の複数のインスタンスにわたって管理を自動化することを*マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
@@ -84,7 +81,7 @@ ms.locfileid: "43813068"
  [企業全体の自動管理のチューニング](tune-automated-administration-across-an-enterprise.md)  
  マルチサーバー環境で自動化された管理により [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の自己チューニング機能を活用する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [サーバーの登録](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   

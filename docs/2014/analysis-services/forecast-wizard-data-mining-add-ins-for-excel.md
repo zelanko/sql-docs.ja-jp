@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - forecasting [data mining]
 - time series [data mining]
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84860116150a802648e93686d3e8beb86c4ba037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323252"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106462"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>予測ウィザード (Excel 用データ マイニング アドイン)
   ![データ マイニング リボンの関連付けウィザード](media/dmc-forecast.gif "データ マイニング リボンのウィザードを関連付ける")  
@@ -74,7 +71,7 @@ ms.locfileid: "37323252"
   
  データに時刻または日付の列が含まれていない場合は、任意の数値系列を割り当てるか、ウィザードで作成することができます。 ウィザードで系列の順序の列を作成する場合は、ウィザードを開始する前に、他の列が必要な順序で並べ替えられていることを確認してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング モデルを作成します。](creating-a-data-mining-model.md)   
  [予測&#40;Excel 用テーブル分析ツール&#41;](forecast-table-analysis-tools-for-excel.md)   
  [予測モデルの参照](browsing-a-forecasting-model.md)  

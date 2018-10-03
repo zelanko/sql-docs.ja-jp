@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - space [SQL Server], indexes
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd6d7c46c1f1aed62f0196640175bb566bca7471
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0464304a23e53762b3e2eb887383b111764379fb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192062"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>ヒープ サイズの見積もり
   ヒープにデータを格納するために必要な領域は、次の手順で見積もることができます。  
@@ -109,7 +106,7 @@ ms.locfileid: "37203338"
   
      スパース列の領域要件については、「 [スパース列の使用](../tables/use-sparse-columns.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ヒープ &#40;クラスター化インデックスなしのテーブル&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   
  [クラスター化インデックスと非クラスター化インデックスの概念](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [クラスター化インデックスの作成](../indexes/create-clustered-indexes.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0603ccd35973b27993207d634ebc89aa90e6fa1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140610"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
   一般的に、可用性グループのコンテキスト内で、可用性レプリカのプライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 つまり、可用性グループはセカンダリ レプリカのいずれか (現在の " *フェールオーバー ターゲット*") にフェールオーバーされます。  
@@ -314,7 +311,7 @@ ms.locfileid: "37310442"
   
 -   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性モード&#40;AlwaysOn 可用性グループ&#41;](availability-modes-always-on-availability-groups.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

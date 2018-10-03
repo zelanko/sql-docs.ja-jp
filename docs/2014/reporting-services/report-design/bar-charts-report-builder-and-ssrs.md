@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: eb477d33d1e9f6d10d4c2b89d6fd9472725041ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5407fdc291cd1d0d0a533466b0e45dd0cbce320b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106102"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>横棒グラフ (レポート ビルダーおよび SSRS)
   横棒グラフでは、横棒のセットとして系列が表示されます。 一般的な横棒グラフは、縦棒グラフおよび範囲横棒グラフと密接な関係にあります。縦棒グラフでは、縦棒のセットとして系列が表示され、範囲横棒グラフでは、始点と終点が異なる横棒のセットとして系列が表示されます。  
@@ -61,7 +58,7 @@ ms.locfileid: "37224762"
   
 -   グラフのサイズに対してデータセット内のデータ ポイントの数が多い場合は、列または横棒のサイズおよびその間隔が小さくなります。 グラフ内の列の幅を手動で設定するには、 **PointWidth** プロパティを変更して列の幅をピクセル単位で変更します。 既定では、このプロパティの値は 0.8 です。 グラフの列または横棒の幅を大きくすると、各列または横棒の間隔は小さくなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

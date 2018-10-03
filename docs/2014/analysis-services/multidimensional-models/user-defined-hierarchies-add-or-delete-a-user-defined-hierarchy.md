@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting hierarchies
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
-caps.latest.revision: 50
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3cb9b55bcff41dddd2a4c648854e92222d1e8e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183982"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>ユーザー定義階層の追加または削除
   ディメンションでのユーザー定義階層の追加と削除は、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーにある **[ディメンション構造]** タブで実行します。  
@@ -65,7 +62,7 @@ ms.locfileid: "37157123"
   
 -   ユーザー定義階層をデザイン画面外にドラッグします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー階層](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [ユーザー定義階層を作成します。](user-defined-hierarchies-create.md)  
   

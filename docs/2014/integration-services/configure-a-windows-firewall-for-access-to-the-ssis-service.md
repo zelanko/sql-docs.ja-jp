@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], firewalls
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, firewalls
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67a1206afe217ce2f0e358c56ee4df2b16691b8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 246441fba2e72c95004baa3cdb75320b32648e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154742"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS サービスにアクセスするように Windows ファイアウォールを構成する
     
@@ -91,7 +88,7 @@ ms.locfileid: "37163003"
     > [!NOTE]  
     >  Windows ファイアウォールを構成するために、この手順では、コントロール パネルの **[Windows ファイアウォール]** を使用します。 **[Windows ファイアウォール]** では、現在のネットワークの場所のプロファイルに対してのみファイアウォールを構成できます。 ただし、Windows ファイアウォールは、 **netsh** コマンド ライン ツール、またはセキュリティが強化された Windows ファイアウォールの [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール (MMC) スナップインを使用して構成することもできます。 これらのツールの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスをサービスの統合を構成する&#40;SSIS サービス&#41;](service/integration-services-service-ssis-service.md)   
  [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)  
   

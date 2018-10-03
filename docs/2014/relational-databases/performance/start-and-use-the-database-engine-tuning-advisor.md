@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 536c0a6a1a730fcf74d084fbef2d9f1debb347a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097822"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](database-engine-tuning-advisor.md)」を参照してください。  
@@ -509,7 +506,7 @@ database_name.owner_name.table_name
  **[チューニング ログ]**  
  このチューニング セッションに関する情報が表示されます。 このログを印刷するには、ログを右クリックして **[印刷]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン チューニング アドバイザーからの出力の表示および操作](database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   

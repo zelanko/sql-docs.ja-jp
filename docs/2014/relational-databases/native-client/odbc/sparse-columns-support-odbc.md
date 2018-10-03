@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d50666d333a77f4a1e2188ac911d0866395b4cc9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124332"
 ---
 # <a name="sparse-columns-support-odbc"></a>スパース列のサポート (ODBC)
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC でのスパース列のサポートについて説明します。 スパース列に対する ODBC サポートを示すサンプルについては、次を参照してください。[スパース列を含むテーブルに対して SQLColumns を呼び出す](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)します。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../features/sparse-columns-support-in-sql-server-native-client.md)します。  
@@ -44,7 +41,7 @@ ms.locfileid: "40395547"
   
 -   [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
   
   

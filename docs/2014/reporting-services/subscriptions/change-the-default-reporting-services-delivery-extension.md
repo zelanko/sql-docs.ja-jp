@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b232859f61efbfb6de2a0c27fb34af8cb99252c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 054d67de8b05d7f3b913ade660902c764cab9b08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183859"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206832"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Reporting Services の既定の配信拡張機能を変更する
   サブスクリプション定義ページの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [配信者] **リストに表示される既定の配信拡張機能は** の構成設定で変更できます。 たとえば、ユーザーが新しいサブスクリプションを作成したときに電子メール配信ではなくファイル共有配信が既定で選択されるように構成を変更することができます。 また、ユーザー インターフェイスにおける配信拡張機能の表示順を変更することもできます。  
@@ -115,7 +112,7 @@ ms.locfileid: "37183859"
   
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
  [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   

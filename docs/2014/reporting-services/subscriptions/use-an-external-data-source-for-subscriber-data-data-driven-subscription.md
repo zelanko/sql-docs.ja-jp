@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriber data sources [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b81ef71db369b8ede4b85043c860edc73763252
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0112a4a9ae89dbfc2aedad38c16056a4d246964
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174712"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
   データ ドリブン サブスクリプションでは、外部データ ソースからデータを取得するクエリまたはコマンドによって、動的サブスクリプション データが提供されます。 サブスクリプション データは、データ ドリブン サブスクリプション処理の要件を満たす、サポートされているデータ ソースから取得できます。 クエリまたはコマンドの構文は、レポート サーバーと一緒にインストールされたデータ処理拡張機能に対して有効である必要があります。  
@@ -82,7 +79,7 @@ ms.locfileid: "37255534"
   
  これらの変更のいずれかを行う場合は、サブスクリプションを更新する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [作成、変更、およびデータ ドリブン サブスクリプションの削除](data-driven-subscriptions.md)   
  [データ ドリブン サブスクリプション](data-driven-subscriptions.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  

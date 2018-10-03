@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.manualfailover.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40a326eeeadfcf3cfdb085f1268b9bbcb383fb54
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854060"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "34769624"
 > [!NOTE]  
 >  セカンダリ レプリカとプライマリ レプリカの両方に対して自動フェールオーバー モードを構成し、セカンダリ レプリカを同期すると、自動フェールオーバーのターゲットとしても機能できるようになります。 詳細については、「[可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。  
    
-##  <a name="BeforeYouBegin"></a> アンインストールの準備 
+##  <a name="BeforeYouBegin"></a> はじめる前に 
 
 >[!IMPORTANT]
 >クラスター マネージャーを使わないで読み取りスケール可用性グループをフェールオーバーするには、固有の手順があります。 可用性グループで CLUSTER_TYPE = NONE が設定されている場合は、「[読み取りスケール可用性グループのプライマリ レプリカをフェールオーバーする](#fail-over-the-primary-replica-on-a-read-scale-availability-group)」の手順に従ってください。

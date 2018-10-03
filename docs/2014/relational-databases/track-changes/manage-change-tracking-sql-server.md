@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracking data changes [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dba3c283bb5215bb573fa90caf6f8e9cff74ca63
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97ed62336cad7f3e1bc0bbe70edd895384336205
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197752"
 ---
 # <a name="manage-change-tracking-sql-server"></a>変更の追跡の管理 (SQL Server)
   このトピックでは、変更の追跡を管理する方法について説明します。 また、セキュリティを構成する方法、および変更の追跡を使用する場合のストレージとパフォーマンスへの影響を判断する方法について説明します。  
@@ -41,7 +38,7 @@ ms.locfileid: "37232982"
   
  また、 [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) カタログ ビューには、ユーザー テーブルの変更の追跡を有効にしたときに作成された内部テーブルが表示されます。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
  [変更追跡関数](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)を使用して変更追跡情報にアクセスするには、プリンシパルに次の権限が必要です。  
   
 -   少なくともクエリ対象テーブルへの変更の追跡対象テーブルの主キー列に対する SELECT 権限。  
@@ -55,7 +52,7 @@ ms.locfileid: "37232982"
 ## <a name="understanding-change-tracking-overhead"></a>変更の追跡のオーバーヘッドについて  
  テーブルの変更の追跡を有効にすると、一部の管理操作が影響を受けます。 次の表に、考慮する必要がある操作と影響を示します。  
   
-|演算|変更の追跡が有効になっている場合|  
+|操作|変更の追跡が有効になっている場合|  
 |---------------|-------------------------------------|  
 |DROP TABLE|削除するテーブルのすべての変更追跡情報が削除されます。|  
 |ALTER TABLE DROP CONSTRAINT|PRIMARY KEY 制約を削除しようとすると失敗します。 PRIMARY KEY 制約を削除する前に、変更の追跡を無効にする必要があります。|  
@@ -105,7 +102,7 @@ sp_spaceused 'sys.change_tracking_309576141'
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ変更の追跡 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../databases/database-properties-changetracking-page.md)   

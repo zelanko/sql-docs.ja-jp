@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c5fa2f1dab88852bb5d6039b0017370c9a46966
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae3a31913ad603bb7acbb801a2c923105ddbc915
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057182"
 ---
 # <a name="filter-table-rows"></a>[テーブル行のフィルター選択]
   **[テーブル行のフィルター選択]** ページでは、次のことを行うことができます。  
@@ -70,7 +67,7 @@ ms.locfileid: "37302202"
  **[編集]**  
  フィルター ペインで行フィルターまたは結合フィルターを選択し、 **[編集]** をクリックすると、 **[フィルターの編集]** ダイアログ ボックスまたは **[結合の編集]** ダイアログ ボックスが表示されます。  
   
- **削除**  
+ **Del**  
  フィルター ペインで行フィルターまたは結合フィルターを選択し、 **[削除]** をクリックすると、フィルターを削除できます。  
   
  **[テーブルの検索]**  
@@ -83,7 +80,7 @@ ms.locfileid: "37302202"
  **Assert**  
  フィルター ペインで選択されたフィルターの [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義を含みます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Publication](publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
  [パブリッシュされたデータのフィルター選択](publish/filter-published-data.md)   

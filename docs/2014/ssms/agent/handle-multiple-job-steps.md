@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, job steps
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2c57c544c7c23186455a0cb5cb3e788620e2098
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5489dec3f665f56ebd267ccd24ec069a3906bdbf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187322"
 ---
 # <a name="handle-multiple-job-steps"></a>複数のジョブ ステップの処理
   ジョブに複数のジョブ ステップがある場合、ジョブ ステップを実行する順序を指定する必要があります。 この順序指定を*フロー制御*と呼びます。 いつでも新しいジョブ ステップを追加して、フローを再構成できます。変更が有効になるのは、次にジョブを実行するときです。 次の図は、データベース バックアップ ジョブのフロー制御を示しています。  
@@ -45,7 +42,7 @@ ms.locfileid: "43814578"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントにより、ジョブとジョブ ステップの情報がジョブ履歴に記録されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [dbo.sysjobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
  [dbo.sysjobs &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   

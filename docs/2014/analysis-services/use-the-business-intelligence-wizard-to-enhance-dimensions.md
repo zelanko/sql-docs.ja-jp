@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services]
 ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e898e768379e96c45020a6b64f4fc090b6afcb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173782"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>ビジネス インテリジェンス ウィザードを使用したディメンションの拡張
   ビジネス インテリジェンス ウィザードを使用すると、ディメンション プロパティやディメンション オブジェクト プロパティの変更だけでなく、ディメンションの構成および拡張を行うことができます。  
@@ -38,7 +35,7 @@ ms.locfileid: "37277578"
   
 -   [ディメンションの書き戻しの有効化](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ディメンションを定義します。](multidimensional-models/define-database-dimensions.md)   
  [ディメンション属性のプロパティの参照](multidimensional-models/dimension-attribute-properties-reference.md)   
  [ユーザー定義階層を作成します。](multidimensional-models/user-defined-hierarchies-create.md)   

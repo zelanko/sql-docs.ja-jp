@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e08d09bacbd4bdc6a03c89d258c2744a76296038
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 59dcb8932e2c1b4f2dcbe93d879a240743322bde
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404524"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856956"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
  データ ソースとデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[変換先の選択]** が表示されます。 このページでは、データの変換先およびデータに接続する方法についての情報を指定します。

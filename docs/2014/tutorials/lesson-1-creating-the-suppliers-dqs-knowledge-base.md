@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 744658b00253b96bf6110f4382a7a6a8a8d7abfc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2b4fa3328f2c504be6c1ff761a558a6102a5299
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176492"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>レッスン 1: Suppliers DQS ナレッジ ベースを作成する
   という名前の DQS ナレッジ ベースを作成するこのレッスンで**Suppliers**仕入先データに関するナレッジ (メタデータ) とします。 ナレッジ ベースを使用して、入力仕入先データのクレンジングおよび照合アクティビティを実行します。 クレンジング アクティビティでは、不正/無効なデータの識別、不正確なデータの修正、修正/提案の提示、データの標準化、および詳細情報を含むデータの拡充が行われます。 照合アクティビティでは、データを比較して、データ上の重複項目を削除するために、データ内で類似したレコード (ただし、若干異なる) を特定します。  

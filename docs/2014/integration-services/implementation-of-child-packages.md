@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-caps.latest.revision: 38
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100186"
 ---
 # <a name="implementation-of-child-packages"></a>子パッケージの実装
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用して負荷分散を実装すると、子パッケージが他のサーバーにインストールされ、利用可能な CPU 時間またはサーバー時間を活用することができます。 子パッケージを作成および実行するには、次の手順を実行します。  

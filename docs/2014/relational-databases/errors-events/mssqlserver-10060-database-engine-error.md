@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10060"
 helpviewer_keywords:
 - 10060 (Database Engine error)
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5497c254a431718d4f958d441b3e7ee99854639d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ee37bfd2c2ba17377589f8a3e744cc018b9d5775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432471"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119432"
 ---
 # <a name="mssqlserver10060"></a>MSSQLSERVER_10060
     
@@ -47,7 +44,7 @@ ms.locfileid: "37432471"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー ツールを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート接続を許可できるようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン アクセス用の Windows ファイアウォールを構成します。](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [クライアント プロトコルを構成します。](../../database-engine/configure-windows/configure-client-protocols.md)   
  [ネットワーク プロトコルとネットワーク ライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)   

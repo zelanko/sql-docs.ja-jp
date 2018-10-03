@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving databases [Anlysis Services]
 - moving databases
 - operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb91f3120f4f58a2505d7c63f370a709a22a9bee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4471bba7b99010c2138acd2c49d0ad650945724
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304672"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055155"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services データベースの移動
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) が多次元式またはテーブル モデル データベースを別の場所に移動することは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。  
@@ -55,7 +52,7 @@ ms.locfileid: "37304672"
   
 5.  SSMS の左側または右側のペインで、 **[データベース]** フォルダーを探します。  
   
-6.   **[データベース]** フォルダーを右クリックし、 **[アタッチ]** をクリックします。  
+6.  **[データベース]** フォルダーを右クリックし、 **[アタッチ]** をクリックします。  
   
 7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 または、参照ボタン (**[…]**) を使用して、データベース フォルダーを探すこともできます。  
   
@@ -143,7 +140,7 @@ ms.locfileid: "37304672"
   
 2.  XMLA コマンドを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [アタッチし、Analysis Services データベースのデタッチ](attach-and-detach-analysis-services-databases.md)   

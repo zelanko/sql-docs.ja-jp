@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b9724139d6a89e345d1a8dd0c967f51afe5f8c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183482"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール (SSRS ネイティブ モード)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) とインターネット インフォメーション サービス (IIS) は、同じコンピューターにインストールして実行できます。 対処する必要のある相互運用性の問題は、使用している IIS のバージョンによって異なります。  
@@ -71,7 +68,7 @@ ms.locfileid: "37274658"
   
 -   A[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]レポート サーバー インスタンスの URL 予約では、ポート 80 も指定します、レポート マネージャー アプリケーションは、仮想ディレクトリ名の"Reports"を使用することも、既定の構成でインストールします。  
   
- この構成では、http:// に送信される要求\<computername >: 80/reports は、レポート マネージャーによって受信されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
+ この構成では、 http:// に送信される要求\<computername >: 80/reports は、レポート マネージャーによって受信されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新旧のバージョンをサイド バイ サイド配置で実行した場合、前述したルーティングの問題が発生する可能性があります。 これは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのバージョンでは、レポート サーバーとレポート マネージャー アプリケーションの仮想ディレクトリ名として "ReportServer" と "Reports" が使用されているため、IIS には "reports" と "reportserver" という仮想ディレクトリが高い確率で存在していると考えられるためです。  
   
@@ -81,7 +78,7 @@ ms.locfileid: "37274658"
   
 -   手動構成のインストールでは、構成する URL に既定の名前付け規則を採用します。 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] を名前付きインスタンスとしてインストールする場合は、仮想ディレクトリの作成時にインスタンス名を含めるようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバー Url の構成&#40;SSRS 構成マネージャー&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [URL の構成&#40;SSRS 構成マネージャー&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Reporting Services ネイティブ モード レポート サーバーをインストールします。](install-reporting-services-native-mode-report-server.md)  

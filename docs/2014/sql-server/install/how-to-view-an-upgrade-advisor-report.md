@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, reports
 - reports [Upgrade Advisor], viewing
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
-caps.latest.revision: 32
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df6d91d700182c7d3828d9e35ac61cfaa0b3959d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201932"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>アップグレード アドバイザーのレポートを表示する方法
   アップグレード アドバイザーでは、分析対象として選択したコンポーネントごとにレポートが作成されます。 このトピックでは、アップグレード アドバイザーの開始ページからアップグレード アドバイザーのレポートを表示する方法について説明します。  
@@ -76,7 +73,7 @@ ms.locfileid: "37303582"
 > [!NOTE]  
 >  レポートには、検出不可能な問題に対する項目が含まれる場合があります。 これらは、検出できない問題か、または誤って検出された結果が大量に生成される問題です。 をクリックして、**この問題と解決方法に関する詳細情報を表示する**コンポーネントの検出できない問題の一覧を表示するリンク。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)   
  [方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   

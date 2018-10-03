@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236562"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146982"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg テーブルの最適化
   **NewOrd**で作成したテーブル、[テーブルの既存の階層データで設定](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)タスクを選択し、すべての従業員情報が含まれています、を使用して、階層構造を表します`hierarchyid`データ型。 ここでは、`hierarchyid` 列の検索をサポートする新しいインデックスを追加します。  

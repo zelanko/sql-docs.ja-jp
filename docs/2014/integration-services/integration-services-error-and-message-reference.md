@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085724"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106732"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
@@ -233,8 +230,8 @@ ms.locfileid: "39085724"
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|書き込み用にファイル "%1" を開けませんでした。 ファイルが読み取り専用であるか、適切な権限がありません。|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|結果行セットがこのクエリの実行に関連付けられていません。 結果が正しく指定されていません。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|デバッグ ダンプ ファイルを正しく生成できませんでした。 hresult は 0x%1!8.8X! です。|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定された URL が無効です。 このエラーは、サーバーまたはプロキシの URL に NULL が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定された URL が無効です。 このエラーは、サーバーまたはプロキシの URL に NULL が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|サーバー %1 への接続を確立できません。 このエラーは、サーバーが存在しない場合、またはプロキシの設定が正しくない場合に発生する可能性があります。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|サーバーとの接続がリセットされたか、終了しました。 後で再試行してください。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|%1 のログインに失敗しました。 このエラーは、指定されたログイン資格情報が正しくない場合に発生します。 ログイン資格情報を確認してください。|  
@@ -1046,7 +1043,7 @@ ms.locfileid: "39085724"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|このバッファーは孤立しています。 未解決のバッファーを残したまま、バッファー マネージャーがシャットダウンされたため、バッファーがクリーンアップされません。 メモリ リークや他の問題が発生する可能性があります。|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|エラー コード 0x%2!8.8X! により、"%1" という名前の入力列を検索できませんでした。 指定された入力列が入力列のコレクションに見つかりませんでした。|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|エラー コード 0x%2!8.8X! により、系列 ID %1!d! の入力列を 検索できませんでした。 入力列が入力列のコレクションに見つかりませんでした。|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|式に、認識できないトークン "%1" が含まれています。 "%1" が変数の場合、トークンは "\@%1" と表記される必要があります。 指定されたトークンが無効です。 トークンを変数名である場合に付ける必要があります、\@シンボル。|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|式に、認識できないトークン "%1" が含まれています。 "%1" が変数の場合、トークンは "\@%1" と表記される必要があります。 指定されたトークンが無効です。 トークンが変数名である場合、先頭に \@ 記号を付ける必要があります。|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|式に、認識できないトークン "#%1!d!" が含まれています。|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|変数 "%1" が Variables コレクションに見つかりませんでした。 変数が正しいスコープに存在しない可能性があります。|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|式 "%1" を解析できませんでした。 この式には無効なトークン、不完全なトークン、または無効な要素が含まれている可能性があります。 また、適切な形式ではないか、かっこなどの必要な要素の一部が不足している可能性があります。|  
@@ -1093,7 +1090,7 @@ ms.locfileid: "39085724"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|コンポーネント "%1" はランタイム オブジェクト参照トラッカーのコレクションをキャッシュできませんでした。エラー コード 0x%2!8.8X! が返されました。|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|名前 "%1" の入力列が複数あります。 必要な入力列を [コンポーネント名].[%2] という形式で一意に指定するか、系列 ID で参照する必要があります。 現在、指定された入力列が複数のコンポーネントに存在します。|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|エラー コード 0x%3!8.8X! により、"[%1].[%2]" という名前の入力列を検出できませんでした。 入力列が入力列のコレクションに見つかりませんでした。|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|名前 "%1" の変数が複数あります。 必要な変数は、として一意に指定する必要があります\@[Namespace::% 2]。 この変数が複数の名前空間に存在します。|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|名前 "%1" の変数が複数あります。 必要な変数を \@[Namespace::%2] という形式で一意に指定する必要があります。 この変数が複数の名前空間に存在します。|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|データ フロー エンジン スケジューラがパイプラインの実行プランを短縮できませんでした。 OptimizedMode プロパティを False に設定してください。|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|関数 SQRT は負の値では演算できませんが、SQRT 関数に負の値が渡されました。|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|関数 LN は 0 または負の値では演算できませんが、LN 関数に 0 または負の値が渡されました。|  
@@ -1226,7 +1223,7 @@ ms.locfileid: "39085724"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|式に予期しない等号 (=) が含まれています。 このエラーは通常、連続する 2 つの等号 (==) が必要な場合に発生します。|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|指定された入力列名があいまいです。  この列は、[コンポーネント名].[列名] という形式で修飾するか、または系列 ID によって参照される必要があります。 このエラーは、入力列が複数のコンポーネントに存在する場合で、コンポーネント名を追加するか、系列 ID を使用して入力列を区別する必要がある場合に発生します。|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|式内にプレースホルダー関数のパラメーターまたはオペランドが見つかりました。 実際のパラメーターまたはオペランドに置き換える必要があります。|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|指定された変数名があいまいです。 必要な変数は修飾する必要があります\@[Namespace::Variable]。 このエラーは、変数が複数の名前空間に存在する場合に発生します。|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|指定された変数名があいまいです。 必要な変数を \@[Namespace::Variable] という形式で修飾する必要があります。 このエラーは、変数が複数の名前空間に存在する場合に発生します。|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|バイナリ演算のオペランドでは、入力列およびキャスト演算にデータ型 DT_STR のみがサポートされています。 入力列またはキャストの結果ではない DT_STR オペランドは、バイナリ演算では使用できません。 この演算を実行するには、オペランドでキャスト演算子により明示的にキャストする必要があります。|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|条件演算子のオペランドでは、入力列およびキャスト演算にデータ型 DT_STR のみがサポートされています。 入力列またはキャストの結果ではない DT_STR オペランドは、条件演算では使用できません。 この演算を実行するには、オペランドでキャスト演算子により明示的にキャストする必要があります。|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|発生回数パラメーターは、関数 FINDSTRING では有効ではありません。 このパラメーターには、0 より大きい値を指定する必要があります。|  
@@ -2016,7 +2013,7 @@ ms.locfileid: "39085724"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|要素 "%2" で、"%1" の XML スキーマ データ型情報が変更されています。  このコンポーネントのメタデータを再度初期化して、列マッピングを確認してください。|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 は、結合またはコピーで使用されていません。 入力列の一覧から未使用の列を削除してください。|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|入力バッファーの並べ替え中に、スタック オーバーフローによって並べ替えが失敗しました。  データ フロー タスクの DefaultBufferMaxRows プロパティを小さくしてください。|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|接続文字列の PROVIDER を %1 に変更することを検討するか、http://www.microsoft.com/downloads にアクセスして %2 のサポートを探しインストールしてください。|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|接続文字列の PROVIDER を %1 に変更することを検討するか、 http://www.microsoft.com/downloads にアクセスして %2 のサポートを探しインストールしてください。|  
 |||DTS_E_INITTASKOBJECTFAILED|タスク オブジェクトを初期化できませんでした。タスク "%1!s!"、型 "%2!s!"。 エラー: 0x%3!8.8X! "  %4!s!"。|  
 |||DTS_E_GETRTINTERFACEFAILED|COM コンポーネント カテゴリ マネージャーを作成できませんでした。エラー: 0x%1!8.8X! "%2!s!"。|  
 |||DTS_E_COMPONENTINITFAILED|エラー 0x%2!8.8X! " %3!s!" によって コンポーネント %1!s! の初期化に失敗しました 。|  

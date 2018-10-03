@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Members
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 22f1875be04c4491ad5c727999d1fca789414cfd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 981db90ba9114b26b0581f9b1e3d62561c8b6939
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222891"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180622"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>MSReportServer_ConfigurationSetting メンバー
   MSReportServer_ConfigurationSetting クラスには、次のプロパティとメソッドが含まれています。  
@@ -99,7 +96,7 @@ ms.locfileid: "37222891"
 |[SetVirtualDirectory メソッド&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md)|アプリケーションの仮想ディレクトリを設定します。|  
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|指定した Windows ユーザーとしてレポート サーバーの Windows サービスを実行し、レポート サーバーを運用できるファイル システム権限をこのアカウントに与えます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
   

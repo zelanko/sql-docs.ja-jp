@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148552"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>ストアド プロシージャに対する権限の付与 (Analysis Services)
   ストアド プロシージャ、またはアセンブリ、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で記述された、外部ルーチンは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET プログラミング言語の機能を拡張する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 アセンブリには、言語間の統合、例外処理、バージョン管理のサポート、展開のサポート、およびデバッグのサポートを利用する開発者が使用できます。  
@@ -39,7 +36,7 @@ ms.locfileid: "37278758"
   
 -   **Unrestricted**無制限のアクセス許可セットでは、ストアド プロシージャは外部リソースにアクセス任意のコードを使用しています。 この権限セットが指定されている場合、ストアド プロシージャに対してセキュリティも信頼性も保証されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのアセンブリの管理](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

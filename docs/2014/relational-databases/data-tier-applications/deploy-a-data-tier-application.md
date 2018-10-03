@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f869a6a88fb13669d6f3196a040272470fecbc8d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104932"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
   ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから[!INCLUDE[ssDE](../../includes/ssde-md.md)]または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
@@ -232,7 +231,7 @@ $dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ層アプリケーション](data-tier-applications.md)   
  [データベースからの DAC の抽出](extract-a-dac-from-a-database.md)   
  [データベース識別子](../databases/database-identifiers.md)  

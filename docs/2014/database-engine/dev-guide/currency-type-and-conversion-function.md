@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f4c3aae27950cdaa6ff2244abdc2de501c0b1f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332482"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194732"
 ---
 # <a name="currency-type-and-conversion-function"></a>通貨型と変換関数
   この例では、C# を使用して Currency ユーザー定義データ型を定義します。 このユーザー定義データ型は、価格とカルチャをカプセル化し、そのカルチャの通貨の値で正しい価格を表示する方法を決定するために役立ちます。 この例ではさらに、Currency ユーザー定義データ型のインスタンスを返す通貨換算関数を提供します。 U.S. ドル (USD) を指定のカルチャに関連付けられている通貨に換算するための換算レートが AdventureWorks データベースに含まれている場合、通貨換算関数は、換算済みレートを格納した Currency ユーザー定義データ型と、要求されたカルチャに一致するカルチャを返します。 換算レートがデータベースに含まれていない場合は、USD で表される元の価格を格納した Currency ユーザー定義データ型と、`en-us` カルチャを返します。 この例は、Transact-SQL を使用した共通言語ランタイム (CLR) メソッドとアセンブリの登録解除と登録の方法も示しています。  
@@ -499,7 +496,7 @@ DROP PROCEDURE [dbo].[usp_LookupConversionRate]
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

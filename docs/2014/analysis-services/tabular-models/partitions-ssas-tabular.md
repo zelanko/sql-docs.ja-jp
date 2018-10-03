@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0797d22b66a40c0cf13fcd9c394d0072827b8e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cb150e2bf076c6cef4e05d626b71eaab05d64a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239702"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197214"
 ---
 # <a name="partitions-ssas-tabular"></a>パーティション (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [パーティション] ダイアログ ボックスを使用して作成されたパーティションは、モデル ワークスペース データベースに適用されます。 モデルが配置されたときに、モデル ワークスペース データベースに定義されたパーティションが配置済み model データベースで複製されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [パーティション] ダイアログ ボックスを使用して、配置済みモデル データベースのパーティションをさらに作成し管理できます。  このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [パーティション マネージャー] ダイアログ ボックスを使用してモデルを作成するときに作成されたパーティションについて説明します。 配置済みモデルのパーティションの作成と管理の詳細については、「[テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)」を参照してください。  
@@ -55,7 +52,7 @@ ms.locfileid: "37239702"
 |[ワークスペース データベースでのパーティション作成し、管理&#40;SSAS 表形式&#41;](workspace-database-ssas-tabular.md)|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で Partition Manager を使用して、モデル ワークスペース データベースでパーティションを作成し管理する方法について説明します。|  
 |[ワークスペース データベースのパーティションの処理&#40;SSAS 表形式&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|モデル ワークスペース データベースでのパーティションの処理 (更新) 方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)   
  [データ処理&#40;SSAS 表形式&#41;](../process-data-ssas-tabular.md)  
   

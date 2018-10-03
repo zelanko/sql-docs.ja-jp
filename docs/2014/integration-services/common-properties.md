@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-caps.latest.revision: 45
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9d641ccb2a0e261ea899f4fc086d4ad8de0643
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169340"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160648"
 ---
 # <a name="common-properties"></a>共通プロパティ
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -216,7 +213,7 @@ ms.locfileid: "37169340"
 |有効桁数|Integer|数値列の有効桁数。|  
 |Scale|Integer|数値列の小数点以下桁数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー](data-flow/data-flow.md)   
  [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)   
  [パスのプロパティ](../../2014/integration-services/path-properties.md)   

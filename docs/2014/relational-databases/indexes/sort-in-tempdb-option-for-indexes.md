@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SORT_IN_TEMPDB option
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexes [SQL Server], tempdb database
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d8ec82b43cdfd215254c3f16577b1c82af52b47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145265"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>インデックスの SORT_IN_TEMPDB オプション
   インデックスを作成または再構築する際には、SORT_IN_TEMPDB オプションを ON に設定することにより、インデックスの構築に使用する中間の並べ替え結果の格納場所として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が **tempdb** を使用するように指定できます。 このオプションを使用すると、インデックスの作成に使用する一時ディスク領域は増えますが、 **tempdb** がユーザー データベースとは異なるディスク セットにある場合、インデックスの作成または再構築に必要な時間を短縮できることがあります。 **tempdb**の詳細については、「 [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)」を参照してください。  

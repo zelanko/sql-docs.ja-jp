@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], mining accuracy charts
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - input column mapping [Analysis Services]
 - mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3007674d37281d8bf328ba92f81428c8729cc7f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 641ec96632e2976ea56f1607b2076d4d01734523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208172"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166360"
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  
@@ -123,7 +120,7 @@ ms.locfileid: "37208172"
   
      **[列マッピングの指定]** ダイアログ ボックスに、新しい列マッピングが表示されます。 2 つの列を結ぶ線を選択して &lt;localizedText&gt;Del&lt;/localizedText&gt; キーを押すと、マッピングを削除できます。 **[マイニング構造]** テーブルで列を選択し、 **[入力テーブルの選択]** テーブルの対応する列にドラッグすると、新しい接続を作成できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

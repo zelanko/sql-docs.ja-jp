@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7890360221f3adae73efef7a58ae1179e19760a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152808"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>マイニング モデル ビューアー (データ マイニング モデル デザイナー)
   **[マイニング モデル ビューアー]** タブでは、マイニング構造に含まれているマイニング モデルを調べることができます。  
@@ -147,7 +144,7 @@ ms.locfileid: "37293632"
   
     -   [[マイニング凡例] ダイアログ ボックス&#40;マイニング モデル ビューアー&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデル ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
  [マイニング構造 ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine], named pipes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-caps.latest.revision: 30
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b5cd4cc03a1b4254e26750b45704d67af62cef04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95c094282aa185f79f9399a26e3b6fe8049cc965
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167582"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>名前付きパイプを使用した有効な接続文字列の作成
   ユーザーが変更しない限りときの既定のインスタンス[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は使用して、名前付きパイプ プロトコルでリッスン、`\\.\pipe\sql\query`パイプ名として。 ここで、ピリオドはコンピューターがローカル コンピューターであることを示し、`pipe` は接続が名前付きパイプであることを示します。`sql\query` はパイプの名前を示します。 既定のパイプに接続するには、別名でもパイプ名に `\\<computer_name>\pipe\sql\query` を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が別のパイプで受信を待機する構成になっている場合は、パイプ名としてそのパイプを使用する必要があります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパイプとして `\\.\pipe\unit\app` を使用している場合、別名ではパイプ名として `\\<computer_name>\pipe\unit\app` を使用しなければなりません。  
@@ -122,7 +119,7 @@ Server             .
 > [!NOTE]  
 >  としてネットワーク プロトコルを指定する、 **sqlcmd**パラメーターを参照してください"する方法: sqlcmd.exe を使用してデータベース エンジンに接続"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [共有メモリ プロトコルを使用して有効な接続文字列を作成します。](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [TCP/IP を使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [ネットワーク プロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  

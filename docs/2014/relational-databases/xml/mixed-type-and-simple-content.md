@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mixed types [SQL Server]
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be6566b236a3437efcd57a096ef722b2d2c629ad
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 417954df470313af7ea90e7c0cdf2ff5ba9f1f7b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162702"
 ---
 # <a name="mixed-type-and-simple-content"></a>混合型と単純コンテンツ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、混合型を単純コンテンツに制限することはできません。  
@@ -56,7 +53,7 @@ xmlns:ns1="http://ns1">
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー上の XML スキーマ コレクションの要件と制限](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

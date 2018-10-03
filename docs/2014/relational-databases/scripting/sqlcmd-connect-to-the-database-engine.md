@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd utility, Database Engine connections
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - VIA
 - client protocols [SQL Server]
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ea4dda5eb99066bc88e0fde9a1c9b98abaeacf8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1458e1e7fa43b69d771bfcadcc1c0fa039a97c09
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227212"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073228"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>sqlcmd によるデータベース エンジンへの接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TCP/IP ネットワーク プロトコル (既定) および名前付きパイプ プロトコルを使用したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。 **sqlcmd** ユーティリティで使用されるプロトコルは、次の順序で決定されます。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - pull subscriptions [SQL Server replication], deleting
 - subscriptions [SQL Server replication], pull
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fe35faf0b633e5fe7525371713dff189ac559b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9eb39e06198881ac5c51a9fc78e623b010485a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175312"
 ---
 # <a name="delete-a-pull-subscription"></a>プル サブスクリプションの削除
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プル サブスクリプションを削除する方法について説明します。  
@@ -140,7 +137,7 @@ ms.locfileid: "37150863"
   
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリケーションのサブスクライブ](subscribe-to-publications.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  
   

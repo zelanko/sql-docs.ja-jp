@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - report servers [Reporting Services], about report server
@@ -26,16 +22,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], report server
 - storage [Reporting Services]
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 9cb9c580dbd044034923718dd59e4ed27caebab2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40395076"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108492"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   このトピックでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールの中心となるコンポーネントである [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーの概要を説明します。 処理エンジンのペアと、認証、データ処理、表示、配信の各操作を行う用途別拡張機能の集合で構成されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport) 」セクションを参照してください。  
@@ -180,7 +175,7 @@ ms.locfileid: "40395076"
 |ネイティブのレポート サーバー インスタンスで **個人用レポート** を使用できるかどうかを構成する方法について説明します。|[個人用レポートの有効化と無効化](report-server/enable-and-disable-my-reports.md)|  
 |サポートされているブラウザーから、印刷機能を実現する RSClientPrint コントロールを設定する方法について説明します。 ブラウザーの要件の詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)します。|[Reporting Services のクライアント側印刷機能の有効化と無効化](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services の拡張機能](extensions/reporting-services-extensions.md)   
  [Reporting Services ツール](tools/reporting-services-tools.md)   
  [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   

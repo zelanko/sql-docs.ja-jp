@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d3f21807b13b9e3a333ad94b8396d09647cf744
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196198"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>AdomdDataReader を使用したデータの取得
   <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトは、オーバーヘッドと対話性のバランスがとれた分析データ取得方法です。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトは、分析データ ソースから、読み取り専用かつ順方向専用のフラットなデータ ストリームを取得します。 このようにデータ ストリームがバッファリングされないことで、手順ロジックにより、分析データソースから取得した結果を順次効率的に処理することができます。 大量のデータを取得して表示する場合は、データがメモリ キャッシュに格納されない <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> が適しています。  
@@ -120,7 +117,7 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="retrieving-multiple-result-sets"></a>複数の結果セットの取得  
  データ マイニングは入れ子になったテーブルの概念をサポートします。入れ子になったテーブルは、ADOMD.NET では入れ子になった行セットとして示されます。 各行に関連付けられた入れ子になった行セットを取得するには、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A> メソッドを呼び出します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [分析データ ソースからデータを取得します。](retrieving-data-from-an-analytical-data-source.md)   
  [セルセットを使用してデータを取得します。](retrieving-data-using-the-cellset.md)   
  [XmlReader を使用したデータの取得](retrieving-data-using-the-xmlreader.md)  

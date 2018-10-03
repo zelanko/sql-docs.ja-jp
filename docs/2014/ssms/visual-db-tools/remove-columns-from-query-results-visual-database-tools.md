@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting columns
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14070558242ca59336b097664c5510729d85a840
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 01671a809854ce7f023779dca28e198a02ce5926
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115742"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>クエリ結果からの列の削除 (Visual Database Tools)
   選択クエリで使用する列を結果セットには表示しない場合、つまりクエリの選択リストにはその列が必要ない場合、出力から列を削除できます。 クエリ出力から列を削除した後でも、検索条件や並べ替えフィールドとしてその列を使用できます。  
@@ -41,7 +38,7 @@ ms.locfileid: "43814358"
   
 -   [SQL ペイン](sql-pane-visual-database-tools.md)の出力リストから列を削除します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリに列を追加する&#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
  [クエリから列を削除する&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   

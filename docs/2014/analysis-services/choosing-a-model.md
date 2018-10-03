@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining algorithms
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data mining models
 - data mining structures
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9817f7e8906d9e75f7c2b5d55db679d77e7cc47e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113292"
 ---
 # <a name="choosing-a-model"></a>モデルの選択
   **マイニング アルゴリズム:** データ マイニング*アルゴリズム*はデータからパターンを作成するメカニズムです。 このアルゴリズムでは、データのカウント方法、リレーションシップの派生方法、およびパターンの格納方法が定義されます。 アルゴリズムの選択は、分析するデータの種類によっても異なります。 たとえば、アルゴリズムによっては、連続する数値のみを操作できるものもあれば、個々の値の数が制限されている場合に最も効果を発揮するものもあります。  
@@ -120,7 +117,7 @@ ms.locfileid: "37273888"
 |Microsoft シーケンス クラスタリング|シーケンス内で同じ順序で発生しているイベントのクラスターを識別します。<br /><br /> シーケンス分析とクラスタリングを組み合わせたアルゴリズムです。|このアルゴリズムは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でのみ使用できます。 ただし、Office 用データ マイニング アドインでこのアルゴリズムを使用するモデルを作成するには、構造を作成し、手動でモデルを追加します。<br /><br /> 詳細については、次を参照してください。[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)します。|  
 |Microsoft タイム シリーズ|線形デシジョン ツリーを使用して時間に関連するデータを分析します。<br /><br /> パターンを使用して、時系列における将来の値を予測できます。|[予測&#40;Excel 用テーブル分析ツール&#41;](forecast-table-analysis-tools-for-excel.md)<br /><br /> [予測ウィザード&#40;データ マイニング Excel 用アドイン&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office 用データ マイニング アドインの内容](what-s-included-in-the-data-mining-add-ins-for-office.md)  
   
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Kpi Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Kpi element
 ms.assetid: 1979a58f-97a8-4c1a-aa65-dcfb6d2404cf
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27b0bcbe2ddaabcc7b3f9ef16f3fa620a8c2db38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63b7947785976d41cda112b1c14b3829e3f98e3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235642"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124152"
 ---
 # <a name="kpi-element-assl"></a>Kpi 要素 (ASSL)
   内で主要業績評価指標 (KPI) を定義する、[キューブ](cube-element-assl.md)要素または[パースペクティブ](perspective-element-assl.md)要素。  
@@ -87,10 +84,10 @@ ms.locfileid: "37235642"
 |[キューブ](../collections/annotations-element-assl.md)、 [AssociatedMeasureGroupID](../properties/id-element-assl.md)、 [CurrentTimeMember](member-element-assl.md)、[説明](../properties/description-element-assl.md)、 [DisplayFolder](../properties/displayfolder-element-assl.md)、 [目標](../properties/goal-element-assl.md)、 [ID](../properties/id-element-assl.md)、[名前](../properties/name-element-assl.md)、[状態](../properties/status-element-assl.md)、 [StatusGraphic](../properties/statusgraphic-element-assl.md)、[翻訳](../collections/translations-element-assl.md)、[傾向](../properties/trend-element-assl.md)、 [TrendGraphic](../properties/trendgraphic-element-assl.md)、[値](../properties/value-element-assl.md)|  
 |[パースペクティブ](perspective-element-assl.md)|なし|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は、<xref:Microsoft.AnalysisServices.Kpi> と <xref:Microsoft.AnalysisServices.PerspectiveKpi> です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクト&#40;ASSL&#41;](objects-assl.md)  
   
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - current transaction access
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181422"
 ---
 # <a name="accessing-the-current-transaction"></a>現在のトランザクションへのアクセス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行されている CLR (共通言語ランタイム) コードに実行が移った時点でトランザクションがアクティブな場合、`System.Transactions.Transaction` クラスによりそのトランザクションが公開されます。 現在のトランザクションにアクセスするには、`Transaction.Current` プロパティを使用します。 ほとんどの場合、トランザクションに明示的にアクセスする必要はありません。 データベース接続の場合、`Transaction.Current` メソッドが呼び出されると、ADO.NET が `Connection.Open` を自動的にチェックし、ユーザーに意識させることなく接続をそのトランザクションに参加させます (接続文字列の `Enlist` キーワードを false に設定した場合は除く)。  
@@ -67,7 +64,7 @@ The context transaction which was active before entering user defined routine, t
  この例外も想定されるもので、実行を継続するには、トリガーを起動するアクションを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでの try/catch ブロックが必要です。 この 2 つの例外がスローされますが、トランザクションはロールバックされ、変更はコミットされません。  
   
 ### <a name="example"></a>例  
- 次の例では、`Transaction.Rollback` メソッドを使用してマネージド プロシージャからトランザクションをロールバックします。 マネージド コード内にある `Transaction.Rollback` メソッドの前後の try/catch ブロックに注意してください。 ph x="1" /&gt; スクリプトは、アセンブリおよびマネージド ストアド プロシージャを作成します。 注意を`EXEC uspRollbackFromProc`をマネージ プロシージャが実行を完了するとスローされる例外をキャッチするため、ステートメントが、try/catch ブロックにラップされています。  
+ 次の例では、`Transaction.Rollback` メソッドを使用してマネージド プロシージャからトランザクションをロールバックします。 マネージド コード内にある `Transaction.Rollback` メソッドの前後の try/catch ブロックに注意してください。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトは、アセンブリおよびマネージド ストアド プロシージャを作成します。 注意を`EXEC uspRollbackFromProc`をマネージ プロシージャが実行を完了するとスローされる例外をキャッチするため、ステートメントが、try/catch ブロックにラップされています。  
   
 ```csharp  
 using System;  
@@ -203,7 +200,7 @@ DROP ASSEMBLY TestProcs;
 Go  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合とトランザクション](../native-client-ole-db-transactions/transactions.md)  
   
   

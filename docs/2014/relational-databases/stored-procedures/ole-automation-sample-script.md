@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE Automation [SQL Server], examples
@@ -14,12 +12,12 @@ ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66cdc46e024655dbb7c4409368fbb91763f5f945
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194072"
 ---
 # <a name="ole-automation-sample-script"></a>OLE オートメーションのサンプル スクリプト
   このトピックでは、OLE オートメーション ストアド プロシージャを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のローカル インスタンスに SQL-DMO SQLServer オブジェクトを作成および使用する [!INCLUDE[ssDE](../../includes/ssde-md.md)]ステートメント バッチの例について説明します。 このコードの一部は、OLE オートメーション システム ストアド プロシージャのリファレンス トピックで例として使用されています。  

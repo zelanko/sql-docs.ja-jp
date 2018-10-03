@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e7f6f90aab70c08be52c002dc92a9bc3f1943358
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11bfe5a2a1a8a79866983855c61c9666fb114a03
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188520"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>[システム管理] 機能領域 (マスター データ マネージャー)
   [システム管理] 機能領域では、管理者はモデルとそのすべてのオブジェクトを作成できます。 また、ビジネス ルールを作成し、モデル パッケージを配置することも可能です。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  
@@ -64,7 +61,7 @@ ms.locfileid: "37314002"
   
  [ビジネス ルール アクション&#40;マスター データ サービス&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ マネージャー Web アプリケーション](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

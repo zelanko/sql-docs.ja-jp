@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b19f9141df65be952551dbb899b6cb30544e9a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eecfb2ef387bb5989f7c25a7bf7493d71899415b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191732"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>検索用フィルターの構成と管理
   ドキュメントのインデックスを作成、 `varbinary`、 `varbinary(max)`、 `image`、または`xml`データ型の列には、追加の処理が必要です。 この処理はフィルターによって実行します。 フィルターは、ドキュメントから (フォーマットを解除して) 文字情報を抽出します。 次に、テーブル列に関連付けられている言語のワード ブレーカー コンポーネントにテキストを送ります。  
@@ -45,7 +42,7 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 -   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
  [FILESTREAM と SQL Server のその他の機能との互換性](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   

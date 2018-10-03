@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1732ec8f0456fdb64860b5ac352edf6c99aaced
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d2de12fd6ada3fc70511ebc49f85da30306e7cac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228172"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150402"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service の作成と編集
   新しい Oracle CDC Windows Service の作成と編集は CDC Service 構成コンソールで行います。  
@@ -40,7 +37,7 @@ ms.locfileid: "37228172"
 > [!NOTE]  
 > このオプションは、サービスを編集するときは使用できません。 既に存在する Windows サービスの名前を変更することはできません。  
   
- **[説明]**  
+ **Description**  
  サービスを識別するのに役立つ説明を入力します。  
   
  **[サービス アカウント]**  
@@ -91,7 +88,7 @@ ms.locfileid: "37228172"
   
  高可用性構成で同じサービスの他のインスタンスがクラスターの他のノードで構成されている場合、同じマスター パスワードを使用する必要があります。 マスター パスワードを紛失または変更した場合、Oracle CDC インスタンス データベースに格納されているすべてのログ マイニング パスワードを、CDC デザイナー コンソールを使用して再入力する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC Service を作成および編集する方法](how-to-create-and-edit-a-cdc-service.md)  
   
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11f18bd8c1c72bcaf93b74529e604c69440506c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ad91ac53d2ff041c3da32fd9a609e67e8b9d1c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196223"
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services インスタンス管理
   Analysis Services のインスタンスは、オペレーティング システム サービスとして実行される `msmdsrv.exe` 実行可能ファイルのコピーです。 各インスタンスは同じサーバー上の他のインスタンスから完全に独立しており、固有の構成設定、権限、ポート、開始アカウント、ファイル ストレージ、およびサーバー モード プロパティを持ちます。  
@@ -57,7 +54,7 @@ ms.locfileid: "37289788"
 |[Analysis Services 多次元のグローバリゼーションのシナリオ](../globalization-scenarios-for-analysis-services-multiidimensional.md)|言語と照合順序のサポート、両方のプロパティの変更手順、および言語と照合順序の動作の設定とテストのヒントについて説明します。|  
 |[Analysis Services でのログ操作](log-operations-in-analysis-services.md)|ログについて説明し、その構成方法について解説します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルと多次元ソリューションのソリューションの比較&#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [PowerPivot 構成ツール](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [サーバーの全体管理で PowerPivot サーバーの管理と構成](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

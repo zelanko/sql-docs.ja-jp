@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80c3ca9a6ca7b966ba3af54e096d839314158082
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7559dd0e7766b601e525ed25885af34a84c98f1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065522"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する
   SharePoint は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセスに使用できる、組み込みのセキュリティ機能を提供します。 サイトおよびリストに対する権限がユーザーに割り当て済みである場合は、SharePoint とレポート サーバーの間の統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。  
@@ -56,7 +53,7 @@ ms.locfileid: "37294142"
   
  組み込みのグループおよび権限レベルを使用しない場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能にアクセスするには、特定の権限が必要になります。 詳細については、次を参照してください。 [SharePoint Web アプリケーションでレポート サーバー操作に対するアクセス許可の設定](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [SQL Server Reporting Services と SharePoint グループの役割とタスクの比較とアクセス許可](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint Web アプリケーションのレポート サーバー操作に対するアクセス許可を設定する](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   

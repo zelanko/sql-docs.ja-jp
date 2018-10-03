@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88e423e248293e537dba5d90e8d688b826cb5244
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199047"
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 行セット
   計算間の依存関係、およびこれらの計算で参照されるているオブジェクトについてレポートします。 クライアント アプリケーションでは、複雑な式に伴う問題についてレポートする場合や、関連するオブジェクトが削除または変更されたときに警告を生成する場合に、この情報を使用できます。 また、この行セットを使用して、メジャーまたは計算列で使用される DAX 式を抽出することもできます。  
@@ -128,7 +125,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 |GUID|a07ccd46-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|DependencyGraph|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のスキーマ行セット](../analysis-services-schema-rowsets.md)   
  [動的管理ビューを使用して&#40;Dmv&#41;サービス モニターは分析するには](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   

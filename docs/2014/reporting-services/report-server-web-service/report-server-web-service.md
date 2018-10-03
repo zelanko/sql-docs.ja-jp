@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SSIS, Web service
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services]
 - Report Server Web service
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1bdeb1ac3d79ab7b5539940ec14c9f9ae2014ba6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: deac736b28aa9b50c20d3a831685f1f2be62590c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167692"
 ---
 # <a name="report-server-web-service"></a>レポート サーバー Web サービス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] により、レポート サーバー Web サービスを通じて、レポート サーバーのすべての機能を使用できます。 レポート サーバー Web サービスは、SOAP API を使用した XML Web サービスです。 SOAP over HTTP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして機能します。 Web サービスは 2 つのエンドポイントを提供します。1 つはレポートを実行するためのもので、もう 1 つはレポートを管理するためのものです。加えて、レポート サーバーの機能を公開するメソッドが用意されています。このメソッドにより、レポートのライフ サイクルの任意の時点に対するカスタム ツールを作成できます。  
@@ -77,7 +74,7 @@ Reporting Services で利用可能な Web サービス開発オプション
   
 -   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を開発プラットフォームとして使用する場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] や [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] などの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 対応の言語の開発経験があること。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバー web サービス](../report-server-web-service/report-server-web-service.md)  
   
   

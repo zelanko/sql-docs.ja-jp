@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
-caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327562"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153732"
 ---
 # <a name="parameters-properties-page-report-manager"></a>[パラメーター] プロパティ ページ (レポート マネージャー)
   パラメーター化されたレポートのパラメーター設定を表示または変更するには、[パラメーター] プロパティ ページを使用します。  
@@ -72,7 +69,7 @@ ms.locfileid: "37327562"
  **テキストを表示します。**  
  パラメーター テキスト ボックスの隣に表示するテキスト文字列を指定します。 この文字列により、ラベルまたは説明のテキストが表示されます。 文字列の長さに制限はありません。 長いテキスト文字列は、表示領域内で折り返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   

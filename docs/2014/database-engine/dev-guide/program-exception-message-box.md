@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - exception message box [SQL Server]
 - displaying exception message box
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52a24c53fcb7efa367b089b4cf5baa0731d7ad5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cf02e2759c36ae6408beed0d72b677e130e105a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164112"
 ---
 # <a name="program-exception-message-box"></a>例外メッセージ ボックスのプログラミング
   によって提供されるよりもはるかに多くのコントロールで、メッセージ エクスペリエンスを提供する、アプリケーションで例外メッセージ ボックスを使用することができます、<xref:System.Windows.Forms.MessageBox>クラス。 詳細については、次を参照してください。[例外メッセージ ボックスのプログラミング](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)します。 取得し、例外メッセージ ボックス .dll をデプロイする方法については、次を参照してください。[例外メッセージ ボックス アプリケーションを展開する](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)します。  

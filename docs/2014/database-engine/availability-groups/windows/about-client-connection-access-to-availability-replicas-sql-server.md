@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228512"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153681"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>可用性レプリカに対するクライアント接続アクセスについて (SQL Server)
   AlwaysOn 可用性グループでは、1 つまたは複数の可用性レプリカを構成して、セカンダリ ロールで実行しているとき (つまり、セカンダリ レプリカとして実行しているとき) に読み取り専用接続を許可することができます。 各可用性レプリカをプライマリ ロールで実行しているとき (つまり、プライマリ レプリカとして実行しているとき) に、読み取り専用接続を許可または除外するように構成することもできます。  
@@ -125,7 +122,7 @@ ms.locfileid: "37228512"
   
 -   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [統計](../../../relational-databases/statistics/statistics.md)  

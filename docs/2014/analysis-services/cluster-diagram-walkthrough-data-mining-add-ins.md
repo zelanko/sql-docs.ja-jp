@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - shapes, cluster
 - data mining layout toolbar
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 808accf81389f97d2dff9383fe4c3fbe9d86068d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057092"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>クラスター ダイアグラムのチュートリアル (データ マイニング アドイン)
   クラスタ リング モデルを作成した後を使用して Visio にインポートできる、**クラスター**図形、カスタマイズおよび強化、レイアウトに進みます。 **Visio 用データ マイニング図形**データ マイニング ダイアグラムを操作するため、次のカスタム コントロールが含まれます。  
@@ -117,7 +114,7 @@ ms.locfileid: "37177259"
      **ページのサイズ変更します。**  
      このコントロールは、HTML の以前のバージョンを対象としたものです。 代わりに、Visio のページのサイズ変更コントロールを使用してください。  
   
-     **[説明]**  
+     **Description**  
      クラスターが選択されている場合、このオプションをクリックすると、クラスターに関する詳細が表示されます。  
   
      ![説明は、クラスターに関する詳細を取得する をクリックして](media/dm13-visio-cluster-description-control.gif "クラスターに関する情報を取得の説明をクリックします。")  
@@ -143,7 +140,7 @@ ms.locfileid: "37177259"
   
     -   クラスター識別グラフを追加します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visio データ マイニング図形のトラブルシューティング&#40;SQL Server データ マイニング アドイン&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

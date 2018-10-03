@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2392b6ee2bdafe0cc6a836cadb0bca94bf71612
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c81cfcac808b5bf4055f968dadff018eadc4d8be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174732"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors イベント クラス
   OLEDB Errors イベント クラスは、OLE DB プロバイダーの呼び出しによってエラーが返された場合に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生します。 OLE DB プロバイダーから報告された HRESULT エラーを表示する場合に、このイベント クラスをトレースに追加します。  
@@ -58,7 +55,7 @@ ms.locfileid: "37309972"
 |TextData|`nvarchar`|OLE DB 呼び出しで送受信されるパラメーター。|1|いいえ|  
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Transact-SQL での OLE オートメーション オブジェクト](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
   

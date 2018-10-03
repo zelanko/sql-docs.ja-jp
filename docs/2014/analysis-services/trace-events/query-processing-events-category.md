@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ee6ef696f26397c3b4ca7656710d666d6e1941d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c35f747d93bb36a767d2d9534cc285950114e25c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174402"
 ---
 # <a name="query-processing-events-category"></a>クエリ処理イベント カテゴリ
   クエリ処理イベント カテゴリには、次の表に示したイベント クラスがあります。  
   
-|**Event Class**|**イベント ID**|**[説明]**|  
+|**Event Class**|**イベント ID**|**Description**|  
 |---------------------|------------------|---------------------|  
 |Query Subcube|11|使用法に基づく最適化用のサブキューブのクエリ。|  
 |Query Subcube Verbose|12|詳細情報を指定してサブキューブをクエリします。 このイベントを有効にすると、パフォーマンスが低下する場合があります。|  
@@ -47,7 +44,7 @@ ms.locfileid: "37261488"
   
  クエリ処理イベントの各イベント クラスに関連する列については、「 [Query Processing Events Data Columns](query-processing-events-data-columns.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services トレース イベント](analysis-services-trace-events.md)  
   
   

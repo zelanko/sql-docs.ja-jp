@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
@@ -42,16 +40,15 @@ helpviewer_keywords:
 - Deploy a SQL Server database to Azure
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c17e29b5a41930f954e5cad6b67fccbaa1cc086d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207532"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure Virtual Machine の SQL Server データベースの配置
   **Windows Azure 仮想マシンに SQL Server データベースを配置**ウィザードを使用して、データベースを[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスから Windows Azure 仮想マシン (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
@@ -254,7 +251,7 @@ ms.locfileid: "37158513"
   
  **[完了]** をクリックして、ウィザードを終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 用のクラウド アダプター](../../database-engine/cloud-adapter-for-sql-server.md)   
  [データベースのライフサイクル管理](../database-lifecycle-management.md)   
  [データ層アプリケーションのエクスポート](../data-tier-applications/export-a-data-tier-application.md)   

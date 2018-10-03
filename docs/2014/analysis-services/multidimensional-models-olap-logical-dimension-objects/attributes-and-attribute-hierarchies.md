@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - regular attributes [Analysis Services]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5fb6653895a360f95bbca3bdc31fd320e2f1d2dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a42447bb508fee0510dc1d4543828475f584ed76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149373"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165872"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>属性と属性階層
   ディメンションとは属性のコレクションで、これらの属性はデータ ソース ビュー内のテーブルまたはビューの 1 つ以上の列にバインドされています。  
@@ -51,7 +48,7 @@ ms.locfileid: "37149373"
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>属性リレーションシップ、スター スキーマ、およびスノーフレーク スキーマ  
  スター スキーマでは既定ですべての属性がキー属性に直接関連付けられます。したがってユーザーはディメンション内の任意の属性階層に基づいてキューブ内のファクトを参照できます。 スノーフレーク スキーマでは、基になるテーブルをファクト テーブルに直接リンクしている場合、属性はキー属性に直接リンクされます。または、直接リンクしているテーブルにスノーフレーク テーブルをリンクする、基になるテーブルのキーにバインドされた属性によって間接的にリンクされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー定義階層を作成します。](../multidimensional-models/user-defined-hierarchies-create.md)   
  [属性リレーションシップを定義します。](../multidimensional-models/attribute-relationships-define.md)   
  [ディメンションの属性のプロパティの参照](../multidimensional-models/dimension-attribute-properties-reference.md)  

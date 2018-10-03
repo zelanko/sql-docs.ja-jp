@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85ded5847bbb2bc1c32336e999b3579925a4e930
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5088c22fed14e099f77f1ddcc1b7158f9e6f04f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202782"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>SharePoint を使用した SQL Server の BI 機能のインストール (PowerPivot と Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint での Business Intelligence (BI) 機能を有効にする Microsoft SharePoint ファームと統合できます。 機能が含まれます[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、および[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 使用は[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint ファームでのデータ アクセス。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成され、SharePoint ライブラリからアクセスされるブック用のデータ エンジンです。 保存すると、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブックを SharePoint には、使えるのデータ ソースとして[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]レポートします。  
@@ -170,7 +167,7 @@ ms.locfileid: "37325542"
   
 -   [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレードする](http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [SharePoint と Reporting Services サーバーとアドインのサポートされる組み合わせ&#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)   
  [インストールまたはアンインストール、Reporting Services アドイン、SharePoint の&#40;SharePoint 2010 および SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

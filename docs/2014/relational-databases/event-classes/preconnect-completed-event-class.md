@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - PreConnect:Completed Event Class
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a91728174a11ecf1cdd008b5aa1c9829da890ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16720db613815d5c8cce501c1cee2d5d3cc9b3cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150632"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed イベント クラス
   PreConnect:Completed イベント クラスは、LOGON トリガーまたはリソース ガバナー分類関数の実行が終了したことを示します。  
@@ -48,7 +45,7 @@ ms.locfileid: "37150693"
 |TargetUserName|`sysname`|対応するアクティブなグループをシステムが見つけられない場合は、ユーザー定義の分類子関数の戻り値 (ワークロード グループ名)。 それ以外の場合は、この列は NULL に設定されます。|39|はい|  
 |ObjectName|`nvarchar(256)`|ユーザー定義の分類子関数の 2 部構成の名前 (dbo.classifier など)。|34|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [PreConnect:Starting イベント クラス](preconnect-starting-event-class.md)   
  [リソース ガバナー](../resource-governor/resource-governor.md)  

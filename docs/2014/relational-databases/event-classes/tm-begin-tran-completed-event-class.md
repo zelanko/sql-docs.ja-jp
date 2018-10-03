@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Begin Tran Completed event class'
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7039e0b3d829daebd2af39c6cf279c7e4c4645e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca4f86e8309e9872682488bc37ecc15c8accb460
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125992"
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed イベント クラス
   TM: Begin Tran Completed イベント クラスは、BEGIN TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。  
@@ -56,7 +53,7 @@ ms.locfileid: "37182349"
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)  

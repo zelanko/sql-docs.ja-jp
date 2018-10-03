@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.general.f1
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70d3e2aa852acd34d28c2f2501d17117c6cf8640
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fca1a77392b2cdc6297d0eb96d502726264ee40c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154573"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102792"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>[WMI データ リーダー タスク エディター] ([全般] ページ)
   **[WMI データ リーダー タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI データ リーダー タスクの名前と説明を入力できます。  
@@ -37,10 +34,10 @@ ms.locfileid: "37154573"
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **Description**  
  WMI データ リーダー タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [WMI データ リーダー タスク エディター &#40;WMI オプション ページ&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [[式] ページ](expressions/expressions-page.md)   

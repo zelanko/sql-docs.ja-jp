@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [ODBC]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - sql_variant data type
 - SQL Server Native Client ODBC driver, data types
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd657592598ad51a2a61d0f51e5e36cbf56067c5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 13a011ab9545b9e5b9f02daf46654b0f8253a66d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423561"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142518"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのマップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC SQL データ型への SQL データ型。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  
@@ -91,7 +88,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 ### <a name="sending-data-to-the-server"></a>サーバーへのデータの送信  
  **SQL_SS_VARIANT**、新しいデータ型に固有の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーに送信されるデータの使用、 **sql_variant**列。 パラメーターを使用してサーバーにデータを送信するときに (たとえば、INSERT INTO TableName VALUES (?、ですか?))、 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) C 型と、対応するなどのパラメーター情報を指定するために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、適切ないずれかに C データ型を変換**sql_variant**サブタイプ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結果の処理&#40;ODBC&#41;](processing-results-odbc.md)  
   
   

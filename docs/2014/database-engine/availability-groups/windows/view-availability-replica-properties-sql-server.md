@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ', policies'
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c9c8ce45ca1ae4efdb65d8d1aae44261be80a0a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282204"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097272"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>可用性レプリカのプロパティの表示 (SQL Server)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して、AlwaysOn 可用性グループの可用性レプリカのプロパティを表示する方法について説明します。  
@@ -33,11 +30,11 @@ ms.locfileid: "37282204"
   
 2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
-3.  可用性レプリカが属する可用性グループを展開し、[**可用性レプリカ**] ノードを展開します。  
+3.  可用性レプリカが属する可用性グループを展開し、**[可用性レプリカ]** ノードを展開します。  
   
-4.  プロパティを表示する可用性レプリカを右クリックし、[ **プロパティ** ] をクリックします。  
+4.  プロパティを表示する可用性レプリカを右クリックし、**[プロパティ]** をクリックします。  
   
-5.  [ **可用性レプリカ プロパティ** ] ダイアログ ボックスで、[ **全般** ] ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、次を参照してください。[可用性レプリカ プロパティ&#40;[全般] ページ&#41;](availability-replica-properties-general-page.md)します。  
+5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、**[全般]** ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、次を参照してください。[可用性レプリカ プロパティ&#40;[全般] ページ&#41;](availability-replica-properties-general-page.md)します。  
   
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -121,7 +118,7 @@ ms.locfileid: "37282204"
 -   [可用性グループからのプライマリ データベースの削除 &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性グループの運用上の問題の AlwaysOn ポリシー &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   

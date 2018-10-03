@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 107da5c6037988987beed9794ee1ef172ed17e4c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258120"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097292"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>[ラベル] ([マップの緯線のプロパティ] ダイアログ ボックス)
   使用して、 **MapParallel プロパティ**ダイアログ ボックスで、マップ ビューポートの水平グリッドのラベルのオプションを変更します。 緯線とは、ビューポートに指定された座標系に応じて、次の値を表します。  
@@ -53,7 +50,7 @@ ms.locfileid: "37258120"
   
 -   **[遠く]** ラベルを下部に表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
  [変更するマップの凡例、カラー スケール、および関連付けられているルール&#40;レポート ビルダーおよび SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   

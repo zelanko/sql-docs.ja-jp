@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], development
 - development security [SQL Server replication]
 ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3144b5aa38b273de283b624b90fa612130e6270d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00e18959f7b9fa99ab401d1ae6a8caa7438c4ce3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111702"
 ---
 # <a name="secure-development-replication"></a>セキュリティで保護された開発 (レプリケーション)
   ここでは、より高いセキュリティで保護されたレプリケーション トポロジを計画する場合に役立つ情報を提供します。  
@@ -37,7 +34,7 @@ ms.locfileid: "37288788"
  [レプリケーション セキュリティの推奨事項](replication-security-best-practices.md)  
  より高いセキュリティで保護されたレプリケーション トポロジを計画するための一般的な情報を提供します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティの概要 &#40;レプリケーション&#41;](security-overview-replication.md)   
  [セキュリティで保護された配置 &#40;レプリケーション&#41;](secure-deployment-replication.md)  
   

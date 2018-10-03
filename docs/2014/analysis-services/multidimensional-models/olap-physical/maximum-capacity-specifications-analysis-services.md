@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04307fb9eb5525c9ce4d91af7eda44ea3783b3b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed648821a41006842911eede9ee5740cdddeabde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190472"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量仕様 (Analysis Services)
   次の各表に、さまざまなサーバー配置モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] コンポーネントで定義される各種オブジェクトの最大サイズと最大数を示します。  
@@ -102,7 +99,7 @@ ms.locfileid: "37200272"
 |ソース クエリのレコード サイズ|64 K|  
 |オブジェクト名の長さ|100 文字|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services インスタンスのサーバー モードを決定します。](../../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [全般プロパティ](../../server-properties/general-properties.md)  
   

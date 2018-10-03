@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 86fc068d0ff8278b3004c585b3d3d4bcf10facdb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152983"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164712"
 ---
 # <a name="understanding-the-tabular-object-model"></a>テーブル オブジェクト モデルについて
   テーブル モデルは、テーブル、リレーションシップ、階層、パースペクティブ、メジャー、および主要業績に関する論理的表現です。 ここでは、AMO を使用した内部実装について説明します。 参照してください[Analysis Management Objects を使用した開発&#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)までに AMO を使用していない場合。  

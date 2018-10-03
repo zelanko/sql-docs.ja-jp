@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DbStorageLocation element
 ms.assetid: 1f448249-103a-479f-ae86-b0017acd0436
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 055780c9c91817a44dce6dfdaeb6ea3b541c05a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdee1fc2d62f63eb70e5aecd47c32693a9fbd155
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173922"
 ---
 # <a name="dbstoragelocation-element"></a>DbStorageLocation 要素
   フォルダーを指定します、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]作成し、すべてのデータベースのデータとメタデータ ファイルを管理します。  
@@ -53,12 +50,12 @@ ms.locfileid: "37224002"
 |親要素|[[データベース]](database-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `DbStorageLocation`データベース プロパティは、既存の UNC フォルダー パスまたは空の文字列に設定する必要があります。 空の文字列は、既定のサーバー データ フォルダーを示します。 フォルダーが存在しない場合、`Create` コマンド、`Attach` コマンド、または `Alter` コマンドを実行するとエラーが発生します。  
   
  さらに、`DbStorageLocation`サーバー データ フォルダーまたはそのサブフォルダーを指すデータベース プロパティを設定することはできません。 サーバー データ フォルダーまたはそのサブフォルダーを指した場合、`Create` コマンド、`Attach` コマンド、または `Alter` コマンドを実行するとエラーが発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Analysis Services データベースのインポートとデタッチ](../../multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   

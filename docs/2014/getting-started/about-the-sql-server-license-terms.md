@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - licenses [SQL Server]
 - end user license agreement [SQL Server]
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
-caps.latest.revision: 55
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edfd3cdc1d6565fd6538dfcf5d79e9c1e7d4c9d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 348ee13872db0ae6e9900290404d8db88122b123
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194532"
 ---
 # <a name="about-the-sql-server-license-terms"></a>SQL Server の使用許諾条件について
   [!INCLUDE[msCoName](../includes/msconame-md.md)] ソフトウェア使用許諾条件は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストール時にローカル コンピューターにコピーされます。 同じエディションと言語の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます %programfiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ または % の ProgramFiles(x86) % \。[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 条項\\します。  
@@ -70,7 +67,7 @@ ms.locfileid: "37165343"
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ライセンス オプション  
  詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]価格およびライセンス オプションを参照してください、 [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web サイト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のライセンスに関する考慮事項](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   
  [Microsoft SQL Server のプライバシーに関する声明](../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [ドキュメントの免責事項](../../2014/getting-started/legal-notice-for-documentation.md)  

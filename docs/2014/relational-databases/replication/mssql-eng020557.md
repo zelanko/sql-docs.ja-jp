@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020557 error
 ms.assetid: c43c6952-5b60-4347-b881-11a0004dce24
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fae14de91b626fdb349f712f0311ccbe97929560
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7701a709d9415c660ad63a70c8cfbb3bfafd0878
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315642"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193962"
 ---
 # <a name="mssqleng020557"></a>MSSQL_ENG020557
     
@@ -55,7 +52,7 @@ ms.locfileid: "37315642"
   
 -   エラーの発生が継続する場合は、エージェントのログ記録を増やし、ログの出力ファイルを指定します。 エラーのコンテキストによっては、エラーや他のエラー メッセージを発生させる手順が示される場合もあります。 レプリケーションのログ記録を構成する方法については、サポート技術情報の資料 [312292](http://support.microsoft.com/kb/312292)を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6ab017df400de3a9894a64108d97cbd97fd3374c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79ad4c19b0f6b3dff91def701611b0a20d66a34d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049812"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  
@@ -82,7 +79,7 @@ ms.locfileid: "37218982"
 |<\<|ビット パターン上で算術左シフトを実行します。|  
 |>>|ビット パターン上で算術右シフトを実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[式] ダイアログ ボックス](../expression-dialog-box.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   

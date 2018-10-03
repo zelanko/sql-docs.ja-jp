@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5ec1b7d62e3e765ee43624f0e97aef60c91309ee
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 07c1c226d33a213dd9bd071c59d9771a0e0ca736
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848858"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL コンソール入門 (MySQLToSQL)
 このセクションを起動し、MySQL のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  
@@ -71,6 +65,6 @@ SSMA スクリプト コマンドとオプションを実行すると、コン�
 |[緑]|ユーザー入力を求めるプロンプト|  
 |シアン|開始、終了日と操作の結果|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA for MySQL のインストール](installing-ssma-for-mysql-mysqltosql.md)  
   

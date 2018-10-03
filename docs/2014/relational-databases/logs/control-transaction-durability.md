@@ -4,26 +4,21 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147169"
 ---
 # <a name="control-transaction-durability"></a>トランザクションの持続性の制御
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] におけるトランザクションのコミットには、完全持続性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値、または遅延持続性 (低速コミットとも呼ばれます) が適用されます。  
@@ -59,7 +54,7 @@ ms.locfileid: "37201502"
 -   同時実行トランザクション間でログ IO の競合が発生する可能性は高くありません。ログ バッファーは大きな単位でディスクにフラッシュできるため、競合が軽減され、スループットを向上できます。  
   
     > [!NOTE]  
-    >  ただしログ バッファーがフラッシュされる前にいっぱいになる場合など、同時実行性が高い場合は、ログ I/O の競合が生じることもあります。  
+    >  ただしログ バッファーがフラッシュされる前にいっぱいになる場合など、コンカレンシーが高い場合は、ログ I/O の競合が生じることもあります。  
   
  **遅延持続性トランザクションを使用する場合**  
   
@@ -208,7 +203,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウンと再起動  
  遅延持続性の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の予期しないシャットダウンと予期されたシャットダウン/再起動に違いはありません。 重大なイベントと同様に、データ損失に対する計画を立てる必要があります。 計画されたシャットダウン/再起動では、ディスクに書き込まれていない一部のトランザクションが最初にディスクに保存される場合がありますが、それを予期することはできません。 計画されているかどうかに関係なく、シャットダウン/再起動によって重大なイベントと同様にデータが失われるものとして計画してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション分離レベル](../../database-engine/transaction-isolation-levels.md)   
  [メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン](../in-memory-oltp/memory-optimized-tables.md)  
   

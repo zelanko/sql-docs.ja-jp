@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 92
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200952"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
   データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
@@ -244,7 +241,7 @@ Server=123.34.45.56,4724;
 |データベース管理者がミラー化を停止し (クライアントの接続を切断)、Partner_A を Partner_C に置き換えて、ミラー化を再開|Partner_B|Partner_C|クライアントは Partner_A への接続を試行して失敗します。その後、Partner_B (現在のプリンシパル サーバー) への接続を試行して成功します。 データ アクセス プロバイダーは現在のミラー サーバー名である Partner_C をダウンロードし、現在のフェールオーバー パートナー名としてキャッシュに保存します。|  
 |サービスを手動で Partner_C にフェールオーバー (クライアントの接続を切断)|Partner_C|Partner_B|クライアントはまず Partner_A に接続してから Partner_B に接続しようとします。 どちらの名前でも接続に失敗し、最終的には接続要求がタイムアウトになって失敗します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング中に発生する可能性のあるエラー](possible-failures-during-database-mirroring.md)  
   

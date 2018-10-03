@@ -1,26 +1,23 @@
 ---
-title: カーソル (ODBC) を使用して、|Microsoft Docs
+title: カーソル (ODBC) を使用して、|マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfb7dc92b49ec434b9fd4bf407704afbcf795f45
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 222cb3cd5511d4c663e86ba847090cc35d84e2cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431641"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143090"
 ---
 # <a name="use-cursors-odbc"></a>カーソルの使用 (OLE DB)
     
@@ -74,7 +71,7 @@ ms.locfileid: "37431641"
   
      使用するカーソルの種類を制御するには、SQL_ATTR_CURSOR_TYPE と SQL_ATTR_CONCURRENCY を設定するか、SQL_ATTR_CURSOR_SENSITIVITY と SQL_ATTR_CURSOR_SCROLLABLE を設定します。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルの操作方法に関するトピックを使用して&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

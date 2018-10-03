@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d64224c1b7489895ff0d9dca00a3841be0ed0bbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203302"
 ---
 # <a name="cubeattribute-data-type-assl"></a>CubeAttribute データ型 (ASSL)
   関連付けられている属性を表すプリミティブ データ型を定義、[キューブ](../objects/cube-element-assl.md)要素。  
@@ -64,7 +61,7 @@ ms.locfileid: "37319352"
 |子要素|[AggregationUsage](../properties/aggregationusage-element-assl.md)、[注釈](../collections/annotations-element-assl.md)、 [AttributeHierarchyEnabled](../properties/enabled-element-assl.md)、 [AttributeHierarchyOptimizedState](../properties/state-element-assl.md)、 [AttributeHierarchyVisible](../properties/visible-element-assl.md)、 [AttributeID](../properties/id-element-assl.md)|  
 |派生要素|[属性](../objects/attribute-element-assl.md)([属性](../collections/attributes-element-assl.md)のコレクション[CubeDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  *AttributeHierarchyOptimizedState* DeploymentMode 構成プロパティの値 1 または 2 (SharePoint モードまたは表形式モード、PowerPivot とテーブル モデル データベースを実行するために使用) でサービスを実行するときに、要素がサポートされていません。  
   
  階層のレベルとして属性を追加することはできませんと、プロパティ*AtttributeHierarchyEnabled*FALSE に設定されている DeploymentMode 1 または 2 (SharePoint または表形式サーバー モード) インスタンスが動作しているとします。  
@@ -75,7 +72,7 @@ ms.locfileid: "37319352"
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.CubeAttribute>します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services スクリプト言語の XML データ型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

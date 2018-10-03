@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.results.f1
 - sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46703b9de00698a4accbb629c8d3310779d2fa03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50d1d8e392b9cee6788da1aec29466ea7afeaa0b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953117"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846280"
 ---
 # <a name="results-detailed-view-dialog-box"></a>[結果の詳細ビュー] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[ポリシーの評価]** ダイアログ ボックスを使用してポリシーを実行し、 **[評価]** をクリックすると、このダイアログ ボックスにポリシーの評価結果が表示されます。 このダイアログ ボックスは読み取り専用で、プロパティ式のどの部分に問題があるかを把握するのに役立ちます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[AndOr]**  
  複数のプロパティ式がある場合に、プロパティ式を累積するか、選択するかを指定します。  
   

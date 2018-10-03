@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Instance to upgrade, Setup
 ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f29f3e745ae56a716a617f5938c3958de36f0891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 769ae8cd5abab02fd2ae253e6165ad4d6b89b974
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182092"
 ---
 # <a name="select-instance"></a>インスタンスの選択
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インスタンスの選択] ページを使用すると、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にアップグレードする [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のインスタンスを指定できます。  
@@ -49,7 +46,7 @@ ms.locfileid: "37270198"
   
  サポートされるアップグレード シナリオとアップグレードの既知の問題については、「 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アップグレード アドバイザーを使用したアップグレードの準備](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [SQL Server の複数のバージョンおよびインスタンスの使用](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   

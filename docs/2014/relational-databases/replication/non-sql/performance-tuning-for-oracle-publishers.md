@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], performance tuning
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6325010f13ee758532729ea67d88760073f38e18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a73811a1a6d9c720e322d14031a004746198470b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124602"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle パブリッシャーのパフォーマンス チューニング
   Oracle のパブリッシング アーキテクチャは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のパブリッシング アーキテクチャに似ています。したがって、「 [Enhance General Replication Performance](../administration/enhance-general-replication-performance.md)」で紹介されているチューニング全般の推奨事項に従うことが、Oracle レプリケーションのパフォーマンスをチューニングするための第一歩となります。  
@@ -44,7 +41,7 @@ ms.locfileid: "37150733"
   
  トランザクション セット ジョブを構成するには、「[Configure the Transaction Set Job for an Oracle Publisher](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)」 (Oracle パブリッシャー用にトランザクション セット ジョブを構成する方法 (レプリケーション Transact-SQL プログラミング)) を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server, HADR]
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a1d9f3e76d0ab3bb4c5b7560e38de8a208c0211
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28198abe0fe417ea29d5a10409e141a7a2ee2f1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150572"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性レプリカ間のセッション中に発生する可能性のあるエラー (SQL Server)
   物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題により、2 つの可用性レプリカ間のセッションが失敗する場合があります。 可用性レプリカでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、通知されないその他の失敗を検出するために、独自のセッション タイムアウト メカニズムを実装しています。 セッション タイムアウト期間を秒単位で指定します。 このタイムアウト時間は、別のインスタンスからの PING メッセージを受信するために、サーバー インスタンスが待機する最大時間です。この時間を過ぎると、待機していたインスタンスは接続解除されたものと見なされます。 2 つの可用性レプリカ間でセッション タイムアウトが発生すると、可用性レプリカはエラーが発生したと想定し、 *ソフト エラー*を宣言します。  
@@ -103,7 +100,7 @@ ms.locfileid: "37245362"
   
 -   「[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)」で **session_timeout** クエリを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

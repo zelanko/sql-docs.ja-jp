@@ -1,14 +1,12 @@
 ---
-title: その他の注釈 (SQLXML 4.0) |Microsoft Docs
+title: その他の注釈 (SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - url-encode annotation
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01e0af9b72790b8a2ddf396434c84f25ee270313
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe23d1fbcae65bf77c66ffa423d597cb1539a1eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115761"
 ---
 # <a name="other-annotations-sqlxml-40"></a>その他の注釈 (SQLXML 4.0)
   前のトピックで説明した注釈に加えて、XML 一括読み込みでは、その他の注釈が次のように解釈されます。  
@@ -54,7 +51,7 @@ ms.locfileid: "37223132"
  `sql:key-fields`  
  XML 一括読み込みでは、この注釈は常に無視されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [注釈の解釈&#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

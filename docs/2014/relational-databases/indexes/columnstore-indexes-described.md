@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8dd4fdcc7031f56850cded09b098356d2fbad195
-ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
+ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42802532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109808"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *メモリ内列ストア インデックス*格納および列ベースのデータ ストレージと列ベースのクエリ処理を使用してデータを管理します。 列ストア インデックスは、主に一括読み込みと読み取り専用のクエリを実行するデータ ウェアハウスのワークロードで適切に動作します。 従来の行指向ストレージの最大 **10 倍のクエリ パフォーマンス** と、非圧縮データ サイズの最大 **7 倍のデータ圧縮** を達成するために列ストア インデックスを使用します。  

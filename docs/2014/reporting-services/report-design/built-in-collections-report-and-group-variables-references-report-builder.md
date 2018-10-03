@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10404"
@@ -19,16 +17,15 @@ f1_keywords:
 - "10292"
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139618"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)
   レポート内の式で複数回使用される複雑な計算があれば、変数を作成した方がよい場合があります。 このような場合は、レポート変数またはグループ変数を作成できます。 変数名は、レポート内で一意である必要があります。  
@@ -75,8 +72,8 @@ ms.locfileid: "37148493"
   
  式で変数を参照するには、 `=Variables!GroupDescription.Value`などのグローバル コレクション構文を使用します。 デザイン画面では、この値が `<<Expr>>`としてテキスト ボックスに表示されます。  
   
-## <a name="see-also"></a>参照  
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [式内で組み込みコレクション&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
-caps.latest.revision: 4
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bfdad3793673e24ddf87d504ab71c96c0bac16f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a29a56a53fe02aeb02c6096ca287b65c23d9b27
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170848"
 ---
 # <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>レッスン 2 : スケジュールに基づくベスト プラクティス ポリシーの評価
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つ以上のインスタンスについて、スケジュールに基づくベスト プラクティス ポリシーの評価を構成できます。 ベスト プラクティス ポリシーをスケジュールに基づいて実行するよう構成するには、ポリシーを対象インスタンスにインポートする必要があります。  
@@ -45,7 +42,7 @@ ms.locfileid: "37196602"
   
 -   [スケジュールされたポリシーの複数インスタンスへの配置](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [中央管理サーバーを使用した複数のサーバーの管理](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

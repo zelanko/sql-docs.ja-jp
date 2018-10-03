@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 653782ef61866adfa1a495deca49b563f12ca110
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76017bf54455d702dbea060e4f966765ddb1e47b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070019"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>手順 1: レッスン 4 のパッケージのコピー
   ここでは、レッスン 4 で作成した Lesson 4.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 4 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 5 の実習では、このパッケージの新しいコピーを使用します。  
