@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119872"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>時系列予測の作成 (中級者向けデータ マイニング チュートリアル)
   このレッスンの前の作業では、時系列モデルを作成し、結果を検証しました。 既定では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって常に時系列モデルの 5 つの予測のセットが作成され、予測された値が予測グラフの一部として表示されます。 ただし、データ マイニング拡張機能 (DMX) の予測クエリを作成することによって、予測を作成することもできます。  

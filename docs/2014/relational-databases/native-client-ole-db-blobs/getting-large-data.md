@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BLOBs, OLE objects
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b211984732a3ed571e29e4c7117fe0aab21bd033
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428881"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120274"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
   一般に、コンシューマーを作成するコードを分離する必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクトにより参照されないデータを処理する他のコードから、 **ISequentialStream**インターフェイス ポインター。  
@@ -36,7 +33,7 @@ ms.locfileid: "37428881"
   
 -   ICommand::Execute  
   
- コンシューマーがへの呼び出し内のデータの単一の行のみをフェッチする必要があります (行セット プロパティ グループ) 内の DBPROP_ACCESSORDER プロパティが値 DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかに設定されている場合、 **GetNextRows**メソッド BLOB データがバッファーされていないためです。 DBPROP_ACCESSORDER の値が DBPROPVAL_AO_RANDOM に設定されている場合、コンシューマーが内のデータの複数の行をフェッチできます**GetNextRows**します。  
+ コンシューマーがへの呼び出し内のデータの単一の行のみをフェッチする必要があります (行セット プロパティ グループ) 内の DBPROP_ACCESSORDER プロパティが値 DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかに設定されている場合、 **GetNextRows**メソッド BLOB データがバッファーされていないためです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから大規模なデータが取得されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーの要求されるまでです。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
   
@@ -149,7 +146,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>参照  
- [Blob と OLE オブジェクト](blobs-and-ole-objects.md)   
+ [BLOB と OLE オブジェクト](blobs-and-ole-objects.md)   
  [大きな値の型の使用](../native-client/features/using-large-value-types.md)  
   
   

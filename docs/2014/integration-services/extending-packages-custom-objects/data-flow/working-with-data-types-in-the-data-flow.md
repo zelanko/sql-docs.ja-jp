@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom data flow components [Integration Services], mapping data types
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ec97729e8e1cdeefa2851cca00075dff0566901
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d018f8a82aeaabd0a0a3e325daf9fea771cb7c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195682"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122524"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>データ フロー内のデータ型の処理
   Integration Services のカスタム データ フロー コンポーネント開発には、データ フロー バッファーにデータをコピーしたり、データ フロー バッファーからデータを取得したり、値を変換したりするなど、常にデータ型の処理が伴います。 このトピックでは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型の正しい選択と、それを扱うための適切なメソッドの使用について説明します。  
@@ -101,7 +98,7 @@ ms.locfileid: "37195682"
 >  既定で C:\Program Files\Microsoft SQL Server\120\DTS\MappingFiles にインストールされる XML 形式のマッピング ファイルは、このトピックで説明するデータ型のマッピングには関連しません。 これらのファイルは、データ型をあるデータベース バージョンまたはシステムから別のデータベース バージョンまたはシステムにマップ ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から Oracle へのマッピングなど) したものであり、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードでのみ使用されます。 これらのマッピング ファイルの詳細については、「[SQL Server インポートおよびエクスポート ウィザード](../../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
 ### <a name="mapping-between-integration-services-and-managed-data-types"></a>Integration Services とマネージド データ型とのマッピング  
- ph x="1" /&gt; メソッドおよび <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> メソッドは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型をマネージド データ型にマップします。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> メソッドは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型をマネージド データ型にマップします。  
   
 > [!CAUTION]  
 >  開発者が <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> クラスのこれらのメソッドを使用する際には注意が必要です。また、カスタム コンポーネントの固有の要件により適した独自のデータ型マッピング メソッドのコーディングが必要になる場合もあります。 既存のメソッドでは、数値有効桁数や小数点以下桁数が考慮されていません。また、他のプロパティは、データ型そのものに密接に関連します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の将来のバージョンでは、これらのメソッドが変更または削除されたり、メソッドが実行するマッピングが変更されたりする可能性があります。  
@@ -135,7 +132,7 @@ ms.locfileid: "37195682"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|System.UInt64|  
   
 ### <a name="mapping-integration-services-data-types-to-fit-managed-data-types"></a>Integration Services データ型から適合マネージド データ型へのマッピング  
- ph x="1" /&gt; データ型をマネージド型に変換する前に、データ フロー コンポーネントによる別の型への変換が必要になる場合もあります。 ph x="1" /&gt; メソッド クラスは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> メソッドを使ってマネージド データ型にマップすることのできる、他の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型にマップします。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型をマネージド型に変換する前に、データ フロー コンポーネントによる別の型への変換が必要になる場合もあります。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> メソッド クラスは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> メソッドを使ってマネージド データ型にマップすることのできる、他の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型にマップします。  
   
 > [!CAUTION]  
 >  開発者が <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> クラスのこれらのメソッドを使用する際には注意が必要です。また、カスタム コンポーネントの固有の要件により適した独自のデータ型マッピング メソッドのコーディングが必要になる場合もあります。 既存のメソッドでは、数値有効桁数や小数点以下桁数が考慮されていません。また、他のプロパティは、データ型そのものに密接に関連します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の将来のバージョンでは、これらのメソッドが変更または削除されたり、メソッドが実行するマッピングが変更されたりする可能性があります。  
