@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2eca6e7528b3b01a64640220906d9aee96ac3f48
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 94a0a5fbf228f7fbf8249e9e75a7e2aebf861065
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690056"
 ---
 # <a name="working-with-statements-and-result-sets"></a>ステートメントおよび結果セットの操作
 
@@ -35,9 +32,9 @@ JDBC ドライバーの Statement オブジェクト、たとえば [SQLServerSt
 
 - OUT パラメーターまたはがないか、ステートメントを複数回実行する予定がない場合は、SQLServerCallableStatement または SQLServerPreparedStatement オブジェクトを使用する必要はありません。 代わりに、SQLServerStatement オブジェクトを使用します。
 
-## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>ResultSet オブジェクトに対する適切な同時実行の使用
+## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>ResultSet オブジェクトに対する適切なコンカレンシーの使用
 
-結果セットを生成するステートメントを作成する際、実際に結果の更新を意図していない限り、更新可能な同時実行を要求しないでください。 既定の順方向専用、読み取り専用のカーソル モデルは、結果セットが小さい場合に最も高速に読み取りを行います。
+結果セットを生成するステートメントを作成する際、実際に結果の更新を意図していない限り、更新可能なコンカレンシーを要求しないでください。 既定の順方向専用、読み取り専用のカーソル モデルは、結果セットが小さい場合に最も高速に読み取りを行います。
 
 ## <a name="limit-the-size-of-your-result-sets"></a>結果セットのサイズの制限
 
@@ -45,7 +42,7 @@ JDBC ドライバーの Statement オブジェクト、たとえば [SQLServerSt
 
 ## <a name="use-the-appropriate-fetch-size"></a>適切なフェッチ サイズの使用
 
-読み取り専用のサーバー カーソルの場合、サーバーへのラウンド トリップと、ドライバーで使用されるメモリ量がトレードオフになります。 更新可能なサーバー カーソルの場合、フェッチ サイズもまた、変更に対する結果セットの応答性とサーバー上の同時実行に影響します。 現在のフェッチ バッファー内の行の更新は、[refreshRow](../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md) メソッドが明示的に発行されるか、カーソルがフェッチ バッファーを離れるまで表示されません。 フェッチ バッファーが大きいと、パフォーマンスが向上します (サーバーのラウンド トリップが少なくなります) が、変更に対する応答性が低下し、CONCUR_SS_SCROLL_LOCKS (1009) が使用されている場合、サーバー上の同時実行が減少します。 変更に対する応答性を最大化するには、フェッチ サイズ 1 を使用します。 ただし、フェッチされるすべての行でサーバーへのラウンド トリップが発生する点に注意してください。
+読み取り専用のサーバー カーソルの場合、サーバーへのラウンド トリップと、ドライバーで使用されるメモリ量がトレードオフになります。 更新可能なサーバー カーソルの場合、フェッチ サイズもまた、変更に対する結果セットの応答性とサーバー上のコンカレンシーに影響します。 現在のフェッチ バッファー内の行の更新は、[refreshRow](../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md) メソッドが明示的に発行されるか、カーソルがフェッチ バッファーを離れるまで表示されません。 フェッチ バッファーが大きいと、パフォーマンスが向上します (サーバーのラウンド トリップが少なくなります) が、変更に対する応答性が低下し、CONCUR_SS_SCROLL_LOCKS (1009) が使用されている場合、サーバー上のコンカレンシーが減少します。 変更に対する応答性を最大化するには、フェッチ サイズ 1 を使用します。 ただし、フェッチされるすべての行でサーバーへのラウンド トリップが発生する点に注意してください。
 
 ## <a name="use-streams-for-large-in-parameters"></a>大きな IN パラメーターでのストリームの使用
 
