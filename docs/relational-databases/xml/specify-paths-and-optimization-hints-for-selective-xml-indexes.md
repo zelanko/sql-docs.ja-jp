@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18340956a0378a20a4ff5f9c92a47a477d5b3683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caa27c607c82da066e350113d8c29e412c2ce39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731360"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -361,20 +358,20 @@ WHERE T.xmldata.exist('
   
 |最適化ヒント|より効率的なストレージ|パフォーマンスの向上|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|はい|いいえ|  
-|**SINGLETON**|いいえ|はい|  
-|**DATA TYPE**|はい|はい|  
-|**MAXLENGTH**|はい|はい|  
+|**node()**|[ユーザー アカウント制御]|いいえ|  
+|**SINGLETON**|いいえ|[ユーザー アカウント制御]|  
+|**DATA TYPE**|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|**MAXLENGTH**|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
   
 ### <a name="optimization-hints-and-data-types"></a>最適化ヒントとデータ型  
  ノードに XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型としてインデックスを設定できます。 次の表に、各データ型でサポートされる最適化ヒントを示します。  
   
 |最適化ヒント|XQuery のデータ型|SQL データ型|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|はい|いいえ|  
-|**SINGLETON**|はい|はい|  
-|**DATA TYPE**|はい|いいえ|  
-|**MAXLENGTH**|はい|いいえ|  
+|**node()**|[ユーザー アカウント制御]|いいえ|  
+|**SINGLETON**|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|**DATA TYPE**|[ユーザー アカウント制御]|いいえ|  
+|**MAXLENGTH**|[ユーザー アカウント制御]|いいえ|  
   
 ### <a name="node-optimization-hint"></a>node() 最適化ヒント  
  適用先: XQuery データ型  

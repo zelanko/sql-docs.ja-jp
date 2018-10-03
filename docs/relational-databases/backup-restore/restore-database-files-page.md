@@ -5,30 +5,27 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.files.f1
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
-caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 14411c1f06a25ace27823f2b0890c89fa5009cf8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0603d21022889153c6f0fc80908abfa3798aa0f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723320"
 ---
 # <a name="restore-database-files-page"></a>[データベースの復元]\([ファイル] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[データベースの復元]** ダイアログ ボックスの **[ファイル]** ページを使用して、データベース内で復元するように選択した特定のファイルを管理します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
   
 ### <a name="restore-database-files-as"></a>[次のデータベース ファイルに復元]  
  復元されたファイルに新しいファイル パスを割り当て、管理できます。  
@@ -36,7 +33,7 @@ ms.locfileid: "32918807"
  **[すべてのファイルをフォルダーに移動]**  
  復元されたファイルを再配置します。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**データ ファイル フォルダー**|復元されたデータ ファイルが移されるデータ ファイルのフォルダー名を入力または検索します。|  
 |**ログ ファイル フォルダー**|復元されたログ ファイルが移されるログ ファイル フォルダーを入力または検索します。|  

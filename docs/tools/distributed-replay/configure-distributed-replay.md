@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745320"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +165,23 @@ ms.locfileid: "38038483"
     </OutputOptions>  
 </Options>  
 ```  
-  
+
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>同期シーケンス モードで実行するときに、考えられる問題
+ 再生の機能が表示される「停止」、または再生イベントを非常に遅くなります現象が発生する可能性があります。 この現象は、データまたは復元先データベースに存在しないイベントが再生されるトレースが依存する場合に発生することができます。 
+ 
+ 1 つの例は、キャプチャされたワークロードなど、Service Broker の受信の WAITFOR ステートメントで、WAITFOR を使用します。 同期シーケンス モードを使用して、バッチが順番に再生されます。 データベースのバックアップ後にソース データベースに対して挿入が発生した場合は、トレースを開始する再生キャプチャする前に、WAITFOR 受信再生中に発行された、WAITFOR の期間全体を待機する必要があります。 イベントは、WAITFOR の受信が停止している後に再生するのに設定します。 これにより、再生のデータベース ターゲットをゼロに削除するには、バッチ要求/秒パフォーマンス モニター カウンターで、WAITFOR が完了するまでです。 
+ 
+ 同期モードでありを使用して、この動作を回避する必要がある場合は、次の操作を行う必要があります。
+ 
+1.  休止再生ターゲットとして使用するデータベース。
+
+2.  完了する保留中のすべてのアクティビティを許可します。
+
+3.  データベースをバックアップし、バックアップの完了を許可します。
+
+4.  分散再生のトレース キャプチャを開始し、標準的なワークロードを再開します。 
+ 
+ 
 ## <a name="see-also"></a>参照  
  [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   

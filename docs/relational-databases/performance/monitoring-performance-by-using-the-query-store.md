@@ -5,25 +5,22 @@ ms.date: 07/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be57bd0f6d29dc38bf31774abb6fc56cac8ae30c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fdf4b9ba29155d3779f1c28b74b7ad8617be0d48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073901"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717060"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +119,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 |-|-|-|  
 |以前のエクスペリエンス|新しいエクスペリエンス|操作|
 |データベースごとの高い RESOURCE_SEMAPHORE 待機|特定のクエリに対するクエリ ストアでの高いメモリ待機|クエリ ストアでメモリ消費量の多いクエリを探します。 これらのクエリは、影響を受けるクエリの進行をさらに遅らせる可能性があります。 これらのクエリまたは影響を受けるクエリに、MAX_GRANT_PERCENT クエリ ヒントを使うことを検討します。|
-|データベースごとの高い LCK_M_X 待機|特定のクエリに対するクエリ ストアでの高いロック待機|影響を受けるクエリのクエリ テキストを確認し、ターゲット エンティティを明らかにします。 クエリ ストアで同じエンティティを変更している他のクエリを探します。これらは、頻繁に実行されていたり、実行時間が長くなったりします。 これらのクエリを特定した後、同時実行が向上するようにアプリケーション ロジックを変更するか、制限の低い分離レベルを使うことを検討します。|
+|データベースごとの高い LCK_M_X 待機|特定のクエリに対するクエリ ストアでの高いロック待機|影響を受けるクエリのクエリ テキストを確認し、ターゲット エンティティを明らかにします。 クエリ ストアで同じエンティティを変更している他のクエリを探します。これらは、頻繁に実行されていたり、実行時間が長くなったりします。 これらのクエリを特定した後、コンカレンシーが向上するようにアプリケーション ロジックを変更するか、制限の低い分離レベルを使うことを検討します。|
 |データベースごとの高い PAGEIOLATCH_SH 待機|特定のクエリに対するクエリ ストアでの高いバッファー IO 待機|クエリ ストアで、物理読み取り数が多いクエリを検索します。 それらが IO 待機の長いクエリと一致する場合は、スキャンではなくシークを行うように基になるエンティティにインデックスを導入して、クエリの IO オーバーヘッドを最小限に抑えることを検討します。|
 |データベースごとの高い SOS_SCHEDULER_YIELD 待機|特定のクエリに対するクエリ ストアでの高い CPU 待機|クエリ ストアで CPU 消費量の多いクエリを探します。 それらの中で、高い CPU 傾向が影響を受けるクエリの高い CPU 待機と関連性のあるクエリを特定します。 それらのクエリの最適化に注目します。プラン回帰または欠落インデックスが存在する可能性があります。|
 
@@ -350,7 +347,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **過去 1 時間で平均実行時間が長かったクエリの上位。**  
+ **去&1; 時間で平均実行時間が長かったクエリの上位。**  
   
 ```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  

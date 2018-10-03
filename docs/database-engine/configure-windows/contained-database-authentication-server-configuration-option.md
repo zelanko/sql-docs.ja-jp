@@ -5,24 +5,21 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, enabling
 - contained database authentication option
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 57688eaacdfe7c4caaca489e4cac3df79823a51d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c116e8dcfe3484641563da41577cee05058daab2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32864247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731860"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>contained database authentication サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ ms.locfileid: "32864247"
 > [!NOTE]
 > [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] の場合、包含データベースは常に有効であり、無効にすることはできません。
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに包含データベースが存在する場合、 **contained database authentication** の設定は **RECONFIGURE WITH OVERRIDE** ステートメントを使用して 0 に設定できます。 **contained database authentication** を 0 に設定すると、包含データベースに対して contained database authentication が無効になります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに包含データベースが存在する場合、**contained database authentication** の設定は **RECONFIGURE WITH OVERRIDE** ステートメントを使用して 0 に設定できます。 **contained database authentication** を 0 に設定すると、包含データベースに対して contained database authentication が無効になります。  
   
 > [!IMPORTANT]  
 >  包含データベースを有効にすると、ALTER ANY USER 権限を持つデータベース ユーザー (db_owner ロールおよび db_accessadmin データベース ロールのメンバーなど) は、データベースへのアクセスが許可されます。そうすることで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへのアクセスが許可されます。 これは、サーバーへのアクセスの制御は sysadmin および securityadmin 固定サーバー ロールのメンバー、およびサーバー レベルでの管理 CONTROL SERVER および ALTER ANY LOGIN 権限によるログインに制限されなくなることを意味します。 包含データベースを許可する前に、包含データベースに関連するリスクを理解する必要があります。 詳細については、「 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)」を参照してください。  
