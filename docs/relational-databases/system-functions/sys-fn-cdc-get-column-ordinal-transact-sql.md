@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_get_column_ordinal (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_cdc_get_column_ordinal (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_column_ordinal
 - fn_cdc_get_column_ordinal_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_get_column_ordinal
 - sys.fn_cdc_get_column_ordinal
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 70ca20e98ba1330482fd19265b7f54f07d9711e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b82aac8f856c1e057f389ac0af7d06dfee549fa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229849"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624210"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +44,18 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
   
 ## <a name="arguments"></a>引数  
  **'** *capture_instance* **'**  
- キャプチャ対象の列が指定されたキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname**です。  
+ キャプチャ対象の列が指定されたキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname**します。  
   
  **'** *column_name* **'**  
- レポート対象の列を指定します。 *column_name*は**sysname**です。  
+ レポート対象の列を指定します。 *column_name*は**sysname**します。  
   
 ## <a name="return-type"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
- この関数は、変更データ キャプチャの更新マスク内で、キャプチャ対象列の序数位置を特定するために使用します。 これは主に使用されます関数と組み合わせて[sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)変更データのクエリを実行するときに、更新マスクから情報を抽出します。  
+## <a name="remarks"></a>コメント  
+ この関数は、変更データ キャプチャの更新マスク内で、キャプチャ対象列の序数位置を特定するために使用します。 これは、関数と組み合わせてで使用して主[sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)変更データのクエリを実行するときに、更新マスクから情報を抽出します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。 キャプチャ インスタンスに対して変更データ キャプチャ コンポーネントのデータベース ロールが指定されている場合、そのロールのメンバーシップも必要となります。  
   
 ## <a name="examples"></a>使用例  

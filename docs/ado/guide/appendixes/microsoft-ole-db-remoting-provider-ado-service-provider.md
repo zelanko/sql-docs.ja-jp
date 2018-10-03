@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB remoting provider [ADO]
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da4daddadce73d58dcaa58d5fb56cde1d532ec87
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b0c58d6c90b67369f969a37cc2ad7e03cc6cad82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624610"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB リモート処理のプロバイダーの概要
 Microsoft OLE DB リモート処理プロバイダーにより、リモート コンピューター上のデータ プロバイダーを呼び出すため、クライアント コンピューター上のローカル ユーザーです。 リモート コンピューター上のローカル ユーザーをした場合と同様に、リモート コンピューターのデータ プロバイダーのパラメーターを指定します。 次に、リモート コンピューターにアクセスするリモート処理のプロバイダーによって使用されるパラメーターを指定します。 ローカル ユーザーをした場合と、リモート コンピューターをアクセスできます。
@@ -53,7 +50,7 @@ Microsoft OLE DB リモート処理プロバイダーにより、リモート �
 |**DFMode**|DataFactory のモードを示します。 目的のバージョンを指定する文字列、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)サーバー上のオブジェクト。 特定のバージョンの要求への接続を開く前に、このプロパティを設定、 **DataFactory**します。 要求されたバージョンが利用できない場合は試行前のバージョンを使用します。 前のバージョンがない場合は、エラーが発生します。 場合**DFMode**が利用可能なバージョンより小さい、エラーが発生します。 このプロパティは、接続の確立後は読み取り専用です。<br /><br /> 有効な文字列値は次のいずれかを指定できます。<br /><br /> -「25」、バージョン 2.5 (既定値)<br />-「21」、バージョン 2.1<br />-「20」、バージョン 2.0<br />-「15」、バージョン 1.5|
 |**コマンドのプロパティ**|MS リモート プロバイダーによって、サーバーに送信されるコマンド (行セット) のプロパティの文字列に追加される値を示します。 この文字列の既定値は、vt_empty です。|
 |**現在 DFMode**|実際のバージョンの数を示す、 **DataFactory**サーバー。 バージョンが要求されたかどうかに表示するには、このプロパティを確認、 **DFMode**プロパティが受け入れられます。<br /><br /> 長整数型の有効な値は次のいずれかを指定できます。<br /><br /> -25、2.5 (既定値) のバージョン<br />-21-バージョン 2.1<br />-20-version 2.0<br />-15: バージョン 1.5<br /><br /> 追加する"DFMode = 20 です。"を接続文字列を使用する場合、 **MSRemote**データを更新するときに、プロバイダーがサーバーのパフォーマンスを向上させることができます。 この設定で、 **RDSServer.DataFactory**サーバー上のオブジェクトが少ないリソースを消費するモードを使用します。 ただし、次の機能では、この構成では使用できません。<br /><br /> -パラメーター化クエリを使用します。<br />-呼び出しの前にパラメーターまたは列の情報の取得、 **Execute**メソッド。<br />-設定**更新プログラムを Transact**に**True**します。<br />-行のステータスを取得します。<br />-呼び出し、**再同期**メソッド。<br />-(明示的または自動) の更新を使用して、 **Update Resync**プロパティ。<br />-設定**コマンド**または**Recordset**プロパティ。<br />-を使用して**adCmdTableDirect**します。|
-|**ハンドラー**|機能を拡張するサーバー側のカスタマイズのプログラム (またはハンドラー) の名前を示します、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)、およびハンドラーによって使用されるパラメーター *、* (をコンマで区切って","). A**文字列**値。|
+|**ハンドラー**|機能を拡張するサーバー側のカスタマイズのプログラム (またはハンドラー) の名前を示します、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)、およびハンドラーによって使用されるパラメーター *、* (をコンマで区切って","). **文字列**値です。|
 |**インターネット タイムアウト。**|要求と、サーバーの間を移動するを待機するミリ秒の最大数を示します。 (既定値は 5 分です)。|
 |**リモート プロバイダー**|リモート サーバーで使用するデータ プロバイダーの名前を示します。|
 |**リモート サーバー**|この接続で使用されるサーバー名との通信プロトコルを示します。 このプロパティは、 [rds.DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト[Server](../../../ado/reference/rds-api/server-property-rds.md)プロパティ。|

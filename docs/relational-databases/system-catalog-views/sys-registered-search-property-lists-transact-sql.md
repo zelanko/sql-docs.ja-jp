@@ -1,14 +1,11 @@
 ---
-title: sys.registered_search_property_lists (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.registered_search_property_lists (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - registered_search_property_lists_TSQL
@@ -22,23 +19,22 @@ helpviewer_keywords:
 - sys.registered_search_property_lists catalog view
 - search property lists [SQL Server], viewing
 ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0e404aa67e5e0cc386ab06db4d93cd1d988d86c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 36761417e5be68ef9da7c28464562ada75af088d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178738"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617790"
 ---
 # <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースの検索プロパティ リストごとに 1 行のデータを格納します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|プロパティ リストの ID。|  
 |**name**|**sysname**|プロパティ リストの名前。|  
@@ -46,17 +42,17 @@ ms.locfileid: "33178738"
 |**modify_date**|**datetime**|ALTER ステートメントによってプロパティ リストが最後に変更された日付。|  
 |**principal_id**|**int**|プロパティ リストの所有者。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  検索プロパティ リスト内のメタデータの表示は、自分が所有している、または REFERENCE 権限が与えられている検索プロパティ リストに限定されます。  
   
 > [!NOTE]  
 >  検索プロパティ リストの REFERENCE 権限または CONTROL 権限は、その検索プロパティ リストの所有者が許可できます。 CONTROL 権限を持つユーザーは、他のユーザーに REFERENCE 権限を与えることができます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、検索プロパティ リストの名前と ID の表示、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例での検索プロパティ リストの名前と ID の表示、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
   
 ```  
 USE AdventureWorks2012;  

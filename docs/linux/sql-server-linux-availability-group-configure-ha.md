@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082714"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621080"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>構成する SQL Server Always On 可用性グループの Linux での高可用性
 
@@ -68,6 +66,8 @@ ms.locfileid: "39082714"
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>AG を作成する
+
+このセクションの例では、TRANSACT-SQL を使用して可用性グループを作成する方法について説明します。 SQL Server Management Studio の可用性グループ ウィザードを使用することもできます。 ウィザードを使用して AG を作成するときに、レプリカを AG に結合すると、エラーを返します。 この問題を解決するには付与`ALTER`、 `CONTROL`、および`VIEW DEFINITIONS`すべてのレプリカで可用性グループの pacemaker にします。 プライマリ レプリカに対しては、権限が与えられる後、は、可用性グループ ウィザードの手順が正常に機能をすべてのレプリカでのアクセス許可を与える HA のために、ノードに参加させます。
 
 確実に自動フェールオーバーの高可用性構成の場合、可用性グループには、少なくとも 3 つのレプリカが必要です。 高可用性をサポート、次の構成のいずれかのことができます。
 
@@ -192,6 +192,13 @@ AG を構成することもできます。 `CLUSTER_TYPE=EXTERNAL` SQL Server Ma
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>セカンダリ レプリカ、可用性グループへの参加します。
 
+Pacemaker のユーザーが必要と`ALTER`、 `CONTROL`、および`VIEW DEFINITION`すべてのレプリカで可用性グループに対する権限。 アクセス許可を付与するには、可用性グループに追加された後すぐに、プライマリ レプリカとセカンダリ レプリカごとに、可用性グループを作成した後、次の TRANSACT-SQL スクリプトを実行します。 スクリプトを実行する前に置き換える`<pacemakerLogin>`pacemaker のユーザー アカウントの名前に置き換えます。
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 次の TRANSACT-SQL スクリプトでは、SQL Server インスタンスを結合という名前を AG に`ag1`します。 ご利用の環境に合わせてスクリプトを変更してください。 セカンダリ レプリカをホストする各 SQL Server インスタンスでは、可用性グループに参加する次の Transact SQL を実行します。
 
 ```Transact-SQL
@@ -213,10 +220,10 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >クラスターを構成するクラスター リソースとして、可用性グループを追加したら、TRANSACT-SQL を使用して AG リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは関連付けられていませんに厳しく、オペレーティング システムは Windows Server フェールオーバー クラスター (WSFC) にします。 SQL Server サービスでは、クラスターの存在を認識しません。 すべてのオーケストレーションは、クラスターの管理ツールを使用して行われます。 RHEL または Ubuntu を使用して`pcs`します。 SLES で使用して`crm`します。 
 
 >[!IMPORTANT]
->既知の問題が、可用性グループがクラスター リソースの場合は、非同期レプリカにデータ損失の強制フェールオーバーが機能しないという現在のリリースであります。 これは、今後のリリースで修正されます。 同期レプリカを手動または自動フェールオーバーは成功します。 
+>既知の問題が、可用性グループがクラスター リソースの場合は、非同期レプリカにデータ損失の強制フェールオーバーが機能しないという現在のリリースであります。 これは、今後のリリースで修正されます。 同期レプリカを手動または自動フェールオーバーは成功します。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [SQL Server 可用性グループのクラスター リソースの Red Hat Enterprise Linux クラスターを構成します。](sql-server-linux-availability-group-cluster-rhel.md)
 

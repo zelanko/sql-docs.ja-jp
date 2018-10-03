@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - current transaction access
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 66d123ca233bc71ce401fb7d76fe5b1fc29e0870
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8e9d28588237030c45bd352994ac77d511db139e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358754"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631745"
 ---
 # <a name="accessing-the-current-transaction"></a>現在のトランザクションへのアクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ The context transaction which was active before entering user defined routine, t
  この例外も想定されるもので、実行を継続するには、トリガーを起動するアクションを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでの try/catch ブロックが必要です。 この 2 つの例外がスローされますが、トランザクションはロールバックされ、変更はコミットされません。  
   
 ### <a name="example"></a>例  
- 使用してマネージ プロシージャから、ロールバックするトランザクションの例を次に、 **Transaction.Rollback**メソッド。 前後の try/catch ブロックに注意してください、 **Transaction.Rollback**マネージ コード内のメソッド。 ph x="1" /&gt; スクリプトは、アセンブリおよびマネージド ストアド プロシージャを作成します。 注意を**EXEC uspRollbackFromProc**をマネージ プロシージャが実行を完了するとスローされる例外をキャッチするため、ステートメントが、try/catch ブロックにラップされています。  
+ 使用してマネージ プロシージャから、ロールバックするトランザクションの例を次に、 **Transaction.Rollback**メソッド。 前後の try/catch ブロックに注意してください、 **Transaction.Rollback**マネージ コード内のメソッド。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトは、アセンブリおよびマネージド ストアド プロシージャを作成します。 注意を**EXEC uspRollbackFromProc**をマネージ プロシージャが実行を完了するとスローされる例外をキャッチするため、ステートメントが、try/catch ブロックにラップされています。  
   
 ```csharp  
 using System;  

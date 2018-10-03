@@ -1,13 +1,11 @@
 ---
-title: 接続を確立する |Microsoft ドキュメント
+title: 接続を確立する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,22 +18,21 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d433869c3ae7cff9921210c25fce6757f36180b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910704"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606382"
 ---
-# <a name="establishing-a-connection"></a>接続を確立します。
-環境と接続ハンドルを割り当てると、接続属性を設定、アプリケーションがデータ ソースまたはドライバーに接続できるようにします。 これを行うアプリケーションで使用して 3 つの異なる関数があります: **SQLConnect** (コア インターフェイスへの準拠レベル)、 **SQLDriverConnect** (Core)、および**SQLBrowseConnect**(レベル 1)。 別のシナリオで使用する、3 つに設計されています。 接続すると、前に、アプリケーションを判断できますではサポートされているこれらの関数、 **ConnectFunctions**キーワードによって返される**SQLDrivers**です。  
+# <a name="establishing-a-connection"></a>接続の確立
+環境と接続ハンドルの割り当てし、任意の接続属性を設定した後は、アプリケーションは、データ ソースまたはドライバーに接続する準備。 これを行うアプリケーションを使用できる 3 つの異なる関数がある: **SQLConnect** (Core インターフェイスへの準拠レベル)、 **SQLDriverConnect** (コア) と**SQLBrowseConnect**(レベル 1)。 さまざまなシナリオで使用するのには 3 つの各設計されています。 サポートがこれらの関数のうち、接続する前に、アプリケーションが判断できます、 **ConnectFunctions**キーワードによって返される**SQLDrivers**します。  
   
 > [!NOTE]  
->  一部のドライバーは、サポートされるアクティブな接続の数を制限します。 アプリケーションが呼び出す**SQLGetInfo**特定のドライバーをサポートしているアクティブな接続の数を決定する SQL_MAX_DRIVER_CONNECTIONS オプションを使用します。  
+>  一部のドライバーでは、サポートされるアクティブな接続の数を制限します。 アプリケーションを呼び出す**SQLGetInfo**特定のドライバーがサポートしているアクティブな接続の数を決定する SQL_MAX_DRIVER_CONNECTIONS オプションを使用します。  
   
  このセクションでは、次のトピックを扱います。  
   

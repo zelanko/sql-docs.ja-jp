@@ -1,13 +1,11 @@
 ---
-title: つまり、CopyTo、および SaveToFile メソッドの例 (VB) |Microsoft ドキュメント
+title: CopyRecord、CopyTo、および SaveToFile メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a1367298c3d5c78e95112802732aa10ef75141
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 213a9aaa3556700bbbe0f88200796a524c65f5e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601680"
 ---
-# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>つまり、CopyTo、および SaveToFile メソッドの例 (VB)
-この例を使用してファイルのコピーを作成する方法を示します[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。 1 つのコピーは、インターネットへの発行用の Web フォルダーに対して行われます。 他のプロパティとメソッドが含まれて[ストリームの種類](../../../ado/reference/ado-api/type-property-ado-stream.md)、**開く**、 [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)、および[レコード開く](../../../ado/reference/ado-api/open-method-ado-record.md)です。  
+# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、CopyTo、および SaveToFile メソッドの例 (VB)
+使用してファイルのコピーを作成する方法を示します[Stream](../../../ado/reference/ado-api/stream-object-ado.md)または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。 1 つのコピーは、インターネットへの発行の Web フォルダーに作成されます。 その他のプロパティと示されているメソッドが含まれて[Stream 型](../../../ado/reference/ado-api/type-property-ado-stream.md)、**オープン**、 [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)と[レコード オープン](../../../ado/reference/ado-api/open-method-ado-record.md)します。  
   
 ```  
 'BeginCopyRecordVB  
@@ -129,12 +126,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [つまりメソッド (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
+ [CopyRecord メソッド (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [CopyTo メソッド (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [LoadFromFile メソッド (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Open メソッド (ADO レコード)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [SaveToFile メソッド](../../../ado/reference/ado-api/savetofile-method.md)   
- [ストリーム オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type プロパティ (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -1,13 +1,11 @@
 ---
-title: 子プロパティ (ADO MD) |Microsoft ドキュメント
+title: Children プロパティ (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ca7bff8aae165833dcf6e0cc20bd1af55d62279
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f489a87573dabbd091f5d2dce8a084b53cc5771e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626130"
 ---
-# <a name="children-property-ado-md"></a>子プロパティ (ADO MD)
-返します、[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクションに対して現在[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)階層の親であります。  
+# <a name="children-property-ado-md"></a>Children プロパティ (ADO MD)
+返します、[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)対象のコレクション、現在[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)階層の親であります。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**メンバー**コレクションは読み取り専用とします。  
+ 返します、**メンバー**コレクションは読み取り専用であるとします。  
   
 ## <a name="remarks"></a>コメント  
- **子**プロパティが含まれています、**メンバー**コレクションに対して現在**メンバー**階層の親であります。 リーフ レベル**メンバー**オブジェクトがあるない子メンバー、**メンバー**コレクション。 このプロパティでのみサポート**メンバー**に属しているオブジェクト、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト。 このプロパティが参照されたときにエラーが発生した**メンバー**に属しているオブジェクト、[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクト。  
+ **子**プロパティが含まれています、**メンバー**対象のコレクション、現在**メンバー**階層の親であります。 リーフ レベル**メンバー**オブジェクト メンバーが存在しない子、**メンバー**コレクション。 このプロパティでのみサポート**メンバー**に属するオブジェクトを[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト。 このプロパティはから参照したときにエラーが発生した**メンバー**に属するオブジェクトを[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクト。  
   
 ## <a name="applies-to"></a>適用対象  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

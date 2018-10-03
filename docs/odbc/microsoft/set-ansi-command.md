@@ -1,30 +1,27 @@
 ---
-title: SET ANSI コマンド |Microsoft ドキュメント
+title: SET ANSI コマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - set ANSI command [ODBC]
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5946efa397fa6bde8c52ad69925a96f2e33f7dd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5af98bd8f16d7278b932ad89f1c81c58ddb1fb54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612211"
 ---
 # <a name="set-ansi-command"></a>SET ANSI コマンド
-異なる長さの文字列間の比較を実行する方法を決定する、Visual FoxPro SQL コマンド内の演算子を = です。  
+異なる長さの文字列の比較が行われる方法を決定する、Visual FoxPro SQL コマンド内の演算子を = です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,31 +32,31 @@ SET ANSI ON | OFF
   
 ## <a name="arguments"></a>引数  
  ON  
- (ドライバーの既定値以外の場合は Visual FoxPro の既定値は OFF です。)パッド、短い文字列、空白が必要になります。 が長いほどのと同じ文字列の長さです。 2 つの文字列は、その全体の長さの文字の比較対象の文字です。 この比較を考慮してください。  
+ ドライバーの既定値 (Visual FoxPro の既定値は OFF)。パッドは、空白で文字列を短くするために必要になりますが長くなるのと同じ文字列の長さ。 2 つの文字列は、それら全体の長さの文字の文字を比較します。 この比較を検討してください。  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- 結果は False (です。F.) する場合、ANSI の設定が有効になって埋められる場合は、'Tom' 'Tom' になり、文字列 'Tom' と 'Tommy' は文字を文字に一致しないためです。  
+ 結果は False (します。F.) 埋められる場合は、'Tom' が 'Tom' と 'Tom' と 'Tommy' 文字列が文字の文字と一致しないために、ANSI の設定がオンの場合。  
   
- 演算子の使用の Visual FoxPro SQL コマンドで比較する場合は、このメソッドを = = です。  
+ このメソッドでは、Visual FoxPro SQL コマンドの比較演算子の使用を = =。  
   
  OFF  
- 短い文字列を空白で埋めいないことを指定します。 2 つの文字列の比較は短いほうの文字列の末尾に到達するまでの文字の文字です。 この比較を考慮してください。  
+ 短い文字列は空白が埋め込まれませんことを指定します。 2 つの文字列の比較より短い文字列の末尾に到達するまでの文字の文字。 この比較を検討してください。  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- 結果は True (です。T.) と ANSI の設定はオフであるため、比較は、'Tom' の後に停止します。  
+ 結果は True (します。T.) と ANSI の設定がオフ、ため、比較は、'Tom' の後に停止します。  
   
-## <a name="remarks"></a>解説  
- ANSI の設定は、かどうか 2 つの文字列のうち短い方が空白で埋められます SQL 文字列の比較が行われたときを判断します。 ANSI の設定も何も起こりません、= = 演算子使用すると、演算子、= = 短い文字列が比較に空白が埋め込まれた常にします。  
+## <a name="remarks"></a>コメント  
+ かどうか 2 つの文字列のうち、小さい方が空白で埋められます SQL 文字列の比較が行われたときに ANSI の設定を決定します。 ANSI の設定も何も起こりませんは演算子 = =使用する場合、演算子、= = 短い文字列が比較のための空白で埋められます常にします。  
   
 ## <a name="string-order"></a>文字列の順序  
- SQL コマンドで、左から右の順序比較では 2 つの文字列は irrelevantswitching = の一方の側から文字列 = = または演算子を他の比較の結果に影響はありません。  
+ SQL コマンドの 2 つの文字列比較では左から右の順序は irrelevantswitching = の一方の側から文字列を = = または演算子には、比較の結果に影響しません。  
   
 ## <a name="see-also"></a>参照  
- [SQL コマンドを選択します。](../../odbc/microsoft/select-sql-command.md)   
+ [SELECT - SQL コマンド](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT コマンド](../../odbc/microsoft/set-exact-command.md)

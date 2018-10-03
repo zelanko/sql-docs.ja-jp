@@ -1,13 +1,11 @@
 ---
-title: Save メソッド |Microsoft ドキュメント
+title: Save メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a92e053443dbb32aae83756a98facdc53fa74725
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 55ba7b2fc9e1b6ea0eaeb44989e1bfb64b44d9d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625120"
 ---
 # <a name="save-method"></a>Save メソッド
-保存、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)ファイルまたは[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+保存、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)ファイルまたは[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,40 +36,40 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>パラメーター  
  *変換先*  
- 任意。 A**バリアント**ファイルの完全なパス名を表す場所、 **Recordset**を保存するまたはへの参照、**ストリーム**オブジェクト。  
+ 任意。 A**バリアント**ファイルの完全なパス名を表す場所、 **Recordset**を保存するまたはへの参照、 **Stream**オブジェクト。  
   
  *PersistFormat*  
- 任意。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)する形式を指定する値、 **Recordset** (XML または adtg 形式) に保存します。 既定値は**adPersistADTG**です。  
+ 任意。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)形式を指定する値、 **Recordset** (XML または adtg 形式) に保存します。 既定値は**adPersistADTG**します。  
   
 ## <a name="remarks"></a>コメント  
- [Save メソッド](../../../ado/reference/ado-api/save-method.md)メソッドは、開いているでのみ呼び出すこと**Recordset**です。 使用して、 [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)後で復元する方法、**レコード セット**から*先*です。  
+ [Save メソッド](../../../ado/reference/ado-api/save-method.md)メソッドは、オープンでのみ呼び出すこと**Recordset**します。 使用して、 [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)後で復元する方法、**レコード セット**から*先*します。  
   
- 場合、[フィルター プロパティ](../../../ado/reference/ado-api/filter-property.md)プロパティは、有効で、 **Recordset**フィルターでアクセス可能な行のみを保存し、します。 場合、**レコード セット**は階層構造、現在の子では、**レコード セット**とその子を保存する親を含む**レコード セット**です。 場合、子の Save メソッド**レコード セット**が呼び出されると、子とその子をすべて保存されますが、親はありません。  
+ 場合、[フィルター プロパティ](../../../ado/reference/ado-api/filter-property.md)プロパティはに対して有効で、**レコード セット**フィルターでアクセス可能な行のみが保存されます。 場合、**レコード セット**は階層構造を持つ現在の子、**レコード セット**と親を含む、その子が保存**レコード セット**します。 場合、子の Save メソッド**レコード セット**は子とそのすべての子を保存すると、呼び出されるが、親はありません。  
   
- 最初に保存するとき、**レコード セット**を指定する省略可能である*先*です。 省略した場合*先*の Source プロパティの値に設定の名前を持つ新しいファイルが作成する、**レコード セット**です。  
+ 初めて保存するとき、**レコード セット**を指定する省略可能*先*します。 省略した場合*先*の Source プロパティの値に設定の名前を持つ新しいファイルを作成するが、**レコード セット**。  
   
- 省略*先*関数を呼び出すと**保存**後の最初の保存または実行時エラーが発生します。 後で呼び出す場合は、**保存**を新しい*先*、**レコード セット**は新しい場所に保存します。 ただし、新しい移行先と元の送信先が両方開いています。  
+ 省略*先*関数を呼び出すと**保存**後、最初の保存または実行時エラーが発生します。 後で呼び出す場合**保存**を新しい*先*、**レコード セット**新しい変換先に保存されます。 ただし、新しい変換先および元の送信先両方開かれます。  
   
- **保存**閉じません、**レコード セット**または*先*で作業を続行できるように、**レコード セット**し、最新の変更を保存します。 *移行先*まで開いたまま、 **Recordset**が閉じられます。  
+ **保存**が閉じない、**レコード セット**または*先*で作業を続行することができますので、**レコード セット**して最新の変更を保存します。 *移行先*されるまで開いたまま、 **Recordset**が閉じられました。  
   
- セキュリティ上の理由から、**保存**メソッドは、Microsoft Internet Explorer によって実行されるスクリプトからの低、カスタムのセキュリティ設定の使用のみを許可します。  
+ セキュリティ上の理由から、**保存**メソッドは、Microsoft Internet Explorer によって実行されるスクリプトから低、カスタムのセキュリティ設定の使用のみを許可します。  
   
- 場合、**保存**中に、非同期メソッドが呼び出された**レコード セット**フェッチ、実行、または更新操作が進行状況をし**保存**非同期操作まで待機完了しました。  
+ 場合、**保存**中に、非同期メソッドが呼び出される**レコード セット**フェッチ、実行、または更新し、操作が進行中は**保存**まで非同期の操作の待機完了しました。  
   
- 最初の行で始まるレコードが保存された、 **Recordset**です。 ときに、**保存**メソッドが完了すると、現在の行位置はの最初の行に移動、 **Recordset**です。  
+ 最初の行で始まるレコードの保存、 **Recordset**します。 ときに、**保存**メソッドが終了したらの最初の行に現在の行位置を移動、**レコード セット**します。  
   
- 最良の結果を次のように設定します。、 [CursorLocation プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**で**保存**です。 かどうか、プロバイダーがサポートしないすべての機能を保存するために必要な**レコード セット**オブジェクト、カーソル サービスはその機能を提供します。  
+ 最適な結果を設定、 [CursorLocation プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**で**保存**します。 かどうか、プロバイダーがサポートしないすべての機能を保存するために必要な**レコード セット**オブジェクトの場合、カーソル サービスが機能を提供します。  
   
- ときに、 **Recordset**に保存されて、 **CursorLocation**プロパティに設定**adUseServer**の更新機能、 **Recordset**は制限されます。 通常、のみ 1 つのテーブルの更新、挿入、および削除が (プロバイダーの機能に依存する) を使用できます。 [メソッドの再同期](../../../ado/reference/ado-api/resync-method.md)メソッドもこの構成では使用できません。  
+ ときに、**レコード セット**に保存されて、 **CursorLocation**プロパティに設定**adUseServer**、更新プログラムの機能、 **Recordset**は制限されています。 通常、のみ単一テーブルの更新、挿入、および削除が (プロバイダーの機能に依存する) を使用できます。 [メソッドの再同期](../../../ado/reference/ado-api/resync-method.md)メソッドもこの構成では使用できません。  
   
 > [!NOTE]
->  保存、 **Recordset**で**フィールド**型の**adVariant**、**追加**、または**しようとする**はADO によってサポートされず、予期しない結果が生じることができます。  
+>  保存、**レコード セット**で**フィールド**型の**adVariant**、**追加**、または**しようとする**はADO でサポートされずに、予期しない結果が発生することができます。  
   
- のみをフィルター処理条件文字列の形式で (例: OrderDate > ' 12/31/1999 ') の保存される内容に影響を与える**レコード セット**です。 配列が作成されたフィルター**ブックマーク**から値を使用するか、 [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 、永続化の内容は変わりません**Recordset**です。 これらの規則を適用する**Recordset**クライアント側またはサーバー側のカーソルで作成されました。  
+ のみがフィルター条件文字列の形式で (例: OrderDate > ' 12/31/1999 ')、永続化の内容に影響を与える**レコード セット**します。 配列が作成されたフィルター**ブックマーク**またはからの値を使用して、 [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 、永続化の内容には影響しません**Recordset**します。 これらの規則を適用する**Recordset**クライアント側またはサーバー側のカーソルで作成されました。  
   
- *先*パラメーターは OLE DB IStream インターフェイスをサポートする任意のオブジェクトに使用できる、保存することができます、**レコード セット**ASP 応答オブジェクトに直接できます。 詳細についてを参照してください、 **XML レコード セットを永続化シナリオ**です。  
+ *先*パラメーターは、OLE DB IStream インターフェイスをサポートする任意のオブジェクトを受け入れることができます、保存することができます、**レコード セット**ASP 応答オブジェクトに直接します。 詳細についてを参照してください、 **XML レコード セットの保持シナ リオ**します。  
   
- 保存することも、 **Recordset** MSXML の DOM オブジェクトのインスタンスを XML 形式で、次の Visual Basic コードに示すようとしては。  
+ 保存することも、 **Recordset** MSXML の DOM オブジェクトのインスタンスには、XML の形式で次の Visual Basic コードに示すようには。  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  
@@ -87,9 +84,9 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  階層のレコード セット (データ図形) を XML 形式で保存するときに、2 つの制限が適用されます。 場合は、XML に保存することはできません、階層**レコード セット**保留中の更新を含むパラメーター化されたを保存することはできませんと階層**レコード セット**です。  
+>  階層レコード セット (データ図形) を XML 形式で保存するときに、2 つの制限が適用されます。 場合は、XML に保存することはできません、階層**レコード セット**保留中の更新プログラムが含まれています。 パラメーター化されたを保存することはできませんと階層**レコード セット**します。  
   
- A **Recordset**保存で XML 形式が保存 utf-8 形式を使用します。 ADO ストリームにこのようなファイルが読み込まれると、ストリーム オブジェクトを開こうとしていない、 **Recordset**ストリームからストリームの文字セット プロパティを適切な utf-8 形式の値に設定しない限り、します。  
+ A **Recordset**保存 utf-8 形式を使用して XML の形式が保存されます。 このようなファイルが、ADO Stream に読み込まれると、Stream オブジェクトが開こうとしていない、**レコード セット**ストリームからストリームの文字セット プロパティが utf-8 形式の適切な値に設定されていない限り。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -98,8 +95,8 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>参照  
- [保存して開く方法の例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [保存して開く方法の例 (vc++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
- [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Save および Open メソッドの例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
+ [保存および開く方法の例 (vc++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
+ [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [SaveToFile メソッド](../../../ado/reference/ado-api/savetofile-method.md)

@@ -1,13 +1,11 @@
 ---
-title: Position プロパティ (ADO) |Microsoft ドキュメント
+title: Position プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,34 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - Position property [ADO]
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 407ef25ebc55685436f61acaa42cbdf964619b09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 333b06ef76ae6407ca8a5605f1917dc0bb609aca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280691"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615890"
 ---
-# <a name="position-property-ado"></a>位置プロパティ (ADO)
-内の現在位置を示す、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+# <a name="position-property-ado"></a>Position プロパティ (ADO)
+内の現在位置を示す、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**長い**バイト、ストリームの先頭から現在の位置の数でオフセットを指定する値。 既定では 0 で、ストリーム内の最初のバイトを表します。  
+ 設定または取得を**長い**ストリームの先頭から現在の位置のバイト数でオフセットを指定する値。 既定では 0 で、ストリーム内の最初のバイトを表します。  
   
 ## <a name="remarks"></a>コメント  
- 現在の位置は、ストリームの末尾の後に、ポイントに移動できます。 ストリームの末尾を越える現在位置を指定する場合、[サイズ](../../../ado/reference/ado-api/size-property-ado-stream.md)の**ストリーム**オブジェクトがそれに応じて増加します。 この方法で追加された新しいバイトは、null になります。  
+ 現在の位置は、ストリームの終了後、ポイントに移動できます。 現在のストリームの末尾を越える位置を指定する場合、[サイズ](../../../ado/reference/ado-api/size-property-ado-stream.md)の**Stream**オブジェクトがそれに応じて増加します。 この方法で追加された新しいバイトは、null になります。  
   
 > [!NOTE]
->  **位置**常にバイトを測定します。 テキスト ストリームはマルチバイト文字セットを使用して、位置の文字数を決定する、文字のサイズを掛けます。 たとえば、2 バイト文字セットでは、最初の文字は、位置 0、2、3 番目の文字位置にある 2 番目の文字の位置 4、およびながします。  
+>  **位置**常にバイトを測定します。 テキスト ストリームはマルチバイト文字セットを使用して、位置の文字数を決定する、文字のサイズを乗算します。 たとえば、2 バイト文字セットでは、最初の文字は、位置 0、2、3 番目の文字の位置にある 2 番目の文字位置 4、具合が。  
   
 > [!NOTE]
->  内の現在位置を変更するのには、負の値を使用できません、**ストリーム**です。 正の数値だけを使用できます**位置**です。  
+>  負の値を使用しての現在の位置を変更することはできません、 **Stream**します。 正の数値のみを使用できる**位置**します。  
   
 > [!NOTE]
->  読み取り専用**ストリーム**オブジェクトの場合は、ADO はエラーを返しません。**位置**より大きい値に設定されて、**サイズ**の、**ストリーム**です。 サイズは変わりません、**ストリーム**、alter、または、**ストリーム**任意の方法で内容。 ただし、これを行う避ける必要がありますので、無意味な**位置**値。  
+>  読み取り専用**Stream**オブジェクトの場合は、ADO はエラーを返しません。**位置**より大きい値に設定されて、**サイズ**の、 **Stream**します。 サイズは変わりません、 **Stream**、alter、または、 **Stream**何らかの方法でコンテンツ。 ただし、これを行う避ける必要がありますので、意味のない**位置**値。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

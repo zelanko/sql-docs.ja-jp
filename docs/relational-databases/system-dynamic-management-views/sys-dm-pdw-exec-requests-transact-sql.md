@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.suite: sql
-ms.component: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 966fbd2efde6934f8cfe1b59706dec27b92e301e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c2a1978aeea7ec69ea45bc088bbdff432de3c9f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980683"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621870"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "37980683"
 ## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  sys.dm_pdw_exec_requests は、データベース固有のアクセス許可に従ってのクエリの結果をフィルターしていません。 VIEW SERVER STATE 権限を持つログインでも、結果をすべてのデータベースのクエリ結果を得ることができます。  
   
 > [!WARNING]  

@@ -1,14 +1,11 @@
 ---
-title: sp_msx_set_account (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_msx_set_account (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_set_account
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_set_account
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2d776a7ad3d29c180a4a2d2b017f5e1e6d0158a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627940"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +52,13 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用して、対象サーバーがマスター サーバーにログインに使用するユーザー名とパスワード情報を格納します。 このプロシージャでは、対象サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスター サーバーへのログインで使用する資格情報を設定します。  
+## <a name="remarks"></a>コメント  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用して、ターゲット サーバーはマスター サーバーにログインを使用してユーザー名とパスワード情報を格納します。 このプロシージャでは、対象サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスター サーバーへのログインで使用する資格情報を設定します。  
   
- 既存の資格情報を指定する必要があります。 資格情報の作成の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)です。  
+ 既存の資格情報を指定する必要があります。 資格情報の作成の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)します。  
   
-## <a name="permissions"></a>権限  
- 実行権限**sp_msx_set_account**のメンバーの既定値は、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ 実行権限**sp_msx_set_account**既定のメンバーに、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、マスター サーバーへのログインで資格情報 `MsxAccount` を使用するように、サーバーを設定します。  
