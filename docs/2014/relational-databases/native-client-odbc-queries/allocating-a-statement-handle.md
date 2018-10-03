@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetStmtAttr function
@@ -19,18 +17,17 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22b207f02fd2cbf4cffa10af8ebab1cb6ba268e7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430441"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215032"
 ---
-# <a name="allocating-a-statement-handle"></a>ステートメント ハンドルの割り当てください。
+# <a name="allocating-a-statement-handle"></a>ステートメント ハンドルの割り当て
   アプリケーションでステートメントを実行する前に、ステートメント ハンドルを割り当てる必要があります。 これは呼び出すことによって、 **SQLAllocHandle**で、 *HandleType*パラメーターに sql_handle_stmt として設定し、 *InputHandle*接続ハンドルを指します。  
   
  ステートメント属性は、ステートメント ハンドルの特徴を表します。 ブックマークやカーソルを使用してサンプル ステートメント属性を取り込み、ステートメントの結果セットと共に使用することができます。 ステートメント属性が設定されて[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)を使用して、現在の設定を取得して[SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md)します。 アプリケーションでステートメント属性を設定する必要はありません。すべてのステートメント属性には既定値があり、一部の属性は、ドライバー固有の属性になっています。  

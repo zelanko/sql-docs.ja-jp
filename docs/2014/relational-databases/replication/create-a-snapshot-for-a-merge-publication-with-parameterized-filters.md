@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
 - snapshots [SQL Server replication], parameterized filters and
 - filters [SQL Server replication], parameterized
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5de6e6d274ccaf030e900ce9448b2713091d9a79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 10e8c84af197c600c9b89f850ab84fc27fd56e2d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179859"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217742"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パラメーター化されたフィルターでマージ パブリケーションのスナップショットを作成する方法ついて説明します。  
@@ -172,8 +169,7 @@ ms.locfileid: "37179859"
   
 8.  サブスクリプションごとにマージ エージェントを実行して、初期のパーティション スナップショットをサブスクライバーに適用します。次のプロパティを指定します。  
   
-    -   
-  **-Hostname** - HOST_NAME の実際の値がオーバーライドされている場合にパーティションの定義に使用する値。  
+    -   **-Hostname** - HOST_NAME の実際の値がオーバーライドされている場合にパーティションの定義に使用する値。  
   
     -   **-DynamicSnapshotLocation** - このパーティションの動的スナップショットの場所。  
   

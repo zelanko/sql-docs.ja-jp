@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f30b9bbc04e7008a6d5be33e364ef6de7e91edf8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223842"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>データ マイニング ウィザード (Analysis Services - データ マイニング)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
   
  ウィザードの最後のフェーズでは、オプションでデータをトレーニング セットとテスト セットに分けることができ、ドリルスルーなどの機能を有効にすることができます。  
   
@@ -40,7 +37,7 @@ ms.locfileid: "37288418"
   
 -   どの列または属性を予測に使用するか。 どの列または属性を分析の入力として使用するのが適しているか。  
   
--   どのアルゴリズムを使用するのがよいか。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているすべてのアルゴリズムは、それぞれに特性が異なり、生成する結果も異なります。 データの各セット用のモデルは 1 つに限られていないので、さまざまなモデルを追加して試してみることができます。  
+-   どのアルゴリズムを使用するのがよいか。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているすべてのアルゴリズムは、それぞれに特性が異なり、生成する結果も異なります。 データの各セット用のモデルは 1 つに限られていないので、さまざまなモデルを追加して試してみることができます。  
   
 -   統合されたデータ セットでモデルをテストできる必要があるか。 その場合は、テストのためにデータを確保しておくオプションの使用を検討してください。 割合を選択して、必要であれば、指定した行数で上限を設定できます。  
   

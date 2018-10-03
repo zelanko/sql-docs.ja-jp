@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - write-enabled cubes [Analysis Services]
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293536"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225132"
 ---
 # <a name="write-enabled-dimensions"></a>書き込み許可ディメンション
     
@@ -59,7 +56,7 @@ ms.locfileid: "37293536"
 > [!NOTE]  
 >  ディメンションの書き戻しはリンク ディメンションではサポートされていません。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  書き込み許可ディメンションを更新できるビジネス ユーザーは、そのディメンションへの読み取り/書き込みアクセスが許可されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース ロールに属するユーザーだけです。 ロールごとに、更新できるメンバーと更新できないメンバーを管理できます。 ビジネス ユーザーが書き込み許可ディメンションを更新するには、そのクライアント アプリケーションでこの機能がサポートされている必要があります。 このようなユーザーの場合、書き込み許可ディメンションを、その前回の変更以後に処理されたキューブに含める必要があります。 詳細については、「[オブジェクトと操作へのアクセスの承認 (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)」を参照してください。  
   
  管理者ロールに含まれているユーザーとグループは、書き込み許可ディメンションがキューブに含まれていなくても、その書き込み許可ディメンションの属性メンバーを更新できます。  

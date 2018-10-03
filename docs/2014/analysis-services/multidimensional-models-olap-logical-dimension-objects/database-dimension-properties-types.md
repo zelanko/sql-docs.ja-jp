@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61792f88c028ce1c011b91fb9a5ecbec97b50396
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212512"
 ---
 # <a name="dimension-types"></a>ディメンションの種類
   `Type` プロパティの設定は、ディメンションの内容に関する情報をサーバーおよびクライアント アプリケーションに提供します。 `Type` の設定がクライアント アプリケーションへのガイダンスの提供のみを目的としている場合は、この設定を省略できます。 一方、`Accounts` ディメンションや `Time` ディメンションでは、ディメンションおよびその属性の `Type` プロパティの設定によって、サーバー ベースの具体的な動作が決まるため、キューブで特定の動作を実装する際に、この設定が必要になることがあります。 たとえば、ディメンションの `Type` プロパティを `Accounts` に設定すると、標準ディメンションに勘定科目属性が含まれていることがクライアント アプリケーションに示されます。 時間、アカウント、および通貨ディメンションの詳細については、次を参照してください[日付型ディメンションの作成](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)、 [、親子型ディメンションの財務アカウントの作成](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)、および[、通貨の作成。ディメンションの入力](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)します。  
@@ -50,7 +47,7 @@ ms.locfileid: "37189049"
 |[ディメンションの種類]|説明|  
 |--------------------|-----------------|  
 |Regular|特定のディメンションの種類に設定されていない種類のディメンションです。|  
-|[時刻]|属性が年、半期、四半期、月、日などの時間間隔を表すディメンションです。|  
+|Time|属性が年、半期、四半期、月、日などの時間間隔を表すディメンションです。|  
 |Organization|属性が従業員や子会社などの組織情報を表すディメンションです。|  
 |Geography|属性が市区町村や郵便番号などの地理情報を表すディメンションです。|  
 |BillOfMaterials|属性が製品の部品表などの在庫情報や製造情報を表すディメンションです。|  

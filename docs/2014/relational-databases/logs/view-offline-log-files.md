@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2e54a2eb18fc3adb98fca83620d8b88a2cec92
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32b0b350d7b23b41573a147f095705546b0d8b04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307572"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214742"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
@@ -74,8 +71,7 @@ ms.locfileid: "37307572"
   
     1.  **[WMI コントロール (ローカル)]** を右クリックし、 **[別のコンピューターへ接続]** をクリックします。  
   
-    2.  
-  **[管理するコンピューターの変更]** ダイアログ ボックスで **[別のコンピューター]** をクリックします。  
+    2.  **[管理するコンピューターの変更]** ダイアログ ボックスで **[別のコンピューター]** をクリックします。  
   
     3.  リモート コンピューター名を入力し、 **[OK]** をクリックします。  
   

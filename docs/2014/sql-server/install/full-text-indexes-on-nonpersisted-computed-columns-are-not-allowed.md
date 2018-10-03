@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes
 ms.assetid: cba737f7-b187-47d0-8458-23dc18d18aca
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2abb3dba12ec76a4acd5c94998fad69274495203
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 547ce7f80189cc15ea946f5cc8fab470ed83a754
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220484"
 ---
 # <a name="full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed"></a>保存されない計算列にフルテキスト インデックスを使用できない
   非決定的な計算列と不正確な計算列に対してフルテキスト インデックスを作成できません。 このような列は、型列やフルテキスト キー列として使用できません。  
