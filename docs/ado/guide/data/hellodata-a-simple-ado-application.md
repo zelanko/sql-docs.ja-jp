@@ -1,52 +1,49 @@
 ---
-title: 'HelloData: 単純な ADO アプリケーション |Microsoft ドキュメント'
+title: 'HelloData: 単純な ADO アプリケーション |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624680"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
-この単純なアプリケーションをステップ実行の 4 つの主要な ADO 操作: を取得する、検査、編集、およびデータを更新します。 これらの操作は、Microsoft® SQL Server に含まれている、Northwind サンプル データベースに対して実行されます。 ADO の基礎に集中し、コードの煩雑さを防ぐためには、エラー処理の例では最小限です。  
+この単純なアプリケーションの 4 つの主要な ADO 操作の各ステップ: を取得する、確認、編集、およびデータを更新します。 これらの操作は、Microsoft® SQL Server に含まれている Northwind サンプル データベースに対して実行されます。 ADO の基礎に注目して、コードの煩雑さを回避するには、エラー処理の例では最小限です。  
   
 ### <a name="to-run-hellodata"></a>HelloData を実行するには  
   
-1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、次を参照してください。 [ADO ライブラリを参照する](../../../ado/guide/referencing-the-ado-libraries.md)です。  
+1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、次を参照してください。 [ADO ライブラリを参照する](../../../ado/guide/referencing-the-ado-libraries.md)します。  
   
-2.  フォームの上部にある 4 つのコマンド ボタンを作成、**名前**と**キャプション**プロパティをこのトピックの最後の表に示す値。  
+2.  フォームの上部にある 4 つのコマンド ボタンを作成、**名前**と**キャプション**プロパティの値をこのトピックの最後にある表に示すようにします。  
   
-3.  ボタンの下に、追加、 **Microsoft DataGrid コントロール**(Msdatgrd.ocx)。 Msdatgrd.ocx ファイルは、Visual Basic に付属しているしは \windows\system32 または \winnt\system32 ディレクトリにあります。 DataGrid コントロールを Visual Basic [ツールボックス] ウィンドウに追加するには、選択**コンポーネント.** から、**プロジェクト**メニュー。 チェック ボックスをオン の横に"Microsoft データ グリッド コントロール 6.0 (SP3) (OLEDB)"をクリックし、 **ok**です。 コントロールをプロジェクトに追加するには、Visual Basic フォームをツールボックスから DataGrid コントロールをドラッグします。  
+3.  ボタンの下に追加、 **Microsoft DataGrid コントロール**(Msdatgrd.ocx)。 Msdatgrd.ocx ファイルは、Visual Basic に含まれているされ、\windows\system32 または \winnt\system32 ディレクトリに置かれます。 DataGrid コントロールを Visual Basic のツールボックス ウィンドウに追加するには、選択**コンポーネント.** から、**プロジェクト**メニュー。 チェック ボックスをオンを横に"Microsoft DataGrid コントロール (SP3) 6.0 (OLEDB)"をクリックして **[ok]**。 コントロールをプロジェクトに追加するには、Visual Basic フォームをツールボックスから DataGrid コントロールをドラッグします。  
   
-4.  作成、 ** テキスト ボックス**グリッドの下のフォーム上の表に示すように、そのプロパティを設定します。 フォームが完了したら、次の図のようになります。  
+4.  作成、**テキスト ボックス**グリッドの下のフォーム上の表に示すように、そのプロパティを設定するとします。 フォームが完了したら、次の図のようになります。  
   
-5.  最後に記載されているコードをコピー [HelloData コード](../../../ado/guide/data/hellodata-code.md)、し、フォームのコード エディター ウィンドウに貼り付けます。 キーを押して**f5 キーを押して**コードを実行します。  
+5.  最後に記載されているコードをコピー [HelloData コード](../../../ado/guide/data/hellodata-code.md)フォームのコード エディター ウィンドウに貼り付けます。 キーを押して**F5**コードを実行します。  
   
 > [!NOTE]
->  次の例では、およびこのガイドには、ユーザー id"123 abc"のパスワードを使用して"MyId"は、サーバーに対する認証に使用されます。 サーバーの有効なログオンの資格情報でこれらの値を置き換える必要があります。 また、サーバーの名前を持つ"MySQLServer"値に置き換えます。  
+>  次の例と、このガイドでは、ユーザー id"123 abc"のパスワードを使用して「MyId」が、サーバーに対する認証に使用されます。 サーバーの有効なログオンの資格情報でこれらの値を置き換える必要があります。 また、サーバーの名前を持つ"MySQLServer"値に置き換えてください。  
   
- コードの詳細については、次を参照してください。 [HelloData に関するコメント](../../../ado/guide/data/comments-on-hellodata.md)です。  
+ コードの詳細については、次を参照してください。 [HelloData に関するコメント](../../../ado/guide/data/comments-on-hellodata.md)します。  
   
  ![HelloData VB アプリケーションの Form1 を示しています](../../../ado/guide/data/media/hellodata.gif "HelloData。")  
   
-|コントロール型|プロパティ|値|  
+|コントロールの種類|プロパティ|値|  
 |------------------|--------------|-----------|  
 |Form|名前|Form1|  
 ||[高さ]|6500|  

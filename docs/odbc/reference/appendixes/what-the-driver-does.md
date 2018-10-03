@@ -1,13 +1,11 @@
 ---
-title: ドライバーの動作 |Microsoft ドキュメント
+title: ドライバーの機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
@@ -16,28 +14,27 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa114af7390d3ac4f971c507f508d8f747e134c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 685f67c9f24593a5c50097de426b76fef068d6e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628180"
 ---
-# <a name="what-the-driver-does"></a>ドライバーの動作
-次の表に、どのような関数とステートメント属性 ODBC 3 *.x*ブロックとスクロール可能なカーソルのドライバーを実装する必要があります。  
+# <a name="what-the-driver-does"></a>ドライバーの機能
+次の表に、どのような関数とステートメント属性を ODBC 3 *.x*ブロックおよびスクロール可能なカーソルのドライバーを実装する必要があります。  
   
 |関数または<br /><br /> ステートメント属性|コメント|  
 |-----------------------------------------|--------------|  
-|SQL_ATTR_ROW_STATUS_PTR|埋められた行の状態配列のアドレス セット**SQLFetch**と**SQLFetchScroll**です。 この配列がで埋められたも**SQLSetPos**場合**SQLSetPos**ステートメント状態 S6 で呼び出されます。 場合**SQLSetPos**が呼び出された状態 S7、この配列が指定されていませんが、配列を指す、 *RowStatusArray*の引数**SQLExtendedFetch**入力されます。 詳細については、次を参照してください。[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)付録 b: ODBC 状態遷移表でします。|  
-|SQL_ATTR_ROWS_FETCHED_PTR|バッファーのアドレスを設定**SQLFetch**と**SQLFetchScroll**フェッチされた行の数を返します。 場合**SQLExtendedFetch**が呼び出されると、このバッファーが指定されていませんが、 *RowCountPtr*引数がフェッチされた行の数を指します。|  
-|SQL_ATTR_ROW_ARRAY_SIZE|によって使用される行セット サイズ設定**SQLFetch**と**SQLFetchScroll**です。|  
-|SQL_ROWSET_SIZE|によって使用される行セット サイズ設定**SQLExtendedFetch**です。 ODBC 3 *.x*ドライバーではこれが実装される ODBC 2 を使用する場合 *。x*を呼び出すアプリケーションに**SQLExtendedFetch**または**SQLSetPos**です。|  
-|**SQLBulkOperations**|場合、ODBC 3 *.x*ドライバーは、ODBC 2 を使用する必要があります *。x*を使用するアプリケーション**SQLSetPos**で、*操作*SQL_ADD のドライバーをサポートする必要があります**SQLSetPos**で、 *操作*に加えて SQL_ADD の**SQLBulkOperations**で、*操作*SQL_ADD のです。|  
-|**SQLExtendedFetch**|指定した行セットを返します。 ODBC 3 *.x*ドライバーではこれが実装される ODBC 2 を使用する場合 *。x*を呼び出すアプリケーションに**SQLExtendedFetch**または**SQLSetPos**です。 実装の詳細を次に示します。<br /><br /> -ドライバーは、SQL_ROWSET_SIZE ステートメント属性の値から行セットのサイズを取得します。<br />-ドライバーからの行の状態配列のアドレスを取得する、 *RowStatusArray*引数、SQL_ATTR_ROW_STATUS_PTR ステートメント属性ではありません。 *RowStatusArray*への呼び出しで引数**SQLExtendedFetch** null ポインターをすることはできません。 (ODBC 3 なお *.x*、SQL_ATTR_ROW_STATUS_PTR ステートメント属性は null ポインターであることができます)。<br />-ドライバーからフェッチされた行のバッファーのアドレスを取得する、 *RowCountPtr*引数、SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性ではありません。<br />-ドライバーは SQLSTATE 01S01 を返します (行でエラー) への呼び出しによって行がフェッチされたときにエラーが発生したことを示すために**SQLExtendedFetch**です。 ODBC 3 *.x*ドライバーは SQLSTATE 01S01 を返す必要があります (行でエラー) される場合にのみ**SQLExtendedFetch**が呼び出されたがないとき**SQLFetch**または**SQLFetchScroll**と呼びます。 旧バージョンとの互換性を維持するときに SQLSTATE 01S01 (行でエラー) がによって返される**SQLExtendedFetch**、ドライバー マネージャーは、順序付けしません状態レコード"シーケンスの状態で説明したルールに従ってエラー キューレコード数"のセクション[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)です。|  
-|**SQLFetch**|次の行セットを返します。 実装の詳細を次に示します。<br /><br /> -ドライバーは、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性の値から行セットのサイズを取得します。<br />-ドライバーは、SQL_ATTR_ROW_STATUS_PTR ステートメント属性からの行の状態配列のアドレスを取得します。<br />-ドライバーは、SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性からバッファーをフェッチされた行のアドレスを取得します。<br />-アプリケーションは、間の呼び出しを混在させることが**SQLFetchScroll**と**SQLFetch**です。<br />-   **SQLFetch**列 0 がバインドされている場合は、ブックマークを返します。<br />-   **SQLFetch** 1 つ以上の行を返すと呼ばれることができます。<br />-ドライバーは SQLSTATE 01S01 を返さないこと (行でエラー) への呼び出しによって行がフェッチされたときにエラーが発生したことを示すために**SQLFetch**です。|  
-|**SQLFetchScroll**|指定した行セットを返します。 実装の詳細を次に示します。<br /><br /> -ドライバーは、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性から行セットのサイズを取得します。<br />-ドライバーは、SQL_ATTR_ROW_STATUS_PTR ステートメント属性からの行の状態配列のアドレスを取得します。<br />-ドライバーは、SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性からバッファーをフェッチされた行のアドレスを取得します。<br />-アプリケーションは、間の呼び出しを混在させることが**SQLFetchScroll**と**SQLFetch**です。<br />-ドライバーは SQLSTATE 01S01 を返さないこと (行でエラー) への呼び出しによって行がフェッチされたときにエラーが発生したことを示すために**SQLFetchScroll**です。|  
-|**SQLSetPos**|さまざまな位置指定操作を実行します。 実装の詳細を次に示します。<br /><br /> -これは、S6 または S7 ステートメントの状態で呼び出すことができます。 詳細については、次を参照してください。[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)付録 b: ODBC 状態遷移表でします。<br />-これは、呼び出された場合 S5 または S6 ステートメントの状態で、ドライバーは SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性と、SQL_ATTR_ROW_STATUS_PTR ステートメント属性からの行の状態配列のアドレスから行セットのサイズを取得します。<br />場合、これは、ステートメントの状態 S7 で呼び出される、行セットのサイズから取り出します SQL_ROWSET_SIZE ステートメント属性と、行の状態配列からのアドレス、 *RowStatusArray*の引数**SQLExtendedFetch**です。<br />-ドライバーは SQLSTATE 01S01 を返します (行でエラー) への呼び出しによって行がフェッチされたときにエラーが発生したことを示すためにのみ**SQLSetPos** S7 の状態で、関数が呼び出されると、一括操作を実行します。 場合は、旧バージョンとの互換性を保持するために SQLSTATE 01S01 (行でエラー) がによって返される**SQLSetPos**、ドライバー マネージャーは、順序付けしません状態レコード「シーケンスの状態レコード」に記載されている規則に従ってエラー キューセクション[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)です。<br />場合は、ドライバーは、ODBC 2 で動作する必要があります。*x*を呼び出すアプリケーションに**SQLSetPos**で、*操作*SQL_ADD の引数は、ドライバーをサポートする必要があります**SQLSetPos** と*操作*SQL_ADD の引数。|
+|SQL_ATTR_ROW_STATUS_PTR|行の状態配列のアドレスが入力セット**SQLFetch**と**SQLFetchScroll**します。 この配列はで塗りつぶされますも**SQLSetPos**場合**SQLSetPos** S6 ステートメントの状態で呼び出されます。 場合**SQLSetPos**呼びます S7 状態でこの配列は記入されていませんが、によって示される、配列、 *RowStatusArray*の引数**SQLExtendedFetch**が入力されます。 詳細については、次を参照してください。[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)付録 b: ODBC の状態遷移のテーブルにします。|  
+|SQL_ATTR_ROWS_FETCHED_PTR|バッファーのアドレスを設定**SQLFetch**と**SQLFetchScroll**フェッチされた行の数を返します。 場合**SQLExtendedFetch**が呼び出されると、このバッファーは記入されていませんが、 *RowCountPtr*引数がフェッチされた行の数を指します。|  
+|SQL_ATTR_ROW_ARRAY_SIZE|使用される行セットのサイズを設定**SQLFetch**と**SQLFetchScroll**します。|  
+|SQL_ROWSET_SIZE|使用される行セットのサイズを設定**SQLExtendedFetch**します。 ODBC 3 *.x*ドライバーではこれが実装される ODBC 2 を使用する場合 *。x*を呼び出すアプリケーション**SQLExtendedFetch**または**SQLSetPos**します。|  
+|**SQLBulkOperations**|場合、ODBC 3 *.x*ドライバーは ODBC 2 を使用する必要があります *。x*を使用するアプリケーション**SQLSetPos**で、*操作*SQL_ADD のドライバーをサポートする必要があります**SQLSetPos**で、 *操作*に加えて SQL_ADD の**SQLBulkOperations**で、*操作*SQL_ADD の。|  
+|**SQLExtendedFetch**|指定した行セットを返します。 ODBC 3 *.x*ドライバーではこれが実装される ODBC 2 を使用する場合 *。x*を呼び出すアプリケーション**SQLExtendedFetch**または**SQLSetPos**します。 次に、実装の詳細を示します。<br /><br /> -ドライバーは、SQL_ROWSET_SIZE ステートメント属性の値から行セットのサイズを取得します。<br />-ドライバーは、行の状態配列からのアドレスを取得、 *RowStatusArray*引数、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性ではありません。 *RowStatusArray*への呼び出しで引数**SQLExtendedFetch** null ポインターをすることはできません。 (ODBC 3 で *.x*、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性は null ポインターであることができます)。<br />-ドライバーからフェッチされた行のバッファーのアドレスを取得する、 *RowCountPtr*引数、SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性ではありません。<br />-ドライバーは SQLSTATE 01S01 を返します (行内のエラー) への呼び出しによって行がフェッチされたときにエラーが発生したことを示す**SQLExtendedFetch**します。 ODBC 3 *.x*ドライバーは SQLSTATE 01S01 を返す必要があります (エラー行の) 場合にのみ**SQLExtendedFetch**が呼び出されると、いないときに**SQLFetch**または**SQLFetchScroll**が呼び出されます。 旧バージョンとの互換性を維持するときに SQLSTATE 01S01 (行内のエラー) がによって返される**SQLExtendedFetch**、ドライバー マネージャーが、"シーケンスの状態で説明したルールに従って、エラー キュー内状態レコードを注文できませんレコード数"のセクション[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)します。|  
+|**SQLFetch**|次の行セットを返します。 次に、実装の詳細を示します。<br /><br /> -ドライバーは、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性の値から行セットのサイズを取得します。<br />-ドライバーは、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性からの行の状態配列のアドレスを取得します。<br />-ドライバーは、SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性からバッファーをフェッチされた行のアドレスを取得します。<br />-アプリケーションは、間の呼び出しを混在させることが**SQLFetchScroll**と**SQLFetch**します。<br />-   **SQLFetch**列 0 がバインドされている場合は、ブックマークを返します。<br />-   **SQLFetch**呼び出す 1 つ以上の行を返すことができます。<br />-ドライバーは SQLSTATE 01S01 を返しません (行内のエラー) への呼び出しによって行がフェッチされたときにエラーが発生したことを示す**SQLFetch**します。|  
+|**SQLFetchScroll**|指定した行セットを返します。 次に、実装の詳細を示します。<br /><br /> -ドライバーは、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性から行セットのサイズを取得します。<br />-ドライバーは、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性からの行の状態配列のアドレスを取得します。<br />-ドライバーは、SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性からバッファーをフェッチされた行のアドレスを取得します。<br />-アプリケーションは、間の呼び出しを混在させることが**SQLFetchScroll**と**SQLFetch**します。<br />-ドライバーは SQLSTATE 01S01 を返しません (行内のエラー) への呼び出しによって行がフェッチされたときにエラーが発生したことを示す**SQLFetchScroll**します。|  
+|**SQLSetPos**|さまざまな位置指定操作を実行します。 次に、実装の詳細を示します。<br /><br /> -これは、S6、S7 またはステートメントの状態で呼び出すことができます。 詳細については、次を参照してください。[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)付録 b: ODBC の状態遷移のテーブルにします。<br />場合、これは、S5 または S6 ステートメントの状態で呼び出されると、ドライバー、SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性とし、SQL_ATTR_ROW_STATUS_PTR ステートメント属性からの行の状態配列のアドレスから行セットのサイズを取得します。<br />場合、これは、ステートメント状態 S7 で呼び出されると、ドライバーが SQL_ROWSET_SIZE ステートメント属性と、行の状態配列からのアドレスから行セットのサイズを取得、 *RowStatusArray*の引数**SQLExtendedFetch**します。<br />-ドライバーは SQLSTATE 01S01 を返します (行内のエラー) への呼び出しによって行がフェッチされたときにエラーが発生したことを示すためにのみ**SQLSetPos** S7 の状態で、関数が呼び出されると、一括操作を実行します。 場合は、旧バージョンとの互換性を保持するために SQLSTATE 01S01 (行内のエラー) がによって返される**SQLSetPos**、ドライバー マネージャーは「シーケンスの状態レコード」に記載されている規則に従って、エラー キュー内の状態レコードを注文できませんセクションの[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)します。<br />場合は、ドライバーは、ODBC 2 を使用する必要があります。*x*を呼び出すアプリケーション**SQLSetPos**で、*操作*SQL_ADD の引数は、ドライバーをサポートする必要があります**SQLSetPos** で*操作*SQL_ADD の引数。|

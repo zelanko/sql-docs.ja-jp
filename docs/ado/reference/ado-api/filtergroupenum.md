@@ -1,13 +1,11 @@
 ---
-title: FilterGroupEnum |Microsoft ドキュメント
+title: FilterGroupEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd0af463cf9ebc5bad28665cad32fc49fce5fb5b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7c200e1ed569db288d92a6322cba2adc5c00f7c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278651"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649820"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
-フィルター処理するレコードのグループを指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
+フィルター処理するレコードのグループを指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -35,9 +32,9 @@ ms.locfileid: "35278651"
 |**adFilterConflictingRecords**|5|最後のバッチ更新が失敗したレコードを表示するためのフィルター。|  
 |**adFilterFetchedRecords**|3|現在のキャッシュ内のレコードを表示するためのフィルター-つまり、データベースからレコードを取得するには、最後の呼び出しの結果。|  
 |**adFilterNone**|0|現在のフィルターを削除し、表示するためのすべてのレコードを復元します。|  
-|**adFilterPendingRecords**|1|変更されましたが、サーバーにまだ送信されていないレコードだけを表示するためのフィルター。 バッチ更新モードにのみ適用できます。|  
+|**adFilterPendingRecords**|1|変更されたが、サーバーにまだ送信されていないレコードだけを表示するためのフィルター。 バッチ更新モードにのみ適用できます。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

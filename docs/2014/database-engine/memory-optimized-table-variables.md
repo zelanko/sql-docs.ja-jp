@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7f86328234ab251c50ab4ac68b02bd039b653da
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065792"
 ---
 # <a name="memory-optimized-table-variables"></a>メモリ最適化テーブル変数
   さらにメモリ最適化テーブル (効率的なデータ アクセス) とネイティブ コンパイル ストアド プロシージャ (効率的なクエリ処理とビジネス ロジックの実行)[!INCLUDE[hek_2](../includes/hek-2-md.md)]オブジェクトの 3 つ目の種類が導入されています。 メモリ最適化テーブル型です。 メモリ最適化テーブル型を使用して作成されたテーブル変数は、メモリ最適化テーブル変数です。  

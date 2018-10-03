@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a7322f12605256fe25bb533c0360467510be92e2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f3d1db1998e91eedf4ebc8f759550b2088a29d03
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139992"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 要素 (CSDLBI)
   `EntityType` 要素は、データ モデルで顧客や注文などの高レベル エンティティの構造を表す複合型です。 `bi:EntityType`要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](/dotnet/framework/data/adonet/ef/overview)します。  

@@ -4,9 +4,7 @@ ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: linux
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: ''
-caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8222c0a58c1dbaeeaa5bd3dffedcca254728aae6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 11cb2d92d0a18e837a1bf7887ddf6f7a2dfbc449
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628830"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>エディションと SQL Server 2017 on Linux のサポートされる機能
 
@@ -51,7 +48,7 @@ ms.locfileid: "38045110"
 
 Linux で使用できない SQL Server 機能の一覧は、次を参照してください。[機能とサービスがサポートされていない](sql-server-linux-release-notes.md#Unsupported)します。
 
-### <a name="try-sql-server"></a>SQL Server をお試しください    
+### <a name="try-sql-server"></a>SQL Server を試してください    
     
 [SQL Server 2017 をダウンロードします。](http://www.microsoft.com/sql-server/sql-server-2017)
 
@@ -167,7 +164,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
   
 |機能|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|専用管理者接続|はい|はい|はい|可 (トレース フラグを使用)|可 (トレース フラグを使用)|   
+|専用管理者接続|はい|はい|はい|はい (トレース フラグを使用)|はい (トレース フラグを使用)|   
 |PowerShell スクリプティングのサポート|はい|はい|はい|はい| 
 |データ層アプリケーション コンポーネントの操作のサポート - 抽出、配置、アップグレード、削除|はい|はい|はい|はい| 
 |ポリシー オートメーション (変更時とスケジュールに基づいて確認)|はい|はい|はい|いいえ|いいえ|   
@@ -217,7 +214,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |業界標準の空間データ形式のインポート/エクスポート|はい|はい|はい|はい|   
 
   
-## <a name="next-steps"></a>次のステップ 
+## <a name="next-steps"></a>次の手順 
  [各エディションと SQL Server 2017 - Windows のサポートされている機能](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [各エディションと SQL Server 2016、Windows のサポートされている機能](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [各エディションと SQL Server 2014 - Windows の機能がサポートされています。](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  

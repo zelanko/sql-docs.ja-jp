@@ -1,14 +1,11 @@
 ---
-title: sp_apply_job_to_targets (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_apply_job_to_targets (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7ec6285f807dd51b0a67ad55ab2e53634584e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641721"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +59,19 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  指定したジョブを適用する対象サーバーを、コンマ区切りのリストで指定します *target_servers*は**nvarchar (2048)**、既定値は NULL です。  
   
  [  **@operation=** ] **'***操作***'**  
- 指定したジョブを、指定した対象サーバーまたは対象サーバー グループに対して適用するか削除するかを指定します。 *操作*は**varchar (7)**、既定値は APPLY です。 有効な操作は**適用**と**削除**です。  
+ 指定したジョブを、指定した対象サーバーまたは対象サーバー グループに対して適用するか削除するかを指定します。 *操作*は**varchar (7)**、既定値は APPLY です。 有効な操作は**適用**と**削除**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_apply_job_to_targets**代わりを呼び出すことで、複数の対象サーバーからジョブを適用 (または削除) する簡単な方法を提供**sp_add_jobserver** (または**sp_delete_jobserver**)各対象サーバーが必要に対して 1 回です。  
+## <a name="remarks"></a>コメント  
+ **sp_apply_job_to_targets**ジョブを適用する (または削除する) 複数の対象サーバーからの簡単な方法を提供しを呼び出す代わりには、 **sp_add_jobserver** (または**sp_delete_jobserver**)各対象サーバーが必要ですに対して 1 回。  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**この手順を実行できるは、固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールは、このプロシージャを実行できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、以前に作成した適用`Backup Customer Information`ジョブ内のすべての対象サーバーを`Servers Maintaining Customer Information`グループ。  
+ 次の例では、適用前に作成した`Backup Customer Information`ジョブ内のすべてのターゲット サーバーを`Servers Maintaining Customer Information`グループ。  
   
 ```  
 USE msdb ;  

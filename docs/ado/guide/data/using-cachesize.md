@@ -1,41 +1,38 @@
 ---
-title: CacheSize を使用して |Microsoft ドキュメント
+title: CacheSize を使用する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f15c7ba0e954f6214670a3ba687094131e90a57
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1c29fb18431d1f02d82db76605a8a53752ea0357
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633437"
 ---
-# <a name="using-cachesize"></a>CacheSize を使用します。
-使用して、 **CacheSize**プロパティは、プロバイダーからローカル メモリに一度に取得するレコードの数を制御します。 たとえば場合、 **CacheSize**は 10 ですが最初に開く後、**レコード セット**オブジェクト、プロバイダーがローカル メモリに最初の 10 個のレコードを取得します。 間を移動すると、 **Recordset**オブジェクト、プロバイダーがローカル メモリ バッファーからデータを返します。 過去のキャッシュの最後のレコードを移動するとすぐに、プロバイダーは、キャッシュにデータ ソースから、次の 10 個のレコードを取得します。  
+# <a name="using-cachesize"></a>CacheSize を使用する
+使用して、 **CacheSize**プロバイダーからのローカル メモリに一度に取得するレコードの数を制御するプロパティ。 たとえば場合、 **CacheSize** 10 が、最初に開く、**レコード セット**オブジェクト、プロバイダーがローカル メモリに最初の 10 個のレコードを取得します。 間を移動し、 **Recordset**オブジェクト、プロバイダーがローカル メモリ バッファーからデータを返します。 過去のキャッシュの最後のレコードを移動するとすぐに、プロバイダーは、キャッシュにデータ ソースから、次の 10 個のレコードを取得します。  
   
 > [!NOTE]
->  **CacheSize**に基づく、**開いている行の最大数**プロバイダー固有のプロパティ (で、**プロパティ**のコレクション、 **Recordset**オブジェクト)。 設定することはできません**CacheSize**より大きい値に**開いている行の最大数。** プロバイダーで開くことができる行の数を変更するには、次のように設定します。**最大行数は開いている**です。  
+>  **CacheSize**に基づいて、**開ける行の最大**プロバイダー固有のプロパティ (で、**プロパティ**のコレクション、 **Recordset**オブジェクト)。 設定することはできません**CacheSize**より大きい値に**開いている行の最大数。** プロバイダーで開くことができる行の数を変更するには、設定**開ける行の最大**します。  
   
- 値**CacheSize**の有効期間中に調整されることができます、 **Recordset**データ ソースから次に、キャッシュ内のレコードの数にのみ影響、オブジェクトがこの値を変更します。 プロパティの値のみを変更しても、キャッシュの現在の内容は変更されません。  
+ 値**CacheSize**の有効期間中に調整できる、**レコード セット**データ ソースから次に、キャッシュ内のレコードの数にのみ影響、オブジェクトがこの値を変更します。 単独でプロパティ値を変更する場合は、キャッシュの現在の内容は変更されません。  
   
  も取得するレコードが少ない場合**CacheSize**を示す、プロバイダーは、残りのレコードを返し、エラーは発生しません。  
   
  A **CacheSize**ゼロに設定は許可されていませんし、エラーが返されます。  
   
- キャッシュから取得したレコードでは、他のユーザーが、ソース データに対する同時変更は反映されません。 すべてのキャッシュされたデータの更新を強制するを使用して、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドです。  
+ キャッシュから取得したレコードには、他のユーザーがソース データに対する同時変更は反映されません。 キャッシュされたすべてのデータの更新プログラムを強制的には、使用、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッド。  
   
- 場合**CacheSize**ナビゲーション方法 1 より大きい値に設定されます ([移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md))、削除されたへの移動されない可能性がありますレコードを取得した後、削除が発生した場合に記録します。 最初のフェッチ後以降の削除は反映されませんデータ キャッシュ内の削除された行のデータ値にアクセスしようとするまで。 ただし、設定**CacheSize**を 1 に削除された行はフェッチできないためにこの問題を排除します。
+ 場合**CacheSize**ナビゲーション方法 1 より大きい値に設定されます ([移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext、MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) へのナビゲーションを削除された可能性がありますレコードを取得した後、削除が発生した場合に記録します。 最初のフェッチ後に以降の削除は反映されませんデータ キャッシュ内の削除された行のデータ値にアクセスを試みるまで。 ただし、設定**CacheSize**を 1 に削除された行をフェッチできないためにこの問題を排除します。

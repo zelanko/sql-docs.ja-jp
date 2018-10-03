@@ -1,13 +1,11 @@
 ---
-title: 既定のデータ ソース |Microsoft ドキュメント
+title: 既定のデータ ソース |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b756f9b553c622028266d1fc591596bf58ddf45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619570"
 ---
 # <a name="default-data-source"></a>既定のデータ ソース
-ドライバーは、ここで、アプリケーションで明示的に指定されない 1 つ特定の場合で、既定のデータ ソースと呼ばれる、データ ソースを選択できます。  
+ドライバーは、特定のケースで、アプリケーションで明示的に指定されない 1 つで、既定のデータ ソースと呼ばれる、データ ソースを選択できます。  
   
--   呼び出しで**SQLConnect**場所、 *ServerName*引数が長さ 0 の文字列、null ポインター、または DEFAULT です。  
+-   呼び出しで**SQLConnect**場所、 *ServerName*引数が長さ 0 の文字列、null ポインター、または既定値。  
   
--   呼び出しで**SQLDriverConnect**場所*InConnectionString*いずれかを示す**DSN**= 既定値または指定、 **DSN**キーワード、システム情報に含まれていないデータ ソースです。  
+-   呼び出しで**SQLDriverConnect**場所*InConnectionString*いずれかを指定します**DSN**= 既定またはを指定します、 **DSN**キーワード、システム情報に含まれていないデータ ソース。  
   
- これはドライバーで定義されている既定のデータ ソースを指定する方法です。 これにより、管理操作を伴う場合がありますされ、ユーザーに依存している可能性があります。
+ ドライバーで定義された既定のデータ ソースを指定する方法。 これは管理操作を伴う可能性があり、ユーザーによって異なります。

@@ -1,13 +1,11 @@
 ---
-title: 機能のサポートとばらつきを確認しています |Microsoft ドキュメント
+title: 機能のサポートと可変性の確認 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2dfea013336a98ab4e69adf79198692e336acfd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648820"
 ---
-# <a name="checking-feature-support-and-variability"></a>機能のサポートとばらつきを確認しています
-アプリケーション機能のサポートとばらつきを確認する呼び出し通常**SQLGetInfo**、 **SQLGetFunctions**、および**SQLGetTypeInfo**です。 開始点としては、ドライバーの API と SQL の文法の準拠レベルです。 これらのさまざまなレベルの機能サポートについて説明します。 アプリケーションが呼び出すことができますし、 **SQLGetInfo**サポートまたは必要な機能の違いを確認するには、他のオプションと**SQLGetFunctions**を決定するかどうか、返された以外に必要な関数準拠レベルがサポートされている、および**SQLGetTypeInfo**をどのような SQL データ型がサポートされているかを判断します。  
+# <a name="checking-feature-support-and-variability"></a>機能のサポートと可変性の確認
+アプリケーションの通常の呼び出し機能のサポートと可変性を確認する**SQLGetInfo**、 **SQLGetFunctions**、および**SQLGetTypeInfo**します。 開始点としては、ドライバーの API と SQL 文法の適合性レベルです。 これらには、さまざまなレベルの機能サポートについて説明します。 アプリケーションを呼び出して**SQLGetInfo**サポートまたは必要な機能のばらつきを判断するには、他のオプションと**SQLGetFunctions**を決定する関数かどうか、返されたを超える必要があります準拠レベルはサポートされていると**SQLGetTypeInfo**をどのような SQL データ型がサポートされているかを判断します。  
   
- アプリケーションでは、呼び出すことによって、ステートメントまたは接続属性がサポートされているかどうかを判断できます**SQLSetStmtAttr**または**SQLSetConnectAttr**その属性を持つ。 関数から SQL_SUCCESS または sql_success_with_info が返された場合、属性はサポートされています。SQLSTATE HYC00 SQL_ERROR を返す場合 (省略可能な機能で実装されていません)、属性はサポートされていません。  
+ アプリケーションが呼び出すことによって、ステートメントまたは接続属性がサポートされているかどうかを判断することができます**SQLSetStmtAttr**または**SQLSetConnectAttr**属性を持つ。 関数が SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返す場合、属性はサポートされています。SQLSTATE HYC00 SQL_ERROR を返す場合 (省略可能な機能は実装されていません)、属性がサポートされていません。  
   
- アプリケーションは、呼び出すことによって、ドライバーに接続する前に、情報量が限られても特定できます**SQLDrivers**です。
+ アプリケーションには、呼び出すことによって、ドライバーに接続する前に、限られた量が決定することも**SQLDrivers**します。
