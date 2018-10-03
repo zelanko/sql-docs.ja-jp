@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - clr enabled option
 - common language runtime [SQL Server], enabling
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cf4d327ecc82f047d80eba8da709fea1fd7e82dd
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 0e39d3805ea89f6f8bbf7a48488fc536796312b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653350"
 ---
-# <a name="clr-integration---enabling"></a>CLR 統合 - 有効にします。
+# <a name="clr-integration---enabling"></a>CLR 統合 - 有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   CLR (共通言語ランタイム) 統合機能は既定では無効になっているので、CLR 統合を使用して実装されるオブジェクトを使用するには、この機能を有効にする必要があります。 CLR 統合を有効にするには使用、 **clr を有効になっている**のオプション、 **sp_configure**ストアド プロシージャの[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   

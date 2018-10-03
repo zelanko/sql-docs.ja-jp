@@ -1,18 +1,13 @@
 ---
-title: sysextendedarticlesview (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysextendedarticlesview (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysextendedarticlesview_TSQL
 - sysextendedarticlesview
@@ -21,28 +16,27 @@ dev_langs:
 helpviewer_keywords:
 - sysextendedarticlesview view
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7600ee20683846aa5a2defb676d10daea0038d7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe6c88ac0dc8b131323282478a2330525d0fcf9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648190"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sysextendedarticlesview**ビューは、パブリッシュされたアーティクルに関する情報を提供します。 このビューは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルの一意な ID 番号を示す ID 列です。|  
 |**creation_script**|**nvarchar (255)**|そのアーティクルのスキーマ作成スクリプトです。|  
 |**del_cmd**|**nvarchar (255)**|DELETE 時に実行するコマンド、またはログから作成するコマンドです。|  
-|**説明**|**nvarchar (255)**|アーティクルの説明エントリします。|  
+|**description**|**nvarchar (255)**|この記事の説明エントリします。|  
 |**dest_table**|**nvarchar(128)**|対象テーブルの名前です。|  
 |**フィルター (filter)**|**int**|行方向のパーティション分割に使用するストアド プロシージャのオブジェクト識別子です。|  
 |**filter_clause**|**ntext**|フィルターによる行選択に使用する、アーティクルの WHERE 句です。|  
@@ -50,12 +44,12 @@ ms.locfileid: "33012979"
 |**name**|**nvarchar(128)**|パブリケーションの中で一意なアーティクルに関係する名前です。|  
 |**objid**|**int**|パブリッシュするテーブル オブジェクト ID です。|  
 |**pubid**|**int**|そのアーティクルが属するパブリケーションの ID です。|  
-|**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE、または TRUNCATE 事前作成コマンドです。<br /><br /> **0** = none です。<br /><br /> **1**ドロップを = です。<br /><br /> **2** = 削除します。<br /><br /> **3** = TRUNCATE です。|  
-|**ステータス**|**int**|アーティクル オプションとステータスのビットマスクです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **1** = アーティクルはアクティブです。<br /><br /> **8** = INSERT ステートメントに列名を含みます。<br /><br /> **16** = ステートメント パラメーターを使用します。<br /><br /> **24** = 両方の INSERT ステートメントに列名を含めるし、パラメーター化されたステートメントを使用します。<br /><br /> たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの場合、この列の値は 17 になります。 値 0 は、アーティクルが非アクティブであり、追加のプロパティが定義されていないことを表します。|  
+|**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE、または TRUNCATE 事前作成コマンドです。<br /><br /> **0** = none。<br /><br /> **1** = ドロップします。<br /><br /> **2** = 削除します。<br /><br /> **3** = TRUNCATE です。|  
+|**status**|**int**|アーティクル オプションとステータスのビットマスクです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **1** = アーティクルはアクティブです。<br /><br /> **8** = INSERT ステートメントに列名を含みます。<br /><br /> **16** = ステートメントをパラメーター化を使用します。<br /><br /> **24** = INSERT ステートメントに列名は、どちらも、パラメーター化されたステートメントを使用しています。<br /><br /> たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの場合、この列の値は 17 になります。 値 0 は、アーティクルが非アクティブであり、追加のプロパティが定義されていないことを表します。|  
 |**sync_objid**|**int**|アーティクルの定義を表すテーブルまたはビューの ID です。|  
 |**type**|**tinyint**|アーティクルのタイプです。<br /><br /> **1**ログベースのアーティクルを = です。<br /><br /> **3** = 手動フィルター付きログベースのアーティクルです。<br /><br /> **5** = 手動ビュー付きログベースのアーティクルです。<br /><br /> **7** = 手動フィルターおよび手動ビュー付きログベースのアーティクルです。|  
 |**upd_cmd**|**nvarchar (255)**|UPDATE 時に実行するコマンド、またはログから作成するコマンドです。|  
-|**schema_option**|**[バイナリ]**|パブリッシュされたオブジェクトのどのプロパティをスナップショットにスクリプト作成するのかを示します。 サポートされるスキーマ オプションの一覧は、次を参照してください。 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)です。|  
+|**schema_option**|**[バイナリ]**|パブリッシュされたオブジェクトのどのプロパティをスナップショットにスクリプト作成するのかを示します。 サポートされるスキーマ オプションの一覧は、次を参照してください。 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)します。|  
 |**dest_owner**|**nvarchar(128)**|目的のデータベースにおけるテーブルの所有者です。|  
 |**ins_scripting_proc**|**int**|INSERT ステートメントがレプリケートされるときに実行されるカスタム ストアド プロシージャまたはスクリプトのオブジェクト識別子です。|  
 |**del_scripting_proc**|**int**|DELETE ステートメントがレプリケートされるときに実行されるカスタム ストアド プロシージャまたはスクリプトのオブジェクト識別子です。|  

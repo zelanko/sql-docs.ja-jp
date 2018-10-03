@@ -1,13 +1,11 @@
 ---
-title: ストリーム (Visual C 構文の ADO) |Microsoft ドキュメント
+title: Stream (Visual C 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1d2890d6167314a2e69e03463b3e09a100c191c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 77da08e1d6ead2ad5777f41113a1ed164a7fb5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715750"
 ---
-# <a name="stream-ado-for-visual-c-syntax"></a>ストリーム (Visual C 構文の ADO)
+# <a name="stream-ado-for-visual-c-syntax"></a>Stream (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
   
 ```  

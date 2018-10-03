@@ -1,38 +1,32 @@
 ---
-title: 変数値ファイル (MySQLToSQL) を作成する |Microsoft ドキュメント
+title: 変数値ファイル (MySQLToSQL) の作成 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Creating variable value files
 - variable value file validation
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
-caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9d350957cb1590fa2aec5fcd31028849191d8f5d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 23594e24aef1722c43134c741f79bcf42b84e410
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651290"
 ---
-# <a name="creating-variable-value-files-mysqltosql"></a>変数値ファイル (MySQLToSQL) を作成します。
-変数の値ファイルと同様に、送信元または送信先のサーバー名に 1 つのサーバーの移行を頻繁に変更するコマンドのパラメーター値で構成される XML ファイルです。 多数のデータベースの移行が発生すると、各送信元サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている、 **– v**コマンド ライン スイッチです。 これは、複数の変数ファイルで変数の値を持ついくつかのスクリプト ファイルの静的な値を維持するために役立ちます。  
+# <a name="creating-variable-value-files-mysqltosql"></a>変数値ファイルの作成 (MySQLToSQL)
+変数値ファイルは、別に 1 つのサーバーの移行から頻繁に変更されるように、送信元または送信先のサーバー名のコマンドのパラメーターの値を構成する XML ファイルです。 各ソース サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている多数のデータベースの移行が発生すると、 **– v**コマンド ライン スイッチします。 これにより、複数の変数ファイルの変数の値をいくつかのスクリプト ファイルの静的な値を維持するためにします。  
   
 > [!NOTE]  
-> 1.  変数の名前が始まるし、$ (ドル) 記号が付加されたものです。 変数が変数の値のファイルの値を割り当てられていない場合は、コンソールの実行プロセスの停止の結果として得られるスクリプト ファイルの解析中にエラーが発生します。  
-> 2.  The escape character for **$** is **$$**. パラメーターの変数または静的な値の値を含むかどうか**$** し (ドル) シンボル**$$** 変数の代わりに文字として扱うことを示す指定する必要があります。  
-> 3.  保守容易性のために、変数内で宣言できます`‘variable-group’`ユーザーの論理的な分離の要素は、変数を定義します。  この要素の使用は必須ではありません。  
+> 1.  変数の名前はプレフィックスし、$ (ドル) 記号が付いています。 変数は、変数値ファイルで値が割り当てられていない場合はその結果、コンソールの実行プロセスを停止するスクリプト ファイルの解析中にエラーが発生します。  
+> 2.  エスケープ文字**$** は **$$** します。 パラメーターの変数または静的な値の値を含むかどうか**$** し (ドル) シンボル**$$** 変数ではなく文字として扱うことを指定する必要があります。  
+> 3.  保守容易性のために、内部で変数を宣言できます`‘variable-group’`ユーザーの論理的な分離の要素は、変数を定義します。  この要素の使用は必須ではありません。  
   
 **使用例:**  
   
@@ -93,8 +87,8 @@ ms.locfileid: "34775872"
 </variables>  
 ```  
   
-## <a name="variable-value-file-validation"></a>変数の値のファイルの検証  
-ユーザーがスキーマ定義ファイルに対して自分の変数値ファイルを簡単に検証 **'ConsoleScriptVariablesSchema.xsd'** 'スキーマ' フォルダー内にあります。  
+## <a name="variable-value-file-validation"></a>変数値ファイルの検証  
+ユーザーは、スキーマ定義ファイルに対して自分の変数値ファイルを検証できます簡単に **'ConsoleScriptVariablesSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
 コンソールの運用には、次の手順は[サーバー接続ファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  

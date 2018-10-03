@@ -1,33 +1,30 @@
 ---
-title: バッチを実行して |Microsoft ドキュメント
+title: 実行中のバッチ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22c034d4be28ca8c3212fad4ee1493cb0a22d915
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695038"
 ---
 # <a name="executing-batches"></a>バッチの実行
-アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずチェックする必要があります。 これには、アプリケーションの呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS と SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションでは、行のカウント – 生成および – セットを生成するステートメントが明示的なバッチおよび後者 2 つのオプションの戻り値の行の数と結果の可用性に関する情報を設定中に、プロシージャでサポートされる結果がパラメーター化するかどうかが返されます。実行します。  
+アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずおください。 これは、アプリケーション呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションは、行の数 – 生成および – セットを生成するステートメントが明示的なバッチおよび行の数と結果の可用性に関する情報を返しますの設定で後者の 2 つのオプションの中に、プロシージャでサポートされる結果がパラメーター化するかどうかを返します実行します。  
   
- ステートメントのバッチが実行される**SQLExecute**または**SQLExecDirect**です。 たとえば、次の呼び出しは、明示的なバッチ内のステートメントを開くには、新しい販売注文を実行します。  
+ ステートメントのバッチがを通じて実行された**SQLExecute**または**SQLExecDirect**します。 たとえば、次の呼び出しは、明示的なバッチのステートメントを新しい販売注文を開くを実行します。  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -41,9 +38,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- バッチの結果を生成するときにステートメントが実行される、1 つを返しますまたは行数、あるいは結果の詳細を設定します。 これらを取得する方法については、次を参照してください。[複数の結果](../../../odbc/reference/develop-app/multiple-results.md)です。  
+ バッチの結果を生成するときにステートメントが実行される、1 つを返しますまたは詳細行の数または結果を設定します。 これらを取得する方法については、次を参照してください。[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
   
- ステートメントのバッチには、パラメーター マーカーが含まれている場合、これらは、他のステートメントではそのパラメーターの順序を増やすことに番号付けします。 たとえば、ステートメントの次のバッチが 1 ~ 21 です。 番号付きのパラメーター最初の**挿入**ステートメントには、番号付き 1 ~ 5 および、最後にその**挿入**ステートメントは、番号が 18 21 ~ です。  
+ ステートメントのバッチには、パラメーター マーカーが含まれている場合は、その他のステートメントでは、パラメーターの順序を増やすことでこれら番号が付けられます。 次のステートメントのバッチが 1 ~ 21 です。 番号付きのパラメーターを持ちなど最初にある**挿入**ステートメントは、番号付き 1 ~ 5 と最後の**挿入**ステートメントは番号付きの 18 ~ 21 です。  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

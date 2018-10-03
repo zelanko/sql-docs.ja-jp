@@ -1,12 +1,10 @@
 ---
-title: sys.dm_hadr_cluster (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_hadr_cluster (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_cluster
@@ -20,38 +18,38 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bbdbf9cf7e51371568ad160b1dd8c1f5d05a1c0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2c4e66ed6471ec0959cfece477af4b939fb129c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748240"
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  かどうか、Windows Server フェールオーバー クラスタ リング (WSFC) ノード インスタンスをホストするの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対応した[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]に WSFC クォーラムがある**sys.dm_hadr_cluster**クラスター名と情報を公開する行を返しますクォーラムについて。 WSFC ノードがクォーラムを持たない場合、行は返されません。  
+  かどうか、Windows Server フェールオーバー クラスタ リング (WSFC) ノード インスタンスをホストするの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を有効になっている[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]WSFC のクォーラムが存在**sys.dm_hadr_cluster**クラスター名と情報を公開する行を返しますクォーラムについて。 WSFC ノードがクォーラムを持たない場合、行は返されません。  
  > [!TIP]
  > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、この動的管理ビューは、Always On フェールオーバー クラスター インスタンスだけでなく Always On 可用性グループをサポートしています。
 
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対応した [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] のインスタンスをホストする WSFC クラスターの名前。|  
 |**quorum_type**|**tinyint**|この WSFC クラスターで使用されているクォーラムの種類。次のいずれかになります。<br /><br /> 0 = ノード マジョリティ。 このクォーラム構成では、クラスター内の半数のノード (切り上げ) より 1 つ少ない数のノードの障害に耐えることができます。 たとえば、7 つのノードから成るクラスターの場合、このクォーラム構成では 3 つのノードの障害に対する耐性があります。<br /><br /> 1 = ノードおよびディスク マジョリティ。 ディスク監視がオンラインのままの場合、このクォーラム構成では、クラスター内の半数のノード (切り上げ) の障害に耐えることができます。 たとえば、6 つのノードから成るクラスターの場合、ディスク監視がオンラインのときは 3 つのノードの障害に対する耐性があります。 ディスク監視がオフラインになった場合、またはディスク監視で障害が発生している場合、半数のノード (切り上げ) より 1 つ少ない数のノードの障害に耐えることができます。 たとえば、6 つのノードから成るクラスターの場合、ディスク監視で障害が発生しているときは 2 つのノード (3-1=2) の障害に対する耐性があります。<br /><br /> 2 = ノードおよびファイル共有マジョリティ。 このクォーラム構成は "ノードおよびディスク マジョリティ" と同じように動作しますが、ディスク監視の代わりにファイル共有監視を使用します。<br /><br /> 3 = マジョリティなし: ディスクのみ。 クォーラム ディスクがオンラインの場合、このクォーラム構成では、1 つを除くすべてのノードの障害に耐えることができます。|  
-|**quorum_type_desc**|**varchar (50)**|説明**quorum_type**,、1 つの。<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY|  
+|**quorum_type_desc**|**varchar (50)**|説明**quorum_type**、1 つの。<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY|  
 |**quorum_state**|**tinyint**|WSFC クォーラムの状態。次のいずれかになります。<br /><br /> 0 = クォーラム状態不明<br /><br /> 1 = 通常のクォーラム<br /><br /> 2 = 強制クォーラム|  
-|**quorum_state_desc**|**varchar (50)**|説明**quorum_state**,、1 つの。<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
+|**quorum_state_desc**|**varchar (50)**|説明**quorum_state**、1 つの。<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [可用性グループの監視と &#40; です。Transact SQL と &#41; です。](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

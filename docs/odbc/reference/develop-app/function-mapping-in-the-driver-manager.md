@@ -1,55 +1,52 @@
 ---
-title: ドライバー マネージャーでのマッピング機能 |Microsoft ドキュメント
+title: 関数マッピングでは、ドライバー マネージャー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - driver manager [ODBC], function mapping
 - functions [ODBC], Unicode functions
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee2e5d3e770ddd605618f6a71161f410dab7ab52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762510"
 ---
-# <a name="function-mapping-in-the-driver-manager"></a>関数マッピングでは、ドライバー マネージャー
-ドライバー マネージャーは、文字列引数を受け取る関数の 2 つのエントリ ポイントをサポートします。 非装飾関数 (**SQLDriverConnect**) 関数の ANSI 形式です。 Unicode フォームが修飾された、 *W* (**SQLDriverConnectW**)。  
+# <a name="function-mapping-in-the-driver-manager"></a>ドライバー マネージャーの関数マッピング
+ドライバー マネージャーは、文字列引数を受け取る関数の 2 つのエントリ ポイントをサポートします。 装飾されていない関数 (**SQLDriverConnect**) は、関数の ANSI 形式です。 Unicode 形式がで修飾された、 *W* (**SQLDriverConnectW**)。  
   
- ODBC ヘッダー ファイルで修飾された関数もサポートしています、 *A には、* (**SQLDriverConnectA**) 混在 ANSI または Unicode アプリケーションの利便性を考慮します。 呼び出し、 **A**関数は、装飾されていないエントリ ポイントへの呼び出しでは実際には (**SQLDriverConnect**)。  
+ ODBC ヘッダー ファイルで修飾された関数もサポートしています、 *A、* (**SQLDriverConnectA**) 混合 ANSI または Unicode アプリケーションが使いやすいようにします。 呼び出し、 **A**関数呼び出しは、装飾されていないエントリ ポイントを実際には、(**SQLDriverConnect**)。  
   
- アプリケーションが、_UNICODE でコンパイルされた場合 **#define**、ODBC ヘッダー ファイルは、装飾されていない関数の呼び出しをマップする (**SQLDriverConnect**) を Unicode バージョン (**SQLDriverConnectW**.)  
+ アプリケーションをコンパイル、_UNICODE した場合 **#define**、ODBC ヘッダー ファイルが装飾されていない関数の呼び出しにマップされます (**SQLDriverConnect**) Unicode バージョン (**SQLDriverConnectW**.)  
   
- 場合、ドライバー マネージャーで Unicode ドライバーとドライバーが認識**SQLConnectW**ドライバーでサポートされています。  
+ 場合 Unicode ドライバーとして認識されるドライバーをドライバー マネージャー **SQLConnectW**ドライバーでサポートされています。  
   
- Unicode、ドライバーには、関数呼び出しがとおり、ドライバー マネージャーは、します。  
+ ドライバーが Unicode ドライバーの場合は、ドライバー マネージャーがとおり関数呼び出しを行います。  
   
--   文字列の引数やパラメーターなしの関数をを通じて直接ドライバーに渡します。  
+-   文字列引数またはパラメーターなしの関数に、ドライバーを通じて直接渡します。  
   
 -   Unicode 関数に渡します (で、 *W*サフィックス) 経由で直接ドライバーにします。  
   
--   ANSI 関数に変換します (で、 *A*サフィックス) Unicode 関数に (で、 *W*サフィックス) 文字を Unicode に変換される文字列の引数、およびドライバーに、Unicode 関数を渡します。  
+-   ANSI の関数に変換します (で、 *A*サフィックス) Unicode 関数 (で、 *W*サフィックス) 文字列引数を Unicode に変換して文字と、ドライバーに、Unicode 関数。  
   
- ANSI ドライバーをドライバーには、関数呼び出しがとおり、ドライバー マネージャーは、します。  
+ 場合は、ドライバーは、ANSI ドライバー、ドライバー マネージャーがとおり関数呼び出しを行います。  
   
--   文字列の引数または経由で直接パラメーターなしの関数をドライバーに渡します。  
+-   文字列引数またはから直接使用するパラメーターなしの関数は、ドライバーに渡します。  
   
--   Unicode 関数に変換 (で、 *W*サフィックス)、ANSI に関数呼び出しと、ドライバーに渡します。  
+-   Unicode 関数に変換 (で、 *W*サフィックス)、ANSI に関数呼び出しをドライバーに渡します。  
   
--   ドライバーに直接 ANSI 関数を渡します。  
+-   ドライバーに直接、ANSI 関数を渡します。  
   
- ドライバー マネージャーが Unicode に対応した内部的にします。 その結果、最適なパフォーマンスは、ドライバー マネージャーでは、ドライバーを通じて Unicode 関数だけが渡されるから Unicode アプリケーションの場合、Unicode のドライバーを使用して取得されます。 使用する場合、ANSI アプリケーションは、ANSI ドライバー、ドライバー マネージャーは、必要があります文字列に変換 ANSI から Unicode など一部の関数の処理時に**SQLDriverConnect**です。 関数を処理した後、ドライバー マネージャー必要がありますし、ANSI に変換する Unicode 文字列戻す関数を ANSI ドライバーに送信する前にします。  
+ ドライバー マネージャーが Unicode 対応の内部でします。 その結果、最適なパフォーマンスは、ドライバー マネージャーは、ドライバーを使用して Unicode 関数を渡すだけであるために、Unicode アプリケーションの場合、Unicode ドライバーを使用して取得されます。 ANSI アプリケーションは、ANSI ドライバーを操作するとき、ドライバー マネージャーする必要があります文字列 ANSI から Unicode に変換など、一部の関数を処理するときに**SQLDriverConnect**します。 関数を処理した後は、関数を ANSI ドライバーに送信する前に ANSI に Unicode 文字列をドライバー マネージャーがし、変換する必要があります。  
   
- アプリケーションの変更またはドライバーには、SQL_STILL_EXECUTING または SQL_NEED_DATA が返されるときにバインドされたパラメーターにより、バッファーを読み取る必要がありますできません。 ドライバー マネージャーは、ドライバーが SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、または SQL_ERROR に戻るまで、ANSI にバインドされたバッファーを残します。 マルチ スレッド アプリケーションでは、別のスレッドが実行されている SQL ステートメントのバインドされたパラメーター値にアクセスできないようにする必要があります。 ドライバー マネージャーは、データを Unicode から ANSI「インプレース」に変換し、他のスレッド、ドライバーには、SQL ステートメントがまだ処理中にこれらのバッファーに ANSI データが表示可能性があります。 ANSI ドライバーに Unicode データをバインドするアプリケーションは、同じアドレスに 2 つの列をバインドできません必要があります。
+ アプリケーションの変更またはドライバーに SQL_STILL_EXECUTING または SQL_NEED_DATA が返されるときに、バインドされたパラメーターのバッファーを読み取る必要がありますできません。 ドライバー マネージャーは、ドライバーが SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、または SQL_ERROR に戻るまでに、ANSI にバインドされているバッファーを残します。 マルチ スレッド アプリケーションでは、別のスレッドは、SQL ステートメントを実行するのには任意のバインドされたパラメーター値にアクセスできないようにする必要があります。 ドライバー マネージャーは、Unicode との間でデータを"、"その場での ANSI に変換し、その他のスレッド、ドライバーには、SQL ステートメントがまだ処理中にこれらのバッファーに ANSI データが表示可能性があります。 ANSI のドライバーに Unicode データにバインドするアプリケーションは、同じアドレスに 2 つの異なる列をバインドしない必要があります。

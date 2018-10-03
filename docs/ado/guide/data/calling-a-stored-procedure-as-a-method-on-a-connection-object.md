@@ -1,34 +1,31 @@
 ---
-title: 接続オブジェクトのメソッドとしてストアド プロシージャの呼び出し |Microsoft ドキュメント
+title: 接続オブジェクトのメソッドとしてストアド プロシージャの呼び出し |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758820"
 ---
-# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>接続オブジェクトのメソッドとしてストアド プロシージャの呼び出し
-関連付けられている開くときにネイティブ メソッドの場合と同様に、ストアド プロシージャを呼び出すことができます**接続**オブジェクト。 名前付きコマンドを呼び出すことに似ています、**接続**オブジェクト。  
+# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Connection オブジェクトに対するメソッドとしてストアド プロシージャを呼び出す
+関連するオープンでネイティブ メソッドの場合と同様に、ストアド プロシージャを呼び出すことができます**接続**オブジェクト。 名前付きコマンドを呼び出すことに似ています、**接続**オブジェクト。  
   
- Visual Basic のコード例を次では、利便性のためここでもう一度表示 CustOrdersOrders と呼ばれる、Northwind サンプル データベースでストアド プロシージャを呼び出します。  
+ 次の Visual Basic のコード例では、CustOrdersOrders、便宜上、ここでもう一度表示と呼ばれる、Northwind サンプル データベースでストアド プロシージャを呼び出します。  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -38,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- 次のコード例では、関連付けられた開いているでネイティブ メソッドの場合と同様に、ストアド プロシージャを呼び出す**接続**オブジェクト。  
+ 次のコード例は、関連するオープンでネイティブ メソッドの場合と同様に、ストアド プロシージャを呼び出す方法を示します**接続**オブジェクト。  
   
 ```  
 Const DS = "MySQLServer"  

@@ -1,13 +1,11 @@
 ---
-title: コマンドと CommandText プロパティの例 (VB) |Microsoft ドキュメント
+title: Command プロパティおよび CommandText プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CommandText property [ADOX], Visual Basic example
 - Command property [ADOX], Visual Basic example
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 710bcfef773fcb5801604eb46121da7bfc689596
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 742f00402a553d8f918e0de0c3aad0f6c6e4af64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285321"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634628"
 ---
-# <a name="command-and-commandtext-properties-example-vb"></a>コマンドと CommandText プロパティの例 (VB)
-次のコードを使用する方法を示しています、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロシージャのテキストを更新するプロパティです。  
+# <a name="command-and-commandtext-properties-example-vb"></a>Command プロパティおよび CommandText プロパティの例 (VB)
+次のコードを使用する方法を示します、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロシージャのテキストを更新するプロパティ。  
   
 ```  
 ' BeginProcedureTextVB  
@@ -81,7 +78,7 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [コマンドのプロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [プロシージャのオブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Procedure オブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

@@ -1,32 +1,28 @@
 ---
-title: 'サンプル: WMI プロバイダーと SQL Server エージェント警告を作成する |Microsoft ドキュメント'
+title: 'サンプル: WMI プロバイダーでの SQL Server エージェント警告の作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9f99fcb708788c996847161b36c138cdfa65994b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 112f7083dda05b36fc31a829fdd964672c8a2059
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011559"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749704"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>サンプル: WMI プロバイダーと SQL Server エージェント警告を作成します。
+# <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>サンプル: WMI プロバイダーを使用した SQL Server エージェント警告の作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   WMI イベント プロバイダーの標準的な使い方の 1 つは、特定のイベントに応答する SQL Server エージェントを作成することです。 次のサンプルでは、後で分析するために、テーブルに XML デッドロック グラフ イベントを保存する簡単な警告を提供しています。 SQL Server エージェントは、WQL 要求の送信、WMI イベントの受信、およびイベントに応答したジョブの実行を行います。 通知メッセージの処理に関連する Service Broker オブジェクトはいくつかありますが、WMI イベント プロバイダーはこれらのオブジェクトの作成および管理の詳細を処理します。  
   
@@ -35,12 +31,12 @@ ms.locfileid: "33011559"
   
  次に警告が作成されます。 スクリプトは、まず、警告が実行するジョブを作成し、ジョブ ステップをジョブに追加し、そのジョブを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスに指定します。 次に、スクリプトは警告を作成します。  
   
- ジョブ ステップを取得、 **TextData**プロパティの WMI イベント インスタンスとその値を挿入、 **DeadlockGraph**の列、 **DeadlockEvents**テーブル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、暗黙に文字列を XML 形式に変換することに注意してください。 このジョブ ステップでは [!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステムを使用するので、プロシキは指定されません。  
+ ジョブ ステップを取得、 **TextData**プロパティの WMI イベントのインスタンスとその値を挿入、 **DeadlockGraph**の列、 **DeadlockEvents**テーブル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、暗黙に文字列を XML 形式に変換することに注意してください。 このジョブ ステップでは [!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステムを使用するので、プロシキは指定されません。  
   
  警告は、デッドロック グラフ トレース イベントのログが記録されるたびに、ジョブを実行します。 WMI 警告の場合、SQL Server エージェントは、指定された名前空間および WQL ステートメントを使用して通知クエリを作成します。 この警告の場合、SQL Server エージェントは、ローカル コンピューター上の既定のインスタンスを監視します。 WQL ステートメントは、既定のインスタンス内の任意の `DEADLOCK_GRAPH` イベントを要求します。 警告が監視するインスタンスを変更するには、警告する `MSSQLSERVER` 内の `@wmi_namespace` のインスタンス名を置き換えます。  
   
 > [!NOTE]  
->  WMI イベントを受信する SQL Server エージェントの[!INCLUDE[ssSB](../../includes/sssb-md.md)]で有効にする必要があります**msdb**と[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]です。  
+>  WMI のイベントを受信する SQL Server エージェントの[!INCLUDE[ssSB](../../includes/sssb-md.md)]で有効にする必要があります**msdb**と[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]します。  
   
 ```  
 USE AdventureWorks ;  
@@ -95,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>サンプルのテスト  
- ジョブの実行を確認するには、デッドロックを発生させます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、2 つの開く**SQL クエリ**タブし、両方のクエリを同じインスタンスに接続します。 次のスクリプトを 2 つのクエリ タブのうちの 1 つで実行します。 このスクリプトは、1 つの結果セットを作成して終了します。  
+ ジョブの実行を確認するには、デッドロックを発生させます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、2 つ開きます**SQL クエリ**タブし、両方のクエリを同じインスタンスに接続します。 次のスクリプトを 2 つのクエリ タブのうちの 1 つで実行します。 このスクリプトは、1 つの結果セットを作成して終了します。  
   
 ```  
 USE AdventureWorks ;  

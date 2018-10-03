@@ -1,35 +1,32 @@
 ---
-title: URL プロパティの例 (VBScript) |Microsoft ドキュメント
+title: URL プロパティの例 (VBScript) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - URL property [ADO], VBScript example
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 233d7ab118a25725deca1cb5c6d90396b4dd0dea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 57e7899753f2574ed62c644fcdb0c2fecc99b232
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697204"
 ---
 # <a name="url-property-example-vbscript"></a>URL プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- 次のコードを設定する方法を示しています、 **URL**クライアント側でさらに、データ ソースへの変更の送信を処理する .asp ファイルを指定するプロパティです。  
+ 次のコードを設定する方法を示して、 **URL**さらに、データ ソースへの変更の送信を処理する .asp ファイルを指定するクライアント側でのプロパティ。  
   
 ```  
 <!-- BeginURLClientVBS -->  
@@ -104,7 +101,7 @@ End Sub
 <!-- EndURLClientVBS -->  
 ```  
   
- 内に存在するサーバー側コード**URLServerVBS.asp**送信、更新された**Recordset**データ ソースにします。  
+ サーバー側コードに存在する**URLServerVBS.asp**送信、更新された**レコード セット**データ ソースにします。  
   
 ```  
 <!-- BeginURLServerVBS -->  

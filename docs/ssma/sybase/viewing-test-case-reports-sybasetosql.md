@@ -1,57 +1,51 @@
 ---
-title: テスト_ケースのレポート (SybaseToSQL) の表示 |Microsoft ドキュメント
+title: テスト_ケースのレポート (SybaseToSQL) の表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eae96cbd4a222441f98be2aaf9718b3b6438e3b5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 840f73d0732d0789d378c6f1bceb100c58e01bb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779638"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624470"
 ---
-# <a name="viewing-test-case-reports-sybasetosql"></a>テスト_ケースのレポートの表示 (SybaseToSQL)
-テスト_ケースのレポートは、テストの検証の結果とテストの一般的な情報を示します。 障害の発生、テスト、検証済みのオブジェクト内の一致しないデータに関する情報も表示されます。  
+# <a name="viewing-test-case-reports-sybasetosql"></a>テスト ケースのレポートの表示 (SybaseToSQL)
+テスト_ケースのレポートは、テスト検証の結果とテストの一般的な情報を示します。 失敗した場合、テスト、検証済みのオブジェクト内の一致しないデータに関する情報も表示されます。  
   
-## <a name="report-structure"></a>レポートの構造体  
+## <a name="report-structure"></a>レポートの構造  
 レポートの上部では、これらの統計情報を示します。  
   
 -   テスト対象のオブジェクトと、テストが成功したオブジェクトの数の合計数。  
   
 -   検証済みのテーブルと外部キーの合計数とテーブルと外部キーが正常に一致の数。  
   
--   開始時刻、終了時刻の場合は、テスト_ケースおよび実行にかかった合計時間です。  
+-   開始時刻、テスト ケースの終了時刻と実行にかかった合計時間。  
   
-レポートの残りの部分は、4 つのカテゴリ内の情報を示します。  
+レポートの残りの部分では、4 つのカテゴリの情報が表示されます。  
   
-**前提条件のエラー**  
-発生したエラーを示しています、**の前提条件**手順です。 通常、これはスキップされます。  
+**前提条件エラー**  
+発生したエラーをすべて表示、**の前提条件**手順。 通常、これはスキップされます。  
   
 **初期化**  
-としての実行の状態を示しています。**成功**または**エラー**です。  
+としての実行の状態を表示**成功**または**エラー**します。  
   
-**オブジェクトのテスト結果**  
-結果 (成功または失敗) と SSMA テスト担当者が障害発生時検出の不一致の比較できます。  
+**テスト結果のオブジェクト**  
+結果 (成功または失敗) と SSMA テスターの検出エラーが発生した場合の不一致を比較します。  
   
-**最終処理**  
-としての実行の状態を示しています。**成功**または**エラー**です。  
+**終了処理**  
+としての実行の状態を表示**成功**または**エラー**します。  
   
 ## <a name="see-also"></a>参照  
-[テスト_ケースを実行する&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[データベース オブジェクトを移行テスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[テスト_ケースを実行している&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

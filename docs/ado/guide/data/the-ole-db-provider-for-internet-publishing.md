@@ -1,13 +1,11 @@
 ---
-title: インターネットへの発行の OLE DB Provider |Microsoft ドキュメント
+title: OLE DB Provider for Internet Publishing |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for Internet publishing [ADO]
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7efbcd02903e8bba38ecfa177ed7e095e0f5e9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f70970ec872d3c921fa10e3eacb1c54d7c4de2d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632210"
 ---
-# <a name="the-ole-db-provider-for-internet-publishing"></a>インターネットへの発行用の OLE DB プロバイダー
-ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトで使える Microsoft OLE DB Provider for Internet Publishing (インターネット発行プロバイダー) にアクセスして、リソースを操作する Web フォルダーやファイルなどMicrosoft によって処理されます。 ADO のソースを指定することができます、**レコード**、**ストリーム**、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) URL であります。 ことができますし、アップロード、ダウンロード、移動、コピー、および、リソースを削除またはリソースのプロパティを直接操作します。  
+# <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet Publishing
+ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトで使える Microsoft OLE DB Provider for Internet Publishing (インターネット発行プロバイダー) にアクセスして、リソースを操作する Web フォルダーやファイルなどMicrosoft FrontPage によって処理されます。 ADO では、ソースを指定することができます、**レコード**、 **Stream**、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) url。 ことができますし、アップロード、ダウンロード、移動、コピー、およびリソースを削除またはリソース プロパティを直接操作します。  
   
- 使用するコード例**レコード**と**ストリーム**公開インターネット プロバイダーは、次を参照してください。、[インターネット発行シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)です。  
+ 使用するコード例**レコード**と**ストリーム**公開インターネット プロバイダーは、次を参照してください。、[インターネットによる公開シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)します。  
   
- インターネット、パブリッシング用プロバイダーは、Microsoft Windows 2000 と共にインストールされます。 以前のバージョンのインターネット発行プロバイダーも Microsoft Office 2000 と Microsoft Internet Explorer 5.0 以降で使用できます。  
+ インターネット公開プロバイダーは、Microsoft Windows 2000 と共にインストールされます。 以前のバージョンのインターネット発行プロバイダーでは、Microsoft Office 2000 および Microsoft Internet Explorer 5.0 で入手できます。  
   
- ストアには、ADO プロバイダーに接続する、インターネット発行の 3 つの方法があります。  
+ ADO をパブリッシング用プロバイダー、インターネットに接続するための 3 つの方法はあります。  
   
 -   指定"URL ="接続文字列にします。 以下に例を示します。  
   
@@ -42,7 +39,7 @@ ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[スト
     objConn.Open "URL=http://servername"  
     ```  
   
--   指定の Msdaipp.dso、*プロバイダー*接続文字列のキーワードです。 以下に例を示します。  
+-   指定の Msdaipp.dso、*プロバイダー*接続文字列のキーワード。 以下に例を示します。  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
@@ -56,6 +53,6 @@ ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[スト
     ```  
   
 > [!NOTE]
->  Msdaipp.dso が、プロバイダーは、のいずれかの値として明示的に指定されている場合、*プロバイダー*接続文字列キーワード、または**プロバイダー**プロパティは使用できません"URL ="接続文字列にします。 この場合、エラーが発生します。 代わりに、単に URL を指定前に示したようです。  
+>  Msdaipp.dso がいずれかで、プロバイダーの値として明示的に指定されている場合、*プロバイダー*接続文字列キーワード、または**プロバイダー**プロパティは使用できません"URL ="接続文字列にします。 この場合、エラーが発生します。 前述のように、URL を単に指定代わりに、します。  
   
- インターネット、パブリッシング用プロバイダーの詳細については、次を参照してください[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)、または使用する送信元アプリケーションで提供されるプロバイダーのドキュメントの OLE DB プロバイダー。Internet Publishing がインストールされた: Windows 2000、Office 2000、または Internet Explorer 5.0 です。
+ インターネット公開プロバイダーの詳細については、次を参照してください[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)、またはプロバイダーのドキュメントがソース アプリケーションに付属の OLE DB プロバイダー。インストールされた Internet Publishing: Windows 2000、Office 2000、または Internet Explorer 5.0 です。

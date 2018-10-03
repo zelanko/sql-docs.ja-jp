@@ -5,24 +5,21 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750360"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
@@ -43,7 +40,7 @@ ms.locfileid: "35404374"
   
 -   [[構成] ダイアログ ボックス](../integration-services/service/configure-dialog-box.md)  
   
--   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+-   [[パッケージの実行] ダイアログ ボックス](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
 ### <a name="parameter-values"></a>パラメーター値  
  パラメーターに最大 3 つの型の値を割り当てることができます。 パッケージ実行が開始されると、パラメーターに 1 つの値が使用され、パラメーターはその最終的なリテラル値に解決されます。  
@@ -167,7 +164,7 @@ ms.locfileid: "35404374"
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 **[パラメーター化]** ダイアログ ボックスでは、新規または既存のパラメーターをタスクのプロパティと関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、**[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターの詳細については、「 [Integration Services (SSIS) パラメーター](https://msdn.microsoft.com/library/hh213214.aspx)」を参照してください。
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **プロパティ**  
  パラメーターと関連付けるタスクのプロパティを選択します。 この一覧には、パラメーター化できるすべてのプロパティが表示されます。  
   

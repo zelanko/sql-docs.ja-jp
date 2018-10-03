@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], host databases
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - mail host databases [SQL Server]
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71445835763436cae2e37fa114ff06db8e8855d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ea98ee2400776dfa87c1f3b2c84ee37ccd5d353
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32926936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778980"
 ---
 # <a name="database-mail-messaging-objects"></a>データベース メール メッセージング オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "32926936"
   
  これらのオブジェクトは、メール ホスト データベース内のデータベース メールのインターフェイスです。 上記で一覧したオブジェクトによって提供される機能を実装するために、他のオブジェクトがインストールされます。 ただし、このようなオブジェクトは内部使用のために予約されています。  
   
-|[オブジェクト名]|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**[表示]**|データベース メールに送信されたすべてのメッセージの一覧を表示します。|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**[表示]**|[Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)の動作に関するメッセージの一覧を表示します。|  

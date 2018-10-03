@@ -1,44 +1,41 @@
 ---
-title: SQLBindCol を使用して |Microsoft ドキュメント
+title: SQLBindCol の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4ccd4607e16b244279e0910fe32047f19e2e6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776410"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol の使用
-アプリケーションが呼び出すことによって列をバインド**SQLBindCol**です。 この関数は、一度に 1 つの列をバインドします。 アプリケーションには、次を指定します。  
+アプリケーションが呼び出すことによって列をバインド**SQLBindCol**します。 この関数は、一度に 1 つの列をバインドします。 アプリケーションは、次を指定します。  
   
--   列番号。 0 の列がブックマーク列です。この列は、いくつかの結果セットには含まれません。 その他のすべての列は、1 から始まる番号が付けられます。 エラーが、結果セット内の列よりも大きい番号の列をバインドするにはこのエラー検出できません、結果セットが作成されるまでによって返されるように**SQLFetch**ではなく、 **SQLBindCol**です。  
+-   列番号。 0 の列がブックマーク列です。この列は、いくつかの結果セットは含まれません。 その他のすべての列は、番号 1 から始まります。 結果セットに列があるよりも大きい番号の列をバインドするとエラーにはこのエラーを検出できません、結果セットが作成されるまでによって返されるように**SQLFetch**ではなく、 **SQLBindCol**します。  
   
--   変数の C データ型、アドレス、およびバイト長は、列にバインドします。 エラーを列の SQL データ型を変換できません; C データ型を指定するにはこのエラー検出されない結果セットが作成されるまでによって返されるように**SQLFetch**ではなく、 **SQLBindCol**です。 サポートされる変換の一覧は、次を参照してください。[に変換するデータを SQL から C データ型に](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d: データ型にします。 バイトの長さの詳細については、次を参照してください。[データ バッファーの長さ](../../../odbc/reference/develop-app/data-buffer-length.md)です。  
+-   変数の C データ型、アドレス、およびバイト長は、その列にバインドします。 列の SQL データ型を変換できません。 C データ型を指定するとエラーにはこのエラーが検出されない結果セットが作成されるまでによって返されるように**SQLFetch**ではなく、 **SQLBindCol**します。 サポートされる変換の一覧は、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d: データ型。 バイトの長さの詳細については、次を参照してください。[データ バッファーの長さ](../../../odbc/reference/develop-app/data-buffer-length.md)します。  
   
--   長さ/インジケーター バッファーのアドレス。 長さ/インジケーター バッファーはオプションです。 データが NULL の場合、バイナリまたは文字データや戻り値の SQL_NULL_DATA のバイトの長さを返すために使用されます。 詳細については、次を参照してください。[長さ/インジケーターの値を使用する](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)です。  
+-   長さ/インジケーター バッファーのアドレス。 長さ/インジケーター バッファーは省略可能です。 データが NULL の場合は、バイナリまたは文字データまたは SQL_NULL_DATA の戻り値のバイトの長さを返すために使用されます。 詳細については、次を参照してください。[長さ/インジケーターの値を使用して](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)します。  
   
- ときに**SQLBindCol**が呼び出されると、ドライバー情報を関連付けますこのステートメントを使用します。 各データ行がフェッチしたときに情報を使用して、各列のデータ バインドされたアプリケーション変数内に配置します。  
+ ときに**SQLBindCol**が呼び出されると、ドライバー情報を関連付けますこのステートメントを使用します。 各データ行をフェッチするときに、バインドされたアプリケーション変数に各列のデータを配置するのに情報を使用します。  
   
- たとえば、次のコードは、販売員および CustID 列に変数をバインドします。 列のデータが返されます*販売員*と*CustID*です。 *販売員*を文字バッファーには、ドライバーは、データを切り捨てるかどうかを判断できるように、アプリケーションがそのバイトの長さ (11) を指定します。 返されたのバイト長のタイトルまたは NULL であるかどうかに返されます*SalesPersonLenOrInd*です。  
+ たとえば、次のコードでは、販売員と CustID 列に変数をバインドします。 列のデータが返されます*販売員*と*CustID*します。 *販売員*文字バッファーには、ドライバーは、データを切り捨てるかどうかを確認できるように、アプリケーションは、バイトの長さ (11) を指定します。 返されたのバイト長のタイトルまたは NULL であるかどうかで返される*SalesPersonLenOrInd*。  
   
- *CustID*整数型の変数し、が固定長のバイト長を指定する必要はありません。 ドライバーは、ことが前提としています。 **sizeof (** SQLUINTEGER **)** です。 返された顧客のバイト長のデータを ID または NULL であるかどうかに返されます*CustIDInd*です。 バイトの長さは、常にあるため、アプリケーションが、給与が NULL であるかのみを求めていることに注意してください**sizeof (** SQLUINTEGER **)** です。  
+ *CustID*整数型の変数し、が固定長のバイトの長さを指定する必要はありません。 ドライバーであると**sizeof (** SQLUINTEGER **)**。 返された顧客のバイト長のデータを ID または NULL であるかどうかに返されます*CustIDInd*します。 バイトの長さが常にあるために、アプリケーションが、給与が NULL であるかのみを求めていることに注意してください。 **sizeof (** SQLUINTEGER **)** します。  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -74,7 +71,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- 次のコードが実行される、**選択**ステートメントは、ユーザーが入力し、結果セット内のデータの各行を出力します。 アプリケーションは、結果の形状を予測できないため、設定によって作成された、**選択**ステートメントでは、結果セットを前の例のようににハード コーディングされた変数もバインドできません。 代わりに、アプリケーション データを保持するバッファーおよび長さ/インジケーター バッファーを割り当てますその行の各列。 各列の列のメモリの開始のオフセットを計算列のデータと長さ/インジケーター バッファーはアラインメントの境界で開始するために、このオフセットを調整します。 メモリの列にオフセットを開始し、バインドします。 ドライバーの観点から、このメモリのアドレスでは、前の例でバインドされている変数のアドレスを区別します。 配置の詳細については、次を参照してください。[配置](../../../odbc/reference/develop-app/alignment.md)です。  
+ 次のコードが実行される、**選択**ステートメントは、ユーザーが入力し、結果セット内のデータの各行を出力します。 アプリケーションは、結果の形状を予測できないため、設定によって作成された、**選択**ステートメントでは、前の例のように設定の結果にハード コーディングされた変数をバインドにことはできません。 代わりに、アプリケーションが割り当てられます、データを保持するバッファーおよび長さ/インジケーター バッファーの該当する行の各列。 列ごとには、列のメモリの開始のオフセットを計算し、列のデータと長さ/インジケーター バッファーが整列境界で開始されるように、このオフセットを調整します。 メモリの列オフセットから開始し、バインドします。 ドライバーの観点からは、このメモリのアドレスは、前の例に、バインドされた変数のアドレスと区別することではありません。 配置の詳細については、次を参照してください。[配置](../../../odbc/reference/develop-app/alignment.md)します。  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

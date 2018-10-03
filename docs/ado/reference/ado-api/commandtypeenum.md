@@ -1,13 +1,11 @@
 ---
-title: CommandTypeEnum |Microsoft ドキュメント
+title: CommandTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,33 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2120e4e593b0465d7f2412b3e938a8aea6cc2674
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276921"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742880"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
-コマンドの引数を解釈する方法を指定します。  
+コマンド引数を解釈する方法を指定します。  
   
- ユーザーが指定したを検証することが重要*クラスヒント*アプリケーションのユーザーに実行する ADO の危険性のあるコマンドを挿入する機会を提供しないようにする値。  
+ ユーザーが指定したかを検証することが重要*クラスヒント*アプリケーション ユーザーに実行する ADO の危険性のあるコマンドを挿入する機会を提供しないようにする値。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|コマンドの型引数を指定しません。|  
 |**adCmdText**|1|評価[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)コマンドまたはストアド プロシージャのテキストの定義として呼び出します。|  
-|**adCmdTable**|2|評価**CommandText**列を持つがすべて、内部的に生成された SQL クエリによって返されるテーブル名とします。|  
+|**adCmdTable**|2|評価**CommandText**をテーブル名を列の変更がすべて、内部的に生成された SQL クエリで返されます。|  
 |**adCmdStoredProc**|4|評価**CommandText**としてストアド プロシージャの名前。|  
-|**adCmdUnknown**|8|既定値です。 示しますコマンドの種類、 **CommandText**プロパティが不明です。<br /><br /> ADO で解釈するいくつかの試行は、コマンドの種類が認識されていない場合、 **CommandText**です。<br /><br /> -   **CommandText**コマンドまたはストアド プロシージャの呼び出しのテキストの定義として解釈されます。 これと同じ動作**adCmdText**です。<br />-   **CommandText**ストアド プロシージャの名前を指定します。 これと同じ動作**adCmdStoredProc**です。<br />-   **CommandText**は、テーブルの名前として解釈されます。 内部的に生成された SQL クエリでは、すべての列が返されます。 これと同じ動作**adCmdTable**です。|  
-|**adCmdFile**|256|評価**CommandText**の永続的に格納されたファイル名として[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 と共に使用**レコード セット**。[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)または[Requery](../../../ado/reference/ado-api/requery-method.md)のみです。|  
-|**adCmdTableDirect**|512|評価**CommandText**として、テーブル名を持つ列がすべて返されます。 と共に使用**Recordset.Open**または**Requery**のみです。 使用する、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッド、 **Recordset**で開く必要があります**adCmdTableDirect**です。<br /><br /> この値と組み合わせることはできません、 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値**adAsyncExecute**です。|  
+|**adCmdUnknown**|8|既定値です。 示しますコマンドの種類、 **CommandText**プロパティが不明です。<br /><br /> ADO で解釈するいくつかの試行は、コマンドの種類が不明の場合に、 **CommandText**します。<br /><br /> -   **CommandText**コマンドまたはストアド プロシージャの呼び出しのテキストの定義として解釈されます。 これと同じ動作**adCmdText**します。<br />-   **CommandText**ストアド プロシージャの名前を指定します。 これと同じ動作**adCmdStoredProc**します。<br />-   **CommandText**はテーブルの名前として解釈されます。 内部的に生成された SQL クエリでは、すべての列が返されます。 これと同じ動作**adCmdTable**します。|  
+|**adCmdFile**|256|評価**CommandText**永続的にストアドのファイル名として[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 併用**レコード セット**。[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)または[Requery](../../../ado/reference/ado-api/requery-method.md)のみです。|  
+|**adCmdTableDirect**|512|評価**CommandText**をテーブル名を持つ列がすべて返されます。 併用**Recordset.Open**または**Requery**のみです。 使用する、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッド、**レコード セット**で開く必要がある**adCmdTableDirect**します。<br /><br /> この値は組み合わせることができない、 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値**adAsyncExecute**します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  
