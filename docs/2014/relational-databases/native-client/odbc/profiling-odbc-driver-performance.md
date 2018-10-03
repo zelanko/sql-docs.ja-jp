@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - profiling ODBC driver performance data [SQL Server Native Client]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26dba5236a748dc4a35262f2bdfe05af994e282f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8990539dcee3be8eb8101050a9f9f11d880fcd7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138672"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC ドライバーのパフォーマンスのプロファイル
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次の 2 種類のパフォーマンス データをプロファイルできます。  
@@ -102,7 +99,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SumOpenStmt|SQL_PERF_START 以降に開かれたステートメント ハンドルの数。|  
 |**接続の統計情報:**||  
 |CurrentConnectionCount|アプリケーションがサーバーに対して開いている現在アクティブな接続ハンドルの数。|  
-|MaxConnectionsOpened|SQL_PERF_START 以降に同時に開かれた接続ハンドルの最大数。|  
+|MaxConnectionsOpened|SQL_PERF_START 以降に開かれたコンカレント接続ハンドルの最大数。|  
 |SumConnectionsOpened|SQL_PERF_START 以降に開かれた接続ハンドルの合計数。|  
 |SumConnectionTime|SQL_PERF_START 以降に開かれたすべての接続の接続時間の合計。 たとえば、アプリケーションが接続を 10 開いていて、各接続を 5 秒間保持していた場合、SumConnectionTime は 50 秒になります。|  
 |AvgTimeOpened|SumConnectionsOpened/ SumConnectionTime の計算結果になります。|  

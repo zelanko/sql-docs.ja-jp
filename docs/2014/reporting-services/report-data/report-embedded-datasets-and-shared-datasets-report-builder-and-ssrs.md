@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cee911569d1b90751e6c553b365a08bbaa3108eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218932"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138272"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  
@@ -167,14 +164,14 @@ ms.locfileid: "37218932"
   
  フィルターは、共有データセット定義の一部です。 共有データセット フィルターは、共有データセットを含むすべてのレポートに影響を与えます。 レポートに共有データセットを追加した後、または依存する共有データセットを持つコンポーネントを追加した後、追加のデータセット フィルターを作成できます。 作成したフィルターは、自分のレポート内でのみ使用され、レポート サーバーの共有データセット定義の一部にはなりません。  
   
- 追加のフィルターは、データ領域またはデータ領域グループに対して設定できます。 また、パラメーターとフィルターの組み合わせを使用して、レポートに表示するデータを選択できます。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ 追加のフィルターは、データ領域またはデータ領域グループに対して設定できます。 また、パラメーターとフィルターの組み合わせを使用して、レポートに表示するデータを選択できます。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 ### <a name="sorting-data-in-a-dataset"></a>データセットのデータの並べ替え  
  データセットでのデータの順序は、外部データ ソースから取得された順序と同じです。 この順序は、クエリ デザイナーでクエリを実行するときに表示される順序とも同じです。 クエリ コマンド構文が並べ替えをサポートしている場合は、レポート データとしてデータが返される前にクエリを編集してソースでデータを並べ替えることができます。 たとえば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリの場合、ORDER BY ステートメントが並べ替え順序を制御します。  
   
  レポートに返された後にデータを並べ替えるには、データ領域とデータ領域グループで並べ替え式を定義します。 詳細については、データ領域の特定の型についてのトピック (たとえば、「[テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」) を参照してください。  
   
- また、パラメーターと並べ替え式の組み合わせを使用して、レポートでのデータの並べ替え順序を選択できます。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ また、パラメーターと並べ替え式の組み合わせを使用して、レポートでのデータの並べ替え順序を選択できます。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 ### <a name="grouping-data-in-a-dataset"></a>データセットのデータのグループ化  
  データセットのデータはグループ化できません。 データセットのデータを集計するには、データがレポート用に取得される前に、クエリ コマンドを編集して集計を計算します。 これらは、 *サーバー集計*と呼ばれます。 式では、事前に計算された集計としてこれらの値を識別するため、Aggregate 関数を使用します。 詳細については、「[集計関数 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)」を参照してください。  
@@ -211,7 +208,7 @@ ms.locfileid: "37218932"
   
 -   複数のデータ領域をデータセットにリンクすることで、同じデータを複数の形式で表示することができます。 詳細については、次を参照してください。[同じデータセットへの複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)します。  
   
--   データセットを使用して、使用可能な値のドロップダウン リスト、またはレポート パラメーターの既定値を表示します。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+-   データセットを使用して、使用可能な値のドロップダウン リスト、またはレポート パラメーターの既定値を表示します。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 -   詳細レポートまたはサブレポートのパラメーターを使用して、複数のデータセットの関連データをリンクできます。 たとえば、売上レポートに全店舗の要約データを表示し、ドリルスルー リンクを使用して、指定の店舗の個々の売上高を取得するデータセット クエリが含まれたレポートに、パラメーターとして店舗 ID を指定することができます。 詳細については、「[ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)」と「[サブレポート &#40;レポート ビルダーおよび SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)」を参照してください。  
   
